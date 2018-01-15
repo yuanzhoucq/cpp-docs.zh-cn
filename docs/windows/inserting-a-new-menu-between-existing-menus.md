@@ -1,42 +1,44 @@
 ---
-title: "Inserting a New Menu Between Existing Menus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menus, adding items"
-  - "commands, adding to menus"
+title: "插入新菜单在现有菜单之间 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- menus, adding items
+- commands, adding to menus
 ms.assetid: 7a6c807f-3839-40dc-97c9-dedb0e33dcde
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c549dcdc09d104a9d67b459898b59de528420b02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Inserting a New Menu Between Existing Menus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 在现有菜单之间插入新菜单  
+# <a name="inserting-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单  
   
-1.  选择现有的菜单名称，然后按**“插入”**键。  于选定项之前插入**“新建项”**框。  
+1.  选择现有的菜单名称，然后按**插入**密钥。 **新项**框插入选定项的前面。  
   
-     \- 或 \-  
+     \- 或 -  
   
-2.  在菜单栏上右键单击并从快捷菜单选择**“新插入”**。  
+2.  在菜单栏上右键单击并选择**插入新**从快捷菜单。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
   
- 要求  
+ 惠?  
   
  Win32  
   
-## 请参阅  
- [Menu Editor](../mfc/menu-editor.md)   
- [菜单](_win32_Menus)
+## <a name="see-also"></a>请参阅  
+ [菜单编辑器](../windows/menu-editor.md)   

@@ -1,32 +1,33 @@
 ---
-title: "usesgetlasterror | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.usesgetlasterror"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "usesgetlasterror attribute"
+title: "usesgetlasterror |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.usesgetlasterror
+dev_langs: C++
+helpviewer_keywords: usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 05c74f1254230270654b3dc0b44f541e4fe9ef2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# usesgetlasterror
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-通知调用方，则出现错误，则调用该函数，则调用方可以调用 `GetLastError` 检索错误代码。  
+# <a name="usesgetlasterror"></a>usesgetlasterror
+告知调用方，是否调用该函数时，没有出错，则调用方可以然后调用`GetLastError`以检索的错误代码。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,25 +35,24 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **usesgetlasterror** C\+\+ 特性具有与 [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Usesgetlasterror** c + + 属性具有相同的功能[usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL 特性。  
   
-## 示例  
- 有关示例如何参见 [idl\_module](../windows/idl-module.md) 示例使用 **usesgetlasterror**。  
+## <a name="example"></a>示例  
+ 请参阅[idl_module](../windows/idl-module.md)如何使用的示例**usesgetlasterror**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**模块** 属性|  
+|**适用对象**|**模块**属性|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   

@@ -83,11 +83,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9720d407fb13b5a87335da08eb40c2886fdcdb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed981a2f7345a59f3df479bcd82b9326fd84de12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 提供 Windows 公共选项卡控件的功能。  
@@ -159,7 +160,7 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmn.h  
   
 ##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
@@ -471,7 +472,7 @@ DWORD GetItemState(
 ### <a name="return-value"></a>返回值  
  对引用`DWORD`接收的状态信息的值。 可以是以下值之一：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**TCIS_BUTTONPRESSED**|选择选项卡控件项。|  
 |**TCIS_HIGHLIGHTED**|选项卡控件项会突出显示，并使用当前的突出显示颜色绘制选项卡和文本。 在使用突出显示颜色时，这将是 true 的内插，不是抖色的颜色。|  
@@ -768,7 +769,7 @@ BOOL SetItemState(
  `dwState`  
  对引用`DWORD`值，该值包含状态信息。 可以是以下值之一：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**TCIS_BUTTONPRESSED**|选择选项卡控件项。|  
 |**TCIS_HIGHLIGHTED**|选项卡控件项会突出显示，并使用当前的突出显示颜色绘制选项卡和文本。 在使用突出显示颜色时，这将是 true 的内插，不是抖色的颜色。|  
@@ -821,7 +822,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="example"></a>示例  
   请参阅示例[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CHeaderCtrl 类](../../mfc/reference/cheaderctrl-class.md)   

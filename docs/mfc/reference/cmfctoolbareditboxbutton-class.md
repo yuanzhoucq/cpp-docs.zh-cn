@@ -63,11 +63,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b659ae9b1abfe98ba393e7252e79336b2bd3cfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f774282823d68a3b5f2107b7297714ce8aa918f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 类
 包含编辑控件的工具栏按钮 ( [CEdit 类](../../mfc/reference/cedit-class.md))。  
@@ -149,7 +150,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  `CMFCToolBarEditBoxButton` 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxtoolbareditboxbutton.h  
   
 ##  <a name="canbestretched"></a>CMFCToolBarEditBoxButton::CanBeStretched  
@@ -603,7 +604,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>备注  
  此方法会设置[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)到`nStyle`它同时还能禁用文本框中，当应用程序在自定义模式，而不自定义模式应用程序时启用它 (请参阅[CMFCToolBar:: SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)和[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode))。 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)为无效样式标志的列表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)   

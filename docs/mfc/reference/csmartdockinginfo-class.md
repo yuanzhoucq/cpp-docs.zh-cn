@@ -37,11 +37,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 733ef0c228fd0dea068c22b555d090de33f59624
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2954e3fc6a0a8ee7265c5b2baa29d391aa52329c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
 定义智能停靠标记的外观。  
@@ -68,7 +69,7 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否使用当前的主题颜色时框架显示智能停靠标记。|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智能停靠标记的基的背景的色。|  
@@ -108,7 +109,7 @@ class CSmartDockingInfo : public CObject
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxDockingManager.h  
   
 ##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
@@ -235,7 +236,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)

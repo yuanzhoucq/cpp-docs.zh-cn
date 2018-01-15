@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95e863c1d80c84767f5ce90d9f91f02cac0ffb94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7166fd1b0ce0f8e9152c617979d0ec80bfb2b57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 类
 支持 16 位键控的 `CObject` 指针的映射。  
@@ -115,10 +116,10 @@ class CMapWordToOb : public CObject
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcoll.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

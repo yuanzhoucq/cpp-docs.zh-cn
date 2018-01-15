@@ -231,11 +231,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cf9d7244ce587881062fcd95ce1d3f3414e2ca8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 545cf67ff790edeb2303f95365c34ca71e4dc7f6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 类
 表示 HTML 编辑组件。  
@@ -372,7 +373,7 @@ template <class T> class CHtmlEditCtrlBase
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CHtmlEditCtrlBase`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxhtml.h  
   
 ##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
@@ -1466,7 +1467,7 @@ long QueryStatus(long cmdID) const;
   
 ### <a name="parameters"></a>参数  
  `cmdID`  
- 命令 ID。 命令标识符，将从`CGID_MSHTML`命令组。 这些命令在 Mshtmcid.h 中定义。 你还可以找到在联机列表[MSHTML 命令标识符](http://go.microsoft.com/fwlink/linkid=149220)。  
+ 命令 ID。 命令标识符，将从`CGID_MSHTML`命令组。 这些命令在 Mshtmcid.h 中定义。 你还可以找到在联机列表[MSHTML 命令标识符](http://go.microsoft.com/fwlink/p/?linkid=149220)。  
   
 ### <a name="return-value"></a>返回值  
  返回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) ，该值指示的状态`cmdID`，或失败的 0。  
@@ -2171,7 +2172,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM UNORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769987.aspx)到 WebBrowser 控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [HTMLEdit 示例](../../visual-cpp-samples.md)
 

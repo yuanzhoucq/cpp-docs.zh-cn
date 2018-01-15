@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a4f71b2877eaaa7af125918c7fe2b71bb031d39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>创建设备图像（图标的图像编辑器）
 当你创建新图标或光标资源时，图像编辑器首先以特定的样式 （32 × 32，16 种颜色图标和 32x32，为游标的单色） 创建的映像。 然后可以将映像中不同的大小和样式添加到初始图标或光标，并编辑每个其他映像，根据需要为不同的显示设备。 你还可以通过执行剪切和粘贴操作，从现有的映像类型或在图形程序中创建的位图编辑映像。  
@@ -43,13 +46,13 @@ ms.lasthandoff: 10/24/2017
   
      如果一个加号 (**+**) 旁边图像资源类型显示**插入资源**对话框中，这意味着工具栏模板都可用。 单击加号以便展开模板列表中的，选择一个模板，然后单击**新建**。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
  **要求**  
   
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [图标和光标： 显示设备的图像资源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams [C++], member functions
+dev_langs: C++
+helpviewer_keywords: output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
 输出流成员函数具有三种类型：等效于操控器的类型、执行未格式化的写操作的类型，以及其他修改流状态且不具有等效的操控器或插入运算符的类型。 对于连续的格式化输出，可仅使用插入运算符和操控器。 对于随机访问二进制磁盘输出，在无论是否具有插入运算符，都可使用其他成员函数。  
@@ -148,7 +145,6 @@ if(!cout.fail())...
   
  **void\*()** 运算符并不等同于 **good**，因为它不会测试文件结尾。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输出流](../standard-library/output-streams.md)
-
 

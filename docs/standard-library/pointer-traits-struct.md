@@ -25,11 +25,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d40f9149a9a03e4de40713ba9c7c0ce65f0edad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b82970336c11e8060b01b9c78b48b21accdc67db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointertraits-struct"></a>pointer_traits 结构
 提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。  
@@ -65,7 +66,7 @@ struct Ptr
   
 ### <a name="structs"></a>结构  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`pointer_traits::rebind`|尝试将基础指针类型转换为指定类型。|  
   
@@ -75,7 +76,7 @@ struct Ptr
 |----------|-----------------|  
 |[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<memory>  
   
  **命名空间：** std  
@@ -87,7 +88,7 @@ struct Ptr
 static pointer pointer_to(element_type& obj);
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<memory>](../standard-library/memory.md)   
  [allocator_traits 类](../standard-library/allocator-traits-class.md)
 

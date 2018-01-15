@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ee4a5b46d1a8f990469767bc95b39897889150e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e5fa42339ea5490ff9c97938cfe55d6256bc123
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT 析构函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -35,10 +38,10 @@ ms.lasthandoff: 10/24/2017
   
  此析构函数也解除对当前的 SyncLockT 实例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SyncLockT 类](../windows/synclockt-class.md)

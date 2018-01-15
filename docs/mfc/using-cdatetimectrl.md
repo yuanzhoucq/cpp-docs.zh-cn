@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59353359afc1ddb1ea28f22a2049c6fca8ea049f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab0f8c64b953a9ddaffa3382863762256b90c6c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cdatetimectrl"></a>使用 CDateTimeCtrl
 日期和时间选取器控件 ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) 实现直观和可识别的输入或选择特定日期方法。 在功能上类似于组合框控件的主要接口。 但是，如果用户展开该控件，月历控件 （默认情况下显示），允许用户指定特定日期。 当选择一个日期时，月历控件将自动消失。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [处理日期和时间选取器控件中的通知消息](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

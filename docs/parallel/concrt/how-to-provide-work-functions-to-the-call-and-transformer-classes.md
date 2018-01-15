@@ -1,67 +1,73 @@
 ---
-title: "如何：为 call 和 transformer 类提供工作函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call 类, 示例"
-  - "使用 transformer 类 [并发运行时]"
-  - "使用 call 类 [并发运行时]"
+title: "如何： 为 call 和 transformer 类提供工作函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- call class, example
+- using the transformer class [Concurrency Runtime]
+- using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52ab28a015fa0312a5d064401451640c2747e9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：为 call 和 transformer 类提供工作函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>如何：为 call 和 transformer 类提供工作函数
+本主题演示通过多种方法提供工作函数[concurrency:: call](../../parallel/concrt/reference/call-class.md)和[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)类。  
+  
+ 第一个示例演示如何将传递到 lambda 表达式`call`对象。 第二个示例演示如何将传递到一个函数对象`call`对象。 第三个示例演示如何将绑定到类方法`call`对象。  
+  
+ 为进行说明，使用本主题中的每个示例`call`类。 有关示例，使用`transformer`类，请参阅[如何： 在数据管道中的使用 transformer](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)。  
+  
+## <a name="example"></a>示例  
+ 下面的示例演示使用的常用方法`call`类。 此示例将传递到 lambda 函数`call`构造函数。  
+  
+ [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]  
+  
+ 本示例生成以下输出。  
+  
+```Output  
+13 squared is 169.  
+```  
+  
+## <a name="example"></a>示例  
+ 下面的示例类似于前一个，只不过它使用`call`以及 （函子） 的函数对象的类。  
+  
+ [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]  
+  
+## <a name="example"></a>示例  
 
-本主题阐释几种用于向 [concurrency::call](../../parallel/concrt/reference/call-class.md) 和 [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) 类提供工作函数的方式。  
+ 下面的示例类似于前一个，只不过它使用[std::bind1st](../../standard-library/functional-functions.md#bind1st)和[std::mem_fun](../../standard-library/functional-functions.md#mem_fun)函数绑定`call`对类方法的对象。  
+
   
- 第一个示例说明如何将 lambda 表达式传递给 `call` 对象。  第二个示例说明如何将函数对象传递给 `call` 对象。  第三个示例说明如何将类方法绑定到 `call` 对象。  
+ 使用此方法，如果必须将绑定`call`或`transformer`对象对特定的类方法而不是函数调用运算符， `operator()`。  
   
- 出于演示的目的，本主题中的每个示例都使用 `call` 类。  有关使用 `transformer` 类的示例，请参见[如何：在数据管道中使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)。  
+ [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]  
   
-## 示例  
- 下面的示例说明使用 `call` 类的常见方法。  此示例将 lambda 函数传递给 `call` 构造函数。  
+ 你还可以分配的结果`bind1st`函数来[std:: function](../../standard-library/function-class.md)对象或使用`auto`关键字，如下面的示例中所示。  
   
- [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]  
+ [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]  
   
- 该示例产生下面的输出。  
+## <a name="compiling-the-code"></a>编译代码  
+ 复制代码示例并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`call.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
-  **13为169的平方根。**   
-## 示例  
- 下面的示例与上一示例类似，只不过下面的示例将 `call` 类与函数对象 \(functor\) 一起使用。  
+ **cl.exe /EHsc call.cpp**  
   
- [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]  
-  
-## 示例  
- 下面的示例与上一示例类似，只不过它使用 [std::bind1st](../Topic/bind1st%20Function.md) 和 [std::mem\_fun](../Topic/mem_fun%20Function.md) 函数将 `call` 对象绑定到类方法。  
-  
- 如果必须将 `call` 或 `transformer` 对象绑定到特定的类方法而不是函数调用运算符 `operator()`，请使用此技术。  
-  
- [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]  
-  
- 也可以将 `bind1st` 函数的结果分配给 [std::function](../../standard-library/function-class.md) 对象或使用 `auto` 关键字，如以下示例所示。  
-  
- [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]  
-  
-## 编译代码  
- 复制代码示例，再将此代码粘贴到 Visual Studio项目中或一个名为 `call.cpp` 的文件中，然后在Visual Studio 命令提示符窗口中运行以下命令。  
-  
- **cl.exe \/EHsc call.cpp**  
-  
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
  [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)   
- [如何：在数据管道中使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   
+ [如何： 在数据管道中的使用 transformer](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   
  [call 类](../../parallel/concrt/reference/call-class.md)   
  [transformer 类](../../parallel/concrt/reference/transformer-class.md)

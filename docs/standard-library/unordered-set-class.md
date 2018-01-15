@@ -145,11 +145,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dfc07d8cd923b945c04c8fb9a89e7f8ee8af1316
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ed62216483b23c75133759f0df39697e74e463a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedset-class"></a>unordered_set 类
 此模板类描述用于控制 `const Key` 类型的变长元素序列的对象。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素同时用作排序键和值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
@@ -187,7 +188,7 @@ class unordered_set;
 |[const_reference](#const_reference)|元素的常量引用的类型。|  
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|  
 |[hasher](#hasher)|哈希函数的类型。|  
-|[iterator](#iterator)|受控序列的迭代器的类型。|  
+|[Iterator](#iterator)|受控序列的迭代器的类型。|  
 |[key_equal](#key_equal)|比较函数的类型。|  
 |[key_type](#key_type)|排序键的类型。|  
 |[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|  
@@ -241,7 +242,7 @@ class unordered_set;
   
  对象通过 [unordered_set::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<unordered_set>  
   
  **命名空间：** std  
@@ -254,7 +255,7 @@ typedef Alloc allocator_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Alloc`的同义词。  
+ 该类型是模板参数 `Alloc` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1356,7 +1357,7 @@ typedef Hash hasher;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Hash`的同义词。  
+ 该类型是模板参数 `Hash` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1501,7 +1502,7 @@ typedef Pred key_equal;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Pred`的同义词。  
+ 该类型是模板参数 `Pred` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1539,7 +1540,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Key`的同义词。  
+ 该类型是模板参数 `Key` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -2417,9 +2418,9 @@ int main()
  [d] [c] [b] [a]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<unordered_set>](../standard-library/unordered-set.md)   
  [容器](../cpp/containers-modern-cpp.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

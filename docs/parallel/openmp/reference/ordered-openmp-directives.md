@@ -1,46 +1,45 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: "ordered （OpenMP 指令） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa5db4e92603519314750886c28db7d097183b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定应执行在 for 循环并行化的下面的代码与串行循环。  
+# <a name="ordered-openmp-directives"></a>ordered（OpenMP 指令）
+指定该代码在并行化循环应执行顺序循环类似。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## 备注  
- **排序** 指令必须在 [for](../../../parallel/openmp/reference/for-openmp.md) 或 **并行。** 构造中的动态区域与 **排序** 子句中。  
+## <a name="remarks"></a>备注  
+ **排序**指令必须在动态程度[为](../../../parallel/openmp/reference/for-openmp.md)或**为并行**采用构造**排序**子句。  
   
- **排序** 指令不支持 OpenMP 子句。  
+ **排序**指令支持没有 OpenMP 子句。  
   
- 有关更多信息，请参见 [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md)。  
+ 有关详细信息，请参阅[2.6.6 ordered 构造](../../../parallel/openmp/2-6-6-ordered-construct.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +81,17 @@ int main( )
 }  
 ```  
   
-  **测试 \(\) 迭代 1**  
-**测试 \(\) 迭代 3**  
-**测试 \(\) 迭代 5**  
-**测试 \(\) 迭代 7**  
-**test2 \(\) 迭代 0**  
-**test2 \(\) 迭代 1**  
-**test2 \(\) 迭代 2**  
-**test2 \(\) 迭代 3**  
-**test2 \(\) 迭代 4**   
-## 请参阅  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [指令](../../../parallel/openmp/reference/openmp-directives.md)

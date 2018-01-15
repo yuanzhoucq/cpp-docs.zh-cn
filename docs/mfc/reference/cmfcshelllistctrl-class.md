@@ -53,11 +53,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 455ac8911e99843c14cdab80a6c97e243259c5a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4b5204fe92685431ccdd2c6735553c9b7ce85bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 类
 `CMFCShellListCtrl`类提供 Windows 列表控件功能，并通过包含显示 shell 项列表的功能进行扩展。  
@@ -118,7 +119,7 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
  `CMFCShellListCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxshelllistCtrl.h  
   
 ##  <a name="displayfolder"></a>CMFCShellListCtrl::DisplayFolder  
@@ -408,7 +409,7 @@ void SetItemTypes(SHCONTF nTypes);
 ### <a name="remarks"></a>备注  
  项类型的列表的详细信息，请参阅[SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)   

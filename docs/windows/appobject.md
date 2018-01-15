@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dbdf0ac568990ca2702e81ceef1aae564f3d1be3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 19462987cf4f9b5cc295766a694f01b8b4fac8ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appobject"></a>appobject
 标识为应用程序对象，这些关联与完整.exe 应用程序，并指示是否在此全局提供的函数和属性组件类组件类[类型库](../mfc/automation-clients-using-type-libraries.md)。  
@@ -53,20 +56,20 @@ class A : public ICustom {
 };  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**class**， `struct`|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [类特性](../windows/class-attributes.md)   
  [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   

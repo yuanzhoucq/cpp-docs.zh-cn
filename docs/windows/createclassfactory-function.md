@@ -15,11 +15,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ac438e233c675b6d650af83354edd36f877602d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0ac522c2997f6c170e76c462626bb98a290a7dc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函数
 创建为指定类生成实例的工厂。  
@@ -56,10 +59,10 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ## <a name="remarks"></a>备注  
  如果将发出断言错误模板参数`Factory`不派生自接口 IClassFactory。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Wrappers::Details 命名空间](../windows/microsoft-wrl-wrappers-details-namespace.md)

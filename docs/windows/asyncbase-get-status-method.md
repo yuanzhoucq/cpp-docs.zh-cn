@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::get_Status 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::get_Status"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_Status 方法"
+title: "Asyncbase:: Get_status 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::get_Status
+dev_langs: C++
+helpviewer_keywords: get_Status method
 ms.assetid: 9823ecb9-212e-471d-b76f-7b8f21208905
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aaa51225f8ff4ec81fbfa549b00f3614c0ad7c9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::get_Status 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-检索一个枚举值，它指示工作流同步操作的状态。  
+# <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status 方法
+检索一个值，该值指示异步操作的状态。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHOD(  
@@ -34,20 +35,20 @@ STDMETHOD(
 )(AsyncStatus *status) override;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `status`  
- 句柄中的存储位置 。  有关更多信息，请参见 Windows Workflow Foundation:AsyncStatus enumeration 概述。  
+ 状态为要存储的位置。 有关详细信息，请参阅 Windows::Foundation::AsyncStatus 枚举。  
   
-## 返回值  
- S\_OK，如果成功；否则，E\_ILLEGAL\_METHOD\_CALL。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
   
-## 备注  
- 此方法实现 IAsyncInfo::get\_Status。  
+## <a name="remarks"></a>备注  
+ 此方法实现 IAsyncInfo::get_Status。  
   
-## 要求  
- **页眉：**async.h  
+## <a name="requirements"></a>惠?  
+ **标头：** async.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [AsyncBase 类](../windows/asyncbase-class.md)

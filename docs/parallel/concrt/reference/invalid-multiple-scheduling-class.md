@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_multiple_scheduling class
+dev_langs: C++
+helpviewer_keywords: invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aa021ec655162cb75837ac1475e5cb9094f79fa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling 类
 此类描述在没有对 `wait` 或 `run_and_wait` 方法进行干预调用的情况下，通过 `task_group` 或 `structured_task_group` 对象的 `run` 方法对 `task_handle` 对象进行多次计划时引发的异常。  
@@ -64,8 +47,8 @@ class invalid_multiple_scheduling : public std::exception;
   
  `invalid_multiple_scheduling`  
   
-## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+## <a name="requirements"></a>惠?  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -83,7 +66,7 @@ invalid_multiple_scheduling() throw();
  `_Message`  
  错误的描述性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [task_handle 类](task-handle-class.md)   
  [task_group 类](task-group-class.md)   
@@ -91,4 +74,3 @@ invalid_multiple_scheduling() throw();
  [等待](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group 类](structured-task-group-class.md)
-

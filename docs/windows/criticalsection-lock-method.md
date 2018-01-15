@@ -1,32 +1,33 @@
 ---
-title: "CriticalSection::Lock 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lock 方法"
+title: "Criticalsection:: Lock 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock
+dev_langs: C++
+helpviewer_keywords: Lock method
 ms.assetid: 37cb184c-e13c-49ef-b6a0-13908a956414
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: af996faeebd0fcddb85993badd71ceecd32d494e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CriticalSection::Lock 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-等待指定的临界区对象的所有权。  在授予调用线程所属权时，函数会返回。  
+# <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
+等待指定关键部分对象的所有权。 此函数将在授予调用线程所有权时返回。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 SyncLock Lock();  
@@ -36,20 +37,20 @@ SyncLock Lock();
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `cs`  
- 一个用户指定的关键部分对象。  
+ 用户指定的关键部分对象。  
   
-## 返回值  
- 可用于取消锁定当前临界的锁对象。  
+## <a name="return-value"></a>返回值  
+ 可用于取消锁定当前关键部分的锁定对象。  
   
-## 备注  
- 第一个函数当前 **Lock** 影响关键部分对象。  第二个 **Lock** 函数对用户指定的关键部分。  
+## <a name="remarks"></a>备注  
+ 第一个**锁**函数影响当前关键部分对象。 第二个**锁**函数影响用户指定的关键部分。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CriticalSection 类](../windows/criticalsection-class.md)

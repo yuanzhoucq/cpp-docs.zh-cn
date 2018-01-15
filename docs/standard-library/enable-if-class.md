@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::enable_if
-dev_langs:
-- C++
+f1_keywords: type_traits/std::enable_if
+dev_langs: C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4d01230a1e185ad793f554afa7fa2fe2942b27a6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if 类
 有条件地为 SFINAE 重载决策设置类型的实例。 当且仅当 `enable_if<Condition,Type>::type` 是 `Type` 时，嵌套的 typedef `Condition` 才存在（并且是 `true` 的同义词）。  
@@ -56,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- 在 C++ 中，模板参数的替换失败不是其本身的错误，这称为 *SFINAE*（替换失败不是错误）。 通常，`enable_if` 用于从重载决策中删除候选项（即剔除重载集），以便为了支持一个定义而拒绝另一个定义。 这符合 SFINAE 行为。 有关 SFINAE 的详细信息，请参阅 Wikipedia 上的[替换失败不是错误](http://go.microsoft.com/fwlink/LinkId=394798)。  
+ 在 C++ 中，模板参数的替换失败不是其本身的错误，这称为 *SFINAE*（替换失败不是错误）。 通常，`enable_if` 用于从重载决策中删除候选项（即剔除重载集），以便为了支持一个定义而拒绝另一个定义。 这符合 SFINAE 行为。 有关 SFINAE 的详细信息，请参阅 Wikipedia 上的[替换失败不是错误](http://go.microsoft.com/fwlink/p/?linkid=394798)。  
   
  以下是四种示例方案：  
   
@@ -140,14 +137,13 @@ func(make_pair("foo", "bar"));
   
  C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A` 且 `const Y&` 可隐式转换为 `B` 时 `pair<A, B>(const pair<X, Y>&)` 才存在，来解决此多义性问题。  这允许重载决策确定 `pair<const char *, const char *>` 不可转换为 `pair<int, int>`，以及采用 `pair<string, string>` 的重载可行。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

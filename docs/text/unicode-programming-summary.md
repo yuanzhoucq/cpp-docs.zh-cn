@@ -1,104 +1,105 @@
 ---
-title: "Unicode 编程摘要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode [C++], MFC 和 C 运行时函数"
-  - "Unicode [C++], 编程方法"
+title: "Unicode 编程摘要 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Unicode [C++], programming with
+- Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Unicode 编程摘要
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-若要利用 MFC 和 C 运行时对 Unicode 的支持，需要：  
+# <a name="unicode-programming-summary"></a>Unicode 编程摘要
+若要充分利用 Unicode 的 MFC 和 C 运行时支持，你需要：  
   
--   定义 **\_UNICODE**。  
+-   定义**_UNICODE**。  
   
-     在生成程序之前定义 **\_UNICODE** 符号。  
+     定义符号**_UNICODE**生成程序之前。  
   
 -   指定入口点。  
   
-     在项目的[属性页](../ide/property-pages-visual-cpp.md)对话框的“链接器”文件夹的“输出”页中，设置 **wWinMainCRTStartup** 的“入口点”符号。  
+     上**输出**链接器中的文件夹的项目的页[属性页](../ide/property-pages-visual-cpp.md)对话框框中，将入口点符号设置为**wWinMainCRTStartup**。  
   
--   使用可移植的运行时函数和类型。  
+-   使用可移植运行时函数和类型。  
   
-     为 Unicode 字符串处理使用正确的 C 运行时函数。  可以使用 **wcs** 函数族，但您可能更喜欢使用完全可移植的（支持国际化的）**\_TCHAR** 宏。  这些宏都以 **\_tcs** 为前缀；它们一对一地替换 **str** 函数族。  在“运行库参考”的[国际化](../c-runtime-library/internationalization.md)节中对这些函数有详细介绍。  有关更多信息，请参见 [Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
+     为 Unicode 字符串处理使用适当的 C 运行时函数。 你可以使用**wcs**系列函数，但你可能希望 （国际上已启用） 完全可移植**_TCHAR**宏。 这些宏全都带有前缀**_tcs**; 它们替换，一对一，为**str**函数系列。 中详细介绍这些函数[国际化](../c-runtime-library/internationalization.md)部分*运行时库参考*。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
   
-     使用[支持 Unicode](../text/support-for-unicode.md) 中描述的 **\_TCHAR** 和相关的可移植数据类型。  
+     使用**_TCHAR**和相关的可移植数据类型中所述[有关 Unicode 的支持](../text/support-for-unicode.md)。  
   
--   正确地处理字符串。  
+-   正确处理文本的字符串。  
   
-     Visual C\+\+ 编译器将编码的字符串解释为：  
+     Visual c + + 编译器将解释为编码的文本字符串：  
   
     ```  
     L"this is a literal string"  
     ```  
   
-     指出这是 Unicode 字符的字符串。  可以对文字字符使用相同的前缀。  一般使用 **\_T** 宏对字符串进行编码，因此在 Unicode 下字符串编译为 Unicode 字符串，不使用 Unicode 时字符串编译为 ANSI 字符串（包括 MBCS）。  例如，不要使用：  
+     表示 Unicode 字符的字符串。 为原义字符，可以使用相同的前缀。 使用**_T**宏以使它们编译为 Unicode 下的 Unicode 字符串或 Unicode 无的 ANSI 字符串 （包括 MBCS） 的一般情况下，代码文本字符串。 例如，而不是:  
   
     ```  
     pWnd->SetWindowText( "Hello" );  
     ```  
   
-     而使用：  
+     使用：  
   
     ```  
     pWnd->SetWindowText( _T("Hello") );  
     ```  
   
-     使用已定义的 **\_UNICODE**，**\_T** 将字符串翻译为以 L 为前缀的格式；否则 **\_T** 将字符串翻译为不带 L 前缀的格式。  
+     与**_UNICODE**定义， **_T**转换字符串到 L 前缀窗体; 否则为**_T**转换不 L 前缀的字符串。  
   
     > [!TIP]
-    >  **\_T** 宏与 `_TEXT` 宏相同。  
+    >  **_T**宏等同于`_TEXT`宏。  
   
--   将字符串长度传递给函数时要小心。  
+-   请注意将字符串长度传递给函数。  
   
-     一些函数需要获取字符串的字符数；另一些函数需要获取字符串的字节数。  例如，如果已定义 **\_UNICODE**，则下列对 `CArchive` 对象的调用无效（`str` 属于 `CString`）：  
+     某些函数需要字符串; 中的字符数其他希望字节的数。 例如，如果**_UNICODE**定义的以下调用到`CArchive`不起作用对象 (`str`是`CString`):  
   
     ```  
     archive.Write( str, str.GetLength( ) );    // invalid  
     ```  
   
-     在 Unicode 应用程序中，由于每个字符都是 2 个字节宽，因此长度给出的是字符数而不是正确的字节数。  所以必须使用：  
+     在 Unicode 应用程序，长度可让你的字符数，但不是正确字节数，因为每个字符是双字节宽。 相反，你必须使用：  
   
     ```  
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid  
     ```  
   
-     它指定要写入的正确字节数。  
+     它指定要写入字节的正确的数目。  
   
-     但是，MFC 成员函数是面向字符而非面向字节的，因此无需此额外的编码：  
+     但是，MFC 成员函数是面向字符的而不是面向字节的工作未对此进行额外的编码：  
   
     ```  
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut` 采用字符数而非字节数。  
+     `CDC::TextOut`采用数量的字符，不的字节数。  
   
--   使用 [fopen\_s、\_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) 打开 Unicode 文件。  
+-   使用[fopen_s、 _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)若要打开 Unicode 文件。  
   
- 总之，MFC 和运行库对 Windows 2000 下的 Unicode 编程提供下列支持：  
+ 总之，MFC 和运行时库提供以下支持适用于 Unicode 编程在 Windows 2000 下：  
   
--   除数据库类成员函数外，所有 MFC 函数（包括 `CString`）都支持 Unicode。  `CString` 还提供 Unicode\/ANSI 转换函数。  
+-   数据库类成员函数，除了所有 MFC 函数都都支持 Unicode，包括`CString`。 `CString`此外提供了 Unicode/ANSI 转换函数。  
   
--   运行库提供所有字符串处理函数的 Unicode 版本。（运行库还提供适合 Unicode 或 MBCS 的可移植版本。  这些版本是 **\_tcs** 宏。）  
+-   运行时库提供所有字符串处理函数的 Unicode 的版本。 （运行时库还提供了合适的可移植版本为 Unicode 或 MBCS。 这些是**_tcs**宏。)  
   
--   Tchar.h 提供可移植的数据类型以及用于转换字符串和字符的 **\_T** 宏。  有关更多信息，请参见 [Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
+-   Tchar.h 提供可移植数据类型和**_T**宏用于转换字符串和字符。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
   
--   运行库提供 **main** 的宽字符版本。  使用 **wmain** 可使应用程序成为 Unicode 识别的应用程序。  
+-   运行时库提供的宽字符版本**主要**。 使用**wmain**使 Unicode 感知应用程序。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [支持 Unicode](../text/support-for-unicode.md)

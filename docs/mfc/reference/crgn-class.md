@@ -57,11 +57,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57bf810ed1e44ee04b9018da3987c0232fca5e28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d5556db19d7f0ec92f915dda49dfeb24390ab70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crgn-class"></a>CRgn 类
 封装一个 Windows 图形设备接口 (GDI) 区域。  
@@ -124,7 +125,7 @@ class CRgn : public CGdiObject
   
  `CRgn`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="combinergn"></a>CRgn::CombineRgn  
@@ -764,7 +765,7 @@ void SetRectRgn(LPCRECT lpRect);
   
  使用此函数，而不是`CreateRectRgn`成员函数以避免对本地内存管理器的调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

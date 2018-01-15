@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,37 +13,19 @@ f1_keywords:
 - AFXDB_/CLongBinary::CLongBinary
 - AFXDB_/CLongBinary::m_dwDataLength
 - AFXDB_/CLongBinary::m_hData
-dev_langs:
-- C++
-helpviewer_keywords:
-- BLOB (binary large object)
-- CLongBinary class
-- BLOB (binary large object), CLongBinary class
+dev_langs: C++
+helpviewer_keywords: CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 4f06c6ef0b988a348f074d50ce7a33e8015a20fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clongbinary-class"></a>CLongBinary 类
 简化对数据库中超大二进制数据对象（经常称作 BLOB，即“二进制大对象”）的使用。  
@@ -65,7 +46,7 @@ class CLongBinary : public CObject
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|包含以字节为单位的句柄存储在数据对象的实际大小`m_hData`。|  
 |[CLongBinary::m_hData](#m_hdata)|包含 Windows`HGLOBAL`实际映像对象的句柄。|  
@@ -80,15 +61,15 @@ class CLongBinary : public CObject
   
  当销毁记录集，嵌入`CLongBinary`对象也会被销毁，并其析构函数释放`HGLOBAL`数据句柄。  
   
- 有关大型对象和用法的详细信息`CLongBinary`，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)和[记录集︰ 处理大数据项目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。  
+ 有关大型对象和用法的详细信息`CLongBinary`，请参阅文章[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)和[记录集： 处理大数据项目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CLongBinary`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdb_.h  
+## <a name="requirements"></a>惠?  
+ **标头：** afxdb_.h  
   
 ##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
  构造 `CLongBinary` 对象。  
@@ -114,8 +95,7 @@ SQLULEN m_dwDataLength;
 HGLOBAL m_hData;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CRecordset 类](../../mfc/reference/crecordset-class.md)
-

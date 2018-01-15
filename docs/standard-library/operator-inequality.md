@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,23 +14,22 @@ f1_keywords:
 - std.operator!=
 - std.!=
 - operator!=
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '!= operator'
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0579b893d1dd5c383be99117da3e879ed6a7612f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 6549656d90a95281cd07de2f4675e53ecf3871f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator"></a>operator!=
 > [!NOTE]
@@ -51,7 +49,6 @@ bool operator!=(
 ## <a name="return-value"></a>返回值  
  返回 `!(left == right)`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<sample container>](../standard-library/sample-container.md)
-
 

@@ -1,31 +1,31 @@
 ---
-title: "A.23   Examples of the ordered Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "有序指令 A.23 示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f8fa761b-7fc5-4447-95f9-8571e9ca31bf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 83d77bb4f064a7ee69b013b36de919b57486b3e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.23   Examples of the ordered Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以使多个与 `for` 的有序部分指定与 `ordered` 子句。  ，因为 API 指定以下内容，第一个示例是不符合:  
+# <a name="a23---examples-of-the-ordered-directive"></a>A.23   ordered 指令的示例
+可以具有多个有序的部分`for`指定`ordered`子句。 第一个示例是不符合要求，因为指定以下 API:  
   
- “的循环的迭代与 `for` 结构化不可多次执行相同 `ordered` 指令，因此，它无法执行多个 `ordered` 指令”。\(请参见在第 22 页\) 的 [第2.6.6部分](../../parallel/openmp/2-6-6-ordered-construct.md)  
+ "具有循环的迭代`for`构造不能执行相同`ordered`指令超过一次，而且它不能执行多个`ordered`指令。" (请参阅[部分 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md)在页上 22)  
   
- 不在此示例中，所有迭代执行 2 个有序的部分:  
+ 在此不符合要求的示例中，所有迭代都执行有序的两个部分：  
   
 ```  
 #pragma omp for ordered  
@@ -41,7 +41,7 @@ for (i=0; i<n; i++)
 }  
 ```  
   
- 下面的示例演示带有多个有序的 `for` :  
+ 以下符合示例所示`for`与多个经过排序的节：  
   
 ```  
 #pragma omp for ordered  

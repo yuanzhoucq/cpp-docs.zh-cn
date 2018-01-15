@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a5d494d28872bf5e59f0c436ceb037bd36a94c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6338ed2bbaa7d16dc2723f4bdcaa93ea0a3f3e31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream 类
 描述了控制元素和编码对象插入 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的流缓冲区的对象。  
@@ -71,13 +72,13 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 |[rdbuf](#rdbuf)|向 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> 返回 `pointer` 类型的已存储流缓冲区的地址。|  
 |[str](#str)|设置或获取字符串缓冲区中的文本，而无需更改写入位置。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<sstream>  
   
  **命名空间：** std  
   
 ##  <a name="allocator_type"></a>  basic_ostringstream::allocator_type  
- 该类型是模板参数 `Alloc`的同义词。  
+ 该类型是模板参数 `Alloc` 的同义词。  
   
 ```  
 typedef Alloc allocator_type;  
@@ -144,7 +145,7 @@ void str(
 ### <a name="example"></a>示例  
   请参阅 [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)，了解使用 **str** 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)

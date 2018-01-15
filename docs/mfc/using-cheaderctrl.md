@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 316066f8476d413f9a92e11cc69f709080829f18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88b4da42944c3c42e48fae4c0cf503f7f6ace1a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 使用标头控件，由类表示[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)，以显示有关纵栏表列表的列标题。 例如，标头控件将用于实施电子表格中的列控制。  
@@ -57,6 +58,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [处理标题控件通知](../mfc/processing-header-control-notifications.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

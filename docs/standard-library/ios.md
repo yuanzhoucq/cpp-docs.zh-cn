@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04992f8324196c5fd762ba01a96fff7cc6ba6539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23fbac008c6954830fb016099fdf7ebc45ba685f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 定义作为 iostreams 操作的基础的多种类型和函数。 此标头通常包含在另一 iostream 标头中；很少会直接包含它。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如，[noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除 **str** 对象中的格式标志 `ios_base::skipws`，它可以是其中一种类型。  
   
- 还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如：  
+ 还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如:  
   
 ```
 istr>> noskipws;
@@ -91,7 +92,7 @@ istr>> noskipws;
 |[fpos](../standard-library/fpos-class.md)|此模板类描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的全部信息。|  
 |[ios_base](../standard-library/ios-base-class.md)|此类描述了不依赖模板参数的输入和输出流通用的存储和成员函数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   

@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 705ffaa38222d83fe02e20f20c47ee4c06f22294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
 一个模板容器适配器类，它提供功能的限制，限制一些基本容器类型顶端元素的访问权限，并且该类通常为最大类或具有最高优先级。 可以将新元素添加到 priority_queue，并且可以检查或删除 priority_queue 的顶级元素。  
@@ -98,7 +99,7 @@ class priority_queue
 |[size](#size)|返回 `priority_queue` 中的元素数量。|  
 |[top](#top)|返回对 `priority_queue` 顶部的最大元素的常量引用。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<queue>  
   
  **命名空间：** std  
@@ -111,7 +112,7 @@ typedef Container container_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型是模板参数 `Container` 的同义词。 C++ 标准库序列容器类 `deque` 和默认类 `vector` 满足用作 priority_queue 对象的基容器的要求。 也可能使用满足要求的用户定义的类型。  
+ 该类型是模板参数 `Container` 的同义词。 C++ 标准库序列容器类 `deque` 和默认类 `vector` 满足用作 priority_queue 对象的基容器的要求。 也可能使用满足要求的用户定义的类型。  
   
  有关 `Container` 的详细信息，请参阅 [priority_queue 类](../standard-library/priority-queue-class.md)主题的备注部分。  
   
@@ -555,7 +556,7 @@ The value_type is AnInt = 69
 The element at the top of the priority_queue is 69.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

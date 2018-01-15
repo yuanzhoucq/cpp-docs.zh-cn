@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 103e76f32e9b7296af53fbebbd1d837991facec5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>通过代码向导对控件进行类型安全的访问
 如果你熟悉 DDX 功能，你可以使用中的控件属性[添加成员变量向导](../ide/add-member-variable-wizard.md)创建类型安全访问。 这种方法是比创建控件而不通过代码向导更容易。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
  有关控件的详细信息，请参阅[控件](../mfc/controls-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对在对话框中的控件类型安全访问](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)   
  [对控件进行类型安全的访问（不使用代码向导）](../mfc/type-safe-access-to-controls-without-code-wizards.md)

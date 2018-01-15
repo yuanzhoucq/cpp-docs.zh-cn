@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67848252bf875303c8120c9d4935e0135f705489
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0699e589340081d5dd13e8ab879094445005e327
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-library-conventions"></a>C++ 库约定
 C++ 库遵循的约定与标准 C 库大致相同，同时还遵循此处所述的一些其他约定。  
@@ -57,7 +58,7 @@ C++ 库遵循的约定与标准 C 库大致相同，同时还遵循此处所述�
   
 -   库提供的函数（包括可替换函数的默认版本）*最多*可能会引发任何异常规范中列出的那些异常。 库提供的析构函数不会引发异常。 标准 C 库中的函数可能会传播异常，比如当 `qsort` 调用比较函数时引发的异常，但它们不会另行引发异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

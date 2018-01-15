@@ -345,11 +345,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3c0888ef6fd2980eefed9a6e5c503454201c3dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 用于开发 OLE 控件的重要基类。  
@@ -574,7 +575,7 @@ class COleControl : public CWnd
   
  `COleControl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxctl.h  
   
 ##  <a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
@@ -1830,7 +1831,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
  指向对象的指针`IDropTarget`接口。 由于它不具有一个窗口，无窗口对象无法注册`IDropTarget`接口。 但是，若要参与拖放，无窗口对象仍可实现接口，以及返回在`GetWindowlessDropTarget`。  
   
 ### <a name="remarks"></a>备注  
- 通常，这需要将该控件的窗口注册为放置目标。 但由于该控件没有自己的窗口，以容器将使用自己的窗口作为放置目标。 在控件只需要提供的一个实现`IDropTarget`接口到容器可以委托调用在适当的时间。 例如:   
+ 通常，这需要将该控件的窗口注册为放置目标。 但由于该控件没有自己的窗口，以容器将使用自己的窗口作为放置目标。 在控件只需要提供的一个实现`IDropTarget`接口到容器可以委托调用在适当的时间。 例如:  
   
  [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
@@ -2231,7 +2232,7 @@ virtual BOOL OnEdit(
 ### <a name="remarks"></a>备注  
  此操作调用控件的相同效果`OLEIVERB_UIACTIVATE`谓词。  
   
- 此函数通常用作的处理程序函数`ON_OLEVERB`消息映射条目。 这使"编辑"谓词出现在控件的"对象"菜单。 例如:   
+ 此函数通常用作的处理程序函数`ON_OLEVERB`消息映射条目。 这使"编辑"谓词出现在控件的"对象"菜单。 例如:  
   
  [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
@@ -3763,7 +3764,7 @@ virtual LRESULT WindowProc(
 ### <a name="remarks"></a>备注  
  调用此函数可将特定消息通过控件的消息映射调度。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CIRC3](../../visual-cpp-samples.md)   
  [MFC 示例 TESTHELP](../../visual-cpp-samples.md)   
  [COlePropertyPage 类](../../mfc/reference/colepropertypage-class.md)   

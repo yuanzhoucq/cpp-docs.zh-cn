@@ -30,11 +30,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 422d01cf138da0468a430e1a802369e8ecda093a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff31849020c9daed7999ae1569e8c12249a4b834
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propagatorblock-class"></a>propagator_block 类
 `propagator_block` 类是同时为源和目标的消息块的抽象基类。 它合并了 `source_block` 和 `target_block` 类的功能。  
@@ -107,7 +108,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  `propagator_block`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -303,7 +304,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
 virtual void unlink_sources();
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [source_block 类](source-block-class.md)   
  [ITarget 类](itarget-class.md)

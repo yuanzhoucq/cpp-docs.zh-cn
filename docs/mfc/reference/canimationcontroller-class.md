@@ -114,11 +114,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8f76e8ace4eff6bd02efeba8a42554a27618bc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 类
 实现动画控制器，它为创建和管理动画提供了中央接口。  
@@ -190,7 +191,7 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|关键帧，表示情节提要的开头。|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|指定动画控制器是否为有效。 如果当前操作系统不支持 Windows 动画 API，此成员设置为 FALSE。|  
@@ -209,7 +210,7 @@ class CAnimationController : public CObject;
   
  `CAnimationController`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController  
@@ -998,5 +999,5 @@ virtual void UpdateAnimationManager();
 ### <a name="remarks"></a>备注  
  调用此方法将推进到当前时间的动画管理器、 根据需要更改情节提要的状态和更新到相应的任何动画变量内插值。 此方法在内部调用 IUIAnimationTimer::GetTime(timeNow) 和 IUIAnimationManager::Update(timeNow)。 重写此方法在派生类以自定义此行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

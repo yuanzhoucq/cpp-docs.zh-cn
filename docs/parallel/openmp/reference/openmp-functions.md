@@ -1,53 +1,54 @@
 ---
-title: "OpenMP Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "OpenMP 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c01967e47d8108803fdadd9c9cfe746a4d477459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# OpenMP Functions
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-提供指向用于 OpenMP API 的功能。  
+# <a name="openmp-functions"></a>OpenMP 函数
+提供指向 OpenMP API 中使用的函数。  
   
- OpenMP 标准的 Visual C\+\+ 实现包括以下功能。  
+ 标准 OpenMP 的 Visual c + + 实现包括以下函数。  
   
-|功能|说明|  
-|--------|--------|  
-|[omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Uninitializes 锁。|  
-|[omp\_destroy\_nest\_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Uninitializes 可套上的锁。|  
-|[omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|返回一个值线程数可用在后续并行区域是否可以在运行时调整。|  
-|[omp\_get\_max\_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|返回等于或大于线程数可用的整数，如果没有 [num\_threads](../../../parallel/openmp/reference/num-threads.md) 的并行区域在代码此时定义。|  
-|[omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md)|返回一个值嵌套并行是否启用。|  
-|[omp\_get\_num\_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|返回可用处理器的数目，则在函数调用时。|  
-|[omp\_get\_num\_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|在并行区域返回线程的数量。|  
-|[omp\_get\_thread\_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|返回对其线程团队中的线程的线程数。|  
-|[omp\_get\_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|返回秒数。处理器时钟计时周期之间的。|  
-|[omp\_get\_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|时间的秒返回一个值从少数 elapsed 点。|  
-|[omp\_in\_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|返回非零，则调用从并行区域内。|  
-|[omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)|初始化一个简单的锁。|  
-|[omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|初始化锁。|  
-|[omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|指示线程的数目可用在后续并行区域可以在运行时调整。|  
-|[omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)|阻塞线程执行，直至锁可用。|  
-|[omp\_set\_nest\_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|阻塞线程执行，直至锁可用。|  
-|[omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md)|使嵌套并行。|  
-|[omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|在后续并行区域设置线程数，因此，除非重写由 [num\_threads](../../../parallel/openmp/reference/num-threads.md) 子句。|  
-|[omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)|尝试设置锁定，但不阻塞线程上执行。|  
-|[omp\_test\_nest\_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|尝试设置可套上的锁定，但不阻塞线程上执行。|  
-|[omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|释放锁。|  
-|[omp\_unset\_nest\_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|释放可套上的锁。|  
+|函数|描述|  
+|--------------|-----------------|  
+|[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|取消初始化锁。|  
+|[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|取消初始化 nestable 锁。|  
+|[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|返回一个值，该值指示是否可以由运行时调整后续并行区域中的可用线程数。|  
+|[omp_get_max_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|返回一个整数，等于或大于如果而无需并行区域可用的线程数[num_threads](../../../parallel/openmp/reference/num-threads.md)在该点在代码中定义。|  
+|[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)|返回一个值，该值指示是否启用了嵌套并行度。|  
+|[omp_get_num_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|返回调用函数时都可用的处理器数。|  
+|[omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|并行区域中返回线程的数。|  
+|[omp_get_thread_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|返回在其线程团队中的线程正在执行线程的数。|  
+|[omp_get_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|返回处理器时钟计时周期之间的秒数。|  
+|[omp_get_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|返回从某一时刻已用时间的秒中的值。|  
+|[omp_in_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|返回非零，如果从调用并行区域内。|  
+|[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)|初始化一个简单的锁定。|  
+|[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|初始化锁。|  
+|[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|指示运行时可以进行调整了后续并行区域中的可用线程数。|  
+|[omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)|块线程执行，直到锁可用。|  
+|[omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|块线程执行，直到锁可用。|  
+|[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)|启用嵌套并行度。|  
+|[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|在后续的并行区域设置的线程数，除非通过重写[num_threads](../../../parallel/openmp/reference/num-threads.md)子句。|  
+|[omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)|尝试设置锁，但不会阻止线程执行。|  
+|[omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|尝试设置 nestable 锁定，但不会阻止线程执行。|  
+|[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|释放锁。|  
+|[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|释放 nestable 锁定。|  
   
-## 请参阅  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>请参阅  
+ [库参考](../../../parallel/openmp/reference/openmp-library-reference.md)

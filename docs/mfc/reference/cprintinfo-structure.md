@@ -1,0 +1,297 @@
+---
+title: "CPrintInfo 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: CPrintInfo
+dev_langs: C++
+helpviewer_keywords: CPrintInfo structure [MFC]
+ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4943554e67d43b6dc1652a984a0e758af9d6951b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
+---
+# <a name="cprintinfo-structure"></a>CPrintInfo 结构
+存储有关打印或打印预览作业的信息。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+struct CPrintInfo  
+```  
+  
+## <a name="members"></a>成员  
+  
+### <a name="public-methods"></a>公共方法  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CPrintInfo::GetFromPage](#getfrompage)|返回打印的第一页的数目。|  
+|[CPrintInfo::GetMaxPage](#getmaxpage)|返回文档的最后一页的数目。|  
+|[CPrintInfo::GetMinPage](#getminpage)|返回文档的第一页的数目。|  
+|[CPrintInfo::GetOffsetPage](#getoffsetpage)|返回前面在组合的 DocObject 打印作业中打印的 DocObject 项的第一页的页的数目。|  
+|[CPrintInfo::GetToPage](#gettopage)|返回打印的最后一页的数目。|  
+|[CPrintInfo::SetMaxPage](#setmaxpage)|设置文档的最后一页的数量。|  
+|[CPrintInfo::SetMinPage](#setminpage)|设置文档的第一页的数量。|  
+  
+### <a name="public-data-members"></a>公共数据成员  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|包含一个标志，指示框架是否应继续打印循环。|  
+|[CPrintInfo::m_bDirect](#m_bdirect)|包含一个标志，指示是否在直接 （不显示打印对话框中） 打印文档。|  
+|[CPrintInfo::m_bDocObject](#m_bdocobject)|包含一个标志，指示正在打印的文档是否 DocObject。|  
+|[CPrintInfo::m_bPreview](#m_bpreview)|包含一个标志，指示是否正在预览文档。|  
+|[CPrintInfo::m_dwFlags](#m_dwflags)|指定 DocObject 打印操作。|  
+|[CPrintInfo::m_lpUserData](#m_lpuserdata)|包含指向用户创建结构的指针。|  
+|[CPrintInfo::m_nCurPage](#m_ncurpage)|标识当前打印的页的页码。|  
+|[CPrintInfo::m_nJobNumber](#m_njobnumber)|指定由当前的打印作业操作系统分配的作业数|  
+|[CPrintInfo::m_nNumPreviewPages](#m_nnumpreviewpages)|标识在预览窗口中; 中显示的页面数1 或 2。|  
+|[CPrintInfo::m_nOffsetPage](#m_noffsetpage)|在组合的 DocObject 打印作业中指定特定 DocObject 的第一页的偏移的量。|  
+|[CPrintInfo::m_pPD](#m_ppd)|包含指向的`CPrintDialog`用于打印对话框中的对象。|  
+|[CPrintInfo::m_rectDraw](#m_rectdraw)|指定一个定义当前可用页面区域的矩形。|  
+|[CPrintInfo::m_strPageDesc](#m_strpagedesc)|包含页号显示的格式字符串。|  
+  
+## <a name="remarks"></a>备注  
+ `CPrintInfo`是一种结构，并且没有基类。  
+  
+ 框架创建的对象`CPrintInfo`每次打印或打印预览命令会选择，并在命令完成时才销毁它。  
+  
+ `CPrintInfo`包含有关打印作业作为一个整体，如要打印的页范围和打印作业，例如当前打印页的当前状态信息。 某些信息存储在一个关联[CPrintDialog](../../mfc/reference/cprintdialog-class.md)对象; 此对象包含由用户在打印对话框中输入的值。  
+  
+ A`CPrintInfo`对象在打印期间传递框架和视图类之间和用于两个之间交换信息。 例如，框架告知视图类要通过指定的值打印的文档的页`m_nCurPage`的成员`CPrintInfo`; 视图类检索值，并执行指定的页的实际打印。  
+  
+ 另一个示例是在其中文档的长度，直到才知道它打印这种情况。 在此情况下，视图类测试结尾文档的每次打印一页。 视图类达到结束后，设置`m_bContinuePrinting`的成员`CPrintInfo`到**FALSE**; 这可告知要停止打印循环的框架。  
+  
+ `CPrintInfo`成员函数使用`CView`列出在"另请参阅。" 有关通过 Microsoft 基础类库提供的打印体系结构的详细信息，请参阅[框架窗口](../../mfc/frame-windows.md)和[文档/视图体系结构](../../mfc/document-view-architecture.md)和文章[打印](../../mfc/printing.md)和[打印： 多页文档](../../mfc/multipage-documents.md)。  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
+ `CPrintInfo`  
+  
+## <a name="requirements"></a>惠?  
+ **标头：** afxext.h  
+  
+##  <a name="getfrompage"></a>CPrintInfo::GetFromPage  
+ 调用此函数可检索要打印的第一页的次数。  
+  
+```  
+UINT GetFromPage() const;
+
+ 
+```  
+  
+### <a name="return-value"></a>返回值  
+ 要打印的第一页的数。  
+  
+### <a name="remarks"></a>备注  
+ 这是由用户在打印对话框中，指定的值并存储在`CPrintDialog`所引用对象`m_pPD`成员。 如果用户未指定一个值，则默认值为文档的第一页。  
+  
+##  <a name="getmaxpage"></a>CPrintInfo::GetMaxPage  
+ 调用此函数可检索文档的最后一页的次数。  
+  
+```  
+UINT GetMaxPage() const;
+
+ 
+```  
+  
+### <a name="return-value"></a>返回值  
+ 文档的最后一页的数。  
+  
+### <a name="remarks"></a>备注  
+ 此值存储在`CPrintDialog`所引用对象`m_pPD`成员。  
+  
+##  <a name="getminpage"></a>CPrintInfo::GetMinPage  
+ 调用此函数可检索文档的第一页的次数。  
+  
+```  
+UINT GetMinPage() const;
+
+ 
+```  
+  
+### <a name="return-value"></a>返回值  
+ 文档的第一页的数。  
+  
+### <a name="remarks"></a>备注  
+ 此值存储在`CPrintDialog`所引用对象`m_pPD`成员。  
+  
+##  <a name="getoffsetpage"></a>CPrintInfo::GetOffsetPage  
+ 调用此函数可检索偏移量，从 DocObject 客户端打印多个 DocObject 项时。  
+  
+```  
+UINT GetOffsetPage() const;
+
+ 
+```  
+  
+### <a name="return-value"></a>返回值  
+ 前面在组合的 DocObject 打印作业中打印的 DocObject 项的第一页的页面数。  
+  
+### <a name="remarks"></a>备注  
+ 此值引用的**m_nOffsetPage**成员。 您的文档的第一页将为编号**m_nOffsetPage**值 + 1 作为与其他活动文档 DocObject 打印时。 **M_nOffsetPage**成员是有效才**m_bDocObject**值是**TRUE**。  
+  
+##  <a name="gettopage"></a>CPrintInfo::GetToPage  
+ 调用此函数可检索要打印的最后一页的次数。  
+  
+```  
+UINT GetToPage() const;
+
+ 
+```  
+  
+### <a name="return-value"></a>返回值  
+ 要打印的最后一页的数。  
+  
+### <a name="remarks"></a>备注  
+ 这是由用户在打印对话框中，指定的值并存储在`CPrintDialog`所引用对象`m_pPD`成员。 如果用户未指定一个值，则默认值为文档的最后一页。  
+  
+##  <a name="m_bcontinueprinting"></a>CPrintInfo::m_bContinuePrinting  
+ 包含一个标志，指示框架是否应继续打印循环。  
+  
+### <a name="remarks"></a>备注  
+ 如果你正在打印时分页，您可以将此成员设置为**FALSE**的重写中`CView::OnPrepareDC`后已到达文档的结尾。 不需要修改此变量，如果已指定开头的打印作业使用文档的长度`SetMaxPage`成员函数。 `m_bContinuePrinting`成员是类型的公共变量**BOOL**。  
+  
+##  <a name="m_bdirect"></a>CPrintInfo::m_bDirect  
+ 框架将此成员设置为**TRUE**如果直接打印，则将不打印对话框中**FALSE**否则为。  
+  
+### <a name="remarks"></a>备注  
+ 通常情况下绕过打印对话框，打印从 shell 或执行打印时使用的命令 ID **ID_FILE_PRINT_DIRECT**。  
+  
+ 你通常不会更改此成员，但如果你更改它，将其更改之前调用[CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting)的重写中[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)。  
+  
+##  <a name="m_bdocobject"></a>CPrintInfo::m_bDocObject  
+ 包含一个标志，指示正在打印的文档是否 DocObject。  
+  
+### <a name="remarks"></a>备注  
+ 数据成员`m_dwFlags`和**m_nOffsetPage**是无效的除非此标志是**TRUE**。  
+  
+##  <a name="m_bpreview"></a>CPrintInfo::m_bPreview  
+ 包含一个标志，指示是否正在预览文档。  
+  
+### <a name="remarks"></a>备注  
+ 这是设置的具体取决于命令用户执行的框架。 打印对话框中不显示打印预览作业。 **M_bPreview**成员是类型的公共变量**BOOL**。  
+  
+##  <a name="m_dwflags"></a>CPrintInfo::m_dwFlags  
+ 包含的指定 DocObject 打印操作的标志的组合。  
+  
+### <a name="remarks"></a>备注  
+ 有效仅当数据成员**m_bDocObject**是**TRUE**。  
+  
+ 标志可以是一个或多个以下值：  
+  
+- **PRINTFLAG_MAYBOTHERUSER**  
+  
+- **PRINTFLAG_PROMPTUSER**  
+  
+- **PRINTFLAG_USERMAYCHANGEPRINTER**  
+  
+- **PRINTFLAG_RECOMPOSETODEVICE**  
+  
+- **PRINTFLAG_DONTACTUALLYPRINT**  
+  
+- **PRINTFLAG_FORCEPROPERTIES**  
+  
+- **PRINTFLAG_PRINTTOFILE**  
+  
+##  <a name="m_lpuserdata"></a>CPrintInfo::m_lpUserData  
+ 包含指向用户创建结构的指针。  
+  
+### <a name="remarks"></a>备注  
+ 你可以使用此存储不希望将存储在视图类的特定于打印的数据。 **M_lpUserData**成员是类型的公共变量**LPVOID**。  
+  
+##  <a name="m_ncurpage"></a>CPrintInfo::m_nCurPage  
+ 包含当前页的页码。  
+  
+### <a name="remarks"></a>备注  
+ 框架调用`CView::OnPrepareDC`和`CView::OnPrint`一次为每个页面的文档，此成员为每个时间; 指定不同的值及其值的范围从返回的值`GetFromPage`到返回的`GetToPage`。 使用此成员中的替代`CView::OnPrepareDC`和`CView::OnPrint`打印文档的指定的页。  
+  
+ 当第一次调用预览模式时，框架将读取以确定哪一页的文档应最初预览此成员的值。 你可以将此成员的值设置的重写中`CView::OnPreparePrinting`输入预览模式时维护文档中的用户的当前新位置。 `m_nCurPage`成员是类型的公共变量**UINT**。  
+  
+##  <a name="m_njobnumber"></a>CPrintInfo::m_nJobNumber  
+ 指示由当前的打印作业操作系统分配的作业数。  
+  
+### <a name="remarks"></a>备注  
+ 此值可能为**SP_ERROR**如果尚未尚未打印作业 (即，如果`CPrintInfo`对象新构造并不尚未已用于打印)，或如果在启动作业时出错。  
+  
+##  <a name="m_nnumpreviewpages"></a>CPrintInfo::m_nNumPreviewPages  
+ 包含以预览模式; 显示的页面数它可以是 1 或 2。  
+  
+### <a name="remarks"></a>备注  
+ **M_nNumPreviewPages**成员是类型的公共变量**UINT**。  
+  
+##  <a name="m_noffsetpage"></a>CPrintInfo::m_nOffsetPage  
+ 包含在组合的 DocObject 打印作业中前面特定 DocObject 的第一页的页面数。  
+  
+##  <a name="m_ppd"></a>CPrintInfo::m_pPD  
+ 包含指向的`CPrintDialog`用来显示打印作业的打印对话框中的对象。  
+  
+### <a name="remarks"></a>备注  
+ `m_pPD`成员是作为指向的声明的公共变量`CPrintDialog`。  
+  
+##  <a name="m_rectdraw"></a>CPrintInfo::m_rectDraw  
+ 指定以逻辑坐标表示的页的可用绘图区域。  
+  
+### <a name="remarks"></a>备注  
+ 你可能想要的重写中引用此`CView::OnPrint`。 您可以使用此成员来跟踪哪一区域仍会保持可用后打印页眉、 页脚和等等。 **M_rectDraw**成员是类型的公共变量`CRect`。  
+  
+##  <a name="m_strpagedesc"></a>CPrintInfo::m_strPageDesc  
+ 包含用于在打印预览，则为过程中显示页码的格式字符串此字符串包含这两个子字符串、 单页面显示以及双页面显示，每个 \n 字符终止。  
+  
+### <a name="remarks"></a>备注  
+ 框架将使用默认值为"页 %u\npages%u-%u\n"。 如果你需要不同格式的页码，指定格式字符串中的重写`CView::OnPreparePrinting`。 **M_strPageDesc**成员是类型的公共变量`CString`。  
+  
+##  <a name="setmaxpage"></a>CPrintInfo::SetMaxPage  
+ 调用此函数可指定文档的最后一页的数目。  
+  
+```  
+void SetMaxPage(UINT nMaxPage);
+```  
+  
+### <a name="parameters"></a>参数  
+ *nMaxPage*  
+ 文档的最后一页的数。  
+  
+### <a name="remarks"></a>备注  
+ 此值存储在`CPrintDialog`所引用对象`m_pPD`成员。 如果它在打印之前知道文档的长度，则调用此函数的重写从`CView::OnPreparePrinting`。 如果文档的长度依赖于用户在打印对话框中指定的设置，则调用此函数的重写从`CView::OnBeginPrinting`。 如果，直到它打印才知道文档的长度，使用`m_bContinuePrinting`成员来控制打印循环。  
+  
+### <a name="example"></a>示例  
+  请参阅示例[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)。  
+  
+##  <a name="setminpage"></a>CPrintInfo::SetMinPage  
+ 调用此函数可指定文档的第一页的数目。  
+  
+```  
+void SetMinPage(UINT nMinPage);
+```  
+  
+### <a name="parameters"></a>参数  
+ *nMinPage*  
+ 文档的第一页的数。  
+  
+### <a name="remarks"></a>备注  
+ 页码通常从 1 开始。 此值存储在`CPrintDialog`所引用对象`m_pPD`成员。  
+  
+## <a name="see-also"></a>请参阅  
+ [MFC 示例 DIBLOOK](../../visual-cpp-samples.md)   
+ [层次结构图](../../mfc/hierarchy-chart.md)   
+ [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)   
+ [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)   
+ [CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)   
+ [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)   
+ [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)   
+ [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
+
+
+

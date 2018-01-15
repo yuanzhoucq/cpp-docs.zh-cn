@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58d9327ee1436061dcfff52a8b5abd6c42bc1b9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fb4ba350a9fb0f17b7ca242f9b5106ac3b1edf50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr 析构函数
 取消初始化 ComPtr 的实例。  
@@ -30,10 +33,10 @@ ms.lasthandoff: 10/24/2017
 WRL_NOTHROW ~ComPtr();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ComPtr 类](../windows/comptr-class.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03c88c5550bf5e7a54269a3ea521cd1767d50a7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb2fdb202c9f52b941fa20877c11a7f97e1b5c9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthroughs-mfc"></a>演练 (MFC)
 本节包含的文章为你演练与新的 MFC 库功能相关的各种任务。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/24/2017
  [演练：向 MFC 项目添加动画](../mfc/walkthrough-adding-animation-to-an-mfc-project.md)  
  演示如何将图形对象添加到项目，并介绍了如何对它进行动画处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)
 

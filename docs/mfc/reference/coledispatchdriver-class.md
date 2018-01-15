@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e19bfb11a564f23ce41bbc963a19fd239476dfb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 059ff922689eaf354d4b4ae9b89fb49ab8c5a885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 实现 OLE 自动化的客户端。  
@@ -102,7 +103,7 @@ class COleDispatchDriver
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `COleDispatchDriver`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>COleDispatchDriver::AttachDispatch  
@@ -374,7 +375,7 @@ void AFX_CDECL SetProperty(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CALCDRIV](../../visual-cpp-samples.md)   
  [MFC 示例 ACDUAL](../../visual-cpp-samples.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

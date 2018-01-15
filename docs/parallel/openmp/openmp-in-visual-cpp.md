@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7c1681daf0f0ccae7d6307b2f6c000c01a313c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 734b118cfdd1523379e9fb1e5e157bf9da9824af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ 中的 OpenMP
 OpenMP C 和 c + + 应用程序接口，可以编写的应用程序有效地使用多个处理器。 Visual c + + 支持 OpenMP 2.0 标准。  
@@ -40,7 +41,7 @@ OpenMP C 和 c + + 应用程序接口，可以编写的应用程序有效地使�
  讨论 OpenMP C 和 c + + API，从 OpenMP 体系结构审阅委员会版本 2.0 规范中所述。  
   
 ## <a name="related-sections"></a>相关章节  
- [/openmp （启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)  
+ [/openmp（启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)  
  使编译器处理`#pragma omp`。  
   
  [预定义宏](../../preprocessor/predefined-macros.md)  

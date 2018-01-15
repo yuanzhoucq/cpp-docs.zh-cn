@@ -23,17 +23,17 @@ helpviewer_keywords:
 - std::error_condition::category
 - std::error_condition::clear
 - std::error_condition::message
-- 
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8109db3a6607abd1792485c93a59795d432f824
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcondition-class"></a>error_condition 类
 表示用户定义的错误代码。  
@@ -78,7 +78,7 @@ class error_condition;
 |[operator=](#op_eq)|向 `error_condition` 对象分配新的枚举值。|  
 |[operator bool](#op_bool)|转换 `error_condition` 类型的变量。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<system_error>  
   
  **命名空间：** std  
@@ -92,7 +92,7 @@ void assign(value_type val, const error_category& _Cat);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`val`|要存储在 `error_code` 中的错误代码值。|  
 |`_Cat`|要存储在 `error_code` 中的错误类别。|  
@@ -138,7 +138,7 @@ error_condition(_Enum _Errcode,
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`val`|要存储在 `error_condition` 中的错误代码值。|  
 |`_Cat`|要存储在 `error_condition` 中的错误类别。|  
@@ -211,7 +211,7 @@ bool operator<(const error_condition& right) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`right`|要比较的 `error_condition` 对象。|  
   
@@ -279,7 +279,7 @@ typedef int value_type;
 ### <a name="remarks"></a>备注  
  该类型定义是 `int` 的同义词。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [error_category 类](../standard-library/error-category-class.md)   
  [<system_error>](../standard-library/system-error.md)
 

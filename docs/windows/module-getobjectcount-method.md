@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62e09aa2073c86c4bb4cc943e0bd90eee9b3c422
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ff4a38791f527800698d5e8a8c17c2fe6abd6134
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulegetobjectcount-method"></a>Module::GetObjectCount 方法
 检索此模块管理的对象数量。  
@@ -33,10 +36,10 @@ virtual long GetObjectCount() const;
 ## <a name="return-value"></a>返回值  
  此模块管理的当前对象数量。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [Module 类](../windows/module-class.md)

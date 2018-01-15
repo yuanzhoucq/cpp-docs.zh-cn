@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85737b3e62f77d4f2beea7928cfc589e8706e01a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef3f6fa8807a348388e34d2cb68cccc7cc684cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: graphics 命名空间枚举
 |||  
@@ -39,8 +40,8 @@ enum address_mode;
 ```  
 enum filter_mode;  
 ```  
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** amp_graphics.h **Namespace:** concurrency:: graphics
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

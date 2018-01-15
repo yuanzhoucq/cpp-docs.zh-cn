@@ -1,32 +1,33 @@
 ---
-title: "EventTargetArray::AddTail 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::AddTail"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddTail 方法"
+title: "Eventtargetarray:: Addtail 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::AddTail
+dev_langs: C++
+helpviewer_keywords: AddTail method
 ms.assetid: d0fafab9-049c-40e0-a40c-d126c9ee63e6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2ff008a60831ccce9a93bc3b4c4df8643db9c541
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# EventTargetArray::AddTail 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail 方法
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void AddTail(  
@@ -34,20 +35,20 @@ void AddTail(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `element`  
- 为附加的事件处理程序上。  
+ 指向要追加的事件处理程序的指针。  
   
-## 备注  
- 附加指定的事件处理程序对内部的结尾按事件处理程序。  
+## <a name="remarks"></a>备注  
+ 向事件处理程序在内部数组的末尾追加指定的事件处理程序。  
   
- AddTail\(\) 打算只能由 EventSource 类在内部使用。  
+ AddTail() 旨在仅 EventSource 类由内部使用。  
   
-## 要求  
- **标头：**event.h  
+## <a name="requirements"></a>惠?  
+ **标头：** event.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [EventTargetArray 类](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

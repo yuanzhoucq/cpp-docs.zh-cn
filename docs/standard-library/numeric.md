@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a4ffc7ad1e7fa512a51169e4155b54b7eca3194
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fae023ad0750e150c326ab094e2a89e48d2a39f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltnumericgt"></a>&lt;数字&gt;
 定义执行数值处理算法的容器模板函数。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 |[iota](../standard-library/numeric-functions.md#iota)|存储一个起始值，从第一个元素开始，在间隔 `value++` 内的每个元素中填充此值的连续递增值 (`[first, last)`)。|  
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|计算输入范围中从第一个元素到第 *i* 个元素的一系列总和，并在目标范围的第 *i* 个元素中存储每个总和的结果，或计算将求和运算替换为其他指定二元运算的一般化程序的结果。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

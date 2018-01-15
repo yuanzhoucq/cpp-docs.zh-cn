@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d949c1ff19be6f3b89673753fdaccc2996bbef36
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1037b8b81c9286ac1b1dd9303294b4300e7c9309
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>针对旧代码的多线程支持 (Visual C++)
 Visual c + + 允许你拥有多个并发线程同时运行的执行。 使用多线程处理，可以派生出后台任务，管理同时发生的输入流，管理用户界面和更多内容。  

@@ -1,32 +1,33 @@
 ---
-title: "progid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.progid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "progid attribute"
+title: "progid |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.progid
+dev_langs: C++
+helpviewer_keywords: progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 862629af7e279cf1f03a5e9adc9424b330ee1d90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# progid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-为 COM 对象指定 ProgID。  
+# <a name="progid"></a>progid
+指定 COM 对象的 ProgID。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,42 +36,41 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *name*  
- 表示对象的 ProgID。  
+ 表示的对象的 ProgID。  
   
- Progid 存在 \(CLSID\) 中使用的一个可读的版本类标识符标识 COM\/ActiveX 对象。  
+ Progid 提供用于标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读的版本。  
   
-## 备注  
- **progid** C\+\+ 特性可以为 COM 对象指定 ProgID。  ProgID 具有以下形式 *name1.name2.version*。  如果不为 ProgID 指定 *版本* 中，默认版本为 1。  如果未指定 *name1.name2*，默认名称为 *classname.classname**。* 如果未指定 **progid** ，并指定 **vi\_progid**， *name1.name2*从 **vi\_progid** 执行，并 \(下一个序号\) 版本追加。  
+## <a name="remarks"></a>备注  
+ **Progid** c + + 属性允许您指定的 COM 对象的 ProgID。 ProgID 形式具有窗体*name1.name2.version*。 如果不指定*版本*对于其 ProgID 的默认版本为 1。 如果不指定*name1.name2*，默认名称是*classname.classname*。 如果不指定**progid**而且你指定**vi_progid**， *name1.name2* ，将从**vi_progid**和 (下一步顺序追加数字） 版本。  
   
- 如果特性块使用 **progid** 也不使用 `uuid`，编译器将检查注册表查看 `uuid` 是否为指定的 **progid**存在。  如果 **progid** 未指定，则此版本 \(和 coclass 名称，因此，如果创建 coclass\) 将用于生成 **progid**。  
+ 如果使用的属性块**progid**也不使用`uuid`，编译器将检查注册表以查看是否`uuid`指定存在**progid**。 如果**progid**未指定，则将使用版本 （和组件类名称，如果创建组件类） 来生成**progid**。  
   
- **progid** 提示 **coclass** 属性，即，因此，如果指定 **progid**，它是内容并指定 **coclass** 和 **progid** 属性相同。  
+ **progid**意味着**组件类**特性，也就是说，如果你指定**progid**，它是与指定的相同步**组件类**和**progid**属性。  
   
- **progid** 特性使类自动注册以指定的名称。  生成的 .idl 文件不会显示 **progid** 值。  
+ **Progid**属性将导致一个类，以指定的名称下自动注册。 生成的.idl 文件将不会显示**progid**值。  
   
- 当此属性在使用 ATL 项目中时，属性的行为更改。  除了上面的行为以外，信息指定与此特性用于 **GetProgID** 功能，插入已 **coclass** 属性。  有关更多信息，请参见 [coclass](../windows/coclass.md) 属性。  
+ 当使用 ATL 项目中使用此属性时，该属性的行为更改。 除了上述行为，指定与此属性的信息用于**GetProgID**函数，通过插入**组件类**属性。 有关详细信息，请参阅[组件类](../windows/coclass.md)属性。  
   
-## 示例  
- 为 [coclass](../windows/coclass.md) 参见示例为 **progid**的示例使用。  
+## <a name="example"></a>示例  
+ 请参阅示例[组件类](../windows/coclass.md)的示例使用**progid**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
+|**适用对象**|**class**， `struct`|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [ProgID Key](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [ProgID 密钥](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fd0a194dc8f5b9272921a0445ecf5754ec2a4e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 014d0679be8a03b60c2e759b36c056b35784be78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-initialization"></a>OLE 初始化
 必须先初始化 OLE 系统并验证 DLL 是否是正确版本，然后应用程序才能使用 OLE 系统服务。 **AfxOleInit**函数初始化 OLE 系统 Dll。  
@@ -45,7 +46,7 @@ void AfxEnableControlContainer( );
 ### <a name="remarks"></a>备注  
  有关 OLE 控件 （现在称为 ActiveX 控件） 的详细信息，请参阅[ActiveX 控件主题](../mfc-activex-controls.md)。  
    
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxdisp.h  
 
   
@@ -72,8 +73,8 @@ BOOL AFXAPI AfxOleInit();
 > [!NOTE]
 >  MFC 应用程序必须初始化为单线程单元 (STA)。 如果调用[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中你`InitInstance`重写时，请指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxdisp.h
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

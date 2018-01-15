@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83d217cb749c350da45bcae2159e6b46d03f68cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f1607b5fc290c398350b9e5c9d81eb50088b61c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo 方法
 获取一个指向指定接口。  
@@ -46,10 +49,10 @@ __forceinline HRESULT CanCastTo(
 ## <a name="remarks"></a>备注  
  这是一个内部帮助程序函数，执行 QueryInterface 操作。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** implements.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Implements 结构](../windows/implements-structure.md)

@@ -16,16 +16,17 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 245952bd8dfb9acc8fc8550955232a30b9dbfe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 本主题介绍如何创建基于代理的基本应用程序。 在本演练中，你可以创建以异步方式从文本文件中读取数据的代理。 应用程序使用 adler-32 校验和算法来计算该文件的内容的校验和。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你必须了解以下主题来完成本演练：  
   
 - [异步代理](../../parallel/concrt/asynchronous-agents.md)  
@@ -187,7 +188,7 @@ Adler-32 sum is fefb0d75
 ## <a name="next-steps"></a>后续步骤  
  有关基于代理的应用程序的另一个示例，请参阅[演练： 使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
  [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)   
  [消息传递函数](../../parallel/concrt/message-passing-functions.md)   

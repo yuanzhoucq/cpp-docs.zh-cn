@@ -19,11 +19,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a2820daea9508145a200fc5dfd82098ac2572b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>并发运行时中的异常处理
 并发运行时使用 c + + 异常处理来告知许多类型的错误。 这些错误包括在您提供给任务和任务组的工作函数中的运行时，运行时错误，无法获取资源，如和发生的错误的使用无效。 当任务或任务组引发异常时，运行时将保持该异常，并将其封送到等待的任务或任务组完成的上下文。 对于如轻量级任务和代理的组件，运行时不管理为你的异常。 在这些情况下，则必须实现自己的异常处理机制。 本主题介绍运行时如何处理由任务、 任务组、 轻量级任务和异步代理引发的异常以及如何在你的应用程序中响应异常。  
@@ -192,7 +193,7 @@ the status of the agent is: done
 ##  <a name="summary"></a> 摘要  
  [[返回页首](#top)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发运行时](../../parallel/concrt/concurrency-runtime.md)   
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [并行算法](../../parallel/concrt/parallel-algorithms.md)   

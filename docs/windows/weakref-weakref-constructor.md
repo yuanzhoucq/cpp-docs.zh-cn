@@ -1,32 +1,33 @@
 ---
-title: "WeakRef::WeakRef 构造函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::WeakRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WeakRef, 构造函数"
+title: "Weakref:: Weakref 构造函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::WeakRef
+dev_langs: C++
+helpviewer_keywords: WeakRef, constructor
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 125fe25179ddbe975530a0c368a4dfc7e4caaf1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# WeakRef::WeakRef 构造函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef 构造函数
 初始化 WeakRef 类的新实例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 WeakRef();  
@@ -51,17 +52,17 @@ WeakRef(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `ptr`  
- 指针、引用或 Rvalue 引用初始化当前 WeakRef 对象的现有对象。  
+ 指针、 引用或对初始化当前 WeakRef 对象的现有对象的右值引用。  
   
-## 备注  
- 第一构造函数初始化空的 WeakRef 对象。  第二个构造函数初始化从指针的一 WeakRef 对象到 IWeakReference 接口。  第三个构造函数初始化从一个引用 WeakRef 对象到 ComPtr\< IWeakReference\> 对象。  第四、第五构造函数初始化另一个 WeakRef 对象的一 WeakRef 对象。  
+## <a name="remarks"></a>备注  
+ 第一个构造函数初始化一个空的 WeakRef 对象。 第二个构造函数初始化 WeakRef 对象从指针到 IWeakReference 接口。 第三个构造函数初始化 WeakRef 对象的引用 ComPtr\< IWeakReference > 对象。 第四个和第五个构造函数初始化 WeakRef 对象的另一个 WeakRef 对象。  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>惠?  
+ **标头：** client.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [WeakRef 类](../windows/weakref-class.md)

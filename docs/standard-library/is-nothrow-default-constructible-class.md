@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe166b5b0db0c9bde54b725a4be018e1f1f5e9ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d47e20963d85350bd06e21dc3f668b22a85ae20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible 类
 测试类型是否具有非引发默认构造函数。  
@@ -38,12 +39,12 @@ struct is_nothrow_default_constructible;
 ## <a name="remarks"></a>备注  
  如果类型 `Ty` 具有 nothrow 默认构造函数，类型谓词的实例将保留为 true，否则保留为 false。 类型谓词的实例等效于 `is_nothrow_constructible<Ty>`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
 
 

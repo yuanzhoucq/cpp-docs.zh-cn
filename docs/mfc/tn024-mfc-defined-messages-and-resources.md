@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e3987f9716601eb45cd3043670b90f5e3ffd1be9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定义的消息和资源
 > [!NOTE]
@@ -202,7 +203,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
   
  这是一个非常一般的格式，允许任何 Windows 消息和数据内容。 在 Visual c + + 资源编辑器和 MFC 仅支持 Windows 消息的有限的子集： CB_ADDSTRING （数据是一个文本字符串） 的组合框的初始列表选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

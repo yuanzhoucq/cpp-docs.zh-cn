@@ -1,50 +1,52 @@
 ---
-title: "装箱（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "装箱, Visual C++"
+title: "装箱 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 装箱（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 编译器可以在称为*装箱*的进程中将值类型转换为对象，并在称为*取消装箱*的进程中将对象转换为值类型。  
+# <a name="boxing--c-component-extensions"></a>装箱（C++ 组件扩展）
+Visual c + + 编译器可以将值类型转换为称为的过程中的对象*装箱*，并将对象转换为称为的过程中的值类型*取消装箱*。  
   
-## 所有运行时  
+## <a name="all-runtimes"></a>所有运行时  
  （此语言功能没有适用于所有运行时的备注。）  
   
-## Windows 运行时  
- [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)] 支持用于装箱值类型和取消装箱引用类型的简短语法。  值类型在分配给类型为 `Object` 的变量时装箱。  在将 `Object` 变量分配给值类型变量，并且在括号中指定了未装箱的类型时（即，当对象变量强制转换为值类型时），该变量将取消装箱。  
+## <a name="windows-runtime"></a>Windows 运行时  
+ C + + /cli CX 支持用于装箱值类型和取消装箱引用类型的速记形式语法。 值类型在分配给类型为 `Object` 的变量时装箱。 在将 `Object` 变量分配给值类型变量，并且在括号中指定了未装箱的类型时（即，当对象变量强制转换为值类型时），该变量将取消装箱。  
   
 ```  
   
-Platform::Object^ object_variable  = value_variable;  
+  Platform::Object^  
+  object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
   
 ```  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-### 示例  
- 下面的代码示例装箱和取消装箱 `DateTime` 值。  首先，该示例获取表示当前日期和时间的 DateTime 值，然后将其分配给 DateTime 变量。  然后，通过将 DateTime 分配到对象变量，对其进行装箱。  最后，通过将装箱值分配到另一个 DateTime 变量来取消装箱。  
+### <a name="examples"></a>示例  
+ 下面的代码示例装箱和取消装箱 `DateTime` 值。 首先，该示例获取表示当前日期和时间的 DateTime 值，然后将其分配给 DateTime 变量。 然后，通过将 DateTime 分配到对象变量，对其进行装箱。 最后，通过将装箱值分配到另一个 DateTime 变量来取消装箱。  
   
- 要测试示例，请创建 BlankApplication 项目，替换 BlankPage::OnNavigatedTo\(\) 方法，然后在后括号处指定断点并对变量 str1 赋值。  当示例到达右括号时，检查 str1。  
+ 要测试示例，请创建 BlankApplication 项目，替换 BlankPage::OnNavigatedTo() 方法，然后在后括号处指定断点并对变量 str1 赋值。 当示例到达右括号时，检查 str1。  
   
 ```  
   
@@ -80,27 +82,27 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 ```  
   
- 有关详细信息，请参阅[装箱 \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。  
+ 有关详细信息，请参阅[装箱 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。  
   
-## 公共语言运行时  
- Visual C\+\+ 编译器现在将值类型装箱到 <xref:System.Object>。  这可能是因为存在将值类型转换为 <xref:System.Object> 的编译器定义的转换。  
+## <a name="common-language-runtime"></a>公共语言运行时  
+ Visual C++ 编译器现在将值类型装箱到 <xref:System.Object>。  这可能是因为存在将值类型转换为 <xref:System.Object> 的编译器定义的转换。  
   
- 装箱和取消装箱使值类型能够被视为对象。  值类型（包括结构类型和内置类型，如 int）与 <xref:System.Object> 类型可相互转换。  
+ 装箱和取消装箱使值类型能够被视为对象。 值类型（包括结构类型和内置类型，如 int）与 <xref:System.Object> 类型可相互转换。  
   
  有关详细信息，请参见:  
   
 -   [如何：显式请求装箱](../dotnet/how-to-explicitly-request-boxing.md)  
   
--   [如何：使用 gcnew 创建值类型并使用隐式装箱](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
+-   [如何：使用 gcnew 创建值类型和使用隐式装箱](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
   
 -   [如何：取消装箱](../dotnet/how-to-unbox.md)  
   
 -   [标准转换和隐式装箱](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
  下面的示例说明了隐式装箱的工作方式。  
@@ -177,14 +179,25 @@ int main() {
   
  **输出**  
   
-  **1**  
- **xx \= 10**  
- **在 A 中**  
- **使用隐式装箱，类 V 已通过**  
- **使用强制装箱，类 V 已通过**  
- **接口函数**  
- **在 func1\(V2^\) 中**  
- **在 func2\(System::ValueType^\) 中**  
- **在 func2\(System::ValueType^\) 中**   
-## 请参阅  
+```Output  
+1  
+  
+xx = 10  
+  
+in A  
+  
+Class V passed using implicit boxing  
+  
+Class V passed with forced boxing  
+  
+Interface function  
+  
+in func1(V2^)  
+  
+in func2(System::ValueType^)  
+  
+in func2(System::ValueType^)  
+```  
+  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

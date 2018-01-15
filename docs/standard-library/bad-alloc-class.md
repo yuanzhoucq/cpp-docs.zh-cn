@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- new/std::bad_alloc
-- bad_alloc
-dev_langs:
-- C++
-helpviewer_keywords:
-- bad_alloc class
+f1_keywords: new/std::bad_alloc
+dev_langs: C++
+helpviewer_keywords: bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3d42ce374744f446185466f65df77a38ebcdbfd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fc136f33d3653aef1e325a97f6e47ff3742b0182
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="badalloc-class"></a>bad_alloc 类
 该类描述引发的异常以指示分配请求未成功。  
@@ -57,7 +38,7 @@ virtual ~bad_alloc();
 ## <a name="remarks"></a>备注  
  **what** 返回的值是实现定义的 C 字符串。 无成员函数引发任何异常。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<new>  
   
  **命名空间：** std  
@@ -89,11 +70,10 @@ int main() {
 bad allocation  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<new>  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [exception 类](../standard-library/exception-class.md)  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -17,13 +17,14 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d0e3c65101455958772415228d5cf0d95fbd4d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltiteratorgt"></a>&lt;iterator&gt;
+# <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 定义迭代器基元、预定义的迭代器和流迭代器，以及一些支持模板。 预定义的迭代器包含插入及反向适配器。 插入迭代器适配器包括三类：前向、后向和常规。 它们提供的是插入语义而不是容器成员函数迭代器所提供的覆盖语义。  
   
 ## <a name="syntax"></a>语法  
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/24/2017
 |[insert_iterator](../standard-library/insert-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将元素插入到 **Container** 类型的容器，并通过其存储的受保护 **pointer** 对象（称为容器）访问此容器。 它也可以存储受保护的 **iterator** 对象（**Container::iterator** 类），称为 **iter**。|  
 |[istream_iterator](../standard-library/istream-iterator-class.md)|此模板类描述输入迭代器对象。 它可以从输入流中提取 **Ty** 类的对象，并通过其存储的、指向 `basic_istream`\<**Elem**, **Tr**> 的 pointer 类型对象进行访问。|  
 |[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此模板类描述输入迭代器对象。 它可以将 **Elem** 类对象插入到输出流缓冲区，并通过其存储的、指向 `basic_streambuf`\<**Elem**, **Tr**> 的 **pointer** 类型对象进行访问。|  
-|[iterator](../standard-library/iterator-struct.md)|模板类用作所有迭代器的基类型。|  
+|[Iterator](../standard-library/iterator-struct.md)|模板类用作所有迭代器的基类型。|  
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|一种模板 helper 类，可以提供与不同迭代器类型相关联的关键类型，以便用相同的方式引用这些迭代器。|  
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` 对象可以存储 `RandomIterator` 类型的随机访问迭代器。 它的行为类似于随机访问迭代器，但在解引用时除外。 `operator*` 的结果将隐式强制转换为 `value_type&&:`，以便形成 `rvalue reference`。|  
 |[ostream_iterator](../standard-library/ostream-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将 **Type** 类对象插入到输出流，并通过其存储的、指向 `basic_ostream`\<**Elem**, **Tr**> 的 **pointer** 类型对象进行访问。|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/24/2017
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此模板类描述一个行为类似于随机访问迭代器的对象，只不过方向相反。|  
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|一种使用随机访问未检查迭代器来访问数组的类。 **注意：**此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

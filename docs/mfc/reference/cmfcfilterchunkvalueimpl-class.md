@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXWIN/CMFCFilterChunkValueImpl::SetSystemTimeValue
 - AFXWIN/CMFCFilterChunkValueImpl::SetTextValue
 - AFXWIN/CMFCFilterChunkValueImpl::SetChunk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], CMFCFilterChunkValueImpl
 - CMFCFilterChunkValueImpl [MFC], Clear
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2f98125e8e84ec0271bb3dff2eab01e0cfef368
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: b1817203abda9bbd81c8b673e1631c25c76c4572
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
 这是一个类可简化区块和属性值对逻辑。  
@@ -131,7 +129,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
@@ -653,6 +651,5 @@ HRESULT SetTextValue(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

@@ -1,32 +1,33 @@
 ---
-title: "EventSource 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EventSource 类"
+title: "EventSource 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource
+dev_langs: C++
+helpviewer_keywords: EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# EventSource 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-表示一个事件。  事件源成员函数添加，移除，然后调用事件处理程序。  
+# <a name="eventsource-class"></a>EventSource 类
+表示一个事件。 EventSource 成员函数添加、 删除和调用事件处理程序。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -35,42 +36,42 @@ template<
 class EventSource;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `TDelegateInterface`  
- 为表示事件处理程序委托的接口。  
+ 一个委托，表示一个事件处理程序接口。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |[EventSource::EventSource 构造函数](../windows/eventsource-eventsource-constructor.md)|初始化 EventSource 类的新实例。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[EventSource::Add 方法](../windows/eventsource-add-method.md)|附加指定的委托表示接口的事件处理程序设置为当前 EventSource 组对象的事件处理程序。|  
-|[EventSource::GetSize 方法](../windows/eventsource-getsize-method.md)|事件处理程序检索的次数与当前 EventSource 对象|  
-|[EventSource::InvokeAll 方法](../windows/eventsource-invokeall-method.md)|调用每一个事件处理程序与当前对象 EventSource 使用指定的参数类型和参数。|  
-|[EventSource::Remove 方法](../windows/eventsource-remove-method.md)|删除一组指定的事件注册标记表示的事件处理程序关联的事件处理程序 EventSource 当前对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[EventSource::Add 方法](../windows/eventsource-add-method.md)|将追加到的事件处理程序当前 EventSource 对象集表示由指定的委托接口的事件处理程序。|  
+|[EventSource::GetSize 方法](../windows/eventsource-getsize-method.md)|检索与当前 EventSource 对象关联的事件处理程序数量|  
+|[EventSource::InvokeAll 方法](../windows/eventsource-invokeall-method.md)|使用指定自变量类型和自变量调用与当前 EventSource 对象关联的每个事件处理程序。|  
+|[EventSource::Remove 方法](../windows/eventsource-remove-method.md)|删除从与当前 EventSource 对象关联的事件处理程序集中指定的事件注册标记所表示的事件处理程序。|  
   
-### 受保护的数据成员  
+### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|说明|  
-|--------|--------|  
-|[EventSource::addRemoveLock\_ 数据成员](../windows/eventsource-addremovelock-data-member.md)|当添加，移除或调用事件处理程序时，同步向 [targets\_](../windows/eventsource-targets-data-member.md) 数组的访问。|  
-|[EventSource::targets\_ 数据成员](../windows/eventsource-targets-data-member.md)|一组一个或多个事件处理程序。|  
-|[EventSource::targetsPointerLock\_ 数据成员](../windows/eventsource-targetspointerlock-data-member.md)|甚至，在此 EventSource 的事件处理程序被添加，移除或调用时，同步对内部数据成员的访问权限。|  
+|name|描述|  
+|----------|-----------------|  
+|[EventSource::addRemoveLock_ 数据成员](../windows/eventsource-addremovelock-data-member.md)|同步访问[targets_](../windows/eventsource-targets-data-member.md)数组时添加、 删除或调用事件处理程序。|  
+|[EventSource::targets_ 数据成员](../windows/eventsource-targets-data-member.md)|包含一个或多个事件处理程序的数组。|  
+|[EventSource::targetsPointerLock_ 数据成员](../windows/eventsource-targetspointerlock-data-member.md)|同步对内部数据成员的访问，即使在添加、删除或调用此 EventSource 的事件处理程序时也是如此。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `EventSource`  
   
-## 要求  
- **标头：**event.h  
+## <a name="requirements"></a>惠?  
+ **标头：** event.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289a4928c9c46f6d758ddc2f30ed864488ab725e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f6b10c681eb12d38d33c50fe9e652ffd095dd4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel"></a>parallel
 定义并行区域，这是将由多个线程并行执行的代码。  
@@ -90,5 +91,5 @@ Hello from thread 3
 ## <a name="comment"></a>注释  
  请注意，在不同计算机上的输出顺序而异。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令](../../../parallel/openmp/reference/openmp-directives.md)

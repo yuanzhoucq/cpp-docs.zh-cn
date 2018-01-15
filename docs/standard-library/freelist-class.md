@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a49953e328807b16579996e47ee3f69a32e67e2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63490ba1be2459aa31f461193c0f754ba9ec1e12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freelist-class"></a>freelist 类
 管理内存块列表。  
@@ -61,7 +62,7 @@ class freelist
 |[pop](#pop)|从空闲列表中删除第一个内存块。|  
 |[push](#push)|向列表中添加内存块。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<allocators>  
   
  **命名空间：** stdext  
@@ -97,7 +98,7 @@ bool push(void* ptr);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`ptr`|指向要添加到空闲列表的内存块的指针。|  
   
@@ -107,7 +108,7 @@ bool push(void* ptr);
 ### <a name="remarks"></a>备注  
  如果 max 类的 `full` 函数返回 `false`，则此成员函数将 `ptr` 指向的内存块添加到列表表头。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

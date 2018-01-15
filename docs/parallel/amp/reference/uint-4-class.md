@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::set_xywz
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c0cd118a5ce9f5ebec30e5d1ca7a8437d14f55ab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4de759866580cce03dae40c5fe2fe5cb9482013b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint4-class"></a>uint_4 类
 表示短矢量的四个无符号整数。  
@@ -321,14 +305,14 @@ class uint_4;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[uint_4 构造函数](#uint_4__ctor) |已重载。 默认构造函数，将初始化为 0 的所有元素。|  
 
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |uint_4::get_w||  
 |uint_4::get_wx||  
@@ -474,7 +458,7 @@ class uint_4;
 |uint_4::operator-||  
 |uint_4::operator-||  
 |uint_4::operator * =||  
-|uint_4::operator / =||  
+|/ = uint_4::operator 的||  
 |uint_4::operator + +||  
 |uint_4::operator + =||  
 |uint_4::operator =||  
@@ -482,7 +466,7 @@ class uint_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#size)||  
 
@@ -623,8 +607,8 @@ class uint_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `uint_4`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -692,6 +676,5 @@ explicit inline uint_4(
 static const int size = 4;  
 ```  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

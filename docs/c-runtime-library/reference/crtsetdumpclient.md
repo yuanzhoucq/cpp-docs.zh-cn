@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDumpClient
+apiname: _CrtSetDumpClient
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0fc4875a344a8d094c40436ae6d67d80707deef1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bf64ca280998ac25adbb380ff8245a0b8eecf797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 安装应用程序定义的函数以转储 `_CLIENT_BLOCK` 类型的内存块（仅限调试版本）。  
@@ -93,18 +75,18 @@ typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
   
  有关在 `_CLIENT_BLOCK` 类型内存块上操作的函数的详细信息，请参阅[客户端块挂钩函数](/visualstudio/debugger/client-block-hook-functions)。 [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md) 函数可用于返回有关块类型和子类型的信息。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_CrtSetDumpClient`|\<crtdbg.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
  [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)   
  [_CrtGetDumpClient](../../c-runtime-library/reference/crtgetdumpclient.md)

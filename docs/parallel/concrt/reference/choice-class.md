@@ -30,11 +30,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0466b374869ac34c56f58c94111c1738980286a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choice-class"></a>choice 类
 `choice` 消息块是多源、单目标的块，表示与一组源进行的控制流交互。 choice 块将等待多个源中的任何一个源以生成消息，并将传播生成该消息的源的索引。  
@@ -94,7 +95,7 @@ class choice: public ISource<size_t>;
   
  `choice`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -344,7 +345,7 @@ _Payload_type const& value();
 ### <a name="remarks"></a>备注  
  因为 `choice` 消息块可以采用不同负载类型的输入，您必须指定检索时的负载类型。 你可以确定基于的结果的类型`index`方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [join 类](join-class.md)   
  [single_assignment 类](single-assignment-class.md)

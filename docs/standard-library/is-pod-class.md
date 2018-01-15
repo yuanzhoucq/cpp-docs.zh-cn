@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_pod
-dev_langs:
-- C++
+f1_keywords: type_traits/std::is_pod
+dev_langs: C++
 helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4f6410ca3f8a011cce3673eec28b616bfb4a96aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: efe54ef10c8ab8102e17efdbf8e38f217ec2e0df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispod-class"></a>is_pod 类
 测试类型是否为 POD。  
@@ -104,14 +101,13 @@ is_pod<int> == true
 is_pod<throws> == false  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **标头：**\<type_traits>  
   
 **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

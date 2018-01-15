@@ -1,29 +1,29 @@
 ---
-title: "2.7.2.8 copyprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.8 copyprivate |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c382348c-c785-45b2-8ee6-a66b76b97f3e
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 21d739fb3ead0512776cfd996b59f1ceab5e8250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2.8 copyprivate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**copyprivate** 子句提供了一种机制使用私有变量广播从工作组中的成员的值与其他成员。  它可以替代使用共享变量的值的，同时允许这样的共享变量很难 \(例如，在需要不同的变量的递归在每个级别\)。  **copyprivate** 子句只能出现在 **单个** 指令。  
+# <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
+**Copyprivate**子句提供了一种机制来使用的私有变量的其他成员广播来自团队的成员的一个值。 它是另一种共享的变量的值时提供此类共享的变量是非常困难的 （例如，在需要一个不同的变量在每个级别的递归）。 **Copyprivate**子句只能出现在**单个**指令。  
   
- **copyprivate** 子句的语法如下所示:  
+ 语法**copyprivate**子句是，如下所示：  
   
 ```  
   
@@ -33,12 +33,12 @@ variable-list
   
 ```  
   
- **copyprivate** 子句的效果对其变量变量列表时，在构造的执行块与 **单个** 构造后，，因此，在任何一个团队的线程将障碍在构造结束时之前。  然后，在团队中的其他线程，每个的变量在 *变量列表*，变量成为定义 \(如同按指派\) 与相应的变量的值在执行结构化构造的线程的块。  
+ 效果**copyprivate**其变量列表中的变量上的子句发生在与关联的结构化块执行后**单个**构造，以及在任何中的线程之前团队已离开构造末尾屏障。 然后，在团队成员，以在每个变量中的所有其他线程*变量列表*，该变量将成为 （就像分配） 包含定义相应的值中的线程来执行构造的变量的结构化块。  
   
- 为 **copyprivate** 子句的限制如下所示:  
+ 限制到**copyprivate**子句如下所示：  
   
--   在 **copyprivate** 子句中指定的变量不能出现在同一个 **单个** 指令的 **专用** 或 **firstprivate** 子句。  
+-   中指定的变量**copyprivate**子句不得出现在**私有**或**firstprivate**子句相同**单**指令。  
   
--   如果使用 **copyprivate** 子句的一个 **单个** 指令在并行区域的动态区域遇到，在 **copyprivate** 子句中指定的所有变量必须是专用在封闭上下文。  
+-   如果**单个**指令与**copyprivate**在并行区域的动态范围中遇到子句中的所有变量都指定**copyprivate**子句必须在封闭上下文中为私有。  
   
--   在 **copyprivate** 子句中指定的变量必须有一个可访问的明确的复制赋值运算符。
+-   中指定的变量**copyprivate**子句必须具有可访问的明确复制赋值运算符。

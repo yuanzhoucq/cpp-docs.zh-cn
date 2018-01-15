@@ -1,29 +1,30 @@
 ---
-title: "特性参数类型（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自定义特性, 参数类型"
+title: "特性参数类型 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 特性参数类型（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-值传递给特性必须为在编译时的编译器所知。特性参数可为下列类型：  
+# <a name="attribute-parameter-types--c-component-extensions"></a>特性参数类型（C++ 组件扩展）
+编译器在编译时必须知道传递给特性的值。  特性参数可为下列类型：  
   
 -   `bool`  
   
@@ -49,9 +50,9 @@ manager: "ghogen"
   
 -   `enum`  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // attribute_parameter_types.cpp  
@@ -74,12 +75,12 @@ ref struct MyStruct {
 };  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 当指定特性时，所有未命名 \(位置\) 的任何参数必须在命名参数。  
+### <a name="description"></a>描述  
+ 当指定特性时，所有未命名（位置）的参数必须优先于命名参数。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // extending_metadata_c.cpp  
@@ -107,12 +108,12 @@ ref class ClassC {};   // Positional argument
 ref class ClassD {};   // Positional and named  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
+### <a name="description"></a>描述  
  特性参数可以为上述类型的一维数组。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // extending_metadata_d.cpp  
@@ -129,5 +130,5 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)

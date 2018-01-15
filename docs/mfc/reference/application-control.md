@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b5c64a8e624d48bf07348c591d42920911d711b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-control"></a>应用程序控件
 OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能够启动并自动发布的应用程序，协调其生产和修改的对象，依次类推。 本主题中的函数满足这些要求。 除了调用由 OLE 系统 Dll，这些函数有时必须由应用程序以及调用。 
@@ -56,7 +57,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头**: afxdisp.h 
 
 ##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
@@ -77,7 +78,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
   
  [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxwin.h 
 
 ##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
@@ -93,7 +94,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ### <a name="remarks"></a>备注  
  如果用户已显式打开或创建新文档，则用户将位于应用程序控件内。 如果应用程序不是由 OLE 系统 DLL 启动的 - 换句话说，如果用户使用系统 Shell 启动了应用程序，则用户也将位于控件内。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxdisp.h
 
 ##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
@@ -112,7 +113,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
   
  如果你的应用程序中的其他操作应将用户放在应用程序的控制，请调用此函数。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxdisp.h
 
 ##  <a name="afxolelockapp"></a>AfxOleLockApp  
@@ -132,7 +133,7 @@ void AFXAPI AfxOleLockApp();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxdisp.h
 
 ##  <a name="afxoleunlockapp"></a>AfxOleUnlockApp  
@@ -150,7 +151,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="example"></a>示例  
  请参阅示例[AfxOleLockApp](#afxolelockapp)。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
@@ -183,10 +184,10 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** < afxwin.h >  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
@@ -244,7 +245,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
  符号填充了如下：  
   
-|符号|值|  
+|符号|“值”|  
 |------------|-----------|  
 |%1|类 ID，其格式为字符串|  
 |%2|类名|  
@@ -252,7 +253,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 |%4|Short 类型名称|  
 |%5|Long 类型名称|  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxdisp.h
 
 ##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
@@ -294,10 +295,10 @@ void AFXAPI AfxOleSetEditMenu(
   
  **#include \<afxolecl.rc >**  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头**: afxole.h 
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
@@ -329,10 +330,10 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
    
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** < afxwin.h >  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)  
  [AfxOleLockControl](#afxolelockcontrol)
 

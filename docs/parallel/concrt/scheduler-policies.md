@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85b9c40d5253c707567a7cb0a1c751b1392fc995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-policies"></a>计划程序策略
 本文档介绍并发运行时中的计划程序策略的角色。 A*计划程序策略*控制计划程序将使用在管理任务的策略。 例如，假设一个应用程序需要某些任务在 `THREAD_PRIORITY_NORMAL` 上执行，而其他任务在 `THREAD_PRIORITY_HIGHEST` 上执行。  您可以创建两个计划程序实例：一个指定 `ContextPriority` 策略为 `THREAD_PRIORITY_NORMAL`，另一个指定同一策略为 `THREAD_PRIORITY_HIGHEST`。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>示例  
  若要检查使用特定计划程序策略来控制计划程序的行为的示例，请参阅[如何： 指定特定计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)和[如何： 创建该使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [如何： 指定特定计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
  [如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

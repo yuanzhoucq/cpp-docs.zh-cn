@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 505596c503d7c3e4d95e1b7075d537dad659587e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3343f1d9b9f302d43a5cfbfec55b48c2bfd1b799
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-a-message-handler"></a>编辑消息处理程序
 一旦定义消息处理程序，你可以转到成员函数的定义，以便添加或修改代码。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  跳转到中的成员函数定义[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，双击类视图中的函数名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将消息映射到函数](../../mfc/reference/mapping-messages-to-functions.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../../ide/adding-a-class-visual-cpp.md)   

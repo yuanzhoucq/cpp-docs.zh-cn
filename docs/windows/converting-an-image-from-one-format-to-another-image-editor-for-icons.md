@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 227bf99f0f92555e6fd1eb94b5e85886949b9f60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2defaafb1c0edb58f3fbd50ecc47ad26309ca38b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>将图像从一种格式转换为另一种格式（图标的图像编辑器）
 你可以在图像编辑器中打开 GIF 或 JPEG 图像，并将其保存为位图。 此外，你可以打开位图文件，并将其保存为 GIF 或 JPEG。 处理的图像不需要以在开发环境中编辑项目的一部分 (请参阅[独立运行图像编辑](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。  
@@ -37,13 +40,13 @@ ms.lasthandoff: 10/24/2017
   
 4.  单击“保存” 。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [图标的图像编辑器](../windows/image-editor-for-icons.md)
 

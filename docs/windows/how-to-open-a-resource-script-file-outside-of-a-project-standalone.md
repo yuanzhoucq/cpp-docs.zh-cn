@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfe2df286960ca332a6c3d9ef33d53e0a5edb3bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2dd3bb3996fca1fd2c73ff98e7f391d27911ad15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>如何：在项目外打开资源脚本文件（独立）
 你可以查看 .rc 文件中的资源，而不必打开项目。 .Rc 文件将在而不是在中打开的文档窗口中打开[资源视图](../windows/resource-view-window.md)窗口 （方式与其在项目内部打开文件时）。  
@@ -67,9 +70,9 @@ ms.lasthandoff: 10/24/2017
   
 
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [资源文件](../windows/resource-files-visual-studio.md)   
  [资源编辑器](../windows/resource-editors.md)

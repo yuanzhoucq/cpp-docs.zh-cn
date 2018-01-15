@@ -1,32 +1,33 @@
 ---
-title: "SRWLock::TryLockShared 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLockShared 方法"
+title: "Srwlock:: Trylockshared 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared
+dev_langs: C++
+helpviewer_keywords: TryLockShared method
 ms.assetid: 10cc198d-39a0-4d18-aa78-706744948668
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7c36657b5c732055260dc77471e109961a66c144
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLock::TryLockShared 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尝试获取在共享的图案 SRWLock 对象当前或指定的 SRWLock 对象。  
+# <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 方法
+尝试针对当前或指定 SRWLock 对象获取共享模式的 SRWLock 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 WRL_NOTHROW SyncLockShared TryLockShared();  
@@ -35,17 +36,17 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `lock`  
- 指向SRWLock对象的指针。  
+ 指向 SRWLock 对象的指针。  
   
-## 返回值  
- 如果成功，则共享模式的一 SRWLock 对象并调用的线程获取锁的所有权。  否则，状态无效的 SRWLock 对象。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为共享模式的 SRWLock 对象，并且调用线程将获得锁定的所有权。 否则为其状态无效的 SRWLock 对象。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [SRWLock 类](../windows/srwlock-class.md)

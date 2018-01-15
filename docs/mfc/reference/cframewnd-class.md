@@ -117,11 +117,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d5766a883c8bec143a7a635a657ba2545d1d612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c27f27b8369aeb5fdb15d37dc196556a5f508d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  
@@ -247,7 +248,7 @@ class CFrameWnd : public CWnd
   
 -   如果框架窗口是主应用程序窗口，框架窗口是运行 WinHelp 的上下文。 关闭帧窗口将关闭 WINHELP。如果它对此应用程序的帮助启动，EXE。  
   
- 不使用 c + +**删除**运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow` 。 `CFrameWnd`实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。  
+ 不使用 c + +**删除**运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。  
   
  有关详细信息`CFrameWnd`，请参阅[框架窗口](../../mfc/frame-windows.md)。  
   
@@ -260,7 +261,7 @@ class CFrameWnd : public CWnd
   
  `CFrameWnd`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="activateframe"></a>CFrameWnd::ActivateFrame  
@@ -984,7 +985,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `nState`|指定是否显示或隐藏菜单。 `nState`参数可以具有以下值：<br /><br /> -如果它处于隐藏状态，但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-AFX_MBS_HIDDEN (0x02)-隐藏菜单上，如果它可见，但如果它隐藏不起作用。|  
   
@@ -1003,7 +1004,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `nStyle`|指定是否菜单默认情况下隐藏的或者是可见的具有焦点。 `nStyle`参数可以具有以下值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单会显示在所有时间，并默认情况下不具有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下，菜单处于隐藏状态。 如果菜单处于隐藏状态，请按 ALT 键来显示菜单并授予它焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124;AFX_MBV_DISPLAYONF10 (0X04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。|  
   
@@ -1145,7 +1146,7 @@ void ShowOwnedWindows(BOOL bShow);
  `bShow`  
  指定是否拥有的 windows 的是显示还是隐藏。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

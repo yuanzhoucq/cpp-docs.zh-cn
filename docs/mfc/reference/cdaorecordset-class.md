@@ -177,11 +177,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9742093585283350ce2c40ae533cc9e530d94bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 表示从数据源选择的一组记录。  
@@ -332,7 +333,7 @@ class CDaoRecordset : public CObject
   
  `CDaoRecordset`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdao.h  
   
 ##  <a name="addnew"></a>CDaoRecordset::AddNew  
@@ -645,7 +646,7 @@ virtual BOOL Find(
 - **AFX_DAO_LAST**查找匹配的字符串的最后一个位置。  
   
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。 例如:   
+ 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。 例如:  
   
  [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
   
@@ -997,7 +998,7 @@ short GetEditMode();
   
 ### <a name="remarks"></a>备注  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**dbEditNone**|任何编辑操作不正在进行。|  
 |**dbEditInProgress**|**编辑**已调用。|  
@@ -1909,7 +1910,7 @@ BOOL Seek(
  以下字符串表达式之一:"<"、"\<="，"="、"> ="，或">"。  
   
  `pKey1`  
- 指向的指针[COleVariant](../../mfc/reference/colevariant-class.md)其值对应于索引中的第一个字段。 必需。  
+ 指向的指针[COleVariant](../../mfc/reference/colevariant-class.md)其值对应于索引中的第一个字段。 必须的。  
   
  *pKey2*  
  指向的指针`COleVariant`其值对应于第二个字段在索引中，如果有的话。 默认为**NULL**。  
@@ -2311,7 +2312,7 @@ virtual void Update();
   
  有关相关信息，请参阅主题的"AddNew 方法"、"正在执行方法"、"Delete 方法"、"上次更改时间属性"、"更新方法"和 DAO 帮助中的"EditMode 属性"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDaoTableDef 类](../../mfc/reference/cdaotabledef-class.md)   

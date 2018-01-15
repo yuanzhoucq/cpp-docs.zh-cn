@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 进行多线程编程
 Microsoft Visual c + + 用于与 Microsoft Windows 一起创建多线程应用程序提供支持： Windows XP、 Windows 2000、 Windows NT、 Windows Me，和 Windows 98。 你应考虑使用多个线程，如果你的应用程序需要管理多个活动，如同时键盘和鼠标输入。 一个线程可以处理键盘输入，而第二个线程筛选鼠标活动。 第三个线程可以更新显示屏幕基于数据的鼠标和键盘线程。 同时，其他线程可以访问磁盘文件或从通信端口中获取数据。  
@@ -54,5 +55,5 @@ Microsoft Visual c + + 用于与 Microsoft Windows 一起创建多线程应用�
   
 -   [线程本地存储区 (TLS)](../parallel/thread-local-storage-tls.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对旧代码的多线程支持 (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

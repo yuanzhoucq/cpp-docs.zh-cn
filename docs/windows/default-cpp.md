@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 352fca07ecb9528bb11ff1cb5cc1f701bfa01e1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b24b0ed9b8e547a52388b6f93a4955da782331b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-c"></a>default (C++)
 指示组件类中定义的自定义接口或调度接口表示默认的可编程性接口。  
@@ -105,20 +108,20 @@ int main() {
   
  [source](../windows/source-cpp.md) 属性也有说明如何使用 **default**的示例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**class**、 `struct`、数据成员|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [类特性](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   

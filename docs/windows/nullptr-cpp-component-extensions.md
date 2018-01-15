@@ -1,66 +1,68 @@
 ---
-title: "nullptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nullptr 关键字 (C++)"
-  - "nullptr 关键字 [C++]"
+title: "nullptr （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- __nullptr keyword (C++)
+- nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# nullptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`nullptr` 关键字表示 *空指针值*。  关键字指示对象句柄、内部指针或本机指针类型不指向对象。  
+# <a name="nullptr--c-component-extensions"></a>nullptr（C++ 组件扩展）
+`nullptr`关键字表示*null 指针值*。 使用 null 指针值指示，对象句柄、 内部指针或本机指针类型不指向对象。  
   
- 使用托管 `nullptr` 或本机代码。  编译器发出的托管代码和本机的 null 指针值的相应，但不同的指令。  有关使用此关键字 ISO C\+\+ 标准版本的信息，请参见 [nullptr](../cpp/nullptr.md)。  
+ 使用`nullptr`与托管或本机代码。 编译器会发出适当但不同的托管和本机 null 指针值的说明。 有关使用此关键字的 ISO 标准 c + + 版本的信息，请参阅[nullptr](../cpp/nullptr.md)。  
   
- 特定于 Microsoft 的 `__nullptr` 关键字与 `nullptr` 的含义相同，但前者仅适用于本机代码。  如果使用具有本机 C\/C\+\+ 代码的 `nullptr` 和编译与 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项，编译器无法确定 `nullptr` 是否指示本机或托管的 null 指针值。  若要使编译器意图，请使用 `nullptr` 指定托管的值或 `__nullptr` 指定本机的值。  
+ `__nullptr`关键字是具有的相同含义与 Microsoft 专用关键字`nullptr`，但适用于仅本机代码。 如果你使用`nullptr`使用本机 C/c + + 代码，并使用然后编译[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，编译器无法确定是否`nullptr`指示本机或托管的 null 指针值。 若要使您的意图清楚地了解编译器，使用`nullptr`指定托管的值或`__nullptr`指定本机值。  
   
- （这 `nullptr`的关键字等效于 Visual Basic 中的 `Nothing` 和 C\#中的 `null`。）  
+ `nullptr`关键字等效于`Nothing`在 Visual Basic 中和`null`C# 中。  
   
-## 用法  
- 可以使用 `nullptr` 关键字。任何句柄，本机指针，或可以使用函数参数。  
+## <a name="usage"></a>用法  
+ `nullptr`关键字可使用的位置可以使用句柄、 本机指针或函数参数。  
   
- `nullptr` 关键字不是类型而不支持用于：  
+ `nullptr`关键字不是类型和不支持用于：  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr` 虽然会起作用 \( `throw (Object^)nullptr;` \)  
+-   `throw nullptr`(尽管`throw (Object^)nullptr;`起)  
   
- `nullptr` 关键字可在以下类型指针的初始值：  
+ `nullptr`关键字可在以下的指针类型的初始化：  
   
 -   本机指针  
   
 -   Windows 运行时句柄  
   
--   托管处理  
+-   托管的句柄  
   
 -   托管的内部指针  
   
- `nullptr` 关键字可用来测试，如果是指针或句柄引用空，在使用之前引用。  
+ `nullptr`关键字可以用于测试相同，如果之前使用的引用的指针或句柄引用为 null。  
   
- 的语言中的应正确解释函数调用之间用于错误检查使用 null 指针值。  
+ 应正确解释语言用于错误检查 null 指针值之间的函数调用。  
   
- 不能初始化为零；句柄可以只使用 `nullptr`。  常数 0 的分配给对象句柄的生产装箱的 `Int32` 和一个转换为 `Object^`。  
+ 无法初始化为零; 的句柄仅`nullptr`可用。 常数 0 到的对象的句柄的分配生成一个装箱`Int32`和强制转换为`Object^`。  
   
-## 示例  
- 下面的代码示例说明，可以使用 `nullptr` 关键字。句柄，本机指针，或可以使用函数参数。  此示例说明，`nullptr` 关键字可用来检查引用，然后使用它之前对它。  
+## <a name="example"></a>示例  
+ 下面的代码示例演示`nullptr`只要的句柄，本机指针，就能使用关键字或函数参数可用。 该示例演示和`nullptr`关键字可以用于检查引用，然后使用它。  
   
 ```  
 // mcpp_nullptr.cpp  
@@ -87,10 +89,10 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例显示该 `nullptr` 以及零在本机指针可以交换使用。  
+ 下面的代码示例演示`nullptr`和本机指针上互换使用零。  
   
 ```  
 // mcpp_nullptr_1.cpp  
@@ -117,16 +119,22 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**  
- **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**   
-## 示例  
+```Output  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+```  
+  
+## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例演示一，`nullptr` 被解释，则对任何类型或本机指针的句柄到任何类型。  对于重载与句柄函数的情况下对不同类型，则不确定性甚至会生成错误。  `nullptr` 必须显式转换为类型。  
+ 下面的代码示例演示`nullptr`解释为任何类型的句柄或指向任何类型的本机指针。 如果函数重载具有不同类型的句柄时，将生成多义性错误。 `nullptr`必须显式转换为一种类型。  
   
 ```  
 // mcpp_nullptr_2.cpp  
@@ -142,10 +150,10 @@ void f_null() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例演示一，转换使用 `nullptr` 并返回指针或句柄到包含 `nullptr` 值的转换类型。  
+ 下面的代码示例演示该强制转换`nullptr`允许并返回到包含的强制转换类型的指针或句柄`nullptr`值。  
   
 ```  
 // mcpp_nullptr_3.cpp  
@@ -164,10 +172,10 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例演示一，`nullptr` 可用作函数参数。  
+ 下面的代码示例演示`nullptr`可用作函数参数。  
   
 ```  
 // mcpp_nullptr_4.cpp  
@@ -182,13 +190,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **测试**   
-## 示例  
+```Output  
+test  
+```  
+  
+## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例演示处理，那么，当声明并且不显式初始化时，会默认初始化为 `nullptr`。  
+ 下面的代码示例演示当句柄声明，并且未显式初始化，它们是默认值初始化为`nullptr`。  
   
 ```  
 // mcpp_nullptr_5.cpp  
@@ -209,13 +220,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **NULL**   
-## 示例  
+```Output  
+NULL  
+```  
+  
+## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例演示 `nullptr`，可以分配给本机指针，在使用 **\/clr**编译时。  
+ 下面的代码示例演示`nullptr`与编译时可以分配给本机指针**/clr**。  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -226,9 +240,9 @@ int main() {
 }  
 ```  
   
-## 要求  
- 编译器选项：\(不要求；支持所有代码生成选项，包括 **\/ZW** 和 **\/clr**\)。  
+## <a name="requirements"></a>惠?  
+ 编译器选项: (而不是所需; 支持的所有代码生成选项，包括**/ZW**和**/clr**)  
   
-## 请参阅  
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
+## <a name="see-also"></a>请参阅  
+ [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49f17f1d5dd850034a802103ebd9208dc9bf8e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17d5063db9eb76e0fc6db9eecfe183b63276b874
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 当你[向现有 MFC 可执行文件或 DLL 中添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 进行以下修改现有的 MFC 项目 (在此示例中，项目称为`MFCEXE`):  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="notes-for-dll-projects"></a>DLL 项目的说明  
  ATL 支持添加到 MFC DLL 项目时，你将看到一些差异。 代码添加到**dllregisterserver 的调用**和**DLLUnregisterServer**用于注册和注销该 DLL 的函数。 此外将代码添加到[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)和[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 项目中的 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../../ide/adding-a-class-visual-cpp.md)   

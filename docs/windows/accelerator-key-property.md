@@ -1,55 +1,57 @@
 ---
-title: "快捷键的 Key 属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Key 属性"
+title: "快捷键的 Key 属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Key property
 ms.assetid: d1570cd9-b414-4cd6-96bd-47c38281eaca
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 365960717f5fe4cedf79615fd3087bc89d6b531c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 快捷键的 Key 属性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面是快捷键对应表中 Key 属性的合法项：  
+# <a name="accelerator-key-property"></a>快捷键的 Key 属性
+以下是用于快捷键对应表中的键属性的合法条目：  
   
--   十进制格式中 0 到 255 之间的整数。  该值确定值被视为 ASCII 还是 ANSI，如下所示：  
+-   介于 0 和 255 以十进制格式之间的整数。 值确定是否值被视为 ASCII 或 ANSI，如下所示：  
   
-    -   单个数字始终解释为相应的键，而不是 ASCII 或 ANSI 值。  
+    -   一位数字始终解释为对应的键，而不是 ASCII 或 ANSI 值。  
   
-    -   当从 1 到 26 的值之前有零时，它们被解释为 ^A 到 ^Z，表示在与 Ctrl 键同时按下时字母表字母的 ASCII 值。  
+    -   从 1 到 26 时前面带有零，, 值都会被解释为 ^ A 到 ^ Z，它表示与按住 CTRL 键一起按下时字母表的字母的 ASCII 值。  
   
-    -   从 27 到 32 的值始终解释为从 027 到 032 的三位数十进制值。  
+    -   从 27-32 的值始终解释为三个数字的十进制值 027 到 032。  
   
-    -   从 033 到 255 的值前面无论是否有零都被解释为 ANSI 值。  
+    -   跟在 0 的还是未解释为 ANSI 值 033 到 255 中的值。  
   
--   单个键盘字符。  大写字母 A \- Z 或数字 0 \- 9 既可以是 ASCII 值又可以是虚拟键值；而其他任何字符只能是 ASCII。  
+-   单个键盘字符。 大写字母 A-Z 或数字 0-9 可以是 ASCII 或虚拟键值;任何其他字符仅 ASCII。  
   
--   前面有插入符号 \(^\) 且范围在 A \- Z（仅为大写）的单个键盘字符（如 ^C）。  当按住 Ctrl 键时按该键将输入该键的 ASCII 值。  
+-   A-Z 范围中的单个键盘字符 （仅为大写），前面的脱字号 (^) (例如，^ C)。 它与按住 CTRL 键一起按下时，这将会进入键的 ASCII 值。  
   
     > [!NOTE]
-    >  当输入 ASCII 值时，修饰符属性选项会受到限制。  仅有的可用控制键是 Alt 键。  
+    >  当输入 ASCII 值，则修饰符属性选项被限制。 可供使用的是使用 ALT 键唯一的控制密钥。  
   
--   任何有效的虚拟键标识符。  快捷键对应表中的“项”下拉框包含一系列标准的虚拟键标识符。  
+-   任何有效的虚拟键标识符。 快捷键对应表中的下拉列表密钥框包含标准虚拟键标识符列表。  
   
     > [!TIP]
-    >  另一种定义快捷键的方式是：右击快捷键对应表中的一项或多个项，从快捷菜单中选择**“键入的下一个键”**，然后按键盘上的任何键或组合键。  也可从“编辑”菜单中使用“键入的下一个键”命令。  
+    >  定义快捷键另一种方法是右键单击一项或多个项的快捷键对应表中，选择**键入的下一个密钥**从快捷菜单，然后在键盘上按任何键或键组合。 **键入的下一个密钥**命令也是可从**编辑**菜单。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## 请参阅  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Editing in an Accelerator Table](../windows/editing-in-an-accelerator-table.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>请参阅  
+ [设置快捷键属性](../windows/setting-accelerator-properties.md)   
+ [编辑快捷键对应表中](../windows/editing-in-an-accelerator-table.md)   
+ [快捷键编辑器](../windows/accelerator-editor.md)

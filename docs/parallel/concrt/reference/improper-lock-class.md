@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2da7827afe8bed49c514eda10ce16c16b434c9f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 876023cbc559364a51f7c0774b7b5d04a11a65d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improperlock-class"></a>improper_lock 类
 此类描述错误获取锁时引发的异常。  
@@ -49,7 +50,7 @@ class improper_lock : public std::exception;
   
  `improper_lock`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -68,7 +69,7 @@ improper_lock() throw();
  `_Message`  
  错误的描述性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [critical_section 类](critical-section-class.md)   
  [reader_writer_lock 类](reader-writer-lock-class.md)

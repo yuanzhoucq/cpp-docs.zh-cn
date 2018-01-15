@@ -57,11 +57,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02a0b36d01a14b6765d8169caa1966297b759658
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b9d8373bdf1cba1c57936dfb4d98c5401c80476
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 类
 ID2D1Geometry 包装器。  
@@ -112,7 +113,7 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|指向 ID2D1Geometry 的指针。|  
   
@@ -123,7 +124,7 @@ class CD2DGeometry : public CD2DResource;
   
  `CD2DGeometry`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
@@ -556,5 +557,5 @@ BOOL Widen(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

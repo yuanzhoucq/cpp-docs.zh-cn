@@ -1,27 +1,27 @@
 ---
-title: "A.12   Using the atomic Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用原子指令 A.12 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d3ba3c87-413d-4efa-8a45-8a7f28ab0164
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9aa619d9bbe635a41d15a39d6c05780a4416520e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.12   Using the atomic Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例避免争用条件 \( *x 元素的* 同时更新由多个线程的\) 使用 `atomic` 指令 \(在第 19 页\) 的[第2.6.4部分](../../parallel/openmp/2-6-4-atomic-construct.md) :  
+# <a name="a12---using-the-atomic-directive"></a>A.12   使用 atomic 指令
+下面的示例可避免争用条件 (的元素的同时更新*x*由多个线程) 通过使用`atomic`指令 ([部分 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md)第 19 页上):  
   
 ```  
 #pragma omp parallel for shared(x, y, index, n)  
@@ -33,6 +33,6 @@ manager: "ghogen"
     }  
 ```  
   
- 使用 `atomic` 指令的优点在此示例中为它允许 x 的两个不同元素更新并行生成。  如果使用了 `critical` 指令 \(在第 18 页\) 的[第2.6.2部分](../../parallel/openmp/2-6-2-critical-construct.md) ，则为 *x 元素的* 所有更新将按顺序执行 \(尽管不以任何确保的顺序\)。  
+ 使用的优点`atomic`在此示例中的指令是它允许更新的 x 会并行发生在两个不同的元素。 如果`critical`指令 ([部分 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md)第 18 页上) 已使用，则所有更新到的元素*x*将按顺序 （但不在任何保证顺序） 执行。  
   
- 请注意 `atomic` 指令仅适用于后的 C 或 C\+\+ 语句。  因此， *y 的* 元素不在此示例中更新基本。
+ 请注意，`atomic`指令仅适用于紧靠它的 C 或 c + + 语句。  因此，元素的*y*未在此示例中以原子方式更新。

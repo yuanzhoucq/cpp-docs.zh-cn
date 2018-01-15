@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3bcd353def1f42269a851c39a1c96e451caa577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc83001328f346aa33d15b0ea6fcfb26eb444ec4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="agent-class"></a>agent 类
 旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。  
@@ -76,7 +77,7 @@ class agent;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `agent`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -272,5 +273,5 @@ static void __cdecl wait_for_one(
   
  如果参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间量过期代理完成其任务之前，将引发。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

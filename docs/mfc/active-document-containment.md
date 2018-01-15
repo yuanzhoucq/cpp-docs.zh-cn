@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 749d4badb3a7b5a2c61fa753a840765f14e2a329
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containment"></a>活动文档包容
 活动文档包容是一种技术，它提供用于处理的文档，而不是强制你创建和使用每个文档类型的多个应用程序帧中的单个帧。 它不同于基本 OLE 技术，因为 OLE 配合复合文档仅一段单独的内容可在其中活动内的嵌入对象的不同而不同。 使用活动文档包容的单个帧的上下文中激活整个文档 （即，整个应用程序，包括关联的菜单、 工具栏和等等）。  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [MFCBIND](../visual-cpp-samples.md)示例阐释了活动文档容器应用程序的实现。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC COM](../mfc/mfc-com.md)
 

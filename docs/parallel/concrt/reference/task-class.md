@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,38 +17,22 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- task class
+dev_langs: C++
+helpviewer_keywords: task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
-并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它还可由与其他任务使用继续符 ( `then`)，和联接 ( `when_all`) 和所选 ( `when_any`) 模式。  
+并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它还可由其他使用延续任务 ( `then`)，和联接 ( `when_all`) 以及所选择的 ( `when_any`) 模式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -109,8 +92,8 @@ class task;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `task`  
   
-## <a name="requirements"></a>要求  
- **标头︰** ppltasks.h  
+## <a name="requirements"></a>惠?  
+ **标头：** ppltasks.h  
   
  **命名空间：** 并发  
   
@@ -128,10 +111,10 @@ void get() const;
  任务的结果。  
   
 ### <a name="remarks"></a>备注  
- 如果取消该任务，则调用`get`将引发[task_canceled](task-canceled-class.md)异常。 如果任务遇到了不同的异常或异常从前面的任务传播到此任务，则对 `get` 的调用将引发该异常。  
+ 如果任务已取消，调用`get`将引发[task_canceled](task-canceled-class.md)异常。 如果任务遇到了不同的异常或异常从前面的任务传播到此任务，则对 `get` 的调用将引发该异常。  
   
 > [!IMPORTANT]
->  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]应用程序中，不要调用[concurrency::task::wait](#wait)或`get`(`wait`调用`get`) 在 STA 运行的代码中 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)因为这些方法阻止当前线程并且会导致应用停止响应。 但是，你可以调用`get`方法来接收基于任务的延续中的先行任务的结果，因为所得的结果立即可用。  
+>  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]应用程序中，不要调用[concurrency::task::wait](#wait)或`get`(`wait`调用`get`) 在 STA 运行的代码中 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)原因这些方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用`get`方法来接收基于任务的延续中的先行任务的结果，因为所得的结果立即可用。  
   
 ##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
@@ -155,7 +138,7 @@ bool is_done() const;
  如果任务已完成，false 否则，则为 true。  
   
 ### <a name="remarks"></a>备注  
- 如果该任务完成或取消 （有或没有用户异常），该函数返回 true。  
+ 如果任务已完成或取消 （有或没有用户异常），该函数返回 true。  
   
 ##  <a name="operator_neq"></a>运算符 ！ = 
 
@@ -216,7 +199,7 @@ scheduler_ptr scheduler() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向计划程序指针  
+ 计划程序指针  
   
 ##  <a name="ctor"></a>任务 
 
@@ -327,7 +310,7 @@ __declspec(
 ### <a name="remarks"></a>备注  
  采用返回 Windows::Foundation::IAsyncInfo 接口的 lambda 或函子的 `then` 的重载仅适用于 Windows 应用商店应用。  
   
- 有关如何使用任务延续构成异步工作的详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 有关如何使用任务延续撰写异步工作的详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ##  <a name="wait"></a>等待 
 
@@ -345,6 +328,5 @@ task_status wait() const;
 > [!IMPORTANT]
 >  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]应用程序中，不要调用`wait`在 STA 运行的代码中 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用[concurrency::task::get](#get)方法来接收基于任务的延续中的先行任务的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)
-

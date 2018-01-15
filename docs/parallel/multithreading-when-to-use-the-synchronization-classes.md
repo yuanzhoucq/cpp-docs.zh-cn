@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b72b3ffac2c4c295aa997e43e52b0bf5e67fe985
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38437983552dfdf2cf6708ec5fd067e06387ea5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>多线程处理：何时使用同步类
 MFC 提供的多线程的类分为两类： 同步对象 ([CSyncObject](../mfc/reference/csyncobject-class.md)， [CSemaphore](../mfc/reference/csemaphore-class.md)， [CMutex](../mfc/reference/cmutex-class.md)， [CCriticalSection](../mfc/reference/ccriticalsection-class.md)，和[CEvent](../mfc/reference/cevent-class.md)) 和同步访问对象 ([CMultiLock](../mfc/reference/cmultilock-class.md)和[CSingleLock](../mfc/reference/csinglelock-class.md))。  
@@ -61,5 +62,5 @@ MFC 提供的多线程的类分为两类： 同步对象 ([CSyncObject](../mfc/r
   
  有关如何使用同步类的信息，请参阅[多线程处理： 如何使用同步类](../parallel/multithreading-how-to-use-the-synchronization-classes.md)。 有关同步的信息，请参阅[同步](http://msdn.microsoft.com/library/windows/desktop/ms686353)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。 有关 MFC 中的多线程处理支持的信息，请参阅[与 c + + 和 MFC 的多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++ 和 MFC 进行多线程编程](../parallel/multithreading-with-cpp-and-mfc.md)

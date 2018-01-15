@@ -1,153 +1,157 @@
 ---
-title: "演练：使用 join 避免死锁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "使用联接阻止死锁 [并发运行时]"
-  - "死锁，阻止 [并发运行时]"
-  - "非贪婪联接，示例"
-  - "join 类，示例"
+title: "演练： 使用 join 避免死锁 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preventing deadlock with joins [Concurrency Runtime]
+- deadlock, preventing [Concurrency Runtime]
+- non-greedy joins, example
+- join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 演练：使用 join 避免死锁
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主题通过哲学家就餐问题说明如何使用 [concurrency::join](../../parallel/concrt/reference/join-class.md) 类来避免应用程序中发生死锁。  在软件应用程序中，在两个或更多进程中的每个进程都占用一个资源，并相互等待另一个进程释放一些其他资源时，会发生死锁。  
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>演练：使用 join 避免死锁
+本主题使用通过哲学家就餐问题说明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)类以防止你的应用程序中发生死锁。 在软件应用程序，*死锁*当两个或多个进程彼此占用一个资源并相互等待另一个进程以释放一些其他资源。  
   
- 哲学家就餐问题是在多个并发进程之间共享资源集时可能出现的一组常规问题的具体示例。  
+ 通过哲学家就餐问题是常规的一组在多个并发进程之间共享一组资源时可能发生的问题的特定示例。  
   
-## 系统必备  
- 在开始本演练之前，请阅读下列主题：  
+## <a name="prerequisites"></a>系统必备  
+ 在开始本演练之前，请阅读以下主题：  
   
--   [异步代理](../../parallel/concrt/asynchronous-agents.md)  
+- [异步代理](../../parallel/concrt/asynchronous-agents.md)  
   
--   [演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
+- [演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
   
--   [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)  
+- [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [消息传递函数](../../parallel/concrt/message-passing-functions.md)  
+- [消息传递函数](../../parallel/concrt/message-passing-functions.md)  
   
--   [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)  
+- [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a> 各节内容  
+##  <a name="top"></a> 部分  
  本演练包含以下各节：  
   
--   [哲学家就餐问题](#problem)  
+- [通过哲学家就餐问题](#problem)  
   
--   [低级实现](#deadlock)  
+- [Naïve 实现](#deadlock)  
   
--   [使用联接避免死锁](#solution)  
+- [使用 join 避免死锁](#solution)  
   
-##  <a name="problem"></a> 哲学家就餐问题  
- 哲学家就餐问题说明了在应用程序中如何发生死锁。  在这个问题中，五个哲学家坐在圆桌旁。  每个哲学家一边思考一边就餐。  每个哲学家必须与左侧邻居共享一根筷子，与右侧邻居共享另一根筷子。  下图显示了这一布局。  
+##  <a name="problem"></a>通过哲学家就餐问题  
+ 通过哲学家就餐问题说明了如何在应用程序中发生死锁。 此问题，请在五个哲学家坐在轮表。 每个哲学家思想和饮食之间交替。 每个哲学家必须与左侧，另一个邻居共享筷子筷子与右侧邻居。 下图显示此布局。  
   
- ![哲学家就餐问题](../../parallel/concrt/media/dining_philosophersproblem.png "Dining\_PhilosophersProblem")  
+ ![用餐哲学家就餐问题](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
   
- 为了就餐，哲学家必须拿起两根筷子。  如果每个哲学家都只拿起一根筷子而等待另一根筷子，则没有一个哲学家可以吃到食物，所有人都饿着。  
+ 为了就餐，哲学家必须包含两个筷子。 如果每个哲学家保持一个筷子，并等待另一个，然后没有一个哲学家可以吞噬你和所有枯竭。  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="deadlock"></a> 低级实现  
- 下面的示例演示哲学家就餐问题的低级实现。  从 [concurrency::agent](../../parallel/concrt/reference/agent-class.md) 派生的 `philosopher` 类使每个哲学家可以单独操作。  该示例使用 [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) 对象的共享数组为每个 `philosopher` 对象授予对一对筷子的独占访问权。  
+##  <a name="deadlock"></a>Naïve 实现  
+ 下面的示例演示通过哲学家就餐问题的简单实现。 `philosopher`类，该类派生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)，使每个哲学家可以单独操作。 该示例使用的共享的数组[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)对象，让每个`philosopher`对象对一对筷子的独占访问权。  
   
- 为了将该实现与图示相关联，`philosopher` 类表示一个哲学家。  `int` 变量表示每根筷子。  `critical_section` 对象作为放置筷子的托架。  `run` 方法模拟哲学家的生命周期。  `think` 方法模拟思考操作，`eat` 方法模拟就餐操作。  
+ 要关联到图中，实现`philosopher`类表示一个哲学家。 `int`变量表示每个筷子。 `critical_section`对象作为放置在其停留筷子的持有者。 `run`方法模拟哲学家的生命周期。 `think`方法模拟思考操作和`eat`方法模拟就餐操作。  
   
- `philosopher` 对象在调用 `eat` 方法之前，锁定全部两个 `critical_section` 对象，以模拟从托架上取走筷子的操作。  调用 `eat` 后，`philosopher` 对象通过将 `critical_section` 对象设置回未锁定状态，将筷子放回到托架。  
+ A`philosopher`对象锁定全部两个`critical_section`对象以模拟从之前它是持有人筷子删除调用`eat`方法。 在调用后`eat`、`philosopher`对象返回到是持有人通过设置的筷子`critical_section`对象回解除锁定状态。  
   
- `pickup_chopsticks` 方法说明了可能发生死锁的位置。  如果每个 `philosopher` 对象获得了一个锁的访问权，则没有 `philosopher` 对象可以继续，因为另一个锁由另一个 `philosopher` 对象控制。  
+ `pickup_chopsticks`方法演示了可能出现死锁。 如果每个`philosopher`对象可以访问一个锁，则没有`philosopher`对象可以继续，因为其他锁由另一个控制`philosopher`对象。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
+### <a name="description"></a>描述  
   
-### 代码  
- [!CODE [concrt-philosophers-deadlock#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-deadlock#1)]  
+### <a name="code"></a>代码  
+ [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]  
   
-## 编译代码  
- 复制代码示例，再将此代码粘贴到 Visual Studio 项目中或一个名为 `philosophers-deadlock.cpp` 的文件中，然后在 Visual Studio命令提示符窗口中运行以下命令。  
+## <a name="compiling-the-code"></a>编译代码  
+ 复制代码示例并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`philosophers-deadlock.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- **cl.exe \/EHsc philosophers\-deadlock.cpp**  
+ **cl.exe /EHsc philosophers-deadlock.cpp**  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="solution"></a> 使用联接避免死锁  
- 本节说明如何使用消息缓冲区和消息传递函数来消除出现死锁的机会。  
+##  <a name="solution"></a>使用 join 避免死锁  
+ 本部分演示如何使用消息缓冲区和消息传递函数来消除出现死锁的机会。  
   
- 为了将该示例与上一示例相关联，`philosopher` 类通过使用 [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) 对象和 `join` 对象来替换每个 `critical_section` 对象。  `join` 对象作为向哲学家提供筷子的仲裁者。  
+ 要关联到更早版本的一个，此示例`philosopher`类替换每个`critical_section`对象使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象和一个`join`对象。 `join`对象用作到哲学家提供筷子的仲裁。  
   
- 该示例使用 `unbounded_buffer` 类，这是因为在目标收到来自 `unbounded_buffer` 对象的消息后，将从消息队列中移除此消息。  这样，包含消息的 `unbounded_buffer` 对象表示筷子可用。  不包含消息的 `unbounded_buffer` 对象则表示筷子正在使用中。  
+ 此示例使用`unbounded_buffer`类，因为在目标收到来自消息`unbounded_buffer`对象，从消息队列中删除消息。 这使`unbounded_buffer`包含一条消息，则指示筷子的对象都不可用。 `unbounded_buffer`不包含消息的对象表示筷子正在使用。  
   
- 该示例使用非贪婪 `join` 对象，这是因为只有当两个 `unbounded_buffer` 对象都包含消息时，非贪婪联接才为每个 `philosopher` 对象授予全部两根筷子的访问权。  因为只要消息可用，贪婪联接就会接受消息，所以贪婪联接无法避免死锁。  如果所有贪婪 `join` 对象收到其中一条消息，但是永远等待另一条变为可用，则会发生死锁。  
+ 此示例使用非贪婪`join`对象，因为非贪婪联接用于为每`philosopher`对象对这两个筷子的访问仅当同时`unbounded_buffer`对象包含一条消息。 因为贪婪联接接受的消息变得可用时，就会立即，贪婪联接将不会阻止死锁。 如果所有贪婪，则会发生死锁`join`对象收到一条消息，但永远等待另一个变得可用。  
   
- 有关贪婪和非贪婪联接的更多信息，以及各种消息缓冲区类型之间的差异，请参见[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 有关贪婪和非贪婪联接，以及各种消息缓冲区类型之间的差异的详细信息，请参阅[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。  
   
-#### 在此示例中避免死锁  
+#### <a name="to-prevent-deadlock-in-this-example"></a>若要防止在此示例中的死锁  
   
-1.  从示例中移除以下代码。  
+1.  删除以下代码示例中。  
   
-     [!CODE [concrt-philosophers-deadlock#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-deadlock#2)]  
+ [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]  
   
-2.  将 `philosopher` 类的 `_left` 和 `_right` 数据成员的类型更改为 `unbounded_buffer`。  
+2.  更改的类型`_left`和`_right`的数据成员`philosopher`类到`unbounded_buffer`。  
   
-     [!CODE [concrt-philosophers-join#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#2)]  
+ [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]  
   
-3.  修改 `philosopher` 构造函数，以采用 `unbounded_buffer` 对象作为其参数。  
+3.  修改`philosopher`构造函数以使用`unbounded_buffer`作为其参数的对象。  
   
-     [!CODE [concrt-philosophers-join#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#3)]  
+ [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]  
   
-4.  修改 `pickup_chopsticks` 方法，以使用非贪婪 `join` 对象从全部两根筷子的消息缓冲区接收消息。  
+4.  修改`pickup_chopsticks`要使用非贪婪方法`join`对象从这两个筷子的消息缓冲区接收消息。  
   
-     [!CODE [concrt-philosophers-join#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#4)]  
+ [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]  
   
-5.  修改 `putdown_chopsticks` 方法，以通过将消息发送到全部两根筷子的消息缓冲区来释放对筷子的访问权。  
+5.  修改`putdown_chopsticks`方法来通过将一条消息发送到这两个筷子的消息缓冲区释放对筷子的访问。  
   
-     [!CODE [concrt-philosophers-join#5](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#5)]  
+ [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]  
   
-6.  修改 `run` 方法，以保存 `pickup_chopsticks` 方法的结果，并将这些结果传递给 `putdown_chopsticks` 方法。  
+6.  修改`run`方法保存的结果`pickup_chopsticks`方法并传递到这些结果`putdown_chopsticks`方法。  
   
-     [!CODE [concrt-philosophers-join#6](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#6)]  
+ [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]  
   
-7.  将 `wmain` 函数中 `chopsticks` 变量的声明修改为 `unbounded_buffer` 对象的数组，其中每个对象保存一条消息。  
+7.  修改的声明`chopsticks`变量中`wmain`函数为非数组的`unbounded_buffer`每个保存一条消息的对象。  
   
-     [!CODE [concrt-philosophers-join#7](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#7)]  
+ [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 下面显示了使用非贪婪 `join` 对象消除死锁风险的已完成示例。  
+### <a name="description"></a>描述  
+ 下面显示的已完成的示例中使用非贪婪`join`对象，若要消除的死锁风险。  
   
-### 代码  
- [!CODE [concrt-philosophers-join#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#1)]  
+### <a name="code"></a>代码  
+ [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]  
   
-### 注释  
- 该示例产生下面的输出。  
+### <a name="comments"></a>注释  
+ 本示例生成以下输出。  
   
-  **亚里斯多德吃了 50 次。**  
-**笛卡儿吃了 50 次。**  
-**hobbes 吃了 50 次。**  
-**socrates 吃了 50 次。**  
-**柏拉图吃了 50 次。**   
-## 编译代码  
- 复制代码示例，再将此代码粘贴到 Visual Studio项目中或一个名为`philosophers-join.cpp` 的文件中，然后在Visual Studio命令提示符窗口中运行以下命令。  
+```Output  
+aristotle ate 50 times.  
+descartes ate 50 times.  
+hobbes ate 50 times.  
+socrates ate 50 times.  
+plato ate 50 times.  
+```  
   
- **cl.exe \/EHsc philosophers\-join.cpp**  
+## <a name="compiling-the-code"></a>编译代码  
+ 复制代码示例并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`philosophers-join.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- \[[Top](#top)\]  
+ **cl.exe /EHsc philosophers-join.cpp**  
   
-## 请参阅  
+ [[返回页首](#top)]  
+  
+## <a name="see-also"></a>请参阅  
  [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
  [异步代理](../../parallel/concrt/asynchronous-agents.md)   

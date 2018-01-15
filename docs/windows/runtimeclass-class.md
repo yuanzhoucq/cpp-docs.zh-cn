@@ -15,85 +15,37 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e757712b360ff3ed4de12d8236c75a691a1f0c7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 类
-表示继承指定数量的接口的实例化类，并提供指定 Windows 运行时、经典 COM 和弱引用支持。  
+表示继承指定的接口并提供指定的 Windows 运行时、 经典 COM 和弱引用支持的、 WinRT 或 COM 的类。  
   
- 通常派生从你 WRL 类型`RuntimeClass`因为此类实现`AddRef`， `Release`，和`QueryInterface`，并可帮助管理模块的总体引用计数。  
+此类提供 WinRT 和 COM 的类，提供的实现的样本实现`QueryInterface`， `AddRef`，`Release`等，管理模块的引用计数，并提供的类工厂的支持可激活的对象。
   
 ## <a name="syntax"></a>语法  
   
-```  
-template <  
-   typename I0,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil,  
-   typename I3 = Details::Nil,  
-   typename I4 = Details::Nil,  
-   typename I5 = Details::Nil,  
-   typename I6 = Details::Nil,  
-   typename I7 = Details::Nil,  
-   typename I8 = Details::Nil,  
-   typename I9 = Details::Nil  
->  
-class RuntimeClass : public Details::RuntimeClass<typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT, RuntimeClassFlags<WinRt>>;  
-  
-template <  
-   unsigned int classFlags,  
-   typename I0,  
-   typename I1,  
-   typename I2,  
-   typename I3,  
-   typename I4,  
-   typename I5,  
-   typename I6,  
-   typename I7,  
-   typename I8  
->  
-class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : public Details::RuntimeClass<typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT, RuntimeClassFlags<classFlags> >;  
-```  
+```
+template <typename ...TInterfaces> class RuntimeClass
+template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
+```
   
 #### <a name="parameters"></a>参数  
- `I0`  
- 第零个接口 id。 （必需）  
-  
- `I1`  
- 第一个接口 id。 （可选）  
-  
- `I2`  
- 第二个接口 id。 （可选）  
-  
- `I3`  
- 第三个接口 id。 （可选）  
-  
- `I4`  
- 第四个接口 id。 （可选）  
-  
- `I5`  
- 第五个接口 id。 （可选）  
-  
- `I6`  
- 第六个接口 id。 （可选）  
-  
- `I7`  
- 第七个接口 id。 （可选）  
-  
- `I8`  
- 第八个接口 id。 （可选）  
-  
- `I9`  
- 第九个接口 id。 （可选）  
-  
  `classFlags`  
- 一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。  `__WRL_CONFIGURATION_LEGACY__`可以定义宏，若要更改项目中的所有运行时类的 classFlags 的默认值。 如果定义，则 RuntimeClass 实例进行非敏捷 dy 默认。 未定义时，RuntimeClass 实例都是敏捷的默认值。 若要避免多义性始终指定 RuntimeClassType::FtmBase 或 RuntimeClassType::InhibitFtmBase。
+可选参数。 一个或多个组合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。 `__WRL_CONFIGURATION_LEGACY__`可以定义宏，若要更改项目中的所有运行时类的 classFlags 的默认值。 如果定义，RuntimeClass 实例是默认情况下非敏捷。 未定义时，RuntimeClass 实例都是敏捷的默认值。 若要避免多义性，始终指定中的 Microsoft::WRL::FtmBase`TInterfaces`或 RuntimeClassType::InhibitFtmBase。 请注意，如果 InhibitFtmBase 和 FtmBase 是这两种使用该对象将是敏捷类。
+ 
+ `TInterfaces`  
+超出 IUnknown、 IInspectable 或受其他接口的接口的列表对象实现[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)。 它还可能会列出其他类来从值得注意的是 Microsoft::WRL::FtmBase 派生来使该对象为敏捷，从而使该实现 IMarshal。
   
 ## <a name="members"></a>成员  
-  
+`RuntimeClassInitialize`一个函数，如果 MakeAndInitialize 模板函数用于构造对象初始化的对象。 如果初始化失败，则返回如果已成功初始化了对象，则为 S_OK 或 COM 错误代码。 COM 错误代码将 MakeAndInitialize 的返回值作为传播。 请注意是否请模板函数用于构造对象不调用 RuntimeClassInitialize 方法。
+
 ### <a name="public-constructors"></a>公共构造函数  
   
 |名称|描述|  
@@ -102,30 +54,12 @@ class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7
 |[RuntimeClass::~RuntimeClass 析构函数](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|取消初始化 RuntimeClass 类的当前实例。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
- `I0`  
+这是实现详细信息。
   
- `ChainInterfaces`  
+## <a name="requirements"></a>惠?  
+**标头：** implements.h  
   
- `I0`  
+**命名空间：** Microsoft::WRL  
   
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `RuntimeClass`  
-  
-## <a name="requirements"></a>要求  
- **标头：** implements.h  
-  
- **命名空间：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另请参阅  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+[Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 733c99dc4895907ba943f32dc7048ce6cfc01528
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 71389a622b02d5c0379b2be1a91783e8235077bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>跟踪引用运算符（C++ 组件扩展）
 A*跟踪引用*(`%`) 表现得像普通的 c + + 参考 (`&`) 只不过当一个对象分配给跟踪引用，该对象的引用计数会递增。  

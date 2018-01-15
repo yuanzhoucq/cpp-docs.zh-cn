@@ -1,32 +1,33 @@
 ---
-title: "SafeDivide | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeDivide"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeDivide 函数"
+title: "SafeDivide |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeDivide
+dev_langs: C++
+helpviewer_keywords: SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SafeDivide
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-分为两个数字。防止除以零的方法。  
+# <a name="safedivide"></a>SafeDivide
+使可防止被零除的方式的两个数字相除。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename T, typename U>  
@@ -37,33 +38,33 @@ inline bool SafeDivide (
 ) throw ();  
 ```  
   
-#### 参数  
- \[in\] `t`  
- 除数。  这必须是类型 T。  
+#### <a name="parameters"></a>参数  
+ [in] `t`  
+ 除数。 其类型必须为 T。  
   
- \[in\] `u`  
- 被除数。  这必须为类型 U。  
+ [in] `u`  
+ 被除数。 其类型必须为 U。  
   
- \[out\] `result`  
- 参数 `SafeDivide` 存储结果的地方。  
+ [out] `result`  
+ 参数其中`SafeDivide`存储结果。  
   
-## 返回值  
- `true`，如果未发生错误；`false`，如果出错。  
+## <a name="return-value"></a>返回值  
+ `true`如果没有错误发生;`false`如果发生错误。  
   
-## 备注  
- 此方法为 [SafeInt 库](../windows/safeint-library.md) 的一部分以及单个除法运算设计，而不会创建的实例。[SafeInt 类](../windows/safeint-class.md)  
+## <a name="remarks"></a>备注  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个除法运算[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  此方法，如果必须保护时，才应使用个数学运算。  如果存在多个操作，应该使用 `SafeInt` 类 \(而非调用各个独立函数。  
+>  此方法仅应在必须保护单个数学运算时使用。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
   
- 有关类型 U 和 T 模板的更多信息，请参见 [SafeInt 函数](../windows/safeint-functions.md)。  
+ 有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
-## 要求  
- **页眉：** safeint.h  
+## <a name="requirements"></a>惠?  
+ **标头：** safeint.h  
   
- **命名空间：** Microsoft::Utilities  
+ **Namespace:** microsoft:: utilities  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [SafeInt 函数](../windows/safeint-functions.md)   
  [SafeInt 库](../windows/safeint-library.md)   
  [SafeInt 类](../windows/safeint-class.md)   

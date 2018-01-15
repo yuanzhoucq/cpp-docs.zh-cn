@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2a16e9125c0c121aea3905b6e20eba59ef1dc68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8fee8ecffda86f306b44f0d5b873d5192d4d181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-streams"></a>输出流
 输出流对象是字节的目标。 三个最重要的输出流类为 `ostream`、`ofstream` 和 `ostringstream`。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
  [自行编写无自变量的操控器](../standard-library/writing-your-own-manipulators-without-arguments.md)  
   
-## <a name="see-also"></a>另请参阅 
+## <a name="see-also"></a>请参阅 
  [ofstream](../standard-library/basic-ofstream-class.md)   
  [ostringstream](../standard-library/basic-ostringstream-class.md)   
  [iostream 编程](../standard-library/iostream-programming.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2853c40a5eaa3ccb8dbbf5855b92b4cba9b3a140
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-list-controls"></a>虚拟列表控件
 虚拟列表控件是一个列表视图控件，具有**LVS_OWNERDATA**样式。 此样式使控件能够最多支持项计数`DWORD`(默认项计数仅扩展到`int`)。 但是，此样式所提供的最大优点是能够在任何时候在内存中仅有部分数据项目。 这将允许虚拟列表视图控件，若要将自身添加为大型数据库的信息，用于访问数据的特定方法已到位。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
  你应该准备好搜索项给定的列表视图控件的信息相匹配。 如果不找到任何匹配项，则应返回的项，如果成功，则为-1 的索引。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

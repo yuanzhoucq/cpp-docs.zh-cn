@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 511b583e6ce01a6d4f6d40fa2a4a075216a367d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 484997806cadb75b0322e9d194fe37ab30dae3b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution 类
 在包含起始值不包含结束值的输出范围中生成均匀的（每个值的概率都均等）浮点分布。  
@@ -178,7 +179,7 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<random>  
   
  **命名空间：** std  
@@ -202,7 +203,7 @@ explicit uniform_real_distribution(const param_type& parm);
 用于构造分布的 `param_type` 结构。  
   
 ### <a name="remarks"></a>备注  
- **前提条件：**`a < b`  
+ **前置条件：**`a < b`  
   
 第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。  
   
@@ -237,7 +238,7 @@ struct param_type {
   
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
 
 

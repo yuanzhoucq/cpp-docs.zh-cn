@@ -20,11 +20,14 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72149aa023723f4524ac22252f6778494341f44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 声明*钉住指针*，其只能与公共语言运行时一起使用。  
@@ -94,7 +97,7 @@ ms.lasthandoff: 10/24/2017
   
  有关钉住指针的详细信息，请参阅[How to: Pin 指针和数组](../windows/how-to-pin-pointers-and-arrays.md)和[如何： 声明钉住指针和值类型](../windows/how-to-declare-pinning-pointers-and-value-types.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

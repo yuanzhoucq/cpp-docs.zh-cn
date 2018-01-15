@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 619ddd7805207f14bb44ed52d148f53e3aa79e57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 类
 创建使用位图图像而非文本进行标记的按钮控件。  
@@ -115,7 +116,7 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxext.h  
   
 ##  <a name="autoload"></a>CBitmapButton::AutoLoad  
@@ -176,7 +177,7 @@ BOOL LoadBitmaps(
   
 ### <a name="parameters"></a>参数  
  *lpszBitmapResource*  
- 指向以 null 结尾的字符串包含位图的名称，如位图按钮的常规或"向上"状态。 必需。  
+ 指向以 null 结尾的字符串包含位图的名称，如位图按钮的常规或"向上"状态。 必须的。  
   
  *lpszBitmapResourceSel*  
  点到包含位图的名称，为所选的位图按钮的以 null 结尾的字符串或"关闭"状态。 可能是**NULL**。  
@@ -188,7 +189,7 @@ BOOL LoadBitmaps(
  指向以 null 结尾的字符串包含位图按钮的禁用状态的位图的名称。 可能是**NULL**。  
   
  *nIDBitmapResource*  
- 指定位图资源如位图按钮的常规或"向上"状态的资源 ID 号。 必需。  
+ 指定位图资源如位图按钮的常规或"向上"状态的资源 ID 号。 必须的。  
   
  *nIDBitmapResourceSel*  
  为所选的位图按钮的或"关闭"状态，请指定位图资源的资源 ID 号。 可能为 0。  
@@ -215,7 +216,7 @@ void SizeToContent();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CTRLTEST](../../visual-cpp-samples.md)   
  [CButton 类](../../mfc/reference/cbutton-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)

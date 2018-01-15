@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98c59ec6c0eed419cdac05a39a65ea1bde624d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 类
 具有仅限本地旋转的基于编写器首选队列的读取器-编写器锁。 锁授予对编写器的先进先出 (FIFO) 访问权限，并在出现编写器持续负载的情况下停止读取器。  
@@ -58,7 +59,7 @@ class reader_writer_lock;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[lock](#lock)|获取读取器 / 编写器锁，用作一个编写器。|  
 |[lock_read](#lock_read)|获取读取器 / 编写器锁，用作一个读取器。 如果有编写器，活动的读取器必须等待，直到它们完成。 读取器只需注册感兴趣锁定并等待编写器释放它。|  
@@ -72,7 +73,7 @@ class reader_writer_lock;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `reader_writer_lock`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -214,6 +215,6 @@ void unlock();
 ### <a name="remarks"></a>备注  
  如果有正在等待锁的编写器，释放锁将始终转到按 FIFO 顺序的下一步编写器。 此锁朝编写器偏离，并且可以阻止编写器持续负载下的读取器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [critical_section 类](critical-section-class.md)

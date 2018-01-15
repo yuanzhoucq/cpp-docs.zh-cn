@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8189e621ac137986c72657441c5584e09795edd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14f41a90aab8e95d336df6724a7217947ec1c57c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistream-class"></a>basic_istream 类
 描述一个对象，它控制从具有类型为 `Elem` 的元素的流缓冲区提取元素和编码对象的操作，其中该类型也称为 [char_type](../standard-library/basic-ios-class.md#char_type)，其字符特征由类 *Tr*（也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)）决定。  
@@ -170,7 +171,7 @@ setstate(state);
 |[operator>>](#op_gt_gt)|调用输入流上的函数或从输入流中读取格式化数据。|  
 |[operator=](#op_eq)|将运算符右侧上的 `basic_istream` 分配给此对象。 这是涉及不会留下副本的 `rvalue` 引用的移动赋值运算符。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<istream>  
   
  **命名空间：** std  
@@ -964,7 +965,7 @@ abc
 abc  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)

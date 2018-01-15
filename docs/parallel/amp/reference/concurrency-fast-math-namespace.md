@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14bdfdf5ab570567f78befd3c99bca5c56c5195e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 命名空间
 函数中`fast_math`命名空间具有降低的准确性，支持仅的单精度 (`float`)，并调用 DirectX 内部函数。 有两个版本的每个函数，例如`cos`和`cosf`。 这两个版本采用并返回`float`，但每个调用相同的 DirectX 内部函数。  
@@ -101,10 +102,10 @@ namespace fast_math;
 |[trunc](concurrency-fast-math-namespace-functions.md#trunc)|将截断的整数部分的自变量|  
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|将截断的整数部分的自变量|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_math.h  
   
  **Namespace:** concurrency:: fast_math  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

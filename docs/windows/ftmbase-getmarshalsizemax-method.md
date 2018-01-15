@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3597d19e1bcdc6b1b14e150c66236585f8c35fb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d68889531c270db190f861eb20a34783b88987f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax 方法
 获取上的封送指定的接口指针上指定的对象所需的字节数的上限。  
@@ -63,10 +66,10 @@ STDMETHODIMP GetMarshalSizeMax(
 ## <a name="return-value"></a>返回值  
  如果成功，则则为 S_OK否则为 E_FAIL 或 E_NOINTERFACE。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** ftm.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FtmBase 类](../windows/ftmbase-class.md)

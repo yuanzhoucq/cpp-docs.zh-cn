@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 944ba06bd7b3d81abb2ab431494096f9ade77574
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b7ab27bb7a6458efde84451febaeb6f3ef37115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internationalization-strategies"></a>国际化策略
 根据您的目标操作系统和市场，你有几个国际化策略：  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/24/2017
   
  这些主题的其余部分专注于编写可以生成为 Unicode 或 MBCS 的完全可移植代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [区域设置和代码页](../text/locales-and-code-pages.md)

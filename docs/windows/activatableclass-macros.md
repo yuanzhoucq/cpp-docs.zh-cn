@@ -21,11 +21,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cd75d4075cfe590151f7746281640febb334ce9
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7043a3a9013f02048b34149dd113d2125dced6a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 宏
 
@@ -65,12 +68,12 @@ ActivatableClassWithFactoryEx(
 
 执行不与经典 COM 一起使用这些宏，除非使用`#undef`指令以确保**&#95; &#95;WRL_WINRT_STRICT &#95; &#95;**删除宏定义。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 
 **标头：** module.h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Module 类](../windows/module-class.md)

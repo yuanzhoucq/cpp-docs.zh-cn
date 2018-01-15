@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec82c030e01852725ffd7a7a9308fcbbf7802ef8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048：为 MFC 数据库应用程序编写 ODBC 安装和管理程序
 > [!NOTE]
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  有关详细信息，请参阅 ODBC SDK*程序员参考*章 23、 安装程序 DLL 函数参考及章 24 个，安装程序 DLL 的函数参考。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

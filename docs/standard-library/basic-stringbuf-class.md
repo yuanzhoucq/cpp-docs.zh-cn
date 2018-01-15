@@ -41,11 +41,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06d149e6a3f69096a86d84ebe3401b5dc30e748a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b1b41f1a12f6b9e97db6ad3014b047bbc0f4b72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 类
 描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与数组对象中存储的元素序列之间的来回传输进行控制的流缓冲区。  
@@ -87,7 +88,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|该类型是模板参数 `Alloc`的同义词。|  
+|[allocator_type](#allocator_type)|该类型是模板参数 `Alloc` 的同义词。|  
 |[char_type](#char_type)|将类型名与 `Elem` 模板参数关联。|  
 |[int_type](#int_type)|使 `basic_filebuf` 范围中的此类型等效于 `Tr` 范围中具有相同名称的类型。|  
 |[off_type](#off_type)|使 `basic_filebuf` 范围中的此类型等效于 `Tr` 范围中具有相同名称的类型。|  
@@ -106,13 +107,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 |swap||  
 |[underflow](#underflow)|从输入流中提取当前元素的受保护虚拟成员函数。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<sstream>  
   
  **命名空间：** std  
   
 ##  <a name="allocator_type"></a>  basic_stringbuf::allocator_type  
- 该类型是模板参数 `Alloc`的同义词。  
+ 该类型是模板参数 `Alloc` 的同义词。  
   
 ```  
 typedef Alloc allocator_type;  
@@ -238,7 +239,7 @@ virtual pos_type seekoff(
 ### <a name="remarks"></a>备注  
  对于 `basic_stringbuf<Elem, Tr, Alloc>` 类的对象，流位置仅包含流偏移量。 如果偏移量为零，将指定受控序列的第一个元素。  
   
- 确定新的位置，如下所示：  
+ 确定新位置，如下所示：  
   
 -   如果 `_Way` == `ios_base::beg`，新的位置是流开头加上 `_Off`。  
   
@@ -380,7 +381,7 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)

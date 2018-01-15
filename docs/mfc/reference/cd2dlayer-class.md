@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DLayer::GetSize
 - AFXRENDERTARGET/CD2DLayer::IsValid
 - AFXRENDERTARGET/CD2DLayer::m_pLayer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DLayer [MFC], CD2DLayer
 - CD2DLayer [MFC], Attach
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94345f4784254addce0deaf8bdb5061dbde6a8cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: cdb6cfe624b0b3ba22d91ab30998aebf5bc96820
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer 类
 ID2D1Layer 包装器。  
@@ -82,7 +80,7 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DLayer::m_pLayer](#m_player)|将存储指向 ID2D1Layer 对象的指针。|  
   
@@ -93,7 +91,7 @@ class CD2DLayer : public CD2DResource;
   
  `CD2DLayer`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
@@ -208,6 +206,5 @@ operator ID2D1Layer* ();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1Layer 接口或如果尚未初始化对象的 NULL 指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

@@ -53,11 +53,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1502f2bc315df705f7a135305388277c6d44918e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，它将打开一个下拉工具栏 ( [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果用户按下并按住工具栏按钮。  
@@ -103,7 +104,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|指定用户必须按住鼠标按钮下拉工具栏出现之前的时间的长度。|  
   
@@ -121,7 +122,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
  [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdropdowntoolbar.h  
   
 ##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
@@ -379,7 +380,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
 - **Image**  
   
-- **“文本”**  
+- **文本**  
   
 - **图像和文本**  
   
@@ -484,7 +485,7 @@ void SetDefaultCommand(UINT uiCmd);
 ### <a name="remarks"></a>备注  
  调用此方法以指定用户单击按钮时框架所执行的默认命令。 具有由指定的命令 ID 的项`uiCmd`必须位于父下拉工具栏。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)   

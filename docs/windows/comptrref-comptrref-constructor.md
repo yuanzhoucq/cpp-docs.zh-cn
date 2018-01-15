@@ -1,32 +1,33 @@
 ---
-title: "ComPtrRef::ComPtrRef 构造函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::ComPtrRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRef，构造函数"
+title: "Comptrref:: Comptrref 构造函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::ComPtrRef
+dev_langs: C++
+helpviewer_keywords: ComPtrRef, constructor
 ms.assetid: ce2d2533-fef6-4b2d-b088-6f3db01df5a5
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1e5012af680722c07432b492c4ca1ead5dc44cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef::ComPtrRef 构造函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef 构造函数
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 ComPtrRef(  
@@ -34,18 +35,18 @@ ComPtrRef(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `ptr`  
- 基础值另一 ComPtrRef 对象。  
+ 另一个 ComPtrRef 对象的基础值。  
   
-## 备注  
- 初始化 ComPtrRef 类的新实例。指定的指针到另一 ComPtrRef 对象。  
+## <a name="remarks"></a>备注  
+ 初始化中的指定指针到另一个 ComPtrRef 对象的 ComPtrRef 类的新实例。  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>惠?  
+ **标头：** client.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ComPtrRef 类](../windows/comptrref-class.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

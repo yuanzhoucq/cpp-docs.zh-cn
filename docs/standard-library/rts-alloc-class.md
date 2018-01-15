@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 77a85485c2ad2aad64417400e9189da5ab5c7b21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e4870edc0b54a92307ddf88d58dd96ca3fd331e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtsalloc-class"></a>rts_alloc 类
 rts_alloc 模板类描述一种[筛选器](../standard-library/allocators-header.md)，它具有缓存实例数组，并确定运行时（而非编译时）用于分配和解除分配的实例。  
@@ -56,7 +57,7 @@ class rts_alloc
 |[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|  
 |[equals](#equals)|比较两个缓存是否相等。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<allocators>  
   
  **命名空间：** stdext  
@@ -114,7 +115,7 @@ bool equals(const sync<_Cache>& _Other) const;
 ### <a name="remarks"></a>备注  
  如果结果为 `caches[0].equals(other.caches[0])`，则为 `true`；否则为 `false`。 `caches` 表示缓存对象的数组。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)   
  [\<allocators>](../standard-library/allocators-header.md)
 

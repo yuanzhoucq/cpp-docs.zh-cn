@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49e4ae6b7486911df9f41d985b49853123840ffb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3736e1693c336736dc4c699f46842ea2e19a3972
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT 析构函数
 取消初始化 HandleT 类的实例。  
@@ -30,10 +33,10 @@ ms.lasthandoff: 10/24/2017
 ~HandleT();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HandleT 类](../windows/handlet-class.md)

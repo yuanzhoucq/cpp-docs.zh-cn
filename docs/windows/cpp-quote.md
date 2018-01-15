@@ -1,32 +1,33 @@
 ---
-title: "cpp_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.cpp_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cpp_quote attribute"
+title: "cpp_quote |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.cpp_quote
+dev_langs: C++
+helpviewer_keywords: cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95b43856401b5bccfa9a0bef12fdc93ec886cea1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# cpp_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-发出该指定字符串，因此，不带引号字符，到生成的 .idl 文件。  
+# <a name="cppquote"></a>cpp_quote
+发出指定的字符串，而无需引号字符，到生成的.idl 文件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,23 +36,23 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 参数  
- *statement*  
- 对. 命令。  
+#### <a name="parameters"></a>参数  
+ statement  
+ C 指令中。  
   
-## 备注  
- ，如果您在 .idl 文件中，要将预处理器指令 **cpp\_quote** C\+\+ 特性非常有用。  
+## <a name="remarks"></a>备注  
+ **Cpp_quote** c + + 特性非常有用，如果你想要将预处理器指令放在.idl 文件。  
   
- 作为 MIDL 生成的一部分，也可以使用 **cpp\_quote** 和生成 .h 文件。  例如，因此，如果您具有 c. C\+\+ 使用 C\+\+ IDL 特性的头文件，但不能为某任务使用该文件，然后可以生成它创建一个 MIDL 生成的 .h 文件，您应当能够使用。  
+ 你还可以使用**cpp_quote**并生成一个.h 文件作为 MIDL 编译的一部分。 例如，如果你有使用 c + + IDL 特性，但不能使用此文件执行某些任务的 c + + 头文件，然后你可以其进行编译以创建 MIDL 生成的.h 文件，你应该能够使用。  
   
- **cpp\_quote** 属性具有与 [cpp\_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 属性相同。  
+ **Cpp_quote**属性具有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 特性。  
   
-## 示例  
- 为 [双](../windows/dual.md) 参见本示例对示例使用如何使用 **cpp\_quote**。  
+## <a name="example"></a>示例  
+ 请参阅示例[双重](../windows/dual.md)有关用法示例如何使用**cpp_quote**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -60,9 +61,8 @@ caps.handback.revision: 10
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [独立特性](../windows/stand-alone-attributes.md)   

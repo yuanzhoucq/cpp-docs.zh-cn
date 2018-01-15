@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a598b6a4b0e1b6077e2232131814192ef0a81863
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d13f532484cc071744b9b823546052d92c6f6b78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString 构造函数
 初始化 HString 类的新实例。  
@@ -42,10 +45,10 @@ HString(HString&& other) throw();
   
  第二个构造函数初始化的现有值将新 HString 对象`other`参数，然后销毁`other`参数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HString 类](../windows/hstring-class.md)

@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c02ce03349ba24a2550f91d34b05e361d38c0ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 类
 生成 gamma 分布。  
@@ -101,7 +102,7 @@ public:
   
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
-有关 gamma 分布的详细信息，请参阅 Wolfram MathWorld 文章 [Gamma 分布](http://go.microsoft.com/fwlink/LinkId=401111)。  
+有关 gamma 分布的详细信息，请参阅 Wolfram MathWorld 文章 [Gamma 分布](http://go.microsoft.com/fwlink/p/?linkid=401111)。  
   
 ## <a name="example"></a>示例  
   
@@ -186,7 +187,7 @@ Distribution for 10 samples:
     10: 2.1201210996  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **标头：**\<random>  
   
 **命名空间：** std  
@@ -245,7 +246,7 @@ right
   
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [\<random>](../standard-library/random.md)
 
 

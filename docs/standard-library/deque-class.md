@@ -99,11 +99,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 852a9d97fed21835c966b4f47af4fb24ad026546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-class"></a>deque 类
 对线性排列中给定类型的元素进行排序，并且类似于矢量，允许快速随机访问任何元素并在容器后面高效插入和删除。 但是，和矢量不同的是，`deque` 类还支持在容器前面高效插入和删除。  
@@ -200,10 +201,10 @@ class deque
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#op_at)|返回对指定位置的 `deque` 元素的引用。|  
+|[operator[]](#op_at)|返回对指定位置的 `deque` 元素的引用。|  
 |[operator=](#op_eq)|将 `deque` 的元素替换为另一个 `deque` 的副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头**：\<deque>  
   
 ##  <a name="allocator_type"></a>  deque::allocator_type  
@@ -1036,7 +1037,7 @@ iterator emplace(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`_Where`|[deque](../standard-library/deque-class.md) 中插入第一个元素的位置。|  
 |`val`|插入到 `deque` 中的元素的值。|  
   
@@ -1099,7 +1100,7 @@ void emplace_back(Type&& val);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`val`|添加到 [deque](../standard-library/deque-class.md) 末尾的元素。|  
   
 ### <a name="example"></a>示例  
@@ -1464,7 +1465,7 @@ IList);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`Where`|目标 deque 中插入第一个元素的位置。|  
 |`Val`|要插入 deque 中的元素的值。|  
 |`Count`|要插入 deque 中的元素数。|  
@@ -1539,7 +1540,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="remarks"></a>备注  
  如果 `operator[]` 的返回值赋给了`const_reference`，则无法修改 deque 对象。 如果 `operator[]` 的返回值赋给了 **reference**，则可以修改 deque 对象。  
   
- 通过使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果你尝试访问 deque 边界以外的元素，将发生运行时错误。  有关更多信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
+ 通过使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果你尝试访问 deque 边界以外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -1581,7 +1582,7 @@ deque& operator=(deque&& right);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`right`|提供新内容的 deque。|  
   
 ### <a name="remarks"></a>备注  
@@ -2265,7 +2266,7 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

@@ -177,11 +177,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5f31a6c16e14152f624c3bc6225337621cc887b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b60e2355636ca0cf30ed0a0141ec07f1312f760f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 A`CMFCPropertyGridProperty`对象表示属性列表控件中的列表项。  
@@ -291,7 +292,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|双精度类型的值的格式字符串。|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|浮点类型的值的格式字符串。|  
@@ -313,7 +314,7 @@ class CMFCPropertyGridProperty : public CObject
   
  [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxpropertygridctrl.h  
   
 ##  <a name="addoption"></a>CMFCPropertyGridProperty::AddOption  
@@ -613,7 +614,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `bIncludeHidden`|`TRUE`将隐藏子项目包含在计数中;否则为`FALSE`。 默认值为 `TRUE`。|  
   
@@ -740,7 +741,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ### <a name="return-value"></a>返回值  
  指向为此属性的子项目的属性对象的指针。  
   
- - 或 -  
+ 或  
   
  在零售模式下，`NULL`如果`nIndex`参数无效。 在调试模式下，此方法断言。  
   
@@ -1040,7 +1041,7 @@ virtual void OnClickName(CPoint C);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `C`|客户端坐标中的点。|  
   
@@ -1256,7 +1257,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `CWnd`|（未使用。）指向窗口的指针。|  
   
@@ -1301,7 +1302,7 @@ virtual void OnRClickName(CPoint C);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `C`|客户端坐标中的点。|  
   
@@ -1319,7 +1320,7 @@ virtual void OnRClickValue(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `C`|客户端坐标中的点。|  
 |[in] `B`|一个布尔值。|  
@@ -1529,7 +1530,7 @@ void Show(
  [in] `bAdjustLayout`  
  `TRUE`若要重新计算如何绘制的标签和值的属性，然后绘制您的属性。`FALSE`以使用现有的计算来绘制属性。 默认值为 `TRUE`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)

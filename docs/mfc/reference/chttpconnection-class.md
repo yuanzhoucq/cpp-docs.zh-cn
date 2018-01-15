@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea35172c527d1dad62f2f565bf7cf2e25001323b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 类
 管理与 HTTP 服务器的连接。  
@@ -66,7 +67,7 @@ class CHttpConnection : public CInternetConnection
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
   
 ##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
@@ -211,7 +212,7 @@ CHttpFile* OpenRequest(
   
  使用此函数可能会引发异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   

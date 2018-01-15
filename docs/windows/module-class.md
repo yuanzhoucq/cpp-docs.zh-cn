@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2536d406293d84db2ce5d5bd3e0292e0e57920e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d17e0dc79241fbd84e282b9cd8403259e34def0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-class"></a>Module 类
 表示相关对象的集合。  
@@ -48,7 +51,7 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="protected-classes"></a>受保护的类  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[Module::GenericReleaseNotifier 类](../windows/module-genericreleasenotifier-class.md)|在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由 lambda、functor 或 pointer-to-function 指定。|  
 |[Module::MethodReleaseNotifier 类](../windows/module-methodreleasenotifier-class.md)|在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由对象并将其指针到方法成员指定。|  
@@ -93,7 +96,7 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[Module::objectCount_ 数据成员](../windows/module-objectcount-data-member.md)|将跟踪的多少个类已创建具有[使](../windows/make-function.md)函数。|  
 |[Module::releaseNotifier_ 数据成员](../windows/module-releasenotifier-data-member.md)|包含指向 ReleaseNotifier 对象的指针。|  
@@ -113,10 +116,10 @@ class Module<OutOfProc> : public Module<InProc>;
   
  `Module`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

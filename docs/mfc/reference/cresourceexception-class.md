@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 497ced5337a44bb0d72be734cfea35a30ead383b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2e17b859042a5712a998eaeebe9f16f81c91200
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cresourceexception-class"></a>CResourceException 类
 当 Windows 无法找到或分配请求的资源时生成。  
@@ -55,7 +56,7 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cresourceexception"></a>CResourceException::CResourceException  
@@ -68,7 +69,7 @@ CResourceException();
 ### <a name="remarks"></a>备注  
  不直接，使用此构造函数，但而是调用全局函数[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 有关异常的详细信息，请参阅文章[MFC 中的异常处理](../exception-handling-in-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CException 类](cexception-class.md)   
  [层次结构图](../hierarchy-chart.md)
 

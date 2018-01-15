@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d6ec102d38e91389fddb3faf4eb83ace9ba7129
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-tool-tip-notifications"></a>处理工具提示通知
 当指定`TBSTYLE_TOOLTIPS`样式，工具栏创建和管理工具提示控件。 工具提示是文本的一个小型弹出窗口，其中包含描述工具栏按钮行。 隐藏的工具提示，仅当用户将光标放在工具栏按钮上并停留约半秒钟时才显示出来。 在光标附近将显示工具提示。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  示例处理程序函数和有关启用工具提示的详细信息，请参阅[工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

@@ -1,48 +1,48 @@
 ---
-title: "WeakRef::operator&amp; 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::operator&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator& 运算符"
+title: "WeakRef::operator&amp;运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::operator&
+dev_langs: C++
+helpviewer_keywords: operator& operator
 ms.assetid: 900afb73-3801-4d08-9b41-2e6a62011ccd
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 787712a857740afad539c0e44c450c6762aeb48f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# WeakRef::operator&amp; 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-返回一个表示当前 WeakRef 对象的 ComPtrRef 对象。  
+# <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp;运算符
+返回表示当前 WeakRef 对象的 ComPtrRef 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 Details::ComPtrRef<WeakRef> operator&() throw()  
 ```  
   
-## 返回值  
- 返回一个表示当前 WeakRef 对象的 ComPtrRef 对象 。  
+## <a name="return-value"></a>返回值  
+ 表示当前 WeakRef 对象的 ComPtrRef 对象。  
   
-## 备注  
- 这是不会在代码的内部帮助器运算符。  
+## <a name="remarks"></a>备注  
+ 这是一个内部帮助程序运算符，并不是在代码中使用。  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>惠?  
+ **标头：** client.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [WeakRef 类](../windows/weakref-class.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ef848d5b00df1140850e19611a426d289539ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
 > [!NOTE]
@@ -78,7 +79,7 @@ ULONG CMyObj::Release()
 }  
 ```  
   
- [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成员函数是更有意思。 它不是非常有趣的事情了其唯一的成员函数是一个对象， [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)— 是一种好，让对象完成更多事项比[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)提供。 这就是[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)很有用。 它允许你在同一对象上获取不同的“接口”。 这些接口通常派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)然后通过添加新成员函数添加其他功能。 COM 接口从不在接口中声明成员变量，并且所有成员函数都声明为纯虚。 例如，  
+ [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成员函数是更有意思。 它不是非常有趣的事情了其唯一的成员函数是一个对象， [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)— 是一种好，让对象完成更多事项比[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)提供。 这就是[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)很有用。 它允许你在同一对象上获取不同的“接口”。 这些接口通常派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)然后通过添加新成员函数添加其他功能。 COM 接口从不在接口中声明成员变量，并且所有成员函数都声明为纯虚。 例如，应用于对象的  
   
 ```  
 class IPrintInterface : public IUnknown  
@@ -101,7 +102,7 @@ pPrint->Release();
 }  
 ```  
   
- 这看起来非常简单，但你要如何实现同时支持 IPrintInterface 的对象和[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口在此情况下它很简单，因为 IPrintInterface 直接派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — 通过实现 IPrintInterface， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)自动支持。 例如:   
+ 这看起来非常简单，但你要如何实现同时支持 IPrintInterface 的对象和[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口在此情况下它很简单，因为 IPrintInterface 直接派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — 通过实现 IPrintInterface， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)自动支持。 例如:  
   
 ```  
 class CPrintObj : public CPrintInterface  
@@ -709,7 +710,7 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>备注  
  此宏用于告知框架，类正在使用聚合对象。 它必须在 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 宏之间出现。 聚合对象是单独的对象，派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 通过使用聚合和 `INTERFACE_AGGREGATE` 宏，你可以让聚合支持的所有接口看起来像是受到对象直接支持。 `theAggr`参数是只是你的类的派生自的成员变量的名称[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或间接）。 在放置到接口映射中时，所有 `INTERFACE_AGGREGATE` 宏都必须遵循 `INTERFACE_PART` 宏。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

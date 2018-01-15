@@ -1,32 +1,33 @@
 ---
-title: "ChainInterfaces 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ChainInterfaces 结构"
+title: "ChainInterfaces 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces
+dev_langs: C++
+helpviewer_keywords: ChainInterfaces structure
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9417b3950e4df98ed4e13ea1bb40e76c383868e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ChainInterfaces 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定可能应用于一组接口 ID 的验证和初始化函数。  
+# <a name="chaininterfaces-structure"></a>ChainInterfaces 结构
+指定可应用于一组接口 ID 的验证和初始化函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -59,72 +60,72 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `I0`  
- 必需的接口ID 0。  
+ （必需）接口 ID 0。  
   
  `I1`  
- 必需的接口ID 1。  
+ （必需）接口 ID 为 1。  
   
  `I2`  
- \(可选\) 接口 ID 2。  
+ （可选）接口 ID 2。  
   
  `I3`  
- \(可选\) 接口 ID 3。  
+ （可选）接口 ID 3。  
   
  `I4`  
- \(可选\) 接口 ID 4。  
+ （可选）接口 ID 4。  
   
  `I5`  
- \(可选\) 接口 ID 5。  
+ （可选）接口 ID 5。  
   
  `I6`  
- \(可选\) 接口 ID 6。  
+ （可选）接口 ID 6。  
   
  `I7`  
- \(可选\) 接口 ID 7。  
+ （可选）接口 ID 7。  
   
  `I8`  
- \(可选\) 接口 ID 8。  
+ （可选）接口 ID 8。  
   
  `I9`  
- \(可选\) 接口 ID 9。  
+ （可选）接口 ID 9。  
   
  `DerivedType`  
- 派生类型  
+ 派生的类型。  
   
  `BaseType`  
- 的派生类型的基类型。  
+ 派生类型的基类型。  
   
  `hasImplements`  
- 布尔值，如果 `true`，这意味着不能使用从 [实现](../windows/implements-structure.md) 结构不从派生的类中的 [MixIn](../windows/mixin-structure.md) 结构。  
+ 一个布尔值，如果`true`，这意味着你无法使用[MixIn](../windows/mixin-structure.md)与不是派生的类结构[实现](../windows/implements-structure.md)结构。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 受保护的方法  
+### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
-|--------|--------|  
-|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指示指定接口 ID 是否可以转换为主要接口的模板参数定义的每一专用化。|  
-|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|转换定义 `I0` 模板参数类型的接口指针的指针到指向 IUnknown。|  
-|[ChainInterfaces::FillArrayWithIid 方法](../windows/chaininterfaces-fillarraywithiid-method.md)|存储 `I0` 模板参数定义的接口 ID 到指定的数组中的指定位置设置接口 ID。|  
-|[ChainInterfaces::Verify 方法](../windows/chaininterfaces-verify-method.md)|验证模板参数定义的每个接口 `I0` 通过 `I9` 和 IInspectable 由从继承，因此，通过 `I0` 从 `I1` 继承 `I9`。|  
+|名称|描述|  
+|----------|-----------------|  
+|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指示指定的接口 ID 是否可以强制转换为每个由 ChainInterface 模板参数定义专用化。|  
+|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|将 `I0` 模板参数定义的类型的接口指针转换为指向 IUnknown 的指针。|  
+|[ChainInterfaces::FillArrayWithIid 方法](../windows/chaininterfaces-fillarraywithiid-method.md)|通过定义的接口 ID 的存储`I0`指定数组中的接口 Id 的指定位置的模板参数。|  
+|[ChainInterfaces::Verify 方法](../windows/chaininterfaces-verify-method.md)|验证模板参数 `I0` 到 `I9` 定义的每个接口是否继承自 IUnknown 和/或 IInspectable，以及验证 `I0` 是否继承自 `I1` 到 `I9`。|  
   
-### 保护的常量  
+### <a name="protected-constants"></a>受保护的常量  
   
-|名称|说明|  
-|--------|--------|  
-|[ChainInterfaces::IidCount 常量](../windows/chaininterfaces-iidcount-constant.md)|接口 ID 的总数。包含接口的模板通过指定的参数 `I0` `I9`。|  
+|name|描述|  
+|----------|-----------------|  
+|[ChainInterfaces::IidCount 常量](../windows/chaininterfaces-iidcount-constant.md)|模板参数 `I0` 到 `I9` 指定的接口中包含的接口 ID 总数。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  
   
  `ChainInterfaces`  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

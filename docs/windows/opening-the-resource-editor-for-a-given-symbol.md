@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 752a9b82bd6515f5ccceb89869e0d8b09577f057
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b2d8da5a03289d65dd00d280d6fc3ef3f13b038
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>打开给定符号的资源编辑器
 当您在浏览中的符号[资源符号对话框](../windows/resource-symbols-dialog-box.md)，你可能想了解有关如何使用特定符号的详细信息。 **查看使用**按钮提供了获得此信息的快速方法。  
@@ -39,10 +42,10 @@ ms.lasthandoff: 10/24/2017
   
  有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
   
- 要求  
+ 惠?  
   
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看资源符号](../windows/viewing-resource-symbols.md)   
  [预定义的符号 ID](../windows/predefined-symbol-ids.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19ed209306e5d7f94a30bca525ddce634a90bc6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 564c5185bd5414d2b0194abb8b16a4522439afb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassflagsvalue-constant"></a>RuntimeClassFlags::value 常量
 包含的字段[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。  
@@ -30,10 +33,10 @@ ms.lasthandoff: 10/24/2017
 static const unsigned int value = flags;  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** implements.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RuntimeClassFlags 结构](../windows/runtimeclassflags-structure.md)

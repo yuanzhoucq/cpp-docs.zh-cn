@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc11fac57cc70e1556e681ab43fd48ce695a4a6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63da9ea650c34b7b1ed75d351587c39e52a88098
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implements-structure"></a>Implements 结构
 为指定接口实现 QueryInterface 和 GetIid。  
@@ -112,7 +115,7 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 ### <a name="protected-constants"></a>受保护的常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[Implements::IidCount 常量](../windows/implements-iidcount-constant.md)|保存实现接口 Id 的数量。|  
   
@@ -129,10 +132,10 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
  `Implements`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** implements.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

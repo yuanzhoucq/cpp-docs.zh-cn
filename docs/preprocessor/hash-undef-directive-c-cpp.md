@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"undef-directive-cc--microsoft-docs\"></a>undef 指令 （C/c + +） |Microsoft 文档"
+title: "#undef 指令 （C/c + +） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72480e658ccd6aec2bdba40df0fd8eaa92ccae12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aee7babf895b72a5ff4f5fb1485e4bb118e95889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="undef-directive-cc"></a>#undef 指令 (C/C++)
 移除（取消定义）之前使用 `#define` 创建的名称。  
@@ -61,5 +62,5 @@ identifier
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [预处理器指令](../preprocessor/preprocessor-directives.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369ef30758b687c94c97e5fb0cf18bb7565ea83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 类
 支持调整现有 OLE 项的控件条类型。  
@@ -68,7 +69,7 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxole.h  
   
 ##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
@@ -104,7 +105,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果已创建的大小调整栏; 则为非 0否则为 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 SUPERPAD](../../visual-cpp-samples.md)   
  [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

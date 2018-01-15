@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_operation
 - CONCRT/concurrency::invalid_operation
 - CONCRT/concurrency::invalid_operation::invalid_operation
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_operation class
+dev_langs: C++
+helpviewer_keywords: invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 85821bbbe62fe5da93165065cb6f17ae4e938f4e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 67bd4819f3f1820ae9a13cc07fc2db692a362433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidoperation-class"></a>invalid_operation 类
 此类描述执行无效操作时引发的异常，由并发运行时引发的其他异常类型不会对此异常进行更为准确的描述。  
@@ -67,8 +50,8 @@ class invalid_operation : public std::exception;
   
  `invalid_operation`  
   
-## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+## <a name="requirements"></a>惠?  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -86,6 +69,5 @@ invalid_operation() throw();
  `_Message`  
  错误的描述性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)
-

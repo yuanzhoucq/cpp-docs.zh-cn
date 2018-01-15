@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c63b900b389edb2c62b69296f709619072f4511
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9eccf65f091c8c5c273f6a65cb7e81b0d386afa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>递增和递减指针
 使用以下提示：  
@@ -65,6 +66,6 @@ ms.lasthandoff: 10/24/2017
   
 -   你可能想要维护一个指向前一个字符为更快地调用`_mbsdec`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MBCS 编程提示](../text/mbcs-programming-tips.md)   
  [字节索引](../text/byte-indices.md)

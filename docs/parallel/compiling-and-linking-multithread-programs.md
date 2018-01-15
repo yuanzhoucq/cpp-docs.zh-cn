@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdfae45dabc989113ec7305feed27ea6d697e422
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0145c480d74cb1978c1b6caef65489eae96501c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>编译和链接多线程程序
 中引入 Bounce.c 程序[多线程 C 程序示例](../parallel/sample-multithread-c-program.md)。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/24/2017
     CL BOUNCE.C  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)

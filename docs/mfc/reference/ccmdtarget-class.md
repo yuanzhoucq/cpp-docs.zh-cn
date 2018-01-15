@@ -57,11 +57,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaae01c2e63c152139694c9d723b6bde7febf9c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0bdca1e4193be46a28739b01aed6e26e0e388b13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 Microsoft 基础类库消息映射体系结构的基类。  
@@ -120,7 +121,7 @@ class CCmdTarget : public CObject
   
  `CCmdTarget`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
@@ -468,7 +469,7 @@ void RestoreWaitCursor();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 ACDUAL](../../visual-cpp-samples.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

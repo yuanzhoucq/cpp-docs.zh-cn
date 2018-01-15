@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>MFC 应用程序向导的文档模板字符串
 在 MFC 应用程序向导的此页中，提供或优化以下选项来帮助进行文档管理和本地化。 文档模板字符串是可用于应用程序包括**文档/视图体系结构支持**中[应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md)。 它们不能对话框。 由于大多数文档模板字符串是可见且由应用程序的用户，它们已本地化到**资源语言**中所示**应用程序类型**向导页。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
 |**文件新的短名称**|设置显示在标准的 Windows 中的名称`New`对话框中，如果有多个新的文档模板。 如果你的应用程序[自动化服务器](../../mfc/automation-servers.md)，此名称用作您的自动化对象的短名称。 默认情况下，项目名称。|  
 |**文件类型长名称**|在系统注册表中设置的文件类型名称。 如果你的应用程序自动化服务器，则此名称用作您的自动化对象的长名称。 默认情况下，项目名称加上。文档。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)
 

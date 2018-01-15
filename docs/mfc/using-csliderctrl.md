@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01ba4f1852f7f5d79de94712b8465fb54e62acb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e92358b3aa7d8cffb0c05112e9b8b3587ee6590
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-csliderctrl"></a>使用 CSliderCtrl
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)类表示滑块控件，这也称为 trackbar 控件。 “滑块控件”是一个包含滑块和可选刻度线的窗口。 当用户使用鼠标或箭头键移动滑块时，滑块控件将发送通知消息来指示更改。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [滑块通知消息](../mfc/slider-notification-messages.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

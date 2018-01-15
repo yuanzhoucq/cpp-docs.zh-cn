@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCustomTransition [MFC], CCustomTransition
 - CCustomTransition [MFC], Create
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d7db8c2dc1d78fae3aebdecaac689c14695a8acb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 类
 实现自定义转换。  
@@ -71,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|指定是否使用 SetInitialValue 指定初始值。|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|指定是否使用 SetInitialVelocity 指定的初始速度。|  
@@ -89,7 +87,7 @@ class CCustomTransition : public CBaseTransition;
   
  `CCustomTransition`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
@@ -176,6 +174,5 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ### <a name="parameters"></a>参数  
  `initialVelocity`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

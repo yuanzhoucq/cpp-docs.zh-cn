@@ -24,11 +24,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e64d55250a9739e8465a4ae79ecb293e2879daef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4971ceaea57b91ff708315a2c32c7bac2801798f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandui-interface"></a>ICommandUI 接口
 管理用户界面命令。  
@@ -123,8 +124,8 @@ property String^ Text;
 ## <a name="remarks"></a>备注
 此属性设置为此命令的用户界面项的文本。 将文本设置为文本字符串句柄。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCmdUI 类](../../mfc/reference/ccmdui-class.md)

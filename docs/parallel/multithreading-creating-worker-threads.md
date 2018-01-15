@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c43b8453b592369d8179c9d3917bdbcc7381fa00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-worker-threads"></a>多线程处理：创建辅助线程
 工作线程通常用于处理用户不必等待就可以继续使用你的应用程序的后台任务。 任务 （如重新计算和后台打印) 的工作线程很好的示例。 本主题详细介绍创建工作线程所需的步骤。 包括以下主题：  
@@ -100,5 +101,5 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 -   [多线程处理：创建用户界面线程](../parallel/multithreading-creating-user-interface-threads.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++ 和 MFC 进行多线程编程](../parallel/multithreading-with-cpp-and-mfc.md)

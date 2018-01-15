@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e52d050b9b05ccb72969c531297367e729c258b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cf7fb54b4059bc56aea967f03b9e4c2874f84e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dispinterface"></a>dispinterface
 将一个接口作为调度接口置于 .idl 文件中。  
@@ -49,20 +52,20 @@ dispinterface helloPro
 ## <a name="example"></a>示例  
  有关如何使用 [dispinterface](../windows/bindable.md) 的示例，请参阅 **bindable**示例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`interface`|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [按用法分的特性](../windows/attributes-by-usage.md)   
  [uuid](../windows/uuid-cpp-attributes.md)   

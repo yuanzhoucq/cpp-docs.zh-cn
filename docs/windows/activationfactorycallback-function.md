@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactoryCallback 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::ActivationFactoryCallback"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactoryCallback 函数"
+title: "ActivationFactoryCallback 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::ActivationFactoryCallback
+dev_langs: C++
+helpviewer_keywords: ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e88a6f9cb89746cd0380587789fbdd68f80d5e36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactoryCallback 函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函数
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
@@ -35,25 +36,25 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `activationId`  
- 对指定的运行时类名称的字符串处理。  
+ 一个字符串，指定运行时类名称的句柄。  
   
  `ppFactory`  
- 该操作完成，对应参数的 `activationId`激活工厂。  
+ 此操作完成后，对应于参数的激活工厂`activationId`。  
   
-## 返回值  
- S\_OK，如果成功；描述，否则失败的 HRESULT。  可能的失败 HRESULT 是 CLASS\_E\_CLASSNOTAVAILABLE 和 E\_INVALIDARG。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为 S_OK；否则为描述失败的 HRESULT。 可能失败的 hresult 映射为 CLASS_E_CLASSNOTAVAILABLE 和 E_INVALIDARG。  
   
-## 备注  
- 获取指定的 ID. 激活的激活工厂  
+## <a name="remarks"></a>备注  
+ 获取指定的激活 id。 激活工厂  
   
- Windows 运行时调用该回调函数在请求其运行时类名指定的对象。  
+ Windows 运行时调用此回调函数来请求由其运行时类名称指定的对象。  
   
-## 要求  
- **标头:** module.h  
+## <a name="requirements"></a>惠?  
+ **标头：** module.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

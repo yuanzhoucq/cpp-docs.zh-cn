@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44e1ec9a00f1de2ab07d7b2a916d274a9cddce2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implements-c"></a>implements (C++)
 指定强制 IDL 组件类的成员的调度接口。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  默认情况下，只有 COM 的接口的组件类的基类被添加在 IDL 组件类。 **实现**允许你强制 IDL 组件类成员其他接口。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
@@ -548,6 +551,6 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器特性](../windows/compiler-attributes.md)   
  [类特性](../windows/class-attributes.md)   

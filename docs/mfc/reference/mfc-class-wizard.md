@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.wizards.classwizard
-dev_langs:
-- C++
+f1_keywords: vc.wizards.classwizard
+dev_langs: C++
 helpviewer_keywords:
 - wizards (MFC)
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 66ef4c3595e25fecf4930cf62275847d8c264044
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 2d8a0e18da58829175a973bf31b2597240e23bd8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-class-wizard"></a>MFC 类向导
 可以将消息和消息处理程序添加到你的项目中的类。 此外可以启动其他向导，或将类添加到你的项目。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 10/09/2017
  若要打开**MFC 类向导**上**项目**菜单上，单击**类向导**。 若要使用的键盘快捷方式打开向导，请键入 CTRL + SHIFT + X。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **项目**  
+ **Project**  
  你的解决方案中项目的名称。  
   
  您可以选择你从下拉列表框中的解决方案中的其他项目。  
@@ -103,6 +100,5 @@ ms.lasthandoff: 10/09/2017
   
  若要显示一个定义，请双击中的项**方法**列表。 或者，选择中的项**方法**列表，然后单击**转到定义**按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加类](../../ide/adding-a-class-visual-cpp.md)
-

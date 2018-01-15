@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b48374182d9b39d43cbf0ec99cb51075867e914d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb640f146109363a8025818b3ec560c250029914
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 类
 在释放模块中的最后一个对象时调用事件处理程序。  
@@ -49,10 +52,10 @@ class ReleaseNotifier;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ReleaseNotifier`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [Module 类](../windows/module-class.md)

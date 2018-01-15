@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b94fb68ad28e45141551b238acf99baedf78ef6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>演练：创建数据流代理
 本文档演示如何创建基于代理的应用程序基于数据流，而不是控制流。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
   
  异步代理支持的控制流和数据流编程模型。 尽管控制流模型适合在许多情况下，数据流模型适合其他情况下，例如，在代理接收数据，并执行一个基于该数据的负载的操作时。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  在开始本演练之前，请阅读以下文档：  
   
 - [异步代理](../../parallel/concrt/asynchronous-agents.md)  
@@ -153,6 +154,6 @@ info: ===Logging finished.===
   
  [[返回页首](#top)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 

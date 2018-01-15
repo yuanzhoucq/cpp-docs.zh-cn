@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369f7b9264c7b0fd0bfbb9f137278a9f53848d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aec9ff1b4294257f692d76a96960820379116b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits 命名空间
 描述常见基于句柄的资源类型的特征。  
@@ -46,10 +49,10 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 |[SRWLockExclusiveTraits 结构](../windows/srwlockexclusivetraits-structure.md)|描述常见特征`SRWLock`独占锁模式下的类。|  
 |[SRWLockSharedTraits 结构](../windows/srwlocksharedtraits-structure.md)|描述常见特征`SRWLock`在共享锁定模式下的类。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Wrappers 命名空间](../windows/microsoft-wrl-wrappers-namespace.md)

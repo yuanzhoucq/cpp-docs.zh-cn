@@ -36,11 +36,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4df750e90ccd36545348f765ecd00e02728481e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e4a195566479f9e7e9f5b68a46069701462bb2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commit"></a>_commit
 将文件直接刷新到磁盘。  
@@ -65,15 +66,15 @@ int _commit(
   
  如果 `fd` 是无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回 -1 并将 `errno` 设置为 `EBADF`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|----------------------|  
 |`_commit`|\<io.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   

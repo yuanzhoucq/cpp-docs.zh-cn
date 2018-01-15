@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- function
 - functional/std::function
 - functional/std::function::result_type
 - functional/std::function::assign
@@ -18,35 +16,25 @@ f1_keywords:
 - functional/std::function::target_type
 - functional/std::function::operator unspecified
 - functional/std::function::operator()
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- function class
+- std::function [C++]
+- std::function [C++], result_type
+- std::function [C++], assign
+- std::function [C++], swap
+- std::function [C++], target
+- std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a07538c7f3ddd58e45fc23a4fc2c9c13850f08a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-class"></a>function 类
 可调用对象的包装器。  
@@ -141,7 +129,7 @@ public:
 |-|-|  
 |[assign](#assign)|将可调用对象分配给此函数对象。|  
 |[swap](#swap)|交换两个可调用对象。|  
-|[目标](#target)|测试存储的可调用对象是否可按指定方式调用。|  
+|[target](#target)|测试存储的可调用对象是否可按指定方式调用。|  
 |[target_type](#target_type)|获取有关可调用对象的类型信息。|  
   
 ### <a name="operators"></a>运算符  
@@ -152,7 +140,7 @@ public:
 |[function::operator()](#op_call)|调用可调用的对象。|  
 |[function::operator=](#op_eq)|替换存储的可调用对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<functional>  
   
  **命名空间：** std  
@@ -665,7 +653,6 @@ empty == true
 type == void  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper 类](../standard-library/reference-wrapper-class.md)
-

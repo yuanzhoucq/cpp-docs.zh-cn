@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 包括标准标头 \< chrono > 来定义表示和操作持续时间及时刻的类和函数。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="structs"></a>结构  
   
-|名称|说明|  
+|name|描述|  
 |----------|-----------------|  
 |[common_type 结构](../standard-library/common-type-structure.md)|介绍有关 `duration` 和 `time_point` 实例化的 [common_type](../standard-library/common-type-class.md) 模板类的专用化。|  
 |[duration_values 结构](../standard-library/duration-values-structure.md)|提供 `duration` 模板参数 `Rep` 的特定值。|  
@@ -118,7 +119,7 @@ constexpr auto my_duration_unit = 108ms;
 ```  
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 
 

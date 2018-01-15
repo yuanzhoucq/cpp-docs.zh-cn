@@ -33,11 +33,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b311a6e4926e06d6be17b7b544296c39faaf11c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 此文章介绍了如何将一系列消息映射到单个消息处理程序函数 （而不是将一条消息映射到一个功能）。  
@@ -150,5 +151,5 @@ ms.lasthandoff: 10/24/2017
   
  在示例中所示的代码是典型： 将值传递到转换`int`内的消息范围和声明这种情况。 然后，你可能需要一些不同的操作，具体取决于单击按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明消息处理程序函数](../mfc/declaring-message-handler-functions.md)

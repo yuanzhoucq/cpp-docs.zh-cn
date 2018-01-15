@@ -1,32 +1,33 @@
 ---
-title: "db_accessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_accessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_accessor attribute"
+title: "db_accessor |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_accessor
+dev_langs: C++
+helpviewer_keywords: db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5faa84773fbf1fe15fd0223c97f0361f1215b149
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# db_accessor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-分组联接 `IAccessor`基于绑定的 **db\_column** 属性。  
+# <a name="dbaccessor"></a>db_accessor
+组**db_column**参与特性`IAccessor`-基于绑定。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,24 +37,24 @@ caps.handback.revision: 11
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *num*  
- 指定访问器编号 \(从零开始的整数索引\)。  使用整数或已定义的值，则必须以递增的顺序指定访问器编号，。  
+ 指定访问器数目 （从零开始的整数索引）。 你必须指定访问器中增加的数字顺序，使用整数或定义的值。  
   
- *自动*  
- 指定的布尔值是否访问器自动检索 \(**TRUE**\) 不会检索 \(**错误**\)。  
+ *auto*  
+ 一个布尔值，指定是否自动检索访问器 (**TRUE**) 未检索到或 (**FALSE**)。  
   
-## 备注  
- **db\_accessor** 定义后续 **db\_column** 的基础 OLE DB 访问器和在同一个类或函数中的 **db\_param** 属性。  **db\_accessor** 中可用的成员级别和用于分组联接 OLE DB `IAccessor`基于绑定的 **db\_column** 属性。  它与 **db\_table** 或 **db\_command** 特性一起使用。  调用此属性与调用 [BEGIN\_ACCESSOR](../data/oledb/begin-accessor.md) 和 [END\_ACCESSOR](../data/oledb/end-accessor.md) 宏。  
+## <a name="remarks"></a>备注  
+ **db_accessor**定义为基础的 OLE DB 取值函数后续**db_column**和**db_param**相同类或函数中的属性。 **db_accessor**在成员级别为可用，并且使用到组**db_column**参与 OLE DB 的特性`IAccessor`-基于绑定。 请结合使用**db_table**或**db_command**属性。 调用此属性是类似于调用[BEGIN_ACCESSOR](../data/oledb/begin-accessor.md)和[END_ACCESSOR](../data/oledb/end-accessor.md)宏。  
   
- **db\_accessor** 生成一个行集合并将其绑定到相应的访问器映射。  如果不调用 **db\_accessor**，访问器 0 将自动生成，因此，所有列绑定将映射到此访问器块。  
+ **db_accessor**生成行集，并将其绑定到相应的访问器映射。 如果不调用**db_accessor**，则将自动生成访问器 0，而所有列绑定将都映射到此访问器块。  
   
- **db\_accessor** 组数据库列绑定到一个或多个访问器中。  有关需要使用多个访问器的方案的讨论，请参见 [行集合上使用多个访问器](../data/oledb/using-multiple-accessors-on-a-rowset.md)。  请参见 “用户记录为多个访问器支持” [用户记录](../data/oledb/user-records.md)的。  
+ **db_accessor**组数据库列绑定到一个或多个访问器。 你需要使用多个访问器的方案的讨论，请参阅[行集上使用多个访问器](../data/oledb/using-multiple-accessors-on-a-rowset.md)。 另请参阅"用户记录支持的多个访问器"，在[用户记录](../data/oledb/user-records.md)。  
   
- 当使用者属性提供程序应用此特性应用于类，编译器将类重命名为 \_TheClassNameAccessor， *TheClassName* 的名称就是您为该类，因此，编译器还将创建一个名为 *TheClassName 的* 类 *，* 从 \_TheClassNameAccessor 派生。  在类视图中，您将看到两类。  
+ 当使用者特性提供程序应用于类时此属性时，编译器将该类重命名为\_*类名*访问器，其中*类名*是你为指定的名称类，并且编译器还将创建一个名为类*类名*，它派生自\_*类名*访问器。  将在类视图中看到这两个类。  
   
-## 示例  
- 下面的示例使用 **db\_accessor** 分组列在 Northwind 数据库的 orders 表中到两个访问器。  访问器 0 是自动访问器，因此，访问器 1 不是。  
+## <a name="example"></a>示例  
+ 下面的示例使用**db_accessor**将 Orders 表中的列分组从 Northwind 数据库到两个访问器。 访问器 0 是自动访问器中，并访问器 1 不是。  
   
 ```  
 // cpp_attr_ref_db_accessor.cpp  
@@ -75,9 +76,9 @@ public:
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -86,8 +87,7 @@ public:
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)   

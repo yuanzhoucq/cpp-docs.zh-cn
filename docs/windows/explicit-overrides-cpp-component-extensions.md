@@ -1,76 +1,77 @@
 ---
-title: "显式重写 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "重写, 重写 [C++]"
+title: "显式重写 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 显式重写
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题讨论如何显式重写基类或接口的成员。  应只使用一个名为 \(显式\) 重写用具有不同名称的派生方法的方法。  
+# <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
+本主题讨论如何显式重写基类或接口的成员。 命名的 （显式） 重写应仅用于重写的方法与具有不同的名称派生方法。  
   
-## 所有运行时  
+## <a name="all-runtimes"></a>所有运行时  
  **语法**  
   
 ```  
   
-        overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **参数**  
   
- *overriding\-function\-declarator*  
- 重写函数的返回类型、名称和参数列表。注意重写函数不必与重写函数相同。  
+ *重写函数声明符*  
+ 重写的函数返回类型、 名称和自变量列表。  请注意，重写的函数不需要具有重写的函数相同的名称。  
   
  *type*  
- 包含一个函数覆盖的基类型。  
+ 包含用于重写的函数的基类型。  
   
- *function*  
- 重写的一个或多个函数名称一个逗号分隔列表。  
+ *函数*  
+ 以逗号分隔的一个或多个要重写的函数名称列表。  
   
- *overriding\-function\-definition*  
- 定义重写函数的函数体语句。  
+ *重写函数定义*  
+ 定义重写的函数 function 正文语句。  
   
  **备注**  
   
- 使用显式重写方法的签名创建别名，还是为方法提供的不同实现具有相同的签名。  
+ 使用显式重写创建别名对于方法签名，或以提供有关方法 witht 相同的签名的不同实现。  
   
- 有关修改继承的类型和类型成员的继承行为的信息，请参见 [重写说明符](../windows/override-specifiers-cpp-component-extensions.md)。  
+ 有关修改继承的类型和继承的类型成员的行为的信息，请参阅[重写说明符](../windows/override-specifiers-cpp-component-extensions.md)。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
- 有关显式重写信息用本机代码或使用 **\/clr:oldSyntax**编译，请参见 [显式重写](../cpp/explicit-overrides-cpp.md)。  
+ 有关显式信息在本机代码中重写或使用代码编译**/clr:oldSyntax**，请参阅[显式重写](../cpp/explicit-overrides-cpp.md)。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例显示成员的简单，隐式重写和实现在基接口，而不是使用显式重写。  
+ 下面的代码示例演示一个简单的、 隐式重写和一个的成员的实现在基接口中，不使用显式重写。  
   
 ```  
 // explicit_override_1.cpp  
@@ -92,11 +93,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **I1::f 的 X::f 重写** **示例**  
+```Output  
+X::f override of I1::f  
+```  
   
- 使用显式重写语法，下面的代码示例演示如何实现具有的公用签名的所有接口成员中，  
+ **示例**  
+  
+ 下面的代码示例演示如何实现所有接口成员具有公共签名使用显式重写语法。  
   
 ```  
   
@@ -124,12 +129,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **X::f 重写 I1::f 和 I2::f**  
- **X::f 重写 I1::f 和 I2::f** **示例**  
+```Output  
+X::f override of I1::f and I2::f  
+X::f override of I1::f and I2::f  
+```  
   
- 下面的代码示例显示如何重写函数可以有其实现从函数不同的名称。  
+ **示例**  
+  
+ 下面的代码示例显示如何函数重写可以有与它正在实现的函数的名称不同。  
   
 ```  
 // explicit_override_3.cpp  
@@ -151,11 +160,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **X::g** **示例**  
+```Output  
+X::g  
+```  
   
- 下面的代码示例演示如何实现一个类型安全的集合显式接口实现。  
+ **示例**  
+  
+ 下面的代码示例显示一个显式接口实现，实现类型安全集合。  
   
 ```  
 // explicit_override_4.cpp  
@@ -180,5 +193,5 @@ public:
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

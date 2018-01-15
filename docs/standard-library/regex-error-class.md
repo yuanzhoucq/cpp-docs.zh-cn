@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - regex/std::regex_error
 - regex/std::regex_error::code
-dev_langs:
-- C++
-helpviewer_keywords:
-- regex_error class
+dev_langs: C++
+helpviewer_keywords: regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dce4b42d5e9ec05544ceb7e8c885ba93634579a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: a0336bce168edc8b4c50639b1e3ace4f82e7c971
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regexerror-class"></a>regex_error 类
 报告错误的 basic_regex 对象。  
@@ -47,7 +44,7 @@ public:
 ## <a name="remarks"></a>备注  
  该类描述一个异常对象，引发该异常的目的是为报告一个构造中的错误或 `basic_regex` 对象的使用错误。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<regex 1>  
   
  **命名空间：** std  
@@ -150,7 +147,7 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 类](../standard-library/regex-constants-class.md)  
 [\<regex> functions](../standard-library/regex-functions.md)  
@@ -159,4 +156,3 @@ regex error: unbalanced parentheses
 [regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 类](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
-

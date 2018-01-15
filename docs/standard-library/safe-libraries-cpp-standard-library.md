@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
-dev_langs:
-- C++
+f1_keywords: _SCL_SECURE_NO_DEPRECATE
+dev_langs: C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 20b68338dd15eaea0d74af9299da5ce8657f65f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62c5e582773f534aa046eeaeda439b43358e07c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>安全库：C++ 标准库
 已对随附于 Visual C++ 的库（包括 C++ 标准库）实施了多项功能增强以使它们更加安全。  
@@ -52,9 +49,8 @@ ms.lasthandoff: 10/03/2017
   
  [Checked Iterators](../standard-library/checked-iterators.md)  
   
- [调试迭代器支持](../standard-library/debug-iterator-support.md)  
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
-
 

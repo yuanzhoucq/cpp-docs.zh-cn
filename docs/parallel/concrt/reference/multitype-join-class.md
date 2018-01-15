@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a53206c32b59ab5cac9f14d51bed42a4870b94fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multitypejoin-class"></a>multitype_join 类
 `multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。  
@@ -90,7 +91,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  `multitype_join`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -289,7 +290,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 virtual void unlink_targets();
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [choice 类](choice-class.md)   
  [join 类](join-class.md)

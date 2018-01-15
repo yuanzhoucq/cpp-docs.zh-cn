@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 218493b6346858d33df042ec5754775272b1d788
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="help-menu-merging"></a>帮助菜单合并
 菜单合并协议 OLE 文档容器中的活动对象时，使对象完成控制**帮助**菜单。 因此，容器的帮助主题将不可用，除非用户停用该对象。 活动文档包容体系结构基于就地菜单合并的规则进行扩展，以允许容器和活动文档共享此菜单。 新规则是一些有关哪些组件拥有菜单的哪个部分以及如何构造共享菜单的额外约定。  
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/24/2017
   
  最后，在开始反汇编菜单时，该对象会删除插入**帮助**除了删除其他插入的菜单菜单。 当容器删除其菜单时，它将删除其**帮助**除了插入该实体的其他菜单的菜单。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [活动文档容器](../mfc/active-document-containers.md)
 

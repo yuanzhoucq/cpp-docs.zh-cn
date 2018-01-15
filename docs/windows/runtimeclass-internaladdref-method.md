@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc63ef7feeb6cf1491bbde4e99a2860485fb0497
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a7ac6c89e60a7c2f052d4455c77df69fdec3aaf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef 方法
 递增对当前 RuntimeClass 对象的引用计数。  
@@ -33,10 +36,10 @@ ULONG InternalAddRef();
 ## <a name="return-value"></a>返回值  
  在生成的引用计数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** implements.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RuntimeClass 类](../windows/runtimeclass-class.md)

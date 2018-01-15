@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b6fd116f75ddc35ac1d3095ebfcbb1973b9d20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 58c74602c4170cbe0816dcdf14e0196cca44af42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 将添加到 COM 映射的目标类的接口条目。  
@@ -109,7 +112,7 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
@@ -122,7 +125,7 @@ END_COM_MAP()
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 特性](../windows/com-attributes.md)   
  [类特性](../windows/class-attributes.md)   
  [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   

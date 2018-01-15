@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e12869710694083bb0608f158c91e14df36b9ed9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7edf8ebb089b3e39135edb14931197c984c6946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptras-method"></a>ComPtr::As 方法
 返回表示由指定模板参数标识的接口的 ComPtr 对象。  
@@ -57,10 +60,10 @@ HRESULT As(
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ComPtr 类](../windows/comptr-class.md)

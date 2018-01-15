@@ -101,11 +101,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c23178c4883eedb40033aaa0ac744e90060482e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dad90540f74438ac17cfe1d5e14963492ee6d371
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 封装月历控件的功能。  
@@ -194,7 +195,7 @@ class CMonthCalCtrl : public CWnd
   
  `CMonthCalCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdtctl.h  
   
 ##  <a name="cmonthcalctrl"></a>CMonthCalCtrl::CMonthCalCtrl  
@@ -354,7 +355,7 @@ DWORD GetCurrentView() const;
 ### <a name="return-value"></a>返回值  
  当前视图，这将由以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`MCMV_MONTH`|每月的视图|  
 |`MCMV_YEAR`|每年的视图|  
@@ -418,7 +419,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的 Win32 消息行为[MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958)，如 Windows SDK 中所述。 每周天数，如下所示为整数，表示。  
   
-|值|日期是星期几|  
+|“值”|日期是星期几|  
 |-----------|---------------------|  
 |0|星期一|  
 |1|星期二|  
@@ -538,7 +539,7 @@ int GetMonthRange(
  `dwFlags`  
  值，该值指定要检索的范围限制的作用域。 此值必须是下列其中一项。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |GMR_DAYSTATE|包括的前导和尾随的可见区域仅部分显示的月。|  
 |GMR_VISIBLE|包括完全显示这些个月。|  
@@ -579,7 +580,7 @@ DWORD GetRange(
 ### <a name="return-value"></a>返回值  
  A`DWORD`可能为零 （设置不受限制） 或指定限制信息的以下值的组合。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |GDTR_MAX|用于控制，设置最大限制`pMaxRange`有效，并且包含适用日期信息。|  
 |GDTR_MIN|最小限制设置用于控制，`pMinRange`有效，并且包含适用日期信息。|  
@@ -731,7 +732,7 @@ void SetCalendarBorder(int cxyBorder);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `cxyBorder`|边框宽度，以像素为单位。|  
   
@@ -771,7 +772,7 @@ BOOL SetCalID(CALID calid);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `calid`|之一[日历标识符](http://msdn.microsoft.com/library/windows/desktop/dd317732)常量。|  
   
@@ -819,7 +820,7 @@ COLORREF SetColor(
  `nRegion`  
  指定要设置哪些月日历颜色的整数值。 此值可以是下列其中一项。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |MCSC_BACKGROUND|显示不同的月份的背景色。|  
 |MCSC_MONTHBK|在月份中显示的背景色。|  
@@ -849,7 +850,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `dwNewView`|指定每月，年度、 十年中或世纪视图的以下值之一。<br /><br /> MCMV_MONTH： 每月视图<br /><br /> MCMV_YEAR： 年度视图<br /><br /> MCMV_DECADE： 十年视图<br /><br /> MCMV_CENTURY： 世纪视图|  
   
@@ -1135,7 +1136,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义一个包含所需的日历数的矩形。|  
   
@@ -1147,7 +1148,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
  此方法可发送[MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020)消息，Windows SDK 中介绍。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

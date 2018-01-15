@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54823d53cfe6e83879db70dac7809a1b40217bd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 通过利用在离散图形卡的数据并行硬件，如图形处理单元 (GPU)，c + + Accelerated Massive Parallelism (c + + AMP) 加快了 c + + 代码的执行。 通过使用 c + + AMP，你可以编写代码，多维数据算法，以便可以在异类硬件上使用并行加速执行。 C + + AMP 编程模型包括多维数组、 索引、 内存传输、 平铺和数学函数库。 可以使用 c + + AMP 语言扩展来控制数据如何从 CPU 移动到 GPU 并返回，以便您可以提高性能。  
@@ -427,7 +428,7 @@ for (int i = 0; i <4; i++) {
 ```  
   
 ## <a name="math-libraries"></a>数学库  
- C + + AMP 包括两个数学库。 中的双精度库[concurrency:: precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md)为双精度功能提供支持。 它还提供了支持对于单精度函数，但在硬件上的双精度支持是仍必需的。 它符合[C99 规范 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/linkid=225887)。 快捷键必须支持完整双精度。 你可以确定它是否是通过检查的值[accelerator:: supports_double_precision 数据成员](reference/accelerator-class.md#supports_double_precision)。 快速数学库，请在[concurrency:: fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一套数学函数。 这些函数，仅支持`float`操作数，更快地执行，但不精确的双精度算术库中。 函数包含在\<amp_math.h > 标头文件和所有声明与`restrict(amp)`。 中的函数\<t h > 标头文件将导入到同时`fast_math`和`precise_math`命名空间。 `restrict`关键字用于区分\<t h > 版本和 c + + AMP 版本。 下面的代码计算的以 10 为基数的对数，使用计算域中每个值的快速方法。  
+ C + + AMP 包括两个数学库。 中的双精度库[concurrency:: precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md)为双精度功能提供支持。 它还提供了支持对于单精度函数，但在硬件上的双精度支持是仍必需的。 它符合[C99 规范 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 快捷键必须支持完整双精度。 你可以确定它是否是通过检查的值[accelerator:: supports_double_precision 数据成员](reference/accelerator-class.md#supports_double_precision)。 快速数学库，请在[concurrency:: fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一套数学函数。 这些函数，仅支持`float`操作数，更快地执行，但不精确的双精度算术库中。 函数包含在\<amp_math.h > 标头文件和所有声明与`restrict(amp)`。 中的函数\<t h > 标头文件将导入到同时`fast_math`和`precise_math`命名空间。 `restrict`关键字用于区分\<t h > 版本和 c + + AMP 版本。 下面的代码计算的以 10 为基数的对数，使用计算域中每个值的快速方法。  
 
   
 ```cpp  
@@ -469,13 +470,13 @@ void MathExample() {
   
 - [在 Windows 应用商店应用中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
-- [演练： 在 c + + 中创建基本 Windows 运行时组件并从 JavaScript 中调用它](http://go.microsoft.com/fwlink/p/linkid=249077)  
+- [演练： 在 c + + 中创建基本 Windows 运行时组件并从 JavaScript 中调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
-- [必应地图行程优化器，以 JavaScript 和 c + + Windows 应用商店应用](http://go.microsoft.com/fwlink/p/linkid=249078)  
+- [必应地图行程优化器，以 JavaScript 和 c + + Windows 应用商店应用](http://go.microsoft.com/fwlink/p/?linkid=249078)  
   
-- [如何使用 c + + AMP 从 C# 中使用 Windows 运行时](http://go.microsoft.com/fwlink/p/linkid=249080)  
+- [如何使用 c + + AMP 从 C# 中使用 Windows 运行时](http://go.microsoft.com/fwlink/p/?linkid=249080)  
   
-- [如何使用 c + + AMP 从 C#](http://go.microsoft.com/fwlink/p/linkid=249081)  
+- [如何使用 c + + AMP 从 C#](http://go.microsoft.com/fwlink/p/?linkid=249081)  
   
 - [从托管代码调用本机函数](../../dotnet/calling-native-functions-from-managed-code.md)  
   
@@ -492,13 +493,13 @@ void MathExample() {
   
 - [通道（线程视图）](/visualstudio/profiling/channels-threads-view)  
   
-- [分析 c + + AMP 代码使用并发可视化工具](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)  
+- [分析 c + + AMP 代码使用并发可视化工具](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
   
 ## <a name="performance-recommendations"></a>性能建议  
  取模和无符号整数的减法具有性能明显高于模数和带符号整数的减法。 我们建议你使用尽可能的无符号的整数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)   
  [引用 (c + + AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
- [在本机代码的博客中的并行编程](http://go.microsoft.com/fwlink/p/linkid=238472)
+ [在本机代码的博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=238472)

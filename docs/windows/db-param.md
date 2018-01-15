@@ -1,32 +1,33 @@
 ---
-title: "db_param | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_param"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_param attribute"
+title: "db_param |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_param
+dev_langs: C++
+helpviewer_keywords: db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b5224c406f6e10cd4ef9f0ed64fbdbd7c5cc8e62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# db_param
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将指定的成员变量与输入或输出参数并将变量。  
+# <a name="dbparam"></a>db_param
+将指定的成员变量与一个输入或输出参数相关联，并分隔变量。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -41,47 +42,47 @@ caps.handback.revision: 11
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `ordinal`  
- 列数 \(**DBCOLUMNINFO** 序号\) 与绑定数据的行集合的字段相对应。  
+ 列号 (**DBCOLUMNINFO**序号) 要将数据绑定到行集中的字段相对应。  
   
- *paramtype* \(可选\)  
- 设置类型为参数。  提供程序支持参数由基础数据源支持的 I\/O 类型。  该类型是一个或多 **DBPARAMIOENUM** 值的组合:  
+ *paramtype* （可选）  
+ 要为参数设置的类型。 提供程序仅支持参数 I/O 类型所支持的基础数据源。 类型是一个或多个组合**DBPARAMIOENUM**值：  
   
--   **DBPARAMIO\_INPUT**输入参数。  
+-   **DBPARAMIO_INPUT** 输入参数。  
   
--   **DBPARAMIO\_OUTPUT**输出参数。  
+-   **DBPARAMIO_OUTPUT** 输出参数。  
   
--   **DBPARAMIO\_NOTPARAM** 访问器没有参数。  将设置为值的 **eParamIO** 在行访问器提醒用户参数将被忽略。  
+-   **DBPARAMIO_NOTPARAM** 访问器没有参数。 设置**eParamIO**到行中的此值访问器可提醒用户将忽略参数。  
   
- *dbtype* \(可选\)  
- 列项的 OLE DB [键入指示器](https://msdn.microsoft.com/en-us/library/ms711251.aspx) 。  
+ *dbtype* （可选）  
+ OLE DB[类型指示符](https://msdn.microsoft.com/en-us/library/ms711251.aspx)列条目。  
   
- *精度* \(可选\)  
- 为列项将使用的精度。  有关详细信息，请参见 [DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)的 **bPrecision** 元素的说明  
+ *精度*（可选）  
+ 要用于列条目精度。 有关详细信息，请参阅说明**bPrecision**元素[DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *缩放* \(可选\)  
- 为列项将使用缩放。  有关详细信息，请参见 [DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)的 **bScale** 元素的说明  
+ *缩放*（可选）  
+ 要使用的列项的比例。 有关详细信息，请参阅说明**bScale**元素[DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *状态* \(可选\)  
- 用于的成员变量保存该列的状态。  状态指示列值是否为数据绑定值或其他值，如 **NULL**。  有关可能的值，请参见 " *OLE DB 程序员的*[状态](https://msdn.microsoft.com/en-us/library/ms722617.aspx)*引用*。  
+ *状态*（可选）  
+ 成员变量，用来保存此列的状态。 状态指示该列的值是数据值或某些其他值，如**NULL**。 有关可能的值，请参阅[状态](https://msdn.microsoft.com/en-us/library/ms722617.aspx)中*OLE DB 程序员参考*。  
   
- *长度* \(可选\)  
- 用于的成员变量来保存列的大小 \(以字节为单位\)。  
+ *长度*（可选）  
+ 成员变量，用来保存列的大小，以字节为单位。  
   
-## 备注  
- **db\_param** 定义可在命令的参数;因此将它与 **db\_command**。  例如，可以使用 **db\_param** 为固定参数在 SQL 查询或存储过程。  在存储过程中的参数表示由问号 \(?\)，因此，您应绑定数据成员按参数的出现顺序。  
+## <a name="remarks"></a>备注  
+ **db_param**定义参数，在命令中使用; 因此将它与**db_command**。 例如，你可以使用**db_param**若要将 SQL 查询或存储的过程中的参数绑定。 由问号 （？），表示在存储过程的参数，你应绑定参数的顺序中的数据成员。  
   
- **db\_param** 分隔可参与 OLE DB `ICommandWithParameters`基于绑定的数据成员。  它将参数类型 \(输入或输出\)， OLE DB 类型、精度、缩放、状态和长度为指定的参数。  此特性插入 OLE DB 使用者宏 BEGIN\_PARAM\_MAP…  END\_PARAM\_MAP.  在标有 **db\_param** 属性以 COLUMN\_ENTRY 形式，的每个成员将占用在映射的项。  
+ **db_param**分隔可以参与 OLE DB 的成员数据`ICommandWithParameters`-基于绑定。 它将设置参数类型 （输入或输出）、 OLE DB 类型、 精度、 小数位数、 状态和为指定的参数的长度。 此属性将插入的 OLE DB 使用者宏 BEGIN_PARAM_MAP...END_PARAM_MAP。 以将标记每个成员**db_param**属性中的映射中的 COLUMN_ENTRY 窗体占用一个条目。  
   
- **db\_param** 与 [db\_table](../windows/db-table.md) 或 [db\_command](../windows/db-command.md) 特性一起使用。  
+ **db_param**与请结合使用[db_table](../windows/db-table.md)或[db_command](../windows/db-command.md)属性。  
   
- 当使用者属性提供程序应用此特性应用于类，编译器将类重命名为 \_TheClassNameAccessor， *TheClassName* 的名称就是您为该类，因此，编译器还将创建一个名为 *TheClassName 的* 类 *，* 从 \_TheClassNameAccessor 派生。  在类视图中，您将看到两类。  
+ 当使用者特性提供程序应用于类时此属性时，编译器将该类重命名为\_*类名*访问器，其中*类名*是你为指定的名称类，并且编译器还将创建一个名为类*类名*，它派生自\_*类名*访问器。  将在类视图中看到这两个类。  
   
-## 示例  
- 下面的示例 Northwind 数据库中创建基于 SalesbyYear 存储过程的命令类。  其关联在存储过程中的第一个参数与 `m_RETURN_VALUE` 变量，并定义为输出参数。  其关联最后两个输入参数 \(\) 与 `m_Beginning_Date` 和 `m_Ending_Date`。  
+## <a name="example"></a>示例  
+ 下面的示例创建了基于 Northwind 数据库中的 SalesbyYear 存储过程的命令类。 它是相关联的存储过程中的第一个参数`m_RETURN_VALUE`变量，并将其定义为输出参数。 它是相关联的最后两个 （输入） 参数与`m_Beginning_Date`和`m_Ending_Date`。  
   
- 下面的示例关联 `nOutput` 变量与输出参数。  
+ 下面的示例将`nOutput`变量使用输出参数。  
   
 ```  
 // db_param.cpp  
@@ -117,19 +118,18 @@ struct CSalesbyYear {
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`，成员，方法，本地|  
+|**适用对象**|**类**、 `struct`、成员、方法、本地|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)   

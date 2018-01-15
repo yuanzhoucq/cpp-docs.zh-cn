@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-class"></a>message 类
 包含正在消息块之间传递的数据负载的基本消息信封。  
@@ -77,7 +78,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `message`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -163,5 +164,5 @@ long remove_ref();
 ### <a name="return-value"></a>返回值  
  引用计数的新值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

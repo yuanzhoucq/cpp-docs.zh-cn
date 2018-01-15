@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12ebceaa155a8af1078bd18fa74ced1a4d8e72d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6cc1670559354628127729724300399d5f003ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支持
 MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 类中支持**CDocument**。 具体而言， **CDocument**具有确定邮件支持是否在最终用户的计算机上存在的成员函数，并且，如果是这样，启用其标准命令 id 的发送邮件命令**ID_FILE_SEND_MAIL**. 此命令的 MFC 处理程序函数允许用户通过电子邮件发送文档。  
@@ -69,6 +70,6 @@ MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 
   
 -   [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MAPI](../mfc/mapi.md)
 

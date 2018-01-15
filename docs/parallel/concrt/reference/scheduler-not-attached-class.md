@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e18171f3984a7021884586ec519512a49dc6fbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c76ed0c2b4291934914d3e6aa8d13b23580bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached 类
 此类描述需要将计划程序附加到当前上下文以执行操作，而实际并未进行附加即执行该操作时引发的异常。  
@@ -46,7 +47,7 @@ class scheduler_not_attached : public std::exception;
   
  `scheduler_not_attached`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -65,6 +66,6 @@ scheduler_not_attached() throw();
  `_Message`  
  错误的描述性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)

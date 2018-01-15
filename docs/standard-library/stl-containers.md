@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>C++ 标准库容器
 标准库为相关对象的存储集合提供了各种类型安全容器。 容器是类模板；在声明容器变量时，你可以指定该容器将保存的元素类型。 可以使用初始值设定项列表构造容器。 它们具有用于添加和移除元素以及执行其他操作的成员函数。  
@@ -176,21 +160,20 @@ int main()
  容器中的某些操作可能还需要公共默认构造函数和公共等效运算符。 例如，未排序的关联容器需要支持相等性和哈希处理。  
   
 ## <a name="accessing-container-elements"></a>正在访问容器元素  
- 使用迭代器访问容器的元素。 有关详细信息，请参阅[迭代器](../standard-library/iterators.md)。  
+ 使用迭代器访问容器的元素。 有关更多信息，请参见 [迭代器](../standard-library/iterators.md)。  
   
 > [!NOTE]
 >  还可以使用[基于范围的 for 循环](../cpp/range-based-for-statement-cpp.md)来循环访问 C++ 标准库集合。  
   
 ## <a name="comparing-containers"></a>比较容器  
- 所有容器都重载运算符 == 用于比较同一类型的两个具有相同的元素类型的容器。 可使用 == 比较一个矢量 \<string> 与另一矢量 \<string>，但是不能用它比较矢量 \<string> 与列表 \<string> 或比较矢量 \<string> 与矢量\<char*>。  在 C++98/03 中可以使用 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae) 或 [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) 来比较不同的容器类型和/或元素类型。 在 C++11 中还可以使用 [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f)。 但在这些情况下函数假设容器都具有相同的长度。 如果第二个范围比第一个短，则产生未定义的行为。 如果第二个范围的更长，结果可能仍然不正确，因为第一个范围结束后比较不会继续。  
+ 所有容器都重载运算符 == 用于比较同一类型的两个具有相同的元素类型的容器。 可使用 == 比较一个矢量 \<string> 与另一矢量 \<string>，但是不能用它比较矢量 \<string> 与列表 \<string> 或比较矢量 \<string> 与矢量\<char*>。  在 C++98/03 中可以使用 [std::equal](algorithm-functions.md#equal) 或 [std::mismatch](algorithm-functions.md#mismatch) 来比较不同的容器类型和/或元素类型。 在 C++11 中还可以使用 [std::is_permutation](algorithm-functions.md#is_permutation)。 但在这些情况下函数假设容器都具有相同的长度。 如果第二个范围比第一个短，则产生未定义的行为。 如果第二个范围的更长，结果可能仍然不正确，因为第一个范围结束后比较不会继续。  
   
 ### <a name="comparing-dissimilar-containers-c14"></a>比较不同的容器 (C++14)  
- 在 C++14 及更高版本，通过使用采用两个完整范围的 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae)、[std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) 或 [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f) 函数重载之一来比较不同的容器和/或不同的元素类型。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。  
+ 在 C++14 及更高版本，通过使用采用两个完整范围的 **std::equal**、**std::mismatch** 或 **std::is_permutation** 函数重载之一来比较不同的容器和/或不同的元素类型。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)   
  [\<sample container>](../standard-library/sample-container.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

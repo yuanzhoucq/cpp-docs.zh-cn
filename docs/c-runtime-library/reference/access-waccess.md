@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - taccess
 - waccess
 - _taccess
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - access function
 - _taccess function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d0968ec14a43cfbbf1169f34ac929435787bc349
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5c4d8c6d8caae8b36f372ce75b4fc91638f9e78e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-waccess"></a>_access、_waccess
 确定文件是否是只读的。 提供更多的安全版本；请参阅 [_access_s、_waccess_s](../../c-runtime-library/reference/access-s-waccess-s.md)。  
@@ -100,7 +84,7 @@ int _waccess(
  `EINVAL`  
  参数无效。  
   
- 有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
  与文件一起使用时，`_access` 函数确定指定的文件或目录是否存在，并且是否具有由 `mode` 值指定的属性。 与目录一起使用时，`_access` 仅确定指定的目录是否存在；在 [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。  
@@ -124,9 +108,9 @@ int _waccess(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_taccess`|`_access`|`_access`|`_waccess`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|----------------------|  
 |`_access`|\<io.h>|\<errno.h>|  
 |`_waccess`|\<wchar.h> 或 \<io.h>|\<errno.h>|  
@@ -164,7 +148,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   

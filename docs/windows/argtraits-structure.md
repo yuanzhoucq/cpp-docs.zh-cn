@@ -1,32 +1,33 @@
 ---
-title: "ArgTraits 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ArgTraits 结构"
+title: "ArgTraits 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraits
+dev_langs: C++
+helpviewer_keywords: ArgTraits structure
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64ec29d674f6213992fbb1424093931b20ed45b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ArgTraits 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="argtraits-structure"></a>ArgTraits 结构
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -120,30 +121,30 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `TMemberFunction`  
- 不能匹配的 ArgTraits 结构参数的 Typename 任何调用方法签名。  
+ ArgTraits 结构，它不能与任何 Invoke 方法签名匹配的类型名称参数。  
   
  `TDelegateInterface`  
- 委托接口。  
+ 一种委托接口。  
   
  `TArg1`  
  调用方法的第一个参数的类型。  
   
  `TArg2`  
- 调用方法的第一个参数的类型。  
+ Invoke 方法的第二个自变量的类型。  
   
  `TArg3`  
- 调用方法的第三个参数的类型。  
+ Invoke 方法的第三个自变量的类型。  
   
  `TArg4`  
- 调用方法的第四个参数的类型。  
+ Invoke 方法的第四个自变量的类型。  
   
  `TArg5`  
- 调用方法的第五个参数的类型。  
+ Invoke 方法的第五个自变量的类型。  
   
  `TArg6`  
- 调用方法的第六个参数的类型。  
+ Invoke 方法的第六个自变量的类型。  
   
  `TArg7`  
  调用方法的第七个参数的类型。  
@@ -152,40 +153,40 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  调用方法的第八个参数的类型。  
   
  `TArg9`  
- 调用方法的第九个参数的类型。  
+ Invoke 方法的第九个自变量的类型。  
   
-## 备注  
- `ArgTraits` 结构声明委托指定的接口并具有参数指定数量的一个匿名成员函数。  
+## <a name="remarks"></a>备注  
+ `ArgTraits`结构声明指定的委托接口和匿名成员函数具有指定的数目的参数。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`Arg1Type`|TArg1 的 typedef。|  
-|`Arg2Type`|TArg2 的 typedef。|  
-|`Arg3Type`|TArg3 的 typedef。|  
-|`Arg4Type`|TArg4 的 typedef。|  
-|`Arg5Type`|TArg5 的 typedef。|  
-|`Arg6Type`|TArg6 的 typedef。|  
-|`Arg7Type`|TArg7 的 typedef。|  
-|`Arg8Type`|TArg8 的 typedef。|  
-|`Arg9Type`|TArg9 的 typedef。|  
+|名称|描述|  
+|----------|-----------------|  
+|`Arg1Type`|TArg1 typedef。|  
+|`Arg2Type`|TArg2 typedef。|  
+|`Arg3Type`|TArg3 typedef。|  
+|`Arg4Type`|TArg4 typedef。|  
+|`Arg5Type`|TArg5 typedef。|  
+|`Arg6Type`|TArg6 typedef。|  
+|`Arg7Type`|TArg7 typedef。|  
+|`Arg8Type`|TArg8 typedef。|  
+|`Arg9Type`|TArg9 typedef。|  
   
-### 公共常量  
+### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
-|--------|--------|  
-|[ArgTraits::args 常量](../windows/argtraits-args-constant.md)|数数目参数数量。委托接口的调用方法。|  
+|name|描述|  
+|----------|-----------------|  
+|[ArgTraits::args 常量](../windows/argtraits-args-constant.md)|保留的调用方法的委托接口上的参数数目的计数。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ArgTraits`  
   
-## 要求  
- **标头：**event.h  
+## <a name="requirements"></a>惠?  
+ **标头：** event.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb195bfb5e6e35d035ba5a3660bb91644a04ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-stream-member-functions"></a>输入流成员函数
 输入流成员函数用于磁盘输入。 成员函数包括：  
@@ -199,6 +200,6 @@ int main( )
 ##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a>输入流的 close 函数  
  **close** 成员函数会关闭与输入文件流关联的磁盘文件，并释放操作系统文件句柄。 [ifstream](../standard-library/basic-ifstream-class.md) 析构函数将关闭该文件，但如需打开同一流对象的另一个文件，则可以使用 **close** 函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输入流](../standard-library/input-streams.md)
 

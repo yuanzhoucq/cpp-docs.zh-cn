@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f18b0690b6205f8e7b0f07fdfa6f0b88c75a3a91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7f93e81d5d030112f436ad93a53c2a65854b38f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 项目向导的应用程序设置
 使用向导的此页为 Win32 项目设置选项。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 |**DLL**|创建 Win32 动态链接库 (DLL)。 Win32 DLL 是用 C 或 c + +，使用调用 Win32 API，而不是 MFC 类，以及作为多个应用程序可同时使用的函数的共享库中编写的二进制文件。<br /><br /> 无法添加 MFC 或 ATL 支持到 DLL 应用程序。 你可以指示 DLL 导出符号。|  
 |**静态库**|创建一个静态库。 静态库是一个包含对象及其函数和生成的可执行文件时，链接到你的程序的数据文件。 本主题说明如何创建初学者文件和[项目属性](../ide/property-pages-visual-cpp.md)为静态库。 静态库文件提供以下好处：<br /><br /> -A Win32 静态库是如果您正在使用的应用程序执行调用 Win32 API，而不是 MFC 类很有用。<br />不论你的 Windows 应用程序的其余部分编写 C 或 c + +，-链接的过程都是相同的。<br />-你可以将静态库链接到一个基于 MFC 的程序或非 MFC 程序。|  
   
- **其他选项**  
+ **附加选项**  
  定义的支持和应用程序，具体取决于其类型的选项。  
   
 |选项|描述|  
@@ -54,5 +57,5 @@ ms.lasthandoff: 10/24/2017
 |**ATL**|将嵌入到类中活动模板库 (ATL) 中的项目支持。 适用于仅 Win32 控制台应用。<br /><br /> **请注意**此选项并不表示对使用 ATL 的 ATL 对象代码向导添加的支持。 你可以仅向 ATL 项目添加 ATL 对象或与 ATL 的 MFC 项目支持。|  
 |**MFC**|将嵌入到 Microsoft 基础类 (MFC) 库的项目支持。 Win32 控制台应用程序和仅限静态库。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Win32 应用程序向导](../windows/win32-application-wizard.md)   

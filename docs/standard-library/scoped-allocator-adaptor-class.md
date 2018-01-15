@@ -34,11 +34,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c74216b8b510b17327c22a087295725049c4f024
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
 表示分配器嵌套。  
@@ -73,7 +74,7 @@ class scoped_allocator_adaptor;
   
 ### <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|构造 `scoped_allocator_adaptor` 对象。|  
   
@@ -96,7 +97,7 @@ class scoped_allocator_adaptor;
   
 ### <a name="structs"></a>结构  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor::rebind 结构](#rebind_struct)|将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。|  
   
@@ -113,7 +114,7 @@ class scoped_allocator_adaptor;
 |[outer_allocator](#outer_allocator)|检索对类型为 `outer_allocator_type` 的存储对象的引用。|  
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<scoped_allocator 1>  
   
  **命名空间：** std  
@@ -307,7 +308,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 ### <a name="return-value"></a>返回值  
  实际上，此方法将返回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 结果为新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用相应分配器 `al` 的 `al.select_on_container_copy_construction()` 进行初始化。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 
 

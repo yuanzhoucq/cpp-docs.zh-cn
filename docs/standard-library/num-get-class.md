@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 908f7f595f2312bc16a01cdc3b6784c3e56f21bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numget-class"></a>num_get 类
 一种模板类，用于描述一个对象来充当区域设置 facet，以便控制 `CharType` 类型的序列向数值的转换。  
@@ -71,7 +72,7 @@ class num_get : public locale::facet;
 |[do_get](#do_get)|为从字符序列提取数值或布尔值而调用的虚拟函数。|  
 |[get](#get)|从字符序列提取数值或布尔值。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
@@ -580,7 +581,7 @@ explicit num_get(size_t _Refs = 0);
   
  构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<区域设置>](../standard-library/locale.md)   
  [facet 类](../standard-library/locale-class.md#facet_class)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

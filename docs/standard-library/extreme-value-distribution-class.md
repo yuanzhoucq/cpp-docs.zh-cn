@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator!=
-- random/std::extreme_value_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::extreme_value_distribution [C++]
 - std::extreme_value_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5cf43efdbe6f7c0cd79bee18e8a696986d0b5446
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 类
 生成极值分布。  
@@ -98,7 +95,7 @@ public:
   
  有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
   
- 有关极值分布的详细信息，请参阅 Wolfram MathWorld 文章[极值分布](http://go.microsoft.com/fwlink/LinkId=401110)。  
+ 有关极值分布的详细信息，请参阅 Wolfram MathWorld 文章[极值分布](http://go.microsoft.com/fwlink/p/?linkid=401110)。  
   
 ## <a name="example"></a>示例  
   
@@ -183,7 +180,7 @@ Distribution for 10 samples:
     10: 2.0568757061  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<random>  
   
  **命名空间：** std  
@@ -211,7 +208,7 @@ explicit extreme_value_distribution(const param_type& parm);
   
  第一个构造函数将构造一个其存储的 `a` 值保留值 *a_value*，并且其存储的 `b` 值保留值 *b_value* 的对象。  
   
- 第二个构造函数将构造一个从 *parm* 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
+ 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
   
 ##  <a name="param_type"></a>  extreme_value_distribution::param_type  
 存储分布的参数。  
@@ -243,9 +240,8 @@ struct param_type {
   
  在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
-
 
 
 

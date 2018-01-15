@@ -29,11 +29,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 719acc2706483a3fcfa5506da077cee9e5fc1a5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控件的对话框数据交换函数
 本主题列出了用于对话框、 窗体视图或控件视图对象中 OLE 控件的属性和对话框、 窗体视图或控件视图对象的数据成员之间交换数据的 DDX_OC 函数。  
@@ -82,7 +83,7 @@ void AFXAPI DDX_OCBool(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头：** afxdisp.h  
   
 ##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
@@ -112,7 +113,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>DDX_OCColor  
@@ -142,7 +143,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
@@ -172,7 +173,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
@@ -208,7 +209,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
@@ -244,7 +245,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>DDX_OCInt  
@@ -280,7 +281,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
@@ -316,7 +317,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_ocshort"></a>DDX_OCShort  
@@ -346,7 +347,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
@@ -376,7 +377,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_octext"></a>DDX_OCText  
@@ -406,7 +407,7 @@ void AFXAPI DDX_OCText(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h  
   
 ##  <a name="ddx_octextro"></a>DDX_OCTextRO  
@@ -436,8 +437,8 @@ void AFXAPI DDX_OCTextRO(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdisp.h
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,32 +1,33 @@
 ---
-title: "no_injected_text | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.no_injected_text"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "no_injected_text attribute"
+title: "no_injected_text |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.no_injected_text
+dev_langs: C++
+helpviewer_keywords: no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c74d3134b5381be4ec330742726b26fea6155da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# no_injected_text
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-由于属性使用，以防止编译器插入代码。  
+# <a name="noinjectedtext"></a>no_injected_text
+阻止编译器将注入代码作为特性，请使用结果。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,16 +36,16 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 参数  
- `boolean`\(可选\)  
- **true** ，如果不需要插入的代码，允许代码的 **错误** 插入。  **true** 是默认设置。  
+#### <a name="parameters"></a>参数  
+ `boolean`（可选）  
+ **true**如果你想将插入的没有代码**false**若要允许代码注入。 **true**是默认设置。  
   
-## 备注  
- 最常见 **no\_injected\_text** C\+\+ 特性由 [\/Fx](../build/reference/fx-merge-injected-code.md) 编译器选项，插入 **no\_injected\_text** 属性设置为 .mrg 文件中。  
+## <a name="remarks"></a>备注  
+ 最常见的用途**no_injected_text** c + + 属性是通过[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项，可插入**no_injected_text**到.mrg 文件中的属性。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -53,8 +54,7 @@ caps.handback.revision: 10
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [编译器特性](../windows/compiler-attributes.md)   

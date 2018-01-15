@@ -1,39 +1,39 @@
 ---
-title: "2.1 Directive Format | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.1 指令格式 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 918b6445-d35e-4176-9565-b045be941b4d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c3ff4e0078ffd086ce3b62d8927184188f0ebdd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 2.1 Directive Format
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OpenMP 指令的语法由 [附录 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)于以下语法形式指定和非正式地:  
+# <a name="21-directive-format"></a>2.1 指令格式
+中的语法正式指定 OpenMP 指令的语法[附录 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)，和非正式的方式，如下所示：  
   
 ```  
 #pragma omp directive-name  [clause[ [,] clause]...] new-line  
 ```  
   
- 每个指令从 **\#pragma omp**开始，减少发生冲突的风险与同名的其他 \(对 OpenMP 的非 OpenMP 或供应商扩展\) 杂注指令。  指令的其余部分遵循 C 和 C\+\+ 标准约定编译器指令的。  特别是，在 **\#**前后，空白可以使用，并且，有时必须使用空格分隔指令中的单词。  按照 **\#pragma omp** 的预处理标记受宏替换。  
+ 每个指令开头**#pragma omp**，来减少与其他 （非 OpenMP 或供应商扩展到 OpenMP） 杂注指令具有相同名称发生冲突的可能性。 指令的剩余部分遵循的编译器指令的 C 和 c + + 标准的约定。 之前和之后具体而言，可以使用空白 **#** ，并有时必须使用空格分隔词指令中的。 预处理标记后面**#pragma omp**受到宏替换。  
   
- 指令区分大小写。  子句出现在指令的顺序并不重要。  指令中的子句能重复根据需要，这取决于列表的限制在每个子句的说明。  如果 *将变量列表* 显示在子句，它必须只指定变量。  仅指令 *名称* 可以每条指令以指定。  例如，下面的指令不允许:  
+ 指令是区分大小写。 子句在指令中的显示顺序并不重要。 根据需要每个子句的说明中列出的限制的制约可能重复在指令上的子句。 如果*变量列表*将显示在子句中，它必须指定仅变量。 只有一个*指令名称*可以指定每个指令。  例如，不允许使用以下指令：  
   
 ```  
 /* ERROR - multiple directive names not allowed */  
 #pragma omp parallel barrier  
 ```  
   
- OpenMP 指令适用于最多一个成功的语句，必须是构造的块。
+ OpenMP 指令适用于最多一个后续语句，它必须是结构化的块中。

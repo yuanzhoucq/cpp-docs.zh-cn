@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47355ea2c7db35b32c69e91bf8445efe7671ccce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 对象
 你可以使用[快捷键](../../parallel/amp/reference/accelerator-class.md)和[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)指定设备或仿真程序在运行 c + + AMP 代码的类。 系统可能具有多个设备或仿真程序的内存、 共享的内存支持、 调试支持或双精度支持量上存在差异。 C + + Accelerated Massive Parallelism (c + + AMP) 提供 Api，可用于检查可用快捷键、 设置另一个用作默认值、 指定多个 accelerator_view 上以便 parallel_for_each，多个调用和执行特殊的调试任务。  
@@ -175,12 +176,12 @@ bool pick_accelerator()
   
 - [accelerator:: direct3d_warp 数据成员](reference/accelerator-class.md#direct3d_warp)： 此加速器提供用于使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码的回退解决方案。  
   
-- [accelerator:: cpu_accelerator 数据成员](reference/accelerator-class.md#cpu_accelerator)： 可用于此加速器设置暂存数组。 它不能执行 c + + AMP 代码。 有关详细信息，请参阅[c + + AMP 中的临时数组](http://go.microsoft.com/fwlink/p/LinkId=248485)在本机代码博客中的并行编程上发布。  
+- [accelerator:: cpu_accelerator 数据成员](reference/accelerator-class.md#cpu_accelerator)： 可用于此加速器设置暂存数组。 它不能执行 c + + AMP 代码。 有关详细信息，请参阅[c + + AMP 中的临时数组](http://go.microsoft.com/fwlink/p/?linkId=248485)在本机代码博客中的并行编程上发布。  
   
 ## <a name="interoperability"></a>互操作性  
- C + + AMP 运行时支持之间的互操作性`accelerator_view`类和 Direct3D [ID3D11Device 接口](http://go.microsoft.com/fwlink/p/LinkId=248488)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法采用`IUnknown`接口并返回`accelerator_view`对象。 [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)方法采用`accelerator_view`对象，并返回`IUknown`接口。  
+ C + + AMP 运行时支持之间的互操作性`accelerator_view`类和 Direct3D [ID3D11Device 接口](http://go.microsoft.com/fwlink/p/?linkId=248488)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法采用`IUnknown`接口并返回`accelerator_view`对象。 [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)方法采用`accelerator_view`对象，并返回`IUknown`接口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)   
  [accelerator_view 类](../../parallel/amp/reference/accelerator-view-class.md)

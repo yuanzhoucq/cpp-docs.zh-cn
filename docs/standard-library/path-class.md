@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4221702df42bc82d1a0573f9a8b10252017b282a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="path-class"></a>path 类
 **path** 类存储类型为 string\_type 的对象，此处处于阐释目的将其称为 myname，它适合用作路径名称。 string\_type 是 basic\_string\<value_type> 的同义词，其中 value\_type 是 Windows 下 char 的同义词或 Posix 下 wchar_t 的同义词。  
@@ -594,11 +595,11 @@ wstring wstring() const;
   
  将 mypath 中存储的序列转换为 wchar_t 序列的主机系统偏好的编码，并将其返回存储到类型 wstring 的对象中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<文件系统 >  
   
  **命名空间：**std::experimental::filesystem
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 

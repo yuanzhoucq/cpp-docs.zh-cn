@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26947b0c2c779f65fb01dd78d56ffe19afaf27ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控件：属性
 ActiveX 控件，将引发事件，其控件容器与进行通信。 容器，因而将使用方法和属性与控件进行通信。 方法和属性的使用和目的，类似分别是，对成员函数和 c + + 类的成员变量。 属性是对任何容器公开的数据成员的 ActiveX 控件。 属性包含 ActiveX 控件，如自动化客户端和 ActiveX 控件容器应用程序提供的接口。  
@@ -44,6 +45,6 @@ ActiveX 控件，将引发事件，其控件容器与进行通信。 容器，�
   
 -   [MFC ActiveX 控件：访问环境属性](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
 

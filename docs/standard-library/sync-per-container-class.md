@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::sync_per_container
 - allocators/stdext::sync_per_container::equals
-dev_langs:
-- C++
-helpviewer_keywords:
-- sync_per_container class
+dev_langs: C++
+helpviewer_keywords: sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7864b6367d716ff7504982c4a8cbbed55f7784c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8628d2866fa4a180975cde1f0ea161378afc6d50
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 类
 描述为每个筛选器对象提供单独的缓存对象的[同步筛选](../standard-library/allocators-header.md) 。  
@@ -50,7 +47,7 @@ class sync_per_container
 |-|-|  
 |[equals](#equals)|比较两个缓存是否相等。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<allocators>  
   
  **命名空间：** stdext  
@@ -74,9 +71,8 @@ bool equals(const sync_per_container<Cache>& Other) const;
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

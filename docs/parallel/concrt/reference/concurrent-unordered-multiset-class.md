@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58dd056bc3a4d397fc8e77b8e2c0b508b489eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 518e0b7bef29e9d10e7cf603fc3bf387d986fa09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset 类
 `concurrent_unordered_multiset`类是并发安全容器，用于控制变长元素序列的类型 k。序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。  
@@ -116,7 +117,7 @@ template <typename K,
   
  `concurrent_unordered_multiset`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concurrent_unordered_set.h  
   
  **命名空间：** 并发  
@@ -659,7 +660,7 @@ size_type unsafe_max_bucket_count() const;
 ### <a name="return-value"></a>返回值  
  此容器中的存储桶的最大数量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
 

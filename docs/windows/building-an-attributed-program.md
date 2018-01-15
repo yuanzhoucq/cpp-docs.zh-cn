@@ -25,11 +25,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a757cbbb7bb9e080a9492ecabfd0542714cf2c7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e3e39bbd2b630d35942c1c5107041b2fbadf7549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-an-attributed-program"></a>生成特性化程序
 Visual c + + 特性置于你的源代码后，您可能希望 Visual c + + 编译器可为你生成类型库和.idl 文件。 以下链接器选项生成.tlb 和.idl 文件的帮助：  
@@ -46,5 +49,5 @@ Visual c + + 特性置于你的源代码后，您可能希望 Visual c + + 编�
   
  此外，Visual c + + 链接器将输出所有 IDL 相关属性信息添加到单个 MIDL 文件。 将无法从单个项目中生成两个类型库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../windows/attributed-programming-concepts.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::get_x
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 789c1fc872f478945de6444c07de069b50074a7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d050e819361175f1808a440671de684499ebfa3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm2-class"></a>unorm_2 类
-表示两个无符号的常规数字的短矢量。  
+表示两个无符号的正常数字短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,11 +88,11 @@ class unorm_2;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |unorm_2::operator-||  
 |unorm_2::operator * =||  
-|unorm_2::operator / =||  
+|/ = unorm_2::operator 的||  
 |unorm_2::operator + +||  
 |unorm_2::operator + =||  
 |unorm_2::operator =||  
@@ -116,7 +100,7 @@ class unorm_2;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |unorm_2::size 常量||  
   
@@ -136,8 +120,8 @@ class unorm_2;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unorm_2`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -221,6 +205,5 @@ explicit inline unorm_2(
 static const int size = 2;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58d1c1ec052c399cf56cd145e7ee06f52483661e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 451cc5690e871c1292f0a8ff2450eca950ada65b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 类
 设备上下文类派生自[CDC](../../mfc/reference/cdc-class.md)。  
@@ -54,7 +55,7 @@ class CPaintDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND`此`CPaintDC`附加对象。|  
   
@@ -72,7 +73,7 @@ class CPaintDC : public CDC
   
  `CPaintDC`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>CPaintDC::CPaintDC  
@@ -122,7 +123,7 @@ PAINTSTRUCT m_ps;
 ### <a name="example"></a>示例  
   请参阅示例[CPaintDC::m_hWnd](#m_hwnd)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MDI](../../visual-cpp-samples.md)   
  [CDC 类](../../mfc/reference/cdc-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)

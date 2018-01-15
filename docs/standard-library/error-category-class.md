@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40ca15541b9035a82869cdfed7f304eeaeeb2553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>error_category 类
 表示描述错误代码类别的对象的抽象、公用基。  
@@ -68,7 +69,7 @@ class error_category;
 |[operator!=](#op_neq)|测试各 `error_category` 对象是否不相等。|  
 |[operator<](#op_lt)|测试 [error_category](../standard-library/error-category-class.md) 对象是否小于要比较的传入 `error_category` 对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<system_error>  
   
  **命名空间：** std  
@@ -127,7 +128,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`val`|要描述的错误代码值。|  
   
@@ -195,7 +196,7 @@ bool operator<(const error_category& right) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`right`|要比较的 `error_category` 对象。|  
   
@@ -215,7 +216,7 @@ typedef int value_type;
 ### <a name="remarks"></a>备注  
  此类型定义是 `int` 的同义词。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<system_error>](../standard-library/system-error.md)
 
 

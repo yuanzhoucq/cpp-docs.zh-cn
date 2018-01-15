@@ -1,61 +1,65 @@
 ---
-title: "Sizing Individual Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Size to Content command"
-  - "size, controls"
-  - "text, autosizing controls to fit text"
-  - "controls [C++], sizing"
+title: "调整单个控件的大小 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
 ms.assetid: 14ccba02-7171-463a-a121-7018cf1e2e5a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b019cd2bbf68a4321bafd6dd960ffbcdba2dddf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Sizing Individual Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用尺寸柄调整控件的大小。  当指针定位在尺寸柄上时，它的形状发生改变以指示控件可以向哪个方向调整大小。  活动尺寸柄是实心的；如果尺寸柄是空心的，则不能沿该轴调整控件大小。  
+# <a name="sizing-individual-controls"></a>调整单个控件的大小
+使用调整大小控点来调整控件的大小。 仅当鼠标指针置于尺寸控点时，它将改变形状以指示可以在其中调整控件的说明。 活动的调整大小控点是实心;如果空心尺寸控点，该控件不调整大小沿该轴。  
   
- 也可以通过将控件与参考线或边距对齐，或者通过将对齐的控件和参考线彼此移开来更改控件的大小。  
+ 此外可以通过将控件与参考线或边距，对齐更改控件的大小，或通过将移动一个对齐控件和参考线彼此。  
   
-### 调整控件的大小  
+### <a name="to-size-a-control"></a>若要调整控件的大小  
   
-1.  选定控件。  
+1.  选择的控件。  
   
-2.  拖动尺寸柄以更改控件的大小：  
+2.  拖动调整大小控点，若要更改控件的大小：  
   
-    -   顶部和两边的尺寸柄更改水平大小或垂直大小。  
+    -   在顶部和两边的调整大小控点更改水平或垂直大小。  
   
-    -   角上的尺寸柄同时更改水平大小和垂直大小。  
+    -   调整大小控点角更改水平和垂直大小。  
   
     > [!TIP]
-    >  通过按住 Shift 键并使用向右和向下键，可以一次一个对话框单元 \(DLU\) 地调整控件大小。  
+    >  您可以通过按住 SHIFT 键并使用右和向下箭头键调整控件一个对话框单元 (DLU) 大小一次。  
   
-### 自动调整控件大小以容纳其中的文本  
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>若要自动调整大小以适应其中的文本的控件  
   
-1.  从“格式”菜单中选择“按内容调整大小”。  
+1.  选择**内容调整大小**从**格式**菜单。  
   
- \- 或 \-  
+ \- 或 -  
   
--   右击控件，然后从快捷菜单中选择“按内容调整大小”。  
+-   右键单击控件并选择**内容调整大小**从快捷菜单。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  Win32  
   
-## 请参阅  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>请参阅  
+ [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
+

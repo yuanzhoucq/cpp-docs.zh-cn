@@ -97,11 +97,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0900dae615bfe950655b04cbc501ef32c08f2c9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimap-class"></a>multimap 类
 C++ 标准库多重映射类用于存储和检索集合中的数据，此集合中的每个元素均为包含数据值和排序键的元素对。 键值不需要唯一，用于自动排序数据。 可以直接更改多重映射中的元素值，但不能直接更改其关联键值。 必须先删除与旧元素关联的键值，才能插入与新元素关联的新键值。  
@@ -174,7 +175,7 @@ class multimap;
 |[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `multimap` 元素的引用（用于读取和执行 `const` 操作）。|  
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `multimap` 元素的双向迭代器。|  
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `multimap` 中迭代器指向的元素间范围内的元素数量。|  
-|[iterator](#iterator)|一种类型，此类型提供引用同一 `multimap` 中的元素的两个迭代器之间的差异。|  
+|[Iterator](#iterator)|一种类型，此类型提供引用同一 `multimap` 中的元素的两个迭代器之间的差异。|  
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `multimap` 中两个元素的相对顺序。|  
 |[key_type](#key_type)|一种类型，此类型描述组成 `multimap` 中每个元素的排序键对象。|  
 |[mapped_type](#mapped_type)|一种类型，此类型表示存储在 `multimap` 中的数据类型。|  
@@ -220,7 +221,7 @@ class multimap;
 |-|-|  
 |[operator=](#op_eq)|将一个 `multimap` 中的元素替换为另一 `multimap` 副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **Header:** \<map>  
   
  **命名空间：** std  
@@ -303,7 +304,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>备注  
  由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
+ 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -708,7 +709,7 @@ iterator emplace(Args&&... args);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`args`|用于构造要插入到多重映射中的元素的转发参数。|  
   
 ### <a name="return-value"></a>返回值  
@@ -777,7 +778,7 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`args`|用于构造要插入到多重映射中的元素的转发参数。|  
 |`where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|  
   
@@ -964,7 +965,7 @@ size_type erase(
  要移除的元素的键。  
   
 ### <a name="return-value"></a>返回值  
- 对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为映射末尾的元素。  
+ 对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为 map 末尾的元素。  
   
  对于第三个成员函数，则返回已从多重映射中移除的元素的数目。  
   
@@ -1301,7 +1302,7 @@ typedef implementation-defined iterator;
   
  若要取消引用指向 multimap 中元素的 **iterator**`Iter`，请使用 **->** 运算符。  
   
- 若要访问元素的键值，请使用 `Iter` -> **first**，其等同于 (\* `Iter`)。 **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second**。  
+ 若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second** 相同。  
   
  **iterator** 类型可用于修改元素的值。  
   
@@ -1737,7 +1738,7 @@ multimap& operator=(multimap&& right);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`right`|正在复制到 `multimap` 的 [multimap](../standard-library/multimap-class.md)。|  
   
 ### <a name="remarks"></a>备注  
@@ -2346,9 +2347,9 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<map> 成员](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
  [容器](../cpp/containers-modern-cpp.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

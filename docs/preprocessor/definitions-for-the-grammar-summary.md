@@ -1,37 +1,38 @@
 ---
-title: "语法摘要的定义 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "预处理器"
-  - "预处理器, 定义"
+title: "语法摘要的定义 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor, definitions
+- preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 36ce8a4f1bf6e4c5e9c79298899c871c74c1707b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 语法摘要的定义
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-终止符是语法定义中的终结点。  不提供其他解决方法。  终止符包括保留字和用户定义的标识符的集。  
+# <a name="definitions-for-the-grammar-summary"></a>语法摘要的定义
+终止符是语法定义中的终结点。 不提供其他解决方法。 终止符包括保留字和用户定义的标识符的集。  
   
- 非终止符是语法中的占位符。  它们中的大多数是在此语法摘要中的其他位置定义的。  定义可是递归的。  在《C\+\+ 语言参考》的[语法摘要](../misc/grammar-summary-cpp.md)中定义以下非终止符：  
+非终止符是语法中的占位符。 它们中的大多数是在此语法摘要中的其他位置定义的。 定义可是递归的。 在中定义以下非终止符[词法约定](../cpp/lexical-conventions.md)部分*c + + 语言参考*:  
   
- `constant`、*constant\-expression*、*identifier*、*keyword*、`operator`、`punctuator`  
+`constant`*常量表达式*，*标识符*，*关键字*， `operator`，`punctuator`  
   
- 可选组件由带下标的 opt 指示。  例如，下面指示包含在大括号中的可选表达式：  
+可选组件由带下标的 opt 指示。 例如，下面指示包含在大括号中的可选表达式：  
   
- **{** *expression*opt **}**  
+**{** *表达式*选择**}**  
   
-## 请参阅  
- [语法摘要](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>请参阅  
+[语法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

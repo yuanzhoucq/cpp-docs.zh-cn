@@ -42,11 +42,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25def6932680b47e69fc9b16064f046319bb5023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharedptr-class"></a>shared_ptr 类
 将引用计数智能指针回绕在动态分配的对象周围。  
@@ -64,7 +65,7 @@ class shared_ptr;
   
  模板参数 `T` 可能是一个不完整的类型，针对某些成员函数的情况除外。  
   
- 当从类型 `shared_ptr<T>` 的资源指针或 `G*` 中构造 `shared_ptr<G>` 对象时，指针类型 `G*` 必须可转换为 `T*`。 如果不是这样，则代码将不进行编译。 例如：  
+ 当从类型 `shared_ptr<T>` 的资源指针或 `G*` 中构造 `shared_ptr<G>` 对象时，指针类型 `G*` 必须可转换为 `T*`。 如果不是这样，则代码将不进行编译。 例如:  
   
 ```cpp  
 #include <memory>  
@@ -161,7 +162,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |[shared_ptr::operator=](#op_eq)|替换拥有的资源。|  
 |[shared_ptr::operator-&gt;](#operator-_gt)|获取指向指定的值的指针。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<memory>  
   
  **命名空间：** std  
@@ -174,7 +175,7 @@ typedef T element_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `T`的同义词。  
+ 该类型是模板参数 `T` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -848,7 +849,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [weak_ptr 类](../standard-library/weak-ptr-class.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

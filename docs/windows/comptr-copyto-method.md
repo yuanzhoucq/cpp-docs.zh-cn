@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 184abddec5099eff20f75531fe240886841e9814
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f47df584fb456c721c92823a87ca525beb052d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
 副本与指定的指针到此 ComPtr 关联的当前或指定的接口。  
@@ -64,10 +67,10 @@ HRESULT CopyTo(
   
  第三个函数将执行与此 ComPtr 的基础接口关联的接口 QueryInterface 操作`U`参数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ComPtr 类](../windows/comptr-class.md)

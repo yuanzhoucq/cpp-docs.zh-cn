@@ -1,56 +1,55 @@
 ---
-title: "OMP_DYNAMIC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_DYNAMIC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_DYNAMIC OpenMP environment variable"
+title: "OMP_DYNAMIC |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_DYNAMIC
+dev_langs: C++
+helpviewer_keywords: OMP_DYNAMIC OpenMP environment variable
 ms.assetid: e306049d-b644-4b73-8b63-46c835bff98b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 900f3e4ddd0e9901e72ed65f12bc036d87a6956e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# OMP_DYNAMIC
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-OpenMP 指定运行时是否在并行区域可以调整线程的数量。  
+# <a name="ompdynamic"></a>OMP_DYNAMIC
+指定运行时 OpenMP 是否可以调整并行区域中的线程数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 set OMP_DYNAMIC[=TRUE | =FALSE]  
 ```  
   
-## 备注  
- `OMP_DYNAMIC` 环境变量可由 [omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) 功能重写。  
+## <a name="remarks"></a>备注  
+ `OMP_DYNAMIC`环境变量可以通过重写[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)函数。  
   
- 在 OpenMP 标准的 Visual C\+\+ 实现的默认值为 `OMP_DYNAMIC=FALSE`。  
+ OpenMP 标准的 Visual c + + 实现中的默认值是`OMP_DYNAMIC=FALSE`。  
   
- 有关更多信息，请参见 [4.3 OMP\_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)。  
+ 有关详细信息，请参阅[4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)。  
   
-## 示例  
- 以下命令将 `OMP_DYNAMIC` 环境变量为 true:  
+## <a name="example"></a>示例  
+ 下面的命令集`OMP_DYNAMIC`为 TRUE 的环境变量：  
   
 ```  
 set OMP_DYNAMIC=TRUE  
 ```  
   
- 下面的命令演示当前设置 `OMP_DYNAMIC` 环境变量:  
+ 下面的命令显示的当前设置`OMP_DYNAMIC`环境变量：  
   
 ```  
 set OMP_DYNAMIC  
 ```  
   
-## 请参阅  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>请参阅  
+ [环境变量](../../../parallel/openmp/reference/openmp-environment-variables.md)

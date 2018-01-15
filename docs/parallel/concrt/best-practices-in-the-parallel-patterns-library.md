@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea611f555abe21a6ad3196bca287a7bd4ff00aa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>并行模式库中的最佳做法
 本文档介绍如何最佳有效地使用并行模式库 (PPL)。 PPL 提供通用的容器、对象和算法，用于执行细化并行。  
@@ -242,7 +243,7 @@ Container 1: Freeing resources...Exiting program...
  [[返回页首](#top)]  
   
 ##  <a name="lifetime"></a>请确保变量在任务的整个生存期内有效  
- 如果向任务组或并行算法提供 Lambda 表达式，capture 子句将指定 Lambda 表达式的主体是否通过值或引用访问封闭范围中的变量。 通过引用将变量传递到 lambda 表达式时，必须保证该变量的生存期在任务完成之前一直保持。  
+ 如果向任务组或并行算法提供 Lambda 表达式，capture 子句将指定 Lambda 表达式的主体是否通过值或引用访问封闭范围中的变量。 通过引用将变量传递到 Lambda 表达式时，必须保证该变量的生存期在任务完成之前一直保持。  
   
  请看下面的示例，该示例定义了 `object` 类和 `perform_action` 函数。 `perform_action` 函数创建 `object` 变量，并在该变量中以异步方式执行某项操作。 由于不能保证在 `perform_action` 函数返回前完成任务，因此，如果 `object` 变量在任务运行时被销毁，则程序将崩溃或发生未指定的行为。  
   
@@ -274,7 +275,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[返回页首](#top)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发运行时最佳做法](../../parallel/concrt/concurrency-runtime-best-practices.md)   
  [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)   

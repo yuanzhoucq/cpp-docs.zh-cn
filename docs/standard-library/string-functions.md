@@ -37,11 +37,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 5f6b8c5da1b8d848d751a8ce2189b864538f4cfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b1d77b464ea9e9ab4ca6e9511836c490c1c622a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函数
 ||||  
@@ -390,7 +391,7 @@ unsigned long long stoull(
 ### <a name="remarks"></a>备注  
  该函数将 `str` 中元素的序列转换为类型 `val` 的值 `unsigned long long`，就像通过调用 `strtoull( str.c_str(), _Eptr, idx)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  swap  
  交换两个字符串的字符数组。  
   
 ```  
@@ -533,6 +534,6 @@ wstring to_wstring(long double Val);
   
  该函数返回 `wstring(Buf)`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<string>](../standard-library/string.md)
 

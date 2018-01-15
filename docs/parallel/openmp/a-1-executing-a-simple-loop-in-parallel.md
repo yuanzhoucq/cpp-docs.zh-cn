@@ -1,27 +1,27 @@
 ---
-title: "A.1   Executing a Simple Loop in Parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.1 并行执行简单的循环 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b8aaacae-b20d-4b16-a540-54ccbf09582b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b8e425363b81954a72d0eb08491c384c47c695d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.1   Executing a Simple Loop in Parallel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例演示如何并行化一个简单的循环使用 `parallel for` 指令 \(在第 16 页\) 的[第2.5.1部分](../../parallel/openmp/2-5-1-parallel-for-construct.md) 。  默认情况下循环迭代变量是私有的，因此，显式指定它在私有子句并不是必需的。  
+# <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   并行执行简单循环
+下面的示例演示如何并行执行简单的循环使用`parallel for`指令 ([部分 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md)第 16 页上)。 循环迭代变量是默认情况下，为私有的因此不需要专用子句中显式指定。  
   
 ```  
 #pragma omp parallel for  

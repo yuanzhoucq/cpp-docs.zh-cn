@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7081d1ed4c65afea2aab7eca169782ec227a258b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25a4471a0522f89fd5cf1653398e92694daf887e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>打开&lt;设备&gt;图像对话框 （图标的图像编辑器）
 使用此对话框中打开设备图像。 它列出当前资源 （属于当前资源的映像） 中的现有设备图像。  
@@ -27,10 +30,10 @@ ms.lasthandoff: 10/24/2017
  **当前映像**  
  列出资源中包含的图像。 选择你想要打开的图像类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像菜单](../windows/image-menu-image-editor-for-icons.md)   
  [图标的图像编辑器](../windows/image-editor-for-icons.md)
 

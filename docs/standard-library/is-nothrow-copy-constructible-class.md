@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b1ce02c71fb7745465d21c7a4004ebc00ea7ddb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a39161c0715ef709d9f343188851a0b94abfe40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible 类
 测试类型是否具有 **nothrow** 复制构造函数。  
@@ -38,12 +39,12 @@ struct is_nothrow_copy_constructible;
 ## <a name="remarks"></a>备注  
  如果类型 `Ty` 具有 nothrow 复制构造函数，则类型谓词的实例将保留为 true，否则保留为 false。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
 
 

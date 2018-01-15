@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a40b73d752a40c94a8ea47acef40ea12f2e4504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itarget-class"></a>ITarget 类
 `ITarget` 类是所有目标块的接口。 目标块使用 `ISource` 块提供给它们的消息。  
@@ -80,7 +81,7 @@ class ITarget;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ITarget`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -192,6 +193,6 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 virtual void unlink_sources() = 0;
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [ISource 类](isource-class.md)

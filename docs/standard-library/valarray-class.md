@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - valarray/std::valarray::size
 - valarray/std::valarray::sum
 - valarray/std::valarray::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::valarray [C++]
 - std::valarray [C++], value_type
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 171b30710f6135a6aee13a12c035b957ec038bbb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valarray-class"></a>valarray 类
 该模板类描述了一个对象，该对象控制类型 **Type** 的元素序列，这些元素存储为数组并用于执行高速数学运算，且针对计算性能进行了优化。  
@@ -114,7 +112,7 @@ ms.lasthandoff: 10/03/2017
 |[operator|=](#op_or_eq)|获取数组中元素的按位 `OR`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|  
 |[operator~](#op_dtor)|一个一元运算符，该运算符获取 `valarray` 中每个元素的按位 `NOT` 值。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<valarray>  
   
  **命名空间：** std  
@@ -271,7 +269,7 @@ void free();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此非标准函数等效于分配空 valarray。 例如：  
+ 此非标准函数等效于分配空 valarray。 例如:  
   
 ```  
 valarray<T> v;  
@@ -1701,12 +1699,12 @@ void swap(valarray& right);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`right`|一个 `valarray`，提供要交换的元素。|  
   
 ### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right` 之间的受控序列。 它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。  
+ 成员函数交换 `*this` 和 `right`之间的受控序列。 它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。  
   
 ##  <a name="valarray"></a>  valarray::valarray  
  构造特定大小的数值数组、带特定值的元素的数值数组、作为另一个数值数组的副本或另一个数值数组的子集的数值数组。  
@@ -1889,7 +1887,6 @@ The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 975844d2a5dcad3afecd07411d2992abb6c8578b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e08749341bd7865c89e397e36aeff3a6ccc0d71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
 为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。  
@@ -91,7 +92,7 @@ class CTypedPtrArray : public BASE_CLASS
   
  `CTypedPtrArray`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxtempl.h  
   
 ##  <a name="add"></a>CTypedPtrArray::Add  
@@ -301,7 +302,7 @@ void SetAtGrow(
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例收集](../../visual-cpp-samples.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CPtrArray 类](../../mfc/reference/cptrarray-class.md)   

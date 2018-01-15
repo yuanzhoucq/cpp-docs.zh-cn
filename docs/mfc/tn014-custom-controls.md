@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8833ed077000c3ba41d1400241fa9b10c2f35e63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn014-custom-controls"></a>TN014：自定义控件
 此说明描述 MFC 对自定义和自我绘制控件的支持。 它还描述了动态子类，并描述了之间的关系[CWnd](../mfc/reference/cwnd-class.md)对象和`HWND`s。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 10/24/2017
   
  请参阅[CTRLTEST](../visual-cpp-samples.md)更大的示例需要使用的几个示例`SubclassWindow`和`SubclassDlgItem`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

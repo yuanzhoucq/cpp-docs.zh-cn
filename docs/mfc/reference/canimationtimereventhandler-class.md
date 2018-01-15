@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 35e59a74be574913b6605bd9bce0934280bbb542
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 类
 实现回调，它在计时事件发生时由动画 API 调用。  
@@ -64,7 +65,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
   
  `CAnimationTimerEventHandler`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
@@ -129,5 +130,5 @@ void SetAnimationController(CAnimationController* pAnimationController);
  `pAnimationController`  
  指向动画控制器，它将接收此事件的指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

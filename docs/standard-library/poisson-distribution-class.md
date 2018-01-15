@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::poisson_distribution::param_type::mean
 - random/std::poisson_distribution::param_type::operator==
 - random/std::poisson_distribution::param_type::operator!=
-- random/std::poisson_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::poisson_distribution [C++]
 - std::poisson_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 1033cc69a3076762cb6ac1b5c50bf6fe7ca2df7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution 类
 生成泊松分布。  
@@ -102,7 +99,7 @@ public:
   
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
-有关泊松分布的详细信息，请参阅 Wolfram MathWorld 文章[泊松分布](http://go.microsoft.com/fwlink/LinkId=401112)。  
+有关泊松分布的详细信息，请参阅 Wolfram MathWorld 文章[泊松分布](http://go.microsoft.com/fwlink/p/?linkid=401112)。  
   
 ## <a name="example"></a>示例  
   
@@ -202,7 +199,7 @@ Distribution for 100 samples:
    17 :  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<random>  
   
  **命名空间：** std  
@@ -223,7 +220,7 @@ explicit binomial_distribution(const param_type& parm);
 用于构造分布的参数结构。  
   
 ### <a name="remarks"></a>备注  
- **前提条件：**`0.0 < mean`  
+ **前置条件：**`0.0 < mean`  
   
 第一个构造函数将构造一个其存储的 `mean` 值保留值 *mean* 的对象。  
   
@@ -251,7 +248,6 @@ struct param_type {
   
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
-
 

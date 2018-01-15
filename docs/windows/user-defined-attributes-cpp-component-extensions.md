@@ -16,11 +16,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7c96ff7be36ac90560d36c3c0989379eea24777
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>用户定义的特性（C++ 组件扩展）
 自定义属性使您能够扩展接口、 类或结构、 方法、 参数或枚举的元数据。  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="remarks"></a>备注  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
@@ -54,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
  有关 Visual c + + 中的签名程序集的信息，请参阅[强名称程序集 （程序集签名） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -215,5 +218,5 @@ ref struct A : Attribute {
 ref struct B {};  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 484f7181bafc4103ef4f3dcfa4e88475a8798ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0fa4ea48a9947492ee4ce53f33450d1944d6d3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="matchresults-class"></a>match_results 类
 包含一系列子匹配项。  
@@ -72,7 +73,7 @@ class match_results {
 ## <a name="remarks"></a>备注  
  模板类描述一个对象，该对象用于控制由正则表达式搜索生成的 `sub_match<BidIt>` 类型元素不可修改的序列。 每个元素指向与该元素对应的捕获组匹配的子序列。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<regex 1>  
   
  **命名空间：** std  
@@ -3224,7 +3225,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<regex>](../standard-library/regex.md)
 
 

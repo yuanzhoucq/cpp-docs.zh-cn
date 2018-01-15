@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b856ea17e4542bee68d55b22069e559592199939
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b504f116dcbff7fa45e741ff9715070ee0c74583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msg-structure1"></a>MSG 结构 1
 `MSG`结构包含从线程的消息队列的消息信息。  
@@ -56,9 +57,9 @@ typedef struct tagMSG {     // msg
  `pt`  
  当发送消息之后，请指定光标位置，在屏幕坐标。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** winuser.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

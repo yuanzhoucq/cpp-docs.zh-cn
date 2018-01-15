@@ -1,56 +1,57 @@
 ---
-title: "对象句柄运算符 (^)（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "^ 对象句柄 [C++]"
+title: "对象句柄运算符 (^) （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e760181f48e4bfd197514b152701e94ac6e94a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 对象句柄运算符 (^)（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-“句柄声明符”（`^`，发音为“hat”）会修改类型[说明符](../cpp/overview-of-declarators.md)，表示当系统确定声明的对象已不再可以访问时，应当自动删除该声明的对象。  
+# <a name="handle-to-object-operator---c-component-extensions"></a>对象句柄运算符 (^)（C++ 组件扩展）
+*句柄声明符*(`^`，发音为"hat")，修改类型[说明符](../cpp/overview-of-declarators.md)表示，声明的对象应自动删除当系统确定该对象是无法再进行访问。  
   
-## 访问声明的对象  
- 使用句柄声明符声明的变量与指向对象的指针具有类似的行为。  但是，该变量指向整个对象，不能指向对象的某个成员，也不支持指针算法。  可使用间接寻扯运算符 \(`*`\) 访问对象，使用箭头成员访问运算符 \(`->`\) 访问对象的成员。  
+## <a name="accessing-the-declared-object"></a>访问声明的对象  
+ 使用句柄声明符声明的变量与指向对象的指针具有类似的行为。 但是，该变量指向整个对象，不能指向对象的某个成员，也不支持指针算法。 可使用间接寻扯运算符 (`*`) 访问对象，使用箭头成员访问运算符 (`->`) 访问对象的成员。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- 编译器使用 COM 引用计数机制来确定对象是否不再使用并可以删除。  因为从 Windows 运行时接口派生的对象实际上是 COM 对象，所以这是可行的。  在创建或复制对象时，引用计数会递增；当对象设置为 null 或超出范围时，引用计数会递减。  如果引用计数归零，将立即自动删除对象。  
+## <a name="windows-runtime"></a>Windows 运行时  
+ 编译器使用 COM*引用计数*机制来确定是否对象不再使用，而且可以被删除。 因为从 Windows 运行时接口派生的对象实际上是 COM 对象，所以这是可行的。 在创建或复制对象时，引用计数会递增；当对象设置为 null 或超出范围时，引用计数会递减。 如果引用计数归零，将立即自动删除对象。  
   
- 句柄声明符的优点在于，在 COM 中，您必须以显式方式管理对象的引用计数，而这个过程单调乏味又容易出错。  也就是说，要递增或递减引用计数，必须调用对象的 AddRef\(\) 和 Release\(\) 方法。  但是，如果使用对象声明符声明一个对象，则 Visual C\+\+ 编译器会生成自动调整引用计数的代码。  
+ 句柄声明符的优点在于，在 COM 中，您必须以显式方式管理对象的引用计数，而这个过程单调乏味又容易出错。 也就是说，要递增或递减引用计数，必须调用对象的 AddRef() 和 Release() 方法。 但是，如果使用对象声明符声明一个对象，则 Visual C++ 编译器会生成自动调整引用计数的代码。  
   
- 有关如何实例化对象的详细信息，请参阅 [ref new](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
+ 有关如何实例化对象的信息，请参阅[ref 新](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
-## 要求  
- 编译器选项：**\/ZW**  
+## <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- 系统使用 CLR 垃圾回收器机制来确定对象是否已不再使用且可以删除。  公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。  当不再使用某个对象时，会释放它在堆上占用的内存。  垃圾回收器会定期压缩该堆，已更好地利用释放的内存。  压缩堆可能会移动堆上的对象，这会使托管引用所引用的位置不再有效。  但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。  
+## <a name="common-language-runtime"></a>公共语言运行时 
+ 系统使用 CLR*垃圾回收器*机制来确定是否对象不再使用，而且可以被删除。 公共语言运行时会维护一个用来分配对象的堆，并在程序中使用托管引用（变量）来指示对象在堆上的位置。 当不再使用某个对象时，会释放它在堆上占用的内存。 垃圾回收器会定期压缩该堆，已更好地利用释放的内存。 压缩堆可能会移动堆上的对象，这会使托管引用所引用的位置不再有效。 但是，垃圾回收器知道所有托管引用的位置，并会自动更新位置来指示对象在堆上的当前位置。  
   
- 因为本机 C\+\+ 指针 \(`*`\) 和引用 \(`&`\) 都是托管引用，所以垃圾回收器不能更新它们指向的地址。  若要解决此问题，请使用句柄声明符指定一个变量，垃圾回收器能够知道这个变量的状态并会自动进行更新。  
+ 因为本机 C++ 指针 (`*`) 和引用 (`&`) 都是托管引用，所以垃圾回收器不能更新它们指向的地址。 若要解决此问题，请使用句柄声明符指定一个变量，垃圾回收器能够知道这个变量的状态并会自动进行更新。  
   
- 在 Visual C\+\+ 2002 和 Visual C\+\+ 2003 中，使用 `__gc *` 来声明托管堆上的对象。在新的语法中，`^` 取代了 `__gc *`。  
+ 在 Visual C++ 2002 和 Visual C++ 2003 中，使用 `__gc *` 来声明托管堆上的对象。  在新的语法中，`^` 取代了 `__gc *`。  
   
- 有关详细信息，请参阅[如何：使用本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。  
+ 有关详细信息，请参阅[如何： 在本机类型中声明处理](../dotnet/how-to-declare-handles-in-native-types.md)。  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 此示例演示如何在托管堆上创建引用类型的实例。此示例还演示，您可以使用一个句柄初始化另一个句柄，使两个引用都指向垃圾回收托管堆上的同一对象。  请注意，为一个句柄赋值 [nullptr](../windows/nullptr-cpp-component-extensions.md) 不会将该对象标记为进行垃圾回收。  
+ 此示例演示如何在托管堆上创建引用类型的实例。  此示例还演示，您可以使用一个句柄初始化另一个句柄，使两个引用都指向垃圾回收托管堆上的同一对象。 请注意，分配[nullptr](../windows/nullptr-cpp-component-extensions.md)到一个句柄不将标记为垃圾回收的对象。  
   
 ```  
 // mcppv2_handle.cpp  
@@ -79,10 +80,14 @@ int main() {
   
  **输出**  
   
- **1**   
-**2** **示例**  
+```Output  
+1  
+2  
+```  
   
- 以下示例演示如何声明一个句柄，指向托管堆上的一个对象，而对象的类型是装箱值类型。  示例还演示如何从装箱对象获取值类型。  
+ **示例**  
+  
+ 以下示例演示如何声明一个句柄，指向托管堆上的一个对象，而对象的类型是装箱值类型。 示例还演示如何从装箱对象获取值类型。  
   
 ```  
 // mcppv2_handle_2.cpp  
@@ -109,10 +114,14 @@ int main() {
   
  **输出**  
   
-  **Not a boxed int**  
- **100** **示例**  
+```Output  
+Not a boxed int  
+100  
+```  
   
- 此示例演示，如何将使用 void\* 指针指向任意对象的常见 C\+\+ 思路替换为使用 Object^，后者可以容纳指向任意引用类的句柄。  它还演示可将所有类型（如数组和委托）都转换为对象句柄。  
+ **示例**  
+  
+ 此示例演示，如何将使用 void* 指针指向任意对象的常见 C++ 思路替换为使用 Object^，后者可以容纳指向任意引用类的句柄。 它还演示可将所有类型（如数组和委托）都转换为对象句柄。  
   
 ```  
 // mcppv2_handle_3.cpp  
@@ -151,9 +160,15 @@ int main() {
   
  **输出**  
   
-  **Type is System.Collections.ArrayList**  
- **Type is System.Int32**  
- **Type is MyDel** **示例**  
+```Output  
+Type is System.Collections.ArrayList  
+  
+Type is System.Int32  
+  
+Type is MyDel  
+```  
+  
+ **示例**  
   
  此示例演示可以对句柄取消引用，并通过取消引用的句柄访问成员。  
   
@@ -197,10 +212,15 @@ int main() {
   
  **输出**  
   
-  **Array value: 7**  
- **Cannot access array element 11, size is 10** **示例**  
+```Output  
+Array value: 7  
   
- 此示例演示不能将本机引用 \(`&`\) 绑定到托管类型的 `int` 成员，因为 `int` 可能存储在垃圾回收堆中，但本机引用不能跟踪托管堆中的对象移动。  解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。  
+Cannot access array element 11, size is 10  
+```  
+  
+ **示例**  
+  
+ 此示例演示不能将本机引用 (`&`) 绑定到托管类型的 `int` 成员，因为 `int` 可能存储在垃圾回收堆中，但本机引用不能跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。  
   
 ```  
 // mcppv2_handle_5.cpp  
@@ -222,9 +242,9 @@ int main() {
 }  
 ```  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-## 请参阅  
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
- [% \(跟踪引用\)](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>请参阅  
+ [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
+ [跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)

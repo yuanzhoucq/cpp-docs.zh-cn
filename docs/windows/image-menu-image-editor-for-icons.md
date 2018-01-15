@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32b10c79d5ec2a8d25c0a942dd96a22b8e6a71e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="image-menu-image-editor-for-icons"></a>“图像”菜单（图标的图像编辑器）
 图像菜单，仅在图像编辑器处于活动状态时，才显示，提供用于编辑图像、 管理调色板，和设置的图像编辑器窗口选项的命令。 此外，使用设备图像提供了个命令使用图标和光标时。  
@@ -75,10 +78,10 @@ ms.lasthandoff: 10/24/2017
  **工具**  
  启动的子菜单，其中包含所有可用的工具[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [图标的图像编辑器](../windows/image-editor-for-icons.md)
 

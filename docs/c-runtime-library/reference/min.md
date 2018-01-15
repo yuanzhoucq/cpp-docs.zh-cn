@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a80f679834971f8508f5f586758dced1e5f6ed9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8504736d10c02a58ba456e8dd501ca09084c9529
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="min"></a>__min
 返回两个值中的较小者。  
@@ -66,9 +67,9 @@ type __min(
 ## <a name="remarks"></a>备注  
  `__min` 宏会将两个值进行比较并返回其中的较小者。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`__min`|\<stdlib.h>|  
   
@@ -95,6 +96,6 @@ The larger of 10 and 21 is 21
 The smaller of 10 and 21 is 10  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [__max](../../c-runtime-library/reference/max.md)

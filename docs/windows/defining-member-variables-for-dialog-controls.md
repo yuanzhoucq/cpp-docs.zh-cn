@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f81b0d124db2a28b8d38c1a79d7569d8e46742b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb966459695eb048943a12e33c8e909f99fdc92b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>定义对话框控件的成员变量
 要定义除按钮外的任何对话框控件的成员变量，可以使用以下方法。  
@@ -49,11 +52,11 @@ ms.lasthandoff: 10/24/2017
   
  你还可以使用**成员变量**选项卡中**MFC 类向导**添加为指定类的新成员变量并查看已定义的那些。  
   
- 要求  
+ 惠?  
   
  MFC  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)   
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [MFC 类向导](../mfc/reference/mfc-class-wizard.md)   

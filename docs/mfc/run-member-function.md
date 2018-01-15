@@ -1,37 +1,32 @@
 ---
-title: "运行成员函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWinApp 类, Run"
-  - "CWinApp::Run 中的消息泵"
-  - "消息, 循环"
-  - "Run 方法, 消息和空闲处理"
-  - "WinMain 方法"
-  - "WinMain 方法, 调用 CWinApp::Run"
+title: "运行成员函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: WinMain method [MFC]
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 90436e3b775cd547a67be49c120d1fb94b32a5dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 运行成员函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-框架应用程序花费类 [CWinApp](../mfc/reference/cwinapp-class.md) 的 [运行](../Topic/CWinApp::Run.md) 成员函数中的大部分时间。  在初始化之后， `WinMain` 调用 **运行** 处理信息循环。  
+# <a name="run-member-function"></a>运行成员函数
+框架应用程序花费其大部分时间中[运行](../mfc/reference/cwinapp-class.md#run)类的成员函数[CWinApp](../mfc/reference/cwinapp-class.md)。 初始化之后，`WinMain`调用**运行**来处理消息循环。  
   
- **运行** 通过消息循环进行循环，检查可用消息的消息队列。  如果消息可用，**运行** 分派行动。  如果没有消息可获得，通常为 true， **运行** 调用 `OnIdle` 处理您或框架可能需要执行的任何闲置时间进程。  如果没消息和闲置进程要执行，该应用程序等待直到某事发生。  在应用程序终止时，**运行** 调用 `ExitInstance`。  在 [OnIdle 成员函数中的数字](../mfc/onidle-member-function.md) 在消息循环中显示操作序列。  
+ **运行**检查是否有可用消息的消息队列的消息循环将循环。 如果可用，消息则**运行**将该消息调度的操作。 如果任何消息不都不可用，这是通常为 true，**运行**调用`OnIdle`执行您或框架可能需要完成任何空闲时间处理。 如果没有要执行的消息和空闲处理，则应用程序将进行等待，直到发生某些情况。 当应用程序终止时，**运行**调用`ExitInstance`。 在图[OnIdle 成员函数](../mfc/onidle-member-function.md)显示在消息循环的操作的顺序。  
   
- 消息调度取决于此消息的类型。  有关更多信息，请参阅 [消息和框架中的命令](../mfc/messages-and-commands-in-the-framework.md).  
+ 消息调度取决于消息类型。 有关详细信息，请参阅[消息和框架中的命令](../mfc/messages-and-commands-in-the-framework.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)

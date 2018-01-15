@@ -19,11 +19,14 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e59aafde058565435e0a777a55ff7b010fea705e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 使用以下形式声明泛型类：  
@@ -277,7 +280,7 @@ Test1
 ### <a name="non-generic-methods-in-generic-classes"></a>泛型类中的非泛型方法  
  具有任何其他类型参数的泛型类中的方法通常称为非泛型虽然它们按封闭泛型类隐式参数化。  
   
- 非泛型方法的签名可以包括在封闭类的一个或多个类型参数，直接或开放构造类型中。 例如:   
+ 非泛型方法的签名可以包括在封闭类的一个或多个类型参数，直接或开放构造类型中。 例如:  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
@@ -340,7 +343,7 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>泛型类中的泛型方法  
- 您可以声明泛型和非泛型类中的泛型方法。 例如:   
+ 您可以声明泛型和非泛型类中的泛型方法。 例如:  
   
 ## <a name="example"></a>示例  
   
@@ -703,5 +706,5 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

@@ -22,16 +22,17 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1220ec0fa20eb285af755a67fae7ae09bd3d4fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0bb076a2cfd8a97c2a3cfc5dc8f33e5390c27a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 本主题介绍文件系统标头中的枚举。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<experimental/filesystem>    
  **命名空间：**std::experimental::filesystem  
 
@@ -109,7 +110,7 @@ enum class file_type {
   
 ### <a name="values"></a>值  
   
-|名称|值|描述|  
+|名称|“值”|描述|  
 |----------|-----------|-----------------|  
 |`not_found`|-1|表示一个不存在的文件。|  
 |`none`|0|表示一个不具有类型特性的文件。 （不支持。）|  
@@ -153,7 +154,7 @@ enum class perms {// names for permissions
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)
 

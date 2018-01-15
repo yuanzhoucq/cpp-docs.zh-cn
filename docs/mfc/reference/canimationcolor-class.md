@@ -41,11 +41,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e03ba23b30c714216356d49086a0d8f81df7db14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd6ec3b6d8ee6a37fbe189ff70a2a633cfda9c8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 类
 实现可对颜色的红色、绿色和蓝色分量进行动画处理的颜色功能。  
@@ -91,7 +92,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|表示动画颜色中的蓝色部分的封装的动画变量。|  
 |[CAnimationColor::m_gValue](#m_gvalue)|表示动画颜色中的绿色部分的封装的动画变量。|  
@@ -107,7 +108,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
  `CAnimationColor`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>CAnimationColor::AddTransition  
@@ -299,5 +300,5 @@ void SetDefaultValue(COLORREF color);
 ### <a name="remarks"></a>备注  
  使用此函数将默认值设置为动画对象。 此方法将默认值分配给动画颜色的颜色组件。 它还重新创建基础 COM 对象，如果已创建。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 为此动画对象，你需要重新启用这些事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be77c7986675fe30b4e2b1ea12287c6a83b4d66f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a1da85da1c7e56f16ec98dd78bb0af58c242a99d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-attributes-reference"></a>C++ 特性参考
 Microsoft 定义一的组特性，用于简化 COM 编程和.NET Framework 公共语言运行时开发。 当您在源文件中包含特性时，编译器会使用提供程序 Dll 插入代码或修改生成的对象文件中的代码。  
@@ -46,4 +49,4 @@ Microsoft 定义一的组特性，用于简化 COM 编程和.NET Framework 公�
  提供一些链接，它们指向描述 C 和 C++ 语言参考、Visual C++ 随附的库、Visual C++ 扩展性对象模型和 Microsoft 宏汇编 (MASM) 的主题。  
   
  [Visual C++ 示例](../visual-cpp-samples.md)  
- 提供一些代码示例链接，演示 Visual C++ 的功能，以及它支持的库和技术。
+ 提供一些链接，它们指向显示 Visual C++ 功能及其支持的库和技术的示例代码。

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: caafb7818c32dad7b21ac7a05d10f77753c1da73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25b1dd9eb2dcdd5a0a41992ed562ddd290014e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-openmp"></a>default (OpenMP)
 并行区域中指定的未区分范围的变量的行为。  
@@ -48,5 +49,5 @@ default(shared | none)
 ## <a name="example"></a>示例  
  请参阅[私有](../../../parallel/openmp/reference/private-openmp.md)有关的使用示例`default`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

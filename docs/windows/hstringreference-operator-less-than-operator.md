@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46d839cd10144877ee4af561ce9e1ab52343de83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ac370a8d863e7c71dcd3564b3a5d0ae7d214322d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Hstringreference:: Operator&lt;运算符
 指示第一个参数是否小于第二个参数。  
@@ -41,10 +44,10 @@ inline bool operator<(
 ## <a name="return-value"></a>返回值  
  `true`如果`lhs`参数是小于`rhs`参数; 否则为`false`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HStringReference 类](../windows/hstringreference-class.md)

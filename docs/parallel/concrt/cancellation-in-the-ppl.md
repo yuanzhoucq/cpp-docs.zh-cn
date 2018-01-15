@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 本文档说明并行模式库 (PPL) 中取消操作的角色、如何取消并行工作以及如何确定取消并行工作的时间。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/24/2017
  有关取消并行任务的更多示例，请参阅[演练： 连接使用任务和 XML HTTP 请求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)，[如何： 使用取消中断 Parallel 循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)，和[如何： 使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。  
   
 ###  <a name="tokens"></a>使用取消标记来取消并行工作  
- `task`、`task_group` 和 `structured_task_group` 类支持通过使用取消标记进行取消。 PPL 定义[concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)和[concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)用于此目的的类。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作可以使用 [is_canceled] ((.../../ parallel/concrt/reference/cancellation-token-class.md#is_canceled) 成员函数以监视取消标记并在可能时停止。  
+ `task`、`task_group` 和 `structured_task_group` 类支持通过使用取消标记进行取消。 PPL 定义[concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)和[concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)用于此目的的类。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 可以使用已经处于活动状态的工作[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成员函数以监视取消标记并在可能时停止。  
   
 
  若要初始化取消，请调用[concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel)方法。 可以采用以下方法响应取消：  

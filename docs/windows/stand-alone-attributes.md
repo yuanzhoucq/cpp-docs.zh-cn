@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17009c1e9c1f7a771b717a96d1aadc4a680fe78f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stand-alone-attributes"></a>独立特性
 独立属性不对 c + + 关键字进行操作，但更类似的代码行。 独立特性语句需要行尾的分号。  
@@ -43,5 +46,5 @@ ms.lasthandoff: 10/24/2017
 |[no_injected_text](../windows/no-injected-text.md)|阻止编译器将注入代码作为特性，请使用结果。|  
 |[pragma](../windows/pragma.md)|发出指定的字符串，而无需引号字符，到生成的.idl 文件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按用法分的特性](../windows/attributes-by-usage.md)

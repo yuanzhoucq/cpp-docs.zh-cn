@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.database
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, database support
+f1_keywords: vc.appwiz.mfc.exe.database
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7b7c9aaa6389f5e86a51348a8b5423260c4c76e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 875df8f8205d132cf6bcafe536c221876a5e3e51
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 应用程序向导的数据库支持
 此页提供允许你指定的数据库级别的选项为你的项目支持 （加上数据源中，如有必要）。  
@@ -71,7 +67,7 @@ ms.lasthandoff: 10/09/2017
  **将所有列都绑定**  
  用于 ODBC 客户端。 指定是否绑定中所选表的所有列。 如果选中此框，则会绑定所有列;如果不选择此框，没有列被绑定，并在记录集类，必须手动绑定它们。  
   
- **类型**  
+ **Type**  
  用于 ODBC 客户端。 指定记录集是动态集或快照下, 表中所述。  
   
 |选项|描述|  
@@ -79,6 +75,5 @@ ms.lasthandoff: 10/09/2017
 |**动态集**|指定的记录集是动态集。 动态集是查询的提供为查询的数据库的数据的索引的视图的结果。 动态集缓存仅的原始数据的整数索引并提供了一个性能因此获得比快照。 直接与每个记录的索引点找到作为查询结果，并指示是否删除一条记录。 查询记录中还有权访问更新信息。|  
 |快照|指定记录集是快照。 快照是查询的结果，并且是时间点的数据库。 由于查询找到的所有记录会都缓存，因此你看不到对原始记录的任何更改。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)
-

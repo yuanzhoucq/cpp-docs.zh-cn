@@ -1,42 +1,42 @@
 ---
-title: "2.7.2.1 private | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.1 私有 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 079b4b84-f2b3-4050-a0ac-289493c36b3d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a08faf39ab2f82d76a936c216ba6707bee5c240
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2.1 private
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`private` 子句声明变量变量列表是私有的。在团队的每个线程。  `private` 子句的语法如下所示:  
+# <a name="2721-private"></a>2.7.2.1 private
+`private`子句声明变量的列表是专用于每个线程在一个组中的变量。 语法`private`子句是，如下所示：  
   
 ```  
 private(variable-list)  
 ```  
   
- 在 `private` 子句指定变量的行为如下所示。  具有自动存储持续时间的新对象用于构造分配。  新对象的大小和对齐取决于变量的类型。  此分配在团队中的每个线程都发生一次，并且，默认构造函数为类对象如果需要，调用;否则原始值是不确定的。  该变量引用的原始对象封送在项对构造，所需的不确定的值不在构造中的动态区域被修改，并具有一个不确定的值从构造退出。  
+ 中指定的变量的行为`private`子句是，如下所示。 具有自动存储持续时间的新对象分配并供构造。 大小和新对象的对齐方式取决于变量的类型。 此分配一次发生在团队中，每个线程，以及针对的类对象，如有必要; 调用默认构造函数否则的初始值是不确定的。  所引用的变量的原始对象具有不确定的值到构造在输入时、 在构造中，动态范围内不能修改并且在从构造退出时不确定的值。  
   
- 在指令中构造的词法区域，该变量引用线程分配的新私有对象。  
+ 在指令构造的词法范围内，该变量引用新线程分配的私有对象。  
   
- 为 `private` 子句的限制如下所示:  
+ 对限制`private`子句如下所示：  
   
--   与 `private` 子句中指定的类类型的变量必须有一个可访问，明确的默认构造函数。  
+-   中指定的类类型的变量`private`子句必须具有可访问的明确的默认构造函数。  
   
--   ，除非它具有 `mutable` 成员，的类类型在 `private` 子句中指定的变量不能有 **const**\- 限定类型。  
+-   中指定的变量`private`子句不能有**const**-限定类型，除非它具有类型具有的类`mutable`成员。  
   
--   在 `private` 子句中指定的变量不能包含不完整类型或引用类型。  
+-   中指定的变量`private`子句必须没有不完整类型或引用类型。  
   
--   显示 **并行** 指令的 `reduction` 子句的变量。 `private` 子句不能指定在绑定到并行构造的工作划分指令。
+-   在出现的变量`reduction`子句**并行**指令不能指定`private`将绑定到并行构造工作共享指令上的子句。

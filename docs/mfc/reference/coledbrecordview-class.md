@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb13fc956ffffe2e58953aa29f02c56344b07a44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 类
 显示控件中数据库记录的视图。  
@@ -80,7 +81,7 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxoledb.h  
   
 ##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
@@ -157,7 +158,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
   
  如果移动记录集中的最后一条记录，记录视图将继续显示最后一条记录。 如果向后移过会将第一条记录，记录视图将继续显示第一条记录。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)
 
 

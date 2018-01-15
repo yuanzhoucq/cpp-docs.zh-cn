@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74b5badf3b65ecbc9842202bdc5bcfc31b5b189f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d43ed06797ed79942a43612ab4c9ae774c4fcf17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxis"></a>max_is
 指定有效的数组索引的最大值。  
@@ -40,14 +43,14 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  **Max_is** c + + 属性具有相同的功能[max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL 特性。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|字段中`struct`或**联合**、 接口参数、 接口方法|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|**size_is**|  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>示例  
  请参阅[first_is](../windows/first-is.md)有关如何指定数组的一部分的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Parameter 特性](../windows/parameter-attributes.md)   

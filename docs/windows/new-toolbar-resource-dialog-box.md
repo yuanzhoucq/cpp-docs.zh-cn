@@ -1,45 +1,47 @@
 ---
-title: "“新建工具栏资源”对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newtoolbarresource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "“新建工具栏资源”对话框"
+title: "新建工具栏资源对话框 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newtoolbarresource
+dev_langs: C++
+helpviewer_keywords: New Toolbar Resource dialog box
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c30301b8887013d72e7ae2ab2d70650de7d7f0e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# “新建工具栏资源”对话框
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-“新建工具栏资源”对话框允许指定添加到工具栏资源中的按钮的宽度和高度。  默认值是 16 × 15 像素。  
+# <a name="new-toolbar-resource-dialog-box"></a>“新建工具栏资源”对话框
+新建工具栏资源对话框中，可指定的宽度和高度要添加到工具栏资源的按钮。 默认值为 16 × 15 像素。  
   
- 用于创建工具栏的位图的最大宽度为 2048。  因此如果将“按钮宽度”设置成 512，则只能有四个按钮。  如果将宽度设置成 513，则只能有三个按钮。  
+ 用于创建工具栏位图具有的最大宽度为 2048年。 因此，如果你设置**按钮宽度**为 512，只能有四个按钮。 如果宽度设置为 513 后，你只能有三个按钮。  
   
  **按钮宽度**  
- 提供一个场所，以输入从位图资源转换为工具栏资源的工具栏按钮的宽度。  图像被裁剪为指定的宽度和高度，并且颜色调整为使用标准工具栏颜色（16 色）。  
+ 在此处你可以输入从位图资源转换为工具栏资源的工具栏按钮的宽度。 映像被裁剪为的宽度和高度指定，并且颜色调整以使用标准工具栏的颜色 （16 种颜色）。  
   
  **按钮高度**  
- 提供一个场所，以输入从位图资源转换为工具栏资源的工具栏按钮的高度。  图像被裁剪为指定的宽度和高度，并且颜色调整为使用标准工具栏颜色（16 色）。  
+ 在此处你可以输入从位图资源转换为工具栏资源的工具栏按钮的高度。 映像被裁剪为的宽度和高度指定，并且颜色调整以使用标准工具栏的颜色 （16 种颜色）。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  MFC 或 ATL  
   
-## 请参阅  
- [Toolbar Button Properties](../mfc/toolbar-button-properties.md)   
- [Converting Bitmaps to Toolbars](../mfc/converting-bitmaps-to-toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>请参阅  
+ [工具栏按钮属性](../windows/toolbar-button-properties.md)   
+ [将位图转换为工具栏](../windows/converting-bitmaps-to-toolbars.md)   
+ [工具栏编辑器](../windows/toolbar-editor.md)
+

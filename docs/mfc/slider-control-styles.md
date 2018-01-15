@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43d8cf7ae406f2d29a381f765686e6537243de3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slider-control-styles"></a>滑块控件样式
 滑块控件 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 可以具有垂直或水平方向。 该控件可以在任意一侧带有刻度线，可以两侧都有刻度线，也可以两侧都没有刻度线。 它们还可用于指定一系列连续值。 这些属性是使用滑块控件样式控制的，您可以在创建滑块控件时指定该样式。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
  默认情况下，控件滑块的长度随选择范围的更改而更改。 如果滑块控件具有**TBS_FIXEDLENGTH**样式，将滑块的长度保持不变，即使选择范围发生变化。 滑块控件有**TBS_NOTHUMB**样式不包含滑块。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

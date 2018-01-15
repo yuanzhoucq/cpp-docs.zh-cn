@@ -37,11 +37,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceca13bd09483c788c430d420b53c88bb97ed34d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 `CMFCEditBrowseCtrl`类支持编辑浏览控件，即有选择性地包含一个浏览按钮可编辑文本框控件。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
@@ -127,7 +128,7 @@ class CMFCEditBrowseCtrl : public CEdit
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxeditbrowsectrl.h  
   
 ##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
@@ -198,7 +199,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  下表列出可能的返回值。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|`custom mode`。 程序员定义的操作执行。|  
 |`BrowseMode_File`|`file mode`。 将显示标准文件浏览器对话框。|  
@@ -313,6 +314,6 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

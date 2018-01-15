@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2765579b26f73f958fcfc816252348ce2d8c8721
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
 实现功能区的不可单击文本标签。  
@@ -67,7 +68,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
@@ -105,7 +106,7 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>返回值  
  `TRUE`如果`data`参数已成功填充了当前的功能区标签可访问性数据; 否则为`FALSE`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)

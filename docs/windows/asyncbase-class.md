@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase 类
 实现 Windows 运行时异步状态机。  
@@ -98,10 +101,10 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
  `AsyncBase`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** async.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

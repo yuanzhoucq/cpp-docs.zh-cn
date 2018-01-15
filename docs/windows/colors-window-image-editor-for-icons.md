@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48fb12f9aa96084f74a8a6f33d5e0f71d0d2b6bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 98c5e341291d089cf4627a298e592f76c2a8aa8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colors-window-image-editor-for-icons"></a>“颜色”窗口（图标的图像编辑器）
 “颜色”窗口有两部分：  
@@ -48,10 +51,10 @@ ms.lasthandoff: 10/24/2017
   
 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [显示或隐藏颜色窗口](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
  [在设备图像中创建透明或反转区域](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
  [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   

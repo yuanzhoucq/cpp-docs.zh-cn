@@ -34,43 +34,17 @@ helpviewer_keywords:
 - std::bit_or [C++]
 - std::bit_xor [C++]
 - std::cref [C++]
-- 
-- std::mem_fn [C++]
-- std::mem_fun [C++]
-- std::mem_fun_ref [C++]
-- std::not1
-- std::not2
-- std::ptr_fun [C++]
-- std::ref [C++]
-- 
-- std::swap [C++]
-- 
-- std::bind [C++]
-- std::bind1st
-- std::bind2nd
-- std::bit_and [C++]
-- std::bit_not [C++]
-- std::bit_or [C++]
-- std::bit_xor [C++]
-- std::cref [C++]
-- std::mem_fn [C++]
-- std::mem_fun [C++]
-- std::mem_fun_ref [C++]
-- std::not1
-- std::not2
-- std::ptr_fun [C++]
-- std::ref [C++]
-- std::swap [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f8ebfab21459083e49576eb07331fe206299d96a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cce36b764002232f89c5cbcf09e7a6a8e8a8107f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函数
 ||||  
@@ -1124,6 +1098,6 @@ empty == false
 val == -3  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<functional>](../standard-library/functional.md)
 

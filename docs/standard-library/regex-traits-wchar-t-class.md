@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9380ada48041a502a4be41fbb9ba8b954fff3ae6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e94865ad7a44abff5d62842f41097462d7da4c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 类
 用于 wchar_t 的 regex_traits 的专用化。  
@@ -34,12 +35,12 @@ class regex_traits<wchar_t>
 ## <a name="remarks"></a>备注  
  此类是类型为 `wchar_t` 的元素的 [regex_traits](../standard-library/regex-traits-class.md) 模板类的显式专用化（以便它可以充分利用操作此类型对象的库函数）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<regex 1>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 类](../standard-library/regex-constants-class.md)  
 [regex_error 类](../standard-library/regex-error-class.md)  

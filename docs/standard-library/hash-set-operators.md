@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
+ms.openlocfilehash: e5205240d4f0bbfbf41423ee73a737e7d2bd0667
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62ad48b857b4136f2f8abbdef6ec3b5acddc00d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 运算符
 ||||  
@@ -116,7 +114,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 ### <a name="remarks"></a>备注  
  hash_set 对象之间的比较基于其元素的成对比较。 如果两个 hash_set 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_set 相等。 否则，它们不相等。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>示例  
   
@@ -181,7 +179,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 ### <a name="remarks"></a>备注  
  hash_multiset 对象之间的比较基于其元素的成对比较。 如果两个 hash_multiset 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_multiset 相等。 否则，它们不相等。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>示例  
   
@@ -246,8 +244,6 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 ### <a name="remarks"></a>备注  
  hash_multiset 对象之间的比较基于其元素的成对比较。 如果两个 hash_multiset 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_multiset 相等。 否则，它们不相等。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 请参阅[stdext 命名空间](../standard-library/stdext-namespace.md)有关详细信息。  
-  
 ### <a name="example"></a>示例  
   
 ```cpp  
@@ -287,7 +283,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<hash_set>](../standard-library/hash-set.md)
-
 

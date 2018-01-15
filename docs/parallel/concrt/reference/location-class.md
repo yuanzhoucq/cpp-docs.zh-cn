@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 26a45809ce41beb36a5f69d2ab219b85e3aafcdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-class"></a>location 类
 硬件上物理位置的抽象。  
@@ -75,13 +58,13 @@ class location;
 |----------|-----------------|  
 |[operator!=](#operator_neq)|确定两个 `location` 对象是否表示不同的位置。|  
 |[operator=](#operator_eq)|将另一 `location` 对象的内容分配给此对象。|  
-|[operator==](#operator_eq_eq)|确定两个`location`对象代表同一位置。|  
+|[operator==](#operator_eq_eq)|确定两个`location`对象表示相同的位置。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `location`  
   
-## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+## <a name="requirements"></a>惠?  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -176,7 +159,7 @@ location& operator= (const location& _Rhs);
   
 ##  <a name="operator_eq_eq"></a>运算符 = = 
 
- 确定两个`location`对象代表同一位置。  
+ 确定两个`location`对象表示相同的位置。  
   
 ```
 bool operator== (const location& _Rhs) const;
@@ -186,8 +169,7 @@ bool operator== (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>返回值  
- `true`如果两个位置是相同的并且`false`否则为。  
+ `true`如果两个位置相同，和`false`否则为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)
-

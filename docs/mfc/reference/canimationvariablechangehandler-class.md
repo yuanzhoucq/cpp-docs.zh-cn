@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,21 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f70e8d59e291362496ec2555cf2838bf2df41d3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 6cab28e78b24333614eaeaa817f5aacbc59a1da5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 类
 实现回调，它在动画变量值更改时由动画 API 调用。  
@@ -65,7 +63,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
   
  `CAnimationVariableChangeHandler`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
@@ -106,6 +104,5 @@ void SetAnimationController(CAnimationController* pAnimationController);
  `pAnimationController`  
  指向动画控制器，它将接收此事件的指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

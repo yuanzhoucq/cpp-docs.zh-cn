@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 757ab7a6d2c8b846a51da359c4b8dc5a72c6e9e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: db6c31df932890799f68e2ae466b0a927f0f999f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-c"></a>version (C++)
 标识的类的多个版本之间的特定版本。  
@@ -45,19 +48,19 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>示例  
  请参阅[可绑定](../windows/bindable.md)更大的示例的示例使用**版本**。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**class**， `struct`|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器特性](../windows/compiler-attributes.md)   
  [类特性](../windows/class-attributes.md)   

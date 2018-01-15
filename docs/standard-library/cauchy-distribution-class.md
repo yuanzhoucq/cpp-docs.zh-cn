@@ -37,11 +37,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4910c1e65ac8e758b1b7790c27b8addf732dc32e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53ecdd04ebb24c6380e61f8bc5536d24df4dc21b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 类
 生成柯西分布。  
@@ -101,9 +102,9 @@ public:
   
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
   
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
-有关柯西分布的详细信息，请参阅 Wolfram MathWorld 文章[柯西分布](http://go.microsoft.com/fwlink/LinkId=400523)。  
+有关柯西分布的详细信息，请参阅 Wolfram MathWorld 文章[柯西分布](http://go.microsoft.com/fwlink/p/?linkid=400523)。  
   
 ## <a name="example"></a>示例  
   
@@ -240,7 +241,7 @@ Distribution for 10 samples:
     10: 35.2531547063  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **标头：**\<random>  
   
 **命名空间：** std  
@@ -264,7 +265,7 @@ explicit cauchy_distribution(const param_type& parm);
 用于构造分布的 `param_type` 结构。  
   
 ### <a name="remarks"></a>备注  
-**前提条件：**`0.0 < b`  
+**前置条件：**`0.0 < b`  
   
 第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。  
   
@@ -300,7 +301,7 @@ struct param_type {
   
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [\<random>](../standard-library/random.md)
 
 

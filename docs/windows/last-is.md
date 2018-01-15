@@ -1,32 +1,33 @@
 ---
-title: "last_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.last_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "last_is attribute"
+title: "last_is |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.last_is
+dev_langs: C++
+helpviewer_keywords: last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7d7a230299a94ba33a142ca44ebc34981f7201ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# last_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lastis"></a>last_is
 指定要传输的最后一个数组元素的索引。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,35 +36,34 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *表达式*  
- 一个或多个 C 语言表达式。  空参数允许槽。  
+ 一个或多个 C 语言表达式。 允许空自变量槽。  
   
-## 备注  
- **last\_is** C\+\+ 特性具有与 [last\_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Last_is** c + + 属性具有相同的功能[last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 特性。  
   
-## 示例  
- 为的示例演示如何参见 [first\_is](../windows/first-is.md) 指定数组的一部分。  
+## <a name="example"></a>示例  
+ 请参阅[first_is](../windows/first-is.md)有关如何指定数组的一部分的示例。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|字段在 `struct` 或 **联合**，接口参数，接口方法|  
+|**适用对象**|字段中`struct`或**联合**、 接口参数、 接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Parameter 特性](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

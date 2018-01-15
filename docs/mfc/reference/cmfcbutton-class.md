@@ -91,11 +91,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f27516bc2cd878bb0886133e7c27099c03ff5026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d496cf079cd56d8260c5fd8072809bc05559ef2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 `CMFCButton`类添加了功能[CButton](../../mfc/reference/cbutton-class.md)如对齐按钮文本、 组合按钮文本和图像、 选择光标以及指定工具提示的类。  
@@ -163,7 +164,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指示是否周围绘制聚焦框按钮。|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指示是否在光标悬停在其上时突出显示 BS_CHECKBOX 样式按钮。|  
@@ -200,7 +201,7 @@ class CMFCButton : public CButton
   
  [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxbutton.h  
   
 ##  <a name="cleanup"></a>CMFCButton::CleanUp  
@@ -429,7 +430,7 @@ AlignStyle m_nAlignStyle;
 ### <a name="remarks"></a>备注  
  使用以下项之一`CMFCButton::AlignStyle`枚举值来指定按钮文本的对齐方式：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |ALIGN_CENTER|（默认值）对齐到中心按钮的按钮文本。|  
 |ALIGN_LEFT|对齐按钮左侧的按钮文本。|  
@@ -447,7 +448,7 @@ FlatStyle  m_nFlatStyle;
 ### <a name="remarks"></a>备注  
  下表列出`CMFCButton::m_nFlatStyle`指定按钮的外观的枚举值。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |BUTTONSTYLE_3D|（默认值）按钮显示为具有高的三维边。 单击该按钮，该按钮显示为按到深层缩进。|  
 |BUTTONSTYLE_FLAT|当鼠标不会暂停到按钮上方中时，按钮似乎是二维并且没有引发的边。 当鼠标停留到按钮上方时，按钮显示为具有低，三维边。 单击该按钮，该按钮显示为按到浅表缩进。|  
@@ -870,7 +871,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ### <a name="remarks"></a>备注  
  默认情况下，此方法计算新的大小，其中包括水平边距为 10 个像素和垂直边距为 5 个像素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCLinkCtrl 类](../../mfc/reference/cmfclinkctrl-class.md)   
