@@ -1,7 +1,7 @@
 ---
 title: "nothrow （c + +） |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -13,45 +13,50 @@ helpviewer_keywords:
 - __declspec keyword [C++], nothrow
 - nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
-caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a6200a8207fdf25b533c7db7e05247797592744e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e0f5f40fbcfcb95952fd956060801e862e9cdaf
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
-**Microsoft 专用**  
-  
- `__declspec` 扩展特性，可在函数声明中使用。  
-  
+
+**Microsoft 专用**
+
+`__declspec` 扩展特性，可在函数声明中使用。
+
 ## <a name="syntax"></a>语法  
   
-```  
-  
-return-type __declspec(nothrow) [call-convention] function-name ([argument-list])  
-```  
-  
-## <a name="remarks"></a>备注  
- 此特性告知编译器，声明的函数及其调用的函数从不引发异常。 利用当前默认的同步异常处理模式，编译器可以消除跟踪此类函数中的某些不可展开的对象的生命周期的机制，从而显著减小代码大小。 在使用以下预处理器指令的情况下，下面的三个函数声明是等效的：  
-  
-```  
-#define WINAPI __declspec(nothrow) __stdcall   
-  
-void WINAPI f1();  
-void __declspec(nothrow) __stdcall f2();  
-void __stdcall f3() throw();  
-```  
-  
- 使用 `void __declspec(nothrow) __stdcall f2();` 有一个好处，即，您可以使用 API 定义（如 `#define` 语句阐释的定义）在一组函数上轻松指定 `nothrow`。 第三个声明 `, void __stdcall f3() throw();` 是由 C++ 标准定义的语法。  
-  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="see-also"></a>请参阅  
- [__declspec](../cpp/declspec.md)   
- [关键字](../cpp/keywords-cpp.md)
+> *return-type* __declspec(nothrow) [*call-convention*] *function-name* ([*argument-list*])
+
+## <a name="remarks"></a>备注
+
+我们建议所有新代码使用[noexcept](noexcept-cpp.md)运算符而非`__declspec(nothrow)`。
+
+此特性告知编译器，声明的函数及其调用的函数从不引发异常。 但是，它不会强制指令。 换而言之，但决不导致[std:: terminate](../standard-library/exception-functions.md#terminate)要调用与不同`noexcept`，或在**std:c + + 17**模式 (Visual Studio 2017 15.5 及更高版本)， `throw()`。
+
+利用当前默认的同步异常处理模式，编译器可以消除跟踪此类函数中的某些不可展开的对象的生命周期的机制，从而显著减小代码大小。 给定以下预处理器指令，下面的三个函数声明是等效的**/std:c + + 14**模式：
+
+```cpp
+#define WINAPI __declspec(nothrow) __stdcall
+
+void WINAPI f1();
+void __declspec(nothrow) __stdcall f2();
+void __stdcall f3() throw();
+```
+
+在**/std:c + + 17**模式下，`throw()`不等效于其他使用`__declspec(nothrow)`因为它会导致`std::terminate`要调用从函数引发的异常。
+
+`void __stdcall f3() throw();`声明将使用由 c + + 标准定义的语法。 C + + 17 中`throw()`关键字已弃用。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>请参阅
+
+[__declspec](../cpp/declspec.md)  
+[noexcept](noexcept-cpp.md)  
+[关键字](../cpp/keywords-cpp.md)  
