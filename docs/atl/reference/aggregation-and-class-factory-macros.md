@@ -28,11 +28,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce4021ee01052f1c830bba5ad1932898fd84b281
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d18afdfe08a97a7a685b373b1f8951799836ab1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 这些宏提供的控制聚合和声明类工厂的方法。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 |[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|删除的内部对象构造期间可防止在外部对象。|  
 |[DECLARE_VIEW_STATUS](#declare_view_status)|指定**VIEWSTATUS**到容器的标志。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
    
 ##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
@@ -169,7 +170,7 @@ class  CComClassFactory2 : public IClassFactory2,
 ### <a name="remarks"></a>备注  
  `CComClassFactory2`实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口，该扩展的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 **IClassFactory2**控件对象通过许可证的创建。 类工厂执行许可的计算机上可以提供运行时许可证密钥。 此许可证密钥允许应用程序在完整的计算机许可证不存在时实例化对象。  
   
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](#declare_classfactory2)对象的类定义中的宏。 例如:   
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](#declare_classfactory2)对象的类定义中的宏。 例如:  
   
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
@@ -208,7 +209,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ### <a name="remarks"></a>备注  
  `CComClassFactoryAutoThread`类似于[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)，但允许在多个单元中创建的对象。 若要利用此支持，派生从你 EXE 模块[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
   
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)对象的类定义中的宏。 例如:   
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)对象的类定义中的宏。 例如:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
@@ -247,7 +248,7 @@ class CComClassFactorySingleton : public CComClassFactory
  `CComClassFactorySingleton`派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造单个对象。 每次调用`CreateInstance`方法只需查询此对象的接口指针。  
   
 ### <a name="remarks"></a>备注  
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)对象的类定义中的宏。 例如:   
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)对象的类定义中的宏。 例如:  
   
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
@@ -339,5 +340,5 @@ DECLARE_VIEW_STATUS( statusFlags )
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏](../../atl/reference/atl-macros.md)

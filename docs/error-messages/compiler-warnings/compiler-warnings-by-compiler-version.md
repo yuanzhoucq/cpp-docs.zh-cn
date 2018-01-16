@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f4a4aedc85cade0d5b7b895e5998733460a7ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>由编译器版本的编译器警告  
   
@@ -362,7 +363,7 @@ C4678|基本类的*声明*is 可访问性低于*名称*
 C4679|*说明*： 无法导入成员
 C4687|*类型*： 密封的抽象类不能实现接口*类型*
 C4688|*名称*： 约束列表包含程序集私有类型*声明*
-C4690|[emitidl (pop)]: 详细栈比入
+C4690|[ emitidl( pop ) ]: 详细栈比入
 C4691|*类型*： 引用的类型应在以上不访问*模块**说明*，而是使用了当前翻译单元中定义的类型
 C4692|*名称*： 非私有成员的签名包含程序集私有本机类型*声明*
 C4693|*类型*： 密封的抽象类不能具有任何实例成员*名称*
@@ -602,7 +603,7 @@ C4996|*问题*:*说明*
 C4997|*类型*： 组件类不实现 COM 接口或伪接口
 C4998|预期失败：*说明*(*数*)
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [/Wv 编译器选项](../../build/reference/compiler-option-warning-level.md)  
 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
 [warning](../../preprocessor/warning.md)  

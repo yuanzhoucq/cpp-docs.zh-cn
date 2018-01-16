@@ -50,11 +50,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bdb3d081e9f7f1c2333d8bc577401b95ab0f858
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff64eeedb324d3a849029b15744cd630603aef67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-class"></a>accelerator 类
 加速器是针对数据并行计算进行了优化的硬件功能。 加速器可能是设备连接到 PCIe 总线 （如 GPU)，也可能是在主要的 CPU 上设置的扩展的指令。  
@@ -133,7 +134,7 @@ class accelerator;
   
  您可以构造`accelerator`对象通过枚举可用的设备，或获取默认设备、 引用设备或 WARP 设备。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amprt.h  
   
  **命名空间：** 并发  
@@ -778,5 +779,5 @@ void wait();
 ### <a name="return-value"></a>返回值  
  返回 `void`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

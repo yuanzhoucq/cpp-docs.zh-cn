@@ -48,11 +48,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4abb41c756baecc5578bbc7db94d65768cae70a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 200d82c9d9b2ca0456ae5de4d6c937be69e212bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏 (ATL)
 这些宏定义消息映射和条目。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/24/2017
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|映射反映**WM_NOTIFY**到处理程序函数，基于通知代码和连续范围的控件标识符的消息。|  
 |[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|映射反映**WM_NOTIFY**到处理程序函数，基于连续范围的控件标识符的消息。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
@@ -128,7 +129,7 @@ ALT_MSG_MAP(msgMapID)
   
  [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
 
 ##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
@@ -203,7 +204,7 @@ BEGIN_MSG_MAP(theClass)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
@@ -228,7 +229,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
@@ -253,7 +254,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
@@ -286,7 +287,7 @@ CHAIN_MSG_MAP(theChainClass)
   
 -   如果使用窗口过程`CMyClass`的第二个备用的消息映射和`OnChar`不处理消息，该消息定向到的指定的备用消息映射中`CMyBaseClass`。 `CMyBaseClass`必须声明与此消息映射`ALT_MSG_MAP(1)`。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
@@ -309,7 +310,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
@@ -342,7 +343,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
   
 -   如果使用窗口过程`CMyClass`的第二个备用的消息映射和`OnChar`不处理消息，该消息定向到指定的备用消息映射的`m_obj`。 类`CMyContainedClass`必须与此消息映射声明`ALT_MSG_MAP(1)`。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
@@ -359,7 +360,7 @@ COMMAND_CODE_HANDLER(code, func)
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="command_handler"></a>COMMAND_HANDLER  
@@ -380,7 +381,7 @@ COMMAND_HANDLER(id, code, func)
  [in]消息处理程序函数的名称。  
   
 ### <a name="remarks"></a>备注  
- `COMMAND_HANDLER`映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)为指定的处理程序函数，基于通知代码和控件标识符的消息。 例如:   
+ `COMMAND_HANDLER`映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)为指定的处理程序函数，基于通知代码和控件标识符的消息。 例如:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -397,7 +398,7 @@ COMMAND_HANDLER(id, code, func)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
@@ -414,7 +415,7 @@ COMMAND_ID_HANDLER(id, func)
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
@@ -440,7 +441,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="remarks"></a>备注  
  此范围根据菜单项、 控件或快捷键发送消息的标识符。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
@@ -463,7 +464,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="remarks"></a>备注  
  此范围根据菜单项、 控件或快捷键发送消息的标识符。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
@@ -485,7 +486,7 @@ DECLARE_EMPTY_MSG_MAP()
 DEFAULT_REFLECTION_HANDLER()
 ```  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="end_msg_map"></a>END_MSG_MAP  
@@ -511,7 +512,7 @@ END_MSG_MAP()
   
  [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
@@ -524,7 +525,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="remarks"></a>备注  
  消息映射的一部分指定此宏。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="message_handler"></a>MESSAGE_HANDLER  
@@ -560,7 +561,7 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#129](../../atl/codesnippet/cpp/message-map-macros-atl_8.h)]  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
@@ -580,7 +581,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
@@ -597,7 +598,7 @@ NOTIFY_CODE_HANDLER(cd, func)
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="notify_handler"></a>NOTIFY_HANDLER  
@@ -636,7 +637,7 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
@@ -653,7 +654,7 @@ NOTIFY_ID_HANDLER( id, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
@@ -679,7 +680,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="remarks"></a>备注  
  此范围取决于发送消息的控件的标识符。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
@@ -702,7 +703,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="remarks"></a>备注  
  此范围取决于发送消息的控件的标识符。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
@@ -715,7 +716,7 @@ REFLECT_NOTIFICATIONS()
 ### <a name="remarks"></a>备注  
  指定为父窗口的消息映射的一部分的此宏。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
@@ -732,7 +733,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
    
 ##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
@@ -752,7 +753,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
@@ -769,7 +770,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
@@ -792,7 +793,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
@@ -812,7 +813,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
@@ -829,7 +830,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
@@ -849,7 +850,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
@@ -866,7 +867,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
 
 ##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
@@ -889,7 +890,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlwin.h   
   
 ##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
@@ -909,5 +910,5 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏](../../atl/reference/atl-macros.md)

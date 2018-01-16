@@ -84,11 +84,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2aa9f57fd95f31181f62892349aff7d7223fd786
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43a497b3eeec48c22d688f4974efcb3d2f511446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 类
 在功能区栏上实现位于一个编辑控件。  
@@ -152,7 +153,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxRibbonEdit.h  
   
 ##  <a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched  
@@ -676,7 +677,7 @@ void SetWidth(
 ### <a name="remarks"></a>备注  
  `CMFCRibbonEdit`控件具有根据其显示模式的两个宽度： 浮点模式和常规模式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)   

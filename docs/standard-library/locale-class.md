@@ -32,11 +32,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53f9a32da84c450825fc61b8316593e1041784c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-class"></a>locale 类
 一种描述区域设置对象的类，此对象用于将特定于文化的信息封装为一组 facet 以共同定义特定本地化环境。  
@@ -120,7 +121,7 @@ messages<wchar_t>
   
  其中某些预定义的 facet 由 iostreams 类使用，用来控制数值与文本序列的相互转换。  
   
- locale 类的对象还将区域设置名称存储为[字符串](../standard-library/string-typedefs.md#string)类的对象。 若使用无效区域设置名称构造区域设置 facet 或区域设置对象，将引发 [runtime_error](../standard-library/runtime-error-class.md) 类的对象。 如果区域设置对象无法确定 C 样式区域设置与此对象表示的区域设置完全对应，则存储的区域设置名称为 `"*"`。 如果能够确定，可以在标准 C 库中 `Loc`通过调用 `setlocale`(LC_ALL `,` `Loc`. [名称](#name)`().c_str()`).  
+ locale 类的对象还将区域设置名称存储为[字符串](../standard-library/string-typedefs.md#string)类的对象。 若使用无效区域设置名称构造区域设置 facet 或区域设置对象，将引发 [runtime_error](../standard-library/runtime-error-class.md) 类的对象。 如果区域设置对象无法确定 C 样式区域设置与此对象表示的区域设置完全对应，则存储的区域设置名称为 `"*"`。 如果能够确定，可以在标准 C 库中 `Loc`通过调用 `setlocale`(LC_ALL `,` `Loc`. [名称](#name)`().c_str()`)。  
   
  在此实现中，还可以调用静态成员函数：  
   
@@ -187,8 +188,8 @@ cout.imbue(loc);
 |[facet](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|  
 |[id](#id_class)|成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<locale>  
   
  **命名空间：** std  
   
@@ -713,7 +714,7 @@ locales loc1 (German_Germany.1252)
  and loc3 (English_United States.1252) are not equal.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<locale>](../standard-library/locale.md)   
  [代码页](../c-runtime-library/code-pages.md)   
  [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
