@@ -110,9 +110,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>如果应用程序使用多个 CRT 版本，将存在什么问题？  
- 如果有多个 DLL 或 EXE，则无论是否正在使用不同版本的 Visual C++，你都可以具有多个 CRT。 例如，将 CRT 静态链接到多个 Dll 可能存在相同的问题。 遇到此静态 CRT 问题的开发人员已被告知使用 **/MD** 进行编译，以便使用 CRT DLL。 如果 Dll 跨 DLL 边界传递 CRT 资源，则可能遇到与 CRT 不匹配的问题，需要使用 Visual C++ 重新编译项目。  
+ 如果有多个 DLL 或 EXE，则可能有多个 CRT，无论它们是否使用不同版本的 Visual C++ 生成。例如，将 CRT 静态链接到多个 Dll 可能引发这个问题。遇到此静态 CRT 问题的开发人员已被告知使用 **/MD** 进行编译，以便使用 CRT DLL。如果 Dll 跨 DLL 边界传递 CRT 资源，则可能遇到与 CRT 不匹配相关的问题，此时需使用 Visual C++ 重新编译项目。  
   
- 如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时需注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
+ 如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时同样需要注意。有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能发生的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)
