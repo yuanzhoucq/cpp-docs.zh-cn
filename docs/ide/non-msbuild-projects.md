@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>在 Visual c + + 中打开文件夹项目
 Visual Studio 2017 引入了"打开文件夹"功能，可用于打开源文件的文件夹立即开头编码支持 IntelliSense，浏览、 重构、 调试，依次类推。 不加载任何.sln 或.vcxproj 文件;如果需要可以指定自定义任务以及生成和启动参数通过简单的.json 文件。 供电打开文件夹时，Visual c + + 现在可以支持的文件，松散集合不仅还几乎是任何生成系统，包括 CMake、 忍者、 QMake （对于 Qt 项目）、 gyp、 SCons、 Gradle、 Buck、 生成和的详细信息。 
@@ -72,19 +72,130 @@ IntelliSense 和浏览行为部分取决于活动的生成配置，它定义 #in
 |`undefines`|宏是未定义 （映射到 MSVC 的 /U） 的列表|
 |`intelliSenseMode`|要使用 IntelliSense 引擎。 你可以为 MSVC gcc 和 Clang 指定体系结构的特定变体：
 - msvc x86 （默认值）
-- msvc x64
-- msvc arm
-- windows clang x86
-- windows clang x64
-- windows clang arm
-- Linux x64
-- Linux x86
+- msvc-x64
+- msvc-arm
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
+- Linux-x64
+- Linux-x86
 - Linux arm
 - gccarm
 
-CppProperties.json 支持环境变量扩展的包括路径和其他属性的值。 语法是`${env.FOODIR}`以展开环境变量`%FOODIR%`。
+#### <a name="environment-variables"></a>环境变量
+CppProperties.json 支持系统环境变量扩展为包括路径和其他属性的值。 语法是`${env.FOODIR}`以展开环境变量`%FOODIR%`。 此外支持以下系统定义变量：
 
-你还必须在此文件中的下列内置宏访问：
+|变量名称|描述|  
+|-----------|-----------------|
+|vsdev|默认 Visual Studio 环境|
+|msvc_x86|编译为 x86 使用 x86 工具|
+|msvc_arm|编译 arm 使用 x86 工具|
+|msvc_arm64|针对 ARM64 编译使用 x86 工具|
+|msvc_x86_x64|针对 AMD64 编译使用 x86 工具|
+|msvc_x64_x64|针对 AMD64 编译使用 64 位工具|
+|msvc_arm_x64|为 ARM 使用 64 位工具编译|
+|msvc_arm64_x64|针对 ARM64 编译使用 64 位工具|
+
+安装 Linux 工作负荷时，以下环境是可用于远程指向 Linux 和 WSL:
+
+|变量名称|描述|  
+|-----------|-----------------|
+|linux_x86|面向 x86 Linux 远程|
+|linux_x64|面向 x64 Linux 远程|
+|linux_arm|远程面向 ARM Linux|
+
+你可以定义自定义环境变量中 CppProperties.json 或者全局或每个配置。 下面的示例演示如何可以声明并使用默认和自定义环境变量。 全局**环境**属性声明一个名为变量**包括**，可以由任何配置：
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+你还可以定义**环境**内配置，以便它仅适用于该配置，并将覆盖具有相同名称的任何全局变量的属性。 在下面的示例中，x64 配置定义本地**包括**将重写全局值的变量：
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+所有自定义和默认环境变量也会出现在 tasks.vs.json 和 launch.vs.json。
+
+#### <a name="macros"></a>宏
+你有权在 CppProperties.json 内的以下内置宏：
 |||
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
@@ -138,7 +249,7 @@ CppProperties.json 支持环境变量扩展的包括路径和其他属性的值�
 
 ![打开文件夹配置任务](media/open-folder-config-tasks.png)
 
-这创建 （或打开） `tasks.vs.json` .vs 文件夹将在根项目文件夹中创建 Visual Studio 中的文件。 你可以在此文件中定义任意的任何任务，然后调用从**解决方案资源管理器**上下文菜单。 下面的示例演示定义单个任务的 tasks.vs.json 文件。 `taskName`定义在上下文菜单中显示的名称。 `appliesTo`定义可以对执行命令的文件。 `command`属性是指 COMSPEC 环境变量，它标识控制台 (在 Windows 上的 cmd.exe) 的路径。 `args`属性指定要调用的命令行。 `${file}`宏检索中的所选的文件**解决方案资源管理器**。 下面的示例将显示当前所选的.cpp 文件的文件名。
+这创建 （或打开） `tasks.vs.json` .vs 文件夹将在根项目文件夹中创建 Visual Studio 中的文件。 你可以在此文件中定义任意的任何任务，然后调用从**解决方案资源管理器**上下文菜单。 下面的示例演示定义单个任务的 tasks.vs.json 文件。 `taskName`定义在上下文菜单中显示的名称。 `appliesTo`定义可以对执行命令的文件。 `command`属性是指 COMSPEC 环境变量，它标识控制台 (在 Windows 上的 cmd.exe) 的路径。 你还可以引用 CppProperties.json 或 CMakeSettings.json 中声明的环境变量。 `args`属性指定要调用的命令行。 `${file}`宏检索中的所选的文件**解决方案资源管理器**。 下面的示例将显示当前所选的.cpp 文件的文件名。
 
 ```json
 {
@@ -155,6 +266,8 @@ CppProperties.json 支持环境变量扩展的包括路径和其他属性的值�
 }
 ```
 在保存后 tasks.vs.json，右键单击该文件夹中的任何.cpp 文件，选择**Echo filename**从上下文菜单中，并显示在输出窗口中的文件名称，请参阅。
+
+
 
 #### <a name="appliesto"></a>appliesTo
 您可以通过指定其名称中的创建的任何文件或文件夹的任务`appliesTo`字段，例如`"appliesTo" : "hello.cpp"`。 以下文件掩码可以用作值：

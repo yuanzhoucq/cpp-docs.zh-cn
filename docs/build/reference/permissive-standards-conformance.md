@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ 宽松-（标准一致性）
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>语法
 
-> **/ 宽松-**
+> **/permissive-**
 
 ## <a name="remarks"></a>备注
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
 **/ 宽松-**选项集[/zc: strictstrings](../../build/reference/zc-conformance.md)和[/zc: rvaluecast](../../build/reference/zc-conformance.md)符合标准行为的选项。 它们默认为不符合要求的行为。 你可以将传递特定**/Zc**选项后**/ 宽松-**重写此行为在命令行上。
 
-在版本的 Visual Studio 2017 版本 15.3，在编译器开始**/ 宽松-**选项集**/Zc:ternary**选项。 编译器还实现两阶段的名称查找的要求的详细信息。 当**/ 宽松-**设置选项，编译器分析函数和类模板定义中，标识了模板中使用的相关和非依赖名称。 在此版本中，执行仅名称依赖项分析。
+在版本的 Visual Studio 2017 版本 15.3，在编译器开始**/ 宽松-**选项集[/Zc:ternary](../../build/reference/zc-ternary.md)选项。 编译器还实现两阶段的名称查找的要求的详细信息。 当**/ 宽松-**设置选项，编译器分析函数和类模板定义中，标识了模板中使用的相关和非依赖名称。 在此版本中，执行仅名称依赖项分析。
 
 不受特定于环境的扩展和标准离开的实现的语言区域**/ 宽松-**。 例如，特定于 Microsoft 的`__declspec`，不会调用约定和结构化的异常处理关键字，和特定于编译器的杂注指令或属性中的编译器将标记**/ 宽松-**模式。
 
