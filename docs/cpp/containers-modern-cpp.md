@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ffad61c015c38d808b35ebffd98f74733d0997de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fc8bbc3a983e6fa50e4ae5e8590e1f1de37f02f
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="containers-modern-c"></a>容器（现代 C++）  
   
@@ -41,7 +41,7 @@ apple_color["Granny Smith"] = "Green";
   
 1.  [数组](../standard-library/array-class-stl.md)键入嵌入十分重要，例如，作为类成员时。  
   
-2.  无序 [unordered_map] 等的关联容器 ((.../standard-library/unordered-map-class.md)。 这些开销具有较低的每个元素，并且常量时间查找，但它们可以作为难以正确有效地使用。  
+2.  如无序的关联容器[unordered_map](../standard-library/unordered-map-class.md)。 这些开销具有较低的每个元素，并且常量时间查找，但它们可以作为难以正确有效地使用。  
   
 3.  排序`vector`。 有关详细信息，请参阅[算法](../cpp/algorithms-modern-cpp.md)。  
   

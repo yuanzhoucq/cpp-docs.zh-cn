@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序快速、高效。 该语言比其他语言更加灵活，因为你可以使用它来创建各种应用，包括有趣刺激的游戏、高性能科学软件、设备驱动程序、嵌入式程序和 Windows 客户端应用。 20 多年来，C++ 已用于解决此类问题和许多其他问题。 你可能不知道，越来越多的 C++ 程序员已经抛弃过时的 C 样式编程，改为使用先进的 C++。  
@@ -50,40 +50,60 @@ C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序快�
  C++ 语言本身也有所发展。 比较以下代码片段。 下面显示了过去 C++ 的代码片段：  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  以下是用现代 C++ 完成同一操作的代码片段：  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- 在现代 C++ 中，不必使用 new/delete 或显式异常处理，因为可以使用智能指针来替代。 当你使用`auto`类型推导和[lambda 函数](../cpp/lambda-expressions-in-cpp.md)，你可以编写代码速度更快，加强代码并更好地了解。 `for_each` 比 `for` 循环更整洁和易于使用，并且不容易发生意外错误。 可以使用样本和最少行数的代码来编写应用。 你可以确保代码异常安全和内存安全，并且没有要处理的分配/解除分配或错误代码。  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ 在现代 C++ 中，不必使用 new/delete 或显式异常处理，因为可以使用智能指针来替代。 当你使用`auto`类型推导和[lambda 函数](../cpp/lambda-expressions-in-cpp.md)，你可以编写代码速度更快，加强代码并更好地了解。 基于范围的和`for`循环是更简洁、 更轻松地使用，且不易造成意外的错误为 C 样式比`for`循环。 可以使用样本和最少行数的代码来编写应用。 你可以确保代码异常安全和内存安全，并且没有要处理的分配/解除分配或错误代码。  
   
  现代 C++ 整合两种多态性：编译时（通过模板）和运行时（通过继承和虚拟化）。 可以混合使用这两种多态性以增强效果。 C + + 标准库模板`shared_ptr`使用内部虚拟方法完成其极为轻松类型擦除。 但是，当模板是更好的选择时，请勿过度使用多态性的虚拟化。 模板可以非常强大。  
   
