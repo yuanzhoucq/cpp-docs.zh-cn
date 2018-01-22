@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4552"></a>编译器警告（等级 1）C4552
-operator： 运算符起任何作用;预期带副作用的运算符  
+operator： 运算符不起任何作用;预期带副作用的运算符  
   
  如果表达式语句作为表达式顶部有一个没有任何副作用的运算符，它可能是一个错误。  
   
