@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 表示可按照索引单独访问的对象的顺序集合的只读视图。 集合中每个对象的类型由模板参数指定。  
@@ -54,17 +54,17 @@ template <typename T, typename E>
   
 |名称|描述|  
 |----------|-----------------|  
-|[Vectorview:: Vectorview](#ctor)|初始化 VectorView 类的新实例。|  
+|[VectorView::VectorView](#ctor)|初始化 VectorView 类的新实例。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Vectorview:: First](#first)|返回指定 VectorView 中的第一个元素的迭代器。|  
-|[Vectorview:: Getat](#getat)|检索由指定的索引表示的当前 VectorView 的元素。|  
-|[Vectorview:: Getmany](#getmany)|从当前 VectorView 检索项序列，从指定索引处开始。|  
-|[Vectorview:: Indexof](#indexof)|在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。|  
-|[Vectorview:: Size](#size)|返回当前 VectorView 对象中的元素数目。|  
+|[VectorView::First](#first)|返回指定 VectorView 中的第一个元素的迭代器。|  
+|[VectorView::GetAt](#getat)|检索由指定的索引表示的当前 VectorView 的元素。|  
+|[VectorView::GetMany](#getmany)|从当前 VectorView 检索项序列，从指定索引处开始。|  
+|[VectorView::IndexOf](#indexof)|在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。|  
+|[VectorView::Size](#size)|返回当前 VectorView 对象中的元素数目。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `VectorView`  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)   
- [C + + 创建 Windows 运行时组件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
