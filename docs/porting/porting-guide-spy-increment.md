@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
@@ -141,7 +141,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- 当前，项目正使用 MBCS（多字节字符集）进行生成，因此 char 是合适的字符数据类型。 但是，为了实现更轻松地将代码更新为 UTF-16 Unicode，我们将其更新为 TCHAR，TCHAR 解析为 char 或 wchar_t，具体取决于项目设置中的“字符集”属性是否设置为 MBCS 或 Unicode。  
+ 当前，项目正使用 MBCS（多字节字符集）进行生成，因此 `char` 是合适的字符数据类型。 但是，为了更轻松地将代码更新为 UTF-16 Unicode，我们将其更新为 `TCHAR`，它解析为 `char` 或 `wchar_t`，具体取决于项目设置中的“字符集”属性是否设置为 MBCS 或 Unicode。  
   
  其他一些代码需要进行更新。  我们将基类 ios 替换为了 ios_base，并将 ostream is 替换为了 basic_ostream\<T>。 我们添加了两个额外的 typedef，并编译此部分。  
   
@@ -514,8 +514,9 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  该问题发生在变量首先声明 `extern` 再声明 `static` 时。 这两个存储类说明符的含义是互斥的，但作为 Microsoft 扩展这是允许的。 如果希望代码可移植到其他编译器，或者希望使用 /Za（ANSI 兼容性）来编译代码，则可以更改声明以获得匹配的存储类说明符。  
   
-##  <a name="porting_to_unicode"></a>步骤 11. 从 MBCS 移植到 Unicode  
- 注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要下载 MBCS 版本的 MFC。  已从默认的 Visual Studio 安装中删除了这个相当大的库，因此必须单独下载。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 完成下载并重启 Visual Studio 后，可以使用 MBCS 版本的 MFC 进行编译和链接，但若要完全删除关于 MBCS 的警告，则还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性预处理器部分的预定义宏列表，或者添加到 stdafx.h 头文件或其他常见头文件的开头。  
+##  <a name="porting_to_unicode"></a>步骤 11. 从 MBCS 移植到 Unicode
+
+ 注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 Visual Studio 2013 和 Visual Studio 2015 中弃用了 MFC 的 MBCS 版本，但是 Visual Studio 2017 将不再弃用它。 如果使用的是 Visual Studio 2013 或 Visual Studio 2015，在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要安装 ANSI/MBCS 版本的 MFC。 Visual Studio 使用 C++ 的桌面开发的默认安装内容并不包括较大的 MFC 库，因此需要在安装程序的可选组件中将其选中。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 完成下载并重启 Visual Studio 后，可以使用 MBCS 版本的 MFC 进行编译和链接，但若要在使用 Visual Studio 2013 和 Visual Studio 2015 时完全删除关于 MBCS 的警告，则还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性预处理器部分的预定义宏列表，或者添加到 stdafx.h 头文件或其他常见头文件的开头。  
   
  现在我们将获得一些链接器错误。  
   
@@ -531,7 +532,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
   
  现在让我们实际将旧的多字节字符集 (MBCS) 代码更新为 Unicode。 由于这是一个 Windows 应用程序，它与 Windows 桌面平台联系紧密，因此我们将该应用程序移植到 Windows 使用的 UTF-16 Unicode。 如果你正编写跨平台代码或正将 Windows 应用程序移植到另一个平台，则可能需要考虑移植到其他操作系统广泛使用的 UTF-8。  
   
- 移植到 UTF-16 Unicode 时，必须决定是否仍然需要编译为 MBCS 的选项。  如果需要具有支持 MBCS 的选项，则应将 TCHAR 宏用作字符类型，它将解析为 char 或 wchar_t，具体取决于是否在编译期间定义了 _MBCS 或 _UNICODE。 切换到 TCHAR 及 TCHAR 版本的各种 API 而不是 wchar_t 及其关联 API 意味着你能够重回 MBCS 版本的代码，只需定义 _MBCS 宏而不是 _UNICODE 即可。 除 TCHAR 外，还存在各种 TCHAR 版本，如广泛使用的 typedef、宏和函数。 例如，LPCTSTR 而非 LPCSTR，等等。 在项目属性对话框中，在“配置属性”的“常规”部分，将“字符集”属性从“使用 MBCS 字符集”更改为“使用 Unicode 字符集”。 此设置会影响编译期间预定义的宏。 同时存在 UNICODE 宏和 _UNICODE 宏。 项目属性对两者的影响一致。 Windows 头文件使用 UNICODE，而 Visual C++ 头文件（如 MFC）则使用 _UNICODE，但定义其中一个后，另一个也将得到定义。  
+ 移植到 UTF-16 Unicode 时，必须决定是否仍然需要编译为 MBCS 的选项。  如果需要具有支持 MBCS 的选项，则应将 TCHAR 宏用作字符类型，它将解析为 `char` 或 `wchar_t`，具体取决于是否在编译期间定义了 _MBCS 或 _UNICODE。 切换到 TCHAR 及 TCHAR 版本的各种 API 而不是 `wchar_t` 及其关联 API，意味着你能回到 MBCS 版本的代码，只需定义 _MBCS 宏而不是 _UNICODE。 除 TCHAR 外，还存在各种 TCHAR 版本，如广泛使用的 typedef、宏和函数。 例如，LPCTSTR 而非 LPCSTR，等等。 在项目属性对话框中，在“配置属性”的“常规”部分，将“字符集”属性从“使用 MBCS 字符集”更改为“使用 Unicode 字符集”。 此设置会影响编译期间预定义的宏。 同时存在 UNICODE 宏和 _UNICODE 宏。 项目属性对两者的影响一致。 Windows 头文件使用 UNICODE，而 Visual C++ 头文件（如 MFC）则使用 _UNICODE，但定义其中一个后，另一个也将得到定义。  
   
  有一个使用 TCHAR 从 MBCS 移植到 UTF-16 Unicode 的好[方法](http://msdn.microsoft.com/library/cc194801.aspx)。 选择此路由。 首先，将“字符集”属性设置为“使用 Unicode 字符集”并重新生成项目。  
   
@@ -555,7 +556,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- _T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置。 若要在 Visual Studio 中将所有字符串替换为 _T，首先需要打开“快速替换”框（键盘：Ctrl+F）或“在文件中替换”（键盘：Ctrl+Shift+H），然后选中“使用正则表达式”复选框。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 _T 宏，此过程将重新添加该宏，并且可能还会发现不需要 _T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。  
+ _T 宏可以使字符串文本编译为 `char` 字符串或 `wchar_t` 字符串，具体取决于 MBCS 或 UNICODE 的设置。 若要在 Visual Studio 中将所有字符串替换为 _T，首先需要打开“快速替换”框（键盘：Ctrl+F）或“在文件中替换”（键盘：Ctrl+Shift+H），然后选中“使用正则表达式”复选框。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 _T 宏，此过程将重新添加该宏，并且可能还会发现不需要 _T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。  
   
  此特定函数 [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。  
   
@@ -573,7 +574,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- 尽管使用了 _tcscpy 函数（复制字符串的 TCHAR strcpy 函数），但已分配的缓冲区是 char 缓冲区。 可轻松更改为 TCHAR。  
+ 尽管使用了 _tcscpy 函数（复制字符串的 TCHAR strcpy 函数），但已分配的缓冲区是 `char` 缓冲区。 可轻松更改为 TCHAR。  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,7 +582,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- 同样，当编译器错误保证时，我们分别将 `LPSTR`（指向字符串的长指针）和 `LPCSTR`（指向常量字符串的长指针）更改为了 `LPTSTR`（指向 TCHAR 字符串的长指针）和 `LPCTSTR`（指向常量 TCHAR 字符串的长指针）。 我们选择不使用全局搜索和替换来进行此类替换，因为必须逐个检查每种情况。 在某些情况下，需要 char 版本，如处理某些使用具有 A 后缀的 Windows 结构的 Windows 消息时。 在 Windows API 中，后缀 A 意味着 ASCII 或 ANSI（也适用于 MBCS)，而后缀 W 意味着宽字符或 UTF-16 Unicode。 此命名模式在 Windows 头文件使用，但当我们不得不添加 Unicode 版本的函数（仅在 MBCS 版本中定义）时，也将在 Spy++ 代码中进行沿用。  
+ 同样，当编译器错误保证时，我们分别将 `LPSTR`（指向字符串的长指针）和 `LPCSTR`（指向常量字符串的长指针）更改为了 `LPTSTR`（指向 TCHAR 字符串的长指针）和 `LPCTSTR`（指向常量 TCHAR 字符串的长指针）。 我们选择不使用全局搜索和替换来进行此类替换，因为必须逐个检查每种情况。 在某些情况下，需要 `char` 版本，如处理某些使用具有 A 后缀的 Windows 结构的 Windows 消息时。 在 Windows API 中，后缀 A 意味着 ASCII 或 ANSI（也适用于 MBCS)，而后缀 W 意味着宽字符或 UTF-16 Unicode。 此命名模式在 Windows 头文件使用，但当我们不得不添加 Unicode 版本的函数（仅在 MBCS 版本中定义）时，也将在 Spy++ 代码中进行沿用。  
   
  某些情况下，我们必须替换类型以使用正确解析的版本（例如 WNDCLASS 而非 WNDCLASSA)。  
   

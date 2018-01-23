@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee1abce5c319d3efdc8154304c4d5ec853e0e517
-ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.workload: cplusplus
+ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-conversion-macros"></a>字符串转换宏
 
@@ -46,7 +47,7 @@ MACRONAME( address_of_structure )
   
 ### <a name="remarks"></a>备注
 
-例如:   
+例如:  
   
 [!code-cpp[NVC_ATL_Utilities#128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
   
@@ -80,6 +81,6 @@ and：
 |`DEVMODET2OLE`|`TEXTMETRICT2OLE`|  
 |`DEVMODEW2A`|`TEXTMETRICW2A`|  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)
