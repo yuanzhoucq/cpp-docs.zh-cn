@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 7d7300247c32c5f18190c6a5a1b6469e4c8173be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d63072e3190929f5191f3d515b73dbd6a6a75040
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 表示一个一维数组，当调用方为要填充的方法传递数组时，可将此一维数组用作输入参数。  
@@ -193,4 +193,4 @@ T& set(
   
 ## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)   
- [C + + 创建 Windows 运行时组件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

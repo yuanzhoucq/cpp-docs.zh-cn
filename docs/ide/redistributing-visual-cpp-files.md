@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>重新分发 Visual C++ 文件
+
+> [!NOTE]
+> 目前你因为您正在寻找的 Visual c + + 运行时文件之一下载？ 转到[Microsoft](http://www.microsoft.com/)网站，然后输入**Visual c + + 可再发行组件**的搜索框中。 下载并安装你的计算机 (例如，x64 如果正在 64 位 Windows) 的体系结构和所需的 Visual c + + 的版本的可再发行组件包。   
+  
 部署应用程序时，还必须部署支持该应用程序所需的文件。 如果其中有任何文件由 Microsoft 提供，请检查是否允许你重新发布这些文件。 若要查看 Visual Studio 许可条款，请参阅有关 Microsoft Visual Studio 对话框中，在 IDE 中，在许可条款链接，或下载[Microsoft 软件许可条款](http://go.microsoft.com/fwlink/p/?LinkId=831114)文件。 若要查看 Microsoft 软件许可条款，某些版本的 Visual Studio 的"可分发代码"部分中引用的"REDIST 列表"，请参阅[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 可分发代码SDK （包括实用程序和 BuildServer 文件）](http://go.microsoft.com/fwlink/p/?LinkId=823098)，或 Visual Studio 2015，请参阅[Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可分发代码](http://go.microsoft.com/fwlink/p/?LinkId=523763)。 有关可再发行文件的详细信息，请参阅[确定要重新分发的 Dll](../ide/determining-which-dlls-to-redistribute.md)和[部署示例](../ide/deployment-examples.md)。  
   
  若要部署可再发行 Visual c + + 文件，你可以使用 Visual c + + 可再发行组件包 (VCRedist\_x86.exe，VCRedist\_x64.exe 或 VCRedist\_arm.exe)，而且包含在 Visual Studio。 可以在 Visual Studio 2017，在程序文件 [(x86)] 中找到这些文件\\Microsoft Visual Studio\\2017年\\_版本_\\VC\\Redist\\MSVC\\_lib 版本_文件夹，其中_版本_是安装，Visual Studio 版本和_lib 版本_的版本若要重新分发的库。 在 Visual Studio 2015 中，找到这些文件可以在你的 Visual Studio 安装目录下位于 Program Files [(x86)] \Microsoft Visual Studio*版本*\VC\redist\\*区域设置*\\. 另一个选项是使用可再发行合并模块 （.msm 文件），这会在 Visual Studio 2017 可以在 Program Files [(x86)] 中找到\\Microsoft Visual Studio\\2017年\\_版本_\\VC\\Redist\\MSVC\\_lib 版本_\\MergeModules\\文件夹。 Visual Studio 2015 中这些可以找到的 Program Files [(x86)] \common 模块\\。 还有可能直接安装可再发行组件中的 Visual c + + Dll*应用程序本地文件夹*，它是包含可执行应用程序文件的文件夹。 出于维护原因，不建议使用此安装位置。  

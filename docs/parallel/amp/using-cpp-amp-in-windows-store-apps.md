@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>在 Windows 应用商店应用程序中使用 C++ AMP
 你可以在使用 c + + AMP (c + + Accelerated Massive Parallelism) 你[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用在 GPU （图形处理单元） 或其他计算加速器上执行计算。 但是，C++ AMP 不提供用于直接处理 Windows 运行时类型的 API，并且 Windows 运行时不提供 C++ AMP 包装器。 当你在代码（包括你自己创建的代码）中使用Windows 运行时类型时，必须将它们转换为与 C++ AMP 兼容的类型。  
@@ -120,8 +120,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [创建使用 c + + 对第一个 Windows 应用商店应用程序](http://go.microsoft.com/fwlink/p/?linkid=249073)   
- [C + + 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?linkid=249076)
-
-
+ [创建使用 c + + 对第一个 Windows 应用商店应用程序](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [C + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

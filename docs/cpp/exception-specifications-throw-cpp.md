@@ -1,7 +1,7 @@
 ---
-title: "异常规范 (throw) （c + +） |Microsoft 文档"
+title: "异常规范 （throw，noexcept） （c + +） |Microsoft 文档"
 ms.custom: 
-ms.date: 01/12/2018
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: c93fdaa75155e6f0117ef1c30d4e093d5ca0e576
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范 （throw，noexcept） （c + +）
 
 异常规范是 c + + 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 你可以指定一个函数可能或可能不通过使用中退出的异常*异常规范*。 编译器可以使用此信息来优化对该函数调用和终止程序，如果异常转义函数。 
 
-在 C + + 17 之前没有两种类型的异常规范。 *Noexcept 规范*C + + 11 中的新增功能。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*，或`throw(optional_type_list)`规范中，已在 C + + 11 中弃用并删除 C + + 17 中除`throw()`，即 noexcept （true） 的别名。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 证明确实有一定用处的一个动态异常规范是无条件`throw()`规范。 例如，以下函数声明中：
+在 C + + 17 之前没有两种类型的异常规范。 *Noexcept 规范*C + + 11 中的新增功能。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*，或`throw(optional_type_list)`规范中，已在 C + + 11 中弃用并删除 C + + 17 中除`throw()`，即的别名`noexcept(true)`。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 证明确实有一定用处的一个动态异常规范是无条件`throw()`规范。 例如，以下函数声明中：
 
 ```cpp
 void MyFunction(int i) throw();

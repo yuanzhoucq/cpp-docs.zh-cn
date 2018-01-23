@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -40,7 +40,7 @@ Windows 应用有好几大类别可以使用 Visual C ++ 进行开发。 这些�
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 
-使用 Windows 10，应用程序能够在所有 Windows 10 设备（如平板电脑和移动电话）上以及在桌面上运行。 在桌面上，它们能够作为桌面窗口运行而不始终运行全屏幕。 这些应用还可以在 Xbox 上以及在将来使用的设备上运行。  这两种类型的应用的编程模型不同于 Win32 桌面应用程序。 这些 Windows 应用可以在 Windows 运行时上运行，Windows 运行时可以为这些应用提供用户界面元素和重要服务以及为受支持的各种硬件设备提供接口。 这些应用编译为本机代码，具有 XAML 用户界面，或使用 DirectX。 你还可以在其他 Windows 应用可以使用的本机代码中编写 Windows 运行时组件，其中包括在 C#、 Visual Basic 或 JavaScript 编写的应用程序。 有关详细信息，请参阅[在 c + + 中创建通用 Windows 平台应用](http://go.microsoft.com/fwlink/p/?linkid=534976)，[创建第一个 UWP 游戏使用 DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656)，和[c + + 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkId=244658)。
+使用 Windows 10，应用程序能够在所有 Windows 10 设备（如平板电脑和移动电话）上以及在桌面上运行。 在桌面上，它们能够作为桌面窗口运行而不始终运行全屏幕。 这些应用还可以在 Xbox 上以及在将来使用的设备上运行。  这两种类型的应用的编程模型不同于 Win32 桌面应用程序。 这些 Windows 应用可以在 Windows 运行时上运行，Windows 运行时可以为这些应用提供用户界面元素和重要服务以及为受支持的各种硬件设备提供接口。 这些应用编译为本机代码，具有 XAML 用户界面，或使用 DirectX。 你还可以在其他 Windows 应用可以使用的本机代码中编写 Windows 运行时组件，其中包括在 C#、 Visual Basic 或 JavaScript 编写的应用程序。 有关详细信息，请参阅[在 c + + 中创建的 UWP"Hello world"应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)，[使用 DirectX 创建简单的 UWP 游戏](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)，和[c + + 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 > [!TIP]
 > 对于 Windows 10 中，你可以使用桌面应用转换器你现有桌面应用程序打包以部署到 Windows 应用商店。 有关详细信息，请参阅 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)（在 Centennial 项目中使用 Visual C++ 运行时）和 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)（使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)）。
