@@ -210,11 +210,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 2b70ab848071bb1196ceb57f986a6e74fe43d2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 ||||  
@@ -5403,7 +5404,7 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和 Stackoverflow 文章[为什么是 std:: random_shuffle 弃用方法在 C + + 14？](http://go.microsoft.com/fwlink/?LinkId=397954)。  
+ Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和 Stackoverflow 文章[为什么是 std:: random_shuffle 弃用方法在 C + + 14？](http://go.microsoft.com/fwlink/p/?linkid=397954)。  
   
 ##  <a name="remove"></a>  remove  
  从给定范围中消除指定值，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。  
@@ -8460,5 +8461,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>另请参阅   
+## <a name="see-also"></a>请参阅   
  [\<algorithm>](../standard-library/algorithm.md)
