@@ -21,7 +21,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="wrl-integration-ccx"></a>WRL 集成 (C++/CX)
 
-可以自由混合使用 WRL 代码[!INCLUDE[cppwrl](includes/cppwrl-md.md)]([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) 代码。 在同一个翻译单元中，你可以使用与 WRL 句柄到对象声明的对象 (`^`) 表示法和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]智能指针 (`ComPtr<T>`) 表示法。 但是，你必须手动处理返回值和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]HRESULT 错误代码和 WRL 异常。
+可以自由混合使用 WRL 代码[!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) 代码。 在同一个翻译单元中，你可以使用与 WRL 句柄到对象声明的对象 (`^`) 表示法和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]智能指针 (`ComPtr<T>`) 表示法。 但是，你必须手动处理返回值和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]HRESULT 错误代码和 WRL 异常。
   
 ## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 开发
 
