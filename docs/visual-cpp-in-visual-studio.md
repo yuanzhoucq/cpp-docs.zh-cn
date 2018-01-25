@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -32,7 +32,7 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
 
 此内容适用于正在编写程序的 C++ 开发人员。
 
-- 如果要查找 C++ 可再发行包和运行时组件以便能够运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/en-us/download/) ，并在搜索框中输入“Visual C++”  。
+- 如果要查找特定 C++ 可再发行组件包和运行时组件以便能够运行程序，请转到 [Microsoft](http://www.microsoft.com/) 网站，并在搜索框中输入“Visual C++ Redistributable”。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本。 
 
 - 如果要查找 C++ 编程概念的简介，请转到众多提供此内容的网站之一，或获取 C++ 的创造者 Bjarne Stroustup 撰写的 [Programming -- Principles and Practice Using C++ (Second Edition)](http://stroustrup.com/Programming/) 《C++ 程序设计原理与实践》（第二版）的副本。 Visual C++ 内容假设你已基本熟悉 C++。
 
