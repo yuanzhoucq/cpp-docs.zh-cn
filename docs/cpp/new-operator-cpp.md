@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new 运算符 (C++)
 对象或对象数组分配内存*类型名称*从自由存储和返回非零、 适当类型化指针的对象。  
@@ -69,10 +69,10 @@ delete *p;
   
  下面的列表描述的语法元素**新**:  
   
- *放置*  
+ *placement*  
  提供一种传递附加自变量，如果重载**新**。  
   
- *类型名称*  
+ *type-name*  
  指定要分配的类型；它可以是内置类型，也可以是用户定义的类型。 如果类型规范非常复杂，则可用括号将其括起来以强制实施绑定顺序。  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  当编译器遇到**新**运算符分配类型的对象`type`，它会发出调用`type` **:: 运算符 new (sizeof (** `type` **))**或如果不是用户定义`operator new`定义， **:: 运算符 new (sizeof (** `type` **))**。 因此，**新**运算符可以为对象分配正确的内存量。  
   
 > [!NOTE]
->  自变量`operator new`属于类型**size_t**。 在 DIRECT.H、MALLOC.H、MEMORY.H、SEARCH.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H 和 TIME.H 中定义此类型。  
+>  自变量`operator new`属于类型**size_t**。 此类型定义中\<.h >， \<l l >， \<y.h >， \<h.h >， \<stddef.h >， \<.h >， \<stdlib.h >， \<string.h >，和\<.h >。  
   
  在语法中的选项允许的规范*放置*(请参阅有关语法[new 运算符](../cpp/new-operator-cpp.md))。 *放置*参数可以仅用于用户定义的实现`operator new`; 它允许将额外信息传递给`operator new`。 一个具有表达式*放置*字段如`T *TObject = new ( 0x0040 ) T;`转换为`T *TObject = T::operator new( sizeof( T ), 0x0040 );`如果类 T 具有成员运算符 new，否则到`T *TObject = ::operator new( sizeof( T ), 0x0040 );`。  
   

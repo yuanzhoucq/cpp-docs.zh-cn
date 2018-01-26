@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 3fcd54b9aacf4eaba4bb5acfb115943225aa0efa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e73c2549e5ce29823376b378b9dc565e2d883ffa
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="abort-function"></a>abort 函数
 
-**中止**还在标准包含文件 STDLIB 中声明的函数。H、 终止 c + + 程序。 之间的差异**退出**和**中止**在于**退出**允许执行 c + + 运行时终止处理 （全局对象将调用析构函数），而**中止**立即终止程序。 有关详细信息，请参阅[中止](../c-runtime-library/reference/abort.md)中*运行时库参考*。
+**中止**函数，同样在标准包含文件中声明\<stdlib.h >，将终止 c + + 程序。 之间的差异**退出**和**中止**在于**退出**允许执行 c + + 运行时终止处理 （全局对象将调用析构函数），而**中止**立即终止程序。 有关详细信息，请参阅[中止](../c-runtime-library/reference/abort.md)中*运行时库参考*。
 
 ## <a name="see-also"></a>请参阅
 

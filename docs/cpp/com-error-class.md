@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error 类
 **Microsoft 专用**  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[运算符 =](../cpp/com-error-operator-equal.md)|将现有 `_com_error` 对象赋给另一个对象。|  
+|[operator =](../cpp/com-error-operator-equal.md)|将现有 `_com_error` 对象赋给另一个对象。|  
   
 ### <a name="extractor-functions"></a>提取程序函数  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[错误消息](../cpp/com-error-errormessage.md)|检索字符串消息的 HRESULT 存储在`_com_error`对象。|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|检索字符串消息的 HRESULT 存储在`_com_error`对象。|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode 到 HRESULT 映射器  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **结束 Microsoft 专用**  
   
 ## <a name="requirements"></a>惠?  
- **标头：** comdef.h  
+ **标头：** \<comdef.h >  
   
  `Lib:`对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   

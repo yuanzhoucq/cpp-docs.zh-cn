@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alignof-operator"></a>__alignof 运算符
 C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式（以字节为单位）。 为实现最大的可移植性，应使用 alignof 运算符，而不是特定于 Microsoft 的 __alignof 运算符。  
@@ -40,10 +40,7 @@ C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      __alignof(   
-   type    
-)  
+  __alignof( type )
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -51,13 +48,13 @@ C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式
   
 |表达式|“值”|  
 |----------------|-----------|  
-|**__alignof (char)**|1|  
-|**__alignof （短）**|2|  
-|**__alignof (int)**|4|  
-|**__alignof ( \__int64)**|8|  
-|**__alignof (float)**|4|  
-|**__alignof （双精度型）**|8|  
-|**__alignof (char\* )**|4|  
+|**__alignof( char )**|1|  
+|**__alignof( short )**|2|  
+|**__alignof( int )**|4|  
+|**__alignof( \__int64 )**|8|  
+|**__alignof( float )**|4|  
+|**__alignof( double )**|8|  
+|**__alignof( char\* )**|4|  
   
  `__alignof` 值与基本类型的 `sizeof` 的值相同。 但是，请考虑该示例：  
   
@@ -92,7 +89,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [__unaligned](../cpp/unaligned.md)  
   
--   [/Zp （结构成员对齐）](../build/reference/zp-struct-member-alignment.md)  
+-   [/Zp（结构成员对齐）](../build/reference/zp-struct-member-alignment.md)  
   
 -   [结构对齐示例](../build/examples-of-structure-alignment.md)(特定于 x64)  
   

@@ -1,5 +1,5 @@
 ---
-title: "_set_com_error_handler |Microsoft 文档"
+title: _set_com_error_handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 2cfb1e0dedf8d5ff90092d7eee2246791a491d2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c04c6b2a1177288544536130cf88c8fd8fb673e6
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft 专用**  
@@ -94,7 +94,7 @@ Exception raised: Unable to establish the connection!
 ```  
   
 ## <a name="requirements"></a>惠?  
- **标头：** comdef.h  
+ **标头：** \<comdef.h >  
   
  **Lib:**如果**wchar_t is Native Type**编译器选项设置为 on，请使用对 comsuppw.lib 或 comsuppwd.lib。 如果**wchar_t is Native Type** ，请使用 comsupp.lib。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   

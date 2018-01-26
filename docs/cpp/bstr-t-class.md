@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t 类
 **Microsoft 专用**  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[分配](../cpp/bstr-t-assign.md)|将 `BSTR` 复制到 `BSTR` 包装的 `_bstr_t` 中。|  
+|[Assign](../cpp/bstr-t-assign.md)|将 `BSTR` 复制到 `BSTR` 包装的 `_bstr_t` 中。|  
 |[附加](../cpp/bstr-t-attach.md)|将 `_bstr_t` 包装器链接到 `BSTR`。|  
 |[copy](../cpp/bstr-t-copy.md)|构造封装的 `BSTR` 的副本。|  
 |[分离](../cpp/bstr-t-detach.md)|返回 `BSTR` 包装的 `_bstr_t` 并从 `BSTR` 中分离 `_bstr_t`。|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[运算符 =](../cpp/bstr-t-operator-equal.md)|将新值赋给现有 `_bstr_t` 对象。|  
-|[运算符 + =](../cpp/bstr-t-operator-add-equal-plus.md)|将字符附加到 `_bstr_t` 对象的结尾。|  
+|[operator =](../cpp/bstr-t-operator-equal.md)|将新值赋给现有 `_bstr_t` 对象。|  
+|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|将字符附加到 `_bstr_t` 对象的结尾。|  
 |[运算符 +](../cpp/bstr-t-operator-add-equal-plus.md)|串联两个字符串。|  
 |[运算符 !](../cpp/bstr-t-operator-logical-not.md)|检查是否封装`BSTR`是**NULL**字符串。|  
 |[运算符 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比较两个 `_bstr_t` 对象。|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 **结束 Microsoft 专用**  
   
 ## <a name="requirements"></a>惠?  
- **标头：** comutil.h  
+ **标头：** \<comutil.h >  
   
  **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   

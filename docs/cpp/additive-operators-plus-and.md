@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>加法运算符：+ 和 -
 ## <a name="syntax"></a>语法  
@@ -55,21 +55,21 @@ expression - expression
   
 |类型|含义|  
 |----------|-------------|  
-|*算术运算*|整型和浮点类型统称为“算术”类型。|  
-|*整型*|所有大小（long、short）和枚举数的 char 和 int 类型为“整数”类型。|  
-|*标量*|标量操作数是算术类型或指针类型的操作数。|  
+|*arithmetic*|整型和浮点类型统称为“算术”类型。|  
+|*integral*|所有大小（long、short）和枚举数的 char 和 int 类型为“整数”类型。|  
+|*scalar*|标量操作数是算术类型或指针类型的操作数。|  
   
  这些运算符的合法组合为：  
   
- *算术* + *算术*  
+ *arithmetic* + *arithmetic*  
   
- *标量* + *整型*  
+ *scalar* + *integral*  
   
- *整型* + *标量*  
+ *integral* + *scalar*  
   
- *算术* - *算术*  
+ *arithmetic* - *arithmetic*  
   
- *标量* - *标量*  
+ *scalar* - *scalar*  
   
  请注意，加法和减法不是等效运算。  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  在 C++ 程序中很少找到 `pIntArray = pIntArray + 1` 形式的代码；若要实现递增，以下形式更可取：`pIntArray++` 或 `pIntArray += 1`。  
   
 ## <a name="pointer-subtraction"></a>指针减法  
- 如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式产生类型 ptrdiff_t（在标准包含文件 STDDEF.H 中定义）的带符号的整数结果。  
+ 如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式产生类型 ptrdiff_t 有符号整数结果 (在标准包含文件中定义\<stddef.h >)。  
   
  其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向的指针 (*n* - *我*) 个数组元素，其中 *n* 是由指向元素原始指针和*我*是第二个操作数的整数值。  
   

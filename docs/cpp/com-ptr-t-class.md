@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 类
 **Microsoft 专用**  
@@ -60,14 +60,14 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[运算符 =](../cpp/com-ptr-t-operator-equal.md)|将新值赋给现有 `_com_ptr_t` 对象。|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|将新值赋给现有 `_com_ptr_t` 对象。|  
 |[运算符 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比较智能指针对象与另一个智能指针、 原始接口指针或**NULL**。|  
 |[提取器](../cpp/com-ptr-t-extractors.md)|提取封装的 COM 接口指针。|  
   
 **结束 Microsoft 专用**  
   
 ## <a name="requirements"></a>惠?  
- **标头：** comip.h 声明  
+ **标头：** \<comip.h 声明 >  
   
  **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
