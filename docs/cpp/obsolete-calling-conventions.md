@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 325a9a98ec536eaabedef3a93fbe38ccc2016cd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad065eb3f35080ff2e5743c0259b20ba72ee6175
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="obsolete-calling-conventions"></a>已过时调用约定
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  **__Pascal**， **__fortran**，和**__syscall**调用约定不再受支持。 通过使用支持的调用约定之一和适当的链接器选项，可以模拟其功能。  
   
- WINDOWS。H 现在支持**WINAPI**宏，将转换为目标的适当调用约定。 使用**WINAPI**以前使用**PASCAL**或**__far \__pascal**。  
+ \<windows.h > 现在支持**WINAPI**宏，将转换为目标的适当调用约定。 使用**WINAPI**以前使用**PASCAL**或**__far \__pascal**。  
   
 **结束 Microsoft 专用**  
   

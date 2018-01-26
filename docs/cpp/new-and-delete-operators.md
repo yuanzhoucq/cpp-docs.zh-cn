@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
@@ -56,7 +56,7 @@ char *pch = new char[BUFFER_SIZE];
 |**:: new 运算符**|Global|  
 |*类名* **:: new 运算符**|类|  
   
- 第一个参数**运算符 new**的类型必须为**size_t** （STDDEF 中定义的类型。H） 和返回类型始终是**void \*** 。  
+ 第一个参数**运算符 new**的类型必须为**size_t** (中定义的类型\<stddef.h >)，并且返回类型始终**void \*** .  
   
  全局**运算符 new**时，将调用函数**新**运算符用于分配内置类型的对象、 类类型的对象，其中不包含用户定义**运算符 new**函数和任何类型的数组。 当**新**运算符用于分配类类型的对象其中**运算符 new**定义，该类的**运算符 new**调用。  
   

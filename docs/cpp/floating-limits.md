@@ -11,7 +11,7 @@ dev_langs: C++
 helpviewer_keywords:
 - ranges, floating-point constants
 - floating-point constants, limits
-- FLOAT.H header file
+- float.h header file
 - limits, floating-point constants
 - floating-point numbers [C++]
 - floating limits
@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 449356b7bce3f17862919e90d7fc7e72b2d57df6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6406d3d2d81fa3025a024606da68d61b5dcefdb7
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="floating-limits"></a>浮点限制
 **Microsoft 专用**  
   
- 下表列出了浮点常数的值的限制。 标准头文件 FLOAT.H 中也定义了这些限制。  
+ 下表列出了浮点常数的值的限制。 标准头文件中也定义了这些限制\<.h >。  
   
 ### <a name="limits-on-floating-point-constants"></a>对浮点常量的限制  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |FLT_MAX DBL_MAX LDBL_MAX|最大可表示的浮点数。|3.402823466e+38F 1.7976931348623158e+308 1.7976931348623158e+308|  
 |FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|最大整数，以便 10 的该数字引发是一个可表示的浮点数。|38 308 308|  
 |FLT_MAX_EXP DBL_MAX_EXP LDBL_MAX_EXP|最大整数，以便 FLT_RADIX 的该数字的幂是一个可表示的浮点数。|128 1024 1024|  
-|FLT_MIN DBL_MIN LDBL_MIN|最小正值。|1.175494351e-38F 2.2250738585072014 e-308 2.2250738585072014 e-308|  
+|FLT_MIN DBL_MIN LDBL_MIN|最小正值。|1.175494351e-38F 2.2250738585072014e-308 2.2250738585072014e-308|  
 |FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|最小负整数，以便 10 的该数字引发是可表示的浮点数。|-37<br /><br /> -307<br /><br /> -307|  
 |FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|最小负整数，以便 FLT_RADIX 的该数字的幂是一个可表示的浮点数。|-125<br /><br /> -1021<br /><br /> -1021|  
 |FLT_NORMALIZE||0|  

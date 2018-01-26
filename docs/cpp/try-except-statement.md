@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > {  
 >    受保护的代码  
 > }  
-> **__except** (*表达式*)  
+> **__except** ( *expression* )  
 > {  
 >    异常处理程序代码  
 > }  
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-将指针类型`PEXCEPTION_RECORD`和`PCONTEXT`包含文件 WINNT 中定义。H、 和`_EXCEPTION_RECORD`和`_CONTEXT`包含文件 EXCPT 中定义。H
+将指针类型`PEXCEPTION_RECORD`和`PCONTEXT`包含文件中定义\<winnt.h >，和`_EXCEPTION_RECORD`和`_CONTEXT`包含文件中定义\<excpt.h >
 
 你可以使用`GetExceptionCode`在异常处理程序。 但是，你可以使用`GetExceptionInformation`只能在异常筛选器表达式。 它指向的信息通常位于堆栈上，并且这些信息在控制权转交给异常处理程序之后不再可用。
 
 内部函数`AbnormalTermination`终止处理程序内可用。 如果将返回 0 的正文**的 try-finally**语句将按顺序终止。 在所有其他情况下，它将返回 1。
 
-EXCPT.H 为这些内部函数定义了一些替代名称：
+excpt.h 定义为这些内部函数一些替代名称：
 
 `GetExceptionCode`等效于`_exception_code`
 

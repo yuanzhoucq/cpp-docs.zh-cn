@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ad4362b8e84d7ffb4bb090a4e513538cdb26ae25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c999b429cb789167eeb754b6f11a8b3d90c28642
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Microsoft 专用**  
@@ -33,9 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-__declspec( uuid("  
-ComObjectGUID  
-") ) declarator  
+__declspec( uuid("ComObjectGUID") ) declarator  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -46,7 +44,7 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- 此特性可应用于重新声明。 这允许系统标头提供接口定义，如**IUnknown**，和其他标头 （如 COMDEF 中的重新声明。H) 提供 GUID。  
+ 此特性可应用于重新声明。 这允许系统标头提供接口定义，如**IUnknown**，和其他标头中的重新声明 (如\<comdef.h >) 提供 GUID。  
   
  关键字[__uuidof](../cpp/uuidof-operator.md)可以应用检索 GUID 附加到的用户定义的类型的常量。  
   

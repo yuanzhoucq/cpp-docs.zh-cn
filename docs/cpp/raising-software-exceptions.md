@@ -25,11 +25,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 系统不会将某些最常见的程序错误源标记为异常。 例如，如果你尝试分配内存块，但没有足够的内存，则运行时或 API 函数不会引发异常，但会返回一个错误代码。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用异常处理筛选器来测试你定义的异常代码。  
   
- WINERROR.H 文件显示异常代码的格式。 若要确保不定义与现有异常代码发生冲突的代码，请将第三个最高有效位设置为 1。 应设置四个最高有效位，如下表所示。  
+ \<Winerror.h > 文件显示异常代码的格式。 若要确保不定义与现有异常代码发生冲突的代码，请将第三个最高有效位设置为 1。 应设置四个最高有效位，如下表所示。  
   
 |Bits|建议的二进制设置|描述|  
 |----------|--------------------------------|-----------------|  

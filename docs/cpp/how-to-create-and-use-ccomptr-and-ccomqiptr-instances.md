@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：创建和使用 CComPtr 和 CComQIPtr 实例
 在经典 Windows 编程中，库通常作为 COM 对象（更准确地说是 COM 服务器）实现。 很多 Windows 操作系统组件都作为 COM 服务器实现，因此，很多参与者以这种形式提供库。 有关 COM 的基础知识的信息，请参阅 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` 及其相关内容是 ATL 的一部分，在 atlcomcli.h 中定义。 `_com_ptr_t` 在 comip.h 声明。 当为类型库生成包装器类时，编译器将创建 `_com_ptr_t` 的专用化。  
+ `CComPtr`和及其相关内容是 ATL 的一部分中定义\<atlcomcli.h >。 `_com_ptr_t`在中声明\<comip.h 声明 >。 当为类型库生成包装器类时，编译器将创建 `_com_ptr_t` 的专用化。  
   
 ## <a name="example"></a>示例  
  ATL 还提供了 `CComQIPtr`，它具有用于查询 COM 对象以检索额外接口的更简单的语法。 但是，建议采用 `CComPtr` ，因为它能够执行 `CComQIPtr` 执行的所有操作，并且在语义上与原始 COM 接口指针更一致。 如果您可以使用 `CComPtr` 来查询接口，新接口指针将被放在输出参数中。 如果调用失败，则会返回 HRESULT，它是典型的 COM 模式。 如果使用 `CComQIPtr`，返回值将为指针本身，并且当调用失败时，内部 HRESULT 返回值将无法访问。 以下两行显示了 `CComPtr` 和 `CComQIPtr` 中的错误处理机制的差异。  

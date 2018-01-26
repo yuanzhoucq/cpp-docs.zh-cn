@@ -12,9 +12,9 @@ helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
 - exception handling [C++], timing
-- SETJMPEX.H
+- setjmpex.h
 - termination handlers [C++], timing
-- SETJMP.H
+- setjmp.h
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e14f89bba02a53af5956ec2a2dcb52bfb1a38c
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>异常处理的计时：摘要
 无论 `__try` 语句块如何终止，都要执行终止处理程序。 原因包括跳出 `__try` 块（用于将控制权转交给块的 `longjmp` 语句外部）以及为了进行异常处理而展开堆栈。  
   
 > [!NOTE]
->  Visual C++ 支持 `setjmp` 和 `longjmp` 语句两种形式。 快速版本会跳过终止处理，但更高效。 若要使用此版本，请包含文件 SETJMP.H。 另一个版本支持上一段中所述的终止处理。 若要使用此版本，请包含文件 SETJMPEX.H。 快速版本的性能提升取决于硬件配置。  
+>  Visual C++ 支持 `setjmp` 和 `longjmp` 语句两种形式。 快速版本会跳过终止处理，但更高效。 若要使用此版本，包括文件\<setjmp.h >。 另一个版本支持上一段中所述的终止处理。 若要使用此版本，包括文件\<setjmpex.h >。 快速版本的性能提升取决于硬件配置。  
   
  在执行任何其他代码前，操作系统将以适当的顺序执行所有终止处理程序，包括异常处理程序的主体。  
   

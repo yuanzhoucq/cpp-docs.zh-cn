@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sizeof-operator"></a>sizeof 运算符
 产生与 `char` 类型的大小有关的操作数大小。  
@@ -36,7 +36,7 @@ sizeof  ( type-name )
 ```  
   
 ## <a name="remarks"></a>备注  
- `sizeof` 运算符的结果为 `size_t` 类型，它是包含文件 STDDEF.H 中定义的整数类型。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。  
+ 结果`sizeof`运算符的类型是`size_t`，在包含文件中定义的整数类型\<stddef.h >。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。  
   
  `sizeof` 的操作数可以是下列项之一：  
   

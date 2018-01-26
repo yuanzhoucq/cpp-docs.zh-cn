@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t 类
 **Microsoft 专用**  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[运算符 =](../cpp/variant-t-operator-equal.md)|将新值赋给现有 `_variant_t` 对象。|  
-|[运算符 = =、 ！ =](../cpp/variant-t-relational-operators.md)|比较两个 `_variant_t` 对象是否相等。|  
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|比较两个 `_variant_t` 对象是否相等。|  
 |[提取器](../cpp/variant-t-extractors.md)|从封装中提取数据**VARIANT**对象。|  
   
 **结束 Microsoft 专用**  
   
 ## <a name="requirements"></a>惠?  
- **标头：** comutil.h  
+ **标头：** \<comutil.h >  
   
  **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
