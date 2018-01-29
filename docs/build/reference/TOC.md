@@ -102,6 +102,7 @@
 ##### [/Qpar（自动并行化程序）](qpar-auto-parallelizer.md)
 ##### [/Qpar-report（自动并行化程序报告等级）](qpar-report-auto-parallelizer-reporting-level.md)
 ##### [/Qsafe_fp_loads](qsafe-fp-loads.md)
+##### [/Qspectre](qspectre.md)
 ##### [/Qvec-report（自动矢量化程序报告等级）](qvec-report-auto-vectorizer-reporting-level.md)
 #### [/RTC（运行时错误检查）](rtc-run-time-error-checks.md)
 #### [/sdl（启用附加安全检查）](sdl-enable-additional-security-checks.md)
