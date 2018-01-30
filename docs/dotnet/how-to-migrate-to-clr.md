@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 本主题讨论了在编译本机代码时出现的问题**/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许 Visual c + + 模块调用和被调用在保留与非托管模块的兼容性的同时从.NET 程序集。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)和[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优点**/clr**。  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>使用新的 Visual c + + 功能  
  在应用程序编译、 链接和运行之后, 可以开始使用编译的任何模块中使用.NET 功能**/clr**。 有关详细信息，请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。  
   
- 如果用于 c + + 托管扩展，你可以转换你的代码以使用新的语法。 语法差异的摘要，请参阅[(NOTINBUILD) c + + 语法升级清单的托管扩展](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)。 有关转换为 c + + 托管扩展的详细信息，请参阅[C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)。  
+ 如果用于 c + + 托管扩展，你可以转换你的代码以使用新的语法。 有关转换为 c + + 托管扩展的详细信息，请参阅[C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)。  
   
  在 Visual c + + 编程的.NET 上的信息请参阅：  
   

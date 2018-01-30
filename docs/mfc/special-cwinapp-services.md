@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服务
 除了运行消息循环以及支持您初始化应用程序然后清理它， [CWinApp](../mfc/reference/cwinapp-class.md)提供了一些其他服务。  
@@ -60,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
  `CWinApp` 中的此自动支持使您无需将 .reg 文件附加到您的应用程序或完成特殊安装工作。  
   
- 如果你想要为你的应用程序初始化 GDI + (通过调用 [GdiplusStartup]-brokenlink-(_gdiplus_FUNC_GdiplusStartup_token_input_output_) 在你[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函数)，你必须禁止显示 GDI + 后台线程。  
+ 如果你想要为你的应用程序初始化 GDI + (通过调用[GdiplusStartup](https://msdn.microsoft.com/library/ms534077)中你[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函数)，您必须禁止 GDI + 后台线程。  
   
- 你可以执行此操作通过设置**SuppressBackgroundThread**的成员 [GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) 结构**TRUE**。 当禁止 GDI + 后台线程， **NotificationHook**和**NotificationUnhook**调用 （请参阅 [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) 应进入和退出应用程序的消息循环之前进行。 因此，调用的良好开端**GdiplusStartup**和挂钩通知函数将中的虚函数重写[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
+ 你可以执行此操作通过设置**SuppressBackgroundThread**的成员[GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067)结构**TRUE**。 当禁止 GDI + 后台线程， **NotificationHook**和**NotificationUnhook**应进行呼叫之前进入和退出应用程序的消息循环。 有关这些调用的详细信息，请参阅[GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)。 因此，调用的良好开端**GdiplusStartup**和挂钩通知函数将中的虚函数重写[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

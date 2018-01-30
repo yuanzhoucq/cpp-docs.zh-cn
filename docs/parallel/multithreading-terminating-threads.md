@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>多线程处理：终止线程
 两种正常情况下会导致线程终止： 控制函数退出或不允许线程能够运行完成。 如果字处理器用于后台打印的线程，如果已成功打印已完成控制函数将正常终止。 如果用户想要取消的打印，但是，后台打印线程必须提前终止。 本主题说明如何实现的每种情形和如何获取线程的退出代码之后它终止。  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   设置`m_bAutoDelete`到的数据成员**FALSE**。 这允许`CWinThread`对象得以后终止线程。 然后就可以访问`m_hThread`数据成员后终止线程。 如果你使用此技术，但是，你将负责销毁`CWinThread`对象，因为框架将不会自动为你删除。 这是首选的方法。  
   
--   单独存储的线程句柄。 创建线程后，将复制其`m_hThread`数据成员 (使用**:: DuplicateHandle**) 给另一个变量，并且通过该变量访问它。 当发生终止，并且你仍可以找出线程终止的原因，将自动删除这种方式对象。 请注意，线程不会终止之前可以复制该句柄。 若要执行此操作的最安全方法是将传递**CREATE_SUSPENDED**到[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)存储句柄，，然后通过调用恢复线程[ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread)。  
+-   单独存储的线程句柄。 创建线程后，将复制其`m_hThread`数据成员 (使用**:: DuplicateHandle**) 给另一个变量，并且通过该变量访问它。 当发生终止，并且你仍可以找出线程终止的原因，将自动删除这种方式对象。 请注意，线程不会终止之前可以复制该句柄。 若要执行此操作的最安全方法是将传递**CREATE_SUSPENDED**到[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)存储句柄，，然后通过调用恢复线程[ResumeThread](../mfc/reference/cwinthread-class.md#resumethread)。  
   
  任何一种方法可以确定为何`CWinThread`终止的对象。  
   

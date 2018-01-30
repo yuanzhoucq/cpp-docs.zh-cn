@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>算法
 算法是 C++ 标准库的基础部分。 算法不与容器本身一起使用，而与迭代器一起使用。 因此，大多数（如果不是全部）C++ 标准库容器都可以使用相同的算法。 本部分讨论 C++ 标准库算法的约定和术语。  
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  如果对于范围 [0, `Last` - `First`) 中的每个 *N* 和范围 (N,`Last` - `First`) 中的每个 *M*，谓词 !(\*(`First` + *M*) < \*(*First* + *N*)) 为 true，则由迭代器在范围 [`First`, `Last`) 内指定的元素序列是按 operator**<** 排序的序列。 （请注意元素以升序进行排序）。谓词函数 **operator<** 或任何其替代函数不得更改其任一操作数。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。 此外，必须对它比较的操作数进行严格弱排序。  
   
- 如果对于范围 [1, `Last` - `First`) 中的每个 *N*，谓词 !(\*`First` < \*(`First` + *N*)) 为 true，则由迭代器在范围 [`First`, `Last`) 内指定的元素序列是按 **operator<** 排序的堆。 （第一个元素最大。）而其内部结构仅对模板函数 [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2)、[pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap) 和 [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap) 是已知的。 就有序序列来说，谓词函数 **operator<**（或其任何替代函数）不得更改任一操作数，且必须对将它比较的操作数进行严格弱排序。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。  
+ 如果对于范围 [1, `Last` - `First`) 中的每个 *N*，谓词 !(\*`First` < \*(`First` + *N*)) 为 true，则由迭代器在范围 [`First`, `Last`) 内指定的元素序列是按 **operator<** 排序的堆。 （第一个元素最大。）仅对模板函数否则已知其内部结构[make_heap](../standard-library/algorithm-functions.md#make_heap)， [pop_heap](../standard-library/algorithm-functions.md#pop_heap)，和[push_heap](../standard-library/algorithm-functions.md#push_heap)。 就有序序列来说，谓词函数 **operator<**（或其任何替代函数）不得更改任一操作数，且必须对将它比较的操作数进行严格弱排序。 每次计算都必须生成相同的 `bool` 结果，且当任一操作数的副本替换了操作数时，也必须生成相同的结果。  
   
  C++ 标准库算法位于 [\<algorithm>](../standard-library/algorithm.md) 和 [\<numeric>](../standard-library/numeric.md) 标头文件中。  
   

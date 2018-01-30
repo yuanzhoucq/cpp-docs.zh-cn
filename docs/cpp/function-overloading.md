@@ -1,33 +1,38 @@
 ---
 title: "函数重载 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>函数重载
-C++ 允许同一范围内具有相同名称的多个函数的规范。 这些函数称为重载函数，“重载”中对其进行了详细介绍。 利用重载函数，程序员可以根据自变量的类型和数量为函数提供不同的语义。  
+C++ 允许同一范围内具有相同名称的多个函数的规范。 这些应用程序称为*重载*函数。 重载的函数，可以提供不同的语义，对于函数，具体取决于类型和数量的参数。 
   
- 例如，**打印**函数采用字符串 (或**char \*** ) 自变量执行的任务比采用类型的自变量**double**. 重载允许通用命名并使程序员无需创建名称，例如 `print_sz` 或 `print_d`。 下表显示了 C++ 使用函数声明的哪些部分来区分同一范围内具有相同名称的函数组。  
+ 例如，**打印**函数，它采用**std:: string**自变量可能会执行比采用类型的自变量的不同任务**double**。 重载使你不必使用名称如`print_string`或`print_double`。 在编译时，该编译器选择要使用的重载基于由调用方传入的参数的类型。  如果调用**print(42.0)**则**void 打印 (双 d)**将调用函数。 如果调用**打印 （"你好 world"）**则**void print(std::string)**重载将调用。
+
+您可以重载成员函数以及非成员函数。 下表显示了 C++ 使用函数声明的哪些部分来区分同一范围内具有相同名称的函数组。  
   
 ### <a name="overloading-considerations"></a>重载注意事项  
   
@@ -39,9 +44,8 @@ C++ 允许同一范围内具有相同名称的多个函数的规范。 这些函
 |省略号存在或缺失|是|  
 |`typedef` 名称的使用|否|  
 |未指定的数组边界|否|  
-|**const**或`volatile`（见下文）|是|  
-  
- 虽然可以根据返回类型区分函数，但是无法在此基础上对它们进行重载。  `Const`或`volatile`用作基础重载如果它们用于类中将应用到的情况下仅用于**这**类，而不是函数的返回类型的指针。  换而言之，重载仅适用于**const**或`volatile`关键字遵循声明中的函数的自变量列表。  
+|**const**或`volatile`|是的当应用于整个函数|
+|[ref-qualifier](#ref-qualifier)|是|  
   
 ## <a name="example"></a>示例  
  以下示例阐述如何使用重载。  
@@ -51,68 +55,71 @@ C++ 允许同一范围内具有相同名称的多个函数的规范。 这些函
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |从类型转换|转换为类型|  
 |-----------------------|---------------------|  
-|*类型名称*|*类型名称***&**|  
-|*类型名称***&**|*类型名称*|  
-|*类型名称* **]**|*类型名称\**|  
-|*类型名称* **(** *自变量列表* **)**|**(** *\*类型名称* **) (** *自变量列表* **)**|  
-|*类型名称*|**const** *类型名称*|  
-|*类型名称*|`volatile`*类型名称*|  
-|*类型名称\**|**const** *类型名称\**|  
-|*类型名称\**|`volatile`*类型名称\**|  
+|*type-name*|*type-name* **&**|  
+|*type-name* **&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile` *type-name*|  
+|*type-name\**|**const** *type-name\**|  
+|*type-name\**|`volatile` *type-name\**|  
   
  在其中尝试转换的序列如下：  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  处理 `->*` 和 `.*`（指向成员的指针）运算符的左操作数的方式与处理与参数匹配相关的 `.` 和 `->`（成员选择）运算符的方式相同。  
+
+## <a name="ref-qualifiers"></a>成员函数的 ref 限定符  
+Ref 限定符使得可重载成员函数根据是否指向的对象通过`this`是为右值或左值。  此功能可以用于避免不必要的复制操作在方案中你选择不是为了提供对数据的指针访问。 例如，假定类**C**初始化其构造函数中的某些数据并在成员函数返回的数据的副本**get_data()**。 如果类型的对象**C**为右值，为将被破坏，则编译器将选择**get_data() （& a) （& a)**超负荷运转，这可将数据移动，而不是将其复制。 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>限制  
+## <a name="restrictions-on-overloading"></a>重载的限制  
  多个限制管理可接受的重载函数集：  
   
 -   重载函数集内的任意两个函数必须具有不同的自变量列表。  
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>声明匹配  
+## <a name="overloading-overriding-and-hiding"></a>重载，重写和隐藏
+  
  同一范围内具有同一名称的任何两个函数声明都可以引用同一函数或重载的两个不同的函数。 如果声明的自变量列表包含等效类型的自变量（如上一节所述），函数声明将引用同一函数。 否则，它们将引用使用重载选择的两个不同的函数。  
   
- 需要严格遵守类范围；因此，在基类中声明的函数与在派生类中声明的函数不在同一范围内。 如果使用与基类中的函数相同的名称声明派生类中的函数，则该派生类函数会隐藏基类函数，而不是导致重载。  
+ 需要严格遵守类范围；因此，在基类中声明的函数与在派生类中声明的函数不在同一范围内。 如果使用与基类派生类函数中的虚函数相同的名称声明派生类中的函数*重写*基类函数。 有关详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。
+
+如果基类函数未声明为虚拟的，则派生的类函数称为到*隐藏*它。 重写或隐藏都是不同于重载。  
   
  需要严格遵守块范围；因此，在文件范围中声明的函数与在本地声明的函数不在同一范围内。 如果在本地声明的函数与在文件范围中声明的函数具有相同名称，则在本地声明的函数将隐藏文件范围内的函数而不是导致重载。 例如:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>请参阅  
  [函数 (C++)](../cpp/functions-cpp.md)

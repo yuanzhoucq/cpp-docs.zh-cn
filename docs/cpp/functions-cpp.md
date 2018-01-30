@@ -1,13 +1,15 @@
 ---
 title: "函数 （c + +） |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>函数 (C++)
 函数是执行某种操作的代码块。 函数可以选择性地定义使调用方可以将实参传递到函数中的输入形参。 函数可以选择性地返回值作为输出。 函数可用于在单个可重用块中封装常用操作（理想情况是使用可清晰地描述函数行为的名称）。 以下函数接受从调用方的两个整数并返回其总和;`a`和`b`是*参数*类型的`int`。  
@@ -50,6 +53,8 @@ int main()
  对于函数长度没有实际限制，不过良好的设计应以执行单个明确定义的任务的函数为目标。 复杂算法应尽可能分解成易于理解的更简单函数。  
   
  在类范围中定义的函数称为成员函数。 在 C++ 中（与其他语言不同），函数还可以在命名空间范围中定义（包括隐式全局命名空间）。 此类函数称为*free 函数*或*非成员函数*; 它们在标准库中广泛使用。  
+
+函数可能*重载*，这意味着不同版本的函数可能会共享相同的名称，如果它们的数量和/或形参类型不同。 有关详细信息，请参阅[函数重载](../cpp/function-overloading.md)。
   
 ## <a name="parts-of-a-function-declaration"></a>函数声明的各个部分  
  最小函数*声明*包含返回类型、 函数名称和参数列表 （可能为空），以及向编译器提供附加说明的可选关键字。 下面的示例是函数声明：
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  （仅限成员函数仅）应用于成员函数的 `static` 表示函数不与类的任何对象实例关联。  
   
-8.  （仅限非静态成员函数）Ref 限定符，向编译器指定的函数时要选择的重载隐式对象参数 (* 这) 是右值引用与左值引用。  
+8.  （仅限非静态成员函数）Ref 限定符，向编译器指定的函数时要选择的重载隐式对象参数 (* 这) 是右值引用与左值引用。 有关详细信息，请参阅[函数重载](function-overloading.md#ref-qualifiers)。 
   
  下图显示了函数定义的各个部分。 灰色区域是函数体。  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. 除了使用返回值本身，你可以"返回"值通过定义任意数量的参数以使用按引用传递，以便可以修改该函数或将其初始化的调用方提供的对象的值。 有关详细信息，请参阅[引用类型函数自变量](reference-type-function-arguments.md)。
+4. 除了使用返回值本身，你可以"返回"值通过定义任意数量的参数以使用按引用传递，以便可以修改该函数或将其初始化的调用方提供的对象的值。 有关详细信息，请参阅[引用类型函数自变量](reference-type-function-arguments.md)。  
   
 ## <a name="function-pointers"></a>函数指针  
  C++ 通过与 C 语言相同的方式支持函数指针。 但是更加类型安全的替代方法通常是使用函数对象。  
