@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB templates
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供了实现许多常用 OLE DB 接口的模板类。 你可以使用 Visual c + + 使用者模板编写 OLE DB 客户端 （使用者） 应用程序和提供程序模板编写服务器 （提供程序） 应用程序。  
@@ -64,9 +68,6 @@ OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供了实现
   
  [活动模板库 (ATL) 参考](../../atl/atl-com-desktop-components.md)  
  提供 ATL 库的参考资料，这是一组基于模板的 C++ 类，用于简化 COM 对象的编程。  
-  
- [Visual C++ 库](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- 提供 Visual C++ 附带的各种库链接，其中包括 ATL、MFC、OLE DB 模板、C 运行时库和 C++ 标准库。  
   
  [调试](/visualstudio/debugger/debugging-in-visual-studio)  
  提供一些链接，所涉及内容为使用 Visual Studio 调试器纠正应用程序或存储过程中的逻辑错误。

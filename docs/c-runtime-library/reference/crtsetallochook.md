@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _CrtSetAllocHook
+apiname:
+- _CrtSetAllocHook
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ac777b2e2a7ca791821be52b68f136998c33d243
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6168081aff668a3b613b4844be3c50b841f5bc07
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 通过挂钩到 C 运行时调试内存分配进程安装客户端定义的分配函数（仅限调试版本）。  
@@ -95,7 +99,7 @@ lineNumber);
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
 ## <a name="example"></a>示例  
- 有关如何使用 `_CrtSetAllocHook` 的示例，请参阅 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
+ 有关如何使用 `_CrtSetAllocHook` 的示例，请参阅 [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。  
   
 ## <a name="see-also"></a>请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
