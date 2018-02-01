@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>兼容性
 通用 C 运行时库 (UCRT) 支持实现 C++ 一致性所需的大多数 C 标准库。 它实现了 C99 (ISO/IEC 9899:1999) 库，\<tgmath.h> 中定义的泛型类型宏和 \<complex.h> 中的严格的类型兼容性除外。 UCRT 还实现了 POSIX.1（ISO/IEC 9945-1:1996，POSIX 系统应用程序编程接口）C 库的大型子集，但不完全符合任何特定的 POSIX 标准。  此外，UCRT 实现了几个特定于 Microsoft 的函数和不属于标准的一部分的宏。  
@@ -34,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  由于误用参数和未检查缓冲区，标准 C 库中的某些函数具有不安全的使用情况历史记录。 这些函数通常是代码中出现的安全问题的来源。 Microsoft 创建了这些函数的一组更加安全的版本，在运行时检测到问题时，可用于验证参数的使用情况并调用无效的参数处理程序。  默认情况下，如果使用的函数具有更加安全的变体，Visual C++ 编译器会发出弃用警告。 当编译 C++ 代码时，你可以将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定义为 1，以消除大多数警告。 这会使用模板重载调用更加安全的变体，同时保持可移植的源代码。 若要取消警告，在使用这些函数的代码中包含任何标头之前，请定义 `_CRT_SECURE_NO_WARNINGS` 。 有关详细信息，请参阅 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。  
   
- 除非文档中对特定函数另有注明，否则 UCRT 与 Windows API 可兼容。  Windows 8 应用商店应用或 Windows 10 上的通用 Windows 应用中不支持某些函数。 这些函数都列在 [/ZW 不支持 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)中，其中枚举了 [Windows 运行时](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9)不支持的函数。  
+ 除非文档中对特定函数另有注明，否则 UCRT 与 Windows API 可兼容。  某些函数在 Windows 8 应用商店应用或 Windows 10 上的通用 Windows 平台 (UWP) 应用中不受支持。 这些函数都在[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)中列出，其中枚举了 Windows 运行时和 [UWP](/uwp) 不支持的函数。  
   
 ## <a name="related-articles"></a>相关文章  
   
