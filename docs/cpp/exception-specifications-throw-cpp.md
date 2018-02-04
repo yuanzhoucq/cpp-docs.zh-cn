@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -18,12 +20,13 @@ ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范 （throw，noexcept） （c + +）
 
@@ -34,24 +37,22 @@ ms.lasthandoff: 01/22/2018
 ```cpp
 void MyFunction(int i) throw();
 ```
-
- 告诉编译器函数不引发任何异常。 但是，在**/std:c + + 14**模式，这可能导致未定义行为，如果该函数会引发异常。 因此我们建议使用[noexcept](../cpp/noexcept-cpp.md)而不是上述的运算符：
+告诉编译器函数不引发任何异常。 但是，在**/std:c + + 14**模式，这可能导致未定义行为，如果该函数会引发异常。 因此我们建议使用[noexcept](../cpp/noexcept-cpp.md)而不是上述的运算符：
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-
-下表总结了 Visual C++ 的异常规范实现：
+下表总结了异常规范的 Microsoft Visual c + + 实现：
 
 |异常规范|含义|
 |-----------------------------|-------------|
 |`noexcept`<br>`noexcept(true)`<br>`throw()`|函数不会引发异常。 在[/std:c + + 14](../build/reference/std-specify-language-standard-version.md)模式 （这是默认值），`noexcept`和`noexcept(true)`是等效的。 从声明的函数引发异常`noexcept`或`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)调用。 从函数引发异常声明为`throw()`中**/std:c + + 14**模式时，结果是未定义的行为。 调用没有特定的函数。 这是从 C + + 14 标准，分歧，这要求编译器将调用[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br> **Visual Studio 2017 15.5 及更高版本**： 在**/std:c + + 17**模式下， `noexcept`， `noexcept(true)`，和`throw()`都是等效的。 在**/std:c + + 17**模式下，`throw()`是的别名`noexcept(true)`。 在**/std:c + + 17**模式下，当从与任意这些规范中，声明的函数引发异常[std:: terminate](../standard-library/exception-functions.md#terminate)调用通过 C + + 17 标准所需的方式。|
 |`noexcept(false)`<br/>`throw(...)`<br/>没有规范|函数可以引发任何类型的异常。|
-|`throw(type)`| (**C + + 14 及更早版本**) 函数可以引发类型的异常`type`。 Microsoft c + + 编译器接受语法，但将其作为解释`noexcept(false)`。 在**/std:c + + 17**模式编译器发出警告 C5040。|
+|`throw(type)`| (**C + + 14 及更早版本**) 函数可以引发类型的异常`type`。 编译器接受语法，但将其作为解释`noexcept(false)`。 在**/std:c + + 17**模式编译器发出警告 C5040。|
 
- 如果应用程序中使用异常处理，则必须有一个函数引发异常之前它们退出外部函数的范围内的句柄标记为调用堆栈中`noexcept`， `noexcept(true)`，或`throw()`。 如果调用之间的任何函数会引发异常和处理异常的一个指定为`noexcept`， `noexcept(true)` (或`throw()`中**/std:c + + 17**模式)，程序将终止时noexcept 函数将此异常的传播。
+如果应用程序中使用异常处理，则必须有一个函数引发异常之前它们退出外部函数的范围内的句柄标记为调用堆栈中`noexcept`， `noexcept(true)`，或`throw()`。 如果调用之间的任何函数会引发异常和处理异常的一个指定为`noexcept`， `noexcept(true)` (或`throw()`中**/std:c + + 17**模式)，程序将终止时noexcept 函数将此异常的传播。
 
- 函数的异常行为取决于以下因素：
+函数的异常行为取决于以下因素：
 
 - 其中[语言标准编译模式](../build/reference/std-specify-language-standard-version.md)设置。
 - 您是否在 C 或 C++ 下编译函数。
@@ -60,9 +61,9 @@ void MyFunction(int i) noexcept;
 
 - 是否显式指定异常规范。
 
- 不允许对 C 函数使用显式异常规范。 C 假定函数不引发异常下的**/EHsc**，并且可能会引发下的结构化的异常**/EHs**， **/EHa**，或**/EHac**。
+不允许对 C 函数使用显式异常规范。 C 假定函数不引发异常下的**/EHsc**，并且可能会引发下的结构化的异常**/EHs**， **/EHa**，或**/EHac**。
 
- 下表总结了 c + + 函数可能会有可能引发下处理选项的各种编译器异常是否：
+下表总结了 c + + 函数可能会有可能引发下处理选项的各种编译器异常是否：
 
 |函数|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
@@ -110,7 +111,7 @@ void __declspec(nothrow) f2(void) {
     }
 }
 
-// only valid if compiled without /EHc 
+// only valid if compiled without /EHc
 // /EHc means assume extern "C" functions don't throw exceptions
 extern "C" void f4(void);
 void f4(void) {
