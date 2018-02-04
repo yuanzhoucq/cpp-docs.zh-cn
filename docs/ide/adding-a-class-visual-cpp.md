@@ -4,33 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.adding
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.adding
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL projects, adding classes
 - classes [C++], creating
 - classes [C++], adding
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d767bd0afa85bc417cd33ce305ffe0061104bf64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ac87368f2bd38c32425799103fa3999dd11b3298
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-class-visual-c"></a>添加类 (Visual C++)
 若要在中添加在 Visual c + + 项目中，类**解决方案资源管理器**，右键单击项目，单击**添加**，然后单击**类**。 这将打开[添加类对话框](../ide/add-class-dialog-box.md)对话框。  
   
- 当您添加一个类时，你必须指定与 MFC 或 atl。 中已存在的类不同的名称 如果指定的名称在库中已存在，Visual c + + 将显示一条消息，该值指示指定的名称保留字。  
+ 当您添加一个类时，你必须指定与 MFC 或 atl。 中已存在的类不同的名称 如果指定的名称在库中已存在时，IDE 将显示一条错误消息。  
   
- 如果你的项目命名约定要求您使用现有的名称，然后只需更改即可在名称中的一个或多个字母的大小写因为 Visual c + + 是区分大小写。 例如，尽管不能将命名类`CDocument`，可将其命名`cdocument`。  
+ 如果你的项目命名约定要求您使用现有的名称，然后只需更改即可在名称中的一个或多个字母的大小写因为 c + + 是区分大小写。 例如，尽管不能将命名类`CDocument`，可将其命名`cdocument`。  
   
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>要添加哪种类型的类？  
  在**添加类**对话框中，当你扩展**Visual c + +**显示的已安装的模板的几个分组的左窗格中的节点。 组包括**CLR**， **ATL**， **MFC**，和**c + +**。 当你选择一个组时，该组中的可用模板的列表显示在中间窗格中。 每个模板包含的文件和所需的类的源代码。  
