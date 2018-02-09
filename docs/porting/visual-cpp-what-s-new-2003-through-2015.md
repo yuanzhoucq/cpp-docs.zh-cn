@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1485,7 +1487,7 @@ ms.lasthandoff: 01/11/2018
 
 #### <a name="compiler"></a>编译器
 
-Microsoft C++ 编译器支持以下 ISO C++11 语言功能：
+Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 
 - 函数模板的默认模板参数。
 - 委托构造函数
@@ -1503,7 +1505,7 @@ Microsoft C++ 编译器支持以下 ISO C++11 语言功能：
 - 指定的初始值设定项。
 - 组合带有代码的声明。
 - 字符串文本转换为可修改的值可通过使用新编译器选项 /Zc:strictStrings 禁用。 在 C++98 中，已弃用从字符串文本转换至 char\*（和将宽字符串文本转换为 wchar_t\*）。 在 C++11 中，已将转换完全移除。 虽然编译器可以严格遵循该标准，但提供了 /Zc:strictStrings 选项，以便控制转换。 默认情况下，该选项是关闭的。 注意，当您在调试模式下使用此选项，STL 将无法编译。
-- rvalue/lvalue 引用转换。 通过 rvalue 引用，C++11 可清晰地区分 lvalue 和 rvalue。 过去，在特定强制转换方案中，Visual C++ 编译器不提供此功能。 添加了新编译器选项 /Zc:rvalueCast，以使编译器与 C++ 语言的工作文件相符（请参阅第 5.4 节，[expr.cast]/1）。 未指定选项时，该默认行为与 Visual Studio 2012 中的相同。
+- rvalue/lvalue 引用转换。 通过 rvalue 引用，C++11 可清晰地区分 lvalue 和 rvalue。 过去，在特定强制转换方案中，编译器不提供此功能。 添加了新编译器选项 /Zc:rvalueCast，以使编译器与 C++ 语言的工作文件相符（请参阅第 5.4 节，[expr.cast]/1）。 未指定选项时，该默认行为与 Visual Studio 2012 中的相同。
   - 请注意：默认函数不支持使用 =default 逐一请求成员移动构造函数和赋值运算符。
 
 ### <a name="c99-libraries"></a>C99 库

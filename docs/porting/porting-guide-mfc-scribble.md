@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>迁移指南：MFC Scribble
 本主题是向你介绍 Visual C++ 项目升级过程的几个主题中的第一个主题，具体升级过程为将在较旧版本的 Visual Studio 中创建的 Visual C++ 项目升级到 Visual Studio 2017。 这些主题通过示例介绍升级过程，从非常简单的项目开始，过渡到稍微更复杂的项目。 在本主题中，我们将完成特定项目 (MFC Scribble) 的升级过程。 它很适合作为对 C++ 项目升级过程的基本介绍。  
@@ -85,7 +88,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
  由于没有任何测试套件，因此我们只是启动应用，通过用户界面手动测试其功能。 观察不到任何问题。  
   
 ### <a name="step-4-improve-the-code"></a>步骤 4。 改进代码  
- 现在你已经迁移到 Visual Studio 2017，建议执行一些更改来利用新的 C++ 功能。 当前版本的 Visual C++ 编译器相比早期版本更符合 C++ 标准，因此如果想做一些代码更改以使代码更加安全，并更易于移植到其他编译器和操作系统上，则应考虑做些改进。  
+ 现在你已经迁移到 Visual Studio 2017，建议执行一些更改来利用新的 C++ 功能。 当前版本的 C++ 编译器相比早期版本更符合 C++ 标准，因此如果想做一些代码更改以使代码更加安全，并更易于移植到其他编译器和操作系统上，则应考虑做些改进。  
   
 ## <a name="next-steps"></a>后续步骤  
  Scribble 是一款小巧而简单 Windows 桌面应用程序，且不难转换。 许多小型简单的应用程序都可轻松转换为新版本。  对于具有很多行代码以及可能不符合现代设计标准的较早的旧版代码、多个项目和库、自定义生成步骤的更复杂的应用程序，或对于复杂脚本的自动生成，则需要较长时间进行升级。 继续[下一个示例](../porting/porting-guide-com-spy.md)，即称为 COM Spy 的 ATL/COM 应用程序。  
