@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CImage
-dev_langs: C++
-helpviewer_keywords: CImage class [MFC], limitations
+f1_keywords:
+- CImage
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImage class [MFC], limitations
 ms.assetid: 4bedaab8-7dd1-4c91-ab35-b75fb56765b0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 27046704975bf8f5e28f12acbfa72e860660fdbd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="cimage-limitations-with-earlier-operating-systems"></a>早期操作系统中的 CImage 限制
 很多 `CImage` 函数仅适用于较新的 Windows 版本：Windows 95/98、Windows NT 4.0 或 Windows 2000。 本文介绍某些方法的版本限制。  
