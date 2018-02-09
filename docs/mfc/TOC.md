@@ -531,7 +531,6 @@
 ##### [图形对象](graphic-objects.md)
 ###### [对象的单步和两步构建](one-stage-and-two-stage-construction-of-objects.md)
 ###### [将图形对象选入设备上下文](selecting-a-graphic-object-into-a-device-context.md)
-###### [早期操作系统中的 CImage 限制](cimage-limitations-with-earlier-operating-systems.md)
 #### [框架窗口](frame-windows.md)
 ##### [框架窗口类](frame-window-classes.md)
 ###### [应用程序向导创建的框架窗口类](frame-window-classes-created-by-the-application-wizard.md)
