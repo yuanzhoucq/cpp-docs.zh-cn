@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支持
-当在 MBCS 支持的版本的 Windows 2000 或 Windows XP 操作系统上运行，Visual c + + 开发系统 （包括集成的源代码编辑器、 调试器和命令行工具） 是 MBCS 支持，除了内存窗口。  
+当在 MBCS 支持的版本的 Windows 上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 是 MBCS 支持，除了内存窗口。  
   
  内存窗口不将数据的字节解释为 MBCS 字符，即使它可以将这些字节解释为 ANSI 或 Unicode 字符。 ANSI 字符的大小始终为 1 个字节，而 Unicode 字符的大小为 2 个字节。 在 MBCS 中，字符的大小可以是 1 个或 2 个字节，其解释取决于正在使用的代码页。 因此，内存窗口很难可靠地显示 MBCS 字符。 内存窗口无法知道哪些字节是字符的开头。 开发人员可以在内存窗口中查看的字节值，并查找表来确定字符表示形式中的值。 这可能是字符串的因为开发人员知道基于的源代码的起始地址。  
   

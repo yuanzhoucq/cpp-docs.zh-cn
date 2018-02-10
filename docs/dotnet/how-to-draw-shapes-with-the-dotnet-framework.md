@@ -4,34 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - GDI+, drawing shapes
 - drawing, shapes
 - shapes
 - shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 62579ca21ba4a4dcf89aea6ff717ce6c884073b3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c5fc48eefb44049e4cff010b16c9567e443ba5db
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>如何：使用 .NET Framework 绘制形状
 下面的代码示例使用<xref:System.Drawing.Graphics>类来修改<xref:System.Windows.Forms.Form.OnPaint%2A>事件处理程序来检索指向<xref:System.Drawing.Graphics>主窗体的对象。 此指针然后用于设置窗体的背景色和绘制直线和弧线使用<xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName>和<xref:System.Drawing.Graphics.DrawArc%2A>方法。  
-  
-> [!NOTE]
->  GDI + 随 Windows XP 附带，可用作 Windows NT 4.0 SP 6、 Windows 2000、 Windows 98 和 Windows me 的可再发行 若要下载最新可再发行组件，请参阅[http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232)。 
   
 ## <a name="example"></a>示例  
   

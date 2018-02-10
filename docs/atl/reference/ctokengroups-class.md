@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,19 +20,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenGroups::GetPTOKEN_GROUPS
 - ATLSECURITY/ATL::CTokenGroups::GetSidsAndAttributes
 - ATLSECURITY/ATL::CTokenGroups::LookupSid
-dev_langs: C++
-helpviewer_keywords: CTokenGroups class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b6f0e8e2f63d5765e0e888c7a98cea77c862e241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a5a958fcc1bd8c26599272774c86cd64fa2c720
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 类
 此类是包装器**TOKEN_GROUPS**结构。  
@@ -52,7 +56,7 @@ class CTokenGroups
 |名称|描述|  
 |----------|-----------------|  
 |[CTokenGroups::CTokenGroups](#ctokengroups)|构造函数。|  
-|[CTokenGroups:: ~ CTokenGroups](#dtor)|析构函数。|  
+|[CTokenGroups::~CTokenGroups](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -75,7 +79,7 @@ class CTokenGroups
 |[CTokenGroups::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文，并分配给每个用户登录到 Windows NT 或 Windows 2000 的系统。  
+ [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是介绍进程或线程的安全上下文，并分配给每个用户登录到 Windows 系统的对象。  
   
  **CTokenGroups**类是包装器[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)包含访问令牌中的组安全标识符 (Sid) 有关的信息的结构。  
   
@@ -84,7 +88,7 @@ class CTokenGroups
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="add"></a>CTokenGroups::Add  
+##  <a name="add"></a>  CTokenGroups::Add  
  将添加`CSid`或现有**TOKEN_GROUPS**结构`CTokenGroups`对象。  
   
 ```
@@ -105,7 +109,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ### <a name="remarks"></a>备注  
  这些方法将添加一个或多个`CSid`对象和其关联的属性到`CTokenGroups`对象。  
   
-##  <a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
+##  <a name="ctokengroups"></a>  CTokenGroups::CTokenGroups  
  构造函数。  
   
 ```
@@ -121,7 +125,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="remarks"></a>备注  
  `CTokenGroups` （可选） 可以使用创建对象**TOKEN_GROUPS**结构或以前定义`CTokenGroups`对象。  
   
-##  <a name="dtor"></a>CTokenGroups:: ~ CTokenGroups  
+##  <a name="dtor"></a>  CTokenGroups::~CTokenGroups  
  析构函数。  
   
 ```
@@ -131,7 +135,7 @@ virtual ~CTokenGroups() throw();
 ### <a name="remarks"></a>备注  
  析构函数释放所有已分配的资源。  
   
-##  <a name="delete"></a>CTokenGroups::Delete  
+##  <a name="delete"></a>  CTokenGroups::Delete  
  删除`CSid`和其关联的属性从`CTokenGroups`对象。  
   
 ```
@@ -145,14 +149,14 @@ bool Delete(const CSid& rSid) throw();
 ### <a name="return-value"></a>返回值  
  返回 true 如果`CSid`被删除，则返回 false 否则。  
   
-##  <a name="deleteall"></a>CTokenGroups::DeleteAll  
+##  <a name="deleteall"></a>  CTokenGroups::DeleteAll  
  删除所有`CSid`对象和从其关联的属性`CTokenGroups`对象。  
   
 ```
 void DeleteAll() throw();
 ```  
   
-##  <a name="getcount"></a>CTokenGroups::GetCount  
+##  <a name="getcount"></a>  CTokenGroups::GetCount  
  返回的数目`CSid`中所含对象`CTokenGroups`。  
   
 ```
@@ -162,7 +166,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>返回值  
  返回的数目[CSid](../../atl/reference/csid-class.md)对象和其关联的属性中包含`CTokenGroups`对象。  
   
-##  <a name="getlength"></a>CTokenGroups::GetLength  
+##  <a name="getlength"></a>  CTokenGroups::GetLength  
  返回的大小**CTokenGroup**对象。  
   
 ```
@@ -172,7 +176,7 @@ UINT GetLength() const throw();
 ### <a name="remarks"></a>备注  
  返回的总大小**CTokenGroup**对象，以字节为单位。  
   
-##  <a name="getptoken_groups"></a>CTokenGroups::GetPTOKEN_GROUPS  
+##  <a name="getptoken_groups"></a>  CTokenGroups::GetPTOKEN_GROUPS  
  检索指向的**TOKEN_GROUPS**结构。  
   
 ```
@@ -182,7 +186,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ### <a name="return-value"></a>返回值  
  检索指向的[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构属于`CTokenGroups`访问令牌的对象。  
   
-##  <a name="getsidsandattributes"></a>CTokenGroups::GetSidsAndAttributes  
+##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes  
  检索`CSid`对象和 （可选） 的属性属于`CTokenGroups`对象。  
   
 ```
@@ -201,7 +205,7 @@ void GetSidsAndAttributes(
 ### <a name="remarks"></a>备注  
  此方法将枚举的所有`CSid`中所含对象`CTokenGroups`对象并将它们和 （可选） 的属性标志放入数组对象。  
   
-##  <a name="lookupsid"></a>CTokenGroups::LookupSid  
+##  <a name="lookupsid"></a>  CTokenGroups::LookupSid  
  检索与关联的属性`CSid`对象。  
   
 ```
@@ -221,9 +225,9 @@ bool LookupSid(
  返回 true 如果`CSid`找到，则 false 否则。  
   
 ### <a name="remarks"></a>备注  
- 设置`pdwAttributes`到 NULL 提供一种确认是否存在`CSid`无需访问该属性。 请注意，此方法不应检查访问权限，如不正确的结果可能会出现在 Windows 2000 下。 应用程序应改用[CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership)方法。  
+ 设置`pdwAttributes`到 NULL 提供一种确认是否存在`CSid`无需访问该属性。 请注意，此方法不应检查访问权限。 应用程序应改用[CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership)方法。  
   
-##  <a name="operator_eq"></a>CTokenGroups::operator =  
+##  <a name="operator_eq"></a>  CTokenGroups::operator =  
  赋值运算符。  
   
 ```

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>CSid 类
 此类是包装器`SID`（安全标识符） 结构。  
@@ -63,7 +67,7 @@ class CSid
 |名称|描述|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|构造函数。|  
-|[CSid:: ~ CSid](#dtor)|析构函数。|  
+|[CSid::~CSid](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -86,19 +90,19 @@ class CSid
   
 |||  
 |-|-|  
-|[运算符 =](#operator_eq)|赋值运算符。|  
+|[operator =](#operator_eq)|赋值运算符。|  
 |[运算符 const SID *](#operator_const_sid__star)|强制转换`CSid`对象的指针到`SID`结构。|  
   
 ### <a name="global-operators"></a>全局运算符  
   
 |||  
 |-|-|  
-|[运算符 = =](#operator_eq_eq)|测试相等的两个安全描述符对象|  
-|[运算符 ！ =](#operator_neq)|测试不相等的两个安全描述符对象|  
+|[operator ==](#operator_eq_eq)|测试相等的两个安全描述符对象|  
+|[operator !=](#operator_neq)|测试不相等的两个安全描述符对象|  
 |[运算符\<](#operator_lt_)|比较两个安全描述符对象的相对值。|  
-|[运算符 >](#operator_gt_)|比较两个安全描述符对象的相对值。|  
-|[运算符\<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|  
-|[运算符 > =](#operator_gt__eq)|比较两个安全描述符对象的相对值。|  
+|[operator >](#operator_gt_)|比较两个安全描述符对象的相对值。|  
+|[operator \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|  
+|[operator >=](#operator_gt__eq)|比较两个安全描述符对象的相对值。|  
   
 ## <a name="remarks"></a>备注  
  `SID`结构是用于唯一标识用户或组的长度可变的结构。  
@@ -110,7 +114,7 @@ class CSid
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>  CSid::AccountName  
  返回与关联的帐户的名称`CSid`对象。  
   
 ```
@@ -125,7 +129,7 @@ LPCTSTR AccountName() const throw(...);
   
  如果没有帐户名`SID`可以找到，`AccountName`返回空字符串。 如果是网络超时可防止此方法查找名称便会出现此问题。 没有相应的帐户名称，如登录安全标识符也会出现`SID`标识登录会话。  
   
-##  <a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>  CSid::CSid  
  构造函数。  
   
 ```
@@ -171,7 +175,7 @@ explicit CSid(
   
  如果初始化失败，构造函数将引发[CAtlException 类](../../atl/reference/catlexception-class.md)。  
   
-##  <a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid::~CSid  
  析构函数。  
   
 ```
@@ -181,7 +185,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>备注  
  析构函数释放由对象获取任何资源。  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  数组[CSid](../../atl/reference/csid-class.md)对象。  
   
 ```
@@ -191,7 +195,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>备注  
  此 typedef 指定可以用于从 ACL （访问控制列表） 中检索安全标识符的数组类型。 请参阅[CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)。  
   
-##  <a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>  CSid::Domain  
  返回与关联的域的名称`CSid`对象。  
   
 ```
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  如果没有帐户名`SID`可以找到，**域**返回为一个空字符串的域。 如果是网络超时可防止此方法查找名称便会出现此问题。 没有相应的帐户名称，如登录安全标识符也会出现`SID`标识登录会话。  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  测试`SID`（安全标识符） 前缀是否相等。  
   
 ```
@@ -224,7 +228,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>备注  
  请参阅[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)更多详细信息的 Windows SDK 中。  
   
-##  <a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>  CSid::GetLength  
  返回的长度`CSid`对象。  
   
 ```
@@ -240,7 +244,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  在调试版本中，如果该函数将导致断言`CSid`对象无效。  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  返回一个指向`SID`（安全标识符） 结构。  
   
 ```
@@ -250,7 +254,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>返回值  
  返回的地址`CSid`对象的基本`SID`结构。  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  返回一个指向**SID_IDENTIFIER_AUTHORITY**结构。  
   
 ```
@@ -263,7 +267,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  在调试版本中，如果该函数将导致断言`CSid`对象无效。  
   
-##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>  CSid::GetSubAuthority  
  返回在指定的授权`SID`（安全标识符） 结构。  
   
 ```
@@ -283,7 +287,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  在调试版本中，如果该函数将导致断言`CSid`对象无效。  
   
-##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount  
  返回的子计数。  
   
 ```
@@ -298,7 +302,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  在调试版本中，如果该函数将导致断言`CSid`对象无效。  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  测试`CSid`有效性的对象。  
   
 ```
@@ -311,7 +315,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>备注  
  `IsValid`方法验证`CSid`通过验证修订号处于已知的范围内，以及次级机构数是否小于最大值的对象。  
   
-##  <a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>  CSid::LoadAccount  
  更新`CSid`给定帐户名称和域或现有的 SID （安全标识符） 结构的对象。  
   
 ```
@@ -340,7 +344,7 @@ bool LoadAccount(
 ### <a name="remarks"></a>备注  
  `LoadAccount`尝试查找安全标识符指定的名称。 请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)有关详细信息。  
   
-##  <a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>  CSid::operator =  
  赋值运算符。  
   
 ```
@@ -355,7 +359,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>返回值  
  返回对已更新的引用`CSid`对象。  
   
-##  <a name="operator_eq_eq"></a>CSid::operator = =  
+##  <a name="operator_eq_eq"></a>  CSid::operator ==  
  测试相等的两个安全描述符对象。  
   
 ```
@@ -374,7 +378,7 @@ bool operator==(
 ### <a name="return-value"></a>返回值  
  **true**的安全描述符是否相等，否则如果**false**。  
   
-##  <a name="operator_neq"></a>CSid::operator ！ =  
+##  <a name="operator_neq"></a>  CSid::operator !=  
  测试不相等的两个安全描述符对象。  
   
 ```
@@ -393,7 +397,7 @@ bool operator!=(
 ### <a name="return-value"></a>返回值  
  **true**如果的安全描述符不相等，否则**false**。  
   
-##  <a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>  CSid::operator &lt;  
  比较两个安全描述符对象的相对值。  
   
 ```
@@ -412,7 +416,7 @@ bool operator<(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`是小于`rhs`，否则为**false**。  
   
-##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  比较两个安全描述符对象的相对值。  
   
 ```
@@ -431,7 +435,7 @@ bool operator<=(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`小于或等于`rhs`，否则为**false**。  
   
-##  <a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>  CSid::operator &gt;  
  比较两个安全描述符对象的相对值。  
   
 ```
@@ -450,7 +454,7 @@ bool operator>(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`大于`rhs`，否则为**false**。  
   
-##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=  
  比较两个安全描述符对象的相对值。  
   
 ```
@@ -479,7 +483,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>备注  
  返回的地址`SID`结构。  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  返回`SID`（安全标识符） 作为字符串的结构。  
   
 ```
@@ -487,9 +491,9 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回`SID`作为适用于显示、 存储或传输的格式字符串的结构。 等效于[ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399)，尽管此函数是仅可在 Windows 2000 或更高版本，因此被模拟的早期版本的操作系统。  
+ 返回`SID`作为适用于显示、 存储或传输的格式字符串的结构。 等效于[ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399)。  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  返回的状态的描述`CSid`对象。  
   
 ```

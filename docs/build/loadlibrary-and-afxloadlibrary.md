@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 处理调用[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 显式链接到 DLL。 如果函数成功，它将指定的 DLL 映射到调用进程的地址空间，并可与其他函数中显式链接的 DLL 中返回的句柄 — 例如，`GetProcAddress`和`FreeLibrary`。  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  如果 Windows 无法加载 DLL，该过程可以尝试从错误中恢复。 例如，进程无法通知错误的用户并要求用户指定的 DLL 的另一个路径。  
   
 > [!IMPORTANT]
->  如果代码是在 Windows NT 4、 Windows 2000 或 Windows XP （之前 SP1) 下运行，请确保指定的任何 Dll 的完整路径。 在这些操作系统上加载的文件时会首先搜索当前目录。 如果不符合的文件的路径，则可能会加载不是预期的文件。  
+>  请确保指定的任何 Dll 的完整路径。 已加载文件时，将首先搜索当前目录。 如果不符合的文件的路径，则可能会加载不是预期的文件。  
   
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   

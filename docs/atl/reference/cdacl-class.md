@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,19 +17,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CDacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cdacl-class"></a>CDacl 类
 此类是 DACL （自由访问控制列表） 结构的包装器。  
@@ -49,7 +53,7 @@ class CDacl : public CAcl
 |名称|描述|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|构造函数。|  
-|[CDacl:: ~ CDacl](#dtor)|析构函数。|  
+|[CDacl::~CDacl](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -84,7 +88,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
  将允许的 ACE （访问控制项） 添加到`CDacl`对象。  
   
 ```
@@ -123,12 +127,9 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>备注  
  A`CDacl`对象包含标识的用户和组可以访问该对象零个或多个 Ace （访问控制项）。 此方法将添加允许访问的 ACE`CDacl`对象。  
   
-> [!NOTE]
->  第二种形式的`AddAllowedAce`才可在 Windows 2000 上及更高版本。  
-  
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关可以在中设置的各种标志的说明`AceFlags`参数。  
   
-##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  将被拒绝的 ACE （访问控制项） 添加到`CDacl`对象。  
   
 ```
@@ -167,12 +168,9 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>备注  
  A`CDacl`对象包含标识的用户和组可以访问该对象零个或多个 Ace （访问控制项）。 此方法将添加拒绝访问的 ACE`CDacl`对象。  
   
-> [!NOTE]
->  第二种形式的`AddDeniedAce`才可在 Windows 2000 上及更高版本。  
-  
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关可以在中设置的各种标志的说明`AceFlags`参数。  
   
-##  <a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>  CDacl::CDacl  
  构造函数。  
   
 ```
@@ -187,7 +185,7 @@ CDacl () throw();
 ### <a name="remarks"></a>备注  
  `CDacl`对象可以根据需要使用创建的现有**ACL**结构。 务必要注意，只有的 DACL （自由访问控制列表），并不 SACL （系统访问控制列表），应作为此参数进行传递。 在调试版本中，将传递 SACL 将导致断言。 在发布版本中传递 SACL 将会导致 Ace （访问控制项） 中的 ACL 以被忽略，并不会发生错误。  
   
-##  <a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>  CDacl::~CDacl  
  析构函数。  
   
 ```
@@ -197,7 +195,7 @@ CDacl () throw();
 ### <a name="remarks"></a>备注  
  析构函数释放使用的对象，包括所有 Ace （访问控制项） 获取任何资源[CDacl::RemoveAllAces](#removeallaces)。  
   
-##  <a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>  CDacl::GetAceCount  
  返回中的 Ace （访问控制项） 的数量`CDacl`对象。  
   
 ```
@@ -207,7 +205,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>返回值  
  返回包含中的 Ace 的数量`CDacl`对象。  
   
-##  <a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>  CDacl::operator =  
  赋值运算符。  
   
 ```
@@ -224,7 +222,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>备注  
  你应确保你仅向此函数传递的 DACL （自由访问控制列表）。 传递 SACL （系统访问控制列表） 对此函数将导致在调试版本中的断言，但将导致在发布版本中的任何错误。  
   
-##  <a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>  CDacl::RemoveAce  
  从中移除特定 ACE （访问控制项）`CDacl`对象。  
   
 ```
@@ -238,7 +236,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>备注  
  此方法派生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CDacl::RemoveAllAces  
  中移除的 Ace （访问控制项） 中包含所有`CDacl`对象。  
   
 ```
@@ -251,7 +249,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
  [CAcl 类](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)

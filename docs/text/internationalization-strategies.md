@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - language-portable code [C++]
@@ -18,21 +20,22 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b7ab27bb7a6458efde84451febaeb6f3ef37115
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ead6470bbbeacd43326f4373877eb991e5899116
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internationalization-strategies"></a>国际化策略
 根据您的目标操作系统和市场，你有几个国际化策略：  
   
--   你的应用程序使用 Unicode，并因此运行 Windows 2000 和 Windows NT 中，但不是能在 Windows 95 或 Windows 98。  
+-   你的应用程序使用 Unicode。  
   
      使用 Unicode 特有的功能和所有字符宽度都为 16 位 （尽管出于特殊目的，可以在程序的某些部分中使用 ANSI 字符）。 C 运行库提供仅 Unicode 编程函数、 宏和数据类型。 MFC 是完全支持 Unicode。  
   
@@ -41,8 +44,6 @@ ms.lasthandoff: 12/21/2017
      使用特定于 MBCS 的功能。 字符串可以包含单字节字符和 / 或双字节字符。 C 运行库提供仅 MBCS 编程函数、 宏和数据类型。 MFC 是完全 MBCS 启用。  
   
 -   为完成的可移植性编写你的应用程序的源代码 — 通过使用符号重新编译**_UNICODE**或符号**_MBCS**定义，您可以生成使用的版本。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
-  
--   你的应用程序可用于一个包装库缺少 Windows 95、 Windows 98 和 Windows ME 上的 Unicode 函数，如本文中其中一个[设计一个在两个 Windows 98 和 Windows 2000 运行的单个 Unicode 应用](http://go.microsoft.com/fwlink/p/?LinkId=250770)。 包装库也有用于商业目的。  
   
      将使用完全可移植的 C 运行时函数、 宏和数据类型。 MFC 的灵活性支持所有这些策略。  
   

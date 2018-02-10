@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -55,19 +56,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
 - ATLSECURITY/ATL::CAccessToken::SetOwner
 - ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
-dev_langs: C++
-helpviewer_keywords: CAccessToken class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 此类是访问令牌的包装。  
@@ -87,7 +91,7 @@ class CAccessToken
   
 |名称|描述|  
 |----------|-----------------|  
-|[CAccessToken:: ~ CAccessToken](#dtor)|析构函数。|  
+|[CAccessToken::~CAccessToken](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -140,14 +144,14 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|调用此方法以设置的主组`CAccessToken`对象。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文，并分配给每个用户登录到 Windows NT 或 Windows 2000 的系统。  
+ [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是介绍进程或线程的安全上下文，并分配给每个用户登录到 Windows 系统的对象。  
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="attach"></a>CAccessToken::Attach  
+##  <a name="attach"></a>  CAccessToken::Attach  
  调用此方法以获取给定的访问令牌句柄的所有权。  
   
 ```
@@ -161,7 +165,7 @@ void Attach(HANDLE hToken) throw();
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误`CAccessToken`对象已具有的访问令牌的所有权。  
   
-##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken  
+##  <a name="dtor"></a>  CAccessToken::~CAccessToken  
  析构函数。  
   
 ```
@@ -171,7 +175,7 @@ virtual ~CAccessToken() throw();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
+##  <a name="checktokenmembership"></a>  CAccessToken::CheckTokenMembership  
  调用此方法以确定是否在中启用具有指定的 SID`CAccessToken`对象。  
   
 ```
@@ -198,7 +202,7 @@ bool CheckTokenMembership(
 > [!NOTE]
 >  `CAccessToken`对象必须模拟令牌，并且不的主令牌。  
   
-##  <a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
+##  <a name="createimpersonationtoken"></a>  CAccessToken::CreateImpersonationToken  
  调用此方法以创建模拟访问令牌。  
   
 ```
@@ -220,7 +224,7 @@ bool CreateImpersonationToken(
 ### <a name="remarks"></a>备注  
  `CreateImpersonationToken`调用[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)以创建新的模拟令牌。  
   
-##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
+##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  调用此方法以创建新的主令牌。  
   
 ```
@@ -246,7 +250,7 @@ bool CreatePrimaryToken(
 ### <a name="remarks"></a>备注  
  `CreatePrimaryToken`调用[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)以创建新的主令牌。  
   
-##  <a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
+##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  调用此方法以创建新的进程表示的用户的安全上下文中运行`CAccessToken`对象。  
   
 ```
@@ -302,7 +306,7 @@ bool CreateProcessAsUser(
   
  此方法成功， `CAccessToken` （除非它是受限制的令牌），对象必须保留 AssignPrimaryToken 和 IncreaseQuota 特权。  
   
-##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
+##  <a name="createrestrictedtoken"></a>  CAccessToken::CreateRestrictedToken  
  调用此方法以创建一个新的受限`CAccessToken`对象。  
   
 ```
@@ -332,13 +336,10 @@ bool CreateRestrictedToken(
 ### <a name="remarks"></a>备注  
  `CreateRestrictedToken`使用[CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583)的 Win32 函数来创建一个新`CAccessToken`对象，其中包括限制。  
   
-> [!NOTE]
->  此方法仅可在 Windows 2000 或更高版本。  
-  
 > [!IMPORTANT]
 >  使用时`CreateRestrictedToken`，请确保满足以下： 现有令牌是有效 （而不由用户输入） 和`SidsToDisable`和`PrivilegesToDelete`同时有效 （而不由用户输入）。 如果该方法返回 false，则拒绝功能。  
   
-##  <a name="detach"></a>CAccessToken::Detach  
+##  <a name="detach"></a>  CAccessToken::Detach  
  调用此方法以撤消的访问令牌的所有权。  
   
 ```
@@ -351,7 +352,7 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>备注  
  此方法会吊销`CAccessToken`的访问令牌的所有权。  
   
-##  <a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
+##  <a name="disableprivilege"></a>  CAccessToken::DisablePrivilege  
  调用此方法以禁用在权限`CAccessToken`对象。  
   
 ```
@@ -370,7 +371,7 @@ bool DisablePrivilege(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
+##  <a name="disableprivileges"></a>  CAccessToken::DisablePrivileges  
  调用此方法以禁用中的一个或多个特权`CAccessToken`对象。  
   
 ```
@@ -389,7 +390,7 @@ bool DisablePrivileges(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
+##  <a name="enableprivilege"></a>  CAccessToken::EnablePrivilege  
  调用此方法以启用中的特权`CAccessToken`对象。  
   
 ```
@@ -408,7 +409,7 @@ bool EnablePrivilege(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
+##  <a name="enableprivileges"></a>  CAccessToken::EnablePrivileges  
  调用此方法以启用中的一个或多个特权`CAccessToken`对象。  
   
 ```
@@ -427,7 +428,7 @@ bool EnablePrivileges(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
+##  <a name="getdefaultdacl"></a>  CAccessToken::GetDefaultDacl  
  调用此方法以返回`CAccessToken`对象的默认 DACL。  
   
 ```
@@ -441,7 +442,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果默认的 DACL 已否则被恢复，则返回 false，则返回 true。  
   
-##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
+##  <a name="geteffectivetoken"></a>  CAccessToken::GetEffectiveToken  
  调用此方法以获取`CAccessToken`对象等于当前的线程有效的访问令牌。  
   
 ```
@@ -455,7 +456,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getgroups"></a>CAccessToken::GetGroups  
+##  <a name="getgroups"></a>  CAccessToken::GetGroups  
  调用此方法以返回`CAccessToken`对象的令牌组。  
   
 ```
@@ -469,7 +470,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="gethandle"></a>CAccessToken::GetHandle  
+##  <a name="gethandle"></a>  CAccessToken::GetHandle  
  调用此方法以检索访问令牌的句柄。  
   
 ```
@@ -479,7 +480,7 @@ HANDLE GetHandle() const throw();
 ### <a name="return-value"></a>返回值  
  返回的句柄`CAccessToken`对象的访问令牌。  
   
-##  <a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
+##  <a name="getimpersonationlevel"></a>  CAccessToken::GetImpersonationLevel  
  调用此方法以从访问令牌获取的模拟级别。  
   
 ```
@@ -494,7 +495,7 @@ bool GetImpersonationLevel(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
+##  <a name="getlogonsessionid"></a>  CAccessToken::GetLogonSessionId  
  调用此方法以获取与关联的登录会话 ID`CAccessToken`对象。  
   
 ```
@@ -511,7 +512,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误`pluid`是无效值。  
   
-##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid  
+##  <a name="getlogonsid"></a>  CAccessToken::GetLogonSid  
  调用此方法以获取与关联的登录 SID`CAccessToken`对象。  
   
 ```
@@ -528,7 +529,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误*pSid*是无效值。  
   
-##  <a name="getowner"></a>CAccessToken::GetOwner  
+##  <a name="getowner"></a>  CAccessToken::GetOwner  
  调用此方法以获取与关联的所有者`CAccessToken`对象。  
   
 ```
@@ -545,7 +546,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>备注  
  默认情况下，在此访问令牌有效期间创建的任何对象上设置所有者。  
   
-##  <a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
+##  <a name="getprimarygroup"></a>  CAccessToken::GetPrimaryGroup  
  调用此方法以获取与关联的主组`CAccessToken`对象。  
   
 ```
@@ -562,7 +563,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>备注  
  在此访问令牌有效期间创建的任何对象上的默认设置组。  
   
-##  <a name="getprivileges"></a>CAccessToken::GetPrivileges  
+##  <a name="getprivileges"></a>  CAccessToken::GetPrivileges  
  调用此方法以获取相关联的特权`CAccessToken`对象。  
   
 ```
@@ -576,7 +577,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
+##  <a name="getprocesstoken"></a>  CAccessToken::GetProcessToken  
  调用此方法可使用给定进程中的访问令牌初始化 `CAccessToken`。  
   
 ```
@@ -596,7 +597,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ### <a name="remarks"></a>备注  
  调用[OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 函数。  
   
-##  <a name="getprofile"></a>CAccessToken::GetProfile  
+##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  调用此方法以获取指向关联的用户配置文件的句柄`CAccessToken`对象。  
   
 ```
@@ -606,7 +607,7 @@ HANDLE GetProfile() const throw();
 ### <a name="return-value"></a>返回值  
  返回指向的用户配置文件或为 NULL，如果没有配置文件存在的句柄。  
   
-##  <a name="getsource"></a>CAccessToken::GetSource  
+##  <a name="getsource"></a>  CAccessToken::GetSource  
  调用此方法以获取的源`CAccessToken`对象。  
   
 ```
@@ -620,7 +621,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getstatistics"></a>CAccessToken::GetStatistics  
+##  <a name="getstatistics"></a>  CAccessToken::GetStatistics  
  调用此方法以获取与关联的信息`CAccessToken`对象。  
   
 ```
@@ -634,7 +635,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
+##  <a name="getterminalservicessessionid"></a>  CAccessToken::GetTerminalServicesSessionId  
  调用此方法以获取与关联的终端服务会话 ID`CAccessToken`对象。  
   
 ```
@@ -648,7 +649,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
+##  <a name="getthreadtoken"></a>  CAccessToken::GetThreadToken  
  调用此方法以初始化`CAccessToken`使用给定的线程中的令牌。  
   
 ```
@@ -673,7 +674,7 @@ bool GetThreadToken(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="gettokenid"></a>CAccessToken::GetTokenId  
+##  <a name="gettokenid"></a>  CAccessToken::GetTokenId  
  调用此方法以获取与关联的令牌 ID`CAccessToken`对象。  
   
 ```
@@ -687,7 +688,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="gettype"></a>CAccessToken::GetType  
+##  <a name="gettype"></a>  CAccessToken::GetType  
  调用此方法以获取其令牌类型的`CAccessToken`对象。  
   
 ```
@@ -704,7 +705,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="remarks"></a>备注  
  **TOKEN_TYPE**枚举类型包含区分的主令牌和模拟令牌的值。  
   
-##  <a name="getuser"></a>CAccessToken::GetUser  
+##  <a name="getuser"></a>  CAccessToken::GetUser  
  调用此方法来确定与关联的用户`CAccessToken`对象。  
   
 ```
@@ -718,7 +719,7 @@ bool GetUser(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
   
-##  <a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
+##  <a name="hkeycurrentuser"></a>  CAccessToken::HKeyCurrentUser  
  调用此方法以获取指向关联的用户配置文件的句柄`CAccessToken`对象。  
   
 ```
@@ -728,7 +729,7 @@ HKEY HKeyCurrentUser() const throw();
 ### <a name="return-value"></a>返回值  
  返回指向的用户配置文件或为 NULL，如果没有配置文件存在的句柄。  
   
-##  <a name="impersonate"></a>CAccessToken::Impersonate  
+##  <a name="impersonate"></a>  CAccessToken::Impersonate  
  调用此方法以分配模拟`CAccessToken`到线程。  
   
 ```
@@ -747,7 +748,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
   
  [CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)可以用于自动还原模拟的访问令牌。  
   
-##  <a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
+##  <a name="impersonateloggedonuser"></a>  CAccessToken::ImpersonateLoggedOnUser  
  调用此方法以允许调用线程模拟登录的用户的安全上下文。  
   
 ```
@@ -762,7 +763,7 @@ bool ImpersonateLoggedOnUser() const throw(...);
 > [!IMPORTANT]
 >  如果出于任何原因，对模拟函数的调用失败，无法模拟该客户端和客户端请求将在从中执行调用进程的安全上下文中创建。 如果进程运行作为高特权帐户，或作为管理组的成员，用户可能能够执行操作，系统将否则允许他或她。 因此，应该始终确认此函数的返回值。  
   
-##  <a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
+##  <a name="istokenrestricted"></a>  CAccessToken::IsTokenRestricted  
  调用此方法以测试是否`CAccessToken`对象包含受限制的 Sid 的列表。  
   
 ```
@@ -772,7 +773,7 @@ bool IsTokenRestricted() const throw();
 ### <a name="return-value"></a>返回值  
  如果对象包含的限制 Sid，false，如果不有任何限制的 Sid 列表，或该方法将失败，则返回 true。  
   
-##  <a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
+##  <a name="loaduserprofile"></a>  CAccessToken::LoadUserProfile  
  调用此方法以加载用户配置文件与关联`CAccessToken`对象。  
   
 ```
@@ -785,7 +786,7 @@ bool LoadUserProfile() throw(...);
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误`CAccessToken`不包含有效的令牌，或者如果用户配置文件已存在。  
   
-##  <a name="logonuser"></a>CAccessToken::LogonUser  
+##  <a name="logonuser"></a>  CAccessToken::LogonUser  
  调用此方法以创建与给定的凭据关联的用户的登录会话。  
   
 ```
@@ -819,7 +820,7 @@ bool LogonUser(
 ### <a name="remarks"></a>备注  
  从登录令牌生成将与关联的访问`CAccessToken`。 此方法成功，`CAccessToken`对象必须具有相关 SE_TCB_NAME 权限，识别持有者作为基的受信任计算机的一部分。 请参阅[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)有关所需的特权的详细信息。  
   
-##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
+##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  调用此方法从内处理从客户端执行调用以初始化的 COM 服务器`CAccessToken`使用 COM 客户端中的访问令牌。  
   
 ```
@@ -847,7 +848,7 @@ bool OpenCOMClientToken(
 ### <a name="remarks"></a>备注  
  [CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)可以用于自动还原模拟的访问令牌通过设置创建`bImpersonate`标志切换为*true*。  
   
-##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
+##  <a name="opennamedpipeclienttoken"></a>  CAccessToken::OpenNamedPipeClientToken  
  内调用此方法从一台服务器拍摄请求通过命名管道来初始化`CAccessToken`使用从客户端的访问令牌。  
   
 ```
@@ -879,7 +880,7 @@ bool OpenNamedPipeClientToken(
 ### <a name="remarks"></a>备注  
  [CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)可以用于自动还原模拟的访问令牌通过设置创建`bImpersonate`标志切换为*true*。  
   
-##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
+##  <a name="openrpcclienttoken"></a>  CAccessToken::OpenRPCClientToken  
  调用此方法从在服务器处理从 RPC 客户端执行调用以初始化内的`CAccessToken`使用从客户端的访问令牌。  
   
 ```
@@ -911,7 +912,7 @@ bool OpenRPCClientToken(
 ### <a name="remarks"></a>备注  
  [CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)可以用于自动还原模拟的访问令牌通过设置创建`bImpersonate`标志切换为*true*。  
   
-##  <a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
+##  <a name="openthreadtoken"></a>  CAccessToken::OpenThreadToken  
  调用此方法以设置模拟级别，然后对初始化`CAccessToken`使用给定的线程中的令牌。  
   
 ```
@@ -945,7 +946,7 @@ bool OpenThreadToken(
   
  [CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)可以用于自动还原模拟的访问令牌通过设置创建`bImpersonate`标志切换为*true*。  
   
-##  <a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
+##  <a name="privilegecheck"></a>  CAccessToken::PrivilegeCheck  
  调用此方法以确定是否在启用指定的一组特权**CAccessToken**对象。  
   
 ```
@@ -967,7 +968,7 @@ bool PrivilegeCheck(
 ### <a name="remarks"></a>备注  
  当`PrivilegeCheck`返回时，**属性**的每个成员[LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)结构设置为 SE_PRIVILEGE_USED_FOR_ACCESS，如果启用了相应的权限。 此方法调用[PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 函数。  
   
-##  <a name="revert"></a>CAccessToken::Revert  
+##  <a name="revert"></a>  CAccessToken::Revert  
  调用此方法来停止来自使用模拟的令牌的线程。  
   
 ```
@@ -984,7 +985,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="remarks"></a>备注  
  可以使用自动执行的模拟令牌恢复[CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)。  
   
-##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
+##  <a name="setdefaultdacl"></a>  CAccessToken::SetDefaultDacl  
  调用此方法以设置默认值的 DACL`CAccessToken`对象。  
   
 ```
@@ -1001,7 +1002,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="remarks"></a>备注  
  默认值 DACL，则实际上与此访问令牌创建新对象时，默认情况下使用的 DACL。  
   
-##  <a name="setowner"></a>CAccessToken::SetOwner  
+##  <a name="setowner"></a>  CAccessToken::SetOwner  
  调用此方法以设置的所有者`CAccessToken`对象。  
   
 ```
@@ -1018,7 +1019,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>备注  
  所有者是新创建的对象实际上此访问令牌时使用的默认所有者。  
   
-##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
+##  <a name="setprimarygroup"></a>  CAccessToken::SetPrimaryGroup  
  调用此方法以设置的主组`CAccessToken`对象。  
   
 ```

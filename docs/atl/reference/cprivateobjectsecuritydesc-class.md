@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 此类表示私有对象安全描述符对象。  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |名称|描述|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|构造函数。|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|析构函数。|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -60,7 +64,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
 |||  
 |-|-|  
-|[运算符 =](#operator_eq)|赋值运算符。|  
+|[operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
  此类，派生自[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)，提供用于创建和管理私有对象的安全描述符的方法。  
@@ -75,7 +79,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  调用此方法将安全描述符和其访问控制列表 (Acl) 转换为支持的可继承的访问控制项 (Ace) 的自动传播的格式。  
   
 ```
@@ -105,7 +109,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>备注  
  此方法尝试确定是否的 Ace 处于自由访问控制列表 (DACL) 和系统访问控制列表 (SACL) 的当前的安全描述符已继承自父安全描述符。 它调用[ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403)函数。  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  构造函数。  
   
 ```
@@ -115,7 +119,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>备注  
  初始化 `CPrivateObjectSecurityDesc` 对象。  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc  
  析构函数。  
   
 ```
@@ -125,7 +129,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>备注  
  析构函数释放所有已分配的资源，并删除私有对象的安全描述符。  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  调用此方法以分配并初始化由调用的资源管理器创建的私有对象的自相关的安全描述符。  
   
 ```
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>备注  
  此方法调用[CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405)或[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)。  
   
- 第二种方法，这允许指定新的对象的对象类型 GUID 或控制如何继承 Ace，仅适用于运行 Windows 2000 的系统及更高版本。  
+ 第二种方法允许指定新的对象的对象类型 GUID 或控制如何继承 Ace。  
   
 > [!NOTE]
 >  自相关的安全描述符是内存的将其所有的安全信息存储在由连续块的安全描述符。  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  调用此方法以从私有对象的安全描述符中检索信息。  
   
 ```
@@ -204,7 +208,7 @@ bool Get(
 ### <a name="remarks"></a>备注  
  安全描述符为结构和关联的数据包含安全对象的安全信息。  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  赋值运算符。  
   
 ```
@@ -218,7 +222,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>返回值  
  返回已更新`CPrivateObjectSecurityDesc`对象。  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  调用此方法以修改私有对象的安全描述符。  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  如果成功，则返回 true；如果失败，则返回 false。  
   
 ### <a name="remarks"></a>备注  
- 第二种方法，这允许指定对象的对象类型 GUID 或控制如何继承 Ace，仅适用于运行 Windows 2000 的系统及更高版本。  
+ 第二种方法允许指定对象的对象类型 GUID 或控制如何继承 Ace。  
   
 ## <a name="see-also"></a>请参阅  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

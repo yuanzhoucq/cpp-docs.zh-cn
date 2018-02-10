@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,7 +28,8 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e05b0560032d79e5e69a1cafe8669c79160b8e1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e2b57f785ac43866aedfe4bf9dbca59353ca3b51
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="puts-putws"></a>puts、_putws
 将字符串写入 **stdout**。  
@@ -77,7 +80,7 @@ int _putws(
   
  `_putws` 是 `puts` 的宽字符版本；如果在 ANSI 模式下打开流，则这两个函数的行为相同。 `puts` 当前不支持到 UNICODE 流中的输出。  
   
- 在 Windows 2000 和更高版本中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。  
+  **_putwch**写入使用当前控制台区域设置的 Unicode 字符。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>CSacl 类
 此类是 SACL （系统访问控制列表） 结构的包装器。  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |名称|描述|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|构造函数。|  
-|[CSacl:: ~ CSacl](#dtor)|析构函数。|  
+|[CSacl::~CSacl](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -82,7 +86,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  将审核访问控制项 (ACE) 添加到`CSacl`对象。  
   
 ```
@@ -129,11 +133,11 @@ bool AddAuditAce(
  返回**true**如果 ACE 添加到`CSacl`对象， **false**失败。  
   
 ### <a name="remarks"></a>备注  
- A`CSacl`对象包含指定类型的安全事件日志中生成审核记录的访问尝试次数的访问控制项 (Ace)。 此方法将添加到此类的 ACE`CSacl`对象。 第二种形式的`AddAuditAce`才可在 Windows 2000 上及更高版本。  
+ A`CSacl`对象包含指定类型的安全事件日志中生成审核记录的访问尝试次数的访问控制项 (Ace)。 此方法将添加到此类的 ACE`CSacl`对象。  
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关可以在中设置的各种标志的说明`AceFlags`参数。  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  构造函数。  
   
 ```
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>备注  
  `CSacl`对象可以根据需要使用创建的现有**ACL**结构。 请确保此参数是一个系统访问控制列表 (SACL) 和不是自由访问控制列表 (DACL)。 在调试版本中，如果提供 DACL，则断言会发生。 在发布版本中 DACL 的任何条目将被忽略。  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  析构函数。  
   
 ```
@@ -158,7 +162,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>备注  
  析构函数释放由对象，包括所有访问控制项 (Ace) 获取任何资源。  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  返回中访问控制项 (Ace) 数目`CSacl`对象。  
   
 ```
@@ -168,7 +172,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>返回值  
  返回包含中的 Ace 的数量`CSacl`对象。  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  赋值运算符。  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>返回值  
  返回对已更新的引用`CSacl`对象。 确保**ACL**参数是实际系统访问控制列表 (SACL) 和不是自由访问控制列表 (DACL)。 在调试版本中将出现一个断言，并在发布版本中**ACL**参数将被忽略。  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  从中移除特定 ACE （访问控制项） **CSacl**对象。  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>备注  
  此方法派生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  删除访问控制项 (Ace) 中包含的所有`CSacl`对象。  
   
 ```
@@ -208,7 +212,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>请参阅  
  [CAcl 类](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)

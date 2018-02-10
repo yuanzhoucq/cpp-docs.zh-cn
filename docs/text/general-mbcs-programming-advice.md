@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b379c163963a9ae0dd0c59c7d0fc809fee4f46d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-mbcs-programming-advice"></a>常规 MBCS 编程建议
 使用以下提示：  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   在设计对话框时，允许大约 30 %mbcs 转换的静态文本控件的末尾额外空间。  
   
--   因为某些字体并非适用于所有系统，则会为你的应用程序，选择字体时请小心。 例如，日语版本的 Windows 2000 不支持 Helvetica 字体。  
+-   因为某些字体并非适用于所有系统，则会为你的应用程序，选择字体时请小心。  
   
 -   在选择的字体对话框时，使用[MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112)而不是 MS Sans Serif 或 Helvetica。 MS Shell Dlg 将被替换为正确的字体由系统在创建对话框之前。 使用 MS Shell Dlg 可确保在地应对此字体的操作系统中的任何更改都自动将可用。 （MFC 替换 MS Shell Dlg DEFAULT_GUI_FONT 或 Windows 95、 Windows 98 和 Windows NT 4 上的系统字体因为这些系统不正确处理 MS Shell Dlg。）  
   

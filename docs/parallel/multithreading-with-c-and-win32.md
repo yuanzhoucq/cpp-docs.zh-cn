@@ -1,13 +1,15 @@
 ---
 title: "多线程处理使用 C 和 Win32 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows API [C++], multithreading
 - multithreading [C++], C and Win32
@@ -17,19 +19,20 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16353937046384f9dc130048c510197697fb678f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 进行多线程编程
-Microsoft Visual c + + 用于与 Microsoft Windows 一起创建多线程应用程序提供支持： Windows XP、 Windows 2000、 Windows NT、 Windows Me，和 Windows 98。 你应考虑使用多个线程，如果你的应用程序需要管理多个活动，如同时键盘和鼠标输入。 一个线程可以处理键盘输入，而第二个线程筛选鼠标活动。 第三个线程可以更新显示屏幕基于数据的鼠标和键盘线程。 同时，其他线程可以访问磁盘文件或从通信端口中获取数据。  
+Microsoft Visual c + + 提供了用于创建多线程应用程序的支持。 你应考虑使用多个线程，如果你的应用程序需要执行成本高昂的操作会导致用户界面以变得不响应。  
   
  使用 Visual c + + 中，有两个程序与多个线程的方法： 使用 Microsoft 基础类 (MFC) 库或 C 运行时库和 Win32 API。 有关使用 MFC 创建多线程应用程序的信息，请参阅[与 c + + 和 MFC 的多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)之后读取以下有关 C 中的多线程处理的主题  
   
