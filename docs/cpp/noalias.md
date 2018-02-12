@@ -1,28 +1,32 @@
 ---
 title: "noalias |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
@@ -32,13 +36,15 @@ ms.lasthandoff: 12/21/2017
 
 如果函数被批注为 `noalias`，则优化器可以假定除了参数本身以外，只在函数内引用或修改指针参数的第一级间接寻址。 可见全局状态是未在编译范围外定义或引用的所有数据的集合，因此不采用它们的地址。 编译作用域是所有的源文件 ([/LTCG （链接时间代码生成）](../build/reference/ltcg-link-time-code-generation.md)生成) 或单个源文件 (非**/LTCG**生成)。
 
+`noalias`批注仅应用的批注的函数体中。 函数标记为`__declspec(noalias)`不会影响的函数返回的指针的别名。
+
+有关可能会影响别名的另一个批注，请参阅[__declspec(restrict)](../cpp/restrict.md)。
+
 ## <a name="example"></a>示例
 
-以下代码示例演示了使用 `__declspec(restrict)` 和 `__declspec(noalias)`。 通常情况下，内存返回从`malloc`是`restrict`因为 CRT 标头适当的修饰。
+下面的示例演示如何使用`__declspec(noalias)`。
 
-但是，在此示例中，指针`mempool`和`memptr`是全局性的因此编译器的内存不别名不保证。 使用 `__declspec(restrict)` 修饰返回指针的函数将通知编译器，返回值指向的内存不使用别名。
-
-使用 `__declspec(noalias)` 修饰示例中访问内存的函数将通知编译器，此函数不会干扰全局状态，除非通过其参数列表中的指针。
+当函数`multiply`访问内存进行批注`__declspec(noalias)`，它会告知编译器此函数不会修改通过其参数列表中的指针除外的全局状态。
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>请参阅
 
 [__declspec](../cpp/declspec.md)  
-[关键字](../cpp/keywords-cpp.md)
+[关键字](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
