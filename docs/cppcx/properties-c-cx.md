@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 446f2c4f18f68a4a52614397b697409d34b958de
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="properties-ccx"></a>属性 (C++/CX)
 Windows 运行时类型公开公共数据作为属性。 客户端代码像公共数据成员一样访问该属性。 在内部，该属性实现为包含一个 get 访问器方法、一个 set 访问器方法或二者的块。 通过使用访问器方法，你可以在检索值的前后执行其他操作，例如，可以触发事件或执行验证检查。  

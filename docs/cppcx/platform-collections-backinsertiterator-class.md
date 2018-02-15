@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
-dev_langs: C++
-helpviewer_keywords: BackInsertIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 表示一个迭代器，它插入而非重写元素到有序集合的后端。  
@@ -46,7 +50,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Backinsertiterator:: Backinsertiterator](#ctor)|初始化 BackInsertIterator 类的新实例。|  
+|[BackInsertIterator::BackInsertIterator](#ctor)|初始化 BackInsertIterator 类的新实例。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -65,7 +69,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **命名空间：** Platform::Collections  
   
 ---
-## <a name="ctor"></a>Backinsertiterator:: Backinsertiterator 构造函数
+## <a name="ctor"></a>  Backinsertiterator:: Backinsertiterator 构造函数
 初始化 `BackInsertIterator` 类的新实例。  
   
 ## <a name="syntax"></a>语法  
@@ -83,7 +87,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>备注  
  `BackInsertIterator` 在参数 `v` 指定的对象的最后一个元素之后插入元素。  
  
-## <a name="operator-assign"></a>Backinsertiterator:: Operator = 运算符
+## <a name="operator-assign"></a>  Backinsertiterator:: Operator = 运算符
 将指定对象追加到当前有序集合的末尾。  
   
 ## <a name="syntax"></a>语法  
@@ -99,7 +103,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>返回值  
  对当前 BackInsertIterator 的引用。  
 
-## <a name="operator-dereference"></a>Backinsertiterator:: Operator * 运算符
+## <a name="operator-dereference"></a>  Backinsertiterator:: Operator * 运算符
 检索对当前 BackInsertIterator 的引用。  
   
 ## <a name="syntax"></a>语法  
@@ -114,7 +118,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>备注  
  此运算符返回对当前 BackInsertIterator 的引用；而不是对当前集合中任何元素的引用。  
  
-## <a name="operator-increment"></a>Backinsertiterator:: Operator + + 运算符
+## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
 返回对当前 BackInsertIterator 的引用。 迭代器未经修改。  
   
 ## <a name="syntax"></a>语法  

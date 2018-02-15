@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 表示在应用程序执行过程中发生的错误。 自定义异常类不能从 `Platform::Exception`派生。 如果需要自定义异常，可以使用 `Platform::COMException` 并指定应用程序特定的 HRESULT。  
@@ -44,22 +47,22 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |成员|描述|  
 |------------|-----------------|  
-|[Exception:: exception](#ctor)|初始化 `Exception` 类的新实例。|  
+|[Exception::Exception](#ctor)|初始化 `Exception` 类的新实例。|  
   
 ### <a name="methods"></a>方法  
  `Exception`类继承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，和`ToString()`方法从[platform:: object 类](../cppcx/platform-object-class.md)。 `Exception` 类还具有以下方法。  
   
 |成员|描述|  
 |------------|-----------------|  
-|[Exception:: createexception](#createexception)|创建表示指定 HRESULT 值的异常。|  
+|[Exception::CreateException](#createexception)|创建表示指定 HRESULT 值的异常。|  
   
 ### <a name="properties"></a>属性  
  此异常类还具有以下属性。  
   
 |成员|描述|  
 |------------|-----------------|  
-|[Exception:: hresult](#hresult)|与异常相对应的 HRESULT。|  
-|[Exception:: message](#message)|描述异常的消息。 此值是只读的，在构造 `Exception` 后不能修改。|  
+|[Exception::HResult](#hresult)|与异常相对应的 HRESULT。|  
+|[Exception::Message](#message)|描述异常的消息。 此值是只读的，在构造 `Exception` 后不能修改。|  
   
 ### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **元数据：** platform.winmd  
 
-## <a name="createexception"></a>Exception:: createexception 方法
+## <a name="createexception"></a> Exception:: createexception 方法
 基于指定的 HRESULT 值创建 Platform::Exception^。  
   
 ### <a name="syntax"></a>语法  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Exception:: exception 构造函数
+## <a name="ctor"></a>  Exception::Exception Constructor
 初始化 Exception 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Exception:: hresult 属性
+## <a name="hresult"></a>  Exception::HResult Property
 与异常相对应的 HRESULT。  
   
 ### <a name="syntax"></a>语法  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Exception:: message 属性
+## <a name="message"></a> Exception::Message Property
 描述错误的消息。  
   
 ### <a name="syntax"></a>语法  

@@ -6,23 +6,26 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
 - VCCORLIB/Platform::Type::FullName
-dev_langs: C++
-helpviewer_keywords: Platform::Type Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c292426b9d04fd5b3d9785224f9b2d48f129f0db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type 类
 包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过调用获取[object:: gettype](../cppcx/platform-object-class.md#gettype)任何对象或使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符的类或结构的名称。  
@@ -50,7 +53,7 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type:: fullname](#fullname)|返回表示类型的完全限定名称的 [Platform::String 类](../cppcx/platform-string-class.md)^，并使用 . （点） 作为分隔符，不:: （双冒号） — 例如， `MyNamespace.MyClass`。|  
+|[Type::FullName](#fullname)|返回表示类型的完全限定名称的 [Platform::String 类](../cppcx/platform-string-class.md)^，并使用 . （点） 作为分隔符，不:: （双冒号） — 例如， `MyNamespace.MyClass`。|  
   
 ## <a name="conversion-operators"></a>转换运算符  
   
@@ -111,7 +114,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>备注  
  Gettypecode （） 成员方法等效于`typeid`属性。
 
-## <a name="tostring"></a>Type::ToString 方法
+## <a name="tostring">Type::ToString 方法</a>
 检索类型的名称。  
   
 ### <a name="syntax"></a>语法  

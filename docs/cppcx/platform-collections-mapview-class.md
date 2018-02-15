@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -60,17 +63,17 @@ ref class MapView sealed;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Mapview:: Mapview](#ctor)|初始化 MapView 类的新实例。|  
+|[MapView::MapView](#ctor)|初始化 MapView 类的新实例。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Mapview:: First](#first)|返回初始化为映射视图中第一个元素的迭代器。|  
-|[Mapview:: Haskey](#haskey)|确定当前 MapView 中是否包含指定键。|  
-|[Mapview:: Lookup](#lookup)|检索当前 MapView 对象中指定键处的元素。|  
-|[Mapview:: Size](#size)|返回当前 MapView 对象中的元素数目。|  
-|[Mapview:: Split](#split)|将原始 MapView 对象拆分成两个 MapView 对象。|  
+|[MapView::First](#first)|返回初始化为映射视图中第一个元素的迭代器。|  
+|[MapView::HasKey](#haskey)|确定当前 MapView 中是否包含指定键。|  
+|[MapView::Lookup](#lookup)|检索当前 MapView 对象中指定键处的元素。|  
+|[MapView::Size](#size)|返回当前 MapView 对象中的元素数目。|  
+|[MapView::Split](#split)|将原始 MapView 对象拆分成两个 MapView 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `MapView`  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **命名空间：** Platform::Collections  
 
 
-## <a name="first"></a>Mapview:: First 方法
+## <a name="first"></a> Mapview:: First 方法
 返回指定映射视图中第一个元素的迭代器。  
   
 ### <a name="syntax"></a>语法  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>Mapview:: Haskey 方法
+## <a name="haskey"></a>  Mapview:: Haskey 方法
 确定当前 MapView 中是否包含指定键。  
   
 ### <a name="syntax"></a>语法  
@@ -118,7 +121,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a>Mapview:: Lookup 方法
+##  <a name="lookup"></a> Mapview:: Lookup 方法
 检索与类型 K 的指定键关联的类型 V 的值。  
   
 ### <a name="syntax"></a>语法  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>Mapview:: Mapview 构造函数
+##  <a name="ctor"></a> Mapview:: Mapview 构造函数
 初始化 MapView 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -179,7 +182,7 @@ MapView(
 
 
 
-##  <a name="size"></a>Mapview:: Size 方法
+##  <a name="size"></a> Mapview:: Size 方法
 返回当前 MapView 对象中的元素数目。  
   
 ### <a name="syntax"></a>语法  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>Mapview:: Split 方法
+##  <a name="split"></a> Mapview:: Split 方法
 将当前 MapView 对象分成两个 MapView 对象。 此方法为非操作性的。  
   
 ### <a name="syntax"></a>语法  

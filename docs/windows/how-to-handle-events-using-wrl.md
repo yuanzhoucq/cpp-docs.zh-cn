@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 处理事件
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 订阅和处理 Windows 运行时对象的事件。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/21/2017
  以下步骤开始`ABI::Windows::System::Threading::IDeviceWatcher`对象，并使用事件处理程序来监视进度。 `IDeviceWatcher`接口可以枚举设备，以异步方式，或在后台，并在添加、 移除或更改设备时接收通知。 [回调](../windows/callback-function-windows-runtime-cpp-template-library.md)函数是此示例的重要组成部分，因为它启用它以指定事件处理程序处理的后台操作的结果。 以下是完整的示例。  
   
 > [!WARNING]
->  尽管通常使用 Windows 运行时 c + + 模板库通用 Windows 平台应用中，此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[不支持 /zw 的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM for Windows Store 应用](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  尽管通常使用 Windows 运行时 c + + 模板库通用 Windows 平台应用中，此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 1.  包括 (`#include`) 任何必需的 Windows 运行时、 Windows 运行时 c + + 模板库或 c + + 标准库头文件。  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译代码，将其复制，然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-events.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- **cl.exe wrl 使用 events.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-events.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>强制转换 (C++/CX)
 有四种不同的强制转换运算符适用于 Windows 运行时类型： [static_cast 运算符](../cpp/static-cast-operator.md)， [dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)， **safe_cast 运算符**，和[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。 当无法执行转换时，`safe_cast` 和 `static_cast` 将引发异常； [static_cast 运算符](../cpp/static-cast-operator.md) 还执行编译时类型检查。 如果`dynamic_cast` 无法转换类型，它将返回 `nullptr` 。 即使 `reinterpret_cast` 返回一个非 null 值，它也可能是无效的。 为此，我们建议不使用 `reinterpret_cast` ，除非已知该强制转换将会成功。 此外，我们建议，你不使用 C 样式强制转换中你的 C + + /cli CX 代码，因为它们是相同`reinterpret_cast`。  
@@ -61,7 +62,7 @@ Windows 运行时是上 COM，它使用 HRESULT 错误代码而不是异常的�
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- 使用`dynamic_cast`当强制转换对象 (更具体地说，帽子`^`) 为派生程度更大的类型，你预期目标对象可能有时是`nullptr`或者该强制转换可能失败，并且你想要作为普通的代码该条件处理路径而不是异常。 例如，在 **“Windows 应用商店空白应用程序”** 项目模板中， `OnLaunched` 中的 `app.xamp.cpp` 方法使用 `dynamic_cast` 测试应用程序窗口是否包含内容。 如果它没有内容，则不是错误；而是一个预期状况。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` ，该转换是一个 `Windows::UI.XAML::Controls::Frame`，是继承层次结构中派生程度更大的类型。  
+ 使用`dynamic_cast`当强制转换对象 (更具体地说，帽子`^`) 为派生程度更大的类型，你预期目标对象可能有时是`nullptr`或者该强制转换可能失败，并且你想要作为普通的代码该条件处理路径而不是异常。 例如，在**空白应用 (通用 Windows)**项目模板，`OnLaunched`中的方法`app.xamp.cpp`使用`dynamic_cast`来测试应用程序窗口是否包含内容。 如果它没有内容，则不是错误；而是一个预期状况。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` ，该转换是一个 `Windows::UI.XAML::Controls::Frame`，是继承层次结构中派生程度更大的类型。  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  

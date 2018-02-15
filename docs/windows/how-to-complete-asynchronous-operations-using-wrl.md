@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成异步操作
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 来启动异步操作并在操作完成时执行工作。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  以下步骤启动异步计时器，并等待计时器过期。 以下是完整的示例。  
   
 > [!WARNING]
->  尽管通常使用 Windows 运行时 c + + 模板库通用 Windows 平台应用中，此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[不支持 /ZW 的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM for Windows Store 应用](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  虽然通常使用 Windows 运行时 c + + 模板库中的通用 Windows 平台 (UWP) 应用，但此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 1.  包括 (`#include`) 任何必需的 Windows 运行时、 Windows 运行时 c + + 模板库或 c + + 标准库头文件。  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="compiling-the-code"></a>编译代码  
  若要编译代码，将其复制，然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-async.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- **cl.exe wrl 使用 async.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>示例： 使用后台线程  
  以下步骤启动的工作线程，并定义由该线程执行的操作。 以下是完整的示例。  

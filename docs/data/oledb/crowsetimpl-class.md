@@ -4,42 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl
 - ATL.CRowsetImpl
 - ATL::CRowsetImpl
-dev_langs: C++
-helpviewer_keywords: CRowsetImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c126c757ae4776d0b2a5d2bec352ee8d58c4f0d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 类
 提供标准 OLE DB 行集实现，而无需许多实现接口的多个继承。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
    class ArrayType = CAtlArray<Storage>,   
    class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class RowsetInterface = IRowsetImpl <T, IRowset>   
 >  
 class CRowsetImpl :    
    public CComObjectRootEx<CreatorClass::_ThreadModel>,   
@@ -86,7 +89,7 @@ class CRowsetImpl :
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|包含行集的初始索引。|  
   
 ## <a name="remarks"></a>备注  
- `CRowsetImpl`提供的静态向上转换窗体中的替代。 方法控制给定行集将在其中验证命令文本的方式。 你可以创建自己`CRowsetImpl`-样式通过使多个继承实现接口的类。 必须为其提供实现的唯一方法**执行**。 创建者方法具体取决于要创建哪种类型的行集，应为不同签名**执行**。 例如，如果你使用`CRowsetImpl`-派生类，以实现架构行集，**执行**方法将具有以下签名：  
+ `CRowsetImpl` 提供的静态向上转换窗体中的替代。 方法控制给定行集将在其中验证命令文本的方式。 你可以创建自己`CRowsetImpl`-样式通过使多个继承实现接口的类。 必须为其提供实现的唯一方法**执行**。 创建者方法具体取决于要创建哪种类型的行集，应为不同签名**执行**。 例如，如果你使用`CRowsetImpl`-派生类，以实现架构行集，**执行**方法将具有以下签名：  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   

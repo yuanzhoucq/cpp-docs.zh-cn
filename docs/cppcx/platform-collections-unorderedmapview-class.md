@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Unorderedmapview:: Unorderedmapview](#ctor)|初始化 UnorderedMapView 类的新实例。|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|初始化 UnorderedMapView 类的新实例。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Unorderedmapview:: First](#first)|返回初始化为映射视图中第一个元素的迭代器。|  
-|[Unorderedmapview:: Haskey](#haskey)|确定当前 UnorderedMapView 中是否包含指定键。|  
-|[Unorderedmapview:: Lookup](#lookup)|检索当前 UnorderedMapView 对象中指定键处的元素。|  
-|[Unorderedmapview:: Size](#size)|返回当前 UnorderedMapView 对象中的元素数目。|  
-|[Unorderedmapview:: Split](#split)|将原始 UnorderedMapView 对象拆分成两个 UnorderedMapView 对象。|  
+|[UnorderedMapView::First](#first)|返回初始化为映射视图中第一个元素的迭代器。|  
+|[UnorderedMapView::HasKey](#haskey)|确定当前 UnorderedMapView 中是否包含指定键。|  
+|[UnorderedMapView::Lookup](#lookup)|检索当前 UnorderedMapView 对象中指定键处的元素。|  
+|[UnorderedMapView::Size](#size)|返回当前 UnorderedMapView 对象中的元素数目。|  
+|[UnorderedMapView::Split](#split)|将原始 UnorderedMapView 对象拆分成两个 UnorderedMapView 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `UnorderedMapView`  

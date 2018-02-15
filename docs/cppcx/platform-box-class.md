@@ -7,20 +7,23 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::Box
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::Box
+dev_langs:
+- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ac0940d9a7277b7b3f5b66e8d27750a593081471
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 813ba26333cb73212db966a0446d722eb4e0795d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformbox-class"></a>Platform::Box 类
 使值类型（例如 `Windows::Foundation::DateTime` ）或标量类型（例如 `int` ）能够存储在 `Platform::Object` 类型中。 通常没有必要显式使用 `Box` ，因为当你将值类型强制转换为 `Object^`时会发生隐式装箱：  
@@ -43,8 +46,8 @@ ref class Box abstract;
 |[运算符框&lt;const 易失性 T&gt;^](#box-const-volatile-t)|启用从 `const volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。 |
 |[运算符框&lt;T&gt;^](#box-t)|实现从值类 `T` 到 `Box<T>` 的装箱转换。|
 |[运算符框&lt;易失性 T&gt;^](#box-volatile-t)|启用从 `volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。|
-|[Box:: operator T](#t)|实现从 `T` 值类或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。| 
-## <a name="ctor"></a>Box:: box 构造函数
+|[Box::operator T](#t)|实现从 `T` 值类或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。| 
+## <a name="ctor"></a> Box:: box 构造函数
 创建`Box`可以封装指定类型的值。 | |[值属性](#value)|返回值，封装在`Box`对象。 |  
 ### <a name="syntax"></a>语法  
   
@@ -57,7 +60,7 @@ Box(T valueArg);
  要进行装箱值的类型-例如， `int`， `bool`， `float64`， `DateTime`。  
   
 
-## <a name="box-const-t"></a>Box::&lt;const T&gt;^ 运算符
+## <a name="box-const-t"></a> Box::&lt;const T&gt;^ 运算符
 实现从 `const` 值类 `T` 或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。  
   
 ### <a name="syntax"></a>语法  
@@ -73,7 +76,7 @@ operator Box<const T>^(const T valueType);
 ### <a name="return-value"></a>返回值  
  A`Platform::Box<T>^`装箱在 ref 类的实例，表示原始值。  
   
-## <a name="box-const-volatile-t"></a>Box::&lt;const 易失性 T&gt;^ 运算符
+## <a name="box-const-volatile-t"></a> Box::&lt;const 易失性 T&gt;^ 运算符
 启用从 `const volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。  
   
 ### <a name="syntax"></a>语法  
@@ -89,7 +92,7 @@ operator Box<const volatile T>^(const volatile T valueType);
 ### <a name="return-value"></a>返回值  
  A`Platform::Box<T>^`装箱在 ref 类的实例，表示原始值。  
   
-## <a name="box-t"></a>Box::&lt;T&gt;^ 运算符
+## <a name="box-t"></a> Box::&lt;T&gt;^ 运算符
 实现从值类 `T` 到 `Box<T>` 的装箱转换。  
   
 ### <a name="syntax"></a>语法  
@@ -105,7 +108,7 @@ operator Box<const T>^(const T valueType);
 ### <a name="return-value"></a>返回值  
  A`Platform::Box<T>^`装箱在 ref 类的实例，表示原始值。  
   
-## <a name="box-volatile-t"></a>Box::&lt;易失性 T&gt;^ 运算符
+## <a name="box-volatile-t"></a> Box::&lt;易失性 T&gt;^ 运算符
 启用从 `volatile` 值类 `T` 或 `enum` 类型 `T` 到 `Box<T>` 的装箱转换。  
   
 ### <a name="syntax"></a>语法  
@@ -121,7 +124,7 @@ operator Box<volatile T>^(volatile T valueType);
 ### <a name="return-value"></a>返回值  
  A`Platform::Box<T>^`装箱在 ref 类的实例，表示原始值。  
   
-## <a name="t"></a>Box:: operator T 运算符
+## <a name="t"></a>  Box:: operator T 运算符
 实现从 `T` 值类或 `enum` 类 `T` 到 `Box<T>` 的装箱转换。  
   
 ### <a name="syntax"></a>语法  
@@ -138,7 +141,7 @@ operator Box<T>^(T valueType);
  A`Platform::Box<T>^`装箱在 ref 类的实例，表示原始值。  
   
 
-## <a name="value"></a>Box:: value 属性
+## <a name="value"></a> Box:: value 属性
 返回在 `Box` 对象中封装的值。  
   
 ### <a name="syntax"></a>语法  
