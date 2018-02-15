@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs: C++
-helpviewer_keywords: InputIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 类
 在 Windows 运行时中派生的集合提供标准模板库 InputIterator。  
@@ -52,7 +56,7 @@ class InputIterator;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Inputiterator:: Inputiterator](#ctor)|初始化 InputIterator 类的新实例。|  
+|[InputIterator::InputIterator](#ctor)|初始化 InputIterator 类的新实例。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -72,7 +76,7 @@ class InputIterator;
   
  **命名空间：** Platform::Collections  
 
-## <a name="ctor"></a>Inputiterator:: Inputiterator 构造函数
+## <a name="ctor"></a>  Inputiterator:: Inputiterator 构造函数
 初始化 InputIterator 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -88,7 +92,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>Inputiterator:: Operator-&gt;运算符
+## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
 检索当前 InputIterator 指定的元素的地址。  
   
 ### <a name="syntax"></a>语法  
@@ -102,7 +106,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>Inputiterator:: Operator * 运算符
+## <a name="operator-dereference"></a>  InputIterator::operator* Operator
 检索对当前 InputIterator 指定的元素的引用。  
   
 ### <a name="syntax"></a>语法  
@@ -116,7 +120,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Inputiterator:: Operator = = 运算符
+## <a name="operator-equality"></a>  InputIterator::operator== Operator
 指示当前 InputIterator 是否等于指定的 InputIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -134,7 +138,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Inputiterator:: Operator + + 运算符
+## <a name="operator-increment"></a>  InputIterator::operator++ Operator
 递增当前 InputIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -154,7 +158,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Inputiterator:: Operator ！ = 运算符
+## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
 指示当前 InputIterator 是否不等于指定的 InputIterator。  
   
 ### <a name="syntax"></a>语法  

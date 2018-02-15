@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, updatable
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d65bce2b262b7582f9194eb8047d71ce06f3ca16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 Visual c + + 支持可更新提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新提供程序使用 OLE DB 模板。  
@@ -36,7 +38,7 @@ Visual c + + 支持可更新提供程序或可更新的提供程序 （写入）
 > [!NOTE]
 >  UpdatePV 是可更新的提供程序的示例。 UpdatePV 相同作为 MyProv 只是包含可更新的支持。  
   
-##  <a name="vchowmakingprovidersupdatable"></a>使提供程序可更新  
+##  <a name="vchowmakingprovidersupdatable"></a> 使提供程序可更新  
  使提供程序可更新的关键了解你希望你提供程序对数据存储和你想要执行这些操作的提供程序如何执行哪些的操作。 具体而言，主要问题是对数据存储区更新是否要立即完成或延迟 （批处理） 发出更新命令之前。  
   
  你必须首先决定是否要从其继承`IRowsetChangeImpl`或`IRowsetUpdateImpl`行集类中。 根据以下哪种你选择实现，三个方法的功能将受到影响： `SetData`， **InsertRows**，和`DeleteRows`。  
@@ -146,7 +148,7 @@ Visual c + + 支持可更新提供程序或可更新的提供程序 （写入）
   
      有关示例的属性的设置方式，请参阅在该属性设置的地图**CUpdateCommand** （在 Rowset.h) 中[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)。  
   
-##  <a name="vchowwritingtothedatasource"></a>写入到数据源  
+##  <a name="vchowwritingtothedatasource"></a> 写入到数据源  
  若要从数据源中读取，调用**执行**函数。 若要写入的数据源，请调用`FlushData`函数。 （在常规的意义上，刷新表示以保存对表或索引到磁盘进行的修改。）  
   
 ```  
@@ -217,7 +219,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  下面的示例演示如何`FlushData`中实现`RUpdateRowset`类[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)示例 （在示例代码中看到 Rowset.h）：  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
 ...  
@@ -316,7 +318,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  下面的示例演示如何**CommonGetColInfo**中实现函数**CUpdateCommand** （请参阅 UpProvRS.cpp） UpdatePV 中。 请注意如何列具有这**DBCOLUMNFLAGS_ISNULLABLE**为 null 的列。  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////////  
 // CUpdateCommand (in UpProvRS.cpp)  
   
@@ -412,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>列的标志  
- 如果你的列上支持默认值，你需要将其使用中的元数据设置 **\<** *提供程序类***> SchemaRowset**类。 设置*m_bColumnHasDefault* = `VARIANT_TRUE`。  
+ 如果你的列上支持默认值，你需要将其使用中的元数据设置 **\<***提供程序类***> SchemaRowset**类。 设置*m_bColumnHasDefault* = `VARIANT_TRUE`。  
   
  你还可以设置使用指定的列标志的责任**DBCOLUMNFLAGS**枚举类型。 列标志描述列特征。  
   
@@ -428,6 +430,7 @@ trData[0].m_nNumericPrecision = 10;
 trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
                             DBCOLUMNFLAGS_ISFIXEDLENGTH;  
 lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+
 m_rgRowData.Add(trData[0]);  
 ```  
   

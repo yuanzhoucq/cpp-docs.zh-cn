@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
 架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能包含表组成用户定义的层次结构，因此将无法通过阅读确保除架构的知识的方式。 （作为另一个示例，请注意，Visual c + + 向导使用架构行集生成使用者的访问器。）若要允许使用者便可以执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)接口。 在 Visual c + + 应用程序，你使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现**IDBSchemaRowset**。  
   
- `IDBSchemaRowsetImpl`支持以下方法：  
+ `IDBSchemaRowsetImpl` 支持以下方法：  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md)检查针对架构行集的限制的有效性。  
   
@@ -45,11 +47,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB 提供程序向导支持  
  ATL OLE DB 提供程序向导创建会话标头文件中的三个架构类：  
   
--   **C** *短名称* **SessionTRSchemaRowset**  
+-   **C** *ShortName* **SessionTRSchemaRowset**  
   
--   **C** *短名称* **SessionColSchemaRowset**  
+-   **C** *ShortName* **SessionColSchemaRowset**  
   
--   **C** *短名称* **SessionPTSchemaRowset**  
+-   **C** *ShortName* **SessionPTSchemaRowset**  
   
  这些类响应的使用者请求架构信息;请注意，OLE DB 规范需要支持这些三个架构行集：  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  你可以自定义这些类以处理适合于你的提供商的架构信息：  
   
--   在**C***短名称***SessionTRSchemaRowset**，必须填写目录、 表和描述字段 (**trData.m_szType**，**trData.m_szTable**，和**trData.m_szDesc**)。 该向导生成的示例使用只有一个行 （表）。 其他提供程序可能会返回多个表。  
+-   在**C***短名称***SessionTRSchemaRowset**，必须填写目录、 表和描述字段 (**trData.m_szType**， **trData.m_szTable**，和**trData.m_szDesc**)。 该向导生成的示例使用只有一个行 （表）。 其他提供程序可能会返回多个表。  
   
 -   在**C***短名称***SessionColSchemaRowset**，你将为表的名称传递给**DBID**。  
   
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

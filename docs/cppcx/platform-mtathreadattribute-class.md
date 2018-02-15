@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::MTAThreadAttribute::Equals
 - VCCORLIB/Platform::MTAThreadAttribute::GetHashCode
 - VCCORLIB/Platform::MTAThreadAttribute::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::MTAThreadAttribute Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f99b8ab49579d949081af73e76d4bfcb167e2cb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 626d80a40c24f81b8723c4e1b8d916f5a3ba2bd6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 类
 指示应用程序的线程处理模型为多线程单元 (MTA)。  
@@ -61,7 +64,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 
 
-## <a name="ctor"></a>MTAThreadAttribute 构造函数
+## <a name="ctor"></a> MTAThreadAttribute 构造函数
 初始化 MTAThreadAttribute 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -72,7 +75,7 @@ public:MTAThreadAttribute()
   
 
 
-## <a name="equals"></a>MTAThreadAttribute::Equals
+## <a name="equals"></a> MTAThreadAttribute::Equals
 确定指定的对象是否等于当前对象。  
   
 ### <a name="syntax"></a>语法  
@@ -90,7 +93,7 @@ public:virtual override bool Equals(  Object^ obj)
   
 
 
-## <a name="gethashcode"></a>MTAThreadAttribute::GetHashCode
+## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
 返回此实例的哈希代码。  
   
 ### <a name="syntax"></a>语法  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="tostring"></a>MTAThreadAttribute::ToString
+## <a name="tostring"></a> MTAThreadAttribute::ToString
 返回表示当前对象的字符串。  
   
 ### <a name="syntax"></a>语法  

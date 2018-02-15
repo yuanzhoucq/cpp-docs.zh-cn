@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/PlatformIntPtr::IntPtr
 - VCCORLIB/PlatformIntPtr::op_explicit Operator
 - VCCORLIB/PlatformIntPtr::ToInt32
-dev_langs: C++
-helpviewer_keywords: Platform::IntPtr Struct
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 787e8aaa0dc46a651fc4d0ac8b16d9521aebd010
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 93263e1347857b9c78a62852bea96e10c8d68fac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 值类
 表示一个签名指针或句柄，并且其大小特定于平台（32 位或 64 位）。  
@@ -39,9 +42,9 @@ public value struct IntPtr
   
 |成员|描述|  
 |------------|-----------------|  
-|[Intptr:: Intptr](#ctor)|初始化 IntPtr 的一个新实例。|  
+|[IntPtr::IntPtr](#ctor)|初始化 IntPtr 的一个新实例。|  
 |[IntPtr::op_explicit 运算符](#op-explicit)|将指定参数转换为 IntPtr 或指向 IntPtr 值的指针。|  
-|[Intptr:: Toint32](#toint32)|将当前 IntPtr 转换为 32 位整数。|  
+|[IntPtr::ToInt32](#toint32)|将当前 IntPtr 转换为 32 位整数。|  
   
 ### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
@@ -91,7 +94,7 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
   
 
 
-## <a name="toint32"></a> Intptr:: Toint32 方法
+## <a name="toint32"> </a> Intptr:: Toint32 方法
 将当前 IntPtr 值转换为 32 位整数。  
   
 ### <a name="syntax"></a>语法  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -32,18 +33,20 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、 wcstold、_wcstold_l
 将字符串转换为长双精度浮点值。  
@@ -82,7 +85,7 @@ long double wcstold_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- `strtold`返回作为的浮点数的值`long double`，表示将导致溢出时除外 — 在这种情况下，该函数将返回 + /-`HUGE_VALL`。 `HUGE_VALL` 的符号与无法表示的值的符号相匹配。 如果无法执行转换或出现下溢，则 `strtold` 返回 0。  
+ `strtold` 返回作为的浮点数的值`long double`，表示将导致溢出时除外 — 在这种情况下，该函数将返回 + /-`HUGE_VALL`。 `HUGE_VALL` 的符号与无法表示的值的符号相匹配。 如果无法执行转换或出现下溢，则 `strtold` 返回 0。  
   
  `wcstold` 返回类似于 `strtold` 的值。 对于这两个函数，如果发生溢出或下溢，则将 `errno` 设置为 `ERANGE`，并调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
