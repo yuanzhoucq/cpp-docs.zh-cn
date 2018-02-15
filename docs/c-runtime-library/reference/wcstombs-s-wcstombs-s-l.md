@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstombs_s_l
 - wcstombs_s
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstombs_s function
 - string conversion, wide characters
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 863f6dc5b1c7a41145607e8f8ba83466324dac07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
 
@@ -91,16 +94,16 @@ errno_t _wcstombs_s_l(
   
 #### <a name="parameters"></a>参数  
 
-[out]*pReturnValue*  
+[out] *pReturnValue*  
 要转换的字符数。  
   
-[out]*mbstr*  
+[out] *mbstr*  
 生成的已转换多字节字符字符串的缓冲区的地址。  
   
-[in]*sizeInBytes*  
+[in] *sizeInBytes*  
 以字节为单位的大小*mbstr*缓冲区。  
   
-[in]*wcstr*  
+[in] *wcstr*  
 指向要转换的宽字符字符串的指针。  
   
 [in]*计数*  
@@ -116,7 +119,7 @@ errno_t _wcstombs_s_l(
 |错误条件|返回值和 `errno`|  
 |---------------------|------------------------------|  
 |*mbstr*是`NULL`和*sizeInBytes* > 0|`EINVAL`|  
-|*wcstr*是`NULL`|`EINVAL`|  
+|*wcstr*是 `NULL`|`EINVAL`|  
 |目标缓冲区是太小，无法包含转换的字符串 (除非*计数*是`_TRUNCATE`; 请参阅下面的备注)|`ERANGE`|  
   
 如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码并按表中所示设置 `errno`。  

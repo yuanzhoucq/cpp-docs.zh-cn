@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2656b7e1901104b29300f5adb6647e7f3ac1db57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual c + + 工具和 Visual Studio 版本中的功能
 下表显示 Visual Studio 中可用的 Visual C++ 功能。 单元格中的 X 指示功能可用；空单元格指示功能不可用。 括号中的说明指示功能可用，但是受限制。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 |平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|  
 |Windows 桌面||X|X|X|  
 |通用 Windows 平台（手机、平板电脑、PC、Xbox、IoT 和 HoloLens）|X||X|X|  
-|Windows 应用商店 8.1|||X|X|  
+|Microsoft Store 8.1|||X|X|  
 |Windows Phone 8.0|||X|X|  
 |Android|||X|X|  
 |iOS|||X|X|  
@@ -66,10 +69,10 @@ ms.lasthandoff: 12/21/2017
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |适用于 UWP、Windows 8.1、Windows Phone 8.0 的 XAML 模板|X||X|X|  
 |Direct3D 应用程序|X||X|X|  
-|DLL（Windows 应用商店应用）|X||X|X|  
-|静态库（Windows 应用商店应用）|X||X|X|  
+|DLL (通用 Windows)|X||X|X|  
+|静态库 (通用 Windows)|X||X|X|  
 |Windows 运行时组件|X||X|X|  
-|单元测试库（Windows 应用商店应用）|X||X|X|  
+|单元测试应用 (通用 Windows)|X||X|X|  
 |ATL 项目|||X|X|  
 |类库 (CLR)||X|X|X|  
 |CLR 控制台应用程序||X|X|X|  

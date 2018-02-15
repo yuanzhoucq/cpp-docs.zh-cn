@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 提供程序类使用多重继承。 下面的代码演示数据源对象的继承链：  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- 所有 COM 组件均都派生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx`提供有关的所有实现**IUnknown**接口。 它可以处理任何线程处理模型。 `CComCoClass`处理所需的任何错误支持。 如果你想要发送到客户端的更丰富的错误信息，则可以使用某些错误 Api 中`CComCoClass`。  
+ 所有 COM 组件均都派生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供有关的所有实现**IUnknown**接口。 它可以处理任何线程处理模型。 `CComCoClass` 处理所需的任何错误支持。 如果你想要发送到客户端的更丰富的错误信息，则可以使用某些错误 Api 中`CComCoClass`。  
   
  从多个 Impl 类还继承数据源对象。 每个类提供接口的实现。 数据源对象实现`IPersist`， `IDBProperties`， **IDBInitialize**，和**IDBCreateSession**接口。 每个接口是实现所必需的 OLE DB 数据源对象。 你可以选择支持或通过继承或从这些 Impl 类之一不继承支持特定功能。 如果你想要支持**IDBDataSourceAdmin**从继承的接口， **IDBDataSourceAdminImpl**类，以获取所需的功能。  
   

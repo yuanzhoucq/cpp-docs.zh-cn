@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -27,7 +28,8 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 97221d04dcd93fbaa32a3562320d0c098fa001ae
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 打开文件。 这些版本的 [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
@@ -104,7 +107,7 @@ errno_t _wfopen_s(
 ## <a name="unicode-support"></a>Unicode 支持  
  `fopen_s` 支持 Unicode 文件流。 若要打开新的或现有的 Unicode 文件，请将指定所需编码的 `ccs` 标志传递到 `fopen_s`：  
   
- `fopen_s(&fp, "newfile.txt", "rw, ccs=`*编码*`");`  
+ `fopen_s(&fp, "newfile.txt", "rw, ccs=`*encoding*`");`  
   
  允许的值的*编码*是`UNICODE`， `UTF-8`，和`UTF-16LE`。 如果存在为不指定任何值*编码*，`fopen_s`使用 ANSI 编码。  
   

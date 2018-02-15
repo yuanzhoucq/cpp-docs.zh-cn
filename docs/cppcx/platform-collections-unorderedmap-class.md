@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -102,7 +104,7 @@ ref class Map sealed;
 
 **命名空间：** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap:: Clear 方法
+## <a name="clear"></a>  Unorderedmap:: Clear 方法
 
 从当前 UnorderedMap 对象中移除所有键值对。
 
@@ -112,7 +114,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap:: First 方法
+## <a name="first"></a>  Unorderedmap:: First 方法
 
 返回一个迭代器，指定第一个[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)无序映射中的元素。
 
@@ -132,7 +134,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 保留 first 返回的迭代器一种简便方式是将返回值分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myUnorderedMap->First();`。
 
-## <a name="getview"></a>Unorderedmap:: Getview 方法
+## <a name="getview"></a>  Unorderedmap:: Getview 方法
 
 返回当前 UnorderedMap 中; 的只读视图也就是说， [Platform::Collections::UnorderedMapView 类](../cppcx/platform-collections-unorderedmapview-class.md)实现[Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)接口。
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 一个 `UnorderedMapView` 对象。
 
-## <a name="haskey"></a>Unorderedmap:: Haskey 方法
+## <a name="haskey"></a>  Unorderedmap:: Haskey 方法
 
 确定当前 UnorderedMap 中是否包含指定键。
 
@@ -185,14 +187,14 @@ virtual bool Insert(
 *key*  
 键值对中的键部分。 一种*密钥*名称*K*。
 
-*值*  
+*value*  
 键值对中的值部分。 一种*值*名称*V*。
 
 ### <a name="return-value"></a>返回值
 
-`true`如果当前映射中一个现有元素的键匹配*密钥*并且该元素的值部分设置为*值*。 `false`如果当前映射中的没有任何现有元素匹配*密钥*和*密钥*和*值*参数构成键值对并随后添加到当前 UnorderedMap。
+`true` 如果当前映射中一个现有元素的键匹配*密钥*并且该元素的值部分设置为*值*。 `false` 如果当前映射中的没有任何现有元素匹配*密钥*和*密钥*和*值*参数构成键值对并随后添加到当前 UnorderedMap。
 
-## <a name="lookup"></a>Unorderedmap:: Lookup 方法
+## <a name="lookup"></a>  Unorderedmap:: Lookup 方法
 
 检索与类型 K 的指定键关联的类型 V 的值。
 
@@ -229,9 +231,9 @@ A [MapChangedEventHandler\<K，V >](http://msdn.microsoft.com/library/windows/ap
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
-Windows 应用商店应用的 C# 或 Visual Basic 项目 IMap\<K，V > 作为 IDictionary\<K，V >。
+C# 或 Visual Basic 项目 IMap 的 Windows 运行时应用\<K，V > 作为 IDictionary\<K，V >。
 
-## <a name="remove"></a>Unorderedmap:: Remove 方法
+## <a name="remove"></a>  Unorderedmap:: Remove 方法
 
 从 UnorderedMap 对象中删除指定的键值对。
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 键值对中的键部分。 一种*密钥*名称*K*。
 
-## <a name="size"></a>Unorderedmap:: Size 方法
+## <a name="size"></a>  Unorderedmap:: Size 方法
 
 返回的数目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的元素。
 

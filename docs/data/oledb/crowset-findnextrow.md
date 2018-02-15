@@ -1,10 +1,11 @@
 ---
-title: "Crowset:: Findnextrow |Microsoft 文档"
+title: CRowset::FindNextRow | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,39 +18,38 @@ f1_keywords:
 - ATL.CRowset<TAccessor>.FindNextRow
 - ATL::CRowset<TAccessor>::FindNextRow
 - FindNextRow
-dev_langs: C++
-helpviewer_keywords: FindNextRow method
+dev_langs:
+- C++
+helpviewer_keywords:
+- FindNextRow method
 ms.assetid: 36484df9-3625-4f15-bf69-db73a8d91c55
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08dd2a80040c4affb89b19dfff3b22103b4e9547
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9985328ea4f55585e2a1e8261d67f02d44e8f70
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
 查找指定的书签之后的下一步的匹配行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT FindNextRow(   
-   DBCOMPAREOP op,   
-   BYTE* pData,   
+```
+HRESULT FindNextRow(DBCOMPAREOP op,   
+  BYTE* pData,   
    DBTYPE wType,   
    DBLENGTH nLength,   
    BYTE bPrecision,   
    BYTE bScale,   
    BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL    
-) throw( );  
+   CBookmarkBase* pBookmark = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

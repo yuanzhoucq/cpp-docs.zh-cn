@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 命名空间为标准 C++ 构造，用于分组具有相关功能的类型和阻止库中发生名称冲突。 Windows 运行时类型系统要求，必须在命名空间范围的命名空间中声明所有公共 Windows 运行时类型，包括你自己的代码中的那些。 在全局范围内声明的或嵌套在其他类中的公共类型将导致编译时错误。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |private|默认可访问性。 与在标准 C++ 中的含义一样。|否|  
 |protected|与在标准 C++ 中的含义一样（在应用程序或组件中以及元数据中）。|是|  
 |public|与在标准 C++ 中的含义一样。|是|  
-|`public protected`-或者-`protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|  
+|`public protected` -or- `protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|  
 |`protected private` 或 `private protected`|在元数据中不可见；应用程序或组件中的受保护的可访问性。||  
 |`internal` 或 `private public`|成员在应用程序或组件中是公共的，但在元数据中不可见。|否|  
   
