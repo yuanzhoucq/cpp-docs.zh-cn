@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _control87
 - _controlfp
@@ -32,7 +33,8 @@ f1_keywords:
 - controlfp
 - control87_2
 - _control87_2
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - _control87 function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3c4c6188917737e46807979d5f4a7fec350cb3e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2405b569c7e7accb828ba7052a9ea9fae125f0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87、_controlfp、__control87_2
 获取并设置浮点控制字。 `_controlfp` 有一个更安全的版本；请参阅 [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)。  
@@ -147,9 +150,9 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 |`_MCW_RC`舍入控制）|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
 |`_MCW_PC`（精度控制）<br /><br /> （在 ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台上不受支持。）|0x00030000|`_PC_24`（24 位）<br /><br /> `_PC_53`（53 位）<br /><br /> `_PC_64`（64 位）|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_control87`, `_controlfp`, `_control87_2`|\<float.h>|  
   

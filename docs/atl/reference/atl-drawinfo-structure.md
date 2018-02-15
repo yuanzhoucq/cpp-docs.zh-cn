@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
 - ATL_DRAWINFO
 - ATL.ATL_DRAWINFO
-dev_langs: C++
-helpviewer_keywords: ATL_DRAWINFO structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70ea9b2532b8ab63bc9c840e7e08790b3af57342
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 结构
 包含用于呈现到各种目标，如打印机、 图元文件或 ActiveX 控件的信息。  
@@ -55,7 +59,7 @@ struct ATL_DRAWINFO {
  **dwDrawAspect**  
  指定目标的表示方式。 表示形式可以包括内容、 图标、 一个缩略图或打印的文档。 有关可能的值的列表，请参阅[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)和[DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644)。  
   
- **索引**  
+ **lindex**  
  目标的是与绘制操作有关的感兴趣的部分。 中的值而异其解释**dwDrawAspect**成员。  
   
  **ptd**  
@@ -93,12 +97,12 @@ struct ATL_DRAWINFO {
   
  此结构存储用于呈现目标设备的对象的外观的相关信息。 提供的信息可在屏幕、 打印机，或甚至图元文件绘制。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
 ## <a name="see-also"></a>请参阅  
  [结构](../../atl/reference/atl-structures.md)   
- [Iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
+ [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
 
 

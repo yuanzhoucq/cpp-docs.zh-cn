@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sopen_s
 - _wsopen_s
@@ -28,7 +29,8 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 403fc7f285aeebf5fc7b6d4ebb39d1e922d8edc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bc88f047806e21245389837b9f712d3491033a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sopens-wsopens"></a>_sopen_s、_wsopen_s
 打开文件以供共享。 这些版本的 [_sopen 和 _wsopen](../../c-runtime-library/reference/sopen-wsopen.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
@@ -97,8 +100,7 @@ errno_t _wsopen_s(
  已指定 `_O_CREAT` 和 `_O_EXCL` 标志，但 `filename` 已经存在。  
   
  `EINVAL`  
- 
-          `oflag`、`shflag` 或 `pmode` 参数无效，或者 `pfh` 或 `filename` 是空指针。  
+ `oflag`、`shflag` 或 `pmode` 参数无效，或者 `pfh` 或 `filename` 是空指针。  
   
  `EMFILE`  
  没有更多可用的文件描述符。  
@@ -163,8 +165,7 @@ errno_t _wsopen_s(
  打开文件并将其长度截断为零；该文件必须具有写入权限。 无法使用 `_O_RDONLY` 进行指定。 结合使用 `_O_TRUNC` 和 `_O_CREAT` 来打开现有文件或创建文件。  
   
 > [!NOTE]
->  
-          `_O_TRUNC` 标志会损坏指定文件的内容。  
+>  `_O_TRUNC` 标志会损坏指定文件的内容。  
   
  `_O_WRONLY`  
  打开文件以供只写。 无法使用 `_O_RDONLY` 或 `_O_RDWR` 进行指定。  
@@ -198,8 +199,7 @@ errno_t _wsopen_s(
  `_SH_DENYNO`  
  允许读取和写入访问。  
   
- 不同于 `pmode`，始终需要 `_sopen` 参数。 指定 `_O_CREAT` 时，如果该文件不存在，则 `pmode` 将指定在首次关闭新文件时设置的该文件的权限设置。 否则，将忽略 `pmode`。 `pmode` 是一个整数表达式，它包含在 \<sys\stat.h> 中定义的清单常量 `_S_IWRITE` 和 `_S_IREAD` 中的一个或两个。 当给定这两个常量时，将使用按位“或”运算符合并它们。 
-          `pmode` 的含义如下。  
+ 不同于 `pmode`，始终需要 `_sopen` 参数。 指定 `_O_CREAT` 时，如果该文件不存在，则 `pmode` 将指定在首次关闭新文件时设置的该文件的权限设置。 否则，将忽略 `pmode`。 `pmode` 是一个整数表达式，它包含在 \<sys\stat.h> 中定义的清单常量 `_S_IWRITE` 和 `_S_IREAD` 中的一个或两个。 当给定这两个常量时，将使用按位“或”运算符合并它们。 `pmode` 的含义如下。  
   
  `_S_IWRITE`  
  允许写入。  
@@ -214,9 +214,9 @@ errno_t _wsopen_s(
   
  在设置这些权限之前，`_sopen_s` 会将当前文件权限掩码应用到 `pmode`。 （请参阅 [_umask](../../c-runtime-library/reference/umask.md)。）  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_sopen_s`|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|  
 |`_wsopen_s`|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys/types.h>、\<sys/stat.h>、\<share.h>|  

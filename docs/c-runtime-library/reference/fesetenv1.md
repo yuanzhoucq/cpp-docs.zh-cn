@@ -8,8 +8,9 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fesetenv
+ms.topic: reference
+apiname:
+- fesetenv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,19 +27,22 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs: C++
-helpviewer_keywords: fesetenv function
+dev_langs:
+- C++
+helpviewer_keywords:
+- fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64e630afb575523abcb790c29dcd198ba34f263b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2717c0fee2582cac3c9013f3f49ff37744cbde9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fesetenv"></a>fesetenv
 设置当前的浮点环境。  
@@ -65,7 +69,7 @@ int fesetenv(
   
  若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  

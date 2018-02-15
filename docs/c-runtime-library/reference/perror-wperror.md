@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wperror
 - perror
@@ -27,7 +28,8 @@ f1_keywords:
 - _wperror
 - _tperror
 - perror
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tperror function
 - tperror function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bb8dc68154c9a1302fe69dd8416309bf377bdd3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3929d35ac258823a70bf063f2e90e3ce8f1dfb4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="perror-wperror"></a>perror、_wperror
 打印错误消息。  
@@ -84,9 +87,9 @@ void _wperror(
   
  在 Windows 操作系统中，未使用 ERRNO.H 中列出的一些 `errno` 值。 这些值将保留以供 UNIX 操作系统使用。 对于 Windows 操作系统使用的 `errno` 值的列表，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 `perror` 为这些平台未使用的任何 `errno` 值打印一个空字符串。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`perror`|\<stdio.h> 或 \<stdlib.h>|  
 |`_wperror`|\<stdio.h> 或 \<wchar.h>|  

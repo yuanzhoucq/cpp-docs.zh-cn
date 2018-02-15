@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cproj
 - cprojf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/cproj
 - complex/cprojf
 - complex/cprojl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cproj function
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 086abc1446302145eb2749cec10fb07c9d81014a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6afc69e136f6b84b5c6c60681e7670584e32f2d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj、cprojf、cprojl
 检索 Reimann 球体上某个复数的投影。  
@@ -83,9 +85,9 @@ _Lcomplex cprojl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用并返回 `cproj` 和 `_Fcomplex` 值的 `_Lcomplex` 重载。 在 C 程序中，`cproj` 始终采用并返回 `_Dcomplex` 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`cproj`,               `cprojf`, `cprojl`|\<complex.h>|\<ccomplex>|  
   

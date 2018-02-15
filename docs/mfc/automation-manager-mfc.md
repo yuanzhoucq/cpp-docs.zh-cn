@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation-manager-mfc"></a>自动化管理器 (MFC)
 应该将 AUTMGR32.EXE 复制到用来提供远程自动化对象的每台计算机的 Windows 系统目录。 它通常是 C:\WINDOWS\SYSTEM32。  

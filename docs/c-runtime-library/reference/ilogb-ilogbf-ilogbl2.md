@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -38,16 +38,17 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ecf7f9bb38cdd844514001126a98bced67617e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8da5ba71b59f64c38a051fd8f31fa7bf58a4556d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 检索一个整数，以表示指定值以 2 为底的无偏差指数。  
@@ -98,9 +99,9 @@ int ilogbl(
   
  调用此函数相当于调用等效 `logb` 函数，然后将返回值转换为 `int`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
   

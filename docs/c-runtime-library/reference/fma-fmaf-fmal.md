@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21eab7d0adc6cf1952f6f26cdda23c885c63a3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 两个值相乘，添加第三个值，然后将结果舍入，由于中间舍入不会丢失任何精度。  
@@ -106,7 +108,7 @@ long double fmal(
 |问题|返回|  
 |-----------|------------|  
 |`x` = INFINITY、`y` = 0 或<br /><br /> `x` = -0、`y` = INFINITY|NaN|  
-|`x`或`y`= 确切 ± 无穷大，`z`符号相反 = 无穷大|NaN|  
+|`x` 或`y`= 确切 ± 无穷大，`z`符号相反 = 无穷大|NaN|  
 |`x` 或 `y` = NaN|NaN|  
 |非（`x` = 0，`y`= 不定值）和 `z` = NaN<br /><br /> 非（`x`= 不定值，`y`= 0）和 `z` = NaN|NaN|  
 |溢出范围错误|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|  
@@ -119,7 +121,7 @@ long double fmal(
   
  此函数计算值就好像它采取了无限精度，然后将最终结果舍入。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  

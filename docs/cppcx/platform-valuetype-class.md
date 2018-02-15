@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::ValueType::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::ValueType Class
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::ValueType::ToString
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4dba418e74affb2531e3ebbd43d95c35601e9a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4b6fd3ada45e810b95a88090bc98c9305013aaa
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType 类
 值类型实例的基类。  
@@ -40,7 +44,7 @@ public ref class ValueType : Object
 ### <a name="remarks"></a>备注  
  ValueType 类用于构造值类型。 ValueType 派生自有基本成员的 Object。 但是，编译器会将这些基本成员与从 ValueType 类派生的值类型分离。 值类型进行装箱时，编译器会重新附加这些基本成员。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -49,7 +53,7 @@ public ref class ValueType : Object
   
  **元数据：** platform.winmd  
 
-## <a name="tostring"></a>ValueType::ToString 方法
+## <a name="tostring"></a> ValueType::ToString 方法
 返回的字符串表示形式的对象。  
   
 ### <a name="syntax"></a>语法  

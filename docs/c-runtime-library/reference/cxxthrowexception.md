@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CxxThrowException
+ms.topic: reference
+apiname:
+- _CxxThrowException
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CxxThrowException
 - _CxxThrowException
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d1c66f35a61a1b3f8577ac7a1432423906f091ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fb59e3e81a9e92d3a692e91c9c25a92fd09603cd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 生成异常记录并调用运行时环境以开始处理异常。  
@@ -61,7 +65,7 @@ extern "C" void __stdcall _CxxThrowException(
 ## <a name="remarks"></a>备注  
  此方法包含在编译器用来处理异常的仅编译器文件中。 不要直接从代码调用方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **源：**Throw.cpp  
   
 ## <a name="see-also"></a>请参阅  

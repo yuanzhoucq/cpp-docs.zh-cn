@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="where-does-remote-automation-fit-in"></a>远程自动化的适用条件
 DCOM 在 1996 年发布，仅用于 32 位和 64 位平台。 Microsoft 的 Visual Basic 团队始终将 Visual Basic 视为使用自动化允许其组件通信。 缺少分布式版本严重限制了这些功能在企业环境中的使用，因此，开发 Visual Basic 4.0 Enterprise Edition 的团队决定调查自己的针对 OLE 和 COM 的自动化部件的一系列远程处理组件的创建。 显然，主要目标是确保结果与 DCOM 兼容，并确保在 DCOM 可用时可由它替换结果。 它们随后继续运行以便为 16 位和 32 位 Windows 平台实现远程自动化 (RA)。  

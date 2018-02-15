@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fseeki64
 - fseek
@@ -25,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - fseek
 - _fseeki64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fseeki64 function
 - fseeki64 function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 90af1581910ceaadf814050be39bc537cfc3881c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4dd4c4e6550946bafdaf0ad8f521e1e942ae04c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 将文件指针移到指定位置。  
@@ -88,7 +91,7 @@ int _fseeki64(
  `SEEK_SET`  
  文件开头。  
   
- 可以使用 `fseek` 和 `_fseeki64` 在文件的任何位置重新定位指针。 此外还可以在文件结尾外放置指针。 `fseek`和`_fseeki64`清除文件尾指示器，并且不具备任何之前的效果`ungetc`调用针对`stream`。  
+ 可以使用 `fseek` 和 `_fseeki64` 在文件的任何位置重新定位指针。 此外还可以在文件结尾外放置指针。 `fseek` 和`_fseeki64`清除文件尾指示器，并且不具备任何之前的效果`ungetc`调用针对`stream`。  
   
  当文件打开以追加数据时，当前文件位置由最后的 I/O 操作确定，而不是由发生下一个写入的位置确定。 如果在为追加而打开的文件中尚未发生 I/O 操作，则文件位置是文件开头。  
   
@@ -104,7 +107,7 @@ int _fseeki64(
   
  此函数在执行期间将锁定其他线程，因此是线程安全的。 有关非锁定版本，请参阅 [_fseek_nolock、_fseeki64_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

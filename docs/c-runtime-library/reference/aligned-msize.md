@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_msize
+ms.topic: reference
+apiname:
+- _aligned_msize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,21 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_msize
 - aligned_msize
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f94bf064f4fe6e604675eba28867ccdc460530d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e42427fd5c1c879b82dae4f8580627fbfbe67820
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedmsize"></a>_aligned_msize
 返回在堆中分配的存储块的大小。  
@@ -73,9 +77,9 @@ size_t _msize(
   
  此函数验证其参数。 如果 `memblock` 为空指针或 `alignment` 不是 2 的幂，则 `_msize` 会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理了错误，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_msize`|\<malloc.h>|  
   

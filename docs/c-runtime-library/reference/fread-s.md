@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fread_s
+ms.topic: reference
+apiname:
+- fread_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,18 +26,20 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d77f0f7eb0c9eabf8626a920e04534c79048bd90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5fedb1419b3558fc773933619de247cfd3685e06
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freads"></a>fread_s
 从流读取数据。 这是 [fread](../../c-runtime-library/reference/fread.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -78,7 +82,7 @@ size_t fread_s(
   
  此函数将锁定其他线程。 如果需要非锁定版本，请使用 `_fread_nolock`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

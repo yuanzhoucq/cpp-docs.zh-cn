@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _spawnve
 - _wspawnve
@@ -28,7 +29,8 @@ f1_keywords:
 - _spawnve
 - _wspawnve
 - spawnve
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _spawnve function
 - spawnve function
@@ -38,22 +40,23 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d8d7606ab2e9ac589975e0577fac47501dcc9c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 14736a5d2f7b17cffb8e8df8a3affc9d686dcf32
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="spawnve-wspawnve"></a>_spawnve、_wspawnve
 创建并执行更新过程。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -86,7 +89,7 @@ intptr_t _wspawnve(
  指向环境设置的指针的数组。  
   
 ## <a name="return-value"></a>返回值  
- 同步 `_spawnve` 或 `_wspawnve`（为 `_P_WAIT` 指定的 `mode`）中的返回值是新进程的退出状态。 异步 `_spawnve` 或 `_wspawnve`（为 `_P_NOWAIT` 指定的 `_P_NOWAITO` 或 `mode`）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门调用具有非零参数的 `exit` 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （不启动新过程）。 在这种情况下， `errno` 设置为下列值之一。  
+ 同步 `_spawnve` 或 `_wspawnve`（为 `_P_WAIT` 指定的 `mode`）中的返回值是新进程的退出状态。 异步 `_spawnve` 或 `_wspawnve`（为 `_P_NOWAIT` 指定的 `_P_NOWAITO` 或 `mode`）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门调用具有非零参数的 `exit` 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （不启动新过程）。 在这种情况下，`errno` 设置为下列值之一。  
   
  `E2BIG`  
  参数列表超过 1024 个字节。  
@@ -110,9 +113,9 @@ intptr_t _wspawnve(
   
  这些函数验证其参数。 如果 `cmdname` 或 `argv` 是 null 指针，或者 `argv` 指向 null 指针或 `argv[0]` 是空字符串，则调用的参数处理程序无效，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中执行的应用程序。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL`，并返回 -1。 不生成任何新进程。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_spawnve`|\<stdio.h> 或 \<process.h>|  
 |`_wspawnve`|\<stdio.h> 或 \<wchar.h>|  

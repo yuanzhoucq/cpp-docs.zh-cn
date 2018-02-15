@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>使用者向导生成的方法
 ATL OLE DB 使用者向导和 MFC 应用程序向导生成的你应注意某些函数。 请注意，某些方法实现以不同方式在特性化项目中，因此有几条注意事项;下面介绍了每个用例。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。  
   
--   `OpenAll`打开数据源，行集，并开启书签，它们是否可用。  
+-   `OpenAll` 打开数据源，行集，并开启书签，它们是否可用。  
   
--   `CloseAll`关闭所有打开的行集并释放所有的命令执行。  
+-   `CloseAll` 关闭所有打开的行集并释放所有的命令执行。  
   
--   `OpenRowset`OpenAll 打开使用者的行集或行集由调用。  
+-   `OpenRowset` OpenAll 打开使用者的行集或行集由调用。  
   
--   `GetRowsetProperties`检索指向与可以设置哪些属性设置的行集的属性。  
+-   `GetRowsetProperties` 检索指向与可以设置哪些属性设置的行集的属性。  
   
--   `OpenDataSource`打开数据源使用中指定的初始化字符串**数据链接属性**对话框。  
+-   `OpenDataSource` 打开数据源使用中指定的初始化字符串**数据链接属性**对话框。  
   
--   `CloseDataSource`关闭数据源以适当的方式。  
+-   `CloseDataSource` 关闭数据源以适当的方式。  
   
 ## <a name="openall-and-closeall"></a>OpenAll 和 CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll**调用此方法以在使用者中打开行集或行集。 通常，不需要调用`OpenRowset`除非你想要使用多个数据源/会话/行集。 `OpenRowset`在命令或表类标头文件中声明：  
+ **OpenAll**调用此方法以在使用者中打开行集或行集。 通常，不需要调用`OpenRowset`除非你想要使用多个数据源/会话/行集。 `OpenRowset` 在命令或表类标头文件中声明：  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- 此方法检索到的行集的属性集; 的指针此指针可用于设置属性，例如 DBPROP_IRowsetChange。 `GetRowsetProperties`用在用户记录类，如下所示。 你可以修改此代码以设置其他行集属性：  
+ 此方法检索到的行集的属性集; 的指针此指针可用于设置属性，例如 DBPROP_IRowsetChange。 `GetRowsetProperties` 用在用户记录类，如下所示。 你可以修改此代码以设置其他行集属性：  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

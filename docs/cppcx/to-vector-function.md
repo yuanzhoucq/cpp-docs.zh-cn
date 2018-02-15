@@ -7,23 +7,27 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: collection/Windows::Foundation::Collections::to_vector
-dev_langs: C++
-helpviewer_keywords: to_vector Function
+f1_keywords:
+- collection/Windows::Foundation::Collections::to_vector
+dev_langs:
+- C++
+helpviewer_keywords:
+- to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5aa6698306f06fb5d63a8e351054aa2c123749fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 028acf4b3b049f13c7a9ac2204157432fa144caa
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tovector-function"></a>to_vector 函数
-返回 `std::vector` ，其值与指定 IVector 或 IVectorView 参数所代表的集合相同。  
+返回 `std::vector`，其值与指定 IVector 或 IVectorView 参数所代表的集合相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +48,7 @@ inline ::std::vector<T> to_vector(IVectorView<T>^ v);
   
 ### <a name="return-value"></a>返回值  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** collection.h  
   
  **命名空间：** Windows::Foundation::Collections  

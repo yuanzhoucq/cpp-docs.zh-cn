@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - memmove
 - wmemmove
@@ -26,21 +27,23 @@ apitype: DLLExport
 f1_keywords:
 - memmove
 - wmemmove
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: baf823d7ab09109a4b06a15039ed3fd9d7540191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c108b80983d783af2631e4a9972d436db707f5d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 将一个缓冲区移到另一个缓冲区。 提供这些函数的更多安全版本；请参阅 [memmove_s、wmemmove_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md)。  
@@ -88,9 +91,9 @@ or
 #include <wchar.h>  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`memmove`|\<string.h>|  
 |`wmemmove`|\<wchar.h>|  

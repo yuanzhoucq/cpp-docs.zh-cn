@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /CLRUNMANAGEDCODECHECK
-dev_langs: C++
+f1_keywords:
+- /CLRUNMANAGEDCODECHECK
+dev_langs:
+- C++
 helpviewer_keywords:
 - -CLRUNMANAGEDCODECHECK linker option
 - /CLRUNMANAGEDCODECHECK linker option
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0ac6b7c2c0ba9ea14a2ddd9c227143ec71e2b93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f32ae791ebb09d3d2cfced48c42f982580e69b63
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK（添加 SupressUnmanagedCodeSecurityAttribute）
 **/CLRUNMANAGEDCODECHECK**指定链接器是否将应用<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>到链接器生成`PInvoke`从托管代码调用到本机 Dll。  
@@ -36,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  默认情况下，链接器 SuppressUnmanagedCodeSecurityAttribute 适用于链接器生成`PInvoke`调用。 当**/CLRUNMANAGEDCODECHECK**实际上，是 SuppressUnmanagedCodeSecurityAttribute 则不会应用。  
   
- 链接器仅将属性添加到使用编译的对象**/clr**或**/clr: pure**。 链接器不会生成`PInvoke`中使用编译的对象的调用**/clr: safe**。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
+ 链接器仅将属性添加到使用编译的对象**/clr**或**/clr: pure**。 但是， **/clr: pure**和**/clr: safe**编译器选项在 Visual Studio 2015 中弃用，并将编译器的未来版本中删除。  
   
  A`PInvoke`链接器找不到一个托管的符号来满足中托管的调用方的引用，但可以查找本机符号来满足该引用时，调用将生成链接器。 有关详细信息`PInvoke`，请参阅[从托管代码调用本机函数](../../dotnet/calling-native-functions-from-managed-code.md)。  
   
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
-1.  请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>。  
+1.  请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>。  
   
 ## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   

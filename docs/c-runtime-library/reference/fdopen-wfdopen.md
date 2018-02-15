@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
 
@@ -82,7 +85,7 @@ FILE *_wfdopen(
 
 ## <a name="remarks"></a>备注
 
-`_fdopen`函数将 I/O 流与由标识的文件相关联*fd*，从而允许对为低级别 I/O 进行缓冲和格式化打开的文件。 `_wfdopen`是的宽字符版本`_fdopen`;*模式*参数`_wfdopen`是宽字符字符串。 除此以外，`_wfdopen` 和 `_fdopen` 的行为完全相同。
+`_fdopen`函数将 I/O 流与由标识的文件相关联*fd*，从而允许对为低级别 I/O 进行缓冲和格式化打开的文件。 `_wfdopen` 是的宽字符版本`_fdopen`;*模式*参数`_wfdopen`是宽字符字符串。 除此以外，`_wfdopen` 和 `_fdopen` 的行为完全相同。
 
 文件描述符传递给`_fdopen`拥有返回`FILE *`流。 如果`_fdopen`成功，请不要调用[\_关闭](../../c-runtime-library/reference/close.md)上的文件描述符。 调用[fclose](../../c-runtime-library/reference/fclose-fcloseall.md)对返回`FILE *`也会关闭的文件描述符。
 
@@ -95,7 +98,7 @@ FILE *_wfdopen(
 *模式*字符串指定为文件请求的文件访问的类型：  
 
 `"r"`  
-打开以便读取。 如果文件不存在或找不到， `fopen` 调用将失败。
+打开以便读取。 如果文件不存在或找不到，`fopen` 调用将失败。
 
 `"w"`  
 打开用于写入的空文件。 如果给定文件存在，则其内容会被销毁。
@@ -134,7 +137,7 @@ FILE *_wfdopen(
 
 有效字符*模式*中使用字符串`fopen`和`_fdopen`对应于*oflag*中使用自变量[\_打开](../../c-runtime-library/reference/open-wopen.md)和[\_sopen](../../c-runtime-library/reference/sopen-wsopen.md)，此表中所示：
 
-|中的字符*模式*字符串|等效*oflag*值`_open`和`_sopen`|
+|中的字符*模式*字符串|等效*oflag*值`_open`和 `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124;\_O\_追加**(通常 **\_O\_WRONLY &#124;\_O\_CREAT &#124;\_O\_追加**)|
 |`a+`|**\_O\_RDWR &#124;\_O\_追加**(通常 **\_O\_RDWR &#124;\_O\_追加 &#124;\_O\_CREAT** )|
@@ -142,12 +145,12 @@ FILE *_wfdopen(
 |`r+`|**\_O\_RDWR**|
 |`w`|**\_O\_WRONLY** (通常 **\_O\_WRONLY &#124;\_O\_CREAT &#124;\_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (通常 **\_O\_RDWR &#124;\_O\_CREAT &#124;\_O\_TRUNC**)|
-|`b`|**\_O\_二进制**|
-|`t`|**\_O\_文本**|
+|`b`|**\_O\_BINARY**|
+|`t`|**\_O\_TEXT**|
 |`c`|无|
 |`n`|无|
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
@@ -209,8 +212,8 @@ Lines in file: 2
 ## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)   
-[\_dup、 \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
+[\_dup, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
 [fclose、 \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
 [fopen、 \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
-[freopen、 \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
+[freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
 [\_打开， \_wopen](../../c-runtime-library/reference/open-wopen.md)

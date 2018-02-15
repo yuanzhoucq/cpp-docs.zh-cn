@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>创建使用远程自动化的程序
 任何自动化对象和任何自动化控制器都能使用远程自动化，而无需更改源代码、重新编译或重新链接。 一旦您拥有可本地工作的设置（即在同一计算机上），则只需执行几个步骤即可远程操作它。  

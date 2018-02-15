@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b5b76543067b3df52e51b28ae4fc77cfa007860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9341fd3e480fd27f91ccd1ebb1158a7a300f0ead
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 检索复数的自变量，沿负实轴进行分支切割。  
@@ -83,9 +85,9 @@ long double cargl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此可以调用采用 `_Fcomplex` 或 `_Lcomplex` 值的 `carg` 的重载，并返回 `float` 或 `long double` 值。 在 C 程序中，`carg` 始终采用 `_Dcomplex` 值并返回 `double` 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`carg`,               `cargf`, `cargl`|\<complex.h>|\<ccomplex>|  
   

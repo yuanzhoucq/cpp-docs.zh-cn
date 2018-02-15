@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -35,7 +36,8 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69edd654eac52de75de9b928e19f50def894d5e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5481a27f525cd09f84286e0c38ec33ad09b099e5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 格式化并打印到控制台。 这些版本的 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,7 +107,7 @@ int _cwprintf_s_l(
  打印的字符数。  
   
 ## <a name="remarks"></a>备注  
- 这些函数会格式化一系列字符和值并将其直接输出到控制台，并使用 `_putch` 函数（`_cwprintf_s` 为 `_putwch`）来输出字符。 每个 `argument` （如果有）根据 `format`中相应的格式规范进行转换和输出。 格式具有与 [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 函数的 `format` 参数相同的形式和函数。 与不同`fprintf_s`， `printf_s`，和`sprintf_s`函数，两者`_cprintf_s`也不`_cwprintf_s`会换行字符将转换为回车换行符 (CR-LF) 组合输出时。  
+ 这些函数会格式化一系列字符和值并将其直接输出到控制台，并使用 `_putch` 函数（`_cwprintf_s` 为 `_putwch`）来输出字符。 每个 `argument`（如果有）根据 `format` 中相应的格式规范进行转换和输出。 格式具有与 [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 函数的 `format` 参数相同的形式和函数。 与不同`fprintf_s`， `printf_s`，和`sprintf_s`函数，两者`_cprintf_s`也不`_cwprintf_s`会换行字符将转换为回车换行符 (CR-LF) 组合输出时。  
   
  一个重要区别在于，在 Windows NT 中使用 `_cwprintf_s` 时，它将显示 Unicode 字符。 与 `_cprintf_s` 不同，`_cwprintf_s` 使用当前控制台区域设置  
   
@@ -122,9 +125,9 @@ int _cwprintf_s_l(
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|  
 |`_tcprintf_s_l`|`_cprintf_s_l`|`_cprintf_s_l`|`_cwprintf_s_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_cprintf_s`，`_cprintf_s_l`|\<conio.h>|  
 |`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h>|  

@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /clr compiler option [C++], migrating to /clr:pure
 - migration [C++], pure MSIL
 - pure MSIL [C++], porting to
 ms.assetid: 5ffb1184-2095-4ade-84aa-4fa6324bc764
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -21,10 +23,10 @@ ms.workload:
 - cplusplus
 - dotnet
 ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>如何：迁移到 /clr:pure (C++/CLI)
 本主题讨论了将迁移到纯 MSIL 使用时可能出现的问题**/clr: pure** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 本主题假定正在迁移的代码当前编译为混合程序集使用**/clr**选项，因为纯 MSIL 从非托管代码的迁移路径不是一个直接。 对于非托管代码，请参阅[如何： 迁移到 /clr](../dotnet/how-to-migrate-to-clr.md)然后再尝试将迁移到纯 MSIL。  

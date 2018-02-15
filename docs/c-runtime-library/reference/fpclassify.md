@@ -5,8 +5,9 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fpclassify
+ms.topic: reference
+apiname:
+- fpclassify
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f1dac5272bbc8cf956bf8bcfdbd31b1f71b4708
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 81a2c9c5237d455908e1d0e4f58bff87418a7f8b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fpclassify"></a>fpclassify
 返回参数的浮点分类。  
@@ -68,7 +70,7 @@ int fpclassify(
 ## <a name="return-value"></a>返回值  
  `fpclassify` 返回一个指示参数 `x` 的浮点类的整数值。 此表列出了由 `fpclassify` 返回的在 \<math.h 1> 中定义的可能值。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`FP_NAN`|静态、信令或不确定的 NaN|  
 |`FP_INFINITE`|正或负无穷大|  
@@ -79,7 +81,7 @@ int fpclassify(
 ## <a name="remarks"></a>备注  
  在 C 中，`fpclassify` 是一个宏；在 C++ 中，`fpclassify` 是使用参数类型 `float`、`double` 或 `long double` 的重载函数。 在任一情况下，返回的值取决于参数表达式的有效类型，而不是任何中间表示形式。 例如，转换为 `float` 时，正常 `double` 或 `long double` 值可能成为无穷大、非常规，或零值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数/宏|必需的标头 (C)|必需的标头 (C++)|  
 |---------------------|---------------------------|-------------------------------|  

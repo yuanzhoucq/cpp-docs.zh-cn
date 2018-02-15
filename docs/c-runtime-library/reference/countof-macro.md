@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,21 +23,23 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd7273690f75daf4d011a18da354ab8359268556
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f83244ce231ff3e11bc6fee1bbd221840fc1b83
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="countof-macro"></a>_countof 宏
 计算静态分配的数组中元素的数量。  
@@ -59,7 +62,7 @@ size_t _countof(
 ## <a name="remarks"></a>备注  
  确保 `array` 实际上是数组，而不是指针。 在 C 中，如果 `_countof` 是指针，则 `array` 将生成错误结果。 在 C++ 中，如果 `_countof` 是指针，则 `array` 将无法编译。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |宏|必需的标头|  
 |-----------|---------------------|  

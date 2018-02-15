@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -26,7 +27,8 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 571772a5a75a36a3c49adeb560a4814a5c7fcae6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7f9f35fba63fd5b0866a8f2fe13164855d722588
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
 从当前环境中获取值。  [_dupenv_s、_wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) 的版本，使用 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 来分配内存，以提供其他调试信息。  
@@ -76,8 +79,7 @@ errno_t _wdupenv_s_dbg(
  用于存储变量值的缓冲区。  
   
  `numberOfElements`  
- 
-          `buffer` 的大小。  
+ `buffer` 的大小。  
   
  `varname`  
  环境变量名称。  
@@ -109,9 +111,9 @@ errno_t _wdupenv_s_dbg(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_dupenv_s_dbg`|\<crtdbg.h>|  
 |`_wdupenv_s_dbg`|\<crtdbg.h>|  

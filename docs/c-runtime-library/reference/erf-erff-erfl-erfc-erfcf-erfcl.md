@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -28,22 +29,24 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 54256f68263ea966466c9c038f429ab4a73fc868
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fa60c6bb6c3c11a596589a411a7d094cc41c65fa
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 计算某个值的误差函数或补余误差函数。  
@@ -99,7 +102,7 @@ long double erfcl(
   
  由于 C++ 允许重载，因此你可以调用采用并返回 `erf` 和 `erfc` 类型的 `float` 和 `long double` 重载。 在 C 程序中，`erf` 和 `erfc` 始终采用并返回 `double`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

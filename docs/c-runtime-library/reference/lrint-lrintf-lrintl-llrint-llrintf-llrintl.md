@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -42,7 +42,8 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -51,16 +52,17 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2774b22f0b108349d90abc113430f1a573d2cbb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 80a331618df913040ea145346299ebd30509ce8e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 使用当前舍入模式和方向将指定浮点值舍入到最接近的整数值。  
@@ -128,7 +130,7 @@ long long int llrintl(
   
  **特定于 Microsoft**：当结果超出返回类型的范围时，或者当参数为 NaN 或 无穷大时，返回值是定义的实现。 Microsoft 编译器返回零 (0) 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  

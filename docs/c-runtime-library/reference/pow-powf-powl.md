@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - powl
 - pow
@@ -29,7 +30,8 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 16a0d7beefff97eca04e5f94ab720cda4728935f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 09b618e557fffadd3bfffb431fc7e89458c4f420
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 计算 `x` 的 `y` 次幂。  
@@ -116,9 +119,9 @@ long double powl(
   
  `pow(int, int)` 将不再可用。 如果使用此重载，则编译器可以发出 C2668。 若要避免此问题，将第一个参数转换为 `double`、`float` 或 `long double`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`pow`, `powf`, `powl`|\<math.h>|  
   

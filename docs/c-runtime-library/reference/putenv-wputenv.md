@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -29,7 +30,8 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12b1379ea70c841f1689a8b83fae7ca7f43f5789
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putenv-wputenv"></a>_putenv、_wputenv
 创建、修改或删除环境变量。 提供这些函数的更多安全版本；请参阅 [_putenv_s、_wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -91,14 +94,14 @@ int _wputenv(
   
  不直接更改环境条目：改用 `_putenv` 或 `_wputenv` 更改它。 具体而言，直接释放 `_environ[]` 全局数组的元素可能会导致寻址无效的内存。  
   
- `getenv` 和 `_putenv` 使用全局变量 `_environ` 来访问环境表；`_wgetenv` 和 `_wputenv` 使用 `_wenviron`。 `_putenv`和`_wputenv`可能会更改的值`_environ`和`_wenviron`，因此失效`_envp`参数`main`和`_wenvp`参数`wmain`。 因此，使用 `_environ` 或 `_wenviron` 来访问的环境信息是安全的。 有关 `_putenv` 和 `_wputenv` 与全局变量关系的详细信息，请参阅 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。  
+ `getenv` 和 `_putenv` 使用全局变量 `_environ` 来访问环境表；`_wgetenv` 和 `_wputenv` 使用 `_wenviron`。 `_putenv` 和`_wputenv`可能会更改的值`_environ`和`_wenviron`，因此失效`_envp`参数`main`和`_wenvp`参数`wmain`。 因此，使用 `_environ` 或 `_wenviron` 来访问的环境信息是安全的。 有关 `_putenv` 和 `_wputenv` 与全局变量关系的详细信息，请参阅 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。  
   
 > [!NOTE]
 >  `_putenv` 和 `_getenv` 系列的函数不是线程安全函数。 当 `_putenv` 修改字符串时，`_getenv` 可能会返回字符串指针，从而导致随机性失败。 确保对这些函数的调用同步。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_putenv`|\<stdlib.h>|  
 |`_wputenv`|\<stdlib.h> 或 \<wchar.h>|  

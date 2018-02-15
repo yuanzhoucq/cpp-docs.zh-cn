@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -27,23 +28,25 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ed7c12cfc0755360c8512a60ba89b924518b5a1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec98ae83793d2f72026bd71ea1c625069df23b7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
 通过以下方式安装或卸载客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告过程（仅限调试版本）中。  
@@ -99,9 +102,9 @@ int YourReportHook( int reportType, char *message, int *returnValue );
 > [!NOTE]
 >  假设应用程序使用 `/clr` 编译，并且在应用程序退出 main 后调用报告函数，则在报告函数调用任何 CRT 函数时 CLR 将引发异常。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportHook2`|\<crtdbg.h>|\<errno.h>|  
 |`_CrtSetReportHookW2`|\<crtdbg.h>|\<errno.h>|  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -32,7 +33,8 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84b2293114acd31d0baf1f3a595deba9247d6120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 004186bc7ea74cb6ab2c39d25a9b3d3efeb556fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit、iswdigit、_isdigit_l、_iswdigit_l
 确定整数是否表示十进制数字字符。  
@@ -86,7 +89,7 @@ int _iswdigit_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是十进制数字字符的特定表示形式，则每个例程将返回非零值。 `isdigit`返回一个非零值，如果`c`是一个十进制数 (0-9)。 如果 `c` 是对应于十进制数字字符的宽字符，则 `iswdigit` 返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是十进制数字字符的特定表示形式，则每个例程将返回非零值。 `isdigit` 返回一个非零值，如果`c`是一个十进制数 (0-9)。 如果 `c` 是对应于十进制数字字符的宽字符，则 `iswdigit` 返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  这些后缀为 `_l` 的函数版本将传入的区域设置而不是当前区域设置用于其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -99,9 +102,9 @@ int _iswdigit_l(
 |`_istdigit`|`isdigit`|[_ismbcdigit](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswdigit`|  
 |`_istdigit_l`|`_isdigit_l`|[_ismbcdigit_l](../../c-runtime-library/reference/ismbcalnum-functions.md)|`_iswdigit_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`isdigit`|\<ctype.h 1>|  
 |`iswdigit`|\<ctype.h 1> 或 \<wchar.h 1>|  

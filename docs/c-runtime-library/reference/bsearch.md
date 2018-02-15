@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: bsearch
+ms.topic: reference
+apiname:
+- bsearch
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: bsearch
-dev_langs: C++
+f1_keywords:
+- bsearch
+dev_langs:
+- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1db24ea4be15c4111b94a28323903dd3f2c3ed7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6b855292a99313aad6b2431c7cecf77538b38d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bsearch"></a>bsearch
 执行排序数组的二进制搜索。 提供此函数的一个更安全的版本，请参阅 [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)。  
@@ -83,9 +88,9 @@ void *bsearch(
   
  此函数验证其参数。 如果未找到 `compare`、 `key` 或 `num` 为 `NULL`，或者如果 `base` 为 `NULL` 且 *`num` 不为零，或者如果 `width` 为零，则将调用无效的参数处理程序（如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`bsearch`|\<stdlib.h> 和 \<search.h>|  
   

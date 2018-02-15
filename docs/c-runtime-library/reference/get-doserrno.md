@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_doserrno
+ms.topic: reference
+apiname:
+- _get_doserrno
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,21 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - _get_doserrno
 - get_doserrno
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8eff0ac1a97c9a1d48b82601eb0d6dc0bb8bed0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ccda58f0de7a22a5fe54e70e512cb4ae88d063e0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 请先获取由操作系统返回的错误值，然后再将该值转换为 `errno` 值。  
@@ -65,9 +69,9 @@ errno_t _get_doserrno(
   
  在 \<errno.h> 中定义 `_doserrno` 的可能值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_get_doserrno`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|  
   

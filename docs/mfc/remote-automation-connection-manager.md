@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>远程自动化连接管理器
 若要配置客户端计算机和服务器计算机，则需要进行注册表更改。 与其手动执行此操作，不如使用远程自动化连接 (RAC) 管理器工具，因为后者方便得多。 需要将工具 RACMGR32.EXE 以及 RACREG32.DLL 复制到您选择的所有目录。 将此工具放入 PATH 后，可以使用 Run 从任务栏执行它。 或者，也可以在“开始”菜单中创建此工具的快捷方式或放置对它的引用。  

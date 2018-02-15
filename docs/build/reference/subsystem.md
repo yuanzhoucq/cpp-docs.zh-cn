@@ -1,29 +1,33 @@
 ---
-title: "-SUBSYSTEM |Microsoft 文档"
+title: -SUBSYSTEM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /subsystem
-dev_langs: C++
+f1_keywords:
+- /subsystem
+dev_langs:
+- C++
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 945e0d6da5ff1c5f24f8c0e10693f06334e0a25c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 指定可执行映像需要的执行环境。  
@@ -55,7 +59,7 @@ ms.lasthandoff: 12/21/2017
  在 Windows 中的 POSIX 子系统中运行的应用。  
   
  WINDOWS  
- 在 Windows 图形环境中运行的应用。 这包括桌面应用和 Windows 应用商店应用。  
+ 在 Windows 图形环境中运行的应用。 这包括桌面应用和通用 Windows 平台 (UWP) 应用。  
   
  WINDOWSCE  
  WINDOWSCE 子系统指示应用要在具有 Windows CE 内核版本的设备上运行。 内核版本包括 PocketPC、Windows Mobile、Windows Phone 7、Windows CE V1.0-6.0R3 和 Windows Embedded Compact 7。  

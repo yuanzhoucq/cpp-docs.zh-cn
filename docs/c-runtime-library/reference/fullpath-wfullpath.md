@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -28,7 +29,8 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9874d4c0b3576f79880d95a04285be9ff299c7c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 创建指定相对路径名称的绝对或完整路径名称。  
@@ -108,7 +111,7 @@ wchar_t *_wfullpath(
   
  如果 `absPath` 缓冲区为 `NULL`，`_fullpath` 调用 [malloc](../../c-runtime-library/reference/malloc.md) 来分配缓冲区，并忽略 `maxLength` 参数。 调用方负责视情况解除分配此缓冲区（使用 [free](../../c-runtime-library/reference/free.md)）。 如果 `relPath` 参数指定一个磁盘驱动器，则该驱动器的当前目录结合使用此路径。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

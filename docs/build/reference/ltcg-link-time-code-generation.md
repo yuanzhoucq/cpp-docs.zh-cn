@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG（链接时间代码生成）
 ```  
@@ -65,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [/FIXED](../../build/reference/fixed-fixed-base-address.md)  
   
--   /clr  
+-   /LTCG  
   
 -   [/MAP](../../build/reference/map-generate-mapfile.md)  
   
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/LTCG 和 MSIL 模块  
  指定 [/LTCG](../../build/reference/gl-whole-program-optimization.md) 时，使用 [/GL](../../build/reference/clr-common-language-runtime-compilation.md) 和 **/clr** 编译的模块可用作链接器的输入：  
   
--   **/LTCG**可接受本机对象文件、 混合本机/托管对象文件 (使用编译的**/clr**)，和纯对象文件 (使用编译的**/clr: pure**)，和安全对象文件 （使用编译的**/clr: safe**)。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
+-   **/LTCG**可接受本机对象文件和混合本机/托管对象文件 (使用编译的**/clr**)。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
--   **/LTCG**可以接受安全的.netmodule 文件，可以通过使用创建**/clr: safe /LN** Visual c + + 和**/target: module**任何.NET Visual Studio 编译器中。 **/clr** 不接受使用 **/clr:pure** 或 **/LTCG**生成的 .Netmodule。  
-  
--   /LTCG:PGI 不接受使用 **/GL** 和 **/clr**编译的本机模块，也不接受纯模块（使用 **/clr:pure**生成）  
+-   /Ltcg: pgi 不接受使用编译的本机模块**/GL**和**/clr**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>。  
+-   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>。  
   
 ## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   

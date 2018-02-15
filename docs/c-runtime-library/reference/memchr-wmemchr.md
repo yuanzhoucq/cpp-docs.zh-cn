@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wmemchr
 - memchr
@@ -25,21 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f0eb93347f76c7becf44fb7f36fb066fe41f3f41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d008c0dfaae7490dd23fdd5fe3206b0c5c1d76fc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 在缓冲区中查找字符。  
@@ -97,9 +100,9 @@ const wchar_t *wmemchr(
   
  在 C 中，这些函数采用第一个参数的一个 `const` 指针。 在 C++ 中，有两个重载可用。 采用指向 `const` 的指针的重载返回指向 `const` 的指针；采用指向非`const` 的版本的指针返回指向非`const` 的指针。 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS`const`和非-`const`提供了这些函数的版本。 如果在 C++ 中需要这两个 C++ 重载的非 `const` 行为，请定义符号 _CONST_RETURN。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`memchr`|\<memory.h> 或 \<string.h>|  
 |`wmemchr`|\<wchar.h>|  

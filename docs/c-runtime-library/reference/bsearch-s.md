@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: bsearch_s
+ms.topic: reference
+apiname:
+- bsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: bsearch_s
-dev_langs: C++
+f1_keywords:
+- bsearch_s
+dev_langs:
+- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c1ec2b76d64f9a65d19362f592483490c8b9bb3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bsearchs"></a>bsearch_s
 执行排序数组的二进制搜索。 这是 [bsearch](../../c-runtime-library/reference/bsearch.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -99,9 +104,9 @@ void *bsearch_s(
   
  如果搜索的数据结构是对象的一部分，且比较函数需要访问该对象的成员，则 `context` 指针可能有用。 `compare` 函数可能会将 void 指针转换为适当的对象类型并访问该对象的成员。 添加 `context` 参数将使得 `bsearch_s` 更安全，因为其他上下文可用于避免重新进入 Bug 与使用静态变量以使数据对 `compare` 函数可用相关联。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`bsearch_s`|\<stdlib.h> 和 \<search.h>|  
   

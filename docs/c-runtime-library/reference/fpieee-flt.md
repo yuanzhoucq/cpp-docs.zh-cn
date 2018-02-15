@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fpieee_flt
+ms.topic: reference
+apiname:
+- _fpieee_flt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63472ad24a981a39a20e6c0cabb82f7c96d1e59e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88d05d4d8c7f403cc2702c5a0ec3b2af840bd320
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 为 IEEE 浮点异常调用用户定义的陷阱处理程序。  
@@ -82,7 +86,7 @@ int _fpieee_flt(
   
  已禁用的挂起的异常在您启用它们之后将会引发。 这在将 `_fpieee_flt` 用作异常筛选器时会导致未定义的行为。 在启用浮点异常之前，始终调用 [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

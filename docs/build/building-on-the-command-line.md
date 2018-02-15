@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令行上生成 C/c + + 代码
 
@@ -82,16 +85,16 @@ ms.lasthandoff: 01/03/2018
 >   
 > vcvarsall.bat 文件在不同的版本中也会有所不同。 如果还了 Visual c + + 的早期版本的计算机上安装 Visual c + + 的当前版本，不能运行 vcvarsall.bat 或另一个命令文件在同一命令提示符窗口中的不同版本中。  
  
-在现有的命令窗口中指定特定生成体系结构的最简单方法是使用 vcvarsall.bat 文件。 你可以使用 vcvarsall.bat 设置环境变量以配置适用于本机的 32 位或 64 位编译，或为 x86、 x64 或 ARM 处理器的交叉编译命令行若要面向 Windows 应用商店，通用 Windows 平台上或 Windows 桌面平台;若要指定的 Windows SDK，可使用;并指定的平台工具集版本。 如果未不提供任何参数，vcvarsall.bat 将配置环境变量以供使用当前的 32 位本机编译器面向 x86 的 Windows 桌面目标。 但是，你可以使用它来配置任何本机或跨编译器工具。 如果指定的编译器配置，未安装或在你的生成计算机体系结构上不可用，将显示一条错误消息。 下表显示支持的体系结构自变量：  
+在现有的命令窗口中指定特定生成体系结构的最简单方法是使用 vcvarsall.bat 文件。 你可以使用 vcvarsall.bat 设置环境变量以配置适用于本机的 32 位或 64 位编译，或为 x86、 x64 或 ARM 处理器的交叉编译命令行若要面向 Microsoft 应用商店，通用 Windows 平台上或 Windows 桌面平台;若要指定的 Windows SDK，可使用;并指定的平台工具集版本。 如果未不提供任何参数，vcvarsall.bat 将配置环境变量以供使用当前的 32 位本机编译器面向 x86 的 Windows 桌面目标。 但是，你可以使用它来配置任何本机或跨编译器工具。 如果指定的编译器配置，未安装或在你的生成计算机体系结构上不可用，将显示一条错误消息。 下表显示支持的体系结构自变量：  
   
 |Vcvarsall.bat 体系结构自变量|编译器|主机计算机体系结构|生成输出体系结构|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|x86 32 位本机|x86、x64|x86|  
-|x86\_amd64 或 x86\_x64|x86 跨平台上的 x64|x86、x64|X64|  
+|x86\_amd64 or x86\_x64|x86 跨平台上的 x64|x86、x64|x64|  
 |x86_arm|x86 跨平台上的 ARM|x86、x64|ARM|  
-|amd64 或 x64|x64 64 位本机编译器|X64|X64|  
-|amd64\_x86 或 x64\_x86|x64 上的 x86 跨|X64|x86|  
-|amd64\_arm 或 x64\_arm|平台 x64 兼容上的 ARM|X64|ARM|  
+|amd64 或 x64|x64 64 位本机编译器|x64|x64|  
+|amd64\_x86 或 x64\_x86|x64 上的 x86 跨|x64|x86|  
+|amd64\_arm 或 x64\_arm|平台 x64 兼容上的 ARM|x64|ARM|  
   
 你可以使用**存储**或**uwp**选项以指定的平台类型，还是两者皆未指定桌面应用程序。 若要指定的 Windows SDK 版本，可以使用一个完整的 Windows 10 SDK 数字，如 10.0.10240.0，或指定 8.1 若要使用 Windows 8.1 SDK。 使用 14.0 指定 Visual Studio 2015 编译器工具集;默认情况下，环境设置为使用 Visual Studio 2017 编译器工具集。
 
@@ -135,7 +138,7 @@ ms.lasthandoff: 01/03/2018
 [CL](../build/reference/compiling-a-c-cpp-program.md)  
 使用编译器 (cl.exe) 可编译源代码文件，并将其链接到应用、库和 DLL 中。  
   
-[链接](../build/reference/linking.md)  
+[Link](../build/reference/linking.md)  
 使用链接器 (link.exe) 可将已编译的对象文件和库链接到应用和 DLL 中。  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
@@ -176,7 +179,7 @@ ms.lasthandoff: 01/03/2018
   
 ## <a name="related-sections"></a>相关章节  
 
-[/MD、 /MT、 /LD （使用运行时库）](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD、/MT、/LD（使用运行时库）](../build/reference/md-mt-ld-use-run-time-library.md)  
 介绍了如何使用这些编译器选项来使用“Debug”或“Release”运行时库。  
   
 [C/c + + 编译器选项](../build/reference/compiler-options.md)  

@@ -1,10 +1,11 @@
 ---
-title: "Cdynamicaccessor:: Getblobsizelimit |Microsoft 文档"
+title: CDynamicAccessor::GetBlobSizeLimit | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,37 +14,38 @@ f1_keywords:
 - CDynamicAccessor::GetBlobSizeLimit
 - GetBlobSizeLimit
 - ATL.CDynamicAccessor.GetBlobSizeLimit
-dev_langs: C++
-helpviewer_keywords: GetBlobSizeLimit method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetBlobSizeLimit method
 ms.assetid: 7131e7c4-6e05-42f3-9d87-110301b672f2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3162ee335902b887facbc6e3aec33523622be5f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69eeae3d25f8db631e78971c8dcbb5befa63fb45
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicaccessorgetblobsizelimit"></a>CDynamicAccessor::GetBlobSizeLimit
 检索以字节为单位的最大 BLOB 大小。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-const DBLENGTH GetBlobSizeLimit( ) const;  
+```cpp
+const DBLENGTH GetBlobSizeLimit() const;  
   
 ```  
   
 ## <a name="remarks"></a>备注  
  返回 BLOB 处理值`nBlobSize`由中设置[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

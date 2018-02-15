@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _creat
 - _wcreat
@@ -29,7 +30,8 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0355f28ada6313e201b8d761813767135ee3cbf8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 新建文件。 `_creat` 和 `_wcreat` 已弃用；请改用 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -97,7 +100,7 @@ int _wcreat(
   
  如果由 `filename` 指定的文件不存在，则创建具有给定权限设置的新文件并将其打开以供写入。 如果该文件已存在，且其权限设置允许写入，则 `_creat` 将文件长度截断为 0、销毁以前的内容并将其打开以供写入。 权限设置 `pmode` 仅适用于新创建的文件。 新文件第一次关闭后收到指定的权限设置。 整数表达式 `pmode` 包含在 SYS\Stat.h 中定义的 `_S_IWRITE` 和 `_S_IREAD` 清单常量中的一个或两个。 当给定这两个常量时，将使用按位 `OR` 运算符连接它们 ( **&#124;** )。 `pmode` 参数可设置为下列值之一。  
   
-|“值”|定义|  
+|值|定义|  
 |-----------|----------------|  
 |`_S_IWRITE`|允许写入。|  
 |`_S_IREAD`|允许读取。|  
@@ -107,9 +110,9 @@ int _wcreat(
   
  在设置这些权限之前，`_creat` 会将当前文件权限掩码应用到 `pmode`（请参阅 [_umask](../../c-runtime-library/reference/umask.md)）。 `_creat` 主要用于与以前的库的兼容性。 在 `oflag` 参数中使用 `_O_CREAT` 和 `_O_TRUNC` 对 `_open` 进行的调用等同于 `_creat` 并且是新代码的优先选择。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_creat`|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
 |`_wcreat`|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  

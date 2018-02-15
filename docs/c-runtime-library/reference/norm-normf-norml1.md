@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - norm
 - normf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/norm
 - complex/normf
 - complex/norml
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - norm function
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c4bd4fa2b595148350b071f9718d8376f51962a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3a694d2a8660a591265e0270ada5c3b87c07f308
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml1
 检索复数的平方量值。  
@@ -83,9 +85,9 @@ long double norml(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此可以调用采用 `_Fcomplex` 或 `_Lcomplex` 值的 `norm` 的重载，并返回 `float` 或 `long double` 值。 在 C 程序中，`norm` 始终采用 `_Dcomplex` 值并返回 `double` 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`norm`,               `normf`, `norml`|\<complex.h>|\<ccomplex>|  
   

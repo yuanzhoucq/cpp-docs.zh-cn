@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -28,7 +29,8 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92dd4ea8251a0131fa9b7224aa5ea0aa021584fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e6bec7340cf26f98d5843693a24ba6c7673c55d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lrotl-lrotr"></a>_lrotl、_lrotr
 将位向左 (`_lrotl`) 或向右 (`_lrotr`) 旋转。  
@@ -67,7 +70,7 @@ unsigned long _lrotr(
 ```  
   
 #### <a name="parameters"></a>参数  
- *值*  
+ *value*  
  要旋转的值。  
   
  `shift`  
@@ -79,9 +82,9 @@ unsigned long _lrotr(
 ## <a name="remarks"></a>备注  
  `_lrotl` 和 `_lrotr` 函数通过 `shift` 位旋转 *value*。 `_lrotl` 将值向左旋转。 `_lrotr` 将值向右旋转。 两个函数将旋转的位从 *value* 的一端移到另一端。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_lrotl`|\<stdlib.h>|  
 |`_lrotr`|\<stdlib.h>|  

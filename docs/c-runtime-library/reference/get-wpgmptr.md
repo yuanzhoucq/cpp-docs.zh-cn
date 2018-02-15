@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _get_wpgmptr
 apilocation:
@@ -40,11 +40,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80fddf79be3c94eda07958919a886735666dc0d
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: d8e272573db55e413d9654f1968f535b44dd5a7c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 获取 `_wpgmptr` 全局变量的当前值。  
@@ -67,9 +67,9 @@ errno_t _get_wpgmptr(
 ## <a name="remarks"></a>备注  
  只能调用`_get_wpgmptr`如果你的程序包含宽入口点，例如`wmain()`或`wWinMain()`。 `_wpgmptr` 全局变量以宽字符字符串形式包含通向与该过程关联的可执行文件的完整路径。 有关详细信息，请参阅 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_get_wpgmptr`|\<stdlib.h>|  
   

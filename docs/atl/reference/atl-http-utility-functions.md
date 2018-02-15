@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 实用函数
 
@@ -32,10 +33,10 @@ ms.lasthandoff: 12/21/2017
 |[RGBToHtml](#rgbtohtml)|将转换[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)与颜色值相对应的 HTML 文本的值。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|调用此函数可将系统时间转换为采用适合在 HTTP 标头中使用的格式的字符串。|
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 调用此函数可对 URL 进行规范化，包括将不安全的字符和空格转换为转义序列。  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  ATL_URL 标志控制此函数的行为。 
 
-- `ATL_URL_BROWSER_MODE`不会进行编码或解码字符后"#"或"？"，并不会删除尾随空格后"？"。 如果未指定此值，编码整个 URL，并且会删除尾随空格。
-- `ATL_URL_DECODE`将所有 %xx 序列都转换为字符，其中包括转义序列，然后分析该 URL。
-- `ATL_URL_ENCODE_PERCENT`将遇到任何百分号编码。 默认情况下，不进行编码百分比符号的组合。
-- `ATL_URL_ENCODE_SPACES_ONLY`将仅空格的编码。
-- `ATL_URL_ESCAPE`将所有转义序列 （%xx) 都转换为其对应的字符。
-- `ATL_URL_NO_ENCODE`不转换不安全的字符进行转义序列。
-- `ATL_URL_NO_META`不会删除元序列 (如"。"和"..") 从该 URL。 
+- `ATL_URL_BROWSER_MODE` 不会进行编码或解码字符后"#"或"？"，并不会删除尾随空格后"？"。 如果未指定此值，编码整个 URL，并且会删除尾随空格。
+- `ATL_URL_DECODE` 将所有 %xx 序列都转换为字符，其中包括转义序列，然后分析该 URL。
+- `ATL_URL_ENCODE_PERCENT` 将遇到任何百分号编码。 默认情况下，不进行编码百分比符号的组合。
+- `ATL_URL_ENCODE_SPACES_ONLY` 将仅空格的编码。
+- `ATL_URL_ESCAPE` 将所有转义序列 （%xx) 都转换为其对应的字符。
+- `ATL_URL_NO_ENCODE` 不转换不安全的字符进行转义序列。
+- `ATL_URL_NO_META` 不会删除元序列 (如"。"和"..") 从该 URL。 
   
 ### <a name="return-value"></a>返回值  
  返回**TRUE**成功后， **FALSE**失败。  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>请参阅  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  调用此函数可将基 URL 和相对 URL 合并为单个规范 URL。  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>备注  
  行为方式类似的当前版本[InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ，但不需要要安装 WinInet 或 Internet 资源管理器。  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  调用此函数可将所有不安全字符转换为转义序列。  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>返回值  
  [ATL_URL_PORT](atl-typedefs.md#atl_url_port)如果方案无法识别与指定的方案或 ATL_URL_INVALID_PORT_NUMBER 关联。  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  调用此函数可了解字符在 URL 中能否安全使用。  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>备注  
  不应在 Url 中使用的字符可以使用此函数进行测试和转换使用[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  调用此函数可将转义字符转换为其原始值。  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>备注  
  反转转换过程中应用[AtlEscapeUrl](#atlescapeurl)。  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 将转换[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)与颜色值相对应的 HTML 文本的值。  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>备注  
  一个 HTML 颜色值是为每个颜色的红色、 绿色和蓝色组件使用 2 位数的 6 位十六进制值后跟井号 （例如，#FFFFFF 为白色）。  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 调用此函数可将系统时间转换为采用适合在 HTTP 标头中使用的格式的字符串。  
   
 ```  

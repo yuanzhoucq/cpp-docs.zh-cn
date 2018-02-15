@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -34,7 +35,8 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36e90d781c4cc4512f4869247c296b69b19c1f9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5da2b1bcc38c1b41a35de30e589f9660f19f78da
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 计算`x`（`atan`、`atanf` 和 `atanl`）的反正切值或 `y`/`x`（`atan2`、`atan2f` 和 `atan2l`）的反正切值。  
@@ -104,7 +107,7 @@ long double atan2l(
  任意数字。  
   
 ## <a name="return-value"></a>返回值  
- `atan`返回的反正切值`x`到 π/2 弧度范围-π/2 中。 `atan2`返回的反正切值`y/x`到 π 弧度范围 π 中。 如果 `x` 为 0，则 `atan` 返回 0。 如果 `atan2` 的这两个参数均为 0，则函数返回 0。 所有结果都都以弧度为单位。  
+ `atan` 返回的反正切值`x`到 π/2 弧度范围-π/2 中。 `atan2` 返回的反正切值`y/x`到 π 弧度范围 π 中。 如果 `x` 为 0，则 `atan` 返回 0。 如果 `atan2` 的这两个参数均为 0，则函数返回 0。 所有结果都都以弧度为单位。  
   
  `atan2` 使用这两个参数符号来确定返回值的象限。  
   
@@ -119,9 +122,9 @@ long double atan2l(
   
  由于 C++ 允许重载，因此你可以调用 `atan` 和 `atan2` 的重载。 在 C 程序中，`atan` 和 `atan2` 始终采用并返回双精度值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   

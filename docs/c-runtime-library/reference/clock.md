@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: clock
+ms.topic: reference
+apiname:
+- clock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: clock
-dev_langs: C++
+f1_keywords:
+- clock
+dev_langs:
+- C++
 helpviewer_keywords:
 - processor time used, calculating
 - time, calculating processor
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e48d06b3170da0ded81473affec957f3eae0e3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d56f29f1693fba1f4b455d8ae80ee38603e3a604
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clock"></a>clock
 计算调用进程所用的时钟时间。  
@@ -58,9 +63,9 @@ clock_t clock( void );
   
 只要有足够的时间，`clock` 返回的值就可能超过 `clock_t` 的最大正值。 当进程运行更长时间后，`clock` 返回的值始终为 `(clock_t)(-1)`，如 ISO C99 标准 (7.23.2.1) 和 ISO C11 标准 (7.27.2.1) 中所指定的那样。 Microsoft 将 `clock_t` 实现为 `long`，这是一个带符号的 32 位整数，将 `CLOCKS_PER_SEC` 宏定义为 1000。 这样，`clock` 函数的最大返回值为 2147483.647 秒，或大约 24.8 天。 不依赖于运行时间超过此时间的进程中 `clock` 返回的值。 可以使用 64 位 `time` 函数或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) 函数来记录多年进程运行时间。  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`clock`|\<time.h>|  
   

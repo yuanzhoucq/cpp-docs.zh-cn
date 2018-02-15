@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -30,22 +31,24 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b39fbd53baaf861ae7330e03a1b10d71362035ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb904e04e8a99bff242d520f6c0ca3d404a74e89
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="finite-finitef"></a>_finite _finitef
 确定浮点值是否是有限的。  
@@ -67,12 +70,12 @@ int _finitef(
  要测试的浮点值。  
   
 ## <a name="return-value"></a>返回值  
- 同时`_finite`和`_finitef`返回非零值，如果自变量*x*是有限; 即，如果-INF < `x` < + INF。 如果该参数为无限值或为 NAN，则其返回 0。  
+ 同时`_finite`和`_finitef`返回非零值，如果自变量*x*是有限; 即，如果-INF < `x` < + INF。 如果该自变量为无限值或为 NAN，则其返回 0。  
   
 ## <a name="remarks"></a>备注  
  `_finite` 和 `_finitef` 函数是 Microsoft 的特定函数。 `_finitef` 函数仅在编译 x86、ARM、或 ARM64 平台时可用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头 (C)|必需的标头 (C++)|  
 |--------------|---------------------------|-------------------------------|  

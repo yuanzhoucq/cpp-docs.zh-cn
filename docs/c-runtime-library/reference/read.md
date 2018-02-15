@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -69,7 +74,7 @@ int _read(
   
 ## <a name="return-value"></a>返回值  
 
-`_read`返回读取，这可能会更少的字节数比*计数*如果少于*计数*字节留在文件中，或如果在文本模式下打开该文件，在此情况下每个回车符返回行源对`\r\n`使用单一的换行的字符替换`\n`。 在返回值中仅计算单个换行符。 此替换不影响文件指针。  
+`_read` 返回读取，这可能会更少的字节数比*计数*如果少于*计数*字节留在文件中，或如果在文本模式下打开该文件，在此情况下每个回车符返回行源对`\r\n`使用单一的换行的字符替换`\n`。 在返回值中仅计算单个换行符。 此替换不影响文件指针。  
   
 如果函数尝试在文件末尾进行读取，则返回 0。 如果*fd*是无效，文件不是将打开以便读取，或文件被锁定，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则该函数将返回 -1 并将 `errno` 设置为 `EBADF`。  
   
@@ -83,9 +88,9 @@ int _read(
   
 如果文件是在文本模式下打开的，则在 `_read` 遇到 CTRL+Z 字符（被视为文件尾指示符）时，读取将终止。 使用 [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) 可清除文件尾指示符。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_read`|\<io.h>|  
   

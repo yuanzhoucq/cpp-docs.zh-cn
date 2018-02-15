@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -29,22 +30,24 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a0fe8083cfc131f7e8b1f2133943a1c91f614a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 757571b9de1dbf86040ecd83ae86c4038207798e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
 计算表达式，如果结果为 `false`，则打印诊断消息并中止程序。  
@@ -97,9 +100,9 @@ void _wassert(
   
  当未定义 `assert` 时，C 运行库的发布版本和调试版本中均启用了 `NDEBUG` 宏。 当定义了 `NDEBUG` 时，该宏虽然可用，但不会计算其参数，因而并不起作用。 启用后， `assert` 宏会调用 `_wassert` 用于实现。 其他断言宏 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 和 [_ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 也可用，但它们只有在已定义 [_DEBUG](../../c-runtime-library/debug.md) 宏的情况下以及存在于与 C 运行时库调试版本关联的代码中时才会计算传递给它们的表达式。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`assert`, `_wassert`|\<assert.h>|  
   

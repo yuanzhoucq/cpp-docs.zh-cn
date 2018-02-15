@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL.CDynamicAccessor
 - ATL::CDynamicAccessor
 - CDynamicAccessor
-dev_langs: C++
-helpviewer_keywords: CDynamicAccessor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f88c3eff9c8160a0e322c93dacf6985dc7b8a20b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb9bd08cb51a90f2bd616efcace8a66625e66827
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 使您可以在不知道数据库架构（数据库的基础结构）的情况下访问数据源。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class CDynamicAccessor : public CAccessorBase  
 ```  
   
@@ -70,7 +73,7 @@ class CDynamicAccessor : public CAccessorBase
   
  有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

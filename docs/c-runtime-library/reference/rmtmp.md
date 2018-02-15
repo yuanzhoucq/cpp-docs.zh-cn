@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _rmtmp
+ms.topic: reference
+apiname:
+- _rmtmp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - rmtmp
 - _rmtmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - removing temporary files
 - _rmtmp function
@@ -33,16 +36,17 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 12a0bef6622d8f65b450701dcfb86976da6029da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 689c501743702ae208024fcf6126a02719a33bc8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rmtmp"></a>_rmtmp
 删除临时文件。  
@@ -60,9 +64,9 @@ int _rmtmp( void );
 ## <a name="remarks"></a>备注  
  `_rmtmp` 函数将清除当前目录中的所有临时文件。 该函数将仅删除由 `tmpfile` 创建的那些文件；应仅在创建临时文件的相同目录下使用该函数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_rmtmp`|\<stdio.h>|  
   

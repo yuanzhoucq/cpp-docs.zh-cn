@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.tables.runtime
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- vc.tables.runtime
+dev_langs:
+- C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6149962694f9ff60a27645d014389d5b3467b7b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8dd4e811bd164fc44fe0c159218807594994b273
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-alphabetical-function-reference"></a>CRT 按字母顺序的函数参考
 C 运行时 (CRT) 库参考文档由例程按字母顺序进行排列。 若要基于功能性查找 CRT 例程，请参阅[按类别划分的运行时例程](../../c-runtime-library/run-time-routines-by-category.md)。  

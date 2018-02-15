@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation [MFC], installation
 - installing Remote Automation [MFC]
 ms.assetid: 9a02c9f6-dfc6-4489-b240-a1afe25fa0c5
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: acd8ee55261dfa03c68aef506dc90188d8d27d37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-installation"></a>远程自动化安装
 远程自动化具有相对较少组件：  
@@ -36,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  如果将远程自动化组件复制到计算机上的 Visual c + + 版本未安装 Enterprise Edition，请确保该 REGSRV32。EXE 位于该计算机的路径，并注册 RACREG32。使用以下命令行的 DLL:  
   
- REGSRVR32 RACREG32。DLL  
+ REGSRVR32 RACREG32.DLL  
   
 > [!NOTE]
 >  RAC 管理器的 Visual c + + 5.0 要求 GUAGE32 之前的版本。OCX 和 TABCTL32。OCX。 这两项都是必需的版本的 RAC 管理器附带有 Visual c + + 企业版，版本 5.0 或更高版本。  

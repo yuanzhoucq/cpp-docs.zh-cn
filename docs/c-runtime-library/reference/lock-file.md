@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lock_file
+ms.topic: reference
+apiname:
+- _lock_file
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _lock_file
 - lock_file
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - file locking [C++]
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c5186a3d373c541f120197a9ebf89f9e33aabd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9bd039c6f966deae2a05c354051e64ea35ca1c65
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lockfile"></a>_lock_file
 锁定 `FILE` 对象，以确保一致性线程同时访问 `FILE` 对象。  
@@ -59,9 +63,9 @@ void _lock_file(
 ## <a name="remarks"></a>备注  
  `_lock_file` 函数锁定由 `file` 指定的 `FILE` 对象。 基础文件未被 `_lock_file` 锁定。 使用 [_unlock_file](../../c-runtime-library/reference/unlock-file.md) 解除对该文件的锁定。 调用 `_lock_file` 和 `_unlock_file` 必须在线程中匹配。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_lock_file`|\<stdio.h>|  
   

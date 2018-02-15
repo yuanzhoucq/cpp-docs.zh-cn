@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f71ab6a960dbc92c4e6d8399e833f2ddf0e2ac1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 确定整数是否表示字母数字字符。  
@@ -84,7 +87,7 @@ int _iswalnum_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是字母数字字符的特定表示方式，则这些例程都返回非零。 `isalnum`返回一个非零值，如果任一`isalpha`或`isdigit`为非零， `c`，即，如果`c`位于范围 A-Z，a-z 或 0-9。 如果 `iswalnum` 或 `iswalpha` 对 `iswdigit` 为非零，`c` 将返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是字母数字字符的特定表示方式，则这些例程都返回非零。 `isalnum` 返回一个非零值，如果任一`isalpha`或`isdigit`为非零， `c`，即，如果`c`位于范围 A-Z，a-z 或 0-9。 如果 `iswalnum` 或 `iswalpha` 对 `iswdigit` 为非零，`c` 将返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  带 `_l` 后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -97,9 +100,9 @@ int _iswalnum_l(
 |`_istalnum`|`isalnum`|[_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
 |`_istalnum_l`|`_isalnum_l`|`_ismbcalnum_l`|`_iswalnum_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`isalnum`|\<ctype.h 1>|  
 |`iswalnum`|\<ctype.h 1> 或 \<wchar.h 1>|  

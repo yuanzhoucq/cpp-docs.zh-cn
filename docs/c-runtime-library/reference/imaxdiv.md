@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: imaxdiv
+ms.topic: reference
+apiname:
+- imaxdiv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: imaxdiv
-dev_langs: C++
-helpviewer_keywords: imaxdiv function
+f1_keywords:
+- imaxdiv
+dev_langs:
+- C++
+helpviewer_keywords:
+- imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a6dbcd5b25fe1a8b1b21b2e2f6ac7a8cc99cc06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 93416cd105b90cd68ad9224a4726f507e2689c82
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="imaxdiv"></a>imaxdiv
 按单个操作计算两个任意大小整数值的商和余数。  
@@ -61,9 +67,9 @@ imaxdiv_t imaxdiv(
 ## <a name="remarks"></a>备注  
  `imaxdiv` 函数将 `numer` 除以 `denom`，从而计算商和余数。 `imaxdiv_t` 结构包含商，`intmax_t quot` 和余数，`intmax_t rem`。 商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`imaxdiv`|\<inttypes.h>|  
   

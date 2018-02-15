@@ -1,46 +1,40 @@
 ---
-title: "BLOB_NAME_LENGTH |Microsoft 文档"
+title: BLOB_NAME_LENGTH | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BLOB_NAME_LENGTH
-dev_langs: C++
-helpviewer_keywords: BLOB_NAME_LENGTH macro
+f1_keywords:
+- BLOB_NAME_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_NAME_LENGTH macro
 ms.assetid: 38150260-a127-486d-a7ab-0d01b731b6fd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 66037fdb217585096a5251039205eb3e0b208faa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 437c5a355de0c4655fc6beac00d4497c14ea3f2d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="blobnamelength"></a>BLOB_NAME_LENGTH
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还获取以字节为单位的 BLOB 数据列的长度。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BLOB_NAME_LENGTH(  
-pszName  
-,   
-IID  
-,   
-flags  
-,   
-data  
-,   
-length )  
+```cpp
+BLOB_NAME_LENGTH(pszName, IID, flags, data, length )  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -59,7 +53,7 @@ length )
  *length*  
  [out]BLOB 列 （实际） 长度以字节为单位。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

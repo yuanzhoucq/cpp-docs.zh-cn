@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CrtDbgReport
 - _CrtDbgReportW
@@ -43,11 +43,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720053f96972c6ff0d846b9641d9ddc2d256f20
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 45cd908519fbacb42e017676a245451a5966891e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
 生成具有调试消息的报告并将该报告发送到三个可能的目标（仅限调试版本）。  
@@ -118,9 +118,9 @@ int _CrtDbgReportW(
   
  如果你的应用程序需要的灵活性比 `_CrtDbgReport` 和 `_CrtDbgReportW` 提供的灵活性更大，则可以通过使用 [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) 函数来写入你自己的报告函数并将它挂钩到 C 运行时库报告机制中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_CrtDbgReport`|\<crtdbg.h>|  
 |`_CrtDbgReportW`|\<crtdbg.h>|  

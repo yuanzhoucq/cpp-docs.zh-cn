@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _get_printf_count_output
+ms.topic: reference
+apiname:
+- _get_printf_count_output
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - get_printf_count_output
 - _get_printf_count_output
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '%n format'
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 78c48423be0bc642b96c7a46d75f101e183c73fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 05184838f9ac68e697cc7ff326c33c266f865875
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
 指示 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 系列函数是否支持 `%n` 格式。  
@@ -56,9 +60,9 @@ int _get_printf_count_output();
 ## <a name="remarks"></a>备注  
  如果不支持 `%n`（默认设置），则在任何 `printf` 函数的格式字符串中遇到 `%n` 时，都将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`启用支持 (请参阅[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然后`%n`中所述的表现[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_get_printf_count_output`|\<stdio.h>|  
   

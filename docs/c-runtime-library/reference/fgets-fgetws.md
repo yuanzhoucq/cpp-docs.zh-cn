@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 从流获取字符串。  
@@ -81,7 +84,7 @@ wchar_t *fgetws(
  有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
- `fgets` 函数将读取输入 `stream` 参数中的一个字符串，并将其存储到 `str` 中。 `fgets`从当前流位置与包括第一个换行符，读取字符数据到末尾流，或直到读取的字符数等于`n`-1，不管先满足。 将向存储在 `str` 中的结果追加一个 null 字符。 换行符（如果读取）将包括在字符串中。  
+ `fgets` 函数将读取输入 `stream` 参数中的一个字符串，并将其存储到 `str` 中。 `fgets` 从当前流位置与包括第一个换行符，读取字符数据到末尾流，或直到读取的字符数等于`n`-1，不管先满足。 将向存储在 `str` 中的结果追加一个 null 字符。 换行符（如果读取）将包括在字符串中。  
   
  `fgetws` 是 `fgets` 的宽字符版本。  
   
@@ -93,7 +96,7 @@ wchar_t *fgetws(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fgetts`|`fgets`|`fgets`|`fgetws`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

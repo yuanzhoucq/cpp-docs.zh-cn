@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _beginthread
 - _beginthreadex
@@ -28,7 +29,8 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f39ca2a386e605911f01ffe40cf23032d7ca7cb0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 创建线程。  
@@ -110,21 +113,21 @@ uintptr_t _beginthreadex( // MANAGED CODE
  有关 `uintptr_t` 的详细信息，请参阅[标准类型](../../c-runtime-library/standard-types.md)。  
   
 ## <a name="remarks"></a>备注  
- `_beginthread` 函数创建一个在 `start_address`处开始执行例程的线程。 `start_address` 处的例程必须使用 `__cdecl` （对于本机代码）或 `__clrcall` （对于托管代码）调用约定，且应没有任何返回值。 当线程从该例程返回时，就会自动终止。 有关线程的详细信息，请参阅[针对旧代码的多线程支持 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+ `_beginthread` 函数创建一个在 `start_address`处开始执行例程的线程。 `start_address` 中的例程必须使用 `__cdecl`（用于本机代码）或 `__clrcall`（用于托管代码）调用约定，并且应没有返回值。 当线程从该例程返回时，就会自动终止。 有关线程的详细信息，请参阅[针对旧代码的多线程支持 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
  `_beginthreadex` 比 `_beginthread` 更类似于 Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API。 `_beginthreadex` 和 `_beginthread` 存在以下不同：  
   
--   `_beginthreadex` 有三个其他参数： `initflag`、 `security`和 `threadaddr`。 新线程可通过指定的 security 创建为挂起状态，并且可使用线程标识符 `thrdaddr`进行访问。  
+-   `_beginthreadex` 有三个其他参数：`initflag`、`security` 和 `threadaddr`。 新线程通过指定的 security 可创建为挂起状态，并且可使用线程标识符 `thrdaddr` 进行访问。  
   
--   `start_address` 处传递给 `_beginthreadex` 的例程必须使用 `__stdcall` （对于本机代码）或 `__clrcall` （对于托管代码）调用约定，并且必须返回线程退出代码。  
+-   传递给 `start_address` 的 `_beginthreadex` 中的例程必须使用 `__stdcall`（用于本机代码）或 `__clrcall`（用于托管代码）调用约定，并且必须返回线程退出代码。  
   
 -   如果失败，`_beginthreadex` 会返回 0，而不是 -1L。  
   
 -   使用 `_beginthreadex` 创建的线程已通过对 [_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)的调用终止。  
   
- 与 `_beginthreadex` 相比， `_beginthread` 让你可以在更大程度上控制如何创建线程。 `_endthreadex` 函数也更为灵活。 例如，通过 `_beginthreadex`，你可以使用安全信息、设置线程的初始状态（运行或挂起）并获取新创建线程的线程标识符。 你还可以将 `_beginthreadex` 返回的线程句柄与同步 API 结合使用，但无法通过 `_beginthread`完成此操作。  
+ 与 `_beginthreadex` 相比， `_beginthread` 让你可以在更大程度上控制如何创建线程。 `_endthreadex` 函数也更为灵活。 例如，通过 `_beginthreadex`，你可以使用安全信息、设置线程的初始状态（运行或挂起）并获取新创建线程的线程标识符。 你还可以将 `_beginthreadex` 返回的线程句柄与同步 API 结合使用，但无法通过 `_beginthread` 完成此操作。  
   
- 使用 `_beginthreadex` 比 `_beginthread`更为安全。 如果由 `_beginthread` 生成的线程很快退出，则返回到 `_beginthread` 调用方的句柄可能无效或指向另一个线程。 但是，由 `_beginthreadex` 返回的句柄必须由 `_beginthreadex`的调用方关闭，因此如果 `_beginthreadex` 未返回任何错误，则可以保证其为有效句柄。  
+ 使用 `_beginthreadex` 比 `_beginthread` 更为安全。 如果由 `_beginthread` 生成的线程很快退出，则返回到 `_beginthread` 调用方的句柄可能无效或指向另一个线程。 但是，由 `_beginthreadex` 返回的句柄必须由 `_beginthreadex`的调用方关闭，因此如果 `_beginthreadex` 未返回任何错误，则可以保证其为有效句柄。  
   
  你可以显式调用 [_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) 或 `_endthreadex` 以终止线程；但是，如果线程从作为参数传递的例程中返回，则自动调用 `_endthread` 或 `_endthreadex` 。 通过对 `_endthread` 或 `_endthreadex` 的调用来终止线程有助于确保正确恢复为线程分配的资源。  
   
@@ -133,17 +136,17 @@ uintptr_t _beginthreadex( // MANAGED CODE
 > [!NOTE]
 >  对于与 Libcmt.lib 链接的可执行文件，请不要调用 Win32 `ExitThread` API，这样就不会阻止运行时系统回收已分配的资源。 `_endthread` 和 `_endthreadex` 回收分配的线程资源，然后调用 `ExitThread`。  
   
- 当调用了 `_beginthread` 或 `_beginthreadex` 中的任一个时，操作系统将处理堆栈的分配；你不必将该线程堆栈的地址传递给这两个函数中的任何一个。 此外， `stack_size` 参数还可为 0，在这种情况下，操作系统使用的值与为主线程指定的堆栈相同。  
+ 当调用了 `_beginthread` 或 `_beginthreadex` 中的任一个时，操作系统将处理堆栈的分配；你不必将该线程堆栈的地址传递给这两个函数中的任何一个。 此外，`stack_size` 参数还可为 0，在这种情况下，操作系统使用的值与为主线程指定的堆栈相同。  
   
- `arglist` 是传递到新创建的线程的参数。 通常这是数据项的地址，例如字符串。 `arglist` 在不需要时可以为 NULL，但必须对 `_beginthread` 和 `_beginthreadex` 赋值才能传递到新线程。 如果任何线程调用 `abort`、 `exit`、 `_exit`或 `ExitProcess`，所有线程都会终止。  
+ `arglist` 是传递到新创建的线程的参数。 通常这是数据项的地址，例如字符串。 `arglist` 在不需要时可以为 NULL，但必须对 `_beginthread` 和 `_beginthreadex` 赋值才能传递到新线程。 如果任何线程调用 `abort`、`exit`、`_exit` 或 `ExitProcess`，所有线程都会终止。  
   
  新线程的区域设置继承自起父线程。 如果通过对 [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) 的调用（全局或仅针对新线程）启用了每个线程区域设置，则线程可以通过调用 `setlocale` 或 `_wsetlocale`独立从其父级更改区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  对于混合代码和纯代码， `_beginthread` 和 `_beginthreadex` 都具有两种重载，一种采用本机调用约定函数指针，另一种采用 `__clrcall` 函数指针。 第一个重载不是应用程序安全域且永远不会是。 如果你要编写混合代码或纯代码，则必须确保新线程在访问托管资源之前进入正确的应用程序域。 例如，可以使用 [call_in_appdomain 函数](../../dotnet/call-in-appdomain-function.md)来完成该操作。 第二个重载是应用程序安全域；新创建的线程总是在 `_beginthread` 或 `_beginthreadex`调用方的应用程序域中结束。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_beginthread`|\<process.h>|  
 |`_beginthreadex`|\<process.h>|  
@@ -275,7 +278,7 @@ void Bounce( void * parg )
  按任意键结束示例应用程序。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何使用由具有同步 API `_beginthreadex` WaitForSingleObject [的](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)返回的线程句柄。 主线程需等待第二个线程终止才能继续。 在第二个线程调用 `_endthreadex`时，会使其线程对象进入终止状态。 这将允许主线程继续运行。 这不能通过 `_beginthread` 和 `_endthread`完成，因为 `_endthread` 调用 `CloseHandle`，这会使线程对象在设为终止状态之前被销毁。  
+ 下面的代码示例演示如何使用由具有同步 API `_beginthreadex` WaitForSingleObject [的](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)返回的线程句柄。 主线程需等待第二个线程终止才能继续。 在第二个线程调用 `_endthreadex` 时，会使其线程对象进入终止状态。 这将允许主线程继续运行。 这不能通过 `_beginthread` 和 `_endthread` 完成，因为 `_endthread` 调用 `CloseHandle`，这会使线程对象在设为终止状态之前被销毁。  
   
 ```  
 // crt_begthrdex.cpp  

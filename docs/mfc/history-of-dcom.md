@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation, DCOM
 - DCOM, about DCOM
 - DCOM
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="history-of-dcom"></a>DCOM 历史记录
 当自动化于早期 1993年问世时，已支持的使用仅在同一台计算机上运行的应用程序之间。 但是，因为它共享 OLE，即，COM （或组件对象模型） 的其余部分所在的同一个基础结构，它始终本来，COM 本身已更新为包括远程处理功能时，它将变得"远程"。 它原来的计划，从纯粹的本地操作转换为分布式操作需要很少或没有更改现有代码。  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -27,7 +28,8 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -35,22 +37,23 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
 确定一个字符是否为多字节字符的前导字节。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅                  [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,7 +74,7 @@ int _isleadbyte_l(
  如果参数满足测试条件，则 `isleadbyte` 返回一个非零值，否则返回 0。 在“C”区域设置和单字节字符集 (SBCS) 区域设置中， `isleadbyte` 始终返回 0。  
   
 ## <a name="remarks"></a>备注  
- 如果 `isleadbyte` 宏的参数是多字节字符的第一个字节，则它返回非零值。 `isleadbyte`生成有意义的结果的任何整数自变量在-1 (`EOF`) 到`UCHAR_MAX`(0xFF) （含)。  
+ 如果 `isleadbyte` 宏的参数是多字节字符的第一个字节，则它返回非零值。 `isleadbyte` 生成有意义的结果的任何整数自变量在-1 (`EOF`) 到`UCHAR_MAX`(0xFF) （含)。  
   
  `isleadbyte` 的预期参数类型是 `int`；如果传递了带符号的字符，编译器可能会通过符号扩展将其转换为整数，从而生成无法预测的结果。  
   
@@ -83,9 +86,9 @@ int _isleadbyte_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istleadbyte`|始终返回 false|**_** `isleadbyte`|始终返回 false|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`isleadbyte`|\<ctype.h>|  
 |`_isleadbyte_l`|\<ctype.h>|  
