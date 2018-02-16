@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
 本文档介绍如何本机接受 C 样式字符串可以从提供的一个实例的托管函数调用的函数<xref:System.String>通过使用 P/Invoke。 尽管我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供很少的编译时错误报告，因为不是类型安全和可单调乏味，若要实现，如果非托管的 API 打包为的 DLL，并且源代码不是可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
@@ -48,8 +50,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>示例  
  下面的代码由非托管和的托管的模块组成。 非托管的模块是一个 DLL，它定义结构称为位置和 GetDistance 接受位置结构的两个实例时调用的函数。 第二个模块是托管的命令行应用程序将导入 GetDistance 函数，但在位置结构，MLocation 的托管等效项方面对其进行定义。 在实践中相同的名称将可能用于结构; 这两个版本但是，不同的名称用于此处演示 DllImport 原型定义根据托管版本。  
-  
- 托管的模块编译 /clr，但 /clr: pure 工作原理以及。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
  请注意，对使用传统的托管代码公开的 DLL 没有一部分 #include 指令。 实际上，会在运行时仅，访问 DLL，以便与使用 DllImport 导入的函数的问题将不会在编译时检测多。  
   

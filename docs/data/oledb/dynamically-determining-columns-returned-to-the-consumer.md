@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed7ad9ab7b28758419c2b7c848852678f69bc3e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>动态确定返回给使用者的列
 PROVIDER_COLUMN_ENTRY 宏通常处理**IColumnsInfo::GetColumnsInfo**调用。 但是，使用者可能选择使用书签，因为提供程序必须能够更改根据使用者是否要求书签返回的列。  
   
  若要处理**IColumnsInfo::GetColumnsInfo**调用，删除 PROVIDER_COLUMN_MAP，定义了一个函数`GetColumnInfo`，从`CAgentMan`用户 MyProviderRS.h 中记录并将其替换为你自己的定义`GetColumnInfo`函数：  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 class CAgentMan  
@@ -53,11 +55,11 @@ public:
   
  接下来，实现`GetColumnInfo`函数中 MyProviderRS.cpp，如下面的代码中所示。  
   
- `GetColumnInfo`首先检查是否 OLE DB 属性**DBPROP_BOOKMARKS**设置。 要获取其属性，`GetColumnInfo`使用指针 (`pRowset`) 到行集对象。 `pThis`指针表示创建行集，它是类的属性映射的存储位置的类。 `GetColumnInfo`类型强制转换`pThis`指向`RMyProviderRowset`指针。  
+ `GetColumnInfo` 首先检查是否 OLE DB 属性**DBPROP_BOOKMARKS**设置。 要获取其属性，`GetColumnInfo`使用指针 (`pRowset`) 到行集对象。 `pThis`指针表示创建行集，它是类的属性映射的存储位置的类。 `GetColumnInfo` 类型强制转换`pThis`指向`RMyProviderRowset`指针。  
   
  若要检查**DBPROP_BOOKMARKS**属性，`GetColumnInfo`使用`IRowsetInfo`接口，你可以通过调用获取`QueryInterface`上`pRowset`接口。 作为替代方法，你可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法相反。  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
@@ -118,12 +120,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
  此示例使用静态数组以包含的列信息。 如果使用者不希望书签列，则不使用数组中的一个条目。 若要处理的信息，请创建两个数组宏： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 采用了额外的参数， `flags`，也就是说，当你指定的书签列时才需要。  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision,   
-scale, guid, dataClass, member) \  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
@@ -134,8 +135,7 @@ scale, guid, dataClass, member) \
    _rgColumns[ulCols].bScale = (BYTE)scale; \  
    _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
   
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type,   
-precision, scale, guid, dataClass, member, flags) \  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  

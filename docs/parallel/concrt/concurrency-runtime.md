@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 适用于 C++ 的并发运行时可帮助你编写可靠、可伸缩且响应迅速的并行应用程序。 它提升了抽象级别，因此无需管理与并发相关的基础结构详细信息。 你还可以使用它来指定符合应用程序服务要求质量的计划策略。 使用这些资源帮助你开始使用并发运行时。  
@@ -67,13 +70,13 @@ ms.lasthandoff: 01/03/2018
 |[PPL 中的取消操作](cancellation-in-the-ppl.md)|介绍 PPL 中取消操作的角色，包括如何启动和相应取消请求。|  
 |[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用异常处理来中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|  
   
-## <a name="windows-store-apps"></a>Windows 应用商店应用程序  
+## <a name="universal-windows-platform-apps"></a>通用 Windows 平台应用  
   
 |||  
 |-|-|  
-|[用 C++ 为 Windows 应用商店应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用并发运行时生成异步操作时要记住的一些重点。|  
-|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务和 `IXMLHTTPRequest2` 及 `IXMLHTTPRequest2Callback` 接口，以便在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中将 HTTP GET 和 POST 请求发送到 Web 服务。|  
-|[Windows 应用商店应用示例](http://code.msdn.microsoft.com/windowsapps)|包含 [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]的可下载代码示例和演示应用。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|  
+|[在为 UWP 应用的 c + + 中创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成异步操作中的 UWP 应用时，需要注意的要点。|  
+|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务和`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口以将 HTTP GET 和 POST 请求发送到 web 服务中的 UWP 应用。|  
+|[Windows 运行时应用示例](http://code.msdn.microsoft.com/windowsapps)|包含可下载代码示例和演示应用适用于 Windows 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程  
   
@@ -108,7 +111,7 @@ ms.lasthandoff: 01/03/2018
   
 |||  
 |-|-|  
-|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo（一个使用 C++ 和 XAML 的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用）中实现异步操作。|  
+|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|  
 |[并发运行时和 Visual Studio 2010 中的并行模式库的代码示例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供演示并发运行时的示例应用程序和实用程序。|  
 |[在本机代码的博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|  
 |[在 c + + 和本机代码论坛中的并行计算](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|  

@@ -4,40 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
-- connecting to web services, Windows Store apps [C++]
+- connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e778c03368a634c349ec7c3ef241a29314cac4ea
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
-此示例演示如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)接口与任务以将 HTTP GET 和 POST 请求发送到中的 web 服务[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，您可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。  
+此示例演示如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)接口与任务以将 HTTP GET 和 POST 请求发送到 web 服务在通用 Windows 平台 (UWP) 应用程序。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，您可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。  
   
 > [!TIP]
->  还可以使用 C++ REST SDK 从使用 C++ 应用程序的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序或桌面 C++ 应用程序来执行 HTTP 请求。 有关详细信息，请参阅[c + + REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。  
+>  C + + REST SDK 还可用于执行 HTTP 请求，从 UWP 应用使用 c + + 应用程序或桌面 c + + 应用程序。 有关详细信息，请参阅[c + + REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。  
   
- 有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 有关如何使用中的任务的详细信息[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用，请参阅[c + + 中的异步编程](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)和[创建 Windows 应用商店应用的 c + + 中的异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
+ 有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 有关如何在 UWP 应用中使用任务的详细信息，请参阅[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)和[创建异步操作在 c + + 中适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
   
- 本文档首先演示如何创建 `HttpRequest` 及其支持类。 然后演示如何从使用 C++ 和 XAML 的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用此类。  
+ 本文档首先演示如何创建 `HttpRequest` 及其支持类。 然后，它演示如何使用此类从使用 c + + 和 XAML 的 UWP 应用。  
   
  有关的更完整示例，使用`HttpReader`类描述在此文档中，请参阅[开发必应地图行程优化器，以 JavaScript 和 c + + Windows 应用商店应用](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)。 有关其他示例，使用`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)。  
   
 > [!TIP]
->  `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是建议在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用的接口。 还可以调整此示例，以用于桌面应用程序。  
+>  `IXMLHTTPRequest2` 和`IXMLHTTPRequest2Callback`是我们建议在 UWP 应用中使用的接口。 还可以调整此示例，以用于桌面应用程序。  
   
 ## <a name="prerequisites"></a>系统必备  
   
@@ -68,8 +71,8 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[concrt-using-ixhr2#3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_3.cpp)]  
   
-## <a name="using-the-httprequest-class-in-a-includewin8appnamelongbuildincludeswin8appnamelongmdmd-app"></a>在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用 HttpRequest 类  
- 本节演示在 `HttpRequest` 应用程序中如何使用 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 类。 应用程序会提供一个输入框，该输入框定义了一个 URL 资源、用于执行 GET 和 POST 操作的按钮命令和用于取消当前操作的按钮命令。  
+## <a name="using-the-httprequest-class-in-a-uwp-app"></a>在 UWP 应用中使用 HttpRequest 类  
+ 本部分演示如何使用`HttpRequest`在 UWP 应用中的类。 应用程序会提供一个输入框，该输入框定义了一个 URL 资源、用于执行 GET 和 POST 操作的按钮命令和用于取消当前操作的按钮命令。  
   
 #### <a name="to-use-the-httprequest-class"></a>使用 HttpRequest 类  
   
@@ -112,7 +115,7 @@ ms.lasthandoff: 12/21/2017
   
  这是正在运行的应用程序：  
   
- ![正在运行的 Windows 应用商店应用](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
+ ![正在运行的 Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
 ## <a name="next-steps"></a>后续步骤  
  [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
@@ -120,8 +123,8 @@ ms.lasthandoff: 12/21/2017
 ## <a name="see-also"></a>请参阅  
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [PPL 中的取消](cancellation-in-the-ppl.md)   
- [C + + 中的异步编程](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   
- [在 c + + 为 Windows 应用商店应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [C + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
+ [在为 UWP 应用的 c + + 中创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
  [快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [task 类 （并发运行时）](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event 类](../../parallel/concrt/reference/task-completion-event-class.md)

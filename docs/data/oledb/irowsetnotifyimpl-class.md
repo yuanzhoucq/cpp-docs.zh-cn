@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL.IRowsetNotifyImpl
 - ATL::IRowsetNotifyImpl
 - IRowsetNotifyImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetNotifyImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetNotifyImpl class
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ddc410a22318b471fd59c1b29ff09fc9d771c767
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e23103cf4505ffb2bc683c69d22628fa15b861d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 类
 实现并注册[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)上使用者 （也称为"接收器"），以便它可以处理通知。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
   
@@ -49,7 +52,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ## <a name="remarks"></a>备注  
  请参阅[接收通知](../../data/oledb/receiving-notifications.md)如何实现上使用者连接点接口。  
   
- `IRowsetNotifyImpl`提供的虚拟实现`IRowsetNotify`，具有可实现的空功能`IRowsetNotify`方法[OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)， [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)，和[OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). 如果在实现时，在从此类继承`IRowsetNotify`接口，你可以实现只有你需要的方法。 你还需要自行提供的其他方法的空实现。  
+ `IRowsetNotifyImpl` 提供的虚拟实现`IRowsetNotify`，具有可实现的空功能`IRowsetNotify`方法[OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)， [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)，和[OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). 如果在实现时，在从此类继承`IRowsetNotify`接口，你可以实现只有你需要的方法。 你还需要自行提供的其他方法的空实现。  
   
 ## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  

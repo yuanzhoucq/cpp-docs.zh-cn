@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ projects, building
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 074b43619d307d4d6ffeec1a057c9c27a4f9d05f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中生成 C++ 项目
 在 Visual Studio 集成开发环境 (IDE) 中，可通过多种方式生成整个解决方案或只在其中生成一个项目。 还可以修改生成设置并指定自定义生成步骤，以使你的部署过程更加高效。  
@@ -88,4 +91,4 @@ ms.lasthandoff: 12/21/2017
   有关如何升级在 Visual Studio 的早期版本中创建的 c + + 应用程序以及如何将应用程序使用工具而非 Visual Studio 创建的迁移的详细的信息。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 c + + 的 Windows 应用商店应用的路线图](http://msdn.microsoft.com/en-us/0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)
+ [通用 Windows 应用 (C++)](../windows/universal-windows-apps-cpp.md)

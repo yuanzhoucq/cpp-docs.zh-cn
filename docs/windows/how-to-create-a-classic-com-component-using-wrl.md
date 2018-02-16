@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：使用 WRL 创建传统型 COM 组件
-你可以使用 Windows 运行时 c + + 模板库 (WRL) 来创建基本经典 COM 组件用在桌面应用程序，此外将其用于[!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)]应用。 创建 COM 组件时，对于 Windows 运行时 c + + 模板库可能需要更少的代码比 ATL Windows 运行时 c + + 模板库支持的 COM 子集的信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  
+Windows 运行时 c + + 模板库 (WRL) 可用于在桌面应用中，除了使用适用于通用 Windows 平台 (UWP) 应用创建用于基本经典 COM 组件。 创建 COM 组件时，对于 Windows 运行时 c + + 模板库可能需要更少的代码比 ATL Windows 运行时 c + + 模板库支持的 COM 子集的信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  
   
  本文档演示如何使用 Windows 运行时 c + + 模板库创建基本的 COM 组件。 尽管可以使用最适合你需求的部署机制，本文档还会展示一种从桌面应用程序注册及使用 COM 组件的基本方法。  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  在 CalculatorComponent.cpp 中，定义 `CalculatorComponent` 类。 `CalculatorComponent`类继承自[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)。 [Microsoft::\<ClassicCom >](../windows/runtimeclassflags-structure.md)指定的类派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx)和 not [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)。 (`IInspectable`仅供[!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)]应用程序组件。)`CoCreatableClass`为可以如用于与函数的类，创建一个工厂[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx)。  
+5.  在 CalculatorComponent.cpp 中，定义 `CalculatorComponent` 类。 `CalculatorComponent`类继承自[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)。 [Microsoft::\<ClassicCom >](../windows/runtimeclassflags-structure.md)指定的类派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx)和 not [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)。 (`IInspectable`仅对 Windows 运行时应用程序组件可用。)`CoCreatableClass`为可以如用于与函数的类，创建一个工厂[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx)。  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   

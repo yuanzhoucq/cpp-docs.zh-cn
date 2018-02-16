@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetLocateImpl
-dev_langs: C++
+f1_keywords:
+- IRowsetLocateImpl
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a43df3d8732734ed79aae4c56a891bd20bbebe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 类
 实现 OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)接口，从行集提取任意行。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,   
@@ -40,14 +43,12 @@ template <
    class MapClass = CAtlMap < RowClass::KeyType, RowClass* >,   
    class BookmarkKeyType = LONG,   
    class BookmarkType = LONG,   
-   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >  
->  
+   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >>  
 class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<  
-   T,   
-   RowsetInterface,   
-   RowClass,   
-   MapClass  
->  
+       T,   
+       RowsetInterface,   
+       RowClass,   
+       MapClass>  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -81,7 +82,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|比较两个的书签。|  
 |[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|提取行开头指定偏移量从书签的行。|  
 |[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|提取匹配指定的书签的行。|  
-|[哈希](../../data/oledb/irowsetlocateimpl-hash.md)|返回哈希值用于指定书签。|  
+|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|返回哈希值用于指定书签。|  
   
 ### <a name="data-members"></a>数据成员  
   
@@ -90,9 +91,9 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|书签的数组。|  
   
 ## <a name="remarks"></a>备注  
- `IRowsetLocateImpl`是的 OLE DB 模板实现[IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)接口。 `IRowsetLocate`用于从行集提取任意行。 未实现此接口的行集是`sequential`行集。 当`IRowsetLocate`位于第 0 列行集上是行的书签; 读取此列将获取可用来对同一行重新定位一个书签值。  
+ `IRowsetLocateImpl` 是的 OLE DB 模板实现[IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)接口。 `IRowsetLocate` 用于从行集提取任意行。 未实现此接口的行集是`sequential`行集。 当`IRowsetLocate`位于第 0 列行集上是行的书签; 读取此列将获取可用来对同一行重新定位一个书签值。  
   
- `IRowsetLocateImpl`用于在提供程序中实现书签支持。 书签是占位符 （索引行集上），启用快速返回到行的使用者允许高速数据访问。 提供程序确定书签可以唯一标识行。 使用`IRowsetLocateImpl`方法，你可以比较书签、 提取行，偏移量，提取行的书签，并返回用于书签的哈希值。  
+ `IRowsetLocateImpl` 用于在提供程序中实现书签支持。 书签是占位符 （索引行集上），启用快速返回到行的使用者允许高速数据访问。 提供程序确定书签可以唯一标识行。 使用`IRowsetLocateImpl`方法，你可以比较书签、 提取行，偏移量，提取行的书签，并返回用于书签的哈希值。  
   
  若要在行集中支持 OLE DB 书签，请从此类继承的行集。  
   

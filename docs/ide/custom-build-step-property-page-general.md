@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,21 +15,23 @@ f1_keywords:
 - VC.Project.VCCustomBuildStep.Outputs
 - VC.Project.VCCustomBuildStep.Message
 - VC.Project.VCCustomBuildStep.Command
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>“自定义生成步骤”属性页：常规
 对于你的项目中项目配置和目标平台的每种组合，你可以在项目生成时指定要执行的自定义步骤。  
@@ -52,7 +55,7 @@ ms.lasthandoff: 12/21/2017
  这些选项定义相对于列出的目标，何时在生成过程中运行自定义生成步骤。 最常列出的目标是 BuildGenerateSources、BuildCompile 和 BuildLink，因为它们代表生成过程中的主要步骤。 其他经常列出的目标是 Midl、CLCompile 和链接。  
   
  将输出视为内容  
- 该选项只对于 Windows 应用商店或 Windows Phone 应用有意义，这些应用将所有内容文件包含在 .appx 包中。  
+ 此选项才有意义的通用 Windows 平台或 Windows Phone 应用，在.appx 包中包含的所有内容文件。  
   
 ### <a name="to-specify-a-custom-build-step"></a>指定自定义生成步骤  
   

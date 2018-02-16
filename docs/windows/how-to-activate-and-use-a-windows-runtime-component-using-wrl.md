@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：使用 WRL 激活和使用 Windows 运行时组件
 本文档说明如何使用 Windows 运行时 c + + 模板库 (WRL) 初始化 Windows 运行时以及如何激活和使用 Windows 运行时组件。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  以下步骤使用`Windows::Foundation::IUriRuntimeClass`接口来演示如何创建 Windows 运行时组件的激活工厂、 创建该组件的实例并检索的属性值。 它们还演示如何初始化 Windows 运行时。 以下是完整的示例。  
   
 > [!IMPORTANT]
->  尽管通常使用 Windows 运行时 c + + 模板库通用 Windows 平台应用中，此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[不支持 /zw 的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM for Windows Store 应用](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  虽然通常使用 Windows 运行时 c + + 模板库中的通用 Windows 平台 (UWP) 应用，但此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>若要激活和使用 Windows 运行时组件  
   

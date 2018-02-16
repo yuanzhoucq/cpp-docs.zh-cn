@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送函数指针
 本主题说明如何将托管的委托时与进行互操作非托管函数使用.NET Framework P/Invoke 功能可用于代替函数指针。 但是，Visual c + + 程序员是建议 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈实现的。 如果非托管的 API 打包为的 DLL 的源代码不可用，P/Invoke 是唯一的选项。 否则，请参阅以下主题：  
@@ -42,8 +44,6 @@ ms.lasthandoff: 12/21/2017
  托管的模块定义一个委托，封送到本机代码作为函数指针并使用<xref:System.Runtime.InteropServices.DllImportAttribute>属性公开给托管代码的本机 TakesCallback 函数。 在主函数中，委托的一个实例是创建并传递给 TakesCallback 函数。 程序输出演示此函数获取执行者本机 TakesCallback 函数。  
   
  托管的函数取消阻止从本机函数执行时重新定位该委托的.NET Framework 垃圾回收的托管委托的垃圾回收。  
-  
- 托管的模块编译 /clr，但 /clr: pure 工作原理以及。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
 ```cpp  
 // TraditionalDll5.cpp  

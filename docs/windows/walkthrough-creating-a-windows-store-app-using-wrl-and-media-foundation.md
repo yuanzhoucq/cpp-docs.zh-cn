@@ -1,29 +1,31 @@
 ---
-title: "演练： 创建使用 WRL 和 Media Foundation 的 Windows 应用商店应用程序 |Microsoft 文档"
+title: "演练： 创建使用 WRL 和 Media Foundation 的 UWP 应用程序 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>演练：使用 WRL 和 Media Foundation 创建 Windows 应用商店应用程序
-了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建的通用 Windows 平台应用程序使用[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练： 创建使用 WRL 和 Media Foundation 的 UWP 应用程序
+了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建的通用 Windows 平台 (UWP) 应用程序使用[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
   
  此示例将创建一个向捕捉自网络摄像头的图像应用灰度效果的自定义媒体基础转换。 该应用利用 C++ 定义自定义转换，并利用 C# 将该组件用于转换捕捉的图像。  
   
@@ -59,13 +61,13 @@ ms.lasthandoff: 12/21/2017
   
 -   将组件 DLL 链接到 runtimeobject.lib。 此外指定[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md)用于生成 Windows 元数据的链接器行上。  
   
--   使用项目引用，以使 WRL 组件的通用 Windows 平台应用程序可访问。  
+-   使用项目引用，以使 WRL 组件可用于 UWP 应用访问。  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>若要使用 WRL 创建媒体基础灰度转换组件  
   
 1.  在 Visual Studio 中，创建**空白解决方案**项目。 该项目命名，例如， `MediaCapture`。  
   
-2.  添加**DLL （Windows 应用商店应用）**到解决方案的项目。 该项目命名，例如， `GrayscaleTransform`。  
+2.  添加**DLL (通用 Windows)**到解决方案的项目。 该项目命名，例如， `GrayscaleTransform`。  
   
 3.  添加**Midl 文件 (.idl)**到项目的文件。 例如，命名该文件， `GrayscaleTransform.idl`。  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - embedded pointers [C++]
 - interop [C++], embedded pointers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd2717e5ffc5dc25f7a98f679a23d6f97fd335a5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送嵌入式指针
 可以使用平台调用 (P/Invoke) 的功能的托管代码中调用在非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项来进行互操作。 但是，不同于其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)和[How to： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
@@ -35,8 +37,6 @@ ms.lasthandoff: 12/21/2017
  将结构传递给本机代码，则需要创建等效的数据布局到本机结构的托管的结构。 但是，包含指针的结构需要特殊处理。 对于本机结构中每个嵌入的指针，该结构的托管的版本应该包含的实例<xref:System.IntPtr>类型。 此外，内存为必须显式分配这些实例，初始化，并释放使用<xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>， <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>，和<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>方法。  
   
  下面的代码由非托管和的托管的模块组成。 非托管的模块是一个 DLL，它定义接受一个称为包含的指针的 ListString 结构的函数和一个名为 TakesListStruct 函数。 托管的模块是一个命令行应用程序以便导入 TakesListStruct 函数和定义结构调用 MListStruct，它等效于本机 ListStruct，只不过使用表示双 *<xref:System.IntPtr>实例。 在调用 TakesListStruct 之前, 的主函数分配和初始化此字段引用的内存。  
-  
- 托管的模块编译 /clr，但 /clr: pure 工作原理以及。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
 ```cpp  
 // TraditionalDll6.cpp  

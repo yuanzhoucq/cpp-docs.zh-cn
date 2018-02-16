@@ -4,28 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4412
-dev_langs: C++
-helpviewer_keywords: C4412
+f1_keywords:
+- C4412
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92898b9c8e8845ecc8bc650b80cf41a33b3a59d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>编译器警告（等级 2）C4412
 function： 函数签名包含类型 type;C + + 对象是不安全的时间间隔纯代码和混合或本机。  
   
- **/Clr: pure**编译器选项在 Visual Studio 2015 中已弃用。  
+ **/Clr: pure**编译器选项在 Visual Studio 2015 中已弃用。 如果你有必须是"纯粹"的代码，我们建议你向 C# 移植它。  
   
  编译器检测到的可能不安全的情况下，可能会导致运行时错误： 正在进行从调用**/clr： 纯**对已导入通过 dllimport 和函数签名的函数编译单位包含不安全类型. 一种类型是不安全的如果它包含的成员函数，或者包含不安全类型或间接寻址上的不同、 不安全类型的数据成员。  
   
@@ -33,7 +38,6 @@ function： 函数签名包含类型 type;C + + 对象是不安全的时间间�
   
  虚拟成员函数是特别容易产生意外的结果。  但是，应测试甚至非虚拟函数，以确保获得正确的结果。 如果您确信您处于正确的结果，你可以忽略此警告。  
   
- 有关详细信息**/clr： 纯**，请参阅[如何： 迁移到 /clr: pure (C + + /cli CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)。  
   
  默认情况下，C4412 处于关闭状态。 请参阅[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)和[dllexport、 dllimport](../../cpp/dllexport-dllimport.md)有关详细信息。  
   
