@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>适用于 Windows XP 配置程序
 
 由于 Visual Studio 支持多个平台工具集，则可以面向操作系统和不受默认工具集的运行时库。 例如，通过切换平台工具集，你可以使用 C + + 11、 C + + 14 中和 Visual Studio 中的 Visual c + + 编译器支持的 C + + 17 语言增强功能以便创建面向的应用[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]。 你可以还使用较旧的平台工具集来维护二进制兼容旧代码，同时仍然可以利用 Visual Studio IDE 的最新功能。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安装 Windows XP 平台工具集
-
 若要获取的平台工具集和目标组件[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]在 Visual Studio 2017，运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或当你选择**修改**若要修改现有安装，请确保**使用 c + + 桌面开发**选择工作负荷。 在此工作负荷的可选组件的列表中，选择**c + + 的 Windows XP 支持**，然后选择**安装**或**修改**。
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP 定向体验
@@ -65,7 +64,7 @@ Visual Studio 中包含 Windows XP 平台工具集，则的版本[!INCLUDE[win7]
 
 - **C + + 语言功能**
 
-   在 Visual Studio 2012 中实现的仅 c + + 语言功能支持的应用程序使用 v110\_xp 平台工具集。 在 Visual Studio 2013 中实现的仅 c + + 语言功能支持的应用程序使用 v120\_xp 平台工具集。 在 Visual Studio 2012 中实现的仅 c + + 语言功能支持的应用程序使用 v140\_xp 平台工具集。 在构建使用较旧的平台工具集时，visual Studio 将使用相应的编译器。 使用最新的 Windows XP 平台工具集以利用在该版本的编译器中实现的其他 c + + 语言功能。
+   在 Visual Studio 2012 中实现的仅 c + + 语言功能支持的应用程序使用 v110\_xp 平台工具集。 在 Visual Studio 2013 中实现的仅 c + + 语言功能支持的应用程序使用 v120\_xp 平台工具集。 在 Visual Studio 2015 中实现的仅 c + + 语言功能支持的应用程序使用 v140\_xp 平台工具集。 在构建使用较旧的平台工具集时，visual Studio 将使用相应的编译器。 使用最新的 Windows XP 平台工具集以利用在该版本的编译器中实现的其他 c + + 语言功能。
 
 - **远程调试**
 
