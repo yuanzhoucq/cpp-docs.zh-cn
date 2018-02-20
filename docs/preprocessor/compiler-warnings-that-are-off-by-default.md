@@ -15,15 +15,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c447389de1accfe95674855645fe044e1d3df41
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
-编译器包含默认关闭的警告，因为大多数用户不想看到它们。 但是，你可使用下列选项之一启用此类警告。
+编译器将包含警告处于关闭状态默认情况下因为大多数开发人员不希望看到它们。 但是，你可使用下列选项之一启用此类警告。
 
 **#pragma 警告 (默认：** *warning_number* **)**  
 指定的警告 (*warning_number*) 在其默认级别启用。 该警告的文档包含该警告的默认级别。
