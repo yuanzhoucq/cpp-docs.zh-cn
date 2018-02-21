@@ -182,7 +182,7 @@
 ### [/ALIGN（节对齐）](align-section-alignment.md)
 ### [/ALLOWBIND（禁止 DLL 绑定）](allowbind-prevent-dll-binding.md)
 ### [/ALLOWISOLATION（清单查找）](allowisolation-manifest-lookup.md)
-### [/APPCONTAINER（Windows 应用商店应用程序）](appcontainer-windows-store-app.md)
+### [/APPCONTAINER （UWP/Microsoft Store 应用）](appcontainer-windows-store-app.md)
 ### [/ASSEMBLYDEBUG（添加 DebuggableAttribute）](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE（链接到 .NET Framework 资源）](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE（向程序集添加 MSIL 模块）](assemblymodule-add-a-msil-module-to-the-assembly.md)

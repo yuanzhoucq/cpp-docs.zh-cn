@@ -1,7 +1,7 @@
 # [C 运行时库参考](c-run-time-library-reference.md)
 # [CRT 库功能](crt-library-features.md)
 ## [兼容性](compatibility.md)
-### [Windows 应用商店应用程序、Windows 运行时和 C 运行时](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
+### [UWP 应用、Windows 运行时和 C 运行时](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
 ### [ANSI C 遵从性](ansi-c-compliance.md)
 ### [UNIX](unix.md)
 ### [Windows 平台 (CRT)](windows-platforms-crt.md)

@@ -287,7 +287,7 @@
 ### [如何：使用 WRL 处理事件](how-to-handle-events-using-wrl.md)
 ### [WRL 类库项目模板](wrl-class-library-project-template.md)
 ### [演练：使用 WRL 创建基本 Windows 运行时组件](walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)
-### [演练：使用 WRL 和媒体基础创建 Windows 应用商店应用](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
+### [演练：使用 WRL 和媒体基础创建 UWP 应用](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
 ### [如何：使用 WRL 创建传统型 COM 组件](how-to-create-a-classic-com-component-using-wrl.md)
 ### [如何：直接实例化 WRL 组件](how-to-instantiate-wrl-components-directly.md)
 ### [如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)
