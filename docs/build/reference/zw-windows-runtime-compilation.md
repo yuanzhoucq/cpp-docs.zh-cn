@@ -33,7 +33,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 02/14/2018
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW（Windows 运行时编译）
-编译源代码以支持[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 创建的通用 Windows 平台 (UWP) 应用。  
+编译源代码以支持[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 创建的通用 Windows 平台 (UWP) 应用。  
   
  当你使用**/ZW**进行编译时，始终指定**/EHsc**以及。  
   
