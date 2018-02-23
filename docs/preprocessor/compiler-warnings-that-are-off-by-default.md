@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
-编译器将包含警告处于关闭状态默认情况下因为大多数开发人员不希望看到它们。 但是，你可使用下列选项之一启用此类警告。
+因为大多数开发人员不希望看到它们，编译器将包含默认情况下，关闭的警告。 在某些情况下，它们表示一个样式的选择，或在较旧的代码中，是常见惯用语或利用语言的 Microsoft 扩展。 在其他情况下，它们指示其中程序员通常做出错误假设，这可能导致意外或未定义行为的区域。 有些警告可能存在非常干扰库标头中。
 
-**#pragma 警告 (默认：** *warning_number* **)**  
-指定的警告 (*warning_number*) 在其默认级别启用。 该警告的文档包含该警告的默认级别。
+可以使用以下选项之一来启用这些警告：
 
-**#pragma warning(** *warning_level* **:** *warning_number* **)**  
-指定的警告 (*warning_number*) 在指定级别启用 (*warning_level*)。
+- **#pragma 警告 (默认：** *warning_number* **)**  
+   指定的警告 (*warning_number*) 在其默认级别启用。 该警告的文档包含该警告的默认级别。
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ 墙壁**启用默认情况下处于关闭状态的所有警告。
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**  
+   指定的警告 (*warning_number*) 在指定级别启用 (*warning_level*)。
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ 墙壁**启用默认情况下处于关闭状态的所有警告。 如果你使用此选项，你可以通过将个别警告关闭[/wd](../build/reference/compiler-option-warning-level.md)选项。
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   这使警告 *nnnn* 级别*l*。
 
 默认情况下，下列警告是禁用的。
 
@@ -131,6 +136,7 @@ ms.lasthandoff: 02/19/2018
 |C5032 （级别 4）|检测到与测试 warning （没有相应 #pragma pop） #pragma warning （push）|
 |C5035|使用的功能*功能*将导致函数*函数*编译为访客代码|
 |C5036 （级别 1）|varargs 函数指针转换使用 /hybrid:x86arm64 编译时*type1*到*type2*|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|数据成员*member1*将数据成员后初始化*member2*|
 
 这些警告处于关闭状态，除非[/ 宽松-](../build/reference/permissive-standards-conformance.md)设置编译器选项：
 

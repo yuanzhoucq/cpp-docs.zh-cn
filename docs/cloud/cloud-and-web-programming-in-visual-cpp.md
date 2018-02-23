@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-azure
+ms.technology:
+- cpp-azure
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aaf02f645ae61c75fb4ede3f5bc8e820039d1cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c04939aea508afed60b32ae51d627a1f5d902fd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 C++ 中有多种选项可使你连接到 Web 和云。  
   
  [Microsoft Azure 移动服务](http://www.windowsazure.com/develop/mobile/)  
- 提供可在 Windows 应用商店应用或 Windows 桌面应用中使用的本机 API，用于连接到 Microsoft Azure 移动服务。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅 [快速入门：使用 C++ 添加移动服务](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。  
+ 提供可用于在通用 Windows 平台 (UWP) 应用或 Windows 桌面应用中连接到 Windows Azure 移动服务的本机 Api。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅 [快速入门：使用 C++ 添加移动服务](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。  
 
  [C + + 的 Microsoft Azure 存储客户端库](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)  
  用于 c + + 的 Azure 存储客户端库提供了一个全面的 API，用于使用 Azure 存储空间，包括但不是限于以下功能：
@@ -52,11 +55,11 @@ C++ 中有多种选项可使你连接到 Web 和云。
  Windows 运行时 HTTP 客户端类在 .NET Framework 类上建模，后者在 System.Web 命名空间中具有相同的名称。 `HttpClient` 完全支持通过 HTTP 异步上载和下载，还完全支持可将自定义 HTTP 处理程序插入到管道中的管道筛选器。 Windows SDK 包括用于按流量计费的网络和 OAuth 身份验证等的样本筛选器。 对于面向通用 Windows 平台的应用，我们建议你使用`Windows::Web:HttpClient`类。 
   
 [IXMLHTTPRequest2 接口](http://msdn.microsoft.com/library/windows/apps/hh831151.aspx)  
- 提供可在 Windows 应用商店应用或 Windows 桌面应用中使用的本机 COM 接口，用于通过 HTTP 连接到 Internet，并发布 GET、PUT 和其他 HTTP 命令。 有关详细信息，请参阅[演练： 连接使用任务和 XML HTTP 请求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。  
+ 提供的本机 COM 接口，可用于在 Windows 运行时应用或 Windows 桌面应用中通过 HTTP 连接到 Internet 并发布 GET、 PUT 和其他 HTTP 命令。 有关详细信息，请参阅[演练： 连接使用任务和 XML HTTP 请求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。  
   
 [Windows Internet (WinInet)](http://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)  
  可以在 Windows 桌面应用中使用以连接到 Internet 的 Windows API。  
   
 ## <a name="see-also"></a>请参阅  
  [Visual c + +](../visual-cpp-in-visual-studio.md)   
- [连接到网络和 web 服务 （使用 C# / VB/c + + 和 XAML 的 Windows 应用商店应用）](http://msdn.microsoft.com/library/windows/apps/br229573.aspx)
+ [网络和 web 服务](/windows/uwp/networking/)

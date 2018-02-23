@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800 通过 C5999
 
@@ -245,6 +243,7 @@ ms.lasthandoff: 02/14/2018
 |编译器警告 C5035|使用的功能*功能*将导致函数*函数*编译为访客代码|
 |编译器警告 （等级 1） C5036|varargs 函数指针转换使用 /hybrid:x86arm64 编译时*type1*到*type2*|
 |编译器警告 （错误） C5037|*成员函数*： 类模板的成员的超行定义不能具有默认自变量|
+|[编译器警告 C5038](c5038.md)|数据成员*member1*将数据成员后初始化*member2*|
 |编译器警告 C5039|*函数*： 指针或对可能引发函数引用传递给下-EHc extern C 函数。 如果此函数将引发异常，则可能出现未定义的行为。|
 |编译器警告 C5040|动态异常规范是有效的仅在 C + + 14 及更早版本;将视为 noexcept （false）|
 |编译器警告 C5041|*定义*: constexpr 静态数据成员的超行定义，则不需要而且在 C + + 17 中已弃用|

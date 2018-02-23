@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFXPANEDIALOG/CPaneDialog::Create
 - AFXPANEDIALOG/CPaneDialog::HandleInitDialog
 - AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPaneDialog [MFC], Create
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4d292a8f3f8fafc88b23d9375d1894e47e1c0a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e247d1d824d710cfa9588a01d73e1ca611d77ed
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 类
 `CPaneDialog`类支持一个无模式的可停靠对话框。  
@@ -64,7 +67,7 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|指定一个对话框，是的 OLE 控件容器的模板。|  
   
 ## <a name="remarks"></a>备注  
- 构造`CPaneDialog`两个步骤中的对象。 首先，构造你的代码中的对象。 其次，调用[CPaneDialog::Create](#create)。 必须指定有效的资源模板名称或模板 ID，并将指针传递到父窗口。 否则，在创建过程将失败。 对话框中必须指定 WS_CHILD 和 WS_VISIBLE 样式。 我们建议你还指定 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS 样式。 有关详细信息，请参阅[窗口样式](window-styles.md)。  
+ 构造`CPaneDialog`两个步骤中的对象。 首先，构造你的代码中的对象。 其次，调用[CPaneDialog::Create](#create)。 必须指定有效的资源模板名称或模板 ID，并将指针传递到父窗口。 否则，在创建过程将失败。 对话框中必须指定 WS_CHILD 和 WS_VISIBLE 样式。 我们建议你还指定 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS 样式。 有关详细信息，请参阅[窗口样式](styles-used-by-mfc.md#window-styles)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,7 +87,7 @@ class CPaneDialog : public CDockablePane
 ## <a name="requirements"></a>惠?  
  **标头：** afxpanedialog.h  
   
-##  <a name="create"></a>CPaneDialog::Create  
+##  <a name="create"></a>  CPaneDialog::Create  
  创建停靠的对话框中，并将其附加到`CPaneDialog`对象。  
   
 ```  
@@ -130,7 +133,7 @@ BOOL Create(
  向父窗口的点。  
   
  [in] `bHasGripper`  
- `TRUE`若要创建带有标题 （控制手柄）; 停靠对话框否则为`FALSE`。  
+ `TRUE` 若要创建带有标题 （控制手柄）; 停靠对话框否则为`FALSE`。  
   
  [in] `lpszTemplateName`  
  资源对话框模板的名称。  
@@ -151,7 +154,7 @@ BOOL Create(
  其他样式特性。 默认值为 `AFX_DEFAULT_DOCKING_PANE_STYLE`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
@@ -161,7 +164,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
  处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。  
   
 ```  
@@ -183,7 +186,7 @@ afx_msg LRESULT HandleInitDialog(
 ### <a name="remarks"></a>备注  
  框架使用此方法来初始化控件和一个对话框的外观。 然后再显示对话框中，框架会调用此方法。  
   
-##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+##  <a name="setoccdialoginfo"></a>  CPaneDialog::SetOccDialogInfo  
  指定一个对话框，是的 OLE 控件容器的模板。  
   
 ```  

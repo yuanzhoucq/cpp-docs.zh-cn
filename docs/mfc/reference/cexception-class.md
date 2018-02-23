@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cexception-class"></a>CException 类
 Microsoft 基础类库中所有异常的基类。  
@@ -91,7 +94,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
-##  <a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>  CException::CException  
  此成员函数构造`CException`对象。  
   
 ```  
@@ -105,7 +108,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>备注  
  你将通常无需直接调用此构造函数。 引发异常的函数应创建的实例`CException`-派生类并调用其构造函数，或它应使用的 MFC 如引发函数， [AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 引发的预定义的类型。 仅出于完整性的考虑提供此文档。  
   
-##  <a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>  CException::Delete  
  此函数将检查以查看**CException**对象在堆上创建的如果是这样，它调用**删除**对象上的运算符。  
   
 ```  
@@ -169,7 +172,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>  CException::ReportError  
  在消息框中向用户调用此成员函数可对报表错误文本。  
   
 ```  
@@ -180,7 +183,7 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>参数  
  `nType`  
- 指定消息框的样式。 应用的任意组合[消息框样式](message-box-styles.md)在框中。 如果未指定此参数，默认值是**MB_OK**。  
+ 指定消息框的样式。 应用的任意组合[消息框样式](styles-used-by-mfc.md#message-box-styles)在框中。 如果未指定此参数，默认值是**MB_OK**。  
   
  *nMessageID*  
  指定要显示如果异常对象不具有一条错误消息的消息的资源 ID （字符串表项）。 如果为 0，消息"没有错误消息不可用"会显示。  

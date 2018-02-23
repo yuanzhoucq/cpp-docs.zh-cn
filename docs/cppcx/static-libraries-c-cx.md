@@ -2,7 +2,6 @@
 title: "静态库 (C + + /cli CX) |Microsoft 文档"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +14,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="static-libraries-ccx"></a>静态库 (C++/CX)
 在通用 Windows 平台 (UWP) 应用程序中使用的静态库可包含 ISO 标准 c + + 代码，包括 STL 类型，同时还未排除的 Windows 运行时应用程序平台的 Win32 api 的调用。 静态库使用 Windows 运行时组件，并可能创建具有某些限制的 Windows 运行时组件。  

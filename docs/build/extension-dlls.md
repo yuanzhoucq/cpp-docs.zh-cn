@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>MFC 扩展 Dll
 MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可重用类的 DLL。  
@@ -61,7 +65,7 @@ MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可
   
  之前版本的 MFC 4.0，这种类型的 DLL 调用了 AFXDLL。 AFXDLL 指`_AFXDLL`生成 DLL 时定义的预处理器符号。  
   
- 按照中所述的约定命名共享版本的 MFC 导入库[MFC Dll 命名约定](../build/naming-conventions-for-mfc-dlls.md)。 Visual c + + 提供 MFC Dll 和一个数字的非 MFC Dll，你可以使用和你的应用程序一起分发的预构建的的版本。 这些记录在 Redist.txt，安装到 Program Files\Microsoft Visual Studio 文件夹中。  
+ 按照中所述的约定命名共享版本的 MFC 导入库[MFC Dll 命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 Visual c + + 提供 MFC Dll 和一个数字的非 MFC Dll，你可以使用和你的应用程序一起分发的预构建的的版本。 这些记录在 Redist.txt，安装到 Program Files\Microsoft Visual Studio 文件夹中。  
   
  如果你要导出使用.def 文件，在起点和标头文件的末尾将以下代码：  
   
@@ -89,7 +93,7 @@ MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可
 ## <a name="sharing-resources-and-classes"></a>共享资源和类  
  导出资源均通过的资源列表。 每个应用程序包含单向链表的**CDynLinkLibrary**对象。 在查看资源时，大部分加载资源的标准 MFC 实现应当首先查看当前的资源模块 (`AfxGetResourceHandle`) 如果未找到资源和引导的列表**CDynLinkLibrary**对象尝试加载请求的资源。  
   
- 遍历列表也有缺点，它会稍慢些，并需要管理资源 ID 范围。 它具有链接到多个 MFC 扩展 Dll 的客户端应用程序可以使用任何 DLL 提供的资源，而无需指定 DLL 实例句柄的优势。 `AfxFindResourceHandle`是一个 API 用于遍历资源列表以查找给定的匹配项。 它采用的名称和类型的资源，并返回的第一次找的资源句柄 （或 NULL）。  
+ 遍历列表也有缺点，它会稍慢些，并需要管理资源 ID 范围。 它具有链接到多个 MFC 扩展 Dll 的客户端应用程序可以使用任何 DLL 提供的资源，而无需指定 DLL 实例句柄的优势。 `AfxFindResourceHandle` 是一个 API 用于遍历资源列表以查找给定的匹配项。 它采用的名称和类型的资源，并返回的第一次找的资源句柄 （或 NULL）。  
   
  如果你不想要浏览列表，而仅从特定的位置加载资源，使用函数`AfxGetResourceHandle`和`AfxSetResourceHandle`保存旧句柄并设置新的句柄。 请确保还原旧资源句柄，然后返回到客户端应用程序。 使用此方法以显式加载菜单的示例，请参阅 MFC 示例中的 Testdll2.cpp [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。  
   

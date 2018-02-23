@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - regular MFC DLLs [C++]
 - DLLs [C++], regular
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>常规 MFC 静态链接到 MFC 的 Dll
 MFC DLL 静态链接到 MFC 正则表达式是在内部，使用 MFC 的 DLL，可以由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 名称所述，使用静态链接库版本的 MFC 进行构建这种类型的 DLL。 函数通常是从正则表达式使用标准的 C 界面的 MFC DLL 导出的。 有关如何编写、 生成和使用的规则的 MFC DLL 的示例，请参见示例[DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。  
@@ -72,7 +75,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
  此外可以动态地，静态链接到 MFC 的 DLL 无法链接到共享的 MFC Dll。 静态链接到 MFC 的 DLL 动态绑定到应用程序就像任何其他 DLL;就像任何其他 DLL 中将应用程序链接到它。  
   
- 按照中所述的约定命名的标准 MFC 静态链接库[MFC Dll 的命名约定](../build/naming-conventions-for-mfc-dlls.md)。 但是，使用 MFC 3.0 版及更高版本，它不再需要手动指定到链接器所需中链接的 MFC 库的版本。 MFC 标头文件相反，自动确定要根据预处理器中链接的 MFC 库的正确版本定义，如**\_调试**或**_UNICODE**。 MFC 标头文件添加 /DEFAULTLIB 指令指示链接器链接 MFC 库的特定版本。  
+ 按照中所述的约定命名的标准 MFC 静态链接库[MFC Dll 的命名约定](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 但是，使用 MFC 3.0 版及更高版本，它不再需要手动指定到链接器所需中链接的 MFC 库的版本。 MFC 标头文件相反，自动确定要根据预处理器中链接的 MFC 库的正确版本定义，如**\_调试**或**_UNICODE**。 MFC 标头文件添加 /DEFAULTLIB 指令指示链接器链接 MFC 库的特定版本。  
   
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   
