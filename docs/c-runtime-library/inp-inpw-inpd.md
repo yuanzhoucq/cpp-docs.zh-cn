@@ -44,11 +44,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b5a950496c1148b62e248b9d5d5a4d03f40fea45
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
 从某个端口输入一个字节 (`_inp`)、一个字 (`_inpw`) 或一个双字 (`_inpd`)。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/09/2018
 >  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   

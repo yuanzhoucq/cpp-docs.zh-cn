@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>兼容性
 通用 C 运行时库 (UCRT) 支持实现 C++ 一致性所需的大多数 C 标准库。 它实现了 C99 (ISO/IEC 9899:1999) 库，\<tgmath.h> 中定义的泛型类型宏和 \<complex.h> 中的严格的类型兼容性除外。 UCRT 还实现了 POSIX.1（ISO/IEC 9945-1:1996，POSIX 系统应用程序编程接口）C 库的大型子集，但不完全符合任何特定的 POSIX 标准。  此外，UCRT 实现了几个特定于 Microsoft 的函数和不属于标准的一部分的宏。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/29/2018
   
 |标题|描述|  
 |-----------|-----------------|  
-|[Windows 应用商店应用程序、Windows 运行时和 C 运行时](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|说明 UCRT 例程何时与通用 Windows 应用或 Windows 应用商店应用不兼容。|  
+|[UWP 应用、Windows 运行时和 C 运行时](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|说明 UCRT 例程何时与通用 Windows 应用或 Microsoft 应用商店应用不兼容。|  
 |[ANSI C 遵从性](../c-runtime-library/ansi-c-compliance.md)|说明 UCRT 中符合标准的命名。|  
 |[UNIX](../c-runtime-library/unix.md)|提供将程序移植到 UNIX 的指南。|  
 |[Windows 平台 (CRT)](../c-runtime-library/windows-platforms-crt.md)|列出 CRT 支持的操作系统。|  

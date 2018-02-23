@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/03/2018
   
 -   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 这些运算符函数现在始终以静态方式链接到二进制文件，即使是使用运行时库 DLL 时也是如此。  
   
-     这对于本机或混合代码 (/clr) 而言不是一项重大更改，但是对于编译为 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的代码而言，这可能会导致代码无法进行编译。 如果将代码编译为 /clr:pure，可能需要添加 #include \<new> 或 #include \<new.h> 以解决由于此更改导致的生成错误。 请注意，/clr:pure 在 Visual Studio 2015 中已被弃用，并且可能在未来版本中删除。  
+     这对于本机或混合代码 (/clr) 而言不是一项重大更改，但是对于编译为 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的代码而言，这可能会导致代码无法进行编译。 如果将代码编译为 /clr:pure，可能需要添加 #include \<new> 或 #include \<new.h> 以解决由于此更改导致的生成错误。 请注意，/clr:pure 在 Visual Studio 2015 中已被弃用，并且可能在未来版本中删除。 “纯”代码应移植到 C#。  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/03/2018
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
+-    **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 -   **_cgets 和 _cgetws** 已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   

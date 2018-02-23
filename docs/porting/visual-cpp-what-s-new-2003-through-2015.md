@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1545,16 +1545,16 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>按配置优化选项 (PGO) 增强
 
 - 通过使用 PGO 实现已优化的应用程序工作集的缩减，从而提高性能。
-- 用于 Windows Store 应用开发的新 PGO。
+- 用于 Windows 运行时应用开发的新 PGO。
 
-### <a name="windows-store-app-development-support"></a>Windows Store 应用开发支持
+### <a name="windows-runtime-app-development-support"></a>Windows 运行时应用开发支持
 
-- **支持值结构中的装箱类型。** 现在可以使用可以为空的字段（例如与 IBox<int>^ 相对的 int）来定义值类型。这意味着字段可以具有值，或者与 nullptr 相等。
+- **支持值结构中的装箱类型。** 现在可以使用可以为空的字段（例如与 IBox\<int>^ 相对的 int）来定义值类型。这意味着字段可以具有值，或者与 nullptr 相等。
 - **更丰富的异常信息。** C++/CX 支持能够在整个应用程序二进制接口 (ABI) 中获取和传播各种异常信息的新 Windows 错误模型；这包括调用堆栈和自定义消息字符串。
 - **Object::ToString() 现在为虚拟。** 现在可以重写用户定义的 Windows 运行时引用类型中的 ToString。
 - **支持已弃用的 API。** 公共 Windows 运行时 API 现在可标记为已弃用并可收到一条自定义消息，此消息显示为生成警告并可提供迁移指南。
 - **调试器改进。** 支持本机/JavaScript 互操作调试、Windows 运行时异常诊断和异步代码调试（windows 运行时和 PPL）。
-  - 请注意：除本节中介绍的 C++ 特定功能和增强功能外，Visual Studio 中的其他增强功能还可帮助你编写更好的 Windows Store 应用。
+  - 请注意：除本节中介绍的 C++ 特定功能和增强功能外，Visual Studio 中的其他增强功能还可帮助你编写更好的 Windows 运行时应用。
 
 ### <a name="diagnostics-enhancements"></a>诊断增强功能
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Windows Store 应用开发支持
+### <a name="windows-runtime-app-development-support"></a>Windows 运行时应用开发支持
 
-- **基于本机 XAML 的 UI 模型**。 可将新的基于本机 XAML 的 UI 模型用于 Windows Store 应用。
-- **Visual C++ 组件扩展**。 这些扩展减少了 Windows 运行时对象的使用，是 Windows Store 应用不可缺少的部分。 有关详细信息，请参阅使用 C++ 的 Windows Store 应用产品指南和 Visual C++ 语言参考 (C++/CX)
-- **DirectX 游戏**。 你可以利用 Windows Store 应用的新的 DirectX 支持来开发有趣的游戏。
-- **XAML/DirectX 交互**。 使用 XAML 和 DirectX 的 Windows Store 应用现可有效进行交互。
+- **基于本机 XAML 的 UI 模型**。 可将新的基于本机 XAML 的 UI 模型用于 Windows 运行时应用。
+- **Visual C++ 组件扩展**。 这些扩展减少了 Windows 运行时对象的使用，是 Windows 运行时应用不可缺少的部分。 有关详细信息，请参阅[使用 C++ 的 Windows 运行时应用产品指南](../windows/universal-windows-apps-cpp.md)和 [Visual C++ 语言参考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **DirectX 游戏**。 可以利用 Windows 运行时应用的新的 DirectX 支持来开发有趣的游戏。
+- **XAML/DirectX 交互**。 使用 XAML 和 DirectX 的 Windows 运行时应用现可有效进行交互。
 - **Windows 运行时组件 DLL 的开发**。 组件 DLL 的开发使 Windows 运行时环境能够扩展。
 
 ### <a name="compiler-and-linker"></a>编译器和链接器
@@ -1941,7 +1941,7 @@ __sptr、__uptr
 - 64 位本机和跨平台编译器。
 - 添加了 /analyze（企业代码分析）编译器选项。
 - 添加了 /bigobj 编译器选项。
-- 添加了 /clr:pure、/clr:safe 和 /clr:oldSyntax。
+- 添加了 /clr:pure、/clr:safe 和 /clr:oldSyntax。 （此后在 Visual Studio 2015 中弃用。）
 - 已弃用的编译器选项：此版本中很多编译器选项已弃用，请参阅“已弃用的编译器选项”以获取详细信息。
 - 减少了 /clr 代码中的双重形式转换；请参阅“双重形式转换 (C++)”以获取详细信息。
 - /EH（异常处理模型）或 /EHs 将不能再用于捕捉非引发性异常；请使用 /EHa。

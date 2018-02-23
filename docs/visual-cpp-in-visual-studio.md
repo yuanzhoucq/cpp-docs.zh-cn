@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -75,7 +75,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 ## <a name="writing-applications-in-c"></a>使用 C++ 编写应用程序
 
 [通用 Windows 应用](windows/universal-windows-apps-cpp.md)  
-在 Windows 开发人员中心查找指南和参考内容。 有关开发 Windows 应用商店应用的信息，请参阅 [使用 Visual Studio 开发 Windows 应用商店应用](http://go.microsoft.com/fwlink/p/?LinkId=248364) 和 [使用 C++ 的 Windows 应用商店应用指南](http://go.microsoft.com/fwlink/p/?LinkId=244654)。
+在 Windows 开发人员中心查找指南和参考内容。 有关开发 UWP 应用的信息，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 创建第一个 UWP 应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
 [桌面应用程序 (C++)](windows/desktop-applications-visual-cpp.md)  
 了解如何创建具有消息循环和回调的桌面应用程序。
@@ -131,7 +131,7 @@ C++ 标准库。
 在 GPU 上执行的大量并行算法。
 
 [Windows 运行时模板库 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] 应用和组件。
+通用 Windows 平台 (UWP) 应用和组件。
 
 [使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 公共语言运行时 (CLR) 编程。
