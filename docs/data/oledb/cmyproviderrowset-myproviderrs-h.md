@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cmyproviderrowset
 - myproviderrs.h
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8922e1643dc5a33721424f2a5d83c7f66e0f58a7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6a4a786a5980763a0588456004efafc02978365e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 向导将生成行集对象的条目。 在此例中，它称为 `CMyProviderRowset`。 `CMyProviderRowset`类继承的 OLE DB 提供程序类调用`CRowsetImpl`，该类可实现行集对象的所有必要的接口。 下面的代码演示的继承链`CRowsetImpl`:  

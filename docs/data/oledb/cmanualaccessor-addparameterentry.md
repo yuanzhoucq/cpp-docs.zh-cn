@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e0b730ad81eb827fb86b77b95d4abb96ac73b3c3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab686bfed7abd3bece3effbcf9f5e2b98132bb8b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmanualaccessoraddparameterentry"></a>CManualAccessor::AddParameterEntry
 将参数项添加到参数项结构。  
@@ -73,7 +73,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 ## <a name="remarks"></a>备注  
  若要使用此功能，必须先调用[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

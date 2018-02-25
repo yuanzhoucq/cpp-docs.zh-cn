@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a891052b4fa92f6f642cdab89aadf444ec4d8475
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2c8e405b95543d170a4e94e39626e9b9793791c7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 管理与数据源的连接。  
@@ -71,7 +71,7 @@ class CDataConnection
 > [!NOTE]
 >  如果要创建的数据库应用程序需要处理多个会话，你将需要使用[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

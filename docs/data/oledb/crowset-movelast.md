@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CRowset<TAccessor>::MoveLast
 - CRowset<TAccessor>::MoveLast
@@ -30,11 +30,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1080a86273df82361511eaee3c3616aeb0868fd3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1657904b592c59b22a49c1fcaa3d55237a7bccf9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetmovelast"></a>CRowset::MoveLast
 将光标移到的最后一行。  
@@ -54,7 +54,7 @@ HRESULT MoveLast() throw();
   
  此方法要求你设置**DBPROP_CANSCROLLBACKWARDS**到`VARIANT_TRUE`之前调用**打开**对表或命令，其中包含行集。 (为了提高性能，你可能还要设置**DBPROP_QUICKRESTART**到`VARIANT_TRUE`。)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

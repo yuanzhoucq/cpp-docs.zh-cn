@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetErrorInfo
 - ATL.CDBErrorInfo.GetErrorInfo
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87271b58a0cfd7ab3780f6f0eb339478a94d7465
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9877b2094c3bccec1bf7552ba86d60050ab16055
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdberrorinfogeterrorinfo"></a>CDBErrorInfo::GetErrorInfo
 调用[ierrorrecords:: Geterrorinfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx)返回[IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx)到指定的记录的接口指针。  
@@ -48,7 +48,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 ## <a name="return-value"></a>返回值  
  一个标准 `HRESULT`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

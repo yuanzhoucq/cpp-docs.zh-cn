@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::IErrorRecordsImpl
 - ATL.IErrorRecordsImpl
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e69db8c89a60b7dee543bbdf87997514ba5f0cd7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f3d466cbf761342706774a9b5a52c5b4e69a7328
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 实现 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)接口，添加到的记录并从数据成员中检索的记录 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 类型的**CAtlArray <** `RecordClass`**>**.  

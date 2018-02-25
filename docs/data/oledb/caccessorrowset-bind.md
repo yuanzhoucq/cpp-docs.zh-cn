@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CAccessorRowset.Bind
 - CAccessorRowset::Bind
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 068d425d8328f18c4693b3cb4ee27d3972109fdf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 778f8afabbe845c382782ea15e3e47f8736d07fa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
 如果你指定创建绑定**bBind**中为 false [ccommand:: Open](../../data/oledb/ccommand-open.md)。  
@@ -42,7 +42,7 @@ HRESULT Bind();
 ## <a name="return-value"></a>返回值  
  一个标准 `HRESULT`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

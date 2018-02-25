@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CCommand::GetNextResult
 - CCommand::GetNextResult
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 424390a116cfad18dc3221efbc26a05ea666f122
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fa77785373545b2c4efd2faef0a8c0a02ee26910
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ccommandgetnextresult"></a>CCommand::GetNextResult
 提取下一个结果集是否可用。  
@@ -57,7 +57,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
   
  仅当你通过设置指定多个结果，应调用此函数`CCommand`模板参数*TMultiple*=`CMultipleResults`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

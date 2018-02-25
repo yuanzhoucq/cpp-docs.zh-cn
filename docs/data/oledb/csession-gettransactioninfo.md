@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetTransactionInfo
 - CSession.GetTransactionInfo
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 321a7980a423eade0c778d7c1b4c7ae0a12e4e7f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 096d2d9311a891cc41f89380e05830e5c1fa3e59
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csessiongettransactioninfo"></a>CSession::GetTransactionInfo
 返回有关事务的信息。  
@@ -50,7 +50,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[ITransaction::GetTransactionInfo](https://msdn.microsoft.com/en-us/library/ms714975.aspx)中*OLE DB 程序员参考*。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl.SetProperties
 - SetProperties
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9cd0b425a61d3a9dd669f99e4c4471e728e68662
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f556cf112f9364cd2459bd4d1fdc30691281ca30
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbpropertiesimplsetproperties"></a>IDBPropertiesImpl::SetProperties
 枚举器在数据源和初始化属性组的数据源对象或初始化属性组中，设置属性。  

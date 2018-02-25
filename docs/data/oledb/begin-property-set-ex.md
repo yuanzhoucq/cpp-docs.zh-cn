@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - BEGIN_PROPERTY_SET_EX
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bc3738ca9fc03014b68cc47cadad32ac4865b0d1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 46f20308e037942ef3259d930fa89a3e08dca93d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
 在属性中设置属性的开头的标记集映射。  
@@ -48,7 +48,7 @@ BEGIN_PROPERTY_SET_EX(guid
 ## <a name="example"></a>示例  
  请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

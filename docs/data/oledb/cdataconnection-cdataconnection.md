@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataConnection.CDataConnection
 - ATL.CDataConnection.CDataConnection
@@ -25,11 +25,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0437f0280578f9e3e2b652e9d4ed01c59ba3ab6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4405e0dce66de9f006a23b5b680072b9562af06f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnectioncdataconnection"></a>CDataConnection::CDataConnection
 实例化和初始化`CDataConnection`对象。  
@@ -51,7 +51,7 @@ CDataConnection(const CDataConnection &ds);
   
  第二个重写创建一个新`CDataConnection`使用等效于指定类型的数据连接对象的设置的对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  
