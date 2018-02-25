@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::operator!=
 - thread/std::operator&gt;
@@ -14,9 +14,10 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -26,11 +27,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: f1a004cca5d43c22b5315c50b61cb0fcafb2cf10
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 ||||  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  确定一个 `thread::id` 对象是否大于或等于另一个。  
   
 ```cpp  
@@ -83,7 +84,7 @@ bool operator> (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  确定一个 `thread::id` 对象是否小于或等于另一个。  
   
 ```cpp  
@@ -173,7 +174,7 @@ bool operator== (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  将 `thread::id` 对象的文本表示形式插入流。  
   
 ```cpp  
@@ -197,7 +198,7 @@ basic_ostream<Elem, Tr>& operator<<(
   
  如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<thread>](../standard-library/thread.md)
 
 

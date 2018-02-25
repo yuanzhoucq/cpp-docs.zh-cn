@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27c6b4a98eeaf3ffcae07d8277e823375176eed2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-bookmarks"></a>使用书签
 打开行集之前，你必须告知提供程序，你想要使用书签。 若要执行此操作，将设置**DBPROP_BOOKMARKS**属性**true**你属性中设置。 提供程序作为列零，检索书签，因此你必须使用特殊宏`BOOKMARK_ENTRY`和`CBookmark`类如果你使用的静态的访问器。 `CBookmark` 是一种模板类，其中的参数是书签缓冲区的长度以字节为单位。 所需的书签缓冲区的长度取决于提供程序。 如果你使用 ODBC OLE DB 提供程序，如下面的示例中所示，缓冲区必须是 4 个字节。  

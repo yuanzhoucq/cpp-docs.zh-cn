@@ -1,25 +1,29 @@
 ---
-title: "&lt;线程&gt;|Microsoft 文档"
+title: '&lt;thread&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <thread>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <thread>
+dev_langs:
+- C++
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0847d92d890026ce6cfb963b022a3859370877fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fa16f2f06a55122619741c5889f41ce3d6b53c1e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 包括标准标头\<线程 > 定义类`thread`和各种支持的函数。  
@@ -67,10 +71,10 @@ ms.lasthandoff: 12/21/2017
 |----------|-----------------|  
 |[运算符 > = 运算符](../standard-library/thread-operators.md#op_gt_eq)|确定一个 `thread::id` 对象是否大于或等于另一个。|  
 |[运算符 > 运算符](../standard-library/thread-operators.md#op_gt)|确定一个 `thread::id` 对象是否大于另一个。|  
-|[运算符 < = 运算符](../standard-library/thread-operators.md#op_lt_eq)|确定一个 `thread::id` 对象是否小于或等于另一个。|  
+|[operator<= Operator](../standard-library/thread-operators.md#op_lt_eq)|确定一个 `thread::id` 对象是否小于或等于另一个。|  
 |[运算符 < 运算符](../standard-library/thread-operators.md#op_lt)|确定一个 `thread::id` 对象是否小于另一个。|  
 |[运算符 ！ = 运算符](../standard-library/thread-operators.md#op_neq)|比较两个 `thread::id` 对象是否相等。|  
-|[运算符 = = 运算符](../standard-library/thread-operators.md#op_eq_eq)|比较两个 `thread::id` 对象是否相等。|  
+|[operator== Operator](../standard-library/thread-operators.md#op_eq_eq)|比较两个 `thread::id` 对象是否相等。|  
 |[运算符 << 运算符](../standard-library/thread-operators.md#op_lt_lt)|将 `thread::id` 对象的文本表示形式插入流。|  
   
 ## <a name="see-also"></a>请参阅  

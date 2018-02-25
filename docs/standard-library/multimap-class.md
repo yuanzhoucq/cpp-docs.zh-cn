@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::multimap
 - map/std::multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multimap [C++]
 - std::multimap [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multimap-class"></a>multimap 类
 C++ 标准库多重映射类用于存储和检索集合中的数据，此集合中的每个元素均为包含数据值和排序键的元素对。 键值不需要唯一，用于自动排序数据。 可以直接更改多重映射中的元素值，但不能直接更改其关联键值。 必须先删除与旧元素关联的键值，才能插入与新元素关联的新键值。  
@@ -391,7 +394,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>备注  
  `const_iterator` 类型不能用于修改元素的值。  
   
- 多重映射定义的 `const_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ `const_iterator`由多重映射指向的对象定义[value_type](#value_type)，类型`pair` * \< * **const 密钥**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用`const_iterator``cIter`多重映射中指向的元素，使用 **->** 运算符。  
   
@@ -471,7 +474,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>备注  
  `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问多重映射。  
   
- 多重映射定义的 `const_reverse_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ `const_reverse_iterator`由多重映射指向的对象定义[value_type](#value_type)，类型`pair` * \< * **const 密钥**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用`const_reverse_iterator``crIter`多重映射中指向的元素，使用 **->** 运算符。  
   
@@ -1298,7 +1301,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>备注  
- 多重映射定义的 **iterator** 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ **迭代器**由多重映射指向的对象定义[value_type](#value_type)，类型`pair` * \< * **const 密钥**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用指向 multimap 中元素的 **iterator**`Iter`，请使用 **->** 运算符。  
   
@@ -2017,7 +2020,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>备注  
  `reverse_iterator` 类型用于反向循环访问多重映射。  
   
- 多重映射定义的 `reverse_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ `reverse_iterator`由多重映射指向的对象定义[value_type](#value_type)，类型`pair` * \< * **const 密钥**，**类型 * * * >*。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用`reverse_iterator``rIter`多重映射中指向的元素，使用-> 运算符。  
   

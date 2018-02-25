@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - reader_writer_lock
 - CONCRT/concurrency::reader_writer_lock
@@ -18,19 +19,22 @@ f1_keywords:
 - CONCRT/concurrency::reader_writer_lock::try_lock
 - CONCRT/concurrency::reader_writer_lock::try_lock_read
 - CONCRT/concurrency::reader_writer_lock::unlock
-dev_langs: C++
-helpviewer_keywords: reader_writer_lock class
+dev_langs:
+- C++
+helpviewer_keywords:
+- reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 类
 具有仅限本地旋转的基于编写器首选队列的读取器-编写器锁。 锁授予对编写器的先进先出 (FIFO) 访问权限，并在出现编写器持续负载的情况下停止读取器。  
@@ -78,7 +82,7 @@ class reader_writer_lock;
   
  **命名空间：** 并发  
   
-##  <a name="lock"></a>锁 
+##  <a name="lock"></a> 锁 
 
  获取读取器 / 编写器锁，用作一个编写器。  
   
@@ -95,7 +99,7 @@ void lock();
   
  如果锁已经被调用的上下文中，保留[improper_lock](improper-lock-class.md)将引发异常。  
   
-##  <a name="lock_read"></a>lock_read 
+##  <a name="lock_read"></a> lock_read 
 
  获取读取器 / 编写器锁，用作一个读取器。 如果有编写器，活动的读取器必须等待，直到它们完成。 读取器只需注册感兴趣锁定并等待编写器释放它。  
   
@@ -108,7 +112,7 @@ void lock_read();
   
  如果有正在等待锁的编写器，读取器将等待，直到在行中的所有编写器已获取并释放该锁。 此锁朝编写器偏离，并且可以阻止编写器持续负载下的读取器。  
   
-##  <a name="ctor"></a>reader_writer_lock 
+##  <a name="ctor"></a> reader_writer_lock 
 
  构造一个新`reader_writer_lock`对象。  
   
@@ -116,7 +120,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a>~ reader_writer_lock 
+##  <a name="dtor"></a> ~reader_writer_lock 
 
  销毁`reader_writer_lock`对象。  
   
@@ -127,13 +131,13 @@ reader_writer_lock();
 ### <a name="remarks"></a>备注  
  应析构函数运行时不再持有锁。 允许读取器编写器锁与锁定析构仍保留会导致未定义的行为。  
   
-##  <a name="scoped_lock_class"></a>reader_writer_lock:: scoped_lock 类  
+##  <a name="scoped_lock_class">reader_writer_lock:: scoped_lock 类</a>  
  异常安全 RAII 包装器可用于获取`reader_writer_lock`为编写器锁定对象。  
   
 ```
 class scoped_lock;
 ``` 
-## <a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
 构造`scoped_lock`对象，并获取`reader_writer_lock`传入的对象`_Reader_writer_lock`为编写器的参数。 如果锁被保留由另一个线程，则此调用将阻塞。  
   
@@ -146,7 +150,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock`要获取为编写器对象。  
   
-## <a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
 
 销毁`reader_writer_lock`对象并释放其构造函数中提供的锁。   
 
@@ -154,18 +158,18 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class"></a>reader_writer_lock:: scoped_lock_read 类  
+##  <a name="scoped_lock_read_class">reader_writer_lock:: scoped_lock_read 类</a>  
  异常安全 RAII 包装器可用于获取`reader_writer_lock`锁定对象用作一个读取器。  
   
 ```
 class scoped_lock_read;
 ```  
   
-##  <a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a> try_lock 
 
  尝试获取读取器 / 编写器锁为编写器而不阻止。  
 
-## <a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+## <a name="scoped_lock_read_ctor"></a> scoped_lock_read::scoped_lock_read 
 
 构造`scoped_lock_read`对象，并获取`reader_writer_lock`传入的对象`_Reader_writer_lock`作为读取器的参数。 如果锁被保留由为编写器的另一个线程或有挂起的编写器，此调用将阻止。  
   
@@ -177,14 +181,14 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock`作为读取器获取的对象。  
   
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read 析构函数
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read 析构函数
 销毁`scoped_lock_read`对象并释放其构造函数中提供的锁。  
 
 ```
 ~scoped_lock_read();
 ```  
   
-## <a name="try_lock"></a>try_lock 
+## <a name="try_lock"></a> try_lock 
 
 ```
 bool try_lock();
@@ -193,7 +197,7 @@ bool try_lock();
 ### <a name="return-value"></a>返回值  
  如果已获取锁，则这`true`; 否则为值`false`。  
   
-##  <a name="try_lock_read"></a>try_lock_read 
+##  <a name="try_lock_read"></a> try_lock_read 
 
  尝试获取读取器 / 编写器锁为读取器不阻塞。  
   
@@ -204,7 +208,7 @@ bool try_lock_read();
 ### <a name="return-value"></a>返回值  
  如果已获取锁，则这`true`; 否则为值`false`。  
   
-##  <a name="unlock"></a>解锁 
+##  <a name="unlock"></a> 解锁 
 
  解除锁定，基于由谁锁定它、 读取器或编写器将读取器写线程锁。  
   

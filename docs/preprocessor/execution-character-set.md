@@ -1,5 +1,5 @@
 ---
-title: "execution_character_set |Microsoft 文档"
+title: execution_character_set | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,23 +8,26 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - execution_character_set
 - vc-pragma.execution_character_set
-dev_langs: C++
-helpviewer_keywords: pragma execution_character_set
+dev_langs:
+- C++
+helpviewer_keywords:
+- pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1064f5cf97ba6b919e718c60c8346e86d643ced
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eda04de6975708b2460e53681e50f8ea4f9dbcd3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 指定执行字符集，用于字符串和字符文本。 文本标记为 u8 前缀不需要此指令。  

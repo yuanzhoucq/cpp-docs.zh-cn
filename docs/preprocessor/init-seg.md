@@ -1,31 +1,34 @@
 ---
-title: "init_seg |Microsoft 文档"
+title: init_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
 **C + + 专用**  
@@ -46,23 +49,23 @@ ms.lasthandoff: 12/21/2017
   
  到选项**init_seg**杂注是：  
   
- **编译器**  
+ **compiler**  
  保留以供 Microsoft C 运行库初始化使用. 首先构造该组中的对象。  
   
  **lib**  
  可用于第三方类库供应商的初始化。 在那些已标记为后构造此组中的对象**编译器**但之前的任何其他。  
   
- **用户**  
+ **user**  
  可供任何用户使用。 最后构造此组中的对象。  
   
- *节名称*  
+ *section-name*  
  允许初始化部分的显式规范。 在用户指定的对象*节名称*不隐式构造; 但是，将其地址放置在命名的节*节名称*。  
   
  您提供的节名称将包含指向 helper 函数的指针，这些函数将构造在杂注后的模块中声明的全局对象。  
   
  有关创建部分时不应使用的名称的列表，请参阅[/部分](../build/reference/section-specify-section-attributes.md)。  
   
- *func 名称*  
+ *func-name*  
  指定在程序退出时为替换 `atexit` 而调用的函数。 此 helper 函数还调用[atexit](../c-runtime-library/reference/atexit.md)用一个指针指向全局对象的析构函数。 如果以杂注形式指定函数标识符，  
   
 ```  

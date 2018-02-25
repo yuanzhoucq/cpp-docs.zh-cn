@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: concrt/concurrency::invalid_scheduler_policy_thread_specification
-dev_langs: C++
-helpviewer_keywords: invalid_scheduler_policy_thread_specification class
+ms.topic: reference
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_thread_specification
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 82c53e760d09ecdcc39f50b30d68a6c0b5290c4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e73883cc3eb045d1bf12b85e76c122b4efd5788d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification 类
 此类描述尝试设置 `SchedulerPolicy` 对象的并发限制，以便 `MinConcurrency` 键的值小于 `MaxConcurrency` 键的值时引发的异常。  
@@ -37,7 +42,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |名称|描述|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification](无效的计划程序的策略的值-class.md #ctor|已重载。 构造 `invalid_scheduler_policy_value` 对象。|  
+|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|已重载。 构造 `invalid_scheduler_policy_value` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -48,7 +53,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  **标头：** concrt.h  
   
  **命名空间：** 并发  
-##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification 
 
  构造 `invalid_scheduler_policy_value` 对象。  
   

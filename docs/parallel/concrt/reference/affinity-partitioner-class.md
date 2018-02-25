@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - affinity_partitioner
 - PPL/concurrency::affinity_partitioner
 - PPL/concurrency::affinity_partitioner::affinity_partitioner
-dev_langs: C++
-helpviewer_keywords: affinity_partitioner class
+dev_langs:
+- C++
+helpviewer_keywords:
+- affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 25d6edb53a291c7b3a86f8583b78ab3efdce7842
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8ecc7e20947eee2491bf806f225178724b268ace
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner 类
 `affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。  
@@ -51,7 +55,7 @@ class affinity_partitioner;
   
  **命名空间：** 并发  
   
-##  <a name="dtor"></a>~ affinity_partitioner 
+##  <a name="dtor"></a> ~affinity_partitioner 
 
  销毁`affinity_partitioner`对象。  
   
@@ -59,7 +63,7 @@ class affinity_partitioner;
 ~affinity_partitioner();
 ```  
   
-##  <a name="ctor"></a>affinity_partitioner 
+##  <a name="ctor"></a> affinity_partitioner 
 
  构造 `affinity_partitioner` 对象。  
   

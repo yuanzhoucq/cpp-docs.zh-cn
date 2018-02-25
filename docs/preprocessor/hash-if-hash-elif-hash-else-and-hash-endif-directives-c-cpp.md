@@ -1,12 +1,13 @@
 ---
-title: "#<a name=\"if-elif-else-and-endif-directives-cc--microsoft-docs\"></a>如果是，#elif，#else 和 #endif 指令 （C/c + +） |Microsoft 文档"
+title: "#如果是，#elif，#else 和 #endif 指令 （C/c + +） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -14,7 +15,8 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8acd8444295175e6aa9fe329e7851456fcd5f7c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指令 (C/C++)
 `#if` 指令与 `#elif`、`#else` 和 `#endif` 指令一起控制源文件部分的编译。 如果您编写的表达式（在 `#if` 后）有一个非零值，则在翻译单元中保留紧跟 `#if` 指令的行组。  
@@ -50,11 +53,11 @@ ms.lasthandoff: 12/21/2017
  *如果行文本*  
   
  *如果行*:  
- **#if***常量表达式*   
+ **#if**  *constant-expression*  
   
- **#ifdef***标识符*   
+ **#ifdef**  *identifier*  
   
- **#ifndef***标识符*   
+ **#ifndef**  *identifier*  
   
  *elif 部件*:  
  *elif 行文本*  
@@ -62,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  *elif 部件 elif 行文本*  
   
  *elif 行*:  
- **#elif***常量表达式*   
+ **#elif**  *constant-expression*  
   
  *else 部分*:  
  *其他行文本*  

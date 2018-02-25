@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code
-dev_langs: C++
-helpviewer_keywords: scheduler_resource_allocation_error class
+dev_langs:
+- C++
+helpviewer_keywords:
+- scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23f7dffed1ba92d83502c27837b33e0b076e7645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b84533fb578ed0e2988f88420d46aeb2ed7c9657
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 类
 此类描述因未能在并发运行时中获取关键资源而引发的异常。  
@@ -62,7 +66,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="get_error_code"></a>get_error_code 
+##  <a name="get_error_code"></a> get_error_code 
 
  返回导致异常的错误代码。  
   
@@ -73,7 +77,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>返回值  
  `HRESULT`导致异常的错误值。  
   
-##  <a name="ctor"></a>scheduler_resource_allocation_error 
+##  <a name="ctor"></a> scheduler_resource_allocation_error 
 
  构造 `scheduler_resource_allocation_error` 对象。  
   

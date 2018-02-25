@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionContext
 - CONCRTRM/concurrency::IExecutionContext
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
-dev_langs: C++
-helpviewer_keywords: IExecutionContext structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9e3edffb10aad7b5793907c8c95ad5028f4d1d23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 结构
 可以在给定虚拟处理器上运行并可以协作切换上下文的执行上下文的接口。  
@@ -44,11 +48,11 @@ struct IExecutionContext;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Iexecutioncontext:: Dispatch](#dispatch)|线程代理开始执行特定的执行上下文时调用的方法。 这应是您的计划程序的主工作者例程。|  
-|[Iexecutioncontext:: Getid](#getid)|返回的执行上下文的唯一标识符。|  
-|[Iexecutioncontext:: Getproxy](#getproxy)|返回一个指向接口正在执行此上下文的线程代理。|  
-|[Iexecutioncontext:: Getscheduler](#getscheduler)|此执行上下文所属的接口返回到调度器。|  
-|[Iexecutioncontext:: Setproxy](#setproxy)|将与此执行上下文关联的线程代理。 相关联的线程代理时，将调用此方法权限开始执行上下文的之前`Dispatch`方法。|  
+|[IExecutionContext::Dispatch](#dispatch)|线程代理开始执行特定的执行上下文时调用的方法。 这应是您的计划程序的主工作者例程。|  
+|[IExecutionContext::GetId](#getid)|返回的执行上下文的唯一标识符。|  
+|[IExecutionContext::GetProxy](#getproxy)|返回一个指向接口正在执行此上下文的线程代理。|  
+|[IExecutionContext::GetScheduler](#getscheduler)|此执行上下文所属的接口返回到调度器。|  
+|[IExecutionContext::SetProxy](#setproxy)|将与此执行上下文关联的线程代理。 相关联的线程代理时，将调用此方法权限开始执行上下文的之前`Dispatch`方法。|  
   
 ## <a name="remarks"></a>备注  
  如果你要实现的接口与并发运行时的资源管理器中的自定义计划，你将需要实现`IExecutionContext`接口。 通过资源管理器创建的线程执行代表你的计划程序的工作，通过执行`IExecutionContext::Dispatch`方法。  
@@ -61,7 +65,7 @@ struct IExecutionContext;
   
  **命名空间：** 并发  
   
-##  <a name="dispatch"></a>Iexecutioncontext:: Dispatch 方法  
+##  <a name="dispatch"></a>  Iexecutioncontext:: Dispatch 方法  
  线程代理开始执行特定的执行上下文时调用的方法。 这应是您的计划程序的主工作者例程。  
   
 ```
@@ -72,7 +76,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  指向要在其下调度此执行上下文的状态的指针。 调度状态的详细信息，请参阅[DispatchState](dispatchstate-structure.md)。  
   
-##  <a name="getid"></a>Iexecutioncontext:: Getid 方法  
+##  <a name="getid"></a>  IExecutionContext::GetId Method  
  返回的执行上下文的唯一标识符。  
   
 ```
@@ -87,7 +91,7 @@ virtual unsigned int GetId() const = 0;
   
  获取从不同源的标识符可能导致未定义的行为。  
   
-##  <a name="getproxy"></a>Iexecutioncontext:: Getproxy 方法  
+##  <a name="getproxy"></a>  IExecutionContext::GetProxy Method  
  返回一个指向接口正在执行此上下文的线程代理。  
   
 ```
@@ -100,7 +104,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>备注  
  资源管理器将调用`SetProxy`执行上下文，方法与`IThreadProxy`作为参数，在输入前接口`Dispatch`方法在上下文。 你希望存储此自变量并将其返回到调用`GetProxy()`。  
   
-##  <a name="getscheduler"></a>Iexecutioncontext:: Getscheduler 方法  
+##  <a name="getscheduler"></a>  IExecutionContext::GetScheduler Method  
  此执行上下文所属的接口返回到调度器。  
   
 ```
@@ -113,7 +117,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>备注  
  所需初始化使用一个有效的执行上下文`IScheduler`之前使用作为参数传递给方法的接口提供由资源管理器。  
   
-##  <a name="setproxy"></a>Iexecutioncontext:: Setproxy 方法  
+##  <a name="setproxy"></a>  IExecutionContext::SetProxy Method  
  将与此执行上下文关联的线程代理。 相关联的线程代理时，将调用此方法权限开始执行上下文的之前`Dispatch`方法。  
   
 ```

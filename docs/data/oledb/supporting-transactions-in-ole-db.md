@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB consumer templates [C++], transaction support
 - transactions [C++], OLE DB support for
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9be6fb1c86b43f7833818648d84875b1e4c55b59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
 A[事务](../../data/transactions-mfc-data-access.md)是组，或批处理，一系列与数据源的更新，以便所有成功并同时提交，或 （如果任何之一失败） 会提交任何一种方法并回滚整个事务。 此过程可确保数据源上的结果的完整性。  
@@ -36,7 +38,7 @@ A[事务](../../data/transactions-mfc-data-access.md)是组，或批处理，一
   
 -   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
   
--   [Itransaction:: 提交](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
   
 -   [ITransaction::Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
   

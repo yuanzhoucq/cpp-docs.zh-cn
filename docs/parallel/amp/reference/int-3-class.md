@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_x
 - amp_short_vectors/Concurrency::graphics::int_3::operator-=
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 395d548e322ffcaed91536a781c7d5d821b6a446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d66a71701fb0806dbd93490587a9e0d8b3af46fe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="int3-class"></a>int_3 类
 表示三个整数的短矢量。  
@@ -159,20 +162,20 @@ class int_3;
 |名称|描述|  
 |----------|-----------------|  
 |int_3::operator-||  
-|int_3::operator-||  
-|int_3::operator %=||  
-|int_3::operator & =||  
-|int_3::operator * =||  
-|/ = int_3::operator 的||  
-|int_3::operator ^ =||  
-|int_3::operator &#124; =||  
-|int_3::operator ~||  
-|int_3::operator + +||  
-|int_3::operator + =||  
-|int_3::operator <\<=||  
-|int_3::operator =||  
-|int_3::operator =||  
-|int_3::operator >> =||  
+|int_3::operator--||  
+|int_3::operator%=||  
+|int_3::operator&=||  
+|int_3::operator*=||  
+|int_3::operator/=||  
+|int_3::operator^=||  
+|int_3::operator&#124;=||  
+|int_3::operator~||  
+|int_3::operator++||  
+|int_3::operator+=||  
+|int_3::operator<\<=||  
+|int_3::operator=||  
+|int_3::operator-=||  
+|int_3::operator>>=||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -223,7 +226,7 @@ class int_3;
   
  **Namespace:** concurrency:: graphics  
 
-## <a name="ctor"></a>int_3 
+## <a name="ctor"></a> int_3 
 
 默认构造函数，将初始化为 0 的所有元素。  
   
@@ -275,7 +278,7 @@ explicit inline int_3(
  `_Other`  
  用于初始化的对象。  
   
-## <a name="size"></a>大小 
+## <a name="size"></a> 大小 
 
 ## <a name="syntax"></a>语法  
   

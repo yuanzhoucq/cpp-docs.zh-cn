@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>combinable 类
 `combinable<T>` 对象旨在提供数据的线程专用副本，以在并行算法期间执行无锁线程本地子计算。 在并行操作结束时，线程专用子计算可随之合并到最终结果。 此类可替代共享变量使用，并可能会带来性能提升（如果该共享变量上存在大量争用）。  
@@ -59,7 +63,7 @@ class combinable;
 |[clear](#clear)|清除来自以前的使用情况的任何中间的计算结果。|  
 |[combine](#combine)|通过调用提供的 combine 函子计算的一套线程本地子计算从一个最终值。|  
 |[combine_each](#combine_each)|通过调用线程本地子计算每一次提供的 combine 函子计算的一套线程本地子计算从一个最终值。 最终结果的累计通过函数对象。|  
-|[本地](#local)|已重载。 返回对线程专用子计算的引用。|  
+|[local](#local)|已重载。 返回对线程专用子计算的引用。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -78,7 +82,7 @@ class combinable;
   
  **命名空间：** 并发  
   
-##  <a name="clear"></a>清除 
+##  <a name="clear"></a> 清除 
 
  清除来自以前的使用情况的任何中间的计算结果。  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>combinable 
+##  <a name="ctor"></a> combinable 
 
  构造一个新`combinable`对象。  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  第三个构造函数是复制构造函数。  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~ combinable 
 
  销毁 `combinable` 对象。  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>组合 
+##  <a name="combine"></a> 组合 
 
  通过调用提供的 combine 函子计算的一套线程本地子计算从一个最终值。  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>返回值  
  组合所有线程专用子计算的最终结果。  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  通过调用线程本地子计算每一次提供的 combine 函子计算的一套线程本地子计算从一个最终值。 最终结果的累计通过函数对象。  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  用于组合某一子计算函子。 其签名是`void (T)`或`void (const T&)`，并且必须已关联且可交换。  
   
-##  <a name="local"></a>本地 
+##  <a name="local"></a> 本地 
 
  返回对线程专用子计算的引用。  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>返回值  
  对线程专用子计算的引用。  
   
-##  <a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a> 运算符 = 
 
  将分配给`combinable`从另一个对象`combinable`对象。  
   

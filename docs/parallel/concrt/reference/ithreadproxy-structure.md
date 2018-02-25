@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 结构
 执行线程的抽象。 根据你创建的计划程序的 `SchedulerType` 策略键，资源管理器将授予你由普通的 Win32 线程或用户模式计划 (UMS) 线程支持的线程代理。 UMS 线程在具有 Windows 7 或更高版本的 64 位操作系统上受到支持。  
@@ -43,10 +47,10 @@ struct IThreadProxy;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Ithreadproxy:: Getid](#getid)|线程代理返回的唯一标识符。|  
-|[Ithreadproxy:: Switchout](#switchout)|解除上下文与基础虚拟处理器根的关联。|  
-|[Ithreadproxy:: Switchto](#switchto)|到另一个从当前正在执行的上下文中执行的协作上下文切换。|  
-|[Ithreadproxy:: Yieldtosystem](#yieldtosystem)|导致调用线程执行准备好在当前处理器上运行的另一个线程。 由操作系统选择要执行的下一个线程。|  
+|[IThreadProxy::GetId](#getid)|线程代理返回的唯一标识符。|  
+|[IThreadProxy::SwitchOut](#switchout)|解除上下文与基础虚拟处理器根的关联。|  
+|[IThreadProxy::SwitchTo](#switchto)|到另一个从当前正在执行的上下文中执行的协作上下文切换。|  
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|导致调用线程执行准备好在当前处理器上运行的另一个线程。 由操作系统选择要执行的下一个线程。|  
   
 ## <a name="remarks"></a>备注  
  线程代理耦合到执行上下文由接口表示`IExecutionContext`作为一种调度工作。  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **命名空间：** 并发  
   
-##  <a name="getid"></a>Ithreadproxy:: Getid 方法  
+##  <a name="getid"></a>  Ithreadproxy:: Getid 方法  
  线程代理返回的唯一标识符。  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>返回值  
  唯一的整数标识符。  
   
-##  <a name="switchout"></a>Ithreadproxy:: Switchout 方法  
+##  <a name="switchout"></a>  Ithreadproxy:: Switchout 方法  
  解除上下文与基础虚拟处理器根的关联。  
   
 ```
@@ -89,11 +93,11 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  重新初始化后的虚拟处理器根与资源管理器授予您的计划程序的全新虚拟处理器根没有任何不同。 您可以使用 `IVirtualProcessorRoot::Activate`，通过一个执行上下文来激活它，将其用于执行。  
   
- `SwitchOut`必须在调用`IThreadProxy`表示当前正在执行的线程或结果的接口都是未定义。  
+ `SwitchOut` 必须在调用`IThreadProxy`表示当前正在执行的线程或结果的接口都是未定义。  
   
  在随 Visual Studio 2010 一同提供的库和标头中，此方法未采用参数，而且没有重新初始化虚拟处理器根。 为了保留旧行为，提供 `Blocking` 的默认参数值。  
   
-##  <a name="switchto"></a>Ithreadproxy:: Switchto 方法  
+##  <a name="switchto"></a>  Ithreadproxy:: Switchto 方法  
  到另一个从当前正在执行的上下文中执行的协作上下文切换。  
   
 ```
@@ -118,9 +122,9 @@ virtual void SwitchTo(
   
  使用值`Nesting`当你想要暂时分离该线程代理从运行的虚拟处理器根和进行调度工作计划程序。 调用`SwitchTo`与参数`switchState`设置为`Nesting`将导致执行上下文`pContext`以开始执行，并且当前线程代理也会继续执行而无需虚拟处理器根。 线程代理被视为已离开计划程序，直到它调用[ithreadproxy:: Switchout](#switchout)方法在一个更高版本的时间点。 `IThreadProxy::SwitchOut`方法无法阻塞线程代理，直到程序虚拟处理器根可用来重新计划它。  
   
- `SwitchTo`必须在调用`IThreadProxy`表示当前正在执行的线程或结果的接口都是未定义。 该函数将引发`invalid_argument`如果参数`pContext`设置为`NULL`。  
+ `SwitchTo` 必须在调用`IThreadProxy`表示当前正在执行的线程或结果的接口都是未定义。 该函数将引发`invalid_argument`如果参数`pContext`设置为`NULL`。  
   
-##  <a name="yieldtosystem"></a>Ithreadproxy:: Yieldtosystem 方法  
+##  <a name="yieldtosystem"></a>  Ithreadproxy:: Yieldtosystem 方法  
  导致调用线程执行准备好在当前处理器上运行的另一个线程。 由操作系统选择要执行的下一个线程。  
   
 ```
@@ -130,7 +134,7 @@ virtual void YieldToSystem() = 0;
 ### <a name="remarks"></a>备注  
  在由正则 Windows 线程，支持的线程代理被调用时`YieldToSystem`完全一样 Windows 函数的行为`SwitchToThread`。 但是，当从用户模式计划 (UMS) 线程，调用`SwitchToThread`函数委托选取下一个线程运行到用户模式计划，而不是操作系统的任务。 若要实现所需的效果的系统中切换到不同的就绪线程，使用`YieldToSystem`。  
   
- `YieldToSystem`必须在调用`IThreadProxy`表示当前正在执行的线程或结果的接口都是未定义。  
+ `YieldToSystem` 必须在调用`IThreadProxy`表示当前正在执行的线程或结果的接口都是未定义。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 类
 C++ Accelerated Massive Parallelism (AMP) 库中的异常的基类型。  
@@ -67,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **命名空间：** 并发  
 
-## <a name="runtime_exception__ctor"></a>runtime_exception 构造函数  
+## <a name="runtime_exception__ctor">runtime_exception 构造函数</a>  
 初始化类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>返回值  
  `runtime_exception` 对象。  
 
-## <a name="dtor"></a>~ runtime_exception 析构函数  
+## <a name="dtor">~ runtime_exception 析构函数</a>  
 销毁对象。  
   
 ### <a name="syntax"></a>语法  
@@ -106,7 +110,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code   
 返回导致异常的错误代码。  
   
 ### <a name="syntax"></a>语法  

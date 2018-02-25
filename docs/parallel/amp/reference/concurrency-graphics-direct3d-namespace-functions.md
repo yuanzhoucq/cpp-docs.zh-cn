@@ -5,23 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空间函数
 ||||  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler  
+##  <a name="get_sampler"></a>  get_sampler  
  Get D3D 采样器状态接口给定加速器上查看，它表示指定的采样器对象。  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>返回值  
  IUnknown 接口指针表示给定的采样器的 D3D 采样器状态相对应。  
   
-##  <a name="get_texture"></a>get_texture  
+##  <a name="get_texture"></a>  get_texture  
  获取 Direct3D 纹理接口基础指定[纹理](texture-class.md)对象。  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>返回值  
  对应于基础纹理的 Direct3D 纹理 IUnknown 接口指针。  
   
-##  <a name="make_sampler"></a>make_sampler  
+##  <a name="make_sampler"></a>  make_sampler  
  创建从 D3D 采样器状态的接口指针的采样器。  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>返回值  
  采样器表示提供的 D3D 采样器状态。  
   
-##  <a name="make_texture"></a>make_texture  
+##  <a name="make_texture"></a>  make_texture  
  创建[纹理](texture-class.md)通过使用指定的参数的对象。  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>返回值  
  使用提供的 D3D 纹理纹理。  
   
-##  <a name="msad4"></a>msad4  
+##  <a name="msad4"></a>  msad4  
  将 4 字节的引用值和一个 8 字节源值进行比较，并累积 4 总和向量。 每个总和对应于掩蔽绝对区别不同的字节的对齐方式的引用值，并在源值的总和。  
   
 ```  

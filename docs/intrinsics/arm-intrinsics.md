@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
 - armintr/_arm_uxtb
@@ -1933,37 +1934,39 @@ f1_keywords:
 - arm_neon/vrsra_n_s32
 - arm_neon/vabdl_u16
 - arm_neon/vsliq_n_s32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ecdf6a3e736cfe2876d7ea68a8f113e6b120b40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c34855fa3099fa9c91badba96d39b90f4c25792b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
 Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)和[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。  
   
-##  <a name="top"></a>霓虹灯  
+##  <a name="top"></a> 霓虹灯  
  ARM 的霓虹灯矢量指令设置扩展提供了 Single Instruction Multiple Data (SIMD) 功能，这些功能类似于 x86 和 x64 架构处理器通用的 MMX 和 SSE 矢量指令中的功能。  
   
  根据头文件 `arm_neon.h`，霓虹灯内部函数受到支持。 对霓虹灯内部函数的 Visual c + + 编译器支持类似于 ARM 编译器，这记录在附录 G 中[ARM 编译器工具链、 版本 4.1 编译器参考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 信息中心网站上。  
   
  Visual C++ 编译器和 ARM 编译器之间的主要差别在于 Visual C++ 编译器添加了 `_ex` 的 `vldX` 变量和 `vstX` 矢量加载和存储指令。 `_ex` 变量采用附加参数，该参数指定指针参数的对齐情况但在其他方面与其非 `_ex` 对应项相同。  
   
-##  <a name="A"></a>特定于 ARM 的内部函数列表  
+##  <a name="A"></a> 特定于 ARM 的内部函数列表  
   
 |函数名|指令|函数原型|  
 |-------------------|-----------------|------------------------|  
-|_arm_smlal|SMLAL|__int64 _arm_smlal (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlal|SMLAL|__int64 _arm_smlal(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_umlal|UMLAL|无符号的 __int64 _arm_umlal (无符号\__int64 _RdHiLo，无符号的整数 _Rn，未签名的 int _Rm)|  
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|  
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|  
@@ -1974,10 +1977,10 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 AR
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\__int64 _RdHiLo，int _Rn int _Rm)|  
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\__int64 _RdHiLo，int _Rn int _Rm)|  
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\__int64 _RdHiLo，int _Rn int _Rm)|  
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|  
@@ -2055,10 +2058,10 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 AR
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|  
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|  
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|  
-|_arm_smlald|SMLALD|__int64 _arm_smlald (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlald|SMLALD|__int64 _arm_smlald(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\__int64 _RdHiLo，int _Rn int _Rm)|  
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\__int64 _RdHiLo，int _Rn int _Rm)|  
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|  
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|  
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|  
@@ -2083,10 +2086,10 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 AR
 |__iso_volatile_load32||__int32 \__iso_volatile_load32 (const 易失性\__int32 *)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
 |__iso_volatile_load64||__int64 \__iso_volatile_load64 (const 易失性\__int64 *)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
 |__iso_volatile_load8||__int8 \__iso_volatile_load8 (const 易失性\__int8 *)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store16||void __iso_volatile_store16 (易失性\__int16 *， \__int16)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store32||void __iso_volatile_store32 (易失性\__int32 *， \__int32)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store64||void __iso_volatile_store64 (易失性\__int64 *， \__int64)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store8||void __iso_volatile_store8 (易失性\__int8 *， \__int8)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 *, \__int16)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 *, \__int32)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 *, \__int64)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 *, \__int8)<br /><br /> 有关详细信息，请参阅[__iso_volatile_load/store 内部函数](#IsoVolatileLoadStore)。|  
 |__ldrexd|LDREXD|__int64 \__ldrexd (const 易失性\__int64 *)|  
 |__prefetch|PLD|void __cdecl \__prefetch(const void *)<br /><br /> 为系统提供一个 `PLD` 内存提示，便可很快访问指定地址处或指定地址附近的内存。 某些系统可能会选择优化此内存访问模式以提高运行时性能。 但是，从 c + + 语言的角度来看，此功能没有明显的影响，可能不执行任何操作。|  
 |__rdpmccntr64||unsigned 的 __int64 \__rdpmccntr64(void)|  
@@ -2097,8 +2100,8 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 AR
 |__wfe|WFE|void __wfe(void)|  
 |__wfi|WFI|void __wfi(void)|  
 |_AddSatInt|QADD|int _AddSatInt(int, int)|  
-|_CopyDoubleFromInt64||double _CopyDoubleFromInt64 (\__int64)|  
-|_CopyFloatFromInt32||float _CopyFloatFromInt32 (\__int32)|  
+|_CopyDoubleFromInt64||double _CopyDoubleFromInt64(\__int64)|  
+|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|  
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|  
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|  
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|  
@@ -2127,9 +2130,9 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 AR
 |_WriteBankedReg|MSR|void _WriteBankedReg(int _Value, int _Reg)|  
 |_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|  
   
- [[霓虹灯](#top)]  
+ [[NEON](#top)]  
   
-###  <a name="BarrierRestrictions"></a>内存屏障限制  
+###  <a name="BarrierRestrictions"></a> 内存屏障限制  
  内部函数 `__dmb`（数据内存屏障）、`__dsb`（数据同步屏障）和 `__isb`（指令同步屏障）使用以下预定义值以根据共享域和受操作影响的访问类型对内存屏障限制进行指定。  
   
 |限制值|描述|  
@@ -2145,7 +2148,7 @@ Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 AR
   
  对于 `__isb` 内部函数，当前有效的唯一限制是 _ARM_BARRIER_SY；其他所有值由体系结构进行保留。  
   
-###  <a name="IsoVolatileLoadStore"></a>__iso_volatile_load/store 内部函数  
+###  <a name="IsoVolatileLoadStore"></a> __iso_volatile_load/store 内部函数  
  这些内部函数显式执行不进行编译器优化的加载和存储。  
   
 ```  
@@ -2187,7 +2190,7 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
   
  有关详细信息**/volatile:iso**命令行参数，请参阅[/volatile （volatile 关键字解释）](../build/reference/volatile-volatile-keyword-interpretation.md)。  
   
-###  <a name="MoveFromCo"></a>_MoveFromCoprocessor _MoveFromCoprocessor2  
+###  <a name="MoveFromCo"></a> _MoveFromCoprocessor _MoveFromCoprocessor2  
  这些内部函数通过使用协处理器数据传输指令从 ARM 协处理器读取数据。  
   
 ```  
@@ -2236,7 +2239,7 @@ int _MoveFromCoprocessor2(
   
  `_MoveFromCoprocessor` 使用 MRC 指令；`_MoveFromCoprocessor2` 使用 MRC2。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。  
   
-###  <a name="MoveFromCo64"></a>_MoveFromCoprocessor64  
+###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64  
  使用协处理器数据传输指令，读取 ARM 协处理器中的数据。  
   
 ```  
@@ -2269,7 +2272,7 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  `_MoveFromCoprocessor64` 使用 MRRC 指令。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。  
   
-###  <a name="MoveToCo"></a>_MoveToCoprocessor _MoveToCoprocessor2  
+###  <a name="MoveToCo"></a> _MoveToCoprocessor _MoveToCoprocessor2  
  这些内部函数通过使用协处理器数据传输指令将数据写入到 ARM 协处理器。  
   
 ```  
@@ -2323,7 +2326,7 @@ void _MoveToCoprocessor2(
   
  `_MoveToCoprocessor` 使用 MCR 指令；`_MoveToCoprocessor2` 使用 MCR2。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。  
   
-###  <a name="MoveToCo64"></a>_MoveToCoprocessor64  
+###  <a name="MoveToCo64"></a> _MoveToCoprocessor64  
  这些内部函数通过使用协处理器数据传输指令将数据写入到 ARM 协处理器。  
   
 ```  
@@ -2357,7 +2360,7 @@ void _MoveFromCoprocessor64(
   
  `_MoveFromCoprocessor64` 使用 MCRR 指令。 此参数对应于直接编码到指令字中的位字段。 参数的解释与协处理器相关。 有关详细信息，请参见有问题的协处理器的手册。  
   
-##  <a name="I"></a>ARM 支持来自其他体系结构的内部函数  
+##  <a name="I"></a> ARM 支持来自其他体系结构的内部函数  
  下表列出了来自在 ARM 平台上受支持的其他体系结构的内部函数。 如果 ARM 上的内部函数行为不同于它在其他硬件体系结构上的行为，则记录其他详细信息。  
   
 |函数名|函数原型|  
@@ -2396,7 +2399,7 @@ void _MoveFromCoprocessor64(
 |_setjmpex|int __cdecl _setjmpex(jmp_buf)|  
 |_WriteBarrier|void _WriteBarrier(void)|  
   
- [[霓虹灯](#top)]  
+ [[NEON](#top)]  
   
 ## <a name="interlocked-intrinsics"></a>互锁内部函数  
  互锁内部函数是用于执行原子读取-修改-写入操作的一组内部函数。 其中一些互锁内部函数通用于所有平台。 此处单独将其列出不是因为它们数量庞大，而是因为它们的定义通常是多余的，一般情况下较容易就想到它们。 它们的名称可用于派生确切行为。  
@@ -2423,7 +2426,7 @@ void _MoveFromCoprocessor64(
   
 -   **无**： 不支持  
   
-###  <a name="nf_suffix"></a>_nf （无围墙） 后缀  
+###  <a name="nf_suffix"></a> _nf （无围墙） 后缀  
  `_nf` 或“no fence”后缀表示此操作未表现为任何类型的内存屏障。 这与表现为某种屏障的其他三种窗体（无格式、`_acq` 和 `_rel`）相反。 `_nf` 窗体可用于保持统计信息计数器，该计数器由多个线程同时更新但在执行多个线程时不使用该计数器的值。  
   
 ### <a name="list-of-interlocked-intrinsics"></a>互锁内部函数列表  
@@ -2432,7 +2435,7 @@ void _MoveFromCoprocessor64(
 |-------------------|------------------------|  
 |_InterlockedAdd|long _InterlockedAdd(long _volatile *, long)|  
 |_InterlockedAdd64|__int64 _InterlockedAdd64 (\__int64 volatile *， \__int64)|  
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\__int64 volatile *， \__int64)|  
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq(\__int64 volatile *, \__int64)|  
 |_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\__int64 volatile *， \__int64)|  
 |_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedAdd_acq|long _InterlockedAdd_acq(long volatile *, long)|  
@@ -2444,7 +2447,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedAnd16_nf|short _InterlockedAnd16_nf(short volatile *, short)|  
 |_InterlockedAnd16_rel|short _InterlockedAnd16_rel(short volatile *, short)|  
 |_InterlockedAnd64|__int64 _InterlockedAnd64 (\__int64 volatile *， \__int64)|  
-|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\__int64 volatile *， \__int64)|  
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq(\__int64 volatile *, \__int64)|  
 |_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\__int64 volatile *， \__int64)|  
 |_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedAnd8|char _InterlockedAnd8(char volatile *, char)|  
@@ -2468,7 +2471,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf(char volatile *, char, char)|  
 |_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel(char volatile *, char, char)|  
 |_InterlockedCompareExchangePointer|void * _InterlockedCompareExchangePointer (void\*易失性\*，void \*，void \*)|  
-|_InterlockedCompareExchangePointer_acq|void * _InterlockedCompareExchangePointer_acq (void\*易失性\*，void \*，void \*)|  
+|_InterlockedCompareExchangePointer_acq|void * _InterlockedCompareExchangePointer_acq(void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchangePointer_nf|void * _InterlockedCompareExchangePointer_nf (void\*易失性\*，void \*，void \*)|  
 |_InterlockedCompareExchangePointer_rel|void * _InterlockedCompareExchangePointer_rel (void\*易失性\*，void \*，void \*)|  
 |_InterlockedCompareExchange_acq|long _InterlockedCompareExchange_acq(long volatile *, long, long)|  
@@ -2480,8 +2483,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedDecrement16_nf|short _InterlockedDecrement16_nf(short volatile *)|  
 |_InterlockedDecrement16_rel|short _InterlockedDecrement16_rel(short volatile *)|  
 |_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\__int64 易失性 *)|  
-|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\__int64 易失性 *)|  
-|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\__int64 易失性 *)|  
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq(\__int64 volatile *)|  
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf(\__int64 volatile *)|  
 |_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\__int64 易失性 *)|  
 |_InterlockedDecrement_acq|long _InterlockedDecrement_acq(long volatile *)|  
 |_InterlockedDecrement_nf|long _InterlockedDecrement_nf(long volatile *)|  
@@ -2502,9 +2505,9 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd16_nf|short _InterlockedExchangeAdd16_nf(short volatile *, short)|  
 |_InterlockedExchangeAdd16_rel|short _InterlockedExchangeAdd16_rel(short volatile *, short)|  
 |_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\__int64 volatile *， \__int64)|  
-|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\__int64 volatile *， \__int64)|  
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\__int64 volatile *， \__int64)|  
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\__int64 volatile *， \__int64)|  
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel(\__int64 volatile *, \__int64)|  
 |_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8(char volatile *, char)|  
 |_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq(char volatile *, char)|  
 |_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf(char volatile *, char)|  
@@ -2523,8 +2526,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedIncrement16_nf|short _InterlockedIncrement16_nf(short volatile *)|  
 |_InterlockedIncrement16_rel|short _InterlockedIncrement16_rel(short volatile *)|  
 |_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\__int64 易失性 *)|  
-|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\__int64 易失性 *)|  
-|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\__int64 易失性 *)|  
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq(\__int64 volatile *)|  
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf(\__int64 volatile *)|  
 |_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\__int64 易失性 *)|  
 |_InterlockedIncrement_acq|long _InterlockedIncrement_acq(long volatile *)|  
 |_InterlockedIncrement_nf|long _InterlockedIncrement_nf(long volatile *)|  
@@ -2535,8 +2538,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedOr16_nf|short _InterlockedOr16_nf(short volatile *, short)|  
 |_InterlockedOr16_rel|short _InterlockedOr16_rel(short volatile *, short)|  
 |_InterlockedOr64|__int64 _InterlockedOr64 (\__int64 volatile *， \__int64)|  
-|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\__int64 volatile *， \__int64)|  
-|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\__int64 volatile *， \__int64)|  
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf(\__int64 volatile *, \__int64)|  
 |_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedOr8|char _InterlockedOr8(char volatile *, char)|  
 |_InterlockedOr8_acq|char _InterlockedOr8_acq(char volatile *, char)|  
@@ -2562,7 +2565,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedXor_nf|long _InterlockedXor_nf(long volatile *, long)|  
 |_InterlockedXor_rel|long _InterlockedXor_rel(long volatile *, long)|  
   
- [[霓虹灯](#top)]  
+ [[NEON](#top)]  
   
 ### <a name="interlockedbittest-intrinsics"></a>_interlockedbittest 内部函数  
  纯互锁的 bittest 内部函数通用于所有平台。 ARM 添加`_acq`， `_rel`，和`_nf`中所述，只需修改操作的屏障语义的变体[_nf （无围墙） 后缀](#nf_suffix)本文前面。  
@@ -2578,7 +2581,7 @@ void _MoveFromCoprocessor64(
 |_interlockedbittestandset_nf|unsigned char _interlockedbittestandset_nf(long volatile *, long)|  
 |_interlockedbittestandset_rel|unsigned char _interlockedbittestandset_rel(long volatile *, long)|  
   
- [[霓虹灯](#top)]  
+ [[NEON](#top)]  
   
 ## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   

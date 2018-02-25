@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::thread
 - thread/std::thread::id Class
@@ -18,9 +19,10 @@ f1_keywords:
 - thread/std::thread::joinable
 - thread/std::thread::native_handle
 - thread/std::thread::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -34,12 +36,13 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 2e2d9d1bd19b34cd4b542d0325b06ad57e1a7c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a681e61888653c0abada81c5b35ff3b96b75200
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-class"></a>thread 类
 定义用于查看和管理应用程序中执行线程的对象。  
@@ -73,7 +76,7 @@ class thread;
   
 |名称|描述|  
 |----------|-----------------|  
-|[分离](#detach)|从 `thread` 对象拆离相关联的线程。|  
+|[detach](#detach)|从 `thread` 对象拆离相关联的线程。|  
 |[get_id](#get_id)|返回关联线程的唯一标识符。|  
 |[hardware_concurrency](#hardware_concurrency)|静态。 返回硬件线程上下文的估计数量。|  
 |[join](#join)|阻止，直到完成关联的线程。|  
@@ -92,7 +95,7 @@ class thread;
   
  **命名空间：** std  
   
-##  <a name="detach"></a>thread:: detach
+##  <a name="detach"></a>  thread::detach
  拆离相关联的线程。 操作系统负责释放终止的线程资源。  
   
 ```
@@ -106,7 +109,7 @@ void detach();
   
  如果与调用对象相关联的线程无效，该函数将引发将引发一个错误代码为 `no_such_process` 的 `system_error`。  
   
-##  <a name="get_id"></a>thread:: get_id
+##  <a name="get_id"></a>  thread::get_id
  返回关联线程的唯一标识符。  
   
 ```
@@ -116,7 +119,7 @@ id get_id() const noexcept;
 ### <a name="return-value"></a>返回值  
  一个 [thread:: id](#id_class) 对象，唯一标识相关联的线程，如果该对象没有任何关联的线程，则为 `thread::id()`。  
   
-##  <a name="hardware_concurrency"></a>thread:: hardware_concurrency
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
  静态方法，返回硬件线程上下文数量的估计值。  
   
 ```
@@ -140,7 +143,7 @@ class thread::id {
   
  所有默认构造的 `thread::id` 对象都相等。  
   
-##  <a name="join"></a>thread:: join
+##  <a name="join"></a>  thread::join
  阻止，直到完成与调用对象相关联的执行线程。  
   
 ```
@@ -150,7 +153,7 @@ void join();
 ### <a name="remarks"></a>备注  
  调用成功后，再继续调用 [get_id](#get_id)，以便调用对象返回默认值 [thread:: id](#id_class)，该默认值与任何现有线程的 `thread::id` 都不相等；如果调用不成功，`get_id` 返回的值保持不变。  
   
-##  <a name="joinable"></a>thread:: joinable
+##  <a name="joinable"></a>  thread::joinable
  指定关联的线程是否可联接。  
   
 ```
@@ -163,7 +166,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>备注  
  如果 `get_id() != id()`，则线程对象可联接。  
   
-##  <a name="native_handle"></a>thread:: native_handle
+##  <a name="native_handle"></a>  thread::native_handle
  返回表示线程句柄的特定于实现的类型。 可以以特定于实现的方式使用线程句柄。  
   
 ```
@@ -192,7 +195,7 @@ thread& operator=(thread&& Other) noexcept;
   
  建立关联后，将 `Other` 设置为默认构造状态。  
   
-##  <a name="swap"></a>thread:: swap
+##  <a name="swap"></a>  thread::swap
  与指定的 `thread` 对象交换对象状态。  
   
 ```

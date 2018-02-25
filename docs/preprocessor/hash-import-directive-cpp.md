@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 **C + + 专用**  
@@ -43,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="parameters"></a>参数  
  *filename*  
- 指定要导入的类型库。 `filename`可以是以下项之一：  
+ 指定要导入的类型库。 `filename` 可以是以下项之一：  
   
 -   包含类型库的文件的名称，如 .olb、.tlb 或 .dll 文件。 关键字**文件：**，可以在前面的每个文件名。  
   
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>备注  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>文件名的搜索顺序  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> 文件名的搜索顺序  
  *filename* （可选） 跟目录规范。 文件名必须命名现有文件。 两种语法形式之间的差异在于预处理器在未完整指定路径时搜索类型库文件的顺序。  
   
 |语法形式|操作|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |带引号的形式|指示预处理器首先在包含 `#import` 语句的文件目录中查找类型库，然后在包含 (`#include`) 该文件的任何文件目录中查找类型库文件。 然后预处理器沿如下所示的路径执行搜索。|  
 |尖括号形式|指示预处理器沿下列路径搜索类型库文件：<br /><br /> 1.**路径**环境变量路径列表<br />2.**LIB**环境变量路径列表<br />3./I 指定的路径 (附加包含目录) 编译器选项，只不过它编译器搜索从使用的另一个类型库引用的类型库[no_registry](../preprocessor/no-registry.md)属性。|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>指定本地化 ID 和版本号  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 指定本地化 ID 和版本号  
  指定 progid 时，还可以指定 progid 的本地化 ID 和版本号。 例如:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果未指定版本号，则使用最新版本。  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>创建导入的标头文件  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> 创建导入的标头文件  
  `#import` 将创建两个头文件以重新构造 C++ 源代码内的类型库内容。 主头文件类似于 Microsoft 接口定义语言 (MIDL) 编译器生成的文件，但具有附加的编译器生成的代码和数据。 [主头文件](#_predir_the_primary_type_library_header_file)具有与类型库相同的基名称加上。TLH 扩展。 次头文件具有与类型库相同的基名称以及 .TLI 扩展。 它包含编译器生成的成员函数的实现，并且包含 (`#include`) 在主头文件中。  
   
  如果导入使用 byref 参数的调度接口属性，#import 将不会生成 __declspec ([属性](../cpp/property-cpp.md)) 函数的语句。  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  `#import` 指令也参与最小重新生成并可放置在预编译头文件中。 请参阅[创建预编译标头文件](../build/reference/creating-precompiled-header-files.md)有关详细信息。  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>主类型库标头文件  
+###  <a name="_predir_the_primary_type_library_header_file"></a> 主类型库标头文件  
  主类型库头文件包含 7 个部分：  
   
 -   标题样本：包含注释、COMDEF.H（定义标头中使用的一些标准宏）的 `#include` 语句和其他杂项安装信息。  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  有关详细信息，请参阅知识库文章“#import 包装器方法可能导致访问冲突”(Q242527) 或“将 #import 用于 XML 时的编译器错误”(Q269194)。 你可以找到知识库文章位于 MSDN 库媒体或在[Microsoft 支持](https://support.microsoft.com/)。  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>#import 属性  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 属性  
  `#import` 可以选择性地包含一个或多个特性。 这些特性通知编译器修改类型库标头的内容。 反斜杠 (**\\**) 符号可以用于在单个包含附加行`#import`语句。 例如:  
   
 ```  

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f89abf97-67e3-4327-bc30-43f85b9533a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c0f009c26789fd771d55dab5fcfe5f342aa03b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 760e7d138ab71244419ff71960948d4d10f125eb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-libraries"></a>OpenMP 库
 讨论构成 Visual c + + 中的 OpenMP 运行时库的.lib 文件。  
@@ -27,8 +30,8 @@ ms.lasthandoff: 12/21/2017
   
 |OpenMP 运行时库|特征|  
 |------------------------------|---------------------|  
-|VCOMP。LIB|多线程，动态链接 （VCOMP 导入库。LIB)。|  
-|VCOMPD。LIB|多线程，动态链接 （VCOMPD 导入库。合上盖子） （调试）|  
+|VCOMP.LIB|多线程，动态链接 （VCOMP 导入库。LIB)。|  
+|VCOMPD.LIB|多线程，动态链接 （VCOMPD 导入库。合上盖子） （调试）|  
   
  如果在一次编译中定义 _DEBUG 并且`#include omp.h`在源代码，VCOMPD。LIB 将默认 lib。 否则为 VCOMP。将使用 LIB。  
   

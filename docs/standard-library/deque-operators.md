@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::operator!=
 - deque/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - deque/std::operator&lt;
 - deque/std::operator&lt;=
 - deque/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (deque)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 81645c8f645a3c3a09ef641b2fce003260bcd5f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: dfceefe986ae065b6ef85abe7ebd4c5d908f3d46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 运算符
 ||||  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a>operator!=  
  测试运算符左侧的 deque 对象是否不等于右侧的 deque 对象。  
   
 ```
@@ -82,7 +83,7 @@ The deques are not equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a>operator&lt;  
  测试运算符左侧的 deque 对象是否小于右侧的 deque 对象。  
   
 ```
@@ -183,7 +184,7 @@ Deque c1 is less than or equal to deque c2.
   
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>operator==  
  测试运算符左侧的 deque 对象是否等于右侧的 deque 对象。  
   
 ```
@@ -237,7 +238,7 @@ The deques are not equal.
   
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a>operator&gt;  
  测试运算符左侧的 deque 对象是否大于右侧的 deque 对象。  
   
 ```
@@ -340,7 +341,7 @@ Deque c1 is greater than or equal to deque c2.
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<deque>](../standard-library/deque.md)
 
 

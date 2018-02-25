@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#define'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#define'
+dev_langs:
+- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-directive-cc"></a>#define 指令 (C/C++)
 `#define`创建*宏*，这是标识符或参数化的标识符与标记字符串的关联。 在定义宏之后，编译器可用标记字符串替换源文件中标识符的每个匹配项。  
   
 ## <a name="syntax"></a>语法  
- `#define`*标识符**令牌字符串*选择  
+ `#define` *标识符**令牌字符串*选择  
   
- `#define`*标识符* `(` *标识符*选择`,`*...* `,`*标识符*选择`)`*令牌字符串*选择  
+ `#define` *identifier* `(` *identifier*opt`,`*...*`,`*identifier*opt`)`*token-string*opt  
   
 ## <a name="remarks"></a>备注  
  `#define`指令会导致编译器用替换*令牌字符串*每个出现的*标识符*源文件中。 *标识符*仅在程序集形成一个令牌时替换。 也就是说，*标识符*都不能替代，如果它显示在注释在字符串中，或作为较长的标识符的一部分。 有关详细信息，请参阅[令牌](../cpp/tokens-cpp.md)。  
@@ -73,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  如果新定义在语法上与原始定义相同，则 Microsoft C/C++ 允许您重新定义宏。 换言之，这两个定义可以具有不同的参数名称。 此行为不同于 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C，后者需要两个词法相同的定义。  
   
- 例如，下面两个宏除参数名称外完全相同。 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]C 不允许此类重新定义，但 Microsoft C/c + + 编译它而不出错。  
+ 例如，下面两个宏除参数名称外完全相同。 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C 不允许此类重新定义，但 Microsoft C/c + + 编译它而不出错。  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  

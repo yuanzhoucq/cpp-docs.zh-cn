@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - timer
 - AGENTS/concurrency::timer
@@ -21,19 +22,22 @@ f1_keywords:
 - AGENTS/concurrency::timer::release_message
 - AGENTS/concurrency::timer::reserve_message
 - AGENTS/concurrency::timer::resume_propagation
-dev_langs: C++
-helpviewer_keywords: timer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ffc58ce0354b4a3226db82a95d5c0b4cc7bc09f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b5263c8bf156f190ba5572eacd8ff327be5e3f7a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timer-class"></a>timer 类
 `timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。  
@@ -55,16 +59,16 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |名称|描述|  
 |----------|-----------------|  
-|[计时器](#ctor)|已重载。 构造`timer`将在指定时间间隔后激发给定的消息的消息块。|  
+|[timer](#ctor)|已重载。 构造`timer`将在指定时间间隔后激发给定的消息的消息块。|  
 |[~ timer 析构函数](#dtor)|销毁`timer`消息块。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[暂停](#pause)|停止`timer`消息块。 如果它是一个重复`timer`消息块，它可以重新启动通过后续`start()`调用。 对于非重复计时器，这具有相同的效果`stop`调用。|  
+|[pause](#pause)|停止`timer`消息块。 如果它是一个重复`timer`消息块，它可以重新启动通过后续`start()`调用。 对于非重复计时器，这具有相同的效果`stop`调用。|  
 |[start](#start)|启动`timer`消息块。 指定的此之后的毫秒数被调用时，指定的值将传播下游作为`message`。|  
-|[停止](#stop)|停止`timer`消息块。|  
+|[stop](#stop)|停止`timer`消息块。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
@@ -93,7 +97,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  **命名空间：** 并发  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  接受一条消息，已提供此`timer`消息块，将所有权转让给调用方。  
   
@@ -108,7 +112,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>返回值  
  指向的指针`message`对象调用方现在具有的所有权。  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  使用以前提供的消息`timer`并由目标，将所有权转让给调用方保留。  
   
@@ -126,7 +130,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>备注  
  类似于`accept`，但始终通过调用前面`reserve`。  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  通知新的目标已链接到此回调`timer`消息块。  
   
@@ -138,7 +142,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  指向新链接的目标的指针。  
   
-##  <a name="pause"></a>暂停 
+##  <a name="pause"></a> 暂停 
 
  停止`timer`消息块。 如果它是一个重复`timer`消息块，它可以重新启动通过后续`start()`调用。 对于非重复计时器，这具有相同的效果`stop`调用。  
   
@@ -146,7 +150,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 void pause();
 ```  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  尝试通过生成的消息提供`timer`到所有的链接目标的块。  
   
@@ -154,7 +158,7 @@ void pause();
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  释放以前的消息保留。  
   
@@ -166,7 +170,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity`的`message`对象被释放。  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  保留以前提供的这一条消息`timer`消息块。  
   
@@ -179,12 +183,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity`的`message`对象被保留。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果消息已成功保留，`false`否则为。  
+ `true` 如果消息已成功保留，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  后`reserve`调用时，如果它返回`true`，`consume`或`release`必须调用来获取或释放消息的所有权。  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  释放保留后恢复传播。  
   
@@ -192,7 +196,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="start"></a>启动 
+##  <a name="start"></a> 启动 
 
  启动`timer`消息块。 指定的此之后的毫秒数被调用时，指定的值将传播下游作为`message`。  
   
@@ -200,7 +204,7 @@ virtual void resume_propagation();
 void start();
 ```  
   
-##  <a name="stop"></a>停止 
+##  <a name="stop"></a> 停止 
 
  停止`timer`消息块。  
   
@@ -208,7 +212,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="ctor"></a>计时器 
+##  <a name="ctor"></a> 计时器 
 
  构造`timer`将在指定时间间隔后激发给定的消息的消息块。  
   
@@ -256,7 +260,7 @@ timer(
 ### <a name="remarks"></a>备注  
  如果未指定，运行时将使用默认计划程序`_Scheduler`或`_ScheduleGroup`参数。  
   
-##  <a name="dtor"></a>~ 计时器 
+##  <a name="dtor"></a> ~ 计时器 
 
  销毁`timer`消息块。  
   

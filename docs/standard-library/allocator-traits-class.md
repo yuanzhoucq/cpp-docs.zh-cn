@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
 - memory/std::allocator_traits::propagate_on_container_move_assignment
@@ -26,9 +27,10 @@ f1_keywords:
 - memory/std::allocator_traits::destroy
 - memory/std::allocator_traits::max_size
 - memory/std::allocator_traits::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -51,12 +53,13 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.workload: cplusplus
-ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d732b91a1c7a288cf22fea61e9565a794bb3380d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 类
 此模板类描述补充*分配器类型*的对象。 分配器类型是描述分配器对象的任何类型，它用于管理已分配的存储。 具体而言，对于任何分配器类型 `Alloc`，可以使用 `allocator_traits<Alloc>` 来确定支持分配器的容器所需的所有信息。 有关详细信息，请参阅默认的 [allocator 类](../standard-library/allocator-class.md)。  
@@ -101,7 +104,7 @@ class allocator_traits;
   
  **命名空间：** std  
   
-##  <a name="allocate"></a>allocator_traits:: allocate
+##  <a name="allocate"></a>  allocator_traits::allocate
  使用给定的分配器参数分配内存的静态方法。  
   
 ```cpp  
@@ -128,7 +131,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  第二种方法返回 `al.allocate(count, hint)`（如果该表达式形式正确）；否则返回 `al.allocate(count)`。  
   
-##  <a name="construct"></a>allocator_traits:: construct
+##  <a name="construct"></a>  allocator_traits::construct
  使用指定的分配器构造对象的静态方法。  
   
 ```cpp  
@@ -149,7 +152,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>备注  
  如果该表达式形式正确，则静态成员函数调用 `al.construct(ptr, args...)`；否则计算 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` 的结果。  
   
-##  <a name="deallocate"></a>allocator_traits:: deallocate
+##  <a name="deallocate"></a>  allocator_traits::deallocate
  使用指定的分配器释放指定的对象数的静态方法。  
   
 ```cpp  
@@ -173,7 +176,7 @@ static void deallocate(Alloc al,
   
  此方法不会引发任何操作。  
   
-##  <a name="destroy"></a>allocator_traits:: destroy
+##  <a name="destroy"></a>  allocator_traits::destroy
  使用指定的分配器调用对象上的构造函数而不释放其内存的静态方法。  
   
 ```cpp  
@@ -191,7 +194,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>备注  
  如果该表达式形式正确，则此方法调用 `al.destroy(ptr)`；否则计算 `ptr->~Uty()` 的结果。  
   
-##  <a name="max_size"></a>allocator_traits:: max_size
+##  <a name="max_size"></a>  allocator_traits::max_size
  可以分配使用指定的分配器确定对象的最大数目的静态方法。  
   
 ```cpp  
@@ -205,7 +208,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>备注  
  如果该表达式形式正确，则此方法返回 `al.max_size()`；否则返回 `numeric_limits<size_type>::max()`。  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits:: select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
  在指定的分配器上调用 `select_on_container_copy_construction` 的静态方法。  
   
 ```cpp  

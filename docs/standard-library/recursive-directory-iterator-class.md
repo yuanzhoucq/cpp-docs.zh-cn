@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::tr2::sys::recursive_directory_iterator
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::tr2::sys::recursive_directory_iterator
+dev_langs:
+- C++
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55e44e447ee8ad2e449c46acb5535a41346fd19f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c432cde8a4c565e6195658ab27ce5f2cb1838f6a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 类
 描述一个输入迭代器，它对目录中的文件名进行排序，可能以递归方式降序到子目录。 对于迭代器 X，表达式 *X 计算到 directory_entry 类对文件名及与其状态有关的任何信息进行包装的对象。  

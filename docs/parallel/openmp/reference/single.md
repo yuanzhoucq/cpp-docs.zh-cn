@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: Single
-dev_langs: C++
-helpviewer_keywords: single OpenMP directive
+ms.topic: reference
+f1_keywords:
+- Single
+dev_langs:
+- C++
+helpviewer_keywords:
+- single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b93480f01ea35129812b3d4f3c42ce2130046243
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="single"></a>单个
 允许您指定的代码部分应在单个线程，不一定是主线程上执行。  
@@ -47,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [专用](../../../parallel/openmp/reference/private-openmp.md)  
+-   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
  [Master](../../../parallel/openmp/reference/master.md)指令允许你指定应仅在主线程上执行的代码部分。  
   

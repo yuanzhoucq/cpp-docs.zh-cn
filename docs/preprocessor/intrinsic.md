@@ -1,30 +1,33 @@
 ---
-title: "内部函数 |Microsoft 文档"
+title: intrinsic | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d44a347f8f6cf6e502d3cc22435ed441a000f894
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bbee11b792ccdb67e33c9936475d0e701d5f3204
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="intrinsic"></a>intrinsic
 指定对杂注自变量列表中指定的函数的调用是内部的。  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  使用内部函数的程序的运行速度比较快，因为它们没有函数调用的开销，但是，由于生成了附加代码，它们可能比较大。  
   
- **x86 特定**  
+ **x86 Specific**  
   
  _disable 和 _enable 内部生成内核模式说明以禁用/启用中断，并且在内核模式驱动程序中很有用。  
   

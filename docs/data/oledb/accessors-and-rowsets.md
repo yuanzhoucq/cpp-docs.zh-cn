@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>访问器和行集合
 若要设置和检索数据，OLE DB 模板使用访问器和行集通过[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)类。 此类可以处理不同类型的多个访问器。  
   
 ## <a name="accessor-types"></a>访问器类型  
- 所有访问器派生自[CAccessorBase](../../data/oledb/caccessorbase-class.md)。 `CAccessorBase`提供参数和列绑定。  
+ 所有访问器派生自[CAccessorBase](../../data/oledb/caccessorbase-class.md)。 `CAccessorBase` 提供参数和列绑定。  
   
  下图显示访问器类型。  
   
  ![访问器类型](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 访问器类  
   
--   [CAccessor](../../data/oledb/caccessor-class.md)当你在设计时知道数据库源的结构时使用此访问器。 `CAccessor`将数据库记录，其中包含缓冲区，静态绑定到数据源。  
+-   [CAccessor](../../data/oledb/caccessor-class.md)当你在设计时知道数据库源的结构时使用此访问器。 `CAccessor` 将数据库记录，其中包含缓冲区，静态绑定到数据源。  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)在设计时不知道数据库的结构时使用此访问器。 `CDynamicAccessor`调用`IColumnsInfo::GetColumnInfo`获取的数据库列信息。 它创建和管理访问器和缓冲区。  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)在设计时不知道数据库的结构时使用此访问器。 `CDynamicAccessor` 调用`IColumnsInfo::GetColumnInfo`获取的数据库列信息。 它创建和管理访问器和缓冲区。  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)此访问器用于处理未知的命令类型。 当你准备命令，`CDynamicParameterAccessor`即可获取参数信息从`ICommandWithParameters`接口，如果该提供程序支持`ICommandWithParameters`。  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)， [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)，和[CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)在不知道数据库架构时使用这些类。 `CDynamicStringAccessorA`将数据检索为 ANSI 字符串;`CDynamicStringAccessorW`将数据检索为 Unicode 字符串。  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)， [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)，和[CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)在不知道数据库架构时使用这些类。 `CDynamicStringAccessorA` 将数据检索为 ANSI 字符串;`CDynamicStringAccessorW`将数据检索为 Unicode 字符串。  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)与此类，可以使用任何你希望如果提供程序可以将类型转换的数据类型。 它处理结果列和命令参数。  
   

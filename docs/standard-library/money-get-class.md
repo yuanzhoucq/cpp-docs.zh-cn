@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmon/std::money_get
 - xlocmon/std::money_get::char_type
@@ -14,7 +15,8 @@ f1_keywords:
 - xlocmon/std::money_get::string_type
 - xlocmon/std::money_get::do_get
 - xlocmon/std::money_get::get
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::money_get [C++]
 - std::money_get [C++], char_type
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c823f6ddc688a697d82835995b2fda86a2feb44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c4566a9b640a73687b3bf48c1346af711d450b73
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneyget-class"></a>money_get 类
 此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到货币值的转换。  
@@ -286,11 +289,11 @@ explicit money_get(size_t _Refs = 0);
   
 -   1：必须手动管理对象的生存期。  
   
--   \>1： 未定义这些值。  
+-   \> 1： 未定义这些值。  
   
  由于该析构函数受到保护，可能没有直接的示例。  
   
- 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*) 初始化其基对象。  
+ 构造函数初始化与与其基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*)。  
   
 ##  <a name="string_type"></a>  money_get::string_type  
  一种类型，此类型描述包含 **CharType** 类型字符的字符串。  

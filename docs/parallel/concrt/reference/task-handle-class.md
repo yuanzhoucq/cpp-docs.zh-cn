@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
 - PPL/concurrency::task_handle::task_handle
-dev_langs: C++
-helpviewer_keywords: task_handle class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38da8f97dfd689037f52f5e7c67bb51f4577a05a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskhandle-class"></a>task_handle 类
 `task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。  
@@ -54,14 +58,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |名称|描述|  
 |----------|-----------------|  
-|[operator （)](#task_handle__operator_call)|运行时将调用，来执行的任务句柄的工作函数调用运算符。|  
+|[operator()](#task_handle__operator_call)|运行时将调用，来执行的任务句柄的工作函数调用运算符。|  
   
 ## <a name="remarks"></a>备注  
- `task_handle`可以结合使用对象`structured_task_group`或更多常规`task_group`对象，将工作分解成并行任务。 有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ `task_handle` 可以结合使用对象`structured_task_group`或更多常规`task_group`对象，将工作分解成并行任务。 有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
  请注意，创建者的`task_handle`对象负责维护创建的生存期`task_handle`对象，直到它不再必需的并发运行时。 通常，这意味着`task_handle`对象必须销毁，直到`wait`或`run_and_wait`方法`task_group`或`structured_task_group`已调用到其排队。  
   
- `task_handle`对象通常是与 c + + lambda 结合使用。 因为你不知道 lambda、 的实际类型[make_task](concurrency-namespace-functions.md#make_task)函数通常用于创建`task_handle`对象。  
+ `task_handle` 对象通常是与 c + + lambda 结合使用。 因为你不知道 lambda、 的实际类型[make_task](concurrency-namespace-functions.md#make_task)函数通常用于创建`task_handle`对象。  
   
  运行时创建一份工作函数传递给`task_handle`对象。 因此，在函数中发生任何状态更改对象传递给`task_handle`对象将不会出现在该函数对象的副本中。  
   
@@ -73,7 +77,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **命名空间：** 并发  
   
-##  <a name="task_handle__operator_call"></a>operator （) 
+##  <a name="task_handle__operator_call"></a> operator （) 
 
  运行时将调用，来执行的任务句柄的工作函数调用运算符。  
   
@@ -83,7 +87,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a> task_handle 
 
  构造一个新`task_handle`对象。 通过调用作为参数传递给构造函数指定的函数执行该任务的工作。  
   
@@ -98,7 +102,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>备注  
  运行时创建一份工作函数传递给构造函数。 因此，在函数中发生任何状态更改对象传递给`task_handle`对象将不会出现在该函数对象的副本中。  
   
-##  <a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a> ~task_handle 
 
  销毁`task_handle`对象。  
   

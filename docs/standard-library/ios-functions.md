@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xiosbase/std::defaultfloat
 - xiosbase/std::boolalpha
@@ -31,7 +31,7 @@ f1_keywords:
 - ios/std::unitbuf
 - ios/std::uppercase
 ms.assetid: 1382d53f-e531-4b41-adf6-6a1543512e51
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::defaultfloat [C++]
@@ -57,17 +57,17 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 621f659ec0a3896013d8b81526f9ec83561d76a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 60bb8bac5ca2f961d6d2977dc84d0844dfd54b8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函数
 ||||  
 |-|-|-|  
 |[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[dec](#dec)|  
-|[fixed](#fixed)|[hex](#hex)|[内部](#internal)|  
+|[fixed](#fixed)|[hex](#hex)|[internal](#internal)|  
 |[left](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|  
 |[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|  
 |[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[oct](#oct)|  
@@ -92,7 +92,7 @@ ios_base& boolalpha(ios_base& str);
 ### <a name="remarks"></a>备注  
  默认情况下，`bool` 类型的变量显示为 1 或 0。  
   
- `boolalpha`有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`)，然后返回`str`。  
+ `boolalpha` 有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`)，然后返回`str`。  
   
  [noboolalpha](../standard-library/ios-functions.md#noboolalpha) 会取消 `boolalpha` 的效果。  
   
@@ -350,7 +350,7 @@ ios_base& noboolalpha(ios_base& str);
 ### <a name="remarks"></a>备注  
  默认情况，`noboolalpha` 是有效的。  
   
- `noboolalpha`有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`)，然后返回`str`。  
+ `noboolalpha` 有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`)，然后返回`str`。  
   
  [boolalpha](../standard-library/ios-functions.md#boolalpha) 会取消 `noboolalpha` 的效果。  
   

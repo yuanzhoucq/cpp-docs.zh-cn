@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::timed_mutex
 - mutex/std::timed_mutex::timed_mutex
@@ -15,9 +16,10 @@ f1_keywords:
 - mutex/std::timed_mutex::try_lock_for
 - mutex/std::timed_mutex::try_lock_until
 - mutex/std::timed_mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: b8b27489ce275cde4d0493a496980afd844f2378
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec0d34d83d19185730216af6ca9280fa14246214
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timedmutex-class"></a>timed_mutex 类
 表示定时互斥体类型。 此类型的对象在程序内通过时间限制阻止强制实现互相排斥。  
@@ -69,7 +72,7 @@ class timed_mutex;
   
  **命名空间：** std  
   
-##  <a name="lock"></a>timed_mutex:: lock
+##  <a name="lock"></a>  timed_mutex::lock
  阻止调用线程，直到线程获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -96,7 +99,7 @@ timed_mutex();
 ### <a name="remarks"></a>备注  
  如果当析构函数运行时对象被锁定，则该行为不确定。  
   
-##  <a name="try_lock"></a>timed_mutex:: try_lock
+##  <a name="try_lock"></a>  timed_mutex::try_lock
  在不阻止的情况下尝试获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -109,7 +112,7 @@ bool try_lock();
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该行为不确定。  
   
-##  <a name="try_lock_for"></a>timed_mutex:: try_lock_for
+##  <a name="try_lock_for"></a>  timed_mutex::try_lock_for
  在不阻止的情况下尝试获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -127,7 +130,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该行为不确定。  
   
-##  <a name="try_lock_until"></a>timed_mutex:: try_lock_until
+##  <a name="try_lock_until"></a>  timed_mutex::try_lock_until
  在不阻止的情况下尝试获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -147,7 +150,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该行为不确定。  
   
-##  <a name="unlock"></a>timed_mutex:: unlock
+##  <a name="unlock"></a>  timed_mutex::unlock
  释放 `mutex` 的所有权。  
   
 ```cpp  

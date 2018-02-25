@@ -5,25 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 4fcd6f0d72d31823a0d35108f087f2ad680e2f48
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.openlocfilehash: e9d6b5fa1588809b99b26d30234337a890b08157
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 函数
 |||  
 |-|-|  
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  swap  
   
 > [!NOTE]
 >  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
@@ -85,7 +85,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 ### <a name="example"></a>示例  
   有关使用 `swap` 的模板版本的示例，请参阅成员类 [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) 的代码示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<hash_set>](../standard-library/hash-set.md)
 
 

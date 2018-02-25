@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_map/stdext::hash_multimap::swap
 - hash_map/stdext::hash_multimap::upper_bound
 - hash_map/stdext::hash_multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_multimap
 - stdext::hash_multimap::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6474bd6cdbb8baa2819d80f122b5a17792251bc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 类
 > [!NOTE]
@@ -475,7 +478,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>备注  
  `const_iterator` 类型不能用于修改元素的值。  
   
- hash_multimap 定义的 `const_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***constKey, Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过第二个成员对可用。  
+ `const_iterator`由 hash_multimap 指向的对象定义[value_type](#value_type)，类型`pair`  *\< ***constKey，类型***>* . 键值通过第一个成员对可用，已映射元素的值通过第二个成员对可用。  
   
  若要取消引用`const_iterator``cIter`指向 hash_multimap 中的某个元素，使用 **->** 运算符。  
   
@@ -2533,7 +2536,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `value_type`被声明为对\<const [key_type](#key_type)， [mapped_type](#mapped_type)> 然后不配对\<key_type，mapped_type > 因为不能更改的关联容器中的键使用非常量的迭代器或引用。  
+ `value_type` 被声明为对\<const [key_type](#key_type)， [mapped_type](#mapped_type)> 然后不配对\<key_type，mapped_type > 因为不能更改的关联容器中的键使用非常量的迭代器或引用。  
   
    
   

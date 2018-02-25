@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
 - amp_short_vectors/Concurrency::graphics::float_4::zxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float4-class"></a>float_4 类
 表示短矢量的四个浮点数。  
@@ -455,13 +458,13 @@ class float_4;
 |名称|描述|  
 |----------|-----------------|  
 |float_4::operator-||  
-|float_4::operator-||  
-|float_4::operator * =||  
-|/ = float_4::operator 的||  
-|float_4::operator + +||  
-|float_4::operator + =||  
-|float_4::operator =||  
-|float_4::operator =||  
+|float_4::operator--||  
+|float_4::operator*=||  
+|float_4::operator/=||  
+|float_4::operator++||  
+|float_4::operator+=||  
+|float_4::operator=||  
+|float_4::operator-=||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -610,7 +613,7 @@ class float_4;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>float_4 
+##  <a name="ctor"></a> float_4 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -681,7 +684,7 @@ explicit inline float_4(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="float_4__size"></a>大小 
+##  <a name="float_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
 - vc-attr.db_column
@@ -15,21 +16,23 @@ f1_keywords:
 - vc-attr.db_table
 - vc.templates.ole
 - vc-attr.db_source
-dev_langs: C++
-helpviewer_keywords: OLE DB consumer templates, classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29f833f6a598b9028506fb11d163be49212bd998
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 使用者模板参考
 OLE DB 使用者模板包含以下类。 参考材料也包括主题上[用于 OLE DB 使用者模板的宏](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
@@ -121,7 +124,7 @@ OLE DB 使用者模板包含以下类。 参考材料也包括主题上[用于 O
  用于作为模板参数的模板类，如`CCommand`和`CTable`，采用的访问器类自变量。 使用`CNoAccessor`如果你不想要支持参数或输出列的类。  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- 用作模板参数`CCommand`模板时想要处理单个行集的命令。 `CNoMultipleResults`是模板参数的默认值。  
+ 用作模板参数`CCommand`模板时想要处理单个行集的命令。 `CNoMultipleResults` 是模板参数的默认值。  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
  用作模板参数`CCommand`或`CTable`如果命令或表不返回行集。  

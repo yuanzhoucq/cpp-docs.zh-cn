@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="input-stream-member-functions"></a>输入流成员函数
 输入流成员函数用于磁盘输入。 成员函数包括：  
@@ -52,7 +55,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a>Get
+##  <a name="vclrfthegetfunctionanchor12">Get</a>
  未格式化的 **get** 成员函数作用方式与 **>>** 运算符类似，但存在两个例外。 第一，**get** 函数会将空格字符包含在内，而在设置了 **skipws** 标志（默认设置）时提取符会将空格排除在外。 第二，**get** 函数导致绑定输出流（例如 `cout`）刷新的可能性较小。  
   
  一个 **get** 函数变体可指定缓冲区地址和要读取的最大字符数。 这在限制发送给特定变量的字符数时非常有用，如本例所示：  
@@ -86,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a>Getline
+##  <a name="vclrfthegetlinefunctionanchor13">Getline</a>
  **getline** 成员函数类似于 **get** 函数。 这两个函数均允许用于指定输入终止字符的第三个参数。 默认值为换行字符。 这两个函数均会保留一个字符作为所需终止字符。 但是，**get** 会将终止字符留在流中，而 **getline** 会删除此终止字符。  
   
  如下示例为输入流指定了一个终止字符：  
@@ -112,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a>只读
+##  <a name="vclrfthereadfunctionanchor14">只读</a>
  **read** 成员函数会将文件中的字节读取到内存的指定区域。 长度参数决定了所读取字节的数量。 如果未包含该参数，则到达文件物理末尾时，或在文本模式文件的情况下读取到嵌入的 `EOF` 字符时，将停止读取。  
   
  本示例将工资单文件中的二进制记录读取到一个结构中：  

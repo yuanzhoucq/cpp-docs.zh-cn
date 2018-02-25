@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 结构
 表示指向计划程序的指针。 此类可用于通过使用 shared_ptr 来允许指定共享生存期，或通过使用原始指针来允许指定无格式引用。  
@@ -41,20 +44,20 @@ struct scheduler_ptr;
   
 |名称|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: scheduler_ptr](#ctor)|已重载。 创建一个从 shared_ptr 到计划程序的计划程序指针|  
+|[scheduler_ptr::scheduler_ptr](#ctor)|已重载。 创建一个从 shared_ptr 到计划程序的计划程序指针|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: get](#get)|返回指向计划程序的原始指针|  
+|[scheduler_ptr::get](#get)|返回指向计划程序的原始指针|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: operator bool](#operator_bool)|测试计划程序指针是否为非 null|  
-|[scheduler_ptr:: operator-&gt;](#operator_ptr)|行为类似于指针|  
+|[scheduler_ptr::operator bool](#operator_bool)|测试计划程序指针是否为非 null|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|行为类似于指针|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `scheduler_ptr`  
@@ -64,7 +67,7 @@ struct scheduler_ptr;
   
  **命名空间：** 并发  
   
-##  <a name="get"></a>scheduler_ptr:: get 方法  
+##  <a name="get"></a>  scheduler_ptr:: get 方法  
  返回指向计划程序的原始指针  
   
 ```
@@ -73,7 +76,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="operator_bool"></a>scheduler_ptr:: operator bool   
+##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  测试计划程序指针是否为非 null  
   
 '' 运算符 bool() const;
@@ -92,7 +95,7 @@ scheduler_interface * 运算符-> （) const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-显式 scheduler_ptr （计划程序 std:: shared_ptr < scheduler_interface >）;
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 
 显式 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
 ```  

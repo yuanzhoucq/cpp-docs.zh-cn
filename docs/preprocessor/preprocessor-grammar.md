@@ -4,59 +4,62 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
-**#define***标识符**令牌字符串*选择    
+**#define**  *identifier* *token-string*opt  
   
- *#***定义***标识符*[**(** *标识符*选择**，** *...* **，** *标识符*选择**)**]*令牌字符串*选择    
+ *#* **define**  *identifier*[**(** *identifier*opt**,** *...* **,** *identifier*opt **)**] *token-string*opt  
   
- **定义 (***标识符* **)**   
+ **defined(**  *identifier* **)**  
   
- **定义***标识符*   
+ **defined**  *identifier*  
   
- `#include`**"***路径规范***"**  
+ `#include` **"***path-spec***"**  
   
- `#include` **\<** *路径规范***>**  
+ `#include` **\<***path-spec***>**  
   
- **#line***数字序列***"** *filename* **"**选择      
+ **#line**  *digit-sequence*  **"** *filename* **"**opt  
   
- *#***undef***标识符*   
+ *#* **undef**  *identifier*  
   
- **#error***令牌字符串*   
+ **#error**  *token-string*  
   
- **#pragma***令牌字符串*   
+ **#pragma**  *token-string*  
   
  *条件*:  
  *如果一部分 elif 部件*选择*else 部分*选择*endif 行*  
   
  *如果一部分*:  
- *如果 linetext*  
+ *if-linetext*  
   
  *如果行*:  
- **#if***常量表达式*   
+ **#if**  *constant-expression*  
   
- **#ifdef***标识符*   
+ **#ifdef**  *identifier*  
   
- **#ifndef***标识符*   
+ **#ifndef**  *identifier*  
   
  *elif 部件*:  
  *elif 行文本*  
@@ -64,10 +67,10 @@ ms.lasthandoff: 12/21/2017
  *elif 部件 elif 行文本*  
   
  *elif 行*:  
- **#elif***常量表达式*   
+ **#elif**  *constant-expression*  
   
  *else 部分*:  
- *其他 linetext*  
+ *else-linetext*  
   
  *其他行*:  
  `#else`  

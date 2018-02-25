@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - critical_section
 - CONCRT/concurrency::critical_section
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRT/concurrency::critical_section::try_lock
 - CONCRT/concurrency::critical_section::try_lock_for
 - CONCRT/concurrency::critical_section::unlock
-dev_langs: C++
-helpviewer_keywords: critical_section class
+dev_langs:
+- C++
+helpviewer_keywords:
+- critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="criticalsection-class"></a>critical_section 类
 明确感知并发运行时的不可重入互斥。  
@@ -59,7 +63,7 @@ class critical_section;
 |名称|描述|  
 |----------|-----------------|  
 |[critical_section](#ctor)|构造新的关键部分。|  
-|[~ critical_section 析构函数](#dtor)|销毁关键部分。|  
+|[~critical_section Destructor](#dtor)|销毁关键部分。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -82,7 +86,7 @@ class critical_section;
   
  **命名空间：** 并发  
   
-##  <a name="ctor"></a>critical_section 
+##  <a name="ctor"></a> critical_section 
 
  构造新的关键部分。  
   
@@ -90,7 +94,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="dtor"></a>~ critical_section 
+##  <a name="dtor"></a> ~critical_section 
 
  销毁关键部分。  
   
@@ -101,7 +105,7 @@ critical_section();
 ### <a name="remarks"></a>备注  
  应析构函数运行时不再持有锁。 允许要与锁定析构的关键部分仍保留会导致未定义的行为。  
   
-##  <a name="lock"></a>锁 
+##  <a name="lock"></a> 锁 
 
  获取此临界区。  
   
@@ -114,7 +118,7 @@ void lock();
   
  如果锁已经被调用的上下文中，保留[improper_lock](improper-lock-class.md)将引发异常。  
   
-##  <a name="native_handle"></a>native_handle 
+##  <a name="native_handle"></a> native_handle 
 
  返回的平台特定本机句柄，如果存在。  
   
@@ -128,14 +132,14 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>备注  
  A`critical_section`对象不是与平台特定本机句柄关联的 Windows 操作系统。 方法只需返回到对象本身的引用。  
   
-##  <a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock 类  
+##  <a name="critical_section__scoped_lock_class">critical_section:: scoped_lock 类</a>  
  异常安全 RAII 包装器`critical_section`对象。  
   
 ```
 class scoped_lock;
 ```  
   
-##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
  构造`scoped_lock`对象，并获取`critical_section`传入的对象`_Critical_section`参数。 如果关键部分由另一个线程，则此调用将阻塞。  
   
@@ -147,7 +151,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  要锁定的关键部分。  
   
-##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
 
  销毁`scoped_lock`对象并释放其构造函数中提供的关键部分。  
   
@@ -155,7 +159,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ~scoped_lock();
 ```  
   
-##  <a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a> try_lock 
 
  尝试获取锁，而不阻止。  
   
@@ -166,7 +170,7 @@ bool try_lock();
 ### <a name="return-value"></a>返回值  
  如果已获取锁，则这`true`; 否则为值`false`。  
   
-##  <a name="try_lock_for"></a>try_lock_for 
+##  <a name="try_lock_for"></a> try_lock_for 
 
  尝试在不将锁阻塞特定毫秒数的情况下获取锁。  
   
@@ -181,7 +185,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>返回值  
  如果已获取锁，则这`true`; 否则为值`false`。  
   
-##  <a name="unlock"></a>解锁 
+##  <a name="unlock"></a> 解锁 
 
  解除锁定关键部分。  
   

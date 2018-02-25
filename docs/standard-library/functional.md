@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <functional>
 - functional/std::<functional>
 - std::<functional>
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 036da9664c7b61e55e1322f12de3d9c8f72c3f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c50997750c58730fa870d59c913c1c06721f4da
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 定义 C++ 标准库函数，用于帮助构造函数对象（也称为函子）及其绑定程序。 函数对象是用于定义 `operator()` 的类型的对象。 函数对象可以是函数指针，但该对象更常用于存储可在函数调用过程中访问的其他信息。  

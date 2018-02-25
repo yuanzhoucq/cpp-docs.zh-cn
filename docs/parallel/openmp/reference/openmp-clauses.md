@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 582afec1c2d6401aee107a2e20cc04ef943254ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a63dacb8da2b7c4b1c7264cfccc6d2839db1b8b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 提供指向 OpenMP API 中使用的子句。  
@@ -35,11 +38,11 @@ ms.lasthandoff: 12/21/2017
 |[lastprivate](../../../parallel/openmp/reference/lastprivate.md)|指定的变量的封闭上下文的版本被设置为私有版本的任何线程执行的最后一个迭代 （for 循环构造） 或最后一节 （#pragma 节）。|  
 |[nowait](../../../parallel/openmp/reference/nowait.md)|重写指令中隐式屏障。|  
 |[num_threads](../../../parallel/openmp/reference/num-threads.md)|在线程团队设置线程的数。|  
-|[排序](../../../parallel/openmp/reference/ordered-openmp-clauses.md)|上一个并行需要[为](../../../parallel/openmp/reference/for-openmp.md)语句如果[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)指令是在循环中使用。|  
-|[专用](../../../parallel/openmp/reference/private-openmp.md)|指定每个线程都应具有其自己的变量的实例。|  
+|[ordered](../../../parallel/openmp/reference/ordered-openmp-clauses.md)|上一个并行需要[为](../../../parallel/openmp/reference/for-openmp.md)语句如果[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)指令是在循环中使用。|  
+|[private](../../../parallel/openmp/reference/private-openmp.md)|指定每个线程都应具有其自己的变量的实例。|  
 |[reduction](../../../parallel/openmp/reference/reduction.md)|指定对每个线程都是私有的一个或多个变量是并行区域末尾缩减操作的主题。|  
 |[schedule](../../../parallel/openmp/reference/schedule.md)|适用于[为](../../../parallel/openmp/reference/for-openmp.md)指令。|  
-|[共享](../../../parallel/openmp/reference/shared-openmp.md)|将指定应所有线程间共享一个或多个变量。|  
+|[shared](../../../parallel/openmp/reference/shared-openmp.md)|将指定应所有线程间共享一个或多个变量。|  
   
 ## <a name="see-also"></a>请参阅  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)   

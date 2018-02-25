@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::operator!=
 - utility/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - utility/std::operator&lt;
 - utility/std::operator&lt;=
 - utility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (utility)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 9f9290b171a74098af5186c17f027fcf6e34c78f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 407e08934c4469776feb34d0f18b20b457d208d9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 运算符
 ||||  
@@ -126,7 +127,7 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
  如果两个 pair 相等，则为 **true**；如果 `pair` 不相等，则为 **false**。  
   
 ### <a name="remarks"></a>备注  
- 如果两个对的每个元素对应相等，则这两个对相等。 该函数返回 `left`。 **first** == `right`。 **first** && `left`。 **second** == `right`。 **second**。 如果一个对的第一个或第二个元素不等于另一个对的相应元素，则这两个对不相等。  
+ 如果两个对的每个元素对应相等，则这两个对相等。 该函数返回 `left`。 **first** == `right`。 **first** && `left`。 **second** == `right`。 **second** 相同。 如果一个对的第一个或第二个元素不等于另一个对的相应元素，则这两个对不相等。  
   
 ### <a name="example"></a>示例  
   
@@ -236,7 +237,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  测试运算符左侧的 pair 对象是否小于或等于右侧的 pair 对象。  
   
 ```  
@@ -400,7 +401,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  测试运算符左侧的 pair 对象是否大于或等于右侧的 pair 对象。  
   
 ```  
@@ -481,6 +482,6 @@ Pair p1 is greater than or equal to pair p3.
 Pair p1 is greater than or equal to pair p4.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<utility>](../standard-library/utility.md)
 

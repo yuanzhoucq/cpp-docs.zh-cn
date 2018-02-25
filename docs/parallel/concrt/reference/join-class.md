@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - join
 - AGENTS/concurrency::join
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::join::release_message
 - AGENTS/concurrency::join::reserve_message
 - AGENTS/concurrency::join::resume_propagation
-dev_langs: C++
-helpviewer_keywords: join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="join-class"></a>join 类
 `join` 消息块是单目标、多源、有序的 `propagator_block`，它可以合并来自其每个源的 `T` 类型消息。  
@@ -50,7 +54,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
  消息的负载类型加入，并传播的块。  
   
  `_Jtype`  
- 类型的`join`块，此元素，也`greedy`或`non_greedy`  
+ 类型的`join`块，此元素，也`greedy`或 `non_greedy`  
   
 ## <a name="members"></a>成员  
   
@@ -93,7 +97,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **命名空间：** 并发  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  接受一条消息，已提供此`join`消息块，将所有权转让给调用方。  
   
@@ -108,7 +112,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>返回值  
  指向的指针`message`对象调用方现在具有的所有权。  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  使用以前提供的消息`join`消息块，并由目标，将所有权转让给调用方保留。  
   
@@ -126,7 +130,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>备注  
  类似于`accept`，但始终通过调用前面`reserve`。  
   
-##  <a name="ctor"></a>联接 
+##  <a name="ctor"></a> 联接 
 
  构造`join`消息块。  
   
@@ -175,7 +179,7 @@ join(
   
  类型`filter_method`是具有签名的涵子`bool (T const &)`其调用由此`join`消息块，以确定它是否应接受提供的消息。  
   
-##  <a name="dtor"></a>~ 联接 
+##  <a name="dtor"></a> ~join 
 
  销毁`join`块。  
   
@@ -183,7 +187,7 @@ join(
 ~join();
 ```  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  通知新的目标已链接到此回调`join`消息块。  
   
@@ -191,7 +195,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  以异步方式从将消息传递`ISource`至此块`join`消息块。 由调用`propagate`方法，调用由源块时。  
   
@@ -211,7 +215,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>返回值  
  A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  构造输出消息时它们已传播一条消息将包含来自每个源的输入的消息。 将此输出消息发送到其每个目标。  
   
@@ -219,7 +223,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  释放以前的消息保留。  
   
@@ -231,7 +235,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity`的`message`对象被释放。  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  保留以前提供的这一条消息`join`消息块。  
   
@@ -244,12 +248,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity`的提供`message`对象。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果消息已成功保留，`false`否则为。  
+ `true` 如果消息已成功保留，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  后`reserve`调用时，如果它返回`true`，`consume`或`release`必须调用来获取或释放消息的所有权。  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  释放保留后恢复传播。  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - extent
 - AMP/extent
@@ -15,19 +16,22 @@ f1_keywords:
 - AMP/Concurrency::extent::size
 - AMP/Concurrency::extent::tile
 - AMP/Concurrency::extent::rank Constant
-dev_langs: C++
-helpviewer_keywords: extent structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 表示向量*N*指定的边界的整数值*N*-具有 0 来源的维空间。 向量中的值是从最高有效订购到最不重要。  
@@ -60,9 +64,9 @@ class extent;
   
 |名称|描述|  
 |----------|-----------------|  
-|[包含](#contains)|验证指定`extent`对象具有指定的秩。|  
+|[contains](#contains)|验证指定`extent`对象具有指定的秩。|  
 |[size](#size)|返回 （中的元素的单位） 的范围的总线性大小。|  
-|[磁贴](#tile)|生成`tiled_extent`指定维度与给定的磁贴扩展盘区的对象。|  
+|[tile](#tile)|生成`tiled_extent`指定维度与给定的磁贴扩展盘区的对象。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -73,7 +77,7 @@ class extent;
 |[operator%=](#operator_mod_eq)|计算中每个元素的模数 （余数）`extent`对象时该元素除以一个数字。|  
 |[operator*=](#operator_star_eq)|乘以的每个元素`extent`大量对象。|  
 |[operator/=](#operator_min_eq)|将划分的每个元素`extent`大量对象。|  
-|[extent:: operator\[\]](#operator_at)|返回位于指定索引处的元素。|  
+|[extent::operator\[\]](#operator_at)|返回位于指定索引处的元素。|  
 |[operator+](#operator_add)|返回一个新`extent`创建通过添加相应的对象`index`和`extent`元素。|  
 |[operator++](#operator_add_add)|递增的每个元素`extent`对象。|  
 |[operator+=](#operator_add_eq)|将指定的数添加到的每个元素`extent`对象。|  
@@ -91,7 +95,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains"></a>包含 
+## <a name="contains"></a> 包含 
 
 指示是否指定[索引](index-class.md)值包含在该范围对象。  
   
@@ -106,9 +110,9 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
  `index`要测试值。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果指定`index`值包含在`extent`对象; 否则为`false`。  
+ `true` 如果指定`index`值包含在`extent`对象; 否则为`false`。  
   
-##  <a name="ctor"></a>范围 
+##  <a name="ctor"></a> 范围 
 
 初始化范围类的新实例。  
   
@@ -147,7 +151,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  如果数组用于构造`extent`对象，该数组的长度必须匹配的秩`extent`对象。  
   
-##  <a name="operator_mod_eq"></a>operator %= 
+##  <a name="operator_mod_eq"></a> operator%= 
 
 该元素除以一个数字时，计算范围中的每个元素的模数 （余数）。  
   
@@ -164,7 +168,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>返回值  
  `extent` 对象。  
   
-##  <a name="operator_star_eq"></a>运算符 * = 
+##  <a name="operator_star_eq"></a> operator*= 
 
 返回由指定数量的范围对象中的每个元素的乘积。  
   
@@ -181,7 +185,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  `extent` 对象。  
   
-## <a name="operator_add"></a>operator + 
+## <a name="operator_add"></a> operator + 
 
 返回一个新`extent`对象是通过添加相应创建`index`和`extent`元素。  
   
@@ -198,7 +202,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  新的 `extent` 对象。  
   
-##  <a name="operator_add_add"></a>operator + + 
+##  <a name="operator_add_add"></a> operator + + 
 
 递增扩展对象的每个元素。  
   
@@ -212,7 +216,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  对于前缀运算符，`extent`对象 (`*this`)。 后缀运算符，新`extent`对象。  
   
-##  <a name="operator_add_eq"></a>运算符 + = 
+##  <a name="operator_add_eq"></a> operator+= 
 
 将指定的数添加到扩展对象的每个元素。  
   
@@ -231,7 +235,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  生成的 `extent` 对象。  
   
-##  <a name="operator_min"></a>operator- 
+##  <a name="operator_min"></a> operator- 
 
 创建一个新`extent`对象中指定每个元素中的减去`index`对象中的相应元素从`extent`对象。  
   
@@ -248,7 +252,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  新的 `extent` 对象。  
   
-##  <a name="operator_min_min"></a>运算符- 
+##  <a name="operator_min_min"></a> 运算符- 
 
 递减范围对象中的每个元素。  
   
@@ -262,7 +266,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  对于前缀运算符，`extent`对象 (`*this`)。 后缀运算符，新`extent`对象。  
   
-##  <a name="operator_div_eq"></a>/ = 运算符 
+##  <a name="operator_div_eq"></a> / = 运算符 
 
 指定的数除以范围对象中的每个元素。  
   
@@ -279,7 +283,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  `extent` 对象。  
   
-##  <a name="operator_min_eq"></a>operator = 
+##  <a name="operator_min_eq"></a> operator = 
 
 中减去指定的数目的范围对象的每个元素。  
   
@@ -298,7 +302,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  生成的 `extent` 对象。  
   
-##  <a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a> 运算符 = 
 
 将另一个范围对象的内容复制到此。  
   
@@ -315,7 +319,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  对此引用`extent`对象。  
   
-##  <a name="operator_at"></a>extent:: operator\[\] 
+##  <a name="operator_at"></a> extent:: operator \[\] 
 返回位于指定索引处的元素。  
   
 ### <a name="syntax"></a>语法  
@@ -332,7 +336,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  位于指定索引处的元素。  
   
-##  <a name="rank_constant"></a>级别 
+##  <a name="rank_constant"></a> 级别 
 
 将存储的扩展对象的秩。  
   
@@ -342,7 +346,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 static const int rank = _Rank;  
 ```  
   
-##  <a name="size"></a>大小 
+##  <a name="size"></a> 大小 
 
 返回 `extent` 对象的总线性大小（以元素单位）。  
   
@@ -352,7 +356,7 @@ static const int rank = _Rank;
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile"></a>磁贴 
+## <a name="tile"></a> 磁贴 
 
 生成具有指定的图块维度的 tiled_extent 对象。
 
@@ -367,9 +371,9 @@ template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```  
 ### <a name="parameters"></a>参数
-`_Dim0`平铺范围中最重要的组成部分。
-`_Dim1`平铺范围下一步-到-最高有效组件。
-`_Dim2`平铺范围最低有效组件。
+`_Dim0` 平铺范围中最重要的组成部分。
+`_Dim1` 平铺范围下一步-到-最高有效组件。
+`_Dim2` 平铺范围最低有效组件。
 
 
   
