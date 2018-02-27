@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <complex>
 - std::<complex>
-dev_langs: C++
-helpviewer_keywords: complex header
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e23707a342e666e49a15c47e0dc82c4e882176cd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 定义容器模板类**复杂**及其支持的模板。  
@@ -48,15 +52,15 @@ ms.lasthandoff: 12/21/2017
   
 -   对于复数加法逆元 (， *b*) 是 (-、-*b*)，所有此类复数的乘法逆元除 （0，0） 是  
   
-     (/ (<sup>2</sup> + *b*<sup>2</sup>)、-*b*/ (<sup>2</sup> + *b*<sup>2</sup>))  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
  通过表示复数*z* = (， *b*) 的形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，规则可以应用的实数集的代数，到的复数集和其组件。 例如:  
   
-  (1 + 2*我*) \* (2 + 3*我*)  
-  = 1 \* (2 + 3*我*) + 2*我* \* (2 + 3*我*)  
-  = (2 + 3*我*) + (4*我*+ 6*我*<sup>2</sup>)  
-  = (2-6) + (3 + 4)*我*  
-  =-4 + 7*我*  
+  (1 + 2*i*) \* (2 + 3*i*)  
+  = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
+  = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  = (2 - 6) + (3 + 4)*i*  
+  = -4 + 7*i*  
   
  复数的系统是一个域，但它不是一个有序域。 任何的顺序复数没有表示的字段的实际数量和及其子集，因此能应用于复数不等同性，因为它们是为实数。  
   
@@ -130,7 +134,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|返回：`complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|返回： `complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|返回：`complex<double>{0.0, static_cast<double>(d)}`。|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|返回：`complex<float>{0.0f, static_cast<float>(d)}`。|  
   

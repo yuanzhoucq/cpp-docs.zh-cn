@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - multi_link_registry
 - AGENTS/concurrency::multi_link_registry
@@ -17,19 +18,22 @@ f1_keywords:
 - AGENTS/concurrency::multi_link_registry::count
 - AGENTS/concurrency::multi_link_registry::remove
 - AGENTS/concurrency::multi_link_registry::set_bound
-dev_langs: C++
-helpviewer_keywords: multi_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 类
 `multi_link_registry` 对象是管理多个源块或多个目标块的 `network_link_registry`。  
@@ -60,7 +64,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|将添加到链接`multi_link_registry`对象。 (重写[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|返回的第一个元素的迭代器`multi_link_registry`对象。 (重写[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[包含](#contains)|搜索`multi_link_registry`对象指定的块。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
+|[contains](#contains)|搜索`multi_link_registry`对象指定的块。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
 |[count](#count)|计算中的项的数目`multi_link_registry`对象。 (重写[network_link_registry:: count](network-link-registry-class.md#count)。)|  
 |[remove](#remove)|删除从链接`multi_link_registry`对象。 (重写[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
 |[set_bound](#set_bound)|上的链接数设置上限`multi_link_registry`对象可以保留。|  
@@ -75,7 +79,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  **命名空间：** 并发  
   
-##  <a name="add"></a>添加 
+##  <a name="add"></a> 添加 
 
  将添加到链接`multi_link_registry`对象。  
   
@@ -90,7 +94,7 @@ virtual void add(_EType _Link);
 ### <a name="remarks"></a>备注  
  该方法将引发[invalid_link_target](invalid-link-target-class.md)异常如果链接已存在，则在注册表中，或如果绑定已设置与`set_bound`函数和链接已被删除。  
   
-##  <a name="begin"></a>开始 
+##  <a name="begin"></a> 开始 
 
  返回的第一个元素的迭代器`multi_link_registry`对象。  
   
@@ -104,7 +108,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>备注  
  最终状态由`NULL`链接。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  搜索`multi_link_registry`对象指定的块。  
   
@@ -117,9 +121,9 @@ virtual bool contains(_EType _Link);
  指向要在其中搜索中的块的指针`multi_link_registry`对象。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果找到指定的块，`false`否则为。  
+ `true` 如果找到指定的块，`false`否则为。  
   
-##  <a name="count"></a>计数 
+##  <a name="count"></a> 计数 
 
  计算中的项的数目`multi_link_registry`对象。  
   
@@ -130,7 +134,7 @@ virtual size_t count();
 ### <a name="return-value"></a>返回值  
  中的项的数目`multi_link_registry`对象。  
   
-##  <a name="ctor"></a>multi_link_registry 
+##  <a name="ctor"></a> multi_link_registry 
 
  构造 `multi_link_registry` 对象。  
   
@@ -138,7 +142,7 @@ virtual size_t count();
 multi_link_registry();
 ```  
   
-##  <a name="dtor"></a>~ multi_link_registry 
+##  <a name="dtor"></a> ~multi_link_registry 
 
  销毁`multi_link_registry`对象。  
   
@@ -149,7 +153,7 @@ virtual ~multi_link_registry();
 ### <a name="remarks"></a>备注  
  该方法将引发[invalid_operation](invalid-operation-class.md)异常之前将删除所有链接调用。  
   
-##  <a name="remove"></a>删除 
+##  <a name="remove"></a> 删除 
 
  删除从链接`multi_link_registry`对象。  
   
@@ -162,9 +166,9 @@ virtual bool remove(_EType _Link);
  指向块被删除，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果找到并移除了，链接`false`否则为。  
+ `true` 如果找到并移除了，链接`false`否则为。  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  上的链接数设置上限`multi_link_registry`对象可以保留。  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>任务并行（并发运行时）
 并发运行时中,*任务*是执行特定作业并通常与其他任务并行运行的工作单元。 任务可以分解为其他更细化的任务组织成*任务组*。  
@@ -81,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
 - [可靠编程](#robust)  
   
-##  <a name="lambdas"></a>使用 Lambda 表达式  
+##  <a name="lambdas"></a> 使用 Lambda 表达式  
  由于其语法简洁，因此 Lambda 表达式是定义由任务和任务组执行的工作的常用方法。 下面是一些使用提示：  
   
 -   因为任务通常在后台线程上运行，所以在 lambda 表达式中捕获变量时请注意对象生存期。 如果通过值捕获变量，则会在 lambda 体中创建该变量的副本。 通过引用捕获时，不创建副本。 因此，请确保通过引用捕获的任何变量的生存期长于使用它的任务。  
@@ -98,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。  
   
-##  <a name="task-class"></a>Task 类  
+##  <a name="task-class"></a> Task 类  
  你可以使用[concurrency:: task](../../parallel/concrt/reference/task-class.md)类将任务组合成相关操作集。 此组合模型支持的概念*延续*。 延续使代码时要执行前一或*前面的任务*，任务完成。 先行任务的结果会作为输入传递给一个或多个延续任务。 先行任务完成时，在等待它的所有延续任务都计划进行执行。 每个延续任务都会收到先行任务结果的副本。 这些延续任务进而也可能是其他延续的先行任务，从而形成任务链。 延续可帮助创建任务间具有特定依赖关系的任意长度的任务链。 此外，任务还可以在其他任务开始之前或是在其他任务运行期间以协作方式参与取消。 有关此取消模型的详细信息，请参阅[PPL 中的取消](cancellation-in-the-ppl.md)。  
   
  `task` 是模板类。 类型参数 `T` 是由任务生成的结果的类型。 如果任务不返回值，则此类型可以是 `void`。 `T` 不能使用 `const` 修饰符。  
@@ -124,9 +127,9 @@ ms.lasthandoff: 12/21/2017
  有关示例，使用`task`， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)，取消，请参阅[演练： 连接使用任务和 XML HTTP 请求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。 （本文档稍后会介绍 `task_completion_event` 类。）  
   
 > [!TIP]
->  若要了解特定于中的任务的详细信息[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用程序，请参阅[c + + 中的异步编程](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)和[创建 Windows 应用商店应用的 c + + 中的异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
+>  若要了解特定于 UWP 应用中的任务的详细信息，请参阅[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)和[创建异步操作在 c + + 中适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
   
-##  <a name="continuations"></a>延续任务  
+##  <a name="continuations"></a> 延续任务  
  在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况非常常见。 传统上，这使用回调方法来完成。 在并发运行时，相同的功能由*延续任务*。 延续任务 （也简称为延续） 是一个异步任务，由另一个任务，这被称为调用*前面的任务*，前面的任务完成时。 使用延续可以：  
   
 -   将数据从前面的任务传递到延续。  
@@ -135,7 +138,7 @@ ms.lasthandoff: 12/21/2017
   
 -   在延续启动之前取消延续，或在延续正在运行时以协作方式取消延续。  
   
--   提供有关应如何计划延续的提示。 （这仅适用于 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用。 有关详细信息，请参阅[创建 Windows 应用商店应用的 c + + 中的异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)  
+-   提供有关应如何计划延续的提示。 （这适用于通用 Windows 平台 (UWP) 应用程序。 有关详细信息，请参阅[创建异步操作在 c + + 中适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)  
   
 -   从同一前面的任务中调用多个延续。  
   
@@ -159,21 +162,21 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- 延续还可以返回另一个任务。 如果没有取消，则此任务会在后续延续之前执行。 此方法被称为*异步解包*。 要在后台执行其他工作，但不想当前任务阻止当前线程时，异步解包会很有用。 （这在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中很常见，其中延续可以在 UI 线程上运行）。 下面的示例演示三个任务。 第一个任务返回在延续任务之前运行的另一个任务。  
+ 延续还可以返回另一个任务。 如果没有取消，则此任务会在后续延续之前执行。 此方法被称为*异步解包*。 要在后台执行其他工作，但不想当前任务阻止当前线程时，异步解包会很有用。 （这是常见在 UWP 应用中，延续可在其中的 UI 线程上运行）。 下面的示例演示三个任务。 第一个任务返回在延续任务之前运行的另一个任务。  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  当任务的延续返回 `N` 类型的嵌套任务时，生成的任务具有 `N` 类型（而不是 `task<N>`），会在嵌套任务完成时完成。 换句话说，延续会执行嵌套任务的解包。  
   
-##  <a name="value-versus-task"></a>基于值与基于任务的继续  
+##  <a name="value-versus-task"></a> 基于值与基于任务的继续  
  对于其返回类型是 `T` 的 `task` 对象，可以向其延续任务提供 `T` 或 `task<T>` 类型的值。 采用类型延续`T`称为*基于值的延续*。 基于值的延续计划在先行任务完成而未出现错误并且未取消时执行。 采用类型延续`task<T>`为其参数被称为*基于任务的延续*。 基于任务的延续始终计划为在先行任务完成时执行，甚至是在先行任务取消或引发异常时执行。 随后然后调用 `task::get` 以获取先行任务的结果。 如果前面的任务已取消，`task::get`引发[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 如果先行任务引发了异常，则 `task::get` 会再次引发该异常。 基于任务的延续在先行任务取消时不会标记为已取消。  
   
-##  <a name="composing-tasks"></a>组合任务  
+##  <a name="composing-tasks"></a> 组合任务  
  本部分介绍[concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数，它们可帮助你组合多个任务以实现常用模式。  
 
   
-###  <a name="when-all"></a>When_all 函数  
+###  <a name="when-all"></a> When_all 函数  
  `when_all` 函数生成在任务集完成之后完成的任务。 此函数将返回 std::[向量](../../standard-library/vector-class.md)对象，其中包含集中每个任务的结果。 下面的基本示例使用 `when_all` 创建一个表示三个其他任务完成的任务。  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- 请考虑一个使用 C++ 和 XAML 并将文件集写入磁盘的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用。 下面的示例演示如何使用 `when_all` 和 `observe_all_exceptions` 确保该程序观察到所有异常。  
+ 请考虑使用 c + + 和 XAML 并将一组文件写入磁盘的 UWP 应用。 下面的示例演示如何使用 `when_all` 和 `observe_all_exceptions` 确保该程序观察到所有异常。  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ ms.lasthandoff: 12/21/2017
   
 > [!TIP]
 
-> `when_all` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](reference/task-class.md#wait)，则可以安全地调用此函数[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]在 ASTA (应用程序 STA) 线程上的应用程序。  
+> `when_all` 是生成 `task` 作为其结果的的非阻止函数。 与不同[task:: wait](reference/task-class.md#wait)，则可以安全地中在 ASTA (应用程序 STA) 线程上的 UWP 应用中调用此函数。  
 
   
-###  <a name="when-any"></a>When_any 函数  
+###  <a name="when-any"></a> When_any 函数  
  `when_any` 函数生成在任务集中的第一个任务完成时完成的任务。 此函数将返回[std:: pair](../../standard-library/pair-structure.md)对象，其中包含已完成的任务的结果和该任务在集中的索引。  
   
  `when_any` 函数在以下情境中尤其有用：  
@@ -249,9 +252,9 @@ ms.lasthandoff: 12/21/2017
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  与 `when_all` 一样，`when_any` 是非阻止的，可以安全地在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中在 ASTA 线程上进行调用。  
+>  与`when_all`，`when_any`是非阻塞的可以安全地调用中在 ASTA 线程上的 UWP 应用。  
   
-##  <a name="delayed-tasks"></a>延迟的任务执行  
+##  <a name="delayed-tasks"></a> 延迟的任务执行  
  有时需要延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。 例如，在异步编程中，可能必须启动任务以响应 I/O 完成事件。  
   
  实现此目的的两种方法是使用延续，或启动任务并在任务的工作函数内等待某个事件。 但是在某些情况下，无法使用以上方法之一。 例如，若要创建延续，必须具有先行任务。 但是，如果没有先行任务，则可以创建*任务完成事件*和更高版本该完成事件链接到先行任务可用时。 此外，因为正在等待的任务也会阻止线程，所以可以使用任务完成事件在异步操作完成时执行工作，从而释放线程。  
@@ -260,7 +263,7 @@ ms.lasthandoff: 12/21/2017
   
  有关示例，使用`task_completion_event`若要实现在延迟后完成的任务，请参阅[如何： 创建该完成后延迟的任务](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。  
   
-##  <a name="task-groups"></a>任务组  
+##  <a name="task-groups"></a> 任务组  
  A*任务组*组织任务的集合。 任务组会将任务推送到工作窃取队列。 计划程序从此队列中删除任务，然后在可用计算资源上执行它们。 将任务添加到任务组之后，可以等待所有任务完成或取消尚未开始的任务。  
   
  PPL 使用[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类表示任务组和[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)类表示在这些组中运行的任务。 `task_handle` 类封装执行工作的代码。 与 `task` 类一样，工作函数采用 lambda 函数、函数指针或函数对象的形式。 通常不需要直接使用 `task_handle` 对象。 而是将工作函数传递给任务组，然后任务组会创建和管理 `task_handle` 对象。  
@@ -277,7 +280,7 @@ ms.lasthandoff: 12/21/2017
   
  运行时还提供了一个异常处理模型，使你可以从任务引发异常，并在等待关联任务组完成时处理该异常。 有关此异常处理模型的详细信息，请参阅[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
-##  <a name="comparing-groups"></a>Comparing task_group 到 structured_task_group  
+##  <a name="comparing-groups"></a> Comparing task_group 到 structured_task_group  
  虽然我们建议你使用 `task_group` 或 `parallel_invoke` 而不是 `structured_task_group` 类，不过有一些你要使用 `structured_task_group` 的情况，例如当你编写执行可变数量的任务或需要取消支持的并行算法时。 此部分介绍 `task_group` 与 `structured_task_group` 类之间的差异。  
   
  `task_group` 类是线程安全的。 因此，可以从多个线程将任务添加到 `task_group` 对象，然后从多个线程等待或取消 `task_group` 对象。 `structured_task_group` 对象的构造和析构必须在相同词法范围内进行。 此外，对 `structured_task_group` 对象执行的所有操作必须在相同线程上进行。 此规则的例外是[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)和[concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling)方法。 子任务可以随时调用这些方法以取消父任务组或检查是否存在取消。  
@@ -313,7 +316,7 @@ Message from task: 42
   
  有关完整的示例演示如何使用`parallel_invoke`算法，请参阅[如何： 使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[如何： 使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 有关完整示例，使用`task_group`类以实现异步 future，请参阅[演练： 实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。  
   
-##  <a name="robust"></a>可靠编程  
+##  <a name="robust">可靠编程</a>  
  请确保了解取消和异常处理在使用任务、任务组和并行算法时的角色。 例如，在并行工作树中，取消的任务会阻止子任务运行。 如果一个子任务执行的操作对于应用程序很重要（如释放资源），则这可能会导致问题。 此外，如果子任务引发异常，则该异常可以通过对象析构函数进行传播，在应用程序中导致不明确的行为。 有关说明这些要点的示例，请参阅[了解如何取消和异常处理影响对象析构](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)并行模式库文档中的最佳做法中的部分。 有关取消和异常处理模型 PPL 中的详细信息，请参阅[取消](../../parallel/concrt/cancellation-in-the-ppl.md)和[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
 ## <a name="related-topics"></a>相关主题  

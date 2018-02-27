@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array_view
 - AMP/array_view
@@ -29,19 +30,22 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs: C++
-helpviewer_keywords: array_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="arrayview-class"></a>array_view 类
 表示 N 维视图对保存在另一个容器中的数据。  
@@ -88,7 +92,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|返回 array_view 对象的范围对象。|  
 |[get_ref](#get_ref)|返回对索引的元素的引用。|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|返回[accelerator_view](accelerator-view-class.md)其中的数据源的`array_view`所在。|  
-|[刷新](#refresh)|通知`array_view`已在外部修改其绑定的内存的对象`array_view`接口。 调用此方法将呈现所有缓存的信息过时。|  
+|[refresh](#refresh)|通知`array_view`已在外部修改其绑定的内存的对象`array_view`接口。 调用此方法将呈现所有缓存的信息过时。|  
 |[reinterpret_as](#reinterpret_as)|返回包含中的所有元素的一维数组`array_view`对象。|  
 |[section](#section)|返回的子部分的`array_view`对象位于指定的 origin 和 （可选），具有指定的范围。|  
 |[synchronize](#synchronize)|同步对做任何修改`array_view`回其源数据的对象。|  
@@ -101,8 +105,8 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |名称|描述|  
 |----------|-----------------|  
-|[operator （)](#operator_call)|返回由参数或参数指定的元素的值。|  
-|[operator]](#operator_at)|返回由参数指定的元素。|  
+|[operator()](#operator_call)|返回由参数或参数指定的元素的值。|  
+|[operator[]](#operator_at)|返回由参数指定的元素。|  
 |[operator=](#operator_eq)|将指定的内容复制`array_view`到此对象。|  
   
 ### <a name="public-constants"></a>公共常量  
@@ -158,7 +162,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  **命名空间：** 并发  
   
-##  <a name="dtor"></a>~ array_view 
+##  <a name="dtor"></a> ~array_view 
 
  销毁`array_view`对象。  
   
@@ -166,7 +170,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 ~array_view()restrict(amp,cpu);
 ```  
   
-##  <a name="ctor"></a>array_view 
+##  <a name="ctor"></a> array_view 
 
  初始化 `array_view` 类的新实例。  
   
@@ -386,7 +390,7 @@ array_view(
  `_Src`  
  指向源数据将复制到新数组的指针。  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  内容复制`array_view`对象与通过调用指定的目标对象`copy(*this, dest)`。  
   
@@ -406,7 +410,7 @@ void copy_to(
  `_Dest`  
  要将复制到的对象。  
   
-##  <a name="data"></a>数据 
+##  <a name="data"></a> 数据 
 
  将指针返回到原始数据的`array_view`。  
   
@@ -422,7 +426,7 @@ const value_type* data() const restrict(amp,
 ### <a name="return-value"></a>返回值  
  指向 `array_view` 原始数据的指针。  
   
-##  <a name="discard_data"></a>discard_data 
+##  <a name="discard_data"></a> discard_data 
 
  放弃基础此视图的当前数据。 这是用于避免将视图的当前内容复制到目标的运行时优化提示`accelerator_view`访问，并且其使用建议如果不需要的现有内容。 此方法是一个无操作时在 restrict(amp) 上下文中使用  
   
@@ -430,7 +434,7 @@ const value_type* data() const restrict(amp,
 void discard_data() const restrict(cpu);
 ```  
   
-##  <a name="extent"></a>范围 
+##  <a name="extent"></a> 范围 
 
  获取定义 `extent` 对象形状的 `array_view` 对象。  
   
@@ -438,7 +442,7 @@ void discard_data() const restrict(cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a> get_extent 
 
  返回[范围](extent-class.md)对象`array_view`对象。  
   
@@ -449,7 +453,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ### <a name="return-value"></a>返回值  
  `extent` 对象的  `array_view` 对象。  
   
-##  <a name="get_ref"></a>get_ref 
+##  <a name="get_ref"></a> get_ref 
 
  获取对由 _Index 编制索引的元素的引用。 与其他索引运算符用于访问在 CPU 上的 array_view，此方法不会隐式同步到 CPU 的此 array_view 的内容。 访问远程位置上的 array_view 或执行复制操作涉及此 array_view 后用户有责任显式调用此方法之前同步到 CPU array_view。 如果不这样做会导致未定义的行为。  
   
@@ -465,7 +469,7 @@ value_type& get_ref(
 ### <a name="return-value"></a>返回值  
  按 _Index 建立索引的元素引用  
   
-##  <a name="get_source_accelerator_view"></a>get_source_accelerator_view 
+##  <a name="get_source_accelerator_view"></a> get_source_accelerator_view 
 
  返回 accelerator_view array_view 的数据源所在的位置。 此 API 如果 array_view 没有数据源，将引发 runtime_exception  
   
@@ -477,7 +481,7 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="operator_call"></a>operator （) 
+##  <a name="operator_call"></a> operator （) 
 
  返回由参数或参数指定的元素的值。  
   
@@ -524,7 +528,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>返回值  
  由参数或参数的指定元素的值。  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator] 
 
  返回由参数指定的元素。  
   
@@ -547,7 +551,7 @@ value_type& operator[] (
 ### <a name="return-value"></a>返回值  
  元素的索引处的值或`array_view`投影到最高有效维度。  
   
-##  <a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a> 运算符 = 
 
  将指定的内容复制`array_view`于此对象。  
   
@@ -567,7 +571,7 @@ array_view& operator= (
 ### <a name="return-value"></a>返回值  
  对此引用`array_view`对象。  
   
-##  <a name="rank"></a>级别 
+##  <a name="rank"></a> 级别 
 
  将存储的秩`array_view`对象。  
   
@@ -575,14 +579,14 @@ array_view& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="refresh"></a>刷新 
+##  <a name="refresh"></a> 刷新 
 
  通知`array_view`已在外部修改其绑定的内存的对象`array_view`接口。 调用此方法将呈现所有缓存的信息过时。  
   
 ```  
 void refresh() const restrict(cpu);
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 重新解释通过一维 array_view，其作为一个选项可以具有不同的值类型比源 array_view array_view。  
   
@@ -623,7 +627,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);  
 ```  
     
-##  <a name="section"></a>部分 
+##  <a name="section"></a> 部分 
 
  返回的子部分的`array_view`对象位于指定的 origin 和 （可选），具有指定的范围。  
   
@@ -699,7 +703,7 @@ array_view section(
 ### <a name="return-value"></a>返回值  
  子部分的`array_view`对象位于指定的 origin 和 （可选），具有指定的范围。 当仅`index`指定对象、 小节包含关联的范围中具有大于中的元素的索引的索引的所有元素`index`对象。  
   
-##  <a name="source_accelerator_view"></a>source_accelerator_view 
+##  <a name="source_accelerator_view"></a> source_accelerator_view 
 
  获取与此 array_view 源 accelerator_view。  
   
@@ -707,7 +711,7 @@ array_view section(
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;  
 ```  
   
-##  <a name="synchronize"></a>同步 
+##  <a name="synchronize"></a> 同步 
 
  同步对做任何修改`array_view`回其源数据的对象。  
   
@@ -722,7 +726,7 @@ void synchronize() const restrict(cpu);
  `_Access_type`  
  所要的[access_type](concurrency-namespace-enums-amp.md#access_type)在目标上[accelerator_view](accelerator-view-class.md)。 此参数具有默认值为`access_type_read`。  
   
-##  <a name="synchronize_async"></a>synchronize_async 
+##  <a name="synchronize_async"></a> synchronize_async 
 
  以异步方式同步对做任何修改`array_view`回其源数据的对象。  
   
@@ -740,7 +744,7 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
 ### <a name="return-value"></a>返回值  
  等待要完成的操作将基于未来。  
   
-##  <a name="synchronize_to"></a>synchronize_to 
+##  <a name="synchronize_to"></a> synchronize_to 
 
  同步对此 array_view 到指定的 accelerator_view 做任何修改。  
   
@@ -761,7 +765,7 @@ void synchronize_to(
  `_Access_type`  
  在目标 accelerator_view 上所需的 access_type。 此参数的默认值为 access_type_read。  
   
-##  <a name="synchronize_to_async"></a>synchronize_to_async 
+##  <a name="synchronize_to_async"></a> synchronize_to_async 
 
  以异步方式将同步到指定的 accelerator_view 此 array_view 对做任何修改。  
   
@@ -785,7 +789,7 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>返回值  
  等待要完成的操作将基于未来。  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  Array_view 和绑定的数组的值类型。  
   
@@ -793,7 +797,7 @@ concurrency::completion_future synchronize_to_async(
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="view_as"></a>view_as 
+##  <a name="view_as"></a> view_as 
 
  重新解释这`array_view`作为`array_view`的不同级别。  
   

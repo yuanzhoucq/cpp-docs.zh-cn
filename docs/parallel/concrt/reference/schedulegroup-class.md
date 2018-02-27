@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: ScheduleGroup class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 类
 表示计划组的抽象。 计划组整理受益于在时间上（通过在移动到另一个组之前执行同一个组中的另一个任务）或空间上（通过在同一 NUMA 节点或物理套接字上执行同一个组内的多个项）紧密计划在一起的一组相关工作。  
@@ -62,7 +66,7 @@ class ScheduleGroup;
   
  **命名空间：** 并发  
   
-##  <a name="id"></a>Id 
+##  <a name="id"></a> Id 
 
  返回在到组所属的计划程序中是唯一的计划组的标识符。  
   
@@ -73,7 +77,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>返回值  
  在对组所属的计划程序中是唯一的计划组标识符。  
   
-##  <a name="operator_delete"></a>运算符 delete 
+##  <a name="operator_delete"></a> 运算符 delete 
 
  A`ScheduleGroup`由运行时的内部被销毁发布对它的所有外部引用对象。 不能显式删除它。  
   
@@ -92,7 +96,7 @@ void operator delete(
  `_PObject`  
  指向要删除的对象的指针。  
   
-##  <a name="reference"></a>引用 
+##  <a name="reference"></a> 引用 
 
  递增计划组的引用计数。  
   
@@ -106,7 +110,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>备注  
  这通常用于管理组合为计划组的生存期。 当计划组的引用计数降到零时，计划组将删除由运行时。 创建使用的计划组[currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup)方法，或[scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup)启动方法时，引用计数之一。  
   
-##  <a name="release"></a>版本 
+##  <a name="release"></a> 版本 
 
  递减计划程序组的引用计数。  
   
@@ -122,13 +126,13 @@ virtual unsigned int Release() = 0;
   
  计划组都与特定计划程序实例相关联。 必须确保对于计划组的所有引用都在所有对计划程序的引用释放之前释放，因为后者可能导致计划程序破坏。 执行否则为导致未定义的行为。  
   
-##  <a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a> ~ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  计划轻量任务计划组中。  
   

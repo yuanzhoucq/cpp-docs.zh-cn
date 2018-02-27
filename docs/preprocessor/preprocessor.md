@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: preprocessor
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 596e17d0574f9f4935cf31ec71eb74cb2587d312
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor"></a>预处理器
 预处理器是将源文件的文本作为翻译的第一阶段操作的文本处理器。 预处理器不会分析源文本，但会为了查找宏调用而将源文本细分为标记。 尽管编译器一般会在其第一个传递中调用预处理器，但还是可以为了在不进行编译的情况下处理文本而单独调用预处理器。  
@@ -40,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  **结束 Microsoft 专用**  
   
-##  <a name="_predir_special_terminology"></a>特殊术语  
+##  <a name="_predir_special_terminology"></a> 特殊术语  
  在预处理器文档中，术语“自变量”指传递给函数的实体。 在某些情况下，它由“actual”和“formal”修改，二者分别描述函数调用中指定的参数表达式和函数定义中指定的参数声明。  
   
  术语“变量”指简单的 C 类型数据对象。 术语“对象”指 C++ 对象和变量；它是一个非独占术语。  

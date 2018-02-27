@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - accelerator_view
 - AMPRT/accelerator_view
@@ -24,19 +25,22 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator_view:is_debug
 - AMPRT/Concurrency::accelerator_view:queuing_mode
 - AMPRT/Concurrency::accelerator_view:version
-dev_langs: C++
-helpviewer_keywords: accelerator_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 类
 表示 c + + AMP 数据并行加速器上的虚拟设备抽象。  
@@ -67,7 +71,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|返回一个布尔值，该值指示是否`accelerator_view`对象具有为广泛的错误报告启用了调试层。|  
 |[get_queuing_mode](#get_queuing_mode)|返回的排队模式`accelerator_view`对象。|  
 |[get_version](#get_version)|返回的版本`accelerator_view`。|  
-|[等待](#wait)|等待提交到的所有命令`accelerator_view`对象来完成。|  
+|[wait](#wait)|等待提交到的所有命令`accelerator_view`对象来完成。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -81,7 +85,7 @@ class accelerator_view;
   
 |名称|描述|  
 |----------|-----------------|  
-|[快捷键](#accelerator)|获取 `accelerator_view` 对象的 `accelerator` 对象。|  
+|[accelerator](#accelerator)|获取 `accelerator_view` 对象的 `accelerator` 对象。|  
 |[is_auto_selection](#is_auto_selection)|获取一个布尔值，该值指示是否运行时将自动选择相应的快捷键时`accelerator_view`对象传递给[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。|  
 |[is_debug](#is_debug)|获取一个布尔值，该值指示是否`accelerator_view`对象具有为广泛的错误报告启用了调试层。|  
 |[queuing_mode](#queuing_mode)|获取的排队模式`accelerator_view`对象。|  
@@ -102,7 +106,7 @@ class accelerator_view;
   
  **命名空间：** 并发  
 
-## <a name="accelerator"></a>快捷键 
+## <a name="accelerator"></a> 快捷键 
 
 Accelerator_view 对象获取的快捷键对象。  
   
@@ -112,7 +116,7 @@ Accelerator_view 对象获取的快捷键对象。
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
 ```  
   
-## <a name="ctor"></a>accelerator_view 
+## <a name="ctor"></a> accelerator_view 
 
 Accelerator_view 类的新实例初始化通过复制现有`accelerator_view`对象。  
   
@@ -126,7 +130,7 @@ accelerator_view( const accelerator_view & _Other );
  `_Other`  
  `accelerator_view`要复制的对象。  
   
-## <a name="accelerator_view__create_marker"></a>create_marker 
+## <a name="accelerator_view__create_marker"></a> create_marker 
 
 返回将来要跟踪的所有命令提交到目前为止至此完成`accelerator_view`对象。  
   
@@ -139,7 +143,7 @@ concurrency::completion_future create_marker();
 ### <a name="return-value"></a>返回值  
  将来要跟踪的所有命令提交到目前为止至此完成`accelerator_view`对象。  
   
-## <a name="flush"></a>刷新 
+## <a name="flush"></a> 刷新 
 
 将提交所有挂起命令排队发送至给快捷键执行 accelerator_view 对象。  
   
@@ -152,7 +156,7 @@ void flush();
 ### <a name="return-value"></a>返回值  
  返回 `void`。  
 
-## <a name="accelerator_view__get_accelerator"></a>get_accelerator 
+## <a name="accelerator_view__get_accelerator"></a> get_accelerator 
 
 返回 accelerator_view 对象的快捷键对象。
 ### <a name="syntax"></a>语法
@@ -162,7 +166,7 @@ accelerator get_accelerator() const;
 ### <a name="return-value"></a>返回值
 Accelerator_view 对象快捷键对象。
 
-## <a name="accelerator_view__get_is_auto_selection"></a>get_is_auto_selection 
+## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection 
 
 返回一个布尔值，该值指示是否 accelerator_view 传递给时，运行时将自动选择相应加速器[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。  
   
@@ -173,9 +177,9 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果运行时将自动选择相应加速器;否则为`false`。  
+ `true` 如果运行时将自动选择相应加速器;否则为`false`。  
   
-## <a name="accelerator_view__get_is_debug"></a>get_is_debug 
+## <a name="accelerator_view__get_is_debug"></a> get_is_debug 
 
 返回一个布尔值，该值指示 accelerator_view 对象是否为广泛的错误报告启用了调试层。  
   
@@ -188,7 +192,7 @@ bool get_is_debug() const;
 ### <a name="return-value"></a>返回值  
  一个布尔值，指示 `accelerator_view` 对象是否为广泛的错误报告启用了调试层。  
 
-## <a name="accelerator_view__get_queuing_mode"></a>get_queuing_mode 
+## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode 
 
 返回 accelerator_view 对象的排队模式。  
   
@@ -201,7 +205,7 @@ queuing_mode get_queuing_mode() const;
 ### <a name="return-value"></a>返回值  
  `accelerator_view` 对象的排队模式。  
   
-## <a name="accelerator_view__get_version"></a>get_version 
+## <a name="accelerator_view__get_version"></a> get_version 
 
 返回 accelerator_view 的版本。  
   
@@ -214,7 +218,7 @@ unsigned int get_version() const;
 ### <a name="return-value"></a>返回值  
  版本`accelerator_view`。  
   
-## <a name="accelerator_view__is_auto_selection"></a>is_auto_selection 
+## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection 
 
 获取一个布尔值，该值指示是否 accelerator_view 传递给时，运行时将自动选择相应加速器[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。  
   
@@ -224,7 +228,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
 ```  
   
-## <a name="accelerator_view__is_debug"></a>is_debug 
+## <a name="accelerator_view__is_debug"></a> is_debug 
 
 获取一个布尔值，该值指示 accelerator_view 对象是否为广泛的错误报告启用了调试层。  
   
@@ -234,7 +238,7 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-## <a name="accelerator_view__operator_neq"></a>运算符 ！ = 
+## <a name="accelerator_view__operator_neq"></a> 运算符 ！ = 
 
 将此 accelerator_view 对象与另一个，并返回`false`如果它们是相同的; 否则，返回`true`。  
   
@@ -251,7 +255,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>返回值  
  如果两个对象相同，则为 `false`；否则为 `true`。  
   
-## <a name="accelerator_view__operator_eq"></a>运算符 = 
+## <a name="accelerator_view__operator_eq"></a> 运算符 = 
 
 将指定的 accelerator_view 对象的内容复制到此。  
   
@@ -268,7 +272,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>返回值  
  对修改后的 `accelerator_view` 对象的引用。  
   
-## <a name="accelerator_view__operator_eq_eq"></a>运算符 = = 
+## <a name="accelerator_view__operator_eq_eq"></a> operator== 
 
 将此 accelerator_view 对象与另一个，并返回`true`如果它们是相同的; 否则，返回`false`。  
   
@@ -285,7 +289,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>返回值  
  如果两个对象相同，则为 `true`；否则为 `false`。  
   
-## <a name="accelerator_view__queuing_mode"></a>queuing_mode 
+## <a name="accelerator_view__queuing_mode"></a> queuing_mode 
 
 获取 accelerator_view 对象的排队模式。  
   
@@ -295,7 +299,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
 ```  
   
-## <a name="accelerator_view__version"></a>版本 
+## <a name="accelerator_view__version"></a> 版本 
 
 获取 accelerator_view 的版本。  
   
@@ -305,7 +309,7 @@ __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mo
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-## <a name="accelerator_view__wait"></a>等待 
+## <a name="accelerator_view__wait"></a> 等待 
 
 等待所有命令提交到 accelerator_view 对象都完成。  
   
@@ -321,7 +325,7 @@ void wait();
 #### <a name="remarks"></a>备注  
  如果[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)是`immediate`，此方法将立即返回而不阻止。  
   
-##  <a name="dtor"></a>~ accelerator_view 
+##  <a name="dtor"></a> ~accelerator_view 
 
  销毁 accelerator_view 对象。  
   

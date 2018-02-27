@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs: C++
-helpviewer_keywords: source_link_manager class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 类
 `source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。  
@@ -64,7 +68,7 @@ class source_link_manager;
 |名称|描述|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|构造 `source_link_manager` 对象。|  
-|[~ source_link_manager 析构函数](#dtor)|销毁`source_link_manager`对象。|  
+|[~source_link_manager Destructor](#dtor)|销毁`source_link_manager`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -72,7 +76,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|将添加到的源链接`source_link_manager`对象。|  
 |[begin](#begin)|返回的第一个元素的迭代器`source_link_manager`对象。|  
-|[包含](#contains)|搜索`network_link_registry`在此`source_link_manager`对象指定的块。|  
+|[contains](#contains)|搜索`network_link_registry`在此`source_link_manager`对象指定的块。|  
 |[count](#count)|计算中的链接块数目`source_link_manager`对象。|  
 |[reference](#reference)|上获取引用`source_link_manager`对象。|  
 |[register_target_block](#register_target_block)|注册持有此目标块`source_link_manager`对象。|  
@@ -91,7 +95,7 @@ class source_link_manager;
   
  **命名空间：** 并发  
   
-##  <a name="add"></a>添加 
+##  <a name="add"></a> 添加 
 
  将添加到的源链接`source_link_manager`对象。  
   
@@ -103,7 +107,7 @@ void add(_EType _Link);
  `_Link`  
  指向要添加的块的指针。  
   
-##  <a name="begin"></a>开始 
+##  <a name="begin"></a> 开始 
 
  返回的第一个元素的迭代器`source_link_manager`对象。  
   
@@ -117,7 +121,7 @@ iterator begin();
 ### <a name="remarks"></a>备注  
  迭代器的最终状态由`NULL`链接。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  搜索`network_link_registry`在此`source_link_manager`对象指定的块。  
   
@@ -130,9 +134,9 @@ bool contains(_EType _Link);
  指向要在其中搜索中的块的指针`source_link_manager`对象。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果找到指定的块，`false`否则为。  
+ `true` 如果找到指定的块，`false`否则为。  
   
-##  <a name="count"></a>计数 
+##  <a name="count"></a> 计数 
 
  计算中的链接块数目`source_link_manager`对象。  
   
@@ -143,7 +147,7 @@ size_t count();
 ### <a name="return-value"></a>返回值  
  中的链接块的数量`source_link_manager`对象。  
   
-##  <a name="reference"></a>引用 
+##  <a name="reference"></a> 引用 
 
  上获取引用`source_link_manager`对象。  
   
@@ -151,7 +155,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a> register_target_block 
 
  注册持有此目标块`source_link_manager`对象。  
   
@@ -163,7 +167,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  目标块持有这`source_link_manager`对象。  
   
-##  <a name="release"></a>版本 
+##  <a name="release"></a> 版本 
 
  在释放引用`source_link_manager`对象。  
   
@@ -171,7 +175,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a>删除 
+##  <a name="remove"></a> 删除 
 
  删除从链接`source_link_manager`对象。  
   
@@ -184,9 +188,9 @@ bool remove(_EType _Link);
  指向块被删除，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果找到并移除了，链接`false`否则为。  
+ `true` 如果找到并移除了，链接`false`否则为。  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  设置的最大的源链接，可以添加到此`source_link_manager`对象。  
   
@@ -198,7 +202,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  最大连接数。  
   
-##  <a name="ctor"></a>source_link_manager 
+##  <a name="ctor"></a> source_link_manager 
 
  构造 `source_link_manager` 对象。  
   
@@ -206,7 +210,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a>~ source_link_manager 
+##  <a name="dtor"></a> ~source_link_manager 
 
  销毁`source_link_manager`对象。  
   

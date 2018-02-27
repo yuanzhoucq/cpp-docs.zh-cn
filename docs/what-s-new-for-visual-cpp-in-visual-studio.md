@@ -30,7 +30,7 @@ ms.lasthandoff: 02/03/2018
 
 ### <a name="new-compiler-options"></a>新的编译器选项
 
-- /std:c++14 和 /std:c++latest：通过这两个编译器选项，可选择在项目中使用特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [/std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 /std:c++latest 选项进行保护。
+- **/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [/std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 **/std:c++latest** 开关保护。
 
    **Visual Studio 2017 版本15.3**：
 

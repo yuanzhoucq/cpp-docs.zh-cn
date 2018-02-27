@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>ATL 类
 活动模板库 (ATL) 包括以下类。 若要按类别查找特定的类，请参阅[ATL 类概述](../../atl/atl-class-overview.md)。  
@@ -216,7 +219,7 @@ ms.lasthandoff: 12/21/2017
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|此类提供的默认实现`ISupportErrorInfo Interface`接口，并可在只有单个接口生成一个对象上的错误时。|atlcom.h|  
 |[IThreadPoolConfig 接口](../../atl/reference/ithreadpoolconfig-interface.md)|此接口提供用于配置线程池的方法。|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|此类实现**IUnknown**并提供的默认实现[IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763)， [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)，和[IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)接口。|atlctl.h|  
-|[IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`是的客户端实现的接口[CWorkerThread](../../atl/reference/cworkerthread-class.md)类。|atlutil.h|  
+|[IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 是的客户端实现的接口[CWorkerThread](../../atl/reference/cworkerthread-class.md)类。|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|此类提供的包装**CreateWindow**和**CreateWindowEx**。|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|此自变量适配器类允许`RECT`指针或引用传递给实现根据指针的函数。|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|此自变量适配器类允许任一资源名称 (`LPCTSTR`s) 或资源 Id (**UINT**s) 传递到函数，而无需调用方将 ID 转换为字符串使用**MAKEINTRESOURCE**宏。|atlwin.h|  
@@ -227,7 +230,7 @@ ms.lasthandoff: 12/21/2017
  [函数](../../atl/reference/atl-functions.md)   
  [全局变量](../../atl/reference/atl-global-variables.md)   
  [结构](../../atl/reference/atl-structures.md)   
- [Typedef](../../atl/reference/atl-typedefs.md)   
+ [Typedefs](../../atl/reference/atl-typedefs.md)   
  [类概述](../../atl/atl-class-overview.md)
 
 
