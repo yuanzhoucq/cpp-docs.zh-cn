@@ -15,11 +15,11 @@ dev_langs:
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12a6edab46b223a1fa71094708de3ce8c9db5987
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 07b7f4b3c5d77c7c31001a656667b7d2602a74b9
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：用于 Windows 的程序包管理器
 
@@ -35,7 +35,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows 上第三方库�
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
 
 ## <a name="installation"></a>安装
 
