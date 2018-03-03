@@ -1,10 +1,13 @@
 ---
 title: "/Zc:ternary （强制实施条件运算符规则） |Microsoft 文档"
 ms.date: 1/12/2018
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: article
-f1_keywords: /Zc:ternary
-dev_langs: C++
+f1_keywords:
+- /Zc:ternary
+dev_langs:
+- C++
 helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
