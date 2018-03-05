@@ -1,10 +1,13 @@
 ---
 title: "/Zc:alignedNew （c + + 17 过度对齐的分配） |Microsoft 文档"
 ms.date: 12/14/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: article
-f1_keywords: /Zc:alignedNew
-dev_langs: C++
+f1_keywords:
+- /Zc:alignedNew
+dev_langs:
+- C++
 helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
