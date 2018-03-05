@@ -148,6 +148,7 @@
 ##### [/Zc:throwingNew（假定运算符执行新的引发操作）](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc: trigraphs（Trigraphs 替换）](zc-trigraphs-trigraphs-substitution.md)
 ##### [/Zc:wchar_t（wchar_t 是本机类型）](zc-wchar-t-wchar-t-is-native-type.md)
+#### [/Zf（更快的 PDB 生成）](zf.md)
 #### [/Zg（生成函数原型）](zg-generate-function-prototypes.md)
 #### [/Zl（省略默认库名）](zl-omit-default-library-name.md)
 #### [/Zm（指定预编译标头的内存分配限额）](zm-specify-precompiled-header-memory-allocation-limit.md)
