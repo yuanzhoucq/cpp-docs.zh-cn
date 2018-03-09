@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf （更快地 PDB 生成）
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/28/2018
 
 **/Zf**选项使编译器支持更快地生成 PDB 文件时使用[/MP （使用多个进程生成）](mp-build-with-multiple-processes.md)选项，或当生成系统 (例如， [MSBuild](/visualstudio/msbuild/msbuild-reference)或[CMake](../../ide/cmake-tools-for-visual-cpp.md)) 可能运行多个 cl.exe 编译器进程在同一时间。 此选项会导致编译器前端延迟生成的类型索引的 PDB 文件中每个类型记录直至结束编译，然后对 mspdbsrv.exe，而不是进行每个记录的 RPC 请求的单个 RPC 调用中的所有请求它们。 通过减少中多个 cl.exe 编译器进程同时运行的环境的 mspdbsrv.exe 过程的 RPC 负载，这可以显著提高生成吞吐量。
 
-因为**/Zf**选项仅适用于 PDF 生成，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)选项。
+因为**/Zf**选项仅适用于 PDB 的生成，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)选项。
 
 **/Zf**选项 Visual Studio 2017 15.1，版中开始提供，并默认处于关闭状态。
 
