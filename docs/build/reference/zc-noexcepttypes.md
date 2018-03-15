@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes （c + + 17 noexcept 规则）
 
@@ -34,7 +34,7 @@ C + + 17 标准使`throw()`的别名作为`noexcept`，删除`throw(<type list>)
 
 ## <a name="remarks"></a>备注
 
-当**/Zc:noexceptTypes**指定选项，编译器符合 C + + 17 标准，并将[throw （)](../../cpp/exception-specifications-throw-cpp.md)的别名作为[noexcept](../../cpp/noexcept-cpp.md)，删除`throw(<type list>)`和`throw(...)`，和允许某些类型包括`noexcept`。 **/Zc:noexceptTypes**选项才可用[/std:c + + 17](std-specify-language-standard-version.md)或[/std:latest](std-specify-language-standard-version.md)已启用。 **/Zc:noexceptTypes**默认启用以符合 ISO C + + 17 标准。 关闭此选项通过指定**/Zc:noexceptTypes-**以恢复到 C + + 14 的行为`noexcept`时**/std::C + + 17**或**/std::latest**指定。
+当**/Zc:noexceptTypes**指定选项，编译器符合 C + + 17 标准，并将[throw （)](../../cpp/exception-specifications-throw-cpp.md)的别名作为[noexcept](../../cpp/noexcept-cpp.md)，删除`throw(<type list>)`和`throw(...)`，和允许某些类型包括`noexcept`。 **/Zc:noexceptTypes**选项才可用[/std:c + + 17](std-specify-language-standard-version.md)或[/std:latest](std-specify-language-standard-version.md)已启用。 **/Zc:noexceptTypes**默认启用以符合 ISO C + + 17 标准。 [/ 宽松-](permissive-standards-conformance.md)选项不影响**/Zc:noexceptTypes**。 关闭此选项通过指定**/Zc:noexceptTypes-**以恢复到 C + + 14 的行为`noexcept`时**/std::C + + 17**或**/std::latest**指定。
 
 从 Visual Studio 2017 版本 15.5 开始，c + + 编译器诊断声明 C + + 17 模式中的多个不匹配的异常规范，或者当[/ 宽松-](permissive-standards-conformance.md)指定选项。
 
@@ -84,7 +84,7 @@ struct B : A
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-1. 选择**命令行**中的属性页**C/c + +**文件夹。
+1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
 1. 修改**其他选项**属性以包含**/Zc:noexceptTypes**或**/Zc:noexceptTypes-** ，然后选择**确定**。
 

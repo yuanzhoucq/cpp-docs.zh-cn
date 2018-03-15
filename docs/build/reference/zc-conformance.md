@@ -1,12 +1,9 @@
 ---
-title: "-Zc （一致性） |Microsoft 文档"
+title: "/Zc （一致性） |Microsoft 文档"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /zc
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zc-conformance"></a>/Zc（一致性）
 
@@ -36,11 +32,11 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="syntax"></a>语法
 
-> / Zc:_选项_{，_选项_}
+> **/Zc:**_option_{,_option_}
 
 ## <a name="remarks"></a>备注
 
-在 Visual Studio 已实现 C 或不符合标准的 c + + 的扩展，你可以使用`/Zc`一致性选项以指定符合标准的或特定于 Microsoft 的行为。 对于某些选项的特定于 Microsoft 的行为是默认设置，以防止对现有代码的大规模的重大更改。 在其他情况下，默认为标准的行为，其中在安全性、 性能或兼容性方面的改进带来重大更改的成本。 较新版本的 Visual Studio 可能会改变每个一致性选项的默认设置。 有关每个一致性选项的详细信息，请参阅特定选项的主题。
+在 Visual Studio 已实现 C 或不符合标准的 c + + 的扩展，你可以使用`/Zc`一致性选项以指定符合标准的或特定于 Microsoft 的行为。 对于某些选项的特定于 Microsoft 的行为是默认设置，以防止对现有代码的大规模的重大更改。 在其他情况下，默认为标准的行为，其中在安全性、 性能或兼容性方面的改进带来重大更改的成本。 较新版本的 Visual Studio 可能会改变每个一致性选项的默认设置。 有关每个一致性选项的详细信息，请参阅特定选项的主题。 [/ 宽松-](permissive-standards-conformance.md)编译器选项隐式设置未设置默认情况下，为其符合的设置的一致性选项。
 
 这些是`/Zc`编译器选项：
 
@@ -61,7 +57,8 @@ ms.lasthandoff: 01/17/2018
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|启用线程安全的本地静态初始化 (在默认情况下)。|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|假定`operator new`失败时引发 （默认情况下关闭）。|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|启用三元组 （已过时，关闭默认情况下）。|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`是本机类型，不的 typedef (在默认情况下)。|
+|[twoPhase-](zc-twophase.md)|使用分析 （默认情况下一致性） 的行为的不符合要求的模板。|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` 是本机类型，不的 typedef (在默认情况下)。|
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
