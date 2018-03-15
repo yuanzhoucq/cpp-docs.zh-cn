@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 和 Visual Studio 2017 之间的 C++ 二进制兼容性
 
@@ -34,7 +34,8 @@ ms.lasthandoff: 12/21/2017
 
 1) 静态库或对象文件是使用 /GL 编译器开关编译的。  
 
-2) 应用程序使用版本号低于用于编译应用程序的工具集的版本号的可再发行库时。 换句话说，如果使用平台工具集 v141 来编译程序，则应用程序使用的任何可再发行库必须使用 v141 或更高版本编译。  
+2) 构建当前使用的库时所用的工具集的版本高于编译和链接应用程序时使用的工具集。 例如，通过工具集 19.12 编译和链接的程序可以使用通过工具集 19.0 到 19.12 编译的库。 不支持将 19.x 程序与使用 Visual Studio 2013 或更早版本生成的库进行链接。
+
 
 ## <a name="see-also"></a>请参阅  
 
