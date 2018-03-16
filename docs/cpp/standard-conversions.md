@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>标准转换
 C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  值保留提升和保留符号的提升通常会生成相同的结果。 但是，如果提升的对象是以下项之一，它们可能生成不同的结果：  
   
--   操作数 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或**>=**  
+-   操作数 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或 **>=**  
   
      这些运算符依赖于用于确定结果的符号。 因此，当值保留和符号保留提升应用于这些操作数时，它们将生成不同的结果。  
   
--   左的操作数 **>>** 或**>>=**  
+-   左的操作数 **>>** 或 **>>=**  
   
      当执行移位运算时，这些运算符会区别对待有符号的数量和无符号的数量。 对于有符号的数量，将数量右移会导致符号位传播到空出的位位置。 对于无符号的数量，空出的位位置将由零填充。  
   
@@ -199,7 +199,7 @@ int main() {
   
  基类是否可访问取决于派生中使用的继承的类型。 考虑下图中阐释的继承。  
   
- ![继承关系图显示基本 &#45; 类可访问性](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![显示基本的继承图&#45;类可访问性](../cpp/media/vc38xa1.gif "vc38XA1")  
 阐明基类可访问性的继承关系图  
   
  下表显示针对该图阐释的情况的基类可访问性。  
@@ -330,5 +330,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)

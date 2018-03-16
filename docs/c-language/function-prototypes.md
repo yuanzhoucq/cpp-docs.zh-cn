@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-prototypes"></a>函数原型
 函数声明位于函数定义之前，用来指定函数的名称、返回类型、存储类和其他特性。 若要作为原型，函数声明还必须为函数的参数确定类型和标识符。  
@@ -102,5 +102,5 @@ void func1( struct S * );
   
  在 /Ze 下，仍将在全局范围内输入标记。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [函数](../c-language/functions-c.md)

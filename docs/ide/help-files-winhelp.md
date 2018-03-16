@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-winhelp"></a>帮助文件 (WinHelp)
 通过选择的帮助支持 WinHelp 类型添加到你的应用程序时，会创建以下文件**上下文相关帮助**复选框，然后选择**WinHelp 格式**中[高级功能](../mfc/reference/advanced-features-mfc-application-wizard.md)MFC 应用程序向导页。  
@@ -46,5 +46,5 @@ ms.lasthandoff: 12/21/2017
 |Makehelp.bat|*Projname*|源文件|系统使用它来编译项目时生成的帮助项目。|  
 |Bullet.bmp|*Projname*|资源文件|使用标准的帮助文件主题来表示项目符号列表。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)

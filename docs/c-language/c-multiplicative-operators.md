@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 乘法运算符执行乘法 (\*)、除法 (/) 和余数 (`%`) 运算。  
@@ -105,7 +105,7 @@ n = i % j;
   
  **Microsoft 专用**  
   
- 余数的符号与被除数的符号相同。 例如:  
+ 余数的符号与被除数的符号相同。 例如：  
   
 ```  
 50 % -6 = 2  
@@ -116,5 +116,5 @@ n = i % j;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [乘法运算符和取模运算符](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6c2eba982b48181dee284bed63d3bab978d624fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="set-class"></a>set 类
 C++ 标准库容器类集用于存储和检索集合中的数据，此集合中包含的元素值是唯一的，并且用作数据自动排序所依据的键值。 不能直接更改集中元素的值。 必须先删除旧值，才能插入具有新值的元素。  
@@ -216,7 +216,7 @@ class set
 |-|-|  
 |[operator=](#op_eq)|将一个集中的元素替换为另一个集的副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<set>  
   
  **命名空间：** std  
@@ -2379,7 +2379,7 @@ int main( )
 The set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<set>](../standard-library/set.md)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

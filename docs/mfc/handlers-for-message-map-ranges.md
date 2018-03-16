@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 此文章介绍了如何将一系列消息映射到单个消息处理程序函数 （而不是将一条消息映射到一个功能）。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [范围的控件 Id 的示例](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>写入消息映射条目  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> 写入消息映射条目  
  在。CPP 文件中，添加你的消息映射条目，如下面的示例中所示：  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
      第三个宏， `ON_CONTROL_RANGE`，采用附加第一个参数： 控件通知消息，如**EN_CHANGE**。  
   
-##  <a name="_core_declaring_the_handler_function"></a>声明处理程序函数  
+##  <a name="_core_declaring_the_handler_function"></a> 声明处理程序函数  
  添加处理程序函数声明中的。H 文件。 下面的代码演示如何它可能看起来，如下所示：  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
  有关更新处理程序函数的参数要求的详细信息，请参阅[示例的范围的命令 Id 的](#_core_example_for_a_range_of_command_ids)。  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>范围的命令 Id 的示例  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> 范围的命令 Id 的示例  
  何时可以使用一个例子就是在处理如 MFC 示例中的缩放命令的命令的范围[HIERSVR](../visual-cpp-samples.md)。 此命令将视图中，缩放 25%和其正常大小的 300%之间。 HIERSVR 的视图类使用一系列处理并类似于这一个消息映射条目的缩放命令：  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  更新处理程序函数的单个命令通常需要一个参数`pCmdUI`，类型的**CCmdUI\***。 与处理程序函数，不同的消息映射范围的更新处理程序函数不需要额外的参数， `nID`，类型的**UINT**。 命令 ID，将需要指定用户实际选择的命令，该文件位于`CCmdUI`对象。  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>范围的控件 Id 的示例  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> 范围的控件 Id 的示例  
  另一个有趣的用例将控件 Id 的范围的控件通知消息映射到单个处理程序。 假设用户可以单击任何 10 个按钮。 若要映射到一个处理程序的所有 10 个按钮，你的消息映射条目将如下所示：  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
@@ -154,5 +154,5 @@ ms.lasthandoff: 12/21/2017
   
  在示例中所示的代码是典型： 将值传递到转换`int`内的消息范围和声明这种情况。 然后，你可能需要一些不同的操作，具体取决于单击按钮。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [声明消息处理程序函数](../mfc/declaring-message-handler-functions.md)

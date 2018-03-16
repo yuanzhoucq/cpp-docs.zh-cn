@@ -110,10 +110,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 924a0b48736d327c571941ebd7d640ab3f4b30bb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 类
 描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。  
@@ -235,7 +235,7 @@ class basic_streambuf;
 |-|-|  
 |[operator=](#op_eq)|从另一个 `basic_streambuf` 对象为此对象赋值。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<streambuf>  
   
  **命名空间：** std  
@@ -1225,7 +1225,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 ### <a name="remarks"></a>备注  
  此受保护虚拟成员函数最多将 `count` 个元素插入输出流，这与从以 `ptr` 开头的数组重复调用 [sputc](#sputc) 类似。 当所有 `count` 个字符已被写入或如果调用 `sputc( count)` 将返回 `traits::eof()` 时，输出流的字符插入立即停止。 它返回实际插入的元素数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)

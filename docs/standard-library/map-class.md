@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="map-class"></a>map 类
 用于存储和检索集合中的数据，此集合中的每个元素均为包含数据值和排序键的元素对。 键的值是唯一的，用于自动排序数据。  
@@ -233,7 +233,7 @@ class map;
 |[operator[]](#op_at)|将元素插入到具有指定键值的映射。|  
 |[operator=](#op_eq)|将一个映射中的元素替换为另一映射副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **Header:** \<map>  
   
  **命名空间：** std  
@@ -2633,7 +2633,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<map> 成员](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

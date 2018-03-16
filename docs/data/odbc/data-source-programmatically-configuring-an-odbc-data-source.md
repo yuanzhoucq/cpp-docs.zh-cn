@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
 本主题说明如何以编程方式配置开放式数据库连接 (ODBC) 数据源名称。 这可以灵活地访问数据而不强制用户显式使用 ODBC 管理器或其他程序以指定数据源的名称。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  但是，许多 Dbms 允许以编程方式的数据源创建。 某些数据源保持数据库的目录规范。 也就是说，目录是数据源，数据源中的每个表都存储在单独的文件 （对于 dBASE，每个表都是一个.dbf 文件）。 对于其他 ODBC 数据库，如 Microsoft Access 和 SQL Server 驱动程序都需要在建立数据源之前满足某些特定条件。 例如，在使用 SQL Server ODBC 驱动程序时，你需要建立了 SQL Server 计算机。  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource 示例  
+##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 示例  
  下面的示例使用**:: SQLConfigDataSource**调用 ODBC API 函数来创建新的 Excel 数据源的新的 Excel 数据源：  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  尽管此信息无法将直接写入到注册表而无需使用**:: SQLConfigDataSource**，这样做的任何应用程序依赖于驱动程序管理器使用来维护其数据的当前技术。 如果以不同的方式维护有关数据源的 ODBC 驱动程序管理器实现记录到更高版本的修订版本，任何应用程序使用此方法将断开。 通常，最好是在其中一个提供时使用 API 函数。 例如，你的代码是在 16 位为 32 位可移植性的如果你使用**:: SQLConfigDataSource**函数，因为该函数正确将写入 Odbc.ini 文件或注册表。  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>SQLConfigDataSource 参数  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters  
  以下说明了这些参数的**:: SQLConfigDataSource**函数。 很多信息则来自 ODBC API*程序员参考*提供使用 Visual c + + 版本 1.5 和更高版本。  
   
-###  <a name="_core_function_prototype"></a>函数原型  
+###  <a name="_core_function_prototype"></a> 函数原型  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>备注  
   
-####  <a name="_core_parameters_and_usage"></a>参数和使用情况  
+####  <a name="_core_parameters_and_usage"></a> 参数和使用情况  
  *hwndParent*  
  指定为任何 ODBC 驱动程序管理器或特定 ODBC 驱动程序创建以获得有关新的数据源的用户的其他信息的对话框的所有者窗口。 如果`lpszAttributes`参数不会提供足够的信息，将出现一个对话框。 *HwndParent*参数可能是**NULL**。  
   
@@ -125,5 +125,5 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
  ODBC 管理器在显示时用于创建该特定的驱动程序的新数据源的信息，请单击**帮助**。 这将打开该特定的驱动程序，其中通常包含有关使用驱动程序的重要信息的帮助文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)

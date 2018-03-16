@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c4566a9b640a73687b3bf48c1346af711d450b73
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="moneyget-class"></a>money_get 类
 此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到货币值的转换。  
@@ -78,8 +78,8 @@ class money_get : public locale::facet;
 |[do_get](#do_get)|一种虚拟函数，通过调用此函数可从表示货币值的字符序列提取数值。|  
 |[get](#get)|从表示货币值的字符序列提取数值。|  
   
-## <a name="requirements"></a>惠?  
- **标头：**\<locale>  
+## <a name="requirements"></a>要求  
+ **标头：** \<locale>  
   
  **命名空间：** std  
   
@@ -305,7 +305,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 ### <a name="remarks"></a>备注  
  此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类专用化。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<区域设置>](../standard-library/locale.md)   
  [facet 类](../standard-library/locale-class.md#facet_class)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

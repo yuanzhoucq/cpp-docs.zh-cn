@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string 类
 由模板类 `basic_string` 的一个对象控制的序列是标准 C++ 字符串类且通常作为字符串被引用，但不应将它们与以 null 结尾的通用于 C++ 标准库的 C 样式字符串相混淆。 标准 C++ 字符串是一个容器，它可使字符串作为普通类型使用，例如，比较和连接操作、迭代器、C++ 标准库算法以及复制由类分配器管理的内存和使用它进行分配。 如需要将标准 C++ 字符串转换为以 null 结尾的 C 样式字符串，请使用 [basic_string::c_str](#c_str) 成员。  
@@ -241,7 +241,7 @@ class basic_string;
   
  用于指定受控制序列元素的引用、指针和迭代器在调用了可更改受控制序列的函数后或第一次调用一个非 **const** 成员函数后可能失效。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<string>  
   
  **命名空间：** std  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  由参数索引指定的位置的字符串字符的引用。  
   
 ### <a name="remarks"></a>备注  
- 字符串的第一个元素具有零的索引，并且以下元素连续方式进行索引的正整数，以便长度的字符串 *n* 具有 *n* th元素按数字进行索引*n-* 1。  
+ 字符串的第一个元素具有零的索引，并且以下元素连续方式进行索引的正整数，以便长度的字符串*n*具有*n*th 元素按数字进行索引*n-* 1。  
   
  在提供对字符串元素的读取和写入访问权限时，成员 [operator&#91;&#93;](#op_at) 比成员函数 **at** 更快。  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  由参数索引指定的位置的字符串字符的引用。  
   
 ### <a name="remarks"></a>备注  
- 字符串的第一个元素的索引为零，和以下元素连续方式进行索引的正整数，以便长度的字符串 *n* 具有 *n* 个元素按数字进行索引 *n*  -1。  
+ 字符串的第一个元素的索引为零，其后续元素由正整数进行连续地索引，以使长度为 *n* 的字符串具有由数字 *n* - 1 索引的 *n*th 元素。  
   
  `operator[]` 比成员函数 [at](#at) 更快，以提供对字符串元素的读取和写入访问权限。  
   
@@ -4701,7 +4701,7 @@ The character ch1 is: G.
 The character ch2 is: H.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<string>](../standard-library/string.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

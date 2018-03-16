@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>编译器警告 C4400 通过 C4599
 
@@ -177,7 +175,7 @@ ms.lasthandoff: 02/21/2018
 |[编译器警告（等级 1）C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|*标识符*： 标识符是保留的字|
 |[编译器警告（等级 1）C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|忽略指令上的操作数|
 |[编译器警告（等级 1）C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|指向成员表示形式不同的指针之间强制转换，编译器也会生成不正确的代码|
-|[编译器警告（等级 4）C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|匿名 '结构 &#124; 联合不声明任何数据成员|
+|[编译器警告（等级 4）C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|匿名结构&#124;联合未声明任何数据成员|
 |[编译器警告（等级 1）C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|非法指令大小|
 |[编译器警告（等级 1）C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|非法的操作数大小|
 |[编译器警告（等级 1）C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|*标识符*： 符号将解析为置换寄存器|
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/21/2018
 |编译器警告 （等级 1） C4442|嵌入的 null 终止符，__annotation 自变量中。  值将被截断。|
 |编译器警告 （等级 1） C4443|杂注参数应为 '0'、 '1' 或 '2'|
 |编译器警告 （等级 3） C4444|*标识符*： 在此上下文中未实现顶级 __unaligned|
-|[编译器警告（等级 1）C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|*函数*： 在 WinRT &#124; 托管类型的虚拟方法不能为私有|
+|[编译器警告（等级 1）C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|*函数*： 在 WinRT&#124;托管类型的虚拟方法不能为私有|
 |编译器警告 （等级 1） C4446|*类型*： 无法映射成员*name1*为此类型，因为与类型名称冲突。 该方法已重命名为*name2*|
 |编译器警告 （等级 1） C4447|如果线程处理模型未找到 main 的签名。 请考虑使用 int main (platform:: array\<platform:: string ^ > ^ 参数)。|
 |编译器警告 C4448|*类型*1 不具有元数据中指定的默认接口。 选择:*type2*，这可能会在运行时失败。|
@@ -225,14 +223,14 @@ ms.lasthandoff: 02/21/2018
 |[编译器警告（等级 4）C4457](compiler-warning-level-4-c4457.md)|声明*标识符*隐藏函数参数|
 |[编译器警告（等级 4）C4458](compiler-warning-level-4-c4458.md)|声明*标识符*隐藏类成员|
 |[编译器警告 （等级 4） C4459](compiler-warning-level-4-c4459.md)|声明*标识符*隐藏了全局声明|
-|[编译器警告（等级 4）C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|WinRT &#124; 托管运算符*运算符*，通过引用传递参数。 WinRT &#124; 托管运算符*运算符*具有不同的语义与 c + + 运算符*cpp_operator*，是否希望按值传递？|
+|[编译器警告（等级 4）C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|WinRT&#124;托管运算符*运算符*，通过引用传递参数。 WinRT&#124;托管运算符*运算符*具有不同的语义与 c + + 运算符*cpp_operator*，是否希望按值传递？|
 |[编译器警告（等级 1）C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|*classname*： 此类有终结器 ！*终结器*但没有析构函数 ~*dtor*|
 |[编译器警告 （等级 1，错误） C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|*类型*： 无法确定类型的 GUID。 程序可能在运行时失败。|
 |[编译器警告 （等级 4） C4463](compiler-warning-level-4-c4463.md)|溢出;分配*值*到位域的只包含值从*min_value*到*max_value*|
-|编译器警告 （等级 4） C4464|相对包含路径包含..|
+|[编译器警告 （等级 4） C4464](../../error-messages/compiler-warnings/c4464.md)|相对包含路径包含..|
 |[编译器警告（等级 1）C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|忽略在 /clr 下的浮点控制杂注|
 |[编译器警告 （等级 4） C4471](compiler-warning-level-4-c4471.md)|*枚举*： 未区分范围的枚举的前向声明必须具有基础类型 (假定为 int)|
-|编译器警告 （等级 1） C4472|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明 WinRT &#124; 托管枚举|
+|编译器警告 （等级 1） C4472|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明 WinRT&#124;托管枚举|
 |[编译器警告 （等级 1） C4473](c4473.md)|*函数*： 没有足够自变量传递为格式字符串|
 |编译器警告 （等级 3） C4474|*函数*： 为格式字符串中传递的参数太多|
 |编译器警告 （等级 3） C4475|*函数*： 长度修饰符*修饰符*不能用于类型字段字符*字符*格式说明符中|

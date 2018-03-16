@@ -23,10 +23,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 Visual c + + 支持可更新提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新提供程序使用 OLE DB 模板。  
@@ -436,5 +436,5 @@ m_rgRowData.Add(trData[0]);
   
  此代码指定，除了别的之外列支持默认值为 0，它是可写，并且列中的所有数据都具有相同的长度。 如果你想要具有可变长度的列中的数据，则不要设置此标志。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)

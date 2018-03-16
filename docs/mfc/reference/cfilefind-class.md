@@ -72,10 +72,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cfilefind-class"></a>CFileFind 类
 执行本地文件搜索和是为基类[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)，执行 Internet 文件搜索。  
@@ -129,14 +129,14 @@ class CFileFind : public CObject
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|指向 `CAtlTransactionManager` 对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CFileFind`包括成员函数来开始的搜索，找到文件，并返回标题、 名称或文件的路径。 对于 Internet 搜索，成员函数[GetFileURL](#getfileurl)返回文件的 URL。  
+ `CFileFind` 包括成员函数来开始的搜索，找到文件，并返回标题、 名称或文件的路径。 对于 Internet 搜索，成员函数[GetFileURL](#getfileurl)返回文件的 URL。  
   
- `CFileFind`两个其他 MFC 类的基类设计为搜索特定服务器类型：`CGopherFileFind`专门配合 gopher 服务器和`CFtpFileFind`专门配合 FTP 服务器。 在一起，这三个类提供一种无缝机制以查找本地计算机或远程服务器上的文件，而不考虑服务器协议、 文件类型或位置，使客户端。  
+ `CFileFind` 两个其他 MFC 类的基类设计为搜索特定服务器类型：`CGopherFileFind`专门配合 gopher 服务器和`CFtpFileFind`专门配合 FTP 服务器。 在一起，这三个类提供一种无缝机制以查找本地计算机或远程服务器上的文件，而不考虑服务器协议、 文件类型或位置，使客户端。  
   
  下面的代码将枚举在当前目录中，打印的每个文件的名称的所有文件：  
   
@@ -151,10 +151,10 @@ class CFileFind : public CObject
   
  `CFileFind`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="cfilefind"></a>CFileFind::CFileFind  
+##  <a name="cfilefind"></a>  CFileFind::CFileFind  
  此成员函数调用时`CFileFind`构造对象。  
   
 ```  
@@ -169,7 +169,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetFileName](#getfilename)。  
   
-##  <a name="close"></a>CFileFind::Close  
+##  <a name="close"></a>  CFileFind::Close  
  调用此成员函数以结束搜索、 重置上下文，并释放所有资源。  
   
 ```  
@@ -182,7 +182,7 @@ void Close();
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetFileName](#getfilename)。  
   
-##  <a name="closecontext"></a>CFileFind::CloseContext  
+##  <a name="closecontext"></a>  CFileFind::CloseContext  
  关闭当前的搜索句柄指定的文件。  
   
 ```  
@@ -194,7 +194,7 @@ virtual void CloseContext();
   
  必须调用[FindFile](#findfile)或[FindNextFile](#findnextfile)函数至少一次检索有效的搜索句柄。 **FindFile**和`FindNextFile`函数使用的搜索句柄来找到具有匹配具有给定名称的名称的文件。  
   
-##  <a name="findfile"></a>CFileFind::FindFile  
+##  <a name="findfile"></a>  CFileFind::FindFile  
  调用此成员函数以打开文件搜索。  
   
 ```  
@@ -257,7 +257,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::IsDirectory](#isdirectory)。  
   
-##  <a name="findnextfile"></a>CFileFind::FindNextFile  
+##  <a name="findnextfile"></a>  CFileFind::FindNextFile  
  调用此成员函数可继续从上次调用文件搜索[FindFile](#findfile)。  
   
 ```  
@@ -308,12 +308,12 @@ virtual BOOL FindNextFile();
   
 - [MatchesMask](#matchesmask)  
   
- `FindNextFile`包装的 Win32 函数[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
+ `FindNextFile` 包装的 Win32 函数[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::IsDirectory](#isdirectory)。  
   
-##  <a name="getcreationtime"></a>CFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>  CFileFind::GetCreationTime  
  调用此成员函数可获取指定的文件的创建的时间。  
   
 ```  
@@ -329,7 +329,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则非零如果不成功，则为 0。 `GetCreationTime`仅当返回 0 [FindNextFile](#findnextfile)永远不会在此调用了`CFileFind`对象。  
+ 如果成功，则非零如果不成功，则为 0。 `GetCreationTime` 仅当返回 0 [FindNextFile](#findnextfile)永远不会在此调用了`CFileFind`对象。  
   
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetCreationTime`。  
@@ -340,7 +340,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="getfilename"></a>CFileFind::GetFileName  
+##  <a name="getfilename"></a>  CFileFind::GetFileName  
  调用此成员函数可获取找到的文件的名称。  
   
 ```  
@@ -353,9 +353,9 @@ virtual CString GetFileName() const;
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)调用 GetFileName 以前至少一次。  
   
- `GetFileName`是的三个之一`CFileFind`成员函数将返回某种形式的文件名称。 以下列表介绍这三个和它们会有所不同：  
+ `GetFileName` 是的三个之一`CFileFind`成员函数将返回某种形式的文件名称。 以下列表介绍这三个和它们会有所不同：  
   
-- `GetFileName`返回包括扩展名的文件名称。 例如，调用`GetFileName`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件名称`myfile.txt`。  
+- `GetFileName` 返回包括扩展名的文件名称。 例如，调用`GetFileName`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件名称`myfile.txt`。  
   
 - [GetFilePath](#getfilepath)返回文件的整个路径。 例如，调用`GetFilePath`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件路径`c:\myhtml\myfile.txt`。  
   
@@ -364,7 +364,7 @@ virtual CString GetFileName() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#32](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]  
   
-##  <a name="getfilepath"></a>CFileFind::GetFilePath  
+##  <a name="getfilepath"></a>  CFileFind::GetFilePath  
  调用此成员函数可获取指定的文件的完整路径。  
   
 ```  
@@ -377,18 +377,18 @@ virtual CString GetFilePath() const;
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetFilePath`。  
   
- `GetFilePath`是的三个之一`CFileFind`成员函数将返回某种形式的文件名称。 以下列表介绍这三个和它们会有所不同：  
+ `GetFilePath` 是的三个之一`CFileFind`成员函数将返回某种形式的文件名称。 以下列表介绍这三个和它们会有所不同：  
   
 - [GetFileName](#getfilename)返回包括扩展名的文件名称。 例如，调用`GetFileName`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件名称`myfile.txt`。  
   
-- `GetFilePath`返回文件的整个路径。 例如，调用`GetFilePath`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件路径`c:\myhtml\myfile.txt`。  
+- `GetFilePath` 返回文件的整个路径。 例如，调用`GetFilePath`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件路径`c:\myhtml\myfile.txt`。  
   
 - [GetFileTitle](#getfiletitle)返回不包括文件扩展名的文件名称。 例如，调用`GetFileTitle`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回文件标题`myfile`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetFileName](#getfilename)。  
   
-##  <a name="getfiletitle"></a>CFileFind::GetFileTitle  
+##  <a name="getfiletitle"></a>  CFileFind::GetFileTitle  
  调用此成员函数可获取找到的文件的标题。  
   
 ```  
@@ -401,18 +401,18 @@ virtual CString GetFileTitle() const;
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetFileTitle`。  
   
- `GetFileTitle`是的三个之一`CFileFind`成员函数将返回某种形式的文件名称。 以下列表介绍这三个和它们会有所不同：  
+ `GetFileTitle` 是的三个之一`CFileFind`成员函数将返回某种形式的文件名称。 以下列表介绍这三个和它们会有所不同：  
   
 - [GetFileName](#getfilename)返回包括扩展名的文件名称。 例如，调用`GetFileName`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件名称`myfile.txt`。  
   
 - [GetFilePath](#getfilepath)返回文件的整个路径。 例如，调用`GetFilePath`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回的文件路径`c:\myhtml\myfile.txt`。  
   
-- `GetFileTitle`返回不包括文件扩展名的文件名称。 例如，调用`GetFileTitle`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回文件标题`myfile`。  
+- `GetFileTitle` 返回不包括文件扩展名的文件名称。 例如，调用`GetFileTitle`生成有关该文件的用户消息`c:\myhtml\myfile.txt`返回文件标题`myfile`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetFileName](#getfilename)。  
   
-##  <a name="getfileurl"></a>CFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFileFind::GetFileURL  
  调用此成员函数可检索指定的 URL。  
   
 ```  
@@ -425,12 +425,12 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetFileURL`。  
   
- `GetFileURL`类似于成员函数[GetFilePath](#getfilepath)，只不过它的形式返回 URL `file://path`。 例如，调用`GetFileURL`若要获取的完整 URL`myfile.txt`返回的 URL `file://c:\myhtml\myfile.txt`。  
+ `GetFileURL` 类似于成员函数[GetFilePath](#getfilepath)，只不过它的形式返回 URL `file://path`。 例如，调用`GetFileURL`若要获取的完整 URL`myfile.txt`返回的 URL `file://c:\myhtml\myfile.txt`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetFileName](#getfilename)。  
   
-##  <a name="getlastaccesstime"></a>CFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>  CFileFind::GetLastAccessTime  
  调用此成员函数可获取上次访问指定的文件的时间。  
   
 ```  
@@ -446,7 +446,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则非零如果不成功，则为 0。 `GetLastAccessTime`仅当返回 0 [FindNextFile](#findnextfile)永远不会在此调用了`CFileFind`对象。  
+ 如果成功，则非零如果不成功，则为 0。 `GetLastAccessTime` 仅当返回 0 [FindNextFile](#findnextfile)永远不会在此调用了`CFileFind`对象。  
   
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLastAccessTime`。  
@@ -457,7 +457,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="getlastwritetime"></a>CFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>  CFileFind::GetLastWriteTime  
  调用此成员函数可获取该文件已更改的最后一个时间。  
   
 ```  
@@ -473,7 +473,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则非零如果不成功，则为 0。 `GetLastWriteTime`仅当返回 0 [FindNextFile](#findnextfile)永远不会在此调用了`CFileFind`对象。  
+ 如果成功，则非零如果不成功，则为 0。 `GetLastWriteTime` 仅当返回 0 [FindNextFile](#findnextfile)永远不会在此调用了`CFileFind`对象。  
   
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLastWriteTime`。  
@@ -484,7 +484,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="getlength"></a>CFileFind::GetLength  
+##  <a name="getlength"></a>  CFileFind::GetLength  
  调用此成员函数可获取找到的文件，以字节为单位的长度。  
   
 ```  
@@ -497,7 +497,7 @@ ULONGLONG GetLength() const;
 ### <a name="remarks"></a>备注  
  必须调用[FindNextFile](#findnextfile)至少一次之前调用`GetLength`。  
   
- `GetLength`使用 Win32 结构[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)获得和以字节为单位返回文件大小的值。  
+ `GetLength` 使用 Win32 结构[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)获得和以字节为单位返回文件大小的值。  
   
 > [!NOTE]
 >  截至 MFC 7.0`GetLength`支持 64 位整数类型。 以前使用此较新版本的库生成的现有代码可能会导致截断警告。  
@@ -505,7 +505,7 @@ ULONGLONG GetLength() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#33](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]  
   
-##  <a name="getroot"></a>CFileFind::GetRoot  
+##  <a name="getroot"></a>  CFileFind::GetRoot  
  调用此成员函数可获取找到的文件的根目录。  
   
 ```  
@@ -523,7 +523,7 @@ virtual CString GetRoot() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetFileName](#getfilename)。  
   
-##  <a name="isarchived"></a>CFileFind::IsArchived  
+##  <a name="isarchived"></a>  CFileFind::IsArchived  
  调用此成员函数可确定是否存档找到的文件。  
   
 ```  
@@ -543,7 +543,7 @@ BOOL IsArchived() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="iscompressed"></a>CFileFind::IsCompressed  
+##  <a name="iscompressed"></a>  CFileFind::IsCompressed  
  调用此成员函数可确定是否压缩找到的文件。  
   
 ```  
@@ -563,7 +563,7 @@ BOOL IsCompressed() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="isdirectory"></a>CFileFind::IsDirectory  
+##  <a name="isdirectory"></a>  CFileFind::IsDirectory  
  调用此成员函数可确定是否找到的文件是一个目录。  
   
 ```  
@@ -585,7 +585,7 @@ BOOL IsDirectory() const;
   
  [!code-cpp[NVC_MFCFiles#34](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]  
   
-##  <a name="isdots"></a>CFileFind::IsDots  
+##  <a name="isdots"></a>  CFileFind::IsDots  
  调用此成员函数可测试循环访问文件时的当前目录及其父目录标记。  
   
 ```  
@@ -601,7 +601,7 @@ virtual BOOL IsDots() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::IsDirectory](#isdirectory)。  
   
-##  <a name="ishidden"></a>CFileFind::IsHidden  
+##  <a name="ishidden"></a>  CFileFind::IsHidden  
  调用此成员函数可确定是否为隐藏找到的文件。  
   
 ```  
@@ -621,7 +621,7 @@ BOOL IsHidden() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="isnormal"></a>CFileFind::IsNormal  
+##  <a name="isnormal"></a>  CFileFind::IsNormal  
  调用此成员函数可确定找到的文件是否是正常的文件。  
   
 ```  
@@ -641,7 +641,7 @@ BOOL IsNormal() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="isreadonly"></a>CFileFind::IsReadOnly  
+##  <a name="isreadonly"></a>  CFileFind::IsReadOnly  
  调用此成员函数可确定是否找到的文件是只读的。  
   
 ```  
@@ -661,7 +661,7 @@ BOOL IsReadOnly() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="issystem"></a>CFileFind::IsSystem  
+##  <a name="issystem"></a>  CFileFind::IsSystem  
  调用此成员函数可确定找到的文件是否是系统文件。  
   
 ```  
@@ -681,7 +681,7 @@ BOOL IsSystem() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="istemporary"></a>CFileFind::IsTemporary  
+##  <a name="istemporary"></a>  CFileFind::IsTemporary  
  调用此成员函数可确定找到的文件是否是临时的文件。  
   
 ```  
@@ -701,7 +701,7 @@ BOOL IsTemporary() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFileFind::GetLength](#getlength)。  
   
-##  <a name="m_ptm"></a>CFileFind::m_pTM  
+##  <a name="m_ptm"></a>  CFileFind::m_pTM  
  指向 `CAtlTransactionManager` 对象的指针。  
   
 ```  
@@ -710,7 +710,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="matchesmask"></a>CFileFind::MatchesMask  
+##  <a name="matchesmask"></a>  CFileFind::MatchesMask  
  调用此成员函数可测试上找到的文件的文件属性。  
   
 ```  
@@ -746,7 +746,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#35](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_5.cpp)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFtpFileFind 类](../../mfc/reference/cftpfilefind-class.md)   

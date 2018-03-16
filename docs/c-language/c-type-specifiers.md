@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 00d91c2f790b93e70f21557d85f2cbb8216c8ed3
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-type-specifiers"></a>C 类型说明符
 
@@ -72,7 +72,7 @@ short *ps;
 ps = pi;  /* Now generates warning */
 ```
 
-Microsoft C 编译器还生成保留符号的差异警告。 例如:
+Microsoft C 编译器还生成保留符号的差异警告。 例如：
 
 ```C
 signed int *pi;

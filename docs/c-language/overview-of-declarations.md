@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>声明概述
 “声明”指定一组标识符的解释和特性。 还将导致针对标识符命名的对象或函数保留存储的声明将称为“定义”。 用于变量、函数和类型的 C 声明都具有以下语法：  
@@ -81,7 +81,7 @@ int const *fp;
   
  type-qualifier 终止符有两种：const 和 `volatile`。 这些限定符指定仅在通过左值访问该类型的对象时才相关的类型的其他属性。 有关 const 和 `volatile` 的详细信息，请参阅[类型限定符](../c-language/type-qualifiers.md)。 有关左值的定义，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C 语言语法摘要](../c-language/c-language-syntax-summary.md)   
  [声明和类型](../c-language/declarations-and-types.md)   
  [声明摘要](../c-language/summary-of-declarations.md)

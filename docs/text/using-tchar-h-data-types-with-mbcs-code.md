@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>将 TCHAR.H 数据类型用于 _MBCS 代码
 当清单常量**_MBCS**是定义，给定的一般文本例程映射到例程的以下类型之一：  
@@ -79,5 +79,5 @@ ms.lasthandoff: 12/21/2017
   
      采用此方法时，您必须小心以确保使用适当的数据类型的字符串自变量和字符串返回值。 你可以使用类型强制转换来确保正确的类型匹配，或者可以使用**_TXCHAR**一般文本数据类型。 **_TXCHAR**图来键入`char`在 SBCS 代码，但图来键入`unsigned` `char` MBCS 代码中。 有关一般文本宏的详细信息，请参阅[一般文本映射](../c-runtime-library/generic-text-mappings.md)中*运行时库参考*。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)

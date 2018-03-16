@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 表达式根据其运算符的优先级和分组来计算。 ([运算符优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[词法约定](../cpp/lexical-conventions.md)，显示的关系 c + + 运算符对表达式实施。)  
@@ -80,10 +80,10 @@ int main()
   
 |应为类型|允许的类型|  
 |-------------------|-------------------|  
-|*type*|`const`*类型*<br /> `volatile`*类型*<br /> *类型*&<br /> `const`*类型*&<br /> `volatile`*类型*&<br /> `volatile const`*类型*<br /> `volatile const`*类型*&|  
-|*类型*\*|*类型*\*<br /> `const`*类型*\*<br /> `volatile`*类型*\*<br /> `volatile const`*类型*\*|  
-|`const`*类型*|*type*<br /> `const`*类型*<br />`const`*类型*&|  
-|`volatile`*类型*|*type*<br /> `volatile`*类型*<br /> `volatile`*类型*&|  
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
+|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
   
  由于上述规则始终可以组合使用，因此，可以在指针所需的位置提供指向可变对象的 const 指针。  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   逻辑“与”运算符 (&&) 的左操作数。 完全计算逻辑“与”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“与”运算符的右操作数。  
   
--   逻辑 OR 运算符 (&#124; &#124;) 的左的操作数。 完全计算逻辑“或”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“或”运算符的右操作数。  
+-   逻辑 OR 运算符的左操作数 (&#124;&#124;)。 完全计算逻辑“或”运算符的左操作数，并在继续之前完成所有副作用。 不保证一定会计算逻辑“或”运算符的右操作数。  
   
 -   逗号运算符的左操作数。 完全计算逗号运算符的左操作数，并在继续之前完成所有副作用。 始终计算逗号运算符的两个操作数。  
   
@@ -125,5 +125,5 @@ func( i, ++i );
   
 -   return 语句中的表达式。 完全计算该表达式，并在控制权返回到调用函数之前完成所有副作用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式](../cpp/expressions-cpp.md)

@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 15fca6437626b09ee2995f9afe268f44a5f4b34f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="vector-class"></a>vector 类
 C++ 标准库 vector 类是序列容器的一个模板类，这些容器将给定类型的元素以线性排列方式进行排列，并且允许快速随机访问任何元素。 它们应是随机访问性能最佳时的首选序列容器。  
@@ -199,7 +199,7 @@ class vector
 |[operator[]](#op_at)|返回对指定位置的矢量元素的引用。|  
 |[operator=](#op_eq)|用另一个向量的副本替换该向量中的元素。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<vector>  
   
  **命名空间：** std  
@@ -2132,7 +2132,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

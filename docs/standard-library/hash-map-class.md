@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="hashmap-class"></a>hash_map 类
 > [!NOTE]
@@ -231,7 +231,7 @@ class hash_map
 |[operator[]](#op_at)|将元素插入到具有指定键值的 `hash_map`。|  
 |[hash_map::operator=](#op_eq)|将一个 `hash_map` 中的元素替换为另一 `hash_map` 副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<hash_map>  
   
  **命名空间：** stdext  
@@ -2777,7 +2777,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 30.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

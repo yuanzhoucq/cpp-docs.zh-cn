@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="hashset-class"></a>hash_set 类
 > [!NOTE]
@@ -223,7 +223,7 @@ class hash_set
 |-|-|  
 |[hash_set::operator=](#op_eq)|将一个 `hash_set` 中的元素替换为另一 `hash_set` 副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<hash_set>  
   
  **命名空间：** stdext  
@@ -2432,7 +2432,7 @@ int main( )
 The hash_set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

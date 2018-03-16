@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
@@ -38,7 +38,7 @@ C + + 支持动态分配和释放对象使用[新](../cpp/new-operator-cpp.md)�
   
  有关包含 C 运行库和 c + + 标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。  
   
-##  <a id="new_operator"></a> New 运算符  
+##  <a id="new_operator"> </a> New 运算符  
  在程序中遇到以下语句时，它将转换为对函数 `operator new` 的调用：  
   
 ```cpp  
@@ -101,7 +101,7 @@ Blanks *SomeBlanks = new Blanks;
   
  在 Visual c + + 5.0 和更早版本，非类类型和所有数组 (无论是否的**类**类型) 使用分配**新**运算符始终使用全局**运算符 new**函数。  
   
- 从 Visual c + + 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如:  
+ 从 Visual c + + 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如：  
   
 ```cpp  
 // spec1_the_operator_new_function2.cpp  
@@ -144,7 +144,7 @@ int main() {
   
  若要处理失败的内存分配请求的其他方法： 编写自定义恢复例程来处理此类故障，然后通过调用注册您的函数[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)运行时函数。  
   
-##  <a id="delete_operator"></a> Delete 运算符  
+##  <a id="delete_operator"> </a> Delete 运算符  
  使用动态分配的内存**新**运算符可以释放使用**删除**运算符。 Delete 运算符调用**运算符 delete**函数，将内存释放回可用池。 使用**删除**运算符也会导致类析构函数 （如果存在） 调用。  
   
  有全局和类范围**运算符 delete**函数。 只有一个**运算符 delete**可以为给定类定义函数; 如果定义，它会隐藏全局**运算符 delete**函数。 全局**运算符 delete**函数始终调用的任何类型的数组。  
@@ -215,7 +215,7 @@ int main( int argc, char *argv[] ) {
   
  前面的代码可用于检测“内存溢出”，即在自由储存中分配但从未释放过的内存。 若要执行此检测，全局**新**和**删除**运算符会重新定义为计数分配和解除分配的内存。  
   
- 从 Visual c + + 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如:  
+ 从 Visual c + + 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如：  
   
 ```cpp  
 // spec1_the_operator_delete_function2.cpp  

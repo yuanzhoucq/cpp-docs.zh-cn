@@ -25,10 +25,10 @@ ms.workload:
 - cplusplus
 - dotnet
 ms.openlocfilehash: c304b3d01fa8d1cdece410d70ebe437d41d72cd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>如何：将 System::String 转换为 wchar_t* 或 char*
 你可以使用`PtrToStringChars`中要转换的 Vcclr.h<xref:System.String>到本机`wchar_t *`或`char *`。  由于 CLR 字符串内部是 Unicode，这始终返回宽的 Unicode 字符串指针。 你可以然后转换为宽字符串，如下面的示例中所示。  
@@ -77,5 +77,5 @@ Hello
 Hello  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

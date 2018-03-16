@@ -26,10 +26,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 033d772a40ddf55474ca845c9c5708423bcf5e90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="one-dimensional-arrays"></a>一维数组
 后跟用方括号 ([ ]) 括起的表达式的后缀表达式是数组对象元素的下标表示形式。 下标表达式表示在表示为以下形式时位于超出 postfix-expression 的 expression 位置的地址的值  
@@ -77,5 +77,5 @@ b[a]
   
  下标表达式 `line[0]` 表示行的第一个元素的值，因为 `line` 表示的地址的偏移量为 0。 同样，表达式（如 `line[5]`）引用了从行偏移 5 个位置的元素，或数组的第 6 个元素。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [下标运算符：](../cpp/subscript-operator.md)

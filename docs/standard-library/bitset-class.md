@@ -50,10 +50,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="bitset-class"></a>bitset 类
 介绍一种类型的对象，该对象存储由固定数量的位构成的序列，这些位提供一种紧凑方式来保留一组项或条件的标志。 bitset 类支持对 bitset 类型的对象执行操作，此类对象包含位集合并提供对每一个位的定时访问。  
@@ -125,7 +125,7 @@ class bitset
 |[operator&#124;=](#op_or_eq')|使用非独占 `OR` 操作执行位组的按位组合。|  
 |[operator~](#op_dtor)|反转目标 `bitset` 中的所有位并返回结果。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<bitset>  
   
  **命名空间：** std  

@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0d528f53747979da7b95d8d3298a43ea717007a5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sample-container-class"></a>Sample Container 类
 > [!NOTE]
@@ -96,9 +96,9 @@ ms.lasthandoff: 02/23/2018
   
 -   类型 **Alloc::pointer** 不需要与 **Ty\*** 相同。 （指针可以为类。）  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：\<sample container>  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<sample container>](../standard-library/sample-container.md)
 

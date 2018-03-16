@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/23/2018
    **/ 墙壁**启用默认情况下处于关闭状态的所有警告。 如果你使用此选项，你可以通过将个别警告关闭[/wd](../build/reference/compiler-option-warning-level.md)选项。
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   这使警告 *nnnn* 级别*l*。
+   这使警告*nnnn*级别*l*。
 
 默认情况下，下列警告是禁用的。
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/23/2018
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （级别 4）|*class1*: /vd2 下的对象布局将因虚拟基而更改*class2*|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （级别 4）|从虚拟基的 dynamic_cast*class1*到*class2*可能会在某些上下文中失败|
 |C4444 （级别 3）|顶级“__unaligned”没有在该上下文中实现|
-|C4464 （级别 4）|相对包含路径包含..|
+|[C4464](../error-messages/compiler-warnings/c4464.md) （级别 4）|相对包含路径包含..|
 |C4472 （级别 1）|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明托管的枚举|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) （级别 4）|*函数*： 在删除未引用的内联函数|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) （级别 4）|type name： 类型名超出了元数据限制为*限制*' 字符|
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/23/2018
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) （级别 1）|*函数*： 非私有成员的签名包含程序集私有本机类型*native_type*|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) （级别 4）|*函数*： 函数未内联|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) （级别 3）|将 32 位浮点型结果存储在内存中，可能会降低性能|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|可变访问*表达式*受到 /volatile:\<iso &#124; ms > 设置; 请考虑使用 __iso_volatile_load/store 内部函数|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|可变访问*表达式*受到 /volatile:\<iso&#124;ms > 设置; 请考虑使用 __iso_volatile_load/store 内部函数|
 |C4749 （级别 4）|有条件地支持： offsetof 应用于 non standard 布局类型*类型*|
 |C4767 （级别 4）|节名称*符号*的长度超过 8 个字符，将链接器截断|
 |C4768 （级别 3）|则将忽略链接规范的前面的 __declspec 属性|
@@ -160,6 +160,6 @@ ms.lasthandoff: 02/23/2018
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （级别 4）|缺少类型说明符 - 假定为 int。 注意: C 不再支持默认的 int|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [warning](../preprocessor/warning.md)

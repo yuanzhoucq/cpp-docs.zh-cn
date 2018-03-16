@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 330e5ea576e3cd779a7c17c21d00b6459f5e7043
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE**仅适用于**为**和**为并行**指令具有计划类型**运行时**。 通过向任何已识别的计划类型和一个可选设置此环境变量，可以在运行时设置所有此类循环的计划类型和区块大小*使用 chunk_size*。  

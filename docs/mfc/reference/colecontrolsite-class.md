@@ -122,10 +122,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80541bc777d2c77209812cbee621045b7d6c6507
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 提供自定义客户端控件接口支持。  
@@ -209,7 +209,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|控件所在位置的尺寸。|  
   
 ## <a name="remarks"></a>备注  
- 此支持并依据嵌入的 ActiveX 控件获取信息的位置和其显示站点、 其名字对象，其用户界面，其环境属性和由其容器提供其他资源的范围的主要方式。 `COleControlSite`完全实现[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， **IBoundObjectSite**， **INotifyDBEvents**， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)接口。 此外，还实现 IDispatch 接口 （为环境属性和事件接收器中提供支持）。  
+ 此支持并依据嵌入的 ActiveX 控件获取信息的位置和其显示站点、 其名字对象，其用户界面，其环境属性和由其容器提供其他资源的范围的主要方式。 `COleControlSite` 完全实现[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， **IBoundObjectSite**， **INotifyDBEvents**， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)接口。 此外，还实现 IDispatch 接口 （为环境属性和事件接收器中提供支持）。  
   
  若要创建 ActiveX 控件站点使用`COleControlSite`，从派生类`COleControlSite`。 在你`CWnd`-容器 （例如，对话框中） 的派生的类重写**CWnd::CreateControlSite**函数。  
   
@@ -220,10 +220,10 @@ class COleControlSite : public CCmdTarget
   
  `COleControlSite`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxocc.h  
   
-##  <a name="binddefaultproperty"></a>COleControlSite::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
  将调用对象的默认简单绑定的属性，作为类型库中的标记绑定到数据源控件的数据源、 用户名、 密码和 SQL 属性定义的基础光标。  
   
 ```  
@@ -250,7 +250,7 @@ virtual void BindDefaultProperty(
 ### <a name="remarks"></a>备注  
  `CWnd`对其调用此函数的对象必须是数据绑定控件。  
   
-##  <a name="bindproperty"></a>COleControlSite::BindProperty  
+##  <a name="bindproperty"></a>  COleControlSite::BindProperty  
  将调用对象的简单绑定的属性，作为类型库中的标记绑定到数据源控件的数据源、 用户名、 密码和 SQL 属性定义的基础光标。  
   
 ```  
@@ -269,7 +269,7 @@ virtual void BindProperty(
 ### <a name="remarks"></a>备注  
  `CWnd`对其调用此函数的对象必须是数据绑定控件。  
   
-##  <a name="colecontrolsite"></a>COleControlSite::COleControlSite  
+##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite  
  构造一个新`COleControlSite`对象。  
   
 ```  
@@ -283,7 +283,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ### <a name="remarks"></a>备注  
  调用此函数[COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)函数。 有关自定义创建的容器的详细信息，请参阅[COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)。  
   
-##  <a name="createcontrol"></a>COleControlSite::CreateControl  
+##  <a name="createcontrol"></a>  COleControlSite::CreateControl  
  创建 ActiveX 控件，由托管`COleControlSite`对象。  
   
 ```  
@@ -356,7 +356,7 @@ virtual HRESULT CreateControl(
   
 - **WS_DISABLED**创建最初处于禁用状态的窗口。 已禁用的窗口无法接收来自用户输入。 如果控件具有 Enabled 属性可以设置。  
   
-- `WS_BORDER`创建一个窗口，有精简行的边框。 如果控件具有 BorderStyle 属性可以设置。  
+- `WS_BORDER` 创建一个窗口，有精简行的边框。 如果控件具有 BorderStyle 属性可以设置。  
   
 - **WS_GROUP**指定一组控件的第一个控件。 用户可以通过使用箭头键键盘焦点从一个控件组中更改为下一步。 使用定义的所有控件**WS_GROUP**样式后的第一个控件属于同一个组。 使用下一个控件**WS_GROUP**样式组结束和开始下一个组。  
   
@@ -364,7 +364,7 @@ virtual HRESULT CreateControl(
   
  使用第二个重载来创建默认大小的控件。  
   
-##  <a name="destroycontrol"></a>COleControlSite::DestroyControl  
+##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl  
  销毁`COleControlSite`对象。  
   
 ```  
@@ -377,7 +377,7 @@ virtual BOOL DestroyControl();
 ### <a name="remarks"></a>备注  
  一旦完成，该对象从内存中释放，且任何指向对象不再有效。  
   
-##  <a name="doverb"></a>COleControlSite::DoVerb  
+##  <a name="doverb"></a>  COleControlSite::DoVerb  
  执行指定的谓词。  
   
 ```  
@@ -390,7 +390,7 @@ virtual HRESULT DoVerb(
  `nVerb`  
  指定要执行的谓词。 它可以包括以下项之一：  
   
-|“值”|含义|符号|  
+|值|含义|符号|  
 |-----------|-------------|------------|  
 |0|主谓词|`OLEIVERB_PRIMARY`|  
 |-1|辅助谓词|（无）|  
@@ -412,7 +412,7 @@ virtual HRESULT DoVerb(
   
  有关详细信息，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
   
-##  <a name="enabledsc"></a>COleControlSite::EnableDSC  
+##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  使控件站点来源的数据。  
   
 ```  
@@ -422,7 +422,7 @@ virtual void EnableDSC();
 ### <a name="remarks"></a>备注  
  由框架调用以启用并初始化为控件站点来源的数据。 重写此函数可提供自定义的行为。  
   
-##  <a name="enablewindow"></a>COleControlSite::EnableWindow  
+##  <a name="enablewindow"></a>  COleControlSite::EnableWindow  
  启用或禁用鼠标和键盘输入到控件站点。  
   
 ```  
@@ -436,7 +436,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="return-value"></a>返回值  
  非零，如果以前已禁用窗口中，否则为 0。  
   
-##  <a name="freezeevents"></a>COleControlSite::FreezeEvents  
+##  <a name="freezeevents"></a>  COleControlSite::FreezeEvents  
  指定控件所在位置是否将处理或忽略从控件触发的事件。  
   
 ```  
@@ -453,7 +453,7 @@ void FreezeEvents(BOOL bFreeze);
 > [!NOTE]
 >  控件不需要停止激发事件，如果请求的控件所在位置。 它可以继续激发，但所有后续的事件将被忽略，控件所在位置。  
   
-##  <a name="getcontrolinfo"></a>COleControlSite::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  COleControlSite::GetControlInfo  
  检索有关控件的键盘助记键和键盘行为的信息。  
   
 ```  
@@ -463,7 +463,7 @@ void GetControlInfo();
 ### <a name="remarks"></a>备注  
  信息存储在[COleControlSite::m_ctlInfo](#m_ctlinfo)。  
   
-##  <a name="getdefbtncode"></a>COleControlSite::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode  
  确定控件是否为默认下压按钮。  
   
 ```  
@@ -479,7 +479,7 @@ DWORD GetDefBtnCode();
   
 - **0**控件不是一个按钮。  
   
-##  <a name="getdlgctrlid"></a>COleControlSite::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>  COleControlSite::GetDlgCtrlID  
  检索控件的标识符。  
   
 ```  
@@ -489,7 +489,7 @@ virtual int GetDlgCtrlID() const;
 ### <a name="return-value"></a>返回值  
  控件的对话框项标识符。  
   
-##  <a name="geteventiid"></a>COleControlSite::GetEventIID  
+##  <a name="geteventiid"></a>  COleControlSite::GetEventIID  
  检索指向控件的默认事件接口的指针。  
   
 ```  
@@ -503,7 +503,7 @@ BOOL GetEventIID(IID* piid);
 ### <a name="return-value"></a>返回值  
  如果成功，则为非 0 否则为 0。 如果成功，`piid`包含控件的默认事件接口的接口 ID。  
   
-##  <a name="getexstyle"></a>COleControlSite::GetExStyle  
+##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  检索窗口的扩展的样式。  
   
 ```  
@@ -516,7 +516,7 @@ virtual DWORD GetExStyle() const;
 ### <a name="remarks"></a>备注  
  若要检索的正则样式，调用[COleControlSite::GetStyle](#getstyle)。  
   
-##  <a name="getproperty"></a>COleControlSite::GetProperty  
+##  <a name="getproperty"></a>  COleControlSite::GetProperty  
  获取指定的控件属性`dwDispID`。  
   
 ```  
@@ -539,7 +539,7 @@ virtual void GetProperty(
 ### <a name="remarks"></a>备注  
  通过返回的值`pvProp`。  
   
-##  <a name="getstyle"></a>COleControlSite::GetStyle  
+##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  检索控件所在位置的样式。  
   
 ```  
@@ -552,7 +552,7 @@ virtual DWORD GetStyle() const;
 ### <a name="remarks"></a>备注  
  有关可能的值的列表，请参阅[Windows 样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 若要检索控件所在位置的扩展的样式，调用[COleControlSite::GetExStyle](#getexstyle)。  
   
-##  <a name="getwindowtext"></a>COleControlSite::GetWindowText  
+##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText  
  检索控件的当前文本。  
   
 ```  
@@ -566,7 +566,7 @@ virtual void GetWindowText(CString& str) const;
 ### <a name="remarks"></a>备注  
  如果该控件支持标题的常用属性，则返回该值。 如果不支持标题的常用属性，则返回的 Text 属性的值。  
   
-##  <a name="invokehelper"></a>COleControlSite::InvokeHelper  
+##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
  调用的方法或属性指定`dwDispID`，通过指定的上下文中`wFlags`。  
   
 ```  
@@ -602,7 +602,7 @@ virtual void AFX_CDECL InvokeHelper(
   
  此函数将转换的参数**VARIANTARG**值，然后调用**idispatch:: Invoke**在控件上的方法。 如果调用**idispatch:: Invoke**失败，此函数将引发异常。 如果返回状态代码**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函数将引发**COleDispatchException**对象中，否则为它将引发`COleException`。  
   
-##  <a name="invokehelperv"></a>COleControlSite::InvokeHelperV  
+##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
  调用的方法或属性指定`dwDispID`，通过指定的上下文中`wFlags`。  
   
 ```  
@@ -639,7 +639,7 @@ virtual void InvokeHelperV(
   
  通常情况下，调用此函数`COleControlSite::InvokeHelper`。  
   
-##  <a name="isdefaultbutton"></a>COleControlSite::IsDefaultButton  
+##  <a name="isdefaultbutton"></a>  COleControlSite::IsDefaultButton  
  确定控件是否为默认按钮。  
   
 ```  
@@ -649,7 +649,7 @@ BOOL IsDefaultButton();
 ### <a name="return-value"></a>返回值  
  如果该控件为非零的默认按钮在窗口上，否则为零。  
   
-##  <a name="iswindowenabled"></a>COleControlSite::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>  COleControlSite::IsWindowEnabled  
  确定是否启用控件所在位置。  
   
 ```  
@@ -662,7 +662,7 @@ virtual BOOL IsWindowEnabled() const;
 ### <a name="remarks"></a>备注  
  从控件的已启用常用属性检索的值。  
   
-##  <a name="m_biswindowless"></a>COleControlSite::m_bIsWindowless  
+##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless  
  确定对象是否为无窗口控件。  
   
 ```  
@@ -672,7 +672,7 @@ BOOL m_bIsWindowless;
 ### <a name="remarks"></a>备注  
  非零如果控件具有没有窗口，否则为零。  
   
-##  <a name="m_ctlinfo"></a>COleControlSite::m_ctlInfo  
+##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo  
  有关如何由控件处理键盘输入的信息。  
   
 ```  
@@ -682,14 +682,14 @@ CONTROLINFO m_ctlInfo;
 ### <a name="remarks"></a>备注  
  此信息存储在[CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734)结构。  
   
-##  <a name="m_dweventsink"></a>COleControlSite::m_dwEventSink  
+##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  包含从控件的事件接收器的连接点的 cookie。  
   
 ```  
 DWORD m_dwEventSink;  
 ```  
   
-##  <a name="m_dwmiscstatus"></a>COleControlSite::m_dwMiscStatus  
+##  <a name="m_dwmiscstatus"></a>  COleControlSite::m_dwMiscStatus  
  包含有关控件的其他信息。  
   
 ```  
@@ -699,91 +699,91 @@ DWORD m_dwMiscStatus;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK 中。  
   
-##  <a name="m_dwpropnotifysink"></a>COleControlSite::m_dwPropNotifySink  
+##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
  包含[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) cookie。  
   
 ```  
 DWORD m_dwPropNotifySink;  
 ```  
   
-##  <a name="m_dwstyle"></a>COleControlSite::m_dwStyle  
+##  <a name="m_dwstyle"></a>  COleControlSite::m_dwStyle  
  包含控件的窗口样式。  
   
 ```  
 DWORD m_dwStyle;  
 ```  
   
-##  <a name="m_hwnd"></a>COleControlSite::m_hWnd  
+##  <a name="m_hwnd"></a>  COleControlSite::m_hWnd  
  包含`HWND`的控件，或**NULL**无窗口控件时。  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-##  <a name="m_iidevents"></a>COleControlSite::m_iidEvents  
+##  <a name="m_iidevents"></a>  COleControlSite::m_iidEvents  
  包含控件的默认事件接收器接口的接口 ID。  
   
 ```  
 IID m_iidEvents;  
 ```  
   
-##  <a name="m_nid"></a>COleControlSite::m_nID  
+##  <a name="m_nid"></a>  COleControlSite::m_nID  
  包含控件的对话框项的 id。  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_pactiveobject"></a>COleControlSite::m_pActiveObject  
+##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
  包含[IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)控件接口。  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
 ```  
   
-##  <a name="m_pctrlcont"></a>COleControlSite::m_pCtrlCont  
+##  <a name="m_pctrlcont"></a>  COleControlSite::m_pCtrlCont  
  包含控件的容器 （表示窗体）。  
   
 ```  
 COleControlContainer* m_pCtrlCont;  
 ```  
   
-##  <a name="m_pinplaceobject"></a>COleControlSite::m_pInPlaceObject  
+##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
  包含`IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)控件接口。  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
 ```  
   
-##  <a name="m_pobject"></a>COleControlSite::m_pObject  
+##  <a name="m_pobject"></a>  COleControlSite::m_pObject  
  包含**IOleObjectInterface**控件接口。  
   
 ```  
 LPOLEOBJECT m_pObject;  
 ```  
   
-##  <a name="m_pwindowlessobject"></a>COleControlSite::m_pWindowlessObject  
+##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
  包含`IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304)控件接口。  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
 ```  
   
-##  <a name="m_pwndctrl"></a>COleControlSite::m_pWndCtrl  
+##  <a name="m_pwndctrl"></a>  COleControlSite::m_pWndCtrl  
  包含指向的`CWnd`表示该控件本身的对象。  
   
 ```  
 CWnd* m_pWndCtrl;  
 ```  
   
-##  <a name="m_rect"></a>COleControlSite::m_rect  
+##  <a name="m_rect"></a>  COleControlSite::m_rect  
  包含相对于容器的窗口控件的控件边界。  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="modifystyle"></a>COleControlSite::ModifyStyle  
+##  <a name="modifystyle"></a>  COleControlSite::ModifyStyle  
  修改控件的样式。  
   
 ```  
@@ -809,21 +809,21 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>备注  
  将修改控件的 stock Enabled 属性以匹配为设置**WS_DISABLED**。 控件的常用的边框样式属性将进行相应修改以匹配的请求的设置`WS_BORDER`。 所有其他样式将直接应用于控件的窗口句柄，如果有的话。  
   
- 修改控件的窗口样式。 可以使用的按位或 (&#124;) 组合样式来添加或删除运算符。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式信息的 Windows SDK 中的函数。  
+ 修改控件的窗口样式。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式信息的 Windows SDK 中的函数。  
   
  如果`nFlags`不为零，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口`nFlags`与以下四个标志：  
   
-- `SWP_NOSIZE`保留当前的大小。  
+- `SWP_NOSIZE` 保留当前的大小。  
   
-- `SWP_NOMOVE`保留当前的位置。  
+- `SWP_NOMOVE` 保留当前的位置。  
   
-- `SWP_NOZORDER`保留当前的 Z 顺序。  
+- `SWP_NOZORDER` 保留当前的 Z 顺序。  
   
-- `SWP_NOACTIVATE`不会激活窗口。  
+- `SWP_NOACTIVATE` 不会激活窗口。  
   
  若要修改窗口的扩展样式，请调用[ModifyStyleEx](#modifystyleex)。  
   
-##  <a name="modifystyleex"></a>COleControlSite::ModifyStyleEx  
+##  <a name="modifystyleex"></a>  COleControlSite::ModifyStyleEx  
  修改控件的扩展的样式。  
   
 ```  
@@ -849,21 +849,21 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>备注  
  控件的常用外观属性将进行相应修改以匹配为设置**WS_EX_CLIENTEDGE**。 所有其他扩展的窗口样式将直接应用于控件的窗口句柄，如果有的话。  
   
- 修改扩展控件站点对象的样式窗口。 可以使用的按位或 (&#124;) 组合样式来添加或删除运算符。 请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的窗口样式信息的 Windows SDK 中的函数。  
+ 修改扩展控件站点对象的样式窗口。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的窗口样式信息的 Windows SDK 中的函数。  
   
  如果`nFlags`不为零，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口`nFlags`与以下四个标志：  
   
-- `SWP_NOSIZE`保留当前的大小。  
+- `SWP_NOSIZE` 保留当前的大小。  
   
-- `SWP_NOMOVE`保留当前的位置。  
+- `SWP_NOMOVE` 保留当前的位置。  
   
-- `SWP_NOZORDER`保留当前的 Z 顺序。  
+- `SWP_NOZORDER` 保留当前的 Z 顺序。  
   
-- `SWP_NOACTIVATE`不会激活窗口。  
+- `SWP_NOACTIVATE` 不会激活窗口。  
   
  若要修改窗口的扩展样式，请调用[ModifyStyle](#modifystyle)。  
   
-##  <a name="movewindow"></a>COleControlSite::MoveWindow  
+##  <a name="movewindow"></a>  COleControlSite::MoveWindow  
  更改控件的位置。  
   
 ```  
@@ -887,7 +887,7 @@ virtual void MoveWindow(
  `nHeight`  
  新窗口的高度。  
   
-##  <a name="quickactivate"></a>COleControlSite::QuickActivate  
+##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
  快速激活包含的控件。  
   
 ```  
@@ -902,7 +902,7 @@ virtual BOOL QuickActivate();
   
  `IPersist*::Load`和`IPersist*::InitNew`迅速激活发生后，应调用方法。 控件应快速激活期间建立其连接到容器的接收器。 但是，这些连接不是实时直到`IPersist*::Load`或`IPersist*::InitNew`已调用。  
   
-##  <a name="safesetproperty"></a>COleControlSite::SafeSetProperty  
+##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
  设置指定的控件属性`dwDispID`。  
   
 ```  
@@ -929,7 +929,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 > [!NOTE]
 >  与不同`SetProperty`和`SetPropertyV`，如果 （例如尝试将不存在属性设置） 遇到错误，不会引发异常。  
   
-##  <a name="setdefaultbutton"></a>COleControlSite::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>  COleControlSite::SetDefaultButton  
  将控件设置为默认按钮。  
   
 ```  
@@ -945,7 +945,7 @@ void SetDefaultButton(BOOL bDefault);
 > [!NOTE]
 >  控件必须具有**OLEMISC_ACTSLIKEBUTTON**设置位的状态。  
   
-##  <a name="setdlgctrlid"></a>COleControlSite::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>  COleControlSite::SetDlgCtrlID  
  更改控件的对话框项标识符的值。  
   
 ```  
@@ -961,7 +961,7 @@ virtual int SetDlgCtrlID(int nID);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setfocus"></a>COleControlSite::SetFocus  
+##  <a name="setfocus"></a>  COleControlSite::SetFocus  
  设置焦点移到控件。  
   
 ```  
@@ -976,7 +976,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="return-value"></a>返回值  
  指向以前具有焦点的窗口的指针。  
   
-##  <a name="setproperty"></a>COleControlSite::SetProperty  
+##  <a name="setproperty"></a>  COleControlSite::SetProperty  
  设置指定的控件属性`dwDispID`。  
   
 ```  
@@ -1000,7 +1000,7 @@ virtual void AFX_CDECL SetProperty(
   
  异常的类型是由尝试设置的属性或方法的返回值确定的。 如果返回值为`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**则引发该异常; 否则为`COleException`。  
   
-##  <a name="setpropertyv"></a>COleControlSite::SetPropertyV  
+##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
  设置指定的控件属性`dwDispID`。  
   
 ```  
@@ -1025,7 +1025,7 @@ virtual void SetPropertyV(
   
  异常的类型是由尝试设置的属性或方法的返回值确定的。 如果返回值为`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**则引发该异常; 否则为`COleException`。  
   
-##  <a name="setwindowpos"></a>COleControlSite::SetWindowPos  
+##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  设置大小、 位置和控件所在位置的 Z 顺序。  
   
 ```  
@@ -1060,7 +1060,7 @@ virtual BOOL SetWindowPos(
 ### <a name="return-value"></a>返回值  
  非零如果成功，否则为零。  
   
-##  <a name="setwindowtext"></a>COleControlSite::SetWindowText  
+##  <a name="setwindowtext"></a>  COleControlSite::SetWindowText  
  设置控件所在位置的文本。  
   
 ```  
@@ -1074,7 +1074,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ### <a name="remarks"></a>备注  
  此函数首先尝试设置标题常用属性。 如果不支持标题的常用属性，则改为设置文本属性。  
   
-##  <a name="showwindow"></a>COleControlSite::ShowWindow  
+##  <a name="showwindow"></a>  COleControlSite::ShowWindow  
  设置窗口的显示状态。  
   
 ```  
@@ -1108,7 +1108,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ### <a name="return-value"></a>返回值  
  如果窗口已以前可见，则非零如果以前隐藏的窗口，则为 0。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [COleControlContainer 类](../../mfc/reference/colecontrolcontainer-class.md)
