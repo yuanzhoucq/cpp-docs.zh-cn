@@ -36,7 +36,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>将 TCHAR.H 数据类型用于 _MBCS 代码
 当清单常量**_MBCS**是定义，给定的一般文本例程映射到例程的以下类型之一：  
   
--   可恰当处理多字节字节、字符和字符串的 SBCS 例程。 在这种情况下，字符串参数应为类型**char\***。 例如，`_tprintf`映射到`printf`; 的字符串自变量`printf`属于类型**char\***。 如果你使用**_TCHAR**一般文本数据类型为你的字符串类型的形参和实参类型`printf`与匹配，因为**_TCHAR** \*映射到**char\***.  
+-   可恰当处理多字节字节、字符和字符串的 SBCS 例程。 在这种情况下，字符串参数应为类型**char\***。 例如，`_tprintf`映射到`printf`; 的字符串自变量`printf`属于类型**char\***。 如果你使用**_TCHAR**一般文本数据类型为你的字符串类型的形参和实参类型`printf`与匹配，因为**_TCHAR**\*映射到**char\***.  
   
 -   MBCS 专用例程。 在这种情况下，字符串参数应为类型`unsigned` **char\***。 例如，`_tcsrev`映射到`_mbsrev`，其需要并返回类型的字符串`unsigned` **char\***。 如果你使用**_TCHAR**一般文本数据类型为字符串类型，存在是潜在的类型冲突，因为**_TCHAR**图来键入`char`。  
   

@@ -36,7 +36,7 @@ ms.lasthandoff: 03/16/2018
 |Makehtmlhelp.bat|*Projname*|源文件|系统使用它来编译项目时生成的帮助项目。|  
 |Afxcore.htm|*Projname*\hlp|HTML 帮助主题|包含标准 MFC 命令和屏幕对象的标准帮助主题。 添加到此文件的帮助主题。|  
 |Afxprint.htm|*Projname*\hlp|HTML 帮助主题|包含打印命令的帮助主题。|  
-|*.jpg; \*.gif|*Projname*\hlp\Images|资源文件|包含有关不同的生成的帮助文件的主题的图像。|  
+|\*.jpg; \*.gif|*Projname*\hlp\Images|资源文件|包含有关不同的生成的帮助文件的主题的图像。|  
   
 ## <a name="see-also"></a>另请参阅  
  [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)
