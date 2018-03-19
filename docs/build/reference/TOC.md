@@ -147,6 +147,7 @@
 ##### [/Zc:threadSafeInit（线程安全的本地静态初始化）](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew（假定运算符执行新的引发操作）](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc: trigraphs（Trigraphs 替换）](zc-trigraphs-trigraphs-substitution.md)
+##### [/Zc:twoPhase-（禁用两阶段名称查找）](zc-twophase.md)
 ##### [/Zc:wchar_t（wchar_t 是本机类型）](zc-wchar-t-wchar-t-is-native-type.md)
 #### [/Zf（更快的 PDB 生成）](zf.md)
 #### [/Zg（生成函数原型）](zg-generate-function-prototypes.md)
