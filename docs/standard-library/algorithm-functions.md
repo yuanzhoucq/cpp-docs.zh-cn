@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 ||||  
@@ -736,7 +736,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
  一种等于 `dest` 的输出迭代器，针对符合条件的每个元素递增一次。 换言之，返回值减去 `dest` 等于复制的元素数目。  
   
 ### <a name="remarks"></a>备注  
- 该模板函数为范围  中的每个  求值  
+ 模板函数评估  
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- 分区元素，正确找到范围 *n* th 元素的范围中的序列，以便前面遮挡它的所有元素都均小于或等于它以及按照序列中的所有元素大于或等于它重新。  
+ 对范围内的元素分区，正确找到范围中序列的第 *n* 个元素，以使序列中位于此元素之前的所有元素小于或等于此元素，位于此元素之后的所有元素大于或等于此元素。  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>备注  
  引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
   
- `nth_element`算法不保证在子范围内的元素或者端的 *n* th 元素进行排序。 因而，它保证的内容比 `partial_sort` 更少，它对范围中某些所选元素下面的元素进行排序，并且在不需要较低范围的排序时，可以用作替代 `partial_sort` 的一种较快算法。  
+ `nth_element` 算法不保证会存储子范围中第 *n* 个元素两边的任意元素。 因而，它保证的内容比 `partial_sort` 更少，它对范围中某些所选元素下面的元素进行排序，并且在不需要较低范围的排序时，可以用作替代 `partial_sort` 的一种较快算法。  
   
  元素是等效的，但是如果两者都不小于对方，则不一定要相等。  
   
@@ -8463,5 +8463,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>请参阅   
+## <a name="see-also"></a>另请参阅   
  [\<algorithm>](../standard-library/algorithm.md)
