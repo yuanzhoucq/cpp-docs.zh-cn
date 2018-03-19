@@ -205,7 +205,7 @@ virtual BOOL FindFile(
   
 ### <a name="parameters"></a>参数  
  `pstrName`  
- 指向包含要查找的文件的名称的字符串的指针。 如果你通过**NULL**为`pstrName`， **FindFile**没有通配符 (*。\*) 搜索。  
+ 指向包含要查找的文件的名称的字符串的指针。 如果你通过**NULL**为`pstrName`， **FindFile**没有通配符 (\*。\*) 搜索。  
   
  *dwUnused*  
  保留以使**FindFile**多态使用派生类。 必须为 0。  
