@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -37,9 +37,11 @@ ms.lasthandoff: 02/03/2018
 
 C++ 不具备稳定的应用程序二进制接口 (ABI)。 Visual Studio 为版本的所有次要版本维护稳定的 C++ ABI。 例如，Visual Studio 2017 及其所有更新均兼容二进制文件。 但 ABI 不一定具有跨 Visual Studio 主版本的兼容性（2015 和 2017 除外，它们兼容二进制文件）。 也就是说，可以对 C++ 类型布局、名称修饰、异常处理和 C++ ABI 的其他部件进行重大更改。 因此，如果对象文件具有包含 C++ 链接的外部符号，则该对象文件可能无法与由其他主版本工具集生成的对象文件正确链接。 请注意：“可能无效”具有多种可能的结果：链接可能彻底失效（例如，如果名称修饰已更改）；链接可能成功，但在运行时可能无效（例如，如果类型布局已更改）；或在许多情况下，虽然可能出现一些状况，但一切运行正常。 另请注意，尽管 C++ ABI 不稳定，但 COM 所需的 C ABI 和 C++ ABI 的子集是稳定的。
 
+如果链接到导入库，保留 ABI 兼容性的 Visual Studio 可再发行库的更高版本可在运行时使用。 例如，如果使用 Visual Studio 2015 Update 3 工具集编译和链接应用，可使用任何 Visual Studio 2017 可再发行库，因为 2015 和 2017 库具有保留的二进制后向兼容性。 反之则不然。不能将可再发行库用于低于之前生成代码所使用的工具集版本的版本，即使其具有可兼容 ABI，也是如此。
+
 ### <a name="libraries"></a>库
 
-如果使用 Visual Studio C++ 库头文件的特定版本来编译源文件（通过 #including 标头），生成的对象文件必须与相同版本的库链接。 例如，如果使用 Visual Studio 2017 \<immintrin.h> 编译源文件，则必须使用 Visual Studio 2017 vcruntime 库进行链接。 同样地，如果使用 Visual Studio 2017 \<iostream> 编译源文件，则必须使用 Visual Studio 2017 标准 C++ 库 msvcprt 进行链接。 不支持混合与匹配。
+如果使用 Visual Studio C++ 库头文件的特定版本来编译源文件（通过 #including 标头），生成的对象文件必须与相同版本的库链接。 例如，如果使用 Visual Studio 2015 Update 3 \<immintrin.h> 编译源文件，则必须使用 Visual Studio 2015 Update 3 vcruntime 库进行链接。 同样地，如果使用 Visual Studio 2017 版本 15.5 \<iostream> 编译源文件，则必须使用 Visual Studio 2017 版本 15.5 标准 C++ 库 msvcprt 进行链接。 不支持混合与匹配。
 
 对于 C++ 标准库，从 Visual Studio 2010 起，通过在标准标头中使用 `#pragma detect_mismatch` 显示禁止混合与匹配。 如果尝试链接不兼容的对象文件，或尝试与错误的标准库链接，链接将失败。
 
