@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fb8d4474b69d60b9ced342c478ec0f6ba4e1a933
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tools-for-manual-profile-guided-optimization"></a>用于手动按配置优化工具
 以下工具支持按配置优化：  
@@ -37,5 +37,5 @@ ms.lasthandoff: 12/21/2017
  [pgomgr](../../build/reference/pgomgr.md)  
  将配置文件数据从一个或多个对应的.pgc 文件添加到该.pgd 文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [按配置文件优化](../../build/reference/profile-guided-optimizations.md)
