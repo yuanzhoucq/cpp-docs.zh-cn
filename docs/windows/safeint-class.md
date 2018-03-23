@@ -1,12 +1,12 @@
 ---
-title: "SafeInt 类 |Microsoft 文档"
-ms.custom: 
+title: SafeInt 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt 类
 扩展来帮助防止整数溢出的整数基元，并可用于比较不同类型的整数。  
@@ -62,7 +62,7 @@ class SafeInt;
   
 ### <a name="assignment-operators"></a>赋值运算符  
   
-|name|语法|  
+|名称|语法|  
 |----------|------------|  
 |=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|  
 |=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|  
@@ -71,7 +71,7 @@ class SafeInt;
   
 ### <a name="casting-operators"></a>强制转换运算符  
   
-|name|语法|  
+|名称|语法|  
 |----------|------------|  
 |bool|`operator bool() throw()`|  
 |char|`operator char() const`|  
@@ -89,7 +89,7 @@ class SafeInt;
   
 ### <a name="comparison-operators"></a>比较运算符  
   
-|name|语法|  
+|名称|语法|  
 |----------|------------|  
 |<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|  
 |<|`bool operator< (SafeInt<T,E> rhs) const throw()`|  
@@ -108,7 +108,7 @@ class SafeInt;
   
 ### <a name="arithmetic-operators"></a>算术运算符  
   
-|name|语法|  
+|名称|语法|  
 |----------|------------|  
 |+|`const SafeInt<T,E>& operator+ () const throw()`|  
 |-|`SafeInt<T,E> operator- () const`|  
@@ -141,7 +141,7 @@ class SafeInt;
   
 ### <a name="logical-operators"></a>逻辑运算符  
   
-|name|语法|  
+|名称|语法|  
 |----------|------------|  
 |!|`bool operator !() const throw()`|  
 |~|`SafeInt<T,E> operator~ () const throw()`|  
@@ -178,9 +178,9 @@ class SafeInt;
   
  本主题中的运算符表列出支持的数学和比较运算符`SafeInt`类。 大多数的数学运算符将返回`SafeInt`类型的对象`T`。  
   
- 之间的比较运算`SafeInt`，并且可以在任一方向执行整数类型。 例如，`SafeInt<int>(x) < y`和`y > SafeInt<int>(x)`有效并将返回相同的结果。  
+ 之间的比较运算`SafeInt`，并且可以在任一方向执行整数类型。 例如，`SafeInt<int>(x) < y`和`y> SafeInt<int>(x)`有效并将返回相同的结果。  
   
- 很多二元运算符不支持使用两个不同`SafeInt`类型。 这一个示例是`&`运算符。 `SafeInt<T, E> & int`支持，但`SafeInt<T, E> & SafeInt<U, E>`不是。 在后一种的示例中，编译器不知道哪种类型的参数返回。 此问题的一种解决方案是强制转换回的基类型的第二个参数。 通过使用相同的参数，这可通过`SafeInt<T, E> & (U)SafeInt<U, E>`。  
+ 很多二元运算符不支持使用两个不同`SafeInt`类型。 这一个示例是`&`运算符。 `SafeInt<T, E> & int` 支持，但`SafeInt<T, E> & SafeInt<U, E>`不是。 在后一种的示例中，编译器不知道哪种类型的参数返回。 此问题的一种解决方案是强制转换回的基类型的第二个参数。 通过使用相同的参数，这可通过`SafeInt<T, E> & (U)SafeInt<U, E>`。  
   
 > [!NOTE]
 >  对于任何按位运算，两个不同的参数应该是相同的大小。 如果大小不同，编译器将引发[断言](../mfc/reference/diagnostic-services.md#assert)异常。 此操作的结果不能保证不准确。 若要解决此问题，将参数强制转换较小之前更大的参数相同的大小。  
@@ -213,23 +213,23 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`和`U`布尔值类型、 字符类型或整型可以分配。 类型可以有符号或无符号的整数部分和任何大小从 8 位到 64 位。  
+ `T` 和`U`布尔值类型、 字符类型或整型可以分配。 类型可以有符号或无符号的整数部分和任何大小从 8 位到 64 位。  
   
 > [!NOTE]
 >  尽管`SafeInt`类接受任何类型的整数，它更有效地执行与无符号类型。  
   
- `E`是错误处理机制的`SafeInt`使用。 SafeInt 库提供了两个错误处理机制。 默认策略是`SafeIntErrorPolicy_SafeIntException`，该类会引发[SafeIntException 类](../windows/safeintexception-class.md)异常时发生错误。 其他策略`SafeIntErrorPolicy_InvalidParameter`，这在出错时停止该程序。  
+ `E` 是错误处理机制的`SafeInt`使用。 SafeInt 库提供了两个错误处理机制。 默认策略是`SafeIntErrorPolicy_SafeIntException`，该类会引发[SafeIntException 类](../windows/safeintexception-class.md)异常时发生错误。 其他策略`SafeIntErrorPolicy_InvalidParameter`，这在出错时停止该程序。  
   
  有两个选项，以自定义错误策略。 第一个选项是将参数设置`E`创建时`SafeInt`。 使用此选项，当你想要更改的错误处理策略，仅针对之一`SafeInt`。 另一个选项是定义`_SAFEINT_DEFAULT_ERROR_POLICY`是您自定义的错误处理类，包括在内时`SafeInt`库。 如果你想要更改默认的错误处理策略的所有实例使用此选项`SafeInt`在代码中的类。  
   
 > [!NOTE]
 >  处理错误 SafeInt 库中的自定义的类应将控制权返回到调用错误处理程序的代码。 调用错误处理程序时，结果后`SafeInt`操作不能为受信任。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** safeint.h  
   
  **Namespace:** msl::utilities  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SafeInt 库](../windows/safeint-library.md)   
  [SafeIntException 类](../windows/safeintexception-class.md)

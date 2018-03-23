@@ -1,30 +1,36 @@
 ---
-title: "Visual c + + 语言参考 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: Visual c + + 语言参考 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 09/15/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0867cb30f1337ffaf1cb726a0c52977899f02d0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9cca27f54816c3727762eebba5a9af5246ed173
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 语言参考 (C++/CX)
 
 C + + /cli CX 是一套启用的 Windows 应用程序和 Windows 运行时组件尽可能接近现代 c + + 惯用语法创建 c + + 语言扩展。 使用 C + + /cli CX 在与 Visual C#、 Visual Basic 和 JavaScript，轻松地进行交互的本机代码和其他支持 Windows 运行时的语言中编写 Windows 应用程序和组件。 在这些少数情况下需要直接访问原始 COM 接口或非异常代码，你可以使用[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
 
-新模型代表 Windows 上的下一代本机 C++ 编程。 你可以使用它来创建：
+> [!NOTE]
+> C + + /cli WinRT 是新的标准 C + + 17 语言投影的 Windows 运行时 Api。 它是从以后版本 1803年最新的 Windows 10 SDK 中提供。 C + + /cli WinRT 是完全在标头文件中实现和设计用于为现代的 Windows API 将你提供使用第一类的访问权限。
+
+> 使用 C + + /cli WinRT，你可以使用和创作使用任何符合标准的 C + + 17 编译器的 Windows 运行时 Api。 C + + /cli WinRT 通常更好地执行，并生成比任何其他语言选项的 Windows 运行时的较小二进制文件。 我们将继续支持 C + + /cli CX 和 WRL，但强烈建议，新的应用程序使用 C + + /cli WinRT。 有关详细信息，请参阅[C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
+
+
+通过使用 C + + /CX 中，你可以创建：
 
 - C + + 通用 Windows 平台 (UWP) 应用程序使用 XAML 定义用户界面和使用本机堆栈。 有关详细信息，请参阅[创建在 c + + (UWP) 的"你好 world"应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
@@ -44,4 +50,4 @@ C + + /cli CX 是一套启用的 Windows 应用程序和 Windows 运行时组件
 |[命名空间参考](../cppcx/namespaces-reference-c-cx.md)|默认命名空间、平台命名空间、Platform::Collections 和相关命名空间的参考文档。|
 |[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|列出 Windows 运行时应用中不可用的 CRT 函数。|
 |[如何指导使用 Windows 10 应用](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|提供有关 Windows 10 应用的深入指导以及详细信息的链接。|
-|[C + + /cli CX 的第 0 部分\[ n \]： 简介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + /cli CX 的第 1 部分\[ n \]： 简单的类](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + /cli CX 第 2 部分的\[ n \]： 带尖角符号的类型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + /cli CX 的第 3 部分\[ n \]： 正在构造](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + /cli CX 的第 4 部分\[ n \]： 静态成员函数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|介绍性 Visual c + + 博客连载文章在 C + + /cli CX。|
+|[C + + /cli CX 的第 0 部分\[n\]： 简介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + /cli CX 的第 1 部分\[n\]： 简单的类](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + /cli CX 第 2 部分的\[n\]： 带尖角符号的类型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + /cli CX 的第 3 部分\[n\]： 正在构造](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + /cli CX 的第 4 部分\[n\]： 静态成员函数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|介绍性 Visual c + + 博客连载文章在 C + + /cli CX。|

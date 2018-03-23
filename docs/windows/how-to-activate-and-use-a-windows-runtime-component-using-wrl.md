@@ -1,34 +1,31 @@
 ---
-title: "如何： 激活和使用 Windows 运行时组件，使用 WRL |Microsoft 文档"
-ms.custom: 
+title: 如何： 激活和使用 Windows 运行时组件，使用 WRL |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：使用 WRL 激活和使用 Windows 运行时组件
 本文档说明如何使用 Windows 运行时 c + + 模板库 (WRL) 初始化 Windows 运行时以及如何激活和使用 Windows 运行时组件。  
-  
-> [!NOTE]
->  此示例中激活内置的 Windows 运行时组件。 若要了解如何创建您自己可以采用类似的方式激活的组件，请参阅[演练： 创建基本 Windows 运行时组件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)。  
   
  若要使用一个组件，必须首先获取由组件实现的类型的接口指针。 和 Windows 运行时其底层技术是组件对象模型 (COM)，因为你必须遵循 COM 规则来维护类型的实例。 例如，你必须维护*引用计数*，它确定类型从内存中删除时。  
   
@@ -92,5 +89,5 @@ ms.lasthandoff: 02/14/2018
   
  **cl.exe wrl 使用 component.cpp runtimeobject.lib**  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

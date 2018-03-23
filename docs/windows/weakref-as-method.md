@@ -1,12 +1,12 @@
 ---
-title: "Weakref:: As 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Weakref:: As 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef::As
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - As method
 ms.assetid: 7173da62-b3fe-44d6-aea4-1aa97e69b221
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e18ebeb8c50a4bae35c53fc82f059642a88cef07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 034664c91af422aed26f27b924827238b26a9134
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="weakrefas-method"></a>WeakRef::As 方法
 设置指定的 ComPtr 指针参数以表示指定接口。  
@@ -35,16 +35,12 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-template<  
-   typename U  
->  
+template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
 );  
   
-template<  
-   typename U  
->  
+template<typename U>  
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> ptr  
 );  
@@ -72,10 +68,10 @@ HRESULT As(
   
  从 Windows 10 SDK 开始，如果无法获得弱引用，此方法不再将 WeakRef 实例设置为 `nullptr` ，因此应避免使用检查 `nullptr`的 WeakRef 的错误检查代码。 相反，应检查`ptr`为`nullptr`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [WeakRef 类](../windows/weakref-class.md)

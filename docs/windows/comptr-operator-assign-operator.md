@@ -1,12 +1,12 @@
 ---
-title: "Comptr:: Operator = 运算符 |Microsoft 文档"
-ms.custom: 
+title: 'Comptr:: Operator = 运算符 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr::operator=
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - operator= operator
 ms.assetid: 1a0c2752-f7d8-4819-9443-07b88b69ef02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30f04bdfe7b508bf83e34992fefdcb10c58b4655
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b221ff75e250830feefbbd2d3db0d8697095c96
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= 运算符
 为当前 ComPtr 赋值。  
@@ -40,27 +40,21 @@ WRL_NOTHROW ComPtr& operator=(
 WRL_NOTHROW ComPtr& operator=(  
    _In_opt_ T *other  
 );  
-template <  
-   typename U  
->  
+template <typename U>  
 WRL_NOTHROW ComPtr& operator=(  
    _In_opt_ U *other  
 );  
 WRL_NOTHROW ComPtr& operator=(  
    const ComPtr &other  
 );  
-template<  
-   class U  
->  
+template<class U>  
 WRL_NOTHROW ComPtr& operator=(  
    const ComPtr<U>& other  
 );  
 WRL_NOTHROW ComPtr& operator=(  
    _Inout_ ComPtr &&other  
 );  
-template<  
-   class U  
->  
+template<class U>  
 WRL_NOTHROW ComPtr& operator=(  
    _Inout_ ComPtr<U>&& other  
 );  
@@ -91,10 +85,10 @@ WRL_NOTHROW ComPtr& operator=(
   
  第七个版本是复制运算符使用移动语义;对类型的 ComPtr 的右值引用`U`是静态然后强制转换和分配给当前 ComPtr。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ComPtr 类](../windows/comptr-class.md)

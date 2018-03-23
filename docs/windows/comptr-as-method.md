@@ -1,12 +1,12 @@
 ---
-title: "Comptr:: As 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Comptr:: As 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr::As
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - As method
 ms.assetid: 2ad6c262-9bdb-4c59-a330-1af8bcd445cc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7edf8ebb089b3e39135edb14931197c984c6946c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f3602e8be11fa1569117968848e60bd86f59acd
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="comptras-method"></a>ComPtr::As 方法
 返回表示由指定模板参数标识的接口的 ComPtr 对象。  
@@ -35,16 +35,12 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-template<  
-   typename U  
->  
+template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
 ) const;  
   
-template<  
-   typename U  
->  
+template<typename U>  
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
@@ -64,10 +60,10 @@ HRESULT As(
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ComPtr 类](../windows/comptr-class.md)

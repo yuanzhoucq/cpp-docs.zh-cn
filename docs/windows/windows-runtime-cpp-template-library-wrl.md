@@ -1,31 +1,36 @@
 ---
-title: "Windows 运行时 c + + 模板库 (WRL) |Microsoft 文档"
-ms.custom: 
+title: Windows 运行时 c + + 模板库 (WRL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
-Windows 运行时 C++ 模板库 (WRL) 是一个提供低级别方式来创作和使用 Windows 运行时组件的模板库。  
+Windows 运行时 C++ 模板库 (WRL) 是一个提供低级别方式来创作和使用 Windows 运行时组件的模板库。
+
+> [!NOTE]
+> WRL 现在取代由 C + + /cli WinRT，标准 C + + 17 语言投影的 Windows 运行时 Api。 C + + /cli WinRT 位于 Windows 10 SDK，从版本 1803年开始。 C + + /cli WinRT 是完全在标头文件中实现和设计用于为现代的 Windows API 将你提供使用第一类的访问权限。
+
+> 使用 C + + /cli WinRT，你可以使用和创作使用任何符合标准的 C + + 17 编译器的 Windows 运行时 Api。 C + + /cli WinRT 通常更好地执行，并生成比任何其他语言选项的 Windows 运行时的较小二进制文件。 我们将继续支持 C + + /cli CX 和 WRL，但强烈建议，新的应用程序使用 C + + /cli WinRT。 有关详细信息，请参阅[C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。   
   
 ## <a name="benefits"></a>优点  
  Windows 运行时 c + + 模板库，可更轻松地实现和使用组件对象模型 (COM) 组件。 它提供引用计数这类管理技术来管理对象的生存期，并可通过测试 `HRESULT` 值来确定操作是否成功。 若要成功使用 Windows 运行时 c + + 模板库，你必须认真遵循这些规则和技术。  
@@ -57,9 +62,6 @@ Windows 运行时 C++ 模板库 (WRL) 是一个提供低级别方式来创作和
   
  [如何： 处理事件](../windows/how-to-handle-events-using-wrl.md)  
  演示如何使用 Windows 运行时 c + + 模板库订阅和处理 Windows 运行时对象的事件。  
-  
- [演练： 创建基本 Windows 运行时组件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- 演示如何使用 Windows 运行时 c + + 模板库创建两个数相加的基本 Windows 运行时组件。 此外演示如何引发事件，以及通过使用 JavaScript 的 UWP 应用使用组件。  
   
  [演练：使用 WRL 和媒体基础创建 UWP 应用](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  了解如何创建的 UWP 应用程序使用[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -144,7 +146,6 @@ Windows 运行时 C++ 模板库 (WRL) 是一个提供低级别方式来创作和
   
 |||  
 |-|-|  
-|[类库项目模板](../windows/wrl-class-library-project-template.md)|介绍如何访问 WRL 类库项目模板。 此模板有助于简化使用 Visual Studio 创建 Windows 运行时组件的任务。|  
 |[按类别列出的关键 Api](../windows/key-wrl-apis-by-category.md)|突出显示主的 Windows 运行时 c + + 模板库类型、 函数和宏。|  
 |[参考](../windows/wrl-reference.md)|包含 Windows 运行时 c + + 模板库的参考信息。|  
 |[快速参考 （Windows 运行时和 Visual c + +）](http://go.microsoft.com/fwlink/p/?linkid=229180)|简要介绍 C + + /cli CX 支持 Windows 运行时的功能。|  

@@ -1,12 +1,12 @@
 ---
-title: "InterfaceTraits 结构 |Microsoft 文档"
-ms.custom: 
+title: InterfaceTraits 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceTraits
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - InterfaceTraits structure
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c28c7c1eef2fc278a0667ec4b7c635005331467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b4b219091393b1195b60ae78347f952c2c9d37a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -38,9 +38,7 @@ template<
    typename I0  
 >  
 struct __declspec(novtable) InterfaceTraits;  
-template<  
-   typename CloakedType  
->  
+template<typename CloakedType>  
 struct __declspec(novtable) InterfaceTraits<CloakedIid<CloakedType>>;  
   
 template<>  
@@ -79,17 +77,17 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[InterfaceTraits::IidCount 常量](../windows/interfacetraits-iidcount-constant.md)|保存数量的接口 Id 与当前的 InterfaceTraits 对象相关联。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `InterfaceTraits`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
