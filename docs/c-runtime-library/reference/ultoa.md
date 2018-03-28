@@ -1,12 +1,12 @@
 ---
-title: "ultoa | Microsoft 文档"
-ms.custom: 
+title: ultoa | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ultoa
@@ -30,17 +30,17 @@ dev_langs:
 helpviewer_keywords:
 - ultoa function
 ms.assetid: 71acf6b6-a0dc-4442-b5ab-2456ae013f88
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e78a2e6f096da054f603c5be279a80c3b92066ef
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="ultoa"></a>ultoa
 此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_ultoa](../../c-runtime-library/reference/ultoa-ultow.md) 或安全性增强了的 [_ultoa_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)。

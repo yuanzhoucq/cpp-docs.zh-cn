@@ -1,12 +1,12 @@
 ---
-title: "_ultoa_s、_ultow_s | Microsoft 文档"
-ms.custom: 
+title: _ultoa_s、_ultow_s | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ultow_s
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - ultow_s function
 ms.assetid: 606ce905-6752-46ac-a15a-bdc22920e1d4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e6b882e8e4017410e0f377aaf4b49b658b39afa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s、_ultow_s
 将无符号长整数转换为字符串。 这些版本的 [_ultoa、_ultow](../../c-runtime-library/reference/ultoa-ultow.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
@@ -113,16 +113,16 @@ errno_t _ultow_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_ultoa_s`|\<stdlib.h>|  
 |`_ultow_s`|\<stdlib.h>|  
   
  有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [_ultoa、_ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
  [_ltoa、_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
