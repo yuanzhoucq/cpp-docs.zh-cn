@@ -1,12 +1,12 @@
 ---
-title: "strstr、wcsstr、_mbsstr、_mbsstr_l | Microsoft 文档"
-ms.custom: 
+title: strstr、wcsstr、_mbsstr、_mbsstr_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsstr
@@ -26,6 +26,7 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrstr
@@ -52,17 +53,17 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f085af36f08d3b2c0b27fa581089b478463d0e7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d56fc0f254a426eea10abec979ff7d656659bd82
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 返回指向字符串中的搜索字符串的第一个匹配项的指针。  
@@ -156,9 +157,9 @@ const unsigned char *_mbsstr_l(
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|  
 |**不适用**|**不适用**|`_mbsstr_l`|**不适用**|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`strstr`|\<string.h>|  
 |`wcsstr`|\<string.h> 或 \<wchar.h>|  
@@ -203,7 +204,7 @@ String to be searched:
 lazy found at position 36  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

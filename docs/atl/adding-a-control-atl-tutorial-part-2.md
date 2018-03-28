@@ -1,27 +1,27 @@
 ---
-title: "添加控件 (ATL 教程，第 2 部分) |Microsoft 文档"
-ms.custom: 
+title: 添加控件 (ATL 教程，第 2 部分) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>添加控件（ATL 教程，第 2 部分）
 在此步骤中，将控件添加到你的项目，生成它，并在网页上对其进行测试。  
@@ -32,13 +32,13 @@ ms.lasthandoff: 12/21/2017
   
 1.  在类视图中，右键单击多边形项目。  
   
-2.  指向**添加**快捷菜单，然后单击**类**的子菜单中。  
+2.  指向**添加**快捷菜单，然后单击**新项**的子菜单中。  
   
-     **添加类**对话框随即出现。 在左侧的树状结构列出了不同的对象类别。  
+     “添加新项”对话框随即出现。 在左侧的树状结构列出了不同的对象类别。  
   
 3.  单击**ATL**文件夹。  
   
-4.  从右侧的模板列表中，选择**ATL 控件**。 单击 **“添加”**。 ATL 控件向导将打开，并且可以配置该控件。  
+4.  从右侧的模板列表中，选择**ATL 控件**。 单击 **添加**。 ATL 控件向导将打开，并且可以配置该控件。  
   
 5.  类型`PolyCtl`短名称以及其他字段将自动完成的注意。 不要单击**完成**尚未，因为你必须进行一些更改。  
   
@@ -113,8 +113,8 @@ ms.lasthandoff: 12/21/2017
   
  接下来，你将向控件添加自定义属性。  
   
- [返回到步骤 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124;[到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [返回到步骤 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
 

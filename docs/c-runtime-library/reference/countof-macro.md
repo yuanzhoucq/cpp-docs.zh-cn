@@ -1,12 +1,9 @@
 ---
-title: "_countof 宏 | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _countof 宏 | Microsoft 文档
+ms.custom: ''
+ms.date: 03/22/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,71 +26,75 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f83244ce231ff3e11bc6fee1bbd221840fc1b83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="countof-macro"></a>_countof 宏
-计算静态分配的数组中元素的数量。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-size_t _countof(   
-   array  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `array`  
- 数组的名称。  
-  
-## <a name="return-value"></a>返回值  
- 数组中的元素数，表示为 `size_t`。  
-  
-## <a name="remarks"></a>备注  
- 确保 `array` 实际上是数组，而不是指针。 在 C 中，如果 `_countof` 是指针，则 `array` 将生成错误结果。 在 C++ 中，如果 `_countof` 是指针，则 `array` 将无法编译。  
-  
-## <a name="requirements"></a>要求  
-  
-|宏|必需的标头|  
-|-----------|---------------------|  
-|`_countof`|\<stdlib.h>|  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_countof.cpp  
-#define _UNICODE  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <tchar.h>  
-  
-int main( void )  
-{  
-   _TCHAR arr[20], *p;  
-   printf( "sizeof(arr) = %zu bytes\n", sizeof(arr) );  
-   printf( "_countof(arr) = %zu elements\n", _countof(arr) );  
-   // In C++, the following line would generate a compile-time error:  
-   // printf( "%zu\n", _countof(p) ); // error C2784 (because p is a pointer)  
-  
-   _tcscpy_s( arr, _countof(arr), _T("a string") );  
-   // unlike sizeof, _countof works here for both narrow- and wide-character strings  
-}  
-```  
-  
-```Output  
-sizeof(arr) = 40 bytes  
-_countof(arr) = 20 elements  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [sizeof 运算符](../../cpp/sizeof-operator.md)
+
+计算静态分配的数组中元素的数目。
+
+## <a name="syntax"></a>语法
+
+```C
+#define _countof(array) (sizeof(array) / sizeof(array[0]))
+```
+
+### <a name="parameters"></a>参数
+
+*array*<br/>
+数组的名称。
+
+## <a name="return-value"></a>返回值
+
+数组，表示为中的元素数**size_t**。
+
+## <a name="remarks"></a>备注
+
+`_countof` 实现为类似于函数的预处理器宏。 C + + 版本都具有额外的模板机械以检测在编译时，如果在将指针传递而不是静态声明数组。
+
+确保*数组*实际上是一个数组，不是指针。 在 C 中，`_countof`产生错误的结果，如果*数组*是指针。 C + + 中`_countof`无法编译如果*数组*是指针。  数组作为参数传递给函数*为指针 decays*，这意味着，在函数中，你无法使用`_countof`以确定数组的程度。
+
+## <a name="requirements"></a>要求
+
+|宏|必需的标头|
+|-----------|---------------------|
+|`_countof`|\<stdlib.h>|
+
+## <a name="example"></a>示例
+
+```cpp
+// crt_countof.cpp
+#define _UNICODE
+#include <stdio.h>
+#include <stdlib.h>
+#include <tchar.h>
+
+int main( void )
+{
+   _TCHAR arr[20], *p;
+   printf( "sizeof(arr) = %zu bytes\n", sizeof(arr) );
+   printf( "_countof(arr) = %zu elements\n", _countof(arr) );
+   // In C++, the following line would generate a compile-time error:
+   // printf( "%zu\n", _countof(p) ); // error C2784 (because p is a pointer)
+
+   _tcscpy_s( arr, _countof(arr), _T("a string") );
+   // unlike sizeof, _countof works here for both narrow- and wide-character strings
+}
+```
+
+```Output
+sizeof(arr) = 40 bytes
+_countof(arr) = 20 elements
+```
+
+## <a name="see-also"></a>请参阅
+
+[sizeof 运算符](../../cpp/sizeof-operator.md)<br/>

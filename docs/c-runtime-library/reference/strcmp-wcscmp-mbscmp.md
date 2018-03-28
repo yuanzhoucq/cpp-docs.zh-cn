@@ -1,12 +1,12 @@
 ---
-title: "strcmp、wcscmp、_mbscmp | Microsoft 文档"
-ms.custom: 
+title: strcmp、wcscmp、_mbscmp | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcscmp
@@ -26,6 +26,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
@@ -47,17 +48,17 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ced77db630f0cffede96192dbb9fc69ec0061db
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: addc2c215d0c914e3caee3dba4d32f94ca91e62c
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
 比较字符串。  
@@ -115,9 +116,9 @@ int _mbscmp(
   
  `strcmp` 函数区分大小写。 `_stricmp`、`_wcsicmp` 和 `_mbsicmp` 在比较字符串之前会首先将它们转换成小写形式。 包含 ASCII 表中“Z”和“a”之间的字符（“[”、“`\`”、“]”、“`^`”、“`_`”和“```”）的两个字符串，将会有不同的比较方式，这要具体取决于它们的大小写形式。 例如，如果比较采用小写形式，则 `"ABCDE"` 和 `"ABCD^"` 这两个字符串件将以一种方式进行比较 (`"abcde"` > `"abcd^"`)，而如果比较采用大写形式，则将采用另一种方式进行比较 (`"ABCDE"` < `"ABCD^"`)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`strcmp`|<string.h>|  
 |`wcscmp`|<string.h> 或 <wchar.h>|  
@@ -177,7 +178,7 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [_memicmp、_memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   
