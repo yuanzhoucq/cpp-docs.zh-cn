@@ -1,12 +1,12 @@
 ---
-title: "一元加号和非运算符: + 和-|Microsoft 文档"
-ms.custom: 
+title: '一元加号和非运算符: + 和-|Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12aba6e13f10d05c8559439427d2d28bcdad089d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8211cf9ebef808ad428e4c94ba97c6bcd22897ea
+ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元加号和非运算符：+ 和 -
 ## <a name="syntax"></a>语法  
@@ -56,8 +56,8 @@ ms.lasthandoff: 12/21/2017
  将对整型操作数执行整型提升，并且结果类型将是操作数将提升到的类型。 请参阅[标准转换](standard-conversions.md)有关如何执行提升的详细信息。  
   
 ## <a name="microsoft-specific"></a>Microsoft 专用  
- 通过从 2^n 中减去操作数的值来执行无符号数量的一元求反运算，其中 n 是给定的无符号类型的对象的位数。 （Microsoft C++ 运行于利用 2 的补数算法的处理器上。 在其他处理器上，负数的算法可以不同。）  
+ 通过从 2^n 中减去操作数的值来执行无符号数量的一元求反运算，其中 n 是给定的无符号类型的对象的位数。
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
