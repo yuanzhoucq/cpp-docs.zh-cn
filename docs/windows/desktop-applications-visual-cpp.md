@@ -1,33 +1,33 @@
 ---
-title: "桌面应用程序 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 桌面应用程序 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
 A*桌面应用程序*c + + 中是可以访问的 Windows Api，并在窗口中或在系统控制台任一运行整套的本机应用程序。 （尽管不再受正式支持 Windows XP，并且有从那时起已引入的许多 Windows Api），在 c + + 桌面应用程序可以通过 Windows 10 的 Windows XP 上运行。   桌面应用程序是不同于通用 Windows 平台 (UWP) 应用程序，可以在运行 Windows 10 的 Pc 上以及在 XBox、 Windows Phone、 Surface Hub 和其他设备上运行。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择您的技术](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
   
- **术语**  
+ **Terminology**  
   
 -   A *Win32*应用程序是一个 Windows 桌面应用程序可以进行的 c + + 中使用的本机[Windows C Api 和/或 COM Api](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和标准库 Api，和第三方库。 在窗口中运行的 Win32 应用程序需要开发人员可以显式使用 Windows 消息在窗口过程函数。 不管名称如何，Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制。 在 Visual Studio IDE 中的条款 x86 和 Win32 是同义词。  
   
@@ -54,8 +54,8 @@ A*桌面应用程序*c + + 中是可以访问的 Windows Api，并在窗口中�
 |标题|描述|  
 |-----------|-----------------|  
 |[Windows 开发](http://go.microsoft.com/fwlink/p/?LinkId=262282)|包含有关 Windows API 和 COM 的信息。 （某些 Windows API 和第三方 DLL 是作为 COM 对象实现的。）|  
-|[Hilo：开发适用于 Windows 7 的 C++ 应用程序](http://go.microsoft.com/fwlink/p/?LinkId=262284)|描述如何创建使用 Windows Animation 和 Direct2D 创建基于传送的用户界面的、客户端丰富的 Windows 桌面应用程序。  本教程尚未更新自 Windows 7，但它仍提供了 Win32 编程中的 throough 介绍。|  
+|[Hilo：开发适用于 Windows 7 的 C++ 应用程序](http://go.microsoft.com/fwlink/p/?LinkId=262284)|描述如何创建使用 Windows Animation 和 Direct2D 创建基于传送的用户界面的、客户端丰富的 Windows 桌面应用程序。  本教程尚未更新自 Windows 7，但它仍提供了 Win32 编程中的全面介绍。|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|描述 Visual C++ 在 Visual Studio 中的主要功能，并链接到 Visual C++ 文档的剩余部分。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual C++](../visual-cpp-in-visual-studio.md)
