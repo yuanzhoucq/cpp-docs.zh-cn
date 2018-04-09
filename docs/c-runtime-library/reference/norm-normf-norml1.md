@@ -1,13 +1,10 @@
 ---
-title: "norm、normf、norml1 | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: norm, normf, norml | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - norm
@@ -40,64 +37,61 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a694d2a8660a591265e0270ada5c3b87c07f308
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 28c8e05dfc2cc9e42584324a78ba14f37a9b951d
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml1
-检索复数的平方量值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-double norm(   
-   _Dcomplex z   
-);  
-float norm(   
-   _Fcomplex z   
-);  // C++ only  
-long double norm(   
-  _Lcomplex z   
-);  // C++ only  
-float normf(   
-   _Fcomplex z   
-);  
-long double norml(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `z`  
- 一个复数。  
-  
-## <a name="return-value"></a>返回值  
- `z` 的平方量值。  
-  
-## <a name="remarks"></a>备注  
- 由于 C++ 允许重载，因此可以调用采用 `_Fcomplex` 或 `_Lcomplex` 值的 `norm` 的重载，并返回 `float` 或 `long double` 值。 在 C 程序中，`norm` 始终采用 `_Dcomplex` 值并返回 `double` 值。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|C 标头|C++ 标头|  
-|-------------|--------------|------------------|  
-|`norm`,               `normf`, `norml`|\<complex.h>|\<ccomplex>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj、conjf、conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag、cimagf、cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+检索复数的平方量值。
+
+## <a name="syntax"></a>语法
+
+```C
+double norm( _Dcomplex z );
+float normf( _Fcomplex z );
+long double norml( _Lcomplex z );
+```
+
+```cpp
+float norm( _Fcomplex z );  // C++ only
+long double norm( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*z*<br/>
+一个复数。
+
+## <a name="return-value"></a>返回值
+
+平方的量*z*。
+
+## <a name="remarks"></a>备注
+
+由于 c + + 允许重载，你可以调用的重载`norm`采用**_Fcomplex**或**_Lcomplex**值，并返回**float**或**长double**值。 在 C 程序中，`norm`始终采用**_Dcomplex**值并返回**double**值。
+
+## <a name="requirements"></a>要求
+
+|例程|C 标头|C++ 标头|
+|-------------|--------------|------------------|
+|`norm`, `normf`, `norml`|\<complex.h>|\<ccomplex>|
+
+**_Fcomplex**， **_Dcomplex**，和**_Lcomplex**类型是特定于 Microsoft 的等效项的未实现的本机 C99 类型**float _Complex**， **double _Complex**，和**长双精度 _Complex**分别。  有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另请参阅
+
+[按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
+[cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
+[conj、conjf、conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
+[cimag、cimagf、cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
+[carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
+[cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>

@@ -23,11 +23,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a78f3bf043c08586916a1776806b0a759beb827
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -310,6 +310,35 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
+<<<<<<< HEAD
+4. 除了使用返回值本身，你可以"返回"值通过定义任意数量的参数以使用按引用传递，以便可以修改该函数或将其初始化的调用方提供的对象的值。 有关详细信息，请参阅[引用类型函数自变量](reference-type-function-arguments.md)。  
+  
+## <a name="function-pointers"></a>函数指针  
+ C++ 通过与 C 语言相同的方式支持函数指针。 但是更加类型安全的替代方法通常是使用函数对象。  
+  
+ 建议使用 `typedef` 声明函数指针类型的别名（如果声明返回函数指针类型的函数）。  例如  
+  
+```  
+typedef int (*fp)(int);  
+fp myFunction(char* s); // function returning function pointer  
+```  
+  
+ 如果不执行此操作，则函数声明的正确语法可以通过用函数名称和参数列表替换标识符（上例中为 `fp`）来从函数指针的声明符语法推导出，如下所示：  
+  
+```  
+int (*myFunction(char* s))(int);  
+```  
+  
+ 前面的声明与使用上面的 typedef 的声明等效。  
+  
+## <a name="see-also"></a>另请参阅  
+ [函数重载](../cpp/function-overloading.md)   
+ [具有变量自变量列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)   
+ [显式默认函数和已删除函数](../cpp/explicitly-defaulted-and-deleted-functions.md)   
+ [针对函数的依赖于参数的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
+ [默认自变量](../cpp/default-arguments.md)   
+ [内联函数](../cpp/inline-functions-cpp.md)
+=======
 ## <a name="returning-multiple-values-from-a-function"></a>从函数返回多个值
 
 有多种方法，以从函数返回多个值：
@@ -446,3 +475,4 @@ int (*myFunction(char* s))(int);
 - [针对函数的依赖于自变量的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [默认自变量](../cpp/default-arguments.md)
 - [内联函数](../cpp/inline-functions-cpp.md)
+>>>>>>> master
