@@ -1,12 +1,12 @@
 ---
-title: "搜索 Windows 用来定位 DLL 的路径 |Microsoft 文档"
-ms.custom: 
+title: 搜索 Windows 用来定位 DLL 的路径 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - finding DLLs
 - search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

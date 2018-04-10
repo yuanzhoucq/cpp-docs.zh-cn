@@ -1,12 +1,12 @@
 ---
-title: "优化代码 |Microsoft 文档"
-ms.custom: 
+title: 优化代码 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++

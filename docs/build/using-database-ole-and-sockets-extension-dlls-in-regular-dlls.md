@@ -1,12 +1,12 @@
 ---
-title: "在 MFC 的规则 Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll |Microsoft 文档"
-ms.custom: 
+title: 在 MFC 的规则 Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen

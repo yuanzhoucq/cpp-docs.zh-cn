@@ -1,17 +1,17 @@
 ---
-title: "展开数据定义 C 描述 |Microsoft 文档"
-ms.custom: 
+title: 展开数据定义 C 描述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 93cb6430-e4cf-43f5-ab60-3b57d1273b2c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

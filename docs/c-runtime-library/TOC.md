@@ -29,6 +29,7 @@
 ## [缓冲区操作](buffer-manipulation.md)
 ## [字节分类](byte-classification.md)
 ## [字符分类](character-classification.md)
+## [复杂数学支持](complex-math-support.md)
 ## [数据对齐](data-alignment.md)
 ## [数据转换](data-conversion.md)
 ## [调试例程](debug-routines.md)
