@@ -1,12 +1,12 @@
 ---
-title: "编译器错误 C2451 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2451 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C2451
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2451
 ms.assetid: a64c93a5-ab8d-4d39-ae57-9ee7ef803036
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

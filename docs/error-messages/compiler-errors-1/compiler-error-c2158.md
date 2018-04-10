@@ -1,12 +1,12 @@
 ---
-title: "编译器错误 C2158 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2158 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C2158
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2158
 ms.assetid: 39028899-e95c-4809-8e65-6111118641ee
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen

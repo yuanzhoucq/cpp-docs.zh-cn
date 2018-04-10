@@ -1,12 +1,12 @@
 ---
-title: "如何： 检索文件信息 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 检索文件信息 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - files [C++], retrieving information about
 - FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

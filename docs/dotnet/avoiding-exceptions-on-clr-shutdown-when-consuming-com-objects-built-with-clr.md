@@ -1,12 +1,12 @@
 ---
-title: "避免由 COM 对象生成的 clr 与引发的异常 |Microsoft 文档"
-ms.custom: 
+title: 避免由 COM 对象生成的 clr 与引发的异常 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - interoperability [C++], CLR shutdown exceptions
 - CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen

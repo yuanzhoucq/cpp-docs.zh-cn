@@ -1,12 +1,12 @@
 ---
-title: "错误 C1382 |Microsoft 文档"
-ms.custom: 
+title: 错误 C1382 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C1382
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C1382
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen

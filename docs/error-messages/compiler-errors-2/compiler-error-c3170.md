@@ -1,12 +1,12 @@
 ---
-title: "编译器错误 C3170 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3170 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C3170
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

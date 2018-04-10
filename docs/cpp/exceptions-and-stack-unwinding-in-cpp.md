@@ -1,17 +1,17 @@
 ---
-title: "异常和堆栈展开中 c + + |Microsoft 文档"
-ms.custom: 
+title: 异常和堆栈展开中 c + + |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen

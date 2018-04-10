@@ -1,12 +1,12 @@
 ---
-title: "错误 C1602 |Microsoft 文档"
-ms.custom: 
+title: 错误 C1602 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C1602
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C1602
 ms.assetid: a9365c58-fe66-49c4-a702-9bb75429cc1a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen

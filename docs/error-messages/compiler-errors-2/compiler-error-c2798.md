@@ -1,12 +1,12 @@
 ---
-title: "编译器错误 C2798 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2798 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C2798
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

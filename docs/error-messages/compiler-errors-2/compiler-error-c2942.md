@@ -1,12 +1,12 @@
 ---
-title: "编译器错误 C2942 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2942 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C2942
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2942
 ms.assetid: 13abf744-8fa1-450d-886d-e5717c04956e
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen

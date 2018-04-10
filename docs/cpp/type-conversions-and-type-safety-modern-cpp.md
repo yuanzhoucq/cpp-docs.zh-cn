@@ -1,17 +1,17 @@
 ---
-title: "类型转换和类型安全 （现代 c + +） |Microsoft 文档"
-ms.custom: 
+title: 类型转换和类型安全 （现代 c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
 manager: ghogen
