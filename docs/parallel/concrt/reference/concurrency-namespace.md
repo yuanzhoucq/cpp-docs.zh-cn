@@ -1,12 +1,12 @@
 ---
-title: "并发 Namespace |Microsoft 文档"
-ms.custom: 
+title: 并发 Namespace |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 
+caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 `Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -173,7 +173,7 @@ namespace concurrency;
   
 ### <a name="enumerations"></a>枚举  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|  
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|  
@@ -227,7 +227,7 @@ namespace concurrency;
 |[run_with_cancellation_token 函数](concurrency-namespace-functions.md#run_with_cancellation_token)|在给定取消标记的上下文中立即同步执行函数对象。|  
 |[send 函数](concurrency-namespace-functions.md#send)|已重载。 同步发送操作，它会一直等待，直到目标接受或拒绝消息。|  
 |[set_ambient_scheduler 函数 （并发运行时）](concurrency-namespace-functions.md#set_ambient_scheduler)||  
-|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|已重载。 将并发运行时内部工作线程使用的执行资源限制为指定的关联集。<br /><br /> 仅在创建资源管理器之前，或在两个资源管理器生存期之间调用此方法才是有效的。 只要资源管理器在调用时不存在，就可以多次调用它。 设置关联限制后，它仍然有效，直到对 `set_task_execution_resources` 方法的下一次有效调用。<br /><br /> 提供的关联掩码不需要是进程关联掩码的子集。 如果需要，将更新过程关联。|  
+|[set_task_execution_resources 函数](concurrency-namespace-functions.md#set_task_execution_resources)|已重载。 将并发运行时内部工作线程使用的执行资源限制为指定的关联集。<br /><br /> 仅在创建资源管理器之前，或在两个资源管理器生存期之间调用此方法才是有效的。 只要资源管理器在调用时不存在，就可以多次调用它。 设置关联限制后，它仍然有效，直到对 `set_task_execution_resources` 方法的下一次有效调用。<br /><br /> 提供的关联掩码不需要是进程关联掩码的子集。 如果需要，将更新过程关联。|  
 |[swap 函数](concurrency-namespace-functions.md#swap)|交换两个 `concurrent_vector` 对象的元素。|  
 |[task_from_exception 函数 （并发运行时）](concurrency-namespace-functions.md#task_from_exception)||  
 |[task_from_result 函数 （并发运行时）](concurrency-namespace-functions.md#task_from_result)||  
@@ -273,9 +273,9 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。|  
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|类别 GUID，描述由与虚拟处理器直接相关的并发运行时激发的 ETW 事件。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h、 concrt.h、 concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [参考](reference-concurrency-runtime.md)
 

@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>有关生成系统的更改
 MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 和早期版本中，使用了 VCBuild 系统。 某些文件类型和依赖 VCBuild 的概念不存在，或在当前系统中以不同方式表示。 本文档讨论当前的生成系统中的差异。  
@@ -59,7 +59,7 @@ MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 
   
  在当前版本中，通过指定属性的值的串联的一个或多个文本值和属性宏支持继承。 **$ （inherit)**和**$ （noinherit)**宏不支持。  
   
- 在下面的示例中，以分号分隔的列表分配到属性页上的属性。 列表包含的串联*\<值 >*文本和的值`MyProperty`属性，可通过使用宏表示法， **$(** *MyProperty***)**。  
+ 在下面的示例中，以分号分隔的列表分配到属性页上的属性。 列表包含的串联*\<值 >*文本和的值`MyProperty`属性，可通过使用宏表示法， **$(***MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
@@ -68,7 +68,7 @@ Property=<value>;$(MyProperty)
 ## <a name="vcxprojuser-files"></a>。 vcxproj.user 文件  
  用户文件 (。 vcxproj.user) 将存储特定于用户的属性，则对于示例、 调试和部署设置。 Vcxproj.user 文件适用于特定用户的所有项目。  
   
-## <a name="vcxprojfilters-file"></a>。 vcxproj.filters 文件  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
  当**解决方案资源管理器**用于将文件添加到项目中，筛选器文件 (。 vcxproj.filters) 定义中的何处**解决方案资源管理器**树的视图已添加文件，基于其文件扩展名。  
   
 ## <a name="vc-directories-settings"></a>VC + + 目录设置  
@@ -78,5 +78,5 @@ Property=<value>;$(MyProperty)
   
  从.vssettings 文件创建的早期版本的 Visual c + + 迁移 VC + + 目录设置。 打开**工具**菜单上，单击**导入和导出设置**，选择**导入选定的环境设置**，然后按照向导中的说明。 当您按或启动 Visual Studio 首次**选择默认环境设置**对话框中，选择**从早期版本迁移合格的设置并将其应用除了默认设置下面所选**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

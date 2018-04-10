@@ -1,12 +1,12 @@
 ---
-title: "complex 类 | Microsoft 文档"
-ms.custom: 
+title: complex 类 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - complex/std::complex::value_type
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dc697726709f0c5dd7640af0b52b3f8176538267
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="complex-class"></a>complex 类
 此模板类描述存储 **Type** 的两种对象类型的对象，一种表示复数的实部，另一种表示复数的虚部。  
@@ -85,7 +85,7 @@ class complex
 |[operator/=](#op_div_eq)|用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|  
 |[operator=](#op_eq)|向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：\<complex>  
   
  **命名空间：** std  
@@ -770,7 +770,7 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [complex 成员](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

@@ -1,12 +1,12 @@
 ---
-title: "back_insert_iterator 类 | Microsoft 文档"
-ms.custom: 
+title: back_insert_iterator 类 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - iterator/std::back_insert_iterator
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7646b26c1651ccf93fcc3bcb6828ae402ea5ca07
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 类
 描述满足输出迭代器需求的迭代器适配器。 它将元素插入到序列后端而非覆盖序列，因此它提供的语义不同于 C++ 序列容器的迭代器所提供的覆盖语义。 `back_insert_iterator` 类针对容器类型进行模板化。  
@@ -69,7 +69,7 @@ class back_insert_iterator;
 |[operator++](#op_add_add)|将 `back_insert_iterator` 递增到下一个可用来存储值的位置。|  
 |[operator=](#op_eq)|赋值运算符，用于实现末尾插入的输出迭代器表达式 *`i` = `x`。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：\<iterator>  
   
  **命名空间：** std  
@@ -414,7 +414,7 @@ The vector vec is: ( 1 2 3 ).
 The last element in the vector vec is: 3.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

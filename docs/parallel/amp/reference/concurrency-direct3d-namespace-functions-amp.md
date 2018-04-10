@@ -34,10 +34,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空间函数 (AMP)
 ||||  
@@ -48,11 +48,11 @@ ms.lasthandoff: 02/23/2018
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
-|[弧度为单位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 **标头：** amp.h **Namespace:**并发
   
 ##  <a name="abs"></a>  abs  
@@ -381,7 +381,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>返回值  
  返回在一个介于 -1 和 1 之间的 Perlin 噪音值  
   
-##  <a name="radians">弧度为单位</a>  
+##  <a name="radians"></a>  radians  
  将 _X 从度数转换成弧度  
   
 ```  
@@ -412,7 +412,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>返回值  
  指定的自变量的倒数。  
   
-##  <a name="reversebits">reversebits</a>  
+##  <a name="reversebits"></a>  reversebits  
  _X 中位的顺序反转  
   
 ```  
@@ -534,5 +534,5 @@ inline unsigned int umin(
 ### <a name="return-value"></a>返回值  
  返回自变量的最小数值  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)

@@ -1,12 +1,12 @@
 ---
-title: "上下文类 |Microsoft 文档"
-ms.custom: 
+title: 上下文类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Context 类
 表示执行上下文的抽象。  
@@ -56,7 +56,7 @@ class Context;
   
 |名称|描述|  
 |----------|-----------------|  
-|[~ Context 析构函数](#dtor)||  
+|[~Context Destructor](#dtor)||  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -70,7 +70,7 @@ class Context;
 |[Id](#id)|返回当前的上下文，在与当前上下文所属的计划程序中是唯一的标识符。|  
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|返回一个指示是否当前正在执行内联在当前上下文的任务集合处于活动取消 （或不久将）。|  
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|确定上下文同步被阻止。 若要以同步方式被阻止，如果它显式执行的操作导致阻塞，则认为该上下文。|  
-|[Oversubscribe](#oversubscribe)|注入计划程序额外的虚拟处理器的代码在执行上的虚拟处理器，在该计划程序之一的上下文中调用时块的持续时间。|  
+|[过度订阅](#oversubscribe)|注入计划程序额外的虚拟处理器的代码在执行上的虚拟处理器，在该计划程序之一的上下文中调用时块的持续时间。|  
 |[ScheduleGroupId](#schedulegroupid)|返回当前上下文正在处理的计划组的标识符。|  
 |[Unblock](#unblock)|取消阻止上下文，并使其成为可运行。|  
 |[VirtualProcessorId](#virtualprocessorid)|返回在其执行的当前上下文的虚拟处理器的标识符。|  
@@ -86,12 +86,12 @@ class Context;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Context`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
   
-##  <a name="block"></a> 块 
+##  <a name="block"></a> Block 
 
  阻止当前上下文。  
   
@@ -108,7 +108,7 @@ static void __cdecl Block();
   
  此方法会引发异常，包括各种[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)。  
   
-##  <a name="dtor"></a> ~ 上下文 
+##  <a name="dtor"></a> ~Context 
 
 ```
 virtual ~Context();
@@ -240,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>返回值  
  如果当前上下文附加到一个计划程序和运行的计划组时，计划程序的标识符组的当前上下文正在否则为值`-1`。  
   
-##  <a name="unblock"></a> 取消阻止 
+##  <a name="unblock"></a> Unblock 
 
  取消阻止上下文，并使其成为可运行。  
   
@@ -293,7 +293,7 @@ static void __cdecl YieldExecution();
   
  此函数是中的新增功能[!INCLUDE[vs_dev14](../../../ide/includes/vs_dev14_md.md)]和等同于[产生](#yield)起作用，但不与 Windows.h 中的 Yield 宏冲突。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)   
  [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

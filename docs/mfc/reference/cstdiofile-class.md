@@ -1,12 +1,12 @@
 ---
-title: "CStdioFile 类 |Microsoft 文档"
-ms.custom: 
+title: CStdioFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>CStdioFile 类
 表示 C 运行时流文件，并由运行时函数打开[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
@@ -89,10 +89,10 @@ class CStdioFile : public CFile
   
  `CStdioFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  构造并初始化一个 `CStdioFile` 对象。  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  `m_pStream`数据成员是由 C 运行时函数返回指向打开的文件的指针`fopen`。  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>备注  
  它是**NULL**如果文件从未打开或已关闭。  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  已重载。 打开专用于默认值`CStdioFile`构造函数。  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  一个字符串，是所需的文件的路径。 路径可以是相对或绝对。  
   
  `nOpenFlags`  
- 共享和访问模式。 指定当打开文件时要执行的操作。 你可以通过使用按位 OR (&#124;) 组合选项运算符。 一个访问权限和一个共享选项是必需的;modeCreate 和 modeNoInherit 模式是可选的。  
+ 共享和访问模式。 指定当打开文件时要执行的操作。 你可以通过使用按位 OR 组合选项 (&#124;) 运算符。 一个访问权限和一个共享选项是必需的;modeCreate 和 modeNoInherit 模式是可选的。  
   
  `pError`  
  指向将接收失败的操作的状态的现有文件异常对象的指针。  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  将文本数据读入的缓冲区，最多为`nMax`-1 个字符，与关联的文件从`CStdioFile`对象。  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  在先前已打开的文件指针重新定位。  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  将数据从缓冲区写入与关联的文件`CStdioFile`对象。  
   
 ```  
@@ -281,7 +281,7 @@ virtual void WriteString(LPCTSTR lpsz);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CFile 类](../../mfc/reference/cfile-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFile 类](../../mfc/reference/cfile-class.md)   

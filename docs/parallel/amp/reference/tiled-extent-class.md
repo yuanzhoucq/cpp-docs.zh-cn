@@ -1,12 +1,12 @@
 ---
-title: "tiled_extent 类 |Microsoft 文档"
-ms.custom: 
+title: tiled_extent 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent 类
 A`tiled_extent`对象是`extent`到一个、 两个或三维磁贴细分的扩展盘区空间的一到三个维度的对象。  
@@ -95,11 +95,11 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
-|[tile_dim0 Constant](#tile_dim0)|将存储的最重要的维度的长度。|  
-|[tile_dim1 Constant](#tile_dim1)|将存储的下一步的最重要的维度的长度。|  
-|[tile_dim2 Constant](#tile_dim2)|将存储的最低有效的维度的长度。|  
+|[tile_dim0 常量](#tile_dim0)|将存储的最重要的维度的长度。|  
+|[tile_dim1 常量](#tile_dim1)|将存储的下一步的最重要的维度的长度。|  
+|[tile_dim2 常量](#tile_dim2)|将存储的最低有效的维度的长度。|  
 
   
 ### <a name="public-data-members"></a>公共数据成员  
@@ -113,12 +113,12 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  `tiled_extent`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  
 
-## <a name="ctor">tiled_extent 构造函数</a>  
+## <a name="ctor"> </a>  tiled_extent 构造函数  
 初始化 `tiled_extent` 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -228,5 +228,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 ```  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

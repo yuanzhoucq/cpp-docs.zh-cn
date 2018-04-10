@@ -1,12 +1,12 @@
 ---
-title: "资源文件 (Visual Studio) |Microsoft 文档"
-ms.custom: 
+title: 资源文件 (Visual Studio) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -25,7 +25,7 @@ helpviewer_keywords:
 - .rct files
 - resource script files, unsupported types
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -33,10 +33,10 @@ ms.workload:
 - cplusplus
 - uwp
 ms.openlocfilehash: 117472c764dd6f13858881275b067600579a0fc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="resource-files-visual-studio"></a>资源文件 (Visual Studio)
 > [!NOTE]
@@ -92,10 +92,10 @@ ms.lasthandoff: 12/21/2017
   
 -   [受资源编辑影响的文件](../windows/files-affected-by-resource-editing.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源编辑器](../windows/resource-editors.md)   
  [使用资源文件](../windows/working-with-resource-files.md)   
  [菜单和其他资源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

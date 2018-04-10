@@ -1,12 +1,12 @@
 ---
-title: "completion_future 类 |Microsoft 文档"
-ms.custom: 
+title: completion_future 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>completion_future 类
 表示一个将来，对应于 c + + AMP 异步操作。  
@@ -74,7 +74,7 @@ class completion_future;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `completion_future`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amprt.h  
   
  **命名空间：** 并发  
@@ -102,7 +102,7 @@ completion_future(
   
 ### <a name="overloads-list"></a>重载列表  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |`completion_future();`|初始化 `completion_future` 类的新实例。|  
 |`completion_future(const completion_future& _Other);`|通过复制构造函数来初始化 `completion_future` 类的新实例。|  
@@ -118,7 +118,7 @@ completion_future(
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a> 运算符 std::shared_future<void> 
+## <a name="operator_shared_future"></a> operator std::shared_future<void> 
 
 将隐式转换`completion_future`对象传递给`std::shared_future`对象。  
   
@@ -131,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>返回值  
  一个 `std::shared_future` 对象。  
   
-## <a name="operator_eq"></a> 运算符 = 
+## <a name="operator_eq"></a> operator= 
 
 将指定的内容复制`completion_future`到此对象。  
   
@@ -151,7 +151,7 @@ completion_future&  operator= (completion_future&& _Other );
   
 ## <a name="overloads-list"></a>重载列表  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |`completion_future& operator=(const completion_future& _Other);`|使用深层复制将指定 `completion_future` 对象的内容复制到此对象中。|  
 |`completion_future& operator=(completion_future&& _Other);`|使用移动赋值将指定 `completion_future` 对象的内容复制到此对象中。|  
@@ -288,5 +288,5 @@ std::future_status::future_status wait_until(
 ~completion_future();  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

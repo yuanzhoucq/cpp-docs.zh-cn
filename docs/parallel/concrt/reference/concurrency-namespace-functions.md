@@ -1,10 +1,10 @@
 ---
-title: "并发命名空间函数 |Microsoft 文档"
-ms.custom: 
+title: 并发命名空间函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,17 +40,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions"></a>并发命名空间函数
 ||||  
@@ -1423,7 +1423,7 @@ inline void swap(
  提供要交换的元素的并发向量或其元素将要与并发向量交换的向量`_A`。  
   
 ### <a name="remarks"></a>备注  
- 模板函数是一种算法专用的容器类`concurrent_vector`执行成员函数`_A`。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). 这些是由编译器进行的函数模板部分排序的实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的常规版本`template <class T> void swap(T&, T&)`，算法类的工作原理是分配且较慢的操作。 每个容器中的专用化版本速度快很多，因为专用化版本可适用于容器类的内部表示形式。  
+ 模板函数是一种算法专用的容器类`concurrent_vector`执行成员函数`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 这些是由编译器进行的函数模板部分排序的实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的常规版本`template <class T> void swap(T&, T&)`，算法类的工作原理是分配且较慢的操作。 每个容器中的专用化版本速度快很多，因为专用化版本可适用于容器类的内部表示形式。  
   
  此方法不是并发安全。 你必须确保在调用此方法时，没有其他线程正在执行的并发向量中的任何一个的操作。  
   
@@ -1623,5 +1623,5 @@ auto when_any(
   
  有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
