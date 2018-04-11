@@ -1,5 +1,5 @@
 ---
-title: "初始化和委托构造函数的统一 |Microsoft 文档"
+title: "统一初始化和委派构造函数 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="uniform-initialization-and-delegating-constructors"></a>统一安装和委派构造函数
+# <a name="uniform-initialization-and-delegating-constructors"></a>统一初始化和委派构造函数
 在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当你具有执行类似工作的多个构造函数时，你可使用委托构造函数简化代码。  
   
 ## <a name="brace-initialization"></a>大括号初始化  
@@ -130,8 +130,8 @@ string s{ 'a', 'b', 'c' };
 regex rgx{'x', 'y', 'z'};   
 ```  
   
-## <a name="delegating-constructors"></a>委托构造函数  
- 许多类具有执行类似操作（例如，验证参数）的多个构造函数：  
+## <a name="delegating-constructors"></a>委派构造函数  
+ 许多类具有执行类似操作（例如参数验证）的多个构造函数：  
   
 ```cpp  
 class class_c {  

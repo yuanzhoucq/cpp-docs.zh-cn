@@ -33,22 +33,22 @@ C++ 是世界上最常用的编程语言之一。正确编写的 C++ 程序是�
   
 -   使用智能指针，而非裸指针。
   
--   使用`std::string`和`std::wstring`类型 (请参阅[\<字符串 >](../standard-library/string.md)) 而不是原始`char[]`数组。 
+-   使用`std::string`和`std::wstring`类型 (请参阅[\<string>](../standard-library/string.md)) 而不是裸的`char[]`数组。 
   
--   [C++ 标准库](../standard-library/cpp-standard-library-header-files.md)容器类似`vector`， `list`，和`map`而不是原始数组或自定义容器。请参阅[\<向量 >](../standard-library/vector.md)， [\<列表 >](../standard-library/list.md)，和[\<映射 >](../standard-library/map.md)。 
+-   使用诸如`vector`、`list`，和`map`等[C++ 标准库](../standard-library/cpp-standard-library-header-files.md)容器，而不是裸数组或手工编写的容器。请参阅[\<vector>](../standard-library/vector.md)， [\<list>](../standard-library/list.md)，和[\<map>](../standard-library/map.md)。 
   
--   C++ 标准库[算法](../standard-library/algorithm.md)而非手动编码的。 
+-   使用C++ 标准库[算法](../standard-library/algorithm.md)而非手工编写的算法实现。
   
--   异常，可报告和处理错误条件。 
+-   使用异常以报告和处理错误条件。 
   
--   使用 C++ 标准库的线程间通信无锁`std::atomic<>`(请参阅[\<原子 >](../standard-library/atomic.md)) 而不是其他线程间通信机制。 
+-   使用 C++ 标准库的`std::atomic<>`（请参阅[\<atomic>](../standard-library/atomic.md)）进行无锁的线程间通信，而不是其他线程间通信机制。 
   
--   内联[lambda 函数](../cpp/lambda-expressions-in-cpp.md)而不是单独实现的小函数。 
+-   使用内联的[lambda 函数](../cpp/lambda-expressions-in-cpp.md)而不是分开编写的小函数。 
   
--   基于范围的 for 循环，以编写更可靠处理数组、 C++ 标准库容器和 Windows 运行时窗体中的集合的循环`for ( for-range-declaration : expression )`。这是核心语言支持的一部分。有关详细信息，请参阅[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)。 
+-   使用基于范围的 for 循环（Range-based for loops），以编写更可靠的循环形式。即使用`for ( for-range-declaration : expression )`的形式来遍历数组、 C++ 标准库容器和 Windows 运行时中的集合。这是核心语言支持的一部分。有关详细信息，请参阅[基于范围的 for 语句 （C++）](../cpp/range-based-for-statement-cpp.md)。 
   
- C++ 语言本身也有所发展。比较以下代码片段。下面显示了过去 C++ 的代码片段：  
-  
+ C++ 语言自身也有所发展。请对比以下代码片段。以前的 C++ 代码是这样表达的 ：
+
 ```cpp  
 
 #include <vector>
@@ -79,7 +79,7 @@ void f()
 } // end f()
 ```
 
- 以下是用现代 C++ 完成同一操作的代码片段：  
+以下是用现代 C++ 完成同一操作的代码片段：  
   
 ```cpp
 
@@ -103,25 +103,25 @@ void f()
 
 ```
 
- 在现代 C++ 中，不必使用 new/delete 或显式异常处理，因为可以使用智能指针来替代。当你使用`auto`类型推导和[lambda 函数](../cpp/lambda-expressions-in-cpp.md)，你可以编写代码速度更快，加强代码并更好地了解。基于范围的和`for`循环是更简洁、 更轻松地使用，且不易造成意外的错误为 C 样式比`for`循环。可以使用样本和最少行数的代码来编写应用。你可以确保代码异常安全和内存安全，并且没有要处理的分配/解除分配或错误代码。 
+ 在现代 C++ 中，你不必使用 new/delete 或显式异常处理程序，因为可以使用智能指针来替代。当你使用`auto`类型推导和[lambda 函数](../cpp/lambda-expressions-in-cpp.md)时，可以更快地编写出紧凑而可读性高的代码。基于范围的`for`循环更简洁、 更易于使用，且与 C 样式的`for`循环相比，在编写时不易犯错。你可以使用这些样板，在尽可能少的行数内编写出一个应用程序。而你可以确保代码是异常安全和内存安全的，并且无需应对内存分配/释放或是错误码。 
   
- 现代 C++ 整合两种多态性：编译时（通过模板）和运行时（通过继承和虚拟化）。可以混合使用这两种多态性以增强效果。C++ 标准库模板`shared_ptr`使用内部虚拟方法完成其极为轻松类型擦除。但是，当模板是更好的选择时，请勿过度使用多态性的虚拟化。模板可以非常强大。 
+ 现代 C++ 整合了两种多态性：通过模板实现的编译时多态性，以及通过继承和虚拟化实现的运行时多态性。可以结合使用这两种多态性以增强效果。C++ 标准库模板`shared_ptr`通过内部的虚函数完成了其看似极为轻松类型擦除。但当模板是更好的选择时，请不要过度使用虚函数或虚类型来实现多态性。模板其实可以非常强大。
   
- 如果从其他语言（尤其是托管语言，其中大多数类型为引用类型，极少类型为值类型）转换到 C++，请注意 C++ 类在默认情况下是值类型。但是，你可以将这些 C++ 类指定为引用类型，从而实现多态行为以支持面向对象的编程。有帮助的观点：值类型与内存和布局控制更相关，而引用类型与支持多态性的基类和虚拟函数更相关。默认情况下，值类型可以复制，每个值类型都具有一个复制构造函数和一个复制赋值运算符。指定引用类型时，请将类设为不可复制（禁用复制构造函数和复制赋值运算符），并使用支持多态性的虚拟析构函数。值类型还与内容有关，复制时，这将提供可单独修改的两个独立值。但引用类型与标识（即对象类型）有关，因此有时称为多态类型。 
+ 如果你是从其他程序语言、尤其是以引用类型为主的托管语言转换到 C++ 的，请注意 C++ 的类在默认情况下都是值类型。但是，你可以将这些 C++ 类指定为引用类型，从而实现多态行为以支持面向对象的编程。有帮助的观点：值类型与内存以及内存布局控制更相关，而引用类型与支持多态性的基类和虚函数更相关。默认情况下，值类型是可复制的——每个值类型都具有一个拷贝构造函数和一个拷贝赋值运算符。当你在定义引用类型时，请将类设为不可复制的（禁用拷贝构造函数和拷贝赋值运算符），并定义虚析构函数以启用多态性。值类型与自身的内容更相关，当值类型的值被复制后，将会产生两个独立的、内容可分别被修改的值。但引用类型与标识——对象是什么种类的——更相关，因此引用类型有时被称为多态类型。 
   
- C++ 又一次兴起，因为功能再次占据首要位置。当程序员的工作效率很重要时，Java 和 C# 等语言是很好的选择，但当功能和性能至关重要时，此类语言就暴露出了自身限制。要实现高效率和强大功能，特别是在硬件有限的设备上，现代 C++ 无可匹敌。 
+ C++ 正在复兴，因为功能再次占据首要位置。当程序员的工作效率很重要时，Java 和 C# 等语言是很好的选择；但当功能和性能至关重要时，此类语言就暴露出了自身限制。要实现高效率和强大功能、特别是在硬件有限的设备上，现代 C++ 无可匹敌。 
   
- 不仅语言现代，开发工具也很现代。[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 可让开发周期的各个部分高效可靠。开发周期包括应用程序生命周期管理 (ALM) 工具、IntelliSense 等 IDE 增强功能、XAML 等工具友好机制，以及生成、调试和许多其他工具。 
+ 不仅语言现代，开发工具也很现代。[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 可让开发周期的各个部分高效可靠。开发周期包括应用程序生命周期管理 (ALM) 工具、IntelliSense 等 IDE 增强功能、XAML 等工具友好的机制，以及生成、调试和许多其他工具。 
   
  此部分文档中的文章提供了有关在编写现代 C++ 程序时最重要的功能和技术的深入指导与最佳做法。 
   
 -   [C++ 类型系统](../cpp/cpp-type-system-modern-cpp.md)  
   
--   [统一安装和委派构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)  
+-   [统一初始化和委派构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
 -   [对象生存期和资源管理](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
   
--   [对象所有资源 (RAII)](../cpp/objects-own-resources-raii.md)  
+-   [对象拥有资源 （RAII）](../cpp/objects-own-resources-raii.md)  
   
 -   [智能指针](../cpp/smart-pointers-modern-cpp.md)  
   
@@ -137,7 +137,7 @@ void f()
   
 -   [ABI 边界处的可移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 有关详细信息，请参阅 StackOverflow 文章[哪些 C++ 惯例 C++ 11 中已弃用](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ 有关详细信息，请参阅 StackOverflow 文章[哪些 C++ 用法在 C++ 11 中已经弃用](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)   
