@@ -1,5 +1,5 @@
 ---
-title: "C + + 位字段 |Microsoft 文档"
+title: "C++ 位字段 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

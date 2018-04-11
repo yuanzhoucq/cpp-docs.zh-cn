@@ -1,5 +1,5 @@
 ---
-title: "函数调用 （c + +） |Microsoft 文档"
+title: "函数调用 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

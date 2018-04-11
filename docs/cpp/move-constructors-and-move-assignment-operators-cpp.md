@@ -1,5 +1,5 @@
 ---
-title: "移动构造函数和移动赋值运算符 （c + +） |Microsoft 文档"
+title: "移动构造函数和移动赋值运算符 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移动构造函数和移动赋值运算符 (C++)
-本主题介绍如何编写*移动构造函数*和移动赋值运算符的 c + + 类。 利用移动构造函数，您可以实现移动语义，从而显著提高应用程序的性能。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+本主题介绍如何编写*移动构造函数*和移动赋值运算符的 C++ 类。 利用移动构造函数，您可以实现移动语义，从而显著提高应用程序的性能。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  此主题基于用于管理内存缓冲区的 C++ 类 `MemoryBlock`。  
   
@@ -226,7 +226,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>示例  
- 以下示例演示移动语义如何能提高应用程序的性能。 此示例将两个元素添加到一个矢量对象，然后在两个现有元素之间插入一个新元素。 在 Visual c + + 2010 中，`vector`类使用移动语义来高效地执行插入操作，通过移动而不是将其复制向量的元素。  
+ 以下示例演示移动语义如何能提高应用程序的性能。 此示例将两个元素添加到一个矢量对象，然后在两个现有元素之间插入一个新元素。 在 Visual C++ 2010 中，`vector`类使用移动语义来高效地执行插入操作，通过移动而不是将其复制向量的元素。  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -271,7 +271,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- 在 Visual c + + 2010 中之前, 该示例产生下面的输出：  
+ 在 Visual C++ 2010 中之前, 该示例产生下面的输出：  
   
 ```  
 In MemoryBlock(size_t). length = 25.  

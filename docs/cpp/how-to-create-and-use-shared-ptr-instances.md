@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
 ## <a name="example"></a>示例  
- `shared_ptr`也是有帮助 c + + 标准库容器中使用复制元素的算法时。 您可以将元素包装在 `shared_ptr` 中，然后将其复制到其他容器中（请记住，只要您需要，基础内存就会一直有效）。 以下示例演示如何在向量中对 `replace_copy_if` 实例使用 `shared_ptr` 算法。  
+ `shared_ptr`也是有帮助 C++ 标准库容器中使用复制元素的算法时。 您可以将元素包装在 `shared_ptr` 中，然后将其复制到其他容器中（请记住，只要您需要，基础内存就会一直有效）。 以下示例演示如何在向量中对 `replace_copy_if` 实例使用 `shared_ptr` 算法。  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   

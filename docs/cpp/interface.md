@@ -48,7 +48,7 @@ modifier
 ```  
   
 ## <a name="remarks"></a>备注  
- C + +[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)无法实现与这些规则，但`__interface`执行它们的时间。  
+ C++[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)无法实现与这些规则，但`__interface`执行它们的时间。  
   
  例如，以下是示例接口定义：  
   

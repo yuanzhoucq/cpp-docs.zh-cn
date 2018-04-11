@@ -1,5 +1,5 @@
 ---
-title: "复制构造函数和复制赋值运算符 （c + +） |Microsoft 文档"
+title: "复制构造函数和复制赋值运算符 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>复制构造函数和复制赋值运算符 (C++)
 > [!NOTE]
->  从 C + + 11 开始，两种类型的分配支持的语言：*复制分配*和*移动赋值*。 在本文中，“赋值”意味着复制赋值，除非有其他显式声明。 有关移动分配的信息，请参阅[移动构造函数和移动赋值运算符 （c + +）](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db)。  
+>  从 C++ 11 开始，两种类型的分配支持的语言：*复制分配*和*移动赋值*。 在本文中，“赋值”意味着复制赋值，除非有其他显式声明。 有关移动分配的信息，请参阅[移动构造函数和移动赋值运算符 （C++）](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db)。  
 >   
 >  赋值操作和初始化操作都会导致对象被复制。  
   

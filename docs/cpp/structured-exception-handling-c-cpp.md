@@ -1,5 +1,5 @@
 ---
-title: "结构化异常处理 （C/c + +） |Microsoft 文档"
+title: "结构化异常处理 （C/C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  使用 SEH，你可以确保执行意外终止时资源（如内存块和文件）是正确的。 你还可以处理特定问题 — 例如，没有足够的内存 — 方法是使用简洁的结构化的代码，该代码不依赖于 `goto` 语句或返回代码的详尽测试。  
   
- 这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 如果在通过使用 c + + 程序中使用 SEH [/EH](../build/reference/eh-exception-handling-model.md)选项 — 以及某些修饰符-会调用本地对象的析构函数，但其他执行行为可能不是你的预期。 （有关图示，请参阅本文后面的示例。）在大多数情况下，而不是 SEH 我们建议你使用 ISO 标准[c + + 异常处理](../cpp/try-throw-and-catch-statements-cpp.md)，Visual c + + 还支持。 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。  
+ 这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 如果在通过使用 C++ 程序中使用 SEH [/EH](../build/reference/eh-exception-handling-model.md)选项 — 以及某些修饰符-会调用本地对象的析构函数，但其他执行行为可能不是你的预期。 （有关图示，请参阅本文后面的示例。）在大多数情况下，而不是 SEH 我们建议你使用 ISO 标准[C++ 异常处理](../cpp/try-throw-and-catch-statements-cpp.md)，Visual C++ 还支持。 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。  
   
  如果你有使用 SEH 的 C 模块，你可以将它们与使用 C++ 异常处理的 C++ 模块混合使用。 有关信息，请参阅[异常处理差异](../cpp/exception-handling-differences.md)。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 -   [将结构化异常处理用于 C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>示例  
- 如上文所述，析构函数会调用本地对象，如果你在 c + + 程序中使用 SEH，并通过对其进行编译的**/EH**具有某些修饰符的选项 — 例如， **/EHsc**和**/EHa**. 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 下面的示例演示这些行为差异。  
+ 如上文所述，析构函数会调用本地对象，如果你在 C++ 程序中使用 SEH，并通过对其进行编译的**/EH**具有某些修饰符的选项 — 例如， **/EHsc**和**/EHa**. 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 下面的示例演示这些行为差异。  
   
 ```cpp  
 #include <stdio.h>  
@@ -130,7 +130,7 @@ Triggering SEH exception
 Executing SEH __except block  
 ```  
   
- 如果你使用**/EHsc**来编译代码和`CPPEX`使用定义`/DCPPEX`（以致引发 c + + 异常），则`TestClass`析构函数执行并输出如下所示：  
+ 如果你使用**/EHsc**来编译代码和`CPPEX`使用定义`/DCPPEX`（以致引发 C++ 异常），则`TestClass`析构函数执行并输出如下所示：  
   
 ```Output  
 Throwing C++ exception  

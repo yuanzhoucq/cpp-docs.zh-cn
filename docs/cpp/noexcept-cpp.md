@@ -1,5 +1,5 @@
 ---
-title: "noexcept （c + +） |Microsoft 文档"
+title: "noexcept （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 01/12/2018
 ms.reviewer: 
@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/16/2018
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
-**C + + 11:**指定函数是否可能引发异常。  
+**C++ 11:**指定函数是否可能引发异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,4 +53,4 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 异常处理](cpp-exception-handling.md)[异常规范 （throw，noexcept）](exception-specifications-throw-cpp.md)
+ [C++ 异常处理](cpp-exception-handling.md)[异常规范 （throw，noexcept）](exception-specifications-throw-cpp.md)

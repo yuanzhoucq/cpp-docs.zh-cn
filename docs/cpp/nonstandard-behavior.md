@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="nonstandard-behavior"></a>非标准行为
 以下几节将列出 C++ 的 Visual C++ 实现不遵循 C++ 标准的几处地方。 下面给出的节号引用了 C++ 11 标准 (ISO/IEC 14882:2011(E)) 中的节号。  
   
- 编译器限制不同的 c + + 标准中所定义的列表中提供了[编译器限制](../cpp/compiler-limits.md)。  
+ 编译器限制不同的 C++ 标准中所定义的列表中提供了[编译器限制](../cpp/compiler-limits.md)。  
   
 ## <a name="covariant-return-types"></a>协变返回类型  
  当虚函数具有可变数量的参数时，不支持虚拟基类作为协变返回类型。 这不符合 C++ ISO 规范第 10.3 节第 7 段。 下面的示例无法进行编译，产生编译器错误[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
@@ -82,7 +82,7 @@ void g() throw();    // parsed and used
  有关异常规范的详细信息，请参阅[异常规范](../cpp/exception-specifications-throw-cpp.md)。  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual C++ 编译器对 `char` 类型强制实行该约束，但不对 `wchar_t` 类型实行。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的需求。 下面的示例将说明这一点。  
+ C++ 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual C++ 编译器对 `char` 类型强制实行该约束，但不对 `wchar_t` 类型实行。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的需求。 下面的示例将说明这一点。  
   
 ```cpp  
 #include <iostream>  

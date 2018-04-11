@@ -1,5 +1,5 @@
 ---
-title: "解决不明确声明 （c + +） |Microsoft 文档"
+title: "解决不明确声明 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="resolving-ambiguous-declarations-c"></a>解决不明确声明 （c + +）
+# <a name="resolving-ambiguous-declarations-c"></a>解决不明确声明 （C++）
 若要执行从一种类型到另一种类型的显式转换，您必须使用强制转换并指定所需的类型名称。 某些类型转换会导致句法歧义。 下面的函数样式类型转换是不明确的：  
   
 ```  

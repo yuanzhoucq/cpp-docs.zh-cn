@@ -157,7 +157,7 @@ double& func2( double& d, const char *c ) {
   
  如果使用省略号，则必须在自变量列表中最后声明它。 有关传递可变数量的自变量的详细信息，请参阅的讨论[va_arg、 va_start 和 va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)中*运行时库参考*。  
   
- 有关 CLR 编程中默认参数的信息，请参阅[变量自变量列表 （...）(C + + /CLI CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
+ 有关 CLR 编程中默认参数的信息，请参阅[变量自变量列表 （...）(C++ /CLI CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
  如果函数调用中没有提供值，则可通过默认自变量指定自变量应采用的值。 以下代码片段演示默认自变量的工作方式。 指定默认自变量的限制的详细信息，请参阅[默认自变量](../cpp/default-arguments.md)。  
   

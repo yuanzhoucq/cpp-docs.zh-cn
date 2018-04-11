@@ -1,5 +1,5 @@
 ---
-title: "初始化类和结构而无需构造函数 （c + +） |Microsoft 文档"
+title: "初始化类和结构而无需构造函数 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

@@ -1,5 +1,5 @@
 ---
-title: "欢迎回到 c + + （现代 c + +） |Microsoft 文档"
+title: "欢迎回到 C++ （现代 C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ C++ 是世界上最常用的编程语言之一。正确编写的 C++ 程序是�
   
 -   使用`std::string`和`std::wstring`类型 (请参阅[\<字符串 >](../standard-library/string.md)) 而不是原始`char[]`数组。 
   
--   [C + + 标准库](../standard-library/cpp-standard-library-header-files.md)容器类似`vector`， `list`，和`map`而不是原始数组或自定义容器。请参阅[\<向量 >](../standard-library/vector.md)， [\<列表 >](../standard-library/list.md)，和[\<映射 >](../standard-library/map.md)。 
+-   [C++ 标准库](../standard-library/cpp-standard-library-header-files.md)容器类似`vector`， `list`，和`map`而不是原始数组或自定义容器。请参阅[\<向量 >](../standard-library/vector.md)， [\<列表 >](../standard-library/list.md)，和[\<映射 >](../standard-library/map.md)。 
   
--   C + + 标准库[算法](../standard-library/algorithm.md)而非手动编码的。 
+-   C++ 标准库[算法](../standard-library/algorithm.md)而非手动编码的。 
   
 -   异常，可报告和处理错误条件。 
   
--   使用 c + + 标准库的线程间通信无锁`std::atomic<>`(请参阅[\<原子 >](../standard-library/atomic.md)) 而不是其他线程间通信机制。 
+-   使用 C++ 标准库的线程间通信无锁`std::atomic<>`(请参阅[\<原子 >](../standard-library/atomic.md)) 而不是其他线程间通信机制。 
   
 -   内联[lambda 函数](../cpp/lambda-expressions-in-cpp.md)而不是单独实现的小函数。 
   
--   基于范围的 for 循环，以编写更可靠处理数组、 c + + 标准库容器和 Windows 运行时窗体中的集合的循环`for ( for-range-declaration : expression )`。这是核心语言支持的一部分。有关详细信息，请参阅[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)。 
+-   基于范围的 for 循环，以编写更可靠处理数组、 C++ 标准库容器和 Windows 运行时窗体中的集合的循环`for ( for-range-declaration : expression )`。这是核心语言支持的一部分。有关详细信息，请参阅[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)。 
   
  C++ 语言本身也有所发展。比较以下代码片段。下面显示了过去 C++ 的代码片段：  
   
@@ -105,7 +105,7 @@ void f()
 
  在现代 C++ 中，不必使用 new/delete 或显式异常处理，因为可以使用智能指针来替代。当你使用`auto`类型推导和[lambda 函数](../cpp/lambda-expressions-in-cpp.md)，你可以编写代码速度更快，加强代码并更好地了解。基于范围的和`for`循环是更简洁、 更轻松地使用，且不易造成意外的错误为 C 样式比`for`循环。可以使用样本和最少行数的代码来编写应用。你可以确保代码异常安全和内存安全，并且没有要处理的分配/解除分配或错误代码。 
   
- 现代 C++ 整合两种多态性：编译时（通过模板）和运行时（通过继承和虚拟化）。可以混合使用这两种多态性以增强效果。C + + 标准库模板`shared_ptr`使用内部虚拟方法完成其极为轻松类型擦除。但是，当模板是更好的选择时，请勿过度使用多态性的虚拟化。模板可以非常强大。 
+ 现代 C++ 整合两种多态性：编译时（通过模板）和运行时（通过继承和虚拟化）。可以混合使用这两种多态性以增强效果。C++ 标准库模板`shared_ptr`使用内部虚拟方法完成其极为轻松类型擦除。但是，当模板是更好的选择时，请勿过度使用多态性的虚拟化。模板可以非常强大。 
   
  如果从其他语言（尤其是托管语言，其中大多数类型为引用类型，极少类型为值类型）转换到 C++，请注意 C++ 类在默认情况下是值类型。但是，你可以将这些 C++ 类指定为引用类型，从而实现多态行为以支持面向对象的编程。有帮助的观点：值类型与内存和布局控制更相关，而引用类型与支持多态性的基类和虚拟函数更相关。默认情况下，值类型可以复制，每个值类型都具有一个复制构造函数和一个复制赋值运算符。指定引用类型时，请将类设为不可复制（禁用复制构造函数和复制赋值运算符），并使用支持多态性的虚拟析构函数。值类型还与内容有关，复制时，这将提供可单独修改的两个独立值。但引用类型与标识（即对象类型）有关，因此有时称为多态类型。 
   
@@ -115,7 +115,7 @@ void f()
   
  此部分文档中的文章提供了有关在编写现代 C++ 程序时最重要的功能和技术的深入指导与最佳做法。 
   
--   [C + + 类型系统](../cpp/cpp-type-system-modern-cpp.md)  
+-   [C++ 类型系统](../cpp/cpp-type-system-modern-cpp.md)  
   
 -   [统一安装和委派构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
@@ -131,16 +131,16 @@ void f()
   
 -   [算法](../cpp/algorithms-modern-cpp.md)  
   
--   [字符串和 I/O 格式化 （现代 c + +）](../cpp/string-and-i-o-formatting-modern-cpp.md)  
+-   [字符串和 I/O 格式化 （现代 C++）](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
 -   [错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
 -   [ABI 边界处的可移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 有关详细信息，请参阅 StackOverflow 文章[哪些 c + + 惯例 C + + 11 中已弃用](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ 有关详细信息，请参阅 StackOverflow 文章[哪些 C++ 惯例 C++ 11 中已弃用](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)  
  [Visual C++ 语言一致性](../visual-cpp-language-conformance.md)  

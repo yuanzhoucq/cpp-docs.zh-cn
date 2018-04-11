@@ -1,5 +1,5 @@
 ---
-title: "数组 （c + +） |Microsoft 文档"
+title: "数组 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

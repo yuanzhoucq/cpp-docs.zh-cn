@@ -57,7 +57,7 @@ i++;
   
  后缀递增运算符和后缀递减运算符的操作数必须是可修改 (不**const**) 的算法或指针类型的左值。 结果的类型是相同的*后缀表达式*，但它不再是左值。  
   
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀递增或递减运算符不能为类型`bool`。
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀递增或递减运算符不能为类型`bool`。
   
  以下代码演示了后缀递增运算符：  
   
@@ -84,5 +84,5 @@ for( myCompass = North; myCompass != West; myCompass++ ) // Error
   
 ## <a name="see-also"></a>请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 后缀增量和减量运算符](../c-language/c-postfix-increment-and-decrement-operators.md)

@@ -38,7 +38,7 @@ char32_t ch4{ L'a' };// or {L'a'}
 ```  
   
 ## <a name="remarks"></a>备注  
- `char` 类型是 C 和 C++ 中的原始字符类型。 它可以用于存储 ASCII 字符集或所有 ISO-8859 字符集或 UTF-8 字符集中的字符。 类型`unsigned char`通常用于表示*字节*这不是 c + + 中的内置类型。 Char 类型不适用于很多语言的文本。 一般情况下，现代程序应使用一种宽字符类型来表示文本。 Unicode 是  
+ `char` 类型是 C 和 C++ 中的原始字符类型。 它可以用于存储 ASCII 字符集或所有 ISO-8859 字符集或 UTF-8 字符集中的字符。 类型`unsigned char`通常用于表示*字节*这不是 C++ 中的内置类型。 Char 类型不适用于很多语言的文本。 一般情况下，现代程序应使用一种宽字符类型来表示文本。 Unicode 是  
   
  在 C++ 标准库中，basic_string 类型专用于窄字符串和宽字符串。 当字符类型为 char 时，使用 std::string，字符类型为 wchar_t 时，则使用 std::wstring。 其他表示文本的类型，包括 std::stringstream 和 std::cout 均可专用于窄字符串和宽字符串。  
   

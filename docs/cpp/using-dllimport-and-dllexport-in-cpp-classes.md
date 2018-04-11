@@ -1,5 +1,5 @@
 ---
-title: "C + + 类中使用 dllimport 和 dllexport |Microsoft 文档"
+title: "C++ 类中使用 dllimport 和 dllexport |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>在 C++ 类中使用 dllimport 和 dllexport
 ## <a name="microsoft-specific"></a>Microsoft 专用  
- 你可以声明具有 c + + 类**dllimport**或`dllexport`属性。 这些形式表示已导入或导出整个类。 以这种方式导出的类称为可导出类。  
+ 你可以声明具有 C++ 类**dllimport**或`dllexport`属性。 这些形式表示已导入或导出整个类。 以这种方式导出的类称为可导出类。  
   
  以下示例定义了可导出类。 将导出其所有成员函数和静态数据：  
   

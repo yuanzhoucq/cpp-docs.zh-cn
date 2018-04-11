@@ -1,5 +1,5 @@
 ---
-title: "函数具有变量自变量列表 （c + +） |Microsoft 文档"
+title: "函数具有变量自变量列表 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,7 +27,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>包含变量自变量列表的函数 （c + +）
+# <a name="functions-with-variable-argument-lists--c"></a>包含变量自变量列表的函数 （C++）
 如果函数声明中最后一个成员是省略号 (...)，则函数声明可采用数量可变的自变量。 在这些情况下，C++ 只为显式声明的参数提供类型检查。 即使自变量的数量和类型是可变的，在需要使函数泛化时也可使用变量自变量列表。 函数的系列是一个示例使用变量自变量列表的函数。`printf`*自变量声明列表*  
   
 ## <a name="functions-with-variable-arguments"></a>包含变量自变量的函数  

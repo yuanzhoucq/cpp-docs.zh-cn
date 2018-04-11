@@ -1,5 +1,5 @@
 ---
-title: "构造函数 （c + +） |Microsoft 文档"
+title: "构造函数 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [委托构造函数](#delegating_constructors)  
   
--   [继承构造函数 (C + + 11)](#inheriting_constructors)  
+-   [继承构造函数 (C++ 11)](#inheriting_constructors)  
   
 -   [声明构造函数的规则](#rules_for_declaring_constructors)  
   
@@ -268,7 +268,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```  
   
 ##  <a name="copy_and_move_constructors"></a>复制和移动构造函数  
- A*复制构造函数*是特殊成员函数，将作为输入的相同对象的引用类型，并使它的一个副本。 有关详细信息，请参阅[复制构造函数和复制赋值运算符 （c + +）](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)。 A*移动构造函数*也是将现有对象的数据的所有权移动到新变量，而不复制原始数据的特殊成员函数。 有关详细信息，请参阅[移动构造函数和移动赋值运算符 （c + +）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
+ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的引用类型，并使它的一个副本。 有关详细信息，请参阅[复制构造函数和复制赋值运算符 （C++）](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)。 A*移动构造函数*也是将现有对象的数据的所有权移动到新变量，而不复制原始数据的特殊成员函数。 有关详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
   
 ##  <a name="explicitly_defaulted_and_deleted_constructors"></a>显式默认和已删除构造函数  
  你可以显式*默认*复制构造函数、 默认构造函数、 移动构造函数、 复制赋值运算符、 移动赋值运算符和析构函数。 你可以显式*删除*所有特殊成员函数。 有关详细信息，请参阅[显式默认函数和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)。  
@@ -515,7 +515,7 @@ ConstructorDestructor destructor.
   
  有关详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)。  
   
-##  <a name="inheriting_constructors"></a>继承构造函数 (C + + 11)  
+##  <a name="inheriting_constructors"></a>继承构造函数 (C++ 11)  
  派生类可以使用 using 声明从直接基类继承构造函数，如下面的示例所示：  
   
 ```  

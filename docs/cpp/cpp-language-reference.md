@@ -1,5 +1,5 @@
 ---
-title: "C + + 语言参考 |Microsoft 文档"
+title: "C++ 语言参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,13 +26,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>C++ 语言参考
-本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 基于组织*c + + 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO c + + 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。  
+本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 基于组织*C++ 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO C++ 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。  
 
-有关现代 c + + 编程做法的概述，请参阅[欢迎回到 c + +](welcome-back-to-cpp-modern-cpp.md)。
+有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
   
  请参阅下面的表以快速查找关键字或运算符：  
   
--   [C + + 关键字](../cpp/keywords-cpp.md)  
+-   [C++ 关键字](../cpp/keywords-cpp.md)  
   
 -   [C++ 运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/21/2017
  [非标准行为](../cpp/nonstandard-behavior.md)  
  有关 Visual C++ 编译器的非标准行为的信息。  
 
- [欢迎回到 c + +](welcome-back-to-cpp-modern-cpp.md)用于编写安全、 正确且高效程序做法现代 c + + 编程的概述。
+ [欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)用于编写安全、 正确且高效程序做法现代 C++ 编程的概述。
   
 ## <a name="related-sections"></a>相关章节  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)  

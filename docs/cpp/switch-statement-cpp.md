@@ -1,5 +1,5 @@
 ---
-title: "切换语句 （c + +） |Microsoft 文档"
+title: "切换语句 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -87,7 +87,7 @@ int main() {
   
  在上面的示例中，如果 `capa` 是大写 `c`，则 `A` 将递增。 `break` 之后的 `capa++` 语句会终止 `switch` 语句体的执行并将控制转移到 `while` 循环。 而无需`break`语句中，执行将"贯穿"到下一步的标记语句，以便`lettera`和`nota`也将递增。 `break` 的 `case 'a'` 语句也能达到类似的目的。 如果 `c` 是小写 `a`，则 `lettera` 将递增，并且 `break` 语句将终止 `switch` 语句体。 如果 `c` 不是 `a` 或 `A`，则将执行 `default` 语句。  
 
- **2017 及更高版本的 visual Studio:** (适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` C + + 17 标准中指定属性。 可在`switch`语句该回退通过行为旨在作为提示编译器 （或任何人阅读代码）。 Visual c + + 编译器当前不会警告 fallthrough 行为，因此此特性没有任何效果编译器行为。 请注意，该属性将应用于标记的语句; 中的空语句换而言之，分号是必需的。
+ **2017 及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` C++ 17 标准中指定属性。 可在`switch`语句该回退通过行为旨在作为提示编译器 （或任何人阅读代码）。 Visual C++ 编译器当前不会警告 fallthrough 行为，因此此特性没有任何效果编译器行为。 请注意，该属性将应用于标记的语句; 中的空语句换而言之，分号是必需的。
 
 ```cpp
 int main()
@@ -115,7 +115,7 @@ int main()
 }
 ```
 
- **Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): switch 语句可能引入并初始化其作用域仅限于 switch 语句的块变量：
+ **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): switch 语句可能引入并初始化其作用域仅限于 switch 语句的块变量：
 
 ```cpp
  switch (Gadget gadget(args); auto s = gadget.get_status())

@@ -61,7 +61,7 @@ __finally {
  有关相关的信息和代码示例，请参阅[重-除非语句](../cpp/try-except-statement.md)。 一般情况下处理结构化异常的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 在托管应用程序中处理异常的详细信息，请参阅[在 /clr 下的异常处理](../windows/exception-handling-cpp-component-extensions.md)。  
   
 > [!NOTE]
->  结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 c + + 程序，建议你使用 c + + 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。  
+>  结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。  
   
  `__try` 子句后的复合语句是受保护节。 `__finally` 子句后的复合语句是终止处理程序。 处理程序指定了在退出受保护部分时执行的一组操作，无论受保护部分是因异常（不正常终止）还是因标准失效（正常终止）导致退出。  
   
@@ -99,6 +99,6 @@ __finally {
   
 ## <a name="see-also"></a>请参阅  
  [编写终止处理程序](../cpp/writing-a-termination-handler.md)   
- [结构化的异常处理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
+ [结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [终止处理程序语法](http://msdn.microsoft.com/library/windows/desktop/ms681393)

@@ -112,8 +112,8 @@ public:
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [断言和用户提供的消息 （c + +）](../cpp/assertion-and-user-supplied-messages-cpp.md)   
- [#error 指令 （C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)   
+ [断言和用户提供的消息 （C++）](../cpp/assertion-and-user-supplied-messages-cpp.md)   
+ [#error 指令 （C/C++）](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert 宏、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [模板](../cpp/templates-cpp.md)   
  [ASCII 字符集](../c-language/ascii-character-set.md)   

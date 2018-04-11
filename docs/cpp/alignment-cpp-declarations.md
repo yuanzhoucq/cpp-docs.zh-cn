@@ -1,5 +1,5 @@
 ---
-title: "对齐方式 （c + + 声明） |Microsoft 文档"
+title: "对齐方式 （C++ 声明） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,9 +21,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment-c-declarations"></a>对齐方式（C++ 声明）
-C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器根据其大小值来对齐类和结构成员：bool 和 char 都对齐一个 1 字节边界、短整型两个字节、整型四个字节，长整型、双精度型和长双精度型八个字节。 在大多数情况下，你永远无需注意对齐方式，因为默认对齐方式已经是最佳的。 但是，在某些情况下，你可以通过指定数据结构的自定义对齐方式获得显著的性能提升或节约内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 专用关键字 __alignof 和 declspec(alignas) 来指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 C + + 11 标准关键字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)获得最大代码可移植性。 新关键字实质上以与 Microsoft 专用扩展相同的方式运行，这些扩展的文档也适用于这些新关键字。 请参阅[__alignof 运算符](../cpp/alignof-operator.md)和[对齐](../cpp/align-cpp.md)有关详细信息。 C + + 标准不指定小于目标平台中，默认的编译器的边界上对齐，因此仍需要使用 Microsoft #pragma 的装箱行为[包](../preprocessor/pack.md)在这种情况下。  
+C++ 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器根据其大小值来对齐类和结构成员：bool 和 char 都对齐一个 1 字节边界、短整型两个字节、整型四个字节，长整型、双精度型和长双精度型八个字节。 在大多数情况下，你永远无需注意对齐方式，因为默认对齐方式已经是最佳的。 但是，在某些情况下，你可以通过指定数据结构的自定义对齐方式获得显著的性能提升或节约内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 专用关键字 __alignof 和 declspec(alignas) 来指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 C++ 11 标准关键字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)获得最大代码可移植性。 新关键字实质上以与 Microsoft 专用扩展相同的方式运行，这些扩展的文档也适用于这些新关键字。 请参阅[__alignof 运算符](../cpp/alignof-operator.md)和[对齐](../cpp/align-cpp.md)有关详细信息。 C++ 标准不指定小于目标平台中，默认的编译器的边界上对齐，因此仍需要使用 Microsoft #pragma 的装箱行为[包](../preprocessor/pack.md)在这种情况下。  
   
- C + + 标准库提供[aligned_storage 类](../standard-library/aligned-storage-class.md)为具有自定义对齐方式的数据结构分配内存和[aligned_union 类](../standard-library/aligned-union-class.md)用于指定具有联合的对齐方式非普通构造函数或析构函数。  
+ C++ 标准库提供[aligned_storage 类](../standard-library/aligned-storage-class.md)为具有自定义对齐方式的数据结构分配内存和[aligned_union 类](../standard-library/aligned-union-class.md)用于指定具有联合的对齐方式非普通构造函数或析构函数。  
   
 ## <a name="about-alignment"></a>关于对齐方式  
  对齐方式是内存地址的一个属性，表示为数字地址对 2 的幂次方取模。 例如，地址 0x0001103F 对 4 取模为 3 ；则该地址将对齐到 4n+3，其中 4 表示选择的 2 的幂次方。 地址的对齐方式取决于选择的 2 的幂次方。 相同的地址对 8 取模为 7。 如果一个地址的对齐方式是 Xn+0，它将对齐到 X。  

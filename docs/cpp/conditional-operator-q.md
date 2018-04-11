@@ -81,5 +81,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [条件表达式运算符](../c-language/conditional-expression-operator.md)

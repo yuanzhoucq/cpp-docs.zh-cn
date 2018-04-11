@@ -1,5 +1,5 @@
 ---
-title: "标识符 （c + +） |Microsoft 文档"
+title: "标识符 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="identifiers-c"></a>标识符 （c + +）
+# <a name="identifiers-c"></a>标识符 （C++）
 标识符是用于表示以下内容之一的字符序列：  
   
 -   对象或变量名称  

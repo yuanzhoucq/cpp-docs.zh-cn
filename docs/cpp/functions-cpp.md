@@ -1,5 +1,5 @@
 ---
-title: "函数 （c + +） |Microsoft 文档"
+title: "函数 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 01/25/2018
 ms.reviewer: 
@@ -75,7 +75,7 @@ int sum(int a, int b)
   
  函数声明的必需部分有：  
   
-1.  返回类型，指定函数将返回的值的类型，如果不返回任何值，则为 `void`。 在 C + + 11 中，`auto`是有效的返回类型，指示编译器从返回语句推断类型。 在 C++14 中，还允许使用 decltype(auto)。 有关详细信息，请参阅下面的“返回类型中的类型推导”。  
+1.  返回类型，指定函数将返回的值的类型，如果不返回任何值，则为 `void`。 在 C++ 11 中，`auto`是有效的返回类型，指示编译器从返回语句推断类型。 在 C++14 中，还允许使用 decltype(auto)。 有关详细信息，请参阅下面的“返回类型中的类型推导”。  
   
 2.  函数名，必须以字母或下划线开头，不能包含空格。 一般而言，标准库函数名中的前导下划线指示私有成员函数，或不是供你的代码使用的非成员函数。 
   
@@ -173,7 +173,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}  
 ```  
   
- **C + + 11:**若要显式处理通过右值引用或左值引用传递参数，使用双与号参数以指示通用引用：  
+ **C++ 11:**若要显式处理通过右值引用或左值引用传递参数，使用双与号参数以指示通用引用：  
   
 ```  
 void DoSomething(const std::string&& input){...}  
@@ -238,7 +238,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ### <a name="static-local-variables"></a>静态局部变量  
  在 C++ 中，局部变量可以声明为静态。 变量仅在函数体中可见，但是对于函数的所有实例，存在变量的单个副本。  
   
-###  <a name="type_deduction"></a>返回类型 (C + + 14) 中的类型推导  
+###  <a name="type_deduction"></a>返回类型 (C++ 14) 中的类型推导  
  在 C++14 中，可以使用 `auto` 指示编译器从函数体推断返回类型，而不必提供结尾返回类型。 请注意，`auto` 始终推导为按值返回。 使用 `auto&&` 可指示编译器推导引用。  
   
  在此示例中，`auto` 会推导为 lhs 和 rhs 之和的非常量值副本。  
@@ -338,7 +338,7 @@ int main()
 }
 ```
 
-3. **Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 使用结构化绑定。 结构化绑定的优点是，存储返回值的变量进行初始化它们在声明的同时，在某些情况下，这可能会显著更有效。 在此语句-`auto[x, y, z] = f();`-括号引入并初始化在整个函数块的范围内的名称。  
+3. **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 使用结构化绑定。 结构化绑定的优点是，存储返回值的变量进行初始化它们在声明的同时，在某些情况下，这可能会显著更有效。 在此语句-`auto[x, y, z] = f();`-括号引入并初始化在整个函数块的范围内的名称。  
 
 ```cpp
 #include <tuple>

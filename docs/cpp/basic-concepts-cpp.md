@@ -1,5 +1,5 @@
 ---
-title: "基本概念 （c + +） |Microsoft 文档"
+title: "基本概念 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,12 +21,12 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="basic-concepts--c"></a>基本概念 （c + +）
-本部分介绍对了解 c + + 至关重要的概念。 将熟悉这些概念的许多 C 程序员但有一些细微的差异可能导致意外的程序结果。 包含以下主题：  
+# <a name="basic-concepts--c"></a>基本概念 （C++）
+本部分介绍对了解 C++ 至关重要的概念。 将熟悉这些概念的许多 C 程序员但有一些细微的差异可能导致意外的程序结果。 包含以下主题：  
   
 -   [声明和定义](../cpp/declarations-and-definitions-cpp.md)  
   
--   [C + + 对象或函数的作用域](../cpp/scope-visual-cpp.md)  
+-   [C++ 对象或函数的作用域](../cpp/scope-visual-cpp.md)  
   
 -   [程序定义和链接规则](../cpp/program-and-linkage-cpp.md)  
   

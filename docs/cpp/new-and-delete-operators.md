@@ -29,11 +29,11 @@ ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
-C + + 支持动态分配和释放对象使用[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 `new`运算符调用特殊函数[运算符 new](../cpp/new-operator-cpp.md)，和`delete`运算符调用特殊函数[运算符 delete](../cpp/delete-operator-cpp.md)。  
+C++ 支持动态分配和释放对象使用[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 `new`运算符调用特殊函数[运算符 new](../cpp/new-operator-cpp.md)，和`delete`运算符调用特殊函数[运算符 delete](../cpp/delete-operator-cpp.md)。  
   
- `new` C + + 标准库中的函数支持 c + + 标准，则会引发 std:: bad_alloc 异常，如果内存分配失败中指定的行为。 如果您仍需要的非引发版本`new`，将 nothrownew.obj 程序显式链接。但是，当您链接到 nothrownew.obj 时，默认值`operator new`在 c + + 标准库中不再正常工作。  
+ `new` C++ 标准库中的函数支持 C++ 标准，则会引发 std:: bad_alloc 异常，如果内存分配失败中指定的行为。 如果您仍需要的非引发版本`new`，将 nothrownew.obj 程序显式链接。但是，当您链接到 nothrownew.obj 时，默认值`operator new`在 C++ 标准库中不再正常工作。  
   
- 有关包含 C 运行库和 c + + 标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。  
+ 有关包含 C 运行库和 C++ 标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。  
   
 ##  <a id="new_operator"></a> New 运算符  
  在程序中遇到以下语句时，它将转换为对函数 `operator new` 的调用：  
@@ -96,9 +96,9 @@ int main()
 Blanks *SomeBlanks = new Blanks;  
 ```  
   
- 在 Visual c + + 5.0 和更早版本，非类类型和所有数组 (无论是否的**类**类型) 使用分配**新**运算符始终使用全局**运算符 new**函数。  
+ 在 Visual C++ 5.0 和更早版本，非类类型和所有数组 (无论是否的**类**类型) 使用分配**新**运算符始终使用全局**运算符 new**函数。  
   
- 从 Visual c + + 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如:  
+ 从 Visual C++ 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如:  
   
 ```cpp  
 // spec1_the_operator_new_function2.cpp  
@@ -212,7 +212,7 @@ int main( int argc, char *argv[] ) {
   
  前面的代码可用于检测“内存溢出”，即在自由储存中分配但从未释放过的内存。 若要执行此检测，全局**新**和**删除**运算符会重新定义为计数分配和解除分配的内存。  
   
- 从 Visual c + + 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如:  
+ 从 Visual C++ 5.0 开始，编译器支持成员数组**新**和**删除**类声明中的运算符。 例如:  
   
 ```cpp  
 // spec1_the_operator_delete_function2.cpp  

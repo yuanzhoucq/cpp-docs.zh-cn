@@ -1,5 +1,5 @@
 ---
-title: "const （c + +） |Microsoft 文档"
+title: "const （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -45,7 +45,7 @@ int main() {
 }  
 ```  
   
- 在 c + +，你可以使用**const**关键字而不是[#define](../preprocessor/hash-define-directive-c-cpp.md)预处理器指令定义常量值。 使用定义的值**const**需要接受类型检查，并可用于代替常量表达式。 C + + 中，你可以指定数组的大小**const**变量，如下所示：  
+ 在 C++，你可以使用**const**关键字而不是[#define](../preprocessor/hash-define-directive-c-cpp.md)预处理器指令定义常量值。 使用定义的值**const**需要接受类型检查，并可用于代替常量表达式。 C++ 中，你可以指定数组的大小**const**变量，如下所示：  
   
 ```  
 // constant_values2.cpp  
@@ -144,7 +144,7 @@ const int i = 2;
 extern const int i;  
 ```  
   
- 若要在 c + + 中获得相同的行为，您必须声明，但你**const**变量作为：  
+ 若要在 C++ 中获得相同的行为，您必须声明，但你**const**变量作为：  
   
 ```  
 extern const int i = 2;  

@@ -1,5 +1,5 @@
 ---
-title: "容器 （现代 c + +） |Microsoft 文档"
+title: "容器 （现代 C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 1/18/2018
 ms.reviewer: 
@@ -20,7 +20,7 @@ ms.lasthandoff: 01/22/2018
 ---
 # <a name="containers-modern-c"></a>容器（现代 C++）
 
-默认情况下，使用[向量](../standard-library/vector-class.md)作为 c + + 中的首选顺序容器。 这相当于`List<T>`.NET 语言。
+默认情况下，使用[向量](../standard-library/vector-class.md)作为 C++ 中的首选顺序容器。 这相当于`List<T>`.NET 语言。
 
 ```cpp
 vector<string> apples;
@@ -45,7 +45,7 @@ apple_color["Granny Smith"] = "Green";
 
 不要使用 C 样式数组。 对于需要直接访问数据的较旧 Api，使用访问器方法如`f(vec.data(), vec.size());`相反。
 
-有关容器的详细信息，请参阅[c + + 标准库容器](../standard-library/stl-containers.md)。
+有关容器的详细信息，请参阅[C++ 标准库容器](../standard-library/stl-containers.md)。
 
 ## <a name="see-also"></a>请参阅
 

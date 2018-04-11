@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  **Microsoft 专用**  
   
- Microsoft c + + 中的全局静态对象之前，将初始化进入**主要**。  
+ Microsoft C++ 中的全局静态对象之前，将初始化进入**主要**。  
   
  **结束 Microsoft 专用**  
   

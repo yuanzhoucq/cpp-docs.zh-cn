@@ -31,7 +31,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-program-startup"></a>main：程序启动
-一个名为的特殊函数`main`是所有 C 和 c + + 程序的执行的起始点。 如果您要编写遵循 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 编程模型的代码，则可使用 `wmain`（它是 `main` 的宽字符版本）。  
+一个名为的特殊函数`main`是所有 C 和 C++ 程序的执行的起始点。 如果您要编写遵循 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 编程模型的代码，则可使用 `wmain`（它是 `main` 的宽字符版本）。  
   
  `main` 函数未由编译器预定义。 必须在程序文本中提供此函数。  
   

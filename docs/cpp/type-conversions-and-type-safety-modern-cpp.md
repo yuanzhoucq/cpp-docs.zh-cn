@@ -1,5 +1,5 @@
 ---
-title: "类型转换和类型安全 （现代 c + +） |Microsoft 文档"
+title: "类型转换和类型安全 （现代 C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/21/2017
  当编译器检测到不安全的转换时，它会发出错误或警告。 如果发出错误，则编译会停止；如果发出警告，则编译可以继续，但会指示代码中可能存在错误。 但是，即使你编译程序后没有收到警告，它仍然可能包含导致生成错误结果的隐式类型转换。 类型错误也可能由代码中的显式转换或强制转换引入。  
   
 ## <a name="implicit-type-conversions"></a>隐式类型转换  
- 当表达式包含不同内置类型的操作数且存在没有显式强制转换时，编译器将使用内置*标准转换*来转换其中一个操作数的类型匹配。 编译器将尝试按一个明确定义的顺序进行转换，直到有一个转换成功。 如果所选转换是提升转换，则编译器不会发出警告。 如果转换是收缩转换，则编译器会发出有关数据可能丢失的警告。 尽管是否真的发生数据丢失取决于涉及的实际值，但我们建议您将此警告视为错误。 如果涉及到用户定义的类型，则编译器将尝试使用您在类定义中指定的转换。 如果编译器找不到可接受的转换，则会发出错误且不会编译程序。 有关用于管理的标准转换的规则的详细信息，请参阅[标准转换](../cpp/standard-conversions.md)。 有关用户定义的转换的详细信息，请参阅[用户定义的转换 (C + + /cli CLI)](../dotnet/user-defined-conversions-cpp-cli.md)。  
+ 当表达式包含不同内置类型的操作数且存在没有显式强制转换时，编译器将使用内置*标准转换*来转换其中一个操作数的类型匹配。 编译器将尝试按一个明确定义的顺序进行转换，直到有一个转换成功。 如果所选转换是提升转换，则编译器不会发出警告。 如果转换是收缩转换，则编译器会发出有关数据可能丢失的警告。 尽管是否真的发生数据丢失取决于涉及的实际值，但我们建议您将此警告视为错误。 如果涉及到用户定义的类型，则编译器将尝试使用您在类定义中指定的转换。 如果编译器找不到可接受的转换，则会发出错误且不会编译程序。 有关用于管理的标准转换的规则的详细信息，请参阅[标准转换](../cpp/standard-conversions.md)。 有关用户定义的转换的详细信息，请参阅[用户定义的转换 (C++ /cli CLI)](../dotnet/user-defined-conversions-cpp-cli.md)。  
   
 ### <a name="widening-conversions-promotion"></a>扩大转换（提升）  
  在扩大转换中，较小的变量中的值将赋给较大的变量，同时不会丢失数据。 由于扩大转换始终是安全的，编译器将在不提示的情况下执行它们且不会发出警告。 以下转换是扩大转换。  
@@ -188,7 +188,7 @@ int(x); // old-style cast, functional syntax
      有关详细信息，请参阅[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 类型系统](../cpp/cpp-type-system-modern-cpp.md)   
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 类型系统](../cpp/cpp-type-system-modern-cpp.md)   
+ [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

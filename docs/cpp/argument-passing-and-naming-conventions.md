@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  有关如何定义你自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。  
   
- 默认值有关的信息在针对 x64 平台上，请参阅的代码中调用约定[概述 x64 调用约定](../build/overview-of-x64-calling-conventions.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual c + + ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。  
+ 默认值有关的信息在针对 x64 平台上，请参阅的代码中调用约定[概述 x64 调用约定](../build/overview-of-x64-calling-conventions.md)。 有关在面向 ARM 平台的代码中调用约定问题的信息，请参阅[Visual C++ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。  
   
  Visual C/C++ 编译器支持下列调用约定。  
   

@@ -1,5 +1,5 @@
 ---
-title: "new 运算符 （c + +） |Microsoft 文档"
+title: "new 运算符 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  有关如何在托管堆上创建对象的信息，请参阅[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
- 当**新**是用于为 c + + 类对象分配内存，该对象的构造函数中调用后分配内存。  
+ 当**新**是用于为 C++ 类对象分配内存，该对象的构造函数中调用后分配内存。  
   
  使用[删除](../cpp/delete-operator-cpp.md)运算符解除分配的内存分配与**新**运算符。  
   

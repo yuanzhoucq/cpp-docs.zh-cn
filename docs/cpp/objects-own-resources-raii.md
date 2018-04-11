@@ -46,6 +46,6 @@ void g() {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

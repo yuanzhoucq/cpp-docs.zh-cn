@@ -1,5 +1,5 @@
 ---
-title: "C + + 数组的排序 |Microsoft 文档"
+title: "C++ 数组的排序 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

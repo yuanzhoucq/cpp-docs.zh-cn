@@ -191,5 +191,5 @@ int main() {
 7.  [成员访问](../cpp/member-access.md)  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [关键字](../cpp/keywords-cpp.md)

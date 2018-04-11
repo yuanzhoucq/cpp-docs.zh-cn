@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  Visual C++ 编译器可以直接读取组件对象模型 (COM) 类型库并将内容转换为可包含在编译中的 C++ 源代码。 提供了语言扩展来帮助在客户端上进行 COM 编程。  
   
- 通过使用[#import 预处理器指令](../preprocessor/hash-import-directive-cpp.md)，编译器可以读取类型库和转换到 c + + 标头文件，用于描述 COM 接口标记为类。 提供了一组 `#import` 特性来实现对生成的类型库头文件的内容的用户控制。  
+ 通过使用[#import 预处理器指令](../preprocessor/hash-import-directive-cpp.md)，编译器可以读取类型库和转换到 C++ 标头文件，用于描述 COM 接口标记为类。 提供了一组 `#import` 特性来实现对生成的类型库头文件的内容的用户控制。  
   
  你可以使用[__declspec](../cpp/declspec.md)扩展的特性[uuid](../cpp/uuid-cpp.md)要分配给 COM 对象的全局唯一标识符 (GUID)。 关键字[__uuidof](../cpp/uuidof-operator.md)可用于提取与 COM 对象关联的 GUID。 另一个`__declspec`属性，[属性](../cpp/property-cpp.md)，可以用于指定**获取**和**设置**COM 对象的数据成员的方法。  
   

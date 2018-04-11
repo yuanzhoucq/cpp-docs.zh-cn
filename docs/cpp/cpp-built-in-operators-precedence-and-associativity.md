@@ -1,5 +1,5 @@
 ---
-title: "C + + 内置运算符、 优先级和结合性 |Microsoft 文档"
+title: "C++ 内置运算符、 优先级和结合性 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 内置运算符、 优先级和关联性
+# <a name="c-built-in-operators-precedence-and-associativity"></a>C++ 内置运算符、 优先级和关联性
 
 C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指定对一个或多个操作数执行的计算。
 

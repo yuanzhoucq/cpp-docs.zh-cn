@@ -47,7 +47,7 @@ long __hook(
  **&***SourceClass* `::` *EventMethod*  
  指向要将事件处理程序方法挂钩到的事件方法的指针：  
   
--   本机 c + + 事件： *SourceClass*是事件源类和*EventMethod*是事件。  
+-   本机 C++ 事件： *SourceClass*是事件源类和*EventMethod*是事件。  
   
 -   COM 事件： *SourceClass*是事件源接口和*EventMethod*是其方法之一。  
   
@@ -68,7 +68,7 @@ long __hook(
  **&***ReceiverClass* `::``HandlerMethod`  
  指向要挂钩到事件的事件处理程序方法的指针。 处理程序将指定为类的方法或对同一方法的引用；如果不指定类名称，则 `__hook` 假定该类是从中调用它的类。  
   
--   本机 c + + 事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
+-   本机 C++ 事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
   
 -   COM 事件： *ReceiverClass*是事件接收器接口和`HandlerMethod`是其处理程序之一。  
   
@@ -101,7 +101,7 @@ long __hook(
 >  模板类或结构不能包含事件。  
   
 ## <a name="example"></a>示例  
- 请参阅[本机 c + + 中的事件处理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件处理](../cpp/event-handling-in-com.md)示例。  
+ 请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件处理](../cpp/event-handling-in-com.md)示例。  
   
 ## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   

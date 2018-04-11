@@ -1,5 +1,5 @@
 ---
-title: "存储类 （c + +） |Microsoft 文档"
+title: "存储类 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,13 +27,13 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>存储类 (C++)  
   
-A*存储类*在上下文中的 c + + 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 除非使用 `extern`、`static` 或 `thread_local` 说明符另行指定，否则在块中定义的变量具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。  
+A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 除非使用 `extern`、`static` 或 `thread_local` 说明符另行指定，否则在块中定义的变量具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。  
   
 **备注**  
   
 1.  [可变](../cpp/mutable-data-members-cpp.md)关键字可视为存储类说明符。 但是，它只存在于类定义的成员列表中。  
   
-2.  **Visual c + + 2010年及更高版本：** `auto`关键字不再是 c + + 存储类说明符，和`register`关键字被弃用。 **Visual Studio 2017 15.3 及更高版本：** (适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):`register`关键字已不再受支持的存储类。 关键字是仍保留在将来使用的标准。 
+2.  **Visual C++ 2010年及更高版本：** `auto`关键字不再是 C++ 存储类说明符，和`register`关键字被弃用。 **Visual Studio 2017 15.3 及更高版本：** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):`register`关键字已不再受支持的存储类。 关键字是仍保留在将来使用的标准。 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
@@ -232,7 +232,7 @@ void DoSomething()
 在 Windows 上，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过`__declspec(thread)`可以应用于类型定义，并且在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。  
   
 ##  <a name="register"></a>注册  
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):`register`关键字已不再受支持的存储类。 关键字是仍保留在将来使用的标准。 
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):`register`关键字已不再受支持的存储类。 关键字是仍保留在将来使用的标准。 
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

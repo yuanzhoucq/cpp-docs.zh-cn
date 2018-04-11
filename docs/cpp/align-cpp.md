@@ -1,5 +1,5 @@
 ---
-title: "对齐 （c + +） |Microsoft 文档"
+title: "对齐 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
-在 Visual Studio 2015 及更高版本，使用 C + + 11 标准`alignas`说明符来控制对齐效果。 有关详细信息，请参阅[对齐](../cpp/alignment-cpp-declarations.md)。
+在 Visual Studio 2015 及更高版本，使用 C++ 11 标准`alignas`说明符来控制对齐效果。 有关详细信息，请参阅[对齐](../cpp/alignment-cpp-declarations.md)。
 
 **Microsoft 专用**
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 
 在定义 `__declspec(align(#))`、`struct` 或 `union` 时或声明变量时，可以使用 `class`。
 
-编译器不保证或不尝试保留复制过程中或数据转换操作中数据的对齐特性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以将复制与声明的结构`__declspec(align(#))`到任何位置。 请注意，普通分配器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + +[运算符 new](new-operator-cpp.md)，和 Win32 分配器-返回的通常不充分对齐的内存`__declspec(align(#))`结构或者的数组结构。 若要保证复制或数据转换操作的目标正确对齐，使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或编写你自己的分配器。
+编译器不保证或不尝试保留复制过程中或数据转换操作中数据的对齐特性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以将复制与声明的结构`__declspec(align(#))`到任何位置。 请注意，普通分配器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，C++[运算符 new](new-operator-cpp.md)，和 Win32 分配器-返回的通常不充分对齐的内存`__declspec(align(#))`结构或者的数组结构。 若要保证复制或数据转换操作的目标正确对齐，使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或编写你自己的分配器。
 
 不能指定函数参数的对齐方式。 当通过堆栈上的值传递具有对齐特性的数据，它的对齐由调用约定控制。 如果数据对齐在所调用函数中很重要，请在使用前将参数复制到正确对齐的内存中。
 

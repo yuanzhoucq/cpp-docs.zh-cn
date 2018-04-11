@@ -1,5 +1,5 @@
 ---
-title: "函数模板 （c + +） 的部分排序 |Microsoft 文档"
+title: "函数模板 （C++） 的部分排序 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

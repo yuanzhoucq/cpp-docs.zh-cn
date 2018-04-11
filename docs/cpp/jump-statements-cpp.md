@@ -1,5 +1,5 @@
 ---
-title: "跳转语句 （c + +） |Microsoft 文档"
+title: "跳转语句 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

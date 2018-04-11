@@ -67,7 +67,7 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);  
 ```  
   
- 请参阅[本机 c + + 中的事件处理](../cpp/event-handling-in-native-cpp.md)有关示例代码。  
+ 请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)有关示例代码。  
   
 ## <a name="com-events"></a>COM 事件  
  COM 事件是接口。 事件源接口中的方法的参数应为**中**参数 （但这不是强制要求），因为**出**参数不是在多播时无用。 如果你使用，将发出 1 级警告**出**参数。  

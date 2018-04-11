@@ -1,5 +1,5 @@
 ---
-title: "程序和链接 （c + +） |Microsoft 文档"
+title: "程序和链接 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="program-and-linkage--c"></a>程序和链接 （c + +）
+# <a name="program-and-linkage--c"></a>程序和链接 （C++）
 程序包括链接在一起的一个或多个翻译单元。 在翻译单元中包含的函数 （从概念上讲） 开始执行**主要**。 (有关翻译单元的详细信息，请参阅[翻译阶段](../preprocessor/phases-of-translation.md)中*预处理器参考*。)有关详细信息**主要**函数中，请参阅[程序启动： main 函数](../cpp/main-program-startup.md)。)  
   
 ## <a name="see-also"></a>请参阅  

@@ -45,7 +45,7 @@ __declspec(restrict) return_type f();
 ## <a name="example"></a>示例  
  请参阅[noalias](../cpp/noalias.md)的使用示例`restrict`。  
   
- 有关限制关键字是 c + + AMP 的信息，请参阅[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。  
+ 有关限制关键字是 C++ AMP 的信息，请参阅[限制 (C++ AMP)](../cpp/restrict-cpp-amp.md)。  
   
  **结束 Microsoft 专用**  
   

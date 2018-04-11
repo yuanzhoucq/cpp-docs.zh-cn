@@ -1,5 +1,5 @@
 ---
-title: "注释 （c + +） |Microsoft 文档"
+title: "注释 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,10 +25,10 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="comments-c"></a>注释 （c + +）
+# <a name="comments-c"></a>注释 （C++）
 注释是的文本，编译器将忽略，但这是用于程序员。 通常使用注释来批注代码以供将来参考。 编译器会将它们视为空白区域。 你可以使用在测试中的注释以使某些行代码处于非活动状态;但是， `#if` / `#endif`预处理器指令更适用于这因为可以包含注释的代码外侧，但你无法嵌套注释。  
   
- 通过以下方式之一是编写 c + + 注释：  
+ 通过以下方式之一是编写 C++ 注释：  
   
 -   `/*`正斜杠 (星号） 字符后, 跟的任意字符序列 （包括新行） 后, 跟`*/`字符。 此语法等同于 ANSI c。  
   

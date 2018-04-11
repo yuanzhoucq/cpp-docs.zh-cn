@@ -188,5 +188,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语句概述](../cpp/overview-of-cpp-statements.md)   
+ [C++ 语句概述](../cpp/overview-of-cpp-statements.md)   
  [switch 语句 (C++)](../cpp/switch-statement-cpp.md)

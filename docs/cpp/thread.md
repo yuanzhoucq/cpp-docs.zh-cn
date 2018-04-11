@@ -34,7 +34,7 @@ ms.lasthandoff: 02/03/2018
 
 **Microsoft 专用**
 
-**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C + + 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上**thread_local**通过实现**__declspec （thread)**。
+**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C++ 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上**thread_local**通过实现**__declspec （thread)**。
 
 ## <a name="syntax"></a>语法
 
@@ -54,7 +54,7 @@ __declspec( thread ) int tls_i = 1;
 
 1. 如果函数调用 （包括构造函数） 在初始化变量时，此函数将仅调用线程导致二进制/DLL 以加载到进程中，以及二进制/DLL 已加载后启动这些线程。 为已在运行时已加载该 DLL 的其他任何线程不调用初始化函数。 动态初始化永远不会获取消息如果线程启动时，DLL 不在过程上 DLL_THREAD_ATTACH，DllMain 调用，但该 DLL 时发生。
 
-1. 使用常量的值以静态方式初始化线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft Visual c + + 编译器中动态而不是静态初始化。
+1. 使用常量的值以静态方式初始化线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft Visual C++ 编译器中动态而不是静态初始化。
 
    注意： 这两个这些问题被需要修复在将来的编译器的更新。
 
@@ -95,7 +95,7 @@ __declspec( thread ) int tls_i = 1;
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   请注意， **sizeof**包含正在初始化的对象的表达式不构成对自身的引用，允许 C 和 c + + 中。
+   请注意， **sizeof**包含正在初始化的对象的表达式不构成对自身的引用，允许 C 和 C++ 中。
 
 **结束 Microsoft 专用**
 

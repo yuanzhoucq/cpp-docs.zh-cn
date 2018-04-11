@@ -1,5 +1,5 @@
 ---
-title: "字符串和字符文本 （c + +） |Microsoft 文档"
+title: "字符串和字符文本 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/03/2018
 ---
-# <a name="string-and-character-literals--c"></a>字符串和字符文本 （c + +）
+# <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
   
 ```cpp  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>原始字符串 (C++11)  
- 原始字符串文本是一个以 null 结尾的数组-任何字符类型-包含任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C + + 11 的 Bjarne Stroustrup 常见问题](http://go.microsoft.com/fwlink/p/?linkid=401172)。  
+ 原始字符串文本是一个以 null 结尾的数组-任何字符类型-包含任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C++ 11 的 Bjarne Stroustrup 常见问题](http://go.microsoft.com/fwlink/p/?linkid=401172)。  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>具有通用字符名称的字符串文本  
- 本机（非原始）字符串文本可能使用通用字符名称来表示任何字符，只要通用字符名称可被编码为字符串类型中的一个或多个字符。  例如，表示扩展字符的通用字符名称不能以使用 ANSI 代码页的窄字符串进行编码，但可以使用一些多字节代码页中的窄字符串、UTF-8 字符串或宽字符串进行编码。 在 C + + 11 中，Unicode 支持扩展由 char16_t * 和 char32_t\*字符串类型：  
+ 本机（非原始）字符串文本可能使用通用字符名称来表示任何字符，只要通用字符名称可被编码为字符串类型中的一个或多个字符。  例如，表示扩展字符的通用字符名称不能以使用 ANSI 代码页的窄字符串进行编码，但可以使用一些多字节代码页中的窄字符串、UTF-8 字符串或宽字符串进行编码。 在 C++ 11 中，Unicode 支持扩展由 char16_t * 和 char32_t\*字符串类型：  
   
 ```cpp  
 // ASCII smiling face  

@@ -1,5 +1,5 @@
 ---
-title: "for 语句 （c + +） |Microsoft 文档"
+title: "for 语句 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>for 语句 (C++)
-重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
+重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)。  
   
 ## <a name="syntax"></a>语法  
   

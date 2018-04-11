@@ -1,5 +1,5 @@
 ---
-title: "decltype （c + +） |Microsoft 文档"
+title: "decltype （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="decltype--c"></a>decltype （c + +）
+# <a name="decltype--c"></a>decltype （C++）
 `decltype` 类型说明符生成指定表达式的类型。 `decltype`连同类型说明符， [auto 关键字](../cpp/auto-cpp.md)，主要对编写模板库的开发人员很有用。 使用 `auto` 和 `decltype` 声明其返回类型取决于其模板参数类型的模板函数。 或者，使用 `auto` 和 `decltype` 声明包装对其他函数的调用，然后返回包装函数的返回类型的模板函数。  
   
 ## <a name="syntax"></a>语法  
@@ -74,7 +74,7 @@ const A* a = new A();
 |`decltype((a->x));`|`const double&`|内部括号导致语句作为表达式而不是成员访问计算。 由于 `a` 声明为 `const` 指针，因此类型是对 `const double` 的引用。|  
   
 ## <a name="decltype-and-auto"></a>Decltype 和 Auto  
- 在 C + + 14 中，你可以使用`decltype(auto)`不带尾随返回类型来声明其返回类型的模板函数取决于其模板自变量的类型。  
+ 在 C++ 14 中，你可以使用`decltype(auto)`不带尾随返回类型来声明其返回类型的模板函数取决于其模板自变量的类型。  
   
  在 C++11 中，可以结合使用尾随返回类型上的 `decltype` 类型说明符和 `auto` 关键字来声明其返回类型依赖于其模板参数类型的模板函数。 例如，考虑下面的代码示例，其中模板函数的返回类型取决于模板自变量类型。 在代码示例中，*未知*占位符指示无法指定返回类型。  
   

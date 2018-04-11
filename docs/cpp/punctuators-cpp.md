@@ -1,5 +1,5 @@
 ---
-title: "标点符号 （c + +） |Microsoft 文档"
+title: "标点符号 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="punctuators-c"></a>标点符号 （c + +）
+# <a name="punctuators-c"></a>标点符号 （C++）
 在 C++ 中，标点符号相对于编译器来说具有语法意义和语义含义，但是它们本身不会指定一个产生数值的操作。 某些标点符号（单独或组合）也可以是 C++ 运算符或对预处理器很重要。  
 
  以下任意字符都被视为标点符号：  

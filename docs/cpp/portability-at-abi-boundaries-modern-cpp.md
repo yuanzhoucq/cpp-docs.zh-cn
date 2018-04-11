@@ -1,5 +1,5 @@
 ---
-title: "ABI 边界 （现代 c + +） 处的可移植性 |Microsoft 文档"
+title: "ABI 边界 （现代 C++） 处的可移植性 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,6 +41,6 @@ extern "C" {        // functions using explicit "this"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)
