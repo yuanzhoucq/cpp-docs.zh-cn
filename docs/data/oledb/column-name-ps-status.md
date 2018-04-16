@@ -1,46 +1,40 @@
 ---
-title: "COLUMN_NAME_PS_STATUS |Microsoft 文档"
+title: COLUMN_NAME_PS_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_NAME_PS_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_PS_STATUS macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_NAME_PS_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_PS_STATUS macro
 ms.assetid: 134e1bfe-abfa-4b64-9159-e492f31de44b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a773891e7a3a0a623d10e8eb55069bf46fc10f21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05fb08c9165c5b46827891905bc90c3b453e3c30
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnnamepsstatus"></a>COLUMN_NAME_PS_STATUS
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用精度、 小数位数和列的状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_NAME_PS_STATUS(  
-pszName  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-status )  
+```cpp
+COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )  
 ```  
   
 #### <a name="parameters"></a>参数  

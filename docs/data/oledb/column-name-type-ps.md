@@ -1,47 +1,40 @@
 ---
-title: "COLUMN_NAME_TYPE_PS |Microsoft 文档"
+title: COLUMN_NAME_TYPE_PS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE_PS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE_PS macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_NAME_TYPE_PS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE_PS macro
 ms.assetid: 99df7e33-47fc-48ec-ad03-5fd03a190aa9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 476b475c29b957515281739451cc4bd8464cc7fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e284d858f653aad621733adf3acf7cd5fa30528f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnnametypeps"></a>COLUMN_NAME_TYPE_PS
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用数据类型、 精度和小数位数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_NAME_TYPE_PS(  
-pszName  
-,   
-wType  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)  
   
 ```  
   

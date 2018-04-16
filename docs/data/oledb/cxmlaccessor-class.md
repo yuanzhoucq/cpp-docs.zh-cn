@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
 - ATL.CXMLAccessor
-dev_langs: C++
-helpviewer_keywords: CXMLAccessor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 96620f287522168cd7b6b78d43163e8c4bb64217
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d8d42599e9fe87355dc5392e1a473aa0a9c1e1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
   

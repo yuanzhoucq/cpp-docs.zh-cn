@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,19 +15,22 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectNoLock::AddRef
 - ATLCOM/ATL::CComObjectNoLock::QueryInterface
 - ATLCOM/ATL::CComObjectNoLock::Release
-dev_langs: C++
-helpviewer_keywords: CComObjectNoLock class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 4a85a238d17fe279359a73d3c740406c15b92c34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 类
 此类实现**IUnknown**的非聚合的对象，但不会不构造函数中的模块锁计数的递增。  
@@ -49,7 +53,7 @@ class CComObjectNoLock : public Base
 |名称|描述|  
 |----------|-----------------|  
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|构造函数。|  
-|[CComObjectNoLock:: ~ CComObjectNoLock](#dtor)|析构函数。|  
+|[CComObjectNoLock::~CComObjectNoLock](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -60,7 +64,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|递减引用计数对象上。|  
   
 ## <a name="remarks"></a>备注  
- `CComObjectNoLock`类似于[CComObject](../../atl/reference/ccomobject-class.md)在于它实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非聚合的对象; 但是，`CComObjectNoLock`构造函数中不递增模块锁计数。  
+ `CComObjectNoLock` 类似于[CComObject](../../atl/reference/ccomobject-class.md)在于它实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非聚合的对象; 但是，`CComObjectNoLock`构造函数中不递增模块锁计数。  
   
  使用 ATL`CComObjectNoLock`内部的类工厂。 一般情况下，你不将直接使用此类。  
   
@@ -69,10 +73,10 @@ class CComObjectNoLock : public Base
   
  `CComObjectNoLock`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>  CComObjectNoLock::AddRef  
  递增上对象的引用计数。  
   
 ```
@@ -82,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>返回值  
  一个值，可能是用于诊断或测试。  
   
-##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
  构造函数。 与不同[CComObject](../../atl/reference/ccomobject-class.md)，不会增加模块锁计数。  
   
 ```
@@ -91,9 +95,9 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>参数  
  \*void  
- [in]未使用此未命名的参数。 它位于与其他对称性**CCom***XXX*`Object`*XXX*构造函数。  
+ [in]未使用此未命名的参数。 它位于与其他对称性 **CCom * * * XXX*`Object`*XXX*构造函数。  
   
-##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  析构函数。  
   
 ```
@@ -104,7 +108,7 @@ CComObjectNoLock(void* = NULL);
  释放所有已分配的资源和调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。  
 
   
-##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -121,7 +125,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>  CComObjectNoLock::Release  
  递减引用计数对象上。  
   
 ```
@@ -131,5 +135,5 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>返回值  
  在调试版本中，**版本**返回一个值，可能是用于诊断或测试。 在非调试版本中，**版本**始终返回 0。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)

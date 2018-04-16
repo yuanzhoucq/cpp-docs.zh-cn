@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ 互操作（隐式 PInvoke）
 Visual c + + 不同于其他.NET 语言，具有在同一应用程序和甚至同一文件中允许存在托管和非托管代码的互操作性支持 (与[managed、 unmanaged](../preprocessor/managed-unmanaged.md)杂注)。 这允许 Visual c + + 开发人员将.NET 功能集成到现有 Visual c + + 应用程序，而不影响应用程序的其余部分。  
@@ -54,7 +56,7 @@ Visual c + + 不同于其他.NET 语言，具有在同一应用程序和甚至�
  显式 PInvoke 支持由.NET Framework，以及在大多数.NET 语言中可用。 但正如其名，c + + 互操作是特定于 Visual c + +。  
   
 ## <a name="c-interop"></a>C++ 互操作  
- C + + 互操作是通过显式 PInvoke 建议，因为它提供更好地类型安全单调乏味通常较低，来实现，是多 forgiving 如果非托管的 API 将修改，并使性能增强功能可能不适用于显式PInvoke。 但是，c + + 互操作不可能未提供的非托管的源代码时，或使用编译时**/clr: safe**。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。 有关信息，请参阅[纯代码和可验证代码 (C + + /cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
+ C + + 互操作是通过显式 PInvoke 建议，因为它提供更好地类型安全单调乏味通常较低，来实现，是多 forgiving 如果非托管的 API 将修改，并使性能增强功能可能不适用于显式PInvoke。 但是，c + + 互操作不可能如果非托管的源代码不可用。  
   
 ## <a name="c-com-interop"></a>C++ COM 互操作  
  当涉及到与 COM 组件进行互操作时，Visual c + + 支持的互操作性功能提供其他.NET 语言有特定的优势。 而不会限定的.NET framework 的限制[Tlbimp.exe （类型库导入程序）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，如对数据类型以及强制公开的每个 COM 接口的每个成员的有限支持，c + + 互操作允许 COM要访问在组件将和不需要单独的互操作程序集。 有关详细信息，请参阅[通过.NET 使用 COM](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15)。  

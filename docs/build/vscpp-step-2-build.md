@@ -1,22 +1,25 @@
 ---
 title: "生成并运行的 c + + 控制台应用程序项目 |Microsoft 文档"
-description: "安装 Visual c + + 的 Visual Studio 支持"
+description: "生成并运行 Visual c + + 中的 Hello World 控制台应用程序"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 119d39c6aac479c8e08cd017b4d5f8da794c836d
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>生成并运行的 c + + 控制台应用程序项目
 
@@ -83,6 +86,8 @@ Visual Studio 类似如下所示，如果你已准备好生成并运行你的应
 ### <a name="run-your-code-in-a-command-window-issues"></a>问题在命令窗口中运行你的代码
 
 你还可以导航到通过在命令行运行你的应用的解决方案调试文件夹。 你无法从其他目录运行你的应用程序，而无需指定应用程序的路径。 但是，你可以将你的应用程序复制到另一个目录，并从该处运行它。
+
+如果看不到**复制路径为**在快捷菜单中，取消菜单，然后按住 Shift 键，再次打开。 这是仅为方便起见。 此外可以从文件资源管理器搜索栏中，复制到的文件夹的路径，并将其粘贴到**运行**对话框中，然后输入结束时可执行文件的名称。 它是得更多键入，但它具有相同的结果。
 
 [回去。](#run-your-code-in-a-command-window)
 

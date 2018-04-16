@@ -1,28 +1,32 @@
 ---
-title: "SimpleActivationFactory 类 |Microsoft 文档"
-ms.custom: 
+title: SimpleActivationFactory 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: module/Microsoft::WRL::SimpleActivationFactory
-dev_langs: C++
-helpviewer_keywords: SimpleActivationFactory class
+f1_keywords:
+- module/Microsoft::WRL::SimpleActivationFactory
+dev_langs:
+- C++
+helpviewer_keywords:
+- SimpleActivationFactory class
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991d428e90654fd29cfbb9c5c7e110708a05de01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f6aabaae1e19fef3631e372391c81108f212c90
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 类
 提供创建 Windows 运行时或经典 COM 基类的基础机制。  
@@ -30,9 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-template<  
-   typename Base  
->  
+template<typename Base>  
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
@@ -80,10 +82,10 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
  `SimpleActivationFactory`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

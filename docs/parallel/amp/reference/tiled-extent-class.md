@@ -1,12 +1,13 @@
 ---
-title: "tiled_extent 类 |Microsoft 文档"
-ms.custom: 
+title: tiled_extent 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
+ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -18,18 +19,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent 类
 A`tiled_extent`对象是`extent`到一个、 两个或三维磁贴细分的扩展盘区空间的一到三个维度的对象。  
@@ -80,8 +83,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |名称|描述|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|返回`extent`捕获的值的对象`tiled_extent`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。|  
-|[填充](#pad)|返回一个新`tiled_extent`对象扩展盘区调整向上为整除的磁贴尺寸。|  
-|[截断](#truncate)|返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。|  
+|[pad](#pad)|返回一个新`tiled_extent`对象扩展盘区调整向上为整除的磁贴尺寸。|  
+|[truncate](#truncate)|返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -92,7 +95,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[tile_dim0 常量](#tile_dim0)|将存储的最重要的维度的长度。|  
 |[tile_dim1 常量](#tile_dim1)|将存储的下一步的最重要的维度的长度。|  
@@ -110,12 +113,12 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  `tiled_extent`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  
 
-## <a name="ctor"></a> tiled_extent 构造函数  
+## <a name="ctor"> </a>  tiled_extent 构造函数  
 初始化 `tiled_extent` 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -137,7 +140,7 @@ tiled_extent(
 
   
 
-## <a name="get_tile_extent"></a> get_tile_extent   
+## <a name="get_tile_extent"> </a>  get_tile_extent   
 返回`extent`捕获的值的对象`tiled_extent`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。  
   
 ### <a name="syntax"></a>语法  
@@ -150,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent`捕获此维度的对象`tiled_extent`实例。  
   
 
-## <a name="pad"></a>填充   
+## <a name="pad"> </a>  pad   
 返回一个新`tiled_extent`对象扩展盘区调整向上为整除的磁贴尺寸。  
   
 ### <a name="syntax"></a>语法  
@@ -161,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>返回值  
  新`tiled_extent`对象，按值。 
-## <a name="truncate"></a>截断   
+## <a name="truncate"> </a>  截断   
 返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。  
   
 ### <a name="syntax"></a>语法  
@@ -173,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>返回值  
  返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。  
 
-## <a name="operator_eq"></a>运算符 =   
+## <a name="operator_eq"> </a>  operator=   
 将指定的内容复制`tiled_index`到此对象。  
   
 ### <a name="syntax"></a>语法  
@@ -190,7 +193,7 @@ tiled_extent&  operator= (
 ### <a name="return-value"></a>返回值  
  对此引用`tiled_index`实例。  
 
-## <a name="tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"> </a>  tile_dim0   
 将存储的最重要的维度的长度。  
   
 ### <a name="syntax"></a>语法  
@@ -199,7 +202,7 @@ tiled_extent&  operator= (
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"> </a>  tile_dim1   
 将存储的下一步的最重要的维度的长度。  
   
 ### <a name="syntax"></a>语法  
@@ -207,7 +210,7 @@ static const int tile_dim0 = _Dim0;
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tile_dim2"></a> tile_dim2   
+## <a name="tile_dim2"> </a>  tile_dim2   
 将存储的最低有效的维度的长度。  
   
 ### <a name="syntax"></a>语法  
@@ -215,7 +218,7 @@ static const int tile_dim1 = _Dim1;
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tile_extent"></a> tile_extent   
+## <a name="tile_extent"> </a>  tile_extent   
   获取`extent`捕获的值的对象`tiled_extent`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。  
   
 ### <a name="syntax"></a>语法  
@@ -225,5 +228,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 ```  
   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

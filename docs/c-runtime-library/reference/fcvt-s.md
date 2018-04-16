@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt_s
+ms.topic: reference
+apiname:
+- _fcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
 将浮点数转换为字符串。 这是 [_fcvt](../../c-runtime-library/reference/fcvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -110,13 +114,13 @@ errno_t _fcvt_s(
   
  `_CVTBUFSIZE` 的缓冲区长度足以满足任何浮点值。  
   
- `_ecvt_s` 和 `_fcvt_s` 之间的差异在于对 `count` 参数的解释。 `_ecvt_s`解释`count`作为的输出字符串中的位数总数和`_fcvt_s`解释`count`作为小数点后的数字个数。  
+ `_ecvt_s` 和 `_fcvt_s` 之间的差异在于对 `count` 参数的解释。 `_ecvt_s` 解释`count`作为的输出字符串中的位数总数和`_fcvt_s`解释`count`作为小数点后的数字个数。  
   
  在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  此函数的调试版本首先使用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|---------------------|  

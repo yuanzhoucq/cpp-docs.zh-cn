@@ -1,47 +1,40 @@
 ---
-title: "BLOB_ENTRY_STATUS |Microsoft 文档"
+title: BLOB_ENTRY_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BLOB_ENTRY_STATUS
-dev_langs: C++
-helpviewer_keywords: BLOB_ENTRY_STATUS macro
+ms.topic: reference
+f1_keywords:
+- BLOB_ENTRY_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_ENTRY_STATUS macro
 ms.assetid: 191007f4-dfcc-4ae2-a7fc-6f7899accc9f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 61bbc537f74813c266cd3a5652251005818516df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 207f42094ea62db103fb39a0057f595182a2ec9a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 与使用`BEGIN_COLUMN_MAP`或`BEGIN_ACCESSOR_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还可获取 BLOB 列的状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BLOB_ENTRY_STATUS(  
-nOrdinal  
-,   
-IID  
-,   
-flags  
-,   
-data  
-,   
-status  
- )  
+```cpp
+BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)  
   
 ```  
   

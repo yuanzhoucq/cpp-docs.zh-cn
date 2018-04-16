@@ -1,41 +1,40 @@
 ---
-title: "COLUMN_NAME |Microsoft 文档"
+title: COLUMN_NAME | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_NAME
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_NAME
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME macro
 ms.assetid: a213b9a0-2148-4a08-9111-d9fa8fdec462
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 83b65a0439591d9783595bd2e0868e2d63568143
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db731667c4e86f7220f95503c5a61b10679d450b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnname"></a>COLUMN_NAME
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_ENTRY](../../data/oledb/column-entry.md)，只不过此宏采用而不是列号的列名称。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_NAME(  
-pszName  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME(pszName, data)  
   
 ```  
   

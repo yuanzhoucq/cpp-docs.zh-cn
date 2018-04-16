@@ -1,14 +1,17 @@
 ---
-title: "MFC COM |Microsoft 文档"
-ms.custom: 
+title: MFC COM | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 MFC 的子集旨在为支持 COM，虽然大多数的活动模板库 (ATL) 专为 COM 编程。 此部分的主题介绍 MFC 的支持的 com。  
@@ -51,9 +55,9 @@ MFC 的子集旨在为支持 COM，虽然大多数的活动模板库 (ATL) 专�
   
 -   活动脚本控制集成从浏览器或服务器的一个或多个 ActiveX 控件的行为。 活动脚本的详细信息，请参阅[Internet 上的 Active 技术](../mfc/active-technology-on-the-internet.md)。  
   
--   [自动化](../mfc/automation.md)（以前称为 OLE 自动化） 使一个应用程序能够操作在另一个应用程序中实现的对象，或"公开"对象以便它们能够被操作。  
+-   [自动化](../mfc/automation.md)（以前称为 OLE 自动化） 使一个应用程序能够操作在另一个应用程序中实现的对象，或"公开"对象以便操作它们。  
   
-     自动的对象可能是本地或[远程](../mfc/remote-automation.md)（在另一个计算机可访问在网络上）。 自动化可用于 OLE 和 COM 对象。  
+     自动的对象可能是本地或远程 （在另一个计算机可访问在网络上）。 自动化可用于 OLE 和 COM 对象。  
   
 -   本部分还提供有关如何编写使用 MFC，例如中的 COM 组件的信息[连接点](../mfc/connection-points.md)。  
   
@@ -65,8 +69,6 @@ MFC 的子集旨在为支持 COM，虽然大多数的活动模板库 (ATL) 专�
  [活动文档包容](../mfc/active-document-containment.md)  
   
  [自动化](../mfc/automation.md)  
-  
- [远程自动化](../mfc/remote-automation.md)  
   
  [连接点](../mfc/connection-points.md)  
   

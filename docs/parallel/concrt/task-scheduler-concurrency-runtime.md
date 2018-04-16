@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>任务计划程序（并发运行时）
 文档这一部分的主题介绍并发运行时任务计划程序的重要功能。 如果希望细微调整并发运行时的现有代码的性能，则任务计划程序会很有用。  
   
 > [!IMPORTANT]
->  任务计划程序在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不可用。 有关详细信息，请参阅[创建 Windows 应用商店应用的 c + + 中的异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
+>  任务计划程序不可以从通用 Windows 平台 (UWP) 应用。 有关详细信息，请参阅[创建异步操作在 c + + 中适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
 >   
 >  在 Visual Studio 2015 及更高版本， [concurrency:: task](../../parallel/concrt/reference/task-class.md)类和 ppltasks.h 中的相关的类型使用 Windows 线程池作为其计划程序。 本主题不再适用于在 ppltasks.h 中定义的类型。 并行算法（例如 parallel_for）继续使用并发运行时作为默认计划程序。  
   

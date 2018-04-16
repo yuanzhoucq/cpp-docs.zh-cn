@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>Unicode 和 MBCS
 启用 Microsoft 基础类 (MFC) 库、 Visual c + +、 C 运行时库和 Visual c + + 开发环境以帮助你国际化编程。 它们提供：  
   
--   针对在 Windows 2000 (以前称为 Windows NT) 上 Unicode 标准的支持。 Unicode 是最新的标准，应该尽可能使用它。  
+-   针对 Windows 上 Unicode 标准的支持。 Unicode 是最新的标准，应该尽可能使用它。  
   
      Unicode 是 16 位字符编码，并为所有语言提供足够的编码。 所有的 ASCII 字符作为扩大字符包含在 Unicode。  
-  
-    > [!NOTE]
-    >  在 Windows 95、 Windows 98 或 Windows Millennium Edition 上不支持 Unicode 标准。  
   
 -   在所有平台上调用双字节字符集 (DBCS) 的一种形式的多字节字符集 (MBCS) 支持。  
   

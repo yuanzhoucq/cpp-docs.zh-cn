@@ -4,26 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: complex/std::complex<float>
-dev_langs: C++
-helpviewer_keywords: complex<float> function
+ms.topic: reference
+f1_keywords:
+- complex/std::complex<float>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1555812fb3607f3271ba87c88839767ce79f9ecc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 09bf551c6487631ea803e071ed4b4c11501cdb04
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
-描述一个对象，该对象存储两个都为 **float** *类型的有序对象对，*该有序对象对中的第一个对象表示复数的实部，第二个对象表示复数的虚部。  
+描述一个对象，用于存储这两种类型的对象的有序的对 **float * * *，*首先表示复数与第二个实部表示复数虚部。  
   
 ## <a name="syntax"></a>语法  
   
@@ -120,12 +125,12 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：\<complex>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [complex 类](../standard-library/complex-class.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

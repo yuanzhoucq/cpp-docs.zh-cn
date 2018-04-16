@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB providers, reading strings into
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e2d01fb6610f9b5e8f1d1298aaa49de6a83b561
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>将字符串读入 OLE DB 提供程序
-`RMyProviderRowset::Execute`函数打开文件并读取字符串。 使用者将文件名传递给提供程序，通过调用[ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供程序接收的文件名称，并将其存储在成员变量`m_szCommandText`。 `Execute`读取的文件名称`m_szCommandText`。 如果文件名无效，或者该文件不可用，`Execute`返回错误。 否则，将打开的文件和调用`fgets`以检索字符串。 为每个字符串将其设置的读操作，`Execute`创建的用户记录的实例 (`CAgentMan`) 并将其放到一个数组。  
+`RMyProviderRowset::Execute`函数打开文件并读取字符串。 使用者将文件名传递给提供程序，通过调用[ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供程序接收的文件名称，并将其存储在成员变量`m_szCommandText`。 `Execute` 读取的文件名称`m_szCommandText`。 如果文件名无效，或者该文件不可用，`Execute`返回错误。 否则，将打开的文件和调用`fgets`以检索字符串。 为每个字符串将其设置的读操作，`Execute`创建的用户记录的实例 (`CAgentMan`) 并将其放到一个数组。  
   
  如果无法打开该文件，`Execute`必须返回**DB_E_NOTABLE**。 如果它返回**E_FAIL**相反，提供程序不会使用多个使用者和未通过 OLE DB[一致性测试](../../data/oledb/testing-your-provider.md)。  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="code"></a>代码  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
 class RMyProviderRowset : public CRowsetImpl< RMyProviderRowset, CAgentMan, CRMyProviderCommand>  

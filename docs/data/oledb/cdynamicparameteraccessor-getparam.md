@@ -1,12 +1,13 @@
 ---
-title: "Cdynamicparameteraccessor:: Getparam |Microsoft 文档"
+title: CDynamicParameterAccessor::GetParam | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDynamicParameterAccessor::GetParam
 - ATL.CDynamicParameterAccessor.GetParam
@@ -15,43 +16,39 @@ f1_keywords:
 - GetParam
 - ATL::CDynamicParameterAccessor::GetParam<ctype>
 - ATL::CDynamicParameterAccessor::GetParam
-dev_langs: C++
-helpviewer_keywords: GetParam method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetParam method
 ms.assetid: 893a6bf8-7b55-4f6d-8a10-a43b13be7f56
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7cdd27cfdd173e556bb9d4c6fd27a9d801a7f8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61d1a15cd148120914e22a566da45f579fdd72ae
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
 从参数缓冲区中检索指定参数的非字符串数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      template < class ctype > bool GetParam(   
-   DBORDINAL nParam,   
-   ctype* pData    
-) const throw( );  
-template < class ctype > bool GetParam(   
-   TCHAR* pParamName,   
-   ctype* pData    
-) const throw( );  
-void* GetParam(   
-   DBORDINAL nParam    
-) const throw( );  
-void* GetParam(   
-   TCHAR* pParamName    
-) const throw( );  
+```cpp
+template <class ctype>bool GetParam(DBORDINAL nParam,   
+  ctype* pData) const throw();  
+
+template <class ctype> bool GetParam(TCHAR* pParamName,   
+   ctype* pData) const throw();  
+
+void* GetParam(DBORDINAL nParam) const throw();  
+
+void* GetParam(TCHAR* pParamName) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -17,26 +19,17 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
-Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Windows 应用、本机桌面和服务器应用程序、在 Android 和 iOS 以及 Windows 上运行的跨平台库、在 .NET Framework 上运行的托管应用。
-
-**本文档的适用对象？**
-
-此内容适用于正在编写程序的 C++ 开发人员。
-
-- 如果要查找特定 C++ 可再发行组件包和运行时组件以便能够运行程序，请转到 [Microsoft](http://www.microsoft.com/) 网站，并在搜索框中输入“Visual C++ Redistributable”。 下载并安装适用于你的计算机体系结构的可再发行组件包（例如，如果运行 64 位 Windows，请使用 x64）以及所需的 Visual C++ 版本。 
-
-- 如果要查找 C++ 编程概念的简介，请转到众多提供此内容的网站之一，或获取 C++ 的创造者 Bjarne Stroustup 撰写的 [Programming -- Principles and Practice Using C++ (Second Edition)](http://stroustrup.com/Programming/) 《C++ 程序设计原理与实践》（第二版）的副本。 Visual C++ 内容假设你已基本熟悉 C++。
-
-- 如果要查找 Visual C++ 编译器，需从 [https://www.visualstudio.com/](https://www.visualstudio.com/) 下载 Visual Studio 的付费或免费版本。
+Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual Studio 的一部分，指 C++、C 和汇编语言开发的工具和库。 这些工具和库可用于创建通用 Windows 平台 (UWP) 应用、本机桌面和服务器应用程序、在 Windows、Linux、Android 和 iOS 上运行的跨平台库和应用以及使用 .NET Framework 的托管应用。 从 Windows 桌面的简单控制台应用到最复杂的应用，从移动设备的设备驱动程序和操作系统组件到跨平台游戏，再从 Azure 云中的最小 IoT 设备到多服务器的高性能计算等所有内容都可以使用 Visual C++ 编写。
 
 ## <a name="general-information-about-visual-c"></a>有关 Visual C++ 的常规信息
 
@@ -47,7 +40,7 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
 了解 Visual Studio 2017 中 C++ 的符合性改进情况。
 
 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)  
-Visual C ++ 中按功能列出的一致性状态列表。
+MSVC C++ 编译器中按功能列出的符合性状态列表。
 
 [Visual C++ 更改历史记录（2003 - 2015）](porting/visual-cpp-change-history-2003-2015.md)  
 了解先前版本中的重大更改。
@@ -59,13 +52,13 @@ Visual C ++ 中按功能列出的一致性状态列表。
  了解如何针对 Visual C++ 工具集（编译器、链接器和其他工具）创建有效的错误报告，以及提交报告的方法。
 
 [Visual C++ 移植和升级指南](porting/visual-cpp-porting-and-upgrading-guide.md)  
-有关在 Visual Studio 2017 中移植代码并将项目升级到 Visual C++ 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。
+有关移植代码并将项目升级到 Visual Studio 2017 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。
 
 [Visual C++ 团队博客](http://blogs.msdn.com/b/vcblog/)  
  详细了解 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]开发人员发布的新功能和最新信息。
 
 [Visual Studio 下载](http://go.microsoft.com/fwlink/p/?linkid=235233)  
-下载 Visual C++。
+下载 Visual Studio。
 
 [Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)  
 查明不同的 Visual Studio 版本。
@@ -82,9 +75,9 @@ Visual C ++ 中按功能列出的一致性状态列表。
 ## <a name="writing-applications-in-c"></a>使用 C++ 编写应用程序
 
 [通用 Windows 应用](windows/universal-windows-apps-cpp.md)  
-在 Windows 开发人员中心查找指南和参考内容。 有关开发 Windows 应用商店应用的信息，请参阅 [使用 Visual Studio 开发 Windows 应用商店应用](http://go.microsoft.com/fwlink/p/?LinkId=248364) 和 [使用 C++ 的 Windows 应用商店应用指南](http://go.microsoft.com/fwlink/p/?LinkId=244654)。
+在 Windows 开发人员中心查找指南和参考内容。 有关开发 UWP 应用的信息，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 创建第一个 UWP 应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
-[桌面应用程序 (Visual C++)](windows/desktop-applications-visual-cpp.md)  
+[桌面应用程序 (C++)](windows/desktop-applications-visual-cpp.md)  
 了解如何创建具有消息循环和回调的桌面应用程序。
 
 [Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)  
@@ -117,7 +110,7 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 库
 
-以下各节提供了有关 Visual C++ 中不同 C++ 库的信息。
+以下各节提供了有关 Visual Studio 中不同 C 和 C++ 库的信息。
 
 [C 运行时库参考](c-runtime-library/c-run-time-library-reference.md)  
 包括用安全性增强的函数来替代已知会引起安全问题的函数。
@@ -138,27 +131,18 @@ C++ 标准库。
 在 GPU 上执行的大量并行算法。
 
 [Windows 运行时模板库 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] 应用和组件。
+通用 Windows 平台 (UWP) 应用和组件。
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[使用 C++/CLI 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 公共语言运行时 (CLR) 编程。
 
 另请参阅 [STL/CLR](dotnet/stl-clr-library-reference.md) 和 [C++ Support Library](dotnet/cpp-support-library.md)文档。
 
 ## <a name="other-c-libraries"></a>其他 Visual C++ 库
 
-本节中包含指向未包括在 Visual Studio 中的库的链接，但可以下载该库并将其用于 Visual C++。
-
-[Boost](http://www.boost.org/)  
-一种广泛使用的常用库。
-
-[C++ REST SDK](http://casablanca.codeplex.com)。  
-用于通过 HTTP 与 Web 服务进行通信的 Microsoft 库。
+使用 vcpkg 命令行工具，可以显著简化 600 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](vcpkg.md)。
 
 ## <a name="more-resources"></a>更多资源
-
-[Visual C++ 资源](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
-更多 Visual C++ 资源。
 
 [标准 C++](http://isocpp.org/)  
 了解 C++、获取现代 C++ 的概述，并查找各种书籍、文章、谈话和会议的链接

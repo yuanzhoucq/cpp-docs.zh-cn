@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,19 +22,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs: C++
-helpviewer_keywords: CTokenPrivileges class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 类
 此类是包装器**TOKEN_PRIVILEGES**结构。  
@@ -54,7 +58,7 @@ class CTokenPrivileges
 |名称|描述|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|构造函数。|  
-|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|析构函数。|  
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -79,7 +83,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一个对象，用于描述进程或线程的安全上下文，并分配给每个用户登录到 Windows NT 或 Windows 2000 的系统。  
+ [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)是介绍进程或线程的安全上下文，并分配给每个用户登录到 Windows 系统的对象。  
   
  访问令牌用于描述每个用户所授予的各种安全权限。 特权包含一个名为本地唯一标识符的 64 位数字 ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) 和描述符字符串。  
   
@@ -90,7 +94,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
-##  <a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>  CTokenPrivileges::Add  
  将添加一个或多个权限`CTokenPrivileges`访问令牌的对象。  
   
 ```
@@ -111,7 +115,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>返回值  
  此方法的第一种形式返回所拥有的权限已成功添加，false 否则如果为 true。  
   
-##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  构造函数。  
   
 ```
@@ -140,7 +144,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>备注  
  析构函数释放所有已分配的资源。  
   
-##  <a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>  CTokenPrivileges::Delete  
  删除从特权`CTokenPrivileges`访问令牌的对象。  
   
 ```
@@ -155,9 +159,9 @@ bool Delete(LPCTSTR pszPrivilege) throw();
  如果特权否则是已成功删除，则返回 false，则返回 true。  
   
 ### <a name="remarks"></a>备注  
- 此方法很有用工具来创建在 Windows 2000 下受限制的令牌。  
+ 此方法很有用工具来创建受限制的令牌。  
   
-##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll  
  删除所有特权`CTokenPrivileges`访问令牌的对象。  
   
 ```
@@ -167,7 +171,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>备注  
  删除中包含的所有权限`CTokenPrivileges`访问令牌的对象。  
   
-##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames  
  检索显示名称中包含的特权`CTokenPrivileges`访问令牌的对象。  
   
 ```
@@ -183,7 +187,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  此方法检索可显示名称： 例如，如果属性名称为 SE_REMOTE_SHUTDOWN_NAME，可显示的名称是"从远程系统强制关机"。 若要获取的系统名称，使用[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)。  
   
-##  <a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
  返回权限中的条目数`CTokenPrivileges`对象。  
   
 ```
@@ -193,7 +197,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>返回值  
  返回的数目中包含的特权`CTokenPrivileges`对象。  
   
-##  <a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>  CTokenPrivileges::GetLength  
  返回的长度`CTokenPrivileges`对象。  
   
 ```
@@ -203,7 +207,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回保存所需的字节数**TOKEN_PRIVILEGES**结构由表示`CTokenPrivileges`对象，包括所有特权与其包含的项数。  
   
-##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
  检索本地唯一标识符 (Luid) 和从属性标志`CTokenPrivileges`对象。  
   
 ```
@@ -222,7 +226,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>备注  
  此方法将枚举所有中包含的特权`CTokenPrivileges`访问令牌的对象并将各个 Luid 和 （可选） 的属性标志放入数组对象。  
   
-##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
  检索从的名称和属性标志`CTokenPrivileges`对象。  
   
 ```
@@ -243,7 +247,7 @@ void GetNamesAndAttributes(
   
  此方法检索的属性名称，而不是可显示的名称： 例如，如果属性名称，SE_REMOTE_SHUTDOWN_NAME 的系统名称是"SeRemoteShutdownPrivilege。" 若要获取可显示的名称，请使用方法[CTokenPrivileges::GetDisplayNames](#getdisplaynames)。  
   
-##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  返回一个指向**TOKEN_PRIVILEGES**结构。  
   
 ```
@@ -253,7 +257,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>返回值  
  返回一个指向[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)结构。  
   
-##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  检索与给定的特权名称关联的属性。  
   
 ```
@@ -272,7 +276,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>返回值  
  如果该特性否则是已成功检索，则返回 false，则返回 true。  
   
-##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>  CTokenPrivileges::operator =  
  赋值运算符。  
   
 ```

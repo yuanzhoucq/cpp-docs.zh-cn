@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Getapproximateposition |Microsoft 文档"
+title: CRowset::GetApproximatePosition | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CRowset::GetApproximatePosition
 - ATL::CRowset<TAccessor>::GetApproximatePosition
@@ -15,34 +16,33 @@ f1_keywords:
 - GetApproximatePosition
 - ATL.CRowset.GetApproximatePosition
 - CRowset<TAccessor>::GetApproximatePosition
-dev_langs: C++
-helpviewer_keywords: GetApproximatePosition method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetApproximatePosition method
 ms.assetid: 8f9ccd41-0590-468e-b202-6731d0f99d21
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 86d6e17c3bfe01cc579e9a0afab8f555419e5116
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae92a7734c3b6f763ab4d6731e1cb8ff5222c676
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetgetapproximateposition"></a>CRowset::GetApproximatePosition
 返回对应于书签的行的近似位置。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT GetApproximatePosition(   
-   const CBookmarkBase* pBookmark,   
+```cpp
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,   
    DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows    
-) throw( );  
+   DBCOUNTITEM* pcRows) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

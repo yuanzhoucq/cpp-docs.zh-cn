@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 确定整数是否表示字母字符。  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  要使用的非当前区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是字母字符的特定表示方式，则这些例程都返回非零。 `isalpha`返回一个非零值，如果`c`在 A-Z 或 a-z 范围内。 `iswalpha` 仅为 `iswupper` 或 `iswlower` 是非零值的宽字符返回一个非零值；即对于属于实现定义集之一，且 `iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 均不是非零值的任何宽字符返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是字母字符的特定表示方式，则这些例程都返回非零。 `isalpha` 返回一个非零值，如果`c`在 A-Z 或 a-z 范围内。 `iswalpha` 仅为 `iswupper` 或 `iswlower` 是非零值的宽字符返回一个非零值；即对于属于实现定义集之一，且 `iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 均不是非零值的任何宽字符返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  带 `_l` 后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -99,9 +102,9 @@ int _iswalpha_l(
 |`_istalpha`|`isalpha`|`_ismbcalpha`|`iswalpha`|  
 |`_istalpha_l`|`_isalpha_l`|`_ismbcalpha_l`|`_iswalpha_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`isalpha`|\<ctype.h 1>|  
 |`iswalpha`|\<ctype.h 1> 或 \<wchar.h 1>|  

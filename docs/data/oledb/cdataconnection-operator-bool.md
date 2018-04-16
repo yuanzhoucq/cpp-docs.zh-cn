@@ -4,40 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataConnection::operatorBOOL
 - ATL::CDataConnection::operatorBOOL
 - CDataConnection.operatorBOOL
 - ATL.CDataConnection.operatorBOOL
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - BOOL operator
 - operator bool
 ms.assetid: ad0bea7f-61ff-47f7-8127-32a31e3e9b9d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 342a8074f61a6f05505534ff497010b8a752293c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a29d4a3878750f2ca7e70eff032ac9d2cb6b986c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnectionoperator-bool"></a>CDataConnection::operator BOOL
 确定当前会话是否为打开。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-operator BOOL( ) throw( );  
+```cpp
+operator BOOL() throw();  
   
 ```  
   

@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>用作链接器输入的 .netmodule 文件
 link.exe 现在接受 MSIL .obj 和 .netmodule 作为输入。 链接器生成的输出文件将是一个与输入到链接器的任何 .obj 或 .netmodule 没有运行时依赖关系的程序集或 .netmodule。  
   
  .netmodule 文件由带有的 Visual c + + 编译器[/LN （创建 MSIL 模块）](../../build/reference/ln-create-msil-module.md)或通过使用链接器[/NOASSEMBLY （创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md)。 .obj 始终是在 Visual c + + 编译中创建的。 对于其他 Visual Studio 编译器中，使用**/target: module**编译器选项。  
   
- 在大多数情况下，你将需要将传递给链接器.obj 文件从 Visual c + + 编译创建.netmodule，除非使用已创建.netmodule [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 用作链接器的输入必须是纯 MSIL，可以通过 Visual c + + 编译器生成的 MSIL.netmodule 文件**/clr: safe**。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。 默认情况下，.NET Visual Studio 编译器生成纯 MSIL 模块。  
+  你将需要将传递给链接器.obj 文件中，从创建.netmodule 的 Visual c + + 编译。 不再支持.netmodule 传入，因为**/clr: pure**和**/clr: safe**编译器选项在 Visual Studio 2015 中弃用，并将编译器的未来版本中删除。   
   
  有关如何以调用从命令行链接器的信息，请参阅[链接器命令行语法](../../build/reference/linker-command-line-syntax.md)，[命令行上的生成 C/c + + 代码](../../build/building-on-the-command-line.md)，和[设置的路径和环境变量命令行生成](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。  
   
- 到链接器传递的.netmodule 或.dll 文件进行编译使用 Visual c + + 编译器**/clr**或与**/clr: pure**可能会导致链接器错误。 有关详细信息，请参阅[选择.netmodule 输入文件的格式](../../build/reference/choosing-the-format-of-netmodule-input-files.md)。  
+ 到链接器传递的.netmodule 或.dll 文件进行编译使用 Visual c + + 编译器**/clr**可能会导致链接器错误。 有关详细信息，请参阅[选择.netmodule 输入文件的格式](../../build/reference/choosing-the-format-of-netmodule-input-files.md)。  
   
- 链接器接受本机.obj 文件，以及编译的 MSIL 的.obj 文件**/clr**， **/clr: pure**，或**/clr: safe**。 在相同的版本中传递混合的.obj 时, 生成的输出文件的可验证性，默认情况下，将等于输入模块的可验证性的最低级别。 例如，如果你将安全和纯.obj 传递给链接器时，输出文件将是纯的。 [/CLRIMAGETYPE （指定类型的 CLR 映像）](../../build/reference/clrimagetype-specify-type-of-clr-image.md)可让您指定较低级别的可验证性，如果这是你的需要。  
+ 链接器接受本机.obj 文件，以及编译的 MSIL 的.obj 文件**/clr**。 在相同的版本中传递混合的.obj 时, 生成的输出文件的可验证性，默认情况下，将等于输入模块的可验证性的最低级别。 
   
  如果您当前拥有由两个或更多程序集组成的应用程序，并且您希望该应用程序包含在一个程序集中，则必须对程序集进行重新编译，然后链接 .obj 或 .netmodule 以生成单个程序集。  
   

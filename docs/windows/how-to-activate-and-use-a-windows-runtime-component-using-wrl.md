@@ -1,32 +1,31 @@
 ---
-title: "如何： 激活和使用 Windows 运行时组件，使用 WRL |Microsoft 文档"
-ms.custom: 
+title: 如何： 激活和使用 Windows 运行时组件，使用 WRL |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：使用 WRL 激活和使用 Windows 运行时组件
 本文档说明如何使用 Windows 运行时 c + + 模板库 (WRL) 初始化 Windows 运行时以及如何激活和使用 Windows 运行时组件。  
-  
-> [!NOTE]
->  此示例中激活内置的 Windows 运行时组件。 若要了解如何创建您自己可以采用类似的方式激活的组件，请参阅[演练： 创建基本 Windows 运行时组件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)。  
   
  若要使用一个组件，必须首先获取由组件实现的类型的接口指针。 和 Windows 运行时其底层技术是组件对象模型 (COM)，因为你必须遵循 COM 规则来维护类型的实例。 例如，你必须维护*引用计数*，它确定类型从内存中删除时。  
   
@@ -39,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  以下步骤使用`Windows::Foundation::IUriRuntimeClass`接口来演示如何创建 Windows 运行时组件的激活工厂、 创建该组件的实例并检索的属性值。 它们还演示如何初始化 Windows 运行时。 以下是完整的示例。  
   
 > [!IMPORTANT]
->  尽管通常使用 Windows 运行时 c + + 模板库通用 Windows 平台应用中，此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`通用 Windows 平台应用中不可用。 有关类型和可以在通用 Windows 平台应用中使用的函数的详细信息，请参阅[不支持 /zw 的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM for Windows Store 应用](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  虽然通常使用 Windows 运行时 c + + 模板库中的通用 Windows 平台 (UWP) 应用，但此示例是为了进行说明使用控制台应用程序。 函数如`wprintf_s`UWP 应用中不可用。 有关类型和可以在 UWP 应用中使用的函数的详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 适用于 UWP 应用](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>若要激活和使用 Windows 运行时组件  
   
@@ -90,5 +89,5 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe wrl 使用 component.cpp runtimeobject.lib**  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

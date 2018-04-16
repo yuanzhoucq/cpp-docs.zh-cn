@@ -1,23 +1,27 @@
 ---
-title: "向 MFC 项目添加 ATL 支持 |Microsoft 文档"
-ms.custom: 
+title: 向 MFC 项目添加 ATL 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vc.codewiz.adding.atl.mfc
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.adding.atl.mfc
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 92a4e9096cf72f6556c8ceb36e12cdff97139712
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

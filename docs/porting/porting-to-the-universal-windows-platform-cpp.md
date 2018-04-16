@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 *“通用”* 的意思是代码可以在运行 Windows 10 的任何设备上运行，包括桌面、手机、平板电脑和运行 Windows 10 的未来设备。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。  
@@ -73,7 +76,7 @@ ms.lasthandoff: 12/21/2017
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     这些语句分别适用于 Windows 应用商店应用、Windows Phone 应用商店应用、都适用或都不适用（仅针对经典 Win32 桌面）。 这些宏仅在 Windows SDK 8.1 及更高版本中才可用，因此如果你的代码需要使用早期版本的 Windows SDK 或除 Windows 以外的其他平台进行编译，则还应考虑未定义它们中任何一个这种情况。  
+     这些语句分别适用于 UWP 应用、Windows Phone 应用商店应用、都适用或都不适用（仅针对经典 Win32 桌面）。 这些宏仅在 Windows SDK 8.1 及更高版本中才可用，因此如果你的代码需要使用早期版本的 Windows SDK 或除 Windows 以外的其他平台进行编译，则还应考虑未定义它们中任何一个这种情况。  
   
 11. 对应用支持的每种类型的设备，在仿真器或物理设备运行和调试应用。 若要运行仿真程序，则需在物理计算机上（而不是虚拟机上）运行 Visual Studio。  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 12/21/2017
 4.  生成，然后解决由不同版本的 Windows SDK 之间的重大更改所引发的任何错误。  
   
 ## <a name="troubleshooting"></a>疑难解答  
- 在将代码移植到通用 Windows 平台的过程中，可能会遇到各种错误。 以下是一些可能遇到的问题。  
+ 在将代码移植到 UWP 的过程中，可能会遇到各种错误。 以下是一些可能遇到的问题。  
   
  **项目配置问题**  
   
@@ -111,7 +114,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 <ApplicationTypeRevision>10.0</ApplicationTypeRevision>  
 ```  
   
- 如果使用 Visual Studio 创建新的通用 Windows 平台项目，则不应看到此错误。  
+ 如果使用 Visual Studio 创建新的 UWP 项目，则不应看到此错误。  
   
 ## <a name="see-also"></a>请参阅  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   

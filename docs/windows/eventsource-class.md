@@ -1,38 +1,40 @@
 ---
-title: "EventSource 类 |Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+title: EventSource 类 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/22/2018
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: event/Microsoft::WRL::EventSource
-dev_langs: C++
-helpviewer_keywords: EventSource class
+f1_keywords:
+- event/Microsoft::WRL::EventSource
+dev_langs:
+- C++
+helpviewer_keywords:
+- EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 531c4ec218f7e3b694a41cd465090a5b1787c41a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="eventsource-class"></a>EventSource 类
-表示一个事件。 EventSource 成员函数添加、 删除和调用事件处理程序。  
+表示非敏捷事件。 EventSource 成员函数添加、 删除和调用事件处理程序。 对于 agile 事件，使用[AgileEventSource](agileeventsource-class.md)。 
   
 ## <a name="syntax"></a>语法  
   
 ```  
-template<  
-   typename TDelegateInterface  
->  
+template<typename TDelegateInterface>  
 class EventSource;  
 ```  
   
@@ -59,7 +61,7 @@ class EventSource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[EventSource::addRemoveLock_ 数据成员](../windows/eventsource-addremovelock-data-member.md)|同步访问[targets_](../windows/eventsource-targets-data-member.md)数组时添加、 删除或调用事件处理程序。|  
 |[EventSource::targets_ 数据成员](../windows/eventsource-targets-data-member.md)|包含一个或多个事件处理程序的数组。|  
@@ -68,10 +70,11 @@ class EventSource;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `EventSource`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** event.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>另请参阅  
+ [Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)
+[AgileEventSource 类](agileeventsource-class.md)

@@ -1,32 +1,57 @@
 ---
 title: "编译器警告 （等级 1） C4305 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/17/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4305
-dev_langs: C++
-helpviewer_keywords: C4305
-ms.assetid: 56eecc21-2092-4e36-8017-0a8ca0ea0466
-caps.latest.revision: "6"
+f1_keywords:
+- C4305
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4305
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df1626d188d1b8e00674d6af6ce604998d317b78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8fe4b2b420c44584fdd5b4d48b4264bbc7a51bee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-1-c4305"></a>编译器警告（等级 1）C4305
-identifier： 从 type1 到 type2 截断  
-  
- 标识符转换为较小的类型，从而导致信息丢失。  
-  
- 如果你使用 ATL 连接点向导，请参阅知识库文章：  
-  
--   Q250847: ATL 连接点向导生成的代码具有 variant 类型的值的自变量的事件获得 C4305 警告
+
+> *上下文*： 从截断*type1*到*type2*  
+
+## <a name="remarks"></a>备注
+
+当某个值转换为更小的类型进行初始化，或作为构造函数自变量，从而导致信息丢失时，发出此警告。
+
+## <a name="example"></a>示例
+
+此示例演示两种方法可能会看到此警告：
+
+```cpp
+// C4305.cpp
+// Compile by using: cl /EHsc /W4 C4305.cpp
+
+struct item
+{
+    item(float) {}
+};
+
+int main()
+{
+    float f = 2.71828;          // C4305 'initializing'
+    item i(3.14159);            // C4305 'argument'
+    return static_cast<int>(f);
+}
+```
+
+若要修复此问题，请使用正确的类型的值初始化，或使用显式强制转换为正确的类型。 例如，使用**float**文本而不是 2.71828f 如**double** （浮点文本的默认类型） 来初始化**float**变量，或要传递给构造函数采用**float**自变量。

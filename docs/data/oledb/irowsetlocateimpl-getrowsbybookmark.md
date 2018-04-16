@@ -1,47 +1,47 @@
 ---
-title: "Irowsetlocateimpl:: Getrowsbybookmark |Microsoft 文档"
+title: IRowsetLocateImpl::GetRowsByBookmark | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl::GetRowsByBookmark
 - IRowsetLocateImpl.GetRowsByBookmark
 - GetRowsByBookmark
-dev_langs: C++
-helpviewer_keywords: GetRowsByBookmark method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetRowsByBookmark method
 ms.assetid: 07906e42-3582-427e-812a-aa19791e3c56
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ad35b152b5e7285d4dbd80c69ad60e05ddb87f62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68f546472e95147046b702a62be835ad64091d47
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetlocateimplgetrowsbybookmark"></a>IRowsetLocateImpl::GetRowsByBookmark
 获取一个或多个匹配指定的书签的行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD ( GetRowsByBookmark )(  
-   HCHAPTER /* hReserved */,  
+```cpp
+      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const DBBKMARK rgcbBookmarks[],  
    const BYTE* rgpBookmarks,  
    HROW rghRows[],  
-   DBROWSTATUS* rgRowStatus[]   
-);  
+   DBROWSTATUS* rgRowStatus[]);  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -4,36 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: CUtlProps
-dev_langs: C++
-helpviewer_keywords: OnInterfaceRequested method
+ms.topic: reference
+f1_keywords:
+- CUtlProps
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c458eaf7c1e41ade5d29fa020bacfebb2b278e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdac2b6069e5f72534a304794b65723bef8ceb47
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
 处理请求的可选接口，使用者调用方法时对象之一上创建接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      virtual HRESULT CUtlPropsBase::OnInterfaceRequested(  
-   REFIID riid  
-);  
+```cpp
+      virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);  
 ```  
   
 #### <a name="parameters"></a>参数  

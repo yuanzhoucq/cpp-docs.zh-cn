@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
-helpviewer_keywords: ATL, class wizards
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f7197ce84098961623ea95ccf22a7cec47ac6cb9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2fd2a7295b702726e9be30e0f3009c627727cd6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 向导和对话框
 活动模板库 (ATL) 向导生成各种类型的 COM 对象的样板文件代码。 你可以通过打开中的项目的快捷菜单来运行该向导**解决方案资源管理器**并选择**添加**，**类**。  

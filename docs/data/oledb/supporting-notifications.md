@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - notifications [C++], OLE DB consumers
 - events [C++], notifications in OLE DB
@@ -16,24 +18,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a859a9f3b2061d1cb18c93cd9f46d30600ada28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d22f7877e16946ba5cadf943f3ec4ffaf8fa800
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supporting-notifications"></a>支持通知
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>实现连接点接口上的提供程序和使用者  
  若要实现通知，提供程序类必须继承自[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)和[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。  
   
- `IRowsetNotifyCP`实现连接点接口的提供程序站点[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。 `IRowsetNotifyCP`实现广播函数向侦听器建议的连接点**IID_IRowsetNotify**对行集的内容的更改。  
+ `IRowsetNotifyCP` 实现连接点接口的提供程序站点[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。 `IRowsetNotifyCP` 实现广播函数向侦听器建议的连接点**IID_IRowsetNotify**对行集的内容的更改。  
   
  请注意，你还必须实现并注册`IRowsetNotify`上使用使用者 （也称为接收器） [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)以便使用者可以处理通知。 有关实现上使用者连接点接口的信息，请参阅[接收通知](../../data/oledb/receiving-notifications.md)。  
   
@@ -53,14 +55,14 @@ END_CONNECTION_POINT_MAP
 > [!NOTE]
 >  示例代码可能会与不同列出的内容此处;你应将示例代码视为多最新版本。  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
   
 class RUpdateRowset :   
 public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,   
-         CAtlArray< CAgentMan, CAtlArray<CAgentMan> >, CSimpleRow,   
-         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll > >,  
+         CAtlArray< CAgentMan, CAtlArray<CAgentMan>>, CSimpleRow,   
+         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll >>,  
       public IRowsetUpdateImpl< RUpdateRowset, CAgentMan >,  
       public IConnectionPointContainerImpl<RUpdateRowset>,  
       public IRowsetNotifyCP<RUpdateRowset>  

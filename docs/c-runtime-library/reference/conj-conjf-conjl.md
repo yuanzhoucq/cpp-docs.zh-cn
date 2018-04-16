@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - conj
 - conjf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/conj
 - complex/conjf
 - complex/conjl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - conj function
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ce33f536a97f5f78ae573a757402cc316e85f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b6b994d8c6afe416cd399c04d91fae422b217cf2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
 返回复数的复数共轭。  
@@ -83,9 +85,9 @@ _Lcomplex conjl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用并返回 `conj` 和 `_Fcomplex` 值的 `_Lcomplex` 重载。 在 C 程序中，`conj` 始终采用并返回 `_Dcomplex` 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
   

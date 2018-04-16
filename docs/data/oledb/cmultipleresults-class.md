@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CMultipleResults
 - ATL::CMultipleResults
 - CMultipleResults
-dev_langs: C++
-helpviewer_keywords: CMultipleResults class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 360a5fbbb848ac1c3a44ec93343575852838b7ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa14b76b673e999519e25b4b7102b5fc5457b3f8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 类
 如果你想要处理多个结果集的命令，使用`CMultipleResults`为`CCommand`模板自变量*TMultiple*。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class CMultipleResults  
 ```  
   

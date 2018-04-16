@@ -1,37 +1,40 @@
 ---
-title: "C + + 类型系统 （现代 c + +） |Microsoft 文档"
-ms.custom: 
+title: C + + 类型系统 （现代 c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-language
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
-这一概念*类型*在 c + + 中非常重要。 每个变量、函数自变量和函数返回值必须具有一个类型以进行编译。 此外，在计算表达式前，编译器会给出每个表达式（包括文本值）的隐式类型。 类型的一些示例包括`int`存储整数值：`double`存储浮点值 (也称为*标量*数据类型)，或标准库类[std::basic_string](../standard-library/basic-string-class.md)来存储文本。 可以通过定义 `class` 或 `struct` 创建自己的类型。 该类型指定将分配给变量（或表达式结果）的内存量、可能存储在该变量中的值类型、如何对那些值（作为位模式）进行说明以及可对其执行的操作。 本文包含对 C++ 类型系统的主要功能的非正式概述。  
+这一概念*类型*在 C++ 中非常重要。 每个变量、函数自变量和函数返回值必须具有一个类型以进行编译。 此外，在计算表达式前，编译器会给出每个表达式（包括文本值）的隐式类型。 类型的一些示例包括`int`存储整数值：`double`存储浮点值 (也称为*标量*数据类型)，或标准库类[std::basic_string](../standard-library/basic-string-class.md)来存储文本。 可以通过定义 `class` 或 `struct` 创建自己的类型。 该类型指定将分配给变量（或表达式结果）的内存量、可能存储在该变量中的值类型、如何对那些值（作为位模式）进行说明以及可对其执行的操作。 本文包含对 C++ 类型系统的主要功能的非正式概述。   
   
 ## <a name="terminology"></a>术语  
- **变量**: 符号的数据量的名称，以便可以使用名称来访问它是指在范围内的代码定义它的数据。 C + + 中*变量*通常用于指标量数据类型的实例而其他类型的实例通常称为*对象*。  
+ **变量**: 符号的数据量的名称，以便可以使用名称来访问它是指在范围内的代码定义它的数据。 C++ 中*变量*通常用于指标量数据类型的实例而其他类型的实例通常称为*对象*。  
   
  **对象**： 为了简易性和一致性，本文使用术语*对象*来引用任何实例的类或结构，以及它使用一般意义时包括所有类型甚至标量变量。  
   
- **POD 类型**（纯旧数据）： c + + 中的数据类型此非正式类别是指作为标量 （参见基础类型部分） 或*POD 类*。 POD 类没有不是 POD 的静态数据成员，没有用户定义的构造函数、用户定义的析构函数或用户定义的赋值运算符。 此外，POD 类无虚函数、基类、私有的或受保护的非静态数据成员。 POD 类型通常用于外部数据交换，例如与用 C 语言编写的模块（仅具有 POD 类型）进行的数据交换。  
+ **POD 类型**（纯旧数据）： C++ 中的数据类型此非正式类别是指作为标量 （参见基础类型部分） 或*POD 类*。 POD 类没有不是 POD 的静态数据成员，没有用户定义的构造函数、用户定义的析构函数或用户定义的赋值运算符。 此外，POD 类无虚函数、基类、私有的或受保护的非静态数据成员。 POD 类型通常用于外部数据交换，例如与用 C 语言编写的模块（仅具有 POD 类型）进行的数据交换。  
   
 ## <a name="specifying-variable-and-function-types"></a>指定变量和函数类型  
- C + + 是*强类型*语言，也是*静态类型化*; 每个对象都具有类型和类型永远不会更改 （不以与静态数据对象相混淆）。   
+ C++ 是*强类型*语言，也是*静态类型化*; 每个对象都具有类型和类型永远不会更改 （不以与静态数据对象相混淆）。    
 **当你声明一个变量**在代码中，你必须显式指定其类型或使用`auto`关键字指示编译器通过初始值设定项推断类型。   
 **当你声明一个函数**在代码中，你必须指定每个自变量和其返回值的类型或`void`如果函数不返回任何值。 例外情况是，当使用允许任意类型参数的函数模板时。  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  下面的示例演示了一些简单变量声明，并分别对它们进行了说明。 该示例还演示了编译器如何使用类型信息允许或禁止对变量进行某些后续操作。  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -67,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  下图显示了内置类型的相对大小：  
   
- ![大小 （字节） 生成 &#45; 在类型](../cpp/media/built-intypesizes.png "内置 inTYpeSizes")  
+ ![大小 （字节） 生成&#45;类型中](../cpp/media/built-intypesizes.png "内置 inTYpeSizes")  
   
  下表列出了最常用的基础类型：  
   
@@ -88,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>const 类型限定符  
  任何内置或用户定义的类型都可由 const 关键字限定。 此外，成员函数可以受 `const` 限定甚至可以重载 `const`。 `const` 类型的值在初始化后将无法修改。  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -100,7 +103,7 @@ PI = .75 //Error. Cannot modify const variable.
  `const` 类型与其非常数版本截然不同；例如，`const int` 是与 `int` 截然不同的类型。 你可以使用 c + +`const_cast`运算符在这些少数情况下，你必须删除时*常量性*变量中。 有关详细信息，请参阅[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。  
   
 ## <a name="string-types"></a>字符串类型  
- 严格地说，c + + 语言具有没有内置的字符串类型;`char`和`wchar_t`存储单个字符-必须声明来估计一个字符串，这些类型的数组添加终止 null 值 (例如，ASCII `'\0'`) 过去的最后一个有效字符的一个数组元素 (也称为*C 样式字符串*)。 C 样式字符串需要编写更多的代码或者需要使用外部字符串实用工具库函数。 但在现代 C++ 中，我们可以使用标准库类型 `std::string`（用于 8 位 `char` 型字符串）或 `std::wstring`（用于 16 位 `wchar_t` 型字符串）。 可以将这些 c + + 标准库容器视为本机字符串类型因为它们是包含在任何符合 c + + 生成环境中的标准库的一部分。 只需使用 `#include <string>` 指令即可使这些类型在你的程序中可用。 （如果使用的是 MFC 或 ATL，还可使用 CString 类，但其不符合 C++ 标准。）强烈建议你不要在现代 C++ 中使用 null 终止字符数组（前面提到的 C 样式字符串）。  
+ 严格地说，C++ 语言具有没有内置的字符串类型;`char`和`wchar_t`存储单个字符-必须声明来估计一个字符串，这些类型的数组添加终止 null 值 (例如，ASCII `'\0'`) 过去的最后一个有效字符的一个数组元素 (也称为*C 样式字符串*)。 C 样式字符串需要编写更多的代码或者需要使用外部字符串实用工具库函数。 但在现代 C++ 中，我们可以使用标准库类型 `std::string`（用于 8 位 `char` 型字符串）或 `std::wstring`（用于 16 位 `wchar_t` 型字符串）。 可以将这些 C++ 标准库容器视为本机字符串类型因为它们是包含在任何符合 C++ 生成环境中的标准库的一部分。 只需使用 `#include <string>` 指令即可使这些类型在你的程序中可用。 （如果使用的是 MFC 或 ATL，还可使用 CString 类，但其不符合 C++ 标准。）强烈建议你不要在现代 C++ 中使用 null 终止字符数组（前面提到的 C 样式字符串）。  
   
 ## <a name="user-defined-types"></a>用户定义的类型  
  在定义 `class`、`struct`、`union` 或 `enum` 时，该构造会以基础类型的形式用在你其余的代码中。 它具有内存的已知大小以及一些有关可以如何在程序生命期内将其用于编译时检查和运行时的规则。 基本内置类型和用户定义的类型之间的主要区别如下：  
@@ -116,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  首先你应该知道的是，声明一个原始指针变量只会分配存储了取消指针时需引用的内存地址的内存。 数据值本身的内存分配 (也称为*后备存储*) 尚未分配。 换言之，通过声明原始指针变量，将创建内存地址变量而非实际数据变量。 在确保指针变量包含指向备份存储的有效地址前取消对其的引用将导致程序发生未定义行为（通常为严重错误）。 下面的示例演示了此种错误：  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -128,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  该示例取消引用指针类型，未分配用于存储实际整数数据的任何内存或向其分配有效内存地址。 下面的代码更正这些错误：  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -148,7 +151,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  但是，很容易忘记删除动态分配对象-尤其是在复杂代码中，这会导致调用的资源 bug*内存泄漏*。 为此，强烈建议你不要在现代 C++ 中使用原始指针。 始终是更好的做法在原始指针包装[智能指针](../cpp/smart-pointers-modern-cpp.md)，这将自动释放内存时 （当代码超出智能指针的范围） 时，将调用其析构函数; 使用智能指针您几乎消除了所有类的 c + + 程序中的 bug。 在下面的示例中，假定 `MyClass` 是具有公共方法 `DoSomeWork();` 的用户定义的类型  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
@@ -176,7 +179,7 @@ void someFunction() {
 |[值类型](../cpp/value-types-modern-cpp.md)|描述*值类型*以及与其使用相关的问题。|  
 |[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)|描述常见类型转换问题并说明如何避免这些问题出现。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

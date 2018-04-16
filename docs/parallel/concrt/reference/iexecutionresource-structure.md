@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 结构
 硬件线程的抽象。  
@@ -43,10 +47,10 @@ struct IExecutionResource;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Iexecutionresource:: Currentsubscriptionlevel](#currentsubscriptionlevel)|返回数激活的虚拟处理器根和订阅当前与此执行资源表示的基础硬件线程关联的外部线程。|  
-|[Iexecutionresource:: Getexecutionresourceid](#getexecutionresourceid)|返回此执行资源表示的硬件线程的唯一标识符。|  
-|[Iexecutionresource:: Getnodeid](#getnodeid)|返回此执行资源所属的处理器节点的唯一标识符。|  
-|[Iexecutionresource:: Remove](#remove)|返回此执行资源到资源管理器。|  
+|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|返回数激活的虚拟处理器根和订阅当前与此执行资源表示的基础硬件线程关联的外部线程。|  
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|返回此执行资源表示的硬件线程的唯一标识符。|  
+|[IExecutionResource::GetNodeId](#getnodeid)|返回此执行资源所属的处理器节点的唯一标识符。|  
+|[IExecutionResource::Remove](#remove)|返回此执行资源到资源管理器。|  
   
 ## <a name="remarks"></a>备注  
  执行资源可以是独立或与虚拟处理器根。 你的应用程序中的线程创建的线程订阅时，将创建独立执行资源。 方法[ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)和[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)创建线程订阅，并返回`IExecutionResource`接口表示订阅。 创建线程订阅是一种方法通知资源管理器的给定的线程将参与工作排队到计划程序，以及资源管理器将分配给计划程序的虚拟处理器根。 资源管理器使用的信息以避免超额订阅硬件线程，它可在其中。  
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **命名空间：** 并发  
   
-##  <a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 方法  
+##  <a name="currentsubscriptionlevel"></a>  Iexecutionresource:: Currentsubscriptionlevel 方法  
  返回数激活的虚拟处理器根和订阅当前与此执行资源表示的基础硬件线程关联的外部线程。  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  资源管理器使用作为一种用于确定何时要计划程序之间移动资源的订阅级别的信息。  
   
-##  <a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 方法  
+##  <a name="getexecutionresourceid"></a>  Iexecutionresource:: Getexecutionresourceid 方法  
  返回此执行资源表示的硬件线程的唯一标识符。  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>备注  
  每个硬件线程由并发运行时分配的唯一标识符。 如果多个执行资源相关联的硬件线程，它们将具有相同的执行资源标识符。  
   
-##  <a name="getnodeid"></a>Iexecutionresource:: Getnodeid 方法  
+##  <a name="getnodeid"></a>  Iexecutionresource:: Getnodeid 方法  
  返回此执行资源所属的处理器节点的唯一标识符。  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  可以从函数获取节点的计数[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
   
-##  <a name="remove"></a>Iexecutionresource:: Remove 方法  
+##  <a name="remove"></a>  Iexecutionresource:: Remove 方法  
  返回此执行资源到资源管理器。  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  虚拟处理器根也可返回至资源管理器，通过调用 `Remove` 方法实现，因为接口 `IVirtualProcessorRoot` 继承自 `IExecutionResource` 接口。 你可能需要返回到调用的响应中的虚拟处理器根[ischeduler:: Removevirtualprocessors](ischeduler-structure.md#removevirtualprocessors)方法，或当你完成从获取超额订阅的虚拟处理器根[Ischedulerproxy:: Createoversubscriber](ischedulerproxy-structure.md#createoversubscriber)方法。 对于虚拟处理器根没有任何限制对哪个线程可以调用`Remove`方法。  
   
- `invalid_argument`如果引发参数`pScheduler`设置为`NULL`。  
+ `invalid_argument` 如果引发参数`pScheduler`设置为`NULL`。  
   
- `invalid_operation`如果引发参数`pScheduler`不同于创建线程订阅线程当前线程是否是不同于此执行资源是否已创建，或与独立执行资源，计划程序。  
+ `invalid_operation` 如果引发参数`pScheduler`不同于创建线程订阅线程当前线程是否是不同于此执行资源是否已创建，或与独立执行资源，计划程序。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

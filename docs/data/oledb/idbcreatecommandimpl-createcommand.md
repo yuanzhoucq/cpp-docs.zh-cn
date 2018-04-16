@@ -4,41 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IDBCreateCommandImpl.CreateCommand
 - CreateCommand
 - IDBCreateCommandImpl::CreateCommand
-dev_langs: C++
-helpviewer_keywords: CreateCommand method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateCommand method
 ms.assetid: 50ffbf8b-2c07-4bcb-96c5-ffce4519c7f7
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ff1f7e9815ae5cea9a96c95f7faad30340bf548d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83566713a42de25fb2c0e515daa94ee61eed53ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbcreatecommandimplcreatecommand"></a>IDBCreateCommandImpl::CreateCommand
 创建一个新的命令并返回所请求的接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD(CreateCommand)(   
-   IUnknown * pUnkOuter,   
+```cpp
+      STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
    REFIID riid,   
-   IUnknown ** ppvCommand    
-);  
+   IUnknown ** ppvCommand);  
 ```  
   
 #### <a name="parameters"></a>参数  

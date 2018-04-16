@@ -1,30 +1,34 @@
 ---
-title: "runtime_exception 类 |Microsoft 文档"
-ms.custom: 
+title: runtime_exception 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 类
 C++ Accelerated Massive Parallelism (AMP) 库中的异常的基类型。  
@@ -62,12 +66,12 @@ class runtime_exception : public std::exception;
   
  `runtime_exception`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amprt.h  
   
  **命名空间：** 并发  
 
-## <a name="runtime_exception__ctor"></a>runtime_exception 构造函数  
+## <a name="runtime_exception__ctor"></a>  runtime_exception 构造函数  
 初始化类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>返回值  
  `runtime_exception` 对象。  
 
-## <a name="dtor"></a>~ runtime_exception 析构函数  
+## <a name="dtor"></a>  ~runtime_exception Destructor  
 销毁对象。  
   
 ### <a name="syntax"></a>语法  
@@ -106,7 +110,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code   
 返回导致异常的错误代码。  
   
 ### <a name="syntax"></a>语法  
@@ -136,5 +140,5 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

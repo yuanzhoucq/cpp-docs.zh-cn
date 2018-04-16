@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee992c5e33cb29e1a499293787030b38438de6e8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>编译器内部函数和程序集语言
 该文档的本节包含有关编译器内部函数和汇编语言的信息。  
@@ -31,4 +34,4 @@ ms.lasthandoff: 12/21/2017
 |[内联汇编程序](../assembler/inline/inline-assembler.md)|解释如何使用具有 x86 处理器的 Visual C/C++ 内联汇编。|  
 |[ARM 汇编程序参考](../assembler/arm/arm-assembler-reference.md)|提供 Microsoft ARM 汇编程序 (armasm) 和相关工具的参考材料。|  
 |[Microsoft 宏汇编程序参考](../assembler/masm/microsoft-macro-assembler-reference.md)|提供 Microsoft Macro 汇编程序 (masm) 的参考材料。|  
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|Visual C++ 文档的顶级文章。|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Visual C++ 文档的顶级文章。|

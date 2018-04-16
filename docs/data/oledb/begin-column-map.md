@@ -1,28 +1,32 @@
 ---
-title: "BEGIN_COLUMN_MAP |Microsoft 文档"
+title: BEGIN_COLUMN_MAP | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BEGIN_COLUMN_MAP
-dev_langs: C++
-helpviewer_keywords: BEGIN_COLUMN_MAP macro
+ms.topic: reference
+f1_keywords:
+- BEGIN_COLUMN_MAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- BEGIN_COLUMN_MAP macro
 ms.assetid: d6ffe633-e0da-4e33-8faa-f7f259d05420
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9edcaa47bccf0665ddeabf4e65e16ab1642de885
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45d5438d1a4ba946aa3db36cc2b92eef1aa93ba3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="begincolumnmap"></a>BEGIN_COLUMN_MAP
 标记列映射条目的开头。  
@@ -30,11 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-BEGIN_COLUMN_MAP(  
-x  
- )  
-  
+BEGIN_COLUMN_MAP(x)  
 ```  
   
 #### <a name="parameters"></a>参数  

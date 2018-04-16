@@ -4,55 +4,55 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CTable.Open
 - ATL::CTable::Open
 - CTable::Open
 - CTable.Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: 5d006d95-74d7-4e2b-b243-a33bc53b5455
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e664ddb310892004b95c81c8c7d93d8035b82cd3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d727af84dfeae77ab08e57f2f3a11120f9f88631
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctableopen"></a>CTable::Open
 打开表。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Open(  
-   const CSession& session,  
+```cpp
+HRESULT Open(const CSession& session,  
    LPCWSTR wszTableName,  
    DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0  
-) throw ( );  
-HRESULT Open(  
-   const CSession& session,  
+   ULONG ulPropSets = 0) throw ();  
+
+
+HRESULT Open(const CSession& session,  
    LPCSTR szTableName,  
    DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0  
-) throw ( );  
-HRESULT Open(  
-   const CSession& session,  
+   ULONG ulPropSets = 0) throw ();  
+
+
+HRESULT Open(const CSession& session,  
    DBID& dbid,  
    DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0  
-) throw ( );  
+   ULONG ulPropSets = 0) throw ();  
 ```  
   
 #### <a name="parameters"></a>参数  

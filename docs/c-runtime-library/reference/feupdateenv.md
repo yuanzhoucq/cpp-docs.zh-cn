@@ -8,8 +8,9 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: feupdateenv
+ms.topic: reference
+apiname:
+- feupdateenv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,19 +26,22 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs: C++
-helpviewer_keywords: feupdateenv function
+dev_langs:
+- C++
+helpviewer_keywords:
+- feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c84e829876282a43fb9a8a17713a612e387f5216
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1fd4a74515b2b3ab29b30fb07d80121e35d950ee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="feupdateenv"></a>feupdateenv
 保存当前引发的浮点异常，还原指定的浮点环境状态，并引发已保存的浮点异常。  
@@ -62,7 +66,7 @@ int feupdateenv(
   
  若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  

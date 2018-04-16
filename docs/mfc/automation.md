@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>自动化
 自动化（以前称为“OLE 自动化”）使一个应用程序能够操作在其他应用程序中实现的对象，或公开对象以供其他应用程序进行操作。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   自动化（本地）。  
   
--   [远程自动化](../mfc/remote-automation.md) （通过网络，使用分布式的 COM，即 DCOM）。  
+-   （通过网络，使用分布式的 COM，即 DCOM） 的远程自动化。  
   
  当应用程序提供对其他应用程序有用的功能时，公开对象是有益的。 例如，ActiveX 控件是一种类型的自动化服务器；托管 ActiveX 控件的应用程序是该控件的自动化客户端。  
   
@@ -81,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   [自动化客户端](../mfc/automation-clients.md)  
   
 -   [自动化服务器](../mfc/automation-servers.md)  
-  
--   [远程自动化](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

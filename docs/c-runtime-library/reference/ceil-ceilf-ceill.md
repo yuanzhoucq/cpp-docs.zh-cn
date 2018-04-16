@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - ceilf
 - ceil
@@ -29,23 +30,25 @@ f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4831b9f6f046dbc1a5d337f22e6be3dc3f4a5662
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcc33dd5fc9c00b537345d613cd47452a425a00e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 计算一个值的上限。  
@@ -86,9 +89,9 @@ long double ceill(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用 `ceil` 的重载。 在 C 程序中，`ceil` 始终采用及返回双精度型。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`ceil`, `ceilf`, `ceill`|\<math.h>|  
   

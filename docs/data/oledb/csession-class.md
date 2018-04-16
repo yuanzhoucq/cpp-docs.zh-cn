@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CSession
 - ATL::CSession
 - ATL.CSession
-dev_langs: C++
-helpviewer_keywords: CSession class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5f2a764aaa7e10b957955dc11ee35ee44f9472
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csession-class"></a>CSession 类
 表示单个数据库访问会话。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class CSession  
 ```  
   
@@ -44,7 +47,7 @@ class CSession
 |-|-|  
 |[中止](../../data/oledb/csession-abort.md)|取消（终止）事务。|  
 |[关闭](../../data/oledb/csession-close.md)|关闭会话。|  
-|[提交](../../data/oledb/csession-commit.md)|提交事务。|  
+|[Commit](../../data/oledb/csession-commit.md)|提交事务。|  
 |[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|返回有关事务的信息。|  
 |[打开](../../data/oledb/csession-open.md)|为数据源对象打开新会话。|  
 |[StartTransaction](../../data/oledb/csession-starttransaction.md)|开始此会话的新事务。|  

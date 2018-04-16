@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::<string>
 - <string>
-dev_langs: C++
-helpviewer_keywords: string header
+dev_langs:
+- C++
+helpviewer_keywords:
+- string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 20447d439f0db2d49fe0d9c168a01ee1ca613c79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltstringgt"></a>&lt;字符串&gt;
+# <a name="ltstringgt"></a>&lt;string&gt;
 定义容器模板类 `basic_string` 和各种支持模板。  
   
  有关 `basic_string` 的详细信息，请参阅[basic_string Class](../standard-library/basic-string-class.md)  
@@ -46,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[字符串](../standard-library/string-typedefs.md#string)|使用 `basic_string` 类型的元素将 `char` 模板类的专用化描述为 `string` 的类型。|  
+|[string](../standard-library/string-typedefs.md#string)|使用 `basic_string` 类型的元素将 `char` 模板类的专用化描述为 `string` 的类型。|  
 |[wstring](../standard-library/string-typedefs.md#wstring)|使用 `basic_string` 类型的元素将 `wchar_t` 模板类的专用化描述为 `wstring` 的类型。|  
 |[u16string](../standard-library/string-typedefs.md#u16string)|基于 `basic_string` 类型的元素描述模板类 `char16_t` 的专用化的类型。|  
 |[u32string](../standard-library/string-typedefs.md#u32string)|基于 `basic_string` 类型的元素描述模板类 `char32_t` 的专用化的类型。|  

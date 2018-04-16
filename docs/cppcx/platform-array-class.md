@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Array Constructors
 - VCCORLIB/Namespace not found::Platform::Array::Value
-dev_langs: C++
-helpviewer_keywords: Platform::Array Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 表示可以跨应用程序二进制接口 (ABI) 接收和传递的一维可修改数组。  
@@ -53,7 +56,7 @@ private ref class Array<TArg, 1> :
   
 |||  
 |-|-|  
-|[Array:: value](#value)|检索当前数组的句柄。|  
+|[Array::Value](#value)|检索当前数组的句柄。|  
   
 ### <a name="remarks"></a>备注  
  Array 类是密封类，不能被继承。  
@@ -66,11 +69,11 @@ private ref class Array<TArg, 1> :
   
  此类在编译器会自动包括的 vccorlib.h 标头中定义。 它在 Intellisense 中可见，但在“对象浏览器”中不可见，因为它不是在 platform.winmd 中定义的公共类型。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
 
  
-## <a name="ctor"></a>Array 构造函数
+## <a name="ctor"></a>  Array 构造函数
 初始化类模板参数指定的类型的一维可修改数组*T*。  
   
 ## <a name="syntax"></a>语法  
@@ -93,7 +96,7 @@ Array(T* data, unsigned int size);
 ### <a name="remarks"></a>备注  
  有关如何创建 platform:: array 实例的详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
-## <a name="get"></a>Array:: get 方法
+## <a name="get"></a>  Array:: get 方法
 检索对指定索引位置上数组元素的引用。  
   
 ## <a name="syntax"></a>语法  
@@ -109,7 +112,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>返回值  
  `index` 参数指定的数组元素。  
   
-## <a name="value"></a>Array:: value 属性
+## <a name="value"></a>  Array:: value 属性
 检索当前数组的句柄。  
   
 ## <a name="syntax"></a>语法  

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6565a43c-fd2d-4366-8322-8d75e1b06600
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: bd3c4f790681b1b044f435c03d185585b565eb62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="29-directive-nesting"></a>2.9 指令嵌套
 动态嵌套指令必须遵守以下规则：  
@@ -31,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **有关**，**部分**，和**单个**指令不允许使用的动态程度**关键**，**排序**，和**master**如果指令将绑定到相同的区域**并行**作为区域。  
   
--   **屏障**指令不允许使用的动态程度**为**，**排序**，**部分**，**单个**，**master**，和**关键**如果指令将绑定到相同的区域**并行**作为区域。  
+-   **屏障**指令不允许使用的动态程度**为**，**排序**，**部分**，**单个**， **master**，和**关键**如果指令将绑定到相同的区域**并行**作为区域。  
   
 -   **主**指令不允许使用的动态程度**为**，**部分**，和**单个**指令如果**master**指令将绑定到相同**并行**作为工作共享指令。  
   

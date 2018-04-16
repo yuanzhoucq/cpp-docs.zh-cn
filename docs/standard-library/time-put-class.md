@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xloctime/std::time_put
 - locale/std::time_put::char_type
 - locale/std::time_put::iter_type
 - locale/std::time_put::do_put
 - locale/std::time_put::put
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::time_put [C++]
 - std::time_put [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d27cb58766e019d26e3cfc3d99b4d719be701f37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b926fce11dcb7f2a18cc29a6dd653d1fb061bc20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timeput-class"></a>time_put 类
 此模板类描述一个对象来充当区域设置 facet，以便控制时间值向 `CharType` 类型序列的转换。  
@@ -249,7 +252,7 @@ explicit time_put(size_t _Refs = 0);
   
 -   1：必须手动管理对象的生存期。  
   
--   \>1： 未定义这些值。  
+-   \> 1： 未定义这些值。  
   
  构造函数初始化与与其基对象[locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。  
   

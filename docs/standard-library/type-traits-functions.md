@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - type_traits/std::is_assignable
 - type_traits/std::is_copy_assignable
@@ -18,7 +18,7 @@ f1_keywords:
 - type_traits/std::is_trivially_move_assignable
 - type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::is_assignable
@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 668ef9fb5f1786c3830d1ad143348c26060218ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 67fd80381854bd141fd47314544aca745f9a9aaf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 函数
 ||||  
@@ -300,6 +300,6 @@ struct is_trivially_move_constructible;
   
  类的类型数组的所有非静态数据成员的类具有普通构造函数  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
 

@@ -1,54 +1,52 @@
 ---
-title: "Idbschemarowsetimpl:: Createschemarowset |Microsoft 文档"
+title: IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl::CreateSchemaRowset
 - ATL::IDBSchemaRowsetImpl::CreateSchemaRowset
 - CreateSchemaRowset
 - IDBSchemaRowsetImpl.CreateSchemaRowset
 - ATL.IDBSchemaRowsetImpl.CreateSchemaRowset
-dev_langs: C++
-helpviewer_keywords: CreateSchemaRowset method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25d8149cb2e32505d87ef845b525684746d2b8da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e819805f9c73b2f8622b21b999b0db5f6771ecbe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 对模板参数指定的对象实现 COM 对象创建程序函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      template < class   
-      SchemaRowsetClass  
-       >  
-HRESULT CreateSchemaRowset(  
-   IUnknown *pUnkOuter,  
+```cpp
+template template <class SchemaRowsetClass>  
+HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,  
    ULONG cRestrictions,  
    const VARIANT rgRestrictions[],  
    REFIID riid,  
    ULONG cPropertySets,  
    DBPROPSET rgPropertySets[],  
    IUnknown** ppRowset,  
-   SchemaRowsetClass*& pSchemaRowset   
-);  
+   SchemaRowsetClass*& pSchemaRowset);  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - remainderl
 - remainder
@@ -28,22 +29,24 @@ f1_keywords:
 - remainderf
 - remainder
 - remainderl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - remainderf
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a0da3e4a6e785b73ebf2bfb8a529581d52dcfe2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2b7a5d55fd079f03338a6860755a783ba4d82b76
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 计算两个浮点值的商的余数（四舍五入到最接近的整数值）。  
@@ -89,7 +92,7 @@ long double remainderl(
   
  由于 C++ 允许重载，因此你可以调用采用并返回 `remainder` 或 `float` 值的 `long double` 重载。 在 C 程序中，`remainder` 始终采用两个双精度型值并返回一个双精度值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

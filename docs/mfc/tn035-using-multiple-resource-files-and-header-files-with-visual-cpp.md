@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.resources
-dev_langs: C++
+f1_keywords:
+- vc.resources
+dev_langs:
+- C++
 helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多个资源文件和头文件
 > [!NOTE]
@@ -120,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H 定义框架使用（尤其是在 AFXRES.RC 中使用）的标准符号，例如 `ID_FILE_NEW`。 AFXRES.H 还通过 #include 指令包括 WINRES.H，其中包含 Visual C++ 生成的 .RC 文件及 AFXRES.RC 所需的 WINDOWS.H 的一部分。 AFXRES.H 中定义的符号在你编辑应用程序资源文件 (MYAPP.RC) 时可用。 例如，`ID_FILE_NEW` 用于 MYAPP.RC 菜单资源中的“文件新建”菜单项。 无法更改或删除这些框架定义的符号。  
   
-## <a name="_mfcnotes_tn035_including"></a>包括其他头文件  
+## <a name="_mfcnotes_tn035_including"></a> 包括其他头文件  
   
  AppWizard 创建的应用程序仅包括两个头文件：RESOURCE.H 和 AFXRES.H。 只有 RESOURCE.H 特定于应用程序。 在以下情况下，你可能需要包括其他只读头文件：  
   
@@ -299,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ 每次保存 .RC 文件时，均会将 //{{NO_DEPENDENCIES}} 注释行添加到此文件。 某些情况下，避开对 RESOURCE.H 的生成依赖可能会导致在链接时检测不到运行时错误。 例如，使用符号浏览器来更改分配到资源符号的数值时，如果未重新编译引用资源的 .CPP 文件，则无法在应用程序运行时正确查找和加载资源。 在这种情况下，则应显式重新编译任何。在资源中符号更改会影响你知道的 CPP 文件。H 或选择**全部重新生成**。 如果你具有需要频繁更改一组资源的符号值，您可能会发现它更加方便和安全准备好这些符号置于单独只读头文件中，如上面的部分中所述[包括其他头文件](#_mfcnotes_tn035_including)。  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>如何管理 Visual c + + 集包括信息 * *  
+## <a name="_mfcnotes_tn035_set_includes"></a> 如何管理 Visual c + + 集包括信息**  
   
  如上所述，使用“文件”菜单的“设置包括”命令可指定三种类型的信息：  
   
@@ -387,7 +391,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

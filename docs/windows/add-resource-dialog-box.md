@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.editors.insertresource
-dev_langs: C++
+f1_keywords:
+- vc.editors.insertresource
+dev_langs:
+- C++
 helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fde90f5d7c7822155e36b77c74cd80cdf56b10d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="add-resource-dialog-box"></a>“添加资源”对话框
 使用此对话框将资源添加到 C++ Windows 桌面应用程序项目。  
   
 > [!NOTE]
->  此信息不适用于 Windows 应用商店应用中的资源。 有关的详细信息，请参阅[定义应用资源](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4)。  
+>  此信息不适用于通用 Windows 平台应用中的资源。 有关的详细信息，请参阅[应用资源和资源管理系统](/windows/uwp/app-resources/)。  
   
- **资源类型**  
+ 资源类型  
  指定你想要创建的资源类型。  
   
  你可以展开光标和对话框资源目录以显示其他资源。 这些资源位于...\Microsoft Visual Studio `version`\VC\VCResourceTemplates\\< LCID\>\mfc.rct。 如果添加.rct 文件，你必须将它们放在此目录或你必须指定[包括路径](../windows/how-to-specify-include-directories-for-resources.md)它们。 之后，这些文件中的资源将显示在相应类别下的第二层。 可添加的 .rct 文件数没有预设限制。  

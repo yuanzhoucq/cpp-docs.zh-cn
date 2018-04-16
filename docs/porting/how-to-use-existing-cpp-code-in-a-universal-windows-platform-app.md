@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 要在 UWP 环境中运行桌面程序，最简单的方法或许是使用桌面桥技术。 这包括 Desktop App Converter，它能将现有应用程序打包为 UWP 应用，而无需更改代码。 有关详细信息，请参阅[使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)。
@@ -27,9 +30,9 @@ ms.lasthandoff: 12/21/2017
   
  UWP 应用在受保护的环境中运行，结果，很多可能危及平台安全的 Win32、COM 和 CRT API 调用都不被允许。 如果使用 /ZW 选项，则编译器可以检测此类调用并生成错误。 你可以使用应用程序上的应用认证工具包检测调用禁止的 API 的代码。 请参阅[使用应用认证工具包](https://msdn.microsoft.com/library/windows/apps/hh694081.aspx)。  
   
- 如果源代码可用于库，则你可能能够消除禁止的 API 调用。 有关包括允许或禁止的 API 列表的详细信息，请参阅[用于 Windows 运行时应用和通用 Windows 平台 (UWP) 应用的 Win32 和 COM](https://msdn.microsoft.com/library/windows/apps/br205762.aspx)，以及 [/ZW 不支持 CRT 函数](https://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。 在 [Windows 运行时应用和通用 Windows 平台 (UWP) 应用中的 Windows API 的替代项](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx)中可找到一些替代项。  
+ 如果源代码可用于库，则你可能能够消除禁止的 API 调用。 有关包括允许或禁止的 API 列表的详细信息，请参阅[用于 Windows 运行时应用和通用 Windows 平台 (UWP) 应用的 Win32 和 COM](https://msdn.microsoft.com/library/windows/apps/br205762.aspx)，以及[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。 可通过 [UWP 应用中的 Windows API 替代项](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)，找到一些替代项。  
   
- 如果只是尝试从通用 Windows 项目添加引用到经典桌面库，你将得到一条显示库不兼容的错误消息。 如果是静态库，你只需通过将库（.lib 文件）添加到链接器输入就可以链接到库，类似在经典 Win32 应用程序中的操作。 对于仅二进制可用的库，这是唯一的选项。 静态库链接到应用的可执行文件中，但在 UWP 应用中使用的 Win32 DLL 必须通过将其包括在项目中并标记为“内容”来打包到应用中。 若要在通用 Windows 平台应用中加载 Win32 DLL，还需要调用 [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx)，而不是 LoadLibrary 或 LoadLibraryEx。  
+ 如果只是尝试从通用 Windows 项目添加引用到经典桌面库，你将得到一条显示库不兼容的错误消息。 如果是静态库，你只需通过将库（.lib 文件）添加到链接器输入就可以链接到库，类似在经典 Win32 应用程序中的操作。 对于仅二进制可用的库，这是唯一的选项。 静态库链接到应用的可执行文件中，但在 UWP 应用中使用的 Win32 DLL 必须通过将其包括在项目中并标记为“内容”来打包到应用中。 若要在 UWP 应用中加载 Win32 DLL，还需要调用 [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx)，而不是 LoadLibrary 或 LoadLibraryEx。  
   
  如果你有 DLL 或静态库的源代码，则可以使用 /ZW 重新编译为 UWP 项目。 如果要这样做，则可以使用解决方案资源管理器添加引用，并在 C++ UWP 应用中使用它。 在 DLL 的情况下，与导出库链接。  
   
@@ -37,11 +40,11 @@ ms.lasthandoff: 12/21/2017
   
  前面的讨论不适用于 COM 组件案例，COM 组件必须以不同方式处理。 如果在 EXE 或 DLL 中具有 COM 服务器，只要将其作为[免注册 COM 组件](https://msdn.microsoft.com/library/dd408052.aspx)打包，将其作为内容文件添加到你的项目，并使用 [CoCreateInstanceFromApp](https://msdn.microsoft.com/library/windows/apps/hh404137.aspx) 将其实例化，就可以在通用 Windows 项目中使用它。 请参阅[在 Windows 应用商店 C++ 项目中使用 Free-COM DLL](http://blogs.msdn.com/b/win8devsupport/archive/2013/05/20/using-free-com-dll-in-windows-store-c-project.aspx)。  
   
- 如果想要将现有 COM 库移植到通用 Windows 平台，可通过使用 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 将其转换为 Windows 运行时组件。 WRL 不支持 ATL 和 OLE的所有功能，因此这种端口是否可行取决于 COM 代码多少，取决于你的组件需要 COM、ATL 以及 OLE 的哪些功能。  
+ 如果想要将现有 COM 库移植到 UWP，可通过使用 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 将其转换为 Windows 运行时组件。 WRL 不支持 ATL 和 OLE的所有功能，因此这种端口是否可行取决于 COM 代码多少，取决于你的组件需要 COM、ATL 以及 OLE 的哪些功能。  
   
- 这些是你可以在通用 Windows 平台项目中使用现有的 C++ 代码的各种方法。 某些方法不需要在组件扩展 (C++/CX) 启用（即，使用 /ZW 选项）的情况下对代码重新编译，而某些方法需要。因此如果你需要在标准 C++ 中保存代码，或者为某些代码保留经典 Win32 编译环境，你可以进行重新编译并选择相应的体系结构。 例如，所有包含通用 Windows 平台用户界面的代码和要向 C#、Visual Basic 和 JavaScript 调用方公开的类型都应存在于 Windows 应用项目和 Windows 运行时组件项目中。 仅在 C++（包括 C++/CX）代码中需要使用的代码可以存在于使用 /WX 选项编译的项目中或标准 C++ 项目中。 仅当仅二进制代码不使用禁止的 API 时，可通过将其作为静态库链接，或作为内容与应用一起打包并在 DLL 中加载来使用。  
+ 这些是你可以在 UWP 项目中使用现有的 C++ 代码的各种方法。 某些方法不需要在组件扩展 (C++/CX) 启用（即，使用 /ZW 选项）的情况下对代码重新编译，而某些方法需要。因此如果你需要在标准 C++ 中保存代码，或者为某些代码保留经典 Win32 编译环境，你可以进行重新编译并选择相应的体系结构。 例如，所有包含 UWP 用户界面的代码和要向 C#、Visual Basic 和 JavaScript 调用方公开的类型都应存在于 Windows 应用项目和 Windows 运行时组件项目中。 仅在 C++（包括 C++/CX）代码中需要使用的代码可以存在于使用 /WX 选项编译的项目中或标准 C++ 项目中。 仅当仅二进制代码不使用禁止的 API 时，可通过将其作为静态库链接，或作为内容与应用一起打包并在 DLL 中加载来使用。  
   
- 无论你选择哪种开发方案，都应注意可以在代码中使用一些宏定义，以便你可以在经典桌面 Win32 和通用 Windows 平台下有条件地编译代码。  
+ 无论选择哪种开发方案，都应注意可以在代码中使用一些宏定义，以便可以在经典桌面 Win32 和 UWP 下有条件地编译代码。  
   
 ```cpp  
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)  
@@ -50,17 +53,17 @@ ms.lasthandoff: 12/21/2017
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
 ```  
   
- 这些语句分别适用于 Windows 应用商店应用、Windows Phone 应用商店应用、都适用或都不适用（仅针对经典 Win32 桌面）。 这些宏仅在 Windows SDK 8.1 及更高版本中才可用，因此如果你的代码需要使用早期版本的 Windows SDK 或除 Windows 以外的其他平台进行编译，则还应考虑未定义它们中任何一个这种情况。  
+ 这些语句分别适用于 UWP 应用、Windows Phone 应用商店应用、都适用或都不适用（仅针对经典 Win32 桌面）。 这些宏仅在 Windows SDK 8.1 及更高版本中才可用，因此如果你的代码需要使用早期版本的 Windows SDK 或除 Windows 以外的其他平台进行编译，则还应考虑未定义它们中任何一个这种情况。  
   
  本主题包含以下过程。  
   
-1.  [在通用 Windows 平台应用中使用 Win32 DLL](#BK_Win32DLL)  
+1.  [在 UWP 应用中使用 Win32 DLL](#BK_Win32DLL)  
   
 2.  [在 UWP 应用中使用本机 C++ 静态库](#BK_StaticLib)  
   
 3.  [将 C++ 库移植到 Windows 运行时组件](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL"></a>在通用 Windows 平台应用中使用 Win32 DLL  
+##  <a name="BK_Win32DLL"></a>在 UWP 应用中使用 Win32 DLL  
  为了获得更好的安全性和可靠性，通用 Windows 应用在受限的运行时环境中运行，因此不能像在经典 Windows 桌面应用程序中那样使用任何本机 DLL。 如果你有 DLL 的源代码，则可以移植此代码，以便使其在 UWP 上运行。 你首先更改几个项目设置和项目文件元数据，以将此项目标识为 UWP 项目。 你需要使用 /ZW 选项编译库代码，从而启用 C++/CX。 由于与该环境相关的控制更严格，在 UWP 应用中，某些 API 调用是不被允许的。 请参阅[适用于 Windows 运行时应用和通用 Windows 平台 (UWP) 应用的 Win32 和 COM](https://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
   
  以下过程应用于该情况：你的本机 DLL 使用 __declspec(dllexport) 公开函数。  

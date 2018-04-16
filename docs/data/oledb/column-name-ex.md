@@ -1,52 +1,40 @@
 ---
-title: "COLUMN_NAME_EX |Microsoft 文档"
+title: COLUMN_NAME_EX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_NAME_EX
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_EX macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_NAME_EX
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_EX macro
 ms.assetid: 4f916a85-f6ae-464a-9cbe-0a56dbb274a6
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5658a2d0fb06f6bb9e9b8f2ab062f621b189cc75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 389b853255a8c0dadcebac8d18efacd9c8150db6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnnameex"></a>COLUMN_NAME_EX
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用数据类型、 大小、 精度、 缩放、 列长度和列状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_NAME_EX(  
-pszName  
-,   
-wType  
-,   
-nLength  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-length  
-,   
-status )  
+```cpp
+COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status )  
 ```  
   
 #### <a name="parameters"></a>参数  

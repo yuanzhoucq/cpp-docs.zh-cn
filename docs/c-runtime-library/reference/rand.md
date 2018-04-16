@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: rand
+ms.topic: reference
+apiname:
+- rand
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: rand
-dev_langs: C++
+f1_keywords:
+- rand
+dev_langs:
+- C++
 helpviewer_keywords:
 - generating pseudorandom numbers
 - random numbers, generating
@@ -33,12 +37,13 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aada39e6ea3de3cae65642d29fa1b5ce4bad098e
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5fecd9079de1ae846d83847eb299890d62c29d17
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rand"></a>rand
 
@@ -60,9 +65,9 @@ int rand( void );
 
 `rand`函数将生成的已知的序列，并不适合用作加密功能。 有关详细信息加密型安全随机数生成，使用`rand_s`或函数声明的 c + + 标准库中[\<随机 >](../../standard-library/random.md)。 有关 `rand()` 的问题以及 `<random>` 处理这些不足的方式的信息，请观看[此视频](http://go.microsoft.com/fwlink/?LinkId=397615)。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |`rand`|\<stdlib.h>|
 

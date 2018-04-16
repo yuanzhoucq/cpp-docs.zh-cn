@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc.templates.ole
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 037cb338db89e03b4e9457c5a0abc72c33c0ba57
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 OLE DB 模板使 OLE DB 数据访问更加轻松。 Visual c + + 提供了实现许多常用 OLE DB 接口的模板类。 你可以使用 Visual c + + 使用者模板编写 OLE DB 客户端 （使用者） 应用程序和提供程序模板编写服务器 （提供程序） 应用程序。  

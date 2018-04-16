@@ -1,12 +1,13 @@
 ---
-title: "strcmp、wcscmp、_mbscmp | Microsoft 文档"
-ms.custom: 
+title: strcmp、wcscmp、_mbscmp | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: ''
+ms.topic: reference
 apiname:
 - wcscmp
 - _mbscmp
@@ -25,6 +26,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
@@ -32,7 +34,8 @@ f1_keywords:
 - strcmp
 - _tcscmp
 - _ftcscmp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcscmp function
 - strcmp function
@@ -45,22 +48,23 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f133027b2f1e7dfef494baeed9df6e9e56447889
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: addc2c215d0c914e3caee3dba4d32f94ca91e62c
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
 比较字符串。  
   
 > [!IMPORTANT]
->  `_mbscmp` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  `_mbscmp` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -112,9 +116,9 @@ int _mbscmp(
   
  `strcmp` 函数区分大小写。 `_stricmp`、`_wcsicmp` 和 `_mbsicmp` 在比较字符串之前会首先将它们转换成小写形式。 包含 ASCII 表中“Z”和“a”之间的字符（“[”、“`\`”、“]”、“`^`”、“`_`”和“```”）的两个字符串，将会有不同的比较方式，这要具体取决于它们的大小写形式。 例如，如果比较采用小写形式，则 `"ABCDE"` 和 `"ABCD^"` 这两个字符串件将以一种方式进行比较 (`"abcde"` > `"abcd^"`)，而如果比较采用大写形式，则将采用另一种方式进行比较 (`"ABCDE"` < `"ABCD^"`)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`strcmp`|<string.h>|  
 |`wcscmp`|<string.h> 或 <wchar.h>|  
@@ -174,7 +178,7 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [_memicmp、_memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   

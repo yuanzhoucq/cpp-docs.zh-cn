@@ -1,27 +1,26 @@
 ---
 title: "部署 Visual c + + |Microsoft 文档"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
+ms.date: 03/13/2018
+ms.technology:
+- cpp-ide
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -47,6 +46,8 @@ ms.lasthandoff: 12/21/2017
 
 在本地部署中，库文件安装在你的应用程序文件夹，以及可执行文件。 因为每个版本的文件名称包含其版本号，可以在同一文件夹中安装不同版本的 Visual c + + 可再发行库。 例如，c + + 运行时库的 12 版本是 msvcp120.dll 和 14 是 msvcp140.dll 的版本。
 
+库可以分布到多个其他 Dll，称为*点库*。 例如，在 Visual Studio 2017 版本 15.6 中发布的标准库中的某些功能已添加到 msvcp140_1.dll，到 preverve msvcp140.dll 的 ABI 兼容性。 如果你使用 Visual Studio 2017 版本 15.6 （工具集 14.13） 或从 Visual Studio 2017 更高版本的工具集，你可能需要本地部署这些点库，以及主库。 ABI 更改时，这些单独的点库均然后汇总到基础库，下一个主要版本。
+
 由于 Microsoft 无法自动更新本地部署 Visual c + + 库，我们不建议本地部署的这些库。 如果你决定使用可再发行库的本地部署，建议你实现自己的自动更新本地部署库的方法。
 
 ## <a name="static-linking"></a>静态链接
@@ -57,6 +58,6 @@ ms.lasthandoff: 12/21/2017
 
 Visual c + + 库的加载顺序与系统相关。 若要诊断加载程序问题，请使用 depends.exe 或 where.exe。 有关详细信息，请参阅[动态链接库搜索顺序 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

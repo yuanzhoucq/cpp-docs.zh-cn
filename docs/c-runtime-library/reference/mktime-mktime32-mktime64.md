@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee2673f98f219559fd42d192dd934c8fe3eaed8c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 将本地时间转换为日历值。  
@@ -73,7 +76,7 @@ __time64_t _mktime64(
 ## <a name="return-value"></a>返回值  
  `_mktime32` 返回编码为 [time_t](../../c-runtime-library/standard-types.md) 类型的值的指定日历时间。 如果*timeptr*引用午夜，1970 年 1 月 1 日之前的日期或如果无法表示日历时间，`_mktime32`返回-1 转换为类型`time_t`。 使用时`_mktime32`如果*timeptr* 23:59:59 2038 年 1 月 18 日，协调世界时 (UTC) 之后, 的日期的引用，它将返回-1 转换为类型`time_t`。  
   
- `_mktime64`将返回-1 转换为类型`__time64_t`如果*timeptr*引用 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。  
+ `_mktime64` 将返回-1 转换为类型`__time64_t`如果*timeptr*引用 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。  
   
 ## <a name="remarks"></a>备注  
  `mktime`、`_mktime32` 和 `_mktime64` 函数将由 *timeptr* 指向的提供的时间结构（可能不完整）转换为使用规范化值的完全定义的结构，然后将它转换为 `time_t` 日历时间值。 转换后的时间与由 [time](../../c-runtime-library/reference/time-time32-time64.md) 函数返回的值具有相同的编码。 将忽略 *timeptr* 结构的 `tm_wday` 和 `tm_yday` 组件的原始值，并且不会将其他组件的原始值限制为其正常范围。  
@@ -96,9 +99,9 @@ __time64_t _mktime64(
   
  这些函数将验证其参数。 如果 *timeptr* 是 null 指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`mktime`|\<time.h>|  
 |`_mktime32`|\<time.h>|  

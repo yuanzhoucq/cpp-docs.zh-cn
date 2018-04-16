@@ -2,40 +2,38 @@
 title: "静态库 (C + + /cli CX) |Microsoft 文档"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="static-libraries-ccx"></a>静态库 (C++/CX)
-在通用 Windows 平台应用程序中使用的静态库可包含 ISO 标准 c + + 代码，包括 STL 类型，同时还未排除的通用 Windows 平台应用程序平台的 Win32 api 的调用。 静态库使用 Windows 运行时组件，并可能创建具有某些限制的 Windows 运行时组件。  
+在通用 Windows 平台 (UWP) 应用程序中使用的静态库可包含 ISO 标准 c + + 代码，包括 STL 类型，同时还未排除的 Windows 运行时应用程序平台的 Win32 api 的调用。 静态库使用 Windows 运行时组件，并可能创建具有某些限制的 Windows 运行时组件。  
   
 ## <a name="creating-static-libraries"></a>创建静态库  
   
-#### <a name="to-create-a-static-library-for-use-in-a-universal-windows-platform-app"></a>若要在通用 Windows 平台应用中创建使用静态库  
+#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>若要在 UWP 应用中创建使用静态库  
   
-1.  在菜单栏上，选择**文件** > **新建** > **项目** > **空白静态库**适用于通用 Windows 平台应用。  
+1.  在菜单栏上，依次选择“文件” > “新建” > “项目”。 下**Visual c + +** > **Windows 通用**选择**静态库 (通用 Windows)**。  
   
-2.  在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。 在**属性**对话框中，在**配置属性** > **常规**页上，设置为通用 Windows 平台应用程序支持**是**。  
+2.  在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。 在**属性**对话框中，在**配置属性** > **C/c + +**页上，设置**使用 Windows 运行时扩展**到**是 (/ZW)**。  
   
-3.  上**配置属性** > **C/c + +**页上，设置**使用**Windows 运行时**扩展**到**是 (/ZW)**。  
+ 如果不对此适用于 UWP 应用的 Win32 api 调用，新的静态库，编译时，编译器将引发错误 C3861"找不到标识符"。 若要查看适用于 Windows 运行时的替代方法，请参阅[UWP 应用中的 Windows Api 的替代项](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。  
   
- 如果由于通用 Windows 平台应用排除的 Win32 api 调用，新的静态库，编译时，编译器将引发错误 C3861"找不到标识符"。 若要查看适用于 Windows 运行时的替代方法，请参阅[Windows 应用商店应用中的 Windows Api 的替代项](http://msdn.microsoft.com/en-us/75568012-61e0-41cc-a4df-c698f54f21ec)。  
-  
- 如果将 c + + 静态库项目添加到通用 Windows 平台应用程序解决方案，你可能必须更新该库项目的属性设置，以便通用 Windows 平台支持属性设置为**是**。 无此设置代码也能生成和链接，但是当您尝试为 [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]验证该应用程序时，会发生错误。 编译静态库时的编译器设置应与使用该库的项目的编译器设置相同。  
+ 如果将 c + + 静态库项目添加到 UWP 应用程序解决方案，你可能必须更新该库项目的属性设置，以便 UWP 支持属性设置为**是**。 没有此设置，代码将生成，当你尝试验证该应用程序的 Microsoft 应用商店链接，但是错误时发生。 编译静态库时的编译器设置应与使用该库的项目的编译器设置相同。  
   
  如果使用创建公共 `ref` 类、公共接口类或公共值类的静态库，则链接器会引发此警告：  
   

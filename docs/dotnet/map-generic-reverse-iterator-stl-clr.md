@@ -1,17 +1,21 @@
 ---
-title: "map::generic_reverse_iterator (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: map::generic_reverse_iterator (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::map::generic_reverse_iterator
-dev_langs: C++
-helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
+f1_keywords:
+- cliext::map::generic_reverse_iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- generic_reverse_iterator member [STL/CLR]
 ms.assetid: b1b38fa8-89a7-4f39-9c80-b24eccfe339f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

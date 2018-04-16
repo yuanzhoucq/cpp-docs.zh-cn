@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
 - CATCH macro [MFC]
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
 这是一个高级的主题。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [重新引发异常](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>异常类型和 CATCH 宏  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> 异常类型和 CATCH 宏  
  在早期版本的 MFC，**捕获**宏使用 MFC 运行时类型信息来确定异常的类型; 该异常的类型确定，换而言之，在 catch 站点。 使用 c + + 异常，但是，该异常的类型始终在 throw 站点由确定引发的异常对象的类型。 这将导致不兼容问题的罕见情况下则引发该异常对象的指针的类型而不同于则引发该异常对象的类型中。  
   
  下面的示例阐释了这种差异之间 MFC 3.0 版及更早版本的后果：  
@@ -57,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  若要解决此问题，将引发表达式从函数移动到调用代码，并引发在生成的异常时编译器知道实际类型的异常。  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>重新引发异常  
+##  <a name="_core_re.2d.throwing_exceptions"></a> 重新引发异常  
  Catch 块不能引发它捕获的异常相同的指针。  
   
  例如，此代码有效在以前版本，但将有 3.0 版意外的结果：  
@@ -68,6 +71,6 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [异常处理](../mfc/exception-handling-in-mfc.md)
 

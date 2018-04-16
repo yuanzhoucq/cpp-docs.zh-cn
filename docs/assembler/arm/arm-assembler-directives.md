@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM 汇编程序指令
 大多数情况下，Microsoft ARM 汇编程序使用 ARM 程序集语言，这记录在的第 7 章[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 但是，某些程序集指令的 Microsoft 实现与不同 ARM 程序集指令。 本文介绍的区别。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 01/03/2018
  ATTR  
  不支持。  
   
- 代码 16  
+ CODE16  
  不支持，因为它意味着 Microsoft ARM 汇编程序不允许的前期 UAL Thumb 语法。  请改用 THUMB 指令，以及 UAL 语法。  
   
  常见  
@@ -57,7 +60,7 @@ ms.lasthandoff: 01/03/2018
 EXPORTsym {[type]}  
 ```  
   
- `sym`是要导出的符号。  `[type]`如果指定，可以是`[DATA]`以指示符号指向数据或`[FUNC]`以指示符号指向代码。  
+ `sym` 是要导出的符号。  `[type]`如果指定，可以是`[DATA]`以指示符号指向数据或`[FUNC]`以指示符号指向代码。  
   
  全局是导出的同义词。  
   
@@ -75,13 +78,13 @@ EXPORTsym {[type]}
 IMPORT sym{, WEAK alias{, TYPE t}}  
 ```  
   
- `sym`是要导入的符号的名称。  
+ `sym` 是要导入的符号的名称。  
   
  如果弱`alias`指定，它表明`sym`是弱外部。 如果在链接时，找到的它没有定义，则对它的所有引用改为都绑定到`alias`。  
   
  如果类型`t`未指定，则`t`指示如何链接器将尝试解决`sym`。  有关这些值`t`还可能有：   
-1-不执行库搜索`sym`  
-2-执行库搜索`sym`  
+1-不执行库搜索 `sym`  
+2-执行库搜索 `sym`  
 3-`sym`是的别名`alias`（默认值）  
   
  EXTERN 是导入，只不过的同义词`sym`仅在没有引用了它在当前程序集导入。  
@@ -99,7 +102,7 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  不支持。  
   
  RELOC  
- `RELOC n`仅可以按照指令或数据定义指令。 没有任何"匿名符号"可重新定位。  
+ `RELOC n` 仅可以按照指令或数据定义指令。 没有任何"匿名符号"可重新定位。  
   
  需要  
  不支持。  

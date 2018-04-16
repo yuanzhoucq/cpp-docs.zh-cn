@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -100,13 +103,13 @@ double wcstod_l(
 
 ## <a name="return-value"></a>返回值
 
-`strtod`返回的值的浮点数，除时表示形式将导致的溢出，在其中 case 函数将返回 + /-`HUGE_VAL`。 `HUGE_VAL` 的符号与无法表示的值的符号相匹配。 如果无法执行转换或出现下溢，则 `strtod` 返回 0。
+`strtod` 返回的值的浮点数，除时表示形式将导致的溢出，在其中 case 函数将返回 + /-`HUGE_VAL`。 `HUGE_VAL` 的符号与无法表示的值的符号相匹配。 如果无法执行转换或出现下溢，则 `strtod` 返回 0。
 
 `wcstod` 返回类似于 `strtod` 的值。 对于这两个函数，如果发生溢出或下溢，则将 `errno` 设置为 `ERANGE`，并调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个函数将转换输入的字符串*nptr*到`double`。 `strtod`函数将转换*nptr*为双精度值。 `strtod`停止读取字符串*nptr*不能将其识别为一个数字部分的第一个字符。 这可能是终止 null 字符。 `wcstod`是的宽字符版本`strtod`; 其*nptr*参数是宽字符字符串。 否则这些函数具有相同行为。
+每个函数将转换输入的字符串*nptr*到`double`。 `strtod`函数将转换*nptr*为双精度值。 `strtod` 停止读取字符串*nptr*不能将其识别为一个数字部分的第一个字符。 这可能是终止 null 字符。 `wcstod` 是的宽字符版本`strtod`; 其*nptr*参数是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,12 +122,12 @@ double wcstod_l(
 
 如果*endptr*不`NULL`，停止扫描的字符的指针指向的位置存储*endptr*。 如果可以不执行任何转换 （未找到有效的数字或指定了无效的基本） 的值*nptr*指向的位置存储*endptr*。
 
-`strtod`需要*nptr*以指向的字符串的以下形式之一：
+`strtod` 需要*nptr*以指向的字符串的以下形式之一：
 
-[*空白*] [*登录*] {*数字*[*基数**数字*] &#124;*基数**数字*} [{**e** &#124;**E**} [*登录*]*数字*]  
-[*空白*] [*登录*] {**0x** &#124;**0x**} {*hexdigits* [*基数* *hexdigits*] &#124;*基数* *hexdigits*} [{**p** &#124;**P**} [*登录*] *hexdigits*]  
-[*空白*] [*登录*] {**INF** &#124;**无穷大**}  
-[*空白*] [*登录*] **NAN** [*序列*]
+[*whitespace*] [*sign*] {*digits* [*radix* *digits*] &#124; *radix* *digits*} [{**e** &#124; **E**} [*sign*] *digits*]  
+[*whitespace*] [*sign*] {**0x** &#124; **0X**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **P**} [*sign*] *hexdigits*]  
+[*whitespace*] [*sign*] {**INF** &#124; **INFINITY**}  
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 可选的前导*空白*可能包含空格和制表符字符，将被忽略;*登录*是加号 （+） 或减号 （-）;*数字*是一个或多个十进制数字;*hexdigits*是一个或多个十六进制数字;*基数*是基数点字符，或者句点 （.） 在默认"C"区域，或特定于区域设置的值或如果当前区域设置不同时*区域设置*指定，则为*序列*是一系列的字母数字或下划线字符。 在十进制和十六进制数字的窗体，如果没有任何数字出现在之前的基数点字符，至少一个必须出现在之后的基数点字符。 十进制形式的十进制数字后面可以跟一个指数，介绍性字母组成 (**e**或**E**) 和一个可选带符号的整数。 十六进制形式的十六进制数字后面可以跟一个指数，介绍性字母组成 (**p**或**P**) 和一个可选带符号十六进制整数，表示为 2 的幂的指数。 在其中任一种形式中，如果一个指数部分和基数点字符都不出现，基数点字符假定要遵循在字符串中的最后一位数。 在这两忽略大小写**INF**和**NAN**窗体。 不符合这些窗体的第一个字符停止扫描。
 

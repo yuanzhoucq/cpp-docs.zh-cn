@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -28,22 +29,24 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9dd91b5ac59917e7f77cfb38faea96b03068b3e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73ae5542cd15d414f34e063a03fbafb6e1425381
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 计算立方根。  
@@ -82,7 +85,7 @@ long double cbrtl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用 `cbrt` 或 `float` 类型的 `long double` 重载。 在 C 程序中，`cbrt` 始终采用并返回 `double`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  

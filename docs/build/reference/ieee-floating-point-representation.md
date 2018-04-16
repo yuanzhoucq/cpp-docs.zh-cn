@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -18,27 +20,28 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮点表示形式
 Microsoft Visual c + + 是与 IEEE 数值标准保持一致。 有三个内部类型的实际数量。 实际\*4 和 real\*在 Visual c + + 中使用 8。 实际\*使用 word 声明 4 **float**。 实际\*使用 word 声明 8 **double**。 在 32 位 Windows 编程中，`long double`数据类型映射到**double**。 没有，但是，程序集语言支持用于计算使用 real * 10 个数据类型。  
   
  这些值存储，如下所示：  
   
-|“值”|存储为|  
+|值|存储为|  
 |-----------|---------------|  
 |real * 4|登录位，8 位指数，23 位尾数|  
 |real * 8|登录位、 11 位指数、 52 位尾数|  
-|real * 10|登录位、 15 位指数、 64 位尾数|  
+|real*10|登录位、 15 位指数、 64 位尾数|  
   
  在 real * 4 和 real\*8 格式，而它并不存储在内存中，因此尾数实际上是 24 或 53 位位，即使存储仅 23 或 52 位尾数中没有假定的前导 1。 真实\*10 格式实际上将存储此位。  
   
@@ -58,13 +61,13 @@ Microsoft Visual c + + 是与 IEEE 数值标准保持一致。 有三个内部�
   
  格式，然后，针对各种大小为，如下所示：  
   
-|格式|字节 1|字节 2|字节 3|字节 4|...|字节 n|  
+|格式|BYTE 1|BYTE 2|BYTE 3|字节 4|...|字节 n|  
 |------------|------------|------------|------------|------------|---------|------------|  
 |real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
 |real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
-|real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`表示符号位`X`的是指数的位，与`M`的是尾数位。 请注意，将最左边的位假定在 real * 4 和 real\*8 格式，但显示为"1"的实际字节 3 中\*10 格式。  
+ `S` 表示符号位`X`的是指数的位，与`M`的是尾数位。 请注意，将最左边的位假定在 real * 4 和 real\*8 格式，但显示为"1"的实际字节 3 中\*10 格式。  
   
  若要正确地变换二进制点，您首先阶，然后向右移动一些二进制点或剩余的适当数量的位。  
   
@@ -122,5 +125,5 @@ Microsoft Visual c + + 是与 IEEE 数值标准保持一致。 有三个内部�
   
 -   `0  = 1.0 * 2**-128 = all zeros--a special case.`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为何浮点数可能丢失精度](../../build/reference/why-floating-point-numbers-may-lose-precision.md)

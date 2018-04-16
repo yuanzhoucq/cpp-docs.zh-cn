@@ -4,41 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDynamicAccessor::AddBindEntry
 - AddBindEntry
 - CDynamicAccessor.AddBindEntry
 - CDynamicAccessor::AddBindEntry
 - ATL.CDynamicAccessor.AddBindEntry
-dev_langs: C++
-helpviewer_keywords: AddBindEntry method
+dev_langs:
+- C++
+helpviewer_keywords:
+- AddBindEntry method
 ms.assetid: 8f139376-7db3-4193-ba3b-63fe938ffa79
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 910418d83358817e7b0975507b6797c87cab514a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7234b06a32f53a24c5ccb9978ccc3910fa900807
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
 将绑定条目添加到输出列。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT AddBindEntry(   
-   const DBCOLUMNINFO& info    
-) throw( );  
+```cpp
+HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

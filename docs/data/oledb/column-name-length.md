@@ -1,43 +1,40 @@
 ---
-title: "COLUMN_NAME_LENGTH |Microsoft 文档"
+title: COLUMN_NAME_LENGTH | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_NAME_LENGTH
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_LENGTH macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_NAME_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_LENGTH macro
 ms.assetid: 3c4b6c94-d29d-4fba-a425-8186c9dc3f6a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c41d522af548128485051734b7cbb60c8271229b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99c9b63bd45c002a2798d1c951e4ac2bdc7d9fe5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnnamelength"></a>COLUMN_NAME_LENGTH
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用列长度。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_NAME_LENGTH(  
-pszName  
-,   
-data  
-,   
-length  
- )  
+```cpp
+COLUMN_NAME_LENGTH(pszName, data, length)  
   
 ```  
   

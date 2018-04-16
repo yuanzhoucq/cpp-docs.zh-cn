@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="hashset-class"></a>hash_set 类
 > [!NOTE]
@@ -124,10 +127,10 @@ class hash_set
  要存储在 hash_set 中的元素数据类型。  
   
  `Traits`  
- 该类型包括两个函数对象，其中一个是类比较函数，这是一个二元谓词，能够比较作为排序键的两个元素值以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的键值映射到 **size_t** 类型的无符号整数。 此自变量是可选自变量，且默认值为 `hash_compare`*<Key,* **less***\<Key> >*。  
+ 该类型包括两个函数对象，其中一个是类比较函数，这是一个二元谓词，能够比较作为排序键的两个元素值以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的键值映射到 **size_t** 类型的无符号整数。 此参数是可选的与`hash_compare` *< 密钥，* **小于 * * *\<密钥 >>*是默认值。  
   
  `Allocator`  
- 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此自变量是可选自变量，且默认值为 **allocator***\<Key>。*  
+ 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此参数是可选的而默认值是 **分配器 * * *\<密钥 >。*  
   
 ## <a name="remarks"></a>备注  
  Hash_set 是：  
@@ -220,7 +223,7 @@ class hash_set
 |-|-|  
 |[hash_set::operator=](#op_eq)|将一个 `hash_set` 中的元素替换为另一 `hash_set` 副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<hash_set>  
   
  **命名空间：** stdext  
@@ -2429,7 +2432,7 @@ int main( )
 The hash_set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

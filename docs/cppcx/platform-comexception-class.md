@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::COMException Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 类
 表示在应用程序执行过程中发生的 COM 错误。 COMException 是一组预定义的标准异常的基类。  
@@ -55,8 +58,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |成员|描述|  
 |------------|-----------------|  
-|[Exception:: hresult](#hresult)|与异常相对应的 HRESULT。|  
-|[Exception:: message](#message)|描述异常的消息。|  
+|[Exception::HResult](#hresult)|与异常相对应的 HRESULT。|  
+|[Exception::Message](#message)|描述异常的消息。|  
   
 ## <a name="derived-exceptions"></a>派生异常  
  下列预定义的异常从 COMException 派生。 它们与 COMException 的区别只在于名称、构造函数的名称和基础 HRESULT 值。  
@@ -86,7 +89,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **元数据：** platform.winmd  
 
-## <a name="ctor"></a>Comexception:: Comexception 构造函数
+## <a name="ctor"></a> COMException::COMException Constructor
 初始化 COMException 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -101,7 +104,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a>Comexception:: Hresult 属性
+## <a name="hresult"></a> COMException::HResult Property
 与异常相对应的 HRESULT。  
   
 ### <a name="syntax"></a>语法  
@@ -116,7 +119,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>备注  
  有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
 
-## <a name="message"></a>Comexception:: Message 属性
+## <a name="message"></a> COMException::Message Property
 描述异常的消息。  
   
 ### <a name="syntax"></a>语法  

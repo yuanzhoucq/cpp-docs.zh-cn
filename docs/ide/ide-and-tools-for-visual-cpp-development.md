@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d4898b2d67de4b23d31227e572c0f270aa6f37
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4b6ff3f709e5db16f06569ab3406cfef44cabf11
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>用于 Visual C++ 开发的 IDE 和工具
 
@@ -115,7 +115,7 @@ Visual Studio 包含一个用于本机 C++ 和 C++/CLI 的单元测试框架。 
 
 ## <a name="deploy-completed-applications"></a>部署已完成应用程序
 
-UWP 应用部署到通过 Windows 应用商店客户**项目** > **存储**菜单选项。 将在后台自动处理 CRT 的部署。 有关更多信息，请参阅 [将你的应用投入市场](http://go.microsoft.com/fwlink/p/?LinkId=262280)。
+UWP 应用部署到客户通过 Microsoft 应用商店**项目** > **存储**菜单选项。 将在后台自动处理 CRT 的部署。 有关更多信息，请参阅 [将你的应用投入市场](http://go.microsoft.com/fwlink/p/?LinkId=262280)。
 
 将本机 C++ 桌面应用程序部署到另一台计算机时，必须安装该应用程序及其依赖的任何库文件。 有三种方法来部署通用 c + + 运行时 (UCRT) 与应用程序： 集中部署、 本地部署或静态链接。 有关详细信息，请参阅[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)。
 
@@ -131,4 +131,4 @@ UWP 应用部署到通过 Windows 应用商店客户**项目** > **存储**菜�
 |[生成 C/C++ 程序](../build/building-c-cpp-programs.md)|介绍如何生成 C++ 项目。|
 |[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)|对 C++ 应用的部署和指向其他详细介绍部署的文章的链接进行了概述。|
 |[Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)|有关如何升级在 Visual Studio 的早期版本中创建的 c + + 应用程序以及如何将应用程序使用工具而非 Visual Studio 创建的迁移的详细的信息。|
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|描述 Visual C++ 在 Visual Studio 中的主要功能，并链接到 Visual C++ 文档的剩余部分。|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|描述 Visual C++ 在 Visual Studio 中的主要功能，并链接到 Visual C++ 文档的剩余部分。|

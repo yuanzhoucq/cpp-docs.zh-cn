@@ -1,59 +1,58 @@
 ---
-title: "Cdynamicparameteraccessor:: Setparamstatus |Microsoft 文档"
+title: CDynamicParameterAccessor::SetParamStatus | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDynamicParameterAccessor::SetParamStatus
 - ATL.CDynamicParameterAccessor.SetParamStatus
 - ATL::CDynamicParameterAccessor::SetParamStatus
 - CDynamicParameterAccessor.SetParamStatus
 - SetParamStatus
-dev_langs: C++
-helpviewer_keywords: SetParamStatus method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParamStatus method
 ms.assetid: 0c2271f6-457d-46ca-88b7-4590aadb20d7
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 52059675e20eb1789addf20dbf7a0e772f779efb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4af01d1f389f57adeffb953b4a83800e6b1b5387
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessorsetparamstatus"></a>CDynamicParameterAccessor::SetParamStatus
 设置存储在缓冲区中的指定参数的状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```
+bool SetParamStatus(DBORDINAL nParam,  
+   DBSTATUS status);  ```  
   
-      bool SetParamStatus(  
-   DBORDINAL nParam,  
-   DBSTATUS status  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
+#### Parameters  
  `nParam`  
- [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关示例。  
+ [in] The parameter number (offset from 1). Parameter 0 is reserved for return values. The parameter number is the index of the parameter based on its order in the SQL or stored procedure call. See [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) for an example.  
   
  *status*  
- [in]`DBSTATUS`的指定参数的状态。 有关信息`DBSTATUS`值，请参阅[状态](https://msdn.microsoft.com/en-us/library/ms722617.aspx)中*OLE DB 程序员参考*，或搜索`DBSTATUS`oledb.h 中。  
+ [in] The `DBSTATUS` status of the specified parameter. For information on `DBSTATUS` values, see [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in the *OLE DB Programmer's Reference*, or search for `DBSTATUS` in oledb.h.  
   
-## <a name="remarks"></a>备注  
- 返回**true**成功或**false**失败。  
+## Remarks  
+ Returns **true** on success or **false** on failure.  
   
-## <a name="requirements"></a>惠?  
- **标头:** atldbcli.h  
+## Requirements  
+ **Header:** atldbcli.h  
   
-## <a name="see-also"></a>请参阅  
- [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)
+## See Also  
+ [CDynamicParameterAccessor Class](../../data/oledb/cdynamicparameteraccessor-class.md)

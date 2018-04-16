@@ -1,30 +1,33 @@
 ---
-title: "包 |Microsoft 文档"
+title: pack | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pack"></a>pack
 指定结构、联合和类成员的封装对齐。  
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/21/2017
  `n`（可选）  
  指定要用于封装的值（以字节为单位）。 如果编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md)模块的默认值未设置`n`为 8。 有效值为 1、2、4、8 和 16。 成员将在作为 `n` 的倍数或成员的大小的倍数的边界（以较小者为准）上对齐。  
   
- `#pragma pack(pop, identifier, n)`未定义。  
+ `#pragma pack(pop, identifier, n)` 未定义。  
   
  有关如何修改对齐方式的详细信息，请参阅以下主题：  
   

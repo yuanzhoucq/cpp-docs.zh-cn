@@ -1,12 +1,13 @@
 ---
-title: "Cbookmark:: Getsize |Microsoft 文档"
+title: CBookmark::GetSize | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CBookmark::GetSize
 - ATL.CBookmark<nSize>.GetSize
@@ -20,30 +21,31 @@ f1_keywords:
 - ATL.CBookmark.GetSize
 - CBookmark<0>.GetSize
 - CBookmark<nSize>::GetSize
-dev_langs: C++
-helpviewer_keywords: GetSize method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetSize method
 ms.assetid: 78ea6021-2033-48f5-8ce8-040ae30f30c5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 927dc9312fa7ad9729e4a8ab87d1748f699c8508
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb6c78619c303e206ba5e2a3b85a2e0ee66724e5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cbookmarkgetsize"></a>CBookmark::GetSize
 检索书签缓冲区的大小。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-virtual DBLENGTH GetSize( ) const throw( );  
+```cpp
+virtual DBLENGTH GetSize() const throw();  
   
 ```  
   

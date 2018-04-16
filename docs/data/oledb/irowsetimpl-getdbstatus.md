@@ -1,43 +1,43 @@
 ---
-title: "Irowsetimpl:: Getdbstatus |Microsoft 文档"
+title: IRowsetImpl::GetDBStatus | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetDBStatus
 - IRowsetImpl.GetDBStatus
 - IRowsetImpl::GetDBStatus
-dev_langs: C++
-helpviewer_keywords: GetDBStatus method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetDBStatus method
 ms.assetid: e51d8ee2-fc0c-4909-861c-026c94fb0dfc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dff50d7ef201e8479ad06f6096549268b2dfe31d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6da72a2e93278fceb4ba43346ec8233752a8e1ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimplgetdbstatus"></a>IRowsetImpl::GetDBStatus
 返回`DBSTATUS`指定字段的状态标志。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      virtual DBSTATUS GetDBStatus(  
-   RowClass* currentRow,  
-   ATLCOLUMNINFO* columnNames   
-);  
+```cpp
+      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+   ATLCOLUMNINFO* columnNames);  
 ```  
   
 #### <a name="parameters"></a>参数  

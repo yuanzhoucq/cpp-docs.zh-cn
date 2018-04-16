@@ -1,17 +1,21 @@
 ---
-title: "运算符&lt;= (map) (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 运算符&lt;= (map) (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::map::operator<=
-dev_langs: C++
-helpviewer_keywords: operator<= member [STL/CLR]
+f1_keywords:
+- cliext::map::operator<=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator<= member [STL/CLR]
 ms.assetid: 8209ce40-0b2d-470d-9c64-97743e305902
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

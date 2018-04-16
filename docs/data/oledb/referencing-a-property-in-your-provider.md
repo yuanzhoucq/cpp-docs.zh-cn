@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, properties
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e39d012f126d44477bcb27f43b0a1119583a7ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a034c1f925a5b5d422be234118782b283a3d74c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 查找所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*。  
@@ -41,9 +43,10 @@ CDBPropSet propset(DBPROPSET_ROWSET);
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
+
 propset.AddProperty(DBPROP_IRowsetChange, true);  
-propset.AddProperty(DBPROP_UPDATABILITY,  
-DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
+
+propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
  使用`IRowset`接口来调用**GetProperties**。 将属性设置作为参数传递。 下面是最终代码：  
@@ -55,13 +58,16 @@ CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
   
 DBPROPIDSET set;  
 set.AddPropertyID(DBPROP_BOOKMARKS);  
+
 DBPROPSET* pPropSet = NULL;  
 ULONG ulPropSet = 0;  
+
 HRESULT hr;  
   
 if (spRowsetProps)  
    hr = spRowsetProps->GetProperties(1, &set, &ulPropSet, &pPropSet);  
   
+
 if (pPropSet)  
 {  
    CComVariant var = pPropSet->rgProperties[0].vValue;  

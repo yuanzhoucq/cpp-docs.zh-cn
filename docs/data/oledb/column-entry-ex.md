@@ -1,53 +1,40 @@
 ---
-title: "COLUMN_ENTRY_EX |Microsoft 文档"
+title: COLUMN_ENTRY_EX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_EX
-dev_langs: C++
-helpviewer_keywords: COLUMN_ENTRY_EX macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_EX
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_ENTRY_EX macro
 ms.assetid: dfad1b67-51c3-4289-b89a-da42d7e8bb88
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c477d2142fd64461754633593e07d86dc7f4d60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45429d57ae2191e0fc91e6a0bb2e3aa5e743062c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnentryex"></a>COLUMN_ENTRY_EX
 表示行集上与数据库中的特定列的绑定。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_ENTRY_EX(  
-nOrdinal  
-,   
-wType  
-,   
-nLength  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-length  
-,   
-status  
- )  
+```cpp
+COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, status)  
   
 ```  
   

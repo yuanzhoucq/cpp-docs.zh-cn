@@ -1,41 +1,43 @@
 ---
-title: "Cenumeratoraccessor:: M_bisparent |Microsoft 文档"
+title: CEnumeratorAccessor::m_bIsParent | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CEnumeratorAccessor.m_bIsParent
 - ATL::CEnumeratorAccessor::m_bIsParent
 - m_bIsParent
 - ATL.CEnumeratorAccessor.m_bIsParent
 - CEnumeratorAccessor::m_bIsParent
-dev_langs: C++
-helpviewer_keywords: m_bIsParent
+dev_langs:
+- C++
+helpviewer_keywords:
+- m_bIsParent
 ms.assetid: ab267905-d7d9-41cb-96ff-7be4d8875657
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b4920c014f5842162597fdac251eb96ffc52022
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e8e8d73fe87649e8e1eed2abbf23742bdf41806
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cenumeratoraccessormbisparent"></a>CEnumeratorAccessor::m_bIsParent
 一个指示枚举器是否的父枚举，如果行是一个枚举的变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 VARIANT_BOOL m_bIsParent;  
   
 ```  

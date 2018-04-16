@@ -1,24 +1,27 @@
 ---
-title: "2.3 parallel 构造 |Microsoft 文档"
-ms.custom: 
+title: 2.3 parallel 构造 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel 构造
 下面的指令定义并行区域，这是由多个线程并行执行的程序的区域。 这是启动并行执行的基本构造。  
@@ -29,21 +32,21 @@ ms.lasthandoff: 12/21/2017
   
  *子句*是以下之一：  
   
- **如果 (** *标量表达式* **)**  
+ **if(** *scalar-expression* **)**  
   
- **私有 (** *变量列表* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *变量列表* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **默认值 (共享 &#124; 无)**  
+ **default(shared &#124; none)**  
   
- **共享 (** *变量列表* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *变量列表* **)**  
+ **copyin(** *variable-list* **)**  
   
- **减少 (** *运算符* **:***变量列表* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *整数表达式* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  当线程遇到并行构造时，如果以下情况之一，则创建一个团队的线程：  
   

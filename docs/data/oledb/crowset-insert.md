@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>.Insert
 - CRowset.Insert
@@ -16,33 +17,32 @@ f1_keywords:
 - ATL.CRowset.Insert
 - CRowset::Insert
 - ATL::CRowset::Insert
-dev_langs: C++
-helpviewer_keywords: Insert method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Insert method
 ms.assetid: 6a64a1c3-10ac-4296-8685-0fd6fe63a13b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75dfe26fa04f8e639b3d391a9dc703a9a98c70c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e4ae63a867b0900712a90c880af1fc6c0329efe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetinsert"></a>CRowset::Insert
 创建并初始化新行使用访问器中的数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Insert(   
-   int nAccessor = 0,   
-   bool bGetHRow = false    
-) throw( );  
+```cpp
+HRESULT Insert(int nAccessor = 0,   
+   bool bGetHRow = false) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -1,42 +1,44 @@
 ---
-title: "Cdynamicparameteraccessor:: Getparamcount |Microsoft 文档"
+title: CDynamicParameterAccessor::GetParamCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDynamicParameterAccessor::GetParamCount
 - CDynamicParameterAccessor::GetParamCount
 - CDynamicParameterAccessor.GetParamCount
 - GetParamCount
 - ATL.CDynamicParameterAccessor.GetParamCount
-dev_langs: C++
-helpviewer_keywords: GetParamCount method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetParamCount method
 ms.assetid: 2a9bb734-a90c-4f89-aef6-8cbb41fce814
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c1d9e555f20af030076ee1345bf9374dc15f9fc9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28f4172bd644bc87b7f661816e91befef14da4d6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamcount"></a>CDynamicParameterAccessor::GetParamCount
 检索存储在缓冲区中的参数数目。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-DB_UPARAMS GetParamCount( ) const throw( );  
+```cpp
+DB_UPARAMS GetParamCount() const throw();  
   
 ```  
   

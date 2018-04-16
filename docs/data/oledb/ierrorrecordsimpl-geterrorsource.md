@@ -1,42 +1,42 @@
 ---
-title: "Ierrorrecordsimpl:: Geterrorsource |Microsoft 文档"
+title: IErrorRecordsImpl::GetErrorSource | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IErrorRecordsImpl.GetErrorSource
 - GetErrorSource
 - IErrorRecordsImpl::GetErrorSource
-dev_langs: C++
-helpviewer_keywords: GetErrorSource method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetErrorSource method
 ms.assetid: 5436f1ce-c5a4-403b-a62b-c58e70e5c925
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 312b8e28201447def0f09da9bcefc4a78e15d8ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a06b19a75a00be3b8a6befbf3f26218127022025
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ierrorrecordsimplgeterrorsource"></a>IErrorRecordsImpl::GetErrorSource
 获取错误记录从引起错误的源代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      LPOLESTR GetErrorSource(  
-   ERRORINFO& rCurError   
-);  
+```cpp
+      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>参数  

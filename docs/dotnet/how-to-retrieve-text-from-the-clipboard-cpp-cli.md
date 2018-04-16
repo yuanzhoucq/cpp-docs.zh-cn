@@ -1,18 +1,20 @@
 ---
-title: "如何： 检索剪贴板中的文本 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 检索剪贴板中的文本 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - text, retrieving from Clipboard
 - Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen

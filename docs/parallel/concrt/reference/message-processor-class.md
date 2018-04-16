@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message_processor
 - AGENTS/concurrency::message_processor
@@ -14,19 +15,22 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs: C++
-helpviewer_keywords: message_processor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messageprocessor-class"></a>message_processor 类
 `message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。  
@@ -56,7 +60,7 @@ class message_processor;
 |----------|-----------------|  
 |[async_send](#async_send)|当在派生类中重写，以异步方式将消息放置到的块中。|  
 |[sync_send](#sync_send)|当在派生类中重写，以同步方式将消息放置到的块中。|  
-|[等待](#wait)|当在派生类中重写，等待所有异步操作完成。|  
+|[wait](#wait)|当在派生类中重写，等待所有异步操作完成。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
@@ -72,7 +76,7 @@ class message_processor;
   
  **命名空间：** 并发  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  当在派生类中重写，以异步方式将消息放置到的块中。  
   
@@ -87,7 +91,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>备注  
  处理器实现应重写此方法。  
   
-##  <a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a> process_incoming_message 
 
  当在派生类中重写，执行到块转发消息的处理。 每次添加一个新消息并找到队列为空，则调用一次。  
   
@@ -98,7 +102,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>备注  
  消息块实现应重写此方法。  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  当在派生类中重写，以同步方式将消息放置到的块中。  
   
@@ -113,7 +117,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>备注  
  处理器实现应重写此方法。  
   
-##  <a name="wait"></a>等待 
+##  <a name="wait"></a> 等待 
 
  当在派生类中重写，等待所有异步操作完成。  
   

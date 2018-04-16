@@ -1,49 +1,40 @@
 ---
-title: "COLUMN_ENTRY_PS_LENGTH_STATUS |Microsoft 文档"
+title: COLUMN_ENTRY_PS_LENGTH_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_PS_LENGTH_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_ENTRY_PS_LENGTH_STATUS macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_PS_LENGTH_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_ENTRY_PS_LENGTH_STATUS macro
 ms.assetid: 04291671-329d-4974-b04e-36ef3f037787
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 057ff3f0ff621c70331f5baf43b141e50aa1156d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e118a807fe5aac14428ce96bbcedcfdf9eb092cf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnentrypslengthstatus"></a>COLUMN_ENTRY_PS_LENGTH_STATUS
 表示行集上与数据库中的特定列的绑定。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_ENTRY_PS_LENGTH_STATUS(  
-nOrdinal  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-length  
-,   
-status  
- )  
+```cpp
+COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status)  
   
 ```  
   

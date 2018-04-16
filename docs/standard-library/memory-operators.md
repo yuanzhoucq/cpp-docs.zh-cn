@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::operator!=
 - memory/std::operator>
@@ -14,18 +14,20 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 957be55cd6f38f6ff1ea271b09dcdaa1a241c945
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd02495ab42fd758cca28cfc5670ea1a1e7a2a83
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 运算符
 ||||  
@@ -329,7 +331,7 @@ bool operator<=(
  由右侧共享指针控制的类型。  
   
 ### <a name="remarks"></a>备注  
- 模板运算符返回`left.get() <= right.get()`  
+ 模板运算符返回 `left.get() <= right.get()`  
   
 ##  <a name="op_gt"></a>operator&gt;  
  测试一个对象是否大于或等于第二个对象。  

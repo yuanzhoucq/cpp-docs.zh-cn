@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: DEFINE_COMMAND
-dev_langs: C++
-helpviewer_keywords: DEFINE_COMMAND macro
+ms.topic: reference
+f1_keywords:
+- DEFINE_COMMAND
+dev_langs:
+- C++
+helpviewer_keywords:
+- DEFINE_COMMAND macro
 ms.assetid: 9d724968-e242-413c-9a13-e7175fccf9b1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cd2acfee6bb0f28acc774774e446e9efd4a5637b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af85ea4c223cac4e770dd9b45ffe785309f9f69
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 指定将用于创建行集时使用的命令[CCommand](../../data/oledb/ccommand-class.md)类。 接受仅与指定的应用程序类型 （ANSI 或 Unicode） 匹配的字符串类型。  
@@ -32,13 +36,8 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-DEFINE_COMMAND(  
-x  
-,   
-szCommand  
- )  
+```cpp
+DEFINE_COMMAND(x, szCommand)  
   
 ```  
   

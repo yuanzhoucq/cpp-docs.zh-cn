@@ -1,12 +1,13 @@
 ---
-title: "Cstreamrowset:: Cstreamrowset |Microsoft 文档"
+title: CStreamRowset::CStreamRowset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CStreamRowset::CStreamRowset
 - CStreamRowset.CStreamRowset
@@ -15,30 +16,31 @@ f1_keywords:
 - CStreamRowset
 - CStreamRowset<TAccessor>::CStreamRowset
 - ATL::CStreamRowset<TAccessor>::CStreamRowset
-dev_langs: C++
-helpviewer_keywords: CStreamRowset class, constructor
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStreamRowset class, constructor
 ms.assetid: 66f0f56b-ae7a-4e71-80cd-f17b1bd1c458
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b971807374624e25d5a604a1b8c6d34287eab547
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06c8fc811688474d5b80371ea9f678a23456ddc3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cstreamrowsetcstreamrowset"></a>CStreamRowset::CStreamRowset
 实例化和初始化`CStreamRowset`对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-CStreamRowset( );  
+```cpp
+CStreamRowset();  
   
 ```  
   

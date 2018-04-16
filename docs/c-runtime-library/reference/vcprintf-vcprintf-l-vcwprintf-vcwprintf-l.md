@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vcwprintf
 - _vcprintf_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _vcprintf
 - vcprintf
 - vcwprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vcwprintf function
 - _vcwprintf_l function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fd761e434b9fa9d9db694955d17cac0f33d84b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fdf5292278e52f9f36858024db90071084f9b9a9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 使用指向参数列表的指针编写格式化输出到控制台。 提供这些函数的更多安全版本；请参阅 [_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l](../../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -95,7 +98,7 @@ int _vcwprintf_l(
  格式规范。  
   
  `argptr`  
- 指向参数列表的指针。  
+ 指向自变量列表的指针。  
   
  `locale`  
  要使用的区域设置。  
@@ -120,9 +123,9 @@ int _vcwprintf_l(
 |`_vtcprintf`|`_vcprintf`|`_vcprintf`|`_vcwprintf`|  
 |`_vtcprintf_l`|`_vcprintf_l`|`_vcprintf_l`|`_vcwprintf_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|----------------------|  
 |`_vcprintf`, `_vcprintf_l`|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|  
 |`_vcwprintf`, `_vcwprintf_l`|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  

@@ -4,41 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: IRowsetImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetImpl class
+ms.topic: reference
+f1_keywords:
+- IRowsetImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 524f796b3ba864fe4e1d63c04b1b90fada314965
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 类
 提供 `IRowset` 接口的实现。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
-   >  
->  
+      RowClass*>>  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
-dev_langs: C++
-helpviewer_keywords: IUMSScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 结构
 工作计划程序的抽象的接口，该工作计划程序希望并发运行时的资源管理器向其传递用户模式计划 (UMS) 线程。 资源管理器使用此接口与 UMS 线程计划程序进行通信。 `IUMSScheduler` 接口继承自 `IScheduler` 接口。  
@@ -40,7 +44,7 @@ struct IUMSScheduler : public IScheduler;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Iumsscheduler:: Setcompletionlist](#setcompletionlist)|将分配`IUMSCompletionList`UMS 线程计划程序的接口。|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|将分配`IUMSCompletionList`UMS 线程计划程序的接口。|  
   
 ## <a name="remarks"></a>备注  
  如果你要实现的自定义计划程序进行通信使用资源管理器中，并且你希望 UMS 线程能被传递给计划程序而不是普通的 Win32 线程，则应提供的实现`IUMSScheduler`接口。 此外，应将计划程序策略密钥的策略值设置`SchedulerKind`要`UmsThreadDefault`。 如果该策略都指定 UMS 线程`IScheduler`传递作为参数传递给接口[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法必须是`IUMSScheduler`接口。  
@@ -59,7 +63,7 @@ struct IUMSScheduler : public IScheduler;
   
  **命名空间：** 并发  
   
-##  <a name="setcompletionlist"></a>Iumsscheduler:: Setcompletionlist 方法  
+##  <a name="setcompletionlist"></a>  Iumsscheduler:: Setcompletionlist 方法  
  将分配`IUMSCompletionList`UMS 线程计划程序的接口。  
   
 ```

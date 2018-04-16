@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8788de8ad28dc3c746155f59dee3ba5bb763bcaa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-provider-service-defaults"></a>重写提供程序服务默认值
 提供程序的注册表值以查找**OLEDB_SERVICES**返回的默认值为[DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx)数据源对象上的初始化属性。  
@@ -32,11 +34,11 @@ ms.lasthandoff: 12/21/2017
   
 |启用默认服务|DBPROP_INIT_OLEDBSERVICES 属性值|连接字符串中的值|  
 |------------------------------|------------------------------------------------|--------------------------------|  
-|所有服务 （默认值）|**DBPROPVAL_OS_ENABLEALL**|"OLE DB 服务 =-1;"|  
-|除池和登记|**DBPROPVAL_OS_ENABLEALL （& A)**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING （& A)**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB 服务 =-4;"|  
-|除客户端游标|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB 服务 =-5;"|  
-|除池，自动登记和客户端游标|**DBPROPVAL_OS_ENABLEALL （& A)**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT （& A)**<br /><br /> **~ DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB 服务 =-7;"|  
-|没有任何服务|~**DBPROPVAL_OS_ENABLEALL**|"OLE DB 服务 = 0;"|  
+|所有服务 （默认值）|**DBPROPVAL_OS_ENABLEALL**|"OLE DB Services = -1;"|  
+|除池和登记|**DBPROPVAL_OS_ENABLEALL （& A)**<br /><br /> **~DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB Services = -4;"|  
+|除客户端游标|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB Services = -5;"|  
+|除池，自动登记和客户端游标|**DBPROPVAL_OS_ENABLEALL （& A)**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB Services = -7;"|  
+|没有任何服务|~**DBPROPVAL_OS_ENABLEALL**|"OLE DB Services = 0;"|  
   
  如果注册表项不存在的提供程序，组件管理器将不会聚合该提供程序的对象，并将调用任何服务，即使用户显式请求。  
   

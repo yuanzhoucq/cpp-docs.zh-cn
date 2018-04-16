@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e06e1d5b0a5aa34116456c342f9cec233edcb6a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f31f2f3ec58ea7b557cc04718cf52219d0f4d9e9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
 当使用动态访问器如`CDynamicAccessor`，该命令**打开**方法创建一个访问器自动根据打开行集的列信息。 您可以重写动态访问器可控制完全列的绑定方式。  
@@ -39,6 +41,7 @@ CCommand<CDynamicAccessor> product;
 // Open the table, passing false to prevent automatic binding   
 product.Open(session, _T("Select * FROM Products"), NULL, NULL, DBGUID_DEFAULT, false);  
   
+
 ULONG         nColumns;  
 DBCOLUMNINFO*   pColumnInfo;  
 // Get the column information from the opened rowset.  
@@ -63,6 +66,7 @@ product.Bind();
 // previous call to GetColumnInfo.  
 CoTaskMemFree(pColumnInfo);  
   
+
 char*   pszProductName;  
 char*   pszReorderLevel;  
 bool   bRC;  

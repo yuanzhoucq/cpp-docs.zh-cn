@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 72f8aec06388c0d548da1de903bf47225c05c734
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d9e5dfa8b8afb67e0ea69f87199a11b33bfe801
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>与其他语言的互操作性 (C++/CX)
 文档这一部分介绍如何使用 C + + /cli CX 创作可供其他编程语言和库的 Windows 运行时组件。 你还可以编写不能供所有语言使用的组件。 本部分介绍了不同方面时，应考虑你的 C + + /cli CX 应用程序与使用 JavaScript、.NET Framework 托管语言中或 Windows 运行时 c + + 模板库编写的组件互操作。  

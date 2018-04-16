@@ -1,45 +1,45 @@
 ---
-title: "Icommandimpl:: Execute |Microsoft 文档"
+title: ICommandImpl::Execute | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ICommandImpl::Execute
 - ICommandImpl.Execute
-dev_langs: C++
-helpviewer_keywords: Execute method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Execute method
 ms.assetid: 033e0d4e-256b-4eed-9215-70e0bebb768c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 965a344b55b6d290f112970ff357f383fefcd630
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d4d24bbb7f7aad94210672ce9bbf0cc0c7d5414
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="icommandimplexecute"></a>ICommandImpl::Execute
 执行的命令。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Execute(  
-   IUnknown* pUnkOuter,  
+```cpp
+HRESULT Execute(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
    DBROWCOUNT* pcRowsAffected,  
-   IUnknown** ppRowset   
-);  
+   IUnknown** ppRowset);  
 ```  
   
 #### <a name="parameters"></a>参数  

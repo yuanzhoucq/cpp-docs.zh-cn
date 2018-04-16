@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Delete |Microsoft 文档"
+title: CRowset::Delete | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CRowset::Delete
 - CRowset.Delete
@@ -16,30 +17,31 @@ f1_keywords:
 - CRowset<TAccessor>.Delete
 - CRowset<TAccessor>::Delete
 - ATL.CRowset<TAccessor>.Delete
-dev_langs: C++
-helpviewer_keywords: Delete method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 525e89bd49a7bf67ac20a2f580241e7ff982c71b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abbb56f013a7366f27c0e0f46fc99bd451db079e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetdelete"></a>CRowset::Delete
 调用[IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)从行集中删除当前行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-HRESULT Delete( ) const throw( );  
+```cpp
+HRESULT Delete() const throw();  
   
 ```  
   

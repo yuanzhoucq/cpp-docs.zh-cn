@@ -1,7 +1,8 @@
 ---
 title: "编译器警告 C4400 通过 C4599 |Microsoft 文档"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -34,8 +35,11 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +47,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -96,8 +104,11 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +116,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +142,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>编译器警告 C4400 通过 C4599
 
@@ -158,14 +175,14 @@ ms.lasthandoff: 12/21/2017
 |[编译器警告（等级 1）C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|*标识符*： 标识符是保留的字|
 |[编译器警告（等级 1）C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|忽略指令上的操作数|
 |[编译器警告（等级 1）C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|指向成员表示形式不同的指针之间强制转换，编译器也会生成不正确的代码|
-|[编译器警告（等级 4）C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|匿名 '结构 &#124; 联合不声明任何数据成员|
+|[编译器警告（等级 4）C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|匿名结构&#124;联合未声明任何数据成员|
 |[编译器警告（等级 1）C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|非法指令大小|
 |[编译器警告（等级 1）C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|非法的操作数大小|
 |[编译器警告（等级 1）C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|*标识符*： 符号将解析为置换寄存器|
 |[编译器警告（等级 2）C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|*函数*： 函数签名包含类型*类型*';C + + 对象是不安全的时间间隔纯代码和混合或本机。|
 |编译器警告 C4413|classname::member： 引用成员初始化为构造函数退出后不会保留一个临时|
 |[编译器警告（等级 3）C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|*函数*： 短跳转到函数转换到接近|
-|编译器警告 （等级 1） C4415|重复 __declspec (code_seg (*名称*'))|
+|编译器警告 （等级 1） C4415|duplicate __declspec(code_seg('*name*'))|
 |编译器警告 （等级 1） C4416|__declspec(code_seg(...)) 包含空字符串： 忽略|
 |编译器警告 （等级 1） C4417|显式模板实例化不能具有 __declspec(code_seg(...))： 忽略|
 |编译器警告 （等级 1） C4418|__declspec(code_seg(...)) 忽略上枚举|
@@ -191,7 +208,7 @@ ms.lasthandoff: 12/21/2017
 |编译器警告 （等级 1） C4442|嵌入的 null 终止符，__annotation 自变量中。  值将被截断。|
 |编译器警告 （等级 1） C4443|杂注参数应为 '0'、 '1' 或 '2'|
 |编译器警告 （等级 3） C4444|*标识符*： 在此上下文中未实现顶级 __unaligned|
-|[编译器警告（等级 1）C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|*函数*： 在 WinRT &#124; 托管类型的虚拟方法不能为私有|
+|[编译器警告（等级 1）C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|*函数*： 在 WinRT&#124;托管类型的虚拟方法不能为私有|
 |编译器警告 （等级 1） C4446|*类型*： 无法映射成员*name1*为此类型，因为与类型名称冲突。 该方法已重命名为*name2*|
 |编译器警告 （等级 1） C4447|如果线程处理模型未找到 main 的签名。 请考虑使用 int main (platform:: array\<platform:: string ^ > ^ 参数)。|
 |编译器警告 C4448|*类型*1 不具有元数据中指定的默认接口。 选择:*type2*，这可能会在运行时失败。|
@@ -206,15 +223,21 @@ ms.lasthandoff: 12/21/2017
 |[编译器警告（等级 4）C4457](compiler-warning-level-4-c4457.md)|声明*标识符*隐藏函数参数|
 |[编译器警告（等级 4）C4458](compiler-warning-level-4-c4458.md)|声明*标识符*隐藏类成员|
 |[编译器警告 （等级 4） C4459](compiler-warning-level-4-c4459.md)|声明*标识符*隐藏了全局声明|
-|[编译器警告（等级 4）C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|WinRT &#124; 托管运算符*运算符*，通过引用传递参数。 WinRT &#124; 托管运算符*运算符*具有不同的语义与 c + + 运算符*cpp_operator*，是否希望按值传递？|
+|[编译器警告（等级 4）C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|WinRT&#124;托管运算符*运算符*，通过引用传递参数。 WinRT&#124;托管运算符*运算符*具有不同的语义与 c + + 运算符*cpp_operator*，是否希望按值传递？|
 |[编译器警告（等级 1）C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|*classname*： 此类有终结器 ！*终结器*但没有析构函数 ~*dtor*|
 |[编译器警告 （等级 1，错误） C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|*类型*： 无法确定类型的 GUID。 程序可能在运行时失败。|
 |[编译器警告 （等级 4） C4463](compiler-warning-level-4-c4463.md)|溢出;分配*值*到位域的只包含值从*min_value*到*max_value*|
-|编译器警告 （等级 4） C4464|相对包含路径包含..|
+|[编译器警告 （等级 4） C4464](../../error-messages/compiler-warnings/c4464.md)|相对包含路径包含..|
 |[编译器警告（等级 1）C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|忽略在 /clr 下的浮点控制杂注|
 |[编译器警告 （等级 4） C4471](compiler-warning-level-4-c4471.md)|*枚举*： 未区分范围的枚举的前向声明必须具有基础类型 (假定为 int)|
-|编译器警告 （等级 1） C4472|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明 WinRT &#124; 托管枚举|
-|编译器警告 C4480|使用的非标准扩展： 指定枚举的基础类型*枚举*|
+|编译器警告 （等级 1） C4472|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明 WinRT&#124;托管枚举|
+|[编译器警告 （等级 1） C4473](c4473.md)|*函数*： 没有足够自变量传递为格式字符串|
+|编译器警告 （等级 3） C4474|*函数*： 为格式字符串中传递的参数太多|
+|编译器警告 （等级 3） C4475|*函数*： 长度修饰符*修饰符*不能用于类型字段字符*字符*格式说明符中|
+|编译器警告 （等级 3） C4476|*函数*': 未知的类型字段字符*字符*格式说明符中|
+|[编译器警告 （等级 1） C4477](c4477.md)|*函数*： 格式字符串*字符串*要求类型自变量*类型*，但可变参数自变量*数*具有类型*类型*|
+|编译器警告 （等级 1） C4478|*函数*： 位置和非位置占位符不能混合在同一格式字符串|
+|编译器警告 （错误） C4480|使用的非标准扩展： 指定枚举的基础类型*枚举*|
 |[编译器警告（等级 4）C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|使用的非标准扩展： 重写说明符*关键字*|
 |编译器警告 C4482|使用的非标准扩展： 枚举*枚举*限定名称中使用|
 |编译器警告 （等级 1，错误） C4483|语法错误： 应为 c + + 关键字|
@@ -229,6 +252,10 @@ ms.lasthandoff: 12/21/2017
 |编译器警告 （等级 1，错误） C4492|*function1*： 匹配基 ref 类方法*function2*，但未标记为重写|
 |编译器警告 （等级 3，错误） C4493|删除表达式不起作用的析构函数作为*类型*没有 'public' 可访问性|
 |编译器警告 （等级 1） C4494|*函数*： 忽略 __declspec(allocator)，因为该函数返回类型不是指针或引用|
+|编译器警告 C4495|__super 使用的非标准扩展： 将替换为显式基类名称|
+|编译器警告 C4496|使用 for each 的非标准扩展： 替换范围 for 语句|
+|编译器警告 C4497|sealed 使用的非标准扩展： 将替换为最终|
+|编译器警告 C4498|使用的非标准扩展:*扩展*|
 |编译器警告 （等级 4） C4499|*函数*： 显式专用化不能具有存储类 （忽略）"|
 |[编译器警告（等级 1）C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|*链接规范*需要使用关键字外部，并且必须位于所有其他说明符|
 |[编译器警告（等级 1）C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|*标识符*： 修饰名的长度超出，名称已被截断|

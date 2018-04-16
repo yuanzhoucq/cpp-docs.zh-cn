@@ -1,47 +1,47 @@
 ---
-title: "Csession:: Starttransaction |Microsoft 文档"
+title: CSession::StartTransaction | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CSession::StartTransaction
 - StartTransaction
 - ATL.CSession.StartTransaction
 - CSession.StartTransaction
 - ATL::CSession::StartTransaction
-dev_langs: C++
-helpviewer_keywords: StartTransaction method
+dev_langs:
+- C++
+helpviewer_keywords:
+- StartTransaction method
 ms.assetid: cd7bd2be-fad1-4e2b-932b-79d308efb8fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 23117d328f1bed6828350fb87a51a5f4e7c22bfc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d4dbf794be95346ce01293f5fad4367ab8aedf6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csessionstarttransaction"></a>CSession::StartTransaction
 开始此会话的新事务。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT StartTransaction(  
-   ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,  
+```cpp
+HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,  
    ULONG isoFlags = 0,  
    ITransactionOptions* pOtherOptions = NULL,  
-   ULONG* pulTransactionLevel = NULL   
-) const throw( );  
+   ULONG* pulTransactionLevel = NULL) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

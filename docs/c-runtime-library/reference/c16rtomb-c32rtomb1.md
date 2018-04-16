@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -30,21 +30,23 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9eb43d6b225bce002eb2ce5293cb048d3062bcd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2deca697a3dcb338ae9e9ea9e071c73979695ad8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 在当前区域设置中将 UTF-16 或 UTF-32 宽字符转换为多字节字符。  
@@ -84,9 +86,9 @@ size_t c32rtomb(
   
  `state` 转换状态对象让你可以后续调用此函数和维持多字节输出字符的位移状态的其他可重启函数。 如果混合使用可重启和非可重启函数，或者如果在可重启函数调用之间调用 `setlocale` ，结果不确定。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`c16rtomb`, `c32rtomb`|C, C++: \<uchar.h>|  
   

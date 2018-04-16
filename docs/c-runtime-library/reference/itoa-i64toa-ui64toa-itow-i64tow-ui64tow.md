@@ -1,12 +1,13 @@
 ---
-title: "_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow | Microsoft 文档"
-ms.custom: 
+title: _itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: ''
+ms.topic: reference
 apiname:
 - _itow
 - _i64tow
@@ -41,7 +42,8 @@ f1_keywords:
 - i64tow
 - itow
 - _ui64toa
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _itot function
 - ui64toa function
@@ -61,16 +63,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ecf2dc476d9f35b0eb06dff8e0f701bcfa539914
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bdfe837630a4f8b36ca57970c6b23d832740f59d
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow
 将整数转换为字符串。 这些函数的更安全版本已经可用；请参阅 [_itoa_s、 _i64toa_s、_ui64toa_s、_itow_s、_i64tow_s、_ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)。  
@@ -175,9 +178,9 @@ wchar_t * _ui64tow(
 |`_i64tot`|`_i64toa`|`_i64toa`|`_i64tow`|  
 |`_ui64tot`|`_ui64toa`|`_ui64toa`|`_ui64tow`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_itoa`|\<stdlib.h>|  
 |`_i64toa`|\<stdlib.h>|  
@@ -258,7 +261,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [_ltoa、_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ltoa_s、_ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)   

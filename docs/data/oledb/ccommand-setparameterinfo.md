@@ -1,44 +1,44 @@
 ---
-title: "Ccommand:: Setparameterinfo |Microsoft 文档"
+title: CCommand::SetParameterInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SetParameterInfo
 - CCommand.SetParameterInfo
 - CCommand::SetParameterInfo
-dev_langs: C++
-helpviewer_keywords: SetParameterInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParameterInfo method
 ms.assetid: a70e92f4-1e73-41d7-a5b7-c6ebb45a6477
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 991d78bd9da14d9241fb502294ed14efd8ab1df2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 453ee4337e18ee20844631eee12ebf724bde2b2b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ccommandsetparameterinfo"></a>CCommand::SetParameterInfo
 指定每个命令参数的本机类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT CCommandBase::SetParameterInfo(  
-   DB_UPARAMS ulParams,  
+```cpp
+HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,  
    const DBORDINAL* pOrdinals,  
-   const DBPARAMBINDINFO* pParamInfo   
-) throw( );  
+   const DBPARAMBINDINFO* pParamInfo) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

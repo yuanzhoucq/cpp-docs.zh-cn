@@ -4,36 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CAccessorRowset.Bind
 - CAccessorRowset::Bind
-dev_langs: C++
-helpviewer_keywords: Bind method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Bind method
 ms.assetid: 42a1fc86-f570-4e54-9b82-7f7141564214
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87cdf5def79ed212ba90fe2737309f12b0f1e687
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 778f8afabbe845c382782ea15e3e47f8736d07fa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
 如果你指定创建绑定**bBind**中为 false [ccommand:: Open](../../data/oledb/ccommand-open.md)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-HRESULT Bind( );  
+```cpp
+HRESULT Bind();  
   
 ```  
   

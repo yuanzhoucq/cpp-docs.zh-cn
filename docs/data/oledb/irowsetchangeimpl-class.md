@@ -4,45 +4,46 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::IRowsetChangeImpl
 - IRowsetChangeImpl
 - ATL.IRowsetChangeImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - updatable providers, immediate update
 - IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ff5057bed4f6f74511355f4675dd2bc69ad5262
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65463392c96bfa3563929ba64b62bd7454f25ba9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 OLE DB 模板实现[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 规范中的接口。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <  
    class T,   
    class Storage,   
    class BaseInterface = IRowsetChange,   
    class RowClass = CSimpleRow,   
-   class MapClass = CAtlMap < RowClass::KeyType, RowClass* >   
->  
+   class MapClass = CAtlMap <RowClass::KeyType, RowClass*>>  
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
@@ -81,7 +82,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ## <a name="remarks"></a>备注  
  此接口是负责对数据存储区进行即时写入操作。 "即时"意味着，当最终用户 （使用使用者的人员） 进行任何更改，这些更改将立即传输到数据存储 （且不能撤消）。  
   
- `IRowsetChangeImpl`实现 OLE DB`IRowsetChange`接口，可更新的现有行，删除行，并将插入新行中的列的值。  
+ `IRowsetChangeImpl` 实现 OLE DB`IRowsetChange`接口，可更新的现有行，删除行，并将插入新行中的列的值。  
   
  OLE DB 模板实现支持所有基方法 (`SetData`， `InsertRow`，和`DeleteRows`)。  
   

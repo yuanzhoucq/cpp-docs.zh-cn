@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock 类
 Accelerator_view 对象上 D3D 访问锁 RAII 包装器。  
@@ -39,8 +42,8 @@ class scoped_d3d_access_lock;
   
 |名称|描述|  
 |----------|-----------------|  
-|[scoped_d3d_access_lock 构造函数](#ctor)|已重载。 构造 `scoped_d3d_access_lock` 对象。 当此对象超出范围时，该锁被释放。|  
-|[~ scoped_d3d_access_lock 析构函数](#dtor)|释放上关联的 D3D 访问锁`accelerator_view`对象。|  
+|[scoped_d3d_access_lock Constructor](#ctor)|已重载。 构造 `scoped_d3d_access_lock` 对象。 当此对象超出范围时，该锁被释放。|  
+|[~scoped_d3d_access_lock Destructor](#dtor)|释放上关联的 D3D 访问锁`accelerator_view`对象。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -56,7 +59,7 @@ class scoped_d3d_access_lock;
   
  **Namespace:** concurrency:: direct3d  
 
-##  <a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a> scoped_d3d_access_lock 
 
  构造 `scoped_d3d_access_lock` 对象。 当此对象超出范围时，该锁被释放。  
  
@@ -95,14 +98,14 @@ scoped_d3d_access_lock(// [3] move constructor
  使用从另一个的现有 D3D 访问锁`scoped_d3d_access_lock`对象。 构造不会阻止。  
 
   
-##  <a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~scoped_d3d_access_lock 
 
  释放上关联的 D3D 访问锁`accelerator_view`对象。  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>运算符 = 
+## <a name="operator_eq"></a> 运算符 = 
 
 从另一个 D3D 访问锁定的所有权并装入`scoped_d3d_access_lock`对象，释放以前的锁。  
  

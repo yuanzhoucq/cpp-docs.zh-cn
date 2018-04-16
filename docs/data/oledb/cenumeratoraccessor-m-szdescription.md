@@ -1,40 +1,42 @@
 ---
-title: "Cenumeratoraccessor:: M_szdescription |Microsoft 文档"
+title: CEnumeratorAccessor::m_szDescription | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CEnumeratorAccessor::m_szDescription
 - CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szDescription
 - ATL.CEnumeratorAccessor.m_szDescription
-dev_langs: C++
-helpviewer_keywords: m_szDescription
+dev_langs:
+- C++
+helpviewer_keywords:
+- m_szDescription
 ms.assetid: 9816fa64-f506-4a56-b5fc-8ed84c52f772
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3c80f31fe439fb6711a1f2e3fd6bb30af0f5cca4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea32afd60fbcad2735381f78082342bad2d8be95
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cenumeratoraccessormszdescription"></a>CEnumeratorAccessor::m_szDescription
 数据源或枚举器的说明。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 WCHAR m_szDescription[129];  
   
 ```  

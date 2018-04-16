@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetCreatorImpl.SetSite
 - IRowsetCreatorImpl<T>::SetSite
@@ -16,32 +17,31 @@ f1_keywords:
 - ATL::IRowsetCreatorImpl<T>::SetSite
 - ATL::IRowsetCreatorImpl::SetSite
 - ATL.IRowsetCreatorImpl<T>.SetSite
-dev_langs: C++
-helpviewer_keywords: SetSite method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed3f5f0bce2408cd2a4439aac6728f0e00760b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec7621972020d15068d53ccb3351983bc2b1b825
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
 设置包含行集对象的站点。 有关详细信息，请参阅[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD( SetSite )(  
-   IUnknown* pCreator   
-);  
+```cpp
+      STDMETHOD(SetSite )(IUnknown* pCreator);  
 ```  
   
 #### <a name="parameters"></a>参数  

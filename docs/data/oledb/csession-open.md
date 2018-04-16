@@ -1,45 +1,45 @@
 ---
-title: "Csession:: Open |Microsoft 文档"
+title: CSession::Open | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CSession::Open
 - CSession::Open
 - CSession.Open
 - ATL.CSession.Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: c2050c2c-9817-4857-be49-189f346968f6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3aa0f6b694bc594ec00511ce39b7887bf26ecae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab796d19c45959aac608de5097e9112bd8543e2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csessionopen"></a>CSession::Open
 为数据源对象打开新会话。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Open(  
-   const CDataSource& ds,  
+```cpp
+HRESULT Open(const CDataSource& ds,  
    DBPROPSET *pPropSet = NULL,  
-   ULONG ulPropSets = 0  
-) throw( );  
+   ULONG ulPropSets = 0) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

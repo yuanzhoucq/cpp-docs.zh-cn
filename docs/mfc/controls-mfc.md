@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controls-mfc"></a>控件 (MFC)
 控件是用户可与之交互以便输入或操作数据的对象。 它们通常显示在对话框中或工具栏上。 本主题介绍三种主要类型的控件：  
@@ -36,15 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-common-controls"></a>Windows 公共控件  
  Windows 操作系统一直以来提供了许多 Windows 公共控件。 这些控件对象是可编程的，Visual C++ 对话编辑器支持将其添加到你的对话框。 Microsoft 基础类库 (MFC) 提供封装各个控件的类，如表 [Windows 公共控件和 MFC 类](#_core_windows_common_controls_and_mfc_classes)所示。 （表中的某些项提供进一步描述它们的相关主题。 有关缺少主题的控件，请参阅 MFC 类的文档。）  
   
- 类 [CWnd](../mfc/reference/cwnd-class.md) 是所有窗口类的基类，包括所有控件类。 以下环境支持 Windows 公共控件：  
-  
--   Windows 95、Windows 98 和 Windows 2000  
-  
--   Windows NT，3.51 版和更高版本  
-  
--   Win32s，1.3 版（Visual C++ 4.2 版和更高版本不支持 Win32s）  
-  
- 较旧的公共控件 — 复选框、组合框、编辑框、列表框、选项按钮、按键、滚动条控件和静态控件 — 都在早期版本的 Windows 中可用。  
+ 类 [CWnd](../mfc/reference/cwnd-class.md) 是所有窗口类的基类，包括所有控件类。 
   
 ## <a name="activex-controls"></a>ActiveX 控件  
  ActiveX 控件（以前称为 OLE 控件）可在适用于 Windows 的应用程序的对话框中或在万维网上的 HTML 页面上使用。 有关详细信息，请参阅 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。  

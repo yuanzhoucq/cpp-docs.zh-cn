@@ -4,38 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl
 - ATL.IRowsetUpdateImpl
 - ATL::IRowsetUpdateImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c49782328ed51afe6a6501ed239d0800221864c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
 OLE DB 模板实现[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)接口。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <  
    class T,   
    class Storage,   
@@ -43,13 +45,13 @@ template <
    class RowClass = CSimpleRow,   
    class MapClass = CAtlMap <RowClass::KeyType, RowClass*>   
 >  
+
 class IRowsetUpdateImpl : public IRowsetChangeImpl<  
    T,   
    Storage,   
    IRowsetUpdate,   
    RowClass,   
-   MapClass  
->  
+   MapClass>  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -83,7 +85,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|获取最近传输到或从忽略挂起的更改的数据源中获取的数据。|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|返回具有挂起的更改的行的列表。|  
 |[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|返回指定的行的状态。|  
-|[撤消](../../data/oledb/irowsetupdateimpl-undo.md)|自上次提取或更新以来撤消对行的任何更改。|  
+|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|自上次提取或更新以来撤消对行的任何更改。|  
 |[更新](../../data/oledb/irowsetupdateimpl-update.md)|传输自上次提取或更新后对行进行任何更改。|  
   
 ### <a name="implementation-methods-callback"></a>实现方法 （回调）  
@@ -101,7 +103,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ## <a name="remarks"></a>备注  
  你应首先阅读并理解的文档[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)，这是因为存在所述的所有内容也适用此处。 你还应阅读的第 6 章*OLE DB 程序员参考*上设置数据。  
   
- `IRowsetUpdateImpl`实现 OLE DB`IRowsetUpdate`接口，可使用者延迟所做的更改传输`IRowsetChange`到数据源，并撤消在传输之前的更改。  
+ `IRowsetUpdateImpl` 实现 OLE DB`IRowsetUpdate`接口，可使用者延迟所做的更改传输`IRowsetChange`到数据源，并撤消在传输之前的更改。  
   
 > [!IMPORTANT]
 >  强烈建议你阅读以下文档后，再尝试实现你的提供商：  

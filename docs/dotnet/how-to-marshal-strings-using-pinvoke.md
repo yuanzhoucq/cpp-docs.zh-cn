@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送处理字符串
 本主题说明如何本机接受 C 样式字符串可以使用的 CLR 字符串来调用的函数键入 system:: string 使用.NET Framework 平台调用支持。 Visual c + + 程序员人员最好 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈来实现。 如果非托管的 API 打包为一个 DLL，并且源代码不可用，P/Invoke 是唯一的选项中，但否则看到[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
@@ -36,8 +38,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>示例  
  下面的代码由非托管模块和托管的模块组成。 非托管的模块是一个 DLL，它定义一个名为 TakesAString 接受的 char * 窗体中的 C 样式 ANSI 字符串的函数。 托管的模块是一个命令行应用程序，将导入 TakesAString 函数，但定义为采用托管的 System.String 而不是 char\*。 <xref:System.Runtime.InteropServices.MarshalAsAttribute>特性用于指示如何的托管的字符串应封送调用 TakesAString 时。  
-  
- 托管的模块编译 /clr，但 /clr: pure 工作原理以及。  
   
 ```  
 // TraditionalDll2.cpp  

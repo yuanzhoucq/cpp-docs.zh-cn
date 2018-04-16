@@ -1,31 +1,34 @@
 ---
-title: "符合 |Microsoft 文档"
+title: conform | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - conform pragma
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f876c1b921a00c251010d22e2cdd000a405a651
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 476228dc1331d005e4886c905256fad23353874c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conform"></a>conform
 **C + + 专用**  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
  **pop** （可选）  
  设置的值*名称*到内部编译器堆栈，然后弹出堆栈顶部的值。 如果具有指定标识符**pop**，堆栈将弹回，直到它找到的记录*标识符*，这也会弹出; 的当前值*名称*中堆栈上的下一步记录将成为新值*名称*。 如果指定使用 pop*标识符*不在堆栈上，记录**pop**将被忽略。  
   
- *标识符*（可选）  
+ *identifier*(optional)  
  可以包含在**推送**或**pop**命令。 如果*标识符*使用时，则**上**或**关闭**说明符还可以使用。  
   
 ## <a name="example"></a>示例  

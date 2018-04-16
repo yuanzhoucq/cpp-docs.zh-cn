@@ -1,38 +1,40 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_GN |Microsoft 文档"
+title: PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY_GN
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY_GN macro
+ms.topic: reference
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY_GN
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY_GN macro
 ms.assetid: be77ba85-634c-4e28-832f-d2fa40413254
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9899efec9ef3a96ad5ab6377c2451cc8c722a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff73cda1e676387b4f8ca79ce1ef7cbf8fce13e1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
 表示提供程序支持的特定列。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY_GN (  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY_GN (name  
 , ordinal, flags, colSize, dbtype, precision, scale, guid )  
 ```  
   

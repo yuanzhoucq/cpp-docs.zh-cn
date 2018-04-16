@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
 - VC.Project.VCCLCompilerTool.CompileAsManaged
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler, common language runtime option
 - -clr compiler option [C++]
@@ -20,16 +22,17 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 允许应用程序和组件使用公共语言运行时 (CLR) 中的功能。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 01/03/2018
 /clr[:options]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `options`  
  下列开关中的一个或多个（以逗号分隔）。  
   
@@ -54,17 +57,10 @@ ms.lasthandoff: 01/03/2018
  [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md)。  
   
  **/clr:pure**  
- 生成不包含本机可执行代码的仅 Microsoft 中间语言 (MSIL) 输出文件。 但是，它可以包含编译为 MSIL 的本机类型。  
-  
- 有关详细信息，请参阅[纯代码和可验证代码 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
-  
  /clr:pure 已弃用。 未来版本的编译器可能不支持此选项。 建议移植对 C# 来说必须是纯 MSIL 的代码。  
   
  **/clr:safe**  
- 生成仅 MSIL（非本机可执行代码）可验证输出文件。 **/clr:safe** 启用验证诊断（[PEVerify 工具 (Peverify.exe)](/dotnet/framework/tools/peverify-exe-peverify-tool)）。  
-  
-
- /clr:safe 已弃用。 未来版本的编译器可能不支持此选项。 建议移植对 C# 来说必须是可验证的纯 MSIL 的代码。  
+ /clr:safe 已弃用。 未来版本的编译器可能不支持此选项。 我们建议你移植必须是对 C# 的安全 MSIL 的代码。 
   
  **/clr:noAssembly**  
  指定不应将程序集清单插入输出文件中。 默认情况下， **noAssembly** 选项是无效的。  
@@ -96,7 +92,7 @@ ms.lasthandoff: 01/03/2018
   
  默认情况下， **/clr** 是无效的。 当 **/clr** 有效时， **/MD** 也有效。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)。 **/MD** 确保从标准头 (.h) 文件中选择动态链接的多线程版本运行时例程。 托管编程必须进行多线程处理，因为 CLR 垃圾回收器将在辅助线程中运行终结器。  
   
- 如果使用 **/c**进行编译，可以通过 [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)指定生成输出文件的 CLR 映像类型（IJW 映像、安全映像或纯映像）。  
+ 如果通过使用编译**/c**，你可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
   
  **/clr** 暗含 **/EHa**，且 **/clr** 不支持任何其他 **/EH**选项。 有关详细信息，请参阅 [/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)。  
   
@@ -109,23 +105,6 @@ ms.lasthandoff: 01/03/2018
  使用 **/clr** 时， `_MANAGED` 符号定义为 1。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。  
   
  先初始化本机对象文件中的全局变量（如果可执行文件是 DLL，即在 DllMain 期间进行），再初始化托管部分的全局变量（在运行任何托管代码之前进行）。 `#pragma`[init_seg](../../preprocessor/init-seg.md)仅影响托管和非托管类别中的初始化顺序。  
-  
- 使用 **/clr:safe** 进行编译相当于在 C# 等语言中使用 [/platform:anycpu](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option) 进行编译。  
-  
-## <a name="safe-and-pure-images"></a>安全映像和纯映像  
- 纯映像使用 CLR 版本的 C 运行时 (CRT) 库。 但 CRT 不可验证，因此使用 **/clr:safe**进行编译时不能使用 CRT。 有关详细信息，请参阅 [ CRT 库功能](../../c-runtime-library/crt-library-features.md)。  
-  
- 不能出现在纯映像中的本机代码的示例包括内联程序集、 [setjmp](../../c-runtime-library/reference/setjmp.md)和 [longjmp](../../c-runtime-library/reference/longjmp.md)。  
-  
- 纯映像或安全映像的每个入口点都是托管的。 使用 **/clr**进行编译时，入口点在本机。 有关详细信息，请参阅 [__clrcall](../../cpp/clrcall.md)。  
-  
- 使用 **/clr:safe**进行编译时，变量默认为 [appdomain](../../cpp/appdomain.md) 且不能是按进程的。 对于 **/clr:pure**，尽管默认为 **appdomain** ，但仍可使用 [process](../../cpp/process.md) 变量。  
-  
- 当运行在 64 位操作系统上使用 **/clr** 或 **/clr:pure** 进行编译的 32 位 .exe 文件时，该应用程序将在 WOW64 下运行，这使得 32 位应用程序能够在 64 位操作系统中的 32 位 CLR 上运行。 默认情况下，使用 **/clr:safe** 编译的 .exe 文件将在运行 64 位操作系统的计算机中的 64 位 CLR 上运行。 （在 32 位操作系统中，相同的 .exe 文件将在 32 位 CLR 上运行。）但是，安全应用程序可以加载 32 位组件。 在这种情况下，加载 32 位应用程序时，在 64 位操作系统支持下运行的安全映像将失败 (BadFormatException)。 为确保在加载 32 位映像时安全映像继续在 64 位操作系统上运行，必须使用 [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md) 来更改元数据 (.corflags)，并将其标记为在 WOW64 下运行。 以下命令行是一个示例。 （替换你自己的输入符号。）  
-  
- **cl /clr:safe t.cpp /link /clrimagetype:pure /entry:?main@@$$HYMHXZ /subsystem:console**  
-  
- 有关如何获取修饰名的信息，请参阅 [Decorated Names](../../build/reference/decorated-names.md)。 有关 64 位目标的详细信息，请参阅[配置 Visual c + + 64 位 x64 目标](../../build/configuring-programs-for-64-bit-visual-cpp.md)。 有关使用纯 CLR 代码的信息，请参阅[如何： 迁移到 /clr: pure (C + + CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)和[纯代码和可验证代码 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   
 ## <a name="metadata-and-unnamed-classes"></a>元数据和未命名类  
  未命名类将出现在按以下方式命名的元数据中： `$UnnamedClass$`*crc-of-current-file-name*`$`*index*`$`，其中 *index* 是未命名类在编译中的顺序计数。 例如，下面的代码示例将在元数据中生成一个未命名类。  
@@ -160,7 +139,7 @@ class {} x;
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。  
+-   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。  
   
 ## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   

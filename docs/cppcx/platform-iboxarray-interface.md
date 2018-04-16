@@ -6,23 +6,26 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Value
-dev_langs: C++
-helpviewer_keywords: Platform::IBoxArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 421f8517b8a96c40bb44dd959eba90b1bf903113
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f52f8c95851ec80df41fe9f0838345cf46876227
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 接口
 `IBoxArray` 是在应用程序二进制接口 (ABI) 之间传递或在 `Platform::Object^` 元素的集合中存储（如 XAML 控件）的值类型数组的包装器。  
@@ -39,7 +42,7 @@ interface class IBoxArray
  每个数组元素中的装箱值的类型。  
   
 ### <a name="remarks"></a>备注  
- `IBoxArray`是 C + + /cli CX 名称`Windows::Foundation::IReferenceArray`。  
+ `IBoxArray` 是 C + + /cli CX 名称`Windows::Foundation::IReferenceArray`。  
   
 ### <a name="members"></a>成员  
  `IBoxArray` 接口继承自 `IValueType` 接口。 `IBoxArray` 还包括这些成员：  
@@ -48,7 +51,7 @@ interface class IBoxArray
 |------------|-----------------|  
 |[值](#value)|返回此 `IBoxArray` 实例以前存储的未装箱数组。|  
 
-## <a name="value"></a>Iboxarray:: Value 属性
+## <a name="value"></a> Iboxarray:: Value 属性
 返回此对象中最初存储的值。  
   
 ### <a name="syntax"></a>语法  

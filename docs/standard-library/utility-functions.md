@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -13,7 +13,7 @@ f1_keywords:
 - utility/std::move
 - utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::exchange [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: d2b444c2de41651ac74047717ed54a7059866f86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a442f3a4b03a62363d465107b7e2ae5f3e975249
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函数
 ||||  
@@ -275,7 +275,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  如果 `Arg` 中传递的值为左值（也就是说，它具有名称或可以采用其地址），则它在发生移动时将会失效。 在移动 `Arg` 中传递的值后，请勿按照其名称或地址来引用它。  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  swap  
  交换两个 [pair 结构](../standard-library/pair-structure.md)对象的元素。  
   
 ```
@@ -293,7 +293,7 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 ### <a name="remarks"></a>备注  
  `swap` 的优势之一在于要存储的对象类型由编译器自动确定，而不必显式指定。 使用 `swap<int, int>(1, 2)` 时请不要使用显式模板参数（如 `swap`），因为它冗长而多余并会增加复杂的右值引用问题，可能会导致编译失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<utility>](../standard-library/utility.md)
 
 

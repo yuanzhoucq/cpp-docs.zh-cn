@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="map-class"></a>map 类
 用于存储和检索集合中的数据，此集合中的每个元素均为包含数据值和排序键的元素对。 键的值是唯一的，用于自动排序数据。  
@@ -230,7 +233,7 @@ class map;
 |[operator[]](#op_at)|将元素插入到具有指定键值的映射。|  
 |[operator=](#op_eq)|将一个映射中的元素替换为另一映射副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **Header:** \<map>  
   
  **命名空间：** std  
@@ -1504,7 +1507,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>备注  
- map 定义的 **iterator** 指向 [value_type](#value_type) 的对象的元素，它的类型是 `pair`*\<***constKey**, **Type***>*，其第一个成员是元素的键，第二个成员是元素的 map 值。  
+ **迭代器**定义的映射指向的对象的元素[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。  
   
  若要取消引用指向 map 中元素的 **iterator**`Iter`，请使用 **->** 运算符。  
   
@@ -2308,9 +2311,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ```  
   
 ### <a name="remarks"></a>备注  
- `reverse_iterator` 类型无法修改元素的值，它用于反向循环访问 map。  
+ `reverse_iterator` 类型无法修改元素的值，它用于反向循环访问映射。  
   
- map 定义的 `reverse_iterator` 指向 [value_type](#value_type) 的对象的元素，它的类型是 `pair`*\<***constKey**, **Type***>*，其第一个成员是元素的键，第二个成员是元素的 map 值。  
+ `reverse_iterator`定义的映射指向的对象的元素[value_type](#value_type)，该类型的`pair` * \< * **constKey**，**类型 * * * >*、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。  
   
  若要取消引用`reverse_iterator``rIter`指向映射中的元素，使用 **->** 运算符。  
   
@@ -2630,7 +2633,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<map> 成员](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

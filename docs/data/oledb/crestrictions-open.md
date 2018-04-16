@@ -4,39 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CRestrictions.Open
 - ATL::CRestrictions::Open
 - ATL.CRestrictions.Open
 - CRestrictions::Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bbb0b175a6fa5a6cf93b4fe107884d5bb84f2487
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cd31f50258303492cfb7ca92daa5cdfb526c44a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crestrictionsopen"></a>CRestrictions::Open
 返回一个结果集，根据用户提供的限制。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Open(  
-   const CSession& session,  
+```cpp
+HRESULT Open(const CSession& session,  
    LPCTSTR lpszParam 1 = NULL,  
    LPCTSTR lpszParam 2 = NULL,  
    LPCTSTR lpszParam 3 = NULL,  
@@ -44,8 +45,7 @@ ms.lasthandoff: 12/21/2017
    LPCTSTR lpszParam 5 = NULL,  
    LPCTSTR lpszParam 6 = NULL,  
    LPCTSTR lpszParam 7 = NULL,  
-   bool bBind = true  
-);  
+   bool bBind = true);  
 ```  
   
 #### <a name="parameters"></a>参数  

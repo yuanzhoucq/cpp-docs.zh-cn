@@ -1,49 +1,50 @@
 ---
-title: "Cdynamicstringaccessor:: Setstring |Microsoft 文档"
+title: CDynamicStringAccessor::SetString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessor::SetString
 - CDynamicStringAccessor.SetString
-dev_langs: C++
-helpviewer_keywords: SetString method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d425159b1234a152fc5e914db4a664abd91e599
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
 将指定列数据设置为字符串。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-HRESULT SetString(  
-   DBORDINAL nColumn,  
-   BaseType* data  
-) throw( );  
-HRESULT SetString(  
-   const CHAR* pColumnName,  
-   BaseType* data  
-) throw( );  
-HRESULT SetString(  
-   const WCHAR* pColumnName,  
-   BaseType* data  
-) throw( );  
+```
+HRESULT SetString(DBORDINAL nColumn,  
+  BaseType* data) throw();  
+
+
+HRESULT SetString(const CHAR* pColumnName,  
+   BaseType* data) throw();  
+
+
+HRESULT SetString(const WCHAR* pColumnName,  
+   BaseType* data) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

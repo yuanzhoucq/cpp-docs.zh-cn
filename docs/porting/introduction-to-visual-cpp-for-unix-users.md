@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: UNIX [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
 
-本主题的内容适用于不熟悉 Visual C++ 且希望使用 Visual C++ 及 Visual Studio 集成开发环境 (IDE) 高效工作的 UNIX 用户。  
+本主题的内容适用于不熟悉 Visual Studio 且希望使用 C++ 及 Visual Studio 集成开发环境 (IDE) 高效工作的 UNIX 用户。
   
 ## <a name="getting-started-on-the-command-line"></a>首先使用命令行  
 
-可按使用 UNIX 命令行环境的相似方式来使用命令行中的 Visual C++。 使用命令行 C 和 C++ 编译器 (CL.EXE)、链接器 (LINK.EXE) 以及包括 NMAKE.EXE（Microsoft 版 UNIX make 实用工具）在内的其他工具，从命令提示符进行编译。  
+可按使用 UNIX 命令行环境的相似方式来使用命令行中的 C++ 编译器。 使用命令行 C 和 C++ 编译器 (CL.EXE)、链接器 (LINK.EXE) 以及包括 NMAKE.EXE（Microsoft 版 UNIX make 实用工具）在内的其他工具，从命令提示符进行编译。  
   
-在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 Visual C++ 中，命令行工具安装在 VC\bin 子目录及其子目录的 Visual Studio 安装目录中。 不同于 UNIX，这些工具在纯命令提示符窗口中不可用。 要使用命令行工具，请使用开发者命令提示符快捷方式，或者运行 vcvarsall.bat 等开发者命令文件。 此操作设置路径和从命令行编译 Visual C++ 程序所必需的其他环境变量。 有关详细信息，请参阅[在命令行上生成 C/C++ 代码](../build/building-on-the-command-line.md)和[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
+在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 Visual Studio 中，命令行工具安装在 VC\bin 子目录及其子目录的 Visual Studio 安装目录中。 不同于 UNIX，这些工具在纯命令提示符窗口中不可用。 要使用命令行工具，请使用开发者命令提示符快捷方式，或者运行 vcvarsall.bat 等开发者命令文件。 此操作设置路径和从命令行编译 C++ 程序所必需的其他环境变量。 有关详细信息，请参阅[在命令行上生成 C/C++ 代码](../build/building-on-the-command-line.md)和[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
   
 要打开开发者命令提示符快捷方式，请在桌面搜索控件中输入“开发者命令提示符”，然后选择适用于你的 Visual Studio 版本的“开发者命令提示符”结果。 要选择为特定主机和目标体系结构预配置的开发者命令提示符，请打开“开始”菜单（桌面一角的 Windows 图标），然后滚动到你的 Visual Studio 版本的文件夹，例如“Visual Studio 2017”。 打开文件夹，选择首选主机和目标体系结构的命令提示符快捷方式。
   
@@ -47,11 +51,11 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="importing-your-existing-code"></a>导入现有代码 
  
-可借助 Visual C++ 来生成设置为用（不用）生成文件进行编译的现有代码，并将它放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 项目。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
+可借助 C++ 编译器来生成设置为用（不用）生成文件进行编译的现有代码，并将它放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 项目。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
   
 ## <a name="creating-a-new-project"></a>创建新项目  
 
-可在开发环境中创建新项目。 Visual C++ 提供了大量提供各种常见项目的标准代码的模板。 可使用应用程序向导为各种应用程序类型生成具有代码大纲的项目。  
+可在开发环境中创建新项目。 Visual Studio 具备大量提供各种常见项目的标准代码的模板。 可使用应用程序向导为各种应用程序类型生成具有代码大纲的项目。  
   
 可以使用**“控制台应用程序 (Win32) 向导”**开始创建空项目。 选择“空项目”复选框。 然后稍后可将新的和现有文件添加到项目。  
   
@@ -59,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="microsoft-specific-modifiers"></a>Microsoft 专用的修饰符  
 
-Visual C++ 包含一些对标准 C++ 编程语言的扩展，支持 Windows 操作系统编程。 这些扩展用于指定存储类特性、函数调用约定和基于寻址以及其他用途。 有关所有 Visual C++ 扩展的完整列表，请参阅 [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
+Microsoft Visual C++ 编译器实现了一些对标准 C++ 编程语言的扩展，支持 Windows 操作系统编程。 这些扩展用于指定存储类特性、函数调用约定和基于寻址以及其他用途。 有关所有受支持的 C++ 扩展的完整列表，请参阅 [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
   
-可以使用 **/Za** 编译器选项禁用所有特定于 Microsoft 的 C++ 扩展。 如果希望编写可在多个平台上运行的代码，建议使用此选项。 有关 **/Za** 编译器选项的详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。 有关 Visual C++ 一致性的详细信息，请参阅[非标准行为](../cpp/nonstandard-behavior.md)。  
+可以使用 **/Za** 编译器选项禁用所有特定于 Microsoft 的 C++ 扩展。 如果希望编写可在多个平台上运行的代码，建议使用此选项。 有关 **/Za** 编译器选项的详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。 有关 C++ 编译器符合性的详细信息，请参阅 [Visual C++ 语言符合性](../visual-cpp-language-conformance.md)和[非标准行为](../cpp/nonstandard-behavior.md)。  
   
 ## <a name="precompiled-headers"></a>预编译标头  
 

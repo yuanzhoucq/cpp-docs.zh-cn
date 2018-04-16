@@ -4,37 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CNoRowset
 - ATL::CNoRowset<TAccessor>
 - CNoRowset
 - ATL.CNoRowset<TAccessor>
 - ATL::CNoRowset
-dev_langs: C++
-helpviewer_keywords: CNoRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 901d857b5095dd882a368b9a87e8a7d38d20bc42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a509f93a72e1f48bc6af0e372f0353cdebb3edb8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cnorowset-class"></a>CNoRowset 类
 可用作模板自变量 (`TRowset`) 为[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class TAccessor = CAccessorBase>  
 class CNoRowset  
 ```  

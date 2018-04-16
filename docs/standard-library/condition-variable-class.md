@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition
 - condition_variable/std::condition_variable::condition_variable
@@ -16,9 +17,10 @@ f1_keywords:
 - condition_variable/std::condition_variable::wait
 - condition_variable/std::condition_variable::wait_for
 - condition_variable/std::condition_variable::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80b1295c-b73d-4d46-b664-6e183f2eec1b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 3b51ec2810ddb982d53c3073bdf860b26100859d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3d4f917bd9057eed6dfcd2b480bbb8afb2f7ccf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariable-class"></a>condition_variable 类
 使用 `condition_variable` 类在具有 `mutex` 类型的 `unique_lock<mutex>` 时等待事件。 此类型的对象的性能可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 类型的对象更好。  
@@ -62,7 +65,7 @@ class condition_variable;
 |[native_handle](#native_handle)|返回表示 condition_variable 句柄的特定于实现的类型。|  
 |[notify_all](#notify_all)|取消阻止正在等待 `condition_variable` 对象的所有线程。|  
 |[notify_one](#notify_one)|取消阻止正在等待 `condition_variable` 对象的某个线程。|  
-|[等待](#wait)|阻止线程。|  
+|[wait](#wait)|阻止线程。|  
 |[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|  
 |[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|  
   

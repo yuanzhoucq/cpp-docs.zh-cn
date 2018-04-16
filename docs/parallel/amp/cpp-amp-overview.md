@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
-通过利用在离散图形卡的数据并行硬件，如图形处理单元 (GPU)，c + + Accelerated Massive Parallelism (c + + AMP) 加快了 c + + 代码的执行。 通过使用 c + + AMP，你可以编写代码，多维数据算法，以便可以在异类硬件上使用并行加速执行。 C + + AMP 编程模型包括多维数组、 索引、 内存传输、 平铺和数学函数库。 可以使用 c + + AMP 语言扩展来控制数据如何从 CPU 移动到 GPU 并返回，以便您可以提高性能。  
+通过利用在离散图形卡的数据并行硬件，如图形处理单元 (GPU)，c + + Accelerated Massive Parallelism (c + + AMP) 加快了 c + + 代码的执行。 通过使用 c + + AMP，你可以编写代码，多维数据算法，以便可以在异类硬件上使用并行加速执行。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 可以使用 c + + AMP 语言扩展来控制数据如何从 CPU 移动到 GPU 并返回，以便您可以提高性能。  
   
 ## <a name="system-requirements"></a>系统要求  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)]、[!INCLUDE[win8](../../build/reference/includes/win8_md.md)]、[!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] 或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)][!INCLUDE[win8](../../build/reference/includes/win8_md.md)]， [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)]，或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 功能级别 11.0 或更高版本的硬件  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>共享的内存，array 和 array_view  
  共享的内存是 CPU 和快捷键可以访问的内存。 共享内存的使用可以消除或大幅减少 CPU 和快捷键之间复制数据的开销。 尽管内存共享的不能 CPU 和快捷键，同时访问和这样做会导致未定义的行为。  
   
- `array`对象可以用于指定的共享内存使用对细化的控制，如果关联的快捷键支持它。 快捷键是否支持共享的内存由快捷键的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)属性，它返回`true`支持共享的内存时。 如果支持共享的内存，则默认值[access_type 枚举](reference/concurrency-namespace-enums-amp.md#access_type)内存分配快捷键上的由`default_cpu_access_type`属性。 默认情况下，`array`和`array_view`对象需要在同一`access_type`关联为主`accelerator`。  
+ `array` 对象可以用于指定的共享内存使用对细化的控制，如果关联的快捷键支持它。 快捷键是否支持共享的内存由快捷键的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)属性，它返回`true`支持共享的内存时。 如果支持共享的内存，则默认值[access_type 枚举](reference/concurrency-namespace-enums-amp.md#access_type)内存分配快捷键上的由`default_cpu_access_type`属性。 默认情况下，`array`和`array_view`对象需要在同一`access_type`关联为主`accelerator`。  
   
  通过设置[array:: cpu_access_type 数据成员](reference/array-class.md#cpu_access_type)属性`array`显式，你可以练习细化控制通过如何共享内存的使用，以便你可以优化适用于硬件的性能的应用特征，基于其计算内核的内存访问模式。 `array_view`反映相同`cpu_access_type`作为`array`是与其相关联; 或者，如果 array_view 构造不使用数据源，则其`access_type`反映第一次后，即可分配存储的环境。 也就是说，如果主机 (CPU) 第一次访问它时，那么其行为就像它已创建对 CPU 数据源和共享`access_type`的`accelerator_view`通过捕获相关联; 但是，如果是首次访问`accelerator_view`，则其行为就像它是通过创建`array`上，创建`accelerator_view`和共享`array`的`access_type`。  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [短矢量库](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f)： 定义的短矢量类型的长度 2、 3 和 4 在基于一组`int`， `uint`， `float`， `double`， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序  
- 与其他 c + + 库，类似，你可以使用 c + + AMP 中你[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用。 这些文章介绍如何在应用中包含 c + + AMP 代码通过使用 c + +、 C#、 Visual Basic 或 JavaScript 创建：  
+## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用  
+ 如其他 c + + 库中，你可以在 UWP 应用中使用 c + + AMP。 这些文章介绍如何在应用中包含 c + + AMP 代码通过使用 c + +、 C#、 Visual Basic 或 JavaScript 创建：  
   
-- [在 Windows 应用商店应用中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [在 UWP 应用中使用 c + + AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [演练： 在 c + + 中创建基本 Windows 运行时组件并从 JavaScript 中调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

@@ -1,43 +1,44 @@
 ---
-title: "Cdataconnection:: Operator CDataSource&amp; |Microsoft 文档"
+title: CDataConnection::operator CDataSource&amp; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataSource&
 - CDataConnection.operatorCDataSource&
 - operatorCDataSource&
 - CDataConnection::operatorCDataSource&
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CDataSource& operator
 - operator & (CDataSource)
 ms.assetid: 852faeee-f1b1-4465-9828-b261d1edf022
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5cd6c1821f49ba56b8d6ca27932b6cd7f0e17bf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255d1fe1d6363277c300fee134c5c41473ee8c3b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="cdataconnectionoperator-cdatasourceamp"></a>Cdataconnection:: Operator CDataSource&amp;
+# <a name="cdataconnectionoperator-cdatasourceamp"></a>CDataConnection::operator CDataSource&amp;
 返回所包含的引用`CDataSource`对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-operator const CDataSource&() throw( );  
+```cpp
+operator const CDataSource&() throw();  
   
 ```  
   

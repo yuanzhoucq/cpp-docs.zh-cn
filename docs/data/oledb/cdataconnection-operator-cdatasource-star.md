@@ -1,43 +1,44 @@
 ---
-title: "Cdataconnection:: Operator CDataSource * |Microsoft 文档"
+title: CDataConnection::operator CDataSource* | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataSource*
 - CDataConnection::operatorCDataSource*
 - CDataConnection.operatorCDataSource*
 - operatorCDataSource*
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CDataSource* operator
 - operator * (CDataSource)
 ms.assetid: 9118e324-e68d-45c5-a791-03f041d420ed
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2519e036aab6df464ad3e25bc48447ced5af352a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60eba58d4a3884b191afdca1da0934453a303d8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnectionoperator-cdatasource"></a>CDataConnection::operator CDataSource*
 返回指向包含的 `CDataSource` 对象的指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-operator const CDataSource*() throw( );  
+```cpp
+operator const CDataSource*() throw();  
   
 ```  
   

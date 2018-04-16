@@ -1,39 +1,40 @@
 ---
-title: "BEGIN_PROPERTY_SET |Microsoft 文档"
+title: BEGIN_PROPERTY_SET | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BEGIN_PROPERTY_SET
-dev_langs: C++
-helpviewer_keywords: BEGIN_PROPERTY_SET macro
+ms.topic: reference
+f1_keywords:
+- BEGIN_PROPERTY_SET
+dev_langs:
+- C++
+helpviewer_keywords:
+- BEGIN_PROPERTY_SET macro
 ms.assetid: 5995f21a-5161-4ecf-b9da-e2ff6754d40e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1b392647920b29c10579bcb8465a290ee68487ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66a85baffb88b543ca26b819cf2076ec30b78bf1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="beginpropertyset"></a>BEGIN_PROPERTY_SET
 在属性中设置属性的开头的标记集映射。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BEGIN_PROPERTY_SET(  
-guid   
-)  
+```cpp
+BEGIN_PROPERTY_SET(guid)  
   
 ```  
   

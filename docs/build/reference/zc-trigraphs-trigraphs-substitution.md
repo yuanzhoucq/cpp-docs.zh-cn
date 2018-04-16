@@ -1,45 +1,56 @@
 ---
-title: "-Zc: trigraphs （Trigraphs 替换） |Microsoft 文档"
+title: "/Zc: trigraphs （trigraphs 替换） |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+ms.date: 03/06/2018
+ms.technology:
+- cpp-tools
 ms.topic: article
-f1_keywords: /Zc
-dev_langs: C++
+f1_keywords:
+- /Zc
+dev_langs:
+- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - /Zc compiler options (C++)
 - Conformance compiler options
 - Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
-caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 739e772c87c937a552e07a32fa5bb80b1a1e2508
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5fdc5fc6432335e964a05185b7647b152a57d8f4
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs（Trigraphs 替换）
-当**/zc: trigraphs**指定，编译器将通过使用相应的标点字符来替换三元组字符序列。 若要关闭三元组替换，请指定**/Zc:trigraphs-**。 默认情况下， **/zc: trigraphs**处于关闭状态。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-/Zc:trigraphs[-]  
-```  
-  
-## <a name="remarks"></a>备注  
- 三元祖由两个连续的问号（“??”）后跟一个唯一的第三个字符组成。 例如，编译器会将"??="使用 '#' 字符三元组。 可以在使用字符集的 C 源文件中使用三元祖，该字符集不包含一些标点字符的方便图形表示。  
-  
- C/c + + 三字符组和的示例，演示如何使用三字符组的列表，请参阅[三元组](../../c-language/trigraphs.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [/Zc （一致性）](../../build/reference/zc-conformance.md)   
- [三字符组](../../c-language/trigraphs.md)
+
+当**/zc: trigraphs**指定，编译器将通过使用相应的标点字符来替换三元组字符序列。
+
+## <a name="syntax"></a>语法
+
+> **/Zc:trigraphs**[**-**]  
+
+## <a name="remarks"></a>备注
+
+A*三元组*包含两个连续问号 ("??") 跟一个唯一的第三个字符。 标准的 C 语言支持使用不包含某些标点字符的方便图形表示形式的字符集的源文件三元组。 例如，启用三字符组后，编译器将取代"??="使用 '#' 字符三元组。 通过 C + + 14 中，三元组支持如下所示 c。从 c + + 语言，C + + 17 标准中删除三字符组。 在 c + + 代码中， **/zc: trigraphs**编译器选项将替换为三元组序列通过相应的标点字符。 **/Zc:trigraphs-**禁用三元组替换。
+
+**/Zc: trigraphs**选项默认情况下，处于关闭状态和选项不是受影响时[/ 宽松-](permissive-standards-conformance.md)指定选项。
+
+C/c + + 三字符组和的示例，演示如何使用三字符组的列表，请参阅[三元组](../../c-language/trigraphs.md)。
+
+## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+
+1. 修改**其他选项**属性以包含**/zc: trigraphs**或**/Zc:trigraphs-** ，然后选择**确定**。
+
+## <a name="see-also"></a>请参阅
+
+[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[三字符组](../../c-language/trigraphs.md)<br/>

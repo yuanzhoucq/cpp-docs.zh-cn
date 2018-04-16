@@ -1,29 +1,32 @@
 ---
 title: "Visual C++ 语言一致性 | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 语言一致性
 
-本主题概述了 Visual Studio 2017 及早期版本中，针对 Visual C++ 的编译器功能和标准库功能的 ISO C++03、C++11、C++14、C++17 以及 C++20 草稿语言标准一致性。 每个编译器和标准库功能名称都可链接到介绍该功能的 ISO C++ 标准建议文章（如果在发布时可用）。 “支持”列中列出了首次出现在其中并支持该功能的 Visual Studio 版本。
+本主题概述了 Visual Studio 2017 及早期版本中的 C++ 编译器的编译器功能和标准库功能的 ISO C++03、C++11、C++14、C++17 以及 C++20 草稿语言标准符合性。 每个编译器和标准库功能名称都可链接到介绍该功能的 ISO C++ 标准建议文章（如果在发布时可用）。 “支持”列中列出了首次出现在其中并支持该功能的 Visual Studio 版本。
 
-若要深入了解 Visual Studio 2017 中的一致性改进和其他更改，请参阅 [Visual Studio 2017 中 C++ 的一致性改进](cpp-conformance-improvements-2017.md)和 [Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 若要了解早期版本中的一致性更改，请参阅 [Visual C++ 更改历史记录](porting/visual-cpp-change-history-2003-2015.md)和 [2003 至 2015 各版本中 Visual C++ 的新增功能](porting/visual-cpp-what-s-new-2003-through-2015.md)。 有关来自 C++ 团队的最新信息，请访问 [Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)。  
+若要深入了解 Visual Studio 2017 中的一致性改进和其他更改，请参阅 [Visual Studio 2017 中 C++ 的一致性改进](cpp-conformance-improvements-2017.md)和 [Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 若要了解早期版本中的一致性更改，请参阅 [Visual C++ 更改历史记录](porting/visual-cpp-change-history-2003-2015.md)和 [2003 至 2015 各版本中 Visual C++ 的新增功能](porting/visual-cpp-what-s-new-2003-through-2015.md)。 有关来自 C++ 团队的最新信息，请访问 [Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)。
 
- > [!NOTE]
- > Visual Studio 2015 和 Visual Studio 2017 之间没有二进制的重大更改。
+> [!NOTE]
+> Visual Studio 2015 和 Visual Studio 2017 之间没有二进制的重大更改。
 
 ## <a name="compiler-features"></a>编译器功能
 

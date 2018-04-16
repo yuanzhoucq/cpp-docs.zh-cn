@@ -1,12 +1,13 @@
 ---
-title: "Cbookmark:: Setbookmark |Microsoft 文档"
+title: CBookmark::SetBookmark | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CBookmark<0>::SetBookmark
 - ATL.CBookmark<0>.SetBookmark
@@ -17,33 +18,32 @@ f1_keywords:
 - CBookmark.SetBookmark
 - ATL.CBookmark.SetBookmark
 - CBookmark::SetBookmark
-dev_langs: C++
-helpviewer_keywords: SetBookmark method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetBookmark method
 ms.assetid: bcd26831-6045-4e69-96d6-abf8037fc18d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d30e21724bb7ee0d9d2bf7a6a5a094390fff645a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6b1f74cc1a7648ac20b3873f69faca8b1707f36
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
 将复制由引用的书签值`pBuffer`到`CBookmark`缓冲并将缓冲区大小设置为`nSize`。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT SetBookmark(  
-   DBLENGTH nSize,  
-   BYTE* pBuffer   
-) throw( );  
+```
+HRESULT SetBookmark(DBLENGTH nSize,  
+  BYTE* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -4,40 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: IAccessorImpl
-dev_langs: C++
-helpviewer_keywords: IAccessorImpl class
+ms.topic: reference
+f1_keywords:
+- IAccessorImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb76054313946df5b085081a3a619ae3fb3de2ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe9f4905b1c98641d184ab6e67c25405754f8872
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 类
 提供的实现[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)接口。  
   
-## <a name="syntax"></a>语法  
-  
-```  
-template <  
-   class T,   
-   class BindType = ATLBINDINGS,   
-   class BindingVector = CAtlMap <   
-      HACCESSOR hAccessor,   
-      BindType* pBindingsStructure   
-   >   
->  
+## <a name="syntax"></a>语法
+
+```cpp
+template <class T, 
+          class BindType = ATLBINDINGS,
+          class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
@@ -69,7 +68,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|释放访问器。|  
   
 ## <a name="remarks"></a>备注  
- 这是必需的对于行集和命令。 OLE DB 需要提供程序实现**HACCESSOR**，即指向数组的标记[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)结构。 **HACCESSOR**s 由`IAccessorImpl`是地址`BindType`结构。 默认情况下，`BindType`定义为**ATLBINDINGS**中`IAccessorImpl`的模板定义。 `BindType`提供使用一种机制`IAccessorImpl`跟踪中的元素数其**DBBINDING**数组以及引用计数和访问器标志。  
+ 这是必需的对于行集和命令。 OLE DB 需要提供程序实现**HACCESSOR**，即指向数组的标记[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)结构。 **HACCESSOR**s 由`IAccessorImpl`是地址`BindType`结构。 默认情况下，`BindType`定义为**ATLBINDINGS**中`IAccessorImpl`的模板定义。 `BindType` 提供使用一种机制`IAccessorImpl`跟踪中的元素数其**DBBINDING**数组以及引用计数和访问器标志。  
   
 ## <a name="requirements"></a>惠?  
  **标头：** atldb.h  

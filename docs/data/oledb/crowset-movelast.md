@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Movelast |Microsoft 文档"
+title: CRowset::MoveLast | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CRowset<TAccessor>::MoveLast
 - CRowset<TAccessor>::MoveLast
@@ -17,30 +18,31 @@ f1_keywords:
 - CRowset::MoveLast
 - ATL.CRowset<TAccessor>.MoveLast
 - CRowset.MoveLast
-dev_langs: C++
-helpviewer_keywords: MoveLast method
+dev_langs:
+- C++
+helpviewer_keywords:
+- MoveLast method
 ms.assetid: 81063578-ae9d-467b-8c88-81d8fc66e020
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d57885232fb10f302aeb36c6c074e7a88f0fb67b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1657904b592c59b22a49c1fcaa3d55237a7bccf9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetmovelast"></a>CRowset::MoveLast
 将光标移到的最后一行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-HRESULT MoveLast( ) throw( );  
+```cpp
+HRESULT MoveLast() throw();  
   
 ```  
   
@@ -57,6 +59,6 @@ HRESULT MoveLast( ) throw( );
   
 ## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
- [Crowset:: Movenext](../../data/oledb/crowset-movenext.md)   
- [Irowset:: Restartposition](https://msdn.microsoft.com/en-us/library/ms712877.aspx)   
+ [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
+ [IRowset::RestartPosition](https://msdn.microsoft.com/en-us/library/ms712877.aspx)   
  [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)

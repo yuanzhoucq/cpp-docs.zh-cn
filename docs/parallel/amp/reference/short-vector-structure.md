@@ -1,28 +1,31 @@
 ---
-title: "short_vector 结构 |Microsoft 文档"
-ms.custom: 
+title: short_vector 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
+ms.topic: reference
 f1_keywords:
 - short_vector
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e18b22bdc70accae1edae7159fafa3e9d679905c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d71ef4577845319bf66ef51e92afae7907526008
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="shortvector-structure"></a>short_vector 结构
 short_vector 提供可广泛用于短矢量编程的元编程定义。  
@@ -106,16 +109,16 @@ struct short_vector<double, 4>;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `short_vector`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>short_vector:: short_vector 构造函数  
+##  <a name="ctor"></a>  short_vector:: short_vector 构造函数  
   
 ```  
 short_vector();
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

@@ -1,43 +1,43 @@
 ---
-title: "Crowsetimpl:: Getcolumninfo |Microsoft 文档"
+title: CRowsetImpl::GetColumnInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetColumnInfo
 - CRowsetImpl.GetColumnInfo
 - CRowsetImpl::GetColumnInfo
-dev_langs: C++
-helpviewer_keywords: GetColumnInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetColumnInfo method
 ms.assetid: 9ef76525-f996-4c6f-81b9-68eb260350ef
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: acfc7e4afa0036c6f6e66aaef65305fc05ef6d14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18ed527d47b8bfb4ffa64c88597cc2e241ad9852
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetimplgetcolumninfo"></a>CRowsetImpl::GetColumnInfo
 检索特定客户端请求的列信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(  
-   T* pv,  
-   ULONG* pcCols   
-);  
+```cpp
+      static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,  
+   ULONG* pcCols);  
 ```  
   
 #### <a name="parameters"></a>参数  

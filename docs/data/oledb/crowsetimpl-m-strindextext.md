@@ -1,38 +1,40 @@
 ---
-title: "Crowsetimpl:: M_strindextext |Microsoft 文档"
+title: CRowsetImpl::m_strIndexText | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CRowsetImpl::m_strIndexText
 - CRowsetImpl.m_strIndexText
-dev_langs: C++
-helpviewer_keywords: m_strIndexText
+dev_langs:
+- C++
+helpviewer_keywords:
+- m_strIndexText
 ms.assetid: fa5465b8-67c6-4efa-b786-d5bca67b9f96
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0c413c721ba524e53ee59cb26da11ad2c11cfee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17a997eaa3cc77c79b0a945c4a8198510f58c1e6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetimplmstrindextext"></a>CRowsetImpl::m_strIndexText
 包含行集的初始索引。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 CComBSTR CRowsetBaseImpl::m_strIndexText;  
   
 ```  
@@ -42,8 +44,8 @@ CComBSTR CRowsetBaseImpl::m_strIndexText;
   
 ## <a name="see-also"></a>请参阅  
  [CRowsetImpl 类](../../data/oledb/crowsetimpl-class.md)   
- [Crowsetimpl:: M_strcommandtext](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
- [Crowsetimpl:: M_rgrowdata](../../data/oledb/crowsetimpl-m-rgrowdata.md)   
- [Crowsetimpl:: Getcommandfromid](../../data/oledb/crowsetimpl-getcommandfromid.md)   
- [Crowsetimpl:: Setcommandtext](../../data/oledb/crowsetimpl-setcommandtext.md)   
+ [CRowsetImpl::m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
+ [CRowsetImpl::m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)   
+ [CRowsetImpl::GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)   
+ [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)   
  [CRowsetImpl::ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)

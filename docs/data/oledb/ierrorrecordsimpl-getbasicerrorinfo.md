@@ -1,45 +1,45 @@
 ---
-title: "Ierrorrecordsimpl:: Getbasicerrorinfo |Microsoft 文档"
+title: IErrorRecordsImpl::GetBasicErrorInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::IErrorRecordsImpl::GetBasicErrorInfo
 - IErrorRecordsImpl::GetBasicErrorInfo
 - GetBasicErrorInfo
 - ATL.IErrorRecordsImpl.GetBasicErrorInfo
 - IErrorRecordsImpl.GetBasicErrorInfo
-dev_langs: C++
-helpviewer_keywords: GetBasicErrorInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetBasicErrorInfo method
 ms.assetid: d0b4dec3-f32a-4aaa-8365-524f2e7c8395
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8062afd0529970eab2e177182595e91eaa14ceea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 787cbeaea106d33b276458c75251ec5850e51550
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ierrorrecordsimplgetbasicerrorinfo"></a>IErrorRecordsImpl::GetBasicErrorInfo
 返回有关错误，如返回代码和提供程序特定的错误数的基本信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD( GetBasicErrorInfo )(  
-   ULONG ulRecordNum,  
-   ERRORINFO *pErrorInfo   
-);  
+```cpp
+      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+   ERRORINFO *pErrorInfo);  
 ```  
   
 #### <a name="parameters"></a>参数  

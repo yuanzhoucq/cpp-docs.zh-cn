@@ -1,33 +1,35 @@
 ---
-title: "pin_ptr (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: pin_ptr (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - pin_ptr_cpp
 - stdcli::language::pin_ptr
 - pin_ptr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce63996cc2d93f4890f54c5edda318fca55f98aa
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 声明*钉住指针*，其只能与公共语言运行时一起使用。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="parameters"></a>参数  
  *cv_qualifier*  
- `const`或`volatile`限定符。 默认情况下，钉住指针是`volatile`。 但不是声明钉住指针是错误多余`volatile`。  
+ `const` 或`volatile`限定符。 默认情况下，钉住指针是`volatile`。 但不是声明钉住指针是错误多余`volatile`。  
   
  *type*  
  `initializer` 的类型。  
@@ -91,13 +93,13 @@ ms.lasthandoff: 12/21/2017
   
 -   强制转换的目标类型。  
   
- `pin_ptr`处于`cli`命名空间。 有关详细信息，请参阅[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)。  
+ `pin_ptr` 处于`cli`命名空间。 有关详细信息，请参阅[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)。  
   
  有关内部指针的详细信息，请参阅[interior_ptr (C + + /cli CLI)](../windows/interior-ptr-cpp-cli.md)。  
   
  有关钉住指针的详细信息，请参阅[How to: Pin 指针和数组](../windows/how-to-pin-pointers-and-arrays.md)和[如何： 声明钉住指针和值类型](../windows/how-to-declare-pinning-pointers-and-value-types.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -209,7 +211,7 @@ public:
   
 int main() {  
    ManagedType ^mt = gcnew ManagedType;  
-   pin_ptr< int > pt = &mt->i;  
+   pin_ptr<int> pt = &mt->i;  
    *pt = 8;  
    Console::WriteLine(mt->i);  
   

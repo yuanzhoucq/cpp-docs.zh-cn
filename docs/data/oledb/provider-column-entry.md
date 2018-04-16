@@ -1,38 +1,40 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY |Microsoft 文档"
+title: PROVIDER_COLUMN_ENTRY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY macro
+ms.topic: reference
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY macro
 ms.assetid: 7921cfc1-aa9c-493e-8fc4-9d4294cafe72
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9e91df6d8598e59fc2b0bd19cd075ca3cf41a65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 982f15ad5f04aead259adabb362d249354f3421f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="providercolumnentry"></a>PROVIDER_COLUMN_ENTRY
 表示提供程序支持的特定列。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY (  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY (name  
 , ordinal, member )  
 ```  
   

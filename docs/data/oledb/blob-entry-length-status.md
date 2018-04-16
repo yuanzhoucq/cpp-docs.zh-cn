@@ -1,45 +1,46 @@
 ---
-title: "BLOB_ENTRY_LENGTH_STATUS |Microsoft 文档"
+title: BLOB_ENTRY_LENGTH_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BLOB_ENTRY_LENGTH_STATUS
-dev_langs: C++
-helpviewer_keywords: BLOB_ENTRY_LENGTH_STATUS macro
+ms.topic: reference
+f1_keywords:
+- BLOB_ENTRY_LENGTH_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_ENTRY_LENGTH_STATUS macro
 ms.assetid: 09da67de-421b-4853-9a26-760e38324502
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1362fd9b74e415a2502c64245b580acec6fba729
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6fe176d984937a39a3f76981f57388a69f21c0f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="blobentrylengthstatus"></a>BLOB_ENTRY_LENGTH_STATUS
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏还可获取的长度和 BLOB 列的状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 BLOB_ENTRY_LENGTH_STATUS(  
-nOrdinal  
-,   
-IID  
-,   
-flags  
-,   
-data  
-, length, status )  
+    nOrdinal,  
+    IID,  
+    flags,  
+    data,
+    length,
+    status )  
 ```  
   
 #### <a name="parameters"></a>参数  

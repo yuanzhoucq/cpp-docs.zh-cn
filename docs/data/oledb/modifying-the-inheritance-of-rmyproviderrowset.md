@@ -4,39 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - RMyProviderRowset
 - inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ff6e953bf706e0e8767fe6f97fe1d31b70431d08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f63e13b36f723decab9c5886b0523454d7c26fd7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>修改 RMyProviderRowset 的继承
 若要添加`IRowsetLocate`接口与简单只读提供程序的示例中，修改的继承**RMyProviderRowset**。 最初， **RMyProviderRowset**继承自`CRowsetImpl`。 你需要修改从继承**CRowsetBaseImpl**。  
   
  若要执行此操作，创建一个新的类， `CMyRowsetImpl`，MyProviderRS.h 中：  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage> >  
+template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>  
 class CMyRowsetImpl:  
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate > >  
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>  
 {  
 ...  
 };  
@@ -59,7 +61,7 @@ END_COM_MAP()
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset`现在可以使用`IRowsetLocate`接口，同时利用行集类的实现的其余部分。  
+ `RAgentRowset` 现在可以使用`IRowsetLocate`接口，同时利用行集类的实现的其余部分。  
   
  完成此操作后，你可以[动态确定返回给使用者的列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   

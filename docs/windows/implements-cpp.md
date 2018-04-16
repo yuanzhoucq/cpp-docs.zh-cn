@@ -1,28 +1,32 @@
 ---
-title: "实现 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 实现 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: vc-attr.implements
-dev_langs: C++
-helpviewer_keywords: implements attribute
+f1_keywords:
+- vc-attr.implements
+dev_langs:
+- C++
+helpviewer_keywords:
+- implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="implements-c"></a>implements (C++)
 指定强制 IDL 组件类的成员的调度接口。  
@@ -38,16 +42,16 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 #### <a name="parameters"></a>参数  
- **接口**  
+ **interfaces**  
  以逗号分隔的接口的将是 IDL 组件类的成员的列表。 针对指定单个接口的速记方法是**实现 (***interface_name***)**。  
   
- **调度接口**  
- 以逗号分隔将是 IDL 组件类的成员的调度接口的列表。 针对指定单个调度接口的速记方法是**实现 (调度接口** *= dispinterface_name***)**。  
+ **dispinterfaces**  
+ 以逗号分隔将是 IDL 组件类的成员的调度接口的列表。 针对指定单个调度接口的速记方法是**实现 (调度接口*** = dispinterface_name ***)**。  
   
 ## <a name="remarks"></a>备注  
  默认情况下，只有 COM 的接口的组件类的基类被添加在 IDL 组件类。 **实现**允许你强制 IDL 组件类成员其他接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
@@ -482,7 +486,7 @@ public:
       if (pDispParams == 0) {  
          return DISP_E_BADVARTYPE;  
       }  
-      if (pDispParams->cArgs > 0) {  
+      if (pDispParams->cArgs> 0) {  
          return DISP_E_BADPARAMCOUNT;  
       }  
       if (pVarResult != 0) {  
@@ -551,6 +555,6 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器特性](../windows/compiler-attributes.md)   
  [类特性](../windows/class-attributes.md)   

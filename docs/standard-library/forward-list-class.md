@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -46,7 +47,8 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -87,16 +89,17 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2861f4b51b5d1deefd1d4959343d16c2979b67d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="forwardlist-class"></a>forward_list 类
 描述用于控制变长元素序列的对象。 序列存储为节点的单向链接列表，其中每个节点都包含 `Type` 类型的成员。  
@@ -606,7 +609,7 @@ void merge(forward_list& right, Predicate comp);
 |`comp`|用于对元素进行排序的比较函数对象。|  
   
 ### <a name="remarks"></a>备注  
- `forward_list::merge`移除从元素`forward_list` `right`，并将其插入到此`forward_list`。 这两个序列必须由相同的谓词进行排序，如下所述。 合并的序列也可按该比较函数对象进行排序。  
+ `forward_list::merge` 移除从元素`forward_list` `right`，并将其插入到此`forward_list`。 这两个序列必须由相同的谓词进行排序，如下所述。 合并的序列也可按该比较函数对象进行排序。  
   
  对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序进行排序。）第二个成员函数每当 `i < j` 时采用顺序 `! comp(*Pj, *Pi)`。  
   

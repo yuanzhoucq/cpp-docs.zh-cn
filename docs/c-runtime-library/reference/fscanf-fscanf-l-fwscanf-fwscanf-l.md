@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fscanf
 - _fwscanf_l
@@ -31,7 +32,8 @@ f1_keywords:
 - _fwscanf_l
 - _ftscanf
 - _fscanf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fscanf function
 - fwscanf function
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fc40f4ebf4c50a5495490a83469d1b495bcd4a29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa3ccb3cc8a528847b39ad16d5e90d17e24b1da0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 从流中读取带格式的数据。 这些函数的更安全版本已发布。请参阅 [fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)。  
@@ -96,7 +99,7 @@ int _fwscanf_l(
  窗体控件字符串。  
   
  `argument`  
- 可选参数。  
+ 可选自变量。  
   
  `locale`  
  要使用的区域设置。  
@@ -122,7 +125,7 @@ int _fwscanf_l(
   
  有关详细信息，请参阅[格式规范字段 — scanf 函数和 wscanf 函数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

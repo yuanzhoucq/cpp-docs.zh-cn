@@ -1,11 +1,12 @@
 ---
-title: "部署、运行和调试 Linux 项目 | Microsoft Docs"
-ms.custom: 
+title: 部署、运行和调试 Linux 项目 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 734fc0f88d1cf8f97c7cac215f366eb6834fc517
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ebd8783bdcf3c188e04c1d6808d5a727a2bc7cdd
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
@@ -85,6 +86,12 @@ ms.lasthandoff: 12/21/2017
 * 可使用“**其他调试程序命令**”条目将特定调试程序选项传递到 GDB。  例如，你可能需要忽略 SIGILL（非法指令）信号。  那么，可以使用“**句柄**”命令来实现此目的，方法是：  将以下命令添加到如上图中所示的“**其他调试程序命令**”条目：
 
   ```handle SIGILL nostop noprint```
+
+## <a name="next-steps"></a>后续步骤
+
+* 若要在 Linux 上调试 ARM 设备，请参阅此博客文章：[Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/)（在 Visual Studio 中调试嵌入的 ARM 设备）。
+
+* 若要使用 **Attach to Process** 命令进行调试，请参阅以下博客文章：[Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/)（Linux C++ 工作负载对 Project System、Linux Console Window、rsync 和 Attach to Process 的改进）。
 
 ## <a name="see-also"></a>请参阅
 [C++ 调试属性 (Linux C++)](../linux/prop-pages/debugging-linux.md)。

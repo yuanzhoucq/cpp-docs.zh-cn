@@ -1,39 +1,40 @@
 ---
-title: "BEGIN_PROVIDER_COLUMN_MAP |Microsoft 文档"
+title: BEGIN_PROVIDER_COLUMN_MAP | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BEGIN_PROVIDER_COLUMN_MAP
-dev_langs: C++
-helpviewer_keywords: BEGIN_PROVIDER_COLUMN_MAP macro
+ms.topic: reference
+f1_keywords:
+- BEGIN_PROVIDER_COLUMN_MAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- BEGIN_PROVIDER_COLUMN_MAP macro
 ms.assetid: 506b8c0f-6be9-4c97-ba81-c4b7f7d428fa
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 05b70429c127927c7b436980f573efedee14707e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe73f6888b80903f93dc8e4eece58ebf29144a6c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="beginprovidercolumnmap"></a>BEGIN_PROVIDER_COLUMN_MAP
 标记提供程序列映射条目的开始。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BEGIN_PROVIDER_COLUMN_MAP(  
-theClass   
-)  
+```cpp
+BEGIN_PROVIDER_COLUMN_MAP(theClass)  
   
 ```  
   

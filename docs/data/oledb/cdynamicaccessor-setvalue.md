@@ -1,12 +1,13 @@
 ---
-title: "Cdynamicaccessor:: Setvalue |Microsoft 文档"
+title: CDynamicAccessor::SetValue | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor.SetValue
 - ATL::CDynamicAccessor::SetValue
@@ -15,49 +16,49 @@ f1_keywords:
 - ATL.CDynamicAccessor.SetValue<ctype>
 - CDynamicAccessor::SetValue
 - CDynamicAccessor::SetValue<ctype>
-dev_langs: C++
-helpviewer_keywords: SetValue method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetValue method
 ms.assetid: ecc18850-96e5-4845-abe5-ab34ad467238
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bdd334f916257d3688658e941522b6cc20b12b40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c919c5ec9605f65df9a20bf5ccad03ae2bf2761c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicaccessorsetvalue"></a>CDynamicAccessor::SetValue
 将数据存储到指定的列。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      template < class ctype >    
+```cpp  
+template <class ctype>
 bool SetValue(   
    DBORDINAL nColumn,   
-   const ctype& data    
-) throw( );  
-template < class ctype >    
+   constctype& data) throw( );  
+
+template <class ctype>    
 bool SetValue(   
    const CHAR * pColumnName,   
-   const ctype& data    
-) throw( );  
+   const ctype& data) throw( );  
+
 template <class ctype>   
 bool SetValue(  
    const WCHAR *pColumnName,  
-   const ctype& data   
-) throw( );  
+   const ctype& data) throw( );  
 ```  
   
 #### <a name="parameters"></a>参数  
  `ctype`  
- [in]处理字符串类型以外的任意数据类型的模板化参数 (**CHAR\***， **WCHAR\***)，这需要特殊处理。 `GetValue`使用基于此处指定适当的数据类型。  
+ [in]处理字符串类型以外的任意数据类型的模板化参数 (**CHAR\***， **WCHAR\***)，这需要特殊处理。 `GetValue` 使用基于此处指定适当的数据类型。  
   
  `pColumnName`  
  [in] 指向包含列名的字符串的指针。  

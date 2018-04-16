@@ -4,37 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CBulkRowset
 - ATL.CBulkRowset
 - ATL::CBulkRowset<TAccessor>
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
-dev_langs: C++
-helpviewer_keywords: CBulkRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CBulkRowset class
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26ed8c0a3f58ae046ad3e4766b7e009023759be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 288599a85cc63c59bf8b1bd013e197908adc9cc8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 提取和操作要通过检索多个行句柄，通过调用一次处理中大容量的数据行。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class TAccessor>  
 class CBulkRowset : public CRowset<TAccessor>  
 ```  

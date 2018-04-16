@@ -1,18 +1,20 @@
 ---
-title: "MFC 数据库类 （ODBC 和 DAO） |Microsoft 文档"
-ms.custom: 
+title: MFC 数据库类 （ODBC 和 DAO） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,24 +1,27 @@
 ---
-title: "2.4.2 sections 构造 |Microsoft 文档"
-ms.custom: 
+title: 2.4.2 sections 构造 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e9e6e3ea-7fc9-4925-8f68-92b8a5bb1e76
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 6e5b755e95e9bbbb78d6ab13cd09732f9c9aee3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections 构造
 **部分**指令标识一个 noniterative 工作共享构造，用于指定要作为被除数线程在团队间的构造的一组。 每个部分由团队中的线程的执行一次。 语法**部分**指令是，如下所示：  
@@ -35,13 +38,13 @@ ms.lasthandoff: 12/21/2017
   
  子句是以下项之一：  
   
- **私有 (** *变量列表* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *变量列表* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *变量列表* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **减少 (** *运算符* **:***变量列表* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
  **nowait**  
   

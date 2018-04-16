@@ -1,40 +1,42 @@
 ---
-title: "Caccessorbase:: Getnumaccessors |Microsoft 文档"
+title: CAccessorBase::GetNumAccessors | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CAccessorBase::GetNumAccessors
 - GetNumAccessors
 - CAccessorBase.GetNumAccessors
-dev_langs: C++
-helpviewer_keywords: GetNumAccessors method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetNumAccessors method
 ms.assetid: 54576461-2dc3-431a-8cdc-b5f054ee0bdc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11abad4a893f1df48d249759d28b24c39c65373f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1696d8a5ca2c6705fddab1ffdc2b6113c5d8d45d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="caccessorbasegetnumaccessors"></a>CAccessorBase::GetNumAccessors
 检索访问器类创建的数目。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-ULONG GetNumAccessors( ) const;  
+```cpp
+ULONG GetNumAccessors() const;  
   
 ```  
   

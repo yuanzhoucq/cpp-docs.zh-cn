@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
-Visual C++ 包括一个命令行 C++ 编译器，可用来创建基本控制台应用、通用 Windows 应用、Windows 应用商店应用和 .NET 组件等的各种程序。  
+Visual c + + 包括一个命令行的 c + + 编译器，可用来创建从基本控制台应用到通用 Windows 平台应用程序、 桌面应用、 设备驱动程序和.NET 组件。  
   
  在本演练中，你可以创建一个基本的"Hello，World"-通过使用文本编辑器中，样式 c + + 程序，然后在命令行上对其进行编译。 如果你想要尝试 Visual Studio IDE 而不是使用命令行，请参阅[演练： 使用项目和解决方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用适用于 c + + 桌面开发的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   

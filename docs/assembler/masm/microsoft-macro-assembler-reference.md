@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
 - MASM (Microsoft Macro Assembler), overview
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
 Microsoft Macro Assembler (MASM) 提供内联程序集的几个的优点。 MASM 包含具有功能，如循环、 算术、 和文本字符串处理的宏语言。 MASM 还可让你更好地控制硬件因为它支持的 386、 486 和 Pentium 处理器的指令集。 通过使用 MASM，你还可以减少时间和内存开销。  
@@ -51,7 +54,7 @@ Microsoft Macro Assembler (MASM) 提供内联程序集的几个的优点。 MASM
  有关如何创建输出信息文件[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]。  
   
 ## <a name="related-sections"></a>相关章节  
- [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ [Visual C++](../../visual-cpp-in-visual-studio.md)  
  提供的不同区域的 Visual Studio 和 Visual c + + 文档的链接。  
   
 ## <a name="see-also"></a>请参阅  

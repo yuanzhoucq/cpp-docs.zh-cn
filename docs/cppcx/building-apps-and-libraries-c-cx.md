@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ae9da167a3210e704b9d8b209e601e8269311513
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13ec00a692fc6bb884694b6f70689cf58636869e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="building-apps-and-libraries-ccx"></a>生成应用程序和库 (C++/CX)
 本部分中的主题提供有关使用生成系统生成的通用 Windows 平台应用程序或 Windows 运行时组件的一些详细信息。  
@@ -28,6 +29,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [静态库](../cppcx/static-libraries-c-cx.md)  
   
--   [Dll](../cppcx/dlls-c-cx.md)  
+-   [DLLs](../cppcx/dlls-c-cx.md)  
   
  注意： Visual c + + 不支持按配置优化为通用 Windows 平台。 如果尝试使用 IDE 中设置的这些选项生成项目，将导致生成错误。 也不支持控制台应用程序。

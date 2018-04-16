@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="bitset-class"></a>bitset 类
 介绍一种类型的对象，该对象存储由固定数量的位构成的序列，这些位提供一种紧凑方式来保留一组项或条件的标志。 bitset 类支持对 bitset 类型的对象执行操作，此类对象包含位集合并提供对每一个位的定时访问。  
@@ -122,7 +125,7 @@ class bitset
 |[operator&#124;=](#op_or_eq')|使用非独占 `OR` 操作执行位组的按位组合。|  
 |[operator~](#op_dtor)|反转目标 `bitset` 中的所有位并返回结果。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<bitset>  
   
  **命名空间：** std  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  对其调用了成员函数且经过修改的位组副本。  
   
 ### <a name="remarks"></a>备注  
- 如果指定为参数的位置大于其位已经过反转的 **bitset\<***N***>** 的大小 *N*，则第二个成员函数引发 [out_of_range](../standard-library/out-of-range-class.md) 异常。  
+ 第二个成员函数将引发[out_of_range](../standard-library/out-of-range-class.md)异常如果作为参数指定的位置大于大小*N*的**bitset\<***N*** >** 已反转的位。  
   
 ### <a name="example"></a>示例  
   
@@ -1173,7 +1176,7 @@ public:
  由类引用的第一个、第二个和第五个成员函数的自变量位置指定的对位组中的位的引用，并且由 **true** 或 **false** 来反映类引用的第三个和第四个成员函数的位组中经过修改的位的值。  
   
 ### <a name="remarks"></a>备注  
- `reference` 类仅作为位组 `operator[]` 的帮助程序类存在。 成员类描述可以访问位组中的单个位的对象。 让 *b* 作为 `bool` 类型的对象，*x* 和 *y* 作为 **bitset\<***N***>** 类型的对象，*i* 和 *j* 作为此类对象中的有效位置。 表示法 *x [i]* 引用位组 *x* 中的 *i* 位置上的位。 `reference` 类的成员函数按顺序提供以下操作：  
+ `reference` 类仅作为位组 `operator[]` 的帮助程序类存在。 成员类描述可以访问位组中的单个位的对象。 让*b*是类型的对象`bool`， *x*和*y*类型的对象**bitset\<***N*** >**，和*我*和*j*内此类对象的有效位置。 表示法 *x [i]* 引用位组 *x* 中的 *i* 位置上的位。 `reference` 类的成员函数按顺序提供以下操作：  
   
 |操作|定义|  
 |---------------|----------------|  

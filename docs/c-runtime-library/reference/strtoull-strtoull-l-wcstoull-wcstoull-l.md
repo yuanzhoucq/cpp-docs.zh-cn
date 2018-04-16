@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtoull_l
 - _wcstoull_l
@@ -32,7 +33,8 @@ f1_keywords:
 - wcstoull
 - _strtoull_l
 - strtoull
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strtoull function
 - _tcstoull_l function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8af8a6c2d96eb0fa4fd37a41e7f022743ab78d7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d698d38fc68a0a6eb49181dcacd7430460524bd6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull、_strtoull_l、wcstoull、_wcstoull_l
 将字符串转换为无符号的长整数值。  
@@ -122,9 +125,9 @@ unsigned long long _wcstoull_l(
   
  `whitespace` 可能包含被忽略的空格和制表符；`digits` 是一个或多个十进制数字；`letters` 是从“a”到“z”（或从“A”到“Z”）的一个或多个字母。 不符合此形式的第一个字符停止扫描。 如果 `base` 在 2 和 36 之间，则将其用作数字的基数。 如果 `base` 为 0，则由 `nptr` 指向的字符串的初始字符用于确定基数。 如果第一个字符为“0”，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 `base` 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果 `base` 为 0 且扫描的第一个字符为“0”，则假定八进制整数，且“8”或“9”字符会停止扫描。 `strtoull` 允许加号 (`+`) 或减号 (`-`) 前缀；前导减号符号表示返回值不起作用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`strtoull`|\<stdlib.h>|  
 |`wcstoull`|\<stdlib.h> 或 \<wchar.h>|  

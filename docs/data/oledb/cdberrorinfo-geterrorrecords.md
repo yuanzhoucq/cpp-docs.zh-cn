@@ -1,49 +1,49 @@
 ---
-title: "Cdberrorinfo:: Geterrorrecords |Microsoft 文档"
+title: CDBErrorInfo::GetErrorRecords | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDBErrorInfo.GetErrorRecords
 - ATL.CDBErrorInfo.GetErrorRecords
 - ATL::CDBErrorInfo::GetErrorRecords
 - GetErrorRecords
 - CDBErrorInfo::GetErrorRecords
-dev_langs: C++
-helpviewer_keywords: GetErrorRecords method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetErrorRecords method
 ms.assetid: 07746774-bcca-4833-8f55-a619e9777c17
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 560477035eee06e80b56b428e3c11d8c91f2b749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5187de6c9150ead2c01c770e09cb1a7e64c48004
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdberrorinfogeterrorrecords"></a>CDBErrorInfo::GetErrorRecords
 获取指定对象的错误记录。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT GetErrorRecords(   
-   IUnknown* pUnk,   
+```cpp
+HRESULT GetErrorRecords(IUnknown* pUnk,   
    const IID& iid,   
-   ULONG* pcRecords    
-) throw( );  
-HRESULT GetErrorRecords(   
-   ULONG* pcRecords    
-) throw( );  
+   ULONG* pcRecords) throw();  
+
+
+HRESULT GetErrorRecords(ULONG* pcRecords) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

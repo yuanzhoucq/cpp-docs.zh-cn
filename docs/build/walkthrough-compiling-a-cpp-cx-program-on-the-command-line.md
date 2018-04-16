@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>演练：在命令行上编译 C++/CX 程序
-可以创建面向 Windows 运行时的 Visual C++ 程序，并在命令行上生成这些程序。 Visual C++ 支持 Visual C++ 组件扩展 (C++/CX)，其中具有面向 Windows 运行时编程模型的其他类型和运算符。 可使用 C++/CX 生成 Windows Phone 8.1、Windows 应用商店和 Windows 桌面的应用程序。 有关详细信息，请参阅[教程的使用 + /cli CX](http://msdn.microsoft.com/magazine/dn166929.aspx)和[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。  
+可以创建面向 Windows 运行时的 Visual C++ 程序，并在命令行上生成这些程序。 Visual C++ 支持 Visual C++ 组件扩展 (C++/CX)，其中具有面向 Windows 运行时编程模型的其他类型和运算符。 你可以使用 C + + /cli CX 生成适用于通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面应用。 有关详细信息，请参阅[教程的使用 + /cli CX](http://msdn.microsoft.com/magazine/dn166929.aspx)和[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。  
   
  在此演练中，你将使用文本编辑器创建一个基本的 C++/CX 程序，然后在命令行上对其进行编译。 （可使用你自己的 C++/CX 程序，而非键入显示的程序，或者也可使用来自另一篇帮助文章中的 C++/CX 代码示例。 这种技术有助于生成和测试不包含 UI 元素的小模块。）  
   
 > [!NOTE]
->  还可使用 Visual Studio IDE 来编译 C++/CX 程序。 由于 IDE 包含设计、调试、仿真和命令行上不可用的部署支持，因此我们建议使用 IDE 来生成 Windows 应用商店应用程序。 有关详细信息，请参阅[创建基本的 c + + 应用商店应用](http://msdn.microsoft.com/library/windows/apps/dn263168)。  
+>  还可使用 Visual Studio IDE 来编译 C++/CX 程序。 由于 IDE 包含设计、 调试、 仿真和在命令行不可用的部署支持，我们建议你使用 IDE 来生成通用 Windows 平台 (UWP) 应用。 有关详细信息，请参阅[在 c + + 中创建的 UWP 应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。  
   
 ## <a name="prerequisites"></a>系统必备  
  你必须了解 C++ 语言的基础知识。  

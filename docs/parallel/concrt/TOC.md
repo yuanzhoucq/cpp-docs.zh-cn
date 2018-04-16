@@ -2,7 +2,7 @@
 # [并发运行时概述](overview-of-the-concurrency-runtime.md)
 # [并发运行时中的异常处理](exception-handling-in-the-concurrency-runtime.md)
 # [并行诊断工具（并发运行时）](parallel-diagnostic-tools-concurrency-runtime.md)
-# [用 C++ 为 Windows 应用商店应用创建异步操作](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [用 C++ 为 UWP 应用创建异步操作](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [将并发运行时与其他并发模型进行比较](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [从 OpenMP 迁移至并发运行时](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [如何：转换 OpenMP 并行 for 循环以使用并发运行时](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)

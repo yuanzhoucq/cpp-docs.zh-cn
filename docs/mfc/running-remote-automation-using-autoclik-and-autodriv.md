@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: AUTOCLIK sample [MFC]
+dev_langs:
+- C++
+helpviewer_keywords:
+- AUTOCLIK sample [MFC]
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 791655047eaf07732e1e006e8cc3ea8e7dec4727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="running-remote-automation-using-autoclik-and-autodriv"></a>使用 AUTOCLIK 和 AUTODRIV 运行远程自动化
 AUTOCLIK 是简单的自动化服务器示例应用程序，您可将其用作通过其了解更多有关远程自动化的信息的基础。 AUTODRIV 是驱动 AUTOCLIK 的简单自动化客户端应用程序。 您可以使用它们演示远程自动化。  

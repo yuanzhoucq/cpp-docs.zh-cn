@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - else
 - if
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - if keyword [C]
 - else clauses
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: cb0e4929b55d6cfc0ef01ee183b74b2439b85d10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="if-statement-c"></a>if 语句 (C)
 if 语句控制条件分支。 如果表达式的值不为零，则执行 if 语句体。 if 语句的语法有两种形式。  
@@ -80,5 +83,5 @@ else
   
  此示例中的内部 if 语句两边的大括号使 else 子句成为外部 if 语句的一部分。 如果 `i` 小于或等于 0，则将 `i` 赋给 `x`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [if-else 语句 (C++)](../cpp/if-else-statement-cpp.md)

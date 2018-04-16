@@ -1,12 +1,13 @@
 ---
-title: "gets_s、_getws_s | Microsoft 文档"
-ms.custom: 
+title: gets_s、_getws_s | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: ''
+ms.topic: reference
 apiname:
 - _getws_s
 - gets_s
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _getws_s
 - gets_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getws_s function
 - _getws_s function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b4a14a5166e357c3b25622c49f75b2b26fed4f55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getss-getwss"></a>gets_s、_getws_s
 从 `stdin` 流中获取行。 这些版本的 [gets、_getws](../../c-runtime-library/gets-getws.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
@@ -88,7 +91,7 @@ wchar_t *_getws_s(
   
  如果读取的第一个字符是文件尾字符，则空字符将存储在 `buffer` 的开头，并返回 `NULL`。  
   
- `_getws` 是 `gets_s` 的宽字符版本；其参数和返回值都是宽字符字符串。  
+ `_getws_s` 是 `gets_s` 的宽字符版本；其参数和返回值都是宽字符字符串。  
   
  如果 `buffer` 为 `NULL` 或 `sizeInCharacters` 小于或等于零，或者如果缓冲区太小，无法包含输入行和 null 终止符，这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 `NULL` 并将 errno 设置为 `ERANGE`。  
   
@@ -98,16 +101,16 @@ wchar_t *_getws_s(
   
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts`|`gets_s`|`gets_s`|`_getws`|  
+|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`gets_s`|\<stdio.h>|  
-|`_getws`|\<stdio.h> 或 \<wchar.h>|  
+|`_getws_s`|\<stdio.h> 或 \<wchar.h>|  
   
- 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。 与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄`stdin`， `stdout`，和`stderr`，必须将重定向，然后 C 运行时函数可以在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
   
 ## <a name="example"></a>示例  
   
@@ -131,7 +134,7 @@ int main( void )
 Hello there!The line entered was: Hello there!  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [gets、_getws](../../c-runtime-library/gets-getws.md)   
  [fgets、fgetws](../../c-runtime-library/reference/fgets-fgetws.md)   

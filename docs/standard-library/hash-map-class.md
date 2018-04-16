@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_map
 - hash_map/stdext::hash_map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - hash_map/stdext::hash_map::swap
 - hash_map/stdext::hash_map::upper_bound
 - hash_map/stdext::hash_map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_map
 - stdext::hash_map::allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 056d517779ca085152fea081271757329f7f3be8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="hashmap-class"></a>hash_map 类
 > [!NOTE]
@@ -228,7 +231,7 @@ class hash_map
 |[operator[]](#op_at)|将元素插入到具有指定键值的 `hash_map`。|  
 |[hash_map::operator=](#op_eq)|将一个 `hash_map` 中的元素替换为另一 `hash_map` 副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**\<hash_map>  
   
  **命名空间：** stdext  
@@ -518,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>备注  
  `const_iterator` 类型不能用于修改元素的值。  
   
- 由 hash_map 定义的 `const_iterator` 会指向作为 [value_type](#value_type) 的对象的元素（即 `pair`*\<***const Key, Type***>* 类型），其第一个成员是元素的键，第二个成员是此元素保留的映射基准。  
+ `const_iterator`由 hash_map 指向的对象的元素定义[value_type](#value_type)，该类型的`pair`  *\< ***const 密钥、 类型***>* 、 的元素的关键是其第一个成员和成员是元素所保存的映射的基准其秒。  
   
  若要取消引用`const_iterator``cIter`指向 hash_map 中的某个元素，使用 **->** 运算符。  
   
@@ -2711,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `value_type` 被声明为 `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* 而不是 `pair`**\<key_type, mapped_type>**，因为使用非常量迭代器或引用可能不会更改关联容器的键。  
+ `value_type` 被声明为`pair`  *\< * **const**[key_type](#key_type)， [mapped_type](#mapped_type)*> * 而不`pair`  **\<key_type，mapped_type >**因为不能更改的关联容器的密钥使用非常量的迭代器或引用。  
   
   
 ### <a name="example"></a>示例  
@@ -2774,7 +2777,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 30.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

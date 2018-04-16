@@ -4,39 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor.GetBlobHandling
 - CDynamicAccessor::GetBlobHandling
 - ATL::CDynamicAccessor::GetBlobHandling
 - GetBlobHandling
 - CDynamicAccessor.GetBlobHandling
-dev_langs: C++
-helpviewer_keywords: GetBlobHandling method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetBlobHandling method
 ms.assetid: bbc6dda6-e132-42a3-980d-24e455cbe456
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: de4ab605d4b0622d555625e71bf0aefd01cb1368
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fa1b30dce89b1e994e602b8a6f2c0e394e57034
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
 检索 BLOB 处理的当前行值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-const DBBLOBHANDLINGENUM GetBlobHandling( ) const;  
+```cpp
+const DBBLOBHANDLINGENUM GetBlobHandling() const;  
   
 ```  
   

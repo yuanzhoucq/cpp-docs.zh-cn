@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDataSource
 - ATL::CDataSource
 - CDataSource
-dev_langs: C++
-helpviewer_keywords: CDataSource class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDataSource class
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a8f5a7b4c09400ad31be0b8b403899c5e8401afa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 508bbfc7551383fe1d4517d274031faef590fdb9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 对应于一个 OLE DB 数据源对象，该对象表示通过提供程序建立的与数据源的连接。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class CDataSource  
 ```  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::IDBInitializeImpl::m_dwStatus
 - IDBInitializeImpl.m_dwStatus
@@ -16,29 +17,30 @@ f1_keywords:
 - ATL.IDBInitializeImpl<T>.m_dwStatus
 - ATL::IDBInitializeImpl<T>::m_dwStatus
 - m_dwStatus
-dev_langs: C++
-helpviewer_keywords: m_dwStatus
+dev_langs:
+- C++
+helpviewer_keywords:
+- m_dwStatus
 ms.assetid: 7621ccff-ca60-4b75-9c6a-c104bd0e2038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 360eeb936e2bf7b4219e9e6dc8eb95fe40c52c6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69c591b797908879f349945d49e6033763707592
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbinitializeimplmdwstatus"></a>IDBInitializeImpl::m_dwStatus
 数据源的标志。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 DWORD m_dwStatus;  
   
 ```  
@@ -65,5 +67,5 @@ enum DATASOURCE_FLAGS {
   
 ## <a name="see-also"></a>请参阅  
  [IDBInitializeImpl 类](../../data/oledb/idbinitializeimpl-class.md)   
- [Idbinitializeimpl:: Idbinitializeimpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)   
+ [IDBInitializeImpl::IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)   
  [IDBInitializeImpl::Uninitialize](../../data/oledb/idbinitializeimpl-uninitialize.md)

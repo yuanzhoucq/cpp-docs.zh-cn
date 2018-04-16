@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _cwprintf_p
 - _tcprintf_p
 - cprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _cwprintf_p_l function
 - cwprintf_p function
@@ -50,22 +52,23 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5e0e5bdfbb4a42b0911e253c3d5fd9aa4f84fa2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 347ebcc3194d74909e1d829c8c48d55fef1f0cee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 格式化并输出到控制台，并支持格式字符串中的位置参数。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,7 +107,7 @@ int _cwprintf_p_l(
  打印的字符数或负值（如果出错）。  
   
 ## <a name="remarks"></a>备注  
- 这些函数会格式化一系列字符和值并将其直接输出到控制台，并使用 `_putch` 和 `_putwch` 函数输出字符。 每个 `argument` （如果有）根据 `format`中相应的格式规范进行转换和输出。 格式具有与 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 函数的 `format` 参数相同的形式和函数。 `_cprintf_p` 和 `cprintf_s` 之间的差异在于 `_cprintf_p` 支持位置参数，这允许指定格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。  
+ 这些函数会格式化一系列字符和值并将其直接输出到控制台，并使用 `_putch` 和 `_putwch` 函数输出字符。 每个 `argument`（如果有）根据 `format` 中相应的格式规范进行转换和输出。 格式具有与 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 函数的 `format` 参数相同的形式和函数。 `_cprintf_p` 和 `cprintf_s` 之间的差异在于 `_cprintf_p` 支持位置参数，这允许指定格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。  
   
  与不同`fprintf_p`， `printf_p`，和`sprintf_p`函数，两者`_cprintf_p`也不`_cwprintf_p`会换行字符将转换为回车换行符 (CR-LF) 组合输出时。 一个重要区别在于，在 Windows NT 中使用 `_cwprintf_p` 时，它将显示 Unicode 字符。 与 `_cprintf_p` 不同，`_cwprintf_p` 使用当前控制台区域设置。  
   
@@ -122,9 +125,9 @@ int _cwprintf_p_l(
 |`_tcprintf_p`|`_cprintf_p`|`_cprintf_p`|`_cwprintf_p`|  
 |`_tcprintf_p_l`|`_cprintf_p_l`|`_cprintf_p_l`|`_cwprintf_p_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_cprintf_p`，`_cprintf_p_l`|\<conio.h>|  
 |`_cwprintf_p`，`_cwprintf_p_l`|\<conio.h>|  

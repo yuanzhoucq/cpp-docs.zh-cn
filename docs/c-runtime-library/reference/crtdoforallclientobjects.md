@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtDoForAllClientObjects
+ms.topic: reference
+apiname:
+- _CrtDoForAllClientObjects
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,21 +26,23 @@ f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
 - crtdbg/_CrdDoForAllClientObjects
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dff8b99d6378928583cea0c5eec7d69130c56557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1da4ada3286b863444bb567a4fad8cf693f9253
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 为堆中的所有 `_CLIENT_BLOCK` 类型调用应用程序提供的函数（仅限调试版本）。  
@@ -54,7 +58,7 @@ void _CrtDoForAllClientObjects(
   
 #### <a name="parameters"></a>参数  
  `pfn`  
- 指向应用程序提供的函数回调函数的指针。 此函数的第一个参数指向数据。 第二个参数是传递给对 `_CrtDoForAllClientObjects`的调用的上下文指针。  
+ 指向应用程序提供的函数回调函数的指针。 此函数的第一个参数指向数据。 第二个参数是传递给对 `_CrtDoForAllClientObjects` 的调用的上下文指针。  
   
  `context`  
  指向要传递给应用程序提供的函数的应用程序提供的上下文的指针。  
@@ -68,9 +72,9 @@ void _CrtDoForAllClientObjects(
   
  如果 `pfn` 为 `NULL`，则会调用无效的参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)的调用的上下文指针。 如果允许执行继续，则将 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 设置为 `EINVAL` 并返回该函数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_CrtDoForAllClientObjects`|\<crtdbg.h>、\<errno.h>|  
   

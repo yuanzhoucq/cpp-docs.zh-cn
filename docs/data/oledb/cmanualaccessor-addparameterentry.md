@@ -4,47 +4,46 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
 - CManualAccessor.AddParameterEntry
 - AddParameterEntry
 - ATL::CManualAccessor::AddParameterEntry
-dev_langs: C++
-helpviewer_keywords: AddParameterEntry method
+dev_langs:
+- C++
+helpviewer_keywords:
+- AddParameterEntry method
 ms.assetid: 9048b164-052b-41b1-a861-227fc529e0b5
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 66c88bf072cbae6c86949d52ded121dd694c0e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab686bfed7abd3bece3effbcf9f5e2b98132bb8b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmanualaccessoraddparameterentry"></a>CManualAccessor::AddParameterEntry
 将参数项添加到参数项结构。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      void AddParameterEntry(  
-   DBORDINAL nOrdinal,  
-   DBTYPE wType,  
-   DBLENGTH nColumnSize,  
+```
+void AddParameterEntry(DBORDINAL nOrdinal,  
+   DBTYPE wType,  DBLENGTH nColumnSize,  
    void* pData,  
    void* pLength = NULL,  
    void* pStatus = NULL,  
-   DBPARAMIO eParamIO = DBPARAMIO_INPUT   
-) throw ( );  
+   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -79,5 +78,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>请参阅  
  [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)   
- [Cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md)   
+ [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)   
  [DBViewer 示例](../../visual-cpp-samples.md)

@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.ole
-dev_langs: C++
+f1_keywords:
+- vc.ole
+dev_langs:
+- C++
 helpviewer_keywords:
 - dual interfaces [MFC], OLE Automation
 - TN065 [MFC]
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：针对 OLE 自动化服务器的双重接口支持
 > [!NOTE]
@@ -62,7 +66,7 @@ interface IDualAClick : IDispatch
  };  
 ```  
   
- 一旦你准备好接口语句，启动添加的方法和属性的条目。 双重接口，对于，你需要重新排列参数列表，使你的方法和双重接口中的属性访问器函数将返回`HRESULT`并将其返回值作为具有属性的参数传递`[retval,out]`。 请记住，对于属性，你将需要添加这两个读取 (`propget`) 和写入 (`propput`) 访问具有相同 id 的函数。例如:  
+ 一旦你准备好接口语句，启动添加的方法和属性的条目。 双重接口，对于，你需要重新排列参数列表，使你的方法和双重接口中的属性访问器函数将返回`HRESULT`并将其返回值作为具有属性的参数传递`[retval,out]`。 请记住，对于属性，你将需要添加这两个读取 (`propget`) 和写入 (`propput`) 访问具有相同 id 的函数。例如：  
   
 ```  
 [propput,
@@ -73,7 +77,7 @@ interface IDualAClick : IDispatch
     retval] BSTR* retval);
 ```  
   
- 定义方法和属性后，你需要组件类语句中添加对接口语句的引用。 例如:  
+ 定义方法和属性后，你需要组件类语句中添加对接口语句的引用。 例如：  
   
 ```  
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]  
@@ -86,7 +90,7 @@ coclass Document
   
  后已更新 ODL 文件，使用 MFC 的接口映射机制来在对象类中定义的双重接口的实现类和对应的条目中 MFC 的`QueryInterface`机制。 你需要中的一项`INTERFACE_PART`ODL，接口语句中的每个条目以及调度接口的条目的块。 与每个 ODL 条目**propput**属性需要一个名为函数`put_propertyname`。 与每个条目**propget**属性需要一个名为函数`get_propertyname`。  
   
- 若要定义你的双重接口的实现类，添加`DUAL_INTERFACE_PART`到你的对象类定义的块。 例如:  
+ 若要定义你的双重接口的实现类，添加`DUAL_INTERFACE_PART`到你的对象类定义的块。 例如：  
   
 ```  
 BEGIN_DUAL_INTERFACE_PART(DualAClick,
@@ -132,7 +136,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc,
 END_INTERFACE_MAP()  
 ```  
   
- 接下来，你需要填写接口的实现。 大多数情况下，你将能够将委托给现有 MFC`IDispatch`实现。 例如:  
+ 接下来，你需要填写接口的实现。 大多数情况下，你将能够将委托给现有 MFC`IDispatch`实现。 例如：  
   
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()  
@@ -235,7 +239,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }  
 ```  
   
- 对于对象的方法和属性访问器函数，你需要填写实现。 通常，您方法和属性的函数可以委派回使用类向导生成的方法。 但是，如果将属性设置为直接访问的变量，你需要编写代码以 get/put 值到变量。 例如:  
+ 对于对象的方法和属性访问器函数，你需要填写实现。 通常，您方法和属性的函数可以委派回使用类向导生成的方法。 但是，如果将属性设置为直接访问的变量，你需要编写代码以 get/put 值到变量。 例如：  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
@@ -258,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>传递双重接口指针  
- 传递双重接口指针不简单，特别是如果你需要调用`CCmdTarget::FromIDispatch`。 `FromIDispatch`仅适用于 MFC 的`IDispatch`指针。 要解决此问题的一种方法是适用于原始查询`IDispatch`指针集由 MFC 并将该指针传递给需要它的函数。 例如:  
+ 传递双重接口指针不简单，特别是如果你需要调用`CCmdTarget::FromIDispatch`。 `FromIDispatch` 仅适用于 MFC 的`IDispatch`指针。 要解决此问题的一种方法是适用于原始查询`IDispatch`指针集由 MFC 并将该指针传递给需要它的函数。 例如：  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -276,7 +280,7 @@ return NOERROR;
 }  
 ```  
   
- 之前通过双重接口方法向回传递一个指针，你可能需要将其从 MFC 转换`IDispatch`指向双重接口指针。 例如:  
+ 之前通过双重接口方法向回传递一个指针，你可能需要将其从 MFC 转换`IDispatch`指向双重接口指针。 例如：  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -302,10 +306,10 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   应用程序中`InitInstance`函数中，找到调用`COleObjectFactory::UpdateRegistryAll`。 此调用后添加对的调用`AfxOleRegisterTypeLib`，并指定**LIBID**对应于你的类型库，以及你的类型库的名称：  
   
  ' * / / 服务器应用程序启动时独立的它是一个不错的主意 * / / 若要在已损坏的情况下更新系统注册表。  
-    m_server。UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll();* / DUAL_SUPPORT_START * / / 请确保注册类型库或双重接口将不起作用。  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle()，LIBID_ACDual，_T("AutoClik.TLB"));* / DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -346,9 +350,9 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle()，LIBID_ACDual，_T("AutoClik.TLB")
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
 {  
-    METHOD_PROLOGUE （CAutoClickDoc，DualAClick）  
+    METHOD_PROLOGUE(CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC 会自动将转换到 Unicode BSTR 从 * / / Ansi CString，如有必要...  
-    pThis-> m_str = newText;  
+    pThis->m_str = newText;  
     返回 NOERROR;  
  }  
     CATCH_ALL_DUAL}  
@@ -361,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e-> m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -386,25 +390,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE （CAutoClickDoc，SupportErrorInfo）   
-    返回 pThis-> ExternalAddRef();
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    return pThis->ExternalAddRef();
 
 }   
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE （CAutoClickDoc，SupportErrorInfo）   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     返回 pThis-> ExternalRelease();
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface （REFIID iid，LPVOID * ppvObj）   
 {   
-    METHOD_PROLOGUE （CAutoClickDoc，SupportErrorInfo）   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     返回 pThis-> ExternalQueryInterface （和 iid，ppvObj）;
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo( REFIID iid)   
 {   
-    METHOD_PROLOGUE （CAutoClickDoc，SupportErrorInfo）   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     返回 (iid = = IID_IDualAClick)，则为 S_OK: S_FALSE;   
 }  
 ```  

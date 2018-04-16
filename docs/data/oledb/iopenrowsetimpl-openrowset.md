@@ -1,48 +1,48 @@
 ---
-title: "Iopenrowsetimpl:: Openrowset |Microsoft 文档"
+title: IOpenRowsetImpl::OpenRowset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
-dev_langs: C++
-helpviewer_keywords: OpenRowset method
+dev_langs:
+- C++
+helpviewer_keywords:
+- OpenRowset method
 ms.assetid: 2ece8d6c-d165-4f1d-b155-8609bbb60eb6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0382c114975733b07616b697b709a297bef9ec48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430fd00093cbea8c294e97016d42553eea2e815d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iopenrowsetimplopenrowset"></a>IOpenRowsetImpl::OpenRowset
 打开并返回一个包括来自一个基表或索引的所有行的行集。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT OpenRowset(  
-   IUnknown* pUnkOuter,  
+```cpp
+HRESULT OpenRowset(IUnknown* pUnkOuter,  
    DBID* pTableID,  
    DBID* pIndexID,  
    REFIID riid,  
    ULONG cPropertySets,  
    DBPROPSET rgPropertySets[],  
-   IUnknown** ppRowset   
-);  
+   IUnknown** ppRowset);  
 ```  
   
 #### <a name="parameters"></a>参数  

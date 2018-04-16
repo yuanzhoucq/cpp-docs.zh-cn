@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - coshl
 - cosh
@@ -34,7 +35,8 @@ f1_keywords:
 - cosh
 - cosl
 - coshf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - coshl function
 - hyperbolic functions
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e06a929148da03e59edff6f0630cd60841e912e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b9ef8330842f090c5a63cfea65886e6b7c25cee3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos、cosf、cosl、cosh、coshf、coshl
 计算余弦值（`cos`、`cosf` 或 `cosl`），或双曲余弦值（`cosh`、`coshf` 或 `coshl`）。  
@@ -115,9 +118,9 @@ long double coshl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此您可以调用 `cos` 和 `cosh` 的重载，这将采用和返回 `float` 或 `long double` 值。 在 C 程序中，`cos` 和 `cosh` 始终采用并返回 `double`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h>|  
   

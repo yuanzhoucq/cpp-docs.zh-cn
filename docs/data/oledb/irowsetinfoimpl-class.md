@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.IRowsetInfoImpl
 - IRowsetInfoImpl
 - ATL::IRowsetInfoImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetInfoImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cba03cfdda0b7a55c8f4719d5340566ee5dc6050
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a451302920fa94d8bc1224df4c9ad432ed9dc896
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
 提供的实现[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)接口。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE IRowsetInfoImpl :   
    public IRowsetInfo,    

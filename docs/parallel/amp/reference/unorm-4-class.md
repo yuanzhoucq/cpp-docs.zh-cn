@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
 - amp_short_vectors/Concurrency::graphics::unorm_4::gbra
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 类
 表示四个无符号的正常数字短的矢量。  
@@ -307,7 +310,7 @@ class unorm_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[unorm_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[unorm_4 Constructor](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -455,13 +458,13 @@ class unorm_4;
 |名称|描述|  
 |----------|-----------------|  
 |unorm_4::operator-||  
-|unorm_4::operator-||  
-|unorm_4::operator * =||  
-|/ = unorm_4::operator 的||  
-|unorm_4::operator + +||  
-|unorm_4::operator + =||  
-|unorm_4::operator =||  
-|unorm_4::operator =||  
+|unorm_4::operator--||  
+|unorm_4::operator*=||  
+|unorm_4::operator/=||  
+|unorm_4::operator++||  
+|unorm_4::operator+=||  
+|unorm_4::operator=||  
+|unorm_4::operator-=||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -610,7 +613,7 @@ class unorm_4;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm_4 
+##  <a name="ctor"></a> unorm_4 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -694,7 +697,7 @@ explicit inline unorm_4(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="unorm_4__size"></a>大小 
+##  <a name="unorm_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

@@ -4,37 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IGetDataSourceImpl
 - ATL.IGetDataSourceImpl<T>
 - ATL.IGetDataSourceImpl
 - ATL::IGetDataSourceImpl
 - ATL::IGetDataSourceImpl<T>
-dev_langs: C++
-helpviewer_keywords: IGetDataSourceImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IGetDataSourceImpl class
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c83ab71b7b19d410dd0157f3400ebc1a58a63916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d162e775a2f419693d5563b98bd380ac71b90faa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 类
 提供的实现[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)对象。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class T>  
 class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
 ```  

@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Movenext |Microsoft 文档"
+title: CRowset::MoveNext | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>.MoveNext
 - ATL.CRowset.MoveNext
@@ -16,34 +17,32 @@ f1_keywords:
 - CRowset<TAccessor>::MoveNext
 - CRowset::MoveNext
 - ATL::CRowset::MoveNext
-dev_langs: C++
-helpviewer_keywords: MoveNext method
+dev_langs:
+- C++
+helpviewer_keywords:
+- MoveNext method
 ms.assetid: 0df3288c-2bce-494f-99c0-6344b54a4adf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bd997b25125a48dd6103629e6957843295532901
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 493a9c44a582dc51831f72f54b936c3af1307783
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetmovenext"></a>CRowset::MoveNext
 将光标移动到下一条记录。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT MoveNext( ) throw( );   
-HRESULT MoveNext(   
-   LONG lSkip,   
-   bool bForward = true    
-) throw( );  
+```cpp
+HRESULT MoveNext() throw();HRESULT MoveNext(LONG lSkip,   
+   bool bForward= true) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -72,7 +71,7 @@ HRESULT MoveNext(
   
 ## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
- [Crowset:: Movefirst](../../data/oledb/crowset-movefirst.md)   
- [Crowset:: Movetobookmark](../../data/oledb/crowset-movetobookmark.md)   
- [Crowset:: Moveprev](../../data/oledb/crowset-moveprev.md)   
+ [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
+ [CRowset::MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)   
+ [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)

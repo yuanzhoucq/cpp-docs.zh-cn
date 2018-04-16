@@ -1,12 +1,13 @@
 ---
-title: "Cbulkrowset:: Movetobookmark |Microsoft 文档"
+title: CBulkRowset::MoveToBookmark | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CBulkRowset<TAccessor>::MoveToBookmark
 - CBulkRowset.MoveToBookmark
@@ -15,33 +16,32 @@ f1_keywords:
 - CBulkRowset::MoveToBookmark
 - ATL::CBulkRowset<TAccessor>::MoveToBookmark
 - ATL::CBulkRowset::MoveToBookmark
-dev_langs: C++
-helpviewer_keywords: MoveToBookmark method
+dev_langs:
+- C++
+helpviewer_keywords:
+- MoveToBookmark method
 ms.assetid: 76aab025-819e-4ecd-ae0a-d8d3fb2d2099
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 883bea68992d646fd7ee82257f794394a1d2ffc4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07703acbe483f30c2d458f481b7ff301c937d6d4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cbulkrowsetmovetobookmark"></a>CBulkRowset::MoveToBookmark
 提取用书签标记的行或距离书签指定偏移量 (`lSkip`) 的行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT MoveToBookmark(  
-   const CBookmarkBase& bookmark,  
-   DBCOUNTITEM lSkip = 0   
-) throw( );  
+```cpp
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+   DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

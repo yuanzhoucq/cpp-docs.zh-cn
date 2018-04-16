@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual c + + 中的 CMake 项目
 
@@ -161,7 +165,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
    ![CMakeLists.txt 文件错误](media/cmake-cmakelists-error.png "CMakeLists.txt 文件错误")
 
-## <a name="cmake_settings"></a>CMake 设置和自定义配置
+## <a name="cmake_settings"></a> CMake 设置和自定义配置
 
 默认情况下，Visual Studio 提供了六个默认 CMake 配置 （"x86 调试"、"x86 版本"、"x64 调试"、"x64-版"，"Linux 调试"和"Linux 发行版"）。 这些配置定义如何调用 CMake.exe 来创建给定项目的 CMake 缓存。 若要修改这些配置，或创建新的自定义配置，请选择**CMake |更改 CMake 设置**，，然后选择的设置适用于 CMakeLists.txt 文件。 **更改 CMake 设置**命令，还可以在中的文件的上下文菜单**解决方案资源管理器**。 此命令在项目文件夹中创建 CMakeSettings.json 文件。 此文件用于重新创建 CMake 缓存文件，例如后**清理**操作。 
 
@@ -215,13 +219,13 @@ JSON IntelliSense 可帮助您编辑 CMakeSettings.json 文件：
 CMakeSettings.json 还支持使用环境变量中的任何上述属性。 若要使用的语法是`${env.FOO}`以展开环境变量 %FOO%。
 此外可以访问内置宏在此文件中：
 
-- `${workspaceRoot}`– 提供的工作区文件夹的完整路径
-- `${workspaceHash}`– 哈希的工作区位置;可用于创建当前工作区 （例如，若要在文件夹路径中使用） 的唯一标识符
-- `${projectFile}`– 根 CMakeLists.txt 文件的完整路径
-- `${projectDir}`– 根 CMakeLists.txt 文件的文件夹的完整路径
-- `${thisFile}`– CMakeSettings.json 文件的完整路径
-- `${name}`– 配置的名称
-- `${generator}`– 此配置中使用的 CMake 生成器的名称
+- `${workspaceRoot}` – 提供的工作区文件夹的完整路径
+- `${workspaceHash}` – 哈希的工作区位置;可用于创建当前工作区 （例如，若要在文件夹路径中使用） 的唯一标识符
+- `${projectFile}` – 根 CMakeLists.txt 文件的完整路径
+- `${projectDir}` – 根 CMakeLists.txt 文件的文件夹的完整路径
+- `${thisFile}` – CMakeSettings.json 文件的完整路径
+- `${name}` – 配置的名称
+- `${generator}` – 此配置中使用的 CMake 生成器的名称
 
 ### <a name="ninja-command-line-arguments"></a>忍者命令行参数
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w 标志  | 调整警告 （使用-w 列表间警告）|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>继承的环境 (Visual Studio 2017 版本 15.5)
-
-CmakeSettings.json 现在支持继承的环境。 此功能，可 （1） 继承默认的环境和 （2） 创建自定义环境变量在运行时传递给 CMake.exe。
+CMakeSettings.json 现在支持继承的环境。 此功能，可 （1） 继承默认的环境和 （2） 创建自定义环境变量在运行时传递给 CMake.exe。
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ CmakeSettings.json 现在支持继承的环境。 此功能，可 （1） 继承
 |msvc_arm64_x64|针对 ARM64 编译使用 64 位工具|
 
 ### <a name="custom-environment-variables"></a>自定义环境变量
-在 CmakeSettings.json，你可以定义自定义环境变量全局或在配置每个**环境**属性。 下面的示例定义一个全局变量， **BuildDir**，其继承调试 x86 和 x64 调试配置中。 每个配置使用变量指定的值**buildRoot**此配置的属性。 如何使用每个配置另请注意**inheritEnvironments**属性来指定仅适用于该配置的变量。
+在 CMakeSettings.json，你可以定义自定义环境变量全局或在配置每个**环境**属性。 下面的示例定义一个全局变量， **BuildDir**，其继承调试 x86 和 x64 调试配置中。 每个配置使用变量指定的值**buildRoot**此配置的属性。 如何使用每个配置另请注意**inheritEnvironments**属性来指定仅适用于该配置的变量。
 
 ```json
 {
@@ -290,8 +293,7 @@ CmakeSettings.json 现在支持继承的环境。 此功能，可 （1） 继承
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ CmakeSettings.json 现在支持继承的环境。 此功能，可 （1） 继承
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake 配置步骤
+## <a name="cmake-configure-step"></a>CMake 配置步骤
 
 如果进行了重大更改到 CMakeSettings.json 或 CMakeLists.txt 文件，Visual Studio 自动重新运行 CMake 配置步骤。 如果配置步骤完成且未发生错误，收集的信息适用于 c + + IntelliSense 和语言服务和另外，请在生成和调试操作。
 

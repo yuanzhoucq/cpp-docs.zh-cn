@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
-dev_langs: C++
-helpviewer_keywords: VectorViewIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b572d829c21c37457fc9fdab5f745616a6318ff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 类
 为派生自 Windows 运行时的对象提供标准模板库迭代器`IVectorView`接口。  
@@ -54,7 +58,7 @@ class VectorViewIterator;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Vectorviewiterator:: Vectorviewiterator](#ctor)|初始化 VectorViewIterator 类的新实例。|  
+|[VectorViewIterator::VectorViewIterator](#ctor)|初始化 VectorViewIterator 类的新实例。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -64,7 +68,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator-- 运算符](#operator-decrement)|递减当前 VectorViewIterator。|  
 |[VectorViewIterator::operator!= 运算符](#operator-inequality)|指示当前 VectorViewIterator 是否不等于指定的 VectorViewIterator。|  
 |[VectorViewIterator::operator* 运算符](#operator-dereference)|检索对当前 VectorViewIterator 指定的元素的引用。|  
-|[Vectorviewiterator::\[\]](#operator-at)|检索对偏移当前 VectorViewIterator 指定量的元素的引用。|  
+|[VectorViewIterator::operator\[\]](#operator-at)|检索对偏移当前 VectorViewIterator 指定量的元素的引用。|  
 |[VectorViewIterator::operator+ 运算符](#operator-plus)|返回引用偏移指定 VectorViewIterator 指定偏移量处的元素的 VectorViewIterator。|  
 |[VectorViewIterator::operator++ 运算符](#operator-increment)|递增当前 VectorViewIterator。|  
 |[VectorViewIterator::operator+= 运算符](#operator-plus-assign)|按指定偏移量递增当前 VectorViewIterator。|  
@@ -84,7 +88,7 @@ class VectorViewIterator;
   
  **命名空间：** Platform::Collections  
 
-## <a name="operator-arrow"></a>Vectorviewiterator:: Operator-&gt;运算符
+## <a name="operator-arrow"></a>  Vectorviewiterator:: Operator-&gt;运算符
 检索当前 VectorViewIterator 引用的元素的地址。  
   
 ### <a name="syntax"></a>语法  
@@ -100,7 +104,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement"></a>Vectorviewiterator:: Operator-运算符
+## <a name="operator-decrement"></a>  Vectorviewiterator:: Operator-运算符
 递减当前 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -120,7 +124,7 @@ VectorViewIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>Vectorviewiterator:: Operator * 运算符
+## <a name="operator-dereference"></a>  Vectorviewiterator:: Operator * 运算符
 检索对当前 VectorViewIterator 指定的元素的引用。  
   
 ### <a name="syntax"></a>语法  
@@ -134,7 +138,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Vectorviewiterator:: Operator = = 运算符
+## <a name="operator-equality"></a>  VectorViewIterator::operator== Operator
 指示当前 VectorViewIterator 是否等于指定 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -148,11 +152,11 @@ bool operator==(const VectorViewIterator& other) const;
  另一 VectorViewIterator。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果当前 VectorViewIterator 是否等于`other`; 否则为`false`。  
+ `true` 如果当前 VectorViewIterator 是否等于`other`; 否则为`false`。  
   
 
 
-## <a name="operator-greater-than"></a>Vectorviewiterator:: Operator&gt;运算符
+## <a name="operator-greater-than"></a>  Vectorviewiterator:: Operator&gt;运算符
 指示当前 VectorViewIterator 是否大于指定的 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -171,7 +175,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>Vectorviewiterator:: Operator&gt;= 运算符
+## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator:: Operator&gt;= 运算符
 指示当前 VectorViewIterator 是否大于或等于指定的 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -190,7 +194,7 @@ bool operator>=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Vectorviewiterator:: Operator + + 运算符
+## <a name="operator-increment"></a>  Vectorviewiterator:: Operator + + 运算符
 递增当前 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -211,7 +215,7 @@ VectorViewIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Vectorviewiterator:: Operator ！ = 运算符
+## <a name="operator-inequality"></a>  Vectorviewiterator:: Operator ！ = 运算符
 指示当前 VectorViewIterator 是否不等于指定的 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -225,11 +229,11 @@ bool operator!=(const VectorViewIterator& other) const;
  另一 VectorViewIterator。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果当前 VectorViewIterator 是否不等于`other`; 否则为`false`。  
+ `true` 如果当前 VectorViewIterator 是否不等于`other`; 否则为`false`。  
   
 
 
-## <a name="operator-less-than"></a>Vectorviewiterator:: Operator&lt;运算符
+## <a name="operator-less-than"></a>  Vectorviewiterator:: Operator&lt;运算符
 指示当前 VectorIterator 是否小于指定的 VectorIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -247,7 +251,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>Vectorviewiterator:: Operator&lt;= 运算符
+## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator:: Operator&lt;= 运算符
 指示当前 VectorIterator 是否小于或等于指定的 VectorIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -262,11 +266,11 @@ bool operator<=(const VectorViewIterator& other) const;
  另一 VectorIterator。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果当前 VectorIterator 是否小于或等于`other`; 否则为`false`。  
+ `true` 如果当前 VectorIterator 是否小于或等于`other`; 否则为`false`。  
   
 
 
-## <a name="operator-minus"></a>Vectorviewiterator:: Operator-运算符
+## <a name="operator-minus"></a>  Vectorviewiterator:: Operator-运算符
 从当前迭代器中减去指定数目的元素以生成新迭代器，或者从当前迭代器中减去指定的迭代器以生成迭代器之间的元素数目。  
   
 ### <a name="syntax"></a>语法  
@@ -290,7 +294,7 @@ difference_type operator-(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-plus-equals"></a>Vectorviewiterator:: Operator + = 运算符
+## <a name="operator-plus-equals"></a>  Vectorviewiterator:: Operator + = 运算符
 按指定偏移量递增当前 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -308,7 +312,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus"></a>Vectorviewiterator:: Operator + 运算符
+## <a name="operator-plus"></a>  Vectorviewiterator:: Operator + 运算符
 返回引用偏移指定 VectorViewIterator 指定偏移量处的元素的 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -341,7 +345,7 @@ inline VectorViewIterator<T> operator+
   
 
 
-## <a name="operator-minus-assign"></a>Vectorviewiterator:: Operator-= 运算符
+## <a name="operator-minus-assign"></a>  Vectorviewiterator:: Operator-= 运算符
 按指定偏移量递减当前 VectorIterator。  
   
 ### <a name="syntax"></a>语法  
@@ -359,7 +363,7 @@ VectorViewIterator& operator-=(difference_type n);
   
 
 
-## <a name="operator-at"></a>Vectorviewiterator::\[\]
+## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
 检索对偏移当前 VectorViewIterator 指定量的元素的引用。  
   
 ### <a name="syntax"></a>语法  
@@ -377,7 +381,7 @@ reference operator[](difference_type n) const;
   
 
 
-## <a name="ctor"></a>Vectorviewiterator:: Vectorviewiterator 构造函数
+## <a name="ctor"></a>  Vectorviewiterator:: Vectorviewiterator 构造函数
 初始化 VectorViewIterator 类的新实例。  
   
 ### <a name="syntax"></a>语法  

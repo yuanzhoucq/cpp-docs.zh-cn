@@ -1,49 +1,51 @@
 ---
-title: "BOOKMARK_ENTRY |Microsoft 文档"
+title: BOOKMARK_ENTRY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BOOKMARK_ENTRY
-dev_langs: C++
-helpviewer_keywords: BOOKMARK_ENTRY macro
+ms.topic: reference
+f1_keywords:
+- BOOKMARK_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- BOOKMARK_ENTRY macro
 ms.assetid: ec8222f5-9d90-46cb-989e-23f24465083f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9816a09c43f2b61ac908bd4c485deec080817953
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f303714d94ab83df247674a5b7caa55c2861062d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bookmarkentry"></a>BOOKMARK_ENTRY
 将绑定书签列。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BOOKMARK_ENTRY(  
-variable  
- )  
+```cpp
+BOOKMARK_ENTRY(variable)  
   
 ```  
   
 #### <a name="parameters"></a>参数  
- *变量*  
+ *variable*  
  [in]要绑定到书签列的变量。  
   
 ## <a name="example"></a>示例  
 
-```cpp  
+```
+cpp  
 class CArtistsBookmark
 {
 public:

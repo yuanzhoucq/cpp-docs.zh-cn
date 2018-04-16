@@ -1,38 +1,41 @@
 ---
-title: "Ccommand:: Close |Microsoft 文档"
+title: CCommand::Close | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CCommand.Close
 - CCommand::Close
-dev_langs: C++
-helpviewer_keywords: Close method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Close method
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad9d6a892b31d4e0c3945d94c36466d72fb9c81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d25c726ef5961f7504eb72fef230a94588e7734
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ccommandclose"></a>CCommand::Close
 发布与命令关联的访问器行集。  
   
-## <a name="syntax"></a>语法  
-  
-```  
-void Close( );  
+## <a name="syntax"></a>语法
+
+```cpp
+void Close();  
 ```  
   
 ## <a name="remarks"></a>备注  

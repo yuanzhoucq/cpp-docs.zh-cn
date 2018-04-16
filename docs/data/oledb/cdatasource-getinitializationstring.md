@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::GetInitializationString
 - CDataSource.GetInitializationString
 - GetInitializationString
 - CDataSource::GetInitializationString
 - ATL.CDataSource.GetInitializationString
-dev_langs: C++
-helpviewer_keywords: GetInitializationString method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetInitializationString method
 ms.assetid: 97134723-6e99-4004-a56d-ec57543dbf3b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2dd5f7263e6972e788f46f43036991e12555771
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d548fd79ec857f95957bf8306511738d1c88ea55
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdatasourcegetinitializationstring"></a>CDataSource::GetInitializationString
 检索当前处于打开状态的数据源的初始化字符串。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT GetInitializationString(   
-   BSTR* pInitializationString,   
-   bool bIncludePassword = false    
-) throw( );  
+```cpp
+HRESULT GetInitializationString(BSTR* pInitializationString,   
+   bool bIncludePassword = false) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

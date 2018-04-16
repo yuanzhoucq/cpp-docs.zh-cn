@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - casin
 - casinf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bed6a29a270ae6c3e54cd1931a351d3752e2c818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3f0b0131db3ce020d4f840cc7374c8d55b01a5ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casin-casinf-casinl"></a>casin、casinf、casinl
 检索实际轴间隔 [-1，+ 1] 外的分支刮痕部为复数的反正弦的值。  
@@ -83,9 +85,9 @@ _Lcomplex casinl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用并返回 `casin` 和 `_Fcomplex` 值的 `_Lcomplex` 重载。 在 C 程序中，`casin` 始终采用并返回 `_Dcomplex` 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`casin`,               `casinf`, `casinl`|\<complex.h>|\<ccomplex>|  
   

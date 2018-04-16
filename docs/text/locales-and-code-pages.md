@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>区域设置和代码页
 将区域设置 ID 反映本地的约定和语言特定的地理区域。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言： 英语和法语。 因此，加拿大有两个不同的区域设置： 加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  有关代码页的详细信息，请参见 [Code Pages](../c-runtime-library/code-pages.md)。  
   
- C 运行时库有两种类型的内部代码页： 区域设置和多字节。 你可以在程序执行期间更改的当前代码页 (请参阅的文档[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)和[_setmbcp](../c-runtime-library/reference/setmbcp.md)函数)。 此外，运行时库可能获取并使用操作系统代码页的值。 在 Windows 2000 中，操作系统代码页是"系统默认 ANSI"代码页。 程序的执行持续时间内，此代码页为常数。  
+ C 运行时库有两种类型的内部代码页： 区域设置和多字节。 你可以在程序执行期间更改的当前代码页 (请参阅的文档[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)和[_setmbcp](../c-runtime-library/reference/setmbcp.md)函数)。 此外，运行时库可能获取并使用操作系统代码页，可为程序的执行持续时间内的常数的值。  
   
  区域设置代码页更改时，区域设置相关的更改集的函数为由选定的代码页的行为。 默认情况下，所有依赖于区域设置函数开始执行与唯一的"C"区域设置的区域设置代码页。 你可以更改内部的区域设置代码页 （以及其他区域设置特定的属性） 通过调用`setlocale`函数。 调用`setlocale`(LC_ALL，"") 区域设置设定为，指示由操作系统用户区域设置。  
   

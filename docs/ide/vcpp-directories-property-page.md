@@ -1,10 +1,11 @@
 ---
 title: "VC + + 目录属性页 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +17,22 @@ f1_keywords:
 - VC.Project.VCDirectories.LibraryPath
 - VS.ToolsOptionsPages.Projects.VCDirectories
 - VC.Project.VCDirectories.ExcludePath
-dev_langs: C++
-helpviewer_keywords: VC++ Directories Property Page
+dev_langs:
+- C++
+helpviewer_keywords:
+- VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC + + 目录属性页 (Windows)
 
@@ -38,23 +42,25 @@ ms.lasthandoff: 12/21/2017
 
 访问**VC + + 目录**属性页：
 
-1. 在主菜单中选择**视图 |解决方案资源管理器**
-1. 右键单击项目节点 （不是顶级解决方案），然后选择**属性**
-1. 在左窗格中**属性页**对话框框中，展开**配置属性**和选择**VC + + 目录**。  
+1. 如果**解决方案资源管理器**窗口不可见，然后在主菜单上选择**视图** > **解决方案资源管理器**。
+1. 右键单击项目节点 （不是顶级解决方案），然后选择**属性**。
+1. 在左窗格中**属性页**对话框中，选择**配置属性** > **VC + + 目录**。  
 
-VC + + 目录属性适用于一个项目，不是顶级解决方案节点：
+VC + + 目录属性适用于一个项目，而不是顶级解决方案节点。 如果看不到**VC + + 目录**下**配置属性**，选择中的 c + + 项目节点**解决方案资源管理器**窗口： 
 
 ![选择项目节点](media/vcppdir.png "选择项目节点，以查看 VC + + 目录属性")
 
-如果看不到属性页，请确保已在中选择项目节点**解决方案资源管理器**。 请注意， **VC + + 目录**跨平台项目中的属性页的外观。 对于非 Windows 项目，请参阅[VC + + 目录 （Linux c + +）](../linux/prop-pages/directories-linux.md)或。 
+请注意， **VC + + 目录**跨平台项目中的属性页的外观。 特定于 Linux c + + 项目的信息，请参阅[VC + + 目录 （Linux c + +）](../linux/prop-pages/directories-linux.md)。 
  
 如果你不熟悉*项目属性*在 Visual Studio 中，你可能会发现它对第一次读取帮助[使用项目属性](working-with-project-properties.md)。 
  
-VC + + 目录的默认设置取决于项目类型。 对于桌面项目中，它们包括特定的平台工具集的 VC + + 工具位置和为 Windows SDK 的位置。 你可以更改**平台工具集**和**Windows SDK 版本**上**配置属性-常规**页。 若要查看的任何目录的值：
+默认设置**VC + + 目录**属性取决于项目类型。 对于桌面项目中，它们包括特定的平台工具集的 c + + 工具位置和为 Windows SDK 的位置。 你可以更改**平台工具集**和**Windows SDK 版本**上**配置属性** > **常规**页。 
 
-1. 在右窗格中**VC + + 目录**页上，选择一行。 例如，**库目录**
-1. 选择右侧的向下箭头按钮
-1. 选择**编辑**。
+若要查看的任何目录的值：
+
+1. 选择中的属性之一**VC + + 目录**页。 例如，选择**库目录**。
+1. 选择向下箭头按钮在属性值字段的末尾。
+1. 在下拉列表菜单中，选择**编辑**。
 
 ![编辑库目录](media/vcppdir_libdir_edit.png "对话框编辑库路径")
 
@@ -70,7 +76,7 @@ VC + + 目录的默认设置取决于项目类型。 对于桌面项目中，它
 
 ![请参阅宏值](media/vcppdir_libdir_macros.png "对话框编辑宏")
 
-注意： 您键入时，将填充列表。 不要按**Enter**。
+注意： 您键入时，会填充列表。 不要按**Enter**。
 
 有关宏和为何应而不是硬编码路径尽可能使用它们的详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)。 
 
@@ -86,22 +92,25 @@ VC + + 目录的默认设置取决于项目类型。 对于桌面项目中，它
 
 你还可以指定其他目录，如下所示。  
   
-**可执行目录**  
+**可执行目录**<br/>
 在其中搜索可执行文件的目录。 对应于**路径**环境变量。
 
-**包含目录**  
+**包含目录**<br/>
 在其中搜索源代码中所引用的包含文件的目录。 对应于**包括**环境变量。
 
-**引用目录**  
+**引用目录**<br/>
  要在其中搜索程序集和通过的源代码中引用的模块 （元数据） 文件的目录[#using](../preprocessor/hash-using-directive-cpp.md)指令。 对应于**LIBPATH**环境变量。
 
-**库目录**  
-在其中搜索库 (.lib) 文件的目录；其中包括运行库。 对应于**LIB**环境变量。 此设置不适用于.obj 文件;若要链接到.obj 文件中，在[链接器](../ide/linker-property-pages.md)**常规**属性页上，选择**其他库依赖项**，然后指定文件的相对路径。
+**库目录**<br/>
+在其中搜索库 (.lib) 文件的目录；其中包括运行库。 对应于**LIB**环境变量。 此设置不适用于.obj 文件;若要链接到.obj 文件中，在**配置属性** > **链接器** > **常规**属性页上，选择**其他库依赖项**，然后指定文件的相对路径。 有关详细信息，请参阅[链接器属性页](../ide/linker-property-pages.md)。
 
-**源目录**  
+**库 WinRT 目录**<br/>
+在通用 Windows 平台 (UWP) 应用中使用目录以便搜索 WinRT 库文件。 
+
+**源目录**<br/>
 在其中搜索用于 IntelliSense 的源文件的目录。
 
-**排除目录**  
+**排除目录**<br/>
 检查生成依赖项时不搜索的目录。
 
 ## <a name="sharing-the-settings"></a>共享设置

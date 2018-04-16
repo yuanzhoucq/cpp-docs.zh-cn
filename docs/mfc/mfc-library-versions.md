@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -19,12 +21,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>MFC 库版本
 
@@ -95,7 +98,7 @@ MFC 项目使用预处理器符号 **\_UNICODE**以指示 utf-16 宽字符的 Un
 
 MFC 的静态库使用以下命名约定。 库名采用以下格式
 
-> *u*AFX*c * * d*。LIB
+> *u*AFX*c**d*.LIB
 
 其中，使用斜体小写字母形式显示的字母是说明符的占位符，下表中显示了说明符的含义：
 
@@ -111,10 +114,10 @@ MFC 的静态库使用以下命名约定。 库名采用以下格式
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 静态链接库，发布版本|
 |NAFXCWD.LIB|MFC 静态链接库，调试版本|
-|UAFXCW。LIB|具有 Unicode 支持的 MFC 静态链接库，发布版本|
-|UAFXCWD。LIB|具有 Unicode 支持的 MFC 静态链接库，调试版本|
-|AFXNMCD。LIB|不带 MFC 对话框控件，发行版的 MFC 静态链接库|
-|AFXNMCDD。LIB|不带 MFC 对话框控件，调试版本的 MFC 静态链接库|
+|UAFXCW.LIB|具有 Unicode 支持的 MFC 静态链接库，发布版本|
+|UAFXCWD.LIB|具有 Unicode 支持的 MFC 静态链接库，调试版本|
+|AFXNMCD.LIB|不带 MFC 对话框控件，发行版的 MFC 静态链接库|
+|AFXNMCDD.LIB|不带 MFC 对话框控件，调试版本的 MFC 静态链接库|
 
 具有相同的基名称并且扩展名为.pdb 的调试器文件也已可用于每个静态库。
 
@@ -126,14 +129,14 @@ MFC Dll 有*版本*指示二进制兼容性的数字。 使用具有与其他库
 
 |DLL|描述|
 |---------|-----------------|
-|MFC*版本*。DLL|MFC DLL、 ANSI 或 MBCS 版本的版本|
-|MFC*版本*U.DLL|MFC DLL，Unicode 发行版本|
-|MFC*版本*D.DLL|MFC DLL、 ANSI 或 MBCS 调试版本|
-|MFC*版本*UD。DLL|MFC DLL，Unicode 调试版本|
-|MFCM*版本*。DLL|使用 Windows 窗体控件，MFC DLL ANSI 或 MBCS 版本的版本|
-|MFCM*版本*U.DLL|与 Windows 窗体控件，Unicode 版本的 MFC DLL|
-|MFCM*版本*D.DLL|使用 Windows 窗体控件，MFC DLL ANSI 或 MBCS 调试版本|
-|MFCM*版本*UD。DLL|与 Windows 窗体控件，Unicode 调试版本的 MFC DLL|
+|MFC*version*.DLL|MFC DLL、 ANSI 或 MBCS 版本的版本|
+|MFC*version*U.DLL|MFC DLL，Unicode 发行版本|
+|MFC*version*D.DLL|MFC DLL、 ANSI 或 MBCS 调试版本|
+|MFC*version*UD.DLL|MFC DLL，Unicode 调试版本|
+|MFCM*version*.DLL|使用 Windows 窗体控件，MFC DLL ANSI 或 MBCS 版本的版本|
+|MFCM*version*U.DLL|与 Windows 窗体控件，Unicode 版本的 MFC DLL|
+|MFCM*version*D.DLL|使用 Windows 窗体控件，MFC DLL ANSI 或 MBCS 调试版本|
+|MFCM*version*UD.DLL|与 Windows 窗体控件，Unicode 调试版本的 MFC DLL|
 
 需生成应用程序或 MFC 扩展 Dll 用于这些共享的 Dll 导入库拥有与 DLL 相同的基名称，但有.lib 文件扩展名。 当你使用共享的 Dll 时，在小的静态库，仍必须与你的代码; 链接此库名为 MFCS*版本*{U} {D}.lib。
 

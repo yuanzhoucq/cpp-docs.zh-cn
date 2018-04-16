@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
-提供 ref 类和 ref 结构在 Windows 应用商店应用程序中的通用行为。 所有 ref 类和 ref 结构实例都可以隐式转换为 Platform::Object^，并且可以重写其虚拟 ToString 方法。  
+提供 ref 类和 ref 结构在 Windows 运行时应用程序的通用行为。 所有 ref 类和 ref 结构实例都可以隐式转换为 Platform::Object^，并且可以重写其虚拟 ToString 方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,15 +46,15 @@ public ref class Object : Object
   
 |名称|描述|  
 |----------|-----------------|  
-|[Object:: object](#ctor)|初始化该对象类的新实例。|  
+|[Object::Object](#ctor)|初始化该对象类的新实例。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Object:: equals](#equals)|确定指定的对象是否等于当前对象。|  
-|[Object:: gethashcode](#gethashcode)|返回此实例的哈希代码。|  
-|[Object:: referenceequals](#referenceequals)|确定指定对象实例是否为同一实例。|  
+|[Object::Equals](#equals)|确定指定的对象是否等于当前对象。|  
+|[Object::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
+|[Object::ReferenceEquals](#referenceequals)|确定指定对象实例是否为同一实例。|  
 |[ToString](#tostring)|返回表示当前对象的字符串。 可重写。|  
 |[GetType](#gettype)|获取描述当前实例的 [Platform::Type](../cppcx/platform-type-class.md) 。|  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **命名空间：** Platform  
 
   
-## <a name="equals"></a>Object:: equals 方法
+## <a name="equals"></a> Object:: equals 方法
 确定指定的对象是否等于当前对象。  
   
 ### <a name="syntax"></a>语法  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Object:: gethashcode 方法
+## <a name="gethashcode"></a>  Object::GetHashCode Method
 返回此实例的 `IUnknown`* 标识值（如果它是 COM 对象）或计算所得的哈希值（如果它不是 COM 对象）。  
   
 ### <a name="syntax"></a>语法  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object:: gettype 方法
+## <a name="gettype"></a>  Object:: gettype 方法
 返回[platform:: type](../cppcx/platform-type-class.md)描述一个对象的运行时类型的对象。  
   
 ### <a name="syntax"></a>语法  
@@ -131,9 +134,9 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>请参阅  
  [Platform:: type 类](../cppcx/platform-type-class.md)   
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)   
- [类型 System](../cppcx/type-system-c-cx.md
+ [Type System](../cppcx/type-system-c-cx.md
   
-## <a name="ctor"></a>Object:: object 构造函数
+## <a name="ctor"></a>  Object:: object 构造函数
 初始化该对象类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -142,7 +145,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object:: referenceequals 方法
+## <a name="referenceequals"></a>  Object:: referenceequals 方法
 确定指定对象实例是否为同一实例。  
   
 ### <a name="syntax"></a>语法  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>返回值  
  如果两个对象相同，则为 `true`；否则为 `false`。  
  
-## <a name="tostring"></a>Object:: tostring 方法 (C + + /cli CX)
+## <a name="tostring"></a>  Object:: tostring 方法 (C + + /cli CX)
 返回表示当前对象的字符串。  
   
 ### <a name="syntax"></a>语法  

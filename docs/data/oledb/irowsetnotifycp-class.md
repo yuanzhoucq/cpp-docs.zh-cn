@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: IRowsetNotifyCP
-dev_langs: C++
-helpviewer_keywords: IRowsetNotifyCP class
+ms.topic: reference
+f1_keywords:
+- IRowsetNotifyCP
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bae872c90a6df76e3efc1fce1aab6e77bc8fd313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a43825ee3fa676ce07dcd3bc4e121abd400ef322
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 类
 实现连接点接口的提供程序站点[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。  
   
-## <a name="syntax"></a>语法  
-  
-```  
-template <  
-   class T,   
-   class ReentrantEventSync = CComSharedMutex   
->  
+## <a name="syntax"></a>语法
+
+```cpp
+template <class T, class ReentrantEventSync = CComSharedMutex>  
 class IRowsetNotifyCP :   
    public IConnectionPointImpl<  
       T,   
       piid = &__uuidof(IRowsetNotify),   
-      CComDynamicUnkArray DynamicUnkArray  
-   >,  
+      CComDynamicUnkArray DynamicUnkArray>,  
    public ReentrantEventSync  
 ```  
   
@@ -67,7 +67,7 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](../../data/oledb/irowsetnotifycp-fire-onrowsetchange.md)|通知更改影响整个行集的使用者。|  
   
 ## <a name="remarks"></a>备注  
- `IRowsetNotifyCP`实现广播函数向侦听器建议的连接点**IID_IRowsetNotify**对行集的内容的更改。  
+ `IRowsetNotifyCP` 实现广播函数向侦听器建议的连接点**IID_IRowsetNotify**对行集的内容的更改。  
   
  请注意，你还必须实现并注册`IRowsetNotify`使用使用者 （也称为"接收器"） 上[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)以便使用者可以处理通知。 请参阅[接收通知](../../data/oledb/receiving-notifications.md)如何实现上使用者连接点接口。  
   

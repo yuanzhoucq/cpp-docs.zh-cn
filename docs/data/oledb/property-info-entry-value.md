@@ -1,38 +1,40 @@
 ---
-title: "PROPERTY_INFO_ENTRY_VALUE |Microsoft 文档"
+title: PROPERTY_INFO_ENTRY_VALUE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: PROPERTY_INFO_ENTRY_VALUE
-dev_langs: C++
-helpviewer_keywords: PROPERTY_INFO_ENTRY_VALUE macro
+ms.topic: reference
+f1_keywords:
+- PROPERTY_INFO_ENTRY_VALUE
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROPERTY_INFO_ENTRY_VALUE macro
 ms.assetid: 9690f7f3-fb20-4a7e-a75f-8a3a1cb1ce0d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c93b2d010feb6be0160ac3253890ad7ffaa168a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8adb8fb0c2978bdf5886d47fa0ee33cba8f8fbe4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="propertyinfoentryvalue"></a>PROPERTY_INFO_ENTRY_VALUE
 表示属性集中的特定属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-PROPERTY_INFO_ENTRY_VALUE(  
-dwPropID  
+```cpp
+PROPERTY_INFO_ENTRY_VALUE(dwPropID  
 , value )  
 ```  
   
@@ -40,7 +42,7 @@ dwPropID
  *dwPropID*  
  [in] 一个 [DBPROPID](https://msdn.microsoft.com/en-us/library/ms723882.aspx) 值，该值可与属性集 GUID 一起使用以标识属性。  
   
- *值*  
+ *value*  
  [in] `DWORD`类型的属性值。  
   
 ## <a name="remarks"></a>备注  

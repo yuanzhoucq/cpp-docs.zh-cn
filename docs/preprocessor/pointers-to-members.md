@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pointers_to_members_CPP
 - vc-pragma.pointers_to_members
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - class members, pointers to
 - pragmas, pointers_to_members
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4e034a268a6ff3c3fc04da4e50a4477324ec1880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4313aaa38d410b8e6f46594cd9ce11269b523073
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **C + + 专用**  
@@ -54,8 +57,8 @@ ms.lasthandoff: 12/21/2017
   
 |参数|注释|  
 |--------------|--------------|  
-|**单继承**|最常规的表示形式为单一继承（指向成员函数的指针）。 如果类定义（已为其声明指向成员的指针）的继承模型为多重继承或虚拟继承，则会导致出现错误。|  
-|**多重继承**|最常规的表示形式为多重继承（指向成员函数的指针）。 如果类定义（已为其声明指向成员的指针）的继承模型为虚拟继承，则会导致出现错误。|  
+|**single_inheritance**|最常规的表示形式为单一继承（指向成员函数的指针）。 如果类定义（已为其声明指向成员的指针）的继承模型为多重继承或虚拟继承，则会导致出现错误。|  
+|**multiple_inheritance**|最常规的表示形式为多重继承（指向成员函数的指针）。 如果类定义（已为其声明指向成员的指针）的继承模型为虚拟继承，则会导致出现错误。|  
 |**virtual_inheritance**|最常规的表示形式为虚拟继承（指向成员函数的指针）。 绝不会导致出现错误。 这是默认自变量时**#pragma pointers_to_members （full_generality)**使用。|  
   
 > [!CAUTION]
@@ -70,5 +73,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="end-c-specific"></a>结束 C++ 专用  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

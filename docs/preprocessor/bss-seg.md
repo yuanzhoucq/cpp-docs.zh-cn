@@ -1,30 +1,33 @@
 ---
-title: "bss_seg |Microsoft 文档"
+title: bss_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dd1e24127129ef833cfd4906085eabbf1e5c380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4c253cd24bd8246469532cd283e97be4b21f46d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bssseg"></a>bss_seg
 指定其中的未初始化变量存储在 .obj 文件中的段。  
@@ -52,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  *标识符*让多个记录有一条弹出**pop**命令。  
   
- *"段名称"*（可选）  
+ *"segment-name"*(optional)  
  段的名称。 如果用于**pop**，弹出堆栈和*段名称*会成为活动段名称。  
   
  *"段类"* （可选）  

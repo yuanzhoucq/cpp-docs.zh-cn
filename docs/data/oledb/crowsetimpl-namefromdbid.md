@@ -1,43 +1,43 @@
 ---
-title: "Crowsetimpl:: Namefromdbid |Microsoft 文档"
+title: CRowsetImpl::NameFromDBID | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CRowsetImpl.NameFromDBID
 - CRowsetImpl::NameFromDBID
-dev_langs: C++
-helpviewer_keywords: NameFromDBID method
+dev_langs:
+- C++
+helpviewer_keywords:
+- NameFromDBID method
 ms.assetid: 6aa5b074-90c7-4434-adfd-c64c13e76c78
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: afe16dfefa719760c998c25cc107ba99caacff84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 623eeca73ceaf29e0cecbe80b2a4a8b447adefdc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetimplnamefromdbid"></a>CRowsetImpl::NameFromDBID
 从字符串中提取**DBID**和将其复制到`bstr`中传递。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT CRowsetBaseImpl::NameFromDBID(  
-   DBID* pDBID,  
+```cpp
+HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,  
    CComBSTR& bstr,  
-   bool bIndex   
-);  
+   bool bIndex);  
 ```  
   
 #### <a name="parameters"></a>参数  

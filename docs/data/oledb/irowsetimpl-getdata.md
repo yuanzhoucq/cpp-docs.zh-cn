@@ -1,45 +1,45 @@
 ---
-title: "Irowsetimpl:: Getdata |Microsoft 文档"
+title: IRowsetImpl::GetData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.IRowsetImpl.GetData
 - ATL::IRowsetImpl::GetData
 - IRowsetImpl::GetData
 - IRowsetImpl.GetData
-dev_langs: C++
-helpviewer_keywords: GetData method [OLE DB]
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetData method [OLE DB]
 ms.assetid: cb15f1cc-bd25-4b74-93c3-db71aa93829c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c666644c9ac102a0b65f78af0954ca247d672bae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64bc8d6b84195aef8fd9dc3b0093221cc8e057d7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimplgetdata"></a>IRowsetImpl::GetData
 从行的行集的副本检索数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD( GetData )(  
-   HROW hRow,  
+```cpp
+      STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
-   void* pDstData   
-);  
+   void* pDstData);  
 ```  
   
 #### <a name="parameters"></a>参数  

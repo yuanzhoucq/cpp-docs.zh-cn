@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 可以用于通过最少复制操作将字符串数据从 `Platform::String^` 输入参数传递到其他方法的优化类型。  
@@ -43,22 +45,22 @@ class StringReference
   
 |名称|描述|  
 |----------|-----------------|  
-|[Stringreference:: Stringreference](#ctor)|两个用于创建 `StringReference`实例的构造函数。|  
+|[StringReference::StringReference](#ctor)|两个用于创建 `StringReference`实例的构造函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Stringreference:: Data](#data)|返回 char16 值数组形式的字符串数据。|  
-|[Stringreference:: Length](#length)|返回字符串中的字符数。|  
-|[Stringreference:: Gethstring](#gethstring)|返回 HSTRING 形式的字符串数据。|  
-|[Stringreference:: Getstring](#getstring)|返回 `Platform::String^`形式的字符串数据。|  
+|[StringReference::Data](#data)|返回 char16 值数组形式的字符串数据。|  
+|[StringReference::Length](#length)|返回字符串中的字符数。|  
+|[StringReference::GetHSTRING](#gethstring)|返回 HSTRING 形式的字符串数据。|  
+|[StringReference::GetString](#getstring)|返回 `Platform::String^`形式的字符串数据。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[Stringreference:: Operator =](#operator-assign)|将 `StringReference` 分配给新 `StringReference` 实例。|  
+|[StringReference::operator=](#operator-assign)|将 `StringReference` 分配给新 `StringReference` 实例。|  
 |[StringReference::operator()](#operator-call)|将 `StringReference` 转换为 `Platform::String^`。|  
   
 ### <a name="requirements"></a>惠?  
@@ -70,7 +72,7 @@ class StringReference
   
  **标头：** vccorlib.h  
 
-## <a name="data"></a>Stringreference:: Data 方法
+## <a name="data"></a>  Stringreference:: Data 方法
 返回的此内容`StringReference`char16 值数组形式。  
   
 ### <a name="syntax"></a>语法  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>Stringreference:: Gethstring 方法
+## <a name="gethstring"></a>  Stringreference:: Gethstring 方法
 以 `__abi_HSTRING` 形式返回字符串内容。  
   
 ### <a name="syntax"></a>语法  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>Stringreference:: Getstring 方法
+## <a name="getstring"></a>  Stringreference:: Getstring 方法
 以 `Platform::String^` 形式返回字符串内容。  
   
 ### <a name="syntax"></a>语法  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>返回值  
  一个包含字符串数据的 `Platform::String^`。  
 
-## <a name="length"></a>Stringreference:: Length 方法
+## <a name="length"></a>  Stringreference:: Length 方法
 返回字符串中的字符数。  
   
 ### <a name="syntax"></a>语法  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>Stringreference:: Operator = 运算符
+## <a name="operator-assign"></a>  Stringreference:: Operator = 运算符
 将指定对象分配给当前 `StringReference` 对象。  
   
 ### <a name="syntax"></a>语法  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>StringReference::operator() 运算符
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 将 `StringReference` 对象转换为 `Platform::String^` 对象。  
   
 ### <a name="syntax"></a>语法  

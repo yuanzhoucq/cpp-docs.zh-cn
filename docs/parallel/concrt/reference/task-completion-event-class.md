@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_completion_event
 - PPLTASKS/concurrency::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs: C++
-helpviewer_keywords: task_completion_event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 类
 `task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。  
@@ -76,7 +80,7 @@ class task_completion_event<void>;
   
  **命名空间：** 并发  
   
-##  <a name="set"></a>设置 
+##  <a name="set"></a> 设置 
 
  设置任务完成事件。  
   
@@ -96,7 +100,7 @@ bool set() const ;
 ### <a name="remarks"></a>备注  
  在多个存在或对并发调用`set`，仅第一次调用将成功，并且其结果 （如果有） 将存储在任务完成事件。 而忽略其余的集，并且该方法将返回 false。 当设置任务完成事件时，所有的任务创建从，事件将立即完成，并且其延续，如果有的话，将被排定。 任务完成对象具有`_ResultType`以外`void`将将值传递给它们的延续。  
   
-##  <a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a> set_exception 
 
  传播与此事件关联的所有任务的一个例外情况。  
   
@@ -114,7 +118,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a> task_completion_event 
 
  构造 `task_completion_event` 对象。  
   

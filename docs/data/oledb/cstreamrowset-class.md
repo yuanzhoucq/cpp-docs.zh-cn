@@ -4,37 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CStreamRowset<TAccessor>
 - ATL::CStreamRowset
 - CStreamRowset
 - ATL.CStreamRowset<TAccessor>
 - ATL.CStreamRowset
-dev_langs: C++
-helpviewer_keywords: CStreamRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStreamRowset class
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32c4aa20f805ee141918e7c073709ec33b4d29ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 817d9454ad97580cdfb3eb6d68fbc819ed64dd90
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 类
 在中使用`CCommand`或`CTable`声明。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class TAccessor = CAccessorBase>  
 class CStreamRowset  
 ```  
@@ -61,7 +64,7 @@ class CStreamRowset
   
  [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute`返回`ISequentialStream`指针，它存储在`m_spStream`。 然后，你使用**读取**方法来检索 XML 格式 （Unicode 字符串） 的数据。 例如:  
+ `ICommand::Execute` 返回`ISequentialStream`指针，它存储在`m_spStream`。 然后，你使用**读取**方法来检索 XML 格式 （Unicode 字符串） 的数据。 例如:  
   
  [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   

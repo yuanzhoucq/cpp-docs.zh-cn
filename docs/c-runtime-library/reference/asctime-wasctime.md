@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wasctime
 - asctime
@@ -27,7 +28,8 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c89b43613e1eb82eb35876ea733e13c5d2995352
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asctime-wasctime"></a>asctime、_wasctime
 将 `tm` 时间结构转换为字符串。 提供这些函数的更多安全版本；请参阅 [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
@@ -74,7 +77,7 @@ wchar_t *_wasctime(
   
  `asctime` 函数将存储为结构的时间转换为字符串。 通常情况下，`timeptr` 值通过调用 `gmtime` 或 `localtime` 获取，这两个函数均返回一个指向 TIME_H 中定义的 `tm` 结构的指针。  
   
-|timeptr 成员|“值”|  
+|timeptr 成员|值|  
 |--------------------|-----------|  
 |`tm_hour`|小时，自午夜 (0-23)|  
 |`tm_isdst`|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|  
@@ -100,9 +103,9 @@ wchar_t *_wasctime(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`asctime`|\<time.h>|  
 |`_wasctime`|\<time.h> 或 \<wchar.h>|  

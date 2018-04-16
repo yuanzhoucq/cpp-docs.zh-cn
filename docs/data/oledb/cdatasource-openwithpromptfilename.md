@@ -1,47 +1,46 @@
 ---
-title: "Cdatasource:: Openwithpromptfilename |Microsoft 文档"
+title: CDataSource::OpenWithPromptFileName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataSource.OpenWithPromptFileName
 - OpenWithPromptFileName
 - ATL::CDataSource::OpenWithPromptFileName
 - ATL.CDataSource.OpenWithPromptFileName
 - CDataSource::OpenWithPromptFileName
-dev_langs: C++
-helpviewer_keywords: OpenWithPromptFileName method
+dev_langs:
+- C++
+helpviewer_keywords:
+- OpenWithPromptFileName method
 ms.assetid: 89460504-1aaf-4412-aa7b-fa5a4b39ada3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 272fd65eb0fda3a087853ca3a5793618d356fc7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32ced33ad4fd0cd7be99502594720949c4e08310
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdatasourceopenwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
 此方法通过对话框提示用户，然后使用由用户指定的文件打开数据源。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT OpenWithPromptFileName(   
-   HWND hWnd = GetActiveWindow(   
-   ),   
+```cpp
+HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),   
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,   
-   LPCOLESTR szInitialDirectory = NULL    
-) throw( );  
+   LPCOLESTR szInitialDirectory = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

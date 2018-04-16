@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _putw
+ms.topic: reference
+apiname:
+- _putw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bca1143f123b0092266f7a314ac0c863779950ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d4c72da2b3002008d4f81fdac87f0a300dcdbc1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putw"></a>_putw
 将一个整数写入到流中。  
@@ -70,9 +74,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  `_putw` 函数将 `int` 类型的二进制值写入*流*的当前位置。 `_putw` 不影响该流中的项对齐，也不采用任何特定的对齐方式。 `_putw` 主要用于与以前的库的兼容性。 `_putw` 可能会出现可移植性问题，因为在不同的系统中，`int` 的大小和 `int` 中的字节顺序有所不同。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_putw`|\<stdio.h>|  
   

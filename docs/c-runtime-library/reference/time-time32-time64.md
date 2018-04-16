@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - time
 - _time64
@@ -31,7 +32,8 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f0e4cd78c6e4da47b7999e6a9dd6c95be93f557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3490c7ac1425e2ea2e76943709dbeb5d43a4e151
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="time-time32-time64"></a>time、_time32、_time64
 获取系统时间。  
@@ -80,9 +83,9 @@ __time64_t _time64(
   
  `time` 是 `_time64` 的包装器，并且默认情况下， `time_t` 等效于 `__time64_t`。 如果需要强制编译器将 `time_t` 解释为旧的 32 位 `time_t`，你可以定义 `_USE_32BIT_TIME_T`。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；64 位平台上不允许使用此宏。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`time`, `_time32`, `_time64`|C: \<time.h>、C++: \<ctime> 或 \<time.h>|  
   

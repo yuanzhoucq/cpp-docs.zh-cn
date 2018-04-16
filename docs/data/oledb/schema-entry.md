@@ -1,40 +1,41 @@
 ---
-title: "SCHEMA_ENTRY |Microsoft 文档"
+title: SCHEMA_ENTRY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SCHEMA_ENTRY
-dev_langs: C++
-helpviewer_keywords: SCHEMA_ENTRY macro
+ms.topic: reference
+f1_keywords:
+- SCHEMA_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 12a4026e94ea5fe5e310e0aeec7cdad10d33d2bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eed324c184036262093e266c8d246874cd2865a7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schemaentry"></a>SCHEMA_ENTRY
 将 GUID 与类相关联。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      SCHEMA_ENTRY(  
-   guid,  
-   rowsetClass   
-);   
+```cpp
+      SCHEMA_ENTRY(guid,  
+   rowsetClass);   
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -48,8 +49,7 @@ ms.lasthandoff: 12/21/2017
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)然后，可以查询有关的 Guid，列表映射或如果它有一个 GUID，它可以创建一个行集。 架构行集`IDBSchemaRowsetImpl`创建类似于标准`CRowsetImpl`-派生类，但它必须提供**执行**具有以下签名的方法：  
   
 ```  
-HRESULT Execute (
-    LONG* pcRowsAffected,  
+HRESULT Execute (LONG* pcRowsAffected,  
     ULONG cRestrictions,  
     const VARIANT* rgRestrictions);  
 ```  

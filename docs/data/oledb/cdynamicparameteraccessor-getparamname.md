@@ -1,44 +1,44 @@
 ---
-title: "Cdynamicparameteraccessor:: Getparamname |Microsoft 文档"
+title: CDynamicParameterAccessor::GetParamName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDynamicParameterAccessor::GetParamName
 - ATL.CDynamicParameterAccessor.GetParamName
 - GetParamName
 - CDynamicParameterAccessor.GetParamName
 - ATL::CDynamicParameterAccessor::GetParamName
-dev_langs: C++
-helpviewer_keywords: GetParamName method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetParamName method
 ms.assetid: 707c08ed-d3d0-4ce8-b23e-20b07202a3e2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 47b3d792761b13b6c334cb5b4b4311949c697eff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fd23af3454a50d4767ad199a0939fcada272716
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamname"></a>CDynamicParameterAccessor::GetParamName
 检索指定的参数的名称。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      LPOLESTR GetParamName(   
-   DBORDINAL nParam    
-) const throw( );  
+```cpp
+      LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

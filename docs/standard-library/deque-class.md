@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deque-class"></a>deque 类
 对线性排列中给定类型的元素进行排序，并且类似于矢量，允许快速随机访问任何元素并在容器后面高效插入和删除。 但是，和矢量不同的是，`deque` 类还支持在容器前面高效插入和删除。  
@@ -121,7 +124,7 @@ class deque
  要存储在 deque 中的元素数据类型。  
   
  `Allocator`  
- 表示所存储分配器对象的类型，该分配器对象封装有关 deque 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 **allocator\<Type>***。*  
+ 表示所存储分配器对象的类型，该分配器对象封装有关 deque 的内存分配和解除分配的详细信息。 此参数是可选的而默认值是 **分配器\<类型 > * * *。*  
   
 ## <a name="remarks"></a>备注  
  容器类型选择通常应根据应用程序所需的搜索和插入的类型。 当对任何元素的随机访问超出限制并且仅要求在序列的末尾插入或删除元素时，[矢量](../standard-library/vector-class.md)应作为用于管理序列的首选容器。 当在序列内任何位置的高效插入和删除（采用常量时间）超出限制时，list 容器的性能会很优异。 序列中间的此类操作需要元素副本和与序列中的元素数量成正比的分配（线性时间）。  
@@ -204,7 +207,7 @@ class deque
 |[operator[]](#op_at)|返回对指定位置的 `deque` 元素的引用。|  
 |[operator=](#op_eq)|将 `deque` 的元素替换为另一个 `deque` 的副本。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：\<deque>  
   
 ##  <a name="allocator_type"></a>  deque::allocator_type  
@@ -2266,7 +2269,7 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

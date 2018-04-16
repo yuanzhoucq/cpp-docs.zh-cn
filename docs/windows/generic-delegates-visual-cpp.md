@@ -1,29 +1,31 @@
 ---
-title: "泛型委托 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 泛型委托 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2511034af4399c983b8114ec01a86e3290bd2a8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5e1635afb2c11dbb7835244eae776fabdaea9c0
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="generic-delegates-visual-c"></a>泛型委托 (Visual C++)
 你可以使用具有委托的泛型类型参数。 有关委托的更多信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
@@ -32,17 +34,17 @@ ms.lasthandoff: 12/21/2017
   
 ```  
 [attributes]   
-generic < [class | typename] type-parameter-identifiers >  
+generic < [class | typename] type-parameter-identifiers>  
 [type-parameter-constraints-clauses]  
 [accessibility-modifiers] delegate result-type identifier   
 ([formal-parameters]);  
 ```  
   
 #### <a name="parameters"></a>参数  
- `attributes`（可选）  
+ `attributes` （可选）  
  附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
- *类型的参数的标识符*  
+ *type-parameter-identifier(s)*  
  类型参数标识符的逗号分隔列表。  
   
  `type-parameter-constraints-clauses`  
@@ -51,7 +53,7 @@ generic < [class | typename] type-parameter-identifiers >
  *可访问性修饰符*（可选）  
  可访问性修饰符 (例如**公共**， `private`)。  
   
- *结果类型*  
+ *result-type*  
  委托的返回类型。  
   
  *identifier*  
@@ -66,7 +68,7 @@ generic < [class | typename] type-parameter-identifiers >
 ```  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
-generic < class ItemType>  
+generic <class ItemType>  
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
@@ -82,10 +84,10 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
-generic < class ItemType>  
+generic <class ItemType>  
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
   
-generic < class ItemType>  
+generic <class ItemType>  
 ref struct MyGenClass {  
    ItemType MyMethod(ItemType i, ItemType % j) {  
       return ItemType();  
@@ -93,7 +95,7 @@ ref struct MyGenClass {
 };  
   
 ref struct MyClass {  
-   generic < class ItemType>  
+   generic <class ItemType>  
    static ItemType MyStaticMethod(ItemType i, ItemType % j) {  
       return ItemType();  
    }  
@@ -169,5 +171,5 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

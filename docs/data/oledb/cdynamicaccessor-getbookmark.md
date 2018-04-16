@@ -1,44 +1,44 @@
 ---
-title: "Cdynamicaccessor:: Getbookmark |Microsoft 文档"
+title: CDynamicAccessor::GetBookmark | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDynamicAccessor.GetBookmark
 - GetBookmark
 - CDynamicAccessor::GetBookmark
 - ATL.CDynamicAccessor.GetBookmark
 - ATL::CDynamicAccessor::GetBookmark
-dev_langs: C++
-helpviewer_keywords: GetBookmark method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetBookmark method
 ms.assetid: 6d0a2970-0c62-4a34-bac7-149d8e990f81
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e090df30db8abfcd2aee4dc87543be72183f7960
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59701a345fabc9eb02c510d018772bb52ae4dcda
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicaccessorgetbookmark"></a>CDynamicAccessor::GetBookmark
 检索当前行的书签。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT GetBookmark(   
-   CBookmark< >* pBookmark    
-) const throw( );  
+```cpp
+HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

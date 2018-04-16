@@ -1,17 +1,21 @@
 ---
-title: "运算符&gt;= (set) (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 运算符&gt;= (set) (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::set::operator>=
-dev_langs: C++
-helpviewer_keywords: operator>= member [STL/CLR]
+f1_keywords:
+- cliext::set::operator>=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator>= member [STL/CLR]
 ms.assetid: d08a0fc9-02e4-4e05-b469-bac325c38370
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen

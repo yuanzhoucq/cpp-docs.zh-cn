@@ -1,57 +1,56 @@
 ---
-title: "Irowsetchangeimpl:: Flushdata |Microsoft 文档"
+title: IRowsetChangeImpl::FlushData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetChangeImpl::FlushData
 - IRowsetChangeImpl.FlushData
 - FlushData
-dev_langs: C++
-helpviewer_keywords: FlushData method
+dev_langs:
+- C++
+helpviewer_keywords:
+- FlushData method
 ms.assetid: fd4bc73b-bc25-4aab-90d5-0bed92670c88
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 565b971b53ddb0a50b276d76aaaf62e9f7fa39f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e55bc7d027fb282f2d079ff71c25f4134708e173
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetchangeimplflushdata"></a>IRowsetChangeImpl::FlushData
 通过提供商联系以将数据提交到其存储的替代。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```
+HRESULT FlushData(HROW hRowToFlush,  
+   HACCESSOR hAccessorToFlush);  ```  
   
-      HRESULT FlushData(  
-   HROW hRowToFlush,  
-   HACCESSOR hAccessorToFlush   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
+#### Parameters  
  *hRowToFlush*  
- [in]数据行的句柄。 此行的类型确定从*RowClass*模板自变量的`IRowsetImpl`类 (`CSimpleRow`默认情况下)。  
+ [in] Handle to the rows for the data. The type of this row is determined from the *RowClass* template argument of the `IRowsetImpl` class (`CSimpleRow` by default).  
   
  *hAccessorToFlush*  
- [in]访问器，它包含绑定信息和中的类型信息的句柄其**PROVIDER_MAP** (请参阅[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md))。  
+ [in] Handle to the accessor, which contains binding information and type information in its **PROVIDER_MAP** (see [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).  
   
-## <a name="return-value"></a>返回值  
- 一个标准 `HRESULT`。  
+## Return Value  
+ A standard `HRESULT`.  
   
-## <a name="requirements"></a>惠?  
- **标头：** atldb.h  
+## Requirements  
+ **Header:** atldb.h  
   
-## <a name="see-also"></a>请参阅  
- [IRowsetChangeImpl 类](../../data/oledb/irowsetchangeimpl-class.md)
+## See Also  
+ [IRowsetChangeImpl Class](../../data/oledb/irowsetchangeimpl-class.md)

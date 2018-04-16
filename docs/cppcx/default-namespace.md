@@ -7,18 +7,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a9d538e42d4173008343df186bd2579dc088fb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96b4fc906048d8f8e02d5359526e095c0f12118d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="default-namespace"></a>default 命名空间
 `default`命名空间限定范围的内置类型的支持 C + + /cli CX。  
@@ -41,7 +43,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>内置类型  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |`char16`|表示 Unicode (UTF-16) 码位的 16 位非数字值。|  
 |`float32`|32 位 IEEE 754 浮点数。|  
@@ -55,7 +57,7 @@ namespace default;
 |`uint64`|64 位无符号整数。|  
 |`uint8`|8 位无符号数值。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** vccorlib.h  
   
 ## <a name="see-also"></a>请参阅  

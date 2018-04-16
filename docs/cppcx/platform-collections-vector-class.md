@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -117,7 +120,7 @@ template <typename T, typename E>
 
 **命名空间：** Platform::Collections
 
-## <a name="append"></a>Vector:: append 方法
+## <a name="append"></a>  Vector:: append 方法
 
 在当前向量中的最后一项后插入指定项。
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 要插入到向量中的项。 一种*项*由定义*T*类型名称。
 
-## <a name="clear"></a>Vector:: clear 方法
+## <a name="clear"></a>  Vector:: clear 方法
 
 删除当前向量中的所有元素。
 
@@ -142,7 +145,7 @@ virtual void Append(T item);
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector:: first 方法
+## <a name="first"></a>  Vector:: first 方法
 
 返回指向该向量中第一个元素的迭代器。
 
@@ -162,7 +165,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 当你需要一对要传递到 STL 函数的迭代器时，使用自由格式函数[Windows::Foundation::Collections:: 开始](../cppcx/begin-function.md)和[Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector:: getat 方法
+## <a name="getat"></a>  Vector:: getat 方法
 
 检索由指定索引标识的当前向量的元素。
 
@@ -181,7 +184,7 @@ virtual T GetAt(unsigned int index);
 
 指定的元素*索引*参数。 元素类型由*T*类型名称。
 
-## <a name="getmany"></a>Vector:: getmany 方法
+## <a name="getmany"></a>  Vector:: getmany 方法
 
 检索当前向量中的项序列，从指定的索引开始，并将它们复制到调用方分配的数组中。
 
@@ -209,7 +212,7 @@ virtual unsigned int GetMany(
 
 此函数并非旨在由客户端代码直接使用。 在内部使用它[to_vector Function](../cppcx/to-vector-function.md)若要启用的 platform 实例到 std:: vector 实例的高效转换。
 
-## <a name="getview"></a>Vector:: getview 方法
+## <a name="getview"></a>  Vector:: getview 方法
 
 返回向量的只读视图，即 IVectorView。
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 一个 IVectorView 对象。
 
-## <a name="indexof"></a>Vector:: indexof 方法
+## <a name="indexof"></a>  Vector:: indexof 方法
 
 在当前向量中搜索指定项，如果找到，则返回该项的索引。
 
@@ -235,7 +238,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>参数
 
-*值*  
+*value*  
 要查找的项。
 
 *index*  
@@ -251,7 +254,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 IndexOf 使用 std::find_if 查找该项目。 因此，自定义元素类型应该重载 == 和 != 运算符以支持 find_if 所需的相等性比较。
 
-##  <a name="insertat"></a>Vector:: insertat 方法
+##  <a name="insertat"></a>  Vector:: insertat 方法
 
 在当前 Vector 中由指定的索引标识的元素后面插入指定的项。
 
@@ -269,7 +272,7 @@ virtual void InsertAt(unsigned int index, T item)
 *item*  
 要在指定的元素后插入到向量中的项*索引*。 一种*项*由定义*T*类型名称。
 
-## <a name="removeat"></a>Vector:: removeat 方法
+## <a name="removeat"></a>  Vector:: removeat 方法
 
 从当前向量删除指定索引标识的元素。
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-## <a name="removeatend"></a>Vector:: removeatend 方法
+## <a name="removeatend"></a>  Vector:: removeatend 方法
 
 删除当前矢量末尾的元素。
 
@@ -294,7 +297,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector:: replaceall 方法
+## <a name="replaceall"></a>  Vector:: replaceall 方法
 
 删除当前向量中的元素，然后插入来自指定数组的元素。
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 其类型定义的对象的数组*T*类型名称。
 
-## <a name="setat"></a>Vector:: setat 方法
+## <a name="setat"></a>  Vector:: setat 方法
 
 将指定值分配给当前向量中指定索引标识的元素。
 
@@ -327,7 +330,7 @@ virtual void SetAt(unsigned int index, T item);
 *item*  
 要分配给指定元素的值。 一种*项*由定义*T*类型名称。
 
-## <a name="size"></a>Vector:: size 方法
+## <a name="size"></a>  Vector:: size 方法
 
 返回当前向量对象中的元素数目。
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 当前 Vector 中的元素数目。
 
-## <a name="ctor"></a>Vector:: vector 构造函数
+## <a name="ctor"></a>  Vector:: vector 构造函数
 
 初始化 Vector 类的新实例。
 
@@ -384,7 +387,7 @@ A [std:: initializer_list](../standard-library/initializer-list-class.md)类型�
 *size*  
 向量中元素的数目。
 
-*值*  
+*value*  
 用于初始化当前向量中每个元素的值。
 
 *v*  

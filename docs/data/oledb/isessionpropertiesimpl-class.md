@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: ISessionPropertiesImpl
-dev_langs: C++
-helpviewer_keywords: ISessionPropertiesImpl class
+ms.topic: reference
+f1_keywords:
+- ISessionPropertiesImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISessionPropertiesImpl class
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ff8eda4d593ff0c6064313a7be243ec498b15c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd7dde152b2ca122deefd3b7e8d8de24a254519a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 提供的实现[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)接口。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE ISessionPropertiesImpl :  
    public ISessionProperties,    

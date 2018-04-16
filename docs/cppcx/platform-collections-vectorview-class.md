@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
 - COLLECTION/Platform::Collections::VectorView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::GetMany
 - COLLECTION/Platform::Collections::VectorView::IndexOf
 - COLLECTION/Platform::Collections::VectorView::Size
-dev_langs: C++
-helpviewer_keywords: VectorView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 表示可按照索引单独访问的对象的顺序集合的只读视图。 集合中每个对象的类型由模板参数指定。  
@@ -74,7 +77,7 @@ template <typename T, typename E>
   
  **命名空间：** Platform::Collections  
 
-## <a name="first"></a>Vectorview:: First 方法
+## <a name="first"></a>  Vectorview:: First 方法
 返回指定 VectorView 中的第一个元素的迭代器。  
   
 ### <a name="syntax"></a>语法  
@@ -93,7 +96,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
   
 
 
-## <a name="getat"></a>Vectorview:: Getat 方法
+## <a name="getat"></a>  Vectorview:: Getat 方法
 检索由指定的索引表示的当前 VectorView 的元素。  
   
 ### <a name="syntax"></a>语法  
@@ -114,7 +117,7 @@ T GetAt(
   
 
 
-## <a name="getmany"></a>Vectorview:: Getmany 方法
+## <a name="getmany"></a>  Vectorview:: Getmany 方法
 从当前 VectorView 检索项序列，从指定索引处开始。  
   
 ### <a name="syntax"></a>语法  
@@ -139,7 +142,7 @@ virtual unsigned int GetMany(
   
 
 
-## <a name="indexof"></a>Vectorview:: Indexof 方法
+## <a name="indexof"></a>  Vectorview:: Indexof 方法
 在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。  
   
 ### <a name="syntax"></a>语法  
@@ -166,7 +169,7 @@ virtual bool IndexOf(
   
 
 
-## <a name="size"></a>Vectorview:: Size 方法
+## <a name="size"></a>  Vectorview:: Size 方法
 返回当前 VectorView 对象中的元素数目。  
   
 ### <a name="syntax"></a>语法  
@@ -181,7 +184,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="ctor"></a>Vectorview:: Vectorview 构造函数
+## <a name="ctor"></a>  Vectorview:: Vectorview 构造函数
 初始化 VectorView 类的新实例。  
   
 ### <a name="syntax"></a>语法  

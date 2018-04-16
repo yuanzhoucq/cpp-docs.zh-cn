@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - locale/std::collate
 - locale/std::collate::char_type
@@ -17,7 +18,8 @@ f1_keywords:
 - locale/std::collate::do_transform
 - locale/std::collate::hash
 - locale/std::collate::transform
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::collate [C++]
 - std::collate [C++], char_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9cce595095600769743a1320d75b00ec1109275c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 015bfd9a97299bc8fde0817aedb0b686e0dec72a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="collate-class"></a>collate 类
 一种模板类，用于描述一个对象来充当区域设置 facet，以控制字符串中字符的排序和分组、这些字符之间的比较以及字符串的哈希处理。  
@@ -124,7 +127,7 @@ protected:
   
 -   1：必须手动管理对象的生存期。  
   
--   \>1： 未定义这些值。  
+-   \> 1： 未定义这些值。  
   
  构造函数初始化与与其基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。  
   

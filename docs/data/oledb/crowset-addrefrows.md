@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Addrefrows |Microsoft 文档"
+title: CRowset::AddRefRows | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CRowset<TAccessor>.AddRefRows
 - CRowset.AddRefRows
@@ -17,30 +18,31 @@ f1_keywords:
 - ATL::CRowset::AddRefRows
 - ATL.CRowset<TAccessor>.AddRefRows
 - ATL::CRowset<TAccessor>::AddRefRows
-dev_langs: C++
-helpviewer_keywords: AddRefRows method
+dev_langs:
+- C++
+helpviewer_keywords:
+- AddRefRows method
 ms.assetid: 590b5a24-870f-4c42-b0c8-28491f368a82
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 92ef64ebb9cd9891ad08ef2b2ad3e68b158be38c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fed7e6981f72c9698f38eb91022619b9ad1edfb9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetaddrefrows"></a>CRowset::AddRefRows
 调用[irowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx)以增加 （1) 的引用计数与当前行句柄。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-HRESULT AddRefRows( ) throw( );  
+```cpp
+HRESULT AddRefRows() throw();  
   
 ```  
   

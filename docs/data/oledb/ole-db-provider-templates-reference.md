@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供程序模板参考
 可以为以下类别分组的类和接口的 OLE DB 提供程序模板。 参考材料还包含下列相关信息[OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -42,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  提供标准 OLE DB 行集实现，而无需许多实现接口的多个继承。 必须为其提供实现的唯一方法**执行**。  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- 提供的默认实现中使用行句柄，`IRowsetImpl`类。 在逻辑上是结果行的唯一标记的行句柄。 `IRowsetImpl`创建一个新`CSimpleRow`为每个行中请求`IRowsetImpl::GetNextRows`。  
+ 提供的默认实现中使用行句柄，`IRowsetImpl`类。 在逻辑上是结果行的唯一标记的行句柄。 `IRowsetImpl` 创建一个新`CSimpleRow`为每个行中请求`IRowsetImpl::GetNextRows`。  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB 需要提供程序实现**HACCESSOR**，即指向数组的标记**DBBINDING**结构。 提供**HACCESSOR**是的地址的 s **BindType**结构。 行集和命令上为强制参数。  
@@ -63,7 +67,7 @@ ms.lasthandoff: 12/21/2017
  实现 OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)接口，可更新的现有行，删除行，并将插入新行中的列的值。  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和替代[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl`执行与相同的功能`IObjectWithSite`但使 OLE DB 属性还**DBPROPCANSCROLLBACKWARDS**和**DBPROPCANFETCHBACKWARDS**。  
+ 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和替代[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl` 执行与相同的功能`IObjectWithSite`但使 OLE DB 属性还**DBPROPCANSCROLLBACKWARDS**和**DBPROPCANFETCHBACKWARDS**。  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  实现**IRowsetIdentity**接口，允许你进行比较，无论两行数据是否相同。  
@@ -103,7 +107,7 @@ ms.lasthandoff: 12/21/2017
  创建和删除与使用者的连接。 在数据源对象和枚举器上的可选接口上的必需接口。  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开**IDBInitialize**，它必须公开`IDBProperties`（对数据源的属性）。  
+ `IDBProperties` 是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开**IDBInitialize**，它必须公开`IDBProperties`（对数据源的属性）。  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  获取与数据源对象的接口指针。 对该会话的必需接口。  

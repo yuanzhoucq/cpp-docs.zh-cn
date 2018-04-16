@@ -1,44 +1,44 @@
 ---
-title: "Irowsetimpl:: Setdbstatus |Microsoft 文档"
+title: IRowsetImpl::SetDBStatus | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetImpl.SetDBStatus
 - IRowsetImpl::SetDBStatus
 - SetDBStatus
-dev_langs: C++
-helpviewer_keywords: SetDBStatus method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetDBStatus method
 ms.assetid: b73f526a-4fc6-4adb-9611-c3cca2cddb23
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 285f9004c9971d18646626b7410dcb52485227c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc7895e7f52022905b23d71ef670eb19f2e836e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimplsetdbstatus"></a>IRowsetImpl::SetDBStatus
 集`DBSTATUS`指定字段的状态标志。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      virtual HRESULT SetDBStatus(  
-   DBSTATUS* statusFlags,  
+```cpp
+      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
-   ATLCOLUMNINFO* columnInfo   
-);  
+   ATLCOLUMNINFO* columnInfo);  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sopen
 - _wsopen
@@ -28,7 +29,8 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6429eefe8c79337086fb8ec94215f171ae4b0bb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sopen-wsopen"></a>_sopen、_wsopen
 打开文件以供共享。 提供这些函数的更多安全版本；请参阅 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -156,8 +159,7 @@ int _wsopen(
  打开文件并将其长度截断为零；该文件必须具有写入权限。 无法使用 `_O_RDONLY` 进行指定。 结合使用 `_O_TRUNC` 和 `_O_CREAT` 来打开现有文件或创建文件。  
   
 > [!NOTE]
->  
-          `_O_TRUNC` 标志会损坏指定文件的内容。  
+>  `_O_TRUNC` 标志会损坏指定文件的内容。  
   
  `_O_WRONLY`  
  打开文件以供只写。 无法使用 `_O_RDONLY` 或 `_O_RDWR` 进行指定。  
@@ -191,8 +193,7 @@ int _wsopen(
  `_SH_DENYNO`  
  允许读取和写入访问。  
   
- 仅在指定 `pmode` 时，需要使用 `_O_CREAT` 参数。 如果该文件不存在，则 `pmode` 将指定在首次关闭新文件时设置的该文件的权限设置。 否则，将忽略 `pmode`。 `pmode` 是一个整数表达式，它包含在 \<sys\stat.h> 中定义的清单常量 `_S_IWRITE` 和 `_S_IREAD` 中的一个或两个。 当给定这两个常量时，将使用按位“或”运算符合并它们。 
-          `pmode` 的含义如下。  
+ 仅在指定 `pmode` 时，需要使用 `_O_CREAT` 参数。 如果该文件不存在，则 `pmode` 将指定在首次关闭新文件时设置的该文件的权限设置。 否则，将忽略 `pmode`。 `pmode` 是一个整数表达式，它包含在 \<sys\stat.h> 中定义的清单常量 `_S_IWRITE` 和 `_S_IREAD` 中的一个或两个。 当给定这两个常量时，将使用按位“或”运算符合并它们。 `pmode` 的含义如下。  
   
  `_S_IWRITE`  
  允许写入。  
@@ -207,9 +208,9 @@ int _wsopen(
   
  在设置这些权限之前，`_sopen` 会将当前文件权限掩码应用到 `pmode`。 （请参阅 [_umask](../../c-runtime-library/reference/umask.md)。）  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_sopen`|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|  
 |`_wsopen`|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|  

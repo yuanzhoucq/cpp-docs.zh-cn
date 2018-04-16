@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Setdata |Microsoft 文档"
+title: CRowset::SetData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>.SetData
 - SetData
@@ -17,33 +18,34 @@ f1_keywords:
 - CRowset.SetData
 - CRowset<TAccessor>::SetData
 - ATL::CRowset<TAccessor>::SetData
-dev_langs: C++
-helpviewer_keywords: SetData method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetData method
 ms.assetid: 68125142-8510-4132-9393-e39efd39c784
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0aafc521e130a7f737083390fe5f825c88aa5844
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d9f42397ffaa186bfd96db454251c687b634d69
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetsetdata"></a>CRowset::SetData
 设置行的一个或多个列中的数据值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT SetData( ) const throw( );   
-HRESULT SetData(  
-   int nAccessor   
-) const throw( );  
+```cpp
+HRESULT SetData() const throw();   
+
+
+HRESULT SetData(int nAccessor) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

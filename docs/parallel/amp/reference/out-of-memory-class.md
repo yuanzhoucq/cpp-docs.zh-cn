@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - out_of_memory
 - AMPRT/out_of_memory
 - AMPRT/Concurrency::out_of_memory::out_of_memory
-dev_langs: C++
-helpviewer_keywords: out_of_memory class
+dev_langs:
+- C++
+helpviewer_keywords:
+- out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6eb7b4e46d0d91779bf7c4c9047cad2f49100cd1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88f143493aec70d6176436e6acaee7944fa142ad
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="outofmemory-class"></a>out_of_memory 类
 一种方法将因系统或设备内存不足而失败时引发的异常。  
@@ -53,7 +57,7 @@ class out_of_memory : public runtime_exception;
  **标头：** amprt.h  
   
  **命名空间：** 并发  
-## <a name="ctor"></a>out_of_memory 
+## <a name="ctor"></a> out_of_memory 
 
  初始化类的新实例。  
   

@@ -4,9 +4,8 @@ ms.custom:
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.reviewer: 
-s.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::begin
 - VCCORLIB/Platform::WriteOnlyArray::Data
@@ -14,19 +13,22 @@ f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::FastPass
 - VCCORLIB/Platform::WriteOnlyArray::Length
 - VCCORLIB/Platform::WriteOnlyArray::set
-dev_langs: C++
-helpviewer_keywords: Platform::WriteOnlyArray Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d63072e3190929f5191f3d515b73dbd6a6a75040
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 081dc6489b6cd16ef9065ce8ec332c7593105617
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 表示一个一维数组，当调用方为要填充的方法传递数组时，可将此一维数组用作输入参数。  
@@ -131,7 +133,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>Writeonlyarray:: Get 方法
+## <a name="get"></a>  Writeonlyarray:: Get 方法
 返回指定索引处的元素。  
   
 ### <a name="syntax"></a>语法  

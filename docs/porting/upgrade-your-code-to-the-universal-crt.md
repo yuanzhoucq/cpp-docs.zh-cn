@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -42,7 +43,7 @@ C 和 C++ 编译器特定的运行时支持库  **vcruntime** ，包含支持程
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和重新分发
   
-因为 UCRT 现在是Microsoft Windows 操作系统组件，它作为操作系统的一部分包含在 Windows 10 中，可通过较旧操作系统（Windows Vista 到 Windows 8.1）的 Windows 更新获得。 有一个可重新分发的版本适用于 Windows XP。 作为操作系统组件，UCRT 更新和服务由 Windows 更新进行管理（独立于 Visual Studio 和 Visual C++ 编译器版本）。 由于 UCRT 是 Windows 组件，出于安全性、易于更新以及更小的映像大小的考虑，强烈建议为应用集中部署 UCRT。  
+因为 UCRT 现在是Microsoft Windows 操作系统组件，它作为操作系统的一部分包含在 Windows 10 中，可通过较旧操作系统（Windows Vista 到 Windows 8.1）的 Windows 更新获得。 有一个可重新分发的版本适用于 Windows XP。 作为操作系统组件，UCRT 更新和服务由 Windows 更新进行管理（独立于 Visual Studio 和 Microsoft C++ 编译器版本）。 由于 UCRT 是 Windows 组件，出于安全性、易于更新以及更小的映像大小的考虑，强烈建议为应用集中部署 UCRT。  
   
 可以在 Visual Studio 2015 或 Visual Studio 2017 支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 包重新分发它，以便支持 Windows 10 以外的 Windows 版本。 Vcredist 包包含 UCRT 组件，并自动将这些组件安装在默认情况下不安装它们的 Windows 操作系统上。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
   

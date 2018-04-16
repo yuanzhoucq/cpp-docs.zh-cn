@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _futime64
 - _futime32
@@ -29,7 +30,8 @@ f1_keywords:
 - _futime
 - futime64
 - _futime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _futime function
 - futime32 function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e87183a8df076da8443ee4547825948fb5a2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8caa47cd82f61c46ee10f03987bac9735ce506cc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
 设置打开的文件的修改时间。  
@@ -85,7 +88,7 @@ int _futime64(
   
  `_futime64` 使用 `__utimbuf64` 结构，可以读取和修改日期截至 3000 年 12 月 31 日 23:59:59 UTC 的文件；如果文件日期晚于 2038 年 1 月 18 日 23:59:59 UTC，则对 `_futime32` 的调用失败。 1970 年 1 月 1 日午夜是这些函数的日期范围下限。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|---------------------|  

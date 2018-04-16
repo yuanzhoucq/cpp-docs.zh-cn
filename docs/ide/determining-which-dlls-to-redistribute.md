@@ -1,13 +1,15 @@
 ---
 title: "确定哪些 Dll 重新分发的 |Microsoft 文档"
 ms.custom: 
-ms.date: 09/21/2017
+ms.date: 03/13/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>确定要重新分发的 DLL
 
@@ -50,18 +53,18 @@ ms.lasthandoff: 01/03/2018
 
 |Visual C++ 库|描述|适用对象|
 |--------------------------|-----------------|----------------|
-|vcruntime*版本*.dll|对于本机代码的运行时库。|使用常规 C 和 c + + 语言启动和终止服务应用程序。|
-|vccorlib*版本*.dll|托管代码的运行时库。|使用托管代码的 c + + 语言服务应用程序。|
-|msvcp*版本*.dll|对于本机代码的 c + + 标准库。|应用程序使用[c + + 标准库](../standard-library/cpp-standard-library-reference.md)。|
-|concrt*版本*.dll|对于本机代码的并发运行时库。|应用程序使用[并发运行时](../parallel/concrt/concurrency-runtime.md)。|
-|mfc*版本*.dll|Microsoft 基础类 (MFC) 库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)。|
-|mfc*版本**语言*.dll|Microsoft 基础类 (MFC) 库资源。|对 MFC 使用特定语言资源的应用程序。|
-|mfc*版本*u.dll|具有 Unicode 支持的 MFC 库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)并需要 Unicode 支持。|
+|vcruntime*version*.dll|对于本机代码的运行时库。|使用常规 C 和 c + + 语言启动和终止服务应用程序。|
+|vccorlib*version*.dll|托管代码的运行时库。|使用托管代码的 c + + 语言服务应用程序。|
+|msvcp*版本*.dll 和 msvcp*版本*_*dotnumber*.dll|对于本机代码的 c + + 标准库。|应用程序使用[c + + 标准库](../standard-library/cpp-standard-library-reference.md)。|
+|concrt*version*.dll|对于本机代码的并发运行时库。|应用程序使用[并发运行时](../parallel/concrt/concurrency-runtime.md)。|
+|mfc*version*.dll|Microsoft 基础类 (MFC) 库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)。|
+|mfc*version* *language*.dll|Microsoft 基础类 (MFC) 库资源。|对 MFC 使用特定语言资源的应用程序。|
+|mfc*version*u.dll|具有 Unicode 支持的 MFC 库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)并需要 Unicode 支持。|
 |mfcmifc80.dll|MFC 托管接口库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)与[Windows 窗体控件](/dotnet/framework/winforms/controls/index)。|
-|mfcm*版本*.dll|MFC 托管库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)与[Windows 窗体控件](/dotnet/framework/winforms/controls/index)。|
-|mfcm*版本*u.dll|具有 Unicode 支持的 MFC 托管库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)与[Windows 窗体控件](/dotnet/framework/winforms/controls/index)并需要 Unicode 支持。|
-|vcamp*版本*.dll|面向本机代码的 AMP 库。|应用程序使用[c + + AMP 库](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)代码。|
-|vcomp*版本*.dll|面向本机代码的 OpenMP 库。|应用程序使用[c + + OpenMP 库](../parallel/openmp/openmp-in-visual-cpp.md)代码。|
+|mfcm*version*.dll|MFC 托管库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)与[Windows 窗体控件](/dotnet/framework/winforms/controls/index)。|
+|mfcm*version*u.dll|具有 Unicode 支持的 MFC 托管库。|应用程序使用[MFC 库](../mfc/mfc-desktop-applications.md)与[Windows 窗体控件](/dotnet/framework/winforms/controls/index)并需要 Unicode 支持。|
+|vcamp*version*.dll|面向本机代码的 AMP 库。|应用程序使用[c + + AMP 库](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)代码。|
+|vcomp*version*.dll|面向本机代码的 OpenMP 库。|应用程序使用[c + + OpenMP 库](../parallel/openmp/openmp-in-visual-cpp.md)代码。|
 
 > [!NOTE]
 > 不再需要将活动模板库重新发布为单独的 DLL。 其功能已移至标头和静态库。
@@ -70,7 +73,7 @@ ms.lasthandoff: 01/03/2018
 
 通常情况下，无需重新发布系统 DLL，因为它们是操作系统的一部分。 但可能存在例外，例如，当应用程序将在几个版本的 Microsoft 操作系统上运行时。 在这种情况下，请务必阅读相应的许可条款。 此外，请尝试通过 Microsoft 提供的 Windows 更新、Service Pack 或使用可再发行组件包来升级系统 DLL。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [选择部署方法](../ide/choosing-a-deployment-method.md)
 

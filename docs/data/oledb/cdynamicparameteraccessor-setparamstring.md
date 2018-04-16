@@ -1,51 +1,48 @@
 ---
-title: "Cdynamicparameteraccessor:: Setparamstring |Microsoft 文档"
+title: CDynamicParameterAccessor::SetParamString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDynamicParameterAccessor.SetParamString
 - ATL::CDynamicParameterAccessor::SetParamString
 - SetParamString
 - CDynamicParameterAccessor::SetParamString
 - CDynamicParameterAccessor.SetParamString
-dev_langs: C++
-helpviewer_keywords: SetParamString method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParamString method
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75d6e9887b609349a092bb67e55508ca1429387b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11a9436c2e42c9c5f08533f7bfae45e8945575d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessorsetparamstring"></a>CDynamicParameterAccessor::SetParamString
 设置存储在缓冲区中的指定参数的字符串数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      bool SetParamString(   
-   DBORDINAL nParam,   
-   const CHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
-) throw( );  
-bool SetParamString(   
-   DBORDINAL nParam,   
-   const WCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
-) throw( );  
+```
+bool SetParamString(DBORDINAL nParam,   
+   constCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,   
+   constWCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -61,7 +58,7 @@ bool SetParamString(
 ## <a name="remarks"></a>备注  
  返回**true**成功或**false**失败。  
   
- `SetParamString`如果你尝试设置大于为指定的最大大小的字符串将失败`pString`。  
+ `SetParamString` 如果你尝试设置大于为指定的最大大小的字符串将失败`pString`。  
   
  使用`SetParamString`将字符串参数数据设置缓冲区中。 使用[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)将非字符串参数数据设置缓冲区中。  
   

@@ -8,8 +8,9 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: feclearexcept
+ms.topic: reference
+apiname:
+- feclearexcept
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,19 +27,22 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs: C++
-helpviewer_keywords: feclearexcept function
+dev_langs:
+- C++
+helpviewer_keywords:
+- feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 327c2b70a1c5afd26953f830217d0a9c05e4d4e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 661e93b181005acbd822fbb3ea2a2f970bbedf3d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="feclearexcept"></a>feclearexcept
 尝试清除由参数指定的浮点异常标记。  
@@ -72,7 +76,7 @@ int feclearexcept(
   
  `excepts` 参数可能为零，或为一个或多个所支持的异常宏的按位 OR。 任何其他参数值的结果均未定义。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  

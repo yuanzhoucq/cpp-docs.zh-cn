@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d938582aad6972573e0d1fc6bddd801ef03307f3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
@@ -372,7 +375,7 @@ Microsoft Visual c + + 支持这些其他的预定义的宏。
 
 - **&#95;MSC &#95;VER**定义为整数文本进行编码主版本号和次元素数的编译器的版本号。 主版本号是句点分隔的版本号的第一个元素和次版本号是第二个元素。 例如，如果 Visual c + + 编译器的版本号为 17.00.51106.1， **&#95;MSC &#95;VER**宏计算结果为 1700年。 输入**cl /？** 在使用命令行来查看编译器的版本号。 始终定义此宏。
 
-- **&#95;MSVC &#95;LANG**定义为文本一个整数，指定由编译器针对 c + + 语言标准。 如果宏时编译为 c + +，为整数型值 201402 [/std:c + + 14](../build/reference/std-specify-language-standard-version.md)设置编译器选项，或者默认情况下; 它设置为 201703 如果[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)设置编译器选项; 并且设置为更高版本，未指定值时[/std:c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否则，该宏是不确定的。 **&#95;MSVC &#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是 Visual Studio 2015 Update 3 中的开始提供。
+- **&#95;MSVC &#95;LANG**定义为文本一个整数，指定由编译器针对 c + + 语言标准。 如果宏时编译为 c + +，为整数型值 201402 L [/std:c + + 14](../build/reference/std-specify-language-standard-version.md)设置编译器选项，或者默认情况下; 如果它就设置于 201703 机械[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)设置编译器选项; 并且设置为更高版本，未指定值时[/std:c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否则，该宏是不确定的。 **&#95;MSVC &#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是 Visual Studio 2015 Update 3 中的开始提供。
 
 - **&#95; &#95;MSVC &#95;运行时 （&#95;检查**定义为 1 时一个的[/RTC](../build/reference/rtc-run-time-error-checks.md)设置编译器选项。 否则，未定义。
 
@@ -413,6 +416,6 @@ Microsoft Visual c + + 支持这些其他的预定义的宏。
 
 ## <a name="see-also"></a>请参阅
 
-[宏 （C/c + +）](../preprocessor/macros-c-cpp.md)   
+[Macros (C/C++)](../preprocessor/macros-c-cpp.md)   
 [预处理器运算符](../preprocessor/preprocessor-operators.md)   
 [预处理器指令](../preprocessor/preprocessor-directives.md)

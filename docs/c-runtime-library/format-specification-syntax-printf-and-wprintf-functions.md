@@ -1,13 +1,15 @@
 ---
-title: "格式规范语法：printf 和 wprintf 函数 | Microsoft Docs"
-ms.custom: 
+title: 格式规范语法：printf 和 wprintf 函数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
@@ -75,14 +78,14 @@ ms.lasthandoff: 12/21/2017
 |**x**|整数|无符号十六进制整数；使用“abcdef.”|
 |**X**|整数|无符号十六进制整数；使用“ABCDEF.”|
 |**e**|浮点|有符号的值，形式为 [-]*d.dddd*__e±__*dd*[*d*]，其中 *d* 是一个十进制数，*dddd* 是一个或多个十进制数（具体取决于指定的精度），或为默认的六个数，*dd*[*d*] 是两个或三个十进制数（具体取决于[输出格式](../c-runtime-library/set-output-format.md)和指数大小）。|
-|**E**|浮点|与 **e** 格式相同，只不过指数由 **E** 引入，而不是由  **e**  引入。|
+|**E**|浮点|与 **e** 格式相同，只不过指数由 **E** 引入，而不是由 **e** 引入。|
 |**f**|浮点|有符号的值，形式为 [-]*dddd*__.__*dddd*，其中 *dddd* 是一个或多个十进制数。 小数点前的数字位数取决于数字的度量值，小数点后的数字位数取决于请求的精度，或为默认的六位数。|
 |**F**|浮点|与 **f** 格式相同，只不过 infinity 和 nan 输出为大写形式。|
 |**g**|浮点|有符号的值将显示为 **f** 或 **e** 格式，取其中对于给定的值和精度更为精简一个。 仅当值的指数小于 -4 或大于等于 *precision* 参数时，才使用 **e** 格式。 截去尾随零，仅当后跟一个或多个数字时，才会显示小数点。|
 |**G**|浮点|与 **g** 格式相同，只不过指数由 **E** 引入，而不是由 **e** 引入（如果适用）。|
 |**a**|浮点|有符号的十六进制双精度浮点值，形式为 [−]0x*h.hhhh*__p±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用小写字母），*dd* 是一位或多位指数。 精度指定此点后的数字位数。|
 |**A**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用大写字母），*dd* 是一位或多位指数。 精度指定此点后的数字位数。|
-|**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 n 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|
+|**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 **n** 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|
 |**p**|指针类型|将自变量显示为十六进制数中的地址。|
 |**秒**|String|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**S**|String|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|
@@ -90,7 +93,7 @@ ms.lasthandoff: 12/21/2017
 
 从 Visual Studio 2015 开始，如果对应浮点转换说明符（**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**）的参数为无穷大、不定或 NaN，格式化的输出则符合 C99 标准。 下表列出了格式化的输出：
 
-|“值”|输出|
+|值|输出|
 |-----------|------------|
 |infinity|`inf`|
 |静默 NaN|`nan`|
@@ -101,7 +104,7 @@ ms.lasthandoff: 12/21/2017
 
 在 Visual Studio 2015 之前，CRT 使用一种不同的非标准格式作为无穷大、不定和 NaN 值的输出：
 
-|“值”|输出|
+|值|输出|
 |-----------|------------|
 |+ 无穷|`1.#INF` 随机数字|
 |- 无穷|`-1.#INF` 随机数字|
@@ -216,7 +219,7 @@ ms.lasthandoff: 12/21/2017
 > **Microsoft 专用**  
 > **I**（大写的 i）、**I32**、**I64** 和 **w** 参数大小修饰符前缀是 Microsoft 扩展，且不符合 ISO C。 h 前缀（在与 `char` 类型的数据一起使用时）和 l（小写 L）前缀（在与 `double` 类型的数据一起使用时）是 Microsoft 扩展。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  

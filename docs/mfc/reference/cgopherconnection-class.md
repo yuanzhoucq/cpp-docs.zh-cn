@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,23 +15,25 @@ f1_keywords:
 - AFXINET/CGopherConnection::CreateLocator
 - AFXINET/CGopherConnection::GetAttribute
 - AFXINET/CGopherConnection::OpenFile
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CGopherConnection [MFC], CGopherConnection
 - CGopherConnection [MFC], CreateLocator
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 类
 管理与 Gopher Internet 服务器的连接。  
@@ -76,10 +79,10 @@ class CGopherConnection : public CInternetConnection
   
  `CGopherConnection`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
  此成员函数调用以构造`CGopherConnection`对象。  
   
 ```  
@@ -110,7 +113,7 @@ CGopherConnection(
  指向包含 FTP 服务器名称的字符串的指针。  
   
  `dwContext`  
- 操作上下文标识符。 `dwContext`标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
+ 操作上下文标识符。 `dwContext` 标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
   
  `pstrUserName`  
  指向以 null 结尾的字符串，指定要登录的用户的名称。 如果**NULL**，默认值是匿名的。  
@@ -131,7 +134,7 @@ CGopherConnection(
 ### <a name="remarks"></a>备注  
  切勿创建`CGopherConnection`直接。 相反，调用[CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，这将创建`CGopherConnection`对象，并将指针返回到它。  
   
-##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
  调用此成员函数可创建 gopher 定位符以查找或识别 gopher 服务器上的文件。  
   
 ```  
@@ -156,7 +159,7 @@ static CGopherLocator CreateLocator(
  指向包含 gopher 文档或要检索的目录名称的字符串的指针。 如果`pstrDisplayString`参数是**NULL**，返回 gopher 服务器的默认目录。  
   
  `pstrSelectorString`  
- 指向要发送到 gopher 服务器以检索项的选择器字符串的指针。 `pstrSelectorString`可以是**NULL**。  
+ 指向要发送到 gopher 服务器以检索项的选择器字符串的指针。 `pstrSelectorString` 可以是**NULL**。  
   
  *dwGopherType*  
  此设置指定是否`pstrSelectorString`指一个目录或文档，以及请求是 gopher +。 请参阅结构属性[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK 中。  
@@ -178,7 +181,7 @@ static CGopherLocator CreateLocator(
   
  从 gopher 服务器检索信息，以便应用程序必须先获取 gopher 定位符。 应用程序然后必须将定位符视为不透明的令牌 （即，应用程序可以使用该定位符但不是直接操作或将其进行比较）。 通常情况下，应用程序使用该定位符以便调用[CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)成员函数以检索特定的信息。  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
  调用此成员函数以从 gopher 服务器检索有关某个项的特定属性信息。  
   
 ```  
@@ -200,7 +203,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
   
-##  <a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  调用此成员函数以打开 gopher 服务器上的文件。  
   
 ```  
@@ -230,7 +233,7 @@ CGopherFile* OpenFile(
 ### <a name="remarks"></a>备注  
  重写`dwContext`默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CGopherConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFtpConnection 类](../../mfc/reference/cftpconnection-class.md)   

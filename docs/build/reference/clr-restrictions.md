@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 请注意以下限制的使用**/clr**:  
@@ -60,11 +64,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **/ZI**  
   
--   组合`_STATIC_CPPLIB`预处理器定义 (`/D_STATIC_CPPLIB`) 和**/clr**或**/clr: pure**编译器选项不支持。 这是因为此定义会使你的应用程序与静态多线程 c + + 标准库链接，这不受支持。 有关详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)主题。  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md)不支持**/clr: safe**或**/clr: pure**。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
-  
--   纯模式下编译不支持 ATL 和 MFC 库 (**/clr: pure**)。 你可以使用**/clr: pure**使用 c + + 标准库和 CRT 如果还使用进行编译**/MD**或**/MDd**。  
+-   组合`_STATIC_CPPLIB`预处理器定义 (`/D_STATIC_CPPLIB`) 和**/clr**编译器选项不支持。 这是因为此定义会使你的应用程序与静态多线程 c + + 标准库链接，这不受支持。 有关详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)主题。  
   
 -   使用时**/Zi**与**/clr**，但会性能产生影响。 有关详细信息，请参阅[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/21/2017
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/GS](../../build/reference/gs-buffer-security-check.md)与编译时将忽略**/clr**，除非函数是在`#pragma`[非托管](../../preprocessor/managed-unmanaged.md)或如果该函数必须编译为本机，在这种情况下编译器将生成警告 C4793，默认情况下处于关闭状态。  
+-   [/GS](../../build/reference/gs-buffer-security-check.md)与编译时将忽略**/clr**，除非函数是在`#pragma`[非托管](../../preprocessor/managed-unmanaged.md)或者如果必须将函数编译为本机，在这种情况下，编译器将生成警告 C4793，默认情况下处于关闭状态。  
   
 -   请参阅[/ENTRY](../../build/reference/entry-entry-point-symbol.md)托管应用程序的函数签名要求。  
   
@@ -84,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   采用数量可变的参数 (varargs) 的函数将生成为本机函数中。 变量自变量位置中的任何托管的数据类型将封送到本机类型中。 请注意，<xref:System.String?displayProperty=fullName>类型都是实际的宽字符字符串，但它们被封送到单字节字符字符串。 因此如果 printf 说明符 %S （wchar_t *），它将封送处理为 %s 字符串相反。  
   
 -   当使用 va_arg 宏，使用编译时，你可能会收到意外的结果**/clr: pure**。  有关详细信息，请参阅[va_arg、 va_copy、 va_end、 va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  
-  
--   如果你的应用程序传递的类型自变量[va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)函数声明为采用数目可变的参数，并且你的应用程序可以编译使用**/clr: pure**，CLR 将引发<xref:System.NotSupportedException>。 如果**/clr**使用相反，受影响的函数编译为本机代码，并正确执行。 如果**/clr: safe**是使用，则会发出诊断错误。  
   
 -   你不应调用，从托管代码，检查堆栈来获取参数信息 （函数参数），则任何函数P/Invoke 层会导致该信息来进一步入堆栈。  例如，不编译代理/存根 （stub） 与**/clr**。  
   
@@ -100,8 +98,6 @@ ms.lasthandoff: 12/21/2017
     -   后面的函数`#pragma unmanaged`指令。 (请注意，逆， `#pragma managed`，也支持。)  
   
     -   包含对引用的函数对齐类型，即，声明类型使用`__declspec(align(...))`。  
-  
--   不能使用[编译器 COM 支持](../../cpp/compiler-com-support.md)类与**/clr: pure**或**/clr: safe**。  
   
 ## <a name="see-also"></a>请参阅  
  [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)

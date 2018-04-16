@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: '[]'
-dev_langs: C++
+f1_keywords:
+- '[]'
+dev_langs:
+- C++
 helpviewer_keywords:
 - operators [C++], subscript
 - postfix operators [C++]
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="subscript-operator"></a>下标运算符：
 ## <a name="syntax"></a>语法  
@@ -47,11 +51,11 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- 在前面的示例中，表达式 `nArray[2]` 与 `2[nArray]` 相同。 原因是下标表达式的结果*e1***[** *e2* **]**给定：  
+ 在前面的示例中，表达式 `nArray[2]` 与 `2[nArray]` 相同。 原因是下标表达式的结果*e1 * * * [** *e2* **]**给定：  
   
- **\*((** *e2* **)**  *+*  **(***e1***))**  
+ **\*( (** *e2* **)** *+* **(***e1***) )**  
   
- 该表达式生成的地址不是*e2*发件人地址的字节*e1*。 相反，缩放地址以生成数组中的下一个对象*e2*。 例如:  
+ 该表达式生成的地址不是*e2*发件人地址的字节*e1*。 相反，缩放地址以生成数组中的下一个对象*e2*。 例如：  
   
 ```  
 double aDbl[2];  
@@ -63,7 +67,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- 下标表达式从左至右关联。 首先计算最左侧的下标表达式 expression1[expression2]。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 间接寻址运算符 (**\***) 在完成后应用的最后一个下标的表达式将计算，除非最终指针值地址数组类型。  
+ 下标表达式从左至右关联。 最左侧的下标表达式，* expression1***[***expression2 ***]**，首先计算。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 间接寻址运算符 (**\***) 在完成后应用的最后一个下标的表达式将计算，除非最终指针值地址数组类型。  
   
  具有多个下标的表达式引用多维数组的元素。 多维数组是其元素为数组的数组。 例如，三维数组的第一个元素是一个具有两个维度的数组。 以下示例声明并初始化字符的简单二维数组：  
   
@@ -112,7 +116,7 @@ int main() {
   
  下标运算符是可交换的。 因此，表达式*数组*[*索引*] 和*数组*[*数组*] 保证都是等效只要下标未重载运算符 (请参阅[重载运算符](../cpp/operator-overloading.md))。 第一种形式是最常见的编码做法，但它们都有效。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
  [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [数组](../cpp/arrays-cpp.md)   

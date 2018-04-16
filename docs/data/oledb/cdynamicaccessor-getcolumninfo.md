@@ -1,47 +1,47 @@
 ---
-title: "Cdynamicaccessor:: Getcolumninfo |Microsoft 文档"
+title: CDynamicAccessor::GetColumnInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetColumnInfo
 - ATL.CDynamicAccessor.GetColumnInfo
 - ATL::CDynamicAccessor::GetColumnInfo
 - CDynamicAccessor.GetColumnInfo
 - CDynamicAccessor::GetColumnInfo
-dev_langs: C++
-helpviewer_keywords: GetColumnInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetColumnInfo method
 ms.assetid: 7f2102ea-b7cc-4714-812f-3ca2857f4b9a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ece75eeb539dff60b29396e3076cd2465571453a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9f311e9fc5330a68edba4fd5029e97b75033406
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
 返回所需的大多数使用者的列元数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT GetColumnInfo(   
-   IRowset* pRowset,   
+```cpp
+HRESULT GetColumnInfo(IRowset* pRowset,   
    DBORDINAL* pColumns,   
    DBCOLUMNINFO** ppColumnInfo,   
-   OLECHAR** ppStringsBuffer    
-) throw( );  
+   OLECHAR** ppStringsBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

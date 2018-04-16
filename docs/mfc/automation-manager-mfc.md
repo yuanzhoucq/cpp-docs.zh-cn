@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation Manager
 - Automation servers, Automation Manager
@@ -16,19 +18,20 @@ helpviewer_keywords:
 - Automation clients, Automation Manager
 - AUTMGR32.exe
 ms.assetid: 6bf3429e-1946-41c5-86d0-ad7f5b8585b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation-manager-mfc"></a>自动化管理器 (MFC)
-应该将 AUTMGR32.EXE 复制到用来提供远程自动化对象的每台计算机的 Windows 系统目录。 对于 Windows 95 和 Windows 98，此目录通常是 C:\WINDOWS\SYSTEM。 对于 Windows 2000 和 Windows NT，此目录通常是 C:\WINNT\SYSTEM32。  
+应该将 AUTMGR32.EXE 复制到用来提供远程自动化对象的每台计算机的 Windows 系统目录。 它通常是 C:\WINDOWS\SYSTEM32。  
   
  如果要启用从服务器到客户端的回调，则还应将此可执行文件复制到每台客户端计算机的系统目录。  
   

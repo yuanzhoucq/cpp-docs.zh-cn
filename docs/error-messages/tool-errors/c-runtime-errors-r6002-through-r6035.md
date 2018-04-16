@@ -1,20 +1,24 @@
 ---
-title: "C 运行时错误 R6002 到 R6035 |Microsoft 文档"
-ms.custom: 
+title: C 运行时错误 R6002 到 R6035 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
-f1_keywords: c.errors
-dev_langs: C++
+f1_keywords:
+- c.errors
+dev_langs:
+- C++
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 5c5f4c10f99611d7452e42ab9b4be58f6b09125d
 ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT

@@ -1,29 +1,33 @@
 ---
-title: "-CLRHEADER |Microsoft 文档"
+title: -CLRHEADER | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /CLRHEADER
-dev_langs: C++
+f1_keywords:
+- /CLRHEADER
+dev_langs:
+- C++
 helpviewer_keywords:
 - -CLRHEADER dumpbin option
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d8ab1617cffd7560ab47d69f7304df0c76b661eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73f68c4f73d132254ea64d4b3b3b9f787f3a4b82
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clrheader"></a>/CLRHEADER
 ```  
@@ -45,13 +49,9 @@ ms.lasthandoff: 12/21/2017
   
 -   0-/clr （映像可能包含本机代码）。  
   
--   1-/clr: safe （图为唯一，能够在 CLR 任何平台上，运行和可能是可验证的 MSIL）。  
-  
--   3-/clr: pure (图像 MSIL 仅是，但仅能够在 x86 上运行的平台)。  
-  
  以编程方式还可以检查是否为公共语言运行时生成映像。  有关详细信息，请参阅[如何： 确定映像是否本机或 CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)。  
   
- **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
+ **/Clr: pure**和**/clr: safe**编译器选项在 Visual Studio 2015 中弃用，并将编译器的未来版本中删除。 必须为"纯"或"安全"的代码应移植到 C#。 
   
 ## <a name="see-also"></a>请参阅  
  [DUMPBIN 选项](../../build/reference/dumpbin-options.md)

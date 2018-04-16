@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 表示将 MashalingBehavior=Standard 作为敏捷对象（这可以大大降低出现运行时线程处理异常的机率）的对象。 `Agile<T>` 使非敏捷对象可以调用相同或不同线程调用，或是从相同或不同线程进行调用。 有关详细信息，请参阅[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)。  
@@ -53,7 +56,7 @@ class Agile;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Agile:: agile](#ctor)|初始化 Agile 类的新实例。|  
+|[Agile::Agile](#ctor)|初始化 Agile 类的新实例。|  
 |[Agile::~Agile 析构函数](#dtor)|销毁敏捷类的当前实例。|  
   
 ### <a name="public-methods"></a>公共方法  
@@ -86,7 +89,7 @@ class Agile;
   
  **标头：** agile.h  
 
-## <a name="ctor"></a>Agile:: agile 构造函数
+## <a name="ctor"></a>  Agile:: agile 构造函数
 初始化 Agile 类的新实例。  
   
 ## <a name="syntax"></a>语法  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>备注  
  此构造函数的第一个版本是默认构造函数。 第二个版本从 `object` 参数指定的对象初始化新实例 Agile 类。 第三个版本是复制构造函数。 第四个版本是移动构造函数。 此构造函数不能引发异常。  
 
-## <a name="dtor"></a>Agile:: ~ Agile 析构函数
+## <a name="dtor"></a>  Agile:: ~ Agile 析构函数
 销毁敏捷类的当前实例。  
   
 ## <a name="syntax"></a>语法  
@@ -126,7 +129,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>备注  
  此析构函数也会释放当前敏捷对象表示的对象。  
   
-## <a name="get"></a>Agile:: get 方法
+## <a name="get"></a>   Agile:: get 方法
 返回用当前敏捷对象表示的对象的句柄。  
   
 ## <a name="syntax"></a>语法  
@@ -142,7 +145,7 @@ Agile(Agile<T>&& object);
   
  返回值的类型实际是未公开的内部类型。 保留返回值一种简便方式是将它分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myAgileTvariable->Get();`。  
   
-## <a name="getaddressof"></a>Agile:: getaddressof 方法
+## <a name="getaddressof"></a>  Agile:: getaddressof 方法
 重新初始化当前敏捷对象，然后返回类型为 `T`的对象的句柄地址。  
   
 ## <a name="syntax"></a>语法  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>备注  
  此操作释放类型的对象的当前表示`T`，如果任何; 重新初始化敏捷对象的数据成员; 获取当前线程上下文中;，然后返回可以表示句柄到对象变量的地址非敏捷对象。 若要使敏捷类实例以代表一个对象，使用赋值运算符 ([agile:: operator =](#operator-assign)) 将对象分配给敏捷类实例。  
 
-## <a name="getaddressofforinout"></a>Agile:: getaddressofforinout 方法
+## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout 方法
 将句柄的地址返回到用当前敏捷对象表示的对象。  
   
 ## <a name="syntax"></a>语法  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>备注  
  此操作获取当前线程上下文，然后将句柄的地址返回到基础对象。  
 
-## <a name="release"></a>Agile:: release 方法
+## <a name="release"></a>  Agile:: release 方法
 放弃当前敏捷对象的基础对象和上下文。  
   
 ## <a name="syntax"></a>语法  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>备注  
  放弃当前敏捷对象的基础对象和上下文（如果存在），然后将敏捷对象的值设置为 null。  
 
-## <a name="operator-arrow"></a>Agile:: operator-&gt;运算符
+## <a name="operator-arrow"></a>  Agile:: operator-&gt;运算符
 检索用当前敏捷对象表示的对象的句柄。  
   
 ## <a name="syntax"></a>语法  
@@ -214,7 +217,7 @@ const throw();
   
  此运算符实际返回未公开的内部类型。 保留返回值一种简便方式是将它分配给使用声明的变量**自动**类型推导关键字。  
 
-## <a name="operator-assign"></a>Agile:: operator = 运算符
+## <a name="operator-assign"></a>  Agile::operator= Operator
 将指定对象分配给当前敏捷对象。  
   
 ## <a name="syntax"></a>语法  

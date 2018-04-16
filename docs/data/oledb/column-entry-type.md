@@ -1,43 +1,40 @@
 ---
-title: "COLUMN_ENTRY_TYPE |Microsoft 文档"
+title: COLUMN_ENTRY_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_TYPE
-dev_langs: C++
-helpviewer_keywords: COLUMN_ENTRY_TYPE macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_TYPE
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_ENTRY_TYPE macro
 ms.assetid: ac424261-ff6c-443b-a197-2cec8d78d738
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cc2501f38ca93192bd0d74a3d49ca829b19cc1ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de5ead25c4e1c95b98411602a420cc424ff0c716
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnentrytype"></a>COLUMN_ENTRY_TYPE
 表示数据库中的特定列的绑定。 支持`type`参数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_ENTRY_TYPE (  
-nOrdinal  
-,   
-wType  
-,   
-data  
- )  
+```cpp
+COLUMN_ENTRY_TYPE (nOrdinal, wType, data)  
   
 ```  
   

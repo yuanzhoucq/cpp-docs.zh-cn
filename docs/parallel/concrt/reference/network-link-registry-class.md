@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 类
 `network_link_registry` 抽象基类管理源块和目标块之间的链接。  
@@ -60,7 +64,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|当在派生类中重写，将添加到链接`network_link_registry`对象。|  
 |[begin](#begin)|当在派生类中重写，返回的第一个元素的迭代器`network_link_registry`对象。|  
-|[包含](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定的块。|  
+|[contains](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定的块。|  
 |[count](#count)|当在派生类中重写时返回中的项的数目`network_link_registry`对象。|  
 |[remove](#remove)|当在派生类中重写，删除从指定的块`network_link_registry`对象。|  
   
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **命名空间：** 并发  
   
-##  <a name="add"></a>添加 
+##  <a name="add"></a> 添加 
 
  当在派生类中重写，将添加到链接`network_link_registry`对象。  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  指向要添加的块的指针。  
   
-##  <a name="begin"></a>开始 
+##  <a name="begin"></a> 开始 
 
  当在派生类中重写，返回的第一个元素的迭代器`network_link_registry`对象。  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>备注  
  迭代器的最终状态由`NULL`链接。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  当在派生类中重写时搜索`network_link_registry`对象指定的块。  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  指向中进行搜索的块的指针`network_link_registry`对象。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果找到了指定块，`false`否则为。  
+ `true` 如果找到了指定块，`false`否则为。  
   
-##  <a name="count"></a>计数 
+##  <a name="count"></a> 计数 
 
  当在派生类中重写时返回中的项的数目`network_link_registry`对象。  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>返回值  
  中的项的数目`network_link_registry`对象。  
   
-##  <a name="remove"></a>删除 
+##  <a name="remove"></a> 删除 
 
  当在派生类中重写，删除从指定的块`network_link_registry`对象。  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  指向块被删除，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果找到并移除了，链接`false`否则为。  
+ `true` 如果找到并移除了，链接`false`否则为。  
   
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   

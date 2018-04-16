@@ -4,43 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl::Hash
 - IRowsetLocateImpl.Hash
-dev_langs: C++
-helpviewer_keywords: Hash method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Hash method
 ms.assetid: 7df4386d-80fb-4332-a85f-baae98cdc6e0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c3cb64979b8c1ff7a5b9d2e9441a91da0c77f2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 321f10dd0f6b25441b1dc78fa660ff2aa66b3d36
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetlocateimplhash"></a>IRowsetLocateImpl::Hash
 返回哈希值用于指定书签。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD ( Hash )(  
-   HCHAPTER /* hReserved */,  
+```cpp
+      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmarks,  
    const DBBKMARK* rgcbBookmarks[],  
    const BYTE* rgpBookmarks[],  
    DBHASHVALUE rgHashValues[],  
-   DBROWSTATUS rgBookmarkStatus[]   
-);  
+   DBROWSTATUS rgBookmarkStatus[]);  
 ```  
   
 #### <a name="parameters"></a>参数  

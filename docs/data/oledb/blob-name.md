@@ -1,44 +1,40 @@
 ---
-title: "BLOB_NAME |Microsoft 文档"
+title: BLOB_NAME | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BLOB_NAME
-dev_langs: C++
-helpviewer_keywords: BLOB_NAME macro
+ms.topic: reference
+f1_keywords:
+- BLOB_NAME
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_NAME macro
 ms.assetid: 757acd0d-946d-447d-937e-94ecd700ba38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d15a0eb22f2b5234d01b8de07479691258d4d500
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4d5d7bbad25c7b2921e7b379c1014f893216d3d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="blobname"></a>BLOB_NAME
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不过此宏采用而不是列号的列名称。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BLOB_NAME(  
-pszName  
-,   
-IID  
-,   
-flags  
-,   
-data )  
+```cpp
+BLOB_NAME(pszName, IID, flags, data )  
 ```  
   
 #### <a name="parameters"></a>参数  

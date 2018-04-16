@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
 - amp_short_vectors/Concurrency::graphics::unorm_3::zxy
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_y
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4051b7f872803a8ef799178b7ad158e588da08bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm3-class"></a>unorm_3 类
 表示三个无符号的正常数字短矢量。  
@@ -111,7 +114,7 @@ class unorm_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|[unorm_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[unorm_3 Constructor](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -158,13 +161,13 @@ class unorm_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|unorm_3::operator-||  
-|unorm_3::operator * =||  
-|/ = unorm_3::operator 的||  
-|unorm_3::operator + +||  
-|unorm_3::operator + =||  
-|unorm_3::operator =||  
-|unorm_3::operator =||  
+|unorm_3::operator--||  
+|unorm_3::operator*=||  
+|unorm_3::operator/=||  
+|unorm_3::operator++||  
+|unorm_3::operator+=||  
+|unorm_3::operator=||  
+|unorm_3::operator-=||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -215,7 +218,7 @@ class unorm_3;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm_3 
+##  <a name="ctor"></a> unorm_3 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -294,7 +297,7 @@ explicit inline unorm_3(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="unorm_3__size"></a>大小 
+##  <a name="unorm_3__size"></a> 大小 
 
 ```  
 static const int size = 3;  

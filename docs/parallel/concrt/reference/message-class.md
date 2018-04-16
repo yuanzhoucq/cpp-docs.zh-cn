@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message
 - AGENTS/concurrency::message
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs: C++
-helpviewer_keywords: message class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="message-class"></a>message 类
 包含正在消息块之间传递的数据负载的基本消息信封。  
@@ -70,7 +74,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名称|描述|  
 |----------|-----------------|  
-|[有效负载](#payload)|负载`message`对象。|  
+|[payload](#payload)|负载`message`对象。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -83,7 +87,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **命名空间：** 并发  
   
-##  <a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a> add_ref 
 
  将添加到的引用计数`message`对象。 用于需要引用计数以确定消息生存期的消息块。  
   
@@ -94,7 +98,7 @@ long add_ref();
 ### <a name="return-value"></a>返回值  
  引用计数的新值。  
   
-##  <a name="ctor"></a>消息 
+##  <a name="ctor"></a> 消息 
 
  构造 `message` 对象。  
   
@@ -126,7 +130,7 @@ message(
 ### <a name="remarks"></a>备注  
  将指针传递到构造函数`message`对象，如自变量引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果参数`_Msg`是`NULL`。  
   
-##  <a name="dtor"></a>~ 消息 
+##  <a name="dtor"></a> ~ 消息 
 
  销毁`message`对象。  
   
@@ -134,7 +138,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a> msg_id 
 
  返回的 ID`message`对象。  
   
@@ -145,7 +149,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>返回值  
  `runtime_object_identity`的`message`对象。  
   
-##  <a name="payload"></a>有效负载 
+##  <a name="payload"></a> 有效负载 
 
  负载`message`对象。  
   
@@ -153,7 +157,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a> remove_ref 
 
  从的引用计数减去`message`对象。 用于需要引用计数以确定消息生存期的消息块。  
   

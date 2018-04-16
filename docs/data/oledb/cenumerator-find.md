@@ -4,40 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CEnumerator::Find
 - ATL::CEnumerator::Find
 - ATL.CEnumerator.Find
 - CEnumerator.Find
-dev_langs: C++
-helpviewer_keywords: Find method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Find method
 ms.assetid: 69a153af-d6c3-40fd-9018-27c7d2f344c6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d7c2deef184ef9e56dffcfba52ba2cbb2947519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66298c4be2bb1e43aa37899fe652ccbf6694faae
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cenumeratorfind"></a>CEnumerator::Find
 在可用提供程序之间查找指定名称。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      bool Find(   
-   TCHAR* szSearchName    
-) throw( );  
+```cpp
+      bool Find(TCHAR* szSearchName) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

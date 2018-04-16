@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: CDynamicStringAccessor
-dev_langs: C++
-helpviewer_keywords: CDynamicStringAccessor class
+ms.topic: reference
+f1_keywords:
+- CDynamicStringAccessor
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6c24e6eaac83d72f8710b039b312f40517fd7e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f13eb935cae82b0383e87c90bbe17d35d399fbdb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
 使您可以在不知道数据库架构（数据库的基础结构）的情况下访问数据源。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
       template< typename BaseType, DBTYPEENUM OleDbType >  
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmes/std::messages
 - xlocmes/std::messages::char_type
@@ -17,7 +18,8 @@ f1_keywords:
 - xlocmes/std::messages::do_open
 - xlocmes/std::messages::get
 - xlocmes/std::messages::open
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::messages [C++]
 - std::messages [C++], char_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1bf1320e138224b36e0d73e1d2702b9cf85fb8c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 809a5fc0a74408c484948309a62096c2e89b7af5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="messages-class"></a>messages 类
 此模板类描述一个对象来充当区域设置 facet，以便从给定区域设置的国际化消息目录中检索本地化消息。  
@@ -249,7 +252,7 @@ protected: messages(
   
 -   1：必须手动管理对象的生存期。  
   
--   \>1： 未定义这些值。  
+-   \> 1： 未定义这些值。  
   
  由于该析构函数受到保护，可能没有直接的示例。  
   

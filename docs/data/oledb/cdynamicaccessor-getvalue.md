@@ -1,12 +1,13 @@
 ---
-title: "Cdynamicaccessor:: Getvalue |Microsoft 文档"
+title: CDynamicAccessor::GetValue | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetValue
 - CDynamicAccessor::GetValue<ctype>
@@ -16,58 +17,49 @@ f1_keywords:
 - ATL.CDynamicAccessor.GetValue
 - ATL::CDynamicAccessor::GetValue
 - ATL::CDynamicAccessor::GetValue<ctype>
-dev_langs: C++
-helpviewer_keywords: GetValue method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetValue method
 ms.assetid: 553f44af-68bc-4cb6-8774-e0940003fa90
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1599cd82347c4074863f2b649a2c67df894893e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b572faceb1ea27f05bb1a422a86de4b42f9175c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
 检索指定列的数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      void* GetValue(   
-   DBORDINAL nColumn    
-) const throw( );  
-void* GetValue(  
-   const CHAR* pColumnName   
-) const throw( );  
-void* GetValue(  
-   const WCHAR* pColumnName   
-) const throw( );  
+```cpp
+void* GetValue(DBORDINAL nColumn) const throw();  
+
+void* GetValue(const CHAR* pColumnName) const throw();  
+
+void* GetValue(const WCHAR* pColumnName) const throw();  
+
+template < class ctype >
+bool GetValue(DBORDINAL nColumn, ctype* pData) const throw();  
+
 template < class ctype >  
-bool GetValue(  
-   DBORDINAL nColumn,  
-   ctype* pData   
-) const throw( );  
+bool GetValue(const CHAR* pColumnName, ctype* pData) const throw();  
+
 template < class ctype >  
-bool GetValue(  
-   const CHAR* pColumnName,  
-   ctype* pData   
-) const throw( );  
-template < class ctype >  
-bool GetValue(  
-   const WCHAR* pColumnName,  
-   ctype* pData   
-) const throw( );  
+bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  
  `ctype`  
- [in]处理字符串类型以外的任意数据类型的模板化参数 (**CHAR\***， **WCHAR\***)，这需要特殊处理。 `GetValue`使用基于此处指定适当的数据类型。  
+ [in]处理字符串类型以外的任意数据类型的模板化参数 (**CHAR\***， **WCHAR\***)，这需要特殊处理。 `GetValue` 使用基于此处指定适当的数据类型。  
   
  `nColumn`  
  [in] 列号。 列编号从 1 开始。 值为 0 引用的书签列中，如果有的话。  

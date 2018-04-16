@@ -1,13 +1,15 @@
 ---
-title: "ActiveX 控件容器： 处理 ActiveX 控件中的事件 |Microsoft 文档"
-ms.custom: 
+title: ActiveX 控件容器： 处理 ActiveX 控件中的事件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
 - ActiveX control containers [MFC], event sinks
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 本文讨论如何使用属性窗口在 ActiveX 控件容器中安装 ActiveX 控件的事件处理程序。 使用事件处理程序接收通知 （从控件） 的某些事件，并在响应中执行某些操作。 此通知称为"触发"事件。  
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  有关事件接收器映射的详细信息，请参阅[事件接收器映射](../mfc/reference/event-sink-maps.md)中*类库参考*。  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a>项目的修改的事件处理程序  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> 项目的修改的事件处理程序  
  当使用属性窗口来添加事件处理程序时，事件接收器映射是声明和定义项目中。 以下语句添加到控件。CPP 文件添加事件处理程序的第一个时间。 此代码声明事件接收器映射对话框类 (在这种情况下， `CContainerDlg`):  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
@@ -73,6 +76,6 @@ ms.lasthandoff: 12/21/2017
   
 6.  双击从类视图跳转到事件处理程序代码中实现的新处理程序函数 (。CPP） 文件中的`CContainerDlg`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ActiveX 控件容器](../mfc/activex-control-containers.md)
 

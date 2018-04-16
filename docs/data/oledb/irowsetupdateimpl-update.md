@@ -1,48 +1,48 @@
 ---
-title: "Irowsetupdateimpl:: Update |Microsoft 文档"
+title: IRowsetUpdateImpl::Update | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::IRowsetUpdateImpl::Update
 - IRowsetUpdateImpl::Update
 - IRowsetUpdateImpl.Update
 - ATL.IRowsetUpdateImpl.Update
-dev_langs: C++
-helpviewer_keywords: Update method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Update method
 ms.assetid: 9ec6884d-aa9c-4871-a803-c048f162403c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cf0b2989fabda9217abd64aef485f94b2c5ccc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b398bcc4d522fdb682778de1088c60c5b3ac63f3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetupdateimplupdate"></a>IRowsetUpdateImpl::Update
 传输自上次提取或更新后对行进行任何更改。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD ( Update )(  
-   HCHAPTER /* hReserved */,  
+```cpp
+      STDMETHOD (Update )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBCOUNTITEM* pcRows,  
    HROW** prgRows,  
-   DBROWSTATUS** prgRowStatus   
-);  
+   DBROWSTATUS** prgRowStatus);  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -1,26 +1,31 @@
 ---
-title: "段 |Microsoft 文档"
+title: SEGMENT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SEGMENT
-dev_langs: C++
-helpviewer_keywords: SEGMENT directive
+ms.topic: reference
+f1_keywords:
+- SEGMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="segment"></a>SEGMENT
 定义调用程序段*名称*具有段特性  
@@ -45,14 +50,14 @@ name ENDS
 |**DWORD**|下一个可用的双字地址 （双字每 4 个字节）。|  
 |**PARA**|下一个可用段落地址 （每个段落 16 个字节）。|  
 |**PAGE**|下一个可用页面地址 （每页的 256 个字节）。|  
-|**对齐**(*n*)|下一步可用 *n* th 字节地址。 有关详细信息，请参阅备注部分。|  
+|**对齐**(*n*)|下一步可用*n*th 字节地址。 有关详细信息，请参阅备注部分。|  
   
  如果未指定此参数， **PARA**默认情况下使用。  
   
  *combine*  
- **公共**，**堆栈**，**常见**，**内存**，**在***地址*， **私有**  
+ **公共**，**堆栈**，**常见**，**内存**，**在 * * * 地址*，**私有**  
   
- *使用*  
+ *use*  
  **USE16**， **USE32**，**平面**  
   
  `characteristics`  
@@ -66,10 +71,10 @@ name ENDS
  不支持与**/omf**。  
   
  `class`  
- 指定应如何组合以及装配文件中的排序段。 典型值为， `'DATA'`， `'CODE'`，`'CONST'`和`'STACK'`  
+ 指定应如何组合以及装配文件中的排序段。 典型值为， `'DATA'`， `'CODE'`，`'CONST'`和 `'STACK'`  
   
 ## <a name="remarks"></a>备注  
  有关`ALIGN(n)`，`n`可能是介于 1 和 8192 的 2 的任何幂; 不支持**/omf**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

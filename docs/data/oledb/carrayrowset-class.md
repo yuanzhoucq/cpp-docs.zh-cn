@@ -4,37 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CArrayRowset<TAccessor>
 - ATL.CArrayRowset
 - CArrayRowset
 - ATL::CArrayRowset
 - ATL::CArrayRowset<TAccessor>
-dev_langs: C++
-helpviewer_keywords: CArrayRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CArrayRowset class
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 541bf3ea26ae57d0fd61c2d561b4fc87bbcc2932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28d3a28f5c00cb0231738e8f02f07318bf156921
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 使用数组语法访问行集的元素。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template < class TAccessor >  
 class CArrayRowset :   
    public CVirtualBuffer <TAccessor>,   
@@ -58,7 +61,7 @@ class CArrayRowset :
   
 |||  
 |-|-|  
-|[运算符 &#91; &#93;](../../data/oledb/carrayrowset-operator.md)|访问行集合的元素。|  
+|[Operator&#91;&#93;](../../data/oledb/carrayrowset-operator.md)|访问行集合的元素。|  
   
 ### <a name="data-members"></a>数据成员  
   

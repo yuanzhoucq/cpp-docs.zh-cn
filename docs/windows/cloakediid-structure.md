@@ -1,28 +1,32 @@
 ---
-title: "CloakedIid 结构 |Microsoft 文档"
-ms.custom: 
+title: CloakedIid 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: implements/Microsoft::WRL::CloakedIid
-dev_langs: C++
-helpviewer_keywords: CloakedIid structure
+f1_keywords:
+- implements/Microsoft::WRL::CloakedIid
+dev_langs:
+- C++
+helpviewer_keywords:
+- CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c61e005759af9b5fde4bfff407ed502a41c22a72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 075694e83f4c0e2004ccc9a86b03a0f7b7ea7f78
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 结构
 指示无法访问 IID 列表中指定接口的 RuntimeClass、Implements 和 ChainInterfaces 模板。  
@@ -30,9 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 struct CloakedIid : T;  
 ```  
   
@@ -48,10 +50,10 @@ struct CloakedIid : T;
   
  `CloakedIid`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** implements.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

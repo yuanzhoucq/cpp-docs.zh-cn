@@ -1,24 +1,27 @@
 ---
-title: "自动化服务器 |Microsoft 文档"
-ms.custom: 
+title: 自动化服务器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers
 - COM components, Automation servers
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
@@ -26,7 +29,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers"></a>自动化服务器
-利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便让它们能够被操作。 自动化服务器是可编程对象 （称为自动化对象） 公开到其他应用程序的应用程序 (称为[自动化客户端](../mfc/automation-clients.md))。 自动化服务器有时称为自动化组件。  
+利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化服务器是可编程对象 （称为自动化对象） 公开到其他应用程序的应用程序 (称为[自动化客户端](../mfc/automation-clients.md))。 自动化服务器有时称为自动化组件。  
   
  通过公开自动化对象，客户端可以通过直接访问对象和服务器提供的功能来自动执行某些过程。 当应用程序提供对其他应用程序有用的功能时，以这种方式公开对象有很大好处。 例如，字处理器可能公开其拼写检查器功能以便让其他程序使用它。 公开对象后，供应商便能使用其他应用程序的现成功能改进其应用程序的功能。  
   

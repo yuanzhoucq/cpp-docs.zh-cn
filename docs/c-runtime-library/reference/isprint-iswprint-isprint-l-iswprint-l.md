@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -29,7 +30,8 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6ab79ddcf6232e8c3d4345cc1bc3cda7c7deb1dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36d4c6fcc699392f32a45dfff6131a3b7b7e66ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
 确定整数是否表示可打印字符。  
@@ -81,7 +84,7 @@ int _iswprint_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是可打印字符的特定表示形式，则每个例程将返回非零值。 `isprint`返回一个非零值，如果`c`是可打印字符-这包括空格字符 (0x20-0x7E)。 如果 `c` 是可打印宽字符，其中包括空格宽字符，则 `iswprint` 返回一个非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是可打印字符的特定表示形式，则每个例程将返回非零值。 `isprint` 返回一个非零值，如果`c`是可打印字符-这包括空格字符 (0x20-0x7E)。 如果 `c` 是可打印宽字符，其中包括空格宽字符，则 `iswprint` 返回一个非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  这些函数的测试条件的结果取决于区域设置的 `LC_CTYPE` 类别设置；有关详细信息，请参阅 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本将当前区域设置用于任何依赖于区域设置的行为；带有 `_l` 后缀的版本与之相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -93,9 +96,9 @@ int _iswprint_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |**_** `istprint`|`isprint`|[_ismbcprint](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswprint`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`isprint`|\<ctype.h 1>|  
 |`iswprint`|\<ctype.h 1> 或 \<wchar.h 1>|  

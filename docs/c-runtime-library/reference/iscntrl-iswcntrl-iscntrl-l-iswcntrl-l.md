@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 确定整数是否表示控制字符。  
@@ -83,7 +86,7 @@ int _iswcntrl_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是控制字符的特定表示形式，则每个例程将返回非零值。 `iscntrl`返回一个非零值，如果`c`是控制字符 (0x00-0x1F 或 0x7F)。 如果 `c` 是一个控制宽字符，则 `iswcntrl` 返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是控制字符的特定表示形式，则每个例程将返回非零值。 `iscntrl` 返回一个非零值，如果`c`是控制字符 (0x00-0x1F 或 0x7F)。 如果 `c` 是一个控制宽字符，则 `iswcntrl` 返回非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  带 `_l` 后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -96,9 +99,9 @@ int _iswcntrl_l(
 |`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|  
 |`_istcntrl_l`|`_iscntrl_l`|`_iscntrl_l`|`_iswcntrl_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`iscntrl`|\<ctype.h 1>|  
 |`iswcntrl`|\<ctype.h 1> 或 \<wchar.h 1>|  

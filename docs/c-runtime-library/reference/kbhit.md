@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _kbhit
+ms.topic: reference
+apiname:
+- _kbhit
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,7 +27,8 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -36,22 +39,23 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b19ec685454bcad77eae200ebd8f121b655cdb5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 643a02b8c3617689900eb4114d19fad6f46ad280
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="kbhit"></a>_kbhit
 检查键盘输入的控制台。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,9 +70,9 @@ int _kbhit( void );
 ## <a name="remarks"></a>备注  
  `_kbhit` 函数检查最近键击的控制台。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可调用 `_getch` 或 `_getche` 来获取键击。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`_kbhit`|\<conio.h>|  
   

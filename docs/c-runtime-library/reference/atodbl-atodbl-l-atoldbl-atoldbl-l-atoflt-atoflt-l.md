@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -40,7 +41,8 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -56,16 +58,17 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ea51455d2b02c651aeb8e7bb599cbc3133585c15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e5cc49c513f72be5fa96cc8534f749d2ecbc01ec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 将字符串转换为双精度型 (`_atodbl`)、长双精度型 (`_atoldbl`) 或浮点型 (`_atoflt`)。  
@@ -122,7 +125,7 @@ int _atoflt_l(
   
  这些带有 `_l` 后缀的函数的版本与不带有该后缀的函数版本相同，只不过前者使用传入的区域设置参数而不是当前的线程本地。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
 |--------------|---------------------|  

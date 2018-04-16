@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - short_vector_traits
 - AMP_SHORT_VECTORS/short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21f249a464cd9f55d8cbb4aea79bcb705104306b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 结构
 通过 short_vector_traits 可检索基础矢量长度和短的矢量类型或标量类型的标量类型  
@@ -116,13 +119,13 @@ struct short_vector_traits<double_4>;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>short_vector_traits:: short_vector_traits 构造函数  
+##  <a name="ctor">short_vector_traits:: short_vector_traits 构造函数</a>  
   
 ```  
 short_vector_traits();
 ```  
   
-##  <a name="size"></a>short_vector_traits:: size 常量  
+##  <a name="size">short_vector_traits:: size 常量</a>  
   
 ```  
 static int const size = 1;  

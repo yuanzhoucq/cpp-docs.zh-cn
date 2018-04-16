@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-programming-summary"></a>Unicode 编程摘要
 若要充分利用 Unicode 的 MFC 和 C 运行时支持，你需要：  
@@ -91,7 +94,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用[fopen_s、 _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)若要打开 Unicode 文件。  
   
- 总之，MFC 和运行时库提供以下支持适用于 Unicode 编程在 Windows 2000 下：  
+ 总之，MFC 和运行时库提供以下支持 Unicode 编程：  
   
 -   数据库类成员函数，除了所有 MFC 函数都都支持 Unicode，包括`CString`。 `CString`此外提供了 Unicode/ANSI 转换函数。  
   

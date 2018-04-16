@@ -1,30 +1,33 @@
 ---
-title: "BEGIN_ACCESSOR |Microsoft 文档"
+title: BEGIN_ACCESSOR | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BEGIN_ACCESSOR
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- BEGIN_ACCESSOR
+dev_langs:
+- C++
 helpviewer_keywords:
 - BEGIN_ACCESSOR macro, syntax
 - BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f9461c508fe13a2930a39a2632d5a5a80f01c385
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac11ee19a626a945500bd9acb95cbe8ce0823d82
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 标记访问器条目的开始。  
@@ -32,13 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-BEGIN_ACCESSOR(  
-num  
-,   
-bAuto  
- )  
-  
+BEGIN_ACCESSOR(num, bAuto)  
 ```  
   
 #### <a name="parameters"></a>参数  

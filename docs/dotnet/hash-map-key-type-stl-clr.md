@@ -1,17 +1,21 @@
 ---
-title: "hash_map:: key_type (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'hash_map:: key_type (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_map::key_type
-dev_langs: C++
-helpviewer_keywords: key_type member [STL/CLR]
+f1_keywords:
+- cliext::hash_map::key_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- key_type member [STL/CLR]
 ms.assetid: 1e7d0f40-03e0-4413-b652-1d9fe14f0f12
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen

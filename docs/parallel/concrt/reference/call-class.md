@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - call
 - AGENTS/concurrency::call
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: call class
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="call-class"></a>call 类
 `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。  
@@ -53,7 +57,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[调用](#ctor)|已重载。 构造`call`消息块。|  
+|[call](#ctor)|已重载。 构造`call`消息块。|  
 |[~ call 析构函数](#dtor)|销毁`call`消息块。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
@@ -81,7 +85,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **命名空间：** 并发  
   
-##  <a name="ctor"></a>调用 
+##  <a name="ctor"></a> 调用 
 
  构造`call`消息块。  
   
@@ -132,7 +136,7 @@ call(
   
  类型`filter_method`是具有签名的涵子`bool (T const &)`其调用由此`call`消息块，以确定它是否应接受提供的消息。  
   
-##  <a name="dtor"></a>~ 调用 
+##  <a name="dtor"></a> ~call 
 
  销毁`call`消息块。  
   
@@ -140,7 +144,7 @@ call(
 ~call();
 ```  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  执行输入消息中调用函数。  
   
@@ -151,7 +155,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>参数  
  `_PMessage`  
   
-##  <a name="process_message"></a>process_message 
+##  <a name="process_message"></a> process_message 
 
  处理一条消息，已接受此`call`消息块。  
   
@@ -163,7 +167,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  指向要处理的消息的指针。  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法，调用由源块时。  
   
@@ -183,7 +187,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>返回值  
  A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法，调用由源块时。  
   
@@ -203,7 +207,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>返回值  
  A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。  
   

@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataSource.OpenFromInitializationString
 - OpenFromInitializationString
 - CDataSource::OpenFromInitializationString
 - ATL::CDataSource::OpenFromInitializationString
 - ATL.CDataSource.OpenFromInitializationString
-dev_langs: C++
-helpviewer_keywords: OpenFromInitializationString method
+dev_langs:
+- C++
+helpviewer_keywords:
+- OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 294c5cd893b04dd477a002adb6dc03fa33c60a29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f05654c9b8647f62d967f97fa4b373471e049cda
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
 打开用户提供的初始化字符串指定数据源。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT OpenFromInitializationString(   
-   LPCOLESTR szInitializationString,   
-   bool fPromptForInfo = false    
-) throw( );  
+```
+HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,   
+   bool fPromptForInfo= false) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

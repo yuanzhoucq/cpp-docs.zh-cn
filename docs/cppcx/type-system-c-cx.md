@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="type-system-ccx"></a>类型系统 (C++/CX)
 通过使用 Windows 运行时体系结构，你可以使用 C + + /cli CX、 Visual Basic、 Visual C# 和 JavaScript 编写应用程序和组件直接访问 Windows API 并与其他 Windows 运行时应用和组件互操作。 在 c + + 编写的通用 Windows 平台应用程序编译为直接在 CPU 中执行的本机代码。 用 C# 或 Visual Basic 编写的通用 Windows 平台应用程序编译为 Microsoft 中间语言 (MSIL) 并在公共语言运行时 (CLR) 中执行。 用 JavaScript 编写的通用 Windows 平台应用程序在运行时环境中执行。 Windows 运行时操作系统组件本身用 c + + 编写并作为本机代码运行。 所有这些组件和通用 Windows 平台应用程序的直接通过 Windows 运行时应用程序二进制接口 (ABI) 进行通信。  

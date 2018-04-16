@@ -1,41 +1,40 @@
 ---
-title: "COLUMN_ENTRY |Microsoft 文档"
+title: COLUMN_ENTRY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY
-dev_langs: C++
-helpviewer_keywords: COLUMN_ENTRY macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_ENTRY macro
 ms.assetid: a10aef29-6d70-49ec-b572-5b5c4abe1b46
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f509ebc6e3e8a050d6b3bd5fb18b999024ec8af1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9239095874c1274c0c13d37e0f466ac69b2f20e2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnentry"></a>COLUMN_ENTRY
 在行集中的特定列表示行集上的绑定。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_ENTRY(  
-nOrdinal  
-,   
-data  
- )  
+```cpp
+COLUMN_ENTRY(nOrdinal, data)  
   
 ```  
   

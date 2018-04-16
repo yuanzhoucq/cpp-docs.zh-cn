@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>选择部署方法
 除非你的 Visual c + + 应用程序是独立的并且可以通过使用复制命令部署，否则我们建议你使用 Windows Installer 进行部署。 Windows Installer 支持安装、修复和卸载，还支持应用程序文件、依赖项和注册表项的原子更新。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="redistributing-visual-c-libraries"></a>重新发布 Visual C++ 库  
  在你的部署中，可以重新发布获得重新发布许可的任何版本的 Visual C++ 库。 以下是三种部署方法：  
   
--   使用集中部署可再发行组件包，从而安装 Visual c + + 库作为共享 Dll 中 %windir%\system32\\。 （安装到该文件夹中需要管理员权限。）你可以创建一个脚本或安装程序，以便在目标计算机上安装应用程序之前运行可再发行组件包。 可再发行组件包可用于 x86、x64 和 ARM 平台（VCRedist_x86.exe、VCRedist_x64.exe 或 VCRedist_arm.exe）。 Visual Studio 在 %programfiles (x86) %\Microsoft Visual Studio 中包含这些包`version`\VC\Redist\\`locale ID`\\。 你也可以下载它们从[Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793)。 (在下载中心，搜索"Visual c + + 可再发行组件包*Visual Studio 版本和更新*"与匹配你的应用程序。 例如，你使用了 Visual Studio 2012 Update 4 生成应用程序，则搜索“Visual C++ Redistributable Package 2012 Update 4”。）有关如何使用可再发行组件包的信息，请参阅[演练： 部署 Visual c + + 应用程序通过使用 Visual c + + 可再发行组件包](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。  
+-   使用集中部署可再发行组件包，从而安装 Visual c + + 库作为共享 Dll 中 %windir%\system32\\。 （安装到该文件夹中需要管理员权限。）你可以创建一个脚本或安装程序，以便在目标计算机上安装应用程序之前运行可再发行组件包。 可再发行组件包可用于 x86、x64 和 ARM 平台（VCRedist_x86.exe、VCRedist_x64.exe 或 VCRedist_arm.exe）。 Visual Studio 在 %programfiles (x86) %\Microsoft Visual Studio 中包含这些包`version`\VC\Redist\\`locale ID`\\。 你也可以下载它们从[Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793)。 (在下载中心使用搜索框来搜索"Visual c + + 可再发行组件包*Visual Studio 版本和更新*"与匹配你的应用程序。 例如，如果你使用 Visual Studio 2015 update 3 都生成应用程序，然后搜索"Visual c + + 可再发行组件包 2015 update 3"。)有关如何使用可再发行组件包的信息，请参阅[演练： 部署 Visual c + + 应用程序通过使用 Visual c + + 可再发行组件包](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。  
   
 -   集中部署使用合并模块，其中每个会安装特定的 Visual c + + 库作为共享 DLL 中 %windir%\system32\\。 （安装到该文件夹中需要管理员权限。）合并模块将成为你应用程序的 .msi 安装程序文件的一部分。 Visual c + + 可再发行合并模块包含在 Visual Studio 的 \Program Files (x86) \common 模块\\。 有关详细信息，请参阅[通过使用合并模块重新发布](../ide/redistributing-components-by-using-merge-modules.md)。  
   

@@ -1,13 +1,15 @@
 ---
-title: "托管异常中使用的基本概念 |Microsoft 文档"
-ms.custom: 
+title: 托管异常中使用的基本概念 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - try-catch exception handling, managed applications
 - __finally keyword, managed exceptions
@@ -17,7 +19,7 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen

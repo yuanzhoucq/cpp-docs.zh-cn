@@ -1,42 +1,42 @@
 ---
-title: "Ierrorrecordsimpl:: Geterrorhelpcontext |Microsoft 文档"
+title: IErrorRecordsImpl::GetErrorHelpContext | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetErrorHelpContext
 - IErrorRecordsImpl::GetErrorHelpContext
 - IErrorRecordsImpl.GetErrorHelpContext
-dev_langs: C++
-helpviewer_keywords: GetErrorHelpContext method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetErrorHelpContext method
 ms.assetid: 53d70239-0d64-482e-9ad4-4e1f4f02d5a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7487895fc79a9d7fba1ed7b49fb7bce934d2b724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3064f505c87b7d828c99206eb4006226718da82
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ierrorrecordsimplgeterrorhelpcontext"></a>IErrorRecordsImpl::GetErrorHelpContext
 从错误记录中获取的帮助上下文 ID。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      DWORD GetErrorHelpContext(  
-   ERRORINFO& rCurError   
-);  
+```cpp
+      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>参数  

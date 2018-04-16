@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
 - GetProperties
-dev_langs: C++
-helpviewer_keywords: GetProperties method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetProperties method
 ms.assetid: 1bee5f1b-bd08-435a-956a-e4cebcdf5d5e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d870ae3fe50cf8264f213a744e6520cdf74ab71c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc935986c5b1ad83e7faaca9b4cb7e76645aac62
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="icommandpropertiesimplgetproperties"></a>ICommandPropertiesImpl::GetProperties
 返回使用命令的属性映射的所有请求的属性集。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD(GetProperties)(   
-   const ULONG cPropertyIDSets,   
+```cpp
+      STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
    const DBPROPIDSET rgPropertyIDSets[],   
    ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets    
-);  
+   DBPROPSET ** prgPropertySets);  
 ```  
   
 #### <a name="parameters"></a>参数  

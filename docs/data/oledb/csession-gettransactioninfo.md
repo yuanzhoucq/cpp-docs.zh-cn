@@ -1,44 +1,44 @@
 ---
-title: "Csession:: Gettransactioninfo |Microsoft 文档"
+title: CSession::GetTransactionInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GetTransactionInfo
 - CSession.GetTransactionInfo
 - ATL.CSession.GetTransactionInfo
 - CSession::GetTransactionInfo
 - ATL::CSession::GetTransactionInfo
-dev_langs: C++
-helpviewer_keywords: GetTransactionInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetTransactionInfo method
 ms.assetid: 9fa62808-3162-4b5a-8610-e1abb8cf9a71
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8dd9c6d945fc838d787c19e776194261c40d32bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 096d2d9311a891cc41f89380e05830e5c1fa3e59
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csessiongettransactioninfo"></a>CSession::GetTransactionInfo
 返回有关事务的信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT GetTransactionInfo(   
-   XACTTRANSINFO* pInfo    
-) const throw( );  
+```cpp
+HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

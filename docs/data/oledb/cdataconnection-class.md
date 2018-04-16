@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
 - CDataConnection
-dev_langs: C++
-helpviewer_keywords: CDataConnection class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8e405b95543d170a4e94e39626e9b9793791c7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 管理与数据源的连接。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 class CDataConnection  
 ```  
   
@@ -53,13 +56,13 @@ class CDataConnection
 |-|-|  
 |[BOOL 运算符](../../data/oledb/cdataconnection-operator-bool.md)|确定当前会话是否为打开。|  
 |[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|确定当前会话是否为打开。|  
-|[CDataSource 运算符 （& a)](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|返回所包含的引用`CDataSource`对象。|  
-|[运算符 CDataSource *](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|返回指向包含的 `CDataSource` 对象的指针。|  
-|[运算符 CSession （& a)](../../data/oledb/cdataconnection-operator-csession-amp.md)|返回所包含的引用`CSession`对象。|  
-|[运算符 CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|返回指向包含的 `CSession` 对象的指针。|  
+|[operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|返回所包含的引用`CDataSource`对象。|  
+|[operator CDataSource*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|返回指向包含的 `CDataSource` 对象的指针。|  
+|[operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md)|返回所包含的引用`CSession`对象。|  
+|[operator CSession*](../../data/oledb/cdataconnection-operator-csession-star.md)|返回指向包含的 `CSession` 对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CDataConnection`是用于创建客户端，因为它封装必要的对象 （数据源和会话） 和一些操作，你需要连接到数据源时执行操作的有用类  
+ `CDataConnection` 是用于创建客户端，因为它封装必要的对象 （数据源和会话） 和一些操作，你需要连接到数据源时执行操作的有用类  
   
  而无需`CDataConnection`，你必须创建`CDataSource`对象，请调用其[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)方法，然后创建的一个实例[CSession](../../data/oledb/csession-class.md)对象，请调用其[打开](../../data/oledb/csession-open.md)方法，然后创建[CCommand](../../data/oledb/ccommand-class.md)对象并调用其**打开*** 方法。  
   

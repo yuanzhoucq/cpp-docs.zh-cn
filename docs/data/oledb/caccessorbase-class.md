@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: CAccessorBase
-dev_langs: C++
-helpviewer_keywords: CAccessorBase class
+ms.topic: reference
+f1_keywords:
+- CAccessorBase
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessorBase class
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b7c12430c4e7a6872afd46e72e93a29a3189333
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 030e06c40912a6b32c076b86f4a7456177b4ce93
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
-从此类派生，OLE DB 模板中的所有访问器。 `CAccessorBase`允许一个行集来管理多个访问器。 它还提供用于参数和输出列的绑定。  
+从此类派生，OLE DB 模板中的所有访问器。 `CAccessorBase` 允许一个行集来管理多个访问器。 它还提供用于参数和输出列的绑定。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 // Replace with syntax  
 ```  
   

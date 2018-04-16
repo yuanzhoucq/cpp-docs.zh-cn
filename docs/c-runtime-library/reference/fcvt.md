@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt
+ms.topic: reference
+apiname:
+- _fcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _fcvt
-dev_langs: C++
+f1_keywords:
+- _fcvt
+dev_langs:
+- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -30,16 +34,17 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c66666d615dc94f74f17736de6011ec05f1eeca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: def428073c15f3d408174916098573ddff98cde0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvt"></a>_fcvt
 将浮点数转换为字符串。 提供此函数的更安全的版本；请参阅 [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)。  
@@ -84,7 +89,7 @@ char *_fcvt(
   
  此函数验证其参数。 如果 `dec` 或 `sign` 为 NULL，或 `count` 为 0，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 `errno` 被设置为 `EINVAL` 且返回 NULL。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

@@ -4,40 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataConnection.Open
 - ATL.CDataConnection.Open
 - CDataConnection::Open
 - ATL::CDataConnection::Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: 2c6f0c01-4954-43ba-973e-861ac8e82892
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c97d6bbf2c603d8bb3ab703a1e97b83a8bcbb08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4b7c7e7efb72f67bf7112848572701e5fee0156
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdataconnectionopen"></a>CDataConnection::Open
 打开使用初始化字符串的数据源的连接。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Open(   
-   LPCOLESTR szInitString    
-) throw( );  
+```cpp
+HRESULT Open(LPCOLESTR szInitString) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: Platform::WeakReference
+ms.topic: reference
+f1_keywords:
+- Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8666896b0e3414dca8f4cd1f8c4e2f34e9b98050
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 类
 表示对 ref 类实例的弱引用。  
@@ -37,13 +39,13 @@ class WeakReference
   
 |成员|描述|  
 |------------|-----------------|  
-|[Weakreference:: Weakreference](#ctor)|初始化 WeakReference 类的新实例。|  
+|[WeakReference::WeakReference](#ctor)|初始化 WeakReference 类的新实例。|  
   
 ### <a name="methods"></a>方法  
   
 |成员|描述|  
 |------------|-----------------|  
-|[Weakreference::](#resolve)|如果对象不再存在，则返回基础 ref 类的句柄或 nullptr。|  
+|[WeakReference::Resolve](#resolve)|如果对象不再存在，则返回基础 ref 类的句柄或 nullptr。|  
   
 ### <a name="operators"></a>运算符  
   
@@ -55,7 +57,7 @@ class WeakReference
 ### <a name="remarks"></a>备注  
  WeakReference 类本身不是 ref 类，因此不从 Platform::Object^ 继承，也不能在公共方法的签名中使用。  
 
-## <a name="operator-assign"></a>WeakReference::operator =
+## <a name="operator-assign"></a> WeakReference::operator=
 给 WeakReference 赋值。  
   
 ### <a name="syntax"></a>语法  
@@ -70,7 +72,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ### <a name="remarks"></a>备注  
  使用上面列表中的最后一个重载，可以向 WeakReference 变量分配 ref 类。 在这种情况下，ref 类是向下转换到[platform:: object](../cppcx/platform-object-class.md)^。 还原原始类型更高版本通过指定中的类型参数的自变量作为[weakreference::\<T >](#resolve)成员函数。  
   
-## <a name="booltype"></a>WeakReference::operator BoolType
+## <a name="booltype"></a> WeakReference::operator BoolType
 实现 WeakReference 类的安全 bool 模式。 不在你的代码中显式调用。  
   
 ### <a name="syntax"></a>语法  
@@ -79,7 +81,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 BoolType BoolType()  
 ```  
 
-## <a name="resolve"></a>Weakreference:: Resolve 方法 （平台命名空间）
+## <a name="resolve"></a> Weakreference:: Resolve 方法 （平台命名空间）
 如果对象不再存在，则返回原始 ref 类的句柄或 `nullptr`。  
   
 ### <a name="syntax"></a>语法  
@@ -113,7 +115,7 @@ if (bar != nullptr)
  注意类型参数是 T 而非 T^。  
   
  
-## <a name="ctor"></a>Weakreference:: Weakreference 构造函数
+## <a name="ctor"></a> Weakreference:: Weakreference 构造函数
 提供构造 WeakReference 的各种方式。  
   
 ### <a name="syntax"></a>语法  

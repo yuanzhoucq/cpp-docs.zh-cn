@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fgetpos
+ms.topic: reference
+apiname:
+- fgetpos
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,22 +23,25 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: fgetpos
-dev_langs: C++
+f1_keywords:
+- fgetpos
+dev_langs:
+- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 418de3c365c2c42c1cfc41d386a1a823d7e8cfad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3740fdc7924e12fc9eeb2de4ab108ad376c764da
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgetpos"></a>fgetpos
 获取流的文件位置指示器。  
@@ -63,7 +68,7 @@ int fgetpos(
 ## <a name="remarks"></a>备注  
  `fgetpos` 函数获取 `stream` 参数的文件位置指示器的当前值，并将其存储在 `pos` 指向的对象中。 `fsetpos` 函数可以稍后使用存储在 `pos` 中的信息来重置在调用 `fgetpos` 时 `stream` 参数的指针所指向的位置。 `pos` 值以内部格式存储，且仅供 `fgetpos` 和 `fsetpos` 使用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
 |--------------|---------------------|  

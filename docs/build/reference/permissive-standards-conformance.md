@@ -1,28 +1,31 @@
 ---
 title: "-宽松-（标准一致性） |Microsoft 文档"
 ms.date: 11/11/2016
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: article
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /permissive compiler options [C++]
 - -permissive compiler options [C++]
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ 宽松-（标准一致性）
 
@@ -34,7 +37,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="remarks"></a>备注
 
-你可以使用**/ 宽松-**编译器选项来指定符合标准的编译器行为。 此选项禁用宽松行为，并设置[/Zc](../../build/reference/zc-conformance.md)严格一致性的编译器选项。 在 IDE 中，此选项还使 IntelliSense 引擎下划线不符合要求代码。 
+你可以使用**/ 宽松-**编译器选项来指定符合标准的编译器行为。 此选项禁用宽松行为，并设置[/Zc](../../build/reference/zc-conformance.md)严格一致性的编译器选项。 在 IDE 中，此选项还使 IntelliSense 引擎下划线不符合要求代码。
 
 默认情况下， **/ 宽松-**在通过 Visual Studio 2017 版本 15.5 和更高版本创建的新项目中设置选项。 未设置默认情况下，在早期版本中。 当将选项设置，编译器将生成诊断错误或警告非标准语言构造时是否检测到你的代码时，在预包括一些常见的 bug 的 C + + 11 代码。
 
@@ -413,7 +416,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. 打开你的项目的**属性页**对话框。
 
-1. 下**配置属性**，展开**C/c + +**文件夹，然后选择**命令行**属性页。
+1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
 1. 输入**/ 宽松-**中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
 

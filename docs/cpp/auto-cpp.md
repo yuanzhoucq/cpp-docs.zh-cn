@@ -4,21 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
+f1_keywords:
+- auto_CPP
+- auto
+helpviewer_keywords:
+- auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6721aa5860f23025b8b6c762cc7e5f4d6178228d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="auto-c"></a>自动 （c + +）
 从其初始化表达式中推导声明的变量的类型。  
@@ -128,12 +136,12 @@ int main()
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|`auto` 关键字不能与任何其他类型说明符组合。|  
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|使用 `auto` 关键字声明的符号必须具有初始值设定项。|  
 |[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|你错误地使用了 `auto` 关键字来声明类型。 例如，声明了方法返回类型或数组。|  
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)， [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|不能使用 `auto` 关键字声明参数或模板参数。|  
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|不能使用 `auto` 关键字声明参数或模板参数。|  
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|不能使用 `auto` 关键字声明的方法或模板参数。|  
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符号初始化之前无法使用。 在实践中，这意味着无法使用变量来初始化自身。|  
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|无法强制转换为使用 `auto` 关键字声明的类型。|  
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|使用 `auto` 关键字声明的声明符列表中的所有符号必须解析为相同的类型。 有关详细信息，请参阅[声明和定义](declarations-and-definitions-cpp.md)。|  
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)， [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../windows/typeid-cpp-component-extensions.md)运算符不能应用于使用声明的符号`auto`关键字。|  
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../windows/typeid-cpp-component-extensions.md)运算符不能应用于使用声明的符号`auto`关键字。|  
   
 ## <a name="examples"></a>示例  
  这些代码片段阐释了可使用 `auto` 关键字的一些方法。  

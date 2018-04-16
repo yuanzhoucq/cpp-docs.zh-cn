@@ -1,20 +1,22 @@
 ---
-title: "如何： 使用正则表达式提取数据字段 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用正则表达式提取数据字段 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], extracting data from
 - formatted strings [C++]
 - regular expressions [C++], extracting data fields
 - data [C++], extracting from strings
 ms.assetid: b581d9b6-630e-48fa-94fe-20b0f7b89b06
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen

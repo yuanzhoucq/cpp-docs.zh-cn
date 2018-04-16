@@ -1,41 +1,43 @@
 ---
-title: "Irowsetimpl:: M_breset |Microsoft 文档"
+title: IRowsetImpl::m_bReset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.IRowsetImpl.m_bReset
 - IRowsetImpl.m_bReset
 - m_bReset
 - IRowsetImpl::m_bReset
 - ATL::IRowsetImpl::m_bReset
-dev_langs: C++
-helpviewer_keywords: m_bReset
+dev_langs:
+- C++
+helpviewer_keywords:
+- m_bReset
 ms.assetid: d423f9f3-4d48-4d0c-b152-684c81a0b34e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4cd9840b37157aed050bb71d48a275efd2849035
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3605c23ab14cb769ede5a1aec263beb957e1666f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimplmbreset"></a>IRowsetImpl::m_bReset
 一个位标志，用于确定是否行集上定义的光标位置。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 unsigned m_bReset:1;  
   
 ```  

@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Update |Microsoft 文档"
+title: CRowset::Update | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CRowset.Update
 - ATL.CRowset.Update
@@ -16,34 +17,33 @@ f1_keywords:
 - CRowset::Update
 - CRowset<TAccessor>.Update
 - ATL::CRowset::Update
-dev_langs: C++
-helpviewer_keywords: Update method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Update method
 ms.assetid: cd5fedc8-2b85-4cb8-8c40-c79576316903
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26cbada107bbefe4c5e32243f2761193b1912a0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b9acbe5df9d0ccf1a1798f19e41ea9fd1cc0ada
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetupdate"></a>CRowset::Update
 传输任何挂起的更改的当前行自从上次提取或**更新**对其调用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT Update(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT Update(DBCOUNTITEM* pcRows = NULL,   
    HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
-) throw( );  
+   DBROWSTATUS* pStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -70,5 +70,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
  [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [Crowset:: Updateall](../../data/oledb/crowset-updateall.md)   
+ [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)   
  [CRowset::SetData](../../data/oledb/crowset-setdata.md)

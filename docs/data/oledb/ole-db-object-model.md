@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB 对象模型
 OLE DB 对象模型包含下列对象或组件。 第一个四个对象或列出的组件 （数据源、 会话、 命令和行集），可以连接到数据源并查看它。 与显示时使用的数据相关的其余部分，从访问器中，开始。  
@@ -55,7 +57,7 @@ OLE DB 对象模型包含下列对象或组件。 第一个四个对象或列出
 ## <a name="accessors"></a>访问器  
  仅 OLE DB 使用访问器的概念。 访问器中描述如何将数据存储在使用者。 它包含行集字段 （列） 和您在使用者中声明的数据成员之间的一组 （称为列映射） 的绑定。  
   
-##  <a name="vcconoledbcomponents_transactions"></a>事务  
+##  <a name="vcconoledbcomponents_transactions"></a> 事务  
  当提交或中止在非最低级别的嵌套的事务时，需要使用事务对象。 事务是由 ACID 测试定义不可分的工作单元。 ACID 代表：  
   
 -   原子性： 不能划分为较小工作单元。  

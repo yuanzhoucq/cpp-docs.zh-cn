@@ -1,43 +1,40 @@
 ---
-title: "COLUMN_ENTRY_LENGTH |Microsoft 文档"
+title: COLUMN_ENTRY_LENGTH | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_LENGTH
-dev_langs: C++
-helpviewer_keywords: COLUMN_ENTRY_LENGTH macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_ENTRY_LENGTH macro
 ms.assetid: 1758babf-204c-4d1d-b82a-f9a607072e9a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e24c3e97efed6fb2d338e9b33910fd1aab1a893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fccf6da8ada00197f6ce3dce51de1371cfbc6f08
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnentrylength"></a>COLUMN_ENTRY_LENGTH
 表示行集上与数据库中的特定列的绑定。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_ENTRY_LENGTH(  
-nOrdinal  
-,   
-data  
-,   
-length  
- )  
+```cpp
+COLUMN_ENTRY_LENGTH(nOrdinal, data, length)  
   
 ```  
   

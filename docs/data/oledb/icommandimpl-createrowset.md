@@ -4,47 +4,46 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ICommandImpl::CreateRowset
 - ICommandImpl.CreateRowset
 - CreateRowset
-dev_langs: C++
-helpviewer_keywords: CreateRowset method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateRowset method
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4fecb21b35e3941862cc38edc28a2b1e25ff6bcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8266906762021e30abba87b6aff8f39bd611f70
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
 由调用[执行](../../data/oledb/icommandimpl-execute.md)创建单个行集。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      template <class   
-      RowsetClass  
+```cpp
+      template template <class RowsetClass  
       >  
-HRESULT CreateRowset(  
-   IUnknown* pUnkOuter,  
+HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
    DBROWCOUNT* pcRowsAffected,  
    IUnknown** ppRowset,  
-   RowsetClass*& pRowsetObj   
-);  
+   RowsetClass*& pRowsetObj);  
 ```  
   
 #### <a name="parameters"></a>参数  

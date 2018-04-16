@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: R6019
-dev_langs: C++
-helpviewer_keywords: R6019
+f1_keywords:
+- R6019
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0e027907476eeacf10515556544160e402cd0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4ab7054bdce76aa1dd0b443993cfac8eeb8ecc7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-runtime-error-r6019"></a>C 运行时错误 R6019
 无法打开控制台设备  
@@ -37,4 +42,4 @@ ms.lasthandoff: 12/21/2017
   
  **程序员提供的的信息**  
   
- 发生此错误是因为应用程序调用的控制台函数，但操作系统没有授予对控制台的访问。 除在调试模式下，控制台函数通常不允许在 Windows 应用商店应用。 如果你的应用需要管理员特权才能运行，请确保它安装默认情况下以管理员身份运行。
+ 发生此错误是因为应用程序调用的控制台函数，但操作系统没有授予对控制台的访问。 除在调试模式下，控制台函数通常不允许 Microsoft 应用商店应用中。 如果你的应用需要管理员特权才能运行，请确保它安装默认情况下以管理员身份运行。

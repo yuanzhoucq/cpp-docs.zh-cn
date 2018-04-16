@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetReportMode
+ms.topic: reference
+apiname:
+- _CrtSetReportMode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 45319f7584d0c18533433d01b3467ccfeecac8df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 指定由 `_CrtDbgReport` 生成的特定报告类型以及调用 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 的任何宏（例如 [_ASSERT、_ASSERTE、_ASSERT_EXPR 宏](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)，[_ASSERT、_ASSERTE、_ASSERT_EXPR 宏](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)，[_RPT、_RPTF、_RPTW、_RPTFW 宏](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)和 [_RPT、_RPTF、_RPTW、_RPTFW 宏](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)）的目标（仅限调试版本）。  
@@ -100,9 +104,9 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
   
  此外，可以分别控制报告模式和每个报告类型的模式。 例如，可以指定将 `_CRT_WARN` 的 `reportType` 发送到输出调试字符串，而使用调试消息窗口显示 `_CRT_ASSERT`，并将其发送到 `stderr`，如前所述。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   

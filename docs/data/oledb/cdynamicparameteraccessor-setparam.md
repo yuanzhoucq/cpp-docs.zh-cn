@@ -1,12 +1,13 @@
 ---
-title: "Cdynamicparameteraccessor:: Setparam |Microsoft 文档"
+title: CDynamicParameterAccessor::SetParam | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CDynamicParameterAccessor::SetParam
 - ATL::CDynamicParameterAccessor::SetParam<ctype>
@@ -16,42 +17,39 @@ f1_keywords:
 - CDynamicParameterAccessor:SetParam
 - CDynamicParameterAccessor::SetParam<ctype>
 - CDynamicParameterAccessor::SetParam
-dev_langs: C++
-helpviewer_keywords: SetParam method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b092dad600c1698d3cbe550f16e05a8307f030fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3fcedc0d54e5b25eb4490425253f6c1bfd139a85
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
 设置使用指定的 （非字符串） 数据的参数缓冲区。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      template < class   
-      ctype >  
-bool SetParam(  
-   DBORDINAL nParam,  
-   const ctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK  
-) throw( );  
-template < class ctype >  
-bool SetParam(  
-   TCHAR* pParamName,  
-   const ctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK  
-) throw( );  
+```cpp
+template <class ctype>
+bool SetParam(DBORDINAL nParam,  
+               constctype* pData,  
+               DBSTATUS status = DBSTATUS_S_OK) throw();  
+
+template <class ctype>  
+bool SetParam(TCHAR* pParamName,  
+               const ctype* pData,  
+               DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

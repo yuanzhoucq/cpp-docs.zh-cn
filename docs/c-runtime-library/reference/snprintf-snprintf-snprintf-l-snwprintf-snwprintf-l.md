@@ -1,12 +1,13 @@
 ---
-title: "snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l | Microsoft 文档"
-ms.custom: 
+title: snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: ''
+ms.topic: reference
 apiname:
 - _snwprintf
 - _snprintf
@@ -24,6 +25,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _snprintf
@@ -38,7 +40,8 @@ f1_keywords:
 - _snprintf_l
 - _snwprintf
 - _snwprintf_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - snwprintf_l function
 - sntprintf_l function
@@ -54,16 +57,17 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0441f2debf2e030702727c92a6e27bea63cb0564
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92a4939c9fc71245528198c686ca9ed7024c858d
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 将格式化的数据写入字符串。 提供这些函数的更多安全版本，请参阅 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。  
@@ -176,7 +180,7 @@ int _snwprintf_l(
   
  从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始， `snprintf` 不再等于 `_snprintf`。 `snprintf` 函数行为现在符合 C99 标准。  
   
- `_snwprintf` 是 `_snprintf`的宽字符版本； `_snwprintf` 的指针参数是宽字符串。 `_snwprintf` 中对编码错误的检测可能与 `_snprintf` 中不同。 `_snwprintf`就像 `swprintf`，将输出写入字符串，而非 `FILE`类型的目标。  
+ `_snwprintf` 是 `_snprintf`的宽字符版本；`_snwprintf` 的指针参数是宽字符串。 `_snwprintf` 中对编码错误的检测可能与 `_snprintf` 中不同。 `_snwprintf` 就像 `swprintf`，将输出写入字符串，而非 `FILE` 类型的目标。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前线程区域设置。  
   
@@ -189,9 +193,9 @@ int _snwprintf_l(
 |`_sntprintf`|`_snprintf`|`_snprintf`|`_snwprintf`|  
 |`_sntprintf_l`|`_snprintf_l`|`_snprintf_l`|`_snwprintf_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h>|  
 |`_snwprintf`, `_snwprintf_l`|\<stdio.h> 或 \<wchar.h>|  
@@ -311,7 +315,7 @@ Output:
 character count = 69  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   

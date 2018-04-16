@@ -1,46 +1,46 @@
 ---
-title: "Cmanualaccessor:: Createaccessor |Microsoft 文档"
+title: CManualAccessor::CreateAccessor | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CManualAccessor::CreateAccessor
 - CreateAccessor
 - ATL.CManualAccessor.CreateAccessor
 - CManualAccessor.CreateAccessor
 - CManualAccessor::CreateAccessor
-dev_langs: C++
-helpviewer_keywords: CreateAccessor method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateAccessor method
 ms.assetid: 594c8d6d-b49a-4818-a9a5-81c8115d4e42
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f313e6d2b13a03a91295c75d52e4e77d5dfda22b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b9edf987baf9ff2470ed536a1c657025766f23
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmanualaccessorcreateaccessor"></a>CManualAccessor::CreateAccessor
 为列绑定结构分配内存和初始化列数据成员。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT CreateAccessor(   
-   int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize    
-) throw( );  
+```
+HRESULT CreateAccessor(int nBindEntries,   
+  void* pBuffer,   
+   DBLENGTH nBufferSize) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

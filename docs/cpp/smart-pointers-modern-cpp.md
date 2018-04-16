@@ -1,24 +1,27 @@
 ---
-title: "智能指针 （现代 c + +） |Microsoft 文档"
-ms.custom: 
+title: 智能指针 （现代 c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-language
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 在现代 c + + 编程中，标准库包含*智能指针*、 用于确保程序不存在内存和资源泄漏且是异常安全。  
@@ -74,7 +77,7 @@ ms.lasthandoff: 12/21/2017
  使用这些智能指针作为将指针封装为纯旧 C++ 对象 (POCO) 的首选项。  
   
 -   `unique_ptr`   
-     只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。 替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr`小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 c + + 标准库集合的检索。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。  
+     只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。 替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 c + + 标准库集合的检索。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。  
   
 -   `shared_ptr`   
      采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 shared_ptr 实例](../cpp/how-to-create-and-use-shared-ptr-instances.md)和[shared_ptr 类](../standard-library/shared-ptr-class.md)。  
@@ -118,7 +121,7 @@ ms.lasthandoff: 12/21/2017
  [CAutoPtrList 类](../atl/reference/cautoptrlist-class.md)  
  封装用于操作 `CAutoPtr` 节点列表的方法的类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)   

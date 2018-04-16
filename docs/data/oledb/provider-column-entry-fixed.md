@@ -1,38 +1,40 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_FIXED |Microsoft 文档"
+title: PROVIDER_COLUMN_ENTRY_FIXED | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY_FIXED
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY_FIXED macro
+ms.topic: reference
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY_FIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY_FIXED macro
 ms.assetid: 71f9c9aa-56a0-488b-96ba-5c72da9c71d0
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6362feced77174238a773678de11a781b0729211
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fe2cce80d08f0a72aab8681f64b7a2fb1f2b2cc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="providercolumnentryfixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 表示提供程序支持的特定列。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY_FIXED(  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY_FIXED(name  
 , ordinal, dbtype, member )  
 ```  
   

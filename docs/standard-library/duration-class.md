@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -14,19 +15,22 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], duration
-ms.workload: cplusplus
-ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], duration
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 742c6acf9f404275fbf9c74a55abd661224d5bc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="duration-class"></a>duration 类
 描述保存“*时间间隔*”（即两个时间点之间的运行时间）的类型。  
@@ -58,7 +62,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[持续时间](#duration)|构造 `duration` 对象。|  
+|[duration](#duration)|构造 `duration` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -67,7 +71,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[count](#count)|返回时间间隔内的时钟计时周期数。|  
 |[max](#max)|静态。 返回模板参数 `Ref` 的最大允许值。|  
 |[min](#min)|静态。 返回模板参数 `Ref` 的最低允许值。|  
-|[零](#zero)|静态。 实际返回 `Rep`(0)。|  
+|[zero](#zero)|静态。 实际返回 `Rep`(0)。|  
   
 ### <a name="public-operators"></a>公共运算符  
   

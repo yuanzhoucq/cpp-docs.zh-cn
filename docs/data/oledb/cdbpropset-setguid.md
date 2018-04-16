@@ -1,46 +1,45 @@
 ---
-title: "Cdbpropset:: Setguid |Microsoft 文档"
+title: CDBPropSet::SetGUID | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
 - SetGUID
 - CDBPropSet::SetGUID
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: a4cce036-cf1f-4897-9712-7b01eaf887ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e0fed876cabd9a197d022a35829174bcc7e43e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edf9720e0f116060a06ffa56bf5c3e6c4c8691e1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdbpropsetsetguid"></a>CDBPropSet::SetGUID
 集**guidPropertySet**字段**DBPROPSET**结构。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      void SetGUID(   
-   const GUID& guid    
-) throw( );  
+```cpp
+      void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>参数  

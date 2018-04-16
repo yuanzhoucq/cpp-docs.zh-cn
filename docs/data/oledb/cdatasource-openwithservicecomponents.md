@@ -4,46 +4,46 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CDataSource::OpenWithServiceComponents
 - OpenWithServiceComponents
 - CDataSource.OpenWithServiceComponents
-dev_langs: C++
-helpviewer_keywords: OpenWithServiceComponents method
+dev_langs:
+- C++
+helpviewer_keywords:
+- OpenWithServiceComponents method
 ms.assetid: 49c1d037-36ae-4fde-8e54-ced623abe1a9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87ccbbd178de3e8a724e65a04a04319a90b7a311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0967888557d1a62952e0d1f0c23ee83b7d03550b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdatasourceopenwithservicecomponents"></a>CDataSource::OpenWithServiceComponents
 使用 oledb32.dll 中的服务组件打开数据源对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT OpenWithServiceComponents (  
-   const CLSID clsid,  
+```cpp
+HRESULT OpenWithServiceComponents (const CLSID clsid,  
    DBPROPSET* pPropset = NULL,  
-   ULONG ulPropSets = 1   
-);  
-HRESULT OpenWithServiceComponents (  
-   LPCSTR szProgID,  
+   ULONG ulPropSets = 1);  
+
+
+HRESULT OpenWithServiceComponents (LPCSTR szProgID,  
    DBPROPSET* pPropset = NULL,  
-   ULONG ulPropSets = 1   
-);  
+   ULONG ulPropSets = 1);  
 ```  
   
 #### <a name="parameters"></a>参数  

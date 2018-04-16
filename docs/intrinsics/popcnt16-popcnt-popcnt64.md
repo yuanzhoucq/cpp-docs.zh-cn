@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __popcnt64
 - __popcnt
 - __popcnt16
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - popcnt instruction
 - __popcnt16
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e60a412dc24f685fd375ebc19c109b2bee0e2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce622f6283036dc3bde24f526da4c5256474ce00
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 **Microsoft 专用**  
@@ -103,7 +106,7 @@ __popcnt16(0xff) = 8
 __popcnt16(0xffff) = 16  
 __popcnt(0x0) = 0  
 __popcnt(0xff) = 8  
-__oopcnt(0xffff) = 16  
+__popcnt(0xffff) = 16  
 __popcnt(0xffffffff) = 32  
 ```  
   

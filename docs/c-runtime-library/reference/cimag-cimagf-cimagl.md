@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cimag
 - cimagf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/cimagf
 - complex/cimagl
 - cimag
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cimag function
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b499786cbcb1516fb9746d69c7e124f14d00f011
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9802a682193a0ef805f4a6964bf0aa1682a7619b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
 检索复数的虚部。  
@@ -83,9 +85,9 @@ long double cimagl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此可以调用采用 `_Fcomplex` 或 `_Lcomplex` 值的 `cimag` 的重载，并返回 `float` 或 `long double` 值。 在 C 程序中，`cimag` 始终采用 `_Dcomplex` 值并返回 `double` 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|C 标头|C++ 标头|  
+|例程|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`cimag`,               `cimagf`, `cimagl`|\<complex.h>|\<ccomplex>|  
   

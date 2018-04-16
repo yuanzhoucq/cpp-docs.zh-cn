@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 你可以随意使用常规 C 样式数组或[std:: array](../standard-library/array-class-stl.md)在 C + + /cli CX 程序 (尽管[std:: vector](../standard-library/vector-class.md)通常是更好的选择)，但在元数据中发布任何 API 中，你必须将 C 样式数组转换或矢量到[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)具体取决于如何使用的类型。 [Platform::Array](../cppcx/platform-array-class.md) 类型既不像 [std::vector](../standard-library/vector-class.md)那样高效也不像它那样功能强大，因此，一般原则是，应避免在对数组元素执行大量操作的内部代码中使用该类型。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/21/2017
  [!code-cpp[cx_arrays#01](../cppcx/codesnippet/CPP/js-array/class1.cpp#01)]  
   
 ## <a name="receivearray-pattern"></a>ReceiveArray 模式  
- 在 ReceiveArray 模式中，客户端代码声明一个数组，然后将数组传递给为其分配内存的方法并初始化它。 C++ 输入参数类型为指向乘幂号的指针： `Array<T>^*`。 下面的示例演示如何在 JavaScript 中声明一个数组对象并将其传递给一个 C++ 函数，该函数分配内存，初始化元素，并将其返回到 JavaScript。 JavaScript 将分配的数组视为返回值，而 C++ 将其视为输出参数。  
+ 在 ReceiveArray 模式中，客户端代码声明一个数组，然后将数组传递给为其分配内存的方法并初始化它。 C++ 输入参数类型为指向乘幂号的指针：`Array<T>^*`。 下面的示例演示如何在 JavaScript 中声明一个数组对象并将其传递给一个 C++ 函数，该函数分配内存，初始化元素，并将其返回到 JavaScript。 JavaScript 将分配的数组视为返回值，而 C++ 将其视为输出参数。  
   
  [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]  
   

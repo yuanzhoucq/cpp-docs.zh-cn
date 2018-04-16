@@ -1,28 +1,32 @@
 ---
-title: "BEGIN_ACCESSOR_MAP |Microsoft 文档"
+title: BEGIN_ACCESSOR_MAP | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BEGIN_ACCESSOR_MAP
-dev_langs: C++
-helpviewer_keywords: BEGIN_ACCESSOR_MAP macro
+ms.topic: reference
+f1_keywords:
+- BEGIN_ACCESSOR_MAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR_MAP macro
 ms.assetid: e6d6e3a4-62fa-4e49-8c53-caf8c9d20091
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ff08fd95e9e84d47562a5fafb8bf7be04e41ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fd9684d3ab428ffa2e874f781208812d1ad12fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="beginaccessormap"></a>BEGIN_ACCESSOR_MAP
 标记取值函数映射条目的开始。  
@@ -30,13 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-BEGIN_ACCESSOR_MAP(  
-x  
-,   
-num  
- )  
-  
+BEGIN_ACCESSOR_MAP(x, num)  
 ```  
   
 #### <a name="parameters"></a>参数  

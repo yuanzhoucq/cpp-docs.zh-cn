@@ -1,45 +1,40 @@
 ---
-title: "BLOB_ENTRY |Microsoft 文档"
+title: BLOB_ENTRY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: BLOB_ENTRY
-dev_langs: C++
-helpviewer_keywords: BLOB_ENTRY macro
+ms.topic: reference
+f1_keywords:
+- BLOB_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_ENTRY macro
 ms.assetid: 89e40678-0869-49ed-b502-0fa2630a9081
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bf614851612d5bbb32ef0b6431153d5240007018
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46a2a095b08640701630647ca4fe916926085c3d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="blobentry"></a>BLOB_ENTRY
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-BLOB_ENTRY(  
-nOrdinal  
-,  
- IID  
-,   
-flags  
-,   
-data  
- )  
+```cpp
+BLOB_ENTRY(nOrdinal, IID, flags, data)  
   
 ```  
   

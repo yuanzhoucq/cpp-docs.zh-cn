@@ -4,37 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.IColumnsInfoImpl<T>
 - ATL::IColumnsInfoImpl
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-dev_langs: C++
-helpviewer_keywords: IColumnsInfoImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IColumnsInfoImpl class
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18d23120a4a84f9d637a50e379a579389354ff08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e775e0836d27cf055990a2e9bc3bf2f07e61225e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 类
 提供的实现[IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)接口。  
   
-## <a name="syntax"></a>语法  
-  
-```  
+## <a name="syntax"></a>语法
+
+```cpp
 template <class T>  
 class ATL_NO_VTABLE IColumnsInfoImpl :   
    public IColumnsInfo,    

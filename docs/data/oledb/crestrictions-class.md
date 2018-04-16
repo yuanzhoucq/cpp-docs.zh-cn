@@ -4,44 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CRestrictions
 - CRestrictions
 - ATL.CRestrictions
-dev_langs: C++
-helpviewer_keywords: CRestrictions class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 23b01a776a624f0fa463c7071e164b70111b2e8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e68234f3a93cacf22c3abb0c4181a938b3f1dd6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 泛型类，您可以指定架构行集的限制。  
   
-## <a name="syntax"></a>语法  
-  
-```  
-template <   
-   class T,   
-   short nRestrictions,   
-   const GUID* pguid   
->  
-class CRestrictions : public CSchemaRowset <   
-   T,   
-   nRestrictions   
->  
+## <a name="syntax"></a>语法
+
+```cpp
+template <class T, short nRestrictions, const GUID* pguid>  
+class CRestrictions : 
+        public CSchemaRowset <T, nRestrictions>  
 ```  
   
 #### <a name="parameters"></a>参数  

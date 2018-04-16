@@ -1,10 +1,13 @@
 ---
 title: "/Zc:ternary （强制实施条件运算符规则） |Microsoft 文档"
-ms.date: 1/12/2018
-ms.technology: cpp-tools
+ms.date: 3/06/2018
+ms.technology:
+- cpp-tools
 ms.topic: article
-f1_keywords: /Zc:ternary
-dev_langs: C++
+f1_keywords:
+- /Zc:ternary
+dev_langs:
+- C++
 helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
@@ -12,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c4f4e17d3cf72284ec68cf10e75824722d5440
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary （强制实施条件运算符规则）
 
@@ -30,7 +33,7 @@ ms.lasthandoff: 01/17/2018
 
 Visual Studio 版本 15.3 支持编译器的 c + + 标准的条件 （或三元） 运算符 (**？:**) 行为。 C + + 标准要求的任一操作数是相同类型和 cv 限定，或只有一个操作数可以明确地转换为相同的类型和与其他的 cv 限定或 throw 表达式的一个或两个操作数。 在 Visual Studio 版本 15.5 之前的版本中，编译器允许由标准被视为不明确的转换。 当**/Zc:ternary**指定选项，编译器符合标准，并拒绝不满足用于匹配的类型和的第二个和第三个操作数的 cv 限定的规则的代码。
 
-**/Zc:ternary**选项默认处于关闭状态。 使用**/Zc:ternary**以启用符合标准行为，或**/Zc:ternary-**显式指定以前的不符合要求编译器行为。 [/ 宽松-](permissive-standards-conformance.md)选项使**/Zc:ternary**。 
+**/Zc:ternary**选项默认处于关闭状态。 使用**/Zc:ternary**以启用符合标准行为，或**/Zc:ternary-**显式指定以前的不符合要求编译器行为。 [/ 宽松-](permissive-standards-conformance.md)选项隐式启用此选项，但它可以通过重写**/Zc:ternary-**。
 
 ### <a name="examples"></a>示例
 

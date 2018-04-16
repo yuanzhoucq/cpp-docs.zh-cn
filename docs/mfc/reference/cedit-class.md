@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -54,7 +55,8 @@ f1_keywords:
 - AFXWIN/CEdit::SetTabStops
 - AFXWIN/CEdit::ShowBalloonTip
 - AFXWIN/CEdit::Undo
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CEdit [MFC], CEdit
 - CEdit [MFC], CanUndo
@@ -101,16 +103,17 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4418f20b267218b761dd6637762df1b420e9ac6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -184,19 +187,19 @@ class CEdit : public CWnd
   
  构造可以是派生自类中的一步过程`CEdit`。 编写派生的类和调用构造函数**创建**从构造函数中。  
   
- `CEdit`继承中的重要功能`CWnd`。 若要设置和检索文本从`CEdit`对象，请使用`CWnd`成员函数[SetWindowText](cwnd-class.md#setwindowtext)和[GetWindowText](cwnd-class.md#getwindowtext)，编辑的全部内容的 set 或 get 控制，即使它是一个多行控件。 由 \r\n 字符序列分隔的多行控件中的文本行。 此外，如果多行编辑控件，获取和设置控件的文本的一部分调用`CEdit`成员函数[GetLine](#getline)， [SetSel](#setsel)， [GetSel](#getsel)，和[ReplaceSel](#replacesel)。  
+ `CEdit` 继承中的重要功能`CWnd`。 若要设置和检索文本从`CEdit`对象，请使用`CWnd`成员函数[SetWindowText](cwnd-class.md#setwindowtext)和[GetWindowText](cwnd-class.md#getwindowtext)，编辑的全部内容的 set 或 get 控制，即使它是一个多行控件。 由 \r\n 字符序列分隔的多行控件中的文本行。 此外，如果多行编辑控件，获取和设置控件的文本的一部分调用`CEdit`成员函数[GetLine](#getline)， [SetSel](#setsel)， [GetSel](#getsel)，和[ReplaceSel](#replacesel)。  
   
  如果你想要处理到其父发送的编辑控件的 Windows 通知消息 (通常从派生的类`CDialog`)，将消息映射条目和消息处理程序成员函数添加到每条消息的父类。  
   
  每个消息映射条目采用以下形式：  
   
- **ON_**通知**(** *id、 f x n***)**  
+ **ON_**通知**(** *id、 f x n * * *)**  
   
  其中`id`指定发送通知，编辑控件的子窗口 ID 和`memberFxn`是父成员函数编写以处理通知的名称。  
   
  父元素的函数原型如下所示：  
   
- **afx_msg** void f x n **（);**  
+ **afx_msg** void memberFxn **( );**  
   
  以下是潜在的消息映射项和将给父级发送的用例的说明的列表：  
   
@@ -242,7 +245,7 @@ class CEdit : public CWnd
 ## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
-##  <a name="canundo"></a>CEdit::CanUndo  
+##  <a name="canundo"></a>  CEdit::CanUndo  
  调用此函数可确定是否可以撤消上一个编辑操作。  
   
 ```  
@@ -258,7 +261,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::Undo](#undo)。  
   
-##  <a name="cedit"></a>CEdit::CEdit  
+##  <a name="cedit"></a>  CEdit::CEdit  
  构造 `CEdit` 对象。  
   
 ```  
@@ -271,7 +274,7 @@ CEdit();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
-##  <a name="charfrompos"></a>CEdit::CharFromPos  
+##  <a name="charfrompos"></a>  CEdit::CharFromPos  
  调用此函数可检索的从零开始的行和最近在此指定的点的字符的字符索引`CEdit`控件  
   
 ```  
@@ -295,7 +298,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
-##  <a name="clear"></a>CEdit::Clear  
+##  <a name="clear"></a>  CEdit::Clear  
  调用此函数可删除 （清除） 当前所选内容 （如果有） 中的编辑控件。  
   
 ```  
@@ -312,7 +315,7 @@ void Clear();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
-##  <a name="copy"></a>CEdit::Copy  
+##  <a name="copy"></a>  CEdit::Copy  
  调用此函数可对若要复制当前所选内容 （如果有） 到剪贴板中的编辑控件中**CF_TEXT**格式。  
   
 ```  
@@ -325,7 +328,7 @@ void Copy();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
-##  <a name="create"></a>CEdit::Create  
+##  <a name="create"></a>  CEdit::Create  
  创建 Windows 编辑控件并将其附加到`CEdit`对象。  
   
 ```  
@@ -338,7 +341,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  `dwStyle`  
- 指定编辑控件的样式。 应用的任意组合[编辑样式](edit-styles.md)到控件。  
+ 指定编辑控件的样式。 应用的任意组合[编辑样式](styles-used-by-mfc.md#edit-styles)到控件。  
   
  `rect`  
  指定编辑控件的大小和位置。 可以是`CRect`对象或`RECT`结构。  
@@ -359,11 +362,11 @@ virtual BOOL Create(
   
  默认情况下，通过处理这些消息的消息[OnNcCreate](cwnd-class.md#onnccreate)， [OnNcCalcSize](cwnd-class.md#onnccalcsize)， [OnCreate](cwnd-class.md#oncreate)，和[OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo)成员函数在`CWnd`基类。 若要扩展的默认消息处理，从派生类`CEdit`、 将消息映射添加到新的类中，和重写上面的消息处理程序成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
   
- 将应用以下[窗口样式](window-styles.md)向一个编辑控件。  
+ 将应用以下[窗口样式](styles-used-by-mfc.md#window-styles)向一个编辑控件。  
   
 - **WS_CHILD**始终  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
 - **WS_DISABLED**很少  
   
@@ -374,7 +377,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
-##  <a name="cut"></a>CEdit::Cut  
+##  <a name="cut"></a>  CEdit::Cut  
  编辑控件中调用此函数可删除 （剪切） 当前所选内容 （如果有） 并将已删除的文本复制到剪贴板中**CF_TEXT**格式。  
   
 ```  
@@ -391,7 +394,7 @@ void Cut();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
-##  <a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer  
  编辑控件的撤消标志调用此函数可重置 （清除）。  
   
 ```  
@@ -408,7 +411,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
-##  <a name="fmtlines"></a>CEdit::FmtLines  
+##  <a name="fmtlines"></a>  CEdit::FmtLines  
  调用此函数可设置多行编辑控件内包含的软换行字符的打开或关闭。  
   
 ```  
@@ -427,14 +430,14 @@ BOOL FmtLines(BOOL bAddEOL);
   
  如果将只会响应 Windows`CEdit`对象是一个多行编辑控件。  
   
- `FmtLines`只会影响返回的缓冲区[GetHandle](#gethandle)和返回的文本[WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627)。 它不起作用的编辑控件中的文本的显示。  
+ `FmtLines` 只会影响返回的缓冲区[GetHandle](#gethandle)和返回的文本[WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627)。 它不起作用的编辑控件中的文本的显示。  
   
  有关详细信息，请参阅[EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
-##  <a name="getcuebanner"></a>CEdit::GetCueBanner  
+##  <a name="getcuebanner"></a>  CEdit::GetCueBanner  
  检索作为文本提示或提示，当为空时控件的编辑控件中显示的文本。  
   
 ```  
@@ -460,7 +463,7 @@ CString GetCueBanner() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572)消息，Windows SDK 中介绍。 有关详细信息，请参阅[Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695)宏。  
   
-##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine  
  调用此函数可确定在编辑控件中最顶层可见的行。  
   
 ```  
@@ -476,7 +479,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
-##  <a name="gethandle"></a>CEdit::GetHandle  
+##  <a name="gethandle"></a>  CEdit::GetHandle  
  调用此函数可检索为多行编辑控件中当前分配的内存的句柄。  
   
 ```  
@@ -501,7 +504,7 @@ HLOCAL GetHandle() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
-##  <a name="gethighlight"></a>CEdit::GetHighlight  
+##  <a name="gethighlight"></a>  CEdit::GetHighlight  
  获取当前的编辑控件中突出显示的文本的一系列中的第一个和最后一个字符的索引。  
   
 ```  
@@ -523,7 +526,7 @@ BOOL GetHighlight(
 ### <a name="remarks"></a>备注  
  此方法可发送[EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578)消息，Windows SDK 中介绍。  
   
-##  <a name="getlimittext"></a>CEdit::GetLimitText  
+##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  调用此成员函数可获取此文本限制`CEdit`对象。  
   
 ```  
@@ -544,7 +547,7 @@ UINT GetLimitText() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
-##  <a name="getline"></a>CEdit::GetLine  
+##  <a name="getline"></a>  CEdit::GetLine  
  调用此函数可从一个编辑控件中检索一行文本，并将其置于`lpszBuffer`。  
   
 ```  
@@ -566,7 +569,7 @@ int GetLine(
  指向接收一份行的缓冲区。 缓冲区的第一个单词必须指定的最大可以将复制到缓冲区的字符数。  
   
  `nMaxLength`  
- 指定的最大可以将复制到缓冲区的字节数。 `GetLine`将此值放在第一个单词的`lpszBuffer`之后再进行对 Windows 的调用。  
+ 指定的最大可以将复制到缓冲区的字节数。 `GetLine` 将此值放在第一个单词的`lpszBuffer`之后再进行对 Windows 的调用。  
   
 ### <a name="return-value"></a>返回值  
  实际复制的字节数。 返回值为 0，如果指定的行号`nIndex`大于编辑控件中的行数。  
@@ -579,7 +582,7 @@ int GetLine(
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::GetLineCount](#getlinecount)。  
   
-##  <a name="getlinecount"></a>CEdit::GetLineCount  
+##  <a name="getlinecount"></a>  CEdit::GetLineCount  
  调用此函数可检索的多行编辑控件中的行数。  
   
 ```  
@@ -590,14 +593,14 @@ int GetLineCount() const;
  一个包含多个行中的行数的整数编辑控件。 如果没有文本已输入到编辑控件，则返回值为 1。  
   
 ### <a name="remarks"></a>备注  
- `GetLineCount`仅处理由多个行编辑控件。  
+ `GetLineCount` 仅处理由多个行编辑控件。  
   
  有关详细信息，请参阅[EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
-##  <a name="getmargins"></a>CEdit::GetMargins  
+##  <a name="getmargins"></a>  CEdit::GetMargins  
  调用此成员函数可检索此编辑控件的左侧和右侧边距。  
   
 ```  
@@ -618,7 +621,7 @@ DWORD GetMargins() const;
 ### <a name="example"></a>示例  
   请参阅示例[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。  
   
-##  <a name="getmodify"></a>CEdit::GetModify  
+##  <a name="getmodify"></a>  CEdit::GetModify  
  调用此函数可确定是否已修改编辑控件的内容。  
   
 ```  
@@ -636,7 +639,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
-##  <a name="getpasswordchar"></a>CEdit::GetPasswordChar  
+##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar  
  调用此函数可检索时用户输入的文本编辑控件中显示的密码字符。  
   
 ```  
@@ -654,7 +657,7 @@ TCHAR GetPasswordChar() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
-##  <a name="getrect"></a>CEdit::GetRect  
+##  <a name="getrect"></a>  CEdit::GetRect  
  调用此函数可获取编辑控件的格式设置矩形。  
   
 ```  
@@ -675,7 +678,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::LimitText](#limittext)。  
   
-##  <a name="getsel"></a>CEdit::GetSel  
+##  <a name="getsel"></a>  CEdit::GetSel  
  调用此函数可获取的起始和结束字符位置的编辑控件，使用返回值或参数中的当前选择 （如果有）。  
   
 ```  
@@ -702,7 +705,7 @@ void GetSel(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
-##  <a name="hideballoontip"></a>CEdit::HideBalloonTip  
+##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip  
  隐藏任何与当前的编辑控件相关联的气球状提示。  
   
 ```  
@@ -715,7 +718,7 @@ BOOL HideBalloonTip();
 ### <a name="remarks"></a>备注  
  此函数将[EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604)消息，Windows SDK 中介绍。  
   
-##  <a name="limittext"></a>CEdit::LimitText  
+##  <a name="limittext"></a>  CEdit::LimitText  
  调用此函数可限制用户可以输入在编辑控件的文本的长度。  
   
 ```  
@@ -737,7 +740,7 @@ void LimitText(int nChars = 0);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
-##  <a name="linefromchar"></a>CEdit::LineFromChar  
+##  <a name="linefromchar"></a>  CEdit::LineFromChar  
  调用此函数可检索包含指定的字符索引的行的行号。  
   
 ```  
@@ -761,7 +764,7 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
-##  <a name="lineindex"></a>CEdit::LineIndex  
+##  <a name="lineindex"></a>  CEdit::LineIndex  
  调用此函数可检索的多行编辑控件内的行的字符索引。  
   
 ```  
@@ -785,7 +788,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
-##  <a name="linelength"></a>CEdit::LineLength  
+##  <a name="linelength"></a>  CEdit::LineLength  
  检索一个编辑控件中的行的长度。  
   
 ```  
@@ -813,7 +816,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::LineIndex](#lineindex)。  
   
-##  <a name="linescroll"></a>CEdit::LineScroll  
+##  <a name="linescroll"></a>  CEdit::LineScroll  
  调用此函数可滚动的多行编辑控件的文本。  
   
 ```  
@@ -834,14 +837,14 @@ void LineScroll(
   
  编辑控件不垂直滚动过的文本编辑控件中的最后一行。 如果当前行加上指定的行数`nLines`超过了总的编辑控件中的行数，以便编辑控件的最后一行滚动到编辑控件窗口的顶部，将调整值。  
   
- `LineScroll`可以使用水平滚动过去的任意行的最后一个字符。  
+ `LineScroll` 可以使用水平滚动过去的任意行的最后一个字符。  
   
  有关详细信息，请参阅[EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::GetFirstVisibleLine](#getfirstvisibleline)。  
   
-##  <a name="paste"></a>CEdit::Paste  
+##  <a name="paste"></a>  CEdit::Paste  
  调用此函数可将数据插入从剪贴板粘贴到`CEdit`的插入点处。  
   
 ```  
@@ -856,7 +859,7 @@ void Paste();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
-##  <a name="posfromchar"></a>CEdit::PosFromChar  
+##  <a name="posfromchar"></a>  CEdit::PosFromChar  
  调用此函数可获取在此给定的字符的位置 （左上角）`CEdit`对象。  
   
 ```  
@@ -881,7 +884,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::LineFromChar](#linefromchar)。  
   
-##  <a name="replacesel"></a>CEdit::ReplaceSel  
+##  <a name="replacesel"></a>  CEdit::ReplaceSel  
  调用此函数可将替换为指定的文本编辑控件中的当前选定`lpszNewText`。  
   
 ```  
@@ -905,7 +908,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::LineIndex](#lineindex)。  
   
-##  <a name="setcuebanner"></a>CEdit::SetCueBanner  
+##  <a name="setcuebanner"></a>  CEdit::SetCueBanner  
  设置显示为文本提示，或提示，编辑控件时控件为空的文本。  
   
 ```  
@@ -929,7 +932,7 @@ BOOL SetCueBanner(
  默认值为 `false`。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果此方法成功，则否则为`false`。  
+ `true` 如果此方法成功，则否则为`false`。  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639)消息，Windows SDK 中介绍。 有关详细信息，请参阅[Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703)宏。  
@@ -939,7 +942,7 @@ BOOL SetCueBanner(
   
  [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
-##  <a name="sethandle"></a>CEdit::SetHandle  
+##  <a name="sethandle"></a>  CEdit::SetHandle  
  调用此函数可设置为多行编辑控件将使用的本地内存的句柄。  
   
 ```  
@@ -957,7 +960,7 @@ void SetHandle(HLOCAL hBuffer);
   
  应用程序设置新的内存句柄之前，应使用[GetHandle](#gethandle)成员函数到当前的内存缓冲区中获取其句柄并释放该内存使用**LocalFree** Windows 函数。  
   
- `SetHandle`清除撤消缓冲区 ( [CanUndo](#canundo)成员函数则返回 0) 和内部修改标志 ( [GetModify](#getmodify)成员函数则返回 0)。 在重绘编辑控件窗口。  
+ `SetHandle` 清除撤消缓冲区 ( [CanUndo](#canundo)成员函数则返回 0) 和内部修改标志 ( [GetModify](#getmodify)成员函数则返回 0)。 在重绘编辑控件窗口。  
   
  你可以在对话框中使用此成员函数在多行编辑控件中的，仅当你已创建的对话框中**DS_LOCALEDIT**样式标志设置。  
   
@@ -969,7 +972,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
-##  <a name="sethighlight"></a>CEdit::SetHighlight  
+##  <a name="sethighlight"></a>  CEdit::SetHighlight  
  突出显示了一个在当前显示的文本范围的编辑控件。  
   
 ```  
@@ -988,7 +991,7 @@ void SetHighlight(
 ### <a name="remarks"></a>备注  
  此方法可发送[EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643)消息，Windows SDK 中介绍。  
   
-##  <a name="setlimittext"></a>CEdit::SetLimitText  
+##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  调用此成员函数可将此文本限制设置`CEdit`对象。  
   
 ```  
@@ -1011,7 +1014,7 @@ void SetLimitText(UINT nMax);
 ### <a name="example"></a>示例  
   请参阅示例[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。  
   
-##  <a name="setmargins"></a>CEdit::SetMargins  
+##  <a name="setmargins"></a>  CEdit::SetMargins  
  调用此方法以设置此编辑控件的左侧和右侧边距。  
   
 ```  
@@ -1037,7 +1040,7 @@ void SetMargins(
 ### <a name="example"></a>示例  
   请参阅示例[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。  
   
-##  <a name="setmodify"></a>CEdit::SetModify  
+##  <a name="setmodify"></a>  CEdit::SetModify  
  调用此函数可设置或清除编辑控件的已修改的标志。  
   
 ```  
@@ -1056,7 +1059,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::GetModify](#getmodify)。  
   
-##  <a name="setpasswordchar"></a>CEdit::SetPasswordChar  
+##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar  
  调用此函数可设置或删除时用户键入文本编辑控件中显示的密码字符。  
   
 ```  
@@ -1074,14 +1077,14 @@ void SetPasswordChar(TCHAR ch);
   
  当`SetPasswordChar`调用成员函数，`CEdit`将重绘使用由指定的字符的所有可见字符*ch*。  
   
- 如果使用编辑控件创建了[ES_PASSWORD](edit-styles.md)样式，默认的密码字符设置为星号 (  **\*** )。 如果删除此样式`SetPasswordChar`使用调用*ch*设置为 0。  
+ 如果使用编辑控件创建了[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)样式，默认的密码字符设置为星号 (  **\*** )。 如果删除此样式`SetPasswordChar`使用调用*ch*设置为 0。  
   
  有关详细信息，请参阅[EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
-##  <a name="setreadonly"></a>CEdit::SetReadOnly  
+##  <a name="setreadonly"></a>  CEdit::SetReadOnly  
  调用此函数可设置一个编辑控件的只读状态。  
   
 ```  
@@ -1096,14 +1099,14 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
  如果该操作成功，或 0 如果检测到错误发生，则为非 0。  
   
 ### <a name="remarks"></a>备注  
- 可通过测试找到当前设置[ES_READONLY](edit-styles.md)中的返回值标志[CWnd::GetStyle](cwnd-class.md#getstyle)。  
+ 可通过测试找到当前设置[ES_READONLY](styles-used-by-mfc.md#edit-styles)中的返回值标志[CWnd::GetStyle](cwnd-class.md#getstyle)。  
   
  有关详细信息，请参阅[EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
-##  <a name="setrect"></a>CEdit::SetRect  
+##  <a name="setrect"></a>  CEdit::SetRect  
  调用此函数可设置使用指定的坐标的矩形的尺寸。  
   
 ```  
@@ -1128,7 +1131,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
-##  <a name="setrectnp"></a>CEdit::SetRectNP  
+##  <a name="setrectnp"></a>  CEdit::SetRectNP  
  调用此函数可设置多行编辑控件的格式设置矩形。  
   
 ```  
@@ -1142,7 +1145,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="remarks"></a>备注  
  格式设置的矩形是大小的文本，这是大小的独立的编辑控件窗口限制矩形。  
   
- `SetRectNP`等同于`SetRect`成员函数，只不过编辑控件窗口不重绘。  
+ `SetRectNP` 等同于`SetRect`成员函数，只不过编辑控件窗口不重绘。  
   
  首次创建编辑控件时, 的格式设置的矩形是编辑控件窗口的客户端区域相同。 通过调用`SetRectNP`成员函数，大于或小于编辑控件的窗口，应用程序可以使格式设置的矩形。  
   
@@ -1155,7 +1158,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::SetRect](#setrect)。  
   
-##  <a name="setsel"></a>CEdit::SetSel  
+##  <a name="setsel"></a>  CEdit::SetSel  
  调用此函数可在编辑控件中选择某个范围的字符。  
   
 ```  
@@ -1189,7 +1192,7 @@ void SetSel(
 ### <a name="example"></a>示例  
   请参阅示例[CEdit::GetSel](#getsel)。  
   
-##  <a name="settabstops"></a>CEdit::SetTabStops  
+##  <a name="settabstops"></a>  CEdit::SetTabStops  
  调用此函数在多行编辑控件中设置制表位。  
   
 ```  
@@ -1222,14 +1225,14 @@ BOOL SetTabStops(
   
  此成员函数仅处理由多个行编辑控件。  
   
- `SetTabStops`不会自动刷新编辑窗口。 如果更改已在编辑控件的文本的制表位，调用[CWnd::InvalidateRect](cwnd-class.md#invalidaterect)重绘编辑窗口。  
+ `SetTabStops` 不会自动刷新编辑窗口。 如果更改已在编辑控件的文本的制表位，调用[CWnd::InvalidateRect](cwnd-class.md#invalidaterect)重绘编辑窗口。  
   
  有关详细信息，请参阅[EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663)和[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows SDK 中。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CEditView::SetTabStops](ceditview-class.md#settabstops)。  
   
-##  <a name="showballoontip"></a>CEdit::ShowBalloonTip  
+##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip  
  显示与当前的编辑控件相关联的气球状提示。  
   
 ```  
@@ -1267,7 +1270,7 @@ BOOL ShowBalloonTip(
   
  [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
-##  <a name="undo"></a>CEdit::Undo  
+##  <a name="undo"></a>  CEdit::Undo  
  调用此函数可撤消的上一个编辑控件的操作。  
   
 ```  

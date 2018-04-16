@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IScheduler
 - CONCRTRM/concurrency::IScheduler
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
 - CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
 - CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
-dev_langs: C++
-helpviewer_keywords: IScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c639bd760b837923f3011e9209d923fef31f8aee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler 结构
 工作计划程序的抽象的接口。 并发运行时的资源管理器使用此接口与工作计划程序进行通信。  
@@ -46,13 +50,13 @@ struct IScheduler;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示有权执行可执行代表计划程序的工作的单个线程。|  
-|[Ischeduler:: Getid](#getid)|返回计划程序的唯一标识符。|  
-|[Ischeduler:: Getpolicy](#getpolicy)|返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。|  
-|[Ischeduler:: Notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`现在正在使用的其他计划程序。|  
-|[Ischeduler:: Notifyresourcesexternallyidle](#notifyresourcesexternallyidle)|通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`不正由其他计划程序。|  
-|[Ischeduler:: Removevirtualprocessors](#removevirtualprocessors)|启动的以前分配给此计划程序的虚拟处理器根的删除操作。|  
-|[Ischeduler:: Statistics](#statistics)|提供与任务到达和完成率和计划程序的队列长度更改相关的信息。|  
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示有权执行可执行代表计划程序的工作的单个线程。|  
+|[IScheduler::GetId](#getid)|返回计划程序的唯一标识符。|  
+|[IScheduler::GetPolicy](#getpolicy)|返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。|  
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`现在正在使用的其他计划程序。|  
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`不正由其他计划程序。|  
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|启动的以前分配给此计划程序的虚拟处理器根的删除操作。|  
+|[IScheduler::Statistics](#statistics)|提供与任务到达和完成率和计划程序的队列长度更改相关的信息。|  
   
 ## <a name="remarks"></a>备注  
  如果你要实现的自定义计划程序与资源管理器进行通信，则应提供的实现`IScheduler`接口。 此接口是通道的双向通信的计划程序和资源管理器之间的一个 end。 由表示另一端`IResourceManager`和`ISchedulerProxy`都实现资源管理器的接口。  
@@ -65,7 +69,7 @@ struct IScheduler;
   
  **命名空间：** 并发  
   
-##  <a name="addvirtualprocessors"></a>Ischeduler:: Addvirtualprocessors 方法  
+##  <a name="addvirtualprocessors"></a>  Ischeduler:: Addvirtualprocessors 方法  
  供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示有权执行可执行代表计划程序的工作的单个线程。  
   
 ```
@@ -84,7 +88,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>备注  
  资源管理器时，将调用`AddVirtualProcessor`方法授予对计划程序的虚拟处理器根的初始集。 它还可以调用的方法时重新平衡计划程序之间的资源添加到调度器的虚拟处理器根。  
   
-##  <a name="getid"></a>Ischeduler:: Getid 方法  
+##  <a name="getid"></a>  Ischeduler:: Getid 方法  
  返回计划程序的唯一标识符。  
   
 ```
@@ -99,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  获取从不同源的标识符可能导致未定义的行为。  
   
-##  <a name="getpolicy"></a>Ischeduler:: Getpolicy 方法  
+##  <a name="getpolicy"></a>  Ischeduler:: Getpolicy 方法  
  返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。  
   
 ```
@@ -109,7 +113,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>返回值  
  计划程序的策略的副本。  
   
-##  <a name="notifyresourcesexternallybusy"></a>Ischeduler:: Notifyresourcesexternallybusy 方法  
+##  <a name="notifyresourcesexternallybusy"></a>  Ischeduler:: Notifyresourcesexternallybusy 方法  
  通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`现在正在使用的其他计划程序。  
   
 ```
@@ -134,7 +138,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  限定通知的计划获取一的组初始的通知时创建，告知其刚分配的资源的外部正忙还是空闲。  
   
-##  <a name="notifyresourcesexternallyidle"></a>Ischeduler:: Notifyresourcesexternallyidle 方法  
+##  <a name="notifyresourcesexternallyidle"></a>  Ischeduler:: Notifyresourcesexternallyidle 方法  
  通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`不正由其他计划程序。  
   
 ```
@@ -159,7 +163,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  限定通知的计划获取一的组初始的通知时创建，告知其刚分配的资源的外部正忙还是空闲。  
   
-##  <a name="removevirtualprocessors"></a>Ischeduler:: Removevirtualprocessors 方法  
+##  <a name="removevirtualprocessors"></a>  Ischeduler:: Removevirtualprocessors 方法  
  启动的以前分配给此计划程序的虚拟处理器根的删除操作。  
   
 ```
@@ -180,7 +184,7 @@ virtual void RemoveVirtualProcessors(
   
  参数`ppVirtualProcessorRoots`指向的接口的数组。 组中的要删除的虚拟处理器根，，永远不会被激活的根可以立即使用返回`Remove`方法。 应以异步方式返回已激活和是任一正在执行的工作或已停用，正在等待任务到达的根目录。 计划程序必须进行每次尝试以尽可能快地删除虚拟处理器根。 延迟删除的虚拟处理器根，则可能会导致无意过度订阅的计划程序中。  
   
-##  <a name="statistics"></a>Ischeduler:: Statistics 方法  
+##  <a name="statistics"></a>  Ischeduler:: Statistics 方法  
  提供与任务到达和完成率和计划程序的队列长度更改相关的信息。  
   
 ```

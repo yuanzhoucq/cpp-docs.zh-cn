@@ -1,32 +1,35 @@
 ---
-title: "值的分类： 左值和右值 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 值的分类： 左值和右值 （Visual C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-language
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: e06dca827d6b5cb5d457a2eda6aa143bb5d0fe5e
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual c + +）
-每个 c + + 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和表达式求值期间移动临时对象时，编译器必须遵循的规则的基础。 
+# <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual C++）
+每个 C++ 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和表达式求值期间移动临时对象时，编译器必须遵循的规则的基础。 
 
- C + + 17 标准定义表达式值的分类，如下所示：
+ C++ 17 标准定义表达式值的分类，如下所示：
 
 - A *glvalue*是求值确定的标识的对象、 位域或函数的表达式。 
 - A *prvalue*是一个表达式求值初始化对象或一个位字段，或在它所出现的上下文中的指定计算运算符的操作数的值。 
@@ -36,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 
 下图阐释了两个分类之间的关系：
 
- ![C + + 表达式值的分类](media/value_categories.png "c + + 表达式值的分类")  
+ ![C++ 表达式值的分类](media/value_categories.png "C++ 表达式值的分类")  
  
  左值具有可以访问你的程序的地址。 左值表达式的示例包括变量名称，包括`const`变量，数组元素，函数返回左值引用、 位域、 联合和类成员的调用。 
  

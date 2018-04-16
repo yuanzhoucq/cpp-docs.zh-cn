@@ -1,46 +1,46 @@
 ---
-title: "Idbpropertiesimpl:: Getpropertyinfo |Microsoft 文档"
+title: IDBPropertiesImpl::GetPropertyInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl::GetPropertyInfo
 - IDBPropertiesImpl.GetPropertyInfo
 - GetPropertyInfo
-dev_langs: C++
-helpviewer_keywords: GetPropertyInfo method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetPropertyInfo method
 ms.assetid: 170e9640-5010-4e0d-8a54-f50b23af08ad
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b1eb8bc9a859c29a28291dd77e5664df2f185cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa96d49ae5a0ac01d90d6f6c5a0efe020d7a5a3e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbpropertiesimplgetpropertyinfo"></a>IDBPropertiesImpl::GetPropertyInfo
 返回支持的数据源的属性信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      STDMETHOD(GetPropertyInfo)(   
-   ULONG cPropertySets,   
+```cpp
+      STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,   
    const DBPROPIDSET rgPropertySets[],   
    ULONG * pcPropertyInfoSets,   
    DBPROPINFOSET ** prgPropertyInfoSets,   
-   OLECHAR ** ppDescBuffer    
-);  
+   OLECHAR ** ppDescBuffer);  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -61,5 +61,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>请参阅  
  [IDBPropertiesImpl 类](../../data/oledb/idbpropertiesimpl-class.md)   
- [Idbpropertiesimpl:: Getproperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
+ [IDBPropertiesImpl::GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

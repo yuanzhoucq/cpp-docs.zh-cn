@@ -1,18 +1,20 @@
 ﻿---
 title: "Visual Studio 中 Visual C++ 的新增功能 | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
 
@@ -28,15 +30,15 @@ ms.lasthandoff: 01/03/2018
 
 ### <a name="new-compiler-options"></a>新的编译器选项
 
- -**/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [-std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 /std:c++latest 开关保护。 
+- **/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [/std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 **/std:c++latest** 开关保护。
 
    **Visual Studio 2017 版本15.3**：
 
-   通过 /std:c++17 选项，可使用 Visual C++ 编译器实现一组 C++17 功能。 对于在 C++17 之后的工作草案版本及 C++ 标准版缺陷更新中更改或新增的功能，此选项会禁用编译器和标准库支持。 要启用这些功能，请使用 /std:c++latest。
+   通过 /std:c++17 选项，可使用编译器实现一组 C++17 功能。 对于在 C++17 之后的工作草案版本及 C++ 标准版缺陷更新中更改或新增的功能，此选项会禁用编译器和标准库支持。 要启用这些功能，请使用 /std:c++latest。
 
    **Visual Studio 2017 版本 15.5**：
 
-   Visual C++ 编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 这些功能可在 /std:c++17 功能下使用。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
+   编译器支持 C++17 中约 75% 的新增功能，包括结构化绑定、`constexpr` lambdas、`if constexpr`、内联变量、fold 表达式以及将 `noexcept` 添加到类型系统的功能。 这些功能可在 /std:c++17 功能下使用。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
 
 - [/permissive-](build/reference/permissive-standards-conformance.md)：启用所有严格标准符合性编译器选项，并禁用大部分特定于 Microsoft 的编译器扩展（但有一些例外，比如 `__declspec(dllimport)`）。 此选项默认关闭，但在未来的某个时刻默认打开。
 
@@ -46,9 +48,9 @@ ms.lasthandoff: 01/03/2018
 
 - [/diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md)：可用显示行号、行号和列，或行号和列及脱字号（位于诊断错误或警告所在代码行的下方）。
 
-- [/debug:fastlink](build/reference/debug-generate-debug-info.md)：通过避免将所有调试信息复制到 PDB 文件，将增量链接时间缩短达 30%（与 Visual Studio 2015 相比）。 PDB 文件改为指向用于创建可执行文件的对象和库文件的调试信息。 请参阅 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)（使用 /Debug:fastlink 在 VS “15” 中缩短生成周期）和 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)（在 Visual Studio 中加速 C++ 生成的建议）。
+- [/debug:fastlink](build/reference/debug-generate-debug-info.md)：通过避免将所有调试信息复制到 PDB 文件，实现最高达 30％ 更快的增量链接时间（与Visual Studio 2015 相比）。 PDB 文件改为指向用于创建可执行文件的对象和库文件的调试信息。 请参阅 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)（使用 /Debug:fastlink 在 VS “15” 中缩短生成周期）和 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)（在 Visual Studio 中加速 C++ 生成的建议）。
 
-- 可在 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中结合使用 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md)。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
+- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 可将 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md) 结合使用。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、诊断和版本控制
 

@@ -1,42 +1,40 @@
 ---
-title: "COLUMN_NAME_STATUS |Microsoft 文档"
+title: COLUMN_NAME_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_NAME_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_STATUS macro
+ms.topic: reference
+f1_keywords:
+- COLUMN_NAME_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_STATUS macro
 ms.assetid: a6204755-6739-4116-b414-9b8fa7ab6549
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c1e1a2b0b88b3e94d7815f93161165f4db4cf309
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d129e4b7d96fbd2abb55523219f9249ae97a3b1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="columnnamestatus"></a>COLUMN_NAME_STATUS
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用列状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-COLUMN_NAME_STATUS(  
-pszName  
-,   
-data  
-,   
-status )  
+```cpp
+COLUMN_NAME_STATUS(pszName, data, status )  
 ```  
   
 #### <a name="parameters"></a>参数  

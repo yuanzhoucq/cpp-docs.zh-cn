@@ -1,39 +1,40 @@
 ---
-title: "END_PROPERTY_SET |Microsoft 文档"
+title: END_PROPERTY_SET | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: END_PROPERTY_SET
-dev_langs: C++
-helpviewer_keywords: END_PROPERTY_SET macro
+ms.topic: reference
+f1_keywords:
+- END_PROPERTY_SET
+dev_langs:
+- C++
+helpviewer_keywords:
+- END_PROPERTY_SET macro
 ms.assetid: c20a5c97-1d6e-41c5-be2f-244e008e87af
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 365889ce3ae5ef9cdffa8dc585974afca366b779
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77d28b7bed8ee55838d1a5a93dc8feb2d47e682a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="endpropertyset"></a>END_PROPERTY_SET
 将标记属性集的末尾。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-END_PROPERTY_SET(  
-guid   
-)  
+```cpp
+END_PROPERTY_SET(guid)  
   
 ```  
   

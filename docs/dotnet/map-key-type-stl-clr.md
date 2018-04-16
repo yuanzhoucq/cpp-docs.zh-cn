@@ -1,17 +1,21 @@
 ---
-title: "map:: key_type (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'map:: key_type (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::map::key_type
-dev_langs: C++
-helpviewer_keywords: key_type member [STL/CLR]
+f1_keywords:
+- cliext::map::key_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- key_type member [STL/CLR]
 ms.assetid: 5bcf92e4-d9ff-48a2-86da-e24842ccf80c
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen

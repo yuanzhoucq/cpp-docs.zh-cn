@@ -4,41 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl::IsUpdateAllowed
 - IRowsetUpdateImpl.IsUpdateAllowed
 - IsUpdateAllowed
-dev_langs: C++
-helpviewer_keywords: IsUpdateAllowed method
+dev_langs:
+- C++
+helpviewer_keywords:
+- IsUpdateAllowed method
 ms.assetid: d6daf3b3-a8e0-4275-a67d-897dea01e297
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 312d0488afc73d38ebd1ceb8a3f4334468607ed9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13c74046748e64686c44c1e05bacaae0c72bd432
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
 重写此方法来检查安全性，完整性，在更新之前，依此类推。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-      HRESULT IsUpdateAllowed(  
-   DBPENDINGSTATUS /* [in] *//* status */,  
+```cpp
+HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] *//* status */,  
    HROW /* [in] *//* hRowUpdate */,  
-   DBROWSTATUS* /* [out] *//* pRowStatus */  
-);  
+   DBROWSTATUS* /* [out] *//* pRowStatus */);  
 ```  
   
 #### <a name="parameters"></a>参数  

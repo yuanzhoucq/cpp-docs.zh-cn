@@ -4,36 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetNotifyImpl.OnFieldChange
 - IRowsetNotifyImpl::OnFieldChange
 - OnFieldChange
-dev_langs: C++
-helpviewer_keywords: OnFieldChange method
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnFieldChange method
 ms.assetid: f26b492c-c86e-423b-9374-175e510a2860
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08f54506f24932e746cc998bbb9b6302bc8d2dd1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa4d68c6a634600f7afe3295b41b0939675be4f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetnotifyimplonfieldchange"></a>IRowsetNotifyImpl::OnFieldChange
 通知对列的值的任何更改的使用者。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 STDMETHOD(OnFieldChange)(   
 /* [in] */ IRowset* /* pRowset */,  
 /* [in] */ HROW /* hRow */,  

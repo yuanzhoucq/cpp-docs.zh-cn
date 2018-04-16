@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>用户记录
 若要使用静态的访问器 (一个访问器，它是派生自**CAccessor)**，你使用者都必须有用户记录。 用户记录是一个 c + + 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导生成为你的使用者的用户记录。 可以将方法添加到可选任务，例如处理命令的用户记录中。  
   
- 下面的代码显示处理命令的示例记录。 用户记录中`BEGIN_COLUMN_MAP`表示从提供程序传递给使用者的数据行集。 `BEGIN_PARAM_MAP`表示一组命令参数。 此示例使用[CCommand](../../data/oledb/ccommand-class.md)类来处理命令参数。 映射条目中的数据成员表示到一个连续每个类实例的内存块的偏移量。 `COLUMN_ENTRY`宏对应于`PROVIDER_COLUMN_ENTRY`提供商一侧上的宏。  
+ 下面的代码显示处理命令的示例记录。 用户记录中`BEGIN_COLUMN_MAP`表示从提供程序传递给使用者的数据行集。 `BEGIN_PARAM_MAP` 表示一组命令参数。 此示例使用[CCommand](../../data/oledb/ccommand-class.md)类来处理命令参数。 映射条目中的数据成员表示到一个连续每个类实例的内存块的偏移量。 `COLUMN_ENTRY`宏对应于`PROVIDER_COLUMN_ENTRY`提供商一侧上的宏。  
   
  有关详细信息**COLUMN_MAP**和**PARAM_MAP**宏，请参阅[用于 OLE DB 使用者模板的宏](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -115,7 +118,7 @@ ref class Map sealed;
 
 **命名空间：** Platform::Collections
 
-## <a name="clear"></a>Map:: clear 方法
+## <a name="clear"></a>  Map:: clear 方法
 
 从当前 Map 对象中移除所有键值对。
 
@@ -125,7 +128,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>Map:: first 方法
+## <a name="first"></a>  Map:: first 方法
 
 返回指定映射中第一个元素的迭代器，如果映射为空，则返回 `nullptr`。
 
@@ -144,7 +147,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 保留 first 返回的迭代器一种简便方式是将返回值分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMap->First();`。
 
-## <a name="getview"></a>Map:: getview 方法
+## <a name="getview"></a>  Map:: getview 方法
 
 返回当前 Map 中; 的只读视图也就是说， [Platform::Collections::MapView 类](../cppcx/platform-collections-mapview-class.md)，该类实现[Windows::Foundation::Collections::IMapView\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)接口。
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 一个 `MapView` 对象。
 
-## <a name="haskey"></a>Map:: haskey 方法
+## <a name="haskey"></a>  Map:: haskey 方法
 
 确定当前 Map 中是否包含指定键。
 
@@ -177,7 +180,7 @@ bool HasKey(K key);
 
 如果找到该键，则为 `true`；否则为 `false`。
 
-## <a name="insert"></a>Map:: insert 方法
+## <a name="insert"></a>  Map:: insert 方法
 
 将指定的键值对添加到当前 Map 对象中。
 
@@ -192,14 +195,14 @@ virtual bool Insert(K key, V value);
 *key*  
 键值对中的键部分。 一种*密钥*名称*K*。
 
-*值*  
+*value*  
 键值对中的值部分。 一种*值*名称*V*。
 
 ### <a name="return-value"></a>返回值
 
-`true`如果当前映射中一个现有元素的键匹配*密钥*并且该元素的值部分设置为*值*。 `false`如果当前映射中的没有任何现有元素匹配*密钥*和*密钥*和*值*参数构成键值对并随后添加到当前映射。
+`true` 如果当前映射中一个现有元素的键匹配*密钥*并且该元素的值部分设置为*值*。 `false` 如果当前映射中的没有任何现有元素匹配*密钥*和*密钥*和*值*参数构成键值对并随后添加到当前映射。
 
-## <a name="lookup"></a>Map:: lookup 方法
+## <a name="lookup"></a>  Map:: lookup 方法
 
 检索与类型 K 的指定键关联的类型 V 的值（如果键存在）。
 
@@ -222,7 +225,7 @@ V Lookup(K key);
 
 如果不存在该键，则[platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md)引发。
 
-## <a name="ctor"></a>Map:: map 构造函数
+## <a name="ctor"></a>  Map:: map 构造函数
 
 初始化 Map 类的新实例。
 
@@ -256,7 +259,7 @@ Map(
 *last*  
 用于初始化当前映射的一系列元素之后的第一个元素的输入迭代器。
 
-## <a name="mapchanged"></a>Map:: mapchanged 事件
+## <a name="mapchanged"></a>  Map:: mapchanged 事件
 
 项目插入到映射中或从映射中移除时引发。
 
@@ -272,9 +275,9 @@ A [MapChangedEventHandler\<K，V >](http://msdn.microsoft.com/library/windows/ap
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
-使用 C# 或 Visual Basic 的 Windows 应用商店应用项目 IMap\<K，V > 作为 IDictionary\<K，V >。
+使用 C# 或 Visual Basic 的 Windows 运行时应用项目 IMap\<K，V > 作为 IDictionary\<K，V >。
 
-## <a name="remove"></a>Map:: remove 方法
+## <a name="remove"></a>  Map:: remove 方法
 
 从当前 Map 对象中删除指定的键值对。
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 键值对中的键部分。 一种*密钥*名称*K*。
 
-## <a name="size"></a>Map:: size 方法
+## <a name="size"></a>  Map:: size 方法
 
 返回的数目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)映射中的元素。
 

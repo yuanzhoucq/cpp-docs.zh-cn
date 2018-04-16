@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sampler
 - AMP_GRAPHICS/sampler
@@ -17,18 +18,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43aa9b68d2369ff2a0ade4bb4cb122b2481d3cd4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sampler-class"></a>sampler 类
 采样器类聚合采样配置信息要用于纹理采样。  
@@ -77,7 +80,7 @@ class sampler;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>采样器 
+##  <a name="ctor"></a> 采样器 
 
  构造的实例[sampler 类](sampler-class.md)。  
   
@@ -134,7 +137,7 @@ sampler(// [6] move constructor
  [6] 移动构造函数  
  `sampler`对象要移到新`sampler`实例。  
   
-##  <a name="address_mode"></a>address_mode 
+##  <a name="address_mode"></a> address_mode 
 
  获取的地址模式`sampler`对象。  
   
@@ -142,7 +145,7 @@ sampler(// [6] move constructor
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
 ```  
   
-##  <a name="border_color"></a>border_color 
+##  <a name="border_color"></a> border_color 
 
  获取的边框颜色`sampler`对象。  
   
@@ -150,7 +153,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
 ```  
   
-##  <a name="filter_mode"></a>filter_mode 
+##  <a name="filter_mode"></a> filter_mode 
 
  获取的筛选器模式`sampler`对象。  
   
@@ -158,7 +161,7 @@ __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 borde
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
 ```  
   
-##  <a name="get_address_mode"></a>get_address_mode 
+##  <a name="get_address_mode"></a> get_address_mode 
 
  返回为此配置的筛选器模式`sampler`。  
   
@@ -169,7 +172,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 ### <a name="return-value"></a>返回值  
  为采样器配置寻址模式。  
   
-##  <a name="get_border_color"></a>get_border_color 
+##  <a name="get_border_color"></a> get_border_color 
 
  返回为此配置的边框颜色`sampler`。  
   
@@ -180,7 +183,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 ### <a name="return-value"></a>返回值  
  Float_4 包含的边框颜色。  
   
-##  <a name="get_filter_mode"></a>get_filter_mode 
+##  <a name="get_filter_mode"></a> get_filter_mode 
 
  返回为此配置的筛选器模式`sampler`。  
   
@@ -191,7 +194,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ### <a name="return-value"></a>返回值  
  为采样器配置筛选器模式。  
   
-##  <a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a> 运算符 = 
 
  将另一个的采样器对象的值分配给现有的采样器。  
   

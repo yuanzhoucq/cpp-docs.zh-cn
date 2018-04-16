@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower、iswlower、_islower_l、_iswlower_l
 确定整数是否表示小写字符。  
@@ -89,7 +92,7 @@ int _iswlower_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是小写字符的特定表示形式，则每个例程将返回非零值。 `islower`返回一个非零值，如果`c`是小写字符 (a-z)。 如果 `c` 是对应于一个小写字母的宽字符，或者如果 `c` 是实现定义的宽字符集之一，且对于该宽字符，`iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 均不是非零值，则 `iswlower` 返回一个非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是小写字符的特定表示形式，则每个例程将返回非零值。 `islower` 返回一个非零值，如果`c`是小写字符 (a-z)。 如果 `c` 是对应于一个小写字母的宽字符，或者如果 `c` 是实现定义的宽字符集之一，且对于该宽字符，`iswcntrl`、`iswdigit`、`iswpunct` 或 `iswspace` 均不是非零值，则 `iswlower` 返回一个非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  这些后缀为 `_l` 的函数版本将传入的区域设置而不是当前区域设置用于其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -102,9 +105,9 @@ int _iswlower_l(
 |`_istlower`|`islower`|[_ismbclower](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswlower`|  
 |`_istlower_l`|`_islower _l`|[_ismbclower_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_liswlower_l`|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`islower`|\<ctype.h 1>|  
 |`iswlower`|\<ctype.h 1> 或 \<wchar.h 1>|  

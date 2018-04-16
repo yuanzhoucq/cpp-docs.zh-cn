@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>并发运行时的概述
 本文档对并发运行时进行了概述。 它介绍并发运行时的优势、何时使用它、其组件如何相互交互以及与操作系统和应用程序交互。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [要求](#requirements)  
   
-##  <a name="runtime"></a>并发运行时非常重要的原因  
+##  <a name="runtime">并发运行时非常重要的原因</a>  
  并发运行时向同时运行的应用程序和应用程序组件提供一致性和可预测性。 并发运行时的优势的两个示例是*协作任务计划*和*协作阻止*。  
   
  并发运行时使用一种协作任务计划程序，该计划程序实现工作窃取算法来高效地在计算资源间分布工作。 例如，考虑具有由同一个运行时管理的两个线程的应用程序。 如果一个线程完成其计划任务，则它可以从另一个线程卸载工作。 此机制可平衡应用程序的整体工作负载。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  ![并发运行时体系结构](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中或是当你使用 ppltasks.h 中的任务类或其他类型时，无法使用任务计划程序和资源管理器组件。  
+>  任务计划程序和资源管理器组件将不可用从通用 Windows 平台 (UWP) 应用或使用在 ppltasks.h 中的任务类或其他类型。  
   
  并发运行时具有高度*可组合*，也就是说，可以合并现有功能来执行更多操作。 并发运行时从较低级别组件组合了许多功能，如并行算法。  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="lambda"></a>C + + Lambda 表达式  
+##  <a name="lambda">C + + Lambda 表达式</a>  
  并发运行时定义的许多类型和算法作为 C++ 模板实现。 其中某些类型和算法采用执行工作的例程作为参数。 此参数可以是 lambda 函数、函数对象或函数指针。 这些实体也称为*工作函数*或*工作例程*。  
   
  Lambda 表达式是重要的新 Visual C++ 语言功能，因为它们提供了一种为并行处理定义工作函数的简洁方法。 函数对象和函数指针使你可以将并发运行时用于现有代码。 但是，我们建议你在编写新代码时使用 lambda 表达式，因为它们可提供安全性和工作效率优势。  

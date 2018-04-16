@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _heapmin
+ms.topic: reference
+apiname:
+- _heapmin
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _heapmin
 - heapmin
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - heap memory
 - minimizing heaps
@@ -33,16 +36,17 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a43374b9e4453bf1584ffb4d33c6b8b9a1c8acf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 986d56560b421fe0b1973f52a9dbfcf3ea88bff1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="heapmin"></a>_heapmin
 将未使用的堆内存释放到操作系统。  
@@ -61,9 +65,9 @@ int _heapmin( void );
 ## <a name="remarks"></a>备注  
  `_heapmin` 函数通过将未使用的堆内存释放到操作系统来最小化堆。 如果操作系统不支持`_heapmin`（例如，Windows 98），该函数将返回-1 并将设置`errno`到`ENOSYS`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|可选标头|  
+|例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
