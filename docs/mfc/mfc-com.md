@@ -1,12 +1,12 @@
 ---
 title: MFC COM | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - MFC COM (MFC)
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -55,7 +55,7 @@ MFC 的子集旨在为支持 COM，虽然大多数的活动模板库 (ATL) 专�
   
 -   活动脚本控制集成从浏览器或服务器的一个或多个 ActiveX 控件的行为。 活动脚本的详细信息，请参阅[Internet 上的 Active 技术](../mfc/active-technology-on-the-internet.md)。  
   
--   [自动化](../mfc/automation.md)（以前称为 OLE 自动化） 使一个应用程序能够操作在另一个应用程序中实现的对象，或"公开"对象以便它们能够被操作。  
+-   [自动化](../mfc/automation.md)（以前称为 OLE 自动化） 使一个应用程序能够操作在另一个应用程序中实现的对象，或"公开"对象以便操作它们。  
   
      自动的对象可能是本地或远程 （在另一个计算机可访问在网络上）。 自动化可用于 OLE 和 COM 对象。  
   

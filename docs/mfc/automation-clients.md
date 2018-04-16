@@ -1,12 +1,12 @@
 ---
-title: "自动化客户端 |Microsoft 文档"
-ms.custom: 
+title: 自动化客户端 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -29,7 +29,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-clients"></a>自动化客户端
-利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便让它们能够被操作。 自动化客户端是应用程序可以操作属于另一个应用程序公开的对象。 对象公开的应用程序称为自动化服务器。 客户端操作通过访问这些对象的属性和函数的服务器应用程序的对象。  
+利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化客户端是应用程序可以操作属于另一个应用程序公开的对象。 对象公开的应用程序称为自动化服务器。 客户端操作通过访问这些对象的属性和函数的服务器应用程序的对象。  
   
 ### <a name="types-of-automation-clients"></a>类型的自动化客户端  
  有两种类型的自动化客户端：  
