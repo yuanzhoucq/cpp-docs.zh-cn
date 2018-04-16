@@ -1,19 +1,19 @@
 ---
-title: "本机 c + + 中的事件处理 |Microsoft 文档"
-ms.custom: 
+title: 本机 C++ 中的事件处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -27,7 +27,7 @@ ms.lasthandoff: 01/25/2018
 ---
 # <a name="event-handling-in-native-c"></a>本机 C++ 中的事件处理
 
-在本机 c + + 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = `native`. 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。
+在本机 C++ 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = `native`. 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。
 
 ## <a name="declaring-events"></a>声明事件
 
