@@ -1,12 +1,12 @@
 ---
-title: "标准转换 |Microsoft 文档"
-ms.custom: 
+title: 标准转换 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  值保留提升和保留符号的提升通常会生成相同的结果。 但是，如果提升的对象是以下项之一，它们可能生成不同的结果：  
   
--   操作数 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或 **>=**  
+-   操作数**/**， `%`， `/=`， `%=`， **<**， **\< =**，**>**，或 **>=**  
   
      这些运算符依赖于用于确定结果的符号。 因此，当值保留和符号保留提升应用于这些操作数时，它们将生成不同的结果。  
   
--   左的操作数 **>>** 或 **>>=**  
+-   左的操作数**>>**或 **>>=**  
   
      当执行移位运算时，这些运算符会区别对待有符号的数量和无符号的数量。 对于有符号的数量，将数量右移会导致符号位传播到空出的位位置。 对于无符号的数量，空出的位位置将由零填充。  
   
@@ -270,7 +270,7 @@ int main()
 ### <a name="null-pointer-conversions"></a>null 指针转换  
  计算结果为零的整数常量表达式，或到某个指针类型的此类表达式强制转换，将转换为称为“null 指针”的指针。 此指针与指向任何有效对象或函数的指针比较的结果肯定不会相等（指向基对象的指针除外，此类指针可以有相同的偏移量并且仍指向不同的对象）。  
   
- 在 C + + 11 [nullptr](../cpp/nullptr.md)类型应为首选到 C 样式 null 指针。  
+ 在 C++ 11 [nullptr](../cpp/nullptr.md) 类型应为首选到 C 样式 null 指针。   
   
 ### <a name="pointer-expression-conversions"></a>指针表达式转换  
  带数组类型的所有表达式都可以转换为同一类型的指针。 转换的结果是指向第一个数组元素的指针。 下面的示例演示了这样的转换：  
