@@ -1,12 +1,12 @@
 ---
-title: "关键字 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 关键字 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 
+caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -29,7 +29,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="keywords-c"></a>关键字 （c + +）
+# <a name="keywords-c"></a>关键字 （C++）
 关键字是具有特殊意义的预定义保留标识符。 它们不能用作程序中的标识符。 Microsoft C++ 保留了下列关键字。 带前导下划线的名称是 Microsoft 扩展。  
   
 ||||  
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
  1 扩展特性`__declspec`关键字。  
   
- 2 适用于仅 c + + 托管扩展。 此语法现已弃用。  
+ 2 适用于仅 C++ 托管扩展。 此语法现已弃用。  
   
  3 事件处理中使用的内部函数。  
   

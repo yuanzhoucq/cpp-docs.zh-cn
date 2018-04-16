@@ -1,12 +1,12 @@
 ---
-title: "友元 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 友元 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - friend_cpp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -56,14 +56,14 @@ class HasFriends
   
  前面的示例将类名 `ForwardDeclared` 输入到范围中，但是完整的声明（具体而言，声明函数 `IsAFriend` 的部分）是未知的。 因此，`friend` 类中的 `HasFriends` 声明会生成一个错误。  
   
- 从 C + + 11 开始，有两种形式的类的友元声明：  
+ 从 C++ 11 开始，有两种形式的类的友元声明：  
   
 ```cpp  
 friend class F;  
 friend F;  
 ```  
   
- 如果该名称没有任何现有类位于最内部的命名空间，则第一个窗体引入了新类 F。  **C + + 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。  
+ 如果该名称没有任何现有类位于最内部的命名空间，则第一个窗体引入了新类 F。  **C++ 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。  
   
  使用`class friend F`时引用的类型具有尚未声明：  
   
