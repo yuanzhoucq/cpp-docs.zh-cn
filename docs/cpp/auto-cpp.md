@@ -1,12 +1,12 @@
 ---
-title: "自动 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 自动 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: 
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/05/2018
 ---
-# <a name="auto-c"></a>自动 （c + +）
+# <a name="auto-c"></a>自动 （C++）
 从其初始化表达式中推导声明的变量的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -62,7 +62,7 @@ auto declarator initializer;
   
  若要使用 `auto` 关键字，请使用此关键字代替一种类型来声明变量，并指定初始化表达式。 此外，还可通过使用说明符和声明符（如 `auto`、`const`）、指针 (`volatile`)、引用 (`*`) 以及右值引用 (`&`) 来修改 `(&&` 关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。  
   
- 初始化表达式可以是赋值 （等号语法），直接初始化 （函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是*有关范围声明*中的参数[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)语句。 有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)和在本文档后面的代码示例。  
+ 初始化表达式可以是赋值 （等号语法），直接初始化 （函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是*有关范围声明*中的参数[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)语句。 有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)和在本文档后面的代码示例。  
   
  `auto` 关键字是类型的占位符，但它本身不是类型。 因此，`auto`关键字不能在强制转换或运算符如[sizeof](../cpp/sizeof-operator.md)和[typeid](../windows/typeid-cpp-component-extensions.md)。  
   
@@ -100,7 +100,7 @@ int main( )
   
  在前面的示例中，myAuto 是一个 int，而不是一个 int 引用，，因此输出`11 11`，而不`11 12`会出现这种情况，如果尚未删除引用限定符`auto`。  
   
-## <a name="type-deduction-with-braced-initializers-c14"></a>具有大括号内的初始值设定项 (C + + 14) 的类型推导  
+## <a name="type-deduction-with-braced-initializers-c14"></a>具有大括号内的初始值设定项 (C++ 14) 的类型推导  
  下面的代码 exmample 演示如何初始化使用大括号的自动变量。 请注意之间 A 和 B 和 C 之间的差异和 e。  
   
 ```cpp  

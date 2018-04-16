@@ -1,12 +1,12 @@
 ---
-title: "C + + 中的 lambda 表达式 |Microsoft 文档"
-ms.custom: 
+title: C++ 中的 lambda 表达式 |Microsoft 文档
+ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -28,7 +28,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
-在 C + + 11 和更高版本，lambda 表达式-通常称为*lambda*— 是定义匿名函数对象的简便方法 (*闭包*) 坐在调用或作为参数传递位置的位置到函数。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。  
+在 C++ 11 和更高版本，lambda 表达式-通常称为*lambda*— 是定义匿名函数对象的简便方法 (*闭包*) 坐在调用或作为参数传递位置的位置到函数。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。  
 
 ## <a name="related-topics"></a>相关主题
 - [与函数对象的 lambda 表达式](lambda-expression-syntax.md)
@@ -57,7 +57,7 @@ void abssort(float* x, unsigned n) {
   
  ![Lambda 表达式的结构化元素](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")  
   
-1.  *capture 子句*(也称为*lambda 引导*c + + 规范中。)  
+1.  *capture 子句*(也称为*lambda 引导*C++ 规范中。)  
   
 2.  *参数列表*可选。 (也称为*lambda 声明符*)  
   
@@ -70,7 +70,7 @@ void abssort(float* x, unsigned n) {
 6.  *lambda 体*)  
   
 ### <a name="capture-clause"></a>Capture 子句  
- Lambda 可以引入在其主体中的新变量 (在**C + + 14**)，并且它还可以访问，或*捕获*，从周边范围的变量。 Lambda 以 capture 子句开头 (*lambda 引导*标准语法中)，它指定捕获的变量，以及捕获是否通过值或引用。 有与号 (`&`) 前缀的变量通过引用访问，没有该前缀的变量通过值访问。  
+ Lambda 可以引入在其主体中的新变量 (在**C++ 14**)，并且它还可以访问，或*捕获*，从周边范围的变量。 Lambda 以 capture 子句开头 (*lambda 引导*标准语法中)，它指定捕获的变量，以及捕获是否通过值或引用。 有与号 (`&`) 前缀的变量通过引用访问，没有该前缀的变量通过值访问。  
   
  空 capture 子句 `[ ]` 指示 lambda 表达式的主体不访问封闭范围中的变量。  
   
@@ -113,7 +113,7 @@ void f(Args... args) {
   
  要在类方法的正文中使用 lambda 表达式，请将 `this` 指针传递给 Capture 子句，以提供对封闭类的方法和数据成员的访问权限。 
  
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):`this`指针可能通过指定通过值捕获`*this`的捕获子句中。 通过值捕获意味着整个*闭包*，这是该 encapulates lambda 表达式的匿名函数对象，将复制到其中调用 lambda 的每个调用站点。 当 lambda 将执行在并行或异步操作，尤其是在 NUMA 如某些硬件体系结构中，通过值捕获非常有用。 
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):`this`指针可能通过指定通过值捕获`*this`的捕获子句中。 通过值捕获意味着整个*闭包*，这是该 encapulates lambda 表达式的匿名函数对象，将复制到其中调用 lambda 的每个调用站点。 当 lambda 将执行在并行或异步操作，尤其是在 NUMA 如某些硬件体系结构中，通过值捕获非常有用。 
 
 演示如何使用 lambda 表达式与类方法示例，请参阅"示例： 使用 Lambda 表达式中方法"中[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。  
   
@@ -149,7 +149,7 @@ auto y = [] (int first, int second)
   
 ```  
   
- 在**c + + 14**，如果参数类型是泛型，则可以使用 auto 关键字作为类型说明符。 这将告知编译器将函数调用运算符创建为模板。 参数列表中的每个 auto 实例等效于一个不同的类型参数。  
+ 在**C++ 14**，如果参数类型是泛型，则可以使用 auto 关键字作为类型说明符。 这将告知编译器将函数调用运算符创建为模板。 参数列表中的每个 auto 实例等效于一个不同的类型参数。  
   
 ```cpp  
 auto y = [] (auto first, auto second)  
@@ -166,7 +166,7 @@ auto y = [] (auto first, auto second)
  通常，lambda 的函数调用运算符为 const-by-value，但对 `mutable` 关键字的使用可将其取消。它不会生成可变的数据成员。 利用可变规范，lambda 表达式的主体可以修改通过值捕获的变量。 本文后面的一些示例将显示如何使用 `mutable`。  
   
 ### <a name="exception-specification"></a>异常规范  
- 你可以使用 `noexcept` 异常规范来指示 lambda 表达式不会引发任何异常。 如与普通函数，Visual c + + 编译器将生成警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 表达式声明`noexcept`异常规范且 lambda 体引发异常，如下所示：  
+ 你可以使用 `noexcept` 异常规范来指示 lambda 表达式不会引发任何异常。 如与普通函数，Visual C++ 编译器将生成警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 表达式声明`noexcept`异常规范且 lambda 体引发异常，如下所示：  
   
 ```cpp  
 // throw_lambda_expression.cpp  
@@ -247,7 +247,7 @@ void fillVector(vector<int>& v)
   
  有关详细信息，请参阅[生成](../standard-library/algorithm-functions.md#generate)。  
   
- 下面的代码示例使用从前面的示例中，函数，并添加使用 c + + 标准库算法 lambda 表达式的示例`generate_n`。 该 lambda 表达式将 `vector` 对象的元素指派给前两个元素之和。 使用了 `mutable` 关键字，以使 lambda 表达式的主体可以修改 lambda 表达式通过值捕获的外部变量 `x` 和 `y` 的副本。 由于 lambda 表达式通过值捕获原始变量 `x` 和 `y`，因此它们的值在 lambda 执行后仍为 `1`。  
+ 下面的代码示例使用从前面的示例中，函数，并添加使用 C++ 标准库算法 lambda 表达式的示例`generate_n`。 该 lambda 表达式将 `vector` 对象的元素指派给前两个元素之和。 使用了 `mutable` 关键字，以使 lambda 表达式的主体可以修改 lambda 表达式通过值捕获的外部变量 `x` 和 `y` 的副本。 由于 lambda 表达式通过值捕获原始变量 `x` 和 `y`，因此它们的值在 lambda 执行后仍为 `1`。  
   
 ```cpp  
 // compile with: /W4 /EHsc  
@@ -330,7 +330,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
  有关详细信息，请参阅[generate_n](../standard-library/algorithm-functions.md#generate_n)。  
 
 ## <a name="constexpr-lambda-expressions"></a>constexpr lambda 表达式
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 可以将 lambda 表达式声明为`constexpr`或常量表达式中使用时的每个数据成员的初始化它捕获或引入的常量表达式内允许。  
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 可以将 lambda 表达式声明为`constexpr`或常量表达式中使用时的每个数据成员的初始化它捕获或引入的常量表达式内允许。  
 
 ```cpp
     int y = 32;
@@ -377,10 +377,10 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
   
  若要确定 lambda 是否支持某个修饰符，请参阅关于它的文章[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)文档的部分。  
   
- 除了 C + + 11 标准 lambda 功能，Visual Studio 支持无状态 lambda，可完全转换为使用任意调用约定函数指针。  
+ 除了 C++ 11 标准 lambda 功能，Visual Studio 支持无状态 lambda，可完全转换为使用任意调用约定函数指针。  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
- [C + + 标准库中的函数对象](../standard-library/function-objects-in-the-stl.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 标准库中的函数对象](../standard-library/function-objects-in-the-stl.md)   
  [函数调用](../cpp/function-call-cpp.md)   
  [for_each](../standard-library/algorithm-functions.md#for_each)
