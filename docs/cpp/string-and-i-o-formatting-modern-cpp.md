@@ -1,17 +1,17 @@
 ---
-title: "字符串和我-O 格式化 （现代 c + +） |Microsoft 文档"
-ms.custom: 
+title: "\"字符串和我-O 格式化 （现代 C++） |Microsoft 文档\""
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
-C + + [iostreams](../standard-library/iostream.md)能够格式化字符串 I/O。 例如，下面的代码演示如何设置 cout 若要设置格式的整数输出以十六进制表示，第一次关闭的当前状态保存和重新之后，设置，因为后状态格式传递给 cout 时，它始终处于这种方式更改，而不仅仅是为一个行之前代码。  
+C++ [iostreams](../standard-library/iostream.md)。 例如，下面的代码演示如何设置 cout 若要设置格式的整数输出以十六进制表示，第一次关闭的当前状态保存和重新之后，设置，因为后状态格式传递给 cout 时，它始终处于这种方式更改，而不仅仅是为一个行之前代码。   
   
 ```cpp  
 #include <iostream>  
@@ -51,7 +51,7 @@ int main()
   
 ```  
   
- 这可以是完全在许多情况下非常麻烦。 作为替代方法，你可以从提升 c + + 库中，使用 Boost.Format 即使使用了非标准。 你可以下载从任何 Boost 库[Boost](http://www.boost.org/)网站。  
+ 这可以是完全在许多情况下非常麻烦。 作为替代方法，你可以从提升 C++ 库中，使用 Boost.Format 即使使用了非标准。 你可以下载从任何 Boost 库[Boost](http://www.boost.org/)网站。   
   
  Boost.Format 的优点包括：  
   
@@ -61,7 +61,7 @@ int main()
   
 -   方便： 标准 Posix 和类似的格式字符串。  
   
- 虽然 c + + 生成 Boost.Format [iostreams](../standard-library/iostream-programming.md)，它们是安全且可扩展，它们不性能优化。 当需要性能优化时，请考虑 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，这是快速且易于使用。 但是，它们不是扩展，也不安全漏洞。 （安全的版本存在，但它们会产生导致性能略微下降。 有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。  
+ 虽然 C++ 生成 Boost.Format [iostreams](../standard-library/iostream-programming.md)，它们是安全且可扩展，它们不性能优化。 当需要性能优化时，请考虑 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，这是快速且易于使用。  但是，它们不是扩展，也不安全漏洞。 （安全的版本存在，但它们会产生导致性能略微下降。  有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。  
   
  下面的代码演示了一些格式设置功能的提升。  
   
@@ -77,8 +77,8 @@ int main()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)   
  [\<iostream >](../standard-library/iostream.md)   
  [\<限制 >](../standard-library/limits.md)   

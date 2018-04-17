@@ -1,12 +1,12 @@
 ---
-title: "前缀增量和减量运算符: + + 和-|Microsoft 文档"
-ms.custom: 
+title: '前缀增量和减量运算符: + + 和-|Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  前缀递减运算符 (**--**) 是前缀递增运算符类似，只不过操作数将减少 1，并且结果是递减值。  
 
- **Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 递增或递减运算符的操作数可以不是类型`bool`。
+ **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 递增或递减运算符的操作数可以不是类型`bool`。
   
  前缀和后缀递增和递减运算符均会影响其操作数。 它们之间的主要差异是递增或递减在表达式的计算中出现的顺序。 (有关详细信息，请参阅[后缀递增和递减运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)。)在前缀形式中，将在表达式计算中使用值之前进行递增或递减，因此表达式的值与操作数的值不同。 在后缀形式中，将在表达式计算中使用值之后进行递增或递减，因此表达式的值与操作数的值相同。 例如，以下程序将打印“`++i = 6`”：  
   
@@ -92,5 +92,5 @@ k = ((++i)<(j))?(j):(++i);
   
 ## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [前缀增量和减量运算符](../c-language/prefix-increment-and-decrement-operators.md)
