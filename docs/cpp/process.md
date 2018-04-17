@@ -1,4 +1,4 @@
----
+﻿---
 title: process | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/14/2018
   
  如果你希望每个应用程序域具有其自己的全局变量副本，使用[appdomain](../cpp/appdomain.md)。  
   
- 请参阅[应用程序域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)有关详细信息。  
+ 请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)有关详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [__declspec](../cpp/declspec.md)   

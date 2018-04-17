@@ -1,4 +1,4 @@
----
+﻿---
 title: 用于编译时 （现代 C++） 封装的 Pimpl |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

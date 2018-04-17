@@ -1,5 +1,5 @@
----
-title: 类型转换和类型安全 （现代 C++） |Microsoft 文档
+﻿---
+title: "类型转换和类型安全 （现代 C++） |Microsoft 文档"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

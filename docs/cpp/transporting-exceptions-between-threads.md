@@ -1,4 +1,4 @@
----
+﻿---
 title: 线程之间传输异常 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

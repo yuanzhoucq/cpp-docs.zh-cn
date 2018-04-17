@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ 中的 lambda 表达式 |Microsoft 文档
 ms.custom: ''
 ms.date: 07/19/2017

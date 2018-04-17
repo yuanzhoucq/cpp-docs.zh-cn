@@ -1,5 +1,5 @@
----
-title: 异常规范 （throw，noexcept） （C++） |Microsoft 文档
+﻿---
+title: "异常规范 （throw，noexcept） （C++） |Microsoft 文档"
 ms.custom: ''
 ms.date: 01/18/2018
 ms.reviewer: ''

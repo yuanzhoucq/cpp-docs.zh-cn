@@ -1,5 +1,5 @@
----
-title: 分析 c + + 命令行参数 |Microsoft 文档
+﻿---
+title: "分析 C++ 命令行参数 |Microsoft 文档"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="parsing-c-command-line-arguments"></a>分析 C++ 命令行自变量
 **Microsoft 专用**  
   
- 在解释操作系统命令行上给定自变量时，Microsoft C/c + + 启动代码将使用以下规则：  
+ 在解释操作系统命令行上给定自变量时，Microsoft C/C++ 启动代码将使用以下规则：  
   
 -   参数用空白分隔，空白可以是一个空格或制表符。  
   

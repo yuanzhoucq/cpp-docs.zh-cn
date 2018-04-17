@@ -1,4 +1,4 @@
----
+﻿---
 title: "函数调用运算符: （) |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -188,5 +188,5 @@ int main() {
   
 ## <a name="see-also"></a>请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [函数调用](../c-language/function-call-c.md)   

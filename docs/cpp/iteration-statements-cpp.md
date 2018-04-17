@@ -1,5 +1,5 @@
 ---
-title: "迭代语句 （c + +） |Microsoft 文档"
+title: "迭代语句 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="iteration-statements-c"></a>迭代语句 (C++)
 根据一些循环终止条件，迭代语句会导致语句（或复合语句）被执行零次或多次。 当这些语句是复合语句时，它们的顺序执行，除非任一[中断](../cpp/break-statement-cpp.md)语句或[继续](../cpp/continue-statement-cpp.md)遇到语句。  
   
- C + + 提供四个迭代语句-[时](../cpp/while-statement-cpp.md)，[执行](../cpp/do-while-statement-cpp.md)，[为](../cpp/for-statement-cpp.md)，和[基于范围的 for](../cpp/range-based-for-statement-cpp.md)。 其中每个循环直到其终止表达式的计算结果为零 (false)，或使用强制执行循环终止**中断**语句。 下表汇总了这些语句及其操作；后面各节详细讨论了它们。  
+ C++ 提供四个迭代语句-[时](../cpp/while-statement-cpp.md)，[执行](../cpp/do-while-statement-cpp.md)，[为](../cpp/for-statement-cpp.md)，和[基于范围的 for](../cpp/range-based-for-statement-cpp.md)。 其中每个循环直到其终止表达式的计算结果为零 (false)，或使用强制执行循环终止**中断**语句。 下表汇总了这些语句及其操作；后面各节详细讨论了它们。  
   
 ### <a name="iteration-statements"></a>迭代语句  
   

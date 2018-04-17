@@ -1,4 +1,4 @@
----
+﻿---
 title: "类模板 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -28,7 +28,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>类模板
-本主题介绍特定于 c + + 类模板的规则。  
+本主题介绍特定于 C++ 类模板的规则。  
   
 ## <a name="member-functions-of-class-templates"></a>类模板的成员函数  
  可以在类模板的内部或外部定义成员函数。 如果在类模板的外部定义成员函数，则会像定义函数模板一样定义它们。  

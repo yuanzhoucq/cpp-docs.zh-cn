@@ -1,5 +1,5 @@
----
-title: 易失性 （c + +） |Microsoft 文档
+﻿---
+title: "易失性 （C++） |Microsoft 文档"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -62,7 +62,7 @@ volatile declarator ;
  对象声明为`volatile`由于其值可以更改在任何时间不使用中的某些优化。  系统始终读取可变对象的当前值所请求，即使以前的指令要求从同一对象的值。  此外，在分配上立即写入对象的值。  
   
 ## <a name="iso-compliant"></a>符合 ISO  
- 如果您是熟悉 C# volatile 关键字，或熟悉的行为`volatile`在 Visual c + + 的早期版本，请注意，C + + 11 ISO 标准`volatile`关键字是不同，在 Visual Studio 中支持时[/易失性： iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定编译器选项。 （对于 ARM，默认情况下将指定它。） C++11 ISO 标准代码中的 `volatile` 关键字仅用于硬件访问；请不要将其用于线程间通信。 对于线程间通信使用机制例如[std::atomic\<T >](../standard-library/atomic.md)从[c + + 标准库](../standard-library/cpp-standard-library-reference.md)。  
+ 如果您是熟悉 C# volatile 关键字，或熟悉的行为`volatile`在 Visual C++ 的早期版本，请注意，C++ 11 ISO 标准`volatile`关键字是不同，在 Visual Studio 中支持时[/易失性： iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定编译器选项。 （对于 ARM，默认情况下将指定它。） C++11 ISO 标准代码中的 `volatile` 关键字仅用于硬件访问；请不要将其用于线程间通信。 对于线程间通信使用机制例如[std::atomic\<T >](../standard-library/atomic.md)从[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。  
   
 ## <a name="end-of-iso-compliant"></a>符合 ISO 的末尾  
   

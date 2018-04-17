@@ -1,5 +1,5 @@
----
-title: 用户定义的文本 （c + +） |Microsoft 文档
+﻿---
+title: "用户定义的文本 （C++） |Microsoft 文档"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="user-defined-literals--c"></a>用户定义的文本 （c + +）
+# <a name="user-defined-literals--c"></a>用户定义的文本 （C++）
 文本有五个主要类别：整数、字符、浮点、字符串、布尔和指针。  从 C++ 11 开始，可以基于这些类别定义你自己的文本，以便为常见惯用语提供快捷语法，并提高类型安全性。 例如，假设有一个距离类。 你可以将一个文本定义为表示公里，将另一个文本定义为表示英里，并且只需编写以下内容即可帮助用户明确度量单位：auto d = 42.0_km 或 auto d = 42.0_mi。 用户定义的文本没有任何性能优势或劣势；它们的主要作用在于方便或实现编译时类型推断。 标准库中的时间和持续时间操作中具有用户定义的文本为 std: string、 std:: complex，和单位\<chrono > 标头：  
   
 ```  

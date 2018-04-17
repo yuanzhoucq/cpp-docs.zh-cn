@@ -1,5 +1,5 @@
----
-title: "请尝试、 throw 和 catch 语句 （c + +） |Microsoft 文档"
+﻿---
+title: "请尝试、 throw 和 catch 语句 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -105,7 +105,7 @@ catch(...) {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 异常处理](../cpp/cpp-exception-handling.md)   
+ [C++ 异常处理](../cpp/cpp-exception-handling.md)   
  [关键字](../cpp/keywords-cpp.md)   
- [未处理的 c + + 异常](../cpp/unhandled-cpp-exceptions.md)   
+ [未处理的 C++ 异常](../cpp/unhandled-cpp-exceptions.md)   
  [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

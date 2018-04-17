@@ -1,5 +1,5 @@
----
-title: "模板专用化 （c + +） |Microsoft 文档"
+﻿---
+title: "模板专用化 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/16/2018
 ---
-# <a name="template-specialization-c"></a>模板专用化 （c + +）
+# <a name="template-specialization-c"></a>模板专用化 （C++）
 
 类模板可以部分专用化，生成的类仍是模板。 在类似于下面的情况下，部分专用化允许为特定类型部分自定义模板代码：  
   
