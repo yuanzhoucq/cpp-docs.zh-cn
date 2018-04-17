@@ -1,12 +1,12 @@
 ---
-title: "线程之间传输异常 |Microsoft 文档"
-ms.custom: 
+title: 线程之间传输异常 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -36,7 +36,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>在线程之间传输异常
-Visual c + + 支持*传输异常*从到另一个线程。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，Visual c + + 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。  
+Visual C++ 支持*传输异常*从到另一个线程。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，Visual C++ 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -90,14 +90,14 @@ namespace std
   
  只有编译器选项和编程语句的以下组合可以传输异常。 其他组合要么不能捕获异常，要么能捕获但不能传输异常。  
   
--   **/EHa**编译器选项和`catch`语句可以传输 SEH 和 c + + 异常。  
+-   **/EHa**编译器选项和`catch`语句可以传输 SEH 和 C++ 异常。  
   
--   **/EHa**， **/EHs**，和**/EHsc**编译器选项和`catch`语句可以传输 c + + 异常。  
+-   **/EHa**， **/EHs**，和**/EHsc**编译器选项和`catch`语句可以传输 C++ 异常。  
   
--   **/CLR**或**/CLR: pure**编译器选项和`catch`语句可以传输 c + + 异常。 **/CLR**编译器选项暗含规范**/EHa**选项。 请注意，编译器不支持传输托管异常。 这是因为托管异常，派生自[类 System.Exception](../standard-library/exception-class.md)，已是您可以通过使用公共语言运行时的功能的线程之间移动的对象。  
+-   **/CLR**或**/CLR: pure**编译器选项和`catch`语句可以传输 C++ 异常。 **/CLR**编译器选项暗含规范**/EHa**选项。 请注意，编译器不支持传输托管异常。 这是因为托管异常，派生自[类 System.Exception](../standard-library/exception-class.md)，已是您可以通过使用公共语言运行时的功能的线程之间移动的对象。  
   
     > [!IMPORTANT]
-    >  我们建议您指定**/EHsc**编译器选项和 catch 仅 c + + 异常。 你自行向公开一种安全威胁如果你使用**/EHa**或**/CLR**编译器选项和**捕获**带省略号的语句*异常声明*(`catch(...)`)。 你可能希望使用 `catch` 语句捕获几个特定的异常。 但是，`catch(...)` 语句将捕获所有的 C++ 和 SEH 异常，包括致命的意外异常。 如果忽略意外异常或处理不当，恶意代码就可以趁此机会破坏你程序的安全性。  
+    >  我们建议您指定**/EHsc**编译器选项和 catch 仅 C++ 异常。 你自行向公开一种安全威胁如果你使用**/EHa**或**/CLR**编译器选项和**捕获**带省略号的语句*异常声明*(`catch(...)`)。 你可能希望使用 `catch` 语句捕获几个特定的异常。 但是，`catch(...)` 语句将捕获所有的 C++ 和 SEH 异常，包括致命的意外异常。 如果忽略意外异常或处理不当，恶意代码就可以趁此机会破坏你程序的安全性。  
   
 ## <a name="usage"></a>用法  
  下列各节描述如何通过传输异常`exception_ptr`类型，与`current_exception`， `rethrow_exception`，和`make_exception_ptr`函数。  
@@ -128,7 +128,7 @@ namespace std
   
  **SEH 异常：**  
   
- 如果你使用**/EHa**编译器选项，你可以在 c + + 中捕获 SEH 异常`catch`块。 `current_exception` 函数返回引用 SEH 异常的 `exception_ptr` 对象。 与`rethrow_exception`函数将引发 SEH 异常，如果调用使用 thetransported`exception_ptr`对象作为其参数。  
+ 如果你使用**/EHa**编译器选项，你可以在 C++ 中捕获 SEH 异常`catch`块。 `current_exception` 函数返回引用 SEH 异常的 `exception_ptr` 对象。 与`rethrow_exception`函数将引发 SEH 异常，如果调用使用 thetransported`exception_ptr`对象作为其参数。  
   
  如果你在 `current_exception` 终止处理程序、`exception_ptr` 异常处理程序或 `__finally` 筛选器表达式中调用 `__except` 函数，该函数将返回 null `__except`。  
   

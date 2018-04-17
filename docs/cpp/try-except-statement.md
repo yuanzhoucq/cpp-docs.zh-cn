@@ -1,12 +1,12 @@
 ---
-title: "重试-除非语句 |Microsoft 文档"
-ms.custom: 
+title: 重试-除非语句 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,7 +34,7 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="try-except-statement"></a>try-except 语句
 
 **Microsoft 专用**  
-**重-除**语句是 Microsoft 扩展，对 C 和 c + + 语言的支持结构化异常处理。  
+**重-除**语句是 Microsoft 扩展，对 C 和 C++ 语言的支持结构化异常处理。  
 
 ## <a name="syntax"></a>语法  
   
@@ -64,14 +64,14 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="remarks"></a>备注
 
-**重-除**语句是 Microsoft 扩展，对 C 和 c + + 语言，使目标应用程序能够获得控制正常终止程序执行的事件发生时。 此类事件称为*异常*，和处理异常的机制称为*结构化异常处理*(SEH)。
+**重-除**语句是 Microsoft 扩展，对 C 和 C++ 语言，使目标应用程序能够获得控制正常终止程序执行的事件发生时。 此类事件称为*异常*，和处理异常的机制称为*结构化异常处理*(SEH)。
 
 有关相关信息，请参阅[try-finally 语句](../cpp/try-finally-statement.md)。
 
 异常可基于硬件，也可基于软件。 即使应用程序无法从硬件或软件异常中完全恢复，结构化异常处理也可以显示错误信息并捕获应用程序的内部状态，从而帮助诊断问题。 这对于无法轻松重现的间歇性问题特别有用。
 
 > [!NOTE]
-> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 c + + 程序，建议你使用 c + + 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
+> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
 
 在 `__try` 子句后的复合语句是主体或受保护节。 在 `__except` 子句后的复合语句是异常处理程序。 处理程序指定在执行受保护节的主体时引发了异常的情况下要执行的一组操作。 执行过程如下所示：
 
@@ -199,5 +199,5 @@ world
 ## <a name="see-also"></a>请参阅
 
 [编写异常处理程序](../cpp/writing-an-exception-handler.md)   
-[结构化的异常处理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
+[结构化的异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)   
 [关键字](../cpp/keywords-cpp.md)
