@@ -1,19 +1,19 @@
 ---
-title: "Lambda 表达式的示例 |Microsoft 文档"
-ms.custom: 
+title: Lambda 表达式的示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -110,7 +110,7 @@ int main()
  [[本文内容](#top)]  
   
 ##  <a name="callingLambdaExpressions"></a>调用 Lambda 表达式  
- 你可以立即调用 Lambda 表达式，如下面的代码片段所示。 第二个代码段演示如何 lambda 作为参数传递到 c + + 标准库算法如`find_if`。  
+ 你可以立即调用 Lambda 表达式，如下面的代码片段所示。 第二个代码段演示如何 lambda 作为参数传递到 C++ 标准库算法如`find_if`。  
   
 ### <a name="example-1"></a>示例 1  
  以下示例声明的 lambda 表达式将返回两个整数的总和并使用参数 `5` 和 `4` 立即调用该表达式：  
@@ -181,7 +181,7 @@ The first even number in the list is 42.
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息`find_if`函数中，请参阅[find_if](../standard-library/algorithm-functions.md#find_if)。 有关执行公共算法的 c + + 标准库函数的详细信息，请参阅[\<算法 >](../standard-library/algorithm.md)。  
+ 有关详细信息`find_if`函数中，请参阅[find_if](../standard-library/algorithm-functions.md#find_if)。 有关执行公共算法的 C++ 标准库函数的详细信息，请参阅[\<算法 >](../standard-library/algorithm.md)。  
   
  [[本文内容](#top)]  
   
@@ -225,7 +225,7 @@ int main()
 ##  <a name="higherOrderLambdaExpressions"></a>高阶 Lambda 函数  
   
 ### <a name="example"></a>示例  
- 许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其自变量或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 c + + lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。  
+ 许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其自变量或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。  
   
 ### <a name="code"></a>代码  
   
@@ -275,7 +275,7 @@ int main()
   
 ### <a name="example"></a>示例  
  你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获 `this` 指针，以提供对封闭类的函数和数据成员的访问路径。  
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 捕获`this`通过值 (`[*this]`) 当 lambda 将使用在异步或并行操作中代码的可能位置执行后的原始对象超出范围。
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 捕获`this`通过值 (`[*this]`) 当 lambda 将使用在异步或并行操作中代码的可能位置执行后的原始对象超出范围。
   
  你可以在函数中显式使用 `this` 指针，如下所示：  
   
@@ -426,7 +426,7 @@ After negate_all():
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关 c + + 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)。  
+ 有关 C++ 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)。  
   
  [[本文内容](#top)]  
   
@@ -484,7 +484,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[本文内容](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>托管类型传递配合使用 Lambda 表达式 (C + + /cli CLI)  
+##  <a name="managedLambdaExpressions"></a>托管类型传递配合使用 Lambda 表达式 (C++ /cli CLI)  
   
 ### <a name="example"></a>示例  
  lambda 表达式的捕获子句不能包含具有托管类型的变量。 但是，你可以将具有托管类型的实际参数传递到 lambda 表达式的形式参数列表。 以下示例包含一个 lambda 表达式，它通过值捕获局部非托管变量 `ch`，并采用 <xref:System.String?displayProperty=fullName> 对象作为其参数。  

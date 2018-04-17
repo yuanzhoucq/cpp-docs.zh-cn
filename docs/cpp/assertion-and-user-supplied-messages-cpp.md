@@ -1,5 +1,5 @@
 ---
-title: 断言和用户提供的消息 （c + +） |Microsoft 文档
+title: 断言和用户提供的消息 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -43,7 +43,7 @@ C + + 语言支持三个错误处理机制来帮助你调试应用程序： [#er
 -   [断言宏、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏实际上是在运行时。 它会计算用户指定的表达式，如果结果为零，系统将发出诊断消息并关闭应用程序。 许多其他宏，如[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)和`_ASSERTE`，类似于此宏，但发出不同系统定义的或用户定义的诊断消息。  
   
 ## <a name="see-also"></a>请参阅  
- [#error 指令 （C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)   
+ [#error 指令 （C/C++）](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert 宏、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_ASSERT、_ASSERTE、_ASSERT_EXPR 宏](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
  [static_assert](../cpp/static-assert.md)   

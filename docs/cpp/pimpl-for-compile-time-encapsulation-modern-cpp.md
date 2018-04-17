@@ -1,17 +1,17 @@
 ---
-title: "用于编译时 （现代 c + +） 封装的 Pimpl |Microsoft 文档"
-ms.custom: 
+title: 用于编译时 （现代 C++） 封装的 Pimpl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>用于编译时封装的 Pimpl（现代 C++）
-*Pimpl 惯用语法*现代的 c + + 技术，可隐藏实现，以便最大程度减少耦合，从而单独的接口。 Pimpl 是短的"指向的实现。" 你已可能熟悉的概念，但是知道它通过类似 Cheshire Cat 或编译器防火墙惯用语法其他名称。  
+*Pimpl 惯用语法*现代的 C++ 技术，可隐藏实现，以便最大程度减少耦合，从而单独的接口。 Pimpl 是短的"指向的实现。" 你已可能熟悉的概念，但是知道它通过类似 Cheshire Cat 或编译器防火墙惯用语法其他名称。  
   
 ## <a name="why-use-pimpl"></a>为何使用 pimpl？  
  下面是 pimpl 惯用语法可以如何改进软件开发生命周期：  
@@ -68,6 +68,6 @@ my_class::my_class(): pimpl( new impl )
  考虑是否添加对非引发交换专用化的支持。  
   
 ## <a name="see-also"></a>请参阅  
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

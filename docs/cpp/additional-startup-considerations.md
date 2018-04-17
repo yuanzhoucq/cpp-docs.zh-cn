@@ -1,12 +1,12 @@
 ---
-title: "附加启动注意事项 |Microsoft 文档"
-ms.custom: 
+title: 附加启动注意事项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - startup code
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  **Microsoft 专用**  
   
- Microsoft c + + 中的全局静态对象之前，将初始化进入**主要**。  
+ Microsoft C++ 中的全局静态对象之前，将初始化进入**主要**。  
   
  **结束 Microsoft 专用**  
   

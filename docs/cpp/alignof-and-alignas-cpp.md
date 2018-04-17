@@ -1,17 +1,17 @@
 ---
-title: "alignof 和 alignas （c + +） |Microsoft 文档"
-ms.custom: 
+title: alignof 和 alignas （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mikeblome
 ms.author: mblome
 manager: ghogen

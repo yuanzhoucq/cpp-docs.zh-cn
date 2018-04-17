@@ -1,5 +1,5 @@
 ---
-title: 选择语句 （c + +） |Microsoft 文档
+title: 选择语句 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -27,7 +27,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="selection-statements-c"></a>选择语句 (C++)
-C + + 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp/switch-statement-cpp.md)，提供有条件地执行代码的部分的方法。  
+C++ 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp/switch-statement-cpp.md)，提供有条件地执行代码的部分的方法。  
   
  [__If_exists](../cpp/if-exists-statement.md)和[__if_not_exists](../cpp/if-not-exists-statement.md)语句可用于有条件地包括代码具体取决于是否存在某个符号。  
   

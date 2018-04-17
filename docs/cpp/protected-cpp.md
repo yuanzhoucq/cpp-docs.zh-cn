@@ -1,12 +1,12 @@
 ---
-title: "受保护 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 受保护 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - protected_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -57,7 +57,7 @@ protected base-class
  有关相关信息，请参阅[友元](../cpp/friend-cpp.md)，[公共](../cpp/public-cpp.md)，[私有](../cpp/private-cpp.md)，和中的成员访问表[控制对类成员的访问](member-access-control-cpp.md).  
   
 ## <a name="clr-specific"></a>/clr 专用  
- 在 CLR 类型中，c + + 访问说明符关键字 (**公共**， `private`，和`protected`) 可能会影响类型和方法与程序集相关的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。  
+ 在 CLR 类型中，C++ 访问说明符关键字 (**公共**，`private`，和`protected`) 可能会影响类型和方法与程序集相关的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。  
   
 > [!NOTE]
 >  与已编译的文件[/LN](../build/reference/ln-create-msil-module.md)不受此行为。 在这种情况下，所有托管类（公共或私有）都将可见。  

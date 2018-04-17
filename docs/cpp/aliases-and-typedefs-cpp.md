@@ -1,19 +1,19 @@
 ---
-title: "别名和 typedef （c + +） |Microsoft 文档"
-ms.custom: 
+title: 别名和 typedef （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
 dev_langs:
 - C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -345,7 +345,7 @@ POINT ptOrigin;
 struct point_t ptOrigin;  
 ```  
   
- 在 c + + 之间的差异`typedef`名称和实际类型 (使用声明**类**， `struct`，**联合**，和`enum`关键字) 更为明显。 尽管在 `typedef` 语句中声明无名称的结构的 C 做法仍有效，但它不会提供像在 C 中一样的记数性的好处。  
+ 在 C++ 之间的差异`typedef`名称和实际类型 (使用声明**类**， `struct`，**联合**，和`enum`关键字) 更为明显。 尽管在 `typedef` 语句中声明无名称的结构的 C 做法仍有效，但它不会提供像在 C 中一样的记数性的好处。  
   
 ```cpp  
 // typedef_with_class_types2.cpp  

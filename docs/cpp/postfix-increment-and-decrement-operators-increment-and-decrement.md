@@ -1,12 +1,12 @@
 ---
-title: "后缀增量和减量运算符: + + 和-|Microsoft 文档"
-ms.custom: 
+title: '后缀增量和减量运算符: + + 和-|Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -56,11 +56,11 @@ i++;
   
  当后缀运算符应用于函数参数时，在参数的值传递给函数之前，不能保证该值是递增还是递减。  有关详细信息，请参阅 C++ 标准中的 1.9.17 节。  
   
- 将后缀递增运算符应用于指向类型的对象的数组的指针**长**实际上会将添加四个指针的内部表示。 此行为会导致指针，这以前称为 *n* th 元素的数组，来指代 (*n*+ 1) 个元素。  
+ 将后缀递增运算符应用于指向类型的对象的数组的指针**长**实际上会将添加四个指针的内部表示。 此行为会导致指针，这以前称为*n*th 元素的数组，来指代 (*n*+ 1) 个元素。  
   
  后缀递增运算符和后缀递减运算符的操作数必须是可修改 (不**const**) 的算法或指针类型的左值。 结果的类型是相同的*后缀表达式*，但它不再是左值。  
   
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀递增或递减运算符不能为类型`bool`。
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀递增或递减运算符不能为类型`bool`。
   
  以下代码演示了后缀递增运算符：  
   
@@ -87,5 +87,5 @@ for( myCompass = North; myCompass != West; myCompass++ ) // Error
   
 ## <a name="see-also"></a>请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 后缀增量和减量运算符](../c-language/c-postfix-increment-and-decrement-operators.md)

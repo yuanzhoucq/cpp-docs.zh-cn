@@ -1,17 +1,17 @@
 ---
-title: "ABI 边界 （现代 c + +） 处的可移植性 |Microsoft 文档"
-ms.custom: 
+title: ABI 边界 （现代 C++） 处的可移植性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -44,6 +44,6 @@ extern "C" {        // functions using explicit "this"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

@@ -119,6 +119,6 @@ int main() {
   
 ## <a name="see-also"></a>另请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)   
  [间接寻址运算符和 Address-of 运算符](../c-language/indirection-and-address-of-operators.md)
