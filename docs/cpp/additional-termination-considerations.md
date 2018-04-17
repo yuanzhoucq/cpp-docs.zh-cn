@@ -1,12 +1,12 @@
 ---
-title: "附加终止注意事项 |Microsoft 文档"
-ms.custom: 
+title: 附加终止注意事项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - exiting applications
 - programs [C++], terminating
 ms.assetid: acbe2332-9d8a-4a58-a471-dd652a837384
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -28,7 +28,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="additional-termination-considerations"></a>附加终止注意事项
-你可以通过使用终止 c + + 程序**退出**， `return`，或**中止**。 您可以使用 `atexit` 函数添加退出处理。 以下几节中讨论了这几个方面。  
+你可以通过使用终止 C++ 程序**退出**， `return`，或**中止**。 您可以使用 `atexit` 函数添加退出处理。 以下几节中讨论了这几个方面。  
   
 ## <a name="see-also"></a>请参阅  
  [启动和终止](../cpp/startup-and-termination-cpp.md)

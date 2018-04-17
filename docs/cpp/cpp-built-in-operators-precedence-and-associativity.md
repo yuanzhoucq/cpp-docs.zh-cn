@@ -1,5 +1,5 @@
 ---
-title: C + + 内置运算符、 优先级和结合性 |Microsoft 文档
+title: C++ 内置运算符、 优先级和结合性 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -33,7 +33,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 内置运算符、 优先级和关联性
+# <a name="c-built-in-operators-precedence-and-associativity"></a>C++ 内置运算符、 优先级和关联性
 
 C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指定对一个或多个操作数执行的计算。
 
@@ -70,7 +70,7 @@ C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指
 |[销毁对象](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[强制转换](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**组 4 优先级，从左到右的关联性**|
-|[指针到成员 （对象或指针）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[。 &#42;或-> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[指针到成员 （对象或指针）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[。 & #42;或-> & #42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**组 5 优先级，从左到右的关联性**|
 |[乘法](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[除法](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|

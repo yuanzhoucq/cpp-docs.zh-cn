@@ -1,12 +1,12 @@
 ---
-title: "加法运算符: + 和-|Microsoft 文档"
-ms.custom: 
+title: '加法运算符: + 和-|Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -121,9 +121,9 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>指针减法  
  如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式产生类型 ptrdiff_t 有符号整数结果 (在标准包含文件中定义\<stddef.h >)。  
   
- 其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向的指针 (*n* - *我*) 个数组元素，其中 *n* 是由指向元素原始指针和*我*是第二个操作数的整数值。  
+ 其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向的指针 (*n* - *我*) 个数组元素，其中*n*是由指向元素原始指针和*我*是第二个操作数的整数值。  
   
 ## <a name="see-also"></a>请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 加法运算符](../c-language/c-additive-operators.md)

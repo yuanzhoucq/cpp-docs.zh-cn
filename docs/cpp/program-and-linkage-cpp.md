@@ -1,5 +1,5 @@
 ---
-title: 程序和链接 （c + +） |Microsoft 文档
+title: 程序和链接 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 04/09/2018
 ms.reviewer: ''
@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="program-and-linkage--c"></a>程序和链接 （c + +）
+# <a name="program-and-linkage--c"></a>程序和链接 （C++）
 
 在 c + + 程序中，每个全局符号可以定义一次，即使该计划包括的多个翻译单元。 翻译单元组成实现文件 （.cpp、.hpp、.cxx 等） 和其中的直接或间接的所有标头。 程序包括链接在一起的一个或多个翻译单元。 
 
