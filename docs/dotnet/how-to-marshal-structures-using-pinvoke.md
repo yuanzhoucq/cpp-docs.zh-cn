@@ -1,12 +1,12 @@
 ---
-title: "如何： 使用 PInvoke 封送结构 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 PInvoke 封送结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7f08d42946eec22d616e6d964feda78e1358228
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
-本文档介绍如何本机接受 C 样式字符串可以从提供的一个实例的托管函数调用的函数<xref:System.String>通过使用 P/Invoke。 尽管我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供很少的编译时错误报告，因为不是类型安全和可单调乏味，若要实现，如果非托管的 API 打包为的 DLL，并且源代码不是可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
+本文档说明如何本机接受 C 样式结构可以从托管函数调用通过使用 P/Invoke 的函数。 尽管我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供很少的编译时错误报告，因为不是类型安全和可单调乏味，若要实现，如果非托管的 API 打包为的 DLL，并且源代码不是可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
   
--   [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
--   [如何：使用 PInvoke 封送结构](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [如何：使用 PInvoke 封送处理字符串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
  默认情况下，本机和托管结构的布局以不同方式在内存中，成功跨托管/非托管边界传递结构要求额外的步骤来保持数据的完整性。  
   
@@ -143,5 +143,5 @@ int main() {
 [managed] x=50 y=50  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

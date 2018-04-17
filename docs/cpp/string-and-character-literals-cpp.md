@@ -1,12 +1,12 @@
 ---
-title: "字符串和字符文本 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 字符串和字符文本 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （c + +）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- 字符串文本可以米有前缀，也可以具有 `u8`、 `L`、 `u`和  `U` 前缀以分别指示窄字符（单字节或多字节）、UTF-8、宽字符（UCS-2 或 UTF-16）、UTF-16 和 UTF-32 编码。 原始字符串文本可以具有`R`， `u8R`， `LR`，`uR`和`UR`前缀的这些编码的原始版本等效项。  若要创建临时或静态 std::string 值，可以使用带 `s` 后缀的字符串文本或原始字符串文本。 有关详细信息，请参阅下面的“字符串文本”一节。 有关基本源字符集、通用字符名称以及在源代码中使用扩展代码页中的字符的详细信息，请参阅 [Character Sets](../cpp/character-sets2.md)。  
+ 字符串文本可以米有前缀，也可以具有 `u8`、 `L`、 `u`和  `U` 前缀以分别指示窄字符（单字节或多字节）、UTF-8、宽字符（UCS-2 或 UTF-16）、UTF-16 和 UTF-32 编码。 原始字符串文本可以具有`R`， `u8R`， `LR`，`uR`和`UR`前缀的这些编码的原始版本等效项。  若要创建临时或静态 std::string 值，可以使用带 `s` 后缀的字符串文本或原始字符串文本。 有关详细信息，请参阅下面的“字符串文本”一节。 有关基本源字符集的详细信息，通用字符名称以及在源代码中使用扩展代码页中的字符，请参阅[字符集](../cpp/character-sets.md)。  
   
 ## <a name="character-literals"></a>字符文本  
  *字符文本* 由一个字符常量构成。 它由用单引号引起来的字符表示。 有五种类型的字符文本：  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  通用字符名称不能对代理项码位范围 D800-DFFF 内的值进行编码。 对于 Unicode 代理项对，通过使用 `\UNNNNNNNN`（其中，NNNNNNNN 是字符的八位数码位）指定通用字符名称。 如果需要，编译器将生成一个代理项对。  
   
- 在 C++03 中，语言只允许字符串子集通过其通用字符名称来表示，并且允许某些实际不表示任何有效 Unicode 字符的通用字符名称。 这在 C++11 标准中进行了修复。 在 C++ 11 中，字符以及字符串文本和标识符可以使用通用字符名称。  有关通用字符名称的详细信息，请参阅 [Character Sets](../cpp/character-sets2.md)。 有关 Unicode 的详细信息，请参阅 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 有关代理项对的详细信息，请参阅 [代理项对与补充字符](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)。  
+ 在 C++03 中，语言只允许字符串子集通过其通用字符名称来表示，并且允许某些实际不表示任何有效 Unicode 字符的通用字符名称。 这在 C++11 标准中进行了修复。 在 C++ 11 中，字符以及字符串文本和标识符可以使用通用字符名称。  通用字符名称的详细信息，请参阅[字符集](../cpp/character-sets.md)。 有关 Unicode 的详细信息，请参阅 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 有关代理项对的详细信息，请参阅 [代理项对与补充字符](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)。  
   
 ## <a name="string-literals"></a>字符串文本  
  字符串文本表示字符序列，这些字符合起来可组成以 null 结尾的字符串。 字符必须放在双引号之间。 字符串文本有以下类型：  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Character Sets](../cpp/character-sets2.md)   
+ [字符集](../cpp/character-sets.md)   
  [数值、 布尔和指针文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [用户定义的文本](../cpp/user-defined-literals-cpp.md)

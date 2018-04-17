@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ce15db75d4d08ef128e561fa9671b643946c71c3
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 中 C++ 的一致性改进
 
@@ -72,7 +72,7 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>不重复使用属性命名空间
 
-仅在属性列表中启用单个命名空间标识符的新语法。 有关详细信息，请参阅 [C++ 中的属性](cpp/attributes2.md)。
+仅在属性列表中启用单个命名空间标识符的新语法。 有关详细信息，请参阅 [C++ 中的属性](cpp/attributes.md)。
 
 ### <a name="structured-bindings"></a>结构化绑定
 

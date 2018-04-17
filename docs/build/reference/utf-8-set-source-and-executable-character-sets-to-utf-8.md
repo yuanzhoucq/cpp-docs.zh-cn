@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 592cba779113a6658b40d0dc3f855f53fa3d170c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e51db101db10b0461d7e9aa76b62319989d9f7d0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/utf-8 （设为源和可执行文件字符集为 utf-8）
 指定两个源字符集和执行字符集为 utf-8。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  你可以使用**/utf-8**选项以指定的源和执行字符集作为通过使用 utf-8 编码。 它等效于指定**/源-charset:utf-8 /execution-charset:utf-8**命令行上。 所有这些选项还允许**/validate-charset**默认情况下的选项。 支持代码页标识符的列表和字符集名称，请参阅[代码页标识符](http://msdn.microsoft.com/library/windows/desktop/dd317756)。  
   
- 默认情况下，Visual Studio 会检测以确定源是否该文件在编码的 Unicode 格式，例如 utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源文件使用编码的当前的用户代码页，除非使用指定代码页**/utf-8**或**/source-charset**选项。 Visual Studio 允许你使用任何几个字符编码保存你的 c + + 源代码。 有关源和执行字符集的信息，请参阅[字符集](../../cpp/character-sets2.md)语言文档中。  
+ 默认情况下，Visual Studio 会检测以确定源是否该文件在编码的 Unicode 格式，例如 utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源文件使用编码的当前的用户代码页，除非使用指定代码页**/utf-8**或**/source-charset**选项。 Visual Studio 允许你使用任何几个字符编码保存你的 c + + 源代码。 有关源和执行字符集的信息，请参阅[字符集](../../cpp/character-sets.md)语言文档中。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -52,9 +52,9 @@ ms.lasthandoff: 12/21/2017
   
 4.  选择**确定**以保存所做的更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)   
  [/source-charset （设置源字符集）](../../build/reference/source-charset-set-source-character-set.md)   
- [/validate-charset （验证兼容字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+ [/validate-charset（验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)

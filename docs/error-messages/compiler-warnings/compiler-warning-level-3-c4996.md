@@ -1,12 +1,12 @@
 ---
-title: "编译器警告 （等级 3） C4996 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 3） C4996 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
 
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 
 - [此函数或变量可能不安全。请考虑使用*safe_version*相反。若要禁用弃用，请使用\_CRT\_SECURE\_否\_警告。请参阅联机帮助了解详细信息。](#unsafe-crt-library-functions)
 
-- [std::*function_name*::\_未选中\_迭代器::\_Deprecate 调用 std::*function_name*具有参数，参数可能不安全的此调用依赖于调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用 Visual c + + 检查迭代器，请参阅文档](#unsafe-standard-library-functions)
+- [std::*function_name*::\_未选中\_迭代器::\_Deprecate 调用 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用 Visual c + + 检查迭代器，请参阅文档](#unsafe-standard-library-functions)
 
 - [此函数或变量已被较新的库或操作系统功能取代。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>原因
 
-当编译器遇到函数或被标记为的变量，则会发生 C4996[弃用](../../cpp/deprecated-cpp.md)使用`__declspec(deprecated)`修饰符，或当你尝试访问函数、 类成员或具有 C + + 14 的 typedef [ \[\[弃用\]\] ](../../cpp/attributes2.md)属性。 你可以使用`__declspec(deprecated)`修饰符或`[[deprecated]]`属性自己库或标头文件来警告你有关已弃用的函数、 变量、 成员或 typedef 的客户端中。
+当编译器遇到函数或被标记为的变量，则会发生 C4996[弃用](../../cpp/deprecated-cpp.md)使用`__declspec(deprecated)`修饰符，或当你尝试访问函数、 类成员或具有 C + + 14 的 typedef [ \[\[弃用\]\] ](../../cpp/attributes.md)属性。 你可以使用`__declspec(deprecated)`修饰符或`[[deprecated]]`属性自己库或标头文件来警告你有关已弃用的函数、 变量、 成员或 typedef 的客户端中。
 
 ## <a name="remarks"></a>备注
 
