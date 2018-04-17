@@ -1,4 +1,4 @@
----
+﻿---
 title: 构造函数 （c + +） |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018

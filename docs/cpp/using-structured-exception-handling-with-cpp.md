@@ -1,4 +1,4 @@
----
+﻿---
 title: 将结构化的异常处理用于 C++ |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

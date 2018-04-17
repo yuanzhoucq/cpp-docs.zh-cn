@@ -1,4 +1,4 @@
----
+﻿---
 title: "const 和 volatile 指针 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -49,7 +49,7 @@ char * const pchc;
 char * volatile pchv;  
 ```  
   
- C + + 语言禁止将允许修改的对象的分配或指针声明为**const**。 此类赋值会移除用来声明对象或指针的信息，从而违反原始声明的意图。 请考虑以下声明：  
+ C++ 语言禁止将允许修改的对象的分配或指针声明为**const**。 此类赋值会移除用来声明对象或指针的信息，从而违反原始声明的意图。 请考虑以下声明：  
   
 ```  
 const char cch = 'A';  

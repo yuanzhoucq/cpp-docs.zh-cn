@@ -1,4 +1,4 @@
----
+﻿---
 title: "逻辑非运算符：! | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
@@ -63,5 +63,5 @@ int main() {
   
 ## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [一元算术运算符](../c-language/unary-arithmetic-operators.md)

@@ -1,4 +1,4 @@
----
+﻿---
 title: 新和 delete 运算符 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
-C + + C++ 支持动态分配和释放对象使用[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 `new`运算符调用特殊函数[运算符 new](../cpp/new-operator-cpp.md)，和`delete`运算符调用特殊函数[运算符 delete](../cpp/delete-operator-cpp.md)。   
+C++ 支持动态分配和释放对象使用[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 `new`运算符调用特殊函数[运算符 new](../cpp/new-operator-cpp.md)，和`delete`运算符调用特殊函数[运算符 delete](../cpp/delete-operator-cpp.md)。  
   
  `new` C++ 标准库中的函数支持 C++ 标准，则会引发 std:: bad_alloc 异常，如果内存分配失败中指定的行为。 如果您仍需要的非引发版本`new`，将 nothrownew.obj 程序显式链接。但是，当您链接到 nothrownew.obj 时，默认值`operator new`在 C++ 标准库中不再正常工作。   
   

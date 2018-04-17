@@ -1,5 +1,5 @@
----
-title: 值的分类： 左值和右值 （Visual c + +） |Microsoft 文档
+﻿---
+title: "值的分类： 左值和右值 （Visual C++） |Microsoft 文档"
 ms.custom: ''
 ms.date: 04/06/2018
 ms.reviewer: ''
@@ -26,7 +26,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual c + +）
+# <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual C++）
 
 每个 C++ 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和表达式求值期间移动临时对象时，编译器必须遵循的规则的基础。
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 
 下图阐释了两个分类之间的关系：
 
- ![C++ 表达式值的分类](media/value_categories.png "C++ 表达式值的分类")
+ ![C++ 表达式值的分类](media/value_categories.png "C++ 表达式值的分类")  
 
  左值具有可以访问你的程序的地址。 左值表达式的示例包括变量名称，包括`const`变量，数组元素，函数返回左值引用、 位域、 联合和类成员的调用。
 
@@ -80,8 +80,9 @@ int main()
 > [!NOTE]
 > 此主题中的示例阐释了未重载运算符时的正确和错误用法。 通过重载运算符，可以使表达式（如 `j * 4`）成为左值。
 
-条款*左值*和*右值*通常用于在引用对象引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)和[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
-
+  
+ 条款*左值*和*右值*通常用于在引用对象引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)和[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+  
 ## <a name="see-also"></a>另请参阅
 
  [基本概念](../cpp/basic-concepts-cpp.md)[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md) [右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)

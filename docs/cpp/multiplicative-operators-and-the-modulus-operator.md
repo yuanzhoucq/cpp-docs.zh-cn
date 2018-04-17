@@ -1,4 +1,4 @@
----
+﻿---
 title: "乘法运算符和取模运算符 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -103,5 +103,5 @@ int main() {
   
 ## <a name="see-also"></a>另请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 乘法运算符](../c-language/c-multiplicative-operators.md)

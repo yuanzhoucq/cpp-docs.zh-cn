@@ -1,4 +1,4 @@
----
+﻿---
 title: "依赖类型的名称解析 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -102,7 +102,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>模板消除歧义  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 强制实施 C++98/03/11 标准规则以使用“template”关键字消除歧义。 在以下示例中，Visual c + + 2010年以接受不一致性行和一致性行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]接受仅一致性行。  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 强制实施 C++98/03/11 标准规则以使用“template”关键字消除歧义。 在以下示例中，Visual C++ 2010年以接受不一致性行和一致性行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]接受仅一致性行。  
   
 ```cpp  
 #include <iostream>  

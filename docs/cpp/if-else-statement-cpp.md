@@ -1,5 +1,5 @@
----
-title: "if-else 语句 （c + +） |Microsoft 文档"
+﻿---
+title: "if-else 语句 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/17/2017
 ms.reviewer: 
@@ -123,7 +123,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>如果使用初始值设定项的语句
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 如果块的作用域内仅需要变量时，请使用这种形式的 if 语句。 
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 如果块的作用域内仅需要变量时，请使用这种形式的 if 语句。 
 
 ```cpp
 ## Example  
@@ -176,7 +176,7 @@ int main()
  **其他**子句`if...else`语句是与最近关联以前**如果**中没有相应的相同作用域语句**其他**语句。   
 
 ## <a name="constexpr-if-statements"></a>constexpr 如果语句
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用**constexpr 如果**语句使编译时分支决策而无需采用多个函数重载。 例如，你可以编写单个函数该句柄参数解包 （零参数重载均不需要）： 
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用**constexpr 如果**语句使编译时分支决策而无需采用多个函数重载。 例如，你可以编写单个函数该句柄参数解包 （零参数重载均不需要）： 
 
 ```cpp
 template <class T, class... Rest>
