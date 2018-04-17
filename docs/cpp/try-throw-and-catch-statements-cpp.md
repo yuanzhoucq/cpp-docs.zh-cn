@@ -39,6 +39,7 @@ ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
+
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 语句 (C++)
 若要在 C++ 中实现异常处理，你可以使用 `try`、`throw` 和 `catch` 表达式。  
