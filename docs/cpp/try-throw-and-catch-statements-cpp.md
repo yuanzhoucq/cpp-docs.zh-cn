@@ -1,12 +1,12 @@
 ---
-title: "请尝试、 throw 和 catch 语句 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 请尝试、 throw 和 catch 语句 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
@@ -28,7 +28,7 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -105,7 +105,7 @@ catch(...) {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 异常处理](../cpp/cpp-exception-handling.md)   
+ [C++ 异常处理](../cpp/cpp-exception-handling.md)   
  [关键字](../cpp/keywords-cpp.md)   
- [未处理的 c + + 异常](../cpp/unhandled-cpp-exceptions.md)   
+ [未处理的 C++ 异常](../cpp/unhandled-cpp-exceptions.md)   
  [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)
