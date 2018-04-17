@@ -1,17 +1,17 @@
-﻿---
-title: "初始化类和结构而无需构造函数 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 初始化类和结构而无需构造函数 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mikeblome
 ms.author: mblome
 manager: ghogen

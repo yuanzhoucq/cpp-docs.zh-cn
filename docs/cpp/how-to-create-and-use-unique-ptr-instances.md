@@ -1,4 +1,4 @@
-﻿---
+---
 title: 如何： 创建和使用 unique_ptr 实例 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

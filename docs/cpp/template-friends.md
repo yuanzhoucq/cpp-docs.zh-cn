@@ -1,17 +1,17 @@
-﻿---
-title: "模板友元 |Microsoft 文档"
-ms.custom: 
+---
+title: 模板友元 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen

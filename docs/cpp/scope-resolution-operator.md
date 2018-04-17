@@ -1,4 +1,4 @@
-﻿---
+---
 title: '范围解析运算符::: |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016

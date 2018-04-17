@@ -1,12 +1,12 @@
-﻿---
-title: "Catch 块的计算 （C++） 的方式 |Microsoft 文档"
-ms.custom: 
+---
+title: Catch 块的计算 （C++） 的方式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

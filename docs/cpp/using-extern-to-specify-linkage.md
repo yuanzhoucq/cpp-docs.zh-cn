@@ -1,4 +1,4 @@
-﻿---
+---
 title: 使用 extern 指定链接 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018

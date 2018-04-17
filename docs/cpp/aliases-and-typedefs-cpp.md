@@ -1,4 +1,4 @@
-﻿---
+---
 title: 别名和 typedef （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

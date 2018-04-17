@@ -1,12 +1,12 @@
-﻿---
-title: "函数具有变量自变量列表 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 函数具有变量自变量列表 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

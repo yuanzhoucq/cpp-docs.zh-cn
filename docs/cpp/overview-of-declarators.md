@@ -1,19 +1,19 @@
-﻿---
-title: "声明符概述 |Microsoft 文档"
-ms.custom: 
+---
+title: 声明符概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -57,7 +57,7 @@ const char *pch, ch;
   
  **指针、 引用和数组的声明符**  
   
- 在名称前面插入的指针运算符使对象成为指针或引用。   **\*** 运算符声明为指针; 名称 **&** 运算符声明为引用。  
+ 在名称前面插入的指针运算符使对象成为指针或引用。  **\***运算符声明为指针; 名称**&**运算符声明为引用。  
   
 ```  
 int *i; // declarator is *i  

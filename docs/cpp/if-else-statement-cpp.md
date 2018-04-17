@@ -1,12 +1,12 @@
-﻿---
-title: "if-else 语句 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: if-else 语句 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen

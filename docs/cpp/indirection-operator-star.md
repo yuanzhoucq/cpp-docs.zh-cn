@@ -1,12 +1,12 @@
-﻿---
-title: "间接寻址运算符: * |Microsoft 文档"
-ms.custom: 
+---
+title: '间接寻址运算符: * |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 使用 **\*** 运算符在此上下文中的是不同于其含义与二元运算符，后者是乘法。  
+ 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 使用**\***运算符在此上下文中的是不同于其含义与二元运算符，后者是乘法。  
   
  如果操作数指向函数，则结果是函数指示符。 如果它指向存储位置，则结果是指定存储位置的左值。  
   

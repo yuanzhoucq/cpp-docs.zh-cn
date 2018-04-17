@@ -1,19 +1,19 @@
-﻿---
-title: "for 语句 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: for 语句 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen

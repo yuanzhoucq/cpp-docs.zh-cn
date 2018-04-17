@@ -1,12 +1,12 @@
-﻿---
-title: "后缀表达式 |Microsoft 文档"
-ms.custom: 
+---
+title: 后缀表达式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

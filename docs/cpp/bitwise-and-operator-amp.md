@@ -1,12 +1,12 @@
-﻿---
-title: "按位与运算符： &amp; |Microsoft 文档"
-ms.custom: 
+---
+title: 按位与运算符： &amp; |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitand
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -48,7 +48,7 @@ expression
  按位“与”运算符的两个操作数必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)，适用于操作数。  
   
 ## <a name="operator-keyword-for-"></a>运算符关键字 （& a)  
- `bitand`运算符是文本等效项 **&** 。 有两种方法来访问`bitand`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+ `bitand`运算符是文本等效项**&**。 有两种方法来访问`bitand`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   

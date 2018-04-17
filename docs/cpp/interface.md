@@ -1,12 +1,12 @@
-﻿---
-title: "__interface |Microsoft 文档"
-ms.custom: 
+---
+title: __interface |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __interface_cpp
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

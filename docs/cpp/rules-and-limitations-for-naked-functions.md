@@ -1,4 +1,4 @@
-﻿---
+---
 title: 裸函数的规则和限制 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

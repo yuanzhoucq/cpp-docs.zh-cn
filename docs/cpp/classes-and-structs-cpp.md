@@ -1,12 +1,12 @@
-﻿---
-title: "类和结构 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 类和结构 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - classes [C++]
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

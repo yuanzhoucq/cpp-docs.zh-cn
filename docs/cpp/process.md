@@ -1,12 +1,12 @@
-﻿---
+---
 title: process | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - process_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - __declspec keyword [C++], process
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

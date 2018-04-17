@@ -1,12 +1,12 @@
-﻿---
-title: "命名空间 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 命名空间 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen

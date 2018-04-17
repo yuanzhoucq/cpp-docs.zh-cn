@@ -1,12 +1,12 @@
-﻿---
-title: "容器 （现代 C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 容器 （现代 C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 1/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++

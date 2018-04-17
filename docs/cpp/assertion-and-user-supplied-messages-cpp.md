@@ -1,4 +1,4 @@
-﻿---
+---
 title: 断言和用户提供的消息 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 源代码组织 （C++ 模板） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

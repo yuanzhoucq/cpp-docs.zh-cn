@@ -1,4 +1,4 @@
-﻿---
+---
 title: 左的移和右移运算符 (&gt; &gt;和&lt; &lt;) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

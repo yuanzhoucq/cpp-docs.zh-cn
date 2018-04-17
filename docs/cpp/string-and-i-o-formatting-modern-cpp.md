@@ -1,5 +1,5 @@
-﻿---
-title: "字符串和我-O 格式化 （现代 C++） |Microsoft 文档"
+---
+title: "\"字符串和我-O 格式化 （现代 C++） |Microsoft 文档\""
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

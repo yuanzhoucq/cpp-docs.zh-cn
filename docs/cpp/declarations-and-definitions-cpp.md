@@ -1,17 +1,17 @@
-﻿---
-title: "声明和定义 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 声明和定义 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

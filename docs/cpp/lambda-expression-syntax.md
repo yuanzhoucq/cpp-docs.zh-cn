@@ -1,19 +1,19 @@
-﻿---
-title: "Lambda 表达式语法 |Microsoft 文档"
-ms.custom: 
+---
+title: Lambda 表达式语法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen

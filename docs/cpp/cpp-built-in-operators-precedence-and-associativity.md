@@ -1,5 +1,5 @@
-﻿---
-title: "C++ 内置运算符、 优先级和结合性 |Microsoft 文档"
+---
+title: C++ 内置运算符、 优先级和结合性 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

@@ -1,12 +1,12 @@
-﻿---
-title: "强制转换运算符: （) |Microsoft 文档"
-ms.custom: 
+---
+title: '强制转换运算符: （) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

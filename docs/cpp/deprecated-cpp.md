@@ -1,5 +1,5 @@
-﻿---
-title: "弃用 （C++） |Microsoft 文档"
+---
+title: 弃用 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 03/28/2017
 ms.reviewer: ''
@@ -29,7 +29,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>已弃用 (C++)
-本主题只介绍特定于 Microsoft 的弃用 declspec 声明。 有关 C++ 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[C++ 标准特性](attributes2.md)。
+本主题只介绍特定于 Microsoft 的弃用 declspec 声明。 有关 C++ 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[C++ 标准特性](attributes.md)。
 
  与所示的异常**弃用**声明提供与相同的功能[弃用](../preprocessor/deprecated-c-cpp.md)杂注：  
   

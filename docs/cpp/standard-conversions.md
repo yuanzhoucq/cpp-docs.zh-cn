@@ -1,4 +1,4 @@
-﻿---
+---
 title: 标准转换 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

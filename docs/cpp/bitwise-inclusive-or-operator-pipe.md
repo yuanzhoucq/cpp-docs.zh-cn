@@ -1,4 +1,4 @@
-﻿---
+---
 title: '按位与或运算符: | |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
@@ -43,12 +43,12 @@ expression
 ```  
   
 ## <a name="remarks"></a>备注  
- 非独占的按位或运算符 (**&#124;**) 将每个位与第一个操作数与其第二操作数的相应位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。  
+ 非独占的按位或运算符 (**& #124;**) 将每个位与第一个操作数与其第二操作数的相应位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。  
   
  按位“与或”运算符的两个操作数必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)适用于操作数。  
   
-## <a name="operator-keyword-for-124"></a>运算符关键字 &#124;  
- `bitor`运算符是文本等效项**&#124;**。 有两种方法来访问`bitor`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+## <a name="operator-keyword-for-124"></a>运算符关键字 & #124;  
+ `bitor`运算符是文本等效项**& #124;**。 有两种方法来访问`bitor`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   

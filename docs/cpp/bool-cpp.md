@@ -1,5 +1,5 @@
-﻿---
-title: bool （c + +） |Microsoft 文档
+---
+title: bool （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/08/2018
 
 此关键字是内置类型。 此类型的变量可以具有值[true](../cpp/true-cpp.md)和[false](../cpp/false-cpp.md)。 条件表达式不仅具有类型 `bool`，还具有类型 `bool` 的值。 例如，`i!=0`现在具有**true**或**false**根据的值`i`。  
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量**b**类型的**bool**，不再允许这些表达式：
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量**b**类型的**bool**，不再允许这些表达式：
 
 ```cpp
     b++;

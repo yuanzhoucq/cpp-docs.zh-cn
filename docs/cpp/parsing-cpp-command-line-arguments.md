@@ -1,5 +1,5 @@
-﻿---
-title: "分析 C++ 命令行参数 |Microsoft 文档"
+---
+title: 分析 C++ 命令行参数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

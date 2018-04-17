@@ -1,12 +1,12 @@
-﻿---
-title: "C++ 异常处理 |Microsoft 文档"
-ms.custom: 
+---
+title: C++ 异常处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - C++ exception handling
 - Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen

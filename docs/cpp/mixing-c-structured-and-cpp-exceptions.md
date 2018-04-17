@@ -1,12 +1,12 @@
 ---
-title: "混合使用 C （结构化） 和 C++ 异常 |Microsoft 文档"
-ms.custom: 
+title: 混合使用 C （结构化） 和 C++ 异常 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,5 +1,5 @@
-﻿---
-title: '一个 &#39; s 求补运算符: ~ |Microsoft 文档'
+---
+title: '一个 & #39; s 求补运算符: ~ |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -31,7 +31,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="one39s-complement-operator-"></a>一个 &#39; s 求补运算符: ~
+# <a name="one39s-complement-operator-"></a>一个 & #39; s 求补运算符: ~
 ## <a name="syntax"></a>语法  
   
 ```  

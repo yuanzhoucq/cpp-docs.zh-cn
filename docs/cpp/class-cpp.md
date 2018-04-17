@@ -1,12 +1,12 @@
-﻿---
-title: "类 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 类 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - class_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

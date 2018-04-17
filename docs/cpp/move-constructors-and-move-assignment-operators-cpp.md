@@ -1,5 +1,5 @@
-﻿---
-title: "移动构造函数和移动赋值运算符 （C++） |Microsoft 文档"
+---
+title: 如何： 定义移动构造函数和移动赋值运算符 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 03/05/2018
 ms.reviewer: ''
@@ -26,7 +26,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移动构造函数和移动赋值运算符 (C++)
-本主题介绍如何编写*移动构造函数*和移动赋值运算符的 C++ 类。 利用移动构造函数，您可以实现移动语义，从而显著提高应用程序的性能。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+本主题介绍如何编写*移动构造函数*和移动赋值运算符的 C++ 类。 移动构造函数，而无需复制，可将它们移动到左值的右值对象拥有的资源。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  此主题基于用于管理内存缓冲区的 C++ 类 `MemoryBlock`。  
   
@@ -275,7 +275,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- 在 Visual C++ 2010 中之前, 该示例产生下面的输出：  
+ 在 Visual Studio 2010 之前此示例将生成以下输出：  
   
 ```  
 In MemoryBlock(size_t). length = 25.  

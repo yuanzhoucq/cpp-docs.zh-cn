@@ -1,17 +1,17 @@
-﻿---
-title: "对象拥有资源 （RAII） |Microsoft 文档"
-ms.custom: 
+---
+title: 对象所有资源 (RAII) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -23,8 +23,8 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="objects-own-resources-raii"></a>对象拥有资源 （RAII）
-请确保对象拥有自己资源。 此原则是也称为“资源获取即是初始化”或“RAII”。
+# <a name="objects-own-resources-raii"></a>对象所有资源 (RAII)
+请确保对象自己的资源。 此原则是也称为"资源获取即是初始化"或"RAII。"  
   
 ## <a name="example"></a>示例  
  将每个"new"的对象作为构造函数自变量传递给拥有它 (几乎总是 unique_ptr) 的另一个已命名的对象。  

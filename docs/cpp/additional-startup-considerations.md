@@ -1,4 +1,4 @@
-﻿---
+---
 title: 附加启动注意事项 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

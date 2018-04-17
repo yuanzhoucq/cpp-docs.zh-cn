@@ -1,12 +1,12 @@
 ---
-title: "定义带有 dllexport 和 dllimport 的内联 C++ 函数 |Microsoft 文档"
-ms.custom: 
+title: 定义带有 dllexport 和 dllimport 的内联 C++ 函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - dllimport attribute [C++], inline functions
 - dllexport attribute [C++], inline functions
 ms.assetid: 3b48678b-e7b8-4eda-bb46-b5d34dcf7817
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

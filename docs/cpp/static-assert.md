@@ -1,12 +1,12 @@
-﻿---
-title: "static_assert |Microsoft 文档"
-ms.custom: 
+---
+title: static_assert |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - static_assert_cpp
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

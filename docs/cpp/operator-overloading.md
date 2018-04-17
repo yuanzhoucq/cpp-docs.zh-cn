@@ -1,12 +1,12 @@
-﻿---
-title: "运算符重载 |Microsoft 文档"
-ms.custom: 
+---
+title: 运算符重载 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen

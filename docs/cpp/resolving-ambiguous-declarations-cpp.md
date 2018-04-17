@@ -1,4 +1,4 @@
-﻿---
+---
 title: 解决不明确声明 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

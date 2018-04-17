@@ -1,4 +1,4 @@
-﻿---
+---
 title: C++ 标准属性 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/28/2017
@@ -10,10 +10,10 @@ ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/13/2018
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 

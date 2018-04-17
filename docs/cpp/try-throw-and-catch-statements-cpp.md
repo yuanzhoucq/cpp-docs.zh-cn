@@ -1,12 +1,12 @@
-﻿---
-title: "请尝试、 throw 和 catch 语句 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 请尝试、 throw 和 catch 语句 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
@@ -28,7 +28,7 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -39,7 +39,6 @@ ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
-
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 语句 (C++)
 若要在 C++ 中实现异常处理，你可以使用 `try`、`throw` 和 `catch` 表达式。  

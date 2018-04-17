@@ -1,5 +1,5 @@
-﻿---
-title: "constexpr （C++） |Microsoft 文档"
+---
+title: constexpr （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018
 ms.reviewer: ''
@@ -27,11 +27,11 @@ ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
-关键字**constexpr**已在 C + + 11 中引入的以及在 C + + 14 中改进。 这意味着*常量表达式*。 如**const**，它可以应用于变量，以便如果任何代码试图修改的值，则将引发编译器错误。 与不同**const**， **constexpr**还可以应用于函数和类构造函数。 **constexpr**指示的值或返回值是常数，并且如果可能，将在编译时计算。
+关键字**constexpr**已在 C++ 11 中引入的以及在 C++ 14 中改进。 这意味着*常量表达式*。 如**const**，它可以应用于变量，以便如果任何代码试图修改的值，则将引发编译器错误。 与不同**const**， **constexpr**还可以应用于函数和类构造函数。 **constexpr**指示的值或返回值是常数，并且如果可能，将在编译时计算。
 
 A **constexpr**每当 const 整数时必需的如在模板自变量和数组声明，则可以使用整数值。 并且时可以在编译时，而不是运行时计算某个值，它可以帮助你更快地运行，并使用较少的内存的程序。
 
-若要限制计算编译时常量的复杂度以及它们的编译时间的潜在影响，C + + 14 标准要求在常量表达式中涉及的类型是限于[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
+若要限制计算编译时常量的复杂度以及它们的编译时间的潜在影响，C++ 14 标准要求在常量表达式中涉及的类型是限于[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
 
 ## <a name="syntax"></a>语法
 

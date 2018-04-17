@@ -1,12 +1,12 @@
-﻿---
-title: "__clrcall |Microsoft 文档"
-ms.custom: 
+---
+title: __clrcall |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen

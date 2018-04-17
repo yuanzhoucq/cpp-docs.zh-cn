@@ -1,5 +1,5 @@
-﻿---
-title: "ABI 边界 （现代 C++） 处的可移植性 |Microsoft 文档"
+---
+title: ABI 边界 （现代 C++） 处的可移植性 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

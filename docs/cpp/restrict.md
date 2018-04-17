@@ -1,12 +1,12 @@
-﻿---
-title: "限制 |Microsoft 文档"
-ms.custom: 
+---
+title: 限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/09/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - restrict_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/13/2018
  
 有关适用于函数内的别名的另一个批注，请参阅[__declspec(noalias)](../cpp/noalias.md)。
   
-璝惠**限制**关键字是 c + + AMP 中，请参阅[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。  
+璝惠**限制**关键字是 C++ AMP 中，请参阅[限制 (C++ AMP)](../cpp/restrict-cpp-amp.md)。  
  
 ## <a name="example"></a>示例  
 

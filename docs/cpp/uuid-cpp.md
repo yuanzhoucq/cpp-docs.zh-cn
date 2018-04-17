@@ -1,12 +1,12 @@
-﻿---
-title: "uuid （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: uuid （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - uuid_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

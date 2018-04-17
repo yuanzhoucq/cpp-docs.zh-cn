@@ -1,12 +1,12 @@
-﻿---
-title: "令牌 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 令牌 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

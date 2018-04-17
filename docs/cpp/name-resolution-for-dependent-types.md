@@ -1,17 +1,17 @@
-﻿---
-title: "依赖类型的名称解析 |Microsoft 文档"
-ms.custom: 
+---
+title: 依赖类型的名称解析 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,4 +1,4 @@
-﻿---
+---
 title: constexpr C++ 中的 Lambda 表达式 |Microsoft 文档
 ms.custom: ''
 ms.date: 07/19/2017

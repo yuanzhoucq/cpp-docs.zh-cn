@@ -1,12 +1,12 @@
-﻿---
-title: "结构 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 结构 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - struct_cpp
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

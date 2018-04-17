@@ -1,12 +1,12 @@
 ---
-title: "exit 函数 |Microsoft 文档"
-ms.custom: 
+title: exit 函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Exit
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - exit function
 ms.assetid: 26ce439f-81e2-431c-9ff8-a09a96f32127
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen

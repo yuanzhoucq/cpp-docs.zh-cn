@@ -1,5 +1,5 @@
-﻿---
-title: "对象生存期和资源管理 （现代 C++） |Microsoft 文档"
+---
+title: 对象生存期和资源管理 （现代 C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

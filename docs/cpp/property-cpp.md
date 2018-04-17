@@ -1,12 +1,12 @@
-﻿---
-title: "属性 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 属性 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - property_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

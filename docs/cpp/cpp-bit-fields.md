@@ -1,5 +1,5 @@
-﻿---
-title: "C++ 位字段 |Microsoft 文档"
+---
+title: C++ 位字段 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -85,7 +85,7 @@ struct Date {
   
  则内存布局如下图中所示。  
   
- ![与零 &#45;的 Date 对象的布局; 长度位域](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![与零 & #45 的 Date 对象的布局; 长度位域](../cpp/media/vc38uq2.png "vc38UQ2")  
 带有零长度位域的数据对象的布局  
   
  位域的基础类型必须是整数类型、 中所述[基本类型](../cpp/fundamental-types-cpp.md)。  

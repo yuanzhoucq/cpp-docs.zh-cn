@@ -1,12 +1,12 @@
-﻿---
-title: "C++ 常量表达式 |Microsoft 文档"
-ms.custom: 
+---
+title: C++ 常量表达式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -28,7 +28,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>C++ 常量表达式
-A*常量*值是一种不会更改。 C++ 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。  
+A*常量*值是一种不会更改。 C + + 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。  
   
  C++ 需要常量表达式（计算结果为常量的表达式）以便声明：  
   

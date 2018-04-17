@@ -1,12 +1,12 @@
-﻿---
-title: "逻辑非运算符：! | Microsoft Docs"
-ms.custom: 
+---
+title: 逻辑非运算符：! | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '!'
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

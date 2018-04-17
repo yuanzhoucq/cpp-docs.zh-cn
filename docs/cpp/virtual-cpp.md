@@ -1,12 +1,12 @@
-﻿---
-title: "虚拟 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 虚拟 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - virtual_cpp
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

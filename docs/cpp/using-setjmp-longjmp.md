@@ -1,12 +1,12 @@
 ---
-title: "使用 setjmp longjmp |Microsoft 文档"
-ms.custom: 
+title: 使用 setjmp longjmp |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - longjmp_cpp
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - setjmp function
 - setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

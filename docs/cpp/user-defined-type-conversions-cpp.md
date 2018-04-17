@@ -1,12 +1,12 @@
-﻿---
-title: "用户定义的类型转换 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 用户定义的类型转换 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,7 +31,7 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen

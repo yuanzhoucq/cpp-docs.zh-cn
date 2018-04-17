@@ -1,12 +1,12 @@
-﻿---
-title: "类模板 |Microsoft 文档"
-ms.custom: 
+---
+title: 类模板 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen

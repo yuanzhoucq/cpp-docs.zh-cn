@@ -1,5 +1,5 @@
-﻿---
-title: "decltype （C++） |Microsoft 文档"
+---
+title: decltype （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -91,7 +91,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  以下原型阐述一个替代函数声明的语法。 请注意，`const`和`volatile`限定符，和`throw`[异常规范](../cpp/exception-specifications-throw-cpp.md)都是可选的。 *Function_body*占位符表示指定函数的行为的复合语句。 作为最佳编码做法，*表达式*中的占位符`decltype`语句应与指定的表达式匹配`return`语句，如果有的话，在*function_body*。  
   
- **自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>选择</sub>**易失性**<sub>选择</sub>  **->**  **decltype (***表达式* **)** **引发**<sub>选择</sub> **{** *function_body***};**  
+ **自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>选择</sub>**易失性**<sub>选择</sub> **->** **decltype (***表达式* **)** **引发**<sub>选择</sub> **{** *function_body***};**  
   
  在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，此代码示例还使用右值引用和`forward`函数模板来支持*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   

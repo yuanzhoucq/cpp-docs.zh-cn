@@ -1,12 +1,12 @@
-﻿---
-title: "dllexport、 dllimport |Microsoft 文档"
-ms.custom: 
+---
+title: dllexport、 dllimport |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dllimport_cpp
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen

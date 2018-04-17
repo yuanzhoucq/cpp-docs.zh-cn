@@ -1,12 +1,12 @@
-﻿---
-title: "析构函数 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 析构函数 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

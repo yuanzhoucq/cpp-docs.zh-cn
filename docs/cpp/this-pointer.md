@@ -1,12 +1,12 @@
-﻿---
-title: "此指针 |Microsoft 文档"
-ms.custom: 
+---
+title: 此指针 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - this_cpp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -183,7 +183,7 @@ int main()
   
  一种**这**在成员函数中的以下语法，其中*cv 限定符列表*确定从成员函数声明符和可以为**const**或**易失性**（或两者），和*类类型*是类的名称：  
   
- *[cv 限定符列表] 类类型* **\* const 这**   
+ *[cv 限定符列表] 类类型***\* const 这**  
   
  换而言之，**这**始终是 const 指针; 无法重新指派它。  **Const**或`volatile`成员函数声明中使用的限定符应用于指向的类实例**这**该函数的作用域中。  
   

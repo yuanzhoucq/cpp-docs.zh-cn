@@ -1,12 +1,12 @@
-﻿---
-title: "逻辑与运算符： &amp; &amp; |Microsoft 文档"
-ms.custom: 
+---
+title: 逻辑与运算符： &amp; &amp; |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -58,7 +58,7 @@ char *pch = 0;
  如果 `pch` 为 null (0)，则从不计算表达式的右侧。 因此，无法通过 null 指针进行赋值。  
   
 ## <a name="operator-keyword-for-"></a>&& 的运算符关键字  
- **和**运算符是文本等效项 **&&** 。 有两种方法来访问**和**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+ **和**运算符是文本等效项**&&**。 有两种方法来访问**和**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   

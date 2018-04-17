@@ -1,4 +1,4 @@
-﻿---
+---
 title: 智能指针 （现代 C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

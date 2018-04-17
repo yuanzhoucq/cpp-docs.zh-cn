@@ -1,5 +1,5 @@
-﻿---
-title: "本机 C++ 中的事件处理 |Microsoft 文档"
+---
+title: 本机 C++ 中的事件处理 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

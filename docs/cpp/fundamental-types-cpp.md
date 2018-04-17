@@ -1,12 +1,12 @@
 ---
-title: "基本类型 （C++） |Microsoft 文档"
-ms.custom: 
+title: 基本类型 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,7 +52,7 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
+caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen

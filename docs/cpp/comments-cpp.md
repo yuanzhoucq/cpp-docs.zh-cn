@@ -1,12 +1,12 @@
 ---
-title: "注释 （C++） |Microsoft 文档"
-ms.custom: 
+title: 注释 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen

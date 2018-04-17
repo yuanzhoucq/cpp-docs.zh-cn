@@ -1,19 +1,19 @@
 ---
-title: "数字限制 （C++） |Microsoft 文档"
-ms.custom: 
+title: 数字限制 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - numerical limits
 ms.assetid: 5ebc9837-e273-4ea6-ac7d-14b3c2c974c7
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

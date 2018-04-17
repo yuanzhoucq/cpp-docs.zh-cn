@@ -1,4 +1,4 @@
-﻿---
+---
 title: 右值引用声明符： &amp; &amp; |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

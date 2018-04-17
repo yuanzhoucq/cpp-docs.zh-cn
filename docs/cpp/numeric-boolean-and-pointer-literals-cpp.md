@@ -1,12 +1,12 @@
-﻿---
-title: "数值、 布尔和指针文本 （C++） |Microsoft 文档"
-ms.custom: 
+---
+title: 数值、 布尔和指针文本 （C++） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
