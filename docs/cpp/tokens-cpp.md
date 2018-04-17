@@ -1,5 +1,5 @@
----
-title: "令牌 （c + +） |Microsoft 文档"
+﻿---
+title: "令牌 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="tokens-c"></a>令牌 （c + +）
+# <a name="tokens-c"></a>令牌 （C++）
 标记是对编译器有用的 C++ 程序的最小元素。 C++ 分析器识别以下类型的标记：标识符、关键字、文本、运算符、标点和其他分隔符。 这些标记流构成一个翻译单元。  
   
  标记通常由 *空格*分隔。 可以有一个或多个空格：  

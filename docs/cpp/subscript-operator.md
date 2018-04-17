@@ -1,4 +1,4 @@
----
+﻿---
 title: "下标运算符: |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -61,7 +61,7 @@ cout << 2[nArray] << endl;            // prints "2"
 double aDbl[2];  
 ```  
   
- 地址`aDb[0]`和`aDb[1]`相距 8 字节-类型的对象的大小**double**。 根据对象类型缩放由 c + + 语言自动完成，并在中定义[相加运算符](../cpp/additive-operators-plus-and.md)其中讨论了加法和减法运算的操作数的指针类型。  
+ 地址`aDb[0]`和`aDb[1]`相距 8 字节-类型的对象的大小**double**。 根据对象类型缩放由 C++ 语言自动完成，并在中定义[相加运算符](../cpp/additive-operators-plus-and.md)其中讨论了加法和减法运算的操作数的指针类型。  
   
  下标表达式还可以有多个下标，如下所示：  
   
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="positive-and-negative-subscripts"></a>正下标和负下标  
- 数组的第一个元素是元素 0。 C + + 数组的范围是从*数组*[0] 到*数组*[*大小*-1]。 但是，C++ 支持正负下标。 负下标必须在数组边界内；否则结果不可预知。 以下代码显示了正数组和负数组下标：  
+ 数组的第一个元素是元素 0。 C++ 数组的范围是从*数组*[0] 到*数组*[*大小*-1]。 但是，C++ 支持正负下标。 负下标必须在数组边界内；否则结果不可预知。 以下代码显示了正数组和负数组下标：  
   
 ```  
 #include <iostream>  
@@ -118,7 +118,7 @@ int main() {
   
 ## <a name="see-also"></a>另请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [数组](../cpp/arrays-cpp.md)   
  [一维数组](../c-language/one-dimensional-arrays.md)   
  [多维数组](../c-language/multidimensional-arrays-c.md)

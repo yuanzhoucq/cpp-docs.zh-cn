@@ -1,4 +1,4 @@
----
+﻿---
 title: 对齐方式 （C++ 声明） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

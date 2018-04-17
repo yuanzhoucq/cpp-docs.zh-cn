@@ -1,5 +1,5 @@
----
-title: "枚举 （c + +） |Microsoft 文档"
+﻿---
+title: "枚举 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 枚举是用户定义的类型，其中包含一组称为枚举器的命名的整型常数。  
   
 > [!NOTE]
->  本文包含 ISO 标准 C++ 语言 `enum` 类型和 C++11 中引入的范围（或强类型）`enum class` 类型。 璝惠`public enum class`或`private enum class`类型在 C + + /cli 和 C + + /CX 中，请参阅[枚举类](../windows/enum-class-cpp-component-extensions.md)。  
+>  本文包含 ISO 标准 C++ 语言 `enum` 类型和 C++11 中引入的范围（或强类型）`enum class` 类型。 璝惠`public enum class`或`private enum class`类型在 C++ /cli 和 C++ /CX 中，请参阅[枚举类](../windows/enum-class-cpp-component-extensions.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -157,7 +157,7 @@ namespace ScopedEnumConversions
  注意，`hand = account_num;` 行仍会导致对未区分范围的枚举发生的错误，如前面所示。 它可以与显式强制转换一起使用。 但是，借助区分范围的枚举，不再允许在没有显式强制转换的情况下在下一条语句 `account_num = Suit::Hearts;` 中尝试转换。 
 
 ## <a name="enums-with-no-enumerators"></a>与任何枚举器枚举
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 通过使用显式的基础类型和任何枚举器定义枚举 （正则或指定了作用域），你可以有效引入一个新整数类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置基础类型，则可以消除可能会引起意外的隐式转换的细微错误。  
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 通过使用显式的基础类型和任何枚举器定义枚举 （正则或指定了作用域），你可以有效引入一个新整数类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置基础类型，则可以消除可能会引起意外的隐式转换的细微错误。  
 
 
 ```cpp

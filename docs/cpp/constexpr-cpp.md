@@ -1,5 +1,5 @@
----
-title: constexpr （c + +） |Microsoft 文档
+﻿---
+title: "constexpr （C++） |Microsoft 文档"
 ms.custom: ''
 ms.date: 04/06/2018
 ms.reviewer: ''

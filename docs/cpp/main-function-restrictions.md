@@ -28,7 +28,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-restrictions"></a>main 函数限制
-几个限制适用于**主要**并不适用于任何其他 c + + 函数的函数。 **主要**函数：  
+几个限制适用于**主要**并不适用于任何其他 C++ 函数的函数。 **主要**函数：  
   
 -   无法重载 (请参阅[函数重载](function-overloading.md))。  
   

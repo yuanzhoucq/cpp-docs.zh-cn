@@ -1,5 +1,5 @@
 ---
-title: "定义带有 dllexport 和 dllimport 的内联 c + + 函数 |Microsoft 文档"
+title: "定义带有 dllexport 和 dllimport 的内联 C++ 函数 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

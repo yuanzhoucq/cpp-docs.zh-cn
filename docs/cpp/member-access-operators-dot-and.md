@@ -1,4 +1,4 @@
----
+﻿---
 title: "成员访问运算符:。 and -&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
@@ -89,6 +89,6 @@ int main() {
   
 ## <a name="see-also"></a>另请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [类和结构](../cpp/classes-and-structs-cpp.md)   
  [结构和联合成员](../c-language/structure-and-union-members.md)

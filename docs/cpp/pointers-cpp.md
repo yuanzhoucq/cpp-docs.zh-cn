@@ -1,5 +1,5 @@
----
-title: "指针 （c + +） |Microsoft 文档"
+﻿---
+title: "指针 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="pointers-c"></a>指针 （c + +）
+# <a name="pointers-c"></a>指针 （C++）
 使用以下序列声明指针。  
   
 ```  

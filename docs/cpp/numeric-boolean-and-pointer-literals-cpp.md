@@ -1,5 +1,5 @@
----
-title: "数值、 布尔和指针文本 （c + +） |Microsoft 文档"
+﻿---
+title: "数值、 布尔和指针文本 （C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,8 +27,8 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="numeric-boolean-and-pointer-literals--c"></a>数值、 布尔和指针文本 （c + +）
-文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本 （c + +）](../cpp/string-and-character-literals-cpp.md)。 你还可以定义基于任何这些类别中; 你自己的文本有关详细信息请参阅[用户定义文本 （c + +）](../cpp/user-defined-literals-cpp.md)  
+# <a name="numeric-boolean-and-pointer-literals--c"></a>数值、 布尔和指针文本 （C++）
+文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本 （C++）](../cpp/string-and-character-literals-cpp.md)。 你还可以定义基于任何这些类别中; 你自己的文本有关详细信息请参阅[用户定义文本 （C++）](../cpp/user-defined-literals-cpp.md)  
   
  . 你可以在许多上下文中使用文本，但文本的最常用法是初始化命名变量以及将自变量传递给函数：  
   
@@ -127,7 +127,7 @@ void func( long double );
  布尔文本为 `true` 和 `false`。  
   
 ## <a name="pointer-literal-c11"></a>指针文本 (C++11)  
- C + + 引入[nullptr](../cpp/nullptr.md)文本来指定初始化为零的指针。 在可移植代码中，应使用 `nullptr`，而不是整型类型零或宏（如 NULL）。  
+ C++ 引入[nullptr](../cpp/nullptr.md)文本来指定初始化为零的指针。 在可移植代码中，应使用 `nullptr`，而不是整型类型零或宏（如 NULL）。  
   
 ## <a name="binary-literals-c14"></a>二进制文本 (C++14)  
  可以通过使用 `0B` 或 `0b` 前缀，后跟一系列 1 和 0，来指定二进制文本：  
@@ -151,5 +151,5 @@ if (num < 100)
   
 ## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)   
- [C + + 字符串文本](../cpp/string-and-character-literals-cpp.md)   
- [C + + 用户定义的文本](../cpp/user-defined-literals-cpp.md)
+ [C++ 字符串文本](../cpp/string-and-character-literals-cpp.md)   
+ [C++ 用户定义的文本](../cpp/user-defined-literals-cpp.md)

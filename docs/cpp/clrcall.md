@@ -1,4 +1,4 @@
----
+﻿---
 title: "__clrcall |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -42,9 +42,9 @@ ms.lasthandoff: 12/21/2017
   
  [/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)意味着所有函数和函数指针都是`__clrcall`，编译器将不允许在编译单位要标记的任何内容以外的函数`__clrcall`。 当**/clr: pure**使用时，`__clrcall`只能在函数指针和外部声明上指定。  
   
- 你可以直接调用`__clrcall`函数从现有的 c + + 代码编译的使用**/clr** ，只要该函数具有 MSIL 实现。 `__clrcall`不能直接从具有内联 asm，例如，调用特定于 CPU 的 intrinisics 的函数调用函数，即使这些函数在编译时带有**/clr**。  
+ 你可以直接调用`__clrcall`函数从现有的 C++ 代码编译的使用**/clr** ，只要该函数具有 MSIL 实现。 `__clrcall`不能直接从具有内联 asm，例如，调用特定于 CPU 的 intrinisics 的函数调用函数，即使这些函数在编译时带有**/clr**。  
   
- `__clrcall` 函数指针仅能在创建它们的应用程序域中使用。  不要跨应用程序域传递 `__clrcall` 函数指针，而应使用 <xref:System.CrossAppDomainDelegate>。 有关详细信息，请参阅[应用程序域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)。  
+ `__clrcall` 函数指针仅能在创建它们的应用程序域中使用。  不要跨应用程序域传递 `__clrcall` 函数指针，而应使用 <xref:System.CrossAppDomainDelegate>。 有关详细信息，请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)。  
   
 ## <a name="example"></a>示例  
  请注意，当使用 `__clrcall` 声明函数时，将根据需要生成代码；例如，当调用函数时。  

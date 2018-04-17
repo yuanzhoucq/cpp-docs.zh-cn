@@ -1,5 +1,5 @@
----
-title: "范围 （Visual c + +） |Microsoft 文档"
+﻿---
+title: "范围 （Visual C++） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

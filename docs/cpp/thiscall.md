@@ -30,17 +30,17 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Microsoft 专用  
- `__thiscall`调用约定成员函数上使用，并且是由不使用变量自变量的 c + + 成员函数的默认调用约定。 下`__thiscall`，被调用方将清理堆栈，这是不可能`vararg`函数。 自变量推送到堆栈上从右向左，与`this`通过寄存器 ECX，而不是在 x86 上的堆栈，传递的指针体系结构。  
+ `__thiscall`调用约定成员函数上使用，并且是由不使用变量自变量的 C++ 成员函数的默认调用约定。 下`__thiscall`，被调用方将清理堆栈，这是不可能`vararg`函数。 自变量推送到堆栈上从右向左，与`this`通过寄存器 ECX，而不是在 x86 上的堆栈，传递的指针体系结构。  
   
  若要使用的一个原因`__thiscall`在其成员函数使用的类`__clrcall`默认情况下。 在这种情况下，你可以使用`__thiscall`将各个成员函数可从本机代码调用。  
   
  使用编译时[/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)，所有函数和函数指针`__clrcall`除非另有指定。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- 在 Visual c + + 2005年之前的版本中，thiscall 调用约定无法显式指定在程序中，因为`thiscall`不是一个关键字。  
+ 在 Visual C++ 2005年之前的版本中，thiscall 调用约定无法显式指定在程序中，因为`thiscall`不是一个关键字。  
   
  `vararg`成员函数使用`__cdecl`调用约定。 所有函数参数都推送到堆栈上，使用`this`指针将位于堆栈上上一次  
   
- 由于此调用约定仅适用于 c + +，没有任何 C 名称修饰方案。  
+ 由于此调用约定仅适用于 C++，没有任何 C 名称修饰方案。  
   
  ARM 上和[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]机，`__thiscall`接受和忽略由编译器。  
   

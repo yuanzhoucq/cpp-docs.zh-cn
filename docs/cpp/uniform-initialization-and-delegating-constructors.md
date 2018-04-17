@@ -1,5 +1,5 @@
----
-title: 统一初始化和委派构造函数 |Microsoft 文档
+﻿---
+title: "统一初始化和委派构造函数 |Microsoft 文档"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -134,7 +134,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>委派构造函数  
- 许多类具有执行类似操作（例如参数验证）的多个构造函数  
+ 许多类具有执行类似操作（例如参数验证）的多个构造函数：  
   
 ```cpp  
 class class_c {  

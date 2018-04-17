@@ -1,4 +1,4 @@
----
+﻿---
 title: 显式默认函数和已删除的函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016

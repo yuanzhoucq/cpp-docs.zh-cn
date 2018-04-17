@@ -1,4 +1,4 @@
----
+﻿---
 title: "tile_static 关键字 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -159,6 +159,6 @@ for (int i = 0; i < 4; i++) {
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)   
- [C + + AMP 概述](../parallel/amp/cpp-amp-overview.md)   
- [parallel_for_each 函数 (c + + AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
+ [C++ AMP 概述](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each 函数 (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [演练：矩阵乘法](../parallel/amp/walkthrough-matrix-multiplication.md)

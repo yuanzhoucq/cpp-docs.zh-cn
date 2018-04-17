@@ -1,4 +1,4 @@
----
+﻿---
 title: "强制转换运算符: （) |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
@@ -134,7 +134,7 @@ Raw Bytes after cast:   Exciting
   
 ## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [显式类型转换运算符: （)](../cpp/explicit-type-conversion-operator-parens.md)   
  [强制转换运算符](../cpp/casting-operators.md)   
  [强制转换运算符](../c-language/cast-operators.md)
