@@ -1,12 +1,12 @@
 ---
-title: "弃用 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 弃用 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>已弃用 (C++)
-本主题只介绍特定于 Microsoft 的弃用 declspec 声明。 有关 C + + 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[c + + 标准特性](attributes2.md)。
+本主题只介绍特定于 Microsoft 的弃用 declspec 声明。 有关 C + + 14`[[deprecated]]`属性，以及有关何时使用与 Microsoft 专用 declspec 或杂注时，该属性的指导，请参阅[c + + 标准特性](attributes.md)。
 
  与所示的异常**弃用**声明提供与相同的功能[弃用](../preprocessor/deprecated-c-cpp.md)杂注：  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   宏仅被标记为已弃用，**弃用**杂注。  
   
- 如果编译器遇到不推荐使用的标识符或标准使用[ `[[deprecated]]` ](attributes2.md)属性， [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)引发警告。  
+ 如果编译器遇到不推荐使用的标识符或标准使用[ `[[deprecated]]` ](attributes.md)属性， [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)引发警告。  
   
 ## <a name="example"></a>示例  
  下面的示例演示在使用已弃用的函数时，如何将函数标记为已弃用以及如何指定在编译时将显示的消息。  
@@ -81,6 +81,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [__declspec](../cpp/declspec.md)   
  [关键字](../cpp/keywords-cpp.md)

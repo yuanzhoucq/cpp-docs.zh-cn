@@ -1,37 +1,35 @@
 ---
-title: "赋值运算符 |Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 赋值运算符 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>赋值运算符
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>备注  
- 赋值运算符将值存储在左操作数指定的对象中。 有两种赋值操作：简单赋值，其中第二个操作数的值存储在第一个操作数指定的对象中；复合赋值，其中先执行算术、移位或位运算，然后再存储结果。 下表中除 = 运算符之外的所有其他赋值运算符都是复合赋值运算符。  
+ 赋值运算符将值存储在左操作数指定的对象中。 有三种类型的赋值操作： 
+
+1. 简单赋值，在其中第二个操作数的值存储在第一个操作数指定的对象中。 1. 复合赋值，算术、 移位或位运算执行再存储结果。
+1. 中的资源传输而不复制移动 （对于类类型） 的分配。
+
+
+下表中的所有赋值运算符都除外 = 和 & & = 运算符是复合赋值运算符。  
   
 ### <a name="assignment-operators"></a>赋值运算符  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|将第一个操作数的值按第二个操作数的值指定的位数右移；将结果存储在第一个操作数指定的对象中。|  
 |**&=**|获取第一个和第二个操作数的按位“与”；将结果存储在第一个操作数指定的对象中。|  
 |`^=`|获取第一个和第二个操作数的按位“异或”；将结果存储在第一个操作数指定的对象中。|  
-|`&#124;=`|获取第一个和第二个操作数的按位“与或”；将结果存储在第一个操作数指定的对象中。|  
+|`&#124;=`|获取第一个和第二个操作数的按位“与或”；将结果存储在第一个操作数指定的对象中。|
+|**&&=**| （对于类类型） 的移动赋值运算符。 如果第二个操作数为右值，（而不复制它们） 将其资源移到第一个操作数。 请参阅[移动构造函数和移动赋值运算符](move-constructors-and-move-assignment-operators-cpp.md)有关详细信息。|
   
  **运算符关键字**  
   
@@ -129,7 +132,7 @@ int main() {
   
  对类类型（结构、联合和类类型）的对象的赋值由名为 operator= 的函数执行。 此运算符函数值的默认行为是执行按位复制；但是，可使用重载运算符修改此行为。 (请参阅[重载运算符](../cpp/operator-overloading.md)有关详细信息。)  
   
- 任何从给定基类明确派生的类的对象均可赋给基类的对象。 反之则不然，因为有一个隐式转换，它能从派生类转换到基类，但不能从基类转换到派生类。 例如:  
+ 任何从给定基类明确派生的类的对象均可赋给基类的对象。 反之则不然，因为有一个隐式转换，它能从派生类转换到基类，但不能从基类转换到派生类。 例如：  
   
 ```  
 // expre_SimpleAssignment.cpp  
@@ -206,7 +209,7 @@ B = A;
   
  在 ANSI C 中，赋值表达式的结果不是左值。 因此，合法的 C++ 表达式 `(a += b) += c` 在 C 中是非法的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
- [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 赋值运算符](../c-language/c-assignment-operators.md)

@@ -1,12 +1,12 @@
 ---
-title: "正则表达式 (C++) | Microsoft Docs"
-ms.custom: 
+title: 正则表达式 (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>正则表达式 (C++)
 C + + 标准库支持多个正则表达式语法。 使用正则表达式时，本主题讨论可用的语法变体。  
@@ -93,7 +93,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
   
  在 `ECMAScript` 中，元素可以是下列项之一：  
   
--   “（*子表达式*”形式的*非捕获组*。 可匹配目标序列中与分隔符之间的模式相符的字符序列。  
+-   A*非捕获组*窗体的"(？:*子表达式*)"。 可匹配目标序列中与分隔符之间的模式相符的字符序列。  
   
 -   “\f”、“\n”、“\r”、“\t”或“\v”形式的有限*文件格式转义*。 它们分别匹配目标序列中的换页符、换行符、回车符、水平制表符和垂直制表符。  
   
@@ -115,7 +115,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
   
  示例：  
   
--   “(:a)”可匹配目标序列“a”，但“(:a)\1”无效，因为不存在捕获组 1。  
+-   “(?:a)”可匹配目标序列“a”，但“(?:a)\1”无效，因为不存在捕获组 1。  
   
 -   “(=a)a”可匹配目标序列“a”。 肯定断言可匹配目标序列中的初始序列“a”，并且正则表达式中最后的“a”可匹配目标序列中的初始序列“a”。  
   
@@ -162,7 +162,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
   
 -   “a+”可匹配目标序列“a”、目标序列“aa”，以此类推，但不匹配目标序列“”。  
   
- 在 `ECMAScript` 中，所有形式的重复计数都可以后跟字符“，用于指定*非贪婪重复*  
+ 在`ECMAScript`，所有形式的重复计数可以都跟字符？，用于指定*非贪婪重复*。  
   
 ### <a name="concatenation"></a>串联  
  无论是否后跟*重复计数*，正则表达式都可以串联成较长的正则表达式。 由此产生的表达式可匹配由分别与各个元素相符的序列串联而成的目标序列。 例如，“a{2,3}b”可匹配目标序列“aab”和目标序列“aaab”，但不匹配目标序列“ab”或目标序列“aaaab”。  
@@ -314,7 +314,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
  十六进制转义序列包含一个反斜杠，后跟字母“x”，然后再跟两个十六进制数字 (0-9a-fA-F)。 它可匹配目标序列中与这两个数字所指定的值相等的字符。 例如，当采用 ASCII 字符编码时，“\x41”可匹配目标序列“A”。  
   
 ### <a name="identity-escape"></a>标识转义  
- 标识转义包含一个反斜杠，后跟单个字符。 它可匹配该字符。 当字符具有特殊含义时，需要用到它；通过使用标识转义，可以消除其特殊含义。 例如:  
+ 标识转义包含一个反斜杠，后跟单个字符。 它可匹配该字符。 当字符具有特殊含义时，需要用到它；通过使用标识转义，可以消除其特殊含义。 例如：  
   
 -   "\*"可匹配目标序列"aaa"，但不匹配目标序列"\*"。  
   
@@ -365,7 +365,7 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
  如果目标字符串中的当前位置并非紧跟在*字边界*之后，则否定字边界断言匹配。  
   
 ### <a name="non-capture-group"></a>非捕获组  
- 非捕获组用于将其内容标记为正则表达式语法中的一个单元，但不会对目标文本设置标签。 例如，"(a)(:b)\*(c)"可匹配目标文本"abbc"，并将捕获组 1 与子序列相关联""，并捕获组 2 与子序列"c"。  
+ 非捕获组用于将其内容标记为正则表达式语法中的一个单元，但不会对目标文本设置标签。 例如，"(a)(?:b)\*(c)"可匹配目标文本"abbc"，并将捕获组 1 与子序列相关联""，并捕获组 2 与子序列"c"。  
   
 ### <a name="non-greedy-repetition"></a>非贪婪重复  
  非贪婪重复将占用与模式匹配的目标序列的最短子序列。 贪婪重复将占用最长子序列。 例如，"(a+) (\*b)"可匹配目标序列"aaab"。 当使用非贪婪重复时，它会将捕获组 1 与目标序列开头的子序列“a”相关联，将捕获组 2 与目标序列末尾的子序列“aab”相关联。 当使用贪婪匹配时，它会将捕获组 1 与子序列“aaa”相关联，将捕获组 2 与子序列“b”相关联。  
@@ -465,6 +465,6 @@ C + + 标准库支持多个正则表达式语法。 使用正则表达式时，�
 ||"\\\n"|“\n”|  
 |“$nn”||与位置处的捕获组匹配的字符序列`nn`，其中`nn`是 10 到 99 之间的数字 (`[match[nn].first, match[nn].second)`)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
 

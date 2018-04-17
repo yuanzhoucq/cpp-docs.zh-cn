@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ constexpr ctor (params);
 
 ## <a name="return-value"></a>返回值
 
+
  Constexpr 变量或函数必须返回[文本类型](trivial-standard-layout-and-pod-types.md#literal_types)。
 
 ## <a name="constexpr-variables"></a>constexpr 变量
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>constexpr 函数
+## <a name="constexpr_functions"></a> constexpr 函数
 
 A **constexpr**函数是使用代码需要它时，可以在编译计算其返回值。  当其自变量为**constexpr**值，并且使用代码需要返回值在编译时，例如，初始化**constexpr**变量或提供一个非类型模板自变量，它会生成编译时常量。 当调用使用非**constexpr**自变量，或不需要在编译时其值时，它将与正则函数一样运行时生成一个值。  (此双重行为使你无需编写**constexpr**和非-**constexpr**同一函数的版本。)
 

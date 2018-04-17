@@ -1,13 +1,13 @@
 ---
-title: "-源-charset （集源字符集） |Microsoft 文档"
-ms.custom: 
+title: -源-charset （集源字符集） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - source-charset
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa81ba41587a183aca921177a62a45229810f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba414318f9954df331dd05d0f3e2cc2b85c8ad11
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （设置源字符集）
 允许您指定可执行文件的源字符集。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  你可以使用**/source-charset**选项以指定扩展的源字符设置为使用你的源文件包括基本源字符集中未表示的字符时。 源字符集是程序的用于你的源文本解释为用作输入在编译之前先预处理阶段内部表示形式的编码。 然后，内部表示形式将转换为执行字符集在可执行文件中存储字符串和字符值。 你可以使用任一 IANA 或 ISO 的字符集名称，或句点 （.） 后跟以指定要使用的字符集的 3 到 5 数字十进制代码页标识符。 支持代码页标识符的列表和字符集名称，请参阅[代码页标识符](http://msdn.microsoft.com/library/windows/desktop/dd317756)。  
   
- 默认情况下，Visual Studio 会检测以确定源是否该文件在编码的 Unicode 格式，例如 utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源文件使用编码的当前的用户代码页，除非你指定一个字符名称或代码页的设置方式使用**/source-charset**选项。 Visual Studio 允许你使用任何几个字符编码保存你的 c + + 源代码。 有关源和执行字符集的详细信息，请参阅[字符集](../../cpp/character-sets2.md)语言文档中。  
+ 默认情况下，Visual Studio 会检测以确定源是否该文件在编码的 Unicode 格式，例如 utf-16 或 utf-8 字节顺序标记。 如果不找到任何字节顺序标记，则它假定源文件使用编码的当前的用户代码页，除非你指定一个字符名称或代码页的设置方式使用**/source-charset**选项。 Visual Studio 允许你使用任何几个字符编码保存你的 c + + 源代码。 有关源和执行字符集的详细信息，请参阅[字符集](../../cpp/character-sets.md)语言文档中。  
   
  你提供的源字符集必须映射到字符集，相同的代码点的 7 位 ASCII 字符或多个编译错误是有可能遵循。 你的源字符集还必须是可映射到扩展设置 utf-8 编码的 Unicode 字符。 不是采用 utf-8 编码的字符表示通过特定于实现的替代。 Microsoft 编译器使用的这些字符的问号。  
   
@@ -64,9 +64,9 @@ ms.lasthandoff: 12/21/2017
   
 4.  选择**确定**以保存所做的更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)   
  [/utf-8 （设为源和可执行文件字符集为 utf-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
- [/validate-charset （验证兼容字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+ [/validate-charset（验证兼容的字符）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
