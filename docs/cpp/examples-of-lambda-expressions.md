@@ -1,4 +1,4 @@
-﻿---
+---
 title: Lambda 表达式的示例 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
