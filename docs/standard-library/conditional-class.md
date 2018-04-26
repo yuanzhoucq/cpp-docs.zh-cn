@@ -1,12 +1,12 @@
 ---
-title: "conditional 类 | Microsoft 文档"
-ms.custom: 
+title: conditional 类 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::conditional
@@ -16,51 +16,50 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0c6deb6a7167852101efba30a978aee78f96f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 40d7e873ce7ae5814423d4b5e3899ef8bbb46fa7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conditional-class"></a>conditional 类
-根据指定的条件，从两种类型之中选择其中一种。  
-  
-## <a name="syntax"></a>语法  
-  
-```
-template <bool B, class T1, class T2>  
+
+根据指定的条件，从两种类型之中选择其中一种。
+
+## <a name="syntax"></a>语法
+
+```cpp
+template <bool B, class T1, class T2>
 struct conditional;
 
-template <bool _Test, class _T1, class _T2>  
+template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
-```  
-  
-#### <a name="parameters"></a>参数  
- `B`  
- 用于确定所选类型的值。  
-  
- `T1`  
- 当 B 为 true 时的类型结果。  
-  
- `T2`  
- 当 B 为 false 时的类型结果。  
-  
-## <a name="remarks"></a>备注  
- 当 `conditional<B, T1, T2>::type` 的计算结果为 `T1` 时，模板成员 typedef `B` 的计算结果为 `true`，当 `T2` 的计算结果为 `B` ，其计算结果为 `false`。  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<type_traits>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [<type_traits>](../standard-library/type-traits.md)
+```
 
+### <a name="parameters"></a>参数
 
+`B` 确定所选的类型的值。
 
+`T1` 当 B 为 true 时类型的结果。
+
+`T2` 当 B 为 false 时的类型结果。
+
+## <a name="remarks"></a>备注
+
+当 `conditional<B, T1, T2>::type` 的计算结果为 `T1` 时，模板成员 typedef `B` 的计算结果为 `true`，当 `T2` 的计算结果为 `B` ，其计算结果为 `false`。
+
+## <a name="requirements"></a>要求
+
+**标头：**\<type_traits>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[<type_traits>](../standard-library/type-traits.md)<br/>

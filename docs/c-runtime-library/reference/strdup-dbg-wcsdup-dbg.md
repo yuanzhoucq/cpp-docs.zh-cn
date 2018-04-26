@@ -1,12 +1,12 @@
 ---
-title: "_strdup_dbg、_wcsdup_dbg | Microsoft 文档"
-ms.custom: 
+title: _strdup_dbg、_wcsdup_dbg | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _strdup_dbg
@@ -40,77 +40,83 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7865335eb5b483ca722e06c31b935751c92c80bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: aaea554a4663ff0f4a8853b2ad3ed147af99668b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg、_wcsdup_dbg
-使用调试版本 `malloc` 的 [_strdup 和 _wcsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md) 的版本。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-char *_strdup_dbg(  
-   const char *strSource,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wcsdup_dbg(  
-   const wchar_t *strSource,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `strSource`  
- null 终止的源字符串。  
-  
- `blockType`  
- 内存块的请求类型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
-  
- `filename`  
- 指向已请求分配操作的源文件名的指针或 NULL。  
-  
- `linenumber`  
- 请求分配操作所在的源文件中的行数或 NULL。  
-  
-## <a name="return-value"></a>返回值  
- 如果无法分配存储，则其中每个函数都将返回一个指向复制字符串的存储位置的指针或 `NULL` 。  
-  
-## <a name="remarks"></a>备注  
- `_strdup_dbg` 和 `_wcsdup_dbg` 函数与 `_strdup` 和 `_wcsdup` 完全相同，只是当定义 `_DEBUG` 时，这些函数将使用 `malloc` 的调试版本和 `_malloc_dbg` 来为复制的字符串分配内存。 有关 `_malloc_dbg` 调试功能的信息，请参阅 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
-  
- 在大多数情况下，无需显式调用这些函数。 可以改为定义标志 `_CRTDBG_MAP_ALLOC`。 定义 `_CRTDBG_MAP_ALLOC` 后，对 `_strdup` 和 `_wcsdup` 的调用将分别重新映射到 `_strdup_dbg` 和 `_wcsdup_dbg`，同时会将 `blockType` 设置为 `_NORMAL_BLOCK`。 因此，无需显式调用这些函数，除非你希望将堆块标记为 `_CLIENT_BLOCK`。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsdup_dbg`|`_strdup_dbg`|`_mbsdup`|`_wcsdup_dbg`|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_strdup_dbg`, `_wcsdup_dbg`|\<crtdbg.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>库  
- [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有调试版本。  
-  
-## <a name="see-also"></a>请参阅  
- [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [_strdup、_wcsdup、_mbsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md)   
- [堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+
+版本的[_strdup and _wcsdup](strdup-wcsdup-mbsdup.md)使用的调试版本**malloc**。
+
+## <a name="syntax"></a>语法
+
+```C
+char *_strdup_dbg(
+   const char *strSource,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wcsdup_dbg(
+   const wchar_t *strSource,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>参数
+
+*strSource*<br/>
+null 终止的源字符串。
+
+*blockType*<br/>
+内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+
+*filename*<br/>
+指向已请求分配操作的源文件名的指针或 NULL。
+
+*linenumber*<br/>
+请求分配操作所在的源文件中的行数或 NULL。
+
+## <a name="return-value"></a>返回值
+
+其中每个函数返回一个指向复制字符串的存储位置或**NULL**如果无法分配存储。
+
+## <a name="remarks"></a>备注
+
+**_Strdup_dbg**和 **_wcsdup_dbg**函数相等 **_strdup**和 **_wcsdup**只不过，当 **_调试**是定义，这些函数将使用的调试版本**malloc**， **_malloc_dbg**来为复制的字符串分配内存。 有关信息的调试功能的 **_malloc_dbg**，请参阅[_malloc_dbg](malloc-dbg.md)。
+
+在大多数情况下，无需显式调用这些函数。 相反，你可以定义标志 **_CRTDBG_MAP_ALLOC**。 当 **_CRTDBG_MAP_ALLOC**定义，则调用 **_strdup**和 **_wcsdup**重新映射到 **_strdup_dbg**和 **_wcsdup_dbg**分别与*blockType*设置为 **_NORMAL_BLOCK**。 因此，不需要显式调用这些函数，除非你希望将堆块作为标记 **_CLIENT_BLOCK**。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsdup_dbg**|**_strdup_dbg**|**_mbsdup**|**_wcsdup_dbg**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_strdup_dbg**， **_wcsdup_dbg**|\<crtdbg.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>库
+
+[C 运行时库](../../c-runtime-library/crt-library-features.md)的所有调试版本。
+
+## <a name="see-also"></a>请参阅
+
+[字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_strdup、_wcsdup、_mbsdup](strdup-wcsdup-mbsdup.md)<br/>
+[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

@@ -41,11 +41,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1de966b1eb5bd48d4a3120d23c9ffc0de647956
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 198c37e64aba821a78ba26851bfcf3e0bcb71be6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr，_FCmulcr _LCmulcr
 
@@ -69,29 +69,29 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 
 ## <a name="return-value"></a>返回值
 
-A **_Dcomplex**， **_Fcomplex**，或**_Lcomplex**结构，它表示复数的复杂产品*x*和flaoting 点数*y*。
+A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复数的复杂产品*x*和flaoting 点数*y*。
 
 ## <a name="remarks"></a>备注
 
-内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为**_Cmulcr**， **_FCmulcr**，和**_LCmulcr**函数简化乘法的浮点类型的复杂类型。
+内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为 **_Cmulcr**， **_FCmulcr**，和 **_LCmulcr**函数简化乘法的浮点类型的复杂类型。
 
 ## <a name="requirements"></a>要求
 
 |例程|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|`_Cmulcr`,`_FCmulcr`, `_LCmulcr`|\<complex.h>|\<ccomplex>|
+|**_Cmulcr**， **_FCmulcr**， **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-这些函数是特定于 Microsoft 的。 类型**_Dcomplex**， **_Fcomplex**，和**_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，和 **_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[_Cbuild，_FCbuild _LCbuild](../../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)<br/>
-[_Cmulcc, _FCmulcc, _LCmulcc](../../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)<br/>
-[norm、normf、norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
-[cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj、conjf、conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cimag、cimagf、cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[_Cbuild、_FCbuild、_LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
+[_Cmulcc、_FCmulcc、_LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
+[norm、normf、norml](norm-normf-norml1.md)<br/>
+[cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj、conjf、conjl](conj-conjf-conjl.md)<br/>
+[creal、crealf、creall](creal-crealf-creall.md)<br/>
+[cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg、cargf、cargl](carg-cargf-cargl.md)<br/>
+[cabs、cabsf、cabsl](cabs-cabsf-cabsl.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "offsetof 宏 | Microsoft 文档"
-ms.custom: 
+title: offsetof 宏 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -28,57 +28,62 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a70bb2823f29caf3f76224bfb91c3c9642bbdcf1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 686de81ecfd4216f3011c93d3bf9be1bfdc55365
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="offsetof-macro"></a>offsetof 宏
-检索成员与其父结构的开头之间的偏移量。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      size_t offsetof(  
-   structName,  
-   memberName   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- *structName*  
- 父数据结构的名称。  
-  
- `memberName`  
- 确定其偏移量的父数据结构中成员的名称。  
-  
-## <a name="return-value"></a>返回值  
- `offsetof` 返回指定成员与其父数据结构的开头之间的偏移量（以字节为单位）。 它对于位域是未定义的。  
-  
-## <a name="remarks"></a>备注  
- `offsetof` 宏返回 `memberName` 与由 *structName* 指定的作为类型 `size_t` 的值的结构开头之间的偏移量（以字节为单位）。 您可使用 `struct` 关键字指定类型。  
-  
+
+检索成员与其父结构的开头之间的偏移量。
+
+## <a name="syntax"></a>语法
+
+```C
+size_t offsetof(
+   structName,
+   memberName
+);
+```
+
+### <a name="parameters"></a>参数
+
+*structName*<br/>
+父数据结构的名称。
+
+*成员名称*<br/>
+确定其偏移量的父数据结构中成员的名称。
+
+## <a name="return-value"></a>返回值
+
+**offsetof**从其父数据结构的开头，以字节为单位指定成员返回的偏移量。 它对于位域是未定义的。
+
+## <a name="remarks"></a>备注
+
+**Offsetof**宏返回以字节为单位的偏移量*memberName*从指定的结构的开头*structName*类型的值作为**size_t**。 你可以指定与类型**结构**关键字。
+
 > [!NOTE]
->  `offsetof` 不是函数，无法使用 C 原型描述它。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`offsetof`|\<stddef.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>库  
- [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="see-also"></a>请参阅  
- [内存分配](../../c-runtime-library/memory-allocation.md)
+> **offsetof**不是函数和不能使用 C 原型描述。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**offsetof**|\<stddef.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>库
+
+[C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
+
+## <a name="see-also"></a>请参阅
+
+[内存分配](../../c-runtime-library/memory-allocation.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "sopen | Microsoft 文档"
-ms.custom: 
+title: sopen | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - sopen
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - sopen function
 ms.assetid: 1ce0b707-0c9e-4942-8467-ce7f6cd68acc
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec449a0adcff1cfdbbfc77ac25a6948e3e0b7d8d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 13e17eb5beaeba5daa937c0bcdccdc99b1d21039
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sopen"></a>sopen
-此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_sopen](../../c-runtime-library/reference/sopen-wsopen.md) 或安全性已增强的 [_sopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。
+
+此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_sopen](sopen-wsopen.md) 或安全性已增强的 [_sopen_s](sopen-s-wsopen-s.md)。

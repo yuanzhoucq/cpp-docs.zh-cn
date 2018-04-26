@@ -1,12 +1,12 @@
 ---
-title: "_searchenv、_wsearchenv | Microsoft 文档"
-ms.custom: 
+title: _searchenv、_wsearchenv | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _searchenv
@@ -43,127 +43,128 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-caps.latest.revision: 
+caps.latest.revision: 33
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6968d77e118b78b4b61f990e37047b9be7ee03c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e8ebcb694e347becd27eb4e128f9ff96bf19eaab
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
-使用环境路径搜索文件。 提供这些函数的更多安全版本；请参阅 [_searchenv_s、_wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)。  
-  
+
+使用环境路径搜索文件。 提供这些函数的更多安全版本；请参阅 [_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void _searchenv(  
-   const char *filename,  
-   const char *varname,  
-   char *pathname   
-);  
-void _wsearchenv(  
-   const wchar_t *filename,  
-   const wchar_t *varname,  
-   wchar_t *pathname   
-);  
-template <size_t size>  
-void _searchenv(  
-   const char *filename,  
-   const char *varname,  
-   char (&pathname)[size]  
-); // C++ only  
-template <size_t size>  
-void _wsearchenv(  
-   const wchar_t *filename,  
-   const wchar_t *varname,  
-   wchar_t (&pathname)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>参数  
- `filename`  
- 要搜索的文件名称。  
-  
- `varname`  
- 要搜索的环境。  
-  
- `pathname`  
- 用于存储完整路径的缓冲区。  
-  
-## <a name="remarks"></a>备注  
- `_searchenv` 例程搜索指定域中的目标文件。 `varname` 变量可以是指定目录路径的列表的任何环境或用户定义的变量（例如，`PATH`、`LIB` 或 `INCLUDE`）。 由于 `_searchenv` 区分大小写，因此 `varname` 应与环境变量的情况匹配。  
-  
- 例程首先搜索当前工作目录中的文件。 如果找不到文件，它将查找由环境变量指定的目录。 如果目标文件在其中一个目录中，则新创建的路径将被复制到 `pathname` 中。 如果找不到 `filename` 文件，`pathname` 将包含一个以 null 值结束的空字符串。  
-  
- `pathname` 缓冲区的字符长度至少应为 `_MAX_PATH`，以便容纳构建的路径名称的完整长度。 否则，`_searchenv` 可能溢出 `pathname` 缓冲并导致意外行为。  
-  
- `_wsearchenv` 是 `_searchenv` 的宽字符版本，并且 `_wsearchenv` 的参数是宽字符字符串。 除此以外，`_wsearchenv` 和 `_searchenv` 的行为完全相同。  
-  
- 如果 `filename` 为空字符串，这些函数将返回 `ENOENT`。  
-  
- 如果 `filename` 或 `pathname` 是 `NULL` 指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则这些函数返回 -1 并将 `errno` 设置为 `EINVAL`。  
-  
- 有关 `errno` 和错误代码的详细信息，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。  
-  
- 在 C++ 中，这些函数具有可调用这些函数的更新、更安全的版本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tsearchenv`|`_searchenv`|`_searchenv`|`_wsearchenv`|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_searchenv`|\<stdlib.h>|  
-|`_wsearchenv`|\<stdlib.h> 或 \<wchar.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>示例  
-  
-```C  
-// crt_searchenv.c  
-// compile with: /W3  
-// This program searches for a file in  
-// a directory that's specified by an environment variable.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char pathbuffer[_MAX_PATH];  
-   char searchfile[] = "CL.EXE";  
-   char envvar[] = "PATH";  
-  
-   // Search for file in PATH environment variable:  
-   _searchenv( searchfile, envvar, pathbuffer ); // C4996  
-   // Note: _searchenv is deprecated; consider using _searchenv_s  
-   if( *pathbuffer != '\0' )  
-      printf( "Path for %s:\n%s\n", searchfile, pathbuffer );  
-   else  
-      printf( "%s not found\n", searchfile );  
-}  
-```  
-  
-```Output  
-Path for CL.EXE:  
-C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [目录控制](../../c-runtime-library/directory-control.md)   
- [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_putenv、_wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
- [_searchenv_s、_wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+void _searchenv(
+   const char *filename,
+   const char *varname,
+   char *pathname
+);
+void _wsearchenv(
+   const wchar_t *filename,
+   const wchar_t *varname,
+   wchar_t *pathname
+);
+template <size_t size>
+void _searchenv(
+   const char *filename,
+   const char *varname,
+   char (&pathname)[size]
+); // C++ only
+template <size_t size>
+void _wsearchenv(
+   const wchar_t *filename,
+   const wchar_t *varname,
+   wchar_t (&pathname)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*filename*要搜索的文件的名称。
+
+*varname*要搜索的环境。
+
+*路径名*用于存储的完整路径缓冲区。
+
+## <a name="remarks"></a>备注
+
+**_Searchenv**例程搜索指定的域中的目标文件。 *Varname*变量可以是任何环境或用户定义变量 — 例如，**路径**， **LIB**，或**包括**-，它指定目录路径的列表。 因为 **_searchenv**区分大小写， *varname*应匹配的环境变量的大小写。
+
+例程首先搜索当前工作目录中的文件。 如果找不到文件，它将查找由环境变量指定的目录。 如果目标文件在其中一个目录，则新创建的路径复制到*路径名*。 如果*filename*找不到文件，*路径名*包含一个空的以 null 结尾的字符串。
+
+*路径名*缓冲区至少应为 **_MAX_PATH**长度个字符，以便容纳构建的路径名称的完整长度。 否则为 **_searchenv**可能溢出*路径名*缓冲并导致意外的行为。
+
+**_wsearchenv**是宽字符版本的 **_searchenv**，和的自变量 **_wsearchenv**是宽字符字符串。 **_wsearchenv**和 **_searchenv**否则具有相同行为。
+
+如果*filename*为空字符串，这些函数将返回**ENOENT**。
+
+如果*filename*或*路径名*是**NULL**指针，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回-1 并设置**errno**到**EINVAL**。
+
+有关详细信息**errno**和错误代码，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+
+在 C++ 中，这些函数具有可调用这些函数的更新、更安全的版本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tsearchenv**|**_searchenv**|**_searchenv**|**_wsearchenv**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_searchenv**|\<stdlib.h>|
+|**_wsearchenv**|\<stdlib.h> 或 \<wchar.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_searchenv.c
+// compile with: /W3
+// This program searches for a file in
+// a directory that's specified by an environment variable.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char pathbuffer[_MAX_PATH];
+   char searchfile[] = "CL.EXE";
+   char envvar[] = "PATH";
+
+   // Search for file in PATH environment variable:
+   _searchenv( searchfile, envvar, pathbuffer ); // C4996
+   // Note: _searchenv is deprecated; consider using _searchenv_s
+   if( *pathbuffer != '\0' )
+      printf( "Path for %s:\n%s\n", searchfile, pathbuffer );
+   else
+      printf( "%s not found\n", searchfile );
+}
+```
+
+```Output
+Path for CL.EXE:
+C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
+```
+
+## <a name="see-also"></a>请参阅
+
+[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[getenv、_wgetenv](getenv-wgetenv.md)<br/>
+[_putenv、_wputenv](putenv-wputenv.md)<br/>
+[_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)<br/>

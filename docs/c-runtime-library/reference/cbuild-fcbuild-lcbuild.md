@@ -41,11 +41,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d5a2a5f40266f490cc0d18614c63715192b0707
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 555cd1d9d8f22801b1d3f3341be9041b1dde548c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild，_FCbuild _LCbuild
 
@@ -64,34 +64,34 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 要构造的复数实部。
 
-*imaginary*<br/>
+*虚部*<br/>
 要构造的复数的虚部。
 
 ## <a name="return-value"></a>返回值
 
-A **_Dcomplex**， **_Fcomplex**，或**_Lcomplex**结构，它表示复数 (*实际*，*虚部* \*我) 为指定的浮点类型的值。
+A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复数 (*实际*，*虚部* \*我) 为指定的浮点类型的值。
 
 ## <a name="remarks"></a>备注
 
-**_Cbuild**， **_FCbuild**，和**_LCbuild**函数简化创建复杂类型。 使用[creal，crealf，creall](../../c-runtime-library/reference/creal-crealf-creall.md)和[cimag，cimagf，cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)函数来检索表示复数的实部和虚部部分。
+**_Cbuild**， **_FCbuild**，和 **_LCbuild**函数简化创建复杂类型。 使用[creal，crealf，creall](creal-crealf-creall.md)和[cimag，cimagf，cimagl](cimag-cimagf-cimagl.md)函数来检索表示复数的实部和虚部部分。
 
 ## <a name="requirements"></a>要求
 
 |例程|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|`_Cbuild`,`_FCbuild`, `_LCbuild`|\<complex.h>|\<ccomplex>|
+|**_Cbuild**， **_FCbuild**， **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-这些函数是特定于 Microsoft 的。 类型**_Dcomplex**， **_Fcomplex**，和**_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，和 **_Lcomplex**到未实现的 C99 本机类型的特定于 Microsoft 的等效项**double _Complex**， **float _Complex**，和**长双精度 _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[_Cmulcc, _FCmulcc, _LCmulcc](../../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)<br/>
-[_Cmulcr, _FCmulcr, _LCmulcr](../../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)<br/>
-[norm、normf、norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
-[cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj、conjf、conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cimag、cimagf、cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[_Cmulcc、_FCmulcc、_LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
+[_Cmulcr、_FCmulcr、_LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
+[norm、normf、norml](norm-normf-norml1.md)<br/>
+[cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj、conjf、conjl](conj-conjf-conjl.md)<br/>
+[creal、crealf、creall](creal-crealf-creall.md)<br/>
+[cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg、cargf、cargl](carg-cargf-cargl.md)<br/>
+[cabs、cabsf、cabsl](cabs-cabsf-cabsl.md)<br/>

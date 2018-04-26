@@ -1,12 +1,12 @@
 ---
-title: "tan、tanf、tanl、tanh、tanhf、tanhl | Microsoft 文档"
-ms.custom: 
+title: tan、tanf、tanl、tanh、tanhf、tanhl | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tanhf
@@ -53,17 +53,17 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c3391d07e78ba177a3ce31abb26bd5b6ef0449c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
 计算正切值（`tan`、`tanf` 或 `tanl`）或双曲正切值（`tanh`、`tanhf` 或 `tanhl`）。  
@@ -120,9 +120,9 @@ long double tanhl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此您可以调用 `tan` 和 `tanh` 的重载，这将采用和返回 `float` 或 `long double` 值。 在 C 程序中，`tan` 和 `tanh` 始终采用并返回 `double`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
-|例程所返回的值|必需的标头|  
+|例程|必需的标头|  
 |-------------|---------------------|  
 |`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
   

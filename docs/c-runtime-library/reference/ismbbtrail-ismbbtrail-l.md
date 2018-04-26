@@ -1,12 +1,12 @@
 ---
-title: "_ismbbtrail、_ismbbtrail_l | Microsoft 文档"
-ms.custom: 
+title: _ismbbtrail、_ismbbtrail_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbtrail
@@ -37,57 +37,62 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0a56d64a44f9c2fc0c72ec7019cc56420c7dda
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5b062dff3ef38743af21e2dcf75ea1cfb4a8c921
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail、_ismbbtrail_l
-确定一个字节是否为多字节字符的尾随字节。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int _ismbbtrail(  
-   unsigned int c   
-);  
-int _ismbbtrail_l(  
-   unsigned int c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要测试的整数。  
-  
- `locale`  
- 要使用的区域设置。  
-  
-## <a name="return-value"></a>返回值  
- 如果整数 `_ismbbtrail` 为一个多字节字符的第二个字节，则 `c` 将返回一个非零值。 例如，仅在代码页 932 中，有效范围为 0x40 到 0x7E 以及 0x80 到 0xFC。  
-  
-## <a name="remarks"></a>备注  
- `_ismbbtrail` 对与区域设置相关的行为使用当前区域设置。 `_ismbbtrail_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|可选标头|  
-|-------------|---------------------|---------------------|  
-|`_ismbbtrail`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
-|`_ismbbtrail_l`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
-  
- \* 适用于测试条件的清单常量。  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [字节分类](../../c-runtime-library/byte-classification.md)   
- [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)
+
+确定一个字节是否为多字节字符的尾随字节。
+
+## <a name="syntax"></a>语法
+
+```C
+int _ismbbtrail(
+   unsigned int c
+);
+int _ismbbtrail_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要测试的整数。
+
+*locale*<br/>
+要使用的区域设置。
+
+## <a name="return-value"></a>返回值
+
+**_ismbbtrail**返回非零值，如果整数*c*是多字节字符的第二个字节。 例如，仅在代码页 932 中，有效范围为 0x40 到 0x7E 以及 0x80 到 0xFC。
+
+## <a name="remarks"></a>备注
+
+**_ismbbtrail**对区域设置相关行为使用当前区域设置。 **_ismbbtrail_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|可选标头|
+|-------------|---------------------|---------------------|
+|**_ismbbtrail**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
+|**_ismbbtrail_l**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
+
+\* 适用于测试条件的清单常量。
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[字节分类](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "fwide | Microsoft 文档"
-ms.custom: 
+title: fwide | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fwide
@@ -29,47 +29,51 @@ dev_langs:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e38bce95a26bd8b128a048768870c63f7de9da9f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a055df312215b5ff424aff54cfee54e0568ab307
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwide"></a>fwide
-未实现。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int fwide(  
-   FILE *stream,  
-   int mode;  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `stream`  
- 指向 `FILE` 结构的指针（已忽略）。  
-  
- `mode`  
- 流的新宽度：宽字符为正，字节为负，保持不变的为零。 （将忽略此值。）  
-  
-## <a name="return-value"></a>返回值  
- 此函数当前仅返回 `mode`。  
-  
-## <a name="remarks"></a>备注  
- 此函数的当前版本不符合标准。  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`fwide`|\<wchar.h>|  
-  
- 有关详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+未实现。
+
+## <a name="syntax"></a>语法
+
+```C
+int fwide(
+   FILE *stream,
+   int mode;
+);
+```
+
+### <a name="parameters"></a>参数
+
+*流*<br/>
+指向**文件**结构 （忽略）。
+
+*模式*<br/>
+流的新宽度：宽字符为正，字节为负，保持不变的为零。 （将忽略此值。）
+
+## <a name="return-value"></a>返回值
+
+此函数当前仅返回*模式*。
+
+## <a name="remarks"></a>备注
+
+此函数的当前版本不符合标准。
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**fwide**|\<wchar.h>|
+
+有关详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。

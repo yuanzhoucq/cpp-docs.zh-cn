@@ -1,12 +1,12 @@
 ---
-title: "bidirectional_iterator_tag 结构 | Microsoft 文档"
-ms.custom: 
+title: bidirectional_iterator_tag 结构 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xutility/std::bidirectional_iterator_tag
@@ -16,44 +16,46 @@ helpviewer_keywords:
 - bidirectional_iterator_tag class
 - bidirectional_iterator_tag struct
 ms.assetid: 9ac06066-b8ae-44b6-bee4-b05855f6a31a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eb496203b43f7e71c0ec0b69b561c478e83092
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 800968993b874070ccc32baf91e8feec3e01e472
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag 结构
-提供表示双向迭代器的 **iterator_category** 函数的返回类型的类。  
-  
-## <a name="syntax"></a>语法  
-  
-```
+
+提供表示双向迭代器的 **iterator_category** 函数的返回类型的类。
+
+## <a name="syntax"></a>语法
+
+```cpp
 struct bidirectional_iterator_tag    : public forward_iterator_tag {};
-```  
-  
-## <a name="remarks"></a>备注  
- 分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最具体的分类，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`>:: **iterator_category** 必须定义为最具体的分类标记，用于描述迭代器的行为。  
-  
- 当 **Iter** 描述一个可充当双向迭代器的对象时，其类型与 **iterator**\< **Iter**>:: **iterator_category** 相同。  
-  
-## <a name="example"></a>示例  
- 有关如何使用 `bidirectional_iterator_tag` 的示例，请参阅 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)。  
-  
-## <a name="requirements"></a>惠?  
- **标头：** \<iterator>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [forward_iterator_tag 结构](../standard-library/forward-iterator-tag-struct.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+```
 
+## <a name="remarks"></a>备注
 
+分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最具体的分类，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`>:: **iterator_category** 必须定义为最具体的分类标记，用于描述迭代器的行为。
 
+当 **Iter** 描述一个可充当双向迭代器的对象时，其类型与 **iterator**\< **Iter**>:: **iterator_category** 相同。
+
+## <a name="example"></a>示例
+
+有关如何使用 `bidirectional_iterator_tag` 的示例，请参阅 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)。
+
+## <a name="requirements"></a>要求
+
+**标头：** \<iterator>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[forward_iterator_tag 结构](../standard-library/forward-iterator-tag-struct.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

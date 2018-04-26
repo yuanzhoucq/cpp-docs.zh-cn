@@ -1,12 +1,12 @@
 ---
-title: "_fwrite_nolock | Microsoft 文档"
-ms.custom: 
+title: _fwrite_nolock | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fwrite_nolock
@@ -33,63 +33,69 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e698c6957177720bd171429144518a683be9b08
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e04dd884b4b96f64a4d4ece5b61fe5aeafb3a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
-将数据写入流，但不锁定线程。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-size_t _fwrite_nolock(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `buffer`  
- 指向要写入的数据的指针。  
-  
- `size`  
- 项目大小（以字节为单位）。  
-  
- `count`  
- 要写入的项的最大数量。  
-  
- `stream`  
- 指向 `FILE` 结构的指针。  
-  
-## <a name="return-value"></a>返回值  
- 与 [fwrite](../../c-runtime-library/reference/fwrite.md) 相同。  
-  
-## <a name="remarks"></a>备注  
- 此函数为 `fwrite` 的非锁定版本。 它与 `fwrite` 相同，只不过它可能受到其他线程的影响。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`_fwrite_nolock`|\<stdio.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
- 请参阅 [fread](../../c-runtime-library/reference/fread.md) 示例。  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+将数据写入流，但不锁定线程。
+
+## <a name="syntax"></a>语法
+
+```C
+size_t _fwrite_nolock(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>参数
+
+*buffer*<br/>
+指向要写入的数据的指针。
+
+*size*<br/>
+项目大小（以字节为单位）。
+
+*count*<br/>
+要写入的项的最大数量。
+
+*流*<br/>
+指向**文件**结构的指针。
+
+## <a name="return-value"></a>返回值
+
+与 [fwrite](fwrite.md) 相同。
+
+## <a name="remarks"></a>备注
+
+此函数是的非锁定版本**fwrite**。 它等同于**fwrite** ，只不过它不受干扰其他线程。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**_fwrite_nolock**|\<stdio.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+请参阅 [fread](fread.md) 示例。
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fread](fread.md)<br/>
+[_write](write.md)<br/>

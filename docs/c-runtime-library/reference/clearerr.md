@@ -1,12 +1,12 @@
 ---
-title: "clearerr | Microsoft 文档"
-ms.custom: 
+title: clearerr | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - clearerr
@@ -32,99 +32,102 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8763c3b02451478035d4857919bbe453b29999a3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8fbca4b6e6083cb22bc559b7bad7e75b00b8885c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="clearerr"></a>clearerr
-重置流的错误指示符。 提供此函数的一个更安全的版本；请参阅 [clearerr_s](../../c-runtime-library/reference/clearerr-s.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void clearerr(  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `stream`  
- 指向 `FILE` 结构的指针。  
-  
-## <a name="remarks"></a>备注  
- `clearerr` 函数为 `stream` 重置错误指示符和文件尾指示符。 不会自动清除错误指示符；设置指定流的错误指示符后，在调用 `clearerr`、`fseek`、`fsetpos` 或 `rewind` 前，将继续在该流上执行操作以返回错误值。  
-  
- 如果 `stream` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回。 有关 `errno` 和错误代码的详细信息，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。  
-  
- 提供此函数的一个更安全的版本；请参阅 [clearerr_s](../../c-runtime-library/reference/clearerr-s.md)。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`clearerr`|\<stdio.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_clearerr.c  
-// This program creates an error  
-// on the standard input stream, then clears  
-// it so that future reads won't fail.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int c;  
-   // Create an error by writing to standard input.  
-   putc( 'c', stdin );  
-   if( ferror( stdin ) )  
-   {  
-      perror( "Write error" );  
-      clearerr( stdin );  
-   }  
-  
-   // See if read causes an error.  
-   printf( "Will input cause an error? " );  
-   c = getc( stdin );  
-   if( ferror( stdin ) )  
-   {  
-      perror( "Read error" );  
-      clearerr( stdin );  
-   }  
-   else  
-      printf( "No read error\n" );  
-}  
-```  
-  
-```Output  
-  
-n  
-  
-```  
-  
-```Output  
-  
-      nWrite error: No error  
-Will input cause an error? n  
-No read error  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [错误处理](../../c-runtime-library/error-handling-crt.md)   
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof](../../c-runtime-library/reference/feof.md)   
- [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror、_wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+重置流的错误指示符。 提供此函数的一个更安全的版本；请参阅 [clearerr_s](clearerr-s.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+void clearerr(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>参数
+
+*流*指向**文件**结构。
+
+## <a name="remarks"></a>备注
+
+**Clearerr**函数重置错误指示器和的文件尾指示器*流*。 错误指示符不自动清除;设置指定的流的错误指示器后，该流上继续执行操作来返回之前的错误值**clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[rewind](rewind.md)调用。
+
+如果*流*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回。 有关详细信息**errno**和错误代码，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+
+提供此函数的一个更安全的版本；请参阅 [clearerr_s](clearerr-s.md)。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**clearerr**|\<stdio.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_clearerr.c
+// This program creates an error
+// on the standard input stream, then clears
+// it so that future reads won't fail.
+
+#include <stdio.h>
+
+int main( void )
+{
+   int c;
+   // Create an error by writing to standard input.
+   putc( 'c', stdin );
+   if( ferror( stdin ) )
+   {
+      perror( "Write error" );
+      clearerr( stdin );
+   }
+
+   // See if read causes an error.
+   printf( "Will input cause an error? " );
+   c = getc( stdin );
+   if( ferror( stdin ) )
+   {
+      perror( "Read error" );
+      clearerr( stdin );
+   }
+   else
+      printf( "No read error\n" );
+}
+```
+
+```Output
+
+n
+
+```
+
+```Output
+
+      nWrite error: No error
+Will input cause an error? n
+No read error
+```
+
+## <a name="see-also"></a>请参阅
+
+[错误处理](../../c-runtime-library/error-handling-crt.md)<br/>
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[ferror](ferror.md)<br/>
+[perror、_wperror](perror-wperror.md)<br/>

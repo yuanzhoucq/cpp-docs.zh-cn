@@ -1,13 +1,13 @@
 ---
-title: "trunc、truncf、truncl | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: trunc、truncf、truncl | Microsoft 文档
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - trunc
@@ -40,80 +40,73 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b97cc80701ef7f099fd7df177b40a935cce30a52
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b958046a773fff107ec7ad782186a3923c01e149
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
-确定小于或等于指定浮点值的最接近的整数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-double trunc(  
-   double x  
-);  
-  
-float trunc(  
-   float x  
-); //C++ only  
-  
-long double trunc(  
-   long double x  
-); //C++ only  
-  
-float trunc(  
-   float x  
-); //C++ only  
-  
-long double truncl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- [in] `x`  
- 要截断的值。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回向零舍入的 `x` 的整数值。  
-  
- 否则，可能返回以下值之一：  
-  
-|问题|返回|  
-|-----------|------------|  
-|`x` = ±INFINITY|x|  
-|`x` =  ±0|x|  
-|`x` = NaN|NaN|  
-  
- 按 [_matherr](../../c-runtime-library/reference/matherr.md) 中所指定的报告错误。  
-  
-## <a name="remarks"></a>备注  
- 由于 C++ 支持重载，可以调用 `trunc` 重载，以采用并返回浮点型和长双精度型值 。 在 C 程序中，`trunc` 始终采用及返回双精度型。  
-  
- 由于最大的浮点值是精确的整数，因此该函数不会自行溢出。 但是，将值还原为整型时可能会导致此函数溢出。  
-  
- 还可以通过从浮点隐式转换为整数来向下舍入；但是此操作仅限于可存储为目标类型的值。  
-  
-## <a name="requirements"></a>惠?  
-  
-|函数|C 标头|C++ 标头|  
-|--------------|--------------|------------------|  
-|`trunc`,                `truncf`,  `truncl`|\<math.h>|\<cmath>|  
-  
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [floor、floorf、floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [ceil、ceilf、ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [round、roundf、roundl](../../c-runtime-library/reference/round-roundf-roundl.md)
+
+确定小于或等于指定浮点值的最接近的整数。
+
+## <a name="syntax"></a>语法
+
+```C
+double trunc( double x );
+float trunc( float x ); //C++ only
+long double truncl( long double x );
+```
+
+```cpp
+long double trunc( long double x ); //C++ only
+float trunc( float x ); //C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*x*<br/>
+要截断的值。
+
+## <a name="return-value"></a>返回值
+
+如果成功，返回的一个整数值*x*，并向零舍入。
+
+否则，可能返回以下值之一：
+
+|问题|返回|
+|-----------|------------|
+|*x* = ±INFINITY|x|
+|*x* = ±0|x|
+|*x* = NaN|NaN|
+
+按 [_matherr](matherr.md) 中所指定的报告错误。
+
+## <a name="remarks"></a>备注
+
+由于 c + + 允许重载，你可以调用的重载**trunc**采用并返回**float**和**长** **double**类型。 在 C 程序中， **trunc**始终采用并返回**double**。
+
+由于最大的浮点值是精确的整数，因此该函数不会自行溢出。 但是，将值还原为整型时可能会导致此函数溢出。
+
+还可以通过从浮点隐式转换为整数来向下舍入；但是此操作仅限于可存储为目标类型的值。
+
+## <a name="requirements"></a>要求
+
+|函数|C 标头|C++ 标头|
+|--------------|--------------|------------------|
+|**trunc**， **truncf**， **truncl**|\<math.h>|\<cmath>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[floor、floorf、floorl](floor-floorf-floorl.md)<br/>
+[ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
+[round、roundf、roundl](round-roundf-roundl.md)<br/>

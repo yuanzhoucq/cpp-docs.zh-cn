@@ -1,12 +1,12 @@
 ---
-title: "_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l | Microsoft 文档"
-ms.custom: 
+title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctolower_l
@@ -51,86 +51,91 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de3ad7c095ab96e27e00863e2eaa775bce58ae8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cbe370fa5443ade72d352768d299fd6ac697288d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
-测试和转换多字节字符的大小写形式。  
-  
+
+测试和转换多字节字符的大小写形式。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-unsigned int _mbctolower(  
-   unsigned int c   
-);  
-unsigned int _mbctolower_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-unsigned int _mbctoupper(  
-   unsigned int c   
-);  
-unsigned int _mbctoupper_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要转换的多字节字符。  
-  
- `locale`  
- 要使用的区域设置。  
-  
-## <a name="return-value"></a>返回值  
- 如果可能，这些函数将返回转换的字符 `c`。 否则，它将返回未经任何修改的字符 `c`。  
-  
-## <a name="remarks"></a>备注  
- 这些函数将测试一个字符 `c`，如果可能，还将应用以下转换之一。  
-  
-|例程|转换|  
-|--------------|--------------|  
-|`_mbctolower,_mbctolower_l`|大写字符到小写字符。|  
-|`_mbctoupper,_mbctoupper_l`|小写字符到大写字符。|  
-  
- 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 此不带 `_l` 后缀的版本将对与区域设置相关的行为使用当前设置；而带有 `_l` 后缀的版本也执行相同的操作，只不过它改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
-  
- 在以前版本，`_mbctolower`调用`jtolower`，和`_mbctoupper`调用`jtoupper`。 对于新代码，请改用新名称。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_totlower`|`tolower`|`_mbctolower`|`towlower`|  
-|`_totlower_l`|`_tolower_l`|`_mbctolower_l`|`_towlower_t`|  
-|`_totupper`|`toupper`|`_mbctoupper`|`towupper`|  
-|`_totupper_l`|`toupper_l`|`_mbctoupper_l`|`_towupper_l`|  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|--------------|---------------------|  
-|`_mbctolower,_mbctolower_l`|\<mbstring.h>|  
-|`_mbctoupper,_mbctoupper_l`|\<mbstring.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [数据转换](../../c-runtime-library/data-conversion.md)   
- [_mbbtombc、_mbbtombc_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [_mbctombb、_mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+unsigned int _mbctolower(
+   unsigned int c
+);
+unsigned int _mbctolower_l(
+   unsigned int c,
+   _locale_t locale
+);
+unsigned int _mbctoupper(
+   unsigned int c
+);
+unsigned int _mbctoupper_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要转换的多字节字符。
+
+*locale*<br/>
+要使用的区域设置。
+
+## <a name="return-value"></a>返回值
+
+其中每个函数返回转换后的字符*c*如果可能。 否则它将返回字符*c*不变。
+
+## <a name="remarks"></a>备注
+
+这些函数将测试一个字符*c*并且，如果可能，将应用以下转换之一。
+
+|例程|转换|
+|--------------|--------------|
+|**_mbctolower**， **_mbctolower_l**|大写字符到小写字符。|
+|**_mbctoupper**， **_mbctoupper_l**|小写字符到大写字符。|
+
+输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 此函数而无需的版本 **_l**后缀使用当前区域设置区域设置相关的行为; 的版本与 **_l**后缀是相同，但它使用的区域设置参数改用已传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+在以前版本， **_mbctolower**调用**jtolower**，和 **_mbctoupper**调用**jtoupper**。 对于新代码，请改用新名称。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|--------------|---------------------|
+|**_mbctolower**， **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**， **_mbctoupper_l**|\<mbstring.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[数据转换](../../c-runtime-library/data-conversion.md)<br/>
+[_mbbtombc、_mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>
+[_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>
+[_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)<br/>
+[_mbctombb、_mbctombb_l](mbctombb-mbctombb-l.md)<br/>

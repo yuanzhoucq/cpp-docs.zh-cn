@@ -1,12 +1,12 @@
 ---
-title: "_fullpath_dbg、_wfullpath_dbg | Microsoft 文档"
-ms.custom: 
+title: _fullpath_dbg、_wfullpath_dbg | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfullpath_dbg
@@ -38,85 +38,90 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ba8f7d9784bd4f6361159feaef3d855ebee1e3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c94001008cbe10fa9dcc3ceaca8c5b48cea0c2d0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
-使用 `malloc` 调试版本分配内存的 [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md) 版本。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-char *_fullpath_dbg(   
-   char *absPath,  
-   const char *relPath,  
-   size_t maxLength,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wfullpath_dbg(   
-   wchar_t *absPath,  
-   const wchar_t *relPath,  
-   size_t maxLength,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `absPath`  
- 指向包含绝对路径名称或完整路径名称的缓冲区的指针或 `NULL`。  
-  
- `relPath`  
- 相对路径名称。  
-  
- `maxLength`  
- 绝对路径名称缓冲区 (`absPath`) 的最大长度。 对于 `_fullpath`，此长度以字节为单位，但是对于 `wchar_t`，此长度以宽字符 (`_wfullpath`) 为单位。  
-  
- `blockType`  
- 内存块的请求类型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
-  
- `filename`  
- 指向已请求分配操作的源文件名的指针或 `NULL`。  
-  
- `linenumber`  
- 请求分配操作所在的源文件中的行数或 `NULL`。  
-  
-## <a name="return-value"></a>返回值  
- 每个函数都会返回指向包含绝对路径名称 (`absPath`) 的缓冲区的指针。 如果存在错误（例如，如果在 `relPath` 中传递的值包含一个无效或无法找到的驱动器号，或者创建的绝对路径名称 (`absPath`) 的长度大于 `maxLength`），则该函数将返回 `NULL`。  
-  
-## <a name="remarks"></a>备注  
- `_fullpath_dbg`和`_wfullpath_dbg`函数相等`_fullpath`和`_wfullpath`只不过，当`_DEBUG`是定义，这些函数将使用的调试版本`malloc`，`_malloc_dbg`来分配内存，如果为 NULL作为第一个参数传递。 有关 `_malloc_dbg` 调试功能的信息，请参阅 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
-  
- 在大多数情况下，无需显式调用这些函数。 可以改为定义 `_CRTDBG_MAP_ALLOC` 标志。 定义 `_CRTDBG_MAP_ALLOC` 后，对 `_fullpath` 和 `_wfullpath` 的调用将分别重新映射到 `_fullpath_dbg` 和 `_wfullpath_dbg`，同时会将 `blockType` 设置为 `_NORMAL_BLOCK`。 因此，无需显式调用这些函数，除非你希望将堆块标记为 `_CLIENT_BLOCK`。 有关详细信息，请参阅[调试堆的块类型](/visualstudio/debugger/crt-debug-heap-details)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tfullpath_dbg`|`_fullpath_dbg`|`_fullpath_dbg`|`_wfullpath_dbg`|  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`_fullpath_dbg`|\<crtdbg.h>|  
-|`_wfullpath_dbg`|\<crtdbg.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [文件处理](../../c-runtime-library/file-handling.md)   
- [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+
+版本的[_fullpath、 _wfullpath](fullpath-wfullpath.md)使用的调试版本**malloc**分配内存。
+
+## <a name="syntax"></a>语法
+
+```C
+char *_fullpath_dbg(
+   char *absPath,
+   const char *relPath,
+   size_t maxLength,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wfullpath_dbg(
+   wchar_t *absPath,
+   const wchar_t *relPath,
+   size_t maxLength,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>参数
+
+*absPath*<br/>
+指向包含绝对路径或完整路径名称缓冲区的指针或**NULL**。
+
+*relPath*<br/>
+相对路径名称。
+
+*maxLength*<br/>
+最大长度为绝对路径名称缓冲区 (*absPath*)。 此长度以字节为单位的是 **_fullpath**但以宽字符为单位 (**wchar_t**) 为 **_wfullpath**。
+
+*blockType*<br/>
+内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+
+*filename*<br/>
+指向已请求分配操作的源文件名或**NULL**。
+
+*linenumber*<br/>
+请求分配操作所在的源文件中的行数或**NULL**。
+
+## <a name="return-value"></a>返回值
+
+每个函数返回指向包含绝对路径名称的缓冲区的指针 (*absPath*)。 如果没有错误 (例如，如果中传递的值*relPath*包含一个无法找到或不是有效的驱动器号或者，如果创建的绝对路径名称的长度 (*absPath*) 大于*maxLength*) 该函数将返回**NULL**。
+
+## <a name="remarks"></a>备注
+
+**_Fullpath_dbg**和 **_wfullpath_dbg**函数相等 **_fullpath**和 **_wfullpath**只不过，当 **_DEBUG**是定义，这些函数将使用的调试版本**malloc**， **_malloc_dbg**来分配内存，如果作为第一个参数传递 NULL。 有关信息的调试功能的 **_malloc_dbg**，请参阅[_malloc_dbg](malloc-dbg.md)。
+
+在大多数情况下，无需显式调用这些函数。 相反，你可以定义 **_CRTDBG_MAP_ALLOC**标志。 当 **_CRTDBG_MAP_ALLOC**定义，则调用 **_fullpath**和 **_wfullpath**重新映射到 **_fullpath_dbg**和 **_wfullpath_dbg**分别与*blockType*设置为 **_NORMAL_BLOCK**。 因此，不需要显式调用这些函数，除非你希望将堆块作为标记 **_CLIENT_BLOCK**。 有关详细信息，请参阅[调试堆的块类型](/visualstudio/debugger/crt-debug-heap-details)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tfullpath_dbg**|**_fullpath_dbg**|**_fullpath_dbg**|**_wfullpath_dbg**|
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**_fullpath_dbg**|\<crtdbg.h>|
+|**_wfullpath_dbg**|\<crtdbg.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[文件处理](../../c-runtime-library/file-handling.md)<br/>
+[_fullpath、_wfullpath](fullpath-wfullpath.md)<br/>
+[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

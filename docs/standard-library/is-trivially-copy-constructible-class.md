@@ -1,12 +1,12 @@
 ---
-title: "is_trivially_copy_constructible 类 | Microsoft Docs"
-ms.custom: 
+title: is_trivially_copy_constructible 类 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::is_trivially_copy_constructible
@@ -15,44 +15,45 @@ dev_langs:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 438a5e2aa262eefaa7d2c6cfcfe5786051646b87
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 73928574f2c96da952b7f18908c6b7a175549981
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible 类
-测试类型是否包含普通复制构造函数。  
-  
-## <a name="syntax"></a>语法  
-  
-```
+
+测试类型是否包含普通复制构造函数。
+
+## <a name="syntax"></a>语法
+
+```cpp
 template <class T>
 struct is_trivially_copy_constructible;
-```  
-  
-#### <a name="parameters"></a>参数  
- `T`  
- 要查询的类型。  
-  
-## <a name="remarks"></a>备注  
- 如果类型 `T` 是具有普通复制构造函数的类，则类型谓词的实例为 true；否则为 false。  
-  
- 如果类 `T` 的复制构造函数经隐式声明，则为普通类，类 `T` 不具有虚拟函数或虚拟基，类 `T` 的所有直接基具有普通复制构造函数，类类型的所有非静态数据成员的类都具有普通复制构造函数，且类的类型数组的所有非静态数据成员的类具有普通复制构造函数。  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<type_traits>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [<type_traits>](../standard-library/type-traits.md)
+```
 
+### <a name="parameters"></a>参数
 
+`T` 查询的类型。
 
+## <a name="remarks"></a>备注
+
+如果类型 `T` 是具有普通复制构造函数的类，则类型谓词的实例为 true；否则为 false。
+
+如果类 `T` 的复制构造函数经隐式声明，则为普通类，类 `T` 不具有虚拟函数或虚拟基，类 `T` 的所有直接基具有普通复制构造函数，类类型的所有非静态数据成员的类都具有普通复制构造函数，且类的类型数组的所有非静态数据成员的类具有普通复制构造函数。
+
+## <a name="requirements"></a>要求
+
+**标头：**\<type_traits>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[<type_traits>](../standard-library/type-traits.md)<br/>

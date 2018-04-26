@@ -1,12 +1,12 @@
 ---
-title: "_heapmin | Microsoft 文档"
-ms.custom: 
+title: _heapmin | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _heapmin
@@ -36,48 +36,52 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986d56560b421fe0b1973f52a9dbfcf3ea88bff1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c8e86e5fd9cfaac773342cb9fa3785885b477872
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="heapmin"></a>_heapmin
-将未使用的堆内存释放到操作系统。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int _heapmin( void );  
-```  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，`_heapmin` 会返回 0；否则，此函数会返回 -1，并将 `errno` 设置为 `ENOSYS`。  
-  
- 有关此代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
-## <a name="remarks"></a>备注  
- `_heapmin` 函数通过将未使用的堆内存释放到操作系统来最小化堆。 如果操作系统不支持`_heapmin`（例如，Windows 98），该函数将返回-1 并将设置`errno`到`ENOSYS`。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|可选标头|  
-|-------------|---------------------|---------------------|  
-|`_heapmin`|\<malloc.h>|\<errno.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [内存分配](../../c-runtime-library/memory-allocation.md)   
- [free](../../c-runtime-library/reference/free.md)   
- [_heapadd](../../c-runtime-library/heapadd.md)   
- [_heapchk](../../c-runtime-library/reference/heapchk.md)   
- [_heapset](../../c-runtime-library/heapset.md)   
- [_heapwalk](../../c-runtime-library/reference/heapwalk.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)
+
+将未使用的堆内存释放到操作系统。
+
+## <a name="syntax"></a>语法
+
+```C
+int _heapmin( void );
+```
+
+## <a name="return-value"></a>返回值
+
+如果成功， **_heapmin**返回 0; 否则，该函数返回-1 并将设置**errno**到**ENOSYS**。
+
+有关此代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+## <a name="remarks"></a>备注
+
+**_Heapmin**函数通过释放未使用的堆内存到操作系统降至最低堆。 如果操作系统不支持 **_heapmin**（例如，Windows 98），该函数将返回-1 并将设置**errno**到**ENOSYS**。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|可选标头|
+|-------------|---------------------|---------------------|
+|**_heapmin**|\<malloc.h>|\<errno.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[内存分配](../../c-runtime-library/memory-allocation.md)<br/>
+[free](free.md)<br/>
+[_heapadd](../../c-runtime-library/heapadd.md)<br/>
+[_heapchk](heapchk.md)<br/>
+[_heapset](../../c-runtime-library/heapset.md)<br/>
+[_heapwalk](heapwalk.md)<br/>
+[malloc](malloc.md)<br/>

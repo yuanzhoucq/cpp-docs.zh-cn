@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>标准转换
 C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -85,7 +85,7 @@ long_num2 = int_num * long_num2;
   
      这些运算符依赖于用于确定结果的符号。 因此，当值保留和符号保留提升应用于这些操作数时，它们将生成不同的结果。  
   
--   左的操作数**>>**或 **>>=**  
+-   左的操作数**>>** 或 **>>=**  
   
      当执行移位运算时，这些运算符会区别对待有符号的数量和无符号的数量。 对于有符号的数量，将数量右移会导致符号位传播到空出的位位置。 对于无符号的数量，空出的位位置将由零填充。  
   
@@ -120,8 +120,7 @@ int main()
   
  无符号整数类型的对象可以转换为对应的有符号类型。 但是，如果无符号对象的值在有符号类型表示的范围之外，则此类转换可能导致数据错误解释，如以下示例所示：  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  如果浮点类型的对象位于低精度类型可表示的范围中，则还可转换为该类型。 (请参阅[浮点限制](../cpp/floating-limits.md)为浮点类型的范围。)如果原始值不能精确地表示，则可将其转换为下一更高或更低的可表示值。 如果此类值不存在，则结果是不确定的。 请看下面的示例：  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- 按类型可表示的最大值**float**为 3.402823466 e 38-比 1E300 得较小多。 因此，该数字将转换为无穷大，结果为 1.#INF。  
+ 按类型可表示的最大值**float**为 3.402823466 e 38-比 1E300 得较小多。 因此，数字转换为无穷大，并且结果是"inf"。  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>整型和浮点型之间的转换  
  某些表达式可能导致浮点型的对象转换为整型，反之亦然。 当整型对象转换为浮点型且无法正确表示原始值时，结果要么是下一个较大的可表示值，要么是下一个较小的可表示值。  
@@ -330,5 +329,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)

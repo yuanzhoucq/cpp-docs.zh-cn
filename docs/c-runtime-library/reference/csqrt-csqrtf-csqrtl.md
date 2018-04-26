@@ -1,13 +1,13 @@
 ---
-title: "csqrt、csqrtf、csqrtl | Microsoft 文档"
-ms.custom: 
+title: csqrt、csqrtf、csqrtl | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - csqrt
@@ -40,75 +40,80 @@ helpviewer_keywords:
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c295031e2b7d4119c988e4253f34dd7897d30c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ad6424497abc6f45eaf8369aabca4ad966881f4c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
-检索复数的平方根，沿负实轴进行分支切割。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-_Dcomplex csqrt(   
-   _Dcomplex z   
-);  
-_Fcomplex csqrt(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex csqrt(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex csqrtf(   
-   _Fcomplex z   
-);  
-_Lcomplex csqrtl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `z`  
- 一个复数。  
-  
-## <a name="return-value"></a>返回值  
- `z` 的平方根。 结果在右半面中。  
-  
-|输入|SEH 异常|`_matherr` 异常|  
-|-----------|-------------------|--------------------------|  
-|± QNAN、 IND|无|_DOMAIN|  
-|- ∞|无|_DOMAIN|  
-  
-## <a name="remarks"></a>备注  
- 由于 C++ 允许重载，因此你可以调用采用并返回 `csqrt` 和 `_Fcomplex` 值的 `_Lcomplex` 重载。 在 C 程序中，`csqrt` 始终采用并返回 `_Dcomplex` 值。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|C 标头|C++ 标头|  
-|-------------|--------------|------------------|  
-|`csqrt`,               `csqrtf`, `csqrtl`|\<complex.h>|\<ccomplex>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh、catanhf、catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh、ctanhf、ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan、catanf、catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh、csinhf、csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh、casinhf、casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh、ccoshf、ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh、cacoshf、cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos、cacosf、cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan、ctanf、ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin、csinf、csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin、casinf、casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos、ccosf、ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)
+
+检索复数的平方根，沿负实轴进行分支切割。
+
+## <a name="syntax"></a>语法
+
+```C
+_Dcomplex csqrt(
+   _Dcomplex z
+);
+_Fcomplex csqrt(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex csqrt(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex csqrtf(
+   _Fcomplex z
+);
+_Lcomplex csqrtl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>参数
+
+*z*<br/>
+一个复数。
+
+## <a name="return-value"></a>返回值
+
+平方根*z*。 结果在右半面中。
+
+|输入|SEH 异常|**_matherr**异常|
+|-----------|-------------------|--------------------------|
+|± QNAN、 IND|无|_DOMAIN|
+|- ∞|无|_DOMAIN|
+
+## <a name="remarks"></a>备注
+
+由于 c + + 允许重载，你可以调用的重载**csqrt**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **csqrt**始终采用并返回 **_Dcomplex**值。
+
+## <a name="requirements"></a>要求
+
+|例程|C 标头|C++ 标头|
+|-------------|--------------|------------------|
+|**csqrt**， **csqrtf**， **csqrtl**|\<complex.h>|\<ccomplex>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan、catanf、catanl](catan-catanf-catanl.md)<br/>
+[csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh、casinhf、casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh、ccoshf、ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh、cacoshf、cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos、cacosf、cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan、ctanf、ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin、csinf、csinl](csin-csinf-csinl.md)<br/>
+[casin、casinf、casinl](casin-casinf-casinl.md)<br/>
+[ccos、ccosf、ccosl](ccos-ccosf-ccosl.md)<br/>

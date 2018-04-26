@@ -109,15 +109,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a471e0df86dbfd5e8c267c463684a088b400863
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 34069bd8866e38faa2cade18e44e16eda4154a40
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa、 _itoa、 ltoa、 _ltoa、 ultoa、 _ultoa、 _i64toa、 _ui64toa、 _itow、 _ltow、 _ultow、 _i64tow、 _ui64tow
 
-将整数转换为字符串。 这些函数的更多安全版本才会有效。请参阅[_itoa_s、 _itow_s 函数](../../c-runtime-library/reference/itoa-s-itow-s.md)。
+将整数转换为字符串。 这些函数的更多安全版本才会有效。请参阅[_itoa_s、 _itow_s 函数](itoa-s-itow-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -192,14 +192,14 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>备注
 
-`_itoa`， `_ltoa`， `_ultoa`， `_i64toa`，和`_ui64toa`函数将转换的数字给定*值*到以 null 结尾的字符串和存储 （最多 33 结果的自变量有关字符`_itoa`， `_ltoa`，和`_ultoa`，和为 65`_i64toa`和`_ui64toa`) 中*缓冲区*。 如果*基数*等于 10 和*值*为负，则存储字符串的第一个字符为减号 (**-**)。 `_itow`， `_ltow`， `_ultow`， `_i64tow`，和`_ui64tow`函数是宽字符版本的`_itoa`， `_ltoa`， `_ultoa`， `_i64toa`，和`_ui64toa`分别。
+**_Itoa**， **_ltoa**， **_ultoa**， **_i64toa**，和 **_ui64toa**函数将转换的数字给定*值*到以 null 结尾的字符串和存储结果的自变量 (最多 33 个字符 **_itoa**， **_ltoa**，和 **_ultoa**，和为 65 **_i64toa**和 **_ui64toa**) 中*缓冲区*。 如果*基数*等于 10 和*值*为负，则存储字符串的第一个字符为减号 (**-**)。 **_Itow**， **_ltow**， **_ultow**， **_i64tow**，和 **_ui64tow**函数是宽字符版本的 **_itoa**， **_ltoa**， **_ultoa**， **_i64toa**，和 **_ui64toa**，分别。
 
 > [!IMPORTANT]
 > 这些函数可以编写太小的缓冲区的末尾。 若要阻止缓冲区溢出，请确保*缓冲区*足够大以保存转换后的数字加上结尾的 null 字符和符号字符。 不正确使用了这些函数可以在你的代码会导致严重的安全问题。
 
-有关安全问题，默认情况下，其可能由于这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此函数或变量可能不安全。请考虑使用** *safe_function* **相反。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 我们建议你更改源代码以使用*safe_function*建议的警告消息。 更安全的函数不写入的字符数大于指定的缓冲区大小。 有关详细信息，请参阅[_itoa_s、 _itow_s 函数](../../c-runtime-library/reference/itoa-s-itow-s.md)。
+有关安全问题，默认情况下，其可能由于这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此函数或变量可能不安全。请考虑使用** *safe_function* **相反。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 我们建议你更改源代码以使用*safe_function*建议的警告消息。 更安全的函数不写入的字符数大于指定的缓冲区大小。 有关详细信息，请参阅[_itoa_s、 _itow_s 函数](itoa-s-itow-s.md)。
 
-若要使用这些功能，而不必弃用警告，定义**_CRT_SECURE_NO_WARNINGS**包含任何 CRT 标头之前的预处理器宏。 您可以在达到此开发人员命令提示中的命令行通过添加**/D_CRT_SECURE_NO_WARNINGS**编译器选项**cl**命令。 否则，在源文件中定义的宏。 如果你使用预编译标头，定义在预编译标头的顶部宏包含文件，通常 stdafx.h。 若要在源代码中定义宏，请使用**#define**指令之前包括任何 CRT 标头，如此示例所示：
+若要使用这些功能，而不必弃用警告，定义 **_CRT_SECURE_NO_WARNINGS**包含任何 CRT 标头之前的预处理器宏。 您可以在达到此开发人员命令提示中的命令行通过添加 **/D_CRT_SECURE_NO_WARNINGS**编译器选项**cl**命令。 否则，在源文件中定义的宏。 如果你使用预编译标头，定义在预编译标头的顶部宏包含文件，通常 stdafx.h。 若要在源代码中定义宏，请使用 **#define**指令之前包括任何 CRT 标头，如此示例所示：
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
@@ -208,9 +208,9 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 在 c + +，这些函数具有模板重载，以调用更安全的对应。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-Posix 名称`itoa`， `ltoa`，和`ultoa`作为别名存在`_itoa`， `_ltoa`，和`_ultoa`函数。 Posix 名称已弃用，因为它们不遵循特定于实现的函数名称约定的 ISO c。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此项的 POSIX 名称已弃用。请改用 ISO C 和 c + + 一致的名称：** *new_name*。 我们建议你更改源代码才能使用这些函数的更安全版本`_itoa_s`， `_ltoa_s`，或`_ultoa_s`。 有关详细信息，请参阅[_itoa_s、 _itow_s 函数](../../c-runtime-library/reference/itoa-s-itow-s.md)。
+Posix 名称**itoa**， **ltoa**，和**ultoa**作为别名存在 **_itoa**， **_ltoa**，和 **_ultoa**函数。 Posix 名称已弃用，因为它们不遵循特定于实现的函数名称约定的 ISO c。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此项的 POSIX 名称已弃用。请改用 ISO C 和 c + + 一致的名称：** *new_name*。 我们建议你更改源代码才能使用这些函数的更安全版本 **_itoa_s**， **_ltoa_s**，或 **_ultoa_s**。 有关详细信息，请参阅[_itoa_s、 _itow_s 函数](itoa-s-itow-s.md)。
 
-为源代码可移植性，您可能想要保留你的代码中的 Posix 名称。 若要使用这些功能，而不必弃用警告，可以同时定义**_CRT_NONSTDC_NO_WARNINGS**和**_CRT_SECURE_NO_WARNINGS**包含任何 CRT 标头之前的预处理器宏。 您可以在达到此开发人员命令提示中的命令行通过添加**/D_CRT_SECURE_NO_WARNINGS**和**/D_CRT_NONSTDC_NO_WARNINGS**编译器选项，到**cl**命令。 否则，在源文件中定义的宏。 如果你使用预编译标头，定义在预编译标头的顶部宏包括文件，通常 stdafx.h。 若要在你的源代码中定义的宏，使用**#define**指令之前包括任何 CRT 标头，如此示例所示：
+为源代码可移植性，您可能想要保留你的代码中的 Posix 名称。 若要使用这些功能，而不必弃用警告，可以同时定义 **_CRT_NONSTDC_NO_WARNINGS**和 **_CRT_SECURE_NO_WARNINGS**包含任何 CRT 标头之前的预处理器宏。 您可以在达到此开发人员命令提示中的命令行通过添加 **/D_CRT_SECURE_NO_WARNINGS**和 **/D_CRT_NONSTDC_NO_WARNINGS**编译器选项，到**cl**命令。 否则，在源文件中定义的宏。 如果你使用预编译标头，定义在预编译标头的顶部宏包括文件，通常 stdafx.h。 若要在你的源代码中定义的宏，使用 **#define**指令之前包括任何 CRT 标头，如此示例所示：
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -227,11 +227,11 @@ Posix 名称`itoa`， `ltoa`，和`ultoa`作为别名存在`_itoa`， `_ltoa`，
 ||||
 |-|-|-|
 |函数|radix|宏|
-|`_itoa`, `_itow`|16<br/>10<br/>8<br/>2|`_MAX_ITOSTR_BASE16_COUNT`<br/>`_MAX_ITOSTR_BASE10_COUNT`<br/>`_MAX_ITOSTR_BASE8_COUNT`<br/>`_MAX_ITOSTR_BASE2_COUNT`|
-|`_ltoa`, `_ltow`|16<br/>10<br/>8<br/>2|`_MAX_LTOSTR_BASE16_COUNT`<br/>`_MAX_LTOSTR_BASE10_COUNT`<br/>`_MAX_LTOSTR_BASE8_COUNT`<br/>`_MAX_LTOSTR_BASE2_COUNT`|
-|`_ultoa`, `_ultow`|16<br/>10<br/>8<br/>2|`_MAX_ULTOSTR_BASE16_COUNT`<br/>`_MAX_ULTOSTR_BASE10_COUNT`<br/>`_MAX_ULTOSTR_BASE8_COUNT`<br/>`_MAX_ULTOSTR_BASE2_COUNT`|
-|`_i64toa`, `_i64tow`|16<br/>10<br/>8<br/>2|`_MAX_I64TOSTR_BASE16_COUNT`<br/>`_MAX_I64TOSTR_BASE10_COUNT`<br/>`_MAX_I64TOSTR_BASE8_COUNT`<br/>`_MAX_I64TOSTR_BASE2_COUNT`|
-|`_ui64toa`, `_ui64tow`|16<br/>10<br/>8<br/>2|`_MAX_U64TOSTR_BASE16_COUNT`<br/>`_MAX_U64TOSTR_BASE10_COUNT`<br/>`_MAX_U64TOSTR_BASE8_COUNT`<br/>`_MAX_U64TOSTR_BASE2_COUNT`|
+|**_itoa**， **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
+|**_ltoa**， **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
+|**_ultoa**， **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_i64toa**， **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
+|**_ui64toa**， **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
 此示例使用转换计数宏来定义大到足以包含缓冲区**无符号长时间长**基数为 2 中：
 
@@ -249,25 +249,25 @@ int main()
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot`|`_itoa`|`_itoa`|`_itow`|
-|`_ltot`|`_ltoa`|`_ltoa`|`_ltow`|
-|`_ultot`|`_ultoa`|`_ultoa`|`_ultow`|
-|`_i64tot`|`_i64toa`|`_i64toa`|`_i64tow`|
-|`_ui64tot`|`_ui64toa`|`_ui64toa`|`_ui64tow`|
+|**_itot**|**_itoa**|**_itoa**|**_itow**|
+|**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
+|**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|`itoa`, `ltoa`, `ultoa`|\<stdlib.h>|
-|`_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, `_ui64toa`|\<stdlib.h>|
-|`_itow`, `_ltow`, `_ultow`, `_i64tow`, `_ui64tow`|\<stdlib.h> 或 \<wchar.h>|
+|**itoa**， **ltoa**， **ultoa**|\<stdlib.h>|
+|**_itoa**， **_ltoa**， **_ultoa**， **_i64toa**， **_ui64toa**|\<stdlib.h>|
+|**_itow**， **_ltow**， **_ultow**， **_i64tow**， **_ui64tow**|\<stdlib.h> 或 \<wchar.h>|
 
 这些函数和宏是 Microsoft 特定的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-此示例演示一些整数转换函数的用法。 请注意，使用**_CRT_SECURE_NO_WARNINGS**宏来抑制警告 C4996。
+此示例演示一些整数转换函数的用法。 请注意，使用 **_CRT_SECURE_NO_WARNINGS**宏来抑制警告 C4996。
 
 ```C
 // crt_itoa.c
@@ -342,7 +342,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s、 _itow_s 函数](../../c-runtime-library/reference/itoa-s-itow-s.md)<br/>
+[_itoa_s、 _itow_s 函数](itoa-s-itow-s.md)<br/>

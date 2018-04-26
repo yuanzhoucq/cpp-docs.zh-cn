@@ -1,12 +1,12 @@
 ---
-title: "_putchar_nolock、_putwchar_nolock | Microsoft 文档"
-ms.custom: 
+title: _putchar_nolock、_putwchar_nolock | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putchar_nolock
@@ -41,93 +41,98 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0442c17464fc83e5f74a9a4683d00e89d743011e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0b0ed5cd086fef106a2625c096e34459579653bd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock、_putwchar_nolock
-将字符写入 **stdout** 而不锁定线程。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      int _putchar_nolock(  
-   int c   
-);  
-wint_t _putwchar_nolock(  
-   wchar_t c   
-);  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要写入的字符。  
-  
-## <a name="return-value"></a>返回值  
- 请参阅 **putchar、putwchar**。  
-  
-## <a name="remarks"></a>备注  
- **putchar_nolock** 和 `_putwchar_nolock` 与不带 **_nolock** 后缀的版本相同，只不过它们可能会受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_puttchar_nolock`|`_putchar_nolock`|`_putchar_nolock`|`_putwchar_nolock`|  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`_putchar_nolock`|\<stdio.h>|  
-|`_putwchar_nolock`|\<stdio.h> 或 \<wchar.h>|  
-  
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄`stdin`， `stdout`，和`stderr`，必须将重定向，然后 C 运行时函数可以在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
-  
-## <a name="libraries"></a>库  
- [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_putchar_nolock.c  
-/* This program uses putchar to write buffer  
- * to stdout. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = _putchar_nolock( *p );  
-}  
-```  
-  
-## <a name="output"></a>输出  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)
+
+将字符写入 **stdout** 而不锁定线程。
+
+## <a name="syntax"></a>语法
+
+```C
+int _putchar_nolock(
+   int c
+);
+wint_t _putwchar_nolock(
+   wchar_t c
+);
+
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要写入的字符。
+
+## <a name="return-value"></a>返回值
+
+请参阅 **putchar、putwchar**。
+
+## <a name="remarks"></a>备注
+
+**putchar_nolock**和 **_putwchar_nolock**不包含版本相同 **_nolock**后缀，只不过它们不受干扰其他线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttchar_nolock**|**_putchar_nolock**|**_putchar_nolock**|**_putwchar_nolock**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_putchar_nolock**|\<stdio.h>|
+|**_putwchar_nolock**|\<stdio.h> 或 \<wchar.h>|
+
+通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，和**stderr**，必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>库
+
+[C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
+
+## <a name="example"></a>示例
+
+```C
+// crt_putchar_nolock.c
+/* This program uses putchar to write buffer
+* to stdout. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = _putchar_nolock( *p );
+}
+```
+
+### <a name="output"></a>输出
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc、fputwc](fputc-fputwc.md)<br/>
+[fgetc、fgetwc](fgetc-fgetwc.md)<br/>

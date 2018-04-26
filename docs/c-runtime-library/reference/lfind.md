@@ -1,12 +1,12 @@
 ---
-title: "_lfind | Microsoft 文档"
-ms.custom: 
+title: _lfind | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _lfind
@@ -36,105 +36,110 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6df994306ad9a7d51d619a9bd409c021386a11
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 488863a32319fac17f5d1c84f56edaeeb63ff0ce
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lfind"></a>_lfind
-用于针对指定的键执行线性搜索。 此函数有一个更安全的版本；请参阅 [_lfind_s](../../c-runtime-library/reference/lfind-s.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void *_lfind(  
-   const void *key,  
-   const void *base,  
-   unsigned int *num,  
-   unsigned int width,  
-   int (__cdecl *compare)(const void *, const void *)  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `key`  
- 要搜索的对象。  
-  
- `base`  
- 指向搜索数据的基项的指针。  
-  
- `num`  
- 数组元素的数目。  
-  
- `width`  
- 数组元素的宽度。  
-  
- `compare`  
- 指向比较例程的指针。 第一个参数是指向要搜索的键的指针。 第二个参数是指向要与该键进行比较的数组元素的指针。  
-  
-## <a name="return-value"></a>返回值  
- 如果找到此键，则 `_lfind` 返回指向 `base` 处的与 `key` 匹配的数组元素的指针。 如果未找到该键，则 `_lfind` 返回 `NULL`。  
-  
-## <a name="remarks"></a>备注  
- `_lfind` 函数对 `num` 元素的数组中的值 `key` 执行线性搜索，每个元素为 `width` 字节。 与 `bsearch` 不同，`_lfind` 不要求对数组进行排序。 参数 `base` 是指向待搜索数组基项的指针。 参数 `compare` 是指向用户提供的例程的指针，它比较两个数组元素，然后返回指定它们关系的值。 `_lfind` 在搜索过程中一次或多次调用 `compare` 例程，将指针传递给每个调用上的两个数组元素。 `compare` 例程必须比较这些元素，然后返回非零值（表示元素不同）或 0（表示元素相同）。  
-  
- 此函数验证其参数。 如果 `compare`、`key` 或 `num` 为 `NULL`，或者如果 `base` 为 NULL 且 *`num` 不为零，或者如果 `width` 小于零，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_lfind`|\<search.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_lfind.c  
-// This program uses _lfind to search a string array  
-// for an occurrence of "hello".  
-  
-#include <search.h>  
-#include <string.h>  
-#include <stdio.h>  
-  
-int compare(const void *arg1, const void *arg2 )  
-{  
-   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );  
-}  
-  
-int main( )  
-{  
-   char *arr[] = {"Hi", "Hello", "Bye"};  
-   int n = sizeof(arr) / sizeof(char*);  
-   char **result;  
-   char *key = "hello";  
-  
-   result = (char **)_lfind( &key, arr,   
-                      &n, sizeof(char *), compare );  
-  
-   if( result )  
-      printf( "%s found\n", *result );  
-   else  
-      printf( "hello not found!\n" );  
-}  
-```  
-  
-```Output  
-Hello found  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [搜索和排序](../../c-runtime-library/searching-and-sorting.md)   
- [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
- [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)   
- [qsort](../../c-runtime-library/reference/qsort.md)
+
+用于针对指定的键执行线性搜索。 此函数有一个更安全的版本；请参阅 [_lfind_s](lfind-s.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+void *_lfind(
+   const void *key,
+   const void *base,
+   unsigned int *num,
+   unsigned int width,
+   int (__cdecl *compare)(const void *, const void *)
+);
+```
+
+### <a name="parameters"></a>参数
+
+*key*<br/>
+要搜索的对象。
+
+*base*<br/>
+指向搜索数据的基项的指针。
+
+*数*<br/>
+数组元素的数目。
+
+*width*<br/>
+数组元素的宽度。
+
+*compare*<br/>
+指向比较例程的指针。 第一个参数是指向要搜索的键的指针。 第二个参数是指向要与该键进行比较的数组元素的指针。
+
+## <a name="return-value"></a>返回值
+
+如果找到该键， **_lfind**将指针返回到在数组的元素*基*匹配*密钥*。 如果未找到键， **_lfind**返回**NULL**。
+
+## <a name="remarks"></a>备注
+
+**_Lfind**函数执行值的线性搜索*密钥*数组中的*数*元素，每个*宽度*字节。 与不同**bsearch**， **_lfind**不需要要进行排序的数组。 *基*自变量是指向要搜索的数组的基类。 *比较*自变量是指向比较两个数组元素，然后返回一个值，指定其关系的用户提供例程。 **_lfind**调用*比较*搜索，将指针传递给两个数组元素，在每次调用例程的一个或多个期间。 *比较*例程必须比较元素，然后返回非零 （这意味着元素不同） 或 0 （这意味着元素相同的）。
+
+此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*为 NULL 和 **数*不为零，或者如果*宽度*小于零，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_lfind**|\<search.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_lfind.c
+// This program uses _lfind to search a string array
+// for an occurrence of "hello".
+
+#include <search.h>
+#include <string.h>
+#include <stdio.h>
+
+int compare(const void *arg1, const void *arg2 )
+{
+   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );
+}
+
+int main( )
+{
+   char *arr[] = {"Hi", "Hello", "Bye"};
+   int n = sizeof(arr) / sizeof(char*);
+   char **result;
+   char *key = "hello";
+
+   result = (char **)_lfind( &key, arr,
+                      &n, sizeof(char *), compare );
+
+   if( result )
+      printf( "%s found\n", *result );
+   else
+      printf( "hello not found!\n" );
+}
+```
+
+```Output
+Hello found
+```
+
+## <a name="see-also"></a>请参阅
+
+[搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
+[_lfind_s](lfind-s.md)<br/>
+[bsearch](bsearch.md)<br/>
+[_lsearch](lsearch.md)<br/>
+[qsort](qsort.md)<br/>

@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof 宏
 
@@ -58,15 +58,15 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="remarks"></a>备注
 
-`_countof` 实现为类似于函数的预处理器宏。 C + + 版本都具有额外的模板机械以检测在编译时，如果在将指针传递而不是静态声明数组。
+**_countof**作为类似函数的预处理器宏实现。 C + + 版本都具有额外的模板机械以检测在编译时，如果在将指针传递而不是静态声明数组。
 
-确保*数组*实际上是一个数组，不是指针。 在 C 中，`_countof`产生错误的结果，如果*数组*是指针。 C + + 中`_countof`无法编译如果*数组*是指针。  数组作为参数传递给函数*为指针 decays*，这意味着，在函数中，你无法使用`_countof`以确定数组的程度。
+确保*数组*实际上是一个数组，不是指针。 在 C 中， **_countof**产生错误的结果，如果*数组*是指针。 C + + 中 **_countof**无法编译如果*数组*是指针。  数组作为参数传递给函数*为指针 decays*，这意味着，在函数中，你无法使用 **_countof**以确定数组的程度。
 
 ## <a name="requirements"></a>要求
 
 |宏|必需的标头|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>示例
 

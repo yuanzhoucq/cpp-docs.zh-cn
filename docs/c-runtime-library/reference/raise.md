@@ -1,12 +1,12 @@
 ---
-title: "raise | Microsoft 文档"
-ms.custom: 
+title: raise | Microsoft 文档
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>参数
 
-*sig*  
+*sig*<br/>
 要引发的信号。
 
 ## <a name="return-value"></a>返回值
@@ -73,18 +73,18 @@ int raise(
 
 |Signal|含义|默认|
 |------------|-------------|-------------|
-|`SIGABRT`|异常终止|使用退出代码 3 终止调用程序|
-|`SIGFPE`|浮点错误|终止调用程序|
-|`SIGILL`|非法指令|终止调用程序|
-|`SIGINT`|CTRL+C 中断|终止调用程序|
-|`SIGSEGV`|非法存储区访问|终止调用程序|
-|`SIGTERM`|发送到程序的终止请求|忽略信号|
+|**SIGABRT**|异常终止|使用退出代码 3 终止调用程序|
+|**SIGFPE**|浮点错误|终止调用程序|
+|**SIGILL**|非法指令|终止调用程序|
+|**SIGINT**|CTRL+C 中断|终止调用程序|
+|**SIGSEGV**|非法存储区访问|终止调用程序|
+|**SIGTERM**|发送到程序的终止请求|忽略信号|
 
-如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，则函数将 `errno` 设置为 `EINVAL` 并返回一个非零值。
+如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未得到处理，该函数将设置**errno**到**EINVAL**并返回一个非零值。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 
@@ -92,6 +92,6 @@ int raise(
 
 ## <a name="see-also"></a>请参阅
 
-[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

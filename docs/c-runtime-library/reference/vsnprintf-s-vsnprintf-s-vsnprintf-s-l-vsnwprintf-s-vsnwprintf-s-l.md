@@ -1,12 +1,12 @@
 ---
-title: "vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l | Microsoft 文档"
-ms.custom: 
+title: vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vsnwprintf_s
@@ -48,184 +48,189 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e908750b54778d4aad7affeb6bd748a84ab39bc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 230f60f33f37f1151af693f4de585bf78703e983
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
-使用指向参数列表的指针写入格式化的输出。 这些版本的 [vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int vsnprintf_s(  
-   char *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const char *format,  
-   va_list argptr   
-);  
-int _vsnprintf_s(  
-   char *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const char *format,  
-   va_list argptr   
-);  
-int _vsnprintf_s_l(  
-   char *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int _vsnwprintf_s(  
-   wchar_t *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vsnwprintf_s_l(  
-   wchar_t *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-template <size_t size>  
-int _vsnprintf_s(  
-   char (&buffer)[size],  
-   size_t count,  
-   const char *format,  
-   va_list argptr   
-); // C++ only  
-template <size_t size>  
-int _vsnwprintf_s(  
-   wchar_t (&buffer)[size],  
-   size_t count,  
-   const wchar_t *format,  
-   va_list argptr   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>参数  
- `buffer`  
- 输出的存储位置  
-  
- `sizeOfBuffer`  
- `buffer` 的输出大小和字符数相同。  
-  
- `count`  
- 要写入的字符最大数量（不包括终止 null 或 [_TRUNCATE](../../c-runtime-library/truncate.md)）。  
-  
- `format`  
- 格式规范。  
-  
- `argptr`  
- 指向参数列表的指针。  
-  
- `locale`  
- 要使用的区域设置。  
-  
- 有关更多信息，请参见 [格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
-  
-## <a name="return-value"></a>返回值  
- `vsnprintf_s`、`_vsnprintf_s` 和 `_vsnwprintf_s` 返回写入的字符数量，不包括终止的 null 字符，如果发生输出错误，则返回负值。 `vsnprintf_s` 等于 `_vsnprintf_s`。 为符合 ANSI 标准将包括 `vsnprintf_s`。 为实现后向兼容性保留了 `_vnsprintf`。  
-  
- 如果存储数据和终止 null 的所需存储空间超过 `sizeOfBuffer`，则会调用无效参数处理程序（如[参数验证](../../c-runtime-library/parameter-validation.md)所述），除非 `count` 是 [_TRUNCATE](../../c-runtime-library/truncate.md)，这样就会将尽可能多的字符串写入 `buffer` 中并返回 -1。 如果在调用无效参数处理程序后继续执行，这些函数会将 `buffer` 设置为空字符串、`errno` 设置为 `ERANGE`，并返回 -1。  
-  
- 如果 `buffer` 或 `format` 是一个 `NULL` 指针，或如果 `count` 小于或等于 0，则将调用无效参数处理程序。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。  
-  
-### <a name="error-conditions"></a>错误条件  
-  
-|`Condition`|返回|`errno`|  
-|-----------------|------------|-------------|  
-|`buffer` 为 `NULL`|-1|`EINVAL`|  
-|`format` 为 `NULL`|-1|`EINVAL`|  
-|`count` <= 0|-1|`EINVAL`|  
-|`sizeOfBuffer` 过小（`count` != `_TRUNCATE`）|-1（`buffer` 设置为空字符串）|`ERANGE`|  
-  
-## <a name="remarks"></a>备注  
- 这些函数中的每一个函数都将采用指向参数列表的指针，然后进行格式化并将给定数据的多达 `count` 个字符写入 `buffer` 指向的内存中并追加一个终止 null。  
-  
- 如果 `count` 是 [_TRUNCATE](../../c-runtime-library/truncate.md)，那么保留终止 null 的空间时这些写入尽可能多的字符串的函数将能放入 `buffer` 中。 如果在 `buffer` 中能放入了整个字符串（带有终止 null），那么这些函数将返回写入的字符数（不包括终止 null）；否则，这些函数会返回 -1 以指明发生的截断。  
-  
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前线程区域设置。  
-  
+
+使用指向参数列表的指针写入格式化的输出。 这些版本的 [vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
+
+## <a name="syntax"></a>语法
+
+```C
+int vsnprintf_s(
+   char *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const char *format,
+   va_list argptr
+);
+int _vsnprintf_s(
+   char *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const char *format,
+   va_list argptr
+);
+int _vsnprintf_s_l(
+   char *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int _vsnwprintf_s(
+   wchar_t *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const wchar_t *format,
+   va_list argptr
+);
+int _vsnwprintf_s_l(
+   wchar_t *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+template <size_t size>
+int _vsnprintf_s(
+   char (&buffer)[size],
+   size_t count,
+   const char *format,
+   va_list argptr
+); // C++ only
+template <size_t size>
+int _vsnwprintf_s(
+   wchar_t (&buffer)[size],
+   size_t count,
+   const wchar_t *format,
+   va_list argptr
+); // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*buffer*<br/>
+输出的存储位置
+
+*sizeOfBuffer*<br/>
+大小*缓冲区*输出，以字符计数的形式。
+
+*count*<br/>
+要写入的字符最大数量（不包括终止 null 或 [_TRUNCATE](../../c-runtime-library/truncate.md)）。
+
+*format*<br/>
+格式规范。
+
+*argptr*<br/>
+指向参数列表的指针。
+
+*locale*<br/>
+要使用的区域设置。
+
+有关更多信息，请参见 [格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+
+## <a name="return-value"></a>返回值
+
+**vsnprintf_s**， **_vsnprintf_s**和 **_vsnwprintf_s**返回写入的字符数，不包括终止 null 或为负值，如果发生输出错误。 **vsnprintf_s**等同于 **_vsnprintf_s**。 **vsnprintf_s**包含 ANSI 标准的符合性。 **_vnsprintf**保留用于向后兼容。
+
+如果需要使用存储来存储数据和终止 null 超过*sizeOfBuffer*，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)，除非*计数*是[_TRUNCATE](../../c-runtime-library/truncate.md)，在这种情况下尽可能多的字符串一样中放不下*缓冲区*写入并返回-1。 如果在无效的参数处理程序后继续执行，这些函数将设置*缓冲区*为空字符串，设置**errno**到**ERANGE**，并返回-1。
+
+如果*缓冲区*或*格式*是**NULL**指针，或如果*计数*小于或等于 0，将调用无效参数处理程序。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。
+
+### <a name="error-conditions"></a>错误条件
+
+|**条件**|返回|**errno**|
+|-----------------|------------|-------------|
+|*缓冲区*是**NULL**|-1|**EINVAL**|
+|*格式*是**NULL**|-1|**EINVAL**|
+|*计数*< = 0|-1|**EINVAL**|
+|*sizeOfBuffer*太小 (和*计数*！ = **_TRUNCATE**)|为-1 (和*缓冲区*设置为空字符串)|**ERANGE**|
+
+## <a name="remarks"></a>备注
+
+其中每个函数采用指向自变量列表，然后格式化和最多写入*计数*指向的内存的给定数据的字符*缓冲区*并追加终止 null。
+
+如果*计数*是[_TRUNCATE](../../c-runtime-library/truncate.md)，则这些函数编写尽可能多的字符串将适合于*缓冲区*时并留出空间终止 null。 如果整个字符串 （具有终止 null) 都适合*缓冲区*，则这些函数将返回写入 （不包括终止 null） 的字符数; 否则，这些函数将返回-1 以指示该截断出现。
+
+使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+
 > [!IMPORTANT]
->  确保 `format` 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
 > [!NOTE]
->  若要确保具有终止 null 的空间，请严格确保 `count` 小于缓冲区或使用 `_TRUNCATE`。  
-  
- 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vsntprintf_s`|`_vsnprintf_s`|`_vsnprintf_s`|`_vsnwprintf_s`|  
-|`_vsntprintf_s_l`|`_vsnprintf_s_l`|`_vsnprintf_s_l`|`_vsnwprintf_s_l`|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|可选标头|  
-|-------------|---------------------|----------------------|  
-|`vsnprintf_s`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
-|`_vsnprintf_s`, `_vsnprintf_s_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
-|`_vsnwprintf_s`, `_vsnwprintf_s_l`|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
-  
- \* 仅对 UNIX V 兼容性是必需的。  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_vsnprintf_s.cpp  
-#include <stdio.h>  
-#include <wtypes.h>  
-  
-void FormatOutput(LPCSTR formatstring, ...)   
-{  
-   int nSize = 0;  
-   char buff[10];  
-   memset(buff, 0, sizeof(buff));  
-   va_list args;  
-   va_start(args, formatstring);  
-   nSize = vsnprintf_s( buff, _countof(buff), _TRUNCATE, formatstring, args);  
-   printf("nSize: %d, buff: %s\n", nSize, buff); 
-   va_end(args); 
-}  
-  
-int main() {  
-   FormatOutput("%s %s", "Hi", "there");  
-   FormatOutput("%s %s", "Hi", "there!");  
-   FormatOutput("%s %s", "Hi", "there!!");  
-}  
-```  
-  
-```Output  
-nSize: 8, buff: Hi there  
-nSize: 9, buff: Hi there!  
-nSize: -1, buff: Hi there!  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [vprintf 函数](../../c-runtime-library/vprintf-functions.md)   
- [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+> 若要确保具有终止 null 的空间，请确保*计数*严格小于缓冲区长度或使用 **_TRUNCATE**。
+
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
+|**_vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|可选标头|
+|-------------|---------------------|----------------------|
+|**vsnprintf_s**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vsnprintf_s**， **_vsnprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vsnwprintf_s**， **_vsnwprintf_s_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+
+\* 仅对 UNIX V 兼容性是必需的。
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```cpp
+// crt_vsnprintf_s.cpp
+#include <stdio.h>
+#include <wtypes.h>
+
+void FormatOutput(LPCSTR formatstring, ...)
+{
+   int nSize = 0;
+   char buff[10];
+   memset(buff, 0, sizeof(buff));
+   va_list args;
+   va_start(args, formatstring);
+   nSize = vsnprintf_s( buff, _countof(buff), _TRUNCATE, formatstring, args);
+   printf("nSize: %d, buff: %s\n", nSize, buff);
+   va_end(args);
+}
+
+int main() {
+   FormatOutput("%s %s", "Hi", "there");
+   FormatOutput("%s %s", "Hi", "there!");
+   FormatOutput("%s %s", "Hi", "there!!");
+}
+```
+
+```Output
+nSize: 8, buff: Hi there
+nSize: 9, buff: Hi there!
+nSize: -1, buff: Hi there!
+```
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[vprintf 函数](../../c-runtime-library/vprintf-functions.md)<br/>
+[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>

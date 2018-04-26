@@ -1,12 +1,12 @@
 ---
-title: "_ismbbkpunct、_ismbbkpunct_l | Microsoft 文档"
-ms.custom: 
+title: _ismbbkpunct、_ismbbkpunct_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkpunct_l
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bcf41bfa1e06643aebaf77575d98409be694a48
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 73f9ee94dc405163d09f100422d98c9e823f6c77
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct、_ismbbkpunct_l
-检查多字节字符是否为标点字符。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int _ismbbkpunct(  
-   unsigned int c   
-);  
-int _ismbbkpunct_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要测试的整数。  
-  
- `locale`  
- 要使用的区域设置。  
-  
-## <a name="return-value"></a>返回值  
- 如果整数 `c` 是非 ASCII 标点符号，则 `_ismbbkpunct` 将返回非零值；如果不是，则返回 0。 例如，仅在代码页 932 中，`_ismbbkpunct` 测试片假名标点。 `_ismbbkpunct` 对与区域设置相关的所有字符设置使用当前区域设置。 `_ismbbkpunct_l` 是相同的，但它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`_ismbbkpunct`|\<mbctype.h>|  
-|`_ismbbkpunct_l`|\<mbctype.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [字节分类](../../c-runtime-library/byte-classification.md)   
- [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)
+
+检查多字节字符是否为标点字符。
+
+## <a name="syntax"></a>语法
+
+```C
+int _ismbbkpunct(
+   unsigned int c
+);
+int _ismbbkpunct_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要测试的整数。
+
+*locale*<br/>
+要使用的区域设置。
+
+## <a name="return-value"></a>返回值
+
+**_ismbbkpunct**返回非零值，如果整数*c*如果它不为非 ASCII 标点符号，则为 0。 例如，仅在代码页 932， **_ismbbkpunct**测试片假名标点。 **_ismbbkpunct**的任何区域设置相关的字符设置使用当前区域设置。 **_ismbbkpunct_l**是相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_ismbbkpunct**|\<mbctype.h>|
+|**_ismbbkpunct_l**|\<mbctype.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[字节分类](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_mbsnbcat、_mbsnbcat_l | Microsoft 文档"
-ms.custom: 
+title: _mbsnbcat、_mbsnbcat_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcat_l
@@ -41,102 +41,107 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 748fd16726f91abc1f65fbfdc3619727d0af3087
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f7fb633d4e0c259403a5d48e1bb05618c75ddc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
-至多，追加一个多字节字符字符串的第一个 `n` 字节到另一个字符串。 提供这些函数的更多安全版本；请参阅 [_mbsnbcat_s、_mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)。  
-  
+
+追加，最多，第一个**n**字节的多字节字符字符串。 提供这些函数的更多安全版本；请参阅 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-unsigned char *_mbsnbcat(  
-   unsigned char *dest,  
-   const unsigned char *src,  
-   size_t count   
-);  
-unsigned char *_mbsnbcat_l(  
-   unsigned char *dest,  
-   const unsigned char *src,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-unsigned char *_mbsnbcat(  
-   unsigned char (&dest)[size],  
-   const unsigned char *src,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsnbcat_l(  
-   unsigned char (&dest)[size],  
-   const unsigned char *src,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>参数  
- `dest`  
- 以 null 终止的多字节字符目标字符串。  
-  
- `src`  
- 以 null 终止的多字节字符源字符串。  
-  
- `count`  
- `src` 中要追加到 `dest` 的字节数。  
-  
- `locale`  
- 要使用的区域设置。  
-  
-## <a name="return-value"></a>返回值  
- `_mbsnbcat` 返回一个指向目标字符串的指针。 没有保留任何返回值以指示错误。  
-  
-## <a name="remarks"></a>备注  
- `_mbsnbcat` 函数最多可以将 `src` 的第一个 `count` 字节追加到 `dest`。 如果 `dest` 中紧靠空字符之前的字节是前导字节，则 `src` 的初始字节将覆盖此前导字节。 否则，`src` 的初始字节会覆盖 `dest` 的终止 null 字符。 如果在 `src` 字节追加之前，null 字节出现在 `count` 中，`_mbsnbcat` 将追加来自 `src` 的所有字节，直到 null 字符。 如果 `count` 大于 `src` 的长度，则会使用 `src` 的长度代替 `count`。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。  
-  
- 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 此函数的 `_mbsnbcat` 版本对与区域设置相关的行为使用当前区域设置，`_mbsnbcat_l` 版本基本相同，但他们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
-  
- **安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
- 如果 `dest` 或 `src` 为 `NULL`，则这些函数将生成无效的参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理了错误，则该函数返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  
-  
- 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsncat`|[strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|`_mbsnbcat`|[wcsncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|  
-|`_tcsncat_l`|`_strncat_l`|`_mbsnbcat_l`|`_wcsncat_l`|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_mbsnbcat`|\<mbstring.h>|  
-|`_mbsnbcat_l`|\<mbstring.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcmp、_mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
- [_mbsnbcpy、_mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
- [_mbsnbicmp、_mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [_mbsnbset、_mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [_mbsnbcat_s、_mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+unsigned char *_mbsnbcat(
+   unsigned char *dest,
+   const unsigned char *src,
+   size_t count
+);
+unsigned char *_mbsnbcat_l(
+   unsigned char *dest,
+   const unsigned char *src,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+unsigned char *_mbsnbcat(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char *_mbsnbcat_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*dest*<br/>
+以 null 终止的多字节字符目标字符串。
+
+*src*<br/>
+以 null 终止的多字节字符源字符串。
+
+*count*<br/>
+从的字节数*src*要追加到*dest*。
+
+*locale*<br/>
+要使用的区域设置。
+
+## <a name="return-value"></a>返回值
+
+**_mbsnbcat**将指针返回到目标字符串。 没有保留任何返回值以指示错误。
+
+## <a name="remarks"></a>备注
+
+**_Mbsnbcat**函数最多，追加第一个*计数*字节的*src*到*dest*。 如果的上一页中的 null 字符的字节*dest*是前导字节的初始字节*src*覆盖此前导字节。 否则为的初始字节*src*覆盖的终止 null 字符*dest*。 如果 null 字节出现在*src*之前*计数*字节追加， **_mbsnbcat**追加从所有字节*src*，直到 null 字符。 如果*计数*大于的长度*src*的长度*src*代替使用*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+
+输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 **_Mbsnbcat**函数版本使用当前区域设置区域设置相关的行为; **_mbsnbcat_l**版本是相同，但它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
+如果*dest*或*src*是**NULL**中, 所述，该函数将生成无效参数错误，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果处理了错误，则该函数将返回**EINVAL**和设置**errno**到**EINVAL**。
+
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
+|**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_mbsnbcat**|\<mbstring.h>|
+|**_mbsnbcat_l**|\<mbstring.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
+[_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
+[_mbsnbicmp、_mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
+[_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
+[strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_CrtSetReportHook | Microsoft 文档"
-ms.custom: 
+title: _CrtSetReportHook | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetReportHook
@@ -31,67 +31,73 @@ helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c7b3a8954c39e8157834297ab5ac3a747420af8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: faa7e5726555ef8000cd393f8f2f7061024095ed
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
-通过以下方式安装客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告进程（仅限调试版本）中。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-_CRT_REPORT_HOOK _CrtSetReportHook(   
-   _CRT_REPORT_HOOK reportHook   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `reportHook`  
- 将新的客户端定义的报告函数挂钩到 C 运行时调试报告进程。  
-  
-## <a name="return-value"></a>返回值  
- 返回之前的客户端定义的报告函数。  
-  
-## <a name="remarks"></a>备注  
- `_CrtSetReportHook` 允许应用程序将自己的报告函数用于 C 运行时调试库报告进程。 因此，每当调用 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 生成调试报告时，首先调用应用程序的报告函数。 此功能使应用程序能够执行筛选调试报告等操作，这样它就可以使用 `_CrtDbgReport` 关注特定分配类型或将报告发送到不可用的目标。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，会在预处理过程中删除对 `_CrtSetReportHook` 的调用。  
-  
- 有关 `_CrtSetReportHook` 的更可靠版本，请参阅 [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)。  
-  
- `_CrtSetReportHook` 函数安装在 `reportHook` 中指定的新的客户端定义的报告函数，并返回上一个客户端定义的挂钩。 以下示例演示了客户端定义的报告挂钩应如何构建原型：  
-  
-```  
-int YourReportHook( int reportType, char *message, int *returnValue );  
-```  
-  
- 其中 `reportType` 是调试报告类型（`_CRT_WARN`、`_CRT_ERROR` 或 `_CRT_ASSERT`），`message` 是要包含在报告中的已完全装配的调试用户消息，`returnValue` 是由客户端定义的报告函数指定的值，该值由 `_CrtDbgReport` 返回。 有关可用报告类型的完整说明，请参阅 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 函数。  
-  
- 如果客户端定义的报告函数可完全处理调试消息，从而不需要进一步报告，则该函数应返回 `TRUE`。 当该函数返回 `FALSE` 时，调用 `_CrtDbgReport` 以使用报告类型、模式和文件的当前设置生成调试报告。 此外，通过在 `returnValue` 中指定 `_CrtDbgReport` 返回值，应用程序还可以控制是否发生调试中断。 有关如何配置和生成调试报告的完整说明，请参阅 `_CrtSetReportMode`[_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 和 `_CrtDbgReport`。  
-  
- 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。  
-  
+
+通过以下方式安装客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告进程（仅限调试版本）中。
+
+## <a name="syntax"></a>语法
+
+```C
+_CRT_REPORT_HOOK _CrtSetReportHook(
+   _CRT_REPORT_HOOK reportHook
+);
+```
+
+### <a name="parameters"></a>参数
+
+*reportHook*<br/>
+将新的客户端定义的报告函数挂钩到 C 运行时调试报告进程。
+
+## <a name="return-value"></a>返回值
+
+返回之前的客户端定义的报告函数。
+
+## <a name="remarks"></a>备注
+
+**_CrtSetReportHook**允许应用程序使用其自己的报告函数连接到 C 运行时调试库报告过程。 因此，每当调用 [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) 生成调试报告时，首先调用应用程序的报告函数。 此功能可让应用程序执行操作，例如筛选调试报告，以便它可以专注于特定分配类型或将报表发送到目标不可用，通过使用 **_CrtDbgReport**。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetReportHook**在预处理过程中删除。
+
+有关更可靠的版本 **_CrtSetReportHook**，请参阅[_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md)。
+
+**_CrtSetReportHook**函数安装新客户端定义报告函数中指定*reportHook*并返回以前的客户端定义挂钩。 以下示例演示了客户端定义的报告挂钩应如何构建原型：
+
+```C
+int YourReportHook( int reportType, char *message, int *returnValue );
+```
+
+其中*reportType*是调试报表类型 (**_CRT_WARN**， **_CRT_ERROR**，或 **_CRT_ASSERT**)，*消息*要包含在报表中，完全装配的调试用户消息和**returnValue**由客户端定义指定的值报告应当返回的函数 **_CrtDbgReport**。 有关可用报告类型的完整说明，请参阅 [_CrtSetReportMode](crtsetreportmode.md) 函数。
+
+如果客户端定义报告函数完全处理的调试消息，以便是必需的任何进一步的报告，则该函数应返回**TRUE**。 当函数返回**FALSE**， **_CrtDbgReport**调用以生成调试报告使用报告类型、 模式和文件的当前的设置。 此外，通过指定 **_CrtDbgReport**在中返回值**returnValue**，应用程序还可以控制是否发生了一个调试中断。 有关如何配置和生成调试报告的完整说明，请参阅 **_CrtSetReportMode**， [_CrtSetReportFile](crtsetreportfile.md)，和 **_CrtDbgReport**。
+
+有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
+
 > [!NOTE]
->  假设应用程序使用 `/clr` 编译，并且在应用程序退出 main 后调用报告函数，则在报告函数调用任何 CRT 函数时 CLR 将引发异常。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>库  
- 仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
-  
-## <a name="see-also"></a>请参阅  
- [调试例程](../../c-runtime-library/debug-routines.md)   
- [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)
+> 如果你的应用程序进行编译的 **/clr**和报告的函数调用后已退出应用程序主，CLR 将引发异常，如果报告的函数调用任何 CRT 函数。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_CrtSetReportHook**|\<crtdbg.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>库
+
+仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。
+
+## <a name="see-also"></a>请参阅
+
+[调试例程](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtGetReportHook](crtgetreporthook.md)<br/>

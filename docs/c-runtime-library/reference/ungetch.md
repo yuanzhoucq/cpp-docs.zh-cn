@@ -1,12 +1,12 @@
 ---
-title: "ungetch | Microsoft 文档"
-ms.custom: 
+title: ungetch | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ungetch
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - ungetch function
 ms.assetid: 6921232f-6317-41cd-948b-91d56a11bc0e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed53425a475abe4e7243f42daeb1b889b717c523
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7c286ce7f256ef99ee6cc365d2180cc2f5a29f7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ungetch"></a>ungetch
-此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_ungetch](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)。  
-  
+
+此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。

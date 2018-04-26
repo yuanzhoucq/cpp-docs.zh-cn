@@ -1,12 +1,12 @@
 ---
-title: "_strinc、_wcsinc、_mbsinc、_mbsinc_l | Microsoft 文档"
-ms.custom: 
+title: _strinc、_wcsinc、_mbsinc、_mbsinc_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsinc
@@ -49,78 +49,83 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e8d0e25b7d685856ccf4af068408bf0ac495cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 956a0c03d9242d0d8c2912c516e9ba4ed9a06683
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
-比字符串指针提前一个字符。  
-  
+
+比字符串指针提前一个字符。
+
 > [!IMPORTANT]
->  `_mbsinc` 和 `_mbsinc_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-char *_strinc(  
-   const char *current,  
-   _locale_t locale  
-);  
-wchar_t *_wcsinc(  
-   const wchar_t *current,  
-   _locale_t locale  
-);  
-unsigned char *_mbsinc(  
-   const unsigned char *current   
-);  
-unsigned char *_mbsinc_l(  
-   const unsigned char *current,  
-   _locale_t locale  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- `current`  
- 字符指针。  
-  
- `locale`  
- 要使用的区域设置。  
-  
-## <a name="return-value"></a>返回值  
- 其中每个例程都将返回一个指向紧跟 `current` 的字符的指针。  
-  
-## <a name="remarks"></a>备注  
- `_mbsinc` 函数将返回一个指向紧跟 `current` 的多字节字符的第一个字节的指针。 `_mbsinc` 根据当前正在使用的[多字节代码页](../../c-runtime-library/code-pages.md)来识别多字节字符序列；`_mbsinc_l` 是相同的，只不过它使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
-  
- 如果已定义 `_tcsinc`，则在 Tchar.h 中定义的一般文本函数 `_mbsinc` 将映射到 `_MBCS`；如果已定义 `_wcsinc`，则将映射到 `_UNICODE`。 否则，`_tcsinc` 将映射到 `_strinc`。 `_strinc` 和 `_wcsinc` 是 `_mbsinc` 的单字节字符和宽字符版本。 仅为此映射提供 `_strinc` 和 `_wcsinc`，否则不应该使用它们。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
-  
- 如果 `current` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  
-  
+> **_mbsinc**和 **_mbsinc_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+char *_strinc(
+   const char *current,
+   _locale_t locale
+);
+wchar_t *_wcsinc(
+   const wchar_t *current,
+   _locale_t locale
+);
+unsigned char *_mbsinc(
+   const unsigned char *current
+);
+unsigned char *_mbsinc_l(
+   const unsigned char *current,
+   _locale_t locale
+);
+
+```
+
+### <a name="parameters"></a>参数
+
+*current*<br/>
+字符指针。
+
+*locale*<br/>
+要使用的区域设置。
+
+## <a name="return-value"></a>返回值
+
+其中每个例程返回一个指向紧跟在后面的字符*当前*。
+
+## <a name="remarks"></a>备注
+
+**_Mbsinc**函数返回一个指向紧跟的多字节字符的第一个字节*当前*。 **_mbsinc**识别多字节字符序列根据[多字节代码页](../../c-runtime-library/code-pages.md)当前正在使用;**_mbsinc_l**具有完全相同，只不过它改用已传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+一般文本函数 **_tcsinc**在 Tchar.h，映射到中定义 **_mbsinc**如果 **_MBCS**已经定义，或 **_wcsinc**如果 **_UNICODE**已定义。 否则为 **_tcsinc**映射到 **_strinc**。 **_strinc**和 **_wcsinc**单字节字符和宽字符版本的 **_mbsinc**。 **_strinc**和 **_wcsinc**仅为此映射提供，否则不应该使用。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+
+如果*当前*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回**EINVAL**和设置**errno**到**EINVAL**。
+
 > [!IMPORTANT]
->  这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_mbsinc`|\<mbstring.h>|  
-|`_mbsinc_l`|\<mbstring.h>|  
-|`_strinc`|\<tchar.h>|  
-|`_wcsinc`|\<tchar.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [_strdec、_wcsdec、_mbsdec、_mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
- [_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   
- [_strninc、_wcsninc、_mbsninc、_mbsninc_l](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)
+> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_mbsinc**|\<mbstring.h>|
+|**_mbsinc_l**|\<mbstring.h>|
+|**_strinc**|\<tchar.h>|
+|**_wcsinc**|\<tchar.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_strdec、_wcsdec、_mbsdec、_mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
+[_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
+[_strninc、_wcsninc、_mbsninc、_mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

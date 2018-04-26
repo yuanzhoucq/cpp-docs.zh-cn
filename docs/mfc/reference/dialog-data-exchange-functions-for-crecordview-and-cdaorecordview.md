@@ -35,11 +35,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 82585f9f2c727d7189633091429aef6742cdd00b
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
 本主题列出了用于之间交换数据的 DDX_Field 函数[CRecordset](../../mfc/reference/crecordset-class.md)和[CRecordView](../../mfc/reference/crecordview-class.md)窗体或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)窗体。  
@@ -423,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  `pDX`  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *nIDC\**  
+ `nIDC`  
  ID 的第一个组中 (使用样式**WS_GROUP**) 中的相邻的单选按钮控件的[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
   
  *value*  
@@ -490,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
@@ -635,5 +635,5 @@ void AFXAPI DDX_FieldText(
 ### <a name="requirements"></a>要求  
   **标头**afxdao.h  
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

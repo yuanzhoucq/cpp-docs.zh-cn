@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s、 _ltoa_s、 _ultoa_s、 _i64toa_s、 _ui64toa_s、 _itow_s、 _ltow_s、 _ultow_s、 _i64tow_s、 _ui64tow_s
 
-将整数转换为字符串。 一些版本[_itoa、 _itow 函数](../../c-runtime-library/reference/itoa-itow.md)具有安全增强功能中所述[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。
+将整数转换为字符串。 一些版本[_itoa、 _itow 函数](itoa-itow.md)具有安全增强功能中所述[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -161,22 +161,22 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 |值|buffer|size|radix|返回|
 |-----------|------------|----------------------|-----------|------------|
-|任何|`NULL`|任何|任何|`EINVAL`|
-|任何|任何|<=0|任何|`EINVAL`|
-|任何|任何|<= 所需结果字符串的长度|任何|`EINVAL`|
-|任何|任何|任何|*基数*< 2 或*基数*> 36|`EINVAL`|
+|任何|**NULL**|任何|任何|**EINVAL**|
+|任何|任何|<=0|任何|**EINVAL**|
+|任何|任何|<= 所需结果字符串的长度|任何|**EINVAL**|
+|任何|任何|任何|*基数*< 2 或*基数*> 36|**EINVAL**|
 
 ### <a name="security-issues"></a>安全问题
 
-这些函数会导致访问冲突，如果*缓冲区*不指向有效内存并且不是`NULL`，或如果缓冲区的长度不足够长，以容纳结果字符串。
+这些函数会导致访问冲突，如果*缓冲区*不指向有效内存并且不是**NULL**，或如果缓冲区的长度不足够长，以容纳结果字符串。
 
 ## <a name="remarks"></a>备注
 
-除了参数和返回值，`_itoa_s`和`_itow_s`函数系列具有相同的行为为相应安全级别较低`_itoa`和`_itow`版本。
+除了参数和返回值， **_itoa_s**和 **_itow_s**函数系列具有相同的行为为相应安全级别较低 **_itoa**和 **_itow**版本。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先填充用 0xFD 缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先填充用 0xFD 缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 CRT 包括定义将转换的每个整数类型，包括 null 终止符的占用时间最长的可能值所需的缓冲区的大小并对签名字符的几个常见基本的方便宏。 有关信息，请参阅[最大转换计数宏](itoa-itow.md#maximum-conversion-count-macros)。
 
@@ -184,18 +184,18 @@ CRT 包括定义将转换的每个整数类型，包括 null 终止符的占用�
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h> 或 \<wchar.h>|
+|**_itoa_s**， **_ltoa_s**， **_ultoa_s**， **_i64toa_s**， **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**， **_ltow_s**， **_ultow_s**， **_i64tow_s**， **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
 
 这些函数是特定于 Microsoft 的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa、 _itow 函数](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[_itoa、 _itow 函数](itoa-itow.md)<br/>

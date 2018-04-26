@@ -1,12 +1,12 @@
 ---
-title: "isleadbyte、_isleadbyte_l | Microsoft 文档"
-ms.custom: 
+title: isleadbyte、_isleadbyte_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isleadbyte_l
@@ -37,65 +37,66 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dacf22d33f166527e7c464e0632366d2e39315f8
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
-确定一个字符是否为多字节字符的前导字节。  
-  
+
+确定一个字符是否为多字节字符的前导字节。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int isleadbyte(  
-   int c   
-);  
-int _isleadbyte_l(  
-   int c   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要测试的整数。  
-  
-## <a name="return-value"></a>返回值  
- 如果参数满足测试条件，则 `isleadbyte` 返回一个非零值，否则返回 0。 在“C”区域设置和单字节字符集 (SBCS) 区域设置中， `isleadbyte` 始终返回 0。  
-  
-## <a name="remarks"></a>备注  
- 如果 `isleadbyte` 宏的参数是多字节字符的第一个字节，则它返回非零值。 `isleadbyte` 生成有意义的结果的任何整数自变量在-1 (`EOF`) 到`UCHAR_MAX`(0xFF) （含)。  
-  
- `isleadbyte` 的预期参数类型是 `int`；如果传递了带符号的字符，编译器可能会通过符号扩展将其转换为整数，从而生成无法预测的结果。  
-  
- 此函数带 `_l` 后缀的版本是相同的，但该本本会针对其依赖于区域设置的行为使用传入的区域设置而非当前的区域设置。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istleadbyte`|始终返回 false|**_** `isleadbyte`|始终返回 false|  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`isleadbyte`|\<ctype.h>|  
-|`_isleadbyte_l`|\<ctype.h>|  
-  
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [字节分类](../../c-runtime-library/byte-classification.md)   
- [区域设置](../../c-runtime-library/locale.md)   
- [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+int isleadbyte( int c );
+int _isleadbyte_l( int c );
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要测试的整数。
+
+## <a name="return-value"></a>返回值
+
+**isleadbyte**如果自变量满足测试条件或 0，如果它不返回非零值。 在"C"区域设置和单字节字符集 (SBCS) 区域设置中， **isleadbyte**始终返回 0。
+
+## <a name="remarks"></a>备注
+
+**Isleadbyte**宏返回非零值，如果该参数是多字节字符的第一个字节。 **isleadbyte**生成有意义的结果的任何整数自变量在-1 (**EOF**) 到**UCHAR_MAX** (0xFF) （含)。
+
+预期自变量类型**isleadbyte**是**int**; 如果传递了带符号的字符，编译器可能将其转换为整数通过符号扩展，从而生成不可预知的结果。
+
+使用此函数的版本 **_l**后缀是相同，但它使用传递区域设置而不是当前区域设置其区域设置相关的行为。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istleadbyte**|始终返回 false|**_isleadbyte**|始终返回 false|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**isleadbyte**|\<ctype.h>|
+|**_isleadbyte_l**|\<ctype.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[字节分类](../../c-runtime-library/byte-classification.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,13 +1,13 @@
 ---
-title: "timespec_get、_timespec32_get、_timespec64_get1 | Microsoft 文档"
-ms.custom: 
+title: timespec_get、_timespec32_get、_timespec64_get1 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - timespec_get
@@ -43,74 +43,79 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13b85eef72ed1a2180af1b41bf93eefe499967bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 04665cdc46f2bb5aa880eae6022629df1a6258bb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
-基于指定时间基准，将第一个参数指向的间隔设置为当前日历时间。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int timespec_get(  
-    struct timespec* const time_spec,  
-    int const base  
-);  
-int _timespec32_get(  
-    struct _timespec32* const time_spec,  
-    int const base  
-);  
-int _timespec64_get(  
-    struct _timespec64* const time_spec,  
-    int const base  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- `time_spec`  
- 设置为自时期开始以来的时间（以秒和纳秒为单位）的结构的指针。  
-  
- `base`  
- 一个特定于实现的非零值，指定时间基准。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则值为 `base` ，否则它返回零。  
-  
-## <a name="remarks"></a>备注  
- `timespec_get` 函数设置 `time_spec` 参数指向的结构中的当前时间。 此结构的所有版本都具有两个成员，即 `tv_sec` 和 `tv_nsec`。 `tv_sec` 值设置为自 `tv_nsec` 指定的时期开始以来的整秒数， `base`设置为开始以来的整纳秒数（按系统时钟分辨率进行舍入）。  
-  
- **Microsoft 专用**  
-  
- 这些函数仅支持 `TIME_UTC` 作为 `base` 值。 这会将 `time_spec` 值设置为自时期开始（协调世界时 (UTC) 的 1970 年 1 月 1 日午夜）以来的秒数和纳秒数。 在 `struct _timespec32`中， `tv_sec` 是 `__time32_t` 值。 在 `struct _timespec64`中， `tv_sec` 是 `__time64_t` 值。 在 `struct timespec`中， `tv_sec` 是 `time_t` 类型，其长度为 32 位或 64 位，具体取决于是否定义预处理器宏 _USE_32BIT_TIME_T。 `timespec_get` 函数是内联函数，如果定义 _USE_32BIT_TIME_T，则它调用 `_timespec32_get` ；否则它调用 `_timespec64_get`。  
-  
- **结束 Microsoft 专用**  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`timespec_get`中， `_timespec32_get`中， `_timespec64_get`|C: \<time.h>、C++: \<ctime> 或 \<time.h>|  
-  
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [时间管理](../../c-runtime-library/time-management.md)   
- [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime_s、_gmtime32_s、_gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [localtime_s、_localtime32_s、_localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)
+
+基于指定时间基准，将第一个参数指向的间隔设置为当前日历时间。
+
+## <a name="syntax"></a>语法
+
+```C
+int timespec_get(
+    struct timespec* const time_spec,
+    int const base
+);
+int _timespec32_get(
+    struct _timespec32* const time_spec,
+    int const base
+);
+int _timespec64_get(
+    struct _timespec64* const time_spec,
+    int const base
+);
+
+```
+
+### <a name="parameters"></a>参数
+
+*time_spec*<br/>
+设置为自时期开始以来的时间（以秒和纳秒为单位）的结构的指针。
+
+*base*<br/>
+一个特定于实现的非零值，指定时间基准。
+
+## <a name="return-value"></a>返回值
+
+值*基*如果成功，否则它将返回零。
+
+## <a name="remarks"></a>备注
+
+**Timespec_get**函数在通过指向的结构中设置的当前时间*time_spec*自变量。 此结构的所有版本都具有两个成员， **tv_sec**和**tv_nsec**。 **Tv_sec**值设置为整秒数和**tv_nsec**到整纳秒数，舍入到的系统时钟的分辨率所指定的时期开始以来*基*。
+
+**Microsoft 专用**
+
+这些函数仅支持**TIME_UTC**作为*基*值。 这将设置*time_spec*到数秒和纳秒由于时期开始，午夜，1970 年 1 月 1 日协调世界时 (UTC) 的值。 在**结构** **_timespec32**， **tv_sec**是 **__time32_t**值。 在**结构** **_timespec64**， **tv_sec**是 **__time64_t**值。 在**结构** **timespec**， **tv_sec**是**time_t**类型，这是 32 位或 64 位的长度，具体取决于预处理器定义宏 _USE_32BIT_TIME_T。 **Timespec_get**函数是内联函数调用 **_timespec32_get**如果定义 _USE_32BIT_TIME_T，; 否则它会调用 **_timespec64_get**。
+
+**结束 Microsoft 专用**
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**timespec_get**， **_timespec32_get**， **_timespec64_get**|C: \<time.h>、C++: \<ctime> 或 \<time.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[时间管理](../../c-runtime-library/time-management.md)<br/>
+[asctime、_wasctime](asctime-wasctime.md)<br/>
+[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
+[gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
+[gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
+[localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
+[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
+[time、_time32、_time64](time-time32-time64.md)<br/>
+[_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](utime-utime32-utime64-wutime-wutime32-wutime64.md)<br/>

@@ -46,64 +46,69 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abce100af16bff2ec7fd2de82d66ec3a7e59604e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d80800bc5eae41e19f8c74888be21eca272c8ee
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
-检索实际轴间隔 [-1; + 1] 外的分支刮痕部为复数的反双曲正切。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-_Dcomplex catanh(   
-   _Dcomplex z   
-);  
-_Fcomplex catanh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex catanh(   
-   _Lcomplex z   
-);  //  C++ only  
-_Fcomplex catanhf(   
-   _Fcomplex z   
-);  
-_Lcomplex catanhl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `z`  
- 表示角度的复数（以弧度为单位）。  
-  
-## <a name="return-value"></a>返回值  
- `z` 的反双曲正切值（以弧度为单位）。 结果是实际轴和间隔中，不受限制 [-iπ/2; + iπ/2] 轴虚部的复数。 如果 `z` 超出间隔 [-1, +1]，则会发生域错误。 如果 `z` 为 -1 或 +1，将发生极点错误。  
-  
-## <a name="remarks"></a>备注  
- 由于 C++ 允许重载，因此你可以调用采用并返回 `catanh` 和 `_Fcomplex` 值的 `_Lcomplex` 重载。 在 C 程序中，`catanh` 始终采用并返回 `_Dcomplex` 值。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|C 标头|C++ 标头|  
-|-------------|--------------|------------------|  
-|`catanh`,               `catanhf`, `catanhl`|\<complex.h>|\<ccomplex>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [ctanh、ctanhf、ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan、catanf、catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh、csinhf、csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh、casinhf、casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh、ccoshf、ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh、cacoshf、cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos、cacosf、cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan、ctanf、ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin、csinf、csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin、casinf、casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos、ccosf、ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt、csqrtf、csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+检索实际轴间隔 [-1; + 1] 外的分支刮痕部为复数的反双曲正切。
+
+## <a name="syntax"></a>语法
+
+```C
+_Dcomplex catanh(
+   _Dcomplex z
+);
+_Fcomplex catanh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex catanh(
+   _Lcomplex z
+);  //  C++ only
+_Fcomplex catanhf(
+   _Fcomplex z
+);
+_Lcomplex catanhl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>参数
+
+*z*<br/>
+表示角度的复数（以弧度为单位）。
+
+## <a name="return-value"></a>返回值
+
+反双曲正切值*z*，以弧度为单位。 结果是实际轴和间隔中，不受限制 [-iπ/2; + iπ/2] 轴虚部的复数。 如果将发生域错误*z*超出间隔 [-1，+ 1]。 如果将发生极性错误*z*是-1 或 + 1。
+
+## <a name="remarks"></a>备注
+
+由于 c + + 允许重载，你可以调用的重载**catanh**采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **catanh**始终采用并返回 **_Dcomplex**值。
+
+## <a name="requirements"></a>要求
+
+|例程|C 标头|C++ 标头|
+|-------------|--------------|------------------|
+|**catanh**， **catanhf**， **catanhl**|\<complex.h>|\<ccomplex>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan、catanf、catanl](catan-catanf-catanl.md)<br/>
+[csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh、casinhf、casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh、ccoshf、ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh、cacoshf、cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos、cacosf、cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan、ctanf、ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin、csinf、csinl](csin-csinf-csinl.md)<br/>
+[casin、casinf、casinl](casin-casinf-casinl.md)<br/>
+[ccos、ccosf、ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt、csqrtf、csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

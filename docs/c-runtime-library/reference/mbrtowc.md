@@ -1,12 +1,12 @@
 ---
-title: "mbrtowc | Microsoft 文档"
-ms.custom: 
+title: mbrtowc | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbrtowc
@@ -30,196 +30,198 @@ dev_langs:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f3446132532fbf212294c0176b697359572b235
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3b567fdbf4cca315efb41e8f331fc2d67830503
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbrtowc"></a>mbrtowc
-将当前区域设置中的多字节字符转换为等效的宽字符，使其重启功能位于多字节字符的中间。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-size_t mbrtowc(  
-   wchar_t *wchar,  
-   const char *mbchar,  
-   size_t count,  
-   mbstate_t *mbstate  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `wchar`  
- 要接收已转换的宽字符字符串（类型 `wchar_t`)的宽字符的地址。 如果不需要返回任何宽字符，则此值可为 null 指针。  
-  
- `mbchar`  
- 字节（多字节字符）序列的地址。  
-  
- `count`  
- 要检查的字节数。  
-  
- `mbstate`  
- 指向转换状态对象的指针。 如果此值为 null 指针，则函数使用静态的内部转换状态对象。 由于内部 `mbstate_t` 对象不是线程安全的，建议始终传递你自己的 `mbstate` 参数。  
-  
-## <a name="return-value"></a>返回值  
- 以下值之一：  
-  
- 0  
- 如果 `count` 不是 null 指针，则下一个 `wchar` 或更少的字节将填充表示 null 宽字符的多字节字符，其中 null 宽字符存储在 `wchar` 中。  
-  
- 1 到 `count`（含）  
- 下一个 `count` 或更少的字节填充有效的多字节字符。 返回的值是填充多字节字符的字节数。 如果 `wchar` 不是 null 指针，则等效的宽字符存储在 `wchar` 中。  
-  
- (size_t)(-1)  
- 发生编码错误。 下一个 `count` 或更少字节数不有利于实现完整且有效的多字节字符。 在这种情况下，`errno` 设置为 EILSEQ 且未指定 `mbstate` 中的转换位移状态。  
-  
- (size_t)(-2)  
- 下一个 `count` 字节填充有利于实现不完整但可能有效的多字节字符，并已处理了所有 `count` 字节数。 `wchar` 中未存储任何值，但已更新 `mbstate` 以重新启动该函数。  
-  
-## <a name="remarks"></a>备注  
- 如果 `mbchar` 为 null 指针，则该函数等效于调用：  
-  
- `mbrtowc(NULL, "", 1, &mbstate)`  
-  
- 在此情况下，将忽略参数 `wchar` 和 `count` 的值。  
-  
- 如果 `mbchar` 不是 null 指针，则该函数将检查来自 `count` 的 `mbchar` 字节以确定填充下一个多字节字符所需的字节数。 如果下一个字符是有效的，则相应的多字节字符在不是 null 指针时将存储在 `wchar` 中。 如果字符为相应的宽 null 字符，则 `mbstate` 结果状态是初始转换状态。  
-  
- `mbrtowc` 函数的可重启性不同于 [mbtowc、_mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)。 转换状态存储在 `mbstate` 中，以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用 `wcsrlen`（而非 `wcslen`）的后续调用，则应用程序应使用 `wcsrtombs`，而不是 `wcstombs`。  
-  
-## <a name="example"></a>示例  
- 将多字节字符转换为其等效的宽字符。  
-  
-```  
-// crt_mbrtowc.cpp  
-  
-#include <stdio.h>  
-#include <mbctype.h>  
-#include <string.h>  
-#include <locale.h>  
-#include <wchar.h>  
-  
-#define BUF_SIZE 100  
-  
-int Sample(char* szIn, wchar_t* wcOut, int nMax)  
-{  
-    mbstate_t   state = {0}; // Initial state  
-    size_t      nConvResult,   
-                nmbLen = 0,  
-                nwcLen = 0;  
-    wchar_t*    wcCur = wcOut;  
-    wchar_t*    wcEnd = wcCur + nMax;  
-    const char* mbCur = szIn;  
-    const char* mbEnd = mbCur + strlen(mbCur) + 1;  
-    char*       szLocal;  
-  
-    // Sets all locale to French_Canada.1252  
-    szLocal = setlocale(LC_ALL, "French_Canada.1252");  
-    if (!szLocal)  
-    {  
-        printf("The fuction setlocale(LC_ALL, \"French_Canada.1252\") failed!\n");  
-        return 1;  
-    }  
-  
-    printf("Locale set to: \"%s\"\n", szLocal);  
-  
-    // Sets the code page associated current locale's code page  
-    // from a previous call to setlocale.  
-    if (_setmbcp(_MB_CP_SBCS) == -1)  
-    {  
-        printf("The fuction _setmbcp(_MB_CP_SBCS) failed!");  
-        return 1;  
-    }  
-  
-    while ((mbCur < mbEnd) && (wcCur < wcEnd))  
-    {  
-        //  
-        nConvResult = mbrtowc(wcCur, mbCur, 1, &state);  
-        switch (nConvResult)  
-        {  
-            case 0:  
-            {  // done  
-                printf("Conversion succeeded!\nMultibyte String: ");  
-                printf(szIn);  
-                printf("\nWC String: ");  
-                wprintf(wcOut);  
-                printf("\n");  
-                mbCur = mbEnd;  
-                break;  
-            }  
-  
-            case -1:  
-            {  // encoding error  
-                printf("The call to mbrtowc has detected an encoding error.\n");  
-                mbCur = mbEnd;  
-                break;  
-            }  
-  
-            case -2:  
-            {  // incomplete character  
-                if   (!mbsinit(&state))  
-                {  
-                    printf("Currently in middle of mb conversion, state = %x\n", state);  
-                    // state will contain data regarding lead byte of mb character  
-                }  
-  
-                ++nmbLen;  
-                ++mbCur;  
-                break;  
-            }  
-  
-            default:  
-            {  
-                if   (nConvResult > 2) // The multibyte should never be larger than 2  
-                {  
-                    printf("Error: The size of the converted multibyte is %d.\n", nConvResult);  
-                }  
-  
-                ++nmbLen;  
-                ++nwcLen;  
-                ++wcCur;  
-                ++mbCur;  
-            break;  
-            }  
-        }  
-    }  
-  
-   return 0;  
-}  
-  
-int main(int argc, char* argv[])  
-{  
-    char    mbBuf[BUF_SIZE] = "AaBbCc\x9A\x8B\xE0\xEF\xF0xXyYzZ";  
-    wchar_t wcBuf[BUF_SIZE] = {L''};  
-  
-    return Sample(mbBuf, wcBuf, BUF_SIZE);  
-}  
-```  
-  
-## <a name="sample-output"></a>示例输出  
-  
-```  
-Locale set to: "French_Canada.1252"  
-Conversion succeeded!  
-Multibyte String: AaBbCcÜïα∩≡xXyYzZ  
-WC String: AaBbCcÜïα∩≡xXyYzZ  
-```  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`mbrtowc`|\<wchar.h>|  
-  
-## <a name="see-also"></a>请参阅  
- [数据转换](../../c-runtime-library/data-conversion.md)   
- [区域设置](../../c-runtime-library/locale.md)   
- [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+
+将当前区域设置中的多字节字符转换为等效的宽字符，使其重启功能位于多字节字符的中间。
+
+## <a name="syntax"></a>语法
+
+```C
+size_t mbrtowc(
+   wchar_t *wchar,
+   const char *mbchar,
+   size_t count,
+   mbstate_t *mbstate
+);
+```
+
+### <a name="parameters"></a>参数
+
+*wchar*<br/>
+若要接收已转换的宽字符字符串的宽字符的地址 (类型**wchar_t**)。 如果不需要返回任何宽字符，则此值可为 null 指针。
+
+*mbchar*<br/>
+字节（多字节字符）序列的地址。
+
+*count*<br/>
+要检查的字节数。
+
+*mbstate*<br/>
+指向转换状态对象的指针。 如果此值为 null 指针，则函数使用静态的内部转换状态对象。 因为内部**mbstate_t**对象不是线程安全，我们建议始终传递你自己*mbstate*自变量。
+
+## <a name="return-value"></a>返回值
+
+以下值之一：
+
+0 下一步*计数*或更少字节将填充表示 null 宽字符，它存储在多字节字符*wchar*，如果*wchar*不是 null 指针。
+
+1 到*计数*(含） 之间的下一步*计数*或更少的字节填充有效多字节字符。 返回的值是填充多字节字符的字节数。 等效的宽字符存储在*wchar*，如果*wchar*不是 null 指针。
+
+(size_t)(-1)发生编码错误。 下一步*计数*或更少字节数不有利于实现完整且有效的多字节字符。 在这种情况下， **errno**设置为 EILSEQ 且中的转换位移状态*mbstate*未指定。
+
+(size_t)(-2)下一步*计数*字节数有利于实现不完整但可能有效的多字节字符，并且所有*计数*已处理的字节数。 中存储任何值*wchar*，但*mbstate*被更新，以重新启动该函数。
+
+## <a name="remarks"></a>备注
+
+如果*mbchar*是 null 指针，该函数等效于调用：
+
+`mbrtowc(NULL, "", 1, &mbstate)`
+
+在此情况下，这些参数的值*wchar*和*计数*将被忽略。
+
+如果*mbchar*不是 null 指针，该函数将检查*计数*个字节从*mbchar*以确定所需完成下一步所需的字节数多字节字符。 如果下一个字符是有效的将相应的多字节字符存储在*wchar*如果它不是 null 指针。 如果字符是相应的宽 null 字符，结果状态的*mbstate*是初始转换状态。
+
+**Mbrtowc**函数不同于[mbtowc、 _mbtowc_l](mbtowc-mbtowc-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，应用程序应使用**wcsrlen**而不是**wcslen**如果的后续调用**wcsrtombs**而不是使用**wcstombs**.
+
+## <a name="example"></a>示例
+
+将多字节字符转换为其等效的宽字符。
+
+```cpp
+// crt_mbrtowc.cpp
+
+#include <stdio.h>
+#include <mbctype.h>
+#include <string.h>
+#include <locale.h>
+#include <wchar.h>
+
+#define BUF_SIZE 100
+
+int Sample(char* szIn, wchar_t* wcOut, int nMax)
+{
+    mbstate_t   state = {0}; // Initial state
+    size_t      nConvResult,
+                nmbLen = 0,
+                nwcLen = 0;
+    wchar_t*    wcCur = wcOut;
+    wchar_t*    wcEnd = wcCur + nMax;
+    const char* mbCur = szIn;
+    const char* mbEnd = mbCur + strlen(mbCur) + 1;
+    char*       szLocal;
+
+    // Sets all locale to French_Canada.1252
+    szLocal = setlocale(LC_ALL, "French_Canada.1252");
+    if (!szLocal)
+    {
+        printf("The fuction setlocale(LC_ALL, \"French_Canada.1252\") failed!\n");
+        return 1;
+    }
+
+    printf("Locale set to: \"%s\"\n", szLocal);
+
+    // Sets the code page associated current locale's code page
+    // from a previous call to setlocale.
+    if (_setmbcp(_MB_CP_SBCS) == -1)
+    {
+        printf("The fuction _setmbcp(_MB_CP_SBCS) failed!");
+        return 1;
+    }
+
+    while ((mbCur < mbEnd) && (wcCur < wcEnd))
+    {
+        //
+        nConvResult = mbrtowc(wcCur, mbCur, 1, &state);
+        switch (nConvResult)
+        {
+            case 0:
+            {  // done
+                printf("Conversion succeeded!\nMultibyte String: ");
+                printf(szIn);
+                printf("\nWC String: ");
+                wprintf(wcOut);
+                printf("\n");
+                mbCur = mbEnd;
+                break;
+            }
+
+            case -1:
+            {  // encoding error
+                printf("The call to mbrtowc has detected an encoding error.\n");
+                mbCur = mbEnd;
+                break;
+            }
+
+            case -2:
+            {  // incomplete character
+                if   (!mbsinit(&state))
+                {
+                    printf("Currently in middle of mb conversion, state = %x\n", state);
+                    // state will contain data regarding lead byte of mb character
+                }
+
+                ++nmbLen;
+                ++mbCur;
+                break;
+            }
+
+            default:
+            {
+                if   (nConvResult > 2) // The multibyte should never be larger than 2
+                {
+                    printf("Error: The size of the converted multibyte is %d.\n", nConvResult);
+                }
+
+                ++nmbLen;
+                ++nwcLen;
+                ++wcCur;
+                ++mbCur;
+            break;
+            }
+        }
+    }
+
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+    char    mbBuf[BUF_SIZE] = "AaBbCc\x9A\x8B\xE0\xEF\xF0xXyYzZ";
+    wchar_t wcBuf[BUF_SIZE] = {L''};
+
+    return Sample(mbBuf, wcBuf, BUF_SIZE);
+}
+```
+
+### <a name="sample-output"></a>示例输出
+
+```Output
+Locale set to: "French_Canada.1252"
+Conversion succeeded!
+Multibyte String: AaBbCcÜïα∩≡xXyYzZ
+WC String: AaBbCcÜïα∩≡xXyYzZ
+```
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**mbrtowc**|\<wchar.h>|
+
+## <a name="see-also"></a>请参阅
+
+[数据转换](../../c-runtime-library/data-conversion.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

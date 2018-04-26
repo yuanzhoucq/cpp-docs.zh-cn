@@ -1,12 +1,12 @@
 ---
-title: "_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l | Microsoft 文档"
-ms.custom: 
+title: _ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbcalpha
@@ -55,89 +55,94 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02214850013233c616d2bd23970b8921f0ff5e86
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9ad7235ecfce6b9345764c6a8804f2981c0555cc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
-检查多字节字符是字母数字字符、alpha 还是数字字符。  
-  
+
+检查多字节字符是字母数字字符、alpha 还是数字字符。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int _ismbcalnum  
-(  
-   unsigned int c   
-);  
-int _ismbcalnum_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcalpha  
-(  
-   unsigned int c   
-);  
-int _ismbcalpha_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcdigit  
-(  
-   unsigned int c   
-);  
-int _ismbcdigit_l  
-(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要测试的字符。  
-  
- `locale`  
- 要使用的区域设置。  
-  
-## <a name="return-value"></a>返回值  
- 其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果 `c`<= 255 且存在相应的 `_ismbb` 例程（例如，`_ismbcalnum` 对应于 `_ismbbalnum`），则结果是相应的 `_ismbb` 例程的返回值。  
-  
-## <a name="remarks"></a>备注  
- 其中每个例程都针对给定的条件测试给定的多字节字符。  
-  
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
-  
-|例程所返回的值|测试条件|代码页 932 示例|  
-|-------------|--------------------|---------------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|字母数字|当且仅当 `c` 是 ASCII 英文字母的单字节表示形式时返回非零值：请参见 `_ismbcdigit` 和 `_ismbcalpha` 的示例。|  
-|`_ismbcalpha,_ismbcalpha_l`|Alphabetic|当且仅当出现以下情况时返回非零值：`c` 是 ASCII 英文字母的单字节表示形式：0x41<=`c`<=0x5A 或 0x61<=`c`<=0x7A；或是片假名字母的单字节表示形式：0xA6<=`c`<=0xDF。|  
-|`_ismbcdigit,_ismbcdigit`|数字|当且仅当 `c` 是 ASCII 数字 0x30<=`c`<=0x39 的单字节表示形式时返回非零值。|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h>|  
-|`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  
-|`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [字符分类](../../c-runtime-library/character-classification.md)   
- [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
- [is、isw 例程](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+int _ismbcalnum
+(
+   unsigned int c
+);
+int _ismbcalnum_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcalpha
+(
+   unsigned int c
+);
+int _ismbcalpha_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcdigit
+(
+   unsigned int c
+);
+int _ismbcdigit_l
+(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要测试的字符。
+
+*locale*<br/>
+要使用的区域设置。
+
+## <a name="return-value"></a>返回值
+
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*< = 255，并且没有相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
+
+## <a name="remarks"></a>备注
+
+其中每个例程都针对给定的条件测试给定的多字节字符。
+
+使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递区域设置而不是当前区域设置其区域设置相关的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+
+|例程|测试条件|代码页 932 示例|
+|-------------|--------------------|---------------------------|
+|**_ismbcalnum**， **_ismbcalnum_l**|字母数字|返回非零当且仅当*c*是 ASCII 英文字母的单字节表示： 请参阅示例 **_ismbcdigit**和 **_ismbcalpha**。|
+|**_ismbcalpha**， **_ismbcalpha_l**|Alphabetic|返回非零当且仅当*c*是 ASCII 英文字母的单字节表示： 0x41 向 < =*c*< = 0x5A 或 0x61 < =*c*< = 0x7A; 或片假名字母：0xA6 < =*c*< = 0xDF。|
+|**_ismbcdigit**， **_ismbcdigit**|数字|返回非零当且仅当*c*是 ASCII 数字的单字节表示： 0x30 < =*c*< = 0x39。|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_ismbcalnum**， **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**， **_ismbcalpha_l**|\<mbstring.h>|
+|**_ismbcdigit**， **_ismbcdigit_l**|\<mbstring.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[字符分类](../../c-runtime-library/character-classification.md)<br/>
+[_ismbc 例程](../../c-runtime-library/ismbc-routines.md)<br/>
+[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

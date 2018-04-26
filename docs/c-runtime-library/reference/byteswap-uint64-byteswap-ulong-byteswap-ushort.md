@@ -1,12 +1,12 @@
 ---
-title: "_byteswap_uint64、_byteswap_ulong、_byteswap_ushort | Microsoft 文档"
-ms.custom: 
+title: _byteswap_uint64、_byteswap_ulong、_byteswap_ushort | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _byteswap_uint64
@@ -45,69 +45,66 @@ helpviewer_keywords:
 - byteswap_ulong function
 - _byteswap_ulong function
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be61d4c89d59f76953c0772d5a7ed6811b386ce7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c845d2c14ee721fd2fd28fbdb0857cedecfab561
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="byteswapuint64-byteswapulong-byteswapushort"></a>_byteswap_uint64、_byteswap_ulong、_byteswap_ushort
-颠倒整数中的字节顺序。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-unsigned short _byteswap_ushort (  
-   unsigned short val  
-);  
-unsigned long _byteswap_ulong (  
-   unsigned long val  
-);  
-unsigned __int64 _byteswap_uint64 (  
-   unsigned __int64 val  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `val`  
- 要颠倒字节顺序的整数。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`_byteswap_ushort`|\<stdlib.h>|  
-|`_byteswap_ulong`|\<stdlib.h>|  
-|`_byteswap_uint64`|\<stdlib.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_byteswap.c  
-#include <stdlib.h>  
-  
-int main()  
-{  
-   unsigned __int64 u64 = 0x0102030405060708;  
-   unsigned long ul = 0x01020304;  
-  
-   printf("byteswap of %I64x = %I64x\n", u64, _byteswap_uint64(u64));  
-   printf("byteswap of %Ix = %Ix", ul, _byteswap_ulong(ul));  
-}  
-```  
-  
-```Output  
-byteswap of 102030405060708 = 807060504030201  
-byteswap of 1020304 = 4030201  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [按类别分的运行时例程](../../c-runtime-library/run-time-routines-by-category.md)
+
+颠倒整数中的字节顺序。
+
+## <a name="syntax"></a>语法
+
+```C
+unsigned short _byteswap_ushort ( unsigned short val );
+unsigned long _byteswap_ulong ( unsigned long val );
+unsigned __int64 _byteswap_uint64 ( unsigned __int64 val );
+```
+
+### <a name="parameters"></a>参数
+
+*val*<br/>
+要颠倒字节顺序的整数。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_byteswap_ushort**|\<stdlib.h>|
+|**_byteswap_ulong**|\<stdlib.h>|
+|**_byteswap_uint64**|\<stdlib.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_byteswap.c
+#include <stdlib.h>
+
+int main()
+{
+   unsigned __int64 u64 = 0x0102030405060708;
+   unsigned long ul = 0x01020304;
+
+   printf("byteswap of %I64x = %I64x\n", u64, _byteswap_uint64(u64));
+   printf("byteswap of %Ix = %Ix", ul, _byteswap_ulong(ul));
+}
+```
+
+```Output
+byteswap of 102030405060708 = 807060504030201
+byteswap of 1020304 = 4030201
+```
+
+## <a name="see-also"></a>请参阅
+
+[按类别划分的通用 C 运行时例程](../../c-runtime-library/run-time-routines-by-category.md)<br/>

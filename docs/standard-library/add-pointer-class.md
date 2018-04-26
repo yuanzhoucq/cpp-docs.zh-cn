@@ -1,12 +1,12 @@
 ---
-title: "add_pointer 类 | Microsoft 文档"
-ms.custom: 
+title: add_pointer 类 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::add_pointer
@@ -16,68 +16,73 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d2824ce777e2f146adc6e8f3cbd20eb6aff887f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 102984fc0384499f5aa2538a0f8d858578096551
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="addpointer-class"></a>add_pointer 类
-从指定类型创建指向类型的指针。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-template <class T>  
-struct add_pointer;  
- 
+
+从指定类型创建指向类型的指针。
+
+## <a name="syntax"></a>语法
+
+```cpp
 template <class T>
-using add_pointer_t = typename add_pointer<T>::type;  
-```  
-  
-#### <a name="parameters"></a>参数  
-*T*  
-要修改的类型。  
-  
-## <a name="remarks"></a>备注  
-成员 typedef `type` 将命名与 `remove_reference<T>::type*` 相同的类型。 别名 `add_pointer_t` 是访问成员 typedef `type` 的快捷方式。  
-  
-因为从引用创建指针是无效的，所以 `add_pointer` 将从指定类型中移除引用（如果有），然后再创建指向类型的指针。 因此，你可以将某一类型用于 `add_pointer`，而不必考虑该类型是否是引用。  
-  
-## <a name="example"></a>示例  
-下面的示例演示某一类型的 `add_pointer` 与指向该类型的指针相同。  
-  
-```cpp  
-#include <type_traits>   
-#include <iostream>   
-  
-int main()   
-{   
-    std::add_pointer_t<int> *p = (int **)0;   
-  
-    p = p;  // to quiet "unused" warning   
-    std::cout << "add_pointer_t<int> == "   
-        << typeid(*p).name() << std::endl;   
-  
-    return (0);   
-}  
-```  
-  
-```Output  
-add_pointer_t<int> == int *  
-```  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<type_traits>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [<type_traits>](../standard-library/type-traits.md)   
- [remove_pointer 类](../standard-library/remove-pointer-class.md)
+struct add_pointer;
+
+template <class T>
+using add_pointer_t = typename add_pointer<T>::type;
+```
+
+### <a name="parameters"></a>参数
+
+*T*要修改的类型。
+
+## <a name="remarks"></a>备注
+
+成员 typedef `type` 将命名与 `remove_reference<T>::type*` 相同的类型。 别名 `add_pointer_t` 是访问成员 typedef `type` 的快捷方式。
+
+因为从引用创建指针是无效的，所以 `add_pointer` 将从指定类型中移除引用（如果有），然后再创建指向类型的指针。 因此，你可以将某一类型用于 `add_pointer`，而不必考虑该类型是否是引用。
+
+## <a name="example"></a>示例
+
+下面的示例演示某一类型的 `add_pointer` 与指向该类型的指针相同。
+
+```cpp
+#include <type_traits>
+#include <iostream>
+
+int main()
+{
+    std::add_pointer_t<int> *p = (int **)0;
+
+    p = p;  // to quiet "unused" warning
+    std::cout << "add_pointer_t<int> == "
+        << typeid(*p).name() << std::endl;
+
+    return (0);
+}
+```
+
+```Output
+add_pointer_t<int> == int *
+```
+
+## <a name="requirements"></a>要求
+
+**标头：**\<type_traits>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[<type_traits>](../standard-library/type-traits.md)<br/>
+[remove_pointer 类](../standard-library/remove-pointer-class.md)<br/>

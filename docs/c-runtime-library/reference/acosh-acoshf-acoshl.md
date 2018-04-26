@@ -1,12 +1,12 @@
 ---
-title: "acosh、acoshf、acoshl | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: acosh、acoshf、acoshl | Microsoft 文档
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - acoshf
@@ -39,97 +39,94 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 460b6540a724cd7a67d1de22b67238800e5fd5ca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cde187ddcb082c468215c00294b08d183b73323a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
-计算反双曲余弦。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-double acosh(  
-   double x   
-);  
-float acosh(  
-   float x   
-);  // C++ only  
-long double acosh(  
-   long double x  
-);  // C++ only  
-float acoshf(  
-   float x   
-);  
-long double acoshl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `x`  
- 浮点值。  
-  
-## <a name="return-value"></a>返回值  
- `acosh` 函数返回 `x`的反双曲余弦。 这些函数在 `x` ≥ 1 的域上有效。 如果 `x` 小于 1，则将 `errno` 设置为 `EDOM` 且结果是 quiet NaN。 如果 `x` 是 quiet NaN、不确定数或无穷大，则将返回相同的值。  
-  
-|输入|SEH 异常|`_matherr` 异常|  
-|-----------|-------------------|--------------------------|  
-|± QNAN、IND、INF|无|无|  
-|x < 1|无|无|  
-  
-## <a name="remarks"></a>备注  
- 使用 C++ 时，你可以调用采用并返回 `acosh` 或 `float` 值的 `long double` 重载。 在 C 程序中，`acosh` 始终采用并返回 `double`。  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|C 标头|C++ 标头|  
-|--------------|--------------|------------------|  
-|`acosh`, `acoshf`, `acoshl`|\<math.h>|\<cmath>|  
-  
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>示例  
-  
-```C  
-// crt_acosh.c  
-// Compile by using: cl /W4 crt_acosh.c  
-// This program displays the hyperbolic cosine of pi / 4  
-// and the arc hyperbolic cosine of the result.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double pi = 3.1415926535;  
-   double x, y;  
-  
-   x = cosh( pi / 4 );  
-   y = acosh( x );  
-   printf( "cosh( %f ) = %f\n", pi/4, x );  
-   printf( "acosh( %f ) = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-cosh( 0.785398 ) = 1.324609  
-acosh( 1.324609 ) = 0.785398  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [cos、cosf、cosl、cosh、coshf、coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [asinh、asinhf、asinhl](../../c-runtime-library/reference/asinh-asinhf-asinhl.md)   
- [tan、tanf、tanl、tanh、tanhf、tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [atanh、atanhf、atanhl](../../c-runtime-library/reference/atanh-atanhf-atanhl.md)   
- [_CItan](../../c-runtime-library/citan.md)
+
+计算反双曲余弦。
+
+## <a name="syntax"></a>语法
+
+```C
+double acosh( double x );
+float acoshf( float x );
+long double acoshl( long double x );
+```
+
+```cpp
+float acosh( float x );  // C++ only
+long double acosh( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*x*<br/>
+浮点值。
+
+## <a name="return-value"></a>返回值
+
+**Acosh**函数返回的反双曲余弦值 （反双曲余弦值） *x*。 在域内，这些函数都是有效*x* ≥ 1。 如果*x*小于 1， **errno**设置为**EDOM**且结果是 quiet NaN。 如果*x*是 quiet NaN、 不确定数或无穷大，返回相同的值。
+
+|输入|SEH 异常|**_matherr**异常|
+|-----------|-------------------|--------------------------|
+|± QNAN、IND、INF|无|无|
+|*x* < 1|无|无|
+
+## <a name="remarks"></a>备注
+
+当你使用 c + + 时，你可以调用的重载**acosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **acosh**始终采用并返回**double**。
+
+## <a name="requirements"></a>要求
+
+|函数|C 标头|C++ 标头|
+|--------------|--------------|------------------|
+|**acosh**， **acoshf**， **acoshl**|\<math.h>|\<cmath>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_acosh.c
+// Compile by using: cl /W4 crt_acosh.c
+// This program displays the hyperbolic cosine of pi / 4
+// and the arc hyperbolic cosine of the result.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double pi = 3.1415926535;
+   double x, y;
+
+   x = cosh( pi / 4 );
+   y = acosh( x );
+   printf( "cosh( %f ) = %f\n", pi/4, x );
+   printf( "acosh( %f ) = %f\n", x, y );
+}
+```
+
+```Output
+cosh( 0.785398 ) = 1.324609
+acosh( 1.324609 ) = 0.785398
+```
+
+## <a name="see-also"></a>请参阅
+
+[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
+[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
+[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>
+[cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>
+[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)<br/>
+[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)<br/>

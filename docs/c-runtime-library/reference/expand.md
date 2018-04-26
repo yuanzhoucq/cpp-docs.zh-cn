@@ -1,12 +1,12 @@
 ---
-title: "_expand | Microsoft 文档"
-ms.custom: 
+title: _expand | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _expand
@@ -39,102 +39,107 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b2bf8ba3e30165f11e3392e04519a3d49cfd4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f55b7e3c321ff4a86464fab39313abbe742d77d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="expand"></a>_expand
-更改内存块的大小。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void *_expand(   
-   void *memblock,  
-   size_t size   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `memblock`  
- 指向之前已分配内存块的指针。  
-  
- `size`  
- 新大小（字节）。  
-  
-## <a name="return-value"></a>返回值  
- `_expand` 将返回指向重新分配的内存块的 void 指针。 `_expand` 与 `realloc` 不同，它无法移动块以更改其大小。 因此，如果有足够的可用内存来扩展块而无需移动它，则 `_expand` 的 `memblock` 参数与返回值相同。  
-  
- `_expand` 在其操作过程中检测到错误时返回 `NULL`。 例如，如果 `_expand` 用于收缩内存块，它可能会在小块堆或无效的块指针中检测到损坏，并返回 `NULL`。  
-  
- 如果在不移动块的情况下，没有足够的内存将块扩展到给定大小，则函数返回 `NULL`。 `_expand` 从不返回扩展到小于请求大小的块。 如果出现失败，则 `errno` 指示失败原因。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
- 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要检查项目的新大小，请使用 `_msize`。 若要获取指向类型而非 `void` 的指针，请在返回值中使用类型转换。  
-  
-## <a name="remarks"></a>备注  
- `_expand` 函数通过尝试扩展或收缩块且不在堆中移动其位置的情况下，更改以前分配的内存块的大小。 `memblock` 参数指向块的开头。 `size` 参数指定块的新大小（以字节为单位）。 根据新大小和旧大小中的较短者，块内容保持不变。 `memblock` 不应是已释放的块。  
-  
+
+更改内存块的大小。
+
+## <a name="syntax"></a>语法
+
+```C
+void *_expand(
+   void *memblock,
+   size_t size
+);
+```
+
+### <a name="parameters"></a>参数
+
+*memblock*<br/>
+指向之前已分配内存块的指针。
+
+*size*<br/>
+新大小（字节）。
+
+## <a name="return-value"></a>返回值
+
+**_expand**返回指向重新分配的内存块的 void 指针。 **_expand**与**realloc**，不能移动一个块，可以更改其大小。 因此，如果没有足够的内存可用于将块展开而无需移动它， *memblock*参数 **_expand**返回的值相同。
+
+**_expand**返回**NULL**其操作期间时检测到错误。 例如，如果 **_expand**是用来收缩的内存块，它可能检测损坏的小块堆集或无效的块指针，并返回**NULL**。
+
+如果没有足够内存可用于将块展开到给定的大小，而无需移动它，该函数返回**NULL**。 **_expand**永远不会返回一个块展开为大小小于请求。 如果发生故障， **errno**指示故障的性质。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要检查的项的新大小，请使用 **_msize**。 若要获取指向类型而**void**，使用类型强制转换返回值上。
+
+## <a name="remarks"></a>备注
+
+**_Expand**函数尝试来展开或折叠而无需移动堆中的其位置的块中更改之前分配的内存块的大小。 *Memblock*参数指向的块的开头。 *大小*参数指定了新块大小，以字节为单位。 根据新大小和旧大小中的较短者，块内容保持不变。 *memblock*不应被释放的块。
+
 > [!NOTE]
->  在 64 位平台上，如果块的新大小小于当前大小，则 `_expand` 不能对块进行收缩；尤其是，如果块的大小小于 16K 并在低碎片堆中进行分配，则 `_expand` 保持块不变并返回 `memblock`。  
-  
- 当应用程序与调试版的 C 运行库链接时，`_expand` 将解析为 [_expand_dbg](../../c-runtime-library/reference/expand-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。  
-  
- 此函数验证其参数。 如果 `memblock` 为空指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。 如果 `size` 大于 `_HEAP_MAXREQ`，则 `errno` 被设置为 `ENOMEM`，且函数返回 `NULL`。  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`_expand`|\<malloc.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_expand.c  
-  
-#include <stdio.h>  
-#include <malloc.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char *bufchar;  
-   printf( "Allocate a 512 element buffer\n" );  
-   if( (bufchar = (char *)calloc( 512, sizeof( char ) )) == NULL )  
-      exit( 1 );  
-   printf( "Allocated %d bytes at %Fp\n",   
-         _msize( bufchar ), (void *)bufchar );  
-   if( (bufchar = (char *)_expand( bufchar, 1024 )) == NULL )  
-      printf( "Can't expand" );  
-   else  
-      printf( "Expanded block to %d bytes at %Fp\n",   
-            _msize( bufchar ), (void *)bufchar );  
-   // Free memory   
-   free( bufchar );  
-   exit( 0 );  
-}  
-```  
-  
-```Output  
-Allocate a 512 element buffer  
-Allocated 512 bytes at 002C12BC  
-Expanded block to 1024 bytes at 002C12BC  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [内存分配](../../c-runtime-library/memory-allocation.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [free](../../c-runtime-library/reference/free.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_msize](../../c-runtime-library/reference/msize.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)
+> 在 64 位平台上 **_expand**可能不协定块，如果新的大小小于比当前的大小; 具体而言，如果块的大小小于 16 K，且在低碎片堆中，因此分配 **_expand**离开块保持不变并返回*memblock*。
+
+当与 C 运行时库的调试版本链接应用程序 **_expand**解析为[_expand_dbg](expand-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+
+此函数验证其参数。 如果*memblock*是 null 指针，此函数调用无效参数处理程序中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。 如果*大小*大于 **_HEAP_MAXREQ**， **errno**设置为**ENOMEM**和该函数将返回**NULL**.
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**_expand**|\<malloc.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_expand.c
+
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char *bufchar;
+   printf( "Allocate a 512 element buffer\n" );
+   if( (bufchar = (char *)calloc( 512, sizeof( char ) )) == NULL )
+      exit( 1 );
+   printf( "Allocated %d bytes at %Fp\n",
+         _msize( bufchar ), (void *)bufchar );
+   if( (bufchar = (char *)_expand( bufchar, 1024 )) == NULL )
+      printf( "Can't expand" );
+   else
+      printf( "Expanded block to %d bytes at %Fp\n",
+            _msize( bufchar ), (void *)bufchar );
+   // Free memory
+   free( bufchar );
+   exit( 0 );
+}
+```
+
+```Output
+Allocate a 512 element buffer
+Allocated 512 bytes at 002C12BC
+Expanded block to 1024 bytes at 002C12BC
+```
+
+## <a name="see-also"></a>请参阅
+
+[内存分配](../../c-runtime-library/memory-allocation.md)<br/>
+[calloc](calloc.md)<br/>
+[free](free.md)<br/>
+[malloc](malloc.md)<br/>
+[_msize](msize.md)<br/>
+[realloc](realloc.md)<br/>

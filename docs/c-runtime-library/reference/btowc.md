@@ -1,12 +1,12 @@
 ---
-title: "btowc | Microsoft 文档"
-ms.custom: 
+title: btowc | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - btowc
@@ -30,43 +30,47 @@ dev_langs:
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec89bd89edb8fa178ec83d6a2e57fe1ba86da5d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f6605184408b3a1548eeb8af469fc7df1a6407c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="btowc"></a>btowc
-确定整数是否表示初始位移状态中的有效单字节字符。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-wint_t btowc(  
-   int c  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要测试的整数。  
-  
-## <a name="return-value"></a>返回值  
- 如果整数表示初始位移状态中的有效单字节字符，则将返回字符的宽字符表示形式。 如果整数是 EOF 或不是初始位移状态中的有效单字节字符，则返回 WEOF。 此函数的输出将受当前 `LC_TYPE` 区域设置的影响。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`btowc`|\<stdio.h> 或 \<wchar.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [mbtowc、_mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)
+
+确定整数是否表示初始位移状态中的有效单字节字符。
+
+## <a name="syntax"></a>语法
+
+```C
+wint_t btowc(
+   int character
+);
+```
+
+### <a name="parameters"></a>参数
+
+*character*<br/>
+要测试的整数。
+
+## <a name="return-value"></a>返回值
+
+如果整数表示初始位移状态中的有效单字节字符，则将返回字符的宽字符表示形式。 如果整数是 EOF 或不是初始位移状态中的有效单字节字符，则返回 WEOF。 此函数的输出受当前**LC_TYPE**区域设置。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**btowc**|\<stdio.h> 或 \<wchar.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

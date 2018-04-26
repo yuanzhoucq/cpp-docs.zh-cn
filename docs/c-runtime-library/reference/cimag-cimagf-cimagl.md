@@ -1,13 +1,13 @@
 ---
-title: "cimag、cimagf、cimagl | Microsoft 文档"
-ms.custom: 
+title: cimag、cimagf、cimagl | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cimag
@@ -40,64 +40,62 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9802a682193a0ef805f4a6964bf0aa1682a7619b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a00595ea5fdc6ecb5eb527d13211ed5bdda6303e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
-检索复数的虚部。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-double cimag(   
-   _Dcomplex z   
-);  
-float cimag(   
-   _Fcomplex z   
-);  // C++  
-long double cimag(   
-  _Lcomplex z   
-);  // C++  
-float cimagf(   
-   _Fcomplex z   
-);  
-long double cimagl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `z`  
- 一个复数。  
-  
-## <a name="return-value"></a>返回值  
- `z` 的虚部。  
-  
-## <a name="remarks"></a>备注  
- 由于 C++ 允许重载，因此可以调用采用 `_Fcomplex` 或 `_Lcomplex` 值的 `cimag` 的重载，并返回 `float` 或 `long double` 值。 在 C 程序中，`cimag` 始终采用 `_Dcomplex` 值并返回 `double` 值。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|C 标头|C++ 标头|  
-|-------------|--------------|------------------|  
-|`cimag`,               `cimagf`, `cimagl`|\<complex.h>|\<ccomplex>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm、normf、norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj、conjf、conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+检索复数的虚部。
+
+## <a name="syntax"></a>语法
+
+```C
+double cimag( _Dcomplex z );
+float cimagf( _Fcomplex z );
+long double cimagl( _Lcomplex z );
+```
+
+```cpp
+float cimag( _Fcomplex z );  // C++
+long double cimag( _Lcomplex z );  // C++
+```
+
+### <a name="parameters"></a>参数
+
+*z*<br/>
+一个复数。
+
+## <a name="return-value"></a>返回值
+
+虚部*z*。
+
+## <a name="remarks"></a>备注
+
+由于 c + + 允许重载，你可以调用的重载**cimag**采用 **_Fcomplex**或 **_Lcomplex**值，并返回**float**或**长** **double**值。 在 C 程序中， **cimag**始终采用 **_Dcomplex**值并返回**double**值。
+
+## <a name="requirements"></a>要求
+
+|例程|C 标头|C++ 标头|
+|-------------|--------------|------------------|
+|**cimag**， **cimagf**， **cimagl**|\<complex.h>|\<ccomplex>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[norm、normf、norml](norm-normf-norml1.md)<br/>
+[creal、crealf、creall](creal-crealf-creall.md)<br/>
+[cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj、conjf、conjl](conj-conjf-conjl.md)<br/>
+[carg、cargf、cargl](carg-cargf-cargl.md)<br/>
+[cabs、cabsf、cabsl](cabs-cabsf-cabsl.md)<br/>

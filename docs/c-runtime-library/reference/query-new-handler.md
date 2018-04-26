@@ -1,12 +1,12 @@
 ---
-title: "_query_new_handler | Microsoft 文档"
-ms.custom: 
+title: _query_new_handler | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _query_new_handler
@@ -34,46 +34,51 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ace3b5d57515ee10fbb58992f708a465064980
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c59b12c57af4d8a3d40b1ced2ffdc2a2cb00bc1f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="querynewhandler"></a>_query_new_handler
-返回当前新处理程序例程的地址。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-_PNH _query_new_handler(  
-   void   
-);  
-```  
-  
-## <a name="return-value"></a>返回值  
- 返回由 `_set_new_handler` 设置的当前新处理程序例程的地址。  
-  
-## <a name="remarks"></a>备注  
- C++ `_query_new_handler` 函数返回由 C++ [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 函数设置的当前异常处理函数的地址。 如果 **new** 运算符无法分配内存，则 `_set_new_handler` 用于指定获取控制权的异常处理函数。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`_query_new_handler`|\<new.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>库  
- [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="see-also"></a>请参阅  
- [内存分配](../../c-runtime-library/memory-allocation.md)   
- [free](../../c-runtime-library/reference/free.md)
+
+返回当前新处理程序例程的地址。
+
+## <a name="syntax"></a>语法
+
+```C
+_PNH _query_new_handler(
+   void
+);
+```
+
+## <a name="return-value"></a>返回值
+
+返回当前新处理程序例程的地址，如所设置 **_set_new_handler**。
+
+## <a name="remarks"></a>备注
+
+C + + **_query_new_handler**函数返回由 c + + 设置的当前异常处理函数的地址[_set_new_handler](set-new-handler.md)函数。 **_set_new_handler**用于指定是如果获取控制权的异常处理函数**新**运算符无法分配内存。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_query_new_handler**|\<new.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>库
+
+[C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
+
+## <a name="see-also"></a>请参阅
+
+[内存分配](../../c-runtime-library/memory-allocation.md)<br/>
+[free](free.md)<br/>

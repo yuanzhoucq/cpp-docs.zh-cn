@@ -1,12 +1,12 @@
 ---
-title: "fputc、fputwc | Microsoft 文档"
-ms.custom: 
+title: fputc、fputwc | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fputc
@@ -37,101 +37,106 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af95e4b11048ebda50ac4d73fc87b6b67903494b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 707c6d7fa2e45a4fb0c841015f59ef786e539168
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
-将字符写入流。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int fputc(  
-   int c,  
-   FILE *stream   
-);  
-wint_t fputwc(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `c`  
- 要写入的字符。  
-  
- `stream`  
- 指向 `FILE` 结构的指针。  
-  
-## <a name="return-value"></a>返回值  
- 其中每个函数都会返回写入的字符。 对于 `fputc`，返回值 `EOF` 指示一个错误。 对于 `fputwc`，返回值 `WEOF` 指示一个错误。 如果 `stream` 为 `NULL`，这些函数则会调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 `EOF`，并将 `errno` 设置为 `EINVAL`。  
-  
- 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
-## <a name="remarks"></a>备注  
- 其中每个函数将单个字符 `c` 在关联文件位置指示器（如果已定义）所指示的位置写入文件，并根据情况提升指示器。 情况下`fputc`和`fputwc`，与关联文件`stream`。 如果文件不支持定位请求，或在追加模式中打开，则该字符将被追加到流的末尾。  
-  
- 如果在 ANSI 模式下打开流，则这两个函数行为相同。 `fputc` 当前不支持到 UNICODE 流中的输出。  
-  
- 带 `_nolock` 后缀的版本相同，只不过它们可能受到其他线程的影响。 有关详细信息，请参阅 [_fputc_nolock、_fputwc_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md)。  
-  
- 下面是例程特定的备注。  
-  
-|例程|备注|  
-|-------------|-------------|  
-|`fputc`|等效于 `putc`，但仅作为函数实现，而不是同时作为函数和宏实现。|  
-|`fputwc`|`fputc` 的宽字符版本。 根据 `stream` 是在文本模式还是二进制模式中打开，将 `c` 编写为多字节字符或宽字符。|  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fputtc`|`fputc`|`fputc`|`fputwc`|  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`fputc`|\<stdio.h>|  
-|`fputwc`|\<stdio.h> 或 \<wchar.h>|  
-  
- 通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄-`stdin`， `stdout`，和`stderr`-必须将重定向，然后 C 运行时函数可以在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_fputc.c  
-// This program uses fputc  
-// to send a character array to stdout.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char strptr1[] = "This is a test of fputc!!\n";  
-   char *p;  
-  
-   // Print line to stream using fputc.   
-   p = strptr1;  
-   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;  
-  
-}  
-```  
-  
-```Output  
-This is a test of fputc!!  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [putc、putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+将字符写入流。
+
+## <a name="syntax"></a>语法
+
+```C
+int fputc(
+   int c,
+   FILE *stream
+);
+wint_t fputwc(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>参数
+
+*c*<br/>
+要写入的字符。
+
+*流*<br/>
+指向**文件**结构的指针。
+
+## <a name="return-value"></a>返回值
+
+其中每个函数都会返回写入的字符。 有关**fputc**，返回值**EOF**指示错误。 有关**fputwc**，返回值**WEOF**指示错误。 如果*流*是**NULL**中, 所述，这些函数将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，它们将返回**EOF**并设置**errno**到**EINVAL**。
+
+有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+## <a name="remarks"></a>备注
+
+其中每个函数将单个字符*c*到文件中的位置由关联的文件位置指示器 （如果已定义），并使提升根据指示器。 情况下**fputc**和**fputwc**，与关联文件*流*。 如果文件不支持定位请求，或在追加模式中打开，则该字符将被追加到流的末尾。
+
+如果在 ANSI 模式下打开流，则这两个函数行为相同。 **fputc**当前不支持输出到 UNICODE 流。
+
+后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 [_fputc_nolock、_fputwc_nolock](fputc-nolock-fputwc-nolock.md)。
+
+下面是例程特定的备注。
+
+|例程|备注|
+|-------------|-------------|
+|**fputc**|等效于**putc**，但仅作为函数，而不是作为函数和宏实现。|
+|**fputwc**|宽字符版本的**fputc**。 写入*c*作为多字节字符或宽字符根据是否*流*以文本模式还是二进制模式下打开。|
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fputtc**|**fputc**|**fputc**|**fputwc**|
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**fputc**|\<stdio.h>|
+|**fputwc**|\<stdio.h> 或 \<wchar.h>|
+
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄-**stdin**， **stdout**，和**stderr**-必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_fputc.c
+// This program uses fputc
+// to send a character array to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char strptr1[] = "This is a test of fputc!!\n";
+   char *p;
+
+   // Print line to stream using fputc.
+   p = strptr1;
+   while( (*p != '\0') && fputc( *(p++), stdout ) != EOF ) ;
+
+}
+```
+
+```Output
+This is a test of fputc!!
+```
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetc、fgetwc](fgetc-fgetwc.md)<br/>
+[putc、putwc](putc-putwc.md)<br/>

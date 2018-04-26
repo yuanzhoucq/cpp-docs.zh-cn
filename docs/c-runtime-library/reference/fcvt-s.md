@@ -1,12 +1,12 @@
 ---
-title: "_fcvt_s | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _fcvt_s | Microsoft 文档
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fcvt_s
@@ -34,139 +34,143 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e76888f3e4162a35cacbf9c6f2f88bf9d90e34f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
-将浮点数转换为字符串。 这是 [_fcvt](../../c-runtime-library/reference/fcvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-errno_t _fcvt_s(   
-   char* buffer,  
-   size_t sizeInBytes,  
-   double value,  
-   int count,  
-   int *dec,  
-   int *sign   
-);  
-template <size_t size>  
-errno_t _fcvt_s(   
-   char (&buffer)[size],  
-   double value,  
-   int count,  
-   int *dec,  
-   int *sign   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>参数  
- [out] `buffer`  
- 所提供的缓冲区将保留转换的结果。  
-  
- [in] `sizeInBytes`  
- 缓冲区的大小（以字节为单位）。  
-  
- [in] `value`  
- 要转换的数字。  
-  
- [in] `count`  
- 小数点后面的数字位数。  
-  
- [out] `dec`  
- 指向存储的小数点位置的指针。  
-  
- [out] `sign`  
- 指向存储的符号指示符的指针。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 ERRNO.h 中定义的。 有关这些错误的列表，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
- 对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。  
-  
-### <a name="error-conditions"></a>错误条件  
-  
-|`buffer`|`sizeInBytes`|值|count|dec|Sign|返回|`buffer` 中的值|  
-|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
-|`NULL`|任何|任何|任何|任何|任何|`EINVAL`|未修改。|  
-|非 `NULL`（指向有效内存）|<=0|任何|任何|任何|任何|`EINVAL`|未修改。|  
-|任何|任何|任何|任何|`NULL`|任何|`EINVAL`|未修改。|  
-|任何|任何|任何|任何|任何|`NULL`|`EINVAL`|未修改。|  
-  
- **安全问题**  
-  
- 如果 `buffer` 不指向有效内存且不为 `NULL`，则 `_fcvt_s` 可能生成访问冲突。  
-  
-## <a name="remarks"></a>备注  
- `_fcvt_s` 函数将浮点数转换为以 null 结尾的字符串。 `value` 参数是要转换的浮点数。 `_fcvt_s` 将 `value` 的位数存储为字符串，并追加一个空字符 ('\0')。 `count` 参数指定此小数点后要存储的数字位数。 多余的位数被舍入到 `count` 位置。 如果小于精确到 `count` 的位数，则字符串使用零填充。  
-  
- 字符串中仅存储位数。 小数点位置和 `value` 的符号可以在调用后从 `dec` 和 `sign` 中获取。 `dec` 参数指向整数值；此整数值指定相对于字符串开头的小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 参数 `sign` 指向一个整数值，表示 `value` 的符号。 如果 `value` 为正数，则整数设置为 0，如果 `value` 为负数，则整数设置为非零数。  
-  
- `_CVTBUFSIZE` 的缓冲区长度足以满足任何浮点值。  
-  
- `_ecvt_s` 和 `_fcvt_s` 之间的差异在于对 `count` 参数的解释。 `_ecvt_s` 解释`count`作为的输出字符串中的位数总数和`_fcvt_s`解释`count`作为小数点后的数字个数。  
-  
- 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
- 此函数的调试版本首先使用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|可选标头|  
-|--------------|---------------------|---------------------|  
-|`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
-  
- 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
- **库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// fcvt_s.c  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main()  
-{  
-  char * buf = 0;  
-  int decimal;  
-  int sign;  
-  int err;  
-  
-  buf = (char*) malloc(_CVTBUFSIZE);  
-  err = _fcvt_s(buf, _CVTBUFSIZE, 1.2, 5, &decimal, &sign);  
-  
-  if (err != 0)  
-  {  
-     printf("_fcvt_s failed with error code %d\n", err);  
-     exit(1);  
-  }  
-  
-  printf("Converted value: %s\n", buf);    
-  
-}  
-```  
-  
-```Output  
-Converted value: 120000  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [数据转换](../../c-runtime-library/data-conversion.md)   
- [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
- [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)
+
+将浮点数转换为字符串。 这是 [_fcvt](fcvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+
+## <a name="syntax"></a>语法
+
+```C
+errno_t _fcvt_s(
+   char* buffer,
+   size_t sizeInBytes,
+   double value,
+   int count,
+   int *dec,
+   int *sign
+);
+template <size_t size>
+errno_t _fcvt_s(
+   char (&buffer)[size],
+   double value,
+   int count,
+   int *dec,
+   int *sign
+); // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*buffer*<br/>
+所提供的缓冲区将保留转换的结果。
+
+*sizeInBytes*<br/>
+缓冲区的大小（以字节为单位）。
+
+*value*<br/>
+要转换的数字。
+
+*count*<br/>
+小数点后面的数字位数。
+
+*dec*<br/>
+指向存储的小数点位置的指针。
+
+*sign*<br/>
+指向存储的符号指示符的指针。
+
+## <a name="return-value"></a>返回值
+
+如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 ERRNO.h 中定义的。 有关这些错误的列表，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+
+### <a name="error-conditions"></a>错误条件
+
+|*buffer*|*sizeInBytes*|值|count|dec|Sign|返回|中的值*缓冲区*|
+|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
+|**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
+|不**NULL** （指向有效的内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
+|任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
+|任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
+
+## <a name="security-issues"></a>安全性问题
+
+**_fcvt_s**可能会产生访问冲突，如果*缓冲区*不指向有效内存并且不是**NULL**。
+
+## <a name="remarks"></a>备注
+
+**_Fcvt_s**函数将浮点数转换为以 null 结尾的字符串。 *值*参数是要转换的浮点数。 **_fcvt_s**存储的位数*值*作为字符串，并追加 null 字符 (\0)。 *计数*参数指定要存储在小数点之后的数字个数。 多余的数字被舍入为*计数*放置。 如果有数不能超过*计数*位精度，该字符串则用零填充。
+
+字符串中仅存储位数。 小数点和的符号的位置*值*可以从获取*dec*和*登录*后调用。 *Dec*参数指向的整数值; 此整数值使该字符串的开头相对小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 参数*登录*指向一个整数，表示的符号*值*。 整数设置为 0，如果*值*为正数，并且设置为非零的数字如果*值*为负。
+
+缓冲区的长度 **_CVTBUFSIZE**足以满足任何浮点值。
+
+之间的差异 **_ecvt_s**和 **_fcvt_s**处于的解释*计数*参数。 **_ecvt_s**解释*计数*作为的输出字符串中的位数总数和 **_fcvt_s**解释*计数*后的位数的数字的形式小数点。
+
+在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+此函数的调试版本首先使用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|可选标头|
+|--------------|---------------------|---------------------|
+|**_fcvt_s**|\<stdlib.h>|\<errno.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+**库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。
+
+## <a name="example"></a>示例
+
+```C
+// fcvt_s.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main()
+{
+    char * buf = 0;
+    int decimal;
+    int sign;
+    int err;
+
+    buf = (char*) malloc(_CVTBUFSIZE);
+    err = _fcvt_s(buf, _CVTBUFSIZE, 1.2, 5, &decimal, &sign);
+
+    if (err != 0)
+    {
+        printf("_fcvt_s failed with error code %d\n", err);
+        exit(1);
+    }
+
+    printf("Converted value: %s\n", buf);
+}
+```
+
+```Output
+Converted value: 120000
+```
+
+## <a name="see-also"></a>请参阅
+
+[数据转换](../../c-runtime-library/data-conversion.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
+[atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[_ecvt_s](ecvt-s.md)<br/>
+[_gcvt_s](gcvt-s.md)<br/>
+[_fcvt](fcvt.md)<br/>

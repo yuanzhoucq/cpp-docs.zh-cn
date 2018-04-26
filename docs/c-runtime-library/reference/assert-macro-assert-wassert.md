@@ -1,12 +1,12 @@
 ---
-title: "assert 宏、_assert、_wassert | Microsoft 文档"
-ms.custom: 
+title: assert 宏、_assert、_wassert | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - assert
@@ -37,132 +37,133 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757571b9de1dbf86040ecd83ae86c4038207798e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 573226f92b585b6bb158d0c8f9ba5c24af0f7bde
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
-计算表达式，如果结果为 `false`，则打印诊断消息并中止程序。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-assert(   
-   expression   
-);  
-void _assert(  
-   char const* message,  
-   char const* filename,  
-   unsigned line  
-);  
-void _wassert(  
-   wchar_t const* message,  
-   wchar_t const* filename,  
-   unsigned line  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `expression`  
- 计算结果不为零 (`true`) 或为零 (`false`) 的标量表达式（包括指针表达式）。  
-  
- `message`  
- 要显示的消息。  
-  
- `filename`  
- 断言失败的源文件的名称。  
-  
- `line`  
- 断言失败处所在的源文件行号。  
-  
-## <a name="remarks"></a>备注  
- `assert` 宏通常用于标识程序开发过程中的逻辑错误。 出现意外情况时可用它停止程序执行，方法是实现 `expression` 参数来计算仅当程序操作不正确时的 `false` 。 可通过定义宏 `NDEBUG`在编译时关闭断言检查。 使用 `assert` 命令行选项，可以在不修改源文件的情况下来关闭 **assert** 宏。 可以在包含 \<assert.h> 之前使用`#define NDEBUG` 指令，以便在源代码中关闭 `assert` 宏。  
-  
- `assert` 宏将在 `expression` 计算结果为 `false` (0) 时打印诊断消息并调用 [abort](../../c-runtime-library/reference/abort.md) 终止程序执行。 如果 `expression` 为 `true` （非零），则不执行任何操作。 诊断消息包括失败的表达式、源文件的名称以及断言失败的行号。  
-  
- 诊断消息将用宽字符打印。 因此，它将按预期工作，即使表达式中存在 Unicode 字符也是如此。  
-  
- 诊断消息的目标取决于调用例程的应用程序的类型。 控制台应用程序始终通过 `stderr`接收消息。 在基于 Windows 的应用程序中， `assert` 将调用 Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) 函数创建消息框来显示消息以及“确定”  按钮。 当用户单击 **“确定”**后，程序将立即中止。  
-  
- 当应用程序与运行库的调试版本链接， `assert` 将创建带三个按钮的消息框： **“中止”**、 **“重试”**和 **“忽略”**。 如果用户单击 **“中止”**，则程序将立即中止。 如果用户单击 **“重试”**，则将调用调试器，之后用户可以调试程序，前提是启用了实时 (JIT) 调试。 如果用户单击 **“忽略”**，则 `assert` 将继续其常规执行：创建带 **“确定”** 按钮的消息框。 请注意，当存在错误条件时单击 **“忽略”** 可能导致未定义的行为。  
-  
- 有关 CRT 调试的详细信息，请参阅 [CRT 调试技术](/visualstudio/debugger/crt-debugging-techniques)。  
-  
- `_assert` 和 `_wassert` 函数是内部 CRT 函数。 这两个函数可帮助最大程度地减少在对象文件中支持断言所需的代码。 建议不要直接调用这些函数。  
-  
- 当未定义 `assert` 时，C 运行库的发布版本和调试版本中均启用了 `NDEBUG` 宏。 当定义了 `NDEBUG` 时，该宏虽然可用，但不会计算其参数，因而并不起作用。 启用后， `assert` 宏会调用 `_wassert` 用于实现。 其他断言宏 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 和 [_ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 也可用，但它们只有在已定义 [_DEBUG](../../c-runtime-library/debug.md) 宏的情况下以及存在于与 C 运行时库调试版本关联的代码中时才会计算传递给它们的表达式。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`assert`, `_wassert`|\<assert.h>|  
-  
- `_assert` 函数的签名在头文件中不可用。 `_wassert` 函数的签名只有在未定义 `NDEBUG` 宏时才可用。  
-  
-## <a name="example"></a>示例  
- 在此程序中， `analyze_string` 函数使用 `assert` 宏来测试与字符串和长度相关的一些条件。 如果任意条件失败，则程序将打印指示失败原因的消息。  
-  
-```  
-// crt_assert.c  
-// compile by using: cl /W4 crt_assert.c  
-#include <stdio.h>  
-#include <assert.h>  
-#include <string.h>  
-  
-void analyze_string( char *string );   // Prototype  
-  
-int main( void )  
-{  
-   char  test1[] = "abc", *test2 = NULL, test3[] = "";  
-  
-   printf ( "Analyzing string '%s'\n", test1 ); fflush( stdout );  
-   analyze_string( test1 );  
-   printf ( "Analyzing string '%s'\n", test2 ); fflush( stdout );  
-   analyze_string( test2 );  
-   printf ( "Analyzing string '%s'\n", test3 ); fflush( stdout );  
-   analyze_string( test3 );  
-}  
-  
-// Tests a string to see if it is NULL,   
-// empty, or longer than 0 characters.  
-void analyze_string( char * string )  
-{  
-   assert( string != NULL );        // Cannot be NULL  
-   assert( *string != '\0' );       // Cannot be empty  
-   assert( strlen( string ) > 2 );  // Length must exceed 2  
-}  
-```  
-  
- 该程序会生成以下输出：  
-  
-```Output  
-Analyzing string 'abc'  
-Analyzing string '(null)'  
-Assertion failed: string != NULL, file crt_assert.c, line 25  
-```  
-  
- 断言失败后，可能会看到一个包含如下内容的消息框（具体取决于操作系统和运行时库的版本）：  
-  
-```Output  
-A problem caused the program to stop working correctly. Windows will close the program and notify you if a solution is available.  
-```  
-  
- 如果已安装调试器，请选择“调试”  按钮以启动调试器，或选择“关闭程序”  以退出。  
-  
-## <a name="see-also"></a>请参阅  
- [错误处理](../../c-runtime-library/error-handling-crt.md)   
- [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [raise](../../c-runtime-library/reference/raise.md)   
- [signal](../../c-runtime-library/reference/signal.md)   
- [_ASSERT、_ASSERTE、_ASSERT_EXPR 宏](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
- [_DEBUG](../../c-runtime-library/debug.md)
+
+计算表达式，如果结果为**false**，则打印诊断消息并中止程序。
+
+## <a name="syntax"></a>语法
+
+```C
+assert(
+   expression
+);
+void _assert(
+   char const* message,
+   char const* filename,
+   unsigned line
+);
+void _wassert(
+   wchar_t const* message,
+   wchar_t const* filename,
+   unsigned line
+);
+```
+
+### <a name="parameters"></a>参数
+
+*表达式*计算结果不为零的标量表达式 （包括指针表达式） (**true**) 或 0 (**false**)。
+
+*消息*要显示的消息。
+
+*filename*文件中的失败的断言的源名称。
+
+*行*失败的断言的源文件中的行号。
+
+## <a name="remarks"></a>备注
+
+**断言**宏通常用于标识程序开发过程的逻辑错误。 使用它来停止程序执行，通过实现出现意外的情况时*表达式*自变量的计算结果为**false**仅当程序操作不正确。 断言检查可关闭在编译时通过定义宏**NDEBUG**。 你可以将关闭**断言**而无需通过修改你的源文件的宏 **/DNDEBUG**命令行选项。 你可以将关闭**断言**通过在源代码中的宏`#define NDEBUG`指令之前\<.h > 是包含。
+
+**断言**宏打印诊断消息时*表达式*计算结果为**false** (0) 和调用[中止](abort.md)终止程序执行。 如果不执行任何操作*表达式*是**true** （非零）。 诊断消息包括失败的表达式、源文件的名称以及断言失败的行号。
+
+诊断消息将用宽字符打印。 因此，它将按预期工作，即使表达式中存在 Unicode 字符也是如此。
+
+诊断消息的目标取决于调用例程的应用程序的类型。 控制台应用程序始终接收通过消息**stderr**。 在基于 Windows 的应用程序，**断言**调用 Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)函数来创建一个消息框以显示消息以及**确定**按钮。 当用户单击 **“确定”**后，程序将立即中止。
+
+当运行时库的调试版本链接应用程序**断言**创建带三个按钮的消息框：**中止**，**重试**，和**忽略**。 如果用户单击 **“中止”**，则程序将立即中止。 如果用户单击 **“重试”**，则将调用调试器，之后用户可以调试程序，前提是启用了实时 (JIT) 调试。 如果用户单击**忽略**，**断言**继续其常规执行： 创建带的消息框**确定**按钮。 请注意，当存在错误条件时单击 **“忽略”** 可能导致未定义的行为。
+
+有关 CRT 调试的详细信息，请参阅 [CRT 调试技术](/visualstudio/debugger/crt-debugging-techniques)。
+
+**_Assert**和 **_wassert**函数是内部 CRT 函数。 这两个函数可帮助最大程度地减少在对象文件中支持断言所需的代码。 建议不要直接调用这些函数。
+
+**断言**C 运行时库的发行版本和调试版本中启用宏时**NDEBUG**未定义。 当**NDEBUG**是定义，该宏为可用但不会计算其自变量，并不起作用。 启用后，**断言**宏调用 **_wassert**用于实现。 其他断言宏 [_ASSERT](assert-asserte-assert-expr-macros.md)、[_ASSERTE](assert-asserte-assert-expr-macros.md) 和 [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md) 也可用，但它们只有在已定义 [_DEBUG](../../c-runtime-library/debug.md) 宏的情况下以及存在于与 C 运行时库调试版本关联的代码中时才会计算传递给它们的表达式。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**断言**， **_wassert**|\<assert.h>|
+
+签名 **_assert**函数的头文件中不可用。 签名 **_wassert**功能才可用**NDEBUG**未定义宏。
+
+## <a name="example"></a>示例
+
+在此程序中， **analyze_string**函数使用**断言**与字符串和长度相关的宏来测试多个条件。 如果任意条件失败，则程序将打印指示失败原因的消息。
+
+```C
+// crt_assert.c
+// compile by using: cl /W4 crt_assert.c
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+
+void analyze_string( char *string );   // Prototype
+
+int main( void )
+{
+   char  test1[] = "abc", *test2 = NULL, test3[] = "";
+
+   printf ( "Analyzing string '%s'\n", test1 ); fflush( stdout );
+   analyze_string( test1 );
+   printf ( "Analyzing string '%s'\n", test2 ); fflush( stdout );
+   analyze_string( test2 );
+   printf ( "Analyzing string '%s'\n", test3 ); fflush( stdout );
+   analyze_string( test3 );
+}
+
+// Tests a string to see if it is NULL,
+// empty, or longer than 0 characters.
+void analyze_string( char * string )
+{
+   assert( string != NULL );        // Cannot be NULL
+   assert( *string != '\0' );       // Cannot be empty
+   assert( strlen( string ) > 2 );  // Length must exceed 2
+}
+```
+
+该程序会生成以下输出：
+
+```Output
+Analyzing string 'abc'
+Analyzing string '(null)'
+Assertion failed: string != NULL, file crt_assert.c, line 25
+```
+
+断言失败后，可能会看到一个包含如下内容的消息框（具体取决于操作系统和运行时库的版本）：
+
+```Output
+A problem caused the program to stop working correctly. Windows will close the program and notify you if a solution is available.
+```
+
+如果已安装调试器，请选择“调试”  按钮以启动调试器，或选择“关闭程序”  以退出。
+
+## <a name="see-also"></a>请参阅
+
+[错误处理](../../c-runtime-library/error-handling-crt.md)<br/>
+[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[raise](raise.md)<br/>
+[signal](signal.md)<br/>
+[_ASSERT、_ASSERTE、_ASSERT_EXPR 宏](assert-asserte-assert-expr-macros.md)<br/>
+[_DEBUG](../../c-runtime-library/debug.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "execv | Microsoft 文档"
-ms.custom: 
+title: execv | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - execv
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - execv function
 ms.assetid: b097d606-9384-427a-9a1d-707dc4ce03ae
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a88a6fa450ef109bc9d975aab6c1073d7abdbe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e830b5c5ab0b506d809d8fee8cde0ed93d9f755d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execv"></a>execv
-此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_execv](../../c-runtime-library/reference/execv-wexecv.md)。  
-  
+
+此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_execv](execv-wexecv.md)。
+
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。

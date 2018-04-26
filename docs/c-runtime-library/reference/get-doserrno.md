@@ -1,12 +1,12 @@
 ---
-title: "_get_doserrno | Microsoft 文档"
-ms.custom: 
+title: _get_doserrno | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_doserrno
@@ -32,51 +32,56 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccda58f0de7a22a5fe54e70e512cb4ae88d063e0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba68356f13ed416a33f0bde54426ec2182e8e166
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdoserrno"></a>_get_doserrno
-请先获取由操作系统返回的错误值，然后再将该值转换为 `errno` 值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-errno_t _get_doserrno(   
-   int * pValue   
-);   
-```  
-  
-#### <a name="parameters"></a>参数  
- [out] `pValue`  
- 指向要使用 `_doserrno` 全局宏的当前值填充的整数的指针。  
-  
-## <a name="return-value"></a>返回值  
- 如果 `_get_doserrno` 成功，则它将返回零；如果失败，则它将返回错误代码。 如果 `pValue` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。  
-  
-## <a name="remarks"></a>备注  
- 在进程执行开始之前，在 CRT 初始化过程中将 `_doserrno` 全局宏设置为零。 将它设置为由返回操作系统错误的任一系统级函数调用返回的操作系统错误值，而且在执行过程中永远不会将其重置为零。 当你编写代码以检查由某个函数返回的错误值时，请始终在函数调用之前使用 [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md) 清除 `_doserrno`。 因为另一个函数调用可能会覆盖 `_doserrno`，因此请在函数调用之后立即使用 `_get_doserrno` 检查该值。  
-  
- 建议使用 [_get_errno](../../c-runtime-library/reference/get-errno.md) 而非 `_get_doserrno` 获取可移植的错误代码。  
-  
- 在 \<errno.h> 中定义 `_doserrno` 的可能值。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|可选标头|  
-|-------------|---------------------|---------------------|  
-|`_get_doserrno`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|  
-  
- `_get_doserrno` 是 Microsoft 扩展。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)   
- [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+
+获取之前它将转换为返回的操作系统的错误值**errno**值。
+
+## <a name="syntax"></a>语法
+
+```C
+errno_t _get_doserrno( 
+   int * pValue 
+);
+```
+
+### <a name="parameters"></a>参数
+
+*pValue*<br/>
+指向要使用的当前值填充的整数的指针 **_doserrno**全局宏。
+
+## <a name="return-value"></a>返回值
+
+如果 **_get_doserrno**成功，它将返回零; 如果失败，则返回错误代码。 如果*pValue*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+
+## <a name="remarks"></a>备注
+
+**_Doserrno**全局宏设置为零 CRT 初始化期间，在过程之前执行开始。 将它设置为由返回操作系统错误的任一系统级函数调用返回的操作系统错误值，而且在执行过程中永远不会将其重置为零。 当你编写代码以检查错误值返回的函数，始终清除 **_doserrno**使用[_set_doserrno](set-doserrno.md)函数调用之前。 因为另一个函数调用可能会覆盖 **_doserrno**，通过检查值 **_get_doserrno**紧跟函数调用。
+
+我们建议[_get_errno](get-errno.md)而不是 **_get_doserrno**可移植的错误代码。
+
+可能的值的 **_doserrno**中定义\<.h >。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|可选标头|
+|-------------|---------------------|---------------------|
+|**_get_doserrno**|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+
+**_get_doserrno**是 Microsoft 扩展。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[_set_doserrno](set-doserrno.md)<br/>
+[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

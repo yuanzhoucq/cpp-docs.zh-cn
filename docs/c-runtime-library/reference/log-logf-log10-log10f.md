@@ -1,18 +1,17 @@
 ---
-title: "log、logf、log10、log10f | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 日志、 logf、 logl、 log10、 log10f、 log10l |Microsoft 文档
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - log10f
 - logf
 - log10
 - log
+- log10l
+- logl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,10 +27,12 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - logf
+- logl
 - _log10l
 - log
 - _logl
 - log10f
+- log10l
 - log10
 dev_langs:
 - C++
@@ -40,146 +41,133 @@ helpviewer_keywords:
 - log10f function
 - log10 function
 - log function
+- log10l function
+- logl function
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e18cd4c602940884eec13a3b1650afe738acd66
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5b698eab686403dc2350d3d9cc1ddfc1c5065418
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="log-logf-log10-log10f"></a>log、logf、log10、log10f
-计算对数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-      double log(  
-   double x   
-);  
-float log(  
-   float x  
-);  // C++ only  
-long double log(  
-   long double x  
-);  // C++ only  
-float logf(  
-   float x   
-);  
-double log10(  
-   double x  
-);  
-float log10(  
-   float x  
-);  // C++ only  
-long double log10(  
-   long double x  
-);  // C++ only  
-float log10f (  
-   float x  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- *x*  
- 要查找的值的对数。  
-  
-## <a name="return-value"></a>返回值  
- 如果操作成功，则 **log** 函数返回 *x* 的自然对数（以 e 为底数）。 log10 函数返回以 10 为底数的对数。 如果 *x* 是负数，那么默认情况下，这些函数将返回无穷大。 如果 *x* 为 0，则它们将返回 INF（无限）。  
-  
-|输入|SEH 异常|Matherr 异常|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|无|_DOMAIN|  
-|± 0|ZERODIVIDE|_SING|  
-|x < 0|无效|_DOMAIN|  
-  
- **log** 和 `log10` 具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
-  
-## <a name="remarks"></a>备注  
- C++ 允许重载，因此你可以调用 **log** 和 `log10` 的重载。 在 C 程序中，**log** 和 `log10` 始终采用并返回一个双精度值。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|**log**、`logf`、`log10`、`log10f`|\<math.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>库  
- [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_log.c  
-/* This program uses log and log10  
- * to calculate the natural logarithm and  
- * the base-10 logarithm of 9,000.  
- */  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 9000.0;  
-   double y;  
-  
-   y = log( x );  
-   printf( "log( %.2f ) = %f\n", x, y );  
-   y = log10( x );  
-   printf( "log10( %.2f ) = %f\n", x, y );  
-}  
-```  
-  
-## <a name="output"></a>输出  
-  
-```  
-log( 9000.00 ) = 9.104980  
-log10( 9000.00 ) = 3.954243  
-```  
-  
- 若要生成其他底数的对数，请使用数学关系：a 的 log 底数 b == 自然 log (a) / 自然 log （b）。  
-  
-```  
-// logbase.cpp  
-#include <math.h>  
-#include <stdio.h>  
-  
-double logbase(double a, double base)  
-{  
-   return log(a) / log(base);  
-}  
-  
-int main()  
-{  
-   double x = 65536;  
-   double result;  
-  
-   result = logbase(x, 2);  
-   printf("Log base 2 of %lf is %lf\n", x, result);  
-}  
-```  
-  
-## <a name="output"></a>输出  
-  
-```  
-Log base 2 of 65536.000000 is 16.000000  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [exp、 expf，资源管理器](../../c-runtime-library/reference/exp-expf.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [pow、powf、powl](../../c-runtime-library/reference/pow-powf-powl.md)   
- [_CIlog](../../c-runtime-library/cilog.md)   
- [_CIlog10](../../c-runtime-library/cilog10.md)
+# <a name="log-logf-logl-log10-log10f-log10l"></a>日志、 logf、 logl、 log10、 log10f、 log10l
+
+计算对数。
+
+## <a name="syntax"></a>语法
+
+```C
+double log( double x );
+float logf( float x );
+long double logl( double x );
+double log10( double x );
+float log10f ( float x );
+long double log10l( double x );
+```
+
+```cpp
+float log( float x );  // C++ only
+long double log( long double x );  // C++ only
+float log10( float x );  // C++ only
+long double log10( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*x*<br/>
+要查找的值的对数。
+
+## <a name="return-value"></a>返回值
+
+**日志**函数返回自然对数 (基*e*) 的*x*如果成功。 **Log10**函数返回的以 10 为基数的对数。 如果*x*为负，则这些函数返回无限期 (IND)，默认情况下。 如果*x*为 0，它们将返回无穷大 (INF)。
+
+|输入|SEH 异常|Matherr 异常|
+|-----------|-------------------|-----------------------|
+|± QNAN、 IND|无|_DOMAIN|
+|± 0|ZERODIVIDE|_SING|
+|*x* < 0|INVALID|_DOMAIN|
+
+**日志**和**log10**使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+
+## <a name="remarks"></a>备注
+
+C + + 允许重载，因此您可以调用的重载**日志**和**log10**采用并返回**float**或**长双精度**值。 在 C 程序中，**日志**和**log10**始终采用并返回**double**。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**日志**， **logf**， **logl**， **log10**， **log10f**， **log10l**|\<math.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_log.c
+/* This program uses log and log10
+* to calculate the natural logarithm and
+* the base-10 logarithm of 9,000.
+*/
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 9000.0;
+   double y;
+
+   y = log( x );
+   printf( "log( %.2f ) = %f\n", x, y );
+   y = log10( x );
+   printf( "log10( %.2f ) = %f\n", x, y );
+}
+```
+
+```Output
+log( 9000.00 ) = 9.104980
+log10( 9000.00 ) = 3.954243
+```
+
+若要生成其他底数的对数，请使用数学关系：a 的 log 底数 b == 自然 log (a) / 自然 log （b）。
+
+```cpp
+// logbase.cpp
+#include <math.h>
+#include <stdio.h>
+
+double logbase(double a, double base)
+{
+   return log(a) / log(base);
+}
+
+int main()
+{
+   double x = 65536;
+   double result;
+
+   result = logbase(x, 2);
+   printf("Log base 2 of %lf is %lf\n", x, result);
+}
+```
+
+```Output
+Log base 2 of 65536.000000 is 16.000000
+```
+
+## <a name="see-also"></a>请参阅
+
+[浮点支持](../../c-runtime-library/floating-point-support.md) <br/>
+[exp、expf、expl](exp-expf.md) <br/>
+[_matherr](matherr.md) <br/>
+[pow、powf、powl](pow-powf-powl.md) <br/>
+[_CIlog](../../c-runtime-library/cilog.md) <br/>
+[_CIlog10](../../c-runtime-library/cilog10.md)<br/>

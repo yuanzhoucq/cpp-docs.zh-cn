@@ -1,12 +1,12 @@
 ---
-title: "_strtime、_wstrtime | Microsoft 文档"
-ms.custom: 
+title: _strtime、_wstrtime | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wstrtime
@@ -42,97 +42,102 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c355d5d11fe403b8004eeb3b90dc46ba34dab3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2533fa8e3c60cbecbf4ab04c4f2508ef225b62a3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime、_wstrtime
-将时间复制到缓冲区。 这些函数的更安全版本已经发布；请参阅 [_strtime_s、_wstrtime_s](../../c-runtime-library/reference/strtime-s-wstrtime-s.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-char *_strtime(  
-   char *timestr   
-);  
-wchar_t *_wstrtime(  
-   wchar_t *timestr   
-);  
-template <size_t size>  
-char *_strtime(  
-   char (&timestr)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wstrtime(  
-   wchar_t (&timestr)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>参数  
- `timestr`  
- 时间字符串。  
-  
-## <a name="return-value"></a>返回值  
- 返回一个指向结果字符串 `timestr` 的指针。  
-  
-## <a name="remarks"></a>备注  
- `_strtime`函数将当前的本地时间复制到缓冲区的指向`timestr`。 时间格式为 `hh:mm:ss`，其中 `hh` 是以 24 小时制表示小时的两位数，`mm` 是表示整点过的分钟数的两位数，`ss` 是表示秒的两位数。 例如，字符串 `18:23:44` 表示下午 6 点 23 分 44 秒。 缓冲区长度必须至少为 9 个字节。  
-  
- `_wstrtime` 是 `_strtime` 的宽字符版本；`_wstrtime` 的参数和返回值都是宽字符字符串。 否则，这些函数具有相同的行为。如果 `timestr` 是 `NULL` 指针，或者如果 `timestr` 格式不正确，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 NULL，并且如果 `timestr` 为 NULL，则将 `errno` 设置为 `EINVAL`，或者如果 `timestr` 的格式不正确，则将 `errno` 设置为 `ERANGE`。  
-  
- 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstrtime`|`_strtime`|`_strtime`|`_wstrtime`|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_strtime`|\<time.h>|  
-|`_wstrtime`|\<time.h> 或 \<wchar.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_strtime.c  
-// compile with: /W3  
-  
-#include <time.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char tbuffer [9];  
-   _strtime( tbuffer ); // C4996  
-   // Note: _strtime is deprecated; consider using _strtime_s instead  
-   printf( "The current time is %s \n", tbuffer );  
-}  
-```  
-  
-```Output  
-The current time is 14:21:44  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [时间管理](../../c-runtime-library/time-management.md)   
- [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [mktime、_mktime32、_mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset](../../c-runtime-library/reference/tzset.md)
+
+将时间复制到缓冲区。 这些函数的更安全版本已经发布；请参阅 [_strtime_s、_wstrtime_s](strtime-s-wstrtime-s.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+char *_strtime(
+   char *timestr
+);
+wchar_t *_wstrtime(
+   wchar_t *timestr
+);
+template <size_t size>
+char *_strtime(
+   char (&timestr)[size]
+); // C++ only
+template <size_t size>
+wchar_t *_wstrtime(
+   wchar_t (&timestr)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*timestr*<br/>
+时间字符串。
+
+## <a name="return-value"></a>返回值
+
+将指针返回到生成的字符字符串*timestr*。
+
+## <a name="remarks"></a>备注
+
+**_Strtime**函数将当前的本地时间复制到缓冲区的指向*timestr*。 其时间格式为**hh: mm:** 其中**hh**是表示二十四小时制的小时数的两个数字**mm**是两个数字表示小时和分钟**ss**是两位数表示秒。 例如，在字符串**18:23:44**表示 23 分 44 秒过去 6 P.M. 缓冲区长度必须至少为 9 个字节。
+
+**_wstrtime**是宽字符版本的 **_strtime**; 的自变量和返回值 **_wstrtime**是宽字符字符串。 这些函数否则具有相同行为。如果*timestr*是**NULL**指针或如果*timestr*的格式错误，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许异常若要继续，这些函数返回 NULL 和集**errno**到**EINVAL**如果*timestr*为 null 或设置**errno**到**ERANGE**如果*timestr*的格式不正确。
+
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_strtime**|\<time.h>|
+|**_wstrtime**|\<time.h> 或 \<wchar.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_strtime.c
+// compile with: /W3
+
+#include <time.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char tbuffer [9];
+   _strtime( tbuffer ); // C4996
+   // Note: _strtime is deprecated; consider using _strtime_s instead
+   printf( "The current time is %s \n", tbuffer );
+}
+```
+
+```Output
+The current time is 14:21:44
+```
+
+## <a name="see-also"></a>请参阅
+
+[时间管理](../../c-runtime-library/time-management.md)<br/>
+[asctime、_wasctime](asctime-wasctime.md)<br/>
+[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
+[gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
+[localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
+[mktime、_mktime32、_mktime64](mktime-mktime32-mktime64.md)<br/>
+[time、_time32、_time64](time-time32-time64.md)<br/>
+[_tzset](tzset.md)<br/>

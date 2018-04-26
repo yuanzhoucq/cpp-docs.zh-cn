@@ -1,12 +1,12 @@
 ---
-title: "wcsrtombs | Microsoft 文档"
-ms.custom: 
+title: wcsrtombs | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcsrtombs
@@ -32,127 +32,133 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45dd47ed3c6136c4aff860efd51de18e120803ec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ea3544c9d6d84ab4671e505f7389f72dbb25095a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
-将宽字符字符串转换为多字节字符串表示形式。 此函数有一个更安全的版本；请参阅 [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-size_t wcsrtombs(  
-   char *mbstr,  
-   const wchar_t **wcstr,  
-   sizeof count,  
-   mbstate_t *mbstate  
-);  
-template <size_t size>  
-size_t wcsrtombs(  
-   char (&mbstr)[size],  
-   const wchar_t **wcstr,  
-   sizeof count,  
-   mbstate_t *mbstate  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>参数  
- [out] `mbstr`  
- 生成的已转换多字节字符字符串的地址位置。  
-  
- [in] `wcstr`  
- 间接指向要转换的宽字符字符串的位置。  
-  
- [in] `count`  
- 要转换的字符数。  
-  
- [in] `mbstate`  
- 指向 `mbstate_t` 转换状态对象的指针。  
-  
-## <a name="return-value"></a>返回值  
- 返回已成功转换的字节数，不包括 null 终止 null 字节（如果有），发生错误时则为 -1。  
-  
-## <a name="remarks"></a>备注  
- 从 `mbstate` 中包含的指定转换状态开始，`wcsrtombs` 函数将 `wcstr` 中间接指向的宽字符字符串值转换为 `mbstr` 地址。 在遇到 null 终止宽字符或非相应字符或在下一个字符将超过 `count` 中的限制之前，每个字符的转换都将会一直进行。 如果 `wcsrtombs` 在 `count` 出现前或出现时遇到宽字符 null 字符 (L'\0')，则它将该字符转换为 8 位 0 并停止操作。  
-  
- 因此，只有当 `wcsrtombs` 在转换期间遇到宽字符 null 字符时，`mbstr` 处的多字节字符串才以 null 结尾。 如果 `wcstr` 和 `mbstr` 指向的序列重叠，则 `wcsrtombs` 的行为没有定义。 `wcsrtombs` 受到当前区域设置中 LC_TYPE 类别的影响。  
-  
- `wcsrtombs` 函数的可重启性不同于 [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)。 转换状态存储在 `mbstate` 中，以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用 `wcsrlen`（而非 `wcsnlen`）的后续调用，则应用程序应使用 `wcsrtombs`，而非 `wcstombs`。  
-  
- 如果 `mbstr` 参数为 `NULL`，则 `wcsrtombs` 会返回目标字符串所需的大小（以字节为单位）。 如果 `mbstate` 为 null，则使用内部 `mbstate_t` 转换状态。 如果字符序列 `wchar` 不具有相应的多字节字符表示形式，则返回 -1 且将 `errno` 设置为 `EILSEQ`。  
-  
- 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-## <a name="exceptions"></a>异常  
- 只要当前线程中的函数都不调用 `setlocale`，此函数正在执行且 `mbstate` 不是 null，`wcsrtombs` 函数就是多线程安全的。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_wcsrtombs.cpp  
-// compile with: /W3  
-// This code example converts a wide  
-// character string into a multibyte  
-// character string.  
-  
-#include <stdio.h>  
-#include <memory.h>  
-#include <wchar.h>  
-#include <errno.h>  
-  
-#define MB_BUFFER_SIZE 100  
-  
-int main()  
-{  
-    const wchar_t   wcString[] =   
-                    {L"Every good boy does fine."};  
-    const wchar_t   *wcsIndirectString = wcString;  
-    char            mbString[MB_BUFFER_SIZE];  
-    size_t          countConverted;  
-    mbstate_t       mbstate;  
-  
-    // Reset to initial shift state  
-    ::memset((void*)&mbstate, 0, sizeof(mbstate));  
-  
-    countConverted = wcsrtombs(mbString, &wcsIndirectString,  
-                               MB_BUFFER_SIZE, &mbstate); // C4996  
-    // Note: wcsrtombs is deprecated; consider using wcsrtombs_s  
-    if (errno == EILSEQ)  
-    {  
-        printf( "An encoding error was detected in the string.\n" );  
-    }  
-    else   
-    {  
-        printf( "The string was successfuly converted.\n" );  
-    }  
-}  
-```  
-  
-```Output  
-The string was successfuly converted.  
-```  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`wcsrtombs`|\<wchar.h>|  
-  
-## <a name="see-also"></a>请参阅  
- [数据转换](../../c-runtime-library/data-conversion.md)   
- [区域设置](../../c-runtime-library/locale.md)   
- [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [mbsinit](../../c-runtime-library/reference/mbsinit.md)
+
+将宽字符字符串转换为多字节字符串表示形式。 此函数有一个更安全的版本；请参阅 [wcsrtombs_s](wcsrtombs-s.md)。
+
+## <a name="syntax"></a>语法
+
+```C
+size_t wcsrtombs(
+   char *mbstr,
+   const wchar_t **wcstr,
+   sizeof count,
+   mbstate_t *mbstate
+);
+template <size_t size>
+size_t wcsrtombs(
+   char (&mbstr)[size],
+   const wchar_t **wcstr,
+   sizeof count,
+   mbstate_t *mbstate
+); // C++ only
+```
+
+### <a name="parameters"></a>参数
+
+*mbstr*<br/>
+生成的已转换多字节字符字符串的地址位置。
+
+*wcstr*<br/>
+间接指向要转换的宽字符字符串的位置。
+
+*count*<br/>
+要转换的字符数。
+
+*mbstate*<br/>
+指向的指针**mbstate_t**转换状态对象。
+
+## <a name="return-value"></a>返回值
+
+返回已成功转换的字节数，不包括 null 终止 null 字节（如果有），发生错误时则为 -1。
+
+## <a name="remarks"></a>备注
+
+**Wcsrtombs**函数将宽字符，从开始中包含的指定的转换状态的字符串转换*mbstate*，从中指向的值间接*wcstr*，到的地址*mbstr*。 该转换将一直对每个字符之前： 在遇到非相应字符时遇到 null 终止宽字符后或在下一个字符会超过中包含的限制时*计数*。 如果**wcsrtombs**之前或当遇到宽字符 null 字符 (L \0')*计数*发生，它将其转换为 8 位 0 并且停止。
+
+因此，在多字节字符字符串*mbstr*是以 null 结尾的仅当**wcsrtombs**在转换过程中遇到宽字符 null 字符。 如果指向的序列*wcstr*和*mbstr*重叠的行为**wcsrtombs**是不确定的。 **wcsrtombs**受到当前区域设置中 LC_TYPE 类别。
+
+**Wcsrtombs**函数不同于[wcstombs、 _wcstombs_l](wcstombs-wcstombs-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，应用程序将使用**wcsrlen**而非**wcsnlen**，如果的后续调用**wcsrtombs**而不是使用**wcstombs**.
+
+如果*mbstr*自变量是**NULL**， **wcsrtombs**返回以字节为单位的目标字符串所需的大小。 如果*mbstate*为 null，内部**mbstate_t**使用转换状态。 如果字符序列*wchar*没有相应的多字节字符表示形式，则返回-1 和**errno**设置为**EILSEQ**。
+
+在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+## <a name="exceptions"></a>异常
+
+**Wcsrtombs**函数是多线程安全，前提是当前线程中的函数不调用**setlocale**时执行此函数和*mbstate*不为 null。
+
+## <a name="example"></a>示例
+
+```cpp
+// crt_wcsrtombs.cpp
+// compile with: /W3
+// This code example converts a wide
+// character string into a multibyte
+// character string.
+
+#include <stdio.h>
+#include <memory.h>
+#include <wchar.h>
+#include <errno.h>
+
+#define MB_BUFFER_SIZE 100
+
+int main()
+{
+    const wchar_t   wcString[] =
+                    {L"Every good boy does fine."};
+    const wchar_t   *wcsIndirectString = wcString;
+    char            mbString[MB_BUFFER_SIZE];
+    size_t          countConverted;
+    mbstate_t       mbstate;
+
+    // Reset to initial shift state
+    ::memset((void*)&mbstate, 0, sizeof(mbstate));
+
+    countConverted = wcsrtombs(mbString, &wcsIndirectString,
+                               MB_BUFFER_SIZE, &mbstate); // C4996
+    // Note: wcsrtombs is deprecated; consider using wcsrtombs_s
+    if (errno == EILSEQ)
+    {
+        printf( "An encoding error was detected in the string.\n" );
+    }
+    else
+    {
+        printf( "The string was successfuly converted.\n" );
+    }
+}
+```
+
+```Output
+The string was successfuly converted.
+```
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**wcsrtombs**|\<wchar.h>|
+
+## <a name="see-also"></a>请参阅
+
+[数据转换](../../c-runtime-library/data-conversion.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[wcrtomb](wcrtomb.md)<br/>
+[wcrtomb_s](wcrtomb-s.md)<br/>
+[wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
+[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[mbsinit](mbsinit.md)<br/>

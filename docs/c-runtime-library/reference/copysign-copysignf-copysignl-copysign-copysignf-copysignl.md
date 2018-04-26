@@ -1,12 +1,12 @@
 ---
-title: "copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl | Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl | Microsoft 文档
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - copysignf
@@ -45,78 +45,83 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37dc44d64a5cc2828222c9174eacc1110e622842
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d52802914fee97f7c8df1472998ae5c8d7b139cb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
-返回一个值，该值具有一个自变量的数值和另一个自变量的符号。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-double copysign(   
-   double x,  
-   double y   
-);  
-float copysign(   
-   float x,  
-   float y   
-); // C++ only  
-long double copysign(   
-   long double x,  
-   long double y   
-); // C++ only  
-float copysignf(   
-   float x,  
-   float y   
-); // C++ only  
-long double copysignl(   
-   long double x,  
-   long double y   
-); // C++ only  
-double _copysign(   
-   double x,  
-   double y   
-);  
-long double _copysignl(   
-   long double x,  
-   long double y   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `x`  
- 作为结果的数值返回的浮点值。  
-  
- `y`  
- 作为结果的符号返回的浮点值。  
-  
- [浮点支持例程](../../c-runtime-library/floating-point-support.md)  
-  
-## <a name="return-value"></a>返回值  
- `copysign` 函数返回将 `x` 的数值与 `y` 的符号相结合的浮点值。 无错误返回。  
-  
-## <a name="remarks"></a>备注  
- 由于 C++ 允许重载，因此你可以调用采用并返回 `copysign` 或 `float` 值的 `long double` 重载。 在 C 程序中，`copysign` 始终采用并返回 `double`。  
-  
-## <a name="requirements"></a>要求  
-  
-|例程|必需的标头|  
-|-------------|---------------------|  
-|`_copysign`|\<float.h>|  
-|`copysign`，`copysignf`，`copysignl`，`_copysignf`，`_copysignl`|\<math.h>|  
-  
- 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [fabs、fabsf、fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [_chgsign、_chgsignf、_chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)
+
+返回一个值，该值具有一个自变量的数值和另一个自变量的符号。
+
+## <a name="syntax"></a>语法
+
+```C
+double copysign(
+   double x,
+   double y
+);
+float copysign(
+   float x,
+   float y
+); // C++ only
+long double copysign(
+   long double x,
+   long double y
+); // C++ only
+float copysignf(
+   float x,
+   float y
+); // C++ only
+long double copysignl(
+   long double x,
+   long double y
+); // C++ only
+double _copysign(
+   double x,
+   double y
+);
+long double _copysignl(
+   long double x,
+   long double y
+);
+```
+
+### <a name="parameters"></a>参数
+
+*x*<br/>
+作为结果的数值返回的浮点值。
+
+*y*<br/>
+作为结果的符号返回的浮点值。
+
+[浮点支持例程](../../c-runtime-library/floating-point-support.md)
+
+## <a name="return-value"></a>返回值
+
+**Copysign**函数返回浮点值，它将合并的量*x*和的符号*y*。 无错误返回。
+
+## <a name="remarks"></a>备注
+
+由于 c + + 允许重载，你可以调用的重载**copysign**采用并返回**float**或**长** **double**值。 在 C 程序中， **copysign**始终采用并返回**double**。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_copysign**|\<float.h>|
+|**copysign**， **copysignf**， **copysignl**， **_copysignf**， **_copysignl**|\<math.h>|
+
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
+[_chgsign、_chgsignf、_chgsignl](chgsign-chgsignf-chgsignl.md)<br/>

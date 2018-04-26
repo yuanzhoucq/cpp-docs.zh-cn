@@ -1,12 +1,12 @@
 ---
-title: "and | Microsoft 文档"
-ms.custom: 
+title: and | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,59 +29,62 @@ dev_langs:
 helpviewer_keywords:
 - and macro
 ms.assetid: 2644ab57-8e1b-48f0-9021-cafe3e26bdc4
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984925cbb40daecb66fb964e884197a7fb0f8c9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c07514561e9204cab5783f112d359668858ea0f6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="and"></a>与
-&& 运算符的替代项。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#define and &&  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- 该宏产生运算符 &&。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// iso646_and.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   bool a = true, b = false, result;  
-  
-   boolalpha(cout);  
-  
-   result= a && b;  
-   cout << result << endl;  
-  
-   result= a and b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-false  
-false  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** \<iso646.h>
+# <a name="and"></a>和
+
+&& 运算符的替代项。
+
+## <a name="syntax"></a>语法
+
+```C
+
+#define and &&
+
+```
+
+## <a name="remarks"></a>备注
+
+该宏产生运算符 &&。
+
+## <a name="example"></a>示例
+
+```cpp
+// iso646_and.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   bool a = true, b = false, result;
+
+   boolalpha(cout);
+
+   result= a && b;
+   cout << result << endl;
+
+   result= a and b;
+   cout << result << endl;
+}
+```
+
+```Output
+false
+false
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** \<iso646.h>

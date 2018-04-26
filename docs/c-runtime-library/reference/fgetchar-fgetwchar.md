@@ -1,12 +1,12 @@
 ---
-title: "_fgetchar、_fgetwchar | Microsoft 文档"
-ms.custom: 
+title: _fgetchar、_fgetwchar | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fgetchar
@@ -41,92 +41,96 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b6f6933d8483e3fee792829b0efde8e35ad91a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
-从 `stdin` 读取一个字符。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int _fgetchar( void );  
-wint_t _fgetwchar( void );  
-```  
-  
-## <a name="return-value"></a>返回值  
- `_fgetchar` 返回读作 `int` 的字符或返回 `EOF` 以指示错误或文件结尾。 **_**`fgetwchar` 将返回对应于字符读取的宽字符（作为 [wint_t](../../c-runtime-library/standard-types.md)）或返回 `WEOF` 以指示错误或文件结尾。 对于这两个函数，使用 `feof` 或 `ferror` 来区分错误和文件结尾条件。  
-  
-## <a name="remarks"></a>备注  
- 这些函数读取 `stdin` 中的单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。  
-  
- `_fgetchar` 与 `fgetc( stdin )` 相等。 它也等效于 `getchar`，但仅作为函数实现，而不是同时作为函数和宏实现。 `_fgetwchar` 是 `_fgetchar` 的宽字符版本。  
-  
- 这些函数不符合 ANSI 标准。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fgettchar`|`_fgetchar`|`_fgetchar`|`_fgetwchar`|  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`_fgetchar`|\<stdio.h>|  
-|`_fgetwchar`|\<stdio.h> 或 \<wchar.h>|  
-  
- 通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄-`stdin`， `stdout`，和`stderr`-中使用 C 运行时函数之前必须重定向 [！INCLUDEUWP 应用。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// crt_fgetchar.c  
-// This program uses _fgetchar to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-//  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Read in first 80 characters and place them in "buffer":  
-   ch = _fgetchar();  
-   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = _fgetchar();  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-      Line one.  
-Line two.Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+读取从一个字符**stdin**。
+
+## <a name="syntax"></a>语法
+
+```C
+int _fgetchar( void );
+wint_t _fgetwchar( void );
+```
+
+## <a name="return-value"></a>返回值
+
+**_fgetchar**返回作为读取的字符**int**或返回**EOF**以指示错误或文件结尾。 **_ * * * fgetwchar**返回时，作为[wint_t](../../c-runtime-library/standard-types.md)，对应于读取的字符或返回的宽字符**WEOF**以指示错误或文件结尾。 对于这两个函数中，使用**feof**或**ferror**来区分错误和文件尾条件。
+
+## <a name="remarks"></a>备注
+
+这些函数读取单个字符从**stdin**。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
+
+**_fgetchar**等效于`fgetc( stdin )`。 它还等效于**getchar**，但仅作为函数，而不是作为函数和宏实现。 **_fgetwchar**是宽字符版本的 **_fgetchar**。
+
+这些函数不符合 ANSI 标准。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fgettchar**|**_fgetchar**|**_fgetchar**|**_fgetwchar**|
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**_fgetchar**|\<stdio.h>|
+|**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
+
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄-**stdin**， **stdout**，和**stderr**-必须将 C 运行时函数才能使用它们在 UWP 应用重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+```C
+// crt_fgetchar.c
+// This program uses _fgetchar to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char buffer[81];
+   int  i, ch;
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = _fgetchar();
+   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = _fgetchar();
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+}
+```
+
+```Output
+
+      Line one.
+Line two.Line one.
+Line two.
+```
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc、fputwc](fputc-fputwc.md)<br/>
+[getc、getwc](getc-getwc.md)<br/>

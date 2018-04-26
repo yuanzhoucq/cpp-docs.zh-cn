@@ -1,12 +1,12 @@
 ---
-title: "_initterm, _initterm_e | Microsoft 文档"
-ms.custom: 
+title: _initterm, _initterm_e | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _initterm_e
@@ -37,44 +37,48 @@ helpviewer_keywords:
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27e165131b44181f1ee12f11477892fc144c267
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 968e354662deb065aa373d3044f638dc6cf077c4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="initterm-initterme"></a>_initterm、_initterm_e
-用于访问函数指针表并将其初始化的内部方法。  
-  
- 第一个指针位于表中的起始位置，第二个指针位于结束位置。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __cdecl _initterm(  
-   PVFV *,  
-   PVFV *  
-);  
-  
-int __cdecl _initterm_e(  
-   PVFV *,  
-   PVFV *  
-);  
-```  
-  
-## <a name="return-value"></a>返回值  
- 如果初始化失败并引发错误，则返回一个非零的错误代码；如果未发生错误，则返回 0。  
-  
-## <a name="remarks"></a>备注  
- 这些方法只能在 C++ 程序的初始化过程中进行内部调用。 请勿在程序中调用这些方法。  
-  
- 当这些方法访问函数条目表时，将跳过 `NULL` 条目并继续。  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+用于访问函数指针表并将其初始化的内部方法。
+
+第一个指针位于表中的起始位置，第二个指针位于结束位置。
+
+## <a name="syntax"></a>语法
+
+```C
+void __cdecl _initterm(
+   PVFV *,
+   PVFV *
+);
+
+int __cdecl _initterm_e(
+   PVFV *,
+   PVFV *
+);
+```
+
+## <a name="return-value"></a>返回值
+
+如果初始化失败并引发错误，则返回一个非零的错误代码；如果未发生错误，则返回 0。
+
+## <a name="remarks"></a>备注
+
+这些方法只能在 C++ 程序的初始化过程中进行内部调用。 请勿在程序中调用这些方法。
+
+当这些方法访问函数条目表时，它们会跳过**NULL**条目并继续。
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>

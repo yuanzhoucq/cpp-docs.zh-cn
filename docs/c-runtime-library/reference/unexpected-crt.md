@@ -1,12 +1,12 @@
 ---
-title: "unexpected (CRT) | Microsoft 文档"
-ms.custom: 
+title: unexpected (CRT) | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - unexpected
@@ -29,42 +29,45 @@ dev_langs:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86200fc9501b9a543bae3ebc19f5069e49859bb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3fce88dd7b2fdb821fc015130d25e54701c3e467
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
-调用 `terminate` 或使用 `set_unexpected` 指定的函数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void unexpected( void );  
-```  
-  
-## <a name="remarks"></a>备注  
- `unexpected` 例程不与 C++ 异常处理的当前实现一起使用。 默认情况下，`unexpected` 调用 `terminate`。 您可以通过以下方式更改此默认行为：编写自定义终止函数并调用 `set_unexpected`（将该函数的名称作为其参数）。 `unexpected` 调用作为 `set_unexpected` 的参数提供的最后一个函数。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`unexpected`|\<eh.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [异常处理例程](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
- [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)
+
+调用**终止**或使用指定的函数**set_unexpected**。
+
+## <a name="syntax"></a>语法
+
+```C
+void unexpected( void );
+```
+
+## <a name="remarks"></a>备注
+
+**意外**例程不与 c + + 异常处理的当前实现一起使用。 **意外**调用**终止**默认情况下。 你可以更改此默认行为： 编写自定义终止函数并调用**set_unexpected**与作为其自变量函数的名称。 **意外**调用的最后一个函数的自变量被当作**set_unexpected**。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**unexpected**|\<eh.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_set_se_translator](set-se-translator.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>

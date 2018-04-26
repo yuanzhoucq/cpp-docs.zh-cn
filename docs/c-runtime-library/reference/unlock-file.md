@@ -1,12 +1,12 @@
 ---
-title: "_unlock_file | Microsoft 文档"
-ms.custom: 
+title: _unlock_file | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlock_file
@@ -34,46 +34,49 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 503087d84e65e556fa610efbf0054c66ee774d48
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
-解锁文件，允许其他进程访问此文件。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void _unlock_file(  
-   FILE* file  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `file`  
- 文件句柄。  
-  
-## <a name="remarks"></a>备注  
- `_unlock_file` 函数解锁由 `file` 指定的文件。 解锁文件可允许其他进程访问此文件。 不应调用此函数，除非之前在 `file` 指针上调用了 `_lock_file`。 在未锁定的文件上调用 `_unlock_file` 可能会导致死锁。 有关示例，请参阅 [_lock_file](../../c-runtime-library/reference/lock-file.md)。  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_unlock_file`|\<stdio.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>请参阅  
- [文件处理](../../c-runtime-library/file-handling.md)   
- [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_lock_file](../../c-runtime-library/reference/lock-file.md)
+
+解锁文件，允许其他进程访问此文件。
+
+## <a name="syntax"></a>语法
+
+```C
+void _unlock_file(
+   FILE* file
+);
+```
+
+### <a name="parameters"></a>参数
+
+*文件*文件句柄。
+
+## <a name="remarks"></a>备注
+
+**_Unlock_file**函数解锁指定的文件*文件*。 解锁文件可允许其他进程访问此文件。 除非，不应该调用此函数 **_lock_file**之前已调用上*文件*指针。 调用 **_unlock_file**对不会锁定的文件可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_unlock_file**|\<stdio.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>请参阅
+
+[文件处理](../../c-runtime-library/file-handling.md)<br/>
+[_creat、_wcreat](creat-wcreat.md)<br/>
+[_open、_wopen](open-wopen.md)<br/>
+[_lock_file](lock-file.md)<br/>

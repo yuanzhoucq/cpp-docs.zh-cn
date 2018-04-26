@@ -1,12 +1,12 @@
 ---
-title: "fwrite | Microsoft 文档"
-ms.custom: 
+title: fwrite | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fwrite
@@ -31,69 +31,75 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b5328ce6851ceb61ad3260760e95cd329ee064
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b91ad6efe0573bc469e0752ed27978b12018ee7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwrite"></a>fwrite
-将数据写入流。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-size_t fwrite(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `buffer`  
- 指向要写入的数据的指针。  
-  
- `size`  
- 项大小（以字节为单位）。  
-  
- `count`  
- 要写入的项的最大数量。  
-  
- `stream`  
- 指向 `FILE` 结构的指针。  
-  
-## <a name="return-value"></a>返回值  
- `fwrite` 返回实际写入的整个项的数量，如果发生错误，则该数量可能会小于 `count`。 此外，如果发生错误，则无法确定文件位置指示器。 如果 `stream` 或 `buffer` 是空指针，或者如果在 Unicode 模式下指定了要写入的奇数个字节，则该函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 0。  
-  
-## <a name="remarks"></a>备注  
- `fwrite` 函数最多将 `count` 个项从 `size` 写入到输出 `buffer`，每个项的长度为 `stream`。 与 `stream` 相关联的文件指针（如果存在）以实际写入的字节数为增量进行递增。 如果`stream`打开在文本模式下，每个换行符替换为回车符-换行符对。 该替换不会影响返回值。  
-  
- 当在 Unicode 转换模式下打开 `stream` 时（例如，通过调用 `stream` 并使用包含 `fopen`、`ccs=UNICODE` 或 `ccs=UTF-16LE` 的模式参数打开 `ccs=UTF-8` 时，或者通过使用 `_setmode` 和包含 `_O_WTEXT`、`_O_U16TEXT` 或 `_O_U8TEXT` 的模式参数将该模式更改为 Unicode 转换模式时），会将 `buffer` 解释为指向包含 UTF-16 数据的 `wchar_t` 数组的指针。 尝试在此模式下写入奇数个字节会导致参数验证错误。  
-  
- 因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 `_fwrite_nolock`。  
-  
-## <a name="requirements"></a>要求  
-  
-|函数|必需的标头|  
-|--------------|---------------------|  
-|`fwrite`|\<stdio.h>|  
-  
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>示例  
- 请参阅 [fread](../../c-runtime-library/reference/fread.md) 示例。  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [_setmode](../../c-runtime-library/reference/setmode.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+将数据写入流。
+
+## <a name="syntax"></a>语法
+
+```C
+size_t fwrite(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>参数
+
+*buffer*<br/>
+指向要写入的数据的指针。
+
+*size*<br/>
+项大小（以字节为单位）。
+
+*count*<br/>
+要写入的项的最大数量。
+
+*流*<br/>
+指向**文件**结构的指针。
+
+## <a name="return-value"></a>返回值
+
+**fwrite**返回完整的数目实际写入的项，这可能会小于*计数*如果发生错误。 此外，如果发生错误，则无法确定文件位置指示器。 如果任一*流*或*缓冲区*是 null 指针，或如果在 Unicode 模式下指定了奇数个字节写入，则函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回 0。
+
+## <a name="remarks"></a>备注
+
+**Fwrite**函数最多写入*计数*项的*大小*长度每个，从*缓冲区*到输出*流*. 与关联的文件指针*流*（如果有） 就会递增的实际写入的字节数。 如果*流*打开在文本模式下，每个换行符替换为回车符-换行符对。 该替换不会影响返回值。
+
+当*流*在 Unicode 转换模式下打开 — 例如，如果*流*打开通过调用**fopen**和使用模式参数，其中包含**ccs= UNICODE**， **ccs = UTF 16LE**，或**ccs = utf-8**，或如果模式更改为 Unicode 转换模式使用 **_setmode**和模式参数，其中包含 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**-*缓冲区*解释为指向的指针数组**wchar_t**包含 utf-16 数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
+
+因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 **_fwrite_nolock**。
+
+## <a name="requirements"></a>要求
+
+|函数|必需的标头|
+|--------------|---------------------|
+|**fwrite**|\<stdio.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+请参阅 [fread](fread.md) 示例。
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[_setmode](setmode.md)<br/>
+[fread](fread.md)<br/>
+[_fwrite_nolock](fwrite-nolock.md)<br/>
+[_write](write.md)<br/>

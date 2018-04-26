@@ -1,12 +1,12 @@
 ---
-title: "not | Microsoft 文档"
-ms.custom: 
+title: not | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,57 +29,60 @@ dev_langs:
 helpviewer_keywords:
 - not function
 ms.assetid: d2ddbd5c-33c0-4aff-8961-feac155b4ba1
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6e9bef4d969f22c5ce87fd9654e4f8401b4769
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3ea6f505085b11abceaf204d2d2c17ef29bef347
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="not"></a>not
-! 的替代项 运算符。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-#define not !  
-  
-```  
-  
-## <a name="remarks"></a>备注  
- 该宏产生运算符 !。  
-  
-## <a name="example"></a>示例  
-  
-```  
-// iso646_not.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 0;  
-  
-   if (!a)  
-      cout << "a is zero" << endl;  
-  
-   if (not(a))  
-      cout << "a is zero" << endl;  
-}  
-```  
-  
-```Output  
-a is zero  
-a is zero  
-```  
-  
-## <a name="requirements"></a>要求  
- **标头：** \<iso646.h>
+
+! 的替代项 运算符。
+
+## <a name="syntax"></a>语法
+
+```C
+
+#define not !
+
+```
+
+## <a name="remarks"></a>备注
+
+该宏产生运算符 !。
+
+## <a name="example"></a>示例
+
+```cpp
+// iso646_not.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 0;
+
+   if (!a)
+      cout << "a is zero" << endl;
+
+   if (not(a))
+      cout << "a is zero" << endl;
+}
+```
+
+```Output
+a is zero
+a is zero
+```
+
+## <a name="requirements"></a>要求
+
+**标头：** \<iso646.h>

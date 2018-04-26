@@ -1,12 +1,12 @@
 ---
-title: "_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l | Microsoft 文档"
-ms.custom: 
+title: _vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vscprintf
@@ -51,92 +51,98 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0ba44a2e23baf8d901cb6bf5d9abd8306c32527
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4a8cfdd7eded5956e9e34faed53e93e0ad029361
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
-返回使用自变量列表指针的格式化字符串中的字符数。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-int _vscprintf(  
-   const char *format,  
-   va_list argptr   
-);  
-int _vscprintf_l(  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int _vscwprintf(  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vscwprintf_l(  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `format`  
- 窗体控件字符串。  
-  
- `argptr`  
- 指向参数列表的指针。  
-  
- `locale`  
- 要使用的区域设置。  
-  
- 有关更多信息，请参见 [格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
-  
-## <a name="return-value"></a>返回值  
- `_vscprintf` 返回在使用指定的格式化代码打印参数列表指向的字符串或将其发送到文件或缓冲区时生成的字符的数目。 返回的值不包括终止 null 字符。 `_vscwprintf` 对宽字符执行相同的函数。  
-  
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前线程区域设置。  
-  
- 如果 `format` 是 null 指针，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 -1 并将 `errno` 设置为 `EINVAL`。  
-  
-## <a name="remarks"></a>备注  
- 根据 `argument` 中的相应格式规范转换每个 `format`（如果有）。 该格式包括普通字符，其形式和函数与 `format` printf [的](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)参数相同。  
-  
+
+返回使用自变量列表指针的格式化字符串中的字符数。
+
+## <a name="syntax"></a>语法
+
+```C
+int _vscprintf(
+   const char *format,
+   va_list argptr
+);
+int _vscprintf_l(
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int _vscwprintf(
+   const wchar_t *format,
+   va_list argptr
+);
+int _vscwprintf_l(
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+```
+
+### <a name="parameters"></a>参数
+
+*format*<br/>
+窗体控件字符串。
+
+*argptr*<br/>
+指向参数列表的指针。
+
+*locale*<br/>
+要使用的区域设置。
+
+有关更多信息，请参见 [格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+
+## <a name="return-value"></a>返回值
+
+**_vscprintf**返回如果就会产生指向的字符串自变量列表的字符数打印或发送到文件或缓冲区使用指定的格式设置代码。 返回的值不包括终止 null 字符。 **_vscwprintf**对宽字符执行相同的功能。
+
+使用这些函数的版本 **_l**后缀是相同，只不过它们使用传递而不是当前线程区域设置的区域设置参数。
+
+如果*格式*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+
+## <a name="remarks"></a>备注
+
+每个*参数*（如果有） 根据中的相应格式规范转换*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。
+
 > [!IMPORTANT]
->  请确保在 `format` 为用户定义的字符串时，它是以 null 结尾的并具有正确的参数数量和类型。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
-  
-|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vsctprintf`|`_vscprintf`|`_vscprintf`|`_vscwprintf`|  
-|`_vsctprintf_l`|`_vscprintf_l`|`_vscprintf_l`|`_vscwprintf_l`|  
-  
-## <a name="requirements"></a>惠?  
-  
-|例程所返回的值|必需的标头|  
-|-------------|---------------------|  
-|`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
-|`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> 或 \<wchar.h>|  
-  
- 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>示例  
- 请参阅 [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) 的示例。  
-  
-## <a name="see-also"></a>请参阅  
- [流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf、_scanf_l、wscanf、_wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf 函数](../../c-runtime-library/vprintf-functions.md)
+> 确保，如果*格式*为用户定义的字符串，它是以 null 结尾，并且具有正确的数量和类型参数。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射
+
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
+|**_vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
+
+## <a name="requirements"></a>要求
+
+|例程|必需的标头|
+|-------------|---------------------|
+|**_vscprintf**， **_vscprintf_l**|\<stdio.h>|
+|**_vscwprintf**， **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|
+
+有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>示例
+
+请参阅 [vsprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) 的示例。
+
+## <a name="see-also"></a>请参阅
+
+[流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
+[vprintf 函数](../../c-runtime-library/vprintf-functions.md)<br/>
