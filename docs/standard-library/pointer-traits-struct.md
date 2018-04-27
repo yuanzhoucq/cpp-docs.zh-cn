@@ -1,12 +1,12 @@
 ---
-title: "pointer_traits 结构 | Microsoft Docs"
-ms.custom: 
+title: pointer_traits 结构 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
@@ -23,31 +23,34 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e419d8789e9dd6f3ed98e36a05a96d2e5f985082
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e6e6f6ca6c62e0dcb1d44d5f86a19e8a339a6b1
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pointertraits-struct"></a>pointer_traits 结构
-提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
+
+提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。
+
+## <a name="syntax"></a>语法
+
+```cpp
 template <class Ptr>
 struct pointer_traits;
-```  
-  
-## <a name="remarks"></a>备注  
- Ptr 可以是 `Ty *` 类型的原始指针或具有以下属性的类。  
-```  
+```
+
+## <a name="remarks"></a>备注
+
+Ptr 可以是 `Ty *` 类型的原始指针或具有以下属性的类。
+
+```cpp
 struct Ptr
    { // describes a pointer type usable by allocators
    typedef Ptr pointer;
@@ -57,41 +60,44 @@ struct Ptr
    using rebind = typename Ptr<Other, Rest...>; // optional
    static pointer pointer_to(element_type& obj);
    // optional
-   };  
+   };
 ```
-### <a name="typedefs"></a>Typedef  
-  
-|名称|描述|  
-|----------|-----------------|  
-|`typedef T2 difference_type`|如果 `Ptr::difference_type` 类型存在，则类型 `T2` 为此类型，否则为 `ptrdiff_t`。 如果 `Ptr` 是原始指针，则类型为 `ptrdiff_t`。|  
-|`typedef T1 element_type`|如果 `Ptr::element_type` 类型存在，则类型 `T1` 为此类型，否则为 `Ty`。 如果 `Ptr` 是原始指针，则类型为 `Ty`。|  
-|`typedef Ptr pointer`|类型为 `Ptr`。|  
-  
-### <a name="structs"></a>结构  
-  
-|name|描述|  
-|----------|-----------------|  
-|`pointer_traits::rebind`|尝试将基础指针类型转换为指定类型。|  
-  
-### <a name="methods"></a>方法  
-  
-|名称|描述|  
-|----------|-----------------|  
-|[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<memory>  
-  
- **命名空间：** std  
-  
-##  <a name="pointer_to"></a>pointer_to  
- 存在 `Ptr::pointer_to(obj)` 时，则为返回该函数的静态方法。 否则，无法将任意引用转换为 `Ptr` 类的对象。 如果 `Ptr` 是原始指针，则此方法将返回 `addressof(obj)`。  
-  
-```cpp  
-static pointer pointer_to(element_type& obj);
-```  
-  
-## <a name="see-also"></a>请参阅  
- [\<memory>](../standard-library/memory.md)   
- [allocator_traits 类](../standard-library/allocator-traits-class.md)
 
+### <a name="typedefs"></a>Typedef
+
+|名称|描述|
+|----------|-----------------|
+|`typedef T2 difference_type`|如果 `Ptr::difference_type` 类型存在，则类型 `T2` 为此类型，否则为 `ptrdiff_t`。 如果 `Ptr` 是原始指针，则类型为 `ptrdiff_t`。|
+|`typedef T1 element_type`|如果 `Ptr::element_type` 类型存在，则类型 `T1` 为此类型，否则为 `Ty`。 如果 `Ptr` 是原始指针，则类型为 `Ty`。|
+|`typedef Ptr pointer`|类型为 `Ptr`。|
+
+### <a name="structs"></a>结构
+
+|名称|描述|
+|----------|-----------------|
+|`pointer_traits::rebind`|尝试将基础指针类型转换为指定类型。|
+
+### <a name="methods"></a>方法
+
+|名称|描述|
+|----------|-----------------|
+|[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|
+
+## <a name="requirements"></a>要求
+
+**标头：**\<memory>
+
+**命名空间：** std
+
+## <a name="pointer_to"></a>pointer_to
+
+存在 `Ptr::pointer_to(obj)` 时，则为返回该函数的静态方法。 否则，无法将任意引用转换为 `Ptr` 类的对象。 如果 `Ptr` 是原始指针，则此方法将返回 `addressof(obj)`。
+
+```cpp
+static pointer pointer_to(element_type& obj);
+```
+
+## <a name="see-also"></a>请参阅
+
+[\<memory>](../standard-library/memory.md)<br/>
+[allocator_traits 类](../standard-library/allocator-traits-class.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "is_error_condition_enum 类 | Microsoft Docs"
-ms.custom: 
+title: is_error_condition_enum 类 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - system_error/std::is_error_condition_enum
@@ -15,41 +15,42 @@ dev_langs:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f92a07a904ae80fb56e2cf21114bb79506dfa11
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 43959823df01187961fbb9e113160b026e4d31d4
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="iserrorconditionenum-class"></a>is_error_condition_enum 类
-表示测试 [error_condition](../standard-library/error-condition-class.md) 枚举的类型谓词。  
-  
-## <a name="syntax"></a>语法  
-  
-```
+
+表示测试 [error_condition](../standard-library/error-condition-class.md) 枚举的类型谓词。
+
+## <a name="syntax"></a>语法
+
+```cpp
 template <_Enum>
 class is_error_condition_enum;
-```  
-  
-## <a name="remarks"></a>备注  
- 如果类型 `_Enum` 是一个适合存储在类型 `error_condition` 的对象中的枚举值，则此[类型谓词](../standard-library/type-traits.md)的实例为 true。  
-  
- 允许将专用化添加到此类型，以获得用户定义类型。  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<system_error>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [<type_traits>](../standard-library/type-traits.md)   
- [<system_error>](../standard-library/system-error.md)
+```
 
+## <a name="remarks"></a>备注
 
+如果类型 `_Enum` 是一个适合存储在类型 `error_condition` 的对象中的枚举值，则此[类型谓词](../standard-library/type-traits.md)的实例为 true。
 
+允许将专用化添加到此类型，以获得用户定义类型。
+
+## <a name="requirements"></a>要求
+
+**标头：** \<system_error>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[<type_traits>](../standard-library/type-traits.md)<br/>
+[<system_error>](../standard-library/system-error.md)<br/>

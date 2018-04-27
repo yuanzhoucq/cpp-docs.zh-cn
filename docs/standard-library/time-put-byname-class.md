@@ -1,12 +1,12 @@
 ---
-title: "time_put_byname 类 | Microsoft Docs"
-ms.custom: 
+title: time_put_byname 类 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xloctime/std::time_put_byname
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719df3a10b7c4b72cc90b0a5f8aad247cf915f4d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34ac10a6456c2bc1b69d3076e5b3ba351507c3ee
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 类
-一种派生模板类，用于描述一个可充当类型 `time_put`\< CharType, OutputIterator > 的区域设置 facet 的对象。  
-  
-## <a name="syntax"></a>语法  
-  
-```
+
+一种派生模板类，用于描述一个可充当类型 `time_put`\< CharType, OutputIterator > 的区域设置 facet 的对象。
+
+## <a name="syntax"></a>语法
+
+```cpp
 template <class CharType, class OutIt = ostreambuf_iterator<CharType, char_traits<CharType>>>
 class time_put_byname : public time_put<CharType, OutputIterator>
 {
@@ -49,25 +50,24 @@ protected:
     virtual ~time_put_byname();
 
 };
-```  
-  
-#### <a name="parameters"></a>参数  
- `_Locname`  
- 区域设置名称。  
-  
- `_Refs`  
- 初始引用计数。  
-  
-## <a name="remarks"></a>备注  
- 其行为由[已命名的](../standard-library/locale-class.md#name)区域设置 `_Locname` 决定。 每个构造函数使用 [time_put](../standard-library/time-put-class.md#time_put)\<CharType、 OutputIterator 1> ( `_Refs`) 初始化其基对象。  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<locale>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+### <a name="parameters"></a>参数
 
+`_Locname` 区域设置名称。
 
+`_Refs` 初始引用计数。
+
+## <a name="remarks"></a>备注
+
+其行为由[已命名的](../standard-library/locale-class.md#name)区域设置 `_Locname` 决定。 每个构造函数使用 [time_put](../standard-library/time-put-class.md#time_put)\<CharType、 OutputIterator 1> ( `_Refs`) 初始化其基对象。
+
+## <a name="requirements"></a>要求
+
+**标头：** \<locale>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

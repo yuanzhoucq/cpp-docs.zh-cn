@@ -1,12 +1,12 @@
 ---
 title: '&lt;iosfwd&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <iosfwd>
@@ -15,31 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da52a399718acb97f9d14c776091d33ad627a412
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 15005f088043b7d7904f57114fc125d3da80b1fc
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
-声明对 iostreams 中使用的数个模板类的向前引用。 所有这些模板类都定义在其他标准标头中。 仅在需要其中一个声明而不是定义时将此标头明确包含在内。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-#include <iosfwd>  
-  
-```  
-  
-## <a name="typedefs"></a>Typedef  
-  
+
+声明对 iostreams 中使用的数个模板类的向前引用。 所有这些模板类都定义在其他标准标头中。 仅在需要其中一个声明而不是定义时将此标头明确包含在内。
+
+## <a name="syntax"></a>语法
+
+```cpp
+#include <iosfwd>
+
 ```
+
+## <a name="typedefs"></a>Typedef
+
+```cpp
 typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
@@ -74,11 +75,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
-```  
-  
-## <a name="forward-declarationstemplate-classes"></a>向前声明/模板类  
-  
 ```
+
+## <a name="forward-declarationstemplate-classes"></a>向前声明/模板类
+
+```cpp
 template <class _Statetype>
 class fpos;
 
@@ -138,13 +139,11 @@ class basic_ofstream;
 
 template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
-```  
-  
-## <a name="see-also"></a>请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 编程](../standard-library/iostream-programming.md)   
- [iostreams 约定](../standard-library/iostreams-conventions.md)
+```
 
+## <a name="see-also"></a>请参阅
 
-
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[iostream 编程](../standard-library/iostream-programming.md)<br/>
+[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>

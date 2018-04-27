@@ -1,12 +1,12 @@
 ---
-title: "iterator 结构 | Microsoft Docs"
-ms.custom: 
+title: iterator 结构 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xutility/std::iterator
@@ -16,23 +16,25 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 274d472e3f3768a67a49ed6ca074f3a126bfd0fd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6bf766bdcb63ae4d50006f4a2d7722238663c610
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="iterator-struct"></a>iterator 结构
-用来确保用户定义的迭代器可正常配合 **iterator_trait** 使用的空基结构。  
-  
-## <a name="syntax"></a>语法  
-```    
+
+用来确保用户定义的迭代器可正常配合 **iterator_trait** 使用的空基结构。
+
+## <a name="syntax"></a>语法
+
+```cpp
 struct iterator {
    typedef Category iterator_category;
    typedef Type value_type;
@@ -40,37 +42,39 @@ struct iterator {
    typedef Distance distance_type;
    typedef Pointer pointer;
    typedef Reference reference;
-   };  
-```    
-## <a name="remarks"></a>备注  
- 模板结构充当所有迭代器的一个基类型。 它定义成员类型  
-  
-- `iterator_category`（模板参数 `Category` 的同义词）。  
-  
-- `value_type`（模板参数 **Type** 的同义词）。  
-  
-- `difference_type`（模板参数 `Distance` 的同义词）。  
-  
-- `distance_type`（模板参数 `Distance` 的同义词）。  
-  
-- `pointer`（模板参数 `Pointer` 的同义词）。  
-  
-- `reference`（模板参数 `Reference` 的同义词）。  
-  
- 请注意，即使 **pointer** 指向常量 **Type** 的对象且引用指定常量 **Type** 的对象，`value_type` 也不得为常量类型。  
-  
-## <a name="example"></a>示例  
- 有关如何在迭代器基类中声明和使用这些类型的示例，请参阅 [iterator_traits](../standard-library/iterator-traits-struct.md)。  
-  
-## <a name="requirements"></a>惠?  
- **标头：** \<iterator>  
-  
- **命名空间：** std  
-  
-## <a name="see-also"></a>请参阅  
- [\<iterator>](../standard-library/iterator.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+   };
+```
 
+## <a name="remarks"></a>备注
 
+模板结构充当所有迭代器的一个基类型。 它定义成员类型
 
+- `iterator_category`（模板参数 `Category` 的同义词）。
+
+- `value_type`（模板参数 **Type** 的同义词）。
+
+- `difference_type`（模板参数 `Distance` 的同义词）。
+
+- `distance_type`（模板参数 `Distance` 的同义词）。
+
+- `pointer`（模板参数 `Pointer` 的同义词）。
+
+- `reference`（模板参数 `Reference` 的同义词）。
+
+请注意，即使 **pointer** 指向常量 **Type** 的对象且引用指定常量 **Type** 的对象，`value_type` 也不得为常量类型。
+
+## <a name="example"></a>示例
+
+有关如何在迭代器基类中声明和使用这些类型的示例，请参阅 [iterator_traits](../standard-library/iterator-traits-struct.md)。
+
+## <a name="requirements"></a>要求
+
+**标头：** \<iterator>
+
+**命名空间：** std
+
+## <a name="see-also"></a>请参阅
+
+[\<iterator>](../standard-library/iterator.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

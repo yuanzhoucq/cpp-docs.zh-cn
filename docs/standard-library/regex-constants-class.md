@@ -1,12 +1,12 @@
 ---
-title: "regex_constants 类 | Microsoft Docs"
-ms.custom: 
+title: regex_constants 类 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
@@ -91,43 +91,47 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239dbe69d32a5d9a463e33d9d3c1076aa0e79f50
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexconstants-class"></a>regex_constants 类
-正则表达式标志的命名空间。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-namespace regex_constants {  
-    enum syntax_option_type;  
-    enum match_flag_type;  
-    enum error_type;  
- }  
-```  
-  
-## <a name="remarks"></a>备注  
- 命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。  
-  
-## <a name="requirements"></a>惠?  
- **标头：**\<regex 1>  
-  
- **命名空间：** std  
-  
-##  <a name="error_type"></a>regex_constants::error_type  
- 用于报告正则表达式语法错误的标志。  
-  
-```  
+
+正则表达式标志的命名空间。
+
+## <a name="syntax"></a>语法
+
+```cpp
+namespace regex_constants {
+    enum syntax_option_type;
+    enum match_flag_type;
+    enum error_type;
+ }
+```
+
+## <a name="remarks"></a>备注
+
+命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。
+
+## <a name="requirements"></a>要求
+
+**标头：**\<regex 1>
+
+**命名空间：** std
+
+## <a name="error_type"></a>regex_constants::error_type
+
+用于报告正则表达式语法错误的标志。
+
+```cpp
 enum error_type
     {    // identify error
     error_collate,
@@ -145,49 +149,51 @@ enum error_type
     error_stack,
     error_parse,
     error_syntax
-    };  
-```  
-  
-### <a name="remarks"></a>备注  
- 该类型是一个枚举类型，它描述可保留错误标志的对象。 非重复的标志值为：  
-  
- `error_backref` - 表达式中包含无效的向后引用  
-  
- `error_badbrace` - 表达式在 { } 表达式中包含无效计数  
-  
- `error_badrepeat` - 重复表达式（在大多数上下文中为“*”、“?”、“+”、“{”之一）后没有表达式  
-  
- `error_brace` - 表达式中包含不匹配的“'{”或“}”  
-  
- `error_brack` - 表达式中包含不匹配的“[”或“]”  
-  
- `error_collate` - 表达式中包含无效的排序规则元素名  
-  
- `error_complexity` - 尝试匹配失败，因为它太复杂  
-  
- `error_ctype` - 表达式中包含无效的字符类名  
-  
- `error_escape` - 表达式包含无效转义序列  
-  
- `error_paren` - 表达式中包含不匹配的“(”或“)”  
-  
- `error_parse` - 表达式解析失败  
-  
- `error_range` - 表达式中包含无效的字符范围说明符  
-  
- `error_space` - 分析正则表达式失败，因为没有足够的资源  
-  
- `error_stack` - 所尝试匹配失败，因为没有足够的内存  
-  
- `error_syntax` - 分析因语法错误失败  
-  
- `error_backref` - 表达式中包含无效的向后引用  
-  
-##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- 正则表达式匹配选项的标志。  
-  
-```  
-enum match_flag_type 
+    };
+```
+
+### <a name="remarks"></a>备注
+
+该类型是一个枚举类型，它描述可保留错误标志的对象。 非重复的标志值为：
+
+`error_backref` - 表达式中包含无效的向后引用
+
+`error_badbrace` - 表达式在 { } 表达式中包含无效计数
+
+`error_badrepeat` - 重复表达式（在大多数上下文中为“*”、“?”、“+”、“{”之一）后没有表达式
+
+`error_brace` - 表达式中包含不匹配的“'{”或“}”
+
+`error_brack` - 表达式中包含不匹配的“[”或“]”
+
+`error_collate` - 表达式中包含无效的排序规则元素名
+
+`error_complexity` - 尝试匹配失败，因为它太复杂
+
+`error_ctype` - 表达式中包含无效的字符类名
+
+`error_escape` - 表达式包含无效转义序列
+
+`error_paren` - 表达式中包含不匹配的“(”或“)”
+
+`error_parse` - 表达式解析失败
+
+`error_range` - 表达式中包含无效的字符范围说明符
+
+`error_space` - 分析正则表达式失败，因为没有足够的资源
+
+`error_stack` - 所尝试匹配失败，因为没有足够的内存
+
+`error_syntax` - 分析因语法错误失败
+
+`error_backref` - 表达式中包含无效的向后引用
+
+## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+
+正则表达式匹配选项的标志。
+
+```cpp
+enum match_flag_type
     {    // specify matching and formatting rules
     match_default = 0x0000,
     match_not_bol = 0x0001,
@@ -203,46 +209,48 @@ enum match_flag_type
     format_no_copy = 0x0800,
     format_first_only = 0x1000,
     _Match_not_null = 0x2000
-    };  
-```  
-  
-### <a name="remarks"></a>备注  
- 该类型是位掩码类型，用于描述针对替换文本时使用的正则表达式和格式标志匹配文本序列时使用的选项。 可与 `|`组合使用的选项。  
-  
- 匹配选项包括：  
-  
- `match_default`  
-  
- `match_not_bol` - 不将目标序列中的第一个位置视为行首  
-  
- `match_not_eol` - 不将目标序列中超过末尾的位置视为行尾  
-  
- `match_not_bow` - 不将目标序列中的第一个位置视为单词的开头  
-  
- `match_not_eow` - 不将目标序列中超过末尾的位置视为单词的结尾  
-  
- `match_any` - 如果有多个匹配，任何匹配都是可接受的  
-  
- `match_not_null` - 不要将空的子序列视为匹配项  
-  
- `match_continuous` - 不搜索除目标序列开头位置之外的匹配项  
-  
- `match_prev_avail` --  是有效的迭代器，请忽略 `--first``match_not_bol` 和 `match_not_bow`（如果已设置）  
-  
- 格式标志包括：  
-  
- `format_default` -- 使用 ECMAScript 格式规则  
-  
- `format_sed` -- 使用 sed 格式规则  
-  
- `format_no_copy` -- 不复制与正则表达式不匹配的文本  
-  
- `format_first_only` - 不搜索第一个匹配项之后的匹配项  
-  
-##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- 用于选择语法选项的标志。  
-  
-```  
+    };
+```
+
+### <a name="remarks"></a>备注
+
+该类型是位掩码类型，用于描述针对替换文本时使用的正则表达式和格式标志匹配文本序列时使用的选项。 可与 `|`组合使用的选项。
+
+匹配选项包括：
+
+`match_default`
+
+`match_not_bol` - 不将目标序列中的第一个位置视为行首
+
+`match_not_eol` - 不将目标序列中超过末尾的位置视为行尾
+
+`match_not_bow` - 不将目标序列中的第一个位置视为单词的开头
+
+`match_not_eow` - 不将目标序列中超过末尾的位置视为单词的结尾
+
+`match_any` - 如果有多个匹配，任何匹配都是可接受的
+
+`match_not_null` - 不要将空的子序列视为匹配项
+
+`match_continuous` - 不搜索除目标序列开头位置之外的匹配项
+
+`match_prev_avail` --  是有效的迭代器，请忽略 `--first``match_not_bol` 和 `match_not_bow`（如果已设置）
+
+格式标志包括：
+
+`format_default` -- 使用 ECMAScript 格式规则
+
+`format_sed` -- 使用 sed 格式规则
+
+`format_no_copy` -- 不复制与正则表达式不匹配的文本
+
+`format_first_only` - 不搜索第一个匹配项之后的匹配项
+
+## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+
+用于选择语法选项的标志。
+
+```cpp
 enum syntax_option_type
     {    // specify RE syntax rules
     ECMAScript = 0x01,
@@ -257,42 +265,44 @@ enum syntax_option_type
     nosubs = 0x0200,
     optimize = 0x0400,
     collate = 0x0800
-    };  
-```  
-  
-### <a name="remarks"></a>备注  
- 该类型为位掩码类型，用于描述编译正则表达式时要使用的语言说明符和语法修饰符。 可与 `|`组合使用的选项。 一次不能使用多于一个语言说明符。  
-  
- 语言说明符有：  
-  
- `ECMAScript` -- 编译为 ECMAScript  
-  
- `basic` -- 编译为 BRE  
-  
- `extended` -- 编译为 ERE  
-  
- `awk` -- 编译为 awk  
-  
- `grep` -- 编译为 grep  
-  
- `egrep` -- 编译为 egrep  
-  
- 语法修饰符有：  
-  
- `icase` -- 匹配不区分大小写  
-  
- `nosubs` -- 实现不需要跟踪捕获组的内容  
-  
- `optimize` -- 实现应强调匹配的速度而非正则表达式编译的速度  
-  
- `collate` -- 进行区分区域设置的匹配  
-  
-## <a name="see-also"></a>请参阅  
-[\<regex>](../standard-library/regex.md)  
-[regex_error 类](../standard-library/regex-error-class.md)  
-[\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator 类](../standard-library/regex-iterator-class.md)  
-[\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 类](../standard-library/regex-traits-class.md)  
-[\<regex> typedefs](../standard-library/regex-typedefs.md)  
+    };
+```
+
+### <a name="remarks"></a>备注
+
+该类型为位掩码类型，用于描述编译正则表达式时要使用的语言说明符和语法修饰符。 可与 `|`组合使用的选项。 一次不能使用多于一个语言说明符。
+
+语言说明符有：
+
+`ECMAScript` -- 编译为 ECMAScript
+
+`basic` -- 编译为 BRE
+
+`extended` -- 编译为 ERE
+
+`awk` -- 编译为 awk
+
+`grep` -- 编译为 grep
+
+`egrep` -- 编译为 egrep
+
+语法修饰符有：
+
+`icase` -- 匹配不区分大小写
+
+`nosubs` -- 实现不需要跟踪捕获组的内容
+
+`optimize` -- 实现应强调匹配的速度而非正则表达式编译的速度
+
+`collate` -- 进行区分区域设置的匹配
+
+## <a name="see-also"></a>请参阅
+
+[\<regex>](../standard-library/regex.md)<br/>
+[regex_error 类](../standard-library/regex-error-class.md)<br/>
+[\<regex> functions](../standard-library/regex-functions.md)<br/>
+[regex_iterator 类](../standard-library/regex-iterator-class.md)<br/>
+[\<regex> operators](../standard-library/regex-operators.md)<br/>
+[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)<br/>
+[regex_traits 类](../standard-library/regex-traits-class.md)<br/>
+[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
