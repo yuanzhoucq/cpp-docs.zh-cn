@@ -1,12 +1,9 @@
 ---
-title: "运算符 AND |Microsoft 文档"
-ms.custom: 
+title: 运算符 AND |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - And
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - operator AND
 - AND operator
 ms.assetid: 6862d248-c169-4db8-a478-9d0ce4fdd1e3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc2267e821b8af7e22792f809783f40a2acd6057
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f972002a57bdb2dd3ff2003fa922d1aa0f7e1536
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-and"></a>运算符 AND
 返回的按位与运算的结果*expression1*和*expression2*。  

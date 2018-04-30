@@ -1,27 +1,22 @@
 ---
-title: "处理器制造商编程手册 |Microsoft 文档"
-ms.custom: 
+title: 处理器制造商编程手册 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2e21fc5372c7f5ee4602bf18e5ef58ee8a34d69
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 09da159d982c0a286af36c9345299656772d1b50
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>处理器制造商编程手册
 本文提供了可能包含有关处理器不制造、 销售，或由 Microsoft 受支持的编程信息的网站的链接。 Microsoft 不拥有或控制网站或在其上的内容。  

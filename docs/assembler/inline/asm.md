@@ -1,13 +1,10 @@
 ---
-title: "__asm |Microsoft 文档"
-ms.custom: 
+title: __asm |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 f1_keywords:
 - __asm
 - __asm_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a5d272e4ac26b87728506e45759733ffa26472
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77e09f6af92839c6113c9c5ba375a1583bcf7149
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="asm"></a>__asm
 **Microsoft 专用**  
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
  `__asm {`  `assembly-instruction-list`  `};`选择  
   
  *程序集指令列表*:  
- `assembly-instruction``;`选择  
+ `assembly-instruction` `;`选择  
   
- `assembly-instruction``;` `assembly-instruction-list` `;`选择  
+ `assembly-instruction` `;` `assembly-instruction-list` `;`选择  
   
  如果不与大括号一起使用，则 `__asm` 关键字表示此行的其余部分是一条汇编语言语句。 如果与大括号一起使用，则该关键字表示大括号之间的每一行都是一条汇编语言语句。 为了与早期版本兼容，`_asm` 是 `__asm` 的同义词。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 __asm int 3  
 ```  
   
- 不会导致与编译时生成本机代码**/clr**; 编译器将指令转换为 CLR 中断指令。  
+ 不会导致与编译时生成本机代码 **/clr**; 编译器将指令转换为 CLR 中断指令。  
   
  `__asm int 3` 现在将导致为函数生成本机代码。 如果你想中断点导致你的代码，如果你想编译为 MSIL，该函数使用的函数[__debugbreak](../../intrinsics/debugbreak.md)。  
   

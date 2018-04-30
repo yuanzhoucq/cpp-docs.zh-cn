@@ -1,12 +1,9 @@
 ---
-title: "对于 x64 (ml64.exe) MASM |Microsoft 文档"
-ms.custom: 
+title: 对于 x64 (ml64.exe) MASM |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a42b25b5d86d181bed907a3b437d28f3cbf5e820
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b17771239ff9c89b765576ba49515463db42386f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM for x64 (ml64.exe)
 
-Visual Studio 包含 32 位和 64 位托管的版 MASM 分发到面向 x64 代码。 名为 ml64.exe，这是接受 x64 汇编程序汇编程序语言。 当你在 Visual Studio 安装期间选择的 c + + 工作负荷时，会安装 MASM 命令行工具。 这些工具不可用作为单独的下载。 若要下载并安装 Visual Studio 的副本，请参阅[https://www.visualstudio.com/](https://www.visualstudio.com/)。 如果您不想安装 Visual Studio IDE，但只需要命令行工具，请参阅**生成 Tools for Visual Studio 2017**选项[Visual Studio 下载](https://www.visualstudio.com/downloads/)页。
+Visual Studio 包含 32 位和 64 位托管的版 MASM 分发到面向 x64 代码。 名为 ml64.exe，这是接受 x64 汇编程序汇编程序语言。 当你在 Visual Studio 安装期间选择的 c + + 工作负荷时，会安装 MASM 命令行工具。 这些工具不可用作为单独的下载。 若要下载并安装 Visual Studio 的副本，请参阅[ https://www.visualstudio.com/ ](https://www.visualstudio.com/)。 如果您不想安装 Visual Studio IDE，但只需要命令行工具，请参阅**生成 Tools for Visual Studio 2017**选项[Visual Studio 下载](https://www.visualstudio.com/downloads/)页。
 
 若要使用 MASM 构建 x64 代码以在命令行上为目标，你必须使用开发人员命令提示 x64 目标，可将所需的路径和其他环境变量。 有关如何开始开发人员命令提示的信息，请参阅[命令行上的生成 C/c + + 代码](../../build/building-on-the-command-line.md)。
 
@@ -49,7 +44,7 @@ Visual Studio 项目系统支持 c + + 项目中使用 MASM 生成汇编程序�
 
 1. 在菜单栏上，选择**项目**，**添加新项**。 
 
-1. 在**添加新项**对话框中，选择**c + + 文件 (.cpp)**的中心窗格中。 在**名称**编辑控件中，输入新的文件名具有**.asm**而不是.cpp 的扩展。 选择**添加**以将文件添加到你的项目并关闭对话框。
+1. 在**添加新项**对话框中，选择**c + + 文件 (.cpp)** 的中心窗格中。 在**名称**编辑控件中，输入新的文件名具有 **.asm**而不是.cpp 的扩展。 选择**添加**以将文件添加到你的项目并关闭对话框。
 
 在你添加的.asm 文件中创建汇编程序语言代码。 当生成解决方案时，将调用 MASM 汇编程序.asm 文件装入然后链接到你的项目的对象文件。 若要使符号访问更加轻松，你汇编程序函数声明为`extern "C"`在 c + + 源代码，而不是使用 c + + 名称修饰约定在您汇编程序语言源文件。
   

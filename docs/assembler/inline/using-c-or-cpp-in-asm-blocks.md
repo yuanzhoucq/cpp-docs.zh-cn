@@ -1,13 +1,10 @@
 ---
-title: "在 __asm 块中使用 C 或 c + + |Microsoft 文档"
-ms.custom: 
+title: 在 __asm 块中使用 C 或 c + + |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>在 __asm 块中使用 C 或 C++
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   宏和预处理器指令  
   
--   注释 (同时 **/ \* \* /** 和 **//**  )  
+-   注释 (同时**/ \* \* /** 和**//** )  
   
 -   类型名称（其中的 MASM 类型是合法的）  
   
--   `typedef`如运算符通常使用的名称**PTR**和**类型**或指定结构或联合成员  
+-   `typedef` 如运算符通常使用的名称**PTR**和**类型**或指定结构或联合成员  
   
  在 `__asm` 块内，您可以使用 C 表示法或汇编基数表示法指定整数常量（例如，0x100 和 100h 等效）。 这允许您在 C 中定义（使用 `#define`）常量，然后在 C 或 C++ 以及程序的程序集部分中使用该常量。 您还可以通过在其前面放置 0 以八进制指定常量。 例如，0777 指定一个八进制常量。  
   

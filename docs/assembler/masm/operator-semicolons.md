@@ -1,12 +1,9 @@
 ---
-title: operator ;; | Microsoft Docs
-ms.custom: 
+title: 运算符;|Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - '%3B%3B'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ;; operator
 - operator ;;
 ms.assetid: 94320c71-70df-4e71-8c22-e36797294e2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf193eb8a125245baad3a7b76b58f4c6b8c8792d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6231a2068c5a89877c89ceefebfa56e3d582503b
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-"></a>运算符 ;;
 将*文本*作为中的宏，仅在宏定义中出现的注释。 该列表不显示*文本*扩展宏。  

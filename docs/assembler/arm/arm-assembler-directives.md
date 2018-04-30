@@ -1,27 +1,22 @@
 ---
-title: "ARM 汇编程序指令 |Microsoft 文档"
-ms.custom: 
+title: ARM 汇编程序指令 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM 汇编程序指令
 大多数情况下，Microsoft ARM 汇编程序使用 ARM 程序集语言，这记录在的第 7 章[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 但是，某些程序集指令的 Microsoft 实现与不同 ARM 程序集指令。 本文介绍的区别。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/14/2018
  ATTR  
  不支持。  
   
- CODE16  
+ 代码 16  
  不支持，因为它意味着 Microsoft ARM 汇编程序不允许的前期 UAL Thumb 语法。  请改用 THUMB 指令，以及 UAL 语法。  
   
  常见  

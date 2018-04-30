@@ -1,27 +1,22 @@
 ---
-title: "ARM 汇编程序命令行参考 |Microsoft 文档"
-ms.custom: 
+title: ARM 汇编程序命令行参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f196b4aad76c72233c179249386dbb42960b31a6
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 汇编程序命令行参考
 这篇文章提供有关 Microsoft ARM 汇编程序命令行信息*armasm*，用于编译到的 Microsoft 实现的通用对象文件格式 (COFF) 的 ARMv7 Thumb 程序集语言。 链接器可以将 COFF 代码与通过 ARM 汇编程序或由 C 编译器，结合了由管理员创建的对象库生成的对象代码链接。  
@@ -64,7 +59,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  生成 ARMv7 样式 IT 块。  默认情况下，ARMv8 兼容生成 IT 块。  
   
- -via `filename`  
+ -通过 `filename`  
  读取从其他命令行参数`filename`。  
   
  -16  

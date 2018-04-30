@@ -1,12 +1,9 @@
 ---
 title: .SAVEREG | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .SAVEREG
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .SAVEREG directive
 ms.assetid: 1dbc2ef6-a197-40e7-9e55-fddcae8cef29
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ccd097215da57222071ad748852af46d920473
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a50b7a91efd7069e148222d3e3da44178974d6ba
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="savereg"></a>.SAVEREG
 生成或者`UWOP_SAVE_NONVOL`或`UWOP_SAVE_NONVOL_FAR`展开代码条目指定的寄存器 (`reg`) 和偏移量 (`offset`) 使用的当前序言偏移量。 MASM 将选择最有效的编码。  

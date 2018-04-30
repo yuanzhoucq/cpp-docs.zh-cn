@@ -24,7 +24,7 @@
 ## [链接选项](link-options.md)
 ## [跨 DLL 边界传递 CRT 对象可能的错误](potential-errors-passing-crt-objects-across-dll-boundaries.md)
 ## [CRT 初始化](crt-initialization.md)
-# [按类别分的运行时例程](run-time-routines-by-category.md)
+# [按类别分的通用 C 运行时例程](run-time-routines-by-category.md)
 ## [参数访问](argument-access.md)
 ## [缓冲区操作](buffer-manipulation.md)
 ## [字节分类](byte-classification.md)

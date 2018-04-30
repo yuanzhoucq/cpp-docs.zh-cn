@@ -1,12 +1,9 @@
 ---
-title: "运算符 CARRY? | Microsoft Docs"
-ms.custom: 
+title: 运算符 CARRY? | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - CARRY?
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - operator CARRY?
 - CARRY? operator
 ms.assetid: 5b195de7-3f66-436a-b75a-4b8d7c3c83b7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee4570416af832bd8cef0889ddc04a7c1359d9b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 079b3390790c9c2a38baf77ab9dab07afcd20213
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-carry"></a>运算符 CARRY?
 Carry 标志的状态。 只能在使用[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)拦截并在运行时，不是在程序集时计算。  

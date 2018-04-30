@@ -1,12 +1,9 @@
 ---
-title: "运算符 LOW |Microsoft 文档"
-ms.custom: 
+title: 运算符 LOW |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - operator LOW
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - operator LOW
 - LOW operator
 ms.assetid: d09e1f6a-dcf5-444d-81fd-3670178d6885
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3192ec76c19badc2a802490ee8ca155e33d927
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 33915cea2b77c3304a50c095544e9a08803a9182
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-low"></a>运算符 LOW
 返回的低 8 位*表达式*。 MASM 表达式是 64 位值。  

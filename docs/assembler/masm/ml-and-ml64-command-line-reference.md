@@ -1,12 +1,9 @@
 ---
-title: "ML 和 ML64 命令行参考 |Microsoft 文档"
-ms.custom: 
+title: ML 和 ML64 命令行参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令行参考
 汇编，并链接一个或多个程序集语言源文件。 命令行选项是区分大小写。  
@@ -103,11 +98,11 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Cu**|将所有标识符都映射为大写形式 （默认值）。<br /><br /> 在 ml64.exe 中不可用。|  
 |**/Cx**|保留大小写的公共和外部符号。|  
 |**/D** `symbol`[[=`value`]]|定义具有给定名称的文本宏。 如果`value`是缺少，此字段为空。 用空格分隔的多个令牌都必须用引号引起来。|  
-|**/EP**|生成 （发送到 STDOUT） 的预处理的源列表。 请参阅**/Sf**。|  
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|如果 ml.exe 或 ml64.exe 运行时失败，则可以使用**/ERRORREPORT**信息向 Microsoft 发送有关这些内部错误。<br /><br /> 有关详细信息**/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。|  
-|**/F** `hexnum`|设置堆栈大小为`hexnum`字节 (这是与相同**/链接/堆栈**:`number`)。 值必须用十六进制表示法表示。 必须有之间留一个空格**/F**和`hexnum`。|  
+|**/EP**|生成 （发送到 STDOUT） 的预处理的源列表。 请参阅 **/Sf**。|  
+|**/ERRORREPORT** [ **NONE** &AMP;#124; **提示** &AMP;#124; **队列** &AMP;#124; **发送**]|如果 ml.exe 或 ml64.exe 运行时失败，则可以使用 **/ERRORREPORT**信息向 Microsoft 发送有关这些内部错误。<br /><br /> 有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。|  
+|**/F** `hexnum`|设置堆栈大小为`hexnum`字节 (这是与相同 **/链接/堆栈**:`number`)。 值必须用十六进制表示法表示。 必须有之间留一个空格 **/F**和`hexnum`。|  
 |**/Fe** `filename`|命名的可执行文件。|  
-|**/Fl**[[`filename`]]|生成装配的代码列表。 请参阅**/Sf**。|  
+|**/Fl**[[`filename`]]|生成装配的代码列表。 请参阅 **/Sf**。|  
 |**/Fm**[[`filename`]]|创建链接器映射文件。|  
 |**/Fo** `filename`|命名的对象文件。 有关详细信息，请参阅备注部分。|  
 |**/FPi**|生成仿真程序修复增量备份的浮点算术 （仅混合语言）。<br /><br /> 在 ml64.exe 中不可用。|  
@@ -118,9 +113,9 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/GZ**|指定使用 __stdcall 函数调用和命名约定。  与相同**选项语言： STCALL**。<br /><br /> 在 ml64.exe 中不可用。|  
 |**/H** `number`|将数字的重要字符限制外部名称。 默认值为 31 个字符。<br /><br /> 在 ml64.exe 中不可用。|  
 |**/help**|有关帮助 ML 调用 QuickHelp。|  
-|**/I** `pathname`|包含文件的集路径。 最多 10 个**/I**允许选项。|  
+|**/I** `pathname`|包含文件的集路径。 最多 10 个 **/I**允许选项。|  
 |**/nologo**|禁止显示成功的程序集的消息。|  
-|**/omf**|生成对象模块对象模块文件格式 (OMF) 的类型。  **/omf**意味着**/c**;ML.exe 不支持链接 OMF 对象。<br /><br /> 在 ml64.exe 中不可用。|  
+|**/omf**|生成对象模块对象模块文件格式 (OMF) 的类型。  **/omf**意味着 **/c**;ML.exe 不支持链接 OMF 对象。<br /><br /> 在 ml64.exe 中不可用。|  
 |**/Sa**|打开的所有可用信息的列表。|  
 |**/safeseh**|将标记为包含没有异常处理程序或包含异常处理程序的所有声明的对象[。SAFESEH](../../assembler/masm/dot-safeseh.md)。<br /><br /> 在 ml64.exe 中不可用。|  
 |**/Sf**|添加第一个过程列表到列表文件。|  
@@ -131,7 +126,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/St** `text`|指定源列表的标题。 与相同[标题](../../assembler/masm/title.md)文本。|  
 |**/Sx**|打开在列表中的 false 条件语句。|  
 |**/Ta** `filename`|汇编其名称不是以.asm 扩展名结尾的源文件。|  
-|**/w**|与相同**/W0/WX**。|  
+|**/w**|与相同 **/W0/WX**。|  
 |**/W** `level`|设置警告等级，其中`level`= 0、 1、 2 或 3。|  
 |**/WX**|如果不生成警告，则返回错误代码。|  
 |**/X**|忽略 INCLUDE 环境路径。|  
@@ -150,7 +145,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
  链接选项。  请参阅[链接器选项](../../build/reference/linker-options.md)有关详细信息。  
   
 ## <a name="remarks"></a>备注  
- ML 和 ML64 某些命令行选项是放置区分。 例如，因为 ML 和 ML64 可以接受多个**/c**选项，任何对应**/Fo**之前，必须指定选项**/c**。 下面的命令行示例阐释了每个程序集文件规格的对象文件规范：  
+ ML 和 ML64 某些命令行选项是放置区分。 例如，因为 ML 和 ML64 可以接受多个 **/c**选项，任何对应 **/Fo**之前，必须指定选项 **/c**。 下面的命令行示例阐释了每个程序集文件规格的对象文件规范：  
   
  **ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**  
   
