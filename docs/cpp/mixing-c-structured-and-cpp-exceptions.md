@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 # <a name="mixing-c-structured-and-c-exceptions"></a>混合使用 C（结构化）和 C++ 异常
 若要编写可移植性更高的代码，建议不要在 C++ 程序中使用结构化异常处理。 但是，有时可能希望使用**/EHa**编译和混合使用结构化的异常和 C++ 源代码，并且需要用于处理这两种异常的一些设备。 由于结构化异常处理程序没有对象或类型化异常概念，它无法处理 C++ 代码抛出的异常；但是，C++**catch**处理程序可以处理结构化的异常。 同样的，C++ 异常处理语法 (**try**， `throw`，**catch**) 无法被 C 编译器认可，但结构化的异常处理语法 (`__try`， `__except`， `__finally`)被C++编译器支持。  
   
- 请参阅[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)同处理C++异常一样处理结构化异常。  
+ 请参阅[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)和处理C++异常一样处理结构化异常。  
   
  如果将结构化异常和 C++ 异常混合，请注意以下几点：  
   
