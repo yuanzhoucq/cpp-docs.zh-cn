@@ -1,12 +1,9 @@
 ---
-title: "CFileTime 类 |Microsoft 文档"
-ms.custom: 
+title: CFileTime 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFileTime
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48e899bb058ed27559a4ef699a3a53267064f98
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92acaa02ada550f1a2dcbf33a0e0e67b88347a5d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfiletime-class"></a>CFileTime 类
 此类提供用于管理与文件相关联的日期和时间值的方法。  
@@ -76,17 +71,17 @@ class CFileTime :  public FILETIME
 |[CFileTime::operator ！ =](#operator_neq)|此运算符比较两个`CFileTime`对象是否不相等。|  
 |[CFileTime::operator +](#operator_add)|此运算符用于对 `CFileTimeSpan` 对象执行加法。|  
 |[CFileTime::operator + =](#operator_add_eq)|此运算符用于对 `CFileTimeSpan` 对象执行加法并对它赋予结果。|  
-|[CFileTime::operator&lt;](#operator_lt)|此运算符比较两个 `CFileTime` 对象以确定较小者。|  
-|[CFileTime::operator&lt;=](#operator_lt_eq)|此运算符比较两个 `CFileTime` 对象以确定是否相等或较小者。|  
+|[CFileTime::operator &lt;](#operator_lt)|此运算符比较两个 `CFileTime` 对象以确定较小者。|  
+|[CFileTime::operator &lt;=](#operator_lt_eq)|此运算符比较两个 `CFileTime` 对象以确定是否相等或较小者。|  
 |[CFileTime::operator =](#operator_eq)|赋值运算符中。|  
 |[CFileTime::operator =](#operator_-_eq)|此运算符用于对执行减法`CFileTimeSpan`对象，并将结果赋给当前对象。|  
 |[CFileTime::operator = =](#operator_eq_eq)|此运算符比较两个 `CFileTime` 对象是否相等。|  
-|[CFileTime::operator&gt;](#operator_gt)|此运算符比较两个 `CFileTime` 对象以确定较大者。|  
-|[CFileTime::operator&gt;=](#operator_gt_eq)|此运算符比较两个 `CFileTime` 对象以确定是否相等或较大者。|  
+|[CFileTime::operator &gt;](#operator_gt)|此运算符比较两个 `CFileTime` 对象以确定较大者。|  
+|[CFileTime::operator &gt;=](#operator_gt_eq)|此运算符比较两个 `CFileTime` 对象以确定是否相等或较大者。|  
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CFileTime::Day](#day)|将构成一天的 100 毫微秒隔数存储静态数据成员。|  
 |[CFileTime::Hour](#hour)|将构成一小时的 100 毫微秒隔数存储静态数据成员。|  
@@ -118,10 +113,10 @@ class CFileTime :  public FILETIME
   
  `CFileTime`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atltime.h  
   
-##  <a name="cfiletime"></a>CFileTime::CFileTime  
+##  <a name="cfiletime"></a>  CFileTime::CFileTime  
  构造函数。  
   
 ```
@@ -140,7 +135,7 @@ CFileTime(ULONGLONG nTime) throw();
 ### <a name="remarks"></a>备注  
  `CFileTime`可以使用现有的日期和时间创建对象`FILETIME`结构，或者表示为一个 64 位值 （在本地或协调世界时 (UTC) 时间格式）。 默认构造函数设置为 0 的时间。  
   
-##  <a name="day"></a>CFileTime::Day  
+##  <a name="day"></a>  CFileTime::Day  
  将构成一天的 100 毫微秒隔数存储静态数据成员。  
   
 ```
@@ -150,7 +145,7 @@ static const ULONGLONG Day = Hour* 24;
 ### <a name="example"></a>示例  
  请参阅示例[CFileTime::Millisecond](#millisecond)。  
   
-##  <a name="getcurrenttime"></a>CFileTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>  CFileTime::GetCurrentTime  
  调用此静态函数以检索`CFileTime`表示的当前系统日期和时间的对象。  
   
 ```
@@ -163,7 +158,7 @@ static CFileTime GetCurrentTime() throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#41](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_1.cpp)]  
   
-##  <a name="gettime"></a>CFileTime::GetTime  
+##  <a name="gettime"></a>  CFileTime::GetTime  
  调用此方法以检索从时间`CFileTime`对象。  
   
 ```
@@ -173,7 +168,7 @@ ULONGLONG GetTime() const throw();
 ### <a name="return-value"></a>返回值  
  返回的日期和时间作为 64 位数字，这可能是本地或其格式为协调世界时 (UTC) 中。  
   
-##  <a name="hour"></a>CFileTime::Hour  
+##  <a name="hour"></a>  CFileTime::Hour  
  将构成一小时的 100 毫微秒隔数存储静态数据成员。  
   
 ```
@@ -183,7 +178,7 @@ static const ULONGLONG Hour = Minute* 60;
 ### <a name="example"></a>示例  
  请参阅示例[CFileTime::Millisecond](#millisecond)。  
   
-##  <a name="localtoutc"></a>CFileTime::LocalToUTC  
+##  <a name="localtoutc"></a>  CFileTime::LocalToUTC  
  调用此方法将本地文件时间转换为基于协调世界时 (UTC) 的文件时间。  
   
 ```
@@ -196,7 +191,7 @@ CFileTime LocalToUTC() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[CFileTime::UTCToLocal](#utctolocal)。  
   
-##  <a name="millisecond"></a>CFileTime::Millisecond  
+##  <a name="millisecond"></a>  CFileTime::Millisecond  
  将构成一毫秒的 100 毫微秒隔数存储静态数据成员。  
   
 ```
@@ -206,7 +201,7 @@ static const ULONGLONG Millisecond = 10000;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#44](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_2.cpp)]  
   
-##  <a name="minute"></a>CFileTime::Minute  
+##  <a name="minute"></a>  CFileTime::Minute  
  将构成一分钟的 100 毫微秒隔数存储静态数据成员。  
   
 ```
@@ -216,7 +211,7 @@ static const ULONGLONG Minute = Second* 60;
 ### <a name="example"></a>示例  
  请参阅示例[CFileTime::Millisecond](#millisecond)。  
   
-##  <a name="operator_-"></a>CFileTime::operator-  
+##  <a name="operator_-"></a>  CFileTime::operator-  
  此运算符用于对执行减法`CFileTime`或`CFileTimeSpan`对象。  
   
 ```
@@ -234,7 +229,7 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 ### <a name="return-value"></a>返回值  
  返回`CFileTime`对象或`CFileTimeSpan`表示结果的两个对象之间的时间差异的对象。  
   
-##  <a name="operator_neq"></a>CFileTime::operator ！ =  
+##  <a name="operator_neq"></a>  CFileTime::operator ！ =  
  此运算符比较两个`CFileTime`对象是否不相等。  
   
 ```
@@ -248,7 +243,7 @@ bool operator!=(CFileTime ft) const throw();
 ### <a name="return-value"></a>返回值  
  返回**true**要比较的项是否不等于`CFileTime`对象，否则为**false**。  
   
-##  <a name="operator_add"></a>CFileTime::operator +  
+##  <a name="operator_add"></a>  CFileTime::operator +  
  此运算符用于对 `CFileTimeSpan` 对象执行加法。  
   
 ```
@@ -262,7 +257,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>返回值  
  返回`CFileTime`表示结果的原始时间加上相对时间的对象。  
   
-##  <a name="operator_add_eq"></a>CFileTime::operator + =  
+##  <a name="operator_add_eq"></a>  CFileTime::operator + =  
  此运算符用于对 `CFileTimeSpan` 对象执行加法并对它赋予结果。  
   
 ```
@@ -276,7 +271,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>返回值  
  返回已更新`CFileTime`对象，表示结果的原始时间加上相对的时间。  
   
-##  <a name="operator_lt"></a>CFileTime::operator&lt;  
+##  <a name="operator_lt"></a>  CFileTime::operator &lt;  
  此运算符比较两个 `CFileTime` 对象以确定较小者。  
   
 ```
@@ -293,7 +288,7 @@ bool operator<(CFileTime ft) const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#43](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_3.cpp)]  
   
-##  <a name="operator_lt_eq"></a>CFileTime::operator&lt;=  
+##  <a name="operator_lt_eq"></a>  CFileTime::operator &lt;=  
  此运算符比较两个 `CFileTime` 对象以确定是否相等或较小者。  
   
 ```
@@ -307,7 +302,7 @@ bool operator<=(CFileTime ft) const throw();
 ### <a name="return-value"></a>返回值  
  返回**true**是否的第一个对象 （前面的时间） 小于或等于第二个，否则**false**。  
   
-##  <a name="operator_eq"></a>CFileTime::operator =  
+##  <a name="operator_eq"></a>  CFileTime::operator =  
  赋值运算符中。  
   
 ```
@@ -321,7 +316,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 ### <a name="return-value"></a>返回值  
  返回已更新`CFileTime`对象。  
   
-##  <a name="operator_-_eq"></a>CFileTime::operator =  
+##  <a name="operator_-_eq"></a>  CFileTime::operator =  
  此运算符用于对执行减法`CFileTimeSpan`对象，并将结果赋给当前对象。  
   
 ```
@@ -335,7 +330,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>返回值  
  返回已更新`CFileTime`对象。  
   
-##  <a name="operator_eq_eq"></a>CFileTime::operator = =  
+##  <a name="operator_eq_eq"></a>  CFileTime::operator = =  
  此运算符比较两个 `CFileTime` 对象是否相等。  
   
 ```
@@ -349,7 +344,7 @@ bool operator==(CFileTime ft) const throw();
 ### <a name="return-value"></a>返回值  
  返回**true**如果对象相等，否则**false**。  
   
-##  <a name="operator_gt"></a>CFileTime::operator&gt;  
+##  <a name="operator_gt"></a>  CFileTime::operator &gt;  
  此运算符比较两个 `CFileTime` 对象以确定较大者。  
   
 ```
@@ -363,7 +358,7 @@ bool operator>(CFileTime ft) const throw();
 ### <a name="return-value"></a>返回值  
  返回**true** （更高版本中时间） 的第一个对象是否大于第二个，否则为**false**。  
   
-##  <a name="operator_gt_eq"></a>CFileTime::operator&gt;=  
+##  <a name="operator_gt_eq"></a>  CFileTime::operator &gt;=  
  此运算符比较两个 `CFileTime` 对象以确定是否相等或较大者。  
   
 ```
@@ -377,7 +372,7 @@ bool operator>=(CFileTime ft) const throw();
 ### <a name="return-value"></a>返回值  
  返回**true**的第一个对象是否大于 （更高版本中时间） 或等于第二个，否则**false**。  
   
-##  <a name="second"></a>CFileTime::Second  
+##  <a name="second"></a>  CFileTime::Second  
  将构成一天的 100 毫微秒隔数存储静态数据成员。  
   
 ```
@@ -387,7 +382,7 @@ static const ULONGLONG Second = Millisecond* 1000;
 ### <a name="example"></a>示例  
  请参阅示例[CFileTime::Millisecond](#millisecond)。  
   
-##  <a name="settime"></a>CFileTime::SetTime  
+##  <a name="settime"></a>  CFileTime::SetTime  
  调用此方法以设置的日期和时间存储`CFileTime`对象。  
   
 ```
@@ -398,7 +393,7 @@ void SetTime(ULONGLONG nTime) throw();
  `nTime`  
  表示的日期和时间，在本地或其格式为协调世界时 (UTC) 的 64 位值。  
   
-##  <a name="utctolocal"></a>CFileTime::UTCToLocal  
+##  <a name="utctolocal"></a>  CFileTime::UTCToLocal  
  调用此方法可将基于协调世界时 (UTC) 为本地文件时间的时间。  
   
 ```
@@ -411,7 +406,7 @@ CFileTime UTCToLocal() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#42](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_4.cpp)]  
   
-##  <a name="week"></a>CFileTime::Week  
+##  <a name="week"></a>  CFileTime::Week  
  将构成一周的 100 毫微秒隔数存储静态数据成员。  
   
 ```

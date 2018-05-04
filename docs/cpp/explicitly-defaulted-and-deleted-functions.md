@@ -2,26 +2,21 @@
 title: 显式默认函数和已删除的函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除的函数
 在 C++11 中，默认函数和已删除函数使你可以显式控制是否自动生成特殊成员函数。 已删除的函数还可为您提供简单语言，以防止所有类型的函数（特殊成员函数和普通成员函数以及非成员函数）的参数中出现有问题的类型提升，这会导致意外的函数调用。  

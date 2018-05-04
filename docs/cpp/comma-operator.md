@@ -2,11 +2,8 @@
 title: 逗号运算符:，|Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '%2C'
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d610e1a7aefbd0c6615cd9ed758f64b6986e3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comma-operator-"></a>逗号运算符：,
 允许对两个语句进行分组，其中有一个是预期的。  
@@ -48,7 +43,7 @@ expression , expression
   
  类型和表达式的值是类型和值*e2*; 的计算结果*e1*将被丢弃。 如果右操作数是左值，则结果为左值。  
   
- 在通常将逗号用作分隔符的方案中（例如，在函数或聚合初始值设定项的实参中），逗号运算符及其操作数必须包含在括号中。 例如:  
+ 在通常将逗号用作分隔符的方案中（例如，在函数或聚合初始值设定项的实参中），逗号运算符及其操作数必须包含在括号中。 例如：  
   
 ```  
 func_one( x, y + 2, z );  

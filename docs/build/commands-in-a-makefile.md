@@ -1,29 +1,24 @@
 ---
-title: "生成文件中的命令 |Microsoft 文档"
-ms.custom: 
+title: 生成文件中的命令 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99e1eb5b4800ff1046ca60d4d4874d386809e2e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commands-in-a-makefile"></a>生成文件中的命令
 描述块或推理规则指定的命令在依赖项已过期时要运行的块。 NMAKE 每个命令将在之前显示运行它，除非 /s 选项、 **。无提示**， **！CMDSWITCHES**，或使用 @。 如果描述块不跟命令块，NMAKE 查找匹配的推理规则。  

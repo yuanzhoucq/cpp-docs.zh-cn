@@ -2,11 +2,8 @@
 title: CAtlModuleT 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModuleT
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f1ba8d59e85a480af38e5b9778fee0c714a0db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29088c56d7020b38febb96be7512771a258e25fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT 类
 此类实现 ATL 模块。  
@@ -71,7 +66,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="remarks"></a>备注  
  `CAtlModuleT`派生自[CAtlModule](../../atl/reference/catlmodule-class.md)，实现可执行文件 (EXE) 或服务 (EXE) ATL 模块。 可执行模块是本地、 进程外服务器，而服务模块是在 Windows 启动时在后台运行的 Windows 应用程序。  
   
- `CAtlModuleT`为初始化、 注册和注销的模块提供支持。  
+ `CAtlModuleT` 为初始化、 注册和注销的模块提供支持。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -81,10 +76,10 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
   
  `CAtlModuleT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT  
  构造函数。  
   
 ```
@@ -94,7 +89,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>备注  
  调用[CAtlModuleT::InitLibId](#initlibid)。  
   
-##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>  CAtlModuleT::InitLibId  
  初始化包含当前模块的 GUID 的数据成员。  
   
 ```
@@ -104,7 +99,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>备注  
  由构造函数调用[CAtlModuleT::CAtlModuleT](#catlmodulet)。  
   
-##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
  将该 exe 文件添加到注册表。  
   
 ```
@@ -114,7 +109,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
  将服务添加到注册表。  
   
 ```
@@ -133,7 +128,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
  从注册表中删除该 exe 文件。  
   
 ```
@@ -143,7 +138,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
  从注册表中删除服务。  
   
 ```
@@ -162,7 +157,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
  更新注册表中的 EXE 信息。  
   
 ```

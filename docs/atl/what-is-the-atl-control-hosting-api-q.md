@@ -1,13 +1,10 @@
 ---
-title: "什么是 ATL 控件承载 API？ | Microsoft Docs"
-ms.custom: 
+title: 什么是 ATL 控件承载 API？ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - control-hosting API
 - controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>什么是 ATL 控件承载 API？
 ATL 的控件承载 API 是一套函数，它允许任何窗口使其作为 ActiveX 控件容器。 这些函数可以是静态或动态链接到你的项目，因为它们可用作源代码并由 ATL90.dll 公开。 下表中列出的控件承载的函数。  

@@ -1,12 +1,12 @@
 ---
-title: "CDialog 类 |Microsoft 文档"
-ms.custom: 
+title: CDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CDialog
@@ -49,17 +49,17 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 0de2c308372758e96919fbaa9bf247fb424de945
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdialog-class"></a>CDialog 类
 用于在屏幕上显示对话框的基类。  
@@ -125,7 +125,7 @@ class CDialog : public CWnd
   
  程序员和 framework 调用`DoDataExchange`间接通过调用[CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)。  
   
- 框架调用`UpdateData`当用户单击确定按钮以关闭模式对话框。 （不检索数据如果单击取消按钮。）默认实现[OnInitDialog](#oninitdialog)还会调用`UpdateData`设置控件的初始值。 通常可以重写`OnInitDialog`进一步初始化控件。 `OnInitDialog`后创建所有对话框控件和框显示对话框之前调用。  
+ 框架调用`UpdateData`当用户单击确定按钮以关闭模式对话框。 （不检索数据如果单击取消按钮。）默认实现[OnInitDialog](#oninitdialog)还会调用`UpdateData`设置控件的初始值。 通常可以重写`OnInitDialog`进一步初始化控件。 `OnInitDialog` 后创建所有对话框控件和框显示对话框之前调用。  
   
  你可以调用`CWnd::UpdateData`模式或无模式对话框中的执行期间随时。  
   
@@ -150,10 +150,10 @@ class CDialog : public CWnd
   
  `CDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cdialog"></a>CDialog::CDialog  
+##  <a name="cdialog"></a>  CDialog::CDialog  
  若要构造的基于资源的模式对话框，请调用构造函数的任一公共形式。  
   
 ```  
@@ -180,7 +180,7 @@ CDialog();
  指向父或所有者窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
- 一种形式的构造函数通过模板名称提供到对话框资源的访问权限。 另一个构造函数提供按模板 ID 号的访问通常具有**IDD_**前缀 (例如，IDD_DIALOG1)。  
+ 一种形式的构造函数通过模板名称提供到对话框资源的访问权限。 另一个构造函数提供按模板 ID 号的访问通常具有**IDD_** 前缀 (例如，IDD_DIALOG1)。  
   
  若要构造一个模式对话框，可从内存中的模板，请首先调用无参数、 受保护构造函数，然后调用`InitModalIndirect`。  
   
@@ -188,7 +188,7 @@ CDialog();
   
  若要构造一个无模式对话框，使用受保护的形式`CDialog`构造函数。 构造函数得到保护，因为必须派生你自己对话框类，以实现无模式对话框。 无模式对话框的构造是一个两步过程。 第一次调用构造函数;然后调用**创建**成员函数来创建基于资源的对话框中，或调用`CreateIndirect`以从内存中的模板创建对话框。  
   
-##  <a name="create"></a>CDialog::Create  
+##  <a name="create"></a>  CDialog::Create  
  调用**创建**若要创建使用对话框模板资源从一个无模式对话框。  
   
 ```  
@@ -231,7 +231,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
-##  <a name="createindirect"></a>CDialog::CreateIndirect  
+##  <a name="createindirect"></a>  CDialog::CreateIndirect  
  调用此成员函数以从内存中对话框模板创建无模式对话框。  
   
 ```  
@@ -269,9 +269,9 @@ virtual BOOL CreateIndirect(
   
  使用`CWnd::DestroyWindow`函数销毁对话框中创建的`CreateIndirect`函数。  
   
- 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何： 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何： 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="domodal"></a>CDialog::DoModal  
+##  <a name="domodal"></a>  CDialog::DoModal  
  调用此成员函数以调用模式对话框并返回完成的对话框结果。  
   
 ```  
@@ -287,12 +287,12 @@ virtual INT_PTR DoModal();
  如果用户单击其中一个在对话框中，如确定或取消，消息处理程序成员函数时，按键如[OnOK](#onok)或[OnCancel](#oncancel)，调用以尝试关闭对话框。 默认值`OnOK`成员函数将验证和更新对话框中的数据并关闭结果对话框中**IDOK**，也是默认值`OnCancel`成员函数将关闭结果的对话框中**IDCANCEL**而无需验证或更新的对话框中的数据。 你可以重写这些消息处理程序函数，以更改其行为。  
   
 > [!NOTE]
-> `PreTranslateMessage`现在为模式对话框框消息处理调用。  
+> `PreTranslateMessage` 现在为模式对话框框消息处理调用。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
-##  <a name="enddialog"></a>CDialog::EndDialog  
+##  <a name="enddialog"></a>  CDialog::EndDialog  
  调用此成员函数以终止模式对话框。  
   
 ```  
@@ -308,14 +308,14 @@ void EndDialog(int nResult);
   
  你可以调用`EndDialog`任何时候，即使在[OnInitDialog](#oninitdialog)，在这种情况下，你应在关闭对话框框，然后它会显示，或设置输入的焦点之前。  
   
- `EndDialog`不会立即关闭对话框。 相反，它设置一个标志，指示当前消息处理程序返回时，就会立即关闭对话框。  
+ `EndDialog` 不会立即关闭对话框。 相反，它设置一个标志，指示当前消息处理程序返回时，就会立即关闭对话框。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
   
  [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
-##  <a name="getdefid"></a>CDialog::GetDefID  
+##  <a name="getdefid"></a>  CDialog::GetDefID  
  调用`GetDefID`成员函数以获取对话框中的默认按钮控件的 ID。  
   
 ```  
@@ -328,7 +328,7 @@ DWORD GetDefID() const;
 ### <a name="remarks"></a>备注  
  这通常是确定按钮。  
   
-##  <a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>  CDialog::GotoDlgCtrl  
  将焦点移到指定控件在对话框中。  
   
 ```  
@@ -345,7 +345,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem)。  
   
-##  <a name="initmodalindirect"></a>CDialog::InitModalIndirect  
+##  <a name="initmodalindirect"></a>  CDialog::InitModalIndirect  
  调用此成员函数以初始化使用内存中构造的对话框模板的模式对话框对象。  
   
 ```  
@@ -379,9 +379,9 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>备注  
  若要间接创建模式对话框，首先分配全局内存块，并填充对话框模板。 然后调用空`CDialog`用于构造对话框对象构造函数。 接下来，调用`InitModalIndirect`存储到内存中对话框模板你句柄。 创建并显示 Windows 对话框中更高版本，在[DoModal](#domodal)调用成员函数。  
   
- 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何： 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何： 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect  
  要转换为屏幕单元的矩形的对话框单位的调用。  
   
 ```  
@@ -399,7 +399,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  `MapDialogRect`成员函数将替换中的对话框单元`lpRect`与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
   
-##  <a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  将焦点移到下一个控件在对话框中。  
   
 ```  
@@ -409,7 +409,7 @@ void NextDlgCtrl() const;
 ### <a name="remarks"></a>备注  
  如果焦点位于对话框中的最后一个控件，它将移动到第一个控件。  
   
-##  <a name="oncancel"></a>CDialog::OnCancel  
+##  <a name="oncancel"></a>  CDialog::OnCancel  
  框架调用此方法，当用户单击**取消**或按 ESC 键模式或无模式对话框中的。  
   
 ```  
@@ -427,7 +427,7 @@ virtual void OnCancel();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
-##  <a name="oninitdialog"></a>CDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog  
  此方法调用以响应`WM_INITDIALOG`消息。  
   
 ```  
@@ -445,12 +445,12 @@ virtual BOOL OnInitDialog();
  Windows 调用`OnInitDialog`到所有的 Microsoft 基础类库对话框使用常见的标准全局对话框过程的函数。 它不调用此函数通过消息映射，并且因此你不为此方法需要一个消息映射条目。  
   
 > [!NOTE]
->  当你使用时，不能重写此方法`CFileDialog`在下编译的程序中的对象[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]。 有关对进行的更改的详细信息`CFileDialog`下[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]请参阅[CFileDialog 类](../../mfc/reference/cfiledialog-class.md)。  
+> 当你使用时，不能重写此方法`CFileDialog`在 Windows Vista 或更高版本操作系统下编译的程序中的对象。 有关对进行的更改的详细信息`CFileDialog`在 Windows Vista 及更高版本，请参阅[CFileDialog 类](../../mfc/reference/cfiledialog-class.md)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
-##  <a name="onok"></a>CDialog::OnOK  
+##  <a name="onok"></a>  CDialog::OnOK  
  当用户单击时调用**确定**按钮 （带有 IDOK ID 的按钮）。  
   
 ```  
@@ -468,7 +468,7 @@ virtual void OnOK();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
-##  <a name="onsetfont"></a>CDialog::OnSetFont  
+##  <a name="onsetfont"></a>  CDialog::OnSetFont  
  指定在绘制文本时，将使用的对话框中控件的字体。  
   
 ```  
@@ -485,9 +485,9 @@ Virtual void OnSetFont(CFont* pFont);
  对话框编辑器通常设置的对话框字体的对话框模板资源的一部分。  
   
 > [!NOTE]
->  当你使用时，不能重写此方法`CFileDialog`在下编译的程序中的对象[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]。 有关对进行的更改的详细信息`CFileDialog`下[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]请参阅[CFileDialog 类](../../mfc/reference/cfiledialog-class.md)。  
+> 当你使用时，不能重写此方法`CFileDialog`在 Windows Vista 或更高版本操作系统下编译的程序中的对象。 有关对进行的更改的详细信息`CFileDialog`在 Windows Vista 及更高版本，请参阅[CFileDialog 类](../../mfc/reference/cfiledialog-class.md)。  
   
-##  <a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>  CDialog::PrevDlgCtrl  
  在对话框中将焦点设置为上一个控件。  
   
 ```  
@@ -497,7 +497,7 @@ void PrevDlgCtrl() const;
 ### <a name="remarks"></a>备注  
  如果焦点位于对话框中的第一个控件，它将移动到最后一个控件在框中。  
   
-##  <a name="setdefid"></a>CDialog::SetDefID  
+##  <a name="setdefid"></a>  CDialog::SetDefID  
  更改对话框中的默认按钮控件。  
   
 ```  
@@ -508,7 +508,7 @@ void SetDefID(UINT nID);
  `nID`  
  指定将成为默认的按钮控件的 ID。  
   
-##  <a name="sethelpid"></a>CDialog::SetHelpID  
+##  <a name="sethelpid"></a>  CDialog::SetHelpID  
  设置对话框中的上下文相关帮助 ID。  
   
 ```  

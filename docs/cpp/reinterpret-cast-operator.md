@@ -1,12 +1,9 @@
 ---
-title: "reinterpret_cast 运算符 |Microsoft 文档"
-ms.custom: 
+title: reinterpret_cast 运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - reinterpret_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0957a696d7675a932aa86531d39f2e4895ba1ff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 运算符
 允许将任何指针转换为任何其他指针类型。 也允许将任何整数类型转换为任何指针类型以及反向转换。  
@@ -43,7 +38,7 @@ reinterpret_cast < type-id > ( expression )
   
  `reinterpret_cast` 的结果不能安全地用于除强制转换回其原始类型以外的任何用途。 在最好的情况下，其他用途也是不可移植的。  
   
- `reinterpret_cast`运算符不能丢掉**const**， `volatile`，或**__unaligned**属性。 请参阅[const_cast 运算符](../cpp/const-cast-operator.md)有关移除这些特性的信息。  
+ `reinterpret_cast`运算符不能丢掉**const**， `volatile`，或 **__unaligned**属性。 请参阅[const_cast 运算符](../cpp/const-cast-operator.md)有关移除这些特性的信息。  
   
  `reinterpret_cast` 运算符将 null 指针值转换为目标类型的 null 指针值。  
   

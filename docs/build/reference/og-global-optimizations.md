@@ -2,12 +2,9 @@
 title: -Og （全局优化） |Microsoft 文档
 ms.custom: ''
 ms.date: 09/22/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 196e89a958ce49bf5e0087d98d2f40ada210cc87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="og-global-optimizations"></a>/Og（全局优化）
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 
 **/Og**已弃用。 现在默认情况下通常启用这些优化。 优化的详细信息，请参阅[/O1、 /O2 （最小化大小、 最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)。
 
-下列优化下有**/Og**:
+下列优化下有 **/Og**:
 
 - 本地和全局公共子表达式消除
 

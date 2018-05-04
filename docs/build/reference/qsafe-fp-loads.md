@@ -1,25 +1,21 @@
 ---
-title: /Qsafe_fp_loads | Microsoft Docs
-ms.custom: 
+title: / Qsafe_fp_loads |Microsoft 文档
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e079e084c641318c9bec0820263487139b4d5076
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 1462303f9e178c70a845066bc7a0a3ce78a99e15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -35,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 
 **/ Qsafe_fp_loads**强制编译器使用整数移动指令而不是浮点移动指令内存和 MMX 之间移动数据寄存器。 多个控制路径中可加载的浮点值可能导致加载异常（例如 NaN 值）时，此选项还禁用这些值的寄存器加载优化。
 
-此选项将重写[/fp： 除](../../build/reference/fp-specify-floating-point-behavior.md)。 **/ Qsafe_fp_loads**指定由指定的编译器行为子集**/fp： 除**。
+此选项将重写[/fp： 除](../../build/reference/fp-specify-floating-point-behavior.md)。 **/ Qsafe_fp_loads**指定由指定的编译器行为子集 **/fp： 除**。
 
 **/ Qsafe_fp_loads**与不兼容[/clr](../../build/reference/clr-common-language-runtime-compilation.md)和[/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md)。 有关浮点点编译器选项的详细信息，请参阅[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)。
 

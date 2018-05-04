@@ -1,12 +1,9 @@
 ---
-title: "CRBMultiMap 类 |Microsoft 文档"
-ms.custom: 
+title: CRBMultiMap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ec016df268b702fd8b26d742d702ac38b95fa06
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 类
 此类表示允许每个键可以是使用多个值，使用红色黑色二进制树关联的映射结构。  
@@ -80,7 +75,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMultiMap::RemoveKey](#removekey)|调用此方法以删除所有给定键的键/值元素。|  
   
 ## <a name="remarks"></a>备注  
- `CRBMultiMap`为管理密钥的元素和值的有序的数组任何给定类型的映射数组提供支持。 与不同[CRBMap](../../atl/reference/crbmap-class.md)类，每个键可以是与多个值相关联。  
+ `CRBMultiMap` 为管理密钥的元素和值的有序的数组任何给定类型的映射数组提供支持。 与不同[CRBMap](../../atl/reference/crbmap-class.md)类，每个键可以是与多个值相关联。  
   
  元素 （包含的键和值） 存储在二进制树的结构，使用[CRBMultiMap::Insert](#insert)方法。 可以使用删除元素[CRBMultiMap::RemoveKey](#removekey)方法，从而会删除与给定的键匹配的所有元素。  
   
@@ -88,7 +83,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  `KTraits`和`VTraits`参数是包含复制或移动元素所需的任何补充代码的特征类。  
   
- `CRBMultiMap`派生自[CRBTree](../../atl/reference/crbtree-class.md)，该类可实现二进制树使用红色黑色算法。 一种替代方法`CRBMultiMap`和`CRBMap`所提供的[CAtlMap](../../atl/reference/catlmap-class.md)类。 当只有少量的元素需要存储时，请考虑使用[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
+ `CRBMultiMap` 派生自[CRBTree](../../atl/reference/crbtree-class.md)，该类可实现二进制树使用红色黑色算法。 一种替代方法`CRBMultiMap`和`CRBMap`所提供的[CAtlMap](../../atl/reference/catlmap-class.md)类。 当只有少量的元素需要存储时，请考虑使用[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
   
  有关的各种集合类及其功能和性能特征的更完整讨论，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
@@ -97,10 +92,10 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  `CRBMultiMap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap  
  构造函数。  
   
 ```
@@ -119,7 +114,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap  
  析构函数。  
   
 ```
@@ -131,7 +126,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   
-##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey  
  调用此方法以查找与给定键的第一个元素的位置。  
   
 ```
@@ -153,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>示例  
  请参阅示例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey  
  调用此方法以获取与给定的键关联的值并更新位置值。  
   
 ```
@@ -183,7 +178,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>示例  
  请参阅示例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey  
  调用此方法以获取与给定的键关联的元素，并更新位置值。  
   
 ```
@@ -210,7 +205,7 @@ CPair* GetNextWithKey(
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   
-##  <a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>  CRBMultiMap::Insert  
  调用此方法以插入到映射的元素对。  
   
 ```
@@ -221,7 +216,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
  `key`  
  密钥的值将添加到`CRBMultiMap`对象。  
   
- *值*  
+ *value*  
  要添加到值`CRBMultiMap`与关联的对象`key`。  
   
 ### <a name="return-value"></a>返回值  
@@ -233,7 +228,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>示例  
  请参阅示例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMultiMap::RemoveKey  
  调用此方法以删除所有给定键的键/值元素。  
   
 ```
@@ -248,7 +243,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
  返回与给定的键关联的值的数目。  
   
 ### <a name="remarks"></a>备注  
- `RemoveKey`删除所有具有匹配的键的键/值元素`key`。  
+ `RemoveKey` 删除所有具有匹配的键的键/值元素`key`。  
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   

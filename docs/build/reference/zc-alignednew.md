@@ -1,9 +1,9 @@
 ---
-title: "/Zc:alignedNew （c + + 17 过度对齐的分配） |Microsoft 文档"
+title: /Zc:alignedNew （c + + 17 过度对齐的分配） |Microsoft 文档
 ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:alignedNew
 dev_langs:
@@ -14,12 +14,11 @@ helpviewer_keywords:
 - -Zc:alignedNew
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: d645534c398628afa533770d44094d23ca0325a5
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 5f9527d63a9843bd4df90520e5b4759126d72fe1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew （c + + 17 过度对齐的分配）
 
@@ -31,13 +30,13 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="remarks"></a>备注
 
-Visual Studio 版本 15.5 使编译器和 C + + 17 标准过度对齐动态内存分配的库支持。 当**/Zc:alignedNew**指定选项，如动态分配`new Example;`遵循的对齐方式*示例*甚至当其大于`max_align_t`，最大对齐所需的任何基本类型。 当分配的类型的对齐方式只是为原始运算符可以确保获得**新**、 可用的预定义的宏的值作为 **\_ \_STDCPP\_默认\_新建\_对齐\_\_**，语句`new Example;`对的调用会导致`::operator new(size_t)`像在 C + + 14 中。 当对齐大于 **\_ \_STDCPP\_默认\_新建\_对齐\_\_**，实现改为获取通过使用内存`::operator new(size_t, align_val_t)`。 同样，删除过度对齐的类型时，将调用`::operator delete(void*, align_val_t)`或大小删除签名`::operator delete(void*, size_t, align_val_t)`。
+Visual Studio 版本 15.5 使编译器和 C + + 17 标准过度对齐动态内存分配的库支持。 当 **/Zc:alignedNew**指定选项，如动态分配`new Example;`遵循的对齐方式*示例*甚至当其大于`max_align_t`，最大对齐所需的任何基本类型。 当分配的类型的对齐方式只是为原始运算符可以确保获得**新**、 可用的预定义的宏的值作为 **\_ \_STDCPP\_默认\_新建\_对齐\_\_**，语句`new Example;`对的调用会导致`::operator new(size_t)`像在 C + + 14 中。 当对齐大于 **\_ \_STDCPP\_默认\_新建\_对齐\_\_**，实现改为获取通过使用内存`::operator new(size_t, align_val_t)`。 同样，删除过度对齐的类型时，将调用`::operator delete(void*, align_val_t)`或大小删除签名`::operator delete(void*, size_t, align_val_t)`。
 
-**/Zc:alignedNew**选项才可用[/std:c + + 17](std-specify-language-standard-version.md)或[/std:c + + 最新](std-specify-language-standard-version.md)已启用。 下**/std:c + + 17**或**/std:c + + 最新**， **/Zc:alignedNew**默认启用以符合 ISO C + + 17 标准。 如果你的唯一原因实现运算符**新**和**删除**是支持过度对齐的分配，你可能不再需要此代码在 C + + 17 模式下。 若要关闭此选项并恢复到 C + + 14 的行为**新**和**删除**时**/std::c + + 17**或**/std:c + + 最新**指定，则指定**/Zc:alignedNew-**。 如果实现运算符**新**和**删除**但你不准备实现过度对齐的运算符**新**和**删除**具有重载`align_val_t`参数，使用**/Zc:alignedNew-**选项以阻止生成的编译器和标准库调用过度对齐的重载。 [/ 宽松-](permissive-standards-conformance.md)选项不会更改的默认设置**/Zc:alignedNew**。
+**/Zc:alignedNew**选项才可用[/std:c + + 17](std-specify-language-standard-version.md)或[/std:c + + 最新](std-specify-language-standard-version.md)已启用。 下 **/std:c + + 17**或 **/std:c + + 最新**， **/Zc:alignedNew**默认启用以符合 ISO C + + 17 标准。 如果你的唯一原因实现运算符**新**和**删除**是支持过度对齐的分配，你可能不再需要此代码在 C + + 17 模式下。 若要关闭此选项并恢复到 C + + 14 的行为**新**和**删除**时 **/std::c + + 17**或 **/std:c + + 最新**指定，则指定 **/Zc:alignedNew-**。 如果实现运算符**新**和**删除**但你不准备实现过度对齐的运算符**新**和**删除**具有重载`align_val_t`参数，使用 **/Zc:alignedNew-** 选项以阻止生成的编译器和标准库调用过度对齐的重载。 [/ 宽松-](permissive-standards-conformance.md)选项不会更改的默认设置 **/Zc:alignedNew**。
 
 ## <a name="example"></a>示例
 
-此示例演示如何运算符**新**和运算符**删除**时行为**/Zc:alignedNew**设置选项。
+此示例演示如何运算符**新**和运算符**删除**时行为 **/Zc:alignedNew**设置选项。
 
 ```cpp
 // alignedNew.cpp
@@ -108,7 +107,7 @@ Visual c + + 中一致性问题的信息，请参阅[非标准行为](../../cpp/
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含**/Zc:alignedNew**或**/Zc:alignedNew-** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/Zc:alignedNew**或 **/Zc:alignedNew-** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

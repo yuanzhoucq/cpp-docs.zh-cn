@@ -2,11 +2,8 @@
 title: using 声明 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - using keyword [C++]
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6bf39dfdb4f59bcf54ce1ddd5174f1e3a55e3a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-declaration"></a>using 声明
 使用声明将名称引入在其中的声明性区域 using 声明出现。  
@@ -228,7 +223,7 @@ void g() {
  在上例中，`using B::i`语句会导致第二个`int i`中声明`g()`函数。 `using B::f`语句不与冲突`f(char)`正常，因为引入了函数名称`B::f`具有不同的参数类型。  
   
 ## <a name="example"></a>示例  
- 本地函数声明不能将相同的名称和类型作为通过使用声明引入的函数。 例如:  
+ 本地函数声明不能将相同的名称和类型作为通过使用声明引入的函数。 例如：  
   
 ```cpp  
 // functions_in_namespaces2.cpp  

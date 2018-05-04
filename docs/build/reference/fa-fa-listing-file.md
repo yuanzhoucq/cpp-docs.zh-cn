@@ -1,13 +1,10 @@
 ---
-title: "/FA、 /Fa （列出文件） |Microsoft 文档"
-ms.custom: 
+title: /FA、 /Fa （列出文件） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
 创建包含汇编代码的列表文件。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 `s`  
 可选。 在列表中包括源代码。  
   
-`u`可选。 将编码 utf-8 格式的列表文件并包含字节顺序标记。 默认情况下，文件编码为 ANSI。 使用`u`创建列表文件正确显示在任何系统上，或者如果您正在使用 Unicode 源代码文件作为输入到编译器。  
+`u`（可选）。 将编码 utf-8 格式的列表文件并包含字节顺序标记。 默认情况下，文件编码为 ANSI。 使用`u`创建列表文件正确显示在任何系统上，或者如果您正在使用 Unicode 源代码文件作为输入到编译器。  
   
 如果这两个`s`和`u`指定，并如果源代码文件使用 Unicode 编码，而不是 utf-8，则.asm 文件中的代码行可能无法正确显示。  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  打开**C/c + +**文件夹，然后选择**输出文件**属性页。  
+2.  打开**C/c + +** 文件夹，然后选择**输出文件**属性页。  
   
 3.  修改**汇编程序输出**属性来设置`/FAc`和`/FAs`汇编程序、 计算机和源代码的选项。 修改**使用 Unicode 对于汇编程序列出**属性来设置`/FAu`ANSI 或 utf-8 输出的选项。 修改**ASM 列表位置**设置`/Fa`用于列出文件的名称和位置的选项。  
   

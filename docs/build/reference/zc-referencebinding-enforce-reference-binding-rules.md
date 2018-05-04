@@ -1,10 +1,10 @@
 ---
-title: "/Zc:referenceBinding （强制实施引用绑定规则） |Microsoft 文档"
-ms.custom: 
+title: /Zc:referenceBinding （强制实施引用绑定规则） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - referenceBinding
 - /Zc:referenceBinding
@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e3b10f5b2108a4c0e29d802951015749775a27
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 30038f6ff73eaa2d9536c3685927458a70209864
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding （强制实施引用绑定规则）
 
-当**/Zc:referenceBinding**指定选项，编译器不允许将绑定到一个临时的非常量左值引用。
+当 **/Zc:referenceBinding**指定选项，编译器不允许将绑定到一个临时的非常量左值引用。
 
 ## <a name="syntax"></a>语法
 
@@ -38,9 +37,9 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="remarks"></a>备注
 
-如果**/Zc:referenceBinding**指定，则编译器遵循 C + + 11 标准 8.5.3 部分，并且不允许将临时的用户定义的类型绑定到非 const 左值引用的表达式。 默认情况下，或者如果**/Zc:referenceBinding-**指定，编译器允许此类表达式作为 Microsoft 扩展，但发布的 4 级警告。 对于代码安全性、 可移植性和一致性，我们建议你使用**/Zc:referenceBinding**。
+如果 **/Zc:referenceBinding**指定，则编译器遵循 C + + 11 标准 8.5.3 部分，并且不允许将临时的用户定义的类型绑定到非 const 左值引用的表达式。 默认情况下，或者如果 **/Zc:referenceBinding-** 指定，编译器允许此类表达式作为 Microsoft 扩展，但发布的 4 级警告。 对于代码安全性、 可移植性和一致性，我们建议你使用 **/Zc:referenceBinding**。
 
-**/Zc:referenceBinding**选项默认处于关闭状态。 [/ 宽松-](permissive-standards-conformance.md)编译器选项隐式设置此选项，但它可以通过重写**/Zc:referenceBinding-**。
+**/Zc:referenceBinding**选项默认处于关闭状态。 [/ 宽松-](permissive-standards-conformance.md)编译器选项隐式设置此选项，但它可以通过重写 **/Zc:referenceBinding-**。
 
 ## <a name="example"></a>示例
 
@@ -73,7 +72,7 @@ void main() {
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含**/Zc:referenceBinding** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/Zc:referenceBinding** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

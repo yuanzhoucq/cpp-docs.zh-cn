@@ -1,13 +1,10 @@
 ---
-title: "活动模板库 (ATL) 教程 |Microsoft 文档"
-ms.custom: 
+title: 活动模板库 (ATL) 教程 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7737728668adddbf3ca8ed0c41cdbf5e6bb61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 069d5d84b06850705db5c48f09bb0d0122f58fa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-template-library-atl-tutorial"></a>活动模板库 (ATL) 教程
 ATL 旨在简化创建高效、 灵活、 轻型控件的过程。 本教程将引导你逐步完成创建 ActiveX 控件，演示许多 ATL 和 COM 的基础知识。  

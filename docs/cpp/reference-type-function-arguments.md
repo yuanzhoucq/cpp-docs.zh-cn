@@ -2,11 +2,8 @@
 title: 引用类型函数自变量 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b94f6b89ec00cc044cbaa93a4f0f914860db71e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-type-function-arguments"></a>引用类型函数自变量
 向函数传递引用而非大型对象的效率通常更高。 这使编译器能够在保持已用于访问对象的语法的同时传递对象的地址。 请考虑以下使用了 `Date` 结构的示例：  
@@ -81,7 +76,7 @@ long JulianFromGregorian( const Date& GDate );
   
  此原型将确保函数 `JulianFromGregorian` 不会更改其参数。  
   
- 任何函数原型采用引用类型可以接受在其位置的相同类型的对象，因为没有从标准转换*typename*到*typename*  **&**.  
+ 任何函数原型采用引用类型可以接受在其位置的相同类型的对象，因为没有从标准转换*typename*到 * typename ***&**。  
   
 ## <a name="see-also"></a>请参阅  
  [参考资料](../cpp/references-cpp.md)

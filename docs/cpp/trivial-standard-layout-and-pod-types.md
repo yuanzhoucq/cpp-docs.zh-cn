@@ -2,18 +2,13 @@
 title: 普通，标准布局、 POD 和文本类型 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/05/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-caps.latest.revision: 13
-manager: ghogen
-ms.openlocfilehash: e977449c1c31b0b3f83c04b9b52a1a0bacb37f31
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 7a80db109df1d9aa25f471312a9ff7103b90df7b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>普通，标准布局、 POD 和文本类型
 
@@ -203,6 +198,6 @@ int main()
 - Void、标量类型或引用的数组
 - 具有普通析构函数以及一个或多个 constexpr 构造函数且不移动或复制构造函数的类。 此外，其所有非静态数据成员和基类必须是文本类型且不可变。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [基本概念](../cpp/basic-concepts-cpp.md)

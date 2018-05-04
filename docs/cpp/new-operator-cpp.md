@@ -2,28 +2,23 @@
 title: new 运算符 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 365beedce529e29be73c02caa57e5c6236565b9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-operator-c"></a>new 运算符 (C++)
 对象或对象数组分配内存*类型名称*从自由存储和返回非零、 适当类型化指针的对象。  
@@ -73,7 +68,7 @@ delete *p;
   
  下面的列表描述的语法元素**新**:  
   
- *placement*  
+ *放置*  
  提供一种传递附加自变量，如果重载**新**。  
   
  *type-name*  
@@ -127,7 +122,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 如果你使用的放置新形式**新**运算符，具有除了大小自变量的分配，编译器的窗体不支持的放置形式**删除**运算符如果构造函数引发异常。 例如:  
+ 如果你使用的放置新形式**新**运算符，具有除了大小自变量的分配，编译器的窗体不支持的放置形式**删除**运算符如果构造函数引发异常。 例如：  
   
 ```  
 // expre_new_Operator2.cpp  
@@ -201,7 +196,7 @@ int main()
  与函数调用一样，未定义初始化表达式的计算顺序。 此外，您不应指望这些表达式能在执行内存分配前完全计算。 如果内存分配失败和**新**运算符将返回零，可能无法完全计算初始值设定项中的某些表达式。  
   
 ## <a name="lifetime-of-objects-allocated-with-new"></a>使用 new 运算符分配的对象的生存期  
- 对象分配与**新**退出在其中定义的作用域时，将不会销毁运算符。 因为**新**运算符将指针返回到它所分配的对象，因此程序必须定义使用合适的范围，才能访问这些对象的指针。 例如:  
+ 对象分配与**新**退出在其中定义的作用域时，将不会销毁运算符。 因为**新**运算符将指针返回到它所分配的对象，因此程序必须定义使用合适的范围，才能访问这些对象的指针。 例如：  
   
 ```  
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  
@@ -239,7 +234,7 @@ int main()
   
  **新**运算符调用的函数`operator new`。 对于数组的任何类型，以及的不是对象**类**， `struct`，或**联合**类型、 全局函数， **:: 运算符 new**，调用来分配存储空间。 类类型对象可基于每个类定义其自己的 `operator new` 静态成员函数。  
   
- 当编译器遇到**新**运算符分配类型的对象`type`，它会发出调用`type` **:: 运算符 new (sizeof (** `type` **))**或如果不是用户定义`operator new`定义， **:: 运算符 new (sizeof (** `type` **))**。 因此，**新**运算符可以为对象分配正确的内存量。  
+ 当编译器遇到**新**运算符分配类型的对象`type`，它会发出调用`type` **:: 运算符 new (sizeof (** `type` **))** 或如果不是用户定义`operator new`定义， **:: 运算符 new (sizeof (** `type` **))**。 因此，**新**运算符可以为对象分配正确的内存量。  
   
 > [!NOTE]
 >  自变量`operator new`属于类型**size_t**。 此类型定义中\<.h >， \<l l >， \<y.h >， \<h.h >， \<stddef.h >， \<.h >， \<stdlib.h >， \<string.h >，和\<.h >。  

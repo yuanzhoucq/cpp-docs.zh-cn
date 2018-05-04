@@ -1,12 +1,9 @@
 ---
-title: "重载一元运算符 |Microsoft 文档"
-ms.custom: 
+title: 重载一元运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -20,40 +17,38 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d124410b785e44a9dcb55890b4723ebbae2da56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overloading-unary-operators"></a>重载一元运算符
 可重载的一元运算符如下：  
   
-1.  `!`([逻辑非](../cpp/logical-negation-operator-exclpt.md))  
+1.  `!` ([逻辑非](../cpp/logical-negation-operator-exclpt.md))  
   
-2.  `&`([地址的](../cpp/address-of-operator-amp.md))  
+2.  `&` ([地址的](../cpp/address-of-operator-amp.md))  
   
-3.  `~`([的二进制反码](../cpp/one-s-complement-operator-tilde.md))  
+3.  `~` ([的二进制反码](../cpp/one-s-complement-operator-tilde.md))  
   
-4.  `*`([指针取消引用](../cpp/indirection-operator-star.md))  
+4.  `*` ([指针取消引用](../cpp/indirection-operator-star.md))  
   
-5.  `+`([一元加](../cpp/additive-operators-plus-and.md))  
+5.  `+` ([一元加](../cpp/additive-operators-plus-and.md))  
   
-6.  `-`([一元求反](../cpp/additive-operators-plus-and.md))  
+6.  `-` ([一元求反](../cpp/additive-operators-plus-and.md))  
   
-7.  `++`([递增](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
+7.  `++` ([递增](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
-8.  `--`([递减](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
+8.  `--` ([递减](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
 9. 转换运算符  
   
- 后缀递增和递减运算符 (`++`和 **--** ) 将被视为单独在[递增和递减](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
+ 后缀递增和递减运算符 (`++`和**--**) 将被视为单独在[递增和递减](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
   
  转换运算符还讨论了在单独的主题;请参阅[用户定义类型转换](../cpp/user-defined-type-conversions-cpp.md)。  
   

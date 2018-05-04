@@ -1,12 +1,9 @@
 ---
-title: "函数重载 |Microsoft 文档"
-ms.custom: 
+title: 函数重载 |Microsoft 文档
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>函数重载
 C++ 允许同一范围内具有相同名称的多个函数的规范。 这些应用程序称为*重载*函数。 重载的函数，可以提供不同的语义，对于函数，具体取决于类型和数量的参数。 
   
- 例如，**打印**函数，它采用**std:: string**自变量可能会执行比采用类型的自变量的不同任务**double**。 重载使你不必使用名称如`print_string`或`print_double`。 在编译时，该编译器选择要使用的重载基于由调用方传入的参数的类型。  如果调用**print(42.0)**则**void 打印 (双 d)**将调用函数。 如果调用**打印 （"你好 world"）**则**void print(std::string)**重载将调用。
+ 例如，**打印**函数，它采用**std:: string**自变量可能会执行比采用类型的自变量的不同任务**double**。 重载使你不必使用名称如`print_string`或`print_double`。 在编译时，该编译器选择要使用的重载基于由调用方传入的参数的类型。  如果调用**print(42.0)** 则**void 打印 (双 d)** 将调用函数。 如果调用**打印 （"你好 world"）**则**void print(std::string)** 重载将调用。
 
 您可以重载成员函数以及非成员函数。 下表显示了 C++ 使用函数声明的哪些部分来区分同一范围内具有相同名称的函数组。  
   
@@ -261,26 +256,26 @@ volatile Over&
   
 |从类型转换|转换为类型|  
 |-----------------------|---------------------|  
-|*type-name*|*type-name* **&**|  
-|*type-name* **&**|*type-name*|  
+|*type-name*|*类型名称* **&**|  
+|*类型名称* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\**|  
-|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
-|*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *type-name*|  
-|*type-name\**|**const** *type-name\**|  
-|*type-name\**|`volatile` *type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(** *\*类型名称* **) (** *自变量列表* **)**|  
+|*type-name*|**const** *类型名称*|  
+|*type-name*|`volatile` *类型名称*|  
+|*type-name\**|**const** *类型名称\**|  
+|*type-name\**|`volatile` *类型名称\**|  
   
  在其中尝试转换的序列如下：  
   
 1.  完全匹配。 用于调用函数的类型与函数原型中声明的类型之间的完全匹配始终是最佳匹配。 常用转换的序列将归类为完全匹配。 但是，不进行任何转换的序列被视为比进行转换的序列更佳：  
   
-    -   从指针，到指向**const** (`type`  **\*** 到**const** `type`  **\*** ).  
+    -   从指针，到指向**const** (`type` **\*** 到**const** `type` **\***).  
   
-    -   从指针，到指向`volatile`(`type`  **\*** 到`volatile` `type`  **\*** )。  
+    -   从指针，到指向`volatile`(`type` **\*** 到`volatile` `type` **\***)。  
   
-    -   从引用，引用添加到**const** (`type`  **&** 到**const** `type`  **&** ).  
+    -   从引用，引用添加到**const** (`type` **&** 到**const** `type` **&**).  
   
-    -   从引用，引用添加到`volatile`(`type`  **&** 到`volatile` `type`  **&** )。  
+    -   从引用，引用添加到`volatile`(`type` **&** 到`volatile` `type` **&**)。  
   
 2.  使用提升的匹配。 未归类为完全匹配，仅包含整型提升，转换从任何序列**float**到**double**，和常用转换归类为使用提升的匹配。 尽管比不上完全匹配，但使用提升的匹配仍优于使用标准转换的匹配。  
   
@@ -408,7 +403,7 @@ obj.name
  处理 `->*` 和 `.*`（指向成员的指针）运算符的左操作数的方式与处理与参数匹配相关的 `.` 和 `->`（成员选择）运算符的方式相同。  
 
 ## <a name="ref-qualifiers"></a> 成员函数的 ref 限定符  
-Ref 限定符使得可重载成员函数根据是否指向的对象通过`this`是为右值或左值。  此功能可以用于避免不必要的复制操作在方案中你选择不是为了提供对数据的指针访问。 例如，假定类**C**初始化其构造函数中的某些数据并在成员函数返回的数据的副本**get_data()**。 如果类型的对象**C**为右值，为将被破坏，则编译器将选择**get_data() （& a) （& a)**超负荷运转，这可将数据移动，而不是将其复制。 
+Ref 限定符使得可重载成员函数根据是否指向的对象通过`this`是为右值或左值。  此功能可以用于避免不必要的复制操作在方案中你选择不是为了提供对数据的指针访问。 例如，假定类**C**初始化其构造函数中的某些数据并在成员函数返回的数据的副本**get_data()**。 如果类型的对象**C**为右值，为将被破坏，则编译器将选择**get_data() （& a) （& a)** 超负荷运转，这可将数据移动，而不是将其复制。 
 
 ```cpp
 #include <iostream>
@@ -580,5 +575,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数 (C++)](../cpp/functions-cpp.md)

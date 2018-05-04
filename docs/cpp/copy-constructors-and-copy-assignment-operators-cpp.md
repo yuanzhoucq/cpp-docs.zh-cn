@@ -2,11 +2,8 @@
 title: 复制构造函数和复制赋值运算符 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>复制构造函数和复制赋值运算符 (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  如果不声明复制构造函数，编译器将为你生成 member-wise 复制构造函数。  如果不声明复制赋值运算符，编译器将为你生成 member-wise 复制赋值运算符。 声明复制构造函数不会取消编译器生成的复制赋值运算符，反之亦然。 如果实现上述其中一项，建议你还实现另一项以使代码的含义变得明确。  
    
- 复制构造函数采用类型的自变量*类名***&**，其中*类名*是为其定义构造函数的类的名称。 例如:  
+ 复制构造函数采用类型的自变量 * 类的名称 ***&**，其中*类名*是为其定义构造函数的类的名称。 例如：  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  请复制构造函数的自变量的类型*常量的类名称***&**尽可能。 这可防止复制构造函数意外更改从中复制它的对象。 它还允许将从复制**const**对象。  
+>  请复制构造函数的自变量的类型*const 类-名称 * * * （& a)** 尽可能。 这可防止复制构造函数意外更改从中复制它的对象。 它还允许将从复制**const**对象。  
   
 ## <a name="compiler-generated-copy-constructors"></a>编译器生成的构造函数  
- 编译器生成的复制构造函数，如用户定义的复制构造函数具有单个参数的类型"引用*类名*。" 例外情况是当所有基类和成员类都具有声明为采用单个参数的类型的复制构造函数**const** *类名***&**。 在这种情况下，编译器生成的复制构造函数的参数也是**const**。  
+ 编译器生成的复制构造函数，如用户定义的复制构造函数具有单个参数的类型"引用*类名*。" 例外情况是当所有基类和成员类都具有声明为采用单个参数的类型的复制构造函数**const** * 类的名称 ***&**。 在这种情况下，编译器生成的复制构造函数的参数也是**const**。  
   
  当复制构造函数自变量类型不是**const**，通过复制初始化**const**对象生成一个错误。 反之则不然： 如果参数是**const**，可以通过复制不是一个对象初始化**const**。  
   
- 编译器生成的赋值运算符遵循关于相同的模式**const。** 它们将采用类型的单个参数*类名***&**除非所有基类和成员类中的赋值运算符采用自变量类型的**const** *类名称 （& a)。* 在这种情况下，类的生成的赋值运算符采用**const**自变量。  
+ 编译器生成的赋值运算符遵循关于相同的模式**const。** 它们将采用类型的单个参数*类-名称 * * * （& a)** 除非所有基类和成员类中的赋值运算符采用自变量类型的**const** *类名称 （& a)。* 在这种情况下，类的生成的赋值运算符采用**const**自变量。  
   
 > [!NOTE]
 >  当虚拟基类由复制构造函数（编译器生成或用户定义的）初始化时，将只初始化这些基类一次：在构造它们时。  

@@ -1,29 +1,24 @@
 ---
-title: "函数指针 |Microsoft 文档"
-ms.custom: 
+title: 函数指针 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - function pointers, x64
 ms.assetid: 874839ac-ffcd-419f-bcbe-6d492a5c3a61
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bcd323753b0885e2d46df0d4f9270e67cb2e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57c61dc8599ece5020e854b045f9634c1d732a6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-pointers"></a>函数指针
 函数指针是函数的只需指向相应的标签。 有的函数指针的目录 (TOC) 要求没有表。  

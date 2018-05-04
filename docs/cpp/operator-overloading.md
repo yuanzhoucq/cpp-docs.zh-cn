@@ -2,11 +2,8 @@
 title: 运算符重载 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-overloading"></a>运算符重载
 当应用于类的实例时，`operator` 关键字将声明一个用于指定 `operator-symbol` 含义的函数。 这将为运算符提供多个含义，或者将“重载”它。 编译器通过检查其操作数类型来区分运算符不同的含义。  
@@ -116,7 +111,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [递增和递减](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
   
--   [用户定义类型转换](../cpp/user-defined-type-conversions-cpp.md)  
+-   [用户定义的类型转换](../cpp/user-defined-type-conversions-cpp.md)  
   
  无法重载下表中显示的运算符。 该表包括预处理器符号 `#` 和 `##`。  
   

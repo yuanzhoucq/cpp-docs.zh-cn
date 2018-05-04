@@ -1,13 +1,10 @@
 ---
-title: "环境变量宏 |Microsoft 文档"
-ms.custom: 
+title: 环境变量宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ebebb6e7d237746f96c7ac7e27c249244ff825b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variable-macros"></a>环境变量宏
 NMAKE 继承的会话开始之前存在的环境变量的宏定义。 如果变量在操作系统环境中设置的则可以用作 NMAKE 宏。 继承的名称将转换为大写。 在预处理前发生继承。 使用 /E 选项会导致从环境变量重写中生成文件同名的任何宏继承的宏。  
   
  在会话中，可以重新定义环境变量宏，这将更改相应的环境变量。 你还可以更改使用 SET 命令的环境变量。 使用 SET 命令在会话中更改环境变量不会更改相应的宏，但是。  
   
- 例如:  
+ 例如：  
   
 ```  
 PATH=$(PATH);\nonesuch  

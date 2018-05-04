@@ -2,11 +2,8 @@
 title: __thiscall |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __thiscall
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55f7d288758b345dfc4f182f2153e0d39a1b349
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dccd9e80a23b1636bd869d406824c9997f4cdef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  在 Visual C++ 2005年之前的版本中，thiscall 调用约定无法显式指定在程序中，因为`thiscall`不是一个关键字。  
   
- `vararg`成员函数使用`__cdecl`调用约定。 所有函数参数都推送到堆栈上，使用`this`指针将位于堆栈上上一次  
+ `vararg` 成员函数使用`__cdecl`调用约定。 所有函数参数都推送到堆栈上，使用`this`指针将位于堆栈上上一次  
   
  由于此调用约定仅适用于 C++，没有任何 C 名称修饰方案。  
   

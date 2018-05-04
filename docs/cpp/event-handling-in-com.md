@@ -1,12 +1,9 @@
 ---
-title: "COM 中的事件处理 |Microsoft 文档"
-ms.custom: 
+title: COM 中的事件处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件处理
 在 COM 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = **com**。这些特性为自定义接口、调度接口和双重接口注入相应的代码，从而使这些接口能够应用到的类激发事件并通过 COM 连接点处理事件。  
@@ -165,7 +160,7 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>布局取决于 COM 事件  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 布局取决于 COM 事件  
  布局依赖性只是 COM 编程中的一个问题。 在本机和托管事件处理中，处理程序的签名（返回类型、调用约定和自变量）必须与其事件匹配，但处理程序的名称不必与其事件匹配。  
   
  但是，在 COM 事件处理中，当你设置*layout_dependent*参数**event_receiver**到**true**，强制执行的名称和签名匹配。 这意味着事件接收器中处理程序的名称和签名必须与处理程序将挂钩到的事件的名称和签名完全匹配。  

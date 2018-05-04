@@ -2,28 +2,23 @@
 title: 函数模板 （C++） 的部分排序 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函数模板的部分排序 (C++)
 
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
 
      2. 模板仅采用__T\*__ 化程度高于仅采用一个__T__，因为一个假想键入__X\*__ 是有效的参数__T__模板自变量，但__X__不是有效参数__T\*__ 模板自变量。
 
-     3. __const T__化程度高于__T__，这是因为__const X__是的有效参数__T__模板自变量，但__X__不是有效参数__const T__模板自变量。
+     3. __const T__化程度高于__T__，这是因为__const X__是的有效参数__T__模板自变量，但__X__是有效参数不__const T__模板自变量。
 
-     4. __const T\*__ 化程度高于__T\*__，这是因为__const X\*__ 是的有效参数__T\*__模板自变量，但__X\*__ 不是有效参数__const T\*__ 模板自变量。
+     4. __const T\*__ 化程度高于__T\*__，这是因为__const X\*__ 是的有效参数__T\*__ 模板自变量，但__X\*__ 不是有效参数__const T\*__ 模板自变量。
 
 ## <a name="example"></a>示例
 

@@ -1,13 +1,10 @@
 ---
-title: "-Gm （启用最小重新生成） |Microsoft 文档"
-ms.custom: 
+title: -Gm （启用最小重新生成） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc9ff065de2b83d50b6fa905fcc6d1123dbe829
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e0b83c34b0ff8cacbca9d21a40c6c9572f516d1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm（启用最小重新生成）
 此选项启用最小重新生成，它确定是否需要重新编译包含已更改的 C++ 类定义的 C++ 源文件，该定义存储在头 (.h) 文件中。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  最小重新生成依赖于类定义不会在包含文件之间更改。 类定义对于项目必须是全局的（对于给定类应只有一个定义），因为 .idb 文件中的依赖关系信息是为整个项目创建的。 如果项目中的某个类有多个定义，请禁用最小重新生成。  
   
- 因为 incremental 链接器不支持通过使用.obj 文件中包含的 Windows 元数据[/ZW （Windows 运行时编译）](../../build/reference/zw-windows-runtime-compilation.md)选项， **/Gm**选项与不兼容**/ZW**。  
+ 因为 incremental 链接器不支持通过使用.obj 文件中包含的 Windows 元数据[/ZW （Windows 运行时编译）](../../build/reference/zw-windows-runtime-compilation.md)选项， **/Gm**选项与不兼容 **/ZW**。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

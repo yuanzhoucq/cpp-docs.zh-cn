@@ -2,11 +2,8 @@
 title: 成员访问控制 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 访问控制使你可以将分隔[公共](../cpp/public-cpp.md)从类接口的[私有](../cpp/private-cpp.md)实现详细信息和[保护](../cpp/protected-cpp.md)成员仅供使用通过派生的类。 访问说明符应用于在它之后声明的所有成员，直到遇到下一个访问说明符。  
@@ -55,9 +50,9 @@ protected:      // Declare protected function for derived classes only.
   
 |访问类型|含义|  
 |--------------------|-------------|  
-|[专用](../cpp/private-cpp.md)|声明为 `private` 的类成员只能由类的成员函数和友元（类或函数）使用。|  
-|[受保护](../cpp/protected-cpp.md)|声明为 `protected` 的类成员可由类的成员函数和友元（类或函数）使用。 此外，它们还可由派生自该类的类使用。|  
-|[公用](../cpp/public-cpp.md)|类成员声明为**公共**可由任何函数。|  
+|[private](../cpp/private-cpp.md)|声明为 `private` 的类成员只能由类的成员函数和友元（类或函数）使用。|  
+|[protected](../cpp/protected-cpp.md)|声明为 `protected` 的类成员可由类的成员函数和友元（类或函数）使用。 此外，它们还可由派生自该类的类使用。|  
+|[public](../cpp/public-cpp.md)|类成员声明为**公共**可由任何函数。|  
   
  访问控制有助于阻止您通过不适当的方式使用对象。 在执行显式类型转换（强制转换）时，此保护将丢失。  
   
@@ -190,7 +185,7 @@ int Derived2::ShowCount()
  派生类 `T` 的成员和朋友可以将指向 `T` 的指针转换为指向 `T` 的私有直接基类的指针。  
   
 ## <a name="access-to-virtual-functions"></a>对虚函数的访问  
- 访问控制应用于[虚拟](../cpp/virtual-cpp.md)函数由用于进行函数调用的类型。 重写函数的声明不会影响给定类型的访问控制。 例如:  
+ 访问控制应用于[虚拟](../cpp/virtual-cpp.md)函数由用于进行函数调用的类型。 重写函数的声明不会影响给定类型的访问控制。 例如：  
   
 ```  
 // access_to_virtual_functions.cpp  

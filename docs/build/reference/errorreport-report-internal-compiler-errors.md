@@ -1,13 +1,10 @@
 ---
-title: "-errorReport （报告内部编译器错误） |Microsoft 文档"
-ms.custom: 
+title: -errorReport （报告内部编译器错误） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b34df09ca53441789fc90061748ad591149d6b2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 67e87143d31de98039f5d679c102a5815dd87abb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport（报告内部编译器错误）
 允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="remarks"></a>备注  
  当编译器无法处理源代码文件时，会导致内部编译器错误 (ICE)。 出现 ICE 时，编译器不会生成可用于修复代码的输出文件或任何有用的诊断。  
   
- 在早期版本中，当你 ICE，你仅建议致电 Microsoft 产品支持服务要报告问题。 与**/errorReport**，你可以直接向 Microsoft 提供 ICE 信息。 你的错误报告可以帮助改进未来的编译器版本。  
+ 在早期版本中，当你 ICE，你仅建议致电 Microsoft 产品支持服务要报告问题。 与 **/errorReport**，你可以直接向 Microsoft 提供 ICE 信息。 你的错误报告可以帮助改进未来的编译器版本。  
   
  用户能否发送报告取决于计算机和用户策略权限。  
   

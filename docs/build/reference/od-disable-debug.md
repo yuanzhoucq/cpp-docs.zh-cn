@@ -1,13 +1,10 @@
 ---
-title: "-Od （禁用 （调试）） |Microsoft 文档"
-ms.custom: 
+title: -Od （禁用 （调试）） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /od
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0956493184f6c2322bc6838049472e90ad0c1985
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47e287a9991f8192f16ec2f93e4068dc797ff72a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="od-disable-debug"></a>/Od（禁用（调试））
 关闭程序中的所有优化并加快编译。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 默认值为此选项。 因为**/Od**取消代码移动，它简化了在调试过程。 有关调试的编译器选项的详细信息，请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。  
+ 默认值为此选项。 因为 **/Od**取消代码移动，它简化了在调试过程。 有关调试的编译器选项的详细信息，请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

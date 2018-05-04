@@ -2,11 +2,8 @@
 title: decltype （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype （C++）
 `decltype` 类型说明符生成指定表达式的类型。 `decltype`连同类型说明符， [auto 关键字](../cpp/auto-cpp.md)，主要对编写模板库的开发人员很有用。 使用 `auto` 和 `decltype` 声明其返回类型取决于其模板参数类型的模板函数。 或者，使用 `auto` 和 `decltype` 声明包装对其他函数的调用，然后返回包装函数的返回类型的模板函数。  
@@ -187,7 +182,7 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>示例
-**2017 及更高版本的 visual Studio:**编译器模板将声明而不是实例化时就会分析 decltype 自变量。 因此，如果在 decltype 参数中找到非依赖专用化，则它不会被推迟到实例化时间，而会被立即处理，并且将在此时诊断产生的所有错误。
+**2017 及更高版本的 visual Studio:** 编译器模板将声明而不是实例化时就会分析 decltype 自变量。 因此，如果在 decltype 参数中找到非依赖专用化，则它不会被推迟到实例化时间，而会被立即处理，并且将在此时诊断产生的所有错误。
 
 以下示例显示了在声明时引发的这类编译器错误：
 
@@ -210,8 +205,8 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Visual C++ 2010 或更高版本。  
   
- `decltype(auto)`需要 Visual Studio 2015 或更高版本。  
+ `decltype(auto)` 需要 Visual Studio 2015 或更高版本。  
   

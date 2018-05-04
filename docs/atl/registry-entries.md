@@ -2,29 +2,24 @@
 title: 注册表项 (ATL) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faef0ca0c1c9c4c2986a039b8b1a26517641acd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac8e202fc2fc3d58e2d57a9fbfa15264d9fd310e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-entries"></a>注册表项
 DCOM 引入了应用程序 Id (Appid) 分组到一个集中的位置，注册表中的一个或多个 DCOM 对象配置选项的概念。 通过它在名为该对象的 CLSID 下值 AppID 的值，该值指示指定一个 AppID。  

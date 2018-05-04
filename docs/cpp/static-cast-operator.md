@@ -1,12 +1,9 @@
 ---
-title: "static_cast 运算符 |Microsoft 文档"
-ms.custom: 
+title: static_cast 运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticcast-operator"></a>static_cast 运算符
 将转换*表达式*为的类型*类型 id，*仅根据同时出现在表达式的类型。  
@@ -63,7 +58,7 @@ void f(B* pb, D* pd) {
   
  与此相反[dynamic_cast](../cpp/dynamic-cast-operator.md)，不运行时进行检查上`static_cast`的转换`pb`。 由 `pb` 指向的对象可能不是 `D` 类型的对象，在这种情况下使用 `*pd2` 会是灾难性的。 例如，调用 `D` 类（而非 `B` 类）的成员函数可能会导致访问冲突。  
   
- `dynamic_cast` 和 `static_cast` 运算符可以在整个类层次结构中移动指针。 然而，`static_cast` 完全依赖于转换语句提供的信息，因此可能不安全。 例如:  
+ `dynamic_cast` 和 `static_cast` 运算符可以在整个类层次结构中移动指针。 然而，`static_cast` 完全依赖于转换语句提供的信息，因此可能不安全。 例如：  
   
 ```  
 // static_cast_Operator_2.cpp  
@@ -88,7 +83,7 @@ void f(B* pb) {
   
  该行为也适用于类以外的类型。 例如，`static_cast` 可用于将 int 转换为 `char`。 但是，得到的 `char` 可能没有足够的位来保存整个 `int` 值。 同样，它仍将需要程序员来验证的结果`static_cast`转换是安全。  
   
- `static_cast` 运算符还可用于执行任何隐式转换，包括标准转换和用户定义的转换。 例如:  
+ `static_cast` 运算符还可用于执行任何隐式转换，包括标准转换和用户定义的转换。 例如：  
   
 ```  
 // static_cast_Operator_3.cpp  

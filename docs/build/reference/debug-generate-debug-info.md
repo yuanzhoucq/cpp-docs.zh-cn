@@ -1,13 +1,10 @@
 ---
-title: "-DEBUG （生成调试信息） |Microsoft 文档"
-ms.custom: 
+title: -DEBUG （生成调试信息） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateDebugInformation
 - /debug
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f9f424a2e71a3094c9e633cbe5779ef5d75fbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f93c47a0f96cf0b75b453bcea97212d4ab2fd6d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG（生成调试信息）
 ```  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 **/调试： 无**选项不会生成 PDB。  
   
-当指定**/调试**不带任何其他选项，链接器默认为**/DEBUG:FULL**对于命令行和生成文件生成，对于版本的生成在 Visual Studio IDE，并为调试和发布Visual Studio 2015 及更早版本中的生成。 从 Visual Studio 2017 年 1 开始，在 IDE 中的生成系统默认为**/debug: fastlink**时指定**/调试**选项为调试版本。 其他默认值是不变，以保持向后兼容。  
+当指定 **/调试**不带任何其他选项，链接器默认为 **/DEBUG:FULL**对于命令行和生成文件生成，对于版本的生成在 Visual Studio IDE，并为调试和发布Visual Studio 2015 及更早版本中的生成。 从 Visual Studio 2017 年 1 开始，在 IDE 中的生成系统默认为 **/debug: fastlink**时指定 **/调试**选项为调试版本。 其他默认值是不变，以保持向后兼容。  
   
 编译器的[C7 兼容](../../build/reference/z7-zi-zi-debug-information-format.md)(/ Z7) 选项使编译器将调试信息保留在.obj 文件。 你还可以使用[程序数据库](../../build/reference/z7-zi-zi-debug-information-format.md)(/Zi) 编译器选项来在.obj 文件的 PDB 中存储的调试信息。 链接器查找对象的 PDB 首先在.obj 文件中写入的绝对路径，然后再在目录中，包含.obj 文件。 不能指定对象的 PDB 文件的名称或链接器的位置。  
   

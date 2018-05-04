@@ -1,10 +1,9 @@
 ---
-title: "/Tc、 /Tp、 /TC、 /TP （指定源文件类型） |Microsoft 文档"
+title: /Tc、 /Tp、 /TC、 /TP （指定源文件类型） |Microsoft 文档
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - -Tp compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d51e4c6bbf6a77f86be5cabde9b65f8e4f8c9f
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc、/Tp、/TC、/TP（指定源文件类型）
 
 **/Tc**选项指定其文件名参数是 C 源文件，即使它不具有扩展名为.c。 **/Tp**选项指定其文件名参数是 c + + 源文件，即使它不具有扩展名为.cpp 或.cxx 文件。 选项和文件名之间留一个空格是可选的。 每个选项指定一个文件;若要指定其他文件，重复使用此选项。
 
-**/TC**和**/TP**了的全局变体**/Tc**和**/Tp**。 它们向编译器将所有文件视为 C 源文件名为命令行上指定 (**/TC**) 或 c + + 源文件 (**/TP**)，而不考虑相对于选项在命令行上的位置。 可以在单个文件的方式上覆盖这些全局选项**/Tc**或**/Tp**。
+**/TC**和 **/TP**了的全局变体 **/Tc**和 **/Tp**。 它们向编译器将所有文件视为 C 源文件名为命令行上指定 (**/TC**) 或 c + + 源文件 (**/TP**)，而不考虑相对于选项在命令行上的位置。 可以在单个文件的方式上覆盖这些全局选项 **/Tc**或 **/Tp**。
 
 ## <a name="syntax"></a>语法
 

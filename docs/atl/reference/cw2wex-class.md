@@ -1,12 +1,9 @@
 ---
-title: "CW2WEX 类 |Microsoft 文档"
-ms.custom: 
+title: CW2WEX 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2WEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35439b1309e75359177cf45ade4c6be9459f623
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e70ba1fdf42ea2f00b057d9b95105b34d9eff5a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2wex-class"></a>CW2WEX 类
 此类由字符串转换宏`CW2TEX`和`CT2WEX`，和 typedef `CW2W`。  
@@ -94,10 +89,10 @@ class CW2WEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlconv.h  
   
-##  <a name="cw2wex"></a>CW2WEX::CW2WEX  
+##  <a name="cw2wex"></a>  CW2WEX::CW2WEX  
  构造函数。  
   
 ```
@@ -115,7 +110,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ### <a name="remarks"></a>备注  
  创建转换所需的缓冲区。  
   
-##  <a name="dtor"></a>CW2WEX:: ~ CW2WEX  
+##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX  
  析构函数...  
   
 ```
@@ -125,21 +120,21 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ### <a name="remarks"></a>备注  
  释放已分配的缓冲区。  
   
-##  <a name="m_psz"></a>CW2WEX::m_psz  
+##  <a name="m_psz"></a>  CW2WEX::m_psz  
  将源字符串存储数据成员。  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CW2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CW2WEX::m_szBuffer  
  静态缓冲区，用于存储已转换的字符串。  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpwstr"></a>CW2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>  CW2WEX::operator LPWSTR  
  强制转换运算符。  
   
 ```  

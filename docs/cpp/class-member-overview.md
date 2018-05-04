@@ -2,11 +2,8 @@
 title: 类成员概述 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="class-member-overview"></a>类成员概述
 类或结构由其成员组成。 类的工作由其成员函数执行。 它所维持的状态存储在其数据成员中。 成员初始化的通过构造函数和清理工作，如释放的内存和释放资源可通过析构函数。 在 C++ 11 和更高版本中，数据成员可以（并且通常应该）在声明时初始化。  
@@ -102,7 +97,7 @@ int TestRun::_instances{ 0 };
 ```  
   
 ## <a name="member-accessibility"></a>成员可访问性  
- 在成员列表中声明类的成员。 类的成员列表中可能会分为任意数量的`private`，`protected`和**公共**部分使用称为访问说明符的关键字。  冒号**:**必须遵循访问说明符。  这些部分不需要是连续的，也就是说，这些关键字中的任何一个都可能在成员列表中多次出现。  关键字指定所有成员直到下一个访问说明符或右大括号的访问。 有关详细信息，请参阅[成员访问控制 （C++）](../cpp/member-access-control-cpp.md)。  
+ 在成员列表中声明类的成员。 类的成员列表中可能会分为任意数量的`private`，`protected`和**公共**部分使用称为访问说明符的关键字。  冒号 **:** 必须遵循访问说明符。  这些部分不需要是连续的，也就是说，这些关键字中的任何一个都可能在成员列表中多次出现。  关键字指定所有成员直到下一个访问说明符或右大括号的访问。 有关详细信息，请参阅[成员访问控制 （C++）](../cpp/member-access-control-cpp.md)。  
   
 ## <a name="static-members"></a>静态成员  
  可将数据成员声明为静态，这表示类的所有对象都有权访问它的同一副本。 成员函数可能被声明为静态，在这种情况下它只能访问类的静态数据成员 (且不具有*这*指针)。 有关详细信息，请参阅[静态数据成员](../cpp/static-members-cpp.md)。  
@@ -114,11 +109,11 @@ int TestRun::_instances{ 0 };
   
 2.  复制构造函数  
   
-3.  **(C++ 11)**移动构造函数  
+3.  **(C++ 11)** 移动构造函数  
   
 4.  复制赋值运算符  
   
-5.  **(C++ 11)**移动赋值运算符  
+5.  **(C++ 11)** 移动赋值运算符  
   
 6.  析构函数  
   

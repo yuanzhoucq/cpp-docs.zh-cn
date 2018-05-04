@@ -1,12 +1,12 @@
 ---
-title: "链接器属性页 |Microsoft 文档"
-ms.custom: 
+title: 链接器属性页 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.RegisterOutput
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - per-user redirection
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 31b44b6711153d29ab6a9c542a6e5677e6279432
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-property-pages"></a>“链接器”属性页
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="per-user-redirection"></a>每个用户重定向
 
-Visual Studio 中的注册传统上已完成 HKEY_CLASSES_ROOT (HKCR)。 与[!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]、 访问 HKCR 必须在提升模式下运行 Visual Studio。 开发人员始终不希望在提升模式下运行，但仍必须适用于注册。 每个用户重定向，可注册而无需在此模式下运行。
+Visual Studio 中的注册传统上已完成 HKEY_CLASSES_ROOT (HKCR)。 与 Windows Vista 和更高版本操作系统中，若要访问 HKCR 你必须运行 Visual Studio 在提升模式下。 开发人员始终不希望在提升模式下运行，但仍必须适用于注册。 每个用户重定向，可注册而无需在此模式下运行。
 
 每个用户重定向将强制写入的所有数据转换成 HKCR 重定向到 HKEY\_当前\_用户 (HKCU)。 如果每个用户重定向已关闭，它可能会导致[项目生成错误 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)当程序尝试写入 HKCR。
 

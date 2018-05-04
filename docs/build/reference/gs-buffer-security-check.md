@@ -2,12 +2,9 @@
 title: -GS （缓冲区安全检查） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-caps.latest.revision: 40
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS（缓冲区安全检查）  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="remarks"></a>备注  
   
-**/GS**默认是打开的。 如果您希望应用程序拥有不出现安全漏洞，使用**/GS-**。 有关详细信息**/GS**，请参阅[编译器安全检查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)。 有关禁止缓冲区溢出检测的详细信息，请参阅[safebuffers](../../cpp/safebuffers.md)。  
+**/GS**默认是打开的。 如果您希望应用程序拥有不出现安全漏洞，使用 **/GS-**。 有关详细信息 **/GS**，请参阅[编译器安全检查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)。 有关禁止缓冲区溢出检测的详细信息，请参阅[safebuffers](../../cpp/safebuffers.md)。  
   
 ## <a name="security-checks"></a>安全检查  
   
@@ -98,7 +93,7 @@ struct { int a; int b; };
   
 -   易受攻击的函数参数。  
   
-在所有平台上**/GS**尝试检测到的寄信人地址的缓冲区溢出。 缓冲区溢出可以更容易地利用平台例如 x86 和 x64，使用函数调用的返回地址存储在堆栈的调用约定。  
+在所有平台上 **/GS**尝试检测到的寄信人地址的缓冲区溢出。 缓冲区溢出可以更容易地利用平台例如 x86 和 x64，使用函数调用的返回地址存储在堆栈的调用约定。  
   
 在 x86，如果函数使用异常处理程序，编译器将插入一个安全 cookie 以保护异常处理程序的地址。 在帧展开过程将先检查 cookie。  
   
@@ -124,7 +119,7 @@ struct { int a; int b; };
   
 **/GS**编译器选项不能防止所有的缓冲区溢出安全攻击。 例如，如果你有缓冲区和 vtable 对象中，缓冲区溢出可能会损坏 vtable。  
   
-即使你使用**/GS**，始终尝试编写没有缓冲区溢出的安全代码。  
+即使你使用 **/GS**，始终尝试编写没有缓冲区溢出的安全代码。  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项  
   
@@ -132,7 +127,7 @@ struct { int a; int b; };
   
      有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  在**属性页**对话框中，单击**C/c + +**文件夹。  
+2.  在**属性页**对话框中，单击**C/c + +** 文件夹。  
   
 3.  单击**代码生成**属性页。  
   
@@ -169,7 +164,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
   
 [编译器选项](../../build/reference/compiler-options.md)   
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

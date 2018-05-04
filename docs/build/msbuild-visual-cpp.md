@@ -1,13 +1,10 @@
 ---
-title: "MSBuild （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: MSBuild （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 743aba156f9b937f28242b63e6deaf4c6dfb8369
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 你可以使用**MSBuild**工具生成 Visual c + + 应用程序，从命令提示符。 你可以创建和编辑的项目文件 (.vcxproj) 中的信息由控制生成过程。 项目文件指定基于的生成选项生成阶段、 条件和事件。  

@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory2 类 |Microsoft 文档"
-ms.custom: 
+title: CComClassFactory2 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 类
 此类实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口。  
@@ -68,9 +63,9 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|创建并返回的许可密钥。|  
   
 ## <a name="remarks"></a>备注  
- `CComClassFactory2`实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口，该扩展的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 **IClassFactory2**控件对象通过许可证的创建。 类工厂执行许可的计算机上可以提供运行时许可证密钥。 此许可证密钥允许应用程序在完整的计算机许可证不存在时实例化对象。  
+ `CComClassFactory2` 实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口，该扩展的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 **IClassFactory2**控件对象通过许可证的创建。 类工厂执行许可的计算机上可以提供运行时许可证密钥。 此许可证密钥允许应用程序在完整的计算机许可证不存在时实例化对象。  
   
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)对象的类定义中的宏。 例如:  
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)对象的类定义中的宏。 例如：  
   
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`从这两个派生**CComClassFactory2Base**和*许可证*。 **CComClassFactory2Base**，反过来，派生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
+ `CComClassFactory2` 从这两个派生**CComClassFactory2Base**和*许可证*。 **CComClassFactory2Base**，反过来，派生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CComObjectRootBase`  
@@ -91,10 +86,10 @@ class CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  创建指定的 CLSID 的对象并检索到此对象的接口指针。  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>备注  
  要求计算机完全获得许可。 如果完整的计算机许可证不存在，则调用[CreateInstanceLic](#createinstancelic)。  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  类似于[CreateInstance](#createinstance)，只不过`CreateInstanceLic`需要许可证密钥。  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>备注  
  你可以获取许可证密钥 using [RequestLicKey](#requestlickey)。 若要在未授权的计算机上创建一个对象，您必须调用`CreateInstanceLic`。  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  填充[LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)描述类工厂的信息的结构的授权功能。  
   
 ```
@@ -169,8 +164,8 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>备注  
  `fRuntimeKeyAvail`此结构的成员该值指示是否，给定的许可密钥，类工厂允许在未授权的计算机上创建的对象。 *FLicVerified*成员指示完整的计算机许可证是否存在。  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
- 递增和递减模块锁计数通过调用**_Module::Lock**和**_Module::Unlock**分别。  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
+ 递增和递减模块锁计数通过调用 **_Module::Lock**和 **_Module::Unlock**分别。  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  调用`LockServer`允许客户端，以便可以快速创建多个对象保留的类工厂。  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  创建并返回许可证密钥，前提`fRuntimeKeyAvail`的成员[LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)结构是**TRUE**。  
   
 ```

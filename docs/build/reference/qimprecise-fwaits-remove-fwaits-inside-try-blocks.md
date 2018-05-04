@@ -1,13 +1,10 @@
 ---
-title: "-Qimprecise_fwaits （移除 Try 块中的 fwaits） |Microsoft 文档"
-ms.custom: 
+title: -Qimprecise_fwaits （移除 Try 块中的 fwaits） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Qimprecise_fwaits
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c93e60530d870b05c601be4980308feb627b46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a688f4b9f8f3c9302bb6a49e4b0a94a0e0931b33
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits（移除 Try 块中的 fwaits）
 删除`fwait`命令的内部`try`阻止使用时[/fp： 除](../../build/reference/fp-specify-floating-point-behavior.md)编译器选项。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 此选项不起如果**/fp： 除**也未指定。 如果指定**/fp： 除**选项，编译器将插入`fwait`命令的每一行中的代码周围`try`块。 这种方式，编译器可标识产生异常的代码的特定行。 **/Qimprecise_fwaits**删除内部`fwait`说明，离开仅围绕等待`try`块。 这将改善性能，但编译器将仅能够说这`try`块导致异常，不是哪一行。  
+ 此选项不起如果 **/fp： 除**也未指定。 如果指定 **/fp： 除**选项，编译器将插入`fwait`命令的每一行中的代码周围`try`块。 这种方式，编译器可标识产生异常的代码的特定行。 **/Qimprecise_fwaits**删除内部`fwait`说明，离开仅围绕等待`try`块。 这将改善性能，但编译器将仅能够说这`try`块导致异常，不是哪一行。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

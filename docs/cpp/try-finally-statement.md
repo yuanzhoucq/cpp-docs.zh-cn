@@ -2,11 +2,8 @@
 title: try-finally 语句 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 **Microsoft 专用**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>语法  
  try-finally-statement:  
- `__try`*复合语句*  
+ `__try` *复合语句*  
   
- `__finally`*复合语句*  
+ `__finally` *复合语句*  
   
  `try-finally` 语句是 Microsoft C 和 C++ 语言扩展，它们使目标应用程序能够确保在代码块的执行被中断时执行清理。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 `try-finally` 语句对此类例程特别有用：具有几个位置，在这些位置上执行了检查以找出可能导致例程提前返回内容的错误。  
   
@@ -80,7 +75,7 @@ __finally {
   
  例如，假设一个函数调用系列将函数 A 链接到函数 D，如下图所示。 每个函数均有一个终止处理程序。 如果异常在函数 D 中引发并在函数 A 中得到处理，则当系统展开堆栈时，按以下顺序调用终止处理程序：D、C、B。  
   
- ![顺序终止 & #45; 处理程序执行](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![终止的顺序&#45;处理程序执行](../cpp/media/vc38cx1.gif "vc38CX1")  
 终止处理程序执行顺序  
   
 > [!NOTE]

@@ -1,13 +1,10 @@
 ---
-title: "使用导入库和导出文件 |Microsoft 文档"
-ms.custom: 
+title: 使用导入库和导出文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0d60eed00abc60c09e03838a113c424d8f173a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc2e5b6b1f2a459d7a00e48ff1aaafff38803871
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>使用导入库和导出文件
 你可以使用 LIB /DEF 选项创建导入库和导出文件。 要生成一个包含的程序导出文件的链接使用导出 （通常动态链接库 (DLL)），并使用导入库解析其他程序中对这些导出的引用。  

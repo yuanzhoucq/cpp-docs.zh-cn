@@ -2,26 +2,21 @@
 title: C++ 类型系统 （现代 C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 82c017b7048c8b62f58068d22b8efefd72f31d4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-system-modern-c"></a>C++ 类型系统（现代 C++）
 这一概念*类型*在 C++ 中非常重要。 每个变量、函数自变量和函数返回值必须具有一个类型以进行编译。 此外，在计算表达式前，编译器会给出每个表达式（包括文本值）的隐式类型。 类型的一些示例包括`int`存储整数值：`double`存储浮点值 (也称为*标量*数据类型)，或标准库类[std::basic_string](../standard-library/basic-string-class.md)来存储文本。 可以通过定义 `class` 或 `struct` 创建自己的类型。 该类型指定将分配给变量（或表达式结果）的内存量、可能存储在该变量中的值类型、如何对那些值（作为位模式）进行说明以及可对其执行的操作。 本文包含对 C++ 类型系统的主要功能的非正式概述。   
@@ -179,7 +174,7 @@ void someFunction() {
 |[值类型](../cpp/value-types-modern-cpp.md)|描述*值类型*以及与其使用相关的问题。|  
 |[类型转换和类型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)|描述常见类型转换问题并说明如何避免这些问题出现。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

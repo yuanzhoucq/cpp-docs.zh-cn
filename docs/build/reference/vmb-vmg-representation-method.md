@@ -2,12 +2,9 @@
 title: -vmb，-vmg （表示方法） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vmb
 - /vmg
@@ -22,24 +19,22 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a9d64f8b1035f731adef79356d24eeb3e4f7ee3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5263b6c7ca227a10b34c32e0b0801eeddf07b9cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb、/vmg（表示方法）
 选择编译器用于表示对类成员的指针的方法。  
   
- 使用**/vmb**如果始终在声明类的成员的指针之前定义一个类。  
+ 使用 **/vmb**如果始终在声明类的成员的指针之前定义一个类。  
   
- 使用**/vmg**以定义类之前声明的类成员的指针。 如果在两个相互引用的不同类中定义成员，则可能会出现这一要求。 对于此类互相引用的类，它定义之前，必须引用一个类。  
+ 使用 **/vmg**以定义类之前声明的类成员的指针。 如果在两个相互引用的不同类中定义成员，则可能会出现这一要求。 对于此类互相引用的类，它定义之前，必须引用一个类。  
   
 ## <a name="syntax"></a>语法  
   

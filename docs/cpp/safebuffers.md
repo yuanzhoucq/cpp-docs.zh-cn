@@ -1,12 +1,9 @@
 ---
-title: "safebuffers |Microsoft 文档"
-ms.custom: 
+title: safebuffers |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - safebuffers_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: fbfc9317b5ed7c63e9c70b081c3f241b86a65e5f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 专用**  
@@ -50,7 +45,7 @@ __declspec( safebuffers )
 ## <a name="inline-functions"></a>内联函数  
  A*主函数*可以使用[内联](inline-functions-cpp.md)关键字插入一份*辅助函数*。 如果`__declspec(safebuffers)`关键字应用于函数，缓冲区溢出检测取消对该函数。 但是，内联，影响`__declspec(safebuffers)`通过以下方式的关键字。  
   
- 假设**/GS**编译器选项指定为这两个函数，但主函数指定`__declspec(safebuffers)`关键字。 辅助函数中的数据结构将使它符合安全检查的条件，因此该函数不会取消这些检查。 这种情况下：  
+ 假设 **/GS**编译器选项指定为这两个函数，但主函数指定`__declspec(safebuffers)`关键字。 辅助函数中的数据结构将使它符合安全检查的条件，因此该函数不会取消这些检查。 这种情况下：  
   
 -   指定[__forceinline](inline-functions-cpp.md)关键字以强制编译器内联到该函数无论编译器优化的辅助函数上。  
   

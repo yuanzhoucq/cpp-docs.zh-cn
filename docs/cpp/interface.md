@@ -2,11 +2,8 @@
 title: __interface |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __interface_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc53310c492c424c3d97aecec965ba03553dd8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interface"></a>__interface
 **Microsoft 专用**  
@@ -72,7 +67,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface`意味着[novtable](../cpp/novtable.md) `__declspec`修饰符。  
+ `__interface` 意味着[novtable](../cpp/novtable.md) `__declspec`修饰符。  
   
 ## <a name="example"></a>示例  
  以下示例演示如何使用接口中声明的属性。  

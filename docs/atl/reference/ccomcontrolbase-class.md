@@ -1,12 +1,9 @@
 ---
-title: "CComControlBase 类 |Microsoft 文档"
-ms.custom: 
+title: CComControlBase 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControlBase
@@ -89,17 +86,15 @@ dev_langs:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6109bfaf29ee26053bc1dcbb5af8f56a0612215
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b72157db26d4cb7d576e32ca704a32b62b4c2da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 类
 此类提供用于创建和管理 ATL 控件的方法。  
@@ -214,10 +209,10 @@ class ATL_NO_VTABLE CComControlBase
   
  有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。 有关 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="appearancetype"></a>CComControlBase::AppearanceType  
+##  <a name="appearancetype"></a>  CComControlBase::AppearanceType  
  如果重写你**m_nAppearance**常用属性的类型不**短**。  
   
 ```
@@ -227,7 +222,7 @@ typedef short AppearanceType;
 ### <a name="remarks"></a>备注  
  ATL 控件向导将添加**m_nAppearance**常用 short 类型的属性。 重写`AppearanceType`如果你使用不同的数据类型。  
   
-##  <a name="ccomcontrolbase"></a>CComControlBase::CComControlBase  
+##  <a name="ccomcontrolbase"></a>  CComControlBase::CComControlBase  
  构造函数。  
   
 ```
@@ -241,7 +236,7 @@ CComControlBase(HWND& h);
 ### <a name="remarks"></a>备注  
  初始化到 5080 X 5080 himetric 为单位的控件大小 ("X 2"的 2) 并初始化`CComControlBase`数据成员值复制到**NULL**或**FALSE**。  
   
-##  <a name="dtor"></a>CComControlBase:: ~ CComControlBase  
+##  <a name="dtor"></a>  CComControlBase:: ~ CComControlBase  
  析构函数。  
   
 ```
@@ -251,7 +246,7 @@ CComControlBase(HWND& h);
 ### <a name="remarks"></a>备注  
  如果控件是开窗，`~CComControlBase`销毁通过调用[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)。  
   
-##  <a name="controlqueryinterface"></a>CComControlBase::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -272,7 +267,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
-##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
+##  <a name="doesverbactivate"></a>  CComControlBase::DoesVerbActivate  
  检查`iVerb`参数由`IOleObjectImpl::DoVerb`或者激活控件的用户界面 (`iVerb`等于`OLEIVERB_UIACTIVATE`)，定义当用户双击控件执行的操作 (`iVerb`等于`OLEIVERB_PRIMARY`)，显示控件 (`iVerb`等于`OLEIVERB_SHOW`)，或激活控件 (`iVerb`等于**OLEIVERB_INPLACEACTIVATE**)。  
   
 ```
@@ -289,7 +284,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 ### <a name="remarks"></a>备注  
  你可以重写此方法以定义你自己激活谓词。  
   
-##  <a name="doesverbuiactivate"></a>CComControlBase::DoesVerbUIActivate  
+##  <a name="doesverbuiactivate"></a>  CComControlBase::DoesVerbUIActivate  
  检查`iVerb`参数由`IOleObjectImpl::DoVerb`导致控件的用户界面来激活并返回**TRUE**。  
   
 ```
@@ -303,7 +298,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 ### <a name="return-value"></a>返回值  
  返回**TRUE**如果`iVerb`等于`OLEIVERB_UIACTIVATE`， `OLEIVERB_PRIMARY`， `OLEIVERB_SHOW`，或**OLEIVERB_INPLACEACTIVATE**。 否则，该方法返回**FALSE**。  
   
-##  <a name="doverbproperties"></a>CComControlBase::DoVerbProperties  
+##  <a name="doverbproperties"></a>  CComControlBase::DoVerbProperties  
  显示控件的属性页。  
   
 ```
@@ -325,7 +320,7 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
   
  [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
-##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
+##  <a name="fireviewchange"></a>  CComControlBase::FireViewChange  
  调用此方法可告知要重绘控件的容器或通知控件的视图已更改的已注册的通知接收器。  
   
 ```
@@ -341,7 +336,7 @@ HRESULT FireViewChange();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
-##  <a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance  
+##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance  
  检索**DISPID_AMBIENT_APPEARANCE**时，为控件设置的当前外观： 0 代表平面和 3d 1。  
   
 ```
@@ -358,7 +353,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
-##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
+##  <a name="getambientautoclip"></a>  CComControlBase::GetAmbientAutoClip  
  检索**DISPID_AMBIENT_AUTOCLIP**、 一个标志，指示容器是否支持自动剪辑的控件的显示区域。  
   
 ```
@@ -372,7 +367,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientbackcolor"></a>CComControlBase::GetAmbientBackColor  
+##  <a name="getambientbackcolor"></a>  CComControlBase::GetAmbientBackColor  
  检索**DISPID_AMBIENT_BACKCOLOR**，定义的容器的所有控件的环境背景色。  
   
 ```
@@ -386,7 +381,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientcharset"></a>CComControlBase::GetAmbientCharSet  
+##  <a name="getambientcharset"></a>  CComControlBase::GetAmbientCharSet  
  检索**DISPID_AMBIENT_CHARSET**，对于所有控件，定义由容器设置的环境的字符集。  
   
 ```
@@ -400,7 +395,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage  
+##  <a name="getambientcodepage"></a>  CComControlBase::GetAmbientCodePage  
  检索**DISPID_AMBIENT_CODEPAGE**，定义的容器的所有控件的环境的代码页。  
   
 ```
@@ -414,7 +409,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault  
+##  <a name="getambientdisplayasdefault"></a>  CComControlBase::GetAmbientDisplayAsDefault  
  检索**DISPID_AMBIENT_DISPLAYASDEFAULT**，是一个标志**TRUE**如果容器已标记为默认按钮，此站点中的控件和一个按钮控件应因此绘制自行向粗的框架。  
   
 ```
@@ -428,7 +423,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName  
+##  <a name="getambientdisplayname"></a>  CComControlBase::GetAmbientDisplayName  
  检索**DISPID_AMBIENT_DISPLAYNAME**，容器已提供给控件的名称。  
   
 ```
@@ -442,7 +437,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientfont"></a>CComControlBase::GetAmbientFont  
+##  <a name="getambientfont"></a>  CComControlBase::GetAmbientFont  
  检索指向容器的环境`IFont`接口。  
   
 ```
@@ -459,7 +454,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 ### <a name="remarks"></a>备注  
  如果属性是**NULL**，在指针位于**NULL**。 如果指针不**NULL**，调用方必须释放指针。  
   
-##  <a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp  
+##  <a name="getambientfontdisp"></a>  CComControlBase::GetAmbientFontDisp  
  检索指向容器的环境**IFontDisp**调度接口。  
   
 ```
@@ -476,7 +471,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="remarks"></a>备注  
  如果属性是**NULL**，在指针位于**NULL**。 如果指针不**NULL**，调用方必须释放指针。  
   
-##  <a name="getambientforecolor"></a>CComControlBase::GetAmbientForeColor  
+##  <a name="getambientforecolor"></a>  CComControlBase::GetAmbientForeColor  
  检索**DISPID_AMBIENT_FORECOLOR**，对于所有控件，定义由容器的环境前景色。  
   
 ```
@@ -490,7 +485,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientlocaleid"></a>CComControlBase::GetAmbientLocaleID  
+##  <a name="getambientlocaleid"></a>  CComControlBase::GetAmbientLocaleID  
  检索**DISPID_AMBIENT_LOCALEID**，容器使用的语言的标识符。  
   
 ```
@@ -507,7 +502,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 ### <a name="remarks"></a>备注  
  该控件可以使用此标识符以适应其用户界面到不同的语言。  
   
-##  <a name="getambientmessagereflect"></a>CComControlBase::GetAmbientMessageReflect  
+##  <a name="getambientmessagereflect"></a>  CComControlBase::GetAmbientMessageReflect  
  检索**DISPID_AMBIENT_MESSAGEREFLECT**、 一个标志，指示容器是否想要接收窗口消息 (如`WM_DRAWITEM`) 作为事件。  
   
 ```
@@ -521,7 +516,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientpalette"></a>CComControlBase::GetAmbientPalette  
+##  <a name="getambientpalette"></a>  CComControlBase::GetAmbientPalette  
  检索**DISPID_AMBIENT_PALETTE**，可用来访问容器的`HPALETTE`。  
   
 ```
@@ -535,7 +530,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientproperty"></a>CComControlBase::GetAmbientProperty  
+##  <a name="getambientproperty"></a>  CComControlBase::GetAmbientProperty  
  检索指定的容器属性`dispid`。  
   
 ```
@@ -555,7 +550,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 ### <a name="remarks"></a>备注  
  ATL 提供了帮助程序函数来检索特定属性，例如，一组[CComControlBase::GetAmbientBackColor](#getambientbackcolor)。 如果没有可用的合适方法，使用`GetAmbientProperty`。  
   
-##  <a name="getambientrighttoleft"></a>CComControlBase::GetAmbientRightToLeft  
+##  <a name="getambientrighttoleft"></a>  CComControlBase::GetAmbientRightToLeft  
  检索**DISPID_AMBIENT_RIGHTTOLEFT**，内容由容器中的显示方向。  
   
 ```
@@ -569,7 +564,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits  
+##  <a name="getambientscaleunits"></a>  CComControlBase::GetAmbientScaleUnits  
  检索**DISPID_AMBIENT_SCALEUNITS**的容器 （如英寸或厘米） 为加标签显示的环境单位。  
   
 ```
@@ -583,7 +578,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientshowgrabhandles"></a>CComControlBase::GetAmbientShowGrabHandles  
+##  <a name="getambientshowgrabhandles"></a>  CComControlBase::GetAmbientShowGrabHandles  
  检索**DISPID_AMBIENT_SHOWGRABHANDLES**、 一个标志，指示容器是否允许要为其自身活动时显示抓取手柄的控件。  
   
 ```
@@ -597,7 +592,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientshowhatching"></a>CComControlBase::GetAmbientShowHatching  
+##  <a name="getambientshowhatching"></a>  CComControlBase::GetAmbientShowHatching  
  检索**DISPID_AMBIENT_SHOWHATCHING**、 一个标志，指示容器是否允许控件以将它显示用阴影图案控件的用户界面处于活动状态时。  
   
 ```
@@ -611,7 +606,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambientsupportsmnemonics"></a>CComControlBase::GetAmbientSupportsMnemonics  
+##  <a name="getambientsupportsmnemonics"></a>  CComControlBase::GetAmbientSupportsMnemonics  
  检索**DISPID_AMBIENT_SUPPORTSMNEMONICS**、 一个标志，指示容器是否支持键盘助记键。  
   
 ```
@@ -625,7 +620,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
+##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign  
  检索**DISPID_AMBIENT_TEXTALIGN**，由容器首选的文本对齐方式： 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和右对齐的 3。  
   
 ```
@@ -639,7 +634,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getambienttoptobottom"></a>CComControlBase::GetAmbientTopToBottom  
+##  <a name="getambienttoptobottom"></a>  CComControlBase::GetAmbientTopToBottom  
  检索**DISPID_AMBIENT_TOPTOBOTTOM**，内容由容器中的显示方向。  
   
 ```
@@ -653,7 +648,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="getambientuidead"></a>CComControlBase::GetAmbientUIDead  
+##  <a name="getambientuidead"></a>  CComControlBase::GetAmbientUIDead  
  检索**DISPID_AMBIENT_UIDEAD**、 一个标志，指示容器是否想要响应用户界面操作的控件。  
   
 ```
@@ -670,7 +665,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 ### <a name="remarks"></a>备注  
  如果**TRUE**，控件不应作出响应。 此标志而不考虑适用**DISPID_AMBIENT_USERMODE**标志。 请参阅[CComControlBase::GetAmbientUserMode](#getambientusermode)。  
   
-##  <a name="getambientusermode"></a>CComControlBase::GetAmbientUserMode  
+##  <a name="getambientusermode"></a>  CComControlBase::GetAmbientUserMode  
  检索**DISPID_AMBIENT_USERMODE**、 一个标志，指示容器是否处于运行模式 ( **TRUE**) 或设计模式 ( **FALSE**)。  
   
 ```
@@ -684,7 +679,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
-##  <a name="getdirty"></a>CComControlBase::GetDirty  
+##  <a name="getdirty"></a>  CComControlBase::GetDirty  
  返回的数据成员的值`m_bRequiresSave`。  
   
 ```
@@ -697,7 +692,7 @@ BOOL GetDirty();
 ### <a name="remarks"></a>备注  
  此值设置使用[CComControlBase::SetDirty](#setdirty)。  
   
-##  <a name="getzoominfo"></a>CComControlBase::GetZoomInfo  
+##  <a name="getzoominfo"></a>  CComControlBase::GetZoomInfo  
  检索的 x 和 y 分子和缩放系数分母的值的控件为激活就地编辑。  
   
 ```
@@ -711,7 +706,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 ### <a name="remarks"></a>备注  
  缩放系数是其当前范围内的控件的原始大小的比例。  
   
-##  <a name="inplaceactivate"></a>CComControlBase::InPlaceActivate  
+##  <a name="inplaceactivate"></a>  CComControlBase::InPlaceActivate  
  使控件从任何状态中的动词的非活动状态转换到`iVerb`指示。  
   
 ```
@@ -733,7 +728,7 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
   
  此方法还会检索`IOleInPlaceSite`， **IOleInPlaceSiteEx**，或**IOleInPlaceSiteWindowless**控件的接口指针并将它存储在控件类的数据成员[CComControlBase::m_spInPlaceSite](#m_spinplacesite)。 控件类数据成员[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)， [CComControlBase::m_bWndLess](#m_bwndless)， [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)，和[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)设置为 true，根据需要。  
   
-##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite  
+##  <a name="internalgetsite"></a>  CComControlBase::InternalGetSite  
  调用此方法来查询控件所在位置到标识的接口的指针。  
   
 ```
@@ -753,7 +748,7 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 ### <a name="remarks"></a>备注  
  如果站点支持在请求的接口`riid`，指针会返回通过`ppUnkSite`。 否则为`ppUnkSite`设置为 NULL。  
   
-##  <a name="m_bautosize"></a>CComControlBase::m_bAutoSize  
+##  <a name="m_bautosize"></a>  CComControlBase::m_bAutoSize  
  指示该控件不能为任何其他大小的标志。  
   
 ```
@@ -768,7 +763,7 @@ unsigned m_bAutoSize:1;
   
  如果你添加**自动大小**选项[常用属性](../../atl/reference/stock-properties-atl-control-wizard.md)ATL 控件向导，该向导的选项卡自动在你的控件类中创建此数据成员、 创建 put 和 get 方法的属性并支持[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)以在属性变化时自动通知容器。  
   
-##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
+##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  标志指示`IDataObjectImpl::GetData`和`CComControlBase::GetZoomInfo`应设置从控件大小`m_sizeNatural`而不是从`m_sizeExtent`。  
   
 ```
@@ -780,7 +775,7 @@ unsigned m_bDrawFromNatural:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric  
+##  <a name="m_bdrawgetdatainhimetric"></a>  CComControlBase::m_bDrawGetDataInHimetric  
  标志指示`IDataObjectImpl::GetData`应在绘制时使用 himetric 为单位，不像素。  
   
 ```
@@ -793,7 +788,7 @@ unsigned m_bDrawGetDataInHimetric:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_binplaceactive"></a>CComControlBase::m_bInPlaceActive  
+##  <a name="m_binplaceactive"></a>  CComControlBase::m_bInPlaceActive  
  该标志指明控件处于就地活动状态。  
   
 ```
@@ -806,7 +801,7 @@ unsigned m_bInPlaceActive:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_binplacesiteex"></a>CComControlBase::m_bInPlaceSiteEx  
+##  <a name="m_binplacesiteex"></a>  CComControlBase::m_bInPlaceSiteEx  
  该标志指明容器支持**IOleInPlaceSiteEx**接口和 OCX96 控制功能，如无窗口和闪烁的控件。  
   
 ```
@@ -822,7 +817,7 @@ unsigned m_bInPlaceSiteEx:1;
   
  如果`m_bWndLess`是**FALSE**和`m_bInPlaceSiteEx`是**TRUE**，`m_spInPlaceSite`是**IOleInPlaceSiteEx**接口指针。 请参阅[m_spInPlaceSite](#m_spinplacesite)显示这些三个数据成员之间的关系的表。  
   
-##  <a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd  
+##  <a name="m_bnegotiatedwnd"></a>  CComControlBase::m_bNegotiatedWnd  
  该标志指明控件具有与支持 OCX96 控件功能 （如闪烁和无窗口控件） 的容器进行协商和控件是开窗还是无窗口。  
   
 ```
@@ -836,7 +831,7 @@ unsigned m_bNegotiatedWnd:1;
   
  `m_bNegotiatedWnd`标志必须为**TRUE**为`m_spInPlaceSite`指针才能有效。  
   
-##  <a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize  
+##  <a name="m_brecomposeonresize"></a>  CComControlBase::m_bRecomposeOnResize  
  该标志指明控件想要重排与其演示当容器更改控件的显示大小。  
   
 ```
@@ -850,7 +845,7 @@ unsigned m_bRecomposeOnResize:1;
   
  通过检查此标志[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)并且，如果**TRUE**，`SetExtent`通知查看更改的容器。 如果设置此标志， **OLEMISC_RECOMPOSEONRESIZE**中位[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)枚举还应将设置。  
   
-##  <a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave  
+##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  指示自上次保存后，该控件已更改的标志。  
   
 ```
@@ -863,7 +858,7 @@ unsigned m_bRequiresSave:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural  
+##  <a name="m_bresizenatural"></a>  CComControlBase::m_bResizeNatural  
  标志，指示该控件想要调整大小其原始大小 （其未缩放物理大小） 容器时更改控件的显示大小。  
   
 ```
@@ -878,7 +873,7 @@ unsigned m_bResizeNatural:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_buiactive"></a>CComControlBase::m_bUIActive  
+##  <a name="m_buiactive"></a>  CComControlBase::m_bUIActive  
  标志，指示控件的用户界面，例如菜单和工具栏，处于活动状态。  
   
 ```
@@ -891,7 +886,7 @@ unsigned m_bUIActive:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn  
+##  <a name="m_busingwindowrgn"></a>  CComControlBase::m_bUsingWindowRgn  
  该标志指明控件使用提供容器的窗口区域。  
   
 ```
@@ -903,7 +898,7 @@ unsigned m_bUsingWindowRgn:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_bwasoncewindowless"></a>CComControlBase::m_bWasOnceWindowless  
+##  <a name="m_bwasoncewindowless"></a>  CComControlBase::m_bWasOnceWindowless  
  指示该控件已无窗口，但可能也可能不是无窗口现在的标志。  
   
 ```
@@ -915,7 +910,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_bwindowonly"></a>CComControlBase::m_bWindowOnly  
+##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly  
  指示该控件应开窗，即使容器支持无窗口控件的标志。  
   
 ```
@@ -927,7 +922,7 @@ unsigned m_bWindowOnly:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_bwndless"></a>CComControlBase::m_bWndLess  
+##  <a name="m_bwndless"></a>  CComControlBase::m_bWndLess  
  用于指示无窗口控件的标记。  
   
 ```
@@ -943,7 +938,7 @@ unsigned m_bWndLess:1;
   
  如果`m_bWndLess`是**TRUE**，`m_spInPlaceSite`是**IOleInPlaceSiteWindowless**接口指针。 请参阅[CComControlBase::m_spInPlaceSite](#m_spinplacesite)显示这些数据成员之间的完整关系的表。  
   
-##  <a name="m_hwndcd"></a>CComControlBase::m_hWndCD  
+##  <a name="m_hwndcd"></a>  CComControlBase::m_hWndCD  
  包含对与控件关联的窗口句柄的引用。  
   
 ```
@@ -955,7 +950,7 @@ HWND& m_hWndCD;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents  
+##  <a name="m_nfreezeevents"></a>  CComControlBase::m_nFreezeEvents  
  次数计数容器已冻结 （拒绝接受事件） 的事件，而无需干预的解除冻结的事件 （事件接受）。  
   
 ```
@@ -967,7 +962,7 @@ short m_nFreezeEvents;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_rcpos"></a>CComControlBase::m_rcPos  
+##  <a name="m_rcpos"></a>  CComControlBase::m_rcPos  
  控件，以容器的坐标表示的位置，以像素为单位。  
   
 ```
@@ -979,7 +974,7 @@ RECT m_rcPos;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_sizeextent"></a>CComControlBase::m_sizeExtent  
+##  <a name="m_sizeextent"></a>  CComControlBase::m_sizeExtent  
  以 himetric 为单位 （每个单位是 0.01 毫米） 的特定显示控件的范围。  
   
 ```
@@ -995,7 +990,7 @@ SIZE m_sizeExtent;
   
  你可以将大小转换为全局函数的像素[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)。  
   
-##  <a name="m_sizenatural"></a>CComControlBase::m_sizeNatural  
+##  <a name="m_sizenatural"></a>  CComControlBase::m_sizeNatural  
  以 himetric 为单位 （每个单位是 0.01 毫米） 控件的物理大小。  
   
 ```
@@ -1011,7 +1006,7 @@ SIZE m_sizeNatural;
   
  你可以将大小转换为全局函数的像素[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)。  
   
-##  <a name="m_spadvisesink"></a>CComControlBase::m_spAdviseSink  
+##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
  指向通知连接对该容器的直接指针 (容器的[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。  
   
 ```
@@ -1024,7 +1019,7 @@ CComPtr<IAdviseSink>
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_spambientdispatch"></a>CComControlBase::m_spAmbientDispatch  
+##  <a name="m_spambientdispatch"></a>  CComControlBase::m_spAmbientDispatch  
  A`CComDispatchDriver`对象，允许您检索和设置对象的属性通过`IDispatch`指针。  
   
 ```
@@ -1036,7 +1031,7 @@ CComDispatchDriver m_spAmbientDispatch;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_spclientsite"></a>CComControlBase::m_spClientSite  
+##  <a name="m_spclientsite"></a>  CComControlBase::m_spClientSite  
  指向控件的客户端站点容器内的指针。  
   
 ```
@@ -1049,7 +1044,7 @@ CComPtr<IOleClientSite>
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
-##  <a name="m_spdataadviseholder"></a>CComControlBase::m_spDataAdviseHolder  
+##  <a name="m_spdataadviseholder"></a>  CComControlBase::m_spDataAdviseHolder  
  提供一种标准意味着来保留数据对象之间的通知连接和建议的接收器。  
   
 ```
@@ -1066,7 +1061,7 @@ CComPtr<IDataAdviseHolder>
   
  接口`m_spDataAdviseHolder`实现[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579)和[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448)建立和删除到容器的通知连接方法。 控件的容器必须通过支持实现建议接收器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)接口。  
   
-##  <a name="m_spinplacesite"></a>CComControlBase::m_spInPlaceSite  
+##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
  指向容器的[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口指针。  
   
 ```
@@ -1089,7 +1084,7 @@ CComPtr<IOleInPlaceSiteWindowless>
 |**IOleInPlaceSiteEx**|**FALSE**|**TRUE**|  
 |`IOleInPlaceSite`|**FALSE**|**FALSE**|  
   
-##  <a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder  
+##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder  
  提供一种方法来保存的通知连接的标准实现。  
   
 ```
@@ -1104,7 +1099,7 @@ CComPtr<IOleAdviseHolder>
   
  接口`m_spOleAdviseHolder`实现[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573)和[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749)建立和删除到容器的通知连接方法。 控件的容器必须通过支持实现建议接收器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)接口。  
   
-##  <a name="ondraw"></a>CComControlBase::OnDraw  
+##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  重写此方法以绘制控件。  
   
 ```
@@ -1126,7 +1121,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 ### <a name="example"></a>示例  
  请参阅示例[CComControlBase::GetAmbientAppearance](#getambientappearance)。  
   
-##  <a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced  
+##  <a name="ondrawadvanced"></a>  CComControlBase::OnDrawAdvanced  
  默认值`OnDrawAdvanced`准备规范化的设备上下文进行绘制，然后调用你的控件类`OnDraw`方法。  
   
 ```
@@ -1145,7 +1140,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
   
  请参阅[CComControlBase::OnDraw](#ondraw)有关详细信息。  
   
-##  <a name="onkillfocus"></a>CComControlBase::OnKillFocus  
+##  <a name="onkillfocus"></a>  CComControlBase::OnKillFocus  
  检查该控件是处于就地活动状态并且具有有效的控制站点，则通知容器控件已失去焦点。  
   
 ```
@@ -1171,7 +1166,7 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 ### <a name="return-value"></a>返回值  
  始终返回 1。  
   
-##  <a name="onmouseactivate"></a>CComControlBase::OnMouseActivate  
+##  <a name="onmouseactivate"></a>  CComControlBase::OnMouseActivate  
  检查用户界面在用户模式下，则将激活的控件。  
   
 ```
@@ -1197,7 +1192,7 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 ### <a name="return-value"></a>返回值  
  始终返回 1。  
   
-##  <a name="onpaint"></a>CComControlBase::OnPaint  
+##  <a name="onpaint"></a>  CComControlBase::OnPaint  
  为绘制准备容器，获取控件的客户端区域中，然后调用的控件类`OnDrawAdvanced`方法。  
   
 ```
@@ -1226,7 +1221,7 @@ LRESULT OnPaint(UINT /* nMsg */,
 ### <a name="remarks"></a>备注  
  如果`wParam`不为 NULL，`OnPaint`假定它包含有效 HDC 并使用它而不是[CComControlBase::m_hWndCD](#m_hwndcd)。  
   
-##  <a name="onsetfocus"></a>CComControlBase::OnSetFocus  
+##  <a name="onsetfocus"></a>  CComControlBase::OnSetFocus  
  检查该控件是处于就地活动状态并且具有有效的控制站点，则通知容器控件获得焦点。  
   
 ```
@@ -1255,7 +1250,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 ### <a name="remarks"></a>备注  
  发送通知到容器控件已收到焦点。  
   
-##  <a name="pretranslateaccelerator"></a>CComControlBase::PreTranslateAccelerator  
+##  <a name="pretranslateaccelerator"></a>  CComControlBase::PreTranslateAccelerator  
  重写该方法以提供您自己的键盘快捷键处理程序。  
   
 ```
@@ -1273,7 +1268,7 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 ### <a name="return-value"></a>返回值  
  默认情况下返回**FALSE**。  
   
-##  <a name="sendonclose"></a>CComControlBase::SendOnClose  
+##  <a name="sendonclose"></a>  CComControlBase::SendOnClose  
  通知注册已关闭该控件的建议持有的所有通知接收器。  
   
 ```
@@ -1286,7 +1281,7 @@ HRESULT SendOnClose();
 ### <a name="remarks"></a>备注  
  发送通知控件已关闭其通知接收器。  
   
-##  <a name="sendondatachange"></a>CComControlBase::SendOnDataChange  
+##  <a name="sendondatachange"></a>  CComControlBase::SendOnDataChange  
  通知注册控制数据已更改的建议持有的所有通知接收器。  
   
 ```
@@ -1300,7 +1295,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="sendonrename"></a>CComControlBase::SendOnRename  
+##  <a name="sendonrename"></a>  CComControlBase::SendOnRename  
  通知注册该控件具有新的名字对象的建议持有的所有通知接收器。  
   
 ```
@@ -1317,7 +1312,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 ### <a name="remarks"></a>备注  
  发送通知的控件的标记已更改。  
   
-##  <a name="sendonsave"></a>CComControlBase::SendOnSave  
+##  <a name="sendonsave"></a>  CComControlBase::SendOnSave  
  通知注册保存该控件的建议持有的所有通知接收器。  
   
 ```
@@ -1330,7 +1325,7 @@ HRESULT SendOnSave();
 ### <a name="remarks"></a>备注  
  发送通知控件具有刚保存其数据。  
   
-##  <a name="sendonviewchange"></a>CComControlBase::SendOnViewChange  
+##  <a name="sendonviewchange"></a>  CComControlBase::SendOnViewChange  
  通知所有已注册的控件的视图已更改的通知接收器。  
   
 ```
@@ -1341,16 +1336,16 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  `dwAspect`  
  方面或控件视图中。  
   
- *索引*  
+ *lindex*  
  已更改视图的部分。 仅为-1 是有效的。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `SendOnViewChange`调用[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)。 唯一的值的*索引*当前支持为-1，指示整个视图是感兴趣。  
+ `SendOnViewChange` 调用[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)。 唯一的值的*索引*当前支持为-1，指示整个视图是感兴趣。  
   
-##  <a name="setcontrolfocus"></a>CComControlBase::SetControlFocus  
+##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  设置或删除到或从控件的键盘焦点。  
   
 ```
@@ -1367,7 +1362,7 @@ BOOL SetControlFocus(BOOL bGrab);
 ### <a name="remarks"></a>备注  
  对于有窗口控件，Windows API 函数[SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312)调用。 对于无窗口控件， [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745)调用。 通过此调用，无窗口控件获取键盘焦点，并可以响应窗口消息。  
   
-##  <a name="setdirty"></a>CComControlBase::SetDirty  
+##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  设置的数据成员`m_bRequiresSave`到中的值`bDirty`。  
   
 ```
@@ -1379,7 +1374,7 @@ void SetDirty(BOOL bDirty);
  数据成员值[CComControlBase::m_bRequiresSave](#m_brequiressave)。  
   
 ### <a name="remarks"></a>备注  
- **SetDirty(TRUE)**应调用以控制已更改自上次保存后的标志。 值`m_bRequiresSave`使用检索[CComControlBase::GetDirty](#getdirty)。  
+ **SetDirty(TRUE)** 应调用以控制已更改自上次保存后的标志。 值`m_bRequiresSave`使用检索[CComControlBase::GetDirty](#getdirty)。  
   
 ## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   

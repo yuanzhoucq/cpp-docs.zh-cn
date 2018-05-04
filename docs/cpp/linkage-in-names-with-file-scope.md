@@ -1,12 +1,9 @@
 ---
-title: "带文件范围的名称中的链接 |Microsoft 文档"
-ms.custom: 
+title: 带文件范围的名称中的链接 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - external linkage, scope linkage rules
 - static variables, external declarations
 ms.assetid: 38d3fa5e-1861-466e-a590-84b86f7b184e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 581d7798f4f3aaa409d843f8b7f3b5869b47407e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 770b30516d16cf9ffccaae4724b368ca8fa33be0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkage-in-names-with-file-scope"></a>具有文件范围的名称中的链接
 以下链接规则适用于带文件范围的名称（`typedef` 和枚举器名称除外）：  

@@ -1,13 +1,10 @@
 ---
-title: "-诊断 （编译器诊断选项） |Microsoft 文档"
-ms.custom: 
+title: -诊断 （编译器诊断选项） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/11/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /diagnostics
 - VC.Project.VCCLCompilerTool.DiagnosticsFormat
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c893b530bfa895e5ec127bd0aea2fb0df4ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （编译器诊断选项）  
   
-使用**/diagnostics**编译器选项来指定所显示的错误和警告的位置信息。  
+使用 **/diagnostics**编译器选项来指定所显示的错误和警告的位置信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 1. 打开你的项目的**属性页**对话框。   
   
-2. 下**配置属性**，展开**C/c + +**文件夹，然后选择**常规**属性页。  
+2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**常规**属性页。  
   
 3. 使用中的下拉列表控件**诊断格式**字段来选择诊断显示选项。 选择**确定**或**应用**以保存所做的更改。  
   

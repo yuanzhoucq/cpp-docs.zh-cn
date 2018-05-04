@@ -1,13 +1,10 @@
 ---
-title: "-Gd，-Gr，-Gv，-Gz （调用约定） |Microsoft 文档"
-ms.custom: 
+title: -Gd，-Gr，-Gv，-Gz （调用约定） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gr
 - /Gv
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e88abf30c0f67fe5b104d560c40dd2adc57752
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0d3d7c750be9b6b6d1496c8a1e2265786264f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd、/Gr、/Gv、/Gz（调用约定）
 这些选项用于确定在哪一个函数自变量推送到堆栈，是否调用方函数或调用的函数自变量从堆栈中移除该调用，末尾的顺序，编译器用来标识名称修饰约定各个函数。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  采用数量可变的自变量的函数必须标记`__cdecl`。  
   
- **/Gd**， **/Gr**， **/Gv**和**/Gz**与不兼容[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或**/clr: pure**. **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
+ **/Gd**， **/Gr**， **/Gv**和 **/Gz**与不兼容[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
 > [!NOTE]
 >  默认情况下，针对 x86 处理器上，c + + 成员函数使用[__thiscall](../../cpp/thiscall.md)。  
@@ -117,7 +112,7 @@ functionname@@number
   
 1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  选择**C/c + +**文件夹。  
+2.  选择**C/c + +** 文件夹。  
   
 3.  选择**高级**属性页。  
   

@@ -2,12 +2,9 @@
 title: -E （预处理到 stdout） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /e
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed083c960421ce17c0ce61036cd05191fc12c797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f9105c5c75bc4695d0b00debdff49acf78690b1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="e-preprocess-to-stdout"></a>/E（预处理到 stdout）
 预处理 C 和 c + + 源文件，并将预处理过的文件复制到标准输出设备。  
@@ -44,15 +39,15 @@ ms.lasthandoff: 12/21/2017
   
  **/E**添加`#line`对的开头和结尾的每个包含的文件以及周围由预处理器指令进行条件编译删除的行的输出的指令。 这些指令重新编号预处理过的文件的行。 因此，更高版本的处理阶段期间生成的错误是指在原始源文件，而不是预处理过的文件中的行的行号。  
   
- **/E**选项禁止编译。 你必须重新提交编译的预处理过的文件。 **/E**也会从输出文件禁止显示**/FA**， **/Fa**，和**/Fm**选项。 有关详细信息，请参阅[/FA、 /Fa （列出文件）](../../build/reference/fa-fa-listing-file.md)和[/Fm （命名映射文件）](../../build/reference/fm-name-mapfile.md)。  
+ **/E**选项禁止编译。 你必须重新提交编译的预处理过的文件。 **/E**也会从输出文件禁止显示 **/FA**， **/Fa**，和 **/Fm**选项。 有关详细信息，请参阅[/FA、 /Fa （列出文件）](../../build/reference/fa-fa-listing-file.md)和[/Fm （命名映射文件）](../../build/reference/fm-name-mapfile.md)。  
   
  若要禁止显示`#line`指令，使用[/EP （不预处理到 stdout #line 指令)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)选项。  
   
  预处理的输出发送到的文件而不是为`stdout`，使用[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)选项。  
   
- 若要禁止显示`#line`指令和发送经过预处理输出到文件，使用**/P**和**/EP**在一起。  
+ 若要禁止显示`#line`指令和发送经过预处理输出到文件，使用 **/P**和 **/EP**在一起。  
   
- 不能使用具有预编译标头**/E**选项。  
+ 不能使用具有预编译标头 **/E**选项。  
   
  请注意，当预处理到单独的文件时，不在标记后发出空格。 这可导致程序非法或具有意外的副作用。 以下程序在成功进行编译：  
   
@@ -70,7 +65,7 @@ m(int)main( )
 cl -E test.cpp > test2.cpp  
 ```  
   
- `int main`在 test2.cpp 不正确地将`intmain`。  
+ `int main` 在 test2.cpp 不正确地将`intmain`。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

@@ -2,11 +2,8 @@
 title: 此指针 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - this_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6a1df3bb262a814c641f5bfbcee070ec5de344
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-pointer"></a>this 指针
 **这**指针是只能在的非静态成员函数中访问指针**类**， `struct`，或**联合**类型。 它指向为其调用成员函数的对象。 静态成员函数没有**这**指针。  
@@ -53,7 +48,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- 对象的地址是可从成员函数作为**这**指针。 大部分使用**这**是隐式的。 它是合法的但没有必要显式使用**这**在引用类的成员时。 例如:  
+ 对象的地址是可从成员函数作为**这**指针。 大部分使用**这**是隐式的。 它是合法的但没有必要显式使用**这**在引用类的成员时。 例如：  
   
 ```  
 void Date::setMonth( int mn )  
