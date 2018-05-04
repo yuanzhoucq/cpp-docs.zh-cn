@@ -1,13 +1,10 @@
 ---
-title: "-Os，-Ot （代码大小优先，快速代码优先） |Microsoft 文档"
-ms.custom: 
+title: -Os，-Ot （代码大小优先，快速代码优先） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ce4b7d5c9617a88450fd90b4ac6c75d41148ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f97ab0a53eb82b65149ea0f27139743e065f7ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot（代码大小优先、代码速度优先）
 最小化或 Exe 和 Dll 的大小，从而最大化。  
@@ -49,21 +44,21 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- **/Os** （倾向于小代码） 通过指示编译器大小优先于速度降至最低的 Exe 和 Dll 的大小。 编译器可以减少到的机器代码的功能上相似序列许多 C 和 c + + 构造。 这些差异有时提供大小和速度的折衷的方案。 **/Os**和**/Ot**选项允许你指定一个首选项：  
+ **/Os** （倾向于小代码） 通过指示编译器大小优先于速度降至最低的 Exe 和 Dll 的大小。 编译器可以减少到的机器代码的功能上相似序列许多 C 和 c + + 构造。 这些差异有时提供大小和速度的折衷的方案。 **/Os**和 **/Ot**选项允许你指定一个首选项：  
   
  **/Ot** （倾向于快速代码） 指示编译器优选速度而非大小，从而最大化 Exe 和 Dll 的速度。 （这是默认值）。编译器可以减少到的机器代码的功能上相似序列许多 C 和 c + + 构造。 有时，这些差异提供大小和速度的折衷的方案。 /Ot 选项也将暗示最大化速度 ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) 选项。 **/O2**选项组合多个选项以生成非常快的代码。  
   
- 如果你使用**/Os**或**/Ot**，则还必须指定[/Og](../../build/reference/og-global-optimizations.md)为优化代码。  
+ 如果你使用 **/Os**或 **/Ot**，则还必须指定[/Og](../../build/reference/og-global-optimizations.md)为优化代码。  
   
 > [!NOTE]
->  通过分析测试运行收集的信息会替代本可以生效如果指定的优化**/Ob**， **/Os**，或**/Ot**。 有关详细信息，[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。  
+>  通过分析测试运行收集的信息会替代本可以生效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息，[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。  
   
  **x86 特定**  
   
  下面的代码示例演示代码大小优先之间的差异 (**/Os**) 选项和代码速度优先 (**/Ot**) 选项：  
   
 > [!NOTE]
->  下面介绍的预期的行为，使用时**/Os**或**/Ot**。 但是，编译器行为发行版本可能会导致下面的代码的不同优化。  
+>  下面介绍的预期的行为，使用时 **/Os**或 **/Ot**。 但是，编译器行为发行版本可能会导致下面的代码的不同优化。  
   
 ```  
 /* differ.c  

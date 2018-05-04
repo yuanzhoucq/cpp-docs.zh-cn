@@ -1,12 +1,9 @@
 ---
-title: "CComEnum 类 |Microsoft 文档"
-ms.custom: 
+title: CComEnum 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnum
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenum-class"></a>CComEnum 类
 此类定义在数组上基于 COM 枚举器对象。  
@@ -59,11 +54,11 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  类的线程模型。 此参数默认为你的项目中使用的全局对象线程模型。  
   
 ## <a name="remarks"></a>备注  
- `CComEnum`定义基于数组的 COM 枚举器对象。 此类是类似于[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)该类可实现基于 c + + 标准库容器的枚举。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举数](../../atl/atl-collections-and-enumerators.md)。  
+ `CComEnum` 定义基于数组的 COM 枚举器对象。 此类是类似于[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)该类可实现基于 c + + 标准库容器的枚举。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举数](../../atl/atl-collections-and-enumerators.md)。  
   
 ## <a name="to-use-this-class"></a>若要使用此类：  
   
-- `typedef`此类的专用化。  
+- `typedef` 此类的专用化。  
   
 -   使用`typedef`中的专用化的模板自变量作为`CComObject`。  
   
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  `CComEnum`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
 ## <a name="example"></a>示例  

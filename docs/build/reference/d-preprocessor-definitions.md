@@ -2,12 +2,9 @@
 title: -D （预处理器定义） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D（预处理器定义）
 定义源文件的预处理符号。  
@@ -46,11 +41,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  可以将此符号与 `#if` 或 `#ifdef` 一起使用，以便有条件地编译源代码。 在代码中重新定义或通过 `#undef` 指令在代码中取消定义符号前，符号定义保持有效。  
   
- **/D**具有相同的效果`#define`指令开头的源代码文件，只不过**/D**去除命令行上的引号和`#define`会保留它们。  
+ **/D**具有相同的效果`#define`指令开头的源代码文件，只不过 **/D**去除命令行上的引号和`#define`会保留它们。  
   
- 默认情况下，与符号关联的值为 1。 例如， **/D** `name`等效于**/D**`name`**= 1**。 在本文中，定义的末尾的示例**测试**显示打印`1`。  
+ 默认情况下，与符号关联的值为 1。 例如， **/D** `name`等效于 **/D**`name`**= 1**。 在本文中，定义的末尾的示例**测试**显示打印`1`。  
   
- 使用编译**/D** `name`  **=** 导致符号没有关联的值。 尽管该符号仍可用于有条件地编译代码，但它不会计算出任何结果。 在示例中，如果通过使用编译**/DTEST =**，发生错误。 此行为类似于带或不带值使用 `#define`。  
+ 使用编译 **/D** `name` **=** 导致符号没有关联的值。 尽管该符号仍可用于有条件地编译代码，但它不会计算出任何结果。 在示例中，如果通过使用编译 **/DTEST =**，发生错误。 此行为类似于带或不带值使用 `#define`。  
   
  此命令在 TEST.c 中定义符号 DEBUG：  
   
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  **CL /D__far = TEST。C**  
   
- **CL**环境变量不能设置为包含等号的字符串。 若要使用**/D**连同**CL**环境变量，你必须指定数字符号而不是等号：  
+ **CL**环境变量不能设置为包含等号的字符串。 若要使用 **/D**连同**CL**环境变量，你必须指定数字符号而不是等号：  
   
 ```  
 SET CL=/DTEST#0  

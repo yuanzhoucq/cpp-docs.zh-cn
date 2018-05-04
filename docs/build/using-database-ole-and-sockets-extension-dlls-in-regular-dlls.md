@@ -2,12 +2,9 @@
 title: 在 MFC 的规则 Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在 MFC 的规则 Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll
 在使用 MFC 扩展 DLL 从正则 MFC DLL，如果 MFC 扩展 DLL 不连接到**CDynLinkLibrary**对象链的常规 MFC DLL，则可能会遇到一个或多个对相关问题的一组。 由于支持的调试版本的 MFC 数据库、 OLE 和套接字 Dll 作为 MFC 扩展 Dll 实现，可能会看到类似的问题，如果你正在使用这些 MFC 功能，即使你未显式使用任何你自己的 MFC 扩展 Dll。 某些症状是：  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   `DllGetClassObject``DllCanUnloadNow`，和`UpdateRegistry`， `Revoke`， `RevokeAll`，和`RegisterAll`的成员函数`COleObjectFactory`无法找到在 MFC 扩展 DLL 中定义的类工厂。  
   
--   `AfxDoForAllClasses`不适合在 MFC 扩展 DLL 中的任何类。  
+-   `AfxDoForAllClasses` 不适合在 MFC 扩展 DLL 中的任何类。  
   
 -   标准 MFC 数据库、 套接字或 OLE 资源加载失败。 例如， **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) 返回空字符串，即使是在正则 MFC DLL 正确使用 MFC 数据库类。  
   
@@ -102,7 +97,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }  
 ```  
   
- 请务必导出**InitYourExtDLL**函数。 这可以使用**__declspec （dllexport)**或，如下所示的 DLL 的.def 文件中：  
+ 请务必导出**InitYourExtDLL**函数。 这可以使用 **__declspec （dllexport)** 或，如下所示的 DLL 的.def 文件中：  
   
 ```  
 // YourExtDLL.Def:  

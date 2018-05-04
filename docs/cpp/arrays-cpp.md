@@ -2,11 +2,8 @@
 title: 数组 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>数组 (C++)
 数组是类似对象的集合。 数组最简单的用例是矢量，可以按以下序列声明矢量：  
@@ -51,7 +46,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   标识符。  
   
--   用方括号括起来的整型常量表达式**[]。** 如果使用额外方括号声明多个维度，则可能在第一组括号省略常量表达式。  
+-   用方括号括起来的整型常量表达式 **[]。** 如果使用额外方括号声明多个维度，则可能在第一组括号省略常量表达式。  
   
 -   包含常数表达式的可选附加方括号。  
   
@@ -92,10 +87,10 @@ int i2[5][7];
   
  它指定类型为 `int` 的数组，从概念上以五行七列的二维矩阵排列，如下图所示：  
   
- ![一个多 & #45 的概念布局; 的二维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![一个多的概念布局&#45;维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
 多维数组的概念性布局  
   
- 在声明的具有初始值设定项列表的多维数组中 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如:  
+ 在声明的具有初始值设定项列表的多维数组中 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如：  
   
 ```  
 // arrays2.cpp  

@@ -1,27 +1,22 @@
 ---
-title: "链式展开信息结构 |Microsoft 文档"
-ms.custom: 
+title: 链式展开信息结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chained-unwind-info-structures"></a>链式展开信息结构
 如果设置 UNW_FLAG_CHAININFO 标志，然后展开信息结构是一个辅助和共享的异常的处理程序/链接的信息地址字段包含主展开信息。 以下代码检索主展开信息，假定`unwindInfo`是具有 UNW_FLAG_CHAININFO 结构标志设置。  

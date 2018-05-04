@@ -2,28 +2,23 @@
 title: __based 语法 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2cb2929fa595ad13746ea929217f41272a8189
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="based-grammar"></a>__based 语法
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -45,9 +40,9 @@ ms.lasthandoff: 12/21/2017
  *抽象声明符*  
   
  *基类型*:  
- *类型名称*  
+ *type-name*  
   
 **结束 Microsoft 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [基的指针](../cpp/based-pointers-cpp.md)
+ [基指针](../cpp/based-pointers-cpp.md)

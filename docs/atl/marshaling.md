@@ -1,13 +1,10 @@
 ---
-title: "封送处理 |Microsoft 文档"
-ms.custom: 
+title: 封送处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89b64794c50e381c07749984ce61579951fa02f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b8b82d5369aa536dab638efa379089325d10b1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="marshaling"></a>封送处理
 封送处理的 COM 技术允许由一个进程，用于在另一个进程中的对象公开的接口。 封送处理、 COM 提供的代码 （或使用提供的接口实现的代码） 中进行打包到跨进程 （以及，通过在其他计算机上运行的进程电缆） 可以移动的格式的方法的参数并将这些参数解压缩在另一端。 同样，COM 必须从调用返回上执行相同的步骤。  

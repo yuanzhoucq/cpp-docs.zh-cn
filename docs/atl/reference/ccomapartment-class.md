@@ -1,12 +1,9 @@
 ---
-title: "CComApartment 类 |Microsoft 文档"
-ms.custom: 
+title: CComApartment 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComApartment
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fecd77e93c0c51a37d7363e6ec1472d157d6d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e08d50cec36366df2423d31082b97d41b5061f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomapartment-class"></a>CComApartment 类
 此类提供用于管理线程放入池中 EXE 模块中的房间的支持。  
@@ -75,12 +70,12 @@ class CComApartment
 |[CComApartment::m_nLockCnt](#m_nlockcnt)|包含线程的当前锁计数。|  
   
 ## <a name="remarks"></a>备注  
- `CComApartment`由[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)管理线程放入池中 EXE 模块中的某个单元。 `CComApartment`提供在一个线程上计数递增和递减锁的方法。  
+ `CComApartment` 由[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)管理线程放入池中 EXE 模块中的某个单元。 `CComApartment` 提供在一个线程上计数递增和递减锁的方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>  CComApartment::Apartment  
  将标记线程的起始地址。  
   
 ```
@@ -93,7 +88,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>备注  
  自动设置期间[CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init)。  
   
-##  <a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>  CComApartment::CComApartment  
  构造函数。  
   
 ```
@@ -103,7 +98,7 @@ CComApartment();
 ### <a name="remarks"></a>备注  
  初始化`CComApartment`数据成员[m_nLockCnt](#m_nlockcnt)和[m_hThread](#m_hthread)。  
   
-##  <a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>  CComApartment::GetLockCount  
  返回的线程的当前锁计数。  
   
 ```
@@ -113,7 +108,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>返回值  
  线程锁上的锁计数。  
   
-##  <a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>  CComApartment::Lock  
  线程的锁计数递增 1。  
   
 ```
@@ -128,28 +123,28 @@ LONG Lock();
   
  在线程上的锁计数用于统计目的。  
   
-##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>  CComApartment::m_dwThreadID  
  包含线程的标识符。  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>  CComApartment::m_hThread  
  包含线程的句柄。  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt  
  包含线程的当前锁计数。  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>  CComApartment::Unlock  
  递减线程的锁计数。  
   
 ```

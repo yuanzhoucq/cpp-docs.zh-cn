@@ -1,12 +1,9 @@
 ---
-title: "IObjectWithSiteImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IObjectWithSiteImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 类
 此类提供允许与其站点通信对象的方法。  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>备注  
  [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)接口允许对象与其站点通信。 类`IObjectWithSiteImpl`提供默认实现此接口并实现**IUnknown**信息发送给转储设备在调试生成。  
   
- `IObjectWithSiteImpl`指定两种方法。 客户端首先调用`SetSite`，传递站点的**IUnknown**指针。 此指针存储在该对象，和更高版本可以通过调用检索`GetSite`。  
+ `IObjectWithSiteImpl` 指定两种方法。 客户端首先调用`SetSite`，传递站点的**IUnknown**指针。 此指针存储在该对象，和更高版本可以通过调用检索`GetSite`。  
   
  通常情况下，派生您的类从`IObjectWithSiteImpl`当您正在创建的对象不是一个控件。 有关控件，派生您的类从[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)，其中还提供站点指针。 不从您的类同时`IObjectWithSiteImpl`和`IOleObjectImpl`。  
   
@@ -75,10 +70,10 @@ template <class T>
   
  `IObjectWithSiteImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  查询为指向由标识的接口的站点`riid`。  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  请参阅[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK 中。  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  管理站点的**IUnknown**指针。  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_spUnkSite`最初接收通过调用此指针[SetSite](#setsite)。  
+ `m_spUnkSite` 最初接收通过调用此指针[SetSite](#setsite)。  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  与该站点提供的对象**IUnknown**指针。  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>返回值  
  返回 `S_OK`。  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  与该站点提供的对象**IUnknown**指针。  
   
 ```

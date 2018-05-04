@@ -2,11 +2,8 @@
 title: '一元加号和非运算符: + 和-|Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8211cf9ebef808ad428e4c94ba97c6bcd22897ea
-ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
+ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元加号和非运算符：+ 和 -
 ## <a name="syntax"></a>语法  
@@ -58,6 +53,6 @@ ms.lasthandoff: 03/30/2018
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  通过从 2^n 中减去操作数的值来执行无符号数量的一元求反运算，其中 n 是给定的无符号类型的对象的位数。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

@@ -1,12 +1,9 @@
 ---
-title: "_variant_t 提取器 |Microsoft 文档"
-ms.custom: 
+title: _variant_t 提取器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>_variant_t 提取器
 **Microsoft 专用**  
@@ -101,27 +96,27 @@ operator unsigned __int64() const;
 ## <a name="remarks"></a>备注  
  从封装中提取原始数据**VARIANT**。 如果**VARIANT**尚不正确的类型， **VariantChangeType**用于尝试进行转换，并在失败时生成错误：  
   
--   **operator short （)**提取**短**整数值。  
+-   **operator short （)** 提取**短**整数值。  
   
--   **operator long （)**提取**长**整数值。  
+-   **operator long （)** 提取**长**整数值。  
   
--   **operator float （)**提取**float**数字值。  
+-   **operator float （)** 提取**float**数字值。  
   
--   **operator double （)**提取**double**整数值。  
+-   **operator double （)** 提取**double**整数值。  
   
--   **operator CY （)**提取**CY**对象。  
+-   **operator CY （)** 提取**CY**对象。  
   
--   **operator bool （)**提取`bool`值。  
+-   **operator bool （)** 提取`bool`值。  
   
--   **operator DECIMAL （)**提取**十进制**值。  
+-   **operator DECIMAL （)** 提取**十进制**值。  
   
--   **operator BYTE （)**提取**字节**值。  
+-   **operator BYTE （)** 提取**字节**值。  
   
--   **operator _bstr_t （)**提取字符串，封装在`_bstr_t`对象。  
+-   **operator _bstr_t （)** 提取字符串，封装在`_bstr_t`对象。  
   
--   **运算符 IDispatch\*（)**从封装中提取调度接口指针**VARIANT**。 `AddRef`因此由您才能调用是否在生成的指针上调用**版本**来释放它。  
+-   **运算符 IDispatch\*（)** 从封装中提取调度接口指针**VARIANT**。 `AddRef` 因此由您才能调用是否在生成的指针上调用**版本**来释放它。  
   
--   **运算符 IUnknown\*（)**提取从封装的 COM 接口指针**VARIANT**。 `AddRef`因此由您才能调用是否在生成的指针上调用**版本**来释放它。  
+-   **运算符 IUnknown\*（)** 提取从封装的 COM 接口指针**VARIANT**。 `AddRef` 因此由您才能调用是否在生成的指针上调用**版本**来释放它。  
   
  **结束 Microsoft 专用**  
   

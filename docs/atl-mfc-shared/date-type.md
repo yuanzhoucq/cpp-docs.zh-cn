@@ -1,12 +1,9 @@
 ---
-title: "日期类型 |Microsoft 文档"
-ms.custom: 
+title: 日期类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - DATE
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5aafed046fa5724442e30014aa5634542de0f4aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-type"></a>日期类型
 **日期**使用 8 字节浮点数实现类型。 按从 1899 年 12 月 30 日，时间为零点午夜开始的整数增量表示天。 小时值表示为绝对值的数值的数字的小数部分。 下表说明了几个日期中的连同其**日期**类型数值等效项：  
