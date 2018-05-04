@@ -1,12 +1,9 @@
 ---
-title: "CAutoVectorPtrElementTraits 类 |Microsoft 文档"
-ms.custom: 
+title: CAutoVectorPtrElementTraits 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoVectorPtrElementTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e69be3fa7136b0d411b92299d99d877710d5f118
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52c450a1a261224cf87ea125a6f01259da0e9f1b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits 类
 此类提供方法、 静态函数和 typedef 时创建的使用向量新的智能指针的集合和 delete 运算符非常有用。  
@@ -71,17 +66,17 @@ class CAutoVectorPtrElementTraits :
   
  `CAutoVectorPtrElementTraits`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE  
  要用于将元素添加到集合类对象的数据类型。  
   
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE  
  要用来检索元素的集合类对象的数据类型。  
   
 ```

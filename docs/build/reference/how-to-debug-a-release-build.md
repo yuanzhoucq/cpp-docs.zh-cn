@@ -1,30 +1,25 @@
 ---
-title: "如何： 调试发行版本 |Microsoft 文档"
-ms.custom: 
+title: 如何： 调试发行版本 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31113d9a5935536ac10b22c7b5f5af27b0d29970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e733375f01d4b2b8ec7090f7f70ad1ec5280cd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-debug-a-release-build"></a>如何：调试发行版本
 你可以调试应用程序的发布版本。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**C/c + +**节点。 设置**调试信息格式**到[C7 兼容 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md)或**程序数据库 (/Zi)**。  
+2.  单击**C/c + +** 节点。 设置**调试信息格式**到[C7 兼容 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md)或**程序数据库 (/Zi)**。  
   
 3.  展开**链接器**单击**常规**节点。 设置**启用增量链接**到[否 (/ /INCREMENTAL: NO)](../../build/reference/incremental-link-incrementally.md)。  
   

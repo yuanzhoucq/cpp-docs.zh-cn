@@ -1,29 +1,24 @@
 ---
-title: "Visual Studio 中的清单生成 |Microsoft 文档"
-ms.custom: 
+title: Visual Studio 中的清单生成 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73b5cbe631d078dd6ee27b4f7e0a97503c36638b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Visual Studio 中的清单生成
 可以在项目中控制生成清单文件的特定项目**属性页**对话框。 上**配置属性**选项卡上，单击**链接器**，然后**清单文件**，然后**生成清单**。 默认情况下，新项目的项目属性将设置为生成清单文件。 但是很可能禁用生成的清单项目使用**生成清单**项目属性。 当此属性设置为**是**，生成此项目的清单。 则链接器忽略程序集信息时解决应用程序代码的依赖关系，并且不生成清单。  

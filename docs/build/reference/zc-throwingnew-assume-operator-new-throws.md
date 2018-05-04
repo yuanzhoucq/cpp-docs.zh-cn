@@ -1,10 +1,10 @@
 ---
-title: "/Zc:throwingNew （假定运算符新引发） |Microsoft 文档"
-ms.custom: 
+title: /Zc:throwingNew （假定运算符新引发） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - throwingNew
 - /Zc:throwingNew
@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc29a364e5001fb319017a1bc2fa084514d52f16
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: f446e5c71e88be86c31e5a83ca7d23f611683af4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew （假定运算符新引发）
 
-当**/Zc:throwingNew**指定选项，编译器优化对调用`operator new`跳过检查 null 指针返回。 此选项，可以告诉编译器假定所有链接的实现`operator new`和自定义分配器符合 c + + 标准和分配失败时引发。 默认情况下，在 Visual Studio 中，编译器将保守地生成 null 检查 (**/Zc:throwingNew-**) 为这些调用，因为用户可以将链接的非引发实现`operator new`或编写自定义分配器例程返回 null 指针。
+当 **/Zc:throwingNew**指定选项，编译器优化对调用`operator new`跳过检查 null 指针返回。 此选项，可以告诉编译器假定所有链接的实现`operator new`和自定义分配器符合 c + + 标准和分配失败时引发。 默认情况下，在 Visual Studio 中，编译器将保守地生成 null 检查 (**/Zc:throwingNew-**) 为这些调用，因为用户可以将链接的非引发实现`operator new`或编写自定义分配器例程返回 null 指针。
 
 ## <a name="syntax"></a>语法
 
@@ -40,11 +39,11 @@ ms.lasthandoff: 03/15/2018
 
 因为 ISO C + + 98，标准已指定，默认值[运算符 new](../../standard-library/new-operators.md#op_new)引发`std::bad_alloc`内存分配失败时。 将返回 null 指针到 Visual Studio 6.0 的 Visual c + + 的版本上分配失败。 从 Visual Studio 2002，开始`operator new`符合标准和失败时引发。 若要支持使用较旧的分配形式的代码，Visual Studio 提供的可链接实现`operator new`中失败返回一个 null 指针的 nothrownew.obj。 默认情况下，编译器还生成防御性 null 检查，以防止这些较旧样式的分配器失败导致程序即时崩溃。 **/Zc:throwingNew**选项告知编译器省略这些 null 检查，假定所有链接内存分配器符合标准。 这不适用于显式非引发`operator new`重载，使用其他参数的类型声明`std::nothrow_t`和具有显式`noexcept`规范。
 
-从概念上讲，若要在自由储存中创建一个对象，编译器生成代码以分配其内存，然后调用其构造函数初始化内存。 因为 Visual c + + 编译器通常无法告知是否此代码将链接到一个不符合要求，非引发的分配器，默认情况下它还生成 null 检查，然后再调用的构造函数。 这可以防止 null 指针取消引用的构造函数调用中，如果非引发分配失败。 在大多数情况下，这些检查是必需的因为默认值`operator new`分配器引发而不是返回 null 指针。 检查还有不幸的副作用。 它们膨胀代码大小、 它们充满分支的预测指标，从而它们避免降低如 devirtualization 或初始化的对象的 const 传播其他有用的编译器优化。 检查存在仅对链接到的支持代码*nothrownew.obj*或具有自定义不符合要求`operator new`实现。 如果不使用不符合要求`operator new`，我们建议你使用**/Zc:throwingNew**来优化你的代码。
+从概念上讲，若要在自由储存中创建一个对象，编译器生成代码以分配其内存，然后调用其构造函数初始化内存。 因为 Visual c + + 编译器通常无法告知是否此代码将链接到一个不符合要求，非引发的分配器，默认情况下它还生成 null 检查，然后再调用的构造函数。 这可以防止 null 指针取消引用的构造函数调用中，如果非引发分配失败。 在大多数情况下，这些检查是必需的因为默认值`operator new`分配器引发而不是返回 null 指针。 检查还有不幸的副作用。 它们膨胀代码大小、 它们充满分支的预测指标，从而它们避免降低如 devirtualization 或初始化的对象的 const 传播其他有用的编译器优化。 检查存在仅对链接到的支持代码*nothrownew.obj*或具有自定义不符合要求`operator new`实现。 如果不使用不符合要求`operator new`，我们建议你使用 **/Zc:throwingNew**来优化你的代码。
 
 **/Zc:throwingNew**选项默认情况下，处于关闭状态，并且不受[/ 宽松-](permissive-standards-conformance.md)选项。
 
-如果你通过使用链接时间代码生成 (LTCG) 编译，不需要指定**/Zc:throwingNew**。 如果通过使用 LTCG 编译你的代码后，编译器可以检测到默认情况下，符合`operator new`使用实现。 如果是这样，编译器遗漏 null 检查自动。 链接器查找**/ThrowingNew**标志来告诉如果的实现`operator new`为一致性。 你可以通过在你自定义运算符的新实现的源中包含此指令指定到链接器此标志：
+如果你通过使用链接时间代码生成 (LTCG) 编译，不需要指定 **/Zc:throwingNew**。 如果通过使用 LTCG 编译你的代码后，编译器可以检测到默认情况下，符合`operator new`使用实现。 如果是这样，编译器遗漏 null 检查自动。 链接器查找 **/ThrowingNew**标志来告诉如果的实现`operator new`为一致性。 你可以通过在你自定义运算符的新实现的源中包含此指令指定到链接器此标志：
 
 ```cpp
 #pragma comment(linker, "/ThrowingNew")
@@ -60,7 +59,7 @@ ms.lasthandoff: 03/15/2018
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含**/Zc:throwingNew**或**/Zc:throwingNew-** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/Zc:throwingNew**或 **/Zc:throwingNew-** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

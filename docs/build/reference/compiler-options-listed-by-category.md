@@ -1,29 +1,24 @@
 ---
-title: "按类别列出的编译器选项 |Microsoft 文档"
-ms.custom: 
+title: 按类别列出的编译器选项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87eb79e7932d18ac5aae47a39ec207fec326d58e
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -163,7 +158,7 @@ ms.lasthandoff: 02/28/2018
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
-|[/analyze](analyze-code-analysis.md)|启用代码分析。|
+|[/ 分析](analyze-code-analysis.md)|启用代码分析。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
@@ -185,7 +180,7 @@ ms.lasthandoff: 02/28/2018
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置输出警告级别。|
-|[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
+|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
 |[/we](compiler-option-warning-level.md)|将指定的警告视为错误。|
@@ -199,7 +194,7 @@ ms.lasthandoff: 02/28/2018
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略当前生成中的所有其他预编译头编译器选项。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定预编译头内存分配限制。|
-|[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
+|[await /](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
 |[/source-charset](source-charset-set-source-character-set.md)|组源字符集。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|集执行字符集。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集为 utf-8。|

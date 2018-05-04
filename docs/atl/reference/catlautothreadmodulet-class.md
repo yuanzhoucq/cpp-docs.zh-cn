@@ -1,12 +1,9 @@
 ---
-title: "CAtlAutoThreadModuleT 类 |Microsoft 文档"
-ms.custom: 
+title: CAtlAutoThreadModuleT 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModuleT
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082214794b2caa66e8be1127c664e0ffec18a394
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 类
 此类提供用于实现线程放入池中，单元模型的 COM 服务器的方法。  
@@ -73,10 +68,10 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
   
  `CAtlAutoThreadModuleT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
  此静态函数动态计算并返回最大为 EXE 模块，基于的处理器数量的线程数。  
   
 ```

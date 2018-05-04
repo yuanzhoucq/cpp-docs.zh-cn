@@ -2,12 +2,9 @@
 title: 从 Visual Basic 应用程序调用 DLL 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 对于 Visual Basic 应用程序 （或 Pascal 或 Fortran 等其他语言中的应用程序） 可以调用 C/c + + DLL 中函数，必须使用正确的调用约定，而无需由编译器进行任何名称修饰导出函数。  
   
- `__stdcall`创建正确的调用约定的函数 （被调用的函数清理堆栈和从右到左传递的参数） 但以不同方式修饰函数名。 因此，当**__declspec （dllexport)**使用在 DLL 中导出的函数，在导出的修饰的名称。  
+ `__stdcall` 创建正确的调用约定的函数 （被调用的函数清理堆栈和从右到左传递的参数） 但以不同方式修饰函数名。 因此，当 **__declspec （dllexport)** 使用在 DLL 中导出的函数，在导出的修饰的名称。  
   
  `__stdcall`名称修饰的前缀以下划线 (_) 的符号名称，并追加具有符号 at 符号 (@) 字符后跟自变量列表 （所需的堆栈空间） 中的字节数。 因此，函数声明为：  
   
@@ -50,7 +45,7 @@ _func@12
   
  C 调用约定 (`__cdecl`) 修饰形式的名称`_func`。  
   
- 若要获取修饰的名称，请使用[/映射](../build/reference/map-generate-mapfile.md)。 利用**__declspec （dllexport)**执行下列任务：  
+ 若要获取修饰的名称，请使用[/映射](../build/reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 执行下列任务：  
   
 -   如果该函数导出使用 C 调用约定 (**_cdecl**)，它会导出名称时抽出前导下划线 (_)。  
   

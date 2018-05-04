@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca4c79fd46954d59a8fdd892fabbd53d4bc985f
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: c7d6de281097232b1b8abc10a103af9c186e3550
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profile-guided-optimizations"></a>按配置文件优化
 
 按配置文件优化可以优化输出文件，其中优化程序使用的数据是通过对 .exe 或 .dll 文件进行测试运行得到的。 这些数据表示程序在生产环境中可能采用的执行方式。
 
-按配置优化才可用于 x86 或 x64 本机目标。 按配置优化不适用于在公共语言运行时运行的输出文件。 即使生成包含混合本机和托管代码的程序集 (通过使用**/clr**编译器选项)，也无法仅对本机代码使用按配置文件优化。 如果你尝试使用 IDE 中设置这些选项生成项目时，不会生成错误。
+按配置优化才可用于 x86 或 x64 本机目标。 按配置优化不适用于在公共语言运行时运行的输出文件。 即使生成包含混合本机和托管代码的程序集 (通过使用 **/clr**编译器选项)，也无法仅对本机代码使用按配置文件优化。 如果你尝试使用 IDE 中设置这些选项生成项目时，不会生成错误。
 
 > [!NOTE]
-> 通过分析测试运行收集的信息替代本可以生效如果指定的优化**/Ob**， **/Os**，或**/Ot**。 有关详细信息，请参阅[/Ob （内联函数扩展）](../../build/reference/ob-inline-function-expansion.md)和[/Os、 /Ot （代码大小优先、 代码速度优先）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。
+> 通过分析测试运行收集的信息替代本可以生效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息，请参阅[/Ob （内联函数扩展）](../../build/reference/ob-inline-function-expansion.md)和[/Os、 /Ot （代码大小优先、 代码速度优先）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。
 
 ## <a name="steps-to-optimize-your-app"></a>若要优化你的应用程序的步骤
 
@@ -37,11 +36,11 @@ ms.lasthandoff: 03/22/2018
 
 - 编译一个或多个源代码文件与[/GL](../../build/reference/gl-whole-program-optimization.md)。
 
-   使用生成每个模块**/GL**可以按配置优化测试运行，以捕获运行时行为过程检查。 按配置优化生成中的每个模块不需要使用编译**/GL**。 但是，只有这些模块编译与**/GL**是检测和更高版本可用于按配置优化。
+   使用生成每个模块 **/GL**可以按配置优化测试运行，以捕获运行时行为过程检查。 按配置优化生成中的每个模块不需要使用编译 **/GL**。 但是，只有这些模块编译与 **/GL**是检测和更高版本可用于按配置优化。
 
 - 使用链接[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)和[/GENPROFILE 或 /FASTGENPROFILE](../../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)。
 
-   同时使用**/LTCG**和**/GENPROFILE**或**/FASTGENPROFILE**运行所检测的应用时，创建.pgd 文件。 将测试运行数据添加到该 .pgd 文件后，该文件可以用作下一个链接步骤（创建优化映像）的输入。 指定时**/GENPROFILE**，你可以选择添加**PGD =**_filename_参数来指定非默认名称或使用.pgd 文件的位置。 组合**/LTCG**和**/GENPROFILE**或**/FASTGENPROFILE**链接器选项将替换不推荐使用**/ltcg: pginstrument**链接器选项。
+   同时使用 **/LTCG**和 **/GENPROFILE**或 **/FASTGENPROFILE**运行所检测的应用时，创建.pgd 文件。 将测试运行数据添加到该 .pgd 文件后，该文件可以用作下一个链接步骤（创建优化映像）的输入。 指定时 **/GENPROFILE**，你可以选择添加**PGD =**_filename_参数来指定非默认名称或使用.pgd 文件的位置。 组合 **/LTCG**和 **/GENPROFILE**或 **/FASTGENPROFILE**链接器选项将替换不推荐使用 **/ltcg: pginstrument**链接器选项。
 
 - 分析应用程序。
 
@@ -51,13 +50,13 @@ ms.lasthandoff: 03/22/2018
 
    你的应用程序还可直接调用 PGO 函数[PgoAutoSweep](pgoautosweep.md)，以捕获为对应的.pgc 文件进行调用的配置文件数据。 这可让你更好地控制涵盖的.pgc 文件中捕获的数据的代码。 有关如何使用此函数的示例，请参阅[PgoAutoSweep](pgoautosweep.md)文档。
 
-   创建时检测的生成，默认情况下，数据收集完成在非线程安全模式下，其速度更快，但可能不完全准确。 通过使用**EXACT**参数**/GENPROFILE**或**/FASTGENPROFILE**，你可以指定在线程安全模式下，但速度较慢更准确的数据收集。 此选项也是将不推荐使用[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode)环境变量，或不推荐使用**/POGOSAFEMODE**链接器选项，当你创建检测的生成。
+   创建时检测的生成，默认情况下，数据收集完成在非线程安全模式下，其速度更快，但可能不完全准确。 通过使用**EXACT**参数 **/GENPROFILE**或 **/FASTGENPROFILE**，你可以指定在线程安全模式下，但速度较慢更准确的数据收集。 此选项也是将不推荐使用[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode)环境变量，或不推荐使用 **/POGOSAFEMODE**链接器选项，当你创建检测的生成。
 
-- 使用链接**/LTCG**和**/USEPROFILE**。
+- 使用链接 **/LTCG**和 **/USEPROFILE**。
 
-   同时使用**/LTCG**和[/USEPROFILE](useprofile.md)链接器选项以创建优化的映像。 此步骤使用 .pgd 文件作为输入。 当指定**/USEPROFILE**，你可以选择添加**PGD =**_filename_参数来指定非默认名称或使用.pgd 文件的位置。 你还可以指定通过使用不推荐使用此名称**/PGD**链接器选项。 组合**/LTCG**和**/USEPROFILE**替换不推荐使用**/ltcg: pgoptimize**和**/LTCG:PGUPDATE**链接器选项。
+   同时使用 **/LTCG**和[/USEPROFILE](useprofile.md)链接器选项以创建优化的映像。 此步骤使用 .pgd 文件作为输入。 当指定 **/USEPROFILE**，你可以选择添加**PGD =**_filename_参数来指定非默认名称或使用.pgd 文件的位置。 你还可以指定通过使用不推荐使用此名称 **/PGD**链接器选项。 组合 **/LTCG**和 **/USEPROFILE**替换不推荐使用 **/ltcg: pgoptimize**和 **/LTCG:PGUPDATE**链接器选项。
 
-甚至可能会在创建了优化输出文件之后，才发现可以进行附加分析以创建更为优化的映像。 如果检测到的映像及其.pgd 文件可用，你可以执行附加测试运行，并使用较新的.pgd 文件重新生成优化的映像，使用相同的**/LTCG**和**/USEPROFILE**链接器选项.
+甚至可能会在创建了优化输出文件之后，才发现可以进行附加分析以创建更为优化的映像。 如果检测到的映像及其.pgd 文件可用，你可以执行附加测试运行，并使用较新的.pgd 文件重新生成优化的映像，使用相同的 **/LTCG**和 **/USEPROFILE**链接器选项.
 
 ## <a name="optimizations-performed-by-pgo"></a>由 PGO 执行的优化
 

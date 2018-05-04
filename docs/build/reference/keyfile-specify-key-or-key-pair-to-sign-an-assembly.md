@@ -1,13 +1,10 @@
 ---
-title: "-KEYFILE （指定密钥或密钥对程序集进行签名） |Microsoft 文档"
-ms.custom: 
+title: -KEYFILE （指定密钥或密钥对程序集进行签名） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /keyfile
 - VC.Project.VCLinkerTool.KeyFile
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - -KEYFILE linker option
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86457510eb017fe2d5060f2f37661a3397ec30d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 476fd1e49a8c93363f00215d422a79eda808c321
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE（指定密钥或密钥对以便为程序集签名）
 ```  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  此外可以将你的加密信息传递到链接器使用[/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)。 使用[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)如果你想部分签名的程序集。 请参阅[强名称程序集 （程序集签名） (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)有关程序集进行签名的详细信息。  
   
- 两者**/KEYFILE**和**/KEYCONTAINER**指定链接器 （通过命令行选项或通过自定义特性），将首先尝试密钥容器。 如果成功，则使用密钥容器中的信息对程序集签名。 如果链接器未找到密钥容器，它将尝试使用 /KEYFILE 指定的文件。 如果成功，则使用密钥文件中的信息对程序集签名，并且将密钥信息安装到密钥容器中（类似于 sn -i），以便在下一次编译中，密钥容器选项将生效。  
+ 两者 **/KEYFILE**和 **/KEYCONTAINER**指定链接器 （通过命令行选项或通过自定义特性），将首先尝试密钥容器。 如果成功，则使用密钥容器中的信息对程序集签名。 如果链接器未找到密钥容器，它将尝试使用 /KEYFILE 指定的文件。 如果成功，则使用密钥文件中的信息对程序集签名，并且将密钥信息安装到密钥容器中（类似于 sn -i），以便在下一次编译中，密钥容器选项将生效。  
   
  请注意，密钥文件可能仅包含公钥。  
   

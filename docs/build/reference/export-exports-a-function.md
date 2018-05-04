@@ -2,12 +2,9 @@
 title: -导出 （导出函数） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT（导出函数）
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  使用此选项，你可以从你的程序导出函数，以便其他程序可以调用该函数。 你还可以导出数据。 通常在 DLL 中定义导出。  
   
- *Entryname*是函数或数据项的名称，因为它是用于调用程序。 `ordinal`索引指定到的导出表中的范围 1 到 65535;如果不指定`ordinal`，链接将分配一个。 **NONAME**关键字仅作为是执行序号，导出该函数不带*entryname*。  
+ *Entryname*是函数或数据项的名称，因为它是用于调用程序。 `ordinal` 索引指定到的导出表中的范围 1 到 65535;如果不指定`ordinal`，链接将分配一个。 **NONAME**关键字仅作为是执行序号，导出该函数不带*entryname*。  
   
  **数据**关键字指定导出的项是数据项。 必须使用声明中客户端程序的数据项**extern __declspec （dllimport)**。  
   

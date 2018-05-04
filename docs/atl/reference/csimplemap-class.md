@@ -1,12 +1,9 @@
 ---
-title: "CSimpleMap 类 |Microsoft 文档"
-ms.custom: 
+title: CSimpleMap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMap
@@ -32,17 +29,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e4fdad706ab9e586efe72663880646e6f50f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415ce3c0d6b060ffc71aa448656cf9ad45a3e7bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemap-class"></a>CSimpleMap 类
 此类提供的是简单映射数组的支持。  
@@ -99,21 +94,21 @@ class CSimpleMap
 |[CSimpleMap::SetAtIndex](#setatindex)|设置指定键和值。|  
   
 ## <a name="remarks"></a>备注  
- `CSimpleMap`提供支持的任何给定的类型是简单映射数组`T`，管理的关键元素和其关联的值的无序的数组。  
+ `CSimpleMap` 提供支持的任何给定的类型是简单映射数组`T`，管理的关键元素和其关联的值的无序的数组。  
   
  参数`TEqual`提供了一种定义的类型的两个元素相等性比较函数`T`。 通过创建一个类类似于[CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)，可以改变的相等性测试的任何给定的数组的行为。 例如，在处理一个指针数组，它可能会有用定义为相等性，具体取决于指针引用的值。 默认实现利用**operator==()**。  
   
  同时`CSimpleMap`和[CSimpleArray](../../atl/reference/csimplearray-class.md)释放与以前的 ATL 的兼容性，并通过提供更完整且高效的集合实现不提供[CAtlArray](../../atl/reference/catlarray-class.md)和[CAtlMap](../../atl/reference/catlmap-class.md)。  
   
- 不同于其他 ATL 和 MFC 中的映射集合，此类实现与一个简单的数组，并查找搜索需要的线性搜索。 `CAtlMap`该数组包含大量元素时，应使用。  
+ 不同于其他 ATL 和 MFC 中的映射集合，此类实现与一个简单的数组，并查找搜索需要的线性搜索。 `CAtlMap` 该数组包含大量元素时，应使用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsimpcoll.h  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleMap::Add  
+##  <a name="add"></a>  CSimpleMap::Add  
  将一个键和关联的值添加到映射数组。  
   
 ```
@@ -133,21 +128,21 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="remarks"></a>备注  
  每个键和值对添加映射数组内存释放和重新分配，从而确保每个数据始终连续存储的原因。 即，第二个关键元素始终直接遵循在内存中的第一个键元素，依此类推。  
   
-##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+##  <a name="_arrayelementtype"></a>  CSimpleMap::_ArrayElementType  
  密钥类型的 typedef。  
   
 ```
 typedef TVal _ArrayElementType;
 ```  
   
-##  <a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+##  <a name="_arraykeytype"></a>  CSimpleMap::_ArrayKeyType  
  值类型的 typedef。  
   
 ```
 typedef TKey _ArrayKeyType;
 ```  
   
-##  <a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+##  <a name="csimplemap"></a>  CSimpleMap::CSimpleMap  
  构造函数。  
   
 ```
@@ -157,7 +152,7 @@ CSimpleMap();
 ### <a name="remarks"></a>备注  
  初始化数据成员。  
   
-##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap  
  析构函数。  
   
 ```
@@ -167,7 +162,7 @@ CSimpleMap();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="findkey"></a>CSimpleMap::FindKey  
+##  <a name="findkey"></a>  CSimpleMap::FindKey  
  查找特定键。  
   
 ```
@@ -181,7 +176,7 @@ int FindKey(const TKey& key) const;
 ### <a name="return-value"></a>返回值  
  返回找到的密钥时的索引，否则返回-1。  
   
-##  <a name="findval"></a>CSimpleMap::FindVal  
+##  <a name="findval"></a>  CSimpleMap::FindVal  
  查找特定值。  
   
 ```
@@ -195,7 +190,7 @@ int FindVal(const TVal& val) const;
 ### <a name="return-value"></a>返回值  
  返回值的索引如果找到此属性，否则返回-1。  
   
-##  <a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+##  <a name="getkeyat"></a>  CSimpleMap::GetKeyAt  
  检索指定索引处的键。  
   
 ```
@@ -212,7 +207,7 @@ TKey& GetKeyAt(int nIndex) const;
 ### <a name="remarks"></a>备注  
  通过传递的索引`nIndex`必须是有效的返回值为有意义。  
   
-##  <a name="getsize"></a>CSimpleMap::GetSize  
+##  <a name="getsize"></a>  CSimpleMap::GetSize  
  映射数组中返回的项数。  
   
 ```
@@ -222,7 +217,7 @@ int GetSize() const;
 ### <a name="return-value"></a>返回值  
  返回映射数组中 （一个键和值是一个条目） 的条目数。  
   
-##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
+##  <a name="getvalueat"></a>  CSimpleMap::GetValueAt  
  检索位于特定索引处的值。  
   
 ```
@@ -239,7 +234,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="remarks"></a>备注  
  通过传递的索引`nIndex`必须是有效的返回值为有意义。  
   
-##  <a name="lookup"></a>CSimpleMap::Lookup  
+##  <a name="lookup"></a>  CSimpleMap::Lookup  
  返回与给定的键关联的值。  
   
 ```
@@ -253,7 +248,7 @@ TVal Lookup(const TKey& key) const;
 ### <a name="return-value"></a>返回值  
  返回关联的值。 如果没有匹配的密钥可找到为 NULL 则返回。  
   
-##  <a name="remove"></a>CSimpleMap::Remove  
+##  <a name="remove"></a>  CSimpleMap::Remove  
  中移除键和匹配的值。  
   
 ```
@@ -267,7 +262,7 @@ BOOL Remove(const TKey& key);
 ### <a name="return-value"></a>返回值  
  如果密钥和匹配的值，已成功移除，则返回 FALSE 否则，则返回 TRUE。  
   
-##  <a name="removeall"></a>CSimpleMap::RemoveAll  
+##  <a name="removeall"></a>  CSimpleMap::RemoveAll  
  中移除所有键和值。  
   
 ```
@@ -277,7 +272,7 @@ void RemoveAll();
 ### <a name="remarks"></a>备注  
  从映射数组对象中删除所有键和值。  
   
-##  <a name="removeat"></a>CSimpleMap::RemoveAt  
+##  <a name="removeat"></a>  CSimpleMap::RemoveAt  
  中移除键和关联的指定索引处的值。  
   
 ```
@@ -291,7 +286,7 @@ BOOL RemoveAt(int nIndex);
 ### <a name="return-value"></a>返回值  
  如果，返回 TRUE 成功后，FALSE 指定的索引是无效的索引。  
   
-##  <a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+##  <a name="reverselookup"></a>  CSimpleMap::ReverseLookup  
  返回与给定的值关联的密钥。  
   
 ```
@@ -305,7 +300,7 @@ TKey ReverseLookup(const TVal& val) const;
 ### <a name="return-value"></a>返回值  
  返回关联的键。 如果没有匹配的密钥可找到为 NULL 则返回。  
   
-##  <a name="setat"></a>CSimpleMap::SetAt  
+##  <a name="setat"></a>  CSimpleMap::SetAt  
  设置与给定的键关联的值。  
   
 ```
@@ -322,7 +317,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="return-value"></a>返回值  
  如果找到该键，，和的值否则是已成功更改，则返回 FALSE，则返回 TRUE。  
   
-##  <a name="setatindex"></a>CSimpleMap::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleMap::SetAtIndex  
  设置指定索引处的键和值。  
   
 ```

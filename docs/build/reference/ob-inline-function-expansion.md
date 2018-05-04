@@ -1,13 +1,10 @@
 ---
-title: "-Ob （内联函数展开） |Microsoft 文档"
-ms.custom: 
+title: -Ob （内联函数展开） |Microsoft 文档
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob（内联函数展开）
 
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 
 **/Ob2**有效时[/O1、 /O2 （最小化大小、 最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)使用。
 
-此选项要求你启用优化使用**/O1**， **/O2**， **/Ox**，或**/Og**。  
+此选项要求你启用优化使用 **/O1**， **/O2**， **/Ox**，或 **/Og**。  
 
 ## <a name="remarks"></a>备注
 
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 你可以使用`#pragma` [auto_inline](../../preprocessor/auto-inline.md)指令排除考虑的候选项为内联展开的函数。 另请参阅`#pragma`[内部](../../preprocessor/intrinsic.md)指令。
 
 > [!NOTE]
-> 通过分析测试运行收集的信息替代本可以生效如果指定的优化**/Ob**， **/Os**，或**/Ot**。 有关详细信息，请参阅[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。
+> 通过分析测试运行收集的信息替代本可以生效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息，请参阅[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -91,6 +86,6 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项 （优化代码）](../../build/reference/o-options-optimize-code.md)  
+[/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)  
 [编译器选项](../../build/reference/compiler-options.md)  
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -13,14 +13,13 @@ f1_keywords:
 - PogoAutoSweepW
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b26eb95552594733fa0849c0df114676dc7a222
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 988a73dd8c4ad6929ef04691ad1959df7ea7bdd7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
@@ -46,7 +45,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 创建的.pgc 文件`PgoAutoSweep`必须合并到要用于创建优化的可执行文件的.pgd 文件。 你可以使用[pgomgr](pgomgr.md)命令执行合并。
 
-你可以合并的.pgd 文件的名称到链接器优化生成期间使用传递**PGD =**_filename_参数[/USEPROFILE](useprofile.md)链接器选项，或通过使用不推荐使用**/PGD**链接器选项。 如果你合并.pgc 文件到名为的文件*base_name*.pgd，你不必在命令行上指定文件名，因为链接器默认情况下选取此文件的名称。
+你可以合并的.pgd 文件的名称到链接器优化生成期间使用传递**PGD =**_filename_参数[/USEPROFILE](useprofile.md)链接器选项，或通过使用不推荐使用 **/PGD**链接器选项。 如果你合并.pgc 文件到名为的文件*base_name*.pgd，你不必在命令行上指定文件名，因为链接器默认情况下选取此文件的名称。
 
 `PgoAutoSweep`函数维护创建检测的生成时指定的线程安全性设置。 如果你使用默认设置或指定**NOEXACT**参数[/GENPROFILE 或 /FASTGENPROFILE]()链接器选项调用`PgoAutoSweep`不是线程安全。 **EXACT**自变量创建线程安全的且更准确，但更慢、 已插入检测点的可执行文件。
 

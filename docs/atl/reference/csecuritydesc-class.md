@@ -1,12 +1,9 @@
 ---
-title: "CSecurityDesc 类 |Microsoft 文档"
-ms.custom: 
+title: CSecurityDesc 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 类
 此类是包装器**SECURITY_DESCRIPTOR**结构。  
@@ -121,7 +116,7 @@ class CSecurityDesc
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
 ##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
@@ -609,7 +604,7 @@ bool ToString(
   
  `si`参数可以包含以下 SECURITY_INFORMATION 标志：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |OWNER_SECURITY_INFORMATION|包括的所有者。|  
 |GROUP_SECURITY_INFORMATION|包括的主要组。|  

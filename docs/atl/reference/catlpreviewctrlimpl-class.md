@@ -1,12 +1,9 @@
 ---
-title: "CAtlPreviewCtrlImpl 类 |Microsoft 文档"
-ms.custom: 
+title: CAtlPreviewCtrlImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 类
 此类是 ATL 的实现位于 Shell 提供用于丰富预览的宿主窗口上的窗口。  
@@ -83,13 +78,13 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 ### <a name="protected-constants"></a>受保护的常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_plf](#m_plf)|用于在预览窗口中显示文本的字体。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|预览窗口的背景色。|  
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|预览窗口文本颜色。|  
@@ -112,10 +107,10 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
  `ATL::CAtlPreviewCtrlImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlpreviewctrlimpl.h  
   
-##  <a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
+##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
  构造预览控件对象。  
   
 ```
@@ -125,7 +120,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
  Destructs 预览控件对象。  
   
 ```
@@ -134,7 +129,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="create"></a>CAtlPreviewCtrlImpl::Create  
+##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
  由要创建 Windows 窗口的丰富预览处理程序调用。  
   
 ```
@@ -153,7 +148,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
+##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
  在需要销毁该控件时，由丰富预览处理程序调用。  
   
 ```
@@ -162,7 +157,7 @@ virtual void Destroy();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
+##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint  
  由框架调用以呈现预览。  
   
 ```
@@ -175,7 +170,7 @@ virtual void DoPaint(HDC hdc);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
+##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
  设置输入到此控件的焦点。  
   
 ```
@@ -184,7 +179,7 @@ virtual void Focus();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
+##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack  
  预览窗口的背景色。  
   
 ```
@@ -193,7 +188,7 @@ COLORREF m_clrBack;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
+##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText  
  预览窗口的文本颜色。  
   
 ```
@@ -202,7 +197,7 @@ COLORREF m_clrText;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
+##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
  用于在预览窗口中显示文本的字体。  
   
 ```
@@ -211,7 +206,7 @@ const LOGFONTW* m_plf;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
+##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint  
  处理 WM_PAINT 消息。  
   
 ```
@@ -240,7 +235,7 @@ LRESULT OnPaint(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
+##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
  指示此控件重绘。  
   
 ```
@@ -249,7 +244,7 @@ virtual void Redraw();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
+##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
  设置此控件的新父级。  
   
 ```
@@ -262,7 +257,7 @@ virtual void SetHost(HWND hWndParent);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
+##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
  由调用丰富预览处理程序需要设置的丰富预览的视觉对象时内容。  
   
 ```
@@ -284,7 +279,7 @@ virtual void SetPreviewVisuals(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect  
  设置此控件的新边框。  
   
 ```

@@ -1,27 +1,22 @@
 ---
 title: 添加控件 (ATL 教程，第 2 部分) |Microsoft 文档
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>添加控件（ATL 教程，第 2 部分）
 在此步骤中，将控件添加到你的项目，生成它，并在网页上对其进行测试。  
@@ -115,6 +110,6 @@ ms.lasthandoff: 03/28/2018
   
  [返回到步骤 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
 

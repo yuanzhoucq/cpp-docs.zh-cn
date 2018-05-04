@@ -2,26 +2,21 @@
 title: 参数传递 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec0c5b6fe00430c8b08fefdd8781b677004085e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-passing"></a>参数传递
 在寄存器中传递的前四个整数参数。 整数值在 RCX、 RDX、 R8 和 R9 中传递 （按从左到右的顺序）。 自变量 5 和更高版本在堆栈上传递。 所有自变量是右对齐，寄存器中。 这样为了使被调用方可以忽略的寄存器高位，如果需要并且可以访问仅需的寄存器的部分。  

@@ -1,29 +1,24 @@
 ---
-title: "避免堆争用 |Microsoft 文档"
-ms.custom: 
+title: 避免堆争用 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avoidance-of-heap-contention"></a>避免堆争用
 MFC 和 ATL 提供的默认字符串经理都在全局堆之上的简单包装器。 此全局堆是完全线程安全的这意味着多个线程可以分配和释放从它同时不会损坏堆的内存。 若要帮助提供线程安全性，堆必须序列化到其自身的访问。 这通常被实现的关键部分或类似的锁定机制。 两个线程尝试同时访问堆，每当一个线程阻止，直到完成其他线程的请求。 对于许多应用程序，这种情况很少发生，并且堆的锁定机制的性能影响可以忽略不计。 但是，对于应用程序经常从多个线程访问堆堆的锁争用会导致更慢速度如果它是单线程方式 （甚至在具有多个 Cpu 的计算机） 上运行该应用程序。  

@@ -1,27 +1,22 @@
 ---
 title: 添加属性页 (ATL 教程，第 6) |Microsoft 文档
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>添加属性页（ATL 教程，第 6 部分）
 属性页是作为单独的 COM 对象，允许它们在需要时共享实现的。 在此步骤中，您将执行以下任务以添加到控件的属性页：  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  ATL 属性页向导出现时，输入`PolyProp`作为**短**名称。  
   
-5.  单击**字符串**以打开**字符串**页上，然后输入**& 多边形**作为**标题**。  
+5.  单击**字符串**以打开**字符串**页上，然后输入 **& 多边形**作为**标题**。  
   
      **标题**的属性页是显示在该页面的选项卡的字符串。 **文档字符串**是属性框架使用放入状态行或工具提示中的说明。 请注意，标准属性框架当前不使用此字符串中，因此你可以将它保留为默认内容。 你将不会生成**帮助文件**目前，因此请删除该文本框中的条目。  
   
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  现在，代码检查该设置`Sides`实际工作的属性。 如果失败，代码将显示一个消息框，显示错误详细信息从**IErrorInfo**接口。 通常，容器请求的对象**ISupportErrorInfo**接口并调用`InterfaceSupportsErrorInfo`第一个，以确定对象是否支持设置错误信息。 你可以跳过此任务。  
   
- [CComPtr](../atl/reference/ccomptr-class.md)可帮助你通过自动处理引用计数，因此不需要调用`Release`接口上。 `CComBSTR`可帮助你与`BSTR`处理，因此不需要执行最终`SysFreeString`调用。 你还使用一个不同的字符串转换类，以便可以转换`BSTR`如有必要 (正因如此`USES_CONVERSION`宏位于函数的开始)。  
+ [CComPtr](../atl/reference/ccomptr-class.md)可帮助你通过自动处理引用计数，因此不需要调用`Release`接口上。 `CComBSTR` 可帮助你与`BSTR`处理，因此不需要执行最终`SysFreeString`调用。 你还使用一个不同的字符串转换类，以便可以转换`BSTR`如有必要 (正因如此`USES_CONVERSION`宏位于函数的开始)。  
   
  你还需要设置属性页的已更新标志以指示**应用**应启用按钮。 发生这种情况是当用户更改中的值**边**编辑框。  
   
@@ -126,7 +121,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`时将会调用**WM_COMMAND**消息不会发送**EN_CHANGE**通知`IDC_SIDES`控件。 `OnEnChangeSides`然后调用`SetDirty`并将传递`TRUE`以指示该属性页现在是脏和**应用**应启用按钮。  
+ `OnEnChangeSides` 时将会调用**WM_COMMAND**消息不会发送**EN_CHANGE**通知`IDC_SIDES`控件。 `OnEnChangeSides` 然后调用`SetDirty`并将传递`TRUE`以指示该属性页现在是脏和**应用**应启用按钮。  
   
 ## <a name="adding-the-property-page-to-the-control"></a>向控件添加的属性页  
  ATL 添加类向导和 ATL 属性页向导不属性页控件为你将自动添加到，因为你的项目中可能有多个控件。 你将需要将条目添加到控件的属性映射。  
@@ -152,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  接下来，你会将您在网页上的控件。  
   
- [返回到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124;[到步骤 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [返回到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [到步骤 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)

@@ -1,13 +1,10 @@
 ---
-title: "为何浮点数可能丢失精度 |Microsoft 文档"
-ms.custom: 
+title: 为何浮点数可能丢失精度 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb673f087d98f6c7acdd1e98b5649cc84a48d277
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>为何浮点数可能丢失精度
 浮点十进制值通常没有确切的二进制表示形式。 这是如何 CPU 浮点数据表示形式会产生副作用。 为此，你可能会遇到一些丢失精度，和某些浮点运算可能产生意外的结果。  

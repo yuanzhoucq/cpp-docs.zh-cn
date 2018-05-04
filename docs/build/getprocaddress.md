@@ -1,13 +1,10 @@
 ---
-title: "GetProcAddress |Microsoft 文档"
-ms.custom: 
+title: GetProcAddress |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,22 +14,20 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-显式链接到 DLL 调用的进程[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 中导出的函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用作为参数的 DLL 模块句柄 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 将函数名称和你要调用或函数的导出序号。  
+显式链接到 DLL 调用的进程[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 中导出的函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用作为参数的 DLL 模块句柄 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 采用的所需的函数名称到调用或函数的导出序号。  
   
- 由于要调用的 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并且会导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建匹配的函数指针的 typedef。 例如:  
+ 由于要调用的 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并且会导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建匹配的函数指针的 typedef。 例如：  
   
 ```  
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  

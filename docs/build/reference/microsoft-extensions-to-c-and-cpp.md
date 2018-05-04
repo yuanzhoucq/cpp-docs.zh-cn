@@ -1,13 +1,10 @@
 ---
-title: "Microsoft C 和 c + + 扩展 |Microsoft 文档"
-ms.custom: 
+title: Microsoft C 和 c + + 扩展 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C 和 C++ 扩展
 Visual C++ 按如下方式扩展 ANSI C 和 ANSI C++ 标准。  
@@ -69,9 +64,9 @@ Visual C++ 按如下方式扩展 ANSI C 和 ANSI C++ 标准。
 const int CMyClass::max;   // out of class definition  
 ```  
   
- 下**/Ze**，扩展的类定义是可选的静态、 常量整型和常量的枚举数据成员。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。  
+ 下 **/Ze**，扩展的类定义是可选的静态、 常量整型和常量的枚举数据成员。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。  
   
- 若要扩展的类定义是提供在标头文件和标头文件包含在多个源文件时，请避免错误，请使用[selectany](../../cpp/selectany.md)。 例如:  
+ 若要扩展的类定义是提供在标头文件和标头文件包含在多个源文件时，请避免错误，请使用[selectany](../../cpp/selectany.md)。 例如：  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
@@ -80,7 +75,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 ## <a name="casts"></a>强制转换  
  C++ 编译器和 C 编译器都支持以下类型的非 ANSI 转换：  
   
--   生成左值的非 ANSI 强制转换。 例如:  
+-   生成左值的非 ANSI 强制转换。 例如：  
   
     ```  
     char *p;  
@@ -96,7 +91,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   函数指针到数据指针的非 ANSI 强制转换。 例如:  
+-   函数指针到数据指针的非 ANSI 强制转换。 例如：  
   
     ```  
     int ( * pfunc ) ();   
@@ -238,10 +233,10 @@ void myfunc( int x, char * c )
     ```  
   
 ## <a name="intrinsic-floating-point-functions"></a>内部函数的浮点函数  
- C + + 编译器和 C 编译器支持内联生成**x86 特定 >**的`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，和`tan`函数**结束 x86 特定**时**/Oi**指定。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。  
+ C + + 编译器和 C 编译器支持内联生成**x86 特定 >** 的`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，和`tan`函数**结束 x86 特定**时 **/Oi**指定。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。  
   
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>非 Const 指针将参数传递给函数，需要对 Const 指针参数的引用  
- 这是 c + + 的扩展。 此代码将编译使用**/Ze**:  
+ 这是 c + + 的扩展。 此代码将编译使用 **/Ze**:  
   
 ```  
 typedef   int   T;  
@@ -264,7 +259,7 @@ void func ()
 ```  
   
 ## <a name="iso646h-not-enabled"></a>ISO646。H 未启用  
- 下**/Ze**，你必须包括 646.h，如果你想要使用文本形式的以下运算符：  
+ 下 **/Ze**，你必须包括 646.h，如果你想要使用文本形式的以下运算符：  
   
 -   && (and)  
   
@@ -280,16 +275,16 @@ void func ()
   
 -   ！ = (not_eq)  
   
--   &#124; &#124;（或者）  
+-   &#124;&#124;（或者）  
   
--   &#124; = (or_eq)  
+-   &#124;= (or_eq)  
   
 -   ^ (xor)  
   
 -   ^ = (xor_eq)  
   
 ## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字符串文本的地址的类型为 const char []，而不是 const char (*) []  
- 下面的示例将输出 char const (\*) [4] 下**/Za**，但 char const [4] 下的**/Ze**。  
+ 下面的示例将输出 char const (\*) [4] 下 **/Za**，但 char const [4] 下的 **/Ze**。  
   
 ```  
 #include <stdio.h>  

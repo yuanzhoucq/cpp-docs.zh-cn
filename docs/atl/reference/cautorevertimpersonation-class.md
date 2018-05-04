@@ -2,11 +2,8 @@
 title: CAutoRevertImpersonation 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoRevertImpersonation
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1982fc3c8b0d46dfd636cab63be82509fa07f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 942c446fc64bb7e4210bc82e21fc2511ae01503a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 类
 此类将恢复[CAccessToken](../../atl/reference/caccesstoken-class.md) nonimpersonating 状态时超出范围的对象。  
@@ -65,10 +60,10 @@ class CAutoRevertImpersonation
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
-##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
  自动执行访问令牌模拟恢复。  
   
 ```
@@ -82,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>备注  
  应仅使用此方法，如果[CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md)对象创建与 NULL`CAccessToken`指针，或如果[分离](#detach)以前调用过。 对于简单的情况下，不需要使用此方法。  
   
-##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
  构造 `CAutoRevertImpersonation` 对象。  
   
 ```
@@ -96,7 +91,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>备注  
  从和最好是在创建之前应单独执行访问令牌实际模拟`CAutoRevertImpersonation`对象。 此模拟将恢复自动当`CAutoRevertImpersonation`对象超出范围。  
   
-##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  销毁对象，并将恢复访问令牌模拟。  
   
 ```
@@ -106,7 +101,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>备注  
  将恢复当前有效的任何模拟[CAccessToken](../../atl/reference/caccesstoken-class.md)提供可以在构造或通过对象[附加](#attach)方法。 如果没有`CAccessToken`是相关联，析构函数不起作用。  
   
-##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
  取消自动模拟恢复。  
   
 ```
@@ -117,9 +112,9 @@ const CAccessToken* Detach() throw();
  先前相关联的地址[CAccessToken](../../atl/reference/caccesstoken-class.md)，如果没有关联存在则为 NULL。  
   
 ### <a name="remarks"></a>备注  
- 调用**分离**阻止`CAutoRevertImpersonation`对象从恢复当前有效的任何模拟[CAccessToken](../../atl/reference/caccesstoken-class.md)与此对象关联的对象。 `CAutoRevertImpersonation`然后可以通过不起作用销毁或它们重新关联到相同或另一个`CAccessToken`对象使用[附加](#attach)。  
+ 调用**分离**阻止`CAutoRevertImpersonation`对象从恢复当前有效的任何模拟[CAccessToken](../../atl/reference/caccesstoken-class.md)与此对象关联的对象。 `CAutoRevertImpersonation` 然后可以通过不起作用销毁或它们重新关联到相同或另一个`CAccessToken`对象使用[附加](#attach)。  
   
-##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
  检索访问令牌当前与此对象关联。  
   
 ```

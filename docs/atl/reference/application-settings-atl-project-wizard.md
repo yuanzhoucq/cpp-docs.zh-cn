@@ -1,12 +1,9 @@
 ---
-title: "应用程序设置，ATL 项目向导 |Microsoft 文档"
-ms.custom: 
+title: 应用程序设置，ATL 项目向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.atl.com.appset
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b7e383716d7cfa330bdfdebe21c33550669cc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47fbf95451834e5f8c41e8b6d7e5af7a9746bb85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-atl-project-wizard"></a>应用程序设置，ATL 项目向导
 使用**应用程序设置**ATL 项目向导设计并将基本功能添加到新的 ATL 项目页。  

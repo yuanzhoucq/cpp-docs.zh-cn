@@ -1,12 +1,9 @@
 ---
-title: "调试和错误报告的宏 |Microsoft 文档"
-ms.custom: 
+title: 调试和错误报告的宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告的宏
 这些宏提供有用的调试和跟踪功能。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[ATLTRACE](#alttrace)|将报告警告输出设备，如调试器窗口中，根据指定的标志和级别。 包括的向后兼容性。|  
 |[ATLTRACE2](#atltrace2)|将报告警告输出设备，如调试器窗口中，根据指定的标志和级别。|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  包括任何要跟踪所有的 ATL 标头文件之前，定义此宏`AddRef`和**版本**在你的组件的接口连接到输出窗口上调用。  
   
 ```
@@ -72,9 +67,9 @@ ms.lasthandoff: 12/21/2017
  映射到前面的跟踪语句中提供的信息直接此处提供的信息，以便你可以检查的引用计数整个接口转换 （thunk） 的整个生命周期。 此外，该接口转换 （thunk） 上获取最大引用计数的指示。  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`可在零售版本。  
+> `_ATL_DEBUG_INTERFACES` 可在零售版本。  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  写入到的所有调用`QueryInterface`到输出窗口。  
   
 ```
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  *接口名称* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  `ATLASSERT`宏执行与相同的功能[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)宏 C 运行时库中找到。  
   
 ```
@@ -100,10 +95,10 @@ ATLASSERT(booleanExpression);
 ### <a name="remarks"></a>备注  
  在调试版本中，`ATLASSERT`计算结果`booleanExpression`和结果为 false 时，将生成调试报告。  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  此宏用于验证传递给函数的参数。  
   
 ```
@@ -132,10 +127,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  ATL 的调试版本中发送字符串"`funcname`未实现"转储设备并返回到**E_NOTIMPL**。  
   
 ```
@@ -152,10 +147,10 @@ ATLTRACENOTIMPL(funcname);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  将报告警告输出设备，如调试器窗口中，根据指定的标志和级别。 包括的向后兼容性。  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>备注  
  请参阅[ATLTRACE2](#atltrace2)有关的说明**ATLTRACE**。 **ATLTRACE**和`ATLTRACE2`具有相同的行为， **ATLTRACE**包含是为了向后兼容。  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  将报告警告输出设备，如调试器窗口中，根据指定的标志和级别。  
   
 ```
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  在发布版本中`ATLTRACE2`编译为`(void) 0`。  
   
- `ATLTRACE2`限制要发送到为不能超过 1023年个字符，转储设备格式化后的字符串的内容。  
+ `ATLTRACE2` 限制要发送到为不能超过 1023年个字符，转储设备格式化后的字符串的内容。  
   
  **ATLTRACE**和`ATLTRACE2`具有相同的行为， **ATLTRACE**包含是为了向后兼容。  
   

@@ -1,13 +1,10 @@
 ---
-title: "CL 调用链接器 |Microsoft 文档"
-ms.custom: 
+title: CL 调用链接器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc9c5c4815dc83b37d0b7971d5fd0f31db51e39e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-invokes-the-linker"></a>CL 调用链接器
 CL 编译除非使用 /c 选项后会自动调用链接器。 CL 将在编译期间创建的.obj 文件的名称和命令行上指定的任何其他文件的名称传递到链接器。 链接器使用 LINK 环境变量中列出的选项。 /Link 选项可用于指定 CL 命令行上的链接器选项。 /Link 选项后跟的选项将替代 LINK 环境变量中。 下表中的选项禁止显示链接。  

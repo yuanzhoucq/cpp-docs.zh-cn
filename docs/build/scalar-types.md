@@ -1,27 +1,22 @@
 ---
-title: "标量类型 |Microsoft 文档"
-ms.custom: 
+title: 标量类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 07c9195e-b6c7-4083-8ef0-8a93032e4d1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b0915637025e176ee98d01be3991b30b4e6544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5490bb33cafd8d2942e434ab9c50e34441506463
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-types"></a>标量类型
 虽然数据的访问可能源于任何的对齐方式，建议，在以避免性能损失 （或更多损失） 其自然边界上对齐数据。 枚举是常量的整数，而是被视为 32 位整数。 下表描述的类型定义和建议的存储为其与使用以下的对齐方式值的对齐方式：  

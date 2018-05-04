@@ -1,12 +1,9 @@
 ---
-title: "CSimpleArrayEqualHelper 类 |Microsoft 文档"
-ms.custom: 
+title: CSimpleArrayEqualHelper 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleArrayEqualHelper
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57e5b40785bda57a4d5578bb998c4c97336246be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6660f72dbd91a41670b3c5f8772d21caf4b8abc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 类
 此类是帮助器[CSimpleArray](../../atl/reference/csimplearray-class.md)类。  
@@ -54,10 +49,10 @@ class CSimpleArrayEqualHelper
 ## <a name="remarks"></a>备注  
  此特征类是对的补充`CSimpleArray`类。 它提供一种方法比较两个元素存储在`CSimpleArray`对象。 默认情况下，对元素进行比较使用**operator=()**，但如果数组包含缺少其自己的相等运算符的复杂数据类型，你将需要重写此类。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsimpcoll.h  
   
-##  <a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
+##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual  
  测试两个`CSimpleArray`对象是否相等的元素。  
   
 ```
@@ -67,10 +62,10 @@ static bool IsEqual(
 ```  
   
 ### <a name="parameters"></a>参数  
- *t1*  
+ *T1*  
  一个对象类型为 t。  
   
- *t2*  
+ *T2*  
  一个对象类型为 t。  
   
 ### <a name="return-value"></a>返回值  

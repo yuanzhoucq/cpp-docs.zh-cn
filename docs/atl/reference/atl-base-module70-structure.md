@@ -1,12 +1,9 @@
 ---
-title: _ATL_BASE_MODULE70 Structure | Microsoft Docs
-ms.custom: 
+title: _ATL_BASE_MODULE70 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL::_ATL_BASE_MODULE70
@@ -18,19 +15,17 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f711621188cffb739fe6895af3b222993c84576c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b4e0173ecca5256ed942c23dbaf377850ee8192
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 Structure
+# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
 使用 atl。 任何项目使用  
   
 ## <a name="syntax"></a>语法  

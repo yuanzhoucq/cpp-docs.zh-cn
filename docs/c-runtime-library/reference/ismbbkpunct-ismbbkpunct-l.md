@@ -2,11 +2,8 @@
 title: _ismbbkpunct、_ismbbkpunct_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkpunct_l
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f9ee94dc405163d09f100422d98c9e823f6c77
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 7e020957b418a2c6a61cda9a5c8c197fb149146d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct、_ismbbkpunct_l
 
@@ -75,7 +70,7 @@ int _ismbbkpunct_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbkpunct**返回非零值，如果整数*c*如果它不为非 ASCII 标点符号，则为 0。 例如，仅在代码页 932， **_ismbbkpunct**测试片假名标点。 **_ismbbkpunct**的任何区域设置相关的字符设置使用当前区域设置。 **_ismbbkpunct_l**是相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbkpunct**返回非零值，如果整数*c*如果它不为非 ASCII 标点符号，则为 0。 例如，仅在代码页 932 中，_ismbbkpunct 测试片假名标点。 **_ismbbkpunct**的任何区域设置相关的字符设置使用当前区域设置。 **_ismbbkpunct_l**是相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

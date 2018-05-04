@@ -1,12 +1,9 @@
 ---
-title: "IEnumOnSTLImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IEnumOnSTLImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
 此类定义一个基于 c + + 标准库集合的枚举器接口。  
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|**IUnknown**提供集合的对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `IEnumOnSTLImpl`提供正在枚举项目兼容的 c + + 标准库容器中的存储在何处 COM 枚举器接口的实现。 此类是类似于[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)类，该类提供的枚举器接口的实现基于数组。  
+ `IEnumOnSTLImpl` 提供正在枚举项目兼容的 c + + 标准库容器中的存储在何处 COM 枚举器接口的实现。 此类是类似于[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)类，该类提供的枚举器接口的实现基于数组。  
   
 > [!NOTE]
 >  请参阅[CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)有关进一步之间的差异的详细信息`CComEnumImpl`和`IEnumOnSTLImpl`。  
@@ -98,10 +93,10 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
  `IEnumOnSTLImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>  IEnumOnSTLImpl::Init  
  初始化枚举数。  
   
 ```
@@ -125,7 +120,7 @@ HRESULT Init(
   
  将指针传递给任何客户端返回的枚举器接口之前，必须调用此方法。  
   
-##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
  此方法提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)通过创建类型的对象的方法`CComEnumOnSTL`，具有相同的集合和迭代器使用的当前对象，初始化它并在返回接口新创建的对象。  
   
 ```
@@ -139,7 +134,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
  **IUnknown**提供集合的对象的指针。  
   
 ```
@@ -149,7 +144,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>备注  
  此智能指针保留在传递到的对象的引用[IEnumOnSTLImpl::Init](#init)，确保，它将保持活动状态的枚举数的生存期内。  
   
-##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
  此成员是指向提供驱动枚举器接口的实现数据的集合。  
   
 ```
@@ -159,14 +154,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>备注  
  此成员初始化通过调用[IEnumOnSTLImpl::Init](#init)。  
   
-##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
  此成员包含用于将标记集合中的当前位置，并导航到后续元素的迭代器。  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>  IEnumOnSTLImpl::Next  
  此方法提供的实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  此方法提供的实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  此方法提供的实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
   
 ```

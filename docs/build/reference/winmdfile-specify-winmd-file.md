@@ -1,29 +1,24 @@
 ---
-title: "-WINMDFILE (指定 winmd 文件) |Microsoft 文档"
-ms.custom: 
+title: -WINMDFILE (指定 winmd 文件) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 dev_langs:
 - C++
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153e5c0bd42b6fdba59e309483f25f09b86fe9fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eaf1bfc805db568a012c28d66361bbd99745a95
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE（指定 winmd 文件）
 指定生成的 Windows 运行时元数据 (.winmd) 输出文件的文件名称[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)链接器选项。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 使用 `filename` 中指定的值重写默认的 .winmd 文件名 (`binaryname`.winmd)。 请注意不要将".winmd"追加到`filename`。  如果多个值列出上**/WINMDFILE**命令行中，最后一个优先。  
+ 使用 `filename` 中指定的值重写默认的 .winmd 文件名 (`binaryname`.winmd)。 请注意不要将".winmd"追加到`filename`。  如果多个值列出上 **/WINMDFILE**命令行中，最后一个优先。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   

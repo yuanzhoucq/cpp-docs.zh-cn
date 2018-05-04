@@ -2,11 +2,8 @@
 title: _mbsnbcpy_s、_mbsnbcpy_s_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5dfb0d070fbe5e229b38aca4ece47696fcfce24
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
@@ -116,7 +111,7 @@ errno_t _mbsnbcpy_s_l(
 
 **_Mbsnbcpy_s**函数副本*计数*个字节从*strSource*到*strDest*。 如果*计数*超过的大小*strDest*，输入字符串为 null 指针，或*sizeInBytes*或*计数*为 0，函数调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回**EINVAL**。 如果源和目标字符串重叠的行为 **_mbsnbcpy_s**是不确定的。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 与此函数的不安全版本不同 **_mbsnbcpy_s**不执行任何 null 填充，始终为 null 终止的字符串。

@@ -1,12 +1,9 @@
 ---
-title: "CTimeSpan 类 |Microsoft 文档"
-ms.custom: 
+title: CTimeSpan 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTimeSpan
@@ -32,17 +29,15 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cedf05bd8f5af198569891b4d6d59610d5098eb6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd95d26dd2df41f16091379c892f67319c218cc4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 类
 一段时间，它将内部存储为中的时间跨度的秒数。  
@@ -85,11 +80,11 @@ class CTimeSpan
 |[运算符 = = < 等。](#ctimespan_comparison_operators)|比较两个相对时间值。|  
   
 ## <a name="remarks"></a>备注  
- `CTimeSpan`没有基类。  
+ `CTimeSpan` 没有基类。  
   
- `CTimeSpan`函数将转换到各种组合的天数、 小时、 分钟、 秒和秒。  
+ `CTimeSpan` 函数将转换到各种组合的天数、 小时、 分钟、 秒和秒。  
   
- `CTimeSpan`对象存储在**__time64_t**结构，这是 8 个字节。  
+ `CTimeSpan`对象存储在 **__time64_t**结构，这是 8 个字节。  
   
  伴生类， [CTime](../../atl-mfc-shared/reference/ctime-class.md)，表示绝对时间。  
   
@@ -97,10 +92,10 @@ class CTimeSpan
   
  有关详细信息使用`CTimeSpan`，请参阅文章[日期和时间](../../atl-mfc-shared/date-and-time.md)，和[时间管理](../../c-runtime-library/time-management.md)中*运行时库参考*。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atltime.h  
   
-##  <a name="ctimespan_comparison_operators"></a>CTimeSpan 比较运算符  
+##  <a name="ctimespan_comparison_operators"></a>  CTimeSpan 比较运算符  
  比较运算符。  
   
 ```
@@ -123,7 +118,7 @@ bool operator>=(CTimeSpan span) const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]  
   
-##  <a name="ctimespan"></a>CTimeSpan::CTimeSpan  
+##  <a name="ctimespan"></a>  CTimeSpan::CTimeSpan  
  构造`CTimeSpan`中各种方法的对象。  
   
 ```
@@ -150,13 +145,13 @@ CTimeSpan(
 ### <a name="remarks"></a>备注  
  所有这些构造函数创建一个新`CTimeSpan`使用指定的相对时间初始化的对象。 下面描述了每个构造函数：  
   
-- **CTimeSpan （);**构造未经初始化即`CTimeSpan`对象。  
+- **CTimeSpan （);** 构造未经初始化即`CTimeSpan`对象。  
   
-- **CTimeSpan (const CTimeSpan （& a));**构造`CTimeSpan`从另一个对象`CTimeSpan`值。  
+- **CTimeSpan (const CTimeSpan （& a));** 构造`CTimeSpan`从另一个对象`CTimeSpan`值。  
   
-- **CTimeSpan (__time64_t);**构造`CTimeSpan`对象**__time64_t**类型。  
+- **CTimeSpan (__time64_t);** 构造`CTimeSpan`对象 **__time64_t**类型。  
   
-- **CTimeSpan (长**， **int、 int，int);**构造`CTimeSpan`从与每个组件的组件的对象限制为以下范围：  
+- **CTimeSpan (长**， **int、 int，int);** 构造`CTimeSpan`从与每个组件的组件的对象限制为以下范围：  
   
     |组件|范围|  
     |---------------|-----------|  
@@ -170,7 +165,7 @@ CTimeSpan(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]  
   
-##  <a name="format"></a>CTimeSpan::Format  
+##  <a name="format"></a>  CTimeSpan::Format  
  生成与对应于此的格式化的字符串`CTimeSpan`。  
   
 ```
@@ -183,7 +178,7 @@ CString Format(UINT nID) const;
  `pFormat`, `pszFormat`  
  格式设置字符串类似于`printf`格式化字符串。 格式设置代码，前面是百分比 ( `%`) 登录，替换为相应`CTimeSpan`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 值和含义的格式设置代码**格式**如下所示：  
   
-- **%D**总在此天数`CTimeSpan`  
+- **%D**总在此天数 `CTimeSpan`  
   
 - **%H**在当天的小时数  
   
@@ -191,7 +186,7 @@ CString Format(UINT nID) const;
   
 - **%S**当前分钟的秒数  
   
-- **%%**百分比符号  
+- **%%** 百分比符号  
   
  `nID`  
  标识此格式的字符串的 ID。  
@@ -205,7 +200,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]  
   
-##  <a name="getdays"></a>CTimeSpan::GetDays  
+##  <a name="getdays"></a>  CTimeSpan::GetDays  
  返回一个值，表示在此完整天数`CTimeSpan`。  
   
 ```
@@ -221,7 +216,7 @@ LONGLONG GetDays() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]  
   
-##  <a name="gethours"></a>CTimeSpan::GetHours  
+##  <a name="gethours"></a>  CTimeSpan::GetHours  
  返回一个值，表示当前的一天 (-23 到 23) 中的小时数。  
   
 ```
@@ -234,7 +229,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]  
   
-##  <a name="getminutes"></a>CTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>  CTimeSpan::GetMinutes  
  返回一个值，表示当前的小时 (-59 到 59) 中的分钟数。  
   
 ```
@@ -247,7 +242,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetHours](#gethours)。  
   
-##  <a name="getseconds"></a>CTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>  CTimeSpan::GetSeconds  
  返回一个值，表示在当前分钟内 (-59 到 59) 的秒数。  
   
 ```
@@ -260,7 +255,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetHours](#gethours)。  
   
-##  <a name="gettimespan"></a>CTimeSpan::GetTimeSpan  
+##  <a name="gettimespan"></a>  CTimeSpan::GetTimeSpan  
  返回的值`CTimeSpan`对象。  
   
 ```
@@ -270,7 +265,7 @@ __ time64_t GetTimeSpan() const throw();
 ### <a name="return-value"></a>返回值  
  返回的当前值`CTimeSpan`对象。  
   
-##  <a name="gettotalhours"></a>CTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>  CTimeSpan::GetTotalHours  
  返回一个值，表示在此完整小时总数`CTimeSpan`。  
   
 ```
@@ -283,7 +278,7 @@ LONGLONG GetTotalHours() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#166](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]  
   
-##  <a name="gettotalminutes"></a>CTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>  CTimeSpan::GetTotalMinutes  
  返回一个值，表示在此完成的分钟总数`CTimeSpan`。  
   
 ```
@@ -296,7 +291,7 @@ LONGLONG GetTotalMinutes() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalHours](#gettotalhours)。  
   
-##  <a name="gettotalseconds"></a>CTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>  CTimeSpan::GetTotalSeconds  
  返回一个值，表示在此完整秒的总数`CTimeSpan`。  
   
 ```
@@ -309,7 +304,7 @@ LONGLONG GetTotalSeconds() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalHours](#gettotalhours)。  
   
-##  <a name="operator_add_-"></a>CTimeSpan::operator +、-  
+##  <a name="operator_add_-"></a>  CTimeSpan::operator +、-  
  添加和减去`CTimeSpan`对象。  
   
 ```
@@ -330,7 +325,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>CTimeSpan::operator + =、 =  
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator + =、 =  
  添加和减去`CTimeSpan`对象与其他这`CTimeSpan`。  
   
 ```
@@ -351,7 +346,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]  
   
-##  <a name="serialize64"></a>CTimeSpan::Serialize64  
+##  <a name="serialize64"></a>  CTimeSpan::Serialize64  
   
 > [!NOTE]
 >  此方法仅在 MFC 项目中可用。  

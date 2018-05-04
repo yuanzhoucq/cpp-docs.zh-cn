@@ -1,13 +1,10 @@
 ---
-title: "导出 c + + 函数以用于 C 语言可执行文件 |Microsoft 文档"
-ms.custom: 
+title: 导出 c + + 函数以用于 C 语言可执行文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf5f348675752ff9c0b548693c442812fa6be697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>导出 C++ 函数以用于 C 语言可执行文件  
   
 如果你具有函数编写 c + + 中，你想要访问从 C 语言的模块，你应声明带 C 链接而不是 c + + 链接的这些函数的 DLL 中。 除非另行指定，则 c + + 编译器将使用 c + + 类型安全命名 （也称为名称修饰） 和 c + + 调用约定，可能很难从 C.调用  
   
-若要指定 C 链接，指定`extern "C"`函数声明。 例如:  
+若要指定 C 链接，指定`extern "C"`函数声明。 例如：  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  

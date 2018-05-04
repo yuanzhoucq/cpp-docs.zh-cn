@@ -1,29 +1,24 @@
 ---
-title: "常用属性，ATL 控件向导 |Microsoft 文档"
-ms.custom: 
+title: 常用属性，ATL 控件向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.stockprops
 dev_langs:
 - C++
 ms.assetid: b27b0e60-08a6-43f4-ba6e-0a4e45147693
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e85dee126440007ac07d724e5da7b8651a1e167
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b6ba488e2cb498aa3d130a8525f1438adc6d406
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stock-properties-atl-control-wizard"></a>常用属性，ATL 控件向导
 向导的此页可标识控件支持的常用属性。 默认情况下，没有属性进行标识。  

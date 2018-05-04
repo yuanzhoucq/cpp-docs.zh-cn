@@ -2,11 +2,8 @@
 title: _mbsnbcat、_mbsnbcat_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcat_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f7fb633d4e0c259403a5d48e1bb05618c75ddc
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 
@@ -111,7 +106,7 @@ unsigned char *_mbsnbcat_l(
 
 **_Mbsnbcat**函数最多，追加第一个*计数*字节的*src*到*dest*。 如果的上一页中的 null 字符的字节*dest*是前导字节的初始字节*src*覆盖此前导字节。 否则为的初始字节*src*覆盖的终止 null 字符*dest*。 如果 null 字节出现在*src*之前*计数*字节追加， **_mbsnbcat**追加从所有字节*src*，直到 null 字符。 如果*计数*大于的长度*src*的长度*src*代替使用*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 **_Mbsnbcat**函数版本使用当前区域设置区域设置相关的行为; **_mbsnbcat_l**版本是相同，但它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcat**函数版本使用当前区域设置区域设置相关的行为; **_mbsnbcat_l**版本是相同，但它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 **安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
 

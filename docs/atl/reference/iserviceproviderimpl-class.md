@@ -1,12 +1,9 @@
 ---
-title: "IServiceProviderImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IServiceProviderImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 类
 此类提供的默认实现`IServiceProvider`接口。  
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl**指定一种方法： [QueryService](#queryservice)，它创建或访问指定的服务并返回服务的指定接口的接口指针。  
   
- `IServiceProviderImpl`使用服务映射，开头[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)结束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。  
+ `IServiceProviderImpl` 使用服务映射，开头[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)结束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。  
   
  服务映射包含两个条目： [SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支持的对象，指定的服务 id (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，哪些调用`QueryService`链接到另一个对象。  
   
@@ -66,10 +61,10 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  `IServiceProviderImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  创建或访问指定的服务并返回服务的指定接口的接口指针。  
   
 ```
@@ -80,13 +75,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>参数  
- [IN]`guidService`  
+ [IN] `guidService`  
  指向服务标识符 (SID)。  
   
- [IN]`riid`  
+ [IN] `riid`  
  为访问调用方的接口标识符。  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  指向所请求的接口的间接指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -101,7 +96,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|所请求的接口不是此服务的一部分，或者服务未知。|  
   
 ### <a name="remarks"></a>备注  
- `QueryService`返回指定的服务中的请求接口的间接指针。 调用方负责在不再需要释放此指针。  
+ `QueryService` 返回指定的服务中的请求接口的间接指针。 调用方负责在不再需要释放此指针。  
   
  当调用`QueryService`，则传递两个服务标识符 ( `guidService`) 和接口标识符 ( `riid`)。 `guidService`指定访问权限，要向其中的服务和`riid`标识服务的一部分的接口。 反过来，你会收到间接指向的接口。  
   

@@ -1,12 +1,9 @@
 ---
-title: "连接点全局函数 |Microsoft 文档"
-ms.custom: 
+title: 连接点全局函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-global-functions"></a>连接点全局函数
 这些函数提供支持的连接点和接收器映射。  
@@ -41,10 +36,10 @@ ms.lasthandoff: 12/21/2017
 |[AtlUnadvise](#atlunadvise)|终止通过建立的连接`AtlAdvise`。|  
 |[AtlAdviseSinkMap](#atladvisesinkmap)|建议或取消通知事件接收器映射中的条目。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
    
-##  <a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>  AtlAdvise  
  在对象的连接点和客户端的接收器间创建连接。  
   
 > [!IMPORTANT]
@@ -80,7 +75,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>  AtlUnadvise  
  终止通过建立的连接[AtlAdvise](#atladvise)。  
   
 > [!IMPORTANT]
@@ -109,7 +104,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap  
  调用此函数可在对象的接收器事件映射中建议或不建议所有条目。  
   
 > [!IMPORTANT]
@@ -120,7 +115,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```  
   
 ### <a name="parameters"></a>参数  
- *pT*  
+ *PT*  
  [in]指向包含接收器映射的对象的指针。  
   
  `bAdvise`  

@@ -1,13 +1,10 @@
 ---
-title: "从 DLL 导出 |Microsoft 文档"
-ms.custom: 
+title: 从 DLL 导出 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64571a0f648c0e33635990d9ca57744877429049
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07efe3d73b3f78dfb30e85ffad6434e2907c36c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll"></a>从 DLL 导出  
   
@@ -39,7 +34,7 @@ DLL 文件具有与.exe 文件，有一个重要的差异非常相似的布局-D
   
 -   创建一个模块定义 (.def) 文件和生成 DLL 时，使用.def 文件。 如果你想要使用此方法[序号而不是按名称从 DLL 导出函数](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。  
   
--   使用关键字**__declspec （dllexport)**函数的定义中。  
+-   使用关键字 **__declspec （dllexport)** 函数的定义中。  
   
  当使用任何一种方法导出函数，请确保使用[__stdcall](../cpp/stdcall.md)调用约定。  
   

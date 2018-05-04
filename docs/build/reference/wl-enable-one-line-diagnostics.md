@@ -2,12 +2,9 @@
 title: -WL （启用单行诊断） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /wl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48ba6ab05ac596c98c4fa5a95971735c62267a35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58a6b41e66f7ec37ad02747edb8331049b9baef5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL（启用单行诊断）
 将其他信息追加到错误或警告消息。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  错误和警告消息，从 c + + 编译器可以跟出现时，默认情况下，新行上的其他信息。 从命令行编译时，可以将信息的其他行追加到错误或警告消息。 当捕获你的生成输出到日志文件，然后处理该日志以查找所有错误和警告，这可能有必要。 与其他行，分号将区分开来的错误或警告消息。  
   
- 并非所有错误和警告消息都具有附加行的信息。 下面的代码将生成信息; 其他行的错误它将允许你测试的效果，当你使用**/WL**。  
+ 并非所有错误和警告消息都具有附加行的信息。 下面的代码将生成信息; 其他行的错误它将允许你测试的效果，当你使用 **/WL**。  
   
 ```  
 // compiler_option_WL.cpp  

@@ -2,12 +2,9 @@
 title: 提高时间关键代码的技巧 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ca6fc8c18a7f2f2013ffdeabd70a7eb9fb0057
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tips-for-improving-time-critical-code"></a>提高时间关键代码的技巧
 编写快速代码需要了解应用程序的所有方面和它如何与系统交互。 此主题建议的方法可替代一些更明显的编码方法，帮助确保代码的时间关键部分满意地执行。  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [小工作集](#_core_small_working_set)  
   
-##  <a name="_core_cache_hits_and_page_faults"></a>缓存未命中和页错误  
+##  <a name="_core_cache_hits_and_page_faults"></a> 缓存未命中和页错误  
  缓存未命中不论出现在内部缓存中，还是出现在外部缓存中，都会降低程序的性能；而页错误由于会转到二级存储中获得程序指令和数据，也会降低程序的性能。  
   
  CPU 缓存命中可以花费程序 10 20 个时钟周期。 外部缓存命中可以花费 20 40 个时钟周期。 页错误可以花费 1,000,000 个时钟周期（假定处理器每秒处理 500,000,000 个指令并且一个页错误是 2 毫秒）。 因此，编写减少缓存未命中和页错误数的代码对程序执行最重要。  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用动态分配的链接表的哈希表可以降低性能。 通过扩展，使用动态分配的链接表存储内容的哈希表的性能可能显著降低。 事实上，在最后的分析中，通过数组的简单线性搜索实际上可能更快（取决于具体的情况）。 基于数组的哈希表（所谓的“关闭散列”）是通常具有极佳的性能但却经常被忽略的实现。  
   
-##  <a name="_core_sorting_and_searching"></a>排序和搜索  
+##  <a name="_core_sorting_and_searching"></a> 排序和搜索  
  与许多典型的操作相比，排序本身就很耗时。 避免不必要减速的最好办法是避免在关键时间排序。 你可能能够执行以下操作：  
   
 -   将排序推迟到非性能关键时间。  
@@ -114,27 +109,27 @@ ms.lasthandoff: 12/21/2017
   
  与排序相比搜索的选择更少。 如果搜索是时间关键的，二进制搜索或者哈希表查找几乎总是最好的，但是与排序一样，必须记住地址。 如果二进制搜索通过的数据结构具有许多导致页错误或缓存未命中的指针，则通过小数组的线性搜索可以比二进制搜索快。  
   
-##  <a name="_core_mfc_and_class_libraries"></a>MFC 和类库  
+##  <a name="_core_mfc_and_class_libraries"></a> MFC 和类库  
  Microsoft 基础类 (MFC) 可以在很大程度上简化代码的编写。 当编写时间关键代码时，应该注意一些类中的固有系统开销。 检查时间关键代码使用的 MFC 代码，查看它是否满足性能要求。 下面的列表标识了应该注意的 MFC 类和函数：  
   
--   `CString`MFC 调用 C 运行时库分配的内存[CString](../../atl-mfc-shared/reference/cstringt-class.md)动态。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 堆栈上的简单 `char` 数组通常可以用于相同的目的并且更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../../c-runtime-library/string-manipulation-crt.md)可能更快。  
+-   `CString` MFC 调用 C 运行时库分配的内存[CString](../../atl-mfc-shared/reference/cstringt-class.md)动态。 一般而言，`CString` 与其他任何动态分配的字符串一样有效。 与任何动态分配的字符串一样，它也有动态分配和释放的系统开销。 堆栈上的简单 `char` 数组通常可以用于相同的目的并且更快。 不要使用 `CString` 存储常数字符串。 请改用 `const char *`。 使用 `CString` 对象执行的任何操作都有一些系统开销。 使用运行时库[字符串函数](../../c-runtime-library/string-manipulation-crt.md)可能更快。  
   
--   `CArray`A [CArray](../../mfc/reference/carray-class.md)提供了规则数组不，但你的程序可能不需要它的灵活性。 如果知道数组的特定限制，反而可以使用全局固定数组。 如果使用 `CArray`，当需要重新分配时，使用 `CArray::SetSize` 建立它的大小并指定增长的元素数。 否则，添加元素可能导致数组经常重新分配和复制，这样做效率很低而且可能产生内存碎片。 还需注意的是，如果将一项插入数组中，则 `CArray` 移动内存中后面的项并且可能需要增长数组。 这些操作可能导致缓存未命中和页错误。 如果浏览 MFC 使用的代码，你可能会发现可编写一些更特定于方案的内容以提高性能。 例如，由于 `CArray` 是一个模板，可以提供特定类型的 `CArray` 专用化。  
+-   `CArray` A [CArray](../../mfc/reference/carray-class.md)提供了规则数组不，但你的程序可能不需要它的灵活性。 如果知道数组的特定限制，反而可以使用全局固定数组。 如果使用 `CArray`，当需要重新分配时，使用 `CArray::SetSize` 建立它的大小并指定增长的元素数。 否则，添加元素可能导致数组经常重新分配和复制，这样做效率很低而且可能产生内存碎片。 还需注意的是，如果将一项插入数组中，则 `CArray` 移动内存中后面的项并且可能需要增长数组。 这些操作可能导致缓存未命中和页错误。 如果浏览 MFC 使用的代码，你可能会发现可编写一些更特定于方案的内容以提高性能。 例如，由于 `CArray` 是一个模板，可以提供特定类型的 `CArray` 专用化。  
   
--   `CList`[CList](../../mfc/reference/clist-class.md)是双向链表，因此元素插入快速位于头尾和已知位置 (`POSITION`) 列表中。 按值或索引查找需要顺序搜索，但是，如果列表很长，则搜索速度可能会较慢。 如果代码不要求双向链接列表，则可能需要重新考虑使用 `CList`。 使用单向链接表可省去更新所有操作的附加指针以及该指针的内存的系统开销。 这种附加内存不太好，但却是解决缓存未命中或页错误的另一种可能的方法。  
+-   `CList` [CList](../../mfc/reference/clist-class.md)是双向链表，因此元素插入快速位于头尾和已知位置 (`POSITION`) 列表中。 按值或索引查找需要顺序搜索，但是，如果列表很长，则搜索速度可能会较慢。 如果代码不要求双向链接列表，则可能需要重新考虑使用 `CList`。 使用单向链接表可省去更新所有操作的附加指针以及该指针的内存的系统开销。 这种附加内存不太好，但却是解决缓存未命中或页错误的另一种可能的方法。  
   
--   `IsKindOf`此函数可生成许多调用和访问大量的内存中不同的数据区域，从而导致极差引用地址的引用。 它对于调试版本是有用的（例如，在 ASSERT 调用中），但应尽量避免在发布版本中使用它。  
+-   `IsKindOf` 此函数可生成许多调用和访问大量的内存中不同的数据区域，从而导致极差引用地址的引用。 它对于调试版本是有用的（例如，在 ASSERT 调用中），但应尽量避免在发布版本中使用它。  
   
--   `PreTranslateMessage`使用`PreTranslateMessage`当特定的 windows 目录树需要不同的键盘快捷键或者必须将消息处理插入到消息泵。 `PreTranslateMessage` 更改 MFC 调度消息。 如果重写 `PreTranslateMessage`，只在需要的级别上这样做。 例如，如果只对转到特定视图子级的消息感兴趣，则不必重写 `CMainFrame::PreTranslateMessage`。 而应重写视图类的 `PreTranslateMessage`。  
+-   `PreTranslateMessage` 使用`PreTranslateMessage`当特定的 windows 目录树需要不同的键盘快捷键或者必须将消息处理插入到消息泵。 `PreTranslateMessage` 更改 MFC 调度消息。 如果重写 `PreTranslateMessage`，只在需要的级别上这样做。 例如，如果只对转到特定视图子级的消息感兴趣，则不必重写 `CMainFrame::PreTranslateMessage`。 而应重写视图类的 `PreTranslateMessage`。  
   
      不要为了规避正常调度路径而使用 `PreTranslateMessage` 处理发送到任何窗口的任何消息。 使用[窗口过程](../../mfc/registering-window-classes.md)和 MFC 消息映射为该目的。  
   
--   `OnIdle`空闲事件可能会发生有时你不希望，如之间`WM_KEYDOWN`和`WM_KEYUP`事件。 计时器可能是触发代码的更有效方法。 不要强制 `OnIdle` 通过生成错误信息或者总是从 `TRUE` 的重写返回 `OnIdle` 被反复调用，它从来都不允许线程休眠。 同样，计时器或者单独的线程可能更合适。  
+-   `OnIdle` 空闲事件可能会发生有时你不希望，如之间`WM_KEYDOWN`和`WM_KEYUP`事件。 计时器可能是触发代码的更有效方法。 不要强制 `OnIdle` 通过生成错误信息或者总是从 `TRUE` 的重写返回 `OnIdle` 被反复调用，它从来都不允许线程休眠。 同样，计时器或者单独的线程可能更合适。  
   
-##  <a name="vcovrsharedlibraries"></a>共享的库  
+##  <a name="vcovrsharedlibraries"></a> 共享的库  
  代码重用是需要的。 然而，如果打算使用他人的代码，则应确保完全知道此代码在那些性能对你很重要的情况中的作用。 了解这一点的最好方法是通过单步执行源代码，或者用 PView 或性能监视器这类工具测量。  
   
-##  <a name="_core_heaps"></a>堆  
+##  <a name="_core_heaps"></a> 堆  
  使用多个堆来做出判断。 使用 `HeapCreate` 和 `HeapAlloc` 创建的附加堆使你可以管理并因而释放一组相关分配。 不要分配出太多内存。 如果使用多个堆，特别注意开始时分配出的内存量。  
   
  作为替代使用多个堆的方法，可以使用 Helper 函数在代码和默认堆之间建立连接。 Helper 函数有利于可以提高应用程序性能的自定义分配策略。 例如，如果经常执行小的分配，可能需要将这些分配固定在默认堆的一部分内。 可以分配大的内存块，然后使用 Helper 函数从该块子分配。 如果这样做，由于分配出自默认堆，所以没有包含未用内存的附加堆。  
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅[空闲循环处理](../../mfc/idle-loop-processing.md)和[多线程处理](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
-##  <a name="_core_small_working_set"></a>小工作集  
+##  <a name="_core_small_working_set"></a> 小工作集  
  较小的工作集意味着更好的引用地址、更少的页错误和更多的缓存命中。 进程工作集是操作系统为测量引用地址直接提供的最接近的尺度。  
   
 -   若要设置的工作集的上限和下限限制，使用[SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx)。  

@@ -1,12 +1,9 @@
 ---
-title: "CComSafeDeleteCriticalSection 类 |Microsoft 文档"
-ms.custom: 
+title: CComSafeDeleteCriticalSection 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df86d5219940ffc1dd3c34f47920675014eefd13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 类
 此类提供用于获取和释放的关键部分对象所有权的方法。  
@@ -66,7 +61,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |[m_bInitialized](#m_binitialized)|标志是否内部**CRITICAL_SECTION**初始化对象。|  
   
 ## <a name="remarks"></a>备注  
- `CComSafeDeleteCriticalSection`派生自类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 但是，`CComSafeDeleteCriticalSection`基础上提供了其他安全机制[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。  
+ `CComSafeDeleteCriticalSection` 派生自类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 但是，`CComSafeDeleteCriticalSection`基础上提供了其他安全机制[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。  
   
  实例时`CComSafeDeleteCriticalSection`号超出范围或显式从内存中删除，基础的关键部分对象将自动清理是否仍然有效。 此外， [CComSafeDeleteCriticalSection::Term](#term)方法将正常退出，如果基础的关键部分对象尚未分配或已从内存释放。  
   
@@ -77,10 +72,10 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
   
  `CComSafeDeleteCriticalSection`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcore.h  
   
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>  CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  构造函数。  
   
 ```
@@ -90,7 +85,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>备注  
  集[m_bInitialized](#m_binitialized)到的数据成员**false**。  
   
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  析构函数。  
   
 ```
@@ -100,7 +95,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>备注  
  释放内部**CRITICAL_SECTION**对象从内存中，如果[m_bInitialized](#m_binitialized)数据成员设置为**true**。  
   
-##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
  调用基类实现的[Init](/visualstudio/debugger/init)和设置[m_bInitialized](#m_binitialized)到**true**如果成功。  
   
 ```
@@ -110,7 +105,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>返回值  
  返回的结果[CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)。  
   
-##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 调用基类实现的[锁](ccomcriticalsection-class.md#lock)。  
 
   
@@ -126,7 +121,7 @@ HRESULT Lock();
   
  有关行为的函数的详细信息，请参阅[CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)。  
   
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
  标志是否内部**CRITICAL_SECTION**初始化对象。  
   
 ```
@@ -136,7 +131,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>备注  
  **M_bInitialized**数据成员用于跟踪的基础的有效性**CRITICAL_SECTION**与关联的对象[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)类。 基础**CRITICAL_SECTION**对象不会尝试如果未设置此标志会从内存中释放**true**。  
   
-##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
  调用基类实现的[CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term)如果内部**CRITICAL_SECTION**对象是否有效。  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "如何： 将 C/c + + 应用程序清单嵌入 |Microsoft 文档"
-ms.custom: 
+title: 如何： 将 C/c + + 应用程序清单嵌入 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将清单嵌入到 C/C++ 应用程序
 建议的 C/c + + 应用程序 （或库） 具有其清单嵌入到最终二进制文件，因为这可保证在大多数情况下正确运行时行为。 默认情况下，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]尝试将清单嵌入在构建源文件一个项目时，请参阅[Visual Studio 中的清单生成](../build/manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则必须对现有的生成文件的一些更改。 本部分演示如何更改现有的生成文件，以便自动将嵌入最终二进制文件中的清单。  

@@ -2,11 +2,8 @@
 title: CComAllocator 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 类
 此类提供用于管理使用 COM 内存例程的内存的方法。  
@@ -53,10 +48,10 @@ class CComAllocator
 ## <a name="remarks"></a>备注  
  此类由[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)提供 COM 内存分配例程。 对应项类中， [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)，提供使用 CRT 例程的相同方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>  CComAllocator::Allocate  
  调用此静态函数以分配内存。  
   
 ```
@@ -73,7 +68,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  分配内存。 请参阅[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)有关详细信息。  
   
-##  <a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>  CComAllocator::Free  
  调用此静态函数以释放分配的内存。  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  释放分配的内存。 请参阅[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)有关详细信息。  
   
-##  <a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  调用此静态函数以重新分配内存。  
   
 ```

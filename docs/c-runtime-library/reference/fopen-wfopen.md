@@ -2,11 +2,8 @@
 title: fopen、_wfopen | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfopen
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb44d99d635891561c4b73d87e737ea594b0b05f
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 3b606f168448f833a8e244ad35e52faf4f0afd75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -153,7 +148,7 @@ FILE *_wfopen(
 
 在文本模式下，CTRL + Z 解释为 EOF 字符输入。 以进行读取/写入使用打开的文件中 **"a +"**， **fopen**检查文件末尾的 CTRL + Z 并移除它，如果有可能。 这样做是因为使用[fseek](fseek-fseeki64.md)和**ftell**移动的文件中可能会导致 CTRL + Z 结尾[fseek](fseek-fseeki64.md)文件末尾附近错误运行。
 
-在文本模式下回车换行符组合将转换为单一的换行输入，并换行字符将转换为输出回车返回换行组合。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符 (就像调用**mbtowc**函数)。 出于相同原因，Unicode 流输出函数将宽字符转换为多字节字符 (就像调用**wctomb**函数)。
+在文本模式下回车换行符组合将转换为单一的换行输入，并换行字符将转换为输出回车返回换行组合。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符（就像调用 mbtowc 函数一样）。 出于同一原因，Unicode 流输出函数将宽字符转换为多字节字符（就像调用 wctomb 函数一样）。
 
 如果**t**或**b**中未给定*模式*，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或**b**将作为自变量，函数将失败并返回前缀**NULL**。
 

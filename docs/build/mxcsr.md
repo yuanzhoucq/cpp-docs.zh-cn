@@ -1,27 +1,22 @@
 ---
-title: "MxCsr |Microsoft 文档"
-ms.custom: 
+title: MxCsr |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4f3c229d-0862-4733-acc7-9ed7a0b870ce
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7794cea8906440c0adca94791d08e3ced6af747e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9df2225526c20463bdbd618322d031c3245d9493
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mxcsr"></a>MxCsr
 注册状态还包括 MxCsr。 调用约定易失性的部分和非易失性部分中划分此注册。 易失的部分包含的 6 状态标志，MXCSR [0:5]，而的寄存器，MXCSR [6:15]，其余部分被视为非易失性。  

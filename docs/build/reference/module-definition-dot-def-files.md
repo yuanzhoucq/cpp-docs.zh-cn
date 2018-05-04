@@ -1,13 +1,10 @@
 ---
-title: "模块定义 (。Def) 文件 |Microsoft 文档"
-ms.custom: 
+title: 模块定义 (。Def) 文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57bad3a63e910918b6a22b6263f0df3faca0dcd1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="module-definition-def-files"></a>模块定义 (.Def) 文件
 模块定义 (.def) 文件提供有关导出、 属性和有关要链接的程序的其他信息的信息链接器。 .Def 文件生成 DLL 时最有用。 由于没有[链接器选项](../../build/reference/linker-options.md)，可以使用而不是模块定义语句.def 文件，则通常不需要。 你还可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)作为一种方式指定导出的函数。  

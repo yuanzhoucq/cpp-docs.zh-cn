@@ -1,12 +1,9 @@
 ---
-title: "添加 ATL Active Server Page 组件 |Microsoft 文档"
-ms.custom: 
+title: 添加 ATL Active Server Page 组件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd79d4bc3370caf153e29a3305dc6dad1d8b97de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>添加 ATL Active Server Page 组件
 若要将活动模板库 (ATL) 对象添加到你的项目，你的项目必须已创建作为 ATL COM 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)若要创建 ATL 应用程序，你可以选择**向 MFC 添加 ATL 支持**从[添加类对话框](../../ide/add-class-dialog-box.md)对话框中，或者你可以[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  

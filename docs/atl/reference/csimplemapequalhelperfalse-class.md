@@ -1,12 +1,9 @@
 ---
-title: "CSimpleMapEqualHelperFalse 类 |Microsoft 文档"
-ms.custom: 
+title: CSimpleMapEqualHelperFalse 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1418114233b59112fcffb58ef4ae7c437af5ab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 类
 此类是帮助器[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
@@ -54,10 +49,10 @@ class CSimpleMapEqualHelperFalse
   
  值比较将始终返回 false，并且此外，将调用`ATLASSERT`用 false 如果曾引用自变量。 在其中相等性测试未充分定义的情况下，此类允许包含键/值对，若要正确运行的大多数方法，但失败的如依赖于比较的方法定义完善的方式映射[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsimpcoll.h  
   
-##  <a name="isequalkey"></a>CSimpleMapEqualHelperFalse::IsEqualKey  
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey  
  测试两个键相等。  
   
 ```
@@ -77,7 +72,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="remarks"></a>备注  
  此方法调用[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)。  
   
-##  <a name="isequalvalue"></a>CSimpleMapEqualHelperFalse::IsEqualValue  
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue  
  返回 false。  
   
 ```

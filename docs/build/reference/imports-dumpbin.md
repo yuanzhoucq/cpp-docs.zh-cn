@@ -1,13 +1,10 @@
 ---
-title: "-导入 (DUMPBIN) |Microsoft 文档"
-ms.custom: 
+title: -导入 (DUMPBIN) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /imports
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1866c8d522e7482781aa65e58d93ccb09e6b265f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3b9a1bbcf1769e87715e46566dee9c53a96747
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 ```  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  此选项显示的 Dll 的列表 (静态链接和[延迟加载](../../build/reference/linker-support-for-delay-loaded-dlls.md)) 导入到可执行文件或 DLL 并的各个导入上述每个 Dll。  
   
- 可选`file`规范允许您指定将显示仅限于该 DLL 的导入。 例如:  
+ 可选`file`规范允许您指定将显示仅限于该 DLL 的导入。 例如：  
   
 ```  
 dumpbin /IMPORTS:msvcrt.dll  

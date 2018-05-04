@@ -1,12 +1,9 @@
 ---
-title: "CAutoPtr 类 |Microsoft 文档"
-ms.custom: 
+title: CAutoPtr 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoPtr
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b8ded7bbf4dbe4e4f2ada7054cebab996934316
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edf1baff50541dd5f16c27205f300558558d6f92
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 类
 此类表示一个智能指针对象。  
@@ -86,19 +81,19 @@ class CAutoPtr
   
  此外，`CAutoPtr`的复制构造函数和赋值运算符传输所有权的指针，将源指针复制到目标指针并将源指针设置为 NULL。 因此不可能有两个`CAutoPtr`对象每个存储相同的指针，这减少了两次删除相同的指针的可能性。  
   
- `CAutoPtr`此外简化了创建的指针的集合。 而不是派生集合类和重写析构函数，它会更易于生成的集合`CAutoPtr`对象。 当删除集合时，`CAutoPtr`对象将超出范围并自动删除自己。  
+ `CAutoPtr` 此外简化了创建的指针的集合。 而不是派生集合类和重写析构函数，它会更易于生成的集合`CAutoPtr`对象。 当删除集合时，`CAutoPtr`对象将超出范围并自动删除自己。  
   
- [CHeapPtr](../../atl/reference/cheapptr-class.md)和变体的工作方式与`CAutoPtr`，只不过它们分配和释放内存而不 c + + 中使用不同的堆函数**新**和**删除**运算符。 [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)类似于`CAutoPtr`、 唯一的区别是它使用**矢量 new []**和**向量 delete []**分配和释放内存。  
+ [CHeapPtr](../../atl/reference/cheapptr-class.md)和变体的工作方式与`CAutoPtr`，只不过它们分配和释放内存而不 c + + 中使用不同的堆函数**新**和**删除**运算符。 [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)类似于`CAutoPtr`、 唯一的区别是它使用**矢量 new []** 和**向量 delete []** 分配和释放内存。  
   
  另请参阅[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)和[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)数组或列表的智能指针时需要。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
-##  <a name="attach"></a>CAutoPtr::Attach  
+##  <a name="attach"></a>  CAutoPtr::Attach  
  调用此方法需要现有指针的所有权。  
   
 ```
@@ -117,7 +112,7 @@ void Attach(T* p) throw();
 ### <a name="example"></a>示例  
  请参阅中的示例[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)。  
   
-##  <a name="cautoptr"></a>CAutoPtr::CAutoPtr  
+##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr  
  构造函数。  
   
 ```
@@ -144,7 +139,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="example"></a>示例  
  请参阅中的示例[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)。  
   
-##  <a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
+##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr  
  析构函数。  
   
 ```
@@ -154,7 +149,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>备注  
  释放任何已分配的资源。 调用[CAutoPtr::Free](#free)。  
   
-##  <a name="detach"></a>CAutoPtr::Detach  
+##  <a name="detach"></a>  CAutoPtr::Detach  
  调用此方法可释放的指针的所有权。  
   
 ```
@@ -170,7 +165,7 @@ T* Detach() throw();
 ### <a name="example"></a>示例  
  请参阅中的示例[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)。  
   
-##  <a name="free"></a>CAutoPtr::Free  
+##  <a name="free"></a>  CAutoPtr::Free  
  调用此方法以删除指向的对象`CAutoPtr`。  
   
 ```
@@ -180,7 +175,7 @@ void Free() throw();
 ### <a name="remarks"></a>备注  
  指向的对象`CAutoPtr`将释放和[CAutoPtr::m_p](#m_p)数据成员变量设置为 NULL。  
   
-##  <a name="m_p"></a>CAutoPtr::m_p  
+##  <a name="m_p"></a>  CAutoPtr::m_p  
  指针数据成员变量。  
   
 ```
@@ -190,7 +185,7 @@ T* m_p;
 ### <a name="remarks"></a>备注  
  此成员变量包含的指针信息。  
   
-##  <a name="operator_eq"></a>CAutoPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoPtr::operator =  
  赋值运算符中。  
   
 ```
@@ -217,7 +212,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ### <a name="example"></a>示例  
  请参阅中的示例[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)。  
   
-##  <a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
+##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;  
  指针到成员运算符中。  
   
 ```
@@ -233,7 +228,7 @@ T* operator->() const throw();
 ### <a name="example"></a>示例  
  请参阅中的示例[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)。  
   
-##  <a name="operator_t_star"></a>CAutoPtr::operator T *  
+##  <a name="operator_t_star"></a>  CAutoPtr::operator T *  
  强制转换运算符。  
   
 ```  

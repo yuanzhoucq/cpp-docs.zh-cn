@@ -2,12 +2,9 @@
 title: 部分 （C/C + +） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SECTIONS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c433bf49ee4c56833ac7291bcc4a0f90e32f4e5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 引入了一个或多个部分`definitions`是对你的项目的输出文件中的分区的访问说明符。  
@@ -53,14 +48,14 @@ definitions
 |`SHARED`|加载图像的所有进程之间共享该节|  
 |`WRITE`|允许对数据进行写操作|  
   
- 请用空格分隔说明符名称。 例如:  
+ 请用空格分隔说明符名称。 例如：  
   
 ```  
 SECTIONS  
 .rdata READ WRITE  
 ```  
   
- `SECTIONS`标记的部分列表的开始`definitions`。 每个`definition`必须在单独一行上。 `SECTIONS`关键字可以出现在与第一个相同的行上`definition`或在前面的行上。 .Def 文件可以包含一个或多`SECTIONS`语句。 `SEGMENTS`关键字支持的同义词`SECTIONS`。  
+ `SECTIONS` 标记的部分列表的开始`definitions`。 每个`definition`必须在单独一行上。 `SECTIONS`关键字可以出现在与第一个相同的行上`definition`或在前面的行上。 .Def 文件可以包含一个或多`SECTIONS`语句。 `SEGMENTS`关键字支持的同义词`SECTIONS`。  
   
  支持较旧版本的 Visual c + +:  
   

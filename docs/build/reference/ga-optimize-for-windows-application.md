@@ -1,13 +1,10 @@
 ---
-title: "-GA （Windows 应用程序优化） |Microsoft 文档"
-ms.custom: 
+title: -GA （Windows 应用程序优化） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication
 - /ga
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611704120ec99280e0701e06e0e4bd45c95330d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA（Windows 应用程序优化）
 有关访问线程本地存储 (TLS) 变量的.exe 文件更高效的代码中的结果。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  **/GA**加快对数据的访问声明与[__declspec （thread)](../../cpp/declspec.md)在基于 Windows 的程序中。 当设置此选项时， [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749)宏被假定为 0。  
   
- 使用**/GA**为 DLL 可能会导致代码生成错误。  
+ 使用 **/GA**为 DLL 可能会导致代码生成错误。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

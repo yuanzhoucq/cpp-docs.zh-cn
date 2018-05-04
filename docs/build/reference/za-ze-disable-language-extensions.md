@@ -1,13 +1,10 @@
 ---
-title: "-Za，-Ze （禁用语言扩展） |Microsoft 文档"
-ms.custom: 
+title: -Za，-Ze （禁用语言扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
 - /za
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6866ccaac789ab2cd5af4703d7f81e30f554db84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2949a3d60af6d9058f02d12aac1fd86dead5affa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze（禁用语言扩展）
 **/Za**编译器选项将发出错误对与 ANSI C89 或 ISO C + + 11 不兼容的语言构造。 **/Ze**编译器选项，这将在上，默认情况下，将启用 Microsoft 扩展。  
@@ -54,11 +49,11 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  **/Ze**选项已弃用，因为其行为是在默认情况下。 我们建议你使用[/Zc （一致性）](../../build/reference/zc-conformance.md)编译器选项来控制特定的语言扩展功能。 不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**主题中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]编译器提供了大量的 ANSI C89、 ISO C99 或 ISO c + + 标准中指定的之外的功能。 这些功能统称为 Microsoft 扩展到 C 和 c + +。 这些扩展时，将按默认情况下，提供的并且不可用**/Za**指定选项。 有关特定扩展的详细信息，请参阅[Microsoft C 和 c + + 扩展](../../build/reference/microsoft-extensions-to-c-and-cpp.md)。  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]编译器提供了大量的 ANSI C89、 ISO C99 或 ISO c + + 标准中指定的之外的功能。 这些功能统称为 Microsoft 扩展到 C 和 c + +。 这些扩展时，将按默认情况下，提供的并且不可用 **/Za**指定选项。 有关特定扩展的详细信息，请参阅[Microsoft C 和 c + + 扩展](../../build/reference/microsoft-extensions-to-c-and-cpp.md)。  
   
- 我们建议你禁用语言扩展，通过指定**/Za**选项如果你打算将程序移植到其他环境。 当**/Za**指定，编译器将 Microsoft 扩展关键字作为简单标识符，禁用的其他 Microsoft 扩展，并自动定义`__STDC__`C 程序的预定义的宏。  
+ 我们建议你禁用语言扩展，通过指定 **/Za**选项如果你打算将程序移植到其他环境。 当 **/Za**指定，编译器将 Microsoft 扩展关键字作为简单标识符，禁用的其他 Microsoft 扩展，并自动定义`__STDC__`C 程序的预定义的宏。  
   
- 与使用其他编译器选项**/Za**可能会影响编译器确保标准一致性的方式。 例如， **/Za**和[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)可能导致不符合的浮点类型提升行为 ISO C99 或 C + + 11 标准。  
+ 与使用其他编译器选项 **/Za**可能会影响编译器确保标准一致性的方式。 例如， **/Za**和[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)可能导致不符合的浮点类型提升行为 ISO C99 或 C + + 11 标准。  
   
  有关指定特定的标准符合的行为设置方法，请参阅[/Zc](../../build/reference/zc-conformance.md)编译器选项。  
   

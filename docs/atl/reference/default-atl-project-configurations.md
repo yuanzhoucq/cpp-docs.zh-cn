@@ -1,29 +1,24 @@
 ---
-title: "默认 ATL 项目配置 |Microsoft 文档"
-ms.custom: 
+title: 默认 ATL 项目配置 |Microsoft 文档
+ms.custom: ''
 ms.date: 10/20/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770f78514a67d723305f9a70959fd69fede86aa5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f9f41a068605cbc73309f89c3ffb09def76750
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-atl-project-configurations"></a>默认 ATL 项目配置
 默认情况下，ATL 项目向导将创建两个项目配置：  

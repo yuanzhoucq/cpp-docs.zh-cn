@@ -2,26 +2,21 @@
 title: 堆栈使用情况 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e3aa8d01dcc85b6c37684ccccaf82c84d8dfb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6f711636089a6f2966002002220aac88cebe17a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-usage"></a>堆栈使用
 超出 RSP 的当前地址的所有内存均都视为可变： 操作系统或调试器，可能会在用户调试会话或中断处理程序期间覆盖此内存。 因此，RSP 必须始终设置然后再尝试读取或写入到堆栈帧的值。  

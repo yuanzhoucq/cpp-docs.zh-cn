@@ -1,5 +1,5 @@
 ---
-title: pgomgr | Microsoft Docs
+title: pgomgr |Microsoft 文档
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743665bbe0ee9c3df08d197d203e95d08542f613
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -37,13 +36,13 @@ ms.lasthandoff: 04/10/2018
 
 -  或   显示可用**pgomgr**选项。
 
-- **/ 清除**导致要清除的所有配置文件信息的.pgd 文件。 不能指定.pgc 文件时**/清除**指定。
+- **/ 清除**导致要清除的所有配置文件信息的.pgd 文件。 不能指定.pgc 文件时 **/清除**指定。
 
-- **详细介绍/**显示详细统计信息，包括流 graph 覆盖率信息。
+- **详细介绍/** 显示详细统计信息，包括流 graph 覆盖率信息。
 
 - **/ 摘要**显示每个函数统计信息。
 
-- **/ 唯一**一起使用时**/摘要**，原因修饰函数名以显示。 默认值，当**/ 唯一**不使用，为要显示的未修饰的函数名称。
+- **/ 唯一**一起使用时 **/摘要**，原因修饰函数名以显示。 默认值，当 **/ 唯一**不使用，为要显示的未修饰的函数名称。
 
 - **/merge**[**: * * * n*] 导致中或多个对应的.pgc 文件添加到该.pgd 文件的数据。 可选参数， *n*，允许你指定数据应添加*n*时间。 例如，如果一个方案通常是完成的六倍反映频率由客户，你可以在测试运行中一次执行并将其添加到六倍使用.pgd 文件**pgomgr /merge:6**。
 

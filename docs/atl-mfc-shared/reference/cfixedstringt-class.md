@@ -1,12 +1,9 @@
 ---
-title: "CFixedStringT 类 |Microsoft 文档"
-ms.custom: 
+title: CFixedStringT 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f66749272649fe230b31e770a175e0b94441b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 类
 此类表示具有固定的字符缓冲区的字符串对象。  
@@ -68,7 +63,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 -   字符缓冲区`CFixedStringT`对象始终是相同的长度 ( *t_nChars*)。 没有缓冲区大小没有限制`CStringT`对象。  
   
--   内存管理器`CFixedStringT`以便共享的自定义[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)之间两个或多个对象`CFixedStringT`objectsis 不允许。 `CStringT`对象不具有此限制。  
+-   内存管理器`CFixedStringT`以便共享的自定义[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)之间两个或多个对象`CFixedStringT`objectsis 不允许。 `CStringT` 对象不具有此限制。  
   
  有关详细信息的自定义`CFixedStringT`和字符串对象的内存管理一般情况下，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
   
@@ -81,10 +76,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
  `CFixedStringT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** cstringt.h  
   
-##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT  
  构造 `CFixedStringT` 对象。  
   
 ```
@@ -110,7 +105,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>备注  
  因为构造函数将输入的数据复制到新的已分配存储，你应注意异常可能会导致该内存。 请注意，某些这些构造函数成为转换函数。  
   
-##  <a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  重新初始化现有`CFixedStringT`使用新数据的对象。  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "实现的事件处理接口 |Microsoft 文档"
-ms.custom: 
+title: 实现的事件处理接口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9226cf2630ad18651f9bda2f154f49b5b739a433
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea37aa4c84cb0824d11f0081e38d9e8157b77ed1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-event-handling-interface"></a>实现的事件处理接口
 ATL 可帮助你具有所需的处理事件的所有三个元素： 实现事件接口、 通知事件源和取消通知事件源。 你将需要采取的精确步骤取决于事件接口和你的应用程序的性能要求的类型。  

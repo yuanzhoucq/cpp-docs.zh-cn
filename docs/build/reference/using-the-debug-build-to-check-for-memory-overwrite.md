@@ -1,29 +1,24 @@
 ---
-title: "使用调试版本检查内存改写 |Microsoft 文档"
-ms.custom: 
+title: 使用调试版本检查内存改写 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c89242a63484eaccd0330eddac28c4e543ec61b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用调试版本检查内存改写
 若要使用调试版本检查内存改写，首先必须重新生成用于调试的项目。 然后，请转到你的应用程序一开始`InitInstance`函数，并添加以下行：  
@@ -40,7 +35,7 @@ afxMemDF |= checkAlwaysMemDF;
 Damage Occurred! Block=0x5533  
 ```  
   
- 如果你看到以下消息之一，你需要单步执行代码以确定发生损坏的位置。 若要隔离内存改写发生位置更确切地说，你可以显式调用`AfxCheckMemory`自己。 例如:  
+ 如果你看到以下消息之一，你需要单步执行代码以确定发生损坏的位置。 若要隔离内存改写发生位置更确切地说，你可以显式调用`AfxCheckMemory`自己。 例如：  
   
 ```  
 ASSERT(AfxCheckMemory());  

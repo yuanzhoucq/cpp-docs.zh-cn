@@ -1,12 +1,9 @@
 ---
-title: "_ATL_WIN_MODULE70 结构 |Microsoft 文档"
-ms.custom: 
+title: _ATL_WIN_MODULE70 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - _ATL_WIN_MODULE70
@@ -18,19 +15,17 @@ helpviewer_keywords:
 - _ATL_WIN_MODULE70 structure
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d284f18005b470f80cc911a24ec2c813715a0ca4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 72f621af04dc420587c2660313aecf70adfaa1ec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 Structure
+# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 结构
 使用窗口化代码在 atl。  
   
 ## <a name="syntax"></a>语法  

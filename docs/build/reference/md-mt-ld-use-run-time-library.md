@@ -2,12 +2,9 @@
 title: -MD，-MT，LD （使用运行时库） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD（使用运行时库）
 指示多线程模块是否为 DLL，并指定运行库的零售版本或调试版本。  
@@ -75,8 +70,8 @@ ms.lasthandoff: 12/21/2017
 |**/MDd**|定义 `_DEBUG`、`_MT` 和 `_DLL`，并使此应用程序使用特定于多线程和 DLL 的调试版本的运行库。 它还会让编译器将库名称 MSVCRTD.lib 放入 .obj 文件中。|  
 |**/MT**|使此应用程序使用运行库的多线程的静态版本。 定义 `_MT`，并使编译器将库名 LIBCMT.lib 放入 .obj 文件中，以便链接器使用 LIBCMT.lib 解析外部符号。|  
 |**/MTd**|定义 `_DEBUG` 和 `_MT`。 此选项还会让编译器将库名称 LIBCMTD.lib 放置到 .obj 文件中，以便链接器将使用 LIBCMTD.lib 来解析外部符号。|  
-|**/LD**|创建一个 DLL。<br /><br /> 传递**/DLL**到链接器选项。 链接器查找 `DllMain` 函数，但并不需要该函数。 如果没有编写 `DllMain` 函数，则链接器将插入返回 TRUE 的 `DllMain` 函数。<br /><br /> 链接 DLL 启动代码。<br /><br /> 如果未在命令行上指定导出 (.exp) 文件，则创建导入库 (.lib)。 将导入库链接到调用 DLL 的应用程序。<br /><br /> 解释[/Fe （命名 EXE 文件）](../../build/reference/fe-name-exe-file.md)作为命名 DLL，而不是.exe 文件。 默认情况下，程序名称将成为*basename*而不是.dll *basename*.exe。<br /><br /> 意味着**/MT**除非您明确指定**/MD**。|  
-|**/Ldd**|创建调试 DLL。 定义 `_MT` 和 `_DEBUG`。|  
+|**/LD**|创建一个 DLL。<br /><br /> 传递 **/DLL**到链接器选项。 链接器查找 `DllMain` 函数，但并不需要该函数。 如果没有编写 `DllMain` 函数，则链接器将插入返回 TRUE 的 `DllMain` 函数。<br /><br /> 链接 DLL 启动代码。<br /><br /> 如果未在命令行上指定导出 (.exp) 文件，则创建导入库 (.lib)。 将导入库链接到调用 DLL 的应用程序。<br /><br /> 解释[/Fe （命名 EXE 文件）](../../build/reference/fe-name-exe-file.md)作为命名 DLL，而不是.exe 文件。 默认情况下，程序名称将成为*basename*而不是.dll *basename*.exe。<br /><br /> 意味着 **/MT**除非您明确指定 **/MD**。|  
+|**/LDd**|创建调试 DLL。 定义 `_MT` 和 `_DEBUG`。|  
   
  有关 C 运行时库和使用进行编译时使用的库的详细信息[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)，请参阅[CRT 库功能](../../c-runtime-library/crt-library-features.md)。  
   
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  展开**C/c + +**文件夹。  
+2.  展开**C/c + +** 文件夹。  
   
 3.  选择**代码生成**属性页。  
   

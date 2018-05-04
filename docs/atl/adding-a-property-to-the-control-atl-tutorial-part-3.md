@@ -1,30 +1,25 @@
 ---
-title: "将属性添加到控件 (ATL 教程，第 3 部分) |Microsoft 文档"
-ms.custom: 
+title: 将属性添加到控件 (ATL 教程，第 3 部分) |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a316ba56c551d0ee47261160058b00eca5e51a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>向控件中添加属性（ATL 教程，第 3 部分）
-`IPolyCtl`是接口，包含控件的自定义方法和属性，并将向其添加属性。  
+`IPolyCtl` 是接口，包含控件的自定义方法和属性，并将向其添加属性。  
   
 ### <a name="to-add-a-property-using-the-add-property-wizard"></a>若要使用添加属性向导添加属性  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  你现在具有一个名为属性`Sides`。 在下一步的步骤中，你将更改绘图代码以使用它。  
   
- [返回到步骤 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124;[到步骤 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [返回到步骤 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [到步骤 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
 ## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)

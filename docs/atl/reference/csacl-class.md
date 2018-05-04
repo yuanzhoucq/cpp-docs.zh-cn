@@ -1,12 +1,9 @@
 ---
-title: "CSacl 类 |Microsoft 文档"
-ms.custom: 
+title: CSacl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSacl
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csacl-class"></a>CSacl 类
 此类是 SACL （系统访问控制列表） 结构的包装器。  
@@ -83,7 +78,7 @@ class CSacl : public CAcl
   
  `CSacl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
 ##  <a name="addauditace"></a>  CSacl::AddAuditAce  
@@ -212,7 +207,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>请参阅  
  [CAcl 类](../../atl/reference/cacl-class.md)   
- [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)

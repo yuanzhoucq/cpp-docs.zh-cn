@@ -1,12 +1,9 @@
 ---
-title: "安全全局函数 |Microsoft 文档"
-ms.custom: 
+title: 安全全局函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-global-functions"></a>安全全局函数
 这些函数为修改 SID 和 ACL 对象提供支持。  
@@ -55,10 +50,10 @@ ms.lasthandoff: 12/21/2017
 |[AtlSetSacl](#atlsetsacl)|调用此函数可设置指定对象的系统访问控制列表 (SACL) 信息。|  
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|调用此函数可检索给定对象的安全说明符。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>  AtlGetDacl  
  调用此函数可检索指定对象的自由访问控制列表 (DACL) 信息。  
   
 > [!IMPORTANT]
@@ -87,7 +82,7 @@ inline bool AtlGetDacl(
 ### <a name="remarks"></a>备注  
  调试版本中，如果将会出错断言`hObject`或`pDacl`无效。  
   
-##  <a name="atlsetdacl"></a>AtlSetDacl  
+##  <a name="atlsetdacl"></a>  AtlSetDacl  
  调用此函数可设置指定对象的自由访问控制列表 (DACL) 信息。  
   
 > [!IMPORTANT]
@@ -119,10 +114,10 @@ inline bool AtlSetDacl(
   
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误`hObject`是无效的或者如果`dwInheritanceFlowControl`不是三个允许的值之一。  
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid  
  调用此函数可检索对象的组安全标识符 (SID)。  
   
 > [!IMPORTANT]
@@ -148,10 +143,10 @@ inline bool AtlGetGroupSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid  
  调用此函数可设置对象的组安全标识符 (SID)。  
   
 > [!IMPORTANT]
@@ -177,10 +172,10 @@ inline bool AtlSetGroupSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>  AtlGetOwnerSid  
  调用此函数可检索对象的所有者安全标识符 (SID)。  
   
 > [!IMPORTANT]
@@ -206,10 +201,10 @@ inline bool AtlGetOwnerSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>  AtlSetOwnerSid  
  调用此函数可设置对象的所有者安全标识符 (SID)。  
   
 > [!IMPORTANT]
@@ -235,10 +230,10 @@ inline bool AtlSetOwnerSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>  AtlGetSacl  
  调用此函数可检索指定对象的系统访问控制列表 (SACL) 信息。  
   
 > [!IMPORTANT]
@@ -271,10 +266,10 @@ inline bool AtlGetSacl(
 ### <a name="remarks"></a>备注  
  如果`AtlGetSacl`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>  AtlSetSacl  
  调用此函数可设置指定对象的系统访问控制列表 (SACL) 信息。  
   
 > [!IMPORTANT]
@@ -313,10 +308,10 @@ inline bool AtlSetSacl(
   
  如果`AtlSetSacl`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
 
-##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor  
  调用此函数可检索给定对象的安全说明符。  
   
 > [!IMPORTANT]
@@ -355,7 +350,7 @@ inline bool AtlGetSecurityDescriptor(
 ### <a name="remarks"></a>备注  
  如果`AtlGetSecurityDescriptor`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlsecurity.h 
    
 ## <a name="see-also"></a>请参阅  

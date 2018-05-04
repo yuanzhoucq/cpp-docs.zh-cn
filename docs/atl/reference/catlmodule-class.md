@@ -1,12 +1,9 @@
 ---
-title: "CAtlModule 类 |Microsoft 文档"
-ms.custom: 
+title: CAtlModule 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModule
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2be5d5a777d4b9aed9ee4d07016771ee91c913b0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 此类提供由几个 ATL module 类的方法。  
@@ -93,10 +88,10 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
  `CAtlModule`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements  
  重写此方法以将参数添加到 ATL 注册表组件 （注册器） 替换映射。  
   
 ```
@@ -115,7 +110,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  请参阅主题[使用可替换参数 （注册机构的预处理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)有关详细信息。  
   
-##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc  
  添加了一个新的函数，该模块终止时调用。  
   
 ```
@@ -132,7 +127,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>  CAtlModule::CAtlModule  
  构造函数。  
   
 ```
@@ -142,7 +137,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>备注  
  初始化数据成员并启动临界区周围模块的线程。  
   
-##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule  
+##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule  
  析构函数。  
   
 ```
@@ -152,7 +147,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>备注  
  释放所有数据成员。  
   
-##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr  
  检索指向全局接口表。  
   
 ```
@@ -173,7 +168,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  请参阅[IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517)有关全局接口表的信息。  
   
-##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  返回的锁计数。  
   
 ```
@@ -183,7 +178,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>返回值  
  返回的锁计数。 此值可能为用于诊断和调试。  
   
-##  <a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>  CAtlModule::Lock  
  锁计数递增 1。  
   
 ```
@@ -193,21 +188,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>返回值  
  锁计数递增 1 并返回更新的值。 此值可能为用于诊断和调试。  
   
-##  <a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>  CAtlModule::m_libid  
  包含当前模块的 GUID。  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>  CAtlModule::m_pGIT  
  指向全局接口表指针。  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>  CAtlModule::Term  
  释放所有数据成员。  
   
 ```
@@ -217,7 +212,7 @@ void Term() throw();
 ### <a name="remarks"></a>备注  
  释放所有数据成员。 析构函数调用此方法。  
   
-##  <a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>  CAtlModule::Unlock  
  减少锁计数。  
   
 ```
@@ -227,7 +222,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>返回值  
  减少锁计数，并返回更新后的值。 此值可能为用于诊断和调试。  
   
-##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD  
  运行指定的资源，若要注册或注销对象中包含的脚本。  
   
 ```
@@ -265,7 +260,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  此方法调用[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)和[IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister)。  
   
-##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper  
  调用此方法`UpdateRegistryFromResourceD`执行注册表更新。  
   
 ```
@@ -291,7 +286,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>备注  
  此方法提供的实现[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)。  
   
-##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS  
  运行指定的资源，若要注册或注销对象中包含的脚本。 此方法以静态方式链接到 ATL 注册表组件。  
   
 ```

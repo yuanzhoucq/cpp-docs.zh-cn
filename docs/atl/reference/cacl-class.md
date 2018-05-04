@@ -1,12 +1,9 @@
 ---
-title: "CAcl 类 |Microsoft 文档"
-ms.custom: 
+title: CAcl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAcl
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd3b17c3cf74e87b709353a8dd2cd00c5355c7fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab138d743dc3f5346ce15449c2a31b5b2484fd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cacl-class"></a>CAcl 类
 此类是包装器`ACL`（访问控制列表） 结构。  
@@ -96,7 +91,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|赋值运算符。|  
   
 ## <a name="remarks"></a>备注  
- **ACL**结构是 ACL （访问控制列表） 的标头。 ACL 包括零个或多一个顺序列表[Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868) （访问控制项）。 ACL 中的各个 Ace 编号从 0 到*n-1*，其中 *n* 是 ACL 中的 Ace 的数量。 在编辑 ACL 时，应用程序是按其索引指在 ACL 中的访问控制项 (ACE)。  
+ **ACL**结构是 ACL （访问控制列表） 的标头。 ACL 包括零个或多一个顺序列表[Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868) （访问控制项）。 ACL 中的各个 Ace 编号从 0 到*n-1*，其中*n*是 ACL 中的 Ace 的数量。 在编辑 ACL 时，应用程序是按其索引指在 ACL 中的访问控制项 (ACE)。  
   
  有两种 ACL 类型：  
   
@@ -112,10 +107,10 @@ class CAcl
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
-##  <a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
+##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray  
  ACCESS_MASK 对象的数组。  
   
 ```
@@ -125,7 +120,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ### <a name="remarks"></a>备注  
  此 typedef 指定用于将使用的访问权限存储在访问控制项 (Ace) 的数组类型。  
   
-##  <a name="caceflagarray"></a>CAcl::CAceFlagArray  
+##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray  
  字节数组。  
   
 ```
@@ -135,7 +130,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ### <a name="remarks"></a>备注  
  此 typedef 指定用于定义访问控制项 (ACE) 的特定类型的控制标志的数组类型。 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能标志的完整列表定义。  
   
-##  <a name="cacetypearray"></a>CAcl::CAceTypeArray  
+##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  字节数组。  
   
 ```
@@ -145,7 +140,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ### <a name="remarks"></a>备注  
  此 typedef 指定用于定义访问控制项 (ACE) 对象，如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE 的特性的数组类型。 请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能的类型的定义的完整列表。  
   
-##  <a name="cacl"></a>CAcl::CAcl  
+##  <a name="cacl"></a>  CAcl::CAcl  
  构造函数。  
   
 ```
@@ -160,7 +155,7 @@ CAcl(const CAcl& rhs) throw(...);
 ### <a name="remarks"></a>备注  
  `CAcl`对象可以根据需要使用创建的现有`CAcl`对象。  
   
-##  <a name="dtor"></a>CAcl:: ~ CAcl  
+##  <a name="dtor"></a>  CAcl:: ~ CAcl  
  析构函数。  
   
 ```
@@ -170,7 +165,7 @@ virtual ~CAcl() throw();
 ### <a name="remarks"></a>备注  
  析构函数释放由对象获取任何资源。  
   
-##  <a name="getacecount"></a>CAcl::GetAceCount  
+##  <a name="getacecount"></a>  CAcl::GetAceCount  
  返回数的访问控制项 (ACE) 的对象。  
   
 ```
@@ -180,7 +175,7 @@ virtual UINT GetAceCount() const throw() = 0;
 ### <a name="return-value"></a>返回值  
  返回的项数 ACE 中`CAcl`对象。  
   
-##  <a name="getaclentries"></a>CAcl::GetAclEntries  
+##  <a name="getaclentries"></a>  CAcl::GetAclEntries  
  检索访问控制列表 (ACL) 项`CAcl`对象。  
   
 ```
@@ -211,7 +206,7 @@ void GetAclEntries(
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关 ACE 类型和标志的详细信息。  
   
-##  <a name="getaclentry"></a>CAcl::GetAclEntry  
+##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  检索所有访问控制列表 (ACL) 中的条目有关的信息。  
   
 ```
@@ -252,7 +247,7 @@ void GetAclEntry(
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关 ACE 类型和标志的详细信息。  
   
-##  <a name="getlength"></a>CAcl::GetLength  
+##  <a name="getlength"></a>  CAcl::GetLength  
  返回的访问控制列表 (ACL) 的长度。  
   
 ```
@@ -262,7 +257,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回以字节为单位的所需的长度保存所需**ACL**结构。  
   
-##  <a name="getpacl"></a>CAcl::GetPACL  
+##  <a name="getpacl"></a>  CAcl::GetPACL  
  将指针返回到访问控制列表 (ACL)。  
   
 ```
@@ -272,7 +267,7 @@ const ACL* GetPACL() const throw(...);
 ### <a name="return-value"></a>返回值  
  返回一个指向**ACL**结构。  
   
-##  <a name="isempty"></a>CAcl::IsEmpty  
+##  <a name="isempty"></a>  CAcl::IsEmpty  
  测试`CAcl`条目的对象。  
   
 ```
@@ -282,7 +277,7 @@ bool IsEmpty() const throw();
 ### <a name="remarks"></a>备注  
  返回**true**如果`CAcl`对象不为 NULL，且不包含任何条目。 返回**false**如果`CAcl`对象为 NULL，或包含至少一个条目。  
   
-##  <a name="isnull"></a>CAcl::IsNull  
+##  <a name="isnull"></a>  CAcl::IsNull  
  返回的状态`CAcl`对象。  
   
 ```
@@ -292,7 +287,7 @@ bool IsNull() const throw();
 ### <a name="return-value"></a>返回值  
  返回**true**如果`CAcl`对象为 NULL， **false**否则为。  
   
-##  <a name="operator_const_acl__star"></a>CAcl::operator const ACL *  
+##  <a name="operator_const_acl__star"></a>  CAcl::operator const ACL *  
  强制转换`CAcl`对象传递给**ACL** （访问控制列表） 结构。  
   
 ```  
@@ -302,7 +297,7 @@ operator const ACL *() const throw(...);
 ### <a name="remarks"></a>备注  
  返回的地址**ACL**结构。  
   
-##  <a name="operator_eq"></a>CAcl::operator =  
+##  <a name="operator_eq"></a>  CAcl::operator =  
  赋值运算符。  
   
 ```
@@ -316,7 +311,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 ### <a name="return-value"></a>返回值  
  返回对已更新的引用`CAcl`对象。  
   
-##  <a name="removeace"></a>CAcl::RemoveAce  
+##  <a name="removeace"></a>  CAcl::RemoveAce  
  从中移除特定 ACE （访问控制项） **CAcl**对象。  
   
 ```
@@ -330,7 +325,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>备注  
  此方法派生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="removeaces"></a>CAcl::RemoveAces  
+##  <a name="removeaces"></a>  CAcl::RemoveAces  
  从中移除所有人 Ace （访问控制项）`CAcl`适用于给定`CSid`。  
   
 ```
@@ -341,7 +336,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
  `rSid`  
  对 `CSid` 对象的引用。  
   
-##  <a name="setempty"></a>CAcl::SetEmpty  
+##  <a name="setempty"></a>  CAcl::SetEmpty  
  标记`CAcl`对象为空。  
   
 ```
@@ -351,7 +346,7 @@ void SetEmpty() throw();
 ### <a name="remarks"></a>备注  
  `CAcl`可以设置为空或为 NULL： 两个状态并不相同。  
   
-##  <a name="setnull"></a>CAcl::SetNull  
+##  <a name="setnull"></a>  CAcl::SetNull  
  标记`CAcl`为 NULL 的对象。  
   
 ```

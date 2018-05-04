@@ -1,12 +1,9 @@
 ---
-title: "CDialogImpl 类 |Microsoft 文档"
-ms.custom: 
+title: CDialogImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d4119daf89820de0a835bfbc572cdfbf38c99e8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 此类提供用于创建模式或无模式对话框中的方法。  
@@ -88,11 +83,11 @@ template <class T,
 |[StartDialogProc](#startdialogproc)|收到第一条消息来处理发送到对话框中的消息时调用。|  
   
 ## <a name="remarks"></a>备注  
- 与`CDialogImpl`可以创建一个模式或无模式对话框。 `CDialogImpl`提供对话框过程，使用默认消息映射来将消息定向到相应的处理程序。  
+ 与`CDialogImpl`可以创建一个模式或无模式对话框。 `CDialogImpl` 提供对话框过程，使用默认消息映射来将消息定向到相应的处理程序。  
   
- 基类析构函数**~ CWindowImplRoot**可确保窗口已销毁对象之前中消除。  
+ 基类析构函数 **~ CWindowImplRoot**可确保窗口已销毁对象之前中消除。  
   
- `CDialogImpl`派生自**CDialogImplBaseT**，它又派生自**CWindowImplRoot**。  
+ `CDialogImpl` 派生自**CDialogImplBaseT**，它又派生自**CWindowImplRoot**。  
   
 > [!NOTE]
 >  你的类必须定义**IDD**成员，用于指定对话框模板资源 id。 例如，ATL 项目向导自动将以下行添加到你的类：  
@@ -108,10 +103,10 @@ template <class T,
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|  
 |对话框|[对话框](http://msdn.microsoft.com/library/windows/desktop/ms632588)和 Windows SDK 中的后续主题|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>  CDialogImpl::Create  
  创建无模式对话框。  
   
 ```  
@@ -129,7 +124,7 @@ HWND Create(
  `hWndParent`  
  [in]向所有者窗口句柄。  
   
- **RECT &**`rect`  
+ **RECT （&AMP; A)** `rect`  
  [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定对话框的大小和位置。  
   
  `dwInitParam`  
@@ -141,7 +136,7 @@ HWND Create(
 ### <a name="remarks"></a>备注  
  此对话框中会自动附加到`CDialogImpl`对象。 若要创建模式对话框，请调用[DoModal](#domodal)。 上面的第二个替代仅用于[CComControl](../../atl/reference/ccomcontrol-class.md)。  
   
-##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow  
  销毁无模式对话框。  
   
 ```  
@@ -157,7 +152,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>备注  
  返回**TRUE**如果对话框成功销毁; 否则为**FALSE**。  
   
-##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>  CDialogImpl::DialogProc  
  此静态函数实现对话框过程。  
   
 ```  
@@ -188,11 +183,11 @@ static LRESULT CALLBACK DialogProc(
  **TRUE**如果消息已处理; 否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- `DialogProc`使用默认消息映射来将消息定向到相应的处理程序。  
+ `DialogProc` 使用默认消息映射来将消息定向到相应的处理程序。  
   
  您可以重写`DialogProc`提供不同的机制，用于处理消息。  
   
-##  <a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>  CDialogImpl::DoModal  
  创建模式对话框。  
   
 ```   
@@ -216,7 +211,7 @@ INT_PTR DoModal(
   
  若要创建无模式对话框，请调用[创建](#create)。  
   
-##  <a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CDialogImpl::EndDialog  
  销毁模式对话框。  
   
 ```   
@@ -231,12 +226,12 @@ BOOL EndDialog(int nRetCode);
  **TRUE**的对话框是销毁; 否则为如果**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- `EndDialog`必须通过对话框过程调用。 对话框时销毁后，Windows 使用的值`nRetCode`的返回值作为`DoModal`，其创建对话框。  
+ `EndDialog` 必须通过对话框过程调用。 对话框时销毁后，Windows 使用的值`nRetCode`的返回值作为`DoModal`，其创建对话框。  
   
 > [!NOTE]
 >  不要调用`EndDialog`销毁无模式对话框。 调用[CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow)相反。  
   
-##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CDialogImpl::GetDialogProc  
  返回`DialogProc`，当前对话框过程。  
   
 ```   
@@ -249,7 +244,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>备注  
  重写此方法以将替换为你自己的对话框过程。  
   
-##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CDialogImpl::MapDialogRect  
  将转换 (maps) 到屏幕的指定矩形的对话框单位单位 （像素）。  
   
 ```   
@@ -266,7 +261,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>备注  
  该函数将在指定的坐标`RECT`结构使用转换后的坐标，这样，要用于创建对话框中，或将控件放在对话框中的结构。  
   
-##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>  CDialogImpl::OnFinalMessage  
  接收最后一条消息后调用 (通常`WM_NCDESTROY`)。  
   
 ```   
@@ -280,7 +275,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>备注  
  请注意，是否你想要自动删除您在窗口析构时的对象，则可以调用`delete this;`此处。  
   
-##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>  CDialogImpl::StartDialogProc  
  只能调用一次，第一个接收消息时，处理发送到对话框中的消息。  
   
 ```   

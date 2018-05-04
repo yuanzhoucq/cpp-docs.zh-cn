@@ -2,11 +2,8 @@
 title: CDynamicChain 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 类
 此类提供支持动态链接的消息映射方法。  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain::SetChainEntry](#setchainentry)|将消息映射条目添加到集合或修改现有条目。|  
   
 ## <a name="remarks"></a>备注  
- `CDynamicChain`管理消息映射，启用 Windows 消息要定向，在运行时，另一个对象的消息映射到的集合。  
+ `CDynamicChain` 管理消息映射，启用 Windows 消息要定向，在运行时，另一个对象的消息映射到的集合。  
   
  若要添加的消息映射的动态链接的支持，请执行以下操作：  
   
 -   派生您的类从`CDynamicChain`。 在消息映射中，指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)链接到另一个对象的默认消息映射宏。  
   
--   派生你想要从链接到每个的类[CMessageMap](../../atl/reference/cmessagemap-class.md)。 `CMessageMap`允许该对象来公开其消息映射到其他对象。  
+-   派生你想要从链接到每个的类[CMessageMap](../../atl/reference/cmessagemap-class.md)。 `CMessageMap` 允许该对象来公开其消息映射到其他对象。  
   
 -   调用`CDynamicChain::SetChainEntry`以确定哪个对象和消息映射您希望链接到。  
   
@@ -86,10 +81,10 @@ class CDynamicChain
   
  有关消息映射链接的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)本文"ATL 窗口类。"  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  将定向到另一个对象的消息映射的 Windows 消息。  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>备注  
  有关调用的窗口过程`CallChain`，必须指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)消息映射中的宏。 有关示例，请参阅[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概述。  
   
- `CallChain`需要的以前调用[SetChainEntry](#setchainentry)关联`dwChainID`值，该值对象，其消息映射。  
+ `CallChain` 需要的以前调用[SetChainEntry](#setchainentry)关联`dwChainID`值，该值对象，其消息映射。  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  构造函数。  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  析构函数。  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  从集合中移除指定的消息映射。  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>返回值  
  **TRUE**如果已成功从集合中移除的消息映射。 否则为**FALSE**。  
   
-##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  将指定的消息映射添加到集合。  
   
 ```

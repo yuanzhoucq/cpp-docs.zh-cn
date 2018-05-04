@@ -2,12 +2,9 @@
 title: LIB 概述 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>LIB 概述
 LIB 创建标准库，导入库和导出的文件可与[链接](../../build/reference/linker-options.md)时生成程序。 从命令提示符运行 LIB。  
@@ -53,7 +48,7 @@ LIB 创建标准库，导入库和导出的文件可与[链接](../../build/refe
   
  有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
- **/ 导出**  
+ **/EXPORT**  
  从你的程序中导出函数。  
   
  有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
@@ -63,7 +58,7 @@ LIB 创建标准库，导入库和导出的文件可与[链接](../../build/refe
   
  有关详细信息请参阅[提取库成员](../../build/reference/extracting-a-library-member.md)。  
   
- **/ 包括**  
+ **/INCLUDE**  
  将符号添加到符号表。  
   
  有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
@@ -113,7 +108,7 @@ LIB 创建标准库，导入库和导出的文件可与[链接](../../build/refe
   
  有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **/ 子系统**  
+ **/SUBSYSTEM**  
  通知操作系统如何运行通过链接到此输出库中创建的程序。  
   
  有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  

@@ -1,12 +1,9 @@
 ---
-title: "ATL Active Server Page 组件向导 |Microsoft 文档"
-ms.custom: 
+title: ATL Active Server Page 组件向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d717eefe9c9ee353692d343b88c57469eeb6892
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 组件向导
 此向导将 Active Server Pages (ASP) 组件插入到项目中。 Microsoft Internet 信息服务 (IIS) 使用 ASP 组件作为其增强的网页开发体系结构的一部分。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  提供信息的对象创建的 c + + 类。  
   
  **短名称**  
- 设置对象的根名称。 提供确定的名称`Class`和**组件类**名称， **.cpp 文件**和**.h 文件**名称，**接口**名称，**类型**名称，与**ProgID**，除非单独更改这些字段。  
+ 设置对象的根名称。 提供确定的名称`Class`和**组件类**名称， **.cpp 文件**和 **.h 文件**名称，**接口**名称，**类型**名称，与**ProgID**，除非单独更改这些字段。  
   
  **.h 文件**  
  设置新对象的类的头文件的名称。 默认情况下，此名称基于你在中提供的名称**短名称**。 单击省略号按钮，以将文件名称保存到你选择的位置，或者将类声明追加到现有文件。 如果选择现有文件时，向导将不将其保存到所选位置直到你单击**完成**向导中。  

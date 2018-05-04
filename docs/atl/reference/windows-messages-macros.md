@@ -1,29 +1,24 @@
 ---
-title: "Windows 消息宏 |Microsoft 文档"
-ms.custom: 
+title: Windows 消息宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 dev_langs:
 - C++
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dde3255997b03eb827ef9e318de73b3badee23c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-messages-macros"></a>Windows 消息宏
 此宏将转发窗口消息。  
@@ -32,10 +27,10 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[WM_FORWARDMSG](#wm_forwardmsg)|使用将转发到另一个处理的窗口的窗口收到的消息。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h 
    
-##  <a name="wm_forwardmsg"></a>WM_FORWARDMSG  
+##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
  此宏将转发到另一个处理的窗口的窗口收到的消息。  
   
 ```

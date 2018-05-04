@@ -2,28 +2,23 @@
 title: 使用函数名称，没有 （） 不产生代码 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03706be0b9853cbbdebe79b58e410f7237692ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40aed3969ae0707b07f0912d7247b49886d0319d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-function-name-without--produces-no-code"></a>使用没有 () 的函数名不产生代码
 当使用在程序中声明的函数名称时不带括号时，编译器不生成代码。 无论该函数使用参数，因为编译器将计算的函数地址; 将发生这种情况但是，因为不存在的函数调用运算符"（）"，则不进行调用。 此结果是类似于以下：  

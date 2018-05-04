@@ -1,12 +1,9 @@
 ---
-title: "CAtlWinModule 类 |Microsoft 文档"
-ms.custom: 
+title: CAtlWinModule 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlWinModule
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 类
 此类为 ATL 窗口化组件提供支持。  
@@ -67,10 +62,10 @@ class CAtlWinModule : public _ATL_WIN_MODULE
   
  `CAtlWinModule`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData  
  此方法初始化并添加`_AtlCreateWndData`结构。  
   
 ```
@@ -87,7 +82,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>备注  
  此方法调用[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)哪些初始化[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构。 此结构将存储**这**指针，用于获取窗口过程中的类实例。  
   
-##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  构造函数。  
   
 ```
@@ -97,7 +92,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>备注  
  如果初始化失败， **EXCEPTION_NONCONTINUABLE**引发异常。  
   
-##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  析构函数。  
   
 ```
@@ -107,7 +102,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData  
  此方法返回一个指向`_AtlCreateWndData`结构。  
   
 ```

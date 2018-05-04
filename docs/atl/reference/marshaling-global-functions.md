@@ -1,12 +1,9 @@
 ---
-title: "封送处理全局函数 |Microsoft 文档"
-ms.custom: 
+title: 封送处理全局函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a12f719d2cb893a5d2989a80f5fe09a5b49aeca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="marshaling-global-functions"></a>封送处理的全局函数
 这些函数提供有关封送处理和封送数据转换为接口指针的支持。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>要求：
 **标头：** atlbase.h
   
-##  <a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
+##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream  
  释放流中的封送数据，然后释放流指针。  
 
 ```
@@ -56,7 +51,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="example"></a>示例  
   请参阅示例[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
   
-##  <a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
+##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc  
  创建新的流对象，将代理的 CLSID 写入流，并通过将初始化代理所需的数据写入流来封送指定接口指针。  
   
 ```
@@ -84,12 +79,12 @@ HRESULT AtlMarshalPtrInProc(
   
  如果封送处理失败，则释放流指针。  
   
- `AtlMarshalPtrInProc`仅可指向进程内对象的指针上使用。  
+ `AtlMarshalPtrInProc` 仅可指向进程内对象的指针上使用。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
   
-##  <a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
+##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr  
  将流的封送数据转换为可由客户端使用的接口指针。  
    
 ```

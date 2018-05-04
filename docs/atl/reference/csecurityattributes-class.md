@@ -1,12 +1,9 @@
 ---
-title: "CSecurityAttributes 类 |Microsoft 文档"
-ms.custom: 
+title: CSecurityAttributes 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityAttributes
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 类
 此类是安全特性结构的瘦包装器。  
@@ -66,10 +61,10 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
  `CSecurityAttributes`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
-##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
  构造函数。  
   
 ```
@@ -84,7 +79,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。  
   
-##  <a name="set"></a>Csecurityattributes:: Set  
+##  <a name="set"></a>  Csecurityattributes:: Set  
  调用此方法以设置的属性`CSecurityAttributes`对象。  
   
 ```

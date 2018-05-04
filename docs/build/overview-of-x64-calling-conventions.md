@@ -1,27 +1,22 @@
 ---
-title: "概述 x64 调用约定 |Microsoft 文档"
-ms.custom: 
+title: 概述 x64 调用约定 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 调用约定概述
 X86 的两个重要区别和[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]是 64 位寻址功能和 16 64 位一平面组寄存器供常规使用。 给定的展开注册集，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]使用[__fastcall](../cpp/fastcall.md)调用约定和基于 RISC 的异常处理模型。 `__fastcall`约定使用寄存器的前四个自变量和堆栈帧将传递其他参数。  

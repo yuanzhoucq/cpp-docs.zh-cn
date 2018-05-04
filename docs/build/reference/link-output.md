@@ -1,13 +1,10 @@
 ---
-title: "LINK 输出 |Microsoft 文档"
-ms.custom: 
+title: LINK 输出 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -26,22 +23,20 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a87ab5cb4badd5f32423b8fb3067b21c46e9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-output"></a>LINK 输出
 Link 输出包括.exe 文件、 Dll、 映射文件和消息。  
   
-##  <a name="_core_output_files"></a>输出文件  
+##  <a name="_core_output_files"></a> 输出文件  
  链接的默认输出文件是.exe 文件。 如果[/DLL](../../build/reference/dll-build-a-dll.md)指定选项，LINK 在生成.dll 文件。 你可以控制输出文件的名称与[输出文件的名称 （/ OUT）](../../build/reference/out-output-file-name.md)选项。  
   
  在增量模式下，链接创建一个.ilk 文件来保存更高版本增量编译的程序的状态信息。 .Ilk 文件有关的详细信息，请参阅[.ilk 文件](../../build/reference/dot-ilk-files-as-linker-input.md)。 有关增量链接的详细信息，请参阅[增量链接 (/incremental)](../../build/reference/incremental-link-incrementally.md)选项。  
@@ -52,7 +47,7 @@ Link 输出包括.exe 文件、 Dll、 映射文件和消息。
   
  如果[生成调试信息 (/debug)](../../build/reference/debug-generate-debug-info.md)指定选项，则 LINK 创建包含调试信息的程序的 PDB。  
   
-##  <a name="_core_other_output"></a>其他输出  
+##  <a name="_core_other_output"></a> 其他输出  
  当你键入`link`而无需任何其他命令行输入时，链接将显示一条总结了其选项的用法语句。  
   
  LINK 显示版权和版本号消息并回显命令文件输入，除非[取消显示启动版权标志 (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md)使用选项。  

@@ -1,13 +1,10 @@
 ---
-title: "-O 选项 （优化代码） |Microsoft 文档"
-ms.custom: 
+title: -O 选项 （优化代码） |Microsoft 文档
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.Optimization
 - /o
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - performance, cle.exe compiler
 - cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7da04384d0c4ea00c2eaaedbcf0ec770e216289
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="o-options-optimize-code"></a>/O 选项（优化代码）
 
@@ -50,13 +45,13 @@ ms.lasthandoff: 12/21/2017
 
 - [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) （默认设置） 将告知编译器优选大小优化的速度。
 
-- [/Ox](../../build/reference/ox-full-optimization.md)是一种组合选项，选择多个主要侧重于速度的优化。 它是的严格子集**/O2**优化。
+- [/Ox](../../build/reference/ox-full-optimization.md)是一种组合选项，选择多个主要侧重于速度的优化。 它是的严格子集 **/O2**优化。
 
 - [/Oy](../../build/reference/oy-frame-pointer-omission.md)取消的速度更快的函数调用的调用堆栈上的帧指针的创建。
 
 ## <a name="remarks"></a>备注
 
-你可以组合多个**/O**到单个选项语句的选项。 例如， **/Odi**相同**/Od /Oi**。 某些选项相互排斥，导致编译器错误，如果将一起使用。 请参阅个人**/O**有关详细信息的选项。
+你可以组合多个 **/O**到单个选项语句的选项。 例如， **/Odi**相同 **/Od /Oi**。 某些选项相互排斥，导致编译器错误，如果将一起使用。 请参阅个人 **/O**有关详细信息的选项。
 
 ## <a name="see-also"></a>请参阅
 

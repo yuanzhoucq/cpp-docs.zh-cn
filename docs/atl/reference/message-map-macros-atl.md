@@ -1,12 +1,9 @@
 ---
-title: "消息映射宏 (ATL) |Microsoft 文档"
-ms.custom: 
+title: 消息映射宏 (ATL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -46,17 +43,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200d82c9d9b2ca0456ae5de4d6c937be69e212bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f026e7b8190b311b16e86673b6f2271637442df0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏 (ATL)
 这些宏定义消息映射和条目。  
@@ -98,10 +93,10 @@ ms.lasthandoff: 12/21/2017
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|映射反映**WM_NOTIFY**到处理程序函数，基于通知代码和连续范围的控件标识符的消息。|  
 |[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|映射反映**WM_NOTIFY**到处理程序函数，基于连续范围的控件标识符的消息。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
+##  <a name="alt_msg_map"></a>  ALT_MSG_MAP  
  将标记替换消息映射的开头。  
   
 ```
@@ -132,10 +127,10 @@ ALT_MSG_MAP(msgMapID)
   
  [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
 
-##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
+##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP  
  标记默认消息映射的开始。  
   
 ```
@@ -207,10 +202,10 @@ BEGIN_MSG_MAP(theClass)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
+##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT  
  消息映射中定义一个条目。  
   
 ```
@@ -225,17 +220,17 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
  [in]消息映射标识符。  
   
 ### <a name="remarks"></a>备注  
- `CHAIN_MSG_MAP_ALT`在基类中指示的备用消息映射到的消息。 必须声明与此替换消息映射[ALT_MSG_MAP(msgMapID)](#alt_msg_map)。 若要将消息定向到基类的默认消息映射 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))，使用`CHAIN_MSG_MAP`。 有关示例，请参阅[CHAIN_MSG_MAP](#chain_msg_map)。  
+ `CHAIN_MSG_MAP_ALT` 在基类中指示的备用消息映射到的消息。 必须声明与此替换消息映射[ALT_MSG_MAP(msgMapID)](#alt_msg_map)。 若要将消息定向到基类的默认消息映射 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))，使用`CHAIN_MSG_MAP`。 有关示例，请参阅[CHAIN_MSG_MAP](#chain_msg_map)。  
   
 > [!NOTE]
 >  始终开始使用消息映射`BEGIN_MSG_MAP`。 然后，你可以声明与后续的备用消息映射`ALT_MSG_MAP`。 [END_MSG_MAP](#end_msg_map)宏标记的消息映射的末尾。 每个消息映射必须具有恰好一个实例`BEGIN_MSG_MAP`和`END_MSG_MAP`。  
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
+##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER  
  消息映射中定义一个条目。  
   
 ```
@@ -250,17 +245,17 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
  [in]消息映射标识符。  
   
 ### <a name="remarks"></a>备注  
- `CHAIN_MSG_MAP_ALT_MEMBER`指示在数据成员中的备用消息映射到的消息。 必须声明与此替换消息映射[ALT_MSG_MAP(msgMapID)](#alt_msg_map)。 若要将消息定向到的数据成员的默认消息映射 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))，使用`CHAIN_MSG_MAP_MEMBER`。 有关示例，请参阅[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)。  
+ `CHAIN_MSG_MAP_ALT_MEMBER` 指示在数据成员中的备用消息映射到的消息。 必须声明与此替换消息映射[ALT_MSG_MAP(msgMapID)](#alt_msg_map)。 若要将消息定向到的数据成员的默认消息映射 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))，使用`CHAIN_MSG_MAP_MEMBER`。 有关示例，请参阅[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)。  
   
 > [!NOTE]
 >  始终开始使用消息映射`BEGIN_MSG_MAP`。 然后，你可以声明与后续的备用消息映射`ALT_MSG_MAP`。 [END_MSG_MAP](#end_msg_map)宏标记的消息映射的末尾。 每个消息映射必须具有恰好一个实例`BEGIN_MSG_MAP`和`END_MSG_MAP`。  
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
+##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP  
  消息映射中定义一个条目。  
   
 ```
@@ -272,7 +267,7 @@ CHAIN_MSG_MAP(theChainClass)
  [in]包含的消息映射的基类的名称。  
   
 ### <a name="remarks"></a>备注  
- `CHAIN_MSG_MAP`将定向到基类的默认消息映射消息 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))。 若要将消息定向到基类的备用消息映射 (使用声明[ALT_MSG_MAP](#alt_msg_map))，使用[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)。  
+ `CHAIN_MSG_MAP` 将定向到基类的默认消息映射消息 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))。 若要将消息定向到基类的备用消息映射 (使用声明[ALT_MSG_MAP](#alt_msg_map))，使用[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)。  
   
 > [!NOTE]
 >  始终开始使用消息映射`BEGIN_MSG_MAP`。 然后，你可以声明与后续的备用消息映射`ALT_MSG_MAP`。 [END_MSG_MAP](#end_msg_map)宏标记的消息映射的末尾。 每个消息映射必须具有恰好一个实例`BEGIN_MSG_MAP`和`END_MSG_MAP`。  
@@ -288,12 +283,12 @@ CHAIN_MSG_MAP(theChainClass)
   
 -   如果窗口过程正在使用中的第一个备用的消息映射`CMyClass`，所有消息都定向到`CMyBaseClass`的默认消息映射。  
   
--   如果使用窗口过程`CMyClass`的第二个备用的消息映射和`OnChar`不处理消息，该消息定向到的指定的备用消息映射中`CMyBaseClass`。 `CMyBaseClass`必须声明与此消息映射`ALT_MSG_MAP(1)`。  
+-   如果使用窗口过程`CMyClass`的第二个备用的消息映射和`OnChar`不处理消息，该消息定向到的指定的备用消息映射中`CMyBaseClass`。 `CMyBaseClass` 必须声明与此消息映射`ALT_MSG_MAP(1)`。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
+##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC  
  消息映射中定义一个条目。  
   
 ```
@@ -305,7 +300,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
  [in]对象的消息映射唯一标识符。  
   
 ### <a name="remarks"></a>备注  
- `CHAIN_MSG_MAP_DYNAMIC`指示消息，在运行时，到另一个对象中的默认消息映射。 与之关联的对象和其消息映射*dynaChainID*，通过定义[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 你必须派生您的类从`CDynamicChain`才能使用`CHAIN_MSG_MAP_DYNAMIC`。 有关示例，请参阅[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概述。  
+ `CHAIN_MSG_MAP_DYNAMIC` 指示消息，在运行时，到另一个对象中的默认消息映射。 与之关联的对象和其消息映射*dynaChainID*，通过定义[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 你必须派生您的类从`CDynamicChain`才能使用`CHAIN_MSG_MAP_DYNAMIC`。 有关示例，请参阅[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概述。  
 
   
 > [!NOTE]
@@ -313,10 +308,10 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
+##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER  
  消息映射中定义一个条目。  
   
 ```
@@ -328,7 +323,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  [in]包含的消息映射的数据成员的名称。  
   
 ### <a name="remarks"></a>备注  
- `CHAIN_MSG_MAP_MEMBER`将定向到的数据成员的默认消息映射消息 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))。 若要将消息定向到的数据成员的备用消息映射 (使用声明[ALT_MSG_MAP](#alt_msg_map))，使用[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)。  
+ `CHAIN_MSG_MAP_MEMBER` 将定向到的数据成员的默认消息映射消息 (使用声明[BEGIN_MSG_MAP](#begin_msg_map))。 若要将消息定向到的数据成员的备用消息映射 (使用声明[ALT_MSG_MAP](#alt_msg_map))，使用[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)。  
   
 > [!NOTE]
 >  始终开始使用消息映射`BEGIN_MSG_MAP`。 然后，你可以声明与后续的备用消息映射`ALT_MSG_MAP`。 [END_MSG_MAP](#end_msg_map)宏标记的消息映射的末尾。 每个消息映射必须具有恰好一个实例`BEGIN_MSG_MAP`和`END_MSG_MAP`。  
@@ -346,10 +341,10 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
   
 -   如果使用窗口过程`CMyClass`的第二个备用的消息映射和`OnChar`不处理消息，该消息定向到指定的备用消息映射的`m_obj`。 类`CMyContainedClass`必须与此消息映射声明`ALT_MSG_MAP(1)`。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
+##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息仅根据通知代码。  
   
 ```
@@ -363,10 +358,10 @@ COMMAND_CODE_HANDLER(code, func)
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="command_handler"></a>COMMAND_HANDLER  
+##  <a name="command_handler"></a>  COMMAND_HANDLER  
  消息映射中定义一个条目。  
   
 ```
@@ -384,7 +379,7 @@ COMMAND_HANDLER(id, code, func)
  [in]消息处理程序函数的名称。  
   
 ### <a name="remarks"></a>备注  
- `COMMAND_HANDLER`映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)为指定的处理程序函数，基于通知代码和控件标识符的消息。 例如:  
+ `COMMAND_HANDLER` 映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)为指定的处理程序函数，基于通知代码和控件标识符的消息。 例如：  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,10 +396,10 @@ COMMAND_HANDLER(id, code, func)
   
  有关在 ATL 中使用消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
+##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息仅根据菜单项、 控件或快捷键的标识符。  
   
 ```
@@ -418,10 +413,10 @@ COMMAND_ID_HANDLER(id, func)
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
+##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
  类似于[COMMAND_RANGE_HANDLER](#command_range_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)中控件的范围到单个处理程序函数的具体的通知代码的消息。  
   
 ```
@@ -444,10 +439,10 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="remarks"></a>备注  
  此范围根据菜单项、 控件或快捷键发送消息的标识符。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
+##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息通过一系列的控件到单个处理程序函数。  
   
 ```
@@ -467,10 +462,10 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="remarks"></a>备注  
  此范围根据菜单项、 控件或快捷键发送消息的标识符。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
+##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP  
  声明空消息映射。  
   
 ```
@@ -478,21 +473,21 @@ DECLARE_EMPTY_MSG_MAP()
 ```  
   
 ### <a name="remarks"></a>备注  
- `DECLARE_EMPTY_MSG_MAP`调用宏是方便宏[BEGIN_MSG_MAP](#begin_msg_map)和[END_MSG_MAP](#end_msg_map)创建空消息映射：  
+ `DECLARE_EMPTY_MSG_MAP` 调用宏是方便宏[BEGIN_MSG_MAP](#begin_msg_map)和[END_MSG_MAP](#end_msg_map)创建空消息映射：  
   
  [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
-##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
+##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER  
  提供的默认处理程序将收到的子窗口 （控件） 反射消息;处理程序将正确未处理将消息传递到`DefWindowProc`。  
   
 ```
 DEFAULT_REFLECTION_HANDLER()
 ```  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="end_msg_map"></a>END_MSG_MAP  
+##  <a name="end_msg_map"></a>  END_MSG_MAP  
  标记消息映射的末尾。  
   
 ```
@@ -515,10 +510,10 @@ END_MSG_MAP()
   
  [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
+##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS  
  将转发到父窗口的通知消息。  
   
 ```
@@ -528,10 +523,10 @@ FORWARD_NOTIFICATIONS()
 ### <a name="remarks"></a>备注  
  消息映射的一部分指定此宏。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="message_handler"></a>MESSAGE_HANDLER  
+##  <a name="message_handler"></a>  MESSAGE_HANDLER  
  消息映射中定义一个条目。  
   
 ```
@@ -546,7 +541,7 @@ MESSAGE_HANDLER( msg, func )
  [in]消息处理程序函数的名称。  
   
 ### <a name="remarks"></a>备注  
- `MESSAGE_HANDLER`将 Windows 消息映射到指定的处理程序函数。  
+ `MESSAGE_HANDLER` 将 Windows 消息映射到指定的处理程序函数。  
   
  中指定任何函数`MESSAGE_HANDLER`必须定义宏，如下所示：  
   
@@ -564,10 +559,10 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#129](../../atl/codesnippet/cpp/message-map-macros-atl_8.h)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
+##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER  
  类似于[MESSAGE_HANDLER](#message_handler)，但映射范围的 Windows 消息都传送到单个处理程序函数。  
   
 ```
@@ -584,10 +579,10 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
+##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅根据通知代码。  
   
 ```
@@ -601,10 +596,10 @@ NOTIFY_CODE_HANDLER(cd, func)
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="notify_handler"></a>NOTIFY_HANDLER  
+##  <a name="notify_handler"></a>  NOTIFY_HANDLER  
  消息映射中定义一个条目。  
   
 ```
@@ -622,7 +617,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in]消息处理程序函数的名称。  
   
 ### <a name="remarks"></a>备注  
- `NOTIFY_HANDLER`映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)为指定的处理程序函数，基于通知代码和控件标识符的消息。  
+ `NOTIFY_HANDLER` 映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)为指定的处理程序函数，基于通知代码和控件标识符的消息。  
   
  中指定任何函数`NOTIFY_HANDLER`必须定义宏，如下所示：  
   
@@ -640,10 +635,10 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
+##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅根据控件标识符。  
   
 ```
@@ -657,10 +652,10 @@ NOTIFY_ID_HANDLER( id, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
  类似于[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)中控件的范围到单个处理程序函数的具体的通知代码的消息。  
   
 ```
@@ -683,10 +678,10 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="remarks"></a>备注  
  此范围取决于发送消息的控件的标识符。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
+##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息通过一系列的控件到单个处理程序函数。  
   
 ```
@@ -706,10 +701,10 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="remarks"></a>备注  
  此范围取决于发送消息的控件的标识符。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
+##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS  
  反映回向他们发送的子窗口 （控件） 的通知消息。  
   
 ```
@@ -719,10 +714,10 @@ REFLECT_NOTIFICATIONS()
 ### <a name="remarks"></a>备注  
  指定为父窗口的消息映射的一部分的此宏。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
+##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER  
  类似于[COMMAND_CODE_HANDLER](#command_code_handler)，但映射反映来自父窗口的命令。  
   
 ```
@@ -736,10 +731,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
    
-##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
+##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射反映来自父窗口的命令。  
   
 ```
@@ -756,10 +751,10 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
+##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER  
  类似于[COMMAND_ID_HANDLER](#command_id_handler)，但映射反映来自父窗口的命令。  
   
 ```
@@ -773,10 +768,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
+##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER  
  类似于[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)，但映射反映来自父窗口的命令。  
   
 ```
@@ -796,10 +791,10 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
+##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER  
  类似于[COMMAND_RANGE_HANDLER](#command_range_handler)，但映射反映来自父窗口的命令。  
   
 ```
@@ -816,10 +811,10 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
+##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER  
  类似于[NOTIFY_CODE_HANDLER](#notify_code_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -833,10 +828,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
+##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -853,10 +848,10 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
+##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER  
  类似于[NOTIFY_ID_HANDLER](#notify_id_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -870,10 +865,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
  `func`  
  [in]消息处理程序函数的名称。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h  
 
-##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
  类似于[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -893,10 +888,10 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  `func`  
  [in]消息处理程序函数的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** atlwin.h   
   
-##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
+##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER  
  类似于[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但映射反映来自父窗口的通知。  
   
 ```

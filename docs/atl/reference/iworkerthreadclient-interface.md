@@ -1,12 +1,9 @@
 ---
-title: "IWorkerThreadClient 接口 |Microsoft 文档"
-ms.custom: 
+title: IWorkerThreadClient 接口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IWorkerThreadClient
@@ -18,20 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b0578b3fbe16d21a12edf2ac5eb91528419e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 接口
-`IWorkerThreadClient`是的客户端实现的接口[CWorkerThread](../../atl/reference/cworkerthread-class.md)类。  
+`IWorkerThreadClient` 是的客户端实现的接口[CWorkerThread](../../atl/reference/cworkerthread-class.md)类。  
   
 > [!IMPORTANT]
 >  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
@@ -54,10 +49,10 @@ __interface IWorkerThreadClient
 ## <a name="remarks"></a>备注  
  当你有需要在响应变得有信号状态的句柄的工作线程上执行的代码，则实现此接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlutil.h  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  实现此方法来关闭与此对象关联的句柄。  
   
 ```
@@ -79,7 +74,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  实现此方法可执行代码时与此对象关联的句柄将被发送信号。  
   
 ```

@@ -2,11 +2,8 @@
 title: 属性映射宏 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>属性映射宏
 这些宏定义属性映射和条目。  
@@ -44,10 +39,10 @@ ms.lasthandoff: 12/21/2017
 |[PROP_PAGE](#prop_page)|输入属性映射属性页的 CLSID。|  
 |[END_PROP_MAP](#end_prop_map)|将标记 ATL 属性映射的末尾。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  标记对象的属性映射的开始。  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  当使用 ATL 项目向导创建对象时，向导将创建的空属性映射，通过指定`BEGIN_PROP_MAP`跟[END_PROP_MAP](#end_prop_map)。  
   
- `BEGIN_PROP_MAP`不保存出的属性映射，程度 （维度），因为使用属性映射的对象可能没有用户界面，使其将不包含任何扩展盘区。 如果对象是具有用户界面的 ActiveX 控件，它具有扩展盘区。 在这种情况下，必须指定[PROP_DATA_ENTRY](#prop_data_entry)属性映射提供范围中。  
+ `BEGIN_PROP_MAP` 不保存出的属性映射，程度 （维度），因为使用属性映射的对象可能没有用户界面，使其将不包含任何扩展盘区。 如果对象是具有用户界面的 ActiveX 控件，它具有扩展盘区。 在这种情况下，必须指定[PROP_DATA_ENTRY](#prop_data_entry)属性映射提供范围中。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  指示的范围内或维度，ActiveX 控件。  
   
 ```
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  使用此宏若要输入对象的属性映射到的属性说明、 属性 DISPID，和属性页的 CLSID。  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>示例  
  请参阅示例[BEGIN_PROP_MAP](#begin_prop_map)。  
   
-##  <a name="prop_entry_type_ex"></a>改用 PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  改用 PROP_ENTRY_TYPE_EX  
  类似于[PROP_ENTRY_TYPE](#prop_entry_type)，但允许你指定特定的 IID，如果你的对象支持多个双重接口。  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  使用此宏若要输入对象的属性映射到的属性页 CLSID。  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in]属性页的 CLSID。  
   
 ### <a name="remarks"></a>备注  
- `PROP_PAGE`类似于[PROP_ENTRY_TYPE](#prop_entry_type)，但不需要的属性说明或 DISPID。  
+ `PROP_PAGE` 类似于[PROP_ENTRY_TYPE](#prop_entry_type)，但不需要的属性说明或 DISPID。  
   
 > [!NOTE]
 >  如果你已经输入与 CLSID`PROP_ENTRY_TYPE`或[改用 PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)，不需要与其他输入`PROP_PAGE`。  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  将标记对象的属性映射的末尾。  
   
 ```

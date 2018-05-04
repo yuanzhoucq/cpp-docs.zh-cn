@@ -2,12 +2,9 @@
 title: -CLRSUPPORTLASTERROR （保留最后一个错误代码为 PInvoke 调用） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLRSUPPORTLASTERROR
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e082637e25832c5c5036910f7b67aff53d867bdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 297414aa71e9d871da795c2ffe567573237c7e0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）
-**/CLRSUPPORTLASTERROR**，这是在默认情况下，使用保留通过 P/Invoke 机制，可用于在 DLL，从代码调用本机函数调用的函数的最后一个错误代码编译**/clr**。  
+**/CLRSUPPORTLASTERROR**，这是在默认情况下，使用保留通过 P/Invoke 机制，可用于在 DLL，从代码调用本机函数调用的函数的最后一个错误代码编译 **/clr**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 保留的最后一个错误代码意味着导致性能降低。  如果您不想要对性能造成影响的保留的最后一个错误代码，与链接**/CLRSUPPORTLASTERROR:NO**。  
+ 保留的最后一个错误代码意味着导致性能降低。  如果您不想要对性能造成影响的保留的最后一个错误代码，与链接 **/CLRSUPPORTLASTERROR:NO**。  
   
- 你可以通过链接性能影响降至最低**/CLRSUPPORTLASTERROR:SYSTEMDLL**，从而仅保留在系统 Dll 中的函数的最后一个错误代码。  系统 DLL 定义为以下项之一：  
+ 你可以通过链接性能影响降至最低 **/CLRSUPPORTLASTERROR:SYSTEMDLL**，从而仅保留在系统 Dll 中的函数的最后一个错误代码。  系统 DLL 定义为以下项之一：  
   
 |||||  
 |-|-|-|-|  
@@ -109,7 +104,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例使用此 DLL，演示如何使用**/CLRSUPPORTLASTERROR**。  
+ 下面的示例使用此 DLL，演示如何使用 **/CLRSUPPORTLASTERROR**。  
   
 ```  
 // CLRSUPPORTLASTERROR_client.cpp  

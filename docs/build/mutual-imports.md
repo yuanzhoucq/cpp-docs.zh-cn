@@ -1,13 +1,10 @@
 ---
-title: "相互导入 |Microsoft 文档"
-ms.custom: 
+title: 相互导入 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>相互导入
 当导入是相互 （或循环） 时，导出或导入到另一个可执行文件比较复杂。 例如，两个 Dll 导入相互，类似于相互递归函数的符号。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
  你可以使用`_AFXEXT`MFC 扩展 Dll，只要你没有 MFC 扩展 Dll 的多个层的预处理器符号。 如果你有 MFC 扩展 Dll 可调用或派生自中你自己的 MFC 扩展 Dll，后者又派生自 MFC 类，类必须使用你自己的预处理器符号以避免多义性。  
   
- 问题在于该在 Win32，所以必须显式声明为任何数据**__declspec （dllexport)**如果它是从 DLL，导出和**__declspec （dllimport)**是否要从 DLL 导入它。 在定义`_AFXEXT`，MFC 标头确保**AFX_EXT_CLASS**正确定义。  
+ 问题在于该在 Win32，所以必须显式声明为任何数据 **__declspec （dllexport)** 如果它是从 DLL，导出和 **__declspec （dllimport)** 是否要从 DLL 导入它。 在定义`_AFXEXT`，MFC 标头确保**AFX_EXT_CLASS**正确定义。  
   
  如果你具有多个层、 一个符号如**AFX_EXT_CLASS**是不够的因为 MFC 扩展 DLL 可能会导出新类，以及从另一个 MFC 扩展 DLL 导入其他类。 若要解决此问题，请使用特殊的预处理器符号，该值指示要生成 DLL 本身还是使用该 DLL。 例如，假设两个 MFC 扩展 Dll、 A.dll 和 B.dll。 每个分别导出 A.h 和 B.h 中的某些类。 B.dll 使用 A.dll 类。 标头文件将如下所示：  
   
@@ -87,14 +82,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- A.dll 生成时，它用生成`/D A_IMPL`和 B.dll 生成时，它用生成`/D B_IMPL`。 每个 DLL，使用单独的符号`CExampleB`导出和`CExampleA`时生成 B.dll，导入。 `CExampleA`导出时生成 A.dll 和导入由 B.dll （或某些其他客户端）。  
+ A.dll 生成时，它用生成`/D A_IMPL`和 B.dll 生成时，它用生成`/D B_IMPL`。 每个 DLL，使用单独的符号`CExampleB`导出和`CExampleA`时生成 B.dll，导入。 `CExampleA` 导出时生成 A.dll 和导入由 B.dll （或某些其他客户端）。  
   
  使用内置时，无法完成这种类型的分层**AFX_EXT_CLASS**和`_AFXEXT`预处理器符号。 上面所述的技术可解决此问题的机制 MFC 本身使用其 Active 技术、 数据库和网络 MFC 扩展 Dll 进行生成时的方式与在。  
   
 ## <a name="not-exporting-the-entire-class"></a>不会导出整个类  
  当不导出整个类时，你必须确保正确导出由 MFC 宏创建的必需数据项目。 这可以通过重新定义完成`AFX_DATA`对特定类的宏。 每当不导出整个类的时候，你应进行此操作。  
   
- 例如:  
+ 例如：  
   
 ```  
 /* A.H */  

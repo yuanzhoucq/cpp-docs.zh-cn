@@ -1,12 +1,9 @@
 ---
-title: "CDefaultHashTraits 类 |Microsoft 文档"
-ms.custom: 
+title: CDefaultHashTraits 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2407ffdd5d8ea327cd4669f2c33ccda5e0246d6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 类
 此类提供用于计算哈希值的静态函数。  
@@ -56,10 +51,10 @@ class CDefaultHashTraits
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>  CDefaultHashTraits::Hash  
  调用此函数可计算给定元素的哈希值。  
   
 ```

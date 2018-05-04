@@ -1,13 +1,10 @@
 ---
-title: "-clr （公共语言运行时编译） |Microsoft 文档"
-ms.custom: 
+title: -clr （公共语言运行时编译） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 允许应用程序和组件使用公共语言运行时 (CLR) 中的功能。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/14/2018
 /clr[:options]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `options`  
  下列开关中的一个或多个（以逗号分隔）。  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 02/14/2018
   
  清单中不具有程序集元数据的托管程序称为 *“模块”*。 **noAssembly** 选项只能用于生成模块。 如果使用 [/c](../../build/reference/c-compile-without-linking.md) 和 **/clr:noAssembly**进行编译，请在创建模块的链接器阶段指定 [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) 选项。  
   
- 在低于 Visual C++ 2005 的版本中， **/clr:noAssembly** 需要 **/LD**。 现在，指定**/LD** 时即暗含 **/LD**。  
+ 在低于 Visual C++ 2005 的版本中， **/clr:noAssembly** 需要 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。  
   
  **/clr:initialAppDomain**  
  允许 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 应用程序在 CLR 版本 1 上运行。 如果你使用**initialAppDomain**，那么你可能会看到的一些问题中所述[BUG: AppDomainUnloaded 异常使用时托管 Visual c + + 组件扩展](http://go.microsoft.com/fwlink/p/?linkid=169465)的 microsoft支持网站。  
@@ -92,7 +87,7 @@ ms.lasthandoff: 02/14/2018
   
  默认情况下， **/clr** 是无效的。 当 **/clr** 有效时， **/MD** 也有效。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)。 **/MD** 确保从标准头 (.h) 文件中选择动态链接的多线程版本运行时例程。 托管编程必须进行多线程处理，因为 CLR 垃圾回收器将在辅助线程中运行终结器。  
   
- 如果通过使用编译**/c**，你可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
+ 如果通过使用编译 **/c**，你可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
   
  **/clr** 暗含 **/EHa**，且 **/clr** 不支持任何其他 **/EH**选项。 有关详细信息，请参阅 [/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)。  
   
@@ -133,13 +128,13 @@ class {} x;
     > [!NOTE]
     >  在“属性页”对话框中启用 **/clr** 时，还将根据需要调整与 **/clr** 不兼容的编译器选项属性。  例如，如果设置了 **/RTC** ，又启用了 **/clr** ，则将关闭 **/RTC** 。  
     >   
-    >  此外，当调试**/clr**应用程序，来设置**调试器类型**属性**混合**或**仅限托管**。 有关详细信息，请参阅[用于 c + + 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。  
+    >  此外，当调试 **/clr**应用程序，来设置**调试器类型**属性**混合**或**仅限托管**。 有关详细信息，请参阅[用于 c + + 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。  
   
      了解如何创建模块，请参阅[/NOASSEMBLY （创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md)。  
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。  
   
 ## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   

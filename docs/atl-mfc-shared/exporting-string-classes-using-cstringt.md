@@ -1,29 +1,24 @@
 ---
-title: "导出字符串类使用 CStringT |Microsoft 文档"
-ms.custom: 
+title: 导出字符串类使用 CStringT |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510b1f44f49d17211c71419f4dde5a6e6a78974
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>导出使用 CStringT 字符串类
 在过去，MFC 开发人员有派生自`CString`特别指明它们自己的字符串类。 在 Microsoft Visual c + +.NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md)类被取代调用一种模板类[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 这提供以下几个好处：  
@@ -32,7 +27,7 @@ ms.lasthandoff: 12/21/2017
   
 -   与新`CStringT`模板类，可以自定义`CString`使用指定字符特征，类似于 c + + 标准库中的模板的模板参数的行为。  
   
--   当将您自己的字符串类导出从 DLL 使用`CStringT`，编译器也会自动导出`CString`基类。 由于`CString`本身是一种模板类，它可能被实例化由编译器时使用，除非编译器已注意到，`CString`从 DLL 导入。 如果你迁移项目从 Visual c + + 6.0 到 Visual c + +.NET，你可能看到的乘定义的链接器的符号错误`CString`由于的冲突`CString`从一个 DLL 和本地实例化的版本导入。 下面描述了执行此操作的正确方法。 有关此问题的详细信息，请参阅知识库文章中，"链接错误，当你导入 CString 派生类"(Q309801) 在[http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx)。  
+-   当将您自己的字符串类导出从 DLL 使用`CStringT`，编译器也会自动导出`CString`基类。 由于`CString`本身是一种模板类，它可能被实例化由编译器时使用，除非编译器已注意到，`CString`从 DLL 导入。 如果你迁移项目从 Visual c + + 6.0 到 Visual c + +.NET，你可能看到的乘定义的链接器的符号错误`CString`由于的冲突`CString`从一个 DLL 和本地实例化的版本导入。 下面描述了执行此操作的正确方法。 有关此问题的详细信息，请参阅知识库文章中，"链接错误，当你导入 CString 派生类"(Q309801) 在[ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx)。  
   
  以下方案将导致链接器以生成乘定义类的符号错误。 假设你要导出`CString`-派生类 (`CMyString`) 从 MFC 扩展 DLL:  
   

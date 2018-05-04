@@ -1,12 +1,9 @@
 ---
-title: "CComObject 类 |Microsoft 文档"
-ms.custom: 
+title: CComObject 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObject
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobject-class"></a>CComObject 类
 此类实现**IUnknown**非聚合对象。  
@@ -116,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- 此静态函数使你可以创建一个新**CComObject <** `Base`  **>** 对象，而无需开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此静态函数使你可以创建一个新**CComObject <** `Base` **>** 对象，而无需开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -124,7 +119,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>参数  
  `pp`  
- [out]指向的指针**CComObject <** `Base`  **>** 指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
+ [out]指向的指针**CComObject <** `Base` **>** 指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
@@ -171,7 +166,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>返回值  
  此函数返回的对象上的新递减引用计数。 在调试版本中，返回的值可能是用于诊断或测试。 在非调试版本中，**版本**始终返回 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
  [CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   

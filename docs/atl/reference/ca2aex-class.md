@@ -1,12 +1,9 @@
 ---
-title: "CA2AEX 类 |Microsoft 文档"
-ms.custom: 
+title: CA2AEX 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdbdebb1ab79ceab44a408fc182b6037f2d32fae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2aex-class"></a>CA2AEX 类
 此类由字符串转换宏`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。  
@@ -94,10 +89,10 @@ class CA2AEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlconv.h  
   
-##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
+##  <a name="ca2aex"></a>  CA2AEX::CA2AEX  
  构造函数。  
   
 ```
@@ -115,7 +110,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>备注  
  创建转换所需的缓冲区。  
   
-##  <a name="dtor"></a>CA2AEX:: ~ CA2AEX  
+##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX  
  析构函数。  
   
 ```
@@ -125,21 +120,21 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>备注  
  释放已分配的缓冲区。  
   
-##  <a name="m_psz"></a>CA2AEX::m_psz  
+##  <a name="m_psz"></a>  CA2AEX::m_psz  
  将源字符串存储数据成员。  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer  
  静态缓冲区，用于存储已转换的字符串。  
   
 ```
 char m_szBuffer[ t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CA2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CA2AEX::operator LPSTR  
  转换运算符。  
   
 ```

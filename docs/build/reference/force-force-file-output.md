@@ -1,13 +1,10 @@
 ---
-title: "-FORCE （强制文件输出） |Microsoft 文档"
-ms.custom: 
+title: -FORCE （强制文件输出） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceLink
 - /force
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec19beec52a217df1237de41d0bd81ab447a56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1daa27ce48590d4a122eafde9f63f7142271610
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="force-force-file-output"></a>/FORCE（强制文件输出）
 ```  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  使用此选项创建的文件可能未按预期运行。 链接器不会在指定 /FORCE 选项时以增量方式将链接。  
   
- 如果使用编译模块**/clr**， **/强制**将不会创建映像。  
+ 如果使用编译模块 **/clr**， **/强制**将不会创建映像。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   

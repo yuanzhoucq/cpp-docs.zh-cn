@@ -2,12 +2,9 @@
 title: -Fd （程序数据库文件名） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /FD
 - VC.Project.VCCLWCECompilerTool.ProgramDataBaseFileName
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cda26f310ec110c452394e960d3fb81d1f3e8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07ab9f1d9c5c611b8da8b19860fe9e0c05351d75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fd-program-database-file-name"></a>/Fd（程序数据库文件名）
 指定创建的程序数据库 (PDB) 文件的文件名[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 而无需**/Fd**，PDB 文件名称默认为 VC*x*0.pdb，其中*x*是在使用 Visual c + + 的主要版本。  
+ 而无需 **/Fd**，PDB 文件名称默认为 VC*x*0.pdb，其中*x*是在使用 Visual c + + 的主要版本。  
   
  如果指定不包括文件名称 （路径以反斜杠结尾） 的路径名称，编译器将创建一个名为 VC 的.pdb 文件*x*0 指定目录中的 pdb。  
   

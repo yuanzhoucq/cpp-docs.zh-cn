@@ -1,13 +1,10 @@
 ---
-title: "堆栈 （堆栈分配） |Microsoft 文档"
-ms.custom: 
+title: 堆栈 （堆栈分配） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.StackReserveSize
 - VC.Project.VCLinkerTool.StackCommitSize
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b487ff830abd3dfa97a748c81d541cbd9fdd0b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8ee3fac90bcbb972278d9b3e2cf7cebd62fedf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-stack-allocations"></a>/STACK（堆栈分配）
 ```  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  `reserve`值指定的总堆栈分配虚拟内存中。 对于 ARM、x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 计算机，默认堆栈大小为 1 MB。  
   
- `commit`受到操作系统的解释。 在 Windows RT 中，它指定一次性分配的物理内存量。 提交的虚拟内存后，要分页文件中保留的空间。 当应用程序需要更多堆栈空间时，增大 `commit` 值可以节省时间，但会增加内存需求并可能延长启动时间。 对于 ARM、x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 计算机，默认提交值为 4 KB。  
+ `commit` 受到操作系统的解释。 在 Windows RT 中，它指定一次性分配的物理内存量。 提交的虚拟内存后，要分页文件中保留的空间。 当应用程序需要更多堆栈空间时，增大 `commit` 值可以节省时间，但会增加内存需求并可能延长启动时间。 对于 ARM、x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 计算机，默认提交值为 4 KB。  
   
  以十进制或 C 语言表示方式指定 `reserve` 和 `commit` 值。  
   

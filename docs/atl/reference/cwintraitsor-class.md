@@ -2,11 +2,8 @@
 title: CWinTraitsOR 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraitsOR
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 类
 此类提供的方法来标准化时创建的窗口对象使用的样式。  
@@ -69,10 +64,10 @@ class CWinTraitsOR
   
  如果你想要提供默认值，仅当对的调用中不指定任何其他样式时将使用的窗口样式`CWindowImpl::Create`，使用[CWinTraits](../../atl/reference/cwintraits-class.md)相反。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
  调用此函数可检索 （使用逻辑 OR 运算符） 的标准样式的组合`CWinTraits`对象和指定的默认样式`t_dwStyle`。  
   
 ```
@@ -86,7 +81,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>返回值  
  传入的样式的组合`dwStyle`和默认值的指定`t_dwStyle`，使用逻辑 OR 运算符。  
   
-##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
  调用此函数可检索的扩展样式的组合 （使用逻辑 OR 运算符）`CWinTraits`对象和指定的默认样式`t_dwStyle`。  
   
 ```

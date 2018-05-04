@@ -1,12 +1,9 @@
 ---
-title: "CComModule 类 |Microsoft 文档"
-ms.custom: 
+title: CComModule 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComModule
@@ -40,17 +37,15 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05b4ec763f6ee719e96627be3dc81a1e9b56c2c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 ATL 7.0 截至`CComModule`已弃用： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
@@ -102,9 +97,9 @@ class CComModule : public _ATL_MODULE
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此类已弃用，和 ATL 代码生成向导现在使用[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)和[CAtlModule](../../atl/reference/catlmodule-class.md)派生类。 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。 后面的信息可用于与使用的 atl。 较旧版本创建的应用程序 `CComModule`仍然是一部分的 ATL 的向后功能。  
+>  此类已弃用，和 ATL 代码生成向导现在使用[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)和[CAtlModule](../../atl/reference/catlmodule-class.md)派生类。 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。 后面的信息可用于与使用的 atl。 较旧版本创建的应用程序 `CComModule` 仍然是一部分的 ATL 的向后功能。  
   
- `CComModule`实现 COM 服务器模块，从而使客户端访问模块的组件。 `CComModule`支持两个 DLL （进程） 和 EXE （本地） 模块。  
+ `CComModule` 实现 COM 服务器模块，从而使客户端访问模块的组件。 `CComModule` 支持两个 DLL （进程） 和 EXE （本地） 模块。  
   
  A`CComModule`实例使用的对象映射来维护一组类对象定义。 此对象映射实现为一个数组`_ATL_OBJMAP_ENTRY`结构，并包含有关的信息：  
   
@@ -129,10 +124,10 @@ class CComModule : public _ATL_MODULE
   
  `CComModule`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="getclassobject"></a>CComModule::GetClassObject  
+##  <a name="getclassobject"></a>  CComModule::GetClassObject  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -158,9 +153,9 @@ HRESULT GetClassObject(
 ### <a name="remarks"></a>备注  
  创建指定的 CLSID 的对象并检索到此对象的接口指针。  
   
- `GetClassObject`仅可用于 Dll。  
+ `GetClassObject` 仅可用于 Dll。  
   
-##  <a name="getmoduleinstance"></a>CComModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>  CComModule::GetModuleInstance  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -173,7 +168,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="remarks"></a>备注  
  返回[m_hInst](#m_hinst)数据成员。  
   
-##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>  CComModule::GetResourceInstance  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -186,7 +181,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="remarks"></a>备注  
  返回[m_hInstResource](#m_hinstresource)数据成员。  
   
-##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
+##  <a name="gettypelibinstance"></a>  CComModule::GetTypeLibInstance  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -199,7 +194,7 @@ HINSTANCE GetTypeLibInstance() const throw();
 ### <a name="remarks"></a>备注  
  返回[m_hInstTypeLib](#m_hinsttypelib)数据成员。  
   
-##  <a name="init"></a>CComModule::Init  
+##  <a name="init"></a>  CComModule::Init  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -225,7 +220,7 @@ HRESULT Init(
 ### <a name="remarks"></a>备注  
  初始化所有数据成员。  
   
-##  <a name="m_csobjmap"></a>CComModule::m_csObjMap  
+##  <a name="m_csobjmap"></a>  CComModule::m_csObjMap  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -235,7 +230,7 @@ CRITICAL_SECTION m_csObjMap;
 ### <a name="remarks"></a>备注  
  确保同步的访问对象映射。  
   
-##  <a name="m_cstypeinfoholder"></a>CComModule::m_csTypeInfoHolder  
+##  <a name="m_cstypeinfoholder"></a>  CComModule::m_csTypeInfoHolder  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -245,7 +240,7 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 ### <a name="remarks"></a>备注  
  可确保对该类型库的同步的访问。  
   
-##  <a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
+##  <a name="m_cswindowcreate"></a>  CComModule::m_csWindowCreate  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -255,7 +250,7 @@ CRITICAL_SECTION m_csWindowCreate;
 ### <a name="remarks"></a>备注  
  可确保窗口类信息并对在窗口创建过程中使用的静态数据的同步的访问。  
   
-##  <a name="m_hinst"></a>CComModule::m_hInst  
+##  <a name="m_hinst"></a>  CComModule::m_hInst  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -267,7 +262,7 @@ HINSTANCE m_hInst;
   
  [Init](#init)方法设置`m_hInst`到句柄传递给**DLLMain**或`WinMain`。  
   
-##  <a name="m_hinstresource"></a>CComModule::m_hInstResource  
+##  <a name="m_hinstresource"></a>  CComModule::m_hInstResource  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -281,7 +276,7 @@ HINSTANCE m_hInstResource;
   
  [GetResourceInstance](#getresourceinstance)方法返回的句柄存储在`m_hInstResource`。  
   
-##  <a name="m_hinsttypelib"></a>CComModule::m_hInstTypeLib  
+##  <a name="m_hinsttypelib"></a>  CComModule::m_hInstTypeLib  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -295,7 +290,7 @@ HINSTANCE m_hInstTypeLib;
   
  [GetTypeLibInstance](#gettypelibinstance)方法返回的句柄存储在`m_hInstTypeLib`。  
   
-##  <a name="m_pobjmap"></a>CComModule::m_pObjMap  
+##  <a name="m_pobjmap"></a>  CComModule::m_pObjMap  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -305,7 +300,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 ### <a name="remarks"></a>备注  
  指向由模块实例维护的对象映射。  
   
-##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
+##  <a name="registerclasshelper"></a>  CComModule::RegisterClassHelper  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -341,7 +336,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
   
  [UpdateRegistryClass](#updateregistryclass)方法调用`RegisterClassHelper`。  
   
-##  <a name="registerclassobjects"></a>CComModule::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>  CComModule::RegisterClassObjects  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -361,7 +356,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="remarks"></a>备注  
  向 OLE 注册 EXE 类对象，以便其他应用程序可以连接到它。 此方法仅供 Exe。  
   
-##  <a name="registerserver"></a>CComModule::RegisterServer  
+##  <a name="registerserver"></a>  CComModule::RegisterServer  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -387,9 +382,9 @@ HRESULT RegisterServer(
   
  请参阅[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)有关如何将条目添加到对象映射的信息。  
   
- `RegisterServer`将自动调用**dllregisterserver 的调用**dll 或`WinMain`为使用运行 EXE **/RegServer**命令行选项。  
+ `RegisterServer` 将自动调用**dllregisterserver 的调用**dll 或`WinMain`为使用运行 EXE **/RegServer**命令行选项。  
   
-##  <a name="registertypelib"></a>CComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CComModule::RegisterTypeLib  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -409,7 +404,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
   
  如果模块实例包含多个类型库，使用此方法的第二个版本可指定应使用哪些类型库。  
   
-##  <a name="revokeclassobjects"></a>CComModule::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>  CComModule::RevokeClassObjects  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -422,7 +417,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="remarks"></a>备注  
  中删除类的对象。 此方法仅供 Exe。  
   
-##  <a name="term"></a>CComModule::Term  
+##  <a name="term"></a>  CComModule::Term  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -432,7 +427,7 @@ void Term() throw();
 ### <a name="remarks"></a>备注  
  释放所有数据成员。  
   
-##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
+##  <a name="unregisterclasshelper"></a>  CComModule::UnregisterClassHelper  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -460,7 +455,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
   
  [UpdateRegistryClass](#updateregistryclass)方法调用`UnregisterClassHelper`。  
   
-##  <a name="unregisterserver"></a>CComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CComModule::UnregisterServer  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -481,11 +476,11 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 ### <a name="remarks"></a>备注  
  具体取决于`pCLSID`参数，注销单个类对象或对象映射中的所有对象。  
   
- `UnregisterServer`将自动调用**DLLUnregisterServer** dll 或`WinMain`为使用运行 EXE **/UnregServer**命令行选项。  
+ `UnregisterServer` 将自动调用**DLLUnregisterServer** dll 或`WinMain`为使用运行 EXE **/UnregServer**命令行选项。  
   
  请参阅[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)有关如何将条目添加到对象映射的信息。  
   
-##  <a name="updateregistryclass"></a>CComModule::UpdateRegistryClass  
+##  <a name="updateregistryclass"></a>  CComModule::UpdateRegistryClass  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -540,7 +535,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
   
  通过指定[DECLARE_REGISTRY](registry-macros.md#declare_registry)宏，`UpdateRegistryClass`处理对象映射时将自动调用。  
   
-##  <a name="updateregistryfromresourced"></a>CComModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CComModule::UpdateRegistryFromResourceD  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -579,14 +574,14 @@ virtual HRESULT UpdateRegistryFromResourceD(
  通过指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏，`UpdateRegistryFromResourceD`处理对象映射时将自动调用。  
   
 > [!NOTE]
->  要替换的替换值在运行时，不要指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`宏。 相反，创建的数组**_ATL_REGMAP_ENTRIES**与一个要在运行时替换占位符值成对出现的结构，其中的每个条目都包含变量的占位符。 然后调用`UpdateRegistryFromResourceD`，传递数组`pMapEntries`参数。 这将添加中的所有替换值**_ATL_REGMAP_ENTRIES**结构到注册机构的替换映射。  
+>  要替换的替换值在运行时，不要指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`宏。 相反，创建的数组 **_ATL_REGMAP_ENTRIES**与一个要在运行时替换占位符值成对出现的结构，其中的每个条目都包含变量的占位符。 然后调用`UpdateRegistryFromResourceD`，传递数组`pMapEntries`参数。 这将添加中的所有替换值 **_ATL_REGMAP_ENTRIES**结构到注册机构的替换映射。  
   
 > [!NOTE]
 >  若要静态链接到 ATL 注册表组件 （注册器），请参阅[UpdateRegistryFromResourceS](#updateregistryfromresources)。  
   
  有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。  
   
-##  <a name="updateregistryfromresources"></a>CComModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CComModule::UpdateRegistryFromResourceS  
  ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
@@ -620,10 +615,10 @@ virtual HRESULT UpdateRegistryFromResourceS(
 ### <a name="remarks"></a>备注  
  类似于[UpdateRegistryFromResourceD](#updateregistryfromresourced)除`UpdateRegistryFromResourceS`创建静态链接到 ATL 注册表组件 （注册器）。  
   
- `UpdateRegistryFromResourceS`将调用自动处理对象映射时，提供你添加`#define _ATL_STATIC_REGISTRY`为你 stdafx.h。  
+ `UpdateRegistryFromResourceS` 将调用自动处理对象映射时，提供你添加`#define _ATL_STATIC_REGISTRY`为你 stdafx.h。  
   
 > [!NOTE]
->  要替换的替换值在运行时，不要指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏。 相反，创建的数组**_ATL_REGMAP_ENTRIES**与一个要在运行时替换占位符值成对出现的结构，其中的每个条目都包含变量的占位符。 然后调用`UpdateRegistryFromResourceS`，传递数组`pMapEntries`参数。 这将添加中的所有替换值**_ATL_REGMAP_ENTRIES**结构到注册机构的替换映射。  
+>  要替换的替换值在运行时，不要指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏。 相反，创建的数组 **_ATL_REGMAP_ENTRIES**与一个要在运行时替换占位符值成对出现的结构，其中的每个条目都包含变量的占位符。 然后调用`UpdateRegistryFromResourceS`，传递数组`pMapEntries`参数。 这将添加中的所有替换值 **_ATL_REGMAP_ENTRIES**结构到注册机构的替换映射。  
   
  有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。  
   

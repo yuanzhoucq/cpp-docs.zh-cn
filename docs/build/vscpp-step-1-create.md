@@ -1,9 +1,9 @@
 ---
-title: "创建 c + + 控制台应用程序项目 |Microsoft 文档"
-description: "在 Visual c + + 中创建的 Hello World 控制台应用"
+title: 创建 c + + 控制台应用程序项目 |Microsoft 文档
+description: 在 Visual c + + 中创建的 Hello World 控制台应用
 ms.custom: mvc
 ms.date: 12/12/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ms.technology:
 - devlang-C++
 ms.devlang: C++
@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76975054aad3173fef99a2e0f6c5ca1c642dea86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 35b7b896dfb2a4c9dd37a9f59476cbc7f23c3902
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-c-console-app-project"></a>创建 c + + 控制台应用程序项目
 
@@ -37,7 +36,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
    ![打开新项目对话框](../build/media/vscpp-file-new-project.gif "打开新项目对话框")
 
-1. 在**新项目**对话框中，选择**已安装**， **Visual c + +**如果它未连接，请选中，然后选择**空项目**模板。 在**名称**字段中，输入*HelloWorld*。 选择**确定**以创建该项目。
+1. 在**新项目**对话框中，选择**已安装**， **Visual c + +** 如果它未连接，请选中，然后选择**空项目**模板。 在**名称**字段中，输入*HelloWorld*。 选择**确定**以创建该项目。
 
    ![命名并创建新项目](../build/media/vscpp-concierge-project-name-callouts.png "名称并创建新项目")
 
@@ -63,7 +62,7 @@ Visual Studio 现在知道生成项目以在控制台窗口中运行。 接下�
 
 1. 在**解决方案资源管理器**，选择 HelloWorld 项目。 在菜单栏上，选择**项目**，**添加新项**以打开**添加新项**对话框。
 
-1. 在**添加新项**对话框中，选择**Visual c + +**下**已安装**如果已选中。 在中心窗格中，选择**c + + 文件 (.cpp)**。 更改**名称**到*HelloWorld.cpp*。 选择**添加**以关闭对话框并创建该文件。
+1. 在**添加新项**对话框中，选择**Visual c + +** 下**已安装**如果已选中。 在中心窗格中，选择**c + + 文件 (.cpp)**。 更改**名称**到*HelloWorld.cpp*。 选择**添加**以关闭对话框并创建该文件。
 
    ![添加一个源文件的 HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "为 HelloWorld.cpp 添加源文件")
 
@@ -104,7 +103,7 @@ Visual studio 创建新的空代码文件，并将其打开在编辑器窗口中
 
 ### <a name="create-your-app-project-issues"></a>创建你的应用程序项目问题
 
-如果**新项目**对话框不会显示**Visual c + +**下的项**已安装**，你的 Visual Studio 副本可能不具有**桌面使用 c + + 开发**安装的工作负荷。 你可以运行安装程序直接从**新项目**对话框。 选择**打开 Visual Studio 安装程序**再次启动安装程序的链接。 如果**用户帐户控制**对话框请求的权限，选择**是**。 在安装程序，请确保**使用 c + + 桌面开发**工作负荷已选中，然后选择**确定**更新你的 Visual Studio 安装。
+如果**新项目**对话框不会显示**Visual c + +** 下的项**已安装**，你的 Visual Studio 副本可能不具有**桌面使用 c + + 开发**安装的工作负荷。 你可以运行安装程序直接从**新项目**对话框。 选择**打开 Visual Studio 安装程序**再次启动安装程序的链接。 如果**用户帐户控制**对话框请求的权限，选择**是**。 在安装程序，请确保**使用 c + + 桌面开发**工作负荷已选中，然后选择**确定**更新你的 Visual Studio 安装。
 
 如果已存在具有相同名称的另一个项目，为你的项目，选择其他名称或删除现有的项目，然后重试。 若要删除现有项目，请在文件资源管理器删除的解决方案文件夹 （包含 helloworld.sln 文件的文件夹）。
 
