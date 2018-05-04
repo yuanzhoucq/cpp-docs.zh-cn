@@ -2,26 +2,21 @@
 title: 类型转换和类型安全 （现代 C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dabba7b7cfc769d91471c2dfc6f92f1b414996
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>类型转换和类型安全（现代 C++）
 本文档确定了一些常见的类型转换问题，并介绍了如何在 C++ 代码中避免它们。  

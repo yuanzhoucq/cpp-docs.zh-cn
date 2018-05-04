@@ -2,11 +2,8 @@
 title: 模板 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>模板 (C++)
 模板是用于在 C++ 中泛型的编程的基础。 作为强类型语言，C++ 需要具有特定类型，显式声明由程序员或由编译器推导的所有变量。 但是，许多数据结构和算法如果查阅无论它们只在运行哪种类型相同。 模板启用您定义的操作的类或函数，并使用户能够指定哪些具体类型这些操作不应处理。  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 上面的代码介绍了具有单个类型参数的泛型函数模板`T`，其返回值和调用参数 （lhs 和 rhs） 是所有此类型。 你可以指定任何你类似，但通过约定单个大写字母最常使用名称的类型参数。 `T`是模板参数，则`typename`关键字显示此参数是一种类型的占位符。 当调用函数时，编译器将替换的每个实例`T`与具体的类型参数已由用户指定，或者由编译器推导。 过程中，编译器将生成一个类，或从模板的函数称为*模板实例化*;  `minimum<int>`是实例化的模板`minimum<T>`。  
+ 上面的代码介绍了具有单个类型参数的泛型函数模板`T`，其返回值和调用参数 （lhs 和 rhs） 是所有此类型。 你可以指定任何你类似，但通过约定单个大写字母最常使用名称的类型参数。 `T` 是模板参数，则`typename`关键字显示此参数是一种类型的占位符。 当调用函数时，编译器将替换的每个实例`T`与具体的类型参数已由用户指定，或者由编译器推导。 过程中，编译器将生成一个类，或从模板的函数称为*模板实例化*;  `minimum<int>`是实例化的模板`minimum<T>`。  
   
  在其他位置，用户可以声明的模板的专用于 int。 实例假定 get_a() 和 get_b() 是返回 int 的函数：  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  如何编译器在函数模板中执行类型推导的规则基于普通函数的规则。 有关详细信息，请参阅[重载解析的函数模板调用](../cpp/overload-resolution-of-function-template-calls.md)。  
   
-## <a id="type_parameters"></a>类型参数  
+## <a id="type_parameters"></a> 类型参数  
  在`minimum`模板更高版本，请注意，类型参数`T`直到添加 const 和引用限定符下使用在函数调用参数中，未以任何方式进行限定。  
   
  类型参数的数目没有实际限制。 使用逗号分隔多个参数：  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  其他类型的值包括指针和引用可以作为非类型参数传递中。 例如，你可以传递一个指针到函数或函数对象，以自定义模板代码内的某些操作。  
   
-## <a id="template_parameters"></a>作为模板参数的模板  
+## <a id="template_parameters"></a> 作为模板参数的模板  
  模板可以是模板参数。 在此示例中，MyClass2 具有两个模板参数： 类型名称参数`T`和模板参数`Arr`:  
   
 ```cpp  

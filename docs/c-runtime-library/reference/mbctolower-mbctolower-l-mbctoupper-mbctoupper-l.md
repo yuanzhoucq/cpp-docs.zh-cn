@@ -2,11 +2,8 @@
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctolower_l
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbe370fa5443ade72d352768d299fd6ac697288d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -110,7 +105,7 @@ unsigned int _mbctoupper_l(
 |**_mbctolower**， **_mbctolower_l**|大写字符到小写字符。|
 |**_mbctoupper**， **_mbctoupper_l**|小写字符到大写字符。|
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 此函数而无需的版本 **_l**后缀使用当前区域设置区域设置相关的行为; 的版本与 **_l**后缀是相同，但它使用的区域设置参数改用已传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此函数而无需的版本 **_l**后缀使用当前区域设置区域设置相关的行为; 的版本与 **_l**后缀是相同，但它使用的区域设置参数改用已传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在以前版本， **_mbctolower**调用**jtolower**，和 **_mbctoupper**调用**jtoupper**。 对于新代码，请改用新名称。
 

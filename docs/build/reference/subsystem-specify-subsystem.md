@@ -1,13 +1,10 @@
 ---
-title: "-SUBSYSTEM （指定子系统） |Microsoft 文档"
-ms.custom: 
+title: -SUBSYSTEM （指定子系统） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM（指定子系统）
 ```  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  窗口  
  应用程序不需要控制台中，因为它可以创建其自己的与用户交互的窗口。 如果`WinMain`或`wWinMain`定义对于本机代码，或`WinMain(HISTANCE *, HINSTANCE *, char *, int)`或`wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`定义托管代码中，对于 WINDOWS 是默认值。  
   
- `Major`和`minor`（可选）  
+ `Major` 和`minor`（可选）  
  指定的子系统的最低所需的版本。 这些参数是十进制数字 0 到 65535 范围内。 请参阅有关详细信息备注。 为版本号没有上限。  
   
 ## <a name="remarks"></a>备注  

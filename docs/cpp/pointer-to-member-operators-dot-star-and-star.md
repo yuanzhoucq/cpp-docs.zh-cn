@@ -1,12 +1,9 @@
 ---
-title: "指针到成员运算符:。 * 和-&gt;* |Microsoft 文档"
-ms.custom: 
+title: 指针到成员运算符:。 * 和-&gt;* |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .*
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>指针到成员运算符:。 * 和-&gt;*
 ## <a name="syntax"></a>语法  
@@ -144,6 +139,6 @@ int main() {
 > [!NOTE]
 >  如果某个指向成员的指针运算符的结果是函数，则该结果只能用作函数调用运算符的操作数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 

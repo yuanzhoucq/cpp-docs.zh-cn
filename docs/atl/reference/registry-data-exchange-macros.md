@@ -2,11 +2,8 @@
 title: 注册表数据交换宏 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlplus/ATL::BEGIN_RDX_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bc12c48ef628a42c309c44ce0fc37abda9b6690
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-data-exchange-macros"></a>注册表数据 Exchange 宏
 这些宏执行注册表数据交换操作。  
@@ -44,10 +39,10 @@ ms.lasthandoff: 12/21/2017
 |[RDX_DWORD](#rdx_dword)|将指定的注册表条目与类型为 DWORD 的指定的成员变量相关联。|  
 |[RDX_TEXT](#rdx_text)|将指定的注册表条目与指定的成员类型的变量的 TCHAR 相关联。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlplus.h  
    
-##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
  标记注册表数据交换映射的开始。  
   
 ```
@@ -66,14 +61,14 @@ BEGIN_RDX_MAP
   
  全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或通过创建具有相同名称的成员函数`BEGIN_RDX_MAP`和`END_RDX_MAP`你的代码需要在系统注册表之间交换数据时，应使用宏，与RDX 映射中指定的变量。  
   
-##  <a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>  END_RDX_MAP  
  标记注册表数据交换映射的末尾。  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>  RDX_BINARY  
  将指定的注册表条目与类型为 BYTE 的指定的成员变量相关联。  
   
 ```
@@ -104,7 +99,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>备注  
  结合使用此宏`BEGIN_RDX_MAP`和`END_RDX_MAP`宏，以将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或通过创建具有相同名称的成员函数`BEGIN_RDX_MAP`和`END_RDX_MAP`宏，应该用于执行的系统注册表和成员之间的数据交换RDX 映射中的变量。  
   
-##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
  将指定的注册表条目与指定的成员类型的变量的 CString 相关联。  
   
 ```
@@ -135,7 +130,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>备注  
  结合使用此宏`BEGIN_RDX_MAP`和`END_RDX_MAP`宏，以将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或通过创建具有相同名称的成员函数`BEGIN_RDX_MAP`和`END_RDX_MAP`宏，应该用于执行的系统注册表和成员之间的数据交换RDX 映射中的变量。  
   
-##  <a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>  RDX_DWORD  
  将指定的注册表条目与类型为 DWORD 的指定的成员变量相关联。  
   
 ```
@@ -166,7 +161,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>备注  
  结合使用此宏`BEGIN_RDX_MAP`和`END_RDX_MAP`宏，以将成员变量与给定的注册表项相关联。 全局函数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或通过创建具有相同名称的成员函数`BEGIN_RDX_MAP`和`END_RDX_MAP`宏，应该用于执行的系统注册表和成员之间的数据交换RDX 映射中的变量。  
   
-##  <a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>  RDX_TEXT  
  将指定的注册表条目与指定的成员类型的变量的 TCHAR 相关联。  
   
 ```

@@ -1,13 +1,10 @@
 ---
 title: 关键字 （C++） |Microsoft 文档
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keywords-c"></a>关键字 （C++）
 关键字是具有特殊意义的预定义保留标识符。 它们不能用作程序中的标识符。 Microsoft C++ 保留了下列关键字。 带前导下划线的名称是 Microsoft 扩展。  
@@ -53,16 +48,16 @@ ms.lasthandoff: 12/21/2017
 |[__w64](../cpp/w64.md)|[__wchar_t wchar_t](../cpp/fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|  
 |[array](../windows/arrays-cpp-component-extensions.md)|[auto](../cpp/auto-keyword.md)|[bool](../cpp/bool-cpp.md)|  
 |[break](../cpp/break-statement-cpp.md)|[case](../cpp/switch-statement-cpp.md)|[catch](../cpp/try-throw-and-catch-statements-cpp.md)|  
-|[char](../cpp/fundamental-types-cpp.md)|[类](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
+|[char](../cpp/fundamental-types-cpp.md)|[class](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
 |[const_cast](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|[decltype](../cpp/decltype-cpp.md)|  
-|[default](../cpp/switch-statement-cpp.md)|[委托](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
+|[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
 |[弃用](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[dllimport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
 |[do](../cpp/do-while-statement-cpp.md)|[double](../cpp/fundamental-types-cpp.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|  
 |[else](../cpp/if-else-statement-cpp.md)|[enum](../cpp/enumerations-cpp.md)|[枚举类](../windows/enum-class-cpp-component-extensions.md)|  
-|[enum 结构](../windows/enum-class-cpp-component-extensions.md)|[事件](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
+|[enum 结构](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
 |[extern](../cpp/using-extern-to-specify-linkage.md)|[false](../cpp/false-cpp.md)|[finally](../dotnet/finally.md)|  
 |[float](../cpp/fundamental-types-cpp.md)|[for](../cpp/for-statement-cpp.md)|[for each, in](../dotnet/for-each-in.md)|  
-|[友元](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|[friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |[泛型](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
 |[initonly](../dotnet/initonly-cpp-cli.md)|[内联](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
 |[接口类](../windows/interface-class-cpp-component-extensions.md)|[接口结构](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|  
@@ -70,8 +65,8 @@ ms.lasthandoff: 12/21/2017
 |[裸](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |[new](../cpp/new-operator-cpp.md)|[noinline](../cpp/noinline.md) <sup>1</sup>|[noreturn](../cpp/noreturn.md) <sup>1</sup>|  
 |[nothrow](../cpp/nothrow-cpp.md) <sup>1</sup>|[novtable](../cpp/novtable.md) <sup>1</sup>|[nullptr](../cpp/nullptr.md)|  
-|[operator](../cpp/operator-overloading.md)|[专用](../cpp/private-cpp.md)|[属性](../windows/property-cpp-component-extensions.md)|  
-|[属性](../cpp/property-cpp.md) <sup>1</sup>|[受保护](../cpp/protected-cpp.md)|[公用](../cpp/public-cpp.md)|  
+|[operator](../cpp/operator-overloading.md)|[private](../cpp/private-cpp.md)|[属性](../windows/property-cpp-component-extensions.md)|  
+|[属性](../cpp/property-cpp.md) <sup>1</sup>|[protected](../cpp/protected-cpp.md)|[public](../cpp/public-cpp.md)|  
 |[ref 类](../windows/classes-and-structs-cpp-component-extensions.md)|[ref 结构](../windows/classes-and-structs-cpp-component-extensions.md)|[register](../cpp/storage-classes-cpp.md#register)|  
 |[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|[return](../cpp/return-statement-cpp.md)|[safecast](../windows/safe-cast-cpp-component-extensions.md)|  
 |[sealed](../windows/sealed-cpp-component-extensions.md)|[selectany](../cpp/selectany.md) <sup>1</sup>|[short](../cpp/fundamental-types-cpp.md)|  

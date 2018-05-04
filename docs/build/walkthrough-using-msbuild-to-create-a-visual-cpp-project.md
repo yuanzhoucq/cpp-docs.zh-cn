@@ -1,13 +1,10 @@
 ---
-title: "演练： 使用 MSBuild 创建 Visual c + + 项目 |Microsoft 文档"
-ms.custom: 
+title: 演练： 使用 MSBuild 创建 Visual c + + 项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88366f78556ebcab6dc7b796cdeeefd402b99721
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建 Visual C++ 项目
 本演练演示如何使用[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]生成 Visual c + + 项目，在命令提示符。 您将学习如何创建 c + + 源代码文件和 Visual c + + 控制台应用程序的基于 XML 的项目文件。 后生成项目时，您将学习如何自定义生成过程。  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
 msbuild myproject.vcxproj /p:configuration=debug  
 ```  
   
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]为输出文件中，创建目录然后编译并链接你的项目以生成 Myproject.exe 程序。 生成过程完成后，使用以下命令运行该应用程序：  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 为输出文件中，创建目录然后编译并链接你的项目以生成 Myproject.exe 程序。 生成过程完成后，使用以下命令运行该应用程序：  
   
 ```  
 myproject  
@@ -200,7 +195,7 @@ myproject
  应用程序应显示"Hello，从 MSBuild ！" 显示文本字符串“Hello World!”。  
   
 ## <a name="customizing-your-project"></a>自定义项目  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]可用于执行预定义的生成目标、 应用用户定义的属性，并使用自定义工具，事件，或生成步骤。 本部分阐释了以下任务：  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 可用于执行预定义的生成目标、 应用用户定义的属性，并使用自定义工具，事件，或生成步骤。 本部分阐释了以下任务：  
   
 -   使用[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]包含生成目标。  
   
@@ -265,7 +260,7 @@ myproject
  `msbuild myproject.vcxproj /t:rebuild`  
   
 ### <a name="adding-msbuild-customizations"></a>将添加 MSBuild 自定义项  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]提供自定义生成过程的各种方法。 下面的主题介绍如何添加自定义生成步骤、 工具和事件，以便将你[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]项目：  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 提供自定义生成过程的各种方法。 下面的主题介绍如何添加自定义生成步骤、 工具和事件，以便将你[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]项目：  
   
 -   [如何：向 MSBuild 项目添加自定义生成步骤](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)  
   

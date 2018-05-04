@@ -1,12 +1,9 @@
 ---
-title: "CComSafeArray 类 |Microsoft 文档"
-ms.custom: 
+title: CComSafeArray 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeArray
@@ -37,17 +34,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c7c4e0603d70513194f8672752ec704011e8326
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 此类是 **SAFEARRAY** 结构的包装器。  
@@ -140,13 +135,13 @@ class CComSafeArray
 |VT_VARIANT|变体指针|  
 |VT_CY|货币数据类型|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsafe.h  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
-##  <a name="add"></a>CComSafeArray::Add  
+##  <a name="add"></a>  CComSafeArray::Add  
  将一个或多个元素或 **SAFEARRAY** 结构添加到 `CComSafeArray`。  
   
 ```
@@ -162,7 +157,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
  `ulCount`  
  要添加到数组的对象数。  
   
- *pT*  
+ *PT*  
  指向要添加到数组的一个或多个对象的指针。  
   
  *t*  
@@ -179,7 +174,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
  `bCopy`考虑标志时类型的元素`BSTR`或**VARIANT**添加到数组。 默认值**TRUE**可确保当该元素添加到数组的数据创建一个新副本。  
   
-##  <a name="attach"></a>CComSafeArray::Attach  
+##  <a name="attach"></a>  CComSafeArray::Attach  
  将 **SAFEARRAY** 结构附加到 `CComSafeArray` 对象。  
   
 ```
@@ -196,7 +191,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>备注  
  将附加**SAFEARRAY**结构`CComSafeArray`对象，使现有`CComSafeArray`可用的方法。  
   
-##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
+##  <a name="ccomsafearray"></a>  CComSafeArray::CComSafeArray  
  构造函数。  
   
 ```
@@ -234,7 +229,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>备注  
  创建一个 `CComSafeArray` 对象。  
   
-##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
+##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray  
  析构函数。  
   
 ```
@@ -244,7 +239,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
+##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom  
  将 **SAFEARRAY** 结构的内容复制到 `CComSafeArray` 对象中。  
   
 ```
@@ -261,7 +256,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>备注  
  此方法将内容复制**SAFEARRAY**到当前`CComSafeArray`对象。 将替换现有数组的内容。  
   
-##  <a name="copyto"></a>CComSafeArray::CopyTo  
+##  <a name="copyto"></a>  CComSafeArray::CopyTo  
  创建 `CComSafeArray` 对象的副本。  
   
 ```
@@ -318,7 +313,7 @@ HRESULT Destroy();
 ### <a name="remarks"></a>备注  
  销毁现有`CComSafeArray`对象及其所有包含的数据。  
   
-##  <a name="detach"></a>CComSafeArray::Detach  
+##  <a name="detach"></a>  CComSafeArray::Detach  
  从 **对象拆离** SAFEARRAY `CComSafeArray` 。  
   
 ```
@@ -331,7 +326,7 @@ LPSAFEARRAY Detach();
 ### <a name="remarks"></a>备注  
  此方法将分离**SAFEARRAY**对象`CComSafeArray`对象。  
   
-##  <a name="getat"></a>CComSafeArray::GetAt  
+##  <a name="getat"></a>  CComSafeArray::GetAt  
  从一维数组中检索单个元素。  
   
 ```
@@ -345,7 +340,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="return-value"></a>返回值  
  返回所需的数组元素的引用。  
   
-##  <a name="getcount"></a>CComSafeArray::GetCount  
+##  <a name="getcount"></a>  CComSafeArray::GetCount  
  返回数组中的元素数目。  
   
 ```
@@ -362,7 +357,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="remarks"></a>备注  
  当与多维数组一起使用，此方法将仅由特定维度中返回元素的数。  
   
-##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
+##  <a name="getdimensions"></a>  CComSafeArray::GetDimensions  
  返回数组中的维数。  
   
 ```
@@ -372,7 +367,7 @@ UINT GetDimensions() const;
 ### <a name="return-value"></a>返回值  
  返回数组中的维数。  
   
-##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
+##  <a name="getlowerbound"></a>  CComSafeArray::GetLowerBound  
  返回数组给定维度的下限。  
   
 ```
@@ -389,7 +384,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>备注  
  如果下限为 0，则表明其第一个元素为元素编号为 0 的类似 C 的数组。 发生错误，例如，维度无效自变量，此方法调用`AtlThrow`与描述该错误的 HRESULT。  
   
-##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
+##  <a name="getsafearrayptr"></a>  CComSafeArray::GetSafeArrayPtr  
  返回 `m_psa` 数据成员的地址。  
   
 ```
@@ -399,7 +394,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ### <a name="return-value"></a>返回值  
  返回一个指向[CComSafeArray::m_psa](#m_psa)数据成员。  
   
-##  <a name="gettype"></a>CComSafeArray::GetType  
+##  <a name="gettype"></a>  CComSafeArray::GetType  
  返回数组中存储的数据类型。  
   
 ```
@@ -427,7 +422,7 @@ VARTYPE GetType() const;
 |VT_VARIANT|变体指针|  
 |VT_CY|货币数据类型|  
   
-##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CComSafeArray::GetUpperBound  
  返回数组任意维度的上限。  
   
 ```
@@ -444,7 +439,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>备注  
  发生错误，例如，维度无效自变量，此方法调用`AtlThrow`与描述该错误的 HRESULT。  
   
-##  <a name="issizable"></a>CComSafeArray::IsSizable  
+##  <a name="issizable"></a>  CComSafeArray::IsSizable  
  测试是否可重设 `CComSafeArray` 对象的大小。  
   
 ```
@@ -454,14 +449,14 @@ bool IsSizable() const;
 ### <a name="return-value"></a>返回值  
  返回**true**如果`CComSafeArray`可调整大小， **false**如果它不能。  
   
-##  <a name="m_psa"></a>CComSafeArray::m_psa  
+##  <a name="m_psa"></a>  CComSafeArray::m_psa  
  保留的地址**SAFEARRAY**访问的结构。  
   
 ```
 LPSAFEARRAY m_psa;
 ```  
   
-##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
+##  <a name="multidimgetat"></a>  CComSafeArray::MultiDimGetAt  
  从多维数组中检索单个元素。  
   
 ```
@@ -478,7 +473,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
+##  <a name="multidimsetat"></a>  CComSafeArray::MultiDimSetAt  
  设置多维数组中元素的值。  
   
 ```
@@ -498,7 +493,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="remarks"></a>备注  
  这是多维版本[CComSafeArray::SetAt](#setat)。  
   
-##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
+##  <a name="operator_at"></a>  CComSafeArray::operator \[\]  
  从数组中检索元素。  
   
 ```
@@ -516,7 +511,7 @@ T& operator[]int nindex) const;
 ### <a name="remarks"></a>备注  
  执行到相似的功能[CComSafeArray::GetAt](#getat)，但此运算符仅适用于一维数组。  
   
-##  <a name="operator_eq"></a>CComSafeArray::operator =  
+##  <a name="operator_eq"></a>  CComSafeArray::operator =  
  赋值运算符。  
   
 ```
@@ -534,7 +529,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>返回值  
  返回数组中存储的数据类型。  
   
-##  <a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
+##  <a name="operator_lpsafearray"></a>  CComSafeArray::operator LPSAFEARRAY  
  将值转换为 **SAFEARRAY** 指针。  
   
 ```
@@ -544,7 +539,7 @@ operator LPSAFEARRAY() const;
 ### <a name="return-value"></a>返回值  
  将值转换为 **SAFEARRAY** 指针。  
   
-##  <a name="resize"></a>CComSafeArray::Resize  
+##  <a name="resize"></a>  CComSafeArray::Resize  
  重设 `CComSafeArray` 对象的大小。  
   
 ```
@@ -568,7 +563,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="remarks"></a>备注  
  此方法仅调整大小时最右边的维度。 它将不调整大小返回的数组**IsResizable**作为**false**。  
   
-##  <a name="setat"></a>CComSafeArray::SetAt  
+##  <a name="setat"></a>  CComSafeArray::SetAt  
  设置一维数组中元素的值。  
   
 ```

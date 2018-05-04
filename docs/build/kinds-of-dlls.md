@@ -1,13 +1,10 @@
 ---
-title: "类型的 Dll |Microsoft 文档"
-ms.custom: 
+title: 类型的 Dll |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>DLL 类型
 本主题提供信息来帮助你确定要生成 dll 的类型。  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>不同类型的 Dll 可用  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 不同类型的 Dll 可用  
  使用 Visual c + +，您可以构建在 C 或 c + + 中的 Win32 Dll，不使用 Microsoft 基础类 (MFC) 库。 你可以使用 Win32 应用程序向导创建的非 MFC DLL 项目。  
   
  在 MFC 库自身可用，则在任一静态链接库或大量使用 MFC DLL 向导 Dll 中。 如果 DLL 使用 MFC，则 Visual c + + 支持三种不同的 DLL 开发方案：  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [哪种类型的 DLL 用于](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>确定哪种类型的使用的 DLL  
+##  <a name="_core_which_kind_of_dll_to_use"></a> 确定哪种类型的使用的 DLL  
  如果您的 DLL 不使用 MFC，使用 Visual c + + 生成非 MFC Win32 DLL。 链接到 MFC 的 DLL，（静态或动态） 需要占用大量磁盘空间和内存。 除非 DLL 实际上使用 MFC，不应链接到 MFC。  
   
  如果您的 DLL 将使用 MFC，并且将由 MFC 或非 MFC 应用程序，必须生成动态链接到 MFC 的正则 MFC DLL 或静态链接到 MFC 的正则 MFC DLL。 在大多数情况下，你可能想要使用动态链接到 MFC，因为这种 DLL 文件大小要小得多，且会在内存中使用共享的版本的 MFC 节省大量的规则 MFC DLL。 如果静态链接到 MFC，您的 DLL 的文件大小将会更大并可能占用额外内存，因为它将加载其自己的 MFC 库代码的私有副本。  

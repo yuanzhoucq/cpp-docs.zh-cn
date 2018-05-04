@@ -2,11 +2,8 @@
 title: if-else 语句 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
 控件条件分支。 中的语句*if 块*只有当执行*if 表达式*计算结果为非零值 (或`true`)。 如果值*表达式*不为零， *statement1*执行块中的任何其他语句和而 else-块中，如果存在，则跳过。 如果值*表达式*是零，则如果块已跳过，并且其他的如果存在，将执行此块。 表达式计算结果为非零值。

@@ -1,12 +1,12 @@
 ---
-title: "CMFCVisualManagerWindows 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCVisualManagerWindows 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerWindows
@@ -149,20 +149,20 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-caps.latest.revision: 
+caps.latest.revision: 46
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c0aea3837239e401592e907fd2049f231dbb74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: eb4199f662f101ad8011b7d33bbab253a08c36a0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 类
-`CMFCVisualManagerWindows`当用户选择 Windows XP 或 Vista 主题时，模仿 Microsoft Windows XP 或 Microsoft Vista 的外观。  
+`CMFCVisualManagerWindows` 当用户选择 Windows XP 或 Vista 主题时，模仿 Microsoft Windows XP 或 Microsoft Vista 的外观。  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -199,7 +199,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||  
 |[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|指示是否视觉管理器实现 Office XP 样式菜单。 (重写[CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus)。)|  
 |[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|（重写 `CMFCVisualManager::IsWindowsThemingSupported`。）|  
-|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|指示 Windows 主题是否可用。 主题可以是 Windows XP 主题或[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]主题。|  
+|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|指示 Windows 主题是否可用。|  
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|（重写 `CMFCVisualManagerOfficeXP::OnDrawBarGripper`。）|  
 |[CMFCVisualManagerWindows::OnDrawBrowseButton](#ondrawbrowsebutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`。）|  
 |[CMFCVisualManagerWindows::OnDrawButtonBorder](#ondrawbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`。）|  
@@ -253,12 +253,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|指定的 Windows XP 主题是否显示三维选项卡。|  
   
 ## <a name="remarks"></a>备注  
- 使用`CMFCVisualManagerWindows`类，以更改你的应用程序模拟当前的 Windows XP 的外观或[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]应用程序在其中运行的计算机上的主题。  
+ 使用`CMFCVisualManagerWindows`类，以更改你的应用程序模拟应用程序在其中运行的计算机上的当前主题的外观。  
   
  但是，Windows 主题可能不可用的 Windows 的版本早于 Windows XP 上运行你的应用程序或者如果是主题已禁用，因为用户使用**经典**视图。 应用程序无主题是否可用，使用默认视觉管理器中定义[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
@@ -278,10 +278,10 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
  [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxvisualmanagerwindows.h  
   
-##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManagerWindows::AlwaysHighlight3DTabs  
+##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerWindows::AlwaysHighlight3DTabs  
 
   
 ```  
@@ -292,7 +292,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="cmfcvisualmanagerwindows"></a>CMFCVisualManagerWindows::CMFCVisualManagerWindows  
+##  <a name="cmfcvisualmanagerwindows"></a>  CMFCVisualManagerWindows::CMFCVisualManagerWindows  
 
   
 ```  
@@ -304,7 +304,7 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="drawcomboborderwinxp"></a>CMFCVisualManagerWindows::DrawComboBorderWinXP  
+##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerWindows::DrawComboBorderWinXP  
 
   
 ```  
@@ -327,7 +327,7 @@ virtual BOOL DrawComboBorderWinXP(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerWindows::DrawComboDropButtonWinXP  
+##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawComboDropButtonWinXP  
 
   
 ```  
@@ -350,7 +350,7 @@ virtual BOOL DrawComboDropButtonWinXP(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManagerWindows::DrawPushButtonWinXP  
+##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawPushButtonWinXP  
 
   
 ```  
@@ -371,7 +371,7 @@ virtual BOOL DrawPushButtonWinXP(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getbuttonextraborder"></a>CMFCVisualManagerWindows::GetButtonExtraBorder  
+##  <a name="getbuttonextraborder"></a>  CMFCVisualManagerWindows::GetButtonExtraBorder  
 
   
 ```  
@@ -382,7 +382,7 @@ virtual CSize GetButtonExtraBorder() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManagerWindows::GetCaptionButtonExtraBorder  
+##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManagerWindows::GetCaptionButtonExtraBorder  
 
   
 ```  
@@ -393,7 +393,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight  
+##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight  
 
   
 ```  
@@ -404,7 +404,7 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor  
+##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor  
 
   
 ```  
@@ -418,7 +418,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getpopupmenugap"></a>CMFCVisualManagerWindows::GetPopupMenuGap  
+##  <a name="getpopupmenugap"></a>  CMFCVisualManagerWindows::GetPopupMenuGap  
 
   
 ```  
@@ -429,7 +429,7 @@ virtual int GetPopupMenuGap() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerWindows::GetToolbarButtonTextColor  
+##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerWindows::GetToolbarButtonTextColor  
 
   
 ```  
@@ -446,7 +446,7 @@ virtual COLORREF GetToolbarButtonTextColor(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManagerWindows::IsDefaultWinXPPopupButton  
+##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManagerWindows::IsDefaultWinXPPopupButton  
 
   
 ```  
@@ -460,7 +460,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManagerWindows::IsHighlightWholeMenuItem  
+##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerWindows::IsHighlightWholeMenuItem  
 
   
 ```  
@@ -471,7 +471,7 @@ virtual BOOL IsHighlightWholeMenuItem();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isofficestylemenus"></a>CMFCVisualManagerWindows::IsOfficeStyleMenus  
+##  <a name="isofficestylemenus"></a>  CMFCVisualManagerWindows::IsOfficeStyleMenus  
 
   
 ```  
@@ -482,7 +482,7 @@ BOOL IsOfficeStyleMenus() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isofficexpstylemenus"></a>CMFCVisualManagerWindows::IsOfficeXPStyleMenus  
+##  <a name="isofficexpstylemenus"></a>  CMFCVisualManagerWindows::IsOfficeXPStyleMenus  
 
   
 ```  
@@ -493,7 +493,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="iswindowsthemingsupported"></a>CMFCVisualManagerWindows::IsWindowsThemingSupported  
+##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerWindows::IsWindowsThemingSupported  
 
   
 ```  
@@ -504,8 +504,8 @@ virtual BOOL IsWindowsThemingSupported() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="iswinxpthemeavailable"></a>CMFCVisualManagerWindows::IsWinXPThemeAvailable  
- 确定 Windows XP 或[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]主题是可用。  
+##  <a name="iswinxpthemeavailable"></a>  CMFCVisualManagerWindows::IsWinXPThemeAvailable  
+ 确定 Windows 主题是否可用。  
   
 ```  
 static BOOL IsWinXPThemeAvailible();
@@ -515,20 +515,20 @@ static BOOL IsWinXPThemeAvailible();
  如果主题可用; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法可用于这两个 Windows XP 和[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]主题。  
+ 此方法可用于所有 Windows XP 和更高版本的主题。  
   
- `IsWinXPThemeAvailable`等同于`CMFCVisualManagerWindows::IsWindowsThemingAvailable`只不过`IsWinXPThemeAvailable`是静态方法。 因此，它将创建临时视觉管理器，如果不存在。  
+ `IsWinXPThemeAvailable` 等同于`CMFCVisualManagerWindows::IsWindowsThemingAvailable`只不过`IsWinXPThemeAvailable`是静态方法。 因此，它将创建临时视觉管理器，如果不存在。  
   
- `IsWinXPThemeAvailable`始终返回 0 s 对于早于 Windows XP 版本的 Windows。  
+ `IsWinXPThemeAvailable` 始终返回 0 s 对于早于 Windows XP 版本的 Windows。  
   
-##  <a name="m_b3dtabsxptheme"></a>CMFCVisualManagerWindows::m_b3DTabsXPTheme  
+##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme  
  布尔参数可确定视觉管理器是否显示三维选项卡。  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;  
 ```  
   
-##  <a name="ondrawbargripper"></a>CMFCVisualManagerWindows::OnDrawBarGripper  
+##  <a name="ondrawbargripper"></a>  CMFCVisualManagerWindows::OnDrawBarGripper  
 
   
 ```  
@@ -547,7 +547,7 @@ virtual void OnDrawBarGripper(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCVisualManagerWindows::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerWindows::OnDrawBrowseButton  
 
   
 ```  
@@ -570,7 +570,7 @@ virtual BOOL OnDrawBrowseButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerWindows::OnDrawButtonBorder  
+##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawButtonBorder  
 
   
 ```  
@@ -589,7 +589,7 @@ virtual void OnDrawButtonBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawbuttonseparator"></a>CMFCVisualManagerWindows::OnDrawButtonSeparator  
+##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerWindows::OnDrawButtonSeparator  
 
   
 ```  
@@ -610,7 +610,7 @@ virtual void OnDrawButtonSeparator(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawcaptionbutton"></a>CMFCVisualManagerWindows::OnDrawCaptionButton  
+##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerWindows::OnDrawCaptionButton  
 
   
 ```  
@@ -635,7 +635,7 @@ virtual void OnDrawCaptionButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawcaptionbuttonicon"></a>CMFCVisualManagerWindows::OnDrawCaptionButtonIcon  
+##  <a name="ondrawcaptionbuttonicon"></a>  CMFCVisualManagerWindows::OnDrawCaptionButtonIcon  
 
   
 ```  
@@ -658,7 +658,7 @@ virtual void OnDrawCaptionButtonIcon(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerWindows::OnDrawCheckBoxEx  
+##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerWindows::OnDrawCheckBoxEx  
 
   
 ```  
@@ -681,7 +681,7 @@ virtual void OnDrawCheckBoxEx(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawcomboborder"></a>CMFCVisualManagerWindows::OnDrawComboBorder  
+##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerWindows::OnDrawComboBorder  
 
   
 ```  
@@ -704,7 +704,7 @@ virtual void OnDrawComboBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerWindows::OnDrawComboDropButton  
+##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerWindows::OnDrawComboDropButton  
 
   
 ```  
@@ -727,7 +727,7 @@ virtual void OnDrawComboDropButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawcontrolborder"></a>CMFCVisualManagerWindows::OnDrawControlBorder  
+##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerWindows::OnDrawControlBorder  
 
   
 ```  
@@ -739,7 +739,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondraweditborder"></a>CMFCVisualManagerWindows::OnDrawEditBorder  
+##  <a name="ondraweditborder"></a>  CMFCVisualManagerWindows::OnDrawEditBorder  
 
   
 ```  
@@ -760,7 +760,7 @@ virtual void OnDrawEditBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawexpandingbox"></a>CMFCVisualManagerWindows::OnDrawExpandingBox  
+##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerWindows::OnDrawExpandingBox  
 
   
 ```  
@@ -779,7 +779,7 @@ virtual void OnDrawExpandingBox(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder  
+##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder  
 
   
 ```  
@@ -798,7 +798,7 @@ virtual void OnDrawFloatingToolbarBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder  
+##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder  
 
   
 ```  
@@ -819,7 +819,7 @@ virtual void OnDrawHeaderCtrlBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow  
+##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow  
 
   
 ```  
@@ -838,7 +838,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawmenuborder"></a>CMFCVisualManagerWindows::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerWindows::OnDrawMenuBorder  
 
   
 ```  
@@ -855,7 +855,7 @@ virtual void OnDrawMenuBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawmenusystembutton"></a>CMFCVisualManagerWindows::OnDrawMenuSystemButton  
+##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerWindows::OnDrawMenuSystemButton  
 
   
 ```  
@@ -876,7 +876,7 @@ virtual void OnDrawMenuSystemButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawminiframeborder"></a>CMFCVisualManagerWindows::OnDrawMiniFrameBorder  
+##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerWindows::OnDrawMiniFrameBorder  
 
   
 ```  
@@ -895,7 +895,7 @@ virtual void OnDrawMiniFrameBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder  
+##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder  
 
   
 ```  
@@ -914,7 +914,7 @@ virtual void OnDrawOutlookPageButtonBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawpaneborder"></a>CMFCVisualManagerWindows::OnDrawPaneBorder  
+##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerWindows::OnDrawPaneBorder  
 
   
 ```  
@@ -931,7 +931,7 @@ virtual void OnDrawPaneBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawpanecaption"></a>CMFCVisualManagerWindows::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerWindows::OnDrawPaneCaption  
 
   
 ```  
@@ -954,7 +954,7 @@ virtual COLORREF OnDrawPaneCaption(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder  
+##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder  
 
   
 ```  
@@ -971,7 +971,7 @@ virtual void OnDrawPopupWindowButtonBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerWindows::OnDrawScrollButtons  
+##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerWindows::OnDrawScrollButtons  
 
   
 ```  
@@ -992,7 +992,7 @@ virtual void OnDrawScrollButtons(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawseparator"></a>CMFCVisualManagerWindows::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCVisualManagerWindows::OnDrawSeparator  
 
   
 ```  
@@ -1011,7 +1011,7 @@ virtual void OnDrawSeparator(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawspinbuttons"></a>CMFCVisualManagerWindows::OnDrawSpinButtons  
+##  <a name="ondrawspinbuttons"></a>  CMFCVisualManagerWindows::OnDrawSpinButtons  
 
   
 ```  
@@ -1032,7 +1032,7 @@ virtual void OnDrawSpinButtons(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder  
+##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder  
 
   
 ```  
@@ -1053,7 +1053,7 @@ virtual void OnDrawStatusBarPaneBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManagerWindows::OnDrawStatusBarProgress  
+##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerWindows::OnDrawStatusBarProgress  
 
   
 ```  
@@ -1082,7 +1082,7 @@ virtual void OnDrawStatusBarProgress(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerWindows::OnDrawStatusBarSizeBox  
+##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerWindows::OnDrawStatusBarSizeBox  
 
   
 ```  
@@ -1099,7 +1099,7 @@ virtual void OnDrawStatusBarSizeBox(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtab"></a>CMFCVisualManagerWindows::OnDrawTab  
+##  <a name="ondrawtab"></a>  CMFCVisualManagerWindows::OnDrawTab  
 
   
 ```  
@@ -1120,7 +1120,7 @@ virtual void OnDrawTab(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtabclosebutton"></a>CMFCVisualManagerWindows::OnDrawTabCloseButton  
+##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManagerWindows::OnDrawTabCloseButton  
 
   
 ```  
@@ -1143,7 +1143,7 @@ virtual void OnDrawTabCloseButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerWindows::OnDrawTabsButtonBorder  
+##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawTabsButtonBorder  
 
   
 ```  
@@ -1164,7 +1164,7 @@ virtual void OnDrawTabsButtonBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtask"></a>CMFCVisualManagerWindows::OnDrawTask  
+##  <a name="ondrawtask"></a>  CMFCVisualManagerWindows::OnDrawTask  
 
   
 ```  
@@ -1185,7 +1185,7 @@ virtual void OnDrawTask(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder  
+##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder  
 
   
 ```  
@@ -1204,7 +1204,7 @@ virtual void OnDrawTasksGroupAreaBorder(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerWindows::OnDrawTasksGroupCaption  
+##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupCaption  
 
   
 ```  
@@ -1225,7 +1225,7 @@ virtual void OnDrawTasksGroupCaption(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawtearoffcaption"></a>CMFCVisualManagerWindows::OnDrawTearOffCaption  
+##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerWindows::OnDrawTearOffCaption  
 
   
 ```  
@@ -1242,7 +1242,7 @@ virtual void OnDrawTearOffCaption(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManagerWindows::OnErasePopupWindowButton  
+##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerWindows::OnErasePopupWindowButton  
 
   
 ```  
@@ -1259,7 +1259,7 @@ virtual void OnErasePopupWindowButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onerasetabsarea"></a>CMFCVisualManagerWindows::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>  CMFCVisualManagerWindows::OnEraseTabsArea  
 
   
 ```  
@@ -1276,7 +1276,7 @@ virtual void OnEraseTabsArea(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onerasetabsbutton"></a>CMFCVisualManagerWindows::OnEraseTabsButton  
+##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerWindows::OnEraseTabsButton  
 
   
 ```  
@@ -1295,7 +1295,7 @@ virtual void OnEraseTabsButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onerasetabsframe"></a>CMFCVisualManagerWindows::OnEraseTabsFrame  
+##  <a name="onerasetabsframe"></a>  CMFCVisualManagerWindows::OnEraseTabsFrame  
 
   
 ```  
@@ -1314,7 +1314,7 @@ virtual BOOL OnEraseTabsFrame(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfillbarbackground"></a>CMFCVisualManagerWindows::OnFillBarBackground  
+##  <a name="onfillbarbackground"></a>  CMFCVisualManagerWindows::OnFillBarBackground  
 
   
 ```  
@@ -1335,7 +1335,7 @@ virtual void OnFillBarBackground(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerWindows::OnFillButtonInterior  
+##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerWindows::OnFillButtonInterior  
 
   
 ```  
@@ -1354,7 +1354,7 @@ virtual void OnFillButtonInterior(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfillcommandslistbackground"></a>CMFCVisualManagerWindows::OnFillCommandsListBackground  
+##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerWindows::OnFillCommandsListBackground  
 
   
 ```  
@@ -1373,7 +1373,7 @@ virtual COLORREF OnFillCommandsListBackground(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfillminiframecaption"></a>CMFCVisualManagerWindows::OnFillMiniFrameCaption  
+##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerWindows::OnFillMiniFrameCaption  
 
   
 ```  
@@ -1394,7 +1394,7 @@ virtual COLORREF OnFillMiniFrameCaption(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerWindows::OnFillOutlookPageButton  
+##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerWindows::OnFillOutlookPageButton  
 
   
 ```  
@@ -1415,7 +1415,7 @@ virtual void OnFillOutlookPageButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManagerWindows::OnFillTasksGroupInterior  
+##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerWindows::OnFillTasksGroupInterior  
 
   
 ```  
@@ -1432,7 +1432,7 @@ virtual void OnFillTasksGroupInterior(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfilltaskspanebackground"></a>CMFCVisualManagerWindows::OnFillTasksPaneBackground  
+##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerWindows::OnFillTasksPaneBackground  
 
   
 ```  
@@ -1447,7 +1447,7 @@ virtual void OnFillTasksPaneBackground(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onhighlightmenuitem"></a>CMFCVisualManagerWindows::OnHighlightMenuItem  
+##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerWindows::OnHighlightMenuItem  
 
   
 ```  
@@ -1466,7 +1466,7 @@ virtual void OnHighlightMenuItem(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems  
+##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems  
 
   
 ```  
@@ -1481,7 +1481,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerWindows::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerWindows::OnUpdateSystemColors  
 
   
 ```  
@@ -1490,7 +1490,7 @@ virtual void OnUpdateSystemColors();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setofficestylemenus"></a>CMFCVisualManagerWindows::SetOfficeStyleMenus  
+##  <a name="setofficestylemenus"></a>  CMFCVisualManagerWindows::SetOfficeStyleMenus  
 
   
 ```  

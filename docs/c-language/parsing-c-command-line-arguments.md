@@ -1,12 +1,12 @@
 ---
-title: "分析 C 命令行参数 | Microsoft Docs"
-ms.custom: 
+title: 分析 C 命令行参数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果偶数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 `argv` 数组中，而双引号 (") 被解释为字符串分隔符。  
   
--   如果奇数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 ) is placed in the `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 (") 放置在 `argv` 中。  
+-   如果奇数个反斜杠后跟双引号，则每对反斜杠 (**\\\\**) 中有一个反斜杠 (**\\**) 被置于 `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 (**"**) 放置在 `argv` 中。  
   
  此列表通过显示命令行参数的多个示例的传递到 `argv` 的解释结果来阐释上述规则。 在第二列、第三列和第四列中列出的输出来自于遵循列表的 ARGS.C 程序。  
   

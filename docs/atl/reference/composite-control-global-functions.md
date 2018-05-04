@@ -2,11 +2,8 @@
 title: 复合控件全局函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 用于创建对话框框中，以及用于创建、 承载和授权 ActiveX 控件，则这些函数提供支持。  
@@ -103,7 +98,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- 编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](http://msdn.microsoft.com/library/windows/desktop/aa380902)下 Windows SDK*: SDK 工具*。  
+ 编辑资源脚本的详细信息，请参阅[如何： 以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 控制资源定义语句的详细信息，请参阅[常见控制参数](http://msdn.microsoft.com/library/windows/desktop/aa380902)下 Windows SDK *: SDK 工具*。  
   
  有关常规中的对话框的详细信息，请参阅[对话框](http://msdn.microsoft.com/library/windows/desktop/ms645452)和[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
   
@@ -165,7 +160,7 @@ ATLAPI AtlAxCreateControl(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   到如活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
 -   如的 HTML 片段"MSHTML:\<HTML >\<正文 > 这是一套文本\</b O >\</HTML >"  
   
@@ -213,7 +208,7 @@ ATLAPI AtlAxCreateControlEx(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   到如活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
 -   如的 HTML 片段"MSHTML:\<HTML >\<正文 > 这是一套文本\</b O >\</HTML >"  
   
@@ -268,7 +263,7 @@ ATLAPI AtlAxCreateControlLic(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   到如活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
 -   如的 HTML 片段"MSHTML:\<HTML >\<正文 > 这是一套文本\</b O >\</HTML >"  
   
@@ -318,7 +313,7 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   到如活动文档的引用"file://\\\Documents\MyDoc.doc"  
   
 -   如的 HTML 片段"MSHTML:\<HTML >\<正文 > 这是一套文本\</b O >\</HTML >"  
   
@@ -436,7 +431,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
  一个标准的 HRESULT 值。  
   
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit  
- 此函数初始化 ATL 的控件承载代码通过注册**"AtlAxWin80"**和**"AtlAxWinLic80"**窗口类以及一些自定义窗口消息。  
+ 此函数初始化 ATL 的控件承载代码通过注册 **"AtlAxWin80"** 和 **"AtlAxWinLic80"** 窗口类以及一些自定义窗口消息。  
   
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
@@ -446,10 +441,10 @@ ATLAPI_(BOOL) AtlAxWinInit();
  如果控件承载代码的初始化成功; 则为非 0否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- 使用 ATL 控件承载 API 之前，必须调用此函数。 对此函数调用**"AtlAxWin"**窗口类可在调用[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)，如 Windows SDK 中所述。  
+ 使用 ATL 控件承载 API 之前，必须调用此函数。 对此函数调用 **"AtlAxWin"** 窗口类可在调用[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)，如 Windows SDK 中所述。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
- 此函数取消初始化 ATL 的控件承载代码通过注销**"AtlAxWin80"**和**"AtlAxWinLic80"**窗口类。  
+ 此函数取消初始化 ATL 的控件承载代码通过注销 **"AtlAxWin80"** 和 **"AtlAxWinLic80"** 窗口类。  
   
 ```
 inline BOOL AtlAxWinTerm();
@@ -505,6 +500,6 @@ ATLAPI AtlGetObjectSourceInterface(
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)   
  [复合控件宏](../../atl/reference/composite-control-macros.md)

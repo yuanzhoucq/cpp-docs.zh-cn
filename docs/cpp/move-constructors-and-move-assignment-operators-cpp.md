@@ -2,28 +2,23 @@
 title: 如何： 定义移动构造函数和移动赋值运算符 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移动构造函数和移动赋值运算符 (C++)
 本主题介绍如何编写*移动构造函数*和移动赋值运算符的 C++ 类。 移动构造函数，而无需复制，可将它们移动到左值的右值对象拥有的资源。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
@@ -319,6 +314,6 @@ MemoryBlock(MemoryBlock&& other)
   
  [Std:: move](../standard-library/utility-functions.md#move)函数保留的右值属性`other`参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
  [\<实用程序 > 移动](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

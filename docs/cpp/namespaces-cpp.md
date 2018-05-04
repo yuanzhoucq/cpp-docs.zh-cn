@@ -2,11 +2,8 @@
 title: 命名空间 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namespaces-c"></a>命名空间 (C++)
 命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过使用每个标识符的完全限定的名称，例如访问成员`std::vector<std::string> vec;`，也可通过[using 声明](../cpp/using-declaration.md)单个标识符 (`using std::string`)，或[using 指令](../cpp/namespaces-cpp.md#using_directives)对命名空间中的所有标识符 (`using namespace std;`)。 头文件中的代码应始终使用完全限定的命名空间名称。  
@@ -116,7 +111,7 @@ int ContosoDataServer::Bar(){return 0;}
   
  可以在单个文件中的多个块中声明命名空间，也可在多个文件中声明命名空间。 编译器在预处理过程中将各部分联接在一起，产生的命名空间中包含所有部分中声明的所有成员。 一个相关示例是在标准库中的每个头文件中声明的 std 命名空间。  
   
- 可以通过显式限定正在定义的名称的声明的命名空间的外部定义命名的命名空间的成员。 但是，定义必须出现在命名空间中的声明位置之后，该命名空间包含在声明的命名空间中。 例如:  
+ 可以通过显式限定正在定义的名称的声明的命名空间的外部定义命名的命名空间的成员。 但是，定义必须出现在命名空间中的声明位置之后，该命名空间包含在声明的命名空间中。 例如：  
   
 ```cpp  
 // defining_namespace_members.cpp  
@@ -260,7 +255,7 @@ namespace Contoso
 ```  
   
 ## <a id="namespace_aliases"></a> Namespace 别名  
- 命名空间名称必须是唯一的，这意味着通常它们不应太短。 如果名称的长度使代码难以阅读，或在不能使用 using 指令的头文件中进行键入单调乏味，则可以使用用作实际名称的缩写的命名空间别名。 例如:  
+ 命名空间名称必须是唯一的，这意味着通常它们不应太短。 如果名称的长度使代码难以阅读，或在不能使用 using 指令的头文件中进行键入单调乏味，则可以使用用作实际名称的缩写的命名空间别名。 例如：  
   
 ```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  

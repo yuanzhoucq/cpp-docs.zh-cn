@@ -1,30 +1,25 @@
 ---
 title: 词法约定 |Microsoft 文档
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894baf715113ebdf8dbead6600f9c906784fbd37
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lexical-conventions"></a>词法约定
 本节介绍 C++ 程序的基本元素。 你将使用这些名为“词法元素”或“标记”的元素构造用于构造完整程序的语句、定义和声明等。 本节将讨论以下词法元素：
@@ -48,6 +43,6 @@ ms.lasthandoff: 04/16/2018
 
 - [用户定义的文本](../cpp/user-defined-literals-cpp.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [C++ 语言参考](../cpp/cpp-language-reference.md)
 - [程序和链接](program-and-linkage-cpp.md)

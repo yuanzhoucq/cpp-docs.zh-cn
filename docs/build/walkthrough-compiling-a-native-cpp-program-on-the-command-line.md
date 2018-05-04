@@ -1,13 +1,10 @@
 ---
-title: "演练： 编译本机 c + + 程序命令行上 |Microsoft 文档"
-ms.custom: 
+title: 演练： 编译本机 c + + 程序命令行上 |Microsoft 文档
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 Visual c + + 包括一个命令行的 c + + 编译器，可用来创建从基本控制台应用到通用 Windows 平台应用程序、 桌面应用、 设备驱动程序和.NET 组件。  
@@ -180,6 +175,6 @@ Visual c + + 包括一个命令行的 c + + 编译器，可用来创建从基本
  Visual c + + 编译器将包含通常符合 ISO C99 标准中，但不严格符合 C 运行库 (CRT)。 在大多数情况下，可移植代码将编译并按预期方式运行。 Visual c + + 不支持某些 CRT 更改在 ISO C11 中。 由 Visual c + + 编译器已弃用某些库函数和 POSIX 函数名称。 支持的函数，但首选的名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)   
  [编译器选项](../build/reference/compiler-options.md)

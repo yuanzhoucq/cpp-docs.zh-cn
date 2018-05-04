@@ -1,12 +1,9 @@
 ---
-title: "联合 |Microsoft 文档"
-ms.custom: 
+title: 联合 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - union_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unions"></a>Unions
 `union` 是用户定义的类型，其中所有成员都共享同一个内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。  
@@ -645,7 +640,7 @@ int main()
  ![数值类型联合中的数据存储](../cpp/media/vc38ul1.png "vc38UL1")  
 NumericType 联合中的数据存储  
   
-## <a name="anonymous_unions"></a>匿名联合  
+## <a name="anonymous_unions"></a> 匿名联合  
  匿名联合还未声明的联合*类名*或*声明符列表*。  
   
 ```cpp  

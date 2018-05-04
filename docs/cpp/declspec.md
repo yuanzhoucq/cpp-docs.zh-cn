@@ -1,12 +1,9 @@
 ---
-title: __declspec | Microsoft Docs
-ms.custom: 
+title: __declspec |Microsoft 文档
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,20 +13,19 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
 **Microsoft 专用**
 
-用于指定存储类信息使用的扩展的特性语法**__declspec**关键字，这指定给定类型的实例是将与下面列出的 Microsoft 专用存储类特性存储。 其他存储类修饰符的示例包括**静态**和**extern**关键字。 但是，这些关键字是 C 和 C++ 语言的 ANSI 规范的一部分，并且本身不包含在扩展特性语法中。 扩展特性语法简化并标准化了 Microsoft 专用的 C 和 C ++ 语言扩展。
+用于指定存储类信息使用的扩展的特性语法 **__declspec**关键字，这指定给定类型的实例是将与下面列出的 Microsoft 专用存储类特性存储。 其他存储类修饰符的示例包括**静态**和**extern**关键字。 但是，这些关键字是 C 和 C++ 语言的 ANSI 规范的一部分，并且本身不包含在扩展特性语法中。 扩展特性语法简化并标准化了 Microsoft 专用的 C 和 C ++ 语言扩展。
 
 ## <a name="grammar"></a>语法
 
@@ -70,15 +66,15 @@ extended-decl-modifier：
 
 **Code_seg**， **dllexport**， **dllimport**，**裸**， **noalias**， **nothrow**，**属性**，**限制**， **selectany**，**线程**，和**uuid**存储类特性是仅的对象或向其应用的函数的声明属性。 **线程**属性影响数据和对象仅。 **裸**和**spectre**特性影响函数仅。 **Dllimport**和**dllexport**特性影响函数、 数据和对象。 **属性**， **selectany**，和**uuid**特性影响 COM 对象。
 
-**__Declspec**关键字应将放置在简单声明的开头。 编译器将忽略，不显示警告，任何**__declspec**关键字放在 * 或 （& a) 和声明中以及变量标识符前面。
+**__Declspec**关键字应将放置在简单声明的开头。 编译器将忽略，不显示警告，任何 **__declspec**关键字放在 * 或 （& a) 和声明中以及变量标识符前面。
 
-A **__declspec**中用户定义的类型声明的开头指定特性应用于该类型的变量。 例如:
+A **__declspec**中用户定义的类型声明的开头指定特性应用于该类型的变量。 例如：
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-在本例中，此特性应用于 `varX`。 A **__declspec**属性放在**类**或**结构**关键字适用于用户定义类型。 例如:
+在本例中，此特性应用于 `varX`。 A **__declspec**属性放在**类**或**结构**关键字适用于用户定义类型。 例如：
 
 ```cpp
 class __declspec(dllimport) X {};
@@ -86,11 +82,11 @@ class __declspec(dllimport) X {};
 
 在本例中，此特性应用于 `X`。
 
-一般原则是使用**__declspec**特性用于简单声明是，如下所示：
+一般原则是使用 **__declspec**特性用于简单声明是，如下所示：
 
-*decl-specifier-seq* *init-declarator-list*;
+*声明说明符 seq* *init 声明符列表*;
 
-*声明说明符 seq*应包含，除了别的之外的基类型 (例如**int**， **float**、 **typedef**，或类名)，存储类 (例如**静态**， **extern**)，或**__declspec**扩展。 *Init 声明符列表*应包含，除了别的之外声明的指针部分。 例如:
+*声明说明符 seq*应包含，除了别的之外的基类型 (例如**int**， **float**、 **typedef**，或类名)，存储类 (例如**静态**， **extern**)，或 **__declspec**扩展。 *Init 声明符列表*应包含，除了别的之外声明的指针部分。 例如：
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier

@@ -1,12 +1,9 @@
 ---
-title: "临时对象 |Microsoft 文档"
-ms.custom: 
+title: 临时对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,24 +11,22 @@ helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="temporary-objects"></a>临时对象
 在某些情况下，编译器需要创建临时对象。 可能会出于下列原因创建这些临时对象：  
   
 -   使用一个不同于所初始化的引用的基础类型的类型的初始值设定项初始化 `const` 引用。  
   
--   存储返回用户定义类型的函数的返回值。 仅当您的程序未将返回值复制到对象时，才会创建这些临时内存。 例如:  
+-   存储返回用户定义类型的函数的返回值。 仅当您的程序未将返回值复制到对象时，才会创建这些临时内存。 例如：  
   
     ```  
     UDT Func1();    //  Declare a function that returns a user-defined  

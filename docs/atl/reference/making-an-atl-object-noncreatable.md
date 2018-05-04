@@ -1,12 +1,9 @@
 ---
-title: "使 ATL 对象 Noncreatable |Microsoft 文档"
-ms.custom: 
+title: 使 ATL 对象 Noncreatable |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.objects
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e37779b081de457782ee59324a00cca5fedaea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05707c6771d641d383825a07d0b26a90fdf46cb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="making-an-atl-object-noncreatable"></a>使 ATL 对象不可创建
 你可以更改基于 ATL COM 对象的属性，以便客户端不能直接创建对象。 在这种情况下，该对象将被另一个对象通过方法调用返回而不直接创建。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  删除[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)对象。 如果你想要 noncreatable 但要注册的控件的对象，将使用 OBJECT_ENTRY_AUTO [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto)。  
   
-2.  添加[noncreatable](../../windows/noncreatable.md)属性设为.idl 文件中的组件类。 例如:  
+2.  添加[noncreatable](../../windows/noncreatable.md)属性设为.idl 文件中的组件类。 例如：  
   
  ```  
  [  

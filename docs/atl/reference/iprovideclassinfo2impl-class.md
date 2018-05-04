@@ -1,12 +1,9 @@
 ---
-title: "IProvideClassInfo2Impl 类 |Microsoft 文档"
-ms.custom: 
+title: IProvideClassInfo2Impl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fe466608acaecfaf6219b6d15d27e0611ac2511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 类
 此类提供的默认实现[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)和[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)方法。  
@@ -71,7 +66,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 ### <a name="constructors"></a>构造函数  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|构造函数。|  
   
@@ -84,24 +79,24 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::_tih](#_tih)|管理组件类的类型信息。|  
   
 ## <a name="remarks"></a>备注  
  [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)接口扩展[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)通过添加`GetGUID`方法。 此方法允许客户端以检索对象的传出接口 IID 为其默认事件集。 类`IProvideClassInfo2Impl`提供的默认实现**IProvideClassInfo**和`IProvideClassInfo2`方法。  
   
- `IProvideClassInfo2Impl`包含类型的静态成员`CComTypeInfoHolder`管理组件类的类型信息。  
+ `IProvideClassInfo2Impl` 包含类型的静态成员`CComTypeInfoHolder`管理组件类的类型信息。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IProvideClassInfo2`  
   
  `IProvideClassInfo2Impl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
+##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
  检索`ITypeInfo`指向组件类的类型信息。  
   
 ```
@@ -111,7 +106,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ### <a name="remarks"></a>备注  
  请参阅[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) Windows SDK 中。  
   
-##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
+##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  检索对象的传出调度接口的 GUID。  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(GetGUID)(
 ### <a name="remarks"></a>备注  
  请参阅[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) Windows SDK 中。  
   
-##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
+##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  构造函数。  
   
 ```
@@ -133,7 +128,7 @@ IProvideClassInfo2Impl();
 ### <a name="remarks"></a>备注  
  调用`AddRef`上[_tih](#_tih)成员。 析构函数调用**版本**。  
   
-##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
+##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
  此静态数据成员是类模板参数的一个实例`tihclass`，后者的默认设置是`CComTypeInfoHolder`。  
   
 ```
@@ -142,7 +137,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>备注  
- `_tih`管理组件类的类型信息。  
+ `_tih` 管理组件类的类型信息。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

@@ -2,11 +2,8 @@
 title: 函数 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -209,7 +204,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11:**若要显式处理通过右值引用或左值引用传递的参数，使用双与号参数以指示通用引用：
+ **C++ 11:** 若要显式处理通过右值引用或左值引用传递的参数，使用双与号参数以指示通用引用：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -277,7 +272,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 ##  <a name="type_deduction"></a> 返回类型 (C++ 14) 中的类型推导
 
-在 C++ 14 中，你可以使用**自动**指示编译器从函数体的返回类型推断而不必提供结尾返回类型。 请注意，**自动**始终推导为返回的值。 使用**自动 （& a) （& a)**指示编译器推导引用。
+在 C++ 14 中，你可以使用**自动**指示编译器从函数体的返回类型推断而不必提供结尾返回类型。 请注意，**自动**始终推导为返回的值。 使用**自动 （& a) （& a)** 指示编译器推导引用。
 
 在此示例中，**自动**会推导为 lhs 和 rhs 之和的非常量值副本。
 
@@ -289,9 +284,9 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 }
 ```
 
-请注意，**自动**不会保留它推导的类型的常量性。 对于转发其返回值需要保留的常量性或引用性的其自变量的函数，你可以使用**decltype （auto)**关键字，使用**decltype**类型推理规则和会保留所有类型信息。 **decltype （auto)**可能被用作左侧的普通返回值或作为尾随返回值。
+请注意，**自动**不会保留它推导的类型的常量性。 对于转发其返回值需要保留的常量性或引用性的其自变量的函数，你可以使用**decltype （auto)** 关键字，使用**decltype**类型推理规则和会保留所有类型信息。 **decltype （auto)** 可能被用作左侧的普通返回值或作为尾随返回值。
 
-下面的示例 (基于代码从[N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html))，显示**decltype （auto)**正在使用的模板之前未知的返回类型的函数自变量完美转发实例化。
+下面的示例 (基于代码从[N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html))，显示**decltype （auto)** 正在使用的模板之前未知的返回类型的函数自变量完美转发实例化。
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-<<<<<<< HEAD
-4. 除了使用返回值本身，你可以"返回"值通过定义任意数量的参数以使用按引用传递，以便可以修改该函数或将其初始化的调用方提供的对象的值。 有关详细信息，请参阅[引用类型函数自变量](reference-type-function-arguments.md)。  
-  
-## <a name="function-pointers"></a>函数指针  
- C++ 通过与 C 语言相同的方式支持函数指针。 但是更加类型安全的替代方法通常是使用函数对象。  
-  
- 建议使用 `typedef` 声明函数指针类型的别名（如果声明返回函数指针类型的函数）。  例如  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- 如果不执行此操作，则函数声明的正确语法可以通过用函数名称和参数列表替换标识符（上例中为 `fp`）来从函数指针的声明符语法推导出，如下所示：  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- 前面的声明与使用上面的 typedef 的声明等效。  
-  
-## <a name="see-also"></a>另请参阅  
- [函数重载](../cpp/function-overloading.md)   
- [具有变量自变量列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [显式默认函数和已删除函数](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [针对函数的依赖于参数的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [默认自变量](../cpp/default-arguments.md)   
- [内联函数](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>从函数返回多个值
 
 有多种方法，以从函数返回多个值：
@@ -467,7 +433,7 @@ int (*myFunction(char* s))(int);
 
 前面的声明与使用上面的 typedef 的声明等效。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [函数重载](../cpp/function-overloading.md)
 - [包含变量参数列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)
@@ -475,4 +441,3 @@ int (*myFunction(char* s))(int);
 - [针对函数的依赖于自变量的名称 (Koenig) 查找](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [默认自变量](../cpp/default-arguments.md)
 - [内联函数](../cpp/inline-functions-cpp.md)
->>>>>>> master

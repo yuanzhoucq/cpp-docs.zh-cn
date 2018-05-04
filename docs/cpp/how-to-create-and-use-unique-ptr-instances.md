@@ -1,34 +1,29 @@
 ---
 title: 如何： 创建和使用 unique_ptr 实例 |Microsoft 文档
-ms.custom: ''
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：创建和使用 unique_ptr 实例
 A [unique_ptr](../standard-library/unique-ptr-class.md)不共享它的指针。 无法将复制到另一个`unique_ptr`、 按值传递给函数，或需要副本进行任何 C++ 标准库算法中使用。 只能移动 `unique_ptr`。 这意味着，内存资源所有权将转移到另一 `unique_ptr`，并且原始 `unique_ptr` 不再拥有此资源。 我们建议你将对象限制为由一个所有者所有，因为多个所有权会使程序逻辑变得复杂。 因此，您需要为普通的 C++ 对象的智能指针，则使用`unique_ptr`，而当构造`unique_ptr`，使用[make_unique](../standard-library/memory-functions.md#make_unique)帮助器函数。  
   
  下图演示了两个 `unique_ptr` 实例之间的所有权转换。  
   
- ![移动的唯一 & #95; 所有权 ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![移动的唯一所有权&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
  `unique_ptr`在中定义`<memory>`C++ 标准库中的标头。 这正是与原始指针有效并可在 C++ 标准库容器。 添加`unique_ptr`到 C++ 标准库容器的实例是高效因为移动构造函数的`unique_ptr`无需进行复制操作。  
   

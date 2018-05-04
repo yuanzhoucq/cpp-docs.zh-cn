@@ -1,29 +1,24 @@
 ---
-title: "编写异常筛选器 |Microsoft 文档"
-ms.custom: 
+title: 编写异常筛选器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>编写异常筛选器
 您可以通过跳转到异常处理程序的级别或通过继续执行来处理异常。 除了使用异常处理程序代码处理异常和故障，你可以使用*筛选器*来清理问题，然后，通过返回-1，而不清除堆栈继续正常流。  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  它是使用函数调用中的一个好办法*筛选器*表达式每当*筛选器*需要执行任何复杂操作。 计算表达式将导致函数的执行，在此示例中，`Eval_Exception`。  
   
- 请注意，使用[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)以确定异常。 您必须在筛选器内部调用此函数。 `Eval_Exception`不能调用**GetExceptionCode**，但是它必须具有传递给它的异常代码。  
+ 请注意，使用[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)以确定异常。 您必须在筛选器内部调用此函数。 `Eval_Exception` 不能调用**GetExceptionCode**，但是它必须具有传递给它的异常代码。  
   
  除非异常是整数或浮点溢出，否则此处理程序会将控制权传递给其他处理程序。 如果异常是整数或浮点溢出，则处理程序将调用一个函数（`ResetVars` 只是一个示例，不是 API 函数）以重置某些全局变量。 *语句块 2*，此示例中为空，无法执行因为`Eval_Exception`绝不返回 EXCEPTION_EXECUTE_HANDLER (1)。  
   

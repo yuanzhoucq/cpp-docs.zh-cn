@@ -2,11 +2,8 @@
 title: 基本类型 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>基本类型 (C++)
 C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类型能够处理整数。 浮点类型能够指定可具有小数部分的值。  
@@ -85,9 +80,9 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 ||`bool`|`bool` 类型是可以具有 `true` 或 `false`这两个值之一的整数类型。 其大小未指定。|  
 ||`short`|`short` `int` 类型（或 `short`）是大于或等于 `char`类型的大小但小于或等于 `int`类型的大小的整型类型。<br /><br /> `short` 类型的对象可声明为 `signed` `short` 或 `unsigned short`。 `Signed short` 是 `short`的同义词。|  
 ||`int`|`int` 类型是大于或等于 `short` `int`类型的大小但小于或等于 `long`类型的大小的整数类型。<br /><br /> `int` 类型的对象可声明为 `signed` `int` 或 `unsigned` `int`。 `Signed` `int` 是 `int`的同义词。|  
-||`__int8`, `__int16`, `__int32`, `__int64`|固定大小的整数 `__int n`，其中 `n` 是整数变量的大小（以比特为单位）。 `__int8`、 `__int16`、 `__int32` 和 `__int64` 是 Microsoft 专用的关键字。 并非所有类型在所有体系结构上都都可用。 `(__int128`不支持。）|  
+||`__int8`, `__int16`, `__int32`, `__int64`|固定大小的整数 `__int n`，其中 `n` 是整数变量的大小（以比特为单位）。 `__int8`、 `__int16`、 `__int32` 和 `__int64` 是 Microsoft 专用的关键字。 并非所有类型在所有体系结构上都都可用。 `(__int128` 不支持。）|  
 ||`long`|`long` 类型（或 `long` `int`）是大于或等于 `int`类型的大小的整数类型。<br /><br /> `long` 类型的对象可声明为 `signed` `long` 或 `unsigned` `long`。 `Signed` `long` 是 `long`的同义词。|  
-||`long` `long`|大于无符号 `long`。<br /><br /> `long long` 类型的对象可声明为 `signed` `long long` 或 `unsigned` `long long`。 `signed``long long`是同义词`long long`。|  
+||`long` `long`|大于无符号 `long`。<br /><br /> `long long` 类型的对象可声明为 `signed` `long long` 或 `unsigned` `long long`。 `signed` `long long` 是的同义词`long long`。|  
 ||`wchar_t`, `__wchar_t`|`wchar_t` 类型的变量指定宽字符或多字节字符类型。 默认情况下， `wchar_t` 是本机类型，但可以使用 [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 使 `wchar_t` 成为 `unsigned short`的 typedef。 `__wchar_t` 类型是本机 `wchar_t` 类型的 Microsoft 专用同义词。<br /><br /> 在字符或字符串文本前使用 L 前缀可指定宽字符类型。|  
 |浮点|`float`|`float` 类型是最小的浮点类型。|  
 ||`double`|`double` 类型是大于或等于 `float`类型的大小但小于或等于 `long` `double`类型的大小的浮点类型。<br /><br /> Microsoft 专用： `long double` 和 `double` 的表示形式完全相同。 但是， `long double` 和 `double` 是不同的类型。|  

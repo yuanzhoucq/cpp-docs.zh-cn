@@ -2,11 +2,8 @@
 title: 表达式的语义 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 表达式根据其运算符的优先级和分组来计算。 ([运算符优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[词法约定](../cpp/lexical-conventions.md)，显示的关系 C++ 运算符对表达式实施。)  
@@ -80,10 +75,10 @@ int main()
   
 |应为类型|允许的类型|  
 |-------------------|-------------------|  
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
-|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
+|*type*|`const` *类型*<br /> `volatile` *类型*<br /> *type*&<br /> `const` *类型*&<br /> `volatile` *类型*&<br /> `volatile const` *类型*<br /> `volatile const` *类型*&|  
+|*type*\*|*type*\*<br /> `const` *类型*\*<br /> `volatile` *类型*\*<br /> `volatile const` *类型*\*|  
+|`const` *类型*|*type*<br /> `const` *类型*<br />`const` *类型*&|  
+|`volatile` *类型*|*type*<br /> `volatile` *类型*<br /> `volatile` *类型*&|  
   
  由于上述规则始终可以组合使用，因此，可以在指针所需的位置提供指向可变对象的 const 指针。  
   
@@ -125,5 +120,5 @@ func( i, ++i );
   
 -   return 语句中的表达式。 完全计算该表达式，并在控制权返回到调用函数之前完成所有副作用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表达式](../cpp/expressions-cpp.md)

@@ -1,12 +1,9 @@
 ---
-title: "CComMultiThreadModelNoCS 类 |Microsoft 文档"
-ms.custom: 
+title: CComMultiThreadModelNoCS 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc32ab53469b1f125b56343806c7920461c64bf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 758811b10757cd7903b4f1d6218a5f34f8a98462
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 类
-`CComMultiThreadModelNoCS`提供线程安全的方法的递增和递减值的变量中，而无需临界区锁定或解锁功能。  
+`CComMultiThreadModelNoCS` 提供线程安全的方法的递增和递减值的变量中，而无需临界区锁定或解锁功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +57,7 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::Increment](#increment)|（静态）线程安全的方式递增指定变量的值。|  
   
 ## <a name="remarks"></a>备注  
- `CComMultiThreadModelNoCS`类似于[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)在于它提供线程安全方法递增和递减的变量。 但是，当引用的关键部分类通过`CComMultiThreadModelNoCS`，等方法`Lock`和`Unlock`将不执行任何操作。  
+ `CComMultiThreadModelNoCS` 类似于[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)在于它提供线程安全方法递增和递减的变量。 但是，当引用的关键部分类通过`CComMultiThreadModelNoCS`，等方法`Lock`和`Unlock`将不执行任何操作。  
   
  通常情况下，使用`CComMultiThreadModelNoCS`通过`ThreadModelNoCS``typedef`名称。 这`typedef`中定义`CComMultiThreadModelNoCS`， `CComMultiThreadModel`，和[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)。  
   
@@ -71,10 +66,10 @@ class CComMultiThreadModelNoCS
   
  除了`ThreadModelNoCS`，`CComMultiThreadModelNoCS`定义`AutoCriticalSection`和`CriticalSection`。 这些后的两个`typedef`名称引用[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)，提供与获取和释放临界区关联的空方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModelNoCS::AutoCriticalSection  
  使用时`CComMultiThreadModelNoCS`、`typedef`名称`AutoCriticalSection`引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。  
   
 ```
@@ -97,7 +92,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>示例  
  请参阅[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
   
-##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModelNoCS::CriticalSection  
  使用时`CComMultiThreadModelNoCS`、`typedef`名称`CriticalSection`引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。  
   
 ```
@@ -120,7 +115,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>示例  
  请参阅[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
   
-##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
  此静态函数将调用 Win32 函数[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，指向变量的值的递减`p`。  
   
 ```
@@ -137,7 +132,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="remarks"></a>备注  
  **InterlockedDecrement**防止多个线程同时使用此变量。  
   
-##  <a name="increment"></a>CComMultiThreadModelNoCS::Increment  
+##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
  此静态函数将调用 Win32 函数[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，指向的变量的值时都会增加`p`。  
   
 ```
@@ -154,7 +149,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="remarks"></a>备注  
  **InterlockedIncrement**防止多个线程同时使用此变量。  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModelNoCS::ThreadModelNoCS  
  使用时`CComMultiThreadModelNoCS`、`typedef`名称`ThreadModelNoCS`只引用`CComMultiThreadModelNoCS`。  
   
 ```

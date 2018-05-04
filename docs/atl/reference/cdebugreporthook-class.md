@@ -1,12 +1,9 @@
 ---
-title: "CDebugReportHook 类 |Microsoft 文档"
-ms.custom: 
+title: CDebugReportHook 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDebugReportHook
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d84b2da8a347833513e0725695bb9d2bacd2951d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 类
 使用此类将调试报告发送到命名管道。  
@@ -69,10 +64,10 @@ class CDebugReportHook
   
  请注意调试报告发送使用线程的基础安全上下文。 模拟暂时被禁用，这样在低权限用户的模拟发生，如在 web 应用程序的情况下，可以查看调试报告。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlutil.h  
   
-##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook  
  调用[SetPipeName](#setpipename)， [SetTimeout](#settimeout)，和[SetHook](#sethook)。  
   
 ```
@@ -92,14 +87,14 @@ CDebugReportHook(
  `dwTimeout`  
  时间 （毫秒） 此类将等待可用的命名管道。  
   
-##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook  
  调用[CDebugReportHook::RemoveHook](#removehook)。  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc  
  挂钩到 C 运行时自定义报告函数调试报告过程。  
   
 ```
@@ -116,7 +111,7 @@ static int __cdecl CDebugReportHookProc(
  `message`  
  消息字符串中。  
   
- *returnValue*  
+ *ReturnValue*  
  应通过返回的值[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)。  
   
 ### <a name="return-value"></a>返回值  
@@ -127,7 +122,7 @@ static int __cdecl CDebugReportHookProc(
   
  在调用线程的基础安全上下文中执行此函数中的代码，即，模拟如何根据此函数的持续时间处于禁用状态。  
   
-##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>  CDebugReportHook::RemoveHook  
  调用此方法来停止调试报告发送给命名管道和还原以前的报告挂钩。  
   
 ```
@@ -137,7 +132,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>备注  
  调用[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)还原以前的报告挂钩。  
   
-##  <a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>  CDebugReportHook::SetHook  
  调用此方法来启动调试报告发送给命名管道。  
   
 ```
@@ -147,7 +142,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>备注  
  调用[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)得到调试报告通过路由[CDebugReportHookProc](#cdebugreporthookproc)到命名管道。 此类用于跟踪的以前的报告挂钩，以便它可以是还原时[RemoveHook](#removehook)调用。  
   
-##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName  
  调用此方法以设置的计算机和调试报表将发送到管道名称。  
   
 ```
@@ -166,7 +161,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout  
  调用此方法以设置中此类将等待可用的命名管道的毫秒的时间。  
   
 ```

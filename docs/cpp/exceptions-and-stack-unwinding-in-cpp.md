@@ -2,26 +2,21 @@
 title: 异常和堆栈展开中 C++ |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b354ebaa72c5257e2752a948ece6320a5d8e70
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b05b2f6240876540cd9e67d83bcb88242b68827b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++ 中的异常和堆栈展开
 在 C++ 异常机制中，控制从 throw 语句移至可处理引发类型的第一个 catch 语句。 当达到 catch 语句时，位于范围内之间 throw 语句和 catch 语句的自动变量的所有过程中被销毁称为*堆栈展开*。 在堆栈展开中，执行将继续，如下所示：  

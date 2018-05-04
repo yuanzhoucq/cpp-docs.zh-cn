@@ -1,12 +1,9 @@
 ---
-title: "_com_error 类 |Microsoft 文档"
-ms.custom: 
+title: _com_error 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerror-class"></a>_com_error 类
 **Microsoft 专用**  
@@ -77,10 +72,10 @@ ms.lasthandoff: 01/25/2018
   
 **结束 Microsoft 专用**  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<comdef.h >  
   
- `Lib:`对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
+ `Lib:` 对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
 ## <a name="see-also"></a>请参阅  
  [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)   

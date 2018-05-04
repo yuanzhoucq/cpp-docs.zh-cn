@@ -1,12 +1,9 @@
 ---
-title: "二元运算符 |Microsoft 文档"
-ms.custom: 
+title: 二元运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c52d48359210a21b23caa72afee7e2a3bcd8cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b930c548ea411beb03255d694f2423903053288
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binary-operators"></a>二元运算符
 下表显示可重载的运算符的列表。  
   
 ### <a name="redefinable-binary-operators"></a>可重新定义的二进制运算符  
   
-|运算符|name|  
+|运算符|名称|  
 |--------------|----------|  
 |**，**|逗号|  
 |`!=`|不相等|  

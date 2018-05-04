@@ -1,12 +1,9 @@
 ---
-title: "CDefaultCharTraits 类 |Microsoft 文档"
-ms.custom: 
+title: CDefaultCharTraits 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultCharTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283f588af0e824801fbec13f32ae1276c13eb724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 类
 此类提供了两个静态函数将之间大写和小写字符转换。  
@@ -56,10 +51,10 @@ class CDefaultCharTraits
 ## <a name="remarks"></a>备注  
  此类提供了利用类的函数[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="chartolower"></a>CDefaultCharTraits::CharToLower  
+##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower  
  调用此函数可将字符转换为小写。  
   
 ```
@@ -74,7 +69,7 @@ static char CharToLower(char x);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
-##  <a name="chartoupper"></a>CDefaultCharTraits::CharToUpper  
+##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  
  调用此函数可将字符转换为大写形式。  
   
 ```

@@ -1,12 +1,12 @@
 ---
-title: "如何： 添加重新启动管理器支持 |Microsoft 文档"
-ms.custom: 
+title: 如何： 添加重新启动管理器支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,27 +14,28 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 4550a8a6a6457c4bf5b7acc137a592aa5ecb2e4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-add-restart-manager-support"></a>如何：添加重新启动管理器支持
-重新启动管理器是添加到用于 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 的 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]的一项功能。 如果发生意外关闭或重启，重新启动管理器将为你的应用程序添加支持。 重新启动管理器的行为取决于应用程序的类型。 如果你的应用程序是文档编辑器，则重新启动管理器让应用程序能够自动保存任何打开文档的状态和内容，并在意外关闭后重启应用程序。 如果你的应用程序不是文档编辑器，则重新启动管理器将重启该应用程序，但无法默认保存应用程序的状态。  
+
+重新启动管理器是添加到 Visual Studio 对于 Windows Vista 或更高版本操作系统的功能。 如果发生意外关闭或重启，重新启动管理器将为你的应用程序添加支持。 重新启动管理器的行为取决于应用程序的类型。 如果你的应用程序是文档编辑器，则重新启动管理器让应用程序能够自动保存任何打开文档的状态和内容，并在意外关闭后重启应用程序。 如果你的应用程序不是文档编辑器，则重新启动管理器将重启该应用程序，但无法默认保存应用程序的状态。  
   
  重启后，如果应用程序采用 Unicode 编码，则该应用程序将显示任务对话框。 如果是 ANSI 应用程序，则该应用程序将显示 Windows 消息框。 此时，用户可以选择是否要还原自动保存的文档。 如果用户不还原自动保存的文档，则重新启动管理器将放弃临时文件。  
   
 > [!NOTE]
 >  可以重写重新启动管理器保存数据和重启应用程序的默认行为。  
   
- 默认情况下，当通过 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中的项目向导创建的 MFC 应用程序在具有 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]的计算机上运行时，这些应用程序支持重新启动管理器。 如果不希望你的应用程序支持重新启动管理器，可以在新项目向导中禁用重新启动管理器。  
+ 默认情况下，通过使用中的项目向导创建 MFC 应用程序[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]时具有 Windows Vista 或更高版本操作系统的计算机上运行这些应用程序支持重新启动管理器。 如果不希望你的应用程序支持重新启动管理器，可以在新项目向导中禁用重新启动管理器。  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>向现有应用程序添加重新启动管理器支持  
   

@@ -1,30 +1,25 @@
 ---
-title: "ERRLOOK 参考 |Microsoft 文档"
-ms.custom: 
+title: ERRLOOK 参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ab70e590c0dd4db67f97f170f4e6ead05318704
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errlook-reference"></a>ERRLOOK 参考
 可从工具菜单访问的 ERRLOOK 实用工具**错误查找**，检索系统错误消息或模块错误消息根据输入的值。 ERRLOOK 检索错误消息文本自动如果拖放到 Visual Studio 调试器从十六进制或十进制值**值**编辑控件。 你也可以输入一个值通过键入**值**编辑控件或通过从剪贴板粘贴并单击**查找**。  

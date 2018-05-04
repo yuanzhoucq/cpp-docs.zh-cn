@@ -1,29 +1,24 @@
 ---
-title: "了解 C/c + + 程序的清单生成 |Microsoft 文档"
-ms.custom: 
+title: 了解 C/c + + 程序的清单生成 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848b4b449fa2c9c8930a616b70a5b61cb28d8fbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb6a65c718b88e4072c0ddad19411bb8ea4ddcff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程序的清单生成
 A[清单](http://msdn.microsoft.com/library/aa375365)的 XML 文档可以是外部 XML 文件或资源嵌入到应用程序或程序集。 清单[隔离应用程序](http://msdn.microsoft.com/library/aa375190)用于管理的名称和版本的应用程序应在运行时绑定到的共享的并行程序集。 通过并行程序集清单指定名称、 版本、 资源和其他程序集上的依赖项。  
