@@ -2,28 +2,23 @@
 title: ATL 注册机构和分析树 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ce648a541f6e0e2d4fac2e6ee19226e41f20ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb5b132e5e55ab5336254acaf4d2d3ae25440697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-parse-trees"></a>了解分析树
 你可以在你注册机构脚本中，其中每个分析树具有以下形式定义一个或多个分析树：  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 > [!NOTE]
-> `HKEY_CLASSES_ROOT`和`HKCR`相等，则`HKEY_CURRENT_USER`和`HKCU`等效;、 等。  
+> `HKEY_CLASSES_ROOT` 和`HKCR`相等，则`HKEY_CURRENT_USER`和`HKCU`等效;、 等。  
   
  分析树可以添加多个项和子项到\<根密钥 >。 在此情况下，它将保持子项的句柄打开直到分析器完成分析及其所有子项。 这种方法是比一次在同一个密钥操作更高效，如下面的示例中所示：  
   

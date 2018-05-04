@@ -1,13 +1,10 @@
 ---
-title: "生成文件预处理运算符 |Microsoft 文档"
-ms.custom: 
+title: 生成文件预处理运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-operators"></a>生成文件预处理运算符
 生成文件预处理表达式可以使用在常数值、命令的退出代码、字符串、宏和文件系统路径上使用的运算符。 若要计算该表达式，预处理器应先展开宏、执行命令，然后再执行运算。 运算先按括号中的显式分组进行计算，然后再按运算符优先级进行计算。 该结果是一个常数值。  
@@ -45,8 +40,8 @@ ms.lasthandoff: 12/21/2017
   
 |运算符|描述|  
 |--------------|-----------------|  
-|`DEFINED(`*macroname*`)`|产生一个逻辑值的当前定义状态*macroname*。|  
-|`EXIST(`*路径*`)`|产生的文件是否存在一个逻辑值*路径*。|  
+|`DEFINED(` *macroname* `)`|产生一个逻辑值的当前定义状态*macroname*。|  
+|`EXIST(` *路径* `)`|产生的文件是否存在一个逻辑值*路径*。|  
 |||  
 |`!`|一元逻辑“非”。|  
 |`~`|一元 1 的补数。|  

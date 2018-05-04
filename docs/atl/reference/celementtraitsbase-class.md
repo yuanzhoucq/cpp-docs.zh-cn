@@ -1,12 +1,9 @@
 ---
-title: "CElementTraitsBase 类 |Microsoft 文档"
-ms.custom: 
+title: CElementTraitsBase 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 类
 此类提供默认副本，并移动的集合类的方法。  
@@ -67,10 +62,10 @@ class CElementTraitsBase
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
  调用此方法以将集合类对象中存储的元素复制。  
   
 ```
@@ -93,21 +88,21 @@ static void CopyElements(
 ### <a name="remarks"></a>备注  
  不应重叠的源和目标的元素。  
   
-##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
  要用于将元素添加到集合的数据类型。  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
  要用来从集合检索元素的数据类型。  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
  调用此方法可重新定位集合类对象中存储元素。  
   
 ```

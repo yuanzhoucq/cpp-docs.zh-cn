@@ -1,12 +1,9 @@
 ---
-title: "服务器注册全局函数 |Microsoft 文档"
-ms.custom: 
+title: 服务器注册全局函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>服务器注册全局函数
 这些函数提供用于注册和注销在对象映射中的 server 对象的支持。  
@@ -43,10 +38,10 @@ ms.lasthandoff: 12/21/2017
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|若要吊销从 COM 模块的类对象，调用此函数。|  
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|调用此函数可获取的类对象。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  调用此函数可在对象映射中注册所有对象。  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `AtlComModuleRegisterServer`指导 ATL 自动生成对象映射和映射中注册每个对象。 如果`pCLSID`不为 NULL，则仅引用的对象`pCLSID`注册; 否则注册的所有对象。  
+ `AtlComModuleRegisterServer` 指导 ATL 自动生成对象映射和映射中注册每个对象。 如果`pCLSID`不为 NULL，则仅引用的对象`pCLSID`注册; 否则注册的所有对象。  
   
  调用此函数[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)。  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  调用此函数可在对象映射中注销所有对象。  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `AtlComModuleUnregisterServer`指导 ATL 对象映射，并注销映射中的每个对象。 如果`pCLSID`不为 NULL，则仅引用的对象`pCLSID`注销; 否则为的所有对象会撤消注册。  
+ `AtlComModuleUnregisterServer` 指导 ATL 对象映射，并注销映射中的每个对象。 如果`pCLSID`不为 NULL，则仅引用的对象`pCLSID`注销; 否则为的所有对象会撤消注册。  
   
  调用此函数[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)。  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  调用此函数可注册类对象。  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) （在 ATL 7.0 中已过时） 和[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)。  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  调用此函数可从运行对象表中移除类工厂。  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) （在 ATL 7.0 中已过时） 和[CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)。  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  调用此函数可返回类工厂。  
   
 ```

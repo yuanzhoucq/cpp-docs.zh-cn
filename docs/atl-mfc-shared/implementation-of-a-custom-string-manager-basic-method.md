@@ -1,32 +1,27 @@
 ---
-title: "实现的自定义字符串管理器 （基本方法） |Microsoft 文档"
-ms.custom: 
+title: 实现的自定义字符串管理器 （基本方法） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 259f9533747b266f0be0a782cdc94c98f167d2d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>实现的自定义字符串管理器 （基本方法）
-为字符串数据是使用 ATL 提供自定义的内存分配方案的最简单办法**CAtlStringMgr**类，但提供你自己的内存分配例程。 构造函数**CAtlStringMgr**采用单个参数： 指向的指针`IAtlMemMgr`对象。 `IAtlMemMgr`是一个提供堆的泛型接口的抽象基类。 使用`IAtlMemMgr`接口， **CAtlStringMgr**分配，重新分配，并释放用于存储字符串数据的内存。 你可以实现`IAtlMemMgr`接口你自己，或使用五个 ATL 提供内存管理器类之一。 ATL 提供内存管理器只包装现有的内存分配功能：  
+为字符串数据是使用 ATL 提供自定义的内存分配方案的最简单办法**CAtlStringMgr**类，但提供你自己的内存分配例程。 构造函数**CAtlStringMgr**采用单个参数： 指向的指针`IAtlMemMgr`对象。 `IAtlMemMgr` 是一个提供堆的泛型接口的抽象基类。 使用`IAtlMemMgr`接口， **CAtlStringMgr**分配，重新分配，并释放用于存储字符串数据的内存。 你可以实现`IAtlMemMgr`接口你自己，或使用五个 ATL 提供内存管理器类之一。 ATL 提供内存管理器只包装现有的内存分配功能：  
   
 -   [CCRTHeap](../atl/reference/ccrtheap-class.md)包装标准 CRT 堆函数 ([malloc](../c-runtime-library/reference/malloc.md)，[免费](../c-runtime-library/reference/free.md)，和[realloc](../c-runtime-library/reference/realloc.md))  
   

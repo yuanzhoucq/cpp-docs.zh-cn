@@ -2,29 +2,24 @@
 title: 生成和测试 ATL 项目 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - composite controls, building and testing the project
 - composite controls, containers for
 ms.assetid: 5c1541f8-f6cb-4c22-bd22-c66bcfbaa077
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a3dbd570a16228c02215560e8133a77b98a2489
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee9be7db4251b6238265d53b6d84f24f39b7b9a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-and-testing-the-atl-project"></a>生成和测试 ATL 项目
 中所述[插入复合控件](../atl/inserting-a-composite-control.md)，其中一个项目的初始组件是一个承载新的复合控件的默认 HTML 页面。 完成修改复合控件后，单击**生成解决方案**或**重新生成解决方案**从**生成**菜单。 项目成功生成后，加载 HTML 页中，Internet Explorer 或另一个浏览器到位于你的复合控件项目的根目录，并测试你的控件的功能。  

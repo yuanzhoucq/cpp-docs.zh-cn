@@ -2,11 +2,8 @@
 title: 服务映射宏 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>服务映射宏
 这些宏定义服务映射和条目。  
@@ -38,10 +33,10 @@ ms.lasthandoff: 12/21/2017
 |[SERVICE_ENTRY](#service_entry)|该值指示对象支持特定的服务 id。|  
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)链接到指定的对象。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  标记服务映射的开始。  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  标记服务映射的末尾。  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>示例  
  请参阅示例[BEGIN_SERVICE_MAP](#begin_service_map)。  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  该值指示对象是否支持指定的服务 id *SID*。  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>示例  
  请参阅示例[BEGIN_SERVICE_MAP](#begin_service_map)。  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  指示[IServiceProviderImpl::QueryService](#queryservice)链接到指定的对象`punk`。  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>示例  
  请参阅示例[BEGIN_SERVICE_MAP](#begin_service_map)。  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  创建或访问指定的服务并返回服务的指定接口的接口指针。  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>参数  
- [IN]`guidService`  
+ [IN] `guidService`  
  指向服务标识符 (SID)。  
   
- [IN]`riid`  
+ [IN] `riid`  
  为访问调用方的接口标识符。  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  指向所请求的接口的间接指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|所请求的接口不是此服务的一部分，或者服务未知。|  
   
 ### <a name="remarks"></a>备注  
- `QueryService`返回指定的服务中的请求接口的间接指针。 调用方负责在不再需要释放此指针。  
+ `QueryService` 返回指定的服务中的请求接口的间接指针。 调用方负责在不再需要释放此指针。  
   
  当调用`QueryService`，则传递两个服务标识符 ( `guidService`) 和接口标识符 ( `riid`)。 `guidService`指定访问权限，要向其中的服务和`riid`标识服务的一部分的接口。 反过来，你会收到间接指向的接口。  
   

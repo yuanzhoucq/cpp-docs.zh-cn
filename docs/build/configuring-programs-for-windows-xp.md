@@ -1,27 +1,22 @@
 ---
-title: "适用于 Windows XP 配置程序 |Microsoft 文档"
-ms.custom: 
+title: 适用于 Windows XP 配置程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>适用于 Windows XP 配置程序
 
@@ -38,7 +33,7 @@ Visual Studio 中包含 Windows XP 平台工具集，则的版本[!INCLUDE[win7]
 
 1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。
 
-1. 在**属性页**对话框中的项目中，在**配置属性** > **常规**，将其设置**平台工具集**到所需的 Windows XP 工具集的属性。 例如，选择**Visual Studio 2017-Windows XP (v141_xp)**创建代码[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]通过使用 Microsoft Visual c + + 2017年编译器。
+1. 在**属性页**对话框中的项目中，在**配置属性** > **常规**，将其设置**平台工具集**到所需的 Windows XP 工具集的属性。 例如，选择**Visual Studio 2017-Windows XP (v141_xp)** 创建代码[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]通过使用 Microsoft Visual c + + 2017年编译器。
 
 ### <a name="c-runtime-support"></a>C++ 运行时支持
 
@@ -46,7 +41,7 @@ Visual Studio 中包含 Windows XP 平台工具集，则的版本[!INCLUDE[win7]
 
 安装 Visual Studio 中，具体取决于目标平台工具集支持这些库：
 
-|库|面向 Windows 桌面应用程序的默认平台工具集|默认平台工具集目标应用商店应用程序|Windows XP 平台工具集目标[!INCLUDE[winxp](../build/includes/winxp_md.md)]， [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
+|库|面向 Windows 桌面应用程序的默认平台工具集|默认平台工具集目标应用商店应用程序|面向 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 和 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 的 Windows XP 平台工具集|
 |---|---|---|---|
 |CRT|X|X|X|
 |C++ 标准库|X|X|X|

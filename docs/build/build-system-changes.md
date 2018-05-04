@@ -2,12 +2,9 @@
 title: 生成系统更改 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>有关生成系统的更改
 MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 和早期版本中，使用了 VCBuild 系统。 某些文件类型和依赖 VCBuild 的概念不存在，或在当前系统中以不同方式表示。 本文档讨论当前的生成系统中的差异。  
@@ -55,11 +50,11 @@ MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 
 >  在最新版本中，[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 不支持创建新规则。 因此，若要使用通过早期版本的 Visual C++ 创建的项目中的规则文件，最简单的方法是将该项目迁移到最新版本。  
   
 ## <a name="inheritance-macros"></a>继承宏  
- 在早期版本中， **$ （inherit)**宏指定继承的属性的顺序由项目生成系统的命令行上。 **$ （noinherit)**宏 $ （inherit） 为忽略任何事件，并折叠要的任何属性将被继承，不被继承。 例如，默认情况下 $ （inherit） 宏会导致使用指定的文件[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)编译器选项追加到命令行。  
+ 在早期版本中， **$ （inherit)** 宏指定继承的属性的顺序由项目生成系统的命令行上。 **$ （noinherit)** 宏 $ （inherit） 为忽略任何事件，并折叠要的任何属性将被继承，不被继承。 例如，默认情况下 $ （inherit） 宏会导致使用指定的文件[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)编译器选项追加到命令行。  
   
- 在当前版本中，通过指定属性的值的串联的一个或多个文本值和属性宏支持继承。 **$ （inherit)**和**$ （noinherit)**宏不支持。  
+ 在当前版本中，通过指定属性的值的串联的一个或多个文本值和属性宏支持继承。 **$ （inherit)** 和 **$ （noinherit)** 宏不支持。  
   
- 在下面的示例中，以分号分隔的列表分配到属性页上的属性。 列表包含的串联*\<值 >*文本和的值`MyProperty`属性，可通过使用宏表示法， **$(***MyProperty***)**.  
+ 在下面的示例中，以分号分隔的列表分配到属性页上的属性。 列表包含的串联*\<值 >* 文本和的值`MyProperty`属性，可通过使用宏表示法， **$(***MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
@@ -68,7 +63,7 @@ Property=<value>;$(MyProperty)
 ## <a name="vcxprojuser-files"></a>。 vcxproj.user 文件  
  用户文件 (。 vcxproj.user) 将存储特定于用户的属性，则对于示例、 调试和部署设置。 Vcxproj.user 文件适用于特定用户的所有项目。  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>。 vcxproj.filters 文件  
  当**解决方案资源管理器**用于将文件添加到项目中，筛选器文件 (。 vcxproj.filters) 定义中的何处**解决方案资源管理器**树的视图已添加文件，基于其文件扩展名。  
   
 ## <a name="vc-directories-settings"></a>VC + + 目录设置  
@@ -78,5 +73,5 @@ Property=<value>;$(MyProperty)
   
  从.vssettings 文件创建的早期版本的 Visual c + + 迁移 VC + + 目录设置。 打开**工具**菜单上，单击**导入和导出设置**，选择**导入选定的环境设置**，然后按照向导中的说明。 当您按或启动 Visual Studio 首次**选择默认环境设置**对话框中，选择**从早期版本迁移合格的设置并将其应用除了默认设置下面所选**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

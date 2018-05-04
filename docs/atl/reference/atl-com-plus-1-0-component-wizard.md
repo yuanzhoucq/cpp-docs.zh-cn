@@ -1,12 +1,9 @@
 ---
-title: "ATL COM + 1.0 组件向导 |Microsoft 文档"
-ms.custom: 
+title: ATL COM + 1.0 组件向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19151ca659f7bc3235f84eefb39b640c4856fa43
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 使用此向导将对象添加到您的项目，支持 COM + 1.0 服务，包括事务。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  指定的对象、 接口和类添加到你的项目的名称。 除**短名称**，所有其他框可以相互独立地进行编辑。 如果你更改的文本**短名称**，此更改反映在此页中的所有其他框的名称。 如果你更改**组件类**名称中 COM 部分中，更改将反映在**类型**和**ProgID**框中，但**接口**名称不会更改。 此命名行为旨在使所有名称轻松地识别为您开发您的控件。  
   
  **短名称**  
- 设置对象的缩写的名称。 提供确定的名称`Class`和`Coclass`名称， **.cpp 文件**和**.h 文件**名称，**接口**命名**类型**名称，与**ProgID**，除非单独更改这些字段。  
+ 设置对象的缩写的名称。 提供确定的名称`Class`和`Coclass`名称， **.cpp 文件**和 **.h 文件**名称，**接口**命名**类型**名称，与**ProgID**，除非单独更改这些字段。  
   
  **.h 文件**  
  设置新对象的类的头文件的名称。 默认情况下，此名称基于你在中提供的名称**短名称**。 单击省略号按钮，以将文件名称保存到你选择的位置，或者将类声明追加到现有文件。 如果你选择现有文件，向导将不将其保存到所选位置直到你单击**完成**向导中。  

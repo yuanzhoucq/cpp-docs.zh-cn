@@ -1,12 +1,9 @@
 ---
-title: "IPropertyPage2Impl 类 |Microsoft 文档"
-ms.custom: 
+title: IPropertyPage2Impl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPropertyPage2Impl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17773bdd07d4ae25b33bc104d46d607b5069f78d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 204f62e667bd149dd174f960ba31d8388e01394e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl 类
 此类实现**IUnknown**和继承的默认实现[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)。  
@@ -72,10 +67,10 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
   
  `IPropertyPage2Impl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
+##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty  
  指定哪些属性控件将接收焦点时激活的属性页。  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "/SECTION （指定节特性） |Microsoft 文档"
-ms.custom: 
+title: /SECTION （指定节特性） |Microsoft 文档
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /section
 dev_langs:
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - /SECTION linker option
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa214c7efeeee595300204df900a333258052772
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6d9b0a724f0e9156c81db20bf283e4418dd2f22d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION（指定节特性）
 
@@ -84,7 +80,7 @@ A*部分*在可移植可执行 (PE) 文件是包含代码或数据的内存的�
 |K|可缓存|将节标记为不可缓存：|
 |P|可分页|将标记为不可分页的部分|
 
-对应于它们的部分标志可用在负的意义上，K 和 P 并不常用。 如果你指定其中的一个.text 部分使用**/SECTION:.text、 K**选项，没有任何区别部分标志在运行时[DUMPBIN](../../build/reference/dumpbin-options.md)与[/HEADERS](../../build/reference/headers.md)选项;已隐式缓存部分。 若要删除默认值，指定**/SECTION:.text，！K**相反。 DUMPBIN 显示部分特征，包括"不缓存。"
+对应于它们的部分标志可用在负的意义上，K 和 P 并不常用。 如果你指定其中的一个.text 部分使用 **/SECTION:.text、 K**选项，没有任何区别部分标志在运行时[DUMPBIN](../../build/reference/dumpbin-options.md)与[/HEADERS](../../build/reference/headers.md)选项;已隐式缓存部分。 若要删除默认值，指定 **/SECTION:.text，！K**相反。 DUMPBIN 显示部分特征，包括"不缓存。"
 
 没有 E、 R 或 W 设置 PE 文件中的节可能无效。
 

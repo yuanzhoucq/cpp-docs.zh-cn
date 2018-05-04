@@ -2,12 +2,9 @@
 title: ATL COM 对象的基础知识 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 对象的基础知识
 下图描绘了的类和接口，用于定义 ATL COM 对象之间的关系。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  此图演示`CComObject`派生自`CYourClass`而`CComAggObject`和`CComPolyObject`包括`CYourClass`作为成员变量。  
   
- 有三种方法来定义 ATL COM 对象。 标准选项是使用`CComObject`类，该类派生自`CYourClass`。 第二个选项是通过使用创建聚合的对象`CComAggObject`类。 第三个选项是使用`CComPolyObject`类。 `CComPolyObject`充当混合： 它可以用作`CComObject`类或`CComAggObject`类，具体取决于如何首次创建。 有关如何使用`CComPolyObject`类，请参阅[CComPolyObject 类](../atl/reference/ccompolyobject-class.md)。  
+ 有三种方法来定义 ATL COM 对象。 标准选项是使用`CComObject`类，该类派生自`CYourClass`。 第二个选项是通过使用创建聚合的对象`CComAggObject`类。 第三个选项是使用`CComPolyObject`类。 `CComPolyObject` 充当混合： 它可以用作`CComObject`类或`CComAggObject`类，具体取决于如何首次创建。 有关如何使用`CComPolyObject`类，请参阅[CComPolyObject 类](../atl/reference/ccompolyobject-class.md)。  
   
  当使用标准的 ATL COM 时，使用两个对象： 外部对象和内部对象。 外部客户端通过外部对象中定义的包装函数访问内部对象的功能。 在外部对象属于类型`CComObject`。  
   

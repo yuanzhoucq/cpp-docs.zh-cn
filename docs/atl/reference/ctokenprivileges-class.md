@@ -1,12 +1,9 @@
 ---
-title: "CTokenPrivileges 类 |Microsoft 文档"
-ms.custom: 
+title: CTokenPrivileges 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 类
 此类是包装器**TOKEN_PRIVILEGES**结构。  
@@ -58,7 +53,7 @@ class CTokenPrivileges
 |名称|描述|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|构造函数。|  
-|[CTokenPrivileges::~CTokenPrivileges](#dtor)|析构函数。|  
+|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|析构函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -91,7 +86,7 @@ class CTokenPrivileges
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
 ##  <a name="add"></a>  CTokenPrivileges::Add  
@@ -134,7 +129,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>备注  
  `CTokenPrivileges` （可选） 可以使用创建对象**TOKEN_PRIVILEGES**结构或以前定义`CTokenPrivileges`对象。  
   
-##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges  
  析构函数。  
   
 ```
@@ -294,7 +289,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>返回值  
  返回已更新`CTokenPrivileges`对象。  
   
-##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  将强制转换为指向的值**TOKEN_PRIVILEGES**结构。  
   
 ```  

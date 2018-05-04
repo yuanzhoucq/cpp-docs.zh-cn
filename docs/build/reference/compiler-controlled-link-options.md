@@ -1,13 +1,10 @@
 ---
-title: "编译器控制的 LINK 选项 |Microsoft 文档"
-ms.custom: 
+title: 编译器控制的 LINK 选项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc899fc7f1fc8c1805648e72e14ef13853841c90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d99a05b5f9c4d97fd42328a41ad3fe054ab42cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 除非另行指定，/c 选项，则 CL 编译器将自动调用链接。 CL 提供一定的控制链接器通过命令行选项和自变量。 下表汇总了 CL 影响链接的功能。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |/LDd|将传递 /DLL|  
 |/link|将命令行的其余部分传递给 LINK|  
 |/MD 或 /MT|将默认库名放入.obj 文件|  
-|/Mdd 或 /MTd|将默认库名放入.obj 文件中。 定义符号**_DEBUG**|  
+|/Mdd 或 /MTd|将默认库名放入.obj 文件中。 定义符号 **_DEBUG**|  
 |/nologo|将传递 /NOLOGO|  
 |/Zd|传递 /DEBUG|  
 |/Zi 或 /Z7|传递 /DEBUG|  

@@ -1,12 +1,9 @@
 ---
-title: "CHeapPtr 类 |Microsoft 文档"
-ms.custom: 
+title: CHeapPtr 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtr
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a728f84a2eaa3f0138e2b0a95c25f8867c17432e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 类
 用于管理堆指针的智能指针类。  
@@ -73,17 +68,17 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |[CHeapPtr::operator =](#operator_eq)|赋值运算符中。|  
   
 ## <a name="remarks"></a>备注  
- `CHeapPtr`派生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)和默认情况下使用的 CRT 例程 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 分配和释放内存。 类[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可能用于构造的堆指针的列表。 另请参阅[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它使用 COM 内存分配例程。  
+ `CHeapPtr` 派生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)和默认情况下使用的 CRT 例程 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 分配和释放内存。 类[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可能用于构造的堆指针的列表。 另请参阅[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它使用 COM 内存分配例程。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
   
  `CHeapPtr`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcore.h  
   
-##  <a name="allocate"></a>CHeapPtr::Allocate  
+##  <a name="allocate"></a>  CHeapPtr::Allocate  
  调用此方法以在存储对象的堆上分配内存。  
   
 ```
@@ -103,7 +98,7 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
-##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
+##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr  
  构造函数。  
   
 ```
@@ -122,7 +117,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
-##  <a name="operator_eq"></a>CHeapPtr::operator =  
+##  <a name="operator_eq"></a>  CHeapPtr::operator =  
  赋值运算符。  
   
 ```
@@ -140,7 +135,7 @@ CHeapPtr<T, Allocator>& operator=(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
-##  <a name="reallocate"></a>CHeapPtr::Reallocate  
+##  <a name="reallocate"></a>  CHeapPtr::Reallocate  
  调用此方法以重新分配堆上的内存。  
   
 ```

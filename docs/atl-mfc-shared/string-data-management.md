@@ -2,28 +2,23 @@
 title: 字符串数据管理 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: acf14ebec5417179a94d0a6ffefdb473966f0c2e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-data-management"></a>字符串数据管理
 Visual c + + 提供多种方式来管理字符串数据：  
@@ -53,10 +48,10 @@ Visual c + + 提供多种方式来管理字符串数据：
  A`CString`对象表示的可变数量的字符序列。 `CString` 对象可以看作的字符数组。  
   
 ##  <a name="_core_unicode_and_mbcs_provide_portability"></a> Unicode 和 MBCS 提供可移植性  
- MFC 3.0 版及更高版本，MFC，其中包括`CString`，为 Unicode 和多字节字符集 (MBCS) 启用。 此支持，使你更轻松地编写可移植的应用程序可以构建用于 Unicode 或 ANSI 字符。 若要启用此可移植性，在每个字符`CString`对象属于类型**TCHAR**，其定义为`wchar_t`如果您定义符号**_UNICODE**时生成应用程序，或作为`char`如果不是。 A`wchar_t`字符是 16 位宽。 如果用的符号生成启用 MBCS **_MBCS**定义。 MFC 本身生成使用**_MBCS**符号 （对于 NAFX 库中） 或**_UNICODE** （对于 UAFX 库中） 的符号定义。  
+ MFC 3.0 版及更高版本，MFC，其中包括`CString`，为 Unicode 和多字节字符集 (MBCS) 启用。 此支持，使你更轻松地编写可移植的应用程序可以构建用于 Unicode 或 ANSI 字符。 若要启用此可移植性，在每个字符`CString`对象属于类型**TCHAR**，其定义为`wchar_t`如果您定义符号 **_UNICODE**时生成应用程序，或作为`char`如果不是。 A`wchar_t`字符是 16 位宽。 如果用的符号生成启用 MBCS **_MBCS**定义。 MFC 本身生成使用 **_MBCS**符号 （对于 NAFX 库中） 或 **_UNICODE** （对于 UAFX 库中） 的符号定义。  
   
 > [!NOTE]
->  `CString`中的示例和伴随文章上字符串显示为 Unicode 可移植性正确设置格式字符串，使用**_T**宏，将转换到窗体的文本字符串：  
+>  `CString`中的示例和伴随文章上字符串显示为 Unicode 可移植性正确设置格式字符串，使用 **_T**宏，将转换到窗体的文本字符串：  
   
  `L"literal string"`  
   
@@ -66,12 +61,12 @@ Visual c + + 提供多种方式来管理字符串数据：
  [!code-cpp[NVC_ATLMFC_Utilities#187](../atl-mfc-shared/codesnippet/cpp/string-data-management_1.cpp)]  
   
 > [!NOTE]
->  如果将被转换为 Unicode 字符串**_UNICODE**定义或作为一个 ANSI 字符串如果不是。 有关详细信息，请参阅文章[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
+>  如果将被转换为 Unicode 字符串 **_UNICODE**定义或作为一个 ANSI 字符串如果不是。 有关详细信息，请参阅文章[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
   
  A`CString`对象可存储最多**INT_MAX** (2,147,483,647) 个字符。 **TCHAR**数据类型用于获取或设置单个字符`CString`对象。 与字符数组不同`CString`类具有内置的内存分配功能。 这允许`CString`对象根据需要自动增长 (即，不需要担心增长`CString`对象大小以适应较长的字符串)。  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> Cstring 和 const char 指针  
- A`CString`对象还可以充当文字的 C 样式字符串 ( `PCXSTR`，这是与相同**const char\*** 如果不是在 Unicode 下的)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)转换运算符允许`CString`自由地将替换为在函数调用中的字符指针的对象。 **CString (LPCWSTR** `pszSrc` **)**构造函数允许要替换的字符指针`CString`对象。  
+ A`CString`对象还可以充当文字的 C 样式字符串 ( `PCXSTR`，这是与相同**const char\*** 如果不是在 Unicode 下的)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)转换运算符允许`CString`自由地将替换为在函数调用中的字符指针的对象。 **CString (LPCWSTR** `pszSrc` **)** 构造函数允许要替换的字符指针`CString`对象。  
   
  未尝试折叠`CString`对象。 如果使两个`CString`对象包含`Chicago`，例如中的字符`Chicago`存储在两个位置。 （这可能不为 true 的将来版本的 MFC，因此不应依赖于它。）  
   
@@ -93,6 +88,6 @@ Visual c + + 提供多种方式来管理字符串数据：
   
  你可以使用`CString`成员函数[CSimpleStringT::LockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[CSimpleStringT::UnlockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)禁用或启用引用计数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [常规 MFC 主题](../mfc/general-mfc-topics.md)
 

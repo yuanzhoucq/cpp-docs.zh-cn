@@ -2,12 +2,9 @@
 title: 生成 C/c + + 独立应用程序和通过并行程序集 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5dec3b0db6d77cc11d0e2ccdc97fe54ab8e0624
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ca99de7403ad56ae82fdd25af8ff22167084b91
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>生成 C/C++ 独立应用程序和并行程序集
 Visual C++ 支持 Windows 客户端应用程序的部署模型，其理论基础是 [独立应用程序](http://msdn.microsoft.com/library/aa375190) 和 [并行程序集](http://msdn.microsoft.com/library/ff951640)。 默认情况下，Visual C++ 将所有本机 C/C++ 应用程序都作为独立应用程序来生成，这些应用程序使用 [清单](http://msdn.microsoft.com/library/aa375365) 来描述其在 Visual C++ 库上的依赖关系。  

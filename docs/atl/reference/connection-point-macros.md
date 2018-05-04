@@ -1,12 +1,9 @@
 ---
-title: "连接点宏 |Microsoft 文档"
-ms.custom: 
+title: 连接点宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f98b5abd00f1d7ac3e3d69b0e22b549fdea35a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-macros"></a>连接点宏
 这些宏定义连接点图和条目。  
@@ -38,10 +33,10 @@ ms.lasthandoff: 12/21/2017
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017)与 CONNECTION_POINT_ENTRY 类似但采用指向 iid 的。|
 |[END_CONNECTION_POINT_MAP](#end_connection_point_map)|将标记的末尾连接点的映射条目。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h 
    
-##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
+##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP  
  标记的连接点的映射条目的开始。  
   
 ```
@@ -60,7 +55,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
-##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 和 CONNECTION_POINT_ENTRY_P  
+##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY 和 CONNECTION_POINT_ENTRY_P  
  为指定接口输入连接点映射到的连接点，以便可以进行访问。  
   
 ```
@@ -85,7 +80,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
-##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
+##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP  
  将标记的末尾连接点的映射条目。  
   
 ```

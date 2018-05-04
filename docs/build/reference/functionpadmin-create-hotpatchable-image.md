@@ -1,10 +1,10 @@
 ---
-title: "/FUNCTIONPADMIN （创建可热修补的映像） |Microsoft 文档"
-ms.custom: 
+title: /FUNCTIONPADMIN （创建可热修补的映像） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /functionpadmin
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c941ec7f0e94ba03979c914ddd26b8bd21237369
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN（创建可热修补的映像）
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 03/12/2018
 
 为了使链接器以生成可热修补图像，.obj 文件都必须已使用编译[/hotpatch （创建可热修补的映像）](../../build/reference/hotpatch-create-hotpatchable-image.md)。
 
-在编译和链接单次调用 cl.exe，与映像**/hotpatch**意味着**/functionpadmin**。
+在编译和链接单次调用 cl.exe，与映像 **/hotpatch**意味着 **/functionpadmin**。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 03/12/2018
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
-1. 输入**/FUNCTIONPADMIN**选项**其他选项**。 选择**确定**以保存所做的更改。
+1. 输入 **/FUNCTIONPADMIN**选项**其他选项**。 选择**确定**以保存所做的更改。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

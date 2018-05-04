@@ -1,12 +1,9 @@
 ---
-title: "ATL 简单对象向导 |Microsoft 文档"
-ms.custom: 
+title: ATL 简单对象向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ff9648cfc350f724a333e38622d082d8d399b3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 简单对象向导
 此向导将最小的 COM 对象插入到项目中。 向导的此页用于指定标识的 c + + 类和你的对象和其 COM 功能文件的名称。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  提供信息的对象创建的 c + + 类。  
   
  **短名称**  
- 设置对象的缩写的名称。 提供确定的名称`Class`和**组件类**名称， **.cpp 文件**和**.h 文件**名称，**接口**名称，**类型**名称，与**ProgID**，除非单独更改这些字段。  
+ 设置对象的缩写的名称。 提供确定的名称`Class`和**组件类**名称， **.cpp 文件**和 **.h 文件**名称，**接口**名称，**类型**名称，与**ProgID**，除非单独更改这些字段。  
   
  **.h 文件**  
  设置新对象的类的头文件的名称。 默认情况下，此名称基于你在中提供的名称**短名称**。 单击省略号按钮，以将文件名称保存到你选择的位置，或者将类声明追加到现有文件。 如果选择现有文件时，向导将不将其保存到所选位置直到你单击**完成**向导中。  

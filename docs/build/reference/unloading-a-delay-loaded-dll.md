@@ -1,30 +1,25 @@
 ---
-title: "卸载延迟加载的 DLL |Microsoft 文档"
-ms.custom: 
+title: 卸载延迟加载的 DLL |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724ee2ac3987c855f5e2102dee35d12785726641
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>卸载延迟加载的 DLL
 默认提供延迟加载 helper 检查以查看的延迟加载描述符 pUnloadIAT 字段中是否具有为指针，原始的导入地址表 (IAT) 的副本。 如果是这样，它会将指针保存到导入延迟描述符列表中。 这使要按名称以支持显式卸载该 DLL 中查找该 DLL 的帮助器函数。  

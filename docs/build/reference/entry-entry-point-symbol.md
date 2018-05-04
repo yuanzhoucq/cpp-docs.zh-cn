@@ -1,13 +1,10 @@
 ---
-title: "输入 （入口点符号） |Microsoft 文档"
-ms.custom: 
+title: 输入 （入口点符号） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY（入口点符号）
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |功能名称|默认值为|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (或**wmainCRTStartup**)|使用 /SUBSYSTEM:CONSOLE; 的应用程序调用`main`(或`wmain`)|  
-|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|使用 /SUBSYSTEM 的应用程序：**WINDOWS**; 调用`WinMain`(或`wWinMain`)，其必须定义为使用`__stdcall`|  
-|**_DllMainCRTStartup**|DLL;调用`DllMain`如果它存在，其必须定义以使用`__stdcall`|  
+|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|使用 /SUBSYSTEM 的应用程序：**WINDOWS**; 调用`WinMain`(或`wWinMain`)，其必须定义为使用 `__stdcall`|  
+|**_DllMainCRTStartup**|DLL;调用`DllMain`如果它存在，其必须定义以使用 `__stdcall`|  
   
  如果[/DLL](../../build/reference/dll-build-a-dll.md)或[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)未指定选项、 链接器选择的子系统和条目的点，具体取决于是否`main`或`WinMain`定义。  
   

@@ -1,13 +1,10 @@
 ---
-title: "-Q 选项 （低级别操作） |Microsoft 文档"
-ms.custom: 
+title: -Q 选项 （低级别操作） |Microsoft 文档
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /q
 dev_langs:
@@ -18,18 +15,17 @@ helpviewer_keywords:
 - /Q compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7636b042669c7f7b04d2bc662bcaa2fbe4bdc82a
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c8a18c5d790cf21e8eb130a2b2baa152e20d79a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="q-options-low-level-operations"></a>/Q 选项（低级别操作）
 
-你可以使用**/Q**编译器选项执行以下低级别编译器操作：
+你可以使用 **/Q**编译器选项执行以下低级别编译器操作：
 
 - [/Qfast_transcendentals （强制快速先验）](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md)： 生成快速先验。
 

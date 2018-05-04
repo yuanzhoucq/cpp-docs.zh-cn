@@ -1,12 +1,9 @@
 ---
-title: "CStringElementTraitsI 类 |Microsoft 文档"
-ms.custom: 
+title: CStringElementTraitsI 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraitsI
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7803d85c7adf346a06f87d35aba7f42e47f77b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI 类
 此类提供与集合类对象中存储的字符串相关的静态函数。 它是类似于[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)，但执行不区分大小写的比较。  
@@ -74,10 +69,10 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
   
  `CStringElementTraitsI`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
  调用此静态函数以比较两个字符串元素相等性，忽略大小写差异。  
   
 ```
@@ -97,7 +92,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>备注  
  比较是区分大小写。  
   
-##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
  调用此静态函数以比较两个字符串元素，忽略大小写差异。  
   
 ```
@@ -118,7 +113,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>备注  
  比较是区分大小写。  
   
-##  <a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>  CStringElementTraitsI::Hash  
  调用此静态函数以计算给定的字符串元素的哈希值。  
   
 ```
@@ -132,14 +127,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>返回值  
  返回一个哈希值，使用字符串的内容计算。  
   
-##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
  要用于将元素添加到集合类对象的数据类型。  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
  要用来检索元素的集合类对象的数据类型。  
   
 ```

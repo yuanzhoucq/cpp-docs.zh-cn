@@ -1,13 +1,10 @@
 ---
-title: "EDITBIN 选项 |Microsoft 文档"
-ms.custom: 
+title: EDITBIN 选项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 EDITBIN 可用于修改对象文件、 可执行文件和动态链接库 (Dll)。 选项指定 EDITBIN 做的更改。  
@@ -34,7 +29,7 @@ EDITBIN 可用于修改对象文件、 可执行文件和动态链接库 (Dll)�
   
  EDITBIN 还拥有以下选项：  
   
-|选项|目的|  
+|选项|目标|  
 |------------|-------------|  
 |[/ALLOWBIND](../../build/reference/allowbind.md)|指定一个 DLL 是否可以绑定。|  
 |[/ALLOWISOLATION](../../build/reference/allowisolation.md)|指定 DLL 或可执行文件清单查找行为。|  
@@ -50,7 +45,7 @@ EDITBIN 可用于修改对象文件、 可执行文件和动态链接库 (Dll)�
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|指定可执行映像是否与 Windows 数据执行保护兼容。|  
 |[/REBASE](../../build/reference/rebase.md)|设置指定对象的基址。|  
 |[/RELEASE](../../build/reference/release.md)|在标头中设置校验和。|  
-|[/SECTION](../../build/reference/section-editbin.md)|重写节的特性。|  
+|[/ 部分](../../build/reference/section-editbin.md)|重写节的特性。|  
 |[/STACK](../../build/reference/stack.md)|以字节设置可执行映像栈的大小。|  
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|指定执行环境。|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|指定可执行映像必须复制到交换文件，然后从其中运行。|  

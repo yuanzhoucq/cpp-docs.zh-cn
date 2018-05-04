@@ -1,29 +1,24 @@
 ---
-title: "实现的自定义字符串管理器 （高级方法） |Microsoft 文档"
-ms.custom: 
+title: 实现的自定义字符串管理器 （高级方法） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>实现的自定义字符串管理器 （高级方法）
 在特殊情况下，你可能想要实现自定义字符串管理器以外的其他更改使用的堆分配内存。 在此情况下，你必须手动实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)作为自定义字符串经理的接口。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr)此字段将指向`IAtlStringMgr`用于管理此字符串数据的接口。 当`CStringT`需要重新分配或释放它调用的重新分配或可用方法的此接口，传递的字符串缓冲区`CStringData`作为参数的结构。 分配时`CStringData`结构中字符串管理器中，必须设置此字段为指向你的自定义字符串的经理。  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength)此字段包含不包括终止 null 的缓冲区中存储的字符串的当前逻辑长度。 `CStringT`字符串的长度更改时，请更新此字段。 分配时`CStringData`结构，字符串 manager 必须将此字段设置为零。 当重新分配`CStringData`结构，你的自定义字符串 manager 必须将此字段保持不变。  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength)此字段包含不包括终止 null 的缓冲区中存储的字符串的当前逻辑长度。 `CStringT` 字符串的长度更改时，请更新此字段。 分配时`CStringData`结构，字符串 manager 必须将此字段设置为零。 当重新分配`CStringData`结构，你的自定义字符串 manager 必须将此字段保持不变。  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength)此字段包含的最大 （不包括终止 null） 可以在不重新分配它的情况下存储在此字符串缓冲区中的字符数。 每当`CStringT`需要增加逻辑字符串的长度，它首先检查此字段以确保在缓冲区中没有足够的空间。 如果检查失败，`CStringT`调入你的自定义字符串的经理，以重新分配缓冲区。 当分配或重新分配`CStringData`结构，你必须将其设置字段到至少请求中的字符数**nChars**参数[IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate)或[IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate)。 如果不是请求的缓冲区中没有更多空间，你可以设置此值以反映实际可用空间量。 这允许`CStringT`增长字符串来填充整个已有将回调到要重新分配缓冲区的字符串管理器之前，已分配空间。  
   

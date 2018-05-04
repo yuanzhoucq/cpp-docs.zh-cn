@@ -1,12 +1,9 @@
 ---
-title: "CContainedWindowT 类 |Microsoft 文档"
-ms.custom: 
+title: CContainedWindowT 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CContainedWindowT
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f3f90e23eed3bd1eba80bbf90fe73de45eb7cfa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 此类实现包含在另一个对象的窗口。  
@@ -97,9 +92,9 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pObject](#m_pobject)|指向包含的对象。|  
   
 ## <a name="remarks"></a>备注  
- `CContainedWindowT`实现包含在另一个对象的窗口。 `CContainedWindowT`窗口过程使用消息映射直接将消息到相应的处理程序的包含对象中。 在构造时`CContainedWindowT`对象，您可以指定应使用哪些消息映射。  
+ `CContainedWindowT` 实现包含在另一个对象的窗口。 `CContainedWindowT`窗口过程使用消息映射直接将消息到相应的处理程序的包含对象中。 在构造时`CContainedWindowT`对象，您可以指定应使用哪些消息映射。  
   
- `CContainedWindowT`可以通过创建超类现有窗口类创建一个新窗口。 **创建**方法第一次注册的窗口类，基于现有类，但使用`CContainedWindowT::WindowProc`。 **创建**然后创建基于此新的窗口类的一个窗口。 每个实例`CContainedWindowT`可以超类不同的窗口类。  
+ `CContainedWindowT` 可以通过创建超类现有窗口类创建一个新窗口。 **创建**方法第一次注册的窗口类，基于现有类，但使用`CContainedWindowT::WindowProc`。 **创建**然后创建基于此新的窗口类的一个窗口。 每个实例`CContainedWindowT`可以超类不同的窗口类。  
   
  `CContainedWindowT` 还支持窗口子类化。 `SubclassWindow` 方法将现有的窗口附加到 `CContainedWindowT` 对象并将窗口过程更改为 `CContainedWindowT::WindowProc`。 `CContainedWindowT` 的每个实例可以子类化其他窗口。  
   
@@ -126,10 +121,10 @@ class CContainedWindowT : public TBase
   
  `CContainedWindowT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
+##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT  
  构造函数初始化数据成员。  
   
 ```
@@ -167,7 +162,7 @@ CContainedWindowT(
   
  如果子类化现有窗口通过[SubclassWindow](#subclasswindow)、`lpszClassName`未使用值; 因此，你可以传递**NULL**为此参数。  
   
-##  <a name="create"></a>CContainedWindowT::Create  
+##  <a name="create"></a>  CContainedWindowT::Create  
  调用[RegisterWndSuperclass](#registerwndsuperclass)注册的窗口类，基于现有类，但使用[CContainedWindowT::WindowProc](#windowproc)。  
   
 ```
@@ -224,7 +219,7 @@ HWND Create(
  [in]指定的窗口的名称。 默认值是**NULL**。  
   
  `dwStyle`  
- [in]窗口的样式。 默认值是**WS_CHILD &#124;WS_VISIBLE**。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]窗口的样式。 默认值是**WS_CHILD &#124; WS_VISIBLE**。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  `dwExStyle`  
  [in]扩展的窗口样式。 默认值为 0，这意味着无扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
@@ -247,7 +242,7 @@ HWND Create(
 > [!NOTE]
 >  如果为的值，则使用 0`MenuOrID`参数，必须将它指定为 0U （默认值） 若要避免编译器错误。  
   
-##  <a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
+##  <a name="defwindowproc"></a>  CContainedWindowT::DefWindowProc  
  由调用[WindowProc](#windowproc)未处理的消息映射处理这些消息。  
   
 ```
@@ -274,7 +269,7 @@ LRESULT DefWindowProc(
 ### <a name="remarks"></a>备注  
  默认情况下，`DefWindowProc`调用[CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32 函数的消息信息发送到中指定的窗口过程[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
-##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  返回当前消息 ( **m_pCurrentMsg**)。  
   
 ```
@@ -284,7 +279,7 @@ const _ATL_MSG* GetCurrentMessage();
 ### <a name="return-value"></a>返回值  
  当前消息，并打包在`MSG`结构。  
   
-##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
+##  <a name="m_dwmsgmapid"></a>  CContainedWindowT::m_dwMsgMapID  
  包含当前正在使用包含窗口的消息映射的标识符。  
   
 ```
@@ -296,9 +291,9 @@ DWORD m_dwMsgMapID;
   
  使用默认消息映射中，声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，始终由零。 使用声明的备用消息映射， [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由标识`msgMapID`。  
   
- `m_dwMsgMapID`首次初始化由构造函数，并可以通过调用更改[SwitchMessageMap](#switchmessagemap)。 有关示例，请参阅[CContainedWindowT 概述](../../atl/reference/ccontainedwindowt-class.md)。  
+ `m_dwMsgMapID` 首次初始化由构造函数，并可以通过调用更改[SwitchMessageMap](#switchmessagemap)。 有关示例，请参阅[CContainedWindowT 概述](../../atl/reference/ccontainedwindowt-class.md)。  
   
-##  <a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName  
  指定现有窗口类的名称。  
   
 ```
@@ -308,9 +303,9 @@ LPTSTR m_lpszClassName;
 ### <a name="remarks"></a>备注  
  当你创建一个窗口，[创建](#create)注册新的窗口类来基于该现有类，但使用[CContainedWindowT::WindowProc](#windowproc)。  
   
- `m_lpszClassName`由构造函数初始化。 有关示例，请参阅[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概述。  
+ `m_lpszClassName` 由构造函数初始化。 有关示例，请参阅[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概述。  
   
-##  <a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CContainedWindowT::m_pfnSuperWindowProc  
  如果对包含的窗口子类化，`m_pfnSuperWindowProc`指向窗口类的原始窗口过程。  
   
 ```
@@ -322,7 +317,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [DefWindowProc](#defwindowproc)方法向保存在窗口过程发送消息信息`m_pfnSuperWindowProc`。  
   
-##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
+##  <a name="m_pobject"></a>  CContainedWindowT::m_pObject  
  指向对象，其中包含`CContainedWindowT`对象。  
   
 ```
@@ -332,9 +327,9 @@ CMessageMap* m_pObject;
 ### <a name="remarks"></a>备注  
  此容器、 其类必须派生自[CMessageMap](../../atl/reference/cmessagemap-class.md)，声明由包含窗口的消息映射。  
   
- `m_pObject`由构造函数初始化。 有关示例，请参阅[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概述。  
+ `m_pObject` 由构造函数初始化。 有关示例，请参阅[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概述。  
   
-##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
+##  <a name="registerwndsuperclass"></a>  CContainedWindowT::RegisterWndSuperclass  
  由调用[创建](#create)以注册包含窗口的窗口类。  
   
 ```
@@ -347,7 +342,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="remarks"></a>备注  
  此窗口类基于现有类，但使用[CContainedWindowT::WindowProc](#windowproc)。 现有窗口类的名称和窗口过程保存在[m_lpszClassName](#m_lpszclassname)和[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)分别。  
   
-##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
+##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow  
  窗口由的子类`hWnd`和将其附加到`CContainedWindowT`对象。  
   
 ```
@@ -367,7 +362,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  不要调用`SubclassWindow`如果已调用了[创建](#create)。  
   
-##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
+##  <a name="switchmessagemap"></a>  CContainedWindowT::SwitchMessageMap  
  更改哪些消息映射将用于处理包含的窗口的消息。  
   
 ```
@@ -383,7 +378,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
   
  你最初构造函数中指定的消息映射标识符。  
   
-##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CContainedWindowT::UnsubclassWindow  
  分离从子类化的窗口`CContainedWindowT`对象，并还原原始窗口过程中，保存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
 ```
@@ -400,7 +395,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="remarks"></a>备注  
  仅当你想要还原的原始窗口过程，窗口被销毁之前，请使用此方法。 否则为[WindowProc](#windowproc)将自动执行此操作时销毁窗口。  
   
-##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
+##  <a name="windowproc"></a>  CContainedWindowT::WindowProc  
  此静态方法实现的窗口过程。  
   
 ```
@@ -428,7 +423,7 @@ static LRESULT CALLBACK WindowProc(
  消息处理的结果。  
   
 ### <a name="remarks"></a>备注  
- `WindowProc`将定向到由标识消息映射消息[m_dwMsgMapID](#m_dwmsgmapid)。 如有必要，`WindowProc`调用[DefWindowProc](#defwindowproc)为其他消息处理。  
+ `WindowProc` 将定向到由标识消息映射消息[m_dwMsgMapID](#m_dwmsgmapid)。 如有必要，`WindowProc`调用[DefWindowProc](#defwindowproc)为其他消息处理。  
   
 ## <a name="see-also"></a>请参阅  
  [CWindow 类](../../atl/reference/cwindow-class.md)   

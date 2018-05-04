@@ -1,13 +1,10 @@
 ---
-title: "实现一个对话框 |Microsoft 文档"
-ms.custom: 
+title: 实现一个对话框 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>实现一个对话框
 有两种方法将添加到你的 ATL 项目对话框中： 使用 ATL 对话框向导或手动添加它。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  当你创建使用 ATL 对话框向导对话框中时，向导会自动添加`IDD`作为成员`enum`类型。  
   
- `CDialogImpl`可实现在安装结束时或承载 Windows 控件的无模式对话框。 `CAxDialogImpl`可实现在安装结束时或承载 ActiveX 和 Windows 控件的无模式对话框。  
+ `CDialogImpl` 可实现在安装结束时或承载 Windows 控件的无模式对话框。 `CAxDialogImpl` 可实现在安装结束时或承载 ActiveX 和 Windows 控件的无模式对话框。  
   
  若要创建模式对话框，创建的实例你`CDialogImpl`-派生 (或`CAxDialogImpl`-派生) 类，然后调用[DoModal](../atl/reference/cdialogimpl-class.md#domodal)方法。 若要关闭模式对话框，调用[EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)从消息处理程序方法。 若要创建无模式对话框，请调用[创建](../atl/reference/cdialogimpl-class.md#create)方法而不是`DoModal`。 若要销毁无模式对话框中，调用[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)。  
   

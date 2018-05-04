@@ -1,13 +1,10 @@
 ---
-title: "修改 ATL DHTML 控件 |Microsoft 文档"
-ms.custom: 
+title: 修改 ATL DHTML 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3810236aca4661a6cdcd8399294cdb73e97948fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控件
 ATL 控件向导提供起始代码，以便你可以生成并运行该控件，因此你可以查看在项目文件中写入这些方法的方式以及如何 DHTML 调用到控件的 c + + 代码中使用调度方法。 可以将任何调度方法添加到接口。 然后，你可以在 HTML 资源调用方法。  
@@ -62,7 +57,7 @@ ATL 控件向导提供起始代码，以便你可以生成并运行该控件，�
   
      检查的 HTML，尤其是对外部的 Windows 调度方法的调用。 HTML 调用项目的`OnClick`方法和参数指示该控件的正文 (`theBody`) 和分配的颜色 ("`red`")。 此方法调用后面的文本是在按钮显示的标签。  
   
-2.  添加另一个`OnClick`方法，仅更改颜色。 例如:  
+2.  添加另一个`OnClick`方法，仅更改颜色。 例如：  
   
  ```  
  <br>  
@@ -72,7 +67,7 @@ ATL 控件向导提供起始代码，以便你可以生成并运行该控件，�
   
      此方法将创建标记的按钮**刷新**，用户可以单击以将控件返回到原始的白色背景。  
   
-3.  添加对的调用`HelloHTML`你创建的方法。 例如:  
+3.  添加对的调用`HelloHTML`你创建的方法。 例如：  
   
  ```  
  <br>  

@@ -1,12 +1,9 @@
 ---
-title: "CRBMap 类 |Microsoft 文档"
-ms.custom: 
+title: CRBMap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32b21c8785bb5e28058c51f2345c5ffcb6de1f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmap-class"></a>CRBMap 类
 此类表示一个映射结构中，使用红色黑色二进制树。  
@@ -76,13 +71,13 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMap::SetAt](#setat)|调用此方法以插入到映射的元素对。|  
   
 ## <a name="remarks"></a>备注  
- `CRBMap`为管理密钥的元素及其关联的值的有序的数组任何给定类型的映射数组提供支持。 每个密钥可以只有一个关联的值。 元素 （包含的键和值） 存储在二进制树的结构，使用[CRBMap::SetAt](#setat)方法。 可以使用删除元素[CRBMap::RemoveKey](#removekey)方法，从而会删除具有给定的密钥值的元素。  
+ `CRBMap` 为管理密钥的元素及其关联的值的有序的数组任何给定类型的映射数组提供支持。 每个密钥可以只有一个关联的值。 元素 （包含的键和值） 存储在二进制树的结构，使用[CRBMap::SetAt](#setat)方法。 可以使用删除元素[CRBMap::RemoveKey](#removekey)方法，从而会删除具有给定的密钥值的元素。  
   
  树的遍历可使用方法如[CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition)， [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)，和[CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)。  
   
  `KTraits`和`VTraits`参数是包含复制或移动元素所需的任何补充代码的特征类。  
   
- `CRBMap`派生自[CRBTree](../../atl/reference/crbtree-class.md)，该类可实现二进制树使用红色黑色算法。 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)是允许每个键的多个值的变化形式。 它太派生自`CRBTree`，并因此共享许多功能与`CRBMap`。  
+ `CRBMap` 派生自[CRBTree](../../atl/reference/crbtree-class.md)，该类可实现二进制树使用红色黑色算法。 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)是允许每个键的多个值的变化形式。 它太派生自`CRBTree`，并因此共享许多功能与`CRBMap`。  
   
  替代这两`CRBMap`和`CRBMultiMap`所提供的[CAtlMap](../../atl/reference/catlmap-class.md)类。 当只有少量的元素需要存储时，请考虑使用[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  
   
@@ -93,10 +88,10 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
   
  `CRBMap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>  CRBMap::CRBMap  
  构造函数。  
   
 ```
@@ -115,7 +110,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>  CRBMap:: ~ CRBMap  
  析构函数。  
   
 ```
@@ -127,7 +122,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   
-##  <a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>  CRBMap::Lookup  
  调用此方法以查找密钥或中的值`CRBMap`对象。  
   
 ```
@@ -140,7 +135,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  指定标识要查找的元素的键。  
   
- *值*  
+ *value*  
  接收的查阅到值的变量。  
   
 ### <a name="return-value"></a>返回值  
@@ -152,7 +147,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMap::RemoveKey  
  调用此方法以删除从元素`CRBMap`给定键的对象。  
   
 ```
@@ -172,7 +167,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>  CRBMap::SetAt  
  调用此方法以插入到映射的元素对。  
   
 ```
@@ -185,14 +180,14 @@ POSITION SetAt(
  `key`  
  密钥的值将添加到`CRBMap`对象。  
   
- *值*  
+ *value*  
  要添加到值`CRBMap`对象。  
   
 ### <a name="return-value"></a>返回值  
  返回的位置中的键/值元素对`CRBMap`对象。  
   
 ### <a name="remarks"></a>备注  
- `SetAt`如果找到匹配的键，将替换现有元素。 如果未找到项，都要创建新的键/值对。  
+ `SetAt` 如果找到匹配的键，将替换现有元素。 如果未找到项，都要创建新的键/值对。  
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   

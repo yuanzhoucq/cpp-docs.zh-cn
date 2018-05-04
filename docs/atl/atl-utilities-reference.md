@@ -1,27 +1,22 @@
 ---
-title: "ATL 实用程序引用 |Microsoft 文档"
-ms.custom: 
+title: ATL 实用程序引用 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b802d8764dda321e2e313f793f4f2e4745dbcc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-utilities-reference"></a>ATL 实用程序引用
 ATL 提供有关操作的窗体中的路径和 Url 的代码[CPathT](../atl/reference/cpatht-class.md)和[CUrl](../atl/reference/curl-class.md)。 线程池， [CThreadPool](../atl/reference/cthreadpool-class.md)，可在你的应用程序。 此代码可以 atlpath.h 和 atlutil.h 中找到。  

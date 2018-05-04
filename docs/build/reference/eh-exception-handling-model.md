@@ -1,13 +1,10 @@
 ---
-title: "-EH （异常处理模型） |Microsoft 文档"
-ms.custom: 
+title: -EH （异常处理模型） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 指定当编译器使用的异常处理类型、何时优化掉异常检查以及是否销毁由于异常而超出范围的 C++ 对象。 如果未指定 **/EH** ，则编译器将同时捕获异步结构化异常和 C++ 异常，但不会销毁由于异步异常超出范围的 C++ 对象。  
@@ -105,9 +100,9 @@ int main() {
   
  有关 **/clr**下的异常处理限制的信息，请参见 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)。  
   
- 可以使用符号 **-**清除该选项。 例如， **/EHsc-** 解释为 **/EHs /EHc-** 并且等效于 **/EHs**。  
+ 可以使用符号 **-** 清除该选项。 例如， **/EHsc-** 解释为 **/EHs /EHc-** 并且等效于 **/EHs**。  
   
- **/EHr** 编译器选项将在具有 `noexcept` 属性的所有函数中强制运行时终止检查。 默认情况下，如果编译器后端确定该函数仅调用 *非引发* 函数，则运行时检查可能被优化掉。 非引发函数是具有一个指定不会引发任何异常的属性的函数。 这包括标记为 `noexcept`, `throw()`, `__declspec(nothrow)`的函数，当指定了 **/EHc** 时，还包括 `extern "C"` 函数生成运行时终止检查。 非引发函数还包括编译器已通过检查确定为非引发的任何函数。 可以通过使用 **/EHr-**显式设置默认值。  
+ **/EHr** 编译器选项将在具有 `noexcept` 属性的所有函数中强制运行时终止检查。 默认情况下，如果编译器后端确定该函数仅调用 *非引发* 函数，则运行时检查可能被优化掉。 非引发函数是具有一个指定不会引发任何异常的属性的函数。 这包括标记为 `noexcept`, `throw()`, `__declspec(nothrow)`的函数，当指定了 **/EHc** 时，还包括 `extern "C"` 函数生成运行时终止检查。 非引发函数还包括编译器已通过检查确定为非引发的任何函数。 可以通过使用 **/EHr-** 显式设置默认值。  
   
  但是，非引发属性不保证函数不会引发任何异常。 与 `noexcept` 函数的行为不同，Visual C++ 编译器认为使用 `throw()`、 `__declspec(nothrow)`或 `extern "C"` 声明的函数引发的异常是未定义的行为。 使用这三个声明属性的函数不强制使用运行时终止检查确定是否存在异常。 可以通过强制编译器为逸出 **/EHr** 函数的未处理异常生成运行时检查，使用 `noexcept` 选项帮助你确定此未定义的行为。  
   

@@ -1,12 +1,9 @@
 ---
-title: "CComEnumImpl 类 |Microsoft 文档"
-ms.custom: 
+title: CComEnumImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumImpl
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14c7b1e72db3337b786a0e524ae3d8da964f6bbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 此类提供正在枚举的项数组中的存储位置的 COM 枚举器接口的实现。  
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|**IUnknown**提供所枚举的集合的对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CComEnumImpl`提供正在枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于 c + + 标准库容器。  
+ `CComEnumImpl` 提供正在枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于 c + + 标准库容器。  
   
 > [!NOTE]
 >  有关进一步之间的差异的详细信息`CComEnumImpl`和`IEnumOnSTLImpl`，请参阅[CComEnumImpl::Init](#init)。  
@@ -109,24 +104,24 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
  `CComEnumImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
  构造函数。  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl  
  析构函数。  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>  CComEnumImpl::Init  
  将指针传递给任何客户端返回的枚举器接口之前，必须调用此方法。  
   
 ```
@@ -158,7 +153,7 @@ HRESULT Init(
   
  如果将指针传递给保存在另一个对象数组中的项 （和不要询问枚举器，用于将数据复制），则可以使用*pUnk*参数以确保对象和数组为均可用于只要枚举器需要这些。 枚举器只需包含要保持处于活动状态的对象上的 COM 引用。 枚举数被销毁时自动释放 COM 引用。  
   
- `flags`参数允许你指定枚举器应如何处理传递给它的数组元素。 `flags`可以执行中的值之一**CComEnumFlags**枚举如下所示：  
+ `flags`参数允许你指定枚举器应如何处理传递给它的数组元素。 `flags` 可以执行中的值之一**CComEnumFlags**枚举如下所示：  
   
 ```  
 enum CComEnumFlags  
@@ -178,7 +173,7 @@ enum CComEnumFlags
 > [!NOTE]
 >  此方法的原型为类型指定的数组元素**T**，其中**T**被定义为类的模板参数。 这是通过 COM 接口方法公开的相同类型[CComEnumImpl::Next](#next)。 这是，与不同[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)，此类不支持不同的存储，并公开数据类型。 数组中元素的数据类型必须是通过 COM 接口公开的数据类型相同。  
   
-##  <a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>  CComEnumImpl::Clone  
  此方法提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)通过创建类型的对象的方法`CComEnum`，具有相同的数组和迭代器使用的当前对象，初始化它并在返回接口新创建的对象。  
   
 ```
@@ -195,42 +190,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>备注  
  请注意，克隆的枚举器永远不会将其自己的原始枚举器使用的数据副本 （或取得所有权）。 如有必要，克隆的枚举器将保持原始枚举器处于活动状态 （使用 COM 引用） 以确保数据可用，只要它们需要它。  
   
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk  
  此智能指针保留在传递到的对象的引用[CComEnumImpl::Init](#init)，确保，它将保持活动状态的枚举数的生存期内。  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>  CComEnumImpl::m_begin  
  指向刚超出最后一个元素的数组，其中包含要枚举的项的位置的指针。  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>  CComEnumImpl::m_end  
  指向包含要枚举的项的数组的第一个元素的指针。  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>  CComEnumImpl::m_iter  
  指向数组，其中包含要枚举的项的当前元素的指针。  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags  
  标志传递给[CComEnumImpl::Init](#init)。  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>  CComEnumImpl::Next  
  此方法提供的实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
   
 ```
@@ -250,7 +245,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>  CComEnumImpl::Reset  
  此方法提供的实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
   
 ```
@@ -260,7 +255,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>  CComEnumImpl::Skip  
  此方法提供的实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
   
 ```

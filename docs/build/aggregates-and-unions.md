@@ -1,29 +1,24 @@
 ---
-title: "聚合和联合 |Microsoft 文档"
-ms.custom: 
+title: 聚合和联合 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregates-and-unions"></a>聚合和联合
 其他类型，如数组、 结构和联合，具有更严格的对齐要求，以确保一致聚合和联合存储和数据检索。 下面是数组、 结构和联合的定义：  
@@ -46,15 +41,15 @@ ms.lasthandoff: 03/08/2018
 |**UINT8**|`unsigned char`|Byte|  
 |**INT16**|**short**|字|  
 |**UINT16**|**unsigned short**|字|  
-|**INT32**|**int、 long**|Doubleword|  
-|**UINT32**|**无符号长的无符号的整数**|Doubleword|  
+|**INT32**|**int、 long**|双字|  
+|**UINT32**|**无符号长的无符号的整数**|双字|  
 |**INT64**|`__int64`|四字|  
 |**UINT64**|unsigned __int64|四字|  
-|**FP32 （单精度）**|**float**|Doubleword|  
+|**FP32 （单精度）**|**float**|双字|  
 |**FP64 （双精度）**|**double**|四字|  
 |**指针**|**\***|四字|  
-|`__m64`|**struct __m64**|四字|  
-|`__m128`|**struct __m128**|Octaword|  
+|`__m64`|**结构 __m64**|四字|  
+|`__m128`|**结构 __m128**|Octaword|  
   
  适用以下聚合对齐规则：  
   

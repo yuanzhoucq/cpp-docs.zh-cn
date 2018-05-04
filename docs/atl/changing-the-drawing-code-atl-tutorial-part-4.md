@@ -1,29 +1,24 @@
 ---
-title: "更改绘图代码 (ATL 教程，第 4) |Microsoft 文档"
-ms.custom: 
+title: 更改绘图代码 (ATL 教程，第 4) |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbf7dab7d39a80efa2b0b0b88b615c55cd9e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c077aca8c3276fac963eda8cdd2c413a9d6d5f5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>更改绘图代码（ATL 教程，第 4 部分）
 默认情况下，控件的绘制代码显示的文本和正方形**PolyCtl**。 在此步骤中，你将更改要显示一些更有趣的内容的代码。 涉及以下任务：  
@@ -125,7 +120,7 @@ ms.lasthandoff: 12/21/2017
   
  在下一步的步骤中，你将添加一个事件。  
   
- [返回到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124;[到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
+ [返回到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
 ## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)   

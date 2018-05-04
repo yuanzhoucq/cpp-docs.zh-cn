@@ -1,12 +1,9 @@
 ---
-title: "CComCompositeControl 类 |Microsoft 文档"
-ms.custom: 
+title: CComCompositeControl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 类
 此类提供实现的复合控件所需的方法。  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>备注  
  类派生自类`CComCompositeControl`继承 ActiveX 复合控件的功能。 ActiveX 控件派生自`CComCompositeControl`托管的标准对话框。 这些类型的控件称为复合控件，因为它们是能够托管其他控件 （本机 Windows 控件和 ActiveX 控件）。  
   
- `CComCompositeControl`标识可用于通过查找将被子类中的枚举的数据成员来创建复合控件的对话框资源。 此子类 IDD 成员设置为将用作该控件的窗口对话框资源的资源 ID。 以下是一种数据成员的类派生自的`CComCompositeControl`来标识要用于该控件的窗口的对话框资源应包含：  
+ `CComCompositeControl` 标识可用于通过查找将被子类中的枚举的数据成员来创建复合控件的对话框资源。 此子类 IDD 成员设置为将用作该控件的窗口对话框资源的资源 ID。 以下是一种数据成员的类派生自的`CComCompositeControl`来标识要用于该控件的窗口的对话框资源应包含：  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -107,10 +102,10 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
  `CComCompositeControl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
  调用此方法以建议或不建议由复合控件承载的所有控件。  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>备注  
  此方法的基实现在事件接收器映射到这些条目搜索。 然后，它将建议或取消通知事件接收器映射的接收器项所描述的 COM 对象的连接点。 此成员方法还依赖于派生的类继承自的一个实例的事实`IDispEventImpl`的每个控件中将是建议还是 unadvised 接收器映射。  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  调用此方法以计算的大小以**HIMETRIC**单位用于承载该复合控件的对话框资源。  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>备注  
  在中返回大小`size`参数。  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  调用此方法创建复合控件的控件窗口。  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>备注  
  此方法通常称为期间就地激活的控件。  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  构造函数。  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>备注  
  初始化[CComCompositeControl::m_hbrBackground](#m_hbrbackground)和[CComCompositeControl::m_hWndFocus](#m_hwndfocus)为 NULL 的数据成员。  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  析构函数。  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>备注  
  如果它存在，请删除背景对象。  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  调用此方法以创建控制窗口，并告知任何托管的控件。  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>备注  
  此方法调用[CComCompositeControl::Create](#create)和[CComCompositeControl::AdviseSinkMap](#advisesinkmap)。  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  背景画笔。  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  当前具有焦点的窗口句柄。  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  调用此方法以设置使用容器的背景色的复合控件的背景色。  
   
 ```

@@ -2,12 +2,9 @@
 title: -F （设置堆栈大小） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /f
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b464a4fb28eb83ef0570416d0cb18fd8f965e0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed0ad03d18493cc5618f9aad2a16b07e4a01717f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="f-set-stack-size"></a>/F（设置堆栈大小）
 以字节为单位设置程序堆栈大小。  
@@ -45,13 +40,13 @@ ms.lasthandoff: 12/21/2017
  堆栈大小 （字节）。  
   
 ## <a name="remarks"></a>备注  
- 如果不使用此选项的堆栈大小默认为 1 MB。 `number`自变量可以是以十进制或 C 语言表示法。 参数可以介于 1 到链接器接受的最大堆栈大小。 链接器将指定的值与最接近的 4 个字节向上舍入。 之间的空间**/F**和`number`是可选的。  
+ 如果不使用此选项的堆栈大小默认为 1 MB。 `number`自变量可以是以十进制或 C 语言表示法。 参数可以介于 1 到链接器接受的最大堆栈大小。 链接器将指定的值与最接近的 4 个字节向上舍入。 之间的空间 **/F**和`number`是可选的。  
   
  你可能需要增加的堆栈大小，如果你的程序获取堆栈溢出消息。  
   
  此外可以设置堆栈大小：  
   
--   使用**/堆栈**链接器选项。 有关详细信息，请参阅[/堆栈](../../build/reference/stack.md)。  
+-   使用 **/堆栈**链接器选项。 有关详细信息，请参阅[/堆栈](../../build/reference/stack.md)。  
   
 -   使用 EDITBIN 的.exe 文件。 有关详细信息，请参阅[EDITBIN 参考](../../build/reference/editbin-reference.md)。  
   

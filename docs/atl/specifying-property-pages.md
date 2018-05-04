@@ -1,13 +1,10 @@
 ---
-title: "指定属性页 (ATL) |Microsoft 文档"
-ms.custom: 
+title: 指定属性页 (ATL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - ISpecifyPropertyPages
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8985499c76a7dc65523a5c2904bcb774a4364d41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-property-pages"></a>指定属性页
 在创建 ActiveX 控件时，通常想要将其与可以用来设置控件的属性的属性页关联。 控制容器使用**ISpecifyPropertyPages**接口以找出哪些属性页可以用于设置控件的属性。 你将需要对控件中实现此接口。  

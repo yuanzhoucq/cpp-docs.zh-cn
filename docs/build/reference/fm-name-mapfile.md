@@ -2,12 +2,9 @@
 title: -Fm （命名映射文件） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /fm
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a5111291ea92b8650896faf3117f0056510e5ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94a499b943fcd3213aa76876c65c3aac2dd79060
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fm-name-mapfile"></a>/Fm（命名映射文件）
 通知链接器生成映射文件包含在相应的.exe 文件或 DLL 的显示的顺序中的段的列表。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>备注  
  默认情况下，映射文件授予的相应 C 或 c + + 源文件的基名称。将扩展名的映射。  
   
- 指定**/Fm**具有相同的效果，如同你指定的一样[/MAP （生成映射文件）](../../build/reference/map-generate-mapfile.md)链接器选项。  
+ 指定 **/Fm**具有相同的效果，如同你指定的一样[/MAP （生成映射文件）](../../build/reference/map-generate-mapfile.md)链接器选项。  
   
  如果指定[（编译而无需链接） 的 /c](../../build/reference/c-compile-without-linking.md)以取消链接， **/Fm**不起作用。  
   

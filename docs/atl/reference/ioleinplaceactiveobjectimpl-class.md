@@ -1,12 +1,9 @@
 ---
-title: "IOleInPlaceActiveObjectImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IOleInPlaceActiveObjectImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d88f85e83a88b0a1ce2bd4566e3ca479dddc1af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d98b8dd082a09de461452b43b70ddeb9431abe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl 类
 此类提供，可帮助在就地控件与其容器之间的通信的方法。  
@@ -79,10 +74,10 @@ class IOleInPlaceActiveObjectImpl
   
  `IOleInPlaceActiveObjectImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  使上下文相关帮助。  
   
 ```
@@ -95,7 +90,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>备注  
  请参阅[IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) Windows SDK 中。  
   
-##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  启用无模式对话框。  
   
 ```
@@ -108,7 +103,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>备注  
  请参阅[IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) Windows SDK 中。  
   
-##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  容器调用此函数可获取控件的窗口句柄。  
   
 ```
@@ -120,7 +115,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  请参阅[IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) Windows SDK 中。  
   
-##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  当激活或停用容器的文档窗口时，请通知控件。  
   
 ```
@@ -133,7 +128,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>备注  
  请参阅[IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) Windows SDK 中。  
   
-##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  当激活或停用容器的顶级框架窗口时，请通知控件。  
   
 ```
@@ -146,7 +141,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>备注  
  请参阅[ioleinplaceactiveobject:: Onframewindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) Windows SDK 中。  
   
-##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  通知控件需要调整其边框的大小。  
   
 ```
@@ -162,7 +157,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>备注  
  请参阅[IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) Windows SDK 中。  
   
-##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  处理从容器的菜单快捷键消息。  
   
 ```
@@ -172,7 +167,7 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 ### <a name="return-value"></a>返回值  
  此方法支持下列返回值：  
   
- `S_OK`如果消息已成功转换。  
+ `S_OK` 如果消息已成功转换。  
   
  **S_FALSE**如果消息已不会进行转换。  
   

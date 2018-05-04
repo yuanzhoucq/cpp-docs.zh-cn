@@ -1,13 +1,10 @@
 ---
-title: "导出 |Microsoft 文档"
-ms.custom: 
+title: 导出 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - EXPORTS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9a8e902e42d44ffa292b9f821839b8e948d7a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc7a9995fdc5be786712752e30015337b9f1607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exports"></a>EXPORTS
 引入了一个由一个或多个导出定义组成的节，这些定义可指定函数或数据的导出名或序号。 每个定义必须在单独一行上。  
@@ -77,7 +72,7 @@ EXPORTS
   
 3.  [/导出](../../build/reference/export-exports-a-function.md)LINK 命令中的规范  
   
-4.  A[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码，窗体`#pragma comment(linker, "/export: definition ")`  
+4.  A[注释](../../preprocessor/comment-c-cpp.md)指令中的源代码，窗体 `#pragma comment(linker, "/export: definition ")`  
   
  所有这四种方法可以用在同一个程序中。 LINK 在生成包含导出的程序时还创建导入库，除非生成中使用了 .EXP 文件。  
   

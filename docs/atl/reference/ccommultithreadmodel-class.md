@@ -1,12 +1,9 @@
 ---
-title: "CComMultiThreadModel 类 |Microsoft 文档"
-ms.custom: 
+title: CComMultiThreadModel 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModel
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89af8507150ee708ad381be2d47201c9266f763
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 类
-`CComMultiThreadModel`提供用于递增和递减的变量的值的线程安全的方法。  
+`CComMultiThreadModel` 提供用于递增和递减的变量的值的线程安全的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,14 +64,14 @@ class CComMultiThreadModel
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`;M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`  
   
- `CComMultiThreadModel`本身定义三个`typedef`名称。 `AutoCriticalSection`和`CriticalSection`引用用于获取和释放临界区的所有权提供的方法的类。 `ThreadModelNoCS`引用类 [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md)。  
+ `CComMultiThreadModel` 本身定义三个`typedef`名称。 `AutoCriticalSection` 和`CriticalSection`引用用于获取和释放临界区的所有权提供的方法的类。 `ThreadModelNoCS` 引用类 [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection  
  使用时`CComMultiThreadModel`、`typedef`名称`AutoCriticalSection`引用类[CComAutoCriticalSection](ccomautocriticalsection-class.md)，用于获取和释放的关键部分对象的所有权提供方法。  
   
 ```
@@ -140,7 +135,7 @@ private:
 |`InternalAddRef`|增量不是线程安全。|增量是线程安全。|  
 |`Lock`|未执行任何操作;没有任何锁定的关键部分。|未执行任何操作;没有任何锁定的关键部分。|  
   
-##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModel::CriticalSection  
  使用时`CComMultiThreadModel`、`typedef`名称`CriticalSection`引用类[CComCriticalSection](ccomcriticalsection-class.md)，用于获取和释放的关键部分对象的所有权提供方法。  
   
 ```
@@ -161,7 +156,7 @@ typedef CComCriticalSection CriticalSection;
 ### <a name="example"></a>示例  
  请参阅[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)。  
   
-##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
  此静态函数将调用 Win32 函数[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，指向变量的值的递减`p`。  
   
 ```
@@ -178,7 +173,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 ### <a name="remarks"></a>备注  
  **InterlockedDecrement**防止多个线程同时使用此变量。  
   
-##  <a name="increment"></a>CComMultiThreadModel::Increment  
+##  <a name="increment"></a>  CComMultiThreadModel::Increment  
  此静态函数将调用 Win32 函数[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，指向的变量的值时都会增加`p`。  
   
 ```
@@ -195,7 +190,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 ### <a name="remarks"></a>备注  
  **InterlockedIncrement**防止多个线程同时使用此变量。  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS  
  使用时`CComMultiThreadModel`、`typedef`名称`ThreadModelNoCS`引用类[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)。  
   
 ```
@@ -203,7 +198,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```  
   
 ### <a name="remarks"></a>备注  
- `CComMultiThreadModelNoCS`提供用于递增和递减变量，例如： 的线程安全的方法但是，它不提供关键部分。  
+ `CComMultiThreadModelNoCS` 提供用于递增和递减变量，例如： 的线程安全的方法但是，它不提供关键部分。  
   
  [CComSingleThreadModel](ccomsinglethreadmodel-class.md)和`CComMultiThreadModelNoCS`还包含定义`ThreadModelNoCS`。 下表显示的线程处理模型类和所引用的类之间的关系`ThreadModelNoCS`:  
   

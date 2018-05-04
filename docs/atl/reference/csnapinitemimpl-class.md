@@ -2,11 +2,8 @@
 title: CSnapInItemImpl 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 类
 此类提供用于实现管理单元中节点对象的方法。  
@@ -103,17 +98,17 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM**使用结构`CSnapInItemImpl`对象。|  
   
 ## <a name="remarks"></a>备注  
- `CSnapInItemImpl`提供了管理单元中节点对象，例如添加菜单项和工具栏，以及转发到相应的处理程序函数的管理单元节点的命令的基本实现。 这些功能使用多个不同的接口来实现，并将类型映射。 默认实现处理方法是确定正确的派生类的实例，然后将消息转发给正确的实例发送到节点对象的通知。  
+ `CSnapInItemImpl` 提供了管理单元中节点对象，例如添加菜单项和工具栏，以及转发到相应的处理程序函数的管理单元节点的命令的基本实现。 这些功能使用多个不同的接口来实现，并将类型映射。 默认实现处理方法是确定正确的派生类的实例，然后将消息转发给正确的实例发送到节点对象的通知。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CSnapInItem`  
   
  `CSnapInItemImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  此方法实现的 Win32 函数[IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)。  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED**数据对象具有无效的类型。  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  此方法实现的 Win32 函数[IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)。  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED**数据对象具有无效的类型。  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  此方法实现的 Win32 函数[IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)。  
   
 ```
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED**数据对象具有无效的类型。  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  构造 `CSnapInItemImpl` 对象。  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  调用此函数可检索项目的信息。  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>备注  
  若要正确实现此函数，请将正确的信息复制到流 ( `pStream`)，则根据指定的剪贴板格式`cf`。  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  调用此函数可检索管理单元中对象的结果窗格中的视图的类型。  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 允许的默认视图选项。  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  调用此函数可检索**SCOPEDATAITEM**管理单元的结构。  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out]指向的指针**SCOPEDATAITEM**结构`CSnapInItemImpl`对象。  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  调用此函数可检索**RESULTDATAITEM**管理单元的结构。  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out]指向的指针**RESULTDATAITEM**结构`CSnapInItemImpl`对象。  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  包含节点项显示的字符串。  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM`的管理单元中数据对象的结构。  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)的管理单元中数据对象的结构。  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  当在由用户执行的管理单元中对象时调用。  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED**数据对象具有无效的类型。  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  调用以查看管理单元中节点是否支持属性页。  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  调用此函数可修改的菜单插入标志，指定`pInsertionAllowed`，管理单元中的对象。  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  不应尝试将中的位`pInsertionAllowed`，最初已清除。 MMC 的未来版本可能会使用 bits 当前未定义因此不应更改当前未定义的位。  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  调用此函数可创建工具栏之前修改的所管理单元中的对象，任何工具栏按钮样式。  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in]按钮状态标志。 可以是一个或多个以下：  
   
-- `TBSTATE_CHECKED`该按钮具有**TBSTYLE_CHECKED**样式，是否已按下。  
+- `TBSTATE_CHECKED` 该按钮具有**TBSTYLE_CHECKED**样式，是否已按下。  
   
-- `TBSTATE_ENABLED`按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并显示为灰色。  
+- `TBSTATE_ENABLED` 按钮接受用户输入。 不具有此状态的按钮不接受用户输入，并显示为灰色。  
   
-- `TBSTATE_HIDDEN`按钮不可见，并且不能接受用户输入。  
+- `TBSTATE_HIDDEN` 按钮不可见，并且不能接受用户输入。  
   
-- `TBSTATE_INDETERMINATE`按钮为灰色。  
+- `TBSTATE_INDETERMINATE` 按钮为灰色。  
   
-- `TBSTATE_PRESSED`已按下按钮。  
+- `TBSTATE_PRESSED` 已按下按钮。  
   
-- `TBSTATE_WRAP`按钮后跟换行符。 按钮还必须具有`TBSTATE_ENABLED`。  
+- `TBSTATE_WRAP` 按钮后跟换行符。 按钮还必须具有`TBSTATE_ENABLED`。  
   
  *fsType*  
  [in]按钮状态标志。 可以是一个或多个以下：  
   
-- `TBSTYLE_BUTTON`创建一个标准的推送按钮。  
+- `TBSTYLE_BUTTON` 创建一个标准的推送按钮。  
   
-- `TBSTYLE_CHECK`创建在每次用户单击它时按下并不按下状态之间切换按钮。 该按钮处于按下状态时具有不同的背景色。  
+- `TBSTYLE_CHECK` 创建在每次用户单击它时按下并不按下状态之间切换按钮。 该按钮处于按下状态时具有不同的背景色。  
   
-- `TBSTYLE_CHECKGROUP`创建一个组中的另一个按钮按下前将保持按下的复选按钮。  
+- `TBSTYLE_CHECKGROUP` 创建一个组中的另一个按钮按下前将保持按下的复选按钮。  
   
-- `TBSTYLE_GROUP`创建一个组中的另一个按钮按下前将保持按下的按钮。  
+- `TBSTYLE_GROUP` 创建一个组中的另一个按钮按下前将保持按下的按钮。  
   
-- `TBSTYLE_SEP`创建一个分隔符，提供按钮组之间的小间距。 具有此样式按钮不接收用户输入。  
+- `TBSTYLE_SEP` 创建一个分隔符，提供按钮组之间的小间距。 具有此样式按钮不接收用户输入。  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  调用此函数可修改菜单项之前插入到管理单元中对象的上下文菜单。  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED**禁用菜单项，因此不能选择它，但标志没有呈灰色它。  
   
-- `MF_ENABLED`实现菜单项，因此它可以被选择，从其显示为灰色状态中还原它。  
+- `MF_ENABLED` 实现菜单项，因此它可以被选择，从其显示为灰色状态中还原它。  
   
 - **MF_GRAYED**禁用菜单项，因此不能同时选择灰它。  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED**和**MF_UNCHECKED**。  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  调用此函数可修改工具栏按钮，该管理单元对象，它显示之前。  
   
 ```

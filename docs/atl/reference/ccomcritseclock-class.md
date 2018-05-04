@@ -2,11 +2,8 @@
 title: CComCritSecLock 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCritSecLock
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb07c2cca9394c23c6c3db156e205749f62e3f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 类
 此类提供用于锁定和解锁的关键部分对象的方法。  
@@ -63,10 +58,10 @@ template<class TLock> class CComCritSecLock
 ## <a name="remarks"></a>备注  
  此类用于锁定和解锁对象与使用更安全的方式[CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)或[CComAutoCriticalSection 类](../../atl/reference/ccomautocriticalsection-class.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
  构造函数。  
   
 ```
@@ -83,7 +78,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>备注  
  初始化关键部分对象。  
   
-##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
  析构函数。  
   
 ```
@@ -93,7 +88,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>备注  
  解除锁定关键部分对象。  
   
-##  <a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>  CComCritSecLock::Lock  
  调用此方法以锁定关键部分对象。  
   
 ```
@@ -106,7 +101,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>备注  
  如果对象已被锁定，在调试版本中将会出错断言。  
   
-##  <a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  调用此方法以解锁关键部分对象。  
   
 ```

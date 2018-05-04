@@ -1,12 +1,9 @@
 ---
-title: "站点信息类 (ATL) |Microsoft 文档"
-ms.custom: 
+title: 站点信息类 (ATL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.site
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f26fcef32bf0e3757792e89e2fc004b82f3797f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2279eb951888a1b323455f3e8a2545cc1b1d7f2d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="site-information-classes"></a>站点信息类
 以下类允许要与其站点通信的对象：  

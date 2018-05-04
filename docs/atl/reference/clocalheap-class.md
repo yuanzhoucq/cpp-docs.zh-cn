@@ -2,11 +2,8 @@
 title: CLocalHeap 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CLocalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5307e0e6e8925bcbbfa7a03d0140c3a5a08baff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 299c672d65d7568539473dfc284833c2583a2220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本地堆函数。  
@@ -56,7 +51,7 @@ class CLocalHeap : public IAtlMemMgr
 |[Clocalheap:: Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|  
   
 ## <a name="remarks"></a>备注  
- `CLocalHeap`实现使用 Win32 本地堆函数的内存分配函数。  
+ `CLocalHeap` 实现使用 Win32 本地堆函数的内存分配函数。  
   
 > [!NOTE]
 >  本地堆函数慢于其他内存管理函数，并且未提供尽可能多的功能。 因此，新的应用程序应使用[堆函数](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 这些是位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。  
@@ -69,10 +64,10 @@ class CLocalHeap : public IAtlMemMgr
   
  `CLocalHeap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlmem.h  
   
-##  <a name="allocate"></a>Clocalheap:: Allocate  
+##  <a name="allocate"></a>  Clocalheap:: Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723)标志参数的**LMEM_FIXED**。  
   
-##  <a name="free"></a>Clocalheap:: Free  
+##  <a name="free"></a>  Clocalheap:: Free  
  调用此方法以释放此内存管理器分配的内存块。  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730)。  
   
-##  <a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>  CLocalHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块分配的大小。  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745)。  
   
-##  <a name="reallocate"></a>Clocalheap:: Reallocate  
+##  <a name="reallocate"></a>  Clocalheap:: Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```

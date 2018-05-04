@@ -1,13 +1,10 @@
 ---
-title: "修改 ATL 项目 |Microsoft 文档"
-ms.custom: 
+title: 修改 ATL 项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Dialog editor, working with composite controls
 - composite controls, adding controls
 ms.assetid: 59984518-748f-4b8b-875f-3e97d22d0b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0a8594c2d98b05750d6e43138101894fb8fc4b72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-project"></a>修改 ATL 项目
 此时，您的复合控件项目实现为您的复合控件必要的对象。 下一步是添加任何控件复合控件，将包含和处理任何必要的事件。  

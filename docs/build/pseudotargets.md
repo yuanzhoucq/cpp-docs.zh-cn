@@ -1,13 +1,10 @@
 ---
-title: "伪目标 |Microsoft 文档"
-ms.custom: 
+title: 伪目标 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - timestamps, makefile pseudotargets
 - NMAKE program, targets
 ms.assetid: c8c479dc-0129-4186-8366-bc6251f2b494
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 761b71f05840c86516563df79d45cc1bb018fbba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67dbc6ae3ad331ab3297b62d00044c3edf679994
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pseudotargets"></a>伪目标
 伪目标是代替是依赖项的行中的文件名的标签。 它被解释为不存在，因此可能会过期的文件。 NMAKE 假定伪目标的时间戳是最新创建的所有依赖项。 如果已没有依赖项，则假定当前时间。 如果伪目标用作目标，则始终执行其命令。 伪目标用作依赖还必须显示为另一个依赖项中的目标。 但是，该依赖关系不必命令块。  

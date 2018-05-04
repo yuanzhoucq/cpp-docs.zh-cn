@@ -1,27 +1,22 @@
 ---
-title: "冲突与 x86 编译器 |Microsoft 文档"
-ms.custom: 
+title: 冲突与 x86 编译器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8e47f0d3-afe0-42d9-9efa-de239ddd3a05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b2b9c4cf871e8436a8da34a862d205541e7dc5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cd72de4922c297b4a230e0dc0fb606b56a2a473
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>与 x86 编译器冲突
 数据类型都大于 4 个字节不自动对齐在堆栈上时使用 x86 编译器进行编译应用程序。 因为编译器为 4 字节对齐的堆栈，任何大于 4 个字节，例如，64 位整数，不能自动对齐到 8 字节地址 x86 的体系结构。  

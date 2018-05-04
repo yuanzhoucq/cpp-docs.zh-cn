@@ -1,12 +1,9 @@
 ---
-title: "CSid 类 |Microsoft 文档"
-ms.custom: 
+title: CSid 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>CSid 类
 此类是包装器`SID`（安全标识符） 结构。  
@@ -98,11 +93,11 @@ class CSid
 |||  
 |-|-|  
 |[operator ==](#operator_eq_eq)|测试相等的两个安全描述符对象|  
-|[operator !=](#operator_neq)|测试不相等的两个安全描述符对象|  
-|[运算符\<](#operator_lt_)|比较两个安全描述符对象的相对值。|  
-|[operator >](#operator_gt_)|比较两个安全描述符对象的相对值。|  
-|[operator \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|  
-|[operator >=](#operator_gt__eq)|比较两个安全描述符对象的相对值。|  
+|[运算符 ！ =](#operator_neq)|测试不相等的两个安全描述符对象|  
+|[运算符 \<](#operator_lt_)|比较两个安全描述符对象的相对值。|  
+|[运算符 >](#operator_gt_)|比较两个安全描述符对象的相对值。|  
+|[运算符 \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|  
+|[运算符 > =](#operator_gt__eq)|比较两个安全描述符对象的相对值。|  
   
 ## <a name="remarks"></a>备注  
  `SID`结构是用于唯一标识用户或组的长度可变的结构。  
@@ -111,7 +106,7 @@ class CSid
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
 ##  <a name="accountname"></a>  CSid::AccountName  
@@ -342,7 +337,7 @@ bool LoadAccount(
  返回**true**成功后， **false**失败。 若要获得扩展的错误信息，请调用 `GetLastError`。  
   
 ### <a name="remarks"></a>备注  
- `LoadAccount`尝试查找安全标识符指定的名称。 请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)有关详细信息。  
+ `LoadAccount` 尝试查找安全标识符指定的名称。 请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)有关详细信息。  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  赋值运算符。  
@@ -359,7 +354,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>返回值  
  返回对已更新的引用`CSid`对象。  
   
-##  <a name="operator_eq_eq"></a>  CSid::operator ==  
+##  <a name="operator_eq_eq"></a>  CSid::operator = =  
  测试相等的两个安全描述符对象。  
   
 ```
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>返回值  
  **true**的安全描述符是否相等，否则如果**false**。  
   
-##  <a name="operator_neq"></a>  CSid::operator !=  
+##  <a name="operator_neq"></a>  CSid::operator ！ =  
  测试不相等的两个安全描述符对象。  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`大于或等于`rhs`，否则为**false**。  
   
-##  <a name="operator_const_sid__star"></a>CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
  强制转换`CSid`对象的指针到`SID`（安全标识符） 结构。  
   
 ```  
@@ -503,7 +498,7 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="return-value"></a>返回值  
  返回存储值描述的状态数据成员的值`CSid`对象。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |SidTypeUser|指示用户`SID`（安全标识符）。|  
 |SidTypeGroup|指示组`SID`。|  
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|指示`SID`计算机。|  
   
 ### <a name="remarks"></a>备注  
- 调用[CSid::LoadAccount](#loadaccount)更新`CSid`对象之前调用`SidNameUse`以返回其状态。 `SidNameUse`不会更改对象的状态 (通过调用到**LookupAccountName**或**LookupAccountSid**)，但仅返回的当前状态。  
+ 调用[CSid::LoadAccount](#loadaccount)更新`CSid`对象之前调用`SidNameUse`以返回其状态。 `SidNameUse` 不会更改对象的状态 (通过调用到**LookupAccountName**或**LookupAccountSid**)，但仅返回的当前状态。  
   
 ## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   

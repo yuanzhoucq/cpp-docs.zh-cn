@@ -1,13 +1,10 @@
 ---
-title: "导出和导入使用 AFX_EXT_CLASS |Microsoft 文档"
-ms.custom: 
+title: 导出和导入使用 AFX_EXT_CLASS |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - afx_ext_class
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb47703b7cd4ef2d0493016c120db0b7d845a71f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6cc853c66afae72d6e426d800c0443ab206ab20
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>使用 AFX_EXT_CLASS 导出和导入  
   
@@ -66,7 +61,7 @@ class AFX_EXT_CLASS CMyClass : public CDocument
   
 有时你可能想要导出你的类的个别成员。 例如，如果要导出`CDialog`-派生类中，你可能只需导出构造函数和`DoModal`调用。 你可以使用`AFX_EXT_CLASS`您需要将导出单个成员上。  
   
-例如:  
+例如：  
   
 ```cpp  
 class CExampleDialog : public CDialog  
@@ -95,7 +90,7 @@ public: \
   
 开头静态行`AFX_DATA`声明内您的类的静态对象。 若要正确进行导出此类，并从客户端可执行文件访问运行时信息，你必须导出此静态对象。 因为使用修饰符声明的静态对象`AFX_DATA`，只需定义`AFX_DATA`要`__declspec(dllexport)`时生成您的 DLL 并将其作为定义`__declspec(dllimport)`生成你的客户端可执行文件时。 因为`AFX_EXT_CLASS`已定义这种方式，你只需重新定义`AFX_DATA`会作为相同`AFX_EXT_CLASS`解决你的类定义。  
   
-例如:  
+例如：  
   
 ```cpp  
 #undef  AFX_DATA  

@@ -1,12 +1,9 @@
 ---
-title: "ATL 项目中的 MFC 支持 |Microsoft 文档"
-ms.custom: 
+title: ATL 项目中的 MFC 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.addmfc
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 399f9fcea216adf5480bf38b8aba051c60eed496
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d42afec863695b1cab05c2d3cf2f65f3d64a1507
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 项目中的 MFC 支持
 如果你选择**支持 MFC**在 ATL 项目向导中，则项目将声明为 MFC 应用程序对象 （类） 应用程序。 项目初始化 MFC 库并实例化类 (类*ProjName*)、 派生自[CWinApp](../../mfc/reference/cwinapp-class.md)。  

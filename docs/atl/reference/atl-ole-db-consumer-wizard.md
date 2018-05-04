@@ -2,11 +2,8 @@
 title: ATL OLE DB 使用者向导 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.consumer.overview
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 此向导安装 OLE DB 使用者类，该类数据绑定通过指定的 OLE DB 访问接口访问指定的数据源所需。  
   
 > [!NOTE]
->  此向导要求您单击**数据源**按钮以选择数据源中输入名称之前`Class`和**.h 文件**字段。  
+>  此向导要求您单击**数据源**按钮以选择数据源中输入名称之前`Class`和 **.h 文件**字段。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **数据源**  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
     3. **选择服务器上的数据库：**单击要在数据服务器上，显示所有已注册的数据库的下拉列表菜单，然后选择一个。  
   
-         或  
+         -或-  
   
  **将作为数据库名称的数据库文件附加：**指定要用作数据库的文件; 输入显式路径名。  
   

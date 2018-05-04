@@ -1,12 +1,9 @@
 ---
-title: "_U_STRINGorID 类 |Microsoft 文档"
-ms.custom: 
+title: _U_STRINGorID 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 类
 此自变量适配器类允许任一资源名称 ( `LPCTSTR`s) 或资源 Id ( **UINT**s) 传递到函数，而无需调用方将 ID 转换为字符串使用**MAKEINTRESOURCE**宏。  
@@ -61,17 +56,17 @@ class _U_STRINGorID
   
  类定义两个构造函数重载： 一种方法接受`LPCTSTR`参数，而另接受**UINT**自变量。 **UINT**自变量转换为与使用 Windows 资源管理函数兼容的资源类型**MAKEINTRESOURCE**宏，并且在类的单个数据成员中存储的结果[m_lpstr](#_u_stringorid__m_lpstr)。 自变量`LPCTSTR`构造函数存储直接进行转换。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
  类包含传递给其构造函数之一为公共的值`LPCTSTR`数据成员。  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
-##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
  **UINT**构造函数将其自变量转换为与使用 Windows 资源管理函数兼容的资源类型**MAKEINTRESOURCE**宏和结果存储在类的单数据成员[m_lpstr](#_u_stringorid__m_lpstr)。  
   
 ```

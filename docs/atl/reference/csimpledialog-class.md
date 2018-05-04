@@ -1,12 +1,9 @@
 ---
-title: "CSimpleDialog 类 |Microsoft 文档"
-ms.custom: 
+title: CSimpleDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 类
 此类实现基本的模式对话框。  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|创建模式对话框。|  
   
 ## <a name="remarks"></a>备注  
- 实现模式对话框的基本功能。 `CSimpleDialog`提供 Windows 公共控件仅支持。 若要创建和显示模式对话框，请创建此类，在对话框中提供现有的资源模板的名称的实例。 当用户单击与预定义的值 （如 IDOK 或 IDCANCEL） 的任何控件，将关闭对话框对象。  
+ 实现模式对话框的基本功能。 `CSimpleDialog` 提供 Windows 公共控件仅支持。 若要创建和显示模式对话框，请创建此类，在对话框中提供现有的资源模板的名称的实例。 当用户单击与预定义的值 （如 IDOK 或 IDCANCEL） 的任何控件，将关闭对话框对象。  
   
- `CSimpleDialog`可以创建仅有模式对话框。 `CSimpleDialog`提供对话框过程，使用默认消息映射来将消息定向到相应的处理程序。  
+ `CSimpleDialog` 可以创建仅有模式对话框。 `CSimpleDialog` 提供对话框过程，使用默认消息映射来将消息定向到相应的处理程序。  
   
  请参阅[实现对话框](../../atl/implementing-a-dialog-box.md)有关详细信息。  
   
@@ -70,10 +65,10 @@ class CSimpleDialog : public CDialogImplBase
   
  `CSimpleDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  调用模式对话框并返回完成的对话框结果。  
   
 ```

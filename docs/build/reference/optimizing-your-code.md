@@ -2,12 +2,9 @@
 title: 优化代码 |Microsoft 文档
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - performance, compiler
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4306f825b9925dbdcdc994d287a2c4287ea7bfc2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a8b18ba4ce00eb751d8f30debbab3e87b9cce53e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimizing-your-code"></a>优化代码
 
@@ -40,7 +36,7 @@ ms.lasthandoff: 01/03/2018
 关键字和杂注，你可以使用在你的代码来提高性能的列表。
 
 [按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)  
-一份**/O**专门影响执行速度或代码大小的编译器选项。
+一份 **/O**专门影响执行速度或代码大小的编译器选项。
 
 [规则引用声明符：&&](../../cpp/rvalue-reference-declarator-amp-amp.md)  
 右值引用支持的实现*移动语义*。 如果移动语义用于实现模板库，使用这些模板的应用程序的性能可以显著提高。

@@ -2,12 +2,9 @@
 title: -FC （诊断中源代码文件的完整路径） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UseFullPaths
 - /FC
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bddc92d8c013fd3b4e2425b7f85b084651cdafe
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 4a721b6887b6c5c07d96a79b06f05e6d7855250b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC（所诊断源代码文件的完整路径）
 
@@ -48,17 +43,17 @@ int main( ) {
 }
 ```
 
-而无需**/FC**，诊断的文本将类似于此诊断的文本：
+而无需 **/FC**，诊断的文本将类似于此诊断的文本：
 
 - compiler_option_FC.cpp(5)： 错误 C2143： 语法错误： 缺少; 之前}
 
-与**/FC**，诊断的文本将类似于此诊断的文本：
+与 **/FC**，诊断的文本将类似于此诊断的文本：
 
 - c:\test\compiler_option_fc.cpp(5)： 错误 C2143： 语法错误： 缺少; 之前}
 
  **/FC**如果你想要使用时，请参阅文件名称的完整路径，则还需要&#95;&#95;文件&#95;&#95;宏。 请参阅[预定义的宏](../../preprocessor/predefined-macros.md)有关详细信息&#95;&#95;文件&#95;&#95;。
 
-**/FC**选项也将暗示**/ZI**。 有关详细信息**/ZI**，请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。
+**/FC**选项也将暗示 **/ZI**。 有关详细信息 **/ZI**，请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。
 
 **/FC**输出采用小写格式的完整路径。
 
@@ -74,7 +69,7 @@ int main( ) {
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UseFullPaths%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器选项](../../build/reference/compiler-options.md)   
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

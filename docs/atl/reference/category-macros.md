@@ -2,11 +2,8 @@
 title: 类别宏 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -34,17 +31,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1eba97ef5253041752d4b8abfcd6ea7300b8492
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="category-macros"></a>类别宏
 这些宏定义类别映射。  
@@ -56,10 +51,10 @@ ms.lasthandoff: 12/21/2017
 |[IMPLEMENTED_CATEGORY](#implemented_category)|指示由 COM 对象实现的类别。|  
 |[REQUIRED_CATEGORY](#required_category)|指示所需的容器的 COM 对象的类别。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP  
  标记类别映射开始。  
   
 ```
@@ -85,7 +80,7 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>  END_CATEGORY_MAP  
  标记类别映射的末尾。  
   
 ```
@@ -95,7 +90,7 @@ END_CATEGORY_MAP()
 ### <a name="example"></a>示例  
  请参阅示例[BEGIN_CATEGORY_MAP](#begin_category_map)。  
   
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY  
  添加`IMPLEMENTED_CATEGORY`宏为组件的[类别映射](#begin_category_map)来指定应注册为实现由类别`catID`参数。  
   
 ```
@@ -128,7 +123,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>  REQUIRED_CATEGORY  
  添加`REQUIRED_CATEGORY`宏为组件的[类别映射](#begin_category_map)来指定应注册为需要由类别`catID`参数。  
   
 ```

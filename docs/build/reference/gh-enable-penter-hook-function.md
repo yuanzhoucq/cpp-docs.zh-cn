@@ -1,13 +1,10 @@
 ---
-title: "-Gh （启用 _penter 挂钩函数） |Microsoft 文档"
-ms.custom: 
+title: -Gh （启用 _penter 挂钩函数） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _penter
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec38a8822bb8a330c4dccff9833780ea3a0a45d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68497e4e760e1268a0175d5a68452678153896b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh（启用 _penter 挂钩函数）
 导致调用`_penter`开头的每个方法或函数的函数。  
@@ -65,7 +60,7 @@ void __declspec(naked) _cdecl _penter( void );
 -   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
 ## <a name="example"></a>示例  
- 下面的代码，如果使用编译的**/Gh**，演示如何`_penter`被调用两次; 一次输入函数时`main`，另一次输入函数时`x`。  
+ 下面的代码，如果使用编译的 **/Gh**，演示如何`_penter`被调用两次; 一次输入函数时`main`，另一次输入函数时`x`。  
   
 ```  
 // Gh_compiler_option.cpp  

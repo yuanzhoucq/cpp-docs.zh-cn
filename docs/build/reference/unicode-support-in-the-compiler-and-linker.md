@@ -1,11 +1,10 @@
 ---
-title: "编译器和链接器中的 Unicode 支持 |Microsoft 文档"
-ms.custom: 
+title: 编译器和链接器中的 Unicode 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UseUnicodeResponseFiles
 - VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
@@ -17,14 +16,13 @@ helpviewer_keywords:
 - Unicode, Visual C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe775a53914089648a868a94aa2c863ee87790c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0b84cd62f3fcca378ab55de16006925e685b37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="asm-and-cod-dumps"></a>.asm 和.cod 转储
 
-.asm 和.cod 转储是在 ANSI 默认情况下，为了与 MASM 兼容。 使用[/FAu](../../build/reference/fa-fa-listing-file.md)输出 utf-8。 请注意，如果你指定**/FAs**，混合的源只需将直接打印，并且可能看起来出现乱码，例如，如果源代码为 utf-8，且未指定**/fasu 时**。
+.asm 和.cod 转储是在 ANSI 默认情况下，为了与 MASM 兼容。 使用[/FAu](../../build/reference/fa-fa-listing-file.md)输出 utf-8。 请注意，如果你指定 **/FAs**，混合的源只需将直接打印，并且可能看起来出现乱码，例如，如果源代码为 utf-8，且未指定 **/fasu 时**。
 
 ## <a name="see-also"></a>请参阅
 

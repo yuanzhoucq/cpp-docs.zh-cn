@@ -1,27 +1,22 @@
 ---
-title: "结构和常量定义 |Microsoft 文档"
-ms.custom: 
+title: 结构和常量定义 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c39809c89b350f9c8754f05687363ecac6271c5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-constant-definitions"></a>结构和常量定义
 默认 helper 例程使用多个结构与挂钩函数以及任何异常期间进行通信。 以下是通知和失败值、 信息结构和传递到挂钩的挂钩函数指针类型：  

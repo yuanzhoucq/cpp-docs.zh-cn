@@ -1,12 +1,9 @@
 ---
-title: "CAtlArray 类 |Microsoft 文档"
-ms.custom: 
+title: CAtlArray 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlArray
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffebf8289b7c1eb5ccaae5a6b6a5f2a3f939cbb9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ceeaf5250cc9dc5cb4cb25c47b3fe179c7c5295
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 此类实现一个数组对象。  
@@ -92,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[运算符 &#91; &#93;](#operator_at)|调用此运算符可返回数组中的元素的引用。|  
+|[运算符&#91;&#93;](#operator_at)|调用此运算符可返回数组中的元素的引用。|  
 
   
 ### <a name="typedefs"></a>Typedef  
@@ -111,10 +106,10 @@ class CAtlArray
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="add"></a>CAtlArray::Add  
+##  <a name="add"></a>  CAtlArray::Add  
  调用此方法将元素添加到数组对象。  
   
 ```
@@ -135,7 +130,7 @@ size_t Add();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
-##  <a name="append"></a>CAtlArray::Append  
+##  <a name="append"></a>  CAtlArray::Append  
  调用此方法以将一个数组的内容添加到另一个末尾。  
   
 ```
@@ -159,7 +154,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
-##  <a name="assertvalid"></a>CAtlArray::AssertValid  
+##  <a name="assertvalid"></a>  CAtlArray::AssertValid  
  调用此方法以确认数组对象有效。  
   
 ```
@@ -172,7 +167,7 @@ void AssertValid() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
-##  <a name="catlarray"></a>CAtlArray::CAtlArray  
+##  <a name="catlarray"></a>  CAtlArray::CAtlArray  
  构造函数。  
   
 ```
@@ -185,7 +180,7 @@ CAtlArray() throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
-##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
+##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray  
  析构函数。  
   
 ```
@@ -195,7 +190,7 @@ CAtlArray() throw();
 ### <a name="remarks"></a>备注  
  使用数组对象的任何资源将释放。  
   
-##  <a name="copy"></a>CAtlArray::Copy  
+##  <a name="copy"></a>  CAtlArray::Copy  
  调用此方法将一个数组的元素复制到另一个。  
   
 ```
@@ -214,12 +209,12 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
  在调试版本中，ATLASSERT 如果将会引发现有`CAtlArray`对象无效，或者如果`aSrc`引用同一对象。 在发布版本无效自变量可能导致不可预知的行为。  
   
 > [!NOTE]
-> `CAtlArray::Copy`不支持使用创建的元素组成的数组[CAutoPtr](../../atl/reference/cautoptr-class.md)类。  
+> `CAtlArray::Copy` 不支持使用创建的元素组成的数组[CAutoPtr](../../atl/reference/cautoptr-class.md)类。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
-##  <a name="freeextra"></a>CAtlArray::FreeExtra  
+##  <a name="freeextra"></a>  CAtlArray::FreeExtra  
  调用此方法以从数组中移除任何空元素。  
   
 ```
@@ -231,7 +226,7 @@ void FreeExtra() throw();
   
  在调试版本中，将引发 ATLASSERT 如果 CAtlArray 对象无效，或该数组将超过其最大大小。  
   
-##  <a name="getat"></a>CAtlArray::GetAt  
+##  <a name="getat"></a>  CAtlArray::GetAt  
  为此方法从数组对象中检索单个元素时调用。  
   
 ```
@@ -252,7 +247,7 @@ E& GetAt(size_t iElement) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
-##  <a name="getcount"></a>CAtlArray::GetCount  
+##  <a name="getcount"></a>  CAtlArray::GetCount  
  调用此方法以返回数组中存储的元素数量。  
   
 ```
@@ -268,7 +263,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[CAtlArray::GetAt](#getat)。  
   
-##  <a name="getdata"></a>CAtlArray::GetData  
+##  <a name="getdata"></a>  CAtlArray::GetData  
  调用此方法以返回指向数组中的第一个元素的指针。  
   
 ```
@@ -282,14 +277,14 @@ const E* GetData() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
-##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
+##  <a name="inargtype"></a>  CAtlArray::INARGTYPE  
  要用于将元素添加到数组的数据类型。  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
+##  <a name="insertarrayat"></a>  CAtlArray::InsertArrayAt  
  调用此方法要插入到另一个数组。  
   
 ```
@@ -309,12 +304,12 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
  在调试版本中，ATLASSERT 如果将会引发`CAtlArray`对象无效，或者如果`paNew`指针为 NULL 或无效。  
   
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`不支持使用创建的元素组成的数组[CAutoPtr](../../atl/reference/cautoptr-class.md)类。  
+> `CAtlArray::InsertArrayAt` 不支持使用创建的元素组成的数组[CAutoPtr](../../atl/reference/cautoptr-class.md)类。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
-##  <a name="insertat"></a>CAtlArray::InsertAt  
+##  <a name="insertat"></a>  CAtlArray::InsertAt  
  数组对象调用此方法插入一个新的元素 （或多个元素的副本）。  
   
 ```
@@ -339,7 +334,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CAtlArray::IsEmpty  
+##  <a name="isempty"></a>  CAtlArray::IsEmpty  
  调用此方法以测试相同，如果数组为空。  
   
 ```
@@ -355,7 +350,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
-##  <a name="operator_at"></a>CAtlArray::operator]  
+##  <a name="operator_at"></a>  CAtlArray::operator]  
  调用此运算符可返回数组中的元素的引用。  
   
 ```
@@ -375,14 +370,14 @@ const E& operator[](size_t ielement) const throw();
   
  在调试版本中，ATLASSERT 如果将会引发`iElement`超过数组中的元素总数。 在零售版本无效的参数可能会导致不可预知的结果。  
   
-##  <a name="outargtype"></a>CAtlArray::OUTARGTYPE  
+##  <a name="outargtype"></a>  CAtlArray::OUTARGTYPE  
  要用于从数组中检索元素的数据类型。  
   
 ```
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```  
   
-##  <a name="removeall"></a>CAtlArray::RemoveAll  
+##  <a name="removeall"></a>  CAtlArray::RemoveAll  
  调用此方法以从数组对象中移除所有元素。  
   
 ```
@@ -397,7 +392,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>示例  
  请参阅示例[CAtlArray::IsEmpty](#isempty)。  
   
-##  <a name="removeat"></a>CAtlArray::RemoveAt  
+##  <a name="removeat"></a>  CAtlArray::RemoveAt  
  调用此方法以从数组中移除一个或多个元素。  
   
 ```
@@ -419,7 +414,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
-##  <a name="setat"></a>CAtlArray::SetAt  
+##  <a name="setat"></a>  CAtlArray::SetAt  
  调用此方法以设置元素的值的数组对象中。  
   
 ```
@@ -439,7 +434,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 ### <a name="example"></a>示例  
  请参阅示例[CAtlArray::GetAt](#getat)。  
   
-##  <a name="setcount"></a>CAtlArray::SetCount  
+##  <a name="setcount"></a>  CAtlArray::SetCount  
  调用此方法以设置数组对象的大小。  
   
 ```
@@ -464,7 +459,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ### <a name="example"></a>示例  
  请参阅示例[CAtlArray::GetData](#getdata)。  
   
-##  <a name="setatgrow"></a>CAtlArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CAtlArray::SetAtGrow  
  调用此方法以设置元素的值在数组对象中，展开所需的数组。  
   
 ```

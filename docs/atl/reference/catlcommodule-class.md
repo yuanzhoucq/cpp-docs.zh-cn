@@ -1,12 +1,9 @@
 ---
-title: "CAtlComModule 类 |Microsoft 文档"
-ms.custom: 
+title: CAtlComModule 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlComModule
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47e85f3aab75f8fafb76977847ce36d37808af60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 类
 此类实现的 COM 服务器模块。  
@@ -61,7 +56,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|调用此方法可注销类型库。|  
   
 ## <a name="remarks"></a>备注  
- `CAtlComModule`实现 COM 服务器模块，从而使客户端访问模块的组件。  
+ `CAtlComModule` 实现 COM 服务器模块，从而使客户端访问模块的组件。  
   
  此类替换已过时[CComModule](../../atl/reference/ccommodule-class.md)的 atl。 早期版本中使用的类 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
@@ -70,10 +65,10 @@ class CAtlComModule : public _ATL_COM_MODULE
   
  `CAtlComModule`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule  
  构造函数。  
   
 ```
@@ -83,7 +78,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>备注  
  初始化该模块。  
   
-##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
+##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule  
  析构函数。  
   
 ```
@@ -93,7 +88,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>备注  
  释放所有的类工厂。  
   
-##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>  CAtlComModule::RegisterServer  
  调用此方法以更新在对象映射中每个对象的系统注册表。  
   
 ```
@@ -113,7 +108,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>备注  
  调用全局函数[AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)。  
   
-##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib  
  调用此方法以注册类型库。  
   
 ```
@@ -131,7 +126,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>备注  
  将有关类型库的信息添加到系统注册表。 如果模块实例包含多个类型库，使用此方法的第一个版本以指定应使用哪些类型库。  
   
-##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer  
  调用此方法以取消注册在对象映射中的每个对象。  
   
 ```
@@ -153,7 +148,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>备注  
  调用全局函数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。  
   
-##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib  
  调用此方法可注销类型库。  
   
 ```

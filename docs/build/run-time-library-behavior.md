@@ -2,12 +2,9 @@
 title: Dll 和 Visual c + + 运行库行为 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 运行库行为  
   
-通过使用 Visual c + +，默认情况下生成动态链接库 (DLL) 时，链接器包括 Visual c + + 运行时库 (VCRuntime)。 VCRuntime 包含初始化和终止 C/c + + 可执行文件所需的代码。 VCRuntime 代码时链接到 DLL，提供一个内部调用的 DLL 入口点函数`_DllMainCRTStartup`用于处理 Windows OS 消息到要将附加到进程或与进程或线程分离的 DLL。 `_DllMainCRTStartup`函数执行重要任务，如堆栈缓冲区安全设置，C 运行时库 (CRT) 初始化和终止，并对静态和全局对象调用构造函数和析构函数。 `_DllMainCRTStartup`此外调用挂钩函数执行其自己的初始化和终止的 WinRT、 MFC 和 ATL 等其他库。 如果没有此初始化、 CRT 和其他库，以及静态变量，将保持处于未初始化状态。 无论是否 DLL 使用静态链接的 CRT 或动态链接的 CRT DLL 称为相同 VCRuntime 内部初始化和终止例程。  
+通过使用 Visual c + +，默认情况下生成动态链接库 (DLL) 时，链接器包括 Visual c + + 运行时库 (VCRuntime)。 VCRuntime 包含初始化和终止 C/c + + 可执行文件所需的代码。 VCRuntime 代码时链接到 DLL，提供一个内部调用的 DLL 入口点函数`_DllMainCRTStartup`用于处理 Windows OS 消息到要将附加到进程或与进程或线程分离的 DLL。 `_DllMainCRTStartup`函数执行重要任务，如堆栈缓冲区安全设置，C 运行时库 (CRT) 初始化和终止，并对静态和全局对象调用构造函数和析构函数。 `_DllMainCRTStartup` 此外调用挂钩函数执行其自己的初始化和终止的 WinRT、 MFC 和 ATL 等其他库。 如果没有此初始化、 CRT 和其他库，以及静态变量，将保持处于未初始化状态。 无论是否 DLL 使用静态链接的 CRT 或动态链接的 CRT DLL 称为相同 VCRuntime 内部初始化和终止例程。  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>默认 DLL 入口点 _DllMainCRTStartup  
   

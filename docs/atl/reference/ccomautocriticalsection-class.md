@@ -2,11 +2,8 @@
 title: CComAutoCriticalSection 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAutoCriticalSection
@@ -17,20 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d12abfceeebeb1cac89b510c14d7a9211173406e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 类
-`CComAutoCriticalSection`提供用于获取和释放的关键部分对象所有权方法。  
+`CComAutoCriticalSection` 提供用于获取和释放的关键部分对象所有权方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +43,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 |[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|析构函数。|  
   
 ## <a name="remarks"></a>备注  
- `CComAutoCriticalSection`类似于类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)，除`CComAutoCriticalSection`自动初始化构造函数中的关键部分对象。  
+ `CComAutoCriticalSection` 类似于类[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)，除`CComAutoCriticalSection`自动初始化构造函数中的关键部分对象。  
   
  通常情况下，使用`CComAutoCriticalSection`通过`typedef`名称[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)。 此名称引用`CComAutoCriticalSection`时[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。  
 
@@ -60,10 +55,10 @@ class CComAutoCriticalSection : public CComCriticalSection
   
  `CComAutoCriticalSection`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcore.h  
   
-##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
+##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection  
  构造函数。  
   
 ```
@@ -73,7 +68,7 @@ CComAutoCriticalSection();
 ### <a name="remarks"></a>备注  
  调用 Win32 函数[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，其中初始化关键部分对象。  
   
-##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  析构函数。  
   
 ```

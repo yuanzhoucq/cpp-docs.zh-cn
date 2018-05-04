@@ -1,12 +1,9 @@
 ---
-title: "CAccessToken 类 |Microsoft 文档"
-ms.custom: 
+title: CAccessToken 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAccessToken
@@ -61,17 +58,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 407652cc5a5e300a2e5eb9d6a5a07dd29209ffef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 此类是访问令牌的包装。  
@@ -148,7 +143,7 @@ class CAccessToken
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsecurity.h  
   
 ##  <a name="attach"></a>  CAccessToken::Attach  
@@ -222,7 +217,7 @@ bool CreateImpersonationToken(
  如果成功，则返回 true；如果失败，则返回 false。  
   
 ### <a name="remarks"></a>备注  
- `CreateImpersonationToken`调用[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)以创建新的模拟令牌。  
+ `CreateImpersonationToken` 调用[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)以创建新的模拟令牌。  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  调用此方法以创建新的主令牌。  
@@ -248,7 +243,7 @@ bool CreatePrimaryToken(
  如果成功，则返回 true；如果失败，则返回 false。  
   
 ### <a name="remarks"></a>备注  
- `CreatePrimaryToken`调用[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)以创建新的主令牌。  
+ `CreatePrimaryToken` 调用[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)以创建新的主令牌。  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  调用此方法以创建新的进程表示的用户的安全上下文中运行`CAccessToken`对象。  
@@ -334,7 +329,7 @@ bool CreateRestrictedToken(
  如果成功，则返回 true；如果失败，则返回 false。  
   
 ### <a name="remarks"></a>备注  
- `CreateRestrictedToken`使用[CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583)的 Win32 函数来创建一个新`CAccessToken`对象，其中包括限制。  
+ `CreateRestrictedToken` 使用[CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583)的 Win32 函数来创建一个新`CAccessToken`对象，其中包括限制。  
   
 > [!IMPORTANT]
 >  使用时`CreateRestrictedToken`，请确保满足以下： 现有令牌是有效 （而不由用户输入） 和`SidsToDisable`和`PrivilegesToDelete`同时有效 （而不由用户输入）。 如果该方法返回 false，则拒绝功能。  
@@ -942,7 +937,7 @@ bool OpenThreadToken(
  如果成功，则返回 true；如果失败，则返回 false。  
   
 ### <a name="remarks"></a>备注  
- `OpenThreadToken`类似于[CAccessToken::GetThreadToken](#getthreadtoken)，但在初始化之前设置的模拟级别`CAccessToken`从线程的访问令牌。  
+ `OpenThreadToken` 类似于[CAccessToken::GetThreadToken](#getthreadtoken)，但在初始化之前设置的模拟级别`CAccessToken`从线程的访问令牌。  
   
  [CAutoRevertImpersonation 类](../../atl/reference/cautorevertimpersonation-class.md)可以用于自动还原模拟的访问令牌通过设置创建`bImpersonate`标志切换为*true*。  
   

@@ -2,11 +2,8 @@
 title: CComPtr 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef8c49b04a769fd6202aa58324f20216948cf3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomptr-class"></a>CComPtr 类
 用于管理 COM 接口指针的智能指针类。  
@@ -73,10 +68,10 @@ class CComPtr
   
  `CComPtr`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="ccomptr"></a>CComPtr::CComPtr  
+##  <a name="ccomptr"></a>  CComPtr::CComPtr  
  构造函数。  
   
 ```
@@ -92,7 +87,7 @@ CComPtr (const CComPtr<T>& lp) throw ();
  `T`  
  COM 接口。  
   
-##  <a name="operator_eq"></a>CComPtr::operator =  
+##  <a name="operator_eq"></a>  CComPtr::operator =  
  赋值运算符。  
   
 ```

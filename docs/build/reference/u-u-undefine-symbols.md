@@ -1,13 +1,10 @@
 ---
-title: "-U，-u （未定义符号） |Microsoft 文档"
-ms.custom: 
+title: -U，-u （未定义符号） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 897ca229ec7312812b6f2bd2991bf519e98c836c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u（未定义符号）
 **/U**编译器选项可取消指定的预处理器符号。 **/U**编译器选项可取消编译器定义的特定于 Microsoft 的符号。  
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
  若要取消定义预处理器符号。  
   
 ## <a name="remarks"></a>备注  
- 既不**/U**或**/u**选项可以取消定义符号通过创建**#define**指令。  
+ 既不 **/U**或 **/u**选项可以取消定义符号通过创建 **#define**指令。  
   
- **/U**选项可以取消定义通过使用以前定义的符号**/D**选项。  
+ **/U**选项可以取消定义通过使用以前定义的符号 **/D**选项。  
   
  默认情况下，编译器定义以下 Microsoft 特定的符号。  
   
@@ -86,4 +81,4 @@ ms.lasthandoff: 12/21/2017
  [/J (默认 char 类型是无符号)](../../build/reference/j-default-char-type-is-unsigned.md)   
  [/GR （启用运行时类型信息）](../../build/reference/gr-enable-run-time-type-information.md)   
  [/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)   
- [/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)
+ [/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)

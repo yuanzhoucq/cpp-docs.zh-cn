@@ -1,13 +1,10 @@
 ---
-title: "如何： 配置 Visual c + + 项目以面向 64 位 x64 平台 |Microsoft 文档"
-ms.custom: 
+title: 如何： 配置 Visual c + + 项目以面向 64 位 x64 平台 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e651d28af3bd8635691d6a54d6c4cca8eb8c160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f1a4c9a27d4fdbbd57348c1fc2ce27301a1a95e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何： 配置 Visual c + + 项目以面向 64 位 x64 平台
 
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  选择“配置管理器”  按钮以打开“配置管理器”  对话框。  
   
-4.  在**活动解决方案平台**下拉列表中，选择**\<新建 … >**选项来打开**新建解决方案平台**对话框。  
+4.  在**活动解决方案平台**下拉列表中，选择**\<新建 … >** 选项来打开**新建解决方案平台**对话框。  
   
 5.  在**键入或选择新平台**下拉列表中，选择 64 位目标平台。  
   

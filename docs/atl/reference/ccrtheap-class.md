@@ -1,12 +1,9 @@
 ---
-title: "CCRTHeap 类 |Microsoft 文档"
-ms.custom: 
+title: CCRTHeap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CCRTHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9864ce3522cf33927a3f6d3572e9d2e12187f5d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83655bddfb56bdd0e532b520b2389278e3fbd762
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccrtheap-class"></a>CCRTHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 CRT 堆函数。  
@@ -53,7 +48,7 @@ class CCRTHeap : public IAtlMemMgr
 |[Ccrtheap:: Allocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|  
   
 ## <a name="remarks"></a>备注  
- `CCRTHeap`实现内存分配函数使用 CRT 堆函数，包括[malloc](../../c-runtime-library/reference/malloc.md)，[免费](../../c-runtime-library/reference/free.md)， [realloc](../../c-runtime-library/reference/realloc.md)，和[_msize](../../c-runtime-library/reference/msize.md)。  
+ `CCRTHeap` 实现内存分配函数使用 CRT 堆函数，包括[malloc](../../c-runtime-library/reference/malloc.md)，[免费](../../c-runtime-library/reference/free.md)， [realloc](../../c-runtime-library/reference/realloc.md)，和[_msize](../../c-runtime-library/reference/msize.md)。  
   
 ## <a name="example"></a>示例  
  请参阅示例[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -63,10 +58,10 @@ class CCRTHeap : public IAtlMemMgr
   
  `CCRTHeap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlmem.h  
   
-##  <a name="allocate"></a>Ccrtheap:: Allocate  
+##  <a name="allocate"></a>  Ccrtheap:: Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -85,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[malloc](../../c-runtime-library/reference/malloc.md)。  
   
-##  <a name="free"></a>Ccrtheap:: Free  
+##  <a name="free"></a>  Ccrtheap:: Free  
  调用此方法以释放此内存管理器分配的内存块。  
   
 ```
@@ -99,7 +94,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[免费](../../c-runtime-library/reference/free.md)。  
   
-##  <a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>  CCRTHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块分配的大小。  
   
 ```
@@ -116,7 +111,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[_msize](../../c-runtime-library/reference/msize.md)。  
   
-##  <a name="reallocate"></a>Ccrtheap:: Allocate  
+##  <a name="reallocate"></a>  Ccrtheap:: Allocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```

@@ -1,27 +1,22 @@
 ---
-title: "ARM 异常处理 |Microsoft 文档"
-ms.custom: 
+title: ARM 异常处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 针对异步硬件生成的异常和同步软件生成的异常，ARM 上的 Windows 将使用相同的结构化异常处理机制。 将通过使用语言帮助器函数，基于 Windows 结构化异常处理来生成特定于语言的异常处理程序。 本文档描述了 ARM 上的 Windows 中的异常处理以及由 MASM 和 Visual C++ 编译器生成的代码所使用的语言帮助器。  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  0xFD 代码是序列末尾处的特殊代码，它表示尾声是一个长度超过序言的 16 位指令。 这样能够进一步共享展开代码。  
   
- 在此示例中，如果在执行序言和尾声之间的函数主体时出现异常，则将从尾声用例（尾声代码中偏移量为 0 处）开始进行展开。 这对应于示例中的偏移量 0x140。 展开器将执行完全展开的序列，因为没有进行任何清理操作。 而如果在尾言代码开头后的某个指令处出现异常，则展开器可以通过跳过第一个展开代码成功进行展开。 给定的操作码之间的一对一映射和展开代码，如果从指令展开 *n* 中尾声，则展开器应跳过前 *n* 展开代码。  
+ 在此示例中，如果在执行序言和尾声之间的函数主体时出现异常，则将从尾声用例（尾声代码中偏移量为 0 处）开始进行展开。 这对应于示例中的偏移量 0x140。 展开器将执行完全展开的序列，因为没有进行任何清理操作。 而如果在尾言代码开头后的某个指令处出现异常，则展开器可以通过跳过第一个展开代码成功进行展开。 给定的操作码之间的一对一映射和展开代码，如果从指令展开*n*中尾声，则展开器应跳过前*n*展开代码。  
   
- 类似的逻辑适用于序言的反向操作。 如果从序言中的偏移量 0 处展开，则无需执行任何操作。 如果从其中的某个指令展开，则展开序列应从结尾处的某个展开代码开始，因为序言展开代码是以反向顺序进行存储的。 一般情况下，如果从指令展开 *n* 在序言中，展开应处开始执行 *n* 展开的代码列表末尾的代码。  
+ 类似的逻辑适用于序言的反向操作。 如果从序言中的偏移量 0 处展开，则无需执行任何操作。 如果从其中的某个指令展开，则展开序列应从结尾处的某个展开代码开始，因为序言展开代码是以反向顺序进行存储的。 一般情况下，如果从指令展开*n*在序言中，展开应处开始执行*n*展开的代码列表末尾的代码。  
   
  序言展开代码和尾声展开代码并不总是完全匹配。 在这种情况下，展开代码数组可能必须包含几个代码序列。 若要确定开始处理代码的偏移量，请使用此逻辑：  
   

@@ -1,13 +1,10 @@
 ---
-title: "链接输入文件 |Microsoft 文档"
-ms.custom: 
+title: 链接输入文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-input-files"></a>LINK 输入文件
 链接器提供包含对象、 导入和标准库、 资源、 模块定义和输入的命令的文件。 链接不使用文件扩展名来做出假设文件的内容。 相反，LINK 检查每个输入的文件，以确定它是什么类型的文件。  

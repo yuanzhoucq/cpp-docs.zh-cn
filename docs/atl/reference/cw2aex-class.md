@@ -1,12 +1,9 @@
 ---
-title: "CW2AEX 类 |Microsoft 文档"
-ms.custom: 
+title: CW2AEX 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fd48a34b82e0671d417a882e040a87a7691c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2aex-class"></a>CW2AEX 类
 此类由字符串转换宏`CT2AEX`， `CW2TEX`， `CW2CTEX`，和`CT2CAEX`，和 typedef **CW2A**。  
@@ -98,10 +93,10 @@ class CW2AEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlconv.h  
   
-##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>  CW2AEX::CW2AEX  
  构造函数。  
   
 ```
@@ -119,7 +114,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>备注  
  分配在转换过程中使用的缓冲区。  
   
-##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+##  <a name="dtor"></a>  CW2AEX:: ~ CW2AEX  
  析构函数。  
   
 ```
@@ -129,21 +124,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>备注  
  释放已分配的缓冲区。  
   
-##  <a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>  CW2AEX::m_psz  
  将源字符串存储数据成员。  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer  
  静态缓冲区，用于存储已转换的字符串。  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CW2AEX::operator LPSTR  
  转换运算符。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "COleDateTime 类 |Microsoft 文档"
-ms.custom: 
+title: COleDateTime 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDateTime
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ac939714eff9473397cbe50075f3082f38cdf23
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 封装`DATE`OLE 自动化中使用的数据类型。  
@@ -114,13 +109,13 @@ class COleDateTime
 |[COleDateTime::m_status](#m_status)|包含此状态`COleDateTime`对象。|  
   
 ## <a name="remarks"></a>备注  
- `COleDateTime`没有基类。  
+ `COleDateTime` 没有基类。  
   
  它是有关的可能类型之一[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) OLE 自动化的数据类型。 A`COleDateTime`值表示绝对日期和时间值。  
   
  `DATE`浮点值形式的实现类型。 午夜从 1899 年 12 月 30 日，测量天数。 下表显示一些日期和其关联的值：  
   
-|日期|“值”|  
+|日期|值|  
 |----------|-----------|  
 |1899 年 12 月 29日日午夜|-1.0|  
 |1899 年 12 月 29日日，6 A.M|-1.25|  
@@ -131,7 +126,7 @@ class COleDateTime
 > [!CAUTION]
 >  请注意，在上面的表，尽管天值变为负值之前 1899 年 12 月 30 日，午夜时间一天的值不这样做。 例如，始终由分数值 0.25，无论 （之后 1899 年 12 月 30 日） 正值或负值 （之前 1899 年 12 月 30 日） 表示一天的整数是否表示上午 6:00。 这意味着简单的浮点点比较错误地将对进行排序`COleDateTime`表示 12/29/1899 作为上午 6:00**更高版本**个表示同一天上午 7:00。  
   
- `COleDateTime`类处理从 1，100 年 1 月，年 12 月 31 日的日期 9999。 `COleDateTime`类使用公历; 它不支持儒略历日期。 `COleDateTime`将忽略夏时制。 (请参阅[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。)  
+ `COleDateTime`类处理从 1，100 年 1 月，年 12 月 31 日的日期 9999。 `COleDateTime`类使用公历; 它不支持儒略历日期。 `COleDateTime` 将忽略夏时制。 (请参阅[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。)  
   
 > [!NOTE]
 >  你可以使用`%y`检索日期开始 1900年仅两位数年份的格式。 如果你使用`%y`上代码之前 1900 年的日期的格式生成断言失败。  
@@ -140,18 +135,18 @@ class COleDateTime
   
  如果你创建`COleDateTime`使用日期对象小于 100，该日期是接受，但后续调用`GetYear`， `GetMonth`， `GetDay`， `GetHour`， `GetMinute`，和`GetSecond`失败并返回-1。 以前，你可以使用两位数日期，但日期必须是 100 或更大在 MFC 4.2 及更高版本。  
   
- 若要避免出现问题，请指定四位数日期。 例如:  
+ 若要避免出现问题，请指定四位数日期。 例如：  
   
  [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]  
   
- 有关基本算术运算`COleDateTime`值使用伴生类[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)。 `COleDateTimeSpan`值定义一个时间间隔。 这些类之间的关系非常类似于之间[CTime](../../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。  
+ 有关基本算术运算`COleDateTime`值使用伴生类[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)。 `COleDateTimeSpan` 值定义一个时间间隔。 这些类之间的关系非常类似于之间[CTime](../../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。  
   
  有关详细信息`COleDateTime`和`COleDateTimeSpan`类，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ATLComTime.h  
   
-##  <a name="coledatetime_relational_operators"></a>COleDateTime 关系运算符  
+##  <a name="coledatetime_relational_operators"></a>  COleDateTime 关系运算符  
  比较运算符。  
   
 ```
@@ -176,11 +171,11 @@ bool operator>=(const COleDateTime& date) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#13](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_2.cpp)]  
   
 ### <a name="example"></a>示例  
- 运算符 **>=** ，  **\< =** ，  **>** ，和 **<** ，如果将断言`COleDateTime`对象设置为 null。  
+ 运算符**>=**， **\< =**， **>**，和**<**，如果将断言`COleDateTime`对象设置为 null。  
   
  [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]  
   
-##  <a name="coledatetime"></a>COleDateTime::COleDateTime  
+##  <a name="coledatetime"></a>  COleDateTime::COleDateTime  
  构造 `COleDateTime` 对象。  
   
 ```
@@ -215,7 +210,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
  为日期/时间 (**日期**) 复制到新值`COleDateTime`对象。  
   
  `timeSrc`  
- A`time_t`或**__time64_t**值才能被转换为日期/时间值并复制到新`COleDateTime`对象。  
+ A`time_t`或 **__time64_t**值才能被转换为日期/时间值并复制到新`COleDateTime`对象。  
   
  *systimeSrc*  
  A`SYSTEMTIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。  
@@ -248,23 +243,23 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  以下是每个构造函数的简要说明：  
   
-- `COleDateTime(`**)**构造`COleDateTime`对象初始化为 0 （午夜，30 1899 年 12 月）。  
+- `COleDateTime(` **)** 构造`COleDateTime`对象初始化为 0 （午夜，30 1899 年 12 月）。  
   
-- `COleDateTime(``dateSrc` **)**构造`COleDateTime`从现有对象`COleDateTime`对象。  
+- `COleDateTime(` `dateSrc` **)** 构造`COleDateTime`从现有对象`COleDateTime`对象。  
   
-- `COleDateTime(`*varSrc* **)**构造`COleDateTime`对象。 尝试将转换`VARIANT`结构或[COleVariant](../../mfc/reference/colevariant-class.md)为日期/时间的对象 ( `VT_DATE`) 值。 如果此转换是成功转换，转换后的值复制到新`COleDateTime`对象。 如果不是的值`COleDateTime`对象设置为 0 （午夜，30 1899 年 12 月） 和其状态设置为无效。  
+- `COleDateTime(` *varSrc* **)** 构造`COleDateTime`对象。 尝试将转换`VARIANT`结构或[COleVariant](../../mfc/reference/colevariant-class.md)为日期/时间的对象 ( `VT_DATE`) 值。 如果此转换是成功转换，转换后的值复制到新`COleDateTime`对象。 如果不是的值`COleDateTime`对象设置为 0 （午夜，30 1899 年 12 月） 和其状态设置为无效。  
   
-- `COleDateTime(``dtSrc` **)**构造`COleDateTime`对象**日期**值。  
+- `COleDateTime(` `dtSrc` **)** 构造`COleDateTime`对象**日期**值。  
   
-- `COleDateTime(``timeSrc` **)**构造`COleDateTime`对象`time_t`值。  
+- `COleDateTime(` `timeSrc` **)** 构造`COleDateTime`对象`time_t`值。  
   
-- `COleDateTime(`*systimeSrc* **)**构造`COleDateTime`对象`SYSTEMTIME`值。  
+- `COleDateTime(` *systimeSrc* **)** 构造`COleDateTime`对象`SYSTEMTIME`值。  
   
-- `COleDateTime(``filetimeSrc` **)**构造`COleDateTime`对象`FILETIME`值。 . 请注意，`FILETIME`使用协调世界时 (UTC)，因此，如果您传入了本地时间结构中，你的结果将是不正确。 请参阅[文件时间](http://msdn.microsoft.com/library/windows/desktop/ms724290)适用于详细信息的 Windows SDK 中。  
+- `COleDateTime(` `filetimeSrc` **)** 构造`COleDateTime`对象`FILETIME`值。 . 请注意，`FILETIME`使用协调世界时 (UTC)，因此，如果您传入了本地时间结构中，你的结果将是不正确。 请参阅[文件时间](http://msdn.microsoft.com/library/windows/desktop/ms724290)适用于详细信息的 Windows SDK 中。  
   
-- `COleDateTime(``nYear`， `nMonth`， `nDay`， `nHour`， `nMin`， `nSec` **)**构造`COleDateTime`从指定的数字值的对象。  
+- `COleDateTime(` `nYear``nMonth`， `nDay`， `nHour`， `nMin`， `nSec` **)** 构造`COleDateTime`从指定的数字值的对象。  
   
-- `COleDateTime(``wDosDate`， `wDosTime` **)**构造`COleDateTime`从指定的 MS-DOS 日期和时间值的对象。  
+- `COleDateTime(` `wDosDate``wDosTime` **)** 构造`COleDateTime`从指定的 MS-DOS 日期和时间值的对象。  
   
  有关详细信息`time_t`数据类型，请参阅[时间](../../c-runtime-library/reference/time-time32-time64.md)函数中*运行时库参考*。  
   
@@ -278,7 +273,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#2](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]  
   
-##  <a name="format"></a>COleDateTime::Format  
+##  <a name="format"></a>  COleDateTime::Format  
  创建日期/时间值的格式的表示。  
   
 ```
@@ -291,11 +286,11 @@ CString Format(UINT nFormatID) const;
  `dwFlags`  
  指示以下的区域设置标记之一：  
   
-- `LOCALE_NOUSEROVERRIDE`使用系统默认区域设置，而不是自定义用户设置。  
+- `LOCALE_NOUSEROVERRIDE` 使用系统默认区域设置，而不是自定义用户设置。  
   
-- `VAR_TIMEVALUEONLY`在分析过程中忽略日期部分。  
+- `VAR_TIMEVALUEONLY` 在分析过程中忽略日期部分。  
   
-- `VAR_DATEVALUEONLY`在分析过程中忽略的时间部分。  
+- `VAR_DATEVALUEONLY` 在分析过程中忽略的时间部分。  
   
  `lcid`  
  指示要使用用于转换的区域设置 ID。 有关语言标识符的详细信息，请参阅[语言标识符](http://msdn.microsoft.com/library/windows/desktop/dd318691)。  
@@ -303,13 +298,13 @@ CString Format(UINT nFormatID) const;
  `lpszFormat`  
  格式设置字符串类似于`printf`格式化字符串。 每个格式设置代码，注释用百分号 ( `%`) 登录，替换为相应`COleDateTime`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)有关详细信息。 值和含义的格式设置代码`Format`是：  
   
-- `%H`在当天的小时数  
+- `%H` 在当天的小时数  
   
-- `%M`当前小时内的分钟数  
+- `%M` 当前小时内的分钟数  
   
-- `%S`当前分钟的秒数  
+- `%S` 当前分钟的秒数  
   
-- `%%`百分比符号  
+- `%%` 百分比符号  
   
  `nFormatID`  
  格式控件字符串资源 ID。  
@@ -334,7 +329,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#3](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_5.cpp)]  
   
-##  <a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>  COleDateTime::GetAsDBTIMESTAMP  
  调用此方法以获取在时间`COleDateTime`对象作为**DBTIMESTAMP**数据结构。  
   
 ```
@@ -354,7 +349,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#4](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_6.cpp)]  
   
-##  <a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>  COleDateTime::GetAsSystemTime  
  调用此方法以获取在时间`COleDateTime`对象作为`SYSTEMTIME`数据结构。  
   
 ```
@@ -369,11 +364,11 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
  返回**true**如果成功，则**false**如果转换失败，或者如果`COleDateTime`对象是**NULL**或无效。  
   
 ### <a name="remarks"></a>备注  
- `GetAsSystemTime`将所生成的时间存储在引用*sysTime*对象。 `SYSTEMTIME`由此函数初始化的数据结构将包含其**wMilliseconds**成员设置为零。  
+ `GetAsSystemTime` 将所生成的时间存储在引用*sysTime*对象。 `SYSTEMTIME`由此函数初始化的数据结构将包含其**wMilliseconds**成员设置为零。  
   
  请参阅[GetStatus](#getstatus)中保存的状态信息的详细信息为`COleDateTime`对象。  
   
-##  <a name="getasudate"></a>COleDateTime::GetAsUDATE  
+##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE  
  调用此方法以获取在时间`COleDateTime`对象作为**UDATE**数据结构。  
   
 ```
@@ -390,7 +385,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 ### <a name="remarks"></a>备注  
  A **UDATE**结构表示"解压缩"日期。  
   
-##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>  COleDateTime::GetCurrentTime  
  调用此静态成员函数可返回当前日期/时间值。  
   
 ```
@@ -400,7 +395,7 @@ static COleDateTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#5](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_7.cpp)]  
   
-##  <a name="getday"></a>COleDateTime::GetDay  
+##  <a name="getday"></a>  COleDateTime::GetDay  
  获取表示通过此日期/时间值的每月的日期。  
   
 ```
@@ -432,7 +427,7 @@ int GetDay() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#6](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_8.cpp)]  
   
-##  <a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>  COleDateTime::GetDayOfWeek  
  获取表示通过此日期/时间值的每月的日期。  
   
 ```
@@ -464,7 +459,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#7](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_9.cpp)]  
   
-##  <a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
+##  <a name="getdayofyear"></a>  COleDateTime::GetDayOfYear  
  获取此日期/时间值所表示的年份的日期。  
   
 ```
@@ -496,7 +491,7 @@ int GetDayOfYear() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#8](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_10.cpp)]  
   
-##  <a name="gethour"></a>COleDateTime::GetHour  
+##  <a name="gethour"></a>  COleDateTime::GetHour  
  获取此日期/时间值表示的小时。  
   
 ```
@@ -528,7 +523,7 @@ int GetHour() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#9](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_11.cpp)]  
   
-##  <a name="getminute"></a>COleDateTime::GetMinute  
+##  <a name="getminute"></a>  COleDateTime::GetMinute  
  获取此日期/时间值所表示的分钟。  
   
 ```
@@ -560,7 +555,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetHour](#gethour)。  
   
-##  <a name="getmonth"></a>COleDateTime::GetMonth  
+##  <a name="getmonth"></a>  COleDateTime::GetMonth  
  获取此日期/时间值所表示的月份。  
   
 ```
@@ -592,7 +587,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetDay](#getday)。  
   
-##  <a name="getsecond"></a>COleDateTime::GetSecond  
+##  <a name="getsecond"></a>  COleDateTime::GetSecond  
  获取表示此日期/时间值的第二个。  
   
 ```
@@ -629,7 +624,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetHour](#gethour)。  
   
-##  <a name="getstatus"></a>COleDateTime::GetStatus  
+##  <a name="getstatus"></a>  COleDateTime::GetStatus  
  获取状态 （有效期） 的给定`COleDateTime`对象。  
   
 ```
@@ -654,7 +649,7 @@ enum DateTimeStatus
   
  有关这些状态值的简短说明，请参阅下面的列表：  
   
-- `COleDateTime::error`指示错误时发生尝试获取日期/时间值的一部分。  
+- `COleDateTime::error` 指示错误时发生尝试获取日期/时间值的一部分。  
   
 - **COleDateTime::valid**指示此`COleDateTime`对象是否有效。  
   
@@ -691,7 +686,7 @@ enum DateTimeStatus
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#10](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_12.cpp)]  
   
-##  <a name="getyear"></a>COleDateTime::GetYear  
+##  <a name="getyear"></a>  COleDateTime::GetYear  
  获取此日期/时间值所表示的年份。  
   
 ```
@@ -725,7 +720,7 @@ int GetYear() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetDay](#getday)。  
   
-##  <a name="m_dt"></a>COleDateTime::m_dt  
+##  <a name="m_dt"></a>  COleDateTime::m_dt  
  基础**日期**此结构`COleDateTime`对象。  
   
 ```
@@ -739,7 +734,7 @@ DATE m_dt;
   
  有关的实现详细信息**日期**对象，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="m_status"></a>COleDateTime::m_status  
+##  <a name="m_status"></a>  COleDateTime::m_status  
  包含此状态`COleDateTime`对象。  
   
 ```
@@ -752,7 +747,7 @@ DateTimeStatus m_status;
 > [!CAUTION]
 >  此数据成员是高级编程的情况下。 应使用内联成员函数[GetStatus](#getstatus)和[SetStatus](#setstatus)。 请参阅`SetStatus`的有关显式设置该数据成员的其他注意事项。  
   
-##  <a name="operator_eq"></a>COleDateTime::operator =  
+##  <a name="operator_eq"></a>  COleDateTime::operator =  
  副本`COleDateTime`值。  
   
 ```
@@ -768,19 +763,19 @@ COleDateTime& operator=(const UDATE& udate) throw();
 ### <a name="remarks"></a>备注  
  这些重载的赋值运算符将源日期/时间值复制到此`COleDateTime`对象。 每个这些的简短说明重载赋值运算符如下所示：  
   
-- **运算符 = (** `dateSrc` **)**的值和操作数的状态复制到此`COleDateTime`对象。  
+- **运算符 = (** `dateSrc` **)** 的值和操作数的状态复制到此`COleDateTime`对象。  
   
-- **运算符 = (** *varSrc* **)**如果的转换[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)值 (或[COleVariant](../../mfc/reference/colevariant-class.md)对象) 为日期/时间 （`VT_DATE`) 是成功，转换后的值复制到此`COleDateTime`对象并将其状态设置为有效。 如果未成功转换，则此对象的值设置为零 (30 1899 年 12 月，午夜) 和其状态设置为无效。  
+- **运算符 = (** *varSrc* **)** 如果的转换[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)值 (或[COleVariant](../../mfc/reference/colevariant-class.md)对象) 为日期/时间 （`VT_DATE`) 是成功，转换后的值复制到此`COleDateTime`对象并将其状态设置为有效。 如果未成功转换，则此对象的值设置为零 (30 1899 年 12 月，午夜) 和其状态设置为无效。  
   
 - **运算符 = (** `dtSrc` **)** **日期**值复制到此`COleDateTime`对象并将其状态设置为有效。  
   
-- **运算符 = (** `timeSrc` **)** `time_t`或**__time64_t**转换值以及将其复制到此`COleDateTime`对象。 如果转换成功，此对象的状态设置为有效，则为如果成功，它将设置到无效。  
+- **运算符 = (** `timeSrc` **)** `time_t`或 **__time64_t**转换值以及将其复制到此`COleDateTime`对象。 如果转换成功，此对象的状态设置为有效，则为如果成功，它将设置到无效。  
   
 - **运算符 = (** *systimeSrc* **)** [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)转换值以及将其复制到此`COleDateTime`对象。 如果转换成功，此对象的状态设置为有效，则为如果成功，它将设置到无效。  
   
 - **运算符 = (** `udate` **)** **UDATE**转换值以及将其复制到此`COleDateTime`对象。 如果转换成功，此对象的状态设置为有效，则为如果成功，它将设置到无效。 A **UDATE**结构表示"解压缩"日期。 请参阅函数[VarDateFromUdate](http://msdn.microsoft.com/en-us/1c924ac5-b896-49e1-9ccf-825ac7a030c8)有关详细信息。  
   
-- **运算符 = (** `filetimeSrc` **)** [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)转换值以及将其复制到此`COleDateTime`对象。 如果转换成功，此对象的状态设置为有效，则为否则设置为无效。 `FILETIME`使用协调世界时 (UTC)，因此如果您传入 UTC 时间结构中，你的结果将为本地时间，UTC 时间从转换，并将存储为变量时间。 此行为是与 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 中的相同。 请参阅[文件时间](http://msdn.microsoft.com/library/windows/desktop/ms724290)适用于详细信息的 Windows SDK 中。  
+- **运算符 = (** `filetimeSrc` **)** [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)转换值以及将其复制到此`COleDateTime`对象。 如果转换成功，此对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此如果您传入 UTC 时间结构中，你的结果将为本地时间，UTC 时间从转换，并将存储为变量时间。 此行为是与 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 中的相同。 请参阅[文件时间](http://msdn.microsoft.com/library/windows/desktop/ms724290)适用于详细信息的 Windows SDK 中。  
   
  有关详细信息，请参阅[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) Windows SDK 中的条目。  
   
@@ -790,7 +785,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
  有关详细信息有关的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="operator_add_-"></a>COleDateTime::operator +、-  
+##  <a name="operator_add_-"></a>  COleDateTime::operator +、-  
  加法和减法**ColeDateTime**值。  
   
 ```
@@ -800,7 +795,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- `COleDateTime`对象表示绝对时间。 [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)对象表示相对的时间。 前两个运算符使您得以加法和减法`COleDateTimeSpan`值从`COleDateTime`值。 第三个运算符，你可以减去`COleDateTime`从另一个用来产生值`COleDateTimeSpan`值。  
+ `COleDateTime` 对象表示绝对时间。 [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)对象表示相对的时间。 前两个运算符使您得以加法和减法`COleDateTimeSpan`值从`COleDateTime`值。 第三个运算符，你可以减去`COleDateTime`从另一个用来产生值`COleDateTimeSpan`值。  
   
  如果任一操作数是 null，生成的状态`COleDateTime`值为 null。  
   
@@ -808,7 +803,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
   
  如果任一操作数无效，且另一个则不为 null，生成的状态`COleDateTime`值是否无效。  
   
-  **+** 和 **-** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关示例。  
+ **+** 和**-** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关示例。  
   
  有关有效、 无效，和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。  
   
@@ -817,7 +812,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#12](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>COleDateTime::operator + =、 =  
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTime::operator + =、 =  
  加法和减法**ColeDateTime**从此值`COleDateTime`对象。  
   
 ```
@@ -834,11 +829,11 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  有关有效、 无效，和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。  
   
-  **+=** 和 **-=** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关示例。  
+ **+=** 和**-=** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关示例。  
   
  有关详细信息有关的边界`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="operator_date"></a>COleDateTime::operator 日期  
+##  <a name="operator_date"></a>  COleDateTime::operator 日期  
  将转换**ColeDateTime**值到**日期**。  
   
 ```
@@ -850,7 +845,7 @@ operator DATE() const throw();
   
  **日期**运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关示例。  
   
-##  <a name="parsedatetime"></a>COleDateTime::ParseDateTime  
+##  <a name="parsedatetime"></a>  COleDateTime::ParseDateTime  
  分析字符串中读取日期/时间值。  
   
 ```
@@ -907,7 +902,7 @@ bool ParseDateTime(
   
  有关边界和实现详细信息`COleDateTime`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="setdate"></a>COleDateTime::SetDate  
+##  <a name="setdate"></a>  COleDateTime::SetDate  
  设置此日期`COleDateTime`对象。  
   
 ```
@@ -941,7 +936,7 @@ int SetDate(
   
  下面是日期值的一些示例：  
   
-|`nYear`|`nMonth`|`nDay`|“值”|  
+|`nYear`|`nMonth`|`nDay`|值|  
 |-------------|--------------|------------|-----------|  
 |2000|2|29|29 2000 年 2 月|  
 |1776|7|4|4 年 7 月 1776|  
@@ -973,7 +968,7 @@ int SetDate(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#11](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_14.cpp)]  
   
-##  <a name="setdatetime"></a>COleDateTime::SetDateTime  
+##  <a name="setdatetime"></a>  COleDateTime::SetDateTime  
  设置的日期和时间的这`COleDateTime`对象。  
   
 ```
@@ -1011,7 +1006,7 @@ int SetDateTime(
   
  下面是时间值的一些示例：  
   
-|`nHour`|`nMin`|`nSec`|“值”|  
+|`nHour`|`nMin`|`nSec`|值|  
 |-------------|------------|------------|-----------|  
 |1|3|3|01:03:03|  
 |23|45|0|23:45:00|  
@@ -1020,7 +1015,7 @@ int SetDateTime(
   
  下面是日期值的一些示例：  
   
-|`nYear`|`nMonth`|`nDay`|“值”|  
+|`nYear`|`nMonth`|`nDay`|值|  
 |-------------|--------------|------------|-----------|  
 |1995|4|15|1995 年 4 月 15日|  
 |1789|7|14|17 年 7 月 1789|  
@@ -1052,7 +1047,7 @@ int SetDateTime(
 ### <a name="example"></a>示例  
  请参阅示例[GetStatus](#getstatus)。  
   
-##  <a name="setstatus"></a>COleDateTime::SetStatus  
+##  <a name="setstatus"></a>  COleDateTime::SetStatus  
  设置此状态`COleDateTime`对象。  
   
 ```
@@ -1072,7 +1067,7 @@ void SetStatus(DateTimeStatus status) throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetStatus](#getstatus)。  
   
-##  <a name="settime"></a>COleDateTime::SetTime  
+##  <a name="settime"></a>  COleDateTime::SetTime  
  设置此时间`COleDateTime`对象。  
   
 ```
@@ -1104,7 +1099,7 @@ int SetTime(
   
  下面是时间值的一些示例：  
   
-|`nHour`|`nMin`|`nSec`|“值”|  
+|`nHour`|`nMin`|`nSec`|值|  
 |-------------|------------|------------|-----------|  
 |1|3|3|01:03:03|  
 |23|45|0|23:45:00|  

@@ -1,12 +1,9 @@
 ---
-title: "双接口类 (ATL) |Microsoft 文档"
-ms.custom: 
+title: 双接口类 (ATL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.interfaces.dual
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dual interfaces, classes
 - dual interfaces
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1d3ce9e99cb79e07efb89f733e86209531ecd6d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9e2acbad92f3da16342de41bb422a75d0304a59f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dual-interfaces-classes"></a>双重接口类
 下面的类提供双重接口支持：  

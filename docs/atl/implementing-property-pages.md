@@ -1,13 +1,10 @@
 ---
-title: "实现属性页 |Microsoft 文档"
-ms.custom: 
+title: 实现属性页 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac80bdd9e38d14b53aea7b691d480272cce66e7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1db6ca4ea374cd76d5b0e1df8e6c0cd03474fdf2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-property-pages"></a>实现的属性页
 属性页是 COM 对象实现`IPropertyPage`或**IPropertyPage2**接口。 ATL 为实现通过属性页提供支持[ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)中[添加类对话框](../ide/add-class-dialog-box.md)。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
  有关示例属性页的实现，请参阅[示例： 实现属性页](../atl/example-implementing-a-property-page.md)。  
   
 > [!NOTE]
->  如果你想托管 ActiveX 控件属性页中，你将需要更改你向导生成的类派生。 替换**CDialogImpl\<CYourClass >**与**CAxDialogImpl\<CYourClass >**基类列表中。  
+>  如果你想托管 ActiveX 控件属性页中，你将需要更改你向导生成的类派生。 替换**CDialogImpl\<CYourClass >** 与**CAxDialogImpl\<CYourClass >** 基类列表中。  
   
 ## <a name="see-also"></a>请参阅  
  [属性页](../atl/atl-com-property-pages.md)   

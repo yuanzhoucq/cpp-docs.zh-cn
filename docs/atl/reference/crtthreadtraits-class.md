@@ -1,12 +1,9 @@
 ---
-title: "CRTThreadTraits 类 |Microsoft 文档"
-ms.custom: 
+title: CRTThreadTraits 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRTThreadTraits
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6fbe71ff23db8dba431b9d46d71fc6c924fbc5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f08f0d6ea57aa5a153d190b357785911e64d6f09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 类
 此类提供了 CRT 线程创建函数。 如果线程将使用的 CRT 函数，请使用此类。  
@@ -62,10 +57,10 @@ class CRTThreadTraits
   
  如果未将使用线程的 CRT 函数，使用[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)相反。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
+##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
  调用此函数可创建一个可以使用的 CRT 函数的线程。  
   
 ```

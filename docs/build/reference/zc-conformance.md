@@ -1,10 +1,10 @@
 ---
-title: "/Zc （一致性） |Microsoft 文档"
-ms.custom: 
+title: /Zc （一致性） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc（一致性）
 
-你可以使用**/Zc**编译器选项来指定标准或特定于 Microsoft 的编译器行为。
+你可以使用 **/Zc**编译器选项来指定标准或特定于 Microsoft 的编译器行为。
 
 ## <a name="syntax"></a>语法
 
-> **/Zc:**_option_{,_option_}
+> **/ Zc:**_选项_{，_选项_}
 
 ## <a name="remarks"></a>备注
 
@@ -43,11 +42,11 @@ ms.lasthandoff: 03/15/2018
 |选项|行为|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|启用 C + + 17 过度对齐动态分配 （在默认在 C + + 17）。|
-|[auto\[-\]](zc-auto-deduce-variable-type.md)|强制执行用于新的标准 c + + 意义`auto`(在默认情况下)。|
+|[自动\[-\]](zc-auto-deduce-variable-type.md)|强制执行用于新的标准 c + + 意义`auto`(在默认情况下)。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|启用为外部链接`constexpr`变量 （默认情况下关闭）。|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|强制执行标准 c + +`for`作用域规则 (在默认情况下)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|启用隐式`noexcept`上所需的功能 (在默认情况下)。|
-|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它为 COMDAT 或具有内部链接仅删除未引用的函数或数据 （默认情况下关闭）。|
+|[内联\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它为 COMDAT 或具有内部链接仅删除未引用的函数或数据 （默认情况下关闭）。|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|强制执行 C + + 17 noexcept 规则 (在默认情况下，C + + 17 中或更高版本)。|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT 临时将不会绑定到非 const 左值引用 （默认情况下关闭）。|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|强制执行标准 c + + 显式类型转换规则 （默认情况下关闭）。|
@@ -56,7 +55,7 @@ ms.lasthandoff: 03/15/2018
 |[ternary\[-\]](zc-ternary.md)|强制实施条件运算符对操作数类型的规则 （默认情况下关闭）。|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|启用线程安全的本地静态初始化 (在默认情况下)。|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|假定`operator new`失败时引发 （默认情况下关闭）。|
-|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|启用三元组 （已过时，关闭默认情况下）。|
+|[三元组\[-\]](zc-trigraphs-trigraphs-substitution.md)|启用三元组 （已过时，关闭默认情况下）。|
 |[twoPhase-](zc-twophase.md)|使用分析 （默认情况下一致性） 的行为的不符合要求的模板。|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` 是本机类型，不的 typedef (在默认情况下)。|
 

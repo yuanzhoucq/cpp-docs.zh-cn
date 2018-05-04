@@ -1,12 +1,9 @@
 ---
-title: "编译器选项宏 |Microsoft 文档"
-ms.custom: 
+title: 编译器选项宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48abc864133849353aeccf82ea3eb9aab1edb5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e84c92e8bbf65ff3b8b54111bcce2306628edb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-macros"></a>编译器选项宏
 这些宏控制特定的编译器功能。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |[ATL_NOINLINE](#atl_noinline)|符号指示函数不应为内联。|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|如果你的对象的所有使用单个线程处理模型中定义。|  
   
-##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS  
  这样在项目中的错误的符号转换从以前版本的 atl。  
   
 ```
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
   
  新的项目具有这`#define`在 stdafx.h 中设置默认情况下。  
   
-##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED  
  如果一个或多个对象使用单元线程处理中定义。  
   
 ```
@@ -98,7 +93,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>备注  
  指定单元线程处理。 请参阅[指定项目的线程处理模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)其他线程处理选项，和[选项，ATL 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md)有关的说明的线程处理模型可用于 ATL 对象。  
   
-##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  使某些`CString`显式，阻止任何无意转换构造函数。  
   
 ```
@@ -110,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  通过使用 _T 宏上所有构造函数字符串自变量，可以定义 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS 和避免无论是否定义了 _UNICODE 编译错误。  
   
-##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
+##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING  
  定义此宏，以便强制为指向成员函数使用 ANSI c + + 符合标准的语法。 使用此宏将导致在非标准语法用于初始化指向成员函数的指针时生成 C4867 编译器错误。  
   
 ```
@@ -120,7 +115,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ### <a name="remarks"></a>备注  
  ATL 和 MFC 库已更改以匹配 Visual c + + 编译器改进了标准 c + + 合规性。 根据 ANSI c + + 标准中，指向类成员函数的指针的语法应该`&CMyClass::MyFunc`。  
   
- 当[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定义 （默认情况下），以便在早期版本中创建的代码可以继续像以前那样生成 ATL/MFC 禁用 （值得注意的是消息映射） 的宏映射中的 C4867 错误。 如果你定义**_ATL_ENABLE_PTM_WARNING**，你的代码应符合 c + + 标准。  
+ 当[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定义 （默认情况下），以便在早期版本中创建的代码可以继续像以前那样生成 ATL/MFC 禁用 （值得注意的是消息映射） 的宏映射中的 C4867 错误。 如果你定义 **_ATL_ENABLE_PTM_WARNING**，你的代码应符合 c + + 标准。  
   
  但是，非标准窗体已弃用，因此你需要将现有代码移到 c + + 标准合规语法。 例如，以下内容：  
   
@@ -132,7 +127,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  请注意，添加 & 字符的映射宏，则不应添加它再次在代码中。  
   
-##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED  
  如果一个或多个对象使用免费或非特定线程处理中定义。  
   
 ```
@@ -142,7 +137,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>备注  
  指定自由线程处理。 自由线程处理相当于多线程单元模型。 请参阅[指定项目的线程处理模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)其他线程处理选项，和[选项，ATL 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md)有关的说明的线程处理模型可用于 ATL 对象。  
   
-##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>  _ATL_MULTI_THREADED  
  符号指示项目将具有标记为同时，免费或非特定的对象。  
   
 ```
@@ -152,7 +147,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>备注  
  如果定义此符号，ATL 会中拉入正确将同步到的全局数据的访问的代码。 新代码应使用等效宏[_ATL_FREE_THREADED](#_atl_free_threaded)相反。  
   
-##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE  
  这会阻止的命名空间作为 atl。 默认情况下使用符号  
   
 ```
@@ -162,7 +157,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>备注  
  如果未定义此符号，则将执行包括 atlbase.h**使用命名空间 ATL**默认情况下，这可能会导致命名冲突。 若要防止此情况，定义此符号。  
   
-##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT  
  以防止与 COM 相关的代码将与您的项目正在编译的符号。  
   
 ```

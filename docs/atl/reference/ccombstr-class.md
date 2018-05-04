@@ -2,11 +2,8 @@
 title: CComBSTR 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComBSTR
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604e3b9841ab628343a48e72612d2e50e85913f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a9130dec2de7d22cfec8a76cdeb31e11388a205
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccombstr-class"></a>CComBSTR 类
 此类是包装器`BSTR`s。  
@@ -81,7 +76,7 @@ class CComBSTR
 |[CComBSTR::BSTRToArray](#bstrtoarray)|创建从零开始的一维 safearray，其中数组的每个元素都从一个字符`CComBSTR`对象。|  
 |[CComBSTR::ByteLength](#bytelength)|返回的长度`m_str`以字节为单位。|  
 |[CComBSTR::Copy](#copy)|返回一份`m_str`。|  
-|[CComBSTR::CopyTo](#copyto)|返回一份`m_str`通过**[out 一个]**参数|  
+|[CComBSTR::CopyTo](#copyto)|返回一份`m_str`通过 **[out 一个]** 参数|  
 |[CComBSTR::Detach](#detach)|分离`m_str`从`CComBSTR`对象。|  
 |[CComBSTR::Empty](#empty)|释放`m_str`。|  
 |[CComBSTR::Length](#length)|返回的长度`m_str`。|  
@@ -124,10 +119,10 @@ class CComBSTR
   
  有关的使用时的注意事项列表`CComBSTR`，请参阅[使用 ccombstr 进行编程](../../atl/programming-with-ccombstr-atl.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   
-##  <a name="append"></a>CComBSTR::Append  
+##  <a name="append"></a>  CComBSTR::Append  
  追加是`lpsz`或`BSTR`的成员`bstrSrc`到[m_str](#m_str)。  
   
 ```
@@ -153,7 +148,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
  [in]从的字符数`lpsz`要追加。  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`成功，则任何标准`HRESULT`错误值。  
+ `S_OK` 成功，则任何标准`HRESULT`错误值。  
   
 ### <a name="remarks"></a>备注  
  在追加之前将转换为 Unicode ANSI 字符串。  
@@ -161,7 +156,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]  
   
-##  <a name="appendbstr"></a>CComBSTR::AppendBSTR  
+##  <a name="appendbstr"></a>  CComBSTR::AppendBSTR  
  追加指定`BSTR`到[m_str](#m_str)。  
   
 ```
@@ -173,7 +168,7 @@ HRESULT AppendBSTR(BSTR p) throw();
  [in]A`BSTR`要追加。  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`成功，则任何标准`HRESULT`错误值。  
+ `S_OK` 成功，则任何标准`HRESULT`错误值。  
   
 ### <a name="remarks"></a>备注  
  不要将一个普通的宽字符字符串传递给此方法。 编译器无法捕获到的错误和运行的时将发生错误。  
@@ -181,7 +176,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]  
   
-##  <a name="appendbytes"></a>CComBSTR::AppendBytes  
+##  <a name="appendbytes"></a>  CComBSTR::AppendBytes  
  追加指定的字节到数[m_str](#m_str)而不进行转换。  
   
 ```
@@ -196,12 +191,12 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
  [in]要追加的字节数。  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`成功，则任何标准`HRESULT`错误值。  
+ `S_OK` 成功，则任何标准`HRESULT`错误值。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]  
   
-##  <a name="arraytobstr"></a>CComBSTR::ArrayToBSTR  
+##  <a name="arraytobstr"></a>  CComBSTR::ArrayToBSTR  
  释放所有现有字符串保存在`CComBSTR`对象，然后创建`BSTR`从 safearray 中每个元素的第一个字符并将其附加到`CComBSTR`对象。  
   
 ```
@@ -213,9 +208,9 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
  [in]包含用于创建字符串的元素 safearray。  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`成功，则任何标准`HRESULT`错误值。  
+ `S_OK` 成功，则任何标准`HRESULT`错误值。  
   
-##  <a name="assignbstr"></a>CComBSTR::AssignBSTR  
+##  <a name="assignbstr"></a>  CComBSTR::AssignBSTR  
  将分配`BSTR`到[m_str](#m_str)。  
   
 ```
@@ -227,9 +222,9 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
  [in]A`BSTR`要分配给当前`CComBSTR`对象。  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`成功，则任何标准`HRESULT`错误值。  
+ `S_OK` 成功，则任何标准`HRESULT`错误值。  
   
-##  <a name="attach"></a>CComBSTR::Attach  
+##  <a name="attach"></a>  CComBSTR::Attach  
  将附加`BSTR`到`CComBSTR`对象通过设置[m_str](#m_str)成员*src*。  
   
 ```
@@ -249,7 +244,7 @@ void Attach(BSTR src) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
-##  <a name="bstrtoarray"></a>CComBSTR::BSTRToArray  
+##  <a name="bstrtoarray"></a>  CComBSTR::BSTRToArray  
  创建从零开始的一维 safearray，其中数组的每个元素都从一个字符`CComBSTR`对象。  
   
 ```
@@ -261,9 +256,9 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
  [out]指向用来保存函数的结果的 safearray 的指针。  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`成功，则任何标准`HRESULT`错误值。  
+ `S_OK` 成功，则任何标准`HRESULT`错误值。  
   
-##  <a name="bytelength"></a>CComBSTR::ByteLength  
+##  <a name="bytelength"></a>  CComBSTR::ByteLength  
  返回中的字节数`m_str`，不包括终止 null 字符。  
   
 ```
@@ -279,7 +274,7 @@ unsigned int ByteLength() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]  
   
-##  <a name="ccombstr"></a>CComBSTR::CComBSTR  
+##  <a name="ccombstr"></a>  CComBSTR::CComBSTR  
  构造函数。 默认构造函数集[m_str](#m_str)成员**NULL**。  
   
 ```
@@ -322,7 +317,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]  
   
-##  <a name="dtor"></a>CComBSTR:: ~ CComBSTR  
+##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR  
  析构函数。  
   
 ```
@@ -332,7 +327,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ### <a name="remarks"></a>备注  
  析构函数释放由 `m_str` 指向的字符串。  
   
-##  <a name="copy"></a>CComBSTR::Copy  
+##  <a name="copy"></a>  CComBSTR::Copy  
  分配并将返回一份`m_str`。  
   
 ```
@@ -345,7 +340,7 @@ BSTR Copy() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]  
   
-##  <a name="copyto"></a>CComBSTR::CopyTo  
+##  <a name="copyto"></a>  CComBSTR::CopyTo  
  分配并将返回一份[m_str](#m_str)通过参数。  
   
 ```
@@ -370,7 +365,7 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]  
   
-##  <a name="detach"></a>CComBSTR::Detach  
+##  <a name="detach"></a>  CComBSTR::Detach  
  分离[m_str](#m_str)从`CComBSTR`对象并设置`m_str`到**NULL**。  
   
 ```
@@ -383,7 +378,7 @@ BSTR Detach() throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]  
   
-##  <a name="empty"></a>CComBSTR::Empty  
+##  <a name="empty"></a>  CComBSTR::Empty  
  释放[m_str](#m_str)成员。  
   
 ```
@@ -393,7 +388,7 @@ void Empty() throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]  
   
-##  <a name="length"></a>CComBSTR::Length  
+##  <a name="length"></a>  CComBSTR::Length  
  返回中的字符数`m_str`，不包括终止 null 字符。  
   
 ```
@@ -406,7 +401,7 @@ unsigned int Length() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]  
   
-##  <a name="loadstring"></a>CComBSTR::LoadString  
+##  <a name="loadstring"></a>  CComBSTR::LoadString  
  加载指定的字符串资源`nID`并将它存储在此对象。  
   
 ```
@@ -426,7 +421,7 @@ bool LoadString(UINT nID) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]  
   
-##  <a name="m_str"></a>CComBSTR::m_str  
+##  <a name="m_str"></a>  CComBSTR::m_str  
  包含`BSTR`与关联`CComBSTR`对象。  
   
 ```
@@ -436,7 +431,7 @@ BSTR m_str;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]  
   
-##  <a name="operator_bstr"></a>CComBSTR::operator BSTR  
+##  <a name="operator_bstr"></a>  CComBSTR::operator BSTR  
  强制转换`CComBSTR`对象传递给`BSTR`。  
   
 ```  
@@ -444,12 +439,12 @@ operator BSTR() const throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 允许您将传递`CComBSTR`对具有函数的对象**[in] BSTR**参数。  
+ 允许您将传递`CComBSTR`对具有函数的对象 **[in] BSTR**参数。  
   
 ### <a name="example"></a>示例  
  请参阅示例[CComBSTR::m_str](#m_str)。  
   
-##  <a name="operator_not"></a>CComBSTR::operator ！  
+##  <a name="operator_not"></a>  CComBSTR::operator ！  
  检查是否`BSTR`字符串为 NULL。  
   
 ```
@@ -465,7 +460,7 @@ bool operator!() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
-##  <a name="operator_neq"></a>CComBSTR::operator ！ =  
+##  <a name="operator_neq"></a>  CComBSTR::operator ！ =  
  返回逻辑相反[运算符 = =](#operator_eq_eq)。  
   
 ```
@@ -491,7 +486,7 @@ bool operator!= (int nNull) const throw();
 ### <a name="remarks"></a>备注  
  `CComBSTR`s 进行比较的用户的默认区域设置上下文中的文本上。 最终的比较运算符仅比较包含的字符串与**NULL**。  
   
-##  <a name="operator_amp"></a>CComBSTR::operator&amp;  
+##  <a name="operator_amp"></a>  CComBSTR::operator &amp;  
  返回的地址`BSTR`存储在[m_str](#m_str)成员。  
   
 ```
@@ -499,7 +494,7 @@ BSTR* operator&() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- `CComBstr operator &`具有与之来帮助确定内存泄漏关联的特殊的断言。 程序将断言时`m_str`初始化成员。 此断言创建以确定其中程序员使用的情况下`& operator`以将新值赋给`m_str`未释放的第一个分配成员`m_str`。 如果`m_str`等于 NULL，则程序假定该 m_str 未尚未分配。 在这种情况下，程序将不可断言。  
+ `CComBstr operator &` 具有与之来帮助确定内存泄漏关联的特殊的断言。 程序将断言时`m_str`初始化成员。 此断言创建以确定其中程序员使用的情况下`& operator`以将新值赋给`m_str`未释放的第一个分配成员`m_str`。 如果`m_str`等于 NULL，则程序假定该 m_str 未尚未分配。 在这种情况下，程序将不可断言。  
   
  默认情况下不启用此断言。 定义`ATL_CCOMBSTR_ADDRESS_OF_ASSERT`若要启用此断言。  
   
@@ -508,7 +503,7 @@ BSTR* operator&() throw();
   
  [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]  
   
-##  <a name="operator_add_eq"></a>CComBSTR::operator + =  
+##  <a name="operator_add_eq"></a>  CComBSTR::operator + =  
  将字符串追加到`CComBSTR`对象。  
   
 ```
@@ -529,7 +524,7 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]  
   
-##  <a name="operator_lt"></a>CComBSTR::operator&lt;  
+##  <a name="operator_lt"></a>  CComBSTR::operator &lt;  
  比较`CComBSTR`使用字符串。  
   
 ```
@@ -544,7 +539,7 @@ bool operator<(LPCSTR pszSrc) const throw();
 ### <a name="remarks"></a>备注  
  使用用户的默认区域设置进行比较。  
   
-##  <a name="operator_eq"></a>CComBSTR::operator =  
+##  <a name="operator_eq"></a>  CComBSTR::operator =  
  集[m_str](#m_str)成员一份`pSrc`或一份`BSTR`的成员*src*。移动赋值运算符移动`src`而不复制该项。   
   
 ```
@@ -560,7 +555,7 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ### <a name="example"></a>示例  
  请参阅示例[CComBSTR::Copy](#copy)。  
   
-##  <a name="operator_eq_eq"></a>CComBSTR::operator = =  
+##  <a name="operator_eq_eq"></a>  CComBSTR::operator = =  
  比较`CComBSTR`使用字符串。 `CComBSTR`s 进行比较的用户的默认区域设置上下文中的文本上。  
   
 ```
@@ -586,7 +581,7 @@ bool operator== (int nNull) const throw();
 ### <a name="remarks"></a>备注  
  最终的比较运算符仅比较包含的字符串与**NULL**。  
   
-##  <a name="operator_gt"></a>CComBSTR::operator&gt;  
+##  <a name="operator_gt"></a>  CComBSTR::operator &gt;  
  比较`CComBSTR`使用字符串。  
   
 ```
@@ -599,7 +594,7 @@ bool operator>(const CComBSTR& bstrSrc) const throw();
 ### <a name="remarks"></a>备注  
  使用用户的默认区域设置进行比较。  
   
-##  <a name="readfromstream"></a>CComBSTR::ReadFromStream  
+##  <a name="readfromstream"></a>  CComBSTR::ReadFromStream  
  集[m_str](#m_str)成员`BSTR`包含在指定的流。  
   
 ```
@@ -619,7 +614,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]  
   
-##  <a name="tolower"></a>CComBSTR::ToLower  
+##  <a name="tolower"></a>  CComBSTR::ToLower  
  将包含的字符串转换为小写。  
   
 ```
@@ -632,7 +627,7 @@ HRESULT ToLower() throw();
 ### <a name="remarks"></a>备注  
  请参阅**CharLowerBuff**有关如何执行转换的详细信息。  
   
-##  <a name="toupper"></a>CComBSTR::ToUpper  
+##  <a name="toupper"></a>  CComBSTR::ToUpper  
  将包含的字符串转换为大写。  
   
 ```
@@ -645,7 +640,7 @@ HRESULT ToUpper() throw();
 ### <a name="remarks"></a>备注  
  请参阅**CharUpperBuff**有关如何执行转换的详细信息。  
   
-##  <a name="writetostream"></a>CComBSTR::WriteToStream  
+##  <a name="writetostream"></a>  CComBSTR::WriteToStream  
  将保存[m_str](#m_str)到流的成员。  
   
 ```

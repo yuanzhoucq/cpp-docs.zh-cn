@@ -2,11 +2,8 @@
 title: IDocHostUIHandlerDispatch 接口 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbd91deb1d80c49dd403e8e08cc50f5fd8c8ec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07d6d861bfa4a41d7d9ee6697dd72cba0da2ceda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 接口
 一个指向的 Microsoft HTML 分析和呈现引擎接口。  
@@ -45,7 +40,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>公共方法  
   
 > [!NOTE]
->  下表中的链接将指向的成员的 INet SDK 参考主题[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)接口。 `IDocHostUIHandlerDispatch`具有相同的功能**IDocUIHostHandler**，二者的区别在于，`IDocHostUIHandlerDispatch`是调度接口，而**IDocUIHostHandler**是一个自定义的接口。  
+>  下表中的链接将指向的成员的 INet SDK 参考主题[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)接口。 `IDocHostUIHandlerDispatch` 具有相同的功能**IDocUIHostHandler**，二者的区别在于，`IDocHostUIHandlerDispatch`是调度接口，而**IDocUIHostHandler**是一个自定义的接口。  
   
 |||  
 |-|-|  
@@ -68,7 +63,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ## <a name="remarks"></a>备注  
  主机可以替换菜单、 工具栏和上下文菜单和所使用的 Microsoft HTML 分析呈现引擎 (MSHTML) 通过实现此接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  此接口的定义是 IDL 或 c + +，可用的如下所示。  
   
 |定义类型|文件|  

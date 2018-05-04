@@ -1,12 +1,9 @@
 ---
-title: "CSocketAddr 类 |Microsoft 文档"
-ms.custom: 
+title: CSocketAddr 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 类
 此类提供用于将主机名转换为主机地址，支持 IPv4 和 IPV6 格式的方法。  
@@ -68,10 +63,10 @@ class CSocketAddr
   
  此类支持这两个 IPv4 andIPv6 网络地址。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsocket.h  
   
-##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr  
  构造函数。  
   
 ```
@@ -81,7 +76,7 @@ CSocketAddr();
 ### <a name="remarks"></a>备注  
  创建一个新`CSocketAddr`对象，然后初始化包含有关主机的响应信息的链接的列表。  
   
-##  <a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>  CSocketAddr::FindAddr  
  调用此方法将提供的主机名转换为主机地址。  
   
 ```
@@ -130,7 +125,7 @@ int FindAddr(
 ### <a name="remarks"></a>备注  
  主机名称参数还可以是 IPv4 或 IPv6 格式。 此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
-##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  调用此方法将 IPv4 主机名转换为主机地址。  
   
 ```
@@ -160,7 +155,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>备注  
  此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
-##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  调用此方法将 IPv6 主机名转换为主机地址。  
   
 ```
@@ -190,7 +185,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>备注  
  此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
-##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  调用此方法以返回到中的特定元素的指针**addrinfo**列表。  
   
 ```
@@ -204,7 +199,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>返回值  
  返回一个指向**addrinfo**结构引用`nIndex`中包含有关主机的响应信息的链接列表。  
   
-##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
  调用此方法以返回一个指向**addrinfo**列表。  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "IOleControlImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IOleControlImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23375f8f76e1a58bf29e3e3e269077fea4ae8d61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 类
 此类提供的默认实现**IOleControl**接口和实现**IUnknown**。  
@@ -70,10 +65,10 @@ class IOleControlImpl
   
  `IOleControlImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
  在 ATL 的实现中，`FreezeEvents`递增的控件类`m_nFreezeEvents`数据成员如果`bFreeze`是**TRUE**，并减少`m_nFreezeEvents`如果`bFreeze`是**FALSE**.  
   
 ```
@@ -81,11 +76,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>备注  
- `FreezeEvents`然后返回`S_OK`。  
+ `FreezeEvents` 然后返回`S_OK`。  
   
  请参阅[IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) Windows SDK 中。  
   
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  填入有关控件的键盘行为的信息。  
   
 ```
@@ -98,7 +93,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>返回值  
  返回**E_NOTIMPL**。  
   
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  通知一个或多个容器的环境属性已更改的控件。  
   
 ```
@@ -111,7 +106,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>备注  
  请参阅[IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) Windows SDK 中。  
   
-##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  通知控件用户已按指定的键击。  
   
 ```

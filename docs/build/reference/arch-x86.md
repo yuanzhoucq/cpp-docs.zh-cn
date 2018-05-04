@@ -2,26 +2,21 @@
 title: -arch (x86) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-caps.latest.revision: 33
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4905634af75f30c5428f8091d736adbe1b8490d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87e1826e324f8e544a791520a3ac035f5ab07100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arch-x86"></a>/arch (x86)
 在 x86 上为代码生成指定体系结构。 另请参阅[/arch (x64)](../../build/reference/arch-x64.md)和[/arch (ARM)](../../build/reference/arch-arm.md)。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  启用对 SSE 指令的使用。  
   
  **/arch:SSE2**  
- 启用对 SSE2 指令的使用。 这是在 x86 上的默认指令平台如果没有**/arch**指定选项。  
+ 启用对 SSE2 指令的使用。 这是在 x86 上的默认指令平台如果没有 **/arch**指定选项。  
   
  **/arch: avx**  
  启用对 Intel 高级矢量扩展指令的使用。  
@@ -53,11 +48,11 @@ ms.lasthandoff: 12/21/2017
   
  `_M_IX86_FP`，`__AVX__`和`__AVX2__`宏指示 (如果有） **/arch**编译器选项已使用。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch: avx2**选项和`__AVX2__`宏在 Visual Studio 2013 Update 2，版本 12.0.34567.1 中引入。  
   
- 优化器选择何时以及如何使用 SSE 和 SSE2 指令时**/arch**指定。 当确定使用 SSE/SSE2 指令和寄存器肯定要比使用 x87 浮点寄存器堆栈更快时，将 SSE 和 SSE2 指令用于某些标量浮点计算。 因此，你的代码实际上将混合使用 x87 和 SSE/SSE2 来进行浮点计算。 此外，通过**/arch:SSE2**，SSE2 指令用于某些 64 位整数运算。  
+ 优化器选择何时以及如何使用 SSE 和 SSE2 指令时 **/arch**指定。 当确定使用 SSE/SSE2 指令和寄存器肯定要比使用 x87 浮点寄存器堆栈更快时，将 SSE 和 SSE2 指令用于某些标量浮点计算。 因此，你的代码实际上将混合使用 x87 和 SSE/SSE2 来进行浮点计算。 此外，通过 **/arch:SSE2**，SSE2 指令用于某些 64 位整数运算。  
   
  除了使用 SSE 和 SSE2 指令之外，编译器还使用在支持 SSE 和 SSE2 的处理器修订版上提供的其他指令。 例如，在 Intel 处理器的 Pentium Pro 修订版中首次出现的 CMOV 指令。  
   
- 由于的 x86 编译器生成使用 SSE2 指令的代码默认情况下，您必须指定**/arch:IA32**禁用 SSE 和 SSE2 指令生成面向 x86 处理器。  
+ 由于的 x86 编译器生成使用 SSE2 指令的代码默认情况下，您必须指定 **/arch:IA32**禁用 SSE 和 SSE2 指令生成面向 x86 处理器。  
   
  **/arch**仅影响本机函数生成的代码。 当你使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)进行编译时， **/arch**对托管的函数的代码生成没有影响。  
   
@@ -79,7 +74,7 @@ r = t + d;     // This should produce the same overall result
   
 1.  打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  选择**配置属性**， **C/c + +**文件夹。  
+2.  选择**配置属性**， **C/c + +** 文件夹。  
   
 3.  选择**代码生成**属性页。  
   

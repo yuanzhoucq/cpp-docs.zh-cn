@@ -1,13 +1,10 @@
 ---
 title: 如何： 修改目标框架和平台工具集 |Microsoft 文档
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed85e0f1e1ce94401c505281c0e693a4904f92d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目标框架和平台工具集
 你可以更改 Visual c + + 项目设置以面向不同版本的.NET Framework 和使用不同的平台工具集。 默认情况下，项目系统将使用对应于你用于创建该项目的 Visual Studio 版本的 .NET Framework 版本和工具集版本。 可以通过修改项目属性来更改目标平台工具集。 可以通过修改项目 (.vcxproj) 文件来更改目标框架。 不必为每个编译目标都维护一个单独的基本代码。  

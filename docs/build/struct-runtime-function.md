@@ -1,27 +1,22 @@
 ---
-title: "runtime_function 结构 |Microsoft 文档"
-ms.custom: 
+title: runtime_function 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 84386527-d3aa-41c5-871d-78e3e1913704
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c2f28380d4a14cf7617653ede20468c45649a8b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION 结构
 基于表的异常处理的分配堆栈空间或调用另一个函数 （例如，非叶函数） 的所有函数需要一个表项。 函数表项具有格式：  

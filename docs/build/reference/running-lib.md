@@ -1,13 +1,10 @@
 ---
-title: "运行 LIB |Microsoft 文档"
-ms.custom: 
+title: 运行 LIB |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c306ba58bfef11f92d7e861272aad2aa605c8fde
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-lib"></a>运行 LIB
 来控制 LIB，可以使用各种命令行选项。  
@@ -74,7 +69,7 @@ LIB @commandfile
   
  下列选项适用于所有的 LIB 模式：  
   
- /ERRORREPORT [无 &#124;提示符 &#124;队列 &#124;发送]  
+ /ERRORREPORT [NONE&AMP;#124;提示&AMP;#124;队列&AMP;#124;发送]  
  如果 lib.exe 在运行时失败，你可以使用 /ERRORREPORT 信息向 Microsoft 发送有关这些内部错误。  
   
  /ERRORREPORT 有关的详细信息，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。  
