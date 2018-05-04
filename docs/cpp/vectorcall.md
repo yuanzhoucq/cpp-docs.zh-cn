@@ -2,31 +2,26 @@
 title: __vectorcall |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Microsoft 专用**  
   
- `__vectorcall` 调用约定指定尽可能在寄存器中传递函数的参数。 `__vectorcall`自变量比使用多个寄存器[__fastcall](../cpp/fastcall.md)或默认值[x64 调用约定](../build/overview-of-x64-calling-conventions.md)使用。 `__vectorcall` 调用约定仅受到包括流式处理 SIMD 扩展 2 (SSE2) 和更高版本的 x86 和 x64 处理器上的本机代码的支持。 使用 `__vectorcall` 可使传递多个浮点或 SIMD 矢量参数的函数加速，并执行利用寄存器中加载的参数的操作。 以下列表显示了 `__vectorcall` 的 x86 和 x64 实现所共有的功能。 本文的后面部分解释了这些差异。  
+ `__vectorcall` 调用约定指定尽可能在寄存器中传递函数的参数。 `__vectorcall` 自变量比使用多个寄存器[__fastcall](../cpp/fastcall.md)或默认值[x64 调用约定](../build/overview-of-x64-calling-conventions.md)使用。 `__vectorcall` 调用约定仅受到包括流式处理 SIMD 扩展 2 (SSE2) 和更高版本的 x86 和 x64 处理器上的本机代码的支持。 使用 `__vectorcall` 可使传递多个浮点或 SIMD 矢量参数的函数加速，并执行利用寄存器中加载的参数的操作。 以下列表显示了 `__vectorcall` 的 x86 和 x64 实现所共有的功能。 本文的后面部分解释了这些差异。  
   
 |元素|实现|  
 |-------------|--------------------|  

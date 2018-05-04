@@ -1,12 +1,9 @@
 ---
-title: "CUrl 类 |Microsoft 文档"
-ms.custom: 
+title: CUrl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CUrl
@@ -44,17 +41,15 @@ dev_langs:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb60fcef5fdfd30b4121f5c2277667829772dcd6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb0f7abc079d699cfcf682356b88b9cc8aa2bb9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="curl-class"></a>CUrl 类
 此类表示的 URL。 它允许你操纵相互独立地 URL 的每个元素是否分析现有的 URL 字符串或生成一个从零开始的字符串。  
@@ -116,7 +111,7 @@ class CUrl
 |[CUrl::operator =](#operator_eq)|将分配指定`CUrl`对象与当前`CUrl`对象。|  
   
 ## <a name="remarks"></a>备注  
- `CUrl`允许您将操作的 URL，例如路径或端口号的字段。 `CUrl`理解以下形式的 Url:  
+ `CUrl` 允许您将操作的 URL，例如路径或端口号的字段。 `CUrl` 理解以下形式的 Url:  
   
  \<方案 >://\<用户名 >:\<密码 > @\<主机名 >:\<端口号 > /\<UrlPath >\<ExtraInfo >  
   
@@ -142,10 +137,10 @@ class CUrl
   
  要操作 UrlPath 字段 （例如），你可以使用[GetUrlPath](#geturlpath)， [GetUrlPathLength](#geturlpathlength)，和[SetUrlPath](#seturlpath)。 你将使用[CreateUrl](#createurl)若要创建完整的 URL 字符串。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlutil.h  
   
-##  <a name="canonicalize"></a>CUrl::Canonicalize  
+##  <a name="canonicalize"></a>  CUrl::Canonicalize  
  调用此方法以将 URL 字符串转换为规范格式。  
   
 ```
@@ -154,7 +149,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
   
 ### <a name="parameters"></a>参数  
  `dwFlags`  
- 控制规范化标志。 如果未不指定任何标志 ( `dwFlags` = 0)，该方法将所有不安全的字符和元序列 (如\\。，\...，和\\...) 进行转义序列。 `dwFlags`可以是以下值之一：  
+ 控制规范化标志。 如果未不指定任何标志 ( `dwFlags` = 0)，该方法将所有不安全的字符和元序列 (如\\。，\...，和\\...) 进行转义序列。 `dwFlags` 可以是以下值之一：  
   
 -   ATL_URL_BROWSER_MODE： 不会进行编码或解码后"#"字符或""并不会删除尾随空格后""。 如果未指定此值，编码整个 URL，并且会删除尾随空格。  
   
@@ -174,14 +169,14 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 ### <a name="remarks"></a>备注  
  将转换为规范格式包括将转换不安全字符和空格为转义序列。  
   
-##  <a name="clear"></a>CUrl::Clear  
+##  <a name="clear"></a>  CUrl::Clear  
  调用此方法以清除所有 URL 字段。  
   
 ```
 inline void Clear() throw();
 ```  
   
-##  <a name="crackurl"></a>CUrl::CrackUrl  
+##  <a name="crackurl"></a>  CUrl::CrackUrl  
  调用此方法解码和分析的 URL。  
   
 ```
@@ -198,7 +193,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="createurl"></a>CUrl::CreateUrl  
+##  <a name="createurl"></a>  CUrl::CreateUrl  
  此方法构造 CUrl 对象的组件字段从一个 URL 字符串。  
   
 ```
@@ -233,7 +228,7 @@ inline BOOL CreateUrl(
   
  [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
   
-##  <a name="curl"></a>CUrl::CUrl  
+##  <a name="curl"></a>  CUrl::CUrl  
  构造函数。  
   
 ```
@@ -245,14 +240,14 @@ CUrl(const CUrl& urlThat) throw();
  `urlThat`  
  `CUrl`对象，若要复制到创建 URL。  
   
-##  <a name="dtor"></a>CUrl:: ~ CUrl  
+##  <a name="dtor"></a>  CUrl:: ~ CUrl  
  析构函数。  
   
 ```
 ~CUrl() throw();
 ```  
   
-##  <a name="getextrainfo"></a>CUrl::GetExtraInfo  
+##  <a name="getextrainfo"></a>  CUrl::GetExtraInfo  
  调用此方法以获取额外信息 (如*文本*或 #*文本*) 从该 URL。  
   
 ```
@@ -262,7 +257,7 @@ inline LPCTSTR GetExtraInfo() const throw();
 ### <a name="return-value"></a>返回值  
  返回包含额外信息的字符串。  
   
-##  <a name="getextrainfolength"></a>CUrl::GetExtraInfoLength  
+##  <a name="getextrainfolength"></a>  CUrl::GetExtraInfoLength  
  调用此方法以获取额外信息的长度 (如*文本*或 #*文本*) 以从 URL 检索。  
   
 ```
@@ -272,7 +267,7 @@ inline DWORD GetExtraInfoLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回包含额外信息的字符串的长度。  
   
-##  <a name="gethostname"></a>CUrl::GetHostName  
+##  <a name="gethostname"></a>  CUrl::GetHostName  
  调用此方法以从 URL 中获取的主机名。  
   
 ```
@@ -282,7 +277,7 @@ inline LPCTSTR GetHostName() const throw();
 ### <a name="return-value"></a>返回值  
  返回的主机名。  
   
-##  <a name="gethostnamelength"></a>CUrl::GetHostNameLength  
+##  <a name="gethostnamelength"></a>  CUrl::GetHostNameLength  
  调用此方法以获取主机名的长度。  
   
 ```
@@ -292,7 +287,7 @@ inline DWORD GetHostNameLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回主机名称长度。  
   
-##  <a name="getpassword"></a>CUrl::GetPassword  
+##  <a name="getpassword"></a>  CUrl::GetPassword  
  调用此方法以从 URL 中获取密码。  
   
 ```
@@ -302,7 +297,7 @@ inline LPCTSTR GetPassword() const throw();
 ### <a name="return-value"></a>返回值  
  返回密码。  
   
-##  <a name="getpasswordlength"></a>CUrl::GetPasswordLength  
+##  <a name="getpasswordlength"></a>  CUrl::GetPasswordLength  
  调用此方法以获取密码的长度。  
   
 ```
@@ -312,7 +307,7 @@ inline DWORD GetPasswordLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回密码长度。  
   
-##  <a name="getportnumber"></a>CUrl::GetPortNumber  
+##  <a name="getportnumber"></a>  CUrl::GetPortNumber  
  调用此方法以获取端口号。  
   
 ```
@@ -322,7 +317,7 @@ inline ATL_URL_PORT GetPortNumber() const throw();
 ### <a name="return-value"></a>返回值  
  返回的端口号。  
   
-##  <a name="getscheme"></a>CUrl::GetScheme  
+##  <a name="getscheme"></a>  CUrl::GetScheme  
  调用此方法以获取 URL 方案。  
   
 ```
@@ -332,7 +327,7 @@ inline ATL_URL_SCHEME GetScheme() const throw();
 ### <a name="return-value"></a>返回值  
  返回[ATL_URL_SCHEME](atl-url-scheme-enum.md)值，该值描述 URL 的方案。  
   
-##  <a name="getschemename"></a>CUrl::GetSchemeName  
+##  <a name="getschemename"></a>  CUrl::GetSchemeName  
  调用此方法以获取的 URL 方案名称。  
   
 ```
@@ -342,7 +337,7 @@ inline LPCTSTR GetSchemeName() const throw();
 ### <a name="return-value"></a>返回值  
  返回 URL 方案名称 （例如"http"或"ftp"）。  
   
-##  <a name="getschemenamelength"></a>CUrl::GetSchemeNameLength  
+##  <a name="getschemenamelength"></a>  CUrl::GetSchemeNameLength  
  调用此方法要获取的 URL 方案名称的长度。  
   
 ```
@@ -352,7 +347,7 @@ inline DWORD GetSchemeNameLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回 URL 方案名称的长度。  
   
-##  <a name="geturllength"></a>CUrl::GetUrlLength  
+##  <a name="geturllength"></a>  CUrl::GetUrlLength  
  调用此方法以获取 URL 长度。  
   
 ```
@@ -362,7 +357,7 @@ inline DWORD GetUrlLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回 URL 长度。  
   
-##  <a name="geturlpath"></a>CUrl::GetUrlPath  
+##  <a name="geturlpath"></a>  CUrl::GetUrlPath  
  调用此方法来获取的 URL 路径。  
   
 ```
@@ -372,7 +367,7 @@ inline LPCTSTR GetUrlPath() const throw();
 ### <a name="return-value"></a>返回值  
  返回的 URL 路径。  
   
-##  <a name="geturlpathlength"></a>CUrl::GetUrlPathLength  
+##  <a name="geturlpathlength"></a>  CUrl::GetUrlPathLength  
  调用此方法以获取的 URL 路径长度。  
   
 ```
@@ -382,7 +377,7 @@ inline DWORD GetUrlPathLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回的 URL 路径长度。  
   
-##  <a name="getusername"></a>CUrl::GetUserName  
+##  <a name="getusername"></a>  CUrl::GetUserName  
  调用此方法以获取从 URL 的用户名。  
   
 ```
@@ -392,7 +387,7 @@ inline LPCTSTR GetUserName() const throw();
 ### <a name="return-value"></a>返回值  
  返回的用户名称。  
   
-##  <a name="getusernamelength"></a>CUrl::GetUserNameLength  
+##  <a name="getusernamelength"></a>  CUrl::GetUserNameLength  
  调用此方法以获取用户名称的长度。  
   
 ```
@@ -402,7 +397,7 @@ inline DWORD GetUserNameLength() const throw();
 ### <a name="return-value"></a>返回值  
  返回用户名称的长度。  
   
-##  <a name="operator_eq"></a>CUrl::operator =  
+##  <a name="operator_eq"></a>  CUrl::operator =  
  将分配指定`CUrl`对象与当前`CUrl`对象。  
   
 ```
@@ -416,7 +411,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 ### <a name="return-value"></a>返回值  
  返回对当前对象的引用。  
   
-##  <a name="setextrainfo"></a>CUrl::SetExtraInfo  
+##  <a name="setextrainfo"></a>  CUrl::SetExtraInfo  
  调用此方法以设置额外的信息 (如*文本*或 #*文本*) 的 URL。  
   
 ```
@@ -430,7 +425,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="sethostname"></a>CUrl::SetHostName  
+##  <a name="sethostname"></a>  CUrl::SetHostName  
  调用此方法用于设置主机名。  
   
 ```
@@ -444,7 +439,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="setpassword"></a>CUrl::SetPassword  
+##  <a name="setpassword"></a>  CUrl::SetPassword  
  调用此方法以设置密码。  
   
 ```
@@ -458,7 +453,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="setportnumber"></a>CUrl::SetPortNumber  
+##  <a name="setportnumber"></a>  CUrl::SetPortNumber  
  调用此方法以设置的端口号。  
   
 ```
@@ -472,7 +467,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="setscheme"></a>CUrl::SetScheme  
+##  <a name="setscheme"></a>  CUrl::SetScheme  
  调用此方法以设置 URL 方案。  
   
 ```
@@ -489,7 +484,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 ### <a name="remarks"></a>备注  
  此外可以按名称设置方案 (请参阅[CUrl::SetSchemeName](#setschemename))。  
   
-##  <a name="setschemename"></a>CUrl::SetSchemeName  
+##  <a name="setschemename"></a>  CUrl::SetSchemeName  
  调用此方法以设置 URL 方案名称。  
   
 ```
@@ -506,7 +501,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 ### <a name="remarks"></a>备注  
  此外可以通过使用设置方案[ATL_URL_SCHEME](atl-url-scheme-enum.md)常量 (请参阅[CUrl::SetScheme](#setscheme))。  
   
-##  <a name="seturlpath"></a>CUrl::SetUrlPath  
+##  <a name="seturlpath"></a>  CUrl::SetUrlPath  
  调用此方法以设置的 URL 路径。  
   
 ```
@@ -520,7 +515,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="setusername"></a>CUrl::SetUserName  
+##  <a name="setusername"></a>  CUrl::SetUserName  
  调用此方法以设置用户名。  
   
 ```

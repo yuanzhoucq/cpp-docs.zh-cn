@@ -2,11 +2,8 @@
 title: 结构化异常处理 （C/C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 尽管 Windows 和 Visual C++ 支持结构化异常处理 (SEH)，我们还是建议你使用 ISO 标准 C++ 异常处理，因为它使代码具有更好的可移植性并更灵活。 然而，在现有代码中或者对于特定类型的程序，你仍可能必须使用 SEH。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="grammar"></a>语法  
  *try 除语句*:  
   
- `__try`*复合语句*  
+ `__try` *复合语句*  
   
- `__except`( `expression` )*复合语句*  
+ `__except` ( `expression` )*复合语句*  
   
 ## <a name="remarks"></a>备注  
  使用 SEH，你可以确保执行意外终止时资源（如内存块和文件）是正确的。 你还可以处理特定问题 — 例如，没有足够的内存 — 方法是使用简洁的结构化的代码，该代码不依赖于 `goto` 语句或返回代码的详尽测试。  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 -   [将结构化异常处理用于 C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>示例  
- 如上文所述，析构函数会调用本地对象，如果你在 C++ 程序中使用 SEH，并通过对其进行编译的**/EH**具有某些修饰符的选项 — 例如， **/EHsc**和**/EHa**. 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 下面的示例演示这些行为差异。  
+ 如上文所述，析构函数会调用本地对象，如果你在 C++ 程序中使用 SEH，并通过对其进行编译的 **/EH**具有某些修饰符的选项 — 例如， **/EHsc**和 **/EHa**. 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 下面的示例演示这些行为差异。  
   
 ```cpp  
 #include <stdio.h>  
@@ -126,14 +121,14 @@ int main()
   
 ```  
   
- 如果你使用**/EHsc**来编译此代码，但本地测试控件`CPPEX`是未定义，则不执行的`TestClass`析构函数，输出如下所示：  
+ 如果你使用 **/EHsc**来编译此代码，但本地测试控件`CPPEX`是未定义，则不执行的`TestClass`析构函数，输出如下所示：  
   
 ```Output  
 Triggering SEH exception  
 Executing SEH __except block  
 ```  
   
- 如果你使用**/EHsc**来编译代码和`CPPEX`使用定义`/DCPPEX`（以致引发 C++ 异常），则`TestClass`析构函数执行并输出如下所示：  
+ 如果你使用 **/EHsc**来编译代码和`CPPEX`使用定义`/DCPPEX`（以致引发 C++ 异常），则`TestClass`析构函数执行并输出如下所示：  
   
 ```Output  
 Throwing C++ exception  
@@ -141,7 +136,7 @@ Destroying TestClass!
 Executing SEH __except block  
 ```  
   
- 如果你使用**/EHa**来编译代码，`TestClass`析构函数而不考虑是否使用引发异常时执行`std::throw`或通过使用 SEH 来触发异常 (`CPPEX`或未定义)。 输出如下所示：  
+ 如果你使用 **/EHa**来编译代码，`TestClass`析构函数而不考虑是否使用引发异常时执行`std::throw`或通过使用 SEH 来触发异常 (`CPPEX`或未定义)。 输出如下所示：  
   
 ```Output  
 Throwing C++ exception  

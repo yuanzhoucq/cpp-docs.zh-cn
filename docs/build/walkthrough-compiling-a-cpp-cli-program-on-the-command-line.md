@@ -2,26 +2,21 @@
 title: 演练： 编译 C + + /cli 程序的程序命令行上 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e5b8119c8921da28c6ad93b257234e0998083a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>演练：在命令行上编译 C++/CLI 程序
 可以创建面向公共语言运行时 (CLR) 并使用 .NET Framework 的 Visual C++ 程序，然后在命令行上生成这些程序。 Visual C++ 支持 C++/CLI 编程语言，它具有要面向 .NET 编程模型的其他类型和运算符。 有关介绍 C + + /cli 语言，请参阅[纯 c + +: Hello，C + + /cli CLI](http://msdn.microsoft.com/magazine/cc163681.aspx)。 有关常规信息，请参阅[.NET 编程使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。  
@@ -73,6 +68,6 @@ ms.lasthandoff: 12/21/2017
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)   
  [编译器选项](../build/reference/compiler-options.md)

@@ -2,11 +2,8 @@
 title: while 语句 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - while_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="while-statement-c"></a>While 语句 (C++)
 执行*语句*重复直到*表达式*计算结果为零。  

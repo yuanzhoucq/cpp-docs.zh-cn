@@ -2,11 +2,8 @@
 title: CW2CWEX 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 类
 此类由字符串转换宏`CW2CTEX`和`CT2CWEX`，和 typedef `CW2W`。  
@@ -88,10 +83,10 @@ class CW2CWEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlconv.h  
   
-##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
  构造函数。  
   
 ```
@@ -109,7 +104,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>备注  
  分配在转换过程中使用的缓冲区。  
   
-##  <a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  析构函数。  
   
 ```
@@ -119,14 +114,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>备注  
  释放已分配的缓冲区。  
   
-##  <a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>  CW2CWEX::m_psz  
  将源字符串存储数据成员。  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR  
  转换运算符。  
   
 ```  

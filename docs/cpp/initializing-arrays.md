@@ -1,12 +1,9 @@
 ---
-title: "初始化数组 |Microsoft 文档"
-ms.custom: 
+title: 初始化数组 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - initializing arrays [C++]
 - arrays [C++], initializing
 ms.assetid: 41efe5f0-15b5-4f49-9196-c4902f8fc705
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42d47f8ba7f7df8285d3c4f685a212c77974b144
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eacd447d27f3dd8bd2d2d88e6d975cdb29a82026
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-arrays"></a>初始化数组
 如果类具有构造函数，该类的数组将由构造函数初始化。 如果初始值设定项列表中的项少于数组中的元素，则默认的构造函数将用于剩余元素。 如果没有为类定义默认构造函数，初始值设定项列表必须完整，即数组中的每个元素都必须有一个初始值设定项。  
@@ -56,7 +51,7 @@ int main()
   
  `aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。  
   
- 静态成员数组 (是否**const**或不) 可以在其定义 （类声明的外部） 中初始化。 例如:  
+ 静态成员数组 (是否**const**或不) 可以在其定义 （类声明的外部） 中初始化。 例如：  
   
 ```  
 // initializing_arrays2.cpp  

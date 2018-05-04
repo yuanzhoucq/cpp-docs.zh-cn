@@ -2,12 +2,9 @@
 title: -O1、-O2 （最小化大小、 最大化速度） |Microsoft 文档
 ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /o2
 - /o1
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f880b3cb806efa63299bf6cfa4aab4c72df23817
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6bbe16cb3f33e048c08d36cb9cd3d5016d7987c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1、/O2（最小化大小、最大化速度）
 
@@ -48,14 +43,14 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="remarks"></a>备注
 
-**/O1**和**/O2**编译器选项是在一次设置多个特定的优化选项的快速方法。 **/O1**选项设置在大多数情况下创建最小代码的各个优化选项。 **/O2**选项设置的选项，在大多数情况下创建最快的代码。 **/O2**选项是发布版本的默认值。 此表显示通过设置的特定选项**/O1**和**/O2**:
+**/O1**和 **/O2**编译器选项是在一次设置多个特定的优化选项的快速方法。 **/O1**选项设置在大多数情况下创建最小代码的各个优化选项。 **/O2**选项设置的选项，在大多数情况下创建最快的代码。 **/O2**选项是发布版本的默认值。 此表显示通过设置的特定选项 **/O1**和 **/O2**:
 
 |选项|等效于|
 |------------|-------------------|
 |**/O1** （最小化大小）|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
 |**/ O2** （最大化速度）|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
 
-**/O1**和**/O2**是互相排斥。
+**/O1**和 **/O2**是互相排斥。
 
 > [!NOTE]  
 > **x86 特定**  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项 （优化代码）](../../build/reference/o-options-optimize-code.md)  
+[/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)  
 [编译器选项](../../build/reference/compiler-options.md)  
 [设置编译器选项](../../build/reference/setting-compiler-options.md)  
-[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)
+[/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)

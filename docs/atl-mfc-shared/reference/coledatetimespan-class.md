@@ -1,12 +1,9 @@
 ---
-title: "COleDateTimeSpan 类 |Microsoft 文档"
-ms.custom: 
+title: COleDateTimeSpan 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDateTimeSpan
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 173ae35f49379bcccf552a105b5615378e7a42cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1941984093879ba22921d19580618ce8caa04b38
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 表示相对时间的时间范围。  
@@ -87,7 +82,7 @@ class COleDateTimeSpan
 |-|-|  
 |[运算符 +、-](#operator_add_-)|添加、 subtract、 和更改符号`COleDateTimeSpan`值。|  
 |[运算符 + =、 =](#operator_add_eq_-_eq)|加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。|  
-|[运算符 =](#operator_eq)|副本`COleDateTimeSpan`值。|  
+|[operator =](#operator_eq)|副本`COleDateTimeSpan`值。|  
 |[运算符 = =、 <、 < =](#coledatetimespan_relational_operators)|比较两个`COleDateTimeSpan`值。|  
 |[运算符 double](#operator_double)|将此转换`COleDateTimeSpan`值赋给**double**。|  
   
@@ -99,18 +94,18 @@ class COleDateTimeSpan
 |[COleDateTimeSpan::m_status](#m_status)|包含此状态`COleDateTimeSpan`对象。|  
   
 ## <a name="remarks"></a>备注  
- `COleDateTimeSpan`没有基类。  
+ `COleDateTimeSpan` 没有基类。  
   
  A`COleDateTimeSpan`将以天为单位的时间。  
   
- `COleDateTimeSpan`适用于其伴生类[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime`封装**日期**OLE 自动化的数据类型。 `COleDateTime`表示绝对时间值。 所有`COleDateTime`计算涉及`COleDateTimeSpan`值。 这些类之间的关系相当于间的一个[CTime](../../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。  
+ `COleDateTimeSpan` 适用于其伴生类[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。 `COleDateTime` 封装**日期**OLE 自动化的数据类型。 `COleDateTime` 表示绝对时间值。 所有`COleDateTime`计算涉及`COleDateTimeSpan`值。 这些类之间的关系相当于间的一个[CTime](../../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)。  
   
  有关详细信息`COleDateTime`和`COleDateTimeSpan`类，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ATLComTime.h  
   
-##  <a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan 关系运算符  
+##  <a name="coledatetimespan_relational_operators"></a>  COleDateTimeSpan 关系运算符  
  比较运算符。  
   
 ```
@@ -139,7 +134,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
   
-##  <a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
+##  <a name="coledatetimespan"></a>  COleDateTimeSpan::COleDateTimeSpan  
  构造 `COleDateTimeSpan` 对象。  
   
 ```
@@ -158,9 +153,9 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="remarks"></a>备注  
  所有这些构造函数创建新`COleDateTimeSpan`对象初始化为指定的值。 这些构造函数的简要描述如下所示：  
   
-- **COleDateTimeSpan （)**构造`COleDateTimeSpan`对象初始化为 0。  
+- **COleDateTimeSpan （)** 构造`COleDateTimeSpan`对象初始化为 0。  
   
-- **COleDateTimeSpan (** `dblSpanSrc` **)**构造`COleDateTimeSpan`从浮点值的对象。  
+- **COleDateTimeSpan (** `dblSpanSrc` **)** 构造`COleDateTimeSpan`从浮点值的对象。  
   
 - **COleDateTimeSpan (** `lDays` **，** `nHours` **，** `nMins` **，** `nSecs` **)** 构造`COleDateTimeSpan`对象初始化为指定的数字值。  
   
@@ -171,7 +166,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
   
-##  <a name="format"></a>COleDateTimeSpan::Format  
+##  <a name="format"></a>  COleDateTimeSpan::Format  
  生成的格式化的字符串表示形式`COleDateTimeSpan`对象。  
   
 ```
@@ -189,7 +184,7 @@ CString Format(UINT nID) const;
   
 - **%S**当前分钟的秒数  
   
-- **%%**百分比符号  
+- **%%** 百分比符号  
   
  上面列出的四个格式代码都将接受格式的唯一代码。  
   
@@ -215,7 +210,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
   
-##  <a name="getdays"></a>COleDateTimeSpan::GetDays  
+##  <a name="getdays"></a>  COleDateTimeSpan::GetDays  
  检索此日期/时间跨度值的日部分。  
   
 ```
@@ -247,7 +242,7 @@ LONG GetDays() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
   
-##  <a name="gethours"></a>COleDateTimeSpan::GetHours  
+##  <a name="gethours"></a>  COleDateTimeSpan::GetHours  
  检索此日期/时间跨度值的小时部分。  
   
 ```
@@ -279,7 +274,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
   
-##  <a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>  COleDateTimeSpan::GetMinutes  
  检索此日期/时间跨度值的分钟部分。  
   
 ```
@@ -311,7 +306,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
   
-##  <a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>  COleDateTimeSpan::GetSeconds  
  检索此日期/时间跨度值的第二个部分。  
   
 ```
@@ -343,7 +338,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
   
-##  <a name="getstatus"></a>COleDateTimeSpan::GetStatus  
+##  <a name="getstatus"></a>  COleDateTimeSpan::GetStatus  
  获取此状态 （有效期）`COleDateTimeSpan`对象。  
   
 ```
@@ -384,7 +379,7 @@ enum DateTimeSpanStatus{
   
  有关详细信息有关的边界`COleDateTimeSpan`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
+##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays  
  检索此以天数表示的日期/时间范围值。  
   
 ```
@@ -416,7 +411,7 @@ double GetTotalDays() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
   
-##  <a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>  COleDateTimeSpan::GetTotalHours  
  检索此日期/时间范围值，以小时为单位。  
   
 ```
@@ -448,7 +443,7 @@ double GetTotalHours() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalDays](#gettotaldays)。  
   
-##  <a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>  COleDateTimeSpan::GetTotalMinutes  
  检索此以分钟为单位表示的日期/时间范围值。  
   
 ```
@@ -480,7 +475,7 @@ double GetTotalMinutes() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalDays](#gettotaldays)。  
   
-##  <a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>  COleDateTimeSpan::GetTotalSeconds  
  检索此用秒数表示的日期/时间范围值。  
   
 ```
@@ -512,7 +507,7 @@ double GetTotalSeconds() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalDays](#gettotaldays)。  
   
-##  <a name="m_span"></a>COleDateTimeSpan::m_span  
+##  <a name="m_span"></a>  COleDateTimeSpan::m_span  
  基础**double**值为`COleDateTime`对象。  
   
 ```
@@ -525,7 +520,7 @@ double m_span;
 > [!CAUTION]
 >  更改中的值**double**数据成员将更改此值`COleDateTimeSpan`对象。 它不会更改此状态`COleDateTimeSpan`对象。  
   
-##  <a name="m_status"></a>COleDateTimeSpan::m_status  
+##  <a name="m_status"></a>  COleDateTimeSpan::m_status  
  此数据成员的类型是枚举的类型**DateTimeSpanStatus**，其定义内`COleDateTimeSpan`类。  
   
 ```
@@ -565,7 +560,7 @@ enum DateTimeSpanStatus{
   
  有关详细信息有关的边界`COleDateTimeSpan`值，请参阅文章[日期和时间： 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="operator_eq"></a>COleDateTimeSpan::operator =  
+##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =  
  副本`COleDateTimeSpan`值。  
   
 ```
@@ -575,7 +570,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ### <a name="remarks"></a>备注  
  此重载的赋值运算符将源日期/时间跨度值复制到此`COleDateTimeSpan`对象。  
   
-##  <a name="operator_add_-"></a>COleDateTimeSpan::operator +、-  
+##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +、-  
  添加、 subtract、 和更改符号`COleDateTimeSpan`值。  
   
 ```
@@ -596,7 +591,7 @@ COleDateTimeSpan operator-() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator + =、 =  
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator + =、 =  
  加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。  
   
 ```
@@ -614,7 +609,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
   
-##  <a name="operator_double"></a>COleDateTimeSpan::operator double  
+##  <a name="operator_double"></a>  COleDateTimeSpan::operator double  
  将此转换`COleDateTimeSpan`值赋给**double**。  
   
 ```
@@ -624,7 +619,7 @@ operator double() const throw();
 ### <a name="remarks"></a>备注  
  此运算符返回的值`COleDateTimeSpan`作为天浮点数的值。  
   
-##  <a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
+##  <a name="setdatetimespan"></a>  COleDateTimeSpan::SetDateTimeSpan  
  设置此日期/时间跨度值的值。  
   
 ```
@@ -657,7 +652,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
   
-##  <a name="setstatus"></a>COleDateTimeSpan::SetStatus  
+##  <a name="setstatus"></a>  COleDateTimeSpan::SetStatus  
  设置的状态 （有效期） 这`COleDateTimeSpan`对象。  
   
 ```

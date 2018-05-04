@@ -2,11 +2,8 @@
 title: 友元 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - friend_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="friend-c"></a>友元 (C++)
 在某些情况下，它会更方便，以授予成员级别的访问的不是类的成员的函数或单独类中的所有成员。 仅类实现器可以声明其友元。 函数或类不能将其自身声明为任何类的友元。 在类定义中，使用`friend`关键字和非成员函数或其他类，以允许其访问你的类的私有和受保护成员的名称。         在模板定义中，类型参数可以声明为友元。  

@@ -2,12 +2,9 @@
 title: -GR （启用运行时类型信息） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993465bd1666e624777e52cb1c3d3a54545589dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79e91f11fa6397d2ba8279998726249182c541d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR（启用运行时类型信息）
 添加代码以在运行时检查对象类型。  
@@ -43,9 +38,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 当**/GR**处于打开状态，编译器会定义`_CPPRTTI`预处理器宏。 默认情况下， **/GR**上。 **/GR-**禁用运行时类型信息。  
+ 当 **/GR**处于打开状态，编译器会定义`_CPPRTTI`预处理器宏。 默认情况下， **/GR**上。 **/GR-** 禁用运行时类型信息。  
   
- 使用**/GR**如果编译器无法以静态方式解决代码中的对象类型。 你通常需要**/GR**选项时你的代码使用[dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)或[typeid](../../cpp/typeid-operator.md)。 但是， **/GR**会增加你的映像的.rdata 部分的大小。 如果你的代码不使用**dynamic_cast**或**typeid**， **/GR-**可能会产生较小的图像。  
+ 使用 **/GR**如果编译器无法以静态方式解决代码中的对象类型。 你通常需要 **/GR**选项时你的代码使用[dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)或[typeid](../../cpp/typeid-operator.md)。 但是， **/GR**会增加你的映像的.rdata 部分的大小。 如果你的代码不使用**dynamic_cast**或**typeid**， **/GR-** 可能会产生较小的图像。  
   
  有关运行时类型检查的详细信息，请参阅[运行时类型信息](../../cpp/run-time-type-information.md)中*c + + 语言参考*。  
   

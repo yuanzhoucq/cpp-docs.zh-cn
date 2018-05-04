@@ -2,12 +2,9 @@
 title: const 和 volatile 指针 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68089c80528265a4375767d9f0a744cb95cb970b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4e76348a4559d68c0c7dacd91d21c39c5b0d8a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="const-and-volatile-pointers"></a>固定和可变指针
 [Const](../cpp/const-cpp.md)和[易失性](../cpp/volatile-cpp.md)关键字更改指针的方式。 **Const**关键字指定无法在初始化后修改的指针; 指针将受到保护之后进行修改。  
@@ -100,7 +95,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  前面的语句声明一个函数， [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中两个三个自变量都是指针类型的`char`。 因为通过引用传递的参数并且不通过值，该函数将为随意修改同时`strDestination`和`strSource`如果`strSource`了未声明为**const**。 声明`strSource`作为**const**向调用方保证`strSource`不能更改被调用函数。  
   
 > [!NOTE]
->  因为没有从标准转换*typename* **\***到**const** *typename*  **\***，它是合法的类型的自变量传递**char \*** 到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不可行的;任何隐式转换存在删除**const**从对象或指针的属性。  
+>  因为没有从标准转换*typename* **\*** 到**const** *typename*  **\***，它是合法的类型的自变量传递**char \*** 到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不可行的;任何隐式转换存在删除**const**从对象或指针的属性。  
   
  A **const**给定类型的指针可以分配给同一类型的指针。 但是，指针，不是**const**不能分配给**const**指针。 以下代码显示了正确和错误的赋值：  
   

@@ -2,11 +2,8 @@
 title: 标识符 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 118c18e413640509789d6a6c4a177371c9144c64
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-c"></a>标识符 （C++）
 标识符是用于表示以下内容之一的字符序列：  
@@ -110,5 +105,5 @@ int main() {
   
  在标识符开头使用两个顺序下划线字符 ( **__** ) 或在单个前导下划线后跟一个大写字母的用法是专为所有范围的 C++ 实现保留的。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)

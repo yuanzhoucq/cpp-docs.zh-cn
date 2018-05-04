@@ -2,11 +2,8 @@
 title: __hook |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hook"></a>__hook
 将处理程序方法与事件关联。  
@@ -48,7 +43,7 @@ long __hook(
 ```  
   
 #### <a name="parameters"></a>参数  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  指向要将事件处理程序方法挂钩到的事件方法的指针：  
   
 -   本机 C++ 事件： *SourceClass*是事件源类和*EventMethod*是事件。  
@@ -69,10 +64,10 @@ long __hook(
   
 -   托管对象指针（针对托管事件）。  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  指向要挂钩到事件的事件处理程序方法的指针。 处理程序将指定为类的方法或对同一方法的引用；如果不指定类名称，则 `__hook` 假定该类是从中调用它的类。  
   
--   本机 C++ 事件：*ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。   
+-   本机 C++ 事件： *ReceiverClass*是事件接收器类和`HandlerMethod`是处理程序。  
   
 -   COM 事件： *ReceiverClass*是事件接收器接口和`HandlerMethod`是其处理程序之一。  
   
@@ -89,7 +84,7 @@ long __hook(
   
  `__hook` 有两种形式。 适用于在其中的 COM 事件接收器，使用具体而言，在大多数情况下，第一种 （四个形参） 形式*layout_dependent*参数[event_receiver](../windows/event-receiver.md)属性是**false**.  
   
- 在这些情况下，当在其中一个方法上激发事件前，不需要在接口中挂钩所有方法；只需挂钩处理事件的方法。 你可以使用的第二个 (two-argument) 形式`__hook`仅为 COM 事件接收器在其中*layout_dependent***= true**。  
+ 在这些情况下，当在其中一个方法上激发事件前，不需要在接口中挂钩所有方法；只需挂钩处理事件的方法。 你可以使用的第二个 (two-argument) 形式`__hook`仅为 COM 事件接收器在其中 * layout_dependent ***= true**。  
   
  `__hook` 将返回一个长值。 非零返回值表示发生了错误（托管事件引发了异常）。  
   
@@ -105,7 +100,7 @@ long __hook(
 >  模板类或结构不能包含事件。  
   
 ## <a name="example"></a>示例  
- 请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件处理](../cpp/event-handling-in-com.md)示例。   
+ 请参阅[本机 C++ 中的事件处理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件处理](../cpp/event-handling-in-com.md)示例。  
   
 ## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   

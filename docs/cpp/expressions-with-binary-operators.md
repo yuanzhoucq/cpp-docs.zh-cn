@@ -1,12 +1,9 @@
 ---
-title: "使用二元运算符的表达式 |Microsoft 文档"
-ms.custom: 
+title: 使用二元运算符的表达式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beed0eaa26b025cec56252e6d82588019e0d467a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-binary-operators"></a>使用二元运算符的表达式
 二元运算符在表达式中操作两个操作数。 二元运算符为：  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
     -   [逻辑 AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [逻辑或 (&#124; &#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [逻辑或 (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [赋值运算符](../cpp/assignment-operators.md)  
   
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
     -   按位“异或”赋值 (^=)  
   
-    -   按位与或赋值 (&#124; =)  
+    -   按位与或赋值 (&#124;=)  
   
 -   [逗号运算符](../cpp/comma-operator.md)（，）  
   

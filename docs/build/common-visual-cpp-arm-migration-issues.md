@@ -1,27 +1,22 @@
 ---
-title: "Visual c + + ARM 迁移的常见问题 |Microsoft 文档"
-ms.custom: 
+title: Visual c + + ARM 迁移的常见问题 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc34d472fb6db02eb902001ad5aac77dea5baf0
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 04253b5d71de75f6a06f2934dae24df2e6d4e3e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 迁移的常见问题
 
@@ -108,9 +103,9 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 MSVC 编译器支持的两个不同的解释`volatile`可以通过使用编译器开关指定的存储限定符。 [/Volatile: ms](../build/reference/volatile-volatile-keyword-interpretation.md)开关用于选择 Microsoft 扩展可变语义，它能够保证强排序，因为已为 x86 和 x64 的传统情况由于这些体系结构上的强内存模型。 [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)开关用于选择的严格 c + + 标准可变语义不能保证强排序。
 
-默认值是 ARM 体系结构， **/volatile:iso**由于 ARM 处理器具有弱排序内存模型，而且因为 ARM 软件不依赖于的扩展语义的旧**/volatile: ms**并且通常没有与执行的软件。 但是，它是仍有时方便或甚至需要编译 ARM 程序以使用扩展的语义。 例如，它可能过于昂贵，若要移植程序能够使用 ISO c + + 语义，或者驱动程序软件可能需要遵守的传统的语义，才能正常工作。 在这些情况下，你可以使用**/volatile: ms**交换机; 但是，要重新创建在 ARM 目标上的传统可变语义，编译器必须将插入解决每个读取或写入的内存屏障`volatile`变量以强制实施强排序，这可以对性能产生负面影响。
+默认值是 ARM 体系结构， **/volatile:iso**由于 ARM 处理器具有弱排序内存模型，而且因为 ARM 软件不依赖于的扩展语义的旧 **/volatile: ms**并且通常没有与执行的软件。 但是，它是仍有时方便或甚至需要编译 ARM 程序以使用扩展的语义。 例如，它可能过于昂贵，若要移植程序能够使用 ISO c + + 语义，或者驱动程序软件可能需要遵守的传统的语义，才能正常工作。 在这些情况下，你可以使用 **/volatile: ms**交换机; 但是，要重新创建在 ARM 目标上的传统可变语义，编译器必须将插入解决每个读取或写入的内存屏障`volatile`变量以强制实施强排序，这可以对性能产生负面影响。
 
-X86 和 x64 体系结构中，默认值是**/volatile: ms**由于已创建针对这些体系结构通过 MSVC 软件大部分依赖于它们。 X86 和 x64 程序编译时，你可以指定**/volatile:iso**交换机以帮助避免不必要依赖的传统的可变语义，并将提升可移植性。
+X86 和 x64 体系结构中，默认值是 **/volatile: ms**由于已创建针对这些体系结构通过 MSVC 软件大部分依赖于它们。 X86 和 x64 程序编译时，你可以指定 **/volatile:iso**交换机以帮助避免不必要依赖的传统的可变语义，并将提升可移植性。
 
 ## <a name="see-also"></a>请参阅
 

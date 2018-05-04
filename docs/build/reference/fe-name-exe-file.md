@@ -1,13 +1,10 @@
 ---
-title: "-Fe （命名 EXE 文件） |Microsoft 文档"
-ms.custom: 
+title: -Fe （命名 EXE 文件） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /fe
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74892ef670ed53e68701730fdb71554989a495c
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 0afd8a863c9b8482e2b7f3868047845818bd2923
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fe-name-exe-file"></a>/Fe（命名 EXE 文件）
 
@@ -42,14 +37,14 @@ ms.lasthandoff: 02/28/2018
 
 ### <a name="arguments"></a>自变量
 
-*pathname*<br/>
+*路径名*<br/>
 相对或绝对路径和基文件名或到目录或要用于生成可执行文件的基文件名称的相对或绝对路径。
 
 ## <a name="remarks"></a>备注
 
 **/Fe**选项允许你指定的输出目录、 输出可执行文件名称，或同时包括这两者，生成的可执行文件。 如果*路径名*路径分隔符中结束 (**&#92;**)，则假定它仅指定输出目录。 否则为最后一个组件的*路径名*用作输出文件基名称和的其余部分*路径名*指定的输出目录。 如果*路径名*不具有任何路径分隔符，则假定它在当前目录中指定输出文件的名称。 *路径名*必须括在双引号 (**"**) 如果它包含不能在一个短的路径，例如空间，任何字符扩展字符或路径组件数量超过八个字符长时间。
 
-当**/Fe**未指定选项，或如果基文件中未指定名称*路径名*，编译器中赋予输出文件的默认名称，使用指定的第一个源或对象文件的基名称在命令行和扩展名为.exe 或.dll。
+当 **/Fe**未指定选项，或如果基文件中未指定名称*路径名*，编译器中赋予输出文件的默认名称，使用指定的第一个源或对象文件的基名称在命令行和扩展名为.exe 或.dll。
 
 如果指定[（编译而无需链接） 的 /c](c-compile-without-linking.md)选项， **/Fe**不起作用。
 

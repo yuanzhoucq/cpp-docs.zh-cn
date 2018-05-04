@@ -1,27 +1,22 @@
 ---
-title: "malloc 对齐 |Microsoft 文档"
-ms.custom: 
+title: malloc 对齐 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="malloc-alignment"></a>malloc 对齐
 [malloc](../c-runtime-library/reference/malloc.md)保证以返回有关存储具有基本的对齐方式，且任何对象分配的内存量无法适应适当对齐的内存。 A*基本对齐*是小于或等于而无需一种对齐规范实现支持的最大对齐方式的对齐方式。 (在 Visual c + +，这是所需的对齐方式`double`，或 8 个字节。 在针对 64 位平台的代码中，是 16 个字节。）例如，将支持任何四个字节或更小的对象的边界上对齐 4 字节分配。  

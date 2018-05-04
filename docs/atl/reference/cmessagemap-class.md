@@ -1,12 +1,9 @@
 ---
-title: "CMessageMap 类 |Microsoft 文档"
-ms.custom: 
+title: CMessageMap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CMessageMap
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
 此类允许对象的消息映射要由另一个对象的访问。  
@@ -52,7 +47,7 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|访问消息映射中的`CMessageMap`-派生类。|  
   
 ## <a name="remarks"></a>备注  
- `CMessageMap`是一个抽象基类，允许对象的消息映射要由另一个对象进行访问。 为了使要公开其消息映射的对象，其类必须派生自`CMessageMap`。  
+ `CMessageMap` 是一个抽象基类，允许对象的消息映射要由另一个对象进行访问。 为了使要公开其消息映射的对象，其类必须派生自`CMessageMap`。  
   
  使用 ATL`CMessageMap`到支持包含 windows 和动态消息映射链接。 例如，任何类包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象必须派生自`CMessageMap`。 以下代码摘自[SUBEDIT](../../visual-cpp-samples.md)示例。 通过[CComControl](../../atl/reference/ccomcontrol-class.md)、`CAtlEdit`类自动派生自`CMessageMap`。  
   
@@ -62,10 +57,10 @@ class ATL_NO_VTABLE CMessageMap
   
  有关消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)本文"ATL 窗口类。"  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlwin.h  
   
-##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
  访问由标识的消息映射`dwMsgMapID`中`CMessageMap`-派生类。  
   
 ```

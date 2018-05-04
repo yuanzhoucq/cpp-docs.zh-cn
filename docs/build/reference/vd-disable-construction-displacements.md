@@ -1,13 +1,10 @@
 ---
-title: "-vd （禁用构造置换） |Microsoft 文档"
-ms.custom: 
+title: -vd （禁用构造置换） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd（禁用构造置换）
 ## <a name="syntax"></a>语法  
@@ -54,12 +49,12 @@ ms.lasthandoff: 12/21/2017
  `2`  
  允许你使用[dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)上正在构造的对象。 例如，dynamic_cast 从虚拟基类派生的类。  
   
- **/vd2**当具有虚拟基具有虚函数时添加一个 vtordisp 字段。 **/vd1**就足够了。 最常见情况**/vd2**是必需的虚拟基中的唯一虚函数是析构函数时。  
+ **/vd2**当具有虚拟基具有虚函数时添加一个 vtordisp 字段。 **/vd1**就足够了。 最常见情况 **/vd2**是必需的虚拟基中的唯一虚函数是析构函数时。  
   
 ## <a name="remarks"></a>备注  
  这些选项仅适用于使用虚拟基的 c + + 代码。  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]在使用虚拟继承的情况下实现 c + + 构造置换支持。 构造置换解决造成时在虚拟基中声明并在派生类中重写的虚拟函数的问题，在进一步的派生类的构造过程中从构造函数调用。  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 在使用虚拟继承的情况下实现 c + + 构造置换支持。 构造置换解决造成时在虚拟基中声明并在派生类中重写的虚拟函数的问题，在进一步的派生类的构造过程中从构造函数调用。  
   
  问题是，可能不正确传递的虚函数`this`指针因此到虚拟置换之间的差异的基类的类及其派生类到置换。 解决方案提供的 vtordisp 字段中，调用类的每个虚拟基的单个构造偏移量调整。  
   

@@ -2,11 +2,8 @@
 title: 内联函数 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __forceinline_cpp
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6661996669e454e655d0149f1dbb1df505116469
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 类声明的主体中定义的函数是内联函数。  
@@ -83,9 +78,9 @@ int main()
   
  使用内联函数可以使程序更快，因为它们消除了与函数调用关联的开销。 内联展开的函数可以进行无法对普通函数使用的代码优化。  
   
- 编译器将内联扩展选项和关键字视为建议。 不保证会对函数进行内联。 无法强制编译器对特定函数进行内联（即使使用 `__forceinline` 关键字）。 使用编译时**/clr**，编译器将不内联函数是否存在安全属性应用于该函数。  
+ 编译器将内联扩展选项和关键字视为建议。 不保证会对函数进行内联。 无法强制编译器对特定函数进行内联（即使使用 `__forceinline` 关键字）。 使用编译时 **/clr**，编译器将不内联函数是否存在安全属性应用于该函数。  
   
- **内联**关键字是仅在 C++ 中可用。 `__inline` 和 `__forceinline` 关键字在 C 和 C++ 中都可用。 为了与早期版本中，兼容**_inline**是同义词`__inline`。  
+ **内联**关键字是仅在 C++ 中可用。 `__inline` 和 `__forceinline` 关键字在 C 和 C++ 中都可用。 为了与早期版本中，兼容 **_inline**是同义词`__inline`。  
   
  **内联**关键字告知编译器内联展开是首选。 但是，编译器可以创建函数的单独实例（实例化），并创建标准调用链接而不是内联插入代码。 可能会出现这种行为的两种情况是：  
   
@@ -144,7 +139,7 @@ private:
   
 -   除非使用 /Og、/Ox、/O1 或 /O2 进行编译，否则函数使用内联程序集。  
   
--   函数是递归函数，不附带**#pragma inline_recursion （on)**。 递归函数使用杂注内联为 16 个调用的默认深度。 若要减小内联深度，使用[inline_depth](../preprocessor/inline-depth.md)杂注。  
+-   函数是递归函数，不附带 **#pragma inline_recursion （on)**。 递归函数使用杂注内联为 16 个调用的默认深度。 若要减小内联深度，使用[inline_depth](../preprocessor/inline-depth.md)杂注。  
   
 -   函数是虚函数，进行虚拟调用。 对虚函数的直接调用可以进行内联。  
   

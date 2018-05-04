@@ -1,12 +1,9 @@
 ---
-title: "继承关键字 |Microsoft 文档"
-ms.custom: 
+title: 继承关键字 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __multiple_inheritance
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 442e8958b1d2201d7261242bd9cd90da29a60a62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inheritance-keywords"></a>继承关键字
 **Microsoft 专用**  
@@ -53,7 +48,7 @@ class [__virtual_inheritance] class-name;
  *类名*  
  要声明的类的名称。  
   
- C++ 允许您在类定义前声明指向类成员的指针。 例如:  
+ C++ 允许您在类定义前声明指向类成员的指针。 例如：  
   
 ```  
 class S;  

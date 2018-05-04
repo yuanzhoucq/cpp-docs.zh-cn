@@ -2,11 +2,8 @@
 title: strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcstok_s_l
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be62937a5c687c93f0280a8f3ca9d8acc955567
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
@@ -156,7 +151,7 @@ unsigned char* _mbstok_s(
 
 由于*上下文*参数将取代中使用的静态缓冲区**strtok**和 **_strtok_l**，可以分析同时在同一线程中的两个字符串。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 版本的这些功能，而不必 **_l**后缀区域设置相关的行为使用当前线程区域设置。 版本与 **_l**后缀是相同，只不过它们改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 版本的这些功能，而不必 **_l**后缀区域设置相关的行为使用当前线程区域设置。 版本与 **_l**后缀是相同，只不过它们改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

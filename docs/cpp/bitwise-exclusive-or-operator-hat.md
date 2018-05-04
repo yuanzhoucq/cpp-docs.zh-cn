@@ -1,12 +1,9 @@
 ---
-title: "按位异或运算符: ^ |Microsoft 文档"
-ms.custom: 
+title: '按位异或运算符: ^ |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>按位异或运算符：^
 ## <a name="syntax"></a>语法  
@@ -44,7 +39,7 @@ expression ^ expression
 按位“异或”运算符的两个操作数都必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)适用于操作数。  
   
 ## <a name="operator-keyword-for-"></a>^ 的运算符关键字  
-**Xor**运算符是文本等效项 **^** 。 有两种方法来访问**xor**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
+**Xor**运算符是文本等效项**^**。 有两种方法来访问**xor**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  
   

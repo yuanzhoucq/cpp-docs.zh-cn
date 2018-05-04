@@ -1,12 +1,9 @@
 ---
-title: "_bstr_t 类 |Microsoft 文档"
-ms.custom: 
+title: _bstr_t 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t 类
 **Microsoft 专用**  
@@ -57,18 +52,18 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |[operator =](../cpp/bstr-t-operator-equal.md)|将新值赋给现有 `_bstr_t` 对象。|  
-|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|将字符附加到 `_bstr_t` 对象的结尾。|  
+|[运算符 + =](../cpp/bstr-t-operator-add-equal-plus.md)|将字符附加到 `_bstr_t` 对象的结尾。|  
 |[运算符 +](../cpp/bstr-t-operator-add-equal-plus.md)|串联两个字符串。|  
 |[运算符 !](../cpp/bstr-t-operator-logical-not.md)|检查是否封装`BSTR`是**NULL**字符串。|  
 |[运算符 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比较两个 `_bstr_t` 对象。|  
-|[运算符 wchar_t * &#124;char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|提取指向封装的 Unicode 或多字节 `BSTR` 对象的指针。|  
+|[运算符 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|提取指向封装的 Unicode 或多字节 `BSTR` 对象的指针。|  
   
 **结束 Microsoft 专用**  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<comutil.h >  
   
- **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
+ **Lib:** 对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
 ## <a name="see-also"></a>请参阅  
  [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

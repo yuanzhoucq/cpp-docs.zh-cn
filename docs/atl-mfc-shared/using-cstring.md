@@ -1,12 +1,9 @@
 ---
-title: "使用 CString |Microsoft 文档"
-ms.custom: 
+title: 使用 CString |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cstring"></a>使用 CString
 本部分中的主题介绍如何使用 `CString` 进行编程。 有关参考文档`CString`类，请参阅的文档[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  

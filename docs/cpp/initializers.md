@@ -1,12 +1,9 @@
 ---
-title: "初始值设定项 |Microsoft 文档"
-ms.custom: 
+title: 初始值设定项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>初始值设定项
 初始值设定项可指定变量的初始值。 你可以在以下上下文中初始化变量：  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>默认初始化  
+### <a name="default_initialization"></a> 默认初始化  
  类、结构和联合的默认初始化是具有默认构造函数的初始化。 可以不使用初始化表达式或使用 `new` 关键字调用默认构造函数：  
   
 ```cpp  
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>聚合初始化  
+### <a name="agginit"></a> 聚合初始化  
  聚合初始化是针对数组或类类型（通常为结构或联合）的一种列表初始化形式：  
   
 -   没有私有或受保护成员  
@@ -479,7 +474,7 @@ int main() {
 ```  
   
 ### <a name="reference-initialization"></a>引用初始化  
- 引用类型的变量必须使用引用类型派生自的类型的对象进行初始化，或使用可转换为引用类型派生自的类型的类型的对象进行初始化。 例如:  
+ 引用类型的变量必须使用引用类型派生自的类型的对象进行初始化，或使用可转换为引用类型派生自的类型的类型的对象进行初始化。 例如：  
   
 ```  
 // initializing_references.cppint   
@@ -502,25 +497,25 @@ int main()
   
  只有在下列声明中才能在没有初始值设定项的情况下声明引用类型变量：  
   
--   函数声明（原型）。 例如:  
+-   函数声明（原型）。 例如：  
   
     ```  
     int func( int& );  
     ```  
   
--   函数返回类型声明。 例如:  
+-   函数返回类型声明。 例如：  
   
     ```  
     int& func( int& );  
     ```  
   
--   引用类型类成员的声明。 例如:  
+-   引用类型类成员的声明。 例如：  
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   显式指定为 `extern` 的声明。 例如:  
+-   显式指定为 `extern` 的声明。 例如：  
   
     ```  
     extern int& iVal;  
@@ -531,7 +526,7 @@ int main()
  ![Ref 类型初始化决策图](../cpp/media/vc38s71.gif "vc38S71")  
 引用类型初始化决策图  
   
- 引用`volatile`类型 (声明为`volatile` *typename*  **&**  *标识符*) 可以使用初始化`volatile`对象的相同类型的对象或使用未声明为`volatile`。 它们不能但是，使用初始化**const**该类型的对象。 同样，引用**const**类型 (声明为**const** *typename*  **&**  *标识符*) 可以使用初始化**const**同类型的对象 (或任何具有转换为该类型或具有未声明为对象**const**)。 但是，不能使用该类型的 `volatile` 对象初始化它们。  
+ 引用`volatile`类型 (声明为`volatile` *typename * * * （& a)** *标识符*) 可以使用初始化`volatile`或使用的相同类型的对象未声明为对象`volatile`。 它们不能但是，使用初始化**const**该类型的对象。 同样，引用**const**类型 (声明为**const** *typename * * * （& a)** *标识符*) 可以是使用初始化**const**同类型的对象 (或任何具有转换为该类型或具有未声明为对象**const**)。 但是，不能使用该类型的 `volatile` 对象初始化它们。  
   
  不使用限定的引用**const**或`volatile`关键字可以仅使用作为既不声明的对象初始化**const**也不`volatile`。  
   

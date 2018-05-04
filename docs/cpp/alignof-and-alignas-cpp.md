@@ -2,26 +2,21 @@
 title: alignof 和 alignas （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-caps.latest.revision: 2
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a506a3c44c3304e786c41a2eb049939d317778e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
 `alignas` 类型说明符是用于指定变量和用户定义类型的自定义对齐方式的一种可移植的 C++ 标准方法。 `alignof` 运算符也是一种获取指定类型或变量的对齐方式的标准可移植的方法。  

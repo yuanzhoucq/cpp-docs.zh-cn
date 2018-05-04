@@ -1,12 +1,9 @@
 ---
-title: "接口，ATL 控件向导 |Microsoft 文档"
-ms.custom: 
+title: 接口，ATL 控件向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.interfaces
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5280f09e7d17036652acf6fc62d4d4f5ab31c758
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 745e8ee1074af6b4126a2123acafdc821906d24c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interfaces-atl-control-wizard"></a>接口，ATL 控件向导
 在向导的此页将标识该控件支持的接口。 默认情况下，受支持的接口是通常使用的大多数容器。  

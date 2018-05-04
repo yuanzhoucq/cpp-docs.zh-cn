@@ -1,30 +1,25 @@
 ---
-title: "ATL 编码引用 |Microsoft 文档"
-ms.custom: 
+title: ATL 编码引用 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - encoding
 - encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a97809fefdc0a5e6e7d90e7b62bbee83f28bfb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d8cbb23c390a47b1bbfb7b1a78b327f07b06869
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-encoding-reference"></a>ATL 编码引用
 在常见的 Internet 标准，如进行 uuencode 十六进制、 范围和 UTF8 编码支持在 atlenc.h 中找到的代码。  

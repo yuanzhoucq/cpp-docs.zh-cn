@@ -1,12 +1,9 @@
 ---
-title: "CImage 类 |Microsoft 文档"
-ms.custom: 
+title: CImage 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage 类
-`CImage`提供增强的位图支持，包括用于加载和采用 JPEG、 GIF、 BMP 和可移植网络图形 (PNG) 格式保存映像的功能。  
+`CImage` 提供增强的位图支持，包括用于加载和采用 JPEG、 GIF、 BMP 和可移植网络图形 (PNG) 格式保存映像的功能。  
   
 > [!IMPORTANT]
 >  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
@@ -99,14 +94,14 @@ class CImage
   
 |名称|描述|  
 |----------|-----------------|  
-|[CImage::AlphaBlend](#alphablend)|显示具有透明或半透明的像素为单位的位图。|  
+|[Cimage:: Alphablend](#alphablend)|显示具有透明或半透明的像素为单位的位图。|  
 |[CImage::Attach](#attach)|将附加`HBITMAP`到`CImage`对象。 可与非 DIB 部分位图或 DIB 部分位图。|  
 |[CImage::BitBlt](#bitblt)|将来自源设备上下文的位图复制到此当前设备上下文中。|  
 |[CImage::Create](#create)|创建一个 DIB 部分位图，并将其附加到以前构造`CImage`对象。|  
 |[CImage::CreateEx](#createex)|创建一个 DIB 部分位图 （使用其他参数），并将其附加到以前构造`CImage`对象。|  
 |[CImage::Destroy](#destroy)|分离从位图`CImage`对象，并销毁位图。|  
 |[CImage::Detach](#detach)|分离从位图`CImage`对象。|  
-|[CImage::Draw](#draw)|将位图从源矩形复制到目标矩形。 **绘制**拉伸或压缩位图以适合目标矩形的尺寸，如有必要，并处理 alpha 混合和透明的颜色。|  
+|[Cimage:: Draw](#draw)|将位图从源矩形复制到目标矩形。 **绘制**拉伸或压缩位图以适合目标矩形的尺寸，如有必要，并处理 alpha 混合和透明的颜色。|  
 |[CImage::GetBits](#getbits)|检索指向位图的实际像素值。|  
 |[CImage::GetBPP](#getbpp)|检索每像素位数。|  
 |[CImage::GetColorTable](#getcolortable)|颜色表中的条目范围中检索红色、 绿色、 蓝色 (RGB) 颜色值。|  
@@ -146,7 +141,7 @@ class CImage
 |[CImage::operator HBITMAP](#operator_hbitmap)|返回附加到的 Windows 句柄`CImage`对象。|  
   
 ## <a name="remarks"></a>备注  
- `CImage`采用位图为任一独立于设备的位图 (DIB) 部分，或未;但是，你可以使用[创建](#create)或[CImage::Load](#load)与仅 DIB 部分。 你可以将附加到一个非 DIB 部分位图`CImage`对象使用[附加](#attach)，但不是能在然后使用以下`CImage`支持仅 DIB 部分位图的方法：  
+ `CImage` 采用位图为任一独立于设备的位图 (DIB) 部分，或未;但是，你可以使用[创建](#create)或[CImage::Load](#load)与仅 DIB 部分。 你可以将附加到一个非 DIB 部分位图`CImage`对象使用[附加](#attach)，但不是能在然后使用以下`CImage`支持仅 DIB 部分位图的方法：  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  使用全局`CImage`不建议在 DLL 中的对象。 如果你需要使用全局`CImage`DLL，调用中的对象[CImage::ReleaseGDIPlus](#releasegdiplus)以显式释放使用的 GDI + 资源。  
   
- `CImage`不能选择到新[CDC](../../mfc/reference/cdc-class.md)。 `CImage`创建其自己**HDC**映像。 因为`HBITMAP`只能为一个选择**HDC**一次`HBITMAP`与关联`CImage`不能为另一选择**HDC**。 如果你需要`CDC`，检索**HDC**从`CImage`并将其交给 [CDC::FromHandle] (.../../mfc/reference/cdc-class.md#cdc__fromhandle。  
+ `CImage` 不能选择到新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 创建其自己**HDC**映像。 因为`HBITMAP`只能为一个选择**HDC**一次`HBITMAP`与关联`CImage`不能为另一选择**HDC**。 如果你需要`CDC`，检索**HDC**从`CImage`并将其交给 [CDC::FromHandle] (.../../mfc/reference/cdc-class.md#cdc__fromhandle。  
   
 ## <a name="example"></a>示例  
 ```cpp  
@@ -209,10 +204,10 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 >   
 >  同样，你必须包含`atlimage.h`你包括之前`atlimpl.cpp`。 若要轻松地完成此操作，包括`atlimage.h`中你`stdafx.h`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlimage.h  
   
-##  <a name="alphablend"></a>  CImage::AlphaBlend  
+##  <a name="alphablend"></a>  Cimage:: Alphablend  
  显示具有透明或半透明的像素为单位的位图。  
   
 ```
@@ -512,7 +507,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>返回值  
  分离，位图的句柄或**NULL**如果不附加任何位图。  
   
-##  <a name="draw"></a>  CImage::Draw  
+##  <a name="draw"></a>  Cimage:: Draw  
  将来自源设备上下文的位图复制到当前的设备上下文中。  
   
 ```
@@ -685,7 +680,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  `pszAllFilesDescription`  
  如果此参数不是**NULL**，筛选器字符串将有一个附加的筛选器列表的开头。 此筛选器将具有的当前值`pszAllFilesDescription`有关其说明，并接受列表中的任何其他导出程序支持的任何文件扩展名的文件。  
   
- 例如:  
+ 例如：  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -732,13 +727,13 @@ CImage::GetExporterFilterString(
   
  参数*strExporter*具有格式：  
   
- 文件 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...文件描述 *n* &#124;\*。ext  *n* &#124; &#124;  
+ 文件 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file 说明*n*&#124;\*.ext *n*&#124;&#124;  
   
- 其中 &#124; 由指定的分隔符字符`chSeparator`。 例如:  
+ 其中&#124;由指定的分隔符字符`chSeparator`。 例如：  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用的默认分隔符 &#124;' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给常见的文件保存对话框中，则使用 null 分隔符 \0'。  
+ 使用的默认分隔符&#124;如果此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给常见的文件保存对话框中，则使用 null 分隔符 \0'。  
   
 ##  <a name="getheight"></a>  CImage::GetHeight  
  检索的高度，以像素为单位的映像。  
@@ -774,7 +769,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  `pszAllFilesDescription`  
  如果此参数不是**NULL**，筛选器字符串将有一个附加的筛选器列表的开头。 此筛选器将具有的当前值`pszAllFilesDescription`有关其说明，并接受列表中的任何其他导出程序支持的任何文件扩展名的文件。  
   
- 例如:  
+ 例如：  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -818,13 +813,13 @@ CImage::GetImporterFilterString(
   
  参数*strImporter*具有格式：  
   
- 文件 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...文件描述 *n* &#124;\*。ext  *n* &#124; &#124;  
+ 文件 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file 说明*n*&#124;\*.ext *n*&#124;&#124;  
   
- 其中 &#124; 由指定的分隔符字符`chSeparator`。 例如:  
+ 其中&#124;由指定的分隔符字符`chSeparator`。 例如：  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用的默认分隔符 &#124;' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给一组公共使用的 null 分隔符 \0'**文件打开**对话框。  
+ 使用的默认分隔符&#124;如果此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给一组公共使用的 null 分隔符 \0'**文件打开**对话框。  
   
 ##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  检索颜色表中的最大项数。  
@@ -1032,7 +1027,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>备注  
  资源的类型必须为`BITMAP`。  
   
-##  <a name="maskblt"></a>  CImage::MaskBlt  
+##  <a name="maskblt"></a>  Cimage:: Maskblt  
  将使用指定的掩码和光栅操作的源和目标位图颜色数据合并。  
   
 ```
@@ -1438,7 +1433,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK 中。  
   
-##  <a name="transparentblt"></a>  CImage::TransparentBlt  
+##  <a name="transparentblt"></a>  Cimage:: Transparentblt  
  将来自源设备上下文的位图复制到此当前设备上下文中。  
   
 ```
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **TRUE**如果成功，否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- `TransparentBlt`支持的每个像素和每个像素的 8 位 4 位数的源位图。 使用[cimage:: Alphablend](#alphablend)指定每个像素 32 位的位图的透明度。  
+ `TransparentBlt` 支持的每个像素和每个像素的 8 位 4 位数的源位图。 使用[cimage:: Alphablend](#alphablend)指定每个像素 32 位的位图的透明度。  
   
   
 ### <a name="example"></a>示例  

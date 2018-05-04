@@ -2,28 +2,23 @@
 title: MSBuild （Visual c + +） 概述 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概述  
   
@@ -54,13 +49,13 @@ MSBuild 是标准生成 Visual c + + 项目系统。 在 Visual Studio 集成的
   
 > **msbuild.exe** [ *project_file* ] [*选项*]  
   
-使用**target** (或**/t**) 和**/property** (或**/p**) 用于重写特定属性和目标的命令行选项项目文件中指定。  
+使用**target** (或 **/t**) 和 **/property** (或 **/p**) 用于重写特定属性和目标的命令行选项项目文件中指定。  
   
 项目文件的基本功能是指定*目标*，即应用于你的项目，并输入和执行该操作所需的输出的特定操作。 项目文件可以指定一个或多个目标，可以包括默认目标。  
   
 每个目标包含的一个或多个序列*任务*。 每个任务由包含一个可执行命令的.NET Framework 类表示。 例如， [CL 任务](/visualstudio/msbuild/cl-task)包含[cl.exe](../build/reference/compiling-a-c-cpp-program.md)命令。  
   
-A*任务参数*是类任务的属性，通常表示可执行命令的命令行选项。 例如，`FavorSizeOrSpeed`参数`CL`任务对应于**/Os**和**/Ot**编译器选项。  
+A*任务参数*是类任务的属性，通常表示可执行命令的命令行选项。 例如，`FavorSizeOrSpeed`参数`CL`任务对应于 **/Os**和 **/Ot**编译器选项。  
   
 其他任务参数支持 MSBuild 基础结构。 例如，`Sources`任务参数指定一组可供其他任务的任务。 有关 MSBuild 任务的详细信息，请参阅[任务参考](/visualstudio/msbuild/msbuild-task-reference)。  
   
@@ -84,9 +79,9 @@ A*任务参数*是类任务的属性，通常表示可执行命令的命令行�
   
 |目录|描述|  
 |---------------|-----------------|  
-|*驱动器*: \Program Files *(x86)*\Microsoft Visual Studio\\*年*\\*版本*\Common7\IDE\VC\VCTargets\ <br /><br />*驱动器*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*版本*\ |包含主目标文件 (.targets) 和目标使用的属性文件 (.props)。 默认情况下，$(VCTargetsPath) 宏引用此目录。|  
-|*驱动器*: \Program Files *(x86)*\Microsoft Visual Studio\\*年*\\*版本*\Common7\IDE\VC\VCTargets\平台\\*平台*\ <br /><br />*驱动器*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\ |包含重写目标和在其父目录中的属性的特定于平台的目标和属性文件。 此目录还包含一个 DLL，它定义在此目录中的目标使用的任务。<br /><br /> *平台*占位符表示 ARM、 Win32、 或 x64 子目录。|  
-|*驱动器*: \Program Files *(x86)*\Microsoft Visual Studio\\*年*\\*版本*\Common7\IDE\VC\VCTargets\平台\\*平台*\PlatformToolsets\\*工具集*\ <br /><br />*驱动器*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\PlatformToolsets\\*工具集*\ <br /><br />*驱动器*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*平台*\PlatformToolsets\\*工具集*\ |包含启用生成要通过使用指定生成 Visual c + + 应用程序的目录*工具集*。<br /><br /> *年*和*版本*占位符由 Visual Studio 2017 和更高版本。 *版本*占位符为 Visual Studio 2012 的 V110、 V120 对于 Visual Studio 2013 或 Visual Studio 2015 的 V140。 *平台*占位符表示 ARM、 Win32、 或 x64 子目录。 *工具集*占位符表示的工具集子目录，例如，v140 构建 Windows 应用程序通过使用 Visual Studio 2015 工具集，v120_xp 生成适用于使用 Visual Studio 2013 工具集或到 v110_wp80 的 Windows XP通过使用 Visual Studio 2012 工具集生成 Windows Phone 8.0 应用。<br /><br />包含启用生成以生成 Visual c + + 2008年或 Visual c + + 2010年应用程序的目录的路径不包括*版本*，和*平台*占位符表示Itanium、 Win32、 或 x64 子目录。 *工具集*占位符表示 v90 或 v100 工具集子目录。|  
+|*驱动器*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*版本*\Common7\IDE\VC\VCTargets\ <br /><br />*驱动器*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*版本*\ |包含主目标文件 (.targets) 和目标使用的属性文件 (.props)。 默认情况下，$(VCTargetsPath) 宏引用此目录。|  
+|*驱动器*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*版本*\Common7\IDE\VC\VCTargets\平台\\*平台*\ <br /><br />*驱动器*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\ |包含重写目标和在其父目录中的属性的特定于平台的目标和属性文件。 此目录还包含一个 DLL，它定义在此目录中的目标使用的任务。<br /><br /> *平台*占位符表示 ARM、 Win32、 或 x64 子目录。|  
+|*驱动器*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*版本*\Common7\IDE\VC\VCTargets\平台\\*平台*\PlatformToolsets\\*工具集*\ <br /><br />*驱动器*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\PlatformToolsets\\*工具集*\ <br /><br />*驱动器*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*平台*\PlatformToolsets\\*工具集*\ |包含启用生成要通过使用指定生成 Visual c + + 应用程序的目录*工具集*。<br /><br /> *年*和*版本*占位符由 Visual Studio 2017 和更高版本。 *版本*占位符为 Visual Studio 2012 的 V110、 V120 对于 Visual Studio 2013 或 Visual Studio 2015 的 V140。 *平台*占位符表示 ARM、 Win32、 或 x64 子目录。 *工具集*占位符表示的工具集子目录，例如，v140 构建 Windows 应用程序通过使用 Visual Studio 2015 工具集，v120_xp 生成适用于使用 Visual Studio 2013 工具集或到 v110_wp80 的 Windows XP通过使用 Visual Studio 2012 工具集生成 Windows Phone 8.0 应用。<br /><br />包含启用生成以生成 Visual c + + 2008年或 Visual c + + 2010年应用程序的目录的路径不包括*版本*，和*平台*占位符表示Itanium、 Win32、 或 x64 子目录。 *工具集*占位符表示 v90 或 v100 工具集子目录。|  
   
 ### <a name="support-files"></a>支持文件  
   

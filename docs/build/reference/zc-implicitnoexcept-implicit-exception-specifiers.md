@@ -1,10 +1,10 @@
 ---
-title: "/Zc: implicitnoexcept （隐式异常说明符） |Microsoft 文档"
-ms.custom: 
+title: '/Zc: implicitnoexcept （隐式异常说明符） |Microsoft 文档'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:implicitNoexcept
 dev_langs:
@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77308d262022f0cddbbb7008fe8277f7768afd68
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 7e420017056d6857a2809ce6eb85fe99b6f3866f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept（隐式异常说明符）
 
-当**/zc: implicitnoexcept**指定选项，编译器将添加一种隐式[noexcept](../../cpp/noexcept-cpp.md)异常说明符到编译器定义的特殊成员函数和用户定义的析构函数和释放。 默认情况下， **/zc: implicitnoexcept**启用以符合 ISO C + + 11 标准。 关闭此选项将对用户定义的析构函数和释放函数以及编译器定义的特殊成员函数禁用隐式 `noexcept`。
+当 **/zc: implicitnoexcept**指定选项，编译器将添加一种隐式[noexcept](../../cpp/noexcept-cpp.md)异常说明符到编译器定义的特殊成员函数和用户定义的析构函数和释放。 默认情况下， **/zc: implicitnoexcept**启用以符合 ISO C + + 11 标准。 关闭此选项将对用户定义的析构函数和释放函数以及编译器定义的特殊成员函数禁用隐式 `noexcept`。
 
 ## <a name="syntax"></a>语法
 
@@ -39,11 +38,11 @@ ms.lasthandoff: 03/15/2018
 
 编译器不会为通过使用显式 `noexcept` 或 `throw` 说明符或 `__declspec(nothrow)` 属性声明的函数生成隐式异常说明符。
 
-默认情况下， **/zc: implicitnoexcept**已启用。 [/ 宽松-](permissive-standards-conformance.md)选项不影响**/zc: implicitnoexcept**。
+默认情况下， **/zc: implicitnoexcept**已启用。 [/ 宽松-](permissive-standards-conformance.md)选项不影响 **/zc: implicitnoexcept**。
 
-如果此选项已禁用通过指定**/zc: implicitnoexcept-**，由编译器生成不隐式异常说明符。 此行为与 Visual Studio 2013 相同，其中不具有异常说明符的析构函数和释放函数可具有相同的 `throw` 语句。 默认情况下，以及何时**/zc: implicitnoexcept**指定，如果`throw`语句遇到运行时在具有隐式函数`noexcept(true)`说明符，它会导致立即调用`std::terminate`，和不保证异常处理程序的正常展开行为。 为了帮助识别这种情况下，编译器将生成[编译器警告 （等级 1） C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)。 如果`throw`是有意的我们建议你更改函数声明，以使用显式`noexcept(false)`而不是使用说明符**/zc: implicitnoexcept-**。
+如果此选项已禁用通过指定 **/zc: implicitnoexcept-**，由编译器生成不隐式异常说明符。 此行为与 Visual Studio 2013 相同，其中不具有异常说明符的析构函数和释放函数可具有相同的 `throw` 语句。 默认情况下，以及何时 **/zc: implicitnoexcept**指定，如果`throw`语句遇到运行时在具有隐式函数`noexcept(true)`说明符，它会导致立即调用`std::terminate`，和不保证异常处理程序的正常展开行为。 为了帮助识别这种情况下，编译器将生成[编译器警告 （等级 1） C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)。 如果`throw`是有意的我们建议你更改函数声明，以使用显式`noexcept(false)`而不是使用说明符 **/zc: implicitnoexcept-**。
 
-此示例演示用户定义的析构函数，没有显式异常说明符的行为方式时**/zc: implicitnoexcept**选项进行设置或禁用。 若要显示的行为设置时，通过使用`cl /EHsc /W4 implicitNoexcept.cpp`。 若要显示禁用时的行为，编译使用`cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`。
+此示例演示用户定义的析构函数，没有显式异常说明符的行为方式时 **/zc: implicitnoexcept**选项进行设置或禁用。 若要显示的行为设置时，通过使用`cl /EHsc /W4 implicitNoexcept.cpp`。 若要显示禁用时的行为，编译使用`cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`。
 
 ```cpp
 // implicitNoexcept.cpp
@@ -119,7 +118,7 @@ int main()
 }
 ```
 
-通过使用默认设置在编译时**/zc: implicitnoexcept**，该示例生成此输出：
+通过使用默认设置在编译时 **/zc: implicitnoexcept**，该示例生成此输出：
 
 ```Output
 ~B Exception caught
@@ -127,7 +126,7 @@ Unexpected throw caused std::terminate
 Exit returning EXIT_FAILURE
 ```
 
-通过使用的设置在编译时**/zc: implicitnoexcept-**，该示例生成此输出：
+通过使用的设置在编译时 **/zc: implicitnoexcept-**，该示例生成此输出：
 
 ```Output
 ~B Exception caught
@@ -143,7 +142,7 @@ Exit returning EXIT_SUCCESS
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含**/zc: implicitnoexcept**或**/zc: implicitnoexcept-** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/zc: implicitnoexcept**或 **/zc: implicitnoexcept-** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

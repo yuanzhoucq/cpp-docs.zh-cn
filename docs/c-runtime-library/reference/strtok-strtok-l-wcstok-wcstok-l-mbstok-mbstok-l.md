@@ -2,11 +2,8 @@
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbstok_l
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23d2d0e368b755600b2d605bfe33bcd636bede40
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -119,7 +114,7 @@ unsigned char *_mbstok(
 
 在第一个调用**strtok**，该函数跳过前导分隔符，并将指针返回到中的第一个标记*strToken*，终止 null 字符的标记。 多个令牌的更改会损坏外的其余部分*strToken*对的调用一系列**strtok**。 每次调用**strtok**修改*strToken*的方法是插入 null 字符后**令牌**该调用返回。 若要读取下一个令牌以从*strToken*，调用**strtok**与**NULL**值*strToken*自变量。 **NULL** *strToken*参数可以使**strtok**搜索中修改后的下一个标记*strToken*。 *StrDelimit*自变量可以采用到下一次调用之间的任何值，以便分隔符集可能会有所不同。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 每个函数均使用线程本地静态变量，以将字符串分析为标记。 因此，多线程可以同时调用这些函数，不会产生不良影响。 但是，在单个线程内，对任一这些函数的交替调用很可能导致数据损坏和结果不准确。 解析不同的字符串时，在解析完一个字符串后再开始解析下一个字符串。 此外，请注意，从调用其他函数的循环内调用其中任一函数可能引发潜在危险。 如果其他函数最终使用这些函数之一，则导致调用交错的序列，从而触发数据损坏。

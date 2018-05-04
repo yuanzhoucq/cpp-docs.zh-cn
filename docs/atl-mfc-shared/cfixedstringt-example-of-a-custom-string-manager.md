@@ -1,40 +1,35 @@
 ---
-title: "CFixedStringT： 示例的自定义字符串 Manager |Microsoft 文档"
-ms.custom: 
+title: CFixedStringT： 示例的自定义字符串 Manager |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT： 示例的自定义字符串管理器
-ATL 库实现的类所使用的自定义字符串管理器的一个示例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)、 调用**那么 CFixedStringMgr**。 `CFixedStringT`派生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)并实现的一部分分配其字符数据字符串`CFixedStringT`对象本身，只要字符串是否小于指定的长度比**t_nChars**模板参数的`CFixedStringT`。 使用此方法，该字符串不需要，堆，除非字符串的长度超过固定的缓冲区的大小。 因为`CFixedStringT`并非总是不使用堆分配其字符串数据，它不能使用**CAtlStringMgr**作为其字符串经理。 它使用自定义字符串管理器 (**那么 CFixedStringMgr**)、 实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)接口。 此接口已在[实现的自定义字符串管理器 （高级方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。  
+ATL 库实现的类所使用的自定义字符串管理器的一个示例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)、 调用**那么 CFixedStringMgr**。 `CFixedStringT` 派生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)并实现的一部分分配其字符数据字符串`CFixedStringT`对象本身，只要字符串是否小于指定的长度比**t_nChars**模板参数的`CFixedStringT`。 使用此方法，该字符串不需要，堆，除非字符串的长度超过固定的缓冲区的大小。 因为`CFixedStringT`并非总是不使用堆分配其字符串数据，它不能使用**CAtlStringMgr**作为其字符串经理。 它使用自定义字符串管理器 (**那么 CFixedStringMgr**)、 实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)接口。 此接口已在[实现的自定义字符串管理器 （高级方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。  
   
  构造函数**那么 CFixedStringMgr**采用三个参数：  
   
--   **pData:**指向固定的`CStringData`要使用的结构。  
+-   **pData:** 指向固定的`CStringData`要使用的结构。  
   
--   **nChars:**最大字符数`CStringData`结构可以容纳。  
+-   **nChars:** 最大字符数`CStringData`结构可以容纳。  
   
--   **pMgr:**指向的指针`IAtlStringMgr`接口的"备份字符串 manager"。  
+-   **pMgr:** 指向的指针`IAtlStringMgr`接口的"备份字符串 manager"。  
   
  构造函数存储的值`pData`和**pMgr**在其各自的成员变量 (`m_pData`和**m_pMgr**)。 然后，它设置为零，可用长度等于最大大小固定的缓冲区，以及为-1 的引用计数的缓冲区的长度。 引用计数值指示锁定缓冲区和要使用的此实例**那么 CFixedStringMgr**作为字符串经理。  
   
@@ -65,7 +60,7 @@ ATL 库实现的类所使用的自定义字符串管理器的一个示例[CFixed
   
  不使用固定的缓冲区时**那么 CFixedStringMgr**可确保它进行初始化长度为零。 这使它可以用作零的字符串。 另一个好处，`nAllocLength`固定的缓冲区的成员始终设置为固定的缓冲区的完整大小。 这意味着，`CStringT`可以增长情况下调用字符串[IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate)，即使零的字符串。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** cstringt.h  
   
 ## <a name="see-also"></a>请参阅  

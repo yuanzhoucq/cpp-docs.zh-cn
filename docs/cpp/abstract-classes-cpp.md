@@ -2,11 +2,8 @@
 title: 抽象类 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23cdff4d0e2eb213a98b2e90d7df41af226edd86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60f46ccdae3b92f60708354078fafb244d29bbe3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="abstract-classes-c"></a>抽象类 (C++)
 抽象类作为可从中派生更具体的类的一般概念的表达。 您不能创建抽象类类型的对象；但可以使用指向抽象类类型的指针和对它们的引用。  
@@ -66,7 +61,7 @@ private:
   
  可以为抽象类定义纯虚函数，但是只能通过使用以下语法直接调用：  
   
- *抽象类名* `::` *函数名称***（)**  
+ *抽象类名* `::` *函数的名称 * * * （)**  
   
  这有助于设计基类包括纯虚析构函数的类层次结构，因为在销毁对象的过程中始终会调用基类析构函数。 请看下面的示例：  
   

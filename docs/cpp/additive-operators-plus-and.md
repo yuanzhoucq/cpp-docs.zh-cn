@@ -2,11 +2,8 @@
 title: '加法运算符: + 和-|Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>加法运算符：+ 和 -
 ## <a name="syntax"></a>语法  
@@ -58,19 +53,19 @@ expression - expression
   
 |类型|含义|  
 |----------|-------------|  
-|*arithmetic*|整型和浮点类型统称为“算术”类型。|  
+|*算术运算*|整型和浮点类型统称为“算术”类型。|  
 |*integral*|所有大小（long、short）和枚举数的 char 和 int 类型为“整数”类型。|  
 |*scalar*|标量操作数是算术类型或指针类型的操作数。|  
   
  这些运算符的合法组合为：  
   
- *arithmetic* + *arithmetic*  
+ *算术* + *算术*  
   
  *scalar* + *integral*  
   
  *integral* + *scalar*  
   
- *arithmetic* - *arithmetic*  
+ *算术* - *算术*  
   
  *scalar* - *scalar*  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>指针减法  
  如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式产生类型 ptrdiff_t 有符号整数结果 (在标准包含文件中定义\<stddef.h >)。  
   
- 其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向的指针 (*n* - *我*) 个数组元素，其中*n*是由指向元素原始指针和*我*是第二个操作数的整数值。  
+ 其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向的指针 (*n* - *我*) 个数组元素，其中*n*元素指向通过原始指针和*我*是第二个操作数的整数值。  
   
 ## <a name="see-also"></a>请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   

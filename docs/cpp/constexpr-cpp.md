@@ -2,28 +2,23 @@
 title: constexpr （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - constexpr_cpp
 dev_langs:
 - C++
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
-caps.latest.revision: 3
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 1f95f6c98138ff1eb52750c1b8593795ca28c784
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -85,7 +80,7 @@ A **constexpr**函数或构造函数是隐式**内联**。
 
 - 它不能是[虚拟](../cpp/virtual-cpp.md)。 A 不能定义为 constexpr 构造函数，如果封闭类具有任何虚拟基类。
 
-- 正文可以定义为**= 默认**或**= 删除**。
+- 正文可以定义为 **= 默认**或 **= 删除**。
 
 - 不能包含正文**goto**语句或的 try 块。
 
@@ -116,7 +111,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="extern-constexpr"></a>extern constexpr
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)编译器选项使编译器将[外部链接]()对使用声明的变量**extern constexpr**。 在早期版本的 Visual Studio 中，并按默认或如果**/Zc:externConstexpr-**指定，则 Visual Studio 将应用到的内部链接**constexpr**变量即使**extern**使用关键字。 **/Zc:externConstexpr**选项是在 Visual Studio 2017 更新 15.6 中开始提供。 和默认处于关闭状态。 /Permissive-option 不会启用 /Zc:externConstexpr。
+[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)编译器选项使编译器将[外部链接]()对使用声明的变量**extern constexpr**。 在早期版本的 Visual Studio 中，并按默认或如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量即使**extern**使用关键字。 **/Zc:externConstexpr**选项是在 Visual Studio 2017 更新 15.6 中开始提供。 和默认处于关闭状态。 /Permissive-option 不会启用 /Zc:externConstexpr。
 
 ## <a name="example"></a>示例
 
@@ -194,7 +189,7 @@ int main()
 
 Visual Studio 2015
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [声明和定义](../cpp/declarations-and-definitions-cpp.md)
 - [const](../cpp/const-cpp.md)

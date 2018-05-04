@@ -2,11 +2,8 @@
 title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnset_s_l
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e9c66670b753d41b5acebaf4a7956c270eac46
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 786f802a25964b118b997a2d5af7376932f8f74f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
@@ -155,7 +150,7 @@ errno_t _mbsnset_s_l(
 
 **_wcsnset_s**和 **_mbsnset_s**宽字符及多字节字符版本的 **_strnset_s**。 字符串自变量 **_wcsnset_s**是宽字符字符串; 的 **_mbsnset_s**是 amultibyte 字符字符串。 否则这三个函数否则具有相同行为。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 

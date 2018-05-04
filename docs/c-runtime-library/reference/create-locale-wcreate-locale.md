@@ -2,11 +2,8 @@
 title: _create_locale、_wcreate_locale | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _create_locale
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 420f18b3bac3daf538ee5eee48b8e57bedbdf9c1
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale、_wcreate_locale
 
@@ -89,11 +84,11 @@ _locale_t _wcreate_locale(
 |*类别*标志|影响|
 |-|-|
 **LC_ALL**|以下列出了所有类别。
-**LC_COLLATE**|**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，和**wcsxfrm**函数。
-**LC_CTYPE**|字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，和**mbtowc**，不受影响)。
+LC_COLLATE|**Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，和**wcsxfrm**函数。
+LC_CTYPE|字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，和**mbtowc**，不受影响)。
 **LC_MONETARY**|返回的货币格式信息**localeconv**函数。
-**LC_NUMERIC**|十进制点字符格式化的输出例程 (如**printf**)、 数据转换例程，并返回的非货币格式设置信息**localeconv**。 除了十进制点字符， **LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。
-**LC_TIME**|**Strftime**和**wcsftime**函数。
+LC_NUMERIC|十进制点字符格式化的输出例程 (如**printf**)、 数据转换例程，并返回的非货币格式设置信息**localeconv**。 除了十进制点字符， **LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。
+LC_TIME|**Strftime**和**wcsftime**函数。
 
 此函数验证*类别*和*区域设置*参数。 如果类别参数不是上表中给出的值之一，或如果*区域设置*是**NULL**，该函数将返回**NULL**。
 

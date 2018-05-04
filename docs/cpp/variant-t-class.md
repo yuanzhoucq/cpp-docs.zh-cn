@@ -1,12 +1,9 @@
 ---
-title: "_variant_t 类 |Microsoft 文档"
-ms.custom: 
+title: _variant_t 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 0ebe850e4b0d0d9fd352df0e60c4ea0737b9fd8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-class"></a>_variant_t 类
 **Microsoft 专用**  
@@ -57,15 +52,15 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |[运算符 =](../cpp/variant-t-operator-equal.md)|将新值赋给现有 `_variant_t` 对象。|  
-|[operator ==, !=](../cpp/variant-t-relational-operators.md)|比较两个 `_variant_t` 对象是否相等。|  
+|[运算符 = =、 ！ =](../cpp/variant-t-relational-operators.md)|比较两个 `_variant_t` 对象是否相等。|  
 |[提取器](../cpp/variant-t-extractors.md)|从封装中提取数据**VARIANT**对象。|  
   
 **结束 Microsoft 专用**  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<comutil.h >  
   
- **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
+ **Lib:** 对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
 ## <a name="see-also"></a>请参阅  
  [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

@@ -2,11 +2,8 @@
 title: _CrtSetBreakAlloc | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e14e1d40d5d20b9759d115eaf2fd29b3cae57172
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -68,7 +63,7 @@ long _CrtSetBreakAlloc(
 
 **_CrtSetBreakAlloc**允许应用程序的内存分配的特定点处中断并重新跟踪该请求的源执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetBreakAlloc**在预处理过程中删除。
 
-对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当其中一个调试转储函数报告有关某个内存块的信息时，该编号将括在大括号中，例如 {36}。
+对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当其中一个调试转储函数报告有关某个内存块的信息时，该编号将括在括号内，如{36}。
 
 详细了解如何 **_CrtSetBreakAlloc**可以用于其他内存管理函数，请参阅[跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 

@@ -1,12 +1,9 @@
 ---
-title: "浮点限制 |Microsoft 文档"
-ms.custom: 
+title: 浮点限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - floating-point numbers [C++]
 - floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6406d3d2d81fa3025a024606da68d61b5dcefdb7
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 7bba2bef20cbe5820d2a7feaae5743f151aea9da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="floating-limits"></a>浮点限制
 **Microsoft 专用**  
@@ -37,7 +32,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="limits-on-floating-point-constants"></a>对浮点常量的限制  
   
-|返回的常量|含义|“值”|  
+|返回的常量|含义|值|  
 |--------------|-------------|-----------|  
 |FLT_DIG DBL_DIG LDBL_DIG|位数 q，以便 q 十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6 15 15|  
 |FLT_EPSILON DBL_EPSILON LDBL_EPSILON|最小正数 x，以便 x + 1.0 不等于 1.0。|1.192092896e-07F 2.2204460492503131e-016 2.2204460492503131e-016|  

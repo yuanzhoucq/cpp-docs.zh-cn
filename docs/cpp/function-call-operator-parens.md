@@ -2,11 +2,8 @@
 title: '函数调用运算符: （) |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa2a61dff4f20c5da7157a8a60700d9a8a10c06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-call-operator-"></a>函数调用运算符：()
 Postfix-expression 后跟函数调用运算符**（)**，指定函数调用。  

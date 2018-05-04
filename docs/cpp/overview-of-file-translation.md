@@ -2,11 +2,8 @@
 title: 文件转换概述 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
 C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的每个文件按以下概念顺序进行翻译（实际顺序遵循“似同”规则：必须进行翻译，就似同已执行这些步骤一样）：  
@@ -37,7 +32,7 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
   
 2.  预处理。 此翻译阶段将引入引用的辅助源文件`#include`指令，处理"stringizing"和"字符化"指令，并执行标记粘贴和宏扩展 (请参阅[预处理器指令](../preprocessor/preprocessor-directives.md)在*预处理器参考*有关详细信息)。 预处理阶段的结果是一系列共同用于定义“翻译单元”的标记。  
   
-     预处理器指令总是以数字符号开头 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如:  
+     预处理器指令总是以数字符号开头 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如：  
   
     ```  
     #include <iostream>  // Include text of iostream in   

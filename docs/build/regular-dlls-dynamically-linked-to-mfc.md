@@ -1,13 +1,10 @@
 ---
-title: "动态链接到 MFC 的正则 MFC Dll |Microsoft 文档"
-ms.custom: 
+title: 动态链接到 MFC 的正则 MFC Dll |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e20a3937786d65945256eeadcf0bf08b0314470
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>动态链接到 MFC 的正则 MFC Dll
 MFC DLL 动态链接到 MFC 正则表达式是在内部，使用 MFC 的 DLL，可以由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 名称所述，使用动态链接库版本的 MFC （也称为 MFC 的共享版本） 进行构建这种类型的 DLL。 函数通常是从正则表达式使用标准的 C 界面的 MFC DLL 导出的。  
@@ -50,7 +45,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
  常规 MFC DLL 动态链接到 MFC 具有以下要求：  
   
--   这些 Dll 在编译时带有**_AFXDLL**定义，就像动态链接到 MFC DLL 的可执行文件。 但是**_USRDLL**也被定义一样静态链接到 MFC 常规 MFC DLL。  
+-   这些 Dll 在编译时带有 **_AFXDLL**定义，就像动态链接到 MFC DLL 的可执行文件。 但是 **_USRDLL**也被定义一样静态链接到 MFC 常规 MFC DLL。  
   
 -   这种类型的 DLL 必须实例化`CWinApp`-派生类。  
   

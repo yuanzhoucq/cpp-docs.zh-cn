@@ -2,26 +2,21 @@
 title: 一般规则和限制 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f92844e993671a3423c04523ccf4e03f7f7e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218bd2fb58ccc4d3a3c2e1d297be930350577d18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-and-limitations"></a>一般规则和限制
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -30,7 +25,7 @@ ms.lasthandoff: 12/21/2017
   
      如果使用 `dllexport` 特性声明函数或对象，则其定义必须出现在同一程序的某个模块中。 否则，将生成链接器错误。  
   
--   如果你的程序中的单个模块包含**dllimport**和`dllexport`声明相同的函数或对象，`dllexport`特性将优先于**dllimport**属性。 但是，会生成编译器警告。 例如:  
+-   如果你的程序中的单个模块包含**dllimport**和`dllexport`声明相同的函数或对象，`dllexport`特性将优先于**dllimport**属性。 但是，会生成编译器警告。 例如：  
   
     ```  
     __declspec( dllimport ) int i;  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
                                      // dllexport takes precedence.  
     ```  
   
--   C++ 中，你可以初始化全局声明或静态局部数据指针或与声明的数据对象的地址**dllimport**属性，会生成错误。 在 c。此外，你可以在其中初始化声明的函数与的地址的静态局部函数指针**dllimport**属性。 在 C 中，此类赋值会将指针设置为指向 DLL 导入形式转换 (thunk)（将控制权转交给函数的代码存根）的地址而不是函数的地址。 在 C++ 中，此类赋值会将指针设置为指向函数的地址。 例如:  
+-   C++ 中，你可以初始化全局声明或静态局部数据指针或与声明的数据对象的地址**dllimport**属性，会生成错误。 在 c。此外，你可以在其中初始化声明的函数与的地址的静态局部函数指针**dllimport**属性。 在 C 中，此类赋值会将指针设置为指向 DLL 导入形式转换 (thunk)（将控制权转交给函数的代码存根）的地址而不是函数的地址。 在 C++ 中，此类赋值会将指针设置为指向函数的地址。 例如：  
   
     ```  
     __declspec( dllimport ) void func1( void );  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果将应用`dllexport`到具有一个基类，未标记为该类的正则类`dllexport`，编译器将生成 C4275。  
   
-     如果基类是类模板的专用化，则编译器将生成相同的警告。 若要解决此问题，请将基类标记为 `dllexport`。 类模板的专用化的问题是 where to place **__declspec （dllexport)**; 你不允许标记类模板。 相反，应显式实例化类模板并将此显式实例化标记为 `dllexport`。 例如:  
+     如果基类是类模板的专用化，则编译器将生成相同的警告。 若要解决此问题，请将基类标记为 `dllexport`。 类模板的专用化的问题是 where to place **__declspec （dllexport)**; 你不允许标记类模板。 相反，应显式实例化类模板并将此显式实例化标记为 `dllexport`。 例如：  
   
     ```  
     template class __declspec(dllexport) B<int>;  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
     // ...  
     ```  
   
-     如果模板自变量是派生类，则此解决方法将失败。 例如:  
+     如果模板自变量是派生类，则此解决方法将失败。 例如：  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  

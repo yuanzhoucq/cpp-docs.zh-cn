@@ -2,11 +2,8 @@
 title: '逻辑或运算符: | ||Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '||'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-or-operator-"></a>逻辑或运算符：||
 ## <a name="syntax"></a>语法  
@@ -56,7 +51,7 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  在上面的示例中，如果 `x` 与 `w`、`y` 或 `z` 相等，则 `printf` 函数的第二个参数的计算结果将为 true，并打印值 1。 否则，它的计算结果将为 false，并打印值 0。 只要其中一个条件的计算结果为 true，计算便会停止。  
   
-## <a name="operator-keyword-for-124124"></a>运算符关键字 & #124; & #124;  
+## <a name="operator-keyword-for-124124"></a>运算符关键字&#124;&#124;  
  **或**运算符是文本等效项`||`。 有两种方法来访问**或**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
 ## <a name="example"></a>示例  

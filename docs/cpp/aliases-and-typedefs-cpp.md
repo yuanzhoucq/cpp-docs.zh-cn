@@ -2,28 +2,23 @@
 title: 别名和 typedef （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
 dev_langs:
 - C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-and-typedefs-c"></a>别名和 typedef (C++)
 你可以使用*别名声明*来声明一个名称将用于以前声明的类型的同义词。 (此机制也称为非正式的语气*类型别名*)。 你还可以使用此机制创建*别名模板*，它可以是对自定义分配器特别有用。  
@@ -196,7 +191,7 @@ void myproc( int )
 }  
 ```  
   
- 当通过与 typedef 相同的名称声明本地范围标识符时，或者在同一范围内或内部范围内声明结构或联合的成员时，必须指定类型说明符。 例如:  
+ 当通过与 typedef 相同的名称声明本地范围标识符时，或者在同一范围内或内部范围内声明结构或联合的成员时，必须指定类型说明符。 例如：  
   
 ```  
 typedef char FlagType;  
@@ -224,7 +219,7 @@ int;  // Illegal declaration
  可以使用 typedef 声明任何类型，包括指针、函数和数组类型。 只要定义具有与声明相同的可见性，那么在定义结构或联合类型之前，您就可以为指向结构或联合类型的指针声明 typedef 名称。  
   
 ### <a name="examples"></a>示例  
- `typedef` 声明的一个用途是使声明更加统一和精简。 例如:  
+ `typedef` 声明的一个用途是使声明更加统一和精简。 例如：  
   
 ```cpp  
 typedef char CHAR;          // Character type.  
@@ -234,7 +229,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- 若要使用 `typedef` 在同一声明中指定基本类型和派生类型，则可以使用逗号分隔声明符。 例如:  
+ 若要使用 `typedef` 在同一声明中指定基本类型和派生类型，则可以使用逗号分隔声明符。 例如：  
   
 ```  
 typedef char CHAR, *PSTR;  
@@ -284,7 +279,7 @@ int main()
 ```  
   
 ### <a name="re-declaration-of-typedefs"></a>typedef 的重新声明  
- `typedef` 声明可用于将相同的名称重新声明为引用相同的类型。 例如:  
+ `typedef` 声明可用于将相同的名称重新声明为引用相同的类型。 例如：  
   
 ```cpp  
 // FILE1.H  

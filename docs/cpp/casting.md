@@ -1,12 +1,9 @@
 ---
-title: "强制转换 |Microsoft 文档"
-ms.custom: 
+title: 强制转换 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="casting"></a>强制转换
 在 C++ 语言中，如果类从包含虚函数的基类派生，则指向基类类型的指针可用于调用派生类对象中包含的虚函数的实现。 包含虚函数的类有时被称为“多态类”。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  如下图所示，可对类型为 `C` 的对象进行可视化。  
   
- ![类 C sub &#45; 个对象 B 和 A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![C 类子&#45;对象 B 和 A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 带有 B 子对象和 A 子对象的类 C  
   
  给定 `C` 类的一个实例，存在 `B` 子对象和 `A` 子对象。 包括 `C` 和 `A` 子对象的 `B` 实例是“完整对象。”  

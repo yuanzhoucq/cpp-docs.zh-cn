@@ -2,11 +2,8 @@
 title: CSnapInPropertyPageImpl 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13714553bdf926b00bd4dd76e039d89c7f78f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 类
 此类提供用于实现管理单元在属性页上对象的方法。  
@@ -91,17 +86,17 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE**使用结构`CSnapInPropertyPageImpl`对象。|  
   
 ## <a name="remarks"></a>备注  
- `CSnapInPropertyPageImpl`提供了管理单元在属性页上对象的基本实现。 管理单元在属性页的基本功能使用多个不同的接口来实现，并将映射类型。  
+ `CSnapInPropertyPageImpl` 提供了管理单元在属性页上对象的基本实现。 管理单元在属性页的基本功能使用多个不同的接口来实现，并将映射类型。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CDialogImplBase`  
   
  `CSnapInPropertyPageImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsnap.h  
   
-##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
  对模式属性表的页面中的数据进行了不可恢复的更改后调用此函数。  
   
 ```
@@ -113,7 +108,7 @@ void CancelToClose();
   
  `CancelToClose`成员函数不会在无模式属性表中，执行任何操作，因为无模式属性表没有**取消**默认情况下的按钮。  
   
-##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  构造 `CSnapInPropertyPageImpl` 对象。  
   
 ```
@@ -127,7 +122,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>备注  
  若要初始化的基础结构，调用[CSnapInPropertyPageImpl::Create](#create)。  
   
-##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>  CSnapInPropertyPageImpl::Create  
  调用此函数可初始化的属性页的基础结构。  
   
 ```
@@ -140,8 +135,8 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>备注  
  首先应调用[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)之前调用此函数。  
   
-##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
- `m_psp`是其成员存储的特征的结构**PROPSHEETPAGE**。  
+##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp  
+ `m_psp` 是其成员存储的特征的结构**PROPSHEETPAGE**。  
   
 ```
 PROPSHEETPAGE m_psp;
@@ -152,7 +147,7 @@ PROPSHEETPAGE m_psp;
   
  此结构，包括其成员的列表的详细信息请参阅[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
   
-##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  用户单击时，此成员函数将调用**确定**或**立即应用**按钮。  
   
 ```
@@ -169,7 +164,7 @@ BOOL OnApply();
   
  默认实现`OnApply`返回**TRUE**。  
   
-##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp  
  用户单击时，此成员函数将调用**帮助**为属性页的按钮。  
   
 ```
@@ -179,7 +174,7 @@ void OnHelp();
 ### <a name="remarks"></a>备注  
  重写该成员函数以显示属性页的帮助。  
   
-##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive  
  页不再是活动的页面时调用此成员函数。  
   
 ```
@@ -192,7 +187,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>备注  
  重写该成员函数以执行特殊的数据验证任务。  
   
-##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel  
  用户单击时，此成员函数将调用**取消**按钮，然后在取消之前操作发生。  
   
 ```
@@ -207,7 +202,7 @@ BOOL OnQueryCancel();
   
  默认实现`OnQueryCancel`返回**TRUE**。  
   
-##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset  
  用户单击时，此成员函数将调用**取消**按钮。  
   
 ```
@@ -219,7 +214,7 @@ void OnReset();
   
  重写该成员函数以指定程序采用当用户单击什么操作**取消**按钮。  
   
-##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive  
  由用户选择和成为活动页面页时调用此成员函数。  
   
 ```
@@ -234,7 +229,7 @@ BOOL OnSetActive();
   
  默认实现返回**TRUE**。  
   
-##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack  
  用户单击时，此成员函数将调用**回**向导中的按钮。  
   
 ```
@@ -252,7 +247,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>备注  
  重写该成员函数以指定用户必须采取时某些操作**回**单击按钮。  
   
-##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CSnapInPropertyPageImpl::OnWizardFinish  
  用户单击时，此成员函数将调用**完成**向导中的按钮。  
   
 ```
@@ -265,7 +260,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>备注  
  重写该成员函数以指定用户必须采取时某些操作**完成**单击按钮。  
   
-##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext  
  用户单击时，此成员函数将调用`Next`向导中的按钮。  
   
 ```
@@ -283,7 +278,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>备注  
  重写该成员函数以指定用户必须采取时某些操作`Next`单击按钮。  
   
-##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings  
  调用此成员函数以将消息转发到属性表中每一页。  
   
 ```
@@ -303,7 +298,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>备注  
  如果页面返回非零值，属性表不后续页中发送消息。  
   
-##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified  
  调用此成员函数可启用或禁用**立即应用**按钮，基于是否属性页中的设置应该应用于相应的外部对象。  
   
 ```
@@ -315,7 +310,7 @@ void SetModified(BOOL bChanged = TRUE);
  [in]**TRUE**以指示是否尚未中应用; 的上次修改的属性页设置**FALSE**以指示已应用，或应忽略的属性页设置。  
   
 ### <a name="remarks"></a>备注  
- 属性表保留的跟踪的页面的"脏"，它是、 属性页，为其调用了**SetModified (TRUE)**。 **立即应用**将始终启用按钮，如果调用**SetModified (TRUE)**页面之一。 **立即应用**在调用时，将禁用按钮**SetModified (FALSE)**之一的页面，但只有无其他页面"脏"。  
+ 属性表保留的跟踪的页面的"脏"，它是、 属性页，为其调用了**SetModified (TRUE)**。 **立即应用**将始终启用按钮，如果调用**SetModified (TRUE)** 页面之一。 **立即应用**在调用时，将禁用按钮**SetModified (FALSE)** 之一的页面，但只有无其他页面"脏"。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

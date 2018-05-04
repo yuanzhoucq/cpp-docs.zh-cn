@@ -1,12 +1,9 @@
 ---
-title: "函数模板 |Microsoft 文档"
-ms.custom: 
+title: 函数模板 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721e466e5d7e77592e66aa3ebacb3ad59eb89bb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-templates"></a>函数模板
 类模板可定义一系列相关类，这些类基于在实例化时传递到类的类型参数。 函数模板类似于类模板，但定义的是一系列函数。 利用函数模板，你可以指定基于相同代码但作用于不同类型或类的函数集。 以下函数模板交换两个项：  
@@ -57,7 +52,7 @@ MySwap( j, Hello );      //error
   
  第二个 `MySwap` 调用触发了编译时错误，因为编译器无法生成具有不同类型的参数的 `MySwap` 函数。 如果使用了 void 指针，两个函数调用都将正确编译，但函数在运行时无法正常工作。  
   
- 允许显式指定函数模板的模板自变量。 例如:  
+ 允许显式指定函数模板的模板自变量。 例如：  
   
 ```cpp
 // function_templates2.cpp  

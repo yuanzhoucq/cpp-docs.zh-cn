@@ -11,18 +11,17 @@ f1_keywords:
 - POGOSAFEMODE
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886fbae5fbeb7606ec0321595f061d2262988170
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (在线程安全模式下的运行 PGO)
 
-**/POGOSAFEMODE 选项已弃用从 Visual Studio 2015 开始**。 使用[/GENPROFILE： 确切](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)和**/GENPROFILE:NOEXACT**改为选项。 **/POGOSAFEMODE**链接器选项指定检测的生成创建要用于数据期间按配置优化 (PGO) 配置文件数据捕获定型运行的线程安全模式。
+**/POGOSAFEMODE 选项已弃用从 Visual Studio 2015 开始**。 使用[/GENPROFILE： 确切](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)和 **/GENPROFILE:NOEXACT**改为选项。 **/POGOSAFEMODE**链接器选项指定检测的生成创建要用于数据期间按配置优化 (PGO) 配置文件数据捕获定型运行的线程安全模式。
 
 ## <a name="syntax"></a>语法
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 
 默认情况下，PGO 分析会在运行快速模式。 **/ POGOSAFEMODE**是仅需要你想要使用安全模式。
 
-若要运行 PGO 分析在安全模式下，你必须使用**/GENPROFILE： 确切**（首选），或使用环境变量[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md)或链接器开关**/POGOSAFEMODE**，取决于系统。 如果你正在执行分析在 x64 计算机，你必须使用链接器开关。 如果你正在执行分析 x86 计算机，你可以使用链接器开关或开始 PGO 检测过程之前将环境变量定义为任何值。
+若要运行 PGO 分析在安全模式下，你必须使用 **/GENPROFILE： 确切**（首选），或使用环境变量[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md)或链接器开关 **/POGOSAFEMODE**，取决于系统。 如果你正在执行分析在 x64 计算机，你必须使用链接器开关。 如果你正在执行分析 x86 计算机，你可以使用链接器开关或开始 PGO 检测过程之前将环境变量定义为任何值。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
@@ -48,7 +47,7 @@ ms.lasthandoff: 03/22/2018
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
-1. 输入**/POGOSAFEMODE**选项到**其他选项**框。 选择**确定**以保存所做的更改。
+1. 输入 **/POGOSAFEMODE**选项到**其他选项**框。 选择**确定**以保存所做的更改。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

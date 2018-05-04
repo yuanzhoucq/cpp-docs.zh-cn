@@ -2,11 +2,8 @@
 title: strspn、wcsspn、_mbsspn、_mbsspn_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsspn_l
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 616c00f1e5043788591d47fabfcbadab44dba654
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn、wcsspn、_mbsspn、_mbsspn_l
 
@@ -111,7 +106,7 @@ null 终止的字符集。
 
 **wcsspn**和 **_mbsspn**宽字符及多字节字符版本的**strspn**。 自变量**wcsspn**是宽字符字符串; 而的 **_mbsspn**是多字节字符字符串。 **_mbsspn**验证其参数。 如果*str*或*strCharSet*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbspn**设置**errno**到**EINVAL**并返回 0。 **strspn**和**wcsspn**不会验证其参数。 否则这三个函数否则具有相同行为。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

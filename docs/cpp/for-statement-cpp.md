@@ -2,28 +2,23 @@
 title: for 语句 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for 语句 (C++)
 重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)。  
@@ -75,7 +70,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` 和 `loop-expression` 可以包含以逗号分隔的多个语句。 例如:  
+ `init-expression` 和 `loop-expression` 可以包含以逗号分隔的多个语句。 例如：  
   
 ```cpp  
 #include <iostream>  
@@ -130,7 +125,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>for 循环和 C++ 标准  
- C++ 标准中提到，`for` 循环中声明的变量将在 `for` 循环结束后超出范围。 例如:  
+ C++ 标准中提到，`for` 循环中声明的变量将在 `for` 循环结束后超出范围。 例如：  
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  

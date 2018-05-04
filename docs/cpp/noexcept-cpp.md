@@ -2,35 +2,30 @@
 title: noexcept （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/12/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - noexcept_cpp
 dev_langs:
 - C++
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b78c19cb156312b6087b75e50c0e0fa28a00246
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: a0cc12c5b82e1cb8cda8243020f91614fe840502
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
-**C++ 11:**指定函数是否可能引发异常。  
+**C++ 11:** 指定函数是否可能引发异常。  
   
 ## <a name="syntax"></a>语法  
   
-> *noexcept-expression*:  
+> *noexcept 表达式*:  
 > &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
 > &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**  
   

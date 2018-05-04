@@ -2,26 +2,21 @@
 title: 统一初始化和委派构造函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
-caps.latest.revision: 3
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d8f9724ba7f26ac9df9b81c1e4c3f6213f76a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>初始化和委派构造函数
 在现代 C++ 中，你可以使用*大括号初始化*对于任何类型，而无需等号。 此外，当你具有执行类似工作的多个构造函数时，你可使用委托构造函数简化代码。  

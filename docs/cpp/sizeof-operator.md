@@ -1,12 +1,9 @@
 ---
-title: "sizeof 运算符 |Microsoft 文档"
-ms.custom: 
+title: sizeof 运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sizeof_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: ff35b6ef4674121a645fb3d80c96f5da3edded9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sizeof-operator"></a>sizeof 运算符
 产生与 `char` 类型的大小有关的操作数大小。  
@@ -49,7 +44,7 @@ sizeof  ( type-name )
   
 -   一个表达式。 当用于表达式时，无论是否使用括号都可指定 `sizeof`。 不计算表达式。  
   
- 当 `sizeof` 运算符应用到 `char` 类型的对象时，它将生成 1。 当 `sizeof` 运算符应用到数组时，它将产生该数组的字节总数，而非由数组标识符表示的指针的大小。 若要获取由数组标识符表示的指针的大小，请将其作为参数传递给使用 `sizeof` 的函数。 例如:  
+ 当 `sizeof` 运算符应用到 `char` 类型的对象时，它将生成 1。 当 `sizeof` 运算符应用到数组时，它将产生该数组的字节总数，而非由数组标识符表示的指针的大小。 若要获取由数组标识符表示的指针的大小，请将其作为参数传递给使用 `sizeof` 的函数。 例如：  
   
 ## <a name="example"></a>示例  
   

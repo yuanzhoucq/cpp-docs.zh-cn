@@ -1,12 +1,9 @@
 ---
-title: "CFirePropNotifyEvent 类 |Microsoft 文档"
-ms.custom: 
+title: CFirePropNotifyEvent 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9571ad4ba928c208c6c028f6e30cf7c27c196d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 类
 此类提供方法通知控件属性更改有关的容器的接收器。  
@@ -54,16 +49,16 @@ class CFirePropNotifyEvent
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|（静态）通知的控件属性即将更改的容器的接收器。|  
   
 ## <a name="remarks"></a>备注  
- `CFirePropNotifyEvent`有两种方法，以通知容器的接收器的控件属性已更改或即将更改。  
+ `CFirePropNotifyEvent` 有两种方法，以通知容器的接收器的控件属性已更改或即将更改。  
   
  如果实现控件的类派生自`IPropertyNotifySink`、`CFirePropNotifyEvent`方法进行调用时，调用`FireOnRequestEdit`或`FireOnChanged`。 如果你的控件类不派生自`IPropertyNotifySink`，对这些函数的调用返回`S_OK`。  
   
  有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
  通知所有连接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)指定的对象属性已更改 （上对象的每个连接点） 的接口。  
   
 ```
@@ -83,7 +78,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>备注  
  此函数可安全地调用即使你的控件不支持连接点。  
   
-##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
  通知所有连接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)即将更改指定的对象属性 （在该对象的每个连接点） 的接口。  
   
 ```

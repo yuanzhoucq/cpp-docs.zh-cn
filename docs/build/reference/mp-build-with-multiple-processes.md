@@ -1,6 +1,6 @@
 ---
-title: "/MP （使用多个进程生成） |Microsoft 文档"
-ms.custom: 
+title: /MP （使用多个进程生成） |Microsoft 文档
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP（使用多个进程生成）
 
@@ -50,7 +49,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="incompatible-options-and-language-features"></a>不兼容的选项和语言功能
 
-**/MP** 选项与一些编译器选项和语言功能不兼容。 如果您使用不兼容的编译器选项与**/MP**选项，则编译器会发出警告**D9030**并忽略**/MP**选项。 如果你使用不兼容的语言功能，编译器会发出错误[C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md)然后结束或继续，具体取决于当前编译器警告等级选项。
+**/MP** 选项与一些编译器选项和语言功能不兼容。 如果您使用不兼容的编译器选项与 **/MP**选项，则编译器会发出警告**D9030**并忽略 **/MP**选项。 如果你使用不兼容的语言功能，编译器会发出错误[C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md)然后结束或继续，具体取决于当前编译器警告等级选项。
 
 > [!NOTE]
 > 大多数选项不兼容，因为如果允许这些选项，并发执行的编译器会将其输出同时写入控制台或特定文件。 因此，输出会互相混合，产生混淆。 在某些情况下，选项组合会使性能变得更糟。
@@ -87,11 +86,11 @@ ms.lasthandoff: 02/28/2018
 
 例如，如果某计算机具有一个物理处理器，该物理处理器有一个核心，并且禁用了超线程，则这台计算机具有一个有效处理器。 相反，如果某计算机具有两个物理处理器，每个物理处理器有两个核心，且所有核心均已启用超线程，则这台计算机具有八个有效处理器。 即 （8 个有效处理器） = （2 个物理处理器） x （每个物理处理器 2 个核心） x （2 个有效处理器每个由于超线程核心）。
 
-如果省略*processMax*中的参数**/MP**选项，编译器从操作系统获取有效的处理器数，然后创建一个进程，每个有效的处理器。 但是，编译器无法保证特定处理器上执行的是哪个进程；该决策由操作系统做出。
+如果省略*processMax*中的参数 **/MP**选项，编译器从操作系统获取有效的处理器数，然后创建一个进程，每个有效的处理器。 但是，编译器无法保证特定处理器上执行的是哪个进程；该决策由操作系统做出。
 
 ### <a name="number-of-processes"></a>进程数
 
-编译器计算将用于编译源文件的进程数。 该值是在命令行上指定的源文件数和使用 **/MP** 选项显式或隐式指定的进程数中较小的值。 如果提供，可以显式设置最大进程数*processMax*参数**/MP**选项。 或者可以使用默认情况下，等同于有效的处理器数在一台计算机，如果省略*processMax*自变量。
+编译器计算将用于编译源文件的进程数。 该值是在命令行上指定的源文件数和使用 **/MP** 选项显式或隐式指定的进程数中较小的值。 如果提供，可以显式设置最大进程数*processMax*参数 **/MP**选项。 或者可以使用默认情况下，等同于有效的处理器数在一台计算机，如果省略*processMax*自变量。
 
 例如，假设指定以下命令行：
 
@@ -123,17 +122,17 @@ ms.lasthandoff: 02/28/2018
 
 #### <a name="the-msbuildexe-tool"></a>MSBUILD.exe 工具
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工具来生成解决方案和项目。 **/Maxcpucount:**_数_(或**/m:**_数_) 的 MSBuild.exe 工具的命令行选项可以生成在多个项目相同的时间。 **/MP** 编译器选项可以同时生成多个编译单元。 如果它适用于你的应用程序，可以使用 **/MP** 和/或 **/maxcpucount**缩短解决方案生成时间。
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 使用 [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) 工具生成解决方案和项目。 **/Maxcpucount:**_数_(或 **/m:**_数_) 的 MSBuild.exe 工具的命令行选项可以生成在多个项目相同的时间。 **/MP** 编译器选项可以同时生成多个编译单元。 如果它适用于你的应用程序，可以使用 **/MP** 和/或 **/maxcpucount**缩短解决方案生成时间。
 
-解决方案生成时间在一定程度上取决于执行生成的进程数。 *数*参数[/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 选项指定的项目以生成在同一时间的最大数量。 同样， *processMax*参数**/MP**编译器选项指定要在同一时间生成的编译单元的最大数。 如果**/maxcpucount**选项指定*P*项目和**/MP**选项指定*C*进程，最多个*P* x *C*进程在同一时间执行。
+解决方案生成时间在一定程度上取决于执行生成的进程数。 *数*参数[/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 选项指定的项目以生成在同一时间的最大数量。 同样， *processMax*参数 **/MP**编译器选项指定要在同一时间生成的编译单元的最大数。 如果 **/maxcpucount**选项指定*P*项目和 **/MP**选项指定*C*进程，最多个*P* x *C*进程在同一时间执行。
 
- 决定是否使用 MSBuild 的准线或**/MP**技术是，如下所示：
+ 决定是否使用 MSBuild 的准线或 **/MP**技术是，如下所示：
 
 - 如果存在与每个项目中的几个文件的多个项目，使用 MSBuild 工具。
 
 - 如果项目较少，而每个项目中有许多文件，请使用 **/MP** 选项。
 
-- 如果平衡的项目和每个项目的文件数，使用这两个 MSBuild 和**/MP**。 起初，将 **/maxcpucount** 选项设置为要生成的项目数，并将 **/MP** 选项设置为计算机上的处理器数。 测量性能，然后调整设置以生成最佳结果。 重复此过程，直到对总生成时间感到满意。
+- 如果平衡的项目和每个项目的文件数，使用这两个 MSBuild 和 **/MP**。 起初，将 **/maxcpucount** 选项设置为要生成的项目数，并将 **/MP** 选项设置为计算机上的处理器数。 测量性能，然后调整设置以生成最佳结果。 重复此过程，直到对总生成时间感到满意。
 
 #### <a name="the-gm-compiler-option"></a>/Gm 编译器选项
 

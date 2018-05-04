@@ -2,11 +2,8 @@
 title: '后缀增量和减量运算符: + + 和-|Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>后缀增量和减量运算符：++ 和 --
 ## <a name="syntax"></a>语法  

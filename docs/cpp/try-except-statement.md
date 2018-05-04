@@ -2,11 +2,8 @@
 title: 重试-除非语句 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -57,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 > {  
 >    受保护的代码  
 > }  
-> **__except** ( *expression* )  
+> **__except** (*表达式*)  
 > {  
 >    异常处理程序代码  
 > }  
@@ -81,11 +76,11 @@ ms.lasthandoff: 01/25/2018
 
 3. 如果受保护节执行过程中发生异常或任何例程中受保护的节调用， `__except` *表达式*(调用*筛选器*表达式) 计算和值确定如何处理异常。 有三个值：
 
-   **EXCEPTION_CONTINUE_EXECUTION (-1)**异常已消除。 从出现异常的点继续执行。
+   **EXCEPTION_CONTINUE_EXECUTION (-1)** 异常已消除。 从出现异常的点继续执行。
 
-   **EXCEPTION_CONTINUE_SEARCH (0)**无法识别异常。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
+   **EXCEPTION_CONTINUE_SEARCH (0)** 无法识别异常。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
 
-   **EXCEPTION_EXECUTE_HANDLER (1)**识别异常。 通过执行 `__except` 复合语句将控制权传输到异常处理程序，然后在 `__except` 块之后继续执行。
+   **EXCEPTION_EXECUTE_HANDLER (1)** 识别异常。 通过执行 `__except` 复合语句将控制权传输到异常处理程序，然后在 `__except` 块之后继续执行。
 
 由于 `__except` 表达式将作为 C 表达式来计算，因此它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 
@@ -105,7 +100,7 @@ A`goto`语句还可以跳出受保护的部分中，并且它不降低性能中�
 
 结构化的异常处理提供了可供使用的两个内部函数**重-除**语句：`GetExceptionCode`和`GetExceptionInformation`。
 
-`GetExceptionCode`返回异常的代码 （32 位整数）。
+`GetExceptionCode` 返回异常的代码 （32 位整数）。
 
 内部函数`GetExceptionInformation`返回指向包含有关异常的其他信息的结构的指针。 通过此指针，您可以访问在出现硬件异常时存在的计算机状态。 该结构如下所示：
 
@@ -124,11 +119,11 @@ typedef struct _EXCEPTION_POINTERS {
 
 excpt.h 定义为这些内部函数一些替代名称：
 
-`GetExceptionCode`等效于`_exception_code`
+`GetExceptionCode` 等效于 `_exception_code`
 
- `GetExceptionInformation`等效于`_exception_info`
+ `GetExceptionInformation` 等效于 `_exception_info`
 
- `AbnormalTermination`等效于`_abnormal_termination`
+ `AbnormalTermination` 等效于 `_abnormal_termination`
   
 ## <a name="example"></a>示例
 

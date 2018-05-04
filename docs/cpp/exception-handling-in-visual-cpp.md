@@ -2,28 +2,23 @@
 title: Visual C++ 中的异常处理 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ec97d5f29398e9e20be9609573eecf33894948
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acd5df644f097d19e5f9708f0a059a31f3e9ee9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-handling-in-visual-c"></a>Visual C++ 中的异常处理
 异常是一个可能超出程序的控制范围的错误条件，它会阻止程序继续沿其常规执行路径执行。 某些操作（包括对象创建、文件输入/输出以及从其他模块中进行的函数调用）都可能是异常的来源，设置在你的程序正常运行时也是如此。 可靠代码可预见并处理异常。  

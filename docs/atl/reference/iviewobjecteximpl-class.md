@@ -1,12 +1,9 @@
 ---
-title: "IViewObjectExImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IViewObjectExImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IViewObjectExImpl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742198b0bf6c5c615baed033e8a0fab7e73b06ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c51bc9e5feb02d837c37341b82a1fc19a3cea558
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl 类
 此类实现**IUnknown**并提供的默认实现[IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763)， [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)，和[IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)接口。  
@@ -88,10 +83,10 @@ class ATL_NO_VTABLE IViewObjectExImpl
   
  `IViewObjectExImpl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlctl.h  
   
-##  <a name="draw"></a>IViewObjectExImpl::Draw  
+##  <a name="draw"></a>  IViewObjectExImpl::Draw  
  绘制控件拖到设备上下文的表示形式。  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(Draw)(
   
  请参阅[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) Windows SDK 中。  
   
-##  <a name="freeze"></a>IViewObjectExImpl::Freeze  
+##  <a name="freeze"></a>  IViewObjectExImpl::Freeze  
  冻结控件的绘制的表示，因此它不会更改直到`Unfreeze`。 ATL 实现返回**E_NOTIMPL**。  
   
 ```
@@ -126,7 +121,7 @@ STDMETHOD(Freeze)(
 ### <a name="remarks"></a>备注  
  请参阅[IViewObject::Freeze](http://msdn.microsoft.com/library/windows/desktop/ms688728) Windows SDK 中。  
   
-##  <a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
+##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise  
  如果存在，请检索在控件上，现有的通知接收器连接。  
   
 ```
@@ -141,7 +136,7 @@ STDMETHOD(GetAdvise)(
   
  请参阅[IViewObject::GetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692772) Windows SDK 中。  
   
-##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
+##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet  
  返回由该控件用于绘图逻辑调色板。 ATL 实现返回**E_NOTIMPL**。  
   
 ```
@@ -157,7 +152,7 @@ STDMETHOD(GetColorSet)(
 ### <a name="remarks"></a>备注  
  请参阅[IViewObject::GetColorSet](http://msdn.microsoft.com/library/windows/desktop/ms686553) Windows SDK 中。  
   
-##  <a name="getextent"></a>IViewObjectExImpl::GetExtent  
+##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent  
  从控件类数据成员中检索以 himetric 为单位 （每个单位 0.01 毫米） 的控件的显示大小[CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。  
   
 ```
@@ -171,7 +166,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>备注  
  请参阅[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Windows SDK 中。  
   
-##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
+##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent  
  提供从对象以用作用户调整其大小时的容器的大小调整提示。  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(GetNaturalExtent)(
   
  请参阅[IViewObjectEx::GetNaturalExtent](http://msdn.microsoft.com/library/windows/desktop/ms683718) Windows SDK 中。  
   
-##  <a name="getrect"></a>IViewObjectExImpl::GetRect  
+##  <a name="getrect"></a>  IViewObjectExImpl::GetRect  
  返回描述请求的绘图方位矩形。 ATL 实现返回**E_NOTIMPL**。  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ### <a name="remarks"></a>备注  
  请参阅[IViewObjectEx::GetRect](http://msdn.microsoft.com/library/windows/desktop/ms695246) Windows SDK 中。  
   
-##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
+##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus  
  返回有关不透明度的对象，并且支持绘制方面的信息。  
   
 ```
@@ -211,7 +206,7 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
   
  请参阅[IViewObjectEx::GetViewStatus](http://msdn.microsoft.com/library/windows/desktop/ms693371) Windows SDK 中。  
   
-##  <a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
+##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint  
  检查是否指定的点中指定的矩形，并返回[HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187)中的值`pHitResult`。  
   
 ```
@@ -230,7 +225,7 @@ STDMETHOD(QueryHitPoint)(
   
  请参阅[IViewObjectEx::QueryHitPoint](http://msdn.microsoft.com/library/windows/desktop/ms691209) Windows SDK 中。  
   
-##  <a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
+##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect  
  检查是否控件的显示矩形重叠的指定的位置的矩形中的任何点，并返回[HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187)中的值`pHitResult`。  
   
 ```
@@ -249,7 +244,7 @@ STDMETHOD(QueryHitRect)(
   
  请参阅[IViewObjectEx::QueryHitRect](http://msdn.microsoft.com/library/windows/desktop/ms693797) Windows SDK 中。  
   
-##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
+##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise  
  设置在控件和通知接收器之间的连接，以便可以中控件的视图的更改通知接收器。  
   
 ```
@@ -266,7 +261,7 @@ STDMETHOD(SetAdvise)(
   
  请参阅[IViewObject::SetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms683950) Windows SDK 中。  
   
-##  <a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
+##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze  
  取消冻结该控件的绘制的表示。 ATL 实现返回**E_NOTIMPL**。  
   
 ```
@@ -276,7 +271,7 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ### <a name="remarks"></a>备注  
  请参阅[IViewObject::Unfreeze](http://msdn.microsoft.com/library/windows/desktop/ms686641) Windows SDK 中。  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  实现此方法来关闭与此对象关联的句柄。  
   
 ```
@@ -298,7 +293,7 @@ HRESULT CloseHandle(HANDLE hHandle);
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  实现此方法可执行代码时与此对象关联的句柄将被发送信号。  
   
 ```

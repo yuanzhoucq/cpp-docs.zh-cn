@@ -2,26 +2,21 @@
 title: 声明和定义 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f8a0922d66a9421bcc7c6c07b9396b277499d0d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarations-and-definitions-c"></a>声明和定义 (C++)
 声明引入名称在程序中，例如变量、 命名空间、 函数和类的名称。 声明还指定了类型信息以及正在声明的对象的其他特征。 必须声明一个名称，然后才能进行使用；C++ 中在声明名称的位置确定其是否对编译器可见。 不能引用的函数或编译单元中; 在某些时刻声明的类你可以使用*的前向声明*若要避开此限制。  

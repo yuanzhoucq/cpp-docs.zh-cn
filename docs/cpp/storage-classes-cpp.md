@@ -2,11 +2,8 @@
 title: 存储类 （C++）|Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10acbfc4835b59bcddefb722a9039cc5dbae5e21
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: a56d456564dc171292e8a58b6cb486ce2dfbaf31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-classes-c"></a>存储类 (C++)  
   
@@ -182,7 +177,7 @@ var == value
 
 声明`const`变量`extern`存储类强制变量具有外部链接。 初始化`extern const`中定义的翻译单元允许变量。 在正在定义的翻译单元之外的翻译单元中进行初始化将生成未定义的结果。 有关详细信息，请参阅[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)编译器选项使编译器将[外部链接]()对使用声明的变量**extern constexpr**。 在早期版本的 Visual Studio 中，并按默认或如果**/Zc:externConstexpr-**指定，则 Visual Studio 将应用到的内部链接**constexpr**变量即使**extern**使用关键字。 **/Zc:externConstexpr**选项是在 Visual Studio 2017 更新 15.6 中开始提供。 和默认处于关闭状态。 /Permissive-option 不会启用 /Zc:externConstexpr。
+[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)编译器选项使编译器将[外部链接]()对使用声明的变量**extern constexpr**。 在早期版本的 Visual Studio 中，并按默认或如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量即使**extern**使用关键字。 **/Zc:externConstexpr**选项是在 Visual Studio 2017 更新 15.6 中开始提供。 和默认处于关闭状态。 /Permissive-option 不会启用 /Zc:externConstexpr。
 
 以下代码显示了两个 `extern` 声明：`DefinedElsewhere`（引用在不同翻译单元中定义的名称）和 `DefinedHere`（引用在封闭范围内定义的名称）：
 
@@ -234,7 +229,7 @@ void DoSomething()
 
 在 Windows 上，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过`__declspec(thread)`可以应用于类型定义，并且在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>  注册
 
 **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):`register`关键字已不再受支持的存储类。 关键字是仍保留在将来使用的标准。 
 
@@ -325,6 +320,6 @@ Destroying: Static I3
 
 - 最后，静态局部变量（如 `I3`）在程序持续时间内保留其值，但在程序终止时将被销毁。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [声明和定义](../cpp/declarations-and-definitions-cpp.md)

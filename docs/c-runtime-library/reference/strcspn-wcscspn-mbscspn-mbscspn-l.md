@@ -2,11 +2,8 @@
 title: strcspn、wcscspn、_mbscspn、_mbscspn_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbscspn_l
@@ -48,17 +45,15 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b9fd51b22dfbe33dacd74070188ce2f75a9f6f
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
 
@@ -112,7 +107,7 @@ null 终止的字符集。
 
 **_mbscspn**验证其参数。 如果任一*str*或*strCharSet*是 null 指针，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回 0 并设置**errno**到**EINVAL**。 **strcspn**和**wcscspn**不会验证其参数。 否则这三个函数否则具有相同行为。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

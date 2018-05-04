@@ -1,13 +1,10 @@
 ---
-title: "-c （链接的情况下进行编译） |Microsoft 文档"
-ms.custom: 
+title: -c （链接的情况下进行编译） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /c
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112e063af9c56ead8ae7e8f59fe88853ff55f7b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86bd1ddcb6d44cfa433d4119f90eb02695089aa4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-compile-without-linking"></a>/c（在不链接的情况下进行编译）
 可防止对链接的自动调用。  
@@ -41,9 +36,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 使用编译**/c**只创建.obj 文件。 使用正确的文件和选项来执行生成的链接阶段中，必须显式调用链接。  
+ 使用编译 **/c**只创建.obj 文件。 使用正确的文件和选项来执行生成的链接阶段中，必须显式调用链接。  
   
- 在开发环境中创建任何内部项目使用**/c**默认情况下的选项。  
+ 在开发环境中创建任何内部项目使用 **/c**默认情况下的选项。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

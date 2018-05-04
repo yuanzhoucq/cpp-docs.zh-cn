@@ -2,11 +2,8 @@
 title: 断言和用户提供的消息 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93798dadee3e4270d82eac84a794c6133c05c07
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>断言和用户提供的消息 (C++)
 C++ 语言支持三个错误处理机制来帮助你调试应用程序： [#error 指令](../preprocessor/hash-error-directive-c-cpp.md)、 [static_assert](../cpp/static-assert.md)关键字，与[断言宏、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏。 所有的三种机制都会发出错误消息，其中两个还会测试软件断言。 软件断言指定在程序的某个特定点应满足的条件。 如果编译时断言失败，编译器将发出诊断消息和编译错误。 如果运行时断言失败，操作系统将发出诊断消息并关闭应用程序。  

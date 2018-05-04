@@ -1,13 +1,10 @@
 ---
-title: "承载 ActiveX 控件使用 ATL AXHost |Microsoft 文档"
-ms.custom: 
+title: 承载 ActiveX 控件使用 ATL AXHost |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - hosting ActiveX controls
 - AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>承载 ActiveX 控件使用 ATL 类
 本主题中的示例演示如何创建 AXHost 以及如何承载 ActiveX 控件使用各种 ATL 函数。 它还演示如何访问控制和接收器事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 从承载的控件。 此示例承载主窗口中或在子窗口中的日历控件。  

@@ -2,11 +2,8 @@
 title: '间接寻址运算符: * |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-operator-"></a>间接寻址运算符：*
 ## <a name="syntax"></a>语法  
@@ -37,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 使用**\***运算符在此上下文中的是不同于其含义与二元运算符，后者是乘法。  
+ 一元间接寻址运算符 (**\***) 取消引用指针; 即，它将一个指针值转换为左值。 间接寻址运算符的操作数必须是指向类型的指针。 间接寻址表达式的结果是从中派生指针类型的类型。 使用**\*** 运算符在此上下文中的是不同于其含义与二元运算符，后者是乘法。  
   
  如果操作数指向函数，则结果是函数指示符。 如果它指向存储位置，则结果是指定存储位置的左值。  
   
@@ -73,7 +68,7 @@ int main() {
   
 -   该指针指定执行程序未使用的地址。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [C++ 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Address-of 运算符： &](../cpp/address-of-operator-amp.md)   

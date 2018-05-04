@@ -1,13 +1,10 @@
 ---
-title: "-homeparams （将寄存器参数复制到堆栈） |Microsoft 文档"
-ms.custom: 
+title: -homeparams （将寄存器参数复制到堆栈） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /homeparams
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff1b206620ef9efee3fc22c83c8d5317e99b607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams（将寄存器参数复制到堆栈）
 强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  当在传递参数[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]编译，则调用约定会要求堆栈空间要求的参数，即使对于在寄存器中传递的参数。 有关详细信息，请参阅[参数传递](../../build/parameter-passing.md)。 但是，默认情况下，在发布版本中，将寄存器参数将不将写入到堆栈中的参数已提供的空间。 这使得难以调试的程序优化 （发布） 版本。  
   
- 对于发布版本中，使用**/homeparams**以确保你可以调试你的应用程序。 **/homeparams**未意味着性能降低，因为它的确需要周期以加载到堆栈将寄存器参数。  
+ 对于发布版本中，使用 **/homeparams**以确保你可以调试你的应用程序。 **/homeparams**未意味着性能降低，因为它的确需要周期以加载到堆栈将寄存器参数。  
   
  在调试版本中，堆栈始终填充在寄存器中传递的参数。  
   

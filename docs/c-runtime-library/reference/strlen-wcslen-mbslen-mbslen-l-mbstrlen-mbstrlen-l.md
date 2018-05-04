@@ -2,11 +2,8 @@
 title: strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbslen
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2830c3bfc343d3f4912d3f2d67cdba4d45f3ee57
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
@@ -129,7 +124,7 @@ size_t _mbstrlen_l(
 
 **_mbslen**和 **_mbslen_l**一个多字节字符字符串中返回的多字节字符数，但它们不会测试多字节字符的有效性。 **_mbstrlen**和 **_mbstrlen_l**测试多字节字符的有效性并识别多字节字符序列。 如果字符串传递给 **_mbstrlen**或 **_mbstrlen_l**包含的代码页，函数将返回-1 并集的无效多字节字符**errno**到**EILSEQ**。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

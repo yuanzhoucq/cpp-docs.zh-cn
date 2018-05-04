@@ -1,12 +1,9 @@
 ---
-title: "CStringData 类 |Microsoft 文档"
-ms.custom: 
+title: CStringData 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringData
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringdata-class"></a>CStringData 类
 此类表示字符串对象的数据。  
@@ -95,10 +90,10 @@ struct CStringData
     > [!NOTE]
     >  字符串对象的实际字符缓冲区追加到字符串管理器分配并`CStringData`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlsimpstr.h  
   
-##  <a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>  CStringData::AddRef  
  递增的字符串对象的引用计数。  
   
 ```
@@ -111,7 +106,7 @@ void AddRef() throw();
 > [!NOTE]
 >  请勿对负的引用计数，字符串中调用此方法，因为负数计数指示字符串缓冲区被锁定。  
   
-##  <a name="data"></a>CStringData::data  
+##  <a name="data"></a>  CStringData::data  
  返回指向字符串对象的字符缓冲区的指针。  
   
 ```
@@ -127,7 +122,7 @@ void* data() throw();
 > [!NOTE]
 >  此缓冲区都没有分配`CStringData`对象但字符串管理器时需要。 分配时，缓冲区将追加到字符串数据对象。  
   
-##  <a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>  CStringData::IsLocked  
  确定是否处于锁定状态的字符缓冲区。  
   
 ```
@@ -140,7 +135,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>备注  
  调用此函数可确定当前已锁定的一个字符串对象的字符缓冲区。  
   
-##  <a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>  CStringData::IsShared  
  确定是否共享字符缓冲区。  
   
 ```
@@ -153,7 +148,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>备注  
  调用此函数可确定在多个字符串对象之间当前共享字符串数据对象的字符缓冲区。  
   
-##  <a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>  CStringData::Lock  
  锁定关联的字符串对象的字符缓冲区。  
   
 ```
@@ -166,7 +161,7 @@ void Lock() throw();
 > [!NOTE]
 >  如果在更高版本的字符串对象之间不共享缓冲区，则仅可以锁定字符缓冲区。  
   
-##  <a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  分配的字符缓冲区的长度。  
   
 ```
@@ -176,7 +171,7 @@ int nAllocLength;
 ### <a name="remarks"></a>备注  
  将存储在已分配的数据缓冲区的长度`XCHAR`s （不包括终止 null)。  
   
-##  <a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>  CStringData::nDataLength  
  字符串对象的当前长度。  
   
 ```
@@ -186,7 +181,7 @@ int nDataLength;
 ### <a name="remarks"></a>备注  
  将存储在当前所用数据的长度`XCHAR`s （不包括终止 null)。  
   
-##  <a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>  CStringData::nRefs  
  字符串数据对象的引用计数。  
   
 ```
@@ -196,7 +191,7 @@ long nRefs;
 ### <a name="remarks"></a>备注  
  将存储的字符串数据对象的引用计数。 此计数指示更高版本与字符串数据对象相关联的字符串对象的数目。 负值指示当前已锁定的字符串数据对象。  
   
-##  <a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  关联的字符串对象的内存管理器。  
   
 ```
@@ -206,7 +201,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>备注  
  将存储关联的字符串对象的内存管理器。 有关内存管理器和字符串的详细信息，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
   
-##  <a name="release"></a>CStringData::Release  
+##  <a name="release"></a>  CStringData::Release  
  递减引用计数的字符串数据对象。  
   
 ```
@@ -220,7 +215,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>  CStringData::Unlock  
  解除锁定关联的字符串对象的字符缓冲区。  
   
 ```

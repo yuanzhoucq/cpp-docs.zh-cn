@@ -1,13 +1,10 @@
 ---
-title: "-Yu （使用预编译标头文件） |Microsoft 文档"
-ms.custom: 
+title: -Yu （使用预编译标头文件） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /yu
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83f159882b9ed6fcfe5557c150413303c401dda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d115017e843e7f03455e1eef2b384b3475a1b798
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu（使用预编译标头文件）
 指示编译器使用当前的编译中的现有预编译标头 (.pch) 文件。  
@@ -43,30 +38,30 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="arguments"></a>自变量  
  *filename*  
- 标头文件，它包括在源文件使用的名称**#include**预处理器指令。  
+ 标头文件，它包括在源文件使用的名称 **#include**预处理器指令。  
   
 ## <a name="remarks"></a>备注  
- 该包含文件的名称必须是相同**/Yc**选项创建预编译标头和任何后续**/Yu** ，该值指示使用预编译标头的选项。  
+ 该包含文件的名称必须是相同 **/Yc**选项创建预编译标头和任何后续 **/Yu** ，该值指示使用预编译标头的选项。  
   
- 有关**/Yc**，`filename`指定的点的预编译会停止; 编译器预编译所有代码，但`filename`并将其命名生成预编译的头使用的包含文件和扩展的基名称为.pch。  
+ 有关 **/Yc**，`filename`指定的点的预编译会停止; 编译器预编译所有代码，但`filename`并将其命名生成预编译的头使用的包含文件和扩展的基名称为.pch。  
   
- .Pch 文件必须已经创建使用**/Yc**。  
+ .Pch 文件必须已经创建使用 **/Yc**。  
   
- 编译器将在作为预编译的.h 文件之前发生的所有代码。 它将跳到刚刚场外**#include**与.h 文件中，关联的指令使用.pch 文件中包含的代码并进行编译之后的所有代码`filename`。  
+ 编译器将在作为预编译的.h 文件之前发生的所有代码。 它将跳到刚刚场外 **#include**与.h 文件中，关联的指令使用.pch 文件中包含的代码并进行编译之后的所有代码`filename`。  
   
- 在命令行中，不允许有空格之间**/Yu**和`filename`。  
+ 在命令行中，不允许有空格之间 **/Yu**和`filename`。  
   
- 当指定**/Yu**选项但不带文件名称，源程序必须包含[#pragma hdrstop](../../preprocessor/hdrstop.md)指定预编译标头，.pch 文件的文件名称的杂注。 在这种情况下，编译器将使用预编译标头 （.pch 文件） 由名为[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)。 编译器将跳到该杂注的位置，从指定的杂注，预编译标头文件将还原的已编译的状态并进行编译杂注后面的代码。 如果**#pragma hdrstop**未指定文件名，编译器将查找具有派生自的基名称的扩展名为.pch 的源文件的名称的文件。 你还可以使用**/Fp**选项以指定不同的.pch 文件。  
+ 当指定 **/Yu**选项但不带文件名称，源程序必须包含[#pragma hdrstop](../../preprocessor/hdrstop.md)指定预编译标头，.pch 文件的文件名称的杂注。 在这种情况下，编译器将使用预编译标头 （.pch 文件） 由名为[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)。 编译器将跳到该杂注的位置，从指定的杂注，预编译标头文件将还原的已编译的状态并进行编译杂注后面的代码。 如果 **#pragma hdrstop**未指定文件名，编译器将查找具有派生自的基名称的扩展名为.pch 的源文件的名称的文件。 你还可以使用 **/Fp**选项以指定不同的.pch 文件。  
   
- 如果指定**/Yu**选项但不带文件名称，并且无法指定**hdrstop**杂注时，将生成错误消息和编译不成功。  
+ 如果指定 **/Yu**选项但不带文件名称，并且无法指定**hdrstop**杂注时，将生成错误消息和编译不成功。  
   
- 如果**/Yc** `filename`和**/Yu** `filename`选项出现在相同的命令行上，并且引用相同的文件名， **/Yc** `filename`采用优先级，最多预编译所有代码和包括的命名的文件。 此功能简化了生成文件的写入。  
+ 如果 **/Yc** `filename`和 **/Yu** `filename`选项出现在相同的命令行上，并且引用相同的文件名， **/Yc** `filename`采用优先级，最多预编译所有代码和包括的命名的文件。 此功能简化了生成文件的写入。  
   
  由于.pch 文件包含有关计算机环境的信息以及有关程序的内存地址信息，你应仅使用被创建时所在的计算机上的 pch 文件。  
   
  预编译标头的详细信息，请参阅：  
   
--   [/Y （预编译标头）](../../build/reference/y-precompiled-headers.md)  
+-   [/Y（预编译标头）](../../build/reference/y-precompiled-headers.md)  
   
 -   [创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)  
   
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  使用命令行编译`CL /YuMYAPP.H PROG.CPP`，编译器不会处理三个保存在预处理所有三个文件 （和它们可能包含任何文件） 中所涉及的时间从而 include 语句，但 myapp.pch，使用预编译代码。  
   
- 你可以使用[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)选项与**/Yu**选项以指定.pch 文件的名称，如果名称不同于到两个文件名称参数**/Yc**或源文件，如下所示的基名称以下：  
+ 你可以使用[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)选项与 **/Yu**选项以指定.pch 文件的名称，如果名称不同于到两个文件名称参数 **/Yc**或源文件，如下所示的基名称以下：  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP  

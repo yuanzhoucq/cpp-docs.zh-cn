@@ -1,12 +1,9 @@
 ---
-title: "编写终止处理程序 |Microsoft 文档"
-ms.custom: 
+title: 编写终止处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9d4099a7f40acf0b5bfcc89f1c95cb880683b86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-a-termination-handler"></a>编写终止处理程序
 与异常处理程序不同，无论代码的受保护块是否已正常终止，终止处理程序总是会执行。 终止处理程序的唯一用途应该是确保无论代码的节如何完成执行，内存、句柄和文件等资源都能正确关闭。  

@@ -1,10 +1,10 @@
 ---
-title: "/Zc: forscope （强制在 for 循环范围一致性） |Microsoft 文档"
-ms.custom: 
+title: '/Zc: forscope （强制在 for 循环范围一致性） |Microsoft 文档'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
 - VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47cdc45b63e5e5c7b48627b13040e95fc64c8a2d
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope（强制 for 循环范围中的一致性）
 
@@ -61,7 +60,7 @@ int main() {
 }
 ```
 
-使用 **/Zc:forScope-**时，如果变量由于在上一范围内所作的声明而处在范围内，则将生成警告 C4288（默认关闭）。 为了说明这点，请删除示例代码中用于声明 `//` 的 `int i`字符。
+使用 **/Zc:forScope-** 时，如果变量由于在上一范围内所作的声明而处在范围内，则将生成警告 C4288（默认关闭）。 为了说明这点，请删除示例代码中用于声明 `//` 的 `int i`字符。
 
 可通过使用 **conform** 杂注修改 [/Zc:forScope](../../preprocessor/conform.md) 的运行时行为。
 

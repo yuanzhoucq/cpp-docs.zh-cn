@@ -2,11 +2,8 @@
 title: 切换语句 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-statement-c"></a>switch 语句 (C++)
 允许根据整型表达式的值在多个代码段中进行选择。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 |没有一个常量匹配中的常量**用例**标签;**默认**标签不存在。|控制转移到其中**默认**标签。|  
 |没有一个常量匹配中的常量**用例**标签;**默认**标签不存在。|控制将转移到 `switch` 语句之后的语句。|  
   
- 如果找到匹配的表达式，则控件不会妨碍后续**用例**或**默认**标签。 [中断](../cpp/break-statement-cpp.md)语句用于停止执行并将控制权转交给之后的语句`switch`语句。 而无需**中断**语句、 从匹配的每个语句**用例**到末尾的标签`switch`，包括**默认**，执行。 例如:  
+ 如果找到匹配的表达式，则控件不会妨碍后续**用例**或**默认**标签。 [中断](../cpp/break-statement-cpp.md)语句用于停止执行并将控制权转交给之后的语句`switch`语句。 而无需**中断**语句、 从匹配的每个语句**用例**到末尾的标签`switch`，包括**默认**，执行。 例如：  
   
 ```  
 // switch_statement1.cpp  
@@ -131,7 +126,7 @@ int main()
         };
 ```
 
- `switch` 语句的内部块可以包含带有初始化的定义，前提是可以访问到它们 - 即，所有可能的执行路径都不会绕过它们。 使用这些声明引入的名称具有局部范围。 例如:  
+ `switch` 语句的内部块可以包含带有初始化的定义，前提是可以访问到它们 - 即，所有可能的执行路径都不会绕过它们。 使用这些声明引入的名称具有局部范围。 例如：  
   
 ```cpp  
 // switch_statement2.cpp  

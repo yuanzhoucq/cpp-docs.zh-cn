@@ -1,29 +1,24 @@
 ---
-title: "函数模板调用的重载解析 |Microsoft 文档"
-ms.custom: 
+title: 函数模板调用的重载解析 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d4a0e2867c5057eb5808c4d39687961eabba6dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>函数模板调用的重载解析
 函数模板可以重载具有相同名称的非模板函数。 在此方案中，首先通过使用模板自变量推理来解析函数调用，以便使用唯一的专用化来实例化函数模板。 如果模板自变量推理失败，则考虑其他函数重载来解析调用。 这些其他重载（也称为候选集）包括非模板函数和其他实例化的函数模板。 如果模板自变量推理成功，则遵循重载决策的规则，将生成的函数与其他函数进行比较以确定最佳匹配。 有关详细信息，请参阅[函数重载](function-overloading.md)。  

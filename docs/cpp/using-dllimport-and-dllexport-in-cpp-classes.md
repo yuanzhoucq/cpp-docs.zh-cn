@@ -2,11 +2,8 @@
 title: C++ 类中使用 dllimport 和 dllexport |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8f9434387efcf3377cdc983116a51b524d16662
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 764ee2026e0ffcd112f202e0d400805c9df55e0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>在 C++ 类中使用 dllimport 和 dllexport
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -51,18 +46,18 @@ class DllExport C {
   
  请注意该显式使用**dllimport**和`dllexport`禁止可导出类的成员上的属性。  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>dllexport 类  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a> dllexport 类  
  在声明类 `dllexport` 时，所有其成员函数和静态数据成员都将导出。 您必须在同一程序中提供所有此类成员的定义。 否则，将生成链接器错误。 此规则有一个例外情况，即对于纯虚函数，您无需为其提供显式定义。 但是，由于基类的析构函数始终在调用抽象类的析构函数，因此纯虚拟析构函数必须始终提供定义。 请注意，这些规则对不可导出的类是相同的。  
   
  如果导出类类型的数据或返回类的函数，请务必导出类。  
   
-##  <a name="_pluslang_dllexport_classesdllexportclasses"></a>dllimport 类  
+##  <a name="_pluslang_dllexport_classesdllexportclasses"></a> dllimport 类  
  当你声明一个类**dllimport**，导入所有其成员函数和静态数据成员。 与不同的行为**dllimport**和`dllexport`非类类型上静态数据成员不能在同一程序中指定的定义**dllimport**定义类。  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>继承和可导出类  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a> 继承和可导出类  
  可导出类的所有基类都必须是可导出的。 否则，会生成编译器警告。 此外，同样是类的所有可访问成员必须是可导出的。 此规则只允许`dllexport`类继承自**dllimport**类，和一个**dllimport**类继承自`dllexport`类 （但不推荐后者）。 通常来说，对 DLL 客户端可访问的所有内容（根据 C++ 访问规则）都应该是可导出接口的一部分。 这包括在内联函数中引用的私有数据成员。  
   
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>选择性成员导入/导出  
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a> 选择性成员导入/导出  
  成员函数和类中的静态数据隐式具有外部链接，因为可以将其与声明**dllimport**或`dllexport`属性，除非导出整个类。 如果整个类导入或导出，显式声明成员函数和数据作为**dllimport**或`dllexport`禁止。 如果在类定义中将静态数据成员声明为 `dllexport`，定义一定会在同一程序中的某处出现（就像非类外部链接一样）。  
   
  同样，可以声明具有函数成员**dllimport**或`dllexport`属性。 在这种情况下，您必须在同一程序中的某处提供 `dllexport` 定义。  

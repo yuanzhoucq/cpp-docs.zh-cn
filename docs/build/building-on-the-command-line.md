@@ -1,10 +1,10 @@
 ---
 title: 在命令行上生成 C/c + + 代码 |Microsoft 文档
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令行上生成 C/c + + 代码
 
@@ -78,7 +77,7 @@ ms.lasthandoff: 04/03/2018
 |**vcvarsamd64_x86.bat**| 使用 64 位 x64 本机跨工具来生成 32 位 x86 代码。|
 |**vcvarsx86_arm.bat**| 使用 32 位 x86 本机跨工具生成 ARM 代码。|
 |**vcvarsamd64_arm.bat**| 使用 64 位 x64 本机跨工具来生成 ARM 代码。|
-|**vcvarsall.bat**| 使用参数来指定主机和目标体系结构，以及 SDK 和平台选择。 有关支持的选项的列表，调用通过使用**/帮助**参数。|
+|**vcvarsall.bat**| 使用参数来指定主机和目标体系结构，以及 SDK 和平台选择。 有关支持的选项的列表，调用通过使用 **/帮助**参数。|
 
 > [!CAUTION]
 > Vcvarsall.bat 文件和其他 Visual Studio 命令文件异计算机到计算机。 不要使用另一台计算机中的文件替换丢失或损坏的 vcvarsall.bat 文件。 重新运行 Visual Studio 安装程序，以替换丢失的文件。
@@ -93,10 +92,10 @@ ms.lasthandoff: 04/03/2018
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*architecture*<br/>
+*体系结构*<br/>
 此可选参数指定将使用主机和目标体系结构。 如果*体系结构*未指定，则使用默认生成环境。 支持这些自变量：
 
-|*architecture*|编译器|主机计算机体系结构|生成输出 （目标） 体系结构|
+|*体系结构*|编译器|主机计算机体系结构|生成输出 （目标） 体系结构|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 32 位本机|x86、x64|x86|
 |**x86\_amd64**或**x86\_x64**|x86 跨平台上的 x64|x86、x64|X64|
@@ -114,7 +113,7 @@ ms.lasthandoff: 04/03/2018
 （可选） 指定要使用的 Windows sdk 的版本。 默认情况下，使用最新安装的 Windows SDK。 若要指定的 Windows SDK 版本，可以使用完整的 Windows 10 SDK 数字，如**10.0.10240.0**，或指定**8.1**若要使用 Windows 8.1 SDK。
 
 *vcversion*<br/>
-（可选） 指定要使用 Visual Studio 编译器工具集。 默认情况下，环境设置为使用当前的 Visual Studio 2017 编译器工具集。 使用**-vcvars_ver = 14.0**指定 Visual Studio 2015 编译器工具集。
+（可选） 指定要使用 Visual Studio 编译器工具集。 默认情况下，环境设置为使用当前的 Visual Studio 2017 编译器工具集。 使用 **-vcvars_ver = 14.0**指定 Visual Studio 2015 编译器工具集。
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>若要将现有的命令提示符窗口中的生成环境设置
@@ -144,14 +143,14 @@ ms.lasthandoff: 04/03/2018
 [CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
 使用编译器 (cl.exe) 可编译源代码文件，并将其链接到应用、库和 DLL 中。
 
-[Link](../build/reference/linking.md)<br/>
+[链接](../build/reference/linking.md)<br/>
 使用链接器 (link.exe) 可将已编译的对象文件和库链接到应用和 DLL 中。
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
 使用 MSBuild (msbuild.exe) 生成 Visual c + + 项目和 Visual Studio 解决方案。 这相当于运行**生成**项目或**生成解决方案**命令在 Visual Studio IDE 中。
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-将 DEVENV (devenv.exe) 与命令行开关结合-例如， **/内部**或**/清理**-执行某些生成命令而不显示 Visual Studio IDE。
+将 DEVENV (devenv.exe) 与命令行开关结合-例如， **/内部**或 **/清理**-执行某些生成命令而不显示 Visual Studio IDE。
 
 [NMAKE](../build/nmake-reference.md)<br/>
 使用 NMAKE (nmake.exe) 可自动执行使用传统的生成文件生成 Visual c + + 项目的任务。

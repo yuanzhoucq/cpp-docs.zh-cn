@@ -1,29 +1,24 @@
 ---
-title: "运算符重载的一般规则 |Microsoft 文档"
-ms.custom: 
+title: 运算符重载的一般规则 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-for-operator-overloading"></a>运算符重载的一般规则
 以下规则约束如何实现重载运算符。 但是，它们不适用于[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符，对其进行单独讨论。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 03/16/2018
   
 -   声明为成员函数的二元运算符将采用一个自变量；如果声明为全局函数，它们将采用两个自变量。  
   
--   如果可以为一个是一元或二元运算符使用运算符 (**&**，  **\*** ，  **+** ，和 **-** )，您可以单独重载每次使用。  
+-   如果可以为一个是一元或二元运算符使用运算符 (**&**， **\***， **+**，和**-**)，您可以单独重载每次使用。  
   
 -   重载运算符不能具有默认自变量。  
   
@@ -81,5 +76,5 @@ var++;
 > [!NOTE]
 >  为保持一致性，定义重载运算符时通常最好遵循内置类型的模型。 如果某个重载运算符的语义与它在其他上下文中的含义差别很大，则它造成的混淆会盖过它的用处。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符重载](../cpp/operator-overloading.md)

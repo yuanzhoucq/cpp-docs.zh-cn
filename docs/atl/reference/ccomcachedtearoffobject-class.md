@@ -1,12 +1,9 @@
 ---
-title: "CComCachedTearOffObject 类 |Microsoft 文档"
-ms.custom: 
+title: CComCachedTearOffObject 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1072faed01033bec9fec127318334f8a61ac29e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 类
 此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。  
@@ -80,7 +75,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A`CComContainedObject`从拖曳类派生的对象 (类`contained`)。|  
   
 ## <a name="remarks"></a>备注  
- `CComCachedTearOffObject`实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。 此类不同于`CComTearOffObject`在于`CComCachedTearOffObject`都具有其自己**IUnknown**、 独立于所有者对象**IUnknown** （所有者是为其拖曳正在创建的对象）。 `CComCachedTearOffObject`保留自己的引用计数在其**IUnknown**并删除本身后的引用计数为零。 但是，如果你查询其拖曳任何接口，所有者对象的引用计数**IUnknown**将递增。  
+ `CComCachedTearOffObject` 实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。 此类不同于`CComTearOffObject`在于`CComCachedTearOffObject`都具有其自己**IUnknown**、 独立于所有者对象**IUnknown** （所有者是为其拖曳正在创建的对象）。 `CComCachedTearOffObject` 保留自己的引用计数在其**IUnknown**并删除本身后的引用计数为零。 但是，如果你查询其拖曳任何接口，所有者对象的引用计数**IUnknown**将递增。  
   
  如果`CComCachedTearOffObject`对象分离式实现已实例化，并再次，对同一分离式接口`CComCachedTearOffObject`重用对象。 相反，如果分离式接口来实现`CComTearOffObject`所有者对象中，通过再次查询的另一个`CComTearOffObject`将实例化。  
   
@@ -95,10 +90,10 @@ public CComObjectRootEx<contained
   
  `CComCachedTearOffObject`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
-##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>  CComCachedTearOffObject::AddRef  
  引用计数递增 1 `CComCachedTearOffObject` 1 的对象。  
   
 ```
@@ -108,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>返回值  
  一个值，可能是用于诊断和测试。  
   
-##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject  
  构造函数。  
   
 ```
@@ -122,7 +117,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>备注  
  初始化`CComContainedObject`成员， [m_contained](#m_contained)。  
   
-##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject  
  析构函数。  
   
 ```
@@ -132,7 +127,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源和调用[FinalRelease](#finalrelease)。  
   
-##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct  
  调用**m_contained::FinalConstruct**创建`m_contained`、 `CComContainedObject` <  `contained`> 用于访问由你拖曳类实现的接口的对象。  
   
 ```
@@ -142,14 +137,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease  
  调用**m_contained::FinalRelease**免费`m_contained`、 `CComContainedObject` <  `contained`> 对象。  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)从拖曳类派生的对象。  
   
 ```
@@ -163,7 +158,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>备注  
  方法`m_contained`继承用于通过缓存拖曳对象的访问拖曳类中的分离式接口`QueryInterface`， `FinalConstruct`，和`FinalRelease`。  
   
-##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -184,7 +179,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  如果所请求的接口是**IUnknown**，返回一个指向`CComCachedTearOffObject`的自己**IUnknown**和递增引用计数。 否则，查询对于上你拖曳类使用的接口[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)方法继承自`CComObjectRootEx`。  
 
   
-##  <a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>  CComCachedTearOffObject::Release  
  递减引用计数 1，如果引用计数为 0，删除`CComCachedTearOffObject`对象。  
   
 ```

@@ -2,26 +2,21 @@
 title: 用于编译时 （现代 C++） 封装的 Pimpl |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a109015f3d30b04eaf89e769e1265c49663599f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>用于编译时封装的 Pimpl（现代 C++）
 *Pimpl 惯用语法*现代的 C++ 技术，可隐藏实现，以便最大程度减少耦合，从而单独的接口。 Pimpl 是短的"指向的实现。" 你已可能熟悉的概念，但是知道它通过类似 Cheshire Cat 或编译器防火墙惯用语法其他名称。  

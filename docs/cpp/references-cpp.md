@@ -2,11 +2,8 @@
 title: 引用 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7453fbab0ade6cfe2cbdd836d7d59ba49c3ccfd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="references-c"></a>引用 (C++)
 与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用： 左值引用后者是指命名的变量和右值引用后者是指[临时对象](../cpp/temporary-objects.md)。 & 运算符表示左值引用，&& 运算符根据上下文表示右值引用或通用引用（右值引用或左值引用）。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
  更复杂的声明符形式为指向数组和函数的指针也适用于引用的数组和函数，请参阅[指针](../cpp/pointers-cpp.md)和[声明符](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
   
- 多个声明符和初始值设定项可能出现在一个声明说明符后面的逗号分隔的列表中。 例如:  
+ 多个声明符和初始值设定项可能出现在一个声明说明符后面的逗号分隔的列表中。 例如：  
   
 ```  
 int &i;   

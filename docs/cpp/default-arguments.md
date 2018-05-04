@@ -2,11 +2,8 @@
 title: 默认自变量 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c341abab34595da58d435be28f50e86cb47403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-arguments"></a>默认自变量
 在许多情况下，函数具有不常使用的自变量，因为使用默认值便已足够。 为了解决此问题，默认自变量工具允许为函数仅指定在给定调用中有意义的自变量。 若要阐明这个概念，请考虑在提供的示例[函数重载](../cpp/function-overloading.md)。  
@@ -119,7 +114,7 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   以后的声明可添加额外的默认自变量。  
   
--   可为指向函数的指针提供默认参数。 例如:  
+-   可为指向函数的指针提供默认参数。 例如：  
   
     ```  
     int (*pShowIntVal)( int i = 0 );  

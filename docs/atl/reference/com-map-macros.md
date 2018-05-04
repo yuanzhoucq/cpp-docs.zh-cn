@@ -2,11 +2,8 @@
 title: COM 映射宏 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_COM_MAP
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97db324dc8e130418419ef435e2665c84eb0b64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-map-macros"></a>COM 映射宏
 这些宏定义 COM 接口映射。  
@@ -36,10 +31,10 @@ ms.lasthandoff: 12/21/2017
 |[BEGIN_COM_MAP](#begin_com_map)|将 COM 接口映射条目的开始标记。|  
 |[END_COM_MAP](#end_com_map)|标记 COM 接口映射条目的末尾。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
    
-##  <a name="begin_com_map"></a>BEGIN_COM_MAP  
+##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
  COM 映射是公开的对象通过在客户端上的接口的机制`QueryInterface`。  
   
 ```
@@ -61,7 +56,7 @@ BEGIN_COM_MAP(x)
   
 
   
-##  <a name="end_com_map"></a>END_COM_MAP  
+##  <a name="end_com_map"></a>  END_COM_MAP  
  结束 COM 接口映射的定义。  
   
 ```
