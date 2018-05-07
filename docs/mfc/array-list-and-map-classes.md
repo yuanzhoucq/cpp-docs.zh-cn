@@ -1,13 +1,10 @@
 ---
-title: "数组、 列表，并将类映射 |Microsoft 文档"
-ms.custom: 
+title: 数组、 列表，并将类映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41dfe0b36548d87b5e0501c557e70f3cf11eea5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-list-and-map-classes"></a>数组、列表和映射类
 为了处理数据的聚合，类库为集合类（数组、列表和映射）提供了一个组，该组可保留各种对象和预定义类型。 将动态调整集合的大小。 这些类可在任何程序中使用，无论是否为 Windows 编写的都是如此。 但是，它们对实现数据结构（定义应用程序框架中的文档类）最有用。 您可以轻松地从其中派生专用集合类，还可以基于模板类进行创建。 有关这些方法的详细信息，请参阅文章[集合](../mfc/collections.md)。 有关模板集合类的列表，请参阅文章[数组、 列表和映射的模板类](../mfc/template-classes-for-arrays-lists-and-maps.md)。  

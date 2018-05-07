@@ -2,11 +2,8 @@
 title: CDockSite 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockSite
@@ -95,17 +92,15 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-caps.latest.revision: 28
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2492738914062be692c1ddd02fd04bc461cd6b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a374496c731e33d13de3ece893fe2ff046d38e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -180,10 +175,10 @@ class CDockSite: public CBasePane
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxDockSite.h  
   
-##  <a name="addrow"></a>CDockSite::AddRow  
+##  <a name="addrow"></a>  CDockSite::AddRow  
 
   
 ```  
@@ -200,7 +195,7 @@ CDockingPanesRow* AddRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="adjustdockinglayout"></a>CDockSite::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CDockSite::AdjustDockingLayout  
 
   
 ```  
@@ -209,7 +204,7 @@ virtual void AdjustDockingLayout();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="adjustlayout"></a>CDockSite::AdjustLayout  
+##  <a name="adjustlayout"></a>  CDockSite::AdjustLayout  
 
   
 ```  
@@ -218,7 +213,7 @@ virtual void AdjustLayout();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="aligndocksite"></a>CDockSite::AlignDockSite  
+##  <a name="aligndocksite"></a>  CDockSite::AlignDockSite  
 
   
 ```  
@@ -235,7 +230,7 @@ void AlignDockSite(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="calcfixedlayout"></a>CDockSite::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CDockSite::CalcFixedLayout  
 
   
 ```  
@@ -252,7 +247,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="canacceptpane"></a>CDockSite::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CDockSite::CanAcceptPane  
 
   
 ```  
@@ -266,7 +261,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="createex"></a>CDockSite::CreateEx  
+##  <a name="createex"></a>  CDockSite::CreateEx  
 
   
 ```  
@@ -291,7 +286,7 @@ virtual BOOL CreateEx(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="createrow"></a>CDockSite::CreateRow  
+##  <a name="createrow"></a>  CDockSite::CreateRow  
 
   
 ```  
@@ -310,7 +305,7 @@ virtual CDockingPanesRow* CreateRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="dockpane"></a>CDockSite::DockPane  
+##  <a name="dockpane"></a>  CDockSite::DockPane  
 
   
 ```  
@@ -327,7 +322,7 @@ virtual void DockPane(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="dockpaneleftof"></a>CDockSite::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CDockSite::DockPaneLeftOf  
  将窗格停靠到另一个窗格的左侧。  
   
 ```  
@@ -337,18 +332,18 @@ virtual BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pBarToDock`  
+ [in][out] `pBarToDock`  
  指向要停靠的左侧窗格中的`pTargetBar`。  
   
- [in][out]`pTargetBar`  
+ [in][out] `pTargetBar`  
  指向目标窗格中的指针。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则停靠窗格，否则为`FALSE`。  
+ `TRUE` 如果成功，则停靠窗格，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CDockSite::DoesAllowDynInsertBefore  
 
   
 ```  
@@ -359,7 +354,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="findpanebyid"></a>CDockSite::FindPaneByID  
+##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID  
  返回具有给定 ID 的窗格  
   
 ```  
@@ -375,7 +370,7 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="findrowindex"></a>CDockSite::FindRowIndex  
+##  <a name="findrowindex"></a>  CDockSite::FindRowIndex  
 
   
 ```  
@@ -389,7 +384,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="fixupvirtualrects"></a>CDockSite::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>  CDockSite::FixupVirtualRects  
 
   
 ```  
@@ -398,7 +393,7 @@ virtual void FixupVirtualRects();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getdocksiteid"></a>CDockSite::GetDockSiteID  
+##  <a name="getdocksiteid"></a>  CDockSite::GetDockSiteID  
 
   
 ```  
@@ -409,7 +404,7 @@ virtual UINT GetDockSiteID() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getdocksiterowslist"></a>CDockSite::GetDockSiteRowsList  
+##  <a name="getdocksiterowslist"></a>  CDockSite::GetDockSiteRowsList  
 
   
 ```  
@@ -420,7 +415,7 @@ const CObList& GetDockSiteRowsList() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getpanelist"></a>CDockSite::GetPaneList  
+##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
  返回在停靠站点停靠的窗格的列表。  
   
 ```  
@@ -430,7 +425,7 @@ const CObList& GetPaneList() const;
 ### <a name="return-value"></a>返回值  
  对的窗格的列表的只读引用当前停靠在停靠栏中。  
   
-##  <a name="isaccessibilitycompatible"></a>CDockSite::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
   
 ```  
@@ -441,7 +436,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isdragmode"></a>CDockSite::IsDragMode  
+##  <a name="isdragmode"></a>  CDockSite::IsDragMode  
 
   
 ```  
@@ -452,7 +447,7 @@ virtual BOOL IsDragMode() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="islastrow"></a>CDockSite::IsLastRow  
+##  <a name="islastrow"></a>  CDockSite::IsLastRow  
 
   
 ```  
@@ -466,7 +461,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isrectwithindocksite"></a>CDockSite::IsRectWithinDockSite  
+##  <a name="isrectwithindocksite"></a>  CDockSite::IsRectWithinDockSite  
 
   
 ```  
@@ -483,7 +478,7 @@ BOOL IsRectWithinDockSite(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isresizable"></a>CDockSite::IsResizable  
+##  <a name="isresizable"></a>  CDockSite::IsResizable  
 
   
 ```  
@@ -494,7 +489,7 @@ virtual BOOL IsResizable() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="movepane"></a>CDockSite::MovePane  
+##  <a name="movepane"></a>  CDockSite::MovePane  
 
   
 ```  
@@ -513,7 +508,7 @@ virtual BOOL MovePane(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="oninsertrow"></a>CDockSite::OnInsertRow  
+##  <a name="oninsertrow"></a>  CDockSite::OnInsertRow  
 
   
 ```  
@@ -525,7 +520,7 @@ virtual void OnInsertRow(POSITION pos);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onremoverow"></a>CDockSite::OnRemoveRow  
+##  <a name="onremoverow"></a>  CDockSite::OnRemoveRow  
 
   
 ```  
@@ -540,7 +535,7 @@ virtual void OnRemoveRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onresizerow"></a>CDockSite::OnResizeRow  
+##  <a name="onresizerow"></a>  CDockSite::OnResizeRow  
 
   
 ```  
@@ -557,7 +552,7 @@ virtual int OnResizeRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onsizeparent"></a>CDockSite::OnSizeParent  
+##  <a name="onsizeparent"></a>  CDockSite::OnSizeParent  
 
   
 ```  
@@ -576,7 +571,7 @@ virtual void OnSizeParent(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onsetwindowpos"></a>CDockSite::OnSetWindowPos  
+##  <a name="onsetwindowpos"></a>  CDockSite::OnSetWindowPos  
 
   
 ```  
@@ -595,7 +590,7 @@ virtual BOOL OnSetWindowPos(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onshowrow"></a>CDockSite::OnShowRow  
+##  <a name="onshowrow"></a>  CDockSite::OnShowRow  
 
   
 ```  
@@ -610,7 +605,7 @@ virtual void OnShowRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="panefrompoint"></a>CDockSite::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CDockSite::PaneFromPoint  
  返回在停靠站点中给定参数指定的点处停靠的窗格。  
   
 ```  
@@ -626,7 +621,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="rectsidefrompoint"></a>CDockSite::RectSideFromPoint  
+##  <a name="rectsidefrompoint"></a>  CDockSite::RectSideFromPoint  
 
   
 ```  
@@ -643,7 +638,7 @@ static int __stdcall RectSideFromPoint(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="removepane"></a>CDockSite::RemovePane  
+##  <a name="removepane"></a>  CDockSite::RemovePane  
 
   
 ```  
@@ -658,7 +653,7 @@ virtual void RemovePane(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="removerow"></a>CDockSite::RemoveRow  
+##  <a name="removerow"></a>  CDockSite::RemoveRow  
 
   
 ```  
@@ -670,7 +665,7 @@ void RemoveRow(CDockingPanesRow* pRow);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="replacepane"></a>CDockSite::ReplacePane  
+##  <a name="replacepane"></a>  CDockSite::ReplacePane  
 
   
 ```  
@@ -687,7 +682,7 @@ BOOL ReplacePane(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="repositionpanes"></a>CDockSite::RepositionPanes  
+##  <a name="repositionpanes"></a>  CDockSite::RepositionPanes  
 
   
 ```  
@@ -699,7 +694,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="resizedocksite"></a>CDockSite::ResizeDockSite  
+##  <a name="resizedocksite"></a>  CDockSite::ResizeDockSite  
 
   
 ```  
@@ -714,7 +709,7 @@ void ResizeDockSite(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="resizerow"></a>CDockSite::ResizeRow  
+##  <a name="resizerow"></a>  CDockSite::ResizeRow  
 
   
 ```  
@@ -733,7 +728,7 @@ int ResizeRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="showpane"></a>CDockSite::ShowPane  
+##  <a name="showpane"></a>  CDockSite::ShowPane  
  显示窗格。  
   
 ```  
@@ -745,25 +740,25 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pBar`  
+ [in][out] `pBar`  
  指向可显示或隐藏窗格的指针。  
   
  [in] `bShow`  
- `TRUE`若要指定在窗格中，要显示;`FALSE`来指定在窗格中，若要隐藏。  
+ `TRUE` 若要指定在窗格中，要显示;`FALSE`来指定在窗格中，若要隐藏。  
   
  [in] `bDelay`  
- `TRUE`若要指定显示窗格中; 之后应直到延迟窗格的布局否则为`FALSE`。  
+ `TRUE` 若要指定显示窗格中; 之后应直到延迟窗格的布局否则为`FALSE`。  
   
  [in] `bActivate`  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果窗格是显示还是隐藏成功。 `FALSE`如果指定的窗格中不属于此停靠站点。  
+ `TRUE` 如果窗格是显示还是隐藏成功。 `FALSE` 如果指定的窗格中不属于此停靠站点。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以显示或隐藏停靠的窗格。 通常情况下，则不需要调用`CDockSite::ShowPane`直接，因为它进行调用通过父框架窗口或基本窗格。  
   
-##  <a name="showrow"></a>CDockSite::ShowRow  
+##  <a name="showrow"></a>  CDockSite::ShowRow  
 
   
 ```  
@@ -780,7 +775,7 @@ void ShowRow(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="swaprows"></a>CDockSite::SwapRows  
+##  <a name="swaprows"></a>  CDockSite::SwapRows  
 
   
 ```  

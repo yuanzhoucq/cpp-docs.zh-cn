@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的 CMake 项目 |Microsoft 文档"
-ms.custom: 
+title: Visual c + + 中的 CMake 项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual c + + 中的 CMake 项目
 
@@ -43,7 +39,7 @@ Visual Studio 用户在不久之前，可以使用 CMake 生成 MSBuild 项目�
 
 ![在 c + + 桌面工作负荷的 CMake 组件](media/cmake-install.png)
  
-## <a name="ide-integration"></a>IDE Integration
+## <a name="ide-integration"></a>IDE 集成
 
 当你选择**文件 |打开 |文件夹**若要打开包含 CMakeLists.txt 文件的文件夹，都会发生以下情况：
 
@@ -194,14 +190,14 @@ JSON IntelliSense 可帮助您编辑 CMakeSettings.json 文件：
 ```
 
 1. **名称**： 在 c + + 配置下拉列表中显示的名称。 此属性的值还可为宏， `${name}`，以指定其他属性值。 有关示例，请参阅**buildRoot** CMakeSettings.json 中的定义。
-1. **生成器**： 映射到**-G**切换，并指定要使用的生成器。 此属性还可为宏， `${generator}`，以帮助指定其他属性值。 Visual Studio 当前支持以下 CMake 生成器：
+1. **生成器**： 映射到 **-G**切换，并指定要使用的生成器。 此属性还可为宏， `${generator}`，以帮助指定其他属性值。 Visual Studio 当前支持以下 CMake 生成器：
 
 
     - "忍者"
-    - "Visual Studio 14 2015"
+    - "Visual Studio 14 2015年"
     - "Visual Studio 14 2015 ARM"
     - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
+    - "Visual Studio 15 2017年"
     - "Visual Studio 15 2017 ARM"
     - "Visual Studio 15 2017 Win64"
 
@@ -209,8 +205,8 @@ JSON IntelliSense 可帮助您编辑 CMakeSettings.json 文件：
 
 若要指定 Visual Studio 生成器中，打开 CMakeSettings.json 从主菜单中，请选择**CMake |更改 CMake 设置**。 删除"忍者"并键入"V"。 这将激活 IntelliSense，这使您能够选择所需的生成器。
 
-1. **buildRoot**： 映射到**-DCMAKE_BINARY_DIR**切换，并指定将在其中创建 CMake 缓存。 如果文件夹不存在，则创建它。
-1. **变量**： 包含将作为获取传递的 CMake 变量名称-值对**-D**_名称_**=**_值_到 CMake。 如果您 CMake 项目生成的指令指定添加直接向 CMake 缓存文件的任何变量，建议你添加他们此处相反。
+1. **buildRoot**： 映射到 **-DCMAKE_BINARY_DIR**切换，并指定将在其中创建 CMake 缓存。 如果文件夹不存在，则创建它。
+1. **变量**： 包含将作为获取传递的 CMake 变量名称-值对 **-D**_名称_**=**_值_到 CMake。 如果您 CMake 项目生成的指令指定添加直接向 CMake 缓存文件的任何变量，建议你添加他们此处相反。
 1. **cmakeCommandArgs**： 指定你想要将传递给 CMake.exe 任何附加开关。
 1. **configurationType**： 定义所选的生成器的生成配置类型。 当前支持的值为"调试"、"MinSizeRel"、"发布"和"RelWithDebInfo"。
 
@@ -239,7 +235,7 @@ usage: ninja [options] [targets...]
 
 |选项|描述|
 |--------------|------------|
-| --version  | 打印忍者版本 ("1.7.1")|
+| -版本  | 打印忍者版本 ("1.7.1")|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|
 |   -f 文件  | 指定输入的生成文件 (default=build.ninja)|
 |   -j N     | 以并行方式运行 N 作业 (默认 = 14 中，从可用的 Cpu 派生)|
@@ -258,7 +254,7 @@ CMakeSettings.json 现在支持继承的环境。 此功能，可 （1） 继承
   "inheritEnvironments": [ "msvc_x64_x64" ]
 ```
 
-上面的示例是运行相同**VS 2017 的开发人员命令提示符**与**-体系结构 = amd64-host_arch = amd64**自变量。
+上面的示例是运行相同**VS 2017 的开发人员命令提示符**与 **-体系结构 = amd64-host_arch = amd64**自变量。
 
 下表显示的默认值和它们的命令行等效项：
 

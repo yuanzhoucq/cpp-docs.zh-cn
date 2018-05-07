@@ -1,13 +1,10 @@
 ---
-title: "连接映射 |Microsoft 文档"
-ms.custom: 
+title: 连接映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>连接映射
 OLE 控件可公开接口向其他应用程序。 这些接口仅允许从容器的访问，在该控件。 如果 OLE 控件想要访问的其他 OLE 对象的外部接口，必须建立的连接点。 此连接点允许传出外部调度映射，如事件映射或通知函数访问控件。  
@@ -55,7 +50,7 @@ OLE 控件可公开接口向其他应用程序。 这些接口仅允许从容器
 |[AfxConnectionAdvise](#afxconnectionadvise)|建立源和接收器之间的连接。|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|将中断源和接收器之间的连接。|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  使用`BEGIN_CONNECTION_PART`宏来开始的事件和属性的通知连接点之外的其他连接点的定义。  
   
 ```   
@@ -72,10 +67,10 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="remarks"></a>备注  
  在定义您的类的成员函数声明 (.h) 文件中，启动的连接点`BEGIN_CONNECTION_PART`宏，然后添加`CONNECTION_IID`宏，并且你想要实现，并完成连接点映射的任何其他成员函数与`END_CONNECTION_PART`宏。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  结束连接点的声明。  
   
 ```   
@@ -86,10 +81,10 @@ END_CONNECTION_PART(localClass)
  *localClass*  
  指定实现连接点的局部类的名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  在 `BEGIN_CONNECTION_PART` 和 `END_CONNECTION_PART` 宏之间使用以定义 OLE 控件支持的连接点的接口 ID。  
   
 ```   
@@ -101,16 +96,16 @@ CONNECTION_IID(iid)
  接口的接口 ID 由连接点调用。  
   
 ### <a name="remarks"></a>备注  
- `iid` 参数是一个接口 ID，用于标识连接点在其连接的接收器中调用的接口。 例如:  
+ `iid` 参数是一个接口 ID，用于标识连接点在其连接的接收器中调用的接口。 例如：  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
  指定调用 `ISinkInterface` 接口的连接点。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  程序中的每个 `COleControl` 派生类可提供一个连接映射来指定控件支持的额外的连接点。  
   
 ```   
@@ -120,10 +115,10 @@ DECLARE_CONNECTION_MAP()
 ### <a name="remarks"></a>备注  
  如果控件支持额外的点，请在类声明的末尾使用 `DECLARE_CONNECTION_MAP` 宏。 然后，在定义类的成员函数的 .cpp 文件中，使用 `BEGIN_CONNECTION_MAP` 宏、控件的每个连接点的 `CONNECTION_PART` 宏和 `END_CONNECTION_MAP` 宏声明连接映射的结尾。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  程序中的每个 `COleControl` 派生类均可提供连接映射来指定控件将支持的连接点。  
   
 ```   
@@ -140,20 +135,20 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="remarks"></a>备注  
  在实现 (。定义你的类的成员函数的 CPP) 文件启动连接映射与`BEGIN_CONNECTION_MAP`宏，然后为每个你使用的连接点添加宏条目[CONNECTION_PART](#connection_part)宏。 最后，完成连接映射与[END_CONNECTION_MAP](#end_connection_map)宏。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  结束连接映射的定义。  
   
 ```   
 END_CONNECTION_MAP()  
 ```  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  将您的 OLE 控件的连接点映射到特定的接口 id。  
   
 ```   
@@ -171,16 +166,16 @@ CONNECTION_PART(theClass, iid, localClass)
  指定实现连接点的局部类的名称。  
   
 ### <a name="remarks"></a>备注  
- 例如:  
+ 例如：  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
  实现连接映射，与连接点，调用`IID_ISinkInterface`接口。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  调用此函数可指定源之间建立连接`pUnkSrc`，和接收器，通过指定`pUnkSink`。  
   
 ```   
@@ -214,10 +209,10 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  调用此函数可断开连接之间指定的源的连接`pUnkSrc`，和接收器，通过指定`pUnkSink`。  
   
 ```   
@@ -251,7 +246,7 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxctl.h 
 
 ## <a name="see-also"></a>请参阅  

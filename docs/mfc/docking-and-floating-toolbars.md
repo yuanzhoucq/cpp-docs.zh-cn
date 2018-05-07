@@ -1,13 +1,10 @@
 ---
-title: "停靠和浮动工具栏 |Microsoft 文档"
-ms.custom: 
+title: 停靠和浮动工具栏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>停靠和浮动工具栏
 Microsoft 基础类库支持可停靠工具栏。 可以附加或停靠到其父窗口中，任何一边可停靠工具栏或可以分离或浮动在其自己的微型框架窗口中。 此文章介绍了如何在你的应用程序中使用可停靠工具栏。  
@@ -65,27 +60,27 @@ Microsoft 基础类库支持可停靠工具栏。 可以附加或停靠到其父
   
  请参阅 MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)有关示例。  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>启用停靠在框架窗口  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> 启用停靠在框架窗口  
  若要将工具栏停靠到框架窗口，框架窗口 （或目标） 必须启用以允许停靠。 这是使用[CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)函数，其将一个`DWORD`参数是一套样式位，该值指示框架窗口的哪一侧接受停靠。 如果工具栏可停靠，有多个可以停靠的边，四条边所示的参数传递给`EnableDocking`使用按以下顺序： 上、 下、 左、 右。 如果你希望能够停靠控件条任何位置，则传递`CBRS_ALIGN_ANY`到`EnableDocking`。  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>启用为工具栏停靠  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> 启用为工具栏停靠  
  准备停靠的目标后，您必须以类似的方式准备的工具栏 （或源）。 调用[CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking)对你想要停靠每一个工具栏，指定目标边到应该停靠工具栏。 如果未对调用中指定的侧边`CControlBar::EnableDocking`匹配四条边启用停靠在框架窗口中，不能停靠工具栏-它将浮动。 一旦浮动，它就会一直浮动工具栏，不能将停靠在框架窗口。  
   
  如果所需的效果是一个永久浮动工具栏，调用`EnableDocking`参数为 0。 然后调用[CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar)。 工具栏将保持浮动，永远不能在任何位置停靠。  
   
-##  <a name="_core_docking_the_toolbar"></a>停靠工具栏  
+##  <a name="_core_docking_the_toolbar"></a> 停靠工具栏  
  框架调用[CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar)当用户尝试删除允许停靠框架窗口的一侧上的工具栏。  
   
  此外，你可以随时到框架窗口停靠控件条调用此函数。 这通常可在初始化过程。 多个工具栏可停靠到框架窗口的特定边。  
   
-##  <a name="_core_floating_the_toolbar"></a>浮动工具栏  
+##  <a name="_core_floating_the_toolbar"></a> 浮动工具栏  
  分离从框架窗口可停靠工具栏称为浮动工具栏。 调用[CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar)要这样做。 指定浮动工具栏、 它应将放置到的位置的点和确定浮动工具栏是水平还是垂直对齐方式。  
   
  当用户拖动工具栏离开其停靠位置，并将它放置在未启用停靠的位置，框架将调用此函数。 这可以是任意位置内部或外部框架窗口。 与`DockControlBar`，你还可以在初始化期间调用此函数。  
   
  可停靠工具栏的 MFC 实现不提供的一些扩展功能在某些应用程序支持可停靠工具栏中找到。 未提供可自定义工具栏等功能。  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>动态调整大小工具栏  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> 动态调整大小工具栏  
  截至 Visual c + + 4.0 版，你可以使你的应用程序动态调整大小的浮动工具栏的用户。 通常，工具栏具有 long、 线性形状，水平显示。 但你可以更改工具栏的方向和形状。 例如，当用户在框架窗口的垂直侧之一将工具栏停靠，形状将更改为垂直布局。 还有可能以重新定形在一个矩形的具有包含多个行的按钮的工具栏。  
   
  你可以：  
@@ -106,7 +101,7 @@ Microsoft 基础类库支持可停靠工具栏。 可以附加或停靠到其父
   
  你还可以使用[CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle)要在您的工具栏中返回的状态和按钮的样式。 按钮的样式确定按钮的显示方式以及它如何响应用户输入;该状态告诉按钮是否换行的状态。  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>设置为固定样式工具栏的的换行位置  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> 设置为固定样式工具栏的的换行位置  
  使用大小固定样式工具栏，指定工具栏按钮工具栏将换行的索引。 下面的代码演示如何执行此操作在主框架窗口的`OnCreate`重写：  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  

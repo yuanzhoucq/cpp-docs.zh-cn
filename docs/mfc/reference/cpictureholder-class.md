@@ -1,12 +1,9 @@
 ---
-title: "CPictureHolder 类 |Microsoft 文档"
-ms.custom: 
+title: CPictureHolder 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPictureHolder
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 类
 实现图片属性，这样用户就可以在控件中显示的图片。  
@@ -87,7 +82,7 @@ class CPictureHolder
 |[CPictureHolder::m_pPict](#m_ppict)|指向图片对象的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CPictureHolder`没有基类。  
+ `CPictureHolder` 没有基类。  
   
  使用常用图片属性，开发人员可以指定位图、 图标或用于显示图元文件。  
   
@@ -96,17 +91,17 @@ class CPictureHolder
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CPictureHolder`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxctl.h  
   
-##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
  构造 `CPictureHolder` 对象。  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>  CPictureHolder::CreateEmpty  
  创建一个空`CPictureHolder`对象，并连接到`IPicture`接口。  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>返回值  
  如果成功创建对象; 则为非 0否则为 0。  
   
-##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap  
  使用位图来初始化中的图片对象`CPictureHolder`。  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>备注  
  如果`bTransferOwnership`是**TRUE**、 调用方不应使用位图或以任何方式此调用后的调色板对象返回。 如果`bTransferOwnership`是**FALSE**，调用方负责确保位图和调色板对象图片对象的生存期内保持有效。  
   
-##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  使用一个图标来初始化中的图片对象`CPictureHolder`。  
   
 ```  
@@ -190,7 +185,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>备注  
  如果`bTransferOwnership`是**TRUE**，调用方不应使用的图标对象以任何方式此调用返回后。 如果`bTransferOwnership`是**FALSE**，调用方负责确保图标对象图片对象的生存期内就保持有效。  
   
-##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  使用图元文件来初始化中的图片对象`CPictureHolder`。  
   
 ```  
@@ -220,7 +215,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>备注  
  如果`bTransferOwnership`是**TRUE**，此调用返回后调用方应以任何方式使用图元文件对象。 如果`bTransferOwnership`是**FALSE**，调用方负责确保图元文件对象的图片对象的生存期内就保持有效。  
   
-##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  检索容器的属性浏览器中显示的字符串。  
   
 ```  
@@ -234,7 +229,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>返回值  
  如果成功检索字符串; 则为非 0否则为 0。  
   
-##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch  
  此函数将返回一个指向`CPictureHolder`对象的`IPictureDisp`接口。  
   
 ```  
@@ -247,7 +242,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>备注  
  调用方必须调用**版本**时已完成，但它 this 指针上。  
   
-##  <a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>  CPictureHolder::GetType  
  指示图是位图、 图元文件或图标。  
   
 ```  
@@ -257,22 +252,22 @@ short GetType();
 ### <a name="return-value"></a>返回值  
  一个值，该值指示该图片的类型。 可能的值及其含义如下所示：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
-|**PICTYPE_UNINITIALIZED**|`CPictureHolder`对象被 unititialized。|  
-|**PICTYPE_NONE**|`CPictureHolder`对象为空。|  
+|**PICTYPE_UNINITIALIZED**|`CPictureHolder` 对象被 unititialized。|  
+|**PICTYPE_NONE**|`CPictureHolder` 对象为空。|  
 |**PICTYPE_BITMAP**|图片是一个位图。|  
 |**PICTYPE_METAFILE**|图片是图元文件。|  
 |**PICTYPE_ICON**|图是一个图标。|  
   
-##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>  CPictureHolder::m_pPict  
  指向的指针`CPictureHolder`对象的`IPicture`接口。  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="render"></a>Cpictureholder:: Render  
+##  <a name="render"></a>  Cpictureholder:: Render  
  呈现中引用的矩形的图片`rcRender`。  
   
 ```  
@@ -292,7 +287,7 @@ void Render(
  *rcWBounds*  
  表示呈现图的对象的边框的矩形。 对于控件，将此矩形是`rcBounds`参数传递到的重写[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。  
   
-##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  连接`CPictureHolder`对象传递给`IPictureDisp`接口。  
   
 ```  

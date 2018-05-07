@@ -1,12 +1,9 @@
 ---
-title: "COleLinkingDoc 类 |Microsoft 文档"
-ms.custom: 
+title: COleLinkingDoc 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 类
 支持链接到所包含的嵌入项的 OLE 容器文档的基类。  
@@ -102,10 +97,10 @@ class COleLinkingDoc : public COleDocument
   
  `COleLinkingDoc`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
  构造`COleLinkingDoc`对象而不从与 OLE 系统 Dll 之间的通信。  
   
 ```  
@@ -115,7 +110,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>备注  
  必须调用`Register`成员函数，以通知 OLE 文档处于打开状态。  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
  由框架调用以确定文档是否包含具有指定名称的嵌入的 OLE 项。  
   
 ```  
@@ -132,7 +127,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>备注  
  默认实现将搜索具有指定名称 （名称比较不区分大小写） 的项的嵌入项的列表。 如果你有自己的存储或命名嵌入的 OLE 项的方法，重写此函数。  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
  由框架调用以检查文档是否包含具有指定名称的链接的服务器项。  
   
 ```  
@@ -149,7 +144,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>备注  
  默认值`COleLinkingDoc`实现始终返回**NULL**。 此函数是在派生类中的重写`COleServerDoc`搜索具有指定名称 （名称比较不区分大小写） 链接的项的 OLE 服务器项的列表。 如果已实现您自己的存储或检索链接的服务器项的方法，重写此函数。  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>  COleLinkingDoc::Register  
  告知 OLE 系统 Dll，文档已打开。  
   
 ```  
@@ -173,7 +168,7 @@ BOOL Register(
   
  如果你使用`COleTemplateServer`中你的应用程序，`Register`为您通过调用`COleLinkingDoc`的实现`OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
  该文档不再是打开通知 OLE 系统 Dll。  
   
 ```  
@@ -183,7 +178,7 @@ void Revoke();
 ### <a name="remarks"></a>备注  
  调用此函数可撤消向 OLE 系统 Dll 的文档的注册。  
   
- 关闭的命名的文件时，应调用此函数，但通常不需要直接调用它。 `Revoke`为您通过调用`COleLinkingDoc`的实现`OnCloseDocument`， `OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。  
+ 关闭的命名的文件时，应调用此函数，但通常不需要直接调用它。 `Revoke` 为您通过调用`COleLinkingDoc`的实现`OnCloseDocument`， `OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   

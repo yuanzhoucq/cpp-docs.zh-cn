@@ -1,13 +1,10 @@
 ---
-title: "如何： 创建类型安全集合 |Microsoft 文档"
-ms.custom: 
+title: 如何： 创建类型安全集合 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 本文介绍如何针对您自己的数据类型生成类型安全的集合。 包括以下主题：  
@@ -42,15 +37,15 @@ ms.lasthandoff: 12/21/2017
   
  Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 由于它们是模板，因此这些类帮助提供类型安全并且易于使用，不必进行类型转换和其他与为了此目的使用非模板类有关的额外的工作。 MFC 示例[收集](../visual-cpp-samples.md)说明如何使用 MFC 应用程序中的基于模板的集合类。 一般将在编写新集合代码时使用这些类。  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a>为了类型安全使用基于模板的类  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> 为了类型安全使用基于模板的类  
   
 #### <a name="to-use-template-based-classes"></a>使用基于模板的类  
   
-1.  声明集合类类型的变量。 例如:  
+1.  声明集合类类型的变量。 例如：  
   
      [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]  
   
-2.  调用集合对象的成员函数。 例如:  
+2.  调用集合对象的成员函数。 例如：  
   
      [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]  
   
@@ -58,10 +53,10 @@ ms.lasthandoff: 12/21/2017
   
  此示例演示对整数列表的声明。 步骤 1 中的第一个参数是作为列表的元素存储的数据的类型。 第二个参数指定如何将数据传递给并返回与成员函数的集合类，如**添加**和`GetAt`。  
   
-##  <a name="_core_implementing_helper_functions"></a>实现帮助器函数  
+##  <a name="_core_implementing_helper_functions"></a> 实现帮助器函数  
  基于模板的集合类 `CArray`、`CList` 和 `CMap` 使用您可根据需要为派生集合类自定义的 5 个全局帮助器函数。 有关这些帮助器函数的信息，请参阅[集合类帮助器](../mfc/reference/collection-class-helpers.md)中*MFC 参考*。 基于模板的集合类的大部分使用需要实现序列化函数。  
   
-###  <a name="_core_serializing_elements"></a>序列化元素  
+###  <a name="_core_serializing_elements"></a> 序列化元素  
  `CArray`、`CList` 和 `CMap` 类将调用 `SerializeElements` 以将集合元素存储到存档中或从存档中读取集合元素。  
   
  `SerializeElements` 帮助器函数的默认实现将执行从对象到存档的位写入，或从存档到对象的位读取，具体取决于是将对象存储在存档中还是从存档中检索对象。 如果此操作不合适，则请重写 `SerializeElements`。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
  有关重载的插入运算符`CArchive`调用`CObject::Serialize`（或该函数的替代） 为每个**CPerson**对象。  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a>使用非模板集合类  
+##  <a name="_core_using_nontemplate_collection_classes"></a> 使用非模板集合类  
  MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 它们可以用于包含受支持的类型的数据`CObject*`， **UINT**， `DWORD`，和`CString`。 您可以使用这些预定义的集合（如 `CObList`）保存派生自 `CObject` 的任何对象的集合。 MFC 还提供其他预定义的集合以保存基元类型，如**UINT**和 void 指针 (`void`*)。 但一般来说，定义自己的类型安全集合来保存更特定的类的对象及其派生类型往往很有用。 请注意，使用不基于模板的集合类这样做比使用基于模板的类工作量大。  
   
  使用非模板集合创建类型安全的集合有两种方式：  

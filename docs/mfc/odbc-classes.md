@@ -1,13 +1,10 @@
 ---
-title: "ODBC 类 |Microsoft 文档"
-ms.custom: 
+title: ODBC 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes"></a>ODBC 类
 这些类可与其他应用程序框架类以便轻松访问各种数据库为其开放式数据库连接 (ODBC) 驱动程序都可用。  
@@ -50,10 +45,10 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="related-classes"></a>相关的类  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- 如位图封装为二进制大型对象 (BLOB) 存储的句柄。 `CLongBinary`对象用于管理存储在数据库表中的大型数据对象。  
+ 如位图封装为二进制大型对象 (BLOB) 存储的句柄。 `CLongBinary` 对象用于管理存储在数据库表中的大型数据对象。  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- 可以用来存储一个值，而无需担心值的数据类型。 `CDBVariant`跟踪当前值，该值存储在联合中的数据类型。  
+ 可以用来存储一个值，而无需担心值的数据类型。 `CDBVariant` 跟踪当前值，该值存储在联合中的数据类型。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)

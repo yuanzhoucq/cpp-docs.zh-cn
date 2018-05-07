@@ -1,12 +1,9 @@
 ---
-title: "CAsyncMonikerFile 类 |Microsoft 文档"
-ms.custom: 
+title: CAsyncMonikerFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 类
 提供功能以在 ActiveX 控件（原为 OLE 控件）中使用异步名字对象。  
@@ -114,10 +109,10 @@ class CAsyncMonikerFile : public CMonikerFile
   
  `CAsyncMonikerFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
  构造 `CAsyncMonikerFile` 对象。  
   
 ```  
@@ -125,11 +120,11 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>备注  
- 它不会创建`IBindHost`接口。 `IBindHost`仅当你提供在使用**打开**成员函数。  
+ 它不会创建`IBindHost`接口。 `IBindHost` 仅当你提供在使用**打开**成员函数。  
   
  有关的说明`IBindHost`接口，请参阅 Windows SDK。  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
  调用此函数可关闭并释放所有资源。  
   
 ```  
@@ -139,7 +134,7 @@ virtual void Close();
 ### <a name="remarks"></a>备注  
  可以在未打开或已关闭的文件上调用。  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
  创建 COM 对象实现`IBindStatusCallback`。  
   
 ```  
@@ -154,7 +149,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
  如果`pUnkControlling`不**NULL**，该函数将指针返回到内部**IUnknown**上新的 COM 对象支持`IBindStatusCallback`。 如果`pUnkControlling`是**NULL**，该函数返回一个指向**IUnknown**上新的 COM 对象支持`IBindStatusCallback`。  
   
 ### <a name="remarks"></a>备注  
- `CAsyncMonikerFile`需要一个 COM 对象，该对象实现`IBindStatusCallback`。 MFC 实现此类对象，并是聚合。 您可以重写`CreateBindStatusCallback`以返回你自己的 COM 对象。 COM 对象可以通过调用聚合 MFC 的实现`CreateBindStatusCallback`与 COM 对象控制未知。 使用实现的 COM 对象`CCmdTarget`COM 支持可以检索控制未知使用**CCmdTarget::GetControllingUnknown**。  
+ `CAsyncMonikerFile` 需要一个 COM 对象，该对象实现`IBindStatusCallback`。 MFC 实现此类对象，并是聚合。 您可以重写`CreateBindStatusCallback`以返回你自己的 COM 对象。 COM 对象可以通过调用聚合 MFC 的实现`CreateBindStatusCallback`与 COM 对象控制未知。 使用实现的 COM 对象`CCmdTarget`COM 支持可以检索控制未知使用**CCmdTarget::GetControllingUnknown**。  
   
  或者，您的 COM 对象可以委托到 MFC 的实现通过调用**CreateBindStatusCallback (NULL)**。  
   
@@ -162,7 +157,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  有关异步名字对象和异步绑定的详细信息，请参阅[IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060)接口和[如何异步绑定和存储工作](http://msdn.microsoft.com/library/windows/desktop/aa379152)。 有关聚合的讨论，请参阅[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 所有三个主题是 Windows SDK 中。  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  从异步名字对象的客户端，以告诉它想要将绑定的异步名字对象调用。  
   
 ```  
@@ -177,7 +172,7 @@ virtual DWORD GetBindInfo() const;
   
  执行此操作的一个原因是将绑定而不数据推送模型中使用数据拉取模型。 在数据拉入模型中，客户端驱动器绑定操作中，并标记仅提供数据给客户端读取它时。 在数据推送模型中，名字对象驱动器异步绑定操作和持续在新数据可用时通知客户端。  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
  调用此函数可检索异步传输绑定的指针。  
   
 ```  
@@ -192,7 +187,7 @@ IBinding* GetBinding() const;
   
  有关的说明`IBinding`接口，请参阅 Windows SDK。  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
  调用此函数可检索的流中的数据格式。  
   
 ```  
@@ -202,7 +197,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>返回值  
  指向 Windows 结构的指针[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)为当前打开的流。 返回**NULL**如果标记尚未绑定，如果它不是异步的或者如果未开始异步操作。  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  从客户端的异步名字对象调用在绑定进程启动时接收到线程给定绑定操作的优先级。  
   
 ```  
@@ -213,9 +208,9 @@ virtual LONG GetPriority() const;
  从该处异步传输将发生的优先级。 一个标准的线程优先级标志： **THREAD_PRIORITY_ABOVE_NORMAL**， **THREAD_PRIORITY_BELOW_NORMAL**， **THREAD_PRIORITY_HIGHEST**， **THREAD_PRIORITY_IDLE**， **THREAD_PRIORITY_LOWEST**， **THREAD_PRIORITY_NORMAL**，和**THREAD_PRIORITY_TIME_CRITICAL**。 请参阅 Windows 函数[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)有关这些值的说明。  
   
 ### <a name="remarks"></a>备注  
- `GetPriority`应不直接调用。 **THREAD_PRIORITY_NORMAL**返回的默认实现。  
+ `GetPriority` 应不直接调用。 **THREAD_PRIORITY_NORMAL**返回的默认实现。  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  异步名字对象调用`OnDataAvailable`变得可用，将向客户端提供数据，在异步过程绑定操作。  
   
 ```  
@@ -241,7 +236,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
  当资源不足时，调用由名字对象。  
   
 ```  
@@ -251,7 +246,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>备注  
  默认实现调用`GetBinding( )-> Abort( )`。  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
  调用由重复以指示此绑定的操作，通常在合理时间间隔内较长的操作的当前进度的名字对象。  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  要绑定到对象的实例是只是关于创建。 `szStatusText`提供允许客户端的机会取消绑定操作中，如果需要字符串格式中的新对象的 CLSID。  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  重写此函数在执行操作时绑定正在启动你派生类中。  
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>备注  
  由名字对象返回调用此函数。 默认实现不执行任何操作。  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
  调用由名字对象绑定操作的末尾。  
   
 ```  
@@ -334,7 +329,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  有关的说明`IBinding`接口，请参阅 Windows SDK。  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
  调用此成员函数以异步方式打开文件。  
   
 ```  
@@ -402,7 +397,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>备注  
  此调用启动绑定过程。  
   
- 你可以使用 URL 或文件名`lpszURL`参数。 例如:  
+ 你可以使用 URL 或文件名`lpszURL`参数。 例如：  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

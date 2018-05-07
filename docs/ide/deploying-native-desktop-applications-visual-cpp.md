@@ -1,13 +1,10 @@
 ---
-title: "部署本机桌面应用程序 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 部署本机桌面应用程序 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe88a322314ac24fa5799735e84ff100efa2e79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 833b3eb674dc2f6efc99b852cd366f699d46e716
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>部署本机桌面应用程序 (Visual C++)
 部署是用于分配要安装到其他计算机上的已完成应用程序或组件的进程。 当在开发人员计算机上创建了应用程序时开始部署规划。 当已安装并准备好在用户计算机上运行应用程序时，部署结束。  

@@ -1,13 +1,10 @@
 ---
-title: "命令传送示例 |Microsoft 文档"
-ms.custom: 
+title: 命令传送示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ac591005d5df6b18102d296352b8b2528ba839
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a12a5cd19177761dfbf484c64f528d8def194ca5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing-illustration"></a>命令传送示例
 为了说明，请考虑来自 MDI 应用程序的“编辑”菜单中“全部清除”菜单项的命令消息。 假设此命令的处理程序函数恰好是应用程序的文档类的成员函数。 下面演示了在用户选择菜单项后命令如何到达其处理程序：  

@@ -1,12 +1,9 @@
 ---
-title: "CControlBar 类 |Microsoft 文档"
-ms.custom: 
+title: CControlBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CControlBar
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911ff6251a6b34162377610ae139cfa3a7cefaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 控件条类的基类[CStatusBar](../../mfc/reference/cstatusbar-class.md)， [CToolBar](../../mfc/reference/ctoolbar-class.md)， [CDialogBar](../../mfc/reference/cdialogbar-class.md)， [CReBar](../../mfc/reference/crebar-class.md)，和[COleResizeBar](../../mfc/reference/coleresizebar-class.md)。  
@@ -132,10 +127,10 @@ class CControlBar : public CWnd
   
  `CControlBar`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
+##  <a name="calcdynamiclayout"></a>  CControlBar::CalcDynamicLayout  
  框架调用此成员函数以计算动态工具栏的维度。  
   
 ```  
@@ -153,8 +148,8 @@ virtual CSize CalcDynamicLayout(
   
 |布局模式标志|其中的含义|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|指示是否将控件条被拉伸到的帧的大小。 如果栏不是停靠栏 （不可用于停靠），设置。 未设置栏时停靠或浮动 （适用于停靠）。 如果设置，`LM_STRETCH`忽略`nLength`并返回维度基于`LM_HORZ`状态。 `LM_STRETCH`工作原理类似于`bStretch`参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
-|`LM_HORZ`|指示该拆分条是水平或垂直方向。 只有当栏为水平方向，并且如果它是垂直方向，未设置设置。 `LM_HORZ`工作原理类似于`bHorz`参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
+|`LM_STRETCH`|指示是否将控件条被拉伸到的帧的大小。 如果栏不是停靠栏 （不可用于停靠），设置。 未设置栏时停靠或浮动 （适用于停靠）。 如果设置，`LM_STRETCH`忽略`nLength`并返回维度基于`LM_HORZ`状态。 `LM_STRETCH` 工作原理类似于`bStretch`参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
+|`LM_HORZ`|指示该拆分条是水平或垂直方向。 只有当栏为水平方向，并且如果它是垂直方向，未设置设置。 `LM_HORZ` 工作原理类似于`bHorz`参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
 |**LM_MRUWIDTH**|最近使用过的动态宽度。 将忽略`nLength`参数，并使用记忆个最近使用的宽度。|  
 |`LM_HORZDOCK`|水平停靠维度。 将忽略`nLength`参数并返回最大宽度的动态大小。|  
 |`LM_VERTDOCK`|垂直停靠维度。 将忽略`nLength`参数和返回使用的最大高度的动态大小。|  
@@ -167,7 +162,7 @@ virtual CSize CalcDynamicLayout(
 ### <a name="remarks"></a>备注  
  重写该成员函数以提供您自己在从派生的类中的动态布局`CControlBar`。 MFC 类派生自`CControlBar`，如[CToolbar](../../mfc/reference/ctoolbar-class.md)，重写该成员函数，并且提供自己的实现。  
   
-##  <a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CControlBar::CalcFixedLayout  
  调用此成员函数来计算的控件条的水平大小。  
   
 ```  
@@ -198,7 +193,7 @@ virtual CSize CalcFixedLayout(
 |**FALSE**|**TRUE**|没有拉伸可用|水平方向|停靠|  
 |**FALSE**|**FALSE**|没有拉伸可用|垂直方向|停靠|  
   
-##  <a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
+##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect  
  框架调用此函数可计算控件条的工作区。  
   
 ```  
@@ -219,14 +214,14 @@ virtual void CalcInsideRect(
   
  重写此函数可自定义的边框和控件条的手柄栏的呈现。  
   
-##  <a name="ccontrolbar"></a>CControlBar::CControlBar  
+##  <a name="ccontrolbar"></a>  CControlBar::CControlBar  
  构造 `CControlBar` 对象。  
   
 ```  
 CControlBar();
 ```  
   
-##  <a name="dopaint"></a>CControlBar::DoPaint  
+##  <a name="dopaint"></a>  CControlBar::DoPaint  
  由框架调用以呈现边框和控件条的手柄栏。  
   
 ```  
@@ -242,7 +237,7 @@ virtual void DoPaint(CDC* pDC);
   
  另一种自定义方法是重写`DrawBorders`和`DrawGripper`函数，并添加边框和控制手柄的自定义绘图代码。 因为默认情况下调用这些方法`DoPaint`方法，重写`DoPaint`不需要。  
   
-##  <a name="drawborders"></a>CControlBar::DrawBorders  
+##  <a name="drawborders"></a>  CControlBar::DrawBorders  
  由框架调用以呈现控件条的边框。  
   
 ```  
@@ -261,7 +256,7 @@ virtual void DrawBorders(
 ### <a name="remarks"></a>备注  
  重写此函数可自定义控件栏边框的外观。  
   
-##  <a name="drawgripper"></a>CControlBar::DrawGripper  
+##  <a name="drawgripper"></a>  CControlBar::DrawGripper  
  由框架调用以呈现控件条的控制手柄。  
   
 ```  
@@ -280,7 +275,7 @@ virtual void DrawGripper(
 ### <a name="remarks"></a>备注  
  重写此函数可自定义控件栏控制手柄的外观。  
   
-##  <a name="enabledocking"></a>CControlBar::EnableDocking  
+##  <a name="enabledocking"></a>  CControlBar::EnableDocking  
  调用此函数可启用要停靠的控件条。  
   
 ```  
@@ -291,37 +286,37 @@ void EnableDocking(DWORD dwDockStyle);
  `dwDockStyle`  
  指定是否将控件条支持停靠和到可停靠控件条，其父窗口的侧，如果受支持。 可以是一个或多个以下：  
   
-- `CBRS_ALIGN_TOP`允许在客户端区域的顶部停靠。  
+- `CBRS_ALIGN_TOP` 允许在客户端区域的顶部停靠。  
   
-- `CBRS_ALIGN_BOTTOM`允许在工作区底部停靠。  
+- `CBRS_ALIGN_BOTTOM` 允许在工作区底部停靠。  
   
-- `CBRS_ALIGN_LEFT`允许客户端区域的左侧停靠。  
+- `CBRS_ALIGN_LEFT` 允许客户端区域的左侧停靠。  
   
-- `CBRS_ALIGN_RIGHT`允许客户端区域右侧停靠。  
+- `CBRS_ALIGN_RIGHT` 允许客户端区域右侧停靠。  
   
-- `CBRS_ALIGN_ANY`允许在客户端区域的任何一侧上停靠。  
+- `CBRS_ALIGN_ANY` 允许在客户端区域的任何一侧上停靠。  
   
-- `CBRS_FLOAT_MULTI`允许多个控件条，以在单个微型框架窗口中浮动。  
+- `CBRS_FLOAT_MULTI` 允许多个控件条，以在单个微型框架窗口中浮动。  
   
  如果为 0 （即，指示没有标志），将不停靠控件条。  
   
 ### <a name="remarks"></a>备注  
  指定四条边必须匹配的一端为停靠在目标框架窗口中，启用或不能为该框架窗口停靠控件条。  
   
-##  <a name="getbarstyle"></a>CControlBar::GetBarStyle  
- 调用此函数可确定哪些**CBRS_**控件栏的当前设置 （控件栏样式） 设置。  
+##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle  
+ 调用此函数可确定哪些**CBRS_** 控件栏的当前设置 （控件栏样式） 设置。  
   
 ```  
 DWORD GetBarStyle();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 当前**CBRS_**控件条的 （控件栏样式） 设置。 请参阅[CControlBar::SetBarStyle](#setbarstyle)可用样式的完整列表。  
+ 当前**CBRS_** 控件条的 （控件栏样式） 设置。 请参阅[CControlBar::SetBarStyle](#setbarstyle)可用样式的完整列表。  
   
 ### <a name="remarks"></a>备注  
  不处理**WS_** （窗口样式） 样式。  
   
-##  <a name="getborders"></a>CControlBar::GetBorders  
+##  <a name="getborders"></a>  CControlBar::GetBorders  
  返回控件条的当前边框的值。  
   
 ```  
@@ -331,7 +326,7 @@ CRect GetBorders() const;
 ### <a name="return-value"></a>返回值  
  A`CRect`对象，其中包含的每一方的控件条对象的当前宽度 （以像素为单位）。 例如，值为`left`成员的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，是左侧边框的宽度。  
   
-##  <a name="getcount"></a>CControlBar::GetCount  
+##  <a name="getcount"></a>  CControlBar::GetCount  
  返回的非数`HWND`项上`CControlBar`对象。  
   
 ```  
@@ -344,7 +339,7 @@ int GetCount() const;
 ### <a name="remarks"></a>备注  
  项的类型取决于派生的对象： 窗格[CStatusBar](../../mfc/reference/cstatusbar-class.md)对象、 按钮和分隔符[CToolBar](../../mfc/reference/ctoolbar-class.md)对象。  
   
-##  <a name="getdockingframe"></a>CControlBar::GetDockingFrame  
+##  <a name="getdockingframe"></a>  CControlBar::GetDockingFrame  
  调用此成员函数以获取指向当前的框架窗口到其停靠控件条的指针。  
   
 ```  
@@ -359,7 +354,7 @@ CFrameWnd* GetDockingFrame() const;
 ### <a name="remarks"></a>备注  
  有关可停靠控件条的详细信息，请参阅[CControlBar::EnableDocking](#enabledocking)和[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)。  
   
-##  <a name="isfloating"></a>CControlBar::IsFloating  
+##  <a name="isfloating"></a>  CControlBar::IsFloating  
  调用此成员函数可确定是否浮动或停靠控件条。  
   
 ```  
@@ -372,7 +367,7 @@ BOOL IsFloating() const;
 ### <a name="remarks"></a>备注  
  若要更改的状态中的控件栏的停靠变为浮动，调用[CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar)。  
   
-##  <a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
+##  <a name="m_bautodelete"></a>  CControlBar::m_bAutoDelete  
  如果不为零，`CControlBar`销毁 Windows 控件条时删除对象。  
   
 ```  
@@ -380,20 +375,20 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_bAutoDelete`是类型的公共变量**BOOL**。  
+ `m_bAutoDelete` 是类型的公共变量**BOOL**。  
   
  控件条对象通常会嵌入在框架窗口对象中。 在这种情况下，`m_bAutoDelete`为 0，因为嵌入的控件条对象被销毁时销毁框架窗口。  
   
  将此变量设置为非零值，如果分配`CControlBar`对象堆和你不打算调用**删除**。  
   
-##  <a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
+##  <a name="m_pinplaceowner"></a>  CControlBar::m_pInPlaceOwner  
  控件条的就地所有者。  
   
 ```  
 CWnd* m_pInPlaceOwner;  
 ```  
   
-##  <a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CControlBar::OnUpdateCmdUI  
  此成员函数调用由框架更新工具栏或状态栏的状态。  
   
 ```  
@@ -412,10 +407,10 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>备注  
  若要更新的单个按钮或窗格中，使用`ON_UPDATE_COMMAND_UI`消息映射适当地设置一个更新处理程序中的宏。 请参阅[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)有关使用此宏的详细信息。  
   
- `OnUpdateCmdUI`当应用程序处于空闲状态时，是由框架调用。 要更新的框架窗口必须是子窗口，至少间接可见框架窗口。 `OnUpdateCmdUI`是一个高级可重写。  
+ `OnUpdateCmdUI` 当应用程序处于空闲状态时，是由框架调用。 要更新的框架窗口必须是子窗口，至少间接可见框架窗口。 `OnUpdateCmdUI` 是一个高级可重写。  
   
-##  <a name="setbarstyle"></a>CControlBar::SetBarStyle  
- 调用此函数可设置所需**CBRS_**控件条的样式。  
+##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle  
+ 调用此函数可设置所需**CBRS_** 控件条的样式。  
   
 ```  
 void SetBarStyle(DWORD dwStyle);
@@ -425,36 +420,36 @@ void SetBarStyle(DWORD dwStyle);
  `dwStyle`  
  控件条所需的样式。 可以是一个或多个以下：  
   
-- `CBRS_ALIGN_TOP`允许到框架窗口的工作区顶部停靠控件条。  
+- `CBRS_ALIGN_TOP` 允许到框架窗口的工作区顶部停靠控件条。  
   
-- `CBRS_ALIGN_BOTTOM`允许到框架窗口的工作区底部停靠控件条。  
+- `CBRS_ALIGN_BOTTOM` 允许到框架窗口的工作区底部停靠控件条。  
   
-- `CBRS_ALIGN_LEFT`允许的客户端区域的框架窗口的左侧停靠控件条。  
+- `CBRS_ALIGN_LEFT` 允许的客户端区域的框架窗口的左侧停靠控件条。  
   
-- `CBRS_ALIGN_RIGHT`允许控件条停靠框架窗口的工作区的右侧。  
+- `CBRS_ALIGN_RIGHT` 允许控件条停靠框架窗口的工作区的右侧。  
   
-- `CBRS_ALIGN_ANY`允许到框架窗口的工作区的任何一侧停靠控件条。  
+- `CBRS_ALIGN_ANY` 允许到框架窗口的工作区的任何一侧停靠控件条。  
   
-- `CBRS_BORDER_TOP`将导致边框要绘制的控件条的顶部边缘时可见。  
+- `CBRS_BORDER_TOP` 将导致边框要绘制的控件条的顶部边缘时可见。  
   
-- `CBRS_BORDER_BOTTOM`导致时可见要绘制的控件条的下边缘的边框。  
+- `CBRS_BORDER_BOTTOM` 导致时可见要绘制的控件条的下边缘的边框。  
   
-- `CBRS_BORDER_LEFT`将导致边框要绘制的控件条的左边缘时可见。  
+- `CBRS_BORDER_LEFT` 将导致边框要绘制的控件条的左边缘时可见。  
   
-- `CBRS_BORDER_RIGHT`将导致边框时可见要绘制的控件条的右边缘上。  
+- `CBRS_BORDER_RIGHT` 将导致边框时可见要绘制的控件条的右边缘上。  
   
-- `CBRS_FLOAT_MULTI`允许多个控件条，以在单个微型框架窗口中浮动。  
+- `CBRS_FLOAT_MULTI` 允许多个控件条，以在单个微型框架窗口中浮动。  
   
-- `CBRS_TOOLTIPS`导致要为控件条显示的工具提示。  
+- `CBRS_TOOLTIPS` 导致要为控件条显示的工具提示。  
   
-- `CBRS_FLYBY`会导致将消息文本在工具提示在同一时间更新。  
+- `CBRS_FLYBY` 会导致将消息文本在工具提示在同一时间更新。  
   
 - **CBRS_GRIPPER**导致的控制手柄，类似于上带区中使用**CReBar**对象，要绘制任何`CControlBar`-派生类。  
   
 ### <a name="remarks"></a>备注  
  不会影响**WS_** （窗口样式） 设置。  
   
-##  <a name="setborders"></a>CControlBar::SetBorders  
+##  <a name="setborders"></a>  CControlBar::SetBorders  
  调用此函数可设置控件条的边框的大小。  
   
 ```  
@@ -488,7 +483,7 @@ void SetBorders(LPCRECT lpRect);
   
  [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
   
-##  <a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
+##  <a name="setinplaceowner"></a>  CControlBar::SetInPlaceOwner  
  更改的控件条的就地所有者。  
   
 ```  
