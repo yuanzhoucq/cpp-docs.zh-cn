@@ -1,13 +1,10 @@
 ---
-title: "拖放： 自定义 |Microsoft 文档"
-ms.custom: 
+title: 拖放： 自定义 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - drag and drop [MFC], calling DoDragDrop
 - OLE drag and drop [MFC], customizing behavior
 ms.assetid: 03369d3e-46bf-4140-b58c-d0c9657cf38a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387344160cf2009b19ad8de820eabc6063ae1f7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59ec5a5a493106750fa7bb8c7ec31b8dbb011070
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-customizing"></a>拖放：自定义
 拖放功能的默认实现对大多数应用程序都够用。 但是，某些应用程序可能需要更改此标准行为。 本文说明更改这些默认设置所需的步骤。 此外，您还可以使用此方法建立不支持复合文档作为放置源的应用程序。  

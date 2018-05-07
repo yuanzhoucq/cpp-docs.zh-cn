@@ -1,12 +1,9 @@
 ---
-title: "实用工具 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 实用工具 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/utility>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - utility header [STL/CLR]
 - <cliext/utility> header [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3876ee887cfeec811d88684927ea9a03af1a8f1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86d4f89982858609cef569fb1caea138dafab376
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 包括 STL/CLR 标头`<cliext/utility>`定义模板类`pair`和几个支持模板函数。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |--------------|-----------------|  
 |[make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)|请从一对值对。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/实用工具 >  
   
  **Namespace:** cliext  

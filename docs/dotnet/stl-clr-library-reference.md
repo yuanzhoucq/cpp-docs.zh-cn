@@ -1,12 +1,9 @@
 ---
-title: "STL/CLR 库参考 |Microsoft 文档"
-ms.custom: 
+title: STL/CLR 库参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aecb7c509fc1b072086a8772c3430c43b67350be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8cab573b0c1de57ef2629f662108098095b722eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 库参考
 STL/CLR 库是子集的一种封装的 c + + 标准库，以用于 c + + 和.NET Framework 公共语言运行时 (CLR)。 与 STL/CLR，可以使用所有容器、 迭代器和的托管环境中的标准库的算法。  

@@ -1,12 +1,9 @@
 ---
-title: "CMDIChildWnd 类 |Microsoft 文档"
-ms.custom: 
+title: CMDIChildWnd 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIChildWnd
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deca38c7c1fdaf9523e4186b801e5ed25042e46e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 类
 提供 Windows 多文档界面 (MDI) 子窗口功能，并提供管理窗口的成员。  
@@ -89,7 +84,7 @@ class CMDIChildWnd : public CFrameWnd
   
  使用**创建**成员函数将为快速的自变量传递帧的创建参数。  
   
- `LoadFrame`需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
   
  当`CMDIChildWnd`对象包含视图和文档，就会创建间接的框架，而不是直接由程序员。 `CDocTemplate`对象安排帧的创建、 创建所包含的视图和连接到适当的文档的视图。 参数`CDocTemplate`构造函数指定`CRuntimeClass`的三个类涉及到 （文档、 框架和视图）。 A`CRuntimeClass`对象由框架用于动态创建新帧时指定用户 （例如，通过使用文件新的命令或 MDI 窗口新的命令）。  
   
@@ -116,10 +111,10 @@ class CMDIChildWnd : public CFrameWnd
   
  `CMDIChildWnd`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
+##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd  
  调用以构造`CMDIChildWnd`对象。  
   
 ```  
@@ -132,7 +127,7 @@ CMDIChildWnd();
 ### <a name="example"></a>示例  
   请参阅示例[CMDIChildWnd::Create](#create)。  
   
-##  <a name="create"></a>CMDIChildWnd::Create  
+##  <a name="create"></a>  CMDIChildWnd::Create  
  调用此成员函数可创建 Windows MDI 子窗口，并将其附加到`CMDIChildWnd`对象。  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]  
   
-##  <a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
+##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame  
  调用此函数可返回的 MDI 父框架。  
   
 ```  
@@ -200,7 +195,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="example"></a>示例  
   请参阅示例[CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)。  
   
-##  <a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
+##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate  
  调用此成员函数以激活独立于 MDI 框架窗口的 MDI 子窗口。  
   
 ```  
@@ -213,7 +208,7 @@ void MDIActivate();
 ### <a name="example"></a>示例  
   请参阅示例[CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)。  
   
-##  <a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
+##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy  
  调用此成员函数要销毁的 MDI 子窗口。  
   
 ```  
@@ -226,7 +221,7 @@ void MDIDestroy();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
-##  <a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize  
  调用此成员函数以最大化 MDI 子窗口。  
   
 ```  
@@ -239,7 +234,7 @@ void MDIMaximize();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
-##  <a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
+##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore  
  调用此成员函数以最大化或最小化大小从还原的 MDI 子窗口。  
   
 ```  
@@ -249,7 +244,7 @@ void MDIRestore();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
-##  <a name="sethandles"></a>CMDIChildWnd::SetHandles  
+##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles  
  设置菜单和快捷键资源的句柄。  
   
 ```  

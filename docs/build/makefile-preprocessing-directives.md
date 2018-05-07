@@ -1,13 +1,10 @@
 ---
-title: "生成文件预处理指令 |Microsoft 文档"
-ms.custom: 
+title: 生成文件预处理指令 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -48,23 +45,21 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bc73a86b0772b13731aaf7ac4e2ef0760caa8a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-directives"></a>生成文件预处理指令
 预处理指令不区分大小写。 初始感叹号 （！） 必须出现在行开头。 零个或多个空格或选项卡可以显示感叹号来缩进的后面。  
   
  **!CMDSWITCHES**  
- {**+**&#124; **-** }*选项*...将每个*选项*列出打开或关闭。 空格或制表符必须之前出现 + 或-运算符;无运算符之间可能会出现与[选项字母](../build/nmake-options.md)。 字母不区分大小写，并且不用反斜杠 （/） 指定。 若要打开上的某些选项而关闭，另外一些选项使用的**！CMDSWITCHES**。  
+ {**+** &#124; **-**}*选项*...将每个*选项*列出打开或关闭。 空格或制表符必须之前出现 + 或-运算符;无运算符之间可能会出现与[选项字母](../build/nmake-options.md)。 字母不区分大小写，并且不用反斜杠 （/） 指定。 若要打开上的某些选项而关闭，另外一些选项使用的**！CMDSWITCHES**。  
   
  仅 /D，/ I、 /N 和 /S 都可以在生成文件中使用。 Tools.ini，在所有选项都允许 /F、 /HELP、 /NOLOGO，除/X，和 /？。 描述块中指定的更改直到下一步的描述块不会生效。 此指令更新**MAKEFLAGS**; 如果更改期间递归继承**MAKEFLAGS**指定。  
   
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
  **!消息***文本*   
  显示*文本*到标准输出。 包含空格或制表符之前*文本*将被忽略。  
   
- **!包括**[  **\<** ] *filename*[  **>** ]  
+ **!包括**[ **\<**] *filename*[ **>**]  
  读取*filename*作为生成文件，然后继续执行当前生成文件。 NMAKE 中搜索*filename*首先在指定或当前目录中，然后以递归方式通过目录的任何父生成文件，然后，如果*filename*用尖括号括 (\<>)，指定目录中**包括**宏，最初设置为 INCLUDE 环境变量。 对于将**。后缀**设置， **。宝贵**，和为递归生成文件的推理规则。  
   
  **!如果**  `constantexpression`  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
  **!IFNDEF***macroname*   
  如果前面的**！IFNDEF**和下一页**！其他**或`!ENDIF`如果*macroname*未定义。  
   
- **!其他**[**如果***常数表达式*&#124;**IFDEF** *macroname*&#124;**IFNDEF** *macroname*]  
+ **!其他**[**如果***常数表达式* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]  
  如果前面的**！其他**和下一页`!ENDIF`如果事先**！如果**， `!IFDEF`，或**！IFNDEF**计算结果为零的语句。 可选关键字提供了进一步的预处理的控件。  
   
  **!ELSEIF**  

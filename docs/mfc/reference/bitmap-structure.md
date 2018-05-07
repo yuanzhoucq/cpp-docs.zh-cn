@@ -1,13 +1,10 @@
 ---
-title: "位图结构 |Microsoft 文档"
-ms.custom: 
+title: 位图结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAP
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed782c3e67a55797bfb2d302265924393946962
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-structure"></a>BITMAP 结构
 **位图**结构定义的高度、 宽度、 颜色格式和逻辑位图的位值**。**  
@@ -69,7 +64,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>备注  
  当前使用的位图格式是单色和彩色。 单色位图使用 1 位 1 平面格式。 每个扫描是 16 位的倍数。  
   
- 扫描高度的单色位图组织方式如下 *n* :  
+ 扫描高度的单色位图组织方式如下*n*:  
   
  `Scan 0`  
   
@@ -91,7 +86,7 @@ typedef struct tagBITMAP {  /* bm */
   
  每台设备都具有自己的唯一颜色格式。 为了将位图从一台设备传输到另一个，使用[GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)和[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 函数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

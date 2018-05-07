@@ -1,12 +1,9 @@
 ---
-title: "范围规则摘要 |Microsoft 文档"
-ms.custom: 
+title: 范围规则摘要 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-scope-rules"></a>范围规则摘要
 名称的使用在其范围内必须是明确的（直至确定重载的点）。 如果名称表示一个函数，则该函数的参数的数目和类型必须明确。 如果名称保持明确，[成员访问](../cpp/member-access-control-cpp.md)应用规则。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="qualified-names"></a>限定名称  
  用于二进制范围解析运算符 (`::`) 的名称称为“限定名”。 在二进制范围解析运算符后指定的名称必须是在该运算符左侧指定的类的成员或其基类的成员。  
   
- 成员选择运算符后指定的名称 (**。** 或 **->** ) 必须是该运算符左侧或其基类的成员上指定的对象的类类型的成员。 成员选择运算符右侧指定的名称 (**->**) 也可以是对象的另一个类类型，提供程序的左侧 **->** 是一个类对象和该类定义的重载的成员选择运算符 (**->**) 计算结果为指向某个其他类类型的指针。 (在将更详细地讨论了此配置[类成员访问](../cpp/member-access.md)。)  
+ 成员选择运算符后指定的名称 (**。** 或**->**) 必须是该运算符左侧或其基类的成员上指定的对象的类类型的成员。 成员选择运算符右侧指定的名称 (**->**) 也可以是对象的另一个类类型，提供程序的左侧**->** 是一个类对象和该类定义的重载的成员选择运算符 (**->**) 计算结果为指向某个其他类类型的指针。 (在将更详细地讨论了此配置[类成员访问](../cpp/member-access.md)。)  
   
  编译器将按以下顺序搜索名称，并在找到名称时停止搜索：  
   

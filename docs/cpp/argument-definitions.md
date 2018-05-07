@@ -2,11 +2,8 @@
 title: 自变量定义 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30dd0c58cd4967065ee3e3c3c4df9538ea194a0
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-definitions"></a>自变量定义
 原型中的自变量  
@@ -44,16 +39,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  包含 `argv` 后面的参数计数的整数。 `argc` 参数始终大于或等于 1。  
   
  `argv`  
- 表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定， `argv` **[0]**是与其调用该程序，该命令`argv` **[1]**为第一个命令行参数，依此类推，直到`argv` **[**`argc`**]**，这始终是**NULL**。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消命令行处理的信息。  
+ 表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定， `argv` **[0]** 是与其调用该程序，该命令`argv` **[1]** 为第一个命令行参数，依此类推，直到`argv` **[**`argc`**]**，这始终是**NULL**。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消命令行处理的信息。  
   
- 第一个命令行自变量始终是`argv` **[1]**和最后一项`argv` **[** `argc` -1**]**。  
+ 第一个命令行自变量始终是`argv` **[1]** 和最后一项`argv` **[** `argc` -1 **]**。  
   
 > [!NOTE]
->  按照约定，`argv`[0] 是用于调用程序的命令。  但是，很可能生成进程使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)并且当你使用第一个和第二个参数 (`lpApplicationName`和`lpCommandLine`)， `argv` **[0]**可能不是可执行文件的名称;使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)检索可执行文件的名称和其完全限定路径。  
+>  按照约定，`argv`[0] 是用于调用程序的命令。  但是，很可能生成进程使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)并且当你使用第一个和第二个参数 (`lpApplicationName`和`lpCommandLine`)， `argv` **[0]** 可能不是可执行文件的名称;使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)检索可执行文件的名称和其完全限定路径。  
   
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  `envp`  
- 在 Microsoft C++ 中使用 `envp` 数组（它是许多 UNIX 系统中的常见扩展）。 它是表示用户环境中的变量集的字符串的数组。 终止此数组**NULL**条目。 它可以声明为指向的指针的数组**char (char** \*envp []**)**或指针指向**char (char** \* \*envp**)**。 如果程序使用**wmain**而不是**主要**，使用`wchar_t`数据类型而不是`char`。 环境块传递给**主要**和**wmain**是当前环境的"冻结"副本。 如果随后更改通过调用环境**putenv**或`_wputenv`，当前环境 (如返回`getenv` / `_wgetenv`和`_environ` /  `_wenviron`变量) 更改，但由 envp 指向的块将不会更改。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此自变量在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。  
+ 在 Microsoft C++ 中使用 `envp` 数组（它是许多 UNIX 系统中的常见扩展）。 它是表示用户环境中的变量集的字符串的数组。 终止此数组**NULL**条目。 它可以声明为指向的指针的数组**char (char** \*envp []**)** 或指针指向**char (char** \* \*envp **)**。 如果程序使用**wmain**而不是**主要**，使用`wchar_t`数据类型而不是`char`。 环境块传递给**主要**和**wmain**是当前环境的"冻结"副本。 如果随后更改通过调用环境**putenv**或`_wputenv`，当前环境 (如返回`getenv` / `_wgetenv`和`_environ` /  `_wenviron`变量) 更改，但由 envp 指向的块将不会更改。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此自变量在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。  
   
 **结束 Microsoft 专用**  
   
@@ -84,5 +79,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [main：程序启动](../cpp/main-program-startup.md)

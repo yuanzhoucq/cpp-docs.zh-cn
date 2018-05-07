@@ -1,30 +1,25 @@
 ---
-title: "不使用向导创建使用者 |Microsoft 文档"
-ms.custom: 
+title: 不使用向导创建使用者 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ffc6a92f8fc4e4223e83c3270e28ae68ddc1829a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c9f6bbc1ba45ec0b510dac015688fd29801c8449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 下面的示例假定 OLE DB 使用者支持添加到现有的 ATL 项目。 如果你想要将 OLE DB 使用者支持添加到 MFC 应用程序，应运行 MFC 应用程序向导，也不能创建所有支持必要时，将调用执行应用程序所需的 MFC 例程。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/23/2018
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   调用**CoInitialize**以初始化 com。 这通常称为主要代码中。 例如:  
+-   调用**CoInitialize**以初始化 com。 这通常称为主要代码中。 例如：  
   
     ```  
     HRESULT hr = CoInitialize(NULL);  

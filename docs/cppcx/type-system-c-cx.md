@@ -1,24 +1,19 @@
 ---
-title: "类型系统 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: 类型系统 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>类型系统 (C++/CX)
 通过使用 Windows 运行时体系结构，你可以使用 C + + /cli CX、 Visual Basic、 Visual C# 和 JavaScript 编写应用程序和组件直接访问 Windows API 并与其他 Windows 运行时应用和组件互操作。 在 c + + 编写的通用 Windows 平台应用程序编译为直接在 CPU 中执行的本机代码。 用 C# 或 Visual Basic 编写的通用 Windows 平台应用程序编译为 Microsoft 中间语言 (MSIL) 并在公共语言运行时 (CLR) 中执行。 用 JavaScript 编写的通用 Windows 平台应用程序在运行时环境中执行。 Windows 运行时操作系统组件本身用 c + + 编写并作为本机代码运行。 所有这些组件和通用 Windows 平台应用程序的直接通过 Windows 运行时应用程序二进制接口 (ABI) 进行通信。  
@@ -27,15 +22,15 @@ ms.lasthandoff: 02/14/2018
   
  有关 C++/CX 语言投影的深度讨论以及它在后台如何工作，请参阅以下博客帖子：  
   
-1.  [C + + /cli CX 的第 0 部分\[ n \]： 简介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + + /cli CX 的第 0 部分\[n\]： 简介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + + /cli CX 的第 1 部分\[ n \]： 简单的类](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + + /cli CX 的第 1 部分\[n\]： 简单的类](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + + /cli CX 第 2 部分的\[ n \]： 带尖角符号的类型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + + /cli CX 第 2 部分的\[n\]： 带尖角符号的类型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + + /cli CX 的第 3 部分\[ n \]： 正在构造](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + + /cli CX 的第 3 部分\[n\]： 正在构造](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + + /cli CX 的第 4 部分\[ n \]： 静态成员函数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + + /cli CX 的第 4 部分\[n\]： 静态成员函数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Windows 元数据 (.winmd) 文件  
  编译用 c + + 编写的通用 Windows 平台应用时，编译器生成本机代码，可执行文件以及包含公共 Windows 运行时类型的描述的单独 Windows 元数据 (.winmd) 文件其中包括类、 结构、 枚举、 接口、 参数化的接口和委托。 元数据的格式类似于在 .NET Framework 程序集中使用的格式。  在 C++ 组件中，.winmd 文件只包含元数据；可执行代码位于单独的文件中。 这是 Windows 附带的 Windows 运行时组件的情况。 WinMD 文件名必须与源代码中的根命名空间的前缀匹配或为该前缀。 （对于 .NET Framework 语言，.winmd 文件同时包含代码和元数据，正如一个 .NET Framework 程序集。）  

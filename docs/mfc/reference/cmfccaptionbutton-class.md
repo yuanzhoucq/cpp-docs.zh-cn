@@ -1,12 +1,9 @@
 ---
-title: "CMFCCaptionButton 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCCaptionButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 类
 `CMFCCaptionButton`类实现停靠的窗格或微型框架窗口的标题栏显示的按钮。 通常，框架会自动创建标题按钮。  
@@ -58,7 +53,7 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>构造函数  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|构造 CMFCCaptionButton 对象。|  
   
@@ -94,10 +89,10 @@ class CMFCCaptionButton : public CObject
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
  构造 `CMFCCaptionButton` 对象。  
   
 ```  
@@ -118,7 +113,7 @@ CMFCCaptionButton(
   
  下表列出可能值`nHit`参数。  
   
-|“值”|命令|  
+|值|命令|  
 |-----------|-------------|  
 |`AFX_HTCLOSE`|关闭按钮。|  
 |`HTMINBUTTON`|最小化按钮。|  
@@ -133,7 +128,7 @@ CMFCCaptionButton(
   
  在左或向右对齐标题按钮。  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
  返回由按钮的命令。  
   
 ```  
@@ -145,7 +140,7 @@ UINT GetHit() const;
   
  下表列出可能的返回值。  
   
-|“值”|命令|  
+|值|命令|  
 |-----------|-------------|  
 |`AFX_HTCLOSE`|关闭按钮。|  
 |`HTMINBUTTON`|最小化按钮。|  
@@ -155,7 +150,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|向下箭头菜单按钮。|  
 |`HTNOWHERE`|默认值;不表示任何命令。|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
  返回与按钮相关联的图像 ID。  
   
 ```  
@@ -166,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
   
 ### <a name="parameters"></a>参数  
  [in] `bHorz`  
- `TRUE`左或向右箭头映像 Id;`FALSE`的向上或向下箭头图像 Id。  
+ `TRUE` 左或向右箭头映像 Id;`FALSE`的向上或向下箭头图像 Id。  
   
  [in] `bMaximized`  
- `TRUE`最大化映像 ID;`FALSE`的最小化映像 id。  
+ `TRUE` 最大化映像 ID;`FALSE`的最小化映像 id。  
   
 ### <a name="return-value"></a>返回值  
  图像 id。  
@@ -177,7 +172,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>备注  
  参数指定最小化的映像 Id 或最大化标题按钮。  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  返回由按钮所占用的矩形。  
   
 ```  
@@ -190,7 +185,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>备注  
  如果看不到按钮，返回的大小为 0。  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  返回的宽度和高度的按钮。  
   
 ```  
@@ -203,7 +198,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>备注  
  返回的大小包括按钮边距和边框。  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
  指示是否将标题栏高度设置为最小大小。  
   
 ```  
@@ -211,11 +206,11 @@ BOOL IsMiniFrameButton() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果将标题设置为最小大小;否则为`FALSE`。  
+ `TRUE` 如果将标题设置为最小大小;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
  设置按钮绘图位置和窗口显示状态。  
   
 ```  
@@ -231,7 +226,7 @@ void Move(
  [in] `bHide`  
  是否显示按钮。  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  绘制标题按钮。  
   
 ```  
@@ -262,7 +257,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>备注  
  `bMaximized`参数最大化按钮时使用，或最小化按钮。  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  设置标题栏的最小大小。  
   
 ```  
@@ -271,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bSet`  
- `TRUE`微型标题栏的高度;`FALSE`的默认标题栏的高度。  
+ `TRUE` 微型标题栏的高度;`FALSE`的默认标题栏的高度。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

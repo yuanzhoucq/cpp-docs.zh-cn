@@ -2,11 +2,8 @@
 title: 编译器警告 （等级 3） C4996 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: a6af8a8ff3cde50ea8b196e7f293874998547ec0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
 
@@ -55,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 
 你可以通过将关闭的警告的代码的特定行[警告](../../preprocessor/warning.md)杂注， `#pragma warning(suppress : 4996)`。 你还可以启用警告文件中使用警告杂注， `#pragma warning(disable : 4996)`。
 
-你可以关闭该警告全局在命令行版本中使用**/wd4996**命令行选项。
+你可以关闭该警告全局在命令行版本中使用 **/wd4996**命令行选项。
 
 若要关闭的警告的 Visual Studio IDE 中的整个项目：
 

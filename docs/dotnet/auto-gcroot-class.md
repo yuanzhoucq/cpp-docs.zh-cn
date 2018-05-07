@@ -1,12 +1,9 @@
 ---
-title: "auto_gcroot 类 |Microsoft 文档"
-ms.custom: 
+title: auto_gcroot 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::auto_gcroot
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bb203193d1568056c631d90a2e1f5b1cf1d00e5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6afad3450aff2a9243b3e4a480a374fbcd14fc7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcroot-class"></a>auto_gcroot 类
 自动资源管理 (如[auto_ptr 类](../standard-library/auto-ptr-class.md)) 可用于本机类型中嵌入虚拟句柄。  
@@ -44,7 +39,7 @@ class auto_gcroot;
  `_element_type`  
  要嵌入的托管的类型。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  

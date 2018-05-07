@@ -1,13 +1,10 @@
 ---
-title: "不是从 CFrameWnd 派生的 Windows 中的工具提示 |Microsoft 文档"
-ms.custom: 
+title: 不是从 CFrameWnd 派生的 Windows 中的工具提示 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27126954f72eb4a075d0741b0ec0faec94f381c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34eb8f0b7394828782a3d0f9ed1ca44fb5731af6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Windows 中不是从 CFrameWnd 派生的工具提示
 本文章系列介绍的不派生自的窗口中包含的控件启用工具提示[CFrameWnd](../mfc/reference/cframewnd-class.md)。 文章[工具栏工具提示](../mfc/toolbar-tool-tips.md)提供有关工具提示的信息中的控件`CFrameWnd`。  

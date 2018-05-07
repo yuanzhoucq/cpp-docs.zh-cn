@@ -1,13 +1,10 @@
 ---
-title: "内存管理： 示例 |Microsoft 文档"
-ms.custom: 
+title: 内存管理： 示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-examples"></a>内存管理：示例
 本指南介绍了 MFC 如何三种典型的内存分配的每个执行了帧分配和堆分配：  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [一个对象](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a>分配的字节数组  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> 分配的字节数组  
   
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>若要分配的帧上的字节数组  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a>分配的数据结构  
+##  <a name="_core_allocation_of_a_data_structure"></a> 分配的数据结构  
   
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>若要分配的帧上的数据结构  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a>分配对象  
+##  <a name="_core_allocation_of_an_object"></a> 分配对象  
   
 #### <a name="to-allocate-an-object-on-the-frame"></a>若要将帧上分配对象  
   

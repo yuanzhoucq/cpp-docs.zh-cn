@@ -1,30 +1,25 @@
 ---
-title: "ActiveX 控件容器 |Microsoft 文档"
-ms.custom: 
+title: ActiveX 控件容器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers"></a>ActiveX 控件容器
 ActiveX 控件容器是完全支持 ActiveX 控件并且可将这些控件整合到其自己的窗口或对话框中的容器。 ActiveX 控件是您可以在许多开发项目中使用的可重用软件元素。 控件允许应用程序的用户访问数据库、监视数据以及在应用程序中作出各种选择。 ActiveX 控件的详细信息，请参阅文章[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。  

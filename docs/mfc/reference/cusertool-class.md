@@ -1,12 +1,9 @@
 ---
-title: "CUserTool 类 |Microsoft 文档"
-ms.custom: 
+title: CUserTool 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUserTool
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38600b2e6eac6ad181baf1263d9e4d10295732b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cusertool-class"></a>CUserTool 类
 用户工具是运行外部应用程序的菜单项。 **工具**选项卡**自定义**对话框 ( [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 允许用户添加用户工具，并指定名称、 命令、 自变量，并每个用户工具的的初始目录。  
@@ -83,7 +78,7 @@ class CUserTool : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|用户工具命令行参数。|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|用户工具初始目录。|  
@@ -102,10 +97,10 @@ class CUserTool : public CObject
   
  [CUserTool](../../mfc/reference/cusertool-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxusertool.h  
   
-##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon  
  在指定的矩形的中心绘制用户工具图标。  
   
 ```  
@@ -132,7 +127,7 @@ void DrawToolIcon(
  [in] `rectImage`  
  指定要显示的图标区域的坐标。  
   
-##  <a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>  CUserTool::GetCommand  
  返回一个字符串，包含与用户工具关联的命令的文本。  
   
 ```  
@@ -142,7 +137,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>返回值  
  对引用`CString`对象，其中包含与用户工具关联的命令的文本。  
   
-##  <a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
  返回用户工具的命令 ID。  
   
 ```  
@@ -152,7 +147,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>返回值  
  此用户工具命令 ID。  
   
-##  <a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>  CUserTool::Invoke  
  执行与用户工具关联的命令。  
   
 ```  
@@ -165,7 +160,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>备注  
  调用[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)执行与用户工具关联的命令。 如果该命令为空或者失败的函数[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)失败。  
   
-##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  加载用户工具的默认图标。  
   
 ```  
@@ -180,7 +175,7 @@ virtual HICON LoadDefaultIcon();
   
  重写此方法以提供您自己的默认工具图标。  
   
-##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
  用户工具命令行参数。  
   
 ```  
@@ -190,7 +185,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>备注  
  在调用时，将此字符串传递给该工具[CUserTool::Invoke](#invoke)或当用户单击与此工具关联的命令。  
   
-##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
  指定用户工具的初始目录。  
   
 ```  
@@ -200,14 +195,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>备注  
  此变量指定在调用时，该工具中执行的初始目录[CUserTool::Invoke](#invoke)或当用户单击与此工具关联的命令。  
   
-##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
  显示在工具菜单项的标签。  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>  CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -219,7 +214,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>  CUserTool::SetCommand  
  设置用户工具运行的应用程序。  
   
 ```  
@@ -233,7 +228,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>备注  
  调用此方法以设置新运行的应用程序的用户工具。 该方法销毁旧图标，并从该给定应用程序加载新建图标。 如果它无法从应用程序加载一个图标，它将加载用户工具的默认图标通过调用[CUserTool::LoadDefaultIcon](#loaddefaulticon)。  
   
-##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  从该工具使用的应用程序加载用户工具的图标。  
   
 ```  

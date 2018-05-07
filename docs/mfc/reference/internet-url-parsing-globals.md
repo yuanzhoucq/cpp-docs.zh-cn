@@ -1,13 +1,10 @@
 ---
-title: "Internet URL 分析全局函数和帮助器 |Microsoft 文档"
-ms.custom: 
+title: Internet URL 分析全局函数和帮助器 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局函数和帮助器
 当某个客户端发送查询到 Internet 服务器时，您可以使用 URL 分析全局变量之一提取有关此客户端的信息。 帮助器函数提供其他 internet 功能。
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxThrowInternetException](#afxthrowinternetexception)|引发与 internet 连接有关的异常。|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|确定 Internet 句柄的类型。|
   
-##  <a name="afxparseurl"></a>AfxParseURL  
+##  <a name="afxparseurl"></a>  AfxParseURL  
  使用在此全局[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
 ```   
@@ -110,21 +105,21 @@ BOOL AFXAPI AfxParseURL(
   
  例如，`AfxParseURL`分析的窗体的 Url **service://server/dir/dir/object.ext:port**并返回其组件存储，如下所示：  
   
- `strServer`= ="server"  
+ `strServer` = ="server"  
   
- `strObject`= ="/ dir/dir/object/object.ext"  
+ `strObject` = ="/ dir/dir/object/object.ext"  
   
- `nPort`= = #port  
+ `nPort` = = #port  
   
- `dwServiceType`= = #service  
+ `dwServiceType` = = #service  
   
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxinet.h  
   
-##  <a name="afxparseurlex"></a>AfxParseURLEx  
+##  <a name="afxparseurlex"></a>  AfxParseURLEx  
  此全局函数是扩展的版本[AfxParseURL](#afxparseurl)并可用于[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
 ```   
@@ -194,7 +189,7 @@ BOOL AFXAPI AfxParseURLEx(
  `dwFlags`  
  控制如何分析的 URL 的标志。 可以是以下值的组合：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |**ICU_DECODE**|将 %xx 转义序列转换为字符。|  
 |**ICU_NO_ENCODE**|不会转换不安全的字符进行转义序列。|  
@@ -213,13 +208,13 @@ BOOL AFXAPI AfxParseURLEx(
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxinet.h  
     
 ## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 使用此全局函数来确定 Internet 句柄的类型。  
    
 ### <a name="syntax"></a>语法  
@@ -265,14 +260,14 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxinet.h  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 引发 Internet 异常。  
    
 ### <a name="syntax"></a>语法    
@@ -292,7 +287,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxinet.h  
    
 ### <a name="see-also"></a>请参阅  

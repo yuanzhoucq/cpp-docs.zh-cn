@@ -1,11 +1,8 @@
 ---
-title: "Platform:: stringreference 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: stringreference 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 可以用于通过最少复制操作将字符串数据从 `Platform::String^` 输入参数传递到其他方法的优化类型。  
@@ -63,7 +58,7 @@ class StringReference
 |[StringReference::operator=](#operator-assign)|将 `StringReference` 分配给新 `StringReference` 实例。|  
 |[StringReference::operator()](#operator-call)|将 `StringReference` 转换为 `Platform::String^`。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -157,7 +152,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="operator-call"></a>  StringReference::operator() 运算符
 将 `StringReference` 对象转换为 `Platform::String^` 对象。  
   
 ### <a name="syntax"></a>语法  

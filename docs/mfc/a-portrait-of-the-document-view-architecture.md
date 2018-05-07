@@ -1,13 +1,10 @@
 ---
-title: "文档视图体系结构的纵览 |Microsoft 文档"
-ms.custom: 
+title: 文档视图体系结构的纵览 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ceadc55945a31e4787287beb6943897784aeaad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文档/视图结构的纵览
 文档和视图在典型的 MFC 应用程序中是成对的。 数据存储在文档中，但视图具有对数据的特别访问权。 将文档与视图分离也会将数据的存储和维护与数据的显示分离。  

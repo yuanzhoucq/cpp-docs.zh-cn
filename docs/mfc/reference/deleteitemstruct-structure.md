@@ -1,13 +1,10 @@
 ---
-title: "DELETEITEMSTRUCT 结构 |Microsoft 文档"
-ms.custom: 
+title: DELETEITEMSTRUCT 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - DELETEITEMSTRUCT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DELETEITEMSTRUCT structure [MFC]
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93be7b23ae713caea5fa64e437fe792c550589f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 结构
 `DELETEITEMSTRUCT` 结构介绍了一个已删除的所有者描述的列表框或组合框项。  
@@ -61,7 +56,7 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ## <a name="remarks"></a>备注  
  在从列表框或组合框中移除某个项或销毁列表框或组合框时，Windows 会将 `WM_DELETEITEM` 消息发送给每个被删除项的所有者。 **LParam**消息参数包含指向此结构的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

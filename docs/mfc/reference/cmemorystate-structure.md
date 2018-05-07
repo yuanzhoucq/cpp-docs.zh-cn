@@ -2,11 +2,8 @@
 title: CMemoryState 结构 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemoryState
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f4c2d7d33d07a5eca5a980c376056c3fe68e2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 结构
 提供一种简便方式检测你的程序中的内存泄漏。  
@@ -56,7 +51,7 @@ struct CMemoryState
 |[CMemoryState::DumpStatistics](#dumpstatistics)|打印内存分配的统计信息`CMemoryState`对象。|  
   
 ## <a name="remarks"></a>备注  
- `CMemoryState`是一种结构，并且没有基类。  
+ `CMemoryState` 是一种结构，并且没有基类。  
   
  对象的内存是堆中分配但未释放不再需要时，会出现"内存泄漏"。 此类内存泄漏可能最终导致内存不足错误。 有多种方式来分配和释放在程序中的内存：  
   
@@ -66,13 +61,13 @@ struct CMemoryState
   
 -   使用 c + +**新**和**删除**运算符。  
   
- `CMemoryState`诊断仅帮助检测内存泄漏时使用的内存分配导致**新**运算符会释放使用**删除**。 内存管理函数中的其他两个组适用于非 c + + 程序，并将它们与混合**新**和**删除**不建议在同一个程序。 其他的宏， `DEBUG_NEW`，用于替换**新**运算符时你需要文件和行号的内存分配的跟踪。 `DEBUG_NEW`你通常应使用时，需要使用**新**运算符。  
+ `CMemoryState`诊断仅帮助检测内存泄漏时使用的内存分配导致**新**运算符会释放使用**删除**。 内存管理函数中的其他两个组适用于非 c + + 程序，并将它们与混合**新**和**删除**不建议在同一个程序。 其他的宏， `DEBUG_NEW`，用于替换**新**运算符时你需要文件和行号的内存分配的跟踪。 `DEBUG_NEW` 你通常应使用时，需要使用**新**运算符。  
   
- 与其他诊断`CMemoryState`诊断程序仅在程序的调试版本中可用。 必须具有的调试版本**_DEBUG**定义常量。  
+ 与其他诊断`CMemoryState`诊断程序仅在程序的调试版本中可用。 必须具有的调试版本 **_DEBUG**定义常量。  
   
  如果你怀疑你的程序有内存泄漏，则可以使用`Checkpoint`，**差异**，和`DumpStatistics`函数在程序中的两个不同点发现 （分配的对象） 的内存状态之间的差异执行。 此信息可以用于确定是否将函数清理其所分配的所有对象。  
   
- 如果只需知道在分配和解除分配这种不平衡的出现位置未提供足够的信息，则可以使用`DumpAllObjectsSince`函数转储所有对象分配到在上一个调用`Checkpoint`。 此转储演示的分配、 源文件和已分配的对象的行顺序 (如果你使用`DEBUG_NEW`分配)，和派生类型的对象，它的地址以及其大小。 `DumpAllObjectsSince`此外会调用每个对象的`Dump`函数提供有关其当前状态信息。  
+ 如果只需知道在分配和解除分配这种不平衡的出现位置未提供足够的信息，则可以使用`DumpAllObjectsSince`函数转储所有对象分配到在上一个调用`Checkpoint`。 此转储演示的分配、 源文件和已分配的对象的行顺序 (如果你使用`DEBUG_NEW`分配)，和派生类型的对象，它的地址以及其大小。 `DumpAllObjectsSince` 此外会调用每个对象的`Dump`函数提供有关其当前状态信息。  
   
  有关如何使用`CMemoryState`和其他诊断，请参阅[调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。  
   
@@ -82,10 +77,10 @@ struct CMemoryState
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CMemoryState`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="checkpoint"></a>CMemoryState::Checkpoint  
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint  
  拍摄快照的内存的摘要，并将其存储在此`CMemoryState`对象。  
   
 ```  
@@ -98,7 +93,7 @@ void Checkpoint();
 ### <a name="example"></a>示例  
   请参阅示例[CMemoryState](#cmemorystate)构造函数。  
   
-##  <a name="cmemorystate"></a>CMemoryState::CMemoryState  
+##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState  
  构造一个空`CMemoryState`对象必须由填写[检查点](#checkpoint)或[差异](#difference)成员函数。  
   
 ```  
@@ -108,7 +103,7 @@ CMemoryState();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
-##  <a name="difference"></a>CMemoryState::Difference  
+##  <a name="difference"></a>  CMemoryState::Difference  
  比较两个`CMemoryState`对象，然后将存储到此差异`CMemoryState`对象。  
   
 ```  
@@ -133,7 +128,7 @@ BOOL Difference(
 ### <a name="example"></a>示例  
   请参阅示例[CMemoryState](#cmemorystate)构造函数。  
   
-##  <a name="dumpallobjectssince"></a>Cmemorystate:: Dumpallobjectssince  
+##  <a name="dumpallobjectssince"></a>  Cmemorystate:: Dumpallobjectssince  
  调用`Dump`函数的所有对象类型的派生自类`CObject`，已分配了 （和仍分配） 自上次操作后[检查点](#checkpoint)调用此`CMemoryState`对象。  
   
 ```  
@@ -148,7 +143,7 @@ void DumpAllObjectsSince() const;
 ### <a name="example"></a>示例  
   请参阅示例[CMemoryState](#cmemorystate)构造函数。  
   
-##  <a name="dumpstatistics"></a>CMemoryState::DumpStatistics  
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics  
  输出中的简洁内存统计信息报告`CMemoryState`对象由填写[差异](#difference)成员函数。  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "如何： 将迁移到的 clr： 安全 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 将迁移到的 clr： 安全 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,21 +13,19 @@ helpviewer_keywords:
 - verifiable assemblies [C++], migrating to
 - /clr compiler option [C++], migrating to /clr:safe
 ms.assetid: 75f9aae9-1dcc-448a-aa11-2d96f972f9d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b12efce8d3566c4fa8824c70e0a6c7ae9d486dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>如何：迁移到 /clr:safe (C++/CLI)
-Visual c + + 可以通过使用生成可验证组件**/clr: safe**，这将导致编译器生成错误的每个非可验证代码构造。  
+Visual c + + 可以通过使用生成可验证组件 **/clr: safe**，这将导致编译器生成错误的每个非可验证代码构造。  
   
 ## <a name="remarks"></a>备注  
  以下问题将生成可验证性错误：  
@@ -55,7 +50,7 @@ Visual c + + 可以通过使用生成可验证组件**/clr: safe**，这将导�
   
 -   如果生成 EXE，一个主函数不能因此声明任何参数，<xref:System.Environment.GetCommandLineArgs%2A>必须用于检索命令行自变量。  
   
--   在非虚拟调用虚函数。 例如:  
+-   在非虚拟调用虚函数。 例如：  
   
     ```  
     // not_verifiable.cpp  
@@ -82,7 +77,7 @@ Visual c + + 可以通过使用生成可验证组件**/clr: safe**，这将导�
   
 -   [__based](../cpp/based-grammar.md)  
   
--   [__try](../cpp/try-except-statement.md)和`__except`  
+-   [__try](../cpp/try-except-statement.md)和 `__except`  
   
 ## <a name="see-also"></a>请参阅  
  [纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

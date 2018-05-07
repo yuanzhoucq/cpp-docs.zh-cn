@@ -1,12 +1,9 @@
 ---
-title: "CNetAddressCtrl 类 |Microsoft 文档"
-ms.custom: 
+title: CNetAddressCtrl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CNetAddressCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a433d723e15d910674c129b1e62ca82c1de4bb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 `CNetAddressCtrl` 类表示网络地址控件，可使用此控件输入和验证 IPv4、IPv6 与命名的 DNS 地址的格式。  
@@ -99,14 +94,14 @@ class CNetAddressCtrl : public CEdit
   
  `CNetAddressCtrl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
  此类支持在[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
   
  此类的其他要求中所述[生成要求的 Windows Vista 公共控件](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
-##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl  
  构造 `CNetAddressCtrl` 对象。  
   
 ```  
@@ -116,7 +111,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>备注  
  使用[CNetAddressCtrl::Create](#create)或[CNetAddressCtrl::CreateEx](#createex)方法来创建网络控件并将其附加到`CNetAddressCtrl`对象。  
   
-##  <a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>  CNetAddressCtrl::Create  
  创建具有指定样式的网络地址控件并将其附加到当前`CNetAddressCtrl`对象。  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
-##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CNetAddressCtrl::CreateEx  
  指定的扩展样式创建的网络地址控件，并将其附加到当前`CNetAddressCtrl`对象。  
   
 ```  
@@ -164,7 +159,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
-##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip  
  与当前的网络地址控件相关联的气球状提示中显示一条错误消息。  
   
 ```  
@@ -179,7 +174,7 @@ HRESULT DisplayErrorTip();
   
  此消息时，将调用[NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314)宏，Windows SDK 中介绍。 该宏将发送`NCM_DISPLAYERRORTIP`消息。  
   
-##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
  检索与当前的网络地址控件相关联的网络地址的验证，并且已分析表示。  
   
 ```  
@@ -202,7 +197,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  此方法调用[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)宏，Windows SDK 中介绍。 该宏将发送`NCM_GETADDRESS`消息。  
   
-##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  检索当前的网络地址控件可以支持的网络地址的类型。  
   
 ```  
@@ -215,7 +210,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>备注  
  此消息时，将调用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)宏，Windows SDK 中介绍。 该宏将发送`NCM_GETALLOWTYPE`消息。  
   
-##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  设置当前的网络地址控件可以支持的网络地址的类型。  
   
 ```  
@@ -229,7 +224,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 |[in] `dwAddrMask`|网络地址控件可支持的按位组合 (OR) 的标志，用于指定的地址类型。 有关详细信息，请参阅[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
   
 ### <a name="return-value"></a>返回值  
- `S_OK`如果此方法成功，则否则为 COM 错误代码。  
+ `S_OK` 如果此方法成功，则否则为 COM 错误代码。  
   
 ### <a name="remarks"></a>备注  
  使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定当前的网络地址控件可以支持的地址的类型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法来验证和分析用户输入的网络地址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法以显示错误消息信息提示，如果[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  

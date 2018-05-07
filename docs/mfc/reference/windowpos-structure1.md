@@ -1,13 +1,10 @@
 ---
-title: "WINDOWPOS 结构 1 |Microsoft 文档"
-ms.custom: 
+title: WINDOWPOS 结构 1 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 结构 1
 `WINDOWPOS`结构包含有关的大小和窗口的位置的信息。  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW**隐藏窗口。  
   
-- `SWP_NOACTIVATE`不会激活窗口。  
+- `SWP_NOACTIVATE` 不会激活窗口。  
   
 - **SWP_NOCOPYBITS**放弃的工作区的全部内容。 如果未指定此标志，客户端区域的有效内容会保存，并且之后的窗口在大小或重新定位复制回的工作区。  
   
-- `SWP_NOMOVE`保留当前的位置 (将忽略**x**和**y**成员)。  
+- `SWP_NOMOVE` 保留当前的位置 (将忽略**x**和**y**成员)。  
   
 - **SWP_NOOWNERZORDER**不会更改中的 Z 顺序的所有者窗口的位置。  
   
-- `SWP_NOSIZE`保留当前大小 (忽略**cx**和**cy**成员)。  
+- `SWP_NOSIZE` 保留当前大小 (忽略**cx**和**cy**成员)。  
   
 - **SWP_NOREDRAW**不重绘更改。  
   
@@ -88,11 +83,11 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING**窗口防止接收`WM_WINDOWPOSCHANGING`消息。  
   
-- `SWP_NOZORDER`保留当前排序 (忽略**hwndInsertAfter**成员)。  
+- `SWP_NOZORDER` 保留当前排序 (忽略**hwndInsertAfter**成员)。  
   
 - **SWP_SHOWWINDOW**显示窗口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** winuser.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "CD2DTextLayout 类 |Microsoft 文档"
-ms.custom: 
+title: CD2DTextLayout 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DTextLayout
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc216014fb88ac7995b9283ab59d0c011f3184f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 类
 IDWriteTextLayout 包装器。  
@@ -89,7 +84,7 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|指向 IDWriteTextLayout 的指针。|  
   
@@ -100,17 +95,17 @@ class CD2DTextLayout : public CD2DResource;
   
  [CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextlayout"></a>CD2DTextLayout:: ~ CD2DTextLayout  
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout  
  析构函数。 当 D2D 文本布局对象被销毁时调用。  
   
 ```  
 virtual ~CD2DTextLayout();
 ```  
   
-##  <a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
+##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout  
  构造 CD2DTextLayout 对象。  
   
 ```  
@@ -138,7 +133,7 @@ CD2DTextLayout(
  `bAutoDestroy`  
  指示该对象将销毁所有者 (pParentTarget)。  
   
-##  <a name="create"></a>CD2DTextLayout::Create  
+##  <a name="create"></a>  CD2DTextLayout::Create  
  创建 CD2DTextLayout。  
   
 ```  
@@ -148,14 +143,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="destroy"></a>CD2DTextLayout::Destroy  
+##  <a name="destroy"></a>  CD2DTextLayout::Destroy  
  销毁 CD2DTextLayout 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextLayout::Get  
+##  <a name="get"></a>  CD2DTextLayout::Get  
  返回 IDWriteTextLayout 接口  
   
 ```  
@@ -165,7 +160,7 @@ IDWriteTextLayout* Get();
 ### <a name="return-value"></a>返回值  
  指向 IDWriteTextLayout 接口或如果尚未初始化对象的 NULL 指针。  
   
-##  <a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName  
  复制的指定位置的文本的字体系列名称。  
   
 ```  
@@ -184,7 +179,7 @@ CString GetFontFamilyName(
 ### <a name="return-value"></a>返回值  
  CString 对象，其中包含当前的字体系列名称。  
   
-##  <a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
+##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName  
  获取位于指定位置的文本的区域设置名称。  
   
 ```  
@@ -203,7 +198,7 @@ CString GetLocaleName(
 ### <a name="return-value"></a>返回值  
  CString 对象，其中包含当前区域设置名称。  
   
-##  <a name="isvalid"></a>CD2DTextLayout::IsValid  
+##  <a name="isvalid"></a>  CD2DTextLayout::IsValid  
  检查资源有效性  
   
 ```  
@@ -213,14 +208,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果资源是有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
+##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout  
  指向 IDWriteTextLayout 的指针。  
   
 ```  
 IDWriteTextLayout* m_pTextLayout;  
 ```  
   
-##  <a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::operator IDWriteTextLayout *  
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *  
  返回 IDWriteTextLayout 接口  
   
 ```  
@@ -230,7 +225,7 @@ operator IDWriteTextLayout*();
 ### <a name="return-value"></a>返回值  
  指向 IDWriteTextLayout 接口或如果尚未初始化对象的 NULL 指针。  
   
-##  <a name="recreate"></a>CD2DTextLayout::ReCreate  
+##  <a name="recreate"></a>  CD2DTextLayout::ReCreate  
  重新创建 CD2DTextLayout。  
   
 ```  
@@ -240,7 +235,7 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
+##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName  
  在指定的文本范围内的文本的集以 null 结尾的字体系列名称  
   
 ```  
@@ -259,7 +254,7 @@ BOOL SetFontFamilyName(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE  
   
-##  <a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
+##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName  
  设置指定的文本范围内的文本的区域设置名称  
   
 ```  

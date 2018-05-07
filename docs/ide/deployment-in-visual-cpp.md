@@ -1,10 +1,10 @@
 ---
-title: "部署 Visual c + + |Microsoft 文档"
-ms.custom: 
+title: 部署 Visual c + + |Microsoft 文档
+ms.custom: ''
 ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -58,6 +57,6 @@ ms.lasthandoff: 03/16/2018
 
 Visual c + + 库的加载顺序与系统相关。 若要诊断加载程序问题，请使用 depends.exe 或 where.exe。 有关详细信息，请参阅[动态链接库搜索顺序 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

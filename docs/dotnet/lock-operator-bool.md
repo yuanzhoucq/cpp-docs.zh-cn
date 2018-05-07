@@ -2,11 +2,8 @@
 title: lock::operator bool |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::operator bool
 ms.assetid: 007f0372-f812-4f1e-ba43-2584bd96eb11
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1156576abd9a8fe98270ee6a8edb864793d127fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a68093ce1bca76d685a6809b8c2a612acaca9d7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 使用的运算符`lock`条件表达式中。  
@@ -42,7 +37,7 @@ operator bool();
 ```  
   
 ## <a name="return-value"></a>返回值  
- `true`如果持有的锁，`false`否则为。  
+ `true` 如果持有的锁，`false`否则为。  
   
 ## <a name="remarks"></a>备注  
  此运算符实际将转换为`_detail_class::_safe_bool`即比更安全`bool`因为它不能转换为整型。  
@@ -137,7 +132,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\lock.h >  
   
  **Namespace** msclr  

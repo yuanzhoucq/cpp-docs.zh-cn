@@ -1,12 +1,9 @@
 ---
-title: "CMiniFrameWnd 类 |Microsoft 文档"
-ms.custom: 
+title: CMiniFrameWnd 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 类
 表示通常在浮动工具条周围出现的半高框架窗口。  
@@ -75,10 +70,10 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  构造`CMiniFrameWnd`对象，但不会创建窗口。  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>备注  
  若要创建的窗口，调用[CMiniFrameWnd::Create](#create)。  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  创建 Windows 微型框架窗口，并将其附加到`CMiniFrameWnd`对象。  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU**后将无法访问系统菜单和控制菜单中，并将它们转换为标题 （标题栏） 的一部分。  
   
- 请参阅[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)有关可能的窗口样式值的说明。 用于微型框架窗口的典型组合是**WS_POPUP &#124;WS_CAPTION &#124;WS_SYSMENU**。  
+ 请参阅[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)有关可能的窗口样式值的说明。 用于微型框架窗口的典型组合是**WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**。  
   
  `rect`  
  A`RECT`结构，它指定所需的窗口的尺寸。  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  **创建**初始化窗口的类名称和窗口名称并注册其样式和父级的默认值。  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  创建一个 `CMiniFrameWnd` 对象。  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  如果成功，则返回 TRUE FALSE 失败。  
   
 ### <a name="remarks"></a>备注  
- `CreateEx`参数指定**WNDCLASS**，窗口样式和 （可选） 初始位置和窗口的大小。 `CreateEx`此外指定窗口的父级 （如果有） 和 id。  
+ `CreateEx`参数指定**WNDCLASS**，窗口样式和 （可选） 初始位置和窗口的大小。 `CreateEx` 此外指定窗口的父级 （如果有） 和 id。  
   
  当`CreateEx`执行 Windows 发送[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)， [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)到窗口的消息。  
   
  若要扩展的默认消息处理，从派生类`CMiniFrameWnd`，将消息映射添加到新的类中，并为上述消息提供成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
   
- 重写进一步**上***消息*消息处理程序，以向派生类添加更多的功能。  
+ 重写进一步 **上 * * * 消息*消息处理程序，以向派生类添加更多的功能。  
   
  如果**WS_VISIBLE**给定样式时，Windows 发送窗口激活和显示窗口所需的所有消息。 如果窗口样式指定的标题栏，窗口标题的指向`lpszWindowName`参数显示在标题栏中。  
   

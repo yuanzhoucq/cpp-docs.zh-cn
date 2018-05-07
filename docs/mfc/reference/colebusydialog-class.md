@@ -1,12 +1,9 @@
 ---
-title: "COleBusyDialog 类 |Microsoft 文档"
-ms.custom: 
+title: COleBusyDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 类
 用于 OLE“服务器未响应”或“服务器忙”对话框。  
@@ -90,10 +85,10 @@ class COleBusyDialog : public COleDialog
   
  `COleBusyDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  此函数仅构造`COleBusyDialog`对象。  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK 中的结构。  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  调用此函数可显示 OLE 服务器忙或服务器未响应对话框。  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`返回**IDOK**，您可以调用其他成员函数检索的设置或由用户输入到对话框中的信息。  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  调用此函数可获取用户在服务器忙对话框中选择的所选内容类型。  
   
 ```  
@@ -178,7 +173,7 @@ enum Selection {
   
 - **COleBusyDialog::callUnblocked**调用以激活服务器现在就是取消阻止。  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  类型的结构**OLEUIBUSY**用于控制服务器忙对话框中的行为。  
   
 ```  

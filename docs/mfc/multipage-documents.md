@@ -1,13 +1,10 @@
 ---
-title: "多页文档 |Microsoft 文档"
-ms.custom: 
+title: 多页文档 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bc9bbe4653e34c37ae46439baa1e649d6d8042
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24ad3e99399e4d5db45606accfd58512f3950f26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multipage-documents"></a>多页文档
 本文介绍 Windows 打印协议并说明如何打印包含多个页面的文档。 本文包含以下主题：  
@@ -59,15 +54,15 @@ ms.lasthandoff: 12/21/2017
   
 -   [打印时分页](#_core_print.2d.time_pagination)  
   
-##  <a name="_core_the_printing_protocol"></a>打印协议  
+##  <a name="_core_the_printing_protocol"></a> 打印协议  
  为了打印多页文档，框架和视图将按以下方式交互。 首先，框架显示**打印**对话框中，创建设备上下文的打印机和调用[StartDoc](../mfc/reference/cdc-class.md#startdoc)成员函数[CDC](../mfc/reference/cdc-class.md)对象。 然后，对于文档的每个页，框架将调用[StartPage](../mfc/reference/cdc-class.md#startpage)成员函数`CDC`对象，指示要打印的页上和调用的视图对象[EndPage](../mfc/reference/cdc-class.md#endpage)成员函数。 如果在启动某一特定页之前，必须更改打印机模式，视图将调用[ResetDC](../mfc/reference/cdc-class.md#resetdc)，哪些更新[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构，它包含新打印机模式信息。 已打印整个文档，框架将调用[EndDoc](../mfc/reference/cdc-class.md#enddoc)成员函数。  
   
-##  <a name="_core_overriding_view_class_functions"></a>重写视图类函数  
+##  <a name="_core_overriding_view_class_functions"></a> 重写视图类函数  
  [CView](../mfc/reference/cview-class.md)类定义在打印期间由框架调用的若干成员函数。 通过在视图类中重写这些函数，便能在框架的打印逻辑和您的视图类的打印逻辑之间建立连接。 下表列出了这些成员函数。  
   
 ### <a name="cviews-overridable-functions-for-printing"></a>CView 的可重写的打印函数  
   
-|name|重写的原因|  
+|名称|重写的原因|  
 |----------|---------------------------|  
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|在“打印”对话框中插入值，尤其是文档的长度|  
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|分配字体或其他 GDI 资源|  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
  ![打印循环过程](../mfc/media/vc37c71.gif "vc37c71")  
 打印循环  
   
-##  <a name="_core_pagination"></a>分页  
+##  <a name="_core_pagination"></a> 分页  
  框架将存储有关中的打印作业的信息大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构。 `CPrintInfo` 中的某些值与分页有关；这些值是可访问的，如下表所示。  
   
 ### <a name="page-number-information-stored-in-cprintinfo"></a>存储在 CPrintInfo 中的页码信息  
@@ -111,12 +106,12 @@ ms.lasthandoff: 12/21/2017
   
  `OnDraw` 同时为屏幕显示和打印执行渲染意味着您的应用程序是“所见即所得”的。 但是，此处假定您没有编写所见即所得的应用程序。 例如，想象一下这样一个文本编辑器：使用粗体字体进行打印但显示控件代码以在屏幕上指示粗体文本。 在这种情况下，您应严格使用 `OnDraw` 进行屏幕显示。 当重写 `OnPrint` 时，请用对 `OnDraw` 的调用替换对单独的绘图函数的调用。 该函数将使用您不在屏幕上显示的特性，按照文档在纸上显示的方式绘制文档。  
   
-##  <a name="_core_printer_pages_vs.._document_pages"></a>打印机页 vs。文档页  
+##  <a name="_core_printer_pages_vs.._document_pages"></a> 打印机页 vs。文档页  
  提到页码，有时候必须区分打印机的页概念与文档的页概念。 从打印机的角度来看，一页就是一张纸。 但是，一张纸不一定等同于一页文档。 例如，如果打印的是要对折纸张的新闻稿，那么一张纸可能会并排放置文档的第一页和最后一页。 同样，如果打印的是电子表格，那么文档完全不包含页。 相反，一张纸可能包含 1 至 20 行，6 至 10 列。  
   
  所有中的页码[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构指打印机页。 框架将为要通过打印机的每张纸调用一次 `OnPrepareDC` 和 `OnPrint`。 当你重写[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函数来指定文档的长度，则必须使用打印机页。 如果存在一对一的对应关系（即一个打印机页等同于一个文档页），则此操作很容易。 另一方面，如果文档页和打印机页不直接对应，则必须对其进行相应的转换。 例如，考虑一下打印电子表格。 当重写 `OnPreparePrinting` 时，必须计算打印整个电子表需要多少张纸，然后在调用 `SetMaxPage` 的 `CPrintInfo` 成员函数时使用该值。 同样，当重写 `OnPrepareDC` 时，必须将 `m_nCurPage` 转换为显示在该特定纸张中的行和列的范围，然后相应地调整视区原点。  
   
-##  <a name="_core_print.2d.time_pagination"></a>打印时分页  
+##  <a name="_core_print.2d.time_pagination"></a> 打印时分页  
  在某些情况下，视图类不能预先知道文档在实际打印前要等待多长时间。 例如，假定应用程序不是所见即所得的，那么文档在屏幕上的长度与其打印时的长度就不对应。  
   
  这会导致问题，在您重写[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)视图类： 你无法将值传递给`SetMaxPage`函数[CPrintInfo](../mfc/reference/cprintinfo-structure.md)结构，因为你不知道的长度文档。 如果用户未“打印”对话框指定停止处的页码，框架就不知道何时停止打印循环。 确定何时停止打印循环的唯一方法是输出文档并查看它何时结束。 视图类必须在文档打印期间检查其末尾，然后告知框架何时到达末尾。  

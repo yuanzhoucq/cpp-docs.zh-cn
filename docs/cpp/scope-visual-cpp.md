@@ -2,11 +2,8 @@
 title: 范围 （Visual C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>范围 (Visual C++)
 只能在程序的某些区域内使用 C++ 名称。 此区域称为名称的“范围”。 范围决定一个不表示静态范围的对象的名称的“生存期”。 在以下情况下，范围还可决定名称的可见性：调用类构造函数或析构函数时，或初始化范围的局部变量时。 (有关详细信息，请参阅[构造函数](../cpp/constructors-cpp.md)和[析构函数](../cpp/destructors-cpp.md)。)有五种范围：  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
      在 C++ 中，文件范围也称为命名空间范围。  
   
--   **类范围内使用**类成员的名称具有类范围。 类成员函数可访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。\***或**-> \***) 上的对象或指针指向的对象类; 非静态的类成员数据被视为本地给该类的对象。 考虑下列类声明：  
+-   **类范围内使用**类成员的名称具有类范围。 类成员函数可访问只能通过使用成员选择运算符 (**。** 或**->**) 或指向成员的指针运算符 (**。\*** 或**-> \***) 上的对象或指针指向的对象类; 非静态的类成员数据被视为本地给该类的对象。 考虑下列类声明：  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="hiding-names"></a>隐藏名称  
  可通过在封闭块中声明名称来隐藏该名称。 在下图中，在内部块中重新声明 `i`，从而隐藏与外部块范围中的 `i` 关联的变量。  
   
- ![块 & #45; 范围名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![块&#45;作用域的名称隐藏](../cpp/media/vc38sf1.png "vc38SF1")  
 块范围和名称隐藏  
   
  来自图中显示的程序的输出为：  

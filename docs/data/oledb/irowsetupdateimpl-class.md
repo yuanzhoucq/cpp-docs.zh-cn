@@ -1,12 +1,9 @@
 ---
-title: "IRowsetUpdateImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IRowsetUpdateImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c49782328ed51afe6a6501ed239d0800221864c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34efd252f67a0e3da9827ef97cff8bcab0a45532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
 OLE DB 模板实现[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)接口。  
@@ -85,7 +80,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|获取最近传输到或从忽略挂起的更改的数据源中获取的数据。|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|返回具有挂起的更改的行的列表。|  
 |[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|返回指定的行的状态。|  
-|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|自上次提取或更新以来撤消对行的任何更改。|  
+|[撤消](../../data/oledb/irowsetupdateimpl-undo.md)|自上次提取或更新以来撤消对行的任何更改。|  
 |[更新](../../data/oledb/irowsetupdateimpl-update.md)|传输自上次提取或更新后对行进行任何更改。|  
   
 ### <a name="implementation-methods-callback"></a>实现方法 （回调）  
@@ -114,7 +109,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 -   另请参阅如何`RUpdateRowset`UpdatePV 示例中使用类  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

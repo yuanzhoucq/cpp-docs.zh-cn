@@ -1,12 +1,9 @@
 ---
-title: "CD2DBitmap 类 |Microsoft 文档"
-ms.custom: 
+title: CD2DBitmap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBitmap
@@ -60,17 +57,15 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 967bad02cf92b0078d789e5c0b6b55f9644bb17b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 类
 ID2D1Bitmap 包装器。  
@@ -128,7 +123,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|如果应销毁 m_hBmpSrc; 则为 TRUE否则为 FALSE。|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|源位图的句柄。|  
@@ -145,17 +140,17 @@ class CD2DBitmap : public CD2DResource;
   
  `CD2DBitmap`
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxrendertarget.h  
   
-##  <a name="_dtorcd2dbitmap"></a>CD2DBitmap:: ~ CD2DBitmap  
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap  
  析构函数。 当 D2D 位图对象被销毁时调用。  
   
 ```  
 virtual ~CD2DBitmap();
 ```  
   
-##  <a name="attach"></a>CD2DBitmap::Attach  
+##  <a name="attach"></a>  CD2DBitmap::Attach  
  附加现有的资源的对象的接口  
   
 ```  
@@ -166,7 +161,7 @@ void Attach(ID2D1Bitmap* pResource);
  `pResource`  
  现有资源接口。 不能为 NULL  
   
-##  <a name="cd2dbitmap"></a>CD2DBitmap::CD2DBitmap  
+##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  构造中资源的 CD2DBitmap 对象。  
   
 ```  
@@ -219,14 +214,14 @@ CD2DBitmap(
  `hbmpSrc`  
  位图的句柄。  
   
-##  <a name="commoninit"></a>CD2DBitmap::CommonInit  
+##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
  初始化对象  
   
 ```  
 void CommonInit();
 ```  
   
-##  <a name="copyfrombitmap"></a>CD2DBitmap::CopyFromBitmap  
+##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
  将指定的区域中指定的位图复制到当前位图  
   
 ```  
@@ -249,7 +244,7 @@ HRESULT CopyFromBitmap(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="copyfrommemory"></a>CD2DBitmap::CopyFromMemory  
+##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
  将指定的区域从内存复制到当前位图  
   
 ```  
@@ -272,7 +267,7 @@ HRESULT CopyFromMemory(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="copyfromrendertarget"></a>CD2DBitmap::CopyFromRenderTarget  
+##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
  副本从指定的指定的区域呈现目标的当前位图为  
   
 ```  
@@ -295,7 +290,7 @@ HRESULT CopyFromRenderTarget(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="create"></a>CD2DBitmap::Create  
+##  <a name="create"></a>  CD2DBitmap::Create  
  创建 CD2DBitmap。  
   
 ```  
@@ -309,14 +304,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="destroy"></a>CD2DBitmap::Destroy  
+##  <a name="destroy"></a>  CD2DBitmap::Destroy  
  销毁 CD2DBitmap 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmap::Detach  
+##  <a name="detach"></a>  CD2DBitmap::Detach  
  分离资源接口从该对象  
   
 ```  
@@ -326,7 +321,7 @@ ID2D1Bitmap* Detach();
 ### <a name="return-value"></a>返回值  
  指向分离的资源接口指针。  
   
-##  <a name="get"></a>CD2DBitmap::Get  
+##  <a name="get"></a>  CD2DBitmap::Get  
  返回 ID2D1Bitmap 接口  
   
 ```  
@@ -336,7 +331,7 @@ ID2D1Bitmap* Get();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1Bitmap 接口或如果尚未初始化对象的 NULL 指针。  
   
-##  <a name="getdpi"></a>CD2DBitmap::GetDPI  
+##  <a name="getdpi"></a>  CD2DBitmap::GetDPI  
  返回每英寸点数 (DPI) 的位图  
   
 ```  
@@ -346,7 +341,7 @@ CD2DSizeF GetDPI() const;
 ### <a name="return-value"></a>返回值  
  位图水平和垂直 DPI。  
   
-##  <a name="getpixelformat"></a>CD2DBitmap::GetPixelFormat  
+##  <a name="getpixelformat"></a>  CD2DBitmap::GetPixelFormat  
  检索位图的像素格式和字母模式  
   
 ```  
@@ -356,7 +351,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 ### <a name="return-value"></a>返回值  
  位图的像素格式和 alpha 模式。  
   
-##  <a name="getpixelsize"></a>CD2DBitmap::GetPixelSize  
+##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
  返回的大小，以依赖于设备的单位 （像素），该位图的  
   
 ```  
@@ -366,7 +361,7 @@ CD2DSizeU GetPixelSize() const;
 ### <a name="return-value"></a>返回值  
  以像素为单位，位图的大小...  
   
-##  <a name="getsize"></a>CD2DBitmap::GetSize  
+##  <a name="getsize"></a>  CD2DBitmap::GetSize  
  返回的大小，以独立于设备的像素为单位 (Dip)，该位图的  
   
 ```  
@@ -376,7 +371,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>返回值  
  Dip 的位图中的大小。  
   
-##  <a name="isvalid"></a>CD2DBitmap::IsValid  
+##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
  检查资源有效性  
   
 ```  
@@ -386,56 +381,56 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果资源是有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="m_bautodestroyhbmp"></a>CD2DBitmap::m_bAutoDestroyHBMP  
+##  <a name="m_bautodestroyhbmp"></a>  CD2DBitmap::m_bAutoDestroyHBMP  
  如果应销毁 m_hBmpSrc; 则为 TRUE否则为 FALSE。  
   
 ```  
 BOOL m_bAutoDestroyHBMP;  
 ```  
   
-##  <a name="m_hbmpsrc"></a>CD2DBitmap::m_hBmpSrc  
+##  <a name="m_hbmpsrc"></a>  CD2DBitmap::m_hBmpSrc  
  源位图的句柄。  
   
 ```  
 HBITMAP m_hBmpSrc;  
 ```  
   
-##  <a name="m_lpsztype"></a>CD2DBitmap::m_lpszType  
+##  <a name="m_lpsztype"></a>  CD2DBitmap::m_lpszType  
  资源类型。  
   
 ```  
 LPCTSTR m_lpszType;  
 ```  
   
-##  <a name="m_pbitmap"></a>CD2DBitmap::m_pBitmap  
+##  <a name="m_pbitmap"></a>  CD2DBitmap::m_pBitmap  
  将存储指向 ID2D1Bitmap 对象的指针。  
   
 ```  
 ID2D1Bitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_sizedest"></a>CD2DBitmap::m_sizeDest  
+##  <a name="m_sizedest"></a>  CD2DBitmap::m_sizeDest  
  位图目标大小。  
   
 ```  
 CD2DSizeU m_sizeDest;  
 ```  
   
-##  <a name="m_strpath"></a>CD2DBitmap::m_strPath  
+##  <a name="m_strpath"></a>  CD2DBitmap::m_strPath  
  位图文件路径。  
   
 ```  
 CString m_strPath;  
 ```  
   
-##  <a name="m_uiresid"></a>CD2DBitmap::m_uiResID  
+##  <a name="m_uiresid"></a>  CD2DBitmap::m_uiResID  
  位图的资源 id。  
   
 ```  
 UINT m_uiResID;  
 ```  
   
-##  <a name="operator_id2d1bitmap_star"></a>CD2DBitmap::operator ID2D1Bitmap *  
+##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap *  
  返回 ID2D1Bitmap 接口  
   
 ```  

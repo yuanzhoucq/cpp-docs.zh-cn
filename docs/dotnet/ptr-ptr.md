@@ -1,12 +1,9 @@
 ---
-title: "ptr::ptr |Microsoft 文档"
-ms.custom: 
+title: ptr::ptr |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::ptr
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 49013e718ad540e88a1cbd00eceb6bb3dc0071b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrptr"></a>ptr::ptr
 构造`com::ptr`包装的 COM 对象。  
@@ -116,7 +111,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\com\ptr.h >  
   
  **Namespace** msclr:: com  

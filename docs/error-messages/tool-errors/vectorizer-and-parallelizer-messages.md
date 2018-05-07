@@ -1,12 +1,9 @@
 ---
-title: "矢量化程序和并行化程序消息 |Microsoft 文档"
-ms.custom: 
+title: 矢量化程序和并行化程序消息 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C5011
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b5ae296c468ce132b4ddcebe8a8894c1ba53e751
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>矢量化程序和并行化程序消息
 你可以使用 Visual c + + 编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)到输出原因代码和有关其活动的信息性消息。 本文说明原因代码和消息。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a>信息性消息  
+##  <a name="BKMK_InformationalMessages"></a> 信息性消息  
  根据你指定的报告级别，将为每个循环显示下列信息性消息之一。  
   
  有关原因代码的信息，请参见本文的下一部分。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="reason-codes"></a>原因代码  
  以下几节列出了自动并行化和自动向量化的可能原因代码。  
   
-###  <a name="BKMK_ReasonCode50x"></a>5xx  
+###  <a name="BKMK_ReasonCode50x"></a> 5xx  
  5*xx*原因代码应用于自动并行化和自动向量化。  
   
 |原因代码|说明|  
@@ -227,7 +222,7 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a>10xx  
+###  <a name="BKMK_ReasonCode100x"></a> 10xx  
  10*xx*原因代码应用于自动并行化。  
   
 |原因代码|说明|  
@@ -436,7 +431,7 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a>11xx  
+###  <a name="BKMK_ReasonCode110x"></a> 11xx  
  11*xx*原因代码应用于自动向量化。  
   
 |原因代码|说明|  
@@ -584,7 +579,7 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a>12xx  
+###  <a name="BKMK_ReasonCode120x"></a> 12xx  
  12*xx*原因代码应用于自动向量化。  
   
 |原因代码|说明|  
@@ -659,7 +654,7 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a>13xx  
+###  <a name="BKMK_ReasonCode130x"></a> 13xx  
  13*xx*原因代码应用于自动向量化。  
   
 |原因代码|说明|  
@@ -791,16 +786,16 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a>14xx  
+###  <a name="BKMK_ReasonCode140x"></a> 14xx  
  14*xx*指定与自动向量化不兼容的选项，则会发生的代码的原因。  
   
 |原因代码|说明|  
 |-----------------|-----------------|  
-|1400|**#pragma loop （no_vector)**指定。|  
+|1400|**#pragma loop （no_vector)** 指定。|  
 |1401|**/kernel**面向 x86 或 ARM 时指定开关。|  
 |1402|**/arch:SSE2**或面向 x86 时未指定更高开关。|  
 |1403|**/arch:ATOM**指定交换机且循环包含两倍运算。|  
-|1404|**/O1**或**/Os**指定开关。|  
+|1404|**/O1**或 **/Os**指定开关。|  
 |1405|禁用向量化可帮助动态初始值设定项到静态初始值设定项优化。|  
   
 ```cpp  
@@ -863,7 +858,7 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a>15xx  
+###  <a name="BKMK_ReasonCode150x"></a> 15xx  
  15*xx*原因代码应用于别名。 当内存中的位置可由两个不同名称访问时，将出现别名。  
   
 |原因代码|说明|  

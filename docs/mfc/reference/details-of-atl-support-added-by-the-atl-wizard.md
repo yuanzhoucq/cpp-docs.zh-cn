@@ -1,13 +1,10 @@
 ---
-title: "ATL 向导添加 ATL 支持的详细信息 |Microsoft 文档"
-ms.custom: 
+title: ATL 向导添加 ATL 支持的详细信息 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.atl.support
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17d5063db9eb76e0fc6db9eecfe183b63276b874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 450021fd1ea05831f44dd5af7a9f1e39a9d6fc5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 当你[向现有 MFC 可执行文件或 DLL 中添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 进行以下修改现有的 MFC 项目 (在此示例中，项目称为`MFCEXE`):  

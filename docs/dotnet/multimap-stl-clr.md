@@ -1,12 +1,9 @@
 ---
-title: "多重映射 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 多重映射 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/map> header [STL/CLR]
 - multimap class [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168c6afec0f8f195d1315a54eff2794f7e3fd07e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`multimap`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  其中：  
   
- `GKey`等同于`Key`后者为 ref 类型，除非在此情况下它是`Key^`  
+ `GKey` 等同于`Key`后者为 ref 类型，除非在此情况下它是 `Key^`  
   
- `GMapped`等同于`Mapped`后者为 ref 类型，除非在此情况下它是`Mapped^`  
+ `GMapped` 等同于`Mapped`后者为 ref 类型，除非在此情况下它是 `Mapped^`  
   
 ## <a name="syntax"></a>语法  
   
@@ -140,7 +135,7 @@ template<typename Key,
   
  此类委托对象必须进行严格弱排序键的类型在施加[multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `key_comp()(X, Y)`返回相同的布尔值导致每次调用。  
+ `key_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
   
  如果`key_comp()(X, Y)`为 true，然后`key_comp()(Y, X)`必须是 false。  
   
@@ -160,7 +155,7 @@ template<typename Key,
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  

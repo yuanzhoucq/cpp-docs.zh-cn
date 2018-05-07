@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrArray 类 |Microsoft 文档"
-ms.custom: 
+title: CTypedPtrArray 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e08749341bd7865c89e397e36aeff3a6ccc0d71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
 为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。  
@@ -95,10 +90,10 @@ class CTypedPtrArray : public BASE_CLASS
   
  `CTypedPtrArray`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxtempl.h  
   
-##  <a name="add"></a>CTypedPtrArray::Add  
+##  <a name="add"></a>  CTypedPtrArray::Add  
  此成员函数将调用`BASE_CLASS` **:: 添加**。  
   
 ```  
@@ -118,7 +113,7 @@ INT_PTR Add(TYPE newElement);
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::Add](../../mfc/reference/cobarray-class.md#add)。  
   
-##  <a name="append"></a>CTypedPtrArray::Append  
+##  <a name="append"></a>  CTypedPtrArray::Append  
  此成员函数将调用`BASE_CLASS` **:: 追加**。  
   
 ```  
@@ -141,7 +136,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::Append](../../mfc/reference/cobarray-class.md#append)。  
   
-##  <a name="copy"></a>CTypedPtrArray::Copy  
+##  <a name="copy"></a>  CTypedPtrArray::Copy  
  此成员函数将调用`BASE_CLASS` **:: 复制**。  
   
 ```  
@@ -161,7 +156,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)。  
   
-##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
  此内联函数调用`BASE_CLASS` **:: ElementAt**。  
   
 ```  
@@ -181,7 +176,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)。  
   
-##  <a name="getat"></a>CTypedPtrArray::GetAt  
+##  <a name="getat"></a>  CTypedPtrArray::GetAt  
  此内联函数调用`BASE_CLASS` **:: GetAt**。  
   
 ```  
@@ -201,7 +196,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
  此成员函数将调用`BASE_CLASS` **:: InsertAt**。  
   
 ```  
@@ -241,7 +236,7 @@ void InsertAt(
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)。  
   
-##  <a name="operator_at"></a>CTypedPtrArray::operator]  
+##  <a name="operator_at"></a>  CTypedPtrArray::operator]  
  这些内联运算符调用`BASE_CLASS` **:: 运算符 []**。  
   
 ```  
@@ -261,7 +256,7 @@ TYPE operator[ ](int_ptr nindex) const;
   
  库的调试版本断言下标 （或者在左侧或赋值语句右侧） 是否超出界限。  
   
-##  <a name="setat"></a>CTypedPtrArray::SetAt  
+##  <a name="setat"></a>  CTypedPtrArray::SetAt  
  此成员函数将调用`BASE_CLASS` **:: SetAt**。  
   
 ```  
@@ -283,7 +278,7 @@ void SetAt(
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)。  
   
-##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
  此成员函数将调用`BASE_CLASS` **:: SetAtGrow**。  
   
 ```  

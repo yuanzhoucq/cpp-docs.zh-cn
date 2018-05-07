@@ -1,12 +1,9 @@
 ---
-title: "COleLinksDialog 类 |Microsoft 文档"
-ms.custom: 
+title: COleLinksDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b998cc18ac0c357b57bc841f6db13700b078063
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 类
 用于 OLE“编辑链接”对话框。  
@@ -87,10 +82,10 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
  显示 OLE 编辑链接对话框。  
   
 ```  
@@ -109,7 +104,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>备注  
  如果你想要通过设置成员的初始化各种对话框控件[m_el](#m_el)结构，你应执行此操作，然后再调`DoModal`，但在构造对话框对象之后。  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  构造 `COleLinksDialog` 对象。  
   
 ```  
@@ -136,7 +131,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>备注  
  此函数仅构造`COleLinksDialog`对象。 若要显示对话框中，调用[DoModal](#domodal)函数。  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
  类型的结构**OLEUIEDITLINKS**用于控制编辑链接对话框中的行为。  
   
 ```  

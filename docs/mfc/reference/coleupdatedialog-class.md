@@ -1,12 +1,9 @@
 ---
-title: "COleUpdateDialog 类 |Microsoft 文档"
-ms.custom: 
+title: COleUpdateDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a7d41c507c2b7b932ba33df911151bfc417091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 类
 用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。  
@@ -74,10 +69,10 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
  构造 `COleUpdateDialog` 对象。  
   
 ```  
@@ -104,7 +99,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>备注  
  此函数仅构造`COleUpdateDialog`对象。 若要显示对话框中，调用[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 此类应使用而不是`COleLinksDialog`如果想要更新仅现有链接或嵌入项。  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
  显示编辑链接对话框框中更新模式。  
   
 ```  

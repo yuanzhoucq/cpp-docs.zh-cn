@@ -1,13 +1,10 @@
 ---
-title: "值类型语义 |Microsoft 文档"
-ms.custom: 
+title: 值类型语义 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>值类型语义
 值类型语义已从托管扩展中的 c + + 更改为 Visual c + +。  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>调用继承的虚方法  
- `Form (1)`是规范化的值对象，并且它很好地理解，除了当有人尝试调用继承的虚方法，如`ToString()`。 例如:  
+ `Form (1)` 是规范化的值对象，并且它很好地理解，除了当有人尝试调用继承的虚方法，如`ToString()`。 例如：  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  我们想要包装在值类型而不是引用类型以避免双堆分配的小型本机类： 本机堆来保存的本机类型和 CLR 堆来保存的托管的包装。 包装在值类型的本机类，你可以避免托管的堆中，但它无法自动执行在回收的本机堆内存。 引用类型是在其中非普通的本机类进行简单包装唯一可行的托管的类型。  
   
 ## <a name="interior-pointers"></a>内部指针  
- `Form (2)`和`Form (3)`更高版本可以解决此领域或下一个 （也就是说，任何托管或本机类型） 中几乎任何类型。 因此，例如，以下所有允许在托管扩展中：  
+ `Form (2)` 和`Form (3)`更高版本可以解决此领域或下一个 （也就是说，任何托管或本机类型） 中几乎任何类型。 因此，例如，以下所有允许在托管扩展中：  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`和`Form (3)`的托管扩展将映射到`interior_ptr<V>`。 `Form (4)`是一个跟踪句柄。 它解决了在托管堆中具有已装箱的整个对象。 对其进行转换到的新语法中`V^`，  
+ `Form (2)` 和`Form (3)`的托管扩展将映射到`interior_ptr<V>`。 `Form (4)` 是一个跟踪句柄。 它解决了在托管堆中具有已装箱的整个对象。 对其进行转换到的新语法中`V^`，  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

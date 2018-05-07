@@ -1,13 +1,10 @@
 ---
-title: "注册窗口类 |Microsoft 文档"
-ms.custom: 
+title: 注册窗口类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - WndProc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - WinMain method [MFC]
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92f5673aac014abdd4fd19425d9ae849f64284ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 00e397f8880f6f42f1930e668b64d3ba62eb2c64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-window-classes"></a>注册窗口类
 Windows 传统编程中的窗口“类”定义了可在其中创建任何数量的窗口的“类”（不是 C++ 类）的特征。 此类型的类是一个用于创建窗口的模板或模型。  

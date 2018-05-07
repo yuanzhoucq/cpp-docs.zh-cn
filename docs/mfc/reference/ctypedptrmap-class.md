@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrMap 类 |Microsoft 文档"
-ms.custom: 
+title: CTypedPtrMap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 为 `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`和 `CMapStringToPtr`指针映射类的对象提供安全类型“包装器”。  
@@ -84,10 +79,10 @@ class CTypedPtrMap : public BASE_CLASS
   
  `CTypedPtrMap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
  检索处的地图元素`rNextPosition`，然后更新`rNextPosition`来引用映射中的下一个元素。  
   
 ```  
@@ -120,8 +115,8 @@ void GetNextAssoc(
   
  此内联函数调用`BASE_CLASS` **:: GetNextAssoc**。  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`使用哈希算法来快速查找完全匹配的密钥的地图元素。  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` 使用哈希算法来快速查找完全匹配的密钥的地图元素。  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
@@ -146,7 +141,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>备注  
  此内联函数调用`BASE_CLASS` **:: 查找**。  
   
-##  <a name="operator_at"></a>CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>  CTypedPtrMap::operator]  
  仅在赋值语句 （左值） 的左侧，可以使用此运算符。  
   
 ```  
@@ -166,7 +161,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>备注  
  如果没有地图元素与指定的键，则会创建一个新的元素。 没有等效于此运算符的任何"右侧"（右值），因为一个密钥可能无法找到在映射中的可能。 使用`Lookup`元素检索的成员函数。  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  此成员函数将调用`BASE_CLASS` **:: RemoveKey**。  
   
 ```  
@@ -186,7 +181,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)。  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
  此成员函数将调用`BASE_CLASS` **:: SetAt**。  
   
 ```  

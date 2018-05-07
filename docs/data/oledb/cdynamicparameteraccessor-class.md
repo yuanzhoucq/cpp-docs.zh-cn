@@ -1,12 +1,9 @@
 ---
-title: "CDynamicParameterAccessor 类 |Microsoft 文档"
-ms.custom: 
+title: CDynamicParameterAccessor 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/14/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicParameterAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicParameterAccessor class
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18f53ca6d95d215ad41c6b2501245be0e470bbb1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b9478a5b2cc2190219ce2b297d1908683577c9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 类
 
@@ -68,7 +63,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 有关演示如何使用此类来执行 SQL Server 存储过程并获取输出参数值的示例，请参阅[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)示例中的代码[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)在 GitHub 上的存储库。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 **标头**：atldbcli.h
 

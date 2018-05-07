@@ -1,12 +1,9 @@
 ---
-title: "CSplitterWnd 类 |Microsoft 文档"
-ms.custom: 
+title: CSplitterWnd 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 提供拆分窗口功能，此窗口包含多个窗格。  
@@ -204,10 +199,10 @@ class CSplitterWnd : public CWnd
   
  `CSplitterWnd`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext  
  由框架调用以执行下一个窗格或上一个窗格的命令。  
   
 ```  
@@ -221,7 +216,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>备注  
  此成员函数是一个高级别的命令，可供[CView](../../mfc/reference/cview-class.md)类若要委托给`CSplitterWnd`实现。  
   
-##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext  
  由框架调用以检查下一个窗格或上一个窗格命令当前可能。  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>备注  
  此成员函数是一个高级别的命令，可供[CView](../../mfc/reference/cview-class.md)类若要委托给`CSplitterWnd`实现。  
   
-##  <a name="create"></a>CSplitterWnd::Create  
+##  <a name="create"></a>  CSplitterWnd::Create  
  若要创建动态拆分窗口，调用**创建**成员函数。  
   
 ```  
@@ -295,7 +290,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl  
  由框架调用以创建共享的滚动条控件。  
   
 ```  
@@ -317,7 +312,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>备注  
  重写`CreateScrollBarCtrl`若要包括的滚动条旁边的额外控件。 默认行为是创建正常 Windows 滚动条控件。  
   
-##  <a name="createstatic"></a>CSplitterWnd::CreateStatic  
+##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic  
  若要创建静态拆分窗口，调用`CreateStatic`成员函数。  
   
 ```  
@@ -367,7 +362,7 @@ virtual BOOL CreateStatic(
   
  请参阅本文中的"拆分窗口"[多文档类型、 视图和框架窗口](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技术注意 29](../../mfc/tn029-splitter-windows.md)，和`CSplitterWnd`类概述有关静态拆分窗口的详细信息。  
   
-##  <a name="createview"></a>CSplitterWnd::CreateView  
+##  <a name="createview"></a>  CSplitterWnd::CreateView  
  创建静态拆分窗口的窗格。  
   
 ```  
@@ -406,7 +401,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd  
  调用以构造`CSplitterWnd`对象。  
   
 ```  
@@ -416,7 +411,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>备注  
  构造`CSplitterWnd`两个步骤中的对象。 首先，调用的构造函数，这将创建`CSplitterWnd`对象，，然后调用[创建](#create)成员函数，其创建拆分器窗口，并将其附加到`CSplitterWnd`对象。  
   
-##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn  
  拆分器窗口中删除某一列。  
   
 ```  
@@ -430,7 +425,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>备注  
  由框架实现动态拆分窗口的逻辑调用此成员函数 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
-##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  从拆分器窗口中删除行。  
   
 ```  
@@ -444,7 +439,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>备注  
  由框架实现动态拆分窗口的逻辑调用此成员函数 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
-##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  从拆分器窗口中删除视图。  
   
 ```  
@@ -465,7 +460,7 @@ virtual void DeleteView(
   
  由框架实现动态拆分窗口的逻辑调用此成员函数 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
-##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  执行键盘拆分命令，通常"窗口拆分。"  
   
 ```  
@@ -478,7 +473,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>备注  
  此成员函数是一个高级别的命令，可供[CView](../../mfc/reference/cview-class.md)类若要委托给`CSplitterWnd`实现。  
   
-##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>  CSplitterWnd::DoScroll  
  执行同步滚动拆分窗口。  
   
 ```  
@@ -516,7 +511,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>备注  
  由框架执行同步滚动拆分窗口的视图接收滚动消息时调用此成员函数。 重写以同步滚动允许之前需要用户执行操作。  
   
-##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy  
  滚动拆分窗口按给定数量的像素。  
   
 ```  
@@ -544,7 +539,7 @@ virtual BOOL DoScrollBy(
   
  重写以要求在允许滚动之前由用户操作。  
   
-##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane  
  确定活动窗格从焦点或框架中的活动视图。  
   
 ```  
@@ -566,7 +561,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>备注  
  此成员函数调用由框架确定拆分器窗口中的活动窗格中。 重写以要求用户在获取活动窗格之前的操作。  
   
-##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount  
  返回当前窗格中列数。  
   
 ```  
@@ -576,7 +571,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>返回值  
  在拆分器返回当前的列数。 对于静态拆分，这也将是最大列数。  
   
-##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo  
  返回指定的列信息。  
   
 ```  
@@ -596,7 +591,7 @@ void GetColumnInfo(
  `cxMin`  
  对引用`int`将设置为列的当前最小宽度。  
   
-##  <a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  返回在指定的行和列的窗格。  
   
 ```  
@@ -615,7 +610,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>返回值  
  返回在指定的行和列的窗格。 返回窗格中通常是[CView](../../mfc/reference/cview-class.md)-派生类。  
   
-##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount  
  返回当前窗格行计数。  
   
 ```  
@@ -625,7 +620,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>返回值  
  返回在拆分器窗口中的当前行数。 静态拆分窗口，这将是最大行数。  
   
-##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo  
  返回有关指定的行信息。  
   
 ```  
@@ -648,7 +643,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>备注  
  调用此成员函数以获取有关指定行的信息。 `cyCur`参数填充的指定行的当前高度和`cyMin`填入行的最小高度。  
   
-##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  返回拆分窗口的共享的滚动条样式。  
   
 ```  
@@ -664,7 +659,7 @@ DWORD GetScrollStyle() const;
   
  如果为零，拆分窗口的当前未管理任何共享的滚动条。  
   
-##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol  
  获取子窗口在指定的行和列的窗格中的 ID。  
   
 ```  
@@ -689,7 +684,7 @@ int IdFromRowCol(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
  确定是否`pWnd`目前此拆分器窗口的子窗格。  
   
 ```  
@@ -719,7 +714,7 @@ BOOL IsChildPane(
   
  此版本现在已过时，不应使用。  
   
-##  <a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>  CSplitterWnd::IsTracking  
  调用此成员函数可确定当前移动窗口中的拆分栏。  
   
 ```  
@@ -729,7 +724,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>返回值  
  如果拆分器操作正在进行; 则为非 0否则为 0。  
   
-##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter  
  将拆分窗口的图像的渲染。  
   
 ```  
@@ -748,7 +743,7 @@ virtual void OnDrawSplitter(
   
 - **splitBox**拆分器拖动框。  
   
-- `splitBar`显示两个拆分窗口之间的栏。  
+- `splitBar` 显示两个拆分窗口之间的栏。  
   
 - **splitIntersection**拆分窗口的交集。 在 Windows 95/98 上运行时不会调用此元素。  
   
@@ -762,7 +757,7 @@ virtual void OnDrawSplitter(
   
  有关动态拆分窗口的详细信息，请参阅"拆分窗口"中文章[多文档类型、 视图和框架窗口](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技术注意 29](../../mfc/tn029-splitter-windows.md)，和`CSplitterWnd`类概述。  
   
-##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker  
  呈现拆分窗口是相同的大小和形状一样的框架窗口的图像。  
   
 ```  
@@ -778,7 +773,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  有关动态拆分窗口的详细信息，请参阅"拆分窗口"中文章[多文档类型、 视图和框架窗口](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技术注意 29](../../mfc/tn029-splitter-windows.md)，和`CSplitterWnd`类概述。  
   
-##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout  
  若要重新拆分窗口显示行或列大小调整后的调用。  
   
 ```  
@@ -793,7 +788,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>示例  
   请参阅示例[CSplitterWnd::SetColumnInfo](#setcolumninfo)。  
   
-##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane  
  将窗格使处于活动状态的帧中的设置。  
   
 ```  
@@ -818,7 +813,7 @@ virtual void SetActivePane(
   
  通过提供行和列中，指定窗格**或**通过提供`pWnd`。  
   
-##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  用于设置指定的列信息的调用。  
   
 ```  
@@ -846,7 +841,7 @@ void SetColumnInfo(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo  
  用于设置指定的行信息的调用。  
   
 ```  
@@ -871,7 +866,7 @@ void SetRowInfo(
   
  当框架显示拆分窗口时，它是布局根据其理想的尺寸，处理从左上角到右下角的拆分器窗口工作区的行和列中的窗格。  
   
-##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle  
  指定拆分窗口的滚动新式共享滚动条支持。  
   
 ```  
@@ -889,7 +884,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>备注  
  滚动条创建后不会销毁即使`SetScrollStyle`称为如果不使用该样式; 而是在隐藏这些滚动条。 这允许滚动条来保留其状态，即使它们处于隐藏状态。 在调用`SetScrollStyle`需要调用[RecalcLayout](#recalclayout)的所有更改才会生效。  
   
-##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn  
  指示框架窗口垂直拆分的位置。  
   
 ```  
@@ -904,11 +899,11 @@ virtual BOOL SplitColumn(int cxBefore);
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 创建垂直拆分器窗口时调用此成员函数。 `SplitColumn`指示发生拆分的位置的默认位置。  
+ 创建垂直拆分器窗口时调用此成员函数。 `SplitColumn` 指示发生拆分的位置的默认位置。  
   
- `SplitColumn`由框架实现动态拆分窗口的逻辑调用 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ `SplitColumn` 由框架实现动态拆分窗口的逻辑调用 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
-##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  指示框架窗口水平拆分的位置。  
   
 ```  
@@ -923,11 +918,11 @@ virtual BOOL SplitRow(int cyBefore);
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 创建水平拆分器窗口时调用此成员函数。 `SplitRow`指示发生拆分的位置的默认位置。  
+ 创建水平拆分器窗口时调用此成员函数。 `SplitRow` 指示发生拆分的位置的默认位置。  
   
- `SplitRow`由框架实现动态拆分窗口的逻辑调用 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ `SplitRow` 由框架实现动态拆分窗口的逻辑调用 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
-##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  由框架调用以绘制拆分窗口。  
   
 ```  

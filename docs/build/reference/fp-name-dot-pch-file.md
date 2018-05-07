@@ -1,13 +1,10 @@
 ---
-title: "-Fp （名称。Pch 文件） |Microsoft 文档"
-ms.custom: 
+title: -Fp （名称。Pch 文件） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
 提供的预编译标头而不是使用默认路径名称的路径名称。  
@@ -44,11 +39,11 @@ ms.lasthandoff: 12/21/2017
 > **/Fp**_路径名_  
   
 ## <a name="remarks"></a>备注  
- 使用此选项与[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)提供而不是使用默认路径名称的预编译标头的路径名称。 你还可以使用**/Fp**与**/Yc**来指定不同于预编译的头文件的用法**/Yc***filename*自变量和从源代码文件的基名称。  
+ 使用此选项与[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)提供而不是使用默认路径名称的预编译标头的路径名称。 你还可以使用 **/Fp**与 **/Yc**来指定不同于预编译的头文件的用法 **/Yc * * * filename*自变量和源文件的基名称。  
   
  如果不指定扩展的路径名称的一部分，则假定.pch 的扩展名。 如果指定没有文件名称的目录，默认文件名是 VC*x*0.pch，其中*x*是在使用 Visual c + + 的主要版本。  
   
- 你还可以使用**/Fp**选项与**/Yu**。  
+ 你还可以使用 **/Fp**选项与 **/Yu**。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   

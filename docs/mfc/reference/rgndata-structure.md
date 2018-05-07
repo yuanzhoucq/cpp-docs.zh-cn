@@ -1,13 +1,10 @@
 ---
-title: "RGNDATA 结构 |Microsoft 文档"
-ms.custom: 
+title: RGNDATA 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - RGNDATA
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RGNDATA structure [MFC]
 ms.assetid: 72257c00-f440-4dca-979e-9b6b5b2d5f2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4170b3590cc841f3edc10d4767045a4fede9782
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591c2dd65fdb9dde00f0ac1373c39affbe82da85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rgndata-structure"></a>RGNDATA 结构
 `RGNDATA` 结构包含一个标头和构成区域的矩形的数组。 这些矩形的顺序为从上到下、从左到右，不会重叠。  
@@ -46,7 +41,7 @@ typedef struct _RGNDATA { /* rgnd */
  `Buffer`  
  指定包含任意大小的缓冲区[RECT](../../mfc/reference/rect-structure1.md)组成区域的结构。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

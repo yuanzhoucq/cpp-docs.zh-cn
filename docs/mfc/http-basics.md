@@ -1,13 +1,10 @@
 ---
-title: "HTTP 基础知识 |Microsoft 文档"
-ms.custom: 
+title: HTTP 基础知识 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - return codes [MFC]
 - HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67921e0667267b99b3787d55fa7ff564aa543ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56a2692edd9d41f80023e44f4ca8172cba8f9d00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-basics"></a>HTTP 基础
 编写 Internet 应用程序时，您经常在 HTTP 标头中检查并添加信息。 返回代码指示请求的事件是成功还是失败。 下表中列出了一些常用返回代码。  

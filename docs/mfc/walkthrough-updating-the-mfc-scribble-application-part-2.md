@@ -1,29 +1,24 @@
 ---
-title: "演练： 更新 MFC 随意画图应用程序 （第 2 部分） |Microsoft 文档"
-ms.custom: 
+title: 演练： 更新 MFC 随意画图应用程序 （第 2 部分） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本演练介绍了如何将 Office Fluent 功能区添加到经典自由曲线应用程序。 本部分将显示如何添加功能区面板和控件，用户可以使用而不是菜单和命令。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [初始化钢笔和保存首选项](#initpensave)  
   
-##  <a name="addnewpanel"></a>向功能区添加新的面板  
+##  <a name="addnewpanel"></a> 向功能区添加新的面板  
  这些步骤演示了如何添加**视图**面板，其中包含控制工具栏和状态栏的可见性的两个复选框以及**窗口**包含垂直的拆分面板控制的创建和排列多文档界面 (MDI) windows 的按钮。  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>若要将视图面板和窗口面板添加到功能区栏  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[部分](#top)]  
   
-##  <a name="addhelppanel"></a>将帮助面板添加到功能区  
+##  <a name="addhelppanel"></a> 将帮助面板添加到功能区  
  现在，你可以将分配到命名的功能区按钮随意画图应用程序中定义的两个菜单项**帮助主题**和**有关 Scribble**。 这些按钮将添加到名为的新面板**帮助**。  
   
 #### <a name="to-add-a-help-panel"></a>若要添加的帮助面板  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[部分](#top)]  
   
-##  <a name="addpenpanel"></a>将钢笔面板添加到功能区  
+##  <a name="addpenpanel"></a> 将钢笔面板添加到功能区  
  现在，添加一个面板，以显示控制粗细和的钢笔颜色的按钮。 此面板包含一个复选框，在粗线和细钢笔之间切换。 其功能类似于**粗线**随意画图应用程序中的菜单项。  
   
  原始随意画图应用程序使用户可以从对话框中，当用户单击时显示选择钢笔宽度**钢笔宽度**菜单上。 由于功能区栏具有提供足够空间的新控件，可通过使用功能区上的两个组合框来代替对话框。 一个组合框调整精简钢笔的宽度和其他组合框调整密集钢笔的宽度。  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[部分](#top)]  
   
-##  <a name="addcolorbutton"></a>将颜色按钮添加到钢笔面板  
+##  <a name="addcolorbutton"></a> 将颜色按钮添加到钢笔面板  
  接下来，添加[CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md)对象，使用户能够自由曲线的颜色的颜色。  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要将颜色按钮添加到钢笔面板  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[部分](#top)]  
   
-##  <a name="addcolormember"></a>将颜色成员添加到文档类  
- 因为原始随意画图应用程序并没有颜色的笔，你必须为它们编写实现。 若要存储文档的钢笔颜色，请将新成员添加到的文档类，`CscribbleDoc.`  
+##  <a name="addcolormember"></a> 将颜色成员添加到文档类  
+ 因为原始随意画图应用程序并没有颜色的笔，你必须为它们编写实现。 若要存储文档的钢笔颜色，请将新成员添加到的文档类， `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>若要将颜色成员添加到文档类  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[部分](#top)]  
   
-##  <a name="initpensave"></a>初始化钢笔和保存首选项  
+##  <a name="initpensave"></a> 初始化钢笔和保存首选项  
  接下来，初始化的颜色和宽度的笔。 最后，保存并加载从文件中绘制的颜色。  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>若要初始化的功能区栏上的控件  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      将以下代码添加到 scribdoc.cpp，，在`CScribbleDoc::InitDocument`方法之后，`m_sizeDoc = CSize(200,200)`语句。  
   
- ```*/ / 将功能区用户界面重置为其初始值 CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())-> GetRibbonBar();ASSERT_VALID(pRibbon);
+ ``` *将功能区用户界面重置为其初始值 CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())-> GetRibbonBar();ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST （CMFCRibbonColorButton，pRibbon-> FindByID(ID_PEN_COLOR));* / 设置为黑色的 ColorButton  
     pColorBtn-> SetColor (RGB （0，0，0）);

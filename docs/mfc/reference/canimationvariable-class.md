@@ -1,12 +1,9 @@
 ---
-title: "CAnimationVariable 类 |Microsoft 文档"
-ms.custom: 
+title: CAnimationVariable 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationVariable
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 类
 表示动画变量。  
@@ -114,7 +109,7 @@ class CAnimationVariable;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|指定默认值，该值会传播到 IUIAnimationVariable。|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|包含进行动画处理此动画变量的转换的列表。|  
@@ -127,17 +122,17 @@ class CAnimationVariable;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CAnimationVariable`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable  
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable  
  析构函数。 CAnimationVariable 对象被销毁时调用。  
   
 ```  
 virtual ~CAnimationVariable();
 ```  
   
-##  <a name="addtransition"></a>CAnimationVariable::AddTransition  
+##  <a name="addtransition"></a>  CAnimationVariable::AddTransition  
  添加转换。  
   
 ```  
@@ -151,7 +146,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>备注  
  调用此方法将转换添加到转换应用于动画变量的内部列表。 在计划动画时，应该清除此列表。  
   
-##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions  
+##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions  
  将转换添加从情节提要的内部列表。  
   
 ```  
@@ -174,7 +169,7 @@ void ApplyTransitions(
 ### <a name="remarks"></a>备注  
  此方法将转换添加从情节提要的内部列表。 它称为从顶级代码多次添加转换，请不要依赖于关键帧并添加依赖于关键帧的转换。 如果尚未创建基础动画变量 COM 对象，此方法将创建它在此阶段。  
   
-##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable  
+##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable  
  将构造一个动画变量对象。  
   
 ```  
@@ -188,7 +183,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ### <a name="remarks"></a>备注  
  构造一个动画变量的对象，并设置其默认值。 当变量不进行动画处理，或无法进行动画处理，则使用默认值。  
   
-##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions  
+##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions  
  清除转换。  
   
 ```  
@@ -202,7 +197,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ### <a name="remarks"></a>备注  
  此方法从转换的内部列表中删除所有转换。 如果 bAutodestroy 为 TRUE，或 m_bAutodestroyTransitions 为 TRUE，则不会删除转换。 否则，调用方应释放转换对象。  
   
-##  <a name="create"></a>CAnimationVariable::Create  
+##  <a name="create"></a>  CAnimationVariable::Create  
  创建基础动画变量 COM 对象。  
   
 ```  
@@ -219,7 +214,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ### <a name="remarks"></a>备注  
  此方法创建的基础的动画变量 COM 对象，并设置其默认值。  
   
-##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions  
+##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions  
  创建要应用于此动画变量的所有转换。  
   
 ```  
@@ -238,7 +233,7 @@ BOOL CreateTransitions(
 ### <a name="remarks"></a>备注  
  它需要创建已添加到变量的内部列表的转换的转换时，将由框架调用此方法。  
   
-##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent  
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent  
  启用或禁用 IntegerValueChanged 事件。  
   
 ```  
@@ -257,7 +252,7 @@ void EnableIntegerValueChangedEvent (
 ### <a name="remarks"></a>备注  
  启用 ValueChanged 事件后，框架会调用虚方法 CAnimationController::OnAnimationIntegerValueChanged。 你需要在要处理此事件从 CAnimationController 派生的类中重写它。 每次更改动画变量的整数值时，调用此方法。  
   
-##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent  
+##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent  
  启用或禁用 ValueChanged 事件。  
   
 ```  
@@ -276,7 +271,7 @@ void EnableValueChangedEvent (
 ### <a name="remarks"></a>备注  
  启用 ValueChanged 事件后，框架会调用虚方法 CAnimationController::OnAnimationValueChanged。 你需要在要处理此事件从 CAnimationController 派生的类中重写它。 每次更改动画变量的值后，调用此方法。  
   
-##  <a name="getdefaultvalue"></a>CAnimationVariable::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue  
  返回默认值。  
   
 ```  
@@ -289,7 +284,7 @@ DOUBLE GetDefaultValue() const;
 ### <a name="remarks"></a>备注  
  使用此函数获取的动画变量的默认值。 在构造函数或 SetDefaultValue 方法，则可以设置默认值。  
   
-##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject  
+##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject  
  返回的父级动画对象。  
   
 ```  
@@ -302,7 +297,7 @@ CAnimationBaseObject* GetParentAnimationObject();
 ### <a name="remarks"></a>备注  
  可以调用此方法来检索指向父动画对象 （容器）。  
   
-##  <a name="getvalue"></a>CAnimationVariable::GetValue  
+##  <a name="getvalue"></a>  CAnimationVariable::GetValue  
  返回动画变量的当前值。  
   
 ```  
@@ -323,7 +318,7 @@ HRESULT GetValue(INT32& nValue);
 ### <a name="remarks"></a>备注  
  可以调用此方法以检索动画变量的当前值。 如果尚未创建基本的 COM 对象，dblValue 将包含默认值，在函数返回时。  
   
-##  <a name="getvariable"></a>CAnimationVariable::GetVariable  
+##  <a name="getvariable"></a>  CAnimationVariable::GetVariable  
  返回指向 IUIAnimationVariable COM 对象的指针。  
   
 ```  
@@ -336,7 +331,7 @@ IUIAnimationVariable* GetVariable();
 ### <a name="remarks"></a>备注  
  使用此函数来访问基础 IUIAnimationVariable COM 对象，并根据需要直接调用其方法。  
   
-##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions  
+##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions  
  指定是否应删除相关的转换对象。  
   
 ```  
@@ -346,35 +341,35 @@ BOOL m_bAutodestroyTransitions;
 ### <a name="remarks"></a>备注  
  正在从内部的转换列表中删除它们时，请设置此值设为 true，则强制删除转换对象。 如果此值为 FALSE 则应通过调用应用程序删除转换。 已安排动画，始终会清除的转换列表。 默认值为 FALSE。  
   
-##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue  
+##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue  
  指定默认值，该值会传播到 IUIAnimationVariable。  
   
 ```  
 DOUBLE m_dblDefaultValue;  
 ```  
   
-##  <a name="m_lsttransitions"></a>CAnimationVariable::m_lstTransitions  
+##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions  
  包含进行动画处理此动画变量的转换的列表。  
   
 ```  
 CObList m_lstTransitions;  
 ```  
   
-##  <a name="m_pparentobject"></a>CAnimationVariable::m_pParentObject  
+##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject  
  指向封装此动画变量的动画对象的指针。  
   
 ```  
 CAnimationBaseObject* m_pParentObject;  
 ```  
   
-##  <a name="m_variable"></a>CAnimationVariable::m_variable  
+##  <a name="m_variable"></a>  CAnimationVariable::m_variable  
  将存储指向 IUIAnimationVariable COM 对象的指针。 如果尚未，创建 COM 对象或创建失败，则为 NULL。  
   
 ```  
 ATL::CComPtr<IUIAnimationVariable> m_variable;  
 ```  
   
-##  <a name="setdefaultvalue"></a>CAnimationVariable::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue  
  设置默认值并释放 IUIAnimationVariable COM 对象。  
   
 ```  
@@ -388,7 +383,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ### <a name="remarks"></a>备注  
  使用此方法以重置默认值。 此方法释放内部 IUIAnimationVariable COM 对象，因此重新创建动画变量时，基础 COM 对象获取新的默认值。 如果未创建表示动画变量的 COM 对象，或如果变量没有动画效果，GetValue 被返回的默认值。  
   
-##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject  
+##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject  
  设置动画变量和动画对象之间的关系。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "搜索 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 搜索 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::search
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - search function [STL/CLR]
 ms.assetid: 3317c7f4-9f47-44b8-a7c7-73948a2f83e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f21b80d20e1f84e8f0e2091054fa5c9c3fe463
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0fb0b045e15c5ab491f0f7a4f2514898526b8fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="search-stlclr"></a>search (STL/CLR)
 在目标范围中搜索其元素与给定序列中的元素相等或在二元谓词指定的意义上等效于给定序列中的元素的序列的第一个匹配项。  
@@ -45,7 +40,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`search`。 有关详细信息，请参阅[搜索](../standard-library/algorithm-functions.md#search)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  

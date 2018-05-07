@@ -1,13 +1,10 @@
 ---
-title: "何时调用更新处理程序 |Microsoft 文档"
-ms.custom: 
+title: 何时调用更新处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - command routing [MFC], update handlers
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaf2773a2d9e393c783a39e01c75f8efa62796df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-update-handlers-are-called"></a>何时调用更新处理程序
 假设用户在“文件”菜单中单击鼠标，则将生成 `WM_INITMENUPOPUP` 消息。 在菜单下拉以便用户可看到它之前，框架的更新机制将统一更新“文件”菜单中的所有项。  

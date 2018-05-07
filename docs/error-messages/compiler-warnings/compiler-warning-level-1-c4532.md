@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 1） C4532 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 1） C4532 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4532
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44aae61190b20bf1ef93b586c02e88837d487324
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e37d36f565cc63c7cef9954a78e14ed60d676996
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4532"></a>编译器警告（等级 1）C4532
 continue: __finally/finally 块中的跳转出现不可确定的行为在终止处理过程  
@@ -42,7 +37,7 @@ continue: __finally/finally 块中的跳转出现不可确定的行为在终止�
   
  如果发生异常，以及时终止处理程序执行期间正在展开堆栈 (`__finally`或 finally 块)，和你的代码跳出`__finally`之前阻止`__finally`块结束，行为是不确定。 控件可能不返回到展开的代码，因此可能未正确处理异常。  
   
- 如果您必须将跳过外**__finally**块中，首先检查异常终止。  
+ 如果您必须将跳过外 **__finally**块中，首先检查异常终止。  
   
  下面的示例生成 C4532;只需注释掉跳转语句以解决此警告。  
   

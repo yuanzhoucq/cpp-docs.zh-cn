@@ -1,13 +1,10 @@
 ---
-title: "使用工具栏控件中的下拉按钮 |Microsoft 文档"
-ms.custom: 
+title: 使用工具栏控件中的下拉按钮 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_DROPDOWN
 - TBSTYLE_EX_DRAWDDARROWS
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - TBSTYLE_EX_DRAWDDARROWS
 - TBN_DROPDOWN notification [MFC]
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c09cb2bec4b466928557434767ce49948f46ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39edda143e28d262e8eea826ced5c24855fb310b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>使用工具栏控件中的下拉按钮
 除了标准下压按钮，工具栏也可以有下拉按钮。 下拉按钮通常由存在附加下箭头指示。  

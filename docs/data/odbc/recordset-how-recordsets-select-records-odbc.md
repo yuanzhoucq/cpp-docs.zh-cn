@@ -1,13 +1,10 @@
 ---
-title: "记录集： 如何记录集选择记录 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 记录集： 如何记录集选择记录 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：记录集如何选择记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  记录集从数据源通过 ODBC 驱动程序中选择的记录，通过将 SQL 语句发送到该驱动程序。 发送 SQL 取决于你如何在设计和打开记录集类。  
   
-##  <a name="_core_your_options_in_selecting_records"></a>选择记录中的选项  
+##  <a name="_core_your_options_in_selecting_records"></a> 选择记录中的选项  
  下表中选择记录显示你的选项。  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>如何以及何时可能会影响记录集  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 |调用**Requery**对数据源的最新值的记录集的类型重新查询 |指定新的参数、 筛选或排序。 请参阅[记录集： 再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>记录集如何构造查询的 SQL 语句  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 记录集如何构造查询的 SQL 语句  
  当调用的记录集对象[打开](../../mfc/reference/crecordset-class.md#open)成员函数，**打开**构造使用的部分或全部以下成分的 SQL 语句：  
   
 -   **LpszSQL**参数传递给**打开**。 如果不是**NULL**，此参数指定的自定义 SQL 字符串或其中一个的一部分。 框架分析字符串。 如果字符串为 SQL**选择**语句或 ODBC**调用**语句，框架会将字符串用作记录集的 SQL 语句。 如果字符串不以"SELECT"或"{调用"开头，框架将使用什么提供来构造 SQL **FROM**子句。  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
  你可以使用这些技术的组合以打开[表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)并来构造该查询基于[联接](../../data/odbc/recordset-performing-a-join-odbc.md)的多个表。 使用其他自定义，可以调用[预定义查询](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)（存储的过程），选择表不在设计时已知的列和[绑定](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)它们到记录集字段或者让你可以执行大多数其他数据访问任务。 不能通过自定义记录集来完成的任务仍可通过[调用 ODBC API 函数](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)或直接执行 SQL 语句与[CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)。  
   
-##  <a name="_core_customizing_the_selection"></a>自定义所选内容  
+##  <a name="_core_customizing_the_selection"></a> 自定义所选内容  
  除了提供筛选器、 排序顺序或参数，你可以执行以下操作以自定义记录集的选择：  
   
 -   将自定义 SQL 字符串中的传递**lpszSQL**当调用[打开](../../mfc/reference/crecordset-class.md#open)为记录集。 任何内容中传递**lpsqSQL**优先于什么[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)成员函数返回。  

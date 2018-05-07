@@ -1,12 +1,9 @@
 ---
-title: "greater_equal (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: greater_equal (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::greater_equal
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - greater_equal function [STL/CLR]
 ms.assetid: 4d4d8301-72dd-4a06-a652-5237e1e72a88
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2d66689ff8b9cddb1ac2e88cb5e4c01f9f09b4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5642fe8e4c2567d63b69fcfc5156f248e7b39bd3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="greaterequal-stlclr"></a>greater_equal (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true 仅第一个自变量是否大于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
@@ -127,7 +122,7 @@ int main()
 1 0  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  

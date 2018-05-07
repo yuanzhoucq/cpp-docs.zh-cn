@@ -1,13 +1,10 @@
 ---
-title: "-DELAYSIGN （部分程序集的签名） |Microsoft 文档"
-ms.custom: 
+title: -DELAYSIGN （部分程序集的签名） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /delaysign
 - VC.Project.VCLinkerTool.DelaySign
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67e4da2d85d94854ec0802450b41333d6577175
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eda1f426f24dd63684fd6831e2efef6838c43a3d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN（为程序集进行部分签名）
 ```  
@@ -42,13 +37,13 @@ ms.lasthandoff: 12/21/2017
  指定程序集不应进行部分签名。  
   
 ## <a name="remarks"></a>备注  
- 使用**/DELAYSIGN**如果你只想要将公钥放在程序集中。 默认值是**/DELAYSIGN:NO**。  
+ 使用 **/DELAYSIGN**如果你只想要将公钥放在程序集中。 默认值是 **/DELAYSIGN:NO**。  
   
  **/DELAYSIGN**选项没有任何影响，除非用于[/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)或[/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)。  
   
  在请求完全签名的程序集时，编译器会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名。 产生的数字签名存储在包含清单的文件中。 在程序集延迟签名时，链接器不会不计算和文件中存储签名，而保留空间，以便稍后可添加签名。  
   
- 例如，使用**/DELAYSIGN**允许测试人员将程序集放入全局缓存。 测试完成后，可以通过将私钥放在程序集中的程序集进行完全签名。  
+ 例如，使用 **/DELAYSIGN**允许测试人员将程序集放入全局缓存。 测试完成后，可以通过将私钥放在程序集中的程序集进行完全签名。  
   
  请参阅[强名称程序集 （程序集签名） (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)和[延迟为程序集签名](/dotnet/framework/app-domains/delay-sign-assembly)有关程序集进行签名的详细信息。  
   

@@ -2,11 +2,8 @@
 title: _mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l | Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctohira
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f82098a033f7a3dec8cdb475476644381bed8d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 
@@ -106,7 +101,7 @@ unsigned int _mbctokata_l(
 |**_mbctohira**， **_mbctohira_l**|多字节片假名与多字节平假名。|
 |**_mbctokata**， **_mbctokata_l**|多字节平假名与多字节片假名。|
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的只不过不是具有 **_l**后缀以及该区域设置相关的行为是执行已使用当前区域设置 **_l**改为后缀使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些函数的版本是相同的只不过不是具有 **_l**后缀以及该区域设置相关的行为是执行已使用当前区域设置 **_l**改为后缀使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在早期版本， **_mbctohira**名为**jtohira**和 **_mbctokata**名为**jtokata**。 对于新代码，请使用新名称。
 

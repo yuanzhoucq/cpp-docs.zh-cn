@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2662 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2662 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2662
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4370754983b71e842b172eade8da6058a8d1dbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4e5f40fcc93739cabd2d5bd73bac6cce2332323
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2662"></a>编译器错误 C2662
 function： 无法将从 type1 到 type2 的 this 指针转换  
@@ -54,7 +49,7 @@ int main() {
 }  
 ```  
   
- 使用编译时**/clr**，不能调用一个函数`const`或`volatile`限定托管的类型。 不能声明托管类的 const 成员函数，因此您无法 const 托管对象上调用方法。  
+ 使用编译时 **/clr**，不能调用一个函数`const`或`volatile`限定托管的类型。 不能声明托管类的 const 成员函数，因此您无法 const 托管对象上调用方法。  
   
 ```  
 // C2662_b.cpp  

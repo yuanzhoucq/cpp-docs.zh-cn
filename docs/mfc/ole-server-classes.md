@@ -1,13 +1,10 @@
 ---
-title: "OLE 服务器类 |Microsoft 文档"
-ms.custom: 
+title: OLE 服务器类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,27 +15,25 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23c7cb23d9221f8f2183c666a99c70ef149db3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-server-classes"></a>OLE 服务器类
 服务器应用程序使用这些类。 服务器文档派生自`COleServerDoc`而不是从**CDocument**。 请注意，因为`COleServerDoc`派生自`COleLinkingDoc`，服务器文档也可以是支持将链接的容器。  
   
  `COleServerItem`类表示文档或文档，可以在另一个文档中嵌入或链接到的一部分。  
   
- `COleIPFrameWnd`和`COleResizeBar`支持就地编辑时的对象处于一个容器，和`COleTemplateServer`支持的文档/视图对创建，这样就可以编辑从其他应用程序的 OLE 对象。  
+ `COleIPFrameWnd` 和`COleResizeBar`支持就地编辑时的对象处于一个容器，和`COleTemplateServer`支持的文档/视图对创建，这样就可以编辑从其他应用程序的 OLE 对象。  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 服务器应用程序文档类用作基类。 `COleServerDoc`对象提供通过与交互的服务器支持大量`COleServerItem`对象。 使用类库的文档/视图体系结构提供可视编辑功能。  
+ 服务器应用程序文档类用作基类。 `COleServerDoc` 对象提供通过与交互的服务器支持大量`COleServerItem`对象。 使用类库的文档/视图体系结构提供可视编辑功能。  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  抽象基类的`COleClientItem`和`COleServerItem`。 对象的类派生自`CDocItem`表示文档的某些部分。  

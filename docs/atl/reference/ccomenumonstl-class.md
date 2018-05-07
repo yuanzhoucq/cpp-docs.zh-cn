@@ -1,12 +1,9 @@
 ---
-title: "CComEnumOnSTL 类 |Microsoft 文档"
-ms.custom: 
+title: CComEnumOnSTL 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumOnSTL
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d42d99baf154bc5434f2d771aeaabb71c5502b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 此类定义一个基于 c + + 标准库集合的 COM 枚举器对象。  
@@ -60,11 +55,11 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
  C + + 标准库容器类。  
   
 ## <a name="remarks"></a>备注  
- `CComEnumOnSTL`定义根据 c + + 标准库集合的 COM 枚举器对象。 此类可用于在其自身或结合[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举数](../../atl/atl-collections-and-enumerators.md)。  
+ `CComEnumOnSTL` 定义根据 c + + 标准库集合的 COM 枚举器对象。 此类可用于在其自身或结合[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。 使用此类的典型步骤如下所述。 有关详细信息，请参阅[ATL 集合和枚举数](../../atl/atl-collections-and-enumerators.md)。  
   
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>将此类用于 ICollectionOnSTLImpl:  
   
-- `typedef`此类的专用化。  
+- `typedef` 此类的专用化。  
   
 -   使用`typedef`的专用化中的最后一个模板参数作为`ICollectionOnSTLImpl`。  
   
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>若要使用独立 ICollectionOnSTLImpl 于此类：  
   
-- `typedef`此类的专用化。  
+- `typedef` 此类的专用化。  
   
 -   使用`typedef`中的专用化的模板自变量作为`CComObject`。  
   
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
  `CComEnumOnSTL`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcom.h  
   
 ## <a name="example"></a>示例  

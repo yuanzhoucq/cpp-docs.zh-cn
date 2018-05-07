@@ -1,13 +1,10 @@
 ---
-title: "服务器： 实现服务器文档 |Microsoft 文档"
-ms.custom: 
+title: 服务器： 实现服务器文档 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>服务器：实现服务器文档
 此文章介绍了您必须执行以便成功实现服务器文档，如果你未在应用程序向导中指定的 OLE 服务器选项的步骤。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  实现`OnGetEmbeddedItem`你服务器文档类的成员函数。  
   
-     `OnGetEmbeddedItem`容器应用程序的用户创建或编辑嵌入的项时调用。 它应返回一个表示整个文档的项。 这应是一个你`COleServerItem`-派生类。  
+     `OnGetEmbeddedItem` 容器应用程序的用户创建或编辑嵌入的项时调用。 它应返回一个表示整个文档的项。 这应是一个你`COleServerItem`-派生类。  
   
 4.  重写`Serialize`成员函数要序列化文档的内容。 不需要序列化的服务器项的列表，除非你正在使用它们来表示在文档中的本机数据。 有关详细信息，请参阅*实现服务器项*文章中[服务器： 服务器项](../mfc/servers-server-items.md)。  
   

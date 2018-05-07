@@ -1,13 +1,10 @@
 ---
-title: "删除 CObject 集合中的所有对象 |Microsoft 文档"
-ms.custom: 
+title: 删除 CObject 集合中的所有对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>删除 CObject 集合中的所有对象
 本文介绍如何删除集合中的所有对象（而不删除集合对象本身）。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [地图](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>若要删除指向 CObject 的指针的列表中的所有对象  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  若要删除指向 CObject 的指针的列表中的所有对象  
   
 1.  使用 `GetHeadPosition` 和 `GetNext` 循环访问该列表。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  请注意删除元素的对象和删除元素本身之间的区别。 删除列表中的元素将仅删除列表对对象的引用。 对象仍存在于内存中。 删除对象后，它将停止存在，并且将回收其内存。 因此，在删除元素的对象后立即删除元素很重要，这样一来列表才不会尝试访问不再存在的对象。  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>若要删除数组中的所有元素  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  若要删除数组中的所有元素  
   
 1.  使用 `GetSize` 和整数索引值循环访问数组。  
   
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  与上述列表示例一样，您可调用 `RemoveAll` 删除数组中的所有元素或调用 `RemoveAt` 删除独立元素。  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>若要删除映射中的所有元素  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> 若要删除映射中的所有元素  
   
 1.  使用 `GetStartPosition` 和 `GetNextAssoc` 循环访问数组。  
   

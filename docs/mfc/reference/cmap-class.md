@@ -2,11 +2,8 @@
 title: CMap 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMap
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmap-class"></a>CMap 类
 将唯一键映射到值的字典集合类。  
@@ -85,7 +80,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-structures"></a>公共结构  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|一个包含密钥值和关联的对象的值的嵌套的结构。|  
   
@@ -127,7 +122,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  全局帮助器函数，此类调用某些成员函数必须进行自定义的大部分使用`CMap`类。 请参阅[集合类帮助器](../../mfc/reference/collection-class-helpers.md)中的宏和全局函数部分`MFC Reference`。  
   
- `CMap`重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)用于支持序列化和转储的其元素。 如果映射存储到存档使用`Serialize`，每个地图元素将依次序列化。 默认实现`SerializeElements`帮助器函数执行的位写入。 有关指针集合项的序列化信息派生自`CObject`或其他用户定义类型，请参阅[如何： 创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
+ `CMap` 重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)用于支持序列化和转储的其元素。 如果映射存储到存档使用`Serialize`，每个地图元素将依次序列化。 默认实现`SerializeElements`帮助器函数执行的位写入。 有关指针集合项的序列化信息派生自`CObject`或其他用户定义类型，请参阅[如何： 创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
   
  如果你需要映射 （键和值） 中的各个元素的诊断转储，你必须设置为 1 或更高版本的转储上下文的深度。  
   
@@ -140,10 +135,10 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  `CMap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>  CMap::CMap  
  构造一个空的映射。  
   
 ```  
@@ -160,7 +155,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>  CMap::CPair  
  包含一个密钥值和关联的对象的值。  
   
 ### <a name="remarks"></a>备注  
@@ -177,7 +172,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>示例  
  有关用法的一个示例，请参阅示例[CMap::PLookup](#plookup)。  
   
-##  <a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>  CMap::GetCount  
  检索映射中的元素的数目。  
   
 ```  
@@ -190,7 +185,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>示例  
  请参阅示例[CMap::Lookup](#lookup)。  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
  确定地图哈希表中的元素数。  
   
 ```  
@@ -203,7 +198,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
  检索处的地图元素`rNextPosition`，然后更新`rNextPosition`来引用映射中的下一个元素。  
   
 ```  
@@ -237,7 +232,7 @@ void GetNextAssoc(
 ### <a name="example"></a>示例  
  请参阅示例[CMap::SetAt](#setat)。  
   
-##  <a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>  CMap::GetSize  
  返回地图元素的数。  
   
 ```  
@@ -253,7 +248,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
  通过返回启动映射迭代**位置**值，可以传递给`GetNextAssoc`调用。  
   
 ```  
@@ -269,7 +264,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>示例  
  请参阅示例[CMap::SetAt](#setat)。  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
  初始化哈希表。  
   
 ```  
@@ -289,7 +284,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ### <a name="example"></a>示例  
  请参阅示例[CMap::Lookup](#lookup)。  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>  CMap::IsEmpty  
  确定是否映射为空。  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>示例  
  请参阅示例[CMap::RemoveAll](#removeall)。  
   
-##  <a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>  CMap::Lookup  
  查找映射到给定键的值。  
   
 ```  
@@ -326,12 +321,12 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  如果该元素; 如果未找到则不为否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `Lookup`使用哈希算法来快速查找与给定的键完全匹配的密钥的地图元素。  
+ `Lookup` 使用哈希算法来快速查找与给定的键完全匹配的密钥的地图元素。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>CMap::operator]  
+##  <a name="operator_at"></a>  CMap::operator]  
  一个方便替换`SetAt`成员函数。  
   
 ```  
@@ -356,7 +351,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>示例  
  请参阅示例[CMap::Lookup](#lookup)。  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
  返回 map 对象的第一个条目。  
   
 ```  
@@ -373,7 +368,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
  检索指向的地图元素`pAssocRec`。  
   
 ```  
@@ -395,7 +390,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>示例  
  请参阅示例[CMap::PGetFirstAssoc](#pgetfirstassoc)。  
   
-##  <a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>  CMap::PLookup  
  查找映射到给定键的值。  
   
 ```  
@@ -416,7 +411,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
+##  <a name="removeall"></a>  CMap::RemoveAll  
  从此映射中移除所有的值，通过调用全局帮助器函数**DestructElements**。  
   
 ```  
@@ -429,7 +424,7 @@ void RemoveAll();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
+##  <a name="removekey"></a>  CMap::RemoveKey  
  查找与提供的键; 相对应的映射条目然后，如果找到该键中, 移除的项。  
   
 ```  
@@ -452,7 +447,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="example"></a>示例  
  请参阅示例[CMap::SetAt](#setat)。  
   
-##  <a name="setat"></a>CMap::SetAt  
+##  <a name="setat"></a>  CMap::SetAt  
  主要方法将一个元素插入映射中。  
   
 ```  

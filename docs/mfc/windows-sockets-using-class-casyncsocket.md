@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 使用类 CAsyncSocket |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 使用类 CAsyncSocket |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CAsyncSocket
 dev_langs:
@@ -20,32 +17,30 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 套接字：使用类 CAsyncSocket
-此文章介绍了如何使用类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 请注意，此类可封装 Windows 套接字 API 非常低的级别。 `CAsyncSocket`是以供程序员了解详细信息中的网络通信，但希望网络事件的通知回调的便利性。 基于此假设，本文仅提供基本说明。 你可能应考虑使用`CAsyncSocket`如果你想的 MFC 应用程序中的多个网络协议处理的 Windows 套接字的易用性，但不是希望以牺牲灵活性来。 你还可能会觉得让你直接比你自己无法使用类的更常规的备用模型进行编程的通信详细获得更高的效率`CSocket`。  
+此文章介绍了如何使用类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 请注意，此类可封装 Windows 套接字 API 非常低的级别。 `CAsyncSocket` 是以供程序员了解详细信息中的网络通信，但希望网络事件的通知回调的便利性。 基于此假设，本文仅提供基本说明。 你可能应考虑使用`CAsyncSocket`如果你想的 MFC 应用程序中的多个网络协议处理的 Windows 套接字的易用性，但不是希望以牺牲灵活性来。 你还可能会觉得让你直接比你自己无法使用类的更常规的备用模型进行编程的通信详细获得更高的效率`CSocket`。  
   
- `CAsyncSocket`记录在*MFC 参考*。 Visual c + + 还提供 Windows 套接字规范，位于 Windows SDK 中。 详细信息会保留给你。 Visual c + + 未提供的示例应用程序`CAsyncSocket`。  
+ `CAsyncSocket` 记录在*MFC 参考*。 Visual c + + 还提供 Windows 套接字规范，位于 Windows SDK 中。 详细信息会保留给你。 Visual c + + 未提供的示例应用程序`CAsyncSocket`。  
   
  如果你不是高度了解网络通信，并需要一个简单的解决方案，使用类[CSocket](../mfc/reference/csocket-class.md)与`CArchive`对象。 请参阅[Windows 套接字： 使用存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)有关详细信息。  
   
- 本文介绍：  
+ 本文包含以下内容：  
   
 -   创建和使用`CAsyncSocket`对象。  
   
 -   [您的职责与 CAsyncSocket](#_core_your_responsibilities_with_casyncsocket)。  
   
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>创建和使用 CAsyncSocket 对象  
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> 创建和使用 CAsyncSocket 对象  
   
 #### <a name="to-use-casyncsocket"></a>若要使用 CAsyncSocket  
   
@@ -53,11 +48,11 @@ ms.lasthandoff: 12/21/2017
   
      创建套接字遵循 MFC 模式，两阶段构造。  
   
-     例如:  
+     例如：  
   
      [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
-     或  
+     -或-  
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  如果客户端套接字，套接字对象连接到服务器套接字，使用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)。  
   
-     或  
+     -或-  
   
      如果套接字是服务器，设置以开始侦听套接字 (与[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 对从客户端的连接尝试。 收到连接请求后，接受其与[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。  
   
@@ -100,8 +95,8 @@ ms.lasthandoff: 12/21/2017
   
  有关在代码中的此序列的示例 (实际上为`CSocket`对象)，请参阅[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)。  
   
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a>CAsyncSocket 与您的职责  
- 当你创建的类对象[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，该对象封装 Windows**套接字**句柄并提供该句柄上的操作。 当你使用`CAsyncSocket`，你必须处理可能会面临如果直接使用 API 的所有问题。 例如:  
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a> CAsyncSocket 与您的职责  
+ 当你创建的类对象[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，该对象封装 Windows**套接字**句柄并提供该句柄上的操作。 当你使用`CAsyncSocket`，你必须处理可能会面临如果直接使用 API 的所有问题。 例如：  
   
 -   "阻止"方案。  
   
@@ -111,7 +106,7 @@ ms.lasthandoff: 12/21/2017
   
  有关术语的定义这些以及其他信息，请参阅[Windows 套接字： 阻止](../mfc/windows-sockets-blocking.md)， [Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)， [Windows 套接字： 转换字符串](../mfc/windows-sockets-converting-strings.md).  
   
- 尽管这些问题，类**CAsycnSocket**可能是正确的选择为你如果你的应用程序要求所有的灵活性和控制可以获取。 如果没有，你应考虑使用类`CSocket`相反。 `CSocket`隐藏大量从你的详细信息： 泵 Windows 消息在阻止调用期间，并为你提供访问权限的 it `CArchive`，后者管理为你的字符串转换和字节顺序差异。  
+ 尽管这些问题，类**CAsycnSocket**可能是正确的选择为你如果你的应用程序要求所有的灵活性和控制可以获取。 如果没有，你应考虑使用类`CSocket`相反。 `CSocket` 隐藏大量从你的详细信息： 泵 Windows 消息在阻止调用期间，并为你提供访问权限的 it `CArchive`，后者管理为你的字符串转换和字节顺序差异。  
   
  有关详细信息，请参见:  
   

@@ -1,12 +1,9 @@
 ---
-title: CMyProviderWindowsFile | Microsoft Docs
-ms.custom: 
+title: CMyProviderWindowsFile |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderwindowsfile
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9549dc81529f4c045a0f27a169516070a09900
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8f0ba90bdcbaa4255757ee31015d0f6986862916
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 该向导创建一个类以包含一行数据;在这种情况下，调用`CMyProviderWindowsFile`。 下面的代码的`CMyProviderWindowsFile`是生成的向导并通过使用列出目录中的所有文件**WIN32_FIND_DATA**结构。 `CMyProviderWindowsFile` 继承自**WIN32_FIND_DATA**结构：  

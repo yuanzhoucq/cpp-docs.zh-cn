@@ -1,12 +1,9 @@
 ---
 title: __svm_clgi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __svm_clgi
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64a3959383106a9bee7effe40277b2d878900ba5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 679c2b4d7abb792dfe6baa5ad5e18752fb7ca8bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="svmclgi"></a>__svm_clgi
 **Microsoft 专用**  
@@ -44,7 +39,7 @@ void __svm_clgi( void );
   
  此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构程序员手动卷 2： 系统编程中，"在文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

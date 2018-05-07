@@ -1,13 +1,10 @@
 ---
-title: "命令和控件通知处理程序 |Microsoft 文档"
-ms.custom: 
+title: 命令和控件通知处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 748bdd1a2ce6b94a2c935df94de68767ee36875e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控件通知的处理程序
 命令或控件通知消息没有默认的处理程序。 因此，您将仅受为这些消息类别命名处理程序的约定约束。 当您将命令或控件通知映射到处理程序时，“属性”窗口将基于命令 ID 或控件通知代码建议一个名称。 您可以接受建议的名称、更改或替换该名称。  

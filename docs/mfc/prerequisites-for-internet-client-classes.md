@@ -1,13 +1,10 @@
 ---
-title: "Internet 客户端类系统必备组件 |Microsoft 文档"
-ms.custom: 
+title: Internet 客户端类系统必备组件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d73ef71854753ffd561053cc71509c7654d33b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6c16c3658ee5d27def4892997c50115dc0b8831
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Internet 客户端类的必备条件
 Internet 客户端 （例如读取文件，） 执行某些操作 （在此情况下，建立 Internet 连接） 具有先决条件的操作。 下表列出了一些客户端操作的先决条件。  

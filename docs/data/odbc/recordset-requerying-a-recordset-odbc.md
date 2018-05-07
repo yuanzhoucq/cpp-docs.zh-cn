@@ -2,12 +2,9 @@
 title: 记录集： 再次查询记录集 (ODBC) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>记录集：再次查询记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -41,16 +36,16 @@ ms.lasthandoff: 12/21/2017
   
 -   刷新记录集根据不断变化的参数值。  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>记录集向上推向日期  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> 记录集向上推向日期  
  通常情况下，你将想要再次查询记录集对象以使其保持最新。 在多用户数据库环境中，其他用户可以更改数据的记录集的生命周期内。 有关当你记录集反映其他用户所做的更改和其他用户的记录集时反映所做的更改的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)和[动态集](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>再次查询基于新的参数  
+##  <a name="_core_requerying_based_on_new_parameters"></a> 再次查询基于新的参数  
  另一个常用-和同等重要 — 利用[Requery](../../mfc/reference/crecordset-class.md#requery)是选择一组新的记录根据不断变化的参数值。  
   
 > [!TIP]
 >  查询速度是快可能很多，如果调用**Requery**用变化于直接调用的参数值**打开**试。  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>再次查询动态记录集 vs。快照  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> 再次查询动态记录集 vs。快照  
  因为动态记录集为了提供一组记录具有动态的最新数据，你想要再次查询动态，通常，如果你想要反映其他用户的添加件。 快照，另一方面，非常有用，因为可以安全地依赖于其静态内容，而准备报表、 计算总计，依次类推。 尽管如此，你有时可能想要查询以及快照。 在多用户环境中，由于其他用户更改数据库快照数据可能会失去与数据源的同步。  
   
 #### <a name="to-requery-a-recordset-object"></a>再次查询记录集对象  

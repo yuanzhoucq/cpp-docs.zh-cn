@@ -1,12 +1,9 @@
 ---
-title: CRowset::MovePrev | Microsoft Docs
-ms.custom: 
+title: 'Crowset:: Moveprev |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowset<TAccessor>.MovePrev
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MovePrev method
 ms.assetid: 7ced2bfb-f556-40fc-97ea-0d4e7213e114
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 272221d484beacbc856842ad70e588a91fa8ef07
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b86a5266faefaacb0df940f51985f1d31dd006b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetmoveprev"></a>CRowset::MovePrev
 将光标移动到上一记录。  
@@ -52,7 +47,7 @@ HRESULT MovePrev() throw();
 ## <a name="remarks"></a>备注  
  此方法要求你设置或者**DBPROP_CANFETCHBACKWARDS**或**DBPROP_CANSCROLLBACKWARDS**到`VARIANT_TRUE`之前调用**打开**对表或包含行集的命令。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,13 +1,10 @@
 ---
-title: "如何： 将 system:: string 转换为 wchar_t * 或 char * |Microsoft 文档"
-ms.custom: 
+title: '如何： 将 system:: string 转换为 wchar_t * 或 char * |Microsoft 文档'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c304b3d01fa8d1cdece410d70ebe437d41d72cd0
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: db4b1955042b83b26ac8abfa9fa5b9b434d35a43
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>如何：将 System::String 转换为 wchar_t* 或 char*
 你可以使用`PtrToStringChars`中要转换的 Vcclr.h<xref:System.String>到本机`wchar_t *`或`char *`。  由于 CLR 字符串内部是 Unicode，这始终返回宽的 Unicode 字符串指针。 你可以然后转换为宽字符串，如下面的示例中所示。  
@@ -77,5 +72,5 @@ Hello
 Hello  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

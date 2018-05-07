@@ -1,13 +1,10 @@
 ---
-title: "消息处理和命令目标 |Microsoft 文档"
-ms.custom: 
+title: 消息处理和命令目标 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ec1f2a1f419715a3e8e9fbac2fcba3c7584a9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-command-targets"></a>消息处理和命令目标
 命令调度接口`IOleCommandTarget`定义一种简单和可扩展的机制，以查询和执行命令。 此机制是比自动化的简单得多`IDispatch`因为它依赖于一组标准的命令; 完全命令很少具有参数，且涉及无类型信息 （命令自变量也会降低类型安全）。  
   
  在命令调度接口设计中，每个命令都属于本身识别具有"命令组" **GUID**。 因此，任何人都可以定义新的组，并定义而无需任何需要与 Microsoft 进行协调或任何其他供应商该组中的所有命令。 (这是实质上与定义的相同方式**调度接口**加上**Dispid**自动化中。 没有重叠在这里，尽管此命令路由机制作为自动化句柄是仅用于命令路由而不是针对大规模脚本/可编程性。）  
   
- `IOleCommandTarget`处理以下方案：  
+ `IOleCommandTarget` 处理以下方案：  
   
 -   一个对象时就地激活，仅通常显示对象的工具栏，该对象的工具栏可能有按钮等容器命令的某些**打印**，**打印预览**， **保存**， `New`，**缩放**，和其他人。 （在就地激活标准建议对象删除此类按钮从其工具栏中，或在至少禁用它们。 此设计允许这些命令来启用和尚未路由到正确的处理程序。）目前，没有任何机制可要调度到容器中的这些命令的对象。  
   

@@ -1,12 +1,9 @@
 ---
-title: "COleDocObjectItem 类 |Microsoft 文档"
-ms.custom: 
+title: COleDocObjectItem 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 实现活动文档包容。  
@@ -101,10 +96,10 @@ class COleDocObjectItem : public COleClientItem
   
  `COleDocObjectItem`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  调用此成员函数可初始化`COleDocObjectItem`对象。  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  指向的指针`COleDocument`充当活动文档容器的对象。 此参数必须是**NULL**启用**IMPLEMENT_SERIALIZE**。 通常将 OLE 项构造与非**NULL**文档指针。  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  由使用默认设置的文档框架调用。  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  指向的指针[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  调用此成员函数以执行用户指定的命令。  
   
 ```  
@@ -154,13 +149,13 @@ HRESULT ExecCommand(
 ### <a name="return-value"></a>返回值  
  返回`S_OK`如果成功; 否则，返回以下错误代码之一。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|出现意外的错误。|  
 |**E_FAIL**|出现错误。|  
 |**E_NOTIMPL**|指示 MFC 本身应尝试转换并将其分派命令。|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`为非**NULL** ，但未指定识别的命令组。|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`无法识别为有效命令组 pGroup 中。|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 为非**NULL** ，但未指定识别的命令组。|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 无法识别为有效命令组 pGroup 中。|  
 |**OLECMDERR_DISABLED**|由该命令`nCmdID`处于禁用状态，并且无法执行。|  
 |**OLECMDERR_NOHELP**|调用方标识的命令上要求帮助`nCmdID`但没有帮助可用。|  
 |**OLECMDERR_CANCELLED**|用户已取消执行。|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>备注  
  `pguidCmdGroup`和`nCmdID`参数一起唯一标识要调用的命令。 `nCmdExecOpt`参数指定要执行的准确操作。  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  调用此成员函数以获取指向`IOleDocumentView`接口的当前处于活动状态的视图。  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>备注  
  对返回的引用计数`IOleDocumentView`此函数返回之前，不会增加指针。  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  调用此成员函数可检索文档中的页面数。  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  由框架用于打印准备文档调用此成员函数。  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  此成员函数调用由框架打印文档。  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  指定是否要打印整个文档。  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  查询由用户界面事件生成的一个或多个命令的状态。  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法，如 Windows SDK 中所述。  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  释放的 OLE 项链接到的连接，并将其关闭，如果它处于打开状态。 不会销毁客户端项。  
   
 ```  

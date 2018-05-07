@@ -1,12 +1,9 @@
 ---
-title: "IDBPropertiesImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IDBPropertiesImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1b1486d5eff73b4f868f5990ceb628cfb7dd20a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3685e6a77e4293ef65b5ee98a0aa326500cfdb2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 类
 提供的实现`IDBProperties`接口。  
@@ -60,7 +55,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ## <a name="remarks"></a>备注  
  [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx)是数据源对象的必需接口和枚举器的可选接口。 但是，如果一个枚举器公开[IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)，它必须公开`IDBProperties`。 `IDBPropertiesImpl` 实现`IDBProperties`使用通过定义的静态函数[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

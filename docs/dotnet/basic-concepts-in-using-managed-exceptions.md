@@ -2,12 +2,9 @@
 title: 托管异常中使用的基本概念 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255a7d053228b73b2b0eb13f4732e9a7829549ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用托管异常中的基本概念
-本主题讨论托管应用程序中的异常处理。 也就是说，编译应用程序与**/clr**编译器选项。  
+本主题讨论托管应用程序中的异常处理。 也就是说，编译应用程序与 **/clr**编译器选项。  
   
 ## <a name="in-this-topic"></a>在本主题中  
   
@@ -42,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 -   [Try/Catch 块的 CLR 扩展](#vcconbasicconceptsinusingmanagedexceptionsanchor2)  
   
 ## <a name="remarks"></a>备注  
- 如果使用编译**/clr**选项，你可以处理 CLR 异常，以及标准[c + + 异常处理](../cpp/cpp-exception-handling.md)和[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR 异常是由托管类型引发任何异常。 [System:: exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)类提供用于处理 CLR 异常许多有用的方法，并建议将其作为用户定义的异常类的基类。  
+ 如果使用编译 **/clr**选项，你可以处理 CLR 异常，以及标准[c + + 异常处理](../cpp/cpp-exception-handling.md)和[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR 异常是由托管类型引发任何异常。 [System:: exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)类提供用于处理 CLR 异常许多有用的方法，并建议将其作为用户定义的异常类的基类。  
   
- 捕捉从接口派生的异常类型不支持下**/clr**。 此外，，公共语言运行时不允许你要捕获堆栈溢出异常;堆栈溢出异常将终止进程。  
+ 捕捉从接口派生的异常类型不支持下 **/clr**。 此外，，公共语言运行时不允许你要捕获堆栈溢出异常;堆栈溢出异常将终止进程。  
   
  有关在托管和非托管应用程序中的异常处理方面的差异的详细信息，请参阅[扩展之间的差异异常处理行为下托管的 c + +](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>引发异常下 /clr  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> 引发异常下 /clr  
  C + + throw 表达式扩展为 CLR 类型引发句柄。 下面的示例创建一个自定义异常类型，然后引发该类型的实例：  
   
 ```  
@@ -80,7 +75,7 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Try/Catch 块的 CLR 扩展  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Try/Catch 块的 CLR 扩展  
  相同**重**/**捕获**块结构可以用于捕获 CLR 和本机异常：  
   
 ```  
@@ -171,7 +166,7 @@ catch(...)
   
  如果通过 catch(Object^) 捕获到非托管的类型，则它不会破坏则引发该异常的对象。  
   
- 时可以引发或捕捉非托管异常，我们建议你使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项，而不是**/EHs**或**/EHa**。  
+ 时可以引发或捕捉非托管异常，我们建议你使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项，而不是 **/EHs**或 **/EHa**。  
   
 ## <a name="see-also"></a>请参阅  
  [异常处理](../windows/exception-handling-cpp-component-extensions.md)   

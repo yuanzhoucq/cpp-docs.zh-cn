@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 高级主题 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 高级主题 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 本文介绍如何与相关的开发 ActiveX 控件的高级的主题。 这些方法包括：  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [访问在运行时不可见的对话框控件](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>ActiveX 控件中使用数据库类  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> ActiveX 控件中使用数据库类  
  因为 ActiveX 控件类是类库的一部分，所以可以应用相同的过程和使用数据库类开发 ActiveX 控件使用 MFC 数据库类一个标准 MFC 应用程序中的规则。  
   
  MFC 数据库类的一般概述，请参阅[MFC 数据库类 （DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 文章还介绍了 MFC ODBC 类和 MFC DAO 类，并将你定向到两边的更多详细信息。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包括并且仍可以使用它们）。 Microsoft 建议你使用[OLE DB 模板](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 你只应在维护现有应用程序使用 DAO。  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>实现的参数化的属性  
+##  <a name="_core_implementing_a_parameterized_property"></a> 实现的参数化的属性  
  参数化的属性 （有时称为的属性数组） 是用于公开作为控件的单个属性的值同类集合的方法。 例如，可以使用参数化的属性来公开一个数组或作为属性的字典。 在 Visual Basic 中，使用数组表示法访问此类属性：  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  为此属性才有用，可以声明类型的控件类中的二维数组成员变量**短**，以存储的参数化属性的值。 无法修改的 Get 函数中返回存储在正确的行和列的值，这些参数，所述，随后可修改的 Set 函数中更新引用由行和列的参数的值。  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>处理 ActiveX 控件中的错误  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> 处理 ActiveX 控件中的错误  
  如果控件中出现错误条件，你可能需要将错误报告给控件容器。 有两种方法来报告错误，具体取决于发生错误情况。 如果发生错误的属性中获取或设置函数，或在 OLE 自动化方法的实现，该控件应调用[colecontrol:: Throwerror](../mfc/reference/colecontrol-class.md#throwerror)，出现错误控制用户的通知。 如果在其他任何时间发生错误，应调用控件[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)，这触发常用的错误事件。  
   
  若要指示已发生错误的种类，控件必须传递到的错误代码`ThrowError`或`FireError`。 错误代码是 OLE 状态代码，具有 32 位值。 如果可能，错误代码从标准集中选择 OLECTL 中定义的代码。H 标头文件。 下表总结了这些代码。  
@@ -156,13 +151,13 @@ ms.lasthandoff: 12/21/2017
 |**CTL_E_SEARCHTEXTNOTFOUND**|未找到搜索文本|  
 |**CTL_E_REPLACEMENTSTOOLONG**|替换内容太长|  
   
- 如有必要，使用**CUSTOM_CTL_SCODE**宏来定义一个标准的代码未涵盖的条件的自定义错误代码。 为此宏参数应为介于 1000年之间的整数和 32767 之间 （含）。 例如:  
+ 如有必要，使用**CUSTOM_CTL_SCODE**宏来定义一个标准的代码未涵盖的条件的自定义错误代码。 为此宏参数应为介于 1000年之间的整数和 32767 之间 （含）。 例如：  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
  如果要创建要替换现有 VBX 控件的 ActiveX 控件，定义具有相同的数字值将 VBX 控件使用以确保兼容的错误代码你 ActiveX 控件错误代码。  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>处理控件中的特殊键  
+##  <a name="_core_handling_special_keys_in_your_control"></a> 处理控件中的特殊键  
  在某些情况下你可能想要以特殊方式; 处理某些击键组合例如，当方向将插入新行时多行文本框中按 ENTER 键框控件或编辑的组之间移动控制密钥按下的 ID。  
   
  如果 ActiveX 控件的基类是`COleControl`，您可以重写[cwnd:: Pretranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)容器处理它们之前处理消息。 在使用此方法时，始终返回**TRUE**如果的重写中处理消息`PreTranslateMessage`。  
@@ -173,12 +168,12 @@ ms.lasthandoff: 12/21/2017
   
  处理 ActiveX 控件的键盘界面的详细信息，请参阅 ActiveX SDK 文档。  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>访问在运行时不可见的对话框控件  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 访问在运行时不可见的对话框控件  
  你可以创建没有用户界面并在运行时不可见对话框控件。 如果将不可见的在运行时 ActiveX 控件添加到对话框中并使用[CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem)若要访问控件，控件将无法正常工作。 相反，你应使用以下方法之一来获取表示控件的对象：  
   
 -   使用添加成员变量向导选择**控制变量**，然后选择控件的 id。 输入一个成员变量名称并选择控件的包装类作为**控件类型**。  
   
-     或  
+     -或-  
   
 -   为对话框项声明的局部变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装器类，`IDC_MYCTRL1`是控件的 ID):  
   

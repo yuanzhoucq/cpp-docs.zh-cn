@@ -1,13 +1,10 @@
 ---
-title: "使用 CArchive &lt; &lt;和&gt;&gt;运算符 |Microsoft 文档"
-ms.custom: 
+title: 使用 CArchive &lt; &lt;和&gt;&gt;运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2da8cc885f94bf15164ff17fdef2b2af13a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;和&gt;&gt;运算符
-`CArchive`提供 <\<和 >> 写入和读取简单数据类型的运算符以及`CObject`s 到和从文件。  
+`CArchive` 提供 <\<和 >> 写入和读取简单数据类型的运算符以及`CObject`s 到和从文件。  
   
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>若要将对象存储在通过存档文件  
   
@@ -54,12 +49,12 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
- 库定义了 **< \<** 和 **>>** 运算符`CArchive`作为第一个操作数的以下数据类型和与第二个操作数的类类型:  
+ 库定义了**< \<** 和**>>** 运算符`CArchive`作为第一个操作数的以下数据类型和与第二个操作数的类类型:  
   
 ||||  
 |-|-|-|  
 |`CObject*`|**大小和 CSize**|**float**|  
-|**WORD**|`CString`|**点**和`CPoint`|  
+|**WORD**|`CString`|**点**和 `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` 和 `CRect`|  
 |**双精度**|**LONG**|`CTime` 和 `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  存储和加载`CObject`s 通过存档需要额外考虑。 有关详细信息，请参阅[存储和加载 Cobject 通过存档](../mfc/storing-and-loading-cobjects-via-an-archive.md)。  
   
- **CArchive <\<** 和 **>>** 运算符将始终返回对引用`CArchive`对象，它是第一个操作数。 这使您可以将运算符，如下所示：  
+ **CArchive <\<** 和**>>** 运算符将始终返回对引用`CArchive`对象，它是第一个操作数。 这使您可以将运算符，如下所示：  
   
  [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]  
   

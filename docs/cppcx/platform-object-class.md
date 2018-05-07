@@ -1,11 +1,8 @@
 ---
-title: "Platform:: object 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: object 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 提供 ref 类和 ref 结构在 Windows 运行时应用程序的通用行为。 所有 ref 类和 ref 结构实例都可以隐式转换为 Platform::Object^，并且可以重写其虚拟 ToString 方法。  
@@ -52,9 +47,9 @@ public ref class Object : Object
   
 |名称|描述|  
 |----------|-----------------|  
-|[Object::Equals](#equals)|确定指定的对象是否等于当前对象。|  
+|[Object:: equals](#equals)|确定指定的对象是否等于当前对象。|  
 |[Object::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
-|[Object::ReferenceEquals](#referenceequals)|确定指定对象实例是否为同一实例。|  
+|[Object:: referenceequals](#referenceequals)|确定指定对象实例是否为同一实例。|  
 |[ToString](#tostring)|返回表示当前对象的字符串。 可重写。|  
 |[GetType](#gettype)|获取描述当前实例的 [Platform::Type](../cppcx/platform-type-class.md) 。|  
   
@@ -63,7 +58,7 @@ public ref class Object : Object
   
  `Object`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** vccorlib.h  
   
  **命名空间：** Platform  
@@ -90,7 +85,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>  Object::GetHashCode Method
+## <a name="gethashcode"></a>  Object:: gethashcode 方法
 返回此实例的 `IUnknown`* 标识值（如果它是 COM 对象）或计算所得的哈希值（如果它不是 COM 对象）。  
   
 ### <a name="syntax"></a>语法  
@@ -134,7 +129,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>请参阅  
  [Platform:: type 类](../cppcx/platform-type-class.md)   
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)   
- [Type System](../cppcx/type-system-c-cx.md
+ [类型 System](../cppcx/type-system-c-cx.md
   
 ## <a name="ctor"></a>  Object:: object 构造函数
 初始化该对象类的新实例。  

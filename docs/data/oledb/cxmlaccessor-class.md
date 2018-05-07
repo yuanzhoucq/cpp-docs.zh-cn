@@ -1,12 +1,9 @@
 ---
-title: "CXMLAccessor 类 |Microsoft 文档"
-ms.custom: 
+title: CXMLAccessor 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CXMLAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d8d42599e9fe87355dc5392e1a473aa0a9c1e1d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 916e9dbe4e142192e4e716f57f97d5bd6865c709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  
@@ -58,7 +53,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

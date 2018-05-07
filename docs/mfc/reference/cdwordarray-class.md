@@ -1,12 +1,9 @@
 ---
-title: "CDWordArray 类 |Microsoft 文档"
-ms.custom: 
+title: CDWordArray 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDWordArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37400e889f32ab01e187388be94b391402958fa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdwordarray-class"></a>CDWordArray 类
 支持 32 位双字数组。  
@@ -116,7 +111,7 @@ class CDWordArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CDWordArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果双字数组数组存储到存档中，使用重载插入 (  **<<** ) 运算符或`Serialize`成员函数，每个元素，从而，序列化。  
+ `CDWordArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果双字数组数组存储到存档中，使用重载插入 ( **<<**) 运算符或`Serialize`成员函数，每个元素，从而，序列化。  
   
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
@@ -125,7 +120,7 @@ class CDWordArray : public CObject
   
  有关详细信息使用`CDWordArray`，请参阅文章[集合](../../mfc/collections.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
 ## <a name="see-also"></a>请参阅  

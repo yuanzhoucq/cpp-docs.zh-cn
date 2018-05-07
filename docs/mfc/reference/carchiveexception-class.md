@@ -1,12 +1,9 @@
 ---
-title: "CArchiveException 类 |Microsoft 文档"
-ms.custom: 
+title: CArchiveException 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchiveException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2ca798bf3cac50e00627fc3986072af7b2ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 类
 表示序列化异常条件  
@@ -60,7 +55,7 @@ class CArchiveException : public CException
 ## <a name="remarks"></a>备注  
  `CArchiveException`类包括一个公共数据成员，该值指示对导致异常。  
   
- `CArchiveException`对象了构造和内引发[CArchive](../../mfc/reference/carchive-class.md)成员函数。 你可以访问这些对象的作用域内**捕获**表达式。 原因代码是独立于操作系统。 有关异常处理的详细信息，请参阅[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ `CArchiveException` 对象了构造和内引发[CArchive](../../mfc/reference/carchive-class.md)成员函数。 你可以访问这些对象的作用域内**捕获**表达式。 原因代码是独立于操作系统。 有关异常处理的详细信息，请参阅[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,10 +64,10 @@ class CArchiveException : public CException
   
  `CArchiveException`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
  构造`CArchiveException`对象，存储的值`cause`对象中。  
   
 ```  
@@ -93,7 +88,7 @@ CArchiveException(
   
  不要直接; 使用此构造函数相反，调用全局函数`AfxThrowArchiveException`。  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
  指定的异常的原因。  
   
 ```  
@@ -125,7 +120,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic**已弃用。 使用**genericException**相反。 如果**泛型**是应用程序中使用和生成使用 /clr，将很难解密的语法错误。  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  指定此异常条件的文件的名称。  
   
 ```  

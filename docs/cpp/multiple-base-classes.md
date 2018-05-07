@@ -2,11 +2,8 @@
 title: 多个基类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>多个基类
 中所述[多重继承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)，可以从多个基类派生的类。 在多重继承模型中 （其中，类派生自多个基类），使用指定基类*基列表*语法元素。 例如，可以指定派生自 `CollectionOfBook` 和 `Collection` 的 `Book` 的类声明：  
@@ -69,7 +64,7 @@ class CollectionOfBook : public Book, public Collection {
   
  在该图中，`Queue` 是 `CashierQueue` 和 `LunchQueue` 的基类。 但是，当将这两个类组合成 `LunchCashierQueue` 时，会出现以下问题：新类包含类型 `Queue` 的两个子对象，一个来自 `CashierQueue`，另一个来自 `LunchQueue`。 下图显示了概念上的内存布局（实际物理内存布局可能会进行优化）。  
   
- ![模拟的午餐 &#45; 行对象](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![模拟午餐&#45;行对象](../cpp/media/vc38xp2.gif "vc38XP2")  
 模拟午餐排队对象  
   
  请注意，`Queue` 对象中有两个 `LunchCashierQueue` 子对象。 以下代码将 `Queue` 声明为虚拟基类：  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  `virtual` 关键字可确保只包含子对象 `Queue` 的一个副本（请参阅下图）。  
   
- ![模拟的午餐 &#45; 行对象，虚拟基类](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![模拟午餐&#45;行对象、 虚拟基类](../cpp/media/vc38xp3.gif "vc38XP3")  
 使用虚拟基类模拟午餐排队对象  
   
  一个类可以同时具有一个给定类型的虚拟组件和非虚拟组件。 下图演示了这种情况。  

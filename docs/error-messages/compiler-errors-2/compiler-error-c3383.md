@@ -1,13 +1,10 @@
 ---
-title: "编译器错误 C3383 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3383 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3383
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3383
 ms.assetid: ceb7f725-f417-4dc3-8496-0f413bb76687
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edf434b9bd1d7a1e8c6609541bd29fab3c0e66d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b54eda0e29a9876da83b9e3da384a39b9345d5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3383"></a>编译器错误 C3383
 不支持将“operator new”与 /clr:safe 一起使用  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅  
   
--   [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [Visual C++ 64 位迁移的常见问题](../../build/common-visual-cpp-64-bit-migration-issues.md)  
   

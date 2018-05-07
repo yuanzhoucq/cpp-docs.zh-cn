@@ -2,12 +2,9 @@
 title: 记录集： 为预定义的查询 (ODBC) 声明一个类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ecdc146610fe20dcc007d6b1223d7108e1ee595
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbbb9202aaf56681a792e1acf2a0c02eff5636d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：为预定义查询声明一个类 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  手动添加为新的字段数据成员的初始化过程中，在记录集类构造函数。  
   
-     你还必须递增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)数据成员。 向导会将写入初始化，但它仅涵盖它为您添加的字段数据成员。 例如:  
+     你还必须递增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)数据成员。 向导会将写入初始化，但它仅涵盖它为您添加的字段数据成员。 例如：  
   
     ```  
     m_nFields += 6;  

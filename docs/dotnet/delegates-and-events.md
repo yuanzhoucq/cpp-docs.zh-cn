@@ -1,13 +1,10 @@
 ---
-title: "委托和事件 |Microsoft 文档"
-ms.custom: 
+title: 委托和事件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - events [C++], upgrading from Managed Extensions for C++
 - event keyword [C++]
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e332c24d30d0439705b6be5e0748518f6537478d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69e0ffcb9b9c48de152a383b4b9a3f6edbe99f42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-and-events"></a>委托和事件
 声明委托和事件的方法已从托管扩展中的 c + + 更改为 Visual c + +。  
@@ -138,4 +133,4 @@ public:
 ## <a name="see-also"></a>请参阅  
  [在类或接口中的成员声明 (C + + /cli CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)   
- [事件](../windows/event-cpp-component-extensions.md)
+ [event](../windows/event-cpp-component-extensions.md)

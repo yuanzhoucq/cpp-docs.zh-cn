@@ -1,12 +1,9 @@
 ---
-title: "裸函数调用 |Microsoft 文档"
-ms.custom: 
+title: 裸函数调用 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eed53718d211ac2152978c2a4d36e6a82c5c8024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b9d7b42f08d68af9838bf908efdbcc59a0540b91
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="naked-function-calls"></a>Naked 函数调用
 ## <a name="microsoft-specific"></a>Microsoft 专用  

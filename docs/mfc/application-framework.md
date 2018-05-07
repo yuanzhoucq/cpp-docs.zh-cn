@@ -1,13 +1,10 @@
 ---
-title: "应用程序框架 |Microsoft 文档"
-ms.custom: 
+title: 应用程序框架 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - applications [MFC]
 - application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a071a5246d00bbc2f4f82255af1aaf80b7b6f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c91706f5d222753a355897de943f78faf6104cb3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-framework"></a>应用程序框架
 Microsoft 基础类 (MFC) 库的核心是对 C++ 形式的 Windows API 的大部分内容的封装。 库类表示窗口、对话框、设备上下文、公用 GDI 对象（如画笔和钢笔）、控件以及其他标准 Windows 项。 这些类为封装它们的窗口中的结构提供了一个便利的 C++ 成员函数接口。 有关使用这些类的详细信息，请参阅[窗口对象主题](../mfc/window-objects.md)。  

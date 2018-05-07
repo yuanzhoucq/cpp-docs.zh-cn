@@ -1,12 +1,9 @@
 ---
-title: "CMFCTasksPaneTaskGroup 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCTasksPaneTaskGroup 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bd53dec328ebf94e8bb9eb6f72aae1e8a90bc4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 类
 `CMFCTasksPaneTaskGroup`类是使用的帮助器类[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。  
@@ -71,7 +66,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|确定是否将任务组对齐到任务窗格控件的底部。|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|确定任务组是否处于折叠状态。|  
@@ -103,10 +98,10 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  构造 `CMFCTasksPaneTaskGroup` 对象。  
   
 ```  
@@ -140,7 +135,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
  确定是否将任务组对齐到任务窗格控件的底部。  
   
 ```  
@@ -150,7 +145,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>备注  
  只有一个组可以对齐到任务窗格控件的底部。 必须最后添加此任务组。 有关详细信息，请参阅[cmfctaskspane:: Addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
   
-##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  确定任务组是否处于折叠状态。  
   
 ```  
@@ -160,7 +155,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>备注  
  你可以启用或禁用折叠的任务窗格上的组，通过调用的能力[cmfctaskspane:: Enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)。  
   
-##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
  确定任务组是否*特殊*和是否为特殊任务组标题应由另一种颜色。  
   
 ```  
@@ -170,7 +165,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>备注  
  如果你的应用程序正在使用 Windows XP 可视主题和`m_bIsSpecial`是`FALSE`，框架调用`DrawThemeBackground`与`EBP_NORMALGROUPBACKGROUND`标志。 如果`m_bIsSpecial`是`TRUE`，框架调用`DrawThemeBackground`与`EBP_SPECIALGROUPBACKGROUND`标志。  
   
-##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
  包含任务的内部列表。  
   
 ```  
@@ -180,7 +175,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>备注  
  若要填充此列表，调用[cmfctaskspane:: Addtask](../../mfc/reference/cmfctaskspane-class.md#addtask)。  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
  指定组标题的边框。  
   
 ```  
@@ -190,7 +185,7 @@ CRect m_rect;
 ### <a name="remarks"></a>备注  
  此值将由框架自动计算。  
   
-##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
  指定组的边框。  
   
 ```  
@@ -200,7 +195,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>备注  
  此值将由框架自动计算。  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
  指定组的名称。  
   
 ```  
@@ -210,7 +205,7 @@ CString m_strName;
 ### <a name="remarks"></a>备注  
  如果此值为空，不显示组标题，并且无法折叠组。  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
  确定当前的任务组的可访问性数据。  
   
 ```  
@@ -227,7 +222,7 @@ virtual BOOL SetACCData(
  类型的对象`CAccessibilityData`并且填充了当前的任务组的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果`data`参数已成功填充了当前的任务组的可访问性数据; 否则为`FALSE`。  
+ `TRUE` 如果`data`参数已成功填充了当前的任务组的可访问性数据; 否则为`FALSE`。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CMFCFilterChunkValueImpl 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCFilterChunkValueImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFilterChunkValueImpl
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f98125e8e84ec0271bb3dff2eab01e0cfef368
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
 这是一个类可简化区块和属性值对逻辑。  
@@ -132,10 +127,10 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
  清除 ChunkValue。  
   
 ```  
@@ -144,7 +139,7 @@ void Clear();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  构造对象。  
   
 ```  
@@ -153,7 +148,7 @@ CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
  Destructs 对象。  
   
 ```  
@@ -162,7 +157,7 @@ virtual ~CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
  将此块复制到结构描述一个块的特征。  
   
 ```  
@@ -178,7 +173,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
  初始化此区块值从另一个值。  
   
 ```  
@@ -191,7 +186,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
  检索区块 GUID。  
   
 ```  
@@ -203,7 +198,7 @@ REFGUID GetChunkGUID() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
  检索区块 PID (属性 ID)。  
   
 ```  
@@ -215,7 +210,7 @@ DWORD GetChunkPID() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
  检索的块类型。  
   
 ```  
@@ -227,7 +222,7 @@ CHUNKSTATE GetChunkType() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
  检索字符串值。  
   
 ```  
@@ -239,7 +234,7 @@ CString &GetString();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
  检索形式分配 propvariant 的值。  
   
 ```  
@@ -255,7 +250,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
  返回非分配 （内部值） 值。  
   
 ```  
@@ -267,7 +262,7 @@ PROPVARIANT GetValueNoAlloc ();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
  检查此属性的值是否为有效。  
   
 ```  
@@ -275,11 +270,11 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果当前的区块值为有效，则为否则为`FALSE`。  
+ `TRUE` 如果当前的区块值为有效，则为否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
  已重载。 通过为布尔值的键设置的属性。  
   
 ```  
@@ -330,7 +325,7 @@ HRESULT SetBoolValue(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
  一个 helper 函数，设置块区的常见属性。  
   
 ```  
@@ -367,7 +362,7 @@ HRESULT SetChunk(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
  DWORD 的密钥设置的属性。  
   
 ```  
@@ -408,7 +403,7 @@ HRESULT SetDwordValue(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
  Filetime 的密钥设置的属性。  
   
 ```  
@@ -449,7 +444,7 @@ HRESULT SetFileTimeValue(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
  通过为 int64 键设置的属性。  
   
 ```  
@@ -490,7 +485,7 @@ HRESULT SetInt64Value(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
  通过给整型变量的键设置属性  
   
 ```  
@@ -531,7 +526,7 @@ HRESULT SetIntValue(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
  为长整型的密钥设置的属性。  
   
 ```  
@@ -572,7 +567,7 @@ HRESULT SetLongValue(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
  通过成 SystemTime 键设置的属性。  
   
 ```  
@@ -613,7 +608,7 @@ HRESULT SetSystemTimeValue(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
  为 Unicode 字符串的密钥设置的属性。  
   
 ```  

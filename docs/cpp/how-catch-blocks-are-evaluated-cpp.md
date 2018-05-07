@@ -2,11 +2,8 @@
 title: Catch 块的计算 （C++） 的方式 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744f75f86fd7d3e2ca2a2545a7914f923c4454b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6343abec7e80bcbc47595856e6fd71a3e204ed54
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch 块的计算方式 (C++)
 虽然通常建议您引发派生自 std::exception 的类型，但 C++ 使您能够引发任何类型的异常。 可由捕获 C++ 异常**捕获**指定相同的类型，为所引发的异常，或可以捕获任何类型的异常处理程序的处理程序。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   接受可通过标准指针转换规则将引发的指针对象转换为的指针的处理程序。  
   
- 顺序**捕获**处理程序显示很重要，因为处理程序给定**重**块检查其出现的顺序。 例如，将基类的处理程序放置在派生类的处理程序的前面是错误的。   匹配后**捕获**找到处理程序，不会检查后续处理程序。 因此，省略号**捕获**处理程序必须是最后一个处理程序其**重**块。 例如:  
+ 顺序**捕获**处理程序显示很重要，因为处理程序给定**重**块检查其出现的顺序。 例如，将基类的处理程序放置在派生类的处理程序的前面是错误的。   匹配后**捕获**找到处理程序，不会检查后续处理程序。 因此，省略号**捕获**处理程序必须是最后一个处理程序其**重**块。 例如：  
   
 ```  
 // ...  

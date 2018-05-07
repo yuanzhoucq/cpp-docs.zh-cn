@@ -1,13 +1,10 @@
 ---
-title: "服务器： 实现就地框架窗口 |Microsoft 文档"
-ms.custom: 
+title: 服务器： 实现就地框架窗口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e26cbb0099f897c65ab3e39338f3c36e77112e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>服务器：实现就地框架窗口
 本文介绍如果您不使用应用程序向导创建服务器应用程序，则在可视编辑服务器应用程序中实现就地框架窗口时必须执行的操作。 代替遵循本文中概述的过程，你可以使用应用程序向导生成的应用程序或 Visual c + + 提供的示例从现有的就地框架窗口类。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  如果您有一个工具栏，请在框架窗口类中声明 `CToolBar` 成员。  
   
-     当服务器处于就地活动状态时，请重写 `OnCreateControlBars` 成员函数以创建工具栏。 例如:  
+     当服务器处于就地活动状态时，请重写 `OnCreateControlBars` 成员函数以创建工具栏。 例如：  
   
      [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
   

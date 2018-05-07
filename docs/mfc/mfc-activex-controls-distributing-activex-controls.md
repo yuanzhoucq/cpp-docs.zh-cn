@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 发行 ActiveX 控件 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 发行 ActiveX 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控件：发行 ActiveX 控件
 此文章介绍了相关的重新分发 ActiveX 控件的几个问题：  
@@ -55,12 +50,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [注册控件](#_core_registering_controls)  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a>ANSI 或 Unicode 控件版本  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI 或 Unicode 控件版本  
  你必须决定是将该控件，或两个 ANSI 或 Unicode 版本。 此决策基于 ANSI 和 Unicode 字符集中的固有的可移植性因素。  
   
  ANSI 控件，在所有 Win32 操作系统中工作，允许各种 Win32 操作系统之间的最大可移植性。 在仅为 Windows NT （版本 3.51 或更高版本），但不是能在 Windows 95 或 Windows 98 Unicode 控件起作用。 如果你主要关注，随附了 ANSI 控件是可移植性。 如果你的控件将仅在 Windows NT 上运行，你可以将发运 Unicode 控件。 你还可以选择将两者都发布并安装最适合于用户的操作系统版本的应用程序。  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a>安装 ActiveX 控件和可再发行 Dll  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> 安装 ActiveX 控件和可再发行 Dll  
  安装程序提供使用 ActiveX 控件应创建特殊的 Windows 目录的子目录，并安装的控件的。在其中 OCX 文件。  
   
 > [!NOTE]
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  可以仅在 OLE 容器应用程序中使用 ActiveX 控件，因为没有无需分发 OLE Dll 与您的控件的完整集。 你可以假定包含应用程序 （或操作系统本身） 具有标准 OLE Dll 安装。  
   
-##  <a name="_core_registering_controls"></a>注册控件  
+##  <a name="_core_registering_controls"></a> 注册控件  
  可以使用一个控件之前，必须在 Windows 注册数据库中为其创建相应的项。 某些 ActiveX 控件容器提供用户注册新控件的菜单项，但此功能可能不会在所有容器中可用。 因此，您可能希望你的安装程序时才可注册控件。  
   
  如果你愿意，你可以编写你的安装程序以改为直接注册控件。  

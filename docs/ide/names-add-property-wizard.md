@@ -1,29 +1,24 @@
 ---
-title: "名称，添加属性向导 |Microsoft 文档"
-ms.custom: 
+title: 名称，添加属性向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>“添加属性向导”->“名称”
 使用此向导将属性添加到接口。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |MFC 调度接口，MFC ActiveX 控件调度接口|提供属性名称，或从列表中选择常用属性。 如果从列表中选择一个属性，相应的值将出现在**属性类型**框。 你可以更改这种类型，具体取决于你的选择下**实现类型**。|  
   
  **返回类型**  
- ATL 接口。 设置属性的返回类型。 双重接口，`HRESULT`始终是返回类型，并且此框是不可用。 对于自定义接口，可以从列表中选择的返回类型。 `HRESULT`仍建议，因为它提供一种标准的方式，返回错误。  
+ ATL 接口。 设置属性的返回类型。 双重接口，`HRESULT`始终是返回类型，并且此框是不可用。 对于自定义接口，可以从列表中选择的返回类型。 `HRESULT` 仍建议，因为它提供一种标准的方式，返回错误。  
   
  **变量名称**  
  MFC 支持。 仅当指定时，才可用**成员变量**下**实现类型**。 设置的属性与之关联的成员变量的名称。 默认情况下，变量名称设置为 m_*PropertyName*。 你可以编辑此名称。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  **Get 函数**  
  对于 MFC 调度接口。 仅当指定时，才可用**Get/Set 方法**下**实现类型**。 设置函数要获取其属性的名称。 默认情况下，获取函数的名称设置为 Get*PropertyName*。 你可以编辑此名称。 如果你删除的名称，该函数[GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)插入到接口调度映射。 Get*PropertyName*函数指定为可读属性。  
   
- **Set 函数**  
+ **set 函数**  
  MFC 支持。 仅当指定时，才可用**Get/Set 方法**下**实现类型**。 设置要设置的属性的函数的名称。 默认情况下，集函数的名称设置为组*PropertyName*。 你可以编辑此名称。 如果你删除的名称，该函数[SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)插入到接口调度映射。 集*PropertyName*函数指定该属性是可写。  
   
  **实现类型**  

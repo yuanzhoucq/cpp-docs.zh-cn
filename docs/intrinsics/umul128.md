@@ -1,12 +1,9 @@
 ---
-title: _umul128 | Microsoft Docs
-ms.custom: 
+title: _umul128 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __umul128
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e4658fbb92a9ae693aed7bb8c940230b11d88c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a6998b51be8fd11092c4266fa7eee7434be8e5b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft 专用**  
@@ -55,11 +50,11 @@ unsigned __int64 _umul128(
 ## <a name="return-value"></a>返回值  
  产品的低 64 位。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|Header|  
 |---------------|------------------|------------|  
-|`_umul128`|ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_umul128`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
   
 ## <a name="example"></a>示例  
   

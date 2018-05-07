@@ -1,12 +1,9 @@
 ---
-title: "CPane 类 |Microsoft 文档"
-ms.custom: 
+title: CPane 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPane
@@ -142,17 +139,15 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56d3d30907a5001b95cdd55bd17fc86eaf5c078f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b764777f33b0ae8ea1521e931ee45740f7057ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpane-class"></a>CPane Class
 `CPane`类是一项增强功能的[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)。 如果要升级现有 MFC 项目，将出现的所有`CControlBar`与`CPane`。  
@@ -250,7 +245,7 @@ class CPane : public CBasePane
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|启用最小大小的窗格的一致处理。|  
 |[Cpane:: M_recentdockinfo](#m_recentdockinfo)|包含新停靠的信息。|  
@@ -271,10 +266,10 @@ class CPane : public CBasePane
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxPane.h  
   
-##  <a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>  CPane::AdjustSizeImmediate  
  立即重新计算一个窗格的布局。  
   
 ```  
@@ -283,12 +278,12 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bRecalcLayout`  
- `TRUE`自动重新计算窗格; 的布局否则为`FALSE`。  
+ `TRUE` 自动重新计算窗格; 的布局否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  动态更改窗格的布局时，请调用此方法。 例如，你可能想要隐藏或显示工具栏按钮时调用此方法。  
   
-##  <a name="allocelements"></a>CPane::AllocElements  
+##  <a name="allocelements"></a>  CPane::AllocElements  
  分配存储供内部使用。  
   
 ```  
@@ -305,9 +300,9 @@ BOOL AllocElements(
  以字节为单位，元素的大小。  
   
 ### <a name="return-value"></a>返回值  
- `FALSE`如果内存分配失败;否则为`TRUE`。  
+ `FALSE` 如果内存分配失败;否则为`TRUE`。  
   
-##  <a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CPane::AllowShowOnPaneMenu  
  指定是否将窗格中列出的应用程序的窗格的运行时生成列表中。  
   
 ```  
@@ -315,12 +310,12 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果在列表中; 显示窗格否则为`FALSE`。 基实现始终返回`TRUE`。  
+ `TRUE` 如果在列表中; 显示窗格否则为`FALSE`。 基实现始终返回`TRUE`。  
   
 ### <a name="remarks"></a>备注  
  应用程序向导生成的应用程序包含菜单选项，其中列出了它所包含的窗格。 此方法确定是否在列表中显示窗格。  
   
-##  <a name="calcavailablesize"></a>CPane::CalcAvailableSize  
+##  <a name="calcavailablesize"></a>  CPane::CalcAvailableSize  
  计算大小中指定的矩形和当前窗口矩形之间的差异。  
   
 ```  
@@ -334,7 +329,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ### <a name="return-value"></a>返回值  
  宽度和高度之间的差异`rectRequired`和当前窗口矩形。  
   
-##  <a name="calcinsiderect"></a>CPane::CalcInsideRect  
+##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect  
  计算内部的窗格中，包括边框和控制手柄的矩形。  
   
 ```  
@@ -348,12 +343,12 @@ void CalcInsideRect(
  包含的大小和偏移量的窗格中的工作区。  
   
  [in] `bHorz`  
- `TRUE`如果在窗格中，面向水平空间。否则为`FALSE`。  
+ `TRUE` 如果在窗格中，面向水平空间。否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  它在必须重新计算窗格布局时，将由框架调用此方法。 `rect`参数填充的大小和偏移量的窗格中的工作区。 这包括其边框和控制手柄。  
   
-##  <a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect  
+##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect  
  计算最近停靠的矩形。  
   
 ```  
@@ -363,7 +358,7 @@ void CalcRecentDockedRect();
 ### <a name="remarks"></a>备注  
  此方法更新[cpane:: M_recentdockinfo](#m_recentdockinfo)。  
   
-##  <a name="calcsize"></a>CPane::CalcSize  
+##  <a name="calcsize"></a>  CPane::CalcSize  
  计算窗格的大小。  
   
 ```  
@@ -372,7 +367,7 @@ virtual CSize CalcSize(BOOL bVertDock);
   
 ### <a name="parameters"></a>参数  
  [in] `bVertDock`  
- `TRUE`如果垂直停靠窗格`FALSE`否则为。  
+ `TRUE` 如果垂直停靠窗格`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
  此方法的默认实现返回的大小为 （0，0）。  
@@ -380,7 +375,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="remarks"></a>备注  
  派生的类应重写此方法。  
   
-##  <a name="canbedocked"></a>CPane::CanBeDocked  
+##  <a name="canbedocked"></a>  CPane::CanBeDocked  
  确定是否可以在指定的基窗格停靠窗格。  
   
 ```  
@@ -392,14 +387,14 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
  指定此窗格其中是要停靠的窗格。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此窗格可以停靠在指定的停靠窗格;，否则为`FALSE`。  
+ `TRUE` 如果此窗格可以停靠在指定的停靠窗格;，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法通常称为框架，以确定是否可将一个窗格停靠在指定的停靠窗格。 若要确定是否可以停靠窗格中，该方法的计算结果窗格中的当前启用停靠的对齐方式。  
   
  启用通过调用停靠在框架窗口的各种侧[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。  
   
-##  <a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument  
+##  <a name="canbetabbeddocument"></a>  CPane::CanBeTabbedDocument  
  确定是否可以将窗格转换到选项卡式文档。  
   
 ```  
@@ -407,12 +402,12 @@ virtual BOOL CanBeTabbedDocument() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果窗格可以转换到选项卡式文档中。否则为`FALSE`。  
+ `TRUE` 如果窗格可以转换到选项卡式文档中。否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类中的，并返回`FALSE`如果你想要防止一个窗格转换为选项卡式文档。 未将窗口位置菜单中列出的选项卡式的文档。  
   
-##  <a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CPane::ConvertToTabbedDocument  
  将可停靠的窗格中转换为选项卡式文档。  
   
 ```  
@@ -426,7 +421,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="remarks"></a>备注  
  仅可停靠窗格可以转换为选项卡式文档。 有关信息，请参阅[CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)。  
   
-##  <a name="copystate"></a>CPane::CopyState  
+##  <a name="copystate"></a>  CPane::CopyState  
  将复制一个窗格的状态。  
   
 ```  
@@ -440,7 +435,7 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="remarks"></a>备注  
  此方法将复制的状态`pOrgBar`到当前窗格中。  
   
-##  <a name="create"></a>Cpane:: Create  
+##  <a name="create"></a>  Cpane:: Create  
  创建的控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL Create(
  [in] `rect`  
  指定的初始大小和位置`pParentWnd`窗口中的，在工作区坐标。  
   
- [in][out]`pParentWnd`  
+ [in][out] `pParentWnd`  
  指定此窗格中的父窗口。  
   
  [in] `nID`  
@@ -473,18 +468,18 @@ virtual BOOL Create(
  [in] `dwControlBarStyle`  
  指定窗格中的样式。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
- [in][out]`pContext`  
+ [in][out] `pContext`  
  指定窗格中的创建的上下文。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则已创建了窗格否则为`FALSE`。  
+ `TRUE` 如果成功，则已创建了窗格否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法创建一个 Windows 窗格并将其附加到`CPane`对象。  
   
  如果显式未初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)之前调用`Create`，参数`rect`将用作浮动或停靠的窗格中时的矩形。  
   
-##  <a name="createdefaultminiframe"></a>Cpane:: Createdefaultminiframe  
+##  <a name="createdefaultminiframe"></a>  Cpane:: Createdefaultminiframe  
  创建浮动窗格的微型框架窗口。  
   
 ```  
@@ -503,7 +498,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
  微型框架窗口的运行时类信息存储在`CPane::m_pMiniFrameRTC`成员。 派生的类可用于设置此成员，如果你决定创建自定义的最小化框架窗口。  
   
-##  <a name="createex"></a>Cpane:: Createex  
+##  <a name="createex"></a>  Cpane:: Createex  
  创建的控件条，并将其附加到[CPane](../../mfc/reference/cpane-class.md)对象。  
   
 ```  
@@ -531,7 +526,7 @@ virtual BOOL CreateEx(
  [in] `rect`  
  指定的初始大小和位置`pParentWnd`窗口中的，在工作区坐标。  
   
- [in][out]`pParentWnd`  
+ [in][out] `pParentWnd`  
  指定此窗格中的父窗口。  
   
  [in] `nID`  
@@ -540,18 +535,18 @@ virtual BOOL CreateEx(
  [in] `dwControlBarStyle`  
  指定窗格中的样式。 有关详细信息，请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
- [in][out]`pContext`  
+ [in][out] `pContext`  
  指定窗格中的创建上下文。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则已创建了窗格否则为`FALSE`。  
+ `TRUE` 如果成功，则已创建了窗格否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法创建一个 Windows 窗格并将其附加到`CPane`对象。  
   
  如果显式未初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)之前调用`CreateEx`，参数`rect`将用作浮动或停靠的窗格中时的矩形。  
   
-##  <a name="dockbymouse"></a>CPane::DockByMouse  
+##  <a name="dockbymouse"></a>  CPane::DockByMouse  
  使用鼠标停靠窗格。  
   
 ```  
@@ -563,9 +558,9 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
  指定要将此窗格停靠到基本窗格。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果已成功，则停靠窗格，否则为`FALSE`。  
+ `TRUE` 如果已成功，则停靠窗格，否则为`FALSE`。  
   
-##  <a name="dockpane"></a>CPane::DockPane  
+##  <a name="dockpane"></a>  CPane::DockPane  
  浮动窗格停靠到基窗格。  
   
 ```  
@@ -576,7 +571,7 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pDockBar`  
+ [in][out] `pDockBar`  
  指定的基窗格停靠到此窗格。  
   
  [in] `lpRect`  
@@ -595,12 +590,12 @@ virtual BOOL DockPane(
 |`DM_STANDARD`|当使用此选项时，框架将在窗格中时将被移绘制为大纲帧。|  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果已成功，则停靠窗格，否则为`FALSE`。  
+ `TRUE` 如果已成功，则停靠窗格，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法将窗格停靠到由指定的基窗格`pDockBar`参数。 你必须首先启用通过调用停靠[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。  
   
-##  <a name="dockpanestandard"></a>CPane::DockPaneStandard  
+##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard  
  通过使用大纲 （标准） 停靠停靠窗格。  
   
 ```  
@@ -609,7 +604,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
   
 ### <a name="parameters"></a>参数  
  [in] `bWasDocked`  
- `TRUE`如果成功停靠窗格;，否则为`FALSE`。  
+ `TRUE` 如果成功停靠窗格;，否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回`this`指针。  
@@ -617,7 +612,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="remarks"></a>备注  
  此方法仅用于派生自的窗格[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。 有关详细信息，请参阅[CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard)。  
   
-##  <a name="docktoframewindow"></a>CPane::DockToFrameWindow  
+##  <a name="docktoframewindow"></a>  CPane::DockToFrameWindow  
  可停靠窗格停靠到的帧。  
   
 ```  
@@ -650,11 +645,11 @@ virtual BOOL DockToFrameWindow(
  如果`TRUE`并且没有在指定的一侧其他可停靠窗格`dwAlignment`，窗格停靠在其他窗格中，更接近于父框架边缘。 如果`FALSE`，窗格停靠在更接近的工作区的中心。  
   
 ### <a name="return-value"></a>返回值  
- `FALSE`如果窗格分隔线 ( [CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)) 创建; 否则为不能为`TRUE`。  
+ `FALSE` 如果窗格分隔线 ( [CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)) 创建; 否则为不能为`TRUE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars  
+##  <a name="doesallowsiblingbars"></a>  CPane::DoesAllowSiblingBars  
  指示是否可以将停靠在同一行的当前窗格停靠的位置的另一个窗格。  
   
 ```  
@@ -662,14 +657,14 @@ virtual BOOL DoesAllowSiblingBars() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此窗格可以停靠到另一个窗格与本身; 位于同一行上否则为`FALSE`。  
+ `TRUE` 如果此窗格可以停靠到另一个窗格与本身; 位于同一行上否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  你可以启用或禁用此行为，通过调用[CPane::SetExclusiveRowMode](#setexclusiverowmode)。  
   
  默认情况下，工具栏具有独占行模式被禁用并且菜单栏启用独占行模式。  
   
-##  <a name="floatpane"></a>CPane::FloatPane  
+##  <a name="floatpane"></a>  CPane::FloatPane  
  浮动窗格。  
   
 ```  
@@ -687,15 +682,15 @@ virtual BOOL FloatPane(
  指定要使用时浮动窗格的停靠方法。 有关可能的值的列表，请参阅[CPane::DockPane](#dockpane)。  
   
  [in] `bShow`  
- `TRUE`若要显示窗格时浮动;否则为`FALSE`。  
+ `TRUE` 若要显示窗格时浮动;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果已成功浮动窗格中，或无法浮动窗格中，因为[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)返回`FALSE`; 否则为`FALSE`。  
+ `TRUE` 如果已成功浮动窗格中，或无法浮动窗格中，因为[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)返回`FALSE`; 否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以浮动在由指定的位置的窗格中`rectFloat`参数。 此方法会自动创建父微型框架窗口的窗格。  
   
-##  <a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize  
+##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize  
  返回的以像素为单位，可以展开窗格。  
   
 ```  
@@ -707,7 +702,7 @@ virtual int GetAvailableExpandSize() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize  
+##  <a name="getavailablestretchsize"></a>  CPane::GetAvailableStretchSize  
  返回的以像素为单位，可以收缩窗格。  
   
 ```  
@@ -720,7 +715,7 @@ virtual int GetAvailableStretchSize() const;
 ### <a name="remarks"></a>备注  
  可用的延伸大小通过减去允许的窗格的大小的最小 ( [CPane::GetMinSize](#getminsize)) 从当前大小 ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect))。  
   
-##  <a name="getborders"></a>CPane::GetBorders  
+##  <a name="getborders"></a>  CPane::GetBorders  
  返回窗格的边框的宽度。  
   
 ```  
@@ -733,7 +728,7 @@ CRect GetBorders() const;
 ### <a name="remarks"></a>备注  
  若要设置边框的大小，调用[CPane::SetBorders](#setborders)。  
   
-##  <a name="getclienthotspot"></a>CPane::GetClientHotSpot  
+##  <a name="getclienthotspot"></a>  CPane::GetClientHotSpot  
  返回*作用点*窗格。  
   
 ```  
@@ -745,7 +740,7 @@ CPoint GetClientHotSpot() const;
 ### <a name="remarks"></a>备注  
  *作用点*是在用户选择并按住若要将窗格移动的窗格上的点。 作用点用于平滑动画窗格从停靠位置移动时。  
   
-##  <a name="getdocksiterow"></a>CPane::GetDockSiteRow  
+##  <a name="getdocksiterow"></a>  CPane::GetDockSiteRow  
  返回停靠行 ( [CDockingPanesRow 类](../../mfc/reference/cdockingpanesrow-class.md)) 中窗格停靠。  
   
 ```  
@@ -755,7 +750,7 @@ CDockingPanesRow* GetDockSiteRow() const;
 ### <a name="return-value"></a>返回值  
  A `CDockingPanesRow`* 指向在其中停靠窗格，停靠行或`NULL`如果未停靠的窗格。  
   
-##  <a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode  
+##  <a name="getexclusiverowmode"></a>  CPane::GetExclusiveRowMode  
  确定窗格是否在独占行模式中。  
   
 ```  
@@ -763,12 +758,12 @@ virtual BOOL GetExclusiveRowMode() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果窗格处于独占行模式;否则为`FALSE`。  
+ `TRUE` 如果窗格处于独占行模式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  有关独占行模式的详细信息，请参阅[CPane::SetExclusiveRowMode](#setexclusiverowmode)。  
   
-##  <a name="gethotspot"></a>CPane::GetHotSpot  
+##  <a name="gethotspot"></a>  CPane::GetHotSpot  
  返回存储在基础的热点`CMFCDragFrameImpl`对象。  
   
 ```  
@@ -780,7 +775,7 @@ CPoint GetHotSpot() const;
 ### <a name="remarks"></a>备注  
  `CPane`类包含`CMFCDragFrameImpl`对象， `m_dragFrameImpl`，即负责绘制显示当用户在标准停靠模式下将一个窗格的矩形。 作用点用于在用户移动窗格中，绘制矩形相对于当前的鼠标位置。  
   
-##  <a name="getminsize"></a>CPane::GetMinSize  
+##  <a name="getminsize"></a>  CPane::GetMinSize  
  检索允许窗格的大小的最小。  
   
 ```  
@@ -793,7 +788,7 @@ virtual void GetMinSize(CSize& size) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getpanename"></a>CPane::GetPaneName  
+##  <a name="getpanename"></a>  CPane::GetPaneName  
  检索窗格的标题。  
   
 ```  
@@ -807,7 +802,7 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="remarks"></a>备注  
  停靠或浮动窗格时，会将该窗格标题显示在标题区域中。 如果窗格是选项卡式组的一部分，标题将显示在选项卡区域中。 如果窗格在自动隐藏模式下，标题会显示在`CMFCAutoHideButton`。  
   
-##  <a name="getvirtualrect"></a>CPane::GetVirtualRect  
+##  <a name="getvirtualrect"></a>  CPane::GetVirtualRect  
  检索*虚拟矩形*的窗格。  
   
 ```  
@@ -823,7 +818,7 @@ void GetVirtualRect(CRect& rectVirtual) const;
   
  请勿调用将与虚拟矩形，除非你要以编程方式移动窗格的方法。  
   
-##  <a name="ischangestate"></a>CPane::IsChangeState  
+##  <a name="ischangestate"></a>  CPane::IsChangeState  
  移动窗格中时，此方法将分析其位置相对于其他窗格，停靠行和微型框架窗口，并返回相应`AFX_CS_STATUS`值。  
   
 ```  
@@ -842,14 +837,14 @@ virtual AFX_CS_STATUS IsChangeState(
 ### <a name="return-value"></a>返回值  
  以下项之一`AFX_CS_STATUS`值：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`CS_NOTHING`|窗格并不是在停靠站点附近。 框架将窗格未停靠。|  
 |`CS_DOCK_IMMEDIATELY`|在窗格中，通过停靠站点，与`DT_IMMEDIATE`启用样式。 框架立即停靠窗格。|  
 |`CS_DELAY_DOCK`|在窗格中，通过另一个停靠窗格或的主框架边缘停靠站点。 当用户释放移动时，框架将停靠窗格。|  
 |`CS_DELAY_DOCK_TO_TAB`|在窗格中，通过使窗格停靠在选项卡式窗口停靠站点。 当窗格时通过另一个停靠窗格的标题或通过选项卡区域的选项卡式窗格中，将发生这种情况。 当用户释放移动时，框架将停靠窗格。|  
   
-##  <a name="isdragmode"></a>CPane::IsDragMode  
+##  <a name="isdragmode"></a>  CPane::IsDragMode  
  指定是否将被移窗格。  
   
 ```  
@@ -857,11 +852,11 @@ virtual BOOL IsDragMode() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果窗格中将被移;否则为`FALSE`。  
+ `TRUE` 如果窗格中将被移;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>  CPane::IsInFloatingMultiPaneFrameWnd  
  指定窗格是否在多窗格框架窗口 ( [CMultiPaneFrameWnd 类](../../mfc/reference/cmultipaneframewnd-class.md))。  
   
 ```  
@@ -869,12 +864,12 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果在窗格中，在多窗格框架窗口;否则为`FALSE`。  
+ `TRUE` 如果在窗格中，在多窗格框架窗口;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  仅可停靠窗格可以浮动在多窗格框架窗口中。 因此，`CPane::IsInFloatingMultiPaneFrameWnd`始终返回`FALSE`。  
   
-##  <a name="isleftof"></a>CPane::IsLeftOf  
+##  <a name="isleftof"></a>  CPane::IsLeftOf  
  确定的 （或更高版本） 是否左窗格中指定的矩形。  
   
 ```  
@@ -895,7 +890,7 @@ bool IsLeftOf(
 ### <a name="remarks"></a>备注  
  如果水平停靠的窗格中，此方法检查是否将其位置左下的`rect`。 否则，此方法检查位置是否高于`rect`。  
   
-##  <a name="isresizable"></a>CPane::IsResizable  
+##  <a name="isresizable"></a>  CPane::IsResizable  
  指定是否可调整大小的窗格。  
   
 ```  
@@ -903,7 +898,7 @@ virtual BOOL IsResizable() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果在窗格中，可调整大小;否则为`FALSE`。  
+ `TRUE` 如果在窗格中，可调整大小;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  基本`CPane`对象不是可调整大小。  
@@ -912,7 +907,7 @@ virtual BOOL IsResizable() const;
   
  非可调整大小的窗格不能驻留在停靠容器。  
   
-##  <a name="istabbed"></a>CPane::IsTabbed  
+##  <a name="istabbed"></a>  CPane::IsTabbed  
  确定窗格中是否已插入到选项卡控件的选项卡式窗口。  
   
 ```  
@@ -920,12 +915,12 @@ virtual BOOL IsTabbed() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果窗格选项卡式;，否则为`FALSE`。  
+ `TRUE` 如果窗格选项卡式;，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  选项卡式的状态都将单独处理从浮点、 停靠，和自动隐藏状态。  
   
-##  <a name="loadstate"></a>CPane::LoadState  
+##  <a name="loadstate"></a>  CPane::LoadState  
  从注册表加载窗格的状态。  
   
 ```  
@@ -946,14 +941,14 @@ virtual BOOL LoadState(
  窗格中的 id。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则加载窗格状态否则为`FALSE`。  
+ `TRUE` 如果成功，则加载窗格状态否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  框架调用此方法以从注册表加载窗格状态。 在由保存要加载的其他信息的派生类中重写它[CPane::SaveState](#savestate)。  
   
  当你重写此方法时，还调用基方法，并返回`FALSE`如果基方法返回`FALSE`。  
   
-##  <a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize  
+##  <a name="m_bhandleminsize"></a>  CPane::m_bHandleMinSize  
  启用一致处理的最小窗格大小。  
   
 ```  
@@ -965,7 +960,7 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
   
  如果此值设置为`TRUE`，其大小应减小其最小大小下的所有窗格将被都剪辑，未延伸。 由于框架将用于窗格大小调整用途的窗口区域，请不要更改此值设置为如果停靠窗格的窗口区域的大小`TRUE`。  
   
-##  <a name="m_recentdockinfo"></a>Cpane:: M_recentdockinfo  
+##  <a name="m_recentdockinfo"></a>  Cpane:: M_recentdockinfo  
  包含新停靠的信息。  
   
 ```  
@@ -975,7 +970,7 @@ CRecentDockSiteInfo m_recentDockInfo;
 ### <a name="remarks"></a>备注  
  框架将存储在此成员的窗格中的最新停靠状态信息。  
   
-##  <a name="movebyalignment"></a>CPane::MoveByAlignment  
+##  <a name="movebyalignment"></a>  CPane::MoveByAlignment  
  按指定量移动窗格和虚拟的矩形。  
   
 ```  
@@ -994,9 +989,9 @@ BOOL MoveByAlignment(
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- `dwAlignment`可以是任何以下值：  
+ `dwAlignment` 可以是任何以下值：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|启用到框架窗口的工作区顶部停靠的窗格。|  
 |`CBRS_ALIGN_BOTTOM`|启用到框架窗口的工作区底部停靠的窗格。|  
@@ -1006,7 +1001,7 @@ BOOL MoveByAlignment(
   
  如果`dwAlignment`包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`标志、 窗格和虚拟矩形被移动水平; 否则为如果`dwAlignment`包含`CBRS_ALIGN_TOP`或`CBRS_ALIGN_BOTTOM`标志、 窗格和虚拟矩形被移动垂直。  
   
-##  <a name="movepane"></a>CPane::MovePane  
+##  <a name="movepane"></a>  CPane::MovePane  
  将窗格移动到指定的矩形。  
   
 ```  
@@ -1032,7 +1027,7 @@ virtual CSize MovePane(
 ### <a name="remarks"></a>备注  
  此方法仅用于可停靠窗格。  
   
-##  <a name="onafterchangeparent"></a>CPane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CPane::OnAfterChangeParent  
  当窗格中的父级发生更改时由框架调用。  
   
 ```  
@@ -1040,13 +1035,13 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pWndOldParent`  
+ [in][out] `pWndOldParent`  
  窗格的上一个父窗口。  
   
 ### <a name="remarks"></a>备注  
  由于停靠或浮动操作更改后的父级的窗格中，将由框架调用此方法。  
   
-##  <a name="onafterdock"></a>CPane::OnAfterDock  
+##  <a name="onafterdock"></a>  CPane::OnAfterDock  
  已停靠窗格时，由框架调用。  
   
 ```  
@@ -1066,7 +1061,7 @@ virtual void OnAfterDock(
  [in] `dockMethod`  
  未使用此参数。  
   
-##  <a name="onafterfloat"></a>CPane::OnAfterFloat  
+##  <a name="onafterfloat"></a>  CPane::OnAfterFloat  
  后一个窗格浮动，由框架调用。  
   
 ```  
@@ -1076,7 +1071,7 @@ virtual void OnAfterFloat();
 ### <a name="remarks"></a>备注  
  如果你想要执行任何处理后浮动窗格中，可以重写此方法在派生类中。  
   
-##  <a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>  CPane::OnBeforeChangeParent  
  将要更改的父级的窗格中时，由框架调用。  
   
 ```  
@@ -1086,18 +1081,18 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pWndNewParent`  
+ [in][out] `pWndNewParent`  
  指定新的父窗口。  
   
  [in] `bDelay`  
- `TRUE`对延迟全局的停靠布局调整;否则为`FALSE`。  
+ `TRUE` 对延迟全局的停靠布局调整;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  将要更改，因为正在窗格中的父级的窗格中时，由框架调用此方法停靠或浮动。  
   
  默认情况下，在窗格中，与停靠窗格注销通过调用`CDockSite::RemovePane`。  
   
-##  <a name="onbeforedock"></a>CPane::OnBeforeDock  
+##  <a name="onbeforedock"></a>  CPane::OnBeforeDock  
  将要停靠窗格时，由框架调用。  
   
 ```  
@@ -1108,7 +1103,7 @@ virtual BOOL OnBeforeDock(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`ppDockBar`  
+ [in][out] `ppDockBar`  
  指定此窗格停靠到窗格。  
   
  [in] `lpRect`  
@@ -1118,12 +1113,12 @@ virtual BOOL OnBeforeDock(
  指定的停靠的方法。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果可以停靠窗格。 如果该函数将返回`FALSE`，停靠操作将中止。  
+ `TRUE` 如果可以停靠窗格。 如果该函数将返回`FALSE`，停靠操作将中止。  
   
 ### <a name="remarks"></a>备注  
  将要停靠窗格时，将由框架调用此方法。 如果你想要执行任何处理之前最后停靠窗格中，可以重写此方法在派生类中。  
   
-##  <a name="onbeforefloat"></a>CPane::OnBeforeFloat  
+##  <a name="onbeforefloat"></a>  CPane::OnBeforeFloat  
  当窗格时有关为浮点数，由框架调用。  
   
 ```  
@@ -1140,12 +1135,12 @@ virtual BOOL OnBeforeFloat(
  指定的停靠窗格的方法。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果可以浮动窗格;否则为`FALSE`。  
+ `TRUE` 如果可以浮动窗格;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  当窗格时有关为浮点数，由框架调用此方法。 如果你想要执行任何处理之前最后浮动窗格中，可以重写此方法在派生类中。  
   
-##  <a name="onpressclosebutton"></a>CPane::OnPressCloseButton  
+##  <a name="onpressclosebutton"></a>  CPane::OnPressCloseButton  
  当用户按关闭按钮上窗格的标题时，由框架调用。  
   
 ```  
@@ -1155,7 +1150,7 @@ virtual void OnPressCloseButton();
 ### <a name="remarks"></a>备注  
  当用户按下时，由框架调用此方法**关闭**上窗格的标题按钮。 若要接收通知有关**关闭**事件，你可以重写此方法在派生类中的。  
   
-##  <a name="onshowcontrolbarmenu"></a>Cpane:: Onshowcontrolbarmenu  
+##  <a name="onshowcontrolbarmenu"></a>  Cpane:: Onshowcontrolbarmenu  
  当即将显示特殊窗格菜单时由框架调用。  
   
 ```  
@@ -1167,12 +1162,12 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
  指定菜单位置。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果可以显示菜单;否则为`FALSE`。  
+ `TRUE` 如果可以显示菜单;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  菜单包含多个项，使您能够指定窗格的行为，即：**浮动**，**停靠**，**自动隐藏**，和**隐藏**. 你可以通过调用启用所有窗格此菜单[CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu)。  
   
-##  <a name="recalclayout"></a>Cpane:: Recalclayout  
+##  <a name="recalclayout"></a>  Cpane:: Recalclayout  
  重新计算该窗格的布局信息。  
   
 ```  
@@ -1184,7 +1179,7 @@ virtual void RecalcLayout();
   
  如果窗格浮动的此方法将通知父微型框架，以调整微型框架的大小的窗格中的大小。 框架可确保的最小化框架至少是允许的窗格的大小的最小 ( [CPane::GetMinSize](#getminsize)) 并调整其大小微型框架，如有必要。  
   
-##  <a name="savestate"></a>CPane::SaveState  
+##  <a name="savestate"></a>  CPane::SaveState  
  将窗格的状态保存到注册表。  
   
 ```  
@@ -1205,14 +1200,14 @@ virtual BOOL SaveState(
  窗格中的 id。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则保存状态否则为`FALSE`。  
+ `TRUE` 如果成功，则保存状态否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  框架调用此方法时它将窗格的状态保存到注册表。 重写`SaveState`在派生类来存储的其他信息。  
   
  当你重写此方法时，还调用基方法，并返回`FALSE`如果基方法返回`FALSE`。  
   
-##  <a name="setactiveingroup"></a>Cpane:: Setactiveingroup  
+##  <a name="setactiveingroup"></a>  Cpane:: Setactiveingroup  
  将其标记为活动状态的窗格。  
   
 ```  
@@ -1230,7 +1225,7 @@ virtual void SetActiveInGroup(BOOL bActive);
   
  如果`CMFCAutoHideButton::m_bOverlappingTabs`是`FALSE`，或如果组中未位于窗格中，框架会将关联的自动隐藏按钮显示为图标和标签。  
   
-##  <a name="setborders"></a>CPane::SetBorders  
+##  <a name="setborders"></a>  CPane::SetBorders  
  设置窗格中的边框值。  
   
 ```  
@@ -1262,7 +1257,7 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="remarks"></a>备注  
  调用此函数可设置窗格的边框的大小。  
   
-##  <a name="setclienthotspot"></a>CPane::SetClientHotSpot  
+##  <a name="setclienthotspot"></a>  CPane::SetClientHotSpot  
  集*作用点*窗格。  
   
 ```  
@@ -1276,7 +1271,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="remarks"></a>备注  
  *作用点*是在用户选择并按住若要将窗格移动的窗格上的点。 作用点用于平滑动画时从停靠位置拖动该窗格。  
   
-##  <a name="setdockstate"></a>CPane::SetDockState  
+##  <a name="setdockstate"></a>  CPane::SetDockState  
  还原停靠的窗格的状态信息。  
   
 ```  
@@ -1292,7 +1287,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
   
  你还可以调用此方法以设置停靠状态，当你从外部源加载窗格中的信息。  
   
-##  <a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode  
+##  <a name="setexclusiverowmode"></a>  CPane::SetExclusiveRowMode  
  启用或禁用独占行模式。  
   
 ```  
@@ -1301,14 +1296,14 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bExclusive`  
- `TRUE`若要启用独占行模式;否则为`FALSE`。  
+ `TRUE` 若要启用独占行模式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以启用或禁用独占行模式。 在独占行模式下一个窗格时，它不能与任何其他工具栏共享同一行。  
   
  默认情况下，所有工具栏都具有独占行模式被禁用并且菜单栏启用独占行模式。  
   
-##  <a name="setminsize"></a>CPane::SetMinSize  
+##  <a name="setminsize"></a>  CPane::SetMinSize  
  设置允许的窗格的大小的最小。  
   
 ```  
@@ -1321,7 +1316,7 @@ void SetMinSize(const CSize& size);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setvirtualrect"></a>CPane::SetVirtualRect  
+##  <a name="setvirtualrect"></a>  CPane::SetVirtualRect  
  集*虚拟矩形*的窗格。  
   
 ```  
@@ -1342,7 +1337,7 @@ void SetVirtualRect(
   
  请勿调用将与虚拟矩形，除非你要以编程方式移动窗格的方法。  
   
-##  <a name="setminiframertc"></a>CPane::SetMiniFrameRTC  
+##  <a name="setminiframertc"></a>  CPane::SetMiniFrameRTC  
  设置默认微型框架窗口的运行时类信息。  
   
 ```  
@@ -1350,13 +1345,13 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pClass`  
+ [in][out] `pClass`  
  指定微型框架窗口的运行时类信息。  
   
 ### <a name="remarks"></a>备注  
  当浮动窗格中时，它将被放[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) （微型框架） 窗口。 你可以提供自定义`CPaneFrameWnd`-派生类将时使用[cpane:: Createdefaultminiframe](#createdefaultminiframe)调用。  
   
-##  <a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos  
+##  <a name="stretchpanedeferwndpos"></a>  CPane::StretchPaneDeferWndPos  
  拉伸垂直或水平停靠样式基于的窗格。  
   
 ```  
@@ -1378,7 +1373,7 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="remarks"></a>备注  
  如果有必要，此方法会修改`nStretchSize`以确保窗格不超过大小限制。 通过调用获得这些限制[CPane::GetAvailableStretchSize](#getavailablestretchsize)和[CPane::GetAvailableExpandSize](#getavailableexpandsize)。  
   
-##  <a name="toggleautohide"></a>CPane::ToggleAutoHide  
+##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide  
  切换自动隐藏模式。  
   
 ```  
@@ -1388,7 +1383,7 @@ virtual void ToggleAutoHide();
 ### <a name="remarks"></a>备注  
  调用此方法以切换自动隐藏模式。 若要切换到自动隐藏模式，必须到主框架窗口停靠窗格。  
   
-##  <a name="undockpane"></a>CPane::UndockPane  
+##  <a name="undockpane"></a>  CPane::UndockPane  
  从停靠站点、 默认滑块或它当前停靠的微型框架窗口删除窗格。  
   
 ```  
@@ -1402,7 +1397,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="remarks"></a>备注  
  使用此方法以编程方式取消停靠窗格。  
   
-##  <a name="updatevirtualrect"></a>CPane::UpdateVirtualRect  
+##  <a name="updatevirtualrect"></a>  CPane::UpdateVirtualRect  
  更新虚拟矩形。  
   
 ```  

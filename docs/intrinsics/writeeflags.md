@@ -1,12 +1,9 @@
 ---
-title: __writeeflags | Microsoft Docs
-ms.custom: 
+title: __writeeflags |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __writeeflags
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ed93b956c4b4dc0864b43089cc183fb01ff97d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定的值写入程序状态和控制 (EFLAGS) 注册。  
@@ -46,7 +41,7 @@ void __writeeflags(unsigned __int64 Value);
 ## <a name="remarks"></a>备注  
  这些例程只能用作内部函数不可用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

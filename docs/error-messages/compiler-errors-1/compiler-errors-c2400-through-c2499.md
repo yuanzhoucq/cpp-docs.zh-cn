@@ -1,16 +1,12 @@
 ---
-title: "编译器错误 C2400 到 C2499 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2400 到 C2499 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>编译器错误 C2400 到 C2499
 
@@ -88,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[编译器错误 C2426](compiler-error-c2426.md)|*令牌*： 非法运算符中的*上下文*|
 |[编译器错误 C2427](compiler-error-c2427.md)|*类*： 无法在此作用域中定义类|
 |[编译器错误 C2428](compiler-error-c2428.md)|*操作*： 不允许对类型为 bool 的操作数|
-|编译器错误 C2429|*上下文**上下文*要求编译器标志*选项*|
+|[编译器错误 C2429](compiler-error-c2429.md)|*语言功能*要求编译器标志*编译器选项*|
 |[编译器错误 C2430](compiler-error-c2430.md)|中的多个索引寄存器*上下文*|
 |[编译器错误 C2431](compiler-error-c2431.md)|中的非法索引寄存器*上下文*|
 |[编译器错误 C2432](compiler-error-c2432.md)|非法引用中的 16 位数据*上下文*|
@@ -149,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[编译器错误 C2491](compiler-error-c2491.md)|*标识符*: dllimport 定义*函数*不允许|
 |[编译器错误 C2492](compiler-error-c2492.md)|*变量*： 具有线程存储持续时间的数据可能没有 dll 接口|
 |[编译器错误 C2493](compiler-error-c2493.md)|__based 非法形式|
-|[编译器错误 C2494](compiler-error-c2494.md)|*关键字*不能从调用在筛选器表达式或 &#95; &#95; 最后/finally 块|
+|[编译器错误 C2494](compiler-error-c2494.md)|*关键字*不能从调用在筛选器表达式或&#95;&#95;最后/finally 块|
 |[编译器错误 C2495](compiler-error-c2495.md)|*标识符*: __declspec(noexcept) 只能应用于函数声明或定义|
 |[编译器错误 C2496](compiler-error-c2496.md)|*标识符*: selectany 只能应用到具有外部链接的数据项|
 |编译器错误 C2497|*标识符*: implementation_key 只能应用于函数声明|

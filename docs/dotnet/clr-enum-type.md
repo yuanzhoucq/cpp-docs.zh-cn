@@ -1,13 +1,10 @@
 ---
-title: "CLR 枚举类型 |Microsoft 文档"
-ms.custom: 
+title: CLR 枚举类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,23 +12,21 @@ helpviewer_keywords:
 - enum struct keyword [C++]
 - enum class keyword [C++]
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ad82c1d867c511121cd024f2affd5df98b4642bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2416a306373db08c5e925b4987fc8a9273973c39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-enum-type"></a>CLR 枚举类型
 声明和行为的枚举已从更改托管扩展的 c + + 为 Visual c + +。  
   
- 托管扩展枚举声明前都附有`__value`关键字。 本指南旨在从该类派生自的 CLR 枚举区分本机枚举`System::ValueType`，同时建议类似的功能。 例如:  
+ 托管扩展枚举声明前都附有`__value`关键字。 本指南旨在从该类派生自的 CLR 枚举区分本机枚举`System::ValueType`，同时建议类似的功能。 例如：  
   
 ```  
 __value enum e1 { fail, pass };  

@@ -1,12 +1,9 @@
 ---
-title: "CObList 类 |Microsoft 文档"
-ms.custom: 
+title: CObList 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcd79377eebbf36ec4dd4688dff8b33c112e451
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coblist-class"></a>CObList 类
 排序的唯一，则列表的 fSupports`CObject`指针访问按顺序或指针值。  
@@ -115,7 +110,7 @@ class CObList : public CObject
 |[CObList::SetAt](#setat)|设置给定位置处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CObList`列表的行为类似于双向链接列表。  
+ `CObList` 列表的行为类似于双向链接列表。  
   
  类型的变量的**位置**至关重要的列表。 你可以使用**位置**变量作为一个迭代器来按顺序遍历列表和一个书签以保存一个位置。 位置不相同的索引，但是。  
   
@@ -139,10 +134,10 @@ class CObList : public CObject
   
  `CObList`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
-##  <a name="addhead"></a>CObList::AddHead  
+##  <a name="addhead"></a>  CObList::AddHead  
  将新元素的列表添加到此列表的开头。  
   
 ```  
@@ -183,7 +178,7 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="addtail"></a>CObList::AddTail  
+##  <a name="addtail"></a>  CObList::AddTail  
  将新元素的列表添加到此列表的结尾。  
   
 ```  
@@ -224,7 +219,7 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="coblist"></a>CObList::CObList  
+##  <a name="coblist"></a>  CObList::CObList  
  构造一个空`CObject`指针列表。  
   
 ```  
@@ -254,7 +249,7 @@ CObList(INT_PTR nBlockSize = 10);
   
  [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="find"></a>CObList::Find  
+##  <a name="find"></a>  CObList::Find  
  按顺序以查找第一个在列表中搜索`CObject`匹配指定的指针`CObject`指针。  
   
 ```  
@@ -288,7 +283,7 @@ POSITION Find(
   
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CObList::FindIndex  
+##  <a name="findindex"></a>  CObList::FindIndex  
  使用的值`nIndex`作为列表中的索引。  
   
 ```  
@@ -303,7 +298,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
  A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果`nIndex`太大。 (如果，框架才生成断言`nIndex`为负。)  
   
 ### <a name="remarks"></a>备注  
- 从列表中，停止对的开头开始顺序扫描 *n* th 元素。  
+ 从列表中，停止对的开头开始顺序扫描*n*th 元素。  
   
  下表显示其他成员函数类似于`CObList::FindIndex`。  
   
@@ -317,7 +312,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="getat"></a>CObList::GetAt  
+##  <a name="getat"></a>  CObList::GetAt  
  类型的变量的**位置**至关重要的列表。  
   
 ```  
@@ -333,7 +328,7 @@ const CObject*& GetAt(POSITION position) const;
  请参见的返回值说明[GetHead](#gethead)。  
   
 ### <a name="remarks"></a>备注  
- 它并不相同索引，并且无法对**位置**值自己。 `GetAt`检索`CObject`给定位置与关联的指针。  
+ 它并不相同索引，并且无法对**位置**值自己。 `GetAt` 检索`CObject`给定位置与关联的指针。  
   
  你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   
@@ -347,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 ### <a name="example"></a>示例  
   请参阅示例[FindIndex](#findindex)。  
   
-##  <a name="getcount"></a>CObList::GetCount  
+##  <a name="getcount"></a>  CObList::GetCount  
  获取此列表中的元素数。  
   
 ```  
@@ -369,7 +364,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="gethead"></a>CObList::GetHead  
+##  <a name="gethead"></a>  CObList::GetHead  
  获取`CObject`表示此列表的头元素的指针。  
   
 ```  
@@ -399,7 +394,7 @@ const CObject*& GetHead() const;
   
  [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="getheadposition"></a>CObList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CObList::GetHeadPosition  
  获取此列表的头元素的位置。  
   
 ```  
@@ -421,7 +416,7 @@ POSITION GetHeadPosition() const;
   
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CObList::GetNext  
+##  <a name="getnext"></a>  CObList::GetNext  
  获取标识的列表元素`rPosition`，然后设置`rPosition`到`POSITION`的列表中的下一步条目的值。  
   
 ```  
@@ -466,7 +461,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  `a CAge at $46C0 21`  
   
-##  <a name="getprev"></a>CObList::GetPrev  
+##  <a name="getprev"></a>  CObList::GetPrev  
  获取标识的列表元素`rPosition`，然后设置`rPosition`到`POSITION`列表中的上一项的值。  
   
 ```  
@@ -509,7 +504,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  `a CAge at $421C 40`  
   
-##  <a name="getsize"></a>CObList::GetSize  
+##  <a name="getsize"></a>  CObList::GetSize  
  返回列表元素的数目。  
   
 ```  
@@ -534,7 +529,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="gettail"></a>CObList::GetTail  
+##  <a name="gettail"></a>  CObList::GetTail  
  获取`CObject`表示此列表的结尾元素的指针。  
   
 ```  
@@ -560,7 +555,7 @@ const CObject*& GetTail() const;
   
  [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="gettailposition"></a>CObList::GetTailPosition  
+##  <a name="gettailposition"></a>  CObList::GetTailPosition  
  获取此列表; 结尾元素的位置**NULL**如果列表为空。  
   
 ```  
@@ -582,7 +577,7 @@ POSITION GetTailPosition() const;
   
  [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="insertafter"></a>CObList::InsertAfter  
+##  <a name="insertafter"></a>  CObList::InsertAfter  
  在指定位置处的元素后，请向此列表中添加一个元素。  
   
 ```  
@@ -623,7 +618,7 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="insertbefore"></a>CObList::InsertBefore  
+##  <a name="insertbefore"></a>  CObList::InsertBefore  
  将元素添加到此列表中指定位置处的元素之前。  
   
 ```  
@@ -664,7 +659,7 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="isempty"></a>CObList::IsEmpty  
+##  <a name="isempty"></a>  CObList::IsEmpty  
  指示此列表是否包含任何元素。  
   
 ```  
@@ -684,7 +679,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>示例  
   请参阅示例[RemoveAll](#removeall)。  
   
-##  <a name="removeall"></a>CObList::RemoveAll  
+##  <a name="removeall"></a>  CObList::RemoveAll  
  从此列表中移除所有元素，并释放关联`CObList`内存。  
   
 ```  
@@ -708,7 +703,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CObList::RemoveAt  
+##  <a name="removeat"></a>  CObList::RemoveAt  
  从此列表中移除指定的元素。  
   
 ```  
@@ -746,7 +741,7 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="removehead"></a>CObList::RemoveHead  
+##  <a name="removehead"></a>  CObList::RemoveHead  
  从列表头与列表中移除的元素，将指针返回到它。  
   
 ```  
@@ -771,7 +766,7 @@ CObject* RemoveHead();
   
  [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CObList::RemoveTail  
+##  <a name="removetail"></a>  CObList::RemoveTail  
  从列表的结尾移除的元素，将指针返回到它。  
   
 ```  
@@ -796,7 +791,7 @@ CObject* RemoveTail();
   
  [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="setat"></a>CObList::SetAt  
+##  <a name="setat"></a>  CObList::SetAt  
  设置给定位置处的元素。  
   
 ```  
@@ -813,7 +808,7 @@ void SetAt(
  `CObject`要写入到列表的指针。  
   
 ### <a name="remarks"></a>备注  
- 类型的变量的**位置**至关重要的列表。 它并不相同索引，并且无法对**位置**值自己。 `SetAt`写入`CObject`到列表中的指定位置的指针。  
+ 类型的变量的**位置**至关重要的列表。 它并不相同索引，并且无法对**位置**值自己。 `SetAt` 写入`CObject`到列表中的指定位置的指针。  
   
  你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   

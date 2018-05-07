@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701f0292d9960801139abc698946122718247645
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>用于按配置文件优化的环境变量
 
-有三个影响与创建的映像上的测试方案的环境变量**/ltcg: pgi**用于按配置文件优化的：
+有三个影响与创建的映像上的测试方案的环境变量 **/ltcg: pgi**用于按配置文件优化的：
 
 - **PogoSafeMode**指定是否使用快速模式或安全模式的应用程序分析。
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 03/22/2018
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-已弃用此环境变量。 使用**EXACT**或**NOEXACT**自变量**/GENPROFILE**或**/FASTGENPROFILE**来控制此行为。
+已弃用此环境变量。 使用**EXACT**或**NOEXACT**自变量 **/GENPROFILE**或 **/FASTGENPROFILE**来控制此行为。
 
 清除或设置**PogoSafeMode**环境变量以指定是否要用于快速模式或安全模式的应用程序分析在 x86 系统。
 
@@ -43,17 +42,17 @@ ms.lasthandoff: 03/22/2018
 
 默认情况下，PGO 分析会在运行快速模式。 **PogoSafeMode**是仅需要你想要使用安全模式。
 
-若要运行 PGO 分析在安全模式下，必须使用环境变量**PogoSafeMode**或链接器开关**/PogoSafeMode**，取决于系统。 如果你正在执行分析在 x64 计算机，你必须使用链接器开关。 如果你正在执行分析 x86 计算机，你可以使用链接器切换或设置**PogoSafeMode**为之前启动优化过程的任何值的环境变量。
+若要运行 PGO 分析在安全模式下，必须使用环境变量**PogoSafeMode**或链接器开关 **/PogoSafeMode**，取决于系统。 如果你正在执行分析在 x64 计算机，你必须使用链接器开关。 如果你正在执行分析 x86 计算机，你可以使用链接器切换或设置**PogoSafeMode**为之前启动优化过程的任何值的环境变量。
 
 ### <a name="pogosafemode-syntax"></a>PogoSafeMode 语法
 
-> **set PogoSafeMode**[**=**_value_]
+> **设置 PogoSafeMode**[**=**_值_]
 
 设置**PogoSafeMode**为任何值，以启用安全模式。 设置要清除以前的值并重新启用快速模式下的值。
 
 ## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
 
-已弃用此环境变量。 使用**MEMMIN**和**MEMMAX**自变量**/GENPROFILE**或**/FASTGENPROFILE**来控制此行为。
+已弃用此环境变量。 使用**MEMMIN**和**MEMMAX**自变量 **/GENPROFILE**或 **/FASTGENPROFILE**来控制此行为。
 
 修改**VCPROFILE_ALLOC_SCALE**环境变量，若要更改的内存量分配为保存配置文件数据。 在极少数情况下，将不会有足够的内存可用于支持运行测试方案时收集配置文件数据。 在这些情况下，你可以通过设置中增加的内存量**VCPROFILE_ALLOC_SCALE**。 如果测试运行，该值指示你没有足够的内存期间收到一条错误消息，将分配到更大的值**VCPROFILE_ALLOC_SCALE**，直到在测试运行完成，但没有内存不足错误。
 
@@ -71,7 +70,7 @@ ms.lasthandoff: 03/22/2018
 
 ### <a name="vcprofilepath-syntax"></a>VCPROFILE_PATH 语法
 
-> **set VCPROFILE_PATH**[**=**_path_]
+> **设置 VCPROFILE_PATH**[**=**_路径_]
 
 设置*路径*到要在其中添加.pgc 文件的目录路径的参数。 例如，此命令行 C:\profile 到设置的文件夹：
 
@@ -81,4 +80,4 @@ ms.lasthandoff: 03/22/2018
 
 [按配置文件优化](../../build/reference/profile-guided-optimizations.md)<br/>
 [/GENPROFILE 和 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
-[/USEPROFILE](useprofile.md)<br/>
+[/ USEPROFILE](useprofile.md)<br/>

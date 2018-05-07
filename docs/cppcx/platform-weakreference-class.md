@@ -1,26 +1,21 @@
 ---
-title: "Platform:: weakreference 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: weakreference 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 类
 表示对 ref 类实例的弱引用。  
@@ -39,7 +34,7 @@ class WeakReference
   
 |成员|描述|  
 |------------|-----------------|  
-|[WeakReference::WeakReference](#ctor)|初始化 WeakReference 类的新实例。|  
+|[Weakreference:: Weakreference](#ctor)|初始化 WeakReference 类的新实例。|  
   
 ### <a name="methods"></a>方法  
   
@@ -57,7 +52,7 @@ class WeakReference
 ### <a name="remarks"></a>备注  
  WeakReference 类本身不是 ref 类，因此不从 Platform::Object^ 继承，也不能在公共方法的签名中使用。  
 
-## <a name="operator-assign"></a> WeakReference::operator=
+## <a name="operator-assign"></a> WeakReference::operator =
 给 WeakReference 赋值。  
   
 ### <a name="syntax"></a>语法  

@@ -1,13 +1,10 @@
 ---
-title: "TN021： 命令和消息传送 |Microsoft 文档"
-ms.custom: 
+title: TN021： 命令和消息传送 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021：命令和消息传送
 > [!NOTE]
@@ -200,7 +195,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  在端说明中，有两个**CWnd**派生的类指定在滚动条样式在其中创建时间是捕获并不会传递给 Windows。 当传递到创建例程， **WS_HSCROLL**和**WS_VSCROLL**可以独立设置，但不能更改创建后。 当然，应该不是直接测试，或将它们创建的窗口 WS_SCROLL 样式位设置。  
   
- 有关**CMDIFrameWnd**滚动条样式在传入到**创建**或**LoadFrame**用于创建 MDICLIENT。 如果你想要具有一定要设置的可滚动 MDICLIENT 区域 （如 Windows 程序管理器） 同时滚动条样式 (**WS_HSCROLL** &#124;**WS_VSCROLL**) 用来创建样式**CMDIFrameWnd**。  
+ 有关**CMDIFrameWnd**滚动条样式在传入到**创建**或**LoadFrame**用于创建 MDICLIENT。 如果你想要具有一定要设置的可滚动 MDICLIENT 区域 （如 Windows 程序管理器） 同时滚动条样式 (**WS_HSCROLL** &#124; **WS_VSCROLL**) 用于创建样式**CMDIFrameWnd**。  
   
  有关**CSplitterWnd**滚动条样式应用于拆分器区域的特殊共享的滚动条。 对于静态拆分窗口，通常不会设置这两种滚动栏样式。 对于动态拆分窗口，你将通常具有滚动条样式设置为您将拆分，即方向**WS_HSCROLL**可以拆分行，如果**WS_VSCROLL**如果可以拆分列。  
   

@@ -1,12 +1,9 @@
 ---
-title: IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs
-ms.custom: 
+title: 'Idbschemarowsetimpl:: Createschemarowset |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl::CreateSchemaRowset
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e819805f9c73b2f8622b21b999b0db5f6771ecbe
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90a942fc92faf3066669b46fd825ad2eae393f43
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 对模板参数指定的对象实现 COM 对象创建程序函数。  
@@ -80,7 +75,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 ## <a name="remarks"></a>备注  
  此函数对所有类型的架构行集实现泛型创建程序。 通常情况下，用户不调用此函数。 它由架构映射的实现调用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

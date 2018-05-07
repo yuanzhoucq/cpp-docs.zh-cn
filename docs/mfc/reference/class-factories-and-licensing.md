@@ -1,13 +1,10 @@
 ---
-title: "类工厂和许可 |Microsoft 文档"
-ms.custom: 
+title: 类工厂和许可 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>类工厂和许可
 为了创建 OLE 控件的实例，容器应用程序调用了控件的类工厂的成员函数。 由于控件是实际 OLE 对象，类工厂将负责创建控件的实例。 每个 OLE 控件类必须有一个类工厂。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[END_OLEFACTORY](#end_olefactory)|结束任何授权函数的声明。|  
 |[AfxVerifyLicFile](#afxverifylicfile)|确认控件是否已获得在特定计算机上使用的授权。|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  声明类工厂和`GetClassID`控件类的成员函数。  
   
 ```   
@@ -62,10 +57,10 @@ DECLARE_OLECREATE_EX(class_name)
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
  实现控件的类工厂和[GetClassID](../../mfc/reference/colecontrol-class.md#getclassid)控件类的成员函数。  
   
 ```   
@@ -98,10 +93,10 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="remarks"></a>备注  
  此宏必须出现在任何使用的控件类的实现文件`DECLARE_OLECREATE_EX`宏或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`宏。 外部名称是向其他应用程序公开 OLE 控件的标识符。 容器使用此名称请求此控件类的对象。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
  开始你的控件类的标头文件中类工厂的声明。  
   
 ``` 
@@ -115,10 +110,10 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="remarks"></a>备注  
  声明的授权函数的类工厂应开始后立即`BEGIN_OLEFACTORY`。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
  结束控件的类工厂的声明。  
   
 ```  
@@ -129,10 +124,10 @@ END_OLEFACTORY(class_name)
  *class_name*  
  这是其类工厂的控件类名称。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
  调用此函数可验证通过名为的许可证文件`pszLicFileName`对 OLE 控件有效。  
   
 ```   
@@ -164,7 +159,7 @@ BOOL AFXAPI AfxVerifyLicFile(
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxctl.h  
 
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "CHeapPtrBase 类 |Microsoft 文档"
-ms.custom: 
+title: CHeapPtrBase 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 类
 此类窗体智能堆指针的多个类的基础。  
@@ -90,10 +85,10 @@ class CHeapPtrBase
 ## <a name="remarks"></a>备注  
  此类窗体智能堆指针的多个类的基础。 派生的类，例如， [CHeapPtr](../../atl/reference/cheapptr-class.md)和[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，添加自己的构造函数和运算符。 请参阅这些类的实现示例。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcore.h  
   
-##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
  调用此方法以分配内存。  
   
 ```
@@ -110,7 +105,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调试版本中，如果断言失败会发生[CHeapPtrBase::m_pData](#m_pdata)成员变量当前指向的现有值; 即，不等于 NULL。  
   
-##  <a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>  CHeapPtrBase::Attach  
  调用此方法需要现有指针的所有权。  
   
 ```
@@ -126,7 +121,7 @@ void Attach(T* pData) throw();
   
  调试版本中，如果断言失败会发生[CHeapPtrBase::m_pData](#m_pdata)成员变量当前指向的现有值; 即，不等于 NULL。  
   
-##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  析构函数。  
   
 ```
@@ -136,7 +131,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>  CHeapPtrBase::Detach  
  调用此方法可释放的指针的所有权。  
   
 ```
@@ -149,7 +144,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>备注  
  释放的指针的所有权，设置[CHeapPtrBase::m_pData](#m_pdata)成员变量为 NULL，并返回指针的副本。  
   
-##  <a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>  CHeapPtrBase::Free  
  调用此方法以删除指向的对象`CHeapPtrBase`。  
   
 ```
@@ -159,7 +154,7 @@ void Free() throw();
 ### <a name="remarks"></a>备注  
  指向的对象`CHeapPtrBase`将释放和[CHeapPtrBase::m_pData](#m_pdata)成员变量设置为 NULL。  
   
-##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  指针数据成员变量。  
   
 ```
@@ -169,7 +164,7 @@ T* m_pData;
 ### <a name="remarks"></a>备注  
  此成员变量包含的指针信息。  
   
-##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
  & 运算符。  
   
 ```
@@ -180,7 +175,7 @@ T** operator&() throw();
  返回指向对象的地址`CHeapPtrBase`对象。  
   
 
-##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
  指针到成员运算符中。  
   
@@ -194,7 +189,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>备注  
  使用此运算符的指向类中调用的方法`CHeapPtrBase`对象。 调试版本中，如果断言失败会发生`CHeapPtrBase`点为 NULL。  
   
-##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  强制转换运算符。  
   
 ```  
@@ -204,7 +199,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>备注  
  返回[CHeapPtrBase::m_pData](#m_pdata)。  
   
-##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
  调用此方法以重新分配内存。  
   
 ```

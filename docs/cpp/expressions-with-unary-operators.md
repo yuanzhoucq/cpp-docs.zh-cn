@@ -1,12 +1,9 @@
 ---
-title: "使用一元运算符的表达式 |Microsoft 文档"
-ms.custom: 
+title: 使用一元运算符的表达式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>使用一元运算符的表达式
 一元运算符仅作用于表达式中的某个操作数。 一元运算符如下所示：  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [__alignof 运算符](../cpp/alignof-operator.md)  
   
--   [new 运算符](../cpp/new-operator-cpp.md)  
+-   [New 运算符](../cpp/new-operator-cpp.md)  
   
 -   [delete 运算符](../cpp/delete-operator-cpp.md)  
   
@@ -64,17 +59,17 @@ ms.lasthandoff: 12/21/2017
   
 -   *postfix-expression*  
   
--   `++`*一元表达式*  
+-   `++` *一元表达式*  
   
--   `--`*一元表达式*  
+-   `--` *一元表达式*  
   
 -   *一元运算符**强制转换表达式*  
   
--   `sizeof`*一元表达式*  
+-   `sizeof` *一元表达式*  
   
--   `sizeof(`*类型名称*`)`  
+-   `sizeof(` *类型名称* `)`  
   
--   `decltype(`*表达式*`)`  
+-   `decltype(` *表达式* `)`  
   
 -   *分配表达式*  
   
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  任何*后缀表达式*被视为*一元表达式*，而且因为任何主表达式被视为*后缀表达式*，任何主表达式是被视为*一元表达式*还。 有关详细信息，请参阅[后缀表达式](../cpp/postfix-expressions.md)和[主表达式](../cpp/primary-expressions.md)。  
   
- A*一元运算符*组成一个或多个以下符号：`* & + - ! ~`  
+ A*一元运算符*组成一个或多个以下符号： `* & + - ! ~`  
   
  *强制转换表达式*是可选的强制转换，以更改类型的一元表达式。 有关详细信息请参阅[强制转换运算符: （)](../cpp/cast-operator-parens.md)。  
   

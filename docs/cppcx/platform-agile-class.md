@@ -1,11 +1,8 @@
 ---
-title: "Platform:: agile 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: agile 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 表示将 MashalingBehavior=Standard 作为敏捷对象（这可以大大降低出现运行时线程处理异常的机率）的对象。 `Agile<T>` 使非敏捷对象可以调用相同或不同线程调用，或是从相同或不同线程进行调用。 有关详细信息，请参阅[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)。  
@@ -80,7 +75,7 @@ class Agile;
   
  `Agile`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -217,7 +212,7 @@ const throw();
   
  此运算符实际返回未公开的内部类型。 保留返回值一种简便方式是将它分配给使用声明的变量**自动**类型推导关键字。  
 
-## <a name="operator-assign"></a>  Agile::operator= Operator
+## <a name="operator-assign"></a>  Agile:: operator = 运算符
 将指定对象分配给当前敏捷对象。  
   
 ## <a name="syntax"></a>语法  

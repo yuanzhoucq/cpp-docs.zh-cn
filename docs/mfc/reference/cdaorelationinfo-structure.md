@@ -2,12 +2,9 @@
 title: CDaoRelationInfo 结构 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoRelationInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 047b81ebaa903d2b9bdddcf6c606d1e9fe649482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 结构
 `CDaoRelationInfo`结构包含有关定义字段中两个表之间的关系的信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
@@ -85,9 +80,9 @@ struct CDaoRelationInfo
   
  关系对象不由 MFC 类表示。 相反，基础的 MFC 对象的 DAO 对象`CDaoDatabase`类维护的关系对象的集合：`CDaoDatabase`提供成员函数来访问关系信息，或你的某些单个项可以使用在一次访问它们`CDaoRelationInfo`对象通过调用`GetRelationInfo`包含的数据库对象的成员函数。  
   
- 检索的信息[CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数将存储在`CDaoRelationInfo`结构。 `CDaoRelationInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoRelationInfo`对象。  
+ 检索的信息[CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数将存储在`CDaoRelationInfo`结构。 `CDaoRelationInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoRelationInfo`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

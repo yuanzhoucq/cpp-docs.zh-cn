@@ -1,12 +1,9 @@
 ---
-title: "CView 类 |Microsoft 文档"
-ms.custom: 
+title: CView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CView
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843417508fc43f99b0027873988746d03a7863cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cview-class"></a>CView 类
 提供用户定义视图类的基本功能。  
@@ -170,10 +165,10 @@ class AFX_NOVTABLE CView : public CWnd
   
  `CView`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cview"></a>CView::CView  
+##  <a name="cview"></a>  CView::CView  
  构造 `CView` 对象。  
   
 ```  
@@ -183,7 +178,7 @@ CView();
 ### <a name="remarks"></a>备注  
  创建新的框架窗口或拆分窗口时，框架将调用构造函数。 重写[OnInitialUpdate](#oninitialupdate)成员函数以初始化视图，在附加文档之后。  
   
-##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
+##  <a name="doprepareprinting"></a>  CView::DoPreparePrinting  
  调用此函数的重写从[OnPreparePrinting](#onprepareprinting)以调用打印对话框并创建打印机设备上下文。  
   
 ```  
@@ -202,7 +197,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
   
  如果正在预览一个文件，此函数将创建使用当前的打印机设置; 是打印机设备上下文此设备上下文用于在预览期间模拟打印机。  
   
-##  <a name="getdocument"></a>CView::GetDocument  
+##  <a name="getdocument"></a>  CView::GetDocument  
  调用此函数可获取指向视图的文档的指针。  
   
 ```  
@@ -215,7 +210,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>备注  
  这样，您才能调用文档的成员函数。  
   
-##  <a name="isselected"></a>CView::IsSelected  
+##  <a name="isselected"></a>  CView::IsSelected  
  由框架调用以检查是否指定的文档项被选中。  
   
 ```  
@@ -232,7 +227,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>备注  
  此函数的默认实现返回**FALSE**。 重写此函数，如果你要实现选择使用[CDocItem](../../mfc/reference/cdocitem-class.md)对象。 如果你的视图包含 OLE 项，必须重写此函数。  
   
-##  <a name="onactivateframe"></a>CView::OnActivateFrame  
+##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  当激活或停用包含视图的框架窗口时，由框架调用。  
   
 ```  
@@ -257,7 +252,7 @@ virtual void OnActivateFrame(
 ### <a name="remarks"></a>备注  
  如果你想要执行特殊处理，在激活或停用与视图关联的框架窗口时，重写该成员函数。 例如， [CFormView](../../mfc/reference/cformview-class.md)执行此重写时它将保存并还原具有焦点的控件。  
   
-##  <a name="onactivateview"></a>CView::OnActivateView  
+##  <a name="onactivateview"></a>  CView::OnActivateView  
  当激活或停用视图时，由框架调用。  
   
 ```  
@@ -284,7 +279,7 @@ virtual void OnActivateView(
   
  与不同，这些参数时[CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)称为与不同于什么视图[CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)将返回。 发生这种情况最常与拆分窗口。  
   
-##  <a name="onbeginprinting"></a>CView::OnBeginPrinting  
+##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting  
  在调用 `OnPreparePrinting` 之后，由框架在打印或打印预览作业开始时调用。  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnBeginPrinting(
   
  你也可以使用此函数根据打印机设备上下文的属性执行初始化。 例如，打印文档所需的页面数可能取决于用户在“打印”对话框中指定的设置（例如页面长度）。 在这种情况下，不能指定文档长度以[OnPreparePrinting](#onprepareprinting)成员函数，其中你平常; 你必须等待，直到已根据对话框设置创建打印机设备上下文。 [OnBeginPrinting](#onbeginprinting)是第一个可重写函数，使您可以访问到[CDC](../../mfc/reference/cdc-class.md)表示打印机设备上下文，因此你可以从该函数设置文档长度的对象。 请注意，如果此时还不指定文档长度，打印预览期间将不会显示滚动条。  
   
-##  <a name="ondragenter"></a>CView::OnDragEnter  
+##  <a name="ondragenter"></a>  CView::OnDragEnter  
  当鼠标首次进入放置目标窗口的非滚动区域，由框架调用。  
   
 ```  
@@ -328,13 +323,13 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>返回值  
  取值范围为`DROPEFFECT`枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常依赖于当前的密钥状态由指示`dwKeyState`。 到 keystates 的标准映射`DROPEFFECT`值是：  
   
-- `DROPEFFECT_NONE`无法删除该数据对象，该窗口中。  
+- `DROPEFFECT_NONE` 无法删除该数据对象，该窗口中。  
   
-- `DROPEFFECT_LINK`有关**MK_CONTROL &#124;MK_SHIFT**创建对象和其服务器之间的链接。  
+- `DROPEFFECT_LINK` 有关**MK_CONTROL &#124; MK_SHIFT**创建对象和其服务器之间的链接。  
   
-- `DROPEFFECT_COPY`有关**MK_CONTROL**创建已删除的对象的副本。  
+- `DROPEFFECT_COPY` 有关**MK_CONTROL**创建已删除的对象的副本。  
   
-- `DROPEFFECT_MOVE`有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。 这通常是默认放置效果，当该视图可以接受此数据对象。  
+- `DROPEFFECT_MOVE` 有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。 这通常是默认放置效果，当该视图可以接受此数据对象。  
   
  有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。  
   
@@ -343,7 +338,7 @@ virtual DROPEFFECT OnDragEnter(
   
  重写此函数可准备以便将来调用[OnDragOver](#ondragover)成员函数。 此数据对象中所需的任何数据应检索以便以后用于在此时`OnDragOver`成员函数。 该视图还应能够在用户的视觉反馈这次会更新。 有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
   
-##  <a name="ondragleave"></a>CView::OnDragLeave  
+##  <a name="ondragleave"></a>  CView::OnDragLeave  
  由框架调用在拖动操作期间时鼠标退出该窗口的有效拖放区域。  
   
 ```  
@@ -353,7 +348,7 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>备注  
  重写此函数，如果当前视图需要清理期间执行任何操作[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)调用，删除任何可视用户反馈时拖动并删除了对象等.  
   
-##  <a name="ondragover"></a>CView::OnDragOver  
+##  <a name="ondragover"></a>  CView::OnDragOver  
  由框架调用在拖动操作期间当鼠标移到放置目标窗口。  
   
 ```  
@@ -376,13 +371,13 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>返回值  
  取值范围为`DROPEFFECT`枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常取决于当前项的状态由`dwKeyState`。 到 keystates 的标准映射`DROPEFFECT`值是：  
   
-- `DROPEFFECT_NONE`无法删除该数据对象，该窗口中。  
+- `DROPEFFECT_NONE` 无法删除该数据对象，该窗口中。  
   
-- `DROPEFFECT_LINK`有关**MK_CONTROL &#124;MK_SHIFT**创建对象和其服务器之间的链接。  
+- `DROPEFFECT_LINK` 有关**MK_CONTROL &#124; MK_SHIFT**创建对象和其服务器之间的链接。  
   
-- `DROPEFFECT_COPY`有关**MK_CONTROL**创建已删除的对象的副本。  
+- `DROPEFFECT_COPY` 有关**MK_CONTROL**创建已删除的对象的副本。  
   
-- `DROPEFFECT_MOVE`有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。 这通常是默认放置效果，当该视图可以接受的数据对象。  
+- `DROPEFFECT_MOVE` 有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。 这通常是默认放置效果，当该视图可以接受的数据对象。  
   
  有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。  
   
@@ -391,7 +386,7 @@ virtual DROPEFFECT OnDragOver(
   
  重写此函数可在拖动操作期间提供的用户的可视反馈。 由于连续调用此函数，其中包含的任何代码应优化尽可能多地。 有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
   
-##  <a name="ondragscroll"></a>CView::OnDragScroll  
+##  <a name="ondragscroll"></a>  CView::OnDragScroll  
  由框架在调用之前调用[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)以确定该点是否位于滚动区域。  
   
 ```  
@@ -410,22 +405,22 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>返回值  
  取值范围为`DROPEFFECT`枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常依赖于当前的密钥状态由指示`dwKeyState`。 到 keystates 的标准映射`DROPEFFECT`值是：  
   
-- `DROPEFFECT_NONE`无法删除该数据对象，该窗口中。  
+- `DROPEFFECT_NONE` 无法删除该数据对象，该窗口中。  
   
-- `DROPEFFECT_LINK`有关**MK_CONTROL &#124;MK_SHIFT**创建对象和其服务器之间的链接。  
+- `DROPEFFECT_LINK` 有关**MK_CONTROL &#124; MK_SHIFT**创建对象和其服务器之间的链接。  
   
-- `DROPEFFECT_COPY`有关**MK_CONTROL**创建已删除的对象的副本。  
+- `DROPEFFECT_COPY` 有关**MK_CONTROL**创建已删除的对象的副本。  
   
-- `DROPEFFECT_MOVE`有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。  
+- `DROPEFFECT_MOVE` 有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。  
   
-- `DROPEFFECT_SCROLL`指示，拖动滚动操作即将发生或者问题发生在目标视图。  
+- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标视图。  
   
  有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。  
   
 ### <a name="remarks"></a>备注  
  如果你想要为此事件提供特殊行为，重写此函数。 默认实现自动滚动 windows 时光标拖放到每个窗口的边框内的默认滚动区域。有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
   
-##  <a name="ondraw"></a>类库  
+##  <a name="ondraw"></a>  类库  
  由框架调用以呈现文档的图像。  
   
 ```  
@@ -443,7 +438,7 @@ virtual void OnDraw(CDC* pDC) = 0;
   
  若要优化绘制，调用[RectVisible](../../mfc/reference/cdc-class.md#rectvisible)的设备上下文以了解是否将绘制给定的矩形的成员函数。 如果你需要区分普通屏幕显示和打印，调用[IsPrinting](../../mfc/reference/cdc-class.md#isprinting)的设备上下文的成员函数。  
   
-##  <a name="ondrop"></a>CView::OnDrop  
+##  <a name="ondrop"></a>  CView::OnDrop  
  当用户释放数据对象有效放置目标之上时，由框架调用。  
   
 ```  
@@ -460,11 +455,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  用户已请求放置效果。  
   
-- `DROPEFFECT_COPY`创建一份丢弃的数据对象。  
+- `DROPEFFECT_COPY` 创建一份丢弃的数据对象。  
   
-- `DROPEFFECT_MOVE`将数据对象移到当前的鼠标位置。  
+- `DROPEFFECT_MOVE` 将数据对象移到当前的鼠标位置。  
   
-- `DROPEFFECT_LINK`创建数据对象和其服务器之间的链接。  
+- `DROPEFFECT_LINK` 创建数据对象和其服务器之间的链接。  
   
  `point`  
  相对于视图客户端区域的当前鼠标位置。  
@@ -480,7 +475,7 @@ virtual BOOL OnDrop(
 > [!NOTE]
 >  框架不调用此函数的重写是否[OnDropEx](#ondropex)此视图类中。  
   
-##  <a name="ondropex"></a>CView::OnDropEx  
+##  <a name="ondropex"></a>  CView::OnDropEx  
  当用户释放数据对象有效放置目标之上时，由框架调用。  
   
 ```  
@@ -528,19 +523,19 @@ virtual DROPEFFECT OnDropEx(
   
  放置效果描述与拖放操作相关联的操作。 请参阅以下放置效果的列表：  
   
-- `DROPEFFECT_NONE`不允许删除。  
+- `DROPEFFECT_NONE` 不允许删除。  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`指示，拖动滚动操作即将发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标中。  
   
  设置默认菜单命令的详细信息，请参阅[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) Windows SDK 中和[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)此卷中。  
   
-##  <a name="onendprinting"></a>CView::OnEndPrinting  
+##  <a name="onendprinting"></a>  CView::OnEndPrinting  
  在打印文档或将其预览后，由框架调用。  
   
 ```  
@@ -559,7 +554,7 @@ virtual void OnEndPrinting(
 ### <a name="remarks"></a>备注  
  此函数的默认实现不执行任何操作。 重写此函数可释放中分配任何 GDI 资源[OnBeginPrinting](#onbeginprinting)成员函数。  
   
-##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
+##  <a name="onendprintpreview"></a>  CView::OnEndPrintPreview  
  当用户退出打印预览模式时，由框架调用。  
   
 ```  
@@ -588,7 +583,7 @@ virtual void OnEndPrintPreview(
   
  始终调用基类版本的`OnEndPrintPreview`从你重写时，通常在该函数的末尾。  
   
-##  <a name="oninitialupdate"></a>Cview:: Oninitialupdate  
+##  <a name="oninitialupdate"></a>  Cview:: Oninitialupdate  
  视图首先附加到文档中之后, 但在最初显示的视图之前，由框架调用。  
   
 ```  
@@ -598,7 +593,7 @@ virtual void OnInitialUpdate();
 ### <a name="remarks"></a>备注  
  此函数的默认实现调用[OnUpdate](#onupdate)而不提示信息的成员函数 (即，使用默认值为 0 表示`lHint`参数和**NULL**为`pHint`参数)。 重写此函数以执行任何需要有关文档的信息的一次性初始化。 例如，如果你的应用程序具有固定大小的文档，你可以使用此函数来初始化视图的滚动限制基于的文档大小。 如果你的应用程序支持大小可变的文档，使用[OnUpdate](#onupdate)更新滚动限制每次文档发生更改。  
   
-##  <a name="onpreparedc"></a>CView::OnPrepareDC  
+##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  由框架在之前调用[OnDraw](#ondraw)为屏幕显示和之前调用成员函数[OnPrint](#onprint)在打印或打印预览过程的每个页面调用成员函数。  
   
 ```  
@@ -632,7 +627,7 @@ virtual void OnPrepareDC(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="onprepareprinting"></a>CView::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting  
  打印或预览文档之前，由框架调用。  
   
 ```  
@@ -651,7 +646,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  你必须重写此函数可启用打印和打印预览。 调用[DoPreparePrinting](#doprepareprinting)成员函数，将其传递`pInfo`参数，然后返回其返回值;`DoPreparePrinting`显示打印对话框中，并创建打印机设备上下文。 如果你想要初始化使用默认值以外的值打印对话框中，将值分配给的成员`pInfo`。 例如，如果你知道文档的长度，将值传递给[SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)成员函数`pInfo`之前调用`DoPreparePrinting`。 此值显示在收件人： 框中的打印对话框中的范围部分。  
   
- `DoPreparePrinting`不显示预览作业的打印对话框。 如果你想要绕过打印作业的打印对话框，请检查**m_bPreview**的成员`pInfo`是**FALSE**然后将它设置为**TRUE**之前将其传递给`DoPreparePrinting`; 重置到**FALSE**之后。  
+ `DoPreparePrinting` 不显示预览作业的打印对话框。 如果你想要绕过打印作业的打印对话框，请检查**m_bPreview**的成员`pInfo`是**FALSE**然后将它设置为**TRUE**之前将其传递给`DoPreparePrinting`; 重置到**FALSE**之后。  
   
  如果你需要执行需要访问的初始化`CDC`表示打印机设备上下文 （例如，如果你之前需要知道的页大小指定文档的长度），对象重写`OnBeginPrinting`成员函数。  
   
@@ -666,7 +661,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="onprint"></a>CView::OnPrint  
+##  <a name="onprint"></a>  CView::OnPrint  
  由框架调用以打印或预览文档的一页。  
   
 ```  
@@ -706,7 +701,7 @@ virtual void OnPrint(
   
  另一个示例，请参阅[CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)。  
   
-##  <a name="onscroll"></a>CView::OnScroll  
+##  <a name="onscroll"></a>  CView::OnScroll  
  由框架可以确定是否滚动一点。  
   
 ```  
@@ -746,7 +741,7 @@ virtual BOOL OnScroll(
 ### <a name="remarks"></a>备注  
  框架使用一种情况下在调用此函数`bDoScroll`设置为**TRUE**视图当收到滚动条消息。 在这种情况下，你应实际滚动视图。 使用在其他情况下调用此函数`bDoScroll`设置为**FALSE**时 OLE 项最初拖放到放置目标的自动滚动区域滚动实际的发生之前。 在这种情况下，你应实际滚动视图。  
   
-##  <a name="onscrollby"></a>CView::OnScrollBy  
+##  <a name="onscrollby"></a>  CView::OnScrollBy  
  当用户查看文档，通过拖动针对视图的当前边框的 OLE 项或操作的垂直或水平滚动条的存在视图之外的区域，由框架调用。  
   
 ```  
@@ -772,7 +767,7 @@ virtual BOOL OnScrollBy(
   
  如果文档宽度或高度超过 32767 的像素为单位，过去的 32767 滚动将失败，因为`OnScrollBy`称为无效`sizeScroll`自变量。  
   
-##  <a name="onupdate"></a>CView::OnUpdate  
+##  <a name="onupdate"></a>  CView::OnUpdate  
  修改视图的文档; 后，由框架调用调用此函数[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) ，并允许更新以反映这些修改显示的视图。  
   
 ```  

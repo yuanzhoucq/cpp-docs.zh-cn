@@ -1,38 +1,33 @@
 ---
-title: "如何： 添加命令路由到 Windows 窗体控件 |Microsoft 文档"
-ms.custom: 
+title: 如何： 添加命令路由到 Windows 窗体控件 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：向 Windows 窗体控件添加命令传送
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)将命令和更新命令 UI 消息路由到用户控件，以允许其处理 MFC 命令 （例如，帧菜单项和工具栏按钮）。  
   
  该用户控件使用[ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)来存储对中的命令源对象的引用`m_CmdSrc`，下面的示例中所示。 若要使用`ICommandTarget`必须添加对 mfcmifc80.dll 的引用。  
   
- `CWinFormsView`通过将它们转发到托管的用户控件中处理多个常见的 MFC 视图通知。 这些通知包括[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)和[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。  
+ `CWinFormsView` 通过将它们转发到托管的用户控件中处理多个常见的 MFC 视图通知。 这些通知包括[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)和[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。  
   
  本主题假定你以前已完成[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[如何： 创建用户控件和主机 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。  
   

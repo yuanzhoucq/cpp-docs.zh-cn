@@ -1,13 +1,10 @@
 ---
-title: "列表框处理程序 |Microsoft 文档"
-ms.custom: 
+title: 列表框处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ON_LBN_DBLCLK
 - ON_LBN_ERRSPACE
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ON_LBN_SETFOCUS
 - ON_LBN_DBLCLK
 ms.assetid: e4e54412-2167-436a-883b-5dcad01820b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afbfadae49fca6d5e53e24d212237cb172636f6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1725521fd710f70f36feb321d9bd019eeebb8116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-box-handlers"></a>列表框处理程序
 下面的映射条目具有相应的函数原型。  

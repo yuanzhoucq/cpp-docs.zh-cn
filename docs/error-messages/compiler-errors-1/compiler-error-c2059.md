@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2059 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2059 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2059
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87f9c3dbb1405463804b7abd5c94abe04a42845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69182e4b27b474cafe60b71b02594a244f65a09b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2059"></a>编译器错误 C2059
 语法错误: token  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  如果在紧随的符号上会出现该错误消息`typedef`变量，请确保该变量已定义的源代码中。  
   
- 如果符号计算结果为执行任何操作，可能会发生，可能会 C2059 时**/D** `symbol`  **=** 用于编译。  
+ 如果符号计算结果为执行任何操作，可能会发生，可能会 C2059 时 **/D** `symbol` **=** 用于编译。  
   
 ```  
 // C2059a.cpp  

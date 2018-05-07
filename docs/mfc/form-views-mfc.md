@@ -1,13 +1,10 @@
 ---
-title: "窗体视图 (MFC) |Microsoft 文档"
-ms.custom: 
+title: 窗体视图 (MFC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-views-mfc"></a>窗体视图 (MFC)
 你可以将窗体添加到任何 Visual c + + 应用程序支持的 MFC 库，包括[基于窗体的应用程序](../mfc/reference/creating-a-forms-based-mfc-application.md)(一个其视图类派生自`CFormView`)。 如果你未最初创建你的应用程序以支持窗体，Visual c + + 将时插入一个新的窗体添加这种对你支持。 在 SDI 或 MDI 应用程序，它实现默认[文档/视图体系结构](../mfc/document-view-architecture.md)，当用户选择`New`命令 (默认情况下上,**文件**菜单)，Visual c + + 会提示用户从可用的窗体中选择。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
  SDI 应用程序后，当用户选择`New`命令时，窗体的当前实例继续运行，但如果找不到创建具有所选表单的应用程序的新实例。 在 MDI 应用程序，该窗体的当前实例继续运行时用户选择`New`命令。  
   
 > [!NOTE]
->  您可以在基于对话框的应用程序中插入窗体 (基于其对话框类的一个`CDialog`，另一个类实现的任何视图中)。 但是，没有文档/视图体系结构，Visual c + + 不自动实现**文件**&#124;**新**功能。 你必须创建一个要查看其他窗体，例如通过实现具有各种属性页的选项卡式的对话框的用户的方式。  
+>  您可以在基于对话框的应用程序中插入窗体 (基于其对话框类的一个`CDialog`，另一个类实现的任何视图中)。 但是，没有文档/视图体系结构，Visual c + + 不自动实现**文件**&#124;**新建**功能。 你必须创建一个要查看其他窗体，例如通过实现具有各种属性页的选项卡式的对话框的用户的方式。  
   
  当你的应用程序中插入一个新窗体时，Visual c + + 实现以下功能：  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
      **WS_VISIBLE**= 关闭  
   
-     **WS_CAPTION =**关闭  
+     **WS_CAPTION =** 关闭  
   
  为应用程序基于文档/视图体系结构，**新窗体**命令 （右键单击类视图中） 还：  
   

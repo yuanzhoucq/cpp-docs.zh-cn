@@ -1,12 +1,9 @@
 ---
-title: "CBitmap 类 |Microsoft 文档"
-ms.custom: 
+title: CBitmap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmap
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 封装一个 Windows 图形设备接口 (GDI) 位图并提供成员函数以操作位图。  
@@ -108,10 +103,10 @@ class CBitmap : public CGdiObject
   
  `CBitmap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
  构造 `CBitmap` 对象。  
   
 ```  
@@ -121,7 +116,7 @@ CBitmap();
 ### <a name="remarks"></a>备注  
  必须使用一个初始化成员函数初始化生成的对象。  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
  初始化具有指定的宽度、高度和位模式的设备相关的内存位图。  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateBitmap(
   
  有关详细信息，请参见 **BITMAP** 结构中的 **bmBits** 字段的说明。 [位图](../../mfc/reference/bitmap-structure.md)结构做了介绍[CBitmap::CreateBitmapIndirect](#createbitmapindirect)成员函数。  
   
-##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
  初始化具有宽度、 高度和提供指向的结构中的位模式 （如果指定） 的位图`lpBitmap`。  
   
 ```  
@@ -182,7 +177,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  当你完成与`CBitmap`创建与对象`CreateBitmapIndirect`函数，首先选择设备上下文中中的位图，然后删除`CBitmap`对象。  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
  初始化与指定的设备兼容的位图`pDC`。  
   
 ```  
@@ -216,7 +211,7 @@ BOOL CreateCompatibleBitmap(
   
  当你完成与`CBitmap`创建与对象`CreateCompatibleBitmap`函数，首先选择设备上下文中中的位图，然后删除`CBitmap`对象。  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
  初始化与由标识的设备上下文兼容的可丢弃位图`pDC`。  
   
 ```  
@@ -246,7 +241,7 @@ BOOL CreateDiscardableBitmap(
   
  当你完成与`CBitmap`创建与对象`CreateDiscardableBitmap`函数，首先选择设备上下文中中的位图，然后删除`CBitmap`对象。  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
  返回一个指向`CBitmap`对象时提供 Windows GDI 位图的句柄。  
   
 ```  
@@ -263,7 +258,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>备注  
  如果`CBitmap`对象尚未附加到该句柄，一种临时`CBitmap`创建对象并将其附加。 此临时`CBitmap`对象是否有效，仅在下次应用程序在其事件循环中具有空闲时间，直到在哪些时间所有临时图形对象会被删除。 另一种说法是一个窗口消息处理期间才有效临时对象。  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
  检索附加位图的图像属性。  
   
 ```  
@@ -279,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
  将附加的位图的位模式复制到指定的缓冲区。  
   
 ```  
@@ -301,7 +296,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>备注  
  使用[CBitmap::GetBitmap](#getbitmap)确定所需的缓冲区大小。  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
  返回的宽度和位图的高度。  
   
 ```  
@@ -314,7 +309,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>备注  
  假定的高度和宽度以前通过使用设置[SetBitmapDimension](#setbitmapdimension)成员函数。  
   
-##  <a name="loadbitmap"></a>Cbitmap:: Loadbitmap  
+##  <a name="loadbitmap"></a>  Cbitmap:: Loadbitmap  
  加载位图资源通过名为`lpszResourceName`或识别的 ID 号`nIDResource`从应用程序的可执行文件。  
   
 ```  
@@ -348,7 +343,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  3.0 及更早版本的 Windows 版本的设备驱动程序不存在这些位图。 有关的位图，并会显示其外观的完整列表，请参阅 Windows SDK。  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
  调用此成员函数以加载位图并映射到当前的系统颜色的颜色。  
   
 ```  
@@ -380,7 +375,7 @@ BOOL LoadMappedBitmap(
   
  有关创建映射的位图的信息，请参阅 Windows 函数[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)和[颜色映射](http://msdn.microsoft.com/library/windows/desktop/bb760448)Windows SDK 中的结构。  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  加载 Windows 所使用的预定义的位图。  
   
 ```  
@@ -417,9 +412,9 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ### <a name="remarks"></a>备注  
  Bitmap 以开头的名称**OBM_OLD**表示由 3.0 之前的 Windows 版本的位图。  
   
- 请注意，该常量**OEMRESOURCE**包括 WINDOWS 之前必须定义。若要使用的任何 H **OBM_**常量。  
+ 请注意，该常量**OEMRESOURCE**包括 WINDOWS 之前必须定义。若要使用的任何 H **OBM_** 常量。  
   
-##  <a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  CBitmap::operator HBITMAP  
  此运算符用于获取附加的 Windows GDI 句柄的`CBitmap`对象。  
   
 ```  
@@ -434,7 +429,7 @@ operator HBITMAP() const;
   
  有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  将位图的位设置为给定的位值`lpBits`。  
   
 ```  
@@ -453,7 +448,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>返回值  
  在将位图位; 设置中使用的字节数如果函数失败，则为 0。  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
  给以 0.1 毫米为单位的位图的宽度和高度。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "指向成员的指针 |Microsoft 文档"
-ms.custom: 
+title: 指向成员的指针 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 指向成员的指针的声明是指针声明的特例。  使用以下序列来声明它们：  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/16/2018
   
     -   :: 运算符。  
   
-    -    **\*** 运算符。  
+    -   **\*** 运算符。  
   
     -   可选**const**和/或`volatile`说明符。  
   
@@ -61,9 +56,9 @@ ms.lasthandoff: 03/16/2018
   
     -   可选的初始值设定项：  
   
-  **=** 运算符。  
+ **=** 运算符。  
   
-  **&** 运算符。  
+ **&** 运算符。  
   
  类的限定名。  
   
@@ -117,7 +112,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 之间的差异**。\***和 **-> \*** 运算符 （指向成员的指针运算符） 是**。\***运算符选择成员给定的对象或对象引用，而 **-> \*** 运算符通过指针选择成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
+ 之间的差异**。\*** 和**-> \*** 运算符 （指向成员的指针运算符） 是**。\*** 运算符选择成员给定的对象或对象引用，而**-> \*** 运算符通过指针选择成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
  指向成员的指针运算符的结果是成员的类型-在这种情况下， **char \*** 。  
   
@@ -139,7 +134,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>针对指向成员的指针的限制  
- 静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 因为只有一个实例的静态成员存在给定的种类的普通地址-的所有对象**(&)**和取消引用**(\*)**可以使用运算符。  
+ 静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 因为只有一个实例的静态成员存在给定的种类的普通地址-的所有对象 **(&)** 和取消引用 **(\*)** 可以使用运算符。  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>指向成员和虚函数的指针  
  通过指向成员函数的指针调用虚函数就如同直接调用函数一样；将在 v 表中查找并调用正确的函数。  
@@ -191,5 +186,5 @@ bPtr = &dObject;    // Set pointer to address of dObject.
 Print function for class Derived  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

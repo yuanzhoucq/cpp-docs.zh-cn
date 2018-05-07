@@ -1,30 +1,25 @@
 ---
-title: "添加属性 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 添加属性 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - interfaces, adding properties
 - properties [C++], adding to interfaces
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fc8c3b5528c0ced4e0d402aec48791b7fbcb9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-property-visual-c"></a>添加属性 (Visual C++)
 你可以使用[添加属性向导](../ide/names-add-property-wizard.md)添加到你的项目中的接口的方法。  

@@ -1,13 +1,10 @@
 ---
-title: "如何： 确定映像是否本机或 CLR |Microsoft 文档"
-ms.custom: 
+title: 如何： 确定映像是否本机或 CLR |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3b4b652be03aeb0c147ee39b141bd2df932af055
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71b13c1f82f233589102c72ed08a731db7de5c56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：确定映像为本机映像还是 CLR 映像
 一种方法来确定是使用公共语言运行时是否生成映像**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。  

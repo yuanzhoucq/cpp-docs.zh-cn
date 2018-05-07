@@ -1,30 +1,25 @@
 ---
-title: "MFC Internet 编程任务 |Microsoft 文档"
-ms.custom: 
+title: MFC Internet 编程任务 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC Internet 编程任务
 本节包含将 Internet 支持添加到应用程序的详细步骤。 主题包括如何使用 MFC 类使现有应用程序支持 Internet，以及如何为现有 COM 组件添加活动文档支持。 你想要创建文档包含最新股票行情、 匹兹堡的橄榄球比赛的比分和南极洲 Microsoft 中的最新温度提供了许多的技术来帮助您做到这一点通过 Internet。  

@@ -1,13 +1,10 @@
 ---
-title: "对话框数据交换和验证 |Microsoft 文档"
-ms.custom: 
+title: 对话框数据交换和验证 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-and-validation"></a>对话框数据交换和验证
 对话框数据交换 (DDX) 是一种在对话框中初始化控件以及按用户收集数据输入的简单方式。 对话框数据验证 (DDV) 是一种在对话框中验证数据输入的简单方式。 若要利用 DDX 和 DDV 在对话框中，使用[添加成员变量向导](../ide/add-member-variable-wizard.md)创建数据成员并设置其数据类型和指定验证规则。  

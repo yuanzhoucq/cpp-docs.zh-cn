@@ -1,13 +1,10 @@
 ---
-title: "异常： 在构造函数中异常 |Microsoft 文档"
-ms.custom: 
+title: 异常： 在构造函数中异常 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc17821e2dd358a4b8f596492fa46c2b7412feed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8336700cc0137efe3bc106871ebd76b8de7a99af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>异常：构造函数中的异常
 构造函数中引发异常时, 所需的对象，内存分配所做在引发异常之前, 中所述清理[异常： 从您自己的函数引发异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)。  

@@ -2,11 +2,8 @@
 title: 右值引用声明符： &amp; &amp; |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -15,19 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c2f775573693f0897122502d7ca092cfe392ebd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符：&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 保留对右值表达式的引用。  
   
 ## <a name="syntax"></a>语法  
@@ -411,7 +406,7 @@ print_type_and_value<string&>(string& t)
   
  模板自变量推导是实现完美转发的重要因素。 本主题前面部分的“完美转发”一节更详细地介绍了完美转发。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使您能够编写一个版本的函数，该函数可接受任意参数并将其转发给另一个函数，就像已直接调用其他函数一样。  
   
 ## <a name="see-also"></a>请参阅  

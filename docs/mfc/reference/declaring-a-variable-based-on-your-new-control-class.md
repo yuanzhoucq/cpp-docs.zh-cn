@@ -1,13 +1,10 @@
 ---
-title: "声明一个变量基于新控件类 |Microsoft 文档"
-ms.custom: 
+title: 声明一个变量基于新控件类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa98f815d9f9322c11d4256c13c0c7a42b4ab66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>声明基于新控件类的变量
 一旦创建了 MFC 控件类，可以声明变量基于它。 若要为新的变量提供的上下文，必须打开对话框编辑器，并编辑想要使用可重用控件的对话框。 此外，对话框中必须已有与之关联的类。 有关使用对话框编辑器的信息，请参阅[对话框编辑器](../../windows/dialog-editor.md)。  

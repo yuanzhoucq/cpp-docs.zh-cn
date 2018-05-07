@@ -1,12 +1,9 @@
 ---
-title: "CGdiObject 类 |Microsoft 文档"
-ms.custom: 
+title: CGdiObject 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGdiObject
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 类
 为各种 Windows 图形设备接口 (GDI) 对象（如位图、区域、画笔、笔、调色板和字体）提供基类。  
@@ -107,10 +102,10 @@ class CGdiObject : public CObject
   
  `CGdiObject`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="attach"></a>CGdiObject::Attach  
+##  <a name="attach"></a>  CGdiObject::Attach  
  将附加到一个 Windows GDI 对象`CGdiObject`对象。  
   
 ```  
@@ -124,7 +119,7 @@ BOOL Attach(HGDIOBJ hObject);
 ### <a name="return-value"></a>返回值  
  如果附件成功; 则为非 0否则为 0。  
   
-##  <a name="cgdiobject"></a>CGdiObject::CGdiObject  
+##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  构造 `CGdiObject` 对象。  
   
 ```  
@@ -134,7 +129,7 @@ CGdiObject();
 ### <a name="remarks"></a>备注  
  切勿创建`CGdiObject`直接。 相反，创建的对象从其派生类之一如`CPen`或**Cbrush**。  
   
-##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
+##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  检索预定义的常用 Windows GDI 钢笔、 画笔或字体，之一的句柄，并将附加到的 GDI 对象`CGdiObject`对象。  
   
 ```  
@@ -151,7 +146,7 @@ BOOL CreateStockObject(int nIndex);
 ### <a name="remarks"></a>备注  
  调用此函数带一个派生的类的对应 Windows GDI 对象类型，如`CPen`的常用的画笔。  
   
-##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
+##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
  通过释放与 Windows GDI 对象相关联的所有系统存储从内存中删除附加的 Windows GDI 对象。  
   
 ```  
@@ -166,7 +161,7 @@ BOOL DeleteObject();
   
  当删除模式画笔时，不会删除与画笔相关联的位图。 必须单独删除位图。  
   
-##  <a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
  自动调用`CWinApp`空闲时间处理程序，`DeleteTempMap`删除任何临时`CGdiObject`创建的对象`FromHandle`。  
   
 ```  
@@ -174,12 +169,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>备注  
- `DeleteTempMap`分离附加到一个临时的 Windows GDI 对象`CGdiObject`对象在删除之前`CGdiObject`对象。  
+ `DeleteTempMap` 分离附加到一个临时的 Windows GDI 对象`CGdiObject`对象在删除之前`CGdiObject`对象。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
-##  <a name="detach"></a>CGdiObject::Detach  
+##  <a name="detach"></a>  CGdiObject::Detach  
  分离中的 Windows GDI 对象`CGdiObject`对象并返回 Windows GDI 对象的句柄。  
   
 ```  
@@ -189,7 +184,7 @@ HGDIOBJ Detach();
 ### <a name="return-value"></a>返回值  
  A`HANDLE`到 Windows GDI 对象分离; 否则为**NULL**如果附加没有任何 GDI 对象。  
   
-##  <a name="fromhandle"></a>CGdiObject::FromHandle  
+##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
  返回一个指向`CGdiObject`提供 Windows GDI 对象的句柄的对象。  
   
 ```  
@@ -208,7 +203,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
   
  此临时`CGdiObject`对象只有在应用程序在其事件循环，删除这段时间的所有临时图形对象具有空闲时间的下一步时才有效。 另一种说法是一个窗口消息处理期间才有效临时对象。  
   
-##  <a name="getobject"></a>CGdiObject::GetObject  
+##  <a name="getobject"></a>  CGdiObject::GetObject  
  定义指定的对象的数据填充缓冲区。  
   
 ```  
@@ -243,7 +238,7 @@ int GetObject(
   
  如果对象是`CPalette`对象，`GetObject`检索**WORD** ，调色板中指定的条目数。 该函数不会检索[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)定义调色板的结构。 应用程序可以获取调色板条目的信息，通过调用[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
   
-##  <a name="getobjecttype"></a>CGdiObject::GetObjectType  
+##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  检索的 GDI 对象的类型。  
   
 ```  
@@ -279,7 +274,7 @@ UINT GetObjectType() const;
   
 - **OBJ_ENHMETADC**增强型图元文件设备上下文  
   
-##  <a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
+##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
  返回`m_hObject`除非**这**是**NULL**，在这种情况下**NULL**返回。  
   
 ```  
@@ -295,14 +290,14 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)。  
   
-##  <a name="m_hobject"></a>CGdiObject::m_hObject  
+##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
  A`HANDLE`包含`HBITMAP`， **HRGN**， `HBRUSH`， `HPEN`， `HPALETTE`，或**HFONT**附加到此对象。  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
-##  <a name="operator_neq"></a>CGdiObject::operator ！ =  
+##  <a name="operator_neq"></a>  CGdiObject::operator ！ =  
  确定两个 GDI 对象是否以逻辑方式不相等。  
   
 ```  
@@ -316,7 +311,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ### <a name="remarks"></a>备注  
  确定在左侧的 GDI 对象是否不等于右侧的 GDI 对象。  
   
-##  <a name="operator_eq_eq"></a>CGdiObject::operator = =  
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =  
  确定两个 GDI 对象是否逻辑上相等。  
   
 ```  
@@ -330,14 +325,14 @@ BOOL operator==(const CGdiObject& obj) const;
 ### <a name="remarks"></a>备注  
  确定在左侧的 GDI 对象是否等于右侧的 GDI 对象。  
   
-##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
+##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
  检索`HANDLE`到附加的 Windows GDI 对象; 否则为**NULL**如果附加没有任何对象。  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
-##  <a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
  重置的源的画笔或重置逻辑调色板。  
   
 ```  

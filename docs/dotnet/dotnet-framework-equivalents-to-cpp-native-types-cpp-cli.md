@@ -1,30 +1,25 @@
 ---
-title: ".NET framework 对应于 c + + 本机类型 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: .NET framework 对应于 c + + 本机类型 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .NET Framework [C++], C++ equivalents
 ms.assetid: 7f116a9a-26cd-46db-9877-a63ffdc88723
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f5362b2c3e20a34249b9410951722222b93dce0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af9038015cd8211bcd66c08b5377d43cf7639668
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>对应于 C++ 本机类型的 .NET Framework 类型 (C++/CLI)
 下表显示了内置的 Visual c + + 类型，它们是预定义的类型的别名关键字中**系统**命名空间。  

@@ -2,11 +2,8 @@
 title: 使用 extern 指定链接 |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - extern
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 319ee69d30ad49ff745df05172db10503b3b42e0
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 68bb5f35044a02b64c0475c7c94bc7a0b025cd3e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-extern-to-specify-linkage"></a>使用 extern 指定链接
 ## <a name="syntax"></a>语法  
@@ -63,7 +58,7 @@ void other() {
   
  在 C++ 中，与字符串一起使用时，`extern` 指定其他语言的链接约定将用于声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。  
   
- Microsoft C++ 支持字符串**"C"**和**"C++"**中*字符串文本*字段。 所有标准包含文件都使用 `extern` "C" 语法以允许运行库函数用于 C++ 程序。  
+ Microsoft C++ 支持字符串 **"C"** 和 **"C++"** 中*字符串文本*字段。 所有标准包含文件都使用 `extern` "C" 语法以允许运行库函数用于 C++ 程序。  
   
 ## <a name="example"></a>示例  
  以下示例演示用于声明具有 C 链接的名称的备选方法：  
@@ -123,7 +118,7 @@ extern "C" int CFunc2(); // Error: not the first declaration of
   
  函数和对象显式声明为**静态**复合链接说明符体内 (**{}**) 将被视为静态函数或对象; 链接说明符将被忽略。 其他函数和对象的行为方式就像它们是使用 `extern` 关键字声明的一样。 (请参阅[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)有关的详细信息`extern`关键字。)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   
  [extern 存储类说明符](../c-language/extern-storage-class-specifier.md)   
  [标识符的行为](../c-language/behavior-of-identifiers.md)   

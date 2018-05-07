@@ -1,13 +1,10 @@
 ---
-title: "TN043: RFX 例程 |Microsoft 文档"
-ms.custom: 
+title: 'TN043: RFX 例程 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RFX
 dev_langs:
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bb44653c03505d954318a01a6e34c1a297dba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn043-rfx-routines"></a>TN043：RFX 例程
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。  
   
- 本说明介绍记录字段交换 (RFX) 体系结构。 它还介绍了如何编写**RFX_**过程。  
+ 本说明介绍记录字段交换 (RFX) 体系结构。 它还介绍了如何编写**RFX_** 过程。  
   
 ## <a name="overview-of-record-field-exchange"></a>记录字段交换的概述  
  C + + 代码完成所有记录集字段函数。 没有任何特殊的资源或神奇的宏。 机制的核心是必须在每个派生的记录集类中重写虚函数。 始终，则该文件位于此窗体：  
@@ -61,9 +56,9 @@ RFX_Custom(pFX, "Col2",
     m_Col2);
 ```  
   
- 大多数**RFX_**函数具有三个自变量，如上所示，但某些 (例如`RFX_Text`和`RFX_Binary`) 具有其他可选自变量。  
+ 大多数**RFX_** 函数具有三个自变量，如上所示，但某些 (例如`RFX_Text`和`RFX_Binary`) 具有其他可选自变量。  
   
- 多个**RFX_**可能包括在每个`DoDataExchange`函数。  
+ 多个**RFX_** 可能包括在每个`DoDataExchange`函数。  
   
  请参阅 afxdb.h 有关的所有记录集字段交换例程 MFC 提供的列表。  
   
@@ -74,7 +69,7 @@ RFX_Custom(pFX, "Col2",
   
  在标准 c + + 中的构造函数，通常一个块以与中设置的数据的初始值`//{{AFX_FIELD_INIT(CMylSet)`和`//}}AFX_FIELD_INIT`注释。  
   
- 每个**RFX_**函数必须支持各种操作，范围从返回到存档中准备用于编辑字段的字段的字段的更新状态。  
+ 每个**RFX_** 函数必须支持各种操作，范围从返回到存档中准备用于编辑字段的字段的字段的更新状态。  
   
  每个调用的函数`DoFieldExchange`(例如`SetFieldNull`， `IsFieldDirty`)，没有围绕对调用其自身初始化`DoFieldExchange`。  
   
@@ -99,15 +94,15 @@ RFX_Custom(pFX, "Col2",
   
 - **值**-追加""跟分隔符，如 '，' 或 '  
   
-- `SetFieldDirty`-设置状态位脏 （即已更改） 字段  
+- `SetFieldDirty` -设置状态位脏 （即已更改） 字段  
   
-- `SetFieldNull`-设置状态位，该值指示字段的 null 值  
+- `SetFieldNull` -设置状态位，该值指示字段的 null 值  
   
-- `IsFieldDirty`-返回脏状态位值  
+- `IsFieldDirty` -返回脏状态位值  
   
-- `IsFieldNull`-返回状态 null 位值  
+- `IsFieldNull` -返回状态 null 位值  
   
-- `IsFieldNullable`-返回 TRUE，如果字段可以保存 NULL 值  
+- `IsFieldNullable` -返回 TRUE，如果字段可以保存 NULL 值  
   
 - **StoreField** -存档字段值  
   
@@ -120,7 +115,7 @@ RFX_Custom(pFX, "Col2",
 ## <a name="user-extensions"></a>用户扩展  
  有多种方法来扩展默认 RFX 机制。 你可以  
   
--   添加新的数据类型。 例如:  
+-   添加新的数据类型。 例如：  
   
  ```  
     CBookmark 
@@ -168,7 +163,7 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`：  
  这是唯一的类库不使用列绑定来接收和发送数据的 RFX 函数。 此函数将忽略 BindFieldToColumn 操作而是在修正操作时，分配的存储空间来容纳传入的 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 数据，然后执行 SQLGetData 呼叫将检索到的已分配存储的值。 在准备将发送回数据源 （如名称和值的操作） 的数据值时，此函数将使用 ODBC 的 DATA_AT_EXEC 功能。 请参阅[技术说明 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)有关使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs 的详细信息。  
   
- 编写你自己时**RFX_**函数，你通常将能够使用**CFieldExchange::Default**来实现对指定的操作。 查看操作的默认实现。 如果它执行该操作将你编写你**RFX_**函数可以委托到**CFieldExchange::Default。** 你可以看到的调用的示例**CFieldExchange::Default** dbrfx.cpp 中  
+ 编写你自己时**RFX_** 函数，你通常将能够使用**CFieldExchange::Default**来实现对指定的操作。 查看操作的默认实现。 如果它执行该操作将你编写你**RFX_** 函数可以委托到**CFieldExchange::Default。** 你可以看到的调用的示例**CFieldExchange::Default** dbrfx.cpp 中  
   
  务必要调用`IsFieldType`开头的你 RFX 函数，并且如果它返回 FALSE，则立即返回。 此机制会让参数从正在执行的操作**outputColumns**，反之亦然 (如调用**BindParam**上**outputColumn**)。 此外，`IsFieldType`自动将跟踪的数**outputColumns** (`m_nFields`) 以及参数 (`m_nParams`)。  
   

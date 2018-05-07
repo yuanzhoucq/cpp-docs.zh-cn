@@ -1,24 +1,19 @@
 ---
-title: "字符串 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: 字符串 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-ccx"></a>字符串 (C++/CX)
 Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string 类](../cppcx/platform-string-class.md)。 使用`Platform::String Class`时将字符串传递来回方法在 Windows 运行时类中，或与其他 Windows 运行时组件跨应用程序二进制接口 (ABI) 边界的进行交互时。 虽然 `Platform::String Class` 为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C++ 模块中，将标准 C++ 字符串类型（如 [wstring](../standard-library/basic-string-class.md) ）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md) ，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String`之间进行转换很容易也很有效。  

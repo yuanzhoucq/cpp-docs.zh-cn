@@ -1,13 +1,10 @@
 ---
-title: "框架 (MFC) |Microsoft 文档"
-ms.custom: 
+title: 框架 (MFC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd75d29ce907b089d698c066e5a6cb41fcae3281
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-mfc"></a>框架 (MFC)
 在使用 Microsoft 基础类 (MFC) 库框架时很大程度上基于几个主要的类和 Visual C++ 工具。 一些类封装了 Win32 应用程序编程接口 (API) 的一大部分。 其他类封装了应用程序概念，如文档、视图和应用程序本身。 还有其他类封装了 OLE 功能以及 ODBC 和 DAO 数据访问功能。  

@@ -1,12 +1,9 @@
 ---
-title: "CDaoException 类 |Microsoft 文档"
-ms.custom: 
+title: CDaoException 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoException
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5295a63a968162f5a891def06206eb50485ab1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 表示由基于数据访问对象 (DAO) 的 MFC 数据库类引起的异常条件。  
@@ -72,7 +67,7 @@ class CDaoException : public CException
 |[CDaoException::m_scode](#m_scode)|[SCODE](#m_scode)与错误关联的值。|  
   
 ## <a name="remarks"></a>备注  
- 该类包括可用于确定异常的原因的公共数据成员。 `CDaoException`对象为构造，并且由 DAO 数据库类的成员函数引发。  
+ 该类包括可用于确定异常的原因的公共数据成员。 `CDaoException` 对象为构造，并且由 DAO 数据库类的成员函数引发。  
   
 > [!NOTE]
 >  DAO 数据库类有别于基于开放式数据库连接 (ODBC) 的 MFC 数据库类。 DAO 数据库类的所有名称都具有"CDao"前缀。 你仍可以访问 ODBC 数据源对于 DAO 类。 通常情况下，基于 DAO 的 MFC 类是更强于基于 ODBC; 的 MFC 类基于 DAO 的类可以访问数据，包括通过 ODBC 驱动程序，通过其自己的数据库引擎。 基于 DAO 的类还支持数据定义语言 (DDL) 操作，如添加表通过类，而无需直接调用 DAO。 ODBC 类引发的异常的信息，请参阅[CDBException](../../mfc/reference/cdbexception-class.md)。  
@@ -92,10 +87,10 @@ class CDaoException : public CException
   
  `CDaoException`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
-##  <a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
  构造 `CDaoException` 对象。  
   
 ```  
@@ -123,7 +118,7 @@ CDaoException();
   
  有关在 MFC DAO 类中处理错误的详细信息，请参阅文章[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。  
   
-##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount  
  调用此成员函数可检索的 DAO 数据库引擎错误集合中的错误对象数。  
   
 ```  
@@ -139,7 +134,7 @@ short GetErrorCount();
 > [!NOTE]
 >  通常错误集合中没有只有一个对象时出错。 如果你正在使用 ODBC 数据源，但是，可能有多个。  
   
-##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo  
  错误集合中返回有关特定错误对象的错误信息。  
   
 ```  
@@ -163,11 +158,11 @@ void GetErrorInfo(int nIndex);
   
 -   帮助上下文  
   
- `GetErrorInfo`将信息存储在异常对象的`m_pErrorInfo`数据成员。 返回的信息的简要说明，请参阅[m_pErrorInfo](#m_perrorinfo)。 如果你捕获类型的异常`CDaoException`由 MFC，引发`m_pErrorInfo`成员，将已填写。 如果你选择直接调用 DAO，则必须调用异常对象的`GetErrorInfo`成员函数自己以填充`m_pErrorInfo`。 有关更多详细说明，请参阅[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)结构。  
+ `GetErrorInfo` 将信息存储在异常对象的`m_pErrorInfo`数据成员。 返回的信息的简要说明，请参阅[m_pErrorInfo](#m_perrorinfo)。 如果你捕获类型的异常`CDaoException`由 MFC，引发`m_pErrorInfo`成员，将已填写。 如果你选择直接调用 DAO，则必须调用异常对象的`GetErrorInfo`成员函数自己以填充`m_pErrorInfo`。 有关更多详细说明，请参阅[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)结构。  
   
  DAO 异常和示例代码有关的信息，请参阅文章[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。  
   
-##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
  包含 MFC 扩展错误代码。  
   
 ### <a name="remarks"></a>备注  
@@ -183,7 +178,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN**尝试打开基于 querydef 或 tabledef 对象未处于打开状态的记录集。  
   
-##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
  包含指向的`CDaoErrorInfo`提供了有关上次检索通过调用 DAO 错误对象信息的结构[GetErrorInfo](#geterrorinfo)。  
   
 ### <a name="remarks"></a>备注  
@@ -199,7 +194,7 @@ void GetErrorInfo(int nIndex);
   
  有关完整详细信息中包含的信息`CDaoErrorInfo`对象，请参阅[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)结构。  
   
-##  <a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>  CDaoException::m_scode  
  包含类型的值`SCODE`描述该错误。  
   
 ### <a name="remarks"></a>备注  

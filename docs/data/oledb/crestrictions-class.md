@@ -1,12 +1,9 @@
 ---
-title: "CRestrictions 类 |Microsoft 文档"
-ms.custom: 
+title: CRestrictions 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CRestrictions
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e68234f3a93cacf22c3abb0c4181a938b3f1dd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b0b174a8e53f72b0077d10fd1728c4e726e0f218
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 泛型类，您可以指定架构行集的限制。  
@@ -59,7 +54,7 @@ class CRestrictions :
 |-|-|  
 |[打开](../../data/oledb/crestrictions-open.md)|返回一个结果集，根据用户提供的限制。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

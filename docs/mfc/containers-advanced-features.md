@@ -1,13 +1,10 @@
 ---
-title: "容器： 高级功能 |Microsoft 文档"
-ms.custom: 
+title: 容器： 高级功能 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>容器：高级功能
 本文介绍了将可选高级功能并入现有容器应用程序所需的步骤。 这些功能包括：  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [指向嵌入对象的 OLE 链接](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>创建容器/服务器应用程序  
+##  <a name="_core_creating_a_container_server_application"></a> 创建容器/服务器应用程序  
  容器/服务器应用程序是既充当容器又充当服务器的应用程序。 Microsoft Word for Windows 是此应用程序的一个示例。 您可将 Word for Windows 文档嵌入其他应用程序，也可将项目嵌入 Word for Windows 文档。 修改既是容器也是完全服务器的容器应用程序的过程（您无法创建组合容器/袖珍服务器应用程序）类似于创建完全服务器的过程。  
   
  文章[服务器： 实现服务器](../mfc/servers-implementing-a-server.md)列出了实现服务器应用程序所需的任务数。 如果将容器应用程序转换为容器/服务器应用程序，则你需要执行一些相同的任务，将代码添加到容器。 下面列出了重要的注意事项：  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  请注意，您无法将 MDI 应用程序插入其本身。 为容器/服务器的应用程序不能插入其本身，除非它是 SDI 应用程序。  
   
-##  <a name="_core_links_to_embedded_objects"></a>链接到嵌入对象  
+##  <a name="_core_links_to_embedded_objects"></a> 链接到嵌入对象  
  利用“链接到嵌入对象”功能，用户可在您的容器应用程序中创建包含指向嵌入对象的 OLE 链接的文档。 例如，在字处理器中创建一个包含嵌入电子表格的文档。 如果应用程序支持链接到嵌入对象，则可将链接粘贴到字处理器的文档中包含的电子表格。 利用此功能，您的应用程序可使用电子表格中包含的信息，而不必知道字处理器最初从何处获得此信息。  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>链接到应用程序中的嵌入对象  

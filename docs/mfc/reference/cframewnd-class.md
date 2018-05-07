@@ -1,12 +1,9 @@
 ---
-title: "CFrameWnd 类 |Microsoft 文档"
-ms.custom: 
+title: CFrameWnd 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFrameWnd
@@ -115,17 +112,15 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c27f27b8369aeb5fdb15d37dc196556a5f508d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35a3fb35115e1fd86a2ccf168e048a697a17dc01
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  
@@ -223,7 +218,7 @@ class CFrameWnd : public CWnd
   
  使用**创建**成员函数将为快速的自变量传递帧的创建参数。  
   
- `LoadFrame`需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
   
  当`CFrameWnd`对象包含视图和文档，就会创建间接的框架，而不是直接由程序员。 `CDocTemplate`对象安排帧的创建、 创建所包含的视图和连接到适当的文档的视图。 参数`CDocTemplate`构造函数指定`CRuntimeClass`的三个类涉及到 （文档、 框架和视图）。 A`CRuntimeClass`对象由框架用于动态创建新帧时指定用户 （例如，通过使用新建文件命令或多个文档界面 (MDI) 窗口新命令）。  
   
@@ -264,10 +259,10 @@ class CFrameWnd : public CWnd
   
  `CFrameWnd`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="activateframe"></a>CFrameWnd::ActivateFrame  
+##  <a name="activateframe"></a>  CFrameWnd::ActivateFrame  
  调用此成员函数以激活并还原框架窗口，以便它向用户是可见的且可用。  
   
 ```  
@@ -288,14 +283,14 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
   
-##  <a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
+##  <a name="beginmodalstate"></a>  CFrameWnd::BeginModalState  
  调用此成员函数以使框架窗口具有模式。  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="cframewnd"></a>CFrameWnd::CFrameWnd  
+##  <a name="cframewnd"></a>  CFrameWnd::CFrameWnd  
  构造`CFrameWnd`对象，但不会创建可见框架窗口。  
   
 ```  
@@ -305,7 +300,7 @@ CFrameWnd();
 ### <a name="remarks"></a>备注  
  调用**创建**创建可见的窗口。  
   
-##  <a name="create"></a>CFrameWnd::Create  
+##  <a name="create"></a>  CFrameWnd::Create  
  调用创建并初始化与关联的 Windows 框架窗口`CFrameWnd`对象。  
   
 ```  
@@ -353,7 +348,7 @@ virtual BOOL Create(
   
  使用`LoadFrame`而非**创建**从而不是指定其自变量的资源加载框架窗口。  
   
-##  <a name="createview"></a>CFrameWnd::CreateView  
+##  <a name="createview"></a>  CFrameWnd::CreateView  
  调用`CreateView`创建在范围内的视图。  
   
 ```  
@@ -375,7 +370,7 @@ CWnd* CreateView(
 ### <a name="remarks"></a>备注  
  使用此成员函数来创建"视图"不是`CView`-框架内派生。 在调用`CreateView`，你必须手动设置为活动状态的视图，并将其设置为可见; 这些任务不会自动执行通过`CreateView`。  
   
-##  <a name="dockcontrolbar"></a>CFrameWnd::DockControlBar  
+##  <a name="dockcontrolbar"></a>  CFrameWnd::DockControlBar  
  将导致控件栏停靠到框架窗口。  
   
 ```  
@@ -392,13 +387,13 @@ void DockControlBar(
  `nDockBarID`  
  确定框架窗口停靠考虑哪些边。 它可以是 0，或一个或多个以下：  
   
-- `AFX_IDW_DOCKBAR_TOP`将停靠到框架窗口的顶部。  
+- `AFX_IDW_DOCKBAR_TOP` 将停靠到框架窗口的顶部。  
   
 - **AFX_IDW_DOCKBAR_BOTTOM**停靠到框架窗口的底部。  
   
-- `AFX_IDW_DOCKBAR_LEFT`停靠到框架窗口的左侧。  
+- `AFX_IDW_DOCKBAR_LEFT` 停靠到框架窗口的左侧。  
   
-- `AFX_IDW_DOCKBAR_RIGHT`停靠框架窗口的右侧。  
+- `AFX_IDW_DOCKBAR_RIGHT` 停靠框架窗口的右侧。  
   
  如果为 0，为在目标框架窗口停靠启用任何端可停靠控件条。  
   
@@ -408,7 +403,7 @@ void DockControlBar(
 ### <a name="remarks"></a>备注  
  将对两者的调用中指定在框架窗口的侧之一停靠控件条[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)和[CFrameWnd::EnableDocking](#enabledocking)。 选择端由`nDockBarID`。  
   
-##  <a name="enabledocking"></a>CFrameWnd::EnableDocking  
+##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking  
  调用此函数可启用框架窗口中的可停靠控件条。  
   
 ```  
@@ -419,15 +414,15 @@ void EnableDocking(DWORD dwDockStyle);
  `dwDockStyle`  
  指定的框架窗口的哪些边可用作停靠控件条的站点。 它可以是一个或多个以下：  
   
-- `CBRS_ALIGN_TOP`允许在客户端区域的顶部停靠。  
+- `CBRS_ALIGN_TOP` 允许在客户端区域的顶部停靠。  
   
-- `CBRS_ALIGN_BOTTOM`允许在工作区底部停靠。  
+- `CBRS_ALIGN_BOTTOM` 允许在工作区底部停靠。  
   
-- `CBRS_ALIGN_LEFT`允许客户端区域的左侧停靠。  
+- `CBRS_ALIGN_LEFT` 允许客户端区域的左侧停靠。  
   
-- `CBRS_ALIGN_RIGHT`允许客户端区域右侧停靠。  
+- `CBRS_ALIGN_RIGHT` 允许客户端区域右侧停靠。  
   
-- `CBRS_ALIGN_ANY`允许在客户端区域的任何一侧上停靠。  
+- `CBRS_ALIGN_ANY` 允许在客户端区域的任何一侧上停靠。  
   
 ### <a name="remarks"></a>备注  
  将默认情况下，框架窗口按以下顺序的一侧中停靠控件条： 上、 下、 左、 右。  
@@ -435,7 +430,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="example"></a>示例  
   请参阅示例[CToolBar::Create](../../mfc/reference/ctoolbar-class.md#create)。  
   
-##  <a name="endmodalstate"></a>CFrameWnd::EndModalState  
+##  <a name="endmodalstate"></a>  CFrameWnd::EndModalState  
  调用此成员函数以将框架窗口从有模式更改为无模式。  
   
 ```  
@@ -443,9 +438,9 @@ virtual void EndModalState();
 ```  
   
 ### <a name="remarks"></a>备注  
- `EndModalState`使所有 windows 通过停用[BeginModalState](#beginmodalstate)。  
+ `EndModalState` 使所有 windows 通过停用[BeginModalState](#beginmodalstate)。  
   
-##  <a name="floatcontrolbar"></a>CFrameWnd::FloatControlBar  
+##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar  
  调用此函数可导致控件栏不停靠到框架窗口。  
   
 ```  
@@ -465,13 +460,13 @@ void FloatControlBar(
  `dwStyle`  
  指定是否在其新的框架窗口内水平或垂直对齐控件条。 它可以是以下之一：  
   
-- `CBRS_ALIGN_TOP`纵向排列控件条。  
+- `CBRS_ALIGN_TOP` 纵向排列控件条。  
   
-- `CBRS_ALIGN_BOTTOM`纵向排列控件条。  
+- `CBRS_ALIGN_BOTTOM` 纵向排列控件条。  
   
-- `CBRS_ALIGN_LEFT`水平排列控件条。  
+- `CBRS_ALIGN_LEFT` 水平排列控件条。  
   
-- `CBRS_ALIGN_RIGHT`水平排列控件条。  
+- `CBRS_ALIGN_RIGHT` 水平排列控件条。  
   
  如果指定水平和垂直方向传递样式，工具栏将为水平方向。  
   
@@ -480,7 +475,7 @@ void FloatControlBar(
   
  当用户释放鼠标左键拖动控件条通过也无法供停靠的位置时来导致放操作时，将由框架调用此函数。  
   
-##  <a name="getactivedocument"></a>CFrameWnd::GetActiveDocument  
+##  <a name="getactivedocument"></a>  CFrameWnd::GetActiveDocument  
  调用此成员函数以获取指向当前的**CDocument**附加到当前活动视图。  
   
 ```  
@@ -490,7 +485,7 @@ virtual CDocument* GetActiveDocument();
 ### <a name="return-value"></a>返回值  
  指向当前[CDocument](../../mfc/reference/cdocument-class.md)。 如果不不存在任何当前的文档，返回**NULL**。  
   
-##  <a name="getactiveframe"></a>CFrameWnd::GetActiveFrame  
+##  <a name="getactiveframe"></a>  CFrameWnd::GetActiveFrame  
  调用此成员函数以获取指向活动的多文档界面 (MDI) 子窗口的 MDI 框架窗口。  
   
 ```  
@@ -503,7 +498,7 @@ virtual CFrameWnd* GetActiveFrame();
 ### <a name="remarks"></a>备注  
  如果没有任何活动的 MDI 子或应用程序为单文档界面 (SDI) 的隐式**这**指针会返回。  
   
-##  <a name="getactiveview"></a>CFrameWnd::GetActiveView  
+##  <a name="getactiveview"></a>  CFrameWnd::GetActiveView  
  调用此成员函数可获取附加到框架窗口的活动视图 （如果有） 的指针 ( `CFrameWnd`)。  
   
 ```  
@@ -518,7 +513,7 @@ CView* GetActiveView() const;
   
  [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
-##  <a name="getcontrolbar"></a>CFrameWnd::GetControlBar  
+##  <a name="getcontrolbar"></a>  CFrameWnd::GetControlBar  
  调用`GetControlBar`来访问与 ID 相关联的控件条  
   
 ```  
@@ -535,9 +530,9 @@ CControlBar* GetControlBar(UINT nID);
 ### <a name="remarks"></a>备注  
  `nID`参数引用传递到的唯一标识符**创建**控件条的方法。 有关控件条的详细信息，请参阅标题为主题[控件条](../../mfc/control-bars.md)。  
   
- `GetControlBar`将返回控件条，即使它浮动的因此不是当前帧的子窗口。  
+ `GetControlBar` 将返回控件条，即使它浮动的因此不是当前帧的子窗口。  
   
-##  <a name="getdockstate"></a>CFrameWnd::GetDockState  
+##  <a name="getdockstate"></a>  CFrameWnd::GetDockState  
  调用此成员函数以存储有关框架窗口的控件条中的状态信息`CDockState`对象。  
   
 ```  
@@ -551,7 +546,7 @@ void GetDockState(CDockState& state) const;
 ### <a name="remarks"></a>备注  
  然后，便可以编写的内容`CDockState`存储使用`CDockState::SaveState`或`Serialize`。 如果你以后想要还原到以前的状态的控件条，加载将状态与`CDockState::LoadState`或`Serialize`，然后调用`SetDockState`要应用于框架窗口的控件条的前一状态。  
   
-##  <a name="getmenubarstate"></a>CFrameWnd::GetMenuBarState  
+##  <a name="getmenubarstate"></a>  CFrameWnd::GetMenuBarState  
  检索当前的 MFC 应用程序中的菜单的显示状态。  
   
 ```  
@@ -568,7 +563,7 @@ virtual DWORD GetMenuBarState();
 ### <a name="remarks"></a>备注  
  如果出现运行时错误时，此方法在调试模式中断言，并且会引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
   
-##  <a name="getmenubarvisibility"></a>CFrameWnd::GetMenuBarVisibility  
+##  <a name="getmenubarvisibility"></a>  CFrameWnd::GetMenuBarVisibility  
  指示当前的 MFC 应用程序中的菜单的默认状态是隐藏还是可见。  
   
 ```  
@@ -582,12 +577,12 @@ virtual DWORD CFrameWnd::GetMenuBarVisibility();
   
 -   AFX_MBV_DISPLAYONFOCUS (0x02)-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键来显示菜单并授予它焦点。 如果显示菜单上，则按 ALT 或 ESC 键，可以将其隐藏。  
   
--   AFX_MBV_ DISPLAYONFOCUS (0x02) &#124;AFX_MBV_DISPLAYONF10 (0x04) （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。  
+-   AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04) （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。  
   
 ### <a name="remarks"></a>备注  
  如果出现运行时错误时，此方法在调试模式中断言，并且会引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
   
-##  <a name="getmessagebar"></a>CFrameWnd::GetMessageBar  
+##  <a name="getmessagebar"></a>  CFrameWnd::GetMessageBar  
  调用此成员函数可获取对状态栏的指针。  
   
 ```  
@@ -597,7 +592,7 @@ virtual CWnd* GetMessageBar();
 ### <a name="return-value"></a>返回值  
  指向状态栏窗口的指针。  
   
-##  <a name="getmessagestring"></a>CFrameWnd::GetMessageString  
+##  <a name="getmessagestring"></a>  CFrameWnd::GetMessageString  
  重写此函数可提供自定义字符串的命令 Id。  
   
 ```  
@@ -611,12 +606,12 @@ virtual void GetMessageString(
  所需的消息的资源 ID。  
   
  `rMessage`  
- `CString`要将该消息放到其中的对象。  
+ `CString` 要将该消息放到其中的对象。  
   
 ### <a name="remarks"></a>备注  
  默认实现只需加载指定的字符串`nID`使用资源文件。 当状态栏中的消息字符串需要更新时，将由框架调用此函数。  
   
-##  <a name="gettitle"></a>CFrameWnd::GetTitle  
+##  <a name="gettitle"></a>  CFrameWnd::GetTitle  
  检索窗口对象的标题。  
   
 ```  
@@ -626,7 +621,7 @@ CString GetTitle() const;
 ### <a name="return-value"></a>返回值  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含的窗口对象的当前标题。  
   
-##  <a name="initialupdateframe"></a>CFrameWnd::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>  CFrameWnd::InitialUpdateFrame  
  调用**IntitialUpdateFrame**创建具有的新帧之后**创建**。  
   
 ```  
@@ -647,7 +642,7 @@ void InitialUpdateFrame(
   
  此外，如果存在不是以前的活动视图，框架窗口的主视图设为活动。 主视图是使用子 ID 的视图**AFX_IDW_PANE_FIRST**。 最后，框架窗口均可见如果`bMakeVisible`为非零值。 如果`bMakeVisible`为 0，则当前焦点和框架窗口的可见状态将保持不变。 不需要使用框架的实现的新文件和文件打开时调用此函数。  
   
-##  <a name="inmodalstate"></a>CFrameWnd::InModalState  
+##  <a name="inmodalstate"></a>  CFrameWnd::InModalState  
  调用此成员函数以检查框架窗口是模式还是无模式。  
   
 ```  
@@ -657,7 +652,7 @@ BOOL InModalState() const;
 ### <a name="return-value"></a>返回值  
  非零，如果否。否则为 0。  
   
-##  <a name="istracking"></a>CFrameWnd::IsTracking  
+##  <a name="istracking"></a>  CFrameWnd::IsTracking  
  调用此成员函数可确定当前移动窗口中的拆分栏。  
   
 ```  
@@ -667,7 +662,7 @@ BOOL IsTracking() const;
 ### <a name="return-value"></a>返回值  
  如果拆分器操作正在进行; 则为非 0否则为 0。  
   
-##  <a name="loadacceltable"></a>CFrameWnd::LoadAccelTable  
+##  <a name="loadacceltable"></a>  CFrameWnd::LoadAccelTable  
  调用以加载指定的快捷键对应表。  
   
 ```  
@@ -688,7 +683,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
   
  如果调用`LoadFrame`若要创建框架窗口，框架将加载快捷键对应表以及菜单和图标的资源，而此成员函数的后续调用即不必要。  
   
-##  <a name="loadbarstate"></a>CFrameWnd::LoadBarState  
+##  <a name="loadbarstate"></a>  CFrameWnd::LoadBarState  
  调用此函数可还原拥有框架窗口的每个控件条的设置。  
   
 ```  
@@ -704,7 +699,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
   
  你想要还原的设置必须写入注册表，然后才能调用`LoadBarState`。 将信息写入注册表通过调用[CWinApp::SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey)。 将信息写入 INI 文件通过调用[SaveBarState](#savebarstate)。  
   
-##  <a name="loadframe"></a>CFrameWnd::LoadFrame  
+##  <a name="loadframe"></a>  CFrameWnd::LoadFrame  
  调用动态地创建框架窗口中的资源信息。  
   
 ```  
@@ -737,7 +732,7 @@ virtual BOOL LoadFrame(
   
  框架将使用`pContext`自变量以指定要连接到框架窗口中，包括所有的对象包含的视图对象。 你可以设置`pContext`参数**NULL**当调用`LoadFrame`。  
   
-##  <a name="m_bautomenuenable"></a>CFrameWnd::m_bAutoMenuEnable  
+##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable  
  启用此数据成员时 （这是默认值），菜单项没有`ON_UPDATE_COMMAND_UI`或`ON_COMMAND`用户会拉取菜单时，处理程序将被自动禁用。  
   
 ```  
@@ -750,14 +745,14 @@ BOOL m_bAutoMenuEnable;
  当设置此数据成员时，菜单项会自动启用与工具栏按钮处于启用状态的方式相同。  
   
 > [!NOTE]
-> `m_bAutoMenuEnable`具有对顶级菜单项没有影响。  
+> `m_bAutoMenuEnable` 具有对顶级菜单项没有影响。  
   
  此数据成员简化了基于当前所选内容的可选命令的实现，而无需编写`ON_UPDATE_COMMAND_UI`用于启用和禁用菜单项的处理程序。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]  
   
-##  <a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>  CFrameWnd::NegotiateBorderSpace  
  调用此成员函数可在 OLE 就地激活过程协商框架窗口中的边框空间。  
   
 ```  
@@ -785,7 +780,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="remarks"></a>备注  
  此成员函数是**CFrameWnd** OLE 边框空间协商实现。  
   
-##  <a name="onbarcheck"></a>CFrameWnd::OnBarCheck  
+##  <a name="onbarcheck"></a>  CFrameWnd::OnBarCheck  
  每当在指定的控件条上执行操作时调用。  
   
 ```  
@@ -799,7 +794,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ### <a name="return-value"></a>返回值  
  如果控件条存在; 则为非 0否则为 0。  
   
-##  <a name="oncontexthelp"></a>CFrameWnd::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CFrameWnd::OnContextHelp  
  处理的就地项的 SHIFT + F1 帮助。  
   
 ```  
@@ -815,7 +810,7 @@ afx_msg void OnContextHelp();
   
  如果你的应用程序是 OLE 容器，`OnContextHelp`放入框架窗口对象中包含到帮助模式的所有现有项。 然后，光标更改为一个箭头和问号，以及用户可以将鼠标指针移动，并按鼠标左键以选择对话框中，窗口、 菜单上或命令按钮。 此成员函数将调用 Windows 函数`WinHelp`光标下的对象的帮助上下文。  
   
-##  <a name="oncreateclient"></a>CFrameWnd::OnCreateClient  
+##  <a name="oncreateclient"></a>  CFrameWnd::OnCreateClient  
  在执行期间由框架调用`OnCreate`。  
   
 ```  
@@ -844,7 +839,7 @@ virtual BOOL OnCreateClient(
 > [!NOTE]
 >  不将值传入`CREATESTRUCT`结构。 它们是仅用于提供信息。 如果你想要重写初始窗口矩形，例如，重写`CWnd`成员函数[PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow)。  
   
-##  <a name="onhidemenubar"></a>CFrameWnd::OnHideMenuBar  
+##  <a name="onhidemenubar"></a>  CFrameWnd::OnHideMenuBar  
  当系统以隐藏在当前的 MFC 应用程序的菜单栏时调用此函数。  
   
 ```  
@@ -854,7 +849,7 @@ virtual void OnHideMenuBar();
 ### <a name="remarks"></a>备注  
  此事件处理程序使应用程序将要隐藏菜单系统时执行自定义操作。 不能防止菜单隐藏，但可以例如，调用其他方法来检索的菜单样式或状态。  
   
-##  <a name="onsetpreviewmode"></a>CFrameWnd::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode  
  调用该成员函数以设置应用程序主框架窗口打印预览模式的流入和流出。  
   
 ```  
@@ -875,7 +870,7 @@ virtual void OnSetPreviewMode(
   
  重写该成员函数以自定义的隐藏和显示的控件条和其他帧窗口部分在打印预览的过程。 调用基类实现从中重写版本。  
   
-##  <a name="onshowmenubar"></a>CFrameWnd::OnShowMenuBar  
+##  <a name="onshowmenubar"></a>  CFrameWnd::OnShowMenuBar  
  当系统即将在当前的 MFC 应用程序中显示的菜单栏时调用此函数。  
   
 ```  
@@ -885,7 +880,7 @@ virtual void OnShowMenuBar();
 ### <a name="remarks"></a>备注  
  此事件处理程序使应用程序将要显示的菜单时执行自定义操作。 不能防止菜单显示，但你可以例如，调用其他方法来检索的菜单样式或状态。  
   
-##  <a name="onupdatecontrolbarmenu"></a>CFrameWnd::OnUpdateControlBarMenu  
+##  <a name="onupdatecontrolbarmenu"></a>  CFrameWnd::OnUpdateControlBarMenu  
  更新关联的菜单时由框架调用。  
   
 ```  
@@ -896,7 +891,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  指向的指针[CCmdUI](../../mfc/reference/ccmdui-class.md)表示生成更新命令的菜单对象。 更新处理程序调用[启用](../../mfc/reference/ccmdui-class.md#enable)成员函数`CCmdUI`对象通过`pCmdUI`若要更新的用户界面。  
   
-##  <a name="recalclayout"></a>CFrameWnd::RecalcLayout  
+##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout  
  标准控件条打开或关闭时或在框架窗口调整大小时，由框架调用。  
   
 ```  
@@ -912,14 +907,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
  重写该成员函数以后已更改的框架窗口的布局进行控制的外观和行为的控件条。 例如，调用它时打开或关闭的控件条或添加另一个控件条。  
   
-##  <a name="rectdefault"></a>CFrameWnd::rectDefault  
+##  <a name="rectdefault"></a>  CFrameWnd::rectDefault  
  将此传递静态`CRect`作为参数创建一个窗口，以使 Windows 能够选择窗口的初始大小和位置时。  
   
 ```  
 static AFX_DATA const CRect rectDefault;  
 ```  
   
-##  <a name="savebarstate"></a>CFrameWnd::SaveBarState  
+##  <a name="savebarstate"></a>  CFrameWnd::SaveBarState  
  调用此函数可存储有关拥有框架窗口的每个控件条的信息。  
   
 ```  
@@ -933,7 +928,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ### <a name="remarks"></a>备注  
  从初始化文件使用可以读取此信息[LoadBarState](#loadbarstate)。 存储的信息包括可见性，水平/垂直方向、 停靠状态和控件条的位置。  
   
-##  <a name="setactivepreviewview"></a>CFrameWnd::SetActivePreviewView  
+##  <a name="setactivepreviewview"></a>  CFrameWnd::SetActivePreviewView  
  指定要用于丰富预览的活动视图，指定的视图。  
   
 ```  
@@ -946,7 +941,7 @@ void SetActivePreviewView(CView* pViewNew);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setactiveview"></a>CFrameWnd::SetActiveView  
+##  <a name="setactiveview"></a>  CFrameWnd::SetActiveView  
  调用此成员函数可设置活动的视图。  
   
 ```  
@@ -965,7 +960,7 @@ void SetActiveView(
 ### <a name="remarks"></a>备注  
  框架将自动调用此函数，如用户将焦点更改到在框架窗口内的视图。 你可以明确地调用`SetActiveView`要将焦点更改到指定的视图。  
   
-##  <a name="setdockstate"></a>CFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>  CFrameWnd::SetDockState  
  调用此成员函数可将状态信息存储在应用`CDockState`到框架窗口的控件条对象。  
   
 ```  
@@ -977,9 +972,9 @@ void SetDockState(const CDockState& state);
  将存储的状态应用到框架窗口的控件条。  
   
 ### <a name="remarks"></a>备注  
- 若要还原以前的状态的控件条，可以加载带的存储的状态`CDockState::LoadState`或`Serialize`，然后使用`SetDockState`以将其应用到框架窗口的控件条。 以前的状态存储在`CDockState`对象`GetDockState`  
+ 若要还原以前的状态的控件条，可以加载带的存储的状态`CDockState::LoadState`或`Serialize`，然后使用`SetDockState`以将其应用到框架窗口的控件条。 以前的状态存储在`CDockState`对象 `GetDockState`  
   
-##  <a name="setmenubarstate"></a>CFrameWnd::SetMenuBarState  
+##  <a name="setmenubarstate"></a>  CFrameWnd::SetMenuBarState  
  隐藏或显示当前的 MFC 应用程序中设置菜单的显示状态。  
   
 ```  
@@ -993,12 +988,12 @@ virtual BOOL SetMenuBarState(DWORD nState);
 |[in] `nState`|指定是否显示或隐藏菜单。 `nState`参数可以具有以下值：<br /><br /> -如果它处于隐藏状态，但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-AFX_MBS_HIDDEN (0x02)-隐藏菜单上，如果它可见，但如果它隐藏不起作用。|  
   
 ### <a name="return-value"></a>返回值  
- `true`如果此方法已成功更改菜单状态;，否则为`false`。  
+ `true` 如果此方法已成功更改菜单状态;，否则为`false`。  
   
 ### <a name="remarks"></a>备注  
  如果出现运行时错误时，此方法在调试模式中断言，并且会引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
   
-##  <a name="setmenubarvisibility"></a>CFrameWnd::SetMenuBarVisibility  
+##  <a name="setmenubarvisibility"></a>  CFrameWnd::SetMenuBarVisibility  
  在当前的 MFC 应用程序，可隐藏还是可见设置菜单的默认行为。  
   
 ```  
@@ -1009,14 +1004,14 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `nStyle`|指定是否菜单默认情况下隐藏的或者是可见的具有焦点。 `nStyle`参数可以具有以下值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单会显示在所有时间，并默认情况下不具有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下，菜单处于隐藏状态。 如果菜单处于隐藏状态，请按 ALT 键来显示菜单并授予它焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124;AFX_MBV_DISPLAYONF10 (0X04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。|  
+|[in] `nStyle`|指定是否菜单默认情况下隐藏的或者是可见的具有焦点。 `nStyle`参数可以具有以下值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单会显示在所有时间，并默认情况下不具有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下，菜单处于隐藏状态。 如果菜单处于隐藏状态，请按 ALT 键来显示菜单并授予它焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。|  
   
 ### <a name="remarks"></a>备注  
  如果值`nStyle`参数不是有效的此方法会断言在调试模式并引发[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在发布模式下。 在其他运行时错误，此方法在调试模式中断言和引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
   
  此方法会影响为编写的应用程序中的菜单状态[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
   
-##  <a name="setmessagetext"></a>CFrameWnd::SetMessageText  
+##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  调用此函数可将字符串放置在状态栏窗格中具有的 ID 为 0。  
   
 ```  
@@ -1034,7 +1029,7 @@ void SetMessageText(UINT nID);
 ### <a name="remarks"></a>备注  
  这通常是状态栏的最左侧，且最长，窗格。  
   
-##  <a name="setprogressbarposition"></a>CFrameWnd::SetProgressBarPosition  
+##  <a name="setprogressbarposition"></a>  CFrameWnd::SetProgressBarPosition  
  设置显示在任务栏上的 Windows 7 进度栏的当前位置。  
   
 ```  
@@ -1047,7 +1042,7 @@ void SetProgressBarPosition(int nProgressPos);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setprogressbarrange"></a>CFrameWnd::SetProgressBarRange  
+##  <a name="setprogressbarrange"></a>  CFrameWnd::SetProgressBarRange  
  设置 Windows 7 进度栏显示在任务栏上的范围。  
   
 ```  
@@ -1065,7 +1060,7 @@ void SetProgressBarRange(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setprogressbarstate"></a>CFrameWnd::SetProgressBarState  
+##  <a name="setprogressbarstate"></a>  CFrameWnd::SetProgressBarState  
  设置的类型和状态任务栏按钮上显示的进度指示器。  
   
 ```  
@@ -1078,7 +1073,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="settaskbaroverlayicon"></a>CFrameWnd::SetTaskbarOverlayIcon  
+##  <a name="settaskbaroverlayicon"></a>  CFrameWnd::SetTaskbarOverlayIcon  
  已重载。 将一个覆盖区应用到任务栏按钮，以指示应用程序状态，或者通知用户。  
   
 ```  
@@ -1103,11 +1098,11 @@ BOOL SetTaskbarOverlayIcon(
  要用作在覆盖区上的图标的句柄。 这应该是一个小图标，测量每英寸点数 (dpi) 96 点在 16 x 16 像素。 如果覆盖图标已应用于任务栏按钮时，将替换该现有覆盖区。 此值可为 `NULL`。 如何`NULL`处理值取决于任务栏按钮表示单个窗口或 windows 组。 要释放的调用应用程序负责`hIcon`不再需要时。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`如果操作系统版本低于 Windows 7 或设置图标就会出错。  
+ `TRUE` 如果成功，则，`FALSE`如果操作系统版本低于 Windows 7 或设置图标就会出错。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="settitle"></a>CFrameWnd::SetTitle  
+##  <a name="settitle"></a>  CFrameWnd::SetTitle  
  设置窗口对象的标题。  
   
 ```  
@@ -1118,7 +1113,7 @@ void SetTitle(LPCTSTR lpszTitle);
  `lpszTitle`  
  指向包含窗口对象的标题的字符串的指针。  
   
-##  <a name="showcontrolbar"></a>CFrameWnd::ShowControlBar  
+##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar  
  调用此成员函数可显示或隐藏控件条。  
   
 ```  
@@ -1138,7 +1133,7 @@ void ShowControlBar(
  *bDelay*  
  如果**TRUE**，延迟显示控件条。 如果**FALSE**，显示栏立即的控件。  
   
-##  <a name="showownedwindows"></a>CFrameWnd::ShowOwnedWindows  
+##  <a name="showownedwindows"></a>  CFrameWnd::ShowOwnedWindows  
  调用此成员函数，以显示所有的派生的窗口`CFrameWnd`对象。  
   
 ```  

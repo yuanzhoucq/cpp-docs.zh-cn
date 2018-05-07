@@ -1,12 +1,9 @@
 ---
-title: IDBSchemaRowsetImpl::CheckRestrictions | Microsoft Docs
-ms.custom: 
+title: 'Idbschemarowsetimpl:: Checkrestrictions |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CheckRestrictions
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CheckRestrictions method
 ms.assetid: 3c9d77d2-0e4b-48fa-80db-d735da19f1cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 44e661bc782af4a162936caae7c8c1be06585647
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c951c892a2e6d875fb1085b1d3208d43938347c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplcheckrestrictions"></a>IDBSchemaRowsetImpl::CheckRestrictions
 检查针对架构行集的限制的有效性。  
@@ -57,7 +52,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
   
  有关架构行集的详细信息，请参阅[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

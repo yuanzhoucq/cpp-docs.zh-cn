@@ -1,13 +1,10 @@
 ---
-title: "属性索引声明 |Microsoft 文档"
-ms.custom: 
+title: 属性索引声明 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - defaults, indexers
 - indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76473ce04cdf5860476b7612ddcbf00b40a0fae1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-index-declaration"></a>属性索引声明
 声明索引的属性的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 索引属性的托管扩展语言支持的两个主要的缺点是，无法提供类级别下标;即，所有索引的属性所需为指定的名称，并因此没有任何方法，例如，可提供一种托管的下标运算符，可以直接应用于`Vector`或`Matrix`类对象。 另一个不太重要的缺点是，很直观地难区分属性和索引属性，即参数的数目是唯一的指示。 最后，从与非索引化属性的相同问题的索引的属性会受到影响-访问器将不视为一个原子单元，而分为各个方法。  例如:  
+ 索引属性的托管扩展语言支持的两个主要的缺点是，无法提供类级别下标;即，所有索引的属性所需为指定的名称，并因此没有任何方法，例如，可提供一种托管的下标运算符，可以直接应用于`Vector`或`Matrix`类对象。 另一个不太重要的缺点是，很直观地难区分属性和索引属性，即参数的数目是唯一的指示。 最后，从与非索引化属性的相同问题的索引的属性会受到影响-访问器将不视为一个原子单元，而分为各个方法。  例如：  
   
 ```  
 public __gc class Vector;  
@@ -69,7 +64,7 @@ public:
 };  
 ```  
   
- 若要指示可以直接应用到类的新语法中的对象的类级别索引器`default`关键字重用来代替显式名称。 例如:  
+ 若要指示可以直接应用到类的新语法中的对象的类级别索引器`default`关键字重用来代替显式名称。 例如：  
   
 ```  
 public ref class Matrix {  

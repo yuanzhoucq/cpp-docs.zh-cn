@@ -2,12 +2,9 @@
 title: 记录视图 （MFC 数据访问） 的数据交换 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1db5adaab66fec2b587f7a15005caa3a9374ff12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58bda2d9a712e38951b8201c08e5bbbe369537eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>记录视图的数据交换（MFC 数据访问）
 当你使用[添加类](../mfc/reference/adding-an-mfc-odbc-consumer.md)将映射到记录集的字段的记录视图的对话框模板资源中的控件，框架将管理在两个方向的数据交换 — 从记录集到控件以及从控件到记录集。 使用 DDX 机制意味着你不必编写代码来回传输数据。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  下图显示了记录视图的 DDX 和 RFX 之间的关系。  
   
- ![对话框 &#45; 数据交换和记录 &#45; 字段交换](../data/media/vc37xt1.gif "vc37xt1")  
+ ![对话框&#45;数据交换和记录&#45;字段 exchange](../data/media/vc37xt1.gif "vc37xt1")  
 对话框数据交换和记录字段交换  
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。 有关 RFX 的详细信息，请参阅[记录字段交换 (RFX)](../data/odbc/record-field-exchange-rfx.md)。  

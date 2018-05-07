@@ -1,12 +1,9 @@
 ---
-title: "CSingleDocTemplate 类 |Microsoft 文档"
-ms.custom: 
+title: CSingleDocTemplate 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSingleDocTemplate
@@ -17,15 +14,13 @@ dev_langs:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: e23db022f62dab171359f2d0a9cdb158c36557c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 类
 定义实现单文档界面 (SDI) 的文档模板。  
@@ -70,10 +65,10 @@ class CSingleDocTemplate : public CDocTemplate
   
  `CSingleDocTemplate`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
+##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
  构造 `CSingleDocTemplate` 对象。  
   
 ```  
@@ -88,7 +83,7 @@ CSingleDocTemplate(
  `nIDResource`  
  指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
- 字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符用作占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 有关子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如:  
+ 字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符用作占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 有关子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如：  
   
  `// MYCALC.RC`  
   

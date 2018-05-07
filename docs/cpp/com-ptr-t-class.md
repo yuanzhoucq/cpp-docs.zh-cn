@@ -1,12 +1,9 @@
 ---
-title: "_com_ptr_t 类 |Microsoft 文档"
-ms.custom: 
+title: _com_ptr_t 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 类
 **Microsoft 专用**  
   
  `_com_ptr_t` 对象封装 COM 接口指针，被称为“智能”指针。 此模板类管理资源分配和释放函数调用通过**IUnknown**成员函数： `QueryInterface`， `AddRef`，和**版本**。  
   
- 智能指针通常由提供的 typedef 定义引用**_COM_SMARTPTR_TYPEDEF**宏。 此宏采用接口名称和 IID，并利用接口名称与后缀 `_com_ptr_t` 声明 `Ptr` 的专用化。 例如:  
+ 智能指针通常由提供的 typedef 定义引用 **_COM_SMARTPTR_TYPEDEF**宏。 此宏采用接口名称和 IID，并利用接口名称与后缀 `_com_ptr_t` 声明 `Ptr` 的专用化。 例如：  
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
@@ -71,10 +66,10 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 **结束 Microsoft 专用**  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<comip.h 声明 >  
   
- **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
+ **Lib:** 对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
 ## <a name="see-also"></a>请参阅  
  [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

@@ -2,28 +2,23 @@
 title: typeid 运算符 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27f3bcb7358b3ea05907df1a4372c107538dfb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abb99b3dbc656d43701eebafbd7d34de125d1a31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typeid-operator"></a>typeid 运算符
 ## <a name="syntax"></a>语法  
@@ -51,7 +46,7 @@ typeid( expression )
   
 -   带下标的指针（即 [ ]）。 （请注意，通常情况下，将下标与指向多态类型的指针一起使用不安全。）  
   
- 如果*表达式*指向基类类型，但该对象的实际类型是派生自该基类， **type_info**引用派生的类为结果。 *表达式*必须指向多态类型 （具有虚函数的类）。 否则，结果是**type_info**中引用的静态类*表达式*。 此外，必须取消引用指针以使用它指向的对象。 如果未取消引用指针，则结果将为**type_info**指针，它不指向。 例如:  
+ 如果*表达式*指向基类类型，但该对象的实际类型是派生自该基类， **type_info**引用派生的类为结果。 *表达式*必须指向多态类型 （具有虚函数的类）。 否则，结果是**type_info**中引用的静态类*表达式*。 此外，必须取消引用指针以使用它指向的对象。 如果未取消引用指针，则结果将为**type_info**指针，它不指向。 例如：  
   
 ```  
 // expre_typeid_Operator.cpp  

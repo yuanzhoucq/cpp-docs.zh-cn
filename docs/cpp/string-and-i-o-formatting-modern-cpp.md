@@ -2,26 +2,21 @@
 title: "\"字符串和我-O 格式化 （现代 C++） |Microsoft 文档\""
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a13861fe03547e37c4de72c21a528e297a217511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 C++ [iostreams](../standard-library/iostream.md)。 例如，下面的代码演示如何设置 cout 若要设置格式的整数输出以十六进制表示，第一次关闭的当前状态保存和重新之后，设置，因为后状态格式传递给 cout 时，它始终处于这种方式更改，而不仅仅是为一个行之前代码。   

@@ -1,13 +1,10 @@
 ---
-title: "MFC 应用程序中的本地化资源： 附属 Dll |Microsoft 文档"
-ms.custom: 
+title: MFC 应用程序中的本地化资源： 附属 Dll |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 0740f567f17c8d44069211274ab1a4c66da311c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 应用程序中的本地化资源：附属 DLL
 MFC 7.0 和更高版本提供对附属 Dll，该功能有助于创建针对多个语言进行本地化的应用程序的增强的支持。 附属 DLL 是[纯资源 DLL](../build/creating-a-resource-only-dll.md) ，其中包含针对特定语言进行本地化的应用程序的资源。 当应用程序开始执行时，MFC 将自动加载已本地化的资源最适合于环境。 例如，你可以使用两个附属 Dll，一个包含你的资源和另一个包含德语翻译的法语翻译的英语资源的应用程序。 当在英语语言的系统上运行应用程序时，它会使用英语资源。 如果在法语系统上运行，它将使用的法语资源;如果德语的系统上运行，则使用德语的资源。  

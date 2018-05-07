@@ -1,24 +1,19 @@
 ---
-title: "模板 ref 类 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: 模板 ref 类 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f135907a4aba473db62734f9370ee82b7113c66d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a1d637eeee0ff087a0c8f07d7929f6d4dcf13247
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-ref-classes-ccx"></a>模板 ref 类 (C++/CX)
 C++ 模板没有发布到元数据，因此你的程序中不能具有公共或受保护的可访问性。 当然，你可在程序内部使用标准 C++ 模板。 此外，你可将私有 ref 类定义为模板，并可将显式专用模板 ref 类声明为公共 ref 类中的私有成员。  

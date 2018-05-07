@@ -1,13 +1,10 @@
 ---
-title: "使用应用程序向导创建桌面项目 |Microsoft 文档"
-ms.custom: 
+title: 使用应用程序向导创建桌面项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.mfcexe.project
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - programs [C++], beginning with wizards
 - applications [C++], using wizards
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919573139ee8bd37c210d91f223a1c41d28d7b3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>使用应用程序向导创建桌面项目
 每种 Visual C++ 项目类型都有应用程序向导，可帮助快速容易地生成仿效项目模板的新项目。  若要打开应用程序向导，请使用**新项目**对话框可以指定项目属性，例如项目，或目录和解决方案的名称在你的项目将驻留的。  

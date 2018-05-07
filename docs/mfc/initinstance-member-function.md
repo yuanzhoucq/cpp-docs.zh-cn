@@ -1,13 +1,10 @@
 ---
-title: "InitInstance 成员函数 |Microsoft 文档"
-ms.custom: 
+title: InitInstance 成员函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - InitInstance
 dev_langs:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96042b4d2931fb3709f992f6e43e408c919fe014
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initinstance-member-function"></a>InitInstance 成员函数
-Windows 操作系统允许您运行同一应用程序的多个副本（也称为“实例”）。 `WinMain`调用[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)每次启动应用程序的新实例。  
+Windows 操作系统允许您运行同一应用程序的多个副本（也称为“实例”）。 `WinMain` 调用[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)每次启动应用程序的新实例。  
   
  MFC 应用程序向导创建的标准 `InitInstance` 实现将执行以下任务：  
   
@@ -48,7 +43,7 @@ Windows 操作系统允许您运行同一应用程序的多个副本（也称为
  您可以添加自己的初始化代码或修改向导编写的代码。  
   
 > [!NOTE]
->  MFC 应用程序必须初始化为单线程单元 (STA)。 如果调用[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中你`InitInstance`重写时，请指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
+>  MFC 应用程序必须初始化为单线程单元 (STA)。 如果调用[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中你`InitInstance`重写时，请指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
   
 ## <a name="see-also"></a>请参阅  
  [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)

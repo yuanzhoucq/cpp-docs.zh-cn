@@ -1,12 +1,9 @@
 ---
-title: "CUIntArray 类 |Microsoft 文档"
-ms.custom: 
+title: CUIntArray 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>CUIntArray 类
 支持无符号整数数组。  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>备注  
  无符号的整数或**UINT**，从字和双字数组中的不同的物理大小**UINT**可以更改具体取决于目标操作环境。 A **UINT**双字的大小相同。  
   
- `CUIntArray`包含[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)宏来支持运行时类型访问和转储到[CDumpContext](../../mfc/reference/cdumpcontext-class.md)对象。 如果你需要单独的无符号的整数元素的转储，你必须设置为 1 或更高版本的转储上下文的深度。 无符号的整数数组无法序列化。  
+ `CUIntArray` 包含[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)宏来支持运行时类型访问和转储到[CDumpContext](../../mfc/reference/cdumpcontext-class.md)对象。 如果你需要单独的无符号的整数元素的转储，你必须设置为 1 或更高版本的转储上下文的深度。 无符号的整数数组无法序列化。  
   
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
@@ -130,7 +125,7 @@ class CUIntArray : public CObject
   
  `CUIntArray`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,13 +1,10 @@
 ---
-title: "运行时对象模型服务 |Microsoft 文档"
-ms.custom: 
+title: 运行时对象模型服务 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff506d559ab44ba4034e982bb909db763917594
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 类[CObject](../../mfc/reference/cobject-class.md)和[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封装多个对象服务，包括对运行时类信息、 序列化和动态对象创建的访问。 所有派生自 `CObject` 的类都继承此功能。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|实现**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。|  
 |[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|任一此宏或[IMPLEMENT_OLECREATE](#implement_olecreate)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。 |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 确定公共控件库是否实现了指定的 API。  
    
 ### <a name="syntax"></a>语法  
@@ -93,13 +88,13 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="remarks"></a>备注  
  使用此宏来确定是否公共控件库函数指定`proc`(而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  afxcomctl32.h，afxcomctl32.inl  
    
 ### <a name="see-also"></a>请参阅  
  [隔离 MFC 公共控件库](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 确定公共控件库是否实现指定的 API (这是 Unicode 版的[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists))。  
    
 ### <a name="syntax"></a>语法    
@@ -113,7 +108,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 ### <a name="remarks"></a>备注  
  使用此宏来确定是否公共控件库函数指定`proc`(而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。 此宏是 Unicode 版本的`AFX_COMCTL32_IF_EXISTS`。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  afxcomctl32.h，afxcomctl32.inl  
    
 ### <a name="see-also"></a>请参阅  
@@ -121,7 +116,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
  添加了派生类时访问的对象类的运行时信息的功能`CObject`。  
   
 ```
@@ -144,10 +139,10 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="example"></a>示例  
  请参阅示例[IMPLEMENT_DYNAMIC](#implement_dynamic)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
  支持的对象`CObject`-派生类，以在运行时动态创建。  
   
 ```
@@ -173,7 +168,7 @@ DECLARE_DYNCREATE(class_name)
 ### <a name="example"></a>示例  
  请参阅示例[IMPLEMENT_DYNCREATE](#implement_dyncreate)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
 
  
@@ -191,7 +186,7 @@ DECLARE_OLECTLTYPE( class_name )
 ### <a name="remarks"></a>备注  
  **GetUserTypeNameID**和`GetMiscStatus`是纯虚函数，在中声明`COleControl`。 因为这些函数是纯虚拟的它们必须被重写控件类中。 除了**DECLARE_OLECTLTYPE**，必须添加`IMPLEMENT_OLECTLTYPE`向控件类声明的宏。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxctl.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -214,14 +209,14 @@ DECLARE_PROPPAGEIDS( class_name )
   
  属性页的详细信息，请参阅文章[ActiveX 控件： 属性页](../mfc-activex-controls-property-pages.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxctl.h  
    
 ### <a name="see-also"></a>请参阅   
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
  生成必需的 c + + 标头代码`CObject`-派生可序列化的类。  
   
 ```
@@ -250,10 +245,10 @@ DECLARE_SERIAL(class_name)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
 
-##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC  
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC  
  生成为动态所需的 c + + 代码`CObject`-派生的类名称和层次结构中的位置与运行时访问的类。  
   
 ```
@@ -277,10 +272,10 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
  支持的对象`CObject`-派生类，以在运行，都会动态创建时间一起使用时`DECLARE_DYNCREATE`宏。  
   
 ```
@@ -308,10 +303,10 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
 任一此宏或[IMPLEMENT_OLECREATE](#implement_olecreate)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
    
 ### <a name="syntax"></a>语法    
@@ -330,12 +325,12 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  `nFlags`  
  包含一个或多个以下的标志：  
   
--   `afxRegInsertable`允许在 OLE 对象的插入对象对话框中显示控件。    
--   `afxRegApartmentThreading`ThreadingModel 到注册表中设置线程模型 = 单元。    
+-   `afxRegInsertable` 允许在 OLE 对象的插入对象对话框中显示控件。    
+-   `afxRegApartmentThreading` ThreadingModel 到注册表中设置线程模型 = 单元。    
 -   **afxRegFreeThreading** ThreadingModel 到注册表中设置线程模型 = 免费。  
   
      你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)线程处理模型注册的详细信息的 Windows SDK 中。    
- *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8*  
+ *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*  
  类的组件**CLSID**。  
    
 ### <a name="remarks"></a>备注  
@@ -347,7 +342,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
   
  OLE 类 ID 是对象的唯一 128 位标识符。 它由一个**长**、 两个**WORD**和八**字节**s，由表示*l*， *w1*， *w2*，和*b1*通过*b8*语法说明中。 应用程序向导和代码向导根据需要为你创建唯一的 OLE 类 Id。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -356,7 +351,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  [CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 实现**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。  
    
 ### <a name="syntax"></a>语法    
@@ -376,19 +371,19 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ### <a name="remarks"></a>备注  
  除了`IMPLEMENT_OLECTLTYPE`，必须添加**DECLARE_OLECTLTYPE**向控件类声明的宏。  
   
- **GetUserTypeNameID**成员函数将返回标识你的控件类的资源字符串。 `GetMiscStatus`返回**OLEMISC** bits 为您的控件。 此枚举指定设置说明杂项特征的控件的集合。 有关完整说明**OLEMISC**设置，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ **GetUserTypeNameID**成员函数将返回标识你的控件类的资源字符串。 `GetMiscStatus` 返回**OLEMISC** bits 为您的控件。 此枚举指定设置说明杂项特征的控件的集合。 有关完整说明**OLEMISC**设置，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
   
 > [!NOTE]
 >  使用 ActiveX 控件向导的默认设置是： **OLEMISC_ACTIVATEWHENVISIBLE**， **OLEMISC_SETCLIENTSITEFIRST**， **OLEMISC_INSIDEOUT**， **OLEMISC_CANTLINKINSIDE**，和**OLEMISC_RECOMPOSEONRESIZE**。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxctl.h  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
  生成为动态所需的 c + + 代码`CObject`-派生的类名称和层次结构中的位置与运行时访问的类。  
   
 ```
@@ -417,10 +412,10 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
  从 c + + 类的名称获取运行时类结构。  
   
 ```
@@ -432,17 +427,17 @@ RUNTIME_CLASS(class_name)
  （未用引号引起来） 类的实际名称。  
   
 ### <a name="remarks"></a>备注  
- `RUNTIME_CLASS`返回一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)指定的类结构*class_name*。 仅`CObject`-派生类使用声明`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`将返回指向`CRuntimeClass`结构。  
+ `RUNTIME_CLASS` 返回一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)指定的类结构*class_name*。 仅`CObject`-派生类使用声明`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`将返回指向`CRuntimeClass`结构。  
   
  有关详细信息，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
  支持的对象`CCmdTarget`-派生类，以通过 OLE 自动化创建。  
   
 ```
@@ -460,10 +455,10 @@ DECLARE_OLECREATE(class_name)
   
  如果`DECLARE_OLECREATE`包含在类声明中，然后`IMPLEMENT_OLECREATE`必须包含在类实现。 类声明使用`DECLARE_OLECREATE`还必须使用`DECLARE_DYNCREATE`或`DECLARE_SERIAL`。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
  任一此宏或[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
   
 ```
@@ -477,7 +472,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *external_name*  
  向其他应用程序 （用引号引起来） 公开的对象名称。  
   
- *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8*  
+ *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*  
  类的组件**CLSID**。  
   
 ### <a name="remarks"></a>备注  
@@ -489,7 +484,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
   
  OLE 类 ID 是对象的唯一 128 位标识符。 它由一个**长**、 两个**WORD**和八**字节**s，由表示*l*， *w1*， *w2*，和*b1*通过*b8*语法说明中。 应用程序向导和代码向导根据需要为你创建唯一的 OLE 类 Id。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h 
 
 ## <a name="see-also"></a>请参阅  

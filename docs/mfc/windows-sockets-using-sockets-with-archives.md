@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 对存档使用套接字 |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 对存档使用套接字 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 套接字：对存档使用套接字
-本指南介绍了[CSocket 编程模型](#_core_the_csocket_programming_model)。 类[CSocket](../mfc/reference/csocket-class.md)比类提供的抽象级别更高的套接字支持[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket`使用 MFC 序列化协议的版本将传递数据传入和传出套接字对象，通过 MFC [CArchive](../mfc/reference/carchive-class.md)对象。 `CSocket` 提供锁定（在管理对 Windows 消息的背景处理时）并为您提供对 `CArchive` 的访问权限（其将管理您必须使用原始 API 或类 `CAsyncSocket` 亲自进行的通信的多个方面）。  
+本指南介绍了[CSocket 编程模型](#_core_the_csocket_programming_model)。 类[CSocket](../mfc/reference/csocket-class.md)比类提供的抽象级别更高的套接字支持[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化协议的版本将传递数据传入和传出套接字对象，通过 MFC [CArchive](../mfc/reference/carchive-class.md)对象。 `CSocket` 提供锁定（在管理对 Windows 消息的背景处理时）并为您提供对 `CArchive` 的访问权限（其将管理您必须使用原始 API 或类 `CAsyncSocket` 亲自进行的通信的多个方面）。  
   
 > [!TIP]
 >  您可以单独使用类 `CSocket` 作为 `CAsyncSocket` 的更方便的版本，但最简单的编程模型是使用具有 `CSocket` 对象的 `CArchive`。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  如果您要编写 MFC 客户端程序来与建立的（非 MFC）服务器通信，则请勿通过存档发送 C++ 对象。 除非服务器是知道您要发送的对象类型的 MFC 应用程序，否则它无法接收和反序列化对象。 在与非 MFC 应用程序通信的主题提供了相关材料，还请参阅文章[Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)。  
   
-##  <a name="_core_the_csocket_programming_model"></a>CSocket 编程模型  
+##  <a name="_core_the_csocket_programming_model"></a> CSocket 编程模型  
  使用 `CSocket` 对象涉及创建多个 MFC 类对象并将这些对象相关联。 在下面一般过程中，每个步骤均由服务器套接字和客户端套接字执行，步骤 3 除外，该步骤中每个套接字类型都需要不同的操作。  
   
 > [!TIP]
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  如果套接字，客户端调用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)连接到服务器套接字的套接字对象。  
   
-     或  
+     -或-  
   
      套接字是服务器，如果调用[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)开始侦听连接尝试从客户端。 收到连接请求后，接受它通过调用[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。  
   

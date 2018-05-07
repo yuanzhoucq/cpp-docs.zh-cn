@@ -1,37 +1,32 @@
 ---
-title: "MFC ActiveX 控件： 添加自定义方法 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 添加自定义方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控件：添加自定义方法
 自定义方法不同于常用方法，因为它们并不已实现通过`COleControl`。 必须提供向控件添加的每个自定义方法的实现。  
   
  ActiveX 控件用户可以随时执行特定于控件的操作调用的自定义方法。 自定义方法的调度映射项的形式`DISP_FUNCTION`。  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>添加具有的自定义方法添加方法向导  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> 添加具有的自定义方法添加方法向导  
  下面的过程演示将 PtInCircle 自定义的方法添加到 ActiveX 控件的主干代码。 PtInCircle 确定传递到的控件的坐标为内部或外部圆。 此外可以使用此相同的过程添加其他自定义的方法。 替换你自定义方法的名称和其 PtInCircle 方法名称和参数的参数。  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 10. 单击 **“完成”**。  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>添加方法向导正在更改的自定义方法  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> 添加方法向导正在更改的自定义方法  
  当你添加自定义方法时，添加方法向导会对控件类标头进行一些更改 (。H） 和实现 (。CPP) 文件。 以下行添加到控件类标头中的调度映射声明 (。H） 文件：  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

@@ -1,13 +1,10 @@
 ---
-title: "对话框数据验证 |Microsoft 文档"
-ms.custom: 
+title: 对话框数据验证 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01766dd741ed87d9ac11b8858221a1bd09b0cf31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-validation"></a>对话框数据验证
 中的示例中所示，可以通过调用 DDV 函数指定除了数据交换的验证[对话框数据交换](../mfc/dialog-data-exchange.md)。 `DDV_MaxChars`在示例中调用验证输入的文本框控件中的字符串不超过 20 个字符。 如果验证失败，并将焦点置于有问题的控件上，以便用户可以重新输入数据，DDV 函数通常向具有一个消息框的用户发出警报。 给定控件的 DDV 函数必须为相同的控件的 DDX 函数之后立即调用。  

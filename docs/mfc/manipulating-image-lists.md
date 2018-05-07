@@ -1,13 +1,10 @@
 ---
-title: "操作图像列表 |Microsoft 文档"
-ms.custom: 
+title: 操作图像列表 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2670f3935e2f4c482728000a268cb46cc9dbdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 559cb87dbed412e706cc85b3db1120083b694991
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-image-lists"></a>操作图像列表
 [替换](../mfc/reference/cimagelist-class.md#replace)成员函数将图像列表中的映像 ([CImageList](../mfc/reference/cimagelist-class.md)) 为新图像。 如果需要动态增加图像列表对象中的图像数，此函数也很有用。 [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount)函数动态地更改存储的图像列表中的图像数量。 如果增加图像列表的大小，调用**替换**将映像添加到新的映像槽。 如果减小图像列表的大小，则释放超出新大小的图像。  

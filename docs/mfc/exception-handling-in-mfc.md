@@ -1,13 +1,10 @@
 ---
-title: "在 MFC 中处理的异常 |Microsoft 文档"
-ms.custom: 
+title: 在 MFC 中处理的异常 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 此文章介绍了 MFC 中可用的异常处理机制。 可以使用两个机制：  
@@ -78,7 +73,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [有关异常的其他阅读材料](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>何时使用异常  
+##  <a name="_core_when_to_use_exceptions"></a> 何时使用异常  
  在程序执行过程中调用函数时，可能发生的结果的三个类别： 正常执行、 错误执行或不正常执行。 下面描述了每个类别。  
   
 -   正常执行  
@@ -95,7 +90,7 @@ ms.lasthandoff: 01/03/2018
   
  使用异常是尤其适用于不正常执行。  
   
-##  <a name="_core_mfc_exception_support"></a>MFC 异常支持  
+##  <a name="_core_mfc_exception_support"></a> MFC 异常支持  
  是否直接使用 c + + 异常，或使用 MFC 异常宏，你将使用[CException 类](../mfc/reference/cexception-class.md)或`CException`-派生的对象由框架或你的应用程序，则可能引发的。  
   
  下表显示 MFC 提供的预定义的异常。  
@@ -116,7 +111,7 @@ ms.lasthandoff: 01/03/2018
 > [!NOTE]
 >  MFC 支持 c + + 异常和 MFC 异常宏。 MFC 不直接支持 Windows NT 结构化异常处理程序 (SEH) 中所述[结构化异常处理](http://msdn.microsoft.com/library/windows/desktop/ms680657)。  
   
-##  <a name="_core_further_reading_about_exceptions"></a>有关异常的其他阅读材料  
+##  <a name="_core_further_reading_about_exceptions"></a> 有关异常的其他阅读材料  
  以下文章说明了使用 MFC 库进行异常处理：  
   
 -   [异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)  
@@ -140,6 +135,6 @@ ms.lasthandoff: 01/03/2018
 -   [异常：使用 MFC 宏和 C++ 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 异常处理](../cpp/cpp-exception-handling.md)   
+ [C++ 异常处理](../cpp/cpp-exception-handling.md)   
  [如何： 创建我自己的自定义异常类](http://go.microsoft.com/fwlink/p/?linkid=128045)
 

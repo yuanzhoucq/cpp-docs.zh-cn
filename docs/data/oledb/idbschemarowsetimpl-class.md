@@ -1,12 +1,9 @@
 ---
-title: "IDBSchemaRowsetImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IDBSchemaRowsetImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBSchemaRowsetImpl class
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2895aeebd49e38b157ab55912fcc4b7c52ba953e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dc9da29bcd49b227596325913d521347b6b0ca0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 类
 提供架构行集的实现。  
@@ -70,7 +65,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
   
  有关架构行集的详细信息，请参阅 [OLE DB 程序员参考](https://msdn.microsoft.com/en-us/library/ms712921.aspx) 中的 *架构行集*。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

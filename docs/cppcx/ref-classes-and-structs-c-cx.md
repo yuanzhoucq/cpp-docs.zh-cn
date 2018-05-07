@@ -1,24 +1,19 @@
 ---
-title: "Ref 类和结构 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: Ref 类和结构 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 类和结构 (C++/CX)
 C + + /cli CX 支持用户定义*ref 类*和*ref 结构*，以及用户定义*值类*和*值结构*。 这些数据结构是主容器的 C + /cli CX 支持的 Windows 运行时类型系统。 其内容发送到元数据根据某些特定规则，这可让其 Windows 运行时组件和用 c + + 或其他语言编写的通用 Windows 平台应用程序之间传递。  

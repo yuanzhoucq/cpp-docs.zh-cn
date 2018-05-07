@@ -1,13 +1,10 @@
 ---
-title: "活动文档容器 |Microsoft 文档"
-ms.custom: 
+title: 活动文档容器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containers"></a>活动文档容器
 活动文档容器，如 Microsoft Office Binder 或 Internet Explorer 中，允许你使用不同的应用程序类型 （而不是强制你创建和使用多个应用程序帧每个单个范围内的多个文档文档类型）。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [命令目标](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a>容器要求  
+##  <a name="container_requirements"></a> 容器要求  
  活动文档容器中的活动文档支持意味着以外的其他接口实现： 它还要求使用包含对象的接口的知识。 这同样适用于活动文档扩展，其中容器还必须了解如何使用活动文档自身上的这些扩展接口。  
   
  活动文档容器集成了活动文档必须：  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  支持单个视图的文档可以在单个具体类中实现的视图和文档的组件 （即，其相应的接口）。 此外，仅支持一次的一个视图的容器站点可以将文档站点和查看网站合并成单一的具体站点类。 但是，容器的框架对象，必须保留不同的并且容器的文档组件只是此处包括为提供的完整蓝图的体系结构;不受活动文档包容体系结构。  
   
-##  <a name="document_site_objects"></a>文档站点对象  
+##  <a name="document_site_objects"></a> 文档站点对象  
  在活动文档包容体系结构中，文档站点等同于客户端的站点对象在 OLE 文档中添加`IOleDocument`接口：  
   
  `interface IOleDocumentSite : IUnknown`  
@@ -83,12 +78,12 @@ ms.lasthandoff: 12/21/2017
   
  文档站点从概念上讲是一个或多个"查看站点"对象的容器。 每个视图站点对象都与文档由文档站点管理的单独的视图对象相关联。 如果容器仅支持每个文档站点的单一视图，，它可以实现文档站点和具有单个具体类的视图站点。  
   
-##  <a name="view_site_objects"></a>查看站点对象  
+##  <a name="view_site_objects"></a> 查看站点对象  
  容器的视图站点对象管理文档的特定视图的显示空间。 除了支持标准`IOleInPlaceSite`接口，查看网站也通常实现`IContinueCallback`以编程方式打印控件。 (请注意，视图对象永远不会查询为`IContinueCallback`因此它实际实现在容器需求的任何对象。)  
   
  支持多个视图的容器必须能够创建文档站点内的站点对象的多个视图。 这需要为每个视图提供了单独的激活和停用服务，如通过提供`IOleInPlaceSite`。  
   
-##  <a name="frame_object"></a>框架对象  
+##  <a name="frame_object"></a> 框架对象  
  容器的框架对象，大多数情况下，用于就地激活 OLE 文档中，它是同一帧、 处理菜单和工具栏协商。 视图对象有权访问通过此框架对象**IOleInPlaceSite::GetWindowContext**，其中还提供对表示容器文档 （它可以处理窗格级工具栏协商的容器对象访问和包含的对象枚举）。  
   
  活动文档容器可以通过添加增强帧`IOleCommandTarget`。 这使它可以接收源自活动文档的用户界面与此接口可以允许一个容器来发送相同的命令相同的方式的命令 (如**文件新**，**打开**， **将另存为**，**打印**;**编辑副本**，**粘贴**，**撤消**，等) 到活动文档。 有关详细信息，请参阅[命令目标](../mfc/message-handling-and-command-targets.md)。  

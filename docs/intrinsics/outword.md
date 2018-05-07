@@ -1,12 +1,9 @@
 ---
-title: __outword | Microsoft Docs
-ms.custom: 
+title: __outword |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __outword
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f85550516167b155f2ec6e871ea17c9e249e746
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="outword"></a>__outword
 **Microsoft 专用**  
@@ -49,7 +44,7 @@ void __outword(
  [in] `Data`  
  要发送的数据。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

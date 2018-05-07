@@ -1,29 +1,24 @@
 ---
-title: "隔离 MFC 公共控件库 |Microsoft 文档"
-ms.custom: 
+title: 隔离 MFC 公共控件库 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04ed1be46d4c3d7f36bfa501bfc933fbba41e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 193a0ea527cda3819a585f5b7149c823a7eb8ef7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>隔离 MFC 公共控件库
 公用控件库现在在 MFC 中处于隔离状态，通过在其清单中指定版本，允许不同模块（如用户 DLL）使用不同版本的公用控件库。  

@@ -1,13 +1,10 @@
 ---
-title: "标头控件中的标头项 |Microsoft 文档"
-ms.custom: 
+title: 标头控件中的标头项 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2143a89d9b91c9c6db53beedce0875ee76f34cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f43440cccda8afc437b213ae3356229c673358f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="header-items-in-a-header-control"></a>标题控件中的标题项
 有相当大的控制权的外观和行为的构成标头控件的标题项 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))。 每个标题项可以有一个字符串、一个位图化图像、一个关联图像列表中的图像或一个与之关联的应用程序定义的 32 位值。 字符串、位图或图像显示在标题项中。  

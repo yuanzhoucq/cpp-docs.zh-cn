@@ -2,11 +2,8 @@
 title: 多集 (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - multiset class [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e01ec2d9c426d6b95b12fe0db9e5a2e328ae1cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`multiset`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。  
@@ -127,7 +122,7 @@ template<typename Key>
   
  此类委托对象必须进行严格弱排序键的类型在施加[multiset:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `key_comp()(X, Y)`返回相同的布尔值导致每次调用。  
+ `key_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
   
  如果`key_comp()(X, Y)`为 true，然后`key_comp()(Y, X)`必须是 false。  
   
@@ -147,7 +142,7 @@ template<typename Key>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

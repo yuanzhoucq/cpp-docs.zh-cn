@@ -1,12 +1,9 @@
 ---
-title: "Cdatasource:: Openfrominitializationstring |Microsoft 文档"
-ms.custom: 
+title: 'Cdatasource:: Openfrominitializationstring |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDataSource.OpenFromInitializationString
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f05654c9b8647f62d967f97fa4b373471e049cda
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dac964f7c6c863f85769a164fab8c418e1c45430
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
 打开用户提供的初始化字符串指定数据源。  
@@ -57,7 +52,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 ## <a name="remarks"></a>备注  
  此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

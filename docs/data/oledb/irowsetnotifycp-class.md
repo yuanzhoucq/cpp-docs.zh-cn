@@ -1,12 +1,9 @@
 ---
-title: "IRowsetNotifyCP 类 |Microsoft 文档"
-ms.custom: 
+title: IRowsetNotifyCP 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyCP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a43825ee3fa676ce07dcd3bc4e121abd400ef322
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 19147710ce8965222eed998e1a7ab4baa1e32caf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 类
 实现连接点接口的提供程序站点[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。  
@@ -51,7 +46,7 @@ class IRowsetNotifyCP :
  支持可重入性 mutex 类 (默认值是**CComSharedMutex**)。 互斥体是一个允许一个线程互相排斥的方式访问资源的同步对象。  
   
  `piid`  
- 接口 ID 指针 (**IID\***) 为**IRowsetNotify**连接点接口。 默认值是**& __uuidof(IRowsetNotify)**。  
+ 接口 ID 指针 (**IID\***) 为**IRowsetNotify**连接点接口。 默认值是 **& __uuidof(IRowsetNotify)**。  
   
  `DynamicUnkArray`  
  类型的数组[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，这是一个动态分配的数组**IUnknown**指向客户端接收器接口。  
@@ -73,7 +68,7 @@ class IRowsetNotifyCP :
   
  有关实现通知的详细信息，请参阅"支持通知"[创建可更新提供程序](../../data/oledb/creating-an-updatable-provider.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "hash_multimap:: value_type (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'hash_multimap:: value_type (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::value_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: f15cbeb0-bd65-4299-93a1-4fe151d7452e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c9c1c3cad25bcee93fc6a5835f74fb868f44e8d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c94ec00d4dd5b83c5e9929f9c339a431caed291
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapvaluetype-stlclr"></a>hash_multimap::value_type (STL/CLR)
 元素的类型。  
@@ -71,7 +66,7 @@ int main()
 [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

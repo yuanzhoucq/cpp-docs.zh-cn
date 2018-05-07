@@ -1,13 +1,10 @@
 ---
-title: "项目文件 |Microsoft 文档"
-ms.custom: 
+title: 项目文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VCPROJ (Visual C++ project file) format
 - project files [C++], .vcproj file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac1b6d01bc454e2bcc7f1c8fd125f9d6ff96c90f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-files"></a>项目文件
 Visual c + + 项目文件是一个基于 XML 的文件具有.vcxproj 文件扩展名，并且包含生成的 Visual c + + 项目所需的信息。  

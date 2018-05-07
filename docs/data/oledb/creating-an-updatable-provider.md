@@ -1,12 +1,9 @@
 ---
-title: "创建可更新提供程序 |Microsoft 文档"
-ms.custom: 
+title: 创建可更新提供程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 317ccd043b3a69489f9cbd2737ad7741389863c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 Visual c + + 支持可更新提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新提供程序使用 OLE DB 模板。  
@@ -436,5 +431,5 @@ m_rgRowData.Add(trData[0]);
   
  此代码指定，除了别的之外列支持默认值为 0，它是可写，并且列中的所有数据都具有相同的长度。 如果你想要具有可变长度的列中的数据，则不要设置此标志。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)

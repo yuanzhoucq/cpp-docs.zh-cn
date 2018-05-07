@@ -1,12 +1,9 @@
 ---
-title: "ICommandTarget 接口 |Microsoft 文档"
-ms.custom: 
+title: ICommandTarget 接口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandTarget
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8adb388bed39f91637dd1ef37ee1ee895f291d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32112fbad516b2550da0cc48cb6c287583d396c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 接口
 向用户控件提供了一个接收命令从命令的源对象的接口。  
@@ -53,10 +48,10 @@ interface class ICommandTarget
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）  
   
-##  <a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a> ICommandTarget::Initialize  
  初始化命令目标对象。  
   
 ```  

@@ -2,11 +2,8 @@
 title: 用户定义的类型转换 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>用户定义的类型转换 (C++)
 A*转换*生成一个值从某种类型的不同类型的新值。 *标准转换*内置于其内置类型，你可以创建的 C++ 语言和支持*用户定义的转换*来执行到、 从，或用户定义类型之间的转换。  
@@ -83,7 +78,7 @@ A*转换*生成一个值从某种类型的不同类型的新值。 *标准转换
   
  `explicit` 关键字可应用于自 C++98 后的转换构造函数和自 C++11 后的转换函数。 以下部分包含有关如何使用 `explicit` 关键字的详细信息。  
   
-##  <a name="ConvCTOR"></a>转换构造函数  
+##  <a name="ConvCTOR"></a> 转换构造函数  
  转换构造函数定义了从用户定义的类型或内置类型到用户定义的类型的转换。 以下示例演示了从内置类型 `Money``double` 转换为用户定义的类型  的转换构造函数。  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  尽管允许隐式转换带来的便利很具吸引力，但执行此操作会引入难以发现的 Bug。 根据经验，应该让所有转换构造函数变为显式，除非你确定希望隐式执行特定转换。  
   
-##  <a name="ConvFunc"></a>转换函数  
+##  <a name="ConvFunc"></a> 转换函数  
  转换函数定义了从用户定义的类型到其他类型的转换。 这些函数有时称为“强制转换运算符”，因为在值强制转换为其他类型时将随转换构造函数一起调用它们。 以下示例演示了从用户定义的类型 `Money` 转换为内置类型 `double` 的转换函数：  
   
 ```  

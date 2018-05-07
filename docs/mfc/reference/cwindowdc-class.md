@@ -1,12 +1,9 @@
 ---
-title: "CWindowDC 类 |Microsoft 文档"
-ms.custom: 
+title: CWindowDC 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWindowDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc3219ff6570fab18b19f350f7dca3171ab4832
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 类
 从 `CDC`派生。  
@@ -50,7 +45,7 @@ class CWindowDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWindowDC::m_hWnd](#m_hwnd)|`HWND`此`CWindowDC`附加。|  
   
@@ -66,10 +61,10 @@ class CWindowDC : public CDC
   
  `CWindowDC`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  标头： afxwin.h  
   
-##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
  构造`CWindowDC`访问的整个屏幕区域 （客户端和非工作） 的对象`CWnd`指向对象`pWnd`。  
   
 ```  
@@ -88,7 +83,7 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
  `HWND`的`CWnd`指针用于构造`CWindowDC`对象。  
   
 ```  
@@ -96,7 +91,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_hWnd`是一个受保护的类型变量`HWND`。  
+ `m_hWnd` 是一个受保护的类型变量`HWND`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWindowDC::CWindowDC](#cwindowdc)。  

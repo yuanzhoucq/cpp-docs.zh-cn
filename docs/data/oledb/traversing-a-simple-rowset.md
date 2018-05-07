@@ -1,12 +1,9 @@
 ---
-title: "遍历简单行集合 |Microsoft 文档"
-ms.custom: 
+title: 遍历简单行集合 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>遍历简单行集合
 下面的示例演示不涉及命令的快速而简便的数据库访问。 下面的使用者代码，在 ATL 项目中，从名为的表中检索记录*艺术家*Microsoft Access 数据库使用 Microsoft OLE DB Provider for ODBC。 该代码创建[CTable](../../data/oledb/ctable-class.md)使用访问器的表对象基于用户记录类`CArtists`。 打开连接，打开连接上, 一个会话，并在会话上打开表。  

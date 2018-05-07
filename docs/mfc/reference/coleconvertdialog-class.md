@@ -1,12 +1,9 @@
 ---
-title: "COleConvertDialog 类 |Microsoft 文档"
-ms.custom: 
+title: COleConvertDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 类
 有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的结构。  
@@ -99,10 +94,10 @@ class COleConvertDialog : public COleDialog
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
  仅构造`COleConvertDialog`对象。  
   
 ```  
@@ -124,7 +119,7 @@ explicit COleConvertDialog (
   
 - **CF_SELECTACTIVATEAS**指定，在调用对话框时最初选择激活单选按钮。  
   
-- **CF_SETCONVERTDEFAULT**指定类其**CLSID**指定**clsidConvertDefault**的成员`m_cv`结构将用作默认值类列表框时转换为单选按钮中的选项处于选中状态。  
+- **CF_SETCONVERTDEFAULT**指定类其**CLSID**指定**clsidConvertDefault**的成员`m_cv`结构将用作默认选择类列表中选中框时转换为单选按钮。  
   
 - **CF_SETACTIVATEDEFAULT**指定类其**CLSID**指定**clsidActivateDefault**的成员`m_cv`结构将用作默认值当选中激活单选按钮时的类列表框中选择。  
   
@@ -141,7 +136,7 @@ explicit COleConvertDialog (
   
  有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)和[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)结构。  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  从已成功返回后，调用此函数， [DoModal](#domodal)要转换或要激活的对象类型， [COleClientItem](../../mfc/reference/coleclientitem-class.md)。  
   
 ```  
@@ -158,7 +153,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>备注  
  转换或激活根据选择的转换对话框中的用户的信息项。  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
  调用此函数可显示 OLE 转换对话框。  
   
 ```  
@@ -179,7 +174,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`返回**IDOK**，您可以调用其他成员函数检索的设置或由用户输入到对话框中的信息。  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
  调用此函数可获取**CLSID**与项关联的转换对话框中选定的用户。  
   
 ```  
@@ -194,7 +189,7 @@ REFCLSID GetClassID() const;
   
  有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  调用此函数可确定是否在用户选择以图标形式显示的选定的项。  
   
 ```  
@@ -204,16 +199,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>返回值  
  呈现对象所需的方法。  
   
-- `DVASPECT_CONTENT`返回如果未选中显示为图标复选框。  
+- `DVASPECT_CONTENT` 返回如果未选中显示为图标复选框。  
   
-- `DVASPECT_ICON`返回如果已选中了显示为图标复选框。  
+- `DVASPECT_ICON` 返回如果已选中了显示为图标复选框。  
   
 ### <a name="remarks"></a>备注  
  调用此函数后，才[DoModal](#domodal)返回**IDOK**。  
   
  绘制方面的详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的数据结构。  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  调用此函数可获取包含所选的项的图标化方面的图元文件的句柄。  
   
 ```  
@@ -223,7 +218,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>返回值  
  如果显示为图标复选框已包含的选定项的图标化方面的图元文件的句柄检查时通过选择解除对话框**确定**; 否则为**NULL**。  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
  调用此函数可确定的转换转换对话框中选定的类型。  
   
 ```  
@@ -252,7 +247,7 @@ enum Selection {
   
 - **COleConvertDialog::activateAs**返回用户如果已选中激活单选按钮，选择不同的项，若要激活，和`DoModal`返回**IDOK**。  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
  类型的结构**OLEUICONVERT**用于控制转换对话框中的行为。  
   
 ```  

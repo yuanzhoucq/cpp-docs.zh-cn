@@ -1,30 +1,25 @@
 ---
-title: "独立应用程序和通过并行程序集的概念 |Microsoft 文档"
-ms.custom: 
+title: 独立应用程序和通过并行程序集的概念 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 095737bf4684f4ba9ed58483bca664f734d1a534
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>独立应用程序和并行程序集的概念
 如果应用程序的所有组件都是 [并行程序集](http://msdn.microsoft.com/library/aa375190) ，则该应用程序被视为 [独立应用程序](http://msdn.microsoft.com/library/ff951640)。 并行程序集是指应用程序在运行时可部署在一起并可使用的资源的集合，如一组 DLL、Windows 类、COM 服务器、类型库或接口。 通常，并行程序集是一个或若干个 DLL。  

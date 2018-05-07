@@ -1,13 +1,10 @@
 ---
-title: "使用工具栏控件 |Microsoft 文档"
-ms.custom: 
+title: 使用工具栏控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>使用工具栏控件
 此文章介绍了如何访问[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象基础[CToolBar](../mfc/reference/ctoolbar-class.md)更好地控制您的工具栏。 这是一个高级的主题。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  调用[CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)。  
   
- `GetToolBarCtrl`返回的引用[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象。 你可以使用该引用调用工具栏控件类的成员函数。  
+ `GetToolBarCtrl` 返回的引用[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象。 你可以使用该引用调用工具栏控件类的成员函数。  
   
 > [!CAUTION]
 >  虽然通过调用`CToolBarCtrl`**获取**函数是安全的如果调用要格外小心**设置**函数。 这是一个高级的主题。 通常情况下则不需要访问基础工具栏控件。  

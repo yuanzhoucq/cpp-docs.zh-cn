@@ -1,12 +1,9 @@
 ---
-title: "使用 OLE DB 记录视图 |Microsoft 文档"
-ms.custom: 
+title: 使用 OLE DB 记录视图 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7cfd6fba45c3d221d22fc7b8938addeef09d1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6cebf8a1c1130a33ffd07e2d23d65c55a2a67b34
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ole-db-record-views"></a>使用 OLE DB 记录视图
 如果你想要在 MFC 应用程序中显示 OLE DB 行集数据，则应使用 MFC 类[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)。 从创建记录视图对象`COleDBRecordView`使你可以在 MFC 控件中显示数据库记录。 记录视图是直接连接到从创建的 OLE DB 行集对象的对话框窗体视图`CRowset`模板类。 获取行集对象的句柄很简单：  

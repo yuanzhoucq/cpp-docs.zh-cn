@@ -1,13 +1,10 @@
 ---
-title: "如何： 访问 system:: string 中的字符 |Microsoft 文档"
-ms.custom: 
+title: '如何： 访问 system:: string 中的字符 |Microsoft 文档'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>如何：访问 System::String 中的字符
 你可以访问的字符<xref:System.String>对象到非托管的高性能调用函数采用`wchar_t*`字符串。 该方法生成的第一个字符的内部指针<xref:System.String>对象。 此指针可以直接操作或固定和传递给需要一个普通函数`wchar_t`字符串。  
   
 ## <a name="example"></a>示例  
- `PtrToStringChars`返回<xref:System.Char>，这是内部指针 (也称为`byref`)。 在这种情况下，它是进行垃圾回收。 你无需将固定此指针，除非你要将其传递给本机函数。  
+ `PtrToStringChars` 返回<xref:System.Char>，这是内部指针 (也称为`byref`)。 在这种情况下，它是进行垃圾回收。 你无需将固定此指针，除非你要将其传递给本机函数。  
   
  考虑下列代码。  因为不需要固定`ppchar`内部指针，并且如果垃圾回收器移动它指向的字符串，它也将更新`ppchar`。 而无需[pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md)，代码将工作，并且不具有潜在的性能问题所致固定。  
   

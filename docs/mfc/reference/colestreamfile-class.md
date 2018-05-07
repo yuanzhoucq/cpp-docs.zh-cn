@@ -1,12 +1,9 @@
 ---
-title: "COleStreamFile 类 |Microsoft 文档"
-ms.custom: 
+title: COleStreamFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 类
 表示数据的流 ( `IStream`) 作为 OLE 结构化存储一部分的复合文件中。  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>备注  
  `IStorage`之前流可以打开或创建，除非它是一个内存流对象必须存在。  
   
- `COleStreamFile`操作对象的完全相同[CFile](../../mfc/reference/cfile-class.md)对象。  
+ `COleStreamFile` 操作对象的完全相同[CFile](../../mfc/reference/cfile-class.md)对象。  
   
  有关操作流与存储的详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...  
   
@@ -85,10 +80,10 @@ class COleStreamFile : public CFile
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  将与所提供的 OLE 流相关联`COleStreamFile`对象。  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  创建一个 `COleStreamFile` 对象。  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  安全地创建一个新流全局、 共享内存不足其中故障为正常，预期的条件。  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  有关详细信息，请参阅[CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK 中。  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  安全地在其中的失败问题是正常，预期的条件所提供的存储对象中创建一个新的流。  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  有关详细信息，请参阅[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  解除对象的流未关闭流之间的关联。  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  调用此函数可将指针返回到当前流。  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>返回值  
  指向当前的流接口的指针 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  打开现有的流。  
   
 ```  

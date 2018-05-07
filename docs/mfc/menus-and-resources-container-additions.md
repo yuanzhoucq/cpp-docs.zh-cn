@@ -1,13 +1,10 @@
 ---
-title: "菜单和资源： 容器添加 |Microsoft 文档"
-ms.custom: 
+title: 菜单和资源： 容器添加 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>菜单和资源：容器添加
 此文章介绍了需要的菜单和可视化编辑的容器应用程序中的其他资源进行的更改。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [添加字符串表](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>菜单添加容器  
+##  <a name="_core_container_menu_additions"></a> 菜单添加容器  
  必须将以下项添加到编辑菜单：  
   
 |项|目标|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  如果你想要支持包含的项的就地激活，必须为容器应用程序中创建一个新的菜单。 此菜单包含相同的文件菜单和窗口弹出菜单时文件处于打开状态，但它具有两个分隔符置于它们之间使用。 这些分隔条用于指示服务器 （组件） 项 （应用程序） 放置其菜单时就地激活的位置。 此菜单合并的方法的详细信息，请参阅[菜单和资源： 菜单合并](../mfc/menus-and-resources-menu-merging.md)。  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>添加容器应用程序快捷键对应表  
+##  <a name="_core_container_application_accelerator_table_additions"></a> 添加容器应用程序快捷键对应表  
  容器应用程序的快捷键对应表资源的小改动如果，则必须支持就地激活。 第一次更改允许用户按 esc 键 (ESC) 取消就地编辑模式。 将以下条目添加到主快捷键对应表中：  
   
 |Id|键|类型|  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 |**ID_PREV_PANE**|SHIFT + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>容器应用程序的添加的字符串表  
+##  <a name="_core_string_table_additions_for_container_applications"></a> 容器应用程序的添加的字符串表  
  更改到容器应用程序的字符串表中的大多数对应中所述的额外的菜单项[容器菜单添加](#_core_container_menu_additions)。 提供显示每个菜单项时，状态栏中显示的文本。 例如，下面是应用程序向导生成的字符串表条目：  
   
 |Id|String|  

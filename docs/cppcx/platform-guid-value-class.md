@@ -1,11 +1,8 @@
 ---
-title: "Platform:: guid 值类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: guid 值类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Guid
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5323c934efb7d9416d1016f355390288885cb0c9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 代表 Windows 运行时类型系统中的 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) 类型。  
@@ -48,7 +43,7 @@ public value struct Guid
 ### <a name="remarks"></a>备注  
  有关如何使用 Windows 函数 [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)生成新的 Platform::Guid 的示例，请参阅 [WinRT 组件：如何生成 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -128,7 +123,7 @@ public value struct Guid
  GUID 的其余 8 个字节。  
   
 
-## <a name="operator-equality"></a> Guid::operator== Operator
+## <a name="operator-equality"></a> Guid::operator = = 运算符
 比较两个 guid。  
   
 ### <a name="syntax"></a>语法  
@@ -154,7 +149,7 @@ Platform::Guid::operator!=
 
 
 
-## <a name="operator-call"></a> Guid::operator() Operator
+## <a name="operator-call"></a> Guid::operator() 运算符
 将隐式转换[GUID 结构](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: guid 的 GUID。  
   
 ### <a name="syntax"></a>语法  

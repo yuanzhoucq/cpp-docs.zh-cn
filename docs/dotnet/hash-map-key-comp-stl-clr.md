@@ -2,11 +2,8 @@
 title: 'hash_map:: key_comp (STL/CLR) |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::key_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_comp member [STL/CLR]
 ms.assetid: 08bd31cc-3a7c-49a3-ac48-089262b3bd44
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5875eb852d0e2df3dd82fd8a70d1313d3f9cca88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61a83ddb925d535cbc0fb61abcafa49449796cd2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapkeycomp-stlclr"></a>hash_map::key_comp (STL/CLR)
 将复制为两个键排序的委托。  
@@ -86,7 +81,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

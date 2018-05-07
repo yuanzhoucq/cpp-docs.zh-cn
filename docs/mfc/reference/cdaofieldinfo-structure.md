@@ -2,12 +2,9 @@
 title: CDaoFieldInfo 结构 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 结构
 `CDaoFieldInfo`结构包含的数据访问对象 (DAO) 定义的字段对象有关的信息。  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary**长二进制 （OLE 对象）; 你可能想要使用 MFC 类[CByteArray](../../mfc/reference/cbytearray-class.md)而不是类`CLongBinary`作为`CByteArray`是更丰富、 更轻松地使用。  
   
-- **dbMemo**备注，请参阅 MFC 类`CString`  
+- **dbMemo**备注，请参阅 MFC 类 `CString`  
   
 - **dbGUID**全局唯一标识符/全局唯一标识符用于远程过程调用。 有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。  
   
@@ -159,9 +154,9 @@ struct CDaoFieldInfo
   
  除了其用于检查对象属性，还可以使用`CDaoFieldInfo`构造在 tabledef 中创建新字段的输入的参数。 更简单的选项都可用于此任务中，但如果你想更精细的控制，你可以使用的版本[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)采用`CDaoFieldInfo`参数。  
   
- 检索的信息`GetFieldInfo`（的包含字段的类） 的成员函数将存储在`CDaoFieldInfo`结构。 调用`GetFieldInfo`字段对象存储在其字段集合中的包含对象的成员函数。 `CDaoFieldInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoFieldInfo`对象。  
+ 检索的信息`GetFieldInfo`（的包含字段的类） 的成员函数将存储在`CDaoFieldInfo`结构。 调用`GetFieldInfo`字段对象存储在其字段集合中的包含对象的成员函数。 `CDaoFieldInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoFieldInfo`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

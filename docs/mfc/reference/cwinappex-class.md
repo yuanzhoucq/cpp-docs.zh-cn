@@ -1,12 +1,9 @@
 ---
-title: "CWinAppEx 类 |Microsoft 文档"
-ms.custom: 
+title: CWinAppEx 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinAppEx
@@ -127,20 +124,18 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 941a496d52dbf38401484bd6ddcd857875849dc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63882cd6ae167e78bc5e3cf509650ae3d84fd0ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 类
-`CWinAppEx`处理应用程序状态、 将状态保存到注册表，从注册表加载的状态，初始化应用程序管理器和对这些相同的应用程序管理器提供的链接。  
+`CWinAppEx` 处理应用程序状态、 将状态保存到注册表，从注册表加载的状态，初始化应用程序管理器和对这些相同的应用程序管理器提供的链接。  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>语法  
@@ -223,7 +218,7 @@ class CWinAppEx : public CWinApp
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|指定是否框架将重置所有工具栏图像加载包含工具栏上的帧窗口时。|  
   
@@ -247,10 +242,10 @@ class CWinAppEx : public CWinApp
   
  [CWinAppEx](../../mfc/reference/cwinappex-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxwinappex.h  
   
-##  <a name="cleanstate"></a>CWinAppEx::CleanState  
+##  <a name="cleanstate"></a>  CWinAppEx::CleanState  
  从 Windows 注册表中删除有关应用程序的所有信息。  
   
 ```  
@@ -267,7 +262,7 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ### <a name="remarks"></a>备注  
  此方法清除应用程序数据从注册表的特定节。 你可以指定要清除通过使用参数的部分`lpszSectionName`。 如果`lpszSectionName`是`NULL`，此方法将使用默认注册表路径存储在`CWinAppEx`对象。 若要获取的默认注册表路径，请使用[CWinAppEx::GetRegistryBase](#getregistrybase)。  
   
-##  <a name="cwinappex"></a>CWinAppEx::CWinAppEx  
+##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx  
  构造 `CWinAppEx` 对象。  
   
 ```  
@@ -281,7 +276,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ### <a name="remarks"></a>备注  
  `CWinAppEx`类具有初始化方法，提供的保存和加载到注册表中，应用程序信息的功能并控制全局应用程序设置。 它还可使用全局经理如[CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)和[CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)。 每个应用程序可以只有一个实例`CWinAppEx`类。  
   
-##  <a name="enableloadwindowplacement"></a>CWinAppEx::EnableLoadWindowPlacement  
+##  <a name="enableloadwindowplacement"></a>  CWinAppEx::EnableLoadWindowPlacement  
  指定是否应用程序将加载的初始大小和位置的主框架窗口从注册表。  
   
 ```  
@@ -295,7 +290,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>备注  
  默认情况下的大小和位置的主框架是从注册表中加载以及其他应用程序设置。 时会出现此情况[CWinAppEx::LoadState](#loadstate)。 如果你不希望从注册表加载初始窗口位置，调用此方法与`bEnable`设置为`false`。  
   
-##  <a name="enabletearoffmenus"></a>CWinAppEx::EnableTearOffMenus  
+##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus  
  创建并初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。  
   
 ```  
@@ -316,12 +311,12 @@ BOOL EnableTearOffMenus(
  关闭菜单最后一个分离 id。  
   
 ### <a name="return-value"></a>返回值  
- `True`如果`CMenuTearOffManager`创建并初始化成功，则`false`如果发生错误，或如果`CMenuTearOffManager`已存在。  
+ `True` 如果`CMenuTearOffManager`创建并初始化成功，则`false`如果发生错误，或如果`CMenuTearOffManager`已存在。  
   
 ### <a name="remarks"></a>备注  
  此函数用于启用应用程序中的拖曳菜单。 您应调用此函数从`InitInstance`。  
   
-##  <a name="enableusertools"></a>CWinAppEx::EnableUserTools  
+##  <a name="enableusertools"></a>  CWinAppEx::EnableUserTools  
  使用户能够创建自定义菜单命令，以降低你的应用程序中的键击。 此方法创建[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)对象。  
   
 ```  
@@ -354,7 +349,7 @@ BOOL EnableUserTools(
  初始工具目录菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果该方法创建并初始化`CUserToolsManager`对象;`FALSE`如果方法失败或者`CUserToolsManager`对象已存在。  
+ `TRUE` 如果该方法创建并初始化`CUserToolsManager`对象;`FALSE`如果方法失败或者`CUserToolsManager`对象已存在。  
   
 ### <a name="remarks"></a>备注  
  当启用用户定义的工具时，框架将自动支持可以扩展中的自定义的动态菜单。 框架将每个新项与外部命令相关联。 当用户选择从合适的项目时，框架将调用这些命令**工具**菜单。  
@@ -363,7 +358,7 @@ BOOL EnableUserTools(
   
  有关用户工具以及如何将它们合并到你的应用程序的详细信息，请参阅[用户定义的工具](../../mfc/user-defined-tools.md)。  
   
-##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
+##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance  
 
   
 ```  
@@ -374,7 +369,7 @@ virtual int ExitInstance();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getbinary"></a>CWinAppEx::GetBinary  
+##  <a name="getbinary"></a>  CWinAppEx::GetBinary  
  从指定的注册表项读取二进制数据。  
   
 ```  
@@ -395,14 +390,14 @@ BOOL GetBinary(
  指向一个无符号整数，该方法用于写入读取的字节数的指针。  
   
 ### <a name="return-value"></a>返回值  
- `True`如果成功，则，`false`否则为。  
+ `True` 如果成功，则，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  此方法读取写入到注册表的二进制数据。 若要将数据写入到注册表中，使用方法[CWinAppEx::WriteBinary](#writebinary)和[CWinAppEx::WriteSectionBinary](#writesectionbinary)。  
   
  `lpszEntry`参数是位于你的应用程序默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getcontextmenumanager"></a>CWinAppEx::GetContextMenuManager  
+##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager  
  将指针返回到全局[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)对象。  
   
 ```  
@@ -415,7 +410,7 @@ CContextMenuManager* GetContextMenuManager();
 ### <a name="remarks"></a>备注  
  如果未初始化 CContextMenuManager 对象，此函数将调用[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)它返回的指针之前。  
   
-##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
+##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion  
 
   
 ```  
@@ -426,7 +421,7 @@ int GetDataVersion() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getdataversionmajor"></a>CWinAppEx::GetDataVersionMajor  
+##  <a name="getdataversionmajor"></a>  CWinAppEx::GetDataVersionMajor  
  返回的应用程序将保存在 Windows 注册表中，在调用时的主要版本[CWinAppEx::SaveState](#savestate)。  
   
 ```  
@@ -436,7 +431,7 @@ int GetDataVersionMajor() const;
 ### <a name="return-value"></a>返回值  
  一个整数值，包含主版本号。  
   
-##  <a name="getdataversionminor"></a>CWinAppEx::GetDataVersionMinor  
+##  <a name="getdataversionminor"></a>  CWinAppEx::GetDataVersionMinor  
  返回的应用程序将保存在 Windows 注册表中，在调用时的次版本[CWinAppEx::SaveState](#savestate)。  
   
 ```  
@@ -446,7 +441,7 @@ int GetDataVersionMinor() const;
 ### <a name="return-value"></a>返回值  
  一个包含的次版本号的整数值。  
   
-##  <a name="getint"></a>CWinAppEx::GetInt  
+##  <a name="getint"></a>  CWinAppEx::GetInt  
  从指定的注册表项读取整数数据。  
   
 ```  
@@ -470,7 +465,7 @@ int GetInt(
   
  `lpszEntry`参数是位于你的应用程序默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getkeyboardmanager"></a>CWinAppEx::GetKeyboardManager  
+##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager  
  将指针返回到全局[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)对象。  
   
 ```  
@@ -483,7 +478,7 @@ CKeyboardManager* GetKeyboardManager();
 ### <a name="remarks"></a>备注  
  如果未初始化键盘管理器，此函数将调用[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)它返回的指针之前。  
   
-##  <a name="getmousemanager"></a>CWinAppEx::GetMouseManager  
+##  <a name="getmousemanager"></a>  CWinAppEx::GetMouseManager  
  将指针返回到全局[CMouseManager](../../mfc/reference/cmousemanager-class.md)对象。  
   
 ```  
@@ -496,7 +491,7 @@ CMouseManager* GetMouseManager();
 ### <a name="remarks"></a>备注  
  如果未初始化鼠标管理器、 此函数将调用[CWinAppEx::InitMouseManager](#initmousemanager)它返回的指针之前。  
   
-##  <a name="getobject"></a>CWinAppEx::GetObject  
+##  <a name="getobject"></a>  CWinAppEx::GetObject  
  读取[CObject](../../mfc/reference/cobject-class.md)-dervied 注册表中的数据。  
   
 ```  
@@ -520,7 +515,7 @@ BOOL GetObject(
   
  `lpszEntry`参数是位于你的应用程序的默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getregistrybase"></a>CWinAppEx::GetRegistryBase  
+##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase  
  检索应用程序的默认注册表路径。  
   
 ```  
@@ -533,7 +528,7 @@ LPCTSTR GetRegistryBase();
 ### <a name="remarks"></a>备注  
  所有方法[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)访问默认位置中的注册表开头。 使用此方法来检索默认注册表位置的路径。 使用[CWinAppEx::SetRegistryBase](#setregistrybase)若要更改默认注册表位置。  
   
-##  <a name="getregsectionpath"></a>CWinAppEx::GetRegSectionPath  
+##  <a name="getregsectionpath"></a>  CWinAppEx::GetRegSectionPath  
  创建并返回注册表项的绝对路径。  
   
 ```  
@@ -550,7 +545,7 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ### <a name="remarks"></a>备注  
  此方法通过追加中的相对路径定义的注册表项的绝对路径`szSectionAdd`到你的应用程序的默认注册表位置。 若要获取默认的注册表项，请使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)。  
   
-##  <a name="getsectionbinary"></a>CWinAppEx::GetSectionBinary  
+##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary  
  从注册表读取二进制数据。  
   
 ```  
@@ -582,7 +577,7 @@ BOOL GetSectionBinary(
   
  `lpszSubSection`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getsectionint"></a>CWinAppEx::GetSectionInt  
+##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt  
  从注册表读取整数数据。  
   
 ```  
@@ -610,7 +605,7 @@ int GetSectionInt(
   
  `lpszSubSection`参数不是注册表条目的绝对路径。 它是添加到你的应用程序的默认注册表项的末尾的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getsectionobject"></a>CWinAppEx::GetSectionObject  
+##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject  
  读取[CObject](../../mfc/reference/cobject-class.md)注册表中的注册表数据。  
   
 ```  
@@ -638,7 +633,7 @@ BOOL GetSectionObject(
   
  `lpszSubSection`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getsectionstring"></a>CWinAppEx::GetSectionString  
+##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString  
  读取字符串注册表中的数据。  
   
 ```  
@@ -666,7 +661,7 @@ CString GetSectionString(
   
  `lpszSubSection`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="getshellmanager"></a>CWinAppEx::GetShellManager  
+##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager  
  将指针返回到全局[CShellManager](../../mfc/reference/cshellmanager-class.md)对象。  
   
 ```  
@@ -679,7 +674,7 @@ CShellManager* GetShellManager();
 ### <a name="remarks"></a>备注  
  如果`CShellManager`未初始化对象，此函数将调用[CWinAppEx::InitShellManager](#initshellmanager)它返回的指针之前。  
   
-##  <a name="getstring"></a>CWinAppEx::GetString  
+##  <a name="getstring"></a>  CWinAppEx::GetString  
  读取的字符串中指定的注册表项的数据。  
   
 ```  
@@ -703,7 +698,7 @@ CString GetString(
   
  `lpszEntry`参数是位于你的应用程序默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="gettooltipmanager"></a>CWinAppEx::GetTooltipManager  
+##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager  
  将指针返回到全局[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)对象。  
   
 ```  
@@ -716,7 +711,7 @@ CTooltipManager* GetTooltipManager();
 ### <a name="remarks"></a>备注  
  如果`CTooltipManager`未初始化对象，此函数将调用[cwinappex:: Inittooltipmanager](#inittooltipmanager)它返回的指针之前。  
   
-##  <a name="getusertoolsmanager"></a>CWinAppEx::GetUserToolsManager  
+##  <a name="getusertoolsmanager"></a>  CWinAppEx::GetUserToolsManager  
  将指针返回到全局[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)对象。  
   
 ```  
@@ -729,7 +724,7 @@ CUserToolsManager* GetUserToolsManager();
 ### <a name="remarks"></a>备注  
  检索指向的指针之前`CUserToolsManager`对象，你必须通过调用初始化管理器[CWinAppEx::EnableUserTools](#enableusertools)。  
   
-##  <a name="initcontextmenumanager"></a>CWinAppEx::InitContextMenuManager  
+##  <a name="initcontextmenumanager"></a>  CWinAppEx::InitContextMenuManager  
  初始化[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)对象。  
   
 ```  
@@ -744,7 +739,7 @@ BOOL InitContextMenuManager();
   
  如果你的应用程序已具有上下文菜单管理器，并且你调用`InitContextMenuManager`，你的应用程序将具有[断言](diagnostic-services.md#assert)失败。 因此，不应调用`InitContextMenuManager`如果创建`CContextMenuManager`直接对象。 如果你不使用自定义`CContextMenuManager`，应使用`GetContextMenuManager`创建`CContextMenuManager`对象。  
   
-##  <a name="initkeyboardmanager"></a>CWinAppEx::InitKeyboardManager  
+##  <a name="initkeyboardmanager"></a>  CWinAppEx::InitKeyboardManager  
  初始化[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)对象。  
   
 ```  
@@ -759,7 +754,7 @@ BOOL InitKeyboardManager();
   
  如果你的应用程序已具有一个键盘管理器，并且你调用`InitKeyboardManager`，你的应用程序将具有[断言](diagnostic-services.md#assert)失败。 因此，不应调用`InitKeyboardManager`如果创建`CKeyboardManager`直接对象。 如果你不使用自定义`CKeyboardManager`，应使用`GetKeyboardManager`创建`CKeyboardManager`对象。  
   
-##  <a name="initmousemanager"></a>CWinAppEx::InitMouseManager  
+##  <a name="initmousemanager"></a>  CWinAppEx::InitMouseManager  
  初始化[CMouseManager](../../mfc/reference/cmousemanager-class.md)对象。  
   
 ```  
@@ -774,7 +769,7 @@ BOOL InitMouseManager();
   
  如果你的应用程序已具有鼠标管理器，并且你调用`InitMouseManager`，你的应用程序将具有[断言](diagnostic-services.md#assert)失败。 因此不应调用`InitMouseManager`如果创建`CMouseManager`直接对象。 如果你不使用自定义`CMouseManager`，应使用`GetMouseManager`创建`CMouseManager`对象。  
   
-##  <a name="initshellmanager"></a>CWinAppEx::InitShellManager  
+##  <a name="initshellmanager"></a>  CWinAppEx::InitShellManager  
  初始化[CShellManager](../../mfc/reference/cshellmanager-class.md)对象。  
   
 ```  
@@ -789,7 +784,7 @@ BOOL InitShellManager();
   
  如果你的应用程序已具有 shell 管理器，并且你调用`InitShellManager`，应用程序将引发[断言](diagnostic-services.md#assert)失败。 因此，请勿调用`InitShellManager`如果创建`CShellManager`直接对象。 如果你不使用自定义`CShellManager`，使用`GetShellManager`创建`CShellManager`对象。  
   
-##  <a name="inittooltipmanager"></a>Cwinappex:: Inittooltipmanager  
+##  <a name="inittooltipmanager"></a>  Cwinappex:: Inittooltipmanager  
  初始化[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)对象。  
   
 ```  
@@ -804,7 +799,7 @@ BOOL InitTooltipManager();
   
  如果你的应用程序已具有工具提示管理器，并且你调用`InitTooltipManager`，你的应用程序将具有[断言](diagnostic-services.md#assert)失败。 因此，不应调用`InitTooltipManager`如果创建`CTooltipManager`直接对象。 如果你不使用自定义`CTooltipManager`，应使用`GetTooltipManager`创建`CTooltipManager`对象。  
   
-##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
+##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate  
 
   
 ```  
@@ -815,7 +810,7 @@ BOOL IsResourceSmartUpdate() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isstateexists"></a>CWinAppEx::IsStateExists  
+##  <a name="isstateexists"></a>  CWinAppEx::IsStateExists  
  指示指定的键是否是在注册表中。  
   
 ```  
@@ -829,7 +824,7 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ### <a name="return-value"></a>返回值  
  如果该密钥是在注册表中; 则为非 0否则为 0。  
   
-##  <a name="loadcustomstate"></a>CWinAppEx::LoadCustomState  
+##  <a name="loadcustomstate"></a>  CWinAppEx::LoadCustomState  
  从注册表加载应用程序的状态后，框架会调用此方法。  
   
 ```  
@@ -841,7 +836,7 @@ virtual void LoadCustomState();
   
  为了从注册表加载自定义状态信息，信息必须首先保存通过[CWinAppEx::SaveCustomState](#savecustomstate)。  
   
-##  <a name="loadstate"></a>CWinAppEx::LoadState  
+##  <a name="loadstate"></a>  CWinAppEx::LoadState  
  从 Windows 注册表中读取的应用程序状态。  
   
 ```  
@@ -885,7 +880,7 @@ virtual BOOL LoadState(
   
  `lpszSectionName`参数不是注册表项的绝对路径。 它是添加到你的应用程序的默认注册表项的末尾的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="loadwindowplacement"></a>CWinAppEx::LoadWindowPlacement  
+##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement  
  从注册表加载的大小和位置的主框架窗口时，由框架调用。  
   
 ```  
@@ -913,7 +908,7 @@ virtual BOOL LoadWindowPlacement(
   
  如果你想要加载有关主框架窗口的其他信息，请重写此方法。  
   
-##  <a name="m_bforceimagereset"></a>CWinAppEx::m_bForceImageReset  
+##  <a name="m_bforceimagereset"></a>  CWinAppEx::m_bForceImageReset  
  指定是否 framework 重置所有工具栏图像时重新加载包含工具栏的框架窗口。  
   
 ```  
@@ -923,7 +918,7 @@ BOOL m_bForceImageReset;
 ### <a name="remarks"></a>备注  
  `m_bForceImageReset`数据成员是受保护的变量。  
   
-##  <a name="onappcontexthelp"></a>CWinAppEx::OnAppContextHelp  
+##  <a name="onappcontexthelp"></a>  CWinAppEx::OnAppContextHelp  
  框架调用此方法，当用户请求的上下文帮助**自定义**对话框。  
   
 ```  
@@ -942,7 +937,7 @@ virtual void OnAppContextHelp(
 ### <a name="remarks"></a>备注  
  此方法当前保留供将来使用。 默认实现不执行任何操作，它当前不由框架调用。  
   
-##  <a name="onclosingmainframe"></a>CWinAppEx::OnClosingMainFrame  
+##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame  
  框架窗口正在处理时，框架将调用此方法`WM_CLOSE`。  
   
 ```  
@@ -956,7 +951,7 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ### <a name="remarks"></a>备注  
  此方法的默认实现将保存的状态`pFrameImpl`。  
   
-##  <a name="onviewdoubleclick"></a>CWinAppEx::OnViewDoubleClick  
+##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick  
  调用用户双击该视图中的任意位置时与视图关联的用户定义的命令。  
   
 ```  
@@ -973,12 +968,12 @@ virtual BOOL OnViewDoubleClick(
  视图 id。  
   
 ### <a name="return-value"></a>返回值  
- `True`如果框架找到命令;否则为 false。  
+ `True` 如果框架找到命令;否则为 false。  
   
 ### <a name="remarks"></a>备注  
  为了支持自定义鼠标行为，您必须调用此函数处理时`WM_LBUTTONDBLCLK`消息。 此方法将执行与提供的视图 ID 关联的命令`iViewId`。 有关自定义鼠标行为的详细信息，请参阅[键盘和鼠标自定义](../../mfc/keyboard-and-mouse-customization.md)。  
   
-##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
+##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle  
 
   
 ```  
@@ -992,7 +987,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="preloadstate"></a>CWinAppEx::PreLoadState  
+##  <a name="preloadstate"></a>  CWinAppEx::PreLoadState  
  从注册表中加载的应用程序的状态之前，框架会调用此方法。  
   
 ```  
@@ -1002,7 +997,7 @@ virtual void PreLoadState();
 ### <a name="remarks"></a>备注  
  如果你想要执行的任何处理，框架将加载应用程序状态之前，重写此方法。  
   
-##  <a name="presavestate"></a>CWinAppEx::PreSaveState  
+##  <a name="presavestate"></a>  CWinAppEx::PreSaveState  
  它将保存应用程序状态之前，框架会调用此方法。  
   
 ```  
@@ -1012,7 +1007,7 @@ virtual void PreSaveState();
 ### <a name="remarks"></a>备注  
  如果你想要执行的任何处理，框架将保存应用程序状态之前，重写此方法。  
   
-##  <a name="reloadwindowplacement"></a>CWinAppEx::ReloadWindowPlacement  
+##  <a name="reloadwindowplacement"></a>  CWinAppEx::ReloadWindowPlacement  
  大小和位置的注册表中的窗口，将重新加载。  
   
 ```  
@@ -1029,7 +1024,7 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ### <a name="remarks"></a>备注  
  使用函数[CWinAppEx::StoreWindowPlacement](#storewindowplacement)写入注册表的大小和窗口的位置。  
   
-##  <a name="savecustomstate"></a>CWinAppEx::SaveCustomState  
+##  <a name="savecustomstate"></a>  CWinAppEx::SaveCustomState  
  它将保存到注册表应用程序的状态后，框架会调用此方法。  
   
 ```  
@@ -1039,7 +1034,7 @@ virtual void SaveCustomState();
 ### <a name="remarks"></a>备注  
  如果你想要执行的任何处理应用程序将状态保存到注册表后，重写此方法。 默认情况下，此方法没有任何影响。  
   
-##  <a name="savestate"></a>CWinAppEx::SaveState  
+##  <a name="savestate"></a>  CWinAppEx::SaveState  
  将应用程序状态写入 Windows 注册表。  
   
 ```  
@@ -1074,14 +1069,14 @@ BOOL SaveState(
  指向框架窗口对象的指针。 此帧将保存到 Windows 注册表中。  
   
 ### <a name="return-value"></a>返回值  
- `True`如果成功，则，`false`否则为。  
+ `True` 如果成功，则，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
  此方法将保存的状态以及应用程序提供的框架窗口的任何状态信息。 如果未提供框架窗口，该方法将仅保存应用程序状态。 应用程序信息包括的状态[CMouseManager 类](../../mfc/reference/cmousemanager-class.md)， [CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)， [CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)，和[CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)。  
   
  `lpszSectionName`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
-##  <a name="setregistrybase"></a>CWinAppEx::SetRegistryBase  
+##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase  
  设置应用程序的默认注册表路径。  
   
 ```  
@@ -1098,7 +1093,7 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ### <a name="remarks"></a>备注  
  所有方法[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)访问默认位置中的注册表开头。 此方法用于更改该默认注册表位置。 使用[CWinAppEx::GetRegistryBase](#getregistrybase)检索默认注册表位置。  
   
-##  <a name="showpopupmenu"></a>CWinAppEx::ShowPopupMenu  
+##  <a name="showpopupmenu"></a>  CWinAppEx::ShowPopupMenu  
  显示弹出菜单。  
   
 ```  
@@ -1126,7 +1121,7 @@ virtual BOOL ShowPopupMenu(
   
  若要支持弹出菜单，你必须[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)对象。 如果你不初始化`CContextMenuManager`对象，`ShowPopupMenu`将失败。  
   
-##  <a name="storewindowplacement"></a>CWinAppEx::StoreWindowPlacement  
+##  <a name="storewindowplacement"></a>  CWinAppEx::StoreWindowPlacement  
  由框架调用以写入注册表的大小和主框架窗口的位置。  
   
 ```  
@@ -1154,7 +1149,7 @@ virtual BOOL StoreWindowPlacement(
   
  如果你想要存储有关主框架窗口的其他信息，请重写此方法。  
   
-##  <a name="writebinary"></a>CWinAppEx::WriteBinary  
+##  <a name="writebinary"></a>  CWinAppEx::WriteBinary  
  将二进制数据写入注册表。  
   
 ```  
@@ -1175,14 +1170,14 @@ BOOL WriteBinary(
  大小`pData`以字节为单位。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszEntry`参数是位于你的应用程序的默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
  如果指定的键`lpszEntry`不存在，此方法将创建它。  
   
-##  <a name="writeint"></a>CWinAppEx::WriteInt  
+##  <a name="writeint"></a>  CWinAppEx::WriteInt  
  将数值数据写入注册表。  
   
 ```  
@@ -1199,14 +1194,14 @@ BOOL WriteInt(
  要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszEntry`参数是位于你的应用程序默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
  如果指定的键`lpszEntry`不存在，此方法将创建它。  
   
-##  <a name="writeobject"></a>CWinAppEx::WriteObject  
+##  <a name="writeobject"></a>  CWinAppEx::WriteObject  
  将派生自的数据写入[CObject 类](../../mfc/reference/cobject-class.md)到注册表。  
   
 ```  
@@ -1223,12 +1218,12 @@ BOOL WriteObject(
  对引用`CObject`方法将存储的数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法将写入`obj`默认注册表项下的指定值的数据。 使用[CWinAppEx::GetRegistryBase](#getregistrybase)以确定当前的注册表项。  
   
-##  <a name="writesectionbinary"></a>CWinAppEx::WriteSectionBinary  
+##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary  
  将二进制数据写入注册表中的值。  
   
 ```  
@@ -1253,14 +1248,14 @@ BOOL WriteSectionBinary(
  大小`pData`以字节为单位。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszSubSection`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
  如果指定的键`lpszEntry`不存在，此方法将创建它。  
   
-##  <a name="writesectionint"></a>CWinAppEx::WriteSectionInt  
+##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt  
  将数值数据写入注册表。  
   
 ```  
@@ -1281,14 +1276,14 @@ BOOL WriteSectionInt(
  要写入注册表的数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszSubSection`参数不是注册表项的绝对路径。 它是追加到你的应用程序的默认注册表项的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
  如果指定的键`lpszEntry`不存在，此方法将创建它。  
   
-##  <a name="writesectionobject"></a>CWinAppEx::WriteSectionObject  
+##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject  
  将派生自的数据写入[CObject 类](../../mfc/reference/cobject-class.md)为特定的注册表值。  
   
 ```  
@@ -1309,14 +1304,14 @@ BOOL WriteSectionObject(
  要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszSubSection`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
  如果指定的值`lpszEntry`下指定的注册表项不存在`lpszSubSection`，此方法将创建该值。  
   
-##  <a name="writesectionstring"></a>CWinAppEx::WriteSectionString  
+##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString  
  将字符串数据写入注册表中的值。  
   
 ```  
@@ -1337,14 +1332,14 @@ BOOL WriteSectionString(
  要写入注册表的字符串数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszSubSection`参数不是注册表项的绝对路径。 它是相对路径追加到你的应用程序的默认注册表项的末尾。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  
   
  如果指定的值`lpszEntry`下不存在`lpszSubSection`，此方法将创建它。  
   
-##  <a name="writestring"></a>CWinAppEx::WriteString  
+##  <a name="writestring"></a>  CWinAppEx::WriteString  
  将字符串数据写入注册表。  
   
 ```  
@@ -1361,7 +1356,7 @@ BOOL WriteString(
  要存储的数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  `lpszEntry`参数是位于你的应用程序默认注册表项下的注册表条目的名称。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分别。  

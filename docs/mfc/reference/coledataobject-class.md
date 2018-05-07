@@ -1,12 +1,9 @@
 ---
-title: "COleDataObject 类 |Microsoft 文档"
-ms.custom: 
+title: COleDataObject 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataObject
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 在数据传输中用于从剪贴板、通过拖放或从嵌入 OLE 项检索各种格式的数据。  
@@ -82,7 +77,7 @@ class COleDataObject
 |[COleDataObject::Release](#release)|分离并释放关联`IDataObject`对象。|  
   
 ## <a name="remarks"></a>备注  
- `COleDataObject`没有基类。  
+ `COleDataObject` 没有基类。  
   
  这些类型的数据传输包括源和目标。 数据源的对象作为实现[COleDataSource](../../mfc/reference/coledatasource-class.md)类。 每当目标应用程序已在其中放置的数据或要求从剪贴板的对象执行粘贴操作`COleDataObject`必须创建类。  
   
@@ -95,10 +90,10 @@ class COleDataObject
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `COleDataObject`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>  COleDataObject::Attach  
  调用此函数可将相关联`COleDataObject`与 OLE 数据对象的对象。  
   
 ```  
@@ -117,7 +112,7 @@ void Attach(
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Windows SDK 中。  
   
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  调用此函数可将附加当前到剪贴板上的数据对象`COleDataObject`对象。  
   
 ```  
@@ -132,7 +127,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  调用此函数锁定剪贴板，直到此数据对象被释放。 中的析构函数释放的数据对象`COleDataObject`。 有关详细信息，请参阅[打开剪贴板](http://msdn.microsoft.com/library/windows/desktop/ms649048)和[CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Win32 文档中。  
   
-##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  调用此函数可准备以便后续调用`GetNextFormat`用于检索从项的数据格式的列表。  
   
 ```  
@@ -146,7 +141,7 @@ void BeginEnumFormats();
   
  有关详细信息，请参阅[IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) Windows SDK 中。  
   
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  构造 `COleDataObject` 对象。  
   
 ```  
@@ -159,7 +154,7 @@ COleDataObject();
 > [!NOTE]
 >  由于拖放处理程序的参数之一是一个指向`COleDataObject`，无需调用此构造函数，以支持拖放。  
   
-##  <a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>  COleDataObject::Detach  
  调用此函数可分离`COleDataObject`其关联的 OLE 数据对象，而不释放数据对象中的对象。  
   
 ```  
@@ -171,7 +166,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>  COleDataObject::GetData  
  调用此函数可从指定的格式中的项中检索数据。  
   
 ```  
@@ -199,7 +194,7 @@ BOOL GetData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  调用此函数可创建`CFile`或`CFile`-派生对象并检索到指定的格式中的数据`CFile`指针。  
   
 ```  
@@ -228,7 +223,7 @@ CFile* GetFileData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  调用此函数可分配全局内存块并检索到指定的格式中的数据`HGLOBAL`。  
   
 ```  
@@ -252,7 +247,7 @@ HGLOBAL GetGlobalData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  调用此函数重复可获取可用于从项中检索数据的所有格式。  
   
 ```  
@@ -273,7 +268,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  有关详细信息，请参阅[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Windows SDK 中。  
   
-##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable  
  调用此函数可确定特定的格式是否可用于从 OLE 项检索数据。  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>示例  
   请参阅示例[CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)。  
   
-##  <a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>  COleDataObject::Release  
  调用此函数可释放的所有权[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)以前有关联的对象`COleDataObject`对象。  
   
 ```  

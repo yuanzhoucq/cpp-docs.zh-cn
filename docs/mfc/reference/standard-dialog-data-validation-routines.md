@@ -1,29 +1,24 @@
 ---
-title: "标准对话框数据验证例程 |Microsoft 文档"
-ms.custom: 
+title: 标准对话框数据验证例程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>标准对话框数据验证例程
 本主题列出在常见的 MFC 对话框控件使用的标准对话框数据验证 (DDV) 例程。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
  调用`DDV_MaxChars`以验证与关联的控件中的字符量*值*不超过*nChars*。  
   
 ```   
@@ -67,7 +62,7 @@ void AFXAPI DDV_MaxChars(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `nChars`  
@@ -76,10 +71,10 @@ void AFXAPI DDV_MaxChars(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
  调用`DDV_MinMaxByte`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -94,7 +89,7 @@ void AFXAPI DDV_MinMaxByte(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -106,10 +101,10 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
  调用`DDV_MinMaxDateTime`以验证日期和时间选取器中的时间/日期值控制 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 与关联*refValue*介于之间`refMinRange`和`refMaxRange`。  
   
 ```   
@@ -142,10 +137,10 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
  调用`DDV_MinMaxDouble`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -160,7 +155,7 @@ void AFXAPI DDV_MinMaxDouble(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -172,10 +167,10 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
  调用`DDV_MinMaxDWord`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -190,7 +185,7 @@ void AFXAPI DDV_MinMaxDWord(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -202,10 +197,10 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
  调用`DDV_MinMaxFloat`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -220,7 +215,7 @@ void AFXAPI DDV_MinMaxFloat(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -232,10 +227,10 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
  调用`DDV_MinMaxInt`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -250,7 +245,7 @@ void AFXAPI DDV_MinMaxInt(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -262,10 +257,10 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
  调用`DDV_MinMaxLong`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -280,7 +275,7 @@ void AFXAPI DDV_MinMaxLong(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -292,10 +287,10 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  调用`DDV_MinMaxLongLong`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -310,7 +305,7 @@ void AFXAPI DDV_MinMaxLongLong(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -322,10 +317,10 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
  调用`DDV_MinMaxMonth`以验证在月历中的时间/日期值控制 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 与关联*refValue*介于之间`refMinRange`和`refMaxRange`。  
   
 ```   
@@ -358,10 +353,10 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  调用`DDV_MinMaxShort`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -376,7 +371,7 @@ void AFXAPI DDV_MinMaxShort(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -388,10 +383,10 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
  调用`DDV_MinMaxSlider`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -406,7 +401,7 @@ void AFXAPI DDV_MinMaxSlider(
  `pDX`  
  指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对要验证的值的引用。 此参数包含，或设置滑块控件的滚动块的当前位置。  
   
  `minVal`  
@@ -418,10 +413,10 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  调用`DDV_MinMaxUInt`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -436,7 +431,7 @@ void AFXAPI DDV_MinMaxUInt(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -448,10 +443,10 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  调用`DDV_MinMaxULongLong`验证控件中的值与关联*值*介于之间`minVal`和`maxVal`。  
   
 ```   
@@ -466,7 +461,7 @@ void AFXAPI DDV_MinMaxULongLong(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -478,7 +473,7 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdd_.h  
     
 ## <a name="see-also"></a>请参阅  
@@ -500,7 +495,7 @@ void AFXAPI DDV_MinMaxULongLong(
  `pDX`  
  指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
   
- *值*  
+ *value*  
  对对话框、 窗体视图或与其验证数据的控件视图对象的成员变量的引用。  
   
  `minVal`  
@@ -512,7 +507,7 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="remarks"></a>备注  
  DDV 有关的详细信息，请参阅[对话框数据交换和验证](../dialog-data-exchange-and-validation.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdd_.h  
    
 ### <a name="see-also"></a>请参阅  

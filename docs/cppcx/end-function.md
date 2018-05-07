@@ -3,9 +3,6 @@ title: end 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - collection/Windows::Foundation::Collections::end
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-caps.latest.revision: 4
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264ffdad3d55ae9d2df44646240d42ac02d5fcb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 771d7e83024f9c258df1437ff902d638bffc8478
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-function"></a>end 函数
 返回指向集合末尾以外的迭代器，该集合由指定的接口参数访问。  
@@ -69,7 +64,7 @@ template <typename T>
   
  [返回的](../cppcx/platform-collections-vectorviewiterator-class.md) Platform::Collections::VectorViewIterator `end` 对象是存储 `VectorProxy<T>`类型的元素的代理迭代器。 不过，代理对象对于用户代码应该不可见。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** collection.h  
   
  **命名空间：** Windows::Foundation::Collections  

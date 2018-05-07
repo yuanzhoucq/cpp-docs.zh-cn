@@ -1,29 +1,24 @@
 ---
-title: "工具栏控件样式 |Microsoft 文档"
-ms.custom: 
+title: 工具栏控件样式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d81be893ce84da24b3a30518219ee1f6fd10057
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-control-styles"></a>工具栏控件样式
 [CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)具有一组确定的外观的样式标志和按钮的行为。 你可以通过调用设置这些标志的组合[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。 本主题列出了样式标志值及其含义。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  视觉管理器将确定按钮在每种状态下的外观。 请参阅[可视化管理器](../../mfc/visualization-manager.md)有关详细信息。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxtoolbarbutton.h  
   
 ## <a name="see-also"></a>请参阅  

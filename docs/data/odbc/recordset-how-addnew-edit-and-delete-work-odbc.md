@@ -2,12 +2,9 @@
 title: 记录集： AddNew、 Edit 和 Delete 如何 (ODBC) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  作为补充，你可能想要读取[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)，用于描述 RFX 更新操作中的相应角色。  
   
-##  <a name="_core_adding_a_record"></a>添加记录  
+##  <a name="_core_adding_a_record"></a> 添加记录  
 
  将一条新记录添加到记录集涉及调用记录集的[AddNew](../../mfc/reference/crecordset-class.md#addnew)成员函数，设置的值将新记录的字段数据成员，以及调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数可以编写到数据源记录。  
   
@@ -73,9 +68,9 @@ ms.lasthandoff: 12/21/2017
   
  若要提交所做的更改，请调用**更新**。 当调用**更新**新记录：  
   
--   如果 ODBC 驱动程序支持**:: SQLSetPos** ODBC API 函数时，MFC 使用函数对数据源添加记录。 与**:: SQLSetPos**，MFC 可以更有效地地添加一条记录，因为它没有构造和处理的 SQL 语句。  
+-   如果 ODBC 驱动程序支持 **:: SQLSetPos** ODBC API 函数时，MFC 使用函数对数据源添加记录。 与 **:: SQLSetPos**，MFC 可以更有效地地添加一条记录，因为它没有构造和处理的 SQL 语句。  
   
--   如果**:: SQLSetPos**不能使用，MFC 有如下：  
+-   如果 **:: SQLSetPos**不能使用，MFC 有如下：  
   
     1.  如果检测不到任何更改，**更新**不执行任何操作并返回 0。  
   
@@ -95,16 +90,16 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  若要检测记录集数据成员更改值时，MFC 使用**PSEUDO_NULL**适合于每个可以存储在记录集中的数据类型的值。 如果你必须显式将字段设置为**PSEUDO_NULL**值和字段恰好已被标记为 Null，你还必须调用`SetFieldNull`，传递的第一个参数中的字段的地址和**FALSE**中第二个参数。  
   
-##  <a name="_core_visibility_of_added_records"></a>添加记录的可见性  
+##  <a name="_core_visibility_of_added_records"></a> 添加记录的可见性  
  可见到记录集时添加的记录？ 已添加的记录有时显示，有时不可见，具体取决于以下两项操作：  
   
 -   支持的驱动程序。  
   
 -   框架可以充分利用。  
   
- 如果 ODBC 驱动程序支持**:: SQLSetPos** ODBC API 函数时，MFC 使用函数添加的记录。 与**:: SQLSetPos**，添加记录都可见的任何可更新的 MFC 记录集。 若不支持该函数，添加记录不可见，必须调用**Requery**才能看到它们。 使用**:: SQLSetPos**来说也是更高效。  
+ 如果 ODBC 驱动程序支持 **:: SQLSetPos** ODBC API 函数时，MFC 使用函数添加的记录。 与 **:: SQLSetPos**，添加记录都可见的任何可更新的 MFC 记录集。 若不支持该函数，添加记录不可见，必须调用**Requery**才能看到它们。 使用 **:: SQLSetPos**来说也是更高效。  
   
-##  <a name="_core_editing_an_existing_record"></a>编辑现有记录  
+##  <a name="_core_editing_an_existing_record"></a> 编辑现有记录  
  编辑在记录集中的现有记录涉及到该记录，调用记录集的滚动[编辑](../../mfc/reference/crecordset-class.md#edit)成员函数，设置的值将新记录的字段数据成员，以及调用[更新](../../mfc/reference/crecordset-class.md#update)成员函数以将更改的记录写入到数据源。  
   
  作为调用的前提条件**编辑**，记录集必须是可更新和上一条记录。 `CanUpdate`和`IsDeleted`成员函数让你能够确定这些条件。 当前记录还必须已尚未删除，且必须记录在会记录集 (同时`IsBOF`和`IsEOF`返回 0)。  
@@ -120,11 +115,11 @@ ms.lasthandoff: 12/21/2017
   
  当调用**更新**的已编辑的记录：  
   
--   如果 ODBC 驱动程序支持**:: SQLSetPos** ODBC API 函数时，MFC 使用函数来更新数据源上的记录。 与**:: SQLSetPos**，驱动程序与相应的记录在服务器上，如果两个不同更新服务器上的记录将编辑缓冲区进行比较。 与**:: SQLSetPos**，MFC 可以高效地更新的记录，因为它没有构造和处理的 SQL 语句。  
+-   如果 ODBC 驱动程序支持 **:: SQLSetPos** ODBC API 函数时，MFC 使用函数来更新数据源上的记录。 与 **:: SQLSetPos**，驱动程序与相应的记录在服务器上，如果两个不同更新服务器上的记录将编辑缓冲区进行比较。 与 **:: SQLSetPos**，MFC 可以高效地更新的记录，因为它没有构造和处理的 SQL 语句。  
   
-     或  
+     -或-  
   
--   如果**:: SQLSetPos**不能使用，MFC 有如下：  
+-   如果 **:: SQLSetPos**不能使用，MFC 有如下：  
   
     1.  如果进行不了任何更改，**更新**不执行任何操作并返回 0。  
   
@@ -140,18 +135,18 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  如果调用`AddNew`或**编辑**后又调用任一函数之前但在之前调用**更新**，编辑缓冲区刷新与存储的记录，并替换中的新建或编辑记录进度。 此行为提供了一种方法中止`AddNew`或**编辑**并开始一个新： 如果你确定记录正在进行了故障，只需调用**编辑**或`AddNew`试。  
   
-##  <a name="_core_deleting_a_record"></a>删除记录  
+##  <a name="_core_deleting_a_record"></a> 删除记录  
  从记录集中删除一条记录包括滚动到该记录及调用记录集的[删除](../../mfc/reference/crecordset-class.md#delete)成员函数。 与不同`AddNew`和**编辑**，**删除**不需要匹配调用**更新**。  
   
  作为调用的前提条件**删除**，记录集必须可更新，并且它必须位于一条记录。 `CanUpdate`， `IsBOF`， `IsEOF`，和`IsDeleted`成员函数让你能够确定这些条件。  
   
  当调用**删除**:  
   
--   如果 ODBC 驱动程序支持**:: SQLSetPos** ODBC API 函数时，MFC 使用函数来删除数据源上的记录。 使用**:: SQLSetPos**通常比使用 SQL 更高效。  
+-   如果 ODBC 驱动程序支持 **:: SQLSetPos** ODBC API 函数时，MFC 使用函数来删除数据源上的记录。 使用 **:: SQLSetPos**通常比使用 SQL 更高效。  
   
-     或  
+     -或-  
   
--   如果**:: SQLSetPos**不能使用，MFC 有如下：  
+-   如果 **:: SQLSetPos**不能使用，MFC 有如下：  
   
     1.  编辑缓冲区中的当前记录不会备份作为 in`AddNew`和**编辑**。  
   

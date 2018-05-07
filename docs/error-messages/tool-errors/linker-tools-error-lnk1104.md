@@ -1,12 +1,9 @@
 ---
-title: "链接器工具错误 LNK1104 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具错误 LNK1104 |Microsoft 文档
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>链接器工具错误 LNK1104
 
@@ -101,4 +96,4 @@ ms.lasthandoff: 12/21/2017
 
 当你没有足够的磁盘空间，可以出现错误。 链接器在多个用例中使用临时文件。 即使有足够的磁盘空间，一个非常大的链接可以消耗或片段的可用磁盘空间。 请考虑使用[/OPT （优化）](../../build/reference/opt-optimizations.md)选项; 不采取可传递的 COMDAT 消除读取所有对象文件多次。
 
-如果*filename*名为 LNK*nnn*生成链接器为临时文件的文件名时，可能不存在 TMP 环境变量中指定的目录，或多个可能为 TMP 环境变量指定目录。 只能将一个目录路径应为 TMP 环境变量指定。
+如果*filename*名为 LNK*nnn*、 即生成链接器为临时文件的文件名、 TMP 环境变量中指定的目录可能不存在，或可能是多个目录为 TMP 环境变量指定。 只能将一个目录路径应为 TMP 环境变量指定。

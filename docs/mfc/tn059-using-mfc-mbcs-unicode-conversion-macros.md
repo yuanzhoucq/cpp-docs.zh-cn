@@ -1,13 +1,10 @@
 ---
-title: "TN059： 使用 MFC MBCS Unicode 转换宏 |Microsoft 文档"
-ms.custom: 
+title: TN059： 使用 MFC MBCS Unicode 转换宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.mbcs
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45df45fe3d06e71b33c20ecd88d3f958a5673df1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 转换宏
 > [!NOTE]
@@ -111,7 +106,7 @@ W2A      (LPCWSTR) -> (LPSTR)
 ## <a name="ole-conversion-macros"></a>OLE 转换宏  
  OLE 转换宏专门用于处理预期的函数**OLESTR**字符。 如果您检查 OLE 标题时，你将看到多项引用**LPCOLESTR**和**OLECHAR**。 这些类型用于以一种非特定于平台的方法引用 OLE 接口中使用的字符类型。 **OLECHAR**映射到`char`在 Win16 和 Macintosh 平台中和**WCHAR** Win32 中。  
   
- 为了使数**#ifdef** MFC 中的指令的代码在最低限度我们具有用于每个转换的类似宏，其中包含 OLE 字符串。 下列宏是最常使用的：  
+ 为了使数 **#ifdef** MFC 中的指令的代码在最低限度我们具有用于每个转换的类似宏，其中包含 OLE 字符串。 下列宏是最常使用的：  
   
 ```  
 T2COLE   (LPCTSTR) -> (LPCOLESTR)  
@@ -149,7 +144,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 }  
 ```  
   
- 如果字符串不是常量，则将方法调用封装到函数中。 这将允许每次都释放转换缓冲区。 例如:  
+ 如果字符串不是常量，则将方法调用封装到函数中。 这将允许每次都释放转换缓冲区。 例如：  
   
 ```  
 void CallSomeMethod(int ii, LPCTSTR lpsz)  

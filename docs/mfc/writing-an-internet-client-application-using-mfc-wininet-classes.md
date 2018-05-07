@@ -1,13 +1,10 @@
 ---
-title: "编写 Internet 客户端应用程序使用 MFC WinInet 类 |Microsoft 文档"
-ms.custom: 
+title: 编写 Internet 客户端应用程序使用 MFC WinInet 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 类编写 Internet 客户端应用程序
 每个 Internet 客户端应用程序的基础是 Internet 会话。 MFC 实现 Internet 会话作为类的对象[CInternetSession](../mfc/reference/cinternetsession-class.md)。 通过使用此类，您可以创建一个 Internet 会话或多个同时会话。  

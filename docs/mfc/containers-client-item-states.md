@@ -1,13 +1,10 @@
 ---
-title: "容器： 客户端项状态 |Microsoft 文档"
-ms.custom: 
+title: 容器： 客户端项状态 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-client-item-states"></a>容器：客户端项状态
 此文章介绍了在其生存期内，通过传递客户端项的不同状态。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  在空状态下，客户端项尚不完全项。 内存已分配，但它尚未已初始化 OLE 项的数据。 这是通过调用创建完毕后，客户端项处于的状态**新**但未经过通常分两步创建的第二步。  
   
- 在第二个步骤中，通过调用执行`COleClientItem::CreateFromFile`或另一个**CreateFrom***xxxx*函数，完全创建相应的项。 OLE 数据 （从文件或某些其他源，如剪贴板） 与`COleClientItem`-派生对象。 现在项处于加载状态。  
+ 在第二个步骤中，通过调用执行`COleClientItem::CreateFromFile`或另一个 **CreateFrom * * * xxxx*函数，完全创建相应的项。 OLE 数据 （从文件或某些其他源，如剪贴板） 与`COleClientItem`-派生对象。 现在项处于加载状态。  
   
  当项具有已在服务器的窗口中打开而不是在容器的文档中的位置中打开时，它会处于打开 （或完全打开） 状态。 在此状态下，跨阴影通常绘制的表示形式来指明，在其他位置的项处于活动状态的容器的窗口中的项上。  
   

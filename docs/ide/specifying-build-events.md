@@ -2,12 +2,9 @@
 title: 指定生成事件 |Microsoft 文档
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCEventTool.CommandLine
 - VC.Project.IVCEventTool.ExcludedFromBuild
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825eec000a2b08bd7a5a4d7769405df2f5570523
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-build-events"></a>指定生成事件
 
@@ -60,7 +55,7 @@ ms.lasthandoff: 01/03/2018
 
       可以使用 MSBuild 宏以符号方式指定多个输入和输出文件。 有关如何指定的文件，位置或文件集的名称的信息，请参阅[用于生成命令和属性的公共宏](../ide/common-macros-for-build-commands-and-properties.md)。
 
-      因为 %字符保留了 MSBuild，如果你指定的环境变量将每个 **%** 用字符转义**%25**十六进制转义序列。 例如，对于替换**%WINDIR%**与**%25WINDIR %25**。 MSBuild 替换每个**%25**序列与 **%** 字符访问环境变量之前。
+      因为 %字符保留了 MSBuild，如果你指定的环境变量将每个**%** 用字符转义 **%25**十六进制转义序列。 例如，对于替换 **%WINDIR%** 与 **%25WINDIR %25**。 MSBuild 替换每个 **%25**序列与**%** 字符访问环境变量之前。
 
    - 在**说明**，键入此事件的描述。 描述输出到**输出**窗口时将发生此事件。
 

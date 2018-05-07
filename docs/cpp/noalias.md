@@ -1,12 +1,9 @@
 ---
-title: "noalias |Microsoft 文档"
-ms.custom: 
+title: noalias |Microsoft 文档
+ms.custom: ''
 ms.date: 02/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - noalias_cpp
@@ -16,25 +13,23 @@ helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
-ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
+ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="noalias"></a>noalias
 
 **Microsoft 专用**
 
-`noalias`意味着函数调用不会修改或引用可见全局状态且只会修改指向的内存*直接*指针参数 （第一级间接寻址）。
+`noalias` 意味着函数调用不会修改或引用可见全局状态且只会修改指向的内存*直接*指针参数 （第一级间接寻址）。
 
-如果函数被批注为 `noalias`，则优化器可以假定除了参数本身以外，只在函数内引用或修改指针参数的第一级间接寻址。 可见全局状态是未在编译范围外定义或引用的所有数据的集合，因此不采用它们的地址。 编译作用域是所有的源文件 ([/LTCG （链接时间代码生成）](../build/reference/ltcg-link-time-code-generation.md)生成) 或单个源文件 (非**/LTCG**生成)。
+如果函数被批注为 `noalias`，则优化器可以假定除了参数本身以外，只在函数内引用或修改指针参数的第一级间接寻址。 可见全局状态是未在编译范围外定义或引用的所有数据的集合，因此不采用它们的地址。 编译作用域是所有的源文件 ([/LTCG （链接时间代码生成）](../build/reference/ltcg-link-time-code-generation.md)生成) 或单个源文件 (非 **/LTCG**生成)。
 
 `noalias`批注仅应用的批注的函数体中。 函数标记为`__declspec(noalias)`不会影响的函数返回的指针的别名。
 

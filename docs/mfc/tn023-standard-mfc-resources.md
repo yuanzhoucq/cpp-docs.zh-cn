@@ -1,13 +1,10 @@
 ---
-title: "TN023： 标准 MFC 资源 |Microsoft 文档"
-ms.custom: 
+title: TN023： 标准 MFC 资源 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.resources
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fded011fda52dfde46804b03699dc93469e5e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023：标准 MFC 资源
 此注释将介绍 MFC 库随附的和需要的标准资源。  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 >  .rc 资源文件包含一个特殊的 `TEXTINCLUDE` 资源，它将阻止您意外地在标准 .rc 文件的基础上进行保存。  
   
 ### <a name="customizing-standard-framework-resources"></a>自定义标准框架资源  
- 通常通过在应用程序的资源文件中使用 #include 命令将标准框架资源包含在应用程序中。 AppWizard 将生成一个资源文件。 此文件包含相应的标准框架资源，具体取决于您选择的 AppWizard 选项。 您可以通过更改编译时指令来评审、添加或删除包含的资源。 若要执行此操作，打开**资源**菜单，然后选择**设置包括**。 查看“编译时指令”编辑项。 例如:  
+ 通常通过在应用程序的资源文件中使用 #include 命令将标准框架资源包含在应用程序中。 AppWizard 将生成一个资源文件。 此文件包含相应的标准框架资源，具体取决于您选择的 AppWizard 选项。 您可以通过更改编译时指令来评审、添加或删除包含的资源。 若要执行此操作，打开**资源**菜单，然后选择**设置包括**。 查看“编译时指令”编辑项。 例如：  
   
 ```  
 #include "afxres.rc"  

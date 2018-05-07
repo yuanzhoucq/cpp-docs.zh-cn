@@ -1,12 +1,9 @@
 ---
-title: __svm_invlpga | Microsoft Docs
-ms.custom: 
+title: __svm_invlpga |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __svm_invlpga
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0343222a08b1ab192be733a1f583cc287a9d3377
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e48fc39fd972387ee9fbbe587dc53bf61f2ae59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft 专用**  
@@ -51,7 +46,7 @@ void __svm_invlpga(
 ## <a name="remarks"></a>备注  
  `__svm_invlpga`函数等同于`INVLPGA`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构程序员手动卷 2： 系统编程中，"在文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

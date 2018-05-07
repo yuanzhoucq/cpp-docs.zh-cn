@@ -1,13 +1,10 @@
 ---
-title: "TN033: MFC 的 DLL 版本 |Microsoft 文档"
-ms.custom: 
+title: 'TN033: MFC 的 DLL 版本 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 本说明介绍如何将 MFCxx.DLL 和 MFCxxD.DLL （其中 x 是 MFC 版本号） 共享动态链接库用于 MFC 应用程序和 MFC 扩展 Dll。 有关 MFC 的规则 Dll 的详细信息，请参阅[使用 MFC 作为 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 -   传送使用共享的库的应用程序需要您在发运 MFCxx.DLL （及其他） 使用你的程序的库。 MFCxx.DLL 许多 Dll，如自由可再发行组件，但你仍必须 DLL 在安装你的安装程序。 此外，你必须将发运 MSVCRTxx.DLL，其中包含用于你的程序和 MFC Dll 本身的 C 运行时库。  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>如何编写 MFC 扩展 DLL  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> 如何编写 MFC 扩展 DLL  
  MFC 扩展 DLL 是一个包含类和写入修饰 MFC 类的功能的函数的 DLL。 MFC 扩展 DLL 与应用程序使用它，有几个额外的注意事项相同的方式使用共享的 MFC Dll:  
   
 -   生成过程等同于生成几个其他编译器和链接器选项使用共享的 MFC 库的应用程序。  
@@ -135,18 +130,18 @@ ms.lasthandoff: 12/21/2017
   
  如果你要将现有项目转换为 MFC 扩展 DLL，开始构建使用共享的版本的 MFC 中，一个应用程序的标准规则，然后执行以下操作：  
   
--   添加**/D_AFXEXT**到编译器标志。 在项目属性对话框中，选择 C/c + + 节点。 然后选择预处理器类别。 添加`_AFXEXT`到定义宏字段中，每个项用分号分隔。  
+-   添加 **/D_AFXEXT**到编译器标志。 在项目属性对话框中，选择 C/c + + 节点。 然后选择预处理器类别。 添加`_AFXEXT`到定义宏字段中，每个项用分号分隔。  
   
--   删除**/Gy**编译器开关。 在项目属性对话框中，选择 C/c + + 节点。 然后选择代码生成类别。 确保未启用"启用函数级链接"选项。 这将使更轻松地导出类，因为链接器不会删除未引用的函数。 如果原始项目用于生成正则表达式 MFC DLL 静态链接到 MFC，更改**/MT [d]**编译器选项**/MD [d]**。  
+-   删除 **/Gy**编译器开关。 在项目属性对话框中，选择 C/c + + 节点。 然后选择代码生成类别。 确保未启用"启用函数级链接"选项。 这将使更轻松地导出类，因为链接器不会删除未引用的函数。 如果原始项目用于生成正则表达式 MFC DLL 静态链接到 MFC，更改 **/MT [d]** 编译器选项 **/MD [d]**。  
   
--   生成与导出库**/DLL**到链接的选项。 这将创建一个新的目标，指定为目标类型的 Win32 动态链接库时设置。  
+-   生成与导出库 **/DLL**到链接的选项。 这将创建一个新的目标，指定为目标类型的 Win32 动态链接库时设置。  
   
 ### <a name="changing-your-header-files"></a>更改标头文件  
  MFC 扩展 DLL 的目标通常是将导出到一个或多个应用程序可以使用该功能的一些常用的功能。 这可以归结为导出类和全局函数，可用于客户端应用程序。  
   
- 为了执行此操作必须确保每个成员函数被标记为导入或导出根据。 这需要特殊的声明： **__declspec （dllexport)**和**__declspec （dllimport)**。 当客户端应用程序使用你的类时，你希望它们声明为**__declspec （dllimport)**。 当生成 MFC 扩展 DLL 本身时，它们应被声明为**__declspec （dllexport)**。 此外，函数必须实际导出，以便客户端程序在加载时将绑定到它们。  
+ 为了执行此操作必须确保每个成员函数被标记为导入或导出根据。 这需要特殊的声明： **__declspec （dllexport)** 和 **__declspec （dllimport)**。 当客户端应用程序使用你的类时，你希望它们声明为 **__declspec （dllimport)**。 当生成 MFC 扩展 DLL 本身时，它们应被声明为 **__declspec （dllexport)**。 此外，函数必须实际导出，以便客户端程序在加载时将绑定到它们。  
   
- 若要导出整个类，使用**AFX_EXT_CLASS**类定义中。 由框架作为定义此宏**__declspec （dllexport)**时**_AFXDLL**和`_AFXEXT`定义，但定义为**__declspec （dllimport)**时`_AFXEXT`未定义。 `_AFXEXT`生成 MFC 扩展 DLL 时仅定义按上文所述，。 例如:  
+ 若要导出整个类，使用**AFX_EXT_CLASS**类定义中。 由框架作为定义此宏 **__declspec （dllexport)** 时 **_AFXDLL**和`_AFXEXT`定义，但定义为 **__declspec （dllimport)** 时`_AFXEXT`未定义。 `_AFXEXT` 生成 MFC 扩展 DLL 时仅定义按上文所述，。 例如：  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -156,7 +151,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 ### <a name="not-exporting-the-entire-class"></a>不会导出整个类  
  有时你可能想要导出只是你的类的个别必要成员。 例如，如果要导出`CDialog`-派生类中，你可能只需导出构造函数和`DoModal`调用。 你可以导出使用 DLL 的这些成员。DEF 文件，但你还可以使用**AFX_EXT_CLASS**得多您需要将导出单个成员上一样。  
   
- 例如:  
+ 例如：  
   
 ```  
 class CExampleDialog : public CDialog  
@@ -188,11 +183,11 @@ protected: \
 \  
 ```  
   
- 开始的行"静态`AFX_DATA`"声明内您的类的静态对象。 若要正确进行导出此类，并从客户端访问运行时信息。EXE，你需要导出此静态对象。 因为使用修饰符声明的静态对象`AFX_DATA`，只需定义`AFX_DATA`要**__declspec （dllexport)**时生成您的 DLL 并将其作为定义**__declspec （dllimport)**生成你的客户端可执行文件时。  
+ 开始的行"静态`AFX_DATA`"声明内您的类的静态对象。 若要正确进行导出此类，并从客户端访问运行时信息。EXE，你需要导出此静态对象。 因为使用修饰符声明的静态对象`AFX_DATA`，只需定义`AFX_DATA`要 **__declspec （dllexport)** 时生成您的 DLL 并将其作为定义 **__declspec （dllimport)** 生成你的客户端可执行文件时。  
   
  如上所述， **AFX_EXT_CLASS**已在这种方式中定义。 你只需重新定义`AFX_DATA`会作为相同**AFX_EXT_CLASS**解决你的类定义。  
   
- 例如:  
+ 例如：  
   
 ```  
 #undef  AFX_DATA  
@@ -225,7 +220,7 @@ class CExampleView : public CView
 ### <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
  您可以使用 _**AFXEXT** MFC 扩展 Dll，只要你没有 MFC 扩展 Dll 的多个层的预处理器符号。 如果你有 MFC 扩展 Dll 可调用或派生自中你自己的 MFC 扩展 Dll，后者又派生自 MFC 类，类必须使用你自己的预处理器符号以避免多义性。  
   
- 问题在于该在 Win32，所以必须显式声明为任何数据**__declspec （dllexport)**如果它是从 DLL，导出和**__declspec （dllimport)**是否要从 DLL 导入它。 在定义`_AFXEXT`，MFC 标头确保**AFX_EXT_CLASS**正确定义。  
+ 问题在于该在 Win32，所以必须显式声明为任何数据 **__declspec （dllexport)** 如果它是从 DLL，导出和 **__declspec （dllimport)** 是否要从 DLL 导入它。 在定义`_AFXEXT`，MFC 标头确保**AFX_EXT_CLASS**正确定义。  
   
  如果你具有多个层、 一个符号如**AFX_EXT_CLASS**是不够的因为 MFC 扩展 DLL 可能会导出新类，以及从另一个 MFC 扩展 DLL 导入其他类。 若要处理此问题，使用特殊的预处理器符号，该值指示要生成 DLL 本身还是使用该 DLL。 例如，假设两个 MFC 扩展 Dll、 A.DLL 和 B.DLL。 每个分别导出 A.H 和 B.H 中的某些类。 B.DLL 使用 A.DLL 类。 标头文件将如下所示：  
   
@@ -251,14 +246,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 { ... class definition .. };  
 ```  
   
- A.DLL 生成时，它用生成**/D A_IMPL**和 B.DLL 生成时，它用生成**/D B_IMPL**。 通过使用单独的符号，每个 DLL，导出 CExampleB 和 CExampleA 时生成 B.DLL 导入。 CExampleA 导出生成 A.DLL 时，导入由 B.DLL （或某些其他客户端）。  
+ A.DLL 生成时，它用生成 **/D A_IMPL**和 B.DLL 生成时，它用生成 **/D B_IMPL**。 通过使用单独的符号，每个 DLL，导出 CExampleB 和 CExampleA 时生成 B.DLL 导入。 CExampleA 导出生成 A.DLL 时，导入由 B.DLL （或某些其他客户端）。  
   
  使用内置时，无法完成这种类型的分层**AFX_EXT_CLASS**和`_AFXEXT`预处理器符号。 上面所述的技术可解决此问题的方式与 MFC 本身的机制使用时生成其 OLE、 数据库和网络 MFC 扩展 Dll 中。  
   
 ### <a name="not-exporting-the-entire-class"></a>不会导出整个类  
  同样，你将需要不导出整个类时要特别小心。 你必须确保正确导出由 MFC 宏创建的必需数据项目。 这可以通过重新定义**AFX_DATA**对特定类的宏。 每当不导出整个类的时候，你应进行此操作。  
   
- 例如:  
+ 例如：  
   
 ```  
 // A.H  
@@ -371,7 +366,7 @@ extern "C" extern void WINAPI InitXxxDLL()
 >  如果你使用你从常规 MFC DLL 的 MFC 扩展 DLL，你必须导出此初始化函数。 使用任何 MFC 扩展 DLL 类或资源之前，必须从 MFC DLL 的常规调用此函数。  
   
 ### <a name="exporting-entries"></a>导出条目  
- 若要导出你的类的简单方法是使用**__declspec （dllimport)**和**__declspec （dllexport)**对每个类和全局您要导出的函数。 这将使其容易得多，但效率低于命名 （如下所述） 每个入口点，因为你可以更少控制导出哪些函数和不能按序号导出的函数。 TESTDLL1 和 TESTDLL2 使用此方法导出其条目。  
+ 若要导出你的类的简单方法是使用 **__declspec （dllimport)** 和 **__declspec （dllexport)** 对每个类和全局您要导出的函数。 这将使其容易得多，但效率低于命名 （如下所述） 每个入口点，因为你可以更少控制导出哪些函数和不能按序号导出的函数。 TESTDLL1 和 TESTDLL2 使用此方法导出其条目。  
   
  更高效的方法 （和使用 MFCxx.DLL 的方法） 是通过命名每个条目中的手动导出每个条目。DEF 文件。 由于我们要从我们 DLL （即，不是全部） 导出选择性导出，我们必须确定我们想要导出的特定接口。 这是困难的因为你必须在窗体中的条目指定到链接器的重整的名称。DEF 文件。 不导出任何 c + + 类，除非你确实需要对符号链接。  
   
@@ -387,9 +382,9 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  如果你想要仅从特定的位置加载资源，使用 Api`AfxGetResourceHandle`和`AfxSetResourceHandle`保存旧句柄并设置新的句柄。 请确保还原旧资源句柄，然后返回到客户端应用程序。 示例 TESTDLL2 用于显式加载菜单使用此方法。  
   
- 遍历列表也有缺点，它会稍慢些，并需要管理资源 ID 范围。 它具有链接到多个 MFC 扩展 Dll 的客户端应用程序可以使用任何 DLL 提供的资源，而无需指定 DLL 实例句柄的优势。 `AfxFindResourceHandle`是一个 API 用于遍历资源列表以查找给定的匹配项。 它采用的名称和类型的资源，并返回的第一次找的资源句柄 （或 NULL）。  
+ 遍历列表也有缺点，它会稍慢些，并需要管理资源 ID 范围。 它具有链接到多个 MFC 扩展 Dll 的客户端应用程序可以使用任何 DLL 提供的资源，而无需指定 DLL 实例句柄的优势。 `AfxFindResourceHandle` 是一个 API 用于遍历资源列表以查找给定的匹配项。 它采用的名称和类型的资源，并返回的第一次找的资源句柄 （或 NULL）。  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>编写的应用程序使用的 DLL 版本  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> 编写的应用程序使用的 DLL 版本  
   
 ### <a name="application-requirements"></a>应用程序的要求  
  使用共享的版本的 MFC 的应用程序必须遵循一些简单的规则：  
@@ -426,7 +421,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  编辑库的链接器的列表。 更改 NAFXCWD。LIB 到 MFCxxD.LIB 和更改 NAFXCW。到 MFCxx.LIB LIB。 替换 LIBC。LIB 与 MSVCRT。LIB。 因为与任何其他 MFC 库它是重要 MFCxxD.LIB 位于**之前**任何 C 运行库。  
   
- 根据需要添加**/D_AFXDLL**到你的零售和调试资源编译器选项 (实际编译的资源的一个**/R**)。 这样就可以共享 MFC Dll 中存在的资源较小进行最终可执行文件。  
+ 根据需要添加 **/D_AFXDLL**到你的零售和调试资源编译器选项 (实际编译的资源的一个 **/R**)。 这样就可以共享 MFC Dll 中存在的资源较小进行最终可执行文件。  
   
  进行这些更改之后，完全重新生成是必需的。  
   
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  不建议重新生成 MFC Dll。  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>如何实现 MFCxx.DLL  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> 如何实现 MFCxx.DLL  
  以下部分介绍如何实现 MFC DLL （MFCxx.DLL 和 MFCxxD.DLL）。 了解的详细信息并不重要信息： 如果所有你想要执行是你的应用程序中使用 MFC DLL。 此处的详细信息不重要对于了解如何编写 MFC 扩展 DLL，但了解此实现可能帮助你编写自己的 DLL。  
   
 ### <a name="implementation-overview"></a>实现概述  
@@ -456,9 +451,9 @@ extern "C" extern void WINAPI InitXxxDLL()
  16 位版本的 MFC 需要大量的特殊技术包括每个应用程序数据上的堆栈段，特殊的段由某些 80x86 程序集代码、 每个进程异常上下文和其他技术。 Win32 直接支持每个进程的数据中一个 DLL，即你想大部分时间。 在大多数情况下 MFCxx.DLL 是只需 NAFXCW。在 DLL 中打包的 LIB。 如果你查看 MFC 源代码，你将找到很少 #ifdef _AFXDLL，因为有极少数需要进行的特殊情况。 是不是专门在 Windows 3.1 （也称为 Win32s） 的 Win32 处理特殊情况。 Win32s 执行不支持每个进程 DLL 数据直接因此 MFC DLL 必须使用线程本地存储 (TLS) 来获取进程的本地数据的 Win32 Api。  
   
 ### <a name="impact-on-library-sources-additional-files"></a>对库源，其他文件的影响  
- 影响**_AFXDLL**上的正常的 MFC 类库源和标头的版本是相对较小。 没有特殊版本文件 (AFXV_DLL。H），以及其他标头文件 (AFXDLL_。H） 包括主 AFXWIN。H 标头。 AFXDLL_。H 标头包括**CDynLinkLibrary**类和其他实现详细信息的同时**_AFXDLL**应用程序和 MFC 扩展 Dll。 AFXDLLX。H 标头提供用于生成 MFC 扩展 Dll （请参阅上面有关详细信息）。  
+ 影响 **_AFXDLL**上的正常的 MFC 类库源和标头的版本是相对较小。 没有特殊版本文件 (AFXV_DLL。H），以及其他标头文件 (AFXDLL_。H） 包括主 AFXWIN。H 标头。 AFXDLL_。H 标头包括**CDynLinkLibrary**类和其他实现详细信息的同时 **_AFXDLL**应用程序和 MFC 扩展 Dll。 AFXDLLX。H 标头提供用于生成 MFC 扩展 Dll （请参阅上面有关详细信息）。  
   
- 到 MFC SRC 中的 MFC 库的正则源具有一些附加条件代码下的**_AFXDLL** #ifdef。 其他的源文件 (DLLINIT。CPP) 包含额外的 DLL 初始化代码和其他粘附共享版本的 MFC。  
+ 到 MFC SRC 中的 MFC 库的正则源具有一些附加条件代码下的 **_AFXDLL** #ifdef。 其他的源文件 (DLLINIT。CPP) 包含额外的 DLL 初始化代码和其他粘附共享版本的 MFC。  
   
  若要生成共享的版本的 MFC，提供了其他文件。 （请参阅下面有关如何生成 DLL 的详细信息。）  
   
@@ -474,7 +469,7 @@ extern "C" extern void WINAPI InitXxxDLL()
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序号和类 __declspec （dllexport） 和 DLL 命名  
  我们不会使用`class` **__declspec （dllexport)** c + + 编译器的功能。 相反，一组导出是附带类库源 （MFCxx.DEF 和 MFCxxD.DEF）。 导出仅这些选定的一组入口点 （函数和数据）。 其他符号，如 MFC 私有实现函数或类，不会导出所有导出都完成而无需在常驻或非居民名称表中的字符串名称的序号。  
   
- 使用`class` **__declspec （dllexport)**可能是可行的替代方案，用于构建较小的 Dll，但在 MFC 中，默认值导出机制类似较大的 DLL 的情况下具有效率和容量限制。  
+ 使用`class` **__declspec （dllexport)** 可能是可行的替代方案，用于构建较小的 Dll，但在 MFC 中，默认值导出机制类似较大的 DLL 的情况下具有效率和容量限制。  
   
  此的所有方法都是功能的什么我们可以打包大量的版本都才大约 800 KB，而无需破坏多执行或加载速度的 MFCxx.DLL 中。 MFCxx.DLL 已经是更大的 100k 此方法尚未使用。 这也使得可以在末尾添加其他入口点。DEF 文件以允许简单版本控制而不会影响按序号导出的速度和大小的效率。 MFC 类库中的主要版本修订将更改库名称。 也就是说，MFC30。DLL 是包含 3.0 版的 MFC 类库的可再发行组件 DLL。 此 DLL，升级在假设的 MFC 3.1 中，假设 DLL 将被命名为 MFC31。DLL 相反。 同样，如果你修改以生成 MFC DLL 的自定义版本的 MFC 源代码，使用不同的名称 （，最好是一个无需在名称中的"MFC"）。  
   

@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 使用字体 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 使用字体 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 如果 ActiveX 控件显示文本，你可以允许控制用户通过更改字体属性更改的文本外观。 字体属性作为字体对象实现，并可以是两种类型之一： 常用或自定义。 常用字体属性是可以使用添加属性向导添加的 preimplemented 的字体属性。 自定义字体属性不 preimplemented 并控件开发人员确定属性的行为和使用情况。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [在控件中使用自定义字体属性](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a>使用常用字体属性  
+##  <a name="_core_using_the_stock_font_property"></a> 使用常用字体属性  
  常用字体属性 preimplemented 由类[COleControl](../mfc/reference/colecontrol-class.md)。 此外，标准的字体属性页也会提供，允许用户更改字体对象，如其名称、 大小和样式的各种属性。  
   
  访问字体对象，通过[GetFont](../mfc/reference/colecontrol-class.md#getfont)， [SetFont](../mfc/reference/colecontrol-class.md#setfont)，和[InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont)函数的`COleControl`。 控制用户将访问通过字体对象`GetFont`和`SetFont`与任何其他 Get/Set 属性相同的方式中的函数。 需要从控件内的字体对象访问权限时，使用`InternalGetFont`函数。  
@@ -102,14 +97,14 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a>修改 OnDraw 函数  
+##  <a name="_core_modifying_the_ondraw_function"></a> 修改 OnDraw 函数  
  默认实现`OnDraw`Windows 系统字体用于显示控件中的所有文本。 这意味着，你必须修改`OnDraw`通过将字体对象选入设备上下文的代码。 若要执行此操作，调用[COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont)并传递控件的设备上下文，如下面的示例中所示：  
   
  [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
  后`OnDraw`函数进行了修改，以使用字体对象，控件中的任何文本将显示具有从控件的常用字体属性的特性。  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a>在控件中使用自定义字体属性  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> 在控件中使用自定义字体属性  
  除了常用字体属性，ActiveX 控件可以包含自定义字体属性。 若要添加自定义字体属性必须：  
   
 -   使用添加属性向导来实现自定义的字体属性。  
@@ -118,7 +113,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [实现新字体通知接口](#_core_implementing_a_new_font_notification_interface)。  
   
-###  <a name="_core_implementing_a_custom_font_property"></a>实现自定义字体属性  
+###  <a name="_core_implementing_a_custom_font_property"></a> 实现自定义字体属性  
  若要实现自定义的字体属性，你使用添加属性向导来添加属性，然后对代码的一些修改。 下列各节描述如何添加自定义`HeadingFont`示例控件的属性。  
   
 ##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>若要添加使用添加属性向导的自定义字体属性  
@@ -206,7 +201,7 @@ ms.lasthandoff: 12/21/2017
   
  做出这些更改后，重新生成整个项目以整合的其他功能。  
   
-###  <a name="_core_processing_font_notifications"></a>处理字体通知  
+###  <a name="_core_processing_font_notifications"></a> 处理字体通知  
  在大多数情况下在控件需要知道何时已修改的字体对象的特征。 每个字体对象都能够提供通知，如果它通过调用的成员函数更改**IFontNotification**由实现的接口`COleControl`。  
   
  如果该控件使用常用字体属性，其通知由`OnFontChanged`成员函数`COleControl`。 当你添加自定义字体属性时，你可以让它们使用相同的实现。 在上一节中示例中，这通过传递 （& a)**m_xFontNotification**初始化时**m_fontHeading**成员变量。  
@@ -218,7 +213,7 @@ ms.lasthandoff: 12/21/2017
   
  区分控件的字体对象通知的一种方法是创建的单独实现**IFontNotification**控件中每个字体对象接口。 此技术使你可以通过更新字符串或使用最近修改过的字体的字符串优化绘制代码。 以下部分演示实现第二个字体属性的单独通知接口所必需的步骤。 第二个字体属性被假定为`HeadingFont`已添加上一节中的属性。  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a>实现新字体通知接口  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> 实现新字体通知接口  
  若要区分两个或多个字体的通知，必须为每个控件中使用的字体实现新的通知接口。 下列各节描述如何通过修改控制标头和实现文件实现新的字体通知接口。  
   
 ### <a name="additions-to-the-header-file"></a>添加内容到标头文件  

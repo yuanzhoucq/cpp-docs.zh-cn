@@ -1,31 +1,26 @@
 ---
-title: "如何： 在对话框中创建用户控件并承载 |Microsoft 文档"
-ms.custom: 
+title: 如何： 在对话框中创建用户控件并承载 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20472a80b35318fa4c6d34221a61345de9e40f9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>如何：创建用户控件并将它承载在对话框中
 这篇文章中的步骤假定你要创建基于对话框的 ([CDialog 类](../mfc/reference/cdialog-class.md)) Microsoft 基础类 (MFC) 项目，但你还可以添加对 Windows 窗体控件的支持到一个现有的 MFC 对话框。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  创建一个名为的 Visual C# Windows 窗体控件库项目`WindowsFormsControlLibrary1`。  
   
-     在 **文件** 菜单上，单击 **新建** ，然后单击 **项目**。 在**Visual C#**文件夹，选择**Windows 窗体控件库**。  
+     在 **文件** 菜单上，单击 **新建** ，然后单击 **项目**。 在**Visual C#** 文件夹，选择**Windows 窗体控件库**。  
   
      接受`WindowsFormsControlLibrary1`通过单击项目名称**确定**。  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  创建 MFC 应用程序项目。  
   
-     在 **文件** 菜单上，单击 **新建** ，然后单击 **项目**。 在**Visual c + +**文件夹，选择**MFC 应用程序**。  
+     在 **文件** 菜单上，单击 **新建** ，然后单击 **项目**。 在**Visual c + +** 文件夹，选择**MFC 应用程序**。  
   
      在“名称”框中键入 `MFC01`。 解决方案将设置更改为**将添加到解决方案**。 单击 **“确定”**。  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
      在**属性页**对话框中，在**配置属性**，选择**常规**。 在**项目默认值**部分中，设置**公共语言运行时支持**到**公共语言运行时支持 (/ clr)**。  
   
-     下**配置属性**，展开**C/c + +**和选择**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。  
+     下**配置属性**，展开**C/c + +** 和选择**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。  
   
      选择**代码生成**节点。 设置**启用最小重新生成**到**否 (/ Gm-)**。 此外设置**基本运行时检查**到**默认**。  
   

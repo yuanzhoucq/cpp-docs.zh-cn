@@ -1,13 +1,10 @@
 ---
-title: "异常： 数据库异常 |Microsoft 文档"
-ms.custom: 
+title: 异常： 数据库异常 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>异常：数据库异常
 此文章介绍了如何处理数据库异常。 你正在使用的 MFC 类开放式数据库连接 (ODBC) 或 MFC 类数据访问对象 (DAO) 可应用于大部分这篇文章中的材料。 显式标记为特定于一个或另一模型的材料。 包括以下主题：  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [数据库异常处理示例](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>对异常处理的方法  
+##  <a name="_core_approaches_to_exception_handling"></a> 对异常处理的方法  
  无论你正在使用 DAO 或 ODBC，这种方法都是相同的。  
   
  你应始终编写异常处理程序来处理异常条件。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  在类下提供了有关 DAO 错误、 DAO 错误对象类型和 DAO 错误集合的其他信息[CDaoException](../mfc/reference/cdaoexception-class.md)。  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>数据库异常处理示例  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> 数据库异常处理示例  
  下面的示例尝试构造[CRecordset](../mfc/reference/crecordset-class.md)-派生对象上具有堆**新**运算符和然后打开的记录集 （ODBC 数据源）。 DAO 类的类似示例，请参阅"DAO 异常示例"下面。  
   
 ### <a name="odbc-exception-example"></a>ODBC 异常示例  

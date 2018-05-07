@@ -1,13 +1,10 @@
 ---
-title: "创建 Web 浏览器样式的 MFC 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 创建 Web 浏览器样式的 MFC 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
 Web 浏览器样式的应用程序可以在本地文件系统中和网络上从 （如 HTML 或活动文档） Internet 或 intranet，以及文件夹访问信息。 通过派生从应用程序的视图类[CHtmlView](../../mfc/reference/chtmlview-class.md)，从而有效 Web 浏览器视图提供 WebBrowser 控件使应用程序。  
@@ -52,7 +47,7 @@ Web 浏览器样式的应用程序可以在本地文件系统中和网络上从 
   
  因为`CHtmlView`只需实现 Microsoft Web 浏览器控件，它的支持，用于打印不像其他[CView](../../mfc/reference/cview-class.md)-派生类。 相反，web 浏览器控件实现的打印机用户界面和打印。 因此，`CHtmlView`未不支持打印预览，框架不函数并提供其他打印支持： 例如， [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)， [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)，和[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)，这是其他 MFC 应用程序中可用。  
   
- `CHtmlView`作为为 Web 浏览器控件，这将使你的应用程序到 Web 或 HTML 页的视图的包装。 该向导创建的重写[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)在视图类中，提供到 Microsoft Visual c + + Web 站点的导航链接的函数：  
+ `CHtmlView` 作为为 Web 浏览器控件，这将使你的应用程序到 Web 或 HTML 页的视图的包装。 该向导创建的重写[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)在视图类中，提供到 Microsoft Visual c + + Web 站点的导航链接的函数：  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -67,7 +62,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
- 您可以使用你自己的替换此站点，或者可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成员函数以打开位于项目的资源脚本作为视图的默认内容一个 HTML 页。 例如:  
+ 您可以使用你自己的替换此站点，或者可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成员函数以打开位于项目的资源脚本作为视图的默认内容一个 HTML 页。 例如：  
   
 ```  
 void CWebView::OnInitialUpdate()  

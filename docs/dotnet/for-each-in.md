@@ -1,12 +1,9 @@
 ---
-title: "对于每一个，在 |Microsoft 文档"
-ms.custom: 
+title: 对于每一个，在 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each, in
 通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用一种标准[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)相反。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  *语句*针对数组或集合中每个元素执行的。 为集合中的所有元素完成迭代后，控制将传递给 `for each` 块之后的语句。  
   
- `for each`和`in`是[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ `for each` 和`in`是[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
  更多相关信息：  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="windows-runtime"></a>Windows 运行时  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ### <a name="example"></a>示例  
@@ -127,9 +122,9 @@ Testing
  *表达式*  
  托管的数组表达式或集合。 集合元素必须是这样，编译器可以将其从转换<xref:System.Object>到*标识符*类型。  
   
- *表达式*计算出的类型实现<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或者定义的类型`GetEnumerator`其中一个返回类型的方法的实现<xref:System.Collections.IEnumerator>或声明所有中定义的方法`IEnumerator`.  
+ *表达式*计算出的类型实现<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或者定义的类型`GetEnumerator`其中一个返回类型的方法的实现<xref:System.Collections.IEnumerator>或声明中定义的方法的所有`IEnumerator`.  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="example"></a>示例  

@@ -1,12 +1,9 @@
 ---
-title: "CHeapPtrElementTraits 类 |Microsoft 文档"
-ms.custom: 
+title: CHeapPtrElementTraits 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrElementTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb646e6f6d2358018c38439e5bea4c651e9d994
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 类
 此类提供方法、 静态函数和有用的 typedef 时创建的堆指针的集合。  
@@ -76,17 +71,17 @@ class CHeapPtrElementTraits :
   
  `CHeapPtrElementTraits`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlcoll.h  
   
-##  <a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE  
  要用于将元素添加到集合类对象的数据类型。  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE  
  要用来检索元素的集合类对象的数据类型。  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "向量 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 向量 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/vector> header [STL/CLR]
 - <vector> header [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de5d09d569933dc06666ed2008081703d59c1564
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 此模板类描述控制变长序列的元素具有随机访问的对象。 使用容器`vector`管理作为一个连续存储的块的元素序列。 块以根据需要增长数组的形式实现。  
@@ -52,7 +47,7 @@ template<typename Value>
 ```  
   
 #### <a name="parameters"></a>参数  
- “值”  
+ 值  
  受控序列中的元素的类型。  
   
 ## <a name="members"></a>成员  
@@ -136,7 +131,7 @@ template<typename Value>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但是，请注意的容器的句柄不会销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/向量 >  
   
  **Namespace:** cliext  

@@ -1,13 +1,10 @@
 ---
-title: "标头控件使用图像列表 |Microsoft 文档"
-ms.custom: 
+title: 标头控件使用图像列表 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-with-header-controls"></a>对标题控件使用图像列表
 标头项都具有显示标头项中的某个图像的功能。 存储在关联的图像列表中，此图像为 16 x 16 像素，并且具有相同的特性列表视图控件中使用的图标图像。 为了成功实现此行为，必须首先创建和初始化的图像列表，将列表与标头控件相关联，然后修改项的图像将显示的标题项的属性。  

@@ -2,11 +2,8 @@
 title: hash_multimap (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/hash_map> header [STL/CLR]
 - <hash_map> header [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 027ed43936e4335819f95d10050de37570e6a679
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`hash_multimap`若要管理的元素序列作为哈希表，每个表项存储双向链接列表的节点，并存储一个元素，每个节点。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  其中：  
   
- `GKey`等同于`Key`后者为 ref 类型，除非在此情况下它是`Key^`  
+ `GKey` 等同于`Key`后者为 ref 类型，除非在此情况下它是 `Key^`  
   
- `GMapped`等同于`Mapped`后者为 ref 类型，除非在此情况下它是`Mapped^`  
+ `GMapped` 等同于`Mapped`后者为 ref 类型，除非在此情况下它是 `Mapped^`  
   
 ## <a name="syntax"></a>语法  
   
@@ -140,7 +135,7 @@ template<typename Key,
   
  通过调用成员函数来访问存储的委托对象[hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`。 此类委托对象必须定义键的类型之间的等效顺序[hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `key_comp()(X, Y)`返回相同的布尔值导致每次调用。  
+ `key_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
   
  如果`key_comp()(X, Y) && key_comp()(Y, X)`为 true，然后`X`和`Y`被认为具有等效顺序。  
   
@@ -150,7 +145,7 @@ template<typename Key,
   
  对象确定哪个存储桶应通过调用类型的存储的委托对象包含给定的排序键[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)。 通过调用成员函数来访问此存储的对象[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()`获取取决于密钥的值的整数值。 在构造 hash_set; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是函数`System::Object::hash_value(key_type)`。 这意味着，任何密钥`X`和`Y`:  
   
- `hash_delegate()(X)`每次调用返回相同的整数结果。  
+ `hash_delegate()(X)` 每次调用返回相同的整数结果。  
   
  如果`X`和`Y`拥有等效顺序，然后`hash_delegate()(X)`应返回与相同的整数结果`hash_delegate()(Y)`。  
   
@@ -166,7 +161,7 @@ template<typename Key,
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

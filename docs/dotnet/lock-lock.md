@@ -1,12 +1,9 @@
 ---
-title: "lock::lock |Microsoft 文档"
-ms.custom: 
+title: lock::lock |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 构造`lock`对象，可以选择等待一定的时间，或者不是在所有永久，获取锁。  
@@ -67,7 +62,7 @@ template<class T> lock(
 ## <a name="remarks"></a>备注  
  前三个窗体的构造函数尝试上获取锁`_object`指定的超时时间段内 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
   
- 第四个形式的构造函数不会在获取锁`_object`。 `lock_later`为属于[lock_when 枚举](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在这种情况下获取锁。  
+ 第四个形式的构造函数不会在获取锁`_object`。 `lock_later` 为属于[lock_when 枚举](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在这种情况下获取锁。  
   
  当调用的析构函数时，将自动释放锁。  
   
@@ -162,7 +157,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\lock.h >  
   
  **Namespace** msclr  

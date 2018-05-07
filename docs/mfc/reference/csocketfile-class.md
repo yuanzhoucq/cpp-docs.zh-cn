@@ -1,12 +1,9 @@
 ---
-title: "CSocketFile 类 |Microsoft 文档"
-ms.custom: 
+title: CSocketFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocketFile
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48ab1428d2c02e51b02977c8457d28e20597cbb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocketfile-class"></a>CSocketFile 类
 用于通过 Windows 套接字在网络中发送和接收数据的 `CFile` 对象。  
@@ -56,7 +51,7 @@ class CSocketFile : public CFile
   
  当你使用`CArchive`与`CSocketFile`和`CSocket`，可能会遇到这样的情况其中**CSocket::Receive**进入循环 (通过**PumpMessages(FD_READ)**) 等待所需的字节的量。 这是因为 Windows 套接字允许每个 FD_READ 通知，只有一个接收调用，但`CSocketFile`和`CSocket`允许每 FD_READ 的多个接收调用。 如果你收到 FD_READ 要读取的数据时，应用程序挂起。 如果你永远不会获得另一个 FD_READ，应用程序将停止通过套接字进行通信。  
   
- 可以解决此问题，如下所示。 在`OnReceive`你套接字类，调用的方法**CAsyncSocket::IOCtl (FIONREAD，...)**之前调用`Serialize`你消息类时所需的数据从套接字读取超过一个的 TCP 数据包 （为网络中，通常至少 1096 字节的最大传输单元） 的大小的方法。 如果可用的数据的大小小于所需，等待以接收和仅然后开始读取的操作的所有数据。  
+ 可以解决此问题，如下所示。 在`OnReceive`你套接字类，调用的方法**CAsyncSocket::IOCtl (FIONREAD，...)** 之前调用`Serialize`你消息类时所需的数据从套接字读取超过一个的 TCP 数据包 （为网络中，通常至少 1096 字节的最大传输单元） 的大小的方法。 如果可用的数据的大小小于所需，等待以接收和仅然后开始读取的操作的所有数据。  
   
  在下面的示例中，`m_dwExpected`是近似用户期望接收的字节数。 假定，您将其声明在其他位置中你的代码。  
   
@@ -71,10 +66,10 @@ class CSocketFile : public CFile
   
  `CSocketFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxsock.h  
   
-##  <a name="csocketfile"></a>CSocketFile::CSocketFile  
+##  <a name="csocketfile"></a>  CSocketFile::CSocketFile  
  构造 `CSocketFile` 对象。  
   
 ```  

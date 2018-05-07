@@ -1,29 +1,24 @@
 ---
-title: "部署应用程序使用的可再发行组件包 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 部署应用程序使用的可再发行组件包 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3b048f896f0cfd532cb3000617756af2dca92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37bba00efdf0368973fa4ffbac1cbc6bb6298ce1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序
 此步骤说明文章描述如何使用 Visual c + + 可再发行组件包部署 Visual c + + 应用程序。  

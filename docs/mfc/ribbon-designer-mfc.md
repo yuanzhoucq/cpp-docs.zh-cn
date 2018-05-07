@@ -1,13 +1,10 @@
 ---
-title: "功能区设计器 (MFC) |Microsoft 文档"
-ms.custom: 
+title: 功能区设计器 (MFC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.ribbon.F1
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ribbon-designer-mfc"></a>功能区设计器 (MFC)
 功能区设计器可用于在 MFC 应用程序中创建和自定义功能区。 功能区是一种将命令整理成逻辑组的用户界面 (UI) 元素。 这些组显示在窗口顶部条带中的独立选项卡上。 功能区取代了菜单栏和工具栏。 功能区可以显著提高应用程序的可用性。 有关详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)。 下图展示了一个功能区。  

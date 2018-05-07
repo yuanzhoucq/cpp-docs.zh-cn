@@ -1,24 +1,19 @@
 ---
-title: "基本类型 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: 基本类型 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-types-ccx"></a>基本类型 (C++/CX)
 除了标准 c + + 内置类型，C + + /cli CX 支持由 Windows 运行时体系结构的基本 Windows 运行时类型映射到标准 c + + 类型提供 typedef 定义的类型系统... C + + /cli CX 实现布尔值、 字符和数值基本类型。 这些 typedef 在永远不需要显式指定的 `default` 命名空间中进行定义。 此外，C + + /cli CX 提供了包装和具体实现某些 Windows 运行时类型和接口。  
@@ -29,7 +24,7 @@ ms.lasthandoff: 02/14/2018
 |命名空间|C + + /cli CX 名称|定义|标准 C++ 名称|值的范围|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |平台|Boolean|8 位布尔值。|bool|`true` （非零）和 `false` （零）|  
-|default|char16|表示 Unicode (UTF-16) 码位的 16 位非数字值。|wchar_t<br /><br /> 或<br /><br /> L'c'|（由 Unicode 标准指定）|  
+|default|char16|表示 Unicode (UTF-16) 码位的 16 位非数字值。|wchar_t<br /><br /> -或-<br /><br /> L'c'|（由 Unicode 标准指定）|  
   
 ## <a name="numeric-types"></a>数值类型  
  下表列出了内置数值类型。 数值类型在 `default` 命名空间中进行声明，是用于对应 C++ 内置类型的 typedef。 在 Windows 运行时中支持不是所有 c + + 内置类型 (例如 long)。 有关一致性和清楚起见，我们建议你使用的 C + + /cli CX 名称。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="windows-runtime-types"></a>Windows 运行时类型  
  下表列出了一些其他类型定义的 Windows 运行时体系结构和内置于 C + + /cli CX。 Object 和 String 是引用类型。 其他类型是值类型。 所有这些类型都在 `Platform` 命名空间中进行声明。 有关完整列表，请参见 [Platform namespace](../cppcx/platform-namespace-c-cx.md)。  
   
-|name|定义|  
+|名称|定义|  
 |----------|----------------|  
 |对象|表示任何 Windows 运行时类型。|  
 |String|一系列表示文本的字符。|  

@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H) |Microsoft 文档"
-ms.custom: 
+title: CMyProviderCommand (MyProviderRS.H) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0852b619dc89df4ab9a04f2e7dcbac5d308fce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand`类是提供程序命令对象的实现。 它提供的实现`IAccessor`， `ICommandText`，和**ICommandProperties**接口。 `IAccessor`接口是在行集中的一个相同。 命令对象使用访问器来指定参数的绑定。 行集对象使用它们来指定输出列的绑定。 `ICommandText`接口是一种以文本上指定的命令。 此示例使用`ICommandText`接口更高版本时它将添加自定义代码; 它还将重写`ICommand::Execute`方法。 **ICommandProperties**接口处理所有的命令和行集对象的属性。  

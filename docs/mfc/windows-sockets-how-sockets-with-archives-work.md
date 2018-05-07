@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 使用存档的套接字如何 |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 使用存档的套接字如何 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 套接字：使用存档的套接字如何工作
 此文章介绍了如何[CSocket](../mfc/reference/csocket-class.md)对象， [CSocketFile](../mfc/reference/csocketfile-class.md)对象，和一个[CArchive](../mfc/reference/carchive-class.md)对象结合来简化发送和接收数据通过 Windows套接字。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  A`CArchive`对象管理的缓冲区。 存储 （发送） 存档的缓冲区已满时，一个关联`CFile`对象写出的缓冲区的内容。 刷新的缓冲区的存档的套接字附加相当于发送消息。 当加载 （接收） 存档的缓冲区已满，`CFile`对象停止读取，直到缓冲区重新变为可用。  
   
- 类`CSocketFile`派生自`CFile`，但它不支持[CFile](../mfc/reference/cfile-class.md)成员函数，如定位函数 (`Seek`， `GetLength`， `SetLength`，依次类推)，锁定函数 （`LockRange`， `UnlockRange`)，或`GetPosition`函数。 所有[CSocketFile](../mfc/reference/csocketfile-class.md)对象必须执行操作是写入或读取的字节到或从关联的序列`CSocket`对象。 由于不涉及到一个文件，因此操作，如`Seek`和`GetPosition`而言毫无意义。 `CSocketFile`派生自`CFile`，因此它通常将继承所有这些成员函数。 若要阻止此操作，请使用不受支持`CFile`中重写成员函数是`CSocketFile`引发[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)。  
+ 类`CSocketFile`派生自`CFile`，但它不支持[CFile](../mfc/reference/cfile-class.md)成员函数，如定位函数 (`Seek`， `GetLength`， `SetLength`，依次类推)，锁定函数 （`LockRange`， `UnlockRange`)，或`GetPosition`函数。 所有[CSocketFile](../mfc/reference/csocketfile-class.md)对象必须执行操作是写入或读取的字节到或从关联的序列`CSocket`对象。 由于不涉及到一个文件，因此操作，如`Seek`和`GetPosition`而言毫无意义。 `CSocketFile` 派生自`CFile`，因此它通常将继承所有这些成员函数。 若要阻止此操作，请使用不受支持`CFile`中重写成员函数是`CSocketFile`引发[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)。  
   
  `CSocketFile`对象调用成员函数的其`CSocket`对象发送或接收数据。  
   

@@ -1,12 +1,9 @@
 ---
-title: "hash_set::max_load_factor (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: hash_set::max_load_factor (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::max_load_factor
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - max_load_factor member [STL/CLR]
 ms.assetid: 9aef46b1-e7c2-488c-a219-77c1c0de6dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6532e22b058b3ec002689790fe546ad574b4eb0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97863b0701a9c2a8033c780c47483d8f753a919d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetmaxloadfactor-stlclr"></a>hash_set::max_load_factor (STL/CLR)
 获取或设置每个存储桶的最多元素数。  
@@ -108,7 +103,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  

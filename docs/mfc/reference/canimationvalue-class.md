@@ -1,12 +1,9 @@
 ---
-title: "CAnimationValue 类 |Microsoft 文档"
-ms.custom: 
+title: CAnimationValue 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationValue
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 类
 实现有一个值的动画对象功能。  
@@ -83,7 +78,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|封装的动画变量表示动画值。|  
   
@@ -97,10 +92,10 @@ class CAnimationValue : public CAnimationBaseObject;
   
  `CAnimationValue`
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
  添加转换应用于一个值。  
   
 ```  
@@ -114,7 +109,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>备注  
  调用此函数可将转换添加到的转换应用于动画变量的内部列表。 添加转换时，它们都不会立即应用和存储在内部列表。 转换将应用 （添加到情节提要特定值） 时调用 CAnimationController::AnimateGroup。  
   
-##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue  
  构造 CAnimationValue 对象。  
   
 ```  
@@ -144,7 +139,7 @@ CAnimationValue(
 ### <a name="remarks"></a>备注  
  构造 CAnimationValue 对象使用默认属性： 默认值，组 ID 和对象 ID 设置为 0。  
   
-##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
  将封装的动画变量放入列表。  
   
 ```  
@@ -157,7 +152,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  当函数返回时，它包含指向 CAnimationVariable 表示动画的值的指针。  
   
-##  <a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>  CAnimationValue::GetValue  
  检索的当前值。  
   
 ```  
@@ -178,7 +173,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>备注  
  调用此函数可检索的当前值。 此实现中调用封装的 COM 对象，并且如果调用失败，此方法返回之前已设置在构造函数或使用 SetDefaultValue 的默认值。  
   
-##  <a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>  CAnimationValue::GetVariable  
  提供给封装的动画变量的访问。  
   
 ```  
@@ -191,14 +186,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>备注  
  使用此方法访问封装的动画变量。 从 CAnimationVariable 你获取对基础 IUIAnimationVariable 对象，其指针可以为 NULL，如果尚未创建动画变量的访问。  
   
-##  <a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>  CAnimationValue::m_value  
  封装的动画变量表示动画值。  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="operator_double"></a>CAnimationValue::operator 双  
+##  <a name="operator_double"></a>  CAnimationValue::operator 双  
  提供 CAnimationValue 和双精度型之间的转换。  
   
 ```  
@@ -211,7 +206,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>备注  
  提供 CAnimationValue 和双精度型之间的转换。 此方法内部调用 GetValue 并不会检查有错误。 如果 GetValue 失败，返回的值将包含在构造函数或使用 SetDefaultValue 以前设置的默认值。  
   
-##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
  提供 CAnimationValue INT32 之间转换。  
   
 ```  
@@ -224,7 +219,7 @@ operator INT32();
 ### <a name="remarks"></a>备注  
  提供 CAnimationValue INT32 之间转换。 此方法内部调用 GetValue 并不会检查有错误。 如果 GetValue 失败，返回的值将包含在构造函数或使用 SetDefaultValue 以前设置的默认值。  
   
-##  <a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>  CAnimationValue::operator =  
  将一个双精度值分配给 CAnimationValue。  
   
 ```  
@@ -242,7 +237,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>备注  
  将一个双精度值分配给 CAnimationValue。 此值设置为封装的动画变量的默认值。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 为此动画对象，你需要重新启用这些事件。  
   
-##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
  设置默认值。  
   
 ```  

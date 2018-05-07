@@ -1,13 +1,10 @@
 ---
-title: "承载 Windows 窗体用户控件作为 MFC 视图 |Microsoft 文档"
-ms.custom: 
+title: 承载 Windows 窗体用户控件作为 MFC 视图 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf9e54b3e2808a232bc13052c885a341cb51297f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>以 MFC 视图的形式承载 Windows 窗体用户控件
 MFC 使用 CWinFormsView 类承载 Windows 窗体用户控件在 MFC 视图。 MFC Windows 窗体视图是 ActiveX 控件。 用户控件的本机视图子级作为托管且占用整个工作区的本机视图。  

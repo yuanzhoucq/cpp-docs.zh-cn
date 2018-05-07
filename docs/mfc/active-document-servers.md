@@ -1,13 +1,10 @@
 ---
-title: "活动文档服务器 |Microsoft 文档"
-ms.custom: 
+title: 活动文档服务器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc207541bda3084db6bc8ab3896f46761587169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-servers"></a>活动文档服务器
 活动文档服务器（如 Word、Excel 或 PowerPoint）承载其他应用程序类型的文档（称为“活动文档”）。 与 OLE 嵌入对象不同（其将仅显示在另一文档的页面中），活动文档提供其创建者 - 服务器应用程序的完整接口和完整本机功能。 用户可借助喜欢的应用程序的全力创建文档（如果他们启用了活动文档），还可将生成的项目视为单一项目。  

@@ -1,13 +1,10 @@
 ---
-title: "使用项目属性 |Microsoft 文档"
-ms.custom: 
+title: 使用项目属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>使用项目属性
-生成项目所需的所有信息作为在 IDE 中的都公开*属性*。 此信息包括应用程序名称、 扩展名 （如 DLL、 LIB、 EXE）、 编译器选项、 链接器选项、 调试器设置、 自定义生成步骤和许多其他操作。 通常情况下，使用*属性页*(**项目 &#124;属性**) 查看和修改这些属性。 
+生成项目所需的所有信息作为在 IDE 中的都公开*属性*。 此信息包括应用程序名称、 扩展名 （如 DLL、 LIB、 EXE）、 编译器选项、 链接器选项、 调试器设置、 自定义生成步骤和许多其他操作。 通常情况下，使用*属性页*(**项目&#124;属性**) 查看和修改这些属性。 
   
  创建项目时，系统会为分配各种属性的值。 默认值会有所不同具体取决于类型在应用程序向导中选择的项目和什么选项。 例如，ATL 项目具有与 MIDL 文件相关的属性，但这些都不存在一个基本控制台应用程序中。 默认属性在属性页常规窗格中所示：  
   
- ![Visual C# 43; &#43;项目默认值](../ide/media/visual-c---project-defaults.png "Visual c + + 项目默认值")  
+ ![Visual C&#43; &#43;项目默认值](../ide/media/visual-c---project-defaults.png "Visual c + + 项目默认值")  
   
- 某些属性，如应用程序名称、 适用于所有生成变体，而不考虑目标平台或者它是否是 debug 或 release 生成。 但是，大多数属性都是依赖于配置的。 这是因为编译器必须知道程序将在运行哪些特定平台和哪些特定编译器选项，可以使用，以便生成正确的代码。 因此，当设置属性时，它都重要要注意哪些配置和平台的新值应该应用到。 它仅应用于调试 Win32 生成，或它还应将应用到调试 ARM 和 x64 调试？ 例如，**优化**属性，默认情况下，设置为**最大化速度 (/ O2)**在版本配置中，但在调试配置中禁用。  
+ 某些属性，如应用程序名称、 适用于所有生成变体，而不考虑目标平台或者它是否是 debug 或 release 生成。 但是，大多数属性都是依赖于配置的。 这是因为编译器必须知道程序将在运行哪些特定平台和哪些特定编译器选项，可以使用，以便生成正确的代码。 因此，当设置属性时，它都重要要注意哪些配置和平台的新值应该应用到。 它仅应用于调试 Win32 生成，或它还应将应用到调试 ARM 和 x64 调试？ 例如，**优化**属性，默认情况下，设置为**最大化速度 (/ O2)** 在版本配置中，但在调试配置中禁用。  
   
  属性页，以便您可以始终可以看到，如果需要修改，哪些配置和平台的属性值应适用于设计。 下图显示顶部的列表框中包含的配置和平台信息的属性页面。 当**优化**此处设置属性，它将仅适用于调试 Win32 生成这种情况是活动的配置，如的红色箭头所示。  
   
- ![Visual C# 43; &#43;显示活动配置的属性页](../ide/media/visual-c---property-pages-showing-active-configuration.png "Visual c + + 属性页显示活动配置")  
+ ![Visual C&#43; &#43;属性页显示活动配置](../ide/media/visual-c---property-pages-showing-active-configuration.png "Visual c + + 属性页显示活动配置")  
   
  下图显示相同的项目属性页中，但配置已更改到发行版。 请注意优化属性的不同值。 另请注意，活动配置仍是调试。 你可以在此处; 设置任何配置的属性它不必使处于活动状态。  
   
- ![Visual C# 43; &#43;显示的属性页释放配置](../ide/media/visual-c---property-pages-showing-release-config.png "Visual c + + 属性页显示发行配置")  
+ ![Visual C&#43; &#43;属性页显示版本配置](../ide/media/visual-c---property-pages-showing-release-config.png "Visual c + + 属性页显示发行配置")  
   
  项目系统本身基于 MSBuild，定义文件格式和用于生成项目的任何类型的规则。 MSBuild 管理很多适用于多个配置和平台，构建的复杂性，但你需要一点了解它的工作原理。 这一点尤其重要，如果你想要定义自定义配置或创建可重用的属性，它们可以共享并导入到多个项目集。  
   
  直接在项目文件 (*.vcxproj) 或其他项目文件导入和其提供默认值的.xml 或.props 文件中存储项目属性。 如前面所示，则可能会在同一配置相同的属性分配了不同的值在不同的文件。 生成项目时，MSBuild 引擎将计算的项目文件和明确定义的顺序 （如下所述） 中的所有导入的文件。 每个文件将在计算，在该文件中定义任何属性值将覆盖现有值。 未指定任何值将继承自已评估了更早版本的文件。 因此，当你设置属性页的属性，也很重要要注意，你设置的位置。 如果你将属性设置为"X"在.props 文件中，但该属性设置为"Y"在项目文件中，该项目将生成属性设置为"Y"。 如果相同的属性设置到"Z"上的项目项，如.cpp 文件，则 MSBuild 引擎将使用"Z"值。 有关详细信息，请参阅[属性继承](#bkmkPropertyInheritance)本文后续部分中。  
   
 ## <a name="build-configurations"></a>生成配置  
- 配置是只需名称的属性的任意组。 Visual Studio 提供调试和发布配置和每个设置为调试生成或发布生成适当的各种属性。 你可以使用**Configuration Manager**将自定义配置定义为一组特定风格的属性的生成的简便方法。 属性管理器用于高级工作具有属性，但我们因为它有助于直观显示的属性配置引入此处。 访问从**视图 &#124; 属性管理器**或**视图 &#124;其他 Windows &#124;属性管理器**具体取决于你的设置。 它在项目中具有配置/平台对每个节点。 在其中每个节点是节点设置为该配置某些特定属性的属性表 （.props 文件）。  
+ 配置是只需名称的属性的任意组。 Visual Studio 提供调试和发布配置和每个设置为调试生成或发布生成适当的各种属性。 你可以使用**Configuration Manager**将自定义配置定义为一组特定风格的属性的生成的简便方法。 属性管理器用于高级工作具有属性，但我们因为它有助于直观显示的属性配置引入此处。 访问从**视图&#124;属性管理器**或**视图&#124;其他窗口&#124;属性管理器**具体取决于你的设置。 它在项目中具有配置/平台对每个节点。 在其中每个节点是节点设置为该配置某些特定属性的属性表 （.props 文件）。  
   
  ![属性管理器](../ide/media/property-manager.png "属性管理器")  
   
@@ -67,9 +62,9 @@ ms.lasthandoff: 12/21/2017
  **任意 CPU**目标平台值可能会在**Configuration Manager**本机 c + + 项目; 没有影响它是适用于 C + + /cli CLI 和其他.NET 项目类型。 有关详细信息，请参阅 [/CLRIMAGETYPE（指定 CLR 映像的类型）](../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
   
 ## <a name="property-pages"></a>属性页  
- 如上文所述，Visual c + + 项目系统基于[MSBuild](/visualstudio/msbuild/msbuild-properties)和这些值存储在 XML 项目文件中，默认.props 和.targets 文件。 对于 Visual Studio 2015 中，这些文件位于**\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**。 对于 Visual Studio 2017，这些文件位于 **\\Program Files (x86)\\Microsoft Visual Studio\\2017年\\_版本_\\Common7\\IDE\\VC\\VCTargets**，其中_版本_是安装的 Visual Studio 版本。 属性也存储在可添加到自己的项目的任何自定义的.props 文件中。 我们强烈建议你未手动编辑这些文件并改为使用在 IDE 中的属性页来修改所有属性，尤其是那些参与继承，除非你有很好的理解的 MSBuild。  
+ 如上文所述，Visual c + + 项目系统基于[MSBuild](/visualstudio/msbuild/msbuild-properties)和这些值存储在 XML 项目文件中，默认.props 和.targets 文件。 对于 Visual Studio 2015 中，这些文件位于 **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**。 对于 Visual Studio 2017，这些文件位于 **\\Program Files (x86)\\Microsoft Visual Studio\\2017年\\_版本_\\Common7\\IDE\\VC\\VCTargets**，其中_版本_是安装的 Visual Studio 版本。 属性也存储在可添加到自己的项目的任何自定义的.props 文件中。 我们强烈建议你未手动编辑这些文件并改为使用在 IDE 中的属性页来修改所有属性，尤其是那些参与继承，除非你有很好的理解的 MSBuild。  
   
- 下图显示了 Visual C++ 项目的属性页。 在左窗格中， **VC + + 目录***规则*选择，而右窗格中列出了与该规则的属性。 `$(...)`值遗憾的是称为*宏*。 这些是*不*C/c + + 宏，但只需编译时常量。 中讨论了宏[属性页宏](#bkmkPropertiesVersusMacros)本文后面的部分。)  
+ 下图显示了 Visual C++ 项目的属性页。 在左窗格中，**VC + + 目录 * * * 规则*选择，而右窗格中列出了与该规则的属性。 `$(...)`值遗憾的是称为*宏*。 这些是*不*C/c + + 宏，但只需编译时常量。 中讨论了宏[属性页宏](#bkmkPropertiesVersusMacros)本文后面的部分。)  
   
  ![项目属性页](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-set-a-property-for-a-project"></a>设置项目属性  
   
-1.  大多数情况下，你可以在无需创建自定义属性表在项目级别中设置属性。 在主菜单上，选择**项目 &#124;属性**，或右键单击项目节点中**解决方案资源管理器**选择**属性**。  
+1.  大多数情况下，你可以在无需创建自定义属性表在项目级别中设置属性。 在主菜单上，选择**项目&#124;属性**，或右键单击项目节点中**解决方案资源管理器**选择**属性**。  
   
 2.  使用**配置**和**平台**列表顶部的对话框中指定应该应用所做的更改哪些属性组的框。 在许多情况下**所有平台**和**所有配置**是正确的选择。 若要设置对于只为某些配置中，多选的属性在**属性管理器**，然后打开快捷菜单并选择**属性**。  
   
@@ -109,7 +104,7 @@ ms.lasthandoff: 12/21/2017
 -   [“XML 数据生成器工具”属性页](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>快速浏览和搜索所有属性  
- **所有选项**属性页 (下**配置属性 &#124;C/C++**中的节点**属性页**对话框) 提供的快速方法来浏览和搜索当前上下文中可用的属性。 它具有特殊的搜索框和简单的语法，能够帮助你筛选结果：  
+ **所有选项**属性页 (下**配置属性&#124;C/c + +** 中的节点**属性页**对话框) 可实现快速浏览和搜索当前上下文中可用的属性。 它具有特殊的搜索框和简单的语法，能够帮助你筛选结果：  
   
  无前缀：  
  仅在属性名称中搜索（不区分大小写的子字符串）。  
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/21/2017
  v:  
  仅在值中搜索（不区分大小写的子字符串）。  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>属性页宏  
+##  <a name="bkmkPropertiesVersusMacros"></a> 属性页宏  
  A*宏*是的编译时常量，可以引用一个值，由 Visual Studio 或 MSBuild 系统定义或用户定义的值。 通过使用宏（而不是硬编码值，例如目录路径），你可更轻松地在计算机之间以及 Visual Studio 的版本之间共享属性设置，并且可更好地确保项目设置正确地参与属性继承。 可以使用属性编辑器以查看所有可用宏的值。  
   
 ### <a name="predefined-macros"></a>预定义宏  
@@ -131,7 +126,7 @@ ms.lasthandoff: 12/21/2017
  具有语法 `%(name)`。 对于文件来说，仅适用于该文件的项宏，例如可以使用 `%(AdditionalIncludeDirectories)` 来指定仅适用于特定文件的包含目录。 这种项宏与 MSBuild 中的 `ItemGroup` 元数据相对应。 在项目配置中使用时，项宏适用于特定类型的所有文件。 例如，C/c + +**预处理器定义**配置属性可以获取`%(PreprocessorDefinitions)`适用于项目中的所有.cpp 文件的项宏。 这种项宏与 MSBuild 中的 `ItemDefinitionGroup` 元数据相对应。 有关详细信息，请参阅[项定义](/visualstudio/msbuild/item-definitions)。  
   
 ### <a name="user-defined-macros"></a>用户定义的宏  
- 你可以创建*用户定义的宏*将用作在项目生成中的变量。 例如，可以创建一个用户定义的宏来提供自定义生成步骤或自定义生成工具的值。 用户定义的宏是名称/值对。 在项目文件中，使用**$(***名称***)**表示法访问该值。  
+ 你可以创建*用户定义的宏*将用作在项目生成中的变量。 例如，可以创建一个用户定义的宏来提供自定义生成步骤或自定义生成工具的值。 用户定义的宏是名称/值对。 在项目文件中，使用 **$(***名称***)** 表示法访问该值。  
   
  用户定义的宏存储在属性表中。 如果你的项目尚未包含属性表，则可以创建一个按照下面的步骤[创建可重用的属性配置](#bkmkPropertySheets)。  
   
@@ -146,13 +141,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="property-editor"></a>属性编辑器  
  你可以使用属性编辑器来修改特定字符串属性，选择宏作为值。 若要访问“属性编辑器”，在属性页中选择属性，然后选择右侧的向下箭头按钮。 如果下拉列表包含**\<编辑 >**，那么你可以选择它以显示该属性的属性编辑器。  
   
- ![属性 （&#95;编辑器 &#95; 下拉列表中](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![属性&#95;编辑器&#95;下拉列表中](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  在属性编辑器中，你可以选择**宏**按钮以查看可用宏及其当前值。 下图显示属性编辑器**附加包含目录**属性后的**宏**按钮已被选。 当**从父级或项目默认设置继承**选中复选框并添加一个新值，则会附加到当前被继承的任何值。 如果清除复选框，则新值会替换继承值。 在大多数情况下，选中复选框。  
   
- ![属性编辑器中，Visual C# 43; &#43;] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![属性编辑器中，Visual C&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>创建可重用的属性配置  
+##  <a name="bkmkPropertySheets"></a> 创建可重用的属性配置  
  虽然可以根据每个用户和每台计算机设置“全局”属性，但我们不建议这样做。 相反，我们建议你使用**属性管理器**创建*属性表*来存储每一类你想要能够重新使用或与其他人共享的项目的设置。 属性表还使无意中更改其他项目类型的属性设置的可能性变小。 更详细地讨论属性表[创建可重用的属性配置](#bkmkPropertySheets)。  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  在**属性管理器**打开新的属性表，然后设置你想要包括的属性。  
   
-##  <a name="bkmkPropertyInheritance"></a>属性继承  
+##  <a name="bkmkPropertyInheritance"></a> 属性继承  
  项目属性已分层。 每层继承前一层的值，但是继承的值可以通过设置属性显式重写。 这是基本的继承树：  
   
 1.  来自 MSBuild CPP 工具集的默认设置（..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props，由 .vcxproj 文件导入。）  
@@ -228,7 +223,7 @@ ms.lasthandoff: 12/21/2017
  有关详细信息，请参阅 [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)。  
   
 ## <a name="adding-an-include-directory-to-the-set-of-default-directories"></a>添加包含目录到默认目录集  
- 在将包含目录添加到项目中时，请勿重写所有默认目录，这点非常重要。 添加目录的正确方法是追加新路径，例如"C:\MyNewIncludeDir\"，然后到追加**$ （includepath)**宏为属性值。  
+ 在将包含目录添加到项目中时，请勿重写所有默认目录，这点非常重要。 添加目录的正确方法是追加新路径，例如"C:\MyNewIncludeDir\"，然后到追加 **$ （includepath)** 宏为属性值。  
   
 ## <a name="setting-environment-variables-for-a-build"></a>设置生成的环境变量  
  Visual C++ 编译器 (cl.exe) 可识别某些环境变量，尤其是 LIB、LIBPATH、PATH 和 INCLUDE。 你使用 IDE 中设置的属性进行生成时[VC + + 目录属性页](../ide/vcpp-directories-property-page.md)属性页用于设置这些环境变量。 如果已设置了 LIB、LIBPATH 和 INCLUDE 值（例如通过开发人员命令提示设置），则这些值将被相应的 MSBuild 属性的值替换。 然后生成在 PATH 前预置 VC++ 目录可执行目录属性的值。 你可以设置用户定义的环境变量创建用户定义的宏然后选中框**将此宏设置为生成环境中的环境变量**。  

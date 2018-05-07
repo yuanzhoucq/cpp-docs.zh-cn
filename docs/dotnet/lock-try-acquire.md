@@ -2,11 +2,8 @@
 title: lock::try_acquire |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - try_acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 获取对等待指定的时间量，并返回的对象的锁`bool`报告成功的收购而不是引发异常。  
@@ -51,7 +46,7 @@ bool try_acquire(
  超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
   
 ## <a name="return-value"></a>返回值  
- `true`如果已获取锁，`false`否则为。  
+ `true` 如果已获取锁，`false`否则为。  
   
 ## <a name="remarks"></a>备注  
  如果已获取锁，则此函数没有任何影响。  
@@ -145,7 +140,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\lock.h >  
   
  **Namespace** msclr  

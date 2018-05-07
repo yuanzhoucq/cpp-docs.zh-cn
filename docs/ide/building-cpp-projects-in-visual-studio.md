@@ -1,13 +1,10 @@
 ---
-title: "生成 Visual Studio 中的 c + + 项目 |Microsoft 文档"
-ms.custom: 
+title: 生成 Visual Studio 中的 c + + 项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 074b43619d307d4d6ffeec1a057c9c27a4f9d05f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中生成 C++ 项目
 在 Visual Studio 集成开发环境 (IDE) 中，可通过多种方式生成整个解决方案或只在其中生成一个项目。 还可以修改生成设置并指定自定义生成步骤，以使你的部署过程更加高效。  

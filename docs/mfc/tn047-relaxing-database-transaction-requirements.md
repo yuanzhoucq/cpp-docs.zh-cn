@@ -1,13 +1,10 @@
 ---
-title: "TN047： 放宽数据库事务需求 |Microsoft 文档"
-ms.custom: 
+title: TN047： 放宽数据库事务需求 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - TN047
 ms.assetid: f93c51cf-a8c0-43d0-aa47-7bcb8333d693
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92631d96e8782a80275695ef4bf2623dc1bff833
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be5870efacb61d5c0bb74f85427c41f787d2edd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047：放宽数据库事务需求
 讨论 MFC ODBC 数据库类的事务要求，此技术说明现已过时。 在 MFC 4.2 版之前数据库类所需的记录集后保留游标**CommitTrans**或**回滚**操作。 ODBC 驱动程序和 DBMS 不支持此级别的光标保留，如果数据库类未不会启用交易。  

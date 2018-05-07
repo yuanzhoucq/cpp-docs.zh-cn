@@ -1,10 +1,10 @@
 ---
-title: "/Zc: rvaluecast （强制实施类型转换规则） |Microsoft 文档"
-ms.custom: 
+title: '/Zc: rvaluecast （强制实施类型转换规则） |Microsoft 文档'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e2223176082a2252dd410af4012ace31c14267
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: d730563d01a3b59d4f2ac6bbadc980ca51112203
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast（强制实施类型转换规则）
 
-当**/zc: rvaluecast**指定选项，编译器会正确标识根据 C + + 11 标准转换运算的结果为右值引用类型。 未指定该选项时，编译器行为与 Visual Studio 2012 中的行为相同。
+当 **/zc: rvaluecast**指定选项，编译器会正确标识根据 C + + 11 标准转换运算的结果为右值引用类型。 未指定该选项时，编译器行为与 Visual Studio 2012 中的行为相同。
 
 ## <a name="syntax"></a>语法
 
@@ -39,11 +38,11 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="remarks"></a>备注
 
-如果**/zc: rvaluecast**指定，则编译器遵循 C + + 11 标准的 5.4 节，并将仅强制转换表达式，导致非引用类型的转换导致对非函数类型的右值引用的表达式作为右值类型。 默认情况下，或者如果**/Zc:rvalueCast-**指定，编译器不符合标准，并将所有导致右值引用视为右值的强制转换表达式。 有关一致性以及消除使用转换中的错误，我们建议你使用**/zc: rvaluecast**。
+如果 **/zc: rvaluecast**指定，则编译器遵循 C + + 11 标准的 5.4 节，并将仅强制转换表达式，导致非引用类型的转换导致对非函数类型的右值引用的表达式作为右值类型。 默认情况下，或者如果 **/Zc:rvalueCast-** 指定，编译器不符合标准，并将所有导致右值引用视为右值的强制转换表达式。 有关一致性以及消除使用转换中的错误，我们建议你使用 **/zc: rvaluecast**。
 
-默认情况下， **/zc: rvaluecast**处于关闭状态 (**/Zc:rvalueCast-**)。 [/ 宽松-](permissive-standards-conformance.md)编译器选项隐式设置此选项，但它可以通过重写**/Zc:rvalueCast-**。
+默认情况下， **/zc: rvaluecast**处于关闭状态 (**/Zc:rvalueCast-**)。 [/ 宽松-](permissive-standards-conformance.md)编译器选项隐式设置此选项，但它可以通过重写 **/Zc:rvalueCast-**。
 
-使用**/zc: rvaluecast**如果强制转换表达式作为自变量传递给采用右值引用类型的函数。 默认行为将导致编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)编译器错误地确定强制转换表达式的类型。 此示例中正确显示的编译器错误代码时**/zc: rvaluecast**未指定：
+使用 **/zc: rvaluecast**如果强制转换表达式作为自变量传递给采用右值引用类型的函数。 默认行为将导致编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)编译器错误地确定强制转换表达式的类型。 此示例中正确显示的编译器错误代码时 **/zc: rvaluecast**未指定：
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -81,7 +80,7 @@ struct Test1 {
 };
 ```
 
-在适当情况下，默认编译器行为可能不会报告错误 C2102。 在此示例中，编译器不报告错误时，采用了由标识转换创建的右值的地址如果**/zc: rvaluecast**未指定：
+在适当情况下，默认编译器行为可能不会报告错误 C2102。 在此示例中，编译器不报告错误时，采用了由标识转换创建的右值的地址如果 **/zc: rvaluecast**未指定：
 
 ```cpp
 int main() {
@@ -100,7 +99,7 @@ int main() {
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含**/zc: rvaluecast** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/zc: rvaluecast** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

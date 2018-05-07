@@ -1,12 +1,9 @@
 ---
-title: "转换 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 转换 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::transform
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - transform function [STL/CLR]
 ms.assetid: 08940969-6d10-40e4-a35b-68dd801b3949
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f5120b2408649893e0b796bbdb256ff0187741ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2301cfbdcd60d60541c0240ced59d44a844b502f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transform-stlclr"></a>transform (STL/CLR)
 将指定的函数对象应用于源范围中的每个元素或两个源范围中的元素对，并将函数对象的返回值复制到目标范围。  
@@ -45,7 +40,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`transform`。 有关详细信息，请参阅[转换](../standard-library/algorithm-functions.md#transform)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  

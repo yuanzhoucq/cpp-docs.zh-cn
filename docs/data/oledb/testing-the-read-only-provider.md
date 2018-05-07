@@ -1,12 +1,9 @@
 ---
-title: "测试只读提供程序 |Microsoft 文档"
-ms.custom: 
+title: 测试只读提供程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 49f86150afe9116909a137e97a0e04d5a7d54bac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 703d33f44fae534b206050e85086edb1ccc816f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-the-read-only-provider"></a>测试只读提供程序
 若要测试提供程序，你需要使用者。 如果使用者可以与相匹配的提供程序，它可以帮助。 OLE DB 使用者模板不 OLE DB 的精简包装，并与提供程序的 COM 对象匹配。 因为源附带的使用者模板，可以很轻松地调试具有它们的提供程序。 使用者模板也是开发使用者应用程序的非常小且快速方法。  

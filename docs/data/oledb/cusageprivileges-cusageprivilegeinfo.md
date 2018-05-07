@@ -1,12 +1,9 @@
 ---
-title: "CUsagePrivileges，CUsagePrivilegeInfo |Microsoft 文档"
-ms.custom: 
+title: CUsagePrivileges，CUsagePrivilegeInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szObjectCatalog
@@ -47,18 +44,16 @@ helpviewer_keywords:
 - m_bIsGrantable
 - m_szObjectName
 ms.assetid: 09460e7f-3947-4837-ad1e-407b94acedb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b5db871447d6de6554d7f7e6a555c195edc97498
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2dd118f4f841ad2c443ca2ed8dcc9d61afd6eb18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cusageprivileges-cusageprivilegeinfo"></a>CUsagePrivileges，CUsagePrivilegeInfo
 调用 typedef 类**CUsagePrivileges**来实现其参数类**CUsagePrivilegeInfo**。  
@@ -81,7 +76,7 @@ ms.lasthandoff: 02/23/2018
 |m_szPrivilegeType|PRIVILEGE_TYPE|  
 |m_bIsGrantable|IS_GRANTABLE|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

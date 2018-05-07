@@ -1,25 +1,23 @@
 ---
-title: "按字母顺序列出的编译器选项 |Microsoft 文档"
-ms.custom: 
+title: 按字母顺序列出的编译器选项 |Microsoft 文档
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -30,9 +28,9 @@ ms.lasthandoff: 02/28/2018
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/AI](ai-specify-metadata-directories.md)|指定在解析传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令的文件引用时搜索的目录。|
-|[/analyze](analyze-code-analysis.md)|启用代码分析。|
+|[/ 分析](analyze-code-analysis.md)|启用代码分析。|
 |[/arch](arch-minimum-cpu-architecture.md)|为代码生成指定体系结构。|
-|[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
+|[await /](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在预处理期间保留注释。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
@@ -143,7 +141,7 @@ ms.lasthandoff: 02/28/2018
 |[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置要输出的警告级别。|
-|[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
+|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
 |[/we](compiler-option-warning-level.md)|将指定的警告视为错误。|

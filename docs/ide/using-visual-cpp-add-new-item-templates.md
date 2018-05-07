@@ -2,12 +2,9 @@
 title: 使用 Visual c + + 添加新项模板 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 的“添加新项”模板
 你可以轻松地添加通过使用 Visual c + + 项目所共有的项**添加新项**命令。 当你使用**添加新项**命令，`Add New Item`对话框中将显示的项模板，将相应的文件添加到你的项目列表。  
@@ -67,5 +62,5 @@ ms.lasthandoff: 04/10/2018
 |XML 架构文件 (.xsd)|创建用于定义 XML 文档的架构文件。|  
 |XSLT 文件 (.xslt)|创建用来转换 XML 文档的文件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)

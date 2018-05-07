@@ -1,12 +1,9 @@
 ---
-title: "CTablePrivileges，CTablePrivilegeInfo |Microsoft 文档"
-ms.custom: 
+title: CTablePrivileges，CTablePrivilegeInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szCatalog
@@ -40,18 +37,16 @@ helpviewer_keywords:
 - GRANTEE
 - m_bIsGrantable
 ms.assetid: ffcd6f73-022e-452a-8342-f2b9362d256b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 89ff02138ae85bebbc9b6f7a1a32ef449c8ad0a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3500bb764596410ca1540e69743e1e608936ac3c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctableprivileges-ctableprivilegeinfo"></a>CTablePrivileges，CTablePrivilegeInfo
 调用 typedef 类**CTablePrivileges**来实现其参数类**CTablePrivilegeInfo**。  
@@ -73,7 +68,7 @@ ms.lasthandoff: 02/23/2018
 |m_szType|PRIVILEGE_TYPE|  
 |m_bIsGrantable|IS_GRANTABLE|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,30 +1,25 @@
 ---
-title: "使用 for each 循环访问 c + + 标准库集合 |Microsoft 文档"
-ms.custom: 
+title: 使用 for each 循环访问 c + + 标准库集合 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1a4ce2de13380895f1f313559abeb87e4cd65db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 963c8a4213da756f03e95924940dc179bd305f60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>使用 for each 循环访问 c + + 标准库集合
 `for each`关键字可用于循环访问 c + + 标准库集合。  
@@ -120,7 +115,7 @@ retval: 60
   
  有关于此功能没有特定于平台的备注。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -128,7 +123,7 @@ retval: 60
   
  有关于此功能没有特定于平台的备注。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ## <a name="see-also"></a>请参阅  

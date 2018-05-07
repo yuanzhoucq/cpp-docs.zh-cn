@@ -1,30 +1,25 @@
 ---
-title: "如何： 组织生成的项目输出文件 |Microsoft 文档"
-ms.custom: 
+title: 如何： 组织生成的项目输出文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 648321c41fe02541eeb746bae24236c40dc5325e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>如何：组织生成的项目输出文件
 本主题描述用于组织项目输出文件的最佳做法。 生成时未正确设置项目输出文件，可以在发生错误。 本主题还概述了每种用于组织项目输出文件的替代方案的优缺点。  
@@ -37,17 +32,17 @@ ms.lasthandoff: 12/21/2017
   
      指定的文件可以是.dll、.exe、.netmodule 或.obj，只要它是在 MSIL 中。 可以采用任何语言生成引用的组件。 使用此选项，因为将从 MSIL 中提取元数据将具有 intellisense 的访问。 所涉及的文件必须位于项目; 路径否则为该项目将不进行编译和 Intellisense 将不可用。 确定文件是否位于路径中的简单办法是： 右击 #using 行，选择**打开的文档**命令。 如果找不到该文件，你将收到通知。  
   
-     如果您不想要放置文件的完整路径，则可以使用**/AI**编译器选项来编辑的搜索路径 #using 引用。 有关详细信息，请参阅 [/AI（指定元数据目录）](../build/reference/ai-specify-metadata-directories.md)。  
+     如果您不想要放置文件的完整路径，则可以使用 **/AI**编译器选项来编辑的搜索路径 #using 引用。 有关详细信息，请参阅 [/AI（指定元数据目录）](../build/reference/ai-specify-metadata-directories.md)。  
   
 #### <a name="to-reference-assemblies-with-fu"></a>引用程序集使用 /FU  
   
-1.  而不是引用程序集直接从代码文件中，按上文所述，你可以使用**/FU**编译器选项。 此方法的优点是，则不需要添加单独 #using 语句引用给定程序集的每个文件。  
+1.  而不是引用程序集直接从代码文件中，按上文所述，你可以使用 **/FU**编译器选项。 此方法的优点是，则不需要添加单独 #using 语句引用给定程序集的每个文件。  
   
-     若要设置此选项，打开**属性页**项目。 展开**配置属性**节点，然后展开**C/c + +**节点，然后选择**高级**。 将所需的程序集添加旁边**强制 #using**。 有关详细信息，请参阅 [/FU（命名强制 #using 文件）](../build/reference/fu-name-forced-hash-using-file.md)。  
+     若要设置此选项，打开**属性页**项目。 展开**配置属性**节点，然后展开**C/c + +** 节点，然后选择**高级**。 将所需的程序集添加旁边**强制 #using**。 有关详细信息，请参阅 [/FU（命名强制 #using 文件）](../build/reference/fu-name-forced-hash-using-file.md)。  
   
 #### <a name="to-reference-assemblies-with-add-new-reference"></a>若要添加新引用与引用程序集  
   
-1.  这是使用 CLR 程序集的最简单方法。 首先，请确保编译项目与**/clr**编译器选项。 然后，右键单击项目从**解决方案资源管理器**和选择**添加**，**引用**。 **属性页**对话框将出现。  
+1.  这是使用 CLR 程序集的最简单方法。 首先，请确保编译项目与 **/clr**编译器选项。 然后，右键单击项目从**解决方案资源管理器**和选择**添加**，**引用**。 **属性页**对话框将出现。  
   
 2.  从**属性页**对话框中，选择**添加新引用**。 将显示一个对话框，列出所有.NET、 COM 和当前项目中可用的其他程序集。 选择所需的程序集，然后单击**确定**。  
   

@@ -1,30 +1,25 @@
 ---
-title: "命令 Id |Microsoft 文档"
-ms.custom: 
+title: 命令 Id |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651c734fbd7098705801aefcaa490293a4d661d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0dc27e39f6e2753b7b468e39c283d58c3e585d6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-ids"></a>命令 ID
 命令完全由其单独的命令 ID (编码在**WM_COMMAND**消息)。 此 ID 分配给生成命令的用户界面对象。 通常情况下，分配给的用户界面对象的功能中名为 Id。  

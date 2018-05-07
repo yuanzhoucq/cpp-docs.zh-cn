@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用正则表达式进行搜索和替换 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用正则表达式进行搜索和替换 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Replace method
 - regular expressions [C++], search and replace
 ms.assetid: 12fe3e18-fe10-4b25-a221-19dc5eab3821
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feb64670accef1cdcc5eedf9aa2b081dc41615b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>如何：使用正则表达式进行搜索和替换 (C++/CLI)
 下面的代码示例演示如何正则表达式类<xref:System.Text.RegularExpressions.Regex>可用来执行搜索和替换。 这通过完成<xref:System.Text.RegularExpressions.Regex.Replace%2A>方法。 使用的版本将作为输入的两个字符串： 要修改的字符串和字符串 （如果有） 代替部分要插入到给定模式相匹配<xref:System.Text.RegularExpressions.Regex>对象。  

@@ -1,13 +1,10 @@
 ---
-title: "TN068： 使用 Microsoft Access 7 ODBC 驱动程序执行事务 |Microsoft 文档"
-ms.custom: 
+title: TN068： 使用 Microsoft Access 7 ODBC 驱动程序执行事务 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - transactions [MFC], calling BeginTrans
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db31d6301f2f0937d7bb5b83e77bf59936efdfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63cce7532d93b1bd44b6a44c526310bd894d5e07
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068：使用 Microsoft Access 7 ODBC 驱动程序执行事务
 > [!NOTE]
@@ -99,7 +94,7 @@ db.Close();
   
  另一种方法实现此方法是编写一个新函数**RequeryWithBeginTrans**，其可以调用以启动下一个事务之后你提交, 或回滚第一个。 若要编写此类函数，请执行以下步骤操作：  
   
-1.  将代码复制**CRecordset::Requery （)**到新函数。  
+1.  将代码复制**CRecordset::Requery （)** 到新函数。  
   
 2.  将以下行添加到在调用后立即**SQLFreeStmt**:  
   

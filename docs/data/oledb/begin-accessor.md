@@ -1,12 +1,9 @@
 ---
-title: BEGIN_ACCESSOR | Microsoft Docs
-ms.custom: 
+title: BEGIN_ACCESSOR |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BEGIN_ACCESSOR
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - BEGIN_ACCESSOR macro, syntax
 - BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac11ee19a626a945500bd9acb95cbe8ce0823d82
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ffb1d506a198586a5a625664f21c29954aada40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 标记访问器条目的开始。  
@@ -51,7 +46,7 @@ BEGIN_ACCESSOR(num, bAuto)
 ## <a name="example"></a>示例  
  请参阅[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

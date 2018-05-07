@@ -1,13 +1,10 @@
 ---
-title: "文档模板字符串，MFC 应用程序向导 |Microsoft 文档"
-ms.custom: 
+title: 文档模板字符串，MFC 应用程序向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.doctemp
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>MFC 应用程序向导的文档模板字符串
 在 MFC 应用程序向导的此页中，提供或优化以下选项来帮助进行文档管理和本地化。 文档模板字符串是可用于应用程序包括**文档/视图体系结构支持**中[应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md)。 它们不能对话框。 由于大多数文档模板字符串是可见且由应用程序的用户，它们已本地化到**资源语言**中所示**应用程序类型**向导页。  

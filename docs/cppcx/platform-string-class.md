@@ -1,11 +1,8 @@
 ---
-title: "Platform:: string 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: string 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 用于表示文本的 Unicode 字符的有序集合。 有关详细信息和示例，请参阅[字符串](../cppcx/strings-c-cx.md)。  
@@ -82,7 +77,7 @@ public ref class String sealed : Object,
 |[String::Data](#data)|返回指向当前字符串开头的指针。|  
 |[String::Dispose](#dispose)|释放资源。|  
 |[String::End](#end)|返回通过当前字符串末尾的指针。|  
-|[String::Equals](#equals)|指示指定对象是否等于当前对象。|  
+|[String:: equals](#equals)|指示指定对象是否等于当前对象。|  
 |[String::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
 |[String::IsEmpty](#isempty)|指示当前字符串对象是否为空。|  
 |[String::IsFastPass](#isfastpass)|指示当前 String 对象是否参与 *快速传递* 操作。 在快速传递操作中，将挂起引用计数。|  
@@ -102,7 +97,7 @@ public ref class String sealed : Object,
 |[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定字符串对象是否具有不同的值。|  
 |[String:: operator < 运算符](#operator-less-than)|指示一个字符串对象的值是否小于第二个字符串对象的值。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -148,7 +143,7 @@ int CompareOrdinal(
 ### <a name="return-value"></a>返回值  
  一个整数，指示两个比较字之间的词法关系。 下表列出可能的返回值。  
   
-|“值”|条件|  
+|值|条件|  
 |-----------|---------------|  
 |-1|`str1` 小于 `str2`。|  
 |0|`str1` 等于 `str2`。|  
@@ -249,7 +244,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>  String::GetHashCode Method
+## <a name="gethashcode"></a>  String:: gethashcode 方法
 返回此实例的哈希代码。  
   
 ### <a name="syntax"></a>语法  
@@ -319,7 +314,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>  String::operator+ Operator
+## <a name="operator-plus"></a>  String:: operator + 运算符
 串联两个[字符串](../cppcx/platform-string-class.md)到新的对象[字符串](../cppcx/platform-string-class.md)对象。
   
 ### <a name="syntax"></a>语法  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>备注  
  此运算符创建一个 `String^` 对象，用以包含两个操作数中的数据。 在极端性能并不重要时，使用它只是为了方便。 函数中有些对“`+`”的调用可能不明显，但如果在紧凑循环中操作大对象或文本数据，则使用标准 C++ 机制和类型。  
   
-##  <a name="operator-equality"></a> String::operator== Operator
+##  <a name="operator-equality"></a> String:: operator = = 运算符
 指示指定的字符串对象是否具有相同的文本值。  
   
 ### <a name="syntax"></a>语法  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String:: operator ！ = 
 指示两个指定字符串对象是否具有不同的值。  
   
 ### <a name="syntax"></a>语法  
@@ -431,7 +426,7 @@ bool String::operator!=( String^ str1, String^ str2)
  如果 `true` 不等于 `str1`，则为 `str2`；否则为 `false`。   
 
 
-## <a name="operator-less-than"></a> String::operator&lt; 
+## <a name="operator-less-than"></a> String::&lt; 
 指示一个字符串对象的值是否小于第二个字符串对象的值。  
   
 ### <a name="syntax"></a>语法  

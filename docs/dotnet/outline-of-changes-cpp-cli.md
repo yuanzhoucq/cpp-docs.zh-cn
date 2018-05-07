@@ -1,28 +1,23 @@
 ---
-title: "更改概要 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 更改概要 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a9662f73844013a944fc2b04ce6d3627d4e4b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="outline-of-changes-ccli"></a>更改概要 (C++/CLI)
 此大纲显示你的一些示例的某些更改托管扩展中的语言为 c + + 实现 Visual c + +。 访问附带有关详细信息的每个项的链接。  

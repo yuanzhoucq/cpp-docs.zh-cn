@@ -1,13 +1,10 @@
 ---
-title: "MFC 库版本 |Microsoft 文档"
-ms.custom: 
+title: MFC 库版本 |Microsoft 文档
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>MFC 库版本
 
@@ -98,7 +94,7 @@ MFC 项目使用预处理器符号 **\_UNICODE**以指示 utf-16 宽字符的 Un
 
 MFC 的静态库使用以下命名约定。 库名采用以下格式
 
-> *u*AFX*c**d*.LIB
+> *u*AFX*c * * d*。LIB
 
 其中，使用斜体小写字母形式显示的字母是说明符的占位符，下表中显示了说明符的含义：
 
@@ -114,7 +110,7 @@ MFC 的静态库使用以下命名约定。 库名采用以下格式
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 静态链接库，发布版本|
 |NAFXCWD.LIB|MFC 静态链接库，调试版本|
-|UAFXCW.LIB|具有 Unicode 支持的 MFC 静态链接库，发布版本|
+|UAFXCW。LIB|具有 Unicode 支持的 MFC 静态链接库，发布版本|
 |UAFXCWD.LIB|具有 Unicode 支持的 MFC 静态链接库，调试版本|
 |AFXNMCD.LIB|不带 MFC 对话框控件，发行版的 MFC 静态链接库|
 |AFXNMCDD.LIB|不带 MFC 对话框控件，调试版本的 MFC 静态链接库|
@@ -130,11 +126,11 @@ MFC Dll 有*版本*指示二进制兼容性的数字。 使用具有与其他库
 |DLL|描述|
 |---------|-----------------|
 |MFC*version*.DLL|MFC DLL、 ANSI 或 MBCS 版本的版本|
-|MFC*version*U.DLL|MFC DLL，Unicode 发行版本|
+|MFC*版本*U.DLL|MFC DLL，Unicode 发行版本|
 |MFC*version*D.DLL|MFC DLL、 ANSI 或 MBCS 调试版本|
 |MFC*version*UD.DLL|MFC DLL，Unicode 调试版本|
 |MFCM*version*.DLL|使用 Windows 窗体控件，MFC DLL ANSI 或 MBCS 版本的版本|
-|MFCM*version*U.DLL|与 Windows 窗体控件，Unicode 版本的 MFC DLL|
+|MFCM*版本*U.DLL|与 Windows 窗体控件，Unicode 版本的 MFC DLL|
 |MFCM*version*D.DLL|使用 Windows 窗体控件，MFC DLL ANSI 或 MBCS 调试版本|
 |MFCM*version*UD.DLL|与 Windows 窗体控件，Unicode 调试版本的 MFC DLL|
 

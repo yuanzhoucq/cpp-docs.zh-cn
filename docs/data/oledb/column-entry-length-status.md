@@ -1,12 +1,9 @@
 ---
-title: COLUMN_ENTRY_LENGTH_STATUS | Microsoft Docs
-ms.custom: 
+title: COLUMN_ENTRY_LENGTH_STATUS |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_LENGTH_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_ENTRY_LENGTH_STATUS macro
 ms.assetid: 6069967c-4665-462b-b822-1e6c22b5bee1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c159e575def5cba5766b526d51c815589aed600
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90f05219da4382f759934e39c074bc6cb81817a7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnentrylengthstatus"></a>COLUMN_ENTRY_LENGTH_STATUS
 表示行集上与数据库中的特定列的绑定。  
@@ -62,7 +57,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
   
 -   之间[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

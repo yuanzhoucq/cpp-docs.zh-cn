@@ -1,12 +1,9 @@
 ---
-title: "CBitmapButton 类 |Microsoft 文档"
-ms.custom: 
+title: CBitmapButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 类
 创建使用位图图像而非文本进行标记的按钮控件。  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|调整大小以适应位图按钮。|  
   
 ## <a name="remarks"></a>备注  
- `CBitmapButton`对象包含最多四个位图，其中包含一个按钮可以假定不同状态的图像： 向上 （或正常），向下 （或所选），已设定焦点，且禁用。 只有第一个位图是必需的;其他是可选的。  
+ `CBitmapButton` 对象包含最多四个位图，其中包含一个按钮可以假定不同状态的图像： 向上 （或正常），向下 （或所选），已设定焦点，且禁用。 只有第一个位图是必需的;其他是可选的。  
   
  位图按钮映像包括图像，以及图像本身的边框。 边框通常所起的作用中显示的按钮的状态。 例如，已设定焦点状态的位图通常就像一个对于松开状态但从边框或边界粗实线虚线的矩形内嵌。 位图的已禁用状态通常类似于一个松开状态但具有较低对比度 （如为灰色或显示为灰色菜单选择）。  
   
@@ -119,10 +114,10 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  将在对话框中的按钮相关联的对象`CBitmapButton`类，按名称加载 bitmap(s) 和大小以适应位图按钮。  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  创建一个 `CBitmapButton` 对象。  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  使用此函数，如果你想要加载标识由其资源名称或 ID 编号，或者无法使用的位图图像`AutoLoad`正常，因为，例如，要创建不属于对话框中的位图按钮。  
   
 ```  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  调用此函数可调整大小的位图的大小的位图按钮。  
   
 ```  

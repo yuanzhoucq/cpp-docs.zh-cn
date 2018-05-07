@@ -2,26 +2,21 @@
 title: 智能指针 （现代 C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 7d532a693414fee7845c45fd548b7513ed99b38d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 在现代 C++ 编程中，标准库包含*智能指针*、 用于确保程序不存在内存和资源泄漏且是异常安全。  
@@ -121,7 +116,7 @@ ms.lasthandoff: 04/06/2018
  [CAutoPtrList 类](../atl/reference/cautoptrlist-class.md)  
  封装用于操作 `CAutoPtr` 节点列表的方法的类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)   

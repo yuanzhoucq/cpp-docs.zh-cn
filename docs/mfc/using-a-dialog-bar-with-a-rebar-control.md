@@ -1,13 +1,10 @@
 ---
-title: "Rebar 控件使用对话栏 |Microsoft 文档"
-ms.custom: 
+title: Rebar 控件使用对话栏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - WM_EX_TRANSPARENT
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4eb47da7c3866e01ee563b9f6b42fa21ada109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47894c14e3b3d694847f94e7f981c9397383e598
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>对 Rebar 控件使用对话栏
 中所述[Rebar 控件和带区](../mfc/rebar-controls-and-bands.md)，每个带区可以包含只有一个子窗口 （或控件）。 如果你想要具有多个每个带区的子窗口，这可能是一个限制。 方便的解决方法是具有多个控件创建对话框栏资源，然后将 rebar 带区 （包含对话栏） 添加到 rebar 控件。  

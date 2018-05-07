@@ -1,12 +1,9 @@
 ---
-title: "CProcedureColumns，CProcedureColumnInfo |Microsoft 文档"
-ms.custom: 
+title: CProcedureColumns，CProcedureColumnInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_guidType
@@ -68,18 +65,16 @@ helpviewer_keywords:
 - m_guidColumn
 - CProcedureColumnInfo parameter class
 ms.assetid: c82626c4-8047-4b9c-b342-e35bf37b7611
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79b782a97ac96f54d951836662b69d06e097123c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 10ef42723ed19e12e2d15602cdca7f30121de55d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprocedurecolumns-cprocedurecolumninfo"></a>CProcedureColumns，CProcedureColumnInfo
 调用 typedef 类**CProcedureColumns**来实现其参数类**CProcedureColumnInfo**。  
@@ -110,7 +105,7 @@ ms.lasthandoff: 02/23/2018
 |m_nScale|NUMERIC_SCALE|  
 |m_szDescription|说明|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

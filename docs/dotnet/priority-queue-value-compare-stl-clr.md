@@ -1,12 +1,9 @@
 ---
-title: "priority_queue::value_compare (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: priority_queue::value_compare (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::value_compare
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_compare member [STL/CLR]
 ms.assetid: 40832c80-426f-42af-b4a3-bab27d2abd7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e1ef22902b0994eb8554334f4af12d83b13d61c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0875b62a6ea320c773ecaa1481de2e8801074794
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueuevaluecompare-stlclr"></a>priority_queue::value_compare (STL/CLR)
 两个值排序委托。  
@@ -86,7 +81,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  

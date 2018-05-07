@@ -1,13 +1,10 @@
 ---
-title: "本机和.NET 互操作性 |Microsoft 文档"
-ms.custom: 
+title: 本机和.NET 互操作性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6206ddf3802078c49bfc1a83e952ed79afe1ff00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cabd21f400b7c0c21faefdf2004dee9ae2cc64ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="native-and-net-interoperability"></a>本机和 .NET 的互操作性
 Visual c + + 支持互操作性功能，允许托管和非托管构造共存和交互操作在相同的程序集中，甚至在同一文件。 此功能，例如 P/Invoke，一小部分支持的其他.NET 语言，但大部分由 Visual c + + 提供的互操作性支持不是有其他语言版本。  

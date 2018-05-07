@@ -1,13 +1,10 @@
 ---
-title: "TN022： 标准命令实现 |Microsoft 文档"
-ms.custom: 
+title: TN022： 标准命令实现 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：标准命令实现
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  你必须连接到你`CWinApp`-派生类的消息映射，以启用此功能。  
   
-     `CWinApp::OnFileNew`应用程序中实现此命令以不同的方式根据文档模板数。 如果只有一个`CDocTemplate`，`CWinApp::OnFileNew`将创建该类型，以及适当的框架和视图类的新文档。  
+     `CWinApp::OnFileNew` 应用程序中实现此命令以不同的方式根据文档模板数。 如果只有一个`CDocTemplate`，`CWinApp::OnFileNew`将创建该类型，以及适当的框架和视图类的新文档。  
   
      如果存在多个`CDocTemplate`，`CWinApp::OnFileNew`将提示用户提供一个对话框 (**AFX_IDD_NEWTYPEDLG**) 允许他们选择要使用的文档类型。 所选`CDocTemplate`用于创建的文档。  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  你必须连接到你`CWinApp`-派生类的消息映射，以启用此功能。  
   
-     `CWinApp::OnFileOpen`已调用的非常简单实现**CWinApp::DoPromptFileName**跟`CWinApp::OpenDocumentFile`替换要打开的文件的文件或路径名称。 `CWinApp`实现例程**DoPromptFileName**标准 FileOpen 对话框会显示，并与文件扩展名从当前的文档模板获取进行填充。  
+     `CWinApp::OnFileOpen` 已调用的非常简单实现**CWinApp::DoPromptFileName**跟`CWinApp::OpenDocumentFile`替换要打开的文件的文件或路径名称。 `CWinApp`实现例程**DoPromptFileName**标准 FileOpen 对话框会显示，并与文件扩展名从当前的文档模板获取进行填充。  
   
      一个常见的自定义`ID_FILE_OPEN`是自定义 FileOpen 对话框或添加其他文件筛选器。 此自定义的建议的方法是将替换为你自己 FileOpen 对话框中，并调用的默认实现`CWinApp::OpenDocumentFile`文档的文件或路径名称。 没有无需调用的基类。  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      此命令时，用户可以自定义打印机和打印设置至少标准的打印设置对话框，将调用此文档或最多中的所有文档此应用程序。 必须使用控制面板来更改整个系统的默认打印机设置。  
   
-     `CWinApp::OnFilePrintSetup`具有非常简单的实现创建`CPrintDialog`对象，并调用**CWinApp::DoPrintDialog**实现函数。 这将设置应用程序默认打印机设置。  
+     `CWinApp::OnFilePrintSetup` 具有非常简单的实现创建`CPrintDialog`对象，并调用**CWinApp::DoPrintDialog**实现函数。 这将设置应用程序默认打印机设置。  
   
      常见的需要自定义此命令是为了允许每个文档打印机设置，应使用该文档何时保存存储。 若要执行此操作应添加中的消息映射处理程序你**CDocument**创建类`CPrintDialog`对象，请使用相应的打印机的属性对其进行初始化 (通常**hDevMode**和**hDevNames**)，调用**CPrintDialog::DoModal，**并保存更改的打印机设置。 强大的实现，你应该查看的实现**CWinApp::DoPrintDialog**检测错误和**CWinApp::UpdatePrinterSelection**来处理合理的默认值和跟踪系统级打印机更改。  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此命令使用实现`CEdit::Clear`。 如果没有当前选定内容，则禁用该命令。  
+     `CEditView` 提供的此命令使用实现`CEdit::Clear`。 如果没有当前选定内容，则禁用该命令。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此命令，用于将当前选定的文本复制到作为 CF_TEXT 使用剪贴板实现`CEdit::Copy`。 如果没有当前选定内容，则禁用该命令。  
+     `CEditView` 提供的此命令，用于将当前选定的文本复制到作为 CF_TEXT 使用剪贴板实现`CEdit::Copy`。 如果没有当前选定内容，则禁用该命令。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此命令，用于将当前选定的文本剪切到剪贴板 CF_TEXT 使用实现`CEdit::Cut`。 如果没有当前选定内容，则禁用该命令。  
+     `CEditView` 提供的此命令，用于将当前选定的文本剪切到剪贴板 CF_TEXT 使用实现`CEdit::Cut`。 如果没有当前选定内容，则禁用该命令。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此命令，用于调用实现帮助器函数的实现**OnEditFindReplace**使用并将以前的查找/替换设置存储在私有实现变量。 `CFindReplaceDialog`类用于管理用于提示用户的无模式对话框。  
+     `CEditView` 提供的此命令，用于调用实现帮助器函数的实现**OnEditFindReplace**使用并将以前的查找/替换设置存储在私有实现变量。 `CFindReplaceDialog`类用于管理用于提示用户的无模式对话框。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此命令，将替换所选的文本使用的当前剪贴板数据复制实现`CEdit::Paste`。 如果没有已禁用命令没有**CF_TEXT**将剪贴板中。  
+     `CEditView` 提供的此命令，将替换所选的文本使用的当前剪贴板数据复制实现`CEdit::Paste`。 如果没有已禁用命令没有**CF_TEXT**将剪贴板中。  
   
      **COleClientDoc**只是为此命令中提供的更新命令 UI 处理程序。 如果剪贴板不包含可嵌入 OLE 项/对象，该命令将被禁用。 你负责编写实际的命令来执行实际粘贴的处理程序。 如果 OLE 应用程序还可将粘贴其他格式，则应提供在视图或文档中的自己更新命令 UI 处理程序 (即，某个位置之前**COleClientDoc**命令目标路由中)。  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `COleDocument`此命令只是提供的更新命令 UI 处理程序。 如果剪贴板不包含可链接 OLE 项/对象，该命令将被禁用。 你负责编写实际的命令来执行实际粘贴的处理程序。 如果 OLE 应用程序还可将粘贴其他格式，则应提供在视图或文档中的自己更新命令 UI 处理程序 (即，某个位置之前`COleDocument`命令目标路由中)。  
+     `COleDocument` 此命令只是提供的更新命令 UI 处理程序。 如果剪贴板不包含可链接 OLE 项/对象，该命令将被禁用。 你负责编写实际的命令来执行实际粘贴的处理程序。 如果 OLE 应用程序还可将粘贴其他格式，则应提供在视图或文档中的自己更新命令 UI 处理程序 (即，某个位置之前`COleDocument`命令目标路由中)。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供此命令可重复最后一次的查找操作的实现。 使用最后一个查找的私有实现变量。 如果无法尝试查找，则禁用该命令。  
+     `CEditView` 提供此命令可重复最后一次的查找操作的实现。 使用最后一个查找的私有实现变量。 如果无法尝试查找，则禁用该命令。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此命令，用于调用实现帮助器函数的实现**OnEditFindReplace**使用并将以前的查找/替换设置存储在私有实现变量。 `CFindReplaceDialog`类用于管理无模式对话框，提示用户。  
+     `CEditView` 提供的此命令，用于调用实现帮助器函数的实现**OnEditFindReplace**使用并将以前的查找/替换设置存储在私有实现变量。 `CFindReplaceDialog`类用于管理无模式对话框，提示用户。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供此命令，用于在文档中选择所有文本的实现。 如果不没有选择任何文本，则禁用该命令。  
+     `CEditView` 提供此命令，用于在文档中选择所有文本的实现。 如果不没有选择任何文本，则禁用该命令。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      当前没有此命令的标准实现。 您必须为每个实现此`CView`-派生类。  
   
-     `CEditView`提供的此实现命令，使用`CEdit::Undo`。 如果已禁用命令`CEdit::CanUndo`方法将返回 FALSE。  
+     `CEditView` 提供的此实现命令，使用`CEdit::Undo`。 如果已禁用命令`CEdit::CanUndo`方法将返回 FALSE。  
   
      如果你选择实现此命令，我们建议使用此命令 id。  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   在 MDI 窗口底部 ID_WINDOW_ARRANGE 排列图标。  
   
-     `CMDIFrameWnd`实现帮助器函数中实现此标准的 MDI 命令**OnMDIWindowCmd**。 此帮助程序将命令 Id 映射到 MDI 窗口消息，并因此共享大量的代码。  
+     `CMDIFrameWnd` 实现帮助器函数中实现此标准的 MDI 命令**OnMDIWindowCmd**。 此帮助程序将命令 Id 映射到 MDI 窗口消息，并因此共享大量的代码。  
   
      与大多数 MDI 窗口菜单命令，一样没有活动的 MDI 子窗口是否已禁用命令。  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_CASCADE 级联窗口成相互重叠。  
   
-     `CMDIFrameWnd`实现帮助器函数中实现此标准的 MDI 命令**OnMDIWindowCmd**。 此帮助程序将命令 Id 映射到 MDI 窗口消息，并因此共享大量的代码。  
+     `CMDIFrameWnd` 实现帮助器函数中实现此标准的 MDI 命令**OnMDIWindowCmd**。 此帮助程序将命令 Id 映射到 MDI 窗口消息，并因此共享大量的代码。  
   
      与大多数 MDI 窗口菜单命令，一样没有活动的 MDI 子窗口是否已禁用命令。  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_SPLIT 键盘置于拆分器的接口。  
   
-     `CView`处理此命令`CSplitterWnd`实现。 如果视图是拆分窗口的一部分，此命令将委托给实现函数`CSplitterWnd::DoKeyboardSplit`。 这会将拆分器置于一种模式，将允许键盘用户拆分或撤销拆分拆分窗口。  
+     `CView` 处理此命令`CSplitterWnd`实现。 如果视图是拆分窗口的一部分，此命令将委托给实现函数`CSplitterWnd::DoKeyboardSplit`。 这会将拆分器置于一种模式，将允许键盘用户拆分或撤销拆分拆分窗口。  
   
      如果视图不在拆分，则禁用此命令。  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  你必须连接到你`CWinApp`-派生类的消息映射，以启用此功能。  
   
-     `CWinApp::OnHelpIndex`处理此命令通过一般而言调用`CWinApp::WinHelp`。  
+     `CWinApp::OnHelpIndex` 处理此命令通过一般而言调用`CWinApp::WinHelp`。  
   
      不建议此命令处理程序的自定义。  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  你必须连接到你`CWinApp`-派生类的消息映射，以启用此功能。  
   
-     `CWinApp::OnHelpUsing`处理此命令通过一般而言调用`CWinApp::WinHelp`。  
+     `CWinApp::OnHelpUsing` 处理此命令通过一般而言调用`CWinApp::WinHelp`。  
   
      不建议此命令处理程序的自定义。  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  你必须连接到你`CWinApp`-派生类的消息映射，以启用此功能。  
   
-     `CWinApp::OnContextHelp`通过设置帮助模式光标、 输入模式的循环等待用户选择一个窗口，以获取有关帮助处理此命令。 请参阅[技术注意 28](../mfc/tn028-context-sensitive-help-support.md)有关 MFC 帮助实现的详细信息。  
+     `CWinApp::OnContextHelp` 通过设置帮助模式光标、 输入模式的循环等待用户选择一个窗口，以获取有关帮助处理此命令。 请参阅[技术注意 28](../mfc/tn028-context-sensitive-help-support.md)有关 MFC 帮助实现的详细信息。  
   
      不建议此命令处理程序的自定义。  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  你必须连接到你`CWinApp`-派生类的消息映射，以启用此功能。  
   
-     `CWinApp::OnHelp`为当前的应用程序上下文中获取正确的帮助上下文来处理此命令。 这处理简单的 F1 帮助，依次类推帮助消息框上。 请参阅[技术注意 28](../mfc/tn028-context-sensitive-help-support.md)的 MFC 中的更多详细信息帮助实现。  
+     `CWinApp::OnHelp` 为当前的应用程序上下文中获取正确的帮助上下文来处理此命令。 这处理简单的 F1 帮助，依次类推帮助消息框上。 请参阅[技术注意 28](../mfc/tn028-context-sensitive-help-support.md)的 MFC 中的更多详细信息帮助实现。  
   
      不建议此命令处理程序的自定义。  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE 将转到下一个窗格  
   
-     `CView`处理此命令`CSplitterWnd`实现。 如果视图是拆分窗口的一部分，此命令将委托给实现函数**CSplitterWnd::OnNextPaneCmd**。 这会将活动视图移动到下一步中拆分器窗格中。  
+     `CView` 处理此命令`CSplitterWnd`实现。 如果视图是拆分窗口的一部分，此命令将委托给实现函数**CSplitterWnd::OnNextPaneCmd**。 这会将活动视图移动到下一步中拆分器窗格中。  
   
      如果视图不在拆分或没有下一步的窗格中，转到，则禁用此命令。  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE 将转到上一个窗格  
   
-     `CView`处理此命令`CSplitterWnd`实现。 如果视图是拆分窗口的一部分，此命令将委托给实现函数**CSplitterWnd::OnNextPaneCmd**。 这会将活动视图移动到在拆分器的上窗格中。  
+     `CView` 处理此命令`CSplitterWnd`实现。 如果视图是拆分窗口的一部分，此命令将委托给实现函数**CSplitterWnd::OnNextPaneCmd**。 这会将活动视图移动到在拆分器的上窗格中。  
   
      如果视图不在拆分或没有任何以前的窗格中，转到，则禁用此命令。  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS 编辑 OLE 链接  
   
-     `COleDocument`通过使用标准的 OLE 链接对话框提供 MFC 实现中处理此命令。 通过访问此对话框的实现`COleLinksDialog`类。 如果当前文档不包含任何链接，将禁用该命令。  
+     `COleDocument` 通过使用标准的 OLE 链接对话框提供 MFC 实现中处理此命令。 通过访问此对话框的实现`COleLinksDialog`类。 如果当前文档不包含任何链接，将禁用该命令。  
   
      不建议此命令处理程序的自定义。  
   
 -   ID_OLE_VERB_FIRST...用于 OLE 谓词的最后一个 ID 范围  
   
-     `COleDocument`当前所选 OLE 项/对象支持的谓词中使用此命令 ID 范围。 这必须是一个范围，因为给定的 OLE 项/对象类型可以支持零个或多个自定义的谓词。 在你的应用程序菜单中，你应具有一个菜单项的 id **ID_OLE_VERB_FIRST**。 当运行该程序时，将随相应的菜单谓词说明 （或多个谓词的弹出菜单） 更新菜单。 OLE 菜单的管理将由处理`AfxOleSetEditMenu`，完成此命令更新命令 UI 处理程序中。  
+     `COleDocument` 当前所选 OLE 项/对象支持的谓词中使用此命令 ID 范围。 这必须是一个范围，因为给定的 OLE 项/对象类型可以支持零个或多个自定义的谓词。 在你的应用程序菜单中，你应具有一个菜单项的 id **ID_OLE_VERB_FIRST**。 当运行该程序时，将随相应的菜单谓词说明 （或多个谓词的弹出菜单） 更新菜单。 OLE 菜单的管理将由处理`AfxOleSetEditMenu`，完成此命令更新命令 UI 处理程序中。  
   
      有无显式命令事件处理程序处理每个在此范围内的命令 ID。 **COleDocument::OnCmdMsg**被重写以捕获在此范围内的所有命令 Id，它们转换为从零开始的谓词数字，并启动该动词的服务器 (使用`COleClientItem::DoVerb`)。  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_VIEW_TOOLBAR 打开和关闭之间切换工具栏  
   
-     `CFrameWnd`处理此命令，并更新命令 UI 处理程序来切换工具栏的可见状态。 工具栏必须是子窗口的框架的子窗口 id 为`AFX_IDW_TOOLBAR`。 命令处理程序实际切换的可见性工具栏窗口。 `CFrameWnd::RecalcLayout`用于在其新的状态重绘通过工具栏的框架窗口。 在工具栏可见时，更新命令 UI 处理程序将检查菜单项。  
+     `CFrameWnd` 处理此命令，并更新命令 UI 处理程序来切换工具栏的可见状态。 工具栏必须是子窗口的框架的子窗口 id 为`AFX_IDW_TOOLBAR`。 命令处理程序实际切换的可见性工具栏窗口。 `CFrameWnd::RecalcLayout` 用于在其新的状态重绘通过工具栏的框架窗口。 在工具栏可见时，更新命令 UI 处理程序将检查菜单项。  
   
      不建议此命令处理程序的自定义。 如果你想要添加额外的工具栏，你将想要克隆和修改的命令处理程序和更新命令 UI 处理此命令。  
   

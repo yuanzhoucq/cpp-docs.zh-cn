@@ -1,13 +1,10 @@
 ---
-title: "演练： 更新 MFC 随意画图应用程序 （第 1 部分） |Microsoft 文档"
-ms.custom: 
+title: 演练： 更新 MFC 随意画图应用程序 （第 1 部分） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练： 更新 MFC 随意画图应用程序 （第 1 部分）
 本演练演示如何修改现有 MFC 应用程序使用功能区用户界面。 Visual Studio 支持 Office 2007 功能区和 Windows 7 风景如画功能区。 有关功能区用户界面的详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 网站上。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 01/03/2018
   
 - [设置应用程序的外观](#setlook)  
   
-##  <a name="replaceclass"></a>替换基类，这些类  
+##  <a name="replaceclass"></a> 替换基类，这些类  
  若要转换支持支持功能区的应用程序的菜单的应用程序，必须更新在基类中派生应用程序、 框架窗口和工具栏类。 （我们建议你不要不修改原始的 Scribble 示例; 相反，清除 Scribble 项目，将其复制到另一个目录，然后修改副本。）  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>若要替换随意画图应用程序中的基本类  
@@ -101,11 +96,11 @@ ms.lasthandoff: 01/03/2018
   
 8.  在 mainfrm.cpp 文件中：  
   
-    1.  替换`m_wndToolBar.SetBarStyle`与`m_wndToolBar.SetPaneStyle`  
+    1.  替换`m_wndToolBar.SetBarStyle`与 `m_wndToolBar.SetPaneStyle`  
   
-    2.  替换`m_wndToolBar.GetBarStyle`与`m_wndToolBar.GetPaneStyle`  
+    2.  替换`m_wndToolBar.GetBarStyle`与 `m_wndToolBar.GetPaneStyle`  
   
-    3.  替换`DockControlBar(&m_wndToolBar)`与`DockPane(&m_wndToolBar)`  
+    3.  替换`DockControlBar(&m_wndToolBar)`与 `DockPane(&m_wndToolBar)`  
   
 9. 在 ipframe.cpp 文件中，注释掉以下三个代码行。  
   
@@ -130,7 +125,7 @@ ms.lasthandoff: 01/03/2018
   
  [[部分](#top)]  
   
-##  <a name="addbitmap"></a>将位图添加到项目  
+##  <a name="addbitmap"></a> 将位图添加到项目  
  本演练的下一步四个步骤需要位图的资源。 你可以获取相应位图以各种方式：  
   
 -   使用[资源编辑器](../windows/resource-editors.md)需创建您自己的位图。 或使用资源编辑器来组合来自附带的可移植网络图形 (.png) 映像的位图[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。 这些映像可以在`VS2008ImageLibrary`目录。  
@@ -175,7 +170,7 @@ ms.lasthandoff: 01/03/2018
   
  [[部分](#top)]  
   
-##  <a name="addribbon"></a>向项目添加功能区资源  
+##  <a name="addribbon"></a> 向项目添加功能区资源  
  在转换使用到使用功能区的应用程序的菜单的应用程序时，你无需删除或禁用现有的菜单。 相反，创建功能区资源、 添加功能区按钮，并将新按钮添加与现有的菜单项。 虽然的菜单不再可见，但通过菜单进行路由的功能区栏中的消息。 此外，菜单快捷键继续正常工作。  
   
  功能区组成的应用程序按钮，即左上方的功能区上的大按钮和一个或多个类别选项卡。 每个类别选项卡包含一个或多个作为容器的功能区按钮和控件的面板。 以下过程演示如何创建功能区资源，然后自定义的应用程序按钮。  
@@ -226,7 +221,7 @@ ms.lasthandoff: 01/03/2018
   
  [[部分](#top)]  
   
-##  <a name="createinstance"></a>创建功能区栏的实例  
+##  <a name="createinstance"></a> 创建功能区栏的实例  
  以下步骤演示如何创建功能区栏的实例，你的应用程序启动时。 若要将功能区栏添加到应用程序中，声明 mainfrm.h 文件中的功能区栏。 然后，在 mainfrm.cpp 文件中，编写代码以加载功能区资源。  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>若要创建的功能区栏实例  
@@ -250,7 +245,7 @@ ms.lasthandoff: 01/03/2018
   
  [[部分](#top)]  
   
-##  <a name="addcategory"></a>自定义功能区资源  
+##  <a name="addcategory"></a> 自定义功能区资源  
  既然你已经创建的应用程序按钮，你可以将元素添加到功能区中。  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ ms.lasthandoff: 01/03/2018
   
  [[部分](#top)]  
   
-##  <a name="setlook"></a>设置应用程序的外观  
+##  <a name="setlook"></a> 设置应用程序的外观  
  A*视觉管理器*是控制应用程序的所有绘图的全局对象。 由于原始随意画图应用程序使用 Office 2000 用户界面 (UI) 样式，该应用程序可能看起来过时。 你可以重置此应用程序，使它类似于 Office 2007 应用程序使用 Office 2007 视觉管理器。  
   
 #### <a name="to-set-the-look-of-the-application"></a>若要设置的应用程序的外观  

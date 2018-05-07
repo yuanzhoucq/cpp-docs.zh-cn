@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2128 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2128 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - c2128
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8d8c1b06f03b8e4f4e26f3bb2dc3818d4576463
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6db4621a39e704c2b9d19b66b388cc1899b8da12
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2128"></a>编译器错误 C2128
 function: alloc_text/same_seg 仅适用于带 C 链接的函数  
   
- `pragma``alloc_text`仅与函数声明为具有 C 链接一起使用。  
+ `pragma` `alloc_text` 只能与函数声明为具有 C 链接使用。  
   
  下面的示例生成 C2128:  
   

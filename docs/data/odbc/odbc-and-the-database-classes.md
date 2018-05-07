@@ -1,13 +1,10 @@
 ---
-title: "ODBC 和数据库类 |Microsoft 文档"
-ms.custom: 
+title: ODBC 和数据库类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - ODBC classes [C++], MFC database classes
 - MFC [C++], ODBC and
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3041a4fc027a8786fb62db7df6eaf486633ce97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abbb20b76f8e24a9b0f20961728dd8e428733654
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC 和数据库类
 MFC ODBC 数据库类封装你将通常自行进行在成员中的函数的 ODBC API 函数调用[CDatabase](../../mfc/reference/cdatabase-class.md)和[CRecordset](../../mfc/reference/crecordset-class.md)类。 例如，复杂 ODBC 调用序列、 返回的记录到存储位置、 处理错误情况，以及其他操作的绑定是为你管理的数据库类。 因此，你可以使用相当简单的类接口来操作通过记录集对象的记录。  

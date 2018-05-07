@@ -1,13 +1,10 @@
 ---
-title: "编译器错误 C2472 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2472 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2472
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5267f20aaed4ebf1c320d3d960684376e29814ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d89a6d6b10fa76c7fbf1bf11c4ebe2ecff5f98ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2472"></a>编译器错误 C2472
 “function”无法在托管代码“message”中生成；请使用 /clr 进行编译以生成混合映像  
@@ -55,4 +50,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)

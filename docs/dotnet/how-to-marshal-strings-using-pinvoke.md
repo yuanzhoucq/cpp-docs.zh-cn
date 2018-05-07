@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用 PInvoke 封送字符串 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 PInvoke 封送字符串 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1a377e7074e72693a1a63e392c64a6d60c5995b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送处理字符串
 本主题说明如何本机接受 C 样式字符串可以使用的 CLR 字符串来调用的函数键入 system:: string 使用.NET Framework 平台调用支持。 Visual c + + 程序员人员最好 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈来实现。 如果非托管的 API 打包为一个 DLL，并且源代码不可用，P/Invoke 是唯一的选项中，但否则看到[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  

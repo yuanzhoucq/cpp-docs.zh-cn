@@ -1,12 +1,9 @@
 ---
-title: "lock::is_locked |Microsoft 文档"
-ms.custom: 
+title: lock::is_locked |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - is_locked
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de4f7a3c92ccace542a4588b0278fd4f799459c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockislocked"></a>lock::is_locked
 指示是否持有的锁。  
@@ -42,7 +37,7 @@ bool is_locked();
 ```  
   
 ## <a name="return-value"></a>返回值  
- `true`如果持有的锁，`false`否则为。  
+ `true` 如果持有的锁，`false`否则为。  
   
 ## <a name="example"></a>示例  
  此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
@@ -134,7 +129,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\lock.h >  
   
  **Namespace** msclr  

@@ -1,12 +1,9 @@
 ---
-title: "CGlobalHeap 类 |Microsoft 文档"
-ms.custom: 
+title: CGlobalHeap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CGlobalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 全局堆函数。  
@@ -56,7 +51,7 @@ class CGlobalHeap : public IAtlMemMgr
 |[Cglobalheap:: Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|  
   
 ## <a name="remarks"></a>备注  
- `CGlobalHeap`实现使用 Win32 全局堆函数的内存分配函数。  
+ `CGlobalHeap` 实现使用 Win32 全局堆函数的内存分配函数。  
   
 > [!NOTE]
 >  全局堆函数慢于其他内存管理函数，并且未提供尽可能多的功能。 因此，新的应用程序应使用[堆函数](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 这些是位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。 DDE 和剪贴板函数仍使用全局函数。  
@@ -69,10 +64,10 @@ class CGlobalHeap : public IAtlMemMgr
   
  `CGlobalHeap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlmem.h  
   
-##  <a name="allocate"></a>Cglobalheap:: Allocate  
+##  <a name="allocate"></a>  Cglobalheap:: Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)标志参数的**GMEM_FIXED**。  
   
-##  <a name="free"></a>Cglobalheap:: Free  
+##  <a name="free"></a>  Cglobalheap:: Free  
  调用此方法以释放此内存管理器分配的内存块。  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)。  
   
-##  <a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块分配的大小。  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)。  
   
-##  <a name="reallocate"></a>Cglobalheap:: Reallocate  
+##  <a name="reallocate"></a>  Cglobalheap:: Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "事件接收器映射 |Microsoft 文档"
-ms.custom: 
+title: 事件接收器映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309474220f081a0eca67d0f83ead21c59eb649e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-sink-maps"></a>事件接收器映射
 当嵌入 OLE 控件触发事件时，控件的容器将使用 MFC 提供的名为“事件接收器映射”的机制接收事件。 此事件接收器映射为每个特定事件指定处理程序函数，以及这些事件的参数。 事件接收器映射的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|定义处理程序来处理来自一组 OLE 控件的属性通知。|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|在控件的容器处理控件发送的属性通知之前接收这些通知。|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
  开始事件接收器映射的定义。  
   
 ```   
@@ -63,10 +58,10 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
   
  事件接收器映射和 OLE 控件容器的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
  OLE 容器可以提供事件接收器映射来指定将接收通知你的容器的事件。  
   
 ```   
@@ -78,20 +73,20 @@ DECLARE_EVENTSINK_MAP()
   
  事件接收器映射的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
  结束事件接收器映射的定义。  
   
 ```   
 END_EVENTSINK_MAP()   
 ```  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>  ON_EVENT  
  使用`ON_EVENT`由 OLE 控件激发的宏来定义事件的事件处理程序函数。  
   
 ```   
@@ -112,21 +107,21 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
  对处理事件的成员函数的指针。 此函数应具有**BOOL**返回类型，并且与事件的参数匹配的参数类型 (请参阅`vtsParams`)。 该函数应返回**TRUE**来指示事件是否处理; 否则为**FALSE**。  
   
  `vtsParams`  
- 序列**VTS_**指定事件的参数类型的常量。 这些是如调度映射条目中使用的相同常量`DISP_FUNCTION`。  
+ 序列**VTS_** 指定事件的参数类型的常量。 这些是如调度映射条目中使用的相同常量`DISP_FUNCTION`。  
   
 ### <a name="remarks"></a>备注  
- `vtsParams`自变量是空格分隔的值从列表**VTS_**常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如:  
+ `vtsParams`自变量是空格分隔的值从列表**VTS_** 常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
  指定列表包含跟短整数**BOOL**。  
   
- 有关的列表**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ 有关的列表**VTS_** 常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
  使用`ON_EVENT_RANGE`由具有连续 Id 的范围中的控件 ID 任何 OLE 控件激发的宏来定义事件的事件处理程序函数。  
   
 ```   
@@ -150,16 +145,16 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
  对处理事件的成员函数的指针。 此函数应具有**BOOL**返回类型，类型的第一个参数**UINT** （有关控件 ID) 和事件的参数匹配的其他参数类型 (请参阅`vtsParams`)。 该函数应返回**TRUE**来指示事件是否处理; 否则为**FALSE**。  
   
  `vtsParams`  
- 序列**VTS_**指定事件的参数类型的常量。 第一个常量的类型应该是**VTS_I4**，有关控件 id。 这些是如调度映射条目中使用的相同常量`DISP_FUNCTION`。  
+ 序列**VTS_** 指定事件的参数类型的常量。 第一个常量的类型应该是**VTS_I4**，有关控件 id。 这些是如调度映射条目中使用的相同常量`DISP_FUNCTION`。  
   
 ### <a name="remarks"></a>备注  
- `vtsParams`自变量是空格分隔的值从列表**VTS_**常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如:  
+ `vtsParams`自变量是空格分隔的值从列表**VTS_** 常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
  指定列表包含跟短整数**BOOL**。  
   
- 有关的列表**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ 有关的列表**VTS_** 常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
 ### <a name="example"></a>示例  
  下面的示例演示一个事件处理程序中的，对于 MouseDown 事件，三个控件实现 (`IDC_MYCTRL1`通过`IDC_MYCTRL3`)。 事件处理程序函数， `OnRangeMouseDown`，在对话框类的标头文件中声明 ( `CMyDlg`) 为：  
@@ -170,10 +165,10 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
   
  [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
  `ON_EVENT_REFLECT`宏，当使用在事件接收器映射的 OLE 控件的包装器类，接收之前它们均由该控件的容器处理控件触发的事件。  
   
 ```   
@@ -191,23 +186,23 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
  对处理事件的成员函数的指针。 此函数应具有**BOOL**返回类型和事件的参数匹配的参数类型 (请参阅`vtsParams`)。 该函数应返回**TRUE**来指示事件是否处理; 否则为**FALSE**。  
   
  `vtsParams`  
- 序列**VTS_**指定事件的参数类型的常量。 这些是如调度映射条目中使用的相同常量`DISP_FUNCTION`。  
+ 序列**VTS_** 指定事件的参数类型的常量。 这些是如调度映射条目中使用的相同常量`DISP_FUNCTION`。  
   
 ### <a name="remarks"></a>备注  
- `vtsParams`自变量是空格分隔的值从列表**VTS_**常量。  
+ `vtsParams`自变量是空格分隔的值从列表**VTS_** 常量。  
   
- 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如:  
+ 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
  指定列表包含跟短整数**BOOL**。  
   
- 有关的列表**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ 有关的列表**VTS_** 常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
  使用`ON_PROPNOTIFY`宏来定义用于处理来自 OLE 控件的属性通知的事件接收器映射条目。  
   
 ```   
@@ -232,15 +227,15 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  指向成员函数处理**OnChanged**此属性的通知。 此函数应该拥有**BOOL**返回类型和**UINT**参数。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- `vtsParams`自变量是空格分隔的值从列表**VTS_**常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如:  
+ `vtsParams`自变量是空格分隔的值从列表**VTS_** 常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
  指定列表包含跟短整数**BOOL**。  
   
- 有关的列表**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ 有关的列表**VTS_** 常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
  使用`ON_PROPNOTIFY_RANGE`宏来定义用于处理来自任何具有连续 Id 的范围中的控件 ID 的 OLE 控件的属性通知的事件接收器映射条目。  
   
 ```  
@@ -268,10 +263,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  `pfnChanged`  
  指向成员函数处理**OnChanged**此属性的通知。 此函数应该拥有**BOOL**返回类型和**UINT**参数。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
  `ON_PROPNOTIFY_REFLECT`宏，当使用在事件接收器映射的 OLE 控件的包装器类，它接收之前它们均由该控件的容器处理由控件发送的属性通知。  
   
 ```  
@@ -293,7 +288,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  `pfnChanged`  
  指向成员函数处理**OnChanged**此属性的通知。 此函数应该拥有**BOOL**返回类型和任何参数。 该函数应返回**TRUE**来指示通知是否处理; 否则为**FALSE**。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
     
 ## <a name="see-also"></a>请参阅  

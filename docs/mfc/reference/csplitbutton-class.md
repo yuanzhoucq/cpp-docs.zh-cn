@@ -1,12 +1,9 @@
 ---
-title: "CSplitButton 类 |Microsoft 文档"
-ms.custom: 
+title: CSplitButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac4241bb19c6abc0fbbf489bf4efb43f56ede72e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 `CSplitButton`类表示拆分按钮控件。 当用户单击按钮的主要部分时，拆分按钮控件将执行一个默认行为，而当用户单击按钮的下拉箭头时，控件将显示一个下拉菜单。  
@@ -83,14 +78,14 @@ class CSplitButton : public CButton
   
  `CSplitButton`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
  此类支持在[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
   
  此类的其他要求中所述[生成要求的 Windows Vista 公共控件](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
-##  <a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>  CSplitButton::Create  
  创建具有指定样式的拆分按钮控件并将其附加到当前`CSplitButton`对象。  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
  构造 `CSplitButton` 对象。 构造函数的参数指定用户单击拆分按钮控件的下拉箭头时，显示的子菜单。  
   
 ```  
@@ -137,7 +132,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>备注  
  使用[CSplitButton::Create](#create)方法创建拆分按钮控件并将其附加到`CSplitButton`对象。  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
  处理`BCN_DROPDOWN`用户单击当前拆分按钮控件的下拉箭头时，系统会将发送的通知。  
   
 ```  
@@ -167,7 +162,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
  设置用户单击当前拆分按钮控件的下拉箭头时，显示的下拉列表菜单。  
   
 ```  

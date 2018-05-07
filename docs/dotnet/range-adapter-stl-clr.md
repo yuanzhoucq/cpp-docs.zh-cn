@@ -1,12 +1,9 @@
 ---
-title: "range_adapter (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: range_adapter (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::range_adapter
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - range_adapter class [STL/CLR]
 ms.assetid: 3fbe2a65-1216-46a0-a182-422816b80cfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a5b8a02856d7739867e3cf9f76f866a1e84efca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 一种模板类，用于包装一对迭代器，用于实现多个基类库 (BCL) 接口。 Range_adapter 用于处理 STL/CLR 范围，就像它是 BCL 集合。  
@@ -70,7 +65,7 @@ template<typename Iter>
 ## <a name="remarks"></a>备注  
  Range_adapter 存储一对迭代器，反过来分隔的元素序列。 该对象实现四个 BCL 接口，可以循环访问的元素顺序。 使用此模板类来操作非常类似 BCL 容器 STL/CLR 范围。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/适配器 >  
   
  **Namespace:** cliext  

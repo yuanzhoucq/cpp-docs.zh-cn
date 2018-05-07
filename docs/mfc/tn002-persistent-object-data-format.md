@@ -1,13 +1,10 @@
 ---
-title: "TN002： 持久性对象数据格式 |Microsoft 文档"
-ms.custom: 
+title: TN002： 持久性对象数据格式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002：持久性对象数据格式
 本说明介绍支持持久性 c + + 对象和对象数据的格式时存储在文件中的 MFC 例程。 这仅适用于具有类[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)宏。  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  如果对象没有保存过，有两种可能需要考虑： 对象和对象的确切类型 （即，类） 不熟悉此存档上下文中，或的对象是已检测到的确切类型。 若要确定是否已出现类型，代码查询`m_pStoreMap`为[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)匹配的对象`CRuntimeClass`与正在保存对象关联的对象。 如果没有匹配项，`WriteObject`插入的标记的按位`OR`的`wOldClassTag`和此索引。 如果`CRuntimeClass`不熟悉此存档上下文中，`WriteObject`将新的 PID 分配给该类并将其存档，前面插入`wNewClassTag`值。  
   
- 此类的描述符会插入到存档使用`CRuntimeClass::Store`方法。 `CRuntimeClass::Store`将类 （见下文） 的架构数字和类的 ASCII 文本名称。 请注意使用 ASCII 文本名称并不保证唯一性的存档跨应用程序。 因此，你应标记数据文件以防止损坏。 以下类信息插入，存档将对象插入`m_pStoreMap`，然后调用`Serialize`方法插入类特定的数据。 将对象插入`m_pStoreMap`之前调用`Serialize`防止该对象的多个副本保存到存储区。  
+ 此类的描述符会插入到存档使用`CRuntimeClass::Store`方法。 `CRuntimeClass::Store` 将类 （见下文） 的架构数字和类的 ASCII 文本名称。 请注意使用 ASCII 文本名称并不保证唯一性的存档跨应用程序。 因此，你应标记数据文件以防止损坏。 以下类信息插入，存档将对象插入`m_pStoreMap`，然后调用`Serialize`方法插入类特定的数据。 将对象插入`m_pStoreMap`之前调用`Serialize`防止该对象的多个副本保存到存储区。  
   
  当返回到初始调用方 （通常根对象的网络），必须调用[CArchive::Close](../mfc/reference/carchive-class.md#close)。 如果你打算执行其他[CFile](../mfc/reference/cfile-class.md)操作，必须调用`CArchive`方法[刷新](../mfc/reference/carchive-class.md#flush)为了防止损坏的存档。  
   

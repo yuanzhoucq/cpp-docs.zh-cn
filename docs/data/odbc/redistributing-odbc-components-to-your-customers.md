@@ -1,13 +1,10 @@
 ---
-title: "重新分发 ODBC 组件到你的客户 |Microsoft 文档"
-ms.custom: 
+title: 重新分发 ODBC 组件到你的客户 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aad9f1dbd4542ad763e7303d9a750f1856208025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0427228b8fb3e852cf1d9ee66a10c9290b860b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>为客户重新分发 ODBC 组件
 如果你将 ODBC 管理员程序的功能合并到你的应用程序，则还必须分配到你的用户运行这些程序的文件。 这些 ODBC 文件驻留在 Visual c + + CD-ROM 的 \OS\System 目录。 Redistrb.wri 文件和许可协议位于同一目录中的包含你可以重新分发 ODBC 文件的列表。  

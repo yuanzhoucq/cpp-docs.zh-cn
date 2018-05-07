@@ -2,11 +2,8 @@
 title: 'hash_map:: equal_range (STL/CLR) |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::equal_range
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - equal_range member [STL/CLR]
 ms.assetid: 9b9a18b8-42fd-4d17-91bd-df85e583cf61
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8d5e8b628e96fbf147e3b757f0c5ba778dc7a22c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c42f08ac258ce1a716453ee4060033c121ad4a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapequalrange-stlclr"></a>hash_map::equal_range (STL/CLR)
 查找与指定键匹配的范围。  
@@ -87,7 +82,7 @@ equal_range(L'x') empty = True
  [b 2]  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

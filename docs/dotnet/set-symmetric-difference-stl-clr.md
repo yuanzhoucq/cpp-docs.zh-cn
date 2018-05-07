@@ -1,12 +1,9 @@
 ---
-title: "set_symmetric_difference (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: set_symmetric_difference (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set_symmetric_difference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - set_symmetric_difference function [STL/CLR]
 ms.assetid: 4d8997c7-038e-42a8-86d4-81d714ed3775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9b34cc49c55dc8031b7df3b7facd7b0431fa7c0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5a0e4926c67671c6536ca39d949e7c97640cc11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setsymmetricdifference-stlclr"></a>set_symmetric_difference (STL/CLR)
 将属于一个而不是两个排序的源范围的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。  
@@ -45,7 +40,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`set_symmetric_difference`。 有关详细信息，请参阅[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  

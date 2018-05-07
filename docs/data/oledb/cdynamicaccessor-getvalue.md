@@ -1,12 +1,9 @@
 ---
-title: CDynamicAccessor::GetValue | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicaccessor:: Getvalue |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetValue
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - GetValue method
 ms.assetid: 553f44af-68bc-4cb6-8774-e0940003fa90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b572faceb1ea27f05bb1a422a86de4b42f9175c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7e43707d4697fbbeece5475f71b7e2f93e731772
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
 检索指定列的数据。  
@@ -80,7 +75,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
   
  在调试模式下，你将获取断言，如果的大小`pData`是到它所指向列的大小不相等。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

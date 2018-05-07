@@ -1,13 +1,10 @@
 ---
-title: "TN017： 销毁窗口对象 |Microsoft 文档"
-ms.custom: 
+title: TN017： 销毁窗口对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.objects
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9aa4cabaafd4eebc3a0fb0b0023a82d446d74a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6bba255403d31e7a1fa03febb0c760d20cdc81c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017：销毁窗口对象
 本说明介绍了利用[CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)方法。 使用此方法，如果你想要执行的自定义的分配`CWnd`-派生的对象。 本文还介绍了为何应使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)销毁而不是 c + + Windows 对象`delete`运算符。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  第二个用例、 使用`delete`Windows 对象运算符应该很少见。 某些情况下，使用以下是否`delete`是正确的选择。  
   
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>与 CWnd::PostNcDestroy 自动清理  
- 系统会销毁 Windows 窗口，发送到窗口的最后一个 Windows 消息时， `WM_NCDESTROY`。 默认值`CWnd`该消息的处理程序是[cwnd::](../mfc/reference/cwnd-class.md#onncdestroy)。 `OnNcDestroy`将分离`HWND`从 c + + 对象并调用虚函数`PostNcDestroy`。 一些类中重写此函数可删除 c + + 对象。  
+ 系统会销毁 Windows 窗口，发送到窗口的最后一个 Windows 消息时， `WM_NCDESTROY`。 默认值`CWnd`该消息的处理程序是[cwnd::](../mfc/reference/cwnd-class.md#onncdestroy)。 `OnNcDestroy` 将分离`HWND`从 c + + 对象并调用虚函数`PostNcDestroy`。 一些类中重写此函数可删除 c + + 对象。  
   
  默认实现`CWnd::PostNcDestroy`不执行任何操作，这是适用于在堆栈帧上分配或嵌入其他对象的窗口对象。 这并不适合用于不包含任何其他对象在堆上分配的窗口对象。 换而言之，不适合于未嵌入在其他 c + + 对象的窗口对象。  
   

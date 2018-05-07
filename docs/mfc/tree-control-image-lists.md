@@ -1,13 +1,10 @@
 ---
-title: "树控件图像列表 |Microsoft 文档"
-ms.custom: 
+title: 树控件图像列表 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-image-lists"></a>树控件图像列表
 树控件中的每个项 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 可以具有与之关联的位图图像的对。 在左侧的项的标签上显示图像。 当选定了项，并显示其他时未选择项目时，会显示一个图像。 例如，某一项可能显示选中时打开的文件夹和关闭的文件夹，如果未选择。  

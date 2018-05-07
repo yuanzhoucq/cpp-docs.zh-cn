@@ -1,12 +1,9 @@
 ---
-title: "Ccommand:: Open |Microsoft 文档"
-ms.custom: 
+title: 'Ccommand:: Open |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CCommand.Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: 4c9b8f31-faf3-452d-9a29-3d3e5f54d6f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bf4d30382224cd1fe85d12623acdcb90b0dee1bd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 82b87ad01bf072358042e9af7170afea1f7d4e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandopen"></a>CCommand::Open
 执行并选择性地绑定命令。  
@@ -118,7 +113,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 > [!NOTE]
 >  **打开**调用**执行**，从而又会调用`GetNextResult`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

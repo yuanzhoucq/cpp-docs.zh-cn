@@ -1,13 +1,10 @@
 ---
-title: "添加成员函数 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 添加成员函数 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.member.function
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - member functions, adding to classes
 - classes [C++], adding members
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6edc2e33eeba8d2d3c6bd0a3778c1863ac295caa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-member-function-visual-c"></a>添加成员函数 (Visual C++)
 在**类视图**，可以将成员函数添加到任何类。 在执行此操作时，会将一个声明添加到标头文件中，并且会将一个存根成员函数主体添加到稍后可修改的类实现文件中。  

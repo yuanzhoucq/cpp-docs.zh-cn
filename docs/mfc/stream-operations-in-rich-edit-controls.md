@@ -1,13 +1,10 @@
 ---
-title: "Rich Edit 控件中的操作 |Microsoft 文档"
-ms.custom: 
+title: Rich Edit 控件中的操作 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1a73790124adbc1ff8a89290bf4e1d7a4fa6824
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66afb05031b302877dfd34f64e6076f882a256d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Rich Edit 控件中的流操作
 你可以使用流将数据传输到或跳出 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 流定义通过[EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)结构，指定缓冲区和应用程序定义的回调函数。  

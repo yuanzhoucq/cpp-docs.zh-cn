@@ -1,12 +1,9 @@
 ---
-title: "CMFCColorDialog 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCColorDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 类
 `CMFCColorDialog`类表示颜色选择对话框。  
@@ -76,10 +71,10 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`如果颜色选择对话框使用其自己的调色板，或`FALSE`如果对话框中使用的调色板中指定`CMFCColorDialog`构造函数。|  
-|`m_bPickerMode`|`TRUE`虽然用户正在从选择对话框中; 选择一种颜色否则为`FALSE`。|  
+|`m_bIsMyPalette`|`TRUE` 如果颜色选择对话框使用其自己的调色板，或`FALSE`如果对话框中使用的调色板中指定`CMFCColorDialog`构造函数。|  
+|`m_bPickerMode`|`TRUE` 虽然用户正在从选择对话框中; 选择一种颜色否则为`FALSE`。|  
 |`m_btnColorSelect`|此用户选定的颜色按钮。|  
 |`m_CurrentColor`|当前选定的颜色。|  
 |`m_hcurPicker`|用于选择一个颜色时光标。|  
@@ -114,10 +109,10 @@ class CMFCColorDialog : public CDialogEx
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  构造 `CMFCColorDialog` 对象。  
   
 ```  
@@ -145,7 +140,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  检索用户从颜色对话框中选择的颜色。  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>备注  
  调用此函数后调用`DoModal`方法。  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  检索当前颜色对话框中提供的调色板。  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>备注  
  调色板指定用户可以选择的颜色。  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  从系统调色板派生调色板。  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  设置对话框中的当前颜色。  
   
 ```  
@@ -191,7 +186,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  将当前颜色设置为当前非常类似的调色板中的颜色。  
   
 ```  
@@ -204,7 +199,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  颜色对话框的第一个属性页上显式指定所选颜色的红色、 绿色和蓝色组件。  
   
 ```  
@@ -226,7 +221,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  颜色对话框的第二个属性页上显式指定所选颜色的红色、 绿色和蓝色组件。  
   
 ```  

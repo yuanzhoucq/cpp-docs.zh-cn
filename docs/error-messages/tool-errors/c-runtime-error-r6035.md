@@ -1,12 +1,9 @@
 ---
-title: "C 运行时错误 R6035 |Microsoft 文档"
-ms.custom: 
+title: C 运行时错误 R6035 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6035
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: ecadf1793475e1cf5f354796c71a1894884e24e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6035"></a>C 运行时错误 R6035
 函数依赖于该安全 cookie 处于活动状态时，Microsoft Visual c + + 运行时库，错误 R6035-此应用程序中的模块正在初始化的模块的全局安全 cookie。  调用 __security_init_cookie 更早版本。  

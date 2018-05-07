@@ -1,12 +1,9 @@
 ---
-title: "CMFCReBar 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCReBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCReBar
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 118c792b1b732fa1e8b024bb6b80da5ea0e7aa31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 A`CMFCReBar`对象是提供布局、 持久性和 rebar 控件的状态信息的控件条。  
@@ -92,10 +87,10 @@ class CMFCReBar : public CPane
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxRebar.h  
   
-##  <a name="addbar"></a>CMFCReBar::AddBar  
+##  <a name="addbar"></a>  CMFCReBar::AddBar  
  向 rebar 带区。  
   
 ```  
@@ -114,13 +109,13 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pBar`  
+ [in][out] `pBar`  
  指向要插入到 rebar 的子窗口的指针。 被引用的对象必须具有**WS_CHILD**窗口样式。  
   
  [in] `pszText`  
  指定要显示在 rebar 上的文本。 文本不是子窗口的一部分。 相反，它将显示在 rebar 本身。  
   
- [in][out]`pbmp`  
+ [in][out] `pbmp`  
  指定要 rebar 背景上显示的位图。  
   
  [in] `dwStyle`  
@@ -133,9 +128,9 @@ BOOL AddBar(
  表示 rebar 的背景色。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果带已成功添加到 rebar;否则为`FALSE`。  
+ `TRUE` 如果带已成功添加到 rebar;否则为`FALSE`。  
   
-##  <a name="create"></a>CMFCReBar::Create  
+##  <a name="create"></a>  CMFCReBar::Create  
  创建 rebar 控件并将其附加到[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)对象。  
   
 ```  
@@ -147,7 +142,7 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pParentWnd`  
+ [in][out] `pParentWnd`  
  指向此 rebar 控件的父窗口的指针。  
   
  [in] `dwCtrlStyle`  
@@ -160,11 +155,11 @@ BOOL Create(
  Rebar 的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则创建 rebar否则为`FALSE`。  
+ `TRUE` 如果成功，则创建 rebar否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl  
  提供直接访问权限`CReBarCtrl`为基础的公共控件`CMFCReBar`对象。  
   
 ```  
@@ -177,7 +172,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="remarks"></a>备注  
  调用此方法以自定义你 rebar 时充分利用 Windows rebar 公共控件功能。  
   
-##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
 
   
 ```  
@@ -194,7 +189,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="canfloat"></a>CMFCReBar::CanFloat  
+##  <a name="canfloat"></a>  CMFCReBar::CanFloat  
 
   
 ```  
@@ -205,7 +200,7 @@ virtual BOOL CanFloat() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
+##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking  
 
   
 ```  
@@ -217,7 +212,7 @@ void EnableDocking(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
+##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize  
 
   
 ```  
@@ -228,7 +223,7 @@ UINT GetReBarBandInfoSize() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu  
 
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest  
 
   
 ```  
@@ -259,7 +254,7 @@ virtual INT_PTR OnToolHitTest(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI  
 
   
 ```  
@@ -274,7 +269,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
+##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment  
 
   
 ```  

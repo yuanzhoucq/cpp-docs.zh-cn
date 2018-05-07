@@ -1,13 +1,10 @@
 ---
-title: "选择部署方法 |Microsoft 文档"
-ms.custom: 
+title: 选择部署方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-deployment-method"></a>选择部署方法
 除非你的 Visual c + + 应用程序是独立的并且可以通过使用复制命令部署，否则我们建议你使用 Windows Installer 进行部署。 Windows Installer 支持安装、修复和卸载，还支持应用程序文件、依赖项和注册表项的原子更新。  

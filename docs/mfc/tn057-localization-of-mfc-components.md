@@ -1,13 +1,10 @@
 ---
-title: "TN057: MFC 组件的本地化 |Microsoft 文档"
-ms.custom: 
+title: 'TN057: MFC 组件的本地化 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.components
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DLLs [MFC], localizing MFC
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27b737a76b30e7193a9afb7797a20951294032e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 935f85f55db8ed0d01bce309aa598100002c0f4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 组件的本地化
 > [!NOTE]
@@ -67,7 +62,7 @@ CMyApp::InitInstance()
   
  从那以后，MFC 将从该 DLL 而非 myapp.exe 加载资源。 但是，所有资源都必须存在于该 DLL 中；MFC 不会搜索应用程序的实例来寻找给定的资源。 此方法适用于同样常规 MFC Dll 以及 OLE 控件。 您的安装程序将根据用户想采用的资源区域设置复制相应版本的 MYRES.DLL。  
   
- 创建纯资源 DLL 相对简单一些。 您创建 DLL 项目，向其添加 .RC 文件，然后添加必需的资源。 如果您有不使用此方法的现有项目，则可以从该项目中复制资源。 将资源文件添加到项目后，你差不多已做好生成项目的准备。 必须执行唯一操作是设置链接器选项以包括**/NOENTRY**。 这将通知链接器，该 DLL 没有入口点-因为它没有代码，它具有不到入口点。  
+ 创建纯资源 DLL 相对简单一些。 您创建 DLL 项目，向其添加 .RC 文件，然后添加必需的资源。 如果您有不使用此方法的现有项目，则可以从该项目中复制资源。 将资源文件添加到项目后，你差不多已做好生成项目的准备。 必须执行唯一操作是设置链接器选项以包括 **/NOENTRY**。 这将通知链接器，该 DLL 没有入口点-因为它没有代码，它具有不到入口点。  
   
 > [!NOTE]
 >  Visual C++ 4.0 和更高版本中的资源编辑器通过 .RC 文件支持多种语言。 这使您在单个项目中管理本地化很容易。 每种语言的资源由资源编辑器生成的预处理器指令控制。  

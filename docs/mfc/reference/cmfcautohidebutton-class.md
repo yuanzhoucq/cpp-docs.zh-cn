@@ -1,12 +1,9 @@
 ---
-title: "CMFCAutoHideButton 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCAutoHideButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f40b7ab03e79d38d36a1b25a4cd973a5077468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 类
 显示或隐藏配置为隐藏的 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 按钮。  
@@ -125,10 +120,10 @@ class CMFCAutoHideButton : public CObject
   
  `CMFCAutoHideButton`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxautohidebutton.h  
   
-##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
 
   
 ```  
@@ -137,7 +132,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>  CMFCAutoHideButton::Create  
  创建并初始化自动隐藏按钮。  
   
 ```  
@@ -173,7 +168,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  检索自动隐藏按钮的对齐方式。  
   
 ```  
@@ -194,7 +189,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  返回[CDockablePane](../../mfc/reference/cdockablepane-class.md)与自动隐藏按钮关联的对象。  
   
 ```  
@@ -207,7 +202,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>备注  
  若要将与自动隐藏按钮相关联`CDockablePane`，传递`CDockablePane`作为参数传递给[CMFCAutoHideButton::Create](#create)方法。  
   
-##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
   
 ```  
@@ -218,7 +213,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect  
 
   
 ```  
@@ -229,7 +224,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize  
  确定自动隐藏按钮的大小。  
   
 ```  
@@ -242,7 +237,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>备注  
  计算的大小包括自动隐藏按钮的边框的大小。  
   
-##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
  返回自动隐藏按钮的文本标签大小。  
   
 ```  
@@ -252,7 +247,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>返回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)对象，其中包含自动隐藏按钮的文本的大小。  
   
-##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  指示自动隐藏按钮是否处于活动状态。  
   
 ```  
@@ -260,12 +255,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果自动隐藏按钮处于活动状态;`FALSE`否则为。  
+ `TRUE` 如果自动隐藏按钮处于活动状态;`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
  时，自动隐藏按钮处于活动状态关联[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)显示窗口。  
   
-##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  确定自动隐藏按钮的方向是水平还是垂直。  
   
 ```  
@@ -278,7 +273,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>备注  
  设置的方向，框架[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)对象时创建它。  你可以通过使用控制方向`dwAlignment`中的参数[CMFCAutoHideButton::Create](#create)方法。  
   
-##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
   
 ```  
@@ -289,7 +284,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
  指示自动隐藏按钮是否可见。  
   
 ```  
@@ -297,9 +292,9 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果按钮是可见的;`FALSE`否则为。  
+ `TRUE` 如果按钮是可见的;`FALSE`否则为。  
   
-##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  框架在绘制自动隐藏按钮时调用此方法。  
   
 ```  
@@ -313,7 +308,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>备注  
  如果你想要自定义应用程序中的自动隐藏按钮的外观，创建一个新的类派生自`CMFCAutoHideButton`。 在派生类中，重写此方法。  
   
-##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  框架在绘制自动隐藏按钮的边框时调用此方法。  
   
 ```  
@@ -336,7 +331,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>备注  
  如果你想要自定义应用程序中的每个自动隐藏按钮的边框，创建一个新的类派生自`CMFCAutoHideButton`。 在派生类中，重写此方法。  
   
-##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  框架在填充自动隐藏按钮的背景时调用此方法。  
   
 ```  
@@ -355,7 +350,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>备注  
  如果你想要自定义应用程序中的自动隐藏按钮的背景，创建一个新的类派生自`CMFCAutoHideButton`。 在派生类中，重写此方法。  
   
-##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
  显示或隐藏关联[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。  
   
 ```  
@@ -366,7 +361,7 @@ void ShowAttachedWindow(BOOL bShow);
  [in] `bShow`  
  一个布尔值，指定此方法显示附加`CDockablePane`。  
   
-##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  显示或隐藏自动隐藏按钮。  
   
 ```  
@@ -377,7 +372,7 @@ virtual void ShowButton(BOOL bShow);
  [in] `bShow`  
  一个布尔值，指定是否显示自动隐藏按钮。  
   
-##  <a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
   
 ```  
@@ -389,7 +384,7 @@ void Move(int nOffset);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane  
 
   
 ```  
@@ -401,7 +396,7 @@ void ReplacePane(CDockablePane* pNewBar);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode  
  禁用自动隐藏模式。  
   
 ```  
@@ -414,7 +409,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
  突出显示自动隐藏按钮。  
   
 ```  
@@ -423,11 +418,11 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>参数  
  `bHighlight`  
- 指定新的自动隐藏按钮的状态。 `TRUE`指示按钮将突出显示，`FALSE`指示按钮未突出显示。  
+ 指定新的自动隐藏按钮的状态。 `TRUE` 指示按钮将突出显示，`FALSE`指示按钮未突出显示。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
  返回自动隐藏按钮的突出显示状态。  
   
 ```  

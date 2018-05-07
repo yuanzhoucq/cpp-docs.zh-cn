@@ -2,12 +2,9 @@
 title: CDaoDatabaseInfo 结构 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoDatabaseInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 085d0e525cb00c9fffb3698080194da92a6dbb8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 结构
 `CDaoDatabaseInfo`结构包含有关定义为数据访问对象 (DAO) 的数据库对象的信息。  
@@ -109,9 +104,9 @@ struct CDaoDatabaseInfo
 ## <a name="remarks"></a>备注  
  数据库是基础类的 MFC 对象的 DAO 对象[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)。 对主、 辅助数据库，以及所有上面的引用指示如何通过返回的信息[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成员函数。  
   
- 检索的信息[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成员函数将存储在`CDaoDatabaseInfo`结构。 调用`GetDatabaseInfo`为`CDaoWorkspace`其数据库集合中存储的数据库对象的对象。 `CDaoDatabaseInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoDatabaseInfo`对象。  
+ 检索的信息[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成员函数将存储在`CDaoDatabaseInfo`结构。 调用`GetDatabaseInfo`为`CDaoWorkspace`其数据库集合中存储的数据库对象的对象。 `CDaoDatabaseInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoDatabaseInfo`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

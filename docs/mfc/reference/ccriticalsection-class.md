@@ -1,12 +1,9 @@
 ---
-title: "CCriticalSection 类 |Microsoft 文档"
-ms.custom: 
+title: CCriticalSection 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 类
 表示一个"临界区"-每次访问资源或代码段的允许一个线程的同步对象。  
@@ -96,10 +91,10 @@ class CCriticalSection : public CSyncObject
   
  `CCriticalSection`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
  构造 `CCriticalSection` 对象。  
   
 ```  
@@ -114,7 +109,7 @@ CCriticalSection();
 ### <a name="example"></a>示例  
   请参阅示例[CCriticalSection::Lock](#lock)。  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>  CCriticalSection::Lock  
  调用此成员函数可访问的关键部分对象。  
   
 ```  
@@ -124,13 +119,13 @@ BOOL Lock(DWORD dwTimeout);
   
 ### <a name="parameters"></a>参数  
  `dwTimeout`  
- `Lock`将忽略此参数值。  
+ `Lock` 将忽略此参数值。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则非零否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `Lock`是一个不会返回之前的关键部分对象处于有信号状态的阻塞调用 （可用时）。  
+ `Lock` 是一个不会返回之前的关键部分对象处于有信号状态的阻塞调用 （可用时）。  
   
  如果已超时的等待是必需的则可以使用[CMutex](../../mfc/reference/cmutex-class.md)对象而不是`CCriticalSection`对象。  
   
@@ -141,14 +136,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
  包含由所有关键部分对象`CCriticalSection`方法。  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *  
  检索**CRITICAL_SECTION**对象。  
   
 ```  
@@ -158,7 +153,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>备注  
  调用此函数可检索到内部指针**CRITICAL_SECTION**对象。  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
  版本`CCriticalSection`以供另一个线程的对象。  
   
 ```  

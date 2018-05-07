@@ -1,13 +1,10 @@
 ---
-title: "OLE 控件的持久性 |Microsoft 文档"
-ms.custom: 
+title: OLE 控件的持久性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控件的持久性
 OLE 控件的一项功能是属性持久化（或称为“序列化”），它允许 OLE 控件在文件或流中读取或写入属性值。 即使在容器应用程序销毁该控件之后，该应用程序仍可以使用序列化来存储控件的属性值。 之后，当创建控件的新实例时，OLE 控件的属性值可从文件或流中读取。  
@@ -54,7 +49,7 @@ OLE 控件的一项功能是属性持久化（或称为“序列化”），它�
   
  此外，还提供了 `AfxOleTypeMatchGuid` 全局函数来测试 `TYPEDESC` 与给定 GUID 是否匹配。  
   
-##  <a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>  PX_Blob  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化存储二进制大型对象 (BLOB) 数据的属性。  
   
 ```  
@@ -99,7 +94,7 @@ hBlobDefault
   
  请注意，`PX_Blob`将分配内存，使用 Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API，在加载 BLOB 类型属性时。 你负责释放此内存。 因此，应调用你的控件的析构函数[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)句柄以释放 BLOB 类型的任何属性上向上分配给控件的任何内存。  
   
-##  <a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>  PX_Bool  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**BOOL**。  
   
 ```  
@@ -142,7 +137,7 @@ bValue  ,
 ### <a name="remarks"></a>备注  
  属性的值将无法读取或写入到引用的变量`bValue`适当。 如果`bDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>  PX_Color  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**OLE_COLOR**。  
   
 ```  
@@ -184,7 +179,7 @@ clrDefault);
 ### <a name="remarks"></a>备注  
  属性的值将无法读取或写入到引用的变量`clrValue`适当。 如果`clrDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>  PX_Currency  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**货币**。  
   
 ```  
@@ -227,7 +222,7 @@ cyValue  ,
 ### <a name="remarks"></a>备注  
  属性的值将无法读取或写入到引用的变量`cyValue`适当。 如果`cyDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>  PX_DataPath  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的数据路径属性[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)。  
   
 ```  
@@ -263,7 +258,7 @@ pPX,
 ### <a name="remarks"></a>备注  
  数据路径属性实现异步控件属性。 属性的值将无法读取或写入到引用的变量`dataPathProperty`适当。  
   
-##  <a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>  PX_Double  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**double**。  
   
 ```  
@@ -306,7 +301,7 @@ doubleValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`doubleValue`适当。 如果`doubleDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>  PX_Font  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型字体的属性。  
   
 ```  
@@ -352,7 +347,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>备注  
  读取或写入属性的值`font`、`CFontHolder`引用，在适当的时候。 如果`pFontDesc`和`pFontDispAmbient`指定，它们用于初始化属性的默认值，在需要时。 如果出于任何原因，控件的序列化过程失败，则使用这些值。 通常情况下，传递**NULL**为`pFontDesc`和返回的环境值`COleControl::AmbientFont`为`pFontDispAmbient`。 请注意，返回字体对象`COleControl::AmbientFont`必须通过调用释放**IFontDisp::Release**成员函数。  
   
-##  <a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>  PX_Float  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**float**。  
   
 ```  
@@ -395,7 +390,7 @@ floatValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`floatValue`适当。 如果`floatDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>  PX_IUnknown  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化对象具有所表示的属性**IUnknown**-派生接口。  
   
 ```  
@@ -437,7 +432,7 @@ pUnkDefault
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值*pUnk*适当。 如果`pUnkDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>  PX_Long  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**长**。  
   
 ```  
@@ -480,7 +475,7 @@ lValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`lValue`适当。 如果`lDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>  PX_Picture  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化你的控件的图片属性。  
   
 ```  
@@ -523,7 +518,7 @@ pict  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`pict`适当。 如果`pictDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>  PX_Short  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**短**。  
   
 ```  
@@ -566,7 +561,7 @@ sValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`sValue`适当。 如果`sDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>  PX_ULong  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性**ULONG**。  
   
 ```  
@@ -609,7 +604,7 @@ ulValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`ulValue`适当。 如果`ulDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>  PX_UShort  
  调用此函数在控件的`DoPropExchange`成员函数，以便序列化或初始化类型的属性`unsigned`**短**。  
   
 ```  
@@ -652,7 +647,7 @@ usValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值*usValue*适当。 如果*usDefault*指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>  PXstring  
  调用此函数在控件的**DoPropExchange**成员函数，以便序列化或初始化字符的字符串属性。  
   
 ```  
@@ -695,7 +690,7 @@ strValue  ,
 ### <a name="remarks"></a>备注  
  读取或写入变量引用的属性的值`strValue`适当。 如果`strDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控件的序列化过程失败，则使用此值。  
   
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
  调用此函数在控件的`DoPropExchange`成员函数以通过转换将 VBX 控件的字体相关的属性初始化字体属性。  
   
 ```  
@@ -718,9 +713,9 @@ pPX  ,
  如果 exchange 成功; 则为非 0如果不成功，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 仅设计为将 VBX 控件的直接替换 OLE 控件才应使用此函数。 当 Visual Basic 开发环境将转换包含将 VBX 控件使用相应替换 OLE 控件的窗体时，它将调用控件的**IDataObject::SetData**函数，传递属性中的设置，包含将 VBX 控件的属性数据。 此操作，反过来，导致该控件的`DoPropExchange`要调用函数。 `DoPropExchange`可以调用`PX_VBXFontConvert`用于将 VBX 控件的字体相关属性转换 (例如，"字体名称，""FontSize，"，依此类推) 到 OLE 控件的字体属性的相应组件。  
+ 仅设计为将 VBX 控件的直接替换 OLE 控件才应使用此函数。 当 Visual Basic 开发环境将转换包含将 VBX 控件使用相应替换 OLE 控件的窗体时，它将调用控件的**IDataObject::SetData**函数，传递属性中的设置，包含将 VBX 控件的属性数据。 此操作，反过来，导致该控件的`DoPropExchange`要调用函数。 `DoPropExchange` 可以调用`PX_VBXFontConvert`用于将 VBX 控件的字体相关属性转换 (例如，"字体名称，""FontSize，"，依此类推) 到 OLE 控件的字体属性的相应组件。  
   
- `PX_VBXFontConvert`应仅调用控件实际上当转换从 VBX 窗体应用程序时。 例如:  
+ `PX_VBXFontConvert` 应仅调用控件实际上当转换从 VBX 窗体应用程序时。 例如：  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  

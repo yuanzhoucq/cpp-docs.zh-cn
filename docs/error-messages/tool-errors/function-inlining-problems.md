@@ -2,11 +2,8 @@
 title: 函数内联问题 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 670136a61d5991655a5d99e8257c6bcc907f2dfb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-inlining-problems"></a>函数内联问题
 如果你使用的内联的函数，您必须：  
@@ -67,7 +62,7 @@ int main() {
 }  
 ```  
   
- 如果你使用`#pragma inline_depth`编译器指令，请确保你已设置的值为 2 或更高版本。 值为 0 会关闭内联。 此外请确保你使用**/Ob1**或**/Ob2**编译器选项。  
+ 如果你使用`#pragma inline_depth`编译器指令，请确保你已设置的值为 2 或更高版本。 值为 0 会关闭内联。 此外请确保你使用 **/Ob1**或 **/Ob2**编译器选项。  
   
  混合在不同模块上的内联和非内联编译选项有时会导致问题。 如果使用函数内联开启创建 c + + 库 ([/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)) 但描述函数的相应标头文件具有内联关闭 （未选项），你将收到错误 LNK2001。 函数不会获得与内联到代码从标头文件中，但因为它们不在库文件中没有任何地址来解析引用。  
   

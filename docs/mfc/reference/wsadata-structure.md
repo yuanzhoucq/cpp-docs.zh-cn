@@ -1,13 +1,10 @@
 ---
-title: "WSADATA 结构 |Microsoft 文档"
-ms.custom: 
+title: WSADATA 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WSADATA
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WSADATA structure [MFC]
 ms.assetid: 80cc60e5-f9ae-4290-8ed5-07003136627d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cfbeb0e917914881587cb70fd345a903a08ecc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93c98f792e1d72d3e6d4a8e15b8347c653b32f46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsadata-structure"></a>WSADATA 结构
 `WSADATA` 结构用于存储通过调用 `AfxSocketInit` 全局函数返回的 Windows 套接字初始化信息。  
@@ -69,7 +64,7 @@ struct WSAData {
 > [!NOTE]
 >  在 MFC 中，`WSADATA` 结构将由 `AfxSocketInit` 函数返回，该函数是您在 `InitInstance` 函数中调用的。 如果您之后需要使用其中的信息，则可检索此结构并将其存储在程序中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** winsock2.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,29 +1,24 @@
 ---
-title: "复合文档支持，MFC 应用程序向导 |Microsoft 文档"
-ms.custom: 
+title: 复合文档支持，MFC 应用程序向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>MFC 应用程序向导的复合文档支持
 在 MFC 应用程序向导的此页中，指示你的应用程序提供的复合和活动文档支持级别。 你的应用程序必须支持文档/视图体系结构，以支持复合文档和文档模板。  

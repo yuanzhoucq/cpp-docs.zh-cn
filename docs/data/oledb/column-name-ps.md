@@ -1,12 +1,9 @@
 ---
-title: COLUMN_NAME_PS | Microsoft Docs
-ms.custom: 
+title: COLUMN_NAME_PS |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_PS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_PS macro
 ms.assetid: 681795d5-0a95-4c8d-b188-2e6ed121ffaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 565b3a57aacc48ce54b6bf2fe0f7540bde3e3be6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 54eb28e7ebdd51bb93fd4d6f11ddecd6a503f2a0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnameps"></a>COLUMN_NAME_PS
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用精度和小数位数。  
@@ -53,7 +48,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 ## <a name="remarks"></a>备注  
  请参阅[COLUMN_NAME](../../data/oledb/column-name.md)有关在何处信息**COLUMN_NAME_\*** 使用宏，则。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "CStatusBar 类 |Microsoft 文档"
-ms.custom: 
+title: CStatusBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBar
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c373f21762c1bf7f21d2a775453bab74c735891d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 类
 含有文本输出窗格或“指示符”的控件条。  
@@ -96,7 +91,7 @@ class CStatusBar : public CControlBar
 ## <a name="remarks"></a>备注  
  输出窗格通常用作消息行和状态指示器用于。 示例包括简短解释选定的菜单命令的菜单帮助消息行和指示器显示 SCROLL LOCK、 NUM LOCK 和其他键的状态。  
   
- [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)，成员函数新到 MFC 4.0，使你可以利用的状态栏自定义项和其他功能的 Windows 公共控件的支持。 `CStatusBar`成员函数为您提供的大多数 Windows 公共控件; 功能但是，当调用`GetStatusBarCtrl`，你可让你状态栏甚至多个 Windows 95/98 状态栏的特征。 当调用`GetStatusBarCtrl`，它将返回到引用`CStatusBarCtrl`对象。 请参阅[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)有关设计使用 Windows 公共控件的工具栏的详细信息。 公共控件有关的更多常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)，成员函数新到 MFC 4.0，使你可以利用的状态栏自定义项和其他功能的 Windows 公共控件的支持。 `CStatusBar` 成员函数为您提供的大多数 Windows 公共控件; 功能但是，当调用`GetStatusBarCtrl`，你可让你状态栏甚至多个 Windows 95/98 状态栏的特征。 当调用`GetStatusBarCtrl`，它将返回到引用`CStatusBarCtrl`对象。 请参阅[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)有关设计使用 Windows 公共控件的工具栏的详细信息。 公共控件有关的更多常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
  框架将指示器信息存储在带有最左侧指示器位置 0 处的数组。 当你创建一个状态栏时，你将使用字符串框架将与相应的指示器相关联的 Id 的数组。 你可以使用字符串 ID 或索引访问指示器。  
   
@@ -133,10 +128,10 @@ class CStatusBar : public CControlBar
   
  `CStatusBar`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CStatusBar::CommandToIndex  
  获取给定 id 对应的指示器索引  
   
 ```  
@@ -153,7 +148,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>备注  
  第一个指示器的索引为 0。  
   
-##  <a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>  CStatusBar::Create  
  创建状态栏 （子窗口），并将其与关联`CStatusBar`对象。  
   
 ```  
@@ -170,11 +165,11 @@ virtual BOOL Create(
  `dwStyle`  
  状态栏样式中。 除了标准的 Windows[样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)，支持这些样式。  
   
-- `CBRS_TOP`控件条是在框架窗口的顶部。  
+- `CBRS_TOP` 控件条是在框架窗口的顶部。  
   
-- `CBRS_BOTTOM`控件条是在框架窗口的底部。  
+- `CBRS_BOTTOM` 控件条是在框架窗口的底部。  
   
-- `CBRS_NOALIGN`父级调整大小时，将不会重新定位控件条。  
+- `CBRS_NOALIGN` 父级调整大小时，将不会重新定位控件条。  
   
  `nID`  
  工具栏的子窗口 id。  
@@ -185,7 +180,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  此外设置初始字体，然后将状态设置为默认值的栏的高度。  
   
-##  <a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>  CStatusBar::CreateEx  
  调用此函数可创建状态栏 （子窗口），并将其与关联`CStatusBar`对象。  
   
 ```  
@@ -223,14 +218,14 @@ virtual BOOL CreateEx(
   
  使用`CreateEx`，而不是[创建](#create)，当某些样式需要在嵌入的状态栏控件的创建过程。 例如，设置`dwCtrlStyle`到**SBT_TOOLTIPS**中的状态栏对象显示工具提示。  
   
-##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  构造`CStatusBar`对象，创建一个默认状态栏的字体如有必要，并将字体特征设置为默认值。  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>  CStatusBar::DrawItem  
  由框架在所有者绘制状态栏会发生变化的可视方面时调用此成员函数。  
   
 ```  
@@ -244,7 +239,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>备注  
  **ItemAction**的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。 重写该成员函数以实现所有者描述的绘图`CStatusBar`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前的此成员函数终止。  
   
-##  <a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>  CStatusBar::GetItemID  
  返回由指定指示器的 ID `nIndex`。  
   
 ```  
@@ -258,7 +253,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>返回值  
  指定指示器的 ID `nIndex`。  
   
-##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
  将复制指定指示器的坐标`nIndex`为指向结构`lpRect`。  
   
 ```  
@@ -277,7 +272,7 @@ void GetItemRect(
 ### <a name="remarks"></a>备注  
  坐标是以相对于状态栏的左上角的像素为单位。  
   
-##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
  集`nID`， `nStyle`，和`cxWidth`到 ID、 样式和在指定的位置指示器窗格的宽度`nIndex`。  
   
 ```  
@@ -301,7 +296,7 @@ void GetPaneInfo(
  `cxWidth`  
  对一个整数，它设置为窗格的宽度的引用。  
   
-##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
  调用此成员函数可检索的状态栏窗格中的样式。  
   
 ```  
@@ -320,7 +315,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  有关可用于状态栏的样式的列表，请参阅[创建](#create)。  
   
-##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>  CStatusBar::GetPaneText  
  调用此成员函数以检索在状态栏窗格中显示的文本。  
   
 ```  
@@ -340,7 +335,7 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ### <a name="remarks"></a>备注  
  此成员的第二种形式函数填充`CString`具有字符串文本对象。  
   
-##  <a name="getstatusbarctrl"></a>CStatusBar::GetStatusBarCtrl  
+##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
  此成员函数允许直接访问基础的公共控件。  
   
 ```  
@@ -355,7 +350,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
   
  公共控件有关的更多常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
-##  <a name="setindicators"></a>CStatusBar::SetIndicators  
+##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
  每个指示器 ID 设置为指定数组的相应元素的值`lpIDArray`、 加载指定的每个 ID 的字符串资源和将指示器的文本设置为字符串。  
   
 ```  
@@ -374,7 +369,7 @@ BOOL SetIndicators(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="setpaneinfo"></a>CStatusBar::SetPaneInfo  
+##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
  将指定的指示器窗格设置为新的 ID、 样式和宽度。  
   
 ```  
@@ -411,7 +406,7 @@ void SetPaneInfo(
   
 - **SBPS_NORMAL**没有 stretch、 边框或弹出。  
   
-##  <a name="setpanestyle"></a>CStatusBar::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  调用此成员函数以设置状态栏的窗格中的样式。  
   
 ```  
@@ -432,7 +427,7 @@ void SetPaneStyle(
   
  有关可用于状态栏的样式的列表，请参阅[SetPaneInfo](#setpaneinfo)。  
   
-##  <a name="setpanetext"></a>CStatusBar::SetPaneText  
+##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
  调用此成员函数可设置为指向字符串的窗格文本`lpszNewText`。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2247 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2247 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2247
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eac2f90d689bf230b317a0443b5ec79ab40be632
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed27398ea1f51ccc2ef0d3339446b422c7a503c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2247"></a>编译器错误 C2247
 identifier 无法访问，因为 class 使用 specifier 继承 class  
   
- `identifier`是从声明具有私有或受保护的访问权限的类继承。  
+ `identifier` 是从声明具有私有或受保护的访问权限的类继承。  
   
  下面的示例生成 C2247:  
   

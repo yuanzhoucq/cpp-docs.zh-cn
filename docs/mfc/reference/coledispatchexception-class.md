@@ -1,12 +1,9 @@
 ---
-title: "COleDispatchException 类 |Microsoft 文档"
-ms.custom: 
+title: COleDispatchException 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90c59e4f85c871c113e51063ef1d50997bb508b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 类
 处理特定于 OLE `IDispatch` 接口的异常，此接口是 OLE 自动化的重要组成部分。  
@@ -72,10 +67,10 @@ class COleDispatchException : public CException
   
  `COleDispatchException`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
   
-##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext  
  标识你的应用程序帮助中的帮助上下文 (。HLP) 文件。  
   
 ```  
@@ -88,7 +83,7 @@ DWORD m_dwHelpContext;
 ### <a name="example"></a>示例  
   请参阅示例[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription  
  包含一个口头错误说明，如"磁盘已满。"  
   
 ```  
@@ -101,14 +96,14 @@ CString m_strDescription;
 ### <a name="example"></a>示例  
   请参阅示例[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile  
  框架填充应用程序的帮助文件的名称与此字符串中。  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>  COleDispatchException::m_strSource  
  框架填充生成异常的应用程序的名称与此字符串中。  
   
 ```  
@@ -118,7 +113,7 @@ CString m_strSource;
 ### <a name="example"></a>示例  
   请参阅示例[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>  COleDispatchException::m_wCode  
  包含特定于你的应用程序的错误代码。  
   
 ```  

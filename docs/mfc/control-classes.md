@@ -1,13 +1,10 @@
 ---
-title: "控件类 |Microsoft 文档"
-ms.custom: 
+title: 控件类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.control
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376fb3836d92a1fae348929a7faa49b44dfd866e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffd7b3b7d2eb9db68fd61ac693c65d87b2ee62d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-classes"></a>控件类
 控件类封装各种范围从静态文本控件到树控件的标准 Windows 控件。 此外，MFC 提供了一些新的控件，包括使用位图和控件条按钮。  

@@ -1,13 +1,10 @@
 ---
-title: "消息映射范围的处理程序 |Microsoft 文档"
-ms.custom: 
+title: 消息映射范围的处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 此文章介绍了如何将一系列消息映射到单个消息处理程序函数 （而不是将一条消息映射到一个功能）。  
@@ -154,5 +149,5 @@ ms.lasthandoff: 03/16/2018
   
  在示例中所示的代码是典型： 将值传递到转换`int`内的消息范围和声明这种情况。 然后，你可能需要一些不同的操作，具体取决于单击按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明消息处理程序函数](../mfc/declaring-message-handler-functions.md)

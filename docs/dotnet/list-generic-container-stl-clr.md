@@ -1,12 +1,9 @@
 ---
-title: "list::generic_container (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: list::generic_container (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::generic_container
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_container member [STL/CLR]
 ms.assetid: 1a8b708e-3c75-4551-a86e-5b50d6be706a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5f04032a3777e9537a7565f479d2a3dce5b407cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de07ce224452e1d6f3c9c8cc864f80c515718e24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listgenericcontainer-stlclr"></a>list::generic_container (STL/CLR)
 容器的泛型接口的类型。  
@@ -93,7 +88,7 @@ a b c d
 a b c d e  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  

@@ -1,13 +1,10 @@
 ---
-title: "TN006： 消息映射 |Microsoft 文档"
-ms.custom: 
+title: TN006： 消息映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.messages.maps
 dev_langs:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a44cd8d8b979a75eca7647861c579bf0c070b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 160b88a7069ac9a5851c0f472f756d694e59874e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn006-message-maps"></a>TN006：消息映射
 此注释描述 MFC 消息映射工具。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
 -   一种受保护虚函数调用`GetMessageMap`返回的地址`messageMap`。  
   
- 应使用消息映射的任何类声明中放置此宏。 按照约定，它是在类声明的末尾。 例如:  
+ 应使用消息映射的任何类声明中放置此宏。 按照约定，它是在类声明的末尾。 例如：  
   
 ```  
 class CMyWnd : public CMyParentWndClass  

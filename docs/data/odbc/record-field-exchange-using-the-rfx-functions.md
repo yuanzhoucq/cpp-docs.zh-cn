@@ -1,13 +1,10 @@
 ---
-title: "记录字段交换： 使用 RFX 函数 |Microsoft 文档"
-ms.custom: 
+title: 记录字段交换： 使用 RFX 函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f834f9f52c8d01dbd7eb3ff54b794afc11630ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>记录字段交换：使用 RFX 函数
 本主题说明如何使用构成的主体 RFX 函数调用你`DoFieldExchange`重写。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  RFX 全局函数交换在记录集中的数据源和字段数据成员上的列之间的数据。 你编写记录集的调用 RFX 函数[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)成员函数。 本主题简要介绍了函数，并显示对其使用 RFX 函数均可用的数据类型。 [技术说明 43](../../mfc/tn043-rfx-routines.md)介绍如何为其他数据类型编写您自己的 RFX 函数。  
   
-##  <a name="_core_rfx_function_syntax"></a>RFX 函数语法  
+##  <a name="_core_rfx_function_syntax"></a> RFX 函数语法  
  每个 RFX 函数采用三个参数 （和有些方法采用一个可选的第四个或第五个参数）：  
   
 -   指向的指针[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)对象。 你只需传递`pFX`指针传递给`DoFieldExchange`。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅下的 RFX 函数[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*类库参考*。 当你可能会使特殊的示例使用的参数，请参阅[记录集： 获取 Sum 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)。  
   
-##  <a name="_core_rfx_data_types"></a>RFX 数据类型  
+##  <a name="_core_rfx_data_types"></a> RFX 数据类型  
  类库提供数据源和你的记录集之间传输许多不同的数据类型的 RFX 的函数。 以下列表总结了 RFX 函数按数据类型。 在你必须在其中编写你自己 RFX 函数调用的情况下，选择按数据类型从这些函数。  
   
 |函数|数据类型|  

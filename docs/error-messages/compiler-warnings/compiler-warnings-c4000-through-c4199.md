@@ -2,11 +2,8 @@
 title: 编译器警告 C4000 通过 C4199 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +95,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 62f99b7be82ccd786bf2b2a5d18ed24a3e3211ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>编译器警告 C4000 通过 C4199
 
@@ -159,7 +154,7 @@ ms.lasthandoff: 04/28/2018
 |编译器警告 （等级 1） C4051|类型转换；可能丢失数据|
 |编译器警告 （等级 4） C4052|函数声明不同；一个包含变量参数|
 |编译器警告 （等级 4） C4053|“?:”的一个 void 操作数|
-|[编译器警告 （等级 1） C4055](compiler-warning-level-1-c4055.md)|conversion： 从数据指针*type1*到函数指针*type2*|
+|[编译器警告（等级 1）C4055](compiler-warning-level-1-c4055.md)|conversion： 从数据指针*type1*到函数指针*type2*|
 |[编译器警告（等级 2）C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|浮点常量的算术溢出|
 |编译器警告 （等级 4） C4057|operator: identifier1 在不同间接寻址到略有不同的基类型与 identifier2|
 |编译器警告 C4060|switch 语句包含任何 case 或 default 标签|

@@ -1,13 +1,10 @@
 ---
-title: "TN028： 区分上下文的帮助支持 |Microsoft 文档"
-ms.custom: 
+title: TN028： 区分上下文的帮助支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028：区分上下文的帮助支持
 此注释描述在 MFC 中分配帮助上下文 ID 和其他帮助问题的规则。 上下文相关帮助支持需要 Visual C++ 中提供的帮助编译器。  
@@ -141,7 +136,7 @@ WPARAM, LPARAM lParam)
 ## <a name="mfc-application-wizard-support-and-makehm"></a>MFC 应用程序向导支持和 MAKEHM  
  MFC 应用程序向导将创建生成帮助文件所需的文件（.cnt 文件和 .hpj 文件）。 它还包括 Microsoft 帮助编译器接受的一些预先生成 .rtf 文件。 许多主题已完成，但一些主题可能需要为特定应用程序进行修改。  
   
- 名为 MAKEHM 的实用工具将支持“帮助映射”文件的自动创建。 MAKEHM 实用工具可以将应用程序的 RESOURCE.H 文件转换为帮助映射文件。 例如:  
+ 名为 MAKEHM 的实用工具将支持“帮助映射”文件的自动创建。 MAKEHM 实用工具可以将应用程序的 RESOURCE.H 文件转换为帮助映射文件。 例如：  
   
 ```  
 #define IDD_MY_DIALOG   2000  

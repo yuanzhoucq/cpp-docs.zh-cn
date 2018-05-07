@@ -1,13 +1,10 @@
 ---
-title: "多个文档类型、 视图和框架窗口 |Microsoft 文档"
-ms.custom: 
+title: 多个文档类型、 视图和框架窗口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多文档类型、视图和框架窗口
 [文档/视图创建](../mfc/document-view-creation.md)中介绍了文档及其视图和架构窗口之间的标准关系。 许多应用程序都支持单文档类型，但可以出现该类型的多个打开的文档，单文档类型指在文档上具有单个视图，而且每个文档只有一个框架窗口的文档类型。 但某些应用程序可能需要改变一个或多个这些默认值。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  下图被分成 a、b、c 三部分，按上面介绍的顺序显示三个用户界面模型。  
   
- ![多个 &#45; 视图用户界面](../mfc/media/vc37a71.gif "vc37a71")  
+ ![多个&#45;查看用户界面](../mfc/media/vc37a71.gif "vc37a71")  
 多视图用户界面  
   
  框架通过实现“新建窗口”命令和提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)类来提供这些模型，请参见 [拆分窗口](#_core_splitter_windows)中的讨论。 可以用这些作为起点实现其他模型。 有关阐释视图、框架窗口和拆分条的不同配置的示例程序，请参阅 [MFC 示例](../visual-cpp-samples.md)。  

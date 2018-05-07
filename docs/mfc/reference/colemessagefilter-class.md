@@ -1,12 +1,9 @@
 ---
-title: "COleMessageFilter 类 |Microsoft 文档"
-ms.custom: 
+title: COleMessageFilter 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 类
 管理 OLE 应用程序交互所需的并发。  
@@ -99,10 +94,10 @@ class COleMessageFilter : public CCmdTarget
   
  `COleMessageFilter`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
  调用此函数可开始繁忙状态。  
   
 ```  
@@ -116,14 +111,14 @@ virtual void BeginBusyState();
   
  默认情况下，框架进入忙状态在空闲处理，通过执行期间[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 处理应用程序时**ON_COMMANDUPDATEUI**空闲处理完成后，将更高版本，处理通知，传入调用。  
   
-##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  创建一个 `COleMessageFilter` 对象。  
   
 ```  
 COleMessageFilter();
 ```  
   
-##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
  启用和禁用繁忙的对话框中，当消息挂起延迟过期时显示 (请参阅[SetRetryReply](#setretryreply)) 期间的 OLE 调用。  
   
 ```  
@@ -134,7 +129,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  指定是否启用或禁用"忙"对话框。  
   
-##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
  启用和禁用"未响应"对话框中，如果键盘或鼠标消息处于挂起状态，则显示在 OLE 过程调用和调用已超时。  
   
 ```  
@@ -145,7 +140,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  指定是否启用或禁用"未响应"对话框。  
   
-##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
  调用此函数可结束繁忙状态。  
   
 ```  
@@ -159,7 +154,7 @@ virtual void EndBusyState();
   
  默认情况下，框架进入忙状态在空闲处理，通过执行期间[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 处理应用程序时`ON_UPDATE_COMMAND_UI`空闲处理完成后处理通知，传入调用。  
   
-##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  正在进行的 OLE 调用时，由处理这些消息框架调用。  
   
 ```  
@@ -178,7 +173,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  你必须通过调用注册消息筛选器[注册](#register)它就会被激活之前。  
   
-##  <a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>  COleMessageFilter::Register  
  使用 OLE 系统 Dll 注册消息筛选器。  
   
 ```  
@@ -193,7 +188,7 @@ BOOL Register();
   
  自动在初始化期间注册和吊销在终止框架的默认消息筛选器。  
   
-##  <a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>  COleMessageFilter::Revoke  
  撤消上一个注册通过调用执行[注册](#register)。  
   
 ```  
@@ -205,7 +200,7 @@ void Revoke();
   
  默认消息筛选器，创建由框架自动注册，并还会自动吊销。  
   
-##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply  
  此函数将应用程序的"繁忙答复。"  
   
 ```  
@@ -229,7 +224,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  默认情况下，繁忙的答复是**SERVERCALL_RETRYLATER**。 此答复导致调用应用程序尽可能快地重试调用。  
   
-##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
  确定调用应用程序调用应用程序，然后执行其他操作的响应，等待多长时间。  
   
 ```  
@@ -243,7 +238,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>备注  
  此函数可配合[SetRetryReply](#setretryreply)。  
   
-##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
  在从调用应用程序接收忙响应时，请确定调用应用程序的操作。  
   
 ```  
@@ -257,7 +252,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ### <a name="remarks"></a>备注  
  在调用应用程序指示忙，调用应用程序可能会决定要等待，直到服务器不再正忙，立即，重试，或在指定时间间隔后重试。 它还可能决定完全取消调用。  
   
- 调用方的响应控制由函数`SetRetryReply`和[SetMessagePendingDelay](#setmessagependingdelay)。 `SetRetryReply`确定调用应用程序的给定调用的重试之间应等待多长时间。 `SetMessagePendingDelay`确定多长时间调用应用程序服务器的响应前等待采取进一步操作。  
+ 调用方的响应控制由函数`SetRetryReply`和[SetMessagePendingDelay](#setmessagependingdelay)。 `SetRetryReply` 确定调用应用程序的给定调用的重试之间应等待多长时间。 `SetMessagePendingDelay` 确定多长时间调用应用程序服务器的响应前等待采取进一步操作。  
   
  通常是可接受和不需要更改的默认值。 框架就会重试调用每个`nRetryReply`直到调用经历或已过期的挂起的消息的延迟的毫秒。 值为 0，`nRetryReply`指定立即重试，和-1，则指定的调用的取消。  
   

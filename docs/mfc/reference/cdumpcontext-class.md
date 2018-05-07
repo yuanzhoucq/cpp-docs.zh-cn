@@ -1,12 +1,9 @@
 ---
-title: "CDumpContext 类 |Microsoft 文档"
-ms.custom: 
+title: CDumpContext 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDumpContext
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d54a461bece96faeb11f78a1788049abcabbae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 类
 支持面向流并使用可读文本格式的诊断输出。  
@@ -70,10 +65,10 @@ class CDumpContext
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|转储上下文中插入变量和对象。|  
+|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|转储上下文中插入变量和对象。|  
   
 ## <a name="remarks"></a>备注  
- `CDumpContext`没有基类。  
+ `CDumpContext` 没有基类。  
   
  你可以使用[afxDump](diagnostic-services.md#afxdump)，预先声明`CDumpContext`对象，以便你转储的大部分。 `afxDump`对象是仅在 Microsoft 基础类库的调试版本中可用。  
   
@@ -81,13 +76,13 @@ class CDumpContext
   
  在 Windows 环境下预定义的输出`afxDump`对象，从概念上讲类似于`cerr`流式处理、 路由到通过 Windows 函数调试器**OutputDebugString**。  
   
- `CDumpContext`类具有重载的插入 (  **<<** ) 运算符`CObject`转储对象的数据的指针。 如果派生的对象需要自定义转储格式，重写[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大多数 Microsoft 基础类实现被重写`Dump`成员函数。  
+ `CDumpContext`类具有重载的插入 ( **<<**) 运算符`CObject`转储对象的数据的指针。 如果派生的对象需要自定义转储格式，重写[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大多数 Microsoft 基础类实现被重写`Dump`成员函数。  
   
  不派生自的类`CObject`，如`CString`， `CTime`，和`CTimeSpan`，具有其自己重载`CDumpContext`插入运算符，为通常使用的是否结构，如**CFileStatus**， `CPoint`，和`CRect`。  
   
  如果你使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏在实现您的类，然后`CObject::Dump`将打印的名称你`CObject`-派生类。 否则，它将打印`CObject`。  
   
- `CDumpContext`类是适用于调试和发布版本的库，但`Dump`仅在调试版本中定义成员函数。 使用**#ifdef _DEBUG**  /  `#endif`语句来封闭诊断代码中，包括您的自定义`Dump`成员函数。  
+ `CDumpContext`类是适用于调试和发布版本的库，但`Dump`仅在调试版本中定义成员函数。 使用 **#ifdef _DEBUG**  /  `#endif`语句来封闭诊断代码中，包括您的自定义`Dump`成员函数。  
   
  在创建你自己之前`CDumpContext`对象，必须创建`CFile`用作转储目标的对象。  
   
@@ -98,10 +93,10 @@ class CDumpContext
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CDumpContext`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext  
  构造类的对象`CDumpContext`。  
   
 ```  
@@ -120,7 +115,7 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex  
  转储格式化为十六进制数字的指定的类型。  
   
 ```  
@@ -143,7 +138,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>  CDumpContext::Flush  
  强制缓冲区写入到文件中剩余的任何数据附加到转储上下文。  
   
 ```  
@@ -153,7 +148,7 @@ void Flush();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>  CDumpContext::GetDepth  
  确定是否正在执行深度或浅表转储。  
   
 ```  
@@ -166,7 +161,7 @@ int GetDepth() const;
 ### <a name="example"></a>示例  
   请参阅示例[SetDepth](#setdepth)。  
   
-##  <a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>  CDumpContext::HexDump  
  转储格式化为十六进制数字的字节数组。  
   
 ```  
@@ -196,7 +191,7 @@ void HexDump(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;  
  将输出转储上下文到指定的数据。  
   
 ```  
@@ -234,7 +229,7 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>  CDumpContext::SetDepth  
  设置转储的深度。  
   
 ```  

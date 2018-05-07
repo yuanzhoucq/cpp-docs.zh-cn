@@ -1,13 +1,10 @@
 ---
-title: "创建文档框架窗口 |Microsoft 文档"
-ms.custom: 
+title: 创建文档框架窗口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-document-frame-windows"></a>创建文档框架窗口
 [文档/视图创建](../mfc/document-view-creation.md)演示如何[CDocTemplate](../mfc/reference/cdoctemplate-class.md)对象安排创建框架窗口、 文档和视图并将它们连接在一起。 三个[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)自变量`CDocTemplate`构造函数指定框架窗口、 文档和文档模板以响应用户命令，例如文件上的新命令动态创建的视图类菜单或 MDI 窗口菜单上的新建窗口命令。 在它创建视图和文档框架窗口时，文档模板将存储此信息以供将来使用。  

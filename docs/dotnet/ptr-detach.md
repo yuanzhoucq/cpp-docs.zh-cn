@@ -1,12 +1,9 @@
 ---
-title: "ptr::Detach |Microsoft 文档"
-ms.custom: 
+title: ptr::Detach |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 放弃的 COM 对象，返回一个指向对象的所有权。  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  在内部，`QueryInterface`上拥有的 COM 对象和任何错误调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
 ## <a name="remarks"></a>备注  
- `Detach`首先将添加到代表调用方的 COM 对象的引用，然后释放拥有的所有引用`com::ptr`。  调用方必须最终发布返回的对象销毁它。  
+ `Detach` 首先将添加到代表调用方的 COM 对象的引用，然后释放拥有的所有引用`com::ptr`。  调用方必须最终发布返回的对象销毁它。  
   
 ## <a name="example"></a>示例  
  本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `DetachDocument`成员函数调用`Detach`以放弃 COM 对象的所有权，并返回到调用方的指针。  
@@ -133,7 +128,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\com\ptr.h >  
   
  **Namespace** msclr:: com  

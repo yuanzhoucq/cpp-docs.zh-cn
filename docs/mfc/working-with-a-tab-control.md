@@ -1,13 +1,10 @@
 ---
-title: "使用选项卡控件 |Microsoft 文档"
-ms.custom: 
+title: 使用选项卡控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 261208c92d55bf09de31cd12c21e348c4d7e41fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4dbc01c83f9561c8174d2a14365a6a8c94e6ded
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-a-tab-control"></a>使用选项卡控件
 使用选项卡控件的最简单方法 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 是使用对话框编辑器将它添加到对话框模板资源。 您还可单独使用选项卡控件。 MFC 调用**InitCommonControls**为你。 关键任务如下所示：  

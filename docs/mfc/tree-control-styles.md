@@ -1,13 +1,10 @@
 ---
-title: "树控件样式 |Microsoft 文档"
-ms.custom: 
+title: 树控件样式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TVS_SINGLEEXPAND
 - TVS_LINESATROOT
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141a2b0db673f8d3c5f2c116de5b5d2ec81a8ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-styles"></a>树控件样式
 树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 样式控制方面的树控件的外观。 创建树控件时，你可以设置的初始样式。 可以检索，还可以通过使用创建树控件后更改样式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数，指定**GWL_STYLE**为`nIndex`参数。 样式的完整列表，请参阅[树视图控件的窗口样式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  

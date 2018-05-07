@@ -1,12 +1,9 @@
 ---
-title: "对 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 对 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::pair
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - pair class [STL/CLR]
 ms.assetid: 3326b4d9-a52a-49e5-8103-9aa5e8b352de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d05dceaa763f8d0e33ccc86e783f66447c48b76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pair-stlclr"></a>pair (STL/CLR)
 此模板类描述一个包装成对的值的对象。  
@@ -70,7 +65,7 @@ template<typename Value1,
 ## <a name="remarks"></a>备注  
  此对象存储值的对。 你使用此模板类将两个值合并到单个对象。 请注意， `cliext::pair` （此处所述） 存储仅托管类型; 若要存储的成对的非托管类型，请使用`std::pair`中声明`<utility>`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/实用工具 >  
   
  **Namespace:** cliext  

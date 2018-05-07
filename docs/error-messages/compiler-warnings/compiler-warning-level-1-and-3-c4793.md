@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 1 和 3） C4793 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 1 和 3） C4793 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>编译器警告（等级 1 和等级 3）C4793
 function： 函数编译为本机代码: reason  
@@ -48,7 +43,7 @@ function： 函数编译为本机代码: reason
 |原因消息|备注|  
 |--------------------|-------------|  
 |在托管代码中不支持对齐的数据类型|CLR 必须能够分配数据，根据需要这可能不可行的如果数据对齐与声明如[__m128](../../cpp/m128.md)或[对齐](../../cpp/align-cpp.md)。|  
-|在托管代码中不支持使用 __ImageBase 的函数|`__ImageBase`是一个特殊的链接器符号，通常用于只能由低级别的本机代码加载 DLL。|  
+|在托管代码中不支持使用 __ImageBase 的函数|`__ImageBase` 是一个特殊的链接器符号，通常用于只能由低级别的本机代码加载 DLL。|  
 |不支持 varargs / clr 编译器选项|本机函数不能调用托管的函数具有[变量自变量列表](../../cpp/functions-with-variable-argument-lists-cpp.md)(varargs) 因为这些函数有不同的堆栈布局要求。 但是，如果你指定`/clr:pure`编译器选项，因为该程序集可以包含仅托管函数支持列表的变量自变量。 有关详细信息，请参阅[纯代码和可验证代码 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。|  
 |64 位 CLR 不支持使用 __ptr32 修饰符声明的数据|指针必须在当前平台上的本机指针相同的大小。 有关详细信息，请参阅[__ptr32、 \__ptr64](../../cpp/ptr32-ptr64.md)。|  
 |32 位 CLR 不支持使用 __ptr64 修饰符声明的数据|指针必须在当前平台上的本机指针相同的大小。 有关详细信息，请参阅[__ptr32、 \__ptr64](../../cpp/ptr32-ptr64.md)。|  

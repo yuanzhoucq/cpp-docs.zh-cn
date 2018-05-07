@@ -1,12 +1,9 @@
 ---
-title: "CDynamicStringAccessorA 类 |Microsoft 文档"
-ms.custom: 
+title: CDynamicStringAccessorA 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessorA
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7dfd677d0a0090946cfa7d6a19ac36e1da57a0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA 类
 可以在不知道数据库架构 （基础结构） 时访问数据源。  
@@ -42,7 +37,7 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
   
  `CDynamicStringAccessorA` 继承**GetString**和`SetString`从`CDynamicStringAccessor`。 当你使用这些方法中的`CDynamicStringAccessorA`对象， ***BaseType***是**CHAR**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**：atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

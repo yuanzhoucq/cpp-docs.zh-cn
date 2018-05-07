@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 本地化 ActiveX 控件 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 本地化 ActiveX 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控件：本地化 ActiveX 控件
 本文讨论本地化 ActiveX 控件接口的过程。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  本文其余部分介绍两个本地化策略。 第一个策略[本地化控件的可编程性接口](#_core_localizing_your_control.92.s_programmability_interface)（属性、 方法和事件的名称）。 第二个策略[本地化控件的用户界面](#_core_localizing_the_control.92.s_user_interface)，使用容器的环境 LocaleID 属性。 有关控件本地化的演示，请参阅 MFC ActiveX 控件示例[LOCALIZE](../visual-cpp-samples.md)。  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>本地化控件的可编程性接口  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> 本地化控件的可编程性接口  
  在本地化控件的可编程性接口（编写使用控件的应用程序的程序员使用的接口），您必须为要支持的每种语言创建一个修改版本的控件 .IDL 文件（用于生成控件类型库的脚本）。 这是您需要本地化控件属性名的唯一位置。  
   
  当您开发一个本地化控件时，在类型库级别包括区域设置 ID 作为特性。 例如，如果要提供一个包含法语本地化属性名称的类型库，请制作 SAMPLE.IDL 文件的副本，称它为 SAMPLEFR.IDL。 将区域设置 ID 特性添加到文件（法语的区域设置 ID 为 0x040c），如下所示：  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  注册控件时，`AfxOleRegisterTypeLib` 函数将在与控件相同的目录中查找指定 .TLB 文件，并在 Windows 注册数据库中注册该文件。 如果未找到 .TLB 文件，则函数将没有任何效果。  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>本地化控件的用户界面  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> 本地化控件的用户界面  
  若要本地化控件的用户界面，请将所有控件的用户可见资源（如属性页和错误消息）放入语言特定资源 DLL 中。 然后您可以使用容器的环境 LocaleID 属性为用户的区域设置选择适当的 DLL。  
   
  以下代码示例演示一种为特定区域设置查找和加载资源 DLL 的方法。 此示例称为 `GetLocalizedResourceHandle` 的成员函数可能是 ActiveX 控件类的成员函数：  

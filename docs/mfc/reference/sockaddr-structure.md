@@ -1,13 +1,10 @@
 ---
-title: "SOCKADDR 结构 |Microsoft 文档"
-ms.custom: 
+title: SOCKADDR 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - SOCKADDR
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SOCKADDR structure [MFC]
 ms.assetid: df1ed66a-f4b8-43f8-8db8-8c2533d25f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55b310ec83aae35c7386d61849663752811651d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f468a0a68dcfedab3b92deea492b48f7876c1610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sockaddr-structure"></a>SOCKADDR 结构
 `SOCKADDR` 结构用于为参与 Windows 套接字通信的计算机存储 Internet 协议 (IP) 地址。  
@@ -49,7 +44,7 @@ struct sockaddr {
 ## <a name="remarks"></a>备注  
  Microsoft TCP/IP 套接字开发人员工具包仅支持 Internet 地址域。 若要实际上填写地址的每个部分的值，请使用专用于此地址格式的 `SOCKADDR_IN` 数据结构。 `SOCKADDR` 和 `SOCKADDR_IN` 数据结构具有相同的大小。 您只需进行强制转换即可在两种结构类型之间切换。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** winsock2.h  
   
 ## <a name="see-also"></a>请参阅  

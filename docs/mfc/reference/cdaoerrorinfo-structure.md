@@ -1,13 +1,10 @@
 ---
-title: "CDaoErrorInfo 结构 |Microsoft 文档"
-ms.custom: 
+title: CDaoErrorInfo 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoErrorInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47b4b68a9fd73b3962254121006eff47282336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c11ebaa7d315d09cea40b4ddc94d5afff498bf7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo 结构
 `CDaoErrorInfo`结构包含有关为数据访问对象 (DAO) 定义的错误对象信息。  
@@ -65,9 +60,9 @@ struct CDaoErrorInfo
   
  有关处理 DAO 错误的详细信息，请参阅文章[异常： 数据库异常](../../mfc/exceptions-database-exceptions.md)。 有关相关信息，请参阅主题 DAO 帮助中的"错误对象"。  
   
- 检索的信息[CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)成员函数将存储在`CDaoErrorInfo`结构。 检查[m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)中的数据成员`CDaoException`捕获异常处理程序或调用中的对象`GetErrorInfo`从`CDaoException`显式创建以检查可能有的错误的对象直接调用 DAO 接口过程中出现。 `CDaoErrorInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoErrorInfo`对象。  
+ 检索的信息[CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)成员函数将存储在`CDaoErrorInfo`结构。 检查[m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)中的数据成员`CDaoException`捕获异常处理程序或调用中的对象`GetErrorInfo`从`CDaoException`显式创建以检查可能有的错误的对象直接调用 DAO 接口过程中出现。 `CDaoErrorInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoErrorInfo`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

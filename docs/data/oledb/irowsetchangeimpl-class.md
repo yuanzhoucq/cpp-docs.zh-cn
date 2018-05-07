@@ -1,12 +1,9 @@
 ---
-title: "IRowsetChangeImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IRowsetChangeImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IRowsetChangeImpl
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - updatable providers, immediate update
 - IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 65463392c96bfa3563929ba64b62bd7454f25ba9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 11435cd1372147efb14aed78448d889fd60dc5a0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 OLE DB 模板实现[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 规范中的接口。  
@@ -95,7 +90,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   另请参阅如何`RUpdateRowset`UpdatePV 示例中使用类  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

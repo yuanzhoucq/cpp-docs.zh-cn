@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3719 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3719 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3719
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6f1f4ad2757d94ebff9c7f0906192944d9f5c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0a399b9ccdb8aefe9e566172c4dc2b566e4fa3ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3719"></a>编译器错误 C3719
 interface： 接口基于的事件源仅用于 COM 事件  
@@ -59,7 +54,7 @@ int main() {
 }  
 ```  
   
- 若要修复此错误，应用[对象](../../windows/object-cpp.md)，[组件类](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，和[event_receiver](../../windows/event-receiver.md)属性相应地进行在其中使用接口 COM 类的类。 例如:  
+ 若要修复此错误，应用[对象](../../windows/object-cpp.md)，[组件类](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，和[event_receiver](../../windows/event-receiver.md)属性相应地进行在其中使用接口 COM 类的类。 例如：  
   
 ```  
 // C3719b.cpp  

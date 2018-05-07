@@ -2,12 +2,9 @@
 title: 自动化客户端 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients"></a>自动化客户端
 利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化客户端是应用程序可以操作属于另一个应用程序公开的对象。 对象公开的应用程序称为自动化服务器。 客户端操作通过访问这些对象的属性和函数的服务器应用程序的对象。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
  然后指定描述的属性和函数的服务器应用程序的对象的类型库文件。 添加项对话框中读取此文件，并创建`COleDispatchDriver`-派生类，与你的应用程序可以调用以类型安全的方式访问 c + + 中的服务器应用程序的对象的成员函数。 其他功能继承自`COleDispatchDriver`简化了调用正确的自动化服务器的过程。  
   
 ### <a name="handling-events-in-automation-clients"></a>自动化客户端中处理事件  
- 如果你想要在你的自动化客户端中处理事件，你需要添加接收器接口。 MFC 提供了向导支持将加载的 ActiveX 控件的接收器接口，但不是支持对其他 COM 服务器。 有关如何将接收器接口添加源接口通过 COM 服务器所述的 MFC 客户端中的信息，请参阅如何： 在创建 MFC-Based COM 客户端 (KB 181845) 中的接收器接口[http://support.microsoft.com/default.aspxscid=kb;en-us;181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845)。  
+ 如果你想要在你的自动化客户端中处理事件，你需要添加接收器接口。 MFC 提供了向导支持将加载的 ActiveX 控件的接收器接口，但不是支持对其他 COM 服务器。 有关如何将接收器接口添加源接口通过 COM 服务器所述的 MFC 客户端中的信息，请参阅如何： 在创建 MFC-Based COM 客户端 (KB 181845) 中的接收器接口[ http://support.microsoft.com/default.aspxscid=kb; en-我们; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845)。  
   
 ## <a name="see-also"></a>请参阅  
  [自动化客户端： 使用类型库](../mfc/automation-clients-using-type-libraries.md)   

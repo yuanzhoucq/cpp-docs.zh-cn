@@ -1,13 +1,10 @@
 ---
-title: "ActiveX 控件容器： 对 ActiveX 控件容器中的 ActiveX 控件编程 |Microsoft 文档"
-ms.custom: 
+title: ActiveX 控件容器： 对 ActiveX 控件容器中的 ActiveX 控件编程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程
 本文介绍了用于访问公开过程[方法](../mfc/mfc-activex-controls-methods.md)和[属性](../mfc/mfc-activex-controls-properties.md)的嵌入 ActiveX 控件。 基本上，你将执行下列步骤：  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a>包装类头文件 (。H） 文件  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> 包装类头文件 (。H） 文件  
  获取并设置属性 （和调用方法） Circ 控件`CCirc`包装类进行的所有公开的方法和属性的声明。 在示例中，这些声明位于 CIRC.H。 下面的示例是类的部分`CCirc`，它定义的 ActiveX 控件公开的接口：  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  然后，可以调用这些函数与其他应用程序的过程使用常规 c + + 语法。 使用此设置以访问控件的方法和属性的成员函数的详细信息，请参阅明[编程 ActiveX 控件](#_core_programming_the_activex_control)。  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a>项目的成员变量修改  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> 项目的成员变量修改  
  添加到项目并在对话框容器中嵌入 ActiveX 控件后，项目的其他部分可以访问该。 访问控制的最简单方法是到[创建成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)的对话框类中， `CContainerDlg` （步骤 2），即包装类添加到项目中 Visual c + + 通过与同一类型。 然后可以使用成员变量在任何时访问嵌入的控件。  
   
  当**添加成员变量**对话框中添加`m_circctl`成员变量项目，它还将添加以下行到标头文件 (。H） 的`CContainerDlg`类：  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a>ActiveX 控件编程  
+##  <a name="_core_programming_the_activex_control"></a> ActiveX 控件编程  
  此时，你已插入 ActiveX 控件到对话框模板，并且为其创建的成员变量。 你现在可以使用常见的 c + + 语法访问的属性和方法的嵌入的控件。  
   
  所述 (在[包装类头文件 (。H） 文件](#_core_the_wrapper_class_header_28h29_file))，该标头文件 (。H） 为`CCirc`包装器类，在此案例 CIRC.H，包含可用于获取和设置的任何公开的属性值的成员函数的列表。 此外，还提供公开的方法的成员函数。  

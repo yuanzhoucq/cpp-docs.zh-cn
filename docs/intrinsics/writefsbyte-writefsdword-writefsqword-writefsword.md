@@ -1,12 +1,9 @@
 ---
-title: "__writefsbyte、 __writefsdword、 __writefsqword、 __writefsword |Microsoft 文档"
-ms.custom: 
+title: __writefsbyte、 __writefsdword、 __writefsqword、 __writefsword |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __writefsword
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a469665569328e5df8cb107cf9e51590b9373da0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Microsoft 专用**  
@@ -70,7 +65,7 @@ void __writefsqword(
  [in] `Data`  
  要写入的值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -87,5 +82,5 @@ void __writefsqword(
 **结束 Microsoft 专用**  
   
 ## <a name="see-also"></a>请参阅  
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

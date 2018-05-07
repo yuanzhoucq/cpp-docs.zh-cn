@@ -1,13 +1,10 @@
 ---
-title: "创建 Windows |Microsoft 文档"
-ms.custom: 
+title: 创建 Windows |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3563395020919c59acbd94bfc8653d349090ff96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 446ebb4904b8f34576b03f88988bfc58138736a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-windows"></a>创建窗口
 框架自动创建框架程序中的大部分所需的窗口。 [文档/视图创建](../mfc/document-view-creation.md)演示了框架如何创建与文档和视图的框架窗口。 但是对于特殊用途可以创建你自己的 windows — 包括您自己的框架窗口或视图的子窗口-除了提供框架的窗口。  

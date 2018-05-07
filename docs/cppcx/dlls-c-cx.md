@@ -1,24 +1,19 @@
 ---
-title: "Dll (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: Dll (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 02/06/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16b7ed16ec128f1fbf67d1b62e974ccd7ea5213b
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 39c334c659980dccdca670ab91501f0e30c4e6d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -26,7 +21,7 @@ Visual Studio 可用于创建标准 Win32 DLL 或 Windows 运行时组件可供�
 
 ## <a name="windows-runtime-component-dlls"></a>Windows 运行时组件 Dll
 
-在几乎所有情况下，当你想要创建的 DLL 时，在 UWP 应用中使用，通过该名称的项目模板创建为 Windows 运行时组件。 你可以为具有公共或私有 Windows 运行时类型的 Dll 创建 Windows 运行时组件项目。 可以从任何 Windows 运行时兼容语言编写的应用程序访问的 Windows 运行时组件。 默认情况下，Windows 运行时组件的编译器设置项目使用**/ZW**切换。 .winmd 文件必须具有和根命名空间相同的名称。 例如，名为 A.B.C.MyClass 的类只有在名为 A.winmd 或 A.B.winmd 或 A.B.C.winmd 的元数据文件中定义后才能实例化。 DLL 的名称不必与 .winmd 文件名匹配。
+在几乎所有情况下，当你想要创建的 DLL 时，在 UWP 应用中使用，通过该名称的项目模板创建为 Windows 运行时组件。 你可以为具有公共或私有 Windows 运行时类型的 Dll 创建 Windows 运行时组件项目。 可以从任何 Windows 运行时兼容语言编写的应用程序访问的 Windows 运行时组件。 默认情况下，Windows 运行时组件的编译器设置项目使用 **/ZW**切换。 .winmd 文件必须具有和根命名空间相同的名称。 例如，名为 A.B.C.MyClass 的类只有在名为 A.winmd 或 A.B.winmd 或 A.B.C.winmd 的元数据文件中定义后才能实例化。 DLL 的名称不必与 .winmd 文件名匹配。
 
 有关详细信息，请参阅[创建 Windows 运行时 c + + 组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
@@ -42,7 +37,7 @@ Visual Studio 可用于创建标准 Win32 DLL 或 Windows 运行时组件可供�
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>在 Visual Studio 中创建标准 DLL
 
-1. 在菜单栏上，选择**文件**，**新建**，**项目**，然后选择**动态链接库 (DLL)**模板。
+1. 在菜单栏上，选择**文件**，**新建**，**项目**，然后选择**动态链接库 (DLL)** 模板。
 
 1. 输入项目名称，然后选择 **“确定”** 按钮。
 

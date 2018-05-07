@@ -2,11 +2,8 @@
 title: auto_gcroot::get |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::auto_gcroot::get
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_gcroot::get
 ms.assetid: 0e922019-1cf5-4220-b5ab-6c4a2a6b40ec
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0aeb4a20f8c7dcb6a112080a88f600366ee62c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 266193acdd3d1a47fa17539536c1f8d1e18cf7ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootget"></a>auto_gcroot::get
 获取包含的对象。  
@@ -91,7 +86,7 @@ Hello from first A!
 in ClassA destructor:first  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  

@@ -1,12 +1,9 @@
 ---
-title: "增强简单的只读提供程序 |Microsoft 文档"
-ms.custom: 
+title: 增强简单的只读提供程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - IRowsetLocate class, adding to OLE DB template providers
 - simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6eb3c583d217e421909236c09ccac6c406cf6a7c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7c88714e4e1651839cdc5fd4b92d3c5222aa08d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>增强简单的只读提供程序
 本部分说明如何增强[简单只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一节中创建。 `IRowsetLocateImpl` 创建的实现`IRowsetLocate`接口，并添加了对你的书签支持。  

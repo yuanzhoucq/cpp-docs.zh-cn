@@ -1,12 +1,9 @@
 ---
-title: "CRowset 类 |Microsoft 文档"
-ms.custom: 
+title: CRowset 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0774c82715ab2fd85098147ebe1697daf7d2d2fa
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c9a23c2e879f0d2fe1add1a970c64f6fbcc27b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowset-class"></a>CRowset 类
 封装 OLE DB 行集对象并在几个相关接口并提供行集数据的操作方法。  
@@ -73,7 +68,7 @@ class CRowset
 |[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|提取行的行集中的小数部分位置 （从开始）。|  
 |[ReleaseRows](../../data/oledb/crowset-releaserows.md)|调用[irowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx)释放当前的行句柄。|  
 |[SetData](../../data/oledb/crowset-setdata.md)|设置中的行使用的一个或多个列的数据值[IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx)。|  
-|[Undo](../../data/oledb/crowset-undo.md)|撤消对某一行自上次读取后进行任何更改或[更新](../../data/oledb/crowset-update.md)。|  
+|[撤消](../../data/oledb/crowset-undo.md)|撤消对某一行自上次读取后进行任何更改或[更新](../../data/oledb/crowset-update.md)。|  
 |[更新](../../data/oledb/crowset-update.md)|传输任何挂起的上次提取或更新以来对当前行所做的更改。|  
 |[UpdateAll](../../data/oledb/crowset-updateall.md)|传输任何挂起的上次提取或更新以来对所有行所做的更改。|  
   
@@ -82,7 +77,7 @@ class CRowset
   
  此类并不是可实例化传递，但作为模板参数传递给`CTable`或`CCommand`(`CRowset`是默认设置)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

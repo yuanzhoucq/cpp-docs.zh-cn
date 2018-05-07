@@ -1,12 +1,9 @@
 ---
-title: _BitScanForward, _BitScanForward64 | Microsoft Docs
-ms.custom: 
+title: _BitScanForward、 _BitScanForward64 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _BitScanForward
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9f45a0cf518265a1eb40a12a976ec0c1e5b9d1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward、_BitScanForward64
 **Microsoft 专用**  
@@ -63,12 +58,12 @@ unsigned char _BitScanForward64(
 ## <a name="remarks"></a>备注  
  如果找到一个设置位，则将在第一个参数中返回已找到的第一个设置位的位位置。 如果没有发现任何设置位，则返回 0；否则返回 1。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_BitScanForward`|x86、 ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **标头文件** \<intrin.h >  
   

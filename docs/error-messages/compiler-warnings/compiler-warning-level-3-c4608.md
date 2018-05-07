@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 3） C4608 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 3） C4608 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4608
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4608
 ms.assetid: 8b8f5f28-8ce9-457e-9d3d-a8c0efce9b6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b766c507db60a312f62b3fa84d4963fdf1f718b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4271d204657467a1e21c2a43debc8bd77696960
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4608"></a>编译器警告（等级 3）C4608
 “union_member”已被初始值设定项列表中的另一个联合成员“union_member”初始化  

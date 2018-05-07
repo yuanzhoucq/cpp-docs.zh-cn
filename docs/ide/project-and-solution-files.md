@@ -1,13 +1,10 @@
 ---
-title: "项目和解决方案文件 |Microsoft 文档"
-ms.custom: 
+title: 项目和解决方案文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.files.projectandsolution
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03797d266dc0f3104d6153b9d946d06ac963fafc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-and-solution-files"></a>项目和解决方案文件
 在 Visual Studio 中创建项目时，会创建以下文件。 它们用于管理解决方案中的项目文件。  

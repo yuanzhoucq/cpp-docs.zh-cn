@@ -1,13 +1,10 @@
 ---
-title: "TN055： 将迁移到 MFC DAO 类 MFC ODBC 数据库类应用程序 |Microsoft 文档"
-ms.custom: 
+title: TN055： 将迁移到 MFC DAO 类 MFC ODBC 数据库类应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-基于)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-基于)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*`RFX_Date`函数基于`CTime`和**TIMESTAMP_STRUCT**。  
+ \*    `RFX_Date`函数基于`CTime`和**TIMESTAMP_STRUCT**。  
   
  下面列出了对可能影响您的应用程序和需要多次简单名称更改的函数的主要更改。  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   异常类已更改。 **CDBExceptions**在 ODBC 类中引发和**CDaoExceptions**在 DAO 类中。  
   
--   `RFX_Date`使用`CTime`和**TIMESTAMP_STRUCT**对象，而**DFX_Date**使用`COleDateTime`。 `COleDateTime`几乎等同于`CTime`，但依赖于使用 8 字节 OLE**日期**而不是一个 4 字节`time_t`以便它可以存放多范围较大的数据。  
+-   `RFX_Date` 使用`CTime`和**TIMESTAMP_STRUCT**对象，而**DFX_Date**使用`COleDateTime`。 `COleDateTime`几乎等同于`CTime`，但依赖于使用 8 字节 OLE**日期**而不是一个 4 字节`time_t`以便它可以存放多范围较大的数据。  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) 快照为只读，而 ODBC (`CRecordset`) 快照是可根据驱动程序和 ODBC 光标库的使用进行更新的。 如果您使用的是光标库，则可更新 `CRecordset` 快照。 如果您使用的是 Desktop Driver Pack 3.0 中的任何 Microsoft 驱动程序，则 `CRecordset` 快照为只读。 如果你使用的另一个驱动程序，请检查驱动程序的文档，了解如果快照 (**STATIC_CURSORS**) 是只读的。  

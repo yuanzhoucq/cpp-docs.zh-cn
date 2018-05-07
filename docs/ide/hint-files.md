@@ -1,13 +1,10 @@
 ---
-title: "提示文件 |Microsoft 文档"
-ms.custom: 
+title: 提示文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,20 +17,18 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>提示文件
-A*提示文件*可帮助 Visual Studio 集成的开发环境 (IDE) 解释 Visual c + + 标识符，例如的函数和宏的名称。 当你打开的 Visual c + + 项目，IDE 的*分析系统*分析项目中每个源文件中的代码并收集有关每个标识符的信息。 然后，IDE 使用该信息支持功能，如**类视图**浏览器和**导航栏**。  
+A*提示文件*可帮助 Visual Studio 集成的开发环境 (IDE) 解释 Visual c + + 标识符，例如的函数和宏的名称。 当你打开的 Visual c + + 项目，IDE 的*分析系统*分析项目中每个源文件中的代码并收集有关每个标识符的信息。 然后，IDE 使用该信息支持的功能，如 **类视图** 浏览器和 **导航栏**。  
   
  分析系统，在 Visual c + + 2010年中引入，理解 C/c + + 语法，但可以曲解包含宏的语句。 如果宏导致要编写语法不正确的源代码，该语句可以被错误解释。 在编译的源代码，并预替换时，该语句可能成为语法正确[宏标识符](../preprocessor/hash-define-directive-c-cpp.md)利用自己的定义。 分析系统工作而无需生成项目，因为它使用提示文件来解释宏。 因此，如浏览功能**类视图**立即可用。  
   
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |语法|含义|  
 |------------|-------------|  
-|`#define`*提示名称**替换字符串*<br /><br /> `#define`*提示名称* `(` *参数*，...`)`*替换字符串*|定义新提示或重新定义现有提示的预处理器指令。 该指令之后，预处理器会将每个匹配项*提示名称*源的代码中*替换字符串*。<br /><br /> 第二种语法形式定义类似于函数的提示。 如果在源代码中出现类似于函数的提示，预处理器首先替换的每个匹配项*参数*中*替换字符串*替换源代码，然后替换对应的实参*提示名称*与*替换字符串*。|  
+|`#define` *提示名称**替换字符串*<br /><br /> `#define` *提示名称* `(` *参数*，...`)`*替换字符串*|定义新提示或重新定义现有提示的预处理器指令。 该指令之后，预处理器会将每个匹配项*提示名称*源的代码中*替换字符串*。<br /><br /> 第二种语法形式定义类似于函数的提示。 如果在源代码中出现类似于函数的提示，预处理器首先替换的每个匹配项*参数*中*替换字符串*替换源代码，然后替换对应的实参*提示名称*与*替换字符串*。|  
 |`@<`|提示文件特定*替换字符串*，该值指示地图元素的一组的开头。|  
 |`@=`|提示文件特定*替换字符串*，该值指示一个中间映射元素。 一个地图可以具有多个地图元素。|  
 |`@>`|提示文件特定*替换字符串*，该值指示地图元素的集的末尾。|  
-|`#undef`*提示名称*|删除现有提示预处理器指令。 提供的提示名*提示名称*标识符。|  
-|`//`*注释*|中的单行注释。|  
+|`#undef` *提示名称*|删除现有提示预处理器指令。 提供的提示名*提示名称*标识符。|  
+|`//` *注释*|中的单行注释。|  
 |`/*`*comment*`*/`|中的多行注释。|  
   
 ## <a name="what-macros-require-a-hint"></a>什么宏需要提示？  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  下图描绘了一些在 Visual c + + 项目中的物理目录。 提示文件位于`vcpackages`， `Debug`， `A1`，和`A2`目录。  
   
 ### <a name="hint-file-directories"></a>提示文件目录  
- ![常见和项目 &#45; 特定的提示文件目录。] (../ide/media/hintfile.png "HintFile")  
+ ![常见和项目&#45;特定提示文件目录。] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>目录和提示文件内容  
  以下列表显示提示文件，以及这些提示文件的内容包含此项目中的目录。 只有某些中的许多提示`vcpackages`列出目录提示文件。  

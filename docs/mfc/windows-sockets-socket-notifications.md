@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 套接字通知 |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 套接字通知 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 套接字：套接字通知
 本文介绍套接字类中的通知函数。 这些成员函数是框架调用以通知你的重要事件的套接字对象的回调函数。 通知函数包括：  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  如果可以从类派生`CAsyncSocket`，适用于那些网络应用程序感兴趣的事件，您必须重写通知函数。 如果从类派生一个类`CSocket`，它是你选择是否覆盖感兴趣的通知函数。 你还可以使用`CSocket`本身，在这种情况下通知函数默认为不执行任何操作。  
   
- 这些函数都是可重写的回调函数。 `CAsyncSocket`和`CSocket`转换消息通知，但你必须实现如何通知函数响应，如果你想要使用它们。 套接字通知的感兴趣，例如要读取的数据的存在的事件时，调用通知函数。  
+ 这些函数都是可重写的回调函数。 `CAsyncSocket` 和`CSocket`转换消息通知，但你必须实现如何通知函数响应，如果你想要使用它们。 套接字通知的感兴趣，例如要读取的数据的存在的事件时，调用通知函数。  
   
  MFC 调用通知函数，以允许您会收到通知时自定义套接字的行为。 例如，你可能会调用**接收**从你`OnReceive`通知函数，即在上通知没有要读取数据，你调用**接收**读取它。 此方法不是必需的但它是一个有效的方案。 作为替代方法，你可能会使用通知函数来跟踪进度，打印**跟踪**消息，依次类推。  
   

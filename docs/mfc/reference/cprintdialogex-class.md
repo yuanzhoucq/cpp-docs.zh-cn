@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialogEx 类 |Microsoft 文档"
-ms.custom: 
+title: CPrintDialogEx 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 类
 封装由 Windows 打印属性表提供的服务。  
@@ -72,7 +67,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|构造 `CPrintDialogEx` 对象。|  
   
@@ -97,7 +92,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CPrintDialogEx::m_pdex](#m_pdex)|用于自定义的结构`CPrintDialogEx`对象。|  
   
@@ -137,7 +132,7 @@ class CPrintDialogEx : public CCommonDialog
   
  `CPrintDialogEx`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>备注  
  从创建打印机设备上下文 (DC) [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)结构。  
   
- `GetDefaults`不显示打印属性表。 相反，它将设置**hDevNames**和**hDevMode**的成员[m_pdex](#m_pdex)句柄到[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)的系统的默认打印机初始化的结构。 同时**hDevNames**和**hDevMode**必须为 NULL，或`GetDefaults`失败。  
+ `GetDefaults` 不显示打印属性表。 相反，它将设置**hDevNames**和**hDevMode**的成员[m_pdex](#m_pdex)句柄到[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)的系统的默认打印机初始化的结构。 同时**hDevNames**和**hDevMode**必须为 NULL，或`GetDefaults`失败。  
   
  如果**PD_RETURNDC**设置标志，此函数不会只返回**hDevNames**和**hDevMode** (位于**m_pdex.hDevNames**和**m_pdex.hDevMode**) 向调用方，但也将返回中的打印机 DC **m_pdex.hDC**。 它负责调用方删除打印机 DC 并调用 Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)函数在完成的句柄`CPrintDialogEx`对象。  
   
@@ -342,7 +337,7 @@ BOOL PrintSelection() const;
 ### <a name="return-value"></a>返回值  
  **TRUE**如果只有所选的项目，则为打印; 否则为**FALSE**。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CPrintInfo 结构](../../mfc/reference/cprintinfo-structure.md)

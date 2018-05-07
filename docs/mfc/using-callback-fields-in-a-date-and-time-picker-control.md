@@ -1,13 +1,10 @@
 ---
-title: "在日期和时间选取器中使用回调字段控件 |Microsoft 文档"
-ms.custom: 
+title: 在日期和时间选取器中使用回调字段控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DTN_FORMATQUERY
 - DTN_FORMAT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5526b0f8826a91eb0b1c5a6eae250abbb02fcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>在日期和时间选取器控件中使用回调字段
 除了定义日期和时间选取器字段的标准格式字符之外，您还可以通过将自定义格式字符串的某些部分指定为回调字段来自定义您的输出。 若要声明回调字段，请在格式字符串主体中的任何位置包含一个或多个“X”字符（ASCII 代码 88）。 例如，以下字符串“Today is: 'yy'/'MM'/'dd' (Day 'X')'”会使日期和时间选取器控件将当前值按照“年、月、日和年积日”格式来显示。  

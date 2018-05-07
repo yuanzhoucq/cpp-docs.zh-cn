@@ -1,12 +1,9 @@
 ---
-title: "deque:: insert (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'deque:: insert (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::insert
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - insert member [STL/CLR]
 ms.assetid: a3b86c46-e6a8-42d0-b642-5a8f05ddd68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 79e03fe5db67162134f5267fc54fab74e4e6b20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6819b1c2e1086c38b2bb1be8207a26afc85168d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequeinsert-stlclr"></a>deque::insert (STL/CLR)
 将元素添加的指定位置。  
@@ -135,7 +130,7 @@ insert(begin()+1, L'x') = x
  a x b c y y a x b  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  

@@ -2,12 +2,9 @@
 title: 管理库 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>管理库
 默认模式为 LIB 是生成或修改 COFF 对象的库。 LIB 在此模式下运行，如果不指定 /extract، （若要将对象复制到文件中） 或 /DEF （若要生成导入库）。  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  以下选项应用于生成和修改库：  
   
- / LIBPATH:`dir`  
+ / LIBPATH: `dir`  
  重写环境库路径。 有关详细信息，请参阅链接的说明[/LIBPATH](../../build/reference/libpath-additional-libpath.md)选项。  
   
  / 列表  
@@ -94,7 +89,7 @@ LIB [options...] files...
  / 删除：*对象*  
  省略指定*对象*输出库中。 LIB 通过组合所有对象 （无论是在对象文件或库中），然后删除用 /REMOVE 指定的任何对象来创建输出库。  
   
- / 子系统: {控制台 &#124;EFI_APPLICATION &#124;EFI_BOOT_SERVICE_DRIVER &#124;EFI_ROM &#124;EFI_RUNTIME_DRIVER &#124;本机 &#124;POSIX &#124;WINDOWS &#124;WINDOWSCE} [，#[。 # #]]  
+ / 子系统: {控制台&AMP;#124;EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER&AMP;#124;本机&AMP;#124;POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [，#[。 # #]]  
  通知操作系统如何运行通过链接到此输出库中创建的程序。 有关详细信息，请参阅链接的说明[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)选项。  
   
  命令行上指定的 LIB 选项不区分大小写。  

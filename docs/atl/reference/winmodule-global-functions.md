@@ -1,12 +1,9 @@
 ---
-title: "WinModule 全局函数 |Microsoft 文档"
-ms.custom: 
+title: WinModule 全局函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 290566c27fa5698c4a00a323a8c2431681b69d88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 514703e2c7c968035e9defc7677943377778a761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全局函数
 这些函数都提供支持`_AtlCreateWndData`结构操作。  
@@ -37,10 +32,10 @@ ms.lasthandoff: 12/21/2017
 |[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|此函数用于初始化和添加`_AtlCreateWndData` 结构。|  
 |[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|调用此函数可提取现有 `_AtlCreateWndData` 结构。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atlbase.h  
   `            
-##  <a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData  
+##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData  
  此函数用于初始化和添加`_AtlCreateWndData` 结构。  
    
 ```
@@ -63,7 +58,7 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ### <a name="remarks"></a>备注  
  初始化`_AtlCreateWndData`结构，用于存储**这**指针来引用类的实例，并将其添加到引用的模块的列表`_ATL_WIN_MODULE70`结构。 由调用[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)。  
   
-##  <a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData  
+##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
  调用此函数可提取现有 `_AtlCreateWndData` 结构。  
  
 ```

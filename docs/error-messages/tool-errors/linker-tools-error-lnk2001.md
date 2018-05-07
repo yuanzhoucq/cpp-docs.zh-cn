@@ -1,12 +1,9 @@
 ---
-title: "链接器工具错误 LNK2001 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具错误 LNK2001 |Microsoft 文档
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>链接器工具错误 LNK2001
 无法解析的外部符号"*符号*"  
@@ -70,13 +65,13 @@ ms.lasthandoff: 12/21/2017
   
 如果你使用，可能出现此错误[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)或[/Zl](../../build/reference/zl-omit-default-library-name.md)选项。 指定这些选项时，包含所需的代码的库除非你显式包括其并未链接到项目。 若要解决此问题，显式包含在链接命令行使用的所有库。 如果你看到许多缺少 CRT 或标准库函数名称，当你使用这些选项时，链接中显式包括 CRT 和标准库 Dll 或库文件。  
 
-如果在编译时使用**/clr**选项，可以对.cctor 的缺少引用。 若要解决此问题，请参阅[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)有关详细信息。  
+如果在编译时使用 **/clr**选项，可以对.cctor 的缺少引用。 若要解决此问题，请参阅[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)有关详细信息。  
   
-如果在生成应用程序的调试版本链接到版本模式库，则可能出现此错误。 同样，如果你使用选项**/MTd**或**/MDd**或定义`_DEBUG`，然后链接到版本库，可以预见，许多潜在未解析的外部对象，在其他问题。 链接发布模式生成带有调试库时也会导致类似问题。 若要解决此问题，请确保你，在调试版本使用的调试库，并在您的零售零售库生成。  
+如果在生成应用程序的调试版本链接到版本模式库，则可能出现此错误。 同样，如果你使用选项 **/MTd**或 **/MDd**或定义`_DEBUG`，然后链接到版本库，可以预见，许多潜在未解析的外部对象，在其他问题。 链接发布模式生成带有调试库时也会导致类似问题。 若要解决此问题，请确保你，在调试版本使用的调试库，并在您的零售零售库生成。  
   
 如果你的代码为符号引用一个版本的库，但提供到链接器库的不同版本，可以出现此错误。 通常情况下，不能混合对象文件或为不同版本的编译器生成的库。 在新版本中提供的库可能包含不能在包含与早期版本中，反之亦然的库中找到的符号。 若要解决此问题，请将它们链接在一起前生成所有对象文件和库的相同版本的编译器。  
   
--  工具 &#124;选项 &#124;项目 &#124;VC + + 目录对话框中，在库文件的所选内容，下，可更改库搜索顺序。 在项目的属性页对话框中的链接器文件夹还可能包含可能已过期的路径。  
+-  工具&#124;选项&#124;项目&#124;VC + + 目录对话框中，在下，库文件的所选内容，允许您更改库搜索顺序。 在项目的属性页对话框中的链接器文件夹还可能包含可能已过期的路径。  
   
 -  新的 SDK 安装 （可能是到其他位置），和搜索顺序不更新为指向新位置时，可能会出现此问题。 通常情况下，应将路径放到新的 SDK 包括和 lib 目录默认 Visual c + + 位置的前面。 此外，包含嵌入的路径的项目可能仍然指向旧路径有效，但已过期的新功能添加到其他位置安装的新版本中。  
   
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
 目前没有标准[c + + 命名](../../error-messages/tool-errors/name-decoration.md)编译器供应商之间、 甚至同一编译器的不同版本之间。 因此，链接用其他编译器编译的对象文件可能不会产生相同的命名方案，从而导致错误 LNK2001。  
   
-[混合使用内联和非内联编译选项](../../error-messages/tool-errors/function-inlining-problems.md)在不同模块，则可能导致 LNK2001。 如果使用函数内联开启创建 c + + 库 (**/Ob1**或**/Ob2**) 但描述函数的相应标头文件具有内联关闭 (没有`inline`关键字)，此错误时发生。 若要解决此问题，请定义函数`inline`在其他源文件中包括标头文件中。  
+[混合使用内联和非内联编译选项](../../error-messages/tool-errors/function-inlining-problems.md)在不同模块，则可能导致 LNK2001。 如果使用函数内联开启创建 c + + 库 (**/Ob1**或 **/Ob2**) 但描述函数的相应标头文件具有内联关闭 (没有`inline`关键字)，此错误时发生。 若要解决此问题，请定义函数`inline`在其他源文件中包括标头文件中。  
   
 如果你使用`#pragma inline_depth`编译器指令，请确保你有[2 或更高版本的设置的值](../../error-messages/tool-errors/function-inlining-problems.md)，并确保你还使用[/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)编译器选项。  
   

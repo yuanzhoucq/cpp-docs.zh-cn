@@ -2,12 +2,9 @@
 title: MFC DLL 向导 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.overview
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d02d6e6f598d6d18a6e17e9a99a3190a836dc780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 向导
 当 MFC DLL 向导用于创建非 MFC DLL 项目时，可以工作初学者应用程序具有内置功能，如果编译中，将实现的基本功能[DLL](../../build/dlls-in-visual-cpp.md)。 MFC 初学者程序包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。 有关详细信息，请参阅中生成的 Visual Studio 中的项目的 Readme.txt 文件的详细信息和[类和函数生成由 MFC DLL 向导](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

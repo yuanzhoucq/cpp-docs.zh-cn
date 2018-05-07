@@ -1,29 +1,24 @@
 ---
-title: ".Xml 文件处理 |Microsoft 文档"
-ms.custom: 
+title: .Xml 文件处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-file-processing"></a>.Xml 文件处理
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 有关详细信息，请参阅[建议标记文档注释](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。 ID 字符串唯一标识构造。 处理的.xml 文件的程序可使用的 ID 字符串以确定将应用文档的相应.NET Framework 元数据或反射项目。  

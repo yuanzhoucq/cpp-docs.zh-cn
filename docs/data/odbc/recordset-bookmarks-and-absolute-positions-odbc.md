@@ -2,12 +2,9 @@
 title: 记录集： 书签和绝对位置 (ODBC) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>记录集：书签和绝对位置 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何设置使用绝对位置的当前记录](#_core_absolute_positions_in_mfc_odbc)。  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>MFC ODBC 中的书签  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> MFC ODBC 中的书签  
  书签唯一标识一条记录。 当你导航到记录集时，你无法始终依赖于一条记录的绝对位置因为可以从记录集中删除记录。 若要跟踪的一条记录的位置的可靠方式是使用其书签。 类`CRecordset`提供成员函数：  
   
 -   获取当前记录，该书签，因此你可以将其保存在变量 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark))。  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  根据你的 ODBC 驱动程序和记录集类型，可能不支持书签。 你可以轻松地确定是否通过调用支持书签[CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)。 此外，如果支持书签，则必须显式选择通过指定实现它们**CRecordset::useBookmarks**选项[CRecordset::Open](../../mfc/reference/crecordset-class.md#open)成员函数。 你还应检查某些记录集操作之后的书签的持久性。 例如，如果你**Requery**记录集，书签可能不再有效。 调用[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)若要检查是否可以安全地调用`SetBookmark`。  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>MFC ODBC 中的绝对位置  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> MFC ODBC 中的绝对位置  
  除了书签，类`CRecordset`，可通过指定序号位置来设置当前记录。 这称为绝对定位。  
   
 > [!NOTE]

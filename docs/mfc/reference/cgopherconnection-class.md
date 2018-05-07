@@ -1,12 +1,9 @@
 ---
-title: "CGopherConnection 类 |Microsoft 文档"
-ms.custom: 
+title: CGopherConnection 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 类
 管理与 Gopher Internet 服务器的连接。  
@@ -233,7 +228,7 @@ CGopherFile* OpenFile(
 ### <a name="remarks"></a>备注  
  重写`dwContext`默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CGopherConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFtpConnection 类](../../mfc/reference/cftpconnection-class.md)   

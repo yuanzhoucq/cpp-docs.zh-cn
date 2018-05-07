@@ -1,12 +1,9 @@
 ---
-title: "CMetaFileDC 类 |Microsoft 文档"
-ms.custom: 
+title: CMetaFileDC 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 类
 实现一个 Windows 图元文件，此文件包含一系列图形设备接口 (GDI) 命令，你可以重播此命令来创建所需图像或文本。  
@@ -87,10 +82,10 @@ class CMetaFileDC : public CDC
   
  `CMetaFileDC`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  关闭图元文件设备上下文，并创建一个 Windows 图元文件句柄，可用于通过使用播放图元文件[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)成员函数。  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  在使用后删除图元文件，通过调用 Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)函数。  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  关闭增强型图元文件设备上下文，并返回标识增强格式图元文件的句柄。  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  当应用程序不再需要的增强型图元文件句柄时，它应通过调用 Win32 释放句柄**DeleteEnhMetaFile**函数。  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  构造`CMetaFileDC`两个步骤中的对象。  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>备注  
  首先，调用`CMetaFileDC`，然后调用**创建**，它创建的 Windows 图元文件设备上下文，并将其附加到`CMetaFileDC`对象。  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  构造`CMetaFileDC`两个步骤中的对象。  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>备注  
  首先，调用的构造函数`CMetaFileDC`，然后调用**创建**，它创建的 Windows 图元文件设备上下文，并将其附加到`CMetaFileDC`对象。  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  创建设备上下文进行的增强型格式图元文件。  
   
 ```  

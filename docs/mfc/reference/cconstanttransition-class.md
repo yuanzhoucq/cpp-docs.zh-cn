@@ -1,12 +1,9 @@
 ---
-title: "CConstantTransition 类 |Microsoft 文档"
-ms.custom: 
+title: CConstantTransition 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConstantTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafd1276b8d4476f5021b3d83a84a1884d78870d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition 类
 封装常量转换。  
@@ -72,10 +67,10 @@ class CConstantTransition : public CBaseTransition;
   
  `CConstantTransition`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
  构造转换对象并初始化其持续时间。  
   
 ```  
@@ -86,7 +81,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  转换的持续时间。  
   
-##  <a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>  CConstantTransition::Create  
  调用要创建封装的转换 COM 对象的转换库。  
   
 ```  
@@ -102,7 +97,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  转换的持续时间。  
   
 ```  

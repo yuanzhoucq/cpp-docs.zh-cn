@@ -1,13 +1,10 @@
 ---
-title: "图像列表类型 |Microsoft 文档"
-ms.custom: 
+title: 图像列表类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84a2118978d5ebd722d4fe56cdeec2aa0f74a94e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8988dc55bbbaa1d446ee14bf78a0cd799b422834
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-image-lists"></a>图像列表类型
 有两种类型的图像列表 ([CImageList](../mfc/reference/cimagelist-class.md)): 未添加蒙板和掩码。 "未添加蒙板的图像列表"包含颜色位图，其中包含一个或多个映像。 "蒙板的图像列表"包含的大小相等的两个位图。 第一个是包含的图像的颜色位图，第二个是包含一系列的掩码的单色位图 — 一个用于在第一个位图中的每个图像。  

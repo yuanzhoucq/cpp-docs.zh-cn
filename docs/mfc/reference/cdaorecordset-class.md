@@ -1,12 +1,9 @@
 ---
-title: "CDaoRecordset 类 |Microsoft 文档"
-ms.custom: 
+title: CDaoRecordset 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 表示从数据源选择的一组记录。  
@@ -327,7 +322,7 @@ class CDaoRecordset : public CObject
   
  使用对象的成员函数和数据成员滚动显示记录并对它们进行操作。 可执行的操作取决于该对象是表类型记录集、 动态集类型的记录集或快照类型的记录集，以及它是否可更新或只读的这取决于数据库或开放式数据库连接 (ODBC) 的功能数据源。 若要刷新记录可能已更改或添加自**打开**调用，调用对象的[Requery](#requery)成员函数。 调用对象的**关闭**成员函数，并使用它完成后销毁对象。  
   
- `CDaoRecordset`使用 DAO 记录字段交换 (DFX) 来支持读取和更新记录的字段的类型安全的 c + + 成员通过你`CDaoRecordset`或`CDaoRecordset`-派生类。 你还可以实现动态绑定列的数据库中不使用 DFX 机制使用[GetFieldValue](#getfieldvalue)和[SetFieldValue](#setfieldvalue)。  
+ `CDaoRecordset` 使用 DAO 记录字段交换 (DFX) 来支持读取和更新记录的字段的类型安全的 c + + 成员通过你`CDaoRecordset`或`CDaoRecordset`-派生类。 你还可以实现动态绑定列的数据库中不使用 DFX 机制使用[GetFieldValue](#getfieldvalue)和[SetFieldValue](#setfieldvalue)。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"记录集对象"。  
   
@@ -336,10 +331,10 @@ class CDaoRecordset : public CObject
   
  `CDaoRecordset`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
-##  <a name="addnew"></a>CDaoRecordset::AddNew  
+##  <a name="addnew"></a>  CDaoRecordset::AddNew  
  调用此成员函数可将一条新记录添加到表类型或动态集类型的记录集。  
   
 ```  
@@ -377,7 +372,7 @@ virtual void AddNew();
   
  有关相关信息，请参阅主题的"AddNew 方法"、"正在执行方法"、"上次更改时间属性"和 DAO 帮助中的"EditMode 属性"。  
   
-##  <a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>  CDaoRecordset::CanAppend  
  调用此成员函数可确定是否以前已打开记录集可用于添加新记录通过调用[AddNew](#addnew)成员函数。  
   
 ```  
@@ -385,12 +380,12 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果是记录集允许添加新记录; 则为非 0否则为 0。 `CanAppend`如果你打开记录集持久化为只读的则将返回 0。  
+ 如果是记录集允许添加新记录; 则为非 0否则为 0。 `CanAppend` 如果你打开记录集持久化为只读的则将返回 0。  
   
 ### <a name="remarks"></a>备注  
  有关相关信息，请参阅主题 DAO 帮助中的"追加方法"。  
   
-##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark  
  调用此成员函数可确定是否以前已打开记录集允许你将使用书签的记录逐个标记。  
   
 ```  
@@ -405,7 +400,7 @@ BOOL CanBookmark();
   
  有关相关信息，请参阅主题 DAO 帮助中的"Bookmarkable 属性"。  
   
-##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate  
  `CancelUpdate`成员函数取消任何挂起的更新，由于[编辑](#edit)或[AddNew](#addnew)操作。  
   
 ```  
@@ -422,7 +417,7 @@ virtual void CancelUpdate();
   
  有关相关信息，请参阅主题 DAO 帮助中的"正在执行方法"。  
   
-##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
  调用此成员函数可确定记录集是否允许通过调用重启 （若要刷新其记录） 其查询**Requery**成员函数。  
   
 ```  
@@ -439,7 +434,7 @@ BOOL CanRestart();
   
  有关相关信息，请参阅主题 DAO 帮助中的"可重启属性"。  
   
-##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>  CDaoRecordset::CanScroll  
  调用此成员函数来确定记录集是否允许滚动。  
   
 ```  
@@ -454,7 +449,7 @@ BOOL CanScroll() const;
   
  有关相关信息，请参阅"定位记录用 DAO 当前指针"DAO 帮助中的主题。  
   
-##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>  CDaoRecordset::CanTransact  
  调用此成员函数来确定记录集是否允许事务。  
   
 ```  
@@ -467,7 +462,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>备注  
  有关相关信息，请参阅主题 DAO 帮助中的"事务属性"。  
   
-##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate  
  调用此成员函数可确定是否可以更新记录集。  
   
 ```  
@@ -482,7 +477,7 @@ BOOL CanUpdate() const;
   
  有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
   
-##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset  
  构造 `CDaoRecordset` 对象。  
   
 ```  
@@ -501,7 +496,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  传递**NULL**到记录集构造函数，以具有`CDaoDatabase`对象构造并为你自动连接。 这是不需要你构造和连接的有用快捷方式`CDaoDatabase`之前构造记录集对象。 如果`CDaoDatabase`对象未打开， [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)还将为你使用默认工作区创建对象。 有关详细信息，请参阅[CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)。  
   
-##  <a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>  CDaoRecordset::Close  
  关闭`CDaoRecordset`对象移除它关联的数据库中的打开记录集的集合中。  
   
 ```  
@@ -517,7 +512,7 @@ virtual void Close();
   
  有关相关信息，请参阅主题 DAO 帮助中的"Close 方法"。  
   
-##  <a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>  CDaoRecordset::Delete  
  调用此成员函数以删除打开的动态集类型或表类型记录集对象中的当前记录。  
   
 ```  
@@ -538,7 +533,7 @@ virtual void Delete();
   
  有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
   
-##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange  
  框架调用此成员函数以自动交换字段数据成员的记录集对象和数据源上的当前记录的相应列之间的数据。  
   
 ```  
@@ -558,7 +553,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="edit"></a>CDaoRecordset::Edit  
+##  <a name="edit"></a>  CDaoRecordset::Edit  
  调用此成员函数，以允许对当前记录的更改。  
   
 ```  
@@ -598,7 +593,7 @@ virtual void Edit();
   
  有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
   
-##  <a name="fillcache"></a>CDaoRecordset::FillCache  
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache  
  调用此成员函数可缓存的指定从记录集中的记录数。  
   
 ```  
@@ -623,11 +618,11 @@ void FillCache(
   
  从缓存提取的记录不能反映由其他用户对源数据同时进行的更改。  
   
- `FillCache`提取仅尚未缓存的记录。 若要强制所有缓存的数据更新，请调用`SetCacheSize`成员函数时`lSize`参数等于 0，调用`SetCacheSize`试`lSize`最初请求，参数等于缓存的大小，然后调用`FillCache`.  
+ `FillCache` 提取仅尚未缓存的记录。 若要强制所有缓存的数据更新，请调用`SetCacheSize`成员函数时`lSize`参数等于 0，调用`SetCacheSize`试`lSize`最初请求，参数等于缓存的大小，然后调用`FillCache`.  
   
  有关相关信息，请参阅主题 DAO 帮助中的"FillCache 方法"。  
   
-##  <a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>  CDaoRecordset::Find  
  调用此成员函数以在动态集或快照类型记录集中使用比较运算符查找特定字符串。  
   
 ```  
@@ -649,7 +644,7 @@ virtual BOOL Find(
 - **AFX_DAO_LAST**查找匹配的字符串的最后一个位置。  
   
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。 例如:  
+ 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。 例如：  
   
  [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
   
@@ -666,7 +661,7 @@ virtual BOOL Find(
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
-##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>  CDaoRecordset::FindFirst  
  调用此成员函数以查找与指定的条件匹配的第一个记录。  
   
 ```  
@@ -716,7 +711,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
-##  <a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>  CDaoRecordset::FindLast  
  调用此成员函数以查找与指定的条件匹配的最后一个记录。  
   
 ```  
@@ -754,7 +749,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
-##  <a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>  CDaoRecordset::FindNext  
  调用此成员函数以查找与指定的条件匹配的下一个记录。  
   
 ```  
@@ -792,7 +787,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
-##  <a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>  CDaoRecordset::FindPrev  
  调用此成员函数以查找与指定的条件匹配的上一条记录。  
   
 ```  
@@ -830,7 +825,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
-##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition  
  返回一个记录集对象的当前记录的记录号。  
   
 ```  
@@ -853,7 +848,7 @@ long GetAbsolutePosition();
   
  有关相关信息，请参阅主题 DAO 帮助中的"AbsolutePosition 属性"。  
   
-##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark  
  调用此成员函数可获取特定的记录中的书签值。  
   
 ```  
@@ -873,7 +868,7 @@ COleVariant GetBookmark();
   
  有关相关信息，请参阅主题 DAO 帮助中的"书签属性"。  
   
-##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize  
  调用此成员函数可获取的缓存的记录数。  
   
 ```  
@@ -890,7 +885,7 @@ long GetCacheSize();
   
  有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
   
-##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart  
  调用此成员函数可获取为缓存的记录集的第一个记录的书签值。  
   
 ```  
@@ -908,7 +903,7 @@ COleVariant GetCacheStart();
   
  有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
   
-##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex  
  调用此成员函数可确定当前正在使用中索引的表类型索引`CDaoRecordset`对象。  
   
 ```  
@@ -925,7 +920,7 @@ CString GetCurrentIndex();
   
  有关相关信息，请参阅主题"索引对象"，并定义 DAO 帮助中的"当前索引"。  
   
-##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated  
  调用此成员函数可检索的日期和时间创建基表。  
   
 ```  
@@ -940,7 +935,7 @@ COleDateTime GetDateCreated();
   
  有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
-##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated  
  调用此成员函数可检索的日期和时间，上次更新架构。  
   
 ```  
@@ -955,7 +950,7 @@ COleDateTime GetDateLastUpdated();
   
  有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
-##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName  
  调用此成员函数可确定该记录集的数据库的名称。  
   
 ```  
@@ -972,7 +967,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL  
  框架调用此成员函数可获取记录集所基于的默认 SQL 语句。  
   
 ```  
@@ -989,7 +984,7 @@ virtual CString GetDefaultSQL();
   
  如果传递的 null SQL 字符串[打开](#open)，然后调用此函数可确定记录集的表名或 SQL。  
   
-##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode  
  调用此成员函数可确定状态的编辑，这是以下值之一：  
   
 ```  
@@ -1001,15 +996,15 @@ short GetEditMode();
   
 ### <a name="remarks"></a>备注  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**dbEditNone**|任何编辑操作不正在进行。|  
 |**dbEditInProgress**|**编辑**已调用。|  
-|**dbEditAdd**|`AddNew`已调用。|  
+|**dbEditAdd**|`AddNew` 已调用。|  
   
  有关相关信息，请参阅主题 DAO 帮助中的"EditMode 属性"。  
   
-##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount  
  调用此成员函数可检索的记录集内定义的字段 （列） 数。  
   
 ```  
@@ -1022,7 +1017,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>备注  
  有关相关信息，请参阅主题 DAO 帮助中的"计数属性"。  
   
-##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo  
  调用此成员函数以获取有关在记录集中的字段的信息。  
   
 ```  
@@ -1048,11 +1043,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  指定有关要检索的记录集的信息的选项。 可用选项以及它们会导致函数返回此处列出。 为了获得最佳性能，检索仅您需要的信息的级别：  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称、 类型、 大小属性  
+- `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小属性  
   
-- `AFX_DAO_SECONDARY_INFO`主要的信息，加上： 序号位置，需要，允许零长度，排序规则顺序外的名称，源字段，源表  
+- `AFX_DAO_SECONDARY_INFO` 主要的信息，加上： 序号位置，需要，允许零长度，排序规则顺序外的名称，源字段，源表  
   
-- `AFX_DAO_ALL_INFO`主要和辅助信息，加上： 默认值，验证规则验证文本  
+- `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 默认值，验证规则验证文本  
   
  `lpszName`  
  字段的名称。  
@@ -1064,7 +1059,7 @@ void GetFieldInfo(
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue  
  调用此成员函数以检索在记录集中的数据。  
   
 ```  
@@ -1102,11 +1097,11 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  使用`GetFieldValue`和[SetFieldValue](#setfieldvalue)将字段动态绑定在运行的时而不是静态绑定列使用[DoFieldExchange](#dofieldexchange)机制。  
   
- `GetFieldValue`与`DoFieldExchange`机制可结合使用来提高性能。 例如，使用`GetFieldValue`检索一个值，你需要仅按需，并将分配到接口中的"详细信息"按钮该调用。  
+ `GetFieldValue` 与`DoFieldExchange`机制可结合使用来提高性能。 例如，使用`GetFieldValue`检索一个值，你需要仅按需，并将分配到接口中的"详细信息"按钮该调用。  
   
  有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
   
-##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount  
  调用此成员函数可确定对表类型记录集可用的索引数。  
   
 ```  
@@ -1117,11 +1112,11 @@ short GetIndexCount();
  中的表类型记录集的索引数。  
   
 ### <a name="remarks"></a>备注  
- `GetIndexCount`可用于循环访问中的记录集的所有索引。 出于这个目的，使用`GetIndexCount`结合[GetIndexInfo](#getindexinfo)。 如果你对动态集类型或快照类型记录集调用此成员函数，则 MFC 会引发异常。  
+ `GetIndexCount` 可用于循环访问中的记录集的所有索引。 出于这个目的，使用`GetIndexCount`结合[GetIndexInfo](#getindexinfo)。 如果你对动态集类型或快照类型记录集调用此成员函数，则 MFC 会引发异常。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo  
  调用此成员函数来获取各种类型的基的基础记录集的表中定义的索引有关的信息。  
   
 ```  
@@ -1147,11 +1142,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  指定要检索的索引有关的信息的选项。 可用选项以及它们会导致函数返回此处列出。 为了获得最佳性能，检索仅您需要的信息的级别：  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称，字段信息字段  
+- `AFX_DAO_PRIMARY_INFO` （默认值）名称，字段信息字段  
   
-- `AFX_DAO_SECONDARY_INFO`主要的信息，加上： 主、 唯一、 聚集、 IgnoreNulls，所需，外部  
+- `AFX_DAO_SECONDARY_INFO` 主要的信息，加上： 主、 唯一、 聚集、 IgnoreNulls，所需，外部  
   
-- `AFX_DAO_ALL_INFO`主要和辅助信息，加上： 非重复计数  
+- `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 非重复计数  
   
  `lpszName`  
  指向按名称查找的名称的索引对象的指针。  
@@ -1163,7 +1158,7 @@ void GetIndexInfo(
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark  
  调用此成员函数可检索最近添加或更新记录的书签。  
   
 ```  
@@ -1180,7 +1175,7 @@ COleVariant GetLastModifiedBookmark();
   
  有关相关信息，请参阅主题 DAO 帮助中的"上次更改时间属性"。  
   
-##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode  
  调用此成员函数可确定实际上锁定记录集的类型。  
   
 ```  
@@ -1199,7 +1194,7 @@ BOOL GetLockingMode();
   
  有关相关信息，请参阅"LockEdits 属性"和"锁定行为在多用户应用程序"DAO 帮助中的主题。  
   
-##  <a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>  CDaoRecordset::GetName  
  调用此成员函数可检索的记录集名称。  
   
 ```  
@@ -1214,7 +1209,7 @@ CString GetName();
   
  有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
-##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue  
  调用此成员函数可检索基础 DAOParameter 对象中存储的指定参数的当前值。  
   
 ```  
@@ -1237,7 +1232,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  有关相关信息，请参阅主题 DAO 帮助中的"参数对象"。  
   
-##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition  
  如果调用处理动态集类型或快照类型记录集时`GetPercentPosition`完全填充记录集之前, 移动的量是相对于访问由调用的记录数[GetRecordCount](#getrecordcount).  
   
 ```  
@@ -1254,7 +1249,7 @@ float GetPercentPosition();
   
  有关相关信息，请参阅主题 DAO 帮助中的"PercentPosition 属性"。  
   
-##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount  
  调用此成员函数以找出已访问在记录集中的多少条记录。  
   
 ```  
@@ -1265,7 +1260,7 @@ long GetRecordCount();
  返回记录集对象中访问的记录的数。  
   
 ### <a name="remarks"></a>备注  
- `GetRecordCount`不表示多少条记录包含动态集类型或快照类型记录集中，直到已访问的所有记录。 此成员函数调用可能需要占用大量的时间才能完成。  
+ `GetRecordCount` 不表示多少条记录包含动态集类型或快照类型记录集中，直到已访问的所有记录。 此成员函数调用可能需要占用大量的时间才能完成。  
   
  后的最新记录已被访问，则返回值指示记录集内的未删除记录的总数。 若要强制进行访问的最后一个记录，请调用`MoveLast`或`FindLast`记录集的成员函数。 SQL 计数还可用于确定你的查询将返回的记录的大致数目。  
   
@@ -1279,7 +1274,7 @@ long GetRecordCount();
   
  有关相关信息，请参阅主题 DAO 帮助中的"RecordCount 属性"。  
   
-##  <a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>  CDaoRecordset::GetSQL  
  调用此成员函数可获取用于选择记录集的记录已打开状态时的 SQL 语句。  
   
 ```  
@@ -1299,7 +1294,7 @@ CString GetSQL() const;
   
  有关相关信息，请参阅主题 DAO 帮助中的"SQL 属性"。  
   
-##  <a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>  CDaoRecordset::GetType  
  打开要确定记录集对象的类型的记录集后调用此成员函数。  
   
 ```  
@@ -1318,7 +1313,7 @@ short GetType();
 ### <a name="remarks"></a>备注  
  有关相关信息，请参阅主题 DAO 帮助中的"类型属性"。  
   
-##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule  
  调用此成员函数以确定用于验证数据的规则。  
   
 ```  
@@ -1335,7 +1330,7 @@ CString GetValidationRule();
   
  有关相关信息，请参阅主题 DAO 帮助中的"有效性规则属性"。  
   
-##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText  
  调用此成员函数可检索基础的字段对象的有效性文本属性的文本。  
   
 ```  
@@ -1348,7 +1343,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>备注  
  有关相关信息，请参阅主题 DAO 帮助中的"有效性文本属性"。  
   
-##  <a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>  CDaoRecordset::IsBOF  
  从记录滚动到记录以了解是否你进入之前记录集的第一条记录之前，请调用此成员函数。  
   
 ```  
@@ -1388,14 +1383,14 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**，`MoveLast`|非零|非零|  
+|**MoveFirst**， `MoveLast`|非零|非零|  
 |**移动**0|无更改|无更改|  
 |`MovePrev`**移动**< 0|非零|无更改|  
 |`MoveNext`**移动**> 0|无更改|非零|  
   
  有关相关信息，请参阅主题"BOF，EOF 属性"DAO 帮助中。  
   
-##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted  
  调用此成员函数可确定当前记录是否已被删除。  
   
 ```  
@@ -1415,7 +1410,7 @@ BOOL IsDeleted() const;
   
  有关相关信息，请参阅"删除方法"、"上次更改时间属性"和 DAO 帮助中的"EditMode 属性"的主题。  
   
-##  <a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>  CDaoRecordset::IsEOF  
  调用此成员函数，如从记录滚动到记录以了解是否你已超出最后一个记录集的记录。  
   
 ```  
@@ -1455,14 +1450,14 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**，`MoveLast`|非零|非零|  
+|**MoveFirst**， `MoveLast`|非零|非零|  
 |**移动**0|无更改|无更改|  
 |`MovePrev`**移动**< 0|非零|无更改|  
 |`MoveNext`**移动**> 0|无更改|非零|  
   
  有关相关信息，请参阅主题"BOF，EOF 属性"DAO 帮助中。  
   
-##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty  
  调用此成员函数，以确定是否尚未标记为"脏"的指定的字段数据成员的动态集 （更改）。  
   
 ```  
@@ -1479,9 +1474,9 @@ BOOL IsFieldDirty(void* pv);
 ### <a name="remarks"></a>备注  
  所有已更新字段数据成员中的数据将传输到记录在数据源上的当前记录更新通过调用时**更新**成员函数`CDaoRecordset`(到调用**编辑**或`AddNew`)。 了解这一点，你可能需要进一步的步骤，如取消标记以将标记列，以便它不会写到数据源的字段数据成员。  
   
- `IsFieldDirty`通过实现`DoFieldExchange`。  
+ `IsFieldDirty` 通过实现`DoFieldExchange`。  
   
-##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull  
  调用此成员函数来确定记录集的指定的字段数据成员是否已标记为 Null。  
   
 ```  
@@ -1506,7 +1501,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  如果使用动态记录绑定，但不使用派生自`CDaoRecordset`，请务必使用**VT_NULL**中示例所示。  
   
-##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable  
  调用以确定是否可以指定的字段数据成员为"null"（可以是设置为一个 Null 值; 如果该成员函数C + + **NULL**不同时，则为 Null，这在数据库术语中，意味着"having 没有值")。  
   
 ```  
@@ -1523,7 +1518,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>备注  
  不能为 Null 的字段必须具有一个值。 如果你尝试将此类字段设置为 Null，在添加或更新记录时，数据源拒绝添加或更新，和**更新**将引发异常。 在调用时，则会发生异常**更新**，在调用时不`SetFieldNull`。  
   
-##  <a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  调用此成员函数可确定记录集是否打开。  
   
 ```  
@@ -1535,7 +1530,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_bcheckcachefordirtyfields"></a>Cdaorecordset:: M_bcheckcachefordirtyfields  
+##  <a name="m_bcheckcachefordirtyfields"></a>  Cdaorecordset:: M_bcheckcachefordirtyfields  
  包含一个标志，指示是否缓存的字段自动标记为脏页 （更改） 和 Null。  
   
 ### <a name="remarks"></a>备注  
@@ -1543,7 +1538,7 @@ BOOL IsOpen() const;
   
  设置此数据成员之前调用**打开**。 此机制是主要用于易用性。 性能可能会降低由于双缓冲的字段进行更改时。  
   
-##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  包含记录集类中的字段数据成员的数目和选定数据源的记录集的列数。  
   
 ### <a name="remarks"></a>备注  
@@ -1556,7 +1551,7 @@ BOOL IsOpen() const;
   
  你可以将列绑定动态的方式的`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`。 如果这样做，你不需要递增中的计数`m_nFields`以反映调用 DFX 函数次数你`DoFieldExchange`成员函数。  
   
-##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams  
  包含的记录集类中的参数数据成员数-与记录集的查询一起传递的参数数目。  
   
 ### <a name="remarks"></a>备注  
@@ -1569,7 +1564,7 @@ BOOL IsOpen() const;
   
  有关相关信息，请参阅主题 DAO 帮助中的"参数对象"。  
   
-##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset  
  包含指向 DAO 记录集对象基础的 OLE 接口的`CDaoRecordset`对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1577,7 +1572,7 @@ BOOL IsOpen() const;
   
  有关相关信息，请参阅主题 DAO 帮助中的"记录集对象"。  
   
-##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase  
  包含指向的`CDaoDatabase`通过该记录集连接到数据源的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1587,7 +1582,7 @@ BOOL IsOpen() const;
   
  有关相关信息，请参阅主题 DAO 帮助中的"数据库对象"。  
   
-##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter  
  包含用于构造字符串**其中**SQL 语句子句。  
   
 ### <a name="remarks"></a>备注  
@@ -1597,7 +1592,7 @@ BOOL IsOpen() const;
   
  有关相关信息，请参阅主题 DAO 帮助中的"筛选器属性"。  
   
-##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort  
  包含一个字符串，包含**ORDERBY**而无需保留字的 SQL 语句子句**ORDERBY**。  
   
 ### <a name="remarks"></a>备注  
@@ -1609,7 +1604,7 @@ BOOL IsOpen() const;
   
  有关相关信息，请参阅主题 DAO 帮助中的"排序属性"。  
   
-##  <a name="move"></a>CDaoRecordset::Move  
+##  <a name="move"></a>  CDaoRecordset::Move  
  调用此成员函数以定位该记录集`lRows`从当前记录的记录。  
   
 ```  
@@ -1621,7 +1616,7 @@ virtual void Move(long lRows);
  要向前或向后移动的记录数。 正值表示向前，移动记录集的一端。 值为负时，开始向后移动。  
   
 ### <a name="remarks"></a>备注  
- 您可以移动向前或向后。 `Move( 1 )`等效于`MoveNext`，和`Move( -1 )`等效于`MovePrev`。  
+ 您可以移动向前或向后。 `Move( 1 )` 等效于`MoveNext`，和`Move( -1 )`等效于`MovePrev`。  
   
 > [!CAUTION]
 >  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
@@ -1638,7 +1633,7 @@ virtual void Move(long lRows);
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
-##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst  
  调用此成员函数要第一条记录中的记录集 （如果有） 的当前记录。  
   
 ```  
@@ -1666,7 +1661,7 @@ void MoveFirst();
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
-##  <a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>  CDaoRecordset::MoveLast  
  在记录集中的当前记录调用此成员函数，以使最后一条记录 （如果有）。  
   
 ```  
@@ -1691,7 +1686,7 @@ void MoveLast();
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
-##  <a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>  CDaoRecordset::MoveNext  
  调用此成员函数以使记录集的当前记录中的下一步的记录。  
   
 ```  
@@ -1715,7 +1710,7 @@ void MoveNext();
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
-##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>  CDaoRecordset::MovePrev  
  调用此成员函数，使上一记录中记录集的当前记录。  
   
 ```  
@@ -1741,7 +1736,7 @@ void MovePrev();
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
-##  <a name="open"></a>Cdaorecordset:: Open  
+##  <a name="open"></a>  Cdaorecordset:: Open  
  必须调用该成员函数以检索记录集的记录。  
   
 ```  
@@ -1863,7 +1858,7 @@ virtual void Open(
   
  有关相关信息，请参阅主题 DAO 帮助中的"OpenRecordset 方法"。  
   
-##  <a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>  CDaoRecordset::Requery  
  调用此成员函数以重新生成 （刷新） 记录集。  
   
 ```  
@@ -1877,7 +1872,7 @@ virtual void Requery();
   
  对于动态集或快照中，调用**Requery**任何你想要重新生成使用参数值的记录集的时间。 通过设置来设置新的筛选器或排序[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)之前调用**Requery**。 通过将新值分配给之前调用的参数数据成员设置新的参数**Requery**。  
   
- 如果重新生成该记录集的尝试失败，已关闭记录集。 在调用之前**Requery**，你可以确定是否可以通过调用重新记录集的查询[CanRestart](#canrestart)成员函数。 `CanRestart`不能保证**Requery**将会成功。  
+ 如果重新生成该记录集的尝试失败，已关闭记录集。 在调用之前**Requery**，你可以确定是否可以通过调用重新记录集的查询[CanRestart](#canrestart)成员函数。 `CanRestart` 不能保证**Requery**将会成功。  
   
 > [!CAUTION]
 >  调用**Requery**仅具有调用后**打开**。  
@@ -1891,7 +1886,7 @@ virtual void Requery();
   
  有关相关信息，请参阅主题 DAO 帮助中的"Requery 方法"。  
   
-##  <a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>  CDaoRecordset::Seek  
  调用此成员函数以满足指定的条件的当前索引，并确保记录当前记录索引的表类型记录集对象中找到的记录。  
   
 ```  
@@ -1936,11 +1931,11 @@ BOOL Seek(
 ### <a name="remarks"></a>备注  
  使用第二个 （数组） 版本`Seek`要处理的四个字段的索引或以上。  
   
- `Seek`使搜索表类型记录集上的高性能索引。 必须通过调用设置的当前索引`SetCurrentIndex`之前调用`Seek`。 如果索引标识了非唯一的键字段或字段，`Seek`查找满足的条件的第一个记录。 如果未设置索引，将引发异常。  
+ `Seek` 使搜索表类型记录集上的高性能索引。 必须通过调用设置的当前索引`SetCurrentIndex`之前调用`Seek`。 如果索引标识了非唯一的键字段或字段，`Seek`查找满足的条件的第一个记录。 如果未设置索引，将引发异常。  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
   
- 当调用`Seek`，你将一个或多个密钥值和比较运算符传递 ("<"、"\<="，"="、"> ="，或">")。 `Seek`搜索指定的键字段，并找到满足指定的条件的第一个记录`lpszComparison`和`pKey1`。 一次找到，`Seek`返回非零值，并将该记录当前。 如果`Seek`无法找到匹配项，`Seek`返回零，而且当前记录是不确定。 当直接使用 DAO，则必须显示检查 NoMatch 属性。  
+ 当调用`Seek`，你将一个或多个密钥值和比较运算符传递 ("<"、"\<="，"="、"> ="，或">")。 `Seek` 搜索指定的键字段，并找到满足指定的条件的第一个记录`lpszComparison`和`pKey1`。 一次找到，`Seek`返回非零值，并将该记录当前。 如果`Seek`无法找到匹配项，`Seek`返回零，而且当前记录是不确定。 当直接使用 DAO，则必须显示检查 NoMatch 属性。  
   
  如果`lpszComparison`"=""> ="，或">"，`Seek`开始的索引开始。 如果`lpszComparison`是"<"或"< ="，`Seek`开始索引末尾、 向后搜索，除非末尾有重复的索引条目。 在这种情况下，`Seek`从索引末尾重复的索引条目中的任意项开始。  
   
@@ -1952,7 +1947,7 @@ BOOL Seek(
   
  有关相关信息，请参阅主题 DAO 帮助中的"查找方法"。  
   
-##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition  
  设置记录集对象的当前记录的相对的记录数。  
   
 ```  
@@ -1978,7 +1973,7 @@ void SetAbsolutePosition(long lPosition);
   
  有关相关信息，请参阅主题 DAO 帮助中的"AbsolutePosition 属性"。  
   
-##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark  
  调用此成员函数可置于包含指定的书签记录的记录集。  
   
 ```  
@@ -1995,11 +1990,11 @@ void SetBookmark(COleVariant varBookmark);
 > [!NOTE]
 >  调用[Requery](#requery)更改 DAO 书签。  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
   
  有关相关信息，请参阅"书签属性"和 Bookmarkable 属性的主题"DAO 帮助中。  
   
-##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize  
  调用此成员函数可设置要缓存的记录数。  
   
 ```  
@@ -2017,7 +2012,7 @@ void SetCacheSize(long lSize);
   
  有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
   
-##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart  
  调用此成员函数可在记录集缓存中指定的第一条记录的书签。  
   
 ```  
@@ -2037,11 +2032,11 @@ void SetCacheStart(COleVariant varBookmark);
   
  若要强制所有缓存的数据更新，请将传递`lSize`参数`SetCacheSize`为 0，调用`SetCacheSize`再次缓存的大小与你最初请求，，然后调用`FillCache`成员函数。  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
   
  有关相关信息，请参阅主题 CacheSize，CacheStart 属性 DAO 帮助中。  
   
-##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex  
  调用此成员函数以在表类型记录集上设置索引。  
   
 ```  
@@ -2061,7 +2056,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  有关相关信息，请参阅主题"索引对象"，并定义 DAO 帮助中的"当前索引"。  
   
-##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty  
  调用此成员函数来标记的字段数据成员的记录集持久化为已更改或为不变。  
   
 ```  
@@ -2099,9 +2094,9 @@ void SetFieldDirty(
   
  这意味着您不能设置所有**param**字段设置为**NULL**，如可以按照与**outputColumn**字段。  
   
- `SetFieldDirty`通过实现`DoFieldExchange`。  
+ `SetFieldDirty` 通过实现`DoFieldExchange`。  
   
-##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull  
  调用此成员函数来标记的字段数据成员的记录集为 Null （专门具有任何值） 或为非 Null。  
   
 ```  
@@ -2118,7 +2113,7 @@ void SetFieldNull(
  如果字段数据成员均被标记为不具有任何值 (Null)，则为非 0。 如果字段数据成员是被标记为非 Null 则否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `SetFieldNull`用于绑定中的字段，`DoFieldExchange`机制。  
+ `SetFieldNull` 用于绑定中的字段，`DoFieldExchange`机制。  
   
  当你将一条新记录添加到记录集时，所有字段数据成员最初设置为 Null 值的并标记为"脏"（更改）。 当从数据源检索一条记录时，其列已具有值，或者为 Null。 如果不合适，若要使字段为 Null， [CDaoException](../../mfc/reference/cdaoexception-class.md)引发。  
   
@@ -2137,7 +2132,7 @@ void SetFieldNull(
   
  将仅设置**outputColumn**字段设置为**NULL**;**param**字段不会受到影响。  
   
-##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue  
  调用此成员函数以设置字段的值，按序号位置或通过更改字符串的值。  
   
 ```  
@@ -2177,11 +2172,11 @@ void SetFieldValue(
 ### <a name="remarks"></a>备注  
  使用`SetFieldValue`和[GetFieldValue](#getfieldvalue)将字段动态绑定在运行的时而不是静态绑定列使用[DoFieldExchange](#dofieldexchange)机制。  
   
- 请注意，是否你不在创建 UNICODE 记录集，你必须使用一种形式的`SetFieldValue`不包含`COleVariant`参数，或`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，是否你不在创建 UNICODE 记录集，你必须使用一种形式的`SetFieldValue`不包含`COleVariant`参数，或`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
   
  有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
   
-##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull  
  调用此成员函数可将字段设置为 Null 值。  
   
 ```  
@@ -2201,7 +2196,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
   
-##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode  
  调用此成员函数以设置锁定记录集的类型。  
   
 ```  
@@ -2223,7 +2218,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  当使用 ODBC 数据源，锁定模式始终是开放式的。  
   
-##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue  
  调用此成员函数以在运行时在记录集设置参数的值。  
   
 ```  
@@ -2250,9 +2245,9 @@ virtual void SetParamValue(
 ### <a name="remarks"></a>备注  
  参数必须已建立作为记录集的 SQL 字符串的一部分。 按名称或在集合中的索引位置，你可以访问参数。  
   
- 指定的值将设置为`COleVariant`对象。 有关设置的所需的值和中的类型信息你`COleVariant`对象，请参阅类[COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ 指定的值将设置为`COleVariant`对象。 有关设置的所需的值和中的类型信息你`COleVariant`对象，请参阅类[COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
   
-##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  调用此成员函数可将参数设置为 Null 值。  
   
 ```  
@@ -2270,7 +2265,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>备注  
  C + + **NULL**不同时，则为 Null，这在数据库术语中，意味着"having 没有值。"  
   
-##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition  
  调用此成员函数可设置一个值，更改基于百分比的中记录集的记录的记录集对象中的当前记录的近似位置。  
   
 ```  
@@ -2291,7 +2286,7 @@ void SetPercentPosition(float fPosition);
   
  有关相关信息，请参阅主题 DAO 帮助中的"PercentPosition 属性"。  
   
-##  <a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>  CDaoRecordset::Update  
  在调用后调用此成员函数`AddNew`或**编辑**成员函数。  
   
 ```  

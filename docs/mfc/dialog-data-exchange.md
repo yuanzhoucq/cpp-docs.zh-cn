@@ -1,13 +1,10 @@
 ---
-title: "对话框数据交换 |Microsoft 文档"
-ms.custom: 
+title: 对话框数据交换 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange"></a>对话框数据交换
 如果使用 DDX 机制，则可设置对话框对象的成员变量的初始值（通常在 `OnInitDialog` 处理程序或对话框构造函数中）。 立即显示对话框之前，框架的 DDX 机制会将成员变量的值传输到的控件在对话框中，它们显示哪个位置对话框本身中出现时响应`DoModal`或**创建**. `OnInitDialog` 中的 `CDialog` 的默认实现调用 `UpdateData` 类的 `CWnd` 成员函数以在对话框中初始化控件。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  ![对话框数据交换](../mfc/media/vc379d1.gif "vc379d1")  
 对话框数据交换  
   
- `UpdateData`在两个方向，作为指定的工作原理**BOOL**参数传递给它。 若要执行交换，`UpdateData` 将设置 `CDataExchange` 对象并调用对话框类的 `CDialog` 的 `DoDataExchange` 成员函数的重写。 `DoDataExchange` 采用 `CDataExchange` 类型的参数。 传递给 `CDataExchange` 的 `UpdateData` 对象表示交换的上下文，并将此类信息定义交换的方向。  
+ `UpdateData` 在两个方向，作为指定的工作原理**BOOL**参数传递给它。 若要执行交换，`UpdateData` 将设置 `CDataExchange` 对象并调用对话框类的 `CDialog` 的 `DoDataExchange` 成员函数的重写。 `DoDataExchange` 采用 `CDataExchange` 类型的参数。 传递给 `CDataExchange` 的 `UpdateData` 对象表示交换的上下文，并将此类信息定义交换的方向。  
   
  当您（或代码向导）重写 `DoDataExchange` 时，可以指定对每个数据成员（控件）调用一个 DDX 函数。 每个 DDX 函数都了解如何基于由 `CDataExchange` 传递给 `DoDataExchange` 的 `UpdateData` 参数提供的上下文双向交换数据。  
   

@@ -1,12 +1,9 @@
 ---
-title: "错误 C1076 |Microsoft 文档"
-ms.custom: 
+title: 错误 C1076 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1076
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617db809cfaeb4d0e0003a3dfc2e9568726b0c58
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1076"></a>错误 C1076
 编译器限制 : 达到内部堆限制；使用 /Zm 指定更高的限制  
@@ -50,4 +45,4 @@ ms.lasthandoff: 12/21/2017
   
 8.  将当前文件拆分成更小的文件。  
   
- 如果指定的值在生成开始后，立即，则会发生 C1076 **/Zm**而言可能太高为您的程序。 减少**/Zm**值。
+ 如果指定的值在生成开始后，立即，则会发生 C1076 **/Zm**而言可能太高为您的程序。 减少 **/Zm**值。

@@ -1,12 +1,9 @@
 ---
-title: _InterlockedCompareExchange128 | Microsoft Docs
-ms.custom: 
+title: _InterlockedCompareExchange128 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2850be4b93738c61e22c5ca841e07f1901ec01e2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft 专用**  
@@ -63,7 +58,7 @@ unsigned char _InterlockedCompareExchange128(
   
  如果该比较字不等于目标的原始值为 0。 目标值不变，且使用的目标值覆盖该比较字的值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

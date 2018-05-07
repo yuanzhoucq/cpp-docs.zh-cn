@@ -1,13 +1,10 @@
 ---
-title: "使用 c + + 互操作 (隐式 PInvoke) |Microsoft 文档"
-ms.custom: 
+title: 使用 c + + 互操作 (隐式 PInvoke) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,18 +26,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a91c9833358744730b9ad9c63f5a14729d9d0968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ 互操作（隐式 PInvoke）
 Visual c + + 不同于其他.NET 语言，具有在同一应用程序和甚至同一文件中允许存在托管和非托管代码的互操作性支持 (与[managed、 unmanaged](../preprocessor/managed-unmanaged.md)杂注)。 这允许 Visual c + + 开发人员将.NET 功能集成到现有 Visual c + + 应用程序，而不影响应用程序的其余部分。  

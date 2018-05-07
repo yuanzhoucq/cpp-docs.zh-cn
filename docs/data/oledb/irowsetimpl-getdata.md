@@ -1,12 +1,9 @@
 ---
-title: IRowsetImpl::GetData | Microsoft Docs
-ms.custom: 
+title: 'Irowsetimpl:: Getdata |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetImpl.GetData
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - GetData method [OLE DB]
 ms.assetid: cb15f1cc-bd25-4b74-93c3-db71aa93829c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 64bc8d6b84195aef8fd9dc3b0093221cc8e057d7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e2a20e8f1948078aec6994516e05f83e95cdcc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimplgetdata"></a>IRowsetImpl::GetData
 从行的行集的副本检索数据。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>备注  
  此外可以处理数据转换使用 OLE DB 数据转换 DLL。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

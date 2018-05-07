@@ -1,11 +1,8 @@
 ---
-title: "Platform:: comexception 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: comexception 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 类
 表示在应用程序执行过程中发生的 COM 错误。 COMException 是一组预定义的标准异常的基类。  
@@ -64,7 +59,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>派生异常  
  下列预定义的异常从 COMException 派生。 它们与 COMException 的区别只在于名称、构造函数的名称和基础 HRESULT 值。  
   
-|name|基础 HRESULT|描述|  
+|名称|基础 HRESULT|描述|  
 |----------|------------------------|-----------------|  
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|  
 |AccessDeniedException|E_ACCESSDENIED|被拒绝访问资源或功能时引发。|  
@@ -80,7 +75,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 |OutOfBoundsException|E_BOUNDS|某个操作尝试在有效范围外访问数据时引发。|  
 |OutOfMemoryException|E_OUTOFMEMORY|没有足够内存来完成操作时引发。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -89,7 +84,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **元数据：** platform.winmd  
 
-## <a name="ctor"></a> COMException::COMException Constructor
+## <a name="ctor"></a> Comexception:: Comexception 构造函数
 初始化 COMException 类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -104,7 +99,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a> COMException::HResult Property
+## <a name="hresult"></a> Comexception:: Hresult 属性
 与异常相对应的 HRESULT。  
   
 ### <a name="syntax"></a>语法  
@@ -119,7 +114,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>备注  
  有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
 
-## <a name="message"></a> COMException::Message Property
+## <a name="message"></a> Comexception:: Message 属性
 描述异常的消息。  
   
 ### <a name="syntax"></a>语法  

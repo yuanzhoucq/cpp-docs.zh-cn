@@ -1,13 +1,10 @@
 ---
-title: "使用 CListCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CListCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CListCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc61b0bb9e1df702424c2e95d3d4ef3b2186dea0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-clistctrl"></a>使用 CListCtrl
 像在文件资源管理器或带或不带图标的分栏式文本列表中，使用列表控件显示图标与标签的任何排列。 有关的四个可能"视图"（不将其与 MFC 视图混淆） 的说明你可以在列表控件 — 图标视图、 小图标视图、 列表视图和报表视图-请参阅中的视图[CListCtrl](../mfc/reference/clistctrl-class.md)类概述。  

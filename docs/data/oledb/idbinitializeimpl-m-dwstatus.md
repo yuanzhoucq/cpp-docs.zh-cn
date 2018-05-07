@@ -1,12 +1,9 @@
 ---
-title: "Idbinitializeimpl:: M_dwstatus |Microsoft 文档"
-ms.custom: 
+title: 'Idbinitializeimpl:: M_dwstatus |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IDBInitializeImpl::m_dwStatus
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - m_dwStatus
 ms.assetid: 7621ccff-ca60-4b75-9c6a-c104bd0e2038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69c591b797908879f349945d49e6033763707592
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6bf195a314189232b197709d7d6c6e0c4ac405f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbinitializeimplmdwstatus"></a>IDBInitializeImpl::m_dwStatus
 数据源的标志。  
@@ -62,7 +57,7 @@ enum DATASOURCE_FLAGS {
 |**DSF_PERSIST_DIRTY**|如果数据源对象需要持久性 （即，如果发生了变化），设置。|  
 |**DSF_INITIALIZED**|如果初始化数据源，设置。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

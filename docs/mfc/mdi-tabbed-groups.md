@@ -1,30 +1,25 @@
 ---
-title: "MDI 选项卡式组 |Microsoft 文档"
-ms.custom: 
+title: MDI 选项卡式组 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9606d28f6e2057072a0c9fc356e3bc7ca7cdc19b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a7cf6420a331d46f2a158c16a30d439f334a46b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 选项卡式组
 多文档界面 (MDI) 选项卡式的组功能，多文档界面 (MDI) 应用程序以显示一个或多个选项卡式的窗口 (或称为的选项卡式窗口组*选项卡式组*) 在 MDI 工作区中。 选项卡式窗口可垂直对齐或水平对齐。 如果应用程序承载多个 MDI 选项卡式组，则将用拆分器分隔这些组。  

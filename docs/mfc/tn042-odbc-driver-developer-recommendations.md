@@ -1,13 +1,10 @@
 ---
-title: "TN042: ODBC 驱动程序开发人员建议 |Microsoft 文档"
-ms.custom: 
+title: 'TN042: ODBC 驱动程序开发人员建议 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6361266ebf2f09b8f34d150de835b25c55720b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35c75f5c5bae3a1b56abe91340de00f373663792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042：ODBC 驱动程序开发人员建议
 > [!NOTE]
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  **SQLGetInfo SQL_DATABASE_NAME**将调用。  
   
 ## <a name="begintrans-committrans-rollback"></a>BeginTrans，CommitTrans，回滚  
- **SQLSetConnectOption SQL_AUTOCOMMIT**和**SQLTransact SQL_COMMIT**， **SQL_ROLLBACK**和**SQL_AUTOCOMMIT**将会调用事务请求。  
+ **SQLSetConnectOption SQL_AUTOCOMMIT**和**SQLTransact SQL_COMMIT**， **SQL_ROLLBACK**和**SQL_AUTOCOMMIT**事务请求将会调用进行。  
   
 ## <a name="crecordsets"></a>CRecordsets  
  **SQLAllocStmt**， **SQLPrepare**， **SQLExecute** (有关**打开**和**Requery**)， **SQLExecDirect** （对于更新操作）， **SQLFreeStmt**必须支持。 **SQLNumResultCols**和**SQLDescribeCol**将对结果集在不同时间调用。  

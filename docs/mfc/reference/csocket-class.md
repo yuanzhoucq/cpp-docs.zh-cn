@@ -1,12 +1,9 @@
 ---
-title: "CSocket 类 |Microsoft 文档"
-ms.custom: 
+title: CSocket 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket 类
 派生自`CAsyncSocket`、 继承其封装 Windows 套接字 API 中，并表示比更高级别的抽象`CAsyncSocket`对象。  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::OnMessagePending](#onmessagepending)|在等待阻塞调用完成时调用以挂起消息的处理。|  
   
 ## <a name="remarks"></a>备注  
- `CSocket`适用于类`CSocketFile`和`CArchive`来管理发送和接收数据。  
+ `CSocket` 适用于类`CSocketFile`和`CArchive`来管理发送和接收数据。  
   
  A`CSocket`对象还提供了阻止，这是至关重要的同步操作`CArchive`。 阻止函数，如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(从所有继承`CAsyncSocket`)，不会返回`WSAEWOULDBLOCK`中的错误`CSocket`。 相反，这些函数等待，直到操作完成。 此外，原始调用将终止并出现错误`WSAEINTR`如果`CancelBlockingCall`时这些函数之一的阻止调用。  
   
@@ -101,10 +96,10 @@ class CSocket : public CAsyncSocket
   
  `CSocket`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>  CSocket::Attach  
  调用此成员函数可将附加`hSocket`的句柄`CSocket`对象。  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  调用此成员函数以取消阻止当前正在进行调用。  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  调用**创建**后构造套接字对象创建 Windows 套接字并将其连接的成员函数。  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字： 背景](../../mfc/windows-sockets-background.md)， [Windows 套接字： 端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)，和[Windows 套接字： 使用使用存档的套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  构造 `CSocket` 对象。  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  返回一个指向`CSocket`对象。  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  调用此成员函数可确定阻止调用是否正在进行。  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  重写该成员函数以从 Windows 查找特定的消息和你的套接字中对其做出响应。  
   
 ```  

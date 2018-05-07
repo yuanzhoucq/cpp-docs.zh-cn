@@ -1,13 +1,10 @@
 ---
-title: "使用 CHeaderCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CHeaderCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHeaderCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88b4da42944c3c42e48fae4c0cf503f7f6ace1a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8825f4cb82d734cee8da410a318a46d57ca61b4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 使用标头控件，由类表示[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)，以显示有关纵栏表列表的列标题。 例如，标头控件将用于实施电子表格中的列控制。  

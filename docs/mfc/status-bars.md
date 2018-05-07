@@ -1,30 +1,25 @@
 ---
-title: "状态栏 |Microsoft 文档"
-ms.custom: 
+title: 状态栏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - status bars
 - control bars [MFC], status bar
 ms.assetid: fcbc5029-1aab-4e14-adf7-419038a4935e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9f79fe4def397346e3f44c6dbf50b2583888e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ee2a1d9270c45bacbcaca7e5a0b2d7cbdd41ef5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="status-bars"></a>状态栏
 状态栏，应用程序向用户显示消息和有用信息但不会中断用户的工作的一个位置。 通常显示在窗口底部，状态栏具有"窗格，"包括"指示器"和"消息行"。 指示器提供 SCROLL LOCK 之类的内容的状态，指示宏录制启用上，依次类推。 状态栏上的消息行可以显示有关程序状态或使用鼠标指向用户是工具栏按钮或菜单项的信息。  

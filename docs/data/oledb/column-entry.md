@@ -1,12 +1,9 @@
 ---
-title: COLUMN_ENTRY | Microsoft Docs
-ms.custom: 
+title: COLUMN_ENTRY |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_ENTRY macro
 ms.assetid: a10aef29-6d70-49ec-b572-5b5c4abe1b46
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9239095874c1274c0c13d37e0f466ac69b2f20e2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1d2f1466b660d3235f3fffe5b7eed9aa80696d7c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnentry"></a>COLUMN_ENTRY
 在行集中的特定列表示行集上的绑定。  
@@ -59,7 +54,7 @@ COLUMN_ENTRY(nOrdinal, data)
 ## <a name="example"></a>示例  
  请参阅中的宏主题中，示例[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

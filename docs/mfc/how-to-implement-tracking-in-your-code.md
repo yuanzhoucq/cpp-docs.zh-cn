@@ -1,29 +1,24 @@
 ---
-title: "如何： 在代码中实现跟踪 |Microsoft 文档"
-ms.custom: 
+title: 如何： 在代码中实现跟踪 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad49c70113780e0c0570e88efab06efc347e83d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>如何：在代码中实现跟踪
 若要跟踪的 OLE 项目，你必须处理到项，例如单击项或更新该文档的视图相关的某些事件。 在所有情况下，只需声明一个临时[CRectTracker](../mfc/reference/crecttracker-class.md)对象，并通过此对象操作项。  

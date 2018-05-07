@@ -1,13 +1,10 @@
 ---
-title: "使用 CTabCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CTabCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CTabCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c6386c5baf4af7447e4d3c711e644cb2ae5209a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
 “选项卡控件”类似于笔记本中的分隔条或文件柜中的带标签的文件夹。 使用由类表示的选项卡控件[CTabCtrl](../mfc/reference/ctabctrl-class.md)、 要向用户，建议的对等或每个页面之间的逻辑关系的格式一次一个地显示的信息或控件的多个页。  

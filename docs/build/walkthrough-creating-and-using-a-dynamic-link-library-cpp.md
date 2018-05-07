@@ -1,30 +1,25 @@
 ---
-title: "演练： 创建和使用你自己动态链接库 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建和使用你自己动态链接库 （c + +） |Microsoft 文档
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练： 创建和使用你自己动态链接库 （c + +）
 
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 
 1. 在菜单栏上，选择**文件**，**新建**，**项目**以打开**新项目**对话框。
 
-1. 在左窗格中**新项目**对话框框中，展开**已安装**和**Visual c + +**如果需要，然后选择**Windows 桌面**。 在中心窗格中，选择**Windows 桌面向导**。 输入`MathLibrary`中**名称**框以指定项目的名称。
+1. 在左窗格中**新项目**对话框框中，展开**已安装**和**Visual c + +** 如果需要，然后选择**Windows 桌面**。 在中心窗格中，选择**Windows 桌面向导**。 输入`MathLibrary`中**名称**框以指定项目的名称。
 
    ![将 MathLibrary 项目](media/mathlibrary-new-project-name-153.png "MathLibrary 项目")
 
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 >
 >1. 在菜单栏上，依次选择“项目”、“属性”。
 >
->1. 在左窗格中**属性页**对话框中，选择**预处理器**下**配置属性**， **C/c + +**。 请检查内容**预处理器定义**属性。<br/><br/>![检查预处理器定义属性](media/mathlibrary-153bug-preprocessor-definitions-check.png "检查预处理器定义属性")<br/><br/>如果你看到**MATHLIBRARY &#95;导出**中**预处理器定义**列表，则不需要更改任何内容。 如果你看到**MathLibrary &#95;导出**相反，然后继续执行以下步骤。
+>1. 在左窗格中**属性页**对话框中，选择**预处理器**下**配置属性**， **C/c + +**。 请检查内容**预处理器定义**属性。<br/><br/>![检查预处理器定义属性](media/mathlibrary-153bug-preprocessor-definitions-check.png "检查预处理器定义属性")<br/><br/>如果你看到**MATHLIBRARY&#95;导出**中**预处理器定义**列表，则不需要更改任何内容。 如果你看到**MathLibrary&#95;导出**相反，然后继续执行以下步骤。
 >
 >1. 在顶部**属性页**对话框中，更改**配置**下拉到**所有配置**。
 >
@@ -176,9 +171,9 @@ ms.lasthandoff: 12/21/2017
 
 此标头文件声明以产生通用斐波那契序列，给定两个初始值某些函数。 调用`fibonacci_init(1, 1)`生成熟悉斐波那契数字序列。
 
-请注意在文件顶部的预处理器语句。 默认情况下，DLL 的新项目模板将添加 ***PROJECTNAME*&#95;导出**DLL 项目的已定义的预处理器宏。 在此示例中，Visual Studio 定义**MATHLIBRARY &#95;导出**生成 MathLibrary DLL 项目时。 （在 Visual Studio 2017 版本 15.3 向导不会强制为大写形式此符号定义。 如果命名你的项目"MathLibrary"定义的符号则 MathLibrary &#95;而不是 MATHLIBRARY &#95; 导出导出。 That's 原因有更高版本以将此符号添加的额外步骤。)
+请注意在文件顶部的预处理器语句。 默认情况下，DLL 的新项目模板将添加 ***PROJECTNAME *&#95;导出**DLL 项目的已定义的预处理器宏。 在此示例中，Visual Studio 定义**MATHLIBRARY&#95;导出**生成 MathLibrary DLL 项目时。 （在 Visual Studio 2017 版本 15.3 向导不会强制为大写形式此符号定义。 如果命名你的项目"MathLibrary"，然后定义的符号是 MathLibrary&#95;而不是 MATHLIBRARY 导出&#95;导出。 That's 原因有更高版本以将此符号添加的额外步骤。)
 
-当**MATHLIBRARY &#95;导出**定义宏， **MATHLIBRARY &#95;API**宏设置`__declspec(dllexport)`函数声明上的修饰符。 此修饰符，可以告诉编译器和链接器以从 DLL 导出函数或变量，以便它可以由其他应用程序。 当**MATHLIBRARY &#95;导出**未定义，例如，当标头文件包括由客户端应用程序， **MATHLIBRARY &#95;API**适用`__declspec(dllimport)`修饰符添加到声明构造。 此修饰符将优化的导入的函数或应用程序中的变量。 有关详细信息，请参阅[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+当**MATHLIBRARY&#95;导出**定义宏， **MATHLIBRARY&#95;API**宏设置`__declspec(dllexport)`函数声明上的修饰符。 此修饰符，可以告诉编译器和链接器以从 DLL 导出函数或变量，以便它可以由其他应用程序。 当**MATHLIBRARY&#95;导出**未定义，例如，当标头文件包括由客户端应用程序， **MATHLIBRARY&#95;API**适用`__declspec(dllimport)`修饰符添加到构造声明。 此修饰符将优化的导入的函数或应用程序中的变量。 有关详细信息，请参阅[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>若要将实现添加到 DLL
 

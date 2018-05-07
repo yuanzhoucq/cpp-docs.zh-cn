@@ -1,12 +1,9 @@
 ---
-title: "列表 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 列表 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - list class [STL/CLR]
 - <list> header [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 40046e2b7263559765c2aab2bef13a17c341f7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4ff009da3ca29697e9b3affceb424bcd84b9b896
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`list`来管理的元素序列作为双向链接列表节点，各个存储一个元素。  
@@ -51,7 +46,7 @@ template<typename Value>
 ```  
   
 #### <a name="parameters"></a>参数  
- “值”  
+ 值  
  受控序列中的元素的类型。  
   
 ## <a name="members"></a>成员  
@@ -139,7 +134,7 @@ template<typename Value>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  

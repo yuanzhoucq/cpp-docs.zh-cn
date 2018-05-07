@@ -1,11 +1,8 @@
 ---
-title: "Platform:: stathreadattribute 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: stathreadattribute 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 类
 指示应用程序的线程模型是单线程单元 (STA)。  
@@ -50,7 +45,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>公共方法  
  STAThreadAttribute 属性继承自[platform:: object 类](../cppcx/platform-object-class.md)。 STAThreadAttribute 还会重载或具有以下成员：  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
@@ -59,7 +54,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Platform`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** collection.h  
   
  **命名空间：** Platform  

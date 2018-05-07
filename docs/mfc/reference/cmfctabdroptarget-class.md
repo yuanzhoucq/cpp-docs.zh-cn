@@ -1,12 +1,9 @@
 ---
-title: "CMFCTabDropTarget 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCTabDropTarget 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ff17f7312f5e04b6ae900e792523155705a3b4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 类
 提供选项卡控件和 OLE 库之间的通信机制。  
@@ -85,10 +80,10 @@ class CMFCTabDropTarget : public COleDropTarget
   
  [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxbasetabctrl.h  
   
-##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter  
  当用户将对象拖到选项卡窗口时，由框架调用。  
   
 ```  
@@ -127,7 +122,7 @@ virtual DROPEFFECT OnDragEnter(
   
  有关自定义模式的详细信息，请参阅[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 有关剪贴板数据格式的详细信息，请参阅[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
-##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  CMFCTabDropTarget::OnDragLeave  
  当用户拖动对象在具有焦点的选项卡时段之外，由框架调用。  
   
 ```  
@@ -144,7 +139,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
  此方法调用`CMFCBaseTabCtrl::OnDragLeave`方法来执行拖动操作。  
   
-##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  CMFCTabDropTarget::OnDragOver  
  当用户将对象拖动到具有焦点的选项卡窗口上，由框架调用。  
   
 ```  
@@ -183,7 +178,7 @@ virtual DROPEFFECT OnDragOver(
   
  有关自定义模式的详细信息，请参阅[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 有关剪贴板数据格式的详细信息，请参阅[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
-##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  CMFCTabDropTarget::OnDropEx  
  当用户释放鼠标按钮在拖动操作结束时，由框架调用。  
   
 ```  
@@ -224,7 +219,7 @@ virtual DROPEFFECT OnDropEx(
   
  有关自定义模式的详细信息，请参阅[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 有关剪贴板数据格式的详细信息，请参阅[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
-##  <a name="register"></a>CMFCTabDropTarget::Register  
+##  <a name="register"></a>  CMFCTabDropTarget::Register  
  将控件注册为一个可以是 OLE 拖放操作的目标。  
   
 ```  

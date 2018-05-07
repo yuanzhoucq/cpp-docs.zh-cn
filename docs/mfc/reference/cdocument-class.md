@@ -1,12 +1,9 @@
 ---
-title: "CDocument 类 |Microsoft 文档"
-ms.custom: 
+title: CDocument 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocument
@@ -129,17 +126,15 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad4a2bb3da49b0163367761aeefe85384ecdfb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 696b0d63a7b81b550e99981f199132713fe8a6ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocument-class"></a>CDocument 类
 提供用户定义文档类的基本功能。  
@@ -263,10 +258,10 @@ class CDocument : public CCmdTarget
   
  `CDocument`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="addview"></a>CDocument::AddView  
+##  <a name="addview"></a>  CDocument::AddView  
  调用此函数可将视图附加到文档。  
   
 ```  
@@ -285,7 +280,7 @@ void AddView(CView* pView);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocViewSDI#12](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
   
-##  <a name="beginreadchunks"></a>CDocument::BeginReadChunks  
+##  <a name="beginreadchunks"></a>  CDocument::BeginReadChunks  
  初始化消息的分块读取。  
   
 ```  
@@ -294,7 +289,7 @@ virtual void BeginReadChunks ();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="cancloseframe"></a>CDocument::CanCloseFrame  
+##  <a name="cancloseframe"></a>  CDocument::CanCloseFrame  
  显示文档的框架窗口关闭之前，由框架调用。  
   
 ```  
@@ -311,7 +306,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ### <a name="remarks"></a>备注  
  默认实现将检查是否有其他显示文档的框架窗口。 如果指定的框架窗口，显示文档的最后一个函数将提示用户保存文档，如果修改它。 如果你想要执行特殊处理，关闭帧窗口时，重写此函数。 这是一个高级可重写。  
   
-##  <a name="cdocument"></a>CDocument::CDocument  
+##  <a name="cdocument"></a>  CDocument::CDocument  
  构造**CDocument**对象。  
   
 ```  
@@ -321,7 +316,7 @@ CDocument();
 ### <a name="remarks"></a>备注  
  该框架将处理为你的文档创建。 重写[OnNewDocument](#onnewdocument)成员函数以执行初始化基于每个文档; 这是单文档界面 (SDI) 应用程序中特别重要。  
   
-##  <a name="clearchunklist"></a>CDocument::ClearChunkList  
+##  <a name="clearchunklist"></a>  CDocument::ClearChunkList  
  清除块列表。  
   
 ```  
@@ -330,7 +325,7 @@ virtual void ClearChunkList ();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="clearpathname"></a>CDocument::ClearPathName  
+##  <a name="clearpathname"></a>  CDocument::ClearPathName  
  清除文档对象的路径。  
   
 ```  
@@ -340,7 +335,7 @@ virtual void ClearPathName();
 ### <a name="remarks"></a>备注  
  清除从路径`CDocument`对象导致应用程序下一步保存文档时提示用户。 这使得**保存**命令的行为类似于**另存为**命令。  
   
-##  <a name="deletecontents"></a>CDocument::DeleteContents  
+##  <a name="deletecontents"></a>  CDocument::DeleteContents  
  由框架，以删除文档的数据而不销毁**CDocument**对象本身。  
   
 ```  
@@ -353,7 +348,7 @@ virtual void DeleteContents();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#57](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
   
-##  <a name="findchunk"></a>CDocument::FindChunk  
+##  <a name="findchunk"></a>  CDocument::FindChunk  
  查找指定 GUID 的块区。  
   
 ```  
@@ -374,7 +369,7 @@ virtual POSITION FindChunk(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getadapter"></a>CDocument::GetAdapter  
+##  <a name="getadapter"></a>  CDocument::GetAdapter  
  将指针返回到一个对象，实现`IDocument`接口。  
   
 ```  
@@ -386,7 +381,7 @@ virtual ATL::IDocument* GetAdapter();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getdoctemplate"></a>CDocument::GetDocTemplate  
+##  <a name="getdoctemplate"></a>  CDocument::GetDocTemplate  
  调用此函数可获取指向文档模板的指针，此文档类型。  
   
 ```  
@@ -399,7 +394,7 @@ CDocTemplate* GetDocTemplate() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#58](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
   
-##  <a name="getfile"></a>CDocument::GetFile  
+##  <a name="getfile"></a>  CDocument::GetFile  
  调用此成员函数以获取指向`CFile`对象。  
   
 ```  
@@ -422,7 +417,7 @@ virtual CFile* GetFile(
 ### <a name="return-value"></a>返回值  
  指向的指针`CFile`对象。  
   
-##  <a name="getfirstviewposition"></a>CDocument::GetFirstViewPosition  
+##  <a name="getfirstviewposition"></a>  CDocument::GetFirstViewPosition  
  调用此函数可获取与文档关联的视图的列表中的第一个视图的位置。  
   
 ```  
@@ -435,7 +430,7 @@ virtual POSITION GetFirstViewPosition() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="getnextview"></a>CDocument::GetNextView  
+##  <a name="getnextview"></a>  CDocument::GetNextView  
  调用此函数用于循环访问所有文档的视图。  
   
 ```  
@@ -455,7 +450,7 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="getpathname"></a>CDocument::GetPathName  
+##  <a name="getpathname"></a>  CDocument::GetPathName  
  调用此函数可获取文档的磁盘文件的完全限定的路径。  
   
 ```  
@@ -465,7 +460,7 @@ const CString& GetPathName() const;
 ### <a name="return-value"></a>返回值  
  文档的完全限定的路径。 如果文档尚未保存，或者没有与它关联的磁盘文件，此字符串为空。  
   
-##  <a name="getthumbnail"></a>CDocument::GetThumbnail  
+##  <a name="getthumbnail"></a>  CDocument::GetThumbnail  
  创建缩略图的提供程序用于显示缩略图的位图。  
   
 ```  
@@ -490,7 +485,7 @@ virtual BOOL GetThumbnail(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gettitle"></a>CDocument::GetTitle  
+##  <a name="gettitle"></a>  CDocument::GetTitle  
  调用此函数可获取该文档的标题，通常派生自文档的文件名。  
   
 ```  
@@ -500,7 +495,7 @@ const CString& GetTitle() const;
 ### <a name="return-value"></a>返回值  
  文档的标题。  
   
-##  <a name="initializesearchcontent"></a>CDocument::InitializeSearchContent  
+##  <a name="initializesearchcontent"></a>  CDocument::InitializeSearchContent  
  调用以初始化搜索内容搜索处理程序。  
   
 ```  
@@ -510,7 +505,7 @@ virtual void InitializeSearchContent ();
 ### <a name="remarks"></a>备注  
  重写此方法在派生类来初始化搜索内容。 内容应该是由分隔的部分的字符串";"。 例如，"点;矩形;ole 项"。  
   
-##  <a name="ismodified"></a>CDocument::IsModified  
+##  <a name="ismodified"></a>  CDocument::IsModified  
  调用此函数可确定自上次保存后是否已修改文档。  
   
 ```  
@@ -520,7 +515,7 @@ virtual BOOL IsModified();
 ### <a name="return-value"></a>返回值  
  如果文档已被修改，因为自上次保存; 则为非 0否则为 0。  
   
-##  <a name="issearchandorganizehandler"></a>CDocument::IsSearchAndOrganizeHandler  
+##  <a name="issearchandorganizehandler"></a>  CDocument::IsSearchAndOrganizeHandler  
  指示是否的此实例`CDocument`针对搜索和组织的处理程序创建的。  
   
 ```  
@@ -533,7 +528,7 @@ BOOL IsSearchAndOrganizeHandler() const;
 ### <a name="remarks"></a>备注  
  此函数将返回当前`TRUE`仅对中的进程服务器实现的丰富预览处理程序。 您可以在你的应用程序级别，以使此函数返回设置相应的标志 （m_bPreviewHandlerMode、 m_bSearchMode、 m_bGetThumbnailMode） `TRUE`。  
   
-##  <a name="loaddocumentfromstream"></a>CDocument::LoadDocumentFromStream  
+##  <a name="loaddocumentfromstream"></a>  CDocument::LoadDocumentFromStream  
  调用以从流加载文档数据。  
   
 ```  
@@ -555,7 +550,7 @@ virtual HRESULT LoadDocumentFromStream(
 ### <a name="remarks"></a>备注  
  你可以重写此方法在派生类以自定义如何从流中加载数据。  
   
-##  <a name="m_bgetthumbnailmode"></a>CDocument::m_bGetThumbnailMode  
+##  <a name="m_bgetthumbnailmode"></a>  CDocument::m_bGetThumbnailMode  
  指定`CDocument`对象由 dllhost 缩略图。 应签入`CView::OnDraw`。  
   
 ```  
@@ -563,9 +558,9 @@ BOOL m_bGetThumbnailMode;
 ```  
   
 ### <a name="remarks"></a>备注  
- `TRUE`指示文档由 dllhost 缩略图。  
+ `TRUE` 指示文档由 dllhost 缩略图。  
   
-##  <a name="m_bpreviewhandlermode"></a>CDocument::m_bPreviewHandlerMode  
+##  <a name="m_bpreviewhandlermode"></a>  CDocument::m_bPreviewHandlerMode  
  指定`CDocument`对象由 prevhost 创建用于丰富预览。 应签入`CView::OnDraw`。  
   
 ```  
@@ -573,9 +568,9 @@ BOOL m_bPreviewHandlerMode;
 ```  
   
 ### <a name="remarks"></a>备注  
- `TRUE`指示，文档已被创建 prevhost 的丰富预览。  
+ `TRUE` 指示，文档已被创建 prevhost 的丰富预览。  
   
-##  <a name="m_bsearchmode"></a>CDocument::m_bSearchMode  
+##  <a name="m_bsearchmode"></a>  CDocument::m_bSearchMode  
  指定`CDocument`通过索引器或其他搜索应用程序创建对象。  
   
 ```  
@@ -583,9 +578,9 @@ BOOL m_bSearchMode;
 ```  
   
 ### <a name="remarks"></a>备注  
- `TRUE`指示创建文档时通过索引器或其他搜索应用程序。  
+ `TRUE` 指示创建文档时通过索引器或其他搜索应用程序。  
   
-##  <a name="m_clrrichpreviewbackcolor"></a>CDocument::m_clrRichPreviewBackColor  
+##  <a name="m_clrrichpreviewbackcolor"></a>  CDocument::m_clrRichPreviewBackColor  
  指定丰富预览窗口的背景的色。 由主机设置此颜色。  
   
 ```  
@@ -594,7 +589,7 @@ COLORREF m_clrRichPreviewBackColor;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_clrrichpreviewtextcolor"></a>CDocument::m_clrRichPreviewTextColor  
+##  <a name="m_clrrichpreviewtextcolor"></a>  CDocument::m_clrRichPreviewTextColor  
  指定的丰富预览窗口的前景色。 由主机设置此颜色。  
   
 ```  
@@ -603,7 +598,7 @@ COLORREF m_clrRichPreviewTextColor;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_lfrichpreviewfont"></a>CDocument::m_lfRichPreviewFont  
+##  <a name="m_lfrichpreviewfont"></a>  CDocument::m_lfRichPreviewFont  
  指定的丰富预览窗口的文本字体。 此字体信息是由主机设置。  
   
 ```  
@@ -612,7 +607,7 @@ CFont m_lfRichPreviewFont;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onbeforerichpreviewfontchanged"></a>CDocument::OnBeforeRichPreviewFontChanged  
+##  <a name="onbeforerichpreviewfontchanged"></a>  CDocument::OnBeforeRichPreviewFontChanged  
  在调用之前更改的丰富预览字体。  
   
 ```  
@@ -621,7 +616,7 @@ virtual void OnBeforeRichPreviewFontChanged();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onchangedviewlist"></a>CDocument::OnChangedViewList  
+##  <a name="onchangedviewlist"></a>  CDocument::OnChangedViewList  
  视图被添加到或从文档中删除后，由框架调用。  
   
 ```  
@@ -631,7 +626,7 @@ virtual void OnChangedViewList();
 ### <a name="remarks"></a>备注  
  此函数的默认实现检查最后一个视图正被删除，是否是这样，删除文档。 如果你想要执行特殊处理，框架将添加或删除视图时，重写此函数。 例如，如果你想要保持打开状态，即使没有附加到它的视图的文档，重写此函数。  
   
-##  <a name="onclosedocument"></a>CDocument::OnCloseDocument  
+##  <a name="onclosedocument"></a>  CDocument::OnCloseDocument  
  文档关闭时，通常为文件关闭命令的一部分，由框架调用。  
   
 ```  
@@ -643,7 +638,7 @@ virtual void OnCloseDocument();
   
  如果你想要执行的特殊清理处理 framework 关闭文档时，重写此函数。 例如，如果文档表示数据库中的记录，你可能想要重写此函数可在关闭该数据库。 通过重写，应调用此函数的基类版本。  
   
-##  <a name="oncreatepreviewframe"></a>CDocument::OnCreatePreviewFrame  
+##  <a name="oncreatepreviewframe"></a>  CDocument::OnCreatePreviewFrame  
  需要创建丰富预览的预览帧时，由框架调用。  
   
 ```  
@@ -655,7 +650,7 @@ virtual BOOL OnCreatePreviewFrame();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondocumentevent"></a>CDocument::OnDocumentEvent  
+##  <a name="ondocumentevent"></a>  CDocument::OnDocumentEvent  
  由框架调用以响应文档事件。  
   
 ```  
@@ -671,14 +666,14 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
   
  下表列出的可能值`deEvent`以及它们对应的事件。  
   
-|“值”|相应的事件|  
+|值|相应的事件|  
 |-----------|-------------------------|  
 |`onAfterNewDocument`|创建新文档。|  
 |`onAfterOpenDocument`|打开新文档。|  
 |`onAfterSaveDocument`|已保存文档。|  
 |`onAfterCloseDocument`|文档已关闭。|  
   
-##  <a name="ondrawthumbnail"></a>CDocument::OnDrawThumbnail  
+##  <a name="ondrawthumbnail"></a>  CDocument::OnDrawThumbnail  
  重写此方法在派生类绘制缩略图。  
   
 ```  
@@ -696,7 +691,7 @@ virtual void OnDrawThumbnail(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfilesendmail"></a>CDocument::OnFileSendMail  
+##  <a name="onfilesendmail"></a>  CDocument::OnFileSendMail  
  发送消息通过常驻邮件主机 （如果有） 与文档作为附件。  
   
 ```  
@@ -704,13 +699,13 @@ void OnFileSendMail();
 ```  
   
 ### <a name="remarks"></a>备注  
- `OnFileSendMail`调用[OnSaveDocument](#onsavedocument) （保存） 到一个临时文件，然后通过电子邮件发送的未命名和修改文档序列化。 如果文档未进行修改，则不需要的临时文件;发送原始。 `OnFileSendMail`加载 MAPI32。如果尚未加载的 DLL。  
+ `OnFileSendMail` 调用[OnSaveDocument](#onsavedocument) （保存） 到一个临时文件，然后通过电子邮件发送的未命名和修改文档序列化。 如果文档未进行修改，则不需要的临时文件;发送原始。 `OnFileSendMail` 加载 MAPI32。如果尚未加载的 DLL。  
   
  一种特殊的实现`OnFileSendMail`为[COleDocument](../../mfc/reference/coledocument-class.md)句柄复合文件正确。  
   
  **CDocument**支持将您的文档通过邮件发送邮件支持 (MAPI) 是否存在。 请参阅文章[MAPI 主题](../../mfc/mapi.md)和[MFC 中的 MAPI 支持](../../mfc/mapi-support-in-mfc.md)。  
   
-##  <a name="onloaddocumentfromstream"></a>CDocument::OnLoadDocumentFromStream  
+##  <a name="onloaddocumentfromstream"></a>  CDocument::OnLoadDocumentFromStream  
  当它需要从流中加载的文档数据时，由框架调用。  
   
 ```  
@@ -731,7 +726,7 @@ virtual HRESULT OnLoadDocumentFromStream(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onnewdocument"></a>CDocument::OnNewDocument  
+##  <a name="onnewdocument"></a>  CDocument::OnNewDocument  
  由框架作为文件新的命令的一部分调用。  
   
 ```  
@@ -757,7 +752,7 @@ virtual BOOL OnNewDocument();
   
  [!code-cpp[NVC_MFCDocView#62](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
   
-##  <a name="onopendocument"></a>CDocument::OnOpenDocument  
+##  <a name="onopendocument"></a>  CDocument::OnOpenDocument  
  由框架作为文件打开命令的一部分调用。  
   
 ```  
@@ -787,7 +782,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
   
  [!code-cpp[NVC_MFCDocView#63](../../mfc/codesnippet/cpp/cdocument-class_8.cpp)]  
   
-##  <a name="onpreviewhandlerqueryfocus"></a>CDocument::OnPreviewHandlerQueryFocus  
+##  <a name="onpreviewhandlerqueryfocus"></a>  CDocument::OnPreviewHandlerQueryFocus  
  指示要返回 HWND 从调用中检索到的预览处理程序`GetFocus`函数。  
   
 ```  
@@ -803,7 +798,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onpreviewhandlertranslateaccelerator"></a>CDocument::OnPreviewHandlerTranslateAccelerator  
+##  <a name="onpreviewhandlertranslateaccelerator"></a>  CDocument::OnPreviewHandlerTranslateAccelerator  
  指示要处理中向上传递，从在其中预览处理程序正在运行的进程的消息泵击键的预览处理程序。  
   
 ```  
@@ -819,7 +814,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onrichpreviewbackcolorchanged"></a>CDocument::OnRichPreviewBackColorChanged  
+##  <a name="onrichpreviewbackcolorchanged"></a>  CDocument::OnRichPreviewBackColorChanged  
  已更改的丰富预览背景色时调用。  
   
 ```  
@@ -828,7 +823,7 @@ virtual void OnRichPreviewBackColorChanged();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onrichpreviewfontchanged"></a>CDocument::OnRichPreviewFontChanged  
+##  <a name="onrichpreviewfontchanged"></a>  CDocument::OnRichPreviewFontChanged  
  丰富预览字体已更改时调用。  
   
 ```  
@@ -837,7 +832,7 @@ virtual void OnRichPreviewFontChanged();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onrichpreviewsitechanged"></a>CDocument::OnRichPreviewSiteChanged  
+##  <a name="onrichpreviewsitechanged"></a>  CDocument::OnRichPreviewSiteChanged  
  丰富预览站点已更改时调用。  
   
 ```  
@@ -846,7 +841,7 @@ virtual void OnRichPreviewSiteChanged();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onrichpreviewtextcolorchanged"></a>CDocument::OnRichPreviewTextColorChanged  
+##  <a name="onrichpreviewtextcolorchanged"></a>  CDocument::OnRichPreviewTextColorChanged  
  丰富预览文本颜色已更改时调用。  
   
 ```  
@@ -855,7 +850,7 @@ virtual void OnRichPreviewTextColorChanged();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onsavedocument"></a>CDocument::OnSaveDocument  
+##  <a name="onsavedocument"></a>  CDocument::OnSaveDocument  
  由框架作为文件保存或文件另存为命令的一部分调用。  
   
 ```  
@@ -872,7 +867,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ### <a name="remarks"></a>备注  
  此函数的默认实现将打开指定的文件中，调用[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)文档的数据写入文件，然后标记作为文档清理。 如果你想要执行特殊处理，当框架保存文档时，重写此函数。 例如，你可以编写应用程序文档其中表示数据库而不是单独的文件中的记录。  
   
-##  <a name="onunloadhandler"></a>CDocument::OnUnloadHandler  
+##  <a name="onunloadhandler"></a>  CDocument::OnUnloadHandler  
  卸载预览处理程序时，由框架调用。  
   
 ```  
@@ -881,7 +876,7 @@ virtual void OnUnloadHandler();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onupdatefilesendmail"></a>CDocument::OnUpdateFileSendMail  
+##  <a name="onupdatefilesendmail"></a>  CDocument::OnUpdateFileSendMail  
  使**ID_FILE_SEND_MAIL**命令邮件支持 (MAPI) 是否存在。  
   
 ```  
@@ -897,7 +892,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
   
  **CDocument**支持将您的文档通过邮件发送邮件支持 (MAPI) 是否存在。 请参阅文章[MAPI 主题](../../mfc/mapi.md)和[MFC 中的 MAPI 支持](../../mfc/mapi-support-in-mfc.md)。  
   
-##  <a name="precloseframe"></a>CDocument::PreCloseFrame  
+##  <a name="precloseframe"></a>  CDocument::PreCloseFrame  
  销毁框架窗口之前，将由框架调用此成员函数。  
   
 ```  
@@ -913,7 +908,7 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
   
  默认`PreCloseFrame`不执行任何操作**CDocument**。 **CDocument**-派生类[COleDocument](../../mfc/reference/coledocument-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)使用此成员函数。  
   
-##  <a name="readnextchunkvalue"></a>CDocument::ReadNextChunkValue  
+##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  读取下一个块区值。  
   
 ```  
@@ -929,7 +924,7 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="releasefile"></a>CDocument::ReleaseFile  
+##  <a name="releasefile"></a>  CDocument::ReleaseFile  
  由框架版本的文件，使其可供其他应用程序调用此成员函数。  
   
 ```  
@@ -946,13 +941,13 @@ virtual void ReleaseFile(
  指定该文件是否通过使用释放`CFile::Close`或`CFile::Abort`。 **FALSE**如果该文件是要释放使用[CFile::Close](../../mfc/reference/cfile-class.md#close);**TRUE**如果该文件是要释放使用[cfile:: Abort](../../mfc/reference/cfile-class.md#abort)。  
   
 ### <a name="remarks"></a>备注  
- 如果`bAbort`是**TRUE**，`ReleaseFile`调用`CFile::Abort`，并释放该文件。 `CFile::Abort`不会引发异常。  
+ 如果`bAbort`是**TRUE**，`ReleaseFile`调用`CFile::Abort`，并释放该文件。 `CFile::Abort` 不会引发异常。  
   
  如果`bAbort`是**FALSE**，`ReleaseFile`调用`CFile::Close`上并释放该文件。  
   
  重写该成员函数以释放该文件之前需要用户执行操作。  
   
-##  <a name="removechunk"></a>CDocument::RemoveChunk  
+##  <a name="removechunk"></a>  CDocument::RemoveChunk  
  删除指定的 GUID 的块区。  
   
 ```  
@@ -970,7 +965,7 @@ virtual void RemoveChunk(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="removeview"></a>CDocument::RemoveView  
+##  <a name="removeview"></a>  CDocument::RemoveView  
  调用此函数可分离从文档的视图。  
   
 ```  
@@ -988,7 +983,7 @@ void RemoveView(CView* pView);
   
  参阅位于以下示例[AddView](#addview)有关示例实现。  
   
-##  <a name="reportsaveloadexception"></a>CDocument::ReportSaveLoadException  
+##  <a name="reportsaveloadexception"></a>  CDocument::ReportSaveLoadException  
  如果引发异常，则调用 (通常[CFileException](../../mfc/reference/cfileexception-class.md)或[CArchiveException](../../mfc/reference/carchiveexception-class.md)) 保存或加载文档时。  
   
 ```  
@@ -1015,7 +1010,7 @@ virtual void ReportSaveLoadException(
 ### <a name="remarks"></a>备注  
  默认实现将检查的异常对象，并查找专门说明的原因的错误消息。 如果找不到特定的消息，或如果*e*是**NULL**，由指定的常规消息`nIDPDefault`使用参数。 然后，该函数将显示包含错误消息的消息框。 如果你想要提供其他自定义错误消息，重写此函数。 这是一个高级可重写。  
   
-##  <a name="savemodified"></a>CDocument::SaveModified  
+##  <a name="savemodified"></a>  CDocument::SaveModified  
  要关闭修改后的文档之前，由框架调用。  
   
 ```  
@@ -1028,7 +1023,7 @@ virtual BOOL SaveModified();
 ### <a name="remarks"></a>备注  
  此函数的默认实现将显示一个消息框，询问用户是否将所做的更改保存到文档中，如果已进行了任何。 如果您的程序要求不同的提示过程，重写此函数。 这是一个高级可重写。  
   
-##  <a name="setchunkvalue"></a>CDocument::SetChunkValue  
+##  <a name="setchunkvalue"></a>  CDocument::SetChunkValue  
  设置一个块区值。  
   
 ```  
@@ -1044,7 +1039,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setmodifiedflag"></a>CDocument::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>  CDocument::SetModifiedFlag  
  调用此函数后所做的对文档进行任何修改。  
   
 ```  
@@ -1058,7 +1053,7 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>备注  
  通过一致地调用此函数时，可以确保框架提示用户在关闭文档前保存更改。 通常应使用的默认值**TRUE**为`bModified`参数。 若要将尽可能全新的文档标记 （未修改），调用此函数中使用的值**FALSE**。  
   
-##  <a name="setpathname"></a>CDocument::SetPathName  
+##  <a name="setpathname"></a>  CDocument::SetPathName  
  调用此函数可指定文档的磁盘文件的完全限定的路径。  
   
 ```  
@@ -1077,7 +1072,7 @@ virtual void SetPathName(
 ### <a name="remarks"></a>备注  
  根据值`bAddToMRU`的路径不添加，或者未添加到由应用程序维护的 MRU 列表。 请注意，一些文档不与磁盘文件关联。 仅当您要重写用于打开和保存框架使用的文件的默认实现调用此函数。  
   
-##  <a name="settitle"></a>CDocument::SetTitle  
+##  <a name="settitle"></a>  CDocument::SetTitle  
  调用此函数可指定文档的标题 （在框架窗口的标题栏中显示的字符串）。  
   
 ```  
@@ -1091,7 +1086,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ### <a name="remarks"></a>备注  
  调用此函数将更新的所有显示的文档的框架窗口的标题。  
   
-##  <a name="updateallviews"></a>CDocument::UpdateAllViews  
+##  <a name="updateallviews"></a>  CDocument::UpdateAllViews  
  修改文档后，请调用此函数。  
   
 ```  

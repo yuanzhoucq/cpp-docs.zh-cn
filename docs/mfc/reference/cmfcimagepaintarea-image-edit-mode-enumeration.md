@@ -1,13 +1,10 @@
 ---
-title: "Cmfcimagepaintarea:: Image_edit_mode 枚举 |Microsoft 文档"
-ms.custom: 
+title: 'Cmfcimagepaintarea:: Image_edit_mode 枚举 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - IMAGE_EDIT_MODE Enumeration
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e3b00bed830052c2abbc988152f4a14f1267ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef036c1d619bf85e21edafbd20f20cc27c7c12d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 枚举
 指定用于修改图像编辑器对话框中的图像绘制模式。  
@@ -61,7 +56,7 @@ enum IMAGE_EDIT_MODE
   
  当你选择一种颜色从映像使用`IMAGE_EDIT_MODE_COLOR`绘图模式下，框架将当前绘图模式设置为`IMAGE_EDIT_MODE_PEN`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afximagepaintarea.h  
   
 ## <a name="see-also"></a>请参阅  

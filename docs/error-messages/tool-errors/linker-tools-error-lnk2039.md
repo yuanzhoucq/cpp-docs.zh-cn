@@ -1,12 +1,9 @@
 ---
-title: "链接器工具错误 LNK2039 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具错误 LNK2039 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2039
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 441765d85ce65a80102ed94b3f4394ae48c0e29f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 954ea12eb9b49c2bdf59b31a1ec2ec2e66c124ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2039"></a>链接器工具错误 LNK2039
 导入 ref 类\<类型 > 中 another.obj 定义; 它应为导入或定义，但不是能同时  

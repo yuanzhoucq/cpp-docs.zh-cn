@@ -1,12 +1,9 @@
 ---
-title: "CMFCDropDownFrame 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCDropDownFrame 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b3e5b56621d7bf8d42aad12e216208338bbacd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 类
 下拉列表框架窗口功能提供给下拉工具栏和下拉工具栏按钮。  
@@ -92,10 +87,10 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
  [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdropdowntoolbar.h  
   
-##  <a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>  CMFCDropDownFrame::Create  
  创建一个 `CMFCDropDownFrame` 对象。  
   
 ```  
@@ -117,14 +112,14 @@ virtual BOOL Create(
 |[in] `pWndOriginToolbar`|具有此方法用于填充新的下拉列表框架对象的下拉列表按钮的工具栏。|  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果已成功创建下拉帧;否则为`FALSE`。  
+ `TRUE` 如果已成功创建下拉帧;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法调用了基[CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)方法来创建与下拉列表框架窗口`WS_POPUP`样式。 下拉列表框架窗口将显示在指定的屏幕坐标。 如果此方法将失败[CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex)方法返回`FALSE`。  
   
  `CMFCDropDownFrame`类会创建一份提供的`CMFCDropDownToolBar`参数。 此方法会复制按钮图像和按钮状态从`pWndOriginToolbar`参数`m_pWndOriginToolbar`数据成员。  
   
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
  检索父菜单栏中的下拉菜单的帧。  
   
 ```  
@@ -137,7 +132,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>备注  
  此方法从父按钮检索父菜单栏。 此方法返回`NULL`如果下拉列表框架都有没有父按钮或父按钮有任何父菜单栏。  
   
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
  检索父弹出菜单的下拉列表框。  
   
 ```  
@@ -150,7 +145,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>备注  
  此方法检索父菜单从父按钮。 此方法返回`NULL`如果下拉列表框架都有没有父按钮或父按钮有任何父菜单。  
   
-##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
  将重新定位的下拉菜单的帧。  
   
 ```  
@@ -167,7 +162,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>备注  
  创建时的下拉列表帧或调整父窗口大小时，框架将调用此方法。 此方法使用的位置和父窗口的大小计算的位置和大小的下拉菜单的帧。  
   
-##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
  设置是否自动销毁子下拉工具栏窗口。  
   
 ```  
@@ -176,7 +171,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bAutoDestroy`  
- `TRUE`自动销毁关联的下拉工具栏窗口中;否则为`FALSE`。  
+ `TRUE` 自动销毁关联的下拉工具栏窗口中;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  如果`bAutoDestroy`是`TRUE`，则`CMFCDropDownFrame`析构函数销毁关联的下拉工具栏窗口。 默认值为 `TRUE`。  

@@ -1,12 +1,9 @@
 ---
-title: "链接器工具警告 LNK4221 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具警告 LNK4221 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4221
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fb348ebb05b7af40821b4f3968a920c2e9e773
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8906c4308b8586d5b1312739921f58063e820deb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4221"></a>链接器工具警告 LNK4221
 此对象文件未定义任何以前未定义的公共符号，因此它不使用通过使用此库的任何链接操作  
@@ -53,4 +48,4 @@ int function()
   
  此错误的常见原因是当两个源文件指定选项[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)同名标头文件中指定**预编译标头**字段。 由于默认情况下，stdafx.cpp 包括 stdafx.h 并不会添加任何新符号，导致此问题的常见原因涉及到 stdafx.h。 如果另一个源文件中包含与 stdafx.h **/Yc**和之前 stdafx.obj 处理关联的.obj 文件，则链接器将引发 LNK4221。  
   
- 一种方法要解决此问题是确保对于每个预编译标头，没有只有一个源文件包含与它的**/Yc**。 所有其他源文件必须使用预编译标头。 有关如何更改此设置的详细信息，请参阅[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)。
+ 一种方法要解决此问题是确保对于每个预编译标头，没有只有一个源文件包含与它的 **/Yc**。 所有其他源文件必须使用预编译标头。 有关如何更改此设置的详细信息，请参阅[/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)。

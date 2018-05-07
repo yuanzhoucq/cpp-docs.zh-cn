@@ -1,12 +1,9 @@
 ---
-title: "使用者向导生成的方法 |Microsoft 文档"
-ms.custom: 
+title: 使用者向导生成的方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9ee0a1a044a7e1f87b6da4bec9418c42e6b6ba1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>使用者向导生成的方法
 ATL OLE DB 使用者向导和 MFC 应用程序向导生成的你应注意某些函数。 请注意，某些方法实现以不同方式在特性化项目中，因此有几条注意事项;下面介绍了每个用例。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。  

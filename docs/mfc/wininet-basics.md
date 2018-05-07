@@ -1,13 +1,10 @@
 ---
-title: "WinInet 基础知识 |Microsoft 文档"
-ms.custom: 
+title: WinInet 基础知识 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c9502c720b0f443ace3cfe637fb4826281ecf4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38506d0b25918bbc9d70ec1801971b070d620bf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wininet-basics"></a>WinInet 基础知识
 你可以使用 WinInet 添加 FTP 支持，以下载并上载来自你的应用程序中的文件。 您可以重写[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)并用`dwContext`参数来搜索和下载文件，向用户提供进度信息。  
@@ -46,16 +41,16 @@ ms.lasthandoff: 12/21/2017
   
  WinInet 的其他信息，请参阅[Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)。  
   
-##  <a name="_core_create_a_very_simple_browser"></a>创建非常简单的浏览器  
+##  <a name="_core_create_a_very_simple_browser"></a> 创建非常简单的浏览器  
  [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]  
   
-##  <a name="_core_download_a_web_page"></a>下载 Web 页  
+##  <a name="_core_download_a_web_page"></a> 下载 Web 页  
  [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]  
   
-##  <a name="_core_ftp_a_file"></a>Ftp 传输文件  
+##  <a name="_core_ftp_a_file"></a> Ftp 传输文件  
  [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]  
   
-##  <a name="_core_retrieve_a_gopher_directory"></a>检索 Gopher 目录  
+##  <a name="_core_retrieve_a_gopher_directory"></a> 检索 Gopher 目录  
  [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]  
   
 ## <a name="use-onstatuscallback"></a>使用 OnStatusCallback  
@@ -65,9 +60,9 @@ ms.lasthandoff: 12/21/2017
   
  分配给特定的 Internet 对象的上下文仅用于标识该对象导致活动`OnStatusCallback`的成员`CInternetSession`对象。 调用`OnStatusCallback`接收多个参数; 这些参数一起协作来告诉你的应用程序已为哪些事务和连接进行了哪些进度。  
   
- 当你创建`CInternetSession`对象，你可以指定`dwContext`的构造函数参数。 `CInternetSession`本身不使用的上下文 ID;相反，它传递到任何的上下文 ID **InternetConnection**-派生的对象的不显式获取自己的上下文 ID。 接下来，那些`CInternetConnection`对象将传递到沿上下文 ID`CInternetFile`对象他们创建如果不显式指定一个不同的上下文 id。 如果在另一方面，指定你自己的一个特定的上下文 ID、 对象和与其任何工作将与该上下文 id。 可以使用上下文 Id 来识别正在中向你提供状态信息你`OnStatusCallback`函数。  
+ 当你创建`CInternetSession`对象，你可以指定`dwContext`的构造函数参数。 `CInternetSession` 本身不使用的上下文 ID;相反，它传递到任何的上下文 ID **InternetConnection**-派生的对象的不显式获取自己的上下文 ID。 接下来，那些`CInternetConnection`对象将传递到沿上下文 ID`CInternetFile`对象他们创建如果不显式指定一个不同的上下文 id。 如果在另一方面，指定你自己的一个特定的上下文 ID、 对象和与其任何工作将与该上下文 id。 可以使用上下文 Id 来识别正在中向你提供状态信息你`OnStatusCallback`函数。  
   
-##  <a name="_core_display_progress_information_while_transferring_files"></a>传输文件时显示进度信息  
+##  <a name="_core_display_progress_information_while_transferring_files"></a> 传输文件时显示进度信息  
  例如，如果您编写的应用程序创建一个读取文件的 FTP 服务器与连接和与 HTTP 服务器以获取网页又连接，你将具有`CInternetSession`对象、 两个`CInternetConnection`对象 (一个将**CFtpSession**和另一个将是**CHttpSession**)，和两个`CInternetFile`对象 （一个用于每个连接）。 如果你使用的默认值`dwContext`参数，你将不能区分`OnStatusCallback`指示 FTP 连接和指示 HTTP 连接的进度调用的进度的调用。 如果指定`dwContext`ID，你可以更高版本测试是否在`OnStatusCallback`，你将知道哪些操作生成回调。  
   
 ## <a name="see-also"></a>请参阅  

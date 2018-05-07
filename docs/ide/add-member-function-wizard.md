@@ -1,13 +1,10 @@
 ---
-title: "添加成员函数向导 |Microsoft 文档"
-ms.custom: 
+title: 添加成员函数向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.function.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Function Wizard [C++]
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775b519b304549b474cd21980ef5a4cbe8f2d4d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-function-wizard"></a>添加成员函数向导
 此向导将添加到标头文件和所选类的实现文件将存根 （stub） 成员函数实现的成员函数声明。  
@@ -63,11 +58,11 @@ ms.lasthandoff: 12/21/2017
  **访问**  
  指向成员函数中设置的访问权限。 访问修饰符是指定其他类具有指向成员函数的访问权限的关键字。 请参阅[成员访问控制](../cpp/member-access-control-cpp.md)有关指定访问的详细信息。 成员函数访问级别设置为**公共**默认情况下。  
   
--   [公用](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [受保护](../cpp/protected-cpp.md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [专用](../cpp/private-cpp.md)  
+-   [private](../cpp/private-cpp.md)  
   
  检查新的成员函数是静态的还是虚拟的以及它是否是内联代码或纯代码。 如果你设置的成员函数是纯，`Virtual`选中复选框，和**内联**复选框变得不可用。 默认值为非静态、 非虚拟成员函数。  
   

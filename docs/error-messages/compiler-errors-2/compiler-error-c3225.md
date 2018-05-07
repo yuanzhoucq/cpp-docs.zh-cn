@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3225 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3225 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3225
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c189e2f4a0af7363f5bb988c9911bd90eb72809
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f9f6691ddacf6b3c1347b9fd4cac134433741a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3225"></a>编译器错误 C3225
 arg 的泛型类型参数不能是 type，它必须是值类型或句柄类型  

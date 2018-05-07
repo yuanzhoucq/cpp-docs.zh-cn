@@ -1,12 +1,9 @@
 ---
-title: "CCommand 类 |Microsoft 文档"
-ms.custom: 
+title: CCommand 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CCommand
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4c53d7b27c98e0509cd434bf6eac2412b9c1a1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 667e86c173a7001ae22036cb1f0dd8f3fbfcf6a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommand-class"></a>CCommand 类
 提供设置和执行命令的方法。  
@@ -84,7 +79,7 @@ class CCommand :
   
  请注意，不能将存储过程与 Jet 的 OLE DB 提供程序一起使用，因为该提供程序不支持存储过程（查询字符串中只允许使用常数）。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

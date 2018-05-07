@@ -1,13 +1,10 @@
 ---
-title: "虚拟列表控件 |Microsoft 文档"
-ms.custom: 
+title: 虚拟列表控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>虚拟列表控件
 虚拟列表控件是一个列表视图控件，具有**LVS_OWNERDATA**样式。 此样式使控件能够最多支持项计数`DWORD`(默认项计数仅扩展到`int`)。 但是，此样式所提供的最大优点是能够在任何时候在内存中仅有部分数据项目。 这将允许虚拟列表视图控件，若要将自身添加为大型数据库的信息，用于访问数据的特定方法已到位。  
@@ -43,15 +38,15 @@ ms.lasthandoff: 12/21/2017
   
  中的处理程序**LVN_GETDISPINFO**通知消息，必须检查以查看正在请求的信息的类型。 可能的值为：  
   
--   `LVIF_TEXT``pszText`成员必须填写。  
+-   `LVIF_TEXT` `pszText`成员必须填写。  
   
--   `LVIF_IMAGE``iImage`成员必须填写。  
+-   `LVIF_IMAGE` `iImage`成员必须填写。  
   
 -   **LVIF_INDENT** *iIndent*成员必须填写。  
   
--   `LVIF_PARAM`*LParam*成员必须填写。 （不存在子项目）  
+-   `LVIF_PARAM` *LParam*成员必须填写。 （不存在子项目）  
   
--   `LVIF_STATE`*状态*成员必须填写。  
+-   `LVIF_STATE` *状态*成员必须填写。  
   
  然后应提供给框架请求任何信息。  
   

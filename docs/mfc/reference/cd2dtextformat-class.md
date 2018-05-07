@@ -1,12 +1,9 @@
 ---
-title: "CD2DTextFormat 类 |Microsoft 文档"
-ms.custom: 
+title: CD2DTextFormat 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DTextFormat
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fbbbe2d9f5edde6e247d69e9e6bc840f05a55b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 类
 IDWriteTextFormat 包装器。  
@@ -83,7 +78,7 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|指向 IDWriteTextFormat 的指针。|  
   
@@ -94,17 +89,17 @@ class CD2DTextFormat : public CD2DResource;
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat:: ~ CD2DTextFormat  
  析构函数。 当 D2D 文本格式对象被销毁时调用。  
   
 ```  
 virtual ~CD2DTextFormat();
 ```  
   
-##  <a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
+##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat  
  构造 CD2DTextFormat 对象。  
   
 ```  
@@ -148,7 +143,7 @@ CD2DTextFormat(
  `bAutoDestroy`  
  指示该对象将销毁所有者 (pParentTarget)。  
   
-##  <a name="create"></a>CD2DTextFormat::Create  
+##  <a name="create"></a>  CD2DTextFormat::Create  
  创建 CD2DTextFormat。  
   
 ```  
@@ -158,14 +153,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="destroy"></a>CD2DTextFormat::Destroy  
+##  <a name="destroy"></a>  CD2DTextFormat::Destroy  
  销毁 CD2DTextFormat 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextFormat::Get  
+##  <a name="get"></a>  CD2DTextFormat::Get  
  返回 IDWriteTextFormat 接口  
   
 ```  
@@ -175,7 +170,7 @@ IDWriteTextFormat* Get();
 ### <a name="return-value"></a>返回值  
  指向 IDWriteTextFormat 接口或如果尚未初始化对象的 NULL 指针。  
   
-##  <a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName  
  获取字体系列名称的副本。  
   
 ```  
@@ -185,7 +180,7 @@ CString GetFontFamilyName() const;
 ### <a name="return-value"></a>返回值  
  CString 对象，其中包含当前的字体系列名称。  
   
-##  <a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
+##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName  
  获取区域设置名称的副本。  
   
 ```  
@@ -195,7 +190,7 @@ CString GetLocaleName() const;
 ### <a name="return-value"></a>返回值  
  CString 对象，其中包含当前区域设置名称。  
   
-##  <a name="isvalid"></a>CD2DTextFormat::IsValid  
+##  <a name="isvalid"></a>  CD2DTextFormat::IsValid  
  检查资源有效性  
   
 ```  
@@ -205,14 +200,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果资源是有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
+##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat  
  指向 IDWriteTextFormat 的指针。  
   
 ```  
 IDWriteTextFormat* m_pTextFormat;  
 ```  
   
-##  <a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat *  
  返回 IDWriteTextFormat 接口  
   
 ```  
@@ -222,7 +217,7 @@ operator IDWriteTextFormat*();
 ### <a name="return-value"></a>返回值  
  指向 IDWriteTextFormat 接口或如果尚未初始化对象的 NULL 指针。  
   
-##  <a name="recreate"></a>CD2DTextFormat::ReCreate  
+##  <a name="recreate"></a>  CD2DTextFormat::ReCreate  
  重新创建 CD2DTextFormat。  
   
 ```  

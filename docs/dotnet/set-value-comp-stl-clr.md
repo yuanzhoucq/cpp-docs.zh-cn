@@ -1,12 +1,9 @@
 ---
-title: "set:: value_comp (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'set:: value_comp (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::value_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_comp member [STL/CLR]
 ms.assetid: 3b7e469d-ca73-415b-bd20-24968c51107c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 98d82fcbe44daa423371536b08277b990ddae1bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 614855867c548a1faf86c8971d1d3646b39ee16e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setvaluecomp-stlclr"></a>set::value_comp (STL/CLR)
 将复制两个元素值的排序委托。  
@@ -71,7 +66,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

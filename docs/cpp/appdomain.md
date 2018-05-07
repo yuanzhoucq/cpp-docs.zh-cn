@@ -2,11 +2,8 @@
 title: appdomain |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - appdomain_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 14b6f23e5690c98553448c827fe287bd413d6f97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appdomain"></a>appdomain
 指定托管应用程序的每个应用程序域应具有其自己的特定全局变量或静态成员变量的副本。 请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)有关详细信息。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/14/2018
   
  如果希望公共语言运行时中进程内的所有应用程序域共享全局变量，请使用 `__declspec(process)` 修饰符。 `__declspec(process)` 默认情况下实际上是[/clr](../build/reference/clr-common-language-runtime-compilation.md)。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- `__declspec(appdomain)` 时才有效之一**/clr**使用编译器选项。 只有全局变量、静态成员变量或静态局部变量可以使用 `__declspec(appdomain)` 进行标记。 将 `__declspec(appdomain)` 应用于托管类型的静态成员是错误的，因为它们始终具有此行为。  
+ `__declspec(appdomain)` 时才有效之一 **/clr**使用编译器选项。 只有全局变量、静态成员变量或静态局部变量可以使用 `__declspec(appdomain)` 进行标记。 将 `__declspec(appdomain)` 应用于托管类型的静态成员是错误的，因为它们始终具有此行为。  
   
  使用`__declspec(appdomain)`类似于使用[线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)。 线程具有其自己的存储，就像应用程序域一样。 使用 `__declspec(appdomain)` 可确保全局变量在为此应用程序创建的每个应用程序域中都具有其自己的存储。  
   

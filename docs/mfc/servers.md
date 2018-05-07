@@ -1,13 +1,10 @@
 ---
-title: "服务器 |Microsoft 文档"
-ms.custom: 
+title: 服务器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d153d73889520deaff12b64da36567a8b9a4087
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers"></a>服务器
 服务器应用程序 （或组件应用程序） 创建供容器应用程序使用的 OLE 项 （或组件）。 可视化编辑服务器应用程序还支持可视编辑或就地激活。 OLE 服务器的另一种形式是[自动化服务器](../mfc/automation-servers.md)。 某些服务器应用程序支持仅创建嵌入项;其他支持嵌入的和链接的项目的创建。 一些只支持链接，但很少见。 所有服务器应用程序必须都支持由容器应用程序激活，当用户想要编辑的项。 应用程序可以是一个容器和服务器。 换而言之，它可以同时将数据合并到其文档，并创建可以作为项合并到其他应用程序的文档的数据。  

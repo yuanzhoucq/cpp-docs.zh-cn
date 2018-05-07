@@ -1,12 +1,9 @@
 ---
-title: "CFormView 类 |Microsoft 文档"
-ms.custom: 
+title: CFormView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFormView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 386e28631d20721f22eb2b778ffbe2e1d4b1824d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cformview-class"></a>CFormView 类
 用于窗体视图的基类。  
@@ -76,10 +71,10 @@ class CFormView : public CScrollView
   
  `CFormView`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>  CFormView::CFormView  
  构造 `CFormView` 对象。  
   
 ```  
@@ -97,7 +92,7 @@ CFormView(UINT nIDTemplate);
 ### <a name="remarks"></a>备注  
  当你创建一种类型的对象派生自`CFormView`，调用的构造函数，以创建视图对象并标识该视图所基于的对话框资源之一。 按名称 （向构造函数传递一个字符串作为自变量） 或由其 ID (pass 作为自变量的无符号整数)，你可以标识资源。  
   
- 窗体视图窗口和子控件之前将不创建`CWnd::Create`调用。 `CWnd::Create`由框架作为文档和视图创建过程中，这由文档模板的一部分调用。  
+ 窗体视图窗口和子控件之前将不创建`CWnd::Create`调用。 `CWnd::Create` 由框架作为文档和视图创建过程中，这由文档模板的一部分调用。  
   
 > [!NOTE]
 >  在派生的类*必须*提供其自己的构造函数。 在构造函数中，调用构造函数中， `CFormView::CFormView`、 资源名称或作为自变量前面的类概述中所示的 ID。  
@@ -107,7 +102,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
  由 MFC 用于确保初始化完成后才会执行其他操作。  
   
 ```  

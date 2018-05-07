@@ -1,13 +1,10 @@
 ---
-title: "LOGPEN 结构 |Microsoft 文档"
-ms.custom: 
+title: LOGPEN 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGPEN
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bfa598a59f62c11dbda13356559816b5bd47ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c0e07ce3a38eaca54e860ebe821924c0f564c69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logpen-structure"></a>LOGPEN 结构
 `LOGPEN`结构定义样式、 宽度和钢笔颜色、 图形对象用于绘制线条和边框。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函数使用`LOGPEN`结构。  
@@ -71,7 +66,7 @@ typedef struct tagLOGPEN {  /* lgpn */
 ## <a name="remarks"></a>备注  
  **Y**中的值[点](../../mfc/reference/point-structure1.md)结构**lopnWidth**成员未使用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

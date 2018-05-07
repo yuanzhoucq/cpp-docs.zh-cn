@@ -2,11 +2,8 @@
 title: 'hash_map:: find (STL/CLR) |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::find
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - find member [STL/CLR]
 ms.assetid: 53ff8d57-2ea4-485e-9419-aed5e3f5affb
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fced245a8a696e104c992c989fb699aa5d28f4c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d6d06c35a4d64791f55a8c1428a6e0e38a111f3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapfind-stlclr"></a>hash_map::find (STL/CLR)
 查找与指定键匹配的元素。  
@@ -88,7 +83,7 @@ find C = False
 ## <a name="description"></a>描述  
  请注意，`find`不保证其找到的多个元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

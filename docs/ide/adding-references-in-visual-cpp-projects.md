@@ -1,13 +1,10 @@
 ---
-title: "在 Visual c + + 项目中添加引用 |Microsoft 文档"
-ms.custom: 
+title: 在 Visual c + + 项目中添加引用 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 项目中添加引用
 程序调用到其他二进制文件（如 DLL、Windows 运行时组件、扩展 SDK、COM 组件和 .NET 程序集）中的 API 的情况非常普遍。 程序找到其他此类库的方式取决于项目的类型，以及二进制文件的类型。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  在本机 C++ 项目 (ATL) 中， *引用* 的理念只适用于解决方案中的其他项目（包括共享项目），因此你只能在“引用管理器” 中看到这些内容：  
   
- ![Visual C# 43; &#43;引用管理器 &#40;ATL 项目 &#41;] (../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 引用管理器 （ATL 项目）")  
+ ![Visual C&#43; &#43;引用管理器&#40;ATL 项目&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 引用管理器 （ATL 项目）")  
   
  在 C++/CLI 或通用 Windows 平台项目中，引用的理念适用于解决方案中的其他项目，以及更多类型的二进制文件。  这些中公开的全部**引用管理器**。
   

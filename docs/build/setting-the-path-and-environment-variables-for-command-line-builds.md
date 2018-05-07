@@ -1,13 +1,10 @@
 ---
 title: 为命令行生成设置路径和环境变量 |Microsoft 文档
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - include
 - Lib
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76fa1a14b4fd60f249ab015f6618e386bda7c86f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b72f13fe25330b81a48d1447b707bdc4626ab3f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>为命令行生成设置路径和环境变量
 

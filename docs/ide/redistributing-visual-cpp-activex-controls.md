@@ -1,30 +1,25 @@
 ---
-title: "重新分发 Visual c + + ActiveX 控件 |Microsoft 文档"
-ms.custom: 
+title: 重新分发 Visual c + + ActiveX 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>重新分发 Visual C++ ActiveX 控件
 Visual c + + 6.0 提供可以在你然后重新分发的应用程序中使用的 ActiveX 控件。 Visual c + + 中不再包含这些控件。 每个 Visual c + + 6.0 许可协议，你可以与在 Visual c + + 中开发的应用程序重新发布这些控件。  
@@ -46,7 +41,7 @@ Visual c + + 6.0 提供可以在你然后重新分发的应用程序中使用的
   
 -   stdole2.tlb  
   
- 如果这些 Dll 不在目标系统上可用，你需要获取这些更新使用所规定的机制用于更新相应的操作系统。 你可以从 Windows 操作系统最新服务包下载[http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com)。  
+ 如果这些 Dll 不在目标系统上可用，你需要获取这些更新使用所规定的机制用于更新相应的操作系统。 你可以从 Windows 操作系统最新服务包下载[ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com)。  
   
  如果你的应用程序使用一个连接到数据库的 ActiveX 控件，你必须具有目标系统上安装 Microsoft 数据访问组件 (MDAC)。 有关详细信息，请参阅[重新分发数据库支持文件](../ide/redistributing-database-support-files.md)。  
   

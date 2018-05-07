@@ -1,12 +1,9 @@
 ---
-title: "CInternetException 类 |Microsoft 文档"
-ms.custom: 
+title: CInternetException 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8caa275af4469d45672125677d960b71212fe3de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetexception-class"></a>CInternetException 类
 表示与 Internet 操作相关的异常条件。  
@@ -69,10 +64,10 @@ class CInternetException : public CException
   
  `CInternetException`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxinet.h  
   
-##  <a name="cinternetexception"></a>CInternetException::CInternetException  
+##  <a name="cinternetexception"></a>  CInternetException::CInternetException  
  此成员函数调用时`CInternetException`创建对象。  
   
 ```  
@@ -86,7 +81,7 @@ CInternetException(DWORD dwError);
 ### <a name="remarks"></a>备注  
  若要引发 CInternetException，调用 MFC 全局函数[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。  
   
-##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
+##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext  
  上下文值和相关 Internet 操作相关联。  
   
 ```  
@@ -94,9 +89,9 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>备注  
- 中最初指定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md)和传递到 MFC 的[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-派生类。 你可以重写此默认值并分配任何`dwContext`参数选择的值。 `dwContext`是与给定任何的操作相关联。 `dwContext`标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
+ 中最初指定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md)和传递到 MFC 的[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-派生类。 你可以重写此默认值并分配任何`dwContext`参数选择的值。 `dwContext` 是与给定任何的操作相关联。 `dwContext` 标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
   
-##  <a name="m_dwerror"></a>CInternetException::m_dwError  
+##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  导致异常的错误。  
   
 ```  

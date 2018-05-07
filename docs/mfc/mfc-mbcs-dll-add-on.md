@@ -1,13 +1,10 @@
 ---
-title: "MFC MBCS DLL 加载项 |Microsoft 文档"
-ms.custom: 
+title: MFC MBCS DLL 加载项 |Microsoft 文档
+ms.custom: ''
 ms.date: 1/04/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - MFC
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f134110ff95956cc37d6e038a680ff27cbc298
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: df6ecf03a5b1c92dc7e435fc014615db09422638
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL 加载项
 

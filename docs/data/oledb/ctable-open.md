@@ -1,12 +1,9 @@
 ---
-title: "Ctable:: Open |Microsoft 文档"
-ms.custom: 
+title: 'Ctable:: Open |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CTable.Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: 5d006d95-74d7-4e2b-b243-a33bc53b5455
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d727af84dfeae77ab08e57f2f3a11120f9f88631
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ca271d8a88035151e6845db6b7cb9423c71c73ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctableopen"></a>CTable::Open
 打开表。  
@@ -80,7 +75,7 @@ HRESULT Open(const CSession& session,
 ## <a name="remarks"></a>备注  
  有关更多详细信息，请参阅[IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程序员参考*。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

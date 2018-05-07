@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonMainPanel 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCRibbonMainPanel 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b5508abdc90c4c566d078f2f75c30822c7a18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 类
 实现在单击时显示的功能区面板[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。  
@@ -83,10 +78,10 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
   
  [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxRibbonMainPanel.h  
   
-##  <a name="add"></a>CMFCRibbonMainPanel::Add  
+##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
  将功能区元素添加到应用程序按钮面板的左窗格中。  
   
 ```  
@@ -94,13 +89,13 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pElem`  
+ [in][out] `pElem`  
  指向要添加到主面板的功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
  将功能区元素添加到面板。 使用此方法添加的元素将位于左侧列的主面板中。  
   
-##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
+##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
  将文本字符串添加到新的文件列表菜单。  
   
 ```  
@@ -118,7 +113,7 @@ void AddRecentFilesList(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
+##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
  将功能区元素添加到功能区应用程序面板的底部窗格中。  
   
 ```  
@@ -126,12 +121,12 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out]`pElem`  
+ [in][out] `pElem`  
  指向要添加到主面板底部的功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
+##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
  将功能区元素添加到应用程序按钮面板的右窗格中。  
   
 ```  
@@ -150,7 +145,7 @@ void AddToRight(
 ### <a name="remarks"></a>备注  
  使用此函数将功能区元素添加到右侧面板。 右侧面板通常显示最新的文件列表中，但你可以添加任何其他功能区元素此处。  
   
-##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
+##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
  返回表示功能区主面板的区域的矩形。  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "记录集： 批量提取记录 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 记录集： 批量提取记录 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>记录集：批量提取记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何实现批量记录字段交换](#_core_how_to_implement_bulk_record_field_exchange)。  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>CRecordset 如何支持批量行提取  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> CRecordset 如何支持批量行提取  
  在打开之前记录集对象，你可以定义与行集大小`SetRowsetSize`成员函数。 行集大小指定应在一次获取检索多少条记录。 实现批量行提取时，默认行集大小为 25。 如果未实现批量行提取，在 1 保持固定的行集大小。  
   
  在初始化的行集大小后，调用[打开](../../mfc/reference/crecordset-class.md#open)成员函数。 在这里，你必须指定`CRecordset::useMultiRowFetch`选项**dwOptions**实现批量行提取的参数。 此外，你可以设置**CRecordset::userAllocMultiRowBuffers**选项。 批量记录字段交换机制使用数组存储在提取过程中检索的数据的多个行。 由框架可以自动分配这些存储缓冲区或你可以手动将他们分配。 指定**CRecordset::userAllocMultiRowBuffers**选项意味着，你将执行操作分配。  
@@ -67,18 +62,18 @@ ms.lasthandoff: 12/21/2017
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|将光标移到行集合中的特定行。|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|为指定的值可更改的行集大小的设置的虚拟函数。|  
   
-##  <a name="_core_special_considerations"></a>特殊的注意事项  
+##  <a name="_core_special_considerations"></a> 特殊的注意事项  
  尽管批量行提取是性能提升，但某些功能的操作方式不同。 你决定实现批量行提取之前，请考虑以下各项：  
   
 -   框架将自动调用`DoBulkFieldExchange`成员函数以将数据从数据源传输到记录集对象。 但是，数据将不传输从记录集到数据源。 调用`AddNew`，**编辑**，**删除**，或**更新**成员函数导致失败的断言。 尽管`CRecordset`目前不提供一种机制，用于更新的数据大容量行，你可以通过使用 ODBC API 函数编写您自己的函数**SQLSetPos**。 有关详细信息**SQLSetPos**，请参阅*ODBC SDK 程序员参考*MSDN 文档中。  
   
 -   成员函数`IsDeleted`， `IsFieldDirty`， `IsFieldNull`， `IsFieldNullable`， `SetFieldDirty`，和`SetFieldNull`不能用于实现批量行提取的记录集。 但是，你可以调用`GetRowStatus`代替了`IsDeleted`，和`GetODBCFieldInfo`代替了`IsFieldNullable`。  
   
--   **移动**操作按行集重新定位记录集。 例如，假设你打开一个包含初始行集大小为 10 的 100 条记录的记录集。 **打开**提取行 1 到 10，与位于第 1 行的当前记录。 调用`MoveNext`提取下一步的行集，不是下一步的行。 一个行集合包括位于第 11 行的 11 至第 20，与当前记录的行。 请注意，`MoveNext`和**Move (1)**实现批量行提取时就不等效。 **Move (1)**提取当前记录的第 1 行开始的行集。 在此示例中，调用**Move (1)**之后调用**打开**提取与位于第 2 行的当前记录包含 2 至第 11 行的行集。 有关详细信息，请参阅[移动](../../mfc/reference/crecordset-class.md#move)成员函数。  
+-   **移动**操作按行集重新定位记录集。 例如，假设你打开一个包含初始行集大小为 10 的 100 条记录的记录集。 **打开**提取行 1 到 10，与位于第 1 行的当前记录。 调用`MoveNext`提取下一步的行集，不是下一步的行。 一个行集合包括位于第 11 行的 11 至第 20，与当前记录的行。 请注意，`MoveNext`和**Move (1)** 实现批量行提取时就不等效。 **Move (1)** 提取当前记录的第 1 行开始的行集。 在此示例中，调用**Move (1)** 之后调用**打开**提取与位于第 2 行的当前记录包含 2 至第 11 行的行集。 有关详细信息，请参阅[移动](../../mfc/reference/crecordset-class.md#move)成员函数。  
   
 -   与记录字段交换不同向导不支持批量记录字段交换。 这意味着你必须手动声明将字段数据成员并手动重写`DoBulkFieldExchange`通过编写对批量 RFX 函数的调用。 有关详细信息，请参阅[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)中*类库参考*。  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>如何实现批量记录字段交换  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> 如何实现批量记录字段交换  
  批量记录字段交换将行集的数据从数据源传输到记录集对象。 批量 RFX 函数使用数组来存储此数据，以及数组存储在行集中的每个数据项的长度。 在类定义中，你必须定义将字段数据成员为指针来访问数据的数组。 此外，你必须定义一组的指针访问数组的长度。 不应声明为指针; 为任何参数数据成员声明的参数数据成员时使用批量记录字段交换等同于使用记录字段交换时声明它们。 下面的代码演示一个简单的示例：  
   
 ```  

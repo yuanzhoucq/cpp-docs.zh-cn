@@ -1,10 +1,10 @@
 ---
-title: "/Zc:sizedDealloc （启用全局调整大小的释放函数） |Microsoft 文档"
-ms.custom: 
+title: /Zc:sizedDealloc （启用全局调整大小的释放函数） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sizedDealloc
 - /Zc:sizedDealloc
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3ae48e0d83fc0e0bd0f0b34b5c84c78d069a22
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 0a912b87240ad37e29cade077b7a93aa1e7886a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc （启用全局调整大小的释放函数）
 
@@ -42,9 +41,9 @@ C + + 11 标准中，你可以定义静态成员函数`operator delete`和`opera
 
 C + + 14 标准更改编译器的行为。 在定义全局`operator delete`和`operator delete[]`它们采用类型的第二个参数`size_t`，编译器首选时不会调用成员作用域版本和对象的大小可调用这些函数。 编译器将隐式传递大小自变量。 当编译器无法确定正在解除分配的对象的大小，时会调用的单个自变量版本。 否则，选择要调用的释放函数的版本的一般规则仍适用。 对全局函数的调用可以显式指定通过预先计算范围解析运算符 (`::`) 到解除分配的函数调用。
 
-默认情况下，启动 Visual Studio 2015 中的 Visual c + + 实现此 C + + 14 标准行为。 可以通过设置显式指定此**/Zc:sizedDealloc**编译器选项。 这表示可能影响重大更改。 使用**/zc: sizeddealloc-**选项以保留旧行为，例如，当你的代码定义了使用类型的第二个参数的放置 delete 运算符`size_t`。 具有第二个参数的类型的全局释放函数的默认 Visual Studio 库实现`size_t`调用的单个参数版本。 如果你的代码提供了唯一单-参数全局 delete 运算符和运算符 delete []，全局调整了大小的释放函数的默认库实现调用全局函数。
+默认情况下，启动 Visual Studio 2015 中的 Visual c + + 实现此 C + + 14 标准行为。 可以通过设置显式指定此 **/Zc:sizedDealloc**编译器选项。 这表示可能影响重大更改。 使用 **/zc: sizeddealloc-** 选项以保留旧行为，例如，当你的代码定义了使用类型的第二个参数的放置 delete 运算符`size_t`。 具有第二个参数的类型的全局释放函数的默认 Visual Studio 库实现`size_t`调用的单个参数版本。 如果你的代码提供了唯一单-参数全局 delete 运算符和运算符 delete []，全局调整了大小的释放函数的默认库实现调用全局函数。
 
-**/Zc:sizedDealloc**编译器选项默认处于启用。 [/ 宽松-](permissive-standards-conformance.md)选项不影响**/Zc:sizedDealloc**。
+**/Zc:sizedDealloc**编译器选项默认处于启用。 [/ 宽松-](permissive-standards-conformance.md)选项不影响 **/Zc:sizedDealloc**。
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
@@ -56,7 +55,7 @@ C + + 14 标准更改编译器的行为。 在定义全局`operator delete`和`o
 
 1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
 
-1. 修改**其他选项**属性以包含**/Zc:sizedDealloc**或**/zc: sizeddealloc-** ，然后选择**确定**。
+1. 修改**其他选项**属性以包含 **/Zc:sizedDealloc**或 **/zc: sizeddealloc-** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 

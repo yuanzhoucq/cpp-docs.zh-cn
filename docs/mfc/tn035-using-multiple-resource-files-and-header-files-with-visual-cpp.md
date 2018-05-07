@@ -1,13 +1,10 @@
 ---
-title: "TN035： 使用 Visual c + + 中使用多个资源文件和头文件 |Microsoft 文档"
-ms.custom: 
+title: TN035： 使用 Visual c + + 中使用多个资源文件和头文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.resources
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多个资源文件和头文件
 > [!NOTE]
@@ -276,9 +271,9 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  创建新 .RC 文件时，Visual C++ 先使用略高于最低合法值的值。 AppWizard 还会初始化这些值以更适于 MFC 应用程序。 有关 ID 值范围的详细信息，请参阅[技术说明 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。  
   
- 现在 Visual c + + 每次创建新的资源文件，即使在同一项目中，定义相同**_APS_NEXT\_** 值。 因此，如果你在两个不同 .RC 文件中添加比如多个对话框，则 Visual C++ 很可能会将相同 #define 值分配到不同对话框。 例如，第一个 .RC 文件中的 IDD_MY_DLG1 可能会获得与第二个 .RC 文件中的 IDD_MY_DLG2 相同的数字 101。  
+ 现在 Visual c + + 每次创建新的资源文件，即使在同一项目中，定义相同 **_APS_NEXT\_** 值。 因此，如果你在两个不同 .RC 文件中添加比如多个对话框，则 Visual C++ 很可能会将相同 #define 值分配到不同对话框。 例如，第一个 .RC 文件中的 IDD_MY_DLG1 可能会获得与第二个 .RC 文件中的 IDD_MY_DLG2 相同的数字 101。  
   
- 若要避免此问题，应在各自 .RC 文件中对四个 ID 域中的每个域保留不同的数值范围。 执行此操作通过手动更新**_APS_NEXT**中每个值。RC 文件`before`开始将资源添加。 例如，如果第一个。RC 文件使用默认值**_APS_NEXT**值，则你可能想要分配以下**_APS_NEXT**第二个值。RC 文件：  
+ 若要避免此问题，应在各自 .RC 文件中对四个 ID 域中的每个域保留不同的数值范围。 执行此操作通过手动更新 **_APS_NEXT**中每个值。RC 文件`before`开始将资源添加。 例如，如果第一个。RC 文件使用默认值 **_APS_NEXT**值，则你可能想要分配以下 **_APS_NEXT**第二个值。RC 文件：  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  
@@ -391,7 +386,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

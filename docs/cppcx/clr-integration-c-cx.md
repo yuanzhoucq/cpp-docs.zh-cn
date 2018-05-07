@@ -1,24 +1,19 @@
 ---
-title: "CLR 集成 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: CLR 集成 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d832e3856d7df444663e0b99b759e2ea620b27ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50b455bd3b6fd4a96c3181b60904cb7a3250e866
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-integration-ccx"></a>CLR 集成 (C++/CX)
 某些 Windows 运行时类型中接收特殊处理在 C + + /cli CX 以及基于公共语言运行时 (CLR) 的语言。 本文讨论一种语言中的几种类型如何映射到另一种语言。 例如，CLR 将 Windows.Foundation.IVector 映射到 System.Collections.IList，将 Windows.Foundation.IMap 映射到 System.Collections.IDictionary，等等。 同样，C + + /cli CX 特别映射诸如 platform:: delegate 和 platform:: string 类型。  

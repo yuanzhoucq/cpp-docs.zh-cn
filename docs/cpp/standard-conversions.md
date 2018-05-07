@@ -2,11 +2,8 @@
 title: 标准转换 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 050f974fe7e74077b1a8dab5caf5160d518ca8b1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-conversions"></a>标准转换
 C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  

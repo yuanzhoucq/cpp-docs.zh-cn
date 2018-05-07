@@ -1,31 +1,26 @@
 ---
-title: "析构函数语义的更改 |Microsoft 文档"
-ms.custom: 
+title: 析构函数语义的更改 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finalizers [C++]
 - destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3d078300ca0e51ba8eb035d5428d300b0413a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-destructor-semantics"></a>析构函数语义的更改
 类析构函数语义具有显著从更改托管扩展的 c + + 为 Visual c + +。  
@@ -168,7 +163,7 @@ void f() {
  实际上，在新语法中，析构函数再次与成对出现，构造函数为自动获取/释放机制取决于本地对象的生存期。  
   
 ## <a name="declaring-an-explicit-finalize"></a>声明显式终止  
- 在新语法中，如我们所见，析构函数合成到`Dispose`方法。 这意味着，析构函数不显式调用时，垃圾回收器在终止过程，将不像以前那样寻找一个关联`Finalize`对象的方法。 若要支持析构和终止，我们引入了一种特殊的语法提供终结器。 例如:  
+ 在新语法中，如我们所见，析构函数合成到`Dispose`方法。 这意味着，析构函数不显式调用时，垃圾回收器在终止过程，将不像以前那样寻找一个关联`Finalize`对象的方法。 若要支持析构和终止，我们引入了一种特殊的语法提供终结器。 例如：  
   
 ```  
 public ref class R {  

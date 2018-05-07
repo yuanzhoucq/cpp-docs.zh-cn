@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2327 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2327 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2327
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aa5635f6e1185e68d3042009f677d797a11a78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcfa48667b20082090fc85079ac5df184f2b10fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2327"></a>编译器错误 C2327
 symbol： 不是类型名称、 静态、 或枚举器  
   
  嵌套类中的代码尝试访问不是类型名称、 静态成员或一个枚举器在封闭类的成员。  
   
- 使用编译时**/clr**，C2327 的常见原因是具有同名的属性类型的属性。  
+ 使用编译时 **/clr**，C2327 的常见原因是具有同名的属性类型的属性。  
   
  下面的示例生成 C2327:  
   

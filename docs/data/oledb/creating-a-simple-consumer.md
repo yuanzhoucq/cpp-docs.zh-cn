@@ -1,30 +1,25 @@
 ---
-title: "创建简单使用者 |Microsoft 文档"
-ms.custom: 
+title: 创建简单使用者 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 553d4f8875812aa9453ec39e0e3223bd3463a31a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 711aaaff2bc4e012ba4c4ef78465f06c51b9d307
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 使用 ATL 项目向导和 ATL OLE DB 使用者向导生成 OLE DB 模板使用者。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 02/23/2018
   
 7.  单击 **“确定”**。 此操作将返回到 ATL OLE DB 使用者向导。  
   
-8.  在向导完成的名称`Class`和**.h 文件**基于名称的表、 视图或存储你选择的过程。 如果你想，你可以编辑这些名称。  
+8.  在向导完成的名称`Class`和 **.h 文件**基于名称的表、 视图或存储你选择的过程。 如果你想，你可以编辑这些名称。  
   
 9. 清除**属性化**复选框，以便该向导创建使用者代码使用[OLE DB 模板类](../../data/oledb/ole-db-consumer-templates-reference.md)而非默认[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)。  
   

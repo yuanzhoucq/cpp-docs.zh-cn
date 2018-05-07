@@ -1,30 +1,25 @@
 ---
-title: "创建 Rebar 控件 |Microsoft 文档"
-ms.custom: 
+title: 创建 Rebar 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - rebar controls [MFC], creating
 - CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263541d9dc462b067caf763fe969f3809f1daa7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1deb33adc104775cf9b76daf75d4ee08b6475f0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-rebar-control"></a>创建 Rebar 控件
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)在父对象可见之前，应该创建对象。 这将最大限度降低出现绘画问题的可能性。  

@@ -1,12 +1,9 @@
 ---
-title: CDynamicAccessor::GetColumnFlags | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicaccessor:: Getcolumnflags |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicAccessor.GetColumnFlags
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetColumnFlags method
 ms.assetid: b2ba2f3a-2c61-4a49-abfb-75823908ccf4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ad0684ba4db334ecf9c911d4265b7b88a9f5fc37
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9cb4e439ab650793dcbafa79092d03b53271e45a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetcolumnflags"></a>CDynamicAccessor::GetColumnFlags
 检索列特征。  
@@ -55,7 +50,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 ## <a name="remarks"></a>备注  
  从一个偏移的列号。 列零是一种特殊情况;如果可用，则书签。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

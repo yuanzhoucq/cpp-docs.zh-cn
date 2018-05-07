@@ -1,31 +1,26 @@
 ---
-title: "如何： 创建用户控件并承载 MDI 视图 |Microsoft 文档"
-ms.custom: 
+title: 如何： 创建用户控件并承载 MDI 视图 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 449f0026cd2d7603ceb190cc747138189313974f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：创建用户控件并承载 MDI 视图
 以下步骤演示如何创建.NET Framework 用户控件创作控件类库 （具体而言，Windows 控件库项目） 中的用户控件，然后将项目编译为程序集。 从 MFC 应用程序使用派生自的类也可以使用控件[CView 类](../mfc/reference/cview-class.md)和[CWinFormsView 类](../mfc/reference/cwinformsview-class.md)。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  创建 MFC 应用程序项目。  
   
-     上**文件**菜单上，选择**新建**，然后单击**项目**。 在**Visual c + +**文件夹，选择**MFC 应用程序**。  
+     上**文件**菜单上，选择**新建**，然后单击**项目**。 在**Visual c + +** 文件夹，选择**MFC 应用程序**。  
   
      在**名称**框中，输入`MFC02`和更改**解决方案**将设置为**将添加到解决方案**。 单击 **“确定”**。  
   
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      下**配置属性**，选择**常规**。 下**项目默认值**部分中，设置**公共语言运行时支持**到**公共语言运行时支持 (/ clr)**。  
   
-     下**配置属性**，展开**C/c + +**单击**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。  
+     下**配置属性**，展开**C/c + +** 单击**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。  
   
      单击**代码生成**节点。 设置**启用最小重新生成**到**否 (/ Gm-)**。 此外设置**基本运行时检查**到**默认**。  
   

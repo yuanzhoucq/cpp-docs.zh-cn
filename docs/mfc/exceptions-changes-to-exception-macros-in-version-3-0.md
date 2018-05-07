@@ -1,13 +1,10 @@
 ---
-title: "异常： 更改版本 3.0 中对异常宏 |Microsoft 文档"
-ms.custom: 
+title: 异常： 更改版本 3.0 中对异常宏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
 这是一个高级的主题。  
@@ -71,6 +66,6 @@ ms.lasthandoff: 03/16/2018
   
  有关详细信息，请参阅[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理](../mfc/exception-handling-in-mfc.md)
 

@@ -1,8 +1,8 @@
 ---
-title: "编译器警告 C4400 通过 C4599 |Microsoft 文档"
+title: 编译器警告 C4400 通过 C4599 |Microsoft 文档
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>编译器警告 C4400 通过 C4599
 
@@ -182,7 +181,7 @@ ms.lasthandoff: 03/16/2018
 |[编译器警告（等级 2）C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|*函数*： 函数签名包含类型*类型*';C + + 对象是不安全的时间间隔纯代码和混合或本机。|
 |编译器警告 C4413|classname::member： 引用成员初始化为构造函数退出后不会保留一个临时|
 |[编译器警告（等级 3）C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|*函数*： 短跳转到函数转换到接近|
-|编译器警告 （等级 1） C4415|duplicate __declspec(code_seg('*name*'))|
+|编译器警告 （等级 1） C4415|重复 __declspec (code_seg (*名称*'))|
 |编译器警告 （等级 1） C4416|__declspec(code_seg(...)) 包含空字符串： 忽略|
 |编译器警告 （等级 1） C4417|显式模板实例化不能具有 __declspec(code_seg(...))： 忽略|
 |编译器警告 （等级 1） C4418|__declspec(code_seg(...)) 忽略上枚举|
@@ -227,7 +226,7 @@ ms.lasthandoff: 03/16/2018
 |[编译器警告（等级 1）C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|*classname*： 此类有终结器 ！*终结器*但没有析构函数 ~*dtor*|
 |[编译器警告 （等级 1，错误） C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|*类型*： 无法确定类型的 GUID。 程序可能在运行时失败。|
 |[编译器警告 （等级 4） C4463](compiler-warning-level-4-c4463.md)|溢出;分配*值*到位域的只包含值从*min_value*到*max_value*|
-|[编译器警告 （等级 4） C4464](../../error-messages/compiler-warnings/c4464.md)|相对包含路径包含..|
+|[编译器警告（等级 4）C4464](../../error-messages/compiler-warnings/c4464.md)|相对包含路径包含..|
 |[编译器警告（等级 1）C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|忽略在 /clr 下的浮点控制杂注|
 |[编译器警告 （等级 4） C4471](compiler-warning-level-4-c4471.md)|*枚举*： 未区分范围的枚举的前向声明必须具有基础类型 (假定为 int)|
 |编译器警告 （等级 1） C4472|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明 WinRT&#124;托管枚举|

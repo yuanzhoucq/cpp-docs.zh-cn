@@ -1,12 +1,9 @@
 ---
-title: "hash_set:: value_comp (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'hash_set:: value_comp (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::value_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_comp member [STL/CLR]
 ms.assetid: 7ef381ea-438b-48ce-b0cb-96d844ea5df7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f29f12401ca3f8160756dc9e921308202c980138
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 04b841e458809cea7ccda1fd6bc632129764ae78
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetvaluecomp-stlclr"></a>hash_set::value_comp (STL/CLR)
 将复制两个元素值的排序委托。  
@@ -71,7 +66,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  

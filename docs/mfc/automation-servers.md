@@ -2,12 +2,9 @@
 title: 自动化服务器 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>自动化服务器
 利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化服务器是可编程对象 （称为自动化对象） 公开到其他应用程序的应用程序 (称为[自动化客户端](../mfc/automation-clients.md))。 自动化服务器有时称为自动化组件。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  通过定义完善的常用接口公开应用程序功能后，自动化实现了在单个通用编程语言（如 Microsoft Visual Basic）中（而不是在各种特定于应用程序的宏语言中）生成应用程序。  
   
-##  <a name="_core_support_for_automation_servers"></a>对自动化服务器的支持  
+##  <a name="_core_support_for_automation_servers"></a> 对自动化服务器的支持  
  Visual C++ 和 MFC 框架为自动化服务器提供了广泛的支持。 它们处理了创建自动化服务器所涉及的大部分工作，从而让您将精力放在应用程序的功能上。  
   
  用于支持自动化的框架的主要机制是调度映射，即扩展到公开 OLE 的方法和属性所需的声明和调用中的一组宏。 典型的调度映射如下所示：  

@@ -1,11 +1,8 @@
 ---
-title: "Platform:: notimplementedexception 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: notimplementedexception 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::NotImplementedException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90733284c44dd99d1687d47493ebbf3959aa3b62
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42ad78bb1eebd9bf5b1bc268fc64bb7c7c3c0818
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException 类
 当接口成员在派生类型中未实现时引发。  
@@ -39,7 +34,7 @@ public ref class NotImplementedException : COMException,    IException,    IPrin
 ### <a name="remarks"></a>备注  
  有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md) 类。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  

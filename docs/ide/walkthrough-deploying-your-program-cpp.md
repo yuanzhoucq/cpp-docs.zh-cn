@@ -1,13 +1,10 @@
 ---
-title: "演练： 部署程序 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 演练： 部署程序 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>演练：部署程序 (C++)
 现在，你已创建你的应用程序通过完成前面相关的演练中，列出了这些[使用适用于 c + + 桌面开发的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)，最后一步是，以便其他用户可以创建安装程序在其计算机上安装的程序。 为此，你需要将新项目添加到现有解决方案。 此新项目输出 setup.exe 文件，该文件将把你的应用程序安装到其他计算机上。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
 14. 在**解决方案资源管理器**下**指定应用程序数据**节点，打开**可再发行文件**页。  
   
-15. 上**可再发行组件 （游戏安装程序）**在编辑器窗口中，选择的选项卡**Visual c + + 11.0 CRT (x86)**复选框。  
+15. 上**可再发行组件 （游戏安装程序）**在编辑器窗口中，选择的选项卡**Visual c + + 11.0 CRT (x86)** 复选框。  
   
 16. 在菜单栏上，选择**生成**，**生成解决方案**生成游戏项目和游戏安装程序项目。  
   
@@ -99,6 +94,6 @@ ms.lasthandoff: 12/21/2017
  **上一步：** [演练： 调试项目 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)  
  [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -1,12 +1,9 @@
 ---
-title: "重写动态访问器 |Microsoft 文档"
-ms.custom: 
+title: 重写动态访问器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f31f2f3ec58ea7b557cc04718cf52219d0f4d9e9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
 当使用动态访问器如`CDynamicAccessor`，该命令**打开**方法创建一个访问器自动根据打开行集的列信息。 您可以重写动态访问器可控制完全列的绑定方式。  

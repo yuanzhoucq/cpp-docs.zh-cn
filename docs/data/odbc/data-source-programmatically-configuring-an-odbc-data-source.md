@@ -1,13 +1,10 @@
 ---
-title: "数据源： 以编程方式配置 ODBC 数据源 |Microsoft 文档"
-ms.custom: 
+title: 数据源： 以编程方式配置 ODBC 数据源 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
 本主题说明如何以编程方式配置开放式数据库连接 (ODBC) 数据源名称。 这可以灵活地访问数据而不强制用户显式使用 ODBC 管理器或其他程序以指定数据源的名称。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 03/16/2018
  但是，许多 Dbms 允许以编程方式的数据源创建。 某些数据源保持数据库的目录规范。 也就是说，目录是数据源，数据源中的每个表都存储在单独的文件 （对于 dBASE，每个表都是一个.dbf 文件）。 对于其他 ODBC 数据库，如 Microsoft Access 和 SQL Server 驱动程序都需要在建立数据源之前满足某些特定条件。 例如，在使用 SQL Server ODBC 驱动程序时，你需要建立了 SQL Server 计算机。  
   
 ##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 示例  
- 下面的示例使用**:: SQLConfigDataSource**调用 ODBC API 函数来创建新的 Excel 数据源的新的 Excel 数据源：  
+ 下面的示例使用 **:: SQLConfigDataSource**调用 ODBC API 函数来创建新的 Excel 数据源的新的 Excel 数据源：  
   
 ```  
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",   
@@ -56,16 +51,16 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  有关创建表的详细信息，请参阅[数据源： 以编程方式创建 ODBC 数据源中的表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。  
   
- 以下信息讨论如何将传递给所需要的参数**:: SQLConfigDataSource** ODBC API 函数。 若要使用**:: SQLConfigDataSource**，你必须包括 Odbcinst.h 标头文件，并使用 Odbcinst.lib 导入库。 此外，在路径中必须在 Odbccp32.dll，在运行的时 （或 Odbcinst.dll 16 位）。  
+ 以下信息讨论如何将传递给所需要的参数 **:: SQLConfigDataSource** ODBC API 函数。 若要使用 **:: SQLConfigDataSource**，你必须包括 Odbcinst.h 标头文件，并使用 Odbcinst.lib 导入库。 此外，在路径中必须在 Odbccp32.dll，在运行的时 （或 Odbcinst.dll 16 位）。  
   
  你可以创建 ODBC 数据源名称使用 ODBC 管理器或类似的实用工具。 但是，有时最好直接从你的应用程序，以获取访问权限，而无需用户运行单独的实用程序创建数据源名称。  
   
- ODBC 管理器 （通常在控制面板中安装） 通过将项放在 Windows 注册表中 （或者，为 Odbc.ini 文件中的 16 位） 创建一个新的数据源。 ODBC 驱动程序管理器查询此文件以获取有关数据源所需的信息。 务必要知道哪些信息需要放置在注册表中，因为你需要提供对的调用**:: SQLConfigDataSource**。  
+ ODBC 管理器 （通常在控制面板中安装） 通过将项放在 Windows 注册表中 （或者，为 Odbc.ini 文件中的 16 位） 创建一个新的数据源。 ODBC 驱动程序管理器查询此文件以获取有关数据源所需的信息。 务必要知道哪些信息需要放置在注册表中，因为你需要提供对的调用 **:: SQLConfigDataSource**。  
   
- 尽管此信息无法将直接写入到注册表而无需使用**:: SQLConfigDataSource**，这样做的任何应用程序依赖于驱动程序管理器使用来维护其数据的当前技术。 如果以不同的方式维护有关数据源的 ODBC 驱动程序管理器实现记录到更高版本的修订版本，任何应用程序使用此方法将断开。 通常，最好是在其中一个提供时使用 API 函数。 例如，你的代码是在 16 位为 32 位可移植性的如果你使用**:: SQLConfigDataSource**函数，因为该函数正确将写入 Odbc.ini 文件或注册表。  
+ 尽管此信息无法将直接写入到注册表而无需使用 **:: SQLConfigDataSource**，这样做的任何应用程序依赖于驱动程序管理器使用来维护其数据的当前技术。 如果以不同的方式维护有关数据源的 ODBC 驱动程序管理器实现记录到更高版本的修订版本，任何应用程序使用此方法将断开。 通常，最好是在其中一个提供时使用 API 函数。 例如，你的代码是在 16 位为 32 位可移植性的如果你使用 **:: SQLConfigDataSource**函数，因为该函数正确将写入 Odbc.ini 文件或注册表。  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters  
- 以下说明了这些参数的**:: SQLConfigDataSource**函数。 很多信息则来自 ODBC API*程序员参考*提供使用 Visual c + + 版本 1.5 和更高版本。  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 参数  
+ 以下说明了这些参数的 **:: SQLConfigDataSource**函数。 很多信息则来自 ODBC API*程序员参考*提供使用 Visual c + + 版本 1.5 和更高版本。  
   
 ###  <a name="_core_function_prototype"></a> 函数原型  
   
@@ -89,7 +84,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 1.  运行 ODBC 管理器。  
   
-2.  单击 **“添加”**。  
+2.  单击 **添加**。  
   
  这样，可以安装的驱动程序和及其说明的列表。 将此说明作为`lpszDriver`参数。 请注意，你将使用整个说明，如"Excel 文件 (*.xls)"，如果它们存在描述中包括的文件扩展名和括号。  
   
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   32 位，找不到该项**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 数据源**的左窗格中。  
   
-         右窗格中列出的窗体的项:"pub: REG_SZ:*<data source name>*"，其中 *<data source name>* 是已配置了你想驱动程序所需的设置的数据源若要使用。 选择数据源所需，例如，SQL Server。 以下字符串的项"发布:"中，在顺序、 keyname 和值要在中使用你`lpszAttributes`参数。  
+         右窗格中列出的窗体的项:"pub: REG_SZ:*<data source name>*"，其中*<data source name>* 是已配置了你想驱动程序所需的设置的数据源若要使用。 选择数据源所需，例如，SQL Server。 以下字符串的项"发布:"中，在顺序、 keyname 和值要在中使用你`lpszAttributes`参数。  
   
     -   16 位，在标记的 Odbc.ini 文件中找到的部分 [*\<数据源名称 >*]。  
   
@@ -117,7 +112,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 1.  运行 ODBC 管理器。  
   
-2.  单击 **“添加”**。  
+2.  单击 **添加**。  
   
 3.  选择的驱动程序名称。  
   
@@ -125,5 +120,5 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
  ODBC 管理器在显示时用于创建该特定的驱动程序的新数据源的信息，请单击**帮助**。 这将打开该特定的驱动程序，其中通常包含有关使用驱动程序的重要信息的帮助文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)

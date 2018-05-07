@@ -1,12 +1,9 @@
 ---
-title: "CSpinButtonCtrl 类 |Microsoft 文档"
-ms.custom: 
+title: CSpinButtonCtrl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 提供 Windows 公共数值调节钮控件的功能。  
@@ -109,10 +104,10 @@ class CSpinButtonCtrl : public CWnd
   
  `CSpinButtonCtrl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
  创建数值调节钮控件，并将其附加到`CSpinButtonCtrl`对象...  
   
 ```  
@@ -144,7 +139,7 @@ virtual BOOL Create(
   
  若要使用扩展的窗口样式创建数值调节钮控件，调用[CSpinButtonCtrl::CreateEx](#createex)而不是**创建**。  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  创建控件 （子窗口），并将其与关联`CSpinButtonCtrl`对象。  
   
 ```  
@@ -178,14 +173,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  构造 `CSpinButtonCtrl` 对象。  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
  检索加速数值调节钮控件的信息。  
   
 ```  
@@ -204,7 +199,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>返回值  
  检索的快捷键结构。  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
  检索数值调节钮控件的当前基。  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>返回值  
  当前的基础值。  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
  检索指向当前合作者窗口的指针。  
   
 ```  
@@ -224,7 +219,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>返回值  
  指向当前合作者窗口的指针。  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
  检索数值调节钮控件的当前位置。  
   
 ```  
@@ -243,7 +238,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="remarks"></a>备注  
  当它处理返回的值时，控件将更新其基于在合作者窗口的标题的当前位置。 如果未合作者窗口或标题指定了一个无效或超出范围的值，该控件将返回错误。  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
  检索的上限和下限限制 （范围） 数值调节钮控件。  
   
 ```  
@@ -271,7 +266,7 @@ void GetRange32(
 ### <a name="remarks"></a>备注  
  成员函数`GetRange32`检索作为 32 位整数的数值调节钮控件的范围。  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
  设置数值调节钮控件的加速。  
   
 ```  
@@ -290,7 +285,7 @@ BOOL SetAccel(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
  设置数值调节钮控件的基。  
   
 ```  
@@ -307,7 +302,7 @@ int SetBase(int nBase);
 ### <a name="remarks"></a>备注  
  基础值确定合作者窗口是否以十进制或十六进制数字显示数字。 十六进制数字始终是无符号;十进制数字进行签名。  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
  设置数值调节钮控件合作者窗口。  
   
 ```  
@@ -324,7 +319,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="remarks"></a>备注  
  数值调节钮控件对于几乎始终与另一个窗口，如编辑控件，显示一些内容。 此其他窗口称为"好友"的数值调节钮控件。  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
  设置数值调节钮控件的当前位置。  
   
 ```  
@@ -340,9 +335,9 @@ int SetPos32(int nPos);
  前一个位置 (16 位精度`SetPos`、 32 位精度的`SetPos32`)。  
   
 ### <a name="remarks"></a>备注  
- `SetPos32`设置的 32 位位置。  
+ `SetPos32` 设置的 32 位位置。  
   
-##  <a name="setrange"></a>Cspinbuttonctrl:: Setrange  
+##  <a name="setrange"></a>  Cspinbuttonctrl:: Setrange  
  设置的上限和下限限制 （范围） 数值调节钮控件。  
   
 ```  
@@ -358,7 +353,7 @@ void SetRange32(
   
 ### <a name="parameters"></a>参数  
  `nLower` 和 `nUpper`  
- 控件的上限和下限限制。 有关`SetRange`，既不限制可以大于**UD_MAXVAL**或小于**UD_MINVAL**; 此外，不能超过两个限制之间的差异**UD_MAXVAL**. `SetRange32`无限制将限制;使用任何整数。  
+ 控件的上限和下限限制。 有关`SetRange`，既不限制可以大于**UD_MAXVAL**或小于**UD_MINVAL**; 此外，不能超过两个限制之间的差异**UD_MAXVAL**. `SetRange32` 无限制将限制;使用任何整数。  
   
 ### <a name="remarks"></a>备注  
  成员函数`SetRange32`设置数值调节钮控件的 32 位范围。  

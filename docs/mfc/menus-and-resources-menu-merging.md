@@ -1,13 +1,10 @@
 ---
-title: "菜单和资源： 菜单合并 |Microsoft 文档"
-ms.custom: 
+title: 菜单和资源： 菜单合并 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>菜单和资源：菜单合并
 本文详细介绍 OLE 文档应用程序能够处理可视化编辑和就地激活正确所必需的步骤。 就地激活带来了挑战，容器和服务器 （组件） 应用程序。 用户保持在相同的框架窗口 （在容器文档的上下文中），但实际上正在运行另一个应用程序 （服务器）。 这要求容器和服务器应用程序的资源之间的协作。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 - [工具栏和状态栏](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>菜单布局  
+##  <a name="_core_menu_layouts"></a> 菜单布局  
  第一步是协调菜单布局。 有关详细信息，请参阅**菜单创建**主题中[菜单编程注意事项](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK 中。  
   
  容器应用程序应创建新的菜单上，仅当在就地激活嵌入的项时使用。 最小值，此菜单应包含以下内容，按列出的顺序：  
@@ -113,7 +108,7 @@ END
   
  当就地激活嵌入的项时，框架将加载基于就地菜单。 然后，在就地激活请求其菜单的服务器应用程序，并将其分隔符所在。 这是菜单的合并方式。 你的操作系统上的文件和窗口的位置，从容器获取菜单和菜单从服务器获取对该项目。  
   
-##  <a name="_core_toolbars_and_status_bars"></a>工具栏和状态栏  
+##  <a name="_core_toolbars_and_status_bars"></a> 工具栏和状态栏  
  服务器应用程序应创建新的工具栏，并将其位图存储在单独的文件。 应用程序向导生成应用程序将此位图存储在名为 ITOOLBAR 的文件。BMP。 在你的服务器的项到位，激活并应包含相同的项作为你正常的工具栏上，但请删除代表文件和窗口菜单上的项的图标时，新的工具栏替换容器应用程序的工具栏。  
   
  在加载此工具栏你`COleIPFrameWnd`-派生类中，为你创建应用程序向导。 由容器应用程序处理状态栏。 上的就地框架窗口的实现的详细信息，请参阅[服务器： 实现服务器](../mfc/servers-implementing-a-server.md)。  

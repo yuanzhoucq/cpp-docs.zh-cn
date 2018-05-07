@@ -1,13 +1,10 @@
 ---
-title: "文档模板和文档视图创建过程 |Microsoft 文档"
-ms.custom: 
+title: 文档模板和文档视图创建过程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd47720009449d51abadd1e5f513149a83702ea3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2d8308e69cf53db4be51f6ce742df41edaa89ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文档模板和文档/视图创建过程
 若要管理使用其关联的视图和框架窗口创建文档的复杂的过程，框架将使用两个文档模板类： [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)用于 SDI 应用程序和[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)对于 MDI 应用程序。 `CSingleDocTemplate` 可以一次创建和存储一种类型的一个文档。 `CMultiDocTemplate` 保留一个类型的多个打开的文档的列表。  

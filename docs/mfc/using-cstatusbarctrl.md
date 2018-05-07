@@ -1,13 +1,10 @@
 ---
-title: "使用 CStatusBarCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CStatusBarCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CStatusBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8960d7093fcc950eb3118115459a414bc0f0fda3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8dd62dc3083959a20387a684f41164c3647c2c22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cstatusbarctrl"></a>使用 CStatusBarCtrl
 你可以使用状态栏控件 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 来创建反映有关应用程序的状态信息的各种类型的控件窗口。 状态窗口可以分成多个部分，以显示多种类型的信息。  

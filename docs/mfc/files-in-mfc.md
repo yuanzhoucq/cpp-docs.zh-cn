@@ -1,13 +1,10 @@
 ---
-title: "MFC 中的文件 |Microsoft 文档"
-ms.custom: 
+title: MFC 中的文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2cd6344f11a9c32ade0fc3241225a8763c18b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="files-in-mfc"></a>MFC 中的文件
 在 Microsoft 基础类库 (MFC)，类[CFile](../mfc/reference/cfile-class.md)处理常规文件 I/O 操作。 此系列文章介绍如何打开和关闭文件以及如何读取数据并将数据写入文件。 还讨论了文件状态操作。 有关如何使用 MFC 的基于对象的序列化功能作为一种替代方式的读取和写入数据文件中的说明，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。  

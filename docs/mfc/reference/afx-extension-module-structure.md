@@ -1,13 +1,10 @@
 ---
-title: "AFX_EXTENSION_MODULE 结构 |Microsoft 文档"
-ms.custom: 
+title: AFX_EXTENSION_MODULE 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFX_EXTENSION_MODULE
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ac896fb16aa3c338cadd6273e226eebe986ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 结构
 `AFX_EXTENSION_MODULE` MFC 扩展 Dll 初始化期间中用于保存 MFC 扩展 DLL 模块的状态。  
@@ -66,15 +61,15 @@ struct AFX_EXTENSION_MODULE
   
 -   创建**CDynLinkLibrary**对象如果 DLL 将导出[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象，或在具有其自己的自定义资源。  
   
- `AFX_EXTENSION_MODULE`结构用来保存一份 MFC 扩展 DLL 的模块状态，包括已通过 MFC 扩展 DLL 初始化为正常的静态对象构造之前执行的一部分运行时类对象的副本`DllMain`是输入。 例如:  
+ `AFX_EXTENSION_MODULE`结构用来保存一份 MFC 扩展 DLL 的模块状态，包括已通过 MFC 扩展 DLL 初始化为正常的静态对象构造之前执行的一部分运行时类对象的副本`DllMain`是输入。 例如：  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- 中存储的模块信息`AFX_EXTENSION_MODULE`结构可以复制到**CDynLinkLibrary**对象。 例如:  
+ 中存储的模块信息`AFX_EXTENSION_MODULE`结构可以复制到**CDynLinkLibrary**对象。 例如：  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
 ## <a name="see-also"></a>请参阅  

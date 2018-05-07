@@ -1,12 +1,9 @@
 ---
-title: "CAnimationColor 类 |Microsoft 文档"
-ms.custom: 
+title: CAnimationColor 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationColor
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6ec3b6d8ee6a37fbe189ff70a2a633cfda9c8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 类
 实现可对颜色的红色、绿色和蓝色分量进行动画处理的颜色功能。  
@@ -95,7 +90,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|表示动画颜色中的蓝色部分的封装的动画变量。|  
 |[CAnimationColor::m_gValue](#m_gvalue)|表示动画颜色中的绿色部分的封装的动画变量。|  
@@ -111,10 +106,10 @@ class CAnimationColor : public CAnimationBaseObject;
   
  `CAnimationColor`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationColor::AddTransition  
+##  <a name="addtransition"></a>  CAnimationColor::AddTransition  
  为红色、 绿色和蓝色组件添加转换。  
   
 ```  
@@ -137,7 +132,7 @@ void AddTransition(
 ### <a name="remarks"></a>备注  
  调用此函数可将指定的转换添加到转换应用于表示颜色组件的动画变量的内部列表。 添加转换时，它们都不会立即应用和存储在内部列表。 转换将应用 （添加到情节提要特定值） 时调用 CAnimationController::AnimateGroup。 如果你不需要将转换应用于颜色组件之一，则可以传递 NULL。  
   
-##  <a name="canimationcolor"></a>CAnimationColor::CAnimationColor  
+##  <a name="canimationcolor"></a>  CAnimationColor::CAnimationColor  
  构造 CAnimationColor 对象。  
   
 ```  
@@ -166,7 +161,7 @@ CAnimationColor(
 ### <a name="remarks"></a>备注  
  使用默认值为红色、 绿色和蓝色，对象 ID 和组 ID，将设置为 0 构造对象。 它们可以在运行时使用 SetDefaultValue 和 SetID 更高版本更改。  
   
-##  <a name="getanimationvariablelist"></a>CAnimationColor::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationColor::GetAnimationVariableList  
  将封装的动画变量放入列表。  
   
 ```  
@@ -177,7 +172,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
  `lst`  
  当函数返回时，它包含指向表示红色、 绿色和蓝色分量的三个 CAnimationVariable 对象的指针。  
   
-##  <a name="getb"></a>CAnimationColor::GetB  
+##  <a name="getb"></a>  CAnimationColor::GetB  
  提供对 CAnimationVariable 表示蓝色组件访问。  
   
 ```  
@@ -190,7 +185,7 @@ CAnimationVariable& GetB();
 ### <a name="remarks"></a>备注  
  你可以调用此方法以获取对基础 CAnimationVariable 表示蓝色组件的直接访问权限。  
   
-##  <a name="getdefaultvalue"></a>CAnimationColor::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationColor::GetDefaultValue  
  返回颜色组件的默认值。  
   
 ```  
@@ -203,7 +198,7 @@ COLORREF GetDefaultValue();
 ### <a name="remarks"></a>备注  
  调用此函数可检索之前已由构造函数或 SetDefaultValue 设置的默认值。  
   
-##  <a name="getg"></a>CAnimationColor::GetG  
+##  <a name="getg"></a>  CAnimationColor::GetG  
  提供对 CAnimationVariable 表示绿色组件访问。  
   
 ```  
@@ -216,7 +211,7 @@ CAnimationVariable& GetG();
 ### <a name="remarks"></a>备注  
  你可以调用此方法以获取对基础 CAnimationVariable 表示绿色组件的直接访问权限。  
   
-##  <a name="getr"></a>CAnimationColor::GetR  
+##  <a name="getr"></a>  CAnimationColor::GetR  
  提供对 CAnimationVariable 表示红色组件访问。  
   
 ```  
@@ -229,7 +224,7 @@ CAnimationVariable& GetR();
 ### <a name="remarks"></a>备注  
  你可以调用此方法以获取对基础 CAnimationVariable 表示红色组件的直接访问权限。  
   
-##  <a name="getvalue"></a>CAnimationColor::GetValue  
+##  <a name="getvalue"></a>  CAnimationColor::GetValue  
  返回当前值。  
   
 ```  
@@ -246,28 +241,28 @@ BOOL GetValue(COLORREF& color);
 ### <a name="remarks"></a>备注  
  调用此函数可检索动画颜色的当前值。 如果此方法失败或基础 COM 对象的颜色组件尚未初始化，颜色将包含在构造函数中或通过 SetDefaultValue 之前已设置的默认值。  
   
-##  <a name="m_bvalue"></a>CAnimationColor::m_bValue  
+##  <a name="m_bvalue"></a>  CAnimationColor::m_bValue  
  表示动画颜色中的蓝色部分的封装的动画变量。  
   
 ```  
 CAnimationVariable m_bValue;  
 ```  
   
-##  <a name="m_gvalue"></a>CAnimationColor::m_gValue  
+##  <a name="m_gvalue"></a>  CAnimationColor::m_gValue  
  表示动画颜色中的绿色部分的封装的动画变量。  
   
 ```  
 CAnimationVariable m_gValue;  
 ```  
   
-##  <a name="m_rvalue"></a>CAnimationColor::m_rValue  
+##  <a name="m_rvalue"></a>  CAnimationColor::m_rValue  
  表示动画颜色中的红色部分的封装的动画变量。  
   
 ```  
 CAnimationVariable m_rValue;  
 ```  
   
-##  <a name="operator_colorref"></a>CAnimationColor::operator COLORREF  
+##  <a name="operator_colorref"></a>  CAnimationColor::operator COLORREF  
   
 ```  
 operator COLORREF();
@@ -275,7 +270,7 @@ operator COLORREF();
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="operator_eq"></a>CAnimationColor::operator =  
+##  <a name="operator_eq"></a>  CAnimationColor::operator =  
  将颜色分配给 CAnimationColor。  
   
 ```  
@@ -289,7 +284,7 @@ void operator=(COLORREF color);
 ### <a name="remarks"></a>备注  
  建议你先执行该操作早动画开始日期，原因是此运算符将调用 SetDefaultValue，重新创建颜色组件的基础 COM 对象，如果已创建。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 为此动画对象，你需要重新启用这些事件。  
   
-##  <a name="setdefaultvalue"></a>CAnimationColor::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationColor::SetDefaultValue  
  设置默认值。  
   
 ```  

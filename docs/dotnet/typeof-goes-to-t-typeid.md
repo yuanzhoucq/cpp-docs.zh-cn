@@ -1,13 +1,10 @@
 ---
-title: "typeof 转到 t:: typeid |Microsoft 文档"
-ms.custom: 
+title: 'typeof 转到 t:: typeid |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,23 +12,21 @@ helpviewer_keywords:
 - __typeof keyword
 - typeid keyword [C++]
 ms.assetid: 6a0d35a7-7a1a-4070-b187-cff37cfdc205
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 09ec4aef4c8bc68f8a808193b30d86b8519ba881
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ae9f772a68735555748e6edbeb6196f1a73d2c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof 转到 T::typeid
 `typeof`由 c + + 托管扩展中使用的运算符`typeid`Visual c + + 中的关键字。  
   
- 在托管扩展中，`__typeof()`运算符返回关联`Type*`对象时传递的托管类型的名称。 例如:  
+ 在托管扩展中，`__typeof()`运算符返回关联`Type*`对象时传递的托管类型的名称。 例如：  
   
 ```  
 // Creates and initializes a new Array instance.  

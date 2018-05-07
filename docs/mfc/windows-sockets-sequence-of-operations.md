@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 操作顺序 |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 操作顺序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70765d94b0104cf905130ce043c2b0e35b26a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93fe2221e25951a53340d5da97f7d5c48ce477cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows 套接字：操作顺序
 并排比较，本文说明了用于服务器套接字和客户端套接字的操作顺序。 因为套接字使用`CArchive`对象，它们都不一定[流套接字](../mfc/windows-sockets-stream-sockets.md)。  
@@ -45,8 +40,8 @@ ms.lasthandoff: 12/21/2017
 ||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|  
 |`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||  
 |`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|  
-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> 或<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> -或这两个-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> 或<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> -或这两个-|  
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> 或<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> 或<br /><br /> `arOut << dwValue;`6|  
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -或-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> -或这两个-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -或-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> -或这两个-|  
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -或-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -或-<br /><br /> `arOut << dwValue;`6|  
   
  1. 其中`nPort`是端口号。 请参阅[Windows 套接字： 端口和套接字地址](../mfc/windows-sockets-ports-and-socket-addresses.md)有关端口的详细信息。  
   

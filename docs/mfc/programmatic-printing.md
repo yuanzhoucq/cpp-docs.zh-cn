@@ -1,13 +1,10 @@
 ---
-title: "以编程方式打印 |Microsoft 文档"
-ms.custom: 
+title: 以编程方式打印 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>以编程方式打印
 OLE 提供了一种来唯一标识永久文档 (**GetClassFile**) 并将它们加载到其相关代码 (`CoCreateInstance`， **queryinterface （iid_ipersistfile)**， **Queryinterface （iid_ipersiststorage)**， **ipersistfile:: Load**，和**ipersiststorage:: Load**)。 为了进一步启用打印文档，活动文档包容（使用最初未随 OLE 2.0 一起提供的现有 OLE 设计）引入了一个基本标准的打印接口 `IPrint`（通常可以通过任何能够加载文档类型的持久状态的对象获取）。 活动文档的每个视图可以选择性地分别支持**IPrint**接口，以提供这些功能。  

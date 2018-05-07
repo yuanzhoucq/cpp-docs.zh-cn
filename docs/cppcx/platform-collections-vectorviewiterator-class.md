@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::VectorViewIterator 类 |Microsoft 文档"
-ms.custom: 
+title: Platform::Collections::VectorViewIterator 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 类
 为派生自 Windows 运行时的对象提供标准模板库迭代器`IVectorView`接口。  
@@ -83,7 +78,7 @@ class VectorViewIterator;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `VectorViewIterator`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** collection.h  
   
  **命名空间：** Platform::Collections  
@@ -138,7 +133,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  VectorViewIterator::operator== Operator
+## <a name="operator-equality"></a>  Vectorviewiterator:: Operator = = 运算符
 指示当前 VectorViewIterator 是否等于指定 VectorViewIterator。  
   
 ### <a name="syntax"></a>语法  

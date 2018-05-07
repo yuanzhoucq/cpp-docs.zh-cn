@@ -1,13 +1,10 @@
 ---
-title: "应用程序类型、 MFC 应用程序向导 |Microsoft 文档"
-ms.custom: 
+title: 应用程序类型、 MFC 应用程序向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.apptype
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45253eed40e9a79dbcb372f63cc44aaeb99edbe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5708e823c57ecdb8470a398c4192cba1a5b6e411
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 应用程序向导的应用程序类型
 使用此页的[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)设计并将基本功能添加到新的 MFC 应用程序。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **Windows 本机/默认**  
   
--   **Office 2003**  
+-   **office 2003**  
   
 -   **Visual Studio 2005**  
   

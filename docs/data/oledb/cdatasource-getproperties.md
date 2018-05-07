@@ -1,12 +1,9 @@
 ---
-title: "Cdatasource:: Getproperties |Microsoft 文档"
-ms.custom: 
+title: 'Cdatasource:: Getproperties |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDataSource::GetProperties
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetProperties method
 ms.assetid: ffaecc17-9fe7-449e-94d6-43d31ad06cfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b44dff871c4358e915bda25ec18ed220de8adb3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e519504777a1ff9f2927d74340bec73e1b157e6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourcegetproperties"></a>CDataSource::GetProperties
 返回请求为连接的数据源对象的属性信息。  
@@ -53,7 +48,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ## <a name="remarks"></a>备注  
  若要获取的单个属性，请使用[GetProperty](../../data/oledb/cdatasource-getproperty.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

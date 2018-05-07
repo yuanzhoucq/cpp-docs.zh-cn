@@ -1,12 +1,9 @@
 ---
-title: "成员函数概述 |Microsoft 文档"
-ms.custom: 
+title: 成员函数概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6389197119135e7e800a4f5ec142bf42b1ef6d39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b34be19c5fe67c087579e3d1cf0643d5afd71dc5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-member-functions"></a>成员函数概述
 成员函数是静态或非静态的。 静态成员函数的行为不同于其他成员函数中，因为静态成员函数不具有隐式**这**自变量。 非静态成员函数具有**这**指针。 可以在类声明的内部或外部定义成员函数（无论是静态的还是非静态的）。  

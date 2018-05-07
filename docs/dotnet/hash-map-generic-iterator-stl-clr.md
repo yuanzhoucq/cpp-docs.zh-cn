@@ -1,12 +1,9 @@
 ---
-title: "hash_map::generic_iterator (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: hash_map::generic_iterator (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::generic_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_iterator member [STL/CLR]
 ms.assetid: 2899eeae-5339-45bb-9d0f-42ce031f1b39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5b22d29511d611461c431dcf1f5a0fc7e9f00709
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a68e077e365b33f3adbc9077484b819e2ac0758e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapgenericiterator-stlclr"></a>hash_map::generic_iterator (STL/CLR)
 与容器的泛型接口使用的迭代器类型。  
@@ -84,7 +79,7 @@ int main()
 [a 1]  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

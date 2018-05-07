@@ -1,12 +1,9 @@
 ---
-title: "CScrollBar 类 |Microsoft 文档"
-ms.custom: 
+title: CScrollBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollBar
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 类
 提供 Windows 滚动条控件功能。  
@@ -106,10 +101,10 @@ class CScrollBar : public CWnd
   
  `CScrollBar`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>  CScrollBar::Create  
  创建 Windows 滚动条，并将其附加到`CScrollBar`对象。  
   
 ```  
@@ -152,7 +147,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
  构造 `CScrollBar` 对象。  
   
 ```  
@@ -165,7 +160,7 @@ CScrollBar();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
  启用或禁用滚动条的一个或两个箭头。  
   
 ```  
@@ -190,7 +185,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>示例  
   请参阅示例[CScrollBar::SetScrollRange](#setscrollrange)。  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
  检索的信息， **SCROLLBARINFO**结构维护的有关滚动条。  
   
 ```  
@@ -207,7 +202,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545)消息时，Windows SDK 中所述。  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  检索 `SCROLLINFO` 结构维护的有关滚动条的信息。  
   
 ```  
@@ -227,16 +222,16 @@ BOOL GetScrollInfo(
  如果消息检索到的任何值，返回是**TRUE**。 否则，它是**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- `GetScrollInfo`使应用程序可以使用 32 位滚动位置。  
+ `GetScrollInfo` 使应用程序可以使用 32 位滚动位置。  
   
  [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构包含有关滚动条，包括最小值和最大滚动位置、 页大小和滚动框 （缩略图） 的位置的信息。 请参阅`SCROLLINFO`结构有关更改结构的默认值的详细信息的 Windows SDK 中的主题。  
   
- MFC Windows 消息处理程序指示滚动条的位置， [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)，提供只有 16 位的位置数据。 `GetScrollInfo`和`SetScrollInfo`提供 32 位的滚动条位置数据。 因此，应用程序可以调用`GetScrollInfo`处理任一时`CWnd::OnHScroll`或`CWnd::OnVScroll`获取 32 位滚动条位置数据。  
+ MFC Windows 消息处理程序指示滚动条的位置， [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)，提供只有 16 位的位置数据。 `GetScrollInfo` 和`SetScrollInfo`提供 32 位的滚动条位置数据。 因此，应用程序可以调用`GetScrollInfo`处理任一时`CWnd::OnHScroll`或`CWnd::OnVScroll`获取 32 位滚动条位置数据。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
  检索滚动的滚动条位置的最大值。  
   
 ```  
@@ -249,7 +244,7 @@ int GetScrollLimit();
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
  检索滚动框的当前位置。  
   
 ```  
@@ -265,7 +260,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
  将给定的滚动条的当前最小和最大滚动条位置复制到指定的位置`lpMinPos`和`lpMaxPos`。  
   
 ```  
@@ -287,7 +282,7 @@ void GetScrollRange(
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
  设置的信息`SCROLLINFO`结构维护的有关滚动条。  
   
 ```  
@@ -314,7 +309,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
  将滚动框的当前位置设置为指定的`nPos`并且，如果指定，重绘滚动条以反映新的位置。  
   
 ```  
@@ -339,7 +334,7 @@ int SetScrollPos(
 ### <a name="example"></a>示例  
   请参阅示例[CScrollBar::SetScrollRange](#setscrollrange)。  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
  设置给定滚动条的最小和最大位置值。  
   
 ```  
@@ -371,7 +366,7 @@ void SetScrollRange(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
  显示或隐藏滚动条。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "COleChangeIconDialog 类 |Microsoft 文档"
-ms.custom: 
+title: COleChangeIconDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 类
 用于 OLE“更改图标”对话框。  
@@ -90,10 +85,10 @@ class COleChangeIconDialog : public COleDialog
   
  `COleChangeIconDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  此函数仅构造`COleChangeIconDialog`对象。  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  有关详细信息，请参阅[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的结构。  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  调用此函数可更改到对话框后中选定的一个表示项的图标[DoModal](#domodal)返回**IDOK**。  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>返回值  
  如果更改成功; 则为非 0否则为 0。  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  调用此函数可显示 OLE 更改图标对话框。  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`返回**IDOK**，您可以调用其他成员函数检索的设置或由用户输入到对话框中的信息。  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  调用此函数可获取包含所选的项的图标化方面的图元文件的句柄。  
   
 ```  
@@ -173,7 +168,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>返回值  
  如果通过选择解除对话框中包含的新建图标，图标化方面的图元文件的句柄**确定**; 否则为在显示对话框之前, 已作为它的图标。  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  类型的结构**OLEUICHANGEICON**用于控制更改图标对话框中的行为。  
   
 ```  

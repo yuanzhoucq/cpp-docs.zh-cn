@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonLabel 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCRibbonLabel 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
 实现功能区的不可单击文本标签。  
@@ -71,10 +66,10 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  构造并初始化[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)显示指定的文本字符串的对象。  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  要在标签中显示的文本。  
   
  [in] `bIsMultiLine`  
- `TRUE`若要指定标签是多行标签;否则为`FALSE`。  
+ `TRUE` 若要指定标签是多行标签;否则为`FALSE`。  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  确定当前的功能区 label 元素的可访问性数据。  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  类型的对象`CAccessibilityData`并且填充了当前的功能区标签可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果`data`参数已成功填充了当前的功能区标签可访问性数据; 否则为`FALSE`。  
+ `TRUE` 如果`data`参数已成功填充了当前的功能区标签可访问性数据; 否则为`FALSE`。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

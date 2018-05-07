@@ -1,13 +1,10 @@
 ---
-title: "CDaoWorkspaceInfo 结构 |Microsoft 文档"
-ms.custom: 
+title: CDaoWorkspaceInfo 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoWorkspaceInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e154e2672a9410af979c2e5aa0f6fb0aba7a50f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd6979124916e8a9cc1dc723008491bababc0322
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 结构
 `CDaoWorkspaceInfo`结构包含有关定义为数据访问对象 (DAO) 数据库访问工作区的信息。  
@@ -55,9 +50,9 @@ struct CDaoWorkspaceInfo
 ## <a name="remarks"></a>备注  
  工作区是类的对象[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 对主、 辅助数据库，以及所有上面的引用指示如何通过返回的信息[GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)类中的成员函数`CDaoWorkspace`。  
   
- 检索的信息[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成员函数将存储在`CDaoWorkspaceInfo`结构。 `CDaoWorkspaceInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoWorkspaceInfo`对象。  
+ 检索的信息[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成员函数将存储在`CDaoWorkspaceInfo`结构。 `CDaoWorkspaceInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoWorkspaceInfo`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

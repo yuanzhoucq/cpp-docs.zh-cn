@@ -1,13 +1,10 @@
 ---
-title: "自动化客户端： 使用类型库 |Microsoft 文档"
-ms.custom: 
+title: 自动化客户端： 使用类型库 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MkTypLib
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67fa0f5d164ae325caff576fb41695fc8689fda0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients-using-type-libraries"></a>自动化客户端：使用类型库
 自动化客户端必须具有服务器对象的属性和方法有关的信息，如果客户端要操作的服务器的对象。 属性具有数据类型;方法通常返回值并接受参数。 客户端需要有关数据类型的所有这些信息才能静态绑定到服务器对象类型。  

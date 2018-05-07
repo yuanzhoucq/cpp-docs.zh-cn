@@ -1,12 +1,9 @@
 ---
-title: "set:: key_type (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'set:: key_type (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::key_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_type member [STL/CLR]
 ms.assetid: 2c057cf7-ac3d-40a6-b7fc-eb1c0a317381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 03044f7c769491282713183b773cda34710c1f46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9df2304f83bde9217e116063672608bd982ca59f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setkeytype-stlclr"></a>set::key_type (STL/CLR)
 排序键的类型。  
@@ -72,7 +67,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

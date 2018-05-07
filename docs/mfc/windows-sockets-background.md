@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 背景 |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 背景 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows 套接字：背景
 此文章介绍了的性质和用途的 Windows 套接字。 文章还：  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  由于套接字使用 Internet 协议套件，它们是用于支持"信息高速公路。"上的 Internet 通信的应用程序的首选的路由  
   
-##  <a name="_core_definition_of_a_socket"></a>套接字定义  
+##  <a name="_core_definition_of_a_socket"></a> 套接字定义  
  套接字是通信终结点-通过该 Windows 套接字应用程序发送，或通过网络接收数据包的对象。 套接字的类型并处于与正在运行的进程，并且它可能具有名称。 目前，套接字通常交换仅与其他"通信在同一域中，"使用 Internet 协议套件的套接字的数据。  
   
  这两种类型的套接字是双向;它们是可以同时在两个方向传达的数据流 （全双工）。  
@@ -84,12 +79,12 @@ ms.lasthandoff: 12/21/2017
   
  有关这些类型信息和哪种类型的套接字在哪些情况下使用，请参阅[Windows 套接字： 流套接字](../mfc/windows-sockets-stream-sockets.md)和[Windows 套接字： 数据报套接字](../mfc/windows-sockets-datagram-sockets.md)。  
   
-##  <a name="_core_the_socket_data_type"></a>套接字数据类型  
+##  <a name="_core_the_socket_data_type"></a> 套接字数据类型  
  每个 MFC 套接字对象封装 Windows 套接字对象的句柄。 此句柄的数据类型是**套接字**。 A**套接字**句柄是类似于`HWND`窗口。 MFC 套接字类提供封装句柄上的操作。  
   
  **套接字**数据类型在 Windows SDK 中的详细信息中所述。 在 Windows 套接字下，请参阅"套接字数据类型和错误值"。  
   
-##  <a name="_core_uses_for_sockets"></a>套接字的用途  
+##  <a name="_core_uses_for_sockets"></a> 套接字的用途  
  套接字是在至少三个通信的上下文中非常有用：  
   
 -   客户端/服务器模型。  

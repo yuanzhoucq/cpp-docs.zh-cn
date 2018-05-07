@@ -1,29 +1,24 @@
 ---
-title: ".vcxproj 和.props 文件结构 |Microsoft 文档"
-ms.custom: 
+title: .vcxproj 和.props 文件结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 文件结构
 
@@ -59,7 +54,7 @@ MSBuild 是 Visual Studio; 中的默认项目系统当你选择**文件 |新项�
 
 你可以通过使用任何文本或 XML 编辑器来检查.vcxproj 文件的内容。 可以通过右键单击项目在解决方案资源管理器，查看它在 Visual Studio 中选择**卸载项目**，然后选择**编辑 Foo.vcxproj**。
 
-需要注意的第一个操作是顶级元素出现在特定的顺序。 例如:
+需要注意的第一个操作是顶级元素出现在特定的顺序。 例如：
 
 - 属性组和项定义组的最晚 Microsoft.Cpp.Default.props 的导入。
 - 在文件末尾导入所有目标。
@@ -100,7 +95,7 @@ MSBuild 是 Visual Studio; 中的默认项目系统当你选择**文件 |新项�
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`是根节点。 它指定要使用的 MSBuild 版本以及此文件将传递到 MSBuild.exe 时要执行的默认目标。
+`Project` 是根节点。 它指定要使用的 MSBuild 版本以及此文件将传递到 MSBuild.exe 时要执行的默认目标。
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup 元素
 
@@ -108,7 +103,7 @@ MSBuild 是 Visual Studio; 中的默认项目系统当你选择**文件 |新项�
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`包含项目配置说明。 示例包括调试 |Win32，版本 |Win32，调试 |ARM 和等等。 许多项目设置是特定于给定的配置。 例如，你可能会想要设置的发布版本，但不是调试版本中的优化属性。
+`ProjectConfigurations` 包含项目配置说明。 示例包括调试 |Win32，版本 |Win32，调试 |ARM 和等等。 许多项目设置是特定于给定的配置。 例如，你可能会想要设置的发布版本，但不是调试版本中的优化属性。
 
 `ProjectConfigurations`项组不在生成期间使用。 Visual Studio IDE 将需要它才能加载项目。 此项组可以移动到.props 文件和导入到.vcxproj 文件。 但是，在这种情况下，如果你需要添加或删除配置，你必须手动编辑.props 文件;不能使用 IDE。
 
@@ -125,7 +120,7 @@ MSBuild 是 Visual Studio; 中的默认项目系统当你选择**文件 |新项�
 
 IDE 预期查找所有 ProjectConfiguration 项中使用的配置和平台值的任意组合的项目配置。 这通常意味着一个项目可能有意义的项目配置，以满足此要求。 例如，如果一个项目具有这些配置：
 
-- Debug|Win32
+- 调试 |Win32
 - 零售 |Win32
 - 特殊的 32 位优化 |Win32
 
@@ -143,7 +138,7 @@ IDE 预期查找所有 ProjectConfiguration 项中使用的配置和平台值的
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`包含项目级别设置，例如 ProjectGuid、 根命名空间和 ApplicationType / ApplicationTypeRevision。 最后两个通常定义目标操作系统。 因为，引用和项目项不能有条件当前，项目仅可具有单个 OS。 这些属性通常不会被替代其他位置在项目文件中。 此组不依赖于配置的因此通常只有一个全局组存在于项目文件时才。
+`Globals` 包含项目级别设置，例如 ProjectGuid、 根命名空间和 ApplicationType / ApplicationTypeRevision。 最后两个通常定义目标操作系统。 因为，引用和项目项不能有条件当前，项目仅可具有单个 OS。 这些属性通常不会被替代其他位置在项目文件中。 此组不依赖于配置的因此通常只有一个全局组存在于项目文件时才。
 
 ### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props 导入元素
 
@@ -191,7 +186,7 @@ A`Configuration`属性组具有一个附加的配置条件 (如`Condition=”'$(
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`包含属性创建作为用于自定义生成过程的变量。 例如，你可以定义用户宏来定义你的自定义输出的路径为 $(CustomOutputPath) 并使用它来定义其他变量。 此属性组可容纳此类属性。 请注意，在 Visual Studio 中，将填充此组不在项目文件中因为 Visual c + + 不支持配置的用户宏。 属性表中支持用户宏。
+`UserMacros` 包含属性创建作为用于自定义生成过程的变量。 例如，你可以定义用户宏来定义你的自定义输出的路径为 $(CustomOutputPath) 并使用它来定义其他变量。 此属性组可容纳此类属性。 请注意，在 Visual Studio 中，将填充此组不在项目文件中因为 Visual c + + 不支持配置的用户宏。 属性表中支持用户宏。
 
 ### <a name="per-configuration-propertygroup-elements"></a>每个配置 PropertyGroup 元素
 
@@ -219,7 +214,7 @@ A`Configuration`属性组具有一个附加的配置条件 (如`Condition=”'$(
 
 包含项目中的项 （源文件等）。 项目项 （即，它们视为项目项规则定义的项类型） 不支持条件。
 
-元数据应具有配置条件的每个配置，即使它们是所有相同。 例如:
+元数据应具有配置条件的每个配置，即使它们是所有相同。 例如：
 
    ```xml
    <ItemGroup>

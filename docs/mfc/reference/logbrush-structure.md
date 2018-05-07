@@ -1,13 +1,10 @@
 ---
-title: "LOGBRUSH 结构 |Microsoft 文档"
-ms.custom: 
+title: LOGBRUSH 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH 结构
 `LOGBRUSH`结构定义样式、 颜色和模式的物理画笔。 它由 Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)和[ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)函数。  
@@ -68,24 +63,24 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  指定的阴影样式。 含义取决于所定义的画笔样式`lbStyle`。 如果`lbStyle`是**BS_DIBPATTERN**、 **lbHatch**成员包含已打包 DIB 的句柄。 如果`lbStyle`是**BS_DIBPATTERNPT**、 **lbHatch**成员包含已打包 DIB 的指针。 如果`lbStyle`是**BS_HATCHED**、 **lbHatch**成员指定用于创建阴影的行的方向。 它可以是以下值之一：  
   
-- `HS_BDIAGONAL`45 度向上、 从左到右阴影  
+- `HS_BDIAGONAL` 45 度向上、 从左到右阴影  
   
-- `HS_CROSS`水平和垂直剖面线  
+- `HS_CROSS` 水平和垂直剖面线  
   
-- `HS_DIAGCROSS`45 度剖面线  
+- `HS_DIAGCROSS` 45 度剖面线  
   
-- `HS_FDIAGONAL`45 度向下、 从左到右阴影  
+- `HS_FDIAGONAL` 45 度向下、 从左到右阴影  
   
-- `HS_HORIZONTAL`水平阴影  
+- `HS_HORIZONTAL` 水平阴影  
   
-- `HS_VERTICAL`垂直阴影  
+- `HS_VERTICAL` 垂直阴影  
   
  如果`lbStyle`是**BS_PATTERN**， **lbHatch**是用于定义的模式的位图的句柄。 如果`lbStyle`是**BS_SOLID**或**BS_HOLLOW**， **lbHatch**将被忽略。  
   
 ## <a name="remarks"></a>备注  
  尽管**lbColor**控制阴影画笔的前景色[CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode)和[CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor)函数控制的背景色。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

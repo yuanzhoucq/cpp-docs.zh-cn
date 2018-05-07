@@ -1,12 +1,9 @@
 ---
-title: "错误 C1128 |Microsoft 文档"
-ms.custom: 
+title: 错误 C1128 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1128
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b53914fba8ab5d5c31d8f7ed0a2e3db52aad5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1d2604b17b656efab3a3575469eff6a02df960c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1128"></a>错误 C1128
 节数超过对象文件格式限制： 请使用 /bigobj 进行编译  
@@ -36,10 +31,10 @@ ms.lasthandoff: 12/21/2017
   
  有太多的内联函数时，还可能导致 C1128。  
   
- 若要更正此错误，将源文件划分为多个源代码文件，而无需编译**/Gy**，或使用编译[/bigobj （增加的节数中。Obj 文件）](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)。  如果您不编译与**/Gy**，你将需要单独，指定优化由于**/O2**和**/O1**均暗指**/Gy**。  
+ 若要更正此错误，将源文件划分为多个源代码文件，而无需编译 **/Gy**，或使用编译[/bigobj （增加的节数中。Obj 文件）](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)。  如果您不编译与 **/Gy**，你将需要单独，指定优化由于 **/O2**和 **/O1**均暗指 **/Gy**。  
   
  如果可能，编译不使用调试信息。  
   
  你可能还需要在单独的源的代码文件，具有特定的模板实例，而不是让编译器发出。  
   
- 当移植代码，C1128 可能时将出现第一次使用 x64 编译器和很多更高版本与 x86 编译器。 x64 将具有与编译每个函数相关联的至少 4 个节**/Gy**或内联从模板或类内联： 编码，pdata，和调试信息以及可能 xdata。  X86 无 pdata。
+ 当移植代码，C1128 可能时将出现第一次使用 x64 编译器和很多更高版本与 x86 编译器。 x64 将具有与编译每个函数相关联的至少 4 个节 **/Gy**或内联从模板或类内联： 编码，pdata，和调试信息以及可能 xdata。  X86 无 pdata。

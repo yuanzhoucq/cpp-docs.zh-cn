@@ -1,11 +1,8 @@
 ---
-title: "Vector:: 类 |Microsoft 文档"
-ms.custom: 
+title: 'Vector:: 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -107,14 +102,14 @@ template <typename T, typename E>
 
 |||
 |-|-|
-|name|描述|
-|event [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|当向量更改时发生。|
+|名称|描述|
+|事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|当向量更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `Vector`
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 **标头：** collection.h
 
@@ -269,7 +264,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-*item*  
+*项*  
 要在指定的元素后插入到向量中的项*索引*。 一种*项*由定义*T*类型名称。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
@@ -327,7 +322,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
-*item*  
+*项*  
 要分配给指定元素的值。 一种*项*由定义*T*类型名称。
 
 ## <a name="size"></a>  Vector:: size 方法
@@ -399,7 +394,7 @@ A [std:: initializer_list](../standard-library/initializer-list-class.md)类型�
 *first*  
 用于初始化当前向量的对象序列中的第一个元素。 一种*第一个*通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*last*  
+*最后一个*  
 用于初始化当前向量的对象序列中的最后一个元素。 一种*最后一个*通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>请参阅

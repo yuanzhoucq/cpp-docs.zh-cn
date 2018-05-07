@@ -1,13 +1,10 @@
 ---
-title: "密封虚函数 |Microsoft 文档"
-ms.custom: 
+title: 密封虚函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - virtual functions, sealing
 - __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48d52a2697289197555438847ba2fcb86aeb3235
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c85f4775025d3661fdfbf8967b310fb733f452b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sealing-a-virtual-function"></a>密封虚函数
 密封虚函数的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- `__sealed`关键字使用托管扩展中，来修改任一引用类型，不允许从它的后续派生 (请参阅[托管类类型的声明](../dotnet/declaration-of-a-managed-class-type.md))，或修改虚拟函数，不允许后续重写的派生类中的方法。 例如:  
+ `__sealed`关键字使用托管扩展中，来修改任一引用类型，不允许从它的后续派生 (请参阅[托管类类型的声明](../dotnet/declaration-of-a-managed-class-type.md))，或修改虚拟函数，不允许后续重写的派生类中的方法。 例如：  
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -53,7 +48,7 @@ public:
 };  
 ```  
   
- 缺少`virtual`此实例中的关键字会导致出现错误。 在新的语法中，上下文关键字`abstract`可代替了`=0`以指示一个纯虚拟函数。 托管扩展中不支持这样做。 例如:  
+ 缺少`virtual`此实例中的关键字会导致出现错误。 在新的语法中，上下文关键字`abstract`可代替了`=0`以指示一个纯虚拟函数。 托管扩展中不支持这样做。 例如：  
   
 ```  
 __gc class base { public: virtual void f()=0; };  

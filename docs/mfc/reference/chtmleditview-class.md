@@ -1,12 +1,9 @@
 ---
-title: "CHtmlEditView 类 |Microsoft 文档"
-ms.custom: 
+title: CHtmlEditView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98964a48be8b8c36a3d6d5bd708a51b9963ae105
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 类
 提供 MFC 文档/视图体系结构上下文中的 Web 浏览器编辑平台功能。  
@@ -79,17 +74,17 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
   
  `CHtmlEditView`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxhtml.h  
   
-##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
  构造 `CHtmlEditView` 对象。  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>  CHtmlEditView::Create  
  创建一个新的窗口对象。  
   
 ```  
@@ -128,7 +123,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  此方法还将调用包含的 WebBrowser**导航**方法以加载默认文档 (请参阅[CHtmlEditView::GetStartDocument](#getstartdocument))。  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
  返回**IHTMLDocument2**当前文档上的接口。  
   
 ```  
@@ -139,7 +134,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)接口。  
   
-##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  检索默认文档的此视图的名称。  
   
 ```  

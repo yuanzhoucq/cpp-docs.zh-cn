@@ -1,13 +1,10 @@
 ---
-title: "查看类 (Windows) |Microsoft 文档"
-ms.custom: 
+title: 查看类 (Windows) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>视图类 (Windows)
-`CView`而其派生的类是表示框架窗口的工作区的子窗口。 视图显示数据，并接受输入文档。  
+`CView` 而其派生的类是表示框架窗口的工作区的子窗口。 视图显示数据，并接受输入文档。  
   
  视图类是与文档类和使用文档模板对象的框架窗口类相关联。  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  包含 Windows 树控件的视图 (请参阅[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 树控件显示图标和标签排列方式类似于左窗格中的文件资源管理器中的分层的列表。  
   
 ## <a name="related-classes"></a>相关的类  
- `CSplitterWnd`可以在单个框架窗口内有多个视图。 `CPrintDialog`和`CPrintInfo`支持视图的打印和打印预览功能。 `CRichEditDoc`和`CRichEditCntrItem`用于`CRichEditView`实现 OLE 容器功能。  
+ `CSplitterWnd` 可以在单个框架窗口内有多个视图。 `CPrintDialog` 和`CPrintInfo`支持视图的打印和打印预览功能。 `CRichEditDoc` 和`CRichEditCntrItem`用于`CRichEditView`实现 OLE 容器功能。  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  用户可以拆分为多个窗格窗口。 这些窗格可以是可由用户或固定的大小调整大小。  

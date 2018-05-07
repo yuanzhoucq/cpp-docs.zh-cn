@@ -1,13 +1,10 @@
 ---
-title: "框架窗口类 (Windows) |Microsoft 文档"
-ms.custom: 
+title: 框架窗口类 (Windows) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.frame
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2668a8334192d4de199f1c42a648b74add1ca5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43d6df0231f9d8d1d64d01bd12fa7209eb7b537d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-window-classes-windows"></a>框架窗口类 (Windows)
 框架窗口是框架应用程序或应用程序的一部分的窗口。 框架窗口通常包含其他窗口，如视图、 工具栏和状态栏。 情况下`CMDIFrameWnd`，它们可能包含`CMDIChildWnd`间接对象。  

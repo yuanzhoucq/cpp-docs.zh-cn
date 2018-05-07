@@ -1,12 +1,9 @@
 ---
-title: "vector:: rbegin (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'vector:: rbegin (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::rbegin
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - rbegin member [STL/CLR]
 ms.assetid: fad410b9-fe79-4820-9be5-6b7e0219a1af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b438e55f10a9f0f355d57f7cc259d4ea0bdaa1cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7714fca5786283d2d56688bc1ccc4b4d05efebd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorrbegin-stlclr"></a>vector::rbegin (STL/CLR)
 指定反向受控序列的开头。  
@@ -82,7 +77,7 @@ int main()
  a y x  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/向量 >  
   
  **Namespace:** cliext  

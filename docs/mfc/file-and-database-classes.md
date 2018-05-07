@@ -1,13 +1,10 @@
 ---
-title: "文件和数据库类 |Microsoft 文档"
-ms.custom: 
+title: 文件和数据库类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.file
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd1d2938a75010d20bde26d2d9d5656b1418f3da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 829cbcf659b1fbd6d7aa3899d7d26c4d87096f93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-and-database-classes"></a>文件和数据库类
 这些类使您可以将信息存储到数据库或磁盘文件。 有三组提供类似功能的数据库类：OLE DB、ODBC 和 DAO。 OLE DB 组是使用 OLE DB 实现的并可与 OLE DB 使用者模板一起使用，DAO 组是使用数据访问对象实现的，ODBC 组是使用开放式数据库连接实现的。 还有一组用来操作标准文件、活动流和 HTML 流的类。  

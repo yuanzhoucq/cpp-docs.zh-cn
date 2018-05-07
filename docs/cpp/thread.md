@@ -2,11 +2,8 @@
 title: 线程 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - thread_cpp
@@ -18,27 +15,25 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread"></a>thread
 
 **Microsoft 专用**
 
-**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C++ 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上**thread_local**通过实现**__declspec （thread)**。
+**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C++ 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上**thread_local**通过实现 **__declspec （thread)**。
 
 ## <a name="syntax"></a>语法
 
-> **__declspec( thread )** *declarator*  
+> **__declspec (thread)** *声明符*  
 
 ## <a name="remarks"></a>备注
 
@@ -85,7 +80,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- 标准 C 允许使用涉及引用自身的表达式初始化对象或变量，但只适用于非静态范围的对象。 虽然 C++ 通常允许使用涉及引用自身的表达式动态初始化对象，但是不允许将这种类型的初始化用于线程本地对象。 例如:
+- 标准 C 允许使用涉及引用自身的表达式初始化对象或变量，但只适用于非静态范围的对象。 虽然 C++ 通常允许使用涉及引用自身的表达式动态初始化对象，但是不允许将这种类型的初始化用于线程本地对象。 例如：
 
    ```cpp
    // declspec_thread_3.cpp

@@ -1,12 +1,9 @@
 ---
-title: "CCubicTransition 类 |Microsoft 文档"
-ms.custom: 
+title: CCubicTransition 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCubicTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 806a8b92867d120a9ae099b96ecaf6fecfca4ea6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 001a1e66707544f6446a5bc54e70269f94108654
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 类
 封装立方转换。  
@@ -78,10 +73,10 @@ class CCubicTransition : public CBaseTransition;
   
  `CCubicTransition`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
+##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
  构造转换对象并初始化其参数。  
   
 ```  
@@ -101,7 +96,7 @@ CCubicTransition(
  `finalVelocity`  
  在转换结束变量的速度。  
   
-##  <a name="create"></a>CCubicTransition::Create  
+##  <a name="create"></a>  CCubicTransition::Create  
  调用要创建封装的转换 COM 对象的转换库。  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
  在转换结束动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
  在转换结束变量的速度。  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-##  <a name="m_duration"></a>CCubicTransition::m_duration  
+##  <a name="m_duration"></a>  CCubicTransition::m_duration  
  转换的持续时间。  
   
 ```  
