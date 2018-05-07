@@ -1,12 +1,9 @@
 ---
-title: "CDragListBox 类 |Microsoft 文档"
-ms.custom: 
+title: CDragListBox 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDragListBox
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 类
 除了提供 Windows 列表框，功能`CDragListBox`类允许用户在列表框内移动文件名等列表框项。  
@@ -89,10 +84,10 @@ class CDragListBox : public CListBox
   
  `CDragListBox`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
  由框架事件发生时无法开始拖动操作，如按鼠标左键。  
   
 ```  
@@ -109,7 +104,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>备注  
  如果你想要控制拖动操作开始时，会发生什么情况，重写此函数。 默认实现捕获鼠标，并保留在拖动模式，直到用户单击左或向右鼠标按钮或按的 ESC，此时取消拖放操作。  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  已取消拖动操作时，由框架调用。  
   
 ```  
@@ -123,14 +118,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>备注  
  重写此函数可处理你的列表框控件的任何特殊处理。  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  构造 `CDragListBox` 对象。  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
  正在将列表框项拖内时由框架调用`CDragListBox`对象。  
   
 ```  
@@ -144,16 +139,16 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="return-value"></a>返回值  
  要显示的光标资源 ID。 还可能有以下值：  
   
-- `DL_COPYCURSOR`指示将复制该项目。  
+- `DL_COPYCURSOR` 指示将复制该项目。  
   
-- `DL_MOVECURSOR`指示将移动该项目。  
+- `DL_MOVECURSOR` 指示将移动该项目。  
   
-- `DL_STOPCURSOR`指示当前的拖放目标不是可接受。  
+- `DL_STOPCURSOR` 指示当前的拖放目标不是可接受。  
   
 ### <a name="remarks"></a>备注  
  默认行为返回`DL_MOVECURSOR`。 如果你想要提供其他功能，重写此函数。  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  由框架调用以绘制指示索引的项之前插入参考线。  
   
 ```  
@@ -167,7 +162,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>备注  
  值为-1 清除插入参考线。 重写此函数可修改的外观或行为插入参考线。  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
  在删除项时，由框架调用`CDragListBox`对象。  
   
 ```  
@@ -186,7 +181,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>备注  
  默认行为将列表框项和其数据复制到新位置，然后删除原始的项目。 重写此函数可自定义的默认行为，例如启用列表框项拖动到列表中其他位置的副本。  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  调用此函数可检索的列表框项的从零开始的索引位于`pt`。  
   
 ```  

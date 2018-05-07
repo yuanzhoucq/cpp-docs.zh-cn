@@ -1,13 +1,10 @@
 ---
-title: "TN053: DAO 的自定义 DFX 例程数据库类 |Microsoft 文档"
-ms.custom: 
+title: 'TN053: DAO 的自定义 DFX 例程数据库类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 数据库类的自定义 DFX 例程
 > [!NOTE]
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  DFX 和动态绑定不会互相排斥，因此可以使用混合使用静态和动态的绑定中。  
   
-## <a name="_mfcnotes_tn053_examples"></a>示例 1-使用的 DAO 记录字段交换仅  
+## <a name="_mfcnotes_tn053_examples"></a> 示例 1-使用的 DAO 记录字段交换仅  
   
  (假定`CDaoRecordset`-派生类`CMySet`尚未打开)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>DFX 的工作原理  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> DFX 的工作原理  
   
  DFX 机制的工作原理类似方式和使用 MFC ODBC 类的记录字段交换 (RFX) 机制。 DFX 和 RFX 的原则是相同，但有许多内部差异。 DFX 函数的设计时，由单个 DFX 例程共享几乎所有代码。 在最高级别 DFX 仅将执行几项操作。  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO 将还"回调"到调用方的可变长度列以便允许调用方分配的内存。 此第二个功能具有的最小化的数据副本数，以及允许进入的类成员的直接存储数据的优点 (`CDaoRecordset`派生类)。 此第二个机制是 MFC 使用将绑定到数据成员中的方法`CDaoRecordset`派生类。  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>自定义 DFX 例程的用途  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> 自定义 DFX 例程的用途  
  很明显来自任何 DFX 函数中实现的最重要操作必须能够设置所需的数据结构成功调用此讨论`GetRows`。 有大量的 DFX 函数，也必须支持其他操作，但不为重要或复杂正确准备`GetRows`调用。  
   
  在联机文档中介绍的 DFX 用法。 从根本上来说，有两个要求。 首先，必须将成员添加到`CDaoRecordset`派生类为每个绑定的字段和参数。 以下这`CDaoRecordset::DoFieldExchange`应重写。 请注意该成员的数据类型非常重要。 它应匹配数据库中字段的数据，或至少可转换为该类型。 例如在数据库中，例如一个长整型数值字段始终可以转换为文本并绑定到`CString`成员，但数据库中的文本字段可能不一定转换为数值的表示形式，如长整型，并绑定到长 integer 成员。 DAO 和 Microsoft Jet 数据库引擎负责转换 （而非 MFC）。  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>DFX_Text 的详细信息  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text 的详细信息  
  如前所述，阐释 DFX 的工作方式的最好办法是工作讲解了一个示例。 为此目的经过深谙`DFX_Text`工作相当有助于提供 DFX 的至少一个基本的了解。  
   
  **AddToParameterList**  

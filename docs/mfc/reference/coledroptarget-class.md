@@ -1,12 +1,9 @@
 ---
-title: "COleDropTarget 类 |Microsoft 文档"
-ms.custom: 
+title: COleDropTarget 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 类
 提供窗口和 OLE 库之间的通信机制。  
@@ -89,10 +84,10 @@ class COleDropTarget : public CCmdTarget
   
  `COleDropTarget`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  构造类的对象`COleDropTarget`。  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>备注  
  调用[注册](#register)将此对象与一个窗口相关联。  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  当光标第一次拖动到窗口时，由框架调用。  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>返回值  
  如果尝试在指定的位置的放置将产生的效果`point`。 它可以是一个或多个以下：  
   
-- `DROPEFFECT_NONE`不允许删除。  
+- `DROPEFFECT_NONE` 不允许删除。  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`拖动滚动操作即将发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` 拖动滚动操作即将发生或者问题发生在目标中。  
   
 ### <a name="remarks"></a>备注  
  重写此函数可允许拖放操作发生在窗口中。 默认实现调用[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)，只返回`DROPEFFECT_NONE`默认情况下。  
   
  有关详细信息，请参阅[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  当光标离开窗口实际上拖动操作时，由框架调用。  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  有关详细信息，请参阅[IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) Windows SDK 中。  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  当光标拖到窗口时，由框架调用。  
   
 ```  
@@ -187,15 +182,15 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>返回值  
  如果尝试在指定的位置的放置将产生的效果`point`。 它可以是一个或多个以下：  
   
-- `DROPEFFECT_NONE`不允许删除。  
+- `DROPEFFECT_NONE` 不允许删除。  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`指示，拖动滚动操作即将发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标中。  
   
 ### <a name="remarks"></a>备注  
  此函数应被替代，以允许拖放操作发生在窗口中。 此函数的默认实现调用[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)，它将返回`DROPEFFECT_NONE`默认情况下。 因为经常在拖放操作过程中调用此函数，应尽可能多地进行优化。  
@@ -205,7 +200,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  由框架在调用之前调用[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)以确定是否`point`位于滚动区域。  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>返回值  
  如果尝试在指定的位置的放置将产生的效果`point`。 它可以是一个或多个以下：  
   
-- `DROPEFFECT_NONE`不允许删除。  
+- `DROPEFFECT_NONE` 不允许删除。  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`指示，拖动滚动操作即将发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标中。  
   
 ### <a name="remarks"></a>备注  
  如果你想要为此事件提供特殊行为，重写此函数。 此函数的默认实现调用[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)，它将返回`DROPEFFECT_NONE`和滚动窗口，当光标拖放到该窗口的边框内的默认滚动区域。  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  拖放操作发生时由框架调用。  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  用户选择放操作效果。 它可以是一个或多个以下：  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
  `point`  
  包含光标，以像素为单位，相对于屏幕的位置。  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  有关详细信息，请参阅[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  拖放操作发生时由框架调用。  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  放置效果描述与拖放操作相关联的操作。 请参阅以下放置效果的列表：  
   
-- `DROPEFFECT_NONE`不允许删除。  
+- `DROPEFFECT_NONE` 不允许删除。  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`指示，拖动滚动操作即将发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标中。  
   
  有关详细信息，请参阅[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  调用此函数可注册 OLE Dll 作为有效的放置目标的你的窗口。  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  有关详细信息，请参阅[RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) Windows SDK 中。  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  在销毁已注册为放置目标通过调用任何窗口之前调用此函数[注册](#register)从放置目标的列表中删除。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: __umulh | Microsoft Docs
-ms.custom: 
+title: __umulh |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __umulh
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3c9ebcf5e512f75e6e9fc66d5019273e1626f6a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 820f18e0f7db1b70982558c75f879902dca14d2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="umulh"></a>__umulh
 **Microsoft 专用**  
@@ -51,7 +46,7 @@ unsigned __int64 __umulh(
 ## <a name="return-value"></a>返回值  
  128 位乘法运算结果的高 64 位。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

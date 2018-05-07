@@ -2,35 +2,30 @@
 title: 异常处理的 CLR 下的行为差异 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR 下的异常处理行为的差异
 [使用托管异常中的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)讨论托管应用程序中的异常处理。 本主题中详细讨论了异常处理的标准行为中的差异以及某些限制。 有关详细信息，请参阅[_set_se_translator 函数](../c-runtime-library/reference/set-se-translator.md)。  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a>跳出 Finally 块  
+##  <a name="vcconjumpingoutofafinallyblock"></a> 跳出 Finally 块  
  在本机 C/c + + 代码中，跳出 __**最后**允许使用结构化的异常处理 (SEH) 的块，但将产生警告。  下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最后**块将导致错误：  
   
 ```  
@@ -44,7 +39,7 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>异常筛选器中引发异常  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> 异常筛选器中引发异常  
  在处理期间引发异常时[异常筛选器](../cpp/writing-an-exception-filter.md)异常是在托管代码中，捕获和处理筛选器返回 0。  
   
  此行为是相反的在本机代码中，将引发嵌套的异常， **Exception_record**字段**EXCEPTION_RECORD**结构 (如返回[GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) 设置，和**ExceptionFlags**字段设置 0x10 位。 以下示例阐释了这种行为差异：  
@@ -107,7 +102,7 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a>解除关联的重新引发  
+##  <a name="vccondisassociatedrethrows"></a> 解除关联的重新引发  
  **/clr**不支持重新引发异常之外 catch 处理程序 （称为解除关联的重新引发）。 此类型的异常被视为一个标准的 C++ 重新引发。 如果在存在活动的托管异常时遇到解除关联的重新引发，则此异常将包装为 C++ 异常，然后重新引发。 此类型的异常可以仅作为类型的异常被捕获[system:: sehexception](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx)。  
   
  以下示例演示了作为 C++ 异常重新引发的托管异常：  
@@ -158,7 +153,7 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>异常筛选器和 EXCEPTION_CONTINUE_EXECUTION  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 异常筛选器和 EXCEPTION_CONTINUE_EXECUTION  
  如果筛选器在托管应用程序中返回 `EXCEPTION_CONTINUE_EXECUTION`，则将按照筛选器返回 `EXCEPTION_CONTINUE_SEARCH` 对其进行处理。 有关这些常量的详细信息，请参阅[重-除非语句](../cpp/try-except-statement.md)。  
   
  以下示例演示了这一差异：  
@@ -198,7 +193,7 @@ int main() {
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a>_Set_se_translator 函数  
+##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator 函数  
  通过调用 `_set_se_translator` 设置的转换器函数仅会影响非托管代码中的 catch 语句。 以下示例演示了这一限制：  
   
 ```  

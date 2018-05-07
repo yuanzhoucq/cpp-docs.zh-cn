@@ -1,13 +1,10 @@
 ---
-title: "消息映射宏 (MFC) |Microsoft 文档"
-ms.custom: 
+title: 消息映射宏 (MFC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 28b8a6e6e34399cb16ba3ec9e4f25562962c2dd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 为了支持消息映射，MFC 提供了以下宏：  
@@ -86,7 +81,7 @@ ms.lasthandoff: 01/03/2018
  有关消息映射、 消息映射声明和分界宏和消息映射宏的详细信息，请参阅[消息映射](../../mfc/reference/message-maps-mfc.md)和[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。 有关消息映射范围的详细信息，请参阅[消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。  
 
 
-## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 开始消息映射的定义。  
   
 ### <a name="syntax"></a>语法  
@@ -114,7 +109,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 END_MESSAGE_MAP()
 ```
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h 
 
 ##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
@@ -139,10 +134,10 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
   
  有关实现模板类的消息映射的详细信息，请参阅[如何： 为一种模板类创建消息映射](../how-to-create-a-message-map-for-a-template-class.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
  
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
  声明类定义消息映射。 每个`CCmdTarget`-程序中的派生的类必须提供一个消息映射来处理消息。  
   
 ### <a name="syntax"></a>语法  
@@ -168,11 +163,11 @@ class CMainFrame : public CMDIFrameWnd
    // Remainder of class declaration omitted.
 ``` 
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
 
 
-## <a name="end_message_map"></a>END_MESSAGE_MAP
+## <a name="end_message_map"></a>  END_MESSAGE_MAP
 结束消息映射的定义。  
   
 ### <a name="syntax"></a>语法  
@@ -184,10 +179,10 @@ END_MESSAGE_MAP( )
 ### <a name="remarks"></a>备注  
  有关详细信息消息映射和`END_MESSAGE_MAP`宏，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
 
-## <a name="on_command"></a>ON_COMMAND
+## <a name="on_command"></a>  ON_COMMAND
 此宏将命令消息映射到的成员函数。  
   
 ### <a name="syntax"></a>语法  
@@ -217,10 +212,10 @@ BEGIN_MESSAGE_MAP(CMFCListViewDoc, CDocument)
 END_MESSAGE_MAP()
 ``` 
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
 
- ## <a name="on_command_ex"></a>ON_COMMAND_EX
+ ## <a name="on_command_ex"></a>  ON_COMMAND_EX
 扩展命令处理程序成员函数。  
    
 ### <a name="syntax"></a>语法  
@@ -254,7 +249,7 @@ ON_COMMAND_EX(id,  memberFxn);
  命令消息处理程序以扩展的形式是可用于高级用途。 `ON_COMMAND_EX`宏用于此类消息处理程序中，并且它提供的超集[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 扩展的命令处理程序成员函数采用一个参数**UINT**包含命令 ID，并返回**BOOL**。 返回值应为 TRUE，以指示已处理该命令;否则路由到其他命令目标对象将继续。  
 有关详细信息，请参阅技术说明 [TN006： 消息映射] tm006 消息 maps.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  标头文件： afxmsg_.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -262,7 +257,7 @@ ON_COMMAND_EX(id,  memberFxn);
  [TN006： 消息映射] tm006 消息 maps.md)
 
   
-## <a name="on_control"></a>ON_CONTROL
+## <a name="on_control"></a>  ON_CONTROL
 指示哪个函数将处理自定义控件通知消息。  
   
 ### <a name="syntax"></a>语法  
@@ -288,11 +283,11 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
   
  有关详细信息和示例，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
   
 
-## <a name="on_message"></a>ON_MESSAGE  
+## <a name="on_message"></a>  ON_MESSAGE  
 指示哪个函数将处理用户定义的消息。  
   
 ### <a name="syntax"></a>语法  
@@ -342,10 +337,10 @@ END_MESSAGE_MAP()
 }
 ```   
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
 
-## <a name="on_olecmd"></a>ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD  
 将命令路由通过命令调度接口`IOleCommandTarget`。  
   
 ### <a name="syntax"></a>语法  
@@ -365,9 +360,9 @@ ON_OLECMD( pguid, olecmdid, id )
  菜单 ID、 工具栏 ID、 按钮 ID 或其他资源或发出命令的对象的 ID 中。  
   
 ### <a name="remarks"></a>备注  
- `IOleCommandTarget`允许容器接收源自 DocObject 的用户界面的命令，并允许要发送的相同命令的容器 (例如新建、 打开、 另存为，和在文件菜单中; 上的打印和复制、 粘贴、 撤消，依次类推编辑菜单上) 到 DocObject。  
+ `IOleCommandTarget` 允许容器接收源自 DocObject 的用户界面的命令，并允许要发送的相同命令的容器 (例如新建、 打开、 另存为，和在文件菜单中; 上的打印和复制、 粘贴、 撤消，依次类推编辑菜单上) 到 DocObject。  
   
- `IOleCommandTarget`OLE 自动化的比简单得多`IDispatch`。 `IOleCommandTarget`完全依赖于一组标准的命令，它很少具有参数，且涉及无类型信息 （命令自变量也会降低类型安全）。 如果你确实需要调度带参数的命令，使用[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)。  
+ `IOleCommandTarget` OLE 自动化的比简单得多`IDispatch`。 `IOleCommandTarget` 完全依赖于一组标准的命令，它很少具有参数，且涉及无类型信息 （命令自变量也会降低类型安全）。 如果你确实需要调度带参数的命令，使用[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)。  
   
  `IOleCommandTarget`标准菜单命令已由 MFC 实现中的以下宏：  
   
@@ -467,14 +462,14 @@ ON_OLECMD( pguid, olecmdid, id )
   
  `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdocob.h  
   
 ### <a name="see-also"></a>请参阅  
  [COleCmdUI 类](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
-## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
 Windows **RegisterWindowMessage**函数用于定义新的窗口消息来保证是唯一的在整个系统。  
   
 ### <a name="syntax"></a>语法  
@@ -505,14 +500,14 @@ BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
 END_MESSAGE_MAP()
 ```  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
   
 ### <a name="see-also"></a>请参阅  
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [用户定义的处理程序](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
 指示哪个函数将处理由 Windows RegisterWindowMessage 函数注册消息。  
   
 ### <a name="syntax"></a>语法  
@@ -531,10 +526,10 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 ### <a name="remarks"></a>备注  
  RegisterWindowMessage 用于定义新的窗口消息来保证是唯一的在整个系统。 CWinThread 类后，ON_REGISTERED_THREAD_MESSAGE 必须使用而不是 ON_REGISTERED_MESSAGE。 
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
 
-## <a name="on_thread_message"></a>ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
 指示哪个函数将处理用户定义的消息。  
   
 ### <a name="syntax"></a>语法  
@@ -551,12 +546,12 @@ ON_THREAD_MESSAGE( message, memberFxn )
  名称`CWinThread`-消息的消息映射到处理程序函数。  
   
 ### <a name="remarks"></a>备注  
- `ON_THREAD_MESSAGE`必须使用而不是`ON_MESSAGE`如果你具有`CWinThread`类。 用户定义的消息是指不是标准的窗口的任何消息**WM_MESSAGE**消息。 应该有且仅有`ON_THREAD_MESSAGE`在必须映射到消息处理程序函数的每个用户定义的消息的消息映射宏语句。  
+ `ON_THREAD_MESSAGE` 必须使用而不是`ON_MESSAGE`如果你具有`CWinThread`类。 用户定义的消息是指不是标准的窗口的任何消息**WM_MESSAGE**消息。 应该有且仅有`ON_THREAD_MESSAGE`在必须映射到消息处理程序函数的每个用户定义的消息的消息映射宏语句。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxole.h  
 
-## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
 此宏指示哪个函数将处理用户界面更新命令消息。  
   
 ### <a name="syntax"></a>语法  
@@ -577,13 +572,13 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
   
  有关详细信息和示例，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
 ### <a name="see-also"></a>请参阅  
  [CCmdUI 类](ccmdui-class.md)
 
-## <a name="on_command_range"></a>ON_COMMAND_RANGE  
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE  
 使用此宏将一组连续的命令 Id 映射到单个消息处理程序函数。  
   
 ### <a name="syntax"></a>语法
@@ -630,10 +625,10 @@ void CChildFrame::OnRangeCmds(UINT nID)
 }
 ```
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
 
-## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
 将一组连续的命令 Id 映射到单个更新消息处理程序函数。  
   
 ### <a name="syntax"></a>语法  
@@ -657,10 +652,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
   
  没有自动支持的消息映射范围，因此必须自行放置宏。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
 
-## <a name="on_control_range"></a>ON_CONTROL_RANGE     
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE     
 使用此宏将连续范围的控件 Id 映射到单个消息处理程序函数为指定的 Windows 通知消息，如**BN_CLICKED**。  
   
 ### <a name="syntax"></a>语法  
@@ -689,7 +684,7 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
   
  有关实现控件 Id 的范围的处理程序函数的详细信息，请参阅[消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxmsg_.h  
   
 

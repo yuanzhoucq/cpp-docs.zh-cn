@@ -1,12 +1,9 @@
 ---
-title: CDynamicAccessor::SetStatus | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicaccessor:: Setstatus |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicAccessor::SetStatus
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - SetStatus method
 ms.assetid: 6db82694-e87d-4bf8-a7e3-5765cf6abff9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b1453c84d7ba25fc6e1a18370a1b92903bc8e58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7bf0fd390699d83261cf52651a3dc16613fa70d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorsetstatus"></a>CDynamicAccessor::SetStatus
 设置指定列的状态。  
@@ -60,7 +55,7 @@ bool SetStatus(const WCHAR* pColumnName,
 ## <a name="return-value"></a>返回值  
  返回**true**如果已成功设置的指定的列的状态。 否则，此函数返回**false**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

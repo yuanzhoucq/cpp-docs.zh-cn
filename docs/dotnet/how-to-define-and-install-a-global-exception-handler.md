@@ -1,30 +1,25 @@
 ---
-title: "如何： 定义和安装全局异常处理程序 |Microsoft 文档"
-ms.custom: 
+title: 如何： 定义和安装全局异常处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f1d9b1125fc54ecbd75fc49b36498a99f5e86f28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b77e982e3668ca23ece2eeeb5c609d71b30dc908
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定义和安装全局异常处理程序
 下面的代码示例演示如何未经处理的异常可以捕获。 该示例窗体包含一个按钮，按下时，执行会导致异常引发空引用。 此功能表示典型代码失败。 生成的异常由安装的主要功能的应用程序级异常处理程序捕获。  

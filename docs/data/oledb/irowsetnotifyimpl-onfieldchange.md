@@ -1,12 +1,9 @@
 ---
-title: "Irowsetnotifyimpl:: Onfieldchange |Microsoft 文档"
-ms.custom: 
+title: 'Irowsetnotifyimpl:: Onfieldchange |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyImpl.OnFieldChange
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - OnFieldChange method
 ms.assetid: f26b492c-c86e-423b-9374-175e510a2860
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4d68c6a634600f7afe3295b41b0939675be4f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 086918e34322fdeb9bf5d0c1ff623017799a4d6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifyimplonfieldchange"></a>IRowsetNotifyImpl::OnFieldChange
 通知对列的值的任何更改的使用者。  
@@ -55,7 +50,7 @@ STDMETHOD(OnFieldChange)(
 ## <a name="remarks"></a>备注  
  此方法会包装[IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

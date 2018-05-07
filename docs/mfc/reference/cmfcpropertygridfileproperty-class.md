@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridFileProperty 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCPropertyGridFileProperty 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4111c7da24300d83128d56b85266ee808b304ace
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 类
 `CMFCPropertyGridFileProperty`类支持打开文件选择对话框中的属性列表控件项。  
@@ -63,10 +58,10 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
  [CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
+##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
  构造 `CMFCPropertyGridFileProperty` 对象。  
   
 ```  
@@ -86,7 +81,7 @@ CMFCPropertyGridFileProperty(
  属性名称。  
   
  [in] `bOpenFileDialog`  
- `TRUE`若要打开**打开文件**对话框;`FALSE`以打开**保存文件**对话框。  
+ `TRUE` 若要打开**打开文件**对话框;`FALSE`以打开**保存文件**对话框。  
   
  [in] `strFileName`  
  初始文件名。  

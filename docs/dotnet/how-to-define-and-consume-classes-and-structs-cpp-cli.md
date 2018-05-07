@@ -1,31 +1,26 @@
 ---
-title: "如何： 定义和使用类和结构 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 定义和使用类和结构 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a0a276854c9f2e27439c2c16e9299d4eaa9243d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8356d96b0193566814c0d52173a03a3a79d08d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C++/CLI)
 这篇文章演示如何定义和使用用户定义的引用类型和值类型在 C + + /cli CLI。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  [析构函数和终结器](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="BKMK_Object_instantiation"></a>对象实例化  
+##  <a name="BKMK_Object_instantiation"></a> 对象实例化  
  引用 (ref) 类型和值类型可以仅实例化托管堆上、 不在堆栈上或本机堆上。  
   
 ```  
@@ -105,7 +100,7 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Implicitly_abstract_classes"></a>隐式抽象类  
+##  <a name="BKMK_Implicitly_abstract_classes"></a> 隐式抽象类  
  *隐式抽象类*不能实例化。 类是隐式抽象的如果类的基类型是一个接口和类未实现所有接口的成员函数。  
   
  如果你不能构造从接口派生的类中的对象，原因可能是此类是隐式抽象。 有关抽象类的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。  
@@ -132,10 +127,10 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Type_visibility"></a>类型可见性  
+##  <a name="BKMK_Type_visibility"></a> 类型可见性  
  你可以控制的可见性公共语言运行时 (CLR) 类型，以便引用程序集，如果程序集中的类型可以是可见或程序集外部不可见。  
   
- `public`指示类型是否可见的包含任何源文件`#using`指令包含的类型的程序集。  `private`指示的类型不是可见的包含的源文件`#using`指令包含的类型的程序集。 但是，是在同一程序集内可见的私有类型。 默认情况下，类的可见性是`private`。  
+ `public` 指示类型是否可见的包含任何源文件`#using`指令包含的类型的程序集。  `private` 指示的类型不是可见的包含的源文件`#using`指令包含的类型的程序集。 但是，是在同一程序集内可见的私有类型。 默认情况下，类的可见性是`private`。  
   
  默认情况下，在 Visual c + + 2005年之前，本机类型具有程序集外部的公共可访问性。 启用[编译器警告 （等级 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型使用不正确。 使用[make_public](../preprocessor/make-public.md)杂注不能修改源代码文件中的本机类型提供公共可访问性。  
   
@@ -228,8 +223,8 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="BKMK_Member_visibility"></a>成员的可见性  
- 你可以访问从同一程序集中是公共类的成员不同于访问至该程序集外部使用的访问说明符对`public`， `protected`，和`private`  
+##  <a name="BKMK_Member_visibility"></a> 成员的可见性  
+ 你可以访问从同一程序集中是公共类的成员不同于访问至该程序集外部使用的访问说明符对`public`， `protected`，和 `private`  
   
  下表汇总了各种访问说明符的效果：  
   
@@ -418,7 +413,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="BKMK_Public_and_private_native_classes"></a>公钥和私钥的本机类  
+##  <a name="BKMK_Public_and_private_native_classes"></a> 公钥和私钥的本机类  
  可以从托管类型引用本机类型。  例如，托管类型中的函数可能需要其类型是一个本机结构的参数。  如果托管的类型和函数在是公共的程序集，然后的本机类型还必须是公共。  
   
 ```  
@@ -505,7 +500,7 @@ in static constructor
 11  
 ```  
   
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>语义 this 指针  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a> 语义 this 指针  
  如果你使用 Visual c + + 定义类型，`this`中引用类型的指针为类型"句柄"。 `this`值类型的指针为类型"内部指针"。  
   
  这些不同的语义的`this`调用默认索引器时，指针可能导致意外的行为。 下面的示例演示访问默认索引器在 ref 类型和值类型的正确方法。  
@@ -560,10 +555,10 @@ int main() {
 10.89  
 ```  
   
-##  <a name="BKMK_Hide_by_signature_functions"></a>按签名隐藏函数  
+##  <a name="BKMK_Hide_by_signature_functions"></a> 按签名隐藏函数  
  标准 c + + 中基的类中的函数是隐藏的在派生类中，具有相同名称的函数中，即使派生类函数不具有相同数量或类型的参数。 这称为*隐藏按名称*语义。 在引用类型，基类中的函数可以仅由隐藏派生类中的函数如果的名称和参数列表相同。 这称为*按签名隐藏*语义。  
   
- 当所有其函数都作为元数据中标记时，类被认为按签名隐藏类`hidebysig`。 默认情况下创建的所有类**/clr**具有`hidebysig`函数。 当类具有`hidebysig`函数，编译器不会隐藏函数按名称的任何直接的基类，但如果编译器遇到的继承链中的隐藏按名称类，它将继续该名称隐藏的行为。  
+ 当所有其函数都作为元数据中标记时，类被认为按签名隐藏类`hidebysig`。 默认情况下创建的所有类 **/clr**具有`hidebysig`函数。 当类具有`hidebysig`函数，编译器不会隐藏函数按名称的任何直接的基类，但如果编译器遇到的继承链中的隐藏按名称类，它将继续该名称隐藏的行为。  
   
  在按签名隐藏语义下的对象，调用函数时编译器将标识包含无法满足函数调用的函数的派生程度最大的类。 如果无法满足调用类中只有一个函数，编译器将调用该函数。 如果无法满足调用类中没有多个函数，编译器使用重载决策规则来确定要调用的函数。 有关重载规则的详细信息，请参阅[函数重载](../cpp/function-overloading.md)。  
   
@@ -670,10 +665,10 @@ Derived::Test4
 97  
 ```  
   
-##  <a name="BKMK_Copy_constructors"></a>复制构造函数  
+##  <a name="BKMK_Copy_constructors"></a> 复制构造函数  
  C + + 标准规定，当一个对象被移动，以便对对象进行创建和销毁在相同的地址时调用复制构造函数。  
   
- 但是，当**/clr**用于编译和编译为 MSIL 调用本机函数的位置的本机类的函数-或多个-传递的值和其中本机类具有复制构造函数和/或析构函数，没有复制调用构造函数和对象被销毁位于比被创建时所在的不同地址。 如果类具有插入其本身，指针或代码由地址跟踪对象，这会导致问题。  
+ 但是，当 **/clr**用于编译和编译为 MSIL 调用本机函数的位置的本机类的函数-或多个-传递的值和其中本机类具有复制构造函数和/或析构函数，没有复制调用构造函数和对象被销毁位于比被创建时所在的不同地址。 如果类具有插入其本身，指针或代码由地址跟踪对象，这会导致问题。  
   
  有关详细信息，请参阅 [/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
@@ -735,7 +730,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="BKMK_Destructors_and_finalizers"></a>析构函数和终结器  
+##  <a name="BKMK_Destructors_and_finalizers"></a> 析构函数和终结器  
  引用类型中的析构函数执行确定性清理的资源。 终结器清理非托管资源和的析构函数或不确定地垃圾回收器可以明确地调用。 有关标准 c + + 中的析构函数的信息，请参阅[析构函数](../cpp/destructors-cpp.md)。  
   
 ```  
@@ -805,7 +800,7 @@ ref struct A {
   
  确定地清理通过调用析构函数的对象的资源可以提高性能与让 CLR 不确定地完成对象进行比较。  
   
- 在 Visual c + + 编写并使用编译的代码**/clr**如果运行的类型的析构函数：  
+ 在 Visual c + + 编写并使用编译的代码 **/clr**如果运行的类型的析构函数：  
   
 -   使用堆栈语义创建的对象超出范围。 有关详细信息，请参阅[对于引用类型的 c + + 堆栈语义](../dotnet/cpp-stack-semantics-for-reference-types.md)。  
   

@@ -1,13 +1,10 @@
 ---
-title: "OLE 后台： 容器和服务器 |Microsoft 文档"
-ms.custom: 
+title: OLE 后台： 容器和服务器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3c6f3c15b0ea398ec621ba5f6e34a9fb6e0aae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f15ef532ba61a089f8adec9ed20f737c07eae2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 后台：容器和服务器
 容器应用程序是可将嵌入项或者链接项并入自己的文档中的应用程序。 管理容器应用程序的文档必须能够存储和显示 OLE 文档组件以及创建应用程序本身的数据。 容器应用程序还必须允许用户插入新项或通过激活服务器应用程序在必要时编辑现有项。 本文列出了的容器应用程序的用户界面要求[容器： 用户界面问题](../mfc/containers-user-interface-issues.md)。  

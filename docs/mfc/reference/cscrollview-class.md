@@ -1,12 +1,9 @@
 ---
-title: "CScrollView 类 |Microsoft 文档"
-ms.custom: 
+title: CScrollView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>CScrollView 类
 A [CView](../../mfc/reference/cview-class.md)带滚动功能。  
@@ -127,10 +122,10 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  调用此成员函数可确定滚动视图是否具有水平和垂直条。  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  指示应用程序具有垂直滚动条。  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  构造 `CScrollView` 对象。  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>备注  
  您必须调用`SetScrollSizes`或`SetScaleToFitSize`之前滚动视图是可用。  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  调用`FillOutsideRect`以填充区域的滚动区之外显示的视图。  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  调用`GetDeviceScrollPosition`时需要的当前水平和垂直位置的滚动框中的滚动条。  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>备注  
  此坐标对对应于已向其滚动视图的左上角的文档中的位置。 这可用于抵销到滚动视图设备位置的鼠标设备位置。  
   
- `GetDeviceScrollPosition`以设备单位返回值。 如果你想逻辑单元，使用`GetScrollPosition`相反。  
+ `GetDeviceScrollPosition` 以设备单位返回值。 如果你想逻辑单元，使用`GetScrollPosition`相反。  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`获取当前的映射模式、 的总大小和可滚动视图的行和页大小。  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` 获取当前的映射模式、 的总大小和可滚动视图的行和页大小。  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>备注  
  大小是以设备为单位。 极少数情况下调用此成员函数。  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  调用`GetScrollPosition`时需要的当前水平和垂直位置的滚动框中的滚动条。  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>备注  
  此坐标对对应于已向其滚动视图的左上角的文档中的位置。  
   
- `GetScrollPosition`在逻辑单元中返回值。 如果你希望设备单位，使用`GetDeviceScrollPosition`相反。  
+ `GetScrollPosition` 在逻辑单元中返回值。 如果你希望设备单位，使用`GetDeviceScrollPosition`相反。  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  调用`GetTotalSize`检索滚动视图的当前水平和垂直大小。  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>返回值  
  滚动视图逻辑单位的总大小。 水平大小为**cx**的成员`CSize`返回值。 垂直大小为**cy**成员。  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  调用`ResizeParentToFit`让你的视图的大小决定其框架窗口的大小。  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>备注  
  这被建议仅对 MDI 子框架窗口中的视图。 使用`ResizeParentToFit`中`OnInitialUpdate`的你派生的处理程序函数`CScrollView`类。 有关此成员函数的示例，请参阅[CScrollView::SetScrollSizes](#setscrollsizes)。  
   
- `ResizeParentToFit`假定已设置了视图窗口的大小。 如果视图窗口大小尚未设置时`ResizeParentToFit`是调用，将获取断言。 若要确保此情况发生，进行以下调用之前调用`ResizeParentToFit`:  
+ `ResizeParentToFit` 假定已设置了视图窗口的大小。 如果视图窗口大小尚未设置时`ResizeParentToFit`是调用，将获取断言。 若要确保此情况发生，进行以下调用之前调用`ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  调用`ScrollToPosition`以滚动到视图中给定的点。  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>备注  
  将滚动视图，以便此点位于窗口的左上角。 如果对视图进行缩放以适合不得调用此成员函数。  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  调用`SetScaleToFitSize`如果想要自动缩放使视区大小与当前的窗口大小。  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  通常将放入到调用`SetScaleToFitSize`的视图的重写中`OnInitialUpdate`成员函数。 如果您不希望自动缩放，调用`SetScrollSizes`成员函数。  
   
- `SetScaleToFitSize`可用来实现"缩放 Fit"操作。 使用`SetScrollSizes`重新初始化滚动。  
+ `SetScaleToFitSize` 可用来实现"缩放 Fit"操作。 使用`SetScrollSizes`重新初始化滚动。  
   
- `SetScaleToFitSize`假定已设置了视图窗口的大小。 如果视图窗口大小尚未设置时`SetScaleToFitSize`是调用，将获取断言。 若要确保此情况发生，进行以下调用之前调用`SetScaleToFitSize`:  
+ `SetScaleToFitSize` 假定已设置了视图窗口的大小。 如果视图窗口大小尚未设置时`SetScaleToFitSize`是调用，将获取断言。 若要确保此情况发生，进行以下调用之前调用`SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  调用`SetScrollSizes`即将更新视图时。  
   
 ```  

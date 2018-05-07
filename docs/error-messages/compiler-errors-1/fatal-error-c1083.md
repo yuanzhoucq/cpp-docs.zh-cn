@@ -1,12 +1,9 @@
 ---
-title: "错误 C1083 |Microsoft 文档"
-ms.custom: 
+title: 错误 C1083 |Microsoft 文档
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1083
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd929403afc86beabf185d099a79bfab5578482a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1083"></a>错误 C1083
 
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 `#include <stdio.h>`
 
-编译器遵循生成环境中，定义的搜索路径**/I**编译器选项， **/X**编译器选项和**包括**环境变量。 有关详细信息，包括有关使用查找的文件的搜索顺序的特定详细信息，请参阅[#include 指令 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
+编译器遵循生成环境中，定义的搜索路径 **/I**编译器选项， **/X**编译器选项和**包括**环境变量。 有关详细信息，包括有关使用查找的文件的搜索顺序的特定详细信息，请参阅[#include 指令 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
 
 如果你包含文件位于相对于你的源目录，另一个目录，并且你使用的相对路径你 include 指令，你必须使用双引号括起来，而不是命令的尖括号。 例如，如果你标头文件 myheader.h 在项目源文件名为标头的子目录中，然后此示例中未能找到该文件并导致 C1083:
 
@@ -81,11 +76,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>该文件位于你的项目，但不是包含搜索路径
 
-甚至当标头文件列出在**解决方案资源管理器**作为项目的一部分，这些文件仅由编译器时发现它们通过引用`#include`或`#import`源中的指令文件中，并位于包括搜索路径。 不同种类的生成可能会使用不同搜索路径。 **/X**编译器选项可以用于从包含搜索路径中排除目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关详细信息**/X**编译器选项，请参阅[/X （忽略标准包括路径）](../../build/reference/x-ignore-standard-include-paths.md)。
+甚至当标头文件列出在**解决方案资源管理器**作为项目的一部分，这些文件仅由编译器时发现它们通过引用`#include`或`#import`源中的指令文件中，并位于包括搜索路径。 不同种类的生成可能会使用不同搜索路径。 **/X**编译器选项可以用于从包含搜索路径中排除目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关详细信息 **/X**编译器选项，请参阅[/X （忽略标准包括路径）](../../build/reference/x-ignore-standard-include-paths.md)。
 
-若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新的项目使用默认值包括搜索路径。 你可能需要修改包含搜索路径，若要为你的项目添加目录。 如果在命令行上进行编译，将路径添加到**包括**环境变量或**/I**编译器选项来指定文件的路径。
+若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新的项目使用默认值包括搜索路径。 你可能需要修改包含搜索路径，若要为你的项目添加目录。 如果在命令行上进行编译，将路径添加到**包括**环境变量或 **/I**编译器选项来指定文件的路径。
 
-若要在 Visual Studio 中设置包含目录路径，请打开项目的**属性页**对话框。 选择**VC + + 目录**下**配置属性**中左窗格中，然后编辑**包含目录**属性。 有关 Visual Studio 中的编译器搜索的每个用户和每个项目目录的详细信息，请参阅[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)。 有关详细信息**/I**编译器选项，请参阅[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中设置包含目录路径，请打开项目的**属性页**对话框。 选择**VC + + 目录**下**配置属性**中左窗格中，然后编辑**包含目录**属性。 有关 Visual Studio 中的编译器搜索的每个用户和每个项目目录的详细信息，请参阅[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)。 有关详细信息 **/I**编译器选项，请参阅[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>未设置命令行包括或 LIB 环境
 
@@ -107,9 +102,9 @@ C1083 错误还可能指示包含了错误版本的文件。 例如，某个生�
 
 - 已安装的 SDK 或第三方库，但 SDK 后未打开新的开发人员命令提示符窗口或安装库。 如果 SDK 或库将文件添加到**包括**路径，你可能需要打开新的开发人员命令提示符窗口，以拾取这些环境变量更改。
 
-- 该文件使用托管的代码，但是编译器选项**/clr**未指定。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。
+- 该文件使用托管的代码，但是编译器选项 **/clr**未指定。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。
 
-- 对文件进行编译使用不同**/ 分析**比使用预编译头编译器选项设置。 当一个项目的标头都要预编译时，全都应使用相同**/ 分析**设置。 有关详细信息，请参阅 [/analyze（代码分析）](../../build/reference/analyze-code-analysis.md)。
+- 对文件进行编译使用不同 **/ 分析**比使用预编译头编译器选项设置。 当一个项目的标头都要预编译时，全都应使用相同 **/ 分析**设置。 有关详细信息，请参阅 [/analyze（代码分析）](../../build/reference/analyze-code-analysis.md)。
 
 - 文件、目录或磁盘为只读。
 

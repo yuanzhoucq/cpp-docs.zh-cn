@@ -1,12 +1,9 @@
 ---
-title: "CMouseManager 类 |Microsoft 文档"
-ms.custom: 
+title: CMouseManager 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMouseManager
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: c58469086089dafe2447446723e06d6aa20a845c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 类
 允许用户将不同的命令与特定相关联[CView](../../mfc/reference/cview-class.md)当用户在视图内双击对象。  
@@ -77,10 +72,10 @@ class CMouseManager : public CObject
   
  `CMouseManager`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxmousemanager.h  
   
-##  <a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>  CMouseManager::AddView  
  注册[CView](../../mfc/reference/cview-class.md)对象[CMouseManager 类](../../mfc/reference/cmousemanager-class.md)以支持自定义鼠标行为。  
   
 ```  

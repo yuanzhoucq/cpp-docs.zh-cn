@@ -2,11 +2,8 @@
 title: CMFCVisualManagerWindows7 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerWindows7
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96168e569ff2207e43663f50989eb0686d3d52a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 类
 `CMFCVisualManagerWindows7` ，应用程序的外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。  
@@ -73,7 +68,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawMenuBorder`|重写[CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|  
 |`CMFCVisualManagerWindows7::OnDrawMenuCheck`|重写[CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|  
 |`CMFCVisualManagerWindows7::OnDrawMenuLabel`|重写[CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|  
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|重写`CMFCVisualManager::OnDrawRadioButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|重写 `CMFCVisualManager::OnDrawRadioButton`|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|重写[CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|重写[CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|重写[CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|  
@@ -82,7 +77,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|重写[CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|重写[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|重写[CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|重写`CMFCVisualManager::OnDrawRibbonLaunchButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|重写 `CMFCVisualManager::OnDrawRibbonLaunchButton`|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|重写[CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|重写[CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|重写[CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|  
@@ -124,24 +119,24 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  `CMFCVisualManagerWindows7`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxvisualmanagerwindows7.h  
   
-##  <a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
+##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
  在默认析构函数。  
   
 ```  
 virtual ~CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
+##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
  默认构造函数。  
   
 ```  
 CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
+##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
  获取功能区编辑框的背景色。  
   
 ```  
@@ -170,7 +165,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
+##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect  
  当填充菜单项图像周围的区域时，框架将调用此方法。  
   
 ```  

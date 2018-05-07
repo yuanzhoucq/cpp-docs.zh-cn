@@ -1,13 +1,10 @@
 ---
-title: "TN058: MFC 模块状态实现 |Microsoft 文档"
-ms.custom: 
+title: 'TN058: MFC 模块状态实现 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.implementation
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed7bc195c771026ff3e58d53f9e3936791810e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058：MFC 模块状态实现
 > [!NOTE]
@@ -55,15 +50,15 @@ ms.lasthandoff: 12/21/2017
   
  很少你想要设置的模块状态，然后不返回设置。 大多数情况下你想要"push"你自己的模块与当前状态，然后，完成后，"pop"回原始上下文。 这通过宏[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)和特殊类**AFX_MAINTAIN_STATE**。  
   
- `CCmdTarget`具有特殊功能支持切换模块状态。 具体而言，`CCmdTarget`是根类使用 OLE 自动化和 OLE COM 入口点。 像任何其他入口点向系统公开，这些入口点必须设置正确的模块状态。 如何未给定`CCmdTarget`知道"正确"的模块状态应该是什么问题的回答是它"记住"的"当前"的模块状态时，是什么构造它，以便它可以设置与当前模块状态"记住"值更高版本时调用。 因此，该模块状态，给定`CCmdTarget`对象所关联与对象构造的时使用的当前模块状态。 举一个简单例子加载 INPROC 服务器、 创建的对象，并调用其方法。  
+ `CCmdTarget` 具有特殊功能支持切换模块状态。 具体而言，`CCmdTarget`是根类使用 OLE 自动化和 OLE COM 入口点。 像任何其他入口点向系统公开，这些入口点必须设置正确的模块状态。 如何未给定`CCmdTarget`知道"正确"的模块状态应该是什么问题的回答是它"记住"的"当前"的模块状态时，是什么构造它，以便它可以设置与当前模块状态"记住"值更高版本时调用。 因此，该模块状态，给定`CCmdTarget`对象所关联与对象构造的时使用的当前模块状态。 举一个简单例子加载 INPROC 服务器、 创建的对象，并调用其方法。  
   
 1.  通过 OLE 加载该 DLL 使用**LoadLibrary**。  
   
 2. **RawDllMain**都会首先调用。 它将该 DLL 的模块状态设置为已知的静态模块状态。 出于此原因**RawDllMain**静态链接到 DLL。  
   
-3.  调用与我们对象相关联的类工厂的构造函数。 `COleObjectFactory`派生自`CCmdTarget`和结果，它会记住在哪些模块状态中其实例化。 这一点很重要，当系统询问类工厂来创建对象，它现在知道要设置为当前哪些模块状态。  
+3.  调用与我们对象相关联的类工厂的构造函数。 `COleObjectFactory` 派生自`CCmdTarget`和结果，它会记住在哪些模块状态中其实例化。 这一点很重要，当系统询问类工厂来创建对象，它现在知道要设置为当前哪些模块状态。  
   
-4. `DllGetClassObject`调用以获取类工厂。 MFC 搜索与此模块关联的类工厂列表，并返回它。  
+4. `DllGetClassObject` 调用以获取类工厂。 MFC 搜索与此模块关联的类工厂列表，并返回它。  
   
 5. **COleObjectFactory::XClassFactory2::CreateInstance**调用。 在创建对象并将其返回之前, 此函数的模块状态设置为在步骤 3 中的当前模块状态 (是最新的一个`COleObjectFactory`实例化)。 这是内部的[METHOD_PROLOGUE](com-interface-entry-points.md)。  
   
@@ -87,7 +82,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  如果未使用 `AFX_MODULE_STATE` 宏，则 DLL 中将产生资源问题。 默认情况下，MFC 使用主应用程序的资源句柄来加载资源模板。 此模板实际存储在 DLL 中。 根本原因是 `AFX_MODULE_STATE` 宏尚未切换 MFC 的模块状态信息。 资源句柄将从 MFC 的模块状态中恢复。 不切换模块状态将导致使用错误的资源句柄。  
   
- `AFX_MODULE_STATE`不需要置于 DLL 中的每个函数。 例如，`InitInstance` 可由应用程序中的 MFC 代码调用，而无需 `AFX_MODULE_STATE`，因为 MFC 会在 `InitInstance` 之前自动切换模块状态，然后在 `InitInstance` 返回之后将其切换回来。 同样适用于所有消息映射处理程序。 常规 MFC Dll 实际上有一个特殊的主窗口过程，在路由任何消息之前自动切换模块状态。  
+ `AFX_MODULE_STATE` 不需要置于 DLL 中的每个函数。 例如，`InitInstance` 可由应用程序中的 MFC 代码调用，而无需 `AFX_MODULE_STATE`，因为 MFC 会在 `InitInstance` 之前自动切换模块状态，然后在 `InitInstance` 返回之后将其切换回来。 同样适用于所有消息映射处理程序。 常规 MFC Dll 实际上有一个特殊的主窗口过程，在路由任何消息之前自动切换模块状态。  
   
 ## <a name="process-local-data"></a>处理本地数据  
  处理本地数据并不是此类让人担心它尚未为 Win32s DLL 模型很难中。 在 Win32s 所有 Dll 都共享其全局数据，即使由多个应用程序加载。 这是非常不同的"真实"Win32 DLL 数据模型，其中每个 DLL 获取其每个进程，将附加到该 DLL 中的数据空间的单独副本。 若要添加到复杂性，Win32s DLL 中的堆上分配的数据实际上是特定过程 （至少只要才归）。 请考虑以下数据和代码：  
@@ -141,9 +136,9 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
 }  
 ```  
   
- MFC 实现这两个步骤中。 首先，将一个层，Win32 **Tls\***  Api (**TlsAlloc**， **TlsSetValue**， **TlsGetValue**等) 的使用每个进程，无论多少 Dll 必须仅有两个 TLS 索引。 第二个，`CProcessLocal`模板可用于访问此数据。 重写运算符-> 这是什么允许上面的直观语法。 通过包装的所有对象`CProcessLocal`必须派生自`CNoTrackObject`。 `CNoTrackObject`提供一个较低级别的分配器 (**LocalAlloc**/**LocalFree**) 和虚拟的析构函数，以便该进程时，MFC 自动可以销毁进程本地对象终止。 此类对象可以包含自定义的析构函数，前提是必需的附加清理。 上面的示例中不要求获得密码，因为编译器将生成默认析构函数销毁嵌入`CString`对象。  
+ MFC 实现这两个步骤中。 首先，将一个层，Win32 **Tls\***  Api (**TlsAlloc**， **TlsSetValue**， **TlsGetValue**等) 的使用每个进程，无论多少 Dll 必须仅有两个 TLS 索引。 第二个，`CProcessLocal`模板可用于访问此数据。 重写运算符-> 这是什么允许上面的直观语法。 通过包装的所有对象`CProcessLocal`必须派生自`CNoTrackObject`。 `CNoTrackObject` 提供一个较低级别的分配器 (**LocalAlloc**/**LocalFree**) 和虚拟的析构函数，MFC 将自动销毁进程本地对象时终止该进程。 此类对象可以包含自定义的析构函数，前提是必需的附加清理。 上面的示例中不要求获得密码，因为编译器将生成默认析构函数销毁嵌入`CString`对象。  
   
- 有这种方法其他有趣优点。 不只是所有`CProcessLocal`对象销毁自动，它们不构造的需要。 `CProcessLocal::operator->`将实例化第一次调用时，关联的对象并不会更快。 在上面的示例中，这意味着，`strGlobal`第一次之前不会构造字符串**SetGlobalString**或**GetGlobalString**调用。 在某些情况下，这可以帮助减少 DLL 启动时间。  
+ 有这种方法其他有趣优点。 不只是所有`CProcessLocal`对象销毁自动，它们不构造的需要。 `CProcessLocal::operator->` 将实例化第一次调用时，关联的对象并不会更快。 在上面的示例中，这意味着，`strGlobal`第一次之前不会构造字符串**SetGlobalString**或**GetGlobalString**调用。 在某些情况下，这可以帮助减少 DLL 启动时间。  
   
 ## <a name="thread-local-data"></a>线程本地数据  
  类似于处理本地数据，线程本地数据时使用的数据必须是本地的给定线程。 也就是说，你需要访问该数据的每个线程数据的单独实例。 这可以多次使用而不是广泛的同步机制。 如果数据并不需要由多个线程共享，此类的机制可能成本高昂且不必要。 假设我们有`CString`（非常类似于上面的示例） 的对象。 我们可以通过使该线程本地包装在与`CThreadLocal`模板：  

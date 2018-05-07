@@ -1,13 +1,10 @@
 ---
-title: "变量参数类型常量 |Microsoft 文档"
-ms.custom: 
+title: 变量参数类型常量 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - VTS_YPOS_HIMETRIC
 - VTS_PICTURE
@@ -44,24 +41,22 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9bd9af96a51697d1800eea1ef2883835375210d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13820ff4fb07c3743f36ba3ebe33ee56a3a79c7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variant-parameter-type-constants"></a>变量参数类型常量
 本主题列出指示变量参数类型适用于 Microsoft 基础类库 OLE 控件类的新常量。  
   
  下面是一个类常量的列表：  
   
-##  <a name="_mfc_variant_data_constants"></a>变量数据常量  
+##  <a name="_mfc_variant_data_constants"></a> 变量数据常量  
   
 -   **VTS_COLOR**用于表示 RGB 颜色值的 32 位整数。  
   
@@ -94,7 +89,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  为所有变体类型，除定义其他变体常量**VTS_FONT**和**VTS_PICTURE**，提供指向各种不同的数据产生的 constant。 使用命名这些常量**VTS_P** `constantname`约定。 例如， **VTS_PCOLOR**是一个指向**VTS_COLOR**常量。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
   
 ## <a name="see-also"></a>请参阅  

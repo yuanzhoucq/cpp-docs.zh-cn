@@ -1,13 +1,10 @@
 ---
-title: "从 ActiveX 控件向导添加类 |Microsoft 文档"
-ms.custom: 
+title: 从 ActiveX 控件向导添加类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>从 ActiveX 控件添加类向导
 使用此向导将从可用的 ActiveX 控件中添加的 MFC 类。 该向导创建从所选的 ActiveX 控件添加每个接口的类。  
@@ -60,9 +55,9 @@ ms.lasthandoff: 12/21/2017
 |**<\<**|删除中的所有类**生成的类**列表。 不可用如果**生成的类**列表为空。|  
   
  **生成的类**  
- 指定要从使用添加的接口生成的类名称 **>** 或 **>>** 按钮。 你可以单击此框以选择类，然后使用向上或向下键滚动浏览列表中，查看在每个类名`Class`框和文件名称中的**.h 文件**单击时，向导将生成的框**完成**。 你可以在此框中选择一次只有一个类。  
+ 指定要从使用添加的接口生成的类名称**>** 或**>>** 按钮。 你可以单击此框以选择类，然后使用向上或向下键滚动浏览列表中，查看在每个类名`Class`框和文件名称中的 **.h 文件**单击时，向导将生成的框**完成**。 你可以在此框中选择一次只有一个类。  
   
- 你可以通过此列表中选择它并单击删除类 **<** 。 不需要选择中的类**生成的类**复选框，可以删除所有类; 通过单击 **<<** ，都删除中的所有类**生成的类**框。  
+ 你可以通过此列表中选择它并单击删除类**<**。 不需要选择中的类**生成的类**复选框，可以删除所有类; 通过单击**<<**，都删除中的所有类**生成的类**框。  
   
  `Class`  
  指定在选定的类名称**生成的类**单击时，该向导将添加的框**完成**。 你可以编辑中的名称`Class`框。  

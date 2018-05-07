@@ -1,23 +1,19 @@
 ---
-title: "运算符 Type ^ |Microsoft 文档"
-ms.custom: 
+title: 运算符 Type ^ |Microsoft 文档
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b24ffc83-0780-4f9a-8ee0-f5725db339d1
-caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e8d51699d56f1868d5840665017feba2dec50766
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aef888e6c9e22c361f54674aaef420531e75630b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-type"></a>运算符 Type^
 实现从 [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) 到 `Platform::Type`的转换。  
@@ -54,7 +50,7 @@ Type^ tx2 = (Type^)(tn);
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
  .NET Framework 程序将 `TypeName` 投影为 [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True)的转换。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   
 ## <a name="see-also"></a>请参阅  
  [运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)   

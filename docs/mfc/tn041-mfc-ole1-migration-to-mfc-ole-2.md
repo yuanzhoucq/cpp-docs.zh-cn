@@ -1,13 +1,10 @@
 ---
-title: "TN041: MFC OLE1 迁移到 MFC 的 OLE 2 |Microsoft 文档"
-ms.custom: 
+title: 'TN041: MFC OLE1 迁移到 MFC 的 OLE 2 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 迁移到 MFC/OLE 2
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>添加“可视化编辑”  
  OLE 最有趣的功能之一是就地激活（也称为“可视化编辑”）。 此功能可让服务器接管容器的一部分用户界面，以便为用户提供更无缝的编辑界面。 若要向 OCLIENT 实现就地激活，则需要添加一些特殊资源和一些附加代码。 这些资源和代码通常由 AppWizard 提供 — 事实上，此处的很多代码是直接通过“容器”支持从新的 AppWizard 应用程序借用的。  
   
- 首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 两个分隔条插入之间文件和窗口弹出窗口，以指示组的分隔 (它应如下所示： 文件 &#124; &#124;窗口中）。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅"菜单和资源： 菜单合并" *OLE 2 类*。  
+ 首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 两个分隔条插入之间文件和窗口弹出窗口，以指示组的分隔 (它应如下所示： 文件&#124;&#124;窗口)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅"菜单和资源： 菜单合并" *OLE 2 类*。  
   
  创建这些菜单后，您需要通知框架。 此操作在将文档模板添加 InitInstance 中的文档模板列表前通过调用文档模板的 `CDocTemplate::SetContainerInfo` 完成。 注册文档模板的新代码如下所示：  
   
@@ -710,7 +705,7 @@ void CServerView::OnEditCopy()
   
 -   您需要向框架告知这些特殊资源和类。  
   
- 菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 将两个分隔符添加到菜单之间编辑和帮助菜单 (它应如下所示： 编辑 &#124; &#124;帮助）。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅"菜单和资源： 菜单合并" *OLE 2 类*。  
+ 菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 将两个分隔符添加到菜单之间编辑和帮助菜单 (它应如下所示： 编辑&#124;&#124;帮助)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅"菜单和资源： 菜单合并" *OLE 2 类*。  
   
  子集工具栏的位图创建起来很轻松：在选中“服务器”选项的情况下从新的 AppWizard 生成的应用程序中复制位图。 此位图随后会导入 Visual C++。 请确保为位图提供 ID IDR_HIERSVRTYPE_SRVR_IP。  
   

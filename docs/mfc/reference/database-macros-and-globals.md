@@ -1,13 +1,10 @@
 ---
-title: "数据库宏和全局函数 |Microsoft 文档"
-ms.custom: 
+title: 数据库宏和全局函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/AFX_ODBC_CALL
 - AFXDB/AFX_SQL_ASYNC
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f43135678c54ed2f837934c19a8543c86a65fdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-macros-and-globals"></a>数据库宏和全局函数
 下面所列的宏和全局适用于基于 ODBC 的数据库应用程序。 它们不适用于基于 DAO 的应用程序。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxGetHENV](#afxgethenv)|检索 MFC 当前正在使用的 ODBC 环境的句柄。 您可以在直接 ODBC 调用中使用此句柄。|  
 
 
-## <a name="afxdbinitmodule"></a>AfxDbInitModule
+## <a name="afxdbinitmodule"></a> AfxDbInitModule
 MFC 数据库 （或 DAO） 支持从动态链接到 MFC 常规 MFC DLL 的支持，在常规 MFC DLL 中添加对此函数的调用**CWinApp::InitInstance**函数可以初始化 MFC 数据库 DLL。  
    
 ### <a name="syntax"></a>语法    
@@ -64,9 +59,9 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>备注  
- 请确保此调用发生在基类中的任何调用之前或任何添加的代码访问 MFC 数据库 DLL。 MFC 数据库 DLL 是 MFC 扩展 DLL;使 MFC 扩展 DLL，若要连接到**CDynLinkLibrary**链，它必须创建**CDynLinkLibrary**将使用它的每个模块的上下文中的对象。 `AfxDbInitModule`创建**CDynLinkLibrary**对象常规 MFC DLL 的上下文中，以便让它连接到**CDynLinkLibrary**对象常规 MFC dll 的链。  
+ 请确保此调用发生在基类中的任何调用之前或任何添加的代码访问 MFC 数据库 DLL。 MFC 数据库 DLL 是 MFC 扩展 DLL;使 MFC 扩展 DLL，若要连接到**CDynLinkLibrary**链，它必须创建**CDynLinkLibrary**将使用它的每个模块的上下文中的对象。 `AfxDbInitModule` 创建**CDynLinkLibrary**对象常规 MFC DLL 的上下文中，以便让它连接到**CDynLinkLibrary**对象常规 MFC dll 的链。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** < afxdll_.h >  
    
 ### <a name="see-also"></a>请参阅  
@@ -74,7 +69,7 @@ void AFXAPI AfxDbInitModule( );
  
   
 
-##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL  
  使用此宏调用可能会返回任何 ODBC API 函数`SQL_STILL_EXECUTING`。  
   
 ```  
@@ -86,7 +81,7 @@ AFX_ODBC_CALL(SQLFunc)
  ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
- `AFX_ODBC_CALL`将重复调用该函数之前它不再返回`SQL_STILL_EXECUTING`。  
+ `AFX_ODBC_CALL` 将重复调用该函数之前它不再返回`SQL_STILL_EXECUTING`。  
   
  然后再调用`AFX_ODBC_CALL`，必须声明变量， `nRetCode`，类型的**某一 RETCODE**。  
   
@@ -98,10 +93,10 @@ AFX_ODBC_CALL(SQLFunc)
   
  [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
-##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC  
  此宏的实现在 MFC 4.2 中发生更改。  
   
 ```   
@@ -116,15 +111,15 @@ AFX_SQL_ASYNC(prs, SQLFunc)
  ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
- `AFX_SQL_ASYNC`简单调用宏[AFX_ODBC_CALL](#afx_odbc_call)并忽略`prs`参数。 在 4.2 之前的 MFC 版本中，`AFX_SQL_ASYNC` 用于调用可能返回 `SQL_STILL_EXECUTING` 的 ODBC API 函数。 如果 ODBC API 函数返回 `SQL_STILL_EXECUTING`，则 `AFX_SQL_ASYNC` 将调用 `prs->OnWaitForDataSource`。  
+ `AFX_SQL_ASYNC` 简单调用宏[AFX_ODBC_CALL](#afx_odbc_call)并忽略`prs`参数。 在 4.2 之前的 MFC 版本中，`AFX_SQL_ASYNC` 用于调用可能返回 `SQL_STILL_EXECUTING` 的 ODBC API 函数。 如果 ODBC API 函数返回 `SQL_STILL_EXECUTING`，则 `AFX_SQL_ASYNC` 将调用 `prs->OnWaitForDataSource`。  
   
 > [!NOTE]
 >  MFC ODBC 类现在只能使用同步处理。 若要执行异步操作，必须调用 ODBC API 函数**SQLSetConnectOption**。 有关详细信息，请参阅"异步执行函数"在 Windows SDK 中的主题。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdb.h  
   
-##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC  
  `AFX_SQL_SYNC`宏只需调用函数`SQLFunc`。  
   
 ```   
@@ -148,10 +143,10 @@ AFX_SQL_SYNC(SQLFunc)
   
  [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdb.h  
   
-##  <a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>  AfxGetHENV  
  你可以在直接 ODBC 调用中，使用返回的句柄，但不是必须关闭句柄，或假定，句柄后依然有效且可用任何现有`CDatabase`-或`CRecordset`-派生的对象已被销毁。  
   
 ```   
@@ -161,7 +156,7 @@ HENV AFXAPI AfxGetHENV();
 ### <a name="return-value"></a>返回值  
  当前正在使用 MFC 的 ODBC 环境句柄。 可以是`SQL_HENV_NULL`是否存在任何[CDatabase](../../mfc/reference/cdatabase-class.md)对象但没有[CRecordset](../../mfc/reference/crecordset-class.md)中使用的对象。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdb.h  
     
 ## <a name="see-also"></a>请参阅  

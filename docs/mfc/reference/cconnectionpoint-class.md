@@ -1,12 +1,9 @@
 ---
-title: "CConnectionPoint 类 |Microsoft 文档"
-ms.custom: 
+title: CConnectionPoint 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a9e9fafc2bbee9959a939815a92c9bc63a650f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 类
 定义用于与其他 OLE 对象通信的接口（称为“连接点”）的特殊类型。  
@@ -109,17 +104,17 @@ class CConnectionPoint : public CCmdTarget
   
  `CConnectionPoint`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
   
-##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
  构造 `CConnectionPoint` 对象。  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections  
  调用此函数可检索连接点的所有活动连接。  
   
 ```  
@@ -129,7 +124,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>返回值  
  指向数组的活动连接 （接收器） 的指针。 某些数组中的指针可能是 NULL。 此数组中的每个非 NULL 指针可以安全地转换为指向使用转换运算符的接收器接口的指针。  
   
-##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
  由框架检索调用**IConnectionPointContainer**连接点。  
   
 ```  
@@ -142,7 +137,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>备注  
  此函数通常由实现`BEGIN_CONNECTION_PART`宏。  
   
-##  <a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  由框架调用以检索连接点的接口 ID。  
   
 ```  
@@ -155,7 +150,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>备注  
  重写此函数可返回用于此连接点的接口 ID。  
   
-##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
  由框架调用以检索最大连接点支持的连接数。  
   
 ```  
@@ -170,7 +165,7 @@ virtual int GetMaxConnections();
   
  如果你想要限制可以连接到你的控件的接收器数，重写此函数。  
   
-##  <a name="getnextconnection"></a>在  
+##  <a name="getnextconnection"></a>  在  
  检索指向处的连接元素的`pos`。  
   
 ```  
@@ -190,7 +185,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
  通过返回启动映射迭代**位置**值，可以传递给[GetNextConnection](#getnextconnection)调用。  
   
 ```  
@@ -206,7 +201,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>示例  
   请参阅示例[在](#getnextconnection)。  
   
-##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
  由框架在连接时调用是正在建立或破坏。  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  如果你想要通知接收器连接到或断开连接点时，重写此函数。  
   
-##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
  检索指向所请求的接收器接口指针。  
   
 ```  

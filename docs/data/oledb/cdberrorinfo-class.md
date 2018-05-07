@@ -1,12 +1,9 @@
 ---
-title: "CDBErrorInfo 类 |Microsoft 文档"
-ms.custom: 
+title: CDBErrorInfo 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBErrorInfo
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBErrorInfo class
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ae65a1a04d5befdfcd22327def8f60d96c9d4cff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 59222e30fe4a0ee7914c4a4d4e8dfa0d6d3a260b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 类
 提供对 OLE DB 错误处理使用 OLE DB 支持[IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)接口。  
@@ -55,7 +50,7 @@ class CDBErrorInfo
 ## <a name="remarks"></a>备注  
  此接口向用户返回一个或多个错误记录。 调用[cdberrorinfo:: Geterrorrecords](../../data/oledb/cdberrorinfo-geterrorrecords.md)首先，需要获得的错误记录计数。 然后调用一个访问函数，如[cdberrorinfo:: Getallerrorinfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)来检索每个记录的错误信息。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

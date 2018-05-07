@@ -1,13 +1,10 @@
 ---
-title: "对话框类 |Microsoft 文档"
-ms.custom: 
+title: 对话框类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>对话框类
 类`CDialog`和及其派生的类封装对话框功能。 对话框中是一种特殊的窗口中，由于`CDialog`派生自`CWnd`。 派生对话框类从`CDialog`或使用其中一个标准对话框框中，例如打开或保存文件、 打印、 选择字体或颜色，通用对话框类的初始化搜索和替换操作中，或执行各种 OLE 相关操作。  

@@ -1,12 +1,9 @@
 ---
-title: "MFC 类 |Microsoft 文档"
-ms.custom: 
+title: MFC 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes"></a>MFC 类
 下面列出的类包含在 Microsoft 基础类 (MFC) 库中。  
@@ -826,7 +821,7 @@ ms.lasthandoff: 02/09/2018
  管理从应用程序资源或文件中加载的工具栏图像。  
   
  [CMFCToolBarInfo 类](../../mfc/reference/cmfctoolbarinfo-class.md)  
- 包含处于不同状态的工具栏图像的资源 ID。 `CMFCToolBarInfo`是用作参数的帮助器类[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
+ 包含处于不同状态的工具栏图像的资源 ID。 `CMFCToolBarInfo` 是用作参数的帮助器类[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
   
  [CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  包含一个弹出菜单的工具栏按钮。  

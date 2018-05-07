@@ -1,12 +1,9 @@
 ---
-title: "CAssertions，CAssertionInfo |Microsoft 文档"
-ms.custom: 
+title: CAssertions，CAssertionInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAssertions
@@ -39,18 +36,16 @@ helpviewer_keywords:
 - INITIALLY_DEFERRED
 - m_bIsDeferrable
 ms.assetid: 2a79c2da-5c9b-4fa6-98e8-90b7f5d6f021
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8662c95d4c1a4f8b35813fced53a2ede5f8dbc2b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6b3a114d4df8effe682798c966811be0eacc41e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cassertions-cassertioninfo"></a>CAssertions，CAssertionInfo
 调用 typedef 类**CAssertions**来实现其参数类**CAssertionInfo**。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 02/23/2018
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|  
 |m_szDescription|说明|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

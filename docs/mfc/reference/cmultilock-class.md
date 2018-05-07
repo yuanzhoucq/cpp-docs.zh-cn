@@ -1,12 +1,9 @@
 ---
-title: "CMultiLock 类 |Microsoft 文档"
-ms.custom: 
+title: CMultiLock 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiLock
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5c5424018c3863ce64435bcc09d2d539560285e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultilock-class"></a>CMultiLock 类
 表示多线程程序中用于控制对多个资源的访问的访问控制机制。  
@@ -61,7 +56,7 @@ class CMultiLock
 |[CMultiLock::Unlock](#unlock)|释放任何拥有的同步对象。|  
   
 ## <a name="remarks"></a>备注  
- `CMultiLock`没有基类。  
+ `CMultiLock` 没有基类。  
   
  若要使用同步类[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，你可以创建**CMultiLock**或[CSingleLock](../../mfc/reference/csinglelock-class.md)等待并释放同步对象的对象。 使用**CMultiLock**时有多个对象，你无法使用在特定的时间。 使用`CSingleLock`时只需一次等待上一个对象。  
   
@@ -74,10 +69,10 @@ class CMultiLock
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CMultiLock`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxmt.h  
   
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
  构造**CMultiLock**对象。  
   
 ```  
@@ -100,7 +95,7 @@ CMultiLock(
 ### <a name="remarks"></a>备注  
  在创建的同步对象等待数组后调用此函数。 它通常从调用线程必须等待可用的同步对象之一中。  
   
-##  <a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>  CMultiLock::IsLocked  
  确定指定的对象是否为非终止 （不可用）。  
   
 ```  
@@ -114,7 +109,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>返回值  
  如果指定的对象被锁定; 则为非 0否则为 0。  
   
-##  <a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>  CMultiLock::Lock  
  调用此函数可访问一个或多个由提供给的同步对象控制的资源**CMultiLock**构造函数。  
   
 ```  
@@ -158,7 +153,7 @@ DWORD Lock(
   
  如果`Lock`不能立即返回，它将等待中指定的毫秒数不超过*dwTimeOut*在返回之前的参数。 如果*dwTimeOut*是**无限**，`Lock`直到获得访问的对象时或在指定了一个条件，将不会返回`dwWakeMask`得到满足而。 否则为如果`Lock`已无法获得的同步对象，它将返回成功; 如果不是，它将返回失败。  
   
-##  <a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>  CMultiLock::Unlock  
  释放所拥有的同步对象`CMultiLock`。  
   
 ```  
@@ -183,7 +178,7 @@ BOOL Unlock(
 ### <a name="remarks"></a>备注  
  调用此函数`CMultiLock`的析构函数。  
   
- 第一种形式的`Unlock`尝试解锁管理的同步对象`CMultiLock`。 第二种形式的`Unlock`尝试解锁`CSemaphore`拥有的对象`CMultiLock`。 如果`CMultiLock`不拥有任何锁定`CSemaphore`对象，该函数将返回**FALSE**; 否则为它将返回**TRUE**。 `lCount`和`lpPrevCount`时完全相同的参数作为[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)。 第二种形式的`Unlock`很少适用于 multilock 的情况下。  
+ 第一种形式的`Unlock`尝试解锁管理的同步对象`CMultiLock`。 第二种形式的`Unlock`尝试解锁`CSemaphore`拥有的对象`CMultiLock`。 如果`CMultiLock`不拥有任何锁定`CSemaphore`对象，该函数将返回**FALSE**; 否则为它将返回**TRUE**。 `lCount` 和`lpPrevCount`时完全相同的参数作为[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)。 第二种形式的`Unlock`很少适用于 multilock 的情况下。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)

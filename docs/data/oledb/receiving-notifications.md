@@ -1,12 +1,9 @@
 ---
-title: "接收通知 |Microsoft 文档"
-ms.custom: 
+title: 接收通知 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 50911440acbc7514b091a439d42bf73ee60353f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d9e1dee5c63281c729cdb798a190938c6433aac0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notifications"></a>接收通知
 OLE DB 提供用于在事件发生时接收通知的接口。 描述了这些内容在[OLE DB 对象通知](https://msdn.microsoft.com/en-us/library/ms725406.aspx)中*OLE DB 程序员参考*。 这些事件的安装程序将使用的标准的 COM 连接点机制。 例如，想要检索通过事件的 ATL 对象`IRowsetNotify`实现`IRowsetNotify`接口通过添加`IRowsetNotify`到派生类的列表并将其通过公开**COM_INTERFACE_ENTRY**宏。  

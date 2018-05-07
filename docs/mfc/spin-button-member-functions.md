@@ -1,30 +1,25 @@
 ---
-title: "调节钮成员函数 |Microsoft 文档"
-ms.custom: 
+title: 调节钮成员函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f0abfd5803ea4b4d4b4478104790e0f56e5afc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 524863b816c62903cb610b57a6e3275bcdf6a3d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spin-button-member-functions"></a>调节钮成员函数
 有几个成员函数可用于数值调节钮控件 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md))。 使用这些函数可更改数值调节钮的以下特性。  

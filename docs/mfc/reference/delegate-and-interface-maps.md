@@ -1,13 +1,10 @@
 ---
-title: "委托和接口映射宏 (MFC) |Microsoft 文档"
-ms.custom: 
+title: 委托和接口映射宏 (MFC) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 |||  
 |-|-|  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[MAKE_DELEGATE](#make_delegate)|将事件处理程序附加到托管的控件。|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 开始委托映射。  
    
 ### <a name="syntax"></a>语法    
@@ -53,7 +48,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="remarks"></a>备注  
  此宏将标记的委托条目，撰写委托映射列表的开头。 有关如何使用此宏的示例，请参阅[EVENT_DELEGATE_ENTRY](#event_delegate_entry)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** msclr\event.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -78,7 +73,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
   
  有关接口映射的详细信息，请参阅[技术说明 38](../tn038-mfc-ole-iunknown-implementation.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
  
 ##  <a name="commandhandler"></a>CommandHandler 委托
@@ -99,7 +94,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）  
    
 ### <a name="see-also"></a>请参阅  
@@ -120,11 +115,11 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
  命令消息 id。  
    
 ### <a name="remarks"></a>备注  
- 此委托注册具有用户界面更新命令消息的回调方法。 `CommandUIHandler`类似于[CommandHandler](#commandhandler)只不过此委托用于用户界面对象更新命令。 用户界面更新命令应映射一对一与消息处理程序方法。  
+ 此委托注册具有用户界面更新命令消息的回调方法。 `CommandUIHandler` 类似于[CommandHandler](#commandhandler)只不过此委托用于用户界面对象更新命令。 用户界面更新命令应映射一对一与消息处理程序方法。  
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxwinforms.h （在程序集 atlmfc\lib\mfcmifc80.dll 中定义）  
    
 ### <a name="see-also"></a>请参阅  
@@ -142,7 +137,7 @@ END_DELEGATE_MAP();
 ### <a name="remarks"></a>备注  
  此宏将标记的委托条目，撰写委托映射列表的末尾。 有关如何使用此宏的示例，请参阅[EVENT_DELEGATE_ENTRY](#event_delegate_entry)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** msclr\event.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -161,7 +156,7 @@ END_INTERFACE_MAP( )
 ### <a name="remarks"></a>备注  
  有关接口映射的详细信息，请参阅[技术说明 38](../tn038-mfc-ole-iunknown-implementation.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -199,7 +194,7 @@ END_DELEGATE_MAP()
 
 ```  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** msclr\event.h  
    
 ### <a name="see-also"></a>请参阅  
@@ -228,7 +223,7 @@ INTERFACE_PART( theClass, iid, localClass)
   
  有关接口映射的详细信息，请参阅[技术说明 38](../tn038-mfc-ole-iunknown-implementation.md)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
    
  
@@ -262,7 +257,7 @@ void CMyView::OnInitialUpdate()
 }
 ```
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** msclr\event.h  
    
 ### <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "CMFCAcceleratorKey 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCAcceleratorKey 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 类
 实现虚拟键映射和格式设置的帮助器类。  
@@ -72,10 +67,10 @@ class CMFCAcceleratorKey : public CObject
   
  `CMFCAcceleratorKey`   
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
  构造[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象。  
   
 ```  
@@ -90,7 +85,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>备注  
  如果在创建时，请勿提供的快捷键`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法将与快捷键关联起来你`CMFCAcceleratorKey`对象。  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  将转换为其关联的字符串值的加速结构。  
   
 ```  
@@ -104,7 +99,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>备注  
  此方法检索关联的快捷键的字符串格式。 您可以设置的字符串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象使用构造函数或方法[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  设置的快捷键[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "CDaoDatabase 类 |Microsoft 文档"
-ms.custom: 
+title: CDaoDatabase 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoDatabase
@@ -67,17 +64,15 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b5ae20f06cee55a13327d5bbe7ad058047b53c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 类
 表示与数据库的连接，通过此连接可操作数据。  
@@ -135,7 +130,7 @@ class CDaoDatabase : public CObject
  有关支持的数据库格式的信息，请参阅[GetName](../../mfc/reference/cdaoworkspace-class.md#getname)成员函数。 可以包含一个或多个`CDaoDatabase`给定"工作区中，"所表示的活动一次对象[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)对象。 工作区保持打开的数据库对象，调用数据库集合的集合。  
   
 > [!NOTE]
->  MFC DAO 数据库类有别于基于 ODBC 的 MFC 数据库类。 DAO 数据库类的所有名称都具有"CDao"前缀。 类`CDaoDatabase`提供类似于 ODBC 类接口[CDatabase](../../mfc/reference/cdatabase-class.md)。 主要区别是，`CDatabase`通过开放式数据库连接 (ODBC) 和 ODBC 驱动程序访问 DBMS，有关该 DBMS。 `CDaoDatabase`通过数据访问对象 (DAO) 基于 Microsoft Jet 数据库引擎访问数据。 通常情况下，基于 DAO 的 MFC 类是更强于基于 ODBC; 的 MFC 类基于 DAO 的类可以访问数据，包括通过 ODBC 驱动程序，通过其自己的数据库引擎。 基于 DAO 的类还支持数据定义语言 (DDL) 操作，如添加表通过类，而无需直接调用 DAO。  
+>  MFC DAO 数据库类有别于基于 ODBC 的 MFC 数据库类。 DAO 数据库类的所有名称都具有"CDao"前缀。 类`CDaoDatabase`提供类似于 ODBC 类接口[CDatabase](../../mfc/reference/cdatabase-class.md)。 主要区别是，`CDatabase`通过开放式数据库连接 (ODBC) 和 ODBC 驱动程序访问 DBMS，有关该 DBMS。 `CDaoDatabase` 通过数据访问对象 (DAO) 基于 Microsoft Jet 数据库引擎访问数据。 通常情况下，基于 DAO 的 MFC 类是更强于基于 ODBC; 的 MFC 类基于 DAO 的类可以访问数据，包括通过 ODBC 驱动程序，通过其自己的数据库引擎。 基于 DAO 的类还支持数据定义语言 (DDL) 操作，如添加表通过类，而无需直接调用 DAO。  
   
 ## <a name="usage"></a>用法  
  在创建记录集对象时，可以隐式创建数据库对象。 但是，也可以显式创建数据库对象。 若要使用现有数据库使用显式`CDaoDatabase`，执行以下任一操作：  
@@ -167,10 +162,10 @@ class CDaoDatabase : public CObject
   
  `CDaoDatabase`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
-##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
+##  <a name="cantransact"></a>  CDaoDatabase::CanTransact  
  调用此成员函数来确定数据库是否允许事务。  
   
 ```  
@@ -183,7 +178,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>备注  
  事务管理数据库的工作区中。  
   
-##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
+##  <a name="canupdate"></a>  CDaoDatabase::CanUpdate  
  调用此成员函数可确定是否`CDaoDatabase`对象允许更新。  
   
 ```  
@@ -196,7 +191,7 @@ BOOL CanUpdate();
 ### <a name="remarks"></a>备注  
  有关数据库可更新性信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
-##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
+##  <a name="cdaodatabase"></a>  CDaoDatabase::CDaoDatabase  
  构造 `CDaoDatabase` 对象。  
   
 ```  
@@ -217,7 +212,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 > [!NOTE]
 >  A`CDaoDatabase`如果打开，也会隐式创建对象[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象而不将指针传递给现有`CDaoDatabase`对象。 此数据库对象已关闭时关闭记录集对象。  
   
-##  <a name="close"></a>CDaoDatabase::Close  
+##  <a name="close"></a>  CDaoDatabase::Close  
  调用此成员函数以从数据库断开连接并关闭任何打开的记录集、 tabledefs 和 querydefs 与数据库关联。  
   
 ```  
@@ -235,7 +230,7 @@ virtual void Close();
   
  如果函数的范围之外定义的数据库对象，但不关闭它退出该函数的数据库对象将保持打开，直到显式关闭或定义它的模块超出作用域。  
   
-##  <a name="create"></a>CDaoDatabase::Create  
+##  <a name="create"></a>  CDaoDatabase::Create  
  若要创建新的 Microsoft Jet (。MDB) 数据库，请调用此成员函数之后你构造,`CDaoDatabase`对象。  
   
 ```  
@@ -306,7 +301,7 @@ virtual void Create(
 > [!NOTE]
 >  与**创建**，你可以创建仅 Microsoft Jet (。MDB) 数据库。 不能创建 ISAM 数据库或 ODBC 数据库。  
   
-##  <a name="createrelation"></a>CDaoDatabase::CreateRelation  
+##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
  调用此成员函数以建立在数据库中的主表中的一个或多个字段和外部表 （数据库中的另一个表） 中的一个或多个字段之间的关系。  
   
 ```  
@@ -366,7 +361,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
   
  有关相关信息，请参阅主题 DAO 帮助中的"CreateRelation 方法"。  
   
-##  <a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
+##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef  
  调用此成员函数可删除指定的 querydef-保存查询 — 从`CDaoDatabase`对象的 QueryDefs 集合。  
   
 ```  
@@ -382,7 +377,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
   
  有关创建 querydef 对象的信息，请参阅类[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 Querydef 对象变为关联与特定`CDaoDatabase`对象构造时`CDaoQueryDef`对象，它将指针传递给数据库对象。  
   
-##  <a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
+##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation  
  调用此成员函数以从数据库对象的关系集合中删除现有关系。  
   
 ```  
@@ -398,7 +393,7 @@ void DeleteRelation(LPCTSTR lpszName);
   
  有关相关信息，请参阅主题 DAO 帮助中的"删除方法"。  
   
-##  <a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
+##  <a name="deletetabledef"></a>  CDaoDatabase::DeleteTableDef  
  调用此成员函数可删除指定的表和从其数据的所有`CDaoDatabase`对象的 TableDefs 集合。  
   
 ```  
@@ -419,7 +414,7 @@ void DeleteTableDef(LPCTSTR lpszName);
   
  有关相关信息，请参阅主题 DAO 帮助中的"删除方法"。  
   
-##  <a name="execute"></a>CDaoDatabase::Execute  
+##  <a name="execute"></a>  CDaoDatabase::Execute  
  调用此成员函数以运行操作查询或对数据库执行 SQL 语句。  
   
 ```  
@@ -433,7 +428,7 @@ void Execute(
  指向以 null 结尾的字符串，包含要执行的有效 SQL 命令。  
   
  `nOptions`  
- 一个整数，指定与查询的完整性相关的选项。 你可以使用按位 OR 运算符 ( **&#124;**) 将组合任何以下常量 (提供组合有意义-例如，不会合并**dbInconsistent**与**dbConsistent**):  
+ 一个整数，指定与查询的完整性相关的选项。 你可以使用按位 OR 运算符 ( **&#124;**) 将组合任何以下常量 (提供组合有意义 — 例如，不会合并**dbInconsistent**与**dbConsistent**):  
   
 - **dbDenyWrite**拒绝其他用户写入权限。  
   
@@ -462,7 +457,7 @@ void Execute(
   
  **执行**不返回一个记录集。 使用**执行**在选择记录的查询会导致引发异常的类型的 MFC `CDaoException`。 (没有任何`ExecuteSQL`成员函数类似于`CDatabase::ExecuteSQL`。)  
   
-##  <a name="getconnect"></a>CDaoDatabase::GetConnect  
+##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
  调用此成员函数可检索用来连接的连接字符串`CDaoDatabase`到 ODBC 或 ISAM 数据库对象。  
   
 ```  
@@ -483,7 +478,7 @@ CString GetConnect();
   
  请参阅[打开](#open)有关的连接字符串的创建方式说明成员函数。 设置连接字符串后**打开**调用，你可以更高版本使用它来检查该设置将确定类型、 路径、 用户 ID、 密码或 ODBC 数据源的数据库。  
   
-##  <a name="getname"></a>CDaoDatabase::GetName  
+##  <a name="getname"></a>  CDaoDatabase::GetName  
  调用此成员函数可检索当前打开的数据库，它是现有数据库文件的名称的名称或已注册的 ODBC 数据源的名称。  
   
 ```  
@@ -513,7 +508,7 @@ CString GetName();
   
  对于如 SQL Server 和 Oracle 的 ODBC 数据库，数据库的连接字符串标识注册的 ODBC 数据源名称 (DSN)。  
   
-##  <a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
+##  <a name="getquerydefcount"></a>  CDaoDatabase::GetQueryDefCount  
  调用此成员函数可检索的数据库的 QueryDefs 集合中定义的查询数。  
   
 ```  
@@ -524,9 +519,9 @@ short GetQueryDefCount();
  数据库中定义的查询数。  
   
 ### <a name="remarks"></a>备注  
- `GetQueryDefCount`如果需要遍历 QueryDefs 集合中的所有 querydefs，很有用。 若要获取有关给定查询集合中的信息，请参阅[GetQueryDefInfo](#getquerydefinfo)。  
+ `GetQueryDefCount` 如果需要遍历 QueryDefs 集合中的所有 querydefs，很有用。 若要获取有关给定查询集合中的信息，请参阅[GetQueryDefInfo](#getquerydefinfo)。  
   
-##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
+##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo  
  调用此成员函数以获取有关数据库中定义的查询的信息的各种类型。  
   
 ```  
@@ -552,11 +547,11 @@ void GetQueryDefInfo(
  `dwInfoOptions`  
  指定有关要检索的记录集的信息的选项。 以及它们会导致函数返回有关记录集，此处列出了可用的选项：  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称、 类型  
+- `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型  
   
-- `AFX_DAO_SECONDARY_INFO`主要信息加号： 日期已创建、 上次更新日期、 返回的记录、 可更新  
+- `AFX_DAO_SECONDARY_INFO` 主要信息加号： 日期已创建、 上次更新日期、 返回的记录、 可更新  
   
-- `AFX_DAO_ALL_INFO`主要和次要信息加号： SQL、 连接，odbc 超时  
+- `AFX_DAO_ALL_INFO` 主要和次要信息加号： SQL、 连接，odbc 超时  
   
  `lpszName`  
  包含在数据库中，按名称查找定义查询的名称的字符串。  
@@ -566,7 +561,7 @@ void GetQueryDefInfo(
   
  有关在中返回的信息的说明*querydefinfo*，请参阅[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 如果请求的信息的一个级别，你将获取任何之前级别的信息以及。  
   
-##  <a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
+##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
  调用此成员函数可检索当前连接的数据库上的后续操作已超时前允许的秒数。  
   
 ```  
@@ -583,7 +578,7 @@ short GetQueryTimeout();
   
  有关相关信息，请参阅主题 DAO 帮助中的"QueryTimeout 属性"。  
   
-##  <a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>  CDaoDatabase::GetRecordsAffected  
  调用此成员函数可确定的最新的调用受影响的记录数[执行](#execute)成员函数。  
   
 ```  
@@ -598,7 +593,7 @@ long GetRecordsAffected();
   
  有关相关信息，请参阅主题 DAO 帮助中的"RecordsAffected 属性"。  
   
-##  <a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
+##  <a name="getrelationcount"></a>  CDaoDatabase::GetRelationCount  
  调用此成员函数可获取数据库中表之间定义关系的数量。  
   
 ```  
@@ -613,7 +608,7 @@ short GetRelationCount();
   
  若要说明相关的概念，请考虑供应商表和产品表，它可能没有一个对多关系。 在此关系中，一个供应商可以提供多个产品。 其他关系为一对一和多对多。  
   
-##  <a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
+##  <a name="getrelationinfo"></a>  CDaoDatabase::GetRelationInfo  
  调用此成员函数以获取有关数据库的关系集合中的指定关系的信息。  
   
 ```  
@@ -639,9 +634,9 @@ void GetRelationInfo(
  `dwInfoOptions`  
  指定有关要检索的关系的信息的选项。 以及它们会导致函数返回有关该关系，这里列出了可用的选项：  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称，表中，外部表  
+- `AFX_DAO_PRIMARY_INFO` （默认值）名称，表中，外部表  
   
-- `AFX_DAO_SECONDARY_INFO`属性，字段信息  
+- `AFX_DAO_SECONDARY_INFO` 属性，字段信息  
   
  字段信息是[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)对象，其中包含从关系中涉及的主表的字段。  
   
@@ -654,7 +649,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  如果您将关系设置对象的属性，若要激活的级联操作 ( **dbRelationUpdateCascades**或**dbRelationDeleteCascades**)，Microsoft Jet 数据库引擎会自动更新或相关的主键表发生更改时，请删除一个或多个其他表中的记录。 例如，假设你建立客户表和 Orders 表之间的级联删除关系。 当 Customers 表中删除记录时，也将删除与该客户相关的 Orders 表中的记录。 此外，如果建立级联删除订单表和其他表之间的关系，则在从客户表中删除记录时，会自动删除这些表中的记录。  
   
-##  <a name="gettabledefcount"></a>CDaoDatabase::GetTableDefCount  
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount  
  调用此成员函数可检索数据库中定义的表的数目。  
   
 ```  
@@ -665,9 +660,9 @@ short GetTableDefCount();
  数据库中定义的 tabledefs 数。  
   
 ### <a name="remarks"></a>备注  
- `GetTableDefCount`如果需要循环访问数据库的 TableDefs 集合中的所有 tabledefs，很有用。 若要获取有关给定表集合中的信息，请参阅[GetTableDefInfo](#gettabledefinfo)。  
+ `GetTableDefCount` 如果需要循环访问数据库的 TableDefs 集合中的所有 tabledefs，很有用。 若要获取有关给定表集合中的信息，请参阅[GetTableDefInfo](#gettabledefinfo)。  
   
-##  <a name="gettabledefinfo"></a>CDaoDatabase::GetTableDefInfo  
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo  
  调用此成员函数来获取各种类型的数据库中定义的表有关的信息。  
   
 ```  
@@ -693,11 +688,11 @@ void GetTableDefInfo(
  `dwInfoOptions`  
  指定要检索的表有关的信息的选项。 以及它们会导致函数返回有关该关系，这里列出了可用的选项：  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）可更新的、 名称、 属性  
+- `AFX_DAO_PRIMARY_INFO` （默认值）可更新的、 名称、 属性  
   
-- `AFX_DAO_SECONDARY_INFO`主要信息加号： 日期创建，上次更新日期，源表名称，连接  
+- `AFX_DAO_SECONDARY_INFO` 主要信息加号： 日期创建，上次更新日期，源表名称，连接  
   
-- `AFX_DAO_ALL_INFO`主要和次要信息加号： 验证规则，验证文本记录计数  
+- `AFX_DAO_ALL_INFO` 主要和次要信息加号： 验证规则，验证文本记录计数  
   
  `lpszName`  
  按名称查找 tabledef 对象名称。  
@@ -710,7 +705,7 @@ void GetTableDefInfo(
 > [!NOTE]
 >  `AFX_DAO_ALL_INFO`选项提供可能会很慢，若要获取的信息。 在这种情况下，计算表中的记录的数量可能非常耗时如果有多个记录。  
   
-##  <a name="getversion"></a>CDaoDatabase::GetVersion  
+##  <a name="getversion"></a>  CDaoDatabase::GetVersion  
  调用此成员函数来确定 Microsoft Jet 数据库文件的版本。  
   
 ```  
@@ -725,7 +720,7 @@ CString GetVersion();
   
  有关相关信息，请参阅主题 DAO 帮助中的"版本属性"。  
   
-##  <a name="isopen"></a>CDaoDatabase::IsOpen  
+##  <a name="isopen"></a>  CDaoDatabase::IsOpen  
  调用此成员函数可确定是否`CDaoDatabase`对象当前处于打开状态的数据库上。  
   
 ```  
@@ -737,7 +732,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
+##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase  
  包含指向 DAO 数据库对象基础的 OLE 接口的`CDaoDatabase`对象。  
   
 ### <a name="remarks"></a>备注  
@@ -745,13 +740,13 @@ BOOL IsOpen() const;
   
  有关调用 DAO 直接，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
   
-##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
+##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace  
  包含指向的[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)对象，其中包含的数据库对象。  
   
 ### <a name="remarks"></a>备注  
  如果你需要直接访问工作区，请使用此指针 — 例如，若要获取工作区中的数据库集合中其他数据库对象的指针。  
   
-##  <a name="open"></a>CDaoDatabase::Open  
+##  <a name="open"></a>  CDaoDatabase::Open  
  必须调用该成员函数以初始化新构造`CDaoDatabase`对象，表示现有数据库。  
   
 ```  
@@ -810,7 +805,7 @@ virtual void Open(
   
  此外可以针对多个级别的登录名授权使用的连接字符串 (每个不同`CDaoDatabase`对象)，或者传递其他特定于数据库的信息。  
   
-##  <a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>  CDaoDatabase::SetQueryTimeout  
  调用此成员函数可重写默认以允许在后续操作上连接的数据库超时之前的秒数。  
   
 ```  

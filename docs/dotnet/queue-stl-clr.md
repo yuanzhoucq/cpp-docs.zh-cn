@@ -2,11 +2,8 @@
 title: 队列 (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - queue class [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d5b91a2556a93f3cd74a24ea57306d70f2cbdb41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e65d5a364f5886df2bad976e3c34dc57266b70f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 此模板类描述控制元素的长短序列，可先入先出访问的对象。 使用容器适配器`queue`来管理为队列的基础容器。  
@@ -48,7 +43,7 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- “值”  
+ 值  
  受控序列中的元素的类型。  
   
  容器  
@@ -105,7 +100,7 @@ template<typename Value,
 ## <a name="remarks"></a>备注  
  对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 对象限制的访问权限只将推送的第一个元素并弹出的最后一个元素，实现第一个在先进先出队列 （也称为 FIFO 队列或只需队列）。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  

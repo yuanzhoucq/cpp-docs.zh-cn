@@ -1,13 +1,10 @@
 ---
-title: "命令传送 |Microsoft 文档"
-ms.custom: 
+title: 命令传送 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>命令传送
 你使用命令的职责限于在命令及其处理程序函数间建立消息映射连接，也是你使用“属性”窗口的任务。 还必须编写大部分命令处理程序。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 |当此类型的对象收到命令时。 . .|它给自身和其他命令目标对象一个机会以此顺序处理命令：|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|MDI 框架窗口 (`CMDIFrameWnd`)|1.活动`CMDIChildWnd`<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|  
+|MDI 框架窗口 (`CMDIFrameWnd`)|1.活动 `CMDIChildWnd`<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|  
 |文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1.活动视图<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|  
 |视图|1.此视图<br />2.附加到视图的文档|  
 |Document|1.此文档<br />2.附加到文档的文档模板|  

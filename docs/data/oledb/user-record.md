@@ -1,12 +1,9 @@
 ---
-title: "用户记录 |Microsoft 文档"
-ms.custom: 
+title: 用户记录 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbb073aceaff855de700eae6d8aede148f9b8bcc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c58807dac8ae320ee69c8e1a372fff5b9d3db02
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-record"></a>用户记录
 用户记录提供表示行集列数据的代码和数据结构。 在编译时或在运行时，可以创建用户记录。 当你创建提供程序使用 ATL OLE DB 提供程序向导时，向导将创建如下所示 （假设你指定"MyProvider"的提供程序名称 [短名称]） 的默认用户记录：  

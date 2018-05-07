@@ -1,12 +1,9 @@
 ---
-title: "CToolBar 类 |Microsoft 文档"
-ms.custom: 
+title: CToolBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CToolBar
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a80ea4cb188d879b9af0a7901ffbe89b8673df6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctoolbar-class"></a>CToolBar 类
 具有一行位图化按钮和可选分隔符的控件条。  
@@ -106,9 +101,9 @@ class CToolBar : public CControlBar
 |[CToolBar::SetSizes](#setsizes)|设置按钮和其位图的大小。|  
   
 ## <a name="remarks"></a>备注  
- 按钮可以像普通按钮、 复选框按钮、 或单选按钮。 `CToolBar`对象是从类派生的框架窗口对象的通常嵌入的成员[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)。  
+ 按钮可以像普通按钮、 复选框按钮、 或单选按钮。 `CToolBar` 对象是从类派生的框架窗口对象的通常嵌入的成员[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)。  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成员函数新到 MFC 4.0，使您可以充分利用自定义工具栏和其他功能的 Windows 公共控件的支持。 `CToolBar`成员函数为您提供的大多数 Windows 公共控件; 功能但是，当调用`GetToolBarCtrl`，你可让您的工具栏甚至多个 Windows 95/98 工具栏的特征。 当调用`GetToolBarCtrl`，它将返回到引用`CToolBarCtrl`对象。 请参阅[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)有关设计使用 Windows 公共控件的工具栏的详细信息。 公共控件有关的更多常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成员函数新到 MFC 4.0，使您可以充分利用自定义工具栏和其他功能的 Windows 公共控件的支持。 `CToolBar` 成员函数为您提供的大多数 Windows 公共控件; 功能但是，当调用`GetToolBarCtrl`，你可让您的工具栏甚至多个 Windows 95/98 工具栏的特征。 当调用`GetToolBarCtrl`，它将返回到引用`CToolBarCtrl`对象。 请参阅[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)有关设计使用 Windows 公共控件的工具栏的详细信息。 公共控件有关的更多常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
  Visual c + + 为你提供了两种方法，以创建工具栏。 若要创建工具栏资源使用资源编辑器，请按照下列步骤：  
   
@@ -141,11 +136,11 @@ class CToolBar : public CControlBar
  每个按钮有一个映像。 各种按钮状态，然后从该一个映像生成样式 （按下，列表中，已禁用、 关闭、 禁用和中间状态）。 尽管位图可能是任意颜色，可以获得最佳结果的黑色和阴影的灰色图像。  
   
 > [!WARNING]
-> `CToolBar`支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
+> `CToolBar` 支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
   
  默认情况下，工具栏按钮模仿按键。 但是，复选框按钮或单选按钮，还可以模拟工具栏按钮。 复选框按钮有三种状态： 已选中、 已清除，和中间状态。 单选按钮具有只有两种状态： 选中和清除。  
   
- 若要设置的单个按钮或分隔符样式不指向数组的情况下，调用[GetButtonStyle](#getbuttonstyle)以检索该样式，然后调用[SetButtonStyle](#setbuttonstyle)而不是`SetButtons`。 `SetButtonStyle`当你想要在运行时更改按钮的样式，则将最为有用。  
+ 若要设置的单个按钮或分隔符样式不指向数组的情况下，调用[GetButtonStyle](#getbuttonstyle)以检索该样式，然后调用[SetButtonStyle](#setbuttonstyle)而不是`SetButtons`。 `SetButtonStyle` 当你想要在运行时更改按钮的样式，则将最为有用。  
   
  若要将分配要在按钮上显示的文本，调用[GetButtonText](#getbuttontext)以检索要显示在的按钮，然后调用的文本[SetButtonText](#setbuttontext)以设置的文本。  
   
@@ -166,10 +161,10 @@ class CToolBar : public CControlBar
   
  `CToolBar`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
  此成员函数返回的第一个工具栏按钮，开始位置 0，其命令 ID 匹配的索引`nIDFind`。  
   
 ```  
@@ -183,7 +178,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>返回值  
  索引的按钮，则为-1 如果按钮没有给定的命令 id。  
   
-##  <a name="create"></a>CToolBar::Create  
+##  <a name="create"></a>  CToolBar::Create  
  此成员函数将创建一个 Windows 工具栏 （子窗口），并将其与关联`CToolBar`对象。  
   
 ```  
@@ -200,13 +195,13 @@ virtual BOOL Create(
  `dwStyle`  
  工具栏样式中。 支持的其他工具栏样式包括：  
   
-- `CBRS_TOP`控件条是在框架窗口的顶部。  
+- `CBRS_TOP` 控件条是在框架窗口的顶部。  
   
-- `CBRS_BOTTOM`控件条是在框架窗口的底部。  
+- `CBRS_BOTTOM` 控件条是在框架窗口的底部。  
   
-- `CBRS_NOALIGN`父级调整大小时，将不会重新定位控件条。  
+- `CBRS_NOALIGN` 父级调整大小时，将不会重新定位控件条。  
   
-- `CBRS_TOOLTIPS`控件栏会显示工具提示。  
+- `CBRS_TOOLTIPS` 控件栏会显示工具提示。  
   
 - **CBRS_SIZE_DYNAMIC**控件条是动态的。  
   
@@ -214,7 +209,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**浮点控件条。  
   
-- `CBRS_FLYBY`状态栏会显示有关该按钮的信息。  
+- `CBRS_FLYBY` 状态栏会显示有关该按钮的信息。  
   
 - **CBRS_HIDE_INPLACE**控件条不向用户显示。  
   
@@ -230,7 +225,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="createex"></a>CToolBar::CreateEx  
+##  <a name="createex"></a>  CToolBar::CreateEx  
  调用此函数可创建一个 Windows 工具栏 （子窗口），并将其与关联`CToolBar`对象。  
   
 ```  
@@ -268,12 +263,12 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  它还将工具栏高度设置为默认值。  
   
- 使用`CreateEx`，而不是[创建](#create)，当需要在嵌入式的工具栏控件的创建过程的某些样式。 例如，设置`dwCtrlStyle`到**TBSTYLE_FLAT &#124;TBSTYLE_TRANSPARENT**创建类似于 Internet 资源管理器 4 工具栏的工具栏。  
+ 使用`CreateEx`，而不是[创建](#create)，当需要在嵌入式的工具栏控件的创建过程的某些样式。 例如，设置`dwCtrlStyle`到**TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT**创建类似于 Internet 资源管理器 4 工具栏的工具栏。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="ctoolbar"></a>CToolBar::CToolBar  
+##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
  此成员函数构造`CToolBar`对象和设置的默认大小。  
   
 ```  
@@ -283,7 +278,7 @@ CToolBar();
 ### <a name="remarks"></a>备注  
  调用[创建](#create)成员函数来创建工具栏窗口。  
   
-##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
  此成员函数将检索控件 ID、 样式和工具栏按钮或通过指定的位置处的分隔符图像索引*nIndex。*  
   
 ```  
@@ -312,7 +307,7 @@ void GetButtonInfo(
   
  如果`nIndex`指定一个分隔符，`iImage`设为以像素为单位的分隔符宽度。  
   
-##  <a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
  调用此成员函数可检索的按钮或在工具栏上的分隔符的样式。  
   
 ```  
@@ -329,7 +324,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>备注  
  按钮样式确定如何该按钮显示和对用户输入的响应方式。 请参阅[SetButtonStyle](#setbuttonstyle)有关按钮样式的示例。  
   
-##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
  调用此成员函数以检索在按钮显示的文本。  
   
 ```  
@@ -353,7 +348,7 @@ void GetButtonText(
 ### <a name="remarks"></a>备注  
  此成员的第二种形式函数填充`CString`具有字符串文本对象。  
   
-##  <a name="getitemid"></a>CToolBar::GetItemID  
+##  <a name="getitemid"></a>  CToolBar::GetItemID  
  此成员函数返回的命令 ID 的按钮或由指定的分隔符`nIndex`。  
   
 ```  
@@ -370,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>备注  
  分隔符返回**ID_SEPARATOR**。  
   
-##  <a name="getitemrect"></a>CToolBar::GetItemRect  
+##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
  此成员函数填充`RECT`结构中包含其地址`lpRect`按钮或由指定的分隔符的坐标`nIndex`。  
   
 ```  
@@ -394,7 +389,7 @@ virtual void GetItemRect(
 ### <a name="example"></a>示例  
   请参阅示例[CToolBar::SetSizes](#setsizes)。  
   
-##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
+##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
  此成员函数允许直接访问基础的公共控件。  
   
 ```  
@@ -412,7 +407,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
  调用此成员函数可加载由指定的位图`lpszResourceName`或`nIDResource`。  
   
 ```  
@@ -434,9 +429,9 @@ BOOL LoadBitmap(UINT nIDResource);
  位图应包含一个图像可查看每个工具栏按钮。 如果图像不标准大小 （16 像素宽和高 15 像素） 的调用[SetSizes](#setsizes)设置按钮大小和其图像。  
   
 > [!WARNING]
-> `CToolBar`支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
+> `CToolBar` 支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
   
-##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
  调用此成员函数可加载由指定的工具栏`lpszResourceName`或`nIDResource`。  
   
 ```  
@@ -460,7 +455,7 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="example"></a>示例  
   请参阅示例[CToolBar::CreateEx](#createex)。  
   
-##  <a name="setbitmap"></a>CToolBar::SetBitmap  
+##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
  调用此成员函数可设置工具栏的位图图像。  
   
 ```  
@@ -477,7 +472,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="remarks"></a>备注  
  例如，调用`SetBitmap`用户对更改按钮的操作的文档执行操作后更改位图图像。  
   
-##  <a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
  调用此成员函数可设置按钮的命令 ID、 样式和映像数量。  
   
 ```  
@@ -525,7 +520,7 @@ void SetButtonInfo(
   
  位图图像和按钮上的信息，请参阅[CToolBar](../../mfc/reference/ctoolbar-class.md)概述和[CToolBar::LoadBitmap](#loadbitmap)。  
   
-##  <a name="setbuttons"></a>CToolBar::SetButtons  
+##  <a name="setbuttons"></a>  CToolBar::SetButtons  
  此成员函数将每个工具栏按钮的命令 ID 设置为指定数组的相应元素的值`lpIDArray`。  
   
 ```  
@@ -551,7 +546,7 @@ BOOL SetButtons(
   
  如果`lpIDArray`是**NULL**，此函数为指定的项的数目分配空间`nIDCount`。 使用[SetButtonInfo](#setbuttoninfo)设置每个项的特性。  
   
-##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
  调用此成员函数可设置的样式的按钮或分隔符，或组按钮。  
   
 ```  
@@ -591,7 +586,7 @@ void SetButtonStyle(
 > [!NOTE]
 >  你还可以设置使用的按钮状态`nStyle`参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonStyle`下一步将会丢失空闲处理。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
   
-##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  调用此函数可设置上一个按钮的文本。  
   
 ```  
@@ -613,7 +608,7 @@ BOOL SetButtonText(
 ### <a name="example"></a>示例  
   请参阅示例[CToolBar::GetToolBarCtrl](#gettoolbarctrl)。  
   
-##  <a name="setheight"></a>CToolBar::SetHeight  
+##  <a name="setheight"></a>  CToolBar::SetHeight  
  此成员函数设置的值，以像素为单位，指定在工具栏的高度`cyHeight`。  
   
 ```  
@@ -629,7 +624,7 @@ void SetHeight(int cyHeight);
   
  如果未调用此函数，框架将使用按钮的大小来确定工具栏高度。  
   
-##  <a name="setsizes"></a>CToolBar::SetSizes  
+##  <a name="setsizes"></a>  CToolBar::SetSizes  
  调用此成员函数可设置为的大小，以像素为单位中, 指定的工具栏按钮*sizeButton*。  
   
 ```  

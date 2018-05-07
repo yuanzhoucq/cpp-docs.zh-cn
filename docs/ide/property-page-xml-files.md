@@ -1,29 +1,24 @@
 ---
-title: "属性页 XML 规则文件 |Microsoft 文档"
-ms.custom: 
+title: 属性页 XML 规则文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>属性页 XML 规则文件
 通过 VCTargets 文件夹中的 XML 文件，配置在 IDE 中的项目属性页。 确切的路径取决于安装了 Visual Studio 的 edition(s)，和产品语言。 对于 Visual Studio 自 2017 年 1 Enterprise Edition 中，在英语中，路径是`%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`。 XML 文件描述的规则、 类别中，和的各个属性，其数据类型、 默认值的名称和它们将如何显示。 当你在 IDE 中设置属性时，在项目文件中存储的新值。
@@ -101,26 +96,26 @@ ms.lasthandoff: 12/21/2017
 
    b. **PageTemplate:** UI 使用此属性的值从 UI 模板集合中进行选择。 "工具"模板呈现标准网格格式中的属性。 此属性的其他内置值是"调试器"和"泛型"。 请参阅调试节点和常规节点，分别，请参阅导致指定这些值的 UI 格式。 "调试器"页模板的 UI 使用一个下拉列表框来切换不同的调试器的属性，而"泛型"模板显示所有中而不是具有多个类别子节点下的规则的一页的不同属性类别节点。 此属性是只是一项建议 UI;xml 文件被旨在作为独立的 UI。 不同 UI 可能用于不同目的使用此属性。
 
-  c. **SwitchPrefix:**这是用于交换机命令行中使用的前缀。 值为"/"将导致如下所示 /ZI、 /nologo、 /W3 等的开关。
+  c. **SwitchPrefix:** 这是用于交换机命令行中使用的前缀。 值为"/"将导致如下所示 /ZI、 /nologo、 /W3 等的开关。
 
   d. **顺序：**这是向与所有其他规则比较，在系统中此规则的相对位置上的潜在 UI 客户端的建议。
 
-  e. **xmlns:**这是一个标准的 XAML 元素。 你可以看到列出的三个命名空间。 这些方法对应于 XAML 反序列化的命名空间类，XAML 架构和系统命名空间，分别。
+  e. **xmlns:** 这是一个标准的 XAML 元素。 你可以看到列出的三个命名空间。 这些方法对应于 XAML 反序列化的命名空间类，XAML 架构和系统命名空间，分别。
 
-  f. **DisplayName:**这是在规则节点的属性页 UI 上显示的名称。 此值进行了本地化。 我们创建 DisplayName 规则的子元素，而不是属性 （如名称或 SwitchPrefix） 由于内部本地化工具要求。 从 XAML 的角度来看，两个等效值。 因此，你可以只需将其属性以减少混乱，或将它保留原样。
+  f. **DisplayName:** 这是在规则节点的属性页 UI 上显示的名称。 此值进行了本地化。 我们创建 DisplayName 规则的子元素，而不是属性 （如名称或 SwitchPrefix） 由于内部本地化工具要求。 从 XAML 的角度来看，两个等效值。 因此，你可以只需将其属性以减少混乱，或将它保留原样。
 
   g. **数据源：**这是一个非常重要的属性，指示项目系统的属性值应从该位置从读取和写入和其分组 （如下所述）。 有关 cl.xml，这些值如下：
 
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`通知规则的所有属性应都写入项目文件的项目系统或属性表使用的文件 （具体取决于节点已生成的属性页）。 其他可能的值是将值写入.user 文件的"UserFile"。
+   - `Persistence="ProjectFile` 通知规则的所有属性应都写入项目文件的项目系统或属性表使用的文件 （具体取决于节点已生成的属性页）。 其他可能的值是将值写入.user 文件的"UserFile"。
 
-   - `ItemType="ClCompile"`显示属性，将存储为 ItemDefinition 元数据或 （后者仅当属性页已生成从解决方案资源管理器中的文件节点） 的项元数据的此项类型。 如果未设置此字段，然后会将此属性写 PropertyGroup 中的常见属性。
+   - `ItemType="ClCompile"` 显示属性，将存储为 ItemDefinition 元数据或 （后者仅当属性页已生成从解决方案资源管理器中的文件节点） 的项元数据的此项类型。 如果未设置此字段，然后会将此属性写 PropertyGroup 中的常见属性。
 
-   - `Label=""`指示当属性都被编写为`ItemDefinition`元数据，父 ItemDefinitionGroup 的标签将为空 （每个 MSBuild 元素可以有标签）。 Visual Studio 2017 使用标记的组来导航.vcxproj 项目文件。 请注意，包含大多数规则属性的组具有一个空字符串作为标签。
+   - `Label=""` 指示当属性都被编写为`ItemDefinition`元数据，父 ItemDefinitionGroup 的标签将为空 （每个 MSBuild 元素可以有标签）。 Visual Studio 2017 使用标记的组来导航.vcxproj 项目文件。 请注意，包含大多数规则属性的组具有一个空字符串作为标签。
 
-   - `HasConfigurationCondition="true"`告知项目系统以粘贴配置条件与值，以便它会仅对当前项目配置 （条件无法附加到父组或值本身） 生效。 例如，打开项目节点关闭属性页并设置属性的值**将警告作为错误**下**配置属性 > C/c + + 常规**为"是"。 下面的值写入项目文件。 请注意配置条件附加到父 ItemDefinitionGroup。
+   - `HasConfigurationCondition="true"` 告知项目系统以粘贴配置条件与值，以便它会仅对当前项目配置 （条件无法附加到父组或值本身） 生效。 例如，打开项目节点关闭属性页并设置属性的值**将警告作为错误**下**配置属性 > C/c + + 常规**为"是"。 下面的值写入项目文件。 请注意配置条件附加到父 ItemDefinitionGroup。
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
@@ -175,14 +170,14 @@ ms.lasthandoff: 12/21/2017
 
    b. **类别：**这会将声明在其下此属性所属的类别。 尝试查找此属性在**输出文件**在 UI 中的类别。
 
-   c. **交换机：**当规则表示一个工具 – 例如编译器工具在此情况下 – 大多数规则属性作为交换机期间传递给该工具可执行生成时。 此属性的值指示文本要使用交换机。 上述属性指定应为其交换机**Fo**。 结合**SwitchPrefix**父规则，此属性的属性传递到可执行文件作为**/Fo"调试\"** （在 C/c + + 中的属性页 UI 的命令行中可见）。
+   c. **交换机：**当规则表示一个工具 – 例如编译器工具在此情况下 – 大多数规则属性作为交换机期间传递给该工具可执行生成时。 此属性的值指示文本要使用交换机。 上述属性指定应为其交换机**Fo**。 结合**SwitchPrefix**父规则，此属性的属性传递到可执行文件作为 **/Fo"调试\"** （在 C/c + + 中的属性页 UI 的命令行中可见）。
 
    其他属性特性包括：
 
    d. **可见性：**如果由于某种原因，您不希望属性显示在属性页中 （但在生成期间可能仍然可用），将此属性设置为 false。
 
-   e. **ReadOnly:**如果你想要提供的属性页中的此属性的值的只读视图，则将此属性设置为 true。
+   e. **ReadOnly:** 如果你想要提供的属性页中的此属性的值的只读视图，则将此属性设置为 true。
 
-   f. **IncludeInCommandLine:**某些属性可能不需要在生成期间要传递给工具。 将此属性设置为 false 将阻止其传递。
+   f. **IncludeInCommandLine:** 某些属性可能不需要在生成期间要传递给工具。 将此属性设置为 false 将阻止其传递。
 
 

@@ -1,13 +1,10 @@
 ---
-title: "TN062： 消息 Windows 控件的反射 |Microsoft 文档"
-ms.custom: 
+title: TN062： 消息 Windows 控件的反射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.messages
 dev_langs:
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9a0dd227cb54ba85c85901f706966326b1b66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062：Windows 控件的消息反射
 > [!NOTE]
@@ -70,11 +65,11 @@ ms.lasthandoff: 12/21/2017
   
  如果提供的处理程序特定消息，或者为某个范围的消息，在父窗口的类中，它将替代反映对同一条消息的消息处理程序，提供你不在你自己的处理程序中调用基类处理程序函数。 例如，如果你处理`WM_CTLCOLOR`对话框类，在你处理将重写任何反射的消息处理程序。  
   
- 如果在父窗口类中，提供的处理程序特定**WM_NOTIFY**消息或一系列**WM_NOTIFY**消息，将调用您的处理程序，仅当子控件发送这些消息的作用没有反映的消息处理程序通过**ON_NOTIFY_REFLECT()**。 如果你使用**ON_NOTIFY_REFLECT_EX()**在消息映射中，消息处理程序可能或可能不允许父窗口来处理该消息。 如果处理程序返回**FALSE**，消息将返回的调用时处理，则父级**TRUE**不允许进行处理的父级。 请注意在通知消息前进行处理反射的消息。  
+ 如果在父窗口类中，提供的处理程序特定**WM_NOTIFY**消息或一系列**WM_NOTIFY**消息，将调用您的处理程序，仅当子控件发送这些消息的作用没有反映的消息处理程序通过**ON_NOTIFY_REFLECT()**。 如果你使用**ON_NOTIFY_REFLECT_EX()** 在消息映射中，消息处理程序可能或可能不允许父窗口来处理该消息。 如果处理程序返回**FALSE**，消息将返回的调用时处理，则父级**TRUE**不允许进行处理的父级。 请注意在通知消息前进行处理反射的消息。  
   
  当**WM_NOTIFY**发送消息，该控件提供第一个机会处理它。 如果任何其他反映的消息发送时，父窗口具有第一个机会处理它，并且该控件将接收反射的消息。 若要执行此操作，它将需要处理程序函数和控件的类消息映射中的相应条目。  
   
- 反映的消息的消息映射宏是正则通知稍有不同： 它具有**_REFLECT**追加到其常用的名称。 例如，若要处理**WM_NOTIFY**消息在父，你可以使用宏`ON_NOTIFY`父级的消息映射中。 若要处理反射的消息中的子控件，使用**ON_NOTIFY_REFLECT**子控件的消息映射中的宏。 在某些情况下，参数不同，也是的。 请注意，ClassWizard 可以通常会为您添加的消息映射条目，并且提供用正确的参数的主干函数实现。  
+ 反映的消息的消息映射宏是正则通知稍有不同： 它具有 **_REFLECT**追加到其常用的名称。 例如，若要处理**WM_NOTIFY**消息在父，你可以使用宏`ON_NOTIFY`父级的消息映射中。 若要处理反射的消息中的子控件，使用**ON_NOTIFY_REFLECT**子控件的消息映射中的宏。 在某些情况下，参数不同，也是的。 请注意，ClassWizard 可以通常会为您添加的消息映射条目，并且提供用正确的参数的主干函数实现。  
   
  请参阅[TN061: ON_NOTIFY 和 WM_NOTIFY 消息](../mfc/tn061-on-notify-and-wm-notify-messages.md)有关新的信息**WM_NOTIFY**消息。  
   
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
  通常，ClassWizard 可以为您添加这些消息映射条目，并提供主干函数实现。 请参阅[反映的消息定义消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)有关如何定义反映的消息的处理程序的信息。  
   
- 若要从消息名称转换为反映的宏名称，在前面添加**ON_**和追加**_REFLECT**。 例如，`WM_CTLCOLOR`变得**ON_WM_CTLCOLOR_REFLECT**。 （若要查看可以反映的消息，请执行下表中的宏项相反的转换。）  
+ 若要从消息名称转换为反映的宏名称，在前面添加**ON_** 和追加 **_REFLECT**。 例如，`WM_CTLCOLOR`变得**ON_WM_CTLCOLOR_REFLECT**。 （若要查看可以反映的消息，请执行下表中的宏项相反的转换。）  
   
  上述规则的三个例外是，如下所示：  
   
