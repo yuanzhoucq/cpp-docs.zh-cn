@@ -1,13 +1,10 @@
 ---
-title: "OLE 后台： 链接和嵌入 |Microsoft 文档"
-ms.custom: 
+title: OLE 后台： 链接和嵌入 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b7de075b3c32d130639c60c7fcc389ae37da54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5dc7a5770c98323187dbabcd8c2a7bb9eb652de
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 后台：链接和嵌入
 在容器应用程序中使用“粘贴”命令将创建嵌入组件或嵌入项目。 嵌入项目的源数据作为包含其的 OLE 文档的一部分存储。 这样一来，字处理器文档的文档文件可包含文本，还可包含位图、图形、公式或任何其他类型的数据。  

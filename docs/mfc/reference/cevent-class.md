@@ -1,12 +1,9 @@
 ---
-title: "CEvent 类 |Microsoft 文档"
-ms.custom: 
+title: CEvent 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent 类
 表示一个事件，即支持一个线程向已发生事件的另一个线程的同步对象。  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>备注  
  当一个线程必须知道何时执行其任务时，事件非常有用。 例如，新数据可用时，必须通知将数据复制到的数据存档的线程。 通过使用`CEvent`对象以新数据可用时通知复制线程的线程可以尽快执行其任务。  
   
- `CEvent`对象具有两种类型： 手动和自动。  
+ `CEvent` 对象具有两种类型： 手动和自动。  
   
  自动`CEvent`对象自动返回给是非终止的 （不可用） 状态后释放至少一个线程。 默认情况下，`CEvent`对象是自动的除非您传递`TRUE`为`bManualReset`在构造期间的参数。  
   
@@ -92,10 +87,10 @@ class CEvent : public CSyncObject
   
  `CEvent`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  命名的或未命名的构造`CEvent`对象。  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  在创建后`CEvent`对象，请使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确保互斥体尚不存在。 如果互斥体未意外存在，则可能表示一个恶意进程是占用和可能想要恶意使用互斥体。 在这种情况下，建议的安全意识过程是关闭句柄并继续就像在创建对象时失败。  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  设置要发出信号的事件的状态 （可用）、 释放任何正在等待的线程，并将其重置为非终止 （不可用） 自动。  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  如果没有线程在等待，或可以立即释放无线程`PulseEvent`设置到事件的状态非终止并返回。  
   
- `PulseEvent`使用基础 Win32`PulseEvent`函数，可暂时从等待状态由内核模式异步过程调用。 因此，`PulseEvent`是不可靠，不应由新的应用程序。 有关详细信息，请参阅[PulseEvent 函数](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
+ `PulseEvent` 使用基础 Win32`PulseEvent`函数，可暂时从等待状态由内核模式异步过程调用。 因此，`PulseEvent`是不可靠，不应由新的应用程序。 有关详细信息，请参阅[PulseEvent 函数](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  设置到事件的状态非终止之前显式设置为终止通过[SetEvent](#setevent)成员函数。  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  自动事件不使用此成员函数。  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  释放任何正在等待的线程设置为终止状态，事件的状态。  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>备注  
  如果事件是手动，则事件将保持终止状态，直到[ResetEvent](#resetevent)调用。 可以在这种情况下释放多个线程。 如果事件是自动的该事件将保留发送信号，直至释放一个线程。 然后，系统会将事件状态设置为非终止。 如果没有线程在等待，一直保持状态，终止状态之前则释放一个线程。  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  释放事件对象。  
   
 ```  

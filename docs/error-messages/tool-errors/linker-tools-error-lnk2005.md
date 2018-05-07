@@ -1,12 +1,9 @@
 ---
-title: "链接器工具错误 LNK2005 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具错误 LNK2005 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2005
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2005"></a>链接器工具错误 LNK2005
 *符号*对象中已定义  
@@ -115,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果可能发生此错误`extern const`变量被定义两次，并在每个定义中具有不同的值。 若要解决此问题，定义常量的一次，或者使用命名空间或`enum class`来区分常量的定义。  
   
--   Uuid.lib 结合使用与定义 Guid （例如 oledb.lib 和 adsiid.lib） 的其他.lib 文件，可能出现此错误。 例如:  
+-   Uuid.lib 结合使用与定义 Guid （例如 oledb.lib 和 adsiid.lib） 的其他.lib 文件，可能出现此错误。 例如：  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  

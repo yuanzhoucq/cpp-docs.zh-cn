@@ -1,12 +1,9 @@
 ---
-title: "partial_sort_copy (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: partial_sort_copy (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::partial_sort_copy
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - partial_sort_copy function [STL/CLR]
 ms.assetid: ed4af83e-7554-4f6d-bf54-c56fa6210fe8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 351209d8f3bd68d614a45a9d4aa8f1b0dc767663
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99b60d3b3384cacd7c501ea1d8beb4e76131616b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partialsortcopy-stlclr"></a>partial_sort_copy (STL/CLR)
 将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。  
@@ -45,7 +40,7 @@ template<class _InIt, class _RanIt, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`partial_sort_copy`。 有关详细信息，请参阅[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  

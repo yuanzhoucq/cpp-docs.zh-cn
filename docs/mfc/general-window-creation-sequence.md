@@ -1,13 +1,10 @@
 ---
-title: "常用窗口创建序列 |Microsoft 文档"
-ms.custom: 
+title: 常用窗口创建序列 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bed4387a6b8e6edeb504e29d221e76a0b39d18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75a9c6ecf6516adceda845dadd4f0313ae605f0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-window-creation-sequence"></a>常用窗口创建序列
 在创建你自己，如子窗口的窗口时，框架将使用得多的相同的过程中所述的[文档/视图创建](../mfc/document-view-creation.md)。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  **创建**成员函数才可使 Windows 窗口，并将存储其`HWND`在 c + + 对象的公共数据成员中[m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)。 **创建**使完成灵活性能够对的创建参数。 之前调用**创建**，你可能想要的窗口类注册为全局函数[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)若要设置帧的图标和类样式。  
   
- 对于框架窗口，你可以使用[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)成员函数而不是**创建**。 `LoadFrame`使 Windows 窗口使用较少的参数。 它会从资源，包括帧的标题、 图标、 快捷键对应表和菜单获取多个默认值。  
+ 对于框架窗口，你可以使用[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)成员函数而不是**创建**。 `LoadFrame` 使 Windows 窗口使用较少的参数。 它会从资源，包括帧的标题、 图标、 快捷键对应表和菜单获取多个默认值。  
   
 > [!NOTE]
 >  图标、 快捷键对应表和菜单资源必须具有一个公共的资源 ID，如**IDR_MAINFRAME**，它们由 LoadFrame 加载。  

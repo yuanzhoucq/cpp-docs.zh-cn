@@ -1,12 +1,9 @@
 ---
-title: "使用多个结果集从一个存储过程 |Microsoft 文档"
-ms.custom: 
+title: 使用多个结果集从一个存储过程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - stored procedures, returning result sets
 - multiple result sets
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39faf4313fbf4ed98810e8f9dd557897f2bfb834
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6393901839e8450ebc45b11f1d4bd2250da2ca56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>使用一个存储过程返回的多个结果集
 大多数存储的过程返回多个结果集。 此类存储的过程通常包括一个或多个选择语句。 使用者需要考虑这一点以便处理所有结果集。  

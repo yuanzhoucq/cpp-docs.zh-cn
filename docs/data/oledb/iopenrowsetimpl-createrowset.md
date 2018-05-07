@@ -1,12 +1,9 @@
 ---
-title: IOpenRowsetImpl::CreateRowset | Microsoft Docs
-ms.custom: 
+title: 'Iopenrowsetimpl:: Createrowset |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IOpenRowsetImpl.CreateRowset
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateRowset method
 ms.assetid: 69041cf6-7a2f-4409-a26e-6e984c24986e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c03b94464b8a326b911b11cc7dab6d09c88ce9a4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2d4554a2aeee3218ce505dc2c135167a3e38d55c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
 创建一个行集对象。 不直接由用户调用。 请参阅[IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程序员参考。*  
@@ -57,7 +52,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
   
  其他参数，请参阅[IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程序员参考。*  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

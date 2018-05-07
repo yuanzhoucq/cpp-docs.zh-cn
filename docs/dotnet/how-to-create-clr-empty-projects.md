@@ -2,30 +2,25 @@
 title: 如何： 创建 CLR 空项目 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81d24698ccdc769f93882287dfa94dbb12d9d197
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-clr-empty-projects"></a>如何：创建 CLR 空项目
 若要创建 CLR 空项目时，使用**CLR 空项目**模板，可从**新项目**对话框。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
      此时将出现 “新建项目” 对话框。  
   
-2.  下**已安装的模板**，单击**Visual c + +**节点; 然后单击**CLR**节点。 选择**CLR 空项目**图标。  
+2.  下**已安装的模板**，单击**Visual c + +** 节点; 然后单击**CLR**节点。 选择**CLR 空项目**图标。  
   
 3.  在“名称”  框中，输入你的应用程序的唯一名称。  
   

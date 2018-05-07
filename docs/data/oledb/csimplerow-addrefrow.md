@@ -1,12 +1,9 @@
 ---
-title: "Csimplerow:: Addrefrow |Microsoft 文档"
-ms.custom: 
+title: 'Csimplerow:: Addrefrow |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CSimpleRow::AddRefRow
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - AddRefRow method
 ms.assetid: 9bb5b7a5-79f2-4de5-852c-e9918fe67665
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7be4877ea67fe9aa55488eea6e0bf1f1809a4db
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e3441fa4e731568167713c3ab5babff835308432
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimplerowaddrefrow"></a>CSimpleRow::AddRefRow
 线程安全的方式向现有行句柄的引用计数。  
@@ -42,10 +37,10 @@ DWORD AddRefRow();
   
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  
  [CSimpleRow 类](../../data/oledb/csimplerow-class.md)   
- [CSimpleRow::ReleaseRow](../../data/oledb/csimplerow-releaserow.md)   
+ [Csimplerow:: Releaserow](../../data/oledb/csimplerow-releaserow.md)   
  [IRowsetImpl::AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)

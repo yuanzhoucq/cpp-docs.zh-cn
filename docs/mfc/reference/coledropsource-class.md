@@ -1,12 +1,9 @@
 ---
-title: "COleDropSource 类 |Microsoft 文档"
-ms.custom: 
+title: COleDropSource 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>COleDropSource 类
 允许数据拖动到放置目标。  
@@ -76,17 +71,17 @@ class COleDropSource : public CCmdTarget
   
  `COleDropSource`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  构造 `COleDropSource` 对象。  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  在调用由框架调用[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  你想要向用户显示的效果，通常指示什么会删除与所选数据这一时刻发生。 通常，这是到最新的调用所返回的值[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)。 它可以是一个或多个以下：  
   
-- `DROPEFFECT_NONE`不允许删除。  
+- `DROPEFFECT_NONE` 不允许删除。  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` 将执行复制操作。  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` 将执行移动操作。  
   
-- `DROPEFFECT_LINK`将建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`拖动滚动操作即将发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` 拖动滚动操作即将发生或者问题发生在目标中。  
   
 ### <a name="return-value"></a>返回值  
  返回**DRAGDROP_S_USEDEFAULTCURSORS**如果拖动正在进行， **NOERROR**如果它不是。  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  有关详细信息，请参阅[IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)， [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)，和[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  由框架事件发生时无法开始拖动操作，如按鼠标左键。  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
  如果你想要修改拖动进程启动的方式，重写此函数。 默认实现捕获鼠标，并保留在拖动模式，直到用户单击左或向右鼠标按钮或点击的 ESC，此时它会释放鼠标。  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  拖动开始后，此函数是重复由框架调用直到取消或完成拖动操作。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 4） C4754 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 4） C4754 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4754
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6bad6452e1d119659c8588531c82671d031863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7f4e42d2e44a55c98abdcd5c3e723e2a9269a1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4754"></a>编译器警告（等级 4）C4754
 比较中的算术运算的转换规则意味着无法执行一个分支。  
@@ -108,7 +103,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **请注意**编译器警告中提到的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如:  
+ **请注意**编译器警告中提到的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如：  
   
 ```cpp  
 unsigned long a;  

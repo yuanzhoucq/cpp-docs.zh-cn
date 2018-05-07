@@ -1,12 +1,9 @@
 ---
-title: "CObject 类 |Microsoft 文档"
-ms.custom: 
+title: CObject 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObject
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0384392d42196e4365c59670537819435ce1e45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobject-class"></a>CObject 类
 Microsoft 基础类库中的主体基类。  
@@ -77,7 +72,7 @@ class AFX_NOVTABLE CObject
 |[新的 CObject::operator](#operator_new)|特殊**新**运算符。|  
   
 ## <a name="remarks"></a>备注  
- 它可用作不仅库类的根如`CFile`和`CObList`，而且对于你编写的类。 `CObject`提供基本的服务，包括  
+ 它可用作不仅库类的根如`CFile`和`CObList`，而且对于你编写的类。 `CObject` 提供基本的服务，包括  
   
 -   序列化支持  
   
@@ -100,10 +95,10 @@ class AFX_NOVTABLE CObject
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CObject`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="assertvalid"></a>CObject::AssertValid  
+##  <a name="assertvalid"></a>  CObject::AssertValid  
  验证此对象的完整性。  
   
 ```  
@@ -111,7 +106,7 @@ virtual void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- `AssertValid`通过检查其内部状态执行有效性检查对此对象。 为库的调试版本中`AssertValid`可能断言并因此终止此程序包含在一条消息，列出的行号和文件名断言失败。  
+ `AssertValid` 通过检查其内部状态执行有效性检查对此对象。 为库的调试版本中`AssertValid`可能断言并因此终止此程序包含在一条消息，列出的行号和文件名断言失败。  
   
  当你编写您自己的类时，则应重写`AssertValid`函数以提供为你自己以及你的类的其他用户的诊断服务。 重写`AssertValid`通常调用`AssertValid`再进行检查数据成员唯一派生的类的其基本类的函数。  
   
@@ -126,7 +121,7 @@ virtual void AssertValid() const;
   
  另一个示例，请参阅[AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)。  
   
-##  <a name="cobject"></a>CObject::CObject  
+##  <a name="cobject"></a>  CObject::CObject  
  这些函数是标准`CObject`构造函数。  
   
 ```  
@@ -136,7 +131,7 @@ CObject(const CObject& objectSrc);
   
 ### <a name="parameters"></a>参数  
  *objectSrc*  
- 对另一个的引用`CObject`  
+ 对另一个的引用 `CObject`  
   
 ### <a name="remarks"></a>备注  
  由派生类的构造函数自动调用默认版本。  
@@ -150,7 +145,7 @@ CObject(const CObject& objectSrc);
   
  [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
   
-##  <a name="dump"></a>CObject::Dump  
+##  <a name="dump"></a>  CObject::Dump  
  转储到对象的内容[CDumpContext](../../mfc/reference/cdumpcontext-class.md)对象。  
   
 ```  
@@ -162,25 +157,25 @@ virtual void Dump(CDumpContext& dc) const;
  转储，通常的诊断转储上下文`afxDump`。  
   
 ### <a name="remarks"></a>备注  
- 当你编写您自己的类时，则应重写`Dump`函数以提供为你自己以及你的类的其他用户的诊断服务。 重写`Dump`通常调用`Dump`之前打印数据成员唯一派生的类的其基本类的函数。 `CObject::Dump`打印类名称，如果你的类使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`宏。  
+ 当你编写您自己的类时，则应重写`Dump`函数以提供为你自己以及你的类的其他用户的诊断服务。 重写`Dump`通常调用`Dump`之前打印数据成员唯一派生的类的其基本类的函数。 `CObject::Dump` 打印类名称，如果你的类使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`宏。  
   
 > [!NOTE]
 >  你`Dump`函数应不会打印出来其输出的末尾处的换行字符。  
   
- `Dump`调用仅在 Microsoft 基础类库的调试版本中有意义。 调用、 函数声明和使用的函数实现应尖括号**#ifdef _DEBUG** /  `#endif`条件编译的语句。  
+ `Dump` 调用仅在 Microsoft 基础类库的调试版本中有意义。 调用、 函数声明和使用的函数实现应尖括号 **#ifdef _DEBUG** /  `#endif`条件编译的语句。  
   
  由于`Dump`是**const**函数，你不允许在转储过程中更改对象状态。  
   
  [CDumpContext 插入 (<<) 运算符](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt)调用`Dump`时`CObject`插入指针。  
   
- `Dump`允许仅"非循环"转储的对象。 例如，你可以转储对象列表，但如果其中一个对象是本身的列表，将最终溢出堆栈。  
+ `Dump` 允许仅"非循环"转储的对象。 例如，你可以转储对象列表，但如果其中一个对象是本身的列表，将最终溢出堆栈。  
   
 ### <a name="example"></a>示例  
  请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`中所有使用类`CObject`示例。  
   
  [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
   
-##  <a name="getruntimeclass"></a>CObject::GetRuntimeClass  
+##  <a name="getruntimeclass"></a>  CObject::GetRuntimeClass  
  返回`CRuntimeClass`结构对应于此对象的类。  
   
 ```  
@@ -199,9 +194,9 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
 - **UINT m_wSchema**架构数字 (-1 表示不可序列化类)。 请参阅[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)宏有关的架构数字的说明。  
   
-- **CObject\* (PASCAL\* m_pfnCreateObject) （)**创建你的类的对象的默认构造函数的函数指针 (有效前提的类支持动态创建; 否则，返回**NULL**).  
+- **CObject\* (PASCAL\* m_pfnCreateObject) （)** 创建你的类的对象的默认构造函数的函数指针 (有效前提的类支持动态创建; 否则，返回**NULL**).  
   
-- **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass) （)**如果你的应用程序动态链接到 MFC 的 AFXDLL 版本中，指向函数的返回`CRuntimeClass`基本类的结构。  
+- **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass) （)** 如果你的应用程序动态链接到 MFC 的 AFXDLL 版本中，指向函数的返回`CRuntimeClass`基本类的结构。  
   
 - **CRuntimeClass\* m_pBaseClass**如果你的应用程序静态链接到 MFC，指向的指针`CRuntimeClass`基本类的结构。  
   
@@ -212,7 +207,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
  [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
   
-##  <a name="iskindof"></a>CObject::IsKindOf  
+##  <a name="iskindof"></a>  CObject::IsKindOf  
  测试到给定类的此对象的关系。  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
   
  [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
   
-##  <a name="isserializable"></a>CObject::IsSerializable  
+##  <a name="isserializable"></a>  CObject::IsSerializable  
  测试此对象是否是适合序列化。  
   
 ```  
@@ -257,7 +252,7 @@ BOOL IsSerializable() const;
   
  [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
   
-##  <a name="operator_delete"></a>CObject::operator 删除  
+##  <a name="operator_delete"></a>  CObject::operator 删除  
  发行版的库中，运算符**删除**释放运算符分配的内存**新**。  
   
 ```  
@@ -293,7 +288,7 @@ void PASCAL operator delete(
   
  [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
   
-##  <a name="operator_new"></a>新的 CObject::operator  
+##  <a name="operator_new"></a>  新的 CObject::operator  
  发行版的库中，运算符**新**执行相似的方式实现最佳的内存分配`malloc`。  
   
 ```  
@@ -319,14 +314,14 @@ void* PASCAL operator new(
  即使不使用`DEBUG_NEW`处于调试模式，您仍然收到泄漏检测，但没有源代码文件行号 reporting 上面所述。  
   
 > [!NOTE]
->  如果你重写此运算符，还必须重写**删除**。 不使用标准库**_new_handler**函数。  
+>  如果你重写此运算符，还必须重写**删除**。 不使用标准库 **_new_handler**函数。  
   
 ### <a name="example"></a>示例  
  请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)有关的列表`CAge`中使用类`CObject`示例。  
   
  [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
   
-##  <a name="serialize"></a>Cobject:: Serialize  
+##  <a name="serialize"></a>  Cobject:: Serialize  
  从存档读取该对象或将该对象写入存档。  
   
 ```  
@@ -344,7 +339,7 @@ virtual void Serialize(CArchive& ar);
   
  使用[CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)或[CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring)来确定存档是否已加载或存储。  
   
- `Serialize`由调用[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)和[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)。 这些函数与之关联`CArchive`插入运算符 (  **< \<** ) 和提取运算符 (  **>>** )。  
+ `Serialize` 由调用[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)和[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)。 这些函数与之关联`CArchive`插入运算符 ( **< \<**) 和提取运算符 ( **>>**)。  
   
  有关序列化示例，请参阅文章[序列化： 将对象序列化为](../../mfc/serialization-serializing-an-object.md)。  
   

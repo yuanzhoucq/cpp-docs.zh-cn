@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用 PInvoke 封送数组 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 PInvoke 封送数组 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e3cf184828c33c63c5252344eb0041640729cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送数组
 本主题说明如何本机接受 C 样式字符串可以使用的 CLR 字符串类型来调用的函数<xref:System.String>使用.NET Framework 平台调用支持。 Visual c + + 程序员人员最好 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈来实现。 如果非托管的 API 打包为的 DLL 的源代码不可用，P/Invoke 是唯一的选项 (否则，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。  

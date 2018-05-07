@@ -1,12 +1,9 @@
 ---
-title: "set:: clear (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'set:: clear (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::clear
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - clear member [STL/CLR]
 ms.assetid: 52b39d7d-d479-45ff-a652-61cd26eb0c9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8fcfc93edc8cb6f10cf53ac1c0919319de97ccbe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f29053d277630520cc4c93cba340181639fe0e6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setclear-stlclr"></a>set::clear (STL/CLR)
 删除所有元素。  
@@ -85,7 +80,7 @@ size() = 0
 size() = 0  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

@@ -1,13 +1,10 @@
 ---
-title: "记录字段交换 (RFX) |Microsoft 文档"
-ms.custom: 
+title: 记录字段交换 (RFX) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b214cf05115056efc96c4a078dedd4b7f9a3a1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-rfx"></a>记录字段交换 (RFX)
 MFC ODBC 数据库类自动执行之间的数据源的数据移动和[记录集](../../data/odbc/recordset-odbc.md)对象。 当你从派生类[CRecordset](../../mfc/reference/crecordset-class.md)并且未使用批量行提取，记录字段交换 (RFX) 机制传输数据。  
@@ -36,7 +31,7 @@ MFC ODBC 数据库类自动执行之间的数据源的数据移动和[记录集]
 > [!NOTE]
 >  如果已实现批量行提取中派生`CRecordset`类，框架将使用批量记录字段交换 (Bulk RFX) 机制将数据传输。 有关详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- RFX 是类似于对话框数据交换 (DDX)。 数据源和记录集的字段数据成员之间移动数据时，需要对记录集的多个调用[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) framework 之间的函数和很大程度交互和[ODBC](../../data/odbc/odbc-basics.md). RFX 机制是类型安全的将你保存的工作成果如调用 ODBC 函数**:: SQLBindCol**。 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ RFX 是类似于对话框数据交换 (DDX)。 数据源和记录集的字段数据成员之间移动数据时，需要对记录集的多个调用[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) framework 之间的函数和很大程度交互和[ODBC](../../data/odbc/odbc-basics.md). RFX 机制是类型安全的将你保存的工作成果如调用 ODBC 函数 **:: SQLBindCol**。 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
  RFX 主要是透明的。 如果在声明您使用 MFC 应用程序向导的记录集类或**添加类**(中所述[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md))，RFX 自动内置到它们。 记录集类必须派生自的基类`CRecordset`框架所提供的。 MFC 应用程序向导允许您创建一个初始的记录集类。 **添加类**允许您根据你的需要添加其他记录集类。 有关详细信息和示例，请参阅[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。  
   

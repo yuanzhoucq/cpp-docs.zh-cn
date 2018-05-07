@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridToolTipCtrl 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCPropertyGridToolTipCtrl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0b4a43da8943bc196a799ca4419dea7f34ed76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
 实现的工具提示控制[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)使用来显示工具提示。  
@@ -92,17 +87,17 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
  [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
  构造 `CMFCPropertyGridToolTipCtrl` 对象。  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
  创建工具提示控件的窗口。  
   
 ```  
@@ -116,7 +111,7 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="return-value"></a>返回值  
  已成功创建窗口; 如果为 TRUE否则为 FALSE。  
   
-##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
  停用并隐藏工具提示控件。  
   
 ```  
@@ -126,7 +121,7 @@ void Deactivate();
 ### <a name="remarks"></a>备注  
  此方法的最后一个位置和设置文本为空值，以便将来调用[CMFCPropertyGridToolTipCtrl::Track](#track)显示工具提示。  
   
-##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
  返回工具提示控件的最后一个位置的坐标。  
   
 ```  
@@ -137,14 +132,14 @@ void GetLastRect(CRect& rect) const;
  [out] `rect`  
  包含的工具提示控件的最后一个位置。  
   
-##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  隐藏的工具提示控件。  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
  设置工具提示文本和工具提示窗口的边框之间的间距。  
   
 ```  
@@ -155,7 +150,7 @@ void SetTextMargin(int nTextMargin);
  [in] `nTextMargin`  
  指定工具提示控件文本和工具提示窗口的边框之间的间距。 默认值为 10 个像素。  
   
-##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  显示工具提示控件。  
   
 ```  

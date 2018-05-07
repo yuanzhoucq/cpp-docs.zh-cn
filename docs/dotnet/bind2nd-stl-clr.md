@@ -2,11 +2,8 @@
 title: bind2nd (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::bind2nd
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3617cb917012a48398c6c9f530c2419aa8ea195b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13d8ffe476c73c04aff2e0c5de84558a7d9dbeae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
 生成`binder2nd`有关自变量，以及函子。  
@@ -106,7 +101,7 @@ int main()
 0 -1  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  

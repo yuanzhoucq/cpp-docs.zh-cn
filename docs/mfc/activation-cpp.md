@@ -1,13 +1,10 @@
 ---
-title: "激活 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 激活 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 34b6d6e9313092a8f9a0a11967c7c6a62ed15e15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activation-c"></a>Activation (C++)
 此文章介绍了在可视编辑 OLE 项中激活的角色。 用户具有在容器文档中嵌入 OLE 项后，它可能需要使用。 若要执行此操作，用户，请双击项，其激活。 激活的最常见活动正在编辑。 多个当前 OLE 项，以进行编辑，激活时导致在当前的框架窗口，若要更改以反映属于服务器应用程序创建项的菜单和工具栏。 此行为，已知为就地激活，允许用户无需离开容器文档窗口中编辑复合文档中的任何嵌入的项。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 03/16/2018
   
  当用户双击它，嵌入项会发生什么情况取决于为项定义的谓词。 有关信息，请参阅[激活： 谓词](../mfc/activation-verbs.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE](../mfc/ole-in-mfc.md)   
  [容器](../mfc/containers.md)   
  [服务器](../mfc/servers.md)

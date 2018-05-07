@@ -1,13 +1,10 @@
 ---
-title: "在 Visual c + + 中打开文件夹项目 |Microsoft 文档"
-ms.custom: 
+title: 在 Visual c + + 中打开文件夹项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>在 Visual c + + 中打开文件夹项目
 Visual Studio 2017 引入了"打开文件夹"功能，可用于打开源文件的文件夹立即开头编码支持 IntelliSense，浏览、 重构、 调试，依次类推。 不加载任何.sln 或.vcxproj 文件;如果需要可以指定自定义任务以及生成和启动参数通过简单的.json 文件。 供电打开文件夹时，Visual c + + 现在可以支持的文件，松散集合不仅还几乎是任何生成系统，包括 CMake、 忍者、 QMake （对于 Qt 项目）、 gyp、 SCons、 Gradle、 Buck、 生成和的详细信息。 
 
-若要使用打开的文件夹，请从主菜单选择*文件 |打开 |文件夹*或按*Ctrl + Shift + Alt + O*。解决方案资源管理器立即显示文件夹中的所有文件。 你可以单击任何文件以开始编辑它。 在后台，Visual Studio 启动文件后，若要启用智能感知、 导航和重构功能编制索引。 如编辑、 创建、 移动或删除文件，Visual Studio 将自动跟踪所做的更改，并不断更新其 IntelliSense 的索引。 
+若要使用打开的文件夹，请从主菜单选择*文件 |打开 |文件夹*或按*Ctrl + Shift + Alt + O*。解决方案资源管理器立即显示文件夹中的所有文件。 可以单击任何文件开始编辑。 在后台，Visual Studio 开始对文件编制索引，以启用 IntelliSense、导航和重构功能。 在编辑、创建、移动或删除文件时，Visual Studio 会自动跟踪更改，并不断更新其 IntelliSense 索引。 
   
 ## <a name="cmake-projects"></a>CMake 项目
 CMake 中集成 Visual Studio IDE CMake 工具和 Visual c + +，c + + 桌面工作负荷的一个组件。 有关详细信息，请参阅 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
@@ -43,8 +39,8 @@ CMake 中集成 Visual Studio IDE CMake 工具和 Visual c + +，c + + 桌面工
 |||
 |-|-|
 |CppProperties.json|指定用于浏览的自定义配置信息。 如果需要可在根项目文件夹，请创建此文件。|
-|launch.vs.json|指定命令行参数。 通过访问**解决方案资源管理器**上下文菜单项**调试和启动设置**。|
-|tasks.vs.json|指定自定义生成命令和编译器开关。 通过访问**解决方案资源管理器**上下文菜单项**配置任务**。|
+|launch.vs.json|指定命令行参数。 通过“解决方案资源管理器”上下文菜单项“调试和启动设置”进行访问。|
+|tasks.vs.json|指定自定义生成命令和编译器开关。 通过“解决方案资源管理器”上下文菜单项“配置任务”进行访问。|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>使用 CppProperties.json 配置 IntelliSense
 IntelliSense 和浏览行为部分取决于活动的生成配置，它定义 #include 路径、 编译器开关和其他参数。 默认情况下，Visual Studio 提供调试和发布配置。 对于某些项目，你可能需要在为了让 IntelliSense 和浏览功能完全理解你的代码中创建自定义配置。 若要定义新的配置，创建名为 CppProperties.json 的根文件夹中的文件。 下面是一个示例：
@@ -80,7 +76,7 @@ IntelliSense 和浏览行为部分取决于活动的生成配置，它定义 #in
 - msvc-arm
 - windows-clang-x86
 - windows-clang-x64
-- windows-clang-arm
+- windows clang arm
 - Linux-x64
 - Linux-x86
 - Linux arm
@@ -248,12 +244,12 @@ CppProperties.json 支持系统环境变量扩展为包括路径和其他属性�
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>定义使用 tasks.vs.json 任务
-你可以自动执行生成脚本或通过直接在 IDE 中的任务中运行的你当前的工作区中没有的文件的任何其他外部操作。 你可以通过右键单击文件或文件夹并选择配置新任务**配置任务**。 
+### <a name="define-tasks-with-tasksvsjson"></a>使用 tasks.vs.json 定义任务
+可以通过直接在 IDE 中作为任务运行来自动执行生成脚本，或者对当前工作区中的现有文件自动执行任何其他外部操作。 可以通过右键单击文件或文件夹并选择“配置任务”来配置新任务。 
 
 ![打开文件夹配置任务](media/open-folder-config-tasks.png)
 
-这创建 （或打开） `tasks.vs.json` .vs 文件夹将在根项目文件夹中创建 Visual Studio 中的文件。 你可以在此文件中定义任意的任何任务，然后调用从**解决方案资源管理器**上下文菜单。 下面的示例演示定义单个任务的 tasks.vs.json 文件。 `taskName`定义在上下文菜单中显示的名称。 `appliesTo`定义可以对执行命令的文件。 `command`属性是指 COMSPEC 环境变量，它标识控制台 (在 Windows 上的 cmd.exe) 的路径。 你还可以引用 CppProperties.json 或 CMakeSettings.json 中声明的环境变量。 `args`属性指定要调用的命令行。 `${file}`宏检索中的所选的文件**解决方案资源管理器**。 下面的示例将显示当前所选的.cpp 文件的文件名。
+这创建 （或打开） `tasks.vs.json` .vs 文件夹将在根项目文件夹中创建 Visual Studio 中的文件。 你可以在此文件中定义任意的任何任务，然后调用从**解决方案资源管理器**上下文菜单。 下面的示例演示定义单个任务的 tasks.vs.json 文件。 `taskName` 定义在上下文菜单中显示的名称。 `appliesTo` 定义可以对执行命令的文件。 `command`属性是指 COMSPEC 环境变量，它标识控制台 (在 Windows 上的 cmd.exe) 的路径。 你还可以引用 CppProperties.json 或 CMakeSettings.json 中声明的环境变量。 `args`属性指定要调用的命令行。 `${file}` 宏检索“解决方案资源管理器”中选定的文件。 下面的示例将显示当前所选的.cpp 文件的文件名。
 
 ```json
 {
@@ -274,29 +270,29 @@ CppProperties.json 支持系统环境变量扩展为包括路径和其他属性�
 
 
 #### <a name="appliesto"></a>appliesTo
-您可以通过指定其名称中的创建的任何文件或文件夹的任务`appliesTo`字段，例如`"appliesTo" : "hello.cpp"`。 以下文件掩码可以用作值：
+可通过在 `appliesTo` 字段中指定其名称来创建任何文件或文件夹任务，例如 `"appliesTo" : "hello.cpp"`。 以下文件掩码可用作值：
 |||
 |-|-|
-|`"*"`| 任务可供所有文件和工作区中的文件夹|
-|`"*/"`| 任务可供在工作区中的所有文件夹|
+|`"*"`| 任务适用于工作区中的所有文件和文件夹|
+|`"*/"`| 任务适用于工作区中的所有文件夹|
 |`"*.cpp"`| 任务可供具有扩展名.cpp 工作区中的所有文件|
 |`"/*.cpp"`| 任务可供具有扩展名.cpp 工作区的根目录中的所有文件|
-|`"src/*/"`| 任务可供所有子文件夹的"src"文件夹|
-|`"makefile"`| 任务可供在工作区中的所有生成文件文件|
-|`"/makefile"`| 任务是仅供工作区的根目录中生成文件|
+|`"src/*/"`| 任务适用于“src”文件夹的所有子文件夹|
+|`"makefile"`| 任务适用于工作区中的所有生成文件文件|
+|`"/makefile"`| 任务仅适用于工作区根目录中的生成文件|
 
 #### <a name="output"></a>输出
-使用`output`属性来指定按下时，将启动的可执行文件**F5**。 例如:
+使用`output`属性来指定按下时，将启动的可执行文件**F5**。 例如：
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>用于 tasks.vs.json 宏
+#### <a name="macros-for-tasksvsjson"></a>tasks.vs.json 宏
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| 指定任何环境变量 （例如，${env。路径}，${env.COMSPEC} 等) 的设置的开发人员命令提示符。 有关详细信息，请参阅[Visual Studio 的开发人员命令提示](/dotnet/framework/tools/developer-command-prompt-for-vs)。|
+|`${env.<VARIABLE>}`| 指定任何环境变量 （例如，${env。路径}，${env.COMSPEC} 等) 的设置的开发人员命令提示符。 有关详细信息，请参阅 [Visual Studio 开发人员命令提示符](/dotnet/framework/tools/developer-command-prompt-for-vs)。|
 |`${workspaceRoot}`| 工作区文件夹 (例如，"C:\sources\hello") 的完整路径|
 |`${file}`| 文件或选择要运行此任务针对 (例如，"C:\sources\hello\src\hello.cpp") 的文件夹的完整路径|
 |`${relativeFile}`| 文件或文件夹 (例如，"src\hello.cpp") 的相对路径|

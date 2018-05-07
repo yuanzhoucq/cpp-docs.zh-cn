@@ -1,12 +1,9 @@
 ---
-title: "链接器工具错误 LNK2031 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具错误 LNK2031 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2031
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a519b4241c9ffabaeeb387cc8e4997125d57781
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 179702b3e162ad9f22fd887d60c5a5c2d0bc8559
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2031"></a>链接器工具错误 LNK2031
 无法生成有关"function_declaration"decorated_name; p/invoke元数据中缺少的调用约定  
@@ -44,7 +39,7 @@ extern "C" {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例创建一个使用本机函数的纯客户端。 但是，在下的调用约定**/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下面的示例生成 LNK2031。  
+ 下面的示例创建一个使用本机函数的纯客户端。 但是，在下的调用约定 **/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下面的示例生成 LNK2031。  
   
 ```  
 // LNK2031_b.cpp  
@@ -58,7 +53,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用纯映像中的本机函数。 请注意显式**__cdecl**调用约定说明符。  
+ 下面的示例演示如何使用纯映像中的本机函数。 请注意显式 **__cdecl**调用约定说明符。  
   
 ```  
 // LNK2031_c.cpp  
