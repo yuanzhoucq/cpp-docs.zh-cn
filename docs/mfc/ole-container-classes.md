@@ -1,13 +1,10 @@
 ---
-title: "OLE 容器类 |Microsoft 文档"
-ms.custom: 
+title: OLE 容器类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df809971ecf8bdd8700217cf6a1965e2973de754
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-container-classes"></a>OLE 容器类
 容器应用程序使用这些类。 同时`COleLinkingDoc`和`COleDocument`管理的集合`COleClientItem`对象。 而不是派生您的文档类从**CDocument**，你将从它派生`COleLinkingDoc`或`COleDocument`，取决于是否要支持链接到嵌入到文档中的对象。  

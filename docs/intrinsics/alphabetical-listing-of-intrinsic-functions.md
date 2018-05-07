@@ -1,12 +1,9 @@
 ---
-title: "按字母顺序排列的内部函数的列表 |Microsoft 文档"
-ms.custom: 
+title: 按字母顺序排列的内部函数的列表 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e4418835d29fed1f054888f16b188a8775307d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序列出的内部函数
 以下各部分介绍了部分或所有体系架构中可用的特定于 Microsoft 的内部函数。 其他受支持的内部函数由处理器制造商在标题文件或其网站上提供。 请参阅[ARM 内部函数](../intrinsics/arm-intrinsics.md)， [x86 内部函数](../intrinsics/x86-intrinsics-list.md)，和[x64 内部函数](../intrinsics/x64-amd64-intrinsics-list.md)有关制造商文档的链接的部分。 具有为其实现的内部函数的 C 运行时库 (CRT) 函数未在此处; 介绍这些函数均记录在[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)。  
   
- [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
+ [__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
   
- [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
+ [__addgsbyte， \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
   
  [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)  
   
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/23/2018
   
  [__incfsbyte、 \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)  
   
- [__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
+ [__incgsbyte， \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
   
  [__indword](../intrinsics/indword.md)  
   
@@ -124,7 +119,7 @@ ms.lasthandoff: 02/23/2018
   
  [__ll_rshift](../intrinsics/ll-rshift.md)  
   
- [__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
+ [__lzcnt16、 \__lzcnt， \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
   
  [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)  
   
@@ -170,7 +165,7 @@ ms.lasthandoff: 02/23/2018
   
  [__outwordstring](../intrinsics/outwordstring.md)  
   
- [__popcnt16, \__popcnt, \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)  
+ [__popcnt16、 \__popcnt， \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)  
   
  [__rdtsc](../intrinsics/rdtsc.md)  
   
@@ -192,9 +187,9 @@ ms.lasthandoff: 02/23/2018
   
  [__readeflags](../intrinsics/readeflags.md)  
   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
+ [__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
   
- [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
+ [__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
   
  [__readmsr](../intrinsics/readmsr.md)  
   
@@ -282,7 +277,7 @@ ms.lasthandoff: 02/23/2018
   
  [__writefsbyte， \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)  
   
- [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
+ [__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
   
  [__writemsr](../intrinsics/writemsr.md)  
   

@@ -1,12 +1,9 @@
 ---
-title: "CViewColumnUsage，CViewColumnInfo |Microsoft 文档"
-ms.custom: 
+title: CViewColumnUsage，CViewColumnInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szTableSchema
@@ -43,18 +40,16 @@ helpviewer_keywords:
 - COLUMN_GUID
 - m_guidColumn
 ms.assetid: 4af14d6b-b224-4d72-b035-9d3aaacde32f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4845af212cd7c2cd7a542cd2b23eed6c8991c1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6b1882f26ea49e22c276661efa5febf6fa1860f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cviewcolumnusage-cviewcolumninfo"></a>CViewColumnUsage，CViewColumnInfo
 调用 typedef 类**CViewColumnUsage**来实现其参数类**CViewColumnInfo**。  
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/23/2018
 |m_guidColumn|COLUMN_GUID|  
 |m_nColumnPropID|COLUMN_PROPID|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

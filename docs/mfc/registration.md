@@ -1,13 +1,10 @@
 ---
-title: "注册 |Microsoft 文档"
-ms.custom: 
+title: 注册 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>注册
 当用户需要将一个 OLE 项插入应用程序中时，OLE 会显示一个对象类型的列表以供选择。 OLE 从系统注册数据库获取此列表，该数据库包含所有服务器应用程序提供的信息。 当服务器注册自身时，它放入系统注册数据库（注册表）中的项将描述它提供的每种对象类型、文件扩展名、自身的路径以及其他信息。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   
  有关系统注册数据库和用于更新该.reg 文件的格式的详细信息，请参阅*OLE 程序员参考*。  
   
-##  <a name="_core_server_installation"></a>服务器安装  
+##  <a name="_core_server_installation"></a> 服务器安装  
  在首次安装服务器应用程序时，应注册它所支持的所有类型的 OLE 项。 您也可以让服务器在每次将系统注册数据库作为独立的应用程序执行时对其进行更新。 这可在移动服务器的可执行文件时保持注册数据库最新。  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/09/2018
   
  RegEdit 将 .reg 文本文件的内容合并到注册数据库中。 若要验证数据库或修复它，请使用注册表编辑器。 注意避免删除必需的 OLE 项。  
   
-##  <a name="_core_server_initialization"></a>服务器初始化  
+##  <a name="_core_server_initialization"></a> 服务器初始化  
  在使用应用程序向导创建服务器应用程序时，该向导将自动为你完成所有初始化任务。 本节介绍了在手动编写服务器应用程序时您必须执行的操作。  
   
  当服务器应用程序由容器应用程序启动时，OLE 系统 DLL 会将“/Embedding”选项添加到服务器的命令行中。 服务器应用程序的行为因其是否由容器启动而异，因此应用程序在开始执行时应执行的第一个操作是检查命令行上的“/Embedding”或“-Embedding”选项。 如果此开关存在，则加载一组不同的资源，这些资源显示服务器处于就地活动状态或完全打开状态。 有关详细信息，请参阅[菜单和资源： 服务器添加](../mfc/menus-and-resources-server-additions.md)。  

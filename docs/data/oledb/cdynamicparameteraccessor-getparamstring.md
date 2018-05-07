@@ -1,12 +1,9 @@
 ---
-title: CDynamicParameterAccessor::GetParamString | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicparameteraccessor:: Getparamstring |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicParameterAccessor.GetParamString
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParamString method
 ms.assetid: 078c2b1c-7072-47c1-a203-f47e75363f91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 203732a5f8d7b1eea9d8047ccf7dc4cb67f83213
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b8dadcb70dd29f1a70aea288eb0f63b22591561e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
 检索存储在缓冲区中的指定参数的字符串数据。  
@@ -71,7 +66,7 @@ bool GetParamString(DBORDINAL nParam,
   
  使用`GetParamString`从缓冲区中检索字符串参数数据。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)从缓冲区中检索非字符串参数数据。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,30 +1,25 @@
 ---
-title: "用户定义的运算符 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 用户定义的运算符 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cf5583b3ae896ea252d191fbeba86e202b56cef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-operators-ccli"></a>用户定义的运算符 (C++/CLI)
 托管类型的用户定义运算符可用作静态成员或实例成员，或者在全局范围内使用。 但是，使用除 Visual C++ 之外的语言编写的客户端通过元数据仅可以访问静态运算符。  
@@ -150,7 +145,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用时才可用的复合运算符**/clr**进行编译。 如果未定义二元运算符的赋值形式，则复合运算符会创建一个，其中赋值运算符的左侧具有一个 CLR 类型。  
+ 下面的示例演示如何使用时才可用的复合运算符 **/clr**进行编译。 如果未定义二元运算符的赋值形式，则复合运算符会创建一个，其中赋值运算符的左侧具有一个 CLR 类型。  
   
 ```cpp  
 // mcppv2_user-defined_operators_2.cpp  

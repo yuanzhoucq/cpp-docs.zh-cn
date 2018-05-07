@@ -1,13 +1,10 @@
 ---
-title: "使用 CMonthCalCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CMonthCalCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CMonthCalCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee958116b7eed8804bb6c540187eea6b37d750ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30c6a25cdb2bd61ec9346108ca5b4587b70ef870
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cmonthcalctrl"></a>使用 CMonthCalCtrl
 月历控件 ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 实现类似于日历的用户界面。 这为用户提供了非常直观和可识别的输入或选择日期的方法。 通过使用现有数据类型，该控件还为应用程序提供了在控件中获取并设置日期信息的方法。 默认情况下，月历控件显示当前的日期和月份。 但是，用户可以滚动到上一个月和下一个月并选择特定的月和/或年。  

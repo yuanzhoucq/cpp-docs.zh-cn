@@ -1,13 +1,10 @@
 ---
-title: "从图像列表绘制图像 |Microsoft 文档"
-ms.custom: 
+title: 从图像列表绘制图像 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>从图像列表绘制图像
 若要绘制图像，请使用[cimagelist:: Draw](../mfc/reference/cimagelist-class.md#draw)成员函数。 您将指定指向设备上下文对象的指针、要绘制的图像的索引、要在其中绘制图像的设备上下文中的位置以及一组表示绘制样式的标志。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  未添加蒙板的图像复制到目标设备上下文使用**SRCCOPY**光栅操作。 不论设备上下文的背景色是什么，图像中的颜色都相同。 在指定的绘图样式**绘制**还具有对未添加蒙板的图像的外观没有影响。  
   
- 除 Draw 成员函数，另一个函数， [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)，扩展的能力，以呈现图像。 `DrawIndirect`采用，作为参数， [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。 此结构可用于自定义当前图像的渲染，包括光栅操作 (ROP) 代码的使用。 ROP 代码的详细信息，请参阅[光栅操作代码](http://msdn.microsoft.com/library/windows/desktop/dd162892)和[位图为画笔](http://msdn.microsoft.com/library/windows/desktop/dd183378)Windows SDK 中。  
+ 除 Draw 成员函数，另一个函数， [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)，扩展的能力，以呈现图像。 `DrawIndirect` 采用，作为参数， [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。 此结构可用于自定义当前图像的渲染，包括光栅操作 (ROP) 代码的使用。 ROP 代码的详细信息，请参阅[光栅操作代码](http://msdn.microsoft.com/library/windows/desktop/dd162892)和[位图为画笔](http://msdn.microsoft.com/library/windows/desktop/dd183378)Windows SDK 中。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 CImageList](../mfc/using-cimagelist.md)   

@@ -1,12 +1,9 @@
 ---
-title: "set:: upper_bound (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'set:: upper_bound (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::upper_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - upper_bound member [STL/CLR]
 ms.assetid: 874d258a-990f-486f-ac7b-757a2f7c150a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 58170abfcb76152afac2a105e40f5f727431bcf7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da9f1ce48d77d3168dbfcb61d6ff23415d4f4c5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setupperbound-stlclr"></a>set::upper_bound (STL/CLR)
 查找与指定的键匹配的范围末尾。  
@@ -83,7 +78,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

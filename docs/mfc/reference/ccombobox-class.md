@@ -1,12 +1,9 @@
 ---
-title: "CComboBox 类 |Microsoft 文档"
-ms.custom: 
+title: CComboBox 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CComboBox
@@ -117,17 +114,15 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa5c09f1572200ca7850c8870b7daee9e3e75f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 提供 Windows 组合框功能。  
@@ -220,7 +215,7 @@ class CComboBox : public CWnd
   
  每个消息映射条目采用以下形式：  
   
- **ON_**通知**(**`id`**，**`memberFxn`**)**  
+ **ON_** 通知 **(**`id`**，**`memberFxn`**)**  
   
  其中`id`指定发送通知的组合框控件的子窗口 ID 和`memberFxn`是父成员函数编写以处理通知的名称。  
   
@@ -250,7 +245,7 @@ class CComboBox : public CWnd
   
 - **ON_CBN_KILLFOCUS**组合框失去输入的焦点。  
   
-- **ON_CBN_SELCHANGE**组合框列表框中的选择即将因用户在列表框中单击或通过使用箭头键更改所选内容而更改。 当处理此消息，在组合框编辑控件中的文本，仅可通过检索`GetLBText`或另一个类似函数。 `GetWindowText`不能使用。  
+- **ON_CBN_SELCHANGE**组合框列表框中的选择即将因用户在列表框中单击或通过使用箭头键更改所选内容而更改。 当处理此消息，在组合框编辑控件中的文本，仅可通过检索`GetLBText`或另一个类似函数。 `GetWindowText` 不能使用。  
   
 - **ON_CBN_SETFOCUS**组合框接收到输入的焦点。  
   
@@ -258,7 +253,7 @@ class CComboBox : public CWnd
   
  如果您嵌入`CComboBox`另一个窗口中的对象的对象，不需要将其销毁。 如果你创建`CComboBox`对象在堆栈上，自动销毁。 如果你创建`CComboBox`使用堆上的对象**新**函数，必须调用**删除**上要在销毁 Windows 组合框时销毁它的对象。  
   
- **请注意**如果你想要处理`WM_KEYDOWN`和`WM_CHAR`的消息，你具有子类化组合框的编辑和列表框控件中，派生的类`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生类。 有关详细信息，请参阅[http://support.microsoft.com/default.aspxscid=kb;en-us;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
+ **请注意**如果你想要处理`WM_KEYDOWN`和`WM_CHAR`的消息，你具有子类化组合框的编辑和列表框控件中，派生的类`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生类。 有关详细信息，请参阅[ http://support.microsoft.com/default.aspxscid=kb; en-我们;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -269,10 +264,10 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="addstring"></a>Ccombobox::  
+##  <a name="addstring"></a>  Ccombobox::  
  将字符串添加到组合框的列表框中。  
   
 ```  
@@ -297,7 +292,7 @@ int AddString(LPCTSTR lpszString);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="ccombobox"></a>CComboBox::CComboBox  
+##  <a name="ccombobox"></a>  CComboBox::CComboBox  
  构造 `CComboBox` 对象。  
   
 ```  
@@ -307,7 +302,7 @@ CComboBox();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="clear"></a>CComboBox::Clear  
+##  <a name="clear"></a>  CComboBox::Clear  
  删除 （清除） 当前选定内容，如果有的话，组合框编辑控件中。  
   
 ```  
@@ -320,7 +315,7 @@ void Clear();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CComboBox::CompareItem  
+##  <a name="compareitem"></a>  CComboBox::CompareItem  
  由框架调用以确定已排序的所有者描述组合框的列表框部分中的新项的相对位置。  
   
 ```  
@@ -334,7 +329,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="return-value"></a>返回值  
  指示中所述的两个项的相对位置`COMPAREITEMSTRUCT`结构。 它可以是任何以下值：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |- 1|项 2 之前进行排序的第 1 项。|  
 |0|项 1 和 2 的项进行排序相同。|  
@@ -348,7 +343,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="copy"></a>CComboBox::Copy  
+##  <a name="copy"></a>  CComboBox::Copy  
  如果有的话，组合框到剪贴板中的编辑控件中复制当前选定内容**CF_TEXT**格式。  
   
 ```  
@@ -358,7 +353,7 @@ void Copy();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="create"></a>CComboBox::Create  
+##  <a name="create"></a>  CComboBox::Create  
  创建组合框，并将其附加到`CComboBox`对象。  
   
 ```  
@@ -411,7 +406,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="cut"></a>CComboBox::Cut  
+##  <a name="cut"></a>  CComboBox::Cut  
  删除 （操作会剪切） 当前选定内容，如果任何，组合框中编辑控制，并将复制到剪贴板中删除的文本**CF_TEXT**格式。  
   
 ```  
@@ -424,7 +419,7 @@ void Cut();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="deleteitem"></a>CComboBox::DeleteItem  
+##  <a name="deleteitem"></a>  CComboBox::DeleteItem  
  当用户从所有者描述中删除项时，由框架调用`CComboBox`对象或销毁组合框。  
   
 ```  
@@ -441,7 +436,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="deletestring"></a>CComboBox::DeleteString  
+##  <a name="deletestring"></a>  CComboBox::DeleteString  
  删除位置中的项`nIndex`从组合框。  
   
 ```  
@@ -461,7 +456,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="dir"></a>CComboBox::Dir  
+##  <a name="dir"></a>  CComboBox::Dir  
  将文件名或驱动器的列表添加到组合框的列表框中。  
   
 ```  
@@ -502,7 +497,7 @@ int Dir(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="drawitem"></a>CComboBox::DrawItem  
+##  <a name="drawitem"></a>  CComboBox::DrawItem  
  由框架的所有者描述组合框中更改的可视方面时调用。  
   
 ```  
@@ -521,7 +516,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="findstring"></a>CComboBox::FindString  
+##  <a name="findstring"></a>  CComboBox::FindString  
  找到，但不会选择第一个字符串，其中包含一个组合框的列表框中指定的前缀。  
   
 ```  
@@ -546,7 +541,7 @@ int FindString(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="findstringexact"></a>CComboBox::FindStringExact  
+##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
  调用`FindStringExact`成员函数，以便查找第一个列表框中的字符串 （组合框） 中指定的字符串匹配`lpszFind`。  
   
 ```  
@@ -571,7 +566,7 @@ int FindStringExact(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
+##  <a name="getcomboboxinfo"></a>  CComboBox::GetComboBoxInfo  
  检索信息`CComboBox`对象。  
   
 ```  
@@ -588,7 +583,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839)消息时，Windows SDK 中所述。  
   
-##  <a name="getcount"></a>CComboBox::GetCount  
+##  <a name="getcount"></a>  CComboBox::GetCount  
  调用此成员函数以检索在组合框的列表框部分中的项的数目。  
   
 ```  
@@ -601,7 +596,7 @@ int GetCount() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
+##  <a name="getcuebanner"></a>  CComboBox::GetCueBanner  
  获取组合框控件显示的提示文本。  
   
 ```  
@@ -622,7 +617,7 @@ BOOL GetCueBanner(
 ### <a name="return-value"></a>返回值  
  在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含提示横幅文本，如果存在; 否则为`CString`长度为零的对象。  
   
- 或  
+ -或-  
   
  在第二个重载中，`true`如果此方法成功; 否则为`false`。  
   
@@ -631,7 +626,7 @@ BOOL GetCueBanner(
   
  此方法可发送[CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843)消息，Windows SDK 中介绍。  
   
-##  <a name="getcursel"></a>CComboBox::GetCurSel  
+##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  调用此成员函数可确定选择组合框中的哪一项。  
   
 ```  
@@ -642,12 +637,12 @@ int GetCurSel() const;
  组合框，列表框中当前选定项的从零开始索引或**CB_ERR**如果未不选定任何项。  
   
 ### <a name="remarks"></a>备注  
- `GetCurSel`返回到列表的索引。  
+ `GetCurSel` 返回到列表的索引。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
+##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect  
  调用`GetDroppedControlRect`成员函数可检索下拉组合框的可见 （删除下） 列表框中的屏幕坐标。  
   
 ```  
@@ -661,7 +656,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
+##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState  
  调用`GetDroppedState`成员函数来确定下拉组合框的列表框中是可见的 （向下删除）。  
   
 ```  
@@ -674,7 +669,7 @@ BOOL GetDroppedState() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
+##  <a name="getdroppedwidth"></a>  CComboBox::GetDroppedWidth  
  调用此函数可检索的最小的允许宽度，以像素为单位，组合框的列表框。  
   
 ```  
@@ -692,7 +687,7 @@ int GetDroppedWidth() const;
 ### <a name="example"></a>示例  
   请参阅示例[SetDroppedWidth](#setdroppedwidth)。  
   
-##  <a name="geteditsel"></a>CComboBox::GetEditSel  
+##  <a name="geteditsel"></a>  CComboBox::GetEditSel  
  获取组合框编辑控件中当前所选内容的起始和结束字符位置。  
   
 ```  
@@ -705,7 +700,7 @@ DWORD GetEditSel() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
+##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI  
  调用`GetExtendedUI`成员函数，以确定一个组合框的默认用户界面或扩展的用户界面。  
   
 ```  
@@ -727,7 +722,7 @@ BOOL GetExtendedUI() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent  
  从组合框检索以依据组合框的列表框部分可以水平滚动的像素为单位的宽度。  
   
 ```  
@@ -743,7 +738,7 @@ UINT GetHorizontalExtent() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="getitemdata"></a>CComboBox::GetItemData  
+##  <a name="getitemdata"></a>  CComboBox::GetItemData  
  检索与指定的组合框项关联的应用程序提供 32 位值。  
   
 ```  
@@ -763,7 +758,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
  检索与为指针指定的组合框项关联的应用程序提供 32 位值 ( **void\***)。  
   
 ```  
@@ -780,7 +775,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
+##  <a name="getitemheight"></a>  CComboBox::GetItemHeight  
  调用`GetItemHeight`成员函数以检索在组合框的列表项的高度。  
   
 ```  
@@ -797,7 +792,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="getlbtext"></a>CComboBox::GetLBText  
+##  <a name="getlbtext"></a>  CComboBox::GetLBText  
  从组合框的列表中获取的字符串。  
   
 ```  
@@ -829,7 +824,7 @@ void GetLBText(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
+##  <a name="getlbtextlen"></a>  CComboBox::GetLBTextLen  
  获取组合框的列表框中的字符串的长度。  
   
 ```  
@@ -846,7 +841,7 @@ int GetLBTextLen(int nIndex) const;
 ### <a name="example"></a>示例  
   请参阅示例[CComboBox::GetLBText](#getlbtext)。  
   
-##  <a name="getlocale"></a>CComboBox::GetLocale  
+##  <a name="getlocale"></a>  CComboBox::GetLocale  
  检索使用组合框的区域设置。  
   
 ```  
@@ -862,7 +857,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>示例  
   请参阅示例[CComboBox::SetLocale](#setlocale)。  
   
-##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
+##  <a name="getminvisible"></a>  CComboBox::GetMinVisible  
  获取当前的组合框控件的下拉列表中的可见项的最小数目。  
   
 ```  
@@ -875,7 +870,7 @@ int GetMinVisible() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)消息，Windows SDK 中介绍。  
   
-##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
+##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  检索在组合框的列表框部分中的第一个可见项的从零开始索引。  
   
 ```  
@@ -891,7 +886,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="initstorage"></a>CComboBox::InitStorage  
+##  <a name="initstorage"></a>  CComboBox::InitStorage  
  在组合框的列表框部分中存储的列表框项的分配内存。  
   
 ```  
@@ -920,7 +915,7 @@ int InitStorage(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="insertstring"></a>CComboBox::InsertString  
+##  <a name="insertstring"></a>  CComboBox::InsertString  
  将字符串插入组合框的列表框。  
   
 ```  
@@ -948,7 +943,7 @@ int InsertString(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="limittext"></a>CComboBox::LimitText  
+##  <a name="limittext"></a>  CComboBox::LimitText  
  限制用户可以输入到组合框编辑控件的文本的长度以字节为单位。  
   
 ```  
@@ -965,12 +960,12 @@ BOOL LimitText(int nMaxChars);
 ### <a name="remarks"></a>备注  
  如果组合框没有样式[CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)，设置文本限制为大于编辑控件的大小将产生任何影响。  
   
- `LimitText`仅限制用户可以输入的文本。 它不起任何文本已在编辑控件时发送消息，也不会影响复制到编辑控件中，选中列表框中的字符串文本的长度。  
+ `LimitText` 仅限制用户可以输入的文本。 它不起任何文本已在编辑控件时发送消息，也不会影响复制到编辑控件中，选中列表框中的字符串文本的长度。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="measureitem"></a>CComboBox::MeasureItem  
+##  <a name="measureitem"></a>  CComboBox::MeasureItem  
  创建带有所有者绘制样式的组合框时，由框架调用。  
   
 ```  
@@ -991,7 +986,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="paste"></a>CComboBox::Paste  
+##  <a name="paste"></a>  CComboBox::Paste  
  将数据从剪贴板插入当前光标位置处的组合框编辑控件。  
   
 ```  
@@ -1004,7 +999,7 @@ void Paste();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="resetcontent"></a>CComboBox::ResetContent  
+##  <a name="resetcontent"></a>  CComboBox::ResetContent  
  中移除所有项从列表框中字符和编辑组合框控件。  
   
 ```  
@@ -1014,7 +1009,7 @@ void ResetContent();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="selectstring"></a>CComboBox::SelectString  
+##  <a name="selectstring"></a>  CComboBox::SelectString  
  组合框，列表框中的字符串搜索，并找到该字符串，如果在列表框中选择字符串并将其复制到编辑控件。  
   
 ```  
@@ -1041,7 +1036,7 @@ int SelectString(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
+##  <a name="setcuebanner"></a>  CComboBox::SetCueBanner  
  设置为组合框控件显示的提示文本。  
   
 ```  
@@ -1072,7 +1067,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
  [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="setcursel"></a>CComboBox::SetCurSel  
+##  <a name="setcursel"></a>  CComboBox::SetCurSel  
  组合框的列表框中选择一个字符串。  
   
 ```  
@@ -1092,7 +1087,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
+##  <a name="setdroppedwidth"></a>  CComboBox::SetDroppedWidth  
  调用此函数可设置的最小的允许宽度，以像素为单位，组合框的列表框。  
   
 ```  
@@ -1114,7 +1109,7 @@ int SetDroppedWidth(UINT nWidth);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="seteditsel"></a>CComboBox::SetEditSel  
+##  <a name="seteditsel"></a>  CComboBox::SetEditSel  
  选择组合框编辑控件中的字符。  
   
 ```  
@@ -1142,7 +1137,7 @@ BOOL SetEditSel(
 ### <a name="example"></a>示例  
   请参阅示例[CComboBox::GetEditSel](#geteditsel)。  
   
-##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
+##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI  
  调用`SetExtendedUI`成员函数以选择的默认用户界面或组合框具有扩展的用户界面[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式。  
   
 ```  
@@ -1168,7 +1163,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 ### <a name="example"></a>示例  
   请参阅示例[CComboBox::GetExtendedUI](#getextendedui)。  
   
-##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent  
  设置的宽度，以像素为单位，所依据的组合框的列表框部分可被滚动水平。  
   
 ```  
@@ -1185,7 +1180,7 @@ void SetHorizontalExtent(UINT nExtent);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="setitemdata"></a>CComboBox::SetItemData  
+##  <a name="setitemdata"></a>  CComboBox::SetItemData  
  设置与组合框中指定的项关联的 32 位值。  
   
 ```  
@@ -1210,7 +1205,7 @@ int SetItemData(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
  设置与为指定的指针的组合框中指定的项关联的 32 位值 ( **void\***)。  
   
 ```  
@@ -1235,7 +1230,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
+##  <a name="setitemheight"></a>  CComboBox::SetItemHeight  
  调用`SetItemHeight`成员函数将列表项的高度设置组合框或组合框的编辑控件 （或静态文本） 部分的高度。  
   
 ```  
@@ -1264,7 +1259,7 @@ int SetItemHeight(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="setlocale"></a>CComboBox::SetLocale  
+##  <a name="setlocale"></a>  CComboBox::SetLocale  
  设置此组合框的区域设置标识符。  
   
 ```  
@@ -1284,7 +1279,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
+##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems  
  在下拉列表中当前的组合框控件设置可见项的最小数目。  
   
 ```  
@@ -1313,7 +1308,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
  [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="settopindex"></a>CComboBox::SetTopIndex  
+##  <a name="settopindex"></a>  CComboBox::SetTopIndex  
  确保特定项的组合框的列表框部分中可见。  
   
 ```  
@@ -1333,7 +1328,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
+##  <a name="showdropdown"></a>  CComboBox::ShowDropDown  
  显示或隐藏具有组合框的列表框[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式。  
   
 ```  

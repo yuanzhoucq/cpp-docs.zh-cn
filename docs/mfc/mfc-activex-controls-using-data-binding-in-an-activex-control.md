@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 在 ActiveX 控件中使用数据绑定 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 在 ActiveX 控件中使用数据绑定 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据库中的特定字段的控件属性的数据绑定。 当用户修改了此绑定的属性中的数据时，该控件通知的数据库和请求将更新记录的字段。 控制的成功或失败的请求，然后会通知数据库。  
   
  本文介绍如何控制一端你的任务。 实现与数据库的数据绑定交互负责的控件容器。 你如何管理容器中的数据库交互不在本文档的范围。 本文的其余部分中描述了如何准备用于数据绑定控件。  
   
- ![概念图的数据 &#45; 绑定的控件](../mfc/media/vc374v1.gif "vc374v1")  
+ ![数据的概念图&#45;绑定控件](../mfc/media/vc374v1.gif "vc374v1")  
 数据绑定控件的概念图  
   
  `COleControl`类提供了两个成员函数，用于使数据绑定来实现一个简单的过程。 第一个函数， [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)，用来请求更改的属性值的权限。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)，第二个函数中，称为后成功更改属性值。  
@@ -51,7 +46,7 @@ ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据
   
 -   [创建可绑定的 Get/Set 方法](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>创建可绑定的常用属性  
+##  <a name="vchowcreatingbindablestockproperty"></a> 创建可绑定的常用属性  
  它是可以创建数据绑定的常用属性的但它是更有可能，你将希望[可绑定的 get/set 方法](#vchowcreatingbindablegetsetmethod)。  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据
   
  你现在可以生成项目，将注册控件。 当在对话框中，插入控件**数据字段**和**数据源**属性将已添加且你现在可以选择数据源，并在控件中显示的字段。  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>创建可绑定的 Get/Set 方法  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> 创建可绑定的 Get/Set 方法  
  除了数据绑定 get/set 方法，还可以创建[可绑定的常用属性](#vchowcreatingbindablestockproperty)。  
   
 > [!NOTE]

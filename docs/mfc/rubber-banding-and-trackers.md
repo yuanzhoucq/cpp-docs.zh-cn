@@ -1,13 +1,10 @@
 ---
-title: "橡皮带线条和跟踪器 |Microsoft 文档"
-ms.custom: 
+title: 橡皮带线条和跟踪器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd9da00d2d6ea0110562f523a0adc53c1a476c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rubber-banding-and-trackers"></a>橡皮筋和跟踪器
 提供有跟踪器的其他功能是“橡皮筋”选择，该功能允许用户通过围绕要选择的项拖动调整大小矩形来选择多个 OLE 项。 当用户松开鼠标左键后，用户选定区域中的项将选定并且可由用户进行操作。 例如，用户可以将选择拖进另一个容器应用程序。  

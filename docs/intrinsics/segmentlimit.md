@@ -1,12 +1,9 @@
 ---
-title: __segmentlimit | Microsoft Docs
-ms.custom: 
+title: __segmentlimit |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __segmentlimit
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0e4ed3eab3d533c0b7e948cf89a1921388c181
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 专用**  
@@ -48,7 +43,7 @@ unsigned long __segmentlimit(
 ## <a name="return-value"></a>返回值  
  通过指定的段选择器的段限制`a`，前提是选择器在当前的权限级别是有效的并且可见。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

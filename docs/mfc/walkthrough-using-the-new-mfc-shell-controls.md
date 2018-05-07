@@ -1,29 +1,24 @@
 ---
-title: "演练： 使用新的 MFC Shell 控件 |Microsoft 文档"
-ms.custom: 
+title: 演练： 使用新的 MFC Shell 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
 在本演练中，您将创建一个类似文件资源管理器的应用程序。 你将创建包含两个窗格的窗口。 左窗格中将包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)的层次结构视图中显示你的桌面的对象。 右窗格中将包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) ，在左窗格中选择的文件夹中显示的文件。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  使用**MFC 应用程序向导**创建新的 MFC 应用程序。 若要从运行向导，**文件**菜单中选择**新建**，然后选择**项目**。 **新项目**将显示对话框。  
   
-2.  在**新项目**对话框框中，展开**Visual c + +**中的节点**项目类型**窗格中，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 为项目键入名称，如`MFCShellControls`单击**确定**。 **MFC 应用程序向导**将显示。  
+2.  在**新项目**对话框框中，展开**Visual c + +** 中的节点**项目类型**窗格中，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 为项目键入名称，如`MFCShellControls`单击**确定**。 **MFC 应用程序向导**将显示。  
   
 3.  在**MFC 应用程序向导**对话框中，单击**下一步**。 **应用程序类型**将显示窗格。  
   

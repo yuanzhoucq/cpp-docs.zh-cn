@@ -1,12 +1,9 @@
 ---
-title: "CCachedDataPathProperty 类 |Microsoft 文档"
-ms.custom: 
+title: CCachedDataPathProperty 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb62a905d092a347103ea98fcd323e3778ed458
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 类
 实现异步传输并在内存文件中缓冲的 OLE 控件属性。  
@@ -52,7 +47,7 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 |名称|描述|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`在其中缓存数据的对象。|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` 在其中缓存数据的对象。|  
   
 ## <a name="remarks"></a>备注  
  内存文件存储在 RAM 中，而不是在磁盘上，并可用于快速临时传输。  
@@ -82,10 +77,10 @@ class CCachedDataPathProperty : public CDataPathProperty
   
  `CCachedDataPathProperty`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxctl.h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
  构造 `CCachedDataPathProperty` 对象。  
   
 ```  
@@ -102,12 +97,12 @@ CCachedDataPathProperty(
  指向要与此关联的 ActiveX 控件对象的指针`CCachedDataPathProperty`对象。  
   
  `lpszPath`  
- 路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CCachedDataPathProperty`使用 Url，不是文件名。 如果你想`CCachedDataPathProperty`对象文件中，前面预置 file:// 到路径。  
+ 路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CCachedDataPathProperty` 使用 Url，不是文件名。 如果你想`CCachedDataPathProperty`对象文件中，前面预置 file:// 到路径。  
   
 ### <a name="remarks"></a>备注  
  `COleControl`指向对象`pControl`由[打开](../../mfc/reference/cdatapathproperty-class.md#open)和检索由派生类。 如果`pControl`是**NULL**，与所使用的控件**打开**应与设置[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果`lpszPath`是**NULL**，可以在路径中，通过传递**打开**或将其与设置[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  包含在其中缓存数据的内存文件的类名称。  
   
 ```  

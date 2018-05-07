@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX 控件： 添加自定义属性 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 添加自定义属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控件：添加自定义属性
 自定义属性不同于常用属性，因为自定义属性不会由已实现`COleControl`类。 自定义属性用于公开的某个状态或 ActiveX 控件适应程序员使用控件的外观。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现调度映射条目宏是`DISP_PROPERTY_PARAM`。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>使用添加属性向导以添加自定义属性  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用添加属性向导以添加自定义属性  
  以下过程演示如何添加自定义属性，CircleOffset，使用 Get/Set 方法的实现。 CircleOffset 自定义属性允许控件的用户偏移量从控件的边界矩形的中心的圆圈。 添加与以外 Get/Set 方法实现的自定义属性的步骤操作非常类似。  
   
  此外可以使用此相同的过程添加所需的其他自定义属性。 替换你自定义属性名称 CircleOffset 属性名称和参数。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 9. 单击 **“完成”**。  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>添加属性向导正在更改用于自定义属性  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> 添加属性向导正在更改用于自定义属性  
  当你将添加 CircleOffset 自定义属性时，添加属性向导中对标头进行更改 (。H） 和实现 (。控件类的 CPP) 文件。  
   
  以下行添加到。要声明两个函数调用的 H 文件`GetCircleOffset`和`SetCircleOffset`:  

@@ -1,13 +1,10 @@
 ---
-title: "编辑消息处理程序 |Microsoft 文档"
-ms.custom: 
+title: 编辑消息处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.editing.msghandler
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3343f1d9b9f302d43a5cfbfec55b48c2bfd1b799
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dafb80b7497d8ab9acbc01060b67e967d5f8244f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-a-message-handler"></a>编辑消息处理程序
 一旦定义消息处理程序，你可以转到成员函数的定义，以便添加或修改代码。  

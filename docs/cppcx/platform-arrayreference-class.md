@@ -1,11 +1,8 @@
 ---
-title: "Platform:: arrayreference 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: arrayreference 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0987511b6653bee85b6cc5c4c680331d12519450
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 类
 `ArrayReference` 是在你希望用输入数据填充 C 样式数组时可以在输入参数中替换 [Platform::Array^](../cppcx/platform-array-class.md) 的优化类型。  
@@ -41,7 +36,7 @@ class ArrayReference
   
 |名称|描述|  
 |----------|-----------------|  
-|[ArrayReference::ArrayReference](#ctor)|初始化 `ArrayReference` 类的新实例。|  
+|[Arrayreference:: Arrayreference](#ctor)|初始化 `ArrayReference` 类的新实例。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -53,7 +48,7 @@ class ArrayReference
 ## <a name="exceptions"></a>异常  
   
 ### <a name="remarks"></a>备注  
- 通过使用 `ArrayReference` 填充 C 样式数组，可避免在先复制到 `Platform::Array` 变量，然后复制到 C 样式数组时涉及额外的重复操作。 当你使用 `ArrayReference` 时，只有一个复制操作。 有关代码示例，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。  
+ 通过使用 `ArrayReference` 填充 C 样式数组，可避免在先复制到 `Platform::Array` 变量，然后复制到 C 样式数组时涉及额外的重复操作。 当你使用 `ArrayReference`时，只有一个复制操作。 有关代码示例，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。  
   
 ### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  

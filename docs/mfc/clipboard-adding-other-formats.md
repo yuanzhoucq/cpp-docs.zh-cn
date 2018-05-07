@@ -1,13 +1,10 @@
 ---
-title: "剪贴板： 添加其他格式 |Microsoft 文档"
-ms.custom: 
+title: 剪贴板： 添加其他格式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>剪贴板：添加其他格式
 本主题说明如何扩展支持的格式，特别是对于 OLE 支持的列表。 主题[剪贴板： 复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放到剪贴板上的唯一格式会`CF_METAFILEPICT`， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并有可能延长`CF_LINKSOURCE`。 大多数应用程序将需要在剪贴板上比这三种的更多格式。  
   
-##  <a name="_core_registering_custom_formats"></a>注册自定义格式  
+##  <a name="_core_registering_custom_formats"></a> 注册自定义格式  
  若要创建您自己的自定义格式，请按照相同的过程将使用在注册任何自定义剪贴板格式时： 传递到格式的名称**RegisterClipboardFormat**函数，并将其返回值用作格式 id。  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>放置在剪贴板上的格式  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> 放置在剪贴板上的格式  
  若要将更多格式添加到那些放到剪贴板上，必须重写`OnGetClipboardData`从派生类中的函数`COleClientItem`或`COleServerItem`（具体取决于是否有本机要复制的数据）。 在此函数中，应使用以下过程。  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>将格式放置在剪贴板上  

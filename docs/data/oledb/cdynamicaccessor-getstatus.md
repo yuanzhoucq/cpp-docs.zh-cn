@@ -1,12 +1,9 @@
 ---
-title: CDynamicAccessor::GetStatus | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicaccessor:: Getstatus |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDynamicAccessor::GetStatus
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 8f1aba69-5c2c-4ca7-ad84-7b4b27995eb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: db78ecf633e3f69e24f1684949bddc0e0c21ce2c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 98e120e19c6115b98ed57bc8d25a934b84573386
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetstatus"></a>CDynamicAccessor::GetStatus
 检索指定列的状态。  
@@ -60,7 +55,7 @@ bool GetStatus(const WCHAR* pColumnName,
 ## <a name="return-value"></a>返回值  
  返回**true**如果找到指定的列。 否则，此函数返回**false**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

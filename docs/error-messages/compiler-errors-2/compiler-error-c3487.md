@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3487 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3487 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3487
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566f130e3d65826feecc02afae0cc1a7db335efe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb30b9a2cb0b77eff0888da6c387bd3b06182721
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3487"></a>编译器错误 C3487
 “返回类型”: 所有返回表达式必须推导为相同类型: 以前为“返回类型”  

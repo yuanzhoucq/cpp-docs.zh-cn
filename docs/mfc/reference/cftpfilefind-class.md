@@ -1,12 +1,9 @@
 ---
-title: "CFtpFileFind 类 |Microsoft 文档"
-ms.custom: 
+title: CFtpFileFind 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 辅助 FTP 服务器的 Internet 文件搜索。  
@@ -61,7 +56,7 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::GetFileURL](#getfileurl)|获取的 URL，包括找到的文件的路径。|  
   
 ## <a name="remarks"></a>备注  
- `CFtpFileFind`包括成员函数来开始的搜索，找到文件，并返回 URL 或文件的其他说明性信息。  
+ `CFtpFileFind` 包括成员函数来开始的搜索，找到文件，并返回 URL 或文件的其他说明性信息。  
   
  设计为 Internet 和搜索的本地文件包括其他 MFC 类[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFileFind](../../mfc/reference/cfilefind-class.md)。 连同`CFtpFileFind`，这些类提供用于客户端能够确定协议或文件类型 （本地计算机或远程服务器） 的特定文件，而不考虑服务器的无缝机制。 请注意，因为 HTTP 不支持直接文件操作所需的搜索搜索 HTTP 服务器上没有任何 MFC 类。  
   
@@ -79,10 +74,10 @@ class CFtpFileFind : public CFileFind
   
  `CFtpFileFind`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxinet.h  
   
-##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
  此成员函数调用以构造`CFtpFileFind`对象。  
   
 ```  
@@ -104,7 +99,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>示例  
   请参阅本主题前面的类概述中的示例。  
   
-##  <a name="findfile"></a>Cftpfilefind:: Findfile  
+##  <a name="findfile"></a>  Cftpfilefind:: Findfile  
  调用此成员函数可查找 FTP 文件。  
   
 ```  
@@ -118,7 +113,7 @@ virtual BOOL FindFile(
  指向包含要查找的文件的名称的字符串的指针。 如果**NULL**，调用将执行通配符的搜索 （*）。  
   
  `dwFlags`  
- 描述如何处理此会话的标志。 这些标志可以与按位 OR 运算符 (&#124;) 结合使用，并如下所示：  
+ 描述如何处理此会话的标志。 可以使用按位 OR 运算符组合这些标志 (&#124;) 和如下所示：  
   
 -   即使本地缓存 INTERNET_FLAG_RELOAD 从网络中获得数据。 这是默认值标志。  
   
@@ -139,7 +134,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>示例  
   请参阅本主题中前面的示例。  
   
-##  <a name="findnextfile"></a>Cftpfilefind:: Findnextfile  
+##  <a name="findnextfile"></a>  Cftpfilefind:: Findnextfile  
  调用此成员函数可继续通过调用开始文件搜索[FindFile](#findfile)成员函数。  
   
 ```  
@@ -152,12 +147,12 @@ virtual BOOL FindNextFile();
 ### <a name="remarks"></a>备注  
  您必须调用任何属性函数之前，至少一次调用此函数 (请参阅[CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。  
   
- `FindNextFile`包装的 Win32 函数[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
+ `FindNextFile` 包装的 Win32 函数[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
   
 ### <a name="example"></a>示例  
   请参阅本主题前面的示例。  
   
-##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
  调用此成员函数可获取指定的文件的 URL。  
   
 ```  
@@ -168,7 +163,7 @@ CString GetFileURL() const;
  文件和路径的通用资源定位符 (URL)。  
   
 ### <a name="remarks"></a>备注  
- `GetFileURL`类似于成员函数[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)，只不过它的形式返回 URL `ftp://moose/dir/file.txt`。  
+ `GetFileURL` 类似于成员函数[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)，只不过它的形式返回 URL `ftp://moose/dir/file.txt`。  
   
 ## <a name="see-also"></a>请参阅  
  [CFileFind 类](../../mfc/reference/cfilefind-class.md)   

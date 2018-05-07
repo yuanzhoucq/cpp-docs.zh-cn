@@ -1,12 +1,9 @@
 ---
-title: __writecr4 | Microsoft Docs
-ms.custom: 
+title: __writecr4 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _writecr4
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29474994bee4ea63a25f6160a733bb79dceaccca
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0d59949c031db6e33bbfb1ac56151c5bc57a972d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writecr4"></a>__writecr4
 **Microsoft 专用**  
@@ -44,7 +39,7 @@ void writecr4(
  [in] `Data`  
  要写入的 CR4 寄存器的值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

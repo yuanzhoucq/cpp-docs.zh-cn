@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsControl 类 |Microsoft 文档"
-ms.custom: 
+title: CWinFormsControl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e6bf46cf28c3bca3d71f85cdd681745a0379bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 类
 提供用于承载 Windows 窗体控件的基本功能。  
@@ -82,10 +77,10 @@ class CWinFormsControl : public CWnd
 > [!NOTE]
 >  MFC Windows 窗体集成仅在动态链接 （在其中 AFXDLL 定义） 的 mfc 项目中可以正常工作。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxwinforms.h  
   
-##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
  在 MFC 容器中创建 Windows 窗体控件。  
   
 ```  
@@ -144,7 +139,7 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>备注  
  此方法实例化 MFC 容器中的.NET Framework Windows 窗体控件。  
   
- 方法的第一个重载接受的.NET Framework 数据类型`pType`以便 MFC 可以实例化此类型的新对象。 `pType`必须是[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
+ 方法的第一个重载接受的.NET Framework 数据类型`pType`以便 MFC 可以实例化此类型的新对象。 `pType` 必须是[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
   
  第二个重载的方法创建基于的 Windows 窗体控件`TManagedControl`的模板参数`CWinFormsControl`类。 大小和位置的控件基于`RECT`结构传递给方法。 仅`dwStyle`样式很重要。  
   
@@ -154,7 +149,7 @@ inline BOOL CreateManagedControl(
   
  请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)的示例使用 Windows 窗体控件。  
   
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
  将构造一个 MFC Windows 窗体控件包装对象。  
   
 ```  
@@ -164,7 +159,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>备注  
  在调用时实例化 Windows 窗体控件[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
   
-##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
  检索指向 Windows 窗体控件的指针。  
   
 ```  
@@ -177,7 +172,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>示例  
   请参阅[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
   
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
  检索 Windows 窗体控件的句柄。  
   
 ```  
@@ -188,9 +183,9 @@ inline HWND GetControlHandle() const;
  返回 Windows 窗体控件的句柄。  
   
 ### <a name="remarks"></a>备注  
- `GetControlHandle`返回.NET Framework 的控件属性存储的窗口句柄的帮助器方法。 窗口句柄值复制到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)到在呼叫期间[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。  
+ `GetControlHandle` 返回.NET Framework 的控件属性存储的窗口句柄的帮助器方法。 窗口句柄值复制到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)到在呼叫期间[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。  
   
-##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  替换[CWinFormsControl::GetControl](#getcontrol)表达式中。  
   
 ```  
@@ -202,7 +197,7 @@ inline TManagedControl^  operator->() const;
   
  Windows 窗体上的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
  将类型强制转换为指向 Windows 窗体控件。  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "TN025： 文档、 视图和框架创建 |Microsoft 文档"
-ms.custom: 
+title: TN025： 文档、 视图和框架创建 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025：文档、视图和框架创建
 > [!NOTE]
@@ -52,7 +47,7 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>DocTemplate  
  `CDocTemplate` 是文档的创建者和管理者。 它对自己创建的文档具有所有权。 如果应用程序使用了下面所述的基于资源的方法，则不需要从 `CDocTemplate` 派生。  
   
- 对于 SDI 应用程序，类 `CSingleDocTemplate` 将跟踪一个打开的文档。 对于 MDI 应用程序，类 `CMultiDocTemplate` 类将保留所有当前打开的从该模板创建的文档的列表 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 提供了用于在模板中添加或删除文档的虚拟成员函数。 `CDocTemplate`是的友元**CDocument**以便我们可以设置受保护**cdocument:: M_pdoctemplate**后向指针以指回创建文档的文档模板。  
+ 对于 SDI 应用程序，类 `CSingleDocTemplate` 将跟踪一个打开的文档。 对于 MDI 应用程序，类 `CMultiDocTemplate` 类将保留所有当前打开的从该模板创建的文档的列表 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 提供了用于在模板中添加或删除文档的虚拟成员函数。 `CDocTemplate` 是的友元**CDocument**以便我们可以设置受保护**cdocument:: M_pdoctemplate**后向指针以指回创建文档的文档模板。  
   
  `CWinApp` 处理默认 `OnFileOpen` 实现，该实现反过来又会查询所有文档模板。 该实现包括查找已打开的文档和确定打开新文档的格式。  
   

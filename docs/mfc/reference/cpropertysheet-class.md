@@ -1,12 +1,9 @@
 ---
-title: "CPropertySheet 类 |Microsoft 文档"
-ms.custom: 
+title: CPropertySheet 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropertySheet
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52c5d167390826578c4e3a2380c885bf1d507d19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 表示属性表，也称为选项卡对话框。  
@@ -125,11 +120,11 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>备注  
  属性表组成`CPropertySheet`对象和一个或多个[CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象。 框架显示属性表作为具有一组选项卡索引和一个区域，它包含当前所选的页面的窗口。 用户导航到特定页通过使用相应的选项卡。  
   
- `CPropertySheet`提供对扩展的支持[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)结构在中引入[!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)]和 Windows NT 2000。 该结构包含其他标志和支持使用"水印"背景位图的成员。  
+ `CPropertySheet` 提供对扩展的支持[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)结构在中引入[!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)]和 Windows NT 2000。 该结构包含其他标志和支持使用"水印"背景位图的成员。  
   
  若要在你的属性表对象中自动显示这些新映像，请将有效值的位图和调色板映像传递对的调用中[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet).  
   
- 即使`CPropertySheet`不派生自[CDialog](../../mfc/reference/cdialog-class.md)，管理`CPropertySheet`对象就像管理`CDialog`对象。 例如，需要两个部分构成构造属性表的创建： 调用的构造函数，然后调用[DoModal](#domodal)模式属性表或[创建](#create)无模式属性表。 `CPropertySheet`有两种类型的构造函数： [CPropertySheet::Construct](#construct)和[CPropertySheet::CPropertySheet](#cpropertysheet)。  
+ 即使`CPropertySheet`不派生自[CDialog](../../mfc/reference/cdialog-class.md)，管理`CPropertySheet`对象就像管理`CDialog`对象。 例如，需要两个部分构成构造属性表的创建： 调用的构造函数，然后调用[DoModal](#domodal)模式属性表或[创建](#create)无模式属性表。 `CPropertySheet` 有两种类型的构造函数： [CPropertySheet::Construct](#construct)和[CPropertySheet::CPropertySheet](#cpropertysheet)。  
   
  构造时`CPropertySheet`对象时，某些[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)可能会导致首次异常出现。 这将导致从系统尝试创建该工作表之前更改的属性表样式。 若要避免此异常，请确保在创建时设置以下样式你`CPropertySheet`:  
   
@@ -168,10 +163,10 @@ class CPropertySheet : public CWnd
   
  `CPropertySheet`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdlgs.h  
   
-##  <a name="addpage"></a>Cpropertysheet:: Addpage  
+##  <a name="addpage"></a>  Cpropertysheet:: Addpage  
  在属性表中添加与最右边的选项卡提供的页。  
   
 ```  
@@ -185,7 +180,7 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="remarks"></a>备注  
  将页面添加到你希望它们出现的从左到右顺序属性表。  
   
- `AddPage`将添加[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)对象传递给`CPropertySheet`对象的页的列表，但不是实际创建页窗口。 框架推迟的页的窗口的创建，直到用户选择该页面。  
+ `AddPage` 将添加[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)对象传递给`CPropertySheet`对象的页的列表，但不是实际创建页窗口。 框架推迟的页的窗口的创建，直到用户选择该页面。  
   
  当你添加属性页使用`AddPage`、`CPropertySheet`父级的`CPropertyPage`。 若要从属性页中获取到属性表的访问权限，调用[CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent)。  
   
@@ -196,7 +191,7 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
   
-##  <a name="construct"></a>CPropertySheet::Construct  
+##  <a name="construct"></a>  CPropertySheet::Construct  
  构造 `CPropertySheet` 对象。  
   
 ```  
@@ -264,7 +259,7 @@ void Construct(
   
  [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
   
-##  <a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
+##  <a name="cpropertysheet"></a>  CPropertySheet::CPropertySheet  
  构造 `CPropertySheet` 对象。  
   
 ```  
@@ -333,7 +328,7 @@ CPropertySheet(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
   
-##  <a name="create"></a>CPropertySheet::Create  
+##  <a name="create"></a>  CPropertySheet::Create  
  显示无模式属性表。  
   
 ```  
@@ -358,7 +353,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ### <a name="remarks"></a>备注  
  调用**创建**可以是在构造函数中，或后调用的构造函数可以调用它。  
   
- 默认样式，表示通过将传递为-1 表示`dwStyle`，实际**WS_SYSMENU &#124;**`WS_POPUP` **&#124;WS_CAPTION &#124; DS_MODALFRAME &#124; DS_CONTEXTHELP &#124;WS_VISIBLE**。 默认值扩展窗口样式，表示通过将 0 作为传递`dwExStyle`，实际**WS_EX_DLGMODALFRAME**。  
+ 默认样式，表示通过将传递为-1 表示`dwStyle`，实际**WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_可见**。 默认值扩展窗口样式，表示通过将 0 作为传递`dwExStyle`，实际**WS_EX_DLGMODALFRAME**。  
   
  **创建**成员函数将在创建属性表后立即返回。 若要销毁属性表，调用[cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。  
   
@@ -371,7 +366,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
   
  [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
   
-##  <a name="domodal"></a>CPropertySheet::DoModal  
+##  <a name="domodal"></a>  CPropertySheet::DoModal  
  显示模式属性表。  
   
 ```  
@@ -379,7 +374,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `IDOK`或`IDCANCEL`如果函数是与成功; 否则为 0 或-1。 如果已建立属性表作为向导 (请参阅[SetWizardMode](#setwizardmode))，`DoModal`返回`ID_WIZFINISH`或`IDCANCEL`。  
+ `IDOK` 或`IDCANCEL`如果函数是与成功; 否则为 0 或-1。 如果已建立属性表作为向导 (请参阅[SetWizardMode](#setwizardmode))，`DoModal`返回`ID_WIZFINISH`或`IDCANCEL`。  
   
 ### <a name="remarks"></a>备注  
  返回值对应于关闭属性表控件的 ID。 此函数返回后，将销毁 windows 对应于属性表和所有页。 对象本身仍存在。 通常情况下，将检索数据从[CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象后`DoModal`返回`IDOK`。  
@@ -414,7 +409,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>示例  
   请参阅示例[cpropertysheet:: Addpage](#addpage)。  
   
-##  <a name="enablestackedtabs"></a>Cpropertysheet:: Enablestackedtabs  
+##  <a name="enablestackedtabs"></a>  Cpropertysheet:: Enablestackedtabs  
  指示是否堆栈中的属性表选项卡的行。  
   
 ```  
@@ -428,12 +423,12 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="remarks"></a>备注  
  默认情况下，如果属性表具有更多选项卡而不能显示在宽度属性表的单个行中选项卡将堆积在多行。 若要使用滚动选项卡而不是堆叠选项卡，调用`EnableStackedTabs`与`bStacked`设置为**FALSE**之前调用[DoModal](#domodal)或[创建](#create)。  
   
- 必须调用`EnableStackedTabs`在创建模式或无模式属性表。 将在此样式`CPropertySheet`-派生类中，消息处理程序编写为`WM_CREATE`。 中的重写版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，调用**EnableStackedTabs (FALSE)**之前调用基类实现。  
+ 必须调用`EnableStackedTabs`在创建模式或无模式属性表。 将在此样式`CPropertySheet`-派生类中，消息处理程序编写为`WM_CREATE`。 中的重写版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，调用**EnableStackedTabs (FALSE)** 之前调用基类实现。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
   
-##  <a name="enddialog"></a>CPropertySheet::EndDialog  
+##  <a name="enddialog"></a>  CPropertySheet::EndDialog  
  终止属性表。  
   
 ```  
@@ -452,7 +447,7 @@ void EndDialog(int nEndID);
 ### <a name="example"></a>示例  
   请参阅示例[CPropertySheet::PressButton](#pressbutton)。  
   
-##  <a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
+##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex  
  获取属性表窗口的活动页的索引号，然后与的参数中使用返回的索引号`GetPage`。  
   
 ```  
@@ -465,7 +460,7 @@ int GetActiveIndex() const;
 ### <a name="example"></a>示例  
   请参阅示例[CPropertySheet::GetActivePage](#getactivepage)。  
   
-##  <a name="getactivepage"></a>CPropertySheet::GetActivePage  
+##  <a name="getactivepage"></a>  CPropertySheet::GetActivePage  
  检索属性表窗口的活动页。  
   
 ```  
@@ -481,7 +476,7 @@ CPropertyPage* GetActivePage() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
   
-##  <a name="getpage"></a>CPropertySheet::GetPage  
+##  <a name="getpage"></a>  CPropertySheet::GetPage  
  将指针返回到此属性表中的指定页。  
   
 ```  
@@ -498,7 +493,7 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="example"></a>示例  
   请参阅示例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
   
-##  <a name="getpagecount"></a>CPropertySheet::GetPageCount  
+##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount  
  确定当前属性表中的页面数。  
   
 ```  
@@ -511,7 +506,7 @@ int GetPageCount() const;
 ### <a name="example"></a>示例  
   请参阅示例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
   
-##  <a name="getpageindex"></a>CPropertySheet::GetPageIndex  
+##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex  
  检索属性表中指定的页的索引号。  
   
 ```  
@@ -531,7 +526,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="example"></a>示例  
   请参阅示例[CPropertySheet::GetActivePage](#getactivepage)。  
   
-##  <a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
+##  <a name="gettabcontrol"></a>  CPropertySheet::GetTabControl  
  检索指向选项卡控件执行操作特定于选项卡控件 (即，使用中的 Api 的任何[CTabCtrl](../../mfc/reference/ctabctrl-class.md))。  
   
 ```  
@@ -547,7 +542,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
   
-##  <a name="m_psh"></a>CPropertySheet::m_psh  
+##  <a name="m_psh"></a>  CPropertySheet::m_psh  
  其成员存储的特征的结构[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。  
   
 ### <a name="remarks"></a>备注  
@@ -558,7 +553,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
   
-##  <a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect  
  将矩形的对话框单位转换为屏幕单位。  
   
 ```  
@@ -576,7 +571,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  `MapDialogRect`成员函数将替换中的对话框单元`lpRect`与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
   
-##  <a name="oninitdialog"></a>Cpropertysheet:: Oninitdialog  
+##  <a name="oninitdialog"></a>  Cpropertysheet:: Oninitdialog  
  替代来增加属性表初始化。  
   
 ```  
@@ -593,7 +588,7 @@ virtual BOOL OnInitDialog();
   
  此成员函数不需要一个消息映射条目。  
   
-##  <a name="pressbutton"></a>CPropertySheet::PressButton  
+##  <a name="pressbutton"></a>  CPropertySheet::PressButton  
  模拟所选的属性表中指定的按钮。  
   
 ```  
@@ -626,7 +621,7 @@ void PressButton(int nButton);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
   
-##  <a name="removepage"></a>CPropertySheet::RemovePage  
+##  <a name="removepage"></a>  CPropertySheet::RemovePage  
  从属性表删除页，并销毁关联的窗口。  
   
 ```  
@@ -644,7 +639,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>备注  
  [CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象本身不会被销毁之前的所有者`CPropertySheet`窗口已关闭。  
   
-##  <a name="setactivepage"></a>CPropertySheet::SetActivePage  
+##  <a name="setactivepage"></a>  CPropertySheet::SetActivePage  
  更改的活动页面。  
   
 ```  
@@ -668,7 +663,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="example"></a>示例  
   请参阅示例[CPropertySheet::GetActivePage](#getactivepage)。  
   
-##  <a name="setfinishtext"></a>CPropertySheet::SetFinishText  
+##  <a name="setfinishtext"></a>  CPropertySheet::SetFinishText  
  设置中完成命令按钮的文本。  
   
 ```  
@@ -685,7 +680,7 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="settitle"></a>CPropertySheet::SetTitle  
+##  <a name="settitle"></a>  CPropertySheet::SetTitle  
  指定属性表的标题 （框架窗口的标题栏中显示的文本）。  
   
 ```  
@@ -707,7 +702,7 @@ void SetTitle(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
   
-##  <a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
+##  <a name="setwizardbuttons"></a>  CPropertySheet::SetWizardButtons  
  启用或禁用向导属性表中的后退、 下一步或完成按钮。  
   
 ```  
@@ -740,7 +735,7 @@ void SetWizardButtons(DWORD dwFlags);
   
  [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="setwizardmode"></a>CPropertySheet::SetWizardMode  
+##  <a name="setwizardmode"></a>  CPropertySheet::SetWizardMode  
  确定为向导的属性页。  
   
 ```  
@@ -752,7 +747,7 @@ void SetWizardMode();
   
  调用`SetWizardMode`之前调用[DoModal](#domodal)。 调用后`SetWizardMode`，`DoModal`将返回**ID_WIZFINISH** （如果用户关闭与完成按钮） 或**IDCANCEL**。  
   
- `SetWizardMode`设置 PSH_WIZARD 标志。  
+ `SetWizardMode` 设置 PSH_WIZARD 标志。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]  

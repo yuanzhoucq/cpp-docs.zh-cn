@@ -1,13 +1,10 @@
 ---
-title: "重新分发 Visual c + + 文件 |Microsoft 文档"
-ms.custom: 
+title: 重新分发 Visual c + + 文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45035847befc08f667c95238ede0604651c7e9b6
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-files"></a>重新分发 Visual C++ 文件
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/03/2018
 
 Visual C++ Redistributable Package 将安装并注册所有 Visual C++ 库。 如果你使用其中一个包，则必须将其设置为在目标系统上运行，以此作为安装应用程序的先决条件。 我们建议你在部署中使用这些包，因为它们能够启用 Visual C++ 库的自动更新。 有关如何使用这些包的示例，请参阅[演练： 部署 Visual c + + 应用程序通过使用 Visual c + + 可再发行组件包](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。
 
-每个 Visual C++ 可再发行包都会检查计算机上是否存在较新版本。 如果找到较新版本，则不安装包。 从 Visual Studio 2015 开始，可再发行包会显示一个表明安装失败的错误消息。 如果通过使用运行包**/quiet/**标志，任何错误消息显示为。 在任一情况下，Microsoft 安装程序都会记录错误，并且会将错误结果返回给调用方。 从 Visual Studio 2015 包开始，你可以通过检查注册表以确定是否安装了较新版本来避免此错误。 当前安装的版本存储在 HKEY_LOCAL_MACHINE\SOFTWARE [\Wow6432Node] \Microsoft\VisualStudio\\_vs 版本_\VC\Runtimes\\{x86 | x64 |ARM} 键，其中_vs 版本_的版本号为 Visual Studio (14.0 Visual Studio 2015 和 Visual Studio 自 2017 年 1，因为更新自 2017 年 1 可再发行组件是 2015年版本与二进制兼容)，和其中的键是ARM、 x86 或 x64 具体取决于平台的已安装了 vcredist 版本。 (你不需要检查 Wow6432Node 子项下，除非你使用注册表编辑器查看已安装 x86 版本在 x64 上的包平台。)版本号存储在 REG_SZ 字符串值**版本**，也可以在的一套**主要**，**次要**， **Bld**，和**Rbld** REG_DWORD 值。 若要避免在安装时出错，则必须跳过的可再发行组件包的安装当前安装的版本是最新。
+每个 Visual C++ 可再发行包都会检查计算机上是否存在较新版本。 如果找到较新版本，则不安装包。 从 Visual Studio 2015 开始，可再发行包会显示一个表明安装失败的错误消息。 如果通过使用运行包 **/quiet/** 标志，任何错误消息显示为。 在任一情况下，Microsoft 安装程序都会记录错误，并且会将错误结果返回给调用方。 从 Visual Studio 2015 包开始，你可以通过检查注册表以确定是否安装了较新版本来避免此错误。 当前安装的版本存储在 HKEY_LOCAL_MACHINE\SOFTWARE [\Wow6432Node] \Microsoft\VisualStudio\\_vs 版本_\VC\Runtimes\\{x86 | x64 |ARM} 键，其中_vs 版本_的版本号为 Visual Studio (14.0 Visual Studio 2015 和 Visual Studio 自 2017 年 1，因为更新自 2017 年 1 可再发行组件是 2015年版本与二进制兼容)，和其中的键是ARM、 x86 或 x64 具体取决于平台的已安装了 vcredist 版本。 (你不需要检查 Wow6432Node 子项下，除非你使用注册表编辑器查看已安装 x86 版本在 x64 上的包平台。)版本号存储在 REG_SZ 字符串值**版本**，也可以在的一套**主要**，**次要**， **Bld**，和**Rbld** REG_DWORD 值。 若要避免在安装时出错，则必须跳过的可再发行组件包的安装当前安装的版本是最新。
 
 如果使用包含 Visual C++ DLL 的合并模块，则必须将该模块包含在用于部署应用程序的 Windows Installer 包（或类似的安装包）中。 有关详细信息，请参阅[通过使用合并模块重新发布](../ide/redistributing-components-by-using-merge-modules.md)。 有关示例，请参阅[演练： 部署 Visual c + + 应用程序通过使用安装项目](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)，其中还说明了如何使用 InstallShield Limited Edition 创建安装包。
 

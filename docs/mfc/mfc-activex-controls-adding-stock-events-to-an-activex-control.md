@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 向 ActiveX 控件添加常用事件 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 向 ActiveX 控件添加常用事件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
-常用事件不同于自定义事件，因为它们自动触发由类[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl`包含激发事件导致常见操作的预定义的成员函数。 实现的一些常见操作`COleControl`纳入单-和当时-clicks 上的控件、 键盘事件和更改鼠标按钮的状态。 常用事件的事件映射条目始终前面带有**EVENT_STOCK**前缀。  
+常用事件不同于自定义事件，因为它们自动触发由类[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含激发事件导致常见操作的预定义的成员函数。 实现的一些常见操作`COleControl`纳入单-和当时-clicks 上的控件、 键盘事件和更改鼠标按钮的状态。 常用事件的事件映射条目始终前面带有**EVENT_STOCK**前缀。  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>常用支持的事件添加事件向导  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> 常用支持的事件添加事件向导  
  `COleControl`类提供了十个常用的事件下, 表中列出。 你可以指定希望你使用在控件中的事件[添加事件向导](../ide/add-event-wizard.md)。  
   
 ### <a name="stock-events"></a>常用事件  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |MouseUp|**void FireMouseUp (短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果任何激发**BUTTONUP**收到 （左、 中间或向右）。 激发此事件之前，释放鼠标捕获。<br /><br /> 事件映射条目： **EVENT_STOCK_MOUSEUP （)**|  
 |ReadyStateChange|**void FireReadyStateChange （)**|在控件转换到下一步收到的数据量由于就绪状态时激发。<br /><br /> 事件映射条目： **EVENT_STOCK_READYSTATECHANGE （)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>添加常用事件使用添加事件向导  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 添加常用事件使用添加事件向导  
  添加常用事件需要比实际事件的激发会自动处理由基类，因为添加自定义事件的工作较少`COleControl`。 下面的过程开发使用的控件添加常用事件[MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)。 当按下某个键且该控件处于活动状态，将引发该事件，调用 KeyPress。 此过程还可用来添加其他常用事件。 KeyPress 的所选的常用事件名称替换。  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>若要添加使用添加事件向导 KeyPress 常用事件  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  单击 **“完成”**。  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>有关常用事件添加事件向导更改  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> 有关常用事件添加事件向导更改  
  因为常用事件处理由控件的基类，添加事件向导不会更改类声明中的以任何方式。 它将事件添加到控件的事件映射，并使将项记入其。IDL 文件。 以下行添加到控件的事件映射，位于控件类实现 (。CPP) 文件：  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  

@@ -1,12 +1,9 @@
 ---
-title: "支持架构行集合 |Microsoft 文档"
-ms.custom: 
+title: 支持架构行集合 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
 架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能包含表组成用户定义的层次结构，因此将无法通过阅读确保除架构的知识的方式。 （作为另一个示例，请注意，Visual c + + 向导使用架构行集生成使用者的访问器。）若要允许使用者便可以执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)接口。 在 Visual c + + 应用程序，你使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现**IDBSchemaRowset**。  

@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3767 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3767 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3767
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731327af2c4c220a3779ddce007c6544db0a3128
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e7e5e422206f3ee58b95024a3b96244d848e1b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3767"></a>编译器错误 C3767
 function 候选函数不可访问  
   
  类中定义的友元函数不应被视为已定义，并且可以在全局命名空间范围中声明。 它可以但是，找不到由依赖于参数的查找。  
   
- C3767 还可能引起一项重大更改： 本机类型现在是在默认情况下私有**/clr**编译，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)有关详细信息。  
+ C3767 还可能引起一项重大更改： 本机类型现在是在默认情况下私有 **/clr**编译，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)有关详细信息。  
   
 ## <a name="example"></a>示例  
  下面的示例生成 C3767:  

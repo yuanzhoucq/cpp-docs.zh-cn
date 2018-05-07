@@ -1,12 +1,9 @@
 ---
-title: "CSimpleException 类 |Microsoft 文档"
-ms.custom: 
+title: CSimpleException 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 类
 此类是资源重要的 MFC 异常的基类。  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|提供有关已发生错误的文本。|  
   
 ## <a name="remarks"></a>备注  
- `CSimpleException`是资源重要的 MFC 异常的基类和处理的所有权和初始化的一条错误消息。 下面的类使用`CSimpleException`作为其基类：  
+ `CSimpleException` 是资源重要的 MFC 异常的基类和处理的所有权和初始化的一条错误消息。 下面的类使用`CSimpleException`作为其基类：  
   
 |||  
 |-|-|  
@@ -76,10 +71,10 @@ class AFX_NOVTABLE CSimpleException : public CException
   
  `CSimpleException`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  构造函数。  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>备注  
  你将通常无需直接调用此构造函数。 引发异常的函数应创建的实例`CException`-派生类并调用其构造函数，或它应使用的 MFC 如引发函数， [AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 引发的预定义的类型。  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  调用此成员函数以提供有关已发生错误的文本。  
   
 ```  

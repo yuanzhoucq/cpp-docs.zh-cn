@@ -2,12 +2,9 @@
 title: 清单工具配置属性 （Visual c + +） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.MergeRulesFile
 - VC.Project.VCManifestTool.UseUnicodeResponseFiles
@@ -18,17 +15,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5e56c823a7a30850e24e393a545f0df6a6637a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1953e7c37c07f66845510efe037015a537aa7baa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>常规、 清单工具，配置属性&lt;Projectname&gt;属性页对话框
 使用此对话框中指定的常规选项[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **取消显示启动版权标志**  
- **是 (/ nologo)**指定启动清单工具时，将隐藏标准 Microsoft 版权数据。 使用此选项时作为生成过程中或从生成环境的一部分运行 mt.exe 抑制不需要的输出日志文件中。  
+ **是 (/ nologo)** 指定启动清单工具时，将隐藏标准 Microsoft 版权数据。 使用此选项时作为生成过程中或从生成环境的一部分运行 mt.exe 抑制不需要的输出日志文件中。  
   
  **详细输出**  
  **是 （/ 详细）**指定清单生成过程中，将显示其他生成信息。  

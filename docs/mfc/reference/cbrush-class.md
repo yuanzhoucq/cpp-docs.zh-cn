@@ -1,12 +1,9 @@
 ---
-title: "CBrush 类 |Microsoft 文档"
-ms.custom: 
+title: CBrush 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush 类
 封装一个 Windows 图形设备接口 (GDI) 画笔。  
@@ -95,10 +90,10 @@ class CBrush : public CGdiObject
   
  `CBrush`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  构造 `CBrush` 对象。  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  指定的画笔的阴影样式。 它可以是以下值之一：  
   
-- `HS_BDIAGONAL`在 45 度 （从左到右） 的向下阴影  
+- `HS_BDIAGONAL` 在 45 度 （从左到右） 的向下阴影  
   
-- `HS_CROSS`水平和垂直剖面线  
+- `HS_CROSS` 水平和垂直剖面线  
   
-- `HS_DIAGCROSS`在 45 度阴影线  
+- `HS_DIAGCROSS` 在 45 度阴影线  
   
-- `HS_FDIAGONAL`在 45 度 （从左到右） 的向上阴影  
+- `HS_FDIAGONAL` 在 45 度 （从左到右） 的向上阴影  
   
-- `HS_HORIZONTAL`水平阴影  
+- `HS_HORIZONTAL` 水平阴影  
   
-- `HS_VERTICAL`垂直阴影  
+- `HS_VERTICAL` 垂直阴影  
   
  `pBitmap`  
  指向`CBitmap`对象，它指定与其画笔绘制的位图。  
   
 ### <a name="remarks"></a>备注  
- `CBrush`有四个重载的构造函数。不带任何参数的构造函数构造未经初始化即`CBrush`可以使用它之前必须进行初始化的对象。  
+ `CBrush` 有四个重载的构造函数。不带任何参数的构造函数构造未经初始化即`CBrush`可以使用它之前必须进行初始化的对象。  
   
  如果你使用不带任何参数的构造函数，必须初始化生成`CBrush`对象[CreateSolidBrush](#createsolidbrush)， [CreateHatchBrush](#createhatchbrush)， [CreateBrushIndirect](#createbrushindirect)， [CreatePatternBrush](#createpatternbrush)，或[CreateDIBPatternBrush](#createdibpatternbrush)。 如果你使用不采用参数的构造函数之一，则没有任何进一步初始化是所必需。 如果遇到错误，而不带任何参数的构造函数将始终会成功，带有参数的构造函数可以引发异常。  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  初始化具有样式、 颜色和中指定模式的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  使用独立于设备的位图 (DIB) 指定的模式初始化画笔。  
   
 ```  
@@ -185,7 +180,7 @@ BOOL CreateDIBPatternBrush(
  标识包含已打包的独立于设备的位图 (DIB) 的全局内存对象。  
   
  *nUsage*  
- 指定是否**bmiColors []**字段[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)数据结构 （是的"打包 DIB"的一部分） 到当前已实现的逻辑调色板包含显式的 RGB 值或索引。 参数必须是以下值之一：  
+ 指定是否**bmiColors []** 字段[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)数据结构 （是的"打包 DIB"的一部分） 到当前已实现的逻辑调色板包含显式的 RGB 值或索引。 参数必须是以下值之一：  
   
 - **DIB_PAL_COLORS**颜色表包含 16 位索引的数组。  
   
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  初始化具有指定阴影的模式和颜色的画笔。  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  指定的画笔的阴影样式。 它可以是以下值之一：  
   
-- `HS_BDIAGONAL`在 45 度 （从左到右） 的向下阴影  
+- `HS_BDIAGONAL` 在 45 度 （从左到右） 的向下阴影  
   
-- `HS_CROSS`水平和垂直剖面线  
+- `HS_CROSS` 水平和垂直剖面线  
   
-- `HS_DIAGCROSS`在 45 度阴影线  
+- `HS_DIAGCROSS` 在 45 度阴影线  
   
-- `HS_FDIAGONAL`在 45 度 （从左到右） 的向上阴影  
+- `HS_FDIAGONAL` 在 45 度 （从左到右） 的向上阴影  
   
-- `HS_HORIZONTAL`水平阴影  
+- `HS_HORIZONTAL` 水平阴影  
   
-- `HS_VERTICAL`垂直阴影  
+- `HS_VERTICAL` 垂直阴影  
   
  `crColor`  
  指定作为 RGB 颜色 （阴影的颜色） 的画笔的前景色。 请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)适用于详细信息的 Windows SDK 中。  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  初始化具有指定位图的模式的画笔。  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  初始化使用指定纯色画笔。  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>示例  
   请参阅示例[CBrush::CBrush](#cbrush)。  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  初始化画笔的颜色。  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  返回一个指向`CBrush`对象提供 Windows 句柄时[HBRUSH](#operator_hbrush)对象。  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>参数  
  `hBrush`  
- `HANDLE`为 Windows GDI 画笔。  
+ `HANDLE` 为 Windows GDI 画笔。  
   
 ### <a name="return-value"></a>返回值  
  指向的指针`CBrush`对象成功; 否则为如果**NULL**。  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>示例  
   请参阅示例[CBrush::CBrush](#cbrush)。  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  调用此成员函数可检索`LOGBRUSH`结构。  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
  此运算符用于获取附加的 Windows GDI 句柄的`CBrush`对象。  
   
 ```  

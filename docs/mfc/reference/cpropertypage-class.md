@@ -1,12 +1,9 @@
 ---
-title: "CPropertyPage 类 |Microsoft 文档"
-ms.custom: 
+title: CPropertyPage 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropertyPage
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42a0ba40797312a2108a288fecdea55c6873f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 表示属性表的各个页，也称为选项卡对话框。  
@@ -122,10 +117,10 @@ class CPropertyPage : public CDialog
   
  `CPropertyPage`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdlgs.h  
   
-##  <a name="canceltoclose"></a>CPropertyPage::CancelToClose  
+##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
  对模式属性表的页面中的数据进行了不可恢复的更改后调用此函数。  
   
 ```  
@@ -140,7 +135,7 @@ void CancelToClose();
 ### <a name="example"></a>示例  
   请参阅示例[CPropertyPage::QuerySiblings](#querysiblings)。  
   
-##  <a name="construct"></a>CPropertyPage::Construct  
+##  <a name="construct"></a>  CPropertyPage::Construct  
  调用此成员函数来构造`CPropertyPage`对象。  
   
 ```  
@@ -200,7 +195,7 @@ void Construct(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
-##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
+##  <a name="cpropertypage"></a>  CPropertyPage::CPropertyPage  
  构造 `CPropertyPage` 对象。  
   
 ```  
@@ -266,7 +261,7 @@ CPropertyPage(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
-##  <a name="getpsp"></a>CPropertyPage::GetPSP  
+##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
  检索 Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)与相关的结构`CPropertyPage`对象。  
   
 ```  
@@ -278,8 +273,8 @@ PROPSHEETPAGE& GetPSP();
 ### <a name="return-value"></a>返回值  
  对引用**PROPSHEETPAGE**结构。  
   
-##  <a name="m_psp"></a>CPropertyPage::m_psp  
- `m_psp`是其成员存储的特征的结构[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)。  
+##  <a name="m_psp"></a>  CPropertyPage::m_psp  
+ `m_psp` 是其成员存储的特征的结构[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)。  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -293,7 +288,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
-##  <a name="onapply"></a>CPropertyPage::OnApply  
+##  <a name="onapply"></a>  CPropertyPage::OnApply  
  当用户选择确定或立即应用按钮，将由框架调用此成员函数。  
   
 ```  
@@ -315,7 +310,7 @@ virtual BOOL OnApply();
 ### <a name="example"></a>示例  
   请参阅示例[CPropertyPage::OnOK](#onok)。  
   
-##  <a name="oncancel"></a>CPropertyPage::OnCancel  
+##  <a name="oncancel"></a>  CPropertyPage::OnCancel  
  当选择取消按钮时，将由框架调用此成员函数。  
   
 ```  
@@ -328,7 +323,7 @@ virtual void OnCancel();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
-##  <a name="onkillactive"></a>Cpropertypage:: Onkillactive  
+##  <a name="onkillactive"></a>  Cpropertypage:: Onkillactive  
  当该页不再是活动的页时，将由框架调用此成员函数。  
   
 ```  
@@ -348,7 +343,7 @@ virtual BOOL OnKillActive();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
-##  <a name="onok"></a>CPropertyPage::OnOK  
+##  <a name="onok"></a>  CPropertyPage::OnOK  
  由框架调用此成员函数，当用户选择确定或立即应用按钮，框架调用后立即[OnKillActive](#onkillactive)。  
   
 ```  
@@ -365,7 +360,7 @@ virtual void OnOK();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
-##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CPropertyPage::OnQueryCancel  
  当用户单击取消按钮和之前取消操作发生时，将由框架调用此成员函数。  
   
 ```  
@@ -383,7 +378,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
-##  <a name="onreset"></a>CPropertyPage::OnReset  
+##  <a name="onreset"></a>  CPropertyPage::OnReset  
  当用户选择取消按钮，将由框架调用此成员函数。  
   
 ```  
@@ -400,7 +395,7 @@ virtual void OnReset();
 ### <a name="example"></a>示例  
   请参阅示例[CPropertyPage::OnCancel](#oncancel)。  
   
-##  <a name="onsetactive"></a>Cpropertypage:: Onsetactive  
+##  <a name="onsetactive"></a>  Cpropertypage:: Onsetactive  
  由用户选择和成为活动页面页时，将由框架调用此成员函数。  
   
 ```  
@@ -418,7 +413,7 @@ virtual BOOL OnSetActive();
 ### <a name="example"></a>示例  
   请参阅示例[CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext)。  
   
-##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
+##  <a name="onwizardback"></a>  CPropertyPage::OnWizardBack  
  当用户单击向导中后退按钮时，将由框架调用此成员函数。  
   
 ```  
@@ -436,7 +431,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
-##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CPropertyPage::OnWizardFinish  
  当用户单击向导中完成按钮时，将由框架调用此成员函数。  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL OnWizardFinish();
   
  [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
-##  <a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
+##  <a name="onwizardnext"></a>  CPropertyPage::OnWizardNext  
  当用户单击向导中的下一步按钮时，将由框架调用此成员函数。  
   
 ```  
@@ -482,7 +477,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
-##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
+##  <a name="querysiblings"></a>  CPropertyPage::QuerySiblings  
  调用此成员函数以将消息转发到属性表中每一页。  
   
 ```  
@@ -511,7 +506,7 @@ LRESULT QuerySiblings(
   
  [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
-##  <a name="setmodified"></a>Cpropertypage:: Setmodified  
+##  <a name="setmodified"></a>  Cpropertypage:: Setmodified  
  调用此成员函数以启用或禁用立即应用按钮，基于是否属性页中的设置应该应用于相应的外部对象。  
   
 ```  
@@ -523,7 +518,7 @@ void SetModified(BOOL bChanged = TRUE);
  **TRUE**以指示是否尚未中应用; 的上次修改的属性页设置**FALSE**以指示已应用，或应忽略的属性页设置。  
   
 ### <a name="remarks"></a>备注  
- 框架将的跟踪该页面的"脏"，它是、 属性页，为其调用了**SetModified (TRUE)**。 将始终启用立即应用按钮，如果调用**SetModified (TRUE)**页面之一。 在调用时，将禁用立即应用按钮**SetModified (FALSE)**之一的页面，但只有无其他页面"脏"。  
+ 框架将的跟踪该页面的"脏"，它是、 属性页，为其调用了**SetModified (TRUE)**。 将始终启用立即应用按钮，如果调用**SetModified (TRUE)** 页面之一。 在调用时，将禁用立即应用按钮**SetModified (FALSE)** 之一的页面，但只有无其他页面"脏"。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]  

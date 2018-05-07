@@ -1,12 +1,9 @@
 ---
-title: "CMFCColorMenuButton 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCColorMenuButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorMenuButton
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c6e976b1a5497e8d2814208b6b3260037458fc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c19386aeac0d85565ae7834a881d710d9226ef9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 类
 `CMFCColorMenuButton`类支持的菜单命令或启动颜色选取器对话框中的工具栏按钮。  
@@ -130,10 +125,10 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
   
  [CMFCColorMenuButton](../../mfc/reference/cmfccolormenubutton-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcolormenubutton.h  
   
-##  <a name="cmfccolormenubutton"></a>CMFCColorMenuButton::CMFCColorMenuButton  
+##  <a name="cmfccolormenubutton"></a>  CMFCColorMenuButton::CMFCColorMenuButton  
  构造 `CMFCColorMenuButton` 对象。  
   
 ```  
@@ -163,7 +158,7 @@ CMFCColorMenuButton(
   
  第二个构造函数将初始化为与指定的命令 ID 相对应的颜色按钮  
   
-##  <a name="copyfrom"></a>CMFCColorMenuButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCColorMenuButton::CopyFrom  
  将复制一个[CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)-到另一个派生对象。  
   
 ```  
@@ -177,7 +172,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>备注  
  重写此方法为派生自的复制对象`CMFCColorMenuButton`对象。  
   
-##  <a name="createpopupmenu"></a>CMFCColorMenuButton::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMFCColorMenuButton::CreatePopupMenu  
  创建颜色选取器对话框。  
   
 ```  
@@ -190,7 +185,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 ### <a name="remarks"></a>备注  
  当用户按下的颜色菜单按钮时，将由框架调用此方法。  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorMenuButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCColorMenuButton::EnableAutomaticButton  
  启用和禁用位于常规颜色按钮上方的"自动"按钮。 (标准系统自动按钮标记为**自动**。)  
   
 ```  
@@ -213,7 +208,7 @@ void EnableAutomaticButton(
 ### <a name="remarks"></a>备注  
  自动按钮会将当前的默认颜色。  
   
-##  <a name="enabledocumentcolors"></a>CMFCColorMenuButton::EnableDocumentColors  
+##  <a name="enabledocumentcolors"></a>  CMFCColorMenuButton::EnableDocumentColors  
  允许显示特定于文档的颜色，而不是系统颜色。  
   
 ```  
@@ -227,12 +222,12 @@ void EnableDocumentColors(
  指定按钮文本。  
   
  [in] `bEnable`  
- `TRUE`若要显示特定于文档的颜色或`FALSE`以显示系统颜色。  
+ `TRUE` 若要显示特定于文档的颜色或`FALSE`以显示系统颜色。  
   
 ### <a name="remarks"></a>备注  
  使用此方法以显示当前的文档颜色或系统调色板的颜色，当用户单击颜色菜单按钮。  
   
-##  <a name="enableotherbutton"></a>CMFCColorMenuButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCColorMenuButton::EnableOtherButton  
  启用和禁用位于常规颜色按钮下方的"其他"按钮。 ("其他"按钮标记为标准系统**其他颜色**。)  
   
 ```  
@@ -254,7 +249,7 @@ void EnableOtherButton(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="enabletearoff"></a>CMFCColorMenuButton::EnableTearOff  
+##  <a name="enabletearoff"></a>  CMFCColorMenuButton::EnableTearOff  
  能够抽出颜色窗格。  
   
 ```  
@@ -277,7 +272,7 @@ void EnableTearOff(
 ### <a name="remarks"></a>备注  
  调用此方法以启用弹出时的颜色窗格的"拖曳"功能`CMFCColorMenuButton`按下按钮。  
   
-##  <a name="getautomaticcolor"></a>CMFCColorMenuButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>  CMFCColorMenuButton::GetAutomaticColor  
  检索当前的自动颜色。  
   
 ```  
@@ -290,7 +285,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>备注  
  调用此方法以获取将由自动配色[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)。  
   
-##  <a name="getcolor"></a>CMFCColorMenuButton::GetColor  
+##  <a name="getcolor"></a>  CMFCColorMenuButton::GetColor  
  检索当前按钮的颜色。  
   
 ```  
@@ -302,7 +297,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcolorbycmdid"></a>CMFCColorMenuButton::GetColorByCmdID  
+##  <a name="getcolorbycmdid"></a>  CMFCColorMenuButton::GetColorByCmdID  
  检索与指定的命令 ID 相对应的颜色  
   
 ```  
@@ -319,7 +314,7 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ### <a name="remarks"></a>备注  
  当应用程序中有多个颜色按钮时，请使用此方法。 当用户单击的颜色按钮时，该按钮发送其命令 ID`WM_COMMAND`到其父的消息。 `GetColorByCmdID`方法使用的命令 ID 来检索相应的颜色。  
   
-##  <a name="isemptymenuallowed"></a>CMFCColorMenuButton::IsEmptyMenuAllowed  
+##  <a name="isemptymenuallowed"></a>  CMFCColorMenuButton::IsEmptyMenuAllowed  
  指示是否支持空的菜单。  
   
 ```  
@@ -332,7 +327,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ### <a name="remarks"></a>备注  
  默认情况下支持空的菜单。 重写此方法可以更改此行为在派生类中。  
   
-##  <a name="onchangeparentwnd"></a>CMFCColorMenuButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCColorMenuButton::OnChangeParentWnd  
  父窗口更改时由框架调用。  
   
 ```  
@@ -345,7 +340,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondraw"></a>CMFCColorMenuButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCColorMenuButton::OnDraw  
  由框架调用以按钮上显示图像。  
   
 ```  
@@ -371,23 +366,23 @@ virtual void OnDraw(
  指向的工具栏图像的列表时。  
   
  [in] `bHorz`  
- `TRUE`若要指定工具栏是按水平停靠状态;否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` 若要指定工具栏是按水平停靠状态;否则为`FALSE`。 默认值为 `TRUE`。  
   
  [in] `bCustomizeMode`  
- `TRUE`若要指定应用程序是在自定义模式;否则为`FALSE`。 默认值为 `FALSE`。  
+ `TRUE` 若要指定应用程序是在自定义模式;否则为`FALSE`。 默认值为 `FALSE`。  
   
  [in] `bHighlight`  
- `TRUE`若要指定，按钮将突出显示;否则为`FALSE`。 默认值为 `FALSE`。  
+ `TRUE` 若要指定，按钮将突出显示;否则为`FALSE`。 默认值为 `FALSE`。  
   
  [in] `bDrawBorder`  
- `TRUE`若要指定显示按钮的边框;否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` 若要指定显示按钮的边框;否则为`FALSE`。 默认值为 `TRUE`。  
   
  [in] `bGrayDisabledButtons`  
- `TRUE`若要指定的禁用按钮将变灰 （无效）否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` 若要指定的禁用按钮将变灰 （无效）否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCColorMenuButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCColorMenuButton::OnDrawOnCustomizeList  
  由框架在之前调用`CMFCColorMenuButton`对象显示在列表中一个工具栏自定义对话框。  
   
 ```  
@@ -405,7 +400,7 @@ virtual int OnDrawOnCustomizeList(
  限定按钮要绘制的矩形。  
   
  [in] `bSelected`  
- `TRUE`指定按钮处于选定状态，则否则为`FALSE`。  
+ `TRUE` 指定按钮处于选定状态，则否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  按钮的宽度。  
@@ -413,7 +408,7 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="remarks"></a>备注  
  由框架调用此方法时`CMFCColorMenuButton`工具栏自定义过程的列表框中显示对象。  
   
-##  <a name="opencolordialog"></a>CMFCColorMenuButton::OpenColorDialog  
+##  <a name="opencolordialog"></a>  CMFCColorMenuButton::OpenColorDialog  
  打开一个颜色选择对话框。  
   
 ```  
@@ -435,7 +430,7 @@ virtual BOOL OpenColorDialog(
 ### <a name="remarks"></a>备注  
  单击菜单按钮时，调用此方法以打开颜色对话框。 返回值不为零，如果用户选择的颜色将存储在`colorRes`参数。 使用[CMFCColorMenuButton::EnableOtherButton](#enableotherbutton)标准颜色对话框之间进行切换的方法和[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)对话框。  
   
-##  <a name="setcolor"></a>CMFCColorMenuButton::SetColor  
+##  <a name="setcolor"></a>  CMFCColorMenuButton::SetColor  
  设置当前的颜色按钮的颜色。  
   
 ```  
@@ -449,12 +444,12 @@ virtual void SetColor(
  RGB 颜色值。  
   
  [in] `bNotify`  
- `TRUE`要应用`clr`参数颜色为任何关联的菜单按钮或工具栏按钮; 否则为`FALSE`。  
+ `TRUE` 要应用`clr`参数颜色为任何关联的菜单按钮或工具栏按钮; 否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  调用此方法可以更改当前的颜色按钮的颜色。 如果`bNotify`参数不为零，任何相关联的弹出菜单或工具栏上的相应按钮的颜色更改为指定的颜色`clr`参数。  
   
-##  <a name="setcolorbycmdid"></a>CMFCColorMenuButton::SetColorByCmdID  
+##  <a name="setcolorbycmdid"></a>  CMFCColorMenuButton::SetColorByCmdID  
  设置指定的颜色菜单按钮的颜色。  
   
 ```  
@@ -470,7 +465,7 @@ static void SetColorByCmdID(
  [in] `color`  
  RGB 颜色值。  
   
-##  <a name="setcolorname"></a>CMFCColorMenuButton::SetColorName  
+##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  设置指定的颜色的新名称。  
   
 ```  
@@ -488,7 +483,7 @@ static void SetColorName(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setcolumnsnumber"></a>CMFCColorMenuButton::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCColorMenuButton::SetColumnsNumber  
  设置要显示颜色选择控件中的列数 ( [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)对象)。  
   
 ```  

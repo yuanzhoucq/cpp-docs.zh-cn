@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2032 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2032 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2032
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2032
 ms.assetid: 625d7c83-70b6-42c2-a558-81fbc0026324
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87703c289dc522f62c29fd2110e969fd44abf645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1db268222f3b9f7ca6f9ce297680866185e6661d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2032"></a>编译器错误 C2032
 identifier： 函数不能为结构/联合 structorunion 的成员  

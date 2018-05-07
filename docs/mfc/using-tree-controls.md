@@ -1,30 +1,25 @@
 ---
-title: "使用树控件 |Microsoft 文档"
-ms.custom: 
+title: 使用树控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3b7e0348cb21aa4338293f7cc1119e380f92dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tree-controls"></a>使用树控件
 树控件的典型用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循以下模式：  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果你想要使用映像树控件，通过调用设置图像列表[SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)。 你还可以通过调用更改缩进[SetIndent](../mfc/reference/ctreectrl-class.md#setindent)。 执行此操作的好时机是在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) （对于在对话框中的控件） 或[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) （适用于视图）。  
   
--   将数据放入控件，通过调用`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)一次为每个数据项的函数。 `InsertItem`返回一个句柄到项可以使用来引用它更高版本，例如，当添加子项。 初始化的数据的好时机是在`OnInitDialog`（对于在对话框中的控件） 或`OnInitialUpdate`（适用于视图）。  
+-   将数据放入控件，通过调用`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)一次为每个数据项的函数。 `InsertItem` 返回一个句柄到项可以使用来引用它更高版本，例如，当添加子项。 初始化的数据的好时机是在`OnInitDialog`（对于在对话框中的控件） 或`OnInitialUpdate`（适用于视图）。  
   
 -   当用户与该控件交互时，将发送各种通知消息。 你可以指定函数来处理每个你想要通过添加处理的消息**ON_NOTIFY_REFLECT**宏控件窗口的消息映射中或通过添加`ON_NOTIFY`宏为父窗口的消息映射。 请参阅[树控件通知消息](../mfc/tree-control-notification-messages.md)本主题中有关的可能的通知列表更高版本。  
   

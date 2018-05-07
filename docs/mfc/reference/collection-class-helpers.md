@@ -1,13 +1,10 @@
 ---
-title: "集合类帮助器 |Microsoft 文档"
-ms.custom: 
+title: 集合类帮助器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
 集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素等目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，与为地图、 列表或数组中存储的数据类型而定制的版本，必须重写这些函数根据需要。 有关如何重写帮助器函数如`SerializeElements`，请参阅文章[集合： 如何生成类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意， **ConstructElements**和**DestructElements**已弃用。  
@@ -46,8 +41,8 @@ ms.lasthandoff: 12/21/2017
 |[HashKey](#hashkey)|计算哈希键。|  
 |[SerializeElements](#serializeelements)|存储或检索到或从存档的元素。|  
   
-##  <a name="compareelements"></a>CompareElements  
- 直接通过调用 [CList::Find] (clist class.md #not_found.md #clist__find 和间接[cmap__lookup](cmap-class.md#lookup)和[cmap__operator &#91; &#93;](cmap-class.md#operator_at)。  
+##  <a name="compareelements"></a>  CompareElements  
+ 直接通过调用 [CList::Find] (clist class.md #not_found.md #clist__find 和间接[cmap__lookup](cmap-class.md#lookup)和[cmap__operator &#91; &#93; ](cmap-class.md#operator_at)。  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -80,10 +75,10 @@ CompareElements(
   
  C + + 语言定义的比较运算符 ( `==`) 对于简单类型 ( `char`， `int`， **float**，依次类推)，但不定义类和结构的比较运算符。 如果你想要使用`CompareElements`或若要实例化一个使用它的集合类，必须定义比较运算符，或重载`CompareElements`版本，返回适当的值。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
    **标头：** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
+##  <a name="copyelements"></a>  CopyElements  
  直接通过调用此函数[carray:: Append](carray-class.md#append)和[carray:: Copy](carray-class.md#copy)。  
   
 ```   
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  要复制的元素的数量。  
   
 ### <a name="remarks"></a>备注  
- 默认实现使用简单的赋值运算符 (  **=**  ) 以执行复制操作。 如果复制类型没有重载操作符 =，则默认实现将执行按位复制。  
+ 默认实现使用简单的赋值运算符 ( **=** ) 以执行复制操作。 如果复制类型没有重载操作符 =，则默认实现将执行按位复制。  
   
  有关实现此函数及其他帮助器函数的信息，请参阅文章[集合： 如何生成类型安全集合](../how-to-make-a-type-safe-collection.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
+##  <a name="dumpelements"></a>  DumpElements  
  为你在重写时的集合的元素提供面向流的文本形式的诊断输出。  
   
 ```   
@@ -145,10 +140,10 @@ void  AFXAPI DumpElements(
  默认实现不执行任何操作。 如果你的集合的元素派生自`CObject`，重写通常将循环访问集合的元素，调用`Dump`中打开每个元素。  
   
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>  HashKey  
  计算给定键的哈希值。  
   
 ```  
@@ -167,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  密钥的哈希值。  
   
 ### <a name="remarks"></a>备注  
- 直接通过调用此函数[CMap::RemoveKey](cmap-class.md#removekey)和间接[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator &#91; &#93;](cmap-class.md#operator_at)。
+ 直接通过调用此函数[CMap::RemoveKey](cmap-class.md#removekey)和间接[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator &#91; &#93; ](cmap-class.md#operator_at)。
   
  默认实现将创建一个哈希值，通过将转移`key`权限通过四个位置。 重写此函数，从而使其返回哈希值适用于你的应用程序。  
   
@@ -181,10 +176,10 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
+##  <a name="serializeelements"></a>  SerializeElements  
  [CArray](carray-class.md)， [CList](clist-class.md)，和[CMap](cmap-class.md)调用此函数可序列化元素。  
   
 ```   
@@ -213,7 +208,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="example"></a>示例  
  请参阅文章中的示例[集合： 如何生成类型安全集合](../how-to-make-a-type-safe-collection.md)。  
  
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxtempl.h 
     
 ## <a name="see-also"></a>请参阅  

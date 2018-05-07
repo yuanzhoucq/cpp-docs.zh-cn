@@ -1,12 +1,9 @@
 ---
-title: "CMapPtrToWord 类 |Microsoft 文档"
-ms.custom: 
+title: CMapPtrToWord 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapPtrToWord
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634f22ae50247a8d4f3a0d3e19e6e6bdef7041d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 180c6db999ed72a83de3f4addbec3db73ee64fa1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord 类
 支持 void 指针键控的 16 位的映射。  
@@ -103,7 +98,7 @@ class CMapPtrToWord : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
   
 ## <a name="remarks"></a>备注  
  `CMapWordToPtr` 合并 `IMPLEMENT_DYNAMIC` 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。 如果你需要单独的地图元素的转储，你必须设置为 1 或更高版本的转储上下文的深度。  
@@ -119,7 +114,7 @@ class CMapPtrToWord : public CObject
   
  `CMapPtrToWord`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
 ## <a name="see-also"></a>请参阅  

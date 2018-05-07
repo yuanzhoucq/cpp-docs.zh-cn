@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialog 类 |Microsoft 文档"
-ms.custom: 
+title: CPrintDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 类
 封装由 Windows 公共对话框提供的打印服务。  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  如果未提供你自己句柄`m_pd`为**hDevMode**和**hDevNames**成员，一定要调用 Windows 函数**GlobalFree**这些句柄当你已完成的对话框中。 使用由提供的框架的打印设置实现时`CWinApp::OnFilePrintSetup`，则不需要释放这些句柄。 句柄由维护`CWinApp`并且在释放`CWinApp`的析构函数。 它只是用来释放这些句柄时使用`CPrintDialog`独立。  
   
- 初始化对话框控件后, 调用`DoModal`成员函数，以显示对话框中，并允许用户选择打印选项。 `DoModal`返回用户是否选择确定 ( **IDOK**) 或取消 ( **IDCANCEL**) 按钮。  
+ 初始化对话框控件后, 调用`DoModal`成员函数，以显示对话框中，并允许用户选择打印选项。 `DoModal` 返回用户是否选择确定 ( **IDOK**) 或取消 ( **IDCANCEL**) 按钮。  
   
  如果`DoModal`返回**IDOK**，你可以使用之一`CPrintDialog`的成员函数以检索用户输入的信息。  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  你可以使用 Windows **CommDlgExtendedError**函数可确定在对话框中的初始化过程中是否发生了错误并了解有关错误的详细信息。 此函数的详细信息，请参阅 Windows SDK。  
   
- `CPrintDialog`依赖于 COMMDLG。随 Windows 版本 3.1 和更高版本一起提供的 DLL 文件。  
+ `CPrintDialog` 依赖于 COMMDLG。随 Windows 版本 3.1 和更高版本一起提供的 DLL 文件。  
   
  要自定义对话框中，从派生类`CPrintDialog`，提供自定义对话框模板，并添加一个消息映射来处理来自扩展控件的通知消息。 任何未处理的消息应传递到基类上。 自定义挂钩函数不是必需的。  
   
@@ -149,7 +144,7 @@ class CPrintDialog : public CCommonDialog
   
  `CPrintDialog`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdlgs.h  
   
 ##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  

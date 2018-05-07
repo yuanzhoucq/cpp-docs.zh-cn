@@ -1,28 +1,23 @@
 ---
-title: "异常 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: 异常 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-ccx"></a>异常 (C++/CX)
 
-错误处理在 C + + /cli CX 基于异常。 在最基本级别，Windows 运行时组件将错误报告为 HRESULT 值。 在 C + + /CX 中，这些值将转换为包含 HRESULT 值和可以通过编程方式访问的字符串说明的强类型异常。  异常作为从 `ref class` 派生的  `Platform::Exception`来实现。  `Platform` 命名空间为最常见的 HRESULT 值定义独特的异常类，而所有其他值都通过 `Platform::COMException` 类来报告。 所有异常类都有一个 [Exception::HResult](platform-exception-class.md#hresult) 字段，可用于检索原始 HRESULT。 您还可以检查可帮助确定根源异常，即使用 c + + 之外的语言编写的代码中产生从调试器中的用户代码的调用堆栈信息。
+错误处理在 C + + /cli CX 基于异常。 在最基本级别，Windows 运行时组件将错误报告为 HRESULT 值。 在 C + + /CX 中，这些值将转换为包含 HRESULT 值和可以通过编程方式访问的字符串说明的强类型异常。  异常作为从 `ref class` 派生的 `Platform::Exception`来实现。  `Platform` 命名空间为最常见的 HRESULT 值定义独特的异常类，而所有其他值都通过 `Platform::COMException` 类来报告。 所有异常类都有一个 [Exception::HResult](platform-exception-class.md#hresult) 字段，可用于检索原始 HRESULT。 您还可以检查可帮助确定根源异常，即使用 c + + 之外的语言编写的代码中产生从调试器中的用户代码的调用堆栈信息。
 
 ## <a name="exceptions"></a>异常
 
@@ -34,7 +29,7 @@ ms.lasthandoff: 02/14/2018
 
 C + + /cli CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异常从 [Platform::COMException](platform-comexception-class.md)派生，而 Platform::COMException 从 `Platform::Exception`派生。 当跨 ABI 边界引发异常时，必须引发一个标准异常。
 
-不能从 `Platform::Exception` 派生您自己的异常类型。 若要引发自定义异常，请使用用户定义的 HRESULT 构造 `COMException` 对象。
+不能从 `Platform::Exception`派生您自己的异常类型。 若要引发自定义异常，请使用用户定义的 HRESULT 构造 `COMException` 对象。
 
 下表列出了标准异常。
 

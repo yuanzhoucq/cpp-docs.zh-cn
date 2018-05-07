@@ -2,11 +2,8 @@
 title: CMFCDropDownToolbarButton 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolbarButton
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-caps.latest.revision: 31
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，它将打开一个下拉工具栏 ( [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果用户按下并按住工具栏按钮。  
@@ -107,7 +102,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|指定用户必须按住鼠标按钮下拉工具栏出现之前的时间的长度。|  
   
@@ -125,10 +120,10 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
  [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdropdowntoolbar.h  
   
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
  将另一个工具栏按钮的属性复制到当前的按钮。  
   
 ```  
@@ -140,9 +135,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  源按钮对要从其中复制的引用。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以将另一个工具栏按钮复制到此工具栏按钮。 `src`类型必须为`CMFCDropDownToolbarButton`。  
+ 调用此方法以将另一个工具栏按钮复制到此工具栏按钮。 `src` 类型必须为`CMFCDropDownToolbarButton`。  
   
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  构造 `CMFCDropDownToolbarButton` 对象。  
   
 ```  
@@ -171,7 +166,7 @@ CMFCDropDownToolbarButton(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
+##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar  
  将打开一个下拉工具栏。  
   
 ```  
@@ -192,7 +187,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  如果此方法将失败`pWnd`是`NULL`和下拉工具栏按钮没有父窗口。  
   
-##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  副本从工具栏按钮的文本复制到的菜单。  
   
 ```  
@@ -211,7 +206,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  如果此方法将失败在父级工具栏`m_pToolBar`，是`NULL`或基类实现返回`FALSE`。  
   
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
+##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
  检索与按钮相关联的下拉菜单的工具栏。  
   
 ```  
@@ -224,7 +219,7 @@ CMFCToolBar* GetDropDownToolBar() const;
 ### <a name="remarks"></a>备注  
  此方法返回`m_pToolBar`数据成员。  
   
-##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
+##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
  确定是否当前打开的下拉菜单的工具栏。  
   
 ```  
@@ -237,7 +232,7 @@ BOOL IsDropDown() const;
 ### <a name="remarks"></a>备注  
  框架使用的打开下拉工具栏[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)方法。 当用户按下的下拉工具栏的非工作区中的左鼠标按钮时，框架将关闭下拉工具栏。  
   
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
+##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
  确定是否可以使用扩展边框显示按钮。  
   
 ```  
@@ -250,7 +245,7 @@ virtual BOOL IsExtraSize() const;
 ### <a name="remarks"></a>备注  
  有关扩展的边框的详细信息，请参阅[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)。  
   
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
+##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
  指定用户必须按住鼠标按钮下拉工具栏出现之前的时间的长度。  
   
 ```  
@@ -260,7 +255,7 @@ static UINT m_uiShowBarDelay;
 ### <a name="remarks"></a>备注  
  以毫秒为单位的延迟时间。 默认值为 500。 你可以通过更改此共享的数据成员的值设置另一个延迟。  
   
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
  由框架调用以计算指定的设备上下文和停靠状态的按钮的大小。  
   
 ```  
@@ -286,7 +281,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>备注  
  此方法扩展的基类实现 ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) 的水平维度的该按钮的大小加上的下拉箭头的宽度。  
   
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
  按钮插入到一个新工具栏时，由框架调用。  
   
 ```  
@@ -300,7 +295,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>备注  
  此方法重写基类实现 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 通过清除的文本标签 ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) 和设置[CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)和[CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)到的数据成员`FALSE`。  
   
-##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
+##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
  当用户单击鼠标按钮时，由框架调用。  
   
 ```  
@@ -314,7 +309,7 @@ virtual BOOL OnClick(
  父窗口的工具栏按钮。  
   
  [in] `bDelay`  
- `TRUE`如果消息应处理一定的延迟。  
+ `TRUE` 如果消息应处理一定的延迟。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮处理单击消息; 非零否则为 0。  
@@ -324,7 +319,7 @@ virtual BOOL OnClick(
   
  当用户单击工具栏按钮时，此方法的书签创建计时器等待指定的时间长度[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)数据成员，然后通过使用打开下拉列表工具栏[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)方法。 此方法关闭下拉工具栏第二次用户单击工具栏按钮。  
   
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
+##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
  当用户释放鼠标按钮时，由框架调用。  
   
 ```  
@@ -341,7 +336,7 @@ virtual BOOL OnClickUp();
   
  有关下拉工具栏和下拉工具栏计时器的详细信息，请参阅[CMFCDropDownToolbarButton::OnClick](#onclick)。  
   
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
  当在父级工具栏处理时由框架调用`WM_HELPHITTEST`消息。  
   
 ```  
@@ -360,7 +355,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  有关详细信息`WM_HELPHITTEST message, see` [TN028： 上下文相关帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。  
   
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
  当应用程序显示在父级工具栏上的快捷菜单，请修改提供的菜单。  
   
 ```  
@@ -389,7 +384,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
  重写此方法以修改框架显示自定义模式中的快捷菜单。  
   
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
  由框架调用以绘制按钮通过使用指定的样式和选项。  
   
 ```  
@@ -432,7 +427,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>备注  
  重写此方法以自定义工具栏按钮绘图。  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
  由框架绘制按钮调用**命令**窗格**自定义**对话框。  
   
 ```  
@@ -460,7 +455,7 @@ virtual int OnDrawOnCustomizeList(
   
  此方法扩展的基类实现 ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) 通过更改按钮的文本标签为按钮的名称 (即，到的值`lpszName`你传递的参数构造函数）。  
   
-##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
+##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
  从存档读取该对象或将其写入存档。  
   
 ```  
@@ -474,7 +469,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>备注  
  此方法扩展的基类实现 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 通过序列化在父级工具栏资源 ID。 当加载存档 ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)返回非零值)，此方法会设置`m_pToolBar`到包含序列化的资源 id。 的工具栏上的数据成员  
   
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
  设置当用户单击按钮时，框架将使用的默认命令。  
   
 ```  

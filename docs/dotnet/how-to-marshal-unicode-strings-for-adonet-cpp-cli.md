@@ -1,13 +1,10 @@
 ---
-title: "如何： 为 ADO.NET 封送 Unicode 字符串 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 为 ADO.NET 封送 Unicode 字符串 (C + + /cli CLI) |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Unicode [C++], strings
 - strings [C++], Unicode
 ms.assetid: 1da090ff-6b53-40be-841f-dc79dfe8ba10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf6078217218a85289602e30c1002ba861db76d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15cf9e9806c0820ea5a410a93419016c2f678c65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>如何：为 ADO.NET 封送 Unicode 字符串 (C++/CLI)
 演示如何添加本机的 Unicode 字符串 (`wchar_t *`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到本机的 Unicode 字符串。  

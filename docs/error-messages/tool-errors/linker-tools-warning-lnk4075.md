@@ -1,12 +1,9 @@
 ---
-title: "链接器工具警告 LNK4075 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具警告 LNK4075 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4075
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c3330e637ae0e0dce5e875fcc349c6deefcf27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bd9a4ecdad30a0be2d45300367f6f79a65a6b31
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4075"></a>链接器工具警告 LNK4075
 忽略由于"选项 2"规范的"选项 1"  
@@ -44,4 +39,4 @@ ms.lasthandoff: 12/21/2017
   
  一些特定的示例：  
   
--   如果链接用编译的模块**/ZI**，这意味着一个内部链接器选项调用意味着没有 /EDITANDCONTINUE /EDITANDCONTINUE 和用 /opt: ref、 /opt: icf 或 /incremental: no，编译的模块，你将获取 LNK4075。  请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)有关详细信息。
+-   如果链接用编译的模块 **/ZI**，这意味着一个内部链接器选项调用意味着没有 /EDITANDCONTINUE /EDITANDCONTINUE 和用 /opt: ref、 /opt: icf 或 /incremental: no，编译的模块，你将获取 LNK4075。  请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](../../build/reference/z7-zi-zi-debug-information-format.md)有关详细信息。

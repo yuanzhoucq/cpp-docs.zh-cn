@@ -1,13 +1,10 @@
 ---
-title: "添加方法向导 |Microsoft 文档"
-ms.custom: 
+title: 添加方法向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>添加方法向导
 使用此向导以向接口添加方法。 具体取决于项目类型或接口类型向其中添加一个方法中，向导将显示不同的选项。  
   
 ## <a name="names"></a>名称  
  **返回类型**  
- 该方法返回的数据类型。 `HRESULT`建议对于所有接口类型，因为它提供一种标准的方式，返回错误。  
+ 该方法返回的数据类型。 `HRESULT` 建议对于所有接口类型，因为它提供一种标准的方式，返回错误。  
   
 |接口类型|描述|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 |-------------------------|-----------------|--------------------------|  
 |**In**|指示参数从调用过程传递到被调用的过程。|**在**仅<br /><br /> **在**和**出**|  
 |**Out**|指示指针参数从调用的过程返回到调用过程 （从服务器到客户端）。|**out**仅<br /><br /> **在**和**出**<br /><br /> **out**和**retval**|  
-|**Retval**|指示参数接收成员的返回值。|**retval**和扩展|  
+|**retval**|指示参数接收成员的返回值。|**retval**和扩展|  
   
  **参数类型**  
  设置参数的数据类型。 从列表中选择类型。  

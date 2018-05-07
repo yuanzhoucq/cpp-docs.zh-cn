@@ -1,27 +1,22 @@
 ---
-title: "DHTML 编辑命令映射 |Microsoft 文档"
-ms.custom: 
+title: DHTML 编辑命令映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eba41005864e2389997a75855eaf955ad18b557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 编辑命令映射
 可以使用以下宏映射 DHTML 编辑命令[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-派生类。 有关其使用的示例，请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|命令 ID 映射到 HTML 编辑命令和用户界面元素。|  
 |[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|将命令 ID 映射到 HTML 编辑命令、消息处理程序和用户界面元素。|  
   
-##  <a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
+##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP  
  声明 DHTML 编辑命令映射类中。  
   
 ```  
@@ -57,10 +52,10 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
   
-##  <a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
+##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP  
  启动 DHTML 编辑命令映射类内部的定义。  
   
 ```  
@@ -76,10 +71,10 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
   
  位置`BEGIN_DHTMLEDITING_CMDMAP`类的实现 (.cpp) 文件中的宏跟[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)用于此类是映射的命令的宏 (例如，从**ID_EDIT_CUT**到**IDM_CUT**)。 使用[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)宏来标记事件映射的末尾。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
   
-##  <a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
+##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP  
  标记 DHTML 编辑命令映射的末尾。  
   
 ```  
@@ -92,10 +87,10 @@ END_DHTMLEDITING_CMDMAP()
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
+##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY  
  命令 ID 映射到 HTML 编辑命令。  
   
 ```  
@@ -112,10 +107,10 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
+##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC  
  命令 ID 映射到 HTML 编辑命令和消息处理程序。  
   
 ```  
@@ -135,10 +130,10 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
+##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE  
  命令 ID 映射到 HTML 编辑命令和用户界面元素。  
   
 ```  
@@ -158,10 +153,10 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
+##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
  将命令 ID 映射到 HTML 编辑命令、消息处理程序和用户界面元素。  
   
 ```  
@@ -184,7 +179,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
     
 ## <a name="see-also"></a>请参阅  

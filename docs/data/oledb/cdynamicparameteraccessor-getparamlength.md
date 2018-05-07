@@ -1,12 +1,9 @@
 ---
-title: CDynamicParameterAccessor::GetParamLength | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicparameteraccessor:: Getparamlength |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDynamicParameterAccessor::GetParamLength
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParamLength method
 ms.assetid: 04d76931-911a-4915-9c2c-ad585a9f3854
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1610dd8bc3c077b2e56787fee3e9ad43bdec5c4b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ee19c694fa267630419857c3a81bd9e61d044939
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamlength"></a>CDynamicParameterAccessor::GetParamLength
 检索存储在缓冲区中的指定参数的长度。  
@@ -54,7 +49,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 ## <a name="remarks"></a>备注  
  第一重写返回**true**成功或**false**失败。 第二个重写指向包含参数的长度的内存。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

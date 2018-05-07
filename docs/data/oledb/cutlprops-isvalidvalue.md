@@ -1,12 +1,9 @@
 ---
-title: CUtlProps::IsValidValue | Microsoft Docs
-ms.custom: 
+title: 'Cutlprops:: Isvalidvalue |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CUtlProps::IsValidValue
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IsValidValue method
 ms.assetid: 1164556e-8d98-429c-a396-fc9a699e0e97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bd02ef7c27926b2be99ed900b82d53c77d8d6dd0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0a37f0e0e9d415f9b7c78c8a619fd7fd66d24f28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
 用于设置属性之前验证值。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>备注  
  如果你有任何你想要运行上一个值，你将用于设置属性的验证例程，应重写此函数。 例如，无法验证**DBPROP_AUTH_PASSWORD**针对密码表来确定有效的值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

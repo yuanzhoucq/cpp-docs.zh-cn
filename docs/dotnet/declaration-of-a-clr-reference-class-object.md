@@ -1,31 +1,26 @@
 ---
-title: "CLR 引用类对象的声明 |Microsoft 文档"
-ms.custom: 
+title: CLR 引用类对象的声明 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - types [C++], reference types
 - reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12cead3a142c69da56390ca6f5bf32cecc3b0075
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 引用类对象的声明
 用于声明并实例化的引用类类型对象的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
@@ -131,7 +126,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 在新语法中，任何初始化或将值类型到`Object`导致该值类型的隐式装箱。 在新语法中，同时`obj`和`obj2`都初始化为寻址分别包含值 0 和 1，装箱的 Int32 对象。 例如:  
+ 在新语法中，任何初始化或将值类型到`Object`导致该值类型的隐式装箱。 在新语法中，同时`obj`和`obj2`都初始化为寻址分别包含值 0 和 1，装箱的 Int32 对象。 例如：  
   
 ```  
 // causes the implicit boxing of both 0 and 1  

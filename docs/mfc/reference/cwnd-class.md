@@ -2,11 +2,8 @@
 title: CWnd 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>CWnd 类
 提供 Microsoft 基础类库中所有窗口类的基本功能。  
@@ -883,7 +878,7 @@ class CWnd : public CCmdTarget
 |[CWnd::ClientToScreen](#clienttoscreen)|将显示中的给定点或矩形的客户端坐标转换为屏幕坐标。|  
 |[CWnd::CloseWindow](#closewindow)|最小化窗口。|  
 |[CWnd::ContinueModal](#continuemodal)|继续窗口的模式状态。|  
-|[CWnd::Create](#create)|创建并初始化与 `CWnd` 对象关联的子窗口。|  
+|[Cwnd:: Create](#create)|创建并初始化与 `CWnd` 对象关联的子窗口。|  
 |[CWnd::CreateAccessibleProxy](#createaccessibleproxy)|为指定对象创建 Active Accessibility 代理服务器。|  
 |[CWnd::CreateCaret](#createcaret)|为系统插入符号创建新形状并获取插入符号的所有权。|  
 |[CWnd::CreateControl](#createcontrol)|创建在 MFC 程序中由 `CWnd` 对象表示的 ActiveX 控件。|  
@@ -1275,8 +1270,8 @@ class CWnd : public CCmdTarget
 |名称|描述|  
 |----------|-----------------|  
 |[CWnd::operator HWND](#operator_hwnd)|调用以获取窗口的句柄。|  
-|[CWnd::operator !=](#operator_neq)|确定窗口是否不与句柄的窗口相同[m_hWnd](#m_hwnd)。|  
-|[CWnd::operator ==](#operator_eq_eq)|确定窗口是否与句柄的窗口相同[m_hWnd](#m_hwnd)。|  
+|[CWnd::operator ！ =](#operator_neq)|确定窗口是否不与句柄的窗口相同[m_hWnd](#m_hwnd)。|  
+|[CWnd::operator = =](#operator_eq_eq)|确定窗口是否与句柄的窗口相同[m_hWnd](#m_hwnd)。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
@@ -1306,7 +1301,7 @@ class CWnd : public CCmdTarget
   
  `CWnd`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
 ##  <a name="accdodefaultaction"></a>  CWnd::accDoDefaultAction  
@@ -1759,7 +1754,7 @@ CWnd* ChildWindowFromPoint(
  *nflags*  
  指定要跳过的子窗口。 此参数可以是以下值的组合：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |**CWP_ALL**|请勿跳过任何子窗口|  
 |**CWP_SKIPINVISIBLE**|跳过不可见子窗口|  
@@ -1823,7 +1818,7 @@ virtual BOOL ContinueModal();
 ### <a name="remarks"></a>备注  
  默认情况下，它将返回非零直到`EndModalLoop`调用。  
   
-##  <a name="create"></a>  CWnd::Create  
+##  <a name="create"></a>  Cwnd:: Create  
  创建指定的子窗口，并将其附加到[CWnd](../../mfc/reference/cwnd-class.md)对象。  
   
 ```  
@@ -1890,7 +1885,7 @@ virtual HRESULT CreateAccessibleProxy(
  `wParam`  
  标识 Active Accessibility 代理服务器访问的对象。 可以是以下值之一  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |**OBJID_CLIENT**|引用的窗口的客户端区域。|  
   
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- 在此示例中，`drive`是驱动器号，`directory`是有效的目录名称，并*filename*是有效的文件名必须包含至少一个通配符。 通配符将问号 （*），这意味着匹配任何字符和星号 (  **\*** )，这意味着匹配任意数量的字符。  
+ 在此示例中，`drive`是驱动器号，`directory`是有效的目录名称，并*filename*是有效的文件名必须包含至少一个通配符。 通配符将问号 （*），这意味着匹配任何字符和星号 ( **\***)，这意味着匹配任意数量的字符。  
   
  如果指定 0 长度字符串`lpPathSpec`，或如果你指定目录名称，但不是包括任何文件规范，该字符串将更改为"*。\*"。  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- 在此示例中，`drive`是驱动器号，`directory`是有效的目录名称，并*filename*是有效的文件名必须包含至少一个通配符。 通配符将问号 （*），这意味着匹配任何字符和星号 (  **\*** )，这意味着匹配任意数量的字符。  
+ 在此示例中，`drive`是驱动器号，`directory`是有效的目录名称，并*filename*是有效的文件名必须包含至少一个通配符。 通配符将问号 （*），这意味着匹配任何字符和星号 ( **\***)，这意味着匹配任意数量的字符。  
   
  如果指定的零长度字符串`lpPathSpec`，将使用当前目录和`lpPathSpec`将不会修改。 如果你指定目录名称，但不是包括任何文件规范，该字符串将更改为"*"。  
   
@@ -4832,7 +4827,7 @@ void AFX_CDECL InvokeHelper(
  中指定的类型的参数的变量列表`pbParamInfo`。  
   
 ### <a name="remarks"></a>备注  
- `pbParamInfo` 参数指定传递到方法或属性的参数的类型。 自变量的变量列表由*...*语法声明中。  
+ `pbParamInfo` 参数指定传递到方法或属性的参数的类型。 自变量的变量列表由 *...* 语法声明中。  
   
  此函数将转换的参数**VARIANTARG**值，然后调用**idispatch:: Invoke** ActiveX 控件上的方法。 如果调用**idispatch:: Invoke**失败，此函数将引发异常。 如果`SCODE`（状态代码） 返回**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象中，否则为它将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![停止 &#40; x &#41;图标](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**， **MB_ICONSTOP**，和**MB_ICONERROR**|  
-|![帮助 &#40; &#41;图标](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![重要 &#40; &#33; &#41;图标](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**和**MB_ICONWARNING**|  
-|![信息 &#40; i &#41;图标](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**和**MB_ICONINFORMATION**|  
+|![停止&#40;x&#41;图标](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**， **MB_ICONSTOP**，和**MB_ICONERROR**|  
+|![帮助&#40;&#41;图标](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
+|![重要&#40; &#33; &#41;图标](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**和**MB_ICONWARNING**|  
+|![信息&#40;我&#41;图标](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**和**MB_ICONINFORMATION**|  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5139,7 +5134,7 @@ BOOL ModifyStyle(
  如果已成功修改样式; 则为非 0否则为为 0。  
   
 ### <a name="remarks"></a>备注  
- 可以使用的按位或 (&#124;) 组合样式来添加或删除运算符。 请参阅主题[窗口样式](http://msdn.microsoft.com/library/windows/desktop/ms632600)和[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式信息的 Windows SDK 中。  
+ 可以通过使用按位 OR 组合样式来添加或删除 (&#124;) 运算符。 请参阅主题[窗口样式](http://msdn.microsoft.com/library/windows/desktop/ms632600)和[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式信息的 Windows SDK 中。  
   
  如果`nFlags`不为零，`ModifyStyle`调用 Windows API 函数[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)和通过组合重绘的窗口`nFlags`与以下四个预设的标志：  
   
@@ -5183,7 +5178,7 @@ BOOL ModifyStyleEx(
  如果已成功修改样式; 则为非 0否则为为 0。  
   
 ### <a name="remarks"></a>备注  
- 可以使用的按位或 (&#124;) 组合样式来添加或删除运算符。 请参阅主题[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)本书中和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的信息的 Windows SDK 中扩展样式  
+ 可以通过使用按位 OR 组合样式来添加或删除 (&#124;) 运算符。 请参阅主题[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)本书中和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的信息的 Windows SDK 中扩展样式  
   
  如果`nFlags`不为零，`ModifyStyleEx`调用 Windows API 函数[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)和通过组合重绘的窗口`nFlags`与以下四个预设的标志：  
   
@@ -5477,7 +5472,7 @@ afx_msg void OnChangeUIState(
   
 - **UISF_HIDEFOCUS**专注指示器。  
   
-- **UISF_ACTIVE Windows XP:**应放用于活动控件的样式绘制控件。  
+- **UISF_ACTIVE Windows XP:** 应放用于活动控件的样式绘制控件。  
   
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)消息时，Windows SDK 中所述。  
@@ -5502,7 +5497,7 @@ afx_msg void OnChar(
  `nFlags`  
  包含扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码，如下面的列表中所示：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0-15|指定的重复计数。 值是因为用户按住键重复击键次数。|  
 |16-23|指定的扫描代码。 值取决于原始设备制造商 (OEM)|  
@@ -5695,7 +5690,7 @@ afx_msg int OnCompareItem(
 ### <a name="return-value"></a>返回值  
  指示两个项的相对位置。 它可能是以下值之一：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |-1|项 2 之前进行排序的第 1 项。|  
 |0|项 1 和 2 的项进行排序相同。|  
@@ -5872,7 +5867,7 @@ afx_msg void OnDeadChar(
  `nFlags`  
  下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
 |8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
@@ -6625,7 +6620,7 @@ afx_msg void OnKeyDown(
  `nFlags`  
  下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0-7|扫描代码 （依赖于 OEM 的值）。|  
 |8|扩展的密钥，如函数密钥或数字键盘 (如果它是扩展的密钥，则为 1) 上的某个键。|  
@@ -6667,7 +6662,7 @@ afx_msg void OnKeyUp(
  `nFlags`  
  下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
 |8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
@@ -6966,7 +6961,7 @@ afx_msg LRESULT OnMenuChar(
 ### <a name="return-value"></a>返回值  
  返回值的高序位字应包含以下命令代码之一：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0|指示 Windows 丢弃用户按下和在系统扬声器上创建短播放提示音的字符。|  
 |1|指示 Windows 关闭当前的菜单。|  
@@ -7372,9 +7367,9 @@ afx_msg void OnNcCalcSize(
 ### <a name="remarks"></a>备注  
  通过处理此消息，应用程序可以控制窗口的客户端区域的内容时的大小或窗口的位置发生更改。  
   
- 无论的值如何`bCalcValidRects`，在指定的数组的第一个矩形**rgrc**的结构成员`NCCALCSIZE_PARAMS`结构包含窗口的坐标。 子窗口的坐标为相对于父窗口的工作区。 针对顶级窗口的坐标为屏幕坐标。 应用程序应修改**rgrc [0]**矩形才能反映的大小和客户端区域的位置。  
+ 无论的值如何`bCalcValidRects`，在指定的数组的第一个矩形**rgrc**的结构成员`NCCALCSIZE_PARAMS`结构包含窗口的坐标。 子窗口的坐标为相对于父窗口的工作区。 针对顶级窗口的坐标为屏幕坐标。 应用程序应修改**rgrc [0]** 矩形才能反映的大小和客户端区域的位置。  
   
- **Rgrc [1]**和**rgrc [2]**矩形是有效才`bCalcValidRects`是**TRUE**。 在这种情况下， **rgrc [1]**矩形包含之前它已移动或调整大小的窗口的坐标。 **Rgrc [2]**矩形包含之前窗口已移动的窗口的工作区的坐标。 所有坐标都是相对于父窗口或屏幕。  
+ **Rgrc [1]** 和**rgrc [2]** 矩形是有效才`bCalcValidRects`是**TRUE**。 在这种情况下， **rgrc [1]** 矩形包含之前它已移动或调整大小的窗口的坐标。 **Rgrc [2]** 矩形包含之前窗口已移动的窗口的工作区的坐标。 所有坐标都是相对于父窗口或屏幕。  
   
  默认实现计算的基于窗口特征 （显示状态的滚动条、 菜单和等等） 的客户端区域的大小，并将在结果放置于`lpncsp`。  
   
@@ -8074,7 +8069,7 @@ afx_msg UINT OnQueryUIState();
   
 - **UISF_HIDEACCEL**隐藏的键盘快捷键。  
   
-- **UISF_ACTIVE Windows XP:**应放用于活动控件的样式绘制控件。  
+- **UISF_ACTIVE Windows XP:** 应放用于活动控件的样式绘制控件。  
   
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355)消息时，Windows SDK 中所述。  
@@ -8554,7 +8549,7 @@ afx_msg void OnSysChar(
  `nFlags`  
  `nFlags`参数可以具有这些值：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0-15|指定的重复计数。 值是因为用户按住键重复击键次数...|  
 |16-23|指定的扫描代码。 值取决于原始设备制造商 (OEM)|  
@@ -8670,7 +8665,7 @@ afx_msg void OnSysDeadChar(
  `nFlags`  
  下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
 |8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
@@ -8706,7 +8701,7 @@ afx_msg void OnSysKeyDown(
  `nFlags`  
  下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
 |8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
@@ -8750,7 +8745,7 @@ afx_msg void OnSysKeyUp(
  `nFlags`  
  下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0-7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
 |8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **(UINT) hWndChild**子窗口的句柄  
   
-- `uFlags` &#124; = **TTF_IDISHWND**句柄的工具  
+- `uFlags` &#124;= **TTF_IDISHWND**句柄的工具  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK**指向指定窗口中显示的字符串  
   
@@ -8956,7 +8951,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|  
 |[in] `nChar`|指定按下的键的字符代码。|  
 |[in] `nRepCnt`|指定当前消息的重复计数。 值是击键是因为用户按住键 autorepeated 次数。 如果击键会保留足够长，将发送多条消息。 但是，重复计数不是累积的。|  
-|[in] `nFlags`|下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 以前的密钥状态和转换状态的标志：<br /><br /> **0-7:**指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:**指定扩展的密钥，如在增强型 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:**由 Windows 在内部使用。<br /><br /> **13:**指定上下文的代码。 标志为 1，如果当按下键; ALT 键并按住否则，值为 0。<br /><br /> **14:**指定以前的密钥状态。 如果密钥为向上，标志是如果密钥已关闭之前将消息发送，则为 1 或 0。<br /><br /> **15:**指定的转换状态。 标志是如果正在释放键，则为 1 或 0，如果按下了键。|  
+|[in] `nFlags`|下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 以前的密钥状态和转换状态的标志：<br /><br /> **0-7:** 指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:** 指定扩展的密钥，如在增强型 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:** 由 Windows 在内部使用。<br /><br /> **13:** 指定上下文的代码。 标志为 1，如果当按下键; ALT 键并按住否则，值为 0。<br /><br /> **14:** 指定以前的密钥状态。 如果密钥为向上，标志是如果密钥已关闭之前将消息发送，则为 1 或 0。<br /><br /> **15:** 指定的转换状态。 标志是如果正在释放键，则为 1 或 0，如果按下了键。|  
   
 ### <a name="remarks"></a>备注  
  此方法接收[WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)通知，它 Windows SDK 中所述。 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)消息旨在发送或发布到 ANSI windows 的 Unicode 字符。 它相当于[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)消息，但使用 Unicode 转换格式-32 编码 (utf-32)，而[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)消息使用 utf-16。  
@@ -9012,7 +9007,7 @@ afx_msg void OnUpdateUIState(
   
 - **UISF_HIDEFOCUS**专注指示器。  
   
-- **UISF_ACTIVE Windows XP:**应放用于活动控件的样式绘制控件。  
+- **UISF_ACTIVE Windows XP:** 应放用于活动控件的样式绘制控件。  
   
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)消息时，Windows SDK 中所述。  
@@ -9390,7 +9385,7 @@ BOOL OpenClipboard();
 operator HWND() const;  
 ```  
   
-##  <a name="operator_neq"></a>  CWnd::operator !=  
+##  <a name="operator_neq"></a>  CWnd::operator ！ =  
  比较两个`CWnd`对象以确定是否他们没有相同[m_hWnd](#m_hwnd)。  
   
 ```  
@@ -9404,7 +9399,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ### <a name="return-value"></a>返回值  
  非零，如果相等;否则为 0。  
   
-##  <a name="operator_eq_eq"></a>  CWnd::operator ==  
+##  <a name="operator_eq_eq"></a>  CWnd::operator = =  
  比较两个`CWnd`对象以确定它们是否具有相同[m_hWnd](#m_hwnd)。  
   
 ```  
@@ -10668,13 +10663,13 @@ BOOL SetWindowPos(
   
  子窗口的所有坐标都是工作区坐标 （相对于父窗口工作区的左上角）。  
   
- 可以将一个窗口移到 Z 顺序的顶层通过设置`pWndInsertAfter`参数**& wndTopMost**并确保`SWP_NOZORDER`标志是未设置或通过设置窗口的 Z 顺序，以便它高于任何现有最顶层窗口。 当非最顶端窗口变得最顶层时，其拥有的 windows 还会最顶层。 不更改其所有者。  
+ 可以将一个窗口移到 Z 顺序的顶层通过设置`pWndInsertAfter`参数 **& wndTopMost**并确保`SWP_NOZORDER`标志是未设置或通过设置窗口的 Z 顺序，以便它高于任何现有最顶层窗口。 当非最顶端窗口变得最顶层时，其拥有的 windows 还会最顶层。 不更改其所有者。  
   
  最顶端窗口不再位于最顶层，如果重新定位到底部 ( **& wndBottom**) Z 顺序或任何非最顶端窗口后。 最顶端窗口进行非最顶层，所有其所有者和其拥有的 windows 还进行非最顶层窗口。  
   
  如果既没有`SWP_NOACTIVATE`也不`SWP_NOZORDER`（即，当应用程序请求一个窗口，同时将其激活并放置在指定的 Z 顺序） 指定中, 指定的值`pWndInsertAfter`仅在以下情况下使用：  
   
--   既不**& wndTopMost**也不**& wndNoTopMost**中指定`pWndInsertAfter`参数。  
+-   既不 **& wndTopMost**也不 **& wndNoTopMost**中指定`pWndInsertAfter`参数。  
   
 -   此窗口不是活动窗口。  
   
@@ -10684,11 +10679,11 @@ BOOL SetWindowPos(
   
  与 Windows 版本 3.1 和更高版本，windows 可以移到 Z 顺序的顶层和锁定通过设置其**WS_EX_TOPMOST**样式。 此类最顶端窗口保持其最顶层位置即使停用。 例如，选择 WinHelp 总在最前面命令会建立最顶层，帮助窗口中，且然后返回到你的应用程序时保持可见。  
   
- 若要创建最顶端窗口，调用`SetWindowPos`与`pWndInsertAfter`参数等于**& wndTopMost**，或设置**WS_EX_TOPMOST**时创建窗口样式。  
+ 若要创建最顶端窗口，调用`SetWindowPos`与`pWndInsertAfter`参数等于 **& wndTopMost**，或设置**WS_EX_TOPMOST**时创建窗口样式。  
   
- 如果 Z 顺序包含与任何 windows **WS_EX_TOPMOST**样式、 转移具有一个窗口**& wndTopMost**值将放在顶部的所有非最顶端窗口，但仍低于任何最顶层窗口。 应用程序时激活而不是非活动窗口**WS_EX_TOPMOST**位，窗口移动所有非最顶端窗口上面但仍低于任何最顶层窗口。  
+ 如果 Z 顺序包含与任何 windows **WS_EX_TOPMOST**样式、 转移具有一个窗口 **& wndTopMost**值将放在顶部的所有非最顶端窗口，但仍低于任何最顶层窗口。 应用程序时激活而不是非活动窗口**WS_EX_TOPMOST**位，窗口移动所有非最顶端窗口上面但仍低于任何最顶层窗口。  
   
- 如果`SetWindowPos`时，将调用`pWndInsertAfter`参数是**& wndBottom**和`CWnd`是最顶端窗口，窗口失去其最顶层的状态 ( **WS_EX_TOPMOST**处于未选中状态)，和系统将该窗口在 Z 顺序的底层。  
+ 如果`SetWindowPos`时，将调用`pWndInsertAfter`参数是 **& wndBottom**和`CWnd`是最顶端窗口，窗口失去其最顶层的状态 ( **WS_EX_TOPMOST**处于未选中状态)，和系统将该窗口在 Z 顺序的底层。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  

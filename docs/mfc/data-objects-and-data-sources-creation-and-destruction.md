@@ -1,13 +1,10 @@
 ---
-title: "数据对象和数据源： 创建和析构 |Microsoft 文档"
-ms.custom: 
+title: 数据对象和数据源： 创建和析构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>数据对象和数据源：创建和销毁
 文章中所述[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)，数据对象和数据源表示数据传输双方。 本文介绍何时创建和销毁这些对象和源以正确地执行数据传输，包括：  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [销毁数据源](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a>创建数据对象  
+##  <a name="_core_creating_data_objects"></a> 创建数据对象  
  数据对象由目标应用程序（客户端或服务器）使用。 目标应用程序中的数据对象是源应用程序与目标应用程序之间的连接的一端。 目标应用程序中的数据对象用于访问数据源中的数据并与之交互。  
   
  有两种常见的需要数据对象的情况。 第一种情况是使用拖放将数据放在应用程序中时。 第二种情况是从“编辑”菜单中选择“粘贴”或“选择性粘贴”时。  
@@ -56,12 +51,12 @@ ms.lasthandoff: 12/21/2017
   
  如果应用程序要执行粘贴或选择性粘贴操作，您应创建 `COleDataObject` 对象并调用其 `AttachClipboard` 成员函数。 这会将数据对象与剪贴板上的数据关联。 您之后可在粘贴函数中使用此数据对象。  
   
-##  <a name="_core_destroying_data_objects"></a>销毁数据对象  
+##  <a name="_core_destroying_data_objects"></a> 销毁数据对象  
  如果你遵循中所述的方案[创建对象数据](#_core_creating_data_objects)，销毁数据对象是传输次要的一面数据。 在粘贴函数中创建的数据对象将在粘贴函数返回时由 MFC 销毁。  
   
  如果您按照另一种方法处理粘贴操作，则务必在粘贴操作完成后销毁数据对象。 在销毁数据对象之前，任何应用程序均无法成功将数据复制到剪贴板。  
   
-##  <a name="_core_creating_data_sources"></a>创建数据源  
+##  <a name="_core_creating_data_sources"></a> 创建数据源  
  数据源由数据传输源使用，该源可以是数据传输客户端或数据传输服务器端。 源应用程序中的数据源是源应用程序与目标应用程序之间的连接的一端。 目标应用程序中的数据对象用于与数据源中的数据交互。  
   
  当应用程序需要将数据复制到剪贴板时，将创建数据源。 一个典型方案运行如下：  
@@ -82,8 +77,8 @@ ms.lasthandoff: 12/21/2017
   
  如果您修改拖放操作的默认行为，则将出现您可能需要创建 `COleDataSource` 对象的另一种情况。 有关详细信息，请参阅[拖放： 自定义](../mfc/drag-and-drop-customizing.md)文章。  
   
-##  <a name="_core_destroying_data_sources"></a>销毁数据源  
- 数据源必须由当前负责它们的应用程序销毁。 在其中将数据源提交给 OLE 的情况下，如调用[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，你需要调用**pdatasrc->internalrelease**。 例如:  
+##  <a name="_core_destroying_data_sources"></a> 销毁数据源  
+ 数据源必须由当前负责它们的应用程序销毁。 在其中将数据源提交给 OLE 的情况下，如调用[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，你需要调用**pdatasrc->internalrelease**。 例如：  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

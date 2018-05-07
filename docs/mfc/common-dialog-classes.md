@@ -1,13 +1,10 @@
 ---
-title: "通用对话框类 |Microsoft 文档"
-ms.custom: 
+title: 通用对话框类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1cb8a9bacf7414a5a2fff246d796c94a8a1598d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-dialog-classes"></a>通用对话框类
 除了类[CDialog](../mfc/reference/cdialog-class.md)，MFC 还提供几个类派生自`CDialog`，封装常用的对话框框中下, 表中所示。 封装的对话框称为"通用对话框"，它们属于 Windows 公共对话框库 (COMMDLG。DLL)。 对话框模板资源和代码，这些类中提供了 Windows 属于的 Windows 版本 3.1 和更高版本的通用对话框。  

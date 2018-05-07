@@ -1,13 +1,10 @@
 ---
-title: "在 Rich Edit 控件中打印 |Microsoft 文档"
-ms.custom: 
+title: 在 Rich Edit 控件中打印 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab8e15e25e2d419bb7c3ac67fc2c6f3453fb03c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23b958e6c770260082af069544480102f6d79926
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing-in-rich-edit-controls"></a>在 Rich Edit 控件中打印
 你可以判断 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 来呈现为指定的设备，例如打印机其输出。 你还可以指定为其 rich edit 控件输出设备设置其文本的格式。  

@@ -1,13 +1,10 @@
 ---
-title: "自定义工具栏控件的外观 |Microsoft 文档"
-ms.custom: 
+title: 自定义工具栏控件的外观 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBSTYLE_
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>自定义工具栏控件的外观
 类`CToolBarCtrl`提供许多影响外观 （和，有时，行为） 的工具栏对象的样式。 通过设置来修改工具栏对象`dwCtrlStyle`参数`CToolBarCtrl::Create`(或`CToolBar::CreateEx`) 成员函数，首次创建工具栏控件时。  
@@ -57,11 +52,11 @@ ms.lasthandoff: 12/21/2017
   
  剩余的样式会影响可视化和非可视方面的工具栏对象：  
   
--   `TBSTYLE_WRAPABLE`创建一个可以有多行的按钮的工具栏。 工具栏按钮可以"包装"到下一行工具栏变得过窄而无法提供同一行上的所有按钮时。 在分离和行会边界上发生换行。  
+-   `TBSTYLE_WRAPABLE` 创建一个可以有多行的按钮的工具栏。 工具栏按钮可以"包装"到下一行工具栏变得过窄而无法提供同一行上的所有按钮时。 在分离和行会边界上发生换行。  
   
 -   **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**通知邮件时它可以处理`WM_ERASEBKGND`消息。  
   
--   `TBSTYLE_TOOLTIPS`创建应用程序可以使用工具栏中显示的按钮的描述性文本的工具提示控件。  
+-   `TBSTYLE_TOOLTIPS` 创建应用程序可以使用工具栏中显示的按钮的描述性文本的工具提示控件。  
   
  工具栏样式和扩展的样式的完整列表，请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)和[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK 中。  
   

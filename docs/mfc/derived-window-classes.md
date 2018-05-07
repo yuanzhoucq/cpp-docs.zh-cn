@@ -1,13 +1,10 @@
 ---
-title: "派生的窗口类 |Microsoft 文档"
-ms.custom: 
+title: 派生的窗口类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-window-classes"></a>派生的窗口类
 你可以创建直接从 windows [CWnd](../mfc/reference/cwnd-class.md)，或其派生新的窗口类`CWnd`。 这是通常在如何创建你自己的自定义 windows。 但是，大多数窗口框架程序中使用而创建的一个`CWnd`-派生 MFC 提供的框架窗口类。  

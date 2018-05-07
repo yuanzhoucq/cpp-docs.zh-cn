@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3400 通过 C3499 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3400 通过 C3499 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>编译器错误 C3400 通过 C3499
 
@@ -173,8 +168,8 @@ ms.lasthandoff: 12/21/2017
 |编译器错误 C3441|*声明*:*关键字*不能在定义类后可应用|
 |编译器错误 C3442|初始化联合的多个成员:*member1*和*member2*|
 |编译器错误 C3443|默认成员初始值设定项*类*是递归|
-|编译器错误 C3444|空聚合类*类*必须使用 {} 初始化|
-|编译器错误 C3445|复制列表的初始化的*类型*不能使用的显式构造函数|
+|编译器错误 C3444|空聚合类*类*必须使用初始化{}|
+|[编译器错误 C3445](compiler-error-c3445.md)|复制列表的初始化的*类型*不能使用的显式构造函数|
 |[编译器错误 C3446](compiler-error-c3446.md)|*类*： 默认成员初始值设定项不允许的值类成员|
 |编译器错误 C3447|已过时。|
 |编译器错误 C3448|已过时。|

@@ -1,12 +1,9 @@
 ---
-title: "CMFCCmdUsageCount 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCCmdUsageCount 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCmdUsageCount
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db24894777170d2860ba8d1639fd44e3893732a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 类
 跟踪 Windows 消息，如当用户从菜单选择项的使用计数。  
@@ -77,14 +72,14 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|name|描述|  
+|名称|描述|  
 |`m_CmdUsage`|A`CMap`将命令映射到其使用情况计数的对象。|  
 |`m_nMinUsagePercentage`|要频繁使用的命令小使用率百分比。|  
 |`m_nStartCount`|用于确定此对象是否具有收集跟踪数据的最小量起始计数器。|  
 |`m_nTotalUsage`|所有跟踪命令计数。|  
   
 ### <a name="remarks"></a>备注  
- `CMFCCmdUsageCount`类映射到 32 位无符号的整数的计数器的每个数字的 Windows 消息标识符。 `CMFCToolBar`使用此类来显示常用工具栏项。 有关详细信息`CMFCToolBar`，请参阅[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。  
+ `CMFCCmdUsageCount`类映射到 32 位无符号的整数的计数器的每个数字的 Windows 消息标识符。 `CMFCToolBar` 使用此类来显示常用工具栏项。 有关详细信息`CMFCToolBar`，请参阅[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。  
   
  您可以保留`CMFCCmdUsageCount`类的程序的运行之间的数据。 使用[CMFCCmdUsageCount::Serialize](#serialize)要序列化类成员数据的方法和[CMFCCmdUsageCount::SetOptions](#setoptions)方法以设置共享的成员数据。  
   
@@ -93,10 +88,10 @@ class CMFCCmdUsageCount : public CObject
   
  [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcmdusagecount.h  
   
-##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
+##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
  一个与给定的命令关联的计数器将增加。  
   
 ```  
@@ -119,9 +114,9 @@ void AddCmd(UINT uiCmd);
   
 -   该命令是指子菜单或菜单分隔符 (`uiCmd`等于 0 或-1)。  
   
-- `uiCmd`指的是标准命令 (全局`IsStandardCommand`函数返回非零值)。  
+- `uiCmd` 指的是标准命令 (全局`IsStandardCommand`函数返回非零值)。  
   
-##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
+##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  检索与给定的命令 ID 相关联的使用计数  
   
 ```  
@@ -138,7 +133,7 @@ UINT GetCount(UINT uiCmd) const;
 ### <a name="return-value"></a>返回值  
  与给定的命令 ID 相关联的使用率计数  
   
-##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
+##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation  
  确定此对象是否已接收到跟踪数据的最小数量。  
   
 ```  
@@ -153,7 +148,7 @@ BOOL HasEnoughInformation() const;
   
  使用此方法的[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)以确定是否显示所有可用的菜单命令。  
   
-##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
  确定是否频繁使用给定的命令。  
   
 ```  
@@ -175,7 +170,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
  [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused)使用此方法来确定命令很少使用。  
   
-##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
+##  <a name="reset"></a>  CMFCCmdUsageCount::Reset  
  清除所有命令的使用计数。  
   
 ```  
@@ -185,7 +180,7 @@ void Reset();
 ### <a name="remarks"></a>备注  
  调用此方法以清除所有条目从映射结构的命令计数`m_CmdUsage`，以及重置总的命令用法中， `m_nTotalUsage`、 计数器为 0。  
   
-##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
+##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize  
  从存档读取该对象或将其写入存档。  
   
 ```  
@@ -204,7 +199,7 @@ virtual void Serialize(CArchive& ar);
   
  有关序列化示例，请参阅[序列化： 将对象序列化为](../../mfc/serialization-serializing-an-object.md)。  
   
-##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
+##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions  
  设置的值共享`CMFCCmdUsageCount`类数据成员。  
   
 ```  
@@ -222,10 +217,10 @@ static BOOL __stdcall SetOptions(
 |[in] `nMinUsagePercentage`|新的小使用率百分比。|  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果该方法成功，`FALSE`如果`nMinUsagePercentage`参数为大于或等于 100。  
+ `TRUE` 如果该方法成功，`FALSE`如果`nMinUsagePercentage`参数为大于或等于 100。  
   
 ### <a name="remarks"></a>备注  
- 此方法设置共享`CMFCCmdUsageCount`类数据成员`m_nStartCount`和`m_nMinUsagePercentage`到`nStartCount`和`nMinUsagePercentage`分别。 `m_nStartCount`由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法来确定此对象是否具有收集跟踪数据的最小数量。 `m_nMinUsagePercentage`由[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法来确定是否频繁使用给定的命令。  
+ 此方法设置共享`CMFCCmdUsageCount`类数据成员`m_nStartCount`和`m_nMinUsagePercentage`到`nStartCount`和`nMinUsagePercentage`分别。 `m_nStartCount` 由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法来确定此对象是否具有收集跟踪数据的最小数量。 `m_nMinUsagePercentage` 由[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法来确定是否频繁使用给定的命令。  
   
  在调试版本中，此方法将生成断言失败如果`nMinUsagePercentage`参数为大于或等于 100。  
   

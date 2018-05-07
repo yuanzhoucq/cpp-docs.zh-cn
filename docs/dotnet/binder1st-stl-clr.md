@@ -1,12 +1,9 @@
 ---
-title: "binder1st (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: binder1st (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::binder1st
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 550340bad45c6a71a633f7924afdd0eaf775005f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ab2d0a0d5127dae39008fdce177d23f1a6f7074
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
 此模板类描述一个自变量函子的当调用，返回其存储的第一个参数而提供的第二个自变量调用其存储两个参数函子。 使用它指定根据其存储的函子的函数对象。  
@@ -131,7 +126,7 @@ int main()
 -1 0  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  

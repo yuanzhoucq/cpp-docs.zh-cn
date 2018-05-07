@@ -1,12 +1,9 @@
 ---
-title: COLUMN_NAME_LENGTH_STATUS | Microsoft Docs
-ms.custom: 
+title: COLUMN_NAME_LENGTH_STATUS |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_LENGTH_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_LENGTH_STATUS macro
 ms.assetid: f73bd592-7ca7-461c-b106-9a8b1adbb01e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f29a8c9d856b95b85d60a29a12bf9359cebe0803
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 55ef9cc5112bd5eb1696283e6a36db2790600c19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnamelengthstatus"></a>COLUMN_NAME_LENGTH_STATUS
 在行集中的特定列表示行集上的绑定。 类似于[COLUMN_NAME](../../data/oledb/column-name.md)，只不过此宏还采用列长度以及列状态。  
@@ -53,7 +48,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 ## <a name="remarks"></a>备注  
  请参阅[COLUMN_NAME](../../data/oledb/column-name.md)有关在何处信息**COLUMN_NAME_\*** 使用宏，则。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

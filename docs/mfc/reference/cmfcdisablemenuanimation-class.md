@@ -1,12 +1,9 @@
 ---
-title: "CMFCDisableMenuAnimation 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCDisableMenuAnimation 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458a35e708db41ee393da70aedd653aca44cf802
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a7a2449fe65a0b17bf770ea2bfb8f3fe750cba0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 类
 禁用弹出菜单的动画。  
@@ -59,7 +54,7 @@ class CMFCDisableMenuAnimation
   
 |||  
 |-|-|  
-|name|描述|  
+|名称|描述|  
 |`CMFCDisableMenuAnimation::m_animType`|存储的以前的弹出菜单动画类型。|  
   
 ### <a name="remarks"></a>备注  
@@ -77,10 +72,10 @@ class CMFCDisableMenuAnimation
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxpopupmenu.h  
   
-##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore  
  还原以前的框架用于显示一个弹出菜单的动画。  
   
 ```  

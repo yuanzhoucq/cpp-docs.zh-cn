@@ -1,12 +1,9 @@
 ---
-title: "运算符&lt;= （队列） (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 运算符&lt;= （队列） (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue::operator<=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator<= member [STL/CLR]
 ms.assetid: 63b7f908-4f6b-40d6-bcc6-22970760789d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bb43f8e43197d86f692a84d36e7abe41f88f198c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ffdf411d60c9ebdb404899f1f7048174b9be2c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-queue-stlclr"></a>运算符&lt;= （队列） (STL/CLR)
 队列小于或等于比较。  
@@ -97,7 +92,7 @@ int main()
 [a b d] <= [a b c] is False  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  

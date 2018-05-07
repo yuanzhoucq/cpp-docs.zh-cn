@@ -1,12 +1,9 @@
 ---
-title: "CLinearTransitionFromSpeed 类 |Microsoft 文档"
-ms.custom: 
+title: CLinearTransitionFromSpeed 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLinearTransitionFromSpeed
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ae7d972c97bdf2d94596004baa71462de7532c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 类
 封装线性速度转换。  
@@ -75,10 +70,10 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
  [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
  构造线性速度转换对象并初始化与速度和最终值。  
   
 ```  
@@ -94,7 +89,7 @@ CLinearTransitionFromSpeed(
  `dblFinalValue`  
  在转换结束动画变量的值。  
   
-##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
+##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
  调用要创建封装的转换 COM 对象的转换库。  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
  在转换结束动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
+##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
  绝对值的数值的变量的速度。  
   
 ```  

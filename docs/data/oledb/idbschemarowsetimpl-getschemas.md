@@ -1,12 +1,9 @@
 ---
-title: IDBSchemaRowsetImpl::GetSchemas | Microsoft Docs
-ms.custom: 
+title: 'Idbschemarowsetimpl:: Getschemas |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IDBSchemaRowsetImpl::GetSchemas
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - GetSchemas method
 ms.assetid: fbe725a6-3acd-45f8-bcaf-10a6c1239cd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd659ccb537a8b556c29f0487c1c2412797dc343
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 886b3ea82d8eb0193207438ce7c5a4fc51981cbc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplgetschemas"></a>IDBSchemaRowsetImpl::GetSchemas
 返回可由 [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)访问的架构行集的列表。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 02/23/2018
   
  若要实现此函数，用户在会话类中必须有架构映射。 然后，该函数会利用架构映射信息，使用映射中架构的 GUID 数组进行响应。 这表示提供程序支持的架构。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "set:: count (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'set:: count (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::Count
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - count member [STL/CLR]
 ms.assetid: 78855f8c-3de5-4d3e-800b-0bbea5e829dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 847154691aa7919b708c36777d2016494c72d21b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eec1e7eaa68bf7273855a4f77e09280e2737a93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setcount-stlclr"></a>set::count (STL/CLR)
 查找与指定键匹配的元素数。  
@@ -79,7 +74,7 @@ count(L'b') = 1
 count(L'C') = 0  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

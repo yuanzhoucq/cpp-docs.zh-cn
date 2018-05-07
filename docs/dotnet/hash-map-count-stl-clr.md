@@ -1,12 +1,9 @@
 ---
-title: "hash_map:: count (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'hash_map:: count (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::Count
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - count member [STL/CLR]
 ms.assetid: 1d02f764-d24f-4c8c-8a62-63074fe49aa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3b1f5536301ecd7e137bc80dc321321ee4d3d55b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 359a57bc97118abdf832a565d74bd2819c6e86f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapcount-stlclr"></a>hash_map::count (STL/CLR)
 查找与指定键匹配的元素数。  
@@ -79,7 +74,7 @@ count(L'b') = 1
 count(L'C') = 0  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  

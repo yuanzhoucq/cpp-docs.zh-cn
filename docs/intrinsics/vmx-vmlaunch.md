@@ -1,12 +1,9 @@
 ---
-title: __vmx_vmlaunch | Microsoft Docs
-ms.custom: 
+title: __vmx_vmlaunch |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmlaunch
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMLAUNCH instruction
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b7328ad2d9cfebb7416241bad3ca1e5081f2cf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 926195aa8dc612d3972634f8140ce3fff753a48f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Microsoft 专用**  
@@ -42,7 +37,7 @@ unsigned char __vmx_vmlaunch(
   
 ## <a name="return-value"></a>返回值  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0|操作成功。|  
 |1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
@@ -53,7 +48,7 @@ unsigned char __vmx_vmlaunch(
   
  `__vmx_vmlaunch`函数等同于`VMLAUNCH`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

@@ -1,12 +1,9 @@
 ---
-title: "项目生成错误 PRJ0007 |Microsoft 文档"
-ms.custom: 
+title: 项目生成错误 PRJ0007 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0007
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bdeba0c732fbb22f14b349b40a89e4acbbd3d3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 288c86797d481719a594b061d6942923fe2230ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0007"></a>项目生成错误 PRJ0007
 无法创建输出目录目录。  
   
- Visual c + + 创建输出目录失败。 可能的原因包括：  
+ Visual c + + 创建输出目录失败。 原因可能为：  
   
 -   已用要创建的输出目录的目录是只读的。  
   

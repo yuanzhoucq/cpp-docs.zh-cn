@@ -1,13 +1,10 @@
 ---
-title: "内存管理： 帧分配 |Microsoft 文档"
-ms.custom: 
+title: 内存管理： 帧分配 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03a8e5f81e55398ffba30479ecfafc42726e9519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-frame-allocation"></a>内存管理：帧分配
 只要调用函数，帧分配就会从已设置的“堆栈帧”中采用其名称。 堆栈帧是一个内存区域，可暂时存储函数的参数以及为函数定义的所有局部变量。 帧变量通常称为“自动”变量，因为编译器会自动为其分配空间。  

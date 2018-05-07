@@ -1,13 +1,10 @@
 ---
-title: "从类型库向导添加类 |Microsoft 文档"
-ms.custom: 
+title: 从类型库向导添加类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>从类型库添加类向导
 使用此向导从可用的类型库添加 MFC 类。 该向导创建从所选的类型库添加每个接口的类。  
@@ -58,9 +53,9 @@ ms.lasthandoff: 12/21/2017
 |**<\<**|删除中的所有类**生成的类**列表。 为灰色的如果**生成的类**列表为空。|  
   
  **生成的类**  
- 指定要从使用添加的接口生成的类名称 **>** 或 **>>** 按钮。 你可以单击此框以选择类，然后使用向上或向下键滚动浏览列表中，查看在每个类名`Class`框和文件名称中的**文件**单击时，向导将生成的框**完成**。 你可以在此框中选择一次只有一个类。  
+ 指定要从使用添加的接口生成的类名称**>** 或**>>** 按钮。 你可以单击此框以选择类，然后使用向上或向下键滚动浏览列表中，查看在每个类名`Class`框和文件名称中的**文件**单击时，向导将生成的框**完成**。 你可以在此框中选择一次只有一个类。  
   
- 你可以通过此列表中选择它并单击删除类 **<** 。 不需要在生成类中，若要删除所有类; 选择一个类通过单击 **<<** ，删除中的所有类**生成的类**框。  
+ 你可以通过此列表中选择它并单击删除类**<**。 不需要在生成类中，若要删除所有类; 选择一个类通过单击**<<**，删除中的所有类**生成的类**框。  
   
  `Class`  
  指定在选定的类名称**生成的类**单击时，该向导将添加的框**完成**。 你可以编辑中的名称`Class`框。  

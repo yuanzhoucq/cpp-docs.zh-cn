@@ -1,12 +1,9 @@
 ---
-title: "CSharedFile 类 |Microsoft 文档"
-ms.custom: 
+title: CSharedFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSharedFile
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c749f86f9e3fbd310fd03b3a82768d58632087
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csharedfile-class"></a>CSharedFile 类
 [CMemFile](../../mfc/reference/cmemfile-class.md)-支持的派生的类共享内存文件。  
@@ -66,7 +61,7 @@ class CSharedFile : public CMemFile
   
  请注意，`CSharedFile`不使用内存映射文件，和数据不能直接共享进程间。  
   
- `CSharedFile`对象可以自动分配其自己的内存，或者可以将附加到你自己内存块`CSharedFile`对象通过调用[CSharedFile::SetHandle](#sethandle)。 在任一情况下，为自动增长的内存文件的内存分配中`nGrowBytes`-如果大小为增量`nGrowBytes`不为零。  
+ `CSharedFile` 对象可以自动分配其自己的内存，或者可以将附加到你自己内存块`CSharedFile`对象通过调用[CSharedFile::SetHandle](#sethandle)。 在任一情况下，为自动增长的内存文件的内存分配中`nGrowBytes`-如果大小为增量`nGrowBytes`不为零。  
   
  有关详细信息，请参阅文章[MFC 中的文件](../../mfc/files-in-mfc.md)和[文件处理](../../c-runtime-library/file-handling.md)中*运行时库参考*。  
   
@@ -79,10 +74,10 @@ class CSharedFile : public CMemFile
   
  `CSharedFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
  构造`CSharedFile`对象，并为其分配内存。  
   
 ```  
@@ -98,7 +93,7 @@ CSharedFile(
  `nGrowBytes`  
  以字节为单位的内存分配增量。  
   
-##  <a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>  CSharedFile::Detach  
  调用此函数会关闭内存文件并将其与内存块分离。  
   
 ```  
@@ -111,7 +106,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>备注  
  你可以通过调用重新打开它[SetHandle](#sethandle)，使用返回的句柄**分离**。  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
  调用此函数可将附加到的全局内存块`CSharedFile`对象。  
   
 ```  

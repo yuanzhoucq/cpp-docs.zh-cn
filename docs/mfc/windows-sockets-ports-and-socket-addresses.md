@@ -1,13 +1,10 @@
 ---
-title: "Windows 套接字： 端口和套接字地址 |Microsoft 文档"
-ms.custom: 
+title: Windows 套接字： 端口和套接字地址 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,29 +16,27 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c7b2e15761815b75ba8001ad4eb5a5c276f5056
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ea9b8a39de8d36ecb621164d98e072a4041211
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows 套接字：端口和套接字地址
 此文章介绍了使用术语"端口"和"地址"作为用于 Windows 套接字。  
   
-##  <a name="_core_port"></a>端口  
+##  <a name="_core_port"></a> 端口  
  端口标识可以为其提供服务的唯一进程。 在存在的上下文中，端口是与支持 Windows 套接字的应用程序相关联。 思路是来唯一地标识每个 Windows 套接字应用程序，因此你可以在同一时间的计算机上运行的多个 Windows 套接字应用程序。  
   
  某些端口被保留供公共服务，如 FTP。 应避免使用这些端口，除非你要提供该类型的服务。 Windows 套接字规范详细介绍这些保留的端口。 WINSOCK 文件。H 也会列出它们。  
   
  若要让 Windows 套接字 DLL 为您选择可用端口，请为端口值传递 0。 MFC 选择大于 1024 十进制的端口值。 你可以检索 MFC 选择通过调用的端口值[CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname)成员函数。  
   
-##  <a name="_core_socket_address"></a>套接字地址  
+##  <a name="_core_socket_address"></a> 套接字地址  
  每个套接字对象都与网络上的 Internet 协议 (IP) 地址相关联。 通常，地址是计算机名称，如"ftp.microsoft.com"或以点分隔的数字，如"128.56.22.8"。  
   
  当您寻求创建套接字时，通常不需要指定你自己的地址。  

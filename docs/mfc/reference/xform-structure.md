@@ -1,13 +1,10 @@
 ---
-title: "XFORM 结构 |Microsoft 文档"
-ms.custom: 
+title: XFORM 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - XFORM
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - XFORM structure [MFC]
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6f7121b5cc93c3f8f6f34f22d16cef888bbf15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xform-structure"></a>XFORM 结构
 `XFORM`结构具有以下形式：  
@@ -53,7 +48,7 @@ typedef struct  tagXFORM {  /* xfrm */
 |**切变**|Nothing|水平比例常量|垂直比例常量|Nothing|  
 |**反射**|水平反射组件|Nothing|Nothing|垂直反射组件|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

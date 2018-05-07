@@ -1,13 +1,10 @@
 ---
-title: "进行数据序列化到文件 |Microsoft 文档"
-ms.custom: 
+title: 进行数据序列化到文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28b12e19b302f5576d2cd76c931e0036c208185
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec6bfbe647045a334af9fe95cd6d1ab40625a51f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-data-to-and-from-files"></a>针对文件进行数据序列化
 持久性基本理念都是一个对象应该能够编写其成员变量，到持久存储的值指示其当前状态。 以后，可以通过读取，或"反序列化，"对象的状态从持久性存储区重新创建该对象。 此处关键的一点是对象本身负责读取和写入其自己的状态。 因此，对于类为永久，它必须实现的基本序列化操作。  
@@ -50,10 +45,10 @@ ms.lasthandoff: 12/21/2017
   
 -   [跳过序列化机制](../mfc/bypassing-the-serialization-mechanism.md)  
   
-##  <a name="_core_the_document.92.s_role_in_serialization"></a>序列化中的文档的角色  
+##  <a name="_core_the_document.92.s_role_in_serialization"></a> 序列化中的文档的角色  
  框架自动响应文件菜单打开、 保存，并将另存为命令通过调用文档的`Serialize`成员函数，如果它实现的。 `ID_FILE_OPEN`命令，例如，调用处理程序函数中的应用程序对象。 在此过程中，用户将看到并响应文件打开的对话框中，并 framework 获取用户选择的文件名。 框架创建`CArchive`对象设置为将数据加载到文档并将传递到存档`Serialize`。 框架已打开该文件。 在文档中的代码`Serialize`成员函数将读取通过存档，根据需要重新构造数据对象中的数据。 有关序列化的详细信息，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。  
   
-##  <a name="_core_the_data.92.s_role_in_serialization"></a>在序列化的数据的角色  
+##  <a name="_core_the_data.92.s_role_in_serialization"></a> 在序列化的数据的角色  
  通常情况下，类类型数据应该能够序列化本身。 即时到存档中传递的对象，该对象应了解本身写入存档以及如何从存档读取本身。 MFC 使类可序列化以这种方式提供支持。 如果设计用于定义数据类型的类和你想要序列化该类型的数据时，设计用于序列化。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "CDaoTableDef 类 |Microsoft 文档"
-ms.custom: 
+title: CDaoTableDef 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoTableDef
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 表示基表或附加表的已存储定义。  
@@ -196,10 +191,10 @@ class CDaoTableDef : public CObject
   
  `CDaoTableDef`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
-##  <a name="append"></a>CDaoTableDef::Append  
+##  <a name="append"></a>  CDaoTableDef::Append  
  调用此成员函数调用之后[创建](#create)创建新的 tabledef 对象来将 tabledef 保存在数据库。  
   
 ```  
@@ -214,7 +209,7 @@ virtual void Append();
   
  有关相关信息，请参阅主题 DAO 帮助中的"追加方法"。  
   
-##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
+##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate  
  调用此成员函数可确定是否对表基础定义`CDaoTableDef`可以更改对象。  
   
 ```  
@@ -229,7 +224,7 @@ BOOL CanUpdate();
   
  有关相关信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
-##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
+##  <a name="cdaotabledef"></a>  CDaoTableDef::CDaoTableDef  
  构造**CDaoTableDef**对象。  
   
 ```  
@@ -243,7 +238,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="remarks"></a>备注  
  在构造对象之后, 必须调用[创建](#create)或[打开](#open)成员函数。 当你完成与对象时，必须调用其[关闭](#close)成员函数，并且销毁`CDaoTableDef`对象。  
   
-##  <a name="close"></a>CDaoTableDef::Close  
+##  <a name="close"></a>  CDaoTableDef::Close  
  调用此成员函数来关闭并释放 tabledef 对象。  
   
 ```  
@@ -257,7 +252,7 @@ virtual void Close();
   
  有关相关信息，请参阅主题 DAO 帮助中的"Close 方法"。  
   
-##  <a name="create"></a>CDaoTableDef::Create  
+##  <a name="create"></a>  CDaoTableDef::Create  
  调用此成员函数来创建新的已保存的表。  
   
 ```  
@@ -293,7 +288,7 @@ virtual void Create(
   
  有关相关信息，请参阅主题 DAO 帮助中的"CreateTableDef 方法"。  
   
-##  <a name="createfield"></a>CDaoTableDef::CreateField  
+##  <a name="createfield"></a>  CDaoTableDef::CreateField  
  调用此成员函数可将字段添加到表。  
   
 ```  
@@ -363,7 +358,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
  有关相关信息，请参阅主题 DAO 帮助中的"CreateField 方法"。  
   
-##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
+##  <a name="createindex"></a>  CDaoTableDef::CreateIndex  
  调用此函数可将索引添加到表。  
   
 ```  
@@ -383,13 +378,13 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName**必须提供名称。  
   
-- `m_pFieldInfos`必须指向数组的`CDaoIndexFieldInfo`结构。  
+- `m_pFieldInfos` 必须指向数组的`CDaoIndexFieldInfo`结构。  
   
-- `m_nFields`必须指定的数组中的字段的数目`CDaoFieldInfo`结构。  
+- `m_nFields` 必须指定的数组中的字段的数目`CDaoFieldInfo`结构。  
   
  剩余成员将被忽略的如果设置为**FALSE**。 此外， **m_lDistinctCount**成员时将忽略在创建索引。  
   
-##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
+##  <a name="deletefield"></a>  CDaoTableDef::DeleteField  
  调用此成员函数删除字段，并使其无法访问。  
   
 ```  
@@ -409,7 +404,7 @@ void DeleteField(int nIndex);
   
  有关相关信息，请参阅主题 DAO 帮助中的"删除方法"。  
   
-##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
+##  <a name="deleteindex"></a>  CDaoTableDef::DeleteIndex  
  调用此成员函数删除基础表中的索引。  
   
 ```  
@@ -429,7 +424,7 @@ void DeleteIndex(int nIndex);
   
  有关相关信息，请参阅主题 DAO 帮助中的"删除方法"。  
   
-##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
+##  <a name="getattributes"></a>  CDaoTableDef::GetAttributes  
  有关`CDaoTableDef`对象，返回的值指定所代表的表格的特征`CDaoTableDef`对象，并可以是这些常量的总和：  
   
 ```  
@@ -456,7 +451,7 @@ long GetAttributes();
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
+##  <a name="getconnect"></a>  CDaoTableDef::GetConnect  
  调用此成员函数来获取数据源的连接字符串。  
   
 ```  
@@ -479,7 +474,7 @@ CString GetConnect();
   
  有关相关信息，请参阅主题 DAO 帮助中的"连接属性"。  
   
-##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoTableDef::GetDateCreated  
  调用此函数可确定日期和时间表基础`CDaoTableDef`创建对象。  
   
 ```  
@@ -494,7 +489,7 @@ COleDateTime GetDateCreated();
   
  有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
-##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
  调用此函数可确定日期和时间表基础**CDaoTableDef**上次更新对象。  
   
 ```  
@@ -509,7 +504,7 @@ COleDateTime GetDateLastUpdated();
   
  有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
-##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoTableDef::GetFieldCount  
  调用此成员函数可检索的表中定义的字段的数目。  
   
 ```  
@@ -524,7 +519,7 @@ short GetFieldCount();
   
  有关相关信息，请参阅主题 DAO 帮助中的"计数属性"。  
   
-##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoTableDef::GetFieldInfo  
  调用此成员函数来获取各种类型的有关 tabledef 中定义的某个字段的信息。  
   
 ```  
@@ -550,11 +545,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  指定有关要检索的字段的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项：  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称、 类型、 大小，属性。 使用此选项以最快的性能。  
+- `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小，属性。 使用此选项以最快的性能。  
   
-- `AFX_DAO_SECONDARY_INFO`主要的信息，加上： 序号位置，需要，允许零长度，排序规则顺序外的名称，源字段，源表  
+- `AFX_DAO_SECONDARY_INFO` 主要的信息，加上： 序号位置，需要，允许零长度，排序规则顺序外的名称，源字段，源表  
   
-- `AFX_DAO_ALL_INFO`主要和辅助信息，加上： 验证规则，验证文本，默认值  
+- `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 验证规则，验证文本，默认值  
   
  `lpszName`  
  指向对象的名称字段，按名称查找的指针。 名称是唯一的名称字段带有最多 64 个字符的字符串。  
@@ -566,7 +561,7 @@ void GetFieldInfo(
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoTableDef::GetIndexCount  
  调用此成员函数可获取的表的索引数。  
   
 ```  
@@ -581,7 +576,7 @@ short GetIndexCount();
   
  有关相关信息，请参阅主题 DAO 帮助中的"计数属性"。  
   
-##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoTableDef::GetIndexInfo  
  调用此成员函数来获取各种类型的有关索引 tabledef 中定义的信息。  
   
 ```  
@@ -607,11 +602,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  指定要检索的索引有关的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项：  
   
-- `AFX_DAO_PRIMARY_INFO`名称，字段信息字段。 使用此选项以最快的性能。  
+- `AFX_DAO_PRIMARY_INFO` 名称，字段信息字段。 使用此选项以最快的性能。  
   
-- `AFX_DAO_SECONDARY_INFO`主要的信息，加上： 主、 唯一、 聚集、 忽略 null 值，所需，外部  
+- `AFX_DAO_SECONDARY_INFO` 主要的信息，加上： 主、 唯一、 聚集、 忽略 null 值，所需，外部  
   
-- `AFX_DAO_ALL_INFO`主要和辅助信息，加上： 非重复计数  
+- `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 非重复计数  
   
  `lpszName`  
  指向按名称查找的名称的索引对象的指针。  
@@ -623,7 +618,7 @@ void GetIndexInfo(
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="getname"></a>CDaoTableDef::GetName  
+##  <a name="getname"></a>  CDaoTableDef::GetName  
  调用此成员函数以获取基础表的用户定义名称。  
   
 ```  
@@ -638,7 +633,7 @@ CString GetName();
   
  有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
-##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoTableDef::GetRecordCount  
  调用此成员函数，以找出多少条记录位于`CDaoTableDef`对象。  
   
 ```  
@@ -653,7 +648,7 @@ long GetRecordCount();
   
  有关相关信息，请参阅主题 DAO 帮助中的"RecordCount 属性"。  
   
-##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
+##  <a name="getsourcetablename"></a>  CDaoTableDef::GetSourceTableName  
  调用此成员函数可检索附加源数据库中表的名称。  
   
 ```  
@@ -668,7 +663,7 @@ CString GetSourceTableName();
   
  有关相关信息，请参阅主题 DAO 帮助中的"SourceTableName 属性"。  
   
-##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoTableDef::GetValidationRule  
  调用此成员函数可检索 tabledef 的验证规则。  
   
 ```  
@@ -683,7 +678,7 @@ CString GetValidationRule();
   
  有关相关信息，请参阅主题 DAO 帮助中的"有效性规则属性"。  
   
-##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoTableDef::GetValidationText  
  调用此函数可检索要显示当用户输入与验证规则不匹配的数据的字符串。  
   
 ```  
@@ -698,7 +693,7 @@ CString GetValidationText();
   
  有关相关信息，请参阅主题 DAO 帮助中的"有效性文本属性"。  
   
-##  <a name="isopen"></a>CDaoTableDef::IsOpen  
+##  <a name="isopen"></a>  CDaoTableDef::IsOpen  
  调用此成员函数可确定是否`CDaoTableDef`对象当前处于打开状态。  
   
 ```  
@@ -710,18 +705,18 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoTableDef::m_pDatabase  
  包含指向的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)此表的对象。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
+##  <a name="m_pdaotabledef"></a>  CDaoTableDef::m_pDAOTableDef  
  包含指向 DAO tabledef 对象基础的 OLE 接口的`CDaoTableDef`对象。  
   
 ### <a name="remarks"></a>备注  
  如果你需要直接访问 DAO 接口，请使用此指针。  
   
-##  <a name="open"></a>CDaoTableDef::Open  
+##  <a name="open"></a>  CDaoTableDef::Open  
  调用此成员函数以打开 tabledef 以前保存到数据库中的 TableDef 的集合。  
   
 ```  
@@ -734,7 +729,7 @@ virtual void Open(LPCTSTR lpszName);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
+##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink  
  调用此成员函数以更新附加表的连接信息。  
   
 ```  
@@ -748,7 +743,7 @@ void RefreshLink();
   
  有关相关信息，请参阅主题 DAO 帮助中的"RefreshLink 方法"。  
   
-##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
+##  <a name="setattributes"></a>  CDaoTableDef::SetAttributes  
  设置一个值，该值指示的一个或多个特征`CDaoTableDef`对象。  
   
 ```  
@@ -769,13 +764,13 @@ void SetAttributes(long lAttributes);
 ### <a name="remarks"></a>备注  
  设置多个属性，就可以将其合并通过对使用按位 OR 运算符相应常量求和。 设置**dbAttachExclusive**在附加的表会生成异常。 结合以下值还生成一个异常：  
   
-- **dbAttachExclusive &#124;dbAttachedODBC**  
+- **dbAttachExclusive &#124; dbAttachedODBC**  
   
-- **dbAttachSavePWD &#124;dbAttachedTable**  
+- **dbAttachSavePWD &#124; dbAttachedTable**  
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
-##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
+##  <a name="setconnect"></a>  CDaoTableDef::SetConnect  
  有关`CDaoTableDef`对象，表示附加的表，字符串对象 （数据库类型说明符和数据库的路径） 的一个或两个部分组成。  
   
 ```  
@@ -810,8 +805,8 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 导入|"HTML 导入;"|" `drive`:\\\ *路径*\ *filename*"|  
 |HTML 导出|"HTML 导出;"|" `drive`:\\\ *路径*"|  
 |Text|"文本;"|"驱动器：\\\path"|  
-|ODBC|"ODBC;数据库 = `database`;UID =*用户*;PWD =*密码*;DSN = *datasourcename;*LOGINTIMEOUT =*秒;*"（这可能不是所有服务器的完整连接字符串; 它只是一个示例。 它是非常重要，不能使用参数之间的空间。）|无|  
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [配置文件 =*配置文件*;]<br /><br /> [PWD =*密码*;]<br /><br /> [数据库 = `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|  
+|ODBC|"ODBC;数据库 = `database`;UID =*用户*;PWD =*密码*;DSN = *datasourcename;* LOGINTIMEOUT =*秒;*"（这可能不是所有服务器的完整连接字符串; 它只是一个示例。 它是非常重要，不能使用参数之间的空间。）|无|  
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [配置文件 =*配置文件*;]<br /><br /> [PWD =*密码*;]<br /><br /> [数据库 = `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|  
   
 > [!NOTE]
 >  Btrieve 截至 DAO 3.5 不再受支持。  
@@ -824,7 +819,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  有关相关信息，请参阅主题 DAO 帮助中的"连接属性"。  
   
-##  <a name="setname"></a>CDaoTableDef::SetName  
+##  <a name="setname"></a>  CDaoTableDef::SetName  
  调用此成员函数以设置表的用户定义名称。  
   
 ```  
@@ -840,7 +835,7 @@ void SetName(LPCTSTR lpszName);
   
  有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
-##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
+##  <a name="setsourcetablename"></a>  CDaoTableDef::SetSourceTableName  
  调用此成员函数以指定附加表的名称或基本表的名称在其上`CDaoTableDef`基于对象，如同它存在于原始源中的数据。  
   
 ```  
@@ -856,7 +851,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
   
  有关相关信息，请参阅主题 DAO 帮助中的"SourceTableName 属性"。  
   
-##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
+##  <a name="setvalidationrule"></a>  CDaoTableDef::SetValidationRule  
  调用此成员函数可设置 tabledef 的验证规则。  
   
 ```  
@@ -878,7 +873,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  有关相关信息，请参阅主题 DAO 帮助中的"有效性规则属性"。  
   
-##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
+##  <a name="setvalidationtext"></a>  CDaoTableDef::SetValidationText  
  调用此成员函数可设置的验证规则的异常文本`CDaoTableDef`与基础基表 Microsoft Jet 数据库引擎支持的对象。  
   
 ```  

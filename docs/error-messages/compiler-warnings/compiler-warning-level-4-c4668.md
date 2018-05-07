@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 4） C4668 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 4） C4668 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4668
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4668
 ms.assetid: c6585460-bc4a-4a15-9242-4cbfce53c961
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8cd54cbc252bf86fdc974fd0e5a87e44d5c853e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a6349e867382a327f53676583f5daad7df80dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4668"></a>编译器警告（等级 4）C4668
 没有将“symbol”定义为预处理器宏，用“0”替换“directives”  

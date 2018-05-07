@@ -1,30 +1,25 @@
 ---
-title: "常用属性 |Microsoft 文档"
-ms.custom: 
+title: 常用属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stock-properties"></a>常用属性
 如果你将属性添加到 MFC 调度接口使用[添加属性向导](../ide/idl-attributes-add-property-wizard.md)，您可以选择从常用属性**属性名称**列入[名称](../ide/names-add-property-wizard.md)页向导。 这些属性如下所示：  

@@ -1,12 +1,9 @@
 ---
-title: ICommandImpl::GetDBSession | Microsoft Docs
-ms.custom: 
+title: 'Icommandimpl:: Getdbsession |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandImpl::GetDBSession
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetDBSession method
 ms.assetid: e5b1cb13-453f-4698-90bf-f6bfe6814a54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11b94f64d389686abfea675c457e13296423b2e4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 116838ebb5857d5761b9d58d4f84e315de56d240
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandimplgetdbsession"></a>ICommandImpl::GetDBSession
 返回到创建该命令的会话中的接口指针。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>备注  
  用于从会话中检索属性。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

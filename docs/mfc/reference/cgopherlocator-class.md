@@ -1,12 +1,9 @@
 ---
-title: "CGopherLocator 类 |Microsoft 文档"
-ms.custom: 
+title: CGopherLocator 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffe833195e665fad37c6638c83170a1913197d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 类
 从 gopher 服务器获取 gopher"定位器"，确定定位器的类型，并使定位器可用于[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。  
@@ -77,10 +72,10 @@ class CGopherLocator : public CObject
   
  `CGopherLocator`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxinet.h  
   
-##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
  此成员函数调用创建`CGopherLocator`对象。  
   
 ```  
@@ -94,7 +89,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>备注  
  切勿创建`CGopherLocator`直接对象。 而应调用[CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)创建并返回一个指向`CGopherLocator`对象。  
   
-##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
  调用此成员函数要获取其定位符类型。  
   
 ```  
@@ -111,7 +106,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 ### <a name="remarks"></a>备注  
  可能的类型如下所示：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |GOPHER_TYPE_TEXT_FILE|一个 ASCII 文本文件。|  
 |GOPHER_TYPE_DIRECTORY|Gopher 了附加项目的目录。|  
@@ -138,7 +133,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|请让 + 项。|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + 项。|  
   
-##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
  此有用的强制转换运算符提供了一种高效的方法访问的以 null 结尾的 C 字符串中包含`CGopherLocator`对象。  
   
 ```  

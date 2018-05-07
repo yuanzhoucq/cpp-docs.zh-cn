@@ -1,13 +1,10 @@
 ---
-title: "调度映射 |Microsoft 文档"
-ms.custom: 
+title: 调度映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>调度映射
 OLE 自动化提供方法来调用方法和跨应用程序中访问属性。 由 Microsoft 基础类库用于调度这些请求提供的机制是"调度映射"，它指定了对象函数和属性，以及属性本身的和的数据类型的内部和外部名称函数自变量。  
@@ -46,7 +41,7 @@ OLE 自动化提供方法来调用方法和跨应用程序中访问属性。 由
 |[DISP_PROPERTY_PARAM](#disp_property_param)|定义 OLE 自动化属性，它采用参数和名称的 Get 和 Set 函数。|  
 |[DISP_DEFVALUE](#disp_defvalue)|将现有属性设为对象的默认值。|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  如果`CCmdTarget`-你的程序中的派生的类支持 OLE 自动化，类必须提供一个调度映射来公开其方法和属性。  
   
 ```   
@@ -64,10 +59,10 @@ DECLARE_DISPATCH_MAP()
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  声明调度映射的定义。  
   
 ```  
@@ -84,10 +79,10 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="remarks"></a>备注  
  在定义类的成员函数的实现 (.cpp) 文件中，使用 `BEGIN_DISPATCH_MAP` 宏启动调度映射，为每个调度函数和属性添加宏项，然后使用 `END_DISPATCH_MAP` 宏完成调度映射。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  结束调度映射的定义。  
   
 ```   
@@ -97,10 +92,10 @@ END_DISPATCH_MAP()
 ### <a name="remarks"></a>备注  
  它必须与 `BEGIN_DISPATCH_MAP` 一起使用。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  调度映射中定义 OLE 自动化函数。  
   
 ```   
@@ -147,13 +142,13 @@ DISP_FUNCTION(
 |VT_VARIANT|**VARIANT**|  
 |VT_UNKNOWN|`LPUNKNOWN`|  
   
- `vtsParams`自变量是空格分隔的值从列表**VTS_**常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如，应用于对象的 
+ `vtsParams`自变量是空格分隔的值从列表**VTS_** 常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如，应用于对象的 
   
  [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
   
  指定包含短整数跟短整数的指针的列表。  
   
- **VTS_**常量和它们的含义如下：  
+ **VTS_** 常量和它们的含义如下：  
   
 |符号|参数类型|  
 |------------|--------------------|  
@@ -167,9 +162,9 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const 变体\***或**variant 类型的值 （& a)**|  
+|**VTS_VARIANT**|**const 变体\*** 或**variant 类型的值 （& a)**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**短\***|  
+|**VTS_PI2**|**short\***|  
 |**VTS_PI4**|**长\***|  
 |**VTS_PR4**|**float\***|  
 |**VTS_PR8**|**双精度\***|  
@@ -183,10 +178,10 @@ DISP_FUNCTION(
 |**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
 |**VTS_NONE**|没有参数|  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  调度映射中定义 OLE 自动化属性。  
   
 ```   
@@ -230,10 +225,10 @@ DISP_PROPERTY(
   
  外部客户端更改的属性，指定的成员变量的值时`memberName`更改; 则不显示通知的更改。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  定义 OLE 自动化属性和名称用获取和设置调度映射中的属性的值的函数。  
   
 ```   
@@ -266,10 +261,10 @@ DISP_PROPERTY_EX(
   
  `vtPropType`自变量为类型**VARTYPE**。 为此参数的可能值取自`VARENUM`枚举。 有关这些值的列表，请参阅备注`vtRetVal`中的参数[DISP_FUNCTION](#disp_function)。 请注意， `VT_EMPTY`，列出在`DISP_FUNCTION`备注，不允许为属性数据类型。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  调度映射中定义通知的 OLE 自动化的属性。  
   
 ```   
@@ -317,10 +312,10 @@ DISP_PROPERTY_NOTIFY(
 |VT_VARIANT|**VARIANT**|  
 |VT_UNKNOWN|`LPUNKNOWN`|  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  定义具有单独访问的属性**获取**和`Set`成员函数。  
   
 ```   
@@ -350,7 +345,7 @@ DISP_PROPERTY_PARAM(
  指定属性的类型的值。  
   
  `vtsParams`  
- 以空格分隔的字符串**VTS_**变量参数类型，另一个用于每个参数。  
+ 以空格分隔的字符串**VTS_** 变量参数类型，另一个用于每个参数。  
   
 ### <a name="remarks"></a>备注  
  与不同`DISP_PROPERTY_EX`宏，此宏允许你指定参数列表的属性。 这可用于实现索引或参数化的属性。  
@@ -372,10 +367,10 @@ DISP_PROPERTY_PARAM(
   
  [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  将现有属性设为对象的默认值。  
   
 ```   
@@ -394,7 +389,7 @@ DISP_DEFVALUE(theClass, pszName)
   
  您的对象的“默认值”是在对对象的引用未指定属性或成员函数时检索到或设置的属性。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdisp.h 
 
 ## <a name="see-also"></a>请参阅  

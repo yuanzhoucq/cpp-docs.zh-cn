@@ -1,12 +1,9 @@
 ---
-title: "COleControlSite 类 |Microsoft 文档"
-ms.custom: 
+title: COleControlSite 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControlSite
@@ -115,17 +112,15 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80541bc777d2c77209812cbee621045b7d6c6507
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 提供自定义客户端控件接口支持。  
@@ -1108,7 +1103,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ### <a name="return-value"></a>返回值  
  如果窗口已以前可见，则非零如果以前隐藏的窗口，则为 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [COleControlContainer 类](../../mfc/reference/colecontrolcontainer-class.md)

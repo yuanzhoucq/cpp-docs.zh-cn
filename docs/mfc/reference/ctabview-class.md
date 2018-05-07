@@ -1,12 +1,9 @@
 ---
-title: "CTabView 类 |Microsoft 文档"
-ms.custom: 
+title: CTabView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabView
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabview-class"></a>CTabView 类
 `CTabView`的类简化了使用选项卡控件类 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  
@@ -73,7 +68,7 @@ class CTabbedView : public CView
 |[CTabView::OnActivateView](#onactivateview)|选项卡视图进行活动或非活动时，由框架调用。|  
   
 ## <a name="remarks"></a>备注  
- 此类可以轻松将选项卡式的视图放入文档/视图应用程序。 `CTabView`是`CView`-派生类，该类包含一个嵌入`CMFCTabCtrl`对象。 `CTabView`处理支持所需的所有消息`CMFCTabCtrl`对象。 只需从派生类`CTabView`，并将其插入你的应用程序，然后添加`CView`-通过使用派生类`AddView`方法。 选项卡控件将显示为选项卡的这些视图。  
+ 此类可以轻松将选项卡式的视图放入文档/视图应用程序。 `CTabView` 是`CView`-派生类，该类包含一个嵌入`CMFCTabCtrl`对象。 `CTabView` 处理支持所需的所有消息`CMFCTabCtrl`对象。 只需从派生类`CTabView`，并将其插入你的应用程序，然后添加`CView`-通过使用派生类`AddView`方法。 选项卡控件将显示为选项卡的这些视图。  
   
  例如，你可能拥有的文档，可以表示不同的方式： 作为电子表格、 图表、 可编辑窗体中，依次类推。 你可以创建根据需要绘制数据的单个视图，它们插入你`CTabView`-派生对象并将它们而无需任何其他编码选项卡式。  
   
@@ -84,10 +79,10 @@ class CTabbedView : public CView
   
  [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>  CTabView::AddView  
  将视图添加到选项卡控件。  
   
 ```  
@@ -117,7 +112,7 @@ int AddView(
 ### <a name="remarks"></a>备注  
  调用此函数可将视图添加到选项卡控件嵌入在框架中。  
   
-##  <a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>  CTabView::FindTab  
  返回选项卡控件中指定的视图的索引。  
   
 ```  
@@ -134,7 +129,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>备注  
  调用此函数可检索具有指定的句柄的视图的索引。  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  将指针返回到当前处于活动状态的视图。  
   
 ```  
@@ -146,7 +141,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
  返回与视图相关联的选项卡控件的引用。  
   
 ```  
@@ -156,7 +151,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>返回值  
  对与视图关联的选项卡控件的引用。  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
  创建选项卡视图，以确定此选项卡视图是否具有共享水平滚动条时，由框架调用。  
   
 ```  
@@ -164,14 +159,14 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果应与共享的滚动条一起创建选项卡视图。 否则为 `FALSE`。  
+ `TRUE` 如果应与共享的滚动条一起创建选项卡视图。 否则为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
  框架在调用此方法时`CTabView`正在创建对象。  
   
  重写`IsScrollBar`中的方法`CTabView`-派生类，并返回`TRUE`如果你想要创建具有共享水平滚动条的视图。  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  选项卡视图进行活动或非活动时，由框架调用。  
   
 ```  
@@ -185,7 +180,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>备注  
  默认实现不执行任何操作。 重写此方法在`CTabView`-派生类来处理此通知。  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>  CTabView::RemoveView  
  从选项卡控件中删除视图。  
   
 ```  
@@ -201,7 +196,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
  使视图处于活动状态。  
   
 ```  
@@ -213,7 +208,7 @@ BOOL SetActiveView(int iTabNum);
  选项卡视图的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果指定的视图已激活，`FALSE`如果视图的索引无效。  
+ `TRUE` 如果指定的视图已激活，`FALSE`如果视图的索引无效。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息请参阅[CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)。  

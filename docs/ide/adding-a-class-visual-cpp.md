@@ -1,13 +1,10 @@
 ---
-title: "添加类 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 添加类 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.adding
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - classes [C++], creating
 - classes [C++], adding
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac87368f2bd38c32425799103fa3999dd11b3298
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-class-visual-c"></a>添加类 (Visual C++)
 若要在中添加在 Visual c + + 项目中，类**解决方案资源管理器**，右键单击项目，单击**添加**，然后单击**类**。 这将打开[添加类对话框](../ide/add-class-dialog-box.md)对话框。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/03/2018
  如果你的项目命名约定要求您使用现有的名称，然后只需更改即可在名称中的一个或多个字母的大小写因为 c + + 是区分大小写。 例如，尽管不能将命名类`CDocument`，可将其命名`cdocument`。  
   
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>要添加哪种类型的类？  
- 在**添加类**对话框中，当你扩展**Visual c + +**显示的已安装的模板的几个分组的左窗格中的节点。 组包括**CLR**， **ATL**， **MFC**，和**c + +**。 当你选择一个组时，该组中的可用模板的列表显示在中间窗格中。 每个模板包含的文件和所需的类的源代码。  
+ 在**添加类**对话框中，当你扩展**Visual c + +** 显示的已安装的模板的几个分组的左窗格中的节点。 组包括**CLR**， **ATL**， **MFC**，和**c + +**。 当你选择一个组时，该组中的可用模板的列表显示在中间窗格中。 每个模板包含的文件和所需的类的源代码。  
   
  若要生成一个新类，在中间窗格中选择一个模板，键入的名称中的类**名称**框中，然后单击**添加**。 这将打开**添加类向导**，以便你可以指定类的选项。  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 > [!NOTE]
 >  模板**向 MFC 添加 ATL 支持**不会创建一个类，但改为配置项目以使用 atl。 有关详细信息，请参阅[MFC 项目中的 ATL 支持](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
   
- 若要使不使用 MFC、 ATL 或 CLR 的 c + + 类，使用**c + + 类**中的模板**c + +**组的已安装的模板。 有关详细信息，请参阅[添加泛型 c + + 类](../ide/adding-a-generic-cpp-class.md)。  
+ 若要使不使用 MFC、 ATL 或 CLR 的 c + + 类，使用**c + + 类**中的模板**c + +** 组的已安装的模板。 有关详细信息，请参阅[添加泛型 c + + 类](../ide/adding-a-generic-cpp-class.md)。  
   
  提供了两种类型的基于窗体的 c + + 类。 第一个， [CFormView 类](../mfc/reference/cformview-class.md)创建的 MFC 类。 第二个创建 CLR Windows 窗体的类。  
   

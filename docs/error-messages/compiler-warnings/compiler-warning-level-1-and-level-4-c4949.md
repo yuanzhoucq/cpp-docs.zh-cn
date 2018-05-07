@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 1 和等级 4） C4949 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 1 和等级 4） C4949 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4949
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4949
 ms.assetid: 34f45a05-c115-49cb-9f67-0bd4f0735d9b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d23a6d6e030007289cc50ce0372acc8f99e7ed3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3dbf80f85db7334d4bcb46402851cac601d258f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>编译器警告（等级 1 和等级 4）C4949
 托管和非托管杂注为仅在使用编译时，才有意义 / clr [: 选项]  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 #pragma managed   // C4949  
 ```  
   
- 当**#pragma 非托管**使用不带**/clr**，C4949 是 4 级警告。  
+ 当 **#pragma 非托管**使用不带 **/clr**，C4949 是 4 级警告。  
   
  下面的示例生成 C4949:  
   

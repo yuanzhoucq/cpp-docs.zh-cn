@@ -1,13 +1,10 @@
 ---
-title: "BITMAPINFO 结构 |Microsoft 文档"
-ms.custom: 
+title: BITMAPINFO 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAPINFO
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BITMAPINFO structure [MFC]
 ms.assetid: a00caa49-e4df-419f-89a7-ab03c13a1b5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d704fec4a6ae0a95bd393b4a7fffa24884711e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e061802cbcd8926a146e5765cc9ecfd9bf917295
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO 结构
 `BITMAPINFO`结构定义的维度和 Windows 设备独立位图 (DIB) 的颜色信息。  
@@ -59,7 +54,7 @@ typedef struct tagBITMAPINFO {
   
 - [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)结构  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

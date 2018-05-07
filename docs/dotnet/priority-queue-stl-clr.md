@@ -1,12 +1,9 @@
 ---
-title: "priority_queue (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: priority_queue (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <queue> header [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e806603a795a71dc2afb95ae17779d1c6f210b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此模板类描述控制不同的长度为排序的元素序列，具有有限访问权限的对象。 使用容器适配器`priority_queue`管理作为优先级队列的基础容器。  
@@ -47,7 +42,7 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- “值”  
+ 值  
  受控序列中的元素的类型。  
   
  容器  
@@ -102,7 +97,7 @@ template<typename Value,
   
  此类委托对象必须对进行严格弱排序类型的值[priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `value_comp()(X, Y)`返回相同的布尔值导致每次调用。  
+ `value_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
   
  如果`value_comp()(X, Y)`为 true，然后`value_comp()(Y, X)`必须是 false。  
   
@@ -122,7 +117,7 @@ template<typename Value,
   
  因此，适合基础容器包括[deque (STL/CLR)](../dotnet/deque-stl-clr.md)和[向量 (STL/CLR)](../dotnet/vector-stl-clr.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  

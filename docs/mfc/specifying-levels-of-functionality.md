@@ -1,13 +1,10 @@
 ---
-title: "指定功能级别 |Microsoft 文档"
-ms.custom: 
+title: 指定功能级别 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-levels-of-functionality"></a>指定功能级别
 本文介绍如何将添加到的功能的以下级别你[CObject](../mfc/reference/cobject-class.md)-派生类：  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  有关常规说明`CObject`功能，请参阅文章[从 CObject 派生类](../mfc/deriving-a-class-from-cobject.md)。  
   
 -   [运行时类信息](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a>若要添加运行时类信息  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> 若要添加运行时类信息  
   
 1.  派生您的类从`CObject`中所述，[从 CObject 派生类](../mfc/deriving-a-class-from-cobject.md)文章。  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  始终将放`IMPLEMENT_DYNAMIC`在实现文件 (。CPP) 为您的类。 `IMPLEMENT_DYNAMIC`宏应在编译期间一次计算，并因此不应使用在接口文件 (。H），可可能包括在多个文件。  
   
-#### <a name="_core_to_add_dynamic_creation_support"></a>若要添加动态创建支持  
+#### <a name="_core_to_add_dynamic_creation_support"></a> 若要添加动态创建支持  
   
 1.  派生您的类从`CObject`。  
   
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  使用`IMPLEMENT_DYNCREATE`类实现文件中的宏。  
   
-#### <a name="_core_to_add_serialization_support"></a>若要添加序列化支持  
+#### <a name="_core_to_add_serialization_support"></a> 若要添加序列化支持  
   
 1.  派生您的类从`CObject`。  
   

@@ -1,13 +1,10 @@
 ---
-title: "记录字段交换： 处理向导代码 |Microsoft 文档"
-ms.custom: 
+title: 记录字段交换： 处理向导代码 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>记录字段交换：使用向导代码
 本主题解释的代码，MFC 应用程序向导和**添加类**(中所述[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 为支持 RFX 和如何你可能想要更改该代码编写。  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   记录集类中的记录集字段数据成员的声明  
   
--   重写`CRecordset::DoFieldExchange`  
+-   重写 `CRecordset::DoFieldExchange`  
   
 -   记录集类构造函数中的记录集字段数据成员的初始化  
   
-##  <a name="_core_the_field_data_member_declarations"></a>字段数据成员声明  
+##  <a name="_core_the_field_data_member_declarations"></a> 字段数据成员声明  
  向导中的.h 文件，如下所示的类编写记录集类声明`CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  此外，请注意，该向导将覆盖`DoFieldExchange`类的成员函数`CRecordset`。  
   
-##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange 替代  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange 替代  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)是 RFX 的核心。 框架调用`DoFieldExchange`随时，需要将数据从数据源得到记录集或从记录集移到数据源。 `DoFieldExchange`此外支持获取有关的信息字段数据成员通过[IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty)和[IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)成员函数。  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)是 RFX 的核心。 框架调用`DoFieldExchange`随时，需要将数据从数据源得到记录集或从记录集移到数据源。 `DoFieldExchange` 此外支持获取有关的信息字段数据成员通过[IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty)和[IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)成员函数。  
   
  以下`DoFieldExchange`替代为`CSections`类。 向导会将该函数写入记录集类的.cpp 文件中。  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   `pFX`指向[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)框架传递时，它调用对象的`DoFieldExchange`。 `CFieldExchange`对象指定的操作，`DoFieldExchange`是执行的传输和其他上下文信息的方向。  
   
-##  <a name="_core_the_recordset_constructor"></a>记录集构造函数  
+##  <a name="_core_the_recordset_constructor"></a> 记录集构造函数  
  向导编写的记录集构造函数包含与 RFX 相关的以下两项操作：  
   
 -   每个字段数据成员初始化  

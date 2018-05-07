@@ -1,13 +1,10 @@
 ---
-title: "TN026: DDX 和 DDV 例程 |Microsoft 文档"
-ms.custom: 
+title: 'TN026: DDX 和 DDV 例程 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  在标准 c + + 中的构造函数，通常一个块以与中设置的数据的初始值`//{{AFX_DATA_INIT`和`//}}AFX_DATA_INIT`注释。  
   
- `CWnd::UpdateData`是操作执行的初始化和错误处理围绕对调用`DoDataExchange`。  
+ `CWnd::UpdateData` 是操作执行的初始化和错误处理围绕对调用`DoDataExchange`。  
   
  你可以调用`CWnd::UpdateData`在任何时候执行数据交换和验证。 默认情况下`UpdateData`中默认值 (TRUE) 称为`CDialog::OnOK`处理程序和`UpdateData`(FALSE) 调用默认情况下`CDialog::OnInitDialog`。  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`： 包含的控件窗口 （通常的对话）。 这是为了防止 DDX_ 和 DDV_ 全局函数的调用方无需将 this 传递到每个 DDX/DDV 例程。  
   
-- `PrepareCtrl`和`PrepareEditCtrl`： 对话框控件准备数据交换。 将存储该控件的句柄将焦点设置在验证失败。 `PrepareCtrl`用于 nonedit 控件和`PrepareEditCtrl`用于编辑的控件。  
+- `PrepareCtrl`和`PrepareEditCtrl`： 对话框控件准备数据交换。 将存储该控件的句柄将焦点设置在验证失败。 `PrepareCtrl` 用于 nonedit 控件和`PrepareEditCtrl`用于编辑的控件。  
   
 - **失败**： 提出消息框，提示用户输入错误后调用。 此例程会将焦点还原到的最后一个控件 (上次调用`PrepareCtrl` / `PrepareEditCtrl`)，并引发异常。 可以从 DDX_ 和 DDV_ 例程调用此成员函数。  
   

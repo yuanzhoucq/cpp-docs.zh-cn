@@ -1,13 +1,10 @@
 ---
-title: "DAO 数据库引擎初始化和终止 |Microsoft 文档"
-ms.custom: 
+title: DAO 数据库引擎初始化和终止 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32dbcb02615f552a2bb26ec047b0b817bb828a95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f28c0c166bcbf13181161d6afce484fe4a45b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO 数据库引擎初始化和终止
 使用 MFC DAO 对象时，必须先初始化 DAO 数据库引擎然后终止，您的应用程序或 DLL 才能退出。 `AfxDaoInit` 和 `AfxDaoTerm` 这两个函数将执行这些任务。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxDaoInit](#afxdaoinit)|初始化 DAO 数据库引擎。|  
 |[AfxDaoTerm](#afxdaoterm)|终止 DAO 数据库引擎。|  
   
-##  <a name="afxdaoinit"></a>AfxDaoInit  
+##  <a name="afxdaoinit"></a>  AfxDaoInit  
  此函数初始化 DAO 数据库引擎。  
   
 ```  
@@ -53,10 +48,10 @@ throw(CDaoException*);
   
  有关相关信息，并调用示例`AfxDaoInit`，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdao.h  
   
-##  <a name="afxdaoterm"></a>AfxDaoTerm  
+##  <a name="afxdaoterm"></a>  AfxDaoTerm  
  此函数将终止 DAO 数据库引擎。  
   
 ```  
@@ -71,7 +66,7 @@ void AfxDaoTerm();
   
  有关相关信息，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdao.h  
 
 ## <a name="see-also"></a>请参阅  

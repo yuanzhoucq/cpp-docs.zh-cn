@@ -1,12 +1,9 @@
 ---
-title: "CConstraintColumnUsage，CConstraintColumnUsageInfo |Microsoft 文档"
-ms.custom: 
+title: CConstraintColumnUsage，CConstraintColumnUsageInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szTableSchema
@@ -51,18 +48,16 @@ helpviewer_keywords:
 - COLUMN_GUID
 - m_guidColumn
 ms.assetid: 7d4d94e8-2025-4fcc-a176-c9b231eca77b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7e7d76c426ff203d989250832231db1783562948
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6db36b0f710b0c12fba1c53e7c9fe09bcc89cd45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a>CConstraintColumnUsage，CConstraintColumnUsageInfo
 调用 typedef 类**CConstraintColumnUsage**来实现其参数类**CConstraintColumnUsageInfo**。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 02/23/2018
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|  
 |m_szConstraintName|CONSTRAINT_NAME|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

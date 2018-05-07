@@ -1,13 +1,10 @@
 ---
-title: "指定自定义生成工具 |Microsoft 文档"
-ms.custom: 
+title: 指定自定义生成工具 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>指定自定义生成工具
 
@@ -65,7 +61,7 @@ A*自定义生成工具*生成系统提供它需要生成特定的输入的文�
 
       可以使用 MSBuild 宏以符号方式指定多个输入和输出文件。 有关如何指定的文件，位置或文件集的名称的信息，请参阅[用于生成命令和属性的公共宏](../ide/common-macros-for-build-commands-and-properties.md)。
 
-      因为 %字符保留了 MSBuild，如果你指定的环境变量将每个 **%** 用字符转义**%25**十六进制转义序列。 例如，对于替换**%WINDIR%**与**%25WINDIR %25**。 MSBuild 替换每个**%25**序列与 **%** 字符访问环境变量之前。
+      因为 %字符保留了 MSBuild，如果你指定的环境变量将每个**%** 用字符转义 **%25**十六进制转义序列。 例如，对于替换 **%WINDIR%** 与 **%25WINDIR %25**。 MSBuild 替换每个 **%25**序列与**%** 字符访问环境变量之前。
 
    - 在**说明**，输入有关此自定义生成工具的描述性消息。 将消息输出到**输出**窗口时生成系统处理此工具。
 

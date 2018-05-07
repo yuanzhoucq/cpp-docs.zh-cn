@@ -1,12 +1,9 @@
 ---
-title: "CMultiDocTemplate 类 |Microsoft 文档"
-ms.custom: 
+title: CMultiDocTemplate 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiDocTemplate
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d5862a547b41ec8d359b09795f7b9985530fc97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 类
 定义实现多文档界面 (MDI) 的文档模板。  
@@ -74,10 +69,10 @@ class CMultiDocTemplate : public CDocTemplate
   
  `CMultiDocTemplate`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate  
+##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate  
  构造 `CMultiDocTemplate` 对象。  
   
 ```  
@@ -92,7 +87,7 @@ CMultiDocTemplate(
  `nIDResource`  
  指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
- 字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符作为一个占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如:  
+ 字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符作为一个占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如：  
   
  `// MYCALC.RC`  
   

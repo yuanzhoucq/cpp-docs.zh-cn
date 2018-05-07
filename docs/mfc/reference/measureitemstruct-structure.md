@@ -1,13 +1,10 @@
 ---
-title: "MEASUREITEMSTRUCT 结构 |Microsoft 文档"
-ms.custom: 
+title: MEASUREITEMSTRUCT 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - MEASUREITEMSTRUCT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5221943ba1591a01ddebe2c261e4197fa18501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 结构
 `MEASUREITEMSTRUCT`结构通知 Windows 所有者绘制的控件或菜单项的维数。  
@@ -86,7 +81,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
  这允许 Windows 正确地处理用户与控件交互。 未能填写中的正确成员`MEASUREITEMSTRUCT`结构将导致不正确的操作的控件。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** winuser.h  
   
 ## <a name="see-also"></a>请参阅  

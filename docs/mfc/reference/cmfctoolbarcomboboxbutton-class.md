@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBarComboBoxButton 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCToolBarComboBoxButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarComboBoxButton
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7732d58c8e37683f670f6f13bb4df5f49e4ef24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 包含一个组合框控件的工具栏按钮 ( [CComboBox 类](../../mfc/reference/ccombobox-class.md))。  
@@ -159,10 +154,10 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxtoolbarcomboboxbutton.h  
   
-##  <a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
+##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem  
  将唯一的项追加到列表框中。  
   
 ```  
@@ -186,7 +181,7 @@ virtual INT_PTR AddItem(
   
  如果将项文本已在列表框中，新的数据存储与现有的项。 项搜索不区分大小写。  
   
-##  <a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
+##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
  将项添加到的列表框中定义的顺序[比较](#compare)方法。  
   
 ```  
@@ -208,7 +203,7 @@ virtual INT_PTR AddSortedItem(
 ### <a name="remarks"></a>备注  
  使用此函数将项添加到的列表框中以特定顺序。  
   
-##  <a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched  
  指示是否可以更改该组合框按钮的大小。  
   
 ```  
@@ -218,7 +213,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>返回值  
  返回 `TRUE`。  
   
-##  <a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
+##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  构造[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)对象。  
   
 ```  
@@ -247,7 +242,7 @@ CMFCToolBarComboBoxButton(
   
  工具栏按钮样式的列表，请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
+##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
  删除用户定义的数据。  
   
 ```  
@@ -257,7 +252,7 @@ virtual void ClearData();
 ### <a name="remarks"></a>备注  
  默认情况下此方法没有任何影响。 重写此方法在派生类中的，如果你想要删除用户定义的任何数据。  
   
-##  <a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
+##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
  比较两个字符串。  
   
 ```  
@@ -276,7 +271,7 @@ virtual int Compare(
 ### <a name="return-value"></a>返回值  
  一个值，指示在字符串之间的区分大小写字典关系。 下表列出可能的值：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |\<0|第一个字符串是否小于第二个。|  
 |0|第一个字符串等于第二个。|  
@@ -289,7 +284,7 @@ virtual int Compare(
   
  此方法调用只能从[AddSortedItem](#addsorteditem)方法。  
   
-##  <a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
  将复制的指定状态`CMFCToolBarComboBoxButton`与当前对象。  
   
 ```  
@@ -300,7 +295,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  [in] `src`  
  源 `CMFCToolBarComboBoxButton` 对象。  
   
-##  <a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
+##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  创建新的组合框的组合框按钮。  
   
 ```  
@@ -319,7 +314,7 @@ virtual CComboBox* CreateCombo(
 ### <a name="return-value"></a>返回值  
  指向新的组合框如果此方法成功，则否则为`NULL`。  
   
-##  <a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
+##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
  创建一个新的编辑框的组合框按钮。  
   
 ```  
@@ -345,7 +340,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ### <a name="remarks"></a>备注  
  创建一个新的编辑框的组合框按钮时，框架将调用此方法。 重写此方法可以更改如何[CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)创建。  
   
-##  <a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
+##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
  从列表框中删除指定的项。  
   
 ```  
@@ -365,11 +360,11 @@ BOOL DeleteItem(DWORD_PTR dwData);
  要删除的项的文本。 如果有多个具有相同的文本项，将删除的第一项。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果项是位于并已成功删除;否则为`FALSE`。  
+ `TRUE` 如果项是位于并已成功删除;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
+##  <a name="duplicatedata"></a>  CMFCToolBarComboBoxButton::DuplicateData  
  用户定义的数据相同。  
   
 ```  
@@ -379,7 +374,7 @@ virtual void DuplicateData();
 ### <a name="remarks"></a>备注  
  默认情况下此方法没有任何影响。 如果你想要将任何用户定义数据复制，重写此方法在派生类。  
   
-##  <a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
+##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
  启用或禁用编辑和组合框。  
   
 ```  
@@ -388,12 +383,12 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bEnable`  
- `TRUE`若要启用的编辑和组合框;`FALSE`若要禁用编辑和组合框。  
+ `TRUE` 若要启用的编辑和组合框;`FALSE`若要禁用编辑和组合框。  
   
 ### <a name="remarks"></a>备注  
  禁用时，这些控件不能成为活动状态，并且不能接受用户输入。  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
  副本使用组合框按钮命令指定菜单应用程序字符串表中的字符串 id。  
   
 ```  
@@ -407,7 +402,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="return-value"></a>返回值  
  总是为 `TRUE`。  
   
-##  <a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
+##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
  返回包含指定的字符串的列表框中的第一项的索引。  
   
 ```  
@@ -423,7 +418,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd  
  获取一个指针指向具有指定的命令 id。 组合框按钮  
   
 ```  
@@ -437,14 +432,14 @@ static CMFCToolBarComboBoxButton* GetByCmd(
  组合框按钮命令 ID。  
   
  [in] `bIsFocus`  
- `TRUE`若要只搜索已设定焦点的按钮;`FALSE`要搜索的所有按钮。  
+ `TRUE` 若要只搜索已设定焦点的按钮;`FALSE`要搜索的所有按钮。  
   
 ### <a name="return-value"></a>返回值  
  组合框按钮; 指向的指针或`NULL`如果找不到按钮。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
+##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox  
  将指针返回到组合框中组合框按钮。  
   
 ```  
@@ -456,7 +451,7 @@ CComboBox* GetComboBox() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>  CMFCToolBarComboBoxButton::GetContextMenuID  
  获取组合框按钮的快捷菜单资源 ID。  
   
 ```  
@@ -466,7 +461,7 @@ UINT GetContextMenuID();
 ### <a name="return-value"></a>返回值  
  快捷菜单上的资源 id。  
   
-##  <a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
+##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
  在列表框中返回的项数。  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
+##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll  
  获取具有指定的命令 id。 组合框按钮的列表框中的项的数目  
   
 ```  
@@ -494,7 +489,7 @@ static int GetCountAll(UINT uiCmd);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
+##  <a name="getcursel"></a>  CMFCToolBarComboBoxButton::GetCurSel  
  在列表框中获取当前选定项的索引。  
   
 ```  
@@ -507,7 +502,7 @@ int GetCurSel() const;
 ### <a name="remarks"></a>备注  
  列表框索引是从零开始。  
   
-##  <a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
+##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
  返回当前选定项的索引中组合的列表框中具有指定的命令 ID 的框按钮  
   
 ```  
@@ -524,7 +519,7 @@ static int GetCurSelAll(UINT uiCmd);
 ### <a name="remarks"></a>备注  
  列表框索引是从零开始。  
   
-##  <a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl  
  将指针返回到编辑框中组合框按钮。  
   
 ```  
@@ -536,7 +531,7 @@ virtual CEdit* GetEditCtrl();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>  CMFCToolBarComboBoxButton::GetHwnd  
  返回组合框的窗口句柄。  
   
 ```  
@@ -546,7 +541,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>返回值  
  窗口句柄，或`NULL`组合框是否不与窗口对象相关联。  
   
-##  <a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
+##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
  返回与列表框中指定索引处的项关联的字符串。  
   
 ```  
@@ -563,7 +558,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ### <a name="remarks"></a>备注  
  为-1 索引参数返回当前选定的项的字符串。  
   
-##  <a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
+##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
  返回与具有指定的命令 id。 组合框按钮列表框中指定索引处的项关联的字符串  
   
 ```  
@@ -585,7 +580,7 @@ static LPCTSTR GetItemAll(
 ### <a name="remarks"></a>备注  
  索引值为-1 返回的当前选定的项的字符串。  
   
-##  <a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
+##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
  返回与列表框中的特定索引处的项关联的数据。  
   
 ```  
@@ -602,7 +597,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ### <a name="remarks"></a>备注  
  为-1 索引参数返回与当前所选的项关联的数据。  
   
-##  <a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
+##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
  返回与具有特定的命令 id。 组合框按钮的列表框中的特定索引处的项关联的数据  
   
 ```  
@@ -624,7 +619,7 @@ static DWORD_PTR GetItemDataAll(
 ### <a name="remarks"></a>备注  
  为-1 索引参数返回与当前所选的项关联的数据。  
   
-##  <a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
+##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
  返回与具有特定的命令 id。 组合框按钮的列表框中的特定索引处的项关联的数据 此数据返回为指针。  
   
 ```  
@@ -645,7 +640,7 @@ static void* GetItemDataPtrAll(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
+##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
  返回组合框按钮提示的字符串。  
   
 ```  
@@ -658,7 +653,7 @@ virtual CString GetPrompt() const;
 ### <a name="remarks"></a>备注  
  当前未实现此方法。  
   
-##  <a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
+##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText  
  获取编辑框中的文本。  
   
 ```  
@@ -670,7 +665,7 @@ LPCTSTR GetText() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
+##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll  
  获取具有指定的命令 id。 组合框按钮的编辑框中的文本  
   
 ```  
@@ -686,7 +681,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
+##  <a name="hasfocus"></a>  CMFCToolBarComboBoxButton::HasFocus  
  指示是否对组合框当前具有焦点。  
   
 ```  
@@ -694,12 +689,12 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果组合框中当前具有焦点，则否则为`FALSE`。  
+ `TRUE` 如果组合框中当前具有焦点，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法也返回`TRUE`如果组合框的任何子窗口当前具有焦点。  
   
-##  <a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
+##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
  返回应用程序中组合框按钮的垂直位置。  
   
 ```  
@@ -707,11 +702,11 @@ static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果为中心的按钮;，`FALSE`如果顶部对齐按钮。  
+ `TRUE` 如果为中心的按钮;，`FALSE`如果顶部对齐按钮。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode  
  返回应用程序中组合框按钮的平面样式外观。  
   
 ```  
@@ -719,12 +714,12 @@ static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果按钮具有平面样式;否则为`FALSE`。  
+ `TRUE` 如果按钮具有平面样式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 组合框按钮的默认平面样式是`FALSE.`  
+ 组合框按钮的默认平面样式是 `FALSE.`  
   
-##  <a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
+##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
  指示指定的句柄是否与组合框按钮，或其某个子级相关联。  
   
 ```  
@@ -736,9 +731,9 @@ virtual BOOL IsOwnerOf(HWND hwnd);
  窗口句柄。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果句柄供电组合框按钮，或从一台其子;否则为`FALSE`。  
+ `TRUE` 如果句柄供电组合框按钮，或从一台其子;否则为`FALSE`。  
   
-##  <a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
+##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
  指示组合框按钮是否位于功能区面板。  
   
 ```  
@@ -751,7 +746,7 @@ BOOL IsRibbonButton() const;
 ### <a name="remarks"></a>备注  
  默认情况下，此方法始终返回`FALSE`，这意味着组合框按钮不会显示在功能区面板。  
   
-##  <a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
  返回的可见性状态的组合框按钮。  
   
 ```  
@@ -761,7 +756,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="return-value"></a>返回值  
  组合框按钮的可见性状态。  
   
-##  <a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand  
  该值指示组合框按钮是否处理消息。  
   
 ```  
@@ -775,14 +770,14 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ### <a name="return-value"></a>返回值  
  是否组合框按钮处理的消息。  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
  由框架调用时该按钮添加到**自定义**对话框。  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCToolBarComboBoxButton::OnCalculateSize  
  由框架调用以计算按钮的大小。  
   
 ```  
@@ -800,12 +795,12 @@ virtual SIZE OnCalculateSize(
  组合框按钮默认大小。  
   
  [in] `bHorz`  
- 在父级工具栏停靠状态。 `TRUE`工具栏时水平停靠和`FALSE`时垂直停靠工具栏。  
+ 在父级工具栏停靠状态。 `TRUE` 工具栏时水平停靠和`FALSE`时垂直停靠工具栏。  
   
 ### <a name="return-value"></a>返回值  
  A`SIZE`结构，它包含组合框按钮，以像素为单位的尺寸。  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
  组合框按钮插入到一个新工具栏时，由框架调用。  
   
 ```  
@@ -816,7 +811,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
  [in] `pWndParent`  
  指向新的父工具栏。  
   
-##  <a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  当用户单击组合框按钮时，由框架调用。  
   
 ```  
@@ -833,9 +828,9 @@ virtual BOOL OnClick(
  保留供派生类中使用。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果该方法处理路由事件。，否则为`FALSE`。  
+ `TRUE` 如果该方法处理路由事件。，否则为`FALSE`。  
   
-##  <a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
  在用户更改设置组合框按钮颜色的父工具栏颜色时，由框架调用。  
   
 ```  
@@ -857,7 +852,7 @@ virtual HBRUSH OnCtlColor(
 ### <a name="remarks"></a>备注  
  此方法还设置组合框按钮文本颜色。  
   
-##  <a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
  由框架调用以绘制使用指定的样式和选项的组合框按钮。  
   
 ```  
@@ -883,7 +878,7 @@ virtual void OnDraw(
  与按钮的图像集合。  
   
  [in] `bHorz`  
- 在父级工具栏停靠状态。 `TRUE`工具栏时水平停靠和`FALSE`时垂直停靠工具栏。  
+ 在父级工具栏停靠状态。 `TRUE` 工具栏时水平停靠和`FALSE`时垂直停靠工具栏。  
   
  [in] `bCustomizeMode`  
  应用程序是否在自定义模式。  
@@ -895,9 +890,9 @@ virtual void OnDraw(
  是否要绘制了一个边框组合框按钮。  
   
  [in] `bGrayDisabledButtons`  
- `TRUE`若要绘制阴影禁用的按钮;`FALSE`若要使用已禁用图像集合。  
+ `TRUE` 若要绘制阴影禁用的按钮;`FALSE`若要使用已禁用图像集合。  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  由框架在绘制组合框按钮调用**命令**窗格**自定义**对话框。  
   
 ```  
@@ -915,26 +910,26 @@ virtual int OnDrawOnCustomizeList(
  组合框按钮的边框。  
   
  [in] `bSelected`  
- `TRUE`如果组合框按钮被选中;否则为`FALSE`。  
+ `TRUE` 如果组合框按钮被选中;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  以像素为单位，组合框按钮的宽度。  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
  由框架设置组合框按钮字体，应用程序字体更改时调用。  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-##  <a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
+##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove  
  由框架调用以在父级工具栏移时改变组合框按钮的位置。  
   
 ```  
 virtual void OnMove();
 ```  
   
-##  <a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
+##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
  隐藏或显示组合框按钮时，由框架调用。  
   
 ```  
@@ -945,7 +940,7 @@ virtual void OnShow(BOOL bShow);
  [in] `bShow`  
  是否要隐藏或显示组合框按钮。  
   
-##  <a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
+##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  由框架调用以在父级工具栏更改大小时更改组合框按钮的大小。  
   
 ```  
@@ -956,7 +951,7 @@ virtual void OnSize(int iSize);
  [in] `iSize`  
  组合框按钮新宽度。  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  在用户更改组合框按钮的工具提示时，由框架调用。  
   
 ```  
@@ -981,9 +976,9 @@ virtual BOOL OnUpdateToolTip(
  工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果该方法处理路由事件。，否则为`FALSE`。  
+ `TRUE` 如果该方法处理路由事件。，否则为`FALSE`。  
   
-##  <a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  从列表和编辑框中删除所有项。  
   
 ```  
@@ -993,7 +988,7 @@ void RemoveAllItems();
 ### <a name="remarks"></a>备注  
  中移除所有项从列表框中字符和编辑组合框控件。  
   
-##  <a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
+##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem  
  在列表框中选择一项。  
   
 ```  
@@ -1010,7 +1005,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  列表框中的项的从零开始索引。  
   
  [in] `bNotify`  
- `TRUE`若要通知的所选内容; 组合框按钮否则为`FALSE`。  
+ `TRUE` 若要通知的所选内容; 组合框按钮否则为`FALSE`。  
   
  [in] `dwData`  
  与列表框中的项关联的数据。  
@@ -1019,11 +1014,11 @@ BOOL SelectItem(LPCTSTR lpszText);
  列表框中的项的文本。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
+##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll  
  具有指定的命令 id。 组合框按钮的列表框中选择项  
   
 ```  
@@ -1056,11 +1051,11 @@ static BOOL SelectItemAll(
  列表框中的项的文本。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
+##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize  
  从存档读取该对象或将其写入存档。  
   
 ```  
@@ -1074,7 +1069,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>备注  
  中的设置`CArchive`对象确定此方法是读取还是写入存档。  
   
-##  <a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
+##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
  填充指定`CAccessibilityData`通过从组合框按钮可访问性数据的对象。  
   
 ```  
@@ -1091,9 +1086,9 @@ virtual BOOL SetACCData(
  A`CAccessibilityData`从组合框按钮接收可访问性数据的对象。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
-##  <a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
+##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
  应用程序中设置组合框按钮的垂直位置。  
   
 ```  
@@ -1102,12 +1097,12 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bCenterVert`  
- `TRUE`到中心组合框按钮在工具栏中;`FALSE`对齐到工具栏顶部组合框按钮。  
+ `TRUE` 到中心组合框按钮在工具栏中;`FALSE`对齐到工具栏顶部组合框按钮。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，组合框按钮对齐到顶部。  
   
-##  <a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
  设置组合框按钮的快捷菜单资源 ID。  
   
 ```  
@@ -1118,7 +1113,7 @@ void SetContextMenuID(UINT uiResID);
  [in] `uiResID`  
  快捷菜单上的资源 id。  
   
-##  <a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  删除向下时，请设置列表框的高度。  
   
 ```  
@@ -1132,7 +1127,7 @@ void SetDropDownHeight(int nHeight);
 ### <a name="remarks"></a>备注  
  默认高度为 150 像素。  
   
-##  <a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
  应用程序中设置组合框按钮的平面样式外观。  
   
 ```  
@@ -1141,12 +1136,12 @@ static void SetFlatMode(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bFlat`  
- `TRUE`用于平面样式外观;否则为`FALSE`。  
+ `TRUE` 用于平面样式外观;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  组合框按钮的默认平面样式是`FALSE`。  
   
-##  <a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
+##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
  设置组合框按钮指定的样式和重绘控件，如果未禁用。  
   
 ```  
@@ -1160,7 +1155,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>备注  
  工具栏按钮样式的列表，请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
+##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
  在编辑框的组合框按钮设置的文本。  
   
 ```  

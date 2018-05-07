@@ -1,12 +1,9 @@
 ---
-title: "CContextMenuManager 类 |Microsoft 文档"
-ms.custom: 
+title: CContextMenuManager 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CContextMenuManager
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bfaec077501173fade6fa15fba3516cde534b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1eb3bb0d96723f14f6dec56853d52860f0568c03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 类
 `CContextMenuManager`对象管理快捷菜单，也称为上下文菜单。  
@@ -83,11 +78,11 @@ class CContextMenuManager : public CObject
 |[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|显示指定的快捷菜单。 返回所选的菜单命令的索引。|  
   
 ## <a name="remarks"></a>备注  
- `CContextMenuManager`管理快捷菜单，并确保它们具有一致的外观。  
+ `CContextMenuManager` 管理快捷菜单，并确保它们具有一致的外观。  
   
  不应创建`CContextMenuManager`手动对象。 你的应用程序的框架创建`CContextMenuManager`对象。 但是，你应调用[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)初始化你的应用程序时。 初始化后的上下文管理器，请使用方法[CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)用于获取指向你的应用程序的上下文管理器。  
   
- 你可以在运行时创建快捷菜单，通过调用`AddMenu`。 如果你想要显示无需接收的第一个用户输入菜单上，调用`ShowPopupMenu`。 `TrackPopupMenu`如果你想要创建菜单并等待用户输入，使用。 `TrackPopupMenu`如果用户未选择任何项目的情况下退出，则返回所选的命令或 0 的索引。  
+ 你可以在运行时创建快捷菜单，通过调用`AddMenu`。 如果你想要显示无需接收的第一个用户输入菜单上，调用`ShowPopupMenu`。 `TrackPopupMenu` 如果你想要创建菜单并等待用户输入，使用。 `TrackPopupMenu` 如果用户未选择任何项目的情况下退出，则返回所选的命令或 0 的索引。  
   
  `CContextMenuManager`还可以保存并加载其状态为 Windows 注册表。  
   
@@ -101,10 +96,10 @@ class CContextMenuManager : public CObject
   
  `CContextMenuManager`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcontextmenumanager.h  
   
-##  <a name="addmenu"></a>CContextMenuManager::AddMenu  
+##  <a name="addmenu"></a>  CContextMenuManager::AddMenu  
  添加到一个新的快捷菜单[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)。  
   
 ```  
@@ -134,7 +129,7 @@ BOOL AddMenu(
 ### <a name="remarks"></a>备注  
  如果此方法将失败`uiMenuResId`无效或具有相同名称的另一个菜单如果已处于`CContextMenuManager`。  
   
-##  <a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager  
+##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
  构造[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)对象。  
   
 ```  
@@ -144,7 +139,7 @@ CContextMenuManager();
 ### <a name="remarks"></a>备注  
  在大多数情况下，不应创建`CContextMenuManager`手动。 你的应用程序的框架创建`CContextMenuManager`对象。 应调用[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)在你的应用程序的初始化过程。 若要获取指向上下文管理器的指针，调用[CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)。  
   
-##  <a name="getmenubyid"></a>CContextMenuManager::GetMenuById  
+##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById  
  返回与给定的资源 id。 关联的菜单的句柄  
   
 ```  
@@ -158,7 +153,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ### <a name="return-value"></a>返回值  
  关联的菜单的句柄或`NULL`如果找不到菜单。  
   
-##  <a name="getmenubyname"></a>CContextMenuManager::GetMenuByName  
+##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName  
  返回特定菜单的句柄。  
   
 ```  
@@ -175,12 +170,12 @@ HMENU GetMenuByName(
  一个指向 `UINT` 的指针。 此参数包含指定的菜单中，资源 ID，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- 指定的名称相匹配的菜单的句柄`lpszName`。 `NULL`如果没有调用任何菜单`lpszName`。  
+ 指定的名称相匹配的菜单的句柄`lpszName`。 `NULL` 如果没有调用任何菜单`lpszName`。  
   
 ### <a name="remarks"></a>备注  
  如果此方法查找匹配的菜单`lpszName`，`GetMenuByName`参数中存储的菜单资源 ID `puiOrigResID`。  
   
-##  <a name="getmenunames"></a>CContextMenuManager::GetMenuNames  
+##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
  返回的列表添加到的菜单名[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)。  
   
 ```  
@@ -191,7 +186,7 @@ void GetMenuNames(CStringList& listOfNames) const;
  [out] `listOfNames`  
  对引用[CStringList](../../mfc/reference/cstringlist-class.md)参数。 此方法将写入此参数的菜单名称的列表。  
   
-##  <a name="loadstate"></a>CContextMenuManager::LoadState  
+##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  加载与关联的信息[CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)从 Windows 注册表。  
   
 ```  
@@ -210,7 +205,7 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  使用方法[CContextMenuManager::SaveState](#savestate)将保存到注册表的快捷菜单。  
   
-##  <a name="resetstate"></a>CContextMenuManager::ResetState  
+##  <a name="resetstate"></a>  CContextMenuManager::ResetState  
  清除与关联的快捷菜单中的所有项[CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)。  
   
 ```  
@@ -218,12 +213,12 @@ virtual BOOL ResetState();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则`FALSE`如果发生故障。  
+ `TRUE` 如果此方法成功，则`FALSE`如果发生故障。  
   
 ### <a name="remarks"></a>备注  
  此方法清除弹出菜单，并将其从`CContextMenuManager`。  
   
-##  <a name="savestate"></a>CContextMenuManager::SaveState  
+##  <a name="savestate"></a>  CContextMenuManager::SaveState  
  将保存与关联的信息[CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)的 Windows 注册表。  
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  使用方法[CContextMenuManager::LoadState](#loadstate)从注册表加载的快捷菜单。  
   
-##  <a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu  
+##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu  
  控件是否[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)显示新的弹出菜单时关闭活动的弹出菜单。  
   
 ```  
@@ -251,12 +246,12 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bSet`  
- 一个布尔型参数，用于控制是否关闭活动的弹出菜单。 值为`TRUE`指示活动的弹出菜单未关闭。 `FALSE`指示活动的弹出菜单已关闭。  
+ 一个布尔型参数，用于控制是否关闭活动的弹出菜单。 值为`TRUE`指示活动的弹出菜单未关闭。 `FALSE` 指示活动的弹出菜单已关闭。  
   
 ### <a name="remarks"></a>备注  
  默认情况下，`CContextMenuManager`关闭活动的弹出菜单。  
   
-##  <a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu  
+##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu  
  显示指定的快捷菜单。  
   
 ```  
@@ -312,7 +307,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
   
  如果参数`bAutoDestroy`是`FALSE`，你必须手动调用继承`DestroyMenu`方法来释放内存资源。 默认实现`ShowPopupMenu`不使用参数`bAutoDestroy`。 它提供供将来使用或自定义的类派生自`CContextMenuManager`类。  
   
-##  <a name="trackpopupmenu"></a>CContextMenuManager::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  显示指定的快捷菜单，并返回所选的快捷方式菜单命令的索引。  
   
 ```  

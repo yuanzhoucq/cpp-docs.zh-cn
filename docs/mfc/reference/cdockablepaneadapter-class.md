@@ -1,12 +1,9 @@
 ---
-title: "CDockablePaneAdapter 类 |Microsoft 文档"
-ms.custom: 
+title: CDockablePaneAdapter 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0e10490a381784e40167e16d1c7ec4e7e1a19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 类
 为 `CWnd`派生窗格提供停靠支持。  
@@ -67,10 +62,10 @@ class CDockablePaneAdapter : public CDockablePane
   
  [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
  返回可停靠窗格适配器的基础窗口。  
   
 ```  
@@ -83,7 +78,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>备注  
  此函数用于访问包装的窗口。  
   
-##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  从注册表加载窗格的状态。  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
  将窗格的状态保存到注册表。  
   
 ```  
@@ -131,7 +126,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
  设置的可停靠窗格适配器基础窗口。  
   
 ```  

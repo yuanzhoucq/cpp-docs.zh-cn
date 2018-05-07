@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2712 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2712 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2712
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee098890bac40c0c376c7623578c4e95e551a75b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26c5d7a24c022cacf4c20687b2d8c58f7e9e342
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2712"></a>编译器错误 C2712
 无法在要求对象展开的函数中使用 __try  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  如果调用通过使用声明的方法，也可能发生错误 C2712 [__event](../../cpp/event.md)关键字。 因为事件可能在多线程环境中使用，编译器将生成阻止基础事件对象操作，然后将生成的代码封装到 SEH 的代码[try-finally 语句](../../cpp/try-finally-statement.md)。 因此，如果调用事件方法并按值传递其类型具有析构函数的自变量，则将发生错误 C2712。 这种情况的一种解决方法是将自变量作为常数引用进行传递。  
   
 ## <a name="example"></a>示例  
- 如果使用进行编译，也会发生 C2712 **/clr: pure**和声明中的指针到函数的静态数组`__try`块。 静态成员要求编译器下使用动态初始化**/clr: pure**，这意味着 c + + 异常处理。 但是，不允许在 `__try` 块中进行 C++ 异常处理。  
+ 如果使用进行编译，也会发生 C2712 **/clr: pure**和声明中的指针到函数的静态数组`__try`块。 静态成员要求编译器下使用动态初始化 **/clr: pure**，这意味着 c + + 异常处理。 但是，不允许在 `__try` 块中进行 C++ 异常处理。  
   
  **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   

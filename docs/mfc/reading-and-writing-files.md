@@ -1,13 +1,10 @@
 ---
-title: "读取和写入文件 |Microsoft 文档"
-ms.custom: 
+title: 读取和写入文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770dfe28b3f0278ba2682b37b71d1dd89d02ae2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 102f5f5de591f8a4475232ad8f0f5383c276e5d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-and-writing-files"></a>读取和写入文件
 如果你已使用 C 运行时库文件处理函数，MFC 读取和写入操作将显示熟悉。 本指南介绍了从直接读取和写入直接`CFile`对象。 你可以还执行缓冲处理文件 i/o 操作[CArchive](../mfc/reference/carchive-class.md)类。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  使用**读取**和**编写**成员函数来读取和写入数据文件中。  
   
-     或  
+     -或-  
   
 2.  `Seek`成员函数也是可用于将移动到文件中的特定偏移量。  
   

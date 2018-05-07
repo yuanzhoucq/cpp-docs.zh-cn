@@ -1,13 +1,10 @@
 ---
-title: "基于模板的类 |Microsoft 文档"
-ms.custom: 
+title: 基于模板的类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2beb417bdedab6196ff6d27a387c4b61f083c4ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68d44a66f328465f2c59fb361f9bb6b2a76efa82
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-based-classes"></a>基于模板的类
 此文章介绍了 MFC 3.0 版及更高版本中的类型安全的基于模板的集合类。 使用这些模板创建类型安全的集合是更方便，并帮助比使用不基于模板的集合类更有效地提供类型安全。  
@@ -60,10 +55,10 @@ ms.lasthandoff: 12/21/2017
   
  有关 c + + 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)中*c + + 语言参考*。  
   
-##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>使用简单的数组、 列表和映射模板  
+##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> 使用简单的数组、 列表和映射模板  
  若要使用简单的集合模板，你需要知道可以在这些集合中存储什么类型的数据以及要在集合声明中使用的参数。  
   
-###  <a name="_core_simple_array_and_list_usage"></a>简单的数组和列表的用法  
+###  <a name="_core_simple_array_and_list_usage"></a> 简单的数组和列表的用法  
  简单数组和列表类[CArray](../mfc/reference/carray-class.md)和[CList](../mfc/reference/clist-class.md)，采用两个参数：*类型*和`ARG_TYPE`。 这些类可以存储任何数据类型，它指定在*类型*参数：  
   
 -   基本的 c + + 数据类型，如`int`， `char`，和**float**  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
 -   你定义其他类型  
   
- 为了方便使用和效率，你可以使用`ARG_TYPE`参数来指定函数自变量的类型。 通常情况下，指定`ARG_TYPE`作为对你在名为的类型的引用*类型*参数。 例如:  
+ 为了方便使用和效率，你可以使用`ARG_TYPE`参数来指定函数自变量的类型。 通常情况下，指定`ARG_TYPE`作为对你在名为的类型的引用*类型*参数。 例如：  
   
  [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]  
   
@@ -80,37 +75,37 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]  
   
-###  <a name="_core_simple_map_usage"></a>简单的映射使用情况  
- 简单的映射类， [CMap](../mfc/reference/cmap-class.md)，采用四个参数：*密钥*， `ARG_KEY`，*值*，和`ARG_VALUE`。 数组和列表像类一样，映射类可以存储任何数据类型。 数组和列表，其中索引和排序它们在存储的数据，与地图关联键和值： 访问存储在映射中通过指定的值关联的键的值。 *密钥*参数指定用于访问存储在映射中的数据的键的数据类型。 如果的一种*密钥*是结构或类，`ARG_KEY`参数通常是对中指定的类型的引用*密钥*。 *值*参数指定映射中存储的项的类型。 如果的一种`ARG_VALUE`是结构或类，`ARG_VALUE`参数通常是对中指定的类型的引用*值*。 例如:  
+###  <a name="_core_simple_map_usage"></a> 简单的映射使用情况  
+ 简单的映射类， [CMap](../mfc/reference/cmap-class.md)，采用四个参数：*密钥*， `ARG_KEY`，*值*，和`ARG_VALUE`。 数组和列表像类一样，映射类可以存储任何数据类型。 数组和列表，其中索引和排序它们在存储的数据，与地图关联键和值： 访问存储在映射中通过指定的值关联的键的值。 *密钥*参数指定用于访问存储在映射中的数据的键的数据类型。 如果的一种*密钥*是结构或类，`ARG_KEY`参数通常是对中指定的类型的引用*密钥*。 *值*参数指定映射中存储的项的类型。 如果的一种`ARG_VALUE`是结构或类，`ARG_VALUE`参数通常是对中指定的类型的引用*值*。 例如：  
   
  [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]  
   
  第一个示例存储`MY_STRUCT`值、 访问通过它们`int`密钥，并返回访问`MY_STRUCT`通过引用的项。 第二个示例存储`CPerson`值、 访问通过它们`CString`键，并返回对访问的项的引用。 该示例可以表示简单的通讯簿，在其中你查找人员按姓氏。  
   
- 因为*密钥*形参属于类型`CString`和*KEY_TYPE*形参属于类型`LPCSTR`，密钥存储在映射的类型的项`CString`但中引用函数如`SetAt`类型的指针通过`LPCSTR`。 例如:  
+ 因为*密钥*形参属于类型`CString`和*KEY_TYPE*形参属于类型`LPCSTR`，密钥存储在映射的类型的项`CString`但中引用函数如`SetAt`类型的指针通过`LPCSTR`。 例如：  
   
  [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]  
   
-##  <a name="_core_using_typed.2d.pointer_collection_templates"></a>使用类型化指针集合模板  
+##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> 使用类型化指针集合模板  
  若要使用的类型化指针集合模板，你需要知道可以在这些集合中存储什么类型的数据和要在集合声明中使用的参数。  
   
-###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a>类型化指针数组和列表的用法  
+###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> 类型化指针数组和列表的用法  
  类型化指针数组和列表类[CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)和[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)，采用两个参数：`BASE_CLASS`和*类型*。 这些类可以存储任何数据类型，它指定在*类型*参数。 它们派生自其中一个存储指针; 的非模板集合类指定在此基类`BASE_CLASS`。 对于数组，使用两种`CObArray`或`CPtrArray`。 对于列表，请使用两种`CObList`或`CPtrList`。  
   
- 实际上，在声明时基于的集合，比如`CObList`、 新类不仅继承其基本类的成员，但它还声明大量的其他类型安全成员函数和帮助通过封装提供类型安全的运算符对基类成员的调用。 这些封装管理所有必要的类型转换。 例如:  
+ 实际上，在声明时基于的集合，比如`CObList`、 新类不仅继承其基本类的成员，但它还声明大量的其他类型安全成员函数和帮助通过封装提供类型安全的运算符对基类成员的调用。 这些封装管理所有必要的类型转换。 例如：  
   
  [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]  
   
- 第一个示例声明的类型化指针数组，`myArray`派生自`CObArray`。 数组存储并返回指向`CPerson`对象 (其中`CPerson`类派生自`CObject`)。 你可以调用任意`CObArray`成员函数，或你可以调用新的类型安全`GetAt`和`ElementAt`函数或使用类型安全**[]**运算符。  
+ 第一个示例声明的类型化指针数组，`myArray`派生自`CObArray`。 数组存储并返回指向`CPerson`对象 (其中`CPerson`类派生自`CObject`)。 你可以调用任意`CObArray`成员函数，或你可以调用新的类型安全`GetAt`和`ElementAt`函数或使用类型安全 **[]** 运算符。  
   
- 第二个示例声明的类型化指针列表，`myList`派生自`CPtrList`。 列表存储并返回指向`MY_STRUCT`对象。 类根据`CPtrList`用于存储指向不派生自的对象的指针`CObject`。 `CTypedPtrList`具有大量类型安全成员函数： `GetHead`， `GetTail`， `RemoveHead`， `RemoveTail`， `GetNext`， `GetPrev`，和`GetAt`。  
+ 第二个示例声明的类型化指针列表，`myList`派生自`CPtrList`。 列表存储并返回指向`MY_STRUCT`对象。 类根据`CPtrList`用于存储指向不派生自的对象的指针`CObject`。 `CTypedPtrList` 具有大量类型安全成员函数： `GetHead`， `GetTail`， `RemoveHead`， `RemoveTail`， `GetNext`， `GetPrev`，和`GetAt`。  
   
-###  <a name="_core_typed.2d.pointer_map_usage"></a>类型化指针映射的用法  
- 类型化指针映射类， [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)，采用三个参数： `BASE_CLASS`，*密钥*，和*值*。 `BASE_CLASS`参数指定从中派生新类的类： `CMapPtrToWord`， `CMapPtrToPtr`， `CMapStringToPtr`， `CMapWordToPtr`， `CMapStringToOb`，依次类推。 *密钥*类似于*密钥*中`CMap`： 它指定用于查找的键的类型。 *值*类似于*值*中`CMap`： 它指定的对象存储在映射的类型。 例如:  
+###  <a name="_core_typed.2d.pointer_map_usage"></a> 类型化指针映射的用法  
+ 类型化指针映射类， [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)，采用三个参数： `BASE_CLASS`，*密钥*，和*值*。 `BASE_CLASS`参数指定从中派生新类的类： `CMapPtrToWord`， `CMapPtrToPtr`， `CMapStringToPtr`， `CMapWordToPtr`， `CMapStringToOb`，依次类推。 *密钥*类似于*密钥*中`CMap`： 它指定用于查找的键的类型。 *值*类似于*值*中`CMap`： 它指定的对象存储在映射的类型。 例如：  
   
  [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]  
   
- 第一个示例是基于映射**CMapPtrToPt**r-它使用`CString`键映射到指向`MY_STRUCT`。 可以通过调用安全类型来查找存储的指针`Lookup`成员函数。 你可以使用**[]**运算符来查找存储的指针并将其添加如果不是找到。 可循环使用类型安全的映射和`GetNextAssoc`函数。 你还可以调用其他成员函数的类`CMapPtrToPtr`。  
+ 第一个示例是基于映射**CMapPtrToPt**r-它使用`CString`键映射到指向`MY_STRUCT`。 可以通过调用安全类型来查找存储的指针`Lookup`成员函数。 你可以使用 **[]** 运算符来查找存储的指针并将其添加如果不是找到。 可循环使用类型安全的映射和`GetNextAssoc`函数。 你还可以调用其他成员函数的类`CMapPtrToPtr`。  
   
  第二个示例是基于映射**CMapStringToO**b-它使用映射到存储指向的字符串键`CMyObject`对象。 你可以使用前面的段落中所述相同的类型安全成员也可以调用类的成员`CMapStringToOb`。  
   

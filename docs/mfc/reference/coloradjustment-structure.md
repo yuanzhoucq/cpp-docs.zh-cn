@@ -1,13 +1,10 @@
 ---
-title: "COLORADJUSTMENT 结构 |Microsoft 文档"
-ms.custom: 
+title: COLORADJUSTMENT 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - COLORADJUSTMENT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - COLORADJUSTMENT structure [MFC]
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4e86010cda3545a6216767c1519bc5b2bccdf43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffb0ec0233edd968ad121b84f9e1d584a26f3387
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT 结构
 `COLORADJUSTMENT`结构定义使用 Windows 的颜色调整值`StretchBlt`和**StretchDIBits**函数时`StretchBlt`模式是**半色调**。  
@@ -116,7 +111,7 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  *caRedGreenTint*  
  指定要应用到源对象的红色或绿色浅色调整量。 值必须在 100 到-100 范围内。 正数会调整朝向红色并负数调整朝向绿色。 0 表示未浅色进行调整。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** wingdi.h  
   
 ## <a name="see-also"></a>请参阅  

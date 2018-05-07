@@ -1,13 +1,10 @@
 ---
-title: "DHTML 事件映射 |Microsoft 文档"
-ms.custom: 
+title: DHTML 事件映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.macros.shared
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e2ebb76da167b6d9d3a790d391dbe4e544bc6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件映射
 下面的宏可以用于处理 DHTML 事件。  
@@ -90,10 +85,10 @@ ms.lasthandoff: 12/21/2017
 |[END_URL_ENTRIES](#end_url_entries)|将标记 URL 事件输入映射的末尾。|  
 |[URL_EVENT_ENTRY](#url_event_entry)|将 URL 或 HTML 资源映射到多页对话框中的页。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP  
+##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP  
  标记的 DHTML 事件映射置于由标识的类别的源文件时开始`className`。  
   
 ```   
@@ -111,10 +106,10 @@ BEGIN_DHTML_EVENT_MAP(className)
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE  
+##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
  标记的 DHTML 事件映射中的类定义开始`className`。  
   
 ```   
@@ -132,11 +127,11 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
 
   
-##  <a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP  
+##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP  
  声明类定义中的 DHTML 事件映射。  
   
 ```   
@@ -152,10 +147,10 @@ DECLARE_DHTML_EVENT_MAP()
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap( );`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event"></a>DHTML_EVENT  
+##  <a name="dhtml_event"></a>  DHTML_EVENT  
  （在文档级别中） 处理由标识的事件`dispid`源于标识的 HTML 元素`elemName`。  
   
 ```   
@@ -175,10 +170,10 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL  
+##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
  处理由事件`dispid`由 ActiveX 控件触发的`controlName`。  
   
 ```   
@@ -198,10 +193,10 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_class"></a>DHTML_EVENT_CLASS  
+##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
  （在文档级别中） 处理由标识的事件`dispid`源自任何 HTML 元素的 CSS 类由标识`elemName`。  
   
 ```   
@@ -221,10 +216,10 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT  
+##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
  处理 (标识的元素在`elemName`) 由标识事件`dispid`。  
   
 ```   
@@ -248,10 +243,10 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
   
  如果此宏用于处理冒泡事件，该元素由`elemName`可能不是事件源 (源可能包含的任何元素`elemName`)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE  
+##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
  （在文档级别中） 处理**onafterupdate**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -268,10 +263,10 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE  
+##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
  （在文档级别中） 处理**onbeforeupdate**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -288,10 +283,10 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR  
+##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
  （在元素级别） 处理**onblur**事件。 这是 nonbubbling 事件。  
   
 ```   
@@ -308,10 +303,10 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE  
+##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE  
  （在元素级别） 处理`onchange`事件。 这是 nonbubbling 事件。  
   
 ```   
@@ -328,10 +323,10 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK  
+##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
  （在文档级别中） 处理**onclick**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -348,10 +343,10 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE  
+##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
  （在文档级别中） 处理**ondataavailable**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -368,10 +363,10 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED  
+##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
  （在文档级别中） 处理**ondatasetchanged**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -388,10 +383,10 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE  
+##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
  （在文档级别中） 处理**ondatasetcomplete**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -409,10 +404,10 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK  
+##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
  （在文档级别中） 处理**ondblclick**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -429,10 +424,10 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART  
+##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
  （在文档级别中） 处理**ondragstart**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -449,10 +444,10 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE  
+##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
  （在文档级别中） 处理**onerrorupdate**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```   
@@ -470,10 +465,10 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE  
+##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
  （在文档级别中） 处理**onfilterchange**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -492,10 +487,10 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS  
+##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
  （在元素级别） 处理**onfocus**事件。 这是 nonbubbling 事件。  
   
 ```  
@@ -514,10 +509,10 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP  
+##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
  （在文档级别中） 处理`onhelp`生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -536,10 +531,10 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN  
+##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
  （在文档级别中） 处理**onkeydown**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -558,10 +553,10 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS  
+##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
  （在文档级别中） 处理**onkeypress**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -580,10 +575,10 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP  
+##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
  （在文档级别中） 处理**onkeyup**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -602,10 +597,10 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN  
+##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
  （在文档级别中） 处理**onmousedown**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -624,10 +619,10 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE  
+##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
  （在文档级别中） 处理`onmousemove`生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -646,10 +641,10 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT  
+##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
  （在文档级别中） 处理**onmouseout**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -668,10 +663,10 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER  
+##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
  （在文档级别中） 处理**onmouseover**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -690,10 +685,10 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP  
+##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
  （在文档级别中） 处理**onmouseup**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -712,10 +707,10 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE  
+##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
  （在元素级别） 处理**onresize**事件。 这是 nonbubbling 事件。  
   
 ```  
@@ -734,10 +729,10 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER  
+##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
  （在文档级别中） 处理**onrowenter**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -756,10 +751,10 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT  
+##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
  （在文档级别中） 处理**onrowexit**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -778,10 +773,10 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART  
+##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
  （在文档级别中） 处理**onselectstart**生成事件的标识的 HTML 元素通过`elemName`。  
   
 ```  
@@ -800,10 +795,10 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="dhtml_event_tag"></a>DHTML_EVENT_TAG  
+##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
  （在文档级别中） 处理由标识的事件`dispid`源自任何 HTML 元素由标识的 HTML 标记`elemName`。  
   
 ```   
@@ -823,10 +818,10 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ### <a name="remarks"></a>备注  
  使用此宏添加到一个条目[DHTML 事件映射](#begin_dhtml_event_map_inline)类中。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP  
+##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP  
  将标记 DHTML 事件映射的末尾。  
   
 ```   
@@ -836,10 +831,10 @@ END_DHTML_EVENT_MAP()
 ### <a name="remarks"></a>备注  
  必须与结合使用[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP  
+##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP  
  在多页对话框中启动 DHTML 和 URL 事件映射的定义。  
   
 ```  
@@ -853,10 +848,10 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP  
+##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP  
  在多页对话框中启动嵌入 DHTML 事件映射的定义。  
   
 ```  
@@ -881,10 +876,10 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="example"></a>示例  
  请参阅中的示例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="begin_url_entries"></a>BEGIN_URL_ENTRIES  
+##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES  
  在多页对话框中启动 URL 事件输入映射的定义。  
   
 ```  
@@ -902,10 +897,10 @@ BEGIN_URL_ENTRIES(className)
 ### <a name="example"></a>示例  
  请参阅中的示例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP  
+##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP  
  声明类定义中的 DHTML 和 URL 事件映射。  
   
 ```  
@@ -918,10 +913,10 @@ DECLARE_DHTML_URL_EVENT_MAP()
   
  DHTML 和 URL 事件映射包含[嵌入 DHTML 事件映射](#begin_embed_dhtml_event_map)和[URL 事件输入](#begin_url_entries)DHTML 事件映射到每页基础上的处理程序。 使用[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)实现映射。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP  
+##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP  
  标记 DHTML 和 URL 事件映射的末尾。  
   
 ```  
@@ -936,10 +931,10 @@ END_DHTML_URL_EVENT_MAP(className)
 ### <a name="example"></a>示例  
  请参阅中的示例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP  
+##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP  
  标记嵌入 DHTML 事件映射的末尾。  
   
 ```  
@@ -950,10 +945,10 @@ END_EMBED_DHTML_EVENT_MAP()
 ### <a name="example"></a>示例  
  请参阅中的示例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="end_url_entries"></a>END_URL_ENTRIES  
+##  <a name="end_url_entries"></a>  END_URL_ENTRIES  
  将标记 URL 事件输入映射的末尾。  
   
 ```  
@@ -964,10 +959,10 @@ END_URL_ENTRIES()
 ### <a name="example"></a>示例  
  请参阅中的示例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
   
-##  <a name="url_event_entry"></a>URL_EVENT_ENTRY  
+##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY  
  将 URL 或 HTML 资源映射到多页对话框中的页。  
   
 ```  
@@ -978,7 +973,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
  `className`  
  包含 URL 事件映射的类的名称。 此类应直接或间接派生从[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件输入映射必须位于内部[DHTML 和 URL 事件映射](#begin_dhtml_url_event_map))。  
   
- *url*  
+ *Url*  
  页面 URL 或 HTML 资源。  
   
  *映射名称*  
@@ -993,7 +988,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
  请参阅中的示例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
 
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdhtml.h  
 
 ##  <a name="end_dhtml_event_map_inline"></a>END_DHTML_EVENT_MAP_INLINE
@@ -1007,7 +1002,7 @@ END_DHTML_EVENT_MAP_INLINE( )
 ### <a name="remarks"></a>备注  
  必须与结合使用[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)。  
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdhtml.h  
    
 ### <a name="see-also"></a>请参阅  

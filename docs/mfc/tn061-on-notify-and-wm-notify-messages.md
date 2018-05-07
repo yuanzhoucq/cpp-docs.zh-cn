@@ -1,13 +1,10 @@
 ---
-title: "TN061: ON_NOTIFY 和 WM_NOTIFY 消息 |Microsoft 文档"
-ms.custom: 
+title: 'TN061: ON_NOTIFY 和 WM_NOTIFY 消息 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061：ON_NOTIFY 和 WM_NOTIFY 消息
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|控件已丢失输入的焦点|  
 |**NM_OUTOFMEMORY**|控件无法完成操作，因为没有足够的内存|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY： 处理在 MFC 应用程序的 WM_NOTIFY 消息  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY： 处理在 MFC 应用程序的 WM_NOTIFY 消息  
  该函数`CWnd::OnNotify`处理通知消息。 其默认实现检查消息映射的通知处理程序调用。 一般情况下，你不会重写`OnNotify`。 相反，你提供的处理程序函数，并将该处理程序的消息映射条目添加到所有者窗口的类的消息映射。  
   
  ClassWizard，通过 ClassWizard 属性表中，可以创建`ON_NOTIFY`消息映射条目，并且提供的主干处理程序函数。 有关使用类向导来简化此过程的详细信息，请参阅[消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)。  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  请注意 ClassWizard 自动提供正确类型的指针。 你可以通过访问通知结构`pNMHDR`或`pLVKeyDow`。  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  如果你需要处理相同**WM_NOTIFY**消息对于一组控件，你可以使用**ON_NOTIFY_RANGE**而非`ON_NOTIFY`。 例如，你可能有一组你想要针对某些通知消息执行相同操作的按钮。  
   
  当你使用**ON_NOTIFY_RANGE**，指定要为其处理通过指定开始和结束范围的子标识符的通知消息的子标识符的连续范围。  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *结果*  
  你将设置到结果代码的指针，再返回。  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
  如果你希望通知中的多个对象路由到处理消息，你可以使用**ON_NOTIFY_EX** (或**ON_NOTIFY_EX_RANGE**) 而非`ON_NOTIFY`(或**ON_NOTIFY_RANGE**). 之间的唯一区别**EX**版本和正则版本是成员函数的调用**EX**版本返回**BOOL** ，该值指示是否消息处理应继续。 返回**FALSE**此函数可用于处理多个对象中的，同一消息。  
   
  ClassWizard 不处理**ON_NOTIFY_EX**或**ON_NOTIFY_EX_RANGE**; 如果你想要使用其中的一个需要亲自编辑消息映射。  

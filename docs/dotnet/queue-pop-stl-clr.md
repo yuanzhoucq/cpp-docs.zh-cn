@@ -1,12 +1,9 @@
 ---
-title: "queue:: pop (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'queue:: pop (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue::pop
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - pop member [STL/CLR]
 ms.assetid: 38f6c03b-e8f8-4663-b3d6-18314cdc8e7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8521ea0a85b8a4997f38a6236981d85b82ecc884
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d3ab61f5108db8fc8c0d05262be4800c1329224
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuepop-stlclr"></a>queue::pop (STL/CLR)
 移除的最后一个元素。  
@@ -75,7 +70,7 @@ a b c
 b c  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  

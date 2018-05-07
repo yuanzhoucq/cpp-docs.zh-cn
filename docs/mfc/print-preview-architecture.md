@@ -1,13 +1,10 @@
 ---
-title: "打印预览体系结构 |Microsoft 文档"
-ms.custom: 
+title: 打印预览体系结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffffa6c446487752974549f4a070cf8e86e91aea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26771ba3f5a79716a759327f485a92391fada8c7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="print-preview-architecture"></a>打印预览结构
 本文介绍 MFC 框架如何实现打印预览功能。 涉及主题包括：  
@@ -38,14 +33,14 @@ ms.lasthandoff: 12/21/2017
   
  由于不是直接在设备上绘制图像，应用程序必须使用屏幕模拟打印机，因此打印预览某种程度上不同于屏幕显示和打印。 为了适应这种情况，Microsoft 基础类库定义特殊的 （未记录） 类派生自[CDC 类](../mfc/reference/cdc-class.md)、 调用**CPreviewDC**。 所有 `CDC` 对象包含两个设备上下文，但这两个上下文一般是相同的。 在**CPreviewDC**对象，它们是不同的： 第一个表示模拟的打印机，第二个表示实际显示输出的屏幕。  
   
-##  <a name="_core_the_print_preview_process"></a>打印预览过程  
+##  <a name="_core_the_print_preview_process"></a> 打印预览过程  
  当用户选择中的打印预览命令**文件**菜单上，框架会创建**CPreviewDC**对象。 每当应用程序执行为打印机设备上下文设置特征的操作时，应用程序也将对屏幕设备上下文执行类似的操作。 例如，如果应用程序选择一种打印字体，则框架将选择一种模拟打印机字体的屏幕显示字体。 每当应用程序将输出发送到打印机时，框架会将输出发送到屏幕。  
   
  打印预览在绘制文档页面的顺序上也不同于打印。 打印期间，框架将继续打印循环，直到呈现特定范围的页面。 打印预览期间，任何时候都是显示一或两页，然后应用程序等待；在用户响应前不再显示任何页面。 打印预览期间，应用程序还必须响应 `WM_PAINT` 消息，正如它在普通屏幕显示期间所做的那样。  
   
  [CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函数在预览模式下调用时调用，就像它是开头的打印作业。 [CPrintInfo 结构](../mfc/reference/cprintinfo-structure.md)传递给函数的结构包含多个成员你可以调整打印预览操作的某些特性将设置其值。 例如，你可以设置**m_nNumPreviewPages**成员来指定要用于预览单页还是双页模式中的文档。  
   
-##  <a name="_core_modifying_print_preview"></a>修改打印预览  
+##  <a name="_core_modifying_print_preview"></a> 修改打印预览  
  您可以通过很多特别简单的方式修改打印预览的行为和外观。 例如，除了别的之外，您可以：  
   
 -   使打印预览窗口显示滚动条，以便轻松访问文档的任何页。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  有时，您可能希望 `OnPreparePrinting` 执行不同的初始化，这取决于它是为打印作业还是为打印预览调用的。 你可以通过检查来确定这**m_bPreview**中的成员变量`CPrintInfo`结构。 此成员设置为**TRUE**何时调用打印预览。  
   
- `CPrintInfo`结构还包含名为的成员**m_strPageDesc**，用于设置格式的单页和双页模式中的屏幕的底部显示的字符串。 默认情况下两个字符串是窗体"页 *n* "和"页 *n*   -  *m*，"，但可以修改**m_strPageDesc**中`OnPreparePrinting`并将字符串设置为更复杂的内容。 请参阅[CPrintInfo 结构](../mfc/reference/cprintinfo-structure.md)中*MFC 参考*有关详细信息。  
+ `CPrintInfo`结构还包含名为的成员**m_strPageDesc**，用于设置格式的单页和双页模式中的屏幕的底部显示的字符串。 默认情况下两个字符串是窗体"页*n*"和"页*n* - *m*，"，但可以修改**m_strPageDesc**从在`OnPreparePrinting`并将字符串设置为更复杂的内容。 请参阅[CPrintInfo 结构](../mfc/reference/cprintinfo-structure.md)中*MFC 参考*有关详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [打印和打印预览](../mfc/printing-and-print-preview.md)   

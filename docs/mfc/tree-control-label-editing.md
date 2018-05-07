@@ -1,13 +1,10 @@
 ---
-title: "树控件标签编辑 |Microsoft 文档"
-ms.custom: 
+title: 树控件标签编辑 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fb11c29b51b30b1aaffccbe3e999f1cefc3fbb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd2157755146606b2bdacf8ae5a1da9cd0966b21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-label-editing"></a>树控件标签编辑
 用户可以直接编辑树控件中的项的标签 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))，其**TVS_EDITLABELS**样式。 用户通过单击具有焦点的项的标签开始编辑。 应用程序开始编辑通过使用[EditLabel](../mfc/reference/ctreectrl-class.md#editlabel)成员函数。 树控件在编辑开始以及编辑取消或完成时发送通知。 当编辑完成时，您负责根据需要更新项的标签。  

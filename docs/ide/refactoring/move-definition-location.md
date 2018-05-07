@@ -1,22 +1,20 @@
 ---
-title: "移动定义位置 |Microsoft 文档"
-ms.custom: 
+title: 移动定义位置 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 838f3d01f5e6d8612948304b80b79cf9c7cb4720
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="move-definition-location"></a>移动定义位置
 **新增功能：**允许您立即将函数定义移到相应的标头文件。
@@ -25,15 +23,15 @@ ms.lasthandoff: 12/21/2017
 
 **原因：**你无法手动移动函数，但此功能将会移动它自动，必要时创建的标头文件。
 
-**如何：**
+方法：
 
 1. 文本或鼠标光标置于想要移动的函数。
 
    ![突出显示的代码](images/movedefinition_highlight.png)
 
-1. 接下来，请执行以下任一操作：
+1. 接下来，执行以下操作之一：
    * **键盘**
-     * 按**Ctrl +。** 向触发器**快速操作和重构**菜单，然后选择**移动定义位置**从上下文菜单。
+     * 按“Ctrl+.” 向触发器**快速操作和重构**菜单，然后选择**移动定义位置**从上下文菜单。
    * **鼠标**
      * 右键单击并选择**快速操作和重构**菜单，然后选择**移动定义位置**从上下文菜单。
 

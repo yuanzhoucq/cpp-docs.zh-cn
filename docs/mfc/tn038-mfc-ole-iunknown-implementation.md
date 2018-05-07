@@ -1,13 +1,10 @@
 ---
-title: "TN038: MFC OLE IUnknown 实现 |Microsoft 文档"
-ms.custom: 
+title: 'TN038: MFC OLE IUnknown 实现 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
 > [!NOTE]
@@ -106,7 +101,7 @@ pPrint->Release();
 }  
 ```  
   
- 这看起来非常简单，但你要如何实现同时支持 IPrintInterface 的对象和[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口在此情况下它很简单，因为 IPrintInterface 直接派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — 通过实现 IPrintInterface， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)自动支持。 例如:  
+ 这看起来非常简单，但你要如何实现同时支持 IPrintInterface 的对象和[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)接口在此情况下它很简单，因为 IPrintInterface 直接派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — 通过实现 IPrintInterface， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)自动支持。 例如：  
   
 ```  
 class CPrintObj : public CPrintInterface  
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  有关聚合的详细信息，请参阅[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx)主题。  
   
- MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget`"*拥有*"引用计数以及所有与关联的成员函数[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)实现 (例如正在引用计数`CCmdTarget`)。 要创建支持 OLE COM 的类，请从 `CCmdTarget` 派生类并使用各种宏以及 `CCmdTarget` 的成员函数实现所需接口。 MFC 的实现使用嵌套类定义每个接口实现，与上面的示例非常类似。 借助 IUnknown 标准实现和数个可以消除一些重复代码的宏，此操作变得更轻松。  
+ MFC 的接口映射支持来源于 `CCmdTarget` 类。 `CCmdTarget` "*拥有*"引用计数以及所有与关联的成员函数[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)实现 (例如正在引用计数`CCmdTarget`)。 要创建支持 OLE COM 的类，请从 `CCmdTarget` 派生类并使用各种宏以及 `CCmdTarget` 的成员函数实现所需接口。 MFC 的实现使用嵌套类定义每个接口实现，与上面的示例非常类似。 借助 IUnknown 标准实现和数个可以消除一些重复代码的宏，此操作变得更轻松。  
   
 ## <a name="interface-map-basics"></a>接口映射基本知识  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  使用 `METHOD_PROLOGUE` 宏访问 `CCmdTarget` 派生的父对象。  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可委派到`CCmdTarget`这些函数的实现 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可委派到`CCmdTarget`这些函数的实现 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。  
   
  以上 CPrintEditObj 示例可按下列方式实现：  
   
@@ -432,7 +427,7 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 3.  在某些情况下（通常在 `CCmdTarget::OnCreateAggregates` 期间），请将成员变量初始化为除 NULL 之外的值。  
   
- 例如:  
+ 例如：  
   
 ```  
 class CAggrExample : public CCmdTarget  
@@ -584,7 +579,7 @@ END_INTERFACE_PART(
   
  `localClass` 参数是将被定义的本地类的名称。 名称前面会自动追加一个“X”。 此命名约定用于避免与同名的全局类发生冲突。 此外，嵌入成员的名称和 `localClass` 的名称相同，但其前缀为“m_x”。  
   
- 例如:  
+ 例如：  
   
 ```  
 BEGIN_INTERFACE_PART(MyAdviseSink,

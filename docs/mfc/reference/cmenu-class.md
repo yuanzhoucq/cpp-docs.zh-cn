@@ -1,12 +1,9 @@
 ---
-title: "CMenu 类 |Microsoft 文档"
-ms.custom: 
+title: CMenu 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenu
@@ -93,17 +90,15 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64682066a93618c8646973c76df395883dddf053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenu-class"></a>CMenu 类
 封装 Windows `HMENU`。  
@@ -190,10 +185,10 @@ class CMenu : public CObject
   
  `CMenu`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
  将新的项追加到末尾的菜单。  
   
 ```  
@@ -242,7 +237,7 @@ BOOL AppendMenu(
   
 - **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
   
-- `MF_ENABLED`启用菜单项，以便它可以选择并将其还原从其灰显状态。  
+- `MF_ENABLED` 启用菜单项，以便它可以选择并将其还原从其灰显状态。  
   
 - **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
   
@@ -250,7 +245,7 @@ BOOL AppendMenu(
   
 - **MF_MENUBREAK**将置于新行在静态菜单或弹出菜单中的新列中的项。 无分隔线位于各列之间。  
   
-- `MF_OWNERDRAW`指定项目的所有者描述项。 当首次显示菜单时，拥有菜单窗口接收`WM_MEASUREITEM`消息，检索的高度和宽度的菜单项。 `WM_DRAWITEM`消息是发送每当所有者必须更新菜单项的可视外观。 此选项不是有效的顶级菜单项。  
+- `MF_OWNERDRAW` 指定项目的所有者描述项。 当首次显示菜单时，拥有菜单窗口接收`WM_MEASUREITEM`消息，检索的高度和宽度的菜单项。 `WM_DRAWITEM`消息是发送每当所有者必须更新菜单项的可视外观。 此选项不是有效的顶级菜单项。  
   
 - **MF_POPUP**指定菜单项具有与之相关联的弹出菜单。 ID 参数指定是要与项相关联的弹出菜单的句柄。 这用于将顶级的弹出菜单或分层的弹出菜单添加到弹出菜单项。  
   
@@ -273,7 +268,7 @@ BOOL AppendMenu(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>  CMenu::Attach  
  将附加到现有 Windows 菜单`CMenu`对象。  
   
 ```  
@@ -295,7 +290,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
  添加到的复选标记，或从弹出菜单中的菜单项中删除复选标记。  
   
 ```  
@@ -330,7 +325,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::GetMenuState](#getmenustate)。  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
  检查指定的菜单项，并使其单选项。  
   
 ```  
@@ -368,7 +363,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>示例  
   请参阅示例[ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)。  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>  CMenu::CMenu  
  创建一个空的菜单，并将其附加到`CMenu`对象。  
   
 ```  
@@ -388,7 +383,7 @@ CMenu();
   
 - [附加](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
  创建一个菜单，并将其附加到`CMenu`对象。  
   
 ```  
@@ -408,7 +403,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
  创建弹出菜单，并将其附加到`CMenu`对象。  
   
 ```  
@@ -428,7 +423,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu  
  从菜单中删除的项。  
   
 ```  
@@ -460,7 +455,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
  自动调用`CWinApp`空闲时间处理程序中，删除任何临时`CMenu`创建的对象[FromHandle](#fromhandle)成员函数。  
   
 ```  
@@ -468,12 +463,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>备注  
- `DeleteTempMap`分离附加到一个临时的 Windows 菜单对象`CMenu`对象在删除之前`CMenu`对象。  
+ `DeleteTempMap` 分离附加到一个临时的 Windows 菜单对象`CMenu`对象在删除之前`CMenu`对象。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu  
  销毁菜单和任何使用的 Windows 资源。  
   
 ```  
@@ -489,7 +484,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>  CMenu::Detach  
  分离从一个 Windows 菜单`CMenu`对象并返回的句柄。  
   
 ```  
@@ -505,7 +500,7 @@ HMENU Detach();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
  由框架在所有者绘制菜单更改的可视方面时调用。  
   
 ```  
@@ -526,7 +521,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
  启用、 禁用，或调低亮度菜单项。  
   
 ```  
@@ -548,7 +543,7 @@ UINT EnableMenuItem(
   
 - **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
   
-- `MF_ENABLED`启用菜单项，以便它可以选择并将其还原从其灰显状态。  
+- `MF_ENABLED` 启用菜单项，以便它可以选择并将其还原从其灰显状态。  
   
 - **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
   
@@ -565,7 +560,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
  返回一个指向`CMenu`赋予一个菜单的 Windows 句柄的对象。  
   
 ```  
@@ -587,7 +582,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
  确定指定的菜单上的默认菜单项。  
   
 ```  
@@ -600,7 +595,7 @@ UINT GetDefaultItem(
  *gmdiFlags*  
  值，该值指定该函数搜索菜单项的方式。 此参数可以为 none、 一个，或以下值的组合：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |**GMDI_GOINTOPOPUPS**|指定，是否默认项目是指打开一个子菜单，该函数是相应的子菜单以递归方式在其中进行搜索。 如果子菜单中没有默认项，则返回的值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定菜单上，不管它是用于打开子菜单项的第一个默认项。|  
 |**GMDI_USEDISABLED**|指定，该函数是返回一个默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或显示为灰色的项。|  
@@ -617,7 +612,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
  检索与 ID 关联的上下文帮助`CMenu`。  
   
 ```  
@@ -630,7 +625,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
  检索一个菜单的信息。  
   
 ```  
@@ -647,7 +642,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>备注  
  调用此函数可检索有关菜单上的信息。  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
  确定弹出窗口或顶级菜单中的项的数目。  
   
 ```  
@@ -660,7 +655,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
  获取位于位置定义的菜单项的菜单项标识符`nPos`。  
   
 ```  
@@ -677,7 +672,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
  检索有关菜单项的信息。  
   
 ```  
@@ -706,7 +701,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
  在弹出菜单中返回指定的菜单项或项的数目的状态。  
   
 ```  
@@ -733,7 +728,7 @@ UINT GetMenuState(
   
 - **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
   
-- `MF_ENABLED`启用菜单项，以便它可以选择并将其还原从其灰显状态。 请注意此常量的值为 0;使用此值时，应用程序不应测试针对失败的 0。  
+- `MF_ENABLED` 启用菜单项，以便它可以选择并将其还原从其灰显状态。 请注意此常量的值为 0;使用此值时，应用程序不应测试针对失败的 0。  
   
 - **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
   
@@ -748,7 +743,7 @@ UINT GetMenuState(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
  将指定的菜单项的标签复制到指定的缓冲区。  
   
 ```  
@@ -794,7 +789,7 @@ int GetMenuString(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
  返回`HMENU`包装此`CMenu`对象，或**NULL** `CMenu`指针。  
   
 ```  
@@ -804,7 +799,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::LoadMenu](#loadmenu)。  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
  检索`CMenu`的弹出菜单的对象。  
   
 ```  
@@ -821,7 +816,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::TrackPopupMenu](#trackpopupmenu)。  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
  在指定位置插入新菜单项`nPosition`菜单中向下移动其他项。  
   
 ```  
@@ -855,7 +850,7 @@ BOOL InsertMenu(
  指定新的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
   
  `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags`可以用于解释`lpszNewItem`通过以下方式：  
+ 指定新的菜单项的内容。 `nFlags` 可以用于解释`lpszNewItem`通过以下方式：  
   
 |nFlags|LpszNewItem 的解释|  
 |------------|-----------------------------------|  
@@ -881,7 +876,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
  在菜单中指定位置插入新菜单项。  
   
 ```  
@@ -904,7 +899,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>备注  
  此函数包装[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)、 Windows SDK 中所述。  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  从应用程序的可执行文件中加载的菜单资源，并将其附加到`CMenu`对象。  
   
 ```  
@@ -928,7 +923,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
  从内存中的菜单模板加载资源并将其附加到`CMenu`对象。  
   
 ```  
@@ -956,7 +951,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
  指定`HMENU`窗口菜单的句柄附加到`CMenu`对象。  
   
 ```  
@@ -966,7 +961,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::LoadMenu](#loadmenu)。  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
  创建一个带所有者绘制样式的菜单时由框架调用。  
   
 ```  
@@ -987,7 +982,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
  更改指定的位置处的现有菜单项`nPosition`。  
   
 ```  
@@ -1045,7 +1040,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
  使用此运算符将检索的句柄`CMenu`对象。  
   
 ```  
@@ -1058,7 +1053,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>备注  
  句柄可用于直接调用 Windows Api。  
   
-##  <a name="operator_neq"></a>CMenu::operator ！ =  
+##  <a name="operator_neq"></a>  CMenu::operator ！ =  
  确定两个菜单是否逻辑上不相等。  
   
 ```  
@@ -1072,7 +1067,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>备注  
  测试在左侧的菜单对象是否不等于右侧的菜单对象。  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator = =  
+##  <a name="operator_eq_eq"></a>  CMenu::operator = =  
  确定两个菜单是否逻辑上相等。  
   
 ```  
@@ -1086,7 +1081,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>备注  
  测试在左侧的菜单对象是否相等 (方面`HMENU`值) 到右侧上的菜单对象。  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
  从菜单中删除具有关联的弹出菜单的菜单项。  
   
 ```  
@@ -1118,7 +1113,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
  将指定菜单默认菜单项设置。  
   
 ```  
@@ -1143,7 +1138,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
  将使用上下文帮助 ID 相关联`CMenu`。  
   
 ```  
@@ -1163,7 +1158,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
  设置为菜单的信息。  
   
 ```  
@@ -1180,7 +1175,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>备注  
  调用此函数可设置有关菜单上的特定信息。  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
  将指定的位图与菜单项相关联。  
   
 ```  
@@ -1226,7 +1221,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
  更改菜单项有关的信息。  
   
 ```  
@@ -1249,7 +1244,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>备注  
  此函数包装[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)、 Windows SDK 中所述。  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  在指定位置显示浮动的弹出菜单，并在弹出菜单上跟踪选定的项。  
   
 ```  
@@ -1286,7 +1281,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
  在指定位置显示浮动的弹出菜单，并在弹出菜单上跟踪选定的项。  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "演练： 调试项目 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 演练： 调试项目 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>演练：调试项目 (C++)
 在本演练中，你将修改程序以修复在测试项目时发现的问题。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
      在**类视图**窗口中，展开**游戏**项目树并选择**Cardgame**类来显示类成员和方法。  
   
-     打开的快捷菜单**~Cardgame(void)**析构函数，然后选择**转到定义**。  
+     打开的快捷菜单 **~Cardgame(void)** 析构函数，然后选择**转到定义**。  
   
 2.  若要在 Cardgame 终止时减少 `totalParticipants`，请在 `Cardgame::~Cardgame` 析构函数的左大括号和右大括号之间键入以下代码。  
   
@@ -65,8 +60,8 @@ ms.lasthandoff: 12/21/2017
 7.  继续逐步执行程序直到其退出，或将其通过选择运行**调试**，**运行**在菜单栏上，或通过选择 F5 键。  
   
 ## <a name="next-steps"></a>后续步骤  
- **上一步：** [演练： 测试项目 （c + +）](../ide/walkthrough-testing-a-project-cpp.md) &#124;**下一步：**[演练： 部署程序 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)  
+ **上一步：** [演练： 测试项目 （c + +）](../ide/walkthrough-testing-a-project-cpp.md) &#124; **下一步：**[演练： 部署程序 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

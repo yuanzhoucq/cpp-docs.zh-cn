@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::Map 类 |Microsoft 文档"
-ms.custom: 
+title: Platform::Collections::Map 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -105,14 +100,14 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|描述|
-|[Map::MapChanged](#mapchanged-event.md) `event`|当映射更改时发生。|
+|名称|描述|
+|[Map:: mapchanged](#mapchanged-event.md) `event`|当映射更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `Map`
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 **标头：** collection.h
 
@@ -256,7 +251,7 @@ Map(
 *first*  
 用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。
 
-*last*  
+*最后一个*  
 用于初始化当前映射的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="mapchanged"></a>  Map:: mapchanged 事件

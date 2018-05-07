@@ -1,13 +1,10 @@
 ---
-title: "记录集： 参数化记录集 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 记录集： 参数化记录集 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>记录集：参数化记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何在运行时将参数信息传递到记录集对象](#_core_passing_parameter_values_at_run_time)。  
   
-##  <a name="_core_parameterized_recordsets"></a>参数化记录集  
+##  <a name="_core_parameterized_recordsets"></a> 参数化记录集  
  参数化记录集，可以通过在运行时的参数信息。 这样做有两个重要的影响：  
   
 -   它可能会导致更好的执行速度。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  当调用**打开**若要运行查询，记录集使用参数的信息来完成其**SQL SELECT**语句。 你可以参数化任何记录集。  
   
-##  <a name="_core_when_to_use_parameters"></a>何时使用参数  
+##  <a name="_core_when_to_use_parameters"></a> 何时使用参数  
  参数的典型用途包括：  
   
 -   将运行时自变量传递给预定义的查询。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  有关筛选器的详细信息，请参阅[记录集： 筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>参数化记录集类  
+##  <a name="_core_parameterizing_your_recordset_class"></a> 参数化记录集类  
   
 > [!NOTE]
 >  本部分适用于对象派生自`CRecordset`中哪些批量行提取尚未实现。 如果你使用的批量行提取，则实现参数是一个类似的过程。 有关详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
@@ -149,7 +144,7 @@ ms.lasthandoff: 12/21/2017
 
 >  要使用的最可能的字符串是所指定的字符串 （如果有） 的类的[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)数据成员，但某些 ODBC 驱动程序可能会允许其他 SQL 子句中的参数。  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>在运行时传递参数值  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> 在运行时传递参数值  
  必须指定参数值，然后才能调用**打开**（适用于新的记录集对象） 或**Requery** （对于一个现有）。  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>若要在运行时将参数值传递到记录集对象  

@@ -1,12 +1,9 @@
 ---
-title: "Ccommand:: Releasecommand |Microsoft 文档"
-ms.custom: 
+title: 'Ccommand:: Releasecommand |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CCommand.ReleaseCommand
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseCommand method
 ms.assetid: 3b58230c-13d5-45c5-b43e-bb013ecc3019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4fdfe9e901b81ee535522f42a54b91393df82af3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a12b3fc3d12e79e93bd77bf02b6f7bfa87dc0052
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandreleasecommand"></a>CCommand::ReleaseCommand
 释放参数访问器，然后释放命令本身。  
@@ -43,7 +38,7 @@ void CCommandBase::ReleaseCommand() throw();
 ## <a name="remarks"></a>备注  
  `ReleaseCommand` 结合使用**关闭**。 请参阅[关闭](../../data/oledb/ccommand-close.md)有关用法的详细信息。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

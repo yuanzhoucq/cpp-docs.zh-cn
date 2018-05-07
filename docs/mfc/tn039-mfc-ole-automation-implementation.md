@@ -1,13 +1,10 @@
 ---
-title: "TN039: MFC OLE 自动化实现 |Microsoft 文档"
-ms.custom: 
+title: 'TN039: MFC OLE 自动化实现 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE 自动化实现
 > [!NOTE]
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   从最多衍生的类 (0 相对) 的调度映射的距离  
   
- **DISPID**分为两个部分。 **LOWORD**的**DISPID**包含第一个组件，按自上而下的调度映射的距离。 **HIWORD**包含最多衍生的类之间的距离。 例如:  
+ **DISPID**分为两个部分。 **LOWORD**的**DISPID**包含第一个组件，按自上而下的调度映射的距离。 **HIWORD**包含最多衍生的类之间的距离。 例如：  
   
 ```  
 class CDispPoint : public CCmdTarget  
@@ -113,7 +108,7 @@ property Y    (DISPID)0x00010002
  给定的 Z 属性**DISPID**带零**HIWORD**由于它公开的属性，CDisp3DPoint 的类中定义。 由于在基类中定义的 X 和 Y 属性**HIWORD**的**DISPID**是 1，因为在其中定义这些属性的类是在从派生程度最高的类的一个派生的距离。  
   
 > [!NOTE]
->  **LOWORD**始终由的位置的映射中，即使存在具有显式映射中的条目**DISPID** (参阅下一步部分信息**_ID**版本的`DISP_PROPERTY`和`DISP_FUNCTION`宏)。  
+>  **LOWORD**始终由的位置的映射中，即使存在具有显式映射中的条目**DISPID** (参阅下一步部分信息 **_ID**版本的`DISP_PROPERTY`和`DISP_FUNCTION`宏)。  
   
 ## <a name="advanced-mfc-dispatch-map-features"></a>高级 MFC 调度映射功能  
  有大量 ClassWizard 不支持的其他功能对于此版本的 Visual c + +。 ClassWizard 支持`DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`用于定义应用程序的方法，成员变量属性和 get/set 成员函数属性，分别。 这些功能通常是创建大多数自动化服务器所需的所有。  
@@ -188,7 +183,7 @@ property Y    (DISPID)0x00010002
  空间的字符串分隔 VTS_ 每个参数。  
   
 ## <a name="remarks"></a>备注  
- 非常类似`DISP_PROPERTY_EX`宏，此宏定义与单独的 Get 和 Set 成员函数访问的属性。 此宏，但是，可以指定参数列表的属性。 这可用于以某种其他方式实现索引或参数化的属性。 参数将始终放置首先，跟属性的新值。 例如:  
+ 非常类似`DISP_PROPERTY_EX`宏，此宏定义与单独的 Get 和 Set 成员函数访问的属性。 此宏，但是，可以指定参数列表的属性。 这可用于以某种其他方式实现索引或参数化的属性。 参数将始终放置首先，跟属性的新值。 例如：  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  空间的字符串分隔 VTS_ 每个参数。  
   
 ## <a name="remarks"></a>备注  
- 这些宏可用于指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由紧后面指定的参数`pszName`参数。 请参阅 AFXDISP。有关这些宏的详细信息的 H。 **_ID**条目必须放置在调度映射的末尾。 其影响自动**DISPID**方式与非相同的生成**_ID**版本宏将 ( **DISPID**s 由位置)。 例如:  
+ 这些宏可用于指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由紧后面指定的参数`pszName`参数。 请参阅 AFXDISP。有关这些宏的详细信息的 H。 **_ID**条目必须放置在调度映射的末尾。 其影响自动**DISPID**方式与非相同的生成 **_ID**版本宏将 ( **DISPID**s 由位置)。 例如：  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

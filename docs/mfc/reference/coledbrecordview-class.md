@@ -1,12 +1,9 @@
 ---
-title: "COleDBRecordView 类 |Microsoft 文档"
-ms.custom: 
+title: COleDBRecordView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 类
 显示控件中数据库记录的视图。  
@@ -58,14 +53,14 @@ class COleDBRecordView : public CFormView
 |[COleDBRecordView::OnMove](#onmove)|当前记录 （如果更新），可以在更新数据源，然后移动到指定的记录 （下一步、 上一个、 第一个或最后一个）。|  
   
 ## <a name="remarks"></a>备注  
- 视图是直接连接到窗体视图`CRowset`对象。 该视图通过对话框模板资源创建和显示的字段`CRowset`对话框模板的控件中的对象。 `COleDBRecordView`对象使用对话框数据交换 (DDX) 和导航功能内置于`CRowset`，以自动进行的窗体上的控件和行集的字段之间的数据移动。 `COleDBRecordView`此外提供了一个默认实现来移动第一个下, 一步上, 一个或最后一个记录和用于更新当前上视图的记录的接口。  
+ 视图是直接连接到窗体视图`CRowset`对象。 该视图通过对话框模板资源创建和显示的字段`CRowset`对话框模板的控件中的对象。 `COleDBRecordView`对象使用对话框数据交换 (DDX) 和导航功能内置于`CRowset`，以自动进行的窗体上的控件和行集的字段之间的数据移动。 `COleDBRecordView` 此外提供了一个默认实现来移动第一个下, 一步上, 一个或最后一个记录和用于更新当前上视图的记录的接口。  
   
- 您可以使用与的 DDX 函数**COleDbRecordView**直接从数据库记录集获取数据并将其显示在对话框控件。 应使用**DDX_\*** 方法 (如`DDX_Text`)，而不**DDX_Field\*** 函数 (如`DDX_FieldText`) 与**COleDbRecordView**. `DDX_FieldText`不会使用**COleDbRecordView**因为`DDX_FieldText`采用类型的其他自变量**CRecordset\***  (有关`CRecordView`) 或**CDaoRecordset\***  (有关`CDaoRecordView`)。  
+ 您可以使用与的 DDX 函数**COleDbRecordView**直接从数据库记录集获取数据并将其显示在对话框控件。 应使用**DDX_\*** 方法 (如`DDX_Text`)，而不**DDX_Field\*** 函数 (如`DDX_FieldText`) 与**COleDbRecordView**. `DDX_FieldText` 不会使用**COleDbRecordView**因为`DDX_FieldText`采用类型的其他自变量**CRecordset\***  (有关`CRecordView`) 或**CDaoRecordset\*** (有关`CDaoRecordView`)。  
   
 > [!NOTE]
 >  如果你正在使用的数据访问对象 (DAO) 类，而不是 OLE DB 使用者模板类，可以使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。  
   
- `COleDBRecordView`将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面。 如果用户移到行集中的任意一端，记录视图禁用用户界面对象 — 如菜单项或工具栏按钮-移动进一步方向相同。  
+ `COleDBRecordView` 将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面。 如果用户移到行集中的任意一端，记录视图禁用用户界面对象 — 如菜单项或工具栏按钮-移动进一步方向相同。  
   
  有关行集类的详细信息，请参阅[使用 OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)文章。  
   
@@ -84,10 +79,10 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
  构造 `COleDBRecordView` 对象。  
   
 ```  
@@ -108,8 +103,8 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  在派生的类*必须*提供其自己的构造函数。 在构造函数中，调用构造函数中， `COleDBRecordView::COleDBRecordView`、 资源名称或 ID 为作为自变量。  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
- 返回的句柄**CRowset <>**与记录视图关联的对象。  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
+ 返回的句柄**CRowset <>** 与记录视图关联的对象。  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
@@ -130,7 +125,7 @@ virtual CRowset<>* OnGetRowset() = 0;
   
  有关详细信息和示例，请参阅文章[记录视图： 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
  移动到另一条记录中的行集和显示其字段的记录控件中查看。  
   
 ```  
@@ -141,13 +136,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  以下标准命令 ID 值之一：  
   
-- `ID_RECORD_FIRST`— 将移动到记录集的第一个记录。  
+- `ID_RECORD_FIRST` — 将移动到记录集的第一个记录。  
   
-- `ID_RECORD_LAST`— 将移动到最后一个记录的记录集。  
+- `ID_RECORD_LAST` — 将移动到最后一个记录的记录集。  
   
-- `ID_RECORD_NEXT`— 将移动到记录集的下一个记录。  
+- `ID_RECORD_NEXT` — 将移动到记录集的下一个记录。  
   
-- `ID_RECORD_PREV`— 将移动到上一记录的记录集。  
+- `ID_RECORD_PREV` — 将移动到上一记录的记录集。  
   
 ### <a name="return-value"></a>返回值  
  如果移动已成功; 则为非 0如果移动请求被拒绝则否则为 0。  

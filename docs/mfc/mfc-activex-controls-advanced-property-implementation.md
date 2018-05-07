@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 高级属性实现 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 高级属性实现 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac8b2cb1a9c8de43ecfbd2f4712d19750bb143a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
 本指南介绍了与实现高级的 ActiveX 控件中的属性相关的主题：  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [从属性返回错误代码](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a>只读和只写属性  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> 只读和只写属性  
  添加属性向导提供的快速而简单的方法来实现控件的只读或只写属性。  
   
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>若要实现只读或只写属性  
@@ -63,19 +58,19 @@ ms.lasthandoff: 12/21/2017
   
  如果你想要更改现有属性为只读或只写，你可以手动编辑调度映射，并从 control 类删除不必要的 Set 或 Get 函数。  
   
- 如果你想要为有条件地只读或只写 （例如，仅当在特定的模式下运行你的控件时） 的属性，你可以提供 Set 或 Get 函数的正常工作，并调用`SetNotSupported`或`GetNotSupported`函数在适当的位置。 例如:  
+ 如果你想要为有条件地只读或只写 （例如，仅当在特定的模式下运行你的控件时） 的属性，你可以提供 Set 或 Get 函数的正常工作，并调用`SetNotSupported`或`GetNotSupported`函数在适当的位置。 例如：  
   
  [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
  此代码示例调用`SetNotSupported`如果`m_bReadOnlyMode`数据成员是**TRUE**。 如果**FALSE**，则该属性设置为新值。  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a>从属性返回错误代码  
+##  <a name="_core_returning_error_codes_from_a_property"></a> 从属性返回错误代码  
  若要指示错误发生时尝试获取或设置一个属性，使用`COleControl::ThrowError`函数，其将`SCODE`（状态代码） 作为参数。 您可以使用预定义的 `SCODE`，也可以自己定义一个。 有关的列表预定义`SCODE`s 和用于定义自定义的说明`SCODE`s，请参阅[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
   
  最常见的预定义存在帮助器函数`SCODE`s，如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted)。  
   
 > [!NOTE]
->  `ThrowError`用于返回属性的 Get 或 Set 从错误的一种方法只可用作函数或自动化方法。 这是适当异常处理程序将出现在堆栈上的唯一时间。  
+>  `ThrowError` 用于返回属性的 Get 或 Set 从错误的一种方法只可用作函数或自动化方法。 这是适当异常处理程序将出现在堆栈上的唯一时间。  
   
  有关报告代码的其他区域中的异常的详细信息，请参阅[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)和节[ActiveX 控件中处理错误](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
   

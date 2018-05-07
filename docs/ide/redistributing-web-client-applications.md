@@ -1,13 +1,10 @@
 ---
-title: "重新分发 Web 客户端应用程序 |Microsoft 文档"
-ms.custom: 
+title: 重新分发 Web 客户端应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Internet applications [C++], redistributing
 - application deployment [C++], Web applications
 ms.assetid: fe05988b-dee8-4a46-b381-016b5103a6bf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e764e42cb558d2e13e0609cb139e9538a72d09ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-web-client-applications"></a>重新发布 Web 客户端应用程序
 如果你的应用程序将使用实现 WebBrowser 控件的 MFC 类 (例如，`CHtmlView`或`CHtmlEditView`)，Microsoft Internet Explorer 4.0 或更高版本必须至少按最小方式安装在目标计算机上。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Q185375，如何： 创建 Internet Explorer 的单个 EXE 安装 ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))  
   
- 你可以在 MSDN 库中或在查找知识库文章[http://support.microsoft.com](http://support.microsoft.com)。  
+ 你可以在 MSDN 库中或在查找知识库文章[ http://support.microsoft.com ](http://support.microsoft.com)。  
   
 ## <a name="see-also"></a>请参阅  
  [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

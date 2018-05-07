@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 编程概述 |Microsoft 文档"
-ms.custom: 
+title: OLE DB 编程概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 编程概述
 OLE DB 是一种高性能、 基于 COM 的数据库技术。 它提供访问数据而不考虑在其中存储表单的常用方法。 在典型的业务的情况下，有大量的信息存储在企业数据库外部。 索引顺序文件、 个人数据库 （如访问）、 （如 Excel) 的电子表格、 项目规划应用程序 （例如项目），和电子邮件 （如 Outlook)，将文件系统 （如 FAT 或 NTFS） 中找到此信息。 OLE DB，可在同样的方式访问任何类型的数据存储区，只要数据存储区具有的 OLE DB 提供程序。

@@ -1,13 +1,10 @@
 ---
-title: "MFC 中的 Windows 套接字 |Microsoft 文档"
-ms.custom: 
+title: MFC 中的 Windows 套接字 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC 中的 Windows 套接字
 > [!NOTE]
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
  有关 Windows 套接字，包括的套接字概念，说明信息请参阅[Windows 套接字： 背景](../mfc/windows-sockets-background.md)。  
   
-##  <a name="_core_sockets_programming_models"></a>套接字编程模型  
+##  <a name="_core_sockets_programming_models"></a> 套接字编程模型  
  以下类支持两个 MFC Windows 套接字编程模型：  
   
 -   `CAsyncSocket`  
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
  创建和使用`CSocket`和`CAsyncSocket`对象述[Windows 套接字： 使用存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)和[Windows 套接字： 使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)。  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows 套接字 Dll  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows 套接字 Dll  
  Microsoft Windows 操作系统提供的 Windows 套接字的动态链接库 (DLL)。 Visual c + + 提供了相应的标头文件、 库和 Windows 套接字规范。  
   
  Windows 套接字有关的详细信息，请参阅：  

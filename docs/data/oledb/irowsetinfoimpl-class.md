@@ -1,12 +1,9 @@
 ---
-title: "IRowsetInfoImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IRowsetInfoImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetInfoImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a451302920fa94d8bc1224df4c9ad432ed9dc896
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9b784dbb13ff39be21ccd353d514dd244d5ae41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
 提供的实现[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)接口。  
@@ -62,7 +57,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ## <a name="remarks"></a>备注  
  行集上的必需接口。 此类通过实现行集属性[属性集映射](../../data/oledb/begin-propset-map.md)命令类中定义。 若要使用命令类的属性集，将显示行集类，尽管命令或会话对象创建时其自己的副本运行时属性时，提供行集。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** altdb.h  
   
 ## <a name="see-also"></a>请参阅  

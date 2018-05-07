@@ -1,30 +1,25 @@
 ---
-title: "演练： 使用 MFC 创建功能区应用程序 |Microsoft 文档"
-ms.custom: 
+title: 演练： 使用 MFC 创建功能区应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad78b64f72b9ee9a896832e008039aa241e2ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 本演练演示如何使用**MFC 应用程序向导**创建默认情况下具有功能区的应用程序。 然后可以通过添加扩展功能区**自定义**具有的功能区类别**收藏夹**功能区面板中，并添加一些经常使用的命令到面板。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  使用**MFC 应用程序向导**创建具有功能区的 MFC 应用程序。 若要运行该向导中，在**文件**菜单上，指向**新建**，然后单击**项目**。  
   
-2.  在**新项目**对话框框中，展开**Visual c + +**节点下的**已安装的模板**，选择**MFC**，然后选择**MFC 应用程序**。 为项目键入名称，例如， `MFCRibbonApp`，然后单击**确定**。  
+2.  在**新项目**对话框框中，展开**Visual c + +** 节点下的**已安装的模板**，选择**MFC**，然后选择**MFC 应用程序**。 为项目键入名称，例如， `MFCRibbonApp`，然后单击**确定**。  
   
 3.  第一页上**MFC 应用程序向导**，单击**下一步**。  
   

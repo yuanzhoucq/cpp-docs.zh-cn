@@ -1,12 +1,9 @@
 ---
-title: "deque (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: deque (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <deque> header [STL/CLR]
 - <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11436466dadf4b06e604af6e2b5150a22c4ed241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 此模板类描述控制变长序列的元素具有随机访问的对象。 使用容器`deque`来管理，如下所示一块连续存储，但这可以增大或缩小在任何一端而无需复制剩余的所有元素的元素序列。 因此它的实现可以有效地`double-ended queue`。 (因此名称。)  
@@ -55,7 +50,7 @@ template<typename Value>
  GValue  
  受控序列中元素的泛型类型。  
   
- “值”  
+ 值  
  受控序列中的元素的类型。  
   
 ## <a name="members"></a>成员  
@@ -139,7 +134,7 @@ template<typename Value>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  

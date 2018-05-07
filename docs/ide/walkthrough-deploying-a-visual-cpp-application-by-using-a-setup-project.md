@@ -1,29 +1,24 @@
 ---
-title: "通过使用安装项目部署 Visual c + + 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 通过使用安装项目部署 Visual c + + 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe75f1fd3ceb037e44716156556882f3f6d1cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>演练：使用安装项目部署 Visual C++ 应用程序
 描述如何使用安装项目部署 Visual c + + 应用程序。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-deploy-an-application-by-using-a-setup-project"></a>通过使用安装项目部署应用程序  
   
-1.  使用**MFC ApplicationWizard**创建新的 Visual Studio 解决方案。 若要查找该向导，从**新项目**对话框框中，展开**Visual c + +**节点中，选择**MFC**，选择**MFC 应用程序**，输入为项目命名，再单击**确定**。  
+1.  使用**MFC ApplicationWizard**创建新的 Visual Studio 解决方案。 若要查找该向导，从**新项目**对话框框中，展开**Visual c + +** 节点中，选择**MFC**，选择**MFC 应用程序**，输入为项目命名，再单击**确定**。  
   
 2.  更改活动解决方案配置到**版本**。 从**生成**菜单上，选择**Configuration Manger**。 从**Configuration Manager**对话框中，选择**版本**从**活动解决方案配置**下拉框。  
   

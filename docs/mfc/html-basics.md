@@ -1,29 +1,24 @@
 ---
-title: "HTML 基础知识 |Microsoft 文档"
-ms.custom: 
+title: HTML 基础知识 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="html-basics"></a>HTML 基础
 大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 当您查看源时，将看到大量两侧是尖括号 (<>)、穿插文本的 HTML（超文本标记语言）标记。  

@@ -1,13 +1,10 @@
 ---
-title: "TN045： 针对长型 Varchar Varbinary 的 MFC 数据库支持 |Microsoft 文档"
-ms.custom: 
+title: TN045： 针对长型 Varchar Varbinary 的 MFC 数据库支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd5201661afcdf6f4ae9676323f3f644817bcf7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：针对长型 Varchar/Varbinary 的 MFC/数据库支持
 > [!NOTE]
@@ -76,7 +71,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
  如果检索到的长整型数据列`CString`或`CByteArray`，最多可以返回的数据量，默认情况下是 255 个字节。 除此之外的任何内容将被忽略。 在这种情况下，框架将引发异常**AFX_SQL_ERROR_DATA_TRUNCATED**。 幸运的是，你可以显式增加到更高值 nMaxLength 达**MAXINT**。  
   
 > [!NOTE]
->  MFC 使用 nMaxLength 的值来设置的本地缓冲区**SQLBindColumn**函数。 这是存储的数据的本地缓冲区，并不实际影响 ODBC 驱动程序返回的数据量。 `RFX_Text`和`RFX_Binary`只进行了上面某调用使用**SQLFetch**从后端数据库检索数据。 每个 ODBC 驱动程序可以读取一次返回的数据量上具有的不同限制。 此限制可能会比在设置 nMaxLength，在这种情况下该异常的值小得多**AFX_SQL_ERROR_DATA_TRUNCATED**将引发。 在这些情况下，切换到使用`RFX_LongBinary`而不是`RFX_Text`或`RFX_Binary`，以便可以检索所有数据。  
+>  MFC 使用 nMaxLength 的值来设置的本地缓冲区**SQLBindColumn**函数。 这是存储的数据的本地缓冲区，并不实际影响 ODBC 驱动程序返回的数据量。 `RFX_Text` 和`RFX_Binary`只进行了上面某调用使用**SQLFetch**从后端数据库检索数据。 每个 ODBC 驱动程序可以读取一次返回的数据量上具有的不同限制。 此限制可能会比在设置 nMaxLength，在这种情况下该异常的值小得多**AFX_SQL_ERROR_DATA_TRUNCATED**将引发。 在这些情况下，切换到使用`RFX_LongBinary`而不是`RFX_Text`或`RFX_Binary`，以便可以检索所有数据。  
   
  将绑定 ClassWizard **SQL_LONGVARCHAR**到`CString`，或**SQL_LONGVARBINARY**到`CByteArray`为你。 如果你想要分配到检索的长整型数据列超过 255 个字节，然后可以只提供 nMaxLength 显式值。  
   
@@ -99,7 +94,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
   
  将绑定 ClassWizard **SQL_LONGVARCHAR**或**SQL_LONGVARBINARY**到`CLongBinary`为你。 选择`CLongBinary`作为添加成员变量对话框中的变量类型。 然后，ClassWizard 将添加`RFX_LongBinary`调用你`DoFieldExchange`调用和递增绑定字段的总数。  
   
- 若要更新长数据列的值，首先请确保已分配`HGLOBAL`足够大，能够容纳新数据，通过调用**:: GlobalSize**上`m_hData`的成员`CLongBinary`。 如果太小，释放`HGLOBAL`并分配一个适当的大小。 然后设置`m_dwDataLength`以反映新的大小。  
+ 若要更新长数据列的值，首先请确保已分配`HGLOBAL`足够大，能够容纳新数据，通过调用 **:: GlobalSize**上`m_hData`的成员`CLongBinary`。 如果太小，释放`HGLOBAL`并分配一个适当的大小。 然后设置`m_dwDataLength`以反映新的大小。  
   
  否则为如果`m_dwDataLength`大于大小的要替换的数据，你可以释放和重新分配`HGLOBAL`，或将其分配保留。 请确保以指示中实际使用的字节数`m_dwDataLength`。  
   

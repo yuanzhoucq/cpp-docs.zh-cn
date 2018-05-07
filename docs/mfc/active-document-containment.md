@@ -1,13 +1,10 @@
 ---
-title: "活动文档包容 |Microsoft 文档"
-ms.custom: 
+title: 活动文档包容 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>活动文档包容
 活动文档包容是一种技术，它提供用于处理的文档，而不是强制你创建和使用每个文档类型的多个应用程序帧中的单个帧。 它不同于基本 OLE 技术，因为 OLE 配合复合文档仅一段单独的内容可在其中活动内的嵌入对象的不同而不同。 使用活动文档包容的单个帧的上下文中激活整个文档 （即，整个应用程序，包括关联的菜单、 工具栏和等等）。  

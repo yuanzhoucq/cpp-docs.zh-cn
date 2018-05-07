@@ -1,13 +1,10 @@
 ---
-title: "了解 Visual c + + 应用程序的依赖关系 |Microsoft 文档"
-ms.custom: 
+title: 了解 Visual c + + 应用程序的依赖关系 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>了解 Visual C++ 应用程序的依赖项
 若要确定取决于应用程序的 Visual c + + 库，你可以查看项目属性。 (在解决方案资源管理器，右键单击该项目并选择**属性**以打开**属性页**对话框。)你还可以使用 Dependency Walker (depends.exe)，以更全面地了解依赖项。  
   
- 在**属性页**对话框中，你可以检查下的各个页面**配置属性**要了解依赖项。 例如，如果你的项目使用 MFC 库并且你选择**MFC 的使用**，**在共享的 DLL 中使用 MFC**上**配置属性**，**常规**页上，应用程序在运行时依赖于 MFC Dll 如 mfc\<版本 >.dll。 如果你的应用程序不使用 MFC，它可能依赖于 CRT 库如果你选择**运行时库**值**多线程调试 DLL (/ MDd)**或**多线程 DLL (/ MD)**上**配置属性**， **C/c + +**，**代码生成**页。  
+ 在**属性页**对话框中，你可以检查下的各个页面**配置属性**要了解依赖项。 例如，如果你的项目使用 MFC 库并且你选择**MFC 的使用**，**在共享的 DLL 中使用 MFC**上**配置属性**，**常规**页上，应用程序在运行时依赖于 MFC Dll 如 mfc\<版本 >.dll。 如果你的应用程序不使用 MFC，它可能依赖于 CRT 库如果你选择**运行时库**值**多线程调试 DLL (/ MDd)** 或**多线程 DLL (/ MD)** 上**配置属性**， **C/c + +**，**代码生成**页。  
   
  确定应用程序依赖哪些 DLL 的更全面的方式是：使用 Dependency Walker (depends.exe) 打开该应用程序。 你可以下载中的工具[Dependency Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640) web 站点。  
   

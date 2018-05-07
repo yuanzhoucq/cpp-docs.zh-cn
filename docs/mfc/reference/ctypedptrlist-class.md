@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrList 类 |Microsoft 文档"
-ms.custom: 
+title: CTypedPtrList 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 类
 为 `CPtrList`类的对象提供安全类型“包装器”。  
@@ -108,10 +103,10 @@ class CTypedPtrList : public BASE_CLASS
   
  `CTypedPtrList`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  此成员函数将调用`BASE_CLASS` **:: AddHead**。  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>备注  
  第一个版本中添加新元素列表的开头之前。 第二个版本将添加前头元素的另一个的列表。  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  此成员函数将调用`BASE_CLASS` **:: AddTail**。  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>备注  
  第一个版本之后列表末尾添加一个新的元素。 第二个版本将元素的另一个列表添加列表的结尾之后。  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  类型的变量的**位置**至关重要的列表。  
   
 ```  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  如果直接或通过指针访问列表`CTypedPtrList`，然后`GetAt`返回对指定模板参数的类型的指针的引用*类型*。 这允许要在赋值语句的任何一侧上使用的函数，从而允许对要修改的列表项。  
   
 ### <a name="remarks"></a>备注  
- 它并不相同索引，并且无法对**位置**值自己。 `GetAt`检索`CObject`给定位置与关联的指针。  
+ 它并不相同索引，并且无法对**位置**值自己。 `GetAt` 检索`CObject`给定位置与关联的指针。  
   
  你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   
  此内联函数调用`BASE_CLASS` **:: GetAt**。  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  获取表示此列表的头元素的指针。  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>备注  
  你必须确保该列表不是空之前调用`GetHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表包含的元素。  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  获取标识的列表元素`rPosition`，然后设置`rPosition`到**位置**的列表中的下一步条目的值。  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  可迭代过程中删除元素。 请参阅示例[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)。  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  获取标识的列表元素`rPosition`，然后设置`rPosition`到**位置**列表中的上一项的值。  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  如果检索的元素的是在列表中，第一个然后的新值`rPosition`设置为**NULL**。  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  获取表示此列表的头元素的指针。  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>备注  
  你必须确保该列表不是空之前调用`GetTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表包含的元素。  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  从列表头与列表中移除的元素，并将其返回。  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>备注  
  你必须确保该列表不是空之前调用`RemoveHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表包含的元素。  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  从列表的结尾移除的元素，并将其返回。  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>备注  
  你必须确保该列表不是空之前调用`RemoveTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表包含的元素。  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  此成员函数将调用`BASE_CLASS` **:: SetAt**。  
   
 ```  
@@ -340,7 +335,7 @@ void SetAt(POSITION pos, TYPE newElement);
  要写入到列表的对象指针。  
   
 ### <a name="remarks"></a>备注  
- 类型的变量的**位置**至关重要的列表。 它并不相同索引，并且无法对**位置**值自己。 `SetAt`将写入列表中的指定位置的对象指针。  
+ 类型的变量的**位置**至关重要的列表。 它并不相同索引，并且无法对**位置**值自己。 `SetAt` 将写入列表中的指定位置的对象指针。  
   
  你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   

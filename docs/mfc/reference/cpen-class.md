@@ -1,12 +1,9 @@
 ---
-title: "CPen 类 |Microsoft 文档"
-ms.custom: 
+title: CPen 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>CPen 类
 封装一个 Windows 图形设备接口 (GDI) 笔。  
@@ -82,10 +77,10 @@ class CPen : public CGdiObject
   
  `CPen`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  构造 `CPen` 对象。  
   
 ```  
@@ -124,7 +119,7 @@ CPen(
   
 - **PS_INSIDEFRAME**创建钢笔绘制由指定边界的矩形的 Windows GDI 输出函数的闭合形状的框架内的行 (例如，**椭圆**，**矩形**， `RoundRect`， `Pie`，和`Chord`成员函数)。 此样式用于 Windows GDI 输出函数，没有指定边界的矩形 (例如，`LineTo`成员函数)，钢笔的绘图区域时不受限制的帧。  
   
- 第二个版本`CPen`构造函数指定的类型、 样式、 端帽和联接属性的组合。 应使用按位 OR 运算符 (&#124;) 组合中每个类别的值。 钢笔类型可以是下列值之一：  
+ 第二个版本`CPen`构造函数指定的类型、 样式、 端帽和联接属性的组合。 应使用按位 OR 运算符组合中每个类别的值 (&#124;)。 钢笔类型可以是下列值之一：  
   
 - **PS_GEOMETRIC**创建几何钢笔。  
   
@@ -179,7 +174,7 @@ CPen(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  创建具有指定的样式、 宽度和画笔属性的逻辑的外观或几何钢笔和将其附加到`CPen`对象。  
   
 ```  
@@ -243,7 +238,7 @@ BOOL CreatePen(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  初始化具有样式、 宽度和颜色中指向的结构提供钢笔`lpLogPen`。  
   
 ```  
@@ -265,7 +260,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  返回一个指向`CPen`提供 Windows GDI pen 对象的句柄的对象。  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>参数  
  *hPen*  
- `HPEN`Windows GDI 钢笔的句柄。  
+ `HPEN` Windows GDI 钢笔的句柄。  
   
 ### <a name="return-value"></a>返回值  
  指向的指针`CPen`对象成功; 否则为如果**NULL**。  
@@ -285,7 +280,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  获取**EXTLOGPEN**基础结构。  
   
 ```  
@@ -317,7 +312,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  获取`LOGPEN`基础结构。  
   
 ```  
@@ -347,7 +342,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
  获取附加的 Windows GDI 句柄的`CPen`对象。  
   
 ```  

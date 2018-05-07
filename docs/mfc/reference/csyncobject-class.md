@@ -1,12 +1,9 @@
 ---
-title: "CSyncObject 类 |Microsoft 文档"
-ms.custom: 
+title: CSyncObject 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSyncObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csyncobject-class"></a>CSyncObject 类
 一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。  
@@ -81,10 +76,10 @@ class CSyncObject : public CObject
   
  `CSyncObject`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
  构造具有提供的名称的同步对象。  
   
 ```  
@@ -96,7 +91,7 @@ virtual ~CSyncObject();
  `pstrName`  
  对象的名称。 如果**NULL**， *pstrName*将为 null。  
   
-##  <a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>  CSyncObject::Lock  
  调用此函数可获取对由同步对象控制资源访问权限。  
   
 ```  
@@ -113,14 +108,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>备注  
  如果同步对象发出信号，`Lock`将成功返回，并在线程现在拥有对象。 如果同步对象是非终止状态 （不可用），`Lock`将等待同步对象中指定的毫秒数最变为终止状态*dwTimeOut*参数。 如果同步对象未不会变得收到信号的状态的时间，指定的量`Lock`返回失败。  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  基础的同步对象句柄。  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator 句柄  
+##  <a name="operator_handle"></a>  CSyncObject::operator 句柄  
  使用此运算符来获取的句柄`CSyncObject`对象。  
   
 ```  
@@ -133,7 +128,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>备注  
  句柄可用于直接调用 Windows Api。  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
  声明`Unlock`不带任何参数纯虚拟函数，并且必须由所有派生自的类中重写`CSyncObject`。  
   
 ```  

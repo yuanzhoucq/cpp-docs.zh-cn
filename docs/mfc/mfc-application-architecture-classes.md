@@ -1,13 +1,10 @@
 ---
-title: "MFC 应用程序体系结构类 |Microsoft 文档"
-ms.custom: 
+title: MFC 应用程序体系结构类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623775d6c3306ba4afdb01eb78ea70b05f7a3365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1174a994f345f4b7733e82603b5a49ed8977651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC 应用程序体系结构类
 此类别的类构成框架应用程序的体系结构。 它们提供大部分应用程序常见的功能。 填充框架以添加应用程序特定功能。 通常，您通过从体系结构类派生新的类，然后添加新成员或重写现有成员函数来实现。  

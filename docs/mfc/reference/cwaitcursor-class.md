@@ -1,12 +1,9 @@
 ---
-title: "CWaitCursor 类 |Microsoft 文档"
-ms.custom: 
+title: CWaitCursor 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 类
 在单行中显示等待光标，在你执行较长操作时，此光标通常显示为一个沙漏。  
@@ -55,7 +50,7 @@ class CWaitCursor
 |[CWaitCursor::Restore](#restore)|已更改后，请还原等待光标。|  
   
 ## <a name="remarks"></a>备注  
- `CWaitCursor`没有基类。  
+ `CWaitCursor` 没有基类。  
   
  良好 Windows 的编程方案需要显示等待光标，每当您正在执行一个操作采用花费大量的时间。  
   
@@ -76,13 +71,13 @@ class CWaitCursor
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CWaitCursor`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
  若要显示等待光标，只需声明`CWaitCursor`之前执行时间较长的操作的代码的对象。  
   
 ```  
@@ -102,7 +97,7 @@ CWaitCursor();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>  CWaitCursor::Restore  
  若要还原等待光标，请执行了操作，例如显示消息框或对话框中，可以将等待光标更改为另一个游标后调用此函数。  
   
 ```  

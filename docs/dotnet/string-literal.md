@@ -2,35 +2,30 @@
 title: 字符串文本 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - string literals
 - strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ac847f67421802fe4d31f2d66b34128e4b24794
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-literal"></a>字符串
 字符串文本处理已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 在 c + + 语言设计托管扩展中，托管的字符串文本已由对字符串添加前缀与指示`S`。 例如:  
+ 在 c + + 语言设计托管扩展中，托管的字符串文本已由对字符串添加前缀与指示`S`。 例如：  
   
 ```  
 String *ps1 = "hello";  
@@ -55,13 +50,13 @@ stloc.0
   
  这与可用于只需记住 （或学习） 是文字字符串的前缀显著节省`S`。 在新语法中，字符串文本的处理进行透明的由使用的上下文。 `S`不再需要指定。  
   
- 情况下在其中我们需要显式直接与一个解释或另一个编译器？ 在这些情况下，我们将应用的显式转换。 例如:  
+ 情况下在其中我们需要显式直接与一个解释或另一个编译器？ 在这些情况下，我们将应用的显式转换。 例如：  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- 此外，字符串文本现在匹配`String`使用简单的转换，而不是标准转换。 虽然这不可能看起来像得多更改的重载的函数集包括分辨率`String`和`const char*`作为竞争的正式参数。 一次解析为的分辨率`const char*`实例现在已标记为不明确。 例如:  
+ 此外，字符串文本现在匹配`String`使用简单的转换，而不是标准转换。 虽然这不可能看起来像得多更改的重载的函数集包括分辨率`String`和`const char*`作为竞争的正式参数。 一次解析为的分辨率`const char*`实例现在已标记为不明确。 例如：  
   
 ```  
 ref struct R {  

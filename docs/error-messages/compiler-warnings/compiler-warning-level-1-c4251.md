@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 1） C4251 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 1） C4251 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4251
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b220913d97755547a9cb35fe326f9fb9a06e40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 366d66a38685e75e47d8921f9ebd525b334ced7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4251"></a>编译器警告（等级 1）C4251
 identifier： 类 type 需要具有 dll 的接口用于类 type2 的客户端  
@@ -42,7 +37,7 @@ identifier： 类 type 需要具有 dll 的接口用于类 type2 的客户端
   
  你可以避免通过定义一个 DLL，它定义具有虚函数的类和函数您可以调用来实例化并删除对象类型的导出类。  然后，可以只需调用虚函数的类型。  
   
- 导出模板的详细信息，请参阅[从中查看EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
+ 导出模板的详细信息，请参阅[ http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
   
  如果你从 c + + 标准库，编译调试版本中的类型派生，则可以忽略 C4251 (**/MTd**) 和编译器错误消息，其中表示 _Container_base。  
   

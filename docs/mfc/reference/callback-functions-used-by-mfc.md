@@ -2,12 +2,9 @@
 title: MFC 使用的回调函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,31 +15,29 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有回调函数必须都捕获返回到 Windows，因为不能跨回调边界引发异常之前的 MFC 异常。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
 
-|name||  
+|名称||  
 |----------|-----------------|  
 |[CDC::EnumObjects 的回调函数](#enum_objects)||  
 |[CDC::GrayString 的回调函数](#graystring)||
 |[Callback Function for CDC::SetAbortProc](#setabortproc)|| 
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h 
 
-## <a name="enum_objects"></a>Cdc:: enumobjects 的回调函数
+## <a name="enum_objects"></a> Cdc:: enumobjects 的回调函数
 *ObjectFunc*名称是应用程序提供的函数名称的占位符。  
   
 ### <a name="syntax"></a>语法  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>备注  
  必须导出实际名称。  
   
-## <a name="graystring"></a>Cdc:: graystring 的回调函数
+## <a name="graystring"></a>  Cdc:: graystring 的回调函数
 *OutputFunc*是应用程序提供的回调函数名称的占位符。  
   
 ### <a name="syntax"></a>语法  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>备注  
  回调函数 (*OutputFunc*) 必须绘制图像相对于坐标 (0，0) 而非 (*x*， *y*)。  
 
-## <a name="setabortproc"></a>Cdc:: setabortproc 的回调函数
+## <a name="setabortproc"></a>  Cdc:: setabortproc 的回调函数
 名称*AbortFunc*是应用程序提供的函数名称的占位符。  
   
 ### <a name="syntax"></a>语法  

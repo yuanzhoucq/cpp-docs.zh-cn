@@ -1,12 +1,9 @@
 ---
-title: "CMapStringToString 类 |Microsoft 文档"
-ms.custom: 
+title: CMapStringToString 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 类
 支持 `CString` 对象键控的 `CString` 对象的映射。  
@@ -83,7 +78,7 @@ class CMapStringToString : public CObject
   
 ### <a name="public-structures"></a>公共结构  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMapStringToString::CPair](#cpair)|一个包含密钥值和关联的字符串对象的值的嵌套的结构。|  
   
@@ -118,10 +113,10 @@ class CMapStringToString : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
   
 ## <a name="remarks"></a>备注  
- `CMapStringToString` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档中，使用重载插入反过来序列的每个元素 (  **<<** ) 运算符或`Serialize`成员函数。  
+ `CMapStringToString` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档中，使用重载插入反过来序列的每个元素 ( **<<**) 运算符或`Serialize`成员函数。  
   
  如果你需要个人的转储`CString` -  `CString`元素，必须将转储上下文的深度设置为 1 或更高版本。  
   
@@ -134,10 +129,10 @@ class CMapStringToString : public CObject
   
  `CMapStringToString`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
-##  <a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>  CMapStringToString::CPair  
  包含一个密钥值和关联的字符串对象的值。  
   
 ### <a name="remarks"></a>备注  
@@ -154,7 +149,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>示例  
   有关用法的一个示例，请参阅示例[CMapStringToString::PLookup](#plookup)。  
   
-##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc  
  返回 map 对象的第一个条目。  
   
 ```  
@@ -172,7 +167,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
  检索指向的地图元素`pAssocRec`。  
   
 ```  
@@ -194,7 +189,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>示例  
   请参阅示例[CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)。  
   
-##  <a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>  CMapStringToString::PLookup  
  查找映射到给定键的值。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Cmanualaccessor:: Addbindentry |Microsoft 文档"
-ms.custom: 
+title: 'Cmanualaccessor:: Addbindentry |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e99e9822b60152fc8daa6f101bcca2ea7e60c25
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 59793bd61b17fe2ead4948932efa1b583da8e1a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmanualaccessoraddbindentry"></a>CManualAccessor::AddBindEntry
 将绑定条目添加到输出列。  
@@ -69,7 +64,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 ## <a name="remarks"></a>备注  
  若要使用此功能，必须先调用[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 无法添加更多项中指定的列数比`CreateAccessor`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "在 c + + 中的封送处理概述 |Microsoft 文档"
-ms.custom: 
+title: 在 c + + 中的封送处理概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中的封送处理概述
-在混合模式下，你有时必须封你本机和托管类型之间的数据。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]引入的封送处理库来帮助你封送，并将数据转换的简单方式。  
+在混合模式下，你有时必须封你本机和托管类型之间的数据。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 引入的封送处理库来帮助你封送，并将数据转换的简单方式。  
   
  你可以使用或不使用封送处理库[marshal_context 类](../dotnet/marshal-context-class.md)。 某些转换需要上下文。 可以使用实现其他转换[marshal_as](../dotnet/marshal-as.md)函数。 下表列出当前支持的转换、 是否需要非上下文，和封送文件必须包括：  
   

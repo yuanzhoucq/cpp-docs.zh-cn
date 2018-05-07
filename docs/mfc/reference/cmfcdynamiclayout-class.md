@@ -1,12 +1,9 @@
 ---
-title: "CMFCDynamicLayout 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCDynamicLayout 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDynamicLayout
@@ -24,17 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6604ada6dc4d322011a835c03731f6a48be472f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 类
 指定窗口中的控件如何随着用户重设窗口大小而移动和重设大小。  
@@ -79,7 +74,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>嵌套类型  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[Cmfcdynamiclayout:: Movesettings 结构](#movesettings_structure)|封装动态布局中控件的移动数据。|  
 |[Cmfcdynamiclayout:: Sizesettings 结构](#sizesettings_structure)|封装动态布局中控件的大小更改数据。|  
@@ -91,10 +86,10 @@ class CMFCDynamicLayout : public CObject
   
  [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxlayout.h  
   
-##  <a name="additem"></a>Cmfcdynamiclayout:: Additem  
+##  <a name="additem"></a>  Cmfcdynamiclayout:: Additem  
  将子窗口（通常是控件）添加到由动态布局管理器控制的窗口的列表。  
   
 ```  
@@ -127,7 +122,7 @@ BOOL AddItem(
 ### <a name="remarks"></a>备注  
  调整承载窗口的大小时，子控件的位置和大小会动态更改。  
   
-##  <a name="adjust"></a>Cmfcdynamiclayout:: Adjust  
+##  <a name="adjust"></a>  Cmfcdynamiclayout:: Adjust  
  将子窗口（通常是控件）添加到由动态布局管理器控制的窗口的列表。  
   
 ```  
@@ -137,7 +132,7 @@ void Adjust();
 ### <a name="remarks"></a>备注  
  调整承载窗口的大小时，子控件的位置和大小会动态更改。  
   
-##  <a name="create"></a>CMFCDynamicLayout::Create  
+##  <a name="create"></a>  CMFCDynamicLayout::Create  
  存储并验证主机窗口。  
   
 ```  
@@ -153,7 +148,7 @@ BOOL Create(CWnd* pHostWnd);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
+##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd  
  返回指向主机窗口的指针。  
   
 ```  
@@ -166,7 +161,7 @@ CWnd* GetHostWnd();
 ### <a name="remarks"></a>备注  
  默认情况下，参照此窗口重新计算所有子控件的位置。  
   
-##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
+##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize  
  返回窗口大小，低于此大小则不调整布局。  
   
 ```  
@@ -179,7 +174,7 @@ CSize GetMinSize();
 ### <a name="remarks"></a>备注  
  调整承载窗口的大小时，子控件的位置和大小会动态更改，但存在一个最低大小，低于此大小则不调整布局。 用户可将窗口大小调整为较小，但届时窗口的某些部分将隐藏。  
   
-##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
+##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect  
  检索窗口的当前工作区的矩形。  
   
 ```  
@@ -192,7 +187,7 @@ void GetHostWndRect(CRect& rect,);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="hasitem"></a>Cmfcdynamiclayout:: Hasitem  
+##  <a name="hasitem"></a>  Cmfcdynamiclayout:: Hasitem  
  检查子控件是否已添加到动态布局。  
   
 ```  
@@ -208,7 +203,7 @@ BOOL HasItem(HWND hwnd);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isempty"></a>Cmfcdynamiclayout:: Isempty  
+##  <a name="isempty"></a>  Cmfcdynamiclayout:: Isempty  
  检查动态布局是否未添加任何子窗口。  
   
 ```  
@@ -220,7 +215,7 @@ BOOL IsEmpty();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
+##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource  
  从 AFX_DIALOG_LAYOUT 资源读取动态布局，然后将该布局应用到主机窗口。  
   
 ```  
@@ -244,7 +239,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="movehorizontal"></a>Cmfcdynamiclayout:: Movehorizontal  
+##  <a name="movehorizontal"></a>  Cmfcdynamiclayout:: Movehorizontal  
  获取[MoveSettings](#movesettings_structure)值，该值定义当用户调整其承载窗口大小时水平移动多少子控件。  
   
 ```  
@@ -260,7 +255,7 @@ static MoveSettings MoveHorizontal(int nRatio);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="movehorizontalandvertical"></a>Cmfcdynamiclayout:: Movehorizontalandvertical  
+##  <a name="movehorizontalandvertical"></a>  Cmfcdynamiclayout:: Movehorizontalandvertical  
  获取[MoveSettings](#movesettings_structure)值，该值定义当用户调整其承载窗口大小时水平移动多少子控件。  
   
 ```  
@@ -279,7 +274,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="movenone"></a>Cmfcdynamiclayout:: Movenone  
+##  <a name="movenone"></a>  Cmfcdynamiclayout:: Movenone  
  获取[MoveSettings](#movesettings_structure)表示不移动，垂直或水平，子控件的值。  
   
 ```  
@@ -291,7 +286,7 @@ static MoveSettings MoveNone();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="movesettings_structure"></a>Cmfcdynamiclayout:: Movesettings 结构  
+##  <a name="movesettings_structure"></a>  Cmfcdynamiclayout:: Movesettings 结构  
  封装动态布局中控件的移动数据。  
   
 ```  
@@ -332,7 +327,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>返回值  
  如果 `MoveSettings` 对象指定非零的垂直移动，则为 true。  
 
-##  <a name="movevertical"></a>Cmfcdynamiclayout:: Movevertical  
+##  <a name="movevertical"></a>  Cmfcdynamiclayout:: Movevertical  
  获取[MoveSettings](#movesettings_structure)值，该值定义当用户调整其承载窗口大小时垂直移动多少子控件。  
   
 ```  
@@ -348,7 +343,7 @@ static MoveSettings MoveVertical(int nRatio);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
+##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize  
  设置窗口大小，低于此大小则不调整布局。  
   
 ```  
@@ -362,7 +357,7 @@ void SetMinSize(const CSize& size);
 ### <a name="remarks"></a>备注  
  调整承载窗口的大小时，子控件的位置和大小会动态更改，但存在一个最低大小，低于此大小则不调整布局。 用户可将窗口大小调整为较小，但届时窗口的某些部分将隐藏。  
   
-##  <a name="sizehorizontal"></a>Cmfcdynamiclayout:: Sizehorizontal  
+##  <a name="sizehorizontal"></a>  Cmfcdynamiclayout:: Sizehorizontal  
  获取[SizeSettings](#sizesettings_structure)值，该值定义当用户调整其承载窗口大小时水平调整多少子控件。  
   
 ```  
@@ -378,7 +373,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="sizehorizontalandvertical"></a>Cmfcdynamiclayout:: Sizehorizontalandvertical  
+##  <a name="sizehorizontalandvertical"></a>  Cmfcdynamiclayout:: Sizehorizontalandvertical  
  获取[SizeSettings](#sizesettings_structure)值，该值定义当用户调整其承载窗口大小时水平调整多少子控件。  
   
 ```  
@@ -397,7 +392,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="sizenone"></a>Cmfcdynamiclayout:: Sizenone  
+##  <a name="sizenone"></a>  Cmfcdynamiclayout:: Sizenone  
  获取[SizeSettings](#sizesettings_structure)值，该值表示子控件的大小不会更改。  
   
 ```  
@@ -409,7 +404,7 @@ static SizeSettings SizeNone();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="sizesettings_structure"></a>Cmfcdynamiclayout:: Sizesettings 结构  
+##  <a name="sizesettings_structure"></a>  Cmfcdynamiclayout:: Sizesettings 结构  
  封装动态布局中控件的大小更改数据。  
   
 ```  
@@ -449,7 +444,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>返回值  
  如果 `SizeSettings` 对象指定非零的垂直大小调整，则为 TRUE。  
 
-##  <a name="sizevertical"></a>Cmfcdynamiclayout:: Sizevertical  
+##  <a name="sizevertical"></a>  Cmfcdynamiclayout:: Sizevertical  
  获取[SizeSettings](#sizesettings_structure)值，该值定义当用户调整其承载窗口大小时垂直调整多少子控件。  
   
 ```  

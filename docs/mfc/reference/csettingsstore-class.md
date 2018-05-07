@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStore 类 |Microsoft 文档"
-ms.custom: 
+title: CSettingsStore 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包装 Windows API 函数，提供用于访问注册表的面向对象的接口。  
@@ -85,10 +80,10 @@ class CSettingsStore : public CObject
   
  `CSettingsStore`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  关闭打开注册表项。  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>备注  
  默认情况下，此方法调用的析构函数从[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  打开注册表项或创建它，如果不存在。  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  如果成功，则为 0否则为一个非零值。  
   
 ### <a name="remarks"></a>备注  
- `CreateKey`使用`m_hKey`注册表查询 root。 它搜索`pszPath`作为项的子项`m_hKey`。 如果不存在该键，`CreateKey`创建它。 否则，它将打开此项。 `CreateKey`然后设置`m_hKey`创建或打开注册表项。  
+ `CreateKey` 使用`m_hKey`注册表查询 root。 它搜索`pszPath`作为项的子项`m_hKey`。 如果不存在该键，`CreateKey`创建它。 否则，它将打开此项。 `CreateKey` 然后设置`m_hKey`创建或打开注册表项。  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  创建一个 `CSettngsStore` 对象。  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  析构函数`CSettingsStore`释放`m_hKey`自动。  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  从注册表中删除密钥及其所有子级。  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  如果参数`bAdmin`为零，`DeleteKey`搜索的密钥，若要删除下`HKEY_CURRENT_USER`。 如果`bAdmin`不为零，`DeleteKey`搜索的密钥，若要删除下`HKEY_LOCAL_MACHINE`。  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  删除从值`m_hKey`。  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  打开注册表项。  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>备注  
  此方法成功打开指定的键后，它将设置`m_hKey`到该项的句柄。  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  从注册表中读取值。  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `Read`检查`pszKey`作为项的子项`m_hKey`。  
+ `Read` 检查`pszKey`作为项的子项`m_hKey`。  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  将值写入注册表项下打开。  
   
 ```  

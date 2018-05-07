@@ -2,11 +2,8 @@
 title: CMFCLinkCtrl 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 类
 `CMFCLinkCtrl`类按钮显示为超链接并单击该按钮时调用链接的目标。  
@@ -82,10 +77,10 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
  绘制聚焦框的按钮之前，由框架调用。  
   
 ```  
@@ -104,7 +99,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>备注  
  当你想要使用你自己的代码绘制按钮的聚焦框时，重写此方法。  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  将指定的 URL 显示为按钮文本。  
   
 ```  
@@ -117,7 +112,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  设置的隐式的协议 (例如，"http:") 的 URL。  
   
 ```  
@@ -131,7 +126,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>备注  
  使用此方法设置的 URL 前缀。 前缀不会显示在按钮的表面，但可以使用它来帮助浏览到的 URL 目标。  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  调整大小时，包含按钮文本或位图按钮。  
   
 ```  
@@ -142,10 +137,10 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>参数  
  [in] `bVCenter`  
- `TRUE`到中心按钮文本和位图的顶部和底部的链接控件; 之间的垂直对齐否则为`FALSE`。 默认值为 `FALSE`。  
+ `TRUE` 到中心按钮文本和位图的顶部和底部的链接控件; 之间的垂直对齐否则为`FALSE`。 默认值为 `FALSE`。  
   
  [in] `bHCenter`  
- `TRUE`到中心按钮文本和位图水平之间的左侧和右侧的链接控件;否则为`FALSE`。 默认值为 `FALSE`。  
+ `TRUE` 到中心按钮文本和位图水平之间的左侧和右侧的链接控件;否则为`FALSE`。 默认值为 `FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)对象，其中包含链接控件的新大小。  

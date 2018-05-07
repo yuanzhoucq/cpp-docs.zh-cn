@@ -1,13 +1,10 @@
 ---
-title: "提供无窗口激活 |Microsoft 文档"
-ms.custom: 
+title: 提供无窗口激活 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>提供无窗口激活
 窗口创建代码 (即，一切事情在调用时**CreateWindow**) 执行成本很高。 用来维护屏幕上的窗口的控件必须管理窗口的消息。 因此，无窗口控件比有窗口控件更快。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  由于无窗口控件没有自己的窗口，因此容器将负责提供本应由控件自己的窗口提供的服务。 例如，如果控件需要查询键盘焦点、捕获鼠标或获取设备上下文，这些操作将由容器管理。 容器将使用 `IOleInPlaceObjectWindowless` 接口将发送给其窗口的用户输入消息传送到相应的无窗口控件。 (请参阅*ActiveX SDK*有关此接口的说明。)`COleControl`成员函数将调用从容器这些服务。  
   
- 若要使您使用无窗口激活的控件，包括**windowlessActivate**标志返回集中的标志[COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:  
+ 若要使您使用无窗口激活的控件，包括**windowlessActivate**标志返回集中的标志[COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如：  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  在无窗口控件中，您应总是使用 `COleControl` 成员函数而不是对应的 `CWnd` 成员函数或其相关的 Win32 API 函数。  
   
- 您可能希望无窗口控件是 OLE 拖放操作的目标。 通常，这需要将该控件的窗口注册为放置目标。 由于该控件没有自己的窗口，容器将使用自己的窗口作为放置目标。 该控件提供了 `IDropTarget` 接口的实现，容器可在适当时向其委托调用。 若要将此接口到容器公开，重写[colecontrol:: Getwindowlessdroptarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)。 例如:  
+ 您可能希望无窗口控件是 OLE 拖放操作的目标。 通常，这需要将该控件的窗口注册为放置目标。 由于该控件没有自己的窗口，容器将使用自己的窗口作为放置目标。 该控件提供了 `IDropTarget` 接口的实现，容器可在适当时向其委托调用。 若要将此接口到容器公开，重写[colecontrol:: Getwindowlessdroptarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)。 例如：  
   
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   

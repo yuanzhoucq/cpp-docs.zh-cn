@@ -1,13 +1,10 @@
 ---
-title: "DEVNAMES 结构 |Microsoft 文档"
-ms.custom: 
+title: DEVNAMES 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - DEVNAMES
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DEVNAMES [MFC]
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3627af10dfb6fd18c54f772d26c33123127613a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3234df2f0430ea75399791f4fd88a636a63b67e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="devnames-structure"></a>DEVNAMES 结构
 `DEVNAMES` 结构包含标识打印机的驱动程序、设备和输出端口名称的字符串。  
@@ -59,7 +54,7 @@ typedef struct tagDEVNAMES { /* dvnm */
 ## <a name="remarks"></a>备注  
  **PrintDlg**函数使用这些字符串初始化系统定义打印对话框中的成员。 当用户关闭对话框后，此结构中将返回有关选定打印机的信息。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** commdlg.h  
   
 ## <a name="see-also"></a>请参阅  

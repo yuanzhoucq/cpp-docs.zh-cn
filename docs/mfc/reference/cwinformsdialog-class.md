@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsDialog 类 |Microsoft 文档"
-ms.custom: 
+title: CWinFormsDialog 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 承载 Windows 窗体用户控件的 MFC 对话框类的包装器。  
@@ -68,20 +63,20 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>公共运算符  
   
-|name||  
+|名称||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|替换[CWinFormsDialog::GetControl](#getcontrol)表达式中。|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|将类型强制转换为 Windows 窗体用户控件的引用。|  
   
 ## <a name="remarks"></a>备注  
- `CWinFormsDialog`是的 MFC 对话框类的包装器 ( [CDialog](../../mfc/reference/cdialog-class.md)) 承载 Windows 窗体用户控件。 这允许.NET Framework 上的控件模式或无模式的 MFC 对话框中显示。  
+ `CWinFormsDialog` 是的 MFC 对话框类的包装器 ( [CDialog](../../mfc/reference/cdialog-class.md)) 承载 Windows 窗体用户控件。 这允许.NET Framework 上的控件模式或无模式的 MFC 对话框中显示。  
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)和[承载 Windows 窗体用户控件作为 MFC 对话框](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxwinforms.h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  构造 `CWinFormsDialog` 对象。  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  包含的对话框模板资源的 ID。 使用对话框编辑器创建对话框模板并将其存储在应用程序的资源脚本文件中。 对话框模板的详细信息，请参阅[CDialog 类](../../mfc/reference/cdialog-class.md)。  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  检索对 Windows 窗体用户控件的引用。  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>返回值  
  在 MFC 对话框中返回对 Windows 窗体控件的引用。  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  检索 Windows 窗体用户控件的窗口句柄。  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>返回值  
  返回 Windows 窗体用户控件的窗口句柄。  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  通过创建和承载 Windows 窗体用户控件在其上初始化 MFC 对话框。  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  如果你需要执行特殊处理，在初始化对话框中时，重写该成员函数。 使用此方法的详细信息，请参阅[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  替换[CWinFormsDialog::GetControl](#getcontrol)表达式中。  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  有关使用 Windows 窗体的信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  将类型强制转换为 Windows 窗体用户控件的引用。  
   
 ```  

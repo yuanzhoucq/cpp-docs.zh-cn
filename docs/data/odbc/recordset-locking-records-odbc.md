@@ -2,12 +2,9 @@
 title: 记录集： 锁定记录 (ODBC) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76d7ab2df01e485ffff70120609227b9fbae6ac5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-locking-records-odbc"></a>记录集：锁定记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  本主题适用于派生自`CRecordset`中哪些批量行提取尚未实现。 如果你已实现批量行提取的某些信息不适用。 例如，不能调用**编辑**和**更新**成员函数。 有关批量行提取的详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="_core_record.2d.locking_modes"></a>记录锁定模式  
+##  <a name="_core_record.2d.locking_modes"></a> 记录锁定模式  
  数据库类提供两个[记录锁定模式](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
 -   开放式锁定 （默认值）  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  乐观锁定锁定仅在数据源上的记录**更新**调用。 如果你使用在多用户环境中的乐观锁定，则应用程序应处理**更新**失败条件。 只要你调用保守式锁定锁定记录**编辑**并不会释放它直到你调用**更新**(故障指示通过`CDBException`机制，不是按值**FALSE**返回**更新**)。 保守式锁定有潜在的性能，并为其他用户，因为并发访问同一个记录可能需要等到您的应用程序完成后才能**更新**过程。  
   
-##  <a name="_core_locking_records_in_your_recordset"></a>锁定记录集中的记录集  
+##  <a name="_core_locking_records_in_your_recordset"></a> 锁定记录集中的记录集  
  如果你想要更改的记录集对象[锁定模式](#_core_record.2d.locking_modes)从默认情况下，你必须更改此模式，然后才能调用**编辑**。  
   
 #### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>若要更改你的记录集的当前锁定模式  

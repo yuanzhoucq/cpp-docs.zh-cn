@@ -1,13 +1,10 @@
 ---
-title: "优化持久性和初始化 |Microsoft 文档"
-ms.custom: 
+title: 优化持久性和初始化 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeddfe4c67de2e96d42c7714619463ae3be45187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-persistence-and-initialization"></a>优化持久性和初始化
-默认情况下，持久性和初始化的控件中处理通过`DoPropExchange`成员函数。 在典型的控件中，该函数包含到多个调用**PX_**函数 (`PX_Color`， `PX_Font`，依次类推)，一个用于每个属性。  
+默认情况下，持久性和初始化的控件中处理通过`DoPropExchange`成员函数。 在典型的控件中，该函数包含到多个调用**PX_** 函数 (`PX_Color`， `PX_Font`，依次类推)，一个用于每个属性。  
   
  此方法具有优势，单个`DoPropExchange`可以用于实现，用于初始化、 持久性采用二进制格式，以及为采用由一些容器使用的所谓的"属性的包"格式的暂留。 此一个函数提供了有关的属性和及其默认值以一个方便的位置的所有信息。  
   
- 但是，此一般性会降低效率。 **PX_**函数获取通过本质上是不太多层实现其灵活性高效相比更直接，但不太灵活的方法。 此外，如果控件将传递到的默认值**PX_**函数，每次，即使在环境下的默认值一定不能使用时必须提供默认值。 如果生成的默认值为普通的任务 （例如，从环境属性获取值时），则额外，在不使用默认值的位置的情况下进行不必要的工作。  
+ 但是，此一般性会降低效率。 **PX_** 函数获取通过本质上是不太多层实现其灵活性高效相比更直接，但不太灵活的方法。 此外，如果控件将传递到的默认值**PX_** 函数，每次，即使在环境下的默认值一定不能使用时必须提供默认值。 如果生成的默认值为普通的任务 （例如，从环境属性获取值时），则额外，在不使用默认值的位置的情况下进行不必要的工作。  
   
  你可以通过重写控件的提高控件的二进制暂留性能`Serialize`函数。 此成员函数的默认实现将调用你`DoPropExchange`函数。 通过重写它，你可以提供更直接为二进制持久性的实现。 例如，考虑这`DoPropExchange`函数：  
   

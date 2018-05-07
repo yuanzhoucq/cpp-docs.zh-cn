@@ -1,13 +1,10 @@
 ---
-title: "使用 CToolBarCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CToolBarCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54031677ae33675ca0fa295c24c78e5390f5dd49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctoolbarctrl"></a>使用 CToolBarCtrl
 你可以使用工具栏控件 ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) 若要创建包含按钮和可选空间的控件窗口。 工具栏控件窗口中的每个按钮都将在用户选择它时向父窗口发送一条命令消息。 通常，工具栏中的按钮对应于应用程序菜单项，为用户另外提供了一种更直接的方式来访问应用程序命令。  

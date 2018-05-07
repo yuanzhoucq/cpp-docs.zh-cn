@@ -1,13 +1,10 @@
 ---
-title: "标准 Windows 消息的处理程序 |Microsoft 文档"
-ms.custom: 
+title: 标准 Windows 消息的处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - afx_msg
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91df3462297c2a45a8938d815cc3b6a3b8ca6edb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-standard-windows-messages"></a>标准 Windows 消息的处理程序
 默认标准 Windows 消息的处理程序 (**WM_**) 中类预定义`CWnd`。 类库基于消息名称来命名这些处理程序的名称。 例如，`WM_PAINT` 消息的处理程序在 `CWnd` 中声明为：  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- 按照约定，这些处理程序的名称以前缀“On”开头。 其中一些处理程序不采用任何自变量，而另一些处理程序采用几个自变量。 一些处理程序还具有 `void` 之外的返回类型。 所有的默认处理程序**WM_**消息均记录在*MFC 参考*类的成员函数作为`CWnd`名称开头"开"。 成员函数声明中的`CWnd`带有前缀**afx_msg**。  
+ 按照约定，这些处理程序的名称以前缀“On”开头。 其中一些处理程序不采用任何自变量，而另一些处理程序采用几个自变量。 一些处理程序还具有 `void` 之外的返回类型。 所有的默认处理程序**WM_** 消息均记录在*MFC 参考*类的成员函数作为`CWnd`名称开头"开"。 成员函数声明中的`CWnd`带有前缀**afx_msg**。  
   
 ## <a name="see-also"></a>请参阅  
  [声明消息处理程序函数](../mfc/declaring-message-handler-functions.md)

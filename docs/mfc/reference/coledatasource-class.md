@@ -1,12 +1,9 @@
 ---
-title: "COleDataSource 类 |Microsoft 文档"
-ms.custom: 
+title: COleDataSource 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataSource
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledatasource-class"></a>COleDataSource 类
 充当应用程序将数据放置到的缓存，应用程序将在数据传输操作（如剪贴板或拖放操作）期间提供这些数据。  
@@ -107,10 +102,10 @@ class COleDataSource : public CCmdTarget
   
  `COleDataSource`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>  COleDataSource::CacheData  
  调用此函数可指定在其中数据提供在数据传输操作的格式。  
   
 ```  
@@ -143,7 +138,7 @@ void CacheData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  调用此函数可指定在其中数据提供在数据传输操作的格式。  
   
 ```  
@@ -172,14 +167,14 @@ void CacheGlobalData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  构造 `COleDataSource` 对象。  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
  调用此函数可指定在其中数据提供在数据传输操作的格式。  
   
 ```  
@@ -206,7 +201,7 @@ void DelayRenderData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  调用此函数可指定在其中数据提供在数据传输操作的格式。  
   
 ```  
@@ -233,7 +228,7 @@ void DelayRenderFileData(
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  调用此函数可支持更改数据源的内容。  
   
 ```  
@@ -250,13 +245,13 @@ void DelaySetData(
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述在其中的数据是要替换的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="remarks"></a>备注  
- [OnSetData](#onsetdata)这种情况下将由框架调用。 这仅框架返回的数据源时使用[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`不调用，你`OnSetData`永远不会调用函数。 `DelaySetData`应该为每个剪贴板调用或**FORMATETC**你支持的格式。  
+ [OnSetData](#onsetdata)这种情况下将由框架调用。 这仅框架返回的数据源时使用[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`不调用，你`OnSetData`永远不会调用函数。 `DelaySetData` 应该为每个剪贴板调用或**FORMATETC**你支持的格式。  
   
  有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的结构。  
   
  有关详细信息，请参阅[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="dodragdrop"></a>Coledatasource:: Dodragdrop  
+##  <a name="dodragdrop"></a>  Coledatasource:: Dodragdrop  
  调用`DoDragDrop`成员函数中通常执行拖放操作对此数据源， [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)处理程序。  
   
 ```  
@@ -270,13 +265,13 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  拖放操作允许对此数据源。 可以是一个或多个以下：  
   
-- `DROPEFFECT_COPY`无法执行复制操作。  
+- `DROPEFFECT_COPY` 无法执行复制操作。  
   
-- `DROPEFFECT_MOVE`无法执行移动操作。  
+- `DROPEFFECT_MOVE` 无法执行移动操作。  
   
-- `DROPEFFECT_LINK`无法建立从放置的数据到原始数据的链接。  
+- `DROPEFFECT_LINK` 无法建立从放置的数据到原始数据的链接。  
   
-- `DROPEFFECT_SCROLL`表示可能发生拖动滚动操作。  
+- `DROPEFFECT_SCROLL` 表示可能发生拖动滚动操作。  
   
  `lpRectStartDrag`  
  指向定义拖动实际开始的矩形的指针。 有关更多信息，请参见下面的“备注”部分。  
@@ -302,7 +297,7 @@ DROPEFFECT DoDragDrop(
   
  有关详细信息，请参阅文章[拖放： 实现放置源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。  
   
-##  <a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>  COleDataSource::Empty  
  调用此函数可对空`COleDataSource`的数据的对象。  
   
 ```  
@@ -314,7 +309,7 @@ void Empty();
   
  有关详细信息，请参阅[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK 中。  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  呈现数据，可在剪贴板上，然后可以在你的应用程序关闭后粘贴剪贴板中的数据。  
   
 ```  
@@ -324,7 +319,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>备注  
  使用[设置剪贴板](#setclipboard)以将数据放在剪贴板上。  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
  确定是否在剪贴板上的数据已更改自[设置剪贴板](#setclipboard)上一次调用，并且，如果是这样，标识当前所有者。  
   
 ```  
@@ -334,7 +329,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>返回值  
  当前在剪贴板上，数据源或**NULL**如果没有任何内容复制到剪贴板上或不由调用应用程序拥有剪贴板。  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
  由框架调用以检索指定的格式中的数据。  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL OnRenderData(
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构， [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)枚举类型和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)在 Windows SDK 中。  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  由框架调用以检索指定的格式中的数据，当指定的存储介质文件。  
   
 ```  
@@ -388,7 +383,7 @@ virtual BOOL OnRenderFileData(
   
  有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  由框架调用以检索指定的格式中的数据时指定的存储介质是全局内存。  
   
 ```  
@@ -416,7 +411,7 @@ virtual BOOL OnRenderGlobalData(
   
  有关详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  由框架设置或替换中的数据调用`COleDataSource`中指定的格式对象。  
   
 ```  
@@ -446,7 +441,7 @@ virtual BOOL OnSetData(
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构和[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)在 Windows SDK 中的函数。  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  中包含的数据放入`COleDataSource`调用下列函数之一后剪贴板上的对象： [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。  
   
 ```  

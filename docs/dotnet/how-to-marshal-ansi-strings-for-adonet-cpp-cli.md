@@ -1,13 +1,10 @@
 ---
-title: "如何： 为 ADO.NET 封送 ANSI 字符串 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 为 ADO.NET 封送 ANSI 字符串 (C + + /cli CLI) |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ADO.NET [C++], marshaling ANSI strings
 - strings [C++], ADO.NET
 ms.assetid: 6759d5a2-515f-4079-856b-73b1c1e68f2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 91d97658436e2d5563c70765da5c3c98e1cbeed5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d06f12a8a8d900e4604bea2800a1ba4c5c966770
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>如何：为 ADO.NET 封送 ANSI 字符串 (C++/CLI)
 演示如何添加本机字符串 (`char *`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到本机的字符串。  

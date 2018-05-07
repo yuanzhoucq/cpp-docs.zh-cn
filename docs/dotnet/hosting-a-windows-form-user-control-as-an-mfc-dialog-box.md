@@ -1,13 +1,10 @@
 ---
-title: "承载 Windows 窗体用户控件作为 MFC 对话框 |Microsoft 文档"
-ms.custom: 
+title: 承载 Windows 窗体用户控件作为 MFC 对话框 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>以 MFC 对话框的形式承载 Windows 窗体用户控件
-MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，以便可以承载 Windows 窗体用户控件 (<xref:System.Windows.Forms.UserControl>) 在模式或无模式的 MFC 对话框中。 `CWinFormsDialog`派生自 MFC 类[CDialog](../mfc/reference/cdialog-class.md)，因此可以作为模式或无模式启动对话框。  
+MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，以便可以承载 Windows 窗体用户控件 (<xref:System.Windows.Forms.UserControl>) 在模式或无模式的 MFC 对话框中。 `CWinFormsDialog` 派生自 MFC 类[CDialog](../mfc/reference/cdialog-class.md)，因此可以作为模式或无模式启动对话框。  
   
  该过程，`CWinFormsDialog`用来承载该用户控件是类似于中所述[承载 Windows 窗体用户控件在 MFC 对话框中](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)。 但是，`CWinFormsDialog`管理初始化和承载的用户控件，以便它不需要手动进行编程。  
   
@@ -39,7 +34,7 @@ MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-clas
   
 1.  创建 MFC 应用程序项目。  
   
-     上**文件**菜单上，选择**新建**，然后单击**项目**。 在**Visual c + +**文件夹，选择**MFC 应用程序**。  
+     上**文件**菜单上，选择**新建**，然后单击**项目**。 在**Visual c + +** 文件夹，选择**MFC 应用程序**。  
   
      在**名称**框中，输入`MFC03`和解决方案将设置更改为**将添加到解决方案**。单击**确定**。  
   

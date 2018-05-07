@@ -1,13 +1,10 @@
 ---
-title: "数据对象和数据源 (OLE) |Microsoft 文档"
-ms.custom: 
+title: 数据对象和数据源 (OLE) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 766148494c6b8693f8d9e65f27e157b58d8e8689
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-ole"></a>数据对象和数据源 (OLE)
 在使用剪贴板或拖放操作执行数据传输时，数据将具有一个源和一个目标。 一个应用程序提供数据以进行复制，另一个应用程序接受该数据以进行粘贴。 传输的每一端均需要对同一数据执行不同的操作以使传输成功。 Microsoft 基础类 (MFC) 库提供表示此传输的每一端的两个类：  

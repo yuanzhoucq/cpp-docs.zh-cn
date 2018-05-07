@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonComboBox 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCRibbonComboBox 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonComboBox
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f748630549c0a26a2818bc7c96e5162d7d36ed4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 类
 `CMFCRibbonComboBox`类实现可以将添加到功能区栏、 功能区面板或功能区弹出菜单的组合框控件。  
@@ -74,7 +69,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>构造函数  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|构造 CMFCRibbonComboBox 对象。|  
   
@@ -118,10 +113,10 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxribboncombobox.h  
   
-##  <a name="additem"></a>CMFCRibbonComboBox::AddItem  
+##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
  将唯一的项追加到列表框中。  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR AddItem(
 ### <a name="return-value"></a>返回值  
  追加的项的从零开始索引。  
   
-##  <a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox  
+##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox  
  构造 `CMFCRibbonComboBox` 对象。  
   
 ```  
@@ -161,7 +156,7 @@ CMFCRibbonComboBox();
  组合框的 ID。  
   
  [in] `bHasEditBox`  
- `TRUE`如果你想编辑框中，控件;`FALSE`否则为。  
+ `TRUE` 如果你想编辑框中，控件;`FALSE`否则为。  
   
  [in] `nWidth`  
  以像素为单位; 组合框的宽度或-1 表示的默认宽度。  
@@ -175,7 +170,7 @@ CMFCRibbonComboBox();
 ### <a name="remarks"></a>备注  
  默认宽度为 108 像素。  
   
-##  <a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem  
+##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
  从列表框中删除指定的项。  
   
 ```  
@@ -196,11 +191,11 @@ BOOL DeleteItem(LPCTSTR lpszText);
  要删除的项的字符串。 如果有多个具有相同的字符串项，将删除的第一项。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果指定的项已被删除;否则为`FALSE`。  
+ `TRUE` 如果指定的项已被删除;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize  
+##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
  指定当它下拉列表框中是否可以更改大小。  
   
 ```  
@@ -209,12 +204,12 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
   
 ### <a name="parameters"></a>参数  
  [in] `bEnable`  
- `TRUE`若要启用调整大小;`FALSE`禁用调整大小。  
+ `TRUE` 若要启用调整大小;`FALSE`禁用调整大小。  
   
 ### <a name="remarks"></a>备注  
  启用重设大小后，列表框将更改大小以适合它显示的项。  
   
-##  <a name="finditem"></a>CMFCRibbonComboBox::FindItem  
+##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
  返回与指定的字符串匹配的列表框中的第一项的索引。  
   
 ```  
@@ -230,7 +225,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcount"></a>CMFCRibbonComboBox::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
  在列表框中返回的项数。  
   
 ```  
@@ -242,7 +237,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel  
+##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
  在列表框中获取当前选定项的索引。  
   
 ```  
@@ -252,7 +247,7 @@ int GetCurSel() const;
 ### <a name="return-value"></a>返回值  
  在列表框中; 当前选定项的从零开始的索引如果未不选定任何项，-1。  
   
-##  <a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight  
+##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
  在下拉列表框时，请获取列表框的高度。  
   
 ```  
@@ -264,7 +259,7 @@ int GetDropDownHeight();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
  在中间模式下显示，则返回的组合框的大小。  
   
 ```  
@@ -281,7 +276,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>备注  
  显示较小的图像时，返回的大小取决于组合框的大小。  
   
-##  <a name="getitem"></a>CMFCRibbonComboBox::GetItem  
+##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
  返回与列表框中指定索引处的项关联的字符串。  
   
 ```  
@@ -297,7 +292,7 @@ LPCTSTR GetItem(int iIndex) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData  
+##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
  返回与列表框中指定索引处的项关联的数据。  
   
 ```  
@@ -311,7 +306,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="return-value"></a>返回值  
  与项; 关联的数据0 或如果该项不存在，或者如果索引参数为-1，并且在列表框中没有未选择的项目。  
   
-##  <a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox  
+##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
  指示控件是否包含编辑框。  
   
 ```  
@@ -319,11 +314,11 @@ BOOL HasEditBox() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果控件包含编辑框;否则为`FALSE`。  
+ `TRUE` 如果控件包含编辑框;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList  
+##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList  
  指示可以调整列表框的大小。  
   
 ```  
@@ -331,12 +326,12 @@ BOOL IsResizeDropDownList() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果可调整大小的列表框中;否则为`FALSE`。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+ `TRUE` 如果可调整大小的列表框中;否则为`FALSE`。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
 ### <a name="remarks"></a>备注  
  你可以启用列表框中调整大小操作通过使用[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)方法。  
   
-##  <a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem  
+##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
  用户的列表框中选择某个项时，由框架调用。  
   
 ```  
@@ -350,7 +345,7 @@ virtual void OnSelectItem(int nItem);
 ### <a name="remarks"></a>备注  
  如果你想要处理用户输入的选择重写此方法。  
   
-##  <a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
  从列表框中删除所有项，并清除编辑框。  
   
 ```  
@@ -359,7 +354,7 @@ void RemoveAllItems();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="selectitem"></a>CMFCRibbonComboBox::SelectItem  
+##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
  在列表框中选择一项。  
   
 ```  
@@ -380,11 +375,11 @@ BOOL SelectItem(LPCTSTR lpszText);
  列表框中的项的字符串。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
  删除向下时，请设置列表框的高度。  
   
 ```  

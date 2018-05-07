@@ -1,13 +1,10 @@
 ---
-title: "Internet 上的 ActiveX 控件 |Microsoft 文档"
-ms.custom: 
+title: Internet 上的 ActiveX 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种不同容器（包括 Internet 上的 COM 感知 Web 浏览器）中使用的可编程软件组件的主要体系结构。 任何 ActiveX 控件都可以是 Internet 控件，并且可将其功能添加到活动文档或成为网页的一部分。 网页上的控件可以使用脚本互相通信。  
@@ -113,7 +108,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
      请注意，您必须包括 AFXCMN.H 以使用 `CListCtrl` 类。  
   
-4.  当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果控件具有只有一个数据路径属性，可以将代码添加在上**BSCF_LASTDATANOTIFICATION**以通知容器您的下载已完成。 例如:  
+4.  当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果控件具有只有一个数据路径属性，可以将代码添加在上**BSCF_LASTDATANOTIFICATION**以通知容器您的下载已完成。 例如：  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -165,7 +160,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
  你实现[异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`类。 但是，ActiveX 控件可以使用 `CDataPathProperty` 类（派生自 `CAsyncMonikerFile`）帮助实现异步控件属性。  
   
- ASYNDOWN 示例将演示如何使用计时器设置异步循环来读取数据。 ASYNDOWN 在知识库文章“如何：AsyncDown 演示了异步数据下载”(Q177244) 中有详细描述，并且可从 Microsoft 下载中心下载。 （有关从 Microsoft 下载中心下载文件的详细信息，请参阅 Microsoft 知识库文章“如何从联机服务获取 Microsoft 支持文件”(Q119591)）。你可以找到在知识库文章[http://support.microsoft.com/support](http://support.microsoft.com/support)。  
+ ASYNDOWN 示例将演示如何使用计时器设置异步循环来读取数据。 ASYNDOWN 在知识库文章“如何：AsyncDown 演示了异步数据下载”(Q177244) 中有详细描述，并且可从 Microsoft 下载中心下载。 （有关从 Microsoft 下载中心下载文件的详细信息，请参阅 Microsoft 知识库文章“如何从联机服务获取 Microsoft 支持文件”(Q119591)）。你可以找到在知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
   
  ASYNDOWN 中使用的基本方法是在中设置计时器**cdatapathproperty:: Ondataavailable**以指示数据时可用。 接收计时器消息后，应用程序将读取 128 字节的数据块并填充编辑控件。 如果处理计时器消息后数据不可用，则将关闭计时器。 如果之后有更多数据到达，则 `OnDataAvailable` 将启用计时器。  
   

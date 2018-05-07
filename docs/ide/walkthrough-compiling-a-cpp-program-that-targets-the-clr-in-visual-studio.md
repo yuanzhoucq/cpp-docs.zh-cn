@@ -1,13 +1,10 @@
 ---
-title: "编译面向 CLR 的 c + + 程序 |Microsoft 文档"
-ms.custom: 
+title: 编译面向 CLR 的 c + + 程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>演练：在 Visual Studio 中编译面向 CLR 的 C++ 程序
 你可以创建使用.NET 类，并通过使用 Visual Studio 开发环境对其进行编译的 Visual c + + 程序。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     -   右键单击**源文件**文件夹在解决方案资源管理器，指向**添加**单击**新项**。  
   
-    -   单击**c + + 文件 (.cpp)**并键入文件名，然后单击**添加**。  
+    -   单击**c + + 文件 (.cpp)** 并键入文件名，然后单击**添加**。  
   
      **.Cpp**文件将显示在**源文件**在解决方案资源管理器和选项卡式的窗口中的文件夹将出现代码的键入想要在该文件中。  
   
@@ -81,11 +76,11 @@ ms.lasthandoff: 12/21/2017
      **Textfile.txt**文本文件现在位于你的项目目录中。 可以通过使用记事本打开此文件。  
   
     > [!NOTE]
-    >  选择空 CLR 项目模板会自动设置**/clr**编译器选项。 要验证这一点，请右键单击中的项目**解决方案资源管理器**并单击**属性**，，然后检查**公共语言运行时支持**中选项**常规**节点**配置属性**。  
+    >  选择空 CLR 项目模板会自动设置 **/clr**编译器选项。 要验证这一点，请右键单击中的项目**解决方案资源管理器**并单击**属性**，，然后检查**公共语言运行时支持**中选项**常规**节点**配置属性**。  
   
 ## <a name="whats-next"></a>下一步  
- **上一步：** [演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)&#124;**下一步：**[演练： 编译 C 程序命令行上](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **上一步：** [演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **下一步：**[演练： 编译 C 程序命令行上](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [C++ 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

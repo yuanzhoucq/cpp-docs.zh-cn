@@ -1,13 +1,10 @@
 ---
-title: "数据类型 (MFC) |Microsoft 文档"
-ms.custom: 
+title: 数据类型 (MFC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LPCRECT
 - POSITION
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd12aabee7e7284e2f3d12f81403b9b499e8e68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-mfc"></a>数据类型 (MFC)
 本主题列出了 Microsoft 基础类库中最常使用的数据类型。 大部分数据类型与平台软件开发工具包 (SDK) 中的相同，而其他数据类型对于 MFC 是唯一的。  

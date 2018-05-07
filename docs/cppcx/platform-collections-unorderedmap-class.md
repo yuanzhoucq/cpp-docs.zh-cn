@@ -1,26 +1,21 @@
 ---
-title: "Platform::Collections::UnorderedMap 类 |Microsoft 文档"
-ms.custom: 
+title: Platform::Collections::UnorderedMap 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -91,14 +86,14 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|描述|
+|名称|描述|
 |[Map:: mapchanged](#mapchanged)事件|当映射更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `UnorderedMap`
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 **标头：** collection.h
 
@@ -367,7 +362,7 @@ UnorderedMap(
 *first*  
 用于初始化当前 UnorderedMap 的一系列元素中的第一个元素的输入迭代器。
 
-*last*  
+*最后一个*  
 用于初始化当前 UnorderedMap 的一系列元素之后的第一个元素的输入迭代器。
 
 ## <a name="see-also"></a>请参阅

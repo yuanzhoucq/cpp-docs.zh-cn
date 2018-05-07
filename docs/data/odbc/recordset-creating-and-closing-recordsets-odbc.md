@@ -1,13 +1,10 @@
 ---
-title: "记录集： 创建和关闭记录集 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 记录集： 创建和关闭记录集 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>记录集：创建和关闭记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [何时以及如何关闭记录集对象](#_core_closing_a_recordset)。  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>在运行时创建记录集  
+##  <a name="_core_creating_recordsets_at_run_time"></a> 在运行时创建记录集  
  你可以在程序中创建记录集对象之前，你通常编写应用程序特定的记录集类。 有关此预备步骤的详细信息，请参阅[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。  
   
  当你需要从数据源选择记录时，请打开动态集或快照的对象。 要创建的对象类型取决于你需要在你的应用程序和 ODBC 驱动程序支持的数据。 有关详细信息，请参阅[动态集](../../data/odbc/dynaset.md)和[快照](../../data/odbc/snapshot.md)。  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  在开发过程中使用的连接字符串可能不是最终用户所需的连接字符串不同。 有关这方面通用化你的应用程序的建议，请参阅[数据源： 管理连接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)。  
   
-##  <a name="_core_setting_recordset_options"></a>设置记录集选项  
+##  <a name="_core_setting_recordset_options"></a> 设置记录集选项  
  在构造记录集对象之后但在调用之前**打开**若要选择记录，你可能想要设置某些选项来控制记录集的行为。 对于所有记录集，您可以：  
   
 -   指定[筛选器](../../data/odbc/recordset-filtering-records-odbc.md)若要将限制记录选择。  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  若要影响记录的选择，必须设置这些选项，然后才能调用**打开**成员函数。  
   
-##  <a name="_core_closing_a_recordset"></a>关闭记录集  
+##  <a name="_core_closing_a_recordset"></a> 关闭记录集  
  完成记录后，必须释放类型，并释放其内存。  
   
 #### <a name="to-close-a-recordset"></a>若要关闭记录集  

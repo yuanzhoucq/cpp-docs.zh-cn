@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsView 类 |Microsoft 文档"
-ms.custom: 
+title: CWinFormsView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 类
 提供用于将 Windows 窗体控件作为 MFC 视图承载的一般功能。  
@@ -56,7 +51,7 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|name||  
+|名称||  
 |----------|-|  
 |[CWinFormsView::operator 控件 ^](#operator_control)|将类型强制转换为指向 Windows 窗体控件。|  
   
@@ -71,10 +66,10 @@ class CWinFormsView : public CView;
 > [!NOTE]
 >  CWinFormsView 不支持 MFC 拆分器窗口 ( [CSplitterWnd 类](../../mfc/reference/csplitterwnd-class.md))。 当前仅 Windows 窗体拆分器支持控制。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxwinforms.h  
   
-##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
  构造 `CWinFormsView` 对象。  
   
 ```  
@@ -86,13 +81,13 @@ CWinFormsView(System::Type^ pManagedViewType);
  指向 Windows 窗体用户控件的数据类型的指针。   
   
 ### <a name="example"></a>示例  
- 在下面的示例中，`CUserView`类继承自`CWinFormsView`传递的类型和`UserControl1`到`CWinFormsView`构造函数。 `UserControl1`是 ControlLibrary1.dll 中的自定义控件。  
+ 在下面的示例中，`CUserView`类继承自`CWinFormsView`传递的类型和`UserControl1`到`CWinFormsView`构造函数。 `UserControl1` 是 ControlLibrary1.dll 中的自定义控件。  
   
  [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
   
  [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsView::GetControl  
  检索指向 Windows 窗体控件的指针。  
   
 ```  
@@ -105,7 +100,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>备注  
  有关如何使用 Windows 窗体的示例，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="operator_control"></a>CWinFormsView::operator 控件 ^  
+##  <a name="operator_control"></a>  CWinFormsView::operator 控件 ^  
  将类型强制转换为指向 Windows 窗体控件。  
   
 ```  

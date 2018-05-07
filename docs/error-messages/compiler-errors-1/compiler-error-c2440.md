@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2440 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2440 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2440
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a83da358738f7892fd5db06fbe775ff0b7d7da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6b03dfc413e3a63e5084dc265d5b7010fbcebd4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 conversion： 无法从 type1 转换为 type2  
@@ -199,7 +194,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- Visual c + + 编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下转换时使用的源代码**/clr**编译编程。  
+ Visual c + + 编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下转换时使用的源代码 **/clr**编译编程。  
   
  若要解决此 C2440，请使用正确的强制转换运算符。 有关详细信息，请参阅[强制转换运算符](../../cpp/casting-operators.md)。  
   

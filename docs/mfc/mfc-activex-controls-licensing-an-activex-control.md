@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 许可 ActiveX 控件 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 许可 ActiveX 控件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - COleObjectFactory
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b90000279e00c9be8f43ecdb33f8e3dedf6b8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 许可支持，ActiveX 控件的一个可选功能允许你控制能够使用或分发该控件。 (的许可问题的更多讨论，请参阅中的授权问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。)  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  实现授权的 ActiveX 控件允许您，作为控件开发人员，以确定其他人使用 ActiveX 控件的方式。 与该控件提供控件购买者和。许可证文件，与购买者可以但不是发布该控件，该协议。具有使用控件的应用程序的许可证文件。 这样可以防止编写新的应用程序无需第一个授权控件从你使用的控件，该应用程序的用户。  
   
-##  <a name="_core_overview_of_activex_control_licensing"></a>授权的 ActiveX 控件概述  
+##  <a name="_core_overview_of_activex_control_licensing"></a> 授权的 ActiveX 控件概述  
  为 ActiveX 控件，提供许可支持[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)类提供多个函数的实现**IClassFactory2**接口： **IClassFactory2:: RequestLicKey**， **IClassFactory2::GetLicInfo**，和**IClassFactory2::CreateInstanceLic**。 当容器应用程序开发人员发出请求以创建该控件，调用的实例`GetLicInfo`进行验证的控件。许可证文件存在。 如果控件授予许可，则可以创建控件的实例，并将其放在容器中。 开发人员已完成构造容器应用程序后，另一个函数调用，此时间`RequestLicKey`，进行。 此函数将返回到容器应用程序的许可密钥 （简单字符字符串）。 然后将其应用程序中嵌入则返回的键。  
   
  下图演示在容器应用程序的开发期间将使用的 ActiveX 控件的许可证验证。 如前所述，容器应用程序开发人员必须已将正确。若要创建的控件实例的开发计算机上安装的许可证文件。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  控件授权包括两个基本组件： 在控件实现 DLL 中的特定代码和许可证文件。 代码组成两个 （或可能是三个） 的函数调用和字符字符串，简称为"许可证"，包含字符串的版权声明。 这些调用和许可证字符串位于控件实现 (。CPP) 文件。 ActiveX 控件向导，生成的许可证文件是具有版权语句的文本文件。 它将使用由项目名称和命名。许可证扩展，例如示例。许可证。 授权的控件必须附带由许可证文件，如果需要设计时使用。  
   
-##  <a name="_core_creating_a_licensed_control"></a>创建授权的控件  
+##  <a name="_core_creating_a_licensed_control"></a> 创建授权的控件  
  当你使用 ActiveX 控件向导创建控制框架时，很容易地包括许可支持。 当你指定的控件应具有运行时许可证时，ActiveX 控件向导会将代码添加到控件类，以支持授权。 代码包含的密钥和许可证文件用于许可证验证的函数。 此外可以修改这些函数以自定义控件授权。 有关许可证自定义项的详细信息，请参阅[自定义的 ActiveX 控件许可](#_core_customizing_the_licensing_of_an_activex_control)本文后续部分中。  
   
 #### <a name="to-add-support-for-licensing-with-the-activex-control-wizard-when-you-create-your-control-project"></a>若要添加为授权使用 ActiveX 控件向导创建控件项目时的支持  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  ActiveX 控件向导现在将生成一种 ActiveX 控件框架，包括基本授权的支持。 有关授权的代码的详细说明，请参阅下一主题。  
   
-##  <a name="_core_licensing_support"></a>许可支持  
+##  <a name="_core_licensing_support"></a> 许可支持  
  ActiveX 控件向导用于将授权的支持添加到 ActiveX 控件，则 ActiveX 控件向导会添加声明并实现授权的功能的代码添加到控制标头和实现文件。 此代码组成`VerifyUserLicense`成员函数和`GetLicenseKey`成员函数，其重写中找到的默认实现[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) 。 这些函数检索，并确认控件许可证。  
   
 > [!NOTE]
@@ -93,12 +88,12 @@ ms.lasthandoff: 12/21/2017
   
      验证嵌入的键和控件的唯一键相同。 这样，要创建它的使用控件的实例的容器。 处理过程中由框架调用此函数**IClassFactory2::CreateInstanceLic**并且可以重写提供的许可证密钥的自定义的验证。 默认实现将执行字符串比较。 有关详细信息，请参阅[自定义的 ActiveX 控件许可](#_core_customizing_the_licensing_of_an_activex_control)，本文稍后的。  
   
-###  <a name="_core_header_file_modifications"></a>标头文件修改  
+###  <a name="_core_header_file_modifications"></a> 标头文件修改  
  ActiveX 控件向导将下面的代码放在控件头文件。 在此示例中，两个成员函数的`CSampleCtrl`的对象`factory`声明，另一个验证控件的状态。许可证文件和另一个用于检索要在包含控件的应用程序中使用的许可证密钥：  
   
  [!code-cpp[NVC_MFC_AxUI#39](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_1.h)]  
   
-###  <a name="_core_implementation_file_modifications"></a>实现文件修改  
+###  <a name="_core_implementation_file_modifications"></a> 实现文件修改  
  ActiveX 控件向导将在控件实现文件来声明许可证文件名和许可字符串中的以下两个语句：  
   
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#42](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_4.idl)]  
   
-##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a>自定义授权 ActiveX 控件  
+##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a> 自定义授权 ActiveX 控件  
  因为`VerifyUserLicense`， `GetLicenseKey`，和`VerifyLicenseKey`被声明为控件工厂类的虚拟成员函数可以自定义控件的授权行为。  
   
  例如，你可以提供多个级别的授权控件，通过重写`VerifyUserLicense`或`VerifyLicenseKey`成员函数。 在此函数无法调整向你检测到的许可证级别根据用户公开的属性或方法。  

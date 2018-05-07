@@ -1,12 +1,9 @@
 ---
-title: "CPaintDC 类 |Microsoft 文档"
-ms.custom: 
+title: CPaintDC 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPaintDC
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cc5690e871c1292f0a8ff2450eca950ada65b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9f83c36a9c1a0d334e3b4a75724521d5711123e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 类
 设备上下文类派生自[CDC](../../mfc/reference/cdc-class.md)。  
@@ -58,7 +53,7 @@ class CPaintDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND`此`CPaintDC`附加对象。|  
   
@@ -76,10 +71,10 @@ class CPaintDC : public CDC
   
  `CPaintDC`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cpaintdc"></a>CPaintDC::CPaintDC  
+##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
  构造`CPaintDC`对象，为绘制，准备应用程序窗口，并将存储[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构[m_ps](#m_ps)成员变量。  
   
 ```  
@@ -96,7 +91,7 @@ explicit CPaintDC(CWnd* pWnd);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CPaintDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CPaintDC::m_hWnd  
  `HWND`此`CPaintDC`附加对象。  
   
 ```  
@@ -104,13 +99,13 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_hWnd`是一个受保护的类型变量`HWND`。  
+ `m_hWnd` 是一个受保护的类型变量`HWND`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
-##  <a name="m_ps"></a>CPaintDC::m_ps  
- `m_ps`是类型的公共成员变量[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。  
+##  <a name="m_ps"></a>  CPaintDC::m_ps  
+ `m_ps` 是类型的公共成员变量[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。  
   
 ```  
 PAINTSTRUCT m_ps;  

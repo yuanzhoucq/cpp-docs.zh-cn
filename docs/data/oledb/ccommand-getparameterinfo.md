@@ -1,12 +1,9 @@
 ---
-title: CCommand::GetParameterInfo | Microsoft Docs
-ms.custom: 
+title: 'Ccommand:: Getparameterinfo |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetParameterInfo
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParameterInfo method
 ms.assetid: 9cd9277f-0161-4bd8-ad24-58e5e90b92a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5006d4bfa042ca0356c42127aeb919339dc61724
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 869675c079a392bb1e1e96656e66ef7742f526c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandgetparameterinfo"></a>CCommand::GetParameterInfo
 获取命令的参数、参数名称和参数类型的列表。  
@@ -47,7 +42,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 ## <a name="return-value"></a>返回值  
  一个标准 `HRESULT`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

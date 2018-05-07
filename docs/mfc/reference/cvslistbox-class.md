@@ -1,12 +1,9 @@
 ---
-title: "CVSListBox 类 |Microsoft 文档"
-ms.custom: 
+title: CVSListBox 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CVSListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 `CVSListBox`类支持可编辑列表控件。  
@@ -114,10 +109,10 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>  CVSListBox::AddItem  
  将字符串添加到列表控件。  
   
 ```  
@@ -143,7 +138,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>备注  
  使用[CVSListBox::GetItemData](#getitemdata)方法来检索由指定的值`dwData`参数。 此值可以是特定于应用程序的整数或其他数据的指针。  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  构造 `CVSListBox` 对象。  
   
 ```  
@@ -154,7 +149,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
  启动列表控件项的文本的编辑的操作。  
   
 ```  
@@ -166,12 +161,12 @@ virtual BOOL EditItem(int iIndex);
  列表控件项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果编辑操作成功，则启动否则为`FALSE`。  
+ `TRUE` 如果编辑操作成功，则启动否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  在用户开始编辑操作，通过双击某一项，标签或通过按**F2**或**空格键**当项具有焦点关键。  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
  检索的可编辑列表控件中的字符串的数量。  
   
 ```  
@@ -184,7 +179,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>备注  
  请注意，此计数是一个大于最后一项的索引值因为索引是从零开始。  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
  检索与可编辑列表控件项关联的特定于应用程序的 32 位值。  
   
 ```  
@@ -201,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>备注  
  使用[CVSListBox::SetItemData](#setitemdata)或[CVSListBox::AddItem](#additem)方法来将 32 位值与列表控件项相关联。 此值可以是特定于应用程序的整数或其他数据的指针。  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
  检索可编辑列表控件项的文本。  
   
 ```  
@@ -217,7 +212,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  返回当前的嵌入的列表视图控件的句柄。  
   
 ```  
@@ -230,7 +225,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>备注  
  使用此方法来检索支持嵌入的列表视图控件的句柄`CVSListBox`类。  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
  检索的可编辑列表控件中当前选定项的从零开始索引。  
   
 ```  
@@ -242,7 +237,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  从可编辑列表控件中移除的项。  
   
 ```  
@@ -254,11 +249,11 @@ virtual BOOL RemoveItem(int iIndex);
  可编辑列表控件项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果指定的项被删除;否则为`FALSE`。  
+ `TRUE` 如果指定的项被删除;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  选择一个可编辑列表控件字符串。  
   
 ```  
@@ -275,7 +270,7 @@ virtual BOOL SelectItem(int iItem);
 ### <a name="remarks"></a>备注  
  此方法选择指定的项，它是必需的如果将项滚动到视图。  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
  将特定于应用程序的 32 位值与可编辑列表控件项相关联。  
   
 ```  

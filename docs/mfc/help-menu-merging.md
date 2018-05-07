@@ -1,13 +1,10 @@
 ---
-title: "帮助菜单合并 |Microsoft 文档"
-ms.custom: 
+title: 帮助菜单合并 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>帮助菜单合并
 菜单合并协议 OLE 文档容器中的活动对象时，使对象完成控制**帮助**菜单。 因此，容器的帮助主题将不可用，除非用户停用该对象。 活动文档包容体系结构基于就地菜单合并的规则进行扩展，以允许容器和活动文档共享此菜单。 新规则是一些有关哪些组件拥有菜单的哪个部分以及如何构造共享菜单的额外约定。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  对象将执行其常规菜单插入代码，但在将插入之前其**帮助**菜单上，它会检查的第六个条目**OLEMENUGROUPWIDTHS**数组。 如果值为 1，最后一个菜单的名称为**帮助**（或相应的本地化字符串），然后，此对象插入其**帮助**作为容器的子菜单的菜单**帮助**菜单。  
   
- 该对象然后设置的第六个元素**OLEMENUGROUPWIDTHS**为零和第五个元素递增 1。 这可让 OLE 获知，**帮助**菜单属于容器，该菜单 （和及其子菜单） 对应的菜单消息应传送到该容器。 这样，就，容器负责转发`WM_INITMENUPOPUP`， **WM_SELECT**， **WM_COMMAND**，属于对象的一部分的其他菜单相关的消息和**帮助**菜单。 这通过使用实现`WM_INITMENU`清除通知容器是否在用户导航到对象的标志**帮助**菜单。 容器将监视`WM_MENUSELECT`进入或退出的任意项**帮助**容器未自行添加的菜单。 在进入时，这意味着用户已导航到某个对象菜单，以便容器设置"in object Help menu"标志，并使用该标志的状态转发任何`WM_MENUSELECT`， `WM_INITMENUPOPUP`，和**WM_COMMAND**消息，最少为对象窗口中。 （在退出时，容器将清除此标志，然后自行处理这些相同的消息。）容器应使用从对象的返回的窗口**ioleinplaceactiveobejct::**函数为目标，这些消息。  
+ 该对象然后设置的第六个元素**OLEMENUGROUPWIDTHS**为零和第五个元素递增 1。 这可让 OLE 获知，**帮助**菜单属于容器，该菜单 （和及其子菜单） 对应的菜单消息应传送到该容器。 这样，就，容器负责转发`WM_INITMENUPOPUP`， **WM_SELECT**， **WM_COMMAND**，属于对象的一部分的其他菜单相关的消息和**帮助**菜单。 这通过使用实现`WM_INITMENU`清除通知容器是否在用户导航到对象的标志**帮助**菜单。 容器将监视`WM_MENUSELECT`进入或退出的任意项**帮助**容器未自行添加的菜单。 在进入时，这意味着用户已导航到某个对象菜单，以便容器设置"in object Help menu"标志，并使用该标志的状态转发任何`WM_MENUSELECT`， `WM_INITMENUPOPUP`，和**WM_COMMAND**消息，最少为对象窗口中。 （在退出时，容器将清除此标志，然后自行处理这些相同的消息。）容器应使用从对象的返回的窗口**ioleinplaceactiveobejct::** 函数为目标，这些消息。  
   
  如果该对象会检测到的第六个元素中零**OLEMENUGROUPWIDTHS**，它将根据一般 OLE 文档规则继续进行。 此过程包含容器是否参与**帮助**菜单合并和一些不这样做。  
   

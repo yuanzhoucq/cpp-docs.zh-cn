@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3849 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3849 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3849
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b310fce347423075b1c3d23244a5059151ac87fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e771e67e3432273c8b3880b44d04e4a17217960b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3849"></a>编译器错误 C3849
 在类型 type 的表达式上的函数样式调用都将丢失所有数字可用运算符重载的 const 和/或可变限定符  

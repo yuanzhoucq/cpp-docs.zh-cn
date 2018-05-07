@@ -1,12 +1,9 @@
 ---
-title: "用户记录 |Microsoft 文档"
-ms.custom: 
+title: 用户记录 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_MAP
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-records"></a>用户记录
 若要使用静态的访问器 (一个访问器，它是派生自**CAccessor)**，你使用者都必须有用户记录。 用户记录是一个 c + + 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导生成为你的使用者的用户记录。 可以将方法添加到可选任务，例如处理命令的用户记录中。  

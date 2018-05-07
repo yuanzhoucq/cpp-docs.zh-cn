@@ -1,13 +1,10 @@
 ---
-title: "异常： 从 MFC 异常宏转换 |Microsoft 文档"
-ms.custom: 
+title: 异常： 从 MFC 异常宏转换 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>异常：从 MFC 异常宏转换
 这是一个高级的主题。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [转换使用异常宏用于 c + + 异常的代码](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>转换的优点  
+##  <a name="_core_advantages_of_converting"></a> 转换的优点  
  你可能不需要转换现有代码，尽管你应注意的 mfc 版本 3.0 宏实现和早期版本中的实现之间的差异。 中讨论了这些差异和代码行为的后续更改[异常： 3.0 版本中对异常宏更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。  
   
  转换的主要优势是：  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
      异常声明**捕获**关键字使用以下语法：  
   
-     **捕获 (** *exception_type* *exception_name***)**  
+     **捕获 (** *exception_type* *exception_name * * *)**  
   
      此异常声明语句指示的一种异常的 catch 块处理。  
   
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
      宏使用`THROW_LAST`重新引发当前异常。 `throw`关键字，使用任何参数时，具有相同的效果。  
   
-##  <a name="_core_doing_the_conversion"></a>进行转换  
+##  <a name="_core_doing_the_conversion"></a> 进行转换  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>要转换宏用于使用 c + + 异常处理关键字的代码  
   
@@ -93,13 +88,13 @@ ms.lasthandoff: 12/21/2017
   
      **捕获**(将其替换为**捕获**)  
   
-     `AND_CATCH`(将其替换为**捕获**)  
+     `AND_CATCH` (将其替换为**捕获**)  
   
-     `END_CATCH`（将其删除）  
+     `END_CATCH` （将其删除）  
   
      **引发**(将其替换为`throw`)  
   
-     `THROW_LAST`(将其替换为`throw`)  
+     `THROW_LAST` (将其替换为`throw`)  
   
 3.  修改宏自变量，以便它们构成有效的异常声明。  
   

@@ -2,12 +2,9 @@
 title: 记录集： 滚动 (ODBC) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>记录集：滚动 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [在滚动的情况下是和不支持下](#_core_when_scrolling_is_supported)。  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>从一个记录滚动到另一个  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> 从一个记录滚动到另一个  
  类`CRecordset`提供**移动**滚动在记录集中的成员函数。 这些函数按行集移动当前记录。 如果已实现批量行提取，**移动**操作按行集的大小重新定位记录集。 如果你尚未在实现批量行提取，调用**移动**函数记录集按记录重新定位一个每次。 有关批量行提取的详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`如果记录集定位最后一条记录，则返回非零值。 `IsBOF`如果记录集定位之前 （在之前的所有记录） 的第一个记录，则返回非零值。 在任一情况下，没有最新的记录上进行操作。 如果调用`MovePrev`时`IsBOF`已**TRUE**或调用`MoveNext`时`IsEOF`已**TRUE**，框架将引发`CDBException`。 你还可以使用`IsBOF`和`IsEOF`检查空的记录集。  
+ `IsEOF` 如果记录集定位最后一条记录，则返回非零值。 `IsBOF` 如果记录集定位之前 （在之前的所有记录） 的第一个记录，则返回非零值。 在任一情况下，没有最新的记录上进行操作。 如果调用`MovePrev`时`IsBOF`已**TRUE**或调用`MoveNext`时`IsEOF`已**TRUE**，框架将引发`CDBException`。 你还可以使用`IsBOF`和`IsEOF`检查空的记录集。  
   
  有关记录集导航的详细信息，请参阅[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
   
-##  <a name="_core_when_scrolling_is_supported"></a>支持滚动时  
+##  <a name="_core_when_scrolling_is_supported"></a> 支持滚动时  
  正如最初设计，SQL 提供仅向前滚动，但 ODBC 扩展了滚动功能。 可用的滚动的支持级别取决于使用驱动程序的 ODBC API 一致性级别，你的应用程序的 ODBC 驱动程序和 ODBC 游标库是否已加载到内存。 有关详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)和[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
   
 > [!TIP]

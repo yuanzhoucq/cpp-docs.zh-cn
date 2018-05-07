@@ -1,12 +1,9 @@
 ---
-title: "CAnimationPoint 类 |Microsoft 文档"
-ms.custom: 
+title: CAnimationPoint 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationPoint
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab685c223c4a86c35ba0feb578d93f58844734b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 类
 实现可对点坐标进行动画处理的点功能。  
@@ -90,7 +85,7 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|封装的动画变量表示 X 动画点的坐标。|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|封装的动画变量表示动画点的 Y 坐标。|  
@@ -105,10 +100,10 @@ class CAnimationPoint : public CAnimationBaseObject;
   
  `CAnimationPoint`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationPoint::AddTransition  
+##  <a name="addtransition"></a>  CAnimationPoint::AddTransition  
  添加转换 X 坐标和 Y 坐标。  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>备注  
  调用此函数可将指定的转换添加到内部列表的转换要应用于动画变量的 X 坐标和 Y 坐标。 添加转换时，它们都不会立即应用和存储在内部列表。 转换将应用 （添加到情节提要特定值） 时调用 CAnimationController::AnimateGroup。 如果你不需要将转换应用于坐标之一，则可以传递 NULL。  
   
-##  <a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint  
+##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint  
  构造 CAnimationPoint 对象。  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationPoint(
 ### <a name="remarks"></a>备注  
  构造 CAnimationPoint 对象使用默认属性： 默认值为点坐标，组 ID 和对象 ID 设置为 0。  
   
-##  <a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList  
  将封装的动画变量放入列表。  
   
 ```  
@@ -168,7 +163,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
  `lst`  
  当函数返回时，它包含指向表示 X 和 Y 坐标的两个 CAnimationVariable 对象的指针。  
   
-##  <a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
  返回默认值为 X 坐标和 Y 坐标。  
   
 ```  
@@ -181,7 +176,7 @@ CPoint GetDefaultValue();
 ### <a name="remarks"></a>备注  
  调用此函数可检索之前已由构造函数或 SetDefaultValue 设置的默认值。  
   
-##  <a name="getvalue"></a>CAnimationPoint::GetValue  
+##  <a name="getvalue"></a>  CAnimationPoint::GetValue  
  返回当前值。  
   
 ```  
@@ -198,7 +193,7 @@ BOOL GetValue(CPoint& ptValue);
 ### <a name="remarks"></a>备注  
  调用此函数可检索动画点的当前值。 如果此方法失败或基础 COM 对象的 X 和 Y 坐标尚未初始化，ptValue 包含在构造函数中或通过 SetDefaultValue 之前已设置的默认值。  
   
-##  <a name="getx"></a>CAnimationPoint::GetX  
+##  <a name="getx"></a>  CAnimationPoint::GetX  
  提供访问权限的 CAnimationVariable X 坐标。  
   
 ```  
@@ -211,7 +206,7 @@ CAnimationVariable& GetX();
 ### <a name="remarks"></a>备注  
  你可以调用此方法以获取直接访问权限表示 X 的基础 CAnimationVariable 协调。  
   
-##  <a name="gety"></a>CAnimationPoint::GetY  
+##  <a name="gety"></a>  CAnimationPoint::GetY  
  提供到 CAnimationVariable Y 坐标的访问权限。  
   
 ```  
@@ -224,21 +219,21 @@ CAnimationVariable& GetY();
 ### <a name="remarks"></a>备注  
  你可以调用此方法以获取对基础 CAnimationVariable 表示 Y 坐标的直接访问权限。  
   
-##  <a name="m_xvalue"></a>CAnimationPoint::m_xValue  
+##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue  
  封装的动画变量表示 X 动画点的坐标。  
   
 ```  
 CAnimationVariable m_xValue;  
 ```  
   
-##  <a name="m_yvalue"></a>CAnimationPoint::m_yValue  
+##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue  
  封装的动画变量表示动画点的 Y 坐标。  
   
 ```  
 CAnimationVariable m_yValue;  
 ```  
   
-##  <a name="operator_cpoint"></a>CAnimationPoint::operator CPoint  
+##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint  
  将 CAnimationPoint 转换为 CPoint。  
   
 ```  
@@ -251,7 +246,7 @@ operator CPoint();
 ### <a name="remarks"></a>备注  
  此函数内部调用 GetValue。 如果出于某种原因 GetValue 失败，则返回的点将包含默认值为 X 坐标和 Y 坐标。  
   
-##  <a name="operator_eq"></a>CAnimationPoint::operator =  
+##  <a name="operator_eq"></a>  CAnimationPoint::operator =  
  将 ptSrc 分配给 CAnimationPoint。  
   
 ```  
@@ -265,7 +260,7 @@ void operator=(const CPoint& ptSrc);
 ### <a name="remarks"></a>备注  
  将 ptSrc 分配给 CAnimationPoint。 建议你先执行，早动画开始日期，原因是此运算符将调用 SetDefaultValue，这将重新创建基础 COM 对象的 X 和 Y 坐标如果已创建。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 为此动画对象，你需要重新启用这些事件。  
   
-##  <a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue  
  设置默认值。  
   
 ```  

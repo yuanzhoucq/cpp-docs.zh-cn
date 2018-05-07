@@ -1,30 +1,25 @@
 ---
-title: "实现列表控件中的工作区域 |Microsoft 文档"
-ms.custom: 
+title: 实现列表控件中的工作区域 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefb8007fd9b73dda4c0e8a99e9ae9daa1bfcc34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b92fbda7f00c761059a44b5bf9483e2dfac814
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>实现列表控件中的工作区域
 默认情况下，列表控件排列标准网格方式中的所有项。 但是，支持另一种方法，工作区，它将列表项矩形分组。 实现工作区域的列表控件的映像，请参阅 Windows SDK 中使用列表视图控件。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  工作区域可以用于显示空边框 （在左侧、 顶部和/或项的权限），或导致水平滚动条时通常不会有一个显示。 另一个常见用法是创建多个工作区向其移动或删除项。 使用此方法，你可以具有不同的含义的单一视图中创建区域。 然后，用户无法将项分类通过将它们放置在不同的区域。 此示例将具有读/写文件的区域和另一个区域只读文件的文件系统的视图。 如果文件项已移动到只读的区域，它将自动变为只读的。 将文件从只读区域移到读/写区域会使文件读/写。  
   
- `CListCtrl`用于创建和管理在列表控件中的工作区域中提供多个成员函数。 [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas)和[SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas)检索和设置的数组`CRect`对象 (或`RECT`结构)，其存储为列表控件的当前实现中的工作区域。 此外， [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas)检索列表控件的工作区域的当前数目 （默认情况下，零）。  
+ `CListCtrl` 用于创建和管理在列表控件中的工作区域中提供多个成员函数。 [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas)和[SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas)检索和设置的数组`CRect`对象 (或`RECT`结构)，其存储为列表控件的当前实现中的工作区域。 此外， [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas)检索列表控件的工作区域的当前数目 （默认情况下，零）。  
   
 ## <a name="items-and-working-areas"></a>项和工作区  
  创建工作区后，位于工作区中的项将成为其成员。 同样，如果的项移到某个工作区中，它将成为工作区移动到其中的成员。 如果某个项不任何工作区中，它将自动成为第一个 （索引 0） 工作区的成员。 如果你想要创建项并将其放置在特定的工作区域内，你将需要创建该项目，然后将其移到所需的工作区域，通过调用[SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition)。 下面的第二个示例演示此技术。  

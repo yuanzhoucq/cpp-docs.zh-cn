@@ -1,13 +1,10 @@
 ---
-title: "框架中的命令和消息 |Microsoft 文档"
-ms.custom: 
+title: 框架中的命令和消息 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390f094b05994dcf2b3b2351a24f163b06554f84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07f38fd833f6efe66dac23e25fe4a10fd5a6ca8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messages-and-commands-in-the-framework"></a>框架中的消息和命令
 为 Microsoft Windows 编写的应用程序是"驱动的消息。" 在响应鼠标单击、 击键、 窗口动作数等的事件，Windows 将消息发送到适当的窗口。 Framework 应用程序处理 Windows 消息与适用于 Windows 的任何其他应用程序一样。 但该框架还提供一些增强功能使处理消息更轻松、 更易于维护，并更好地封装。  

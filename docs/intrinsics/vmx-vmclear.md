@@ -1,12 +1,9 @@
 ---
-title: __vmx_vmclear | Microsoft Docs
-ms.custom: 
+title: __vmx_vmclear |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmclear
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323fcf37ee9ecc9e62abe5d6fdc30944e58862f8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 专用**  
@@ -49,7 +44,7 @@ unsigned char __vmx_vmclear(
   
 ## <a name="return-value"></a>返回值  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0|操作成功。|  
 |1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
@@ -60,7 +55,7 @@ unsigned char __vmx_vmclear(
   
  `__vmx_vmclear`函数等同于`VMCLEAR`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

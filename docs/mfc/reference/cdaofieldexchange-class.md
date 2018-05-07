@@ -1,12 +1,9 @@
 ---
-title: "CDaoFieldExchange 类 |Microsoft 文档"
-ms.custom: 
+title: CDaoFieldExchange 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 类
 支持 DAO 数据库类使用的 DAO 记录字段交换 (DFX) 例程。  
@@ -61,7 +56,7 @@ class CDaoFieldExchange
 |[CDaoFieldExchange::m_prs](#m_prs)|指向记录集的 DFX 执行操作的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CDaoFieldExchange`没有基类。  
+ `CDaoFieldExchange` 没有基类。  
   
  如果你正在编写自定义数据类型; 数据交换例程，使用此类否则，你将直接使用此类。 DFX 之间交换数据的字段数据成员你[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象和相应的字段中的数据源上的当前记录。 DFX 管理两个方向的交换，从数据源和数据源。 请参阅[技术注意 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)有关编写自定义 DFX 例程信息。  
   
@@ -71,7 +66,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  DAO 记录字段交换 (DFX) 是非常类似于基于 ODBC 的 MFC 数据库类中的记录字段交换 (RFX) ( `CDatabase`， `CRecordset`)。 如果你了解 RFX，你将发现易于使用 DFX。  
   
- A`CDaoFieldExchange`对象提供的上下文信息需要用于 DAO 记录字段交换做好准备。 `CDaoFieldExchange`对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员上执行 DFX 操作`enum` **FieldType**中`CDaoFieldExchange`。 可能**FieldType**的值为：  
+ A`CDaoFieldExchange`对象提供的上下文信息需要用于 DAO 记录字段交换做好准备。 `CDaoFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员上执行 DFX 操作`enum` **FieldType**中`CDaoFieldExchange`。 可能**FieldType**的值为：  
   
 - **CDaoFieldExchange::outputColumn**字段数据成员。  
   
@@ -82,10 +77,10 @@ class CDaoFieldExchange
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CDaoFieldExchange`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
-##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
  如果你编写你自己 DFX 函数，请调用`IsValidOperation`您确定是否可以对特定字段数据成员类型执行当前操作的函数的开头 ( **CDaoFieldExchange::outputColumn**或**CDaoFieldExchange::param**)。  
   
 ```  
@@ -100,7 +95,7 @@ BOOL IsValidOperation();
   
  有关编写自定义 DFX 例程的其他信息，请参阅[技术注意 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。  
   
-##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
  标识要执行的操作[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与字段 exchange 对象相关联的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -129,12 +124,12 @@ BOOL IsValidOperation();
 |**DumpField**|转储字段的内容 （仅限调试）。|  
 |**MaxDFXOperation**|用于输入检查。|  
   
-##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
  包含指向的[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与关联的对象`CDaoFieldExchange`对象。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
  调用`SetFieldType`中你`CDaoRecordset`类的`DoFieldExchange`重写。  
   
 ```  

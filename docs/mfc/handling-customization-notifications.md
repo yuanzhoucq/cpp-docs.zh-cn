@@ -2,12 +2,9 @@
 title: 处理自定义通知 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_CUSTHELP
 - TBN_QUERYINSERT
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。  
@@ -169,7 +164,7 @@ Windows 工具栏公共控件有内置的自定义功能，包括一个系统定
  与通知关联的按钮索引。  
   
  **tbButton**  
- `TBBUTTON`结构，它包含与通知关联的工具栏按钮有关的信息。  
+ `TBBUTTON` 结构，它包含与通知关联的工具栏按钮有关的信息。  
   
  **cchText**  
  按钮文本中的字符数。  

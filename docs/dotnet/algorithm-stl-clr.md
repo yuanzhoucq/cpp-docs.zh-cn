@@ -1,12 +1,9 @@
 ---
-title: "算法 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 算法 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/algorithm>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <algorithm> header [STL/CLR]
 - <cliext/algorithm> header [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7dac0e574122342c96b28a2f5ccbeb1ea5088ae9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e347905c6802e544cb9f81c045f9cc881f29fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 定义执行算法的 STL/CLR 容器模板函数。  
@@ -110,7 +105,7 @@ ms.lasthandoff: 12/21/2017
 |[unique_copy (STL/CLR)](../dotnet/unique-copy-stl-clr.md)|将源范围中的元素复制到目标范围，彼此相邻的重复元素除外。|  
 |[upper_bound (STL/CLR)](../dotnet/upper-bound-stl-clr.md)|在排序的范围中查找其值大于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  

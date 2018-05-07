@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2065 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2065 |Microsoft 文档
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2065
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20fee308a8ed9d237f8fc76df60964704c9c69d
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: 5e67fcac9593dc4ad11dbff0cc479ac24d624110
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2065"></a>编译器错误 C2065
 
@@ -87,7 +82,7 @@ int main() {
 
 ## <a name="example-precompiled-header-isnt-first"></a>预编译标头不第一个示例：
 
-如果你将任何预处理器指令，例如，可能出现此错误 #include，#define，或 #pragma 之前, #include 的预编译的头文件。 如果源文件使用预编译标头文件 (即，如果它通过编译**/Yu**编译器选项) 然后忽略预编译标头文件之前的所有预处理器指令。
+如果你将任何预处理器指令，例如，可能出现此错误 #include，#define，或 #pragma 之前, #include 的预编译的头文件。 如果源文件使用预编译标头文件 (即，如果它通过编译 **/Yu**编译器选项) 然后忽略预编译标头文件之前的所有预处理器指令。
 
 此示例无法进行编译因为`cout`和`endl`中定义\<iostream > 标头，因为它包含在预编译的头文件之前忽略。 若要生成此示例中，创建所有三个文件，然后编译 stdafx.cpp，然后编译 C2065_pch.cpp。
 

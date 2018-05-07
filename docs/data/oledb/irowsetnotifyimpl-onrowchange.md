@@ -1,12 +1,9 @@
 ---
-title: "Irowsetnotifyimpl:: Onrowchange |Microsoft 文档"
-ms.custom: 
+title: 'Irowsetnotifyimpl:: Onrowchange |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyImpl::OnRowChange
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - OnRowChange method
 ms.assetid: 148bee03-3707-4bbf-8c51-657efc63645f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ae629b0deec2f6b8cf533b41aec4ff3803117324
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8eae9d40b34adb6368b863f3534c5867a90979af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifyimplonrowchange"></a>IRowsetNotifyImpl::OnRowChange
 通知使用者的第一个更改行或任何更改的影响到整行。  
@@ -54,7 +49,7 @@ STDMETHOD(OnRowChange)(
 ## <a name="remarks"></a>备注  
  此方法会包装[irowsetnotify:: Onrowchange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)方法。 有关详细信息，请参阅“OLE DB 程序员参考”中对该方法的描述。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

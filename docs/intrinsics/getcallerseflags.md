@@ -1,12 +1,9 @@
 ---
-title: "__getcallerseflags |Microsoft 文档"
-ms.custom: 
+title: __getcallerseflags |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _getcallerseflags
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f90d7627267be551b2d3060e6b1b6315e08644cf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0f9cf2a0991b17cb980e60550f445b45c992fcbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getcallerseflags"></a>__getcallerseflags
 **Microsoft 专用**  
@@ -42,7 +37,7 @@ unsigned int __getcallerseflags(void);
 ## <a name="return-value"></a>返回值  
  从调用方的上下文 EFLAGS 值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

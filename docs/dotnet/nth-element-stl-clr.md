@@ -1,12 +1,9 @@
 ---
-title: "nth_element (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: nth_element (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::nth_element
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - nth_element function [STL/CLR]
 ms.assetid: 19fc1695-62a9-4f85-9920-d153c1c6481f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3bad46035c7d31250c6d4beddee70819f4a648e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4517ca62c7f7e376a13f2b3e02488d6c0256031a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 分区元素，正确找到范围`n`th 元素的范围中的序列以便前面遮挡它的所有元素都均小于或等于它以及按照序列中的所有元素都是大于或等于它。  
@@ -44,7 +39,7 @@ template<class _RanIt, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`nth_element`。 有关详细信息，请参阅[nth_element](../standard-library/algorithm-functions.md#nth_element)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  

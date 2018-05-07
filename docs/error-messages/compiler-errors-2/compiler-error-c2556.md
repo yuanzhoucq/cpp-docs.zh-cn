@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2556 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2556 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2556
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b04008d5ee6676cb7c8060dd9369274cbe01ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb090b932daa93c2c680d4ec871b36c78f09a7c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2556"></a>编译器错误 C2556
 identifier： 重载的函数的区别仅在于返回类型  

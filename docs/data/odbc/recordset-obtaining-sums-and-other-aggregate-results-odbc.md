@@ -1,13 +1,10 @@
 ---
-title: "记录集： 获取 Sum 及其他聚合结果 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 记录集： 获取 Sum 及其他聚合结果 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>记录集：获取 SUM 及其他聚合结果 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  若要获取有关数据源中的记录的统计信息而不是从数据源中提取的记录，你可以使用这些 SQL 函数。 记录集通常创建包含单个包含一个值的记录 （如果所有列都是聚合）。 (如果你使用可能是多个记录**GROUP BY**子句。)此值是由 SQL 函数执行的提取或计算的结果。  
   
 > [!TIP]
->  若要添加 SQL **GROUP BY**子句 (和可能**HAVING**子句) 到 SQL 语句，请将其追加到末尾**m_strFilter**。 例如:  
+>  若要添加 SQL **GROUP BY**子句 (和可能**HAVING**子句) 到 SQL 语句，请将其追加到末尾**m_strFilter**。 例如：  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  

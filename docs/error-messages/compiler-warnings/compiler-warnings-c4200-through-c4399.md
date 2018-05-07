@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 s C4200 Through C4399 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 s C4200 Through C4399 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>编译器警告 s C4200 Through C4399
 
@@ -139,8 +134,8 @@ ms.lasthandoff: 02/14/2018
 |[编译器警告（等级 4）C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|*数组*： 数组是太小，无法包括终止 null 字符|
 |[编译器警告（等级 4）C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|*运算符*： 表达式始终是*boolean_value*|
 |[编译器警告（等级 1）C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|*函数*： 假定函数不引发异常，但不会|
-|编译器警告 （等级 4） C4298|*标识符*： 类型库中的标识符*库*已宏; 重命名为*__identifier*|
-|编译器警告 （等级 4） C4299|*标识符*： 类型库中的标识符*库*是一个关键字; 重命名为*__identifier*|
+|编译器警告 （等级 4） C4298|*标识符*： 类型库中的标识符*库*已宏; 重命名为 *__identifier*|
+|编译器警告 （等级 4） C4299|*标识符*： 类型库中的标识符*库*是一个关键字; 重命名为 *__identifier*|
 |编译器警告 C4301|*derived_class*::*函数*： 仅重写虚函数不同于*base_class*::*函数*量/可变的限定符|
 |[编译器警告（等级 2）C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|*转换*： 从截断*type1*到*type2*|
 |编译器警告 C4303|C 样式强制转换从*type1*到*type2*是已弃用，使用静态\_强制转换， \_\_重\_强制转换或动态\_强制转换|
@@ -175,7 +170,7 @@ ms.lasthandoff: 02/14/2018
 |[编译器警告（等级 4）C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|导入交叉引用的类型库*library1*再导入*library2*|
 |[编译器警告（等级 4）C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|交叉引用的类型库*library1*in*library2*正在自动导入|
 |编译器警告 （等级 4） C4338|#pragma*指令*： 标准部分*部分*使用|
-|[编译器警告（等级 4）C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|*类型*： 未定义的类型中检测到使用 WinRT &#124;CLR 元数据-使用此类型可能导致运行时异常|
+|[编译器警告（等级 4）C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|*类型*： 未定义的类型中检测到使用 WinRT&#124;CLR 元数据-使用此类型可能导致运行时异常|
 |[编译器警告（等级 1）C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|*值*： 值由正值切换为负值|
 |[编译器警告（等级 1）C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|行为更改:*函数*调用，但在早期版本中调用时是成员运算符|
 |编译器警告 （等级 4） C4343|#pragma optimize("g",off) 重写 /Og 选项|
@@ -221,6 +216,6 @@ ms.lasthandoff: 02/14/2018
 |[编译器警告 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|*函数*： 不应与 __declspec('dllexport') 标记为每个 appdomain 符号|
 |[编译器警告（等级 1）C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|*函数*： 成员函数将调用上一份 initonly 数据成员*成员*|
 |编译器警告 （等级 2） C4396|*函数*： 友元声明引用函数模板的专用化时，不能使用内联说明符|
-|[编译器警告（等级 1）C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute is ignored|
+|[编译器警告（等级 1）C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|忽略 DefaultCharSetAttribute|
 |[编译器警告（等级 3）C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|*变量*： 每个进程的全局对象可能无法与多个 appdomain 进行正常工作; 请考虑使用 __declspec(appdomain)|
 |[编译器警告（等级 1）C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|*符号*： 不应与使用 /clr 进行编译时的 __declspec('dllimport') 标记为每个进程的符号： 纯|

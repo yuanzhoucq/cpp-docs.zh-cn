@@ -1,12 +1,9 @@
 ---
-title: "映射 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 映射 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`map`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  其中：  
   
- `GKey`等同于`Key`后者为 ref 类型，除非在此情况下它是`Key^`  
+ `GKey` 等同于`Key`后者为 ref 类型，除非在此情况下它是 `Key^`  
   
- `GMapped`等同于`Mapped`后者为 ref 类型，除非在此情况下它是`Mapped^`  
+ `GMapped` 等同于`Mapped`后者为 ref 类型，除非在此情况下它是 `Mapped^`  
   
 ## <a name="syntax"></a>语法  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  此类委托对象必须进行严格弱排序键的类型在施加[map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `key_comp()(X, Y)`返回相同的布尔值导致每次调用。  
+ `key_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
   
  如果`key_comp()(X, Y)`为 true，然后`key_comp()(Y, X)`必须是 false。  
   
@@ -163,7 +158,7 @@ template<typename Key,
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  

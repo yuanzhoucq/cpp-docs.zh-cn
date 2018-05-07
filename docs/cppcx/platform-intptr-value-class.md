@@ -1,11 +1,8 @@
 ---
-title: "Platform:: intptr 值类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: intptr 值类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/PlatformIntPtr::IntPtr
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93263e1347857b9c78a62852bea96e10c8d68fac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 值类
 表示一个签名指针或句柄，并且其大小特定于平台（32 位或 64 位）。  
@@ -46,7 +41,7 @@ public value struct IntPtr
 |[IntPtr::op_explicit 运算符](#op-explicit)|将指定参数转换为 IntPtr 或指向 IntPtr 值的指针。|  
 |[IntPtr::ToInt32](#toint32)|将当前 IntPtr 转换为 32 位整数。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  

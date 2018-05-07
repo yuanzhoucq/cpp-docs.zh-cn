@@ -1,13 +1,10 @@
 ---
-title: "创建 CToolBarCtrl 对象 |Microsoft 文档"
-ms.custom: 
+title: 创建 CToolBarCtrl 对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c5e2ee8c0e2239de86252b3d0fb8ec0ab7cc182
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>创建 CToolBarCtrl 对象
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象包含多个内部数据结构-按钮图像位图的列表、 按钮标签字符串的列表和列表`TBBUTTON`结构 — 也就是说将一个图像关联和/或带有位置、 样式、 状态、 字符串和命令 ID 的按钮。 每个这些数据结构的元素被由从零开始的索引。 你可以使用之前`CToolBarCtrl`对象，则必须将这些数据结构设置。 数据结构的列表，请参阅[工具栏控件](controls-mfc.md)Windows SDK 中。 字符串的列表可以仅用于按钮标签;从工具栏中，无法检索字符串。  

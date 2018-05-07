@@ -1,12 +1,9 @@
 ---
-title: "CDataPathProperty 类 |Microsoft 文档"
-ms.custom: 
+title: CDataPathProperty 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f258f5872a68931a40d21f7079e4089678baac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2559b4917f16bb8ddc49b73ace8bda6e1a9bafc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 实现可异步加载的 OLE 控件属性。  
@@ -93,10 +88,10 @@ class CDataPathProperty : public CAsyncMonikerFile
   
  `CDataPathProperty`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxctl.h  
   
-##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>  CDataPathProperty::CDataPathProperty  
  构造 `CDataPathProperty` 对象。  
   
 ```  
@@ -109,12 +104,12 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
  指向 OLE 控件对象要与此相关联的`CDataPathProperty`对象。  
   
  `lpszPath`  
- 路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CDataPathProperty`使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
+ 路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CDataPathProperty` 使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
   
 ### <a name="remarks"></a>备注  
  `COleControl`指向对象`pControl`由**打开**和检索由派生类。 如果`pControl`是**NULL**，与所使用的控件**打开**应与设置`SetControl`。 如果`lpszPath`是**NULL**，可以在路径中，通过传递**打开**或将其与设置`SetPath`。  
   
-##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
  调用此成员函数可检索`COleControl`与关联的对象`CDataPathProperty`对象。  
   
 ```  
@@ -124,7 +119,7 @@ COleControl* GetControl();
 ### <a name="return-value"></a>返回值  
  返回指向 OLE 控件的指针与关联`CDataPathProperty`对象。 **NULL**如果不控件关联。  
   
-##  <a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>  CDataPathProperty::GetPath  
  调用此成员函数可检索的路径、 时设置`CDataPathProperty`对象已构造的或在指定**打开**，或对上一个调用中指定`SetPath`成员函数。  
   
 ```  
@@ -134,7 +129,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>返回值  
  返回于属性自身的路径名。 如果可以为空指定没有路径。  
   
-##  <a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>  CDataPathProperty::Open  
  调用此成员函数可启动的关联控件的异步属性加载。  
   
 ```  
@@ -164,7 +159,7 @@ virtual BOOL Open(CFileException* pError = NULL);
  指向文件异常的指针。 发生错误时将设置的原因。  
   
  `lpszPath`  
- 路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CDataPathProperty`使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
+ 路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CDataPathProperty` 使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -178,7 +173,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  所有重载[CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open)还可以从中`CDataPathProperty`。  
   
-##  <a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>  CDataPathProperty::ResetData  
  调用此函数可获取`CAsyncMonikerFile::OnDataAvailable`以通知容器的控件属性已发生更改，并以异步方式加载的所有信息都都不再有用。  
   
 ```  
@@ -188,7 +183,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>备注  
  打开应重新启动。 派生的类可以重写此函数以使用不同的默认值。  
   
-##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>  CDataPathProperty::SetControl  
  调用此成员函数可将具有的异步 OLE 控件相关联`CDataPathProperty`对象。  
   
 ```  
@@ -199,7 +194,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  指向要与属性关联的异步 OLE 控件的指针。  
   
-##  <a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>  CDataPathProperty::SetPath  
  调用此成员函数可设置的属性的路径名。  
   
 ```  
@@ -208,7 +203,7 @@ void SetPath(LPCTSTR lpszPath);
   
 ### <a name="parameters"></a>参数  
  `lpszPath`  
- 路径，这可能是绝对或相对，异步加载的属性。 `CDataPathProperty`使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
+ 路径，这可能是绝对或相对，异步加载的属性。 `CDataPathProperty` 使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例图像](../../visual-cpp-samples.md)   

@@ -2,11 +2,8 @@
 title: 'multiset:: count (STL/CLR) |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::count
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - count member [STL/CLR]
 ms.assetid: 6c668667-0047-4101-8dfc-0f538655b3d1
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 149d32a171167d1c75ecbc2f357c2380eb4f4a88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f23dc382668a3866a1a85d7ce16b7d5b5f84d99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetcount-stlclr"></a>multiset::count (STL/CLR)
 查找与指定键匹配的元素数。  
@@ -79,7 +74,7 @@ count(L'b') = 1
 count(L'C') = 0  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

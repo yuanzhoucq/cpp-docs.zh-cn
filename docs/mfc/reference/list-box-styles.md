@@ -1,13 +1,10 @@
 ---
-title: "列表框样式 |Microsoft 文档"
-ms.custom: 
+title: 列表框样式 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LBS_STANDARD
 - LBS_NODATA
@@ -46,17 +43,15 @@ helpviewer_keywords:
 - LBS_NOINTEGRALHEIGHT constant [MFC]
 - LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f52734e26d1965811aded67bc1e1dde6a2c28bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90441984aa8212212c3a9d4ea99cfb5b36127a03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-box-styles"></a>列表框样式
 -   **LBS_DISABLENOSCROLL**列表框中显示一个禁用的垂直滚动条的列表框中不包含足够的项，滚动。 如果不使用此样式，则当列表框未包含足够的项时，将会隐藏滚动条。  

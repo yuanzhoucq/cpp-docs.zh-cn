@@ -1,13 +1,10 @@
 ---
-title: "CDaoIndexInfo 结构 |Microsoft 文档"
-ms.custom: 
+title: CDaoIndexInfo 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 结构
 `CDaoIndexInfo`结构包含有关为数据访问对象 (DAO) 定义的索引对象的信息。  
@@ -110,11 +105,11 @@ struct CDaoIndexInfo {
   
  索引对象不由 MFC 类表示。 相反，DAO 对象类的基础 MFC 对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含称为索引集合的索引对象的集合。 这些类提供成员函数来访问各个项的索引信息，或可以访问其在一次与`CDaoIndexInfo`对象通过调用`GetIndexInfo`包含对象的成员函数。  
   
- `CDaoIndexInfo`具有一个构造函数和析构函数以正确地分配和释放中的索引字段信息`m_pFieldInfos`。  
+ `CDaoIndexInfo` 具有一个构造函数和析构函数以正确地分配和释放中的索引字段信息`m_pFieldInfos`。  
   
- 检索的信息`GetIndexInfo`成员函数的 tabledef 对象存储在`CDaoIndexInfo`结构。 调用`GetIndexInfo`包含 tabledef 对象的索引集合中存储索引对象的成员函数。 `CDaoIndexInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoIndexInfo`对象。  
+ 检索的信息`GetIndexInfo`成员函数的 tabledef 对象存储在`CDaoIndexInfo`结构。 调用`GetIndexInfo`包含 tabledef 对象的索引集合中存储索引对象的成员函数。 `CDaoIndexInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoIndexInfo`对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

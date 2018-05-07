@@ -1,12 +1,9 @@
 ---
-title: "CDocItem 类 |Microsoft 文档"
-ms.custom: 
+title: CDocItem 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>CDocItem 类
 属于文档数据一部分的文档项的基类。  
@@ -50,7 +45,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|确定项目是否包含任何信息。|  
   
 ## <a name="remarks"></a>备注  
- `CDocItem`对象用于表示在客户端和服务器文档中的 OLE 项。  
+ `CDocItem` 对象用于表示在客户端和服务器文档中的 OLE 项。  
   
  有关详细信息，请参阅文章[容器： 实现容器](../../mfc/containers-implementing-a-container.md)。  
   
@@ -61,10 +56,10 @@ class CDocItem : public CCmdTarget
   
  `CDocItem`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  调用此函数可获取包含项的文档。  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>备注  
  此函数在派生类中重写[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)，返回一个指向为[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)对象。  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  默认序列化时，由框架调用。  
   
 ```  

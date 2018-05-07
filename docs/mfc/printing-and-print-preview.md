@@ -1,13 +1,10 @@
 ---
-title: "打印和打印预览 |Microsoft 文档"
-ms.custom: 
+title: 打印和打印预览 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedcf1ecf851ed6d9dd396ee6a82d6d2c058930b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a26bac196dbddc6c05df5850225d05f432bc566
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing-and-print-preview"></a>打印和打印预览
 MFC 支持通过类的程序的文档打印和打印预览[CView](../mfc/reference/cview-class.md)。 针对基本打印和打印预览，只需重写视图类的[OnDraw](../mfc/reference/cview-class.md#ondraw)成员函数，你仍必须执行操作。 该函数可以绘制到在屏幕上，到实际的打印机，是打印机设备上下文的视图或，模拟您在屏幕上的打印机设备上下文。  

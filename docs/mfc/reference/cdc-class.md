@@ -2,11 +2,8 @@
 title: CDC 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC 类
 定义设备上下文对象的类。  
@@ -687,7 +682,7 @@ class CDC : public CObject
   
  `CDC`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
 ##  <a name="abortdoc"></a>  CDC::AbortDoc  
@@ -806,7 +801,7 @@ BOOL AlphaBlend(
  `nSrcHeight`  
  指定逻辑单位，源矩形的高度。  
   
- *blend*  
+ *Blend*  
  指定[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -2938,7 +2933,7 @@ DWORD GetGlyphOutline(
  `nFormat`  
  指定在其中的功能是返回的信息的格式。 它可以是以下值之一，或 0:  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |**GGO_BITMAP**|返回的标志符号位图。 当函数返回时，通过指向的缓冲区`lpBuffer`包含其行在字边界启动一个 1 位每个像素的位图。|  
 |**GGO_NATIVE**|返回在光栅化程序的本机格式，使用设备单元中的曲线数据点。 指定此值，当中指定的任何转换`lpmat2`将被忽略。|  
@@ -5198,7 +5193,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ### <a name="remarks"></a>备注  
  如果应用程序是允许在后台处理期间取消打印作业，打印作业开始使用之前，它必须设置中止函数[StartDoc](#startdoc)成员函数。 打印管理器允许应用程序取消打印作业或处理的磁盘空间不足条件的后台处理过程中调用中止函数。 如果设置中止函数，打印作业将失败，如果没有足够的磁盘空间用于后台打印。  
   
- 请注意 Microsoft Visual c + + 的功能简化传递给回调函数的创建`SetAbortProc`。 地址传递给`EnumObjects`成员函数是指向与导出的函数的指针**__declspec （dllexport)**与`__stdcall`调用约定。  
+ 请注意 Microsoft Visual c + + 的功能简化传递给回调函数的创建`SetAbortProc`。 地址传递给`EnumObjects`成员函数是指向与导出的函数的指针 **__declspec （dllexport)** 与`__stdcall`调用约定。  
   
  您还不需要导出中的函数名称**导出**应用程序的模块定义文件中的语句。 你可以改用**导出**函数修饰符，如  
   
@@ -5235,7 +5230,7 @@ int SetArcDirection(int nArcDirection);
 |---------|---------|  
 |`ArcTo`|**矩形**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**椭圆**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  调用此函数可设置特性设备上下文， `m_hAttribDC`。  
@@ -5317,7 +5312,7 @@ UINT SetBoundsRect(
 - **DCB_ENABLE**开启边界累积。 （边界累积的默认设置为禁用）。  
   
 ### <a name="return-value"></a>返回值  
- 边界矩形，如果该函数成功当前状态。 如`flags`，返回值可以是组合**DCB_**值：  
+ 边界矩形，如果该函数成功当前状态。 如`flags`，返回值可以是组合**DCB_** 值：  
   
 - **DCB_ACCUMULATE**的边框不为空。 此值将始终设置。  
   
@@ -5440,7 +5435,7 @@ DWORD SetLayout(DWORD dwLayout);
  `dwLayout`  
  设备上下文布局和位图控制标志。 它可以是以下值的组合。  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |LAYOUT_BITMAPORIENTATIONPRESERVED|禁用对调用任何反射[cdc:: bitblt](#bitblt)和[CDC::StretchBlt](#stretchblt)。|  
 |LAYOUT_RTL|设置默认水平布局为从右向左。|  
@@ -5706,7 +5701,7 @@ int SetStretchBltMode(int nStretchMode);
  *nStretchMode*  
  指定的拉伸模式。 它可以是任何以下值：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**BLACKONWHITE**|执行布尔 AND 运算使用的已清除的和现有的像素的颜色值。 如果位图是单色位图，此模式会保留代价白色像素是黑色像素。|  
 |**COLORONCOLOR**|删除像素。 此模式下不尝试保留其信息的情况下删除所有消除了的行的像素为单位。|  

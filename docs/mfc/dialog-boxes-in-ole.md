@@ -1,13 +1,10 @@
 ---
-title: "OLE 中的对话框 |Microsoft 文档"
-ms.custom: 
+title: OLE 中的对话框 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的对话框
 在用户运行 OLE 启用应用程序，可以在应用程序时才能执行的操作需要从用户的信息的时间。 MFC OLE 类提供了许多的对话框，以收集所需的信息。 本主题列出由 OLE 对话框的任务和显示这些对话框所需的类。 OLE 对话框和用于自定义其行为的结构的详细信息，请参阅[MFC 参考](../mfc/mfc-desktop-applications.md)。  

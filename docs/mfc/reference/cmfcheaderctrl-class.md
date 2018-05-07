@@ -1,12 +1,9 @@
 ---
-title: "CMFCHeaderCtrl 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCHeaderCtrl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCHeaderCtrl
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8b95b161704d5d5b2ca56e22cfe818e4785d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcheaderctrl-class"></a>CListCtrl
 `CMFCHeaderCtrl`类支持对标题控件中的多个列进行排序。  
@@ -110,10 +105,10 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxheaderctrl.h  
   
-##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
+##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
  构造 `CMFCHeaderCtrl` 对象。  
   
 ```  
@@ -123,7 +118,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 ### <a name="remarks"></a>备注  
  此构造函数初始化为指定值的以下成员变量：  
   
-|成员变量|“值”|  
+|成员变量|值|  
 |---------------------|-----------|  
 |`m_bIsMousePressed`|`FALSE`|  
 |`m_bMultipleSort`|`FALSE`|  
@@ -133,7 +128,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
  启用或禁用*多个列的排序*当前标头控件模式。  
   
 ```  
@@ -142,12 +137,12 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bEnable`  
- `TRUE`若要启用多个列排序模式;`FALSE`要禁用多个列排序模式，以便从已排序的列的列表删除任何列。 默认值为 `TRUE`。  
+ `TRUE` 若要启用多个列排序模式;`FALSE`要禁用多个列排序模式，以便从已排序的列的列表删除任何列。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
  此方法用于启用或禁用多个列排序模式。 如果标头控件在多个列排序模式下，两个或多个列可以加入排序。  
   
-##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
+##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
  指示列未排序，还是按升序或降序排序。  
   
 ```  
@@ -161,7 +156,7 @@ int GetColumnState(int iColumn) const;
 ### <a name="return-value"></a>返回值  
  一个值，指示指定的列的排序状态。 下表列出可能的值：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |-1|按降序排列。|  
 |0|未排序。|  
@@ -169,7 +164,7 @@ int GetColumnState(int iColumn) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
+##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
  检索第一个排序的列标题控件中的从零开始索引。  
   
 ```  
@@ -182,7 +177,7 @@ int GetSortColumn() const;
 ### <a name="remarks"></a>备注  
  如果标头控件处于*多个列的排序*模式，并且您编译在调试模式下，应用程序，此方法断言，建议您使用[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)方法相反。 如果标头控件处于多个列排序模式，并且编译零售模式中的应用程序，此方法将返回-1。  
   
-##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
+##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
  指示是否以升序排序标头控件中的任何列。  
   
 ```  
@@ -190,12 +185,12 @@ BOOL IsAscending() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果标头控件中的任何列按升序排序;否则为`FALSE`。  
+ `TRUE` 如果标头控件中的任何列按升序排序;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  此方法返回的值用于在标头控件项上显示的相应排序箭头。 使用[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)方法以设置排序顺序。  
   
-##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
  指示当前的标头控件的父窗口是否是一个对话框。  
   
 ```  
@@ -203,9 +198,9 @@ BOOL IsDialogControl() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果当前的标头控件的父窗口对话框;否则为`FALSE`。  
+ `TRUE` 如果当前的标头控件的父窗口对话框;否则为`FALSE`。  
   
-##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
  指示当前的标头控件是否处于*多个列的排序*模式。  
   
 ```  
@@ -213,12 +208,12 @@ BOOL IsMultipleSort() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果启用了多个列排序模式;否则为`FALSE`。  
+ `TRUE` 如果启用了多个列排序模式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)方法来启用或禁用多个列排序模式。 如果标头控件在多个列排序模式下，两个或多个列可以加入排序。  
   
-##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
+##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
  由框架调用以绘制标头控件列。  
   
 ```  
@@ -241,12 +236,12 @@ virtual void OnDrawItem(
  要绘制的项的边框。  
   
  [in] `bIsPressed`  
- `TRUE`若要在按下状态，则绘制项否则为`FALSE`。  
+ `TRUE` 若要在按下状态，则绘制项否则为`FALSE`。  
   
  [in] `bIsHighlighted`  
- `TRUE`若要绘制突出显示的状态; 中的项否则为`FALSE`。  
+ `TRUE` 若要绘制突出显示的状态; 中的项否则为`FALSE`。  
   
-##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
+##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  由框架调用以绘制的排序箭头。  
   
 ```  
@@ -262,7 +257,7 @@ virtual void OnDrawSortArrow(
  [in] `rectArrow`  
  排序箭头的绑定矩形。  
   
-##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  由框架调用以填充背景的标头控件列。  
   
 ```  
@@ -275,7 +270,7 @@ virtual void OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
  从列排序的列表中移除指定的列。  
   
 ```  
@@ -286,7 +281,7 @@ void RemoveSortColumn(int iColumn);
  [in] `iColumn`  
  要删除的列的从零开始的索引。  
   
-##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  标题控件中设置指定列的排序顺序。  
   
 ```  
@@ -301,16 +296,16 @@ void SetSortColumn(
  标头控件列的从零开始的索引。 如果此参数小于零，此方法从对列进行排序的列表中删除所有列。  
   
  [in] `bAscending`  
- 指定列的排序顺序，`iColumn`参数指定。 `TRUE`若要设置升序;`FALSE`设置降序排序。 默认值为 `TRUE`。  
+ 指定列的排序顺序，`iColumn`参数指定。 `TRUE` 若要设置升序;`FALSE`设置降序排序。 默认值为 `TRUE`。  
   
  [in] `bAdd`  
- `TRUE`到的列的排序顺序设置`iColumn`参数指定。  
+ `TRUE` 到的列的排序顺序设置`iColumn`参数指定。  
   
  如果当前的标头控件处于*多个列的排序*模式下，此方法将指定的列添加到列排序的列表。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)设置多个列排序模式。  
   
  如果未设置多个列排序模式，并且此方法已编译在调试模式下，此方法将断言。 如果未设置多个列排序模式，并且此方法在发布模式编译，此方法首先从排序列的列表中删除所有列，然后将指定的列添加到列表。  
   
- `FALSE`首先从排序列的列表中删除所有列，然后添加到列表的指定的列。 默认值为 `FALSE`。  
+ `FALSE` 首先从排序列的列表中删除所有列，然后添加到列表的指定的列。 默认值为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
  使用此方法设置列的排序顺序。 如有必要，此方法会将列添加到的列排序的列表。 标头控件使用的排序顺序绘制点向上或向下一个排序箭头。  

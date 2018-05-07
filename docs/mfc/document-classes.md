@@ -1,13 +1,10 @@
 ---
-title: "文档类 |Microsoft 文档"
-ms.custom: 
+title: 文档类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2436b46b7486bd30398dffc530d2adea3d2e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-classes"></a>文档类
 创建的文档模板对象的文档类对象管理应用程序的数据。 从这些类之一，将为你的文档中派生一个类。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  维护 rich edit 控件中的 OLE 客户端项的列表。 与使用[CRichEditView](../mfc/reference/cricheditview-class.md)和[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)。  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 服务器应用程序文档类用作基类。 `COleServerDoc`对象提供通过与交互的服务器支持大量[COleServerItem](../mfc/reference/coleserveritem-class.md)对象。 使用类库的文档/视图体系结构提供可视编辑功能。  
+ 服务器应用程序文档类用作基类。 `COleServerDoc` 对象提供通过与交互的服务器支持大量[COleServerItem](../mfc/reference/coleserveritem-class.md)对象。 使用类库的文档/视图体系结构提供可视编辑功能。  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
  提供，与[CHtmlEditView](../mfc/reference/chtmleditview-class.md)，MFC 文档视图体系结构上下文中的 WebBrowser HTML 编辑平台功能。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
  [CArchive](../mfc/reference/carchive-class.md)  
  配合[CFile](../mfc/reference/cfile-class.md)对象来实现通过序列化的对象的持久存储 (请参阅[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize))。  
   
- 文档还可以包含 OLE 对象。 `CDocItem`是服务器和客户端项的基类。  
+ 文档还可以包含 OLE 对象。 `CDocItem` 是服务器和客户端项的基类。  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  抽象基类的[COleClientItem](../mfc/reference/coleclientitem-class.md)和[COleServerItem](../mfc/reference/coleserveritem-class.md)。 对象的类派生自`CDocItem`表示文档的某些部分。  

@@ -1,12 +1,9 @@
 ---
-title: "CHeaderCtrl 类 |Microsoft 文档"
-ms.custom: 
+title: CHeaderCtrl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 提供 Windows 公共标头控件的功能。  
@@ -163,10 +158,10 @@ class CHeaderCtrl : public CWnd
   
  `CHeaderCtrl`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
  构造 `CHeaderCtrl` 对象。  
   
 ```  
@@ -176,7 +171,7 @@ CHeaderCtrl();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
  清除所有筛选器的标头控件。  
   
 ```  
@@ -192,7 +187,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
  清除标头控件的筛选器。  
   
 ```  
@@ -212,7 +207,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl::Create  
+##  <a name="create"></a>  CHeaderCtrl::Create  
  创建一个标头控件并将其附加到`CHeaderCtrl`对象。  
   
 ```  
@@ -244,17 +239,17 @@ virtual BOOL Create(
   
  除了标头控件样式，你可以使用以下常见的控件样式确定如何标头控件定位并调整自身大小 (请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)有关详细信息):  
   
-- `CCS_BOTTOM`使控件来为自身定位在的父窗口工作区底部和设置窗口的宽度的宽度与父项相同。  
+- `CCS_BOTTOM` 使控件来为自身定位在的父窗口工作区底部和设置窗口的宽度的宽度与父项相同。  
   
-- `CCS_NODIVIDER`防止两个像素突出显示绘制控件的顶部。  
+- `CCS_NODIVIDER` 防止两个像素突出显示绘制控件的顶部。  
   
-- `CCS_NOMOVEY`将导致控件调整大小并在响应中水平，但不是垂直移动本身`WM_SIZE`消息。 如果`CCS_NORESIZE`样式时，此样式不适用。 标头控件默认具有此样式。  
+- `CCS_NOMOVEY` 将导致控件调整大小并在响应中水平，但不是垂直移动本身`WM_SIZE`消息。 如果`CCS_NORESIZE`样式时，此样式不适用。 标头控件默认具有此样式。  
   
-- `CCS_NOPARENTALIGN`防止自动移动到顶部或底部父窗口的控件。 相反，则控件将其位置尽管有所变化的父窗口中保持为父窗口的大小。 如果`CCS_TOP`或`CCS_BOTTOM`还使用样式，高度将会调整为默认值，但的位置和宽度保持不变。  
+- `CCS_NOPARENTALIGN` 防止自动移动到顶部或底部父窗口的控件。 相反，则控件将其位置尽管有所变化的父窗口中保持为父窗口的大小。 如果`CCS_TOP`或`CCS_BOTTOM`还使用样式，高度将会调整为默认值，但的位置和宽度保持不变。  
   
-- `CCS_NORESIZE`在设置其初始大小或新的大小时使用的默认宽度和高度将阻止该控件。 相反，该控件使用的宽度和高度的创建或调整请求中指定。  
+- `CCS_NORESIZE` 在设置其初始大小或新的大小时使用的默认宽度和高度将阻止该控件。 相反，该控件使用的宽度和高度的创建或调整请求中指定。  
   
-- `CCS_TOP`使控件来为自身定位在父窗口工作区的顶部和设置窗口的宽度的宽度与父项相同。  
+- `CCS_TOP` 使控件来为自身定位在父窗口工作区的顶部和设置窗口的宽度的宽度与父项相同。  
   
  你还可以应用以下的窗口样式到标题控件 (请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)有关详细信息):  
   
@@ -273,7 +268,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
  创建控件 （子窗口），并将其与关联`CHeaderCtrl`对象。  
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是**创建**将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
-##  <a name="createdragimage"></a>Cheaderctrl:: Createdragimage  
+##  <a name="createdragimage"></a>  Cheaderctrl:: Createdragimage  
  创建标头控件内的项的图像的透明版本。  
   
 ```  
@@ -326,7 +321,7 @@ CImageList* CreateDragImage(int nIndex);
   
  `CImageList`对象向其返回的指针点是临时对象，并在下一步的空闲时间处理过程中删除。  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
  标头控件中删除的项。  
   
 ```  
@@ -343,7 +338,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
  由框架在所有者绘制标头控件的变化的可视方面时调用。  
   
 ```  
@@ -364,7 +359,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
  开始编辑标头控件的指定的筛选器。  
   
 ```  
@@ -391,7 +386,7 @@ BOOL EditFilter(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
  检索的边距标题控件中的位图的宽度。  
   
 ```  
@@ -407,7 +402,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
  获取在当前的标头控件具有焦点的项的索引。  
   
 ```  
@@ -430,7 +425,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
  检索图像列表用于标题控件中绘制标头项的句柄。  
   
 ```  
@@ -446,7 +441,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>Cheaderctrl:: Getitem  
+##  <a name="getitem"></a>  Cheaderctrl:: Getitem  
  检索有关的标头控件项信息。  
   
 ```  
@@ -468,7 +463,7 @@ BOOL GetItem(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
  检索在标头控件中项的计数。  
   
 ```  
@@ -481,7 +476,7 @@ int GetItemCount() const;
 ### <a name="example"></a>示例  
   请参阅示例[CHeaderCtrl::DeleteItem](#deleteitem)。  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
  获取当前的标头控件中的标头项下拉按钮的边框。  
   
 ```  
@@ -498,7 +493,7 @@ BOOL GetItemDropDownRect(
 |[out] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
- `true`如果成功，则此函数否则为`false`。  
+ `true` 如果成功，则此函数否则为`false`。  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339)消息，Windows SDK 中介绍。  
@@ -513,7 +508,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
  检索给定标头控件中项的边框。  
   
 ```  
@@ -535,7 +530,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>备注  
  此方法实现的行为的 Win32 消息[HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341)，如 Windows SDK 中所述。  
   
-##  <a name="getorderarray"></a>Cheaderctrl:: Getorderarray  
+##  <a name="getorderarray"></a>  Cheaderctrl:: Getorderarray  
  检索标头控件中的项的从左到右顺序。  
   
 ```  
@@ -560,7 +555,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
  获取当前的标头控件的溢出按钮的边框。  
   
 ```  
@@ -574,7 +569,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 |[out] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
- `true`如果成功，则此函数否则为`false`。  
+ `true` 如果成功，则此函数否则为`false`。  
   
 ### <a name="remarks"></a>备注  
  如果标头控件包含比可同时显示多个项，该控件可以显示滚动溢出按钮的不可见的项。 标头控件必须具有`HDS_OVERFLOW`和`HDF_SPLITBUTTON`样式以显示溢出按钮。 边界的矩形包含溢出按钮，以及存在仅当显示溢出按钮。 有关详细信息，请参阅[标头控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775241)。  
@@ -591,7 +586,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
  确定哪些标头项，如果有的话，位于指定点处。  
   
 ```  
@@ -620,7 +615,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>Cheaderctrl:: Insertitem  
+##  <a name="insertitem"></a>  Cheaderctrl:: Insertitem  
  将新项插入到指定索引处的标头控件。  
   
 ```  
@@ -642,7 +637,7 @@ int InsertItem(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl::Layout  
+##  <a name="layout"></a>  CHeaderCtrl::Layout  
  检索的大小和位置标头控件的给定矩形范围内。  
   
 ```  
@@ -662,7 +657,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>Cheaderctrl:: Ordertoindex  
+##  <a name="ordertoindex"></a>  Cheaderctrl:: Ordertoindex  
  检索基于在标头控件中的顺序的项目的索引值。  
   
 ```  
@@ -679,7 +674,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 宏[HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355)，如 Windows SDK 中所述。 它可用于支持标头项排序。  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  标题控件中设置的边距的位图的宽度。  
   
 ```  
@@ -699,7 +694,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
  中的筛选器属性发生更改的时间与发布之间的超时间隔设置[HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277)通知。  
   
 ```  
@@ -719,7 +714,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
  将焦点设置到当前的标头控件中指定的标头项。  
   
 ```  
@@ -748,7 +743,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
  标头项以指示手动之间的分隔线将拖动的更改和标头项的 drop。  
   
 ```  
@@ -772,7 +767,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>CHeaderCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList  
  将图像列表分配到标题控件中。  
   
 ```  
@@ -792,7 +787,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>示例  
   请参阅示例[CHeaderCtrl::GetImageList](#getimagelist)。  
   
-##  <a name="setitem"></a>Cheaderctrl:: Setitem  
+##  <a name="setitem"></a>  Cheaderctrl:: Setitem  
  标题控件中设置指定的项的属性。  
   
 ```  
@@ -814,7 +809,7 @@ BOOL SetItem(
 ### <a name="example"></a>示例  
   请参阅示例[cheaderctrl:: Getitem](#getitem)。  
   
-##  <a name="setorderarray"></a>Cheaderctrl:: Setorderarray  
+##  <a name="setorderarray"></a>  Cheaderctrl:: Setorderarray  
  标题控件中设置的项的从左到右的顺序。  
   
 ```  

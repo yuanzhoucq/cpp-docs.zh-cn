@@ -1,13 +1,10 @@
 ---
-title: "创建 CArchive 对象两种方法 |Microsoft 文档"
-ms.custom: 
+title: 创建 CArchive 对象两种方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>创建 CArchive 对象的两种方法
 可通过两种方法创建 `CArchive` 对象：  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [显式创建 CArchive 对象](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>隐式创建框架通过 CArchive 对象  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> 隐式创建框架通过 CArchive 对象  
  最常见的且最简单，方法是让创建的框架`CArchive`保存、 另存为和文件菜单上的打开命令代表文档的对象。  
   
  下面是框架时你的应用程序的用户发出文件菜单中的另存为命令的用途：  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  因此，如果你让创建的框架`CArchive`对象对于你的文档，所要做是实现文档的`Serialize`写入和读取到和从存档的函数。 你还必须实现`Serialize`任何`CObject`-派生对象的文档的`Serialize`直接或间接函数反过来序列化。  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>显式创建 CArchive 对象  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> 显式创建 CArchive 对象  
  除了通过该框架将文档序列化，有可能需要其他情况下`CArchive`对象。 例如，你可能想要序列化数据传入和传出剪贴板，由表示`CSharedFile`对象。 或者，你可能想要用于保存从框架所提供的一个不同的文件的用户界面。 在这种情况下，你可以显式创建`CArchive`对象。 你执行此相同的方式框架执行的操作，使用以下过程。  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>若要显式创建 CArchive 对象  

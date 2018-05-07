@@ -1,12 +1,9 @@
 ---
-title: CAccessorRowset::GetColumnInfo | Microsoft Docs
-ms.custom: 
+title: 'Caccessorrowset:: Getcolumninfo |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetColumnInfo
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetColumnInfo method
 ms.assetid: 8ade2388-3c58-43cd-8ed6-499ee0531291
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c199712a270af8c73b49d33e1649de441e4077e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 46f645ba2f662cad38fa962cea543f7530418530
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorrowsetgetcolumninfo"></a>CAccessorRowset::GetColumnInfo
 从打开的行集中获取列信息。  
@@ -55,7 +50,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
   
  有关详细信息，请参阅[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程序员参考*。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

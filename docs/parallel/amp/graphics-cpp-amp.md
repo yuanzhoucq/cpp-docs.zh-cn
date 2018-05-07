@@ -1,27 +1,27 @@
 ---
-title: "图形 (c + + AMP) |Microsoft 文档"
-ms.custom: 
+title: 图形 (c + + AMP) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: c187ebc4eeb3917ce01e63c6c0769ffa0a570368
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 C + + AMP 包含中的多个 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)可用来访问 Gpu 上的纹理支持的命名空间。 一些常见的情况有：  
@@ -58,9 +58,9 @@ C + + AMP 包含中的多个 Api [concurrency:: graphics](../../parallel/amp/ref
   
 |运算符类型|有效类型|  
 |-------------------|-----------------|  
-|二元运算符|对所有类型有效：+、-、*、/<br /><br /> 对整数类型有效: %，^，&#124;、 &、 <\<，>><br /><br /> 两个矢量必须具有相同的大小，而结果将是相同大小的矢量。|  
+|二元运算符|对所有类型有效：+、-、*、/<br /><br /> 对整数类型有效: %，^， &#124;，&、 <\<，>><br /><br /> 两个矢量必须具有相同的大小，而结果将是相同大小的矢量。|  
 |关系运算符|对所有类型有效：== 和 !=|  
-|复合赋值运算符|对所有类型有效：+=、-=、*=、/=<br /><br /> 对整数类型有效: %=、 ^ =、 &#124; =、 & =、 <\<=、 >> =|  
+|复合赋值运算符|对所有类型有效：+=、-=、*=、/=<br /><br /> 对整数类型有效: %=、 ^ =、 &#124;=、 & =、 <\<=、 >> =|  
 |递增和递减运算符|对所有类型有效：++、--<br /><br /> 前缀和后缀均有效。|  
 |位非运算符 (~)|对整数类型有效。|  
 |一元 - 运算符|对除 `unorm` 和 `uint` 外的所有类型有效。|  
@@ -129,12 +129,12 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
  通过使用指针指向源数据、源数据的字节大小和每标量元素位数的构造函数重载，你可以声明和初始化 `texture` 对象。  
   
 ```cpp  
-void createTextureWithBPC() { *// Create the source data.  
+void createTextureWithBPC() { // Create the source data.  
     float source[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     source[i] = (float)i;  
  }  
- *// Initialize the texture by using the size of source in bytes *// and bits per scalar element.  
+ // Initialize the texture by using the size of source in bytes // and bits per scalar element.  
     texture<float_2, 1> floatTexture(1024, source, (unsigned int)sizeof(source), 32U);
 
 }  
@@ -144,7 +144,7 @@ void createTextureWithBPC() { *// Create the source data.
   
  如下表所示，`texture` 对象的每个维度具有大小限制。 如果超出限制，就会产生运行时错误。  
   
-|纹理|大小限制|  
+|纹理|每个维度的大小限制|  
 |-------------|---------------------|  
 |纹理\<T，1 >|16384|  
 |纹理\<T，2 >|16384|  
@@ -172,10 +172,10 @@ void readTexture() {
  
     const texture<int_2, 2> tex9(16, 32, src.begin(), src.end());
 
-    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { *// Use the subscript operator.        
-    arr[idx].x += tex9[idx].x; *// Use the function () operator.        
-    arr[idx].x += tex9(idx).x; *// Use the get method.  
-    arr[idx].y += tex9.get(idx).y; *// Use the function () operator.    
+    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { // Use the subscript operator.        
+    arr[idx].x += tex9[idx].x; // Use the function () operator.        
+    arr[idx].x += tex9(idx).x; // Use the get method.  
+    arr[idx].y += tex9.get(idx).y; // Use the function () operator.    
     arr[idx].y += tex9(idx[0], idx[1]).y;   
  });
 
@@ -189,7 +189,7 @@ void readTexture() {
  下面的代码示例演示如何在短矢量中存储纹理通道，然后访问作为短矢量属性的各个标量元素。  
   
 ```cpp  
-void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
+void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
     const int image_height = 16;  
     const int image_width = 16;  
     std::vector<unsigned int> image(image_height* image_width);
@@ -197,13 +197,13 @@ void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned in
  
     extent<2> image_extent(image_height, image_width);
 
- *// By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is *// stored in one 32-bit component of a uint_4.  
+ // By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is // stored in one 32-bit component of a uint_4.  
     texture<uint_4, 2> image_texture(image_extent, image.data(), image_extent.size()* 4U,  8U);
 
- *// Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
+ // Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
     parallel_for_each(image_extent, 
  [&image_texture](index<2> idx) restrict(amp)   
- { *// 4 bytes are automatically extracted when reading.  
+ { // 4 bytes are automatically extracted when reading.  
     uint_4 color = image_texture[idx];   
     unsigned int r = color.r;   
     unsigned int g = color.g;   
@@ -258,7 +258,7 @@ void writeTexture() {
  你可以通过使用的纹理对象之间进行复制[复制](reference/concurrency-namespace-functions-amp.md#copy)函数或[copy_async](reference/concurrency-namespace-functions-amp.md#copy_async)函数，如下面的代码示例中所示。  
   
 ```cpp  
-void copyHostArrayToTexture() { *// Copy from source array to texture object by using the copy function.  
+void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.  
     float floatSource[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     floatSource[i] = (float)i;  
@@ -267,7 +267,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
 
     copy(floatSource, (unsigned int)sizeof(floatSource), floatTexture);
 
- *// Copy from source array to texture object by using the copy function.  
+ // Copy from source array to texture object by using the copy function.  
     char charSource[16* 16];   
     for (int i = 0; i <16* 16; i++) {  
     charSource[i] = (char)i;  
@@ -275,7 +275,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
     texture<int, 2> charTexture(16, 16, 8U);
 
     copy(charSource, (unsigned int)sizeof(charSource), charTexture);
-*// Copy from texture object to source array by using the copy function.  
+// Copy from texture object to source array by using the copy function.  
     copy(charTexture, charSource, (unsigned int)sizeof(charSource));
 
 }  

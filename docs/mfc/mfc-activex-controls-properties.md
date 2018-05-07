@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控件： 属性 |Microsoft 文档"
-ms.custom: 
+title: MFC ActiveX 控件： 属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9d9e4f5e7d777bd147ce36e970e7a30fd875b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控件：属性
 ActiveX 控件，将引发事件，其控件容器与进行通信。 容器，因而将使用方法和属性与控件进行通信。 方法和属性的使用和目的，类似分别是，对成员函数和 c + + 类的成员变量。 属性是对任何容器公开的数据成员的 ActiveX 控件。 属性包含 ActiveX 控件，如自动化客户端和 ActiveX 控件容器应用程序提供的接口。  

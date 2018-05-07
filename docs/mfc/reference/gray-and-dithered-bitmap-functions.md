@@ -1,13 +1,10 @@
 ---
-title: "灰色和抖色位图函数 |Microsoft 文档"
-ms.custom: 
+title: 灰色和抖色位图函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f895fb22e4f4d2649cdec1e4c9925b69b013e49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
 **灰色位图函数**  
@@ -89,7 +84,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
 
 ##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap  
@@ -120,7 +115,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
@@ -163,7 +158,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
 
 
@@ -199,7 +194,7 @@ void AFXAPI AfxGetDitheredBitmap(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
 ## <a name="see-also"></a>请参阅  

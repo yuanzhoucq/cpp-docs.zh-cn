@@ -1,36 +1,31 @@
 ---
-title: "重载运算符 |Microsoft 文档"
-ms.custom: 
+title: 重载运算符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - operator overloading, in a CLR class
 - operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f60b749cb5955eda7011b4dc087727d3ca7a5a02
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloaded-operators"></a>重载运算符
 运算符重载已显著从更改托管扩展的 c + + 为 Visual c + +。  
   
- 个示例中，而不是使用本机引用类型的声明中`operator+`语法中，你显式将写出的运算符的基础的内部名称在这种情况下， `op_Addition`。 此外，运算符的调用必须显式调用通过该名称时，这样会排除运算符重载的两个主要优点: （a） 的直观的语法，并将新的类型与现有类型的混合 （b） 的功能。 例如:  
+ 个示例中，而不是使用本机引用类型的声明中`operator+`语法中，你显式将写出的运算符的基础的内部名称在这种情况下， `op_Addition`。 此外，运算符的调用必须显式调用通过该名称时，这样会排除运算符重载的两个主要优点: （a） 的直观的语法，并将新的类型与现有类型的混合 （b） 的功能。 例如：  
   
 ```  
 public __gc __sealed class Vector {  

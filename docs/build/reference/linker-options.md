@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -116,6 +116,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|使用备用位置来保存 PDB 文件。|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|创建没有私有符号的程序数据库 (PDB) 文件。|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|为按配置文件优化指定 .pgd 文件。|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**已过时**创建线程安全 PGO 检测生成。|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|生成一个可与“性能工具”探查器结合使用的输出文件。|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|在 .exe 标头中设置校验和。|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|指定映像将包含安全异常处理程序表。|
@@ -127,6 +128,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|指定链接器生成的类型库的资源 ID。|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|指定 .tlb 文件和其他 MIDL 输出文件的名称。|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|创建专为在终端服务器下运行而设计的应用程序。|
+|[/ USEPROFILE](../../build/reference/useprofile.md)|使用按配置文件优化定型数据，以创建优化的映像。|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|打印链接器进度消息。|
 |[/VERSION](../../build/reference/version-version-information.md)|分配版本号。|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含指定的静态库中的每个对象文件。|

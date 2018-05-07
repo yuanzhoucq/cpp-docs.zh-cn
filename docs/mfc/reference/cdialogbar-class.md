@@ -1,12 +1,9 @@
 ---
-title: "CDialogBar 类 |Microsoft 文档"
-ms.custom: 
+title: CDialogBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 类
 提供控件条中的 Windows 无模式对话框功能。  
@@ -75,17 +70,17 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  构造 `CDialogBar` 对象。  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  加载指定的对话框资源模板`lpszTemplateName`或`nIDTemplate`、 创建对话栏窗口、 设置其样式，和将其与关联`CDialogBar`对象。  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  工具栏样式中。 支持的其他工具栏样式包括：  
   
-- `CBRS_TOP`控件条是在框架窗口的顶部。  
+- `CBRS_TOP` 控件条是在框架窗口的顶部。  
   
-- `CBRS_BOTTOM`控件条是在框架窗口的底部。  
+- `CBRS_BOTTOM` 控件条是在框架窗口的底部。  
   
-- `CBRS_NOALIGN`父级调整大小时，将不会重新定位控件条。  
+- `CBRS_NOALIGN` 父级调整大小时，将不会重新定位控件条。  
   
-- `CBRS_TOOLTIPS`控件栏会显示工具提示。  
+- `CBRS_TOOLTIPS` 控件栏会显示工具提示。  
   
 - **CBRS_SIZE_DYNAMIC**控件条是动态的。  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**浮点控件条。  
   
-- `CBRS_FLYBY`状态栏会显示有关该按钮的信息。  
+- `CBRS_FLYBY` 状态栏会显示有关该按钮的信息。  
   
 - **CBRS_HIDE_INPLACE**控件条不向用户显示。  
   

@@ -1,12 +1,9 @@
 ---
-title: "CRuntimeClass 结构 |Microsoft 文档"
-ms.custom: 
+title: CRuntimeClass 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 结构
 每个类派生自`CObject`与关联`CRuntimeClass`结构，它可用于获取有关一个对象或其基本类在运行时的信息。  
@@ -61,21 +56,21 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|类的架构数字。|  
   
 ## <a name="remarks"></a>备注  
- `CRuntimeClass`是一种结构，因此没有基类。  
+ `CRuntimeClass` 是一种结构，因此没有基类。  
   
  当需要函数自变量的其他类型检查时，或当你必须编写专用代码基于对象的类，在运行时确定对象的类的功能非常有用。 C++ 语言不直接支持运行时类信息。  
   
- `CRuntimeClass`提供有关相关的 c + + 对象，如指向的指针的信息`CRuntimeClass`的基本类和相关类的 ASCII 类名。 此结构还实现用于动态创建对象，指定通过使用熟悉的名称，并确定是否相关的类派生自特定类的对象的类型的各种功能。  
+ `CRuntimeClass` 提供有关相关的 c + + 对象，如指向的指针的信息`CRuntimeClass`的基本类和相关类的 ASCII 类名。 此结构还实现用于动态创建对象，指定通过使用熟悉的名称，并确定是否相关的类派生自特定类的对象的类型的各种功能。  
   
  有关详细信息使用`CRuntimeClass`，请参阅文章[访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CRuntimeClass`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  调用此函数可在运行时动态创建指定的类。  
   
 ```  
@@ -99,7 +94,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>示例  
   请参阅示例[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="fromname"></a>CRuntimeClass::FromName  
+##  <a name="fromname"></a>  CRuntimeClass::FromName  
  调用此函数可检索`CRuntimeClass`熟悉的名称与相关的结构。  
   
 ```  
@@ -118,7 +113,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  调用此函数可确定是否从中指定的类派生的调用类*pBaseClass*参数。  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  以 null 结尾的字符串，包含 ASCII 类名称。  
   
 ### <a name="remarks"></a>备注  
@@ -154,7 +149,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>示例  
   请参阅示例[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  对象，以字节为单位的大小。  
   
 ### <a name="remarks"></a>备注  
@@ -163,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>示例  
   请参阅示例[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  如果你的应用程序静态链接到 MFC 中，此数据成员包含的指针`CRuntimeClass`基本类的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -172,13 +167,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>示例  
   请参阅示例[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  创建你的类的对象的默认构造函数的函数指针。  
   
 ### <a name="remarks"></a>备注  
  此指针才有效的类支持动态创建;否则，该函数返回**NULL**。  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  如果你的应用程序使用 MFC 库作为共享 DLL，该数据成员将指向返回的函数`CRuntimeClass`基本类的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -187,7 +182,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>示例  
   请参阅示例[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  架构数字 (-1 的不可序列化类) 中。  
   
 ### <a name="remarks"></a>备注  

@@ -1,12 +1,9 @@
 ---
-title: "设置 (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 设置 (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`set`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。  
@@ -127,7 +122,7 @@ template<typename Key>
   
  此类委托对象必须进行严格弱排序键的类型在施加[set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `key_comp()(X, Y)`返回相同的布尔值导致每次调用。  
+ `key_comp()(X, Y)` 返回相同的布尔值导致每次调用。  
   
  如果`key_comp()(X, Y)`为 true，然后`key_comp()(Y, X)`必须是 false。  
   
@@ -147,7 +142,7 @@ template<typename Key>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  
@@ -158,6 +153,6 @@ template<typename Key>
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
- [设置](../dotnet/set-stl-clr.md)   
- [设置](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
  [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

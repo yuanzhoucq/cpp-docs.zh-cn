@@ -1,12 +1,9 @@
 ---
-title: "提供程序中设置属性 |Microsoft 文档"
-ms.custom: 
+title: 提供程序中设置属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 92c5128e3df1e2dfebfef338f3505201cfc40671
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d43e452d0fffcb4dc6eddcae722f8056dbd39dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供程序中设置属性
 查找所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 02/23/2018
   
 -   对您的属性相对应的属性 ID。 从属性名称开头，必须删除的前七个字符 ("DBPROP_")。 例如，如果你想要添加**DBPROP_MAXROWS**，传递`MAXROWS`为第一个元素。 如果这是自定义属性，传递的完整的 GUID 名称 (例如， `DBMYPROP_MYPROPERTY`)。  
   
--   变体类型的属性 (在[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*)。 输入**VT_**类型 (如`VT_BOOL`或`VT_I2`) 与数据类型相对应。  
+-   变体类型的属性 (在[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*)。 输入**VT_** 类型 (如`VT_BOOL`或`VT_I2`) 与数据类型相对应。  
   
 -   标志以指示属性是否读取和写入以及它所属的组。 例如，下面的代码指示属于行集组读/写属性：  
   

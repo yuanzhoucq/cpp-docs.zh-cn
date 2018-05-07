@@ -1,12 +1,9 @@
 ---
-title: "CEdit 类 |Microsoft 文档"
-ms.custom: 
+title: CEdit 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -193,13 +188,13 @@ class CEdit : public CWnd
   
  每个消息映射条目采用以下形式：  
   
- **ON_**通知**(** *id、 f x n * * *)**  
+ **ON_** 通知 **(** *id、 f x n * * *)**  
   
  其中`id`指定发送通知，编辑控件的子窗口 ID 和`memberFxn`是父成员函数编写以处理通知的名称。  
   
  父元素的函数原型如下所示：  
   
- **afx_msg** void memberFxn **( );**  
+ **afx_msg** void f x n **（);**  
   
  以下是潜在的消息映射项和将给父级发送的用例的说明的列表：  
   
@@ -242,7 +237,7 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
 ##  <a name="canundo"></a>  CEdit::CanUndo  
@@ -366,7 +361,7 @@ virtual BOOL Create(
   
 - **WS_CHILD**始终  
   
-- **WS_VISIBLE** Usually  
+- **WS_VISIBLE**通常  
   
 - **WS_DISABLED**很少  
   
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  当`SetPasswordChar`调用成员函数，`CEdit`将重绘使用由指定的字符的所有可见字符*ch*。  
   
- 如果使用编辑控件创建了[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)样式，默认的密码字符设置为星号 (  **\*** )。 如果删除此样式`SetPasswordChar`使用调用*ch*设置为 0。  
+ 如果使用编辑控件创建了[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)样式，默认的密码字符设置为星号 ( **\***)。 如果删除此样式`SetPasswordChar`使用调用*ch*设置为 0。  
   
  有关详细信息，请参阅[EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) Windows SDK 中。  
   

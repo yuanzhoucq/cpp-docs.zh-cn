@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C2400 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C2400 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2400
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2400
 ms.assetid: 1ba441ee-73f9-42a5-bfe9-fbeab93808eb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c78a5b505c6891f8a15ca5d3e73a0ed490697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b6eb9ea25428138297cf85fe71e9c84b2364199
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2400"></a>编译器错误 C2400
 context; 中的内联汇编程序语法错误找到 token  

@@ -1,13 +1,10 @@
 ---
-title: "生成文件项目向导的应用程序设置 |Microsoft 文档"
-ms.custom: 
+title: 生成文件项目向导的应用程序设置 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.makefile.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff4bd61f63790f7e59d2f6a1a03ea2802b9e158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-makefile-project-wizard"></a>应用程序设置，生成文件项目向导
 提供项目的信息。 指定的选项将反映在项目的[属性页](../ide/working-with-project-properties.md)。 一旦你创建项目时，你可以查看和编辑每个中的下列选项**Nmake**的项目的属性页的页。  

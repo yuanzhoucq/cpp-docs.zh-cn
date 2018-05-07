@@ -1,12 +1,9 @@
 ---
-title: "CMFCDesktopAlertWndButton 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCDesktopAlertWndButton 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1153546851e6a34c14dacd33db04091de24557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton 类
 允许按钮添加到桌面通知对话框。  
@@ -62,7 +57,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|name|描述|  
+|名称|描述|  
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|一个布尔值，指定是否在警报对话框的标题区域中会显示该按钮。|  
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|一个布尔值，指定是否按钮关闭警报的对话框。|  
   
@@ -90,10 +85,10 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdesktopalertwnd.h  
   
-##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
  确定是否在警报对话框的标题区域中会显示该按钮。  
   
 ```  
@@ -103,7 +98,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>返回值  
  如果按钮显示在标题区域的警报对话框; 则为非 0否则为为 0。  
   
-##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
  确定是否按钮可以关闭警报对话框。  
   
 ```  

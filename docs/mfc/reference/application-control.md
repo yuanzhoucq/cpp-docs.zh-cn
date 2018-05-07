@@ -1,13 +1,10 @@
 ---
-title: "应用程序控制 |Microsoft 文档"
-ms.custom: 
+title: 应用程序控制 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-control"></a>应用程序控件
 OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能够启动并自动发布的应用程序，协调其生产和修改的对象，依次类推。 本主题中的函数满足这些要求。 除了调用由 OLE 系统 Dll，这些函数有时必须由应用程序以及调用。 
@@ -46,7 +41,7 @@ OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|实现的用户界面*typename*对象命令。|  
 
   
-##  <a name="afxolecanexitapp"></a>AfxOleCanExitApp  
+##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp  
  指示应用程序是否可以终止。  
   
 ```   
@@ -62,10 +57,10 @@ BOOL AFXAPI AfxOleCanExitApp();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
  检索应用程序的当前消息筛选器。  
   
 ```   
@@ -83,10 +78,10 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
   
  [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxwin.h 
 
-##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
  检索当前用户控件标志。  
   
 ```   
@@ -99,10 +94,10 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ### <a name="remarks"></a>备注  
  如果用户已显式打开或创建新文档，则用户将位于应用程序控件内。 如果应用程序不是由 OLE 系统 DLL 启动的 - 换句话说，如果用户使用系统 Shell 启动了应用程序，则用户也将位于控件内。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
  设置或清除用户控件标志，参考 》 中所述`AfxOleGetUserCtrl`。  
   
 ```  
@@ -118,10 +113,10 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
   
  如果你的应用程序中的其他操作应将用户放在应用程序的控制，请调用此函数。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>AfxOleLockApp  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
  框架的全局应用程序中的活动对象数计数递增 1。  
   
 ```   
@@ -138,10 +133,10 @@ void AFXAPI AfxOleLockApp();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>AfxOleUnlockApp  
+##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
  递减的应用程序中的活动对象的框架的计数。  
   
 ```   
@@ -156,7 +151,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="example"></a>示例  
  请参阅示例[AfxOleLockApp](#afxolelockapp)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
@@ -189,14 +184,14 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** < afxwin.h >  
    
 ### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
-##  <a name="afxoleregisterserverclass"></a>AfxOleRegisterServerClass  
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass  
  此函数，可在 OLE 系统注册表中注册你的服务器。  
   
 ```   
@@ -226,13 +221,13 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  `nAppType`  
  从获取的值**OLE_APPTYPE**枚举，指定 OLE 应用程序的类型。 可能的值如下所示：  
   
-- `OAT_INPLACE_SERVER`服务器具有完全服务器用户界面。  
+- `OAT_INPLACE_SERVER` 服务器具有完全服务器用户界面。  
   
-- `OAT_SERVER`服务器支持仅嵌入。  
+- `OAT_SERVER` 服务器支持仅嵌入。  
   
-- `OAT_CONTAINER`容器支持链接到嵌入。  
+- `OAT_CONTAINER` 容器支持链接到嵌入。  
   
-- `OAT_DISPATCH_OBJECT``IDispatch`-支持的对象。  
+- `OAT_DISPATCH_OBJECT` `IDispatch`-支持的对象。  
   
  `rglpszRegister`  
  指向密钥和要添加到 OLE 系统注册表中，如果不找到任何现有值的键的值表示的字符串的指针的数组。  
@@ -250,7 +245,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
  符号填充了如下：  
   
-|符号|“值”|  
+|符号|值|  
 |------------|-----------|  
 |%1|类 ID，其格式为字符串|  
 |%2|类名|  
@@ -258,10 +253,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 |%4|Short 类型名称|  
 |%5|Long 类型名称|  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
  实现的用户界面*typename*对象命令。  
   
 ```   
@@ -300,13 +295,13 @@ void AFXAPI AfxOleSetEditMenu(
   
  **#include \<afxolecl.rc >**  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头**: afxole.h 
 
 ## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
 
-## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 解除锁定指定控件的类工厂。  
    
 ### <a name="syntax"></a>语法  
@@ -335,7 +330,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
    
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** < afxwin.h >  
    
 ### <a name="see-also"></a>请参阅  

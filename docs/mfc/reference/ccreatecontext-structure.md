@@ -1,12 +1,9 @@
 ---
-title: "CCreateContext 结构 |Microsoft 文档"
-ms.custom: 
+title: CCreateContext 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 结构
 框架将使用`CCreateContext`结构创建的框架窗口和与文档相关联的视图时。  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>备注  
- `CCreateContext`是一种结构，并且没有基类。  
+ `CCreateContext` 是一种结构，并且没有基类。  
   
  当你创建一个窗口时，此结构中的值将提供用于连接到其数据的视图的文档的组件的信息。 只需使用`CCreateContext`如果您要重写的创建过程部分。  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |成员|类型|它是什么|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`要创建的新视图。|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` 要创建的新视图。|  
 |`m_pCurrentDoc`|`CDocument*`|要与新视图关联的现有文档。|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|与新的 MDI 框架窗口的创建关联的文档模板。|  
 |`m_pLastView`|`CView*`|在其附加视图进行建模，如下所示的拆分器窗口视图创建或在文档上的第二个视图创建的原始视图。|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  中的指针的所有`CCreateContext`是可选的可以是`NULL`如果未指定或未知。  
   
- `CCreateContext`下面列出的成员函数使用"另请参阅。" 如果你打算重写它们的特定信息，参阅这些函数的说明。  
+ `CCreateContext` 下面列出的成员函数使用"另请参阅。" 如果你打算重写它们的特定信息，参阅这些函数的说明。  
   
  以下是一些通用准则：  
   
@@ -70,7 +65,7 @@ struct CCreateContext
   
  有关详细信息`CCreateContext`，请参阅 MFC 示例[VIEWEX](../../visual-cpp-samples.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
 ## <a name="see-also"></a>请参阅  

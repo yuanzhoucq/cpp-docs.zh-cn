@@ -1,12 +1,9 @@
 ---
-title: PROVIDER_COLUMN_ENTRY_WSTR | Microsoft Docs
-ms.custom: 
+title: PROVIDER_COLUMN_ENTRY_WSTR |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROVIDER_COLUMN_ENTRY_WSTR
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROVIDER_COLUMN_ENTRY_WSTR macro
 ms.assetid: 70630bd5-d782-473b-9777-aebbbf5321c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd0f87bad4fbd758849e33ae18cdcfd6a8e72357
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: faa6630d8821065d056e922dbf4790265d2497f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providercolumnentrywstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 表示提供程序支持的特定列。  
@@ -51,7 +46,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name
 ## <a name="remarks"></a>备注  
  以 null 结尾的 Unicode 字符串，列数据时使用此宏[DBTYPE_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

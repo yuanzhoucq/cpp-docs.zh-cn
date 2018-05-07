@@ -2,11 +2,8 @@
 title: deque::generic_reverse_iterator (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::generic_reverse_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_reverse_iterator member [STL/CLR]
 ms.assetid: e2a837bc-24be-4a99-a0ee-9dc73be97955
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a388245addf978e5bb6504d16ea1685efba4115e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 289c3d2c39b622e80dca39df5fba3fbc5aac880e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequegenericreverseiterator-stlclr"></a>deque::generic_reverse_iterator (STL/CLR)
 反向迭代器用于与容器的泛型接口类型。  
@@ -84,7 +79,7 @@ a b c
 a c c  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  

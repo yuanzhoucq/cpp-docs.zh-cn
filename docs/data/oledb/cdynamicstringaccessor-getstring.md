@@ -1,12 +1,9 @@
 ---
-title: CDynamicStringAccessor::GetString | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicstringaccessor:: Getstring |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessor.GetString
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - GetString method
 ms.assetid: 4af27f27-7589-49f5-93d8-6ef05c023c8a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c6a2340ddd0e123720cd59bb2ee0bf8ca58504f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cc23fe73eb0d804d0b53950885b1b83aba58ff91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicstringaccessorgetstring"></a>CDynamicStringAccessor::GetString
 将指定列数据作为字符串检索。  
@@ -55,7 +50,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 ## <a name="remarks"></a>备注  
  第二个重写窗体采用的列名称为 ANSI 字符串。 第三个重写窗体采用的列名称为 Unicode 字符串。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

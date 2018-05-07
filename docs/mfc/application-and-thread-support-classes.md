@@ -1,13 +1,10 @@
 ---
-title: "应用程序和线程支持类 |Microsoft 文档"
-ms.custom: 
+title: 应用程序和线程支持类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>应用程序和线程支持类
 每个应用程序具有一个且仅有一个应用程序对象;此对象协调正在运行的程序中的其他对象，并从派生`CWinApp`。  
   
  Microsoft 基础类 (MFC) 库支持多个应用程序中的执行线程。 所有应用程序必须具有至少一个线程;通过使用的线程你`CWinApp`对象是此主线程。  
   
- `CWinThread`封装操作系统的线程处理功能的一部分。 若要使使用多个线程更轻松，MFC 还提供同步对象类，用于提供 Win32 同步对象的 c + + 接口。  
+ `CWinThread` 封装操作系统的线程处理功能的一部分。 若要使使用多个线程更轻松，MFC 还提供同步对象类，用于提供 Win32 同步对象的 c + + 接口。  
   
 ## <a name="application-and-thread-classes"></a>应用程序和线程类  
  [CWinApp](../mfc/reference/cwinapp-class.md)  

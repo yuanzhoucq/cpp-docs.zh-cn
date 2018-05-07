@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonProgressBar 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCRibbonProgressBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354b0b15837a733a890c438c7771ffe39526773
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 类
 实现用于直观指示较长操作进度的控件。  
@@ -93,10 +88,10 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
   
  [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxRibbonProgressBar.h  
   
-##  <a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
+##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
  构造并初始化[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)对象。  
   
 ```  
@@ -119,7 +114,7 @@ CMFCRibbonProgressBar(
  [in] `nHeight`  
  指定以像素为单位，功能区进度栏的高度。  
   
-##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
+##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  返回进度栏的当前位置。  
   
 ```  
@@ -132,7 +127,7 @@ int GetPos () const;
 ### <a name="remarks"></a>备注  
  正在设置的范围必须在指定的范围内[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
   
-##  <a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
+##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
  返回进度栏的当前最大值。  
   
 ```  
@@ -144,7 +139,7 @@ int GetRangeMax() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
+##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
  返回进度栏的当前最小范围值。  
   
 ```  
@@ -154,7 +149,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>返回值  
  当前范围最小值。  
   
-##  <a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -168,7 +163,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
+##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode  
  指定是否在无限模式下工作的进度栏。  
   
 ```  
@@ -176,12 +171,12 @@ BOOL IsInfiniteMode() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果进度栏在无限模式;否则为`FALSE`。  
+ `TRUE` 如果进度栏在无限模式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  在无限模式下，进度栏填充重复从最小值到最大值。 您可能使用无限模式来指示操作正在进行，但完成时间未知。  
   
-##  <a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -193,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
+##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode  
  设置进度栏在无限模式下工作。  
   
 ```  
@@ -202,12 +197,12 @@ void SetInfiniteMode(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>参数  
  [in] `bSet`  
- `TRUE`若要指定进度栏处于无限模式;否则为`FALSE`。  
+ `TRUE` 若要指定进度栏处于无限模式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  通常情况下，如果进度栏在无限模式下，它将告诉用户操作正在进行，但完成时间未知。 因此，进度条填满重复从最小值到最大值。  
   
-##  <a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
+##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
  设置进度栏的当前位置。  
   
 ```  
@@ -226,7 +221,7 @@ void SetPos(
 ### <a name="remarks"></a>备注  
  正在设置的范围必须在指定的范围内[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
   
-##  <a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
+##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
  设置进度栏的最小和最大值。  
   
 ```  

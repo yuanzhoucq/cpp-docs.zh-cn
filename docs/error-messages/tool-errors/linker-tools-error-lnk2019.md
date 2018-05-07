@@ -1,10 +1,9 @@
 ---
-title: "链接器工具错误 LNK2019 |Microsoft 文档"
-ms.custom: 
+title: 链接器工具错误 LNK2019 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2019
@@ -16,14 +15,13 @@ helpviewer_keywords:
 - _check_commonlanguageruntime_version
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f6fdad0d26d04c6e8022f7b29dbdd7f13ac874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2019"></a>链接器工具错误 LNK2019
 
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>通过使用 Windows 应用程序设置生成控制台应用程序
 
-如果错误消息类似于**WinMain 函数中引用了未解析外部符号** *function_name*，通过使用链接**/SUBSYSTEM:CONSOLE**而不是**/SUBSYSTEM:WINDOWS**。 有关此设置的详细信息以及如何在 Visual Studio 中设置此属性的说明，请参阅 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
+如果错误消息类似于**WinMain 函数中引用了未解析外部符号** *function_name*，通过使用链接 **/SUBSYSTEM:CONSOLE**而不是 **/SUBSYSTEM:WINDOWS**。 有关此设置的详细信息以及如何在 Visual Studio 中设置此属性的说明，请参阅 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>尝试将 64 位库链接到 32 位代码或 32 位到 64 位代码的库
 
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>混合使用本机 wchar\_代码和未使用的 t
 
-在 Visual C++ 2005 中完成的 C++ 语言一致性工作让 `wchar_t` 成为默认本机类型。 你必须使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 编译器选项来生成兼容使用 Visual C++ 早期版本进行编译的库和对象文件的代码。 如果不是所有文件使用相同的已都编译**/Zc:wchar\_t**设置，引用可能不会解析为兼容的类型的类型。 验证所有库和对象文件中的 `wchar_t` 类型是否兼容，方法是更新使用的类型或在编译时使用一致的 **/Zc:wchar_t** 设置。
+在 Visual C++ 2005 中完成的 C++ 语言一致性工作让 `wchar_t` 成为默认本机类型。 你必须使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 编译器选项来生成兼容使用 Visual C++ 早期版本进行编译的库和对象文件的代码。 如果不是所有文件使用相同的已都编译 **/Zc:wchar\_t**设置，引用可能不会解析为兼容的类型的类型。 验证所有库和对象文件中的 `wchar_t` 类型是否兼容，方法是更新使用的类型或在编译时使用一致的 **/Zc:wchar_t** 设置。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>第三方库问题和 Vcpkg
 

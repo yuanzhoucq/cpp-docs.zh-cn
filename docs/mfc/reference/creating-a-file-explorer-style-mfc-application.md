@@ -1,13 +1,10 @@
 ---
-title: "创建文件资源管理器样式的 MFC 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 创建文件资源管理器样式的 MFC 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>创建文件资源管理器样式的 MFC 应用程序
 许多 Windows 系统应用程序为文件资源管理器使用用户界面 (UI)。 当你启动文件资源管理器时，例如，你看到具有垂直拆分条分割的工作区的应用程序。 客户端区域的左侧提供导航和浏览功能，并右端的客户端区域显示详细信息与所选内容相关的左窗格中。 当用户单击左窗格中的项时，应用程序重新填充右侧窗格。 在 MDI 应用程序，可以使用命令，在**视图**菜单更改显示在右窗格中的详细信息量。 （在 SDI 或多个顶级文档应用程序中，可以更改使用的工具栏按钮的详细信息。）  

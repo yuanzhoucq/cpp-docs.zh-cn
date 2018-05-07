@@ -1,13 +1,10 @@
 ---
-title: "TN024: MFC 定义的消息和资源 |Microsoft 文档"
-ms.custom: 
+title: 'TN024: MFC 定义的消息和资源 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定义的消息和资源
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- 此消息由发送`COleResizeBar`到其所有者窗口 (通过`GetOwner`) 当用户调整大小时重设大小句柄的大小调整栏。 `COleIPFrameWnd`尝试重新定位框架窗口，如用户已请求的响应此消息。  
+ 此消息由发送`COleResizeBar`到其所有者窗口 (通过`GetOwner`) 当用户调整大小时重设大小句柄的大小调整栏。 `COleIPFrameWnd` 尝试重新定位框架窗口，如用户已请求的响应此消息。  
   
  新添加的矩形，其中包含的调整大小栏中，与框架窗口相对的客户端坐标中给定是 lParam 指向。  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|是以下值之一：<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|未使用 (0)|  
   
- 返回值应为非零如果**FS_SYNCACTIVE**是组和窗口使其与父帧的激活。 `CMiniFrameWnd`返回非零值时的样式设置为**MFS_SYNCACTIVE。**  
+ 返回值应为非零如果**FS_SYNCACTIVE**是组和窗口使其与父帧的激活。 `CMiniFrameWnd` 返回非零值时的样式设置为**MFS_SYNCACTIVE。**  
   
  有关详细信息，请参阅的实现`CMiniFrameWnd`。  
   

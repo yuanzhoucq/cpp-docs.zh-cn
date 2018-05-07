@@ -1,13 +1,10 @@
 ---
-title: "OnCmdMsg 处理程序 |Microsoft 文档"
-ms.custom: 
+title: OnCmdMsg 处理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnCmdMsg
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 173741ef73cd4bf6426787ef56e8334f504d7c0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0657b05619a966ed171630d00adcd9303af7e18b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg 处理程序
 为了完成命令路由，每个命令目标均将调用序列中下一命令目标的 `OnCmdMsg` 成员函数。 命令目标将使用 `OnCmdMsg` 确定它们是否可以处理命令并在无法处理命令时将其路由到其他命令目标。  

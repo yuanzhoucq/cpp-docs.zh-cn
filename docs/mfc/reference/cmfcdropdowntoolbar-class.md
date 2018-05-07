@@ -1,12 +1,9 @@
 ---
-title: "CMFCDropDownToolBar 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCDropDownToolBar 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolBar
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a2f53fa75d8637445e155043d6a40787402accb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 类
 当用户按住顶层工具栏按钮时显示的工具栏。  
@@ -109,10 +104,10 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdropdowntoolbar.h  
   
-##  <a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -123,7 +118,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="loadbitmap"></a>CMFCDropDownToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
  从应用程序资源加载工具栏图像。  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL LoadBitmap(
  用于引用常规菜单图像的位图的资源 ID。  
   
  [in] `bLocked`  
- `TRUE`要锁定工具栏;否则为`FALSE`。  
+ `TRUE` 要锁定工具栏;否则为`FALSE`。  
   
  [in] `uiDisabledResID`  
  用于引用禁用工具栏图像的位图的资源 ID。  
@@ -163,7 +158,7 @@ virtual BOOL LoadBitmap(
   
  调用 `LoadBitmapEx` 方法以在创建工具栏后加载其他图像。  
   
-##  <a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar  
 
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL LoadToolBar(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp  
 
   
 ```  
@@ -205,7 +200,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove  
 
   
 ```  
@@ -220,7 +215,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand  
 
   
 ```  
@@ -234,7 +229,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI  
 
   
 ```  

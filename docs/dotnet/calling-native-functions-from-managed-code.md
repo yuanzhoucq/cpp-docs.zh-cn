@@ -1,13 +1,10 @@
 ---
-title: "调用本机函数从托管代码 |Microsoft 文档"
-ms.custom: 
+title: 调用本机函数从托管代码 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 公共语言运行时提供平台调用服务或 PInvoke，使托管代码能够调用本机动态链接库 (Dll) 中的 C 样式函数。 相同的数据封送处理既又用于与运行时和为"仅方式，"或 ijw 映像、 机制 COM 互操作性。  
@@ -40,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
 -   [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [详述平台调用](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [平台调用详解](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- 此部分中的示例仅演示如何`PInvoke`可用。 `PInvoke`可以简化自定义的数据封送处理，这因为你提供以声明方式在属性而不是编写过程封送处理代码中的封送处理信息。  
+ 此部分中的示例仅演示如何`PInvoke`可用。 `PInvoke` 可以简化自定义的数据封送处理，这因为你提供以声明方式在属性而不是编写过程封送处理代码中的封送处理信息。  
   
 > [!NOTE]
 >  封送处理库提供了一种替代方式，以优化方式中的本机和托管环境之间封送数据。 请参阅[概述的封送处理在 c + +](../dotnet/overview-of-marshaling-in-cpp.md)有关封送处理库的详细信息。 封送处理库不仅数据，而不用于函数。  

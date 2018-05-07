@@ -1,12 +1,9 @@
 ---
-title: "编译器内部函数 |Microsoft 文档"
-ms.custom: 
+title: 编译器内部函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b1416eacc6fa31c5e41b4a0539ce9ccbd99f88
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c05a2843e5daff980d1c84d4d3f2185ac361144d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-intrinsics"></a>编译器内部函数
 大多数函数都包含在库中，但也有一些函数是在编译器中生成的（即内部函数）。 这些被称为内联函数或内部函数。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 02/23/2018
   
  某些内部函数（例如 `__assume` 和 `__ReadWriteBarrier`）向编译器提供信息，但这会影响到优化程序的行为。  
   
- 某些内部函数只能用作内部函数，某些内部函数可以同时用于函数和内部函数实现。 你可以指示编译器使用这两种方式中的一种来使用内部函数实现，具体取决于你是想仅启用特定函数还是想启用所有内部函数。 第一种方法是使用`#pragma intrinsic(`*内部函数的函数的名称的列表*`)`。 杂注可用于指定单个内部函数或用逗号分隔的多个内部函数。 第二个是使用[/Oi （生成内部函数）](../build/reference/oi-generate-intrinsic-functions.md)编译器选项，可使在给定平台上的所有内部函数可用。 下**/Oi**，使用`#pragma function(`*内部函数的函数的名称的列表*`)`来强制实现函数调用，而不是内部函数使用。 如果特定内部函数的文档说明例程仅可用作内部函数，则无论是否使用内部函数实现**/Oi**或`#pragma intrinsic`指定。 在所有情况下， **/Oi**或`#pragma intrinsic`允许，但不会强制优化器使用内部函数。 优化程序仍然可以调用函数。  
+ 某些内部函数只能用作内部函数，某些内部函数可以同时用于函数和内部函数实现。 你可以指示编译器使用这两种方式中的一种来使用内部函数实现，具体取决于你是想仅启用特定函数还是想启用所有内部函数。 第一种方法是使用`#pragma intrinsic(`*内部函数的函数的名称的列表*`)`。 杂注可用于指定单个内部函数或用逗号分隔的多个内部函数。 第二个是使用[/Oi （生成内部函数）](../build/reference/oi-generate-intrinsic-functions.md)编译器选项，可使在给定平台上的所有内部函数可用。 下 **/Oi**，使用`#pragma function(`*内部函数的函数的名称的列表*`)`来强制实现函数调用，而不是内部函数使用。 如果特定内部函数的文档说明例程仅可用作内部函数，则无论是否使用内部函数实现 **/Oi**或`#pragma intrinsic`指定。 在所有情况下， **/Oi**或`#pragma intrinsic`允许，但不会强制优化器使用内部函数。 优化程序仍然可以调用函数。  
   
- 一些标准的 C/C++ 库函数在某些体系结构上可用于内部函数实现。 如果调用 CRT 函数时，使用内部函数实现**/Oi**命令行上指定。  
+ 一些标准的 C/C++ 库函数在某些体系结构上可用于内部函数实现。 如果调用 CRT 函数时，使用内部函数实现 **/Oi**命令行上指定。  
   
  头文件中， \<intrin.h >，是可用，其用于声明常用内部函数的原型。 特定于制造商的内部函数位于\<.h > 和\<.h > 标头文件。 此外，某些 Windows 头文件还可声明在编译器内部函数上映射的函数。  
   

@@ -1,13 +1,10 @@
 ---
-title: "TN048： 为 MFC 数据库应用程序编写 ODBC 安装和管理程序 |Microsoft 文档"
-ms.custom: 
+title: TN048： 为 MFC 数据库应用程序编写 ODBC 安装和管理程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048：为 MFC 数据库应用程序编写 ODBC 安装和管理程序
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  使用 MFC 数据库类应用程序将需要安装 ODBC 组件的安装程序。 它们可能还需要将检索有关可用的驱动程序，来指定默认驱动程序以及配置数据源信息的 ODBC 管理程序。 本说明介绍 ODBC 安装程序 api 来编写这些程序使用。  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>编写 ODBC 安装程序  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> 编写 ODBC 安装程序  
  MFC 数据库应用程序需要 ODBC 驱动程序管理器 (ODBC。DLL) 和 ODBC 驱动程序要能够获取对数据源。 许多 ODBC 驱动程序还需要其他网络和通信 Dll。 大多数 ODBC 驱动程序附带将安装所需的 ODBC 组件的安装程序。 使用 MFC 数据库类应用程序开发人员可以：  
   
 -   依赖于安装 ODBC 组件的特定于驱动程序的安装程序。 这将不再需要开发人员部分工作 — 你只需重新分发的驱动程序的安装程序。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  有关 ODBC 的详细信息。INF、 ODBCINST。INI 和使用安装程序 API，请参阅 ODBC SDK*程序员参考*第 19 章、 安装的 ODBC 软件。  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>编写 ODBC 管理器  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> 编写 ODBC 管理器  
  MFC 数据库应用程序可以设置，并采用两种方式之一配置 ODBC 数据源，如下所示：  
   
 -   使用 ODBC 管理器 （作为程序或作为控制面板项可用）。  

@@ -1,12 +1,9 @@
 ---
-title: CDBPropIDSet::CDBPropIDSet | Microsoft Docs
-ms.custom: 
+title: 'Cdbpropidset:: Cdbpropidset |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDBPropIDSet::CDBPropIDSet
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBPropIDSet class, constructor
 ms.assetid: e68cc20e-fce2-4cc1-9e9d-05c542334cc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ced375c762bb231053a4ba0a8f0ff11443853ee
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eb1aa5b832e8be0e90e34c32c9ad76a8c1c314f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbpropidsetcdbpropidset"></a>CDBPropIDSet::CDBPropIDSet
 构造函数。 初始化**rgProperties**， **cProperties**，以及 （可选） **guidPropertySet**字段[DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx)结构。  
@@ -52,7 +47,7 @@ CDBPropIDSet();
  *propidset*  
  [in] 复制构造的另一个 `CDBPropIDSet` 对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

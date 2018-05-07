@@ -2,12 +2,9 @@
 title: CDaoTableDefInfo 结构 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e949cb0348cb55fcee5a940b5753a5a8197e600b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 结构
 `CDaoTableDefInfo`结构包含有关 tabledef 对象定义的数据访问对象 (DAO) 的信息。  
@@ -54,7 +49,7 @@ struct CDaoTableDefInfo
  唯一地命名 tabledef 对象。 若要直接检索此属性的值，调用 tabledef 对象[GetName](../../mfc/reference/cdaotabledef-class.md#getname)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  `m_bUpdatable`  
- 指示是否可以对表进行更改。 确定表是否可更新的快速方式是打开`CDaoTableDef`表对象并调用对象的[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)成员函数。 `CanUpdate`始终返回非零 (**TRUE**) 对于新创建的 tabledef 对象和零 (**FALSE**) 附加的 tabledef 对象。 可以将新 tabledef 对象追加到当前用户对其具有写权限的数据库。 如果表中包含不可更新字段，`CanUpdate`返回 0。 在一个或多个字段都是可更新，`CanUpdate`返回非零值。 你可以编辑仅可更新的字段。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
+ 指示是否可以对表进行更改。 确定表是否可更新的快速方式是打开`CDaoTableDef`表对象并调用对象的[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)成员函数。 `CanUpdate` 始终返回非零 (**TRUE**) 对于新创建的 tabledef 对象和零 (**FALSE**) 附加的 tabledef 对象。 可以将新 tabledef 对象追加到当前用户对其具有写权限的数据库。 如果表中包含不可更新字段，`CanUpdate`返回 0。 在一个或多个字段都是可更新，`CanUpdate`返回非零值。 你可以编辑仅可更新的字段。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
  `m_lAttributes`  
  指定由 tabledef 对象表示的表的特性。 若要检索 tabledef 对象的当前属性，调用其[GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes)成员函数。 返回的值可以是这些长常量的组合 (使用按位 OR (**&#124;**) 运算符):  
@@ -95,11 +90,11 @@ struct CDaoTableDefInfo
 ## <a name="remarks"></a>备注  
  Tabledef 是类的对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)。 对主、 辅助数据库，以及所有上面的引用指示如何通过返回的信息[GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)类中的成员函数`CDaoDatabase`。  
   
- 检索的信息[CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)成员函数将存储在`CDaoTableDefInfo`结构。 调用`GetTableDefInfo`成员函数`CDaoDatabase`tabledef 对象存储在其 TableDefs 集合中的对象。 `CDaoTableDefInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoTableDefInfo`对象。  
+ 检索的信息[CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)成员函数将存储在`CDaoTableDefInfo`结构。 调用`GetTableDefInfo`成员函数`CDaoDatabase`tabledef 对象存储在其 TableDefs 集合中的对象。 `CDaoTableDefInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoTableDefInfo`对象。  
   
  日期和时间设置均源自在其创建或上次更新基表的计算机。 在多用户环境中，用户应该会看到这些设置直接从文件服务器，以避免在时间中的差异以及上次更新属性设置。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

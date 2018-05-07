@@ -1,30 +1,25 @@
 ---
-title: "字符串读入 OLE DB 提供程序 |Microsoft 文档"
-ms.custom: 
+title: 字符串读入 OLE DB 提供程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e2d01fb6610f9b5e8f1d1298aaa49de6a83b561
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>将字符串读入 OLE DB 提供程序
 `RMyProviderRowset::Execute`函数打开文件并读取字符串。 使用者将文件名传递给提供程序，通过调用[ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供程序接收的文件名称，并将其存储在成员变量`m_szCommandText`。 `Execute` 读取的文件名称`m_szCommandText`。 如果文件名无效，或者该文件不可用，`Execute`返回错误。 否则，将打开的文件和调用`fgets`以检索字符串。 为每个字符串将其设置的读操作，`Execute`创建的用户记录的实例 (`CAgentMan`) 并将其放到一个数组。  

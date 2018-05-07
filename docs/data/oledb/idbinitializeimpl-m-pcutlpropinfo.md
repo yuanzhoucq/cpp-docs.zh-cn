@@ -1,12 +1,9 @@
 ---
-title: IDBInitializeImpl::m_pCUtlPropInfo | Microsoft Docs
-ms.custom: 
+title: 'Idbinitializeimpl:: M_pcutlpropinfo |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IDBInitializeImpl<T>::m_pCUtlPropInfo
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - m_pCUtlPropInfo
 ms.assetid: 8996513f-a033-4370-94d0-56f1d7e5492b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec3f1ee512ac39ec16e60f4f8e224838cf7556a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9855352fd624b50aff3c2bb1eb2109ff2418afaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbinitializeimplmpcutlpropinfo"></a>IDBInitializeImpl::m_pCUtlPropInfo
 指向实现 DB 属性信息的对象的指针。  
@@ -46,7 +41,7 @@ T
   
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

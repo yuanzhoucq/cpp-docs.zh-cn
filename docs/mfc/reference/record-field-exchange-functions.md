@@ -1,13 +1,10 @@
 ---
-title: "记录字段交换函数 |Microsoft 文档"
-ms.custom: 
+title: 记录字段交换函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>记录字段交换函数
 本主题列出了记录字段交换 （RFX、 Bulk RFX 和 DFX） 用于自动记录集对象与其数据源之间传输数据以及对数据执行其他操作的函数。  
@@ -148,7 +143,7 @@ void RFX_Binary(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CByteArray](cbytearray-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nMaxLength`  
@@ -160,7 +155,7 @@ void RFX_Binary(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_bool"></a>  RFX_Bool
@@ -182,13 +177,13 @@ void RFX_Bool(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **BOOL**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_byte"></a>  RFX_Byte
@@ -210,13 +205,13 @@ void RFX_Byte(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**字节**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_date"></a>  RFX_Date
@@ -248,7 +243,7 @@ void RFX_Date(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  指定的数据成员; 中存储的值要传输的值。 各种版本的函数执行值的不同数据类型：  
   
  该函数的第一个版本会引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。 对于从记录集到数据源的传输，此值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
@@ -261,7 +256,7 @@ void RFX_Date(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_double"></a>  RFX_Double
@@ -283,13 +278,13 @@ void RFX_Double(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **double**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_int"></a>  RFX_Int
@@ -311,13 +306,13 @@ void RFX_Int(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `int`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_long"></a>  RFX_Long
@@ -340,13 +335,13 @@ value );
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**长**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
   
 ## <a name="rfx_longbinary"></a>  RFX_LongBinary
@@ -368,13 +363,13 @@ void RFX_LongBinary(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `CLongBinary`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_single"></a>  RFX_Single
@@ -396,13 +391,13 @@ void RFX_Single(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **float**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
   
 
@@ -428,7 +423,7 @@ void RFX_Text(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `CString`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nMaxLength`  
@@ -438,7 +433,7 @@ void RFX_Text(
  主要用于参数。 指示参数的数据类型的整数。 类型为 ODBC 数据类型的窗体**SQL_XXX**。  
   
  `nScale`  
- 指定 ODBC 类型的值的小数位数**SQL_DECIMAL**或**SQL_NUMERIC**。 `nScale`当时才有用设置参数值。 详细信息，请参阅主题"精度、 小数位数、 长度和显示大小"中的附录 D *ODBC SDK 程序员参考*。  
+ 指定 ODBC 类型的值的小数位数**SQL_DECIMAL**或**SQL_NUMERIC**。 `nScale` 当时才有用设置参数值。 详细信息，请参阅主题"精度、 小数位数、 长度和显示大小"中的附录 D *ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
  数据源中的所有这些类型的数据映射到和从`CString`的记录集。  
@@ -464,7 +459,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 
@@ -511,7 +506,7 @@ void RFX_Binary_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
@@ -553,7 +548,7 @@ void RFX_Bool_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
@@ -595,7 +590,7 @@ void RFX_Byte_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
   
 ## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
@@ -637,7 +632,7 @@ void RFX_Date_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
@@ -679,7 +674,7 @@ void RFX_Double_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
@@ -701,13 +696,13 @@ void RFX_Int(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `int`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
@@ -749,7 +744,7 @@ void RFX_Long_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
@@ -791,7 +786,7 @@ void RFX_Single_Bulk(
 ### <a name="example"></a>示例  
  请参阅[RFX_Text_Bulk](#rfx_text_bulk)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
   
 
@@ -853,7 +848,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ``` 
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdb.h  
 
 ## <a name="dfx_binary"></a>  DFX_Binary
@@ -877,7 +872,7 @@ void AFXAPI DFX_Binary(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CByteArray](cbytearray-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nPreAllocSize`  
@@ -895,7 +890,7 @@ void AFXAPI DFX_Binary(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 
@@ -919,7 +914,7 @@ void AFXAPI DFX_Bool(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **BOOL**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -934,7 +929,7 @@ void AFXAPI DFX_Bool(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_byte"></a>  DFX_Byte
@@ -957,7 +952,7 @@ void AFXAPI DFX_Byte(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**字节**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -972,7 +967,7 @@ void AFXAPI DFX_Byte(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_currency"></a>  DFX_Currency
@@ -995,7 +990,7 @@ void AFXAPI DFX_Currency(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源的传输，此值将由类型的指定的数据成员， [COleCurrency](colecurrency-class.md)。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -1010,7 +1005,7 @@ void AFXAPI DFX_Currency(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_datetime"></a>  DFX_DateTime
@@ -1033,7 +1028,7 @@ void AFXAPI DFX_DateTime(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 该函数使用的引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象。 对于从记录集到数据源的传输，此值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -1046,12 +1041,12 @@ void AFXAPI DFX_DateTime(
  数据类型之间的映射**DAO_DATE** DAO 和类型中[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)的记录集。  
   
 > [!NOTE]
->  `COleDateTime`替换[CTime](../../atl-mfc-shared/reference/ctime-class.md)和**TIMESTAMP_STRUCT**为此目的在 DAO 类。 `CTime`和**TIMESTAMP_STRUCT**仍然是用于基于 ODBC 的数据访问类。  
+>  `COleDateTime` 替换[CTime](../../atl-mfc-shared/reference/ctime-class.md)和**TIMESTAMP_STRUCT**为此目的在 DAO 类。 `CTime` 和**TIMESTAMP_STRUCT**仍然是用于基于 ODBC 的数据访问类。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_double"></a>  DFX_Double
@@ -1074,7 +1069,7 @@ void AFXAPI DFX_Double(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **double**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -1089,7 +1084,7 @@ void AFXAPI DFX_Double(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_long"></a>  DFX_Long
@@ -1112,7 +1107,7 @@ void AFXAPI DFX_Long(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**长**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -1127,7 +1122,7 @@ void AFXAPI DFX_Long(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 
@@ -1152,7 +1147,7 @@ void AFXAPI DFX_LongBinary(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CLongBinary](clongbinary-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  *dwPreAllocSize*  
@@ -1165,12 +1160,12 @@ void AFXAPI DFX_LongBinary(
 >  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- `DFX_LongBinary`被提供用于使用 MFC ODBC 类的兼容性。 `DFX_LongBinary`函数传输二进制大型对象 (BLOB) 数据使用类`CLongBinary`之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。 数据类型之间的映射**DAO_BYTES** DAO 和类型中[CLongBinary](clongbinary-class.md)的记录集。  
+ `DFX_LongBinary` 被提供用于使用 MFC ODBC 类的兼容性。 `DFX_LongBinary`函数传输二进制大型对象 (BLOB) 数据使用类`CLongBinary`之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。 数据类型之间的映射**DAO_BYTES** DAO 和类型中[CLongBinary](clongbinary-class.md)的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_short"></a>  DFX_Short
@@ -1193,7 +1188,7 @@ void AFXAPI DFX_Short(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**短**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -1206,12 +1201,12 @@ void AFXAPI DFX_Short(
  数据类型之间的映射**DAO_I2** DAO 和类型中**短**的记录集。  
   
 > [!NOTE]
->  `DFX_Short`等效于[RFX_Int](#rfx_int)基于 ODBC 的类。  
+>  `DFX_Short` 等效于[RFX_Int](#rfx_int)基于 ODBC 的类。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 
@@ -1235,7 +1230,7 @@ void AFXAPI DFX_Single(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **float**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
@@ -1250,7 +1245,7 @@ void AFXAPI DFX_Single(
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
 
 ## <a name="dfx_text"></a>  DFX_Text
@@ -1274,7 +1269,7 @@ void AFXAPI DFX_Text(
  `szName`  
  数据列的名称。  
   
- *值*  
+ *value*  
  存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CString](../../atl-mfc-shared/reference/cstringt-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nPreAllocSize`  
@@ -1287,7 +1282,7 @@ void AFXAPI DFX_Text(
 >  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_CHAR**在 DAO 中 (或者，如果符号**_UNICODE**定义， **DAO_WCHAR**) 和类型[CString](../../atl-mfc-shared/reference/cstringt-class.md)中记录集。  n
+ 数据类型之间的映射**DAO_CHAR**在 DAO 中 (或者，如果符号 **_UNICODE**定义， **DAO_WCHAR**) 和类型[CString](../../atl-mfc-shared/reference/cstringt-class.md)中记录集。  n
   
 ### <a name="example"></a>示例  
  此示例演示几次调用到`DFX_Text`。 请注意还对的两个调用[CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype)。 你必须编写首次调用`SetFieldType`及其**DFX**调用。 第二个调用和其关联**DFX**调用通常由生成的类中的代码向导编写的。  
@@ -1308,7 +1303,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** afxdao.h  
   
 ## <a name="see-also"></a>请参阅  

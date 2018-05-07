@@ -1,12 +1,9 @@
 ---
-title: "CDiscreteTransition 类 |Microsoft 文档"
-ms.custom: 
+title: CDiscreteTransition 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 类
 封装离散转换。  
@@ -78,10 +73,10 @@ class CDiscreteTransition : public CBaseTransition;
   
  [CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
  构造一个离散转换对象并初始化其参数。  
   
 ```  
@@ -101,7 +96,7 @@ CDiscreteTransition(
  `hold`  
  用来保存该变量在其最终值的时间量。  
   
-##  <a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>  CDiscreteTransition::Create  
  调用要创建封装的转换 COM 对象的转换库。  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue  
  在转换结束动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>  CDiscreteTransition::m_delay  
  延迟即时切换到的最终值所依据的时间量。  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>  CDiscreteTransition::m_hold  
  用来保存该变量在其最终值的时间量。  
   
 ```  

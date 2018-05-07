@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 4） C4463 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 4） C4463 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>编译器警告 （等级 4） C4463  
   
 > 溢出;分配*值*到只包含中的值的位域*low_value*到*high_value*  
   
-分配*值*位域所能容纳的值的范围之外。 有符号的位域类型使用高顺序位表示符号，因此，如果 *n* 是有符号的位域是-2 位字段大小，范围<sup>n-1</sup>为 2<sup>n-1</sup>-1，而无符号的位字段具有一个从 0 到 2 范围<sup>n</sup>-1。  
+分配*值*位域所能容纳的值的范围之外。 有符号的位域类型使用高顺序位表示符号，因此，如果*n*是有符号的位域是-2 位字段大小，范围<sup>n-1</sup>为 2<sup>n-1</sup>-1，而无符号位域具有一个从 0 到 2 范围<sup>n</sup>-1。  
   
 ## <a name="example"></a>示例  
   

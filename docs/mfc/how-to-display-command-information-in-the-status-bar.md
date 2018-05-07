@@ -1,13 +1,10 @@
 ---
-title: "如何： 在状态栏中显示命令信息 |Microsoft 文档"
-ms.custom: 
+title: 如何： 在状态栏中显示命令信息 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da836f48592d97b3526c568eb9d9a830428f53a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 440e550e6e1ba5a82cac3f35dcb3c76b346b5343
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>如何：在状态栏中显示命令信息
 当你运行应用程序向导创建主干应用程序时，可以支持一个工具栏和状态栏。 两者都支持应用程序向导中的一个选项。 当存在时状态栏时，则应用程序都将自动提供有用的反馈，用户将指针移动到项，在菜单上。 应用程序突出显示菜单项时，自动将提示字符串显示在状态栏中。 例如，当用户将指针移动**剪切**命令**编辑**菜单上，状态栏可能会在消息区域中的状态栏中显示"剪切所选内容并将其放在剪贴板上"。 在提示符下，从而帮助用户了解的菜单项的用途。 此方法也适用当用户单击工具栏按钮。  

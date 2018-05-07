@@ -1,13 +1,10 @@
 ---
-title: "实现接口向导 |Microsoft 文档"
-ms.custom: 
+title: 实现接口向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.interface.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Implement Interface Wizard [C++]
 ms.assetid: 947c329e-0815-4ca7-835e-c41dfeb75f9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-interface-wizard"></a>实现接口向导
 此向导实现 COM 对象的接口。 适用于 Visual Studio 和 Windows 的 COM 库中包括多个接口的实现。 时将创建该对象的实例，并且它提供服务，该对象所提供的接口实现与对象相关联。  

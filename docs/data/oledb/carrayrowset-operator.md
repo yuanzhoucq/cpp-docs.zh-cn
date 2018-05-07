@@ -1,12 +1,9 @@
 ---
-title: "Carrayrowset:: Operator |Microsoft 文档"
-ms.custom: 
+title: 'Carrayrowset:: Operator |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CArrayRowset::operator[]
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - '[] operator'
 - operator[], arrays
 ms.assetid: 3bb8c310-cc1e-46e8-9711-9b565488acaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b2dd001dc3946a3eb22b793874ba1f4b16affb72
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 755e484f430f47eb072e3c590bfbee8471984bb6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carrayrowsetoperator"></a>CArrayRowset::operator
 提供用于访问行集中的行的类似数组的语法。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>备注  
  如果 `nRow` 超过行集中的行数，则会引发异常。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

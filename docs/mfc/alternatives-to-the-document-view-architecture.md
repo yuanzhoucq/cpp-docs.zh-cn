@@ -1,13 +1,10 @@
 ---
-title: "文档视图体系结构的替代方法 |Microsoft 文档"
-ms.custom: 
+title: 文档视图体系结构的替代方法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459383474c9ffed9a7ad6cefe01ea21626cb23b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文档/视图结构的替换选项
 MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格式和数据对用户的可视表示形式。 对于大多数桌面应用程序，文档/视图结构是适当和有效的应用程序体系结构。 这种体系结构将数据与视图分离，大多数情况下，可简化应用程序并减少冗余代码。  

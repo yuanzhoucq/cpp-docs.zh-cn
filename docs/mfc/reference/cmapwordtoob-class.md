@@ -1,12 +1,9 @@
 ---
-title: "CMapWordToOb 类 |Microsoft 文档"
-ms.custom: 
+title: CMapWordToOb 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapWordToOb
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7166fd1b0ce0f8e9152c617979d0ec80bfb2b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 类
 支持 16 位键控的 `CObject` 指针的映射。  
@@ -103,10 +98,10 @@ class CMapWordToOb : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
   
 ## <a name="remarks"></a>备注  
- `CMapWordToOb` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档中，使用重载插入反过来序列的每个元素 (  **<<** ) 运算符或`Serialize`成员函数。  
+ `CMapWordToOb` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果映射存储到存档中，使用重载插入反过来序列的每个元素 ( **<<**) 运算符或`Serialize`成员函数。  
   
  如果你需要个人的转储**WORD** -  `CObject`元素，必须将转储上下文的深度设置为 1 或更高版本。  
   
@@ -119,7 +114,7 @@ class CMapWordToOb : public CObject
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxcoll.h  
   
 ## <a name="see-also"></a>请参阅  

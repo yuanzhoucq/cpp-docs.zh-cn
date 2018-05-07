@@ -1,12 +1,9 @@
 ---
-title: "CDBException 类 |Microsoft 文档"
-ms.custom: 
+title: CDBException 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>CDBException 类
 表示由数据库类引起的异常条件。  
@@ -53,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|包含在由 ODBC 返回的错误代码方面对错误进行描述的字符串。|  
   
 ## <a name="remarks"></a>备注  
- 该类包括两个公共数据成员可以使用来确定导致异常或显示一条描述异常的文本消息。 `CDBException`对象为构造，并且由数据库类的成员函数引发。  
+ 该类包括两个公共数据成员可以使用来确定导致异常或显示一条描述异常的文本消息。 `CDBException` 对象为构造，并且由数据库类的成员函数引发。  
   
 > [!NOTE]
 >  此类是 MFC 的开放式数据库连接 (ODBC) 类。 如果改为使用较新的数据访问对象 (DAO) 类，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)相反。 所有的 DAO 类名称作为前缀都具有"CDao"。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。  
@@ -71,10 +66,10 @@ class CDBException : public CException
   
  `CDBException`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  包含 ODBC 错误代码的类型**某一 RETCODE**返回的 ODBC 应用程序编程接口 (API) 函数。  
   
 ### <a name="remarks"></a>备注  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  由 ODBC 定义 SQL 前缀代码。 AFX 前缀代码 AFXDB 中定义。H、 在 MFC\INCLUDE 中找到。  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  包含描述导致异常的错误的字符串。  
   
 ### <a name="remarks"></a>备注  
  字符串在字母数字术语中描述的错误。 有关详细信息及示例，请参阅**m_strStateNativeOrigin**。  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  包含描述导致异常的错误的字符串。  
   
 ### <a name="remarks"></a>备注  

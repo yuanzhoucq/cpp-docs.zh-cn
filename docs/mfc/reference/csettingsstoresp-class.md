@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStoreSP 类 |Microsoft 文档"
-ms.custom: 
+title: CSettingsStoreSP 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 类
 `CSettingsStoreSP`类是可用于创建的实例的帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
@@ -59,7 +54,7 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |`m_dwUserData`|自定义用户数据存储在`CSettingsStoreSP`对象。 你提供的构造函数中的此数据`CSettingsStoreSP`对象。|  
 |`m_pRegistry`|`CSettingsStore`-派生对象`Create`方法创建。|  
@@ -77,12 +72,12 @@ class CSettingsStoreSP
   
  每当框架通常会访问注册表，它将现在动态实例化自定义类并使用它来读取或写入数据。  
   
- `CSettingsStoreSP::SetRuntimeClass`使用全局静态变量。 因此，一次只能有一个自定义存储是可用。  
+ `CSettingsStoreSP::SetRuntimeClass` 使用全局静态变量。 因此，一次只能有一个自定义存储是可用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
  创建派生自的对象的新实例[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
 ```  
@@ -113,7 +108,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
  构造[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)对象。  
   
 ```  
@@ -127,7 +122,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>备注  
  `CSettingsStoreSP`对象将从数据存储`dwUserData`在受保护的成员变量`m_dwUserData`。  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  设置运行时类。 该方法[CSettingsStoreSP::Create](#create)运行时类用于确定要创建的对象类型。  
   
 ```  
@@ -139,7 +134,7 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
  指向类的运行时类信息的指针派生自[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`如果通过标识类`pRTI`不派生自`CSettingsStore`。  
+ `TRUE` 如果成功，则，`FALSE`如果通过标识类`pRTI`不派生自`CSettingsStore`。  
   
 ### <a name="remarks"></a>备注  
  你可以使用[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)派生的类`CSettingsStore`。 使用方法`SetRuntimeClass`如果你想要创建自定义类派生自的对象`CSettingsStore`。  

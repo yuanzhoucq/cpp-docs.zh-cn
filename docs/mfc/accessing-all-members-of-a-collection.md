@@ -1,13 +1,10 @@
 ---
-title: "访问集合的所有成员 |Microsoft 文档"
-ms.custom: 
+title: 访问集合的所有成员 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-all-members-of-a-collection"></a>访问集合的所有成员
 MFC 数组集合类（无论是否基于模板）使用索引来访问其元素。 MFC 列表和映射集合类（无论是否基于模板）使用 **POSITION** 类型的指示器来描述集合内的给定位置。 若要访问这些集合的一个或多个成员，首先初始化位置指示器，然后重复将此位置传递给集合，使其返回下一个元素。 集合不负责维护迭代进度的状态信息。 该信息保存在位置指示器。 但对于给定的特定位置，集合负责返回下一个元素。  
@@ -55,7 +50,7 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
   
      此示例使用一个类型化的指针数组，其中包含指向 `CPerson` 对象的指针。 数组派生自 `CObArray`类，这是一个非模板预定义类。 `GetAt` 返回一个指向 `CPerson` 对象的指针。 对于类型化的指针集合类（数组或列表），第一个参数指定基类；第二个参数指定要存储的类型。  
   
-     `CTypedPtrArray`类还重载**[]**运算符，以便你可以使用常用的数组下标语法来访问数组的元素。 以上 `for` 循环正文中的语句的替代是  
+     `CTypedPtrArray`类还重载 **[]** 运算符，以便你可以使用常用的数组下标语法来访问数组的元素。 以上 `for` 循环正文中的语句的替代是  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

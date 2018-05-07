@@ -1,13 +1,10 @@
 ---
-title: "与树控件通信 |Microsoft 文档"
-ms.custom: 
+title: 与树控件通信 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - communications, tree controls
 - tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ef1188c9519e57c8132a2b20fc3b272d6c0ac51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af0b248d5e32b535c23cc17b48efdd551dad7a2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="communicating-with-a-tree-control"></a>与树控件通信
 为调用成员函数使用不同的方法[CTreeCtrl](../mfc/reference/ctreectrl-class.md)对象取决于对象的创建方式：  

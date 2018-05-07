@@ -1,13 +1,10 @@
 ---
-title: "添加成员变量向导 |Microsoft 文档"
-ms.custom: 
+title: 添加成员变量向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.variable.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-variable-wizard"></a>添加成员变量向导
 此向导将成员变量声明添加到标头文件，并根据的选项，它可以将代码添加到的.cpp 文件。 一旦已添加成员变量使用向导，你可以编辑在开发环境中的代码。  
@@ -33,11 +28,11 @@ ms.lasthandoff: 12/21/2017
  **访问**  
  设置的访问权限的成员变量。 访问修饰符是指定其他类都没有成员变量的访问权限的关键字。 请参阅[成员访问控制](../cpp/member-access-control-cpp.md)有关指定访问的详细信息。 成员变量的访问级别设置为**公共**默认情况下。  
   
--   [公用](../cpp/public-cpp.md)  
+-   [public](../cpp/public-cpp.md)  
   
--   [受保护](../cpp/protected-cpp.md)  
+-   [protected](../cpp/protected-cpp.md)  
   
--   [专用](../cpp/private-cpp.md)  
+-   [private](../cpp/private-cpp.md)  
   
  **变量类型**  
  设置要添加的成员变量的返回类型。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 |选项|描述|  
 |------------|-----------------|  
 |**控件**|默认情况下，控件类型设置此选项。 它管理控件本身并不是状态或内容 （如你可能想要使用列表框、 组合框中或编辑框执行操作） 的控件。|  
-|**“值”**|此选项才可用仅为控件类型可以包含一个值 （如编辑框中） 或反映状态 （例如复选框），并为其可能管理范围、 内容或状态。 请参阅[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)有关详细信息。|  
+|**值**|此选项才可用仅为控件类型可以包含一个值 （如编辑框中） 或反映状态 （例如复选框），并为其可能管理范围、 内容或状态。 请参阅[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)有关详细信息。|  
   
  **类别**  
  指定变量根据控件类型或控件的值。  

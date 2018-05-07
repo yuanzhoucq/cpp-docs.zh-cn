@@ -1,12 +1,9 @@
 ---
-title: "CD2DRectF 类 |Microsoft 文档"
-ms.custom: 
+title: CD2DRectF 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRectF
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b0919780e4fcad86772892bb0b300a735df81e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 类
 `D2D1_RECT_F`的包装器。  
@@ -65,10 +60,10 @@ class CD2DRectF : public D2D1_RECT_F;
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxrendertarget.h  
   
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
  构造 CD2DRectF 对象从 CRect 对象。  
   
 ```  
@@ -100,7 +95,7 @@ CD2DRectF(
  `fBottom`  
  源下坐标  
   
-##  <a name="isnull"></a>CD2DRectF::IsNull  
+##  <a name="isnull"></a>  CD2DRectF::IsNull  
  返回一个布尔值，该值指示表达式是否包含任何有效的数据 (Null)。  
   
 ```  
@@ -110,7 +105,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>返回值  
  矩形的顶部、 左、 下、 和正确的值完全等于 0; 如果为 TRUE否则为 FALSE。  
   
-##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
  将 CD2DRectF 转换 CRect 对象。  
   
 ```  

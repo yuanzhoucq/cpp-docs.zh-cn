@@ -1,12 +1,9 @@
 ---
-title: "CEditView 类 |Microsoft 文档"
-ms.custom: 
+title: CEditView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEditView
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ceditview-class"></a>CEditView 类
 视图类的类型，提供 Windows 编辑控件功能并可用于实现简单的文本编辑器功能。  
@@ -132,9 +127,9 @@ class CEditView : public CCtrlView
   
  类型的对象`CEditView`(或派生自的类型`CEditView`) 具有以下限制：  
   
-- `CEditView`不实现 true 所见即所得 (WYSIWYG) 编辑。 ： 在屏幕上的提高可读性并对匹配的打印的输出之间有一个选择`CEditView`选取屏幕可读性。  
+- `CEditView` 不实现 true 所见即所得 (WYSIWYG) 编辑。 ： 在屏幕上的提高可读性并对匹配的打印的输出之间有一个选择`CEditView`选取屏幕可读性。  
   
-- `CEditView`可以在只有一种字体显示文本。 尚无特殊字符格式设置支持。 请参阅类[CRichEditView](../../mfc/reference/cricheditview-class.md)的更强大的功能。  
+- `CEditView` 可以在只有一种字体显示文本。 尚无特殊字符格式设置支持。 请参阅类[CRichEditView](../../mfc/reference/cricheditview-class.md)的更强大的功能。  
   
 -   文本量`CEditView`可以包含限制。 限制是相同`CEdit`控件。  
   
@@ -153,10 +148,10 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxext.h  
   
-##  <a name="ceditview"></a>CEditView::CEditView  
+##  <a name="ceditview"></a>  CEditView::CEditView  
  构造 `CEditView` 类型的对象。  
   
 ```  
@@ -166,7 +161,7 @@ CEditView();
 ### <a name="remarks"></a>备注  
  在构造对象之后, 必须调用[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函数之前使用编辑控件。 如果派生的类从`CEditView`并将其添加到模板使用`CWinApp::AddDocTemplate`，框架会调用这两个此构造函数和**创建**函数。  
   
-##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
+##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  包含的默认样式`CEditView`对象。  
   
 ```  
@@ -176,7 +171,7 @@ static const DWORD dwStyleDefault;
 ### <a name="remarks"></a>备注  
  将传递作为此静态成员`dwStyle`参数**创建**函数来获取的默认样式`CEditView`对象。  
   
-##  <a name="findtext"></a>CEditView::FindText  
+##  <a name="findtext"></a>  CEditView::FindText  
  调用`FindText`函数要搜索`CEditView`对象的文本缓冲区。  
   
 ```  
@@ -204,7 +199,7 @@ BOOL FindText(
   
  通常不需要调用`FindText`作用，除非你重写`OnFindNext`，哪些调用`FindText`。  
   
-##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
+##  <a name="getbufferlength"></a>  CEditView::GetBufferLength  
  调用此成员函数可获取当前在编辑控件的缓冲区中，不包括 null 终止符的字符数。  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBufferLength() const;
 ### <a name="return-value"></a>返回值  
  缓冲区中的字符串的长度。  
   
-##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CEditView::GetEditCtrl  
  调用`GetEditCtrl`以获取对使用编辑视图的编辑控件的引用。  
   
 ```  
@@ -233,7 +228,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
+##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont  
  调用`GetPrinterFont`以获取指向[CFont](../../mfc/reference/cfont-class.md)对象，描述当前打印机字体。  
   
 ```  
@@ -248,7 +243,7 @@ CFont* GetPrinterFont() const;
   
  使用此函数可确定当前的打印机字体。 如果它不是所需的打印机字体，使用[CEditView::SetPrinterFont](#setprinterfont)若要更改它。  
   
-##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
+##  <a name="getselectedtext"></a>  CEditView::GetSelectedText  
  调用`GetSelectedText`要复制到所选的文本`CString`对象，直至选定内容或选定内容中前面的第一个回车符-字符的字符的末尾。  
   
 ```  
@@ -259,7 +254,7 @@ void GetSelectedText(CString& strResult) const;
  `strResult`  
  对引用`CString`将接收所选的文本的对象。  
   
-##  <a name="lockbuffer"></a>CEditView::LockBuffer  
+##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
  调用此成员函数以获取指向缓冲区的指针。 不应修改缓冲区。  
   
 ```  
@@ -269,7 +264,7 @@ LPCTSTR LockBuffer() const;
 ### <a name="return-value"></a>返回值  
  指向编辑控件的缓冲区的指针。  
   
-##  <a name="onfindnext"></a>CEditView::OnFindNext  
+##  <a name="onfindnext"></a>  CEditView::OnFindNext  
  搜索指定的文本的缓冲区中的文本`lpszFind`，沿指定方向`bNext`，与由指定的大小写区分功能`bCase`。  
   
 ```  
@@ -292,10 +287,10 @@ virtual void OnFindNext(
 ### <a name="remarks"></a>备注  
  搜索当前所选内容的开头开始，并通过调用来实现[FindText](#findtext)。 在默认实现中，`OnFindNext`调用[OnTextNotFound](#ontextnotfound)如果没有找到文本。  
   
- 重写`OnFindNext`更改的方式`CEditView`-派生的对象搜索文本。 `CEditView`调用`OnFindNext`当用户选择在标准的查找对话框中的查找下一步按钮。  
+ 重写`OnFindNext`更改的方式`CEditView`-派生的对象搜索文本。 `CEditView` 调用`OnFindNext`当用户选择在标准的查找对话框中的查找下一步按钮。  
   
-##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
- `CEditView`调用`OnReplaceAll`当用户在标准的替换对话框中选择全部替换按钮。  
+##  <a name="onreplaceall"></a>  CEditView::OnReplaceAll  
+ `CEditView` 调用`OnReplaceAll`当用户在标准的替换对话框中选择全部替换按钮。  
   
 ```  
 virtual void OnReplaceAll(
@@ -315,14 +310,14 @@ virtual void OnReplaceAll(
  指定搜索是否区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
   
 ### <a name="remarks"></a>备注  
- `OnReplaceAll`搜索指定的文本的缓冲区中的文本`lpszFind`，使用指定的大小写区分功能`bCase`。 当前所选内容的开头开始搜索。 每次发现搜索文本时，则此函数会将文本该匹配项替换与指定的文本`lpszReplace`。 搜索通过调用[FindText](#findtext)。 在默认实现中， [OnTextNotFound](#ontextnotfound)如果没有找到文本，则调用。  
+ `OnReplaceAll` 搜索指定的文本的缓冲区中的文本`lpszFind`，使用指定的大小写区分功能`bCase`。 当前所选内容的开头开始搜索。 每次发现搜索文本时，则此函数会将文本该匹配项替换与指定的文本`lpszReplace`。 搜索通过调用[FindText](#findtext)。 在默认实现中， [OnTextNotFound](#ontextnotfound)如果没有找到文本，则调用。  
   
  如果当前所选内容不匹配`lpszFind`，所选内容更新到指定的文本的第一个匹配项`lpszFind`并且不执行替换操作。 这允许用户为确认这是他们想要选择与要替换的文本不匹配时执行的操作。  
   
  重写`OnReplaceAll`更改的方式`CEditView`-派生的对象替换文本。  
   
-##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
- `CEditView`调用`OnReplaceSel`当用户在标准的替换对话框中选择替换按钮。  
+##  <a name="onreplacesel"></a>  CEditView::OnReplaceSel  
+ `CEditView` 调用`OnReplaceSel`当用户在标准的替换对话框中选择替换按钮。  
   
 ```  
 virtual void OnReplaceSel(
@@ -350,7 +345,7 @@ virtual void OnReplaceSel(
   
  重写`OnReplaceSel`更改的方式`CEditView`-派生的对象将替换所选的文本。  
   
-##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>  CEditView::OnTextNotFound  
  重写此函数可更改的默认实现，后者将调用 Windows 函数**MessageBeep**。  
   
 ```  
@@ -361,7 +356,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  `lpszFind`  
  要找的文本。  
   
-##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
  调用`PrintInsideRect`若要在由指定的矩形中打印文本*rectLayout*。  
   
 ```  
@@ -393,7 +388,7 @@ UINT PrintInsideRect(
   
  **Rect.bottom**元素*rectLayout*对象已更改，从而使矩形的维度定义原始文本所占用的矩形的部分。  
   
-##  <a name="serializeraw"></a>CEditView::SerializeRaw  
+##  <a name="serializeraw"></a>  CEditView::SerializeRaw  
  调用`SerializeRaw`能够`CArchive`对象读取或写入文本`CEditView`到文本文件的对象。  
   
 ```  
@@ -405,9 +400,9 @@ void SerializeRaw(CArchive& ar);
  引用`CArchive`对象，用于存储的序列化的文本。  
   
 ### <a name="remarks"></a>备注  
- `SerializeRaw`不同于`CEditView`的内部实现`Serialize`在于它读取和写入纯文本，而无需前面对象说明数据。  
+ `SerializeRaw` 不同于`CEditView`的内部实现`Serialize`在于它读取和写入纯文本，而无需前面对象说明数据。  
   
-##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
+##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
  调用`SetPrinterFont`到由指定的字体设置的打印机字体`pFont`。  
   
 ```  
@@ -421,7 +416,7 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="remarks"></a>备注  
  如果您希望始终使用特定字体打印你视图，包括调用`SetPrinterFont`在类的`OnPreparePrinting`函数。 此虚函数之前调用打印发生，因此字体更改发生在之前打印视图的内容。  
   
-##  <a name="settabstops"></a>CEditView::SetTabStops  
+##  <a name="settabstops"></a>  CEditView::SetTabStops  
  调用此函数可设置用于显示和打印的制表位。  
   
 ```  
@@ -442,7 +437,7 @@ void SetTabStops(int nTabStops);
   
  [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
+##  <a name="unlockbuffer"></a>  CEditView::UnlockBuffer  
  调用此成员函数以解锁缓冲区。  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "正则表达式 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 正则表达式 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - .NET Framework [C++], regular expressions
 - regular expressions [C++], about regular expressions
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: deac3645e9b53745ccf8e3b68ed47d4c0de86430
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0f91fe3d4c2a5ab215b3eb42f0ba0866b7d0b21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expressions-ccli"></a>正则表达式 (C++/CLI)
 演示如何在.NET Framework 中使用正则表达式类的各种字符串操作。  

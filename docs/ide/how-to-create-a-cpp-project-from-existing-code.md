@@ -1,29 +1,24 @@
 ---
-title: "如何： 通过现有代码创建 c + + 项目 |Microsoft 文档"
-ms.custom: 
+title: 如何： 通过现有代码创建 c + + 项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - C++, creating projects from existing code
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6781709c105c606f6ceb856654525385738c1ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1786e5704d7afd07576ab738d907eb841518f8be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>如何：通过现有代码创建 C++ 项目
 
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  上**文件**菜单上，指向**新建**，然后单击**从现有代码创建项目**。  
   
-1.  第一页上**从现有代码文件创建新项目**向导中，选择**Visual c + +**中**要创建什么类型的项目**列表。 选择“下一步”  继续。 
+1.  第一页上**从现有代码文件创建新项目**向导中，选择**Visual c + +** 中**要创建什么类型的项目**列表。 选择“下一步”  继续。 
   
 1.  指定项目位置和源文件的目录。 有关此页上的详细信息，请参阅[指定项目位置和源文件，创建新从现有代码文件项目向导](../ide/specify-project-location-and-source-files.md)。 选择“下一步”  继续。  
   

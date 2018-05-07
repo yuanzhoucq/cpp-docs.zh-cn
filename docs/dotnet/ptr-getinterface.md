@@ -1,12 +1,9 @@
 ---
-title: "ptr::GetInterface |Microsoft 文档"
-ms.custom: 
+title: ptr::GetInterface |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::GetInterface
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetInterface method
 ms.assetid: d85553ec-fb88-4fd6-9df2-ddcaa8b2dc70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 286a0dfa19d5d18d76dea1164d9d038667e1ef57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99a4163da3692d66c71eba8b4f1eacc872cbc560
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrgetinterface"></a>ptr::GetInterface
 返回指向拥有的 COM 对象的指针。  
@@ -171,7 +166,7 @@ int main() {
 <word>persnickety</word>  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头文件** \<msclr\com\ptr.h >  
   
  **Namespace** msclr:: com  

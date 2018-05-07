@@ -2,11 +2,8 @@
 title: 将划分 (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::divides
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - divides function [STL/CLR]
 ms.assetid: 4c36026a-02ba-475d-af68-854599647f4b
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b634b9e0d04575d17936d9dd855dfab4d8f13c16
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84e95ef9138540ad716655f159392768ac115fb9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="divides-stlclr"></a>divides (STL/CLR)
 此模板类描述某个函数，当调用，返回除以第二个的第一个参数。 使用它指定根据其自变量类型的函数对象。  
@@ -127,7 +122,7 @@ int main()
 2 3  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  

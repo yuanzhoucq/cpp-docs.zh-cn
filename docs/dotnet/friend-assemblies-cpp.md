@@ -2,29 +2,24 @@
 title: 友元程序集 （c + +） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc39fa66a73f16f800f0c7f0e4bbc49730d4b9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C++)
 适用的运行时，为*友元程序集*语言功能使位于命名空间范围或一个或多个客户端程序集或.netmodule 可以访问程序集组件中的全局范围的类型。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  （此语言功能不支持在 Windows 运行时中。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
  作为对使用友元程序集功能的替代，您可使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制对单独类型的访问。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -102,7 +97,7 @@ Class1::Test_Public
   
  下一代码示例定义了未指定将对组件中类型具有访问权限的客户端程序集的组件。  
   
- 请注意，通过使用链接组件**/opt: noref**。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅[/OPT （优化）](../build/reference/opt-optimizations.md)。  
+ 请注意，通过使用链接组件 **/opt: noref**。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅[/OPT （优化）](../build/reference/opt-optimizations.md)。  
   
 ```cpp  
 // friend_assemblies_3.cpp  

@@ -1,12 +1,9 @@
 ---
-title: "less_equal (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: less_equal (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::less_equal
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - less_equal function [STL/CLR]
 ms.assetid: 87d5bebc-6e5a-4d70-b15c-7260d06d50f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f0ecc202e1a83f0f32b0febef488bb1979cccb86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cac1bdd8ddff3999acb88913b721078151258c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lessequal-stlclr"></a>less_equal (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true 仅第一个参数是否小于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
@@ -127,7 +122,7 @@ int main()
 0 1  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  

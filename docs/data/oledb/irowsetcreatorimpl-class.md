@@ -1,12 +1,9 @@
 ---
-title: "IRowsetCreatorImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IRowsetCreatorImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IRowsetCreatorImpl
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetCreatorImpl class
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51d984f2254c8a2a135b5ecb386e8f195946366b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0492994193130ffa6a547691490b4da1ae557c8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 类
 执行与相同的功能`IObjectWithSite`但使 OLE DB 属性还**DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**。  
@@ -58,7 +53,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ## <a name="remarks"></a>备注  
  此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和替代[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 当提供程序命令或会话对象创建一个行集合时，它将调用`QueryInterface`寻找行集对象上`IObjectWithSite`和调用`SetSite`将行集对象传递**IUnkown**作为站点接口的接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

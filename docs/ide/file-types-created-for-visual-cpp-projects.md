@@ -1,13 +1,10 @@
 ---
-title: "文件类型为 Visual c + + 项目创建 |Microsoft 文档"
-ms.custom: 
+title: 文件类型为 Visual c + + 项目创建 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>为 Visual C++ 项目创建的文件类型
 本主题介绍与针对传统桌面应用程序的 Visual C++ 项目相关联的所有文件类型。 项目中包含的实际文件取决于项目类型以及在使用向导时选择的选项。  

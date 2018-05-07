@@ -1,13 +1,10 @@
 ---
-title: "强制转换表示法和 safe_cast 引入&lt;&gt; |Microsoft 文档"
-ms.custom: 
+title: 强制转换表示法和 safe_cast 引入&lt;&gt; |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>强制转换表示法和 safe_cast 简介&lt;&gt;
 强制转换表示法已从托管扩展中的 c + + 更改为 Visual c + +。  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  因此建议被退回以进行进一步考虑，并考虑了几个备选的表示法，返回给委员会了窗体 (`?type`)，这指示它的不确定性-即动态性。 这使得用户能够-静态或动态-这两种形式之间切换但没有与之太高兴。 因此回从头开始。 第三个和成功的表示法是现在标准`dynamic_cast<type>`，它被推广为一组的四个新样式强制转换表示法。  
   
- ISO c + + 中`dynamic_cast`返回`0`时应用于不适当的指针类型，并引发`std::bad_cast`异常时应用于引用类型。 在 c + + 托管扩展应用`dynamic_cast`指向托管的引用类型 （由于其指针表示形式） 始终返回`0`。 `__try_cast<type>`在中引入了模拟作为异常抛出变体`dynamic_cast`，只不过它将引发`System::InvalidCastException`如果转换失败。  
+ ISO c + + 中`dynamic_cast`返回`0`时应用于不适当的指针类型，并引发`std::bad_cast`异常时应用于引用类型。 在 c + + 托管扩展应用`dynamic_cast`指向托管的引用类型 （由于其指针表示形式） 始终返回`0`。 `__try_cast<type>` 在中引入了模拟作为异常抛出变体`dynamic_cast`，只不过它将引发`System::InvalidCastException`如果转换失败。  
   
 ```  
 public __gc class ItemVerb;  

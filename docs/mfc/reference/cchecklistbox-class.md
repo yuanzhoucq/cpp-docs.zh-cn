@@ -1,12 +1,9 @@
 ---
-title: "CCheckListBox 类 |Microsoft 文档"
-ms.custom: 
+title: CCheckListBox 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 类
 提供 Windows 检查表框功能。  
@@ -84,7 +79,7 @@ class CCheckListBox : public CListBox
 ## <a name="remarks"></a>备注  
  "清单框"显示项，例如文件名的列表。 在列表中的每个项都有它的用户可以选中或清除旁的复选框。  
   
- `CCheckListBox`是仅为所有者描述的控件，因为列表包含多个文本字符串。 简单地说，检查表框包含文本字符串和复选框，但不是需要有文本。 例如，你可以每个项旁边的复选框的小位图的列表。  
+ `CCheckListBox` 是仅为所有者描述的控件，因为列表包含多个文本字符串。 简单地说，检查表框包含文本字符串和复选框，但不是需要有文本。 例如，你可以每个项旁边的复选框的小位图的列表。  
   
  若要创建你自己的检查表框，必须派生您自己的类从`CCheckListBox`。 若要派生您自己的类，编写为派生的类构造函数，然后调用**创建**。  
   
@@ -92,7 +87,7 @@ class CCheckListBox : public CListBox
   
  每个消息映射条目采用以下形式：  
   
- **ON_**通知**(**`id`， `memberFxn` **)**  
+ **ON_** 通知 **(**`id`， `memberFxn` **)**  
   
  其中`id`指定发送通知的控件的子窗口 ID 和`memberFxn`是父成员函数编写以处理通知的名称。  
   
@@ -119,10 +114,10 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
  构造 `CCheckListBox` 对象。  
   
 ```  
@@ -135,7 +130,7 @@ CCheckListBox();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>  CCheckListBox::Create  
  创建 Windows 检查表框并将其附加到`CCheckListBox`对象。  
   
 ```  
@@ -185,7 +180,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP**以允许 tab 键移到此控件  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
  由框架在所有者绘制清单框中更改的可视方面时调用。  
   
 ```  
@@ -205,7 +200,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  清单框项不是高度相同，如果清单框样式 (中指定**创建**) 必须是**LBS_OWNERVARIABLE**，且必须重写[MeasureItem](#measureitem)函数。  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>  CCheckListBox::Enable  
  调用此函数可启用或禁用检查列表框项。  
   
 ```  
@@ -221,7 +216,7 @@ void Enable(
  `bEnabled`  
  指定项是启用还是禁用。  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
  检索指定的复选框的状态。  
   
 ```  
@@ -235,13 +230,13 @@ int GetCheck(int nIndex);
 ### <a name="return-value"></a>返回值  
  指定的复选框的状态。 下表列出可能的值。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`BST_CHECKED`|选中复选框。|  
 |`BST_UNCHECKED`|未选中复选框。|  
 |`BST_INDETERMINATE`|复选框状态是不确定的。|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
  调用此函数可获取清单框的样式。  
   
 ```  
@@ -254,7 +249,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>备注  
  有关可能的样式信息，请参阅[SetCheckStyle](#setcheckstyle)。  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
  调用此函数可确定是否启用了一项。  
   
 ```  
@@ -268,7 +263,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>返回值  
  如果启用了项; 则为非 0否则为 0。  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
  创建一个具有非默认样式清单框时，由框架调用。  
   
 ```  
@@ -282,7 +277,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>备注  
  默认情况下，此成员函数没有任何影响。 重写该成员函数，并填写`MEASUREITEMSTRUCT`结构以通知 Windows 检查表框项的维数。 如果使用清单框中创建了[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，框架会调用此成员函数为列表框中的每个项。 否则，此成员是只能调用一次。  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
  框架调用此函数可在项中获取的位置和大小的复选框。  
   
 ```  
@@ -304,7 +299,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>备注  
  默认实现将仅返回的默认位置和大小的复选框 ( `rectCheckBox`)。 默认情况下，复选框在某一项的左上角对齐，并且是标准的复选框大小。 可能情况下你想在右侧，复选框或希望放大或缩小的复选框。 在这些情况下，重写`OnGetCheckPosition`若要更改的复选框位置和项内的大小。  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
  设置指定的复选框的状态。  
   
 ```  
@@ -323,13 +318,13 @@ void SetCheck(
 ### <a name="remarks"></a>备注  
  下表列出可能值`nCheck`参数。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**BST_CHECKED**|选择指定的复选框。|  
 |**BST_UNCHECKED**|清除指定的复选框。|  
 |**BST_INDETERMINATE**|将指定的复选框状态设置为不确定。<br /><br /> 此状态只为时可用的复选框样式`BS_AUTO3STATE`或`BS_3STATE`。 有关详细信息，请参阅[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
  调用此函数可在清单中设置的复选框的样式。  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "绘制和打印类 |Microsoft 文档"
-ms.custom: 
+title: 绘制和打印类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.drawing
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - printing classes [MFC]
 - graphics [MFC], graphical output classes
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4917bf4503958ccdacb7f38082139a36d0e8374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-and-printing-classes"></a>绘制和打印类
 在 Windows 中，所有图形输出都在一个称为设备上下文 (DC) 的虚拟绘制区域上绘制。 MFC 提供用于封装各种类型的 DC 的类，以及 Windows 绘制工具（如位图、画笔、调色板和钢笔）的封装。  

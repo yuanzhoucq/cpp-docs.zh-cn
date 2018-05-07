@@ -1,30 +1,25 @@
 ---
-title: "键盘和鼠标自定义 |Microsoft 文档"
-ms.custom: 
+title: 键盘和鼠标自定义 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b031c4af05df7ad2b8c0850cefb116d4ac249d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-and-mouse-customization"></a>键盘和鼠标自定义
 MFC 允许应用程序用户自定义其处理键盘和鼠标输入的方式。 用户可通过为命令分配键盘快捷键来自定义键盘输入。 用户还可通过选择应在用户双击应用程序特定窗口内时执行的命令来自定义鼠标输入。 本主题介绍如何为您的应用程序自定义输入。  

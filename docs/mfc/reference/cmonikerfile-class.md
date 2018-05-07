@@ -1,12 +1,9 @@
 ---
-title: "CMonikerFile 类 |Microsoft 文档"
-ms.custom: 
+title: CMonikerFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfdf86a4375521d7db084b60c549b08a54dc992
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 类
 表示数据的流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 通过名为[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
@@ -76,7 +71,7 @@ class CMonikerFile : public COleStreamFile
   
  派生自`COleStreamFile`，`CMonikerFile`采用名字对象或可成为名字对象的字符串表示形式并将绑定到名字对象为其名称的流。 然后，你可以读取并写入该流。 实际用途`CMonikerFile`是提供简单访问`IStream`s 命名`IMoniker`s，以便无需自己，绑定流尚未具有`CFile`写入流的功能。  
   
- `CMonikerFile`不能用于绑定到流之外的任何内容。 如果你想要将绑定到存储或一个对象，则必须使用`IMoniker`直接接口。  
+ `CMonikerFile` 不能用于绑定到流之外的任何内容。 如果你想要将绑定到存储或一个对象，则必须使用`IMoniker`直接接口。  
   
  流和名字对象的详细信息，请参阅[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 参考*和[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)和[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)中Windows SDK。  
   
@@ -89,10 +84,10 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxole.h  
   
-##  <a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>  CMonikerFile::Close  
  调用此函数分离并释放流并释放名字对象。  
   
 ```  
@@ -102,14 +97,14 @@ virtual void Close();
 ### <a name="remarks"></a>备注  
  可以在未打开或已关闭流上调用。  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
  构造 `CMonikerFile` 对象。  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
  调用此函数可创建默认初始化绑定上下文。  
   
 ```  
@@ -126,7 +121,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>备注  
  绑定上下文是存储有关特定的名字对象绑定操作的信息的对象。 你可以重写此函数可提供一个自定义绑定的上下文。  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>  CMonikerFile::Detach  
  调用此函数可关闭的流。  
   
 ```  
@@ -140,7 +135,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
  调用此函数可检索指向当前标记的指针。  
   
 ```  
@@ -153,7 +148,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>备注  
  由于`CMonikerFile`不是一个接口，返回的指针引用不递增引用计数 (通过[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，并释放标记时`CMonikerFile`释放对象。 如果你想要保存到名字对象或释放它自己，则必须`AddRef`它。  
   
-##  <a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>  CMonikerFile::Open  
  调用此成员函数，以打开文件或标记的对象。  
   
 ```  
@@ -183,7 +178,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>备注  
  `lpszURL`参数不能用于在 Macintosh 上。 仅`pMoniker`形式**打开**可以在 Macintosh 上使用。  
   
- 你可以使用 URL 或文件名`lpszURL`参数。 例如:  
+ 你可以使用 URL 或文件名`lpszURL`参数。 例如：  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

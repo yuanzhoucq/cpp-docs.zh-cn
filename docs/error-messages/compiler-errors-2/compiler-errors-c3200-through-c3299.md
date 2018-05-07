@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3200 通过 C3299 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3200 通过 C3299 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>编译器错误 C3200 通过 C3299
 
@@ -139,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |[编译器错误 C3271](compiler-error-c3271.md)|*字段*': 无效的值*数*FieldOffset 特性的|
 |[编译器错误 C3272](compiler-error-c3272.md)|*符号*： 符号需要 FieldOffset，因为它是结构/类的成员*type_name* layoutkind 定义|
 |[编译器错误 C3273](compiler-error-c3273.md)|*关键字*： 不允许对 c + + try 块执行|
-|[编译器错误 C3274](compiler-error-c3274.md)|最后 / &#95; &#95; 最后没有匹配，并重试|
+|[编译器错误 C3274](compiler-error-c3274.md)|最后 /&#95;&#95;最后没有匹配，并重试|
 |[编译器错误 C3275](compiler-error-c3275.md)|*标识符*： 不能使用该无限定符的符号|
-|[编译器错误 C3276](compiler-error-c3276.md)|*关键字*： 最后外跳转 / &#95; &#95; 最后块具有未定义的行为在终止处理过程|
+|[编译器错误 C3276](compiler-error-c3276.md)|*关键字*： 最后外跳转 /&#95;&#95;最后块具有未定义的行为在终止处理过程|
 |[编译器错误 C3277](compiler-error-c3277.md)|不能定义非托管的枚举*枚举*内部托管*类型*|
 |[编译器错误 C3278](compiler-error-c3278.md)|直接调用的接口或纯方法*函数*将在运行时失败|
 |[编译器错误 C3279](compiler-error-c3279.md)|不允许对在 cli 命名空间中声明的类模板进行部分专用化、显式专用化和显式实例化|

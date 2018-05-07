@@ -1,12 +1,9 @@
 ---
-title: "CCmdTarget 类 |Microsoft 文档"
-ms.custom: 
+title: CCmdTarget 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdTarget
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bdca1e4193be46a28739b01aed6e26e0e388b13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 Microsoft 基础类库消息映射体系结构的基类。  
@@ -115,7 +110,7 @@ class CCmdTarget : public CObject
   
  有关命令目标的概述和`OnCmdMsg`路由，请参阅[命令目标](../../mfc/command-targets.md)，[命令路由](../../mfc/command-routing.md)，和[消息映射](../../mfc/mapping-messages.md)。  
   
- `CCmdTarget`包括处理沙漏光标的显示的成员函数。 当你需要的命令，以获得明显的时间间隔内执行，则显示沙漏光标。  
+ `CCmdTarget` 包括处理沙漏光标的显示的成员函数。 当你需要的命令，以获得明显的时间间隔内执行，则显示沙漏光标。  
   
  调度映射，类似于消息映射，用于公开 OLE 自动化`IDispatch`功能。 通过公开此接口，你的应用程序可以调用其他应用程序 （如 Visual Basic 中)。  
   
@@ -124,10 +119,10 @@ class CCmdTarget : public CObject
   
  `CCmdTarget`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
+##  <a name="beginwaitcursor"></a>  CCmdTarget::BeginWaitCursor  
  调用此函数可显示为一个沙漏光标，当你需要的命令，以获得明显的时间间隔内执行。  
   
 ```  
@@ -144,14 +139,14 @@ void BeginWaitCursor();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
+##  <a name="ccmdtarget"></a>  CCmdTarget::CCmdTarget  
  构造 `CCmdTarget` 对象。  
   
 ```  
 CCmdTarget();
 ```  
   
-##  <a name="dooleverb"></a>CCmdTarget::DoOleVerb  
+##  <a name="dooleverb"></a>  CCmdTarget::DoOleVerb  
  导致要执行的 OLE 谓词所指定的操作。  
   
 ```  
@@ -181,7 +176,7 @@ BOOL DoOleVerb(
 ### <a name="remarks"></a>备注  
  此成员函数基本上是实现[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)。 可能的操作都用枚举[CCmdTarget::EnumOleVerbs](#enumoleverbs)。  
   
-##  <a name="enableautomation"></a>CCmdTarget::EnableAutomation  
+##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  调用此函数可启用 OLE 自动化对象。  
   
 ```  
@@ -191,7 +186,7 @@ void EnableAutomation();
 ### <a name="remarks"></a>备注  
  此函数通常称为从你的对象的构造函数，并应只有当调度映射已声明的类调用。 自动化的详细信息请参阅文章[自动化客户端](../../mfc/automation-clients.md)和[自动化服务器](../../mfc/automation-servers.md)。  
   
-##  <a name="enableconnections"></a>CCmdTarget::EnableConnections  
+##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections  
  在连接点上实现事件激发。  
   
 ```  
@@ -201,7 +196,7 @@ void EnableConnections();
 ### <a name="remarks"></a>备注  
  若要启用连接点，请在派生类的构造函数中调用此成员函数。  
   
-##  <a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
+##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib  
  启用对象的类型库。  
   
 ```  
@@ -209,9 +204,9 @@ void EnableTypeLib();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此成员函数调用的构造函数中你`CCmdTarget`-派生对象，如果它提供了类型信息。 有关详细信息，请参阅知识库文章 Q185720，"如何： 从 MFC 自动化服务器提供类型信息。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 此成员函数调用的构造函数中你`CCmdTarget`-派生对象，如果它提供了类型信息。 有关详细信息，请参阅知识库文章 Q185720，"如何： 从 MFC 自动化服务器提供类型信息。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
+##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor  
  调用此函数后你调用了`BeginWaitCursor`成员函数以将来自沙漏光标返回到以前的光标。  
   
 ```  
@@ -224,7 +219,7 @@ void EndWaitCursor();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
+##  <a name="enumoleverbs"></a>  CCmdTarget::EnumOleVerbs  
  枚举的对象的 OLE 谓词。  
   
 ```  
@@ -241,7 +236,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="remarks"></a>备注  
  此成员函数基本上是实现[ioleobject:: Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)。  
   
-##  <a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
+##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  调用此函数可映射`IDispatch`指针，从自动化成员函数的类，接收到进入`CCmdTarget`实现的接口的对象`IDispatch`对象。  
   
 ```  
@@ -258,7 +253,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="remarks"></a>备注  
  此函数的结果是指向成员函数的调用的反向`GetIDispatch`。  
   
-##  <a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
+##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID  
  获取主要的调度接口 id。  
   
 ```  
@@ -275,9 +270,9 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>备注  
  派生的类应重写该成员函数 (如果未重写，`GetDispatchIID`返回 FALSE)。 请参阅[COleControl](../../mfc/reference/colecontrol-class.md)。  
   
- 有关详细信息，请参阅知识库文章 Q185720，"如何： 从 MFC 自动化服务器提供类型信息。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 有关详细信息，请参阅知识库文章 Q185720，"如何： 从 MFC 自动化服务器提供类型信息。" 知识库文章位于[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="getidispatch"></a>CCmdTarget::GetIDispatch  
+##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch  
  调用此成员函数可检索`IDispatch`指针从自动化方法的其中一个返回`IDispatch`指针或采用`IDispatch`通过引用的指针。  
   
 ```  
@@ -294,7 +289,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="remarks"></a>备注  
  有关对象该调用`EnableAutomation`在其构造函数，使其自动化启用，此函数返回一个指向的基础类实现`IDispatch`由客户端都通过通信`IDispatch`接口。 自动调用此函数将引用添加到指针，因此不需要调用[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。  
   
-##  <a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  检索对象提供的类型信息接口的数量。  
   
 ```  
@@ -309,7 +304,7 @@ virtual UINT GetTypeInfoCount();
   
  派生的类应重写此函数可返回的类型信息接口提供 （0 或 1） 的数量。 如果未重写， **GetTypeInfoCount**返回 0。 若要重写，使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeLib`和`GetTypeLibCache`。  
   
-##  <a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
+##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  检索与指定的 GUID 相对应的类型说明。  
   
 ```  
@@ -332,7 +327,7 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="return-value"></a>返回值  
  HRESULT，指示调用成功与否。 如果成功，*`ppTypeInfo`指向类型信息接口。  
   
-##  <a name="gettypelib"></a>CCmdTarget::GetTypeLib  
+##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  获取一个指针指向类型库。  
   
 ```  
@@ -354,7 +349,7 @@ virtual HRESULT GetTypeLib(
 ### <a name="remarks"></a>备注  
  派生的类应重写该成员函数 (如果未重写，`GetTypeLib`返回 TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeInfoCount`和`GetTypeLibCache`。  
   
-##  <a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
+##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache  
  获取类型库缓存。  
   
 ```  
@@ -367,7 +362,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 ### <a name="remarks"></a>备注  
  派生的类应重写该成员函数 (如果未重写， **GetTypeLibCache**返回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeInfoCount`和`GetTypeLib`。  
   
-##  <a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
  MFC 的实现调用此函数**idispatch:: Invoke**以确定给定的自动化方法 (由标识`dispid`) 可以调用。  
   
 ```  
@@ -386,7 +381,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
   
  派生的类可以重写此函数可返回适当的值 (如果未重写， `IsInvokeAllowed` ，则返回 TRUE)。 请参阅尤其[COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。  
   
-##  <a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
+##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected  
  使用`IsResultExpected`来确定客户端是否接受来自其调用自动化函数的返回值。  
   
 ```  
@@ -401,9 +396,9 @@ BOOL IsResultExpected();
   
  仅在客户端，以便将与其他自动化函数获取有效的返回值，如果你从调用它们自动化函数，已调用后，此函数将返回 0。  
   
- `IsResultExpected`如果不进行的自动化函数调用时调用，则返回非零值。  
+ `IsResultExpected` 如果不进行的自动化函数调用时调用，则返回非零值。  
   
-##  <a name="oncmdmsg"></a>CCmdTarget::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CCmdTarget::OnCmdMsg  
  由框架调用以路由和调度命令消息并处理的命令用户界面对象的更新。  
   
 ```  
@@ -452,7 +447,7 @@ virtual BOOL OnCmdMsg(
   
  [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
   
-##  <a name="onfinalrelease"></a>Ccmdtarget:: Onfinalrelease  
+##  <a name="onfinalrelease"></a>  Ccmdtarget:: Onfinalrelease  
  发布到或从对象的最后一个 OLE 引用时，由框架调用。  
   
 ```  
@@ -462,7 +457,7 @@ virtual void OnFinalRelease();
 ### <a name="remarks"></a>备注  
  重写此函数以这种情况下提供特殊处理。 默认实现将删除对象。  
   
-##  <a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
+##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor  
  调用此函数可将相应的沙漏光标还原系统光标位置后已更改 （例如，在消息框中具有打开和关闭中间较长的操作后）。  
   
 ```  
