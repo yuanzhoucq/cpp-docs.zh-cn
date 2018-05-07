@@ -1,12 +1,9 @@
 ---
-title: "命令对象接口 |Microsoft 文档"
-ms.custom: 
+title: 命令对象接口 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - command objects [OLE DB]
 - OLE DB [C++], command object interfaces
 ms.assetid: dacff5ae-252c-4f20-9ad7-4e602cc48536
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a26004edcd4b1e32bb7dd960ce927786296ef44b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c597cc30e23ffce2787eac6c13f6ba8c53f96c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-object-interfaces"></a>命令对象接口
 命令对象使用`IAccessor`接口来指定参数绑定。 使用者调用`IAccessor::CreateAccessor`，将其传递的数组`DBBINDING`结构。 `DBBINDING` 包含有关列绑定 （如类型和长度） 的信息。 提供程序接收这些结构，并确定应如何传输数据和是否需要转换。  

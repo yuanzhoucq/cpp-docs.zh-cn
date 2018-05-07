@@ -1,13 +1,10 @@
 ---
-title: "记录集： 添加、 更新和删除记录 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 记录集： 添加、 更新和删除记录 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>记录集：添加、更新和删除记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -71,16 +66,16 @@ ms.lasthandoff: 12/21/2017
 |仅限追加|Y|N|N|Y|  
 |完全可更新|Y|Y|Y|Y|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>确定记录集是否是可更新  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> 确定记录集是否是可更新  
  如果数据源是可更新并且打开记录集持久化为可更新，是可更新记录集对象。 其 updateability 还取决于你使用的 SQL 语句的 ODBC 驱动程序，功能以及 ODBC 游标库是否在内存中。 无法更新只读的记录集或数据源。  
   
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>若要确定是否可以更新记录集  
   
 1.  调用记录集对象的[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)成员函数。  
   
-     `CanUpdate`如果记录集是可更新，则返回非零值。  
+     `CanUpdate` 如果记录集是可更新，则返回非零值。  
   
- 默认情况下，记录集都是完全可更新 (你可以执行`AddNew`，**编辑**，和**删除**操作)。 但你也可以使用[仅附加](../../mfc/reference/crecordset-class.md#open)选项来打开可更新的记录集。 这种方式打开记录集允许仅添加新记录与`AddNew`。 你无法编辑或删除现有记录。 你可以测试是否记录集处于打开状态仅通过调用追加[CanAppend](../../mfc/reference/crecordset-class.md#canappend)成员函数。 `CanAppend`如果记录集是完全可更新或仅供追加，则返回非零值。  
+ 默认情况下，记录集都是完全可更新 (你可以执行`AddNew`，**编辑**，和**删除**操作)。 但你也可以使用[仅附加](../../mfc/reference/crecordset-class.md#open)选项来打开可更新的记录集。 这种方式打开记录集允许仅添加新记录与`AddNew`。 你无法编辑或删除现有记录。 你可以测试是否记录集处于打开状态仅通过调用追加[CanAppend](../../mfc/reference/crecordset-class.md#canappend)成员函数。 `CanAppend` 如果记录集是完全可更新或仅供追加，则返回非零值。  
   
  下面的代码演示如何使用`CanUpdate`对于记录集对象被称为`rsStudentSet`:  
   
@@ -97,7 +92,7 @@ if( !rsStudentSet.CanUpdate( ) )
 > [!CAUTION]
 >  当你准备更新记录集通过调用**更新**，请注意你记录集包括所有列组成的主键的表 （或所有表上任何唯一索引的列）。 在某些情况下，该框架还可以使用仅选定记录集中的列来标识表中要更新的记录。 不包含所有必要的列，则可能在表中，可能损坏的表的引用完整性更新多个记录。 在这种情况下，框架会引发异常时调用**更新**。  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a>将记录添加到记录集  
+##  <a name="_core_adding_a_record_to_a_recordset"></a> 将记录添加到记录集  
  你可以将新记录添加到记录集，如果其[CanAppend](../../mfc/reference/crecordset-class.md#canappend)成员函数将返回一个非零值。  
   
 #### <a name="to-add-a-new-record-to-a-recordset"></a>将一条新记录添加到记录集  
@@ -106,7 +101,7 @@ if( !rsStudentSet.CanUpdate( ) )
   
 2.  调用记录集对象的[AddNew](../../mfc/reference/crecordset-class.md#addnew)成员函数。  
   
-     `AddNew`准备为充当编辑缓冲区的记录集。 设置为特殊值 Null 的并标记为不变，以便在调用时只会更改 （脏） 将值写入到数据源所有字段数据成员[更新](../../mfc/reference/crecordset-class.md#update)。  
+     `AddNew` 准备为充当编辑缓冲区的记录集。 设置为特殊值 Null 的并标记为不变，以便在调用时只会更改 （脏） 将值写入到数据源所有字段数据成员[更新](../../mfc/reference/crecordset-class.md#update)。  
   
 3.  设置新记录的字段数据成员的值。  
   
@@ -139,7 +134,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  若要取消`AddNew`或**编辑**调用，只需进行另一个调用`AddNew`或**编辑**或调用**移动**与**AFX_MOVE_REFRESH**参数。 数据成员被重置为其以前的值和仍位于**编辑**或**添加**模式。  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a>编辑记录集中的记录集  
+##  <a name="_core_editing_a_record_in_a_recordset"></a> 编辑记录集中的记录集  
  如果满足以下条件，则可以编辑现有记录记录集的[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)成员函数将返回一个非零值。  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>若要编辑现有记录在记录集中  
@@ -180,7 +175,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  若要取消`AddNew`或**编辑**调用，只需进行另一个调用`AddNew`或**编辑**或调用**移动**与**AFX_MOVE_REFRESH**参数。 数据成员被重置为其以前的值和仍位于**编辑**或**添加**模式。  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a>从记录集中删除一条记录  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> 从记录集中删除一条记录  
  可删除的记录，如果记录集的[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)成员函数将返回一个非零值。  
   
 #### <a name="to-delete-a-record"></a>若要删除一条记录  

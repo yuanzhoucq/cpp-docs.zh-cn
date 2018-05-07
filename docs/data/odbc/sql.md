@@ -1,13 +1,10 @@
 ---
-title: "SQL |Microsoft 文档"
-ms.custom: 
+title: SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL （结构化查询语言） 是一种方法来定义查询、 修改和控制的数据与关系数据库，它允许通信。 使用 SQL 语法，你可以构造提取根据你指定的条件的记录的语句。  
@@ -47,10 +42,10 @@ SQL （结构化查询语言） 是一种方法来定义查询、 修改和控�
   
 -   [数据库类如何使用 SQL](#_core_how_the_database_classes_use_sql)。  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>开放式数据库连接 (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> 开放式数据库连接 (ODBC)  
  数据库类实现通过 ODBC，使用 SQL 调用级接口，而不是在代码中嵌入的 SQL 命令中。 ODBC 使用 SQL 与进行通信[数据源](../../data/odbc/data-source-odbc.md)通过 ODBC 驱动程序。 这些驱动程序解释 SQL，并将其，如有必要，用于为特定数据库格式，如 Microsoft Access。 有关 ODBC 如何使用 SQL 的详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)和 ODBC SDK*程序员参考*MSDN 库 CD 上。  
   
-##  <a name="_core_the_database_classes"></a>数据库类  
+##  <a name="_core_the_database_classes"></a> 数据库类  
  数据库类旨在使您可以操作并更新中的现有数据[数据源](../../data/odbc/data-source-odbc.md)。 [MFC 应用程序向导](../../mfc/reference/database-support-mfc-application-wizard.md)、 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)(通过访问**添加类**)，并为你的数据库类构造大部分 SQL 语句。  
   
  数据库类使用已知数据操作语言 (DML) 作为 SQL 的一部分。 这些命令，可以使用数据源的全部或部分、 添加新的记录，编辑记录，和删除记录。 下表列出了最常见的 SQL 关键字和数据库类使用它们的方式。  
@@ -79,7 +74,7 @@ SQL （结构化查询语言） 是一种方法来定义查询、 修改和控�
   
  你可以找到详细信息，包括支持的 SQL 语句、 数据类型、 SQL 核心语法，和读取列表的 SQL，有关建议发布的列表中的 sql *ODBC SDK* *程序员参考* MSDN 库 CD 上。  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>数据库类如何使用 SQL  
+##  <a name="_core_how_the_database_classes_use_sql"></a> 数据库类如何使用 SQL  
  如果从数据库类派生的记录集使用 ODBC 与数据源，进行通信和 ODBC 通过发送 SQL 语句从数据源检索记录。 本主题说明数据库类与 SQL 之间的关系。  
   
  通过构建到 SQL 语句的各个部分的记录集构造 SQL 语句`CString`。 该字符串构造为**选择**语句语句，可返回一组记录。  

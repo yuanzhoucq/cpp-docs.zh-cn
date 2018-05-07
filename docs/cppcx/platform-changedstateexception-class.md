@@ -1,11 +1,8 @@
 ---
-title: "Platform:: changedstateexception 类 |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: changedstateexception 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ChangedStateException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910500c24a4e7ca574ac2eebc6264148d14a410
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 04daf6229ffa3f5ce41087a34ab53d92e3a1361c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException 类
 当对象的内部状态发生更改进而导致方法的结果失效时引发。  
@@ -41,7 +36,7 @@ public ref class ChangedStateException : COMException,    IException,    IPrinta
   
  有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md) 类。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  

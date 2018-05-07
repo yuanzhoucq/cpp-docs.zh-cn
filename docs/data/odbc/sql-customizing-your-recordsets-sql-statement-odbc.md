@@ -2,12 +2,9 @@
 title: SQL： 自定义记录集的 SQL 语句 (ODBC) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL：自定义记录集的 SQL 语句 (ODBC)
 本主题说明：  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  如果你的筛选器 （或 SQL 语句的其他部分） 中使用文本字符串，你可能需要"quote"（包含在指定的分隔符） 此类字符串用特定于 DBMS 的文字前缀和文本后缀字符 （或多个字符）。  
   
- 具体取决于所使用的 DBMS，你可能也会遇到特殊的语法要求，外部联接中，等操作。 使用 ODBC 函数为 DBMS 从您的驱动程序获取此信息。 例如，调用**:: SQLGetTypeInfo**对于特定数据类型，如**SQL_VARCHAR**、 请求**LITERAL_PREFIX**和**LITERAL_SUFFIX**字符。 如果你正在编写独立于数据库的代码，请参阅中的附录 C *ODBC SDK**程序员参考*详细的语法信息 MSDN 库 CD 上。  
+ 具体取决于所使用的 DBMS，你可能也会遇到特殊的语法要求，外部联接中，等操作。 使用 ODBC 函数为 DBMS 从您的驱动程序获取此信息。 例如，调用 **:: SQLGetTypeInfo**对于特定数据类型，如**SQL_VARCHAR**、 请求**LITERAL_PREFIX**和**LITERAL_SUFFIX**字符。 如果你正在编写独立于数据库的代码，请参阅中的附录 C *ODBC SDK * * 程序员参考*详细的语法信息 MSDN 库 CD 上。  
   
  记录集对象构造它使用选择的记录，除非您传递自定义 SQL 语句的 SQL 语句。 如何做到这一点取决于主要中传递的值`lpszSQL`参数**打开**成员函数。  
   
@@ -80,7 +75,7 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]  
 ```  
   
- 一种方式添加**DISTINCT**到记录集的 SQL 语句的关键字是在中的第一个 RFX 函数调用中嵌入关键字`DoFieldExchange`。 例如:  
+ 一种方式添加**DISTINCT**到记录集的 SQL 语句的关键字是在中的第一个 RFX 函数调用中嵌入关键字`DoFieldExchange`。 例如：  
   
 ```  
 ...  
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Case|你传递 lpszSQL|生成的 SELECT 语句|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**选择** *rfx 字段列表* **FROM** *表名称*<br /><br /> `CRecordset::Open`调用`GetDefaultSQL`若要获取表名称。 生成的字符串是一个用例 2 至 5，具体取决于什么`GetDefaultSQL`返回。|  
+|1|**NULL**|**选择** *rfx 字段列表* **FROM** *表名称*<br /><br /> `CRecordset::Open` 调用`GetDefaultSQL`若要获取表名称。 生成的字符串是一个用例 2 至 5，具体取决于什么`GetDefaultSQL`返回。|  
 |2|表名|**选择** *rfx 字段列表* **FROM** *表名称*<br /><br /> 字段列表则来自中的 RFX 语句`DoFieldExchange`。 如果**m_strFilter**和`m_strSort`都不为空，将添加**其中**和/或**ORDER BY**子句。|  
 |3 *|完整**选择**语句但没有**其中**或**ORDER BY**子句|为通过。 如果**m_strFilter**和`m_strSort`都不为空，将添加**其中**和/或**ORDER BY**子句。|  
 |4 *|完整**选择**语句**其中**和/或**ORDER BY**子句|为通过。 **m_strFilter**和/或`m_strSort`必须保持为空，要么是两个筛选器和/或排序语句生成。|  
 |5 *|对存储过程的调用|为通过。|  
   
- \*`m_nFields`必须小于或等于的中指定的列数**选择**语句。 每个列中指定的数据类型**选择**语句必须是与对应的 RFX 输出列的数据类型相同。  
+ \* `m_nFields` 必须小于或等于的中指定的列数**选择**语句。 每个列中指定的数据类型**选择**语句必须是与对应的 RFX 输出列的数据类型相同。  
   
 ### <a name="case-1---lpszsql--null"></a>案例 1 lpszSQL = NULL  
  记录集选择取决于什么`GetDefaultSQL`时，后者返回`CRecordset::Open`调用它。 情况 2 到 5 情况描述了可能的字符串。  
@@ -149,7 +144,7 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
   
      列列表应与匹配的列名称和类型的相同顺序如中列出`DoFieldExchange`。  
   
--   您有理由手动检索列的值使用 ODBC 函数**:: SQLGetData**而不是依赖 RFX 绑定以及为你检索列。  
+-   您有理由手动检索列的值使用 ODBC 函数 **:: SQLGetData**而不是依赖 RFX 绑定以及为你检索列。  
   
      例如，可能会想以容纳新的列分发应用程序后，你的应用程序的客户添加到数据库表。 你需要添加已在类声明使用向导时不知道这些额外字段数据成员。  
   

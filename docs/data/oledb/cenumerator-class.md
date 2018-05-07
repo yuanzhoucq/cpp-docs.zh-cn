@@ -1,12 +1,9 @@
 ---
-title: "CEnumerator 类 |Microsoft 文档"
-ms.custom: 
+title: CEnumerator 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CEnumerator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CEnumerator class
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0ac9fe73b2d8b37e345ddcf602dd98316eedf46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2b7e390212da53f85cb50dd5bb151ea6740784b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 使用一个 OLE DB 枚举器对象，它公开[ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx)接口以返回行集描述所有数据源和枚举数。  
@@ -51,7 +46,7 @@ class CEnumerator :
 ## <a name="remarks"></a>备注  
  你可以检索**ISourcesRowset**从此类间接的数据。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：**atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

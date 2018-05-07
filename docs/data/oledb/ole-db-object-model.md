@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 对象模型 |Microsoft 文档"
-ms.custom: 
+title: OLE DB 对象模型 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ba9fd9b7ba5503f6ed5e1837147524f5abc7c31b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB 对象模型
 OLE DB 对象模型包含下列对象或组件。 第一个四个对象或列出的组件 （数据源、 会话、 命令和行集），可以连接到数据源并查看它。 与显示时使用的数据相关的其余部分，从访问器中，开始。  

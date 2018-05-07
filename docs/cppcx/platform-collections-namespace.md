@@ -1,11 +1,8 @@
 ---
-title: "Platform:: collections Namespace |Microsoft 文档"
-ms.custom: 
+title: 'Platform:: collections Namespace |Microsoft 文档'
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f7c99f99e0935fd96aa02240de2c0c72ce890a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空间
 
@@ -47,7 +42,7 @@ using namespace Platform::Collections;
 
 此命名空间包含以下成员。
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator 类](../cppcx/platform-collections-backinsertiterator-class.md)|表示在集合末尾插入一个元素的迭代器。|
 |[Platform::Collections::InputIterator 类](../cppcx/platform-collections-inputiterator-class.md)|表示在集合开头插入一个元素的迭代器。|
@@ -62,7 +57,7 @@ using namespace Platform::Collections;
 
 [平台命名空间](../cppcx/platform-namespace-c-cx.md)
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 **元数据：** platform.winmd
 

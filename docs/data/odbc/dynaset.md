@@ -1,13 +1,10 @@
 ---
-title: "动态集 |Microsoft 文档"
-ms.custom: 
+title: 动态集 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>动态集
 本主题介绍动态集，并讨论了其[可用性](#_core_availability_of_dynasets)。  
@@ -50,9 +45,9 @@ ms.lasthandoff: 12/21/2017
  若要指定记录集是动态集，请将传递**CRecordset::dynaset**的第一个参数作为**打开**的记录集对象的成员函数。  
   
 > [!NOTE]
->  可更新动态记录集，ODBC 驱动程序必须支持任一定位的更新语句或**:: SQLSetPos** ODBC API 函数。 如果支持这两，MFC 使用**:: SQLSetPos**为提高效率。  
+>  可更新动态记录集，ODBC 驱动程序必须支持任一定位的更新语句或 **:: SQLSetPos** ODBC API 函数。 如果支持这两，MFC 使用 **:: SQLSetPos**为提高效率。  
   
-##  <a name="_core_availability_of_dynasets"></a>动态集的可用性  
+##  <a name="_core_availability_of_dynasets"></a> 动态集的可用性  
  MFC 数据库类支持动态记录集，如果满足以下要求：  
   
 -   ODBC 游标库 DLL 不能用于此数据源。  
@@ -63,17 +58,17 @@ ms.lasthandoff: 12/21/2017
   
 -   您的数据源的 ODBC 驱动程序必须支持由键集驱动的游标。  
   
-     键集驱动游标通过获取并存储的密钥集，从表中管理数据。 密钥用于从表中获取当前数据，当用户滚动到特定的记录。 若要确定您的驱动程序是否提供此支持，请调用**:: SQLGetInfo**具有 ODBC API 函数**SQL_SCROLL_OPTIONS**参数。  
+     键集驱动游标通过获取并存储的密钥集，从表中管理数据。 密钥用于从表中获取当前数据，当用户滚动到特定的记录。 若要确定您的驱动程序是否提供此支持，请调用 **:: SQLGetInfo**具有 ODBC API 函数**SQL_SCROLL_OPTIONS**参数。  
   
      如果你尝试打开不由键集支持动态集，则获取`CDBException`，返回代码值**AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**。  
   
 -   您的数据源的 ODBC 驱动程序必须支持扩展提取。  
   
-     扩展提取是能够向后滚动，以及通过将 SQL 查询的结果记录转发。 若要确定您的驱动程序是否支持此功能，请调用**:: SQLGetFunctions**具有 ODBC API 函数**SQL_API_SQLEXTENDEDFETCH**参数。  
+     扩展提取是能够向后滚动，以及通过将 SQL 查询的结果记录转发。 若要确定您的驱动程序是否支持此功能，请调用 **:: SQLGetFunctions**具有 ODBC API 函数**SQL_API_SQLEXTENDEDFETCH**参数。  
   
- 如果你想可更新动态记录集 （或快照，其实），ODBC 驱动程序还必须支持任一**:: SQLSetPos** ODBC API 函数或定位的更新。 **:: SQLSetPos**函数使 MFC 能够更新数据源而无需发送 SQL 语句。 此支持，MFC 就使用它进行更新使用 SQL 优先。 若要确定您的驱动程序是否支持**:: SQLSetPos**，调用**:: SQLGetInfo**与**SQL_POS_OPERATIONS**参数。  
+ 如果你想可更新动态记录集 （或快照，其实），ODBC 驱动程序还必须支持任一 **:: SQLSetPos** ODBC API 函数或定位的更新。 **:: SQLSetPos**函数使 MFC 能够更新数据源而无需发送 SQL 语句。 此支持，MFC 就使用它进行更新使用 SQL 优先。 若要确定您的驱动程序是否支持 **:: SQLSetPos**，调用 **:: SQLGetInfo**与**SQL_POS_OPERATIONS**参数。  
   
- 定位的更新使用 SQL 语法 (窗体的**WHERE CURRENT OF** \<cursorname >) 以标识数据源上的表中的特定行。 若要确定您的驱动程序是否支持定位的更新，请调用**:: SQLGetInfo**与**SQL_POSITIONED_STATEMENTS**参数。  
+ 定位的更新使用 SQL 语法 (窗体的**WHERE CURRENT OF** \<cursorname >) 以标识数据源上的表中的特定行。 若要确定您的驱动程序是否支持定位的更新，请调用 **:: SQLGetInfo**与**SQL_POSITIONED_STATEMENTS**参数。  
   
  通常情况下，MFC 动态记录集 （但不是仅向前的记录集） 需要使用 2 级 API 一致性 ODBC 驱动程序。 如果您的数据源的驱动程序符合 1 级 API 集，你仍然可以使用可更新和只读快照以及只进的记录集，但不是能使用动态集。 但是，第 1 级驱动程序可以支持动态记录集如果它支持扩展提取和键集驱动游标。 有关 ODBC 一致性级别的详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。  
   

@@ -1,12 +1,9 @@
 ---
-title: "ISessionPropertiesImpl 类 |Microsoft 文档"
-ms.custom: 
+title: ISessionPropertiesImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ISessionPropertiesImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ISessionPropertiesImpl class
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd7dde152b2ca122deefd3b7e8d8de24a254519a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 62b1321c9d7d50ff2cd459b395efa1e8147a06ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 提供的实现[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)接口。  
@@ -59,7 +54,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ## <a name="remarks"></a>备注  
  会话上的必需接口。 此类通过调用由定义的静态函数实现的会话属性[属性集映射](../../data/oledb/begin-propset-map.md)。 应在会话类中指定属性集映射。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
 ## <a name="see-also"></a>请参阅  

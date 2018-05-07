@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderSession (MyProviderSess.H) |Microsoft 文档"
-ms.custom: 
+title: CMyProviderSession (MyProviderSess.H) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidersession
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - CMyProviderSession class in MyProviderSess.H
 - OLE DB providers, wizard-generated files
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c244d77a0e299f4a09de985e11c7537a9fb7e5ff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5f5243edcbc6ad7781eb13caf6ec72021fd83506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H 包含的声明和实现 OLE DB 会话对象。 数据源对象创建会话对象，表示使用者和提供程序之间的对话。 多个同时会话可以打开一个数据源。 继承列表`CMyProviderSession`遵循：  

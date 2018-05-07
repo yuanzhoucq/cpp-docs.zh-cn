@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 中支持事务 |Microsoft 文档"
-ms.custom: 
+title: OLE DB 中支持事务 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
 A[事务](../../data/transactions-mfc-data-access.md)是组，或批处理，一系列与数据源的更新，以便所有成功并同时提交，或 （如果任何之一失败） 会提交任何一种方法并回滚整个事务。 此过程可确保数据源上的结果的完整性。  
@@ -49,7 +44,7 @@ A[事务](../../data/transactions-mfc-data-access.md)是组，或批处理，一
   
  当会话进入事务时，对数据存储在该会话中所做的所有工作是该事务的一部分并提交或中止作为单个单元。 （这有时称为手动提交模式。）  
   
- 事务支持是特定于提供程序。 如果你使用的提供程序支持事务，支持会话对象**itransaction::**和**ITransactionLocal**可以输入一个简单 (即非嵌套) 事务。 OLE DB 模板类[CSession](../../data/oledb/csession-class.md)并支持这些接口，则在 Visual c + + 中实现的事务支持的建议的方法。  
+ 事务支持是特定于提供程序。 如果你使用的提供程序支持事务，支持会话对象**itransaction::** 和**ITransactionLocal**可以输入一个简单 (即非嵌套) 事务。 OLE DB 模板类[CSession](../../data/oledb/csession-class.md)并支持这些接口，则在 Visual c + + 中实现的事务支持的建议的方法。  
   
 ## <a name="starting-and-ending-the-transaction"></a>起始和结束事务  
  你调用`StartTransaction`，**提交**，和**中止**中使用者中的行集对象的方法。  

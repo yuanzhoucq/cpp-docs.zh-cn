@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3140 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3140 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3140
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebc5b182b7f4ae70fa2f767fbeae0a51b0507e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c2c8c9e47020fe53e87b985b5db6192cd26098fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3140"></a>编译器错误 C3140
 不能在同一编译单元中有多个模块属性  

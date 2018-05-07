@@ -1,13 +1,10 @@
 ---
-title: "转换项目从混合模式为纯中间语言 |Microsoft 文档"
-ms.custom: 
+title: 转换项目从混合模式为纯中间语言 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>将项目从混合模式转换为纯中间语言项目
 默认情况下，所有 Visual c + + CLR 项目链接到 C 运行时库。 因此，这些项目被归类为混合模式应用程序，因为它们联合使用面向公共语言运行库 （托管代码） 的本机代码。 在编译时它们被编译到中间语言 (IL)，也称为 Microsoft 中间语言 (MSIL)。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
     4.  对于控制台应用程序，在**系统**项目属性页**链接器**，选择**子系统**字段和选项更改为**控制台 （/SUBSYSTEM:CONSOLE)**。  
   
         > [!NOTE]
-        >  不需要设置此属性对于 Windows 窗体应用程序，因为**子系统**字段设置为**Windows (/ 子系统： WINDOWS)**默认情况下。  
+        >  不需要设置此属性对于 Windows 窗体应用程序，因为**子系统**字段设置为**Windows (/ 子系统： WINDOWS)** 默认情况下。  
   
     5.  在 stdafx.h 文件中，注释掉所有`#include`语句。 例如，在控制台应用程序：  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
         // #include <tchar.h>  
         ```  
   
-         或  
+         -或-  
   
          例如，在 Windows 窗体应用程序：  
   
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
         // #include <tchar.h>  
         ```  
   
-    6.  为 Windows 窗体中的应用程序，Form1.cpp，注释掉`#include`引用 windows.h 的语句。 例如:  
+    6.  为 Windows 窗体中的应用程序，Form1.cpp，注释掉`#include`引用 windows.h 的语句。 例如：  
   
         ```  
         // #include <windows.h>  
@@ -104,4 +99,4 @@ ms.lasthandoff: 12/21/2017
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|表示 32 位无符号整数。|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|表示 64 位无符号整数。|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|用于表示指针或句柄的平台特定类型。|  
-        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|指示不返回一个值; 如果方法也就是说，该方法具有 void 返回类型。|
+        |[void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|指示不返回一个值; 如果方法也就是说，该方法具有 void 返回类型。|

@@ -1,26 +1,21 @@
 ---
-title: "Platform::Collections::UnorderedMapView 类 |Microsoft 文档"
-ms.custom: 
+title: Platform::Collections::UnorderedMapView 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -69,7 +64,7 @@ ref class UnorderedMapView sealed;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `UnorderedMapView`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** collection.h  
   
  **命名空间：** Platform::Collections  

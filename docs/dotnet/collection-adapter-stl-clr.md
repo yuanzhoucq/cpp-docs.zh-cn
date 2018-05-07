@@ -2,11 +2,8 @@
 title: collection_adapter (STL/CLR) |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::collection_adapter
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - collection_adapter class [STL/CLR]
 ms.assetid: 31964058-1f50-48bf-82c2-b0b3cc8a7887
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fb5dc48175d755771960e9121c3371a0292595
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 包装.NET 集合以用作 STL/CLR 容器。 A`collection_adapter`是一种模板类描述一个简单的 STL/CLR 容器对象。 它包装一个基类库 (BCL) 接口，并返回用于处理受控的序列的迭代器对。  
@@ -109,7 +104,7 @@ template<typename Key,
 ## <a name="remarks"></a>备注  
  使用此模板类来操作作为 STL/CLR 容器的 BCL 容器。 `collection_adapter`存储 BCL 接口，这反过来控制序列的元素的句柄。 A`collection_adapter`对象`X`返回一对输入迭代器`X.begin()`和`X.end()`用于访问的元素顺序。 某些专用化还允许你编写`X.size()`以确定受控序列的长度。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/适配器 >  
   
  **Namespace:** cliext  

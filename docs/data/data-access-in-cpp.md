@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的数据访问 |Microsoft 文档"
-ms.custom: 
+title: Visual c + + 中的数据访问 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的数据访问
 
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 
 [如何通过 c + + 使用 Blob 存储](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)Azure Blob 存储是一种服务中将非结构化的数据存储在云中作为对象/blob。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。
 
-[ODBC 程序员参考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)ODBC 接口设计用于 C 编程语言。 ODBC 接口的使用涉及三大块：SQL 语句、ODBC 函数调用，以及 C 编程。
+[ ODBC 程序员参考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)ODBC 接口设计用于 C 编程语言。 ODBC 接口的使用涉及三大块：SQL 语句、ODBC 函数调用，以及 C 编程。
 
 ## <a name="see-also"></a>请参阅
 [Visual C++](../visual-cpp-in-visual-studio.md)

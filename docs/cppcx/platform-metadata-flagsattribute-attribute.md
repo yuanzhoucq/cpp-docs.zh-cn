@@ -1,11 +1,8 @@
 ---
-title: "Platform::Metadata::FlagsAttribute 属性 |Microsoft 文档"
-ms.custom: 
+title: Platform::Metadata::FlagsAttribute 属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Metadata::FlagsAttribute
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ce558d7534d99d1755bf9005f5e62cee35a5727
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 72b86c7502ce62f81d84a5ea43ecdd56186cfd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute 特性
 指示可将枚举视为位域（即一组标志）。  
@@ -43,7 +38,7 @@ public ref class Flags abstract : Attribute
   
 ### <a name="remarks"></a>备注  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  

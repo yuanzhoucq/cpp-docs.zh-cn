@@ -1,12 +1,9 @@
 ---
-title: CBookmark::operator = | Microsoft Docs
-ms.custom: 
+title: 'Cbookmark:: Operator = |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBookmark<0>::operator=
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: 23805af4-aedd-47ad-bef4-21d902463797
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c2a5b77d84167a5d051224934447ce8d377b0cb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e8ce68afa83694b3471223e32b1b629075665599
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbookmarkoperator-"></a>CBookmark::operator =
 将一个 `CBookmark` 对象分配给其他对象。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>备注  
  仅在需要此运算符**CBookmark\<0 >**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

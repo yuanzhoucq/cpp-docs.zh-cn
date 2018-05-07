@@ -1,12 +1,9 @@
 ---
-title: "CSchemata，CSchemataInfo |Microsoft 文档"
-ms.custom: 
+title: CSchemata，CSchemataInfo |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - DEFAULT_CHARACTER_SET_CATALOG
@@ -35,18 +32,16 @@ helpviewer_keywords:
 - m_szCharCatalog
 - DEFAULT_CHARACTER_SET_SCHEMA
 ms.assetid: 9d06d65a-c27b-446d-bc42-c7e487b0d9c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c5bcd0477fe2285f5009aeb04c871f72c564365e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8c31a529ff3592ba4dd82d797d3810f76cec0b79
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cschemata-cschematainfo"></a>CSchemata，CSchemataInfo
 调用 typedef 类**CSchemata**来实现其参数类**CSchemataInfo**。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/23/2018
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|  
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** atldbsch.h  
   
 ## <a name="see-also"></a>请参阅  

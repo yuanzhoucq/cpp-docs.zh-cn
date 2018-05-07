@@ -1,12 +1,9 @@
 ---
-title: "编译器错误 C3713 |Microsoft 文档"
-ms.custom: 
+title: 编译器错误 C3713 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3713
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0ff1089166974830c12a588d85d6c09f068814
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f0e919add44075516deedfb339c8e1d7487f6ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3713"></a>编译器错误 C3713
 method： 事件处理程序方法必须具有相同的函数参数作为源 method  

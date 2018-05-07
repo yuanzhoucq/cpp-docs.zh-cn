@@ -1,13 +1,10 @@
 ---
-title: "如何： 创建可验证的 c + + 项目 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 创建可验证的 c + + 项目 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4d6a7806183766d96c0d106d9d9e890b046f4563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a012e52a8eb825c3ffc6b694c888cef8a174f37e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>如何：创建可验证的 C++ 项目 (C++/CLI)
 Visual c + + 应用程序向导不创建可验证项目中，但项目转换为可验证。 本主题介绍如何设置项目属性和修改项目源代码文件，以转换你的 Visual c + + 项目，以便生成可验证的应用程序。  

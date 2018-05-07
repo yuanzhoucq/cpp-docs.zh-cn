@@ -1,12 +1,9 @@
 ---
-title: "multiset:: key_type (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'multiset:: key_type (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::key_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_type member [STL/CLR]
 ms.assetid: 8b243eb3-889b-405c-a2bd-2c2c5dfaafcd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ea2f3803394c09882c58ed09b09bbf54297a473
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89ba7f04e0bd8101a21f13cf921c5823c246bd1f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetkeytype-stlclr"></a>multiset::key_type (STL/CLR)
 排序键的类型。  
@@ -72,7 +67,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  

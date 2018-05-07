@@ -1,30 +1,25 @@
 ---
-title: "发出参数化的查询 |Microsoft 文档"
-ms.custom: 
+title: 发出参数化的查询 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 12363baa4fed5326a4c5c8a84b80eef6e4158d40
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="issuing-a-parameterized-query"></a>发出参数化查询
 下面的示例发出简单参数化的查询从 Microsoft Access 数据库的表中检索具有年龄字段 （这是大于 30） 的记录。 若要支持此参数，用户记录必须具有一个附加的映射。 下面的代码中，在 ATL 项目中，使用`CCommand`类而不是`CTable`使用在前面的示例中，类[遍历简单行集合](../../data/oledb/traversing-a-simple-rowset.md)。  

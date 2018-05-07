@@ -1,31 +1,26 @@
 ---
-title: "集合 (C + + /cli CX) |Microsoft 文档"
-ms.custom: 
+title: 集合 (C + + /cli CX) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 在 C + + /cli CX 程序，你可以任意使用标准模板库 (STL) 容器或任何其他用户定义的集合类型。 但是，通过传递时，集合来回 Windows 运行时应用程序二进制接口 (ABI) — 例如，到 XAML 控件或 JavaScript 客户端，必须使用 Windows 运行时集合类型。  
   
  Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供具体的 c + + 实现 collection.h 标头文件中。 下图显示了各个集合类型之间的关系：  
   
- ![C &#43; &#43; &#47;/CX 集合类型的继承树](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;/CX 集合类型的继承树](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   [Platform::Collections::Vector 类](../cppcx/platform-collections-vector-class.md) 类似于 [std::vector 类](../standard-library/vector-class.md)。  
   
@@ -71,7 +66,7 @@ ms.lasthandoff: 02/14/2018
   
  下图演示了针对 `range for` 的 `IVector<Person^>`循环。 请注意，执行操作在第 64 行的断点处停止。 **“快速监视”** 窗口显示迭代器变量 `p` 实际上是具有 `VectorProxy<Person^>` 和 `m_v` 成员变量的 `m_i` 。 不过，当调用 `GetType` 时，它将返回与 `Person` 实例 `p2`相同的类型。 要点在于，虽然 `VectorProxy` 和 `ArrowProxy` 可能显示在 **“快速监视”**、调试器的某些编译器错误或其他位置中，但通常不需要对它们进行显式编码。  
   
- ![范围 &#45; 中的 VectorProxy 基于 for 循环](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![范围中的 VectorProxy&#45;基于 for 循环](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  必须针对代理对象进行编码的一种情况是，你必须对元素执行 `dynamic_cast` ，例如你在 `UIElement` 元素集合中寻找特定类型的 XAML 对象。 在此情况下，必须先将元素强制转换为 [Platform::Object](../cppcx/platform-object-class.md)^，然后执行动态强制转换：  
   
@@ -136,11 +131,11 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|函数|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部存储[Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int。)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部存储[Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int。)|[开始](../cppcx/begin-function.md)/ [结束](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
 |[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (内部存储[IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 和 int。)|[开始](../cppcx/begin-function.md)/ [结束](../cppcx/end-function.md)([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
 |[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部存储[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [结束](../cppcx/end-function.md)([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部存储[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [结束](../cppcx/end-function.md)([IMap\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)。|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部存储[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部存储[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[开始](../cppcx/begin-function.md)/ [结束](../cppcx/end-function.md)([IMap\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)。|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部存储[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 t。)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>集合更改事件  
  `Vector` 和 `Map` 支持 XAML 集合中的数据绑定，方式是通过实现在更改或重置集合对象，或在插入、移除或更改集合的任何元素时发生的事件。 您可编写自己的支持数据绑定的类型，尽管因这些类型是密封类型而导致无法从 `Map` 或 `Vector` 继承。  

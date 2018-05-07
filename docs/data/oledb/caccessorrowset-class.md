@@ -1,12 +1,9 @@
 ---
-title: "CAccessorRowset 类 |Microsoft 文档"
-ms.custom: 
+title: CAccessorRowset 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAccessorRowset
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CAccessorRowset class
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9da490873c14ea04f55f223e38009ac1952fe6d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 封装一个行集和单个类中其关联的访问器。  
@@ -54,7 +49,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Bind](../../data/oledb/caccessorrowset-bind.md)|创建绑定 (时使用**bBind**指定为 false 在[ccommand:: Open](../../data/oledb/ccommand-open.md))。|  
+|[绑定](../../data/oledb/caccessorrowset-bind.md)|创建绑定 (时使用**bBind**指定为 false 在[ccommand:: Open](../../data/oledb/ccommand-open.md))。|  
 |[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|构造函数。|  
 |[关闭](../../data/oledb/caccessorrowset-close.md)|关闭具有行集和任何访问器。|  
 |[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|释放当前需要被释放的记录中的任何列。|  
@@ -63,7 +58,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ## <a name="remarks"></a>备注  
  类`TAccessor`管理访问器。 类*TRowset*管理行集。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

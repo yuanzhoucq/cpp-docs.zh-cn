@@ -1,12 +1,9 @@
 ---
-title: CRowset::Delete | Microsoft Docs
-ms.custom: 
+title: 'Crowset:: Delete |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CRowset::Delete
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: abbb56f013a7366f27c0e0f46fc99bd451db079e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3554dea7c8054a7deb19e0419f9b6134d649fe7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetdelete"></a>CRowset::Delete
 调用[IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)从行集中删除当前行。  
@@ -48,7 +43,7 @@ HRESULT Delete() const throw();
 ## <a name="return-value"></a>返回值  
  一个标准 `HRESULT`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

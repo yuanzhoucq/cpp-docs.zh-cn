@@ -1,12 +1,9 @@
 ---
-title: "not_equal_to (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: not_equal_to (STL/CLR) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::not_equal_to
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae79c521f7edcc055ec6eee5907a6102ebf26134
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8046b4723a6e4e725662db2cce9e3981155748b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true，仅当第一个参数是否不等于第二个。 使用它指定根据其自变量类型的函数对象。  
@@ -127,7 +122,7 @@ int main()
 0 1  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  

@@ -1,12 +1,9 @@
 ---
-title: BLOB_NAME_STATUS | Microsoft Docs
-ms.custom: 
+title: BLOB_NAME_STATUS |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BLOB_NAME_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BLOB_NAME_STATUS macro
 ms.assetid: 4564e4a0-8e5e-436a-bd1e-012d2a1b8642
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d55e65872a2939a8aa252f0a839ed41570bbcd4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cadd0217c25aed21e6788b7eba7c8d0778624b9d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blobnamestatus"></a>BLOB_NAME_STATUS
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还可获取 BLOB 数据列的状态。  
@@ -54,7 +49,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data
  *status*  
  [out]BLOB 字段的状态。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

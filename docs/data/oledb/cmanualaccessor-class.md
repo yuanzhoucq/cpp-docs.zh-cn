@@ -1,12 +1,9 @@
 ---
-title: "CManualAccessor 类 |Microsoft 文档"
-ms.custom: 
+title: CManualAccessor 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CManualAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CManualAccessor class
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecb9f31c862f62ddc2422f201aa824a959e961a0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7b8efc46971b1aa72f8c5e572aa540bfed250d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 表示用于高级用途设计一个访问器类型。  
@@ -53,7 +48,7 @@ class CManualAccessor : public CAccessorBase
 ## <a name="remarks"></a>备注  
  使用`CManualAccessor`，你可以指定参数和输出列绑定的运行时函数调用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

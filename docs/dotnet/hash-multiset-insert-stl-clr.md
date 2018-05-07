@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset:: insert (STL/CLR) |Microsoft 文档"
-ms.custom: 
+title: 'hash_multiset:: insert (STL/CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::insert
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - insert member [STL/CLR]
 ms.assetid: e7254f30-a514-4ddc-bf53-38aafbe9e8eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3e309fa84ad67b7148ae92d95fa083c24173b6c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 243c07eae12026115f12e042b9fbe49b97cdb1b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetinsert-stlclr"></a>hash_multiset::insert (STL/CLR)
 添加元素。  
@@ -139,7 +134,7 @@ insert(begin(), L'y') = y
  a b b c x y  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  

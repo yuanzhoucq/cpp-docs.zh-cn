@@ -1,11 +1,8 @@
 ---
-title: "Platform::Details::IPrintable 接口 |Microsoft 文档"
-ms.custom: 
+title: Platform::Details::IPrintable 接口 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Details::IPrintable
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::IPrintable Interface
 ms.assetid: b863a872-2563-4d90-88e0-c5a0bdde83f4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b1520f3c6448d4c018f0e0e54457ed2bfe0636e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b52509d2f3813d02ee576ff080bc57f368e5d977
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable 接口
 此接口仅供内部使用，不用于开发。  
@@ -42,7 +37,7 @@ interface class IPrintable;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Platform`  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **元数据：** platform.winmd  
   
  **命名空间：** Platform::Details  

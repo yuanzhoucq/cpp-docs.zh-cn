@@ -1,12 +1,9 @@
 ---
-title: "IRowsetLocateImpl 类 |Microsoft 文档"
-ms.custom: 
+title: IRowsetLocateImpl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27af767c9104159d6c398db226a5a45a36e01e2f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: db8d0b5d81a53a71413998b39947eb71a1bd508a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 类
 实现 OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)接口，从行集提取任意行。  
@@ -82,7 +77,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|比较两个的书签。|  
 |[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|提取行开头指定偏移量从书签的行。|  
 |[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|提取匹配指定的书签的行。|  
-|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|返回哈希值用于指定书签。|  
+|[哈希](../../data/oledb/irowsetlocateimpl-hash.md)|返回哈希值用于指定书签。|  
   
 ### <a name="data-members"></a>数据成员  
   
@@ -99,7 +94,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
  有关实现书签支持的信息，请参阅[用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)中*Visual c + + 程序员指南*和[书签](https://msdn.microsoft.com/en-us/library/ms709728.aspx)中*OLE DB 程序员参考*平台 SDK 中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头**: atldb.h  
   
 ## <a name="see-also"></a>请参阅  
