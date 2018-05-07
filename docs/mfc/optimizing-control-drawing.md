@@ -1,29 +1,24 @@
 ---
-title: "优化控件绘制 |Microsoft 文档"
-ms.custom: 
+title: 优化控件绘制 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8103e1e342756f9b715c1a0959ed256403e130bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-control-drawing"></a>优化控件绘制
 在指示某个控件将自身绘制到容器提供的设备上下文中时，它通常会将 GDI 对象（如钢笔、画笔和字体）选择到设备上下文中，执行其绘制操作，并还原之前的 GDI 对象。 假设容器有多个要绘制到相同设备上下文中的控件，且每个控件选择其所需的 GDI 对象，那么，如果控件不单个地还原之前选中的对象，则可以节省时间。 绘制所有控件之后，容器可以自动还原原始对象。  

@@ -1,13 +1,10 @@
 ---
-title: "全局热键 |Microsoft 文档"
-ms.custom: 
+title: 全局热键 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82297507d8725e6292def759272f48d0d63e84b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd597271d949770ec1a5871cad3ea7be0004e288
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="global-hot-keys"></a>全局热键
 全局热键是与特定的非子窗口相关联。 它允许用户激活系统的任何部分中的窗口。 应用程序通过发送设置特定窗口的全局热键[WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284)消息发送到该窗口。 例如，如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)对象和`pMainWnd`是一个指针，到窗口，以在按下热键时被激活，可以使用下面的代码，以将热键控件中指定相关联指向窗口`pMainWnd`。  

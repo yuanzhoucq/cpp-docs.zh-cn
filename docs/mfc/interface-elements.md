@@ -1,30 +1,25 @@
 ---
-title: "界面元素 |Microsoft 文档"
-ms.custom: 
+title: 界面元素 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>界面元素
 本文档介绍中引入的界面元素[!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]SP1，并还介绍了与该早期版本的库的差异。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  停靠站点 （或主框架窗口） 拥有所有窗格和在应用程序的微型框架窗口。 停靠站点包含[CDockingManager](../mfc/reference/cdockingmanager-class.md)成员。 此成员维护属于停靠站点的所有窗格的列表。 列表进行排序，以便创建在停靠站点的外边缘的窗格位于列表的开头。 当框架重绘停靠站点时，它将循环访问此列表并调整每个窗格，以包括停靠站点的当前边框的布局。 你可以调用`AdjustDockingLayout`或`RecalcLayout`当你具有以调整停靠布局，并且该框架将重定向到停靠管理器对的调用。  
   
 ## <a name="dock-bars"></a>停靠栏  
- 每个主框架窗口可以放置*停靠条*沿其边框。 停靠栏是属于一个窗格[CDockSite 类](../mfc/reference/cdocksite-class.md)。 停靠栏可以接受派生自[CPane](../mfc/reference/cpane-class.md)，如工具栏。 若要创建停靠栏，在初始化主框架窗口时，调用`EnableDocking`。 若要启用自动隐藏栏，请调用`EnableAutoHideBars`。 `EnableAutoHideBars`创建[CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)对象，并将它们置于每个停靠栏旁边。  
+ 每个主框架窗口可以放置*停靠条*沿其边框。 停靠栏是属于一个窗格[CDockSite 类](../mfc/reference/cdocksite-class.md)。 停靠栏可以接受派生自[CPane](../mfc/reference/cpane-class.md)，如工具栏。 若要创建停靠栏，在初始化主框架窗口时，调用`EnableDocking`。 若要启用自动隐藏栏，请调用`EnableAutoHideBars`。 `EnableAutoHideBars` 创建[CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)对象，并将它们置于每个停靠栏旁边。  
   
  每个停靠栏划分为停靠行。 由表示停靠行[CDockingPanesRow 类](../mfc/reference/cdockingpanesrow-class.md)。 每个停靠行包含工具栏的列表。 如果用户将工具栏停靠，或某一行中的工具栏移动到另一种相同的停靠栏，框架创建一个新行，并相应地，调整停靠栏的大小或它位置工具栏上的现有行。  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
  默认情况下，每个`CDockablePane`支持自动隐藏功能。 当用户单击的标题上的 pin 按钮`CDockablePane`，框架切换到自动隐藏模式的窗格。 若要处理单击，框架会创建[CMFCAutoHideBar 类](../mfc/reference/cmfcautohidebar-class.md)和[CMFCAutoHideButton 类](../mfc/reference/cmfcautohidebutton-class.md)与关联`CMFCAutoHideBar`对象。 框架放入新`CMFCAutoHideBar`上[CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)。 框架还会将附加`CMFCAutoHideButton`到工具栏。 [CDockingManager 类](../mfc/reference/cdockingmanager-class.md)维护`CDockablePane`。  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>选项卡式的控件条和 Outlook 栏  
- [CMFCBaseTabCtrl 类](../mfc/reference/cmfcbasetabctrl-class.md)实现可拆分的选项卡的选项卡式窗口的基本功能。 若要使用`CMFCBaseTabCtrl`对象，初始化[CBaseTabbedPane 类](../mfc/reference/cbasetabbedpane-class.md)应用程序中。 `CBaseTabbedPane`派生自`CDockablePane`和维护着一个指针到`CMFCBaseTabCtrl`对象。 `CBaseTabbedPane`使用户能够停靠和调整大小选项卡式的控件条。 使用[cdockablepane:: Attachtotabwnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd)动态创建的停靠和选项卡式控件条。  
+ [CMFCBaseTabCtrl 类](../mfc/reference/cmfcbasetabctrl-class.md)实现可拆分的选项卡的选项卡式窗口的基本功能。 若要使用`CMFCBaseTabCtrl`对象，初始化[CBaseTabbedPane 类](../mfc/reference/cbasetabbedpane-class.md)应用程序中。 `CBaseTabbedPane` 派生自`CDockablePane`和维护着一个指针到`CMFCBaseTabCtrl`对象。 `CBaseTabbedPane`使用户能够停靠和调整大小选项卡式的控件条。 使用[cdockablepane:: Attachtotabwnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd)动态创建的停靠和选项卡式控件条。  
   
  Outlook 栏控件还基于选项卡式条。 [CMFCOutlookBar 类](../mfc/reference/cmfcoutlookbar-class.md)派生自`CBaseTabbedPane`。 有关如何使用 Outlook 栏的详细信息，请参阅[CMFCOutlookBar 类](../mfc/reference/cmfcoutlookbar-class.md)。  
   

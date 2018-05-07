@@ -1,12 +1,9 @@
 ---
-title: "CJumpList 类 |Microsoft 文档"
-ms.custom: 
+title: CJumpList 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CJumpList
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b28199155c0ac3bd90cda8fb830ea6f8894dde
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 A`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。  
@@ -75,7 +70,7 @@ class CJumpList;
 |[CJumpList::CJumpList](#cjumplist)|构造 `CJumpList` 对象。|  
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|销毁 `CJumpList` 对象。|  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|中止生成列表的事务，且不提交。|  
 |[CJumpList::AddDestination](#adddestination)|已重载。 将目标添加到列表。|  
@@ -95,17 +90,17 @@ class CJumpList;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxadv.h  
   
-##  <a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
+##  <a name="_dtorcjumplist"></a>  CJumpList:: ~ CJumpList  
  销毁 `CJumpList` 对象。  
   
 ```  
 ~CJumpList();
 ```  
   
-##  <a name="abortlist"></a>CJumpList::AbortList  
+##  <a name="abortlist"></a>  CJumpList::AbortList  
  中止生成列表的事务，且不提交。  
   
 ```  
@@ -115,7 +110,7 @@ void AbortList();
 ### <a name="remarks"></a>备注  
  调用此方法具有相同的效果销毁`CJumpList`而不调用`CommitList`。  
   
-##  <a name="adddestination"></a>CJumpList::AddDestination  
+##  <a name="adddestination"></a>  CJumpList::AddDestination  
  将目标添加到列表。  
   
 ```  
@@ -155,7 +150,7 @@ BOOL AddDestination(
 ### <a name="remarks"></a>备注  
  实例`CJumpList`内部累计添加的目标，然后提交在`CommitList`。  
   
-##  <a name="addknowncategory"></a>CJumpList::AddKnownCategory  
+##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory  
  将已知的类别追加到列表。  
   
 ```  
@@ -171,7 +166,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ### <a name="remarks"></a>备注  
  已知类别是我们将自动计算每个应用程序利用常用和最近类别`SHAddToRecentDocs`（或间接使用它，如命令行程序将调用它在某些情况下的应用程序的代表）。  
   
-##  <a name="addtask"></a>CJumpList::AddTask  
+##  <a name="addtask"></a>  CJumpList::AddTask  
  将项添加到规范的任务类别。  
   
 ```  
@@ -209,7 +204,7 @@ BOOL AddTask(IShellLink* pShellLink);
 ### <a name="remarks"></a>备注  
  实例`CJumpList`累积指定的任务并将它们添加到目标列表期间`CommitList`。 任务项将显示在应用程序的目标菜单底部的类别。 在 UI 中填充时，此类别优先于所有其他类别。  
   
-##  <a name="addtasks"></a>CJumpList::AddTasks  
+##  <a name="addtasks"></a>  CJumpList::AddTasks  
  将项添加到规范的任务类别。  
   
 ```  
@@ -225,7 +220,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ### <a name="remarks"></a>备注  
  CJumpList 实例累积指定的任务，并将它们添加到目标列表期间`CommitList`。 任务项将显示在应用程序的目标菜单底部的类别。 在 UI 中填充时，此类别优先于所有其他类别。  
   
-##  <a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
+##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator  
  添加任务之间的分隔符。  
   
 ```  
@@ -235,7 +230,7 @@ BOOL AddTaskSeparator();
 ### <a name="return-value"></a>返回值  
  如果成功，则为非 0 如果它不是 0。  
   
-##  <a name="cjumplist"></a>CJumpList::CJumpList  
+##  <a name="cjumplist"></a>  CJumpList::CJumpList  
  构造 `CJumpList` 对象。  
   
 ```  
@@ -246,7 +241,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
  `bAutoCommit`  
  如果此参数为 FALSE 则在析构函数中不是自动提交列表。  
   
-##  <a name="clearall"></a>CJumpList::ClearAll  
+##  <a name="clearall"></a>  CJumpList::ClearAll  
  删除所有任务和已添加到的当前实例的目标`CJumpList`为止。  
   
 ```  
@@ -256,7 +251,7 @@ void ClearAll();
 ### <a name="remarks"></a>备注  
  此方法清除并释放所有数据和内部接口。  
   
-##  <a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
+##  <a name="clearalldestinations"></a>  CJumpList::ClearAllDestinations  
  删除已添加到当前实例的 CJumpList 到目前为止的所有目标。  
   
 ```  
@@ -266,7 +261,7 @@ void ClearAllDestinations();
 ### <a name="remarks"></a>备注  
  如果你需要删除当前会话的目标列表构建中到目前为止添加并再次添加其他目标的所有目标，请调用此函数。 如果内部`ICustomDestinationList`已初始化，它处于活动状态。  
   
-##  <a name="commitlist"></a>CJumpList::CommitList  
+##  <a name="commitlist"></a>  CJumpList::CommitList  
  结束列表生成事务，并将报告的列表提交到相关联的存储 （在此情况下注册表）。  
   
 ```  
@@ -278,7 +273,7 @@ BOOL CommitList();
 ### <a name="remarks"></a>备注  
  提交是原子的。 如果提交失败，则将返回错误。  当`CommitList`调用时，当前的删除的项列表将被清理。 调用此方法将对象重置，以便它不具有活动的列表生成事务。 若要更新的列表，`BeginList`需要再次调用。  
   
-##  <a name="getdestinationlist"></a>CJumpList::GetDestinationList  
+##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList  
  检索到目标列表的接口指针。  
   
 ```  
@@ -290,7 +285,7 @@ ICustomDestinationList* GetDestinationList();
 ### <a name="remarks"></a>备注  
  如果跳转列表尚未初始化，或具有已提交或中止，返回的值将为`NULL`。  
   
-##  <a name="getmaxslots"></a>CJumpList::GetMaxSlots  
+##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots  
  检索项，包括类别标头，可以在调用应用程序的目标菜单中显示的最大数目。  
   
 ```  
@@ -302,7 +297,7 @@ UINT GetMaxSlots() const;
 ### <a name="remarks"></a>备注  
  应用程序可能只报告大量的项和类别标头组合直到达到此值。 如果调用`AppendCategory`， `AppendKnownCategory`，或`AddUserTasks`超过此数字，它们将返回失败。  
   
-##  <a name="getremoveditems"></a>CJumpList::GetRemovedItems  
+##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems  
  返回的项数组，表示删除目标。  
   
 ```  
@@ -314,7 +309,7 @@ IObjectArray* GetRemovedItems();
 ### <a name="remarks"></a>备注  
  跳转列表初始化期间会检索已删除的目标。 在生成新的目标列表时，应用程序应首先处理删除的目标列表中，清除已删除的列表枚举器返回任何项其跟踪数据。 如果应用程序尝试提供只在当前调用对事务中移除的项`BeginList`启动，重新添加该项目的方法调用将失败，以确保应用程序尊重已删除的列表。  
   
-##  <a name="initializelist"></a>CJumpList::InitializeList  
+##  <a name="initializelist"></a>  CJumpList::InitializeList  
  开始生成列表的事务。  
   
 ```  
@@ -326,7 +321,7 @@ BOOL InitializeList();
 ### <a name="remarks"></a>备注  
  无需显式调用此方法，除非你想要检索指向的`ICustomDestinationList`使用`GetDestinationList`，使用的可用插槽数`GetMaxSlots`，或删除的项使用的列表`GetRemovedItems`。  
   
-##  <a name="setappid"></a>CJumpList::SetAppID  
+##  <a name="setappid"></a>  CJumpList::SetAppID  
  设置应用程序用户模型 ID，将生成的列表。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "CMemFile 类 |Microsoft 文档"
-ms.custom: 
+title: CMemFile 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemFile
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411d89c7796ea9ab48c013d4efd53aedd9225aba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemfile-class"></a>CMemFile 类
 [CFile](../../mfc/reference/cfile-class.md)-派生支持内存文件的类。  
@@ -80,7 +75,7 @@ class CMemFile : public CFile
 ## <a name="remarks"></a>备注  
  这些内存文件行为类似于磁盘文件，只不过该文件存储在 RAM 中，而不是在磁盘上。 内存文件可用于快速临时存储或传输原始字节或序列化的独立进程之间的对象。  
   
- `CMemFile`对象可以自动分配其自己的内存，或者可以将附加到你自己内存块`CMemFile`对象通过调用[附加](#attach)。 在任一情况下，为自动增长的内存文件的内存分配中`nGrowBytes`-如果大小为增量`nGrowBytes`不为零。  
+ `CMemFile` 对象可以自动分配其自己的内存，或者可以将附加到你自己内存块`CMemFile`对象通过调用[附加](#attach)。 在任一情况下，为自动增长的内存文件的内存分配中`nGrowBytes`-如果大小为增量`nGrowBytes`不为零。  
   
  内存块将自动删除在析构时`CMemFile`对象如果分配内存时最初通过`CMemFile`对象; 否则，你有责任释放附加到对象的内存。  
   
@@ -90,7 +85,7 @@ class CMemFile : public CFile
   
  `CFile`成员函数[重复](../../mfc/reference/cfile-class.md#duplicate)， [LockRange](../../mfc/reference/cfile-class.md#lockrange)，和[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)未实现`CMemFile`。 如果你对调用这些函数`CMemFile`对象，则将会出现[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- `CMemFile`使用运行时库函数[malloc](../../c-runtime-library/reference/malloc.md)， [realloc](../../c-runtime-library/reference/realloc.md)，和[免费](../../c-runtime-library/reference/free.md)分配，重新分配和释放内存; 和内部函数[memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)到块复制内存时读取和写入。 如果你想要更改此行为或行为时`CMemFile`会增大文件派生您自己的类从`CMemFile`和重写适当的函数。  
+ `CMemFile` 使用运行时库函数[malloc](../../c-runtime-library/reference/malloc.md)， [realloc](../../c-runtime-library/reference/realloc.md)，和[免费](../../c-runtime-library/reference/free.md)分配，重新分配和释放内存; 和内部函数[memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)到块复制内存时读取和写入。 如果你想要更改此行为或行为时`CMemFile`会增大文件派生您自己的类从`CMemFile`和重写适当的函数。  
   
  有关详细信息`CMemFile`，请参阅文章[MFC 中的文件](../../mfc/files-in-mfc.md)和[内存管理 (MFC)](../../mfc/memory-management.md)并查看[文件处理](../../c-runtime-library/file-handling.md)中*运行时库参考*。  
   
@@ -101,10 +96,10 @@ class CMemFile : public CFile
   
  `CMemFile`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>  CMemFile::Alloc  
  调用此函数`CMemFile`成员函数。  
   
 ```  
@@ -123,7 +118,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  默认实现使用运行时库函数[malloc](../../c-runtime-library/reference/malloc.md)分配内存。  
   
-##  <a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>  CMemFile::Attach  
  调用此函数可将附加到的内存块`CMemFile`。  
   
 ```  
@@ -152,7 +147,7 @@ void Attach(
   
  如果`nGrowBytes`大于 0，`CMemFile`将忽略已附加的内存块的内容。 你将需要的内存文件的内容写入从暂存使用`CMemFile`的重写`CFile::Write`。 如果你尝试写入文件的末尾，或通过调用增大文件`CMemFile`的重写`CFile::SetLength`，`CMemFile`将增长增量为内存分配`nGrowBytes`。 如果内存块将传递给不断增长的内存分配将失败**附加**未使用与兼容方法分配[Alloc](#alloc)。 若要使用的默认实现兼容`Alloc`，您必须分配内存，运行时库函数[malloc](../../c-runtime-library/reference/malloc.md)或[calloc](../../c-runtime-library/reference/calloc.md)。  
   
-##  <a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  第一个重载打开的空内存文件。  
   
 ```  
@@ -183,7 +178,7 @@ CMemFile(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>  CMemFile::Detach  
  调用此函数可获取到正在使用的内存块的指针`CMemFile`。  
   
 ```  
@@ -196,7 +191,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>备注  
  调用此函数还关闭`CMemFile`。 你可以重新附加到的内存块`CMemFile`通过调用[附加](#attach)。 如果你想要重新附加该文件并在其中使用的数据，则应调用[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength)要获取之前调用文件长度**分离**。 请注意，如果附加到的内存块`CMemFile`，以便你可以使用其数据 ( `nGrowBytes` = = 0)，然后你将无法增长的内存文件。  
   
-##  <a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>  CMemFile::Free  
  调用此函数`CMemFile`成员函数。  
   
 ```  
@@ -210,7 +205,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>备注  
  重写此函数可实现自定义内存释放。 如果你重写此函数，你可能需要重写[Alloc](#alloc)和[Realloc](#realloc)以及。  
   
-##  <a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>  CMemFile::GrowFile  
  调用此函数可由几个`CMemFile`成员函数。  
   
 ```  
@@ -224,7 +219,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>备注  
  如果你想要更改您可以覆盖它如何`CMemFile`会增大其文件。 默认实现调用[Realloc](#realloc)增长的现有块 (或[Alloc](#alloc)若要创建的内存块)，分配的倍数中的内存`nGrowBytes`构造函数中指定的值或[附加](#attach)调用。  
   
-##  <a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>  CMemFile::Memcpy  
  调用此函数`CMemFile`重写[CFile::Read](../../mfc/reference/cfile-class.md#read)和[CFile::Write](../../mfc/reference/cfile-class.md#write)传输数据传入和传出的内存文件。  
   
 ```  
@@ -250,7 +245,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>备注  
  如果你想要更改的方式重写此函数的`CMemFile`未这些内存副本。  
   
-##  <a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>  CMemFile::Realloc  
  调用此函数`CMemFile`成员函数。  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "__vmx_vmread |Microsoft 文档"
-ms.custom: 
+title: __vmx_vmread |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmread
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 351ef951a57a4f100861dbd12b8a77d11fc41df8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft 专用**  
@@ -51,7 +46,7 @@ unsigned char __vmx_vmread(
   
 ## <a name="return-value"></a>返回值  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |0|操作成功。|  
 |1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
@@ -60,7 +55,7 @@ unsigned char __vmx_vmread(
 ## <a name="remarks"></a>备注  
  `__vmx_vmread`函数等同于`VMREAD`计算机指令。 值`Field`参数是 Intel 文档所述的编码的字段索引。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点，则请查阅该文档的附录 C.  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
 |---------------|------------------|  

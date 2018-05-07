@@ -1,12 +1,9 @@
 ---
-title: "CSmartDockingInfo 类 |Microsoft 文档"
-ms.custom: 
+title: CSmartDockingInfo 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2954e3fc6a0a8ee7265c5b2baa29d391aa52329c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
 定义智能停靠标记的外观。  
@@ -72,7 +67,7 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否使用当前的主题颜色时框架显示智能停靠标记。|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智能停靠标记的基的背景的色。|  
@@ -112,10 +107,10 @@ class CSmartDockingInfo : public CObject
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
  将当前智能停靠参数复制到提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)对象。  
   
 ```  
@@ -126,7 +121,7 @@ void CopyTo(CSmartDockingInfo& params);
  [out] `params`  
  类型的对象`CSmartDockingInfo`填充当前智能停靠参数。  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  指定是否使用当前的主题颜色时框架显示智能停靠标记。  
   
 ```  
@@ -138,14 +133,14 @@ BOOL m_bUseThemeColorInShading;
   
  默认值为 `FALSE`。  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
  指定智能停靠标记的基的背景的色。  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
  指定用于将替换的颜色`m_clrToneSrc`智能停靠标记位图中。  
   
 ```  
@@ -157,7 +152,7 @@ COLORREF m_clrToneDest;
   
  若要更改自定义标记的颜色，则必须同时指定`m_clrToneDest`和`m_clrToneSrc`。  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
  指定的智能停靠标记位图的颜色。  
   
 ```  
@@ -169,7 +164,7 @@ COLORREF m_clrToneSrc;
   
  使用`(COLORREF)-1`将智能停靠组的成员保留为空。  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
  指定的智能停靠标记位图的颜色时它们都是透明。  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>备注  
  停靠的组中显示自定义标记和自定义位图时，必须设置此值。  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
  指定的中心小组矩形的边界和智能停靠标记的中央组之间的偏移量。  
   
 ```  
@@ -189,7 +184,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>备注  
  如果你想要更改自定义标记和智能停靠标记的中央组的边界之间的默认偏移量，请指定此值。 默认偏移量为 5 个像素。  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
  指定包含中央组中的所有智能停靠标记的边框的总大小。  
   
 ```  
@@ -199,7 +194,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>备注  
  设置`m_sizeTotal`中央组标记的边框的大小。 需要指定此值，如果你将自定义位图标记。  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
  定义的用于非突出显示自定义智能停靠标记的位图的资源 Id。  
   
 ```  
@@ -207,7 +202,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>备注  
- 使用的表示智能停靠标记的位图的资源 Id 填充此数组。 `AFX_SD_MARKERS_NUM`当前定义为 5。 如下所示填充数组：  
+ 使用的表示智能停靠标记的位图的资源 Id 填充此数组。 `AFX_SD_MARKERS_NUM` 当前定义为 5。 如下所示填充数组：  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -219,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  定义的用于突出显示的自定义智能停靠标记的位图的资源 Id。  
   
 ```  
@@ -227,7 +222,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>备注  
- 使用的表示突出显示的智能停靠标记的位图的资源 Id 填充此数组。 `AFX_SD_MARKERS_NUM`当前定义为 5。 如下所示填充数组：  
+ 使用的表示突出显示的智能停靠标记的位图的资源 Id 填充此数组。 `AFX_SD_MARKERS_NUM` 当前定义为 5。 如下所示填充数组：  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   

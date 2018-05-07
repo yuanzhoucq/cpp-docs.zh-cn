@@ -1,13 +1,10 @@
 ---
-title: "控件名称，MFC ActiveX 控件向导 |Microsoft 文档"
-ms.custom: 
+title: 控件名称，MFC ActiveX 控件向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.names
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3444ec69ea96ee89ed7a0965f3575fc79e3b9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a406bf633715f6a6e9546295da3b02a41f0063
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 控件向导的控件名称
 指定控件类和属性页类，类型名称的名称和类型为您的控件的标识符。 除**短名称**，所有其他字段可单独进行编辑。 如果你更改的文本**短名称**，在此页中的所有其他字段的名称中会反映更改。 此命名行为旨在使所有名称轻松地识别为您开发您的控件。  

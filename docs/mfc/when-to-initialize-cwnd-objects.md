@@ -2,12 +2,9 @@
 title: 何时初始化 CWnd 对象 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - HWND, when attached to CWnd object
 - CWnd objects [MFC], when to initialize
 ms.assetid: 4d31bcb1-73db-4f2f-b71c-89b087569a10
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1efceb4fa826d5cd2bf8dc900180eb36cea4de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>何时初始化 CWnd 对象
 无法创建你自己的子窗口或调用的构造函数中的任何 Windows API 函数`CWnd`-派生对象。 这是因为`HWND`为`CWnd`尚未创建对象。 最特定于 Windows 的初始化，例如添加子窗口，必须在中[OnCreate](../mfc/reference/cwnd-class.md#oncreate)消息处理程序。  

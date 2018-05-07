@@ -1,13 +1,10 @@
 ---
-title: "对话框数据交换函数 OLE 控件的 |Microsoft 文档"
-ms.custom: 
+title: 对话框数据交换函数 OLE 控件的 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控件的对话框数据交换函数
 本主题列出了用于对话框、 窗体视图或控件视图对象中 OLE 控件的属性和对话框、 窗体视图或控件视图对象的数据成员之间交换数据的 DDX_OC 函数。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_OCText](#ddx_octext)|管理的传输**CString** OLE 控件的属性之间的数据和**CString**数据成员。|  
 |[DDX_OCTextRO](#ddx_octextro)|管理的传输**CString** OLE 控件的只读属性之间的数据和**CString**数据成员。|  
   
-##  <a name="ddx_ocbool"></a>DDX_OCBool  
+##  <a name="ddx_ocbool"></a>  DDX_OCBool  
  `DDX_OCBool`函数管理的传输**BOOL** OLE 控件在对话框中，属性之间的数据窗体视图或控件视图对象和一个**BOOL**数据成员的对话框中，窗体视图或控件视图对象。  
   
 ```   
@@ -80,16 +75,16 @@ void AFXAPI DDX_OCBool(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头：** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
  `DDX_OCBoolRO`函数管理的传输**BOOL** OLE 控件在对话框中，只读属性之间的数据窗体视图或控件视图对象和一个**BOOL**对话框中的数据成员窗体视图或控件视图对象。  
   
 ```   
@@ -110,16 +105,16 @@ void AFXAPI DDX_OCBoolRO(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_occolor"></a>DDX_OCColor  
+##  <a name="ddx_occolor"></a>  DDX_OCColor  
  `DDX_OCColor`函数管理的传输**OLE_COLOR** OLE 控件在对话框中，属性之间的数据窗体视图或控件视图对象和一个**OLE_COLOR**对话框中的数据成员窗体视图或控件视图对象。  
   
 ```   
@@ -140,16 +135,16 @@ void AFXAPI DDX_OCColor(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
  `DDX_OCColorRO`函数管理的传输**OLE_COLOR** OLE 控件在对话框中，只读属性之间的数据窗体视图或控件视图对象和一个**OLE_COLOR**的数据成员对话框、 窗体视图或控件视图对象。  
   
 ```   
@@ -170,16 +165,16 @@ void AFXAPI DDX_OCColorRO(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
  `DDX_OCFloat`函数管理的传输**float** (或**double**) 之间的 OLE 控件在对话框中，属性的数据窗体视图或控件视图对象和一个**float**(或**double**) 的对话框、 窗体视图或控件视图对象的数据成员。  
   
 ```   
@@ -206,16 +201,16 @@ void AFXAPI DDX_OCFloat(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
  `DDX_OCFloatRO`函数管理的传输**float** (或**double**) 之间的 OLE 控件在对话框中，只读属性的数据窗体视图或控件视图对象和一个**float** (或**double**) 的对话框、 窗体视图或控件视图对象的数据成员。  
   
 ```   
@@ -242,16 +237,16 @@ void AFXAPI DDX_OCFloatRO(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_ocint"></a>DDX_OCInt  
+##  <a name="ddx_ocint"></a>  DDX_OCInt  
  `DDX_OCInt`函数管理的传输`int`(或**长**) 之间的 OLE 控件在对话框中，属性的数据窗体视图或控件视图对象和一个`int`(或**长时间**) 的对话框、 窗体视图或控件视图对象的数据成员。  
   
 ```   
@@ -278,16 +273,16 @@ void AFXAPI DDX_OCInt(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
  `DDX_OCIntRO`函数管理的传输`int`(或**长**) 之间的 OLE 控件在对话框中，只读属性的数据窗体视图或控件视图对象和一个`int`(或**长**) 的对话框、 窗体视图或控件视图对象的数据成员。  
   
 ```   
@@ -314,16 +309,16 @@ void AFXAPI DDX_OCIntRO(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>DDX_OCShort  
+##  <a name="ddx_ocshort"></a>  DDX_OCShort  
  `DDX_OCShort`函数管理对话框中，窗体视图中 OLE 控件的属性之间的短的数据传输或控件视图对象和短的数据成员的对话框中，窗体视图，或控件视图对象。  
   
 ```   
@@ -344,16 +339,16 @@ void AFXAPI DDX_OCShort(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
  `DDX_OCShortRO`函数管理短之间数据传输的 OLE 控件在对话框中，窗体视图的只读属性或控件视图对象和短的数据成员的对话框中，窗体视图，或控件视图对象。  
   
 ```   
@@ -374,16 +369,16 @@ void AFXAPI DDX_OCShortRO(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_octext"></a>DDX_OCText  
+##  <a name="ddx_octext"></a>  DDX_OCText  
  **DDX_OCText**函数管理的传输**CString** OLE 控件在对话框中，属性之间的数据窗体视图或控件视图对象和一个**CString**数据对话框、 窗体视图或控件视图对象的成员。  
   
 ```   
@@ -404,16 +399,16 @@ void AFXAPI DDX_OCText(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="ddx_octextro"></a>DDX_OCTextRO  
+##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
  `DDX_OCTextRO` 函数管理对话框、窗体视图或控件视图对象中 OLE 控件的只读属性与对话框、窗体视图或控件视图对象的 `CString` 数据成员之间 `CString` 数据的传输。  
   
 ```  
@@ -434,13 +429,13 @@ void AFXAPI DDX_OCTextRO(
  `dispid`  
  该控件的属性的调度 ID。  
   
- *值*  
+ *value*  
  对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
   
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
   **标头**afxdisp.h
     
 ## <a name="see-also"></a>请参阅  

@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 1） C4378 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 1） C4378 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4378
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fea0b26b6aeaaa1c10316a8b17c6a988f3130bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92f7fa0c455332c443d2651a377d870f12e59522
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4378"></a>编译器警告（等级 1）C4378
 必须获取函数指针，以便运行初始值设定项;请考虑 System::ModuleHandle::ResolveMethodHandle  
   
- 下**/clr**，初始值设定项符号包含函数标记，而不是函数指针。  你需要将令牌转换为使用指针<xref:System.ModuleHandle.ResolveMethodHandle%2A>。  
+ 下 **/clr**，初始值设定项符号包含函数标记，而不是函数指针。  你需要将令牌转换为使用指针<xref:System.ModuleHandle.ResolveMethodHandle%2A>。  
   
 ## <a name="example"></a>示例  
  下面的示例生成 C4378。  

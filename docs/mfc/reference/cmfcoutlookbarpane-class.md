@@ -1,12 +1,9 @@
 ---
-title: "CMFCOutlookBarPane 类 |Microsoft 文档"
-ms.custom: 
+title: CMFCOutlookBarPane 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarPane
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eb92e44a26577866a797243f3a32d53b854365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -144,10 +139,10 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
  [CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxoutlookbarpane.h  
   
-##  <a name="addbutton"></a>CMFCOutlookBarPane::AddButton  
+##  <a name="addbutton"></a>  CMFCOutlookBarPane::AddButton  
  将按钮添加到 Outlook 栏窗格。  
   
 ```  
@@ -216,7 +211,7 @@ BOOL AddButton(
  指向按钮的图标的句柄。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则添加一个按钮否则为`FALSE`。  
+ `TRUE` 如果成功，则添加一个按钮否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  使用此方法将一个新按钮插入到 Outlook 栏的页。 从应用程序资源或从磁盘文件，可以加载按钮的图像。  
@@ -225,7 +220,7 @@ BOOL AddButton(
   
  如果指定的索引`iInsertAt`为-1，按钮将添加到页面的末尾。  
   
-##  <a name="canbeattached"></a>CMFCOutlookBarPane::CanBeAttached  
+##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -236,7 +231,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="clearall"></a>CMFCOutlookBarPane::ClearAll  
+##  <a name="clearall"></a>  CMFCOutlookBarPane::ClearAll  
  释放使用 Outlook 栏窗格上的映像的资源。  
   
 ```  
@@ -246,7 +241,7 @@ void ClearAll();
 ### <a name="remarks"></a>备注  
  此方法直接调用[CMFCToolBarImages::Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear)，这种行为称为上使用的 Outlook 栏窗格中的映像。  
   
-##  <a name="create"></a>CMFCOutlookBarPane::Create  
+##  <a name="create"></a>  CMFCOutlookBarPane::Create  
  创建 Outlook 栏窗格。  
   
 ```  
@@ -271,14 +266,14 @@ virtual BOOL Create(
  指定定义 Outlook 栏窗格控件的行为，从 Outlook 栏分离时的特殊样式。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+ `TRUE` 如果此方法成功，则否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  若要构造`CMFCOutlookBarPane`对象，第一次调用的构造函数，，然后调用`Create`，它创建的 Outlook 栏窗格控件并将其附加到`CMFCOutlookBarPane`对象。  
   
  有关详细信息`dwControlBarStyle`请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
-##  <a name="enablecontextmenuitems"></a>CMFCOutlookBarPane::EnableContextMenuItems  
+##  <a name="enablecontextmenuitems"></a>  CMFCOutlookBarPane::EnableContextMenuItems  
  指定的快捷菜单项将显示在自定义模式。  
   
 ```  
@@ -305,7 +300,7 @@ virtual BOOL EnableContextMenuItems(
 > [!NOTE]
 > *上下文菜单*是快捷菜单的同义词。  
   
-##  <a name="enablepagescrollmode"></a>CMFCOutlookBarPane::EnablePageScrollMode  
+##  <a name="enablepagescrollmode"></a>  CMFCOutlookBarPane::EnablePageScrollMode  
  指定是否在 Outlook 栏窗格中的滚动箭头向前移动按钮按页或按钮的按钮的列表。  
   
 ```  
@@ -316,7 +311,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
  [in] `bPageScroll`  
  如果`TRUE`，启用页滚动模式。 如果`FALSE`，禁用页面滚动模式。  
   
-##  <a name="getregularcolor"></a>CMFCOutlookBarPane::GetRegularColor  
+##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  返回常规 (即非选择) 的 Outlook 栏窗格的文本颜色。  
   
 ```  
@@ -329,7 +324,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
 ### <a name="remarks"></a>备注  
  使用[CMFCOutlookBarPane::SetTextColor](#settextcolor)设置 Outlook 栏的当前 （正则和所选） 的文本颜色。 你可以通过调用获取的默认文本颜色[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)起作用`COLOR_WINDOW`索引。  
   
-##  <a name="isbackgroundtexture"></a>CMFCOutlookBarPane::IsBackgroundTexture  
+##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  确定是否已加载的 Outlook 栏窗格的背景图像。  
   
 ```  
@@ -337,14 +332,14 @@ BOOL IsBackgroundTexture() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果没有要显示; 的背景图像否则为`FALSE`。  
+ `TRUE` 如果没有要显示; 的背景图像否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  你可以通过调用添加背景图像[CMFCOutlookBarPane::SetBackImage](#setbackimage)函数。  
   
  如果没有任何背景图像，绘制背景或通过使用指定的颜色与[CMFCOutlookBarPane::SetBackColor](#setbackcolor)。  
   
-##  <a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane::IsDrawShadedHighlight  
+##  <a name="isdrawshadedhighlight"></a>  CMFCOutlookBarPane::IsDrawShadedHighlight  
  确定当突出显示一个按钮，并且显示的背景图像是否阴影按钮边框。  
   
 ```  
@@ -352,16 +347,16 @@ BOOL IsDrawShadedHighlight() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果按钮的边框显示为灰色;否则为`FALSE`。  
+ `TRUE` 如果按钮的边框显示为灰色;否则为`FALSE`。  
   
-##  <a name="removeallbuttons"></a>CMFCOutlookBarPane::RemoveAllButtons  
+##  <a name="removeallbuttons"></a>  CMFCOutlookBarPane::RemoveAllButtons  
  从 Outlook 栏窗格中删除所有按钮。  
   
 ```  
 virtual void RemoveAllButtons();
 ```  
   
-##  <a name="removebutton"></a>CMFCOutlookBarPane::RemoveButton  
+##  <a name="removebutton"></a>  CMFCOutlookBarPane::RemoveButton  
  删除具有指定的命令 ID 的按钮  
   
 ```  
@@ -373,9 +368,9 @@ BOOL RemoveButton(UINT iIdCommand);
  指定要删除一个按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`如果成功移除了按钮;`FALSE`如果指定的命令 ID 无效。  
+ `TRUE` 如果成功移除了按钮;`FALSE`如果指定的命令 ID 无效。  
   
-##  <a name="setbackcolor"></a>CMFCOutlookBarPane::SetBackColor  
+##  <a name="setbackcolor"></a>  CMFCOutlookBarPane::SetBackColor  
  设置 Outlook 栏的背景色。  
   
 ```  
@@ -389,7 +384,7 @@ void SetBackColor(COLORREF color);
 ### <a name="remarks"></a>备注  
  调用此函数可设置 Outlook 栏的当前背景色。 只有在没有背景图像使用的背景色。  
   
-##  <a name="setbackimage"></a>CMFCOutlookBarPane::SetBackImage  
+##  <a name="setbackimage"></a>  CMFCOutlookBarPane::SetBackImage  
  设置的背景图像。  
   
 ```  
@@ -403,7 +398,7 @@ void SetBackImage(UINT uiImageID);
 ### <a name="remarks"></a>备注  
  调用此方法以设置 Outlook 栏的背景图像。 托管的背景图像列表通过嵌入[CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)对象。  
   
-##  <a name="setdefaultstate"></a>CMFCOutlookBarPane::SetDefaultState  
+##  <a name="setdefaultstate"></a>  CMFCOutlookBarPane::SetDefaultState  
  将 Outlook 栏窗格重置为按钮的原始设置。  
   
 ```  
@@ -413,14 +408,14 @@ void SetDefaultState();
 ### <a name="remarks"></a>备注  
  此方法将 Outlook 栏按钮还原到原始集。 此方法就像是`CMFCOutlookBarPane::RestoreOriginalstate`，只不过它不会触发的 Outlook 栏窗格重绘。  
   
-##  <a name="setextraspace"></a>CMFCOutlookBarPane::SetExtraSpace  
+##  <a name="setextraspace"></a>  CMFCOutlookBarPane::SetExtraSpace  
  设置的周围 Outlook 栏窗格中的按钮使用的填充的像素数。  
   
 ```  
 void SetExtraSpace()  
 ```  
   
-##  <a name="settextcolor"></a>CMFCOutlookBarPane::SetTextColor  
+##  <a name="settextcolor"></a>  CMFCOutlookBarPane::SetTextColor  
  在 Outlook 栏窗格中设置的常规和突出显示文本的颜色。  
   
 ```  
@@ -436,7 +431,7 @@ void SetTextColor(
  [in] `clrSelText`  
  指定所选文本的新颜色。  
   
-##  <a name="settransparentcolor"></a>CMFCOutlookBarPane::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  设置 Outlook 栏窗格中的透明颜色。  
   
 ```  

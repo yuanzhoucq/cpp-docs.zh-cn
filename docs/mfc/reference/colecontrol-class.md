@@ -1,12 +1,9 @@
 ---
-title: "COleControl 类 |Microsoft 文档"
-ms.custom: 
+title: COleControl 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 用于开发 OLE 控件的重要基类。  
@@ -898,7 +893,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
  指向的指针`CPropExchange`对象。 框架提供了此对象以建立属性交换，包括其方向的上下文。  
   
 ### <a name="remarks"></a>备注  
- 使用此功能通常可以调用**PX_**系列函数以加载或存储的 OLE 控件的特定用户定义属性。  
+ 使用此功能通常可以调用**PX_** 系列函数以加载或存储的 OLE 控件的特定用户定义属性。  
   
  如果控件向导用于创建 OLE 控件项目，此函数的重写的版本将序列化支持的常用属性`COleControl`通过调用基类函数， `COleControl::DoPropExchange`。 将用户定义的属性添加到您的 OLE 控件将需要修改此函数可序列化新属性。 在序列化的详细信息，请参阅文章[ActiveX 控件： 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
@@ -1413,9 +1408,9 @@ BOOL GetAmbientProperty(
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
 |`VT_I2`|**short\***|  
-|`VT_I4`|**long\***|  
+|`VT_I4`|**长\***|  
 |`VT_R4`|**float\***|  
-|`VT_R8`|**double\***|  
+|`VT_R8`|**双精度\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
 |VT_DISPATCH|**LPDISPATCH\***|  
@@ -1993,7 +1988,7 @@ BOOL IsModified();
 ### <a name="remarks"></a>备注  
  属性更改值时，则修改控件的状态。  
   
-##  <a name="isoptimizeddraw"></a>  COleControl::IsOptimizedDraw  
+##  <a name="isoptimizeddraw"></a>  Colecontrol:: Isoptimizeddraw  
  确定容器是否支持当前绘图操作优化的绘制。  
   
 ```  
@@ -2383,7 +2378,7 @@ virtual BOOL OnGetDisplayString(
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)通过返回的字符串对象。  
   
 ### <a name="return-value"></a>返回值  
- 如果已在返回的字符串则为非 0 *strValue;*否则为 0。  
+ 如果已在返回的字符串则为非 0 *strValue;* 否则为 0。  
   
 ### <a name="remarks"></a>备注  
  如果控件具有其值不能直接转换为字符串属性，并且你想要在容器提供的属性浏览器中显示的属性的值，重写此函数。  
@@ -3643,7 +3638,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>备注  
  请注意，常用的标题和文本属性同时映射到相同的值。 这意味着对这两个属性所做任何更改将自动更改这两个属性。 一般情况下，控件应支持 stock 标题或文本属性，但不是两者。  
   
-##  <a name="throwerror"></a>  COleControl::ThrowError  
+##  <a name="throwerror"></a>  Colecontrol:: Throwerror  
  用信号通知控件中的错误的匹配项。  
   
 ```  
@@ -3767,7 +3762,7 @@ virtual LRESULT WindowProc(
 ### <a name="remarks"></a>备注  
  调用此函数可将特定消息通过控件的消息映射调度。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CIRC3](../../visual-cpp-samples.md)   
  [MFC 示例 TESTHELP](../../visual-cpp-samples.md)   
  [COlePropertyPage 类](../../mfc/reference/colepropertypage-class.md)   
