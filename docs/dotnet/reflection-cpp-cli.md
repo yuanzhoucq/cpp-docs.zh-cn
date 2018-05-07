@@ -1,13 +1,10 @@
 ---
-title: "反射 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 反射 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - data types [C++], reflection
 - reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f5b6e9aa8614248bc0e1215067e495cb4dce702
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-ccli"></a>反射 (C++/CLI)
 反射允许要在运行时检查已知的数据类型。 反射允许数据类型的枚举中给定的程序集，而且不会发现给定类或值类型的成员。 这是不管是否已知或在编译时引用的类型。 这样，反射非常有用的功能，用于开发和代码管理工具。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  若要访问反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法由[system:: object](https://msdn.microsoft.com/en-us/library/system.object.aspx)，从所有垃圾回收的类都派生的。  
   
- 如果使用生成.exe 只允许用 Visual c + + 编译器生成的.exe 上的反射**/clr: pure**或**/clr: safe**编译器选项。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。  
+ 如果使用生成.exe 只允许用 Visual c + + 编译器生成的.exe 上的反射 **/clr: pure**或 **/clr: safe**编译器选项。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。  
   
  本节中的主题：  
   

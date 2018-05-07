@@ -1,12 +1,9 @@
 ---
-title: COLUMN_ENTRY_STATUS | Microsoft Docs
-ms.custom: 
+title: COLUMN_ENTRY_STATUS |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_ENTRY_STATUS macro
 ms.assetid: 29ffe8b6-cb1e-438c-813e-2e6d73a5deef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0351c479503f357712f25e9928b8082eb8bfbb29
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 91be475992128d21a866d0ee86860e6bb12270da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnentrystatus"></a>COLUMN_ENTRY_STATUS
 表示行集上与数据库中的特定列的绑定。  
@@ -59,7 +54,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
   
 -   之间[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
 ## <a name="see-also"></a>请参阅  

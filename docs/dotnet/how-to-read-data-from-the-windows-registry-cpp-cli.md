@@ -1,31 +1,26 @@
 ---
-title: "如何： 从 Windows 注册表中读取数据 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 从 Windows 注册表中读取数据 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, reading from Windows Registry
 - registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfb654ba2cce069086713322624e947e14bc26f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87c882bcf2a7900e1f95ea968407c159333c6cb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>如何：从 Windows 注册表中读取数据 (C++/CLI)
 下面的代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>键以从 Windows 注册表中读取数据。 首先，使用枚举子项<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>使用打开方法，然后标识子项<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>方法。 与根键中，每个子项都由<xref:Microsoft.Win32.RegistryKey>类。 最后，使用新<xref:Microsoft.Win32.RegistryKey>对象用于枚举的键/值对。  

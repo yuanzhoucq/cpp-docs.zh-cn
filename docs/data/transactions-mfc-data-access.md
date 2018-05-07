@@ -1,13 +1,10 @@
 ---
-title: "事务 （MFC 数据访问） |Microsoft 文档"
-ms.custom: 
+title: 事务 （MFC 数据访问） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f0c028eaf58e828366ae9534ff06b53254e3601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9dd531aee6ac8014f2ce47ddee7fc5f82e35a63
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transactions--mfc-data-access"></a>事务（MFC 数据访问）
 已开发出事务的概念以便根据一系列成功操作处理数据库结果状态的情况。 由于连续性操作可能修改先前操作的结果，因此可能会出现这种情况。 在这种情况下，如果任何一个操作失败，结果状态就有可能不确定。  
