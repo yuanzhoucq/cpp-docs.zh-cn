@@ -1,12 +1,9 @@
 ---
-title: "single_link_registry 类 |Microsoft 文档"
-ms.custom: 
+title: single_link_registry 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_link_registry
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74167dcc03754c7f25d83058ec814798d40931a2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3220156d201a4dcb7edb6281298d3f248f38fc83
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 类
 `single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。  
@@ -63,7 +58,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|将添加到链接`single_link_registry`对象。 (重写[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|返回的第一个元素的迭代器`single_link_registry`对象。 (重写[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[contains](#contains)|搜索`single_link_registry`对象指定的块。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
+|[包含](#contains)|搜索`single_link_registry`对象指定的块。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
 |[count](#count)|计算中的项的数目`single_link_registry`对象。 (重写[network_link_registry:: count](network-link-registry-class.md#count)。)|  
 |[remove](#remove)|删除从链接`single_link_registry`对象。 (重写[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
   
@@ -72,7 +67,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
  `single_link_registry`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -155,7 +150,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="dtor"></a> ~single_link_registry 
+##  <a name="dtor"></a> ~ single_link_registry 
 
  销毁`single_link_registry`对象。  
   

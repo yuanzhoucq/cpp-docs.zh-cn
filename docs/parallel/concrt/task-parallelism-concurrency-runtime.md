@@ -1,13 +1,10 @@
 ---
-title: "任务并行 （并发运行时） |Microsoft 文档"
-ms.custom: 
+title: 任务并行 （并发运行时） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d4f2a1f1a5bd0b4a8ca68f3aa47f6890a11efa11
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>任务并行（并发运行时）
 并发运行时中,*任务*是执行特定作业并通常与其他任务并行运行的工作单元。 任务可以分解为其他更细化的任务组织成*任务组*。  
@@ -316,7 +311,7 @@ Message from task: 42
   
  有关完整的示例演示如何使用`parallel_invoke`算法，请参阅[如何： 使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[如何： 使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 有关完整示例，使用`task_group`类以实现异步 future，请参阅[演练： 实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。  
   
-##  <a name="robust">可靠编程</a>  
+##  <a name="robust"></a> 可靠编程  
  请确保了解取消和异常处理在使用任务、任务组和并行算法时的角色。 例如，在并行工作树中，取消的任务会阻止子任务运行。 如果一个子任务执行的操作对于应用程序很重要（如释放资源），则这可能会导致问题。 此外，如果子任务引发异常，则该异常可以通过对象析构函数进行传播，在应用程序中导致不明确的行为。 有关说明这些要点的示例，请参阅[了解如何取消和异常处理影响对象析构](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)并行模式库文档中的最佳做法中的部分。 有关取消和异常处理模型 PPL 中的详细信息，请参阅[取消](../../parallel/concrt/cancellation-in-the-ppl.md)和[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
 ## <a name="related-topics"></a>相关主题  

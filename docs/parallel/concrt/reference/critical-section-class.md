@@ -1,12 +1,9 @@
 ---
-title: "critical_section 类 |Microsoft 文档"
-ms.custom: 
+title: critical_section 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>critical_section 类
 明确感知并发运行时的不可重入互斥。  
@@ -63,7 +58,7 @@ class critical_section;
 |名称|描述|  
 |----------|-----------------|  
 |[critical_section](#ctor)|构造新的关键部分。|  
-|[~critical_section Destructor](#dtor)|销毁关键部分。|  
+|[~ critical_section 析构函数](#dtor)|销毁关键部分。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -81,7 +76,7 @@ class critical_section;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `critical_section`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -132,7 +127,7 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>备注  
  A`critical_section`对象不是与平台特定本机句柄关联的 Windows 操作系统。 方法只需返回到对象本身的引用。  
   
-##  <a name="critical_section__scoped_lock_class">critical_section:: scoped_lock 类</a>  
+##  <a name="critical_section__scoped_lock_class"></a>  critical_section:: scoped_lock 类  
  异常安全 RAII 包装器`critical_section`对象。  
   
 ```
@@ -151,7 +146,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  要锁定的关键部分。  
   
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
  销毁`scoped_lock`对象并释放其构造函数中提供的关键部分。  
   

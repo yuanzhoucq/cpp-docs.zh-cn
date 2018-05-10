@@ -1,13 +1,10 @@
 ---
-title: "C 乘法运算符 | Microsoft Docs"
-ms.custom: 
+title: C 乘法运算符 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 乘法运算符执行乘法 (\*)、除法 (/) 和余数 (`%`) 运算。  
@@ -105,7 +100,7 @@ n = i % j;
   
  **Microsoft 专用**  
   
- 余数的符号与被除数的符号相同。 例如：  
+ 余数的符号与被除数的符号相同。 例如:  
   
 ```  
 50 % -6 = 2  
@@ -116,5 +111,5 @@ n = i % j;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [乘法运算符和取模运算符](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -1,12 +1,9 @@
 ---
-title: "地区、 endregion |Microsoft 文档"
-ms.custom: 
+title: 地区、 endregion |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.endregion
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda2aba5fdb0aa83066c1762822bfce5fc5f6b4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5590d2b251d86a9d20b62bfdb3d5bf929e3d92d4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="region-endregion"></a>region、endregion
 **#pragma 区域**允许你指定的可以展开或折叠时使用的代码块[大纲显示功能](/visualstudio/ide/outlining)的 Visual Studio 代码编辑器中。  
@@ -51,9 +46,9 @@ ms.lasthandoff: 02/23/2018
  区域的名称。  此名称将显示在代码编辑器中。  
   
 ## <a name="remarks"></a>备注  
- **#pragma endregion**标记的结束**#pragma 区域**块。  
+ **#pragma endregion**标记的结束 **#pragma 区域**块。  
   
- A`#region`块必须终止与**#pragma endregion**。  
+ A`#region`块必须终止与 **#pragma endregion**。  
   
 ## <a name="example"></a>示例  
   

@@ -1,12 +1,9 @@
 ---
-title: "structured_task_group 类 |Microsoft 文档"
-ms.custom: 
+title: structured_task_group 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 类
 `structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。  
@@ -50,17 +45,17 @@ class structured_task_group;
 |名称|描述|  
 |----------|-----------------|  
 |[structured_task_group](#ctor)|已重载。 构造一个新`structured_task_group`对象。|  
-|[~structured_task_group Destructor](#dtor)|销毁 `structured_task_group` 对象。 你应该调用`wait`或`run_and_wait`之前析构函数执行的对象上的方法除非析构函数正在执行的结果堆栈展开由于出现异常。|  
+|[~ structured_task_group 析构函数](#dtor)|销毁 `structured_task_group` 对象。 你应该调用`wait`或`run_and_wait`之前析构函数执行的对象上的方法除非析构函数正在执行的结果堆栈展开由于出现异常。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[cancel](#cancel)|使最大努力尝试取消任务组取得 root 权限的工作的子树。 对任务组计划每个任务都将获取取消间接如有可能。|  
+|[取消](#cancel)|使最大努力尝试取消任务组取得 root 权限的工作的子树。 对任务组计划每个任务都将获取取消间接如有可能。|  
 |[is_canceling](#is_canceling)|任务组当前正在取消通知调用方。 这不一定表示，`cancel`上调用了方法`structured_task_group`对象 (虽然这样肯定会让此方法以返回`true`)。 它可能是这种情况，`structured_task_group`对象正在进行内联执行，任务组进一步向上工作树中已被取消。 在如这些位置的情况下运行时可以确定取消将流过提前`structured_task_group`对象，`true`也会返回。|  
 |[run](#run)|已重载。 在计划任务`structured_task_group`对象。 调用方管理的生存期`task_handle`传入的对象`_Task_handle`参数。 采用参数 `_Placement` 的版本会导致任务偏向在该参数指定的位置执行。|  
 |[run_and_wait](#run_and_wait)|已重载。 计划任务以运行内联将在调用上下文的帮助下`structured_task_group`完整取消支持的对象。 如果`task_handle`对象作为参数传递`run_and_wait`，调用方负责管理的生存期`task_handle`对象。 该函数然后等待，直到上的所有工作`structured_task_group`对象已完成或已取消。|  
-|[wait](#wait)|等待，直到上的所有工作`structured_task_group`已完成或已取消。|  
+|[等待](#wait)|等待，直到上的所有工作`structured_task_group`已完成或已取消。|  
   
 ## <a name="remarks"></a>备注  
  有大量的使用情况的严格限制`structured_task_group`以便获得的性能对象：  
@@ -78,7 +73,7 @@ class structured_task_group;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `structured_task_group`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ppl.h  
   
  **命名空间：** 并发  
@@ -108,7 +103,7 @@ bool is_canceling();
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
   
-##  <a name="run"></a> run 
+##  <a name="run"></a> 运行 
 
  在计划任务`structured_task_group`对象。 调用方管理的生存期`task_handle`传入的对象`_Task_handle`参数。 采用参数 `_Placement` 的版本会导致任务偏向在该参数指定的位置执行。  
   

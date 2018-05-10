@@ -2,9 +2,6 @@
 title: 'Concurrency:: direct3d 命名空间函数 (AMP) |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,17 +24,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空间函数 (AMP)
 ||||  
@@ -47,13 +42,13 @@ ms.lasthandoff: 04/10/2018
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
-|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[mad](#mad)|[make_array](#make_array)|[干扰](#noise)|  
+|[弧度为单位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>要求
-**标头：** amp.h **Namespace:**并发
+**标头：** amp.h **Namespace:** 并发
   
 ##  <a name="abs"></a>  abs  
  返回自变量的绝对值  
@@ -69,7 +64,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>返回值  
  返回自变量的绝对值。  
   
-##  <a name="clamp"></a>  clamp  
+##  <a name="clamp"></a>  夹具  
  计算其限制为第二个和第三个指定的参数定义范围内第一个指定自变量的值。  
   
 ```  
@@ -367,7 +362,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>返回值  
  使用提供的 Direct3D 缓冲区创建数组。  
   
-##  <a name="noise"></a>  noise  
+##  <a name="noise"></a>  干扰  
  通过采用 Perlin 噪音算法生成一个随机值  
   
 ```  
@@ -381,7 +376,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>返回值  
  返回在一个介于 -1 和 1 之间的 Perlin 噪音值  
   
-##  <a name="radians"></a>  radians  
+##  <a name="radians"></a>  弧度为单位  
  将 _X 从度数转换成弧度  
   
 ```  
@@ -440,7 +435,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>返回值  
  返回固定于 0 和 1 之间的 _X  
   
-##  <a name="sign"></a>  sign  
+##  <a name="sign"></a>  登录  
  确定指定的自变量的符号。  
   
 ```  
@@ -477,7 +472,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>返回值  
  如果 _X 小于 _Min，则返回 0；如果 _X 大于 _Max，则返回 1；否则，如果 _X 处于范围 [_Min，_Max] 中，则返回 0 和 1 之间的值  
   
-##  <a name="step"></a>  step  
+##  <a name="step"></a>  步骤  
  比较两个值，返回 0 或 1 基于的值大于  
   
 ```  
@@ -534,5 +529,5 @@ inline unsigned int umin(
 ### <a name="return-value"></a>返回值  
  返回自变量的最小数值  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)

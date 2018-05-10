@@ -1,12 +1,9 @@
 ---
-title: "texture_view 类 |Microsoft 文档"
-ms.custom: 
+title: texture_view 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>texture_view 类
 提供为纹理的写访问权限和读取访问权限。 `texture_view` 仅用于读取其值类型的纹理`int`， `unsigned int`，或`float`具有默认值 32 位 bpse。 若要读取其他纹理格式，使用`texture_view<const value_type, _Rank>`。  
@@ -86,7 +81,7 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|已重载。 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的绿色 (y) 组件。|  
 |[gather_red](#gather_red)|已重载。 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的红色 (x) 组件。|  
 |[get](#get)|已重载。 按索引获取此元素的值。|  
-|[sample](#sample)|已重载。 使用指定的采样配置示例在指定的坐标和的详细信息级别的纹理。|  
+|[示例](#sample)|已重载。 使用指定的采样配置示例在指定的坐标和的详细信息级别的纹理。|  
 |[set](#set)|按索引设置元素的值。|  
   
 ### <a name="public-operators"></a>公共运算符  
@@ -108,12 +103,12 @@ class texture_view<const value_type, _Rank>
   
  `texture_view`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_graphics.h  
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="dtor"></a> ~texture_view 
+##  <a name="dtor"></a> ~ texture_view 
 
  销毁`texture_view`实例。  
   

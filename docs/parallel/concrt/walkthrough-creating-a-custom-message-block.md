@@ -1,30 +1,25 @@
 ---
-title: "演练： 创建自定义消息块 |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建自定义消息块 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>演练：创建自定义消息块
 本文档介绍如何创建按优先级排序传入消息的自定义消息块类型。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 - [完整示例](#complete)  
   
-##  <a name="design"></a>设计自定义消息块  
+##  <a name="design"></a> 设计自定义消息块  
  消息块参与发送和接收消息的行为。 将消息发送的消息块被称为*源块*。 接收消息的消息块被称为*目标块*。 同时发送和接收消息的消息块被称为*传播器块*。 代理库使用抽象类[concurrency:: isource](../../parallel/concrt/reference/isource-class.md)来表示源块和抽象类[concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md)表示目标块。 消息块类型 act，因为源派生自`ISource`; 消息块类型 act，因为目标派生自`ITarget`。  
   
  尽管可以派生消息块类型直接从`ISource`和`ITarget`，代理库定义了三种执行大部分的功能普遍适用于所有消息块类型，例如，处理错误的基类和将消息块连接在一起以并发安全的方式。 [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md)类派生自`ISource`并将消息发送给其他块。 [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md)类派生自`ITarget`并从其他块接收消息。 [Concurrency:: propagator_block](../../parallel/concrt/reference/propagator-block-class.md)类派生自`ISource`和`ITarget`并发送消息给其他块以及从其他块接收消息。 我们建议使用这三个基本类以处理基础结构详细信息，从而确保你可以专注于消息块的行为。  
@@ -73,10 +68,10 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="class"></a>定义 priority_buffer 类  
+##  <a name="class"></a> 定义 priority_buffer 类  
  `priority_buffer`类是传入消息进行排序首先按优先级别，然后按顺序接收消息的顺序的自定义消息块类型。 `priority_buffer`类类似于[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)类，因为它包含一列消息，以及由于它充当源和目标消息块可以有多个源和多个目标。 但是，`unbounded_buffer`消息传播仅在从其源接收消息的顺序。  
   
- `priority_buffer`类接收消息的类型 std::[元组](../../standard-library/tuple-class.md)包含`PriorityType`和`Type`元素。 `PriorityType`引用类型包含的每条消息; 的优先级`Type`指的是消息的数据部分。 `priority_buffer`类发送类型的消息`Type`。 `priority_buffer`类还管理两个消息队列： [std::priority_queue](../../standard-library/priority-queue-class.md)对于传入消息的对象和 std::[队列](../../standard-library/queue-class.md)为传出消息的对象。 按优先级排序消息非常有用`priority_buffer`对象同时收到多条消息，或当它收到多条消息之前由使用者读取的任何消息。  
+ `priority_buffer`类接收消息的类型 std::[元组](../../standard-library/tuple-class.md)包含`PriorityType`和`Type`元素。 `PriorityType` 引用类型包含的每条消息; 的优先级`Type`指的是消息的数据部分。 `priority_buffer`类发送类型的消息`Type`。 `priority_buffer`类还管理两个消息队列： [std::priority_queue](../../standard-library/priority-queue-class.md)对于传入消息的对象和 std::[队列](../../standard-library/queue-class.md)为传出消息的对象。 按优先级排序消息非常有用`priority_buffer`对象同时收到多条消息，或当它收到多条消息之前由使用者读取的任何消息。  
   
  除了七种方法，一个类派生自`propagator_block`必须实现`priority_buffer`类还将重写`link_target_notification`和`send_message`方法。 `priority_buffer`类还定义了两个公共帮助器方法，`enqueue`和`dequeue`，和私有 helper 方法， `propagate_priority_order`。  
   
@@ -193,7 +188,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="complete"></a>完整示例  
+##  <a name="complete"></a> 完整示例  
  下面的示例演示的完整定义`priority_buffer`类。  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

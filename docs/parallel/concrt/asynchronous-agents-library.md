@@ -1,30 +1,25 @@
 ---
-title: "异步代理库 |Microsoft 文档"
-ms.custom: 
+title: 异步代理库 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>异步代理库
 异步代理库 (或仅仅称为*代理库*) 提供编程模型，你可以提高启用并发的应用程序开发的可靠性。 代理库是一个 c + + 模板库，以促进基于参与者的编程模型和进程内消息传递用于粗粒度数据流和管道任务。 代理库基于并发运行时的计划和资源管理组件。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  代理库由三个组件组成：*异步代理*，*异步消息块*，和*消息传递函数*。 代理维护状态，并使用消息块和消息传递函数与另一个以及与外部组件进行通信。 消息传递函数使代理能够发送和接收消息与其他外部组件。 异步消息块存放消息，并使代理能够以同步方式进行通信。  
   
- 下图显示了两个代理使用消息块和消息传递函数进行通信。 此图中，`agent1`发送一条消息到`agent2`使用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函数和[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象。 `agent2`使用[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函数读取消息。 `agent2`使用相同的方法将消息发送到`agent1`。 虚线的箭头表示代理之间的数据流。 实线箭头将代理连接到它们写入或读取的消息块。  
+ 下图显示了两个代理使用消息块和消息传递函数进行通信。 此图中，`agent1`发送一条消息到`agent2`使用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函数和[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象。 `agent2` 使用[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函数读取消息。 `agent2` 使用相同的方法将消息发送到`agent1`。 虚线的箭头表示代理之间的数据流。 实线箭头将代理连接到它们写入或读取的消息块。  
   
  ![代理库的组件](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

@@ -1,13 +1,10 @@
 ---
-title: "C + + 的最佳安全方案 |Microsoft 文档"
-ms.custom: 
+title: C + + 的最佳安全方案 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 本文包含有关安全工具和做法的信息。 使用这些工具和做法并不会使应用程序免受攻击，但能降低攻击成功的可能性。  
@@ -35,22 +30,22 @@ ms.lasthandoff: 01/03/2018
 ## <a name="visual-c-security-features"></a>Visual C++ 安全功能  
  这些安全功能内置于 Visual C++ 编译器和链接器中：  
   
- [/guard （启用控制流保护）](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard（启用控制流保护）](../build/reference/guard-enable-control-flow-guard.md)  
  使编译器在编译时为间接调用目标分析控制流，然后插入代码，以验证运行时的目标。  
   
- [/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)  
+ [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)  
  指示编译器将溢出检测代码插入到面临被利用风险的函数中。 检测到溢出时，则停止执行。 默认情况下，此选项处于启用状态。  
   
- [/SAFESEH （图像具有安全异常处理程序）](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH（图像具有安全异常处理程序）](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  指示链接器在输出映像中包括一个包含每个异常处理程序的地址的表。 在运行时，操作系统使用此表来确保只执行合法的异常处理程序。 这有助于防止在运行时执行由恶意攻击引入的异常处理程序。 默认情况下关闭此选项。  
   
  [/NXCOMPAT](../build/reference/nxcompat.md)， [/NXCOMPAT （与数据执行保护兼容）](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  这些编译器和链接器选项启用数据执行保护 (DEP) 兼容性。 DEP 可防止 CPU 执行非代码页。  
   
- [/analyze （代码分析）](../build/reference/analyze-code-analysis.md)  
+ [/analyze（代码分析）](../build/reference/analyze-code-analysis.md)  
  此编译器选项将激活报告潜在安全问题（比如缓冲区溢出、未初始化的内存、null 指针取消引用和内存泄漏）的代码分析。 默认情况下关闭此选项。 有关详细信息，请参阅[的代码分析 C/c + + 概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。  
   
- [/DYNAMICBASE （使用地址空间布局随机化功能）](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE（使用地址空间布局随机化）](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  通过使用此链接器选项，可以生成一个在执行开始时可在内存的不同位置加载的可执行映像。 此选项还使内存中的堆栈位置更加不可预测。  
   
 ## <a name="security-enhanced-crt"></a>增强了安全性的 CRT  

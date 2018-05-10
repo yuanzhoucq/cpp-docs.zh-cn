@@ -2,11 +2,8 @@
 title: 上下文类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 4bf574fc679b879e2fa9084ed6fbd4ed82e66f70
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="context-class"></a>Context 类
 表示执行上下文的抽象。  
@@ -56,7 +51,7 @@ class Context;
   
 |名称|描述|  
 |----------|-----------------|  
-|[~Context Destructor](#dtor)||  
+|[~ Context 析构函数](#dtor)||  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -91,7 +86,7 @@ class Context;
   
  **命名空间：** 并发  
   
-##  <a name="block"></a> Block 
+##  <a name="block"></a> 块 
 
  阻止当前上下文。  
   
@@ -108,7 +103,7 @@ static void __cdecl Block();
   
  此方法会引发异常，包括各种[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)。  
   
-##  <a name="dtor"></a> ~Context 
+##  <a name="dtor"></a> ~ 上下文 
 
 ```
 virtual ~Context();
@@ -240,7 +235,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>返回值  
  如果当前上下文附加到一个计划程序和运行的计划组时，计划程序的标识符组的当前上下文正在否则为值`-1`。  
   
-##  <a name="unblock"></a> Unblock 
+##  <a name="unblock"></a> 取消阻止 
 
  取消阻止上下文，并使其成为可运行。  
   
@@ -293,7 +288,7 @@ static void __cdecl YieldExecution();
   
  此函数是中的新增功能[!INCLUDE[vs_dev14](../../../ide/includes/vs_dev14_md.md)]和等同于[产生](#yield)起作用，但不与 Windows.h 中的 Yield 宏冲突。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)   
  [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

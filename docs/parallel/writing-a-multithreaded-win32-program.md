@@ -1,13 +1,10 @@
 ---
-title: "编写多线程的 Win32 程序 |Microsoft 文档"
-ms.custom: 
+title: 编写多线程的 Win32 程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>编写多线程 Win32 程序
 当你编写具有多个线程的程序时，你必须协调它们的行为和[的程序的资源使用](#_core_sharing_common_resources_between_threads)。 你还必须确保每个线程接收[其自己的堆栈](#_core_thread_stacks)。  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>线程间共享公共资源  
+##  <a name="_core_sharing_common_resources_between_threads"></a> 线程间共享公共资源  
   
 > [!NOTE]
 >  从 MFC 角度来看的类似讨论，请参阅[多线程处理： 编程提示](../parallel/multithreading-programming-tips.md)和[多线程处理： 何时使用同步类](../parallel/multithreading-when-to-use-the-synchronization-classes.md)。  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>线程堆栈  
+##  <a name="_core_thread_stacks"></a> 线程堆栈  
  所有应用程序的默认堆栈空间分配给第一个线程的执行，这被称为线程 1。 因此，你必须指定需要多少内存来为每个其他线程的单独堆栈分配程序。 操作系统为线程分配附加的堆栈空间，如有必要，但你必须指定默认值。  
   
  中的第一个自变量`_beginthread`调用是一个指向**BounceProc**函数，执行线程。 第二个参数指定线程的默认堆栈大小。 最后一个参数是传递给一个 ID 号**BounceProc**。 **BounceProc**使用的 ID 号随机数字生成器种子并选择线程的颜色属性和显示字符。  

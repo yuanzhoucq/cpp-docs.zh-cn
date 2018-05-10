@@ -1,12 +1,9 @@
 ---
-title: "SchedulerPolicy 类 |Microsoft 文档"
-ms.custom: 
+title: SchedulerPolicy 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 类
 `SchedulerPolicy` 类包含一组控制计划程序实例的行为的键/值对，一个键/值对对应于一个策略元素。  
@@ -70,7 +65,7 @@ class SchedulerPolicy;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `SchedulerPolicy`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h、 concrtrm.h  
   
  **命名空间：** 并发  
@@ -140,7 +135,7 @@ SchedulerPolicy(
   
  第三个构造函数是复制构造函数。 通常，定义新的计划程序策略最方便的方法是复制现有策略并使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法对其进行修改。  
   
-##  <a name="dtor"></a> ~SchedulerPolicy 
+##  <a name="dtor"></a> ~ SchedulerPolicy 
 
  销毁计划程序策略。  
   

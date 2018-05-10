@@ -1,22 +1,20 @@
 ---
-title: "如何使用 Visual C++ 工具集报告问题 | Microsoft Docs"
+title: 如何使用 Visual C++ 工具集报告问题 | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何使用 Visual C++ 工具集报告问题
 
@@ -108,7 +106,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 高质量重现的标准为：
 
-- **最小的。** 重现应尽可能最小，但仍能准确演示所遇到的问题。 重现无需复杂或真实；它们只需要显示符合标准或记录的编译器实现的代码，或者在缺少诊断的情况下显示不合规的代码。 重现应简明扼要，最好只包含刚好足够演示问题的代码。 如果删除或简化某些代码也能保持符合性，并且不改变问题，请进行删除或简化。 不需要提供有效代码的反例。 
+- **最小的。** 重现应尽可能最小，但仍能准确演示所遇到的问题。 重现无需复杂或真实；它们只需要显示符合标准或记录的编译器实现的代码，或者在缺少诊断的情况下显示不合规的代码。 重现应简明扼要，最好只包含刚好足够演示问题的代码。 如果删除或简化某些代码也能保持符合性，并且不改变问题，请进行删除或简化。 不需要提供有效代码的反例。
 
 - **自包含。** 重现应避免不需要的依赖项。 如果无需第三方库就可重现，请直接重现。 如果无需任何库代码，只需简单的输出语句（例如，`puts("this shouldn't compile");`、`std::cout << value;` 和 `printf("%d\n", value);`）即可重现此问题，请使用简单的输出语句。 最理想的情况是，示例可以压缩为单个源代码文件，而不引用任何用户标头。 尽可能减少我们需要考虑的有利于解决问题的代码量，这对我们而言极为有用。
 
@@ -116,13 +114,13 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 - **针对其他编译器进行检查**（如果相关）。 在可能的情况下，涉及可移植 C++ 代码的重现，应在其他编译器中验证行为。 程序的正确性最终由标准来决定，没有完美的编译器，但如果 Clang 和 GCC 接受了代码并且没有诊断，而 MSVC 拒绝，那么我们的编译器可能存在 Bug。 （其他可能性包括 Unix 和 Windows 行为的差异，或者 C++ 标准实现的级别不同等。）另一方面，如果所有编译器都拒绝代码，则可能是代码不正确。 查看不同的错误消息可能有助于自行诊断问题。
 
-   你可以在 ISO C++ 网站上的[在线C++编译器](https://isocpp.org/blog/2013/01/online-c-compilers)中找到在线编译器列表，或查看 GitHub 上的[在线C ++ 编译器列表](https://arnemertz.github.io/online-compilers/)，针对这些编译器来测试代码。 一些具体示例包括 [Wandbox](https://wandbox.org/)、[Compiler Explorer](https://godbolt.org/) 和 [Coliru](http://coliru.stacked-crooked.com/)。 
+   你可以在 ISO C++ 网站上的[在线C++编译器](https://isocpp.org/blog/2013/01/online-c-compilers)中找到在线编译器列表，或查看 GitHub 上的[在线C ++ 编译器列表](https://arnemertz.github.io/online-compilers/)，针对这些编译器来测试代码。 一些具体示例包括 [Wandbox](https://wandbox.org/)、[Compiler Explorer](https://godbolt.org/) 和 [Coliru](http://coliru.stacked-crooked.com/)。
 
    > [!NOTE]
    > 在线编译器网站不隶属于 Microsoft。 许多在线编译器网站都是作为个人项目运行的，在读到本文时，其中某些网站可能已失效，但通过搜索应该能找到其他可用网站。
 
 编译器、链接器和库中的问题往往以特定的方式显示。 所遇问题的类型决定了应在报告中添加的重现类型。 如果无法正确重新，我们将无法进行调查。 以下是你可能会看到的一些类型的问题，以及生成用于报告各类问题的重现的说明。
- 
+
 #### <a name="frontend-parser-crash"></a>前端（分析程序）故障
 
 前端故障发生在编译器的分析阶段。 通常情况下，编译器会发出[错误 C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)，并引用错误发生处的源代码文件和行号；它还会常常提及文件 msc1.cpp，你可忽略此详细信息。

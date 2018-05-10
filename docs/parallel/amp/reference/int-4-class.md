@@ -1,12 +1,9 @@
 ---
-title: "int_4 类 |Microsoft 文档"
-ms.custom: 
+title: int_4 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::get_ywxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947ed0a89e4b940a9c35e2b87eeeb860f71a7ab9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int4-class"></a>int_4 类
 表示短矢量的四个整数。  
@@ -310,7 +305,7 @@ class int_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[int_4 Constructor](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[int_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -475,7 +470,7 @@ class int_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#int_4__size)||  
   
@@ -615,7 +610,7 @@ class int_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `int_4`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  

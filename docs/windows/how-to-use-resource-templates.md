@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用资源模板 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用资源模板 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>如何：使用资源模板
 资源模板是保存为 .rct 文件的自定义资源。 因此，可将资源模板视为创建其他资源的起点。 资源模板可节省开发其他资源或共享功能（如标准控件和其他重复元素）的资源组的时间。 例如，你可能希望在多个对话框中包含“帮助”按钮和公司徽标的图标。 若要快速做到这一点，可以新建一个对话框模板，并用徽标和“帮助”按钮对其进行自定义。  
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  [将.rc 文件作为独立的文件打开](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
-2.  上**文件**菜单上，单击**保存\<*你 filename*> 为 * *。  
+2.  上**文件**菜单上，单击**保存\<*你 filename*> 作为**。  
   
 3.  指定一个位置，然后单击**确定**。  
   
@@ -77,9 +72,9 @@ ms.lasthandoff: 12/21/2017
   
      资源编辑器将自动提供一个唯一的资源 ID。 您可以修改[资源属性](../windows/changing-the-properties-of-a-resource.md)根据需要。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
   
- 惠?  
+ 要求  
   
  Win32  
   

@@ -1,30 +1,25 @@
 ---
-title: "演练： 创建数据流代理 |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建数据流代理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>演练：创建数据流代理
 本文档演示如何创建基于代理的应用程序基于数据流，而不是控制流。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 - [创建消息日志记录代理](#logging)  
   
-##  <a name="control-flow"></a>创建基本的控制流代理  
+##  <a name="control-flow"></a> 创建基本的控制流代理  
  考虑下面的示例定义`control_flow_agent`类。 `control_flow_agent`类将对三个消息缓冲区进行操作： 一个输入缓冲区和两个输出缓冲区。 `run`方法在循环中的源消息缓冲区中读取，并使用条件语句来直接控制程序执行流程。 代理递增一个计数器为非零，负数的值，并递增另一个计数器为非零的正值。 代理收到 sentinel 值为零后，它会将计数器的值发送到输出消息缓冲区中。 `negatives`和`positives`方法启用应用程序代理从读取正负值的计数。  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="dataflow"></a>创建基本数据流代理  
+##  <a name="dataflow"></a> 创建基本数据流代理  
  本部分演示如何将转换`control_flow_agent`类以使用数据流模型执行相同任务。  
   
  数据流代理的工作方式创建的消息缓冲区，其中每个都有特定用途的网络。 某些消息块使用筛选器函数接受或拒绝基于及其负载的消息。 筛选器函数可确保消息块收到仅将特定值。  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[返回页首](#top)]  
   
-##  <a name="logging"></a>创建消息日志记录代理  
+##  <a name="logging"></a> 创建消息日志记录代理  
  下面的示例演示`log_agent`类，类似于`dataflow_agent`类。 `log_agent`类实现异步日志记录代理将日志消息写入到文件然后到控制台。 `log_agent`类使应用程序将分类为信息性消息、 警告或错误。 它还使应用程序指定是否每个日志类别写入到文件和 / 或控制台中。 此示例将所有日志消息写入文件和仅错误消息写入控制台。  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

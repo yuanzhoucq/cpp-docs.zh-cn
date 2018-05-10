@@ -1,12 +1,9 @@
 ---
-title: "improper_lock 类 |Microsoft 文档"
-ms.custom: 
+title: improper_lock 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - improper_lock
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cf615460cda6d0f33f0431e258cac843f456c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="improperlock-class"></a>improper_lock 类
 此类描述错误获取锁时引发的异常。  
@@ -54,7 +49,7 @@ class improper_lock : public std::exception;
   
  `improper_lock`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  

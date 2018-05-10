@@ -1,30 +1,25 @@
 ---
-title: "演练： 创建基于代理的应用程序 |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建基于代理的应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 本主题介绍如何创建基于代理的基本应用程序。 在本演练中，你可以创建以异步方式从文本文件中读取数据的代理。 应用程序使用 adler-32 校验和算法来计算该文件的内容的校验和。  
@@ -43,20 +38,20 @@ ms.lasthandoff: 12/21/2017
 ##  <a name="top"></a> 部分  
  本演练演示如何执行以下任务：  
   
-- [创建控制台应用程序](#createapplication)  
+- [创建控制台应用](#createapplication)  
   
 - [创建 file_reader 类](#createagentclass)  
   
 - [应用程序中使用 file_reader 类](#useagentclass)  
   
-##  <a name="createapplication"></a>创建控制台应用程序  
+##  <a name="createapplication"></a> 创建控制台应用程序  
  本部分演示如何创建 Visual c + + 控制台应用程序引用此程序将使用的标头文件。  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要使用 Win32 控制台应用程序向导创建 Visual c + + 应用程序  
   
 1.  上**文件**菜单上，单击**新建**，然后单击**项目**以显示**新项目**对话框。  
   
-2.  在**新项目**对话框中，选择**Visual c + +**中的节点**项目类型**窗格中，然后选择**Win32 控制台应用程序**在**模板**窗格。 为项目键入名称，例如， `BasicAgent`，然后单击**确定**以显示**Win32 控制台应用程序向导**。  
+2.  在**新项目**对话框中，选择**Visual c + +** 中的节点**项目类型**窗格中，然后选择**Win32 控制台应用程序**在**模板**窗格。 为项目键入名称，例如， `BasicAgent`，然后单击**确定**以显示**Win32 控制台应用程序向导**。  
   
 3.  在**Win32 控制台应用程序向导**对话框中，单击**完成**。  
   
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="createagentclass"></a>创建 file_reader 类  
+##  <a name="createagentclass"></a> 创建 file_reader 类  
  本部分演示如何创建`file_reader`类。 运行时计划每个代理在它自己的上下文中执行工作。 因此，你可以创建代理以同步执行工作，但以异步方式与其他组件进行交互。 `file_reader`类从给定的输入文件中读取数据并将该文件中的数据发送到给定的目标组件。  
   
 #### <a name="to-create-the-filereader-class"></a>若要创建 file_reader 类  
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="useagentclass"></a>应用程序中使用 file_reader 类  
+##  <a name="useagentclass"></a> 应用程序中使用 file_reader 类  
  本部分演示如何使用`file_reader`类来读取文本文件的内容。 它还演示如何创建[concurrency:: call](../../parallel/concrt/reference/call-class.md)接收此文件数据并计算其 adler-32 校验和的对象。  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>若要在你的应用程序中使用 file_reader 类  

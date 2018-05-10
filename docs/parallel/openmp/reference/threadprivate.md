@@ -1,12 +1,9 @@
 ---
-title: "threadprivate |Microsoft 文档"
-ms.custom: 
+title: threadprivate |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - threadprivate
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 3515aaed-6f9d-4d59-85eb-342378bea2d3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a50d2387662fe42c04d61a8e98153aad95c835
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="threadprivate"></a>threadprivate
 指定的变量是私有的线程。  
@@ -47,15 +42,15 @@ ms.lasthandoff: 02/23/2018
   
  有关详细信息，请参阅[2.7.1 threadprivate 指令](../../../parallel/openmp/2-7-1-threadprivate-directive.md)。  
   
- `threadprivate`指令基于[线程](../../../cpp/thread.md)`__declspec`特性; 限制**__declspec （thread)**适用于`threadprivate`。  
+ `threadprivate`指令基于[线程](../../../cpp/thread.md)`__declspec`特性; 限制 **__declspec （thread)** 适用于`threadprivate`。  
   
  不能使用`threadprivate`中将通过加载的任何 DLL [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)。  这包括与加载的 Dll [/DELAYLOAD （延迟加载导入）](../../../build/reference/delayload-delay-load-import.md)，该列也会使用**LoadLibrary**。  
   
  你可以使用`threadprivate`进程启动时以静态方式加载的 DLL 中。  
   
- 因为`threadprivate`基于**__declspec （thread)**、`threadprivate`变量中启动在过程中，而不仅仅是这些线程属于线程团队由并行区域生成的任何线程不会存在。  这是你可能想要注意的因为你可能注意到，例如，构造函数的实现细节`threadprivate`调用通常则期的望多个用户定义类型。  
+ 因为`threadprivate`基于 **__declspec （thread)**、`threadprivate`变量中启动在过程中，而不仅仅是这些线程属于线程团队由并行区域生成的任何线程不会存在。  这是你可能想要注意的因为你可能注意到，例如，构造函数的实现细节`threadprivate`调用通常则期的望多个用户定义类型。  
   
- A `threadprivate` destructable 类型的变量不能保证具有调用其析构函数。  例如:  
+ A `threadprivate` destructable 类型的变量不能保证具有调用其析构函数。  例如：  
   
 ```  
 struct MyType   

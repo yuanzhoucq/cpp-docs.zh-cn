@@ -1,13 +1,10 @@
 ---
-title: "外部级别声明的存储类说明符 | Microsoft Docs"
-ms.custom: 
+title: 外部级别声明的存储类说明符 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdae4791b89ffd78661a983fdc8c1beec77edea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部级别声明的存储类说明符
 外部变量是文件范围内的变量。 它们在任何函数的外部定义，并且可能对许多函数可用。 只能在外部级别定义函数，因此不能将其嵌套。 默认情况下，对名称相同的外部变量和函数的所有引用都是对同一对象的引用，这表示它们具有“外部链接”。 （可以使用 static 关键字进行替代。 有关 static 的更多详细信息，请参阅本节后面的信息。）  

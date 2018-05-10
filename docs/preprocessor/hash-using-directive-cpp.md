@@ -1,12 +1,9 @@
 ---
-title: "#using 指令 (C + + /cli CLR) |Microsoft 文档"
-ms.custom: 
+title: '#using 指令 (C + + /cli CLR) |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - friend_as_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1c43acde6e4f755c6757fc933c80091ba05927c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-directive-cclr"></a>#using 指令 (C + + /cli CLR)
 将元数据导入编译的程序[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
@@ -58,14 +53,14 @@ ms.lasthandoff: 02/23/2018
   
  若要使用的替代方法`#using`是[/FU](../build/reference/fu-name-forced-hash-using-file.md)编译器选项。  
   
- .exe 程序集传递到`#using`应编译使用.NET Visual Studio 编译器 （Visual Basic 或 Visual C# 中，例如） 之一。  尝试从使用编译的.exe 程序集导入元数据**/clr**将导致文件加载异常。  
+ .exe 程序集传递到`#using`应编译使用.NET Visual Studio 编译器 （Visual Basic 或 Visual C# 中，例如） 之一。  尝试从使用编译的.exe 程序集导入元数据 **/clr**将导致文件加载异常。  
   
 > [!NOTE]
 >  使用 `#using` 引用的组件可与编译时导入的文件的其他版本一起运行，这会导致客户端应用程序产生意外结果。  
   
  为了使让编译器识别出的程序集 （而不是模块） 中的类型，它需要强制解析类型，你可以执行此操作，例如，通过定义类型的实例。 如果从程序集中的类型继承，没有其他的方法可以解决对于编译器，例如，程序集的类型名称，类型名称就会知道到编译器。  
   
- 导入从使用的源代码生成的元数据时[__declspec （thread)](../cpp/thread.md)，线程语义不会保留在元数据中。 例如，与声明的变量**__declspec （thread)**为.NET Framework 公共语言运行时，生成，然后通过导入的程序中编译`#using`，将不再有**__declspec (线程）**对变量的语义。  
+ 导入从使用的源代码生成的元数据时[__declspec （thread)](../cpp/thread.md)，线程语义不会保留在元数据中。 例如，与声明的变量 **__declspec （thread)** 为.NET Framework 公共语言运行时，生成，然后通过导入的程序中编译`#using`，将不再有 **__declspec (线程）**对变量的语义。  
   
  `#using` 引用的文件中所有导入的类型（托管的和本机的）都是可用的，但编译器会将本机类型视为声明而不是定义。  
   

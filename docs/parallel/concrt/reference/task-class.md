@@ -2,11 +2,8 @@
 title: task 类 （并发运行时） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
 并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它还可由其他使用延续任务 ( `then`)，和联接 ( `when_all`) 以及所选择的 ( `when_any`) 模式。  
@@ -80,7 +75,7 @@ class task;
 |[is_done](#is_done)|确定任务是否已完成。|  
 |[scheduler](#scheduler)|返回此任务的计划程序|  
 |[then](#then)|已重载。 向此任务添加延续任务。|  
-|[wait](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|  
+|[等待](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -144,7 +139,7 @@ bool is_done() const;
 ### <a name="remarks"></a>备注  
  如果任务已完成或取消 （有或没有用户异常），该函数返回 true。  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> 运算符 ！ = 
 
  确定两个 `task` 对象是否表示不同的内部任务。  
   
@@ -160,7 +155,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>返回值  
  如果这两个对象引用不同基础任务，则为 `true`；否则为 `false`。  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> 运算符 = 
 
  将一个 `task` 对象的内容替换为另一个对象的内容。  
   
@@ -332,5 +327,5 @@ task_status wait() const;
 > [!IMPORTANT]
 >  在通用 Windows 平台 (UWP) 应用中，请勿调用`wait`在 STA 运行的代码中 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用[concurrency::task::get](#get)方法来接收基于任务的延续中的先行任务的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

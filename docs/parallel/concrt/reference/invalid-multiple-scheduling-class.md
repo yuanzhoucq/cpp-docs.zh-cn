@@ -1,12 +1,9 @@
 ---
-title: "invalid_multiple_scheduling 类 |Microsoft 文档"
-ms.custom: 
+title: invalid_multiple_scheduling 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - invalid_multiple_scheduling
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aed5586f58560e01b1a22f973ab7defadf49432
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling 类
 此类描述在没有对 `wait` 或 `run_and_wait` 方法进行干预调用的情况下，通过 `task_group` 或 `structured_task_group` 对象的 `run` 方法对 `task_handle` 对象进行多次计划时引发的异常。  
@@ -51,7 +46,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  `invalid_multiple_scheduling`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -75,6 +70,6 @@ invalid_multiple_scheduling() throw();
  [task_handle 类](task-handle-class.md)   
  [task_group 类](task-group-class.md)   
  [run](task-group-class.md)   
- [wait](task-group-class.md)   
+ [等待](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group 类](structured-task-group-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "PPL 中的取消 |Microsoft 文档"
-ms.custom: 
+title: PPL 中的取消 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 本文档说明并行模式库 (PPL) 中取消操作的角色、如何取消并行工作以及如何确定取消并行工作的时间。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 
 
   
-##  <a name="top"></a>本文档中  
+##  <a name="top"></a> 本文档中  
   
 - [并行工作树](#trees)  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
 - [何时不使用取消](#when)  
   
-##  <a name="trees"></a>并行工作树  
+##  <a name="trees"></a> 并行工作树  
  PPL 使用任务和任务组来管理细化的任务和计算。 可以嵌套任务组，以形成*树*并行工作。 下图演示了并行工作树。 在该图中，`tg1` 和 `tg2` 表示任务组；`t1`、`t2`、`t3`、`t4` 和 `t5` 表示任务组执行的工作。  
   
  ![并行工作树](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
@@ -82,14 +77,14 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="tasks"></a>取消并行任务  
+##  <a name="tasks"></a> 取消并行任务  
 
  可以通过多种方法来取消并行工作。 首选方法是使用取消标记。 任务组还支持[concurrency::task_group::cancel](reference/task-group-class.md#cancel)方法和[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)方法。 最后一种方法是在任务工作函数体中引发异常。 无论选择哪种方法，都应知道取消不会立即发生。 如果任务或任务组已取消，即使新的工作未启动，活动的工作必须检查和响应取消。  
 
   
  有关取消并行任务的更多示例，请参阅[演练： 连接使用任务和 XML HTTP 请求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)，[如何： 使用取消中断 Parallel 循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)，和[如何： 使用异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。  
   
-###  <a name="tokens"></a>使用取消标记来取消并行工作  
+###  <a name="tokens"></a> 使用取消标记来取消并行工作  
  `task`、`task_group` 和 `structured_task_group` 类支持通过使用取消标记进行取消。 PPL 定义[concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)和[concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)用于此目的的类。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 可以使用已经处于活动状态的工作[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成员函数以监视取消标记并在可能时停止。  
   
 
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="cancellation-tokens-and-task-composition"></a>取消标记和任务复合  
 
- [并发:: 超链接"http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数可以帮助你组合多个任务以实现常用模式。 本节描述这些函数如何与取消标记配合使用。  
+ [并发:: 超链接"http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数可帮助你组合多个任务以实现常用模式。 本节描述这些函数如何与取消标记配合使用。  
   
  向任一 `when_all` 和 `when_any` 函数提供取消标记时，仅当该取消标记被取消，或者一个参与任务以已取消状态结束或引发异常时，该函数才会取消。  
   
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-###  <a name="cancel"></a>使用取消方法来取消并行工作  
+###  <a name="cancel"></a> 使用取消方法来取消并行工作  
 
  [Concurrency::task_group::cancel](reference/task-group-class.md#cancel)和[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)方法设置为已取消状态的任务组。 在你调用 `cancel` 之后，任务组不会启动将来的任务。 `cancel` 方法可以由多个子任务调用。 已取消的任务会导致[concurrency::task_group::wait](reference/task-group-class.md#wait)和[concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)方法返回[concurrency:: canceled](reference/concurrency-namespace-enums.md#task_group_status)。  
 
@@ -200,7 +195,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-###  <a name="exceptions"></a>使用异常来取消并行工作  
+###  <a name="exceptions"></a> 使用异常来取消并行工作  
  要取消并行工作树，使用取消标记和 `cancel` 方法比使用异常处理更有效。 取消标记和 `cancel` 方法由上向下取消任务和所有子任务。 相反，异常处理以自下而上的方式工作，并且必须在异常向上传播时单独取消每个子任务组。 主题[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)介绍并发运行时如何使用异常来传递错误。 但是，并非所有异常都表示错误。 例如，搜索算法可能在找到结果时取消其关联的任务。 但是，如上所述，在取消并行工作时，异常处理的效率比使用 `cancel` 方法低。  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="algorithms"></a>取消并行算法  
+##  <a name="algorithms"></a> 取消并行算法  
  PPL 中的并行算法（如 `parallel_for`）基于任务组生成。 因此，你可以使用许多相同的技术来取消并行算法。  
   
  以下示例说明了几种取消并行算法的方法。  
@@ -258,7 +253,7 @@ Caught 50
   
  [[返回页首](#top)]  
   
-##  <a name="when"></a>何时不使用取消  
+##  <a name="when"></a> 何时不使用取消  
  当一组相关任务中的每个成员可以及时退出时，使用取消是恰当的。 但是，在某些情况下取消可能不适合你的应用程序。 例如，由于任务取消是协作性的，如果任何单个任务被阻止，则无法取消整个任务集。 例如，如果一个任务尚未开始，但它取消阻止另一个活动任务，则在任务组已取消时，它将不能启动。 这会导致应用程序中发生死锁。 可能不适合使用取消的另一个示例是任务被取消，但其子任务会执行重要操作（如释放资源）。 因为在取消父任务时整个任务集也会被取消，所以将无法执行此操作。 有关说明这个观点的示例，请参阅[了解如何取消和异常处理影响对象析构](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)并行模式库主题中的最佳做法中的部分。  
   
  [[返回页首](#top)]  

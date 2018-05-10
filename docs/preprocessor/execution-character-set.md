@@ -1,13 +1,10 @@
 ---
-title: execution_character_set | Microsoft Docs
-ms.custom: 
+title: execution_character_set |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - execution_character_set
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda04de6975708b2460e53681e50f8ea4f9dbcd3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2b6cb84ae6ffebda3dd335bc001463e2d8579f99
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 指定执行字符集，用于字符串和字符文本。 文本标记为 u8 前缀不需要此指令。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/23/2018
  指定目标执行字符集。 当前唯一的目标执行设置支持为"utf-8"。  
   
 ## <a name="remarks"></a>备注  
- 此编译器指令已废弃不用从 Visual Studio 2015 Update 2 开始。 我们建议你使用**/execution-charset:utf-8**或**/utf-8**一起使用的编译器选项`u8`窄字符和字符串文本包含扩展上的前缀字符。 有关详细信息`u8`前缀，请参阅[字符串和字符文本](../cpp/string-and-character-literals-cpp.md)。 有关编译器选项的详细信息，请参阅[/execution-charset （设置执行字符集）](../build/reference/execution-charset-set-execution-character-set.md)和[/utf-8 （设为源和可执行文件字符集 utf-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)。  
+ 此编译器指令已废弃不用从 Visual Studio 2015 Update 2 开始。 我们建议你使用 **/execution-charset:utf-8**或 **/utf-8**一起使用的编译器选项`u8`窄字符和字符串文本包含扩展上的前缀字符。 有关详细信息`u8`前缀，请参阅[字符串和字符文本](../cpp/string-and-character-literals-cpp.md)。 有关编译器选项的详细信息，请参阅[/execution-charset （设置执行字符集）](../build/reference/execution-charset-set-execution-character-set.md)和[/utf-8 （设为源和可执行文件字符集 utf-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)。  
   
  `#pragma execution_character_set("utf-8")`指令指示编译器要窄字符和在源代码中的窄字符串文本编码为 utf-8 的可执行文件中。 此输出编码是独立于所使用的源文件编码。  
   

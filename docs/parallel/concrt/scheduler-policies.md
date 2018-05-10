@@ -1,29 +1,24 @@
 ---
-title: "计划程序策略 |Microsoft 文档"
-ms.custom: 
+title: 计划程序策略 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>计划程序策略
 本文档介绍并发运行时中的计划程序策略的角色。 A*计划程序策略*控制计划程序将使用在管理任务的策略。 例如，假设一个应用程序需要某些任务在 `THREAD_PRIORITY_NORMAL` 上执行，而其他任务在 `THREAD_PRIORITY_HIGHEST` 上执行。  您可以创建两个计划程序实例：一个指定 `ContextPriority` 策略为 `THREAD_PRIORITY_NORMAL`，另一个指定同一策略为 `THREAD_PRIORITY_HIGHEST`。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |`MinConcurrency`|`unsigned int`值，该值指定并发计划程序将使用的资源的最小数。|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int`值，该值指定要分配给每个处理资源的线程数。|`1`|  
 |`LocalContextCacheSize`|`unsigned int`值，该值指定每个虚拟处理器的本地队列中的上下文可以缓存的最大数目。|`8`|  
-|`ContextStackSize`|`unsigned int`值，该值中，来保留用于每个上下文千字节为单位指定的堆栈大小。|`0`（使用默认堆栈大小）|  
+|`ContextStackSize`|`unsigned int`值，该值中，来保留用于每个上下文千字节为单位指定的堆栈大小。|`0` （使用默认堆栈大小）|  
 |`ContextPriority`|`int`值，该值指定每个上下文的线程优先级。 这可以是任何值，可以将传递到[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)或`INHERIT_THREAD_PRIORITY`。|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`|A [concurrency:: schedulingprotocoltype](reference/concurrency-namespace-enums.md#schedulingprotocoltype)值，该值指定要使用的计划算法。 |`EnhanceScheduleGroupLocality`|  

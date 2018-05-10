@@ -1,27 +1,22 @@
 ---
-title: "2.5.2 parallel sections 构造 |Microsoft 文档"
-ms.custom: 
+title: 2.5.2 parallel sections 构造 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 94220e27-14f8-465c-bd8d-eb960b4b5dee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a76a950d547effccf0b50fa04799814597bc5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6f7a84e322cb273733c6a724ee2563928df8362
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections 构造
 **并行部分**指令提供快捷窗体，用于指定**并行**区域包含只有一个**部分**指令。 语义相等显式指定**并行**指令紧跟**部分**指令。 语法**并行部分**指令是，如下所示：  

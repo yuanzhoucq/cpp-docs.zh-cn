@@ -1,13 +1,10 @@
 ---
-title: "并行容器和对象 |Microsoft 文档"
-ms.custom: 
+title: 并行容器和对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168705c5d7497a0bcbede505760d49cdb63a3762
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-containers-and-objects"></a>并行容器和对象
 并行模式库 (PPL) 包括多个容器和对象，它提供对其元素的线程安全访问。  
@@ -75,10 +70,10 @@ ms.lasthandoff: 12/21/2017
   
     -   [示例](#combinable-examples)  
   
-##  <a name="vector"></a>concurrent_vector 类  
+##  <a name="vector"></a> concurrent_vector 类  
  [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)类是序列容器类，它，就像[std:: vector](../../standard-library/vector-class.md)类，还可让你随机访问其元素。 `concurrent_vector`类启用并发安全追加和元素访问操作。 追加操作不会使现有指针或迭代器失效。 迭代器访问和遍历操作也是并发安全。  
   
-###  <a name="vector-differences"></a>之间的差异 concurrent_vector 和向量  
+###  <a name="vector-differences"></a> 之间的差异 concurrent_vector 和向量  
  `concurrent_vector`类十分类似于`vector`类。 追加、 元素访问和迭代器访问操作的复杂性`concurrent_vector`对象是否相同`vector`对象。 以下几点阐释了`concurrent_vector`区别`vector`:  
   
 -   追加、 元素访问、 迭代器访问和迭代器遍历操作上`concurrent_vector`对象是并发安全。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
 -   运行时不会定义一个专门`concurrent_vector`类型`bool`。  
   
-###  <a name="vector-safety"></a>并发安全操作，  
+###  <a name="vector-safety"></a> 并发安全操作，  
  将追加到或增加的大小的所有方法`concurrent_vector`对象，或访问中的元素`concurrent_vector`对象，是并发安全的。 此规则的例外是`resize`方法。  
   
  下表显示了常见`concurrent_vector`方法和运算符都是并发安全。  
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
 ||||  
 |-|-|-|  
 
-|[在](reference/concurrent-vector-class.md#at)|[结束](reference/concurrent-vector-class.md#end)|[运算符 &#91; &#93;](reference/concurrent-vector-class.md#operator_at)|  
+|[在](reference/concurrent-vector-class.md#at)|[结束](reference/concurrent-vector-class.md#end)|[运算符&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|  
 |[开始](reference/concurrent-vector-class.md#begin)|[前面](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|  
 |[返回](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|  
 |[容量](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|  
@@ -131,7 +126,7 @@ ms.lasthandoff: 12/21/2017
 
  尽管`end`方法是并发安全并发调用[push_back](reference/concurrent-vector-class.md#push_back)方法使返回的值`end`更改。 迭代器遍历的元素数是不确定的。 因此，此程序可以生成不同的结果每次运行它。  
   
-###  <a name="vector-exceptions"></a>异常安全  
+###  <a name="vector-exceptions"></a> 异常安全  
  如果增长或赋值操作引发异常的状态`concurrent_vector`对象将变为无效。 行为`concurrent_vector`处于无效状态的对象是不确定的除非另有说明。 但是，析构函数始终释放的内存分配的对象，即使此对象处于无效状态。  
   
  矢量元素的数据类型`T`，必须满足以下要求。 否则为的行为`concurrent_vector`未定义类。  
@@ -142,10 +137,10 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="queue"></a>concurrent_queue 类  
+##  <a name="queue"></a> concurrent_queue 类  
  [Concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)类，就像[std::queue](../../standard-library/queue-class.md)类，还可让你访问其前和备份元素。 `concurrent_queue`类启用并发安全排入队列，并取消排队操作。 `concurrent_queue`类还提供了不是并发安全的迭代器支持。  
   
-###  <a name="queue-differences"></a>之间的差异 concurrent_queue 和队列  
+###  <a name="queue-differences"></a> 之间的差异 concurrent_queue 和队列  
  `concurrent_queue`类十分类似于`queue`类。 以下几点阐释了`concurrent_queue`区别`queue`:  
   
 -   排入队列和上取消排队操作`concurrent_queue`对象是并发安全。  
@@ -160,7 +155,7 @@ ms.lasthandoff: 12/21/2017
 -   `concurrent_queue`类提供[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)方法而不是`size`方法。 `unsafe_size`方法不是并发安全。  
 
   
-###  <a name="queue-safety"></a>并发安全操作，  
+###  <a name="queue-safety"></a> 并发安全操作，  
  所有方法到进行排队或取消排队的`concurrent_queue`对象是并发安全。  
   
  下表显示了常见`concurrent_queue`方法和运算符都是并发安全。  
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
 
 
   
-###  <a name="queue-iterators"></a>迭代器支持  
+###  <a name="queue-iterators"></a> 迭代器支持  
  `concurrent_queue`提供不是并发安全的迭代器。 我们建议为仅限调试使用这些迭代器。  
   
  A`concurrent_queue`迭代器遍历中的向前方向的元素。 下表显示了每个迭代器支持的运算符。  
@@ -196,7 +191,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="unordered_map"></a>concurrent_unordered_map 类  
+##  <a name="unordered_map"></a> concurrent_unordered_map 类  
  [超链接"file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622"concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)类是关联容器类，它，就像[std:: unordered_map](../../standard-library/unordered-map-class.md)类中，控件类型的元素的长短序列[std:: pair\<const 密钥、 Ty >](../../standard-library/pair-structure.md)。 无序映射看作是一个字典，其中你可以添加到的键 / 值对或按的键查找的值。 当你具有多个线程或需要同时访问共享的容器，将插入它，或更新它的任务时，此类很有用。  
   
  下面的示例演示使用的基本结构`concurrent_unordered_map`。 此示例在范围 ['a'，' i'] 中插入字符键。 因为的运算顺序是不确定，每个键的最终值也是不确定的。 但是，它可安全地并行执行插入操作。  
@@ -205,20 +200,20 @@ ms.lasthandoff: 12/21/2017
   
  有关示例，使用`concurrent_unordered_map`来执行映射和化简并行操作，请参阅[如何： 执行映射和减少操作并行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。  
   
-###  <a name="map-differences"></a>之间的差异 concurrent_unordered_map 和 unordered_map  
+###  <a name="map-differences"></a> 之间的差异 concurrent_unordered_map 和 unordered_map  
  `concurrent_unordered_map`类十分类似于`unordered_map`类。 以下几点阐释了`concurrent_unordered_map`区别`unordered_map`:  
   
 -   `erase`， `bucket`， `bucket_count`，和`bucket_size`方法的命名`unsafe_erase`， `unsafe_bucket`， `unsafe_bucket_count`，和`unsafe_bucket_size`分别。 `unsafe_`命名约定指示这些方法不是并发安全。 有关并发安全的详细信息，请参阅[并发安全操作，](#map-safety)。  
   
 -   插入操作不会使现有指针或迭代器，失效，也不更改更改在映射中已存在的项的顺序。 插入和遍历操作可以同时发生。  
   
--   `concurrent_unordered_map`支持转发仅迭代。  
+-   `concurrent_unordered_map` 支持转发仅迭代。  
   
 -   插入不会使其无效或更新由迭代器`equal_range`。 插入可以将不相等的项追加到范围的末尾。 开始迭代器指向相等的项。  
   
  为了帮助避免死锁，没有方法`concurrent_unordered_map`持有一个锁，当它调用的内存分配器、 哈希函数或其他用户定义的代码。 此外，你必须确保哈希函数始终计算结果为相同的值相等的密钥。 最佳的哈希函数在哈希代码空间之间均匀分发键。  
   
-###  <a name="map-safety"></a>并发安全操作，  
+###  <a name="map-safety"></a> 并发安全操作，  
  `concurrent_unordered_map`类启用并发安全 insert 和元素访问操作。 现有的指针或迭代器插入操作不会使失效。 迭代器访问和遍历操作也是并发安全。 下表显示了常用`concurrent_unordered_map`方法和运算符都是并发安全。  
   
 |||||  
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="unordered_multimap"></a>concurrent_unordered_multimap 类  
+##  <a name="unordered_multimap"></a> concurrent_unordered_multimap 类  
  [Concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md)类十分类似于`concurrent_unordered_map`类相似，只不过它允许多个值将映射到相同的密钥。 它也不同于`concurrent_unordered_map`通过以下方式：  
   
 -   [Concurrent_unordered_multimap:: insert](reference/concurrent-unordered-multimap-class.md#insert)方法返回的迭代器，而不是`std::pair<iterator, bool>`。  
@@ -251,13 +246,13 @@ ms.lasthandoff: 12/21/2017
   
 -   `concurrent_unordered_multimap`类不提供`operator[]`也不`at`方法。  
   
- 下面的示例演示使用的基本结构`concurrent_unordered_multimap`。 此示例在范围 ['a'，' i'] 中插入字符键。 `concurrent_unordered_multimap`使具有多个值的键。  
+ 下面的示例演示使用的基本结构`concurrent_unordered_multimap`。 此示例在范围 ['a'，' i'] 中插入字符键。 `concurrent_unordered_multimap` 使具有多个值的键。  
   
  [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]  
   
  [[返回页首](#top)]  
   
-##  <a name="unordered_set"></a>concurrent_unordered_set 类  
+##  <a name="unordered_set"></a> concurrent_unordered_set 类  
  [Concurrency::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md)类十分类似于`concurrent_unordered_map`类相似，只不过它管理而不是键和值对的值。 `concurrent_unordered_set`类不提供`operator[]`也不`at`方法。  
   
  下面的示例演示使用的基本结构`concurrent_unordered_set`。 此示例在范围 ['a'，' i'] 中插入字符值。 则可以安全地并行执行插入操作。  
@@ -266,7 +261,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="unordered_multiset"></a>concurrent_unordered_multiset 类  
+##  <a name="unordered_multiset"></a> concurrent_unordered_multiset 类  
  [Concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md)类十分类似于`concurrent_unordered_set`类相似，只不过它允许重复值。 它也不同于`concurrent_unordered_set`通过以下方式：  
   
 
@@ -275,23 +270,23 @@ ms.lasthandoff: 12/21/2017
   
 -   `concurrent_unordered_multiset`类不提供`operator[]`也不`at`方法。  
   
- 下面的示例演示使用的基本结构`concurrent_unordered_multiset`。 此示例在范围 ['a'，' i'] 中插入字符值。 `concurrent_unordered_multiset`启用要发生多次的值。  
+ 下面的示例演示使用的基本结构`concurrent_unordered_multiset`。 此示例在范围 ['a'，' i'] 中插入字符值。 `concurrent_unordered_multiset` 启用要发生多次的值。  
   
  [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]  
   
  [[返回页首](#top)]  
   
-##  <a name="combinable"></a>combinable 类  
+##  <a name="combinable"></a> combinable 类  
  [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类提供允许你执行细化的计算，然后将这些计算合并为最终的结果的可重用的线程本地存储。 你可以将 `combinable` 对象当作 reduction 变量。  
   
  `combinable`必须在多个线程或任务之间共享的资源类很有用。 `combinable`类可帮助您取消共享的状态，通过以无锁方式提供对共享资源的访问。 因此，此类提供一种同步机制，例如，一个 mutex，用于从多个线程同步对共享数据的访问的替代方法。  
   
-###  <a name="combinable-features"></a>方法和功能  
+###  <a name="combinable-features"></a> 方法和功能  
  下表显示了一些重要的方法`combinable`类。 有关所有详细信息`combinable`类方法，请参阅[combinable 类](../../parallel/concrt/reference/combinable-class.md)。  
   
 |方法|描述|  
 |------------|-----------------|  
-|[本地](reference/combinable-class.md#local)|检索与当前线程上下文关联的本地变量的引用。|  
+|[local](reference/combinable-class.md#local)|检索与当前线程上下文关联的本地变量的引用。|  
 |[clear](reference/combinable-class.md#clear)|删除所有线程本地变量，从`combinable`对象。|  
 |[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|使用提供的组合函数来从组的所有线程本地计算生成一个最终值。|  
   

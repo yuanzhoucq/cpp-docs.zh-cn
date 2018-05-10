@@ -1,13 +1,10 @@
 ---
-title: "演练： 使用 join 避免死锁 |Microsoft 文档"
-ms.custom: 
+title: 演练： 使用 join 避免死锁 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>演练：使用 join 避免死锁
-本主题使用通过哲学家就餐问题说明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)类以防止你的应用程序中发生死锁。 在软件应用程序，*死锁*当两个或多个进程彼此占用一个资源并相互等待另一个进程以释放一些其他资源。  
+本主题使用通过哲学家就餐问题说明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)类以防止你的应用程序中发生死锁。 在软件应用中，如果两个或多个进程分别留有资源，且相互等待另一进程释放其他资源，就会发生死锁。  
   
  通过哲学家就餐问题是常规的一组在多个并发进程之间共享一组资源时可能发生的问题的特定示例。  
   
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 - [使用 join 避免死锁](#solution)  
   
-##  <a name="problem"></a>通过哲学家就餐问题  
+##  <a name="problem"></a> 通过哲学家就餐问题  
  通过哲学家就餐问题说明了如何在应用程序中发生死锁。 此问题，请在五个哲学家坐在轮表。 每个哲学家思想和饮食之间交替。 每个哲学家必须与左侧，另一个邻居共享筷子筷子与右侧邻居。 下图显示此布局。  
   
  ![用餐哲学家就餐问题](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="deadlock"></a>Naïve 实现  
+##  <a name="deadlock"></a> Naïve 实现  
  下面的示例演示通过哲学家就餐问题的简单实现。 `philosopher`类，该类派生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)，使每个哲学家可以单独操作。 该示例使用的共享的数组[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)对象，让每个`philosopher`对象对一对筷子的独占访问权。  
   
  要关联到图中，实现`philosopher`类表示一个哲学家。 `int`变量表示每个筷子。 `critical_section`对象作为放置在其停留筷子的持有者。 `run`方法模拟哲学家的生命周期。 `think`方法模拟思考操作和`eat`方法模拟就餐操作。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="solution"></a>使用 join 避免死锁  
+##  <a name="solution"></a> 使用 join 避免死锁  
  本部分演示如何使用消息缓冲区和消息传递函数来消除出现死锁的机会。  
   
  要关联到更早版本的一个，此示例`philosopher`类替换每个`critical_section`对象使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象和一个`join`对象。 `join`对象用作到哲学家提供筷子的仲裁。  

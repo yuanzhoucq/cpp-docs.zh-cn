@@ -1,12 +1,9 @@
 ---
-title: "include_alias |Microsoft 文档"
-ms.custom: 
+title: include_alias |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -35,12 +30,12 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="syntax"></a>语法
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>杂注 include_alias ("*long_filename*"，"*short_filename*")  
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>杂注 include_alias (*long_filename*， *short_filename*)
 
 ## <a name="remarks"></a>备注
 
-某些文件系统允许长度超过 8.3 FAT 文件系统限制的头文件名。 因为较长的头文件名的前八个字符可能不是唯一的，因此编译器无法简单地将较长的名称截断为 8.3。 每当编译器遇到*long_filename*字符串，它将替换*short_filename*，并查找的标头文件*short_filename*相反。 此杂注必须在相应的 `#include` 指令之前出现。 例如:
+某些文件系统允许长度超过 8.3 FAT 文件系统限制的头文件名。 因为较长的头文件名的前八个字符可能不是唯一的，因此编译器无法简单地将较长的名称截断为 8.3。 每当编译器遇到*long_filename*字符串，它将替换*short_filename*，并查找的标头文件*short_filename*相反。 此杂注必须在相应的 `#include` 指令之前出现。 例如：
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -72,7 +67,7 @@ ms.lasthandoff: 02/23/2018
 
 > /YcAppleSystemHeaderStop.h
 
-你可以使用**include_alias**杂注将任何标头文件名映射到另一个。 例如:
+你可以使用**include_alias**杂注将任何标头文件名映射到另一个。 例如：
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -81,7 +76,7 @@ ms.lasthandoff: 02/23/2018
 #include <stdio.h>
 ```
 
-不要将用双引号括起来的文件名与用尖括号括起的文件名组合在一起。 例如，给定上述两个**#pragma include_alias**指令，编译器执行以下任何替换`#include`指令：
+不要将用双引号括起来的文件名与用尖括号括起的文件名组合在一起。 例如，给定上述两个 **#pragma include_alias**指令，编译器执行以下任何替换`#include`指令：
 
 ```cpp
 #include <api.h>
@@ -94,7 +89,7 @@ ms.lasthandoff: 02/23/2018
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-请注意，filename 报告错误消息中或作为预定义的值**&#95; &#95;文件 &#95; &#95;**宏，已执行替换后的文件的名称。 例如，完成以下指令后看到的输出：
+请注意，filename 报告错误消息中或作为预定义的值 **&#95;&#95;文件&#95;&#95;** 宏，已执行替换后的文件的名称。 例如，完成以下指令后看到的输出：
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

@@ -1,27 +1,22 @@
 ---
-title: "UWP 应用、Windows 运行时和 C 运行时 | Microsoft Docs"
-ms.custom: 
+title: UWP 应用、Windows 运行时和 C 运行时 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 应用、Windows 运行时和 C 运行时
 
@@ -31,7 +26,7 @@ Windows 运行时不支持以下 CRT 功能：
 
 - 与不受支持的功能相关的大多数 CRT 函数。
 
-   例如，UWP 应用无法使用 `exec` 和 `spawn` 系列的例程创建过程。
+   例如，UWP 应用无法使用 exec 和 spawn 系列的例程创建过程。
 
    对于 CRT 函数在 UWP 应用中不受支持的情况，其参考文章中会进行说明。
 
@@ -58,4 +53,7 @@ Windows 运行时不支持以下 CRT 功能：
 有关不适用于 UWP 应用的 CRT 函数的完整列表和替代函数的建议，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="see-also"></a>请参阅
- [兼容性](../c-runtime-library/compatibility.md) [Windows 运行时不支持的 CRT 函数](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)
+
+[兼容性](../c-runtime-library/compatibility.md)<br/>
+[Windows 运行时不支持的 CRT 函数](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

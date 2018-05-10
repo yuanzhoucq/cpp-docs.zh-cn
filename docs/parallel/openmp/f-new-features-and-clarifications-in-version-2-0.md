@@ -1,27 +1,22 @@
 ---
-title: "F. 新功能和 2.0 版中的说明 |Microsoft 文档"
-ms.custom: 
+title: F. 新功能和 2.0 版中的说明 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a661f183816fec0f7a71c990f1508338100f4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e48f299e66ed1b4c075757a9cd143d0afe897db
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. 新功能和 2.0 版中的说明
 本附录总结了对从版本 1.0 移动到 2.0 版中的 OpenMP C/c + + 规范的密钥的更改。 以下各项是新功能添加到规范：  

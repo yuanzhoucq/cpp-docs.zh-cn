@@ -1,12 +1,9 @@
 ---
-title: "IScheduler 结构 |Microsoft 文档"
-ms.custom: 
+title: IScheduler 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler 结构
 工作计划程序的抽象的接口。 并发运行时的资源管理器使用此接口与工作计划程序进行通信。  
@@ -50,13 +45,13 @@ struct IScheduler;
   
 |名称|描述|  
 |----------|-----------------|  
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示有权执行可执行代表计划程序的工作的单个线程。|  
+|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|供其使用计划程序提供一组虚拟处理器根。 每个`IVirtualProcessorRoot`接口表示有权执行可执行代表计划程序的工作的单个线程。|  
 |[IScheduler::GetId](#getid)|返回计划程序的唯一标识符。|  
 |[IScheduler::GetPolicy](#getpolicy)|返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。|  
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`现在正在使用的其他计划程序。|  
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|通知此计划程序的硬件线程所表示的一套数组中的虚拟处理器根`ppVirtualProcessorRoots`不正由其他计划程序。|  
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|启动的以前分配给此计划程序的虚拟处理器根的删除操作。|  
-|[IScheduler::Statistics](#statistics)|提供与任务到达和完成率和计划程序的队列长度更改相关的信息。|  
+|[Ischeduler:: Statistics](#statistics)|提供与任务到达和完成率和计划程序的队列长度更改相关的信息。|  
   
 ## <a name="remarks"></a>备注  
  如果你要实现的自定义计划程序与资源管理器进行通信，则应提供的实现`IScheduler`接口。 此接口是通道的双向通信的计划程序和资源管理器之间的一个 end。 由表示另一端`IResourceManager`和`ISchedulerProxy`都实现资源管理器的接口。  
@@ -64,7 +59,7 @@ struct IScheduler;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IScheduler`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  

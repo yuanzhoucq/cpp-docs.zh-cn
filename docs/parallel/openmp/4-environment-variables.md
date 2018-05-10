@@ -1,27 +1,22 @@
 ---
-title: "4. 环境变量 |Microsoft 文档"
-ms.custom: 
+title: 4. 环境变量 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cef1bac78afbcc8b852c3bd42e0904e1963137c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edd4f795a3511358d2b95b93e180b9b21b964dd2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="4-environment-variables"></a>4.环境变量
 本部分介绍的 OpenMP C 和 c + + API 环境变量 （或等效的特定于平台的机制） 控制并行代码的执行。  环境变量的名称必须大写。 分配给它们的值区分大小写，并且可能必须前导和尾随空格。  修改程序已开始后的值将被忽略。  

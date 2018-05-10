@@ -1,12 +1,9 @@
 ---
-title: "event 类 |Microsoft 文档"
-ms.custom: 
+title: event 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - event
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-class"></a>event 类
 明确感知并发运行时的手动重置事件。  
@@ -56,12 +51,12 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|将事件重置为非终止状态。|  
 |[set](#set)|用信号通知事件。|  
-|[wait](#wait)|等待事件变为终止状态。|  
+|[等待](#wait)|等待事件变为终止状态。|  
 |[wait_for_multiple](#wait_for_multiple)|等待多个事件都变为终止状态。|  
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[timeout_infinite](#timeout_infinite)|指示等待永远不应超时的值。|  
   
@@ -71,7 +66,7 @@ class event;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `event`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  

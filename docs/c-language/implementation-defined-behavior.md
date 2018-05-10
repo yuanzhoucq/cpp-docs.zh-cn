@@ -1,13 +1,10 @@
 ---
-title: "实现定义的行为 | Microsoft Docs"
-ms.custom: 
+title: 实现定义的行为 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51587ea864faa11372fc07fd4e1e0b1d7333aaaf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd276b110645dbb868d24315208052a6d05355a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-defined-behavior"></a>实现定义的行为
 ANSI X3.159-1989，*American National Standard for Information Systems* - *编程语言* - *C*，包含“可移植性问题”节。 ANSI 部分列出了 ANSI 针对每个特定实现开放的 C 语言区域。 本节描述 Microsoft C 如何处理 C 语言的这些实现定义的区域。  
@@ -37,4 +32,4 @@ ANSI X3.159-1989，*American National Standard for Information Systems* - *编�
 >  本节仅描述 C 编译器的美国英语版本。 其他语言的 Microsoft C 的实现可能略有不同。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 语言参考](../c-language/c-language-reference.md)
+ [C 语言参考](../c-language/c-language-reference.md)

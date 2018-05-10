@@ -1,12 +1,9 @@
 ---
-title: "unorm_4 类 |Microsoft 文档"
-ms.custom: 
+title: unorm_4 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 类
 表示四个无符号的正常数字短的矢量。  
@@ -310,7 +305,7 @@ class unorm_4;
   
 |名称|描述|  
 |----------|-----------------|  
-|[unorm_4 Constructor](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[unorm_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -468,7 +463,7 @@ class unorm_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#unorm_4__size)||  
   
@@ -608,7 +603,7 @@ class unorm_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unorm_4`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  

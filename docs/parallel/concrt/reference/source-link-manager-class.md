@@ -1,12 +1,9 @@
 ---
-title: "source_link_manager 类 |Microsoft 文档"
-ms.custom: 
+title: source_link_manager 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 类
 `source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。  
@@ -68,7 +63,7 @@ class source_link_manager;
 |名称|描述|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|构造 `source_link_manager` 对象。|  
-|[~source_link_manager Destructor](#dtor)|销毁`source_link_manager`对象。|  
+|[~ source_link_manager 析构函数](#dtor)|销毁`source_link_manager`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -76,7 +71,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|将添加到的源链接`source_link_manager`对象。|  
 |[begin](#begin)|返回的第一个元素的迭代器`source_link_manager`对象。|  
-|[contains](#contains)|搜索`network_link_registry`在此`source_link_manager`对象指定的块。|  
+|[包含](#contains)|搜索`network_link_registry`在此`source_link_manager`对象指定的块。|  
 |[count](#count)|计算中的链接块数目`source_link_manager`对象。|  
 |[reference](#reference)|上获取引用`source_link_manager`对象。|  
 |[register_target_block](#register_target_block)|注册持有此目标块`source_link_manager`对象。|  
@@ -90,7 +85,7 @@ class source_link_manager;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `source_link_manager`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  

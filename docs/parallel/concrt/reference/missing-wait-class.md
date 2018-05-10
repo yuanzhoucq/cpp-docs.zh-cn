@@ -1,12 +1,9 @@
 ---
-title: "missing_wait 类 |Microsoft 文档"
-ms.custom: 
+title: missing_wait 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - missing_wait
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66feb4d39d08b4a9ae9b3a6099c32d2d15f1a5f1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="missingwait-class"></a>missing_wait 类
 此类描述执行对象的析构函数时仍有计划到 `task_group` 或 `structured_task_group` 对象的任务时引发的异常。 如果因为堆栈展开为异常的结果而到达析构函数的调用条件，则永远不会引发此异常。  
@@ -54,7 +49,7 @@ class missing_wait : public std::exception;
   
  `missing_wait`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -76,6 +71,6 @@ missing_wait() throw();
 ## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [task_group 类](task-group-class.md)   
- [wait](task-group-class.md)   
+ [等待](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group 类](structured-task-group-class.md)

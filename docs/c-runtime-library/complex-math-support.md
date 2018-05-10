@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.technology:
 - cpp-standard-libraries
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.complex
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 - complex numbers
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3533d43783648c43b657c8073ada0c2042808b10
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 661e1367ea64713cf7a143f276cd195d54fecf85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-complex-math-support"></a>C 复数数学支持
 
@@ -109,4 +108,4 @@ I 定义为由 `{ 0.0f, 1.0f }` 初始化的浮点复数类型 _FComplex。
 
 ## <a name="see-also"></a>请参阅
 
-[按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

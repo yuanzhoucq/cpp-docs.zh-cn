@@ -1,29 +1,24 @@
 ---
-title: "轻量级任务 |Microsoft 文档"
-ms.custom: 
+title: 轻量级任务 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 010f5fd443271bec1d28b6760f0c17f4e17d803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d602f83cfe2da6bc1506e07720d3ef021ebce04a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="lightweight-tasks"></a>轻量级任务
 本文档介绍并发运行时中的轻量任务的角色。 A*轻量级任务*是直接从计划的任务`concurrency::Scheduler`或`concurrency::ScheduleGroup`对象。 轻量级任务类似于对 Windows API 提供的函数[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数。 因此，轻量级任务非常有用，当改编现有代码以使用并发运行时的计划功能时。 并发运行时本身使用轻量任务来计划异步代理和之间异步消息块发送消息。  

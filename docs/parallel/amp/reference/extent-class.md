@@ -1,12 +1,9 @@
 ---
-title: "extent 类 (c + + AMP) |Microsoft 文档"
-ms.custom: 
+title: extent 类 (c + + AMP) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 表示向量*N*指定的边界的整数值*N*-具有 0 来源的维空间。 向量中的值是从最高有效订购到最不重要。  
@@ -47,7 +42,7 @@ class extent;
  `_Rank`  
  秩`extent`对象。  
 
- ## <a name="requirements"></a>惠?  
+ ## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  
@@ -64,7 +59,7 @@ class extent;
   
 |名称|描述|  
 |----------|-----------------|  
-|[contains](#contains)|验证指定`extent`对象具有指定的秩。|  
+|[包含](#contains)|验证指定`extent`对象具有指定的秩。|  
 |[size](#size)|返回 （中的元素的单位） 的范围的总线性大小。|  
 |[tile](#tile)|生成`tiled_extent`指定维度与给定的磁贴扩展盘区的对象。|  
   
@@ -87,7 +82,7 @@ class extent;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|获取的秩`extent`对象。|  
   
@@ -151,7 +146,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  如果数组用于构造`extent`对象，该数组的长度必须匹配的秩`extent`对象。  
   
-##  <a name="operator_mod_eq"></a> operator%= 
+##  <a name="operator_mod_eq"></a> operator %= 
 
 该元素除以一个数字时，计算范围中的每个元素的模数 （余数）。  
   
@@ -168,7 +163,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>返回值  
  `extent` 对象。  
   
-##  <a name="operator_star_eq"></a> operator*= 
+##  <a name="operator_star_eq"></a> 运算符 * = 
 
 返回由指定数量的范围对象中的每个元素的乘积。  
   
@@ -216,7 +211,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  对于前缀运算符，`extent`对象 (`*this`)。 后缀运算符，新`extent`对象。  
   
-##  <a name="operator_add_eq"></a> operator+= 
+##  <a name="operator_add_eq"></a> 运算符 + = 
 
 将指定的数添加到扩展对象的每个元素。  
   

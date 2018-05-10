@@ -1,29 +1,24 @@
 ---
-title: "同步数据结构 |Microsoft 文档"
-ms.custom: 
+title: 同步数据结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f64acda5fe11cae3a40e4affc403ebb61d876de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronization-data-structures"></a>同步数据结构
 并发运行时提供了一些可以从多个线程同步对共享数据的访问的数据结构。 如果要使用共享不常修改的数据，这些数据结构非常有用。 同步对象，例如，一个临界区，导致其他线程等待，直到共享的资源是可用。 因此，如果使用此类对象来同步访问频繁使用的数据，你可以在你的应用程序中失去可伸缩性。 [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类，让你可以共享在多个线程或任务，而不需同步的资源。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -37,9 +32,9 @@ ms.lasthandoff: 12/21/2017
   
 -   [scoped_lock 和 scoped_lock_read](#scoped_lock)  
   
--   [事件](#event)  
+-   [event](#event)  
   
-##  <a name="critical_section"></a>critical_section  
+##  <a name="critical_section"></a> critical_section  
  [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)类表示一个协作性互斥对象，会其他任务，而不是让它们于。 当多个线程需要独占读取和写入访问共享数据，关键部分非常有用。  
 
  `critical_section`类是不可重入。 [Concurrency::critical_section::lock](reference/critical-section-class.md#lock)方法将引发类型的异常[concurrency:: improper_lock](../../parallel/concrt/reference/improper-lock-class.md)如果它由已拥有锁的线程进行调用。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="reader_writer_lock"></a>reader_writer_lock  
+##  <a name="reader_writer_lock"></a> reader_writer_lock  
  [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)类提供对共享数据的线程安全的读/写操作。 如果多个线程需要对共享资源的并发读取访问，但很少写入到该共享的资源，请使用读取器/编写器锁。 此类，对象在任何时候只有一个线程写入访问。  
   
  `reader_writer_lock`类可以执行更好`critical_section`类，因为`critical_section`对象获取对会阻止并发读访问的共享资源独占访问权。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="scoped_lock"></a>scoped_lock 和 scoped_lock_read  
+##  <a name="scoped_lock"></a> scoped_lock 和 scoped_lock_read  
  `critical_section`和`reader_writer_lock`类提供嵌套的帮助器类，用于简化使用互相排斥的对象的方式。 这些帮助器类称为*范围锁*。  
   
  `critical_section`类包含[concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class)类。 构造函数获取对提供的访问`critical_section`对象; 对该对象的析构函数版本访问权限。 `reader_writer_lock`类包含[concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)类，类似于`critical_section::scoped_lock`，只不过它管理对提供写入访问权限`reader_writer_lock`对象。 `reader_writer_lock`类还包含[concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class)类。 此类管理到所提供的读取访问`reader_writer_lock`对象。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  当你使用`critical_section::scoped_lock`， `reader_writer_lock::scoped_lock`，和`reader_writer_lock::scoped_lock_read`类，不会手动释放的基础的互相排斥对象的访问。 这可以使运行时处于无效状态。  
   
-##  <a name="event"></a>事件  
+##  <a name="event"></a> 事件  
  [Concurrency:: event](../../parallel/concrt/reference/event-class.md)类表示可以发出信号或非终止其状态的同步对象。 与同步对象，例如临界区，其目的是保护对共享数据的访问，不同事件同步执行流。  
   
  `event`一个任务已完成工作的另一个任务类很有用。 例如，一个任务可能告知另一个任务，它已从网络连接或从文件读取数据。  
