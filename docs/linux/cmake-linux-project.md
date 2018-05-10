@@ -1,24 +1,22 @@
 ---
-title: "在 Visual Studio 中配置 Linux CMake 项目 | Microsoft Docs"
-ms.custom: 
+title: 在 Visual Studio 中配置 Linux CMake 项目 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43d29513b41cc89f7d4b6ba4e33365dfa60a761a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
   
@@ -103,19 +101,13 @@ cmake -E capabilities
 
 在输出中，查找 “serverMode”:true。 请注意，即使按如下所述从源编译 CMake，也应该在完成后检查各项功能。 Linux 系统可能存在限制，会阻止启用服务器模式。
 
-若要在 Linux 系统的 shell 中开始从源进行生成，请确保包管理器为最新版，且可使用 git 和 cmake。 首先，克隆 CMake 源：
+若要在 Linux 系统的 shell 中开始从源进行生成，请确保包管理器为最新版，且可使用 git 和 cmake。 首先，从我们用于 Visual Studio 的 CMake 支持的存储库中克隆 CMake 源：
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-接下来，请确保为 Visual Studio 使用的是受支持 CMake 版本。 我们正在积极跟踪 CMake 的开发，但我们不能保证我们支持最新的版本。 例如，若要生成 CMake 3.9.0，请先运行：
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 然后运行以下命令：

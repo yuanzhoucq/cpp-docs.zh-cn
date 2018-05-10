@@ -1,28 +1,23 @@
 ---
-title: "演练： 创建使用 WRL 和 Media Foundation 的 UWP 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建使用 WRL 和 Media Foundation 的 UWP 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1c9e3f678a65b3dacfc5bba012656118b6fe2fa1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练： 创建使用 WRL 和 Media Foundation 的 UWP 应用程序
 了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建的通用 Windows 平台 (UWP) 应用程序使用[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -67,9 +62,9 @@ ms.lasthandoff: 02/14/2018
   
 1.  在 Visual Studio 中，创建**空白解决方案**项目。 该项目命名，例如， `MediaCapture`。  
   
-2.  添加**DLL (通用 Windows)**到解决方案的项目。 该项目命名，例如， `GrayscaleTransform`。  
+2.  添加**DLL (通用 Windows)** 到解决方案的项目。 该项目命名，例如， `GrayscaleTransform`。  
   
-3.  添加**Midl 文件 (.idl)**到项目的文件。 例如，命名该文件， `GrayscaleTransform.idl`。  
+3.  添加**Midl 文件 (.idl)** 到项目的文件。 例如，命名该文件， `GrayscaleTransform.idl`。  
   
 4.  将此代码添加到 GrayscaleTransform.idl。  
   
@@ -112,7 +107,7 @@ ms.lasthandoff: 02/14/2018
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 通过 C# 应用程序中的自定义媒体基础组件  
   
-1.  添加新**C# 空白应用 (XAML)**项目合并为`MediaCapture`解决方案。 该项目命名，例如， `MediaCapture`。  
+1.  添加新**C# 空白应用 (XAML)** 项目合并为`MediaCapture`解决方案。 该项目命名，例如， `MediaCapture`。  
   
 2.  在**MediaCapture**项目中，添加对引用`GrayscaleTransform`项目。 若要了解如何操作，请参阅[如何： 添加或删除引用使用引用管理器](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。  
   

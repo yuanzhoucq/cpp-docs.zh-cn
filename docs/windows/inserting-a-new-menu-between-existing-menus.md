@@ -1,31 +1,26 @@
 ---
-title: "插入新菜单在现有菜单之间 |Microsoft 文档"
-ms.custom: 
+title: 插入新菜单在现有菜单之间 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - menus, adding items
 - commands, adding to menus
 ms.assetid: 7a6c807f-3839-40dc-97c9-dedb0e33dcde
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c549dcdc09d104a9d67b459898b59de528420b02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单  
@@ -36,9 +31,9 @@ ms.lasthandoff: 12/21/2017
   
 2.  在菜单栏上右键单击并选择**插入新**从快捷菜单。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
   
- 惠?  
+ 要求  
   
  Win32  
   

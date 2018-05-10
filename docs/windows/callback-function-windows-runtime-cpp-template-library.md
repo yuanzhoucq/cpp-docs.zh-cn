@@ -1,30 +1,25 @@
 ---
-title: "回调函数 （Windows 运行时 c + + 模板库） |Microsoft 文档"
-ms.custom: 
+title: 回调函数 （Windows 运行时 c + + 模板库） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 dev_langs:
 - C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b2d83096ce4e6ff9245a9e26516d6a487155695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>回调函数（Windows 运行时 C++ 模板库）
 创建一个对象，该对象的成员函数是一个回调方法。  
@@ -254,7 +249,7 @@ ComPtr<TDelegateInterface> Callback(
 ## <a name="remarks"></a>备注  
  委托对象的基对象必须为 IUnknown，不能为 IInspectable。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** event.h  
   
  **命名空间：** Microsoft::WRL  

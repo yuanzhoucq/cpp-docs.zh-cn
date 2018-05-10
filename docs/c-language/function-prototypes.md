@@ -1,13 +1,10 @@
 ---
-title: "函数原型 | Microsoft Docs"
-ms.custom: 
+title: 函数原型 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>函数原型
 函数声明位于函数定义之前，用来指定函数的名称、返回类型、存储类和其他特性。 若要作为原型，函数声明还必须为函数的参数确定类型和标识符。  
@@ -102,5 +97,5 @@ void func1( struct S * );
   
  在 /Ze 下，仍将在全局范围内输入标记。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../c-language/functions-c.md)

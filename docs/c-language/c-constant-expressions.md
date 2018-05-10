@@ -1,13 +1,10 @@
 ---
-title: "C 常量表达式 | Microsoft Docs"
-ms.custom: 
+title: C 常量表达式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aaeb7ab79777d247f0bc0b2e6d749d8df5a7f8e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-constant-expressions"></a>C 常量表达式
 常量表达式将在编译时而不是运行时计算，并且可在可使用常量的任何位置使用。 常量表达式的计算结果必须是位于该类型的可表示值范围内的常量。 常量表达式的操作数可以是整数常量、字符常量、浮点常量、枚举常量、类型强制转换、`sizeof` 表达式和其他常量表达式。  

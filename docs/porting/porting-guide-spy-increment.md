@@ -1,27 +1,22 @@
 ---
-title: "移植指南：Spy++ | Microsoft Docs"
-ms.custom: 
+title: 移植指南：Spy++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
@@ -688,7 +683,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ```  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  将 Spy++ 从原始的 Visual C++ 6.0 代码移植到最新的编译器需要花费大约 20 个小时的编码时间，历经一周的过程。 我们跳过了该产品的 8 个版本（从 Visual Studio 6.0 到 Visual Studio 2015）直接升级。 现在，这是所有大小型项目升级的推荐方法。  
   
 ## <a name="see-also"></a>请参阅  

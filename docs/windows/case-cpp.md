@@ -1,13 +1,10 @@
 ---
-title: "用例 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 用例 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.case
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adacffa4dbce4cc908c393cb5019375234e9ff85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="case-c"></a>case (C++)
 与使用[switch_type](../windows/switch-type.md)属性中**联合**。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 #### <a name="parameters"></a>参数  
- *值*  
+ *value*  
  一个可能的输入的值，用于你要为其提供的处理。 一种**值**可以是以下类型之一：  
   
 -   `int`  
@@ -77,13 +72,13 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|成员**类**或`struct`|  
+|**适用对象**|成员**类**或 `struct`|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

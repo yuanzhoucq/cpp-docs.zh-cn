@@ -1,13 +1,10 @@
 ---
-title: "_environ、_wenviron | Microsoft Docs"
-ms.custom: 
+title: _environ、_wenviron | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - environ
 - wenviron
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 277f8a853a5262d524016630f52bfcbfc8a8b18b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 变量是指向构成进程环境的多字节字符字符串的指针数组的指针。 此全局变量已弃用，因为出现了更安全的函数版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)，应使用这两个版本来替换此全局变量。 `_environ` 在 Stdlib.h 中声明。  

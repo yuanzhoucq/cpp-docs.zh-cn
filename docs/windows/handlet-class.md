@@ -1,12 +1,9 @@
 ---
-title: "HandleT 类 |Microsoft 文档"
-ms.custom: 
+title: HandleT 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - HandleT class
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff7261735149abb8db607c5fc0cd4aa837fdfd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handlet-class"></a>HandleT 类
 表示对象的句柄。  
@@ -83,14 +78,14 @@ class HandleT;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[HandleT::handle_ 数据成员](../windows/handlet-handle-data-member.md)|包含由 HandleT 对象的句柄。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `HandleT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  

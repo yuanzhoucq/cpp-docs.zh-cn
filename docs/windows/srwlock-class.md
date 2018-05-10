@@ -1,12 +1,9 @@
 ---
-title: "SRWLock 类 |Microsoft 文档"
-ms.custom: 
+title: SRWLock 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::SRWLock
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SRWLock class
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="srwlock-class"></a>SRWLock 类
 表示精简读取器/编写器锁定。  
@@ -67,14 +62,14 @@ class SRWLock;
   
 ### <a name="protected-data-member"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[SRWLock::SRWLock_ 数据成员](../windows/srwlock-srwlock-data-member.md)|包含当前 SRWLock 对象的基础锁定变量。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `SRWLock`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  

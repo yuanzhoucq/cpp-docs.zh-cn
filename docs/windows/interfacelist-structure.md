@@ -1,12 +1,9 @@
 ---
-title: "InterfaceList 结构 |Microsoft 文档"
-ms.custom: 
+title: InterfaceList 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceList
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: def0a79556d74616d153a97ee5a0cc9f521944ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -63,7 +58,7 @@ struct InterfaceList;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `InterfaceList`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  

@@ -1,12 +1,10 @@
 ---
-title: "演练： 创建传统的 Windows 桌面应用程序 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建传统的 Windows 桌面应用程序 （c + +） |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练： 创建传统的 Windows 桌面应用程序 （c + +）
 
@@ -74,7 +71,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 现已创建你的项目，在编辑器中打开源文件。 若要继续，请跳到[创建代码](#create-the-code)。
 
-### <a id="create-in-vs2017-rtm"></a>在 Visual Studio 2017 RTM 中创建 Windows 桌面项目
+### <a id="create-in-vs2017-rtm"></a> 在 Visual Studio 2017 RTM 中创建 Windows 桌面项目
 
 1. 在“文件”菜单上选择“新建”，再选择“项目”。
 
@@ -369,7 +366,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    }
    ```
 
-   `HDC`在此代码为是一种数据结构 Windows 用来启用你的应用程序与图形子系统进行通信的设备上下文的句柄。 `BeginPaint`和`EndPaint`函数确保你的应用程序的行为类似一个很好公民和不使用的设备上下文的超出其所需时间较长。 这有助于确保图形子系统是可供其他应用程序使用。
+   `HDC` 在此代码为是一种数据结构 Windows 用来启用你的应用程序与图形子系统进行通信的设备上下文的句柄。 `BeginPaint`和`EndPaint`函数确保你的应用程序的行为类似一个很好公民和不使用的设备上下文的超出其所需时间较长。 这有助于确保图形子系统是可供其他应用程序使用。
 
 1. 应用程序通常会处理许多其他消息，例如， [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)首次创建一个窗口时, 和[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)窗口关闭时。 以下代码显示基本但完整的 `WndProc` 函数。
 

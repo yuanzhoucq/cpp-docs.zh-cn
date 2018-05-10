@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view 类 |Microsoft 文档"
-ms.custom: 
+title: accelerator_view 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 类
 表示 c + + AMP 数据并行加速器上的虚拟设备抽象。  
@@ -71,7 +66,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|返回一个布尔值，该值指示是否`accelerator_view`对象具有为广泛的错误报告启用了调试层。|  
 |[get_queuing_mode](#get_queuing_mode)|返回的排队模式`accelerator_view`对象。|  
 |[get_version](#get_version)|返回的版本`accelerator_view`。|  
-|[wait](#wait)|等待提交到的所有命令`accelerator_view`对象来完成。|  
+|[等待](#wait)|等待提交到的所有命令`accelerator_view`对象来完成。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -101,7 +96,7 @@ class accelerator_view;
   
  `accelerator_view`对象可以具有两个之一[queuing_mode 枚举](concurrency-namespace-enums-amp.md#queuing_mode)状态。 如果排队模式是`immediate`，命令，如`copy`和`parallel_for_each`它们返回到调用方时，就会立即发送到相应的快捷键设备。 如果排队模式是`deferred`，此类命令会在对应的命令队列上排队等候`accelerator_view`对象。 命令不会实际发送到设备之前`flush()`调用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amprt.h  
   
  **命名空间：** 并发  
@@ -272,7 +267,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>返回值  
  对修改后的 `accelerator_view` 对象的引用。  
   
-## <a name="accelerator_view__operator_eq_eq"></a> operator== 
+## <a name="accelerator_view__operator_eq_eq"></a> 运算符 = = 
 
 将此 accelerator_view 对象与另一个，并返回`true`如果它们是相同的; 否则，返回`false`。  
   
@@ -325,7 +320,7 @@ void wait();
 #### <a name="remarks"></a>备注  
  如果[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)是`immediate`，此方法将立即返回而不阻止。  
   
-##  <a name="dtor"></a> ~accelerator_view 
+##  <a name="dtor"></a> ~ accelerator_view 
 
  销毁 accelerator_view 对象。  
   

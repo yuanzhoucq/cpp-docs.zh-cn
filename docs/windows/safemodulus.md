@@ -1,13 +1,10 @@
 ---
-title: "SafeModulus |Microsoft 文档"
-ms.custom: 
+title: SafeModulus |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeModulus
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 383382de2720ac7a72403bd3578e235af7bdbe05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemodulus"></a>SafeModulus
 执行取模操作对两个数字。  
@@ -53,7 +48,7 @@ inline bool SafeModulus (
  参数其中`SafeModulus`存储结果。  
   
 ## <a name="return-value"></a>返回值  
- `true`如果没有错误发生;`false`如果发生错误。  
+ `true` 如果没有错误发生;`false`如果发生错误。  
   
 ## <a name="remarks"></a>备注  
  此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个取模运算[SafeInt 类](../windows/safeint-class.md)。  
@@ -63,7 +58,7 @@ inline bool SafeModulus (
   
  有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** safeint.h  
   
  **Namespace:** microsoft:: utilities  

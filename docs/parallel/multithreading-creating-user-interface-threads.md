@@ -1,13 +1,10 @@
 ---
-title: "多线程处理： 创建用户界面线程 |Microsoft 文档"
-ms.custom: 
+title: 多线程处理： 创建用户界面线程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>多线程处理：创建用户界面线程
 用户界面线程通常用于处理用户输入并响应用户事件行为独立于线程执行其他部分的应用程序。 主应用程序线程 (中提供你`CWinApp`-派生类) 已经创建并启动。 本主题介绍创建其他用户界面线程所需的步骤。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   （可选）中的所需的安全特性。 默认值为与父线程一样进行访问。 此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
- `AfxBeginThread`为你进行的大部分工作。 它将创建您的类的新对象，使用你提供的信息并调用其进行初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)开始执行线程。 在整个过程进行检查以确保所有对象都都释放正确应创建的任何部分出现故障。  
+ `AfxBeginThread` 为你进行的大部分工作。 它将创建您的类的新对象，使用你提供的信息并调用其进行初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)开始执行线程。 在整个过程进行检查以确保所有对象都都释放正确应创建的任何部分出现故障。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   

@@ -1,13 +1,10 @@
 ---
-title: "符号： 资源标识符 |Microsoft 文档"
-ms.custom: 
+title: 符号： 资源标识符 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.identifiers
 dev_langs:
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - symbols, editing
 - resource editors, resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 931ec9cb5d7e756d47a24c0c2b30b8686cd0fd4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbols-resource-identifiers"></a>符号：资源标识符
-符号是由两部分组成的资源标识符 (ID)：一个文本字符串（符号名）与一个整数值（符号值）映射。 例如:  
+符号是由两部分组成的资源标识符 (ID)：一个文本字符串（符号名）与一个整数值（符号值）映射。 例如：  
   
 ```  
 IDC_EDITNAME = 5100  
@@ -70,9 +65,9 @@ IDC_EDITNAME = 5100
   
 - [查看预定义的符号 ID](../windows/predefined-symbol-ids.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  
