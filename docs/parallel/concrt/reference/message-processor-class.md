@@ -1,12 +1,9 @@
 ---
-title: "message_processor 类 |Microsoft 文档"
-ms.custom: 
+title: message_processor 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - message_processor
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="messageprocessor-class"></a>message_processor 类
 `message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。  
@@ -60,7 +55,7 @@ class message_processor;
 |----------|-----------------|  
 |[async_send](#async_send)|当在派生类中重写，以异步方式将消息放置到的块中。|  
 |[sync_send](#sync_send)|当在派生类中重写，以同步方式将消息放置到的块中。|  
-|[wait](#wait)|当在派生类中重写，等待所有异步操作完成。|  
+|[等待](#wait)|当在派生类中重写，等待所有异步操作完成。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
@@ -71,7 +66,7 @@ class message_processor;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `message_processor`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  

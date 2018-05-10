@@ -1,13 +1,10 @@
 ---
-title: "多线程处理： 创建辅助线程 |Microsoft 文档"
-ms.custom: 
+title: 多线程处理： 创建辅助线程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>多线程处理：创建辅助线程
 工作线程通常用于处理用户不必等待就可以继续使用你的应用程序的后台任务。 任务 （如重新计算和后台打印) 的工作线程很好的示例。 本主题详细介绍创建工作线程所需的步骤。 包括以下主题：  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  创建工作线程是相对简单的任务。 是否需要仅有两个步骤来获取你运行的线程： 控制函数的实现和启动线程。 不需要从派生类[CWinThread](../mfc/reference/cwinthread-class.md)。 如果你需要的特殊版本，则可以派生一个类`CWinThread`，但不需要对于大多数简单的工作线程。 你可以使用`CWinThread`而不进行修改。  
   
-##  <a name="_core_starting_the_thread"></a>启动线程  
+##  <a name="_core_starting_the_thread"></a> 启动线程  
  有两个重载的版本`AfxBeginThread`： 一个只能创建工作线程，可以创建用户界面线程和辅助线程的另一个。 若要开始使用第一个重载在辅助线程的执行，调用[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，提供以下信息：  
   
 -   控制函数的地址。  
@@ -57,9 +52,9 @@ ms.lasthandoff: 12/21/2017
   
 -   （可选）中的所需的安全特性。 默认值为与父线程一样进行访问。 此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
- `AfxBeginThread`创建并初始化`CWinThread`为你的对象启动外接程序，并返回其地址，因此您可以参考其更高版本。 在整个过程进行检查以确保所有对象都都释放正确应创建的任何部分出现故障。  
+ `AfxBeginThread` 创建并初始化`CWinThread`为你的对象启动外接程序，并返回其地址，因此您可以参考其更高版本。 在整个过程进行检查以确保所有对象都都释放正确应创建的任何部分出现故障。  
   
-##  <a name="_core_implementing_the_controlling_function"></a>控制函数的实现  
+##  <a name="_core_implementing_the_controlling_function"></a> 控制函数的实现  
  控制函数定义线程。 输入此函数后，线程启动，并且当它退出时，线程终止。 此函数应具有以下原型：  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  有一些限制可以编写与 MFC 库的多线程程序中执行的操作。 有关这些限制和使用线程的其他提示的说明，请参阅[多线程处理： 编程提示](../parallel/multithreading-programming-tips.md)。  
   
-##  <a name="_core_controlling_function_example"></a>控制函数的示例  
+##  <a name="_core_controlling_function_example"></a> 控制函数的示例  
  下面的示例演示如何定义控制函数并使用它从程序的其他部分。  
   
 ```  

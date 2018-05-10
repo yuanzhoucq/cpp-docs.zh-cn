@@ -1,12 +1,9 @@
 ---
-title: "source_block 类 |Microsoft 文档"
-ms.custom: 
+title: source_block 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>source_block 类
 `source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。  
@@ -129,7 +124,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
  `source_block`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -440,7 +435,7 @@ virtual void resume_propagation() = 0;
 source_block();
 ```  
   
-##  <a name="dtor"></a> ~source_block 
+##  <a name="dtor"></a> ~ source_block 
 
  销毁`source_block`对象。  
   

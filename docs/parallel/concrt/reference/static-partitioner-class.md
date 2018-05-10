@@ -1,12 +1,9 @@
 ---
-title: "static_partitioner 类 |Microsoft 文档"
-ms.custom: 
+title: static_partitioner 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - static_partitioner
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20dad961b694042c721f388c9a40e0bf99b9b77d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a15310be9a879a2dbcb117a987e56571e953f825
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="staticpartitioner-class"></a>static_partitioner 类
 `static_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 只要基础计划程序有工作线程可用，分区程序就会将范围分成尽可能多的区块。  
@@ -45,12 +40,12 @@ class static_partitioner;
 |名称|描述|  
 |----------|-----------------|  
 |[static_partitioner](#ctor)|构造 `static_partitioner` 对象。|  
-|[~static_partitioner Destructor](#dtor)|销毁 `static_partitioner` 对象。|  
+|[~ static_partitioner 析构函数](#dtor)|销毁 `static_partitioner` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `static_partitioner`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ppl.h  
   
  **命名空间：** 并发  

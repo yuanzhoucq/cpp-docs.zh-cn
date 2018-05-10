@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token 类 |Microsoft 文档"
-ms.custom: 
+title: cancellation_token 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 类
 `cancellation_token` 类表示确定某项操作是否已请求取消的功能。 给定的标记可与 `task_group`、`structured_task_group` 或 `task` 关联以实现隐式取消。 它还可为了取消而进行轮询，或可在取消关联的 `cancellation_token_source` 时注册回调。  
@@ -50,7 +45,7 @@ class cancellation_token;
 |名称|描述|  
 |----------|-----------------|  
 |[cancellation_token](#ctor)||  
-|[~cancellation_token Destructor](#dtor)||  
+|[~ cancellation_token 析构函数](#dtor)||  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -73,12 +68,12 @@ class cancellation_token;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `cancellation_token`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** pplcancellation_token.h  
   
  **命名空间：** 并发  
   
-##  <a name="dtor"></a> ~cancellation_token 
+##  <a name="dtor"></a> ~ cancellation_token 
 
 ```
 ~cancellation_token();
@@ -164,7 +159,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 运算符 = = 
 
 ```
 bool operator== (const cancellation_token& _Src) const;

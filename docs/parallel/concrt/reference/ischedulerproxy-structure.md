@@ -1,12 +1,9 @@
 ---
-title: "ISchedulerProxy 结构 |Microsoft 文档"
-ms.custom: 
+title: ISchedulerProxy 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISchedulerProxy
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa2a67b432fac1dc7ec685e6563acb87fd69087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65198998666391763ef32a55cd12e86529e619ed
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 结构
 计划程序用来与并发运行时的资源管理器进行通信以协商资源分配的接口。  
@@ -62,7 +57,7 @@ struct ISchedulerProxy;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ISchedulerProxy`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -102,7 +97,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  您甚至可以过度订阅现有虚拟处理器根，因为 `IVirtualProcessorRoot` 接口继承自 `IExecutionResource` 接口。  
   
-##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method  
+##  <a name="requestinitialvirtualprocessors"></a>  Ischedulerproxy:: Requestinitialvirtualprocessors 方法  
  请求的虚拟处理器根的初始分配。 每个虚拟处理器根表示执行可执行工作计划程序的一个线程的功能。  
   
 ```

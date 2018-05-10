@@ -1,13 +1,10 @@
 ---
-title: "to 函数 | Microsoft 文档"
-ms.custom: 
+title: to 函数 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr90.dll
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c852f65e603f11bfaf5812a9cb688dbf0eb36904
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="to-functions"></a>to 函数
 每个 **to** 函数及其关联的宏（如果有），将单个字符转换为另一个字符。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 |`_toupper`|`_toupper`|将 `c` 转换为大写|  
 |`towupper`|无|将 c 转换为相应的宽字符大写字母|  
   
- 若要将  **的函数版本用于同时定义为宏的**  例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。  
+ 若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。  
   
  `__toascii` 例程集将除低顺序 7 位以外的所有 `c` 设置为 0，使转换后的值表示 ASCII 字符集中的字符。 如果 `c` 已表示 ASCII 字符，则 `c` 保持不变。  
   

@@ -1,12 +1,9 @@
 ---
-title: "tiled_index 类 |Microsoft 文档"
-ms.custom: 
+title: tiled_index 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 提供的索引[tiled_extent](tiled-extent-class.md)对象。 此类具有属性来访问元素相对于本地的磁贴源和相对于全局源。 有关平铺空间的详细信息，请参阅[使用磁贴](../../../parallel/amp/using-tiles.md)。  
@@ -94,18 +89,18 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[barrier 常量](#tiled_index__barrier)|存储[tile_barrier](tile-barrier-class.md)对象，表示当前 tile 的线程中屏障。|  
 |||  
 |[全局常量](#tiled_index__global)|存储[索引](index-class.md)对象中的级别 1、 2 或 3 表示全局索引[网格](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)对象。|  
-|[local Constant](#tiled_index__local)|存储`index`对象当前 tile 中的级别 1、 2 或 3 表示相对索引[tiled_extent](tiled-extent-class.md)对象。|  
+|[local 常量](#tiled_index__local)|存储`index`对象当前 tile 中的级别 1、 2 或 3 表示相对索引[tiled_extent](tiled-extent-class.md)对象。|  
 |[rank 常量](#tiled_index__rank)|将存储的秩`tiled_index`对象。|  
 |[tile 常量](#tiled_index__tile)|存储`index`对象的秩为 1、 2 或 3 表示当前 tile 的坐标`tiled_extent`对象。|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|将存储的最重要的维度的长度。|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|将存储的下一步的最重要的维度的长度。|  
-|[tile_dim2 Constant](#tiled_index__tile_dim2)|将存储的最低有效的维度的长度。|  
-|[tile_origin Constant](#tiled_index__tile_origin)|存储`index`对象级别 1、 2 或 3 表示全局坐标中在当前 tile 的原点`tiled_extent`对象。|  
+|[tile_dim0 常量](#tiled_index__tile_dim0)|将存储的最重要的维度的长度。|  
+|[tile_dim1 常量](#tiled_index__tile_dim1)|将存储的下一步的最重要的维度的长度。|  
+|[tile_dim2 常量](#tiled_index__tile_dim2)|将存储的最低有效的维度的长度。|  
+|[tile_origin 常量](#tiled_index__tile_origin)|存储`index`对象级别 1、 2 或 3 表示全局坐标中在当前 tile 的原点`tiled_extent`对象。|  
 
   
 ### <a name="public-data-members"></a>公共数据成员  
@@ -120,13 +115,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
  `tiled_index`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  
 
 
-## <a name="tiled_index__ctor">tiled_index 构造函数</a>  
+## <a name="tiled_index__ctor"></a>  tiled_index 构造函数  
 初始化 `tiled_index` 类的新实例。  
   
 ## <a name="syntax"></a>语法  
@@ -166,7 +161,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|name|描述|  
+|名称|描述|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|初始化的新实例`tile_index`类从索引的全局坐标中的磁贴和本地坐标中的磁贴中的相对位置。 `_Global`和`_Tile_origin`计算参数。|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|初始化的新实例`tile_index`通过复制指定的类`tiled_index`对象。|  
 

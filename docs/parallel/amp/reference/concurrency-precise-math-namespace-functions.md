@@ -1,10 +1,7 @@
 ---
-title: "Concurrency:: precise_math 命名空间函数 |Microsoft 文档"
-ms.custom: 
+title: 'Concurrency:: precise_math 命名空间函数 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空间函数
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>参数  
  `exponent`  
- 指数术语 *n* 的数学表达式`e` <sup> n </sup>，其中`e`是自然对数的底。  
+ 指数术语*n*的数学表达式`e` <sup>n</sup>，其中`e`是自然对数的底。  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的以 e 为底的指数，减去 1  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>参数  
  `exponent`  
- 指数术语 *n* 的数学表达式`e` <sup> n </sup>，其中`e`是自然对数的底。  
+ 指数术语*n*的数学表达式`e` <sup>n</sup>，其中`e`是自然对数的底。  
   
 ### <a name="return-value"></a>返回值  
  返回自变量的以 e 为底的指数，减去 1  
@@ -1076,7 +1071,7 @@ inline double fmod(
  第二个浮点自变量。  
   
 ### <a name="return-value"></a>返回值  
- 其余部分`_X`除以`_Y`; 也就是说，值`_X`  -  `_Y`  *n* ，其中 *n* 是整数以便的量`_X`  -  `_Y`  *n* 小于的量`_Y`。  
+ 其余部分`_X`除以`_Y`; 也就是说，值`_X`  -  `_Y` *n*，其中*n*是整个整数以便的量`_X`  -  `_Y` *n*小于的量`_Y`。  
   
 ##  <a name="fmodf"></a>  fmodf  
  计算除以第二个指定的自变量的第一个指定参数的其余部分。  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  第二个浮点自变量。  
   
 ### <a name="return-value"></a>返回值  
- 其余部分`_X`除以`_Y`; 也就是说，值`_X`  -  `_Y`  *n* ，其中 *n* 是整数以便的量`_X`  -  `_Y`  *n* 小于的量`_Y`。  
+ 其余部分`_X`除以`_Y`; 也就是说，值`_X`  -  `_Y` *n*，其中*n*是整个整数以便的量`_X`  -  `_Y` *n*小于的量`_Y`。  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  将自变量值分类为 NaN、无穷大、正常、次正常、零  
@@ -1914,7 +1909,7 @@ inline float remquof(
 ### <a name="return-value"></a>返回值  
  返回的其余部分`_X`除以`_Y`。  
   
-##  <a name="round"></a>  round  
+##  <a name="round"></a>  舍入  
  将舍入为最接近整数的 _X  
   
 ```  

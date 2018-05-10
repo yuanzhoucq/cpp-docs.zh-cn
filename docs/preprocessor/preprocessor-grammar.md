@@ -1,12 +1,9 @@
 ---
-title: "预处理器语法 |Microsoft 文档"
-ms.custom: 
+title: 预处理器语法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,38 +12,36 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
-**#define**  *identifier* *token-string*opt  
+**#define***标识符**令牌字符串*选择    
   
- *#* **define**  *identifier*[**(** *identifier*opt**,** *...* **,** *identifier*opt **)**] *token-string*opt  
+ *#* **定义***标识符*[**(** *标识符*选择**，** *...* **，** *标识符*选择 **)**]*令牌字符串*选择    
   
  **defined(**  *identifier* **)**  
   
- **defined**  *identifier*  
+ **定义***标识符*   
   
- `#include` **"***path-spec***"**  
+ `#include` **"***路径规范***"**  
   
- `#include` **\<***path-spec***>**  
+ `#include` **\<***路径规范***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef**  *identifier*  
+ *#* **undef***标识符*   
   
- **#error**  *token-string*  
+ **#error***令牌字符串*   
   
- **#pragma**  *token-string*  
+ **#pragma***令牌字符串*   
   
  *条件*:  
  *如果一部分 elif 部件*选择*else 部分*选择*endif 行*  
@@ -57,9 +52,9 @@ ms.lasthandoff: 02/23/2018
  *如果行*:  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***标识符*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***标识符*   
   
  *elif 部件*:  
  *elif 行文本*  

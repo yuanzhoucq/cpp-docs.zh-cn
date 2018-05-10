@@ -1,29 +1,24 @@
 ---
-title: "并发运行时中的常规最佳做法 |Microsoft 文档"
-ms.custom: 
+title: 并发运行时中的常规最佳做法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5c2c626ceb0243e91e56d70f0d8ae71208b157f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2cd9cffa76ce179f478422af9c8efce380a2465
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>并发运行时中的常规最佳做法
 本文档描述应用于的并发运行时的多个区域的最佳做法。  
@@ -45,12 +40,12 @@ ms.lasthandoff: 12/21/2017
   
 - [不在共享的数据段中使用并发对象](#shared-data)  
   
-##  <a name="synchronization"></a>使用尽可能协作同步构造  
+##  <a name="synchronization"></a> 使用尽可能协作同步构造  
  并发运行时提供许多不需要外部同步对象的并发安全构造。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)类提供并发安全追加和元素访问操作。 但是，对于需要对资源的独占访问的情况下，运行时提供[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)， [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)，和[并发:: 事件](../../parallel/concrt/reference/event-class.md)类。 这些类型的行为以协作方式;因此，第一个任务等待数据任务计划程序可以重新分配到另一个上下文的处理资源。 请尽可能使用这些同步类型而不是其他同步机制，如提供的 Windows API 中，不以协作方式那样工作。 有关这些同步类型和代码示例的详细信息，请参阅[同步数据结构](../../parallel/concrt/synchronization-data-structures.md)和[比较同步数据结构与 Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。  
   
  [[返回页首](#top)]  
   
-##  <a name="yield"></a>避免不产生的时间较长的任务  
+##  <a name="yield"></a> 避免不产生的时间较长的任务  
  由于任务计划程序的行为以协作方式，它不提供任务间的公平性。 因此，任务可以阻止其他任务启动。 虽然这是可接受在某些情况下，这会在其他情况下导致死锁或资源不足。  
   
  下面的示例执行多个任务比已分配的处理资源数。 第一个任务不会生成任务计划程序，因此第二个任务不会在第一个任务完成之前不启动。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="oversubscription"></a>使用过度订阅于阻止或具有高延时的偏移量操作  
+##  <a name="oversubscription"></a> 使用过度订阅于阻止或具有高延时的偏移量操作  
  并发运行时提供同步基元，如[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)，，以便任务能够以协作方式停滞和将控制权转交给彼此。 当一个任务以协作方式阻止或生成时，任务计划程序可以重新分配到另一个上下文的处理资源，如第一个任务等待数据。  
   
  在你不能在其中使用并发运行时提供的协作停滞机制的情况下。 例如，你使用的外部库可能使用不同的同步机制。 另一个示例是执行操作时，可能存在很长的延迟，例如，当你使用 Windows API`ReadFile`函数从网络连接读取数据。 在这些情况下，过度订阅可以启用要在另一个任务空闲时运行的其他任务。 可以通过过度订阅创建比可用硬件线程数更多的线程。  
@@ -99,7 +94,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="memory"></a>使用尽可能并发内存管理函数  
+##  <a name="memory"></a> 使用尽可能并发内存管理函数  
 
  使用内存管理函数[concurrency:: alloc](reference/concurrency-namespace-functions.md#alloc)和[concurrency:: free](reference/concurrency-namespace-functions.md#free)，如果你具有经常分配生存期相对较短的小型对象的精细任务。 并发运行时包含单独的内存缓存中，以便每个正在运行的线程。 `Alloc`和`Free`函数分配和释放内存从这些缓存而不使用锁或内存屏障。  
   
@@ -107,7 +102,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="raii"></a>使用 RAII 来管理并发对象的生存期  
+##  <a name="raii"></a> 使用 RAII 来管理并发对象的生存期  
  并发运行时使用异常处理来实现的功能，例如取消。 调入运行时或调用调入运行时的另一个库时，因此，编写异常安全的代码。  
   
  *获取资源即初始化*(RAII) 模式是一种方法，以便安全地管理在给定作用域下的并发对象的生存期。 下 RAII 模式，在堆栈上分配一种数据结构。 该数据结构初始化，或在创建和销毁或销毁数据结构时释放该资源时，获取一个资源。 RAII 模式可确保在封闭作用域退出之前被调用的析构函数。 当函数包含多个时，此模式将有用`return`语句。 此模式还可帮助你编写异常安全的代码。 当`throw`语句会导致堆栈展开，析构函数调用 RAII 对象的; 因此，资源是始终正确地删除或释放。  
@@ -138,7 +133,7 @@ Error details:
   
  [[返回页首](#top)]  
   
-##  <a name="global-scope"></a>不要在全局范围内创建并发对象  
+##  <a name="global-scope"></a> 不要在全局范围内创建并发对象  
  在全局范围内创建并发对象时，会导致应用程序中出现死锁或内存访问冲突等问题。  
   
  例如，在创建并发运行时对象时，如果尚未创建计划程序，运行时会创建一个默认计划程序。 相应地，在全局对象构造期间创建的运行时对象将导致运行时创建此默认计划程序。 但是，此过程采用了内部锁，这会干扰支持并发运行时基础结构的其他对象的初始化过程。 另一个尚未初始化的基础结构对象可能需要此内部锁，因此会导致您的应用程序中发生死锁。  
@@ -151,7 +146,7 @@ Error details:
   
  [[返回页首](#top)]  
   
-##  <a name="shared-data"></a>不在共享的数据段中使用并发对象  
+##  <a name="shared-data"></a> 不在共享的数据段中使用并发对象  
  并发运行时不支持在共享的数据部分中，例如，在 data 节创建并发对象的使用[data_seg](../../preprocessor/data-seg.md) `#pragma`指令。 跨进程边界共享的并发对象无法将运行时置于不一致或无效的状态。  
   
  [[返回页首](#top)]  

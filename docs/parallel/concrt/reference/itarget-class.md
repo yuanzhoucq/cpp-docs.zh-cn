@@ -1,12 +1,9 @@
 ---
-title: "ITarget 类 |Microsoft 文档"
-ms.custom: 
+title: ITarget 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITarget
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9780e4b9ff8950511601b03e8423764c3def77a1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itarget-class"></a>ITarget 类
 `ITarget` 类是所有目标块的接口。 目标块使用 `ISource` 块提供给它们的消息。  
@@ -85,7 +80,7 @@ class ITarget;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ITarget`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  

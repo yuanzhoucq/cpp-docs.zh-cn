@@ -1,29 +1,24 @@
 ---
-title: "并行算法 |Microsoft 文档"
-ms.custom: 
+title: 并行算法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>并行算法
 并行模式库 (PPL) 提供了同时对集合的数据执行工作的算法。 这些算法类似于所提供的 c + + 标准库。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     - [选择排序算法](#choose_sort)  
   
-##  <a name="parallel_for"></a>Parallel_for 算法  
+##  <a name="parallel_for"></a> Parallel_for 算法  
 
  [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法重复地以并行方式执行相同的任务。 其中每个任务是由迭代值参数化。 当必须不共享该循环迭代之间的资源的循环正文时，此算法很有用。  
   
@@ -96,7 +91,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="parallel_for_each"></a>Parallel_for_each 算法  
+##  <a name="parallel_for_each"></a> Parallel_for_each 算法  
 
  [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法对迭代容器，如提供的 c + + 标准库，并行执行任务。 它使用相同的分区逻辑，`parallel_for`算法使用。  
   
@@ -121,7 +116,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="parallel_invoke"></a>Parallel_invoke 算法  
+##  <a name="parallel_invoke"></a> Parallel_invoke 算法  
 
  [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法以并行方式执行一组任务。 它不返回每个任务完成之前。 当你具有你想要在同一时间执行的多个独立任务时，此算法很有用。  
   
@@ -144,14 +139,14 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Parallel_transform 和 parallel_reduce 算法  
+##  <a name="parallel_transform_reduce"></a> Parallel_transform 和 parallel_reduce 算法  
 
  [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)和[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)算法是 c + + 标准库算法的并行版本[std:: transform](../../standard-library/algorithm-functions.md#transform)和[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)分别。 并发运行时版本的行为方式类似的 c + + 标准库版本，只不过操作顺序不确定，因为它们并行执行。 当您使用的集足够大，可从并行处理中获得性能和可扩展性优势时，请使用这些算法。  
   
 > [!IMPORTANT]
 >  因为这些迭代器会生成稳定的内存地址，所以 `parallel_transform` 算法和 `parallel_reduce` 算法仅支持随机访问、双向和向前迭代器。 而且这些迭代器必须生成非 `const` 左值。  
   
-###  <a name="parallel_transform"></a>Parallel_transform 算法  
+###  <a name="parallel_transform"></a> Parallel_transform 算法  
  您可以使用 `parallel transform` 算法执行许多数据并行化操作。 例如，你可以：  
   
 -   调整图像的亮度，并执行其他图像处理操作。  
@@ -174,7 +169,7 @@ ms.lasthandoff: 12/21/2017
 > [!IMPORTANT]
 >  您为 `parallel_transform` 的输出提供的迭代器必须与输入迭代器完全重叠或根本不重叠。 如果输入迭代器和输出迭代器部分重叠，则此算法的行为是未指定的。  
   
-###  <a name="parallel_reduce"></a>Parallel_reduce 算法  
+###  <a name="parallel_reduce"></a> Parallel_reduce 算法  
  当您具有满足关联属性的操作序列时，`parallel_reduce` 算法很有用。 （此算法不要求可交换属性。）以下是可以使用 `parallel_reduce` 执行的一些操作：  
   
 -   将矩阵的序列相乘以生成一个矩阵。  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
   
  在许多情况下，你可以认为的`parallel_reduce`作为使用速记`parallel_for_each`一起使用的算法[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类。  
   
-###  <a name="map_reduce_example"></a>示例： 执行映射和降低并行  
+###  <a name="map_reduce_example"></a> 示例： 执行映射和降低并行  
 
  A*映射*操作将函数应用于序列中的每个值。 A*减少*操作将合并为一个值序列的元素。 你可以使用 c + + 标准库[std:: transform](../../standard-library/algorithm-functions.md#transform)和[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函数来执行映射和化简操作。 但是，对于许多问题，您可以使用 `parallel_transform` 算法并行执行映射操作，并使用 `parallel_reduce` 算法并行执行化简操作。  
 
@@ -204,7 +199,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="partitions"></a>分区工作  
+##  <a name="partitions"></a> 分区工作  
  若要并行化的数据源上的操作，一个必要步骤，是到*分区*到可由多个线程同时访问的多个部分的源。 分区程序将指定并行算法应如何在线程之间对范围进行分区。 如本文档前面所述，PPL 使用的是默认分区机制，该默认分区机制创建初始工作负荷并在工作负荷不平衡时使用工作窃取算法和范围窃取来平衡这些分区。 例如，当某个循环迭代完成一个迭代范围时，运行时会将其他线程的工作重新分配给该线程。 但是，在某些方案中，你可能希望指定另一个更适用于你的问题的分区机制。  
   
  `parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：  
@@ -235,11 +230,11 @@ ms.lasthandoff: 12/21/2017
 > [!CAUTION]
 >  在修改依赖于协作停滞语义的现有代码以使用 `static_partitioner` 或 `affinity_partitioner` 时应谨慎。 这些分区程序类型不使用负载平衡或范围窃取，因此可能会更改应用程序的行为。  
   
- 确定在任何给定方案中是否使用分区程序的最佳方式是：体验并度量操作在有代表性的负载和计算机配置下要花多长时间完成。 例如，静态分区可能会有仅几个核心的多核计算机上的明显加快，但它可能会导致具有相对较多的内核的计算机上的系统速度变慢。  
+ 确定在任何给定方案中是否使用分区程序的最佳方式是：体验并度量操作在有代表性的负载和计算机配置下要花多长时间完成。 例如，如果是只有几个内核的多核计算机，静态分区可以让速度显著提升；但如果是内核相对较多的计算机，静态分区可能会导致速度降低。  
   
  [[返回页首](#top)]  
   
-##  <a name="parallel_sorting"></a>并行排序  
+##  <a name="parallel_sorting"></a> 并行排序  
 
  PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)， [concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)，和[concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)。 当您具有可受益于并行排序的数据集时，这些排序算法很有用。 具体而言，当您具有大型数据集时或使用需要消耗大量计算资源的比较操作对数据进行排序时，并行排序很有用。 每种算法都会就地对元素排序。  
 
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
  哈希函数必须返回整型 ([std::is_integral::value](../../standard-library/is-integral-class.md)必须`true`)。 此整型必须可转换为类型 `size_t`。  
   
-###  <a name="choose_sort"></a>选择排序算法  
+###  <a name="choose_sort"></a> 选择排序算法  
  在许多情况下，`parallel_sort` 会提供速度和内存性能的最佳平衡。 但是，当您增加数据集的大小、可用处理器的数量或比较函数的复杂性时，`parallel_buffered_sort` 或 `parallel_radixsort` 性能更佳。 确定在任何给定方案中使用哪种排序算法的最佳方式是：体验并度量在有代表性计算机配置下对典型数据排序需要多长时间。 在选择排序策略时请遵循以下准则。  
   
 -   数据集的大小。 在此文档中，*小*数据集包含的元素少于 1000，*中等*数据集包含 10,000 和 100,000 个之间元素之间和*大型*数据集包含元素多于 100,000 个。  
@@ -302,7 +297,7 @@ ms.lasthandoff: 12/21/2017
   
  以并行方式对小型数据集排序可能不值得，即使是在您拥有大量的可用计算资源或您的比较函数或哈希函数执行相对大量的工作时。 你可以使用[std:: sort](../../standard-library/algorithm-functions.md#sort)函数对小型数据集进行排序。 (`parallel_sort`和`parallel_buffered_sort`调用`sort`时指定的区块大小大于数据集; 但是，`parallel_buffered_sort`将必须分配 o （n） 空间，这可能需要额外由于锁争用或内存分配的时间。)  
   
- 如果您必须节省内存或您的内存分配器容易出现锁争用问题，请使用 `parallel_sort` 对中型数据集排序。 `parallel_sort`不需要额外的空间;其他算法需要 o （n） 空间。  
+ 如果您必须节省内存或您的内存分配器容易出现锁争用问题，请使用 `parallel_sort` 对中型数据集排序。 `parallel_sort` 不需要额外的空间;其他算法需要 o （n） 空间。  
   
  使用`parallel_buffered_sort`中型数据集和你的应用程序时满足要求的其他 o （n） 空间进行排序。 当您拥有大量的计算资源或高开销的比较函数或哈希函数时，`parallel_buffered_sort` 尤其有用。  
   

@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用 parallel_invoke 来编写并行排序例程 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 parallel_invoke 来编写并行排序例程 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>如何：使用 parallel_invoke 来编写并行排序例程
 本文档介绍如何使用[parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke)算法提高双调排序算法的性能。 双调排序算法以递归方式将输入的序列划分为较小排序分区。 双调排序算法可以并行运行，因为每个分区操作独立于所有其他操作。  
@@ -44,14 +39,14 @@ ms.lasthandoff: 12/21/2017
   
 - [并行使用 parallel_invoke 来执行双调排序](#parallel)  
   
-##  <a name="serial"></a>按顺序执行双调排序  
+##  <a name="serial"></a> 按顺序执行双调排序  
  下面的示例演示双调排序算法的序列化版本。 `bitonic_sort`函数序列分成两个分区、 对按相反方向，这些分区进行排序，然后将合并结果。 此函数调用自身两次以递归方式进行排序的每个分区。  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[返回页首](#top)]  
   
-##  <a name="parallel"></a>并行使用 parallel_invoke 来执行双调排序  
+##  <a name="parallel"></a> 并行使用 parallel_invoke 来执行双调排序  
  本部分介绍如何使用`parallel_invoke`中并行执行双调排序算法的算法。  
   
 ### <a name="procedures"></a>过程  

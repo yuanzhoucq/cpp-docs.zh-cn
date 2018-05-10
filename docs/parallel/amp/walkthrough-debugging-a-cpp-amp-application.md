@@ -1,13 +1,10 @@
 ---
-title: "演练： 调试 c + + AMP 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 演练： 调试 c + + AMP 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 本主题演示如何调试使用 C++ Accelerated Massive Parallelism (C++ AMP) 应用程序以便利用图形处理单元 (GPU)。 它使用总结大整数数组的并行缩减程序。 本演练阐释了以下任务：  
@@ -305,7 +300,7 @@ GPU 线程数据提示
   
      您可以通过选择相应的列标题来按指定表达式排序。  
   
-     选择**localA [localIdx [0]]**列标题对列排序。 下图显示通过排序的结果**localA [localIdx [0]]**。  
+     选择**localA [localIdx [0]]** 列标题对列排序。 下图显示通过排序的结果**localA [localIdx [0]]**。  
   
      ![结果按顺序排列的并行监视窗口](../../parallel/amp/media/campf.png "campf")  
  排序结果  
@@ -321,7 +316,7 @@ GPU 线程数据提示
   
 ### <a name="to-flag-gpu-threads"></a>标记 GPU 线程  
   
-1.  选择**[线程]**并行监视 1 窗口按平铺索引和线程索引进行排序中的列标题。  
+1.  选择 **[线程]** 并行监视 1 窗口按平铺索引和线程索引进行排序中的列标题。  
   
 2.  在菜单栏上，选择**调试**，**继续**，这将导致产生的四个线程的处于活动状态前进到下一个屏障 （在 ampmapreduce.cpp 的第 32 行处定义）。  
   
@@ -393,7 +388,7 @@ GPU 线程窗口中的已冻结线程
      之前在第 21 行处受阻的 24 个线程将继续运行到第 32 行。 这一点在**GPU 线程**窗口。  
   
 ## <a name="see-also"></a>请参阅  
- [C + + AMP 概述](../../parallel/amp/cpp-amp-overview.md)   
+ [C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)   
  [调试 GPU 代码](/visualstudio/debugger/debugging-gpu-code)   
  [如何： 使用 GPU 线程窗口](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
  [如何： 使用并行监视窗口](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   

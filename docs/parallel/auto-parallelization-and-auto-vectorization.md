@@ -1,27 +1,22 @@
 ---
-title: "自动并行化和自动向量化 |Microsoft 文档"
-ms.custom: 
+title: 自动并行化和自动向量化 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自动并行化和自动矢量化
 自动并行化程序和自动向量化旨在为代码中的循环提供自动性能提升。  
@@ -99,7 +94,7 @@ void test() {
 ## <a name="auto-vectorizer"></a>自动向量化  
  自动向量化分析代码中的循环，并使用矢量寄存器和目标计算机上的指令执行它们，如果它知道如何操作。 这可以提高代码的性能。 编译器面向 Intel 或 AMD 处理器中的 SSE2、 AVX 和 AVX2 指令或 ARM 处理器上的 NEON 指令根据[/arch](../build/reference/arch-minimum-cpu-architecture.md)切换。  
   
- 指定自动向量化可能生成不同的指令**/arch**切换。 这些说明由运行检查保护以确保代码仍然能够正常运行。 例如，编译**/arch:SSE2**，可能会发出 SSE4.2 指令。 运行时间检查将验证 SSE4.2 可在目标处理器上使用，如果处理器不支持这些指令，将跳转到非 SSE4.2 版本的循环中。  
+ 指定自动向量化可能生成不同的指令 **/arch**切换。 这些说明由运行检查保护以确保代码仍然能够正常运行。 例如，编译 **/arch:SSE2**，可能会发出 SSE4.2 指令。 运行时间检查将验证 SSE4.2 可在目标处理器上使用，如果处理器不支持这些指令，将跳转到非 SSE4.2 版本的循环中。  
   
  默认情况下，自动向量化处于启用状态。 如果你想要比较的代码的性能，则可以使用[#pragma loop （no_vector)](../preprocessor/loop.md)禁用任何给定循环的向量化。  
   

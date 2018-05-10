@@ -1,27 +1,22 @@
 ---
-title: "2.4.1 for 构造 |Microsoft 文档"
-ms.custom: 
+title: 2.4.1 for 构造 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 for 构造
 **为**指令标识了指定的关联的循环迭代将并行执行的迭代工作共享构造。 迭代**为**循环分布在团队执行的并行构造，它将绑定中已存在的线程。 语法**为**构造是，如下所示：  
@@ -32,13 +27,13 @@ ms.lasthandoff: 12/21/2017
   
  子句是以下项之一：  
   
- **私有 (** *变量列表* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *变量列表* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *变量列表* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **减少 (** *运算符* **:** *变量列表***)**  
+ **减少 (** *运算符* **:** *变量的列表 * * *)**  
   
  **排序**  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **为**指令在相应的结构上放置限制**为**循环。 具体而言，相应**为**循环必须具有规范的形状：  
   
- **有关 (** *init expr* **;***var 逻辑操作 b*;*incr expr***)**  
+ **有关 (** *init expr* **;***var 逻辑操作 b*;*incr-expr * * *)**  
   
  *init expr*  
  以下项之一：  
@@ -60,11 +55,11 @@ ms.lasthandoff: 12/21/2017
  *incr expr*  
  以下项之一：  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,10 +98,10 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|静态|当**计划 (静态的***使用 chunk_size***)**迭代划分为区块的指定大小的指定*使用 chunk_size*。 消息块以静态方式分配给线程号顺序以轮循机制方式团队中的线程。 如果没有*使用 chunk_size*指定，则迭代空间划分为区块与分配给每个线程的一个块区的大小，大致相等的。|  
-|dynamic|当**计划 (动态的***使用 chunk_size***)**迭代划分为区块，每个包含的一系列的指定*使用 chunk_size*迭代。 每个区块分配给正在等待分配的线程。 线程执行的迭代区块，然后等待其下一步的分配，直到没有块保持可以被指定。 请注意，要分配的最后一个块区可能具有较小数目的迭代。 如果没有*使用 chunk_size*指定，则它默认为 1。|  
-|引导式|当**计划 (有作为指导，** *使用 chunk_size***)**迭代分配给递减大小的小区块中的线程的指定。 线程在完成时的迭代其已分配的块，它是动态分配另一个区块，直到未保留任何。 有关*使用 chunk_size*的每个块区大小为 1，是大约的未分配的线程数的一半的迭代数。 这些大小减少大约指数级增长至 1。 有关*使用 chunk_size*值*k*大于 1，大小大约减少指数级增长到*k*，只不过最后一个区块可能具有少于*k*迭代。 如果没有*使用 chunk_size*指定，则它默认为 1。|  
-|Runtime — 运行时|当**schedule （runtime)**指定，则有关计划被推迟到运行时的决策。 计划*类型*和通过设置环境变量，可以在运行时选择各区块大小**OMP_SCHEDULE**。 如果未设置此环境变量，生成的计划是实现定义的。 当**schedule （runtime)**指定，则*使用 chunk_size*不能指定。|  
+|静态|当**计划 (静态的***使用 chunk_size * * *)** 迭代划分为区块的指定大小的指定*使用 chunk_size*。 消息块以静态方式分配给线程号顺序以轮循机制方式团队中的线程。 如果没有*使用 chunk_size*指定，则迭代空间划分为区块与分配给每个线程的一个块区的大小，大致相等的。|  
+|dynamic|当**计划 (动态的***使用 chunk_size * * *)** 迭代划分为区块，每个包含的一系列的指定*使用 chunk_size*迭代。 每个区块分配给正在等待分配的线程。 线程执行的迭代区块，然后等待其下一步的分配，直到没有块保持可以被指定。 请注意，要分配的最后一个块区可能具有较小数目的迭代。 如果没有*使用 chunk_size*指定，则它默认为 1。|  
+|引导式|当**计划 (有作为指导，** *使用 chunk_size * * *)** 指定，则迭代分配给递减大小的小区块中的线程。 线程在完成时的迭代其已分配的块，它是动态分配另一个区块，直到未保留任何。 有关*使用 chunk_size*的每个块区大小为 1，是大约的未分配的线程数的一半的迭代数。 这些大小减少大约指数级增长至 1。 有关*使用 chunk_size*值*k*大于 1，大小大约减少指数级增长到*k*，只不过最后一个区块可能具有少于*k*迭代。 如果没有*使用 chunk_size*指定，则它默认为 1。|  
+|Runtime — 运行时|当**schedule （runtime)** 指定，则有关计划被推迟到运行时的决策。 计划*类型*和通过设置环境变量，可以在运行时选择各区块大小**OMP_SCHEDULE**。 如果未设置此环境变量，生成的计划是实现定义的。 当**schedule （runtime)** 指定，则*使用 chunk_size*不能指定。|  
   
  在没有显式定义**计划**子句，则默认**计划**是实现定义的。  
   

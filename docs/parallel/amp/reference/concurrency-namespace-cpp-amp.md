@@ -1,12 +1,9 @@
 ---
-title: "并发 Namespace (c + + AMP) |Microsoft 文档"
-ms.custom: 
+title: 并发 Namespace (c + + AMP) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空间 (C++ AMP)
 提供的类和在数据并行硬件加速执行的 c + + 代码的函数。 有关详细信息，请参阅[c + + AMP 概述](../cpp-amp-overview.md)  
@@ -70,9 +65,9 @@ namespace Concurrency;
   
 ### <a name="enumerations"></a>枚举  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
-|[access_type Enumeration](concurrency-namespace-enums-amp.md#access_type)|指定的数据访问类型。|  
+|[access_type 枚举](concurrency-namespace-enums-amp.md#access_type)|指定的数据访问类型。|  
 |[queuing_mode 枚举](concurrency-namespace-enums-amp.md#queuing_mode)|指定在快捷键受支持的排队模式。|  
   
 ### <a name="operators"></a>运算符  
@@ -120,7 +115,7 @@ namespace Concurrency;
 |[HLSL_MAX_NUM_BUFFERS 常量](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|最大允许的 DirectX 的缓冲区数。|  
 |[MODULENAME_MAX_LENGTH 常量](concurrency-namespace-constants-amp.md#modulename_max_length)|将存储的模块名称的最大长度。 此值必须在编译器和运行时上相同。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
 ## <a name="see-also"></a>请参阅  

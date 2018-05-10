@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token_source 类 |Microsoft 文档"
-ms.custom: 
+title: cancellation_token_source 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_source
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 类
 `cancellation_token_source` 类表示取消某个可取消操作的功能。  
@@ -48,13 +43,13 @@ class cancellation_token_source;
 |名称|描述|  
 |----------|-----------------|  
 |[cancellation_token_source](#ctor)|已重载。 构造一个新的 `cancellation_token_source`。 该源可用于标记某个可取消操作的取消。|  
-|[~cancellation_token_source Destructor](#dtor)||  
+|[~ cancellation_token_source 析构函数](#dtor)||  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[cancel](#cancel)|取消标记。 所有使用标记的 `task_group`、`structured_task_group` 或 `task` 将在进行此调用时取消，并将在下一个中断点引发异常。|  
+|[取消](#cancel)|取消标记。 所有使用标记的 `task_group`、`structured_task_group` 或 `task` 将在进行此调用时取消，并将在下一个中断点引发异常。|  
 |[create_linked_source](#create_linked_source)|已重载。 创建一个 `cancellation_token_source`，并在取消提供的标记时将其取消。|  
 |[get_token](#get_token)|返回一个与此源相关联的取消标记。 如果发生取消操作，则可能轮询返回的标记以进行取消或提供回调。|  
   
@@ -69,7 +64,7 @@ class cancellation_token_source;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `cancellation_token_source`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** pplcancellation_token.h  
   
  **命名空间：** 并发  
@@ -164,7 +159,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 运算符 = = 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

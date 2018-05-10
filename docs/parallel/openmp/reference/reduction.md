@@ -1,12 +1,9 @@
 ---
-title: "减少 |Microsoft 文档"
-ms.custom: 
+title: 减少 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - reduction
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reduction"></a>reduction
 指定对每个线程都是私有的一个或多个变量是并行区域末尾缩减操作的主题。  
@@ -52,7 +47,7 @@ reduction(operation:var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [部分](../../../parallel/openmp/reference/sections-openmp.md)  
   
  有关详细信息，请参阅[2.7.2.6 缩减](../../../parallel/openmp/2-7-2-6-reduction.md)。  
   

@@ -1,27 +1,22 @@
 ---
-title: "2.7.2 数据共享特性子句 |Microsoft 文档"
-ms.custom: 
+title: 2.7.2 数据共享特性子句 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecc6efac6e3d7356e51dc0ec57009ca9e5a71890
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 数据共享特性子句
 多个指令接受允许用户控制变量的共享属性区域的持续时间内的子句。 共享特性子句仅适用于子句在其显示的指令的词法范围中的变量。 并非所有以下子句可以在所有指令。 指令一起描述了在特定指令都有效的子句的列表。  

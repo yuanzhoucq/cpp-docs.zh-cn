@@ -1,13 +1,10 @@
 ---
-title: "区域设置名称、语言和国家/地区字符串 | Microsoft Docs"
-ms.custom: 
+title: 区域设置名称、语言和国家/地区字符串 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f98014ae0a610c1618e971cd833523ff9535b6ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aeaeb21dfabac173b639fe4b3e1518b276c629a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>区域设置名称、语言和国家/地区字符串
 `setlocale` 和 `_create_locale` 函数的 *locale* 参数可使用 Windows NLS API 支持的区域设置名称、语言、国家/地区代码和代码页设置。 *locale* 参数采取以下格式：  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 &nbsp;&nbsp;&nbsp;&nbsp;| ""  
 &nbsp;&nbsp;&nbsp;&nbsp;| NULL  
   
- 首选区域设置名称格式，例如英语（美国）使用 `en-US`，或波斯尼亚语（西里尔文，波斯尼亚和黑塞哥维那）使用 `bs-Cyrl-BA`。 [Locale Names（区域设置名称）](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)中介绍了这一系列区域设置名称。 有关 Windows 操作系统版本支持的区域设置名称的列表，请参阅  的“区域性名称” [National Language Support (NLS) API Reference（区域语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)列。 该资源列出了支持的语言、脚本和区域设置名称的地区部分。 有关采用非默认排序顺序的受支持的区域设置名称的信息，请参阅 **Sort Order Identifiers（排序顺序标识符）** 中的[“区域性名称”](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx)列。 有关 Windows 操作系统（按版本）中的语言和位置支持的其他信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。 在 Windows 10 或更高版本下，允许使用与有效的 BCP-47 语言标记对应的区域设置名称。 例如，`jp-US` 是一个有效的 BCP-47 标记，但实际上只有 `US` 对于区域设置功能有效。  
+ 首选区域设置名称格式，例如英语（美国）使用 `en-US`，或波斯尼亚语（西里尔文，波斯尼亚和黑塞哥维那）使用 `bs-Cyrl-BA`。 [Locale Names（区域设置名称）](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)中介绍了这一系列区域设置名称。 有关 Windows 操作系统版本支持的区域设置名称的列表，请参阅  的“区域性名称” [National Language Support (NLS) API Reference（区域语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)列。 该资源列出了支持的语言、脚本和区域设置名称的地区部分。 有关采用非默认排序顺序的受支持的区域设置名称的信息，请参阅 [Sort Order Identifiers（排序顺序标识符）](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx) 中的“区域性名称” 列。 有关 Windows 操作系统（按版本）中的语言和位置支持的其他信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。 在 Windows 10 或更高版本下，允许使用与有效的 BCP-47 语言标记对应的区域设置名称。 例如，`jp-US` 是一个有效的 BCP-47 标记，但实际上只有 `US` 对于区域设置功能有效。  
   
  使用语言字符串或语言字符串和国家/地区字符串创建区域设置时， *language*[*_country_region*[.*code_page*]] 格式将存储在类别的区域设置中。 [Language Strings](../c-runtime-library/language-strings.md)中介绍了一系列受支持的语言字符串， [Country/Region Strings](../c-runtime-library/country-region-strings.md)中则列出了受支持的国家/地区字符串。 如果指定的语言与指定的国家/地区无关联，则将指定国家/地区的默认语言存储在区域设置中。 我们不建议将区域设置字符串的该格式嵌入到代码中或序列化到存储中，因为操作系统的更新更改这些字符串的可能性要高于区域设置名称格式。  
   

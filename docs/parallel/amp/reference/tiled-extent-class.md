@@ -2,11 +2,8 @@
 title: tiled_extent 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent 类
 A`tiled_extent`对象是`extent`到一个、 两个或三维磁贴细分的扩展盘区空间的一到三个维度的对象。  
@@ -153,7 +148,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent`捕获此维度的对象`tiled_extent`实例。  
   
 
-## <a name="pad"> </a>  pad   
+## <a name="pad"> </a>  填充   
 返回一个新`tiled_extent`对象扩展盘区调整向上为整除的磁贴尺寸。  
   
 ### <a name="syntax"></a>语法  
@@ -176,7 +171,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>返回值  
  返回一个新`tiled_extent`对象扩展盘区调整下为整除的磁贴尺寸。  
 
-## <a name="operator_eq"> </a>  operator=   
+## <a name="operator_eq"> </a>  运算符 =   
 将指定的内容复制`tiled_index`到此对象。  
   
 ### <a name="syntax"></a>语法  
@@ -228,5 +223,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 ```  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

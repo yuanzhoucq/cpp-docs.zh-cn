@@ -1,10 +1,7 @@
 ---
-title: "并发命名空间枚举 |Microsoft 文档"
-ms.custom: 
+title: 并发命名空间枚举 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>并发命名空间枚举
 ||||  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>  agent_status Enumeration  
+##  <a name="agent_status"></a>  agent_status 枚举  
  `agent` 的有效状态。  
   
 ```
@@ -59,10 +54,10 @@ enum agent_status;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步代理](../../../parallel/concrt/asynchronous-agents.md)。  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrt.h
 
-##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
+##  <a name="agents_eventtype"></a>  Agents_EventType 枚举  
  可以使用代理库提供的跟踪功能进行跟踪的事件的类型  
   
 ```
@@ -82,7 +77,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_START`|表示某些处理过程启动的事件类型|  
 |`AGENTS_EVENT_UNLINK`|表示取消消息块链接的事件类型|  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrt.h
 
 ##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
@@ -105,10 +100,10 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_UNBLOCK`|表示取消阻止上下文的行为的事件类型。|  
 |`CONCRT_EVENT_YIELD`|表示上下文产生的行为的事件类型。|  
   
-### <a name="requirements"></a>惠?  
- **标头：** concrt.h **Namespace:**并发
+### <a name="requirements"></a>要求  
+ **标头：** concrt.h **Namespace:** 并发
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags 枚举  
  事件类型的跟踪标志  
   
 ```
@@ -126,10 +121,10 @@ enum Concrt_TraceFlags;
 |`SchedulerEventFlag`||  
 |`VirtualProcessorEventFlag`||
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrt.h
 
-##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
+##  <a name="criticalregiontype"></a>  CriticalRegionType 枚举  
  上下文位于其中的关键区域的类型。  
   
 ```
@@ -143,7 +138,7 @@ enum CriticalRegionType;
 |`InsideHyperCriticalRegion`|指示上下文是超关键的区域内。 Hyper 关键的区域内, 同步和异步挂起从调度器隐藏。 此类挂起或阻止发生这种情况，资源管理器将等待线程变为可运行，并只需恢复它而不是再次调用调度器。 此类区域内获取的锁永远不会必须与此类区域外运行的代码共享。 这样将导致不可预知的死锁。|  
 |`OutsideCriticalRegion`|指示上下文是任何关键的区域外。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrtrm.h 
 
 ##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
@@ -171,10 +166,10 @@ enum join_type;
 |`greedy`|贪婪`join`消息块立即接受传播时显示的消息。 这是更高效，但具有实时锁定，具体取决于网络配置的可能性。|  
 |`non_greedy`|非贪婪`join`消息块推迟消息并尝试使用它们后所有均已到达。 这些保证都起作用，但是速度更慢。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** agents.h  
 
-##  <a name="message_status"></a>  message_status Enumeration  
+##  <a name="message_status"></a>  message_status 枚举  
  `message` 对象的内容到块的有效响应。  
   
 ```
@@ -189,10 +184,10 @@ enum message_status;
 |`missed`|目标尝试接受消息，但已不再可用。|  
 |`postponed`|目标推迟消息。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** agents.h  
 
-##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
+##  <a name="policyelementkey"></a>  PolicyElementKey 枚举  
  描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略和它们的影响计划程序的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
 ```
@@ -214,10 +209,10 @@ enum PolicyElementKey;
 |`TargetOversubscriptionFactor`|每个硬件线程的虚拟处理器的试探性数。 如果必要，资源管理器可以增加目标过度订阅因素，以满足计算机上硬件线程的 `MaxConcurrency`。<br /><br /> 有效值： 正整数<br /><br /> 默认值： `1`|  
 |`WinRTInitialization`||  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrt.h  
 
-##  <a name="schedulertype"></a>  SchedulerType Enumeration  
+##  <a name="schedulertype"></a>  SchedulerType 枚举  
  由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -231,10 +226,10 @@ enum SchedulerType;
 |`ThreadScheduler`|指示正则 Win32 线程的显式请求。|  
 |`UmsThreadDefault`|在 Visual Studio 2013 中并发运行时中不支持用户模式计划 (UMS) 线程。 使用 `UmsThreadDefault` 作为 `SchedulerType` 策略的一个值不会导致错误。 不过，通过此策略创建的计划程序将默认使用 Win32 线程。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
+##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType 枚举  
  由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -247,7 +242,7 @@ enum SchedulingProtocolType;
 |`EnhanceForwardProgress`|在执行每个任务后，通过计划组的轮循机制到首选计划程序。 取消阻止的上下文通常安排在后进先出 (FIFO) 的方式。 虚拟处理器不会缓存解锁的上下文。|  
 |`EnhanceScheduleGroupLocality`|计划程序首选继续在移动到另一个计划组之前处理当前的计划组中的任务。 取消阻止的上下文缓存每个虚拟处理器，通常按计划先出 (LIFO) 方式解除阻止它们的虚拟处理器。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** concrt.h  
  
 ##  <a name="switchingproxystate"></a>  SwitchingProxyState 枚举  
@@ -269,7 +264,7 @@ enum SwitchingProxyState;
   
  有关如何使用此类型的详细信息，请参阅[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)。  
   
-##  <a name="task_group_status"></a>  task_group_status Enumeration  
+##  <a name="task_group_status"></a>  task_group_status 枚举  
  描述 `task_group` 或 `structured_task_group` 对象的执行状态。 此类型的值是由很多等待安排到一个任务组中的任务完成的方法返回的。  
   
 ```
@@ -283,10 +278,10 @@ enum task_group_status;
 |`completed`|排入 `task_group` 或 `structured_task_group` 对象的任务已成功完成。|  
 |`not_complete`|排入 `task_group` 对象的任务尚未完成。 请注意，此值目前不是由并发运行时返回的。|  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  **标头：** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>  WinRTInitializationType Enumeration  
+##  <a name="winrtinitializationtype"></a>  WinRTInitializationType 枚举  
  由 `WinRTInitialization` 策略用于描述，对于在 Windows 8 或更高版本的操作系统上运行的应用程序，是否以及如何在计划程序的线程上初始化 Windows 运行时。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -299,7 +294,7 @@ enum WinRTInitializationType;
 |`DoNotInitializeWinRT`|当应用程序在 Windows 8 或更高版本的操作系统上运行时，计划程序中的线程不会初始化 Windows 运行时。|  
 |`InitializeWinRTAsMTA`|当应用程序在 Windows 8 或更高版本的操作系统上运行时，计划程序中的每个线程都将初始化 Windows 运行时并声明它是多线程单元的一部分。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
 
 ## <a name="see-also"></a>请参阅  

@@ -1,29 +1,24 @@
 ---
-title: "Concurrency:: graphics Namespace |Microsoft 文档"
-ms.custom: 
+title: 'Concurrency:: graphics Namespace |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0469406d4a4efa4b7241c5561bbfb20e1d08a710
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2da450ca30ee780f0e493f0b120de33a939a4cd7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空间
 图形命名空间提供的类型和用于图形编程的函数。  
@@ -50,10 +45,10 @@ namespace graphics;
   
 ### <a name="enumerations"></a>枚举  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[address_mode 枚举](concurrency-graphics-namespace-enums.md#address_mode)。|指定地址模式支持纹理采样。|  
-|[filter_mode Enumeration](concurrency-graphics-namespace-enums.md#filter_mode)|指定支持纹理采样的筛选器模式。|  
+|[filter_mode 枚举](concurrency-graphics-namespace-enums.md#filter_mode)|指定支持纹理采样的筛选器模式。|  
   
 ### <a name="classes"></a>类  
   
@@ -91,7 +86,7 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|已重载。 将源纹理的内容复制到目标主机缓冲区。|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|已重载。 以异步方式将源纹理的内容复制到目标主机缓冲区。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_graphics.h  
   
  **命名空间：** 并发  

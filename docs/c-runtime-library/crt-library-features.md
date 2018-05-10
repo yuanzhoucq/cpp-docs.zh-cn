@@ -1,10 +1,10 @@
-﻿---
-title: "CRT 库功能 |Microsoft 文档"
-ms.custom: 
+---
+title: CRT 库功能 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/13/2018
 ms.technology:
 - cpp-standard-libraries
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.runtime
 dev_langs:
@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33e3e5f63aebfd1b169210eaa3748feb761e0422
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -115,7 +114,7 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 如果有多个 DLL 或 EXE，则无论是否正在使用不同版本的 Visual C++，你都可以具有多个 CRT。 例如，将 CRT 静态链接到多个 Dll 可能存在相同的问题。 遇到此静态 CRT 问题的开发人员已被告知使用 **/MD** 进行编译，以便使用 CRT DLL。 如果 Dll 跨 DLL 边界传递 CRT 资源，则可能遇到与 CRT 不匹配的问题，需要使用 Visual C++ 重新编译项目。
 
- 如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时同样需要注意。有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能发生的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
+如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时需注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
 ## <a name="see-also"></a>请参阅
 

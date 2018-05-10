@@ -1,27 +1,22 @@
 ---
-title: "2.6.4 atomic 构造 |Microsoft 文档"
-ms.custom: 
+title: 2.6.4 atomic 构造 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic 构造
 `atomic`指令可确保特定内存位置而不是将其公开到的多个可能性的更新是以原子方式，同时编写线程。 语法`atomic`指令是，如下所示：  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   *expr*是标量类型的表达式，它不引用指定的对象*x*。  
   
--   `binop`而不是重载的运算符之一的 +、 *、-，/、 &、 ^，&#124;，<\<，或 >>。  
+-   `binop` 而不是重载的运算符之一的 +、 *、-、 /、 &、 ^， &#124;，<\<，或 >>。  
   
  尽管它是实现定义是否实现替换所有`atomic`指令与**关键**指令具有相同的唯一*名称*、`atomic`指令允许更好的优化。 提供了通常硬件说明可以执行开销最少的原子更新。  
   

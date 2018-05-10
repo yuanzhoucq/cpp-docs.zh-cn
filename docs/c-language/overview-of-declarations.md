@@ -1,30 +1,25 @@
 ---
-title: "声明概述 | Microsoft Docs"
-ms.custom: 
+title: 声明概述 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarations"></a>声明概述
 “声明”指定一组标识符的解释和特性。 还将导致针对标识符命名的对象或函数保留存储的声明将称为“定义”。 用于变量、函数和类型的 C 声明都具有以下语法：  
@@ -81,7 +76,7 @@ int const *fp;
   
  type-qualifier 终止符有两种：const 和 `volatile`。 这些限定符指定仅在通过左值访问该类型的对象时才相关的类型的其他属性。 有关 const 和 `volatile` 的详细信息，请参阅[类型限定符](../c-language/type-qualifiers.md)。 有关左值的定义，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 语言语法摘要](../c-language/c-language-syntax-summary.md)   
  [声明和类型](../c-language/declarations-and-types.md)   
  [声明摘要](../c-language/summary-of-declarations.md)

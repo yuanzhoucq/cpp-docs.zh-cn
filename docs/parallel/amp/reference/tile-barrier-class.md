@@ -2,11 +2,8 @@
 title: tile_barrier 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tile_barrier
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d868b4bd677d207590de6449e3d5643001e857
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 类
 同步正在线程组 （磁贴） 中使用的线程的执行`wait`方法。 只有运行时可以实例化此类。  
@@ -54,7 +49,7 @@ class tile_barrier;
   
 |名称|描述|  
 |----------|-----------------|  
-|[wait](#wait)|指示要停止执行，直至磁贴中的所有线程都完成等待的线程组 (tile) 中的所有线程。|  
+|[等待](#wait)|指示要停止执行，直至磁贴中的所有线程都完成等待的线程组 (tile) 中的所有线程。|  
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|完成所有的内存访问之后，才能将磁贴中的所有线程和磁贴中的所有线程的阻止执行已达到此调用。|  
 |[wait_with_global_memory_fence](#wait_with_global_memory_fence)|直到已完成的所有全局内存访问以及磁贴中的所有线程均已都到达此调用将磁贴中的所有线程的阻止执行。|  
 |[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|将阻止执行磁贴中的所有线程，直至将所有`tile_static`内存访问已完成和磁贴中的所有线程均已都到达此调用。|  
@@ -118,5 +113,5 @@ void wait_with_global_memory_fence() const  restrict(amp);
 void wait_with_tile_static_memory_fence() const restrict(amp);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

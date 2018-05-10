@@ -1,12 +1,9 @@
 ---
-title: "int_2 类 |Microsoft 文档"
-ms.custom: 
+title: int_2 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::y
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5abe11c29263817c8530d01fb3e190ba5866326
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int2-class"></a>int_2 类
 表示两个整数的短矢量。  
@@ -111,7 +106,7 @@ class int_2;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#int_2__size)||  
   
@@ -131,7 +126,7 @@ class int_2;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `int_2`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  

@@ -1,12 +1,9 @@
 ---
-title: "Module:: getactivationfactory 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Module:: getactivationfactory 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GetActivationFactory
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetActivationFactory method
 ms.assetid: 59da8844-072e-414b-b89c-1db1cc4fd81d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d5c5ca4d470f52ff9dde862cc99b10a3459cd0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory 方法
 获取模块的激活工厂。  
@@ -54,7 +49,7 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为 GetActivationFactory 返回的 HRESULT。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  

@@ -1,13 +1,10 @@
 ---
-title: "文件特性常量 | Microsoft Docs"
-ms.custom: 
+title: 文件特性常量 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - A_HIDDEN
 - _A_NORMAL
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55dc7b0c0c21c8ee149e4be8eb829de29d73aacd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-attribute-constants"></a>文件特性常量
 ## <a name="syntax"></a>语法  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
  `_A_SYSTEM`  
  系统文件。 使用 DIR 命令时通常不可见，除非使用 /AS 选项。 值：0x04  
   
- 可以使用 OR 运算符 (&#124;) 组合多个常量。  
+ 可以使用 OR 运算符 (& #124;) 组合多个常量。  
   
 ## <a name="see-also"></a>请参阅  
  [文件名搜索函数](../c-runtime-library/filename-search-functions.md)   

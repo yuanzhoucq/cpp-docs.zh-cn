@@ -1,12 +1,9 @@
 ---
-title: "norm_3 类 |Microsoft 文档"
-ms.custom: 
+title: norm_3 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b697dec751cade2accb262c59b23983ac75d4205
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm3-class"></a>norm_3 类
 表示三个正常数字短矢量。  
@@ -172,7 +167,7 @@ class norm_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#size)||  
   
@@ -214,12 +209,12 @@ class norm_3;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `norm_3`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
 
-## <a name="ctor">norm_3 构造函数</a>
+## <a name="ctor"></a> norm_3 构造函数
 默认构造函数，将初始化为 0 的所有元素。  
   
 ## <a name="syntax"></a>语法  
@@ -283,7 +278,7 @@ explicit inline norm_3(
  `_Other`  
  用于初始化的对象。  
   
-## <a name="a-namesize-size-constant"></a><a name="size">大小常量
+## <a name="a-namesize-size-constant"></a><a name="size"> 大小常量
 ### <a name="syntax"></a>语法  
   
 ```  

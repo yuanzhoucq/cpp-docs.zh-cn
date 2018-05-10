@@ -1,12 +1,9 @@
 ---
-title: "unorm_3 类 |Microsoft 文档"
-ms.custom: 
+title: unorm_3 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm3-class"></a>unorm_3 类
 表示三个无符号的正常数字短矢量。  
@@ -114,7 +109,7 @@ class unorm_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|[unorm_3 Constructor](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
+|[unorm_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -171,7 +166,7 @@ class unorm_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#unorm_3__size)||  
   
@@ -213,7 +208,7 @@ class unorm_3;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unorm_3`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  

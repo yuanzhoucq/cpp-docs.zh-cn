@@ -1,12 +1,9 @@
 ---
-title: "unsupported_os 类 |Microsoft 文档"
-ms.custom: 
+title: unsupported_os 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unsupported_os
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a147bc429268c7342667e770de083dc6660fa955
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7a4881bc0182c0d7bfbc5b5806fd6a59eea7fb25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 类
 此类描述使用不受支持的操作系统时引发的一种异常。  
@@ -51,7 +46,7 @@ class unsupported_os : public std::exception;
   
  `unsupported_os`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  

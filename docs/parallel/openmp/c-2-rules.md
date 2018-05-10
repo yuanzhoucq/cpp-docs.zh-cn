@@ -1,32 +1,27 @@
 ---
-title: "C.2 规则 |Microsoft 文档"
-ms.custom: 
+title: C.2 规则 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 规则
 表示法是部分所述 6.1 C 标准。 此语法附录显示 OpenMP C 和 c + + 指令的基本语言语法的扩展。  
   
- **/\*在 c + + (ISO/IEC 14882:1998)\*/**  
+ **/\* 在 c + + (ISO/IEC 14882:1998) \*/**  
   
  *语句 seq*:  
   
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  *语句 seq openmp 指令*  
   
- **/\*在 C90 (ISO/IEC 9899: 1990)\*/**  
+ **/\* 在 C90 (ISO/IEC 9899: 1990) \*/**  
   
  statement-list：  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  *语句列表 openmp 指令*  
   
- **/\*在 C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* 在 C99 (ISO/IEC 9899: 1999) \*/**  
   
  *块项*:  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  *statement*：  
   
- **/\*标准语句\*/**  
+ **/\* 标准语句 \*/**  
   
  *openmp 构造*  
   
@@ -146,7 +141,7 @@ ms.lasthandoff: 12/21/2017
   
  **static**  
   
- **动态**  
+ **dynamic**  
   
  **引导式**  
   
@@ -274,7 +269,7 @@ ms.lasthandoff: 12/21/2017
   
  *声明*:  
   
- **/\*标准声明\*/**  
+ **/\* 标准声明 \*/**  
   
  *threadprivate 指令*  
   
@@ -304,9 +299,9 @@ ms.lasthandoff: 12/21/2017
   
  *reduction 运算符*:  
   
- *之一*:  **+  \* -（& a) ^ &#124; & （& a) &#124; &#124;**  
+ *之一*:  **+  \* -& ^ &#124; （& a) （& a)&#124;&#124;**  
   
- **/\*在 C 中\*/**  
+ **/\* 在 C 中 \*/**  
   
  *变量列表*:  
   
@@ -314,7 +309,7 @@ ms.lasthandoff: 12/21/2017
   
  *变量列表* **，** *标识符*  
   
- **/\*在 c + +\*/**  
+ **/\* 在 c + + \*/**  
   
  *变量列表*:  
   

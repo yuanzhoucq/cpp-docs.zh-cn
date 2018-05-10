@@ -1,13 +1,10 @@
 ---
-title: "如何： 在数据管道中的使用 transformer |Microsoft 文档"
-ms.custom: 
+title: 如何： 在数据管道中的使用 transformer |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76c8a50bd5a58d9fe6e4a68f05d9732e50fd04e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a291b5c53338137ae59d9361ee36b6df29df277e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>如何：在数据管道中使用转换器
 本主题包含演示如何使用一个基本示例[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)在数据管道中的类。 有关使用数据管道来执行图像处理的更完整示例，请参阅[演练： 创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。  

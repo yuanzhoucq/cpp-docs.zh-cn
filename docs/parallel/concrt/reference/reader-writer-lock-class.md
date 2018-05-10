@@ -1,12 +1,9 @@
 ---
-title: "reader_writer_lock 类 |Microsoft 文档"
-ms.custom: 
+title: reader_writer_lock 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 类
 具有仅限本地旋转的基于编写器首选队列的读取器-编写器锁。 锁授予对编写器的先进先出 (FIFO) 访问权限，并在出现编写器持续负载的情况下停止读取器。  
@@ -77,7 +72,7 @@ class reader_writer_lock;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `reader_writer_lock`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ reader_writer_lock 
 
  销毁`reader_writer_lock`对象。  
   
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>备注  
  应析构函数运行时不再持有锁。 允许读取器编写器锁与锁定析构仍保留会导致未定义的行为。  
   
-##  <a name="scoped_lock_class">reader_writer_lock:: scoped_lock 类</a>  
+##  <a name="scoped_lock_class"></a>  reader_writer_lock:: scoped_lock 类  
  异常安全 RAII 包装器可用于获取`reader_writer_lock`为编写器锁定对象。  
   
 ```
@@ -150,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock`要获取为编写器对象。  
   
-## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
 销毁`reader_writer_lock`对象并释放其构造函数中提供的锁。   
 
@@ -158,7 +153,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class">reader_writer_lock:: scoped_lock_read 类</a>  
+##  <a name="scoped_lock_read_class"></a>  reader_writer_lock:: scoped_lock_read 类  
  异常安全 RAII 包装器可用于获取`reader_writer_lock`锁定对象用作一个读取器。  
   
 ```

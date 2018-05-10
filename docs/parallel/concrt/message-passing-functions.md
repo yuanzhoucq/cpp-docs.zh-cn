@@ -1,29 +1,24 @@
 ---
-title: "消息传递函数 |Microsoft 文档"
-ms.custom: 
+title: 消息传递函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>消息传递函数
 异步代理库提供使你将组件间的消息传递的多个函数。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [示例](#examples)  
   
-##  <a name="send"></a>发送和 asend  
+##  <a name="send"></a> 发送和 asend  
 
  [Concurrency:: send](reference/concurrency-namespace-functions.md#send)函数将消息同步发送到指定的目标和[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函数将消息异步发送到指定的目标。 同时`send`和`asend`函数等待，直到目标指示它最终将接受或拒绝消息。  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="receive"></a>接收和 try_receive  
+##  <a name="receive"></a> 接收和 try_receive  
 
  [Concurrency:: receive](reference/concurrency-namespace-functions.md#receive)和[concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive)函数从给定的源读取数据。 `receive`函数等待数据变得可用，而`try_receive`函数将立即返回。  
   

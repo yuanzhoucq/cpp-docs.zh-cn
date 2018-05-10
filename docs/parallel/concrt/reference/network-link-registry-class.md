@@ -1,12 +1,9 @@
 ---
-title: "network_link_registry 类 |Microsoft 文档"
-ms.custom: 
+title: network_link_registry 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - network_link_registry
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 类
 `network_link_registry` 抽象基类管理源块和目标块之间的链接。  
@@ -64,7 +59,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|当在派生类中重写，将添加到链接`network_link_registry`对象。|  
 |[begin](#begin)|当在派生类中重写，返回的第一个元素的迭代器`network_link_registry`对象。|  
-|[contains](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定的块。|  
+|[包含](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定的块。|  
 |[count](#count)|当在派生类中重写时返回中的项的数目`network_link_registry`对象。|  
 |[remove](#remove)|当在派生类中重写，删除从指定的块`network_link_registry`对象。|  
   
@@ -74,7 +69,7 @@ class network_link_registry;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `network_link_registry`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  

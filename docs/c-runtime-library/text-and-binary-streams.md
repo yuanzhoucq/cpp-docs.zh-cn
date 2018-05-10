@@ -1,30 +1,25 @@
 ---
-title: "文本和二进制流 | Microsoft Docs"
-ms.custom: 
+title: 文本和二进制流 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-and-binary-streams"></a>文本和二进制流
 文本流包含一个或多个文本行，这些文本行可写入到面向文本的显示器中以供读取。 当从文本流中进行读取时，程序在每行末尾读取一个 `NL`（换行符）。 在写入文本流时，程序写入一个 `NL` 以表示行的结尾。 为了在目标环境中匹配不同的约定来表示文件中的文本，库函数可以更改在程序和文本流之间传输的字符的数量和表示。  

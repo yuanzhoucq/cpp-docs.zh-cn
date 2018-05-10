@@ -1,27 +1,22 @@
 ---
-title: "1.2 术语的定义 |Microsoft 文档"
-ms.custom: 
+title: 1.2 术语的定义 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab188c32c633092efc562d0432ebb7c5662b5ff8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8563bb757ad8d30f1639f017769bfd6c4084efa0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="12-definition-of-terms"></a>1.2 术语的定义
 本文档中使用以下术语：  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
  共享的变量名称存储单个的块。 访问此变量的所有线程在一个组将都访问存储此单个块。  
   
  结构化的块  
- 结构化的块是具有单个条目和单个退出的语句 （单个或复合）。 任何语句跳转到或跳出该语句是否是结构化的块 (包括调用**longjmp**(3 C) 或使用**引发**，但调用**退出**允许)。 复合语句是结构化的块，如果其执行始终开始在打开**{** ，并始终在结束结束**}**。 表达式语句、 选择语句、 迭代语句或**重**块是结构化的块，如果通过将其封闭在获取相应的复合语句**{**和**}**将结构化的块。 跳转语句、 标记的语句或声明语句不是结构化的块。  
+ 结构化的块是具有单个条目和单个退出的语句 （单个或复合）。 任何语句跳转到或跳出该语句是否是结构化的块 (包括调用**longjmp**(3 C) 或使用**引发**，但调用**退出**允许)。 复合语句是结构化的块，如果其执行始终开始在打开 **{** ，并始终在结束结束 **}**。 表达式语句、 选择语句、 迭代语句或**重**块是结构化的块，如果通过将其封闭在获取相应的复合语句 **{** 和 **}** 将结构化的块。 跳转语句、 标记的语句或声明语句不是结构化的块。  
   
  团队  
  共同完成执行过程中的一种构造的一个或多个线程。  

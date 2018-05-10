@@ -2,11 +2,8 @@
 title: runtime_exception 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - runtime_exception
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 类
 C++ Accelerated Massive Parallelism (AMP) 库中的异常的基类型。  
@@ -101,7 +96,7 @@ runtime_exception(
 ### <a name="return-value"></a>返回值  
  `runtime_exception` 对象。  
 
-## <a name="dtor"></a>  ~runtime_exception Destructor  
+## <a name="dtor"></a>  ~ runtime_exception 析构函数  
 销毁对象。  
   
 ### <a name="syntax"></a>语法  
@@ -140,5 +135,5 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

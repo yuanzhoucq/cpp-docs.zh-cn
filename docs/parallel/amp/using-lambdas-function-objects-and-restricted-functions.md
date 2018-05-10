@@ -1,27 +1,22 @@
 ---
-title: "使用 Lambda、 函数对象和受限的函数 |Microsoft 文档"
-ms.custom: 
+title: 使用 Lambda、 函数对象和受限的函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>使用 Lambda 表达式、函数对象和受限函数
 作为自变量对的调用中指定你想要在快捷键上运行的 c + + AMP 代码[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 你可以提供 lambda 表达式或函数对象 （函子），作为该参数。 此外，lambda 表达式或函数对象可以调用 c + + AMP 限制的函数。 本主题使用数组添加算法来演示 lambda、 函数对象和受限的函数。 下面的示例演示不使用 c + + AMP 代码的算法。 创建两个一维数组的长度相等。 相应的整数元素添加，并存储在第三个一维数组。 不使用 c + + AMP。  
@@ -181,6 +176,6 @@ void AddArraysWithFunction() {
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)   
  [函数调用](../../cpp/function-call-cpp.md)   
- [C + + 标准库中的函数对象](../../standard-library/function-objects-in-the-stl.md)   
+ [C++ 标准库中的函数对象](../../standard-library/function-objects-in-the-stl.md)   
  [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)
 

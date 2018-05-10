@@ -1,12 +1,9 @@
 ---
-title: "IResourceManager 结构 |Microsoft 文档"
-ms.custom: 
+title: IResourceManager 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 结构
 并发运行时的资源管理器的接口。 这是计划程序与资源管理器进行通信的接口。  
@@ -69,7 +64,7 @@ struct IResourceManager;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IResourceManager`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -123,7 +118,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>返回值  
  通过资源管理器中定义的枚举顺序中的第一个节点。  
   
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
+##  <a name="iresourcemanager__osversion"></a>  Iresourcemanager:: Osversion 枚举  
  表示操作系统版本的枚举类型。  
   
 ```

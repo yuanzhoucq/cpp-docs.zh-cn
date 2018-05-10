@@ -1,12 +1,9 @@
 ---
-title: "norm_4 类 |Microsoft 文档"
-ms.custom: 
+title: norm_4 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm4-class"></a>norm_4 类
 表示正常的四个数字的短矢量。  
@@ -468,7 +463,7 @@ class norm_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#norm_4__size)||  
   
@@ -608,7 +603,7 @@ class norm_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `norm_4`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  

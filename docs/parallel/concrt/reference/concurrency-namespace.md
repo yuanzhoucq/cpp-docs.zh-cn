@@ -2,11 +2,8 @@
 title: 并发 Namespace |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 `Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -276,6 +271,6 @@ namespace concurrency;
 ## <a name="requirements"></a>要求  
  **标头：** agents.h、 concrt.h、 concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参考](reference-concurrency-runtime.md)
 

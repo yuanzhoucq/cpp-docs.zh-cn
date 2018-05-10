@@ -1,13 +1,10 @@
 ---
-title: "事件 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 事件 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event（C++ 组件扩展）
 `event`关键字声明*事件*，这是一条通知到已注册的订阅服务器 (*事件处理程序*) 的相关事情已发生。  
@@ -56,7 +51,7 @@ modifiereventdelegate^ event_name
  *修饰符*  
  修饰符可用于事件声明或事件访问器方法。  可能的值为 `static` 和 `virtual`。  
   
- *委托*  
+ *delegate*  
  [委托](../windows/delegate-cpp-component-extensions.md)，事件处理程序必须与匹配的签名。  
   
  *event_name*  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  可以使用 `operators+=` 和 `operator-=` 来添加和删除事件处理程序，或者显式调用 `add()` 和 `remove()` 方法。  
   
- `event`是上下文相关的关键字;请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。  
+ `event` 是上下文相关的关键字;请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。  
   
 ## <a name="windows-runtime"></a>Windows 运行时  
   
@@ -91,7 +86,7 @@ modifiereventdelegate^ event_name
   
  如果想要添加，然后删除事件处理程序，则必须保存添加操作返回的 EventRegistrationToken 结构。 然后在删除操作中，必须使用已保存的 EventRegistrationToken 结构来标识要删除的事件处理程序。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -118,7 +113,7 @@ modifiereventdelegate^ event_name
  *修饰符*  
  修饰符可用于事件声明或事件访问器方法。  可能的值为 `static` 和 `virtual`。  
   
- *委托*  
+ *delegate*  
  [委托](../windows/delegate-cpp-component-extensions.md)，事件处理程序必须与匹配的签名。  
   
  *event_name*  
@@ -176,7 +171,7 @@ modifiereventdelegate^ event_name
   
 -   [接口中的事件](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

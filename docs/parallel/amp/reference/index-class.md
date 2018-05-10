@@ -1,12 +1,9 @@
 ---
-title: "index 类 |Microsoft 文档"
-ms.custom: 
+title: index 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/index
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="index-class"></a>index 类
 定义*N*-维索引 pographics cpp amp.md。  
@@ -68,7 +63,7 @@ class index;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|将存储的秩`index`对象。|  
   
@@ -78,13 +73,13 @@ class index;
 ## <a name="remarks"></a>备注  
  `index`结构表示的坐标向量*N*指定中的唯一位置的整数*N*-维空间。 向量中的值是从最高有效订购到最不重要。 您可以使用组件的值[运算符 =](#operator_eq)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  
 
 
-## <a name="index_ctor">索引构造函数</a>
+## <a name="index_ctor"></a> 索引构造函数
 初始化索引类的新实例。
 
 ```  
@@ -129,7 +124,7 @@ _I2
 _Other  
 一个新的索引对象所基于的索引对象。  
 
-## <a name="operator--"></a>  operator--
+## <a name="operator--"></a>  运算符-
 递减索引对象的每个元素。  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -141,7 +136,7 @@ index operator--(
 ### <a name="return-values"></a>返回值
 对于前缀运算符，该 index 对象 (* 这)。 对于后缀运算符，新的索引对象。
 
-## <a name="operator_mod_eq"></a>  operator(mod)=   
+## <a name="operator_mod_eq"></a>  operator(mod) =   
 该元素除以指定数目时，请计算该 index 对象中每个元素的模数 （余数）。
 
 ```  
@@ -164,7 +159,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>参数
 _Rhs 要相乘的数字。
 
-## <a name="operator_div_eq"></a>  operator/= 
+## <a name="operator_div_eq"></a>  / = 运算符 
 指定的数除以索引对象中的每个元素。
 
 ```
@@ -246,7 +241,7 @@ _Other 要从复制的索引对象。
 ### <a name="return-value"></a>返回值
 对此索引对象的引用。
 
-## <a name="operator_-_eq"></a>  operator-=
+## <a name="operator_-_eq"></a>  operator =
 中减去指定的数目的索引对象的每个元素。
 ```  
 index<_Rank>& operator-=(
@@ -263,7 +258,7 @@ _Rhs 要减去的数字。
 ### <a name="return-value"></a>返回值
 索引对象中。   
 
-## <a name="rank"></a>  Rank  
+## <a name="rank"></a>  级别  
   获取该 index 对象的秩。
 ```
 static const int rank = _Rank;
