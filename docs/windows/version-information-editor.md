@@ -1,13 +1,10 @@
 ---
-title: "版本信息编辑器 |Microsoft 文档"
-ms.custom: 
+title: 版本信息编辑器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.version.F1
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - editors, Version Information
 - resource editors, Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c221120bf7170025506fe49fe2ab6419ce66044
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a76dbb3d8b41c2366f354f9c3c8d66ccc3743f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="version-information-editor"></a>版本信息编辑器
 版本信息包括公司和产品标识、产品发行版号以及版权与商标通知。 使用版本信息编辑器，可以创建和维护存储在版本信息资源中的这些数据。 虽然应用程序不需要版本信息资源，但它是收集应用程序标识信息的有用位置。 安装 API 也使用版本信息。  
@@ -51,9 +46,9 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  使用版本信息编辑器时，在许多情况下可以单击鼠标右键以显示资源命令的快捷菜单。 例如，如果你在指向块头条目时单击鼠标，快捷菜单将显示“新建版本块信息”和“删除版本块信息”命令。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

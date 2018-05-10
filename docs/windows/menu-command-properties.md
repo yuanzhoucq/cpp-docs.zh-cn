@@ -1,30 +1,25 @@
 ---
-title: "菜单命令属性 |Microsoft 文档"
-ms.custom: 
+title: 菜单命令属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="menu-command-properties"></a>菜单命令属性
 根据选择菜单命令时 [属性窗口](/visualstudio/ide/reference/properties-window) 中出现的菜单属性组织以下信息。 按字母顺序列出属性，尽管属性窗口也使你可以按类别查看这些属性。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

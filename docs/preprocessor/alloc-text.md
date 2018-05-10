@@ -1,12 +1,9 @@
 ---
 title: alloc_text | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.alloc_text
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b93885663a3d8e037ded97fb7fd16eb5fed9bff8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a1e07b630254d7691321443a74973e06ed50ae2d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="alloctext"></a>alloc_text
 命名指定的函数定义驻留的代码部分。 杂注必须出现在函数声明符和命名函数的函数定义之间。  
@@ -42,7 +37,7 @@ textsection
 ```  
   
 ## <a name="remarks"></a>备注  
- **Alloc_text**杂注不处理 c + + 成员函数或重载的函数。 它是仅适用于带 C 链接声明的函数-也就是说，函数声明与**extern"C"**链接规范。 如果尝试对带 C++ 链接的函数使用此杂注，则会生成编译器错误。  
+ **Alloc_text**杂注不处理 c + + 成员函数或重载的函数。 它是仅适用于带 C 链接声明的函数-也就是说，函数声明与**extern"C"** 链接规范。 如果尝试对带 C++ 链接的函数使用此杂注，则会生成编译器错误。  
   
  由于函数寻址使用`__based`不支持，则指定节位置需要使用**alloc_text**杂注。 指定的名称*textsection*应括在双引号中。  
   

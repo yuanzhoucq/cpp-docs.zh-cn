@@ -1,12 +1,9 @@
 ---
-title: "Handlet:: Close 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Handlet:: Close 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT::Close
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Close method
 ms.assetid: 1b9d597c-abcf-4028-a068-0344560009f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2edd3fee9893c72685eb334bf4b361997646b7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handletclose-method"></a>HandleT::Close 方法
 关闭当前的 HandleT 对象。  
@@ -42,7 +37,7 @@ void Close();
   
  如果句柄关闭不正确，则调用线程中将引发异常。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  

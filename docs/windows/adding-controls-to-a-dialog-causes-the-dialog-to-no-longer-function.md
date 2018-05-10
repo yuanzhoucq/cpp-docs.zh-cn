@@ -1,13 +1,10 @@
 ---
-title: "向对话框添加控件导致对话框不再工作 |Microsoft 文档"
-ms.custom: 
+title: 向对话框添加控件导致对话框不再工作 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - dialog box controls, troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b10c24955e74d08ab570b5b694628f42bb394268
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>向对话框添加控件导致对话框不再工作
 将公共控件或 rich edit 控件添加到对话框中之后, 它时不会显示测试对话框中或对话框本身将不会出现。  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="the-fix-for-richedit-controls"></a>对 RichEdit 控件的修复  
  必须调用**LoadLibrary**为 rich edit 控件。 有关详细信息，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)，[有关 Rich Edit 控件](http://msdn.microsoft.com/library/windows/desktop/bb787873)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]，和[格式文本编辑控件的概述](../mfc/overview-of-the-rich-edit-control.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

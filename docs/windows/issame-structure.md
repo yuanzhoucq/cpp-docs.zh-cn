@@ -1,12 +1,9 @@
 ---
-title: "IsSame 结构 |Microsoft 文档"
-ms.custom: 
+title: IsSame 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsSame
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IsSame structure
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bae4ecb6f03b7b1cdb0fae02f211dd613e7c39d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="issame-structure"></a>IsSame 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -59,14 +54,14 @@ struct IsSame<T1, T1>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[IsSame::value 常量](../windows/issame-value-constant.md)|指示一种类型是否与另一个相同。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IsSame`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** internal.h  
   
  **Namespace:** Microsoft::WRL::Details  

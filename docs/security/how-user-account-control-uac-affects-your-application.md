@@ -1,13 +1,10 @@
 ---
-title: "用户帐户控制 (UAC) 如何影响你的应用程序 |Microsoft 文档"
-ms.custom: 
+title: 用户帐户控制 (UAC) 如何影响你的应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e609c16d63974506a06d6ec553cf4be09509acb9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 020a7a16e38ee40c99a7a5b77c88002e3135bfa1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>用户帐户控制 (UAC) 如何影响应用程序
 用户帐户控制 (UAC) 是 Windows Vista 的一项功能，其中用户帐户具有有限的特权。 可以在下列站点找到关于 UAC 的详细信息：  
@@ -45,7 +40,7 @@ ms.lasthandoff: 01/03/2018
   
  第一个选项是修改要更改到将执行级别的清单的 UAC 片段*requireAdministrator*。 然后，应用程序在运行之前将提示用户提供管理凭据。 有关如何执行此操作的信息，请参阅[/MANIFESTUAC （将 UAC 信息嵌入在清单中）](../build/reference/manifestuac-embeds-uac-information-in-manifest.md)。  
   
- 第二个选项是不通过指定将 UAC 片段嵌入到清单**/manifestuac: no**链接器选项。 在这种情况下，应用程序将以虚拟化方式运行。 在应用程序结束后，对注册表或文件系统的任何更改将不会保留。  
+ 第二个选项是不通过指定将 UAC 片段嵌入到清单 **/manifestuac: no**链接器选项。 在这种情况下，应用程序将以虚拟化方式运行。 在应用程序结束后，对注册表或文件系统的任何更改将不会保留。  
   
  下面的流程图描述了应用程序的运行方式取决于是否启用了 UAC 和应用程序是否有 UAC 清单：  
   

@@ -1,13 +1,10 @@
 ---
-title: "如何： 向资源脚本文件添加 MFC 支持 |Microsoft 文档"
-ms.custom: 
+title: 如何： 向资源脚本文件添加 MFC 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.add.MFC
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - MFC, adding support to resource scripts files
 - resource script files, adding MFC support
 ms.assetid: 599dfe9d-ad26-4e34-899c-49b56599e37f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 259b9d0799e46bba6ea2290ba6b02fe3f35e6e74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50c0493e630c2b141da1fced6964ffc514c761d4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>如何：向资源脚本文件添加 MFC 支持
 通常情况下，当生成用于 Windows 使用的 MFC 应用程序[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)，向导将生成一组基本文件 （包括资源脚本 (.rc) 文件），其中包含 Microsoft 基础的核心功能类 (MFC)。 但是，如果在为不基于 MFC 的 Windows 应用程序编辑 .rc 文件，则无法使用以下特定于 MFC 框架的功能：  

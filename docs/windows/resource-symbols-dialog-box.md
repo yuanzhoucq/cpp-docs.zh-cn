@@ -1,13 +1,10 @@
 ---
-title: "资源符号对话框 |Microsoft 文档"
-ms.custom: 
+title: 资源符号对话框 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Resource Symbols dialog box
 - Change Symbol dialog box
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 486d4c6c89a43c9d91c655911fa7fee8a31ebd32
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-symbols-dialog-box"></a>“资源符号”对话框
 **资源符号**对话框中，你可以添加新的资源符号、 更改显示，或跳到源代码中使用符号所在的位置的符号。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
  **名称**  
  显示符号的名称。 有关详细信息，请参阅[符号名限制](../windows/symbol-name-restrictions.md)。  
   
- **“值”**  
+ **值**  
  显示符号的数值。 有关详细信息，请参阅[符号值限制](../windows/symbol-value-restrictions.md)。  
   
  **在使用中**  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

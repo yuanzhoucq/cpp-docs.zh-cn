@@ -1,31 +1,26 @@
 ---
-title: "泛型接口 （Visual c + +） |Microsoft 文档"
-ms.custom: 
+title: 泛型接口 （Visual c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ab6585cd4d8c7a4da93273f99d47c0265608c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
 应用于对类类型参数的限制都应用于类型参数在接口上的那些相同 (请参阅[泛型类 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。  

@@ -1,13 +1,10 @@
 ---
-title: "网格设置对话框 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 网格设置对话框 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Grid Settings dialog box
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b3df26fc7612c236197903ecb9ce0e1d9de6b14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f8e3a1aba4040ce4e9f36cf15438cfd1c44492e4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>“网格设置”对话框（图标的图像编辑器）
 允许你指定映像的网格设置和编辑图像上方显示网格线。 行用于编辑图像，但未将另存为图像本身的一部分。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
  **高度**  
  指定每个磁贴块的高度。 在绘制位图包含定期排列的多个映像时，这非常有用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

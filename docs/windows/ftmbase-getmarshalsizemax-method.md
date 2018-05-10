@@ -1,12 +1,9 @@
 ---
-title: "Ftmbase:: Getmarshalsizemax 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Ftmbase:: Getmarshalsizemax 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetMarshalSizeMax method
 ms.assetid: b416b1bf-c73e-45d5-abb8-04921c1a0c94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d68889531c270db190f861eb20a34783b88987f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax 方法
 获取上的封送指定的接口指针上指定的对象所需的字节数的上限。  
@@ -70,7 +65,7 @@ STDMETHODIMP GetMarshalSizeMax(
 ## <a name="return-value"></a>返回值  
  如果成功，则则为 S_OK否则为 E_FAIL 或 E_NOINTERFACE。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ftm.h  
   
  **命名空间：** Microsoft::WRL  

@@ -1,12 +1,9 @@
 ---
-title: "SyncLockWithStatusT 类 |Microsoft 文档"
-ms.custom: 
+title: SyncLockWithStatusT 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SyncLockWithStatusT class
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b4b007acd6e6b9272a4fc7bb256d302cafeb75c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51e5a66358890fc20731fb5cb657616484e19db4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -72,7 +67,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[SyncLockWithStatusT::status_ 数据成员](../windows/synclockwithstatust-status-data-member.md)|根据当前的 SyncLockWithStatusT 对象保留的结果的基础等待锁操作完成后的操作对象。|  
   
@@ -81,7 +76,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
  `SyncLockWithStatusT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  

@@ -1,12 +1,9 @@
 ---
-title: "Comptrref:: Operator * 运算符 |Microsoft 文档"
-ms.custom: 
+title: 'Comptrref:: Operator * 运算符 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator*
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator* operator
 ms.assetid: 0287ca7a-4ce1-47f7-bab6-714fca3e04bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78ff8365bca6d586156728da89699a47353d940a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -43,7 +38,7 @@ InterfaceType* operator *();
 ## <a name="remarks"></a>备注  
  检索指向由当前 ComPtrRef 对象表示的接口的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** client.h  
   
  **Namespace:** Microsoft::WRL::Details  

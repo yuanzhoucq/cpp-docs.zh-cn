@@ -1,12 +1,9 @@
 ---
-title: "Synclockwithstatust:: Getstatus 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Synclockwithstatust:: Getstatus 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: d448b51d-a63d-40d9-a9ee-4aad3204118d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 181735766e62aa1bf8c306bd425c6e6b03b2066d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03addd8d89c54eddb5deb721ab47d46e8b945edd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="synclockwithstatustgetstatus-method"></a>SyncLockWithStatusT::GetStatus 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -45,7 +40,7 @@ DWORD GetStatus() const;
   
  GetStatus() 函数检索的基础值[status_](../windows/synclockwithstatust-status-data-member.md)数据成员。 当基于 SyncLockWithStatusT 类的对象执行锁定操作时，该对象首先等待该对象变成可用。 该等待操作的结果存储在`status_`数据成员。 可能值`status_`数据成员是等待操作的返回值。 有关详细信息，请参阅的返回值**WaitForSingleObjectEx()** MSDN 库中的函数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  

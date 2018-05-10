@@ -1,28 +1,23 @@
 ---
-title: "如何： 使用 WRL 处理事件 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 WRL 处理事件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3c1666d1c79414beddc5b5e3ccc03953c92e902
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 处理事件
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 订阅和处理 Windows 运行时对象的事件。  
@@ -96,7 +91,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译代码，将其复制，然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-events.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- **cl.exe wrl-consume-events.cpp runtimeobject.lib**  
+ **cl.exe wrl 使用 events.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

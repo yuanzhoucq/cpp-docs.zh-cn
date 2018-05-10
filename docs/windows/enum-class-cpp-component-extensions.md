@@ -1,28 +1,23 @@
 ---
-title: "枚举类 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 枚举类 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876cab344f1177000f63740ca6c33bc1db1afefe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="enum-class--c-component-extensions"></a>枚举类（C++ 组件扩展）
 在命名空间范围内声明枚举，该枚举是用户定义的类型，其包含称为枚举数的一组命名常数。  
@@ -69,7 +64,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
  有关详细信息和示例，请参阅 [枚举](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。  
   
- 请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如:  
+ 请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如：  
   
 -   如果 *underlying-type* 是数字，并且枚举器指定了该类型的最大值，则不会显示下一个隐式定义的枚举值。  
   
@@ -77,7 +72,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
 -   如果 *underlying-type* 是 `char16`，且枚举值的范围是从 0xD800 到 0xDFFF，则可显示该值。 但是，该值出现逻辑错误，因为它表示半个 Unicode 代理项对，且不会以分隔形式显示。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -185,7 +180,7 @@ void f(E)
   
 -   [枚举的基础类型。](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

@@ -1,13 +1,10 @@
 ---
-title: "Win 32 项目向导的应用程序设置 |Microsoft 文档"
-ms.custom: 
+title: Win 32 项目向导的应用程序设置 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.appset
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - application settings [C++]
 - Win32 Project Wizard, application settings
 ms.assetid: d6b818f0-9b23-4793-a6c5-df1c8c594bad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f93e81d5d030112f436ad93a53c2a65854b38f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55ae50d849a67da69cde6a9c4b1529c34ee4b428
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 项目向导的应用程序设置
 使用向导的此页为 Win32 项目设置选项。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 |选项|描述|  
 |------------|-----------------|  
-|**控制台应用程序**|创建控制台应用程序。 使用开发的控制台程序[控制台函数](https://msdn.microsoft.com/en-us/library/ms813137.aspx)，它提供的信息在控制台窗口中的字符模式支持。 Visual c + +[运行时库](../c-runtime-library/c-run-time-library-reference.md)还提供输出并输入从控制台窗口与标准 I/O 函数，如**printf_s()**和**scanf_s()**。 一个控制台应用程序有没有图形用户界面。 它将编译为一个.exe 文件，并可以作为独立的应用程序从命令行运行。<br /><br /> 你可以添加 MFC 和 ATL 支持到控制台应用程序。|  
+|**控制台应用程序**|创建控制台应用程序。 使用开发的控制台程序[控制台函数](https://msdn.microsoft.com/en-us/library/ms813137.aspx)，它提供的信息在控制台窗口中的字符模式支持。 Visual c + +[运行时库](../c-runtime-library/c-run-time-library-reference.md)还提供输出并输入从控制台窗口与标准 I/O 函数，如**printf_s()** 和**scanf_s()**。 一个控制台应用程序有没有图形用户界面。 它将编译为一个.exe 文件，并可以作为独立的应用程序从命令行运行。<br /><br /> 你可以添加 MFC 和 ATL 支持到控制台应用程序。|  
 |**Windows 应用程序**|创建 Win32 程序。 Win32 程序是用 C 或 c + +，使用 Win32 api 调用创建的图形用户界面编写的可执行应用 (EXE)。<br /><br /> 无法添加 MFC 或 ATL 支持到 Windows 应用程序。|  
 |**DLL**|创建 Win32 动态链接库 (DLL)。 Win32 DLL 是用 C 或 c + +，使用调用 Win32 API，而不是 MFC 类，以及作为多个应用程序可同时使用的函数的共享库中编写的二进制文件。<br /><br /> 无法添加 MFC 或 ATL 支持到 DLL 应用程序。 你可以指示 DLL 导出符号。|  
 |**静态库**|创建一个静态库。 静态库是一个包含对象及其函数和生成的可执行文件时，链接到你的程序的数据文件。 本主题说明如何创建初学者文件和[项目属性](../ide/property-pages-visual-cpp.md)为静态库。 静态库文件提供以下好处：<br /><br /> -A Win32 静态库是如果您正在使用的应用程序执行调用 Win32 API，而不是 MFC 类很有用。<br />不论你的 Windows 应用程序的其余部分编写 C 或 c + +，-链接的过程都是相同的。<br />-你可以将静态库链接到一个基于 MFC 的程序或非 MFC 程序。|  

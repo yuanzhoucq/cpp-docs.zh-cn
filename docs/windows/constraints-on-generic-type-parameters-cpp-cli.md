@@ -1,13 +1,10 @@
 ---
-title: "类型参数的泛型约束 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 类型参数的泛型约束 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - where
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 在泛型类型或方法声明中，可以使用约束限定类型参数。 约束是用作类型参数的类型必须满足的需求。 例如，约束可能是类型参数必须实现特定接口或从特定类继承。  
@@ -61,7 +56,7 @@ where type-parameter: constraint list
   
  类和接口约束指定自变量类型必须是或继承自指定的类或实现指定接口。  
   
- 对泛型类型或方法应用约束可以让该类型或方法中的代码利用约束类型的已知功能。 例如，声明一个泛型类，类型参数实现**IComparable\<T >**接口：  
+ 对泛型类型或方法应用约束可以让该类型或方法中的代码利用约束类型的已知功能。 例如，声明一个泛型类，类型参数实现**IComparable\<T >** 接口：  
   
 ```  
 // generics_constraints_1.cpp  
@@ -92,7 +87,7 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- 使用多个类型参数，使用一个**其中**每个类型参数的子句。 例如:  
+ 使用多个类型参数，使用一个**其中**每个类型参数的子句。 例如：  
   
 ```  
 // generics_constraints_3.cpp  
@@ -112,7 +107,7 @@ ref class Dictionary {};
   
 -   约束也可以是类类型，例如抽象基类。 但是，约束不能是值类型或封装的类。  
   
--   约束自身不能是类型参数，但它们涉及开放构造类型中的类型参数。 例如:  
+-   约束自身不能是类型参数，但它们涉及开放构造类型中的类型参数。 例如：  
   
     ```  
     // generics_constraints_4.cpp  

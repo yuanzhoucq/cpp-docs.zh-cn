@@ -1,37 +1,32 @@
 ---
-title: "如何： 声明和使用内部指针及托管的数组 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 如何： 声明和使用内部指针及托管的数组 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: caa0c3cc2c379362972d1b24e80f3ebb94d9f878
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：声明和使用内部指针及托管数组 (C++/CLI)
 以下 C + + /cli CLI 示例演示如何声明和使用内部指针到一个数组。  
   
 > [!IMPORTANT]
->  通过支持此语言功能**/clr**编译器选项，但不是**/ZW**编译器选项。  
+>  通过支持此语言功能 **/clr**编译器选项，但不是 **/ZW**编译器选项。  
   
 ## <a name="example"></a>示例  
   

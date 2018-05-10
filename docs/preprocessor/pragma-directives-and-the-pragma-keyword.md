@@ -1,12 +1,9 @@
 ---
-title: "Pragma 指令和 __Pragma 关键字 |Microsoft 文档"
-ms.custom: 
+title: Pragma 指令和 __Pragma 关键字 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#pragma'
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ccc6ab8fe90b8b97dee213d65e19eb903249da6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 指令和 __Pragma 关键字
 杂注指令指定计算机或操作系统特定的编译器功能。 `__pragma` 关键字是特定于 Microsoft 编译器的，可利用它在宏定义中编码杂注指令。  
@@ -60,18 +55,18 @@ __pragma(token-string)
 |-|-|-|  
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|  
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|  
-|[component](../preprocessor/component.md)|[conform](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
+|[component](../preprocessor/component.md)|[符合](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
 |[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
 |[函数](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|  
-|[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
-|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
+|[intrinsic](../preprocessor/intrinsic.md)|[循环](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
+|[管理](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||  
 |[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|  
 |[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|  
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[非托管](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
 |[warning](../preprocessor/warning.md)|||  
   
  1. 仅受 C++ 编译器支持。  
@@ -91,7 +86,7 @@ cl /Zp8 ...
 ```  
   
 ## <a name="the-pragma-keyword"></a>__pragma() 关键字  
- **Microsoft specific**  
+ **Microsoft 专用**  
   
  编译器还支持 `__pragma` 关键字，该关键字具有与 `#pragma` 指令相同的功能，但可用于宏定义中的内联。 `#pragma`指令不能用于宏定义中，因为编译器会将指令中解释的数字符号 （#）[字符串化运算符 （#）](../preprocessor/stringizing-operator-hash.md)。  
   

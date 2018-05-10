@@ -1,12 +1,9 @@
 ---
-title: "Simpleactivationfactory:: Activateinstance 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Simpleactivationfactory:: Activateinstance 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ActivateInstance method
 ms.assetid: 4f836e51-5a6c-4bad-b871-9f25199298b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bbe9d8c215674f087c6e0fa4ca7f3439fb89b78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance 方法
 
@@ -51,9 +46,9 @@ STDMETHOD( ActivateInstance )(
 
 ## <a name="remarks"></a>备注
 
-如果 &#95; &#95;WRL_STRICT &#95; &#95;是定义，将断言发出错误如果基类中类模板参数指定不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
+如果&#95; &#95;WRL_STRICT&#95; &#95;是定义，将断言发出错误如果基类中类模板参数指定不派生自[RuntimeClass](../windows/runtimeclass-class.md)，或者因配置不与 WinRt 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)枚举值。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 **标头：** module.h
 

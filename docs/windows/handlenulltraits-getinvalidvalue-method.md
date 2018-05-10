@@ -1,12 +1,9 @@
 ---
-title: "Handlenulltraits:: Getinvalidvalue 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Handlenulltraits:: Getinvalidvalue 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetInvalidValue method
 ms.assetid: 49df8980-9c92-4333-9f3b-687b7c10949e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 168213026851bf8a99b999d31cfa64568e13db92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a51570a2616dd99487290e235d6d98e8725d5ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handlenulltraitsgetinvalidvalue-method"></a>HANDLENullTraits::GetInvalidValue 方法
 表示一个无效句柄。  
@@ -40,7 +35,7 @@ inline static Type GetInvalidValue();
 ## <a name="return-value"></a>返回值  
  始终返回 `nullptr`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  

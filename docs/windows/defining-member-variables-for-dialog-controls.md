@@ -1,13 +1,10 @@
 ---
-title: "为对话框控件定义成员变量 |Microsoft 文档"
-ms.custom: 
+title: 为对话框控件定义成员变量 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - controls [C++], member variables
 - Dialog editor, defining member variables for controls
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb966459695eb048943a12e33c8e909f99fdc92b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ba8fc95290ecb90557203be2b6ab4cce18b91e3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>定义对话框控件的成员变量
 要定义除按钮外的任何对话框控件的成员变量，可以使用以下方法。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  你还可以使用**成员变量**选项卡中**MFC 类向导**添加为指定类的新成员变量并查看已定义的那些。  
   
- 惠?  
+ 要求  
   
  MFC  
   

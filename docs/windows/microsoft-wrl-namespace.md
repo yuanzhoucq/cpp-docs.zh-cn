@@ -1,12 +1,9 @@
 ---
-title: "Microsoft:: wrl Namespace |Microsoft 文档"
-ms.custom: 
+title: 'Microsoft:: wrl Namespace |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空间
 定义构成 Windows 运行时 c + + 模板库的基础类型。  
@@ -81,7 +76,7 @@ namespace Microsoft::WRL;
   
 ### <a name="enumerations"></a>枚举  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[AsyncResultType 枚举](../windows/asyncresulttype-enumeration.md)|指定 GetResults() 方法返回的结果类型。|  
 |[ModuleType 枚举](../windows/moduletype-enumeration.md)|指定模块是否应支持进程内服务器或进程外服务器。|  
@@ -97,7 +92,7 @@ namespace Microsoft::WRL;
 |[CreateClassFactory 函数](../windows/createclassfactory-function.md)|创建为指定类生成实例的工厂。|  
 |[Make 函数](../windows/make-function.md)|初始化指定的 Windows 运行时类。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** async.h、 client.h、 corewrappers.h、 event.h、 ftm.h、 implements.h、 internal.h、 module.h  
   
  **命名空间：** Microsoft::WRL  

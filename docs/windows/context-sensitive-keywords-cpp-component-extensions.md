@@ -1,13 +1,10 @@
 ---
-title: "上下文相关的关键字 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 上下文相关的关键字 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - internal_CPP
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
 *上下文相关的关键字*是只能在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [委托](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate](../windows/delegate-cpp-component-extensions.md)  
   
--   [事件](../windows/event-cpp-component-extensions.md)  
+-   [event](../windows/event-cpp-component-extensions.md)  
   
 -   [finally](../dotnet/finally.md)  
   
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
   
 -   [文本](../windows/literal-cpp-component-extensions.md)  
   
--   [替代](../windows/override-cpp-component-extensions.md)  
+-   [override](../windows/override-cpp-component-extensions.md)  
   
 -   [属性](../windows/property-cpp-component-extensions.md)  
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`(属于[泛型](../windows/generics-cpp-component-extensions.md))  
+-   `where` (属于[泛型](../windows/generics-cpp-component-extensions.md))  
   
  出于可读性目的，你可能想要限制区分上下文关键字作为用户定义符号的使用。  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  （此功能没有特定于平台的备注。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  （此功能没有特定于平台的备注。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

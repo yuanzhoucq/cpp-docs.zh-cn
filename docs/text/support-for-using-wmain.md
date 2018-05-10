@@ -1,13 +1,10 @@
 ---
-title: "支持使用 wmain |Microsoft 文档"
-ms.custom: 
+title: 支持使用 wmain |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - wWinMain
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721915ca5ebbc75b17771dae0804e94aa360177c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8b82b9f13da1b7c4884001fed5afce832147714
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-using-wmain"></a>支持使用 wmain
-Visual c + + 支持定义**wmain**函数并将宽字符参数传递给 Unicode 应用程序。 你将形参声明为**wmain**，使用格式类似于**主要**。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如:  
+Visual c + + 支持定义**wmain**函数并将宽字符参数传递给 Unicode 应用程序。 你将形参声明为**wmain**，使用格式类似于**主要**。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如：  
   
 ```  
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )  

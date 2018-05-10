@@ -1,13 +1,10 @@
 ---
-title: "在设备图像 （图标的图像编辑器） 中创建透明或反转区域 |Microsoft 文档"
-ms.custom: 
+title: 在设备图像 （图标的图像编辑器） 中创建透明或反转区域 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,18 +25,16 @@ helpviewer_keywords:
 - device projects, transparent images
 - icons [C++], screen regions
 ms.assetid: a994954b-b039-4391-a535-58d1fa10fc3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f416b31200352fc849fb2d1c7a43f9759da47d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70fd2411eefba495478baaf5fb20fe7a27031001
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>在设备图像中创建透明或反色区域（图标的图像编辑器）
 在[图像编辑器](../windows/image-editor-for-icons.md)，初始图标或光标图像具有透明特性。 尽管图标和光标映像为矩形，许多不会显示，因为图像的部分都是透明的;通过图标或光标显示在屏幕上的基础映像。 当拖动图标时，图像的部分可能以反转的颜色。 通过设置屏幕颜色和中的反转颜色创建此效果[颜色窗口](../windows/colors-window-image-editor-for-icons.md)。  
@@ -66,9 +61,9 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  如果双击屏幕颜色或反色选择器[自定义颜色选择器对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)显示。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 惠?  
+ 要求  
   
  无  
   

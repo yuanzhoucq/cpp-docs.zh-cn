@@ -1,13 +1,10 @@
 ---
-title: "反转选定内容 （图标的图像编辑器） 中的颜色 |Microsoft 文档"
-ms.custom: 
+title: 反转选定内容 （图标的图像编辑器） 中的颜色 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: ec8c724c-6595-4ae8-8893-56e40c14033e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 835c6e8824c29b46fa32bf219518c6d1dc64fa39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>反转所选内容的颜色（图标的图像编辑器）
 图像编辑器提供在图像选定部分进行反色操作的便利方法，这样一来，你就能够了解使用反色时图像将如何显示。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 惠?  
+ 要求  
   
  无  
   

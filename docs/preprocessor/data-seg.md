@@ -1,12 +1,9 @@
 ---
-title: data_seg | Microsoft Docs
-ms.custom: 
+title: data_seg |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - data_seg_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - data_seg pragma
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23598ba98d35e2a32832437111ebf9f852e1259
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dataseg"></a>data_seg
 指定 .obj 文件中用于存储初始化变量的数据段。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
   
  *标识符*让多个记录有一条弹出**pop**命令。  
   
- *"segment-name"*(optional)  
+ *"段名称"*（可选）  
  段的名称。 如果用于**pop**，弹出堆栈和*段名称*会成为活动段名称。  
   
  *"段类"* （可选）  

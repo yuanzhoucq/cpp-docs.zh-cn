@@ -1,12 +1,9 @@
 ---
-title: "ComPtrRefBase 类 |Microsoft 文档"
-ms.custom: 
+title: ComPtrRefBase 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ComPtrRefBase class
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 071598c83086afe12e1d19ef541dbfb3d0dbc55a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -64,14 +59,14 @@ class ComPtrRefBase;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|指向由当前模板参数指定的类型的指针。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ComPtrRefBase`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** client.h  
   
  **Namespace:** Microsoft::WRL::Details  

@@ -1,31 +1,26 @@
 ---
-title: "预定义的符号 Id |Microsoft 文档"
-ms.custom: 
+title: 预定义的符号 Id |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - symbols, predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e431ce20361a9a7d3d05676d1b9da01b98c07d5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="predefined-symbol-ids"></a>预定义的符号 ID
 开始新项目时，根据项目类型预定义了一些符号 ID 供你使用。 这些符号 ID 支持 MFC 等各种库和项目类型。 它们表示通常包含于任何应用程序或硬件项（如鼠标或打印机）动作中的常见任务。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32、MFC 或 ATL  
   
 ## <a name="see-also"></a>请参阅  

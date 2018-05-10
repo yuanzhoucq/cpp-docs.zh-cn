@@ -1,13 +1,10 @@
 ---
-title: "Tchar.h 中的一般文本映射 |Microsoft 文档"
-ms.custom: 
+title: Tchar.h 中的一般文本映射 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的一般文本映射
 若要简化的代码的全球范围内使用，传输[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]运行时库提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-特定一般文本映射的多种数据类型、 例程和其他对象。 你可以使用这些映射，Tchar.h，编写可以为单字节，多字节，编译的泛型代码中定义或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字符集，具体取决于你使用定义的清单常量`#define`语句。 一般文本映射是[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]不扩展[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]兼容。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 |# 定义|编译的版本|示例|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]（宽字符）|`_tcsrev` 映射到 `_wcsrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] （宽字符）|`_tcsrev` 映射到 `_wcsrev`|  
 |`_MBCS`|多字节字符|`_tcsrev` 映射到 `_mbsrev`|  
 |无 (默认值已不`_UNICODE`也不`_MBCS`定义)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` 映射到 `strrev`|  
   
@@ -60,14 +55,14 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="generic-text-data-type-mappings"></a>一般文本数据类型映射  
   
-|一般文本<br /><br /> 数据类型名称|_UNICODE （& A)<br /><br /> 未定义 _MBCS|_MBCS<br /><br /> 已定义|_UNICODE<br /><br /> 已定义|  
+|一般文本<br /><br /> 数据类型名称|_UNICODE （&AMP; A)<br /><br /> 未定义 _MBCS|_MBCS<br /><br /> 已定义|_UNICODE<br /><br /> 已定义|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`unsigned int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L`(将以下字符或字符串转换其[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]对应项)|  
+|`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L` (将以下字符或字符串转换其[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]对应项)|  
   
  一般文本映射的例程、 变量和其他对象的列表，请参阅[一般文本映射](../c-runtime-library/generic-text-mappings.md)运行时库参考中。  
   

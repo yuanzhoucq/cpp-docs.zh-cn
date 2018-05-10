@@ -1,13 +1,10 @@
 ---
-title: "导出 |Microsoft 文档"
-ms.custom: 
+title: 导出 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.export
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24619e3a0e707b40590b0ffb37b415629a18b1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67b71639fc0b7d0039f5665d2cc187191ac14baf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="export"></a>export
 会导致数据结构，用于放置在.idl 文件。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  不能将应用**导出**属性类，即使此类仅具有公共成员 (等效于`struct`)。  
   
- 如果你导出未命名`enum`s 或`struct`s，则会将以开头的给定名称**__unnamed***x*，其中*x*是序列号。  
+ 如果你导出未命名`enum`s 或`struct`s，则会将以开头的给定名称 **__unnamed * * * x*，其中*x*是序列号。  
   
  对导出有效 typedef 是基类型、 结构、 联合、 枚举，或键入标识符。  请参阅[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)有关详细信息。  
   
@@ -62,13 +57,13 @@ struct MyStruct {
 };  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**联合**， `typedef`， `enum`， `struct`，或`interface`|  
+|**适用对象**|**联合**， `typedef`， `enum`， `struct`，或 `interface`|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

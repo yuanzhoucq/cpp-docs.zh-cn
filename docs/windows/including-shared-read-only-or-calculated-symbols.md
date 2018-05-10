@@ -1,13 +1,10 @@
 ---
-title: "包括共享 （只读） 或计算符号 |Microsoft 文档"
-ms.custom: 
+title: 包括共享 （只读） 或计算符号 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.shared.calculated
 dev_langs:
@@ -21,25 +18,23 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共享（只读）或计算符号
 开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。 随后，你可以使用[资源包括对话框中](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。  
   
  可能要使用只读符号定义的原因之一是用于计划在多个项目之间共享的符号文件。  
   
- 当现有资源包含的符号定义使用表达式而不是简单整数来定义符号值时，也可以使用包含的符号文件。 例如:  
+ 当现有资源包含的符号定义使用表达式而不是简单整数来定义符号值时，也可以使用包含的符号文件。 例如：  
   
 ```  
 #define   IDC_CONTROL1 2100  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在**只读符号指令**框中，使用**#include**编译器指令以指定想要保留只读符号的文件。  
+2.  在**只读符号指令**框中，使用 **#include**编译器指令以指定想要保留只读符号的文件。  
   
      请勿调用文件 Resource.h，因为这是通常由主符号头文件使用的文件名。  
   
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 惠?  
+ 要求  
   
  Win32  
   

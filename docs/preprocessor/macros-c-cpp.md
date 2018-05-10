@@ -1,12 +1,9 @@
 ---
-title: "宏 （C/c + +） |Microsoft 文档"
-ms.custom: 
+title: 宏 （C/c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>宏 (C/C++)
-预处理展开宏中不是预处理器指令的所有行 (没有行 **#** 作为第一个非空白字符) 和部分中的一部分不跳过某些指令条件编译。 利用“条件编译”指令，您可以通过测试一个常量表达式或标识符取消对源文件的某些部分的编译，以确定将哪些文本块传递给编译器以及在预处理期间将从源文件中删除哪些文本块。  
+预处理展开宏中不是预处理器指令的所有行 (没有行**#** 作为第一个非空白字符) 和部分中的一部分不跳过某些指令条件编译。 利用“条件编译”指令，您可以通过测试一个常量表达式或标识符取消对源文件的某些部分的编译，以确定将哪些文本块传递给编译器以及在预处理期间将从源文件中删除哪些文本块。  
   
  `#define` 指令通常用于将有用标识符与常量、关键字和常用语句或表达式关联。 表示常量的标识符有时称为“符号常量”或“清单常量”。 表示语句或表达式的标识符称为“宏”。 在该预处理器文档中，仅使用术语“宏”。  
   

@@ -1,30 +1,25 @@
 ---
-title: "显式重写 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 显式重写 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>显式重写（C++ 组件扩展）
 本主题讨论如何显式重写基类或接口的成员。 命名的 （显式） 重写应仅用于重写的方法与具有不同的名称派生方法。  
@@ -60,15 +55,15 @@ overriding-function-declarator = function { overriding-function-definition }
   
 ## <a name="windows-runtime"></a>Windows 运行时  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
- 有关显式信息在本机代码中重写或使用代码编译**/clr:oldSyntax**，请参阅[显式重写](../cpp/explicit-overrides-cpp.md)。  
+ 有关显式信息在本机代码中重写或使用代码编译 **/clr:oldSyntax**，请参阅[显式重写](../cpp/explicit-overrides-cpp.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

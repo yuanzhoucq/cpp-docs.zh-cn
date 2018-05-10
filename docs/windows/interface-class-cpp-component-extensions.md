@@ -1,13 +1,10 @@
 ---
-title: "接口类 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 接口类 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - interface_CPP
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
 声明接口。  在本机接口上的信息，请参阅[__interface](../cpp/interface.md)。  
@@ -83,7 +78,7 @@ interface class
   
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -91,7 +86,7 @@ interface class
   
  （此语言功能没有只适用于公共运行时的备注。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

@@ -1,13 +1,10 @@
 ---
-title: "国际支持 |Microsoft 文档"
-ms.custom: 
+title: 国际支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,22 +14,20 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce0210546dafd354d0d62225c97df8b36a8d84e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f4edcae610f17409c319c7b4bd39dc137e1211e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="international-enabling"></a>国际支持
 大多数传统的 C 和 c + + 代码作出假设字符和字符串操作适用于国际应用程序不起作用。 MFC 和运行时库支持 Unicode 或 MBCS，而是仍为您进行的工作。 以指导你，本部分介绍 Visual c + + 中的"国际支持"的含义：  
   
--   Unicode 和 MBCS 通过 MFC 函数参数列表中的可移植数据类型，可以启用和返回类型。 在合适的方法，具体取决于你的生成是否定义符号中有条件地定义这些类型**_UNICODE**或符号**_MBCS** （这意味着 DBCS）。 应用程序后，具体取决于这两个符号你的生成定义自动链接 MFC 库的不同变体。  
+-   Unicode 和 MBCS 通过 MFC 函数参数列表中的可移植数据类型，可以启用和返回类型。 在合适的方法，具体取决于你的生成是否定义符号中有条件地定义这些类型 **_UNICODE**或符号 **_MBCS** （这意味着 DBCS）。 应用程序后，具体取决于这两个符号你的生成定义自动链接 MFC 库的不同变体。  
   
 -   类库代码使用可移植运行时函数和其他方法来确保正确的 Unicode 或 MBCS 行为。  
   
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
     -   使用相同的可移植运行时函数，使 MFC 在这两种环境下可移植。  
   
-    -   使文本字符串和字符在任一环境，可移植使用**_T**宏。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
+    -   使文本字符串和字符在任一环境，可移植使用 **_T**宏。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
   
     -   分析字符串在 MBCS 下的时，请采取预防措施。 在 Unicode 下不需要这些预防措施。 有关详细信息，请参阅[MBCS 编程提示](../text/mbcs-programming-tips.md)。  
   

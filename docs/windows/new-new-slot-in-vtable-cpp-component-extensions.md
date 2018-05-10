@@ -1,30 +1,25 @@
 ---
-title: "新 (新 vtable 中的槽） （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 新 (新 vtable 中的槽） （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new（vtable 中的新槽）（C++ 组件扩展）
 `new`关键字指示虚拟成员将获取 vtable 中的新槽。  
@@ -38,15 +33,15 @@ ms.lasthandoff: 12/21/2017
 ## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
- 在**/clr**编译，`new`指示虚拟成员将获取 vtable 中的新槽; 该函数不重写基类方法。  
+ 在 **/clr**编译，`new`指示虚拟成员将获取 vtable 中的新槽; 该函数不重写基类方法。  
   
- `new`导致 newslot 修饰符添加到的 IL 的函数。  Newslot 有关的详细信息，请参阅：  
+ `new` 导致 newslot 修饰符添加到的 IL 的函数。  Newslot 有关的详细信息，请参阅：  
   
 -   [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
 -   [MethodAttributes 枚举](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

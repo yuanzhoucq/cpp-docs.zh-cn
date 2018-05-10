@@ -1,12 +1,9 @@
 ---
-title: "#定义指令 （C/c + +） |Microsoft 文档"
-ms.custom: 
+title: '#定义指令 （C/c + +） |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#define'
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8875c2b2c744a16f936fd2220826f23413a0e6c9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="define-directive-cc"></a>#define 指令 (C/C++)
 `#define`创建*宏*，这是标识符或参数化的标识符与标记字符串的关联。 在定义宏之后，编译器可用标记字符串替换源文件中标识符的每个匹配项。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="syntax"></a>语法  
  `#define` *标识符**令牌字符串*选择  
   
- `#define` *identifier* `(` *identifier*opt`,`*...*`,`*identifier*opt`)`*token-string*opt  
+ `#define` *标识符* `(` *标识符*选择`,`*...* `,`*标识符*选择`)`*令牌字符串*选择  
   
 ## <a name="remarks"></a>备注  
  `#define`指令会导致编译器用替换*令牌字符串*每个出现的*标识符*源文件中。 *标识符*仅在程序集形成一个令牌时替换。 也就是说，*标识符*都不能替代，如果它显示在注释在字符串中，或作为较长的标识符的一部分。 有关详细信息，请参阅[令牌](../cpp/tokens-cpp.md)。  

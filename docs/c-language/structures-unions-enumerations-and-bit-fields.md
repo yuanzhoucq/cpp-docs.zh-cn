@@ -1,27 +1,22 @@
 ---
-title: "结构、联合、枚举和位域 | Microsoft Docs"
-ms.custom: 
+title: 结构、联合、枚举和位域 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 53f72553-c716-41fb-8384-89dc6712ee2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9705e6a6940411b1758410882363f2f85dd145f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6b8a1432b6a66cb04f2b5105cb772f9e8e2691
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>结构、联合、枚举和位域
 -   [对联合的不正确的访问](../c-language/improper-access-to-a-union.md)  
