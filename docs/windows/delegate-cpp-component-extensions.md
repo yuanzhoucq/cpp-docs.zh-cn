@@ -1,13 +1,10 @@
 ---
-title: "委托 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 委托 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="delegate--c-component-extensions"></a>委托（C++ 组件扩展）
 声明表示函数指针的类型。  
@@ -72,7 +67,7 @@ delegate-type-identifier
 ### <a name="remarks"></a>备注  
  使用*委托类型标识符*声明具有相同的原型作为委派的事件。 有关详细信息，请参阅[委托 (C + + /cli CX)](../cppcx/delegates-c-cx.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
@@ -129,7 +124,7 @@ function_declaration
   
 -   [泛型委托 (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

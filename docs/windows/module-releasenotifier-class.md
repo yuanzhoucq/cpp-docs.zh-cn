@@ -1,12 +1,9 @@
 ---
-title: "Module:: releasenotifier 类 |Microsoft 文档"
-ms.custom: 
+title: 'Module:: releasenotifier 类 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::ReleaseNotifier
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseNotifier class
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb640f146109363a8025818b3ec560c250029914
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76edb403fae12dd8b6221d8bd6ec82424bc5a4f7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 类
 在释放模块中的最后一个对象时调用事件处理程序。  
@@ -56,7 +51,7 @@ class ReleaseNotifier;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ReleaseNotifier`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL

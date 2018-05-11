@@ -1,13 +1,10 @@
 ---
-title: "泛型 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 泛型 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics--c-component-extensions"></a>泛型（C++ 组件扩展）
 泛型是参数化类型和方法。 在本节中，请了解 Windows 运行时和公共语言运行时共同支持的泛型功能，以及只有公共语言运行时支持的功能。 另外，请了解如何使用 Visual C++ 创作自己的泛型方法和类型，以及如何使用 Visual C++ 的 .NET Framework 语言创作的泛型类型。 最后，本节将比较泛型和 C++ 模板。  

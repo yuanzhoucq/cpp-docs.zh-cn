@@ -1,12 +1,9 @@
 ---
-title: "#导入指令 （c + +） |Microsoft 文档"
-ms.custom: 
+title: '#导入指令 （c + +） |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#import'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e649e458a6275ea369031416c379721c3f9af0e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 **C + + 专用**  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
   
 -   包含类型库的文件的名称，如 .olb、.tlb 或 .dll 文件。 关键字**文件：**，可以在前面的每个文件名。  
   
--   类型库中控件的 progid。 关键字**progid:**，可以在前面的每个 progid。 例如:  
+-   类型库中控件的 progid。 关键字**progid:**，可以在前面的每个 progid。 例如：  
   
     ```  
     #import "progid:my.prog.id.1.5"  
@@ -61,13 +56,13 @@ ms.lasthandoff: 02/23/2018
   
      请注意，在 64 位操作系统上使用交叉编译器编译时，该编译器只能读取 32 位注册表配置单元。 您可能需要使用本机 64 位编译器才能生成和注册 64 位类型库。  
   
--   类型库的库 ID。 关键字**libid:**，可以在前面的每个库 id。 例如:  
+-   类型库的库 ID。 关键字**libid:**，可以在前面的每个库 id。 例如：  
   
     ```  
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")  
     ```  
   
-     如果未指定版本或 lcid，[规则](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)，应用于**progid:**也适用于**libid:**。  
+     如果未指定版本或 lcid，[规则](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)，应用于**progid:** 也适用于**libid:**。  
   
 -   可执行 (.exe) 文件。  
   
@@ -78,13 +73,13 @@ ms.lasthandoff: 02/23/2018
 -   可以理解的任何其他文件格式**LoadTypeLib** API。  
   
  `attributes`  
- 一个或多个[#import 属性](#_predir_the_23import_directive_import_attributes)。 用空格或逗号分隔每个特性。 例如:  
+ 一个或多个[#import 属性](#_predir_the_23import_directive_import_attributes)。 用空格或逗号分隔每个特性。 例如：  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
 ```  
   
- 或  
+ -或-  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only  
@@ -101,7 +96,7 @@ ms.lasthandoff: 02/23/2018
 |尖括号形式|指示预处理器沿下列路径搜索类型库文件：<br /><br /> 1.**路径**环境变量路径列表<br />2.**LIB**环境变量路径列表<br />3./I 指定的路径 (附加包含目录) 编译器选项，只不过它编译器搜索从使用的另一个类型库引用的类型库[no_registry](../preprocessor/no-registry.md)属性。|  
   
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 指定本地化 ID 和版本号  
- 指定 progid 时，还可以指定 progid 的本地化 ID 和版本号。 例如:  
+ 指定 progid 时，还可以指定 progid 的本地化 ID 和版本号。 例如：  
   
 ```  
 #import "progid:my.prog.id" lcid("0") version("4.0)  
@@ -139,7 +134,7 @@ ms.lasthandoff: 02/23/2018
   
 -   转发引用和 typedef：包含结构声明（例如 `struct IMyInterface` 和 typedef）。  
   
--   智能指针声明： 模板类`_com_ptr_t`是用于封装接口指针并将无需调用的智能指针实现`AddRef`，**版本**，`QueryInterface`函数。 此外，它在创建新的 COM 对象时会隐藏 `CoCreateInstance` 调用。 本节使用宏语句**_COM_SMARTPTR_TYPEDEF**将模板专用化 COM 接口的 typedef 建立[_com_ptr_t](../cpp/com-ptr-t-class.md)模板类。 例如，对于接口**IMyInterface**、。TLH 文件将包含：  
+-   智能指针声明： 模板类`_com_ptr_t`是用于封装接口指针并将无需调用的智能指针实现`AddRef`，**版本**，`QueryInterface`函数。 此外，它在创建新的 COM 对象时会隐藏 `CoCreateInstance` 调用。 本节使用宏语句 **_COM_SMARTPTR_TYPEDEF**将模板专用化 COM 接口的 typedef 建立[_com_ptr_t](../cpp/com-ptr-t-class.md)模板类。 例如，对于接口**IMyInterface**、。TLH 文件将包含：  
   
     ```  
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
@@ -190,7 +185,7 @@ using namespace MyLib;
  有关详细信息，请参阅知识库文章“#import 包装器方法可能导致访问冲突”(Q242527) 或“将 #import 用于 XML 时的编译器错误”(Q269194)。 你可以找到知识库文章位于 MSDN 库媒体或在[Microsoft 支持](https://support.microsoft.com/)。  
   
 ##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 属性  
- `#import` 可以选择性地包含一个或多个特性。 这些特性通知编译器修改类型库标头的内容。 反斜杠 (**\\**) 符号可以用于在单个包含附加行`#import`语句。 例如:  
+ `#import` 可以选择性地包含一个或多个特性。 这些特性通知编译器修改类型库标头的内容。 反斜杠 (**\\**) 符号可以用于在单个包含附加行`#import`语句。 例如：  
   
 ```  
 #import "test.lib" no_namespace \  

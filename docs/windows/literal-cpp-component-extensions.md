@@ -1,13 +1,10 @@
 ---
-title: "文本 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 文本 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
@@ -16,21 +13,19 @@ dev_langs:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
-（数据成员） 的变量标记为`literal`中**/clr**编译为等同的本机`static const`变量。  
+（数据成员） 的变量标记为`literal`中 **/clr**编译为等同的本机`static const`变量。  
   
 ## <a name="all-platforms"></a>所有平台  
  **备注**  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
@@ -127,7 +122,7 @@ class B {
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ## <a name="see-also"></a>请参阅  

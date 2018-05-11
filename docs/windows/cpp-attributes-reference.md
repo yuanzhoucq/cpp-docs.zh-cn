@@ -1,30 +1,25 @@
 ---
 title: C + + 属性引用 |Microsoft 文档
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="c-attributes-reference"></a>C++ 特性参考
 Microsoft 定义一的组特性，用于简化 COM 编程和.NET Framework 公共语言运行时开发。 当您在源文件中包含特性时，编译器会使用提供程序 Dll 插入代码或修改生成的对象文件中的代码。  

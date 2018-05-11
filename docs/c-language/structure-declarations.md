@@ -1,13 +1,10 @@
 ---
-title: "结构声明 | Microsoft 文档"
-ms.custom: 
+title: 结构声明 | Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-declarations"></a>结构声明
 “结构声明”用于为类型命名和指定一系列可具有不同类型的变量值（称为结构的“成员”或“字段”）。 可选标识符（称为“标记”）为结构类型命名并可用于结构类型的后续引用。 该结构类型的变量保留该类型定义的整个序列。 C 中的结构类似于其他语言中称为“记录”的类型。  
   
 ## <a name="syntax"></a>语法  
  *struct-or-union-specifier*:  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   
@@ -167,7 +162,7 @@ struct somestruct
   
  编译器允许未确定大小或零大小的数组作为结构的最后一个成员。 如果常量数组在不同的情况下大小不同，这可能很有用。 此类结构的声明类似于以下形式：  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+ `struct` identifier{set-of-declarations type array-name[ ];};* *  
   
  未确定大小的数组仅在作为结构的最后一个成员时才出现。 只要所有封闭结构中都不再进一步声明成员，那么包含未确定大小的数组声明的结构就可以嵌入其他结构中。 不允许有此类结构的数组。 当应用于此类型的变量或应用于此类型本身时，`sizeof` 运算符假定数组的大小为 0。  
   

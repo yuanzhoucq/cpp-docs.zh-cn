@@ -1,31 +1,26 @@
 ---
-title: "方法特性 |Microsoft 文档"
-ms.custom: 
+title: 方法特性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>方法特性
 以下属性将应用于类、 组件类或接口中的方法。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|指示属性支持数据绑定。|  
 |[call_as](../windows/call-as.md)|允许不可远程控制函数映射到远程函数。|  
-|[自定义](../windows/custom-cpp.md)|你可以定义自己的属性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义自己的属性。|  
 |[db_column](../windows/db-column.md)|将指定的列绑定到行集。|  
 |[db_command](../windows/db-command.md)|创建 OLE DB 命令。|  
 |[db_param](../windows/db-param.md)|将指定的成员变量与一个输入或输出参数相关联，并分隔变量。|  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |[id](../windows/id.md)|指定的成员函数 （属性或方法，在接口或调度接口） DISPID。|  
 |[immediatebind](../windows/immediatebind.md)|指示数据库将立即收到通知的数据绑定对象的属性的所有更改。|  
 |[in](../windows/in-cpp.md)|指示参数是要调用的过程中传递给调用的过程。|  
-|[本地](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
+|[local](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
 |[nonbrowsable](../windows/nonbrowsable.md)|指示接口成员不应显示在属性浏览器中。|  
 |[propget](../windows/propget.md)|指定的属性访问器函数。|  
 |[propput](../windows/propput.md)|指定的属性设置函数。|  

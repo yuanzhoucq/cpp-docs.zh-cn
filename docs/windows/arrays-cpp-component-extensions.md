@@ -1,13 +1,10 @@
 ---
-title: "数组 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 数组 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>数组（C++ 组件扩展）
 `Platform::Array<T>`类型在 C + + /CX 中，或`array`关键字在 C + + /cli CLI，声明的指定的类型和初始值的数组。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  `array-type`  
  数组变量的类型。 有效类型为 Windows 运行时类和基本类型、 ref 类和结构、 值类和结构和本机指针 (`type*`)。  
   
- `rank`[可选]  
+ `rank` [可选]  
  数组的维度数。 必须为 1。  
   
  `identifier`  
@@ -79,14 +74,14 @@ ms.lasthandoff: 12/21/2017
  `initialization-type`  
  初始化该数组的值的类型。 通常情况下，`array-type`和`initialization-type`具有相同的类型。 但是，类型可以是不同的转换是否`initialization-type`到`array-type`— 例如，如果`initialization-type`派生自`array-type`。  
   
- `initialization-list`[可选]  
+ `initialization-list` [可选]  
  以逗号分隔初始化数组的元素的大括号中的值的列表。 例如，如果`rank-size-list`已`(3)`，该声明的 3 个元素，一维数组`initialization list`可能是`{1,2,3}`。  
   
 ### <a name="remarks"></a>备注  
   
  你可以在编译时检测类型是否是类型的引用计数数组`__is_ref_array(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ### <a name="examples"></a>示例  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  数组变量的类型。 有效类型为 Windows 运行时类和基本类型、 ref 类和结构、 值类和结构，本机指针 (`type*`)，和本机的 POD （纯旧数据） 类型。  
   
- `rank`[可选]  
+ `rank` [可选]  
  数组的维度数。 默认值为 1;最大值为 32。 每个维度本身就是数组的一个数组。  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  以逗号分隔列表的数组中每个维度的大小。 或者，如果`initialization-list`指定参数，编译器可以推断出的每个维度的大小和`rank-size-list`可以省略。 
   
- `initialization-list`[可选]  
+ `initialization-list` [可选]  
  以逗号分隔初始化数组的元素的大括号中的值的列表。 或逗号分隔的列表嵌套*初始化列表*初始化多维数组中的元素的项。  
   
  例如，如果`rank-size-list`已`(3)`，该声明的 3 个元素，一维数组`initialization list`可能是`{1,2,3}`。 如果`rank-size-list`已`(3,2,4)`，其声明中的第一个维度、 2 个元素在第二个和 4 个元素中第三个、 3 个元素的三维数组`initialization-list`可能是`{{1,2,3},{0,0},{-5,10,-21,99}}`。)  
   
 ### <a name="remarks"></a>备注  
   
- `array`处于[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空间。  
+ `array` 处于[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空间。  
   
  标准 c + +，如数组的索引是从零开始，和数组下标通过使用方括号 ([])。 与标准 c + +，不同的多维数组索引指定列表中的每个维度而不是一组方括号 ([]) 运算符时针对每个维度的索引。 例如，*标识符*[*index1*， *index2*] 而不是*标识符*[*index1*] [ *index2*]。  
   
@@ -155,7 +150,7 @@ int main() {
   
  在编译时，你可以检测是否不包含的公共语言运行时 (CLR) 数组类型`__is_ref_array(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

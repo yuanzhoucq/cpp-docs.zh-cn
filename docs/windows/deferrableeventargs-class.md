@@ -1,28 +1,23 @@
 ---
-title: "DeferrableEventArgs 类 |Microsoft 文档"
-ms.custom: 
+title: DeferrableEventArgs 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce2c554ac6d959df868b80c1959a286fb0ef307
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 15be5c26e5d4e976eaba7b6b24e1bf4f62c53aca
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 类
 一种用于延迟的事件自变量类型的模板类。  
@@ -59,7 +54,7 @@ class DeferrableEventArgs : public TEventArgsInterface
   
  此类显示为一个延迟事件的事件处理程序的第一个自变量。 你可以调用[GetDeferral](../windows/deferrableeventargs-getdeferral-method.md)方法以获取[延迟](http://go.microsoft.com/fwlink/p/?linkid=526520)可以从中获取有关延迟事件的所有信息的对象。 处理完事件后，应对 Deferral 对象调用 Complete。 然后，你应调用[InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md)在事件处理程序方法结束时，这可确保所有延迟事件的完成已正确传递。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** event.h  
   
  **命名空间：** Microsoft::WRL  

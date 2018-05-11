@@ -1,13 +1,10 @@
 ---
-title: "如何： 以文本格式打开资源脚本文件 |Microsoft 文档"
-ms.custom: 
+title: 如何： 以文本格式打开资源脚本文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - .rc files, opening in text format
 - rc files, opening in text format
 ms.assetid: 0bc57527-f53b-40c9-99a9-4dcbc5c9af57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 347d33a746adec1208b81fefa54c10472e68b7d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14af857d7727ee8df13a9eb6c438342007252950
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>如何：以文本格式打开资源脚本文件
 有时可能需要查看项目的资源脚本 (.rc) 文件的内容，而不在特定的资源编辑器中打开资源（如对话框）。 例如，可能需要在资源文件的所有对话框内搜索字符串，而不必分别打开每个对话框。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 惠?  
+ 要求  
   
  Win32  
   

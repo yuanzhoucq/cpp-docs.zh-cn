@@ -1,13 +1,10 @@
 ---
-title: "属性按字母顺序参考 |Microsoft 文档"
-ms.custom: 
+title: 属性按字母顺序参考 |Microsoft 文档
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>按字母顺序的特性参考
 中 Visual c + + 提供了以下属性。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|将一个接口条目添加到 COM 映射。|  
 |[control](../windows/control.md)|指定的用户定义的类型是一个控件。|  
 |[cpp_quote](../windows/cpp-quote.md)|发出指定的字符串，而无需引号字符，到生成的头文件。|  
-|[自定义](../windows/custom-cpp.md)|你可以定义你自己的特性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义你自己的特性。|  
 |[db_accessor](../windows/db-accessor.md)|将列绑定在行集中，并将它们绑定到相应的访问器映射。|  
 |[db_column](../windows/db-column.md)|将指定的列绑定到行集。|  
 |[db_command](../windows/db-command.md)|执行的 OLE DB 命令。|  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[length_is](../windows/length-is.md)|指定要传输的数组元素的数目。|  
 |[library_block](../windows/library-block.md)|将.idl 文件的库块中的构造。|  
 |[licensed](../windows/licensed.md)|指示的组件类它所应用于获得了许可证，并且必须使用实例化**IClassFactory2**。|  
-|[本地](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
+|[local](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
 |[max_is](../windows/max-is.md)|指定有效的数组索引的最大值。|  
 |[模块](../windows/module-cpp.md)|定义.Idl 文件中的库块。|  
 |[ms_union](../windows/ms-union.md)|控制 nonencapsulated 联合的网络数据表示形式对齐方式。|  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 |[nonbrowsable](../windows/nonbrowsable.md)|指示接口成员不应显示在属性浏览器中。|  
 |[noncreatable](../windows/noncreatable.md)|定义本身不能实例化的对象。|  
 |[nonextensible](../windows/nonextensible.md)|指定`IDispatch`实现仅包括的属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。|  
-|[对象](../windows/object-cpp.md)|标识的自定义接口;自定义特性的同义词。|  
+|[object](../windows/object-cpp.md)|标识的自定义接口;自定义特性的同义词。|  
 |[odl](../windows/odl.md)|标识为对象描述语言 (ODL) 接口的接口。|  
 |[oleautomation](../windows/oleautomation.md)|指示接口是与自动化兼容。|  
 |[可选](../windows/optional-cpp.md)|指定的成员函数的可选参数。|  
@@ -109,10 +104,10 @@ ms.lasthandoff: 12/21/2017
 |[propput](../windows/propput.md)|指定属性设置功能。|  
 |[propputref](../windows/propputref.md)|指定使用的引用，而不是值的属性设置函数。|  
 |[ptr](../windows/ptr.md)|将一个指针指定为完整的指针。|  
-|[公用](../windows/public-cpp-attributes.md)|可确保即使它未从引用.idl 文件中，typedef 将转到类型库。|  
+|[public](../windows/public-cpp-attributes.md)|可确保即使它未从引用.idl 文件中，typedef 将转到类型库。|  
 |[范围](../windows/range-cpp.md)|指定自变量或在运行时设置其值的字段的允许值的范围。|  
 |[rdx](../windows/rdx.md)|在创建或修改注册表项。|  
-|[只读](../windows/readonly-cpp.md)|禁止对变量赋值。|  
+|[readonly](../windows/readonly-cpp.md)|禁止对变量赋值。|  
 |[ref](../windows/ref-cpp.md)|标识引用指针。|  
 |[registration_script](../windows/registration-script.md)|执行指定的注册脚本。|  
 |[requestedit](../windows/requestedit.md)|该值指示属性是否支持**OnRequestEdit**通知。|  
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
 |[satype](../windows/satype.md)|指定的数据类型**SAFEARRAY**。|  
 |[size_is](../windows/size-is.md)|指定的内存大小为固定大小的指针分配且大小调整了大小的指针和单字节或多维数组的指针。|  
 |[源](../windows/source-cpp.md)|指示类、 属性或方法的成员是事件的源。|  
-|[字符串](../windows/string-cpp.md)|指示的一维`char`， `wchar_t`，**字节**，或等效的数组或指向这样的数组的指针都必须视为字符串。|  
+|[string](../windows/string-cpp.md)|指示的一维`char`， `wchar_t`，**字节**，或等效的数组或指向这样的数组的指针都必须视为字符串。|  
 |[support_error_info](../windows/support-error-info.md)|支持的错误报告目标对象。|  
 |[switch_is](../windows/switch-is.md)|指定的表达式或充当选择联合成员联合判别的标识符。|  
 |[switch_type](../windows/switch-type.md)|标识用作联合判别变量的类型。|  

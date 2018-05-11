@@ -1,13 +1,10 @@
 ---
-title: "多字节字符集 (Mbcs) 支持 |Microsoft 文档"
-ms.custom: 
+title: 多字节字符集 (Mbcs) 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>支持多字节字符集 (MBCS)
 多字节字符集 (MBCS) 是一种支持无法用单字节表示的字符集（如日语和中文）的旧方法。 如果要进行新的开发，则应对所有文本字符串（最终用户不会看到的系统字符串也许可以除外）使用 Unicode。 MBCS 是旧技术，不建议用于新开发。  
@@ -56,10 +51,10 @@ ms.lasthandoff: 12/21/2017
  C 运行时库和 MFC 支持单字节、MBCS 和 Unicode 编程。 对进行处理单字节字符串`str`系列运行时函数，MBCS 字符串处理相对应的`_mbs`函数和 Unicode 字符串处理相对应的*wcs*函数。 MFC 类成员函数的实现使用可移植运行时函数，该函数在适当情况下映射到 `str` 系列的函数、MBCS 函数或 Unicode 函数，如“MBCS/Unicode 可移植性”中所述。  
   
  MBCS/Unicode 可移植性  
- 使用 Tchar.h 头文件，可以从相同的源生成单字节、MBCS 和 Unicode 应用程序。 Tchar.h 定义具有前缀的宏*_tcs* ，它们分别映射到`str`， `_mbs`，或*wcs*函数，根据需要。 若要生成 MBCS，请定义符号**_MBCS**。 若要生成 Unicode，请定义符号**_UNICODE**。 默认情况下， **_MBCS**为 MFC 应用程序定义。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
+ 使用 Tchar.h 头文件，可以从相同的源生成单字节、MBCS 和 Unicode 应用程序。 Tchar.h 定义具有前缀的宏 *_tcs* ，它们分别映射到`str`， `_mbs`，或*wcs*函数，根据需要。 若要生成 MBCS，请定义符号 **_MBCS**。 若要生成 Unicode，请定义符号 **_UNICODE**。 默认情况下， **_MBCS**为 MFC 应用程序定义。 有关详细信息，请参阅[Tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
   
 > [!NOTE]
->  行为是不确定的如果同时定义**_UNICODE**和**_MBCS**。  
+>  行为是不确定的如果同时定义 **_UNICODE**和 **_MBCS**。  
   
  Mbctype.h 和 Mbstring.h 头文件定义特定于 MBCS 的函数和宏，你可能在某些情况下需要它们。 例如，`_ismbblead` 告诉你字符串中的特定字节是否为前导字节。  
   

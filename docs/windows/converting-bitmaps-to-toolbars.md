@@ -1,13 +1,10 @@
 ---
-title: "将位图转换为工具栏 |Microsoft 文档"
-ms.custom: 
+title: 将位图转换为工具栏 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Toolbar editor, converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d189395bbedff4d73cc690d454ddd07af4d109e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e80bee7ef9bfe52abf63ac959475c5d8dbcf0ece
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>将位图转换为工具栏
 可以通过将位图转换来创建一个新的工具栏。 从位图图形将转换为工具栏按钮图像。 位图通常包含一个位图，与每个按钮的一个映像若干按钮图像。 映像可以是任意大小;默认值为 16 像素宽的图像的高度。 你可以指定在按钮图像的大小[新建工具栏资源对话框](../windows/new-toolbar-resource-dialog-box.md)当选择从工具栏编辑器**映像**与图像编辑器中的菜单。  
@@ -46,9 +41,9 @@ ms.lasthandoff: 12/21/2017
   
  此外可以通过更改新的工具栏上的按钮的命令 Id[属性窗口](/visualstudio/ide/reference/properties-window)。 编辑新的工具栏上的信息，请参阅[创建、 移动和编辑工具栏按钮](../windows/creating-moving-and-editing-toolbar-buttons.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 惠?  
+ 要求  
   
  MFC 或 ATL  
   

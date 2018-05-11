@@ -1,30 +1,25 @@
 ---
-title: "特性用途 |Microsoft 文档"
-ms.custom: 
+title: 特性用途 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], about attributes
 ms.assetid: 3aff8bfa-a2a3-4fcb-a2c6-1d96a2b4c68d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed20c29d017527d5c2ce0b0c5ab8053fc75dc6ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="purpose-of-attributes"></a>特性用途
 属性扩展的 c + + 在不是当前可能的方向而不会破坏语言的经典结构。 属性允许提供程序 (单独的 Dll) 来动态扩展语言功能。 属性的主要目的是简化的 COM 组件，除了提高组件开发人员的工作效率级别创作。 特性可以应用到几乎任何 c + + 构造，如类、 数据成员或成员函数。 下面是这种新技术所提供的优势突出显示：  

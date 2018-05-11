@@ -2,33 +2,28 @@
 title: Lambda 表达式的示例 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
 本文演示如何在你的程序中使用 lambda 表达式。 有关 lambda 表达式的概述，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。 有关 lambda 表达式结构的详细信息，请参阅[Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。  
   
-##  <a name="declaringLambdaExpressions"></a>声明 Lambda 表达式  
+##  <a name="declaringLambdaExpressions"></a> 声明 Lambda 表达式  
   
 ### <a name="example-1"></a>示例 1  
  由于 lambda 表达式已类型化，你可以将其分配给`auto`变量或[函数](../standard-library/function-class.md)对象，如下所示：  
@@ -109,7 +104,7 @@ int main()
   
  [[本文内容](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>调用 Lambda 表达式  
+##  <a name="callingLambdaExpressions"></a> 调用 Lambda 表达式  
  你可以立即调用 Lambda 表达式，如下面的代码片段所示。 第二个代码段演示如何 lambda 作为参数传递到 C++ 标准库算法如`find_if`。  
   
 ### <a name="example-1"></a>示例 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[本文内容](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>嵌套 Lambda 表达式  
+##  <a name="nestingLambdaExpressions"></a> 嵌套 Lambda 表达式  
   
 ### <a name="example"></a>示例  
  你可以将 lambda 表达式嵌套在另一个中，如下例所示。 内部 lambda 表达式将其参数与 2 相乘并返回结果。 外部 lambda 表达式通过其参数调用内部 lambda 表达式并在结果上加 3。  
@@ -222,7 +217,7 @@ int main()
   
  [[本文内容](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>高阶 Lambda 函数  
+##  <a name="higherOrderLambdaExpressions"></a> 高阶 Lambda 函数  
   
 ### <a name="example"></a>示例  
  许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其自变量或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。  
@@ -271,7 +266,7 @@ int main()
   
  [[本文内容](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>在函数中使用 Lambda 表达式  
+##  <a name="methodLambdaExpressions"></a> 在函数中使用 Lambda 表达式  
   
 ### <a name="example"></a>示例  
  你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获 `this` 指针，以提供对封闭类的函数和数据成员的访问路径。  
@@ -366,7 +361,7 @@ int main()
   
  [[本文内容](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>与模板配合使用 Lambda 表达式  
+##  <a name="templateLambdaExpressions"></a> 与模板配合使用 Lambda 表达式  
   
 ### <a name="example"></a>示例  
  由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all` 函数将一元 `operator-` 应用于 `vector` 对象中的每个元素。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[本文内容](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>处理异常  
+##  <a name="ehLambdaExpressions"></a> 处理异常  
   
 ### <a name="example"></a>示例  
  lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 以下示例使用 `for_each` 函数和 lambda 表达式将一个 `vector` 对象的值填充到另一个中。 它使用`try` / `catch`块来处理无效访问第一个向量。  

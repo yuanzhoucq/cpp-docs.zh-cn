@@ -1,13 +1,10 @@
 ---
-title: "自定义或更改颜色 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 自定义或更改颜色 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - Adjust Colors command
 - Image editor [C++], dithered color
 ms.assetid: e58f6b32-f435-4d9a-a570-7569433661ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 762c2a9d9814f9780aeae2d8d61d7006bdc9728c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自定义或更改颜色（图标的图像编辑器）
 图像编辑器[调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，你可以[保存并加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 惠?  
+ 要求  
   
  无  
   

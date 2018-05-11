@@ -1,13 +1,10 @@
 ---
-title: "版本 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 版本 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.version
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db6c31df932890799f68e2ae466b0a927f0f999f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="version-c"></a>version (C++)
 标识的类的多个版本之间的特定版本。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>示例  
  请参阅[可绑定](../windows/bindable.md)更大的示例的示例使用**版本**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   

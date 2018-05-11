@@ -1,12 +1,9 @@
 ---
-title: "Activationfactory:: Queryinterface 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Activationfactory:: Queryinterface 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ActivationFactory::QueryInterface
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - QueryInterface method
 ms.assetid: 2a9b71aa-61c0-43f7-aa35-00f0ee0af031
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efd94727fb49d7673f8f16a6ee427640be79d6e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d93a2f61e92172c94fef2406fc6caa2de71ab8e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface 方法
 检索指向指定接口的指针。  
@@ -49,7 +44,7 @@ STDMETHOD(
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为描述失败的 HRESULT。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  

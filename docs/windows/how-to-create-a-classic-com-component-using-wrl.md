@@ -1,28 +1,23 @@
 ---
-title: "如何： 创建传统型 COM 组件，使用 WRL |Microsoft 文档"
-ms.custom: 
+title: 如何： 创建传统型 COM 组件，使用 WRL |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：使用 WRL 创建传统型 COM 组件
 Windows 运行时 c + + 模板库 (WRL) 可用于在桌面应用中，除了使用适用于通用 Windows 平台 (UWP) 应用创建用于基本经典 COM 组件。 创建 COM 组件时，对于 Windows 运行时 c + + 模板库可能需要更少的代码比 ATL Windows 运行时 c + + 模板库支持的 COM 子集的信息，请参阅[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  
@@ -35,7 +30,7 @@ Windows 运行时 c + + 模板库 (WRL) 可用于在桌面应用中，除了使�
   
 2.  添加**Win32 项目**到解决方案。 该项目命名，例如， `CalculatorComponent`。 上**应用程序设置**选项卡上，选择**DLL**。  
   
-3.  添加**Midl 文件 (.idl)**到项目的文件。 例如，命名该文件， `CalculatorComponent.idl`。  
+3.  添加**Midl 文件 (.idl)** 到项目的文件。 例如，命名该文件， `CalculatorComponent.idl`。  
   
 4.  将此代码添加到 CalculatorComponent.idl：  
   
@@ -49,7 +44,7 @@ Windows 运行时 c + + 模板库 (WRL) 可用于在桌面应用中，除了使�
   
      [!code-cpp[wrl-classic-com-component#3](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]  
   
-7.  添加**模块定义文件 (.def)**到项目的文件。 例如，命名该文件， `CalculatorComponent.def`。 此文件为链接器提供了要导出的函数的名称。  
+7.  添加**模块定义文件 (.def)** 到项目的文件。 例如，命名该文件， `CalculatorComponent.def`。 此文件为链接器提供了要导出的函数的名称。  
   
 8.  将此代码添加到 CalculatorComponent.def：  
   
@@ -66,7 +61,7 @@ Windows 运行时 c + + 模板库 (WRL) 可用于在桌面应用中，除了使�
   
 ### <a name="to-consume-the-com-component-from-a-desktop-app"></a>从桌面应用程序使用 COM 组件  
   
-1.  向 Windows 注册表注册 COM 组件。 为此，请创建注册表项文件中，将其命名为`RegScript.reg`，并添加以下文本。 替换 *\<dll 的路径 >*与您的 DLL 的路径，例如， `C:\\temp\\WRLClassicCOM\\Debug\\CalculatorComponent.dll`。  
+1.  向 Windows 注册表注册 COM 组件。 为此，请创建注册表项文件中，将其命名为`RegScript.reg`，并添加以下文本。 替换 *\<dll 的路径 >* 与您的 DLL 的路径，例如， `C:\\temp\\WRLClassicCOM\\Debug\\CalculatorComponent.dll`。  
   
     ```
     Windows Registry Editor Version 5.00

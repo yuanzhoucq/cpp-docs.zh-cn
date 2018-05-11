@@ -1,13 +1,10 @@
 ---
-title: "资源包括对话框中 |Microsoft 文档"
-ms.custom: 
+title: 资源包括对话框中 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourceincludes
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - symbol header files, read-only
 - symbols, symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 610e970ad84c6c89d91182b7a61bb759112fcd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 756289bb819809fed63dba579c4ad1cd1e975780
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-includes-dialog-box"></a>“资源包括”对话框
 你可以使用**资源包括**对话框来修改环境的正常工作安排，将所有资源都存储在项目.rc 文件和所有[符号](../windows/symbols-resource-identifiers.md)Resource.h 中。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

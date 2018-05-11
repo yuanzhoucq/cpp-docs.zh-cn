@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的 MBCS 支持 |Microsoft 文档"
-ms.custom: 
+title: Visual c + + 中的 MBCS 支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支持
 当在 MBCS 支持的版本的 Windows 上运行，Visual c + + 开发系统 （包括集成的源代码代码编辑器、 调试器和命令行工具） 是 MBCS 支持，除了内存窗口。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 02/09/2018
   
  Visual c + + 接受双字节字符，只要它适合若要这样做。 这包括选择了路径名称和文件名称为中的对话框和 Visual c + + 资源编辑器 （例如，在对话框编辑器中的静态文本） 和图标编辑器中的静态文本项中的文本项。 此外，预处理器可识别某些双字节指令 — 例如，文件名中`#include`语句，并为变量**code_seg**和**data_seg**杂注。 在源代码编辑器中，注释和字符串文本中的双字节字符接受，尽管不是在 C/c + + 语言元素 （如变量名）。  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>支持用于输入法编辑器 (IME)  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 支持用于输入法编辑器 (IME)  
  编写通常使用 MBCS （例如，日语） 的东亚市场支持 Windows IME 用于输入这两个单字节和双字节字符的应用程序。 Visual c + + 开发环境包含完整 IME 支持。 有关详细信息，请参阅[IME 示例： 演示如何控制 IME 模式和实现 IME 级别 3](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
   
  日语键盘不直接支持日文汉字字符。 IME 将转换的语音的字符串，其中一个其他日文字母表 （罗马字、 片假名或平假名） 中输入到其可能日文汉字表示形式。 如果存在多义性，可以从多种可选方案中进行选择。 当你选择了日文的汉字字符时，IME 将传递两个`WM_CHAR`到控制应用程序的消息。  

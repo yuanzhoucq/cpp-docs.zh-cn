@@ -1,13 +1,10 @@
 ---
-title: "程序结构 | Microsoft Docs"
-ms.custom: 
+title: 程序结构 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - programs [C++], structure
 - C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9587cd8e681072eeeb90f4a616e522fee6dece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe41175895f99ff97c6e2171e2cdfc0cbcc82689
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="program-structure"></a>程序结构
 本节概述了 C 程序和程序执行。 还引入了对于了解 C 程序和组件来说很重要的术语和功能。 讨论的主题包括：  
@@ -43,4 +38,4 @@ ms.lasthandoff: 12/21/2017
  由于本节只是为了进行概述，因此讨论的主题仅包含介绍性材料。 有关更详细的解释，请参阅交叉引用信息。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 语言参考](../c-language/c-language-reference.md)
+ [C 语言参考](../c-language/c-language-reference.md)

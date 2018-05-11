@@ -1,13 +1,10 @@
 ---
-title: "_CItan |Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _CItan |Microsoft 文档
+ms.custom: ''
+ms.date: 04/11/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CItan
 apilocation:
@@ -28,35 +25,37 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42bf2d2f7d38779dbed78414fcd94dc33ab82480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbd7f4258447df6f60f464b4c0a24080155fa9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="citan"></a>_CItan
-计算堆栈顶部值的正切值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __cdecl _CItan();  
-```  
-  
-## <a name="remarks"></a>备注  
- 此版本的 `tan` 函数具有编译器理解的专用化调用约定。 该函数将加快执行的速度，因为它可防止生成副本和帮助注册表分配。  
-  
- 生成的值被将被推送到堆栈顶部。  
-  
-## <a name="requirements"></a>惠?  
- **平台：**x86  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [tan、tanf、tanl、tanh、tanhf、tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+计算浮点堆栈顶部值的正切值。
+
+## <a name="syntax"></a>语法
+
+```C
+void __cdecl _CItan();
+```
+
+## <a name="remarks"></a>备注
+
+此版本的 [tan](../c-runtime-library/reference/tan-tanf-tanl.md) 函数具有编译器理解的专用化调用约定。 该函数将加快执行的速度，因为它可防止生成副本和帮助注册表分配。
+
+生成的值被将被推送到浮点堆栈顶部。
+
+## <a name="requirements"></a>惠?
+
+**平台：**x86
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

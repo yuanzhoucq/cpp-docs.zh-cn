@@ -1,13 +1,10 @@
 ---
-title: "编辑图形资源 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 编辑图形资源 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>编辑图形资源（图标的图像编辑器）
 图形资源是为你的应用程序定义的映像。 可以自由绘制，也可以使用形状进行绘制。 你可以选择用于编辑、 翻转或调整大小时，图像的部分或可以从所选映像的一部分中创建自定义画笔，还可以使用该画笔绘制。 你可以定义映像属性，将图像保存在不同的格式，并将图像从一种格式转换为另一个。  
@@ -68,12 +63,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [图像编辑器窗口窗格](../windows/window-panes-image-editor-for-icons.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
 > [!NOTE]
 >  你可以使用“图像编辑器”查看 32 位图像，但是不能对它们进行编辑。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

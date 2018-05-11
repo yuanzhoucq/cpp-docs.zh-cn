@@ -1,12 +1,9 @@
 ---
-title: "#如果是，#elif，#else 和 #endif 指令 （C/c + +） |Microsoft 文档"
-ms.custom: 
+title: '#如果是，#elif，#else 和 #endif 指令 （C/c + +） |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指令 (C/C++)
 `#if` 指令与 `#elif`、`#else` 和 `#endif` 指令一起控制源文件部分的编译。 如果您编写的表达式（在 `#if` 后）有一个非零值，则在翻译单元中保留紧跟 `#if` 指令的行组。  
@@ -55,9 +50,9 @@ ms.lasthandoff: 02/23/2018
  *如果行*:  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***标识符*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***标识符*   
   
  *elif 部件*:  
  *elif 行文本*  
@@ -80,7 +75,7 @@ ms.lasthandoff: 02/23/2018
   
  `#if`、`#elif`、`#else` 和 `#endif` 指令可以嵌套在其他 `#if` 指令的文本部分中。 每个嵌套的 `#else`、`#elif` 或 `#endif` 指令属于最靠近的前面的 `#if` 指令。  
   
- 所有条件编译指令，如`#if`和**#ifdef**，必须与右匹配`#endif`指令之前的文件结束; 否则，将生成一条错误消息。 当条件编译指令包含在包含文件中时，这些指令必须满足相同的条件：包含文件的末尾不能有未匹配的条件编译指令。  
+ 所有条件编译指令，如`#if`和 **#ifdef**，必须与右匹配`#endif`指令之前的文件结束; 否则，将生成一条错误消息。 当条件编译指令包含在包含文件中时，这些指令必须满足相同的条件：包含文件的末尾不能有未匹配的条件编译指令。  
   
  命令行后面的部分中执行宏替换`#elif`命令，以便可以在中使用宏调用*常量表达式*。  
   
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  预处理器处理选定*文本*并将其传递到编译器。 如果*文本*包含预处理器指令，预处理器执行这些指令。 仅编译预处理器所选的文本块。  
   
- 预处理器选择单个*文本*通过以下每个常量表达式求值的项`#if`或`#elif`指令，直到它找到 true （非零） 的常量表达式。 它选择所有文本 (包括其他预处理器指令开头 **#** ) 直到其关联`#elif`， `#else`，或`#endif`。  
+ 预处理器选择单个*文本*通过以下每个常量表达式求值的项`#if`或`#elif`指令，直到它找到 true （非零） 的常量表达式。 它选择所有文本 (包括其他预处理器指令开头**#**) 直到其关联`#elif`， `#else`，或`#endif`。  
   
  如果出现的所有*常量表达式*均为 false，或者如果没有`#elif`指令出现，则预处理器选择后的文本块`#else`子句。 如果`#else`省略子句和的所有实例*常量表达式*中`#if`块均为 false，不选定任何文本块。  
   

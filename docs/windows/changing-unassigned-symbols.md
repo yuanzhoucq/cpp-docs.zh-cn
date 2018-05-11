@@ -1,13 +1,10 @@
 ---
-title: "更改未分配的符号 |Microsoft 文档"
-ms.custom: 
+title: 更改未分配的符号 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.unassigned
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Change Symbol dialog box
 - unassigned symbols
 ms.assetid: b6abee4a-3c24-4697-a166-fe6a86cad35f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 443b77c35496c5870c19975ede165fbf59e17f2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-unassigned-symbols"></a>更改未分配的符号
 中时，在[资源符号对话框](../windows/resource-symbols-dialog-box.md)，你可以编辑或删除现有尚未分配给资源或对象的符号。  
@@ -42,9 +37,9 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  若要更改一个符号，*是*分配给资源或对象，必须使用的资源编辑器或属性窗口。 有关详细信息，请参阅[更改符号或符号名](../windows/changing-a-symbol-or-symbol-name-id.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
   
- 惠?  
+ 要求  
   
  Win32  
   

@@ -1,13 +1,10 @@
 ---
-title: "SafeCast |Microsoft 文档"
-ms.custom: 
+title: SafeCast |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeCast
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c3c9bb208cc2be2f91d8a464787d3299cd0b386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast"></a>SafeCast
 将一种类型到另一种类型的数字的强制转换。  
@@ -49,7 +44,7 @@ inline bool SafeCast (
  对新的数字类型的引用。 其类型必须为 U。  
   
 ## <a name="return-value"></a>返回值  
- `true`如果没有错误发生;`false`如果发生错误。  
+ `true` 如果没有错误发生;`false`如果发生错误。  
   
 ## <a name="remarks"></a>备注  
  此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个强制转换操作[SafeInt 类](../windows/safeint-class.md)。  
@@ -59,7 +54,7 @@ inline bool SafeCast (
   
  有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** safeint.h  
   
  **Namespace:** microsoft:: utilities  

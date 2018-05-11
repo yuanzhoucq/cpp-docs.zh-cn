@@ -1,28 +1,23 @@
 ---
-title: "Microsoft::WRL::Details Namespace |Microsoft 文档"
-ms.custom: 
+title: Microsoft::WRL::Details Namespace |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a038509912c659cc820b73f16210ce874427112
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空间
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -76,7 +71,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="enumerations"></a>枚举  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[AsyncStatusInternal 枚举](../windows/asyncstatusinternal-enumeration.md)|指定状态的异步操作的内部枚举之间的映射和**Windows::Foundation::AsyncStatus**枚举。|  
   
@@ -90,7 +85,7 @@ namespace Microsoft::WRL::Details;
 |[Swap 函数（Windows 运行时 C++ 模板库）](../windows/swap-function-windows-runtime-cpp-template-library.md)|交换两个指定参数的值。|  
 |[TerminateMap 函数](../windows/terminatemap-function.md)|关闭指定模块中的类工厂。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** async.h、 client.h、 corewrappers.h、 event.h、 ftm.h、 implements.h、 internal.h、 module.h  
   
  **Namespace:** Microsoft::WRL::Details  

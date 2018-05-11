@@ -1,12 +1,9 @@
 ---
-title: "Comptrref:: Operator T * 运算符 |Microsoft 文档"
-ms.custom: 
+title: 'Comptrref:: Operator T * 运算符 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator T*
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator T* operator
 ms.assetid: b4f83370-0ebc-4d56-87c6-1a8ea2d0079b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cbc7650c28ac46d6a58bced636a0aad8ae308187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* 运算符
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -40,7 +35,7 @@ operator T*();
 ## <a name="remarks"></a>备注  
  返回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)当前 ComPtrRef 对象的数据成员。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** client.h  
   
  **Namespace:** Microsoft::WRL::Details  

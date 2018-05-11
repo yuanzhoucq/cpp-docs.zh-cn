@@ -1,13 +1,10 @@
 ---
-title: "图标的图像编辑器 |Microsoft 文档"
-ms.custom: 
+title: 图标的图像编辑器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - Image editor [C++]
 - resource editors, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 932afdf219e302459d7c1908cb2220e754d68ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41c4bf71d8d3479f8353c1f57e725f07926dee47
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-editor-for-icons"></a>图标的图像编辑器
 图像编辑器具有一组丰富的图像创建和编辑工具，以及有助于创建工具栏位图的功能。 除了位图、图标和光标，你还可以使用 **“图像”** 菜单上的命令和 **“图像编辑器”** 工具栏上的工具来编辑 GIF 或 JPEG 格式的图像。  
@@ -60,9 +55,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="managed-resources"></a>托管资源  
  你可以使用图像编辑器和 [二进制编辑器](binary-editor.md) 处理托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

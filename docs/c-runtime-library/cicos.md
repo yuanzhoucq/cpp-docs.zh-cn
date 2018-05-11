@@ -1,13 +1,10 @@
 ---
-title: "_CIcos |Microsoft 文档"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _CIcos |Microsoft 文档
+ms.custom: ''
+ms.date: 04/11/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _CIcos
 apilocation:
@@ -28,35 +25,37 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0374ce9c2df09d61a8797190e54ad3abfc9eee6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d60c9ae40cc0a432fd5367d721a771fd0e25e66
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cicos"></a>_CIcos
-计算堆栈顶部值的余弦值。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-void __cdecl _CIcos();  
-```  
-  
-## <a name="remarks"></a>备注  
- 此版本的 `cos` 函数具有编译器理解的专用化调用约定。 它将加快执行的速度，因为它可防止生成副本和帮助注册表分配。  
-  
- 生成的值被将被推送到堆栈顶部。  
-  
-## <a name="requirements"></a>惠?  
- **平台：**x86  
-  
-## <a name="see-also"></a>请参阅  
- [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [cos、cosf、cosl、cosh、coshf、coshl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)
+
+计算浮点堆栈顶部值的余弦值。
+
+## <a name="syntax"></a>语法
+
+```C
+void __cdecl _CIcos();
+```
+
+## <a name="remarks"></a>备注
+
+此版本的 [cos](../c-runtime-library/reference/cos-cosf-cosl.md) 函数具有编译器理解的专用化调用约定。 它将加快执行的速度，因为它可防止生成副本和帮助注册表分配。
+
+生成的值被将被推送到浮点堆栈顶部。
+
+## <a name="requirements"></a>惠?
+
+**平台：**x86
+
+## <a name="see-also"></a>请参阅
+
+[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[cos、cosf、cosl](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>

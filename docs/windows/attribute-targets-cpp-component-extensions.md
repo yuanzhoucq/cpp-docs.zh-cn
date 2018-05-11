@@ -1,30 +1,25 @@
 ---
-title: "特性目标 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 特性目标 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>特性目标（C++ 组件扩展）
 特性用法说明符允许指定特性目标。  每个特性定义为应用于特定的语言元素。 例如，某个特征可能定义为仅应用于类和结构。  以下列表演示了自定义属性可以使用的语法元素。 可以结合使用这些值（使用逻辑或）。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  以下列表显示了有效的特性目标：  
   
--   `All`（适用于所有构造函数）  
+-   `All` （适用于所有构造函数）  
   
     ```  
   
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Assembly`（适用于一个程序集作为一个整体）  
+-   `Assembly` （适用于一个程序集作为一个整体）  
   
     ```  
   
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Module`（作为一个整体应用于模块）  
+-   `Module` （作为一个整体应用于模块）  
   
     ```  
   

@@ -1,13 +1,10 @@
 ---
-title: "helpcontext |Microsoft 文档"
-ms.custom: 
+title: helpcontext |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.helpcontext
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac1915a74aac329ef8b3c94db997dd80ff7905b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="helpcontext"></a>helpcontext
 指定允许用户查看有关此帮助文件中的元素信息的上下文 ID。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>示例  
  请参阅示例[defaultvalue](../windows/defaultvalue.md)以举例说明如何使用**helpcontext**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
@@ -69,5 +64,5 @@ ms.lasthandoff: 12/21/2017
  [类特性](../windows/class-attributes.md)   
  [方法特性](../windows/method-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../windows/helpfile.md)   
+ [Helpfile](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   

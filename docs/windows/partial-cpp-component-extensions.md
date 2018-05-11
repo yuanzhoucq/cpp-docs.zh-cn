@@ -1,13 +1,10 @@
 ---
-title: "部分 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 部分 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - partial_CPP
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71c0fc9739e7ef8e1e68c5678ce56fcec4a250c1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="partial--c-component-extensions"></a>部分（C++ 组件扩展）
 `partial`关键字允许相同的 ref 类，以编写独立地在不同的文件的不同部分。  
@@ -78,7 +73,7 @@ class-key identifier {
   
  有关如何使用`partial`关键字，请参阅[分部类 (C + + /cli CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  

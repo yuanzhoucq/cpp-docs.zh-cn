@@ -1,13 +1,10 @@
 ---
-title: "创建图标或其他图像 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 创建图标或其他图像 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - graphics [C++], creating
 - Image editor [C++], creating images
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae1cc8525b0c93cff5564c2185d80480a632718b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2138e32b18f2e15de027e3cc04fb1bd7ee46ecd5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>创建图标或其他图像（图标的图像编辑器）
 你可以创建新映像 （位图、 图标、 光标或工具栏），然后使用图像编辑器自定义其外观。 你还可以创建新的位图模式[模板](../windows/how-to-use-resource-templates.md)。  
@@ -61,11 +56,11 @@ ms.lasthandoff: 12/21/2017
      资源添加到你的项目在解决方案资源管理器并在中打开该资源[图像编辑器](../windows/image-editor-for-icons.md)。 你现在可以使用图像编辑器中可用的所有工具修改你的映像。 将映像添加到托管项目的详细信息，请参阅[加载在设计时图片](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)。  
   
     > [!NOTE]
-    >  你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。 有关详细信息，请参阅[创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中*.NET Framework 开发员指南*。  
+    >  你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。 有关详细信息，请参阅[创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中 *.NET Framework 开发员指南*。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 惠?  
+ 要求  
   
  无  
   

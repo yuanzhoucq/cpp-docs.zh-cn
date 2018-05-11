@@ -1,31 +1,26 @@
 ---
-title: "接口特性 |Microsoft 文档"
-ms.custom: 
+title: 接口特性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff84939b3211633e199066e1a38da2e91efb1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-attributes"></a>接口特性
 下列属性适用于[接口 （或 __interface）](../cpp/interface.md) c + + 关键字。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 |特性|描述|  
 |---------------|-----------------|  
 |[async_uuid](../windows/async-uuid.md)|指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。|  
-|[自定义](../windows/custom-cpp.md)|你可以定义你自己的特性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义你自己的特性。|  
 |[dispinterface](../windows/dispinterface.md)|将一个接口作为调度接口置于 .idl 文件中。|  
 |[dual](../windows/dual.md)|将接口置于.idl 文件中作为双重接口。|  
 |[export](../windows/export.md)|会导致数据结构，用于放置在.idl 文件。|  
@@ -44,10 +39,10 @@ ms.lasthandoff: 12/21/2017
 |[helpstringdll](../windows/helpstringdll.md)|指定要用于执行文档字符串查找 （本地化） 的 dll 的名称。|  
 |[hidden](../windows/hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|  
 |[library_block](../windows/library-block.md)|将.idl 文件的库块中的构造。|  
-|[本地](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
+|[local](../windows/local-cpp.md)|可用作接口标头中使用时的标头生成器 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。|  
 |[nonextensible](../windows/nonextensible.md)|指定`IDispatch`实现仅包括的属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。 此属性才有效上[双重](../windows/dual.md)接口。|  
 |[odl](../windows/odl.md)|标识为对象描述语言 (ODL) 接口的接口。|  
-|[对象](../windows/object-cpp.md)|标识的自定义的接口。|  
+|[object](../windows/object-cpp.md)|标识的自定义的接口。|  
 |[oleautomation](../windows/oleautomation.md)|指示接口是与自动化兼容。|  
 |[pointer_default](../windows/pointer-default.md)|参数列表中指定除顶级指针显示的所有指针的指针默认属性。|  
 |[ptr](../windows/ptr.md)|将一个指针指定为完整的指针。|  

@@ -1,36 +1,31 @@
 ---
-title: "return 语句 (C) |Microsoft 文档"
-ms.custom: 
+title: return 语句 (C) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>return 语句 (C)
 `return` 语句终止函数的执行并返回对调用函数的控制。 紧接在调用之后在调用函数中恢复执行。 `return` 语句还可以将值返回给调用函数。 有关详细信息，请参阅[返回类型](../c-language/return-type.md)。  
   
 ## <a name="syntax"></a>语法  
  *jump-statement*:  
- **return**  *expression* opt**;**  
+ **return**  *expression* opt **;**  
   
  如果表达式存在的话，*expression* 的值将返回到调用函数。 如果 *expression* 省略，该函数返回值未定义。 先计算表达式（如果存在），然后转换为函数返回的类型。 如果使用返回类型 `void` 声明函数，包含表达式的 `return` 语句生成警告，并且该表达式不进行计算。  
   

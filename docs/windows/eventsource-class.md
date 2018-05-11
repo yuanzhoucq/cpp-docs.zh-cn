@@ -2,11 +2,8 @@
 title: EventSource 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 03/22/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 531c4ec218f7e3b694a41cd465090a5b1787c41a
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: b2d466b317927cd8de259637450b68b6aaf13bd5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsource-class"></a>EventSource 类
 表示非敏捷事件。 EventSource 成员函数添加、 删除和调用事件处理程序。 对于 agile 事件，使用[AgileEventSource](agileeventsource-class.md)。 
@@ -75,6 +70,6 @@ class EventSource;
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)
 [AgileEventSource 类](agileeventsource-class.md)

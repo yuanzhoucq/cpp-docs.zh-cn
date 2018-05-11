@@ -1,13 +1,10 @@
 ---
-title: "文本工具对话框 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 文本工具对话框 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.texttool
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - text, adding to an image
 - Text Tool dialog box
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed1a15dbe8947bc52c8a91d94ca12fee6badcf77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 039158b65664a24280fa8ebac0938892c3fdeb08
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>“文本工具”对话框（图标的图像编辑器）
 使用**文本工具**对话框中，将文本添加到光标、 位图或图标资源。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以右键单击**文本工具**对话框中，若要访问默认的快捷菜单包含标准的 Windows 命令的列表。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

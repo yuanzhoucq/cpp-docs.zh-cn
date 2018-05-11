@@ -1,12 +1,9 @@
 ---
-title: pack | Microsoft Docs
-ms.custom: 
+title: 包 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - pack_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6c29c31cae2b7de59d4db5ed6546ad4eda6baecf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pack"></a>pack
 指定结构、联合和类成员的封装对齐。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 封装类是在内存中将其一个成员直接放在另一个后面，这可能表示对齐部分或全部成员的边界可以小于默认对齐目标体系结构。 `pack` 提供了数据声明级别的控制。 这不同于编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md)，这只提供模块级别控制。 在杂注出现之后，`pack` 在第一个 `struct`、`union` 或 `class` 声明处生效。 `pack` 对定义没有影响。 调用`pack`使用没有自变量集`n`编译器选项中设置的值为**/Zp**。 如果未设置编译器选项，则默认值为 8。  
+ 封装类是在内存中将其一个成员直接放在另一个后面，这可能表示对齐部分或全部成员的边界可以小于默认对齐目标体系结构。 `pack` 提供了数据声明级别的控制。 这不同于编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md)，这只提供模块级别控制。 在杂注出现之后，`pack` 在第一个 `struct`、`union` 或 `class` 声明处生效。 `pack` 对定义没有影响。 调用`pack`使用没有自变量集`n`编译器选项中设置的值为 **/Zp**。 如果未设置编译器选项，则默认值为 8。  
   
  如果更改某个结构的对齐方式，它可能不会使用像内存中一样多的空间，但您可能会发现性能降低或者甚至是因未对齐访问而遇到硬件产生的异常。  你可以通过使用修改此异常行为[SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621)。  
   

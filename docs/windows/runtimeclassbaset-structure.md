@@ -1,30 +1,25 @@
 ---
-title: "RuntimeClassBaseT 结构 |Microsoft 文档"
-ms.custom: 
+title: RuntimeClassBaseT 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT
 dev_langs:
 - C++
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8798372b96074cb8424b4e747b188abcaf826849
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 结构
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -50,7 +45,7 @@ friend struct Details::RuntimeClassBaseT;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `RuntimeClassBaseT`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  

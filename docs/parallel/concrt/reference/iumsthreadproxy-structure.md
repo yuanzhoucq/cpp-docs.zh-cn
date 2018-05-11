@@ -1,12 +1,9 @@
 ---
-title: "IUMSThreadProxy 结构 |Microsoft 文档"
-ms.custom: 
+title: IUMSThreadProxy 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 结构
 执行线程的抽象。 如果想要计划程序获得用户模式计划 (UMS) 线程，则将计划程序策略元素 `SchedulerKind` 的值设置为 `UmsThreadDefault`，并实现 `IUMSScheduler` 接口。 UMS 线程仅在具有 Windows 7 或更高版本的 64 位操作系统上受到支持。  
@@ -59,7 +54,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  `IUMSThreadProxy`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -107,7 +102,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>返回值  
  新超关键区域的深度。 超关键区域是可重入。  
   
-##  <a name="getcriticalregiontype"></a>  IUMSThreadProxy::GetCriticalRegionType Method  
+##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy:: Getcriticalregiontype 方法  
  返回哪种类型的线程代理所处的关键区域。 因为超关键区域是关键区域的一个超集，如果代码已进入关键区域，然后选择超关键的区域，`InsideHyperCriticalRegion`将返回。  
   
 ```

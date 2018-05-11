@@ -1,31 +1,26 @@
 ---
-title: "工具栏上的按钮之间插入一个空格 |Microsoft 文档"
-ms.custom: 
+title: 工具栏上的按钮之间插入一个空格 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Toolbar editor, spacing toolbar buttons
 - toolbar buttons (in Toolbar editor), space between buttons
 ms.assetid: 4925ea6b-5d3a-4949-a920-bf371a37e529
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f290433989ed56912309f86ce715fb7f2ede7d51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11e5c964092bbd67137ed3b6084da9589b026833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>在工具栏按钮之间插入间隔
 一般情况下，若要插入按钮之间留一个空格，只需将它们拖开另一个在工具栏上。 若要删除的空间，请将它们拖动向彼此。  
@@ -42,9 +37,9 @@ ms.lasthandoff: 12/21/2017
   
 1.  将按钮拖动到右或向下直到与下一步按钮重叠大约一半。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 惠?  
+ 要求  
   
  MFC 或 ATL  
   
