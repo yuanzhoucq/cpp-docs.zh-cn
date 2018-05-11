@@ -126,11 +126,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202dd5334e2eb0f133b40198840287af83acee8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
+ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="basicstring-class"></a>basic_string 类
 
@@ -469,7 +469,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 `ptr` 指向要分配给目标字符串的 C 字符串的字符的指针。
 
-`count` 要追加，最多，source 字符串中的字符数。
+`count` 要分配 source 字符串中的字符数。
 
 `str` 分配给目标字符串的字符源字符串。
 

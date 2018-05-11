@@ -1,7 +1,7 @@
 ---
 title: C + + 的最佳安全方案 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
+
 本文包含有关安全工具和做法的信息。 使用这些工具和做法并不会使应用程序免受攻击，但能降低攻击成功的可能性。  
   
-## <a name="visual-c-security-features"></a>Visual C++ 安全功能  
+## <a name="visual-c-security-features"></a>Visual C++ 安全功能
+
  这些安全功能内置于 Visual C++ 编译器和链接器中：  
   
  [/guard（启用控制流保护）](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ ms.lasthandoff: 05/07/2018
 -   检测由常见编程错误导致的潜在应用程序兼容性错误。  
   
 -   检查应用程序是否存在内存相关问题。  
-  秒
+
 -   确定应用程序中的潜在安全问题。  
   
  AppVerifier 属于应用程序兼容性工具包，即从可用[应用程序兼容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 网站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 用户帐户  
- 使用属于管理员组的 Windows 用户帐户将使开发人员和引申到的相关客户暴露在安全风险下。 有关详细信息，请参阅[作为用户组的成员运行](running-as-a-member-of-the-users-group.md)和[如何用户帐户控制 (UAC) 会影响应用程序](how-user-account-control-uac-affects-your-application.md)。  
+ 使用属于管理员组的 Windows 用户帐户将使开发人员和引申到的相关客户暴露在安全风险下。 有关详细信息，请参阅[作为用户组的成员运行](running-as-a-member-of-the-users-group.md)和[如何用户帐户控制 (UAC) 会影响应用程序](how-user-account-control-uac-affects-your-application.md)。
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>推理执行端通道的指南
+
+有关如何识别和缓解针对 c + + 软件中的推理执行端通道硬件漏洞的信息，请参阅[推理执行端通道的 c + + 开发人员指南](developer-guidance-speculative-execution.md)。
+
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Security>   
