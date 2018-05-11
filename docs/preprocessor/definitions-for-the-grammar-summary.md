@@ -1,12 +1,9 @@
 ---
-title: "语法摘要的定义 |Microsoft 文档"
-ms.custom: 
+title: 语法摘要的定义 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 755533d59b9b893da4a657db6da2ea80f13138b5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6d6c84354332b4d01ca07f672024fe9b488cd0a2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="definitions-for-the-grammar-summary"></a>语法摘要的定义
 终止符是语法定义中的终结点。 不提供其他解决方法。 终止符包括保留字和用户定义的标识符的集。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/23/2018
   
 可选组件由带下标的 opt 指示。 例如，下面指示包含在大括号中的可选表达式：  
   
-**{** *expression*opt **}**  
+**{** *表达式*选择 **}**  
   
 ## <a name="see-also"></a>请参阅  
 [语法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

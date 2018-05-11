@@ -1,12 +1,9 @@
 ---
-title: "Eventsource:: Add 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Eventsource:: Add 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource::Add
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Add method
 ms.assetid: 8bded85b-929e-4425-a464-e5de67bb774c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e5a39abdced8929ac1a01db596a6099c70853c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add 方法
 将追加到的事件处理程序当前 EventSource 对象集表示由指定的委托接口的事件处理程序。  
@@ -50,7 +45,7 @@ HRESULT Add(
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** event.h  
   
  **命名空间：** Microsoft::WRL

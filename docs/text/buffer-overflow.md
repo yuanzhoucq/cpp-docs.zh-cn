@@ -1,13 +1,10 @@
 ---
-title: "缓冲区溢出 |Microsoft 文档"
-ms.custom: 
+title: 缓冲区溢出 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="buffer-overflow"></a>缓冲区溢出
 将字符放入缓冲区时，改变字符大小可能会导致问题。 请考虑下面的代码，从字符串的字符复制， `sz`，到缓冲区中， `rgch`:  
@@ -60,7 +55,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- 此代码测试可能会发生缓冲区溢出循环中使用的测试`_mbclen`测试指向的当前字符的大小`sz`。 通过调用`_mbsnbcpy`函数，你可以替换中的代码`while`循环一行代码。 例如:  
+ 此代码测试可能会发生缓冲区溢出循环中使用的测试`_mbclen`测试指向的当前字符的大小`sz`。 通过调用`_mbsnbcpy`函数，你可以替换中的代码`while`循环一行代码。 例如：  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

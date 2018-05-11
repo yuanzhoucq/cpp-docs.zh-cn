@@ -1,13 +1,10 @@
 ---
-title: "模块 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 模块 （c + +） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module (C++)
 定义.Idl 文件中的库块。  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  想要分配到库块的版本号。 默认值为 1.0。  
   
  `uuid`  
- 库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索库块中的 *uuid* ，可以通过使用标识符 **__uuidof (***libraryname***)**来执行此操作。  
+ 库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 你可能需要检索*uuid*你的库块，则你可以使用的标识符 **__uuidof (***libraryname***)**。  
   
  **lcid**  
  本地化参数。 有关详细信息，请参阅 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
  不能随意调用库中的成员。 更多详细信息，请参阅 [受限](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 特性。  
   
  ***自定义***  （可选）  
- 一个或多个特性；这类似于 [自定义](../windows/custom-cpp.md) 特性。 到 `custom` 的第一个参数是该特性的 GUID。 例如:  
+ 一个或多个特性；这类似于 [自定义](../windows/custom-cpp.md) 特性。 到 `custom` 的第一个参数是该特性的 GUID。 例如：  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
@@ -174,7 +169,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
@@ -196,5 +191,5 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [库](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
  [helpcontext](../windows/helpcontext.md)   
  [helpstring](../windows/helpstring.md)   
- [helpfile](../windows/helpfile.md)   
+ [Helpfile](../windows/helpfile.md)   
  [version](../windows/version-cpp.md)   

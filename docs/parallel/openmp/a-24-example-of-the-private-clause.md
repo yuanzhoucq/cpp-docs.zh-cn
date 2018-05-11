@@ -1,27 +1,22 @@
 ---
-title: "Private 子句 A.24 示例 |Microsoft 文档"
-ms.custom: 
+title: Private 子句 A.24 示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f90a5b49-81ff-4746-ae03-37bbd33f6c08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0abd7aa296a16e54e2ec5e5ce7b2c49a93c45e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f8d07f2d95b565077f5dfd78fdc4ff6edf30216
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24   private 子句的示例
 `private`子句 ([部分 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)第 25 页上) 的并行区域仅会影响区域的词法范围，不能为区域的动态范围。  因此，在下面的示例中，使用该变量的任何内`for`例程中的循环*f*的私有副本是指，而在使用情况例程*g*引用全局。  

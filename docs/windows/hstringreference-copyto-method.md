@@ -1,28 +1,23 @@
 ---
-title: "Hstringreference:: Copyto 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Hstringreference:: Copyto 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 179d9b14-1ced-4b16-b297-19ca1e92a462
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb6ac1f645207c048e88078c7fcdc8297f8d1b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f65c08cad438328eb1a0e15495774dbde6845f4d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringreferencecopyto-method"></a>HStringReference::CopyTo 方法
 复制当前 HStringReference 对象 HSTRING 对象。  
@@ -43,7 +38,7 @@ HRESULT CopyTo(
 ## <a name="remarks"></a>备注  
  此方法调用[WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx)函数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  

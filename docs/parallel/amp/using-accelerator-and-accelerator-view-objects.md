@@ -1,27 +1,22 @@
 ---
-title: "使用 accelerator 和 accelerator_view 对象 |Microsoft 文档"
-ms.custom: 
+title: 使用 accelerator 和 accelerator_view 对象 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 对象
 你可以使用[快捷键](../../parallel/amp/reference/accelerator-class.md)和[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)指定设备或仿真程序在运行 c + + AMP 代码的类。 系统可能具有多个设备或仿真程序的内存、 共享的内存支持、 调试支持或双精度支持量上存在差异。 C + + Accelerated Massive Parallelism (c + + AMP) 提供 Api，可用于检查可用快捷键、 设置另一个用作默认值、 指定多个 accelerator_view 上以便 parallel_for_each，多个调用和执行特殊的调试任务。  

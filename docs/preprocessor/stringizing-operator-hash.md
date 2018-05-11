@@ -1,12 +1,9 @@
 ---
-title: "字符串化运算符 （#） |Microsoft 文档"
-ms.custom: 
+title: 字符串化运算符 （#） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61a50b9522c6631ca0b5f32d5c438369632d01
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7891b03fe80b5ad91ad52cf4577d237350d4584c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stringizing-operator-"></a>字符串化运算符 (#)
 数字符号或"字符串化"运算符 (**#**) 将宏参数转换为字符串，而不扩展参数定义。 它只用于采用自变量的宏。 如果它在宏定义中位于形参之前，则由宏调用传递的实参将用引号引起来并被视为字符串。 字符串随后替换宏定义中的字符串化运算符和形参的组合的每个匹配项。  

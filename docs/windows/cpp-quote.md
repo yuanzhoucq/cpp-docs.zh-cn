@@ -1,13 +1,10 @@
 ---
-title: "cpp_quote |Microsoft 文档"
-ms.custom: 
+title: cpp_quote |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.cpp_quote
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95b43856401b5bccfa9a0bef12fdc93ec886cea1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="cppquote"></a>cpp_quote
 发出指定的字符串，而无需引号字符，到生成的.idl 文件。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>示例  
  请参阅示例[双重](../windows/dual.md)有关用法示例如何使用**cpp_quote**。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   

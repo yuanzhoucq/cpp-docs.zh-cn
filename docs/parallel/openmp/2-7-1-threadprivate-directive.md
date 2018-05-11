@@ -1,27 +1,22 @@
 ---
-title: "2.7.1 threadprivate 指令 |Microsoft 文档"
-ms.custom: 
+title: 2.7.1 threadprivate 指令 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9912ccbfa6f5773ec1e523245f75e675bb82244
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指令
 `threadprivate`指令使命名的文件范围、 命名空间范围或静态的块范围变量中指定*变量列表*专用于一个线程。 *变量列表*是不具有不完整类型的变量的以逗号分隔列表。 语法`threadprivate`指令是，如下所示：  
@@ -82,4 +77,4 @@ void f(int n) {
   
 -   动态线程，请参阅[部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上。  
   
--   `OMP_DYNAMIC`环境变量，请参阅[部分 4.3](../../parallel/openmp/4-3-omp-dynamic.md)页 49 上。
+-   `OMP_DYNAMIC` 环境变量，请参阅[部分 4.3](../../parallel/openmp/4-3-omp-dynamic.md)页 49 上。

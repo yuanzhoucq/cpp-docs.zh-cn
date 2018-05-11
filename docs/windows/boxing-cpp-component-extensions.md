@@ -1,30 +1,25 @@
 ---
-title: "装箱 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 装箱 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="boxing--c-component-extensions"></a>装箱（C++ 组件扩展）
 Visual c + + 编译器可以将值类型转换为称为的过程中的对象*装箱*，并将对象转换为称为的过程中的值类型*取消装箱*。  
@@ -43,7 +38,7 @@ value_variable = (value_type) object_variable;
   
 ```  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ### <a name="examples"></a>示例  
@@ -102,7 +97,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 -   [标准转换和隐式装箱](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

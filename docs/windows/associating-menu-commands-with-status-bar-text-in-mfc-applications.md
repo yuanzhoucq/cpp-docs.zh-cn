@@ -1,31 +1,26 @@
 ---
-title: "将菜单命令与 MFC 应用程序中的状态栏文本关联 |Microsoft 文档"
-ms.custom: 
+title: 将菜单命令与 MFC 应用程序中的状态栏文本关联 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - status bars, associating menu items
 - menus, status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea0f68bbd0c426aee8141c27d6852bfaaa6ed523
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17326bdb8fe01c9ad329db0a6c7e8178fdbb25e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>将菜单命令与 MFC 应用程序中的状态栏文本关联
 你的应用程序可以为用户可能选择的每个菜单命令显示说明性文本。 可通过使用“属性”窗口中的 **“提示”** 属性将文本字符串分配给每个菜单命令来完成。 如果 [字符串表](../windows/string-editor.md) 中有一个字符串，其 ID 与命令相同，则当用户悬停在菜单项上方时，MFC 应用程序将在运行的应用程序的状态栏中自动显示此字符串资源。  

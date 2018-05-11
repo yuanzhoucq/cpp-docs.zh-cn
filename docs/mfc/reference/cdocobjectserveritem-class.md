@@ -1,12 +1,9 @@
 ---
-title: "CDocObjectServerItem 类 |Microsoft 文档"
-ms.custom: 
+title: CDocObjectServerItem 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7627fbc7cb5d36bd82e130264d2653d5a8464545
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 实现特别针对 DocObject 服务器的 OLE 服务器谓词。  
@@ -66,7 +61,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|由框架，以使 DocObject 项就地活动状态。 如果该项不是 DocObject，调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
   
 ## <a name="remarks"></a>备注  
- `CDocObjectServerItem`定义可重写成员函数： [OnHide](#onhide)， [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd)，和[OnShow](#onshow)。  
+ `CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)， [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd)，和[OnShow](#onshow)。  
   
  若要使用`CDocObjectServerItem`，确保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)中重写你`COleServerDoc`-派生的类返回一个新`CDocObjectServerItem`对象。 如果你需要更改你的项目中任何功能，你可以创建你自己的新实例`CDocObjectServerItem`-派生类。  
   
@@ -83,10 +78,10 @@ class CDocObjectServerItem : public COleServerItem
   
  `CDocObjectServerItem`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdocob.h  
   
-##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem  
  构造 `CDocObjectServerItem` 对象。  
   
 ```  
@@ -100,7 +95,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  指示链接到该发布时，是否可以删除对象。 将参数设置为**FALSE**如果`CDocObjectServerItem`对象是不可或缺的组成部分文档的数据。 将其设置为**TRUE**如果对象是用于标识可以由框架删除的文档的数据中的范围的辅助结构。  
   
-##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
  检索指向包含项的文档。  
   
 ```  
@@ -113,7 +108,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>备注  
  这将允许到作为参数传递的服务器文档的访问[CDocObjectServerItem](#cdocobjectserveritem)构造函数。  
   
-##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
  由框架调用以隐藏项。  
   
 ```  
@@ -123,7 +118,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>备注  
  如果该项是 DocObject，默认实现将引发异常。 不能隐藏活动 DocObject 项，因为它采用整个视图。 你必须先停用 DocObject 项以将其隐藏。 如果该项不是 DocObject，默认实现调用[COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。  
   
-##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
  由框架，以指示服务器应用程序发出 DocObject 项处于就地活动状态。  
   
 ```  

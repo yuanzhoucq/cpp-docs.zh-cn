@@ -1,23 +1,18 @@
 ---
-title: "将代码升级到通用 CRT | Microsoft Docs"
-ms.custom: 
+title: 将代码升级到通用 CRT | Microsoft Docs
+ms.custom: ''
 ms.date: 03/31/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c2057f3dc8abc3f661010300671b67ad5c37a87d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -37,7 +32,7 @@ UCRT 静态库和动态链接存根库位于 Windows Kits\\10\\Lib\\_sdk-version
   
 零售和调试 UCRT DLL 位于不同的位置。 零售 DLL 可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\Redist\\ucrt\\DLLs\\architecture\. 中找到 调试 UCRT 库不可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\bin\\architecture\\ucrt 文件夹中找到。   
 
-C 和 C++ 编译器特定的运行时支持库  **vcruntime** ，包含支持程序启动所需的代码以及异常处理和内部函数等功能。 库及其头文件仍位于 Program Files 或 Program files (x86) 目录中特定于版本的 Microsoft Visual Studio 文件夹中。 在 Visual Studio 2017 中，标头位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include 中，链接库位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_ 中，其中 _edition_ 是安装的 Visual Studio 版本，_lib-version_ 是库的版本，而 _architecture_ 是处理器体系结构。 OneCore 和 Store 的链接库也位于库文件夹中。 静态库的零售和调试版本分别是 libvcruntime.lib 和 libvcruntimed.lib。 动态链接零售和调试存根库分别是 vcruntime.lib 和 vcruntimed.lib。  
+C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程序启动所需的代码以及异常处理和内部函数等功能。 库及其头文件仍位于 Program Files 或 Program files (x86) 目录中特定于版本的 Microsoft Visual Studio 文件夹中。 在 Visual Studio 2017 中，标头位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include 中，链接库位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_ 中，其中 _edition_ 是安装的 Visual Studio 版本，_lib-version_ 是库的版本，而 _architecture_ 是处理器体系结构。 OneCore 和 Store 的链接库也位于库文件夹中。 静态库的零售和调试版本分别是 libvcruntime.lib 和 libvcruntimed.lib。 动态链接零售和调试存根库分别是 vcruntime.lib 和 vcruntimed.lib。  
   
 更新 Visual C++ 项目时，如果将项目的**链接器**属性“忽略所有默认库”设置为“是”，或如果使用的是命令行上的 /NODEFAULTLIB 链接器选项，则必须更新库的列表以包括新的重构库。 将旧的 CRT 库（例如 libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib）替换为等效的重构库。 有关要使用的特定库的信息，请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。  
   

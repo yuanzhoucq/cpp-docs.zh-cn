@@ -1,13 +1,10 @@
 ---
-title: "创建用户无法退出的对话框 |Microsoft 文档"
-ms.custom: 
+title: 创建用户无法退出的对话框 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - modal dialog boxes, logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b53c233c13ed53f4cf2ccf489da9af90ae15796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>创建用户无法退出的对话框
 可以创建用户无法退出的运行时对话框。 这种类型的对话框对于登录、应用程序或文档锁定非常有用。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  有关如何将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

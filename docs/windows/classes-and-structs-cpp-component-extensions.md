@@ -1,13 +1,10 @@
 ---
-title: "类和结构 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 类和结构 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9863786e5e017b69217f984e3aa6d1db597e74d3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
 声明类或结构其*对象生存期*自动进行管理。 当对象不再可访问或超出范围时，Visual C++ 会自动放弃分配给对象的内存。  
@@ -108,7 +103,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  使用 `value class` 或 `value struct` 关键字声明对象时，不会监督声明的对象的对象生存期。 该对象如同任何其他标准 C++ 类或结构一样。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -125,7 +120,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  `value class`和`value struct`关键字告知编译器的已分配的类或结构的值是传递给函数或存储在成员。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ## <a name="see-also"></a>请参阅  

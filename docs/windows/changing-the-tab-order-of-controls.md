@@ -1,13 +1,10 @@
 ---
-title: "更改控件的 tab 键顺序 |Microsoft 文档"
-ms.custom: 
+title: 更改控件的 tab 键顺序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - controls [C++], focus
 - dialog box controls, tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dca6b1bb894aa2219a0352ba9c359e6f3c5a4677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33e6e9624e7e927860a184361d45f855f3a1e4f6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-tab-order-of-controls"></a>更改控件的 Tab 键顺序
 Tab 键顺序是在其中 TAB 键在输入的焦点从一个控件移到下一个对话框中的顺序。 通常从左到右、 从上到下一个对话框中，将继续进行 tab 键顺序。 每个控件具有**Tabstop**属性，用于确定控件是否接收输入的焦点。  
@@ -79,9 +74,9 @@ Tab 键顺序是在其中 TAB 键在输入的焦点从一个控件移到下一�
   
 4.  按**ENTER**退出**tab 键顺序**模式。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

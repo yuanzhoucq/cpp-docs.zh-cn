@@ -1,12 +1,9 @@
 ---
-title: "CurrentScheduler 类 |Microsoft 文档"
-ms.custom: 
+title: CurrentScheduler 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 类
 表示与调用上下文关联的当前计划程序的抽象。  
@@ -70,7 +65,7 @@ class CurrentScheduler;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CurrentScheduler`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
@@ -120,7 +115,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  请注意，是否你显式创建此计划程序，必须释放之前，你在计划程序，你引用通过释放分离从其当前上下文的计划组中，所有引用。  
   
-##  <a name="detach"></a> Detach 
+##  <a name="detach"></a> 分离 
 
  分离当前计划程序从调用的上下文，并将还原当前计划程序，以前附加的计划程序，如果存在。 此方法返回后，调用上下文然后由计划程序以前被附加到使用的上下文`CurrentScheduler::Create`或`Scheduler::Attach`方法。  
   
@@ -135,7 +130,7 @@ static void __cdecl Detach();
   
  从上下文调用此方法为内部，由一个计划程序或已附加以外使用方法的上下文进行管理[scheduler:: attach](scheduler-class.md#attach)或[currentscheduler:: Create](#create)方法，将导致[improper_scheduler_detach](improper-scheduler-detach-class.md)所引发异常。  
   
-##  <a name="get"></a> Get 
+##  <a name="get"></a> 获取 
 
  将指针返回到调用上下文，也称为当前计划程序与关联的计划程序。  
   

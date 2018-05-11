@@ -1,13 +1,10 @@
 ---
-title: "符号名限制 |Microsoft 文档"
-ms.custom: 
+title: 符号名限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.name
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - symbols, names
 - restrictions, symbol names
 ms.assetid: 4ae7f695-ca86-4f4b-989a-fe6f89650ff7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d82720142517468fffd4388f000f3830e8edb4ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbol-name-restrictions"></a>符号名限制
 对符号名的限制如下所示：  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  Win32  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,31 +1,26 @@
 ---
-title: "字符串 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 字符串 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="string--c-component-extensions"></a>String（C++ 组件扩展）
 Visual c + + 编译器支持*字符串*，这是对象，表示为字符序列的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式的带引号的字符串。  
@@ -51,13 +46,13 @@ using namespace default;
 ### <a name="remarks"></a>备注  
  有关详细信息和有关字符串的示例，请参阅[platform:: string、 std:: wstring 和文字 （平台）](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
- 本主题讨论由使用运行时，Visual c + + 编译器如何处理字符串文本**/clr**编译器选项。 若要使用**/clr**，还必须使用公共语言运行时 (CLR) 中 C + + /cli 语法和托管对象。 有关详细信息**/clr**，请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
+ 本主题讨论由使用运行时，Visual c + + 编译器如何处理字符串文本 **/clr**编译器选项。 若要使用 **/clr**，还必须使用公共语言运行时 (CLR) 中 C + + /cli 语法和托管对象。 有关详细信息 **/clr**，请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 使用编译时**/clr**，编译器会将字符串转换为字符串类型<xref:System.String>。 若要保留与现有代码存在向后的兼容性是对这两种例外：  
+ 使用编译时 **/clr**，编译器会将字符串转换为字符串类型<xref:System.String>。 若要保留与现有代码存在向后的兼容性是对这两种例外：  
   
 -   异常处理。 当引发字符串文字时，编译器将捕捉它为字符串文本。  
   
@@ -78,7 +73,7 @@ using namespace default;
   
  有关详细信息请参阅[字符串和字符文本](../cpp/string-and-character-literals-cpp.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -291,4 +286,4 @@ System.String
 ## <a name="see-also"></a>请参阅  
  [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
  [字符串和字符文本](../cpp/string-and-character-literals-cpp.md)   
- [/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)
+ [/cgthreads（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)

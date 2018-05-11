@@ -1,13 +1,10 @@
 ---
-title: "图像菜单 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 图像菜单 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-menu-image-editor-for-icons"></a>“图像”菜单（图标的图像编辑器）
 图像菜单，仅在图像编辑器处于活动状态时，才显示，提供用于编辑图像、 管理调色板，和设置的图像编辑器窗口选项的命令。 此外，使用设备图像提供了个命令使用图标和光标时。  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
  **工具**  
  启动的子菜单，其中包含所有可用的工具[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

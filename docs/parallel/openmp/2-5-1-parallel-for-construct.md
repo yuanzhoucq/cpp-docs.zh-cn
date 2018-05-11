@@ -1,27 +1,22 @@
 ---
-title: "2.5.1 parallel for 构造 |Microsoft 文档"
-ms.custom: 
+title: 2.5.1 parallel for 构造 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a233e7ed-2462-4f7a-9a5d-556ab9f363d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dcd763b68a78e11c3c33bf3d750a26e88ad02ee
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: ef2732c4f8713466d282346ea240bd3c41886ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for 构造
 **为并行**指令是的快捷方式**并行**区域包含单个仅**为**指令。 语法**为并行**指令是，如下所示：  

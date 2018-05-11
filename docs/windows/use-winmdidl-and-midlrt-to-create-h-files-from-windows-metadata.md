@@ -1,28 +1,23 @@
 ---
-title: "如何： 使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建.h 文件 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建.h 文件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 通过窗口元数据创建 .h 文件
 Winmdidl.exe 和 midlrt.exe 可在本机 C++ 代码与 Windows 运行时组件之间实现 COM 级别交互。 Winmdidl.exe 采用包含 Windows 运行时组件元数据的 .winmd 文件作为输入，并输出 IDL 文件。 Midlrt.exe 将该 IDL 文件转换为 C++ 代码可以使用的头文件。 这两个工具都在命令行上运行。  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  在控制台输出中显示总执行时间。  
   
  /outdir:\<dir >  
- 指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是*\<驱动器 >*: \Users\\*\<用户名 >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\。  
+ 指定输出目录。 如果路径包含空格，请使用引号。 默认输出目录是*\<驱动器 >*: \Users\\*\<用户名 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\。  
   
  `/banner:<file>`  
  指定一个文件，其中包含要在生成的 .idl 文件顶部追加到默认版权消息和 winmdidl 版本号前面的自定义文本。 如果路径包含空格，请使用引号。  

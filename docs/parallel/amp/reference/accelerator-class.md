@@ -1,12 +1,9 @@
 ---
-title: "accelerator 类 |Microsoft 文档"
-ms.custom: 
+title: accelerator 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>accelerator 类
 加速器是针对数据并行计算进行了优化的硬件功能。 加速器可能是设备连接到 PCIe 总线 （如 GPU)，也可能是在主要的 CPU 上设置的扩展的指令。  
@@ -138,7 +133,7 @@ class accelerator;
   
  您可以构造`accelerator`对象通过枚举可用的设备，或获取默认设备、 引用设备或 WARP 设备。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amprt.h  
   
  **命名空间：** 并发  
@@ -495,7 +490,7 @@ accelerator& operator= (const accelerator& _Other);
 ### <a name="return-value"></a>返回值  
  对此引用`accelerator`对象。  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 运算符 = = 
 
  比较此`accelerator`与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。  
   
@@ -574,7 +569,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-##  <a name="dtor"></a> </a> ~accelerator_view 
+##  <a name="dtor"></a> </a> ~ accelerator_view 
 
  销毁[accelerator_view](accelerator-view-class.md)对象。  
   
@@ -739,7 +734,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ### <a name="return-value"></a>返回值  
  对修改后的 `accelerator_view` 对象的引用。  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 运算符 = = 
 
  比较此[accelerator_view](accelerator-view-class.md)与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。  
   

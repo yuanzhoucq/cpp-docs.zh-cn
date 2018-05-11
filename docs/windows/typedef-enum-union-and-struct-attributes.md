@@ -1,13 +1,10 @@
 ---
-title: "Typedef、 Enum、 Union 和 Struct 特性 |Microsoft 文档"
-ms.custom: 
+title: Typedef、 Enum、 Union 和 Struct 特性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 特性
 下列属性适用于[typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)，[结构](../cpp/struct-cpp.md)，和[枚举](../cpp/enumerations-cpp.md)c + + 关键字。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |特性|描述|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|与使用[switch_type](../windows/switch-type.md)属性中**联合**。|  
-|[自定义](../windows/custom-cpp.md)|你可以定义自己的属性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义自己的属性。|  
 |[export](../windows/export.md)|会导致数据结构，用于放置在.idl 文件。|  
 |[first_is](../windows/first-is.md)|指定要传输的第一个数组元素的索引。|  
 |[helpcontext](../windows/helpcontext.md)|指定允许用户查看有关此帮助文件中的元素信息的上下文 ID。|  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |[helpstring](../windows/helpstring.md)|指定用于描述应用于元素的字符字符串。|  
 |[library_block](../windows/library-block.md)|将.idl 文件的库块中的构造。|  
 |[ptr](../windows/ptr.md)|将一个指针指定为完整的指针。|  
-|[公用](../windows/public-cpp-attributes.md)|可确保即使它未从引用.idl 文件中，typedef 将转到类型库。|  
+|[public](../windows/public-cpp-attributes.md)|可确保即使它未从引用.idl 文件中，typedef 将转到类型库。|  
 |[ref](../windows/ref-cpp.md)|标识引用指针。|  
 |[switch_is](../windows/switch-is.md)|指定的表达式或充当选择联合成员联合判别的标识符。|  
 |[switch_type](../windows/switch-type.md)|标识用作联合判别变量的类型。|  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|[自定义](../windows/custom-cpp.md)|你可以定义自己的属性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义自己的属性。|  
 |[export](../windows/export.md)|会导致数据结构，用于放置在.idl 文件。|  
 |[uuid](../windows/uuid-cpp-attributes.md)|指定为类或接口的唯一 ID。|  
 |[v1_enum](../windows/v1-enum.md)|指示指定的枚举的类型可为一个 32 位实体，而不是 16 位默认传输。|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|[自定义](../windows/custom-cpp.md)|你可以定义自己的属性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义自己的属性。|  
 |[export](../windows/export.md)|会导致数据结构，用于放置在.idl 文件。|  
 |[first_is](../windows/first-is.md)|指定要传输的第一个数组元素的索引。|  
 |[last_is](../windows/last-is.md)|指定要传输的最后一个数组元素的索引。|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|创建 ActiveX 控件。|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|将一个接口条目添加到 COM 映射。|  
 |[control](../windows/control.md)|指定的用户定义的类型是一个控件。|  
-|[自定义](../windows/custom-cpp.md)|你可以定义自己的属性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义自己的属性。|  
 |[db_column](../windows/db-column.md)|将指定的列绑定到行集。|  
 |[db_command](../windows/db-command.md)|创建 OLE DB 命令。|  
 |[db_param](../windows/db-param.md)|将指定的成员变量与一个输入或输出参数相关联，并分隔变量。|  

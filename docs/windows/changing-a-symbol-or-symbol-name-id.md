@@ -1,13 +1,10 @@
 ---
-title: "更改符号或符号名 (ID) |Microsoft 文档"
-ms.custom: 
+title: 更改符号或符号名 (ID) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - symbol names
 - symbols, names
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0ed56fc3663b99af311c52e463bd2f16fcef0a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28d31fc27fdc51a3a5b05dba96ab9decf4fc7e00
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>更改符号或符号名 (ID)
 创建新资源或资源对象时，开发环境会向它分配默认符号名，例如 IDD_DIALOG1。 你可以使用[属性窗口](/visualstudio/ide/reference/properties-window)更改默认符号名，或更改已与资源关联的任何符号的名称。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 惠?  
+ 要求  
   
  Win32  
   

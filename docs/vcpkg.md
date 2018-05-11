@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：用于 Windows 的程序包管理器
 
@@ -31,11 +30,11 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows 上第三方库�
 
 ## <a name="sources-not-binaries"></a>源不是二进制文件
 
-对于公共目录中的库，vcpkg 会下载源，而不是二进制文件[1]。 它将使用 Visual Studio 2017 或 Visual Studio 2015（如果未安装 Visual Studio 2017）对源进行编译。 在 C++ 中，作为链接到它的应用程序代码，使用相同的编译器及编译器版本来编译任何要用的库至关重要。 通过 vcpkg 可以消除或最大程度减少不匹配二进制文件的存在风险及它可能造成的问题。 对于使用特定 Visual C++ 编译器版本的标准化团队，可让一位成员使用 vcpkg 下载源并编译一组二进制文件，然后通过导出命令将二进制文件和标头压缩打包，即可与其他团队成员进行共享。 有关详细信息，请参阅下方的导出已编译二进制文件及标头。 
+对于公共目录中的库，vcpkg 会下载源，而不是二进制文件[1]。 它将使用 Visual Studio 2017 或 Visual Studio 2015（如果未安装 Visual Studio 2017）对源进行编译。 在 C++ 中，作为链接到它的应用程序代码，使用相同的编译器及编译器版本来编译任何要用的库至关重要。 通过 vcpkg 可以消除或最大程度减少不匹配二进制文件的存在风险及它可能造成的问题。 对于使用特定 Visual C++ 编译器版本的标准化团队，可让一位成员使用 vcpkg 下载源并编译一组二进制文件，然后通过导出命令将二进制文件和标头压缩打包，即可与其他团队成员进行共享。 有关详细信息，请参阅下方的导出已编译二进制文件及标头。
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
 
 ## <a name="installation"></a>安装
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>列出已安装的库
+
 在安装某些库以后，可使用 vcpkg list 来查看所获得的内容：
 
 ```cmd
@@ -113,61 +113,63 @@ zlib:x86-windows        1.2.11   A compression library
 
 如果需要使用的库的版本与活动 vcpkg 实例中的版本不同，请按以下步骤操作：
 
-1. 新建 vcpkg 克隆 
+1. 新建 vcpkg 克隆
 1. 修改库的端口文件以获取所需版本
 1. 运行 vcpkg install \<library>。
 1. 使用 vcpkg integrate project 创建 NuGet 包，它会按项目来引用该库。
 
 ## <a name="export-compiled-binaries-and-headers"></a>导出已编译的二进制文件和标头
 
-让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件，将其与其他团队成员进行轻松共享。 
+让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件，将其与其他团队成员进行轻松共享。
 
 ## <a name="updateupgrade-installed-libraries"></a>更新/升级已安装的库
 
 公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update。 准备好将端口集合更新为公共目录的最新版本后，运行 vcpkg upgrade 命令以自动下载和重新生成任一或所有已安装的过期库。
 
-默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项。 
+默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项。
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>升级选项
 
-- **--no-dry-run** 执行升级，在没有指定条件的情况下，命令只列出过期的包。 
-- **--keep-going** 继续安装包（即使出现了失败）。 
-- **--triplet \<t>** 为非限定的包设置默认的三元组。 
-- **--vcpkg-root \<path>** 指定要使用的 vcpkg 目录，而不是使用当前目录或工具目录。 
+- **--no-dry-run** 执行升级，在没有指定条件的情况下，命令只列出过期的包。
+- **--keep-going** 继续安装包（即使出现了失败）。
+- **--triplet \<t>** 为非限定的包设置默认的三元组。
+- **--vcpkg-root \<path>** 指定要使用的 vcpkg 目录，而不是使用当前目录或工具目录。
 
 ### <a name="upgrade-example"></a>升级示例
 
 ### <a name="per-project"></a>按项目
+
 如果需要使用的库的版本与活动 vcpkg 实例中的版本不同，请按以下步骤操作：
 
-1. 新建 vcpkg 克隆 
+1. 新建 vcpkg 克隆
 1. 修改库的端口文件以获取所需版本
 1. 运行 vcpkg install \<library>。
 1. 使用 vcpkg integrate project 创建 NuGet 包，它会按项目来引用该库。
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>导出已编译的二进制文件和标头
-让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件，将其与其他团队成员进行轻松共享。 
+
+让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件，将其与其他团队成员进行轻松共享。
 
 ## <a name="updateupgrade-installed-libraries"></a>更新/升级已安装的库
+
 公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update。 准备好将端口集合更新为公共目录的最新版本后，运行 vcpkg upgrade 命令以自动下载和重新生成任一或所有已安装的过期库。
 
-默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项。 
+默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项。
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>升级选项
 
-- **--no-dry-run** 执行升级，在没有指定条件的情况下，命令只列出过期的包。 
-- **--keep-going** 继续安装包（即使出现了失败）。 
-- **--triplet \<t>** 为非限定的包设置默认的三元组。 
-- **--vcpkg-root \<path>** 指定要使用的 vcpkg 目录，而不是使用当前目录或工具目录。 
+- **--no-dry-run** 执行升级，在没有指定条件的情况下，命令只列出过期的包。
+- **--keep-going** 继续安装包（即使出现了失败）。
+- **--triplet \<t>** 为非限定的包设置默认的三元组。
+- **--vcpkg-root \<path>** 指定要使用的 vcpkg 目录，而不是使用当前目录或工具目录。
 
 ### <a name="upgrade-example"></a>升级示例
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>发布新库
+
 可以在自己的专用端口集合中添加任意库。 要建议适合公共目录的新库，请在 [GitHub vcpkg 问题页](https://github.com/Microsoft/vcpkg/issues)上打开一个问题。
 
 ## <a name="remove-a-library"></a>删除库
+
 键入 vcpkg remove 可删除已安装的库。 如果存在任何其他依赖于它的库，则系统会提示通过 --recurse 重新运行命令，如执行此操作，则下游的所有库都会被删除。
 
 ## <a name="customize-vcpkg"></a>自定义 vcpkg
-可凭自身喜好随意修改 vcpkg 的克隆。 可创建多个 vcpkg 克隆，修改每个克隆中的端口文件，使其包含特定版本的库或指定命令行参数。 例如在某企业中，某组的开发者可能正在使用拥有某一依赖项集的软件，而其他组可能拥有不同的集。 可设置两个 vcpkg 克隆并对其进行修改，以便根据需要来下载不同版本的库和编译开关等。 
+
+可凭自身喜好随意修改 vcpkg 的克隆。 可创建多个 vcpkg 克隆，修改每个克隆中的端口文件，使其包含特定版本的库或指定命令行参数。 例如在某企业中，某组的开发者可能正在使用拥有某一依赖项集的软件，而其他组可能拥有不同的集。 可设置两个 vcpkg 克隆并对其进行修改，以便根据需要来下载不同版本的库和编译开关等。
 
 ## <a name="uninstall-vcpkg"></a>卸载 vcpkg
-只需删除目录。 
+
+只需删除目录。
 
 ## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 反馈
+
 使用 --survey 命令向 Microsoft 发送关于 vcpkg 的反馈，包括 Bug 报告和功能上的建议。
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 文件夹层次结构
-所有 vcpkg 功能和数据都自包含在称为“实例”的单独目录层次结构中。 没有注册表设置或环境变量。 可以在计算机上设置任意数量的 vcpkg 实例，它们彼此互不干扰。 
 
-vcpkg 实例的内容如下： 
+所有 vcpkg 功能和数据都自包含在称为“实例”的单独目录层次结构中。 没有注册表设置或环境变量。 可以在计算机上设置任意数量的 vcpkg 实例，它们彼此互不干扰。
+
+vcpkg 实例的内容如下：
 
 - buildtrees - 包含从中生成每个库的源的子文件夹
 - docs - 文档和示例
@@ -240,7 +248,8 @@ vcpkg 实例的内容如下：
 |**vcpkg version**|显示版本信息|
 |**vcpkg contact**|显示联系信息，以便发送反馈|
 
-### <a name="options"></a>选项:
+### <a name="options"></a>选项
+
 |选项|描述|
 |---------|---------|
 |**--triplet \<t>**|指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅“vcpkg help triplet”）|

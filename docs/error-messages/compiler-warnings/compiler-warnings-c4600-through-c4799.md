@@ -1,8 +1,8 @@
 ---
-title: "编译器警告 C4600 到 C4799 |Microsoft 文档"
+title: 编译器警告 C4600 到 C4799 |Microsoft 文档
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>编译器警告 C4600 到 C4799
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 12/21/2017
 |[编译器警告 （错误） C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|class： 密封的抽象类不能实现接口 interface|
 |编译器警告 （等级 1） C4688|“constraint”：约束列表包含程序集私有类型“type”|
 |编译器警告 （等级 1） C4689|%c： 不受支持的 #pragma detect_mismatch; 中的字符忽略 #pragma|
-|编译器警告 （等级 4） C4690|[emitidl (pop)]: 详细栈比入|
+|编译器警告 （等级 4） C4690|[ emitidl ( pop ) ]: 详细栈比入|
 |[编译器警告（等级 1）C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|type： 在未引用程序集 file，而是使用了当前翻译单元中定义的类型应引用的类型|
 |[编译器警告（等级 1）C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|“function”: 非私有成员的签名包含程序集私有本机类型“native_type”|
 |[编译器警告 （等级 1，错误） C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|class： 密封的抽象类不能具有任何实例成员实例 member|
@@ -204,7 +203,7 @@ ms.lasthandoff: 12/21/2017
 |[编译器警告（等级 1）C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|var 具有 file1 和 file2 中的不同对齐方式： 编号和编号|
 |[编译器警告（等级 1）C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|type 具有 file1 和 file2 中的不同大小： 数量和字节数|
 |[编译器警告（等级 1）C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|var 具有 file1 和 file2 中的不同类型: type1 和 type2|
-|[编译器警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|可变访问*表达式*受到 /volatile:\<iso &#124; ms > 设置; 请考虑使用 __iso_volatile_load/store 内部函数|
+|[编译器警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|可变访问*表达式*受到 /volatile:\<iso&#124;ms > 设置; 请考虑使用 __iso_volatile_load/store 内部函数|
 |[编译器警告（等级 1）C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|调用托管入口点： 不会在有加载程序锁，包括 DLL 入口点和调用从 DLL 入口点达到运行托管的代码|
 |编译器警告 （等级 4） C4749|有条件地支持： offsetof 应用于 non standard 布局类型*类型*|
 |编译器警告 （等级 1） C4750|“identifier”：函数 with _alloca() 内嵌到循环中|

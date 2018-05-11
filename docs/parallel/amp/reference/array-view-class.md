@@ -1,12 +1,9 @@
 ---
-title: "array_view 类 |Microsoft 文档"
-ms.custom: 
+title: array_view 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view 类
 表示 N 维视图对保存在另一个容器中的数据。  
@@ -111,13 +106,13 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|将存储的秩`array_view`对象。|  
   
 ### <a name="data-members"></a>数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[extent](#extent)|获取定义 `extent` 对象形状的 `array_view` 对象。|  
 |[source_accelerator_view](#source_accelerator_view)|获取[accelerator_view](accelerator-view-class.md)其中的数据源的`array_view`所在|  
@@ -157,12 +152,12 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  `array_view`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  
   
-##  <a name="dtor"></a> ~array_view 
+##  <a name="dtor"></a> ~ array_view 
 
  销毁`array_view`对象。  
   

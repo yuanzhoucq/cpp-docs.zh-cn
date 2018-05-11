@@ -1,12 +1,9 @@
 ---
-title: "编译器警告 （等级 1） C4946 |Microsoft 文档"
-ms.custom: 
+title: 编译器警告 （等级 1） C4946 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4946
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800d940c3005762bddf6402a14af4416da4bc50e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072e43f4750d2f64fb0f9dc56478a68699b98c9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4946"></a>编译器警告（等级 1）C4946
 reinterpret_cast 在相关类之间使用:“class1”和“class2”  

@@ -1,13 +1,10 @@
 ---
-title: "运行时平台的组件扩展 |Microsoft 文档"
-ms.custom: 
+title: 运行时平台的组件扩展 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,25 +14,23 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
 Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。 通过使用 C + + /CX 中，你可以编程通用 Windows 平台应用程序和编译为本机代码的组件。 虽然你可以通过针对 Windows 运行时 COM 接口直接编程来创建通用 Windows 平台应用程序，通过使用 C + + /CX 中，你可以使用构造函数、 异常和其他现代 c + + 编程习语。 若要启用.NET 平台上的托管的执行环境中的 c + + 编程，你可以使用 C + + /cli CLI。  
   
  **两个运行时，一组扩展**  
   
- C + + /cli CX 是子集的 C + + /cli CLI。 扩展的共有的 C + + /CX 和 C + + /cli CLI，语义取决于你面向的公共语言运行时 (CLR) 或 Windows 运行时。 若要编译应用程序在 Windows 运行时上运行，指定**/ZW**编译器选项。 若要对其进行编译在 CLR 上运行，指定**/clr**编译器选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。  
+ C + + /cli CX 是子集的 C + + /cli CLI。 扩展的共有的 C + + /CX 和 C + + /cli CLI，语义取决于你面向的公共语言运行时 (CLR) 或 Windows 运行时。 若要编译应用程序在 Windows 运行时上运行，指定 **/ZW**编译器选项。 若要对其进行编译在 CLR 上运行，指定 **/clr**编译器选项。 当使用 Visual Studio 创建项目时，将自动设置这些开关。  
   
  有关如何在 c + + 中创建通用 Windows 平台应用程序的详细信息，请参阅[路线图 for Windows Runtime 应用程序使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。  
   
@@ -56,7 +51,7 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 |`enum class`<br /><br /> `enum struct`|否|声明枚举。|[枚举类](../windows/enum-class-cpp-component-extensions.md)|  
 |`property`|是|声明属性。|[属性](../windows/property-cpp-component-extensions.md)|  
 |`delegate`|是|声明委托。|[委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)|  
-|`event`|是|声明事件。|[事件](../windows/event-cpp-component-extensions.md)|  
+|`event`|是|声明事件。|[event](../windows/event-cpp-component-extensions.md)|  
   
 ## <a name="override-specifiers"></a>重写说明符  
  可以使用下列关键字来限定派生的替代行为。 虽然 `new` 关键字不是 C++ 的扩展，但仍列于此处，因为它可以在附加上下文中使用。 某些说明符还可用于本机编程。 有关详细信息，请参阅[如何： 在本机编译中声明重写说明符 (C + + /cli CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
@@ -65,7 +60,7 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 |-------------|-----------------------|-------------|---------------|  
 |`abstract`|是|指示函数或类是抽象的。|[abstract](../windows/abstract-cpp-component-extensions.md)|  
 |`new`|否|指示函数不替代基类版本。|[新 (新 vtable 中的槽）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
-|`override`|是|指示方法必须替代基类版本。|[替代](../windows/override-cpp-component-extensions.md)|  
+|`override`|是|指示方法必须替代基类版本。|[override](../windows/override-cpp-component-extensions.md)|  
 |`sealed`|是|防止类用作基类。|[sealed](../windows/sealed-cpp-component-extensions.md)|  
   
 ## <a name="keywords-for-generics"></a>泛型关键字  
@@ -90,7 +85,7 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 |`nullptr`|否|指示图柄或指针不指向对象。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>模板构造  
- 下列语言构造作为模板而非关键字实现。 如果指定**/ZW**编译器选项，它们在定义`lang`命名空间。 如果指定**/clr**编译器选项，它们在定义`cli`命名空间。  
+ 下列语言构造作为模板而非关键字实现。 如果指定 **/ZW**编译器选项，它们在定义`lang`命名空间。 如果指定 **/clr**编译器选项，它们在定义`cli`命名空间。  
   
 |关键字|目标|参考|  
 |-------------|-------------|---------------|  

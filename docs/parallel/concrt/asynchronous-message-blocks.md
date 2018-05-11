@@ -1,13 +1,10 @@
 ---
-title: "异步消息块 |Microsoft 文档"
-ms.custom: 
+title: 异步消息块 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>异步消息块
 
@@ -60,14 +55,14 @@ ms.lasthandoff: 12/21/2017
   
 - [消息保留](#reservation)  
   
-##  <a name="sources_and_targets"></a>源和目标  
+##  <a name="sources_and_targets"></a> 源和目标  
  源和目标是在消息传递的两个重要的参与者。 A*源*是指将消息发送的通信的终结点。 A*目标*是指接收消息的通信的终结点。 你可以将作为从读取终结点的源和目标为写入到的终结点。 应用程序将源和目标一起连接到窗体*消息传送网络*。  
   
  代理库使用两个抽象类来表示源和目标： [concurrency:: isource](../../parallel/concrt/reference/isource-class.md)和[concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md)。 消息块类型 act，因为源派生自`ISource`; 消息块类型 act，因为目标派生自`ITarget`。 消息块类型 act 作为源和目标派生从这两个`ISource`和`ITarget`。  
   
  [[返回页首](#top)]  
   
-##  <a name="propagation"></a>消息传播  
+##  <a name="propagation"></a> 消息传播  
  *消息传播*是一种将消息从一个组件发送到另一个行为。 消息块提供的一条消息，它可以接受、 拒绝，或推迟该消息。 每个消息块类型存储，并将消息传输不同的方式。 例如，`unbounded_buffer`类存储无限的数量的消息，`overwrite_buffer`类存储一次，一条消息和 transformer 类存储每条消息的更改的版本。 在本文档后面的更详细地介绍了这些消息块类型。  
   
  当消息块接受一条消息时，它可以根据需要执行工作，并且如果消息块是源，将生成的消息传递到网络的另一个成员。 消息块可以使用筛选器函数以拒绝不想接收的消息。 在本主题的部分中后面的更详细地介绍筛选器[消息筛选](#filtering)。 推迟消息的消息块可以保留该消息，并使用它更高版本。 中的部分中的本主题中后面的更详细地介绍了消息保留[消息保留](#reservation)。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="overview"></a>消息块类型概述  
+##  <a name="overview"></a> 消息块类型概述  
  下表简要介绍重要的消息块类型的角色。  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -97,13 +92,13 @@ ms.lasthandoff: 12/21/2017
  [transformer](#transformer)  
  当它接收数据，并将该工作的结果发送到另一个目标块时，请执行工作。 `transformer`类，可以作用于不同的输入和输出类型。  
   
- [选择](#choice)  
+ [choice](#choice)  
  从一组源选择第一个可用的消息。  
   
  [联接和 multitype 联接](#join)  
  等待所有消息从一组源接收，然后将消息组合到另一个消息块的一条消息。  
   
- [计时器](#timer)  
+ [timer](#timer)  
  向目标块按固定间隔发送一条消息。  
   
  这些消息块类型具有不同的特征，这使得它们适用于不同的情况。 以下是一些特征：  
@@ -134,7 +129,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="unbounded_buffer"></a>unbounded_buffer 类  
+##  <a name="unbounded_buffer"></a> unbounded_buffer 类  
  [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)类表示一般用途的异步消息结构。 此类存储先进先出 (FIFO) 消息队列，此消息队列可由多个源写入或从多个目标读取。 在目标收到来自消息`unbounded_buffer`对象，从消息队列中删除该消息。 因此，尽管`unbounded_buffer`对象可以具有多个目标，只有一个目标将接收每条消息。 需将多条消息传递给另一个组件，且该组件必须接收每条消息时，`unbounded_buffer` 类十分有用。  
   
 ### <a name="example"></a>示例  
@@ -152,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="overwrite_buffer"></a>overwrite_buffer 类  
+##  <a name="overwrite_buffer"></a> overwrite_buffer 类  
  [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)类类似于`unbounded_buffer`类，只不过`overwrite_buffer`对象存储只是一条消息。 此外，在目标收到来自消息`overwrite_buffer`对象，该消息不会从缓冲区删除。 因此，多个目标将接收到该消息的副本。  
   
  `overwrite_buffer`类很有用，当你想要将多个消息传递到另一个组件，但该组件只需要最新的值。 需向多个组件广播消息时，此类也很有用。  
@@ -172,7 +167,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="single_assignment"></a>single_assignment 类  
+##  <a name="single_assignment"></a> single_assignment 类  
  [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md)类类似于`overwrite_buffer`类，只不过`single_assignment`对象可写入一次。 与 `overwrite_buffer` 类相似，在目标收到来自 `single_assignment` 对象的消息时，不会从该目标删除此消息。 因此，多个目标将接收到该消息的副本。 `single_assignment`类很有用，当你想要一个条消息广播给多个组件。  
   
 ### <a name="example"></a>示例  
@@ -190,7 +185,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="call"></a>call 类  
+##  <a name="call"></a> call 类  
  [Concurrency:: call](../../parallel/concrt/reference/call-class.md)类充当消息接收方在接收数据时执行工作函数。 此工作函数可以是 lambda 表达式、 一个函数对象或函数指针。 A`call`因为它进行操作以并行方式将消息发送到它的其他组件对对象的行为方式与普通函数调用。 如果`call`对象接收到消息时执行工作，则它将该消息添加到队列。 每个`call`对象进程队列中的邮件中接收它们的顺序。  
   
 ### <a name="example"></a>示例  
@@ -208,7 +203,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="transformer"></a>transformer 类  
+##  <a name="transformer"></a> transformer 类  
  [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)类将为这两个消息接收方和消息发送方进行操作。 `transformer`类类似于`call`类，因为接收数据时，它执行用户定义的工作函数。 但是，`transformer`类还将工作函数的结果发送到接收方对象。 如`call`对象，`transformer`对象，也用作以并行方式对其他组件，用于将消息发送到它。 如果`transformer`对象接收到消息时执行工作，则它将该消息添加到队列。 每个`transformer`对象处理其排队的消息中接收它们的顺序。  
   
  `transformer`类将其消息发送到一个目标。 如果你设置`_PTarget`构造函数中的参数`NULL`，更高版本可以通过调用来指定目标[concurrency::link_target](reference/source-block-class.md#link_target)方法。  
@@ -230,7 +225,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="choice"></a>choice 类  
+##  <a name="choice"></a> choice 类  
  [Concurrency:: choice](../../parallel/concrt/reference/choice-class.md)类从一组源中选择第一个可用的消息。 `choice`类表示而不是数据流机制的控制流机制 (主题[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)描述数据流和控制流之间的差异)。  
   
  从选择的对象的读取类似于调用 Windows API 函数`WaitForMultipleObjects`当它具有`bWaitAll`参数设置为`FALSE`。 但是，`choice`类将数据绑定到事件本身而不是外部的同步对象。  
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[返回页首](#top)]  
   
-##  <a name="join"></a>联接和 multitype_join 类  
+##  <a name="join"></a> 联接和 multitype_join 类  
  [Concurrency:: join](../../parallel/concrt/reference/join-class.md)和[concurrency::multitype_join](../../parallel/concrt/reference/multitype-join-class.md)类使你可以等待的一组源的每个成员，用于接收消息。 `join`类将具有通用的消息类型的源对象进行操作。 `multitype_join`类将可以具有不同的消息类型的源对象进行操作。  
   
  从读取`join`或`multitype_join`对象类似于调用 Windows API 函数`WaitForMultipleObjects`当它具有`bWaitAll`参数设置为`TRUE`。 但是，就像`choice`对象，`join`和`multitype_join`对象使用的事件机制来将数据绑定到事件本身而不是外部的同步对象。  
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[返回页首](#top)]  
   
-##  <a name="timer"></a>timer 类  
+##  <a name="timer"></a> timer 类  
  并发::[计时器类](../../parallel/concrt/reference/timer-class.md)充当消息源。 A`timer`对象将消息发送到目标后经过指定的时间段。 `timer`发送一条消息，则必须延迟或你想要定期发送消息时，类很有用。  
   
 
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[返回页首](#top)]  
   
-##  <a name="filtering"></a>消息筛选  
+##  <a name="filtering"></a> 消息筛选  
  在创建消息块对象时，你可以提供*筛选函数*，它确定消息块是接受还是拒绝消息。 筛选器函数是有用的办法保证的消息块只接收特定值。  
   
  下面的示例演示如何创建`unbounded_buffer`使用筛选器函数仅接受偶数的对象。 `unbounded_buffer`对象拒绝奇数，并因此不会传播到目标块的奇数。  
@@ -345,7 +340,7 @@ bool (T const &)
   
  [[返回页首](#top)]  
   
-##  <a name="reservation"></a>消息保留  
+##  <a name="reservation"></a> 消息保留  
  *消息保留*允许消息块保留消息以备日后使用。 通常情况下，消息保留未直接使用。 但是，了解消息保留可以帮助你更好地了解一些预定义的消息块类型的行为。  
   
  请考虑非贪婪和贪婪联接。 这两种使用消息保留保留消息以供将来使用。 所述更早版本，非贪婪联接接收消息的两个阶段。 在第一个阶段，非贪婪`join`对象会等待其每个源接收消息。 非贪婪联接会尝试保留这些消息中每个。 如果它可以保留每条消息，它使用所有消息，并将其传播到其目标。 否则为它发布或取消，消息保留和重新等待每个源收到一条消息。  

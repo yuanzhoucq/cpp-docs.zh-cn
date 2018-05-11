@@ -1,12 +1,9 @@
 ---
-title: "Module::MethodReleaseNotifier::MethodReleaseNotifier 构造函数 |Microsoft 文档"
-ms.custom: 
+title: Module::MethodReleaseNotifier::MethodReleaseNotifier 构造函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MethodReleaseNotifier, constructor
 ms.assetid: 762e2ca4-0a92-49de-9ff5-d3efa0f067c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 045dd8dd0dbee58c0feea33bc7ce4f6cea30e591
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier 构造函数
 初始化 module:: methodreleasenotifier 类的新实例。  
@@ -53,7 +48,7 @@ MethodReleaseNotifier(
  `release`  
  指定`true`以便调用基础[模块:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否则，指定`false`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  

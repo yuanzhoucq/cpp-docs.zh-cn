@@ -1,13 +1,10 @@
 ---
-title: "C + + AMP 概述 |Microsoft 文档"
-ms.custom: 
+title: C + + AMP 概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8de31ab9009a84c04e594837a0c4fbf30758fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 通过利用在离散图形卡的数据并行硬件，如图形处理单元 (GPU)，c + + Accelerated Massive Parallelism (c + + AMP) 加快了 c + + 代码的执行。 通过使用 c + + AMP，你可以编写代码，多维数据算法，以便可以在异类硬件上使用并行加速执行。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 可以使用 c + + AMP 语言扩展来控制数据如何从 CPU 移动到 GPU 并返回，以便您可以提高性能。  
   
 ## <a name="system-requirements"></a>系统要求  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)][!INCLUDE[win8](../../build/reference/includes/win8_md.md)]， [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)]，或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)]、[!INCLUDE[win8](../../build/reference/includes/win8_md.md)]、[!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] 或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 功能级别 11.0 或更高版本的硬件  
   
@@ -471,7 +466,7 @@ void MathExample() {
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用  
  如其他 c + + 库中，你可以在 UWP 应用中使用 c + + AMP。 这些文章介绍如何在应用中包含 c + + AMP 代码通过使用 c + +、 C#、 Visual Basic 或 JavaScript 创建：  
   
-- [在 UWP 应用中使用 c + + AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [在 UWP 应用中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [演练： 在 c + + 中创建基本 Windows 运行时组件并从 JavaScript 中调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

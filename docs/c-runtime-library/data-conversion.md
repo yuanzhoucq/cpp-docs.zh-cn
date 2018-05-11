@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12574f9a8a2da2072d1196cbd769ac87cf31c2f7
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: a0260ebe37e0656f2078b247017d9f02ccc88474
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-conversion"></a>数据转换
 
@@ -71,4 +70,4 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="see-also"></a>请参阅
 
-[按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

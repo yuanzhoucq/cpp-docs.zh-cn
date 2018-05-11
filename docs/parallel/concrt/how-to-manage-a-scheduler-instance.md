@@ -1,30 +1,25 @@
 ---
-title: "如何： 管理计划程序实例 |Microsoft 文档"
-ms.custom: 
+title: 如何： 管理计划程序实例 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e4916e0f563c4034dc27be1e3d911f42a65319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 699abcbc75dc4f0df40d07d26c0e6987d4711fe3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理计划程序实例
 计划程序实例，可以将特定的计划策略与各种类型的工作负荷相关联。 本主题包含两个基本示例，演示如何创建和管理计划程序实例。  

@@ -1,13 +1,10 @@
 ---
-title: "COM 特性 |Microsoft 文档"
-ms.custom: 
+title: COM 特性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63e23f6a6520085ff5a5a072cb349d079615b6f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d37ba5c690b61840ad261e6ab966d0cc74c07c1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="com-attributes"></a>COM 特性
 COM 特性注入代码以支持的 COM 开发和.NET Framework 公共语言运行时开发的许多方面。 这些区域的范围为自定义接口的实现和支持的现有接口到支持常用属性、 方法和事件。 此外，支持可以找到复合和 ActiveX 控件实现。  

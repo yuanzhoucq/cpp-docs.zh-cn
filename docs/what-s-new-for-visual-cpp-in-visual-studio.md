@@ -1,20 +1,19 @@
-﻿---
-title: "Visual Studio 中 Visual C++ 的新增功能 | Microsoft Docs"
+---
+title: Visual Studio 中 Visual C++ 的新增功能 | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
-- vs-ide-general
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 02/03/2018
 
 ### <a name="new-compiler-options"></a>新的编译器选项
 
-- **/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [/std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 **/std:c++latest** 开关保护。
+- /std:c++14 和 /std:c++latest：通过这两个编译器选项，可选择在项目中使用特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [/std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 **/std:c++latest** 开关保护。
 
    **Visual Studio 2017 版本15.3**：
 
@@ -50,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md)：通过避免将所有调试信息复制到 PDB 文件，实现最高达 30％ 更快的增量链接时间（与Visual Studio 2015 相比）。 PDB 文件改为指向用于创建可执行文件的对象和库文件的调试信息。 请参阅 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)（使用 /Debug:fastlink 在 VS “15” 中缩短生成周期）和 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)（在 Visual Studio 中加速 C++ 生成的建议）。
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 可将 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md) 结合使用。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
+- 可在 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中结合使用 [/sdl](build/reference/sdl-enable-additional-security-checks.md) 和 [/await](build/reference/await-enable-coroutine-support.md)。 移除了针对协同程序的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、诊断和版本控制
 

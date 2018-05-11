@@ -1,13 +1,10 @@
 ---
-title: "idl_quote |Microsoft 文档"
-ms.custom: 
+title: idl_quote |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.idl_quote
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idlquote"></a>idl_quote
 允许你使用 Visual c + + 的当前版本中不支持的 IDL 构造并将它们传递到生成的.idl 文件。  
@@ -85,7 +80,7 @@ __interface IStatic{
   
  此代码会导致 MYFLOT 和 MYDUB 和*文本*条目以放置在生成的.idl 文件。 *名称*参数强制*文本*放置在引用的任何内容之前*名称*生成的.idl 文件中。 *依赖关系*参数强制前后放置的依赖项列表定义*文本*生成的.idl 文件中。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   

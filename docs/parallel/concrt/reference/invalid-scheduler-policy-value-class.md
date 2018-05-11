@@ -1,12 +1,9 @@
 ---
-title: "invalid_scheduler_policy_value 类 |Microsoft 文档"
-ms.custom: 
+title: invalid_scheduler_policy_value 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::invalid_scheduler_policy_value
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbcbef5fc97f10b923b9a6b692a7cfa3799151b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ec11d7ebc7d2c074344e9651a7c548fe1ad01943
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value 类
 此类描述 `SchedulerPolicy` 对象的策略键设置为对于该键无效的值时引发的异常。  
@@ -49,7 +44,7 @@ class invalid_scheduler_policy_value : public std::exception;
   
  `invalid_scheduler_policy_value`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  

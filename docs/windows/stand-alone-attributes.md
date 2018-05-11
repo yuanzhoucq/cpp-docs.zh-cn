@@ -1,31 +1,26 @@
 ---
-title: "独立特性 |Microsoft 文档"
-ms.custom: 
+title: 独立特性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standalone attributes
 - attributes [C++], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="stand-alone-attributes"></a>独立特性
 独立属性不对 c + + 关键字进行操作，但更类似的代码行。 独立特性语句需要行尾的分号。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 |特性|描述|  
 |---------------|-----------------|  
 |[cpp_quote](../windows/cpp-quote.md)|发出指定的字符串，而无需引号字符，到生成的头文件。|  
-|[自定义](../windows/custom-cpp.md)|你可以定义自己的属性。|  
+|[custom](../windows/custom-cpp.md)|你可以定义自己的属性。|  
 |[db_command](../windows/db-command.md)|创建 OLE DB 命令。|  
 |[emitidl](../windows/emitidl.md)|确定是否将处理并放置在生成的.idl 文件中所有后续的 IDL 特性。|  
 |[idl_module](../windows/idl-module.md)|在 DLL 中指定的入口点。|  

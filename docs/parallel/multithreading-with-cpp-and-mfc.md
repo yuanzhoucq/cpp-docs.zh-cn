@@ -1,13 +1,10 @@
 ---
-title: "多线程处理与 c + + 和 MFC |Microsoft 文档"
-ms.custom: 
+title: 多线程处理与 c + + 和 MFC |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 778602a0e9236ad8cc788d8a2306e8f2d143ec49
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 进行多线程编程
 Microsoft 基础类 (MFC) 库提供支持多线程应用程序。 本主题介绍进程、 线程和 MFC 方法为多线程处理。  
@@ -43,7 +38,7 @@ Microsoft 基础类 (MFC) 库提供支持多线程应用程序。 本主题介�
   
  如果你想，你可以在你的应用程序中创建其他线程。 你可能想要执行此操作可在不希望用户等待它们完成时处理背景或维护任务。 MFC 应用程序中的所有线程都由[CWinThread](../mfc/reference/cwinthread-class.md)对象。 在大多数情况下，你甚至无需显式创建这些对象;改为调用框架帮助程序函数[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，这将创建`CWinThread`为你的对象。  
   
- MFC 区分两种类型的线程： 用户界面线程和辅助线程。 用户界面线程通常用于处理用户输入并响应事件和用户生成的消息。 工作线程通常用于完成任务，例如重新计算，不需要用户输入。 Win32 API 不区分类型的一个线程。它只需知道线程的起始地址，因此它可以开始执行该线程。 MFC 专门通过提供用户界面中的事件的消息泵处理用户界面线程。 `CWinApp`是一种用户界面线程对象，因为它派生自`CWinThread`和处理事件和用户生成的消息。  
+ MFC 区分两种类型的线程： 用户界面线程和辅助线程。 用户界面线程通常用于处理用户输入并响应事件和用户生成的消息。 工作线程通常用于完成任务，例如重新计算，不需要用户输入。 Win32 API 不区分类型的一个线程。它只需知道线程的起始地址，因此它可以开始执行该线程。 MFC 专门通过提供用户界面中的事件的消息泵处理用户界面线程。 `CWinApp` 是一种用户界面线程对象，因为它派生自`CWinThread`和处理事件和用户生成的消息。  
   
  其中多个线程可能要求对同一对象的访问的情况下应特别注意。 [多线程处理： 编程提示](../parallel/multithreading-programming-tips.md)介绍可用于避免在这些情况下，可能会出现的问题的技术。 [多线程处理： 如何使用同步类](../parallel/multithreading-how-to-use-the-synchronization-classes.md)介绍如何使用可从多个线程对单个对象的访问进行同步的类。  
   

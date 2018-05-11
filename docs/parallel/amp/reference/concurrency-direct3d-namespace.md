@@ -1,12 +1,9 @@
 ---
-title: "Concurrency:: direct3d Namespace |Microsoft 文档"
-ms.custom: 
+title: 'Concurrency:: direct3d Namespace |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空间
 `direct3d`命名空间提供支持 D3D 互操作性的函数。 它使 AMP 代码中的计算 D3D 资源的无缝利用以及允许在 AMP 中创建在 D3D 代码中，而无需创建冗余中间副本的资源的使用。 你可以以增量方式使用 c + + AMP 来加快 DirectX 应用程序的计算密集型部分上和使用 D3D API 从 AMP 计算生成数据。  
@@ -73,7 +68,7 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|返回一个布尔型标志，该值指示是否对指定 accelerator_view 禁用超时。|  
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|已重载。 执行上三个自变量的算术乘法/加法操作： _X * _Y + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|创建从 D3D 缓冲区接口指针的数组。|  
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|通过使用 Perlin 噪音算法生成的随机值|  
+|[干扰](concurrency-direct3d-namespace-functions-amp.md#noise)|通过使用 Perlin 噪音算法生成的随机值|  
 |[弧度为单位](concurrency-direct3d-namespace-functions-amp.md#radians)|将 _X 从度数转换成弧度|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|计算参数的快速、 近似相互|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|_X 中位的顺序反转|  
@@ -84,7 +79,7 @@ namespace direct3d;
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|比较两个无符号的值，返回的值即更大。|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|比较两个无符号的值，返回这是较小的值。|  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp.h  
   
  **命名空间：** 并发  

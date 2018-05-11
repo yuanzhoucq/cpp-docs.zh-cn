@@ -1,13 +1,10 @@
 ---
-title: "uuid （c + + 特性） |Microsoft 文档"
-ms.custom: 
+title: uuid （c + + 特性） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
 指定为类或接口的唯一 ID。  
@@ -56,13 +51,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>示例  
  请参阅[可绑定](../windows/bindable.md)更大的示例的示例使用`uuid`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`， `interface`，**联合**，`enum`|  
+|**适用对象**|**类**， `struct`， `interface`，**联合**， `enum`|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

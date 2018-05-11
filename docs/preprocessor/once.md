@@ -1,12 +1,9 @@
 ---
-title: once | Microsoft Docs
-ms.custom: 
+title: 一旦 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.once
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0aea1700feaad1c286386f17a5008514282d52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="once"></a>once
 指定该文件在编译源代码文件时仅由编译器包含（打开）一次。  
@@ -41,9 +36,9 @@ ms.lasthandoff: 02/23/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 由于编译器将不会在翻译单元中的文件的第一个 #include 后打开和读取文件，因此，使用 `#pragma once` 可减少生成次数。 这称为*多次包括优化*。 它具有类似的效果*#include 防护*惯用语法，后者使用预处理器宏定义来避免多次包含文件的内容。 这也有助于防止违反*单一定义规则*-要求所有模板、 类型、 函数和对象不能超过一个定义在中的代码。  
+ 由于编译器将不会在翻译单元中的文件的第一个 #include 后打开和读取文件，因此，使用 `#pragma once` 可减少生成次数。 这称为*多次包括优化*。 它具有类似的效果 *#include 防护*惯用语法，后者使用预处理器宏定义来避免多次包含文件的内容。 这也有助于防止违反*单一定义规则*-要求所有模板、 类型、 函数和对象不能超过一个定义在中的代码。  
   
- 例如:  
+ 例如：  
   
 ```  
 // header.h  

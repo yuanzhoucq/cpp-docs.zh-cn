@@ -1,12 +1,9 @@
 ---
-title: "double_2 类 |Microsoft 文档"
-ms.custom: 
+title: double_2 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::set_x
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c447587fcefbd922cbe6c1ba5f63ef1d3a2efce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double2-class"></a>double_2 类
 表示 2 双短矢量。  
@@ -104,7 +99,7 @@ class double_2;
   
 ### <a name="public-constants"></a>公共常量  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |double_2::size 常量||  
   
@@ -124,7 +119,7 @@ class double_2;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `double_2`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  

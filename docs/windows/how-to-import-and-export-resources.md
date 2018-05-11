@@ -1,13 +1,10 @@
 ---
-title: "如何： 导入和导出资源 |Microsoft 文档"
-ms.custom: 
+title: 如何： 导入和导出资源 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.importing
 - vc.resvw.resource.importing
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 3c9329dc-dcb8-4edd-a600-78e3e572bd89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a01269928d0e5b52cca6e2301ad681db61289f80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-import-and-export-resources"></a>如何：导入和导出资源
 可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 可以从 Visual C++ 项目导出相同类型的文件以分隔可以在开发环境外部使用的文件。  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 惠?  
+ 要求  
   
  Win32  
   

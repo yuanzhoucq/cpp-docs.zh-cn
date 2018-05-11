@@ -2,11 +2,8 @@
 title: CPageSetupDialog 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 封装由 Windows 公共 OLE“页面设置”对话框提供的服务以及对于设置和修改打印边距的额外支持。  
@@ -350,7 +345,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>参数  
  *wPaper*  
- 指定一个值，指示纸张大小。 此值可以是之一**DMPAPER_**值中的说明列出[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
+ 指定一个值，指示纸张大小。 此值可以是之一**DMPAPER_** 值中的说明列出[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
   
  `wFlags`  
  指示的方向的纸张或信封，并且打印机已点矩阵或 HPPCL （Hewlett Packard 打印机控件语言） 设备。 此参数可以具有下列值之一：  
@@ -380,7 +375,7 @@ virtual UINT PreDrawPage(
 ### <a name="remarks"></a>备注  
  重写此函数可自定义绘制图像。 如果你重写此函数并返回**TRUE**，你必须绘制整个图像。 如果你重写此函数并返回**FALSE**，由框架绘制整个默认图像。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例写字板](../../visual-cpp-samples.md)   
  [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)

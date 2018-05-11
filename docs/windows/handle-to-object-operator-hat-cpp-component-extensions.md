@@ -1,30 +1,25 @@
 ---
-title: "对象句柄运算符 (^) （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 对象句柄运算符 (^) （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e760181f48e4bfd197514b152701e94ac6e94a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>对象句柄运算符 (^)（C++ 组件扩展）
 *句柄声明符*(`^`，发音为"hat")，修改类型[说明符](../cpp/overview-of-declarators.md)表示，声明的对象应自动删除当系统确定该对象是无法再进行访问。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  有关如何实例化对象的信息，请参阅[ref 新](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -245,7 +240,7 @@ int main() {
 }  
 ```  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ## <a name="see-also"></a>请参阅  

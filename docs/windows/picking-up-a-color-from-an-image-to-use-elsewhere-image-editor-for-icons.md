@@ -1,13 +1,10 @@
 ---
-title: "从映像用于其他地方 （图标的图像编辑器） 选取颜色 |Microsoft 文档"
-ms.custom: 
+title: 从映像用于其他地方 （图标的图像编辑器） 选取颜色 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
 dev_langs:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a42e514c3b13a1e958c4ff08d51bb330653ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c8c946d0343c45ca5223f9bf976a94b67c70a2b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>从图像中选取颜色用于其他地方（图标的图像编辑器）
 **选择颜色**，或颜色选取工具，可以在图像上的任何颜色的当前前景色或背景色，具体取决于您按左侧或鼠标右键按钮。 若要取消**选择颜色**工具中，选择另一个工具。  
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
   
 3.  使用鼠标左键的前景色，或对背景色的鼠标右键按钮的绘制。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 惠?  
+ 要求  
   
  无  
   

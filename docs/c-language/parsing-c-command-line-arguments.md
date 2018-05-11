@@ -2,12 +2,9 @@
 title: 分析 C 命令行参数 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3db47ca48e52babc03923dfba7b1dcb8173cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b61bae046e73c4e49bbcaeb095b7bf230e95dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parsing-c-command-line-arguments"></a>分析 C 命令行自变量
 **Microsoft 专用**  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果偶数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 `argv` 数组中，而双引号 (") 被解释为字符串分隔符。  
   
--   如果奇数个反斜杠后跟双引号，则每对反斜杠 (**\\\\**) 中有一个反斜杠 (**\\**) 被置于 `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 (**"**) 放置在 `argv` 中。  
+-   如果奇数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 ) is placed in the `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 (") 放置在 `argv` 中。  
   
  此列表通过显示命令行参数的多个示例的传递到 `argv` 的解释结果来阐释上述规则。 在第二列、第三列和第四列中列出的输出来自于遵循列表的 ARGS.C 程序。  
   

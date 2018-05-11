@@ -1,10 +1,7 @@
 ---
-title: "Concurrency::graphics::direct3d 命名空间函数 |Microsoft 文档"
-ms.custom: 
+title: Concurrency::graphics::direct3d 命名空间函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空间函数
 ||||  
@@ -164,7 +159,7 @@ inline uint4 msad4(
 ### <a name="return-value"></a>返回值  
  返回一个向量 4 的总和。 每个总和对应于掩蔽绝对区别不同的字节的对齐方式的引用值，并在源值的总和。  
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** amp_graphics.h  
   
  **Namespace:** Concurrency::graphics::direct3d 

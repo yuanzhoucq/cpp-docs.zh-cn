@@ -1,13 +1,10 @@
 ---
-title: "Win32 应用程序向导 |Microsoft 文档"
-ms.custom: 
+title: Win32 应用程序向导 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.overview
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c97caee74e1ae918924632802c155b23fffe0527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-application-wizard"></a>Win32 应用程序向导
 Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的项目（在下表中的标题列出）。 在每种情况下，你都可以指定适合于打开项目类型的其他选项。 下表指示了每个应用程序类型可用的选项。  

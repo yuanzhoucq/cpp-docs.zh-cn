@@ -1,31 +1,26 @@
 ---
-title: "用户定义的属性 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 用户定义的属性 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>用户定义的特性（C++ 组件扩展）
 自定义属性使您能够扩展接口、 类或结构、 方法、 参数或枚举的元数据。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="remarks"></a>备注  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  有关 Visual c + + 中的签名程序集的信息，请参阅[强名称程序集 （程序集签名） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

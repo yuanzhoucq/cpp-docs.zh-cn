@@ -1,30 +1,25 @@
 ---
-title: "如何： 创建在延迟后完成的任务 |Microsoft 文档"
-ms.custom: 
+title: 如何： 创建在延迟后完成的任务 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9547bb5e586c20a22ce79d1227fa5f15b3ea305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fca1ba3874f02b44f96fd795b531536a23c8d462
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>如何：创建在延迟一段时间后完成的任务
 此示例演示如何使用[concurrency:: task](../../parallel/concrt/reference/task-class.md)， [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)， [concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)， [concurrency:: timer](../../parallel/concrt/reference/timer-class.md)，和[concurrency:: call](../../parallel/concrt/reference/call-class.md)类来创建在延迟后完成的任务。 你可使用此方法来生成偶尔轮询数据的循环，引入超时，将对用户输入的处理延迟预定的一段时间等。  

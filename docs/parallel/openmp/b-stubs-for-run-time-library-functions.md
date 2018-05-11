@@ -1,27 +1,22 @@
 ---
-title: "B. 运行时库函数的存根 |Microsoft 文档"
-ms.custom: 
+title: B. 运行时库函数的存根 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1207f943560fdc6a22c62a9a8deafa213400f172
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 运行时库函数的存根
 本部分提供有关在 OpenMP C 和 c + + API 中定义的运行时库函数存根 （stub）。 存根 （stub） 用于启用到 OpenMP C 和 c + + API 不支持的平台的可移植性。 在这些平台上，必须使用包含这些存根 （stub） 函数的库链接 OpenMP 程序。 存根 （stub） 函数假设 OpenMP 程序中的指令将被忽略。 在这种情况下，它们模拟串行语义。  

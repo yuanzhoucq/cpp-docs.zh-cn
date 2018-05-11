@@ -1,13 +1,10 @@
 ---
-title: "查找字符串 |Microsoft 文档"
-ms.custom: 
+title: 查找字符串 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - strings [C++], searching
 - strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a66b5dd34aa21a2a0791ecbc71bfd4abcc90c4fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3763baf0f085dc72040ab22c9efd38e8aa8068f7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="finding-a-string"></a>查找字符串
 你可以搜索字符串表中的一个或多个字符串，然后使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)与**在文件中查找**命令 (**编辑**菜单) 查找字符串的所有实例模式相匹配。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  若要在搜索文件时，请使用正则表达式，使用**在文件中查找**命令。 键入要与模式匹配，或单击右侧的按钮的正则表达式**查找内容**框以显示正则搜索表达式列表。 当你从此列表中选择表达式时，它将替换中的搜索文本**查找内容**框。 如果使用正则表达式，请确保**使用： 正则表达式**复选框处于选中状态。  
   
- 有关将资源添加到托管项目 （那些针对公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅 [演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 有关将资源添加到托管项目 （那些针对公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅 [演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
  **要求**  
   

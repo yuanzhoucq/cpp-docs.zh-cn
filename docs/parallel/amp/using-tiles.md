@@ -1,32 +1,27 @@
 ---
-title: "使用磁贴 |Microsoft 文档"
-ms.custom: 
+title: 使用磁贴 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>使用平铺
 可用平铺来最大化你的应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果你使用相应的磁贴大小和平铺的算法，你可以在 c + + AMP 代码中获取更多的加速。 平铺的基本组件包括：  
   
-- `tile_static`变量。 平铺的主要优点是带来的性能提升`tile_static`访问。 访问中的数据`tile_static`内存可能很有权访问在全局空间中的数据比快很多 (`array`或`array_view`对象)。 实例`tile_static`为每个图块，创建变量并将磁贴中的所有线程都有权访问该变量。 在典型的平铺算法中的数据复制到`tile_static`一次从全局内存的内存，并且从然后访问次数多`tile_static`内存。  
+- `tile_static` 变量。 平铺的主要优点是带来的性能提升`tile_static`访问。 访问中的数据`tile_static`内存可能很有权访问在全局空间中的数据比快很多 (`array`或`array_view`对象)。 实例`tile_static`为每个图块，创建变量并将磁贴中的所有线程都有权访问该变量。 在典型的平铺算法中的数据复制到`tile_static`一次从全局内存的内存，并且从然后访问次数多`tile_static`内存。  
   
 - [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)。 调用`tile_barrier::wait`挂起当前线程的执行，直到所有相同的磁贴中的线程到达调用`tile_barrier::wait`。 你不能保证线程将在中运行，仅该磁贴中的无线程将执行之后调用的顺序`tile_barrier::wait`之前的所有线程都已达到调用。 这意味着，通过使用`tile_barrier::wait`方法，你可以在磁贴的磁贴基础，而不是线程的线程的基础上执行任务。 典型的平铺算法具有代码以初始化`tile_static`整个磁贴的内存跟调用`tile_barrer::wait`。 下面的代码`tile_barrier::wait`包含需要访问所有的计算`tile_static`值。  
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example-of-global-tile-and-local-indices"></a>示例的全局、 磁贴和本地索引  
  下图表示数据，排列在 2 x 3 磁贴 8 x 9 的矩阵。  
   
- ![8 &#45; 通过 &#45; 9 矩阵划分到 2 &#45; &#45; 3 磁贴](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;通过&#45;9 矩阵划分为 2&#45;通过&#45;3 磁贴](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  下面的示例显示全局、 磁贴，并此本地索引平铺的矩阵。 `array_view`对象创建的使用类型的元素`Description`。 `Description`包含全局，磁贴和矩阵中的元素的本地索引。 在调用代码`parallel_for_each`设置的全局值、 磁贴和每个元素的本地索引。 该输出显示中的值`Description`结构。  
   

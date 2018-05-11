@@ -1,12 +1,9 @@
 ---
-title: "Scheduler 类 |Microsoft 文档"
-ms.custom: 
+title: Scheduler 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Scheduler 类
 表示并发运行时计划程序的抽象。  
@@ -57,7 +52,7 @@ class Scheduler;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Scheduler](#ctor)|对象`Scheduler`类可以仅使用工厂方法，创建或隐式。|  
+|[计划程序](#ctor)|对象`Scheduler`类可以仅使用工厂方法，创建或隐式。|  
 |[~ Scheduler 析构函数](#dtor)|对象`Scheduler`类隐式被销毁时对它的所有外部引用停止存在。|  
   
 ### <a name="public-methods"></a>公共方法  
@@ -86,12 +81,12 @@ class Scheduler;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Scheduler`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  
   
-##  <a name="attach"></a> Attach 
+##  <a name="attach"></a> 附加 
 
  将计划程序附加到调用上下文。 此方法返回后，由计划程序管理调用的上下文和计划程序将成为当前计划程序。  
   

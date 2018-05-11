@@ -1,12 +1,9 @@
 ---
-title: "concurrent_queue 类 |Microsoft 文档"
-ms.custom: 
+title: concurrent_queue 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_queue
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9a3ee82b8b81532b4e63f080ad321a93725ce41
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 类
 `concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。  
@@ -74,7 +69,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |名称|描述|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|已重载。 构造并发队列。|  
-|[~concurrent_queue Destructor](#dtor)|销毁并发队列。|  
+|[~ concurrent_queue 析构函数](#dtor)|销毁并发队列。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -95,7 +90,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `concurrent_queue`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concurrent_queue.h  
   
  **命名空间：** 并发  

@@ -1,13 +1,10 @@
 ---
-title: "最佳做法并行模式库中的 |Microsoft 文档"
-ms.custom: 
+title: 最佳做法并行模式库中的 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>并行模式库中的最佳做法
 本文档介绍如何最佳有效地使用并行模式库 (PPL)。 PPL 提供通用的容器、对象和算法，用于执行细化并行。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 - [请确保变量在任务的整个生存期内有效](#lifetime)  
   
-##  <a name="small-loops"></a>未对小型循环体进行并行化  
+##  <a name="small-loops"></a> 未对小型循环体进行并行化  
  相对较小的循环体并行化可能会导致相关的计划开销超过并行处理的获益。 考虑下面的示例，它可将每对元素添加到两个数组。  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="highest"></a>表示最高可能级别的并行度  
+##  <a name="highest"></a> 表示最高可能级别的并行度  
  当只在较低级别并行化代码时，可引入 fork-join 构造，它不随处理器数量的增加而变化。 A*分叉联接*构造为其中一个任务将其工作划分为较小的并行子任务并等待这些子任务完成。 每个子任务可以递归方式将其自身划分为其他子任务。  
   
  尽管 fork-join 模型可用于解决各种问题，但也存在同步开销会降低可伸缩性的情况。 例如，下面处理图像数据的串行代码。  
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="divide-and-conquer"></a>使用 parallel_invoke 来解决分治问题  
+##  <a name="divide-and-conquer"></a> 使用 parallel_invoke 来解决分治问题  
 
  A*除治*问题是一种使用递归将任务细分为多个子任务的 fork-join 构造。 除了[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类，你还可以使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)算法解决分治问题。 `parallel_invoke` 算法具有比任务组对象更简洁的语法，并当具有固定数目的并行任务时非常有用。  
   
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="breaking-loops"></a>使用取消或异常处理中断并行循环  
+##  <a name="breaking-loops"></a> 使用取消或异常处理中断并行循环  
  PPL 提供了两种方法来取消任务组或并行算法所执行的并行工作。 一种方法是使用提供的取消机制[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类。 另一种方法是在任务工作函数体中引发异常。 当取消并行工作树时，取消机制比异常处理更有效。 A*并行工作树*是一组相关的任务组，其中一些任务组包含其他任务组。 取消机制以自上而下的方式取消任务组及其子任务组。 相反，异常处理以自下而上的方式工作，并且必须在异常向上传播时单独取消每个子任务组。  
   
 
@@ -132,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="object-destruction"></a>了解取消和异常处理如何影响对象销毁  
+##  <a name="object-destruction"></a> 了解取消和异常处理如何影响对象销毁  
  在并行工作树中，取消的任务会阻止子任务运行。 如果一个子任务执行的操作对应用程序很重要（如释放资源），则这可能会导致问题。 此外，任务取消可能导致异常通过对象析构函数进行传播，并在应用程序中导致不明确的行为。  
   
  在下面的示例中，`Resource` 类描述资源，`Container` 类描述保存资源的容器。 在其析构函数中，`Container` 类在它两个 `Resource` 成员上并行调用 `cleanup` 方法，然后在它第三个 `Resource` 成员上调用 `cleanup` 方法。  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[返回页首](#top)]  
   
-##  <a name="repeated-blocking"></a>不能在并行循环中反复阻止  
+##  <a name="repeated-blocking"></a> 不能在并行循环中反复阻止  
 
  并行循环如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)或[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)进行控制通过阻止操作可能会导致运行时在短时间内创建许多线程。  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[返回页首](#top)]  
   
-##  <a name="blocking"></a>不要执行停滞操作，当取消并行工作  
+##  <a name="blocking"></a> 不要执行停滞操作，当取消并行工作  
 
  如果可能，请不要执行停滞操作之前调用[concurrency::task_group::cancel](reference/task-group-class.md#cancel)或[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)方法来取消并行工作。  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[返回页首](#top)]  
   
-##  <a name="shared-writes"></a>不写入在并行循环中的共享数据  
+##  <a name="shared-writes"></a> 不写入在并行循环中的共享数据  
  并发运行时提供多个数据结构，例如， [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)，同步对共享数据的并发访问。 很多情况下这些数据结构非常有用，例如，当多个任务很少需要对资源的共享访问时。  
   
  考虑下面的示例使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法和`critical_section`对象来计算内的质数的计数[std:: array](../../standard-library/array-class-stl.md)对象。 此示例不会进行扩展，因为每个线程必须等待以访问共享的变量 `prime_sum`。  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[返回页首](#top)]  
   
-##  <a name="false-sharing"></a>如果可能，避免错误共享  
+##  <a name="false-sharing"></a> 如果可能，避免错误共享  
  *错误共享*在不同处理器运行的多个并发任务写入变量位于相同缓存行时发生。 当一个任务写入一个变量时，这两个变量的缓存行将会失效。 每当缓存行失效时，每个处理器必须重新加载缓存行。 因此，错误共享会导致应用程序中的性能降低。  
   
  以下基本示例介绍了两个并发任务，每个任务都增加了共享的计数器变量。  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[返回页首](#top)]  
   
-##  <a name="lifetime"></a>请确保变量在任务的整个生存期内有效  
+##  <a name="lifetime"></a> 请确保变量在任务的整个生存期内有效  
  如果向任务组或并行算法提供 Lambda 表达式，capture 子句将指定 Lambda 表达式的主体是否通过值或引用访问封闭范围中的变量。 通过引用将变量传递到 Lambda 表达式时，必须保证该变量的生存期在任务完成之前一直保持。  
   
  请看下面的示例，该示例定义了 `object` 类和 `perform_action` 函数。 `perform_action` 函数创建 `object` 变量，并在该变量中以异步方式执行某项操作。 由于不能保证在 `perform_action` 函数返回前完成任务，因此，如果 `object` 变量在任务运行时被销毁，则程序将崩溃或发生未指定的行为。  

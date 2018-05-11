@@ -1,13 +1,10 @@
 ---
-title: "数组声明 | Microsoft Docs"
-ms.custom: 
+title: 数组声明 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f64d5f5ec5dc0f84de504026ea92b88fb1da4d94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="array-declarations"></a>数组声明
 “数组声明”将命名数组并指定其元素的类型。 它还可定义数组中的元素数。 带数组类型的变量被视为指向数组元素的类型的指针。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  pointer optdirect-declarator  
   
  *direct-declarator*：  
- *direct-declarator*  **[**  *constant-expression* opt**]**  
+ *direct-declarator*  **[**  *constant-expression* opt **]**  
   
  由于 constant-expression 是可选的，因此该语法有两种形式：  
   

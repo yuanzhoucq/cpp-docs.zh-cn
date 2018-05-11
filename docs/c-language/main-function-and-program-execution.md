@@ -1,13 +1,10 @@
 ---
-title: "main 函数和程序执行 | Microsoft Docs"
-ms.custom: 
+title: main 函数和程序执行 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-and-program-execution"></a>main 函数和程序执行
-每个 C 程序都有必须命名为 main 的主函数。 如果你的代码遵循 Unicode 编程模型，则可以使用 main 的宽字符版本 wmain。 main 函数充当程序执行的起点。 它通常通过将调用定向到程序中的其他函数来控制程序执行。 尽管程序可以因为各种原因在程序的其他点上终止，但它通常在 main 的结尾处停止执行。 有时，当检测到某一错误时，您可能希望强制终止程序。 为此，请使用 exit 函数。 有关使用 [exit](../c-runtime-library/reference/exit-exit-exit.md) 函数的信息和示例，请参阅*《运行时库参考》*。  
+每个 C 程序都有必须命名为 main 的主函数。 如果你的代码遵循 Unicode 编程模型，则可以使用 main 的宽字符版本 wmain。 main 函数充当程序执行的起点。 它通常通过将调用定向到程序中的其他函数来控制程序执行。 尽管程序可以因为各种原因在程序的其他点上终止，但它通常在 main 的结尾处停止执行。 有时，当检测到某一错误时，您可能希望强制终止程序。 为此，请使用 exit 函数。 有关使用 [exit](../c-runtime-library/reference/exit-exit-exit.md) 函数的信息和示例，请参阅《运行时库参考》。  
   
 ## <a name="syntax"></a>语法  
   

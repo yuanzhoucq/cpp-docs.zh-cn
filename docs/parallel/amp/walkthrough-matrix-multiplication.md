@@ -1,27 +1,22 @@
 ---
-title: "演练： 矩阵乘法 |Microsoft 文档"
-ms.custom: 
+title: 演练： 矩阵乘法 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>演练：矩阵乘法
 此分步演练演示如何使用 c + + AMP 来加快矩阵相乘的执行。 提供两种算法，另一个未平铺和一个平铺。  
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="multiplication-without-tiling"></a>而无需平铺的乘法  
  在本部分中，请考虑乘法的两个矩阵，A 和 B，定义如下：  
   
- ![3 &#45; 通过 &#45; 2 矩阵](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;通过&#45;2 矩阵](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; 通过 &#45; 3 矩阵](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;通过&#45;3 矩阵](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  A 是 3-2 矩阵，B 是 2-3 矩阵。 由 B 放大 A 的产品是以下的 3 x 3 矩阵。 产品被通过将乘以 A B 元素的元素的列的行。  
   
- ![3 &#45; 通过 &#45; 3 矩阵](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;通过&#45;3 矩阵](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>要相乘而无需使用 c + + AMP  
   
@@ -172,21 +167,21 @@ void main() {
   
  若要充分利用平铺的矩阵乘法中，该算法必须矩阵划分为磁贴，然后磁贴将数据复制到`tile_static`更快地访问的变量。 在此示例中，矩阵划分为大小相等的 submatrices 中。 通过将乘以 submatrices 找到产品。 两个矩阵和其在此示例中的产品是：  
   
- ![4 &#45; 通过 &#45; 4 矩阵](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;通过&#45;4 矩阵](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; 通过 &#45; 4 矩阵](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;通过&#45;4 矩阵](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; 通过 &#45; 4 矩阵](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;通过&#45;4 矩阵](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  矩阵是已划分为四个 2 x 2 矩阵，定义如下：  
   
- ![4 &#45; 通过 &#45; 4 矩阵分区到 2 &#45; &#45; 2 sub &#45; 矩阵](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;通过&#45;分区 2 到 4 矩阵&#45;通过&#45;2 sub&#45;矩阵](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; 通过 &#45; 4 矩阵分区到 2 &#45; &#45; 2 sub &#45; 矩阵](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;通过&#45;分区 2 到 4 矩阵&#45;通过&#45;2 sub&#45;矩阵](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  产品 A 和 B 现在可以编写并按以下方式计算：  
   
- ![4 &#45; 通过 &#45; 4 矩阵分区到 2 &#45; &#45; 2 sub &#45; 矩阵](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;通过&#45;分区 2 到 4 矩阵&#45;通过&#45;2 sub&#45;矩阵](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  因为矩阵`a`通过`h`为 2 x 2 矩阵，所有产品，它们的总和还都为 2 x 2 矩阵。 它还会依照 A * B 是 4 x 4 矩阵按预期方式。 若要快速检查算法，计算的第一行中的元素、 产品中的第一列的值。 在示例中，这个位置是元素的值，在第一行和第一列`ae + bg`。 只需计算第一列、 第一行的`ae`和`bg`对于每个术语。 该值用于`ae`是`1*1 + 2*5 = 11`。 值`bg`是`3*1 + 4*5 = 23`。 最终值是`11 + 23 = 34`，哪一个是正确。  
   

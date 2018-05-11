@@ -1,12 +1,9 @@
 ---
-title: "multitype_join 类 |Microsoft 文档"
-ms.custom: 
+title: multitype_join 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join 类
 `multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。  
@@ -71,7 +66,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |名称|描述|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|已重载。 构造 `multitype_join` 消息块。|  
-|[~multitype_join Destructor](#dtor)|销毁`multitype_join`消息块。|  
+|[~ multitype_join 析构函数](#dtor)|销毁`multitype_join`消息块。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -95,7 +90,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  `multitype_join`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -211,7 +206,7 @@ multitype_join(
   
  在锁定状态下不执行移动构造，这意味着应由用户确保在移动期间没有轻量任务处于飞行状态。 否则可能会发生大量争用，从而导致异常或不一致的状态。  
   
-##  <a name="dtor"></a> ~multitype_join 
+##  <a name="dtor"></a> ~ multitype_join 
 
  销毁`multitype_join`消息块。  
   

@@ -1,12 +1,9 @@
 ---
-title: "ITopologyNode 结构 |Microsoft 文档"
-ms.custom: 
+title: ITopologyNode 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITopologyNode
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1c4168fbfbd2bf17ad8b8b752d2843c8f57b0f3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 结构
 资源管理器定义的拓扑节点的接口。 一个节点包含一个或多个执行资源。  
@@ -60,12 +55,12 @@ struct ITopologyNode;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ITopologyNode`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
   
-##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount Method  
+##  <a name="getexecutionresourcecount"></a>  Itopologynode:: Getexecutionresourcecount 方法  
  返回在此节点下组合在一起的执行资源的数量。  
   
 ```

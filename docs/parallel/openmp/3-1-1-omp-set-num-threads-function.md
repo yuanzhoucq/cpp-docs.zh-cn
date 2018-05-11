@@ -1,27 +1,22 @@
 ---
-title: "3.1.1 omp_set_num_threads 函数 |Microsoft 文档"
-ms.custom: 
+title: 3.1.1 omp_set_num_threads 函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b94cf2b5-8011-4a3b-ba56-676982642857
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2510c2ed49f7b46f2ca3d853c9b78ff3c09cb62a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99c82ff324cbf21612d2459511877d152e2757f5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads 函数
 `omp_set_num_threads`函数设置默认线程数以用于后续的并行区域未指定`num_threads`子句。 格式如下所示：  
@@ -39,10 +34,10 @@ void omp_set_num_threads(int num_threads);
   
 ## <a name="cross-references"></a>交叉引用：  
   
--   `omp_set_dynamic`函数中，请参阅[部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上。  
+-   `omp_set_dynamic` 函数中，请参阅[部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上。  
   
--   `omp_get_dynamic`函数中，请参阅[部分 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) 40 页上。  
+-   `omp_get_dynamic` 函数中，请参阅[部分 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) 40 页上。  
   
--   `OMP_NUM_THREADS`环境变量，请参阅[部分 4.2](../../parallel/openmp/4-2-omp-num-threads.md)在页 48 和第 8 页第 2.3 节。  
+-   `OMP_NUM_THREADS` 环境变量，请参阅[部分 4.2](../../parallel/openmp/4-2-omp-num-threads.md)在页 48 和第 8 页第 2.3 节。  
   
--   `num_threads`子句，请参阅[2.3 节](../../parallel/openmp/2-3-parallel-construct.md)第 8 页
+-   `num_threads` 子句，请参阅[2.3 节](../../parallel/openmp/2-3-parallel-construct.md)第 8 页

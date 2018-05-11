@@ -1,12 +1,9 @@
 ---
-title: "bad_target 类 |Microsoft 文档"
-ms.custom: 
+title: bad_target 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - bad_target
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178d8519516790be3cdb2d9178cc8ffdf144ea23
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="badtarget-class"></a>bad_target 类
 此类描述消息块被给予指向目标的指针，但该目标对于正在执行的操作无效时引发的异常。  
@@ -54,7 +49,7 @@ class bad_target : public std::exception;
   
  `bad_target`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  

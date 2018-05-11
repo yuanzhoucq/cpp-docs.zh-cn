@@ -1,13 +1,10 @@
 ---
-title: "多线程处理： 如何使用同步类 |Microsoft 文档"
-ms.custom: 
+title: 多线程处理： 如何使用同步类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>多线程处理：如何使用同步类
 编写多线程应用程序时，同步线程之间的资源访问权限是一个常见问题。 具有两个或多个线程同时访问相同的数据可能会导致不必要和不可预知的结果。 例如，一个线程可能正在更新的结构的内容时另一个线程正在读取的内容相同的结构。 它是未知读取线程将会收到哪些数据： 旧的数据、 新写入的数据，或可能两者的混合。 MFC 提供了大量的同步和同步访问类，以帮助解决此问题。 本主题说明可用的类以及如何使用它们在典型的多线程应用程序创建线程安全类。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  此示例应用程序使用同步类的所有三种类型。 因为它允许最多三个帐户必须一次检查，它使用[CSemaphore](../mfc/reference/csemaphore-class.md)访问权限限制为三个视图对象。 当尝试查看的第四个帐户时，应用程序，或者等到前三个 windows 之一关闭或者该尝试失败。 当更新帐户时，应用程序使用[CCriticalSection](../mfc/reference/ccriticalsection-class.md)以确保只有一个帐户更新一次。 更新才能成功后，它发出信号[CEvent](../mfc/reference/cevent-class.md)，以释放线程等待事件接收信号。 此线程将新数据发送到数据存档。  
   
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>设计的线程安全类  
+##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> 设计的线程安全类  
  若要使类完全的线程安全，首先将适当的同步类作为数据成员添加到共享的类中。 在以前的帐户管理示例中， **CSemaphore**数据成员将添加到视图类中，`CCriticalSection`数据成员将添加到链接列表类，和一个`CEvent`数据成员将添加到数据存储类。  
   
  接下来，添加对所有成员函数的修改的类中的数据或访问受控的资源的同步调用。 在每个函数中，你应创建[CSingleLock](../mfc/reference/csinglelock-class.md)或[CMultiLock](../mfc/reference/cmultilock-class.md)对象并调用该对象的`Lock`函数。 当锁定对象超出范围，并被销毁时，该对象的析构函数调用`Unlock`以释放资源。 当然，你可以调用`Unlock`直接如果你想。  

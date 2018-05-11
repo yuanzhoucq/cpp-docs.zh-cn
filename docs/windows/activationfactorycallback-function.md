@@ -1,12 +1,9 @@
 ---
-title: "ActivationFactoryCallback 函数 |Microsoft 文档"
-ms.custom: 
+title: ActivationFactoryCallback 函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::ActivationFactoryCallback
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e88a6f9cb89746cd0380587789fbdd68f80d5e36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函数
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -55,7 +50,7 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
   
  Windows 运行时调用此回调函数来请求由其运行时类名称指定的对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **Namespace:** Microsoft::WRL::Details  

@@ -1,13 +1,10 @@
 ---
-title: "打印 |Microsoft 文档"
-ms.custom: 
+title: 打印 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee396a7866179bd140f203192d1bdcbfb4681e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7df782e3c30b9120fe7eb6728f1b622750d160f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing"></a>打印
 Microsoft Windows 实现独立于设备的显示。 在 MFC 中，这意味着，相同的绘图调用，在`OnDraw`的视图类，成员函数负责绘制和其他设备，例如打印机上显示。 对于打印预览中，目标设备是模拟的打印机输出到显示器。  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>你在打印与框架的角色中的角色  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> 你在打印与框架的角色中的角色  
  视图类具有以下职责：  
   
 -   告知框架多少页数，包括已文档。  

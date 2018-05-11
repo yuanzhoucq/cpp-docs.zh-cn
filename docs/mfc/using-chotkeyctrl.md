@@ -1,13 +1,10 @@
 ---
-title: "使用 CHotKeyCtrl |Microsoft 文档"
-ms.custom: 
+title: 使用 CHotKeyCtrl |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHotKeyCtrl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d577369dea4f5fe2fffa9801bbd8ae8501f71a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-chotkeyctrl"></a>使用 CHotKeyCtrl
 热键控件，由类表示[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)，是一个窗口，显示的文本表示形式用户键入到其中，例如 CTRL + SHIFT + Q 键组合。 它还保留以虚拟键代码的形式呈现的此键的内部表示形式和一组表示切换状态的标志。 热键控件实际上并不设置热键 - 是否执行此操作取决于您的程序。 （有关标准虚拟键代码的列表，请参见 Winuser.h。）  

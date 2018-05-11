@@ -1,12 +1,9 @@
 ---
-title: "Module:: unregisterwinrtobject 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Module:: unregisterwinrtobject 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::UnregisterWinRTObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - UnregisterWinRTObject method
 ms.assetid: 32334aa7-2293-40d2-9a89-4b02e2e31f3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f91da0305a1b3cfb783be0d2dfa40cfaf226104
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject 方法
 取消一个或多个 Windows 运行时对象，以便其他应用程序无法连接到它们。  
@@ -47,7 +42,7 @@ virtual HRESULT UnregisterWinRTObject(
   
 ## <a name="return-value"></a>返回值  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL

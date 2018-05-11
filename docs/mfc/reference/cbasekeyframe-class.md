@@ -1,12 +1,9 @@
 ---
-title: "CBaseKeyFrame 类 |Microsoft 文档"
-ms.custom: 
+title: CBaseKeyFrame 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseKeyFrame
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dba8ba22325d3ea9e68411f0372cfac4d6b0659d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 类
 实现关键帧的基本功能。  
@@ -71,7 +66,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|指定此关键帧是否已添加到情节提要。|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|指定是否应将此关键帧添加到情节提要从另一个现有的关键帧，偏移量处或末尾的某些转换。|  
@@ -85,10 +80,10 @@ class CBaseKeyFrame : public CObject;
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
  添加关键帧的情节提要。  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>备注  
  调用此方法添加到情节提要的关键帧。  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
  构造一个关键帧对象。  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
  返回基础的关键帧值。  
   
 ```  
@@ -130,7 +125,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="remarks"></a>备注  
  这是对基础的关键帧值的访问器。  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
  指示是否已添加关键帧的情节提要。  
   
 ```  
@@ -143,7 +138,7 @@ BOOL IsAdded() const;
 ### <a name="remarks"></a>备注  
  基类中 IsAdded 始终返回 TRUE，但它在派生类中重写。  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
  指定是否应添加关键帧的偏移量或转换后的情节提要。  
   
 ```  
@@ -156,21 +151,21 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="remarks"></a>备注  
  指定是否应将关键帧添加到情节提要偏移量的位置。 必须在派生类中指定的偏移量或转换。  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
  指定此关键帧是否已添加到情节提要。  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
  指定是否应将此关键帧添加到情节提要从另一个现有的关键帧，偏移量处或末尾的某些转换。  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
  表示 Windows 动画 API 关键帧。 关键帧未初始化时就将它设置为预定义值 UI_ANIMATION_KEYFRAME_STORYBOARD_START 中。  
   
 ```  

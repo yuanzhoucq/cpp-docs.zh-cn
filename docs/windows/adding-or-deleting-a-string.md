@@ -1,13 +1,10 @@
 ---
-title: "添加或删除字符串 |Microsoft 文档"
-ms.custom: 
+title: 添加或删除字符串 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - strings [C++], deleting in string tables
 - string tables, adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e485e1c689814e63c5a43edba2ded80967d576a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e15e29c99dba89ef29ba5b909c62f819bedf63f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-or-deleting-a-string"></a>添加或删除字符串
 你可以快速插入到字符串表使用字符串编辑器的新条目。 新的字符串放置在表的末尾，并且提供下一个可用的标识符。 然后，你可以编辑中的 ID、 值或标题属性[属性窗口](/visualstudio/ide/reference/properties-window)根据需要。  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 -   按**删除**密钥。  
   
- 有关将资源添加到托管项目 （那些针对公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅 [演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 有关将资源添加到托管项目 （那些针对公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅 [演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
  **要求**  
   

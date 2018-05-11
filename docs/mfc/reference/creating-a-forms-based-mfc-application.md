@@ -1,13 +1,10 @@
 ---
-title: "创建基于窗体的 MFC 应用程序 |Microsoft 文档"
-ms.custom: 
+title: 创建基于窗体的 MFC 应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcforms.project
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>创建基于窗体的 MFC 应用程序
 表单是一个对话框以及让用户访问和可能更改数据的控件。 你可能想要开发应用程序在其中用户选择从所选的窗体。 通常，基于窗体的应用程序允许用户访问窗体通过单击**新建**从**文件**菜单。 基于对话框的应用程序，不允许用户访问**新建**选项**文件**菜单上，也被视为一个基于窗体的应用程序。  

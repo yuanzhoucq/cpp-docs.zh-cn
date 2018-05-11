@@ -1,12 +1,9 @@
 ---
-title: "组件 |Microsoft 文档"
-ms.custom: 
+title: 组件 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.component
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edb2f68b479eeadca777e0707dd96e148d13fe8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5bb453e8fe9d21c25292c4e5f94de90dcc67676a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="component"></a>组件
 控制对源文件中的浏览信息或依赖项信息的收集。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="browser"></a>浏览者  
  您可以打开或关闭收集，也可以指定在收集信息时忽略特定名称。  
   
- 使用打开或关闭来控制对之前的杂注中的浏览信息的收集。 例如:  
+ 使用打开或关闭来控制对之前的杂注中的浏览信息的收集。 例如：  
   
 ```  
 #pragma component(browser, off)  
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  若要打开的带此杂注的浏览信息的收集[必须首先启用浏览信息](../build/reference/building-browse-information-files-overview.md)。  
   
- **引用**使用或不可以使用选项*名称*自变量。 使用**引用**而无需*名称*打开或关闭的引用的收集 （其他浏览信息会继续收集，但是）。 例如:  
+ **引用**使用或不可以使用选项*名称*自变量。 使用**引用**而无需*名称*打开或关闭的引用的收集 （其他浏览信息会继续收集，但是）。 例如：  
   
 ```  
 #pragma component(browser, off, references)  
@@ -65,7 +60,7 @@ ms.lasthandoff: 02/23/2018
   
  停止编译器收集引用信息。  
   
- 使用**引用**与*名称*和**关闭**可防止对引用*名称*从显示在浏览信息窗口中。 使用此语法可忽略您不感兴趣的名称和类型，并减小浏览信息文件的大小。 例如:  
+ 使用**引用**与*名称*和**关闭**可防止对引用*名称*从显示在浏览信息窗口中。 使用此语法可忽略您不感兴趣的名称和类型，并减小浏览信息文件的大小。 例如：  
   
 ```  
 #pragma component(browser, off, references, DWORD)  

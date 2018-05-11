@@ -1,13 +1,10 @@
 ---
-title: "组件类 |Microsoft 文档"
-ms.custom: 
+title: 组件类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.coclass
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bcae762c603f05ce11eae5d14eb2e182c666797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="coclass"></a>coclass
 创建 COM 对象，可以实现 COM 接口。  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  **组件类**属性还提供以下函数通过插入的代码，或在的情况下`GetObjectCLSID`，作为基类中的静态方法`CComCoClass`:  
   
--   `UpdateRegistry`注册的目标类的类工厂。  
+-   `UpdateRegistry` 注册的目标类的类工厂。  
   
 -   `GetObjectCLSID`这与注册，还可用来获取目标类的 CLSID。  
   
@@ -141,7 +136,7 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   

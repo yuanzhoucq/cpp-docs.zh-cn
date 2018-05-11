@@ -2,9 +2,6 @@
 title: 'Concurrency:: fast_math 命名空间函数 |Microsoft 文档'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -53,17 +50,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9bd20e2e1d88564c7e688e1e0c9c2392f1f4f2ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 命名空间函数
 ||||  
@@ -485,7 +480,7 @@ inline float fminf(
 ### <a name="return-value"></a>返回值  
  返回自变量的最小数值  
   
-##  <a name="fmod"></a>  fmod  
+##  <a name="fmod"></a>  Fmod  
  计算 _X/_Y 的浮点余数  
   
 ```  
@@ -1093,5 +1088,5 @@ inline float truncf(float _X) restrict(amp);
 ## <a name="requirements"></a>要求
 **标头：** amp_math.h **Namespace:** concurrency:: fast_math
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::fast_math 命名空间](concurrency-fast-math-namespace.md)

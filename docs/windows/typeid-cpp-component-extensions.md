@@ -1,30 +1,25 @@
 ---
-title: "typeid （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: typeid （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid（C++ 组件扩展）
 获取一个值，该值指示对象的类型。  
@@ -59,7 +54,7 @@ Platform::Type^ type = T::typeid;
 ### <a name="remarks"></a>备注  
  在 C + + /CX 中，typeid 返回[platform:: type](../cppcx/platform-type-class.md)构造中的运行时类型信息。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -77,17 +72,17 @@ type::typeid
   
  **备注**  
   
- `typeid`用于获取<xref:System.Type>在编译时类型。  
+ `typeid` 用于获取<xref:System.Type>在编译时类型。  
   
- `typeid`类似于在运行的时使用的类型获取 system:: type<xref:System.Type.GetType%2A>或<xref:System.Object.GetType%2A>。 但是，typeid 仅接受类型名称作为参数。  如果你想要使用一种类型的实例以获取其 system:: type 名称，使用 GetType。  
+ `typeid` 类似于在运行的时使用的类型获取 system:: type<xref:System.Type.GetType%2A>或<xref:System.Object.GetType%2A>。 但是，typeid 仅接受类型名称作为参数。  如果你想要使用一种类型的实例以获取其 system:: type 名称，使用 GetType。  
   
- `typeid`必须能够在编译时，计算类型名称 （类型） 而 GetType 计算要在运行时返回的类型。  
+ `typeid` 必须能够在编译时，计算类型名称 （类型） 而 GetType 计算要在运行时返回的类型。  
   
- `typeid`可能需要本机类型名称或公共语言运行时的本机类型名称; 别名请参阅[到 c + + 本机类型的.NET Framework 等效项 (C + + /cli CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)有关详细信息。  
+ `typeid` 可能需要本机类型名称或公共语言运行时的本机类型名称; 别名请参阅[到 c + + 本机类型的.NET Framework 等效项 (C + + /cli CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)有关详细信息。  
   
- `typeid`也适用于本机类型，尽管它仍将返回 system:: type。  若要获取 type_info 结构，请使用[typeid 运算符](../cpp/typeid-operator.md)。  
+ `typeid` 也适用于本机类型，尽管它仍将返回 system:: type。  若要获取 type_info 结构，请使用[typeid 运算符](../cpp/typeid-operator.md)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

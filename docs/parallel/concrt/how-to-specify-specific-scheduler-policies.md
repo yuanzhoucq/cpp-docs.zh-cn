@@ -1,30 +1,25 @@
 ---
-title: "如何： 指定特定计划程序策略 |Microsoft 文档"
-ms.custom: 
+title: 如何： 指定特定计划程序策略 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af30b38a89eb7e4b50c7d31be2d3ba6572843b1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 988540c19ab94e841e274637b581f0ce8031df13
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>如何：指定特定的计划程序策略
 计划程序策略让你能够控制计划程序将使用在管理任务的策略。 本主题演示如何使用计划程序策略来提高打印到控制台进度指示器的任务的线程优先级。  

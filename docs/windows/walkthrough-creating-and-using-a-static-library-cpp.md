@@ -1,31 +1,26 @@
 ---
-title: "演练： 创建和使用静态库 （c + +） |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建和使用静态库 （c + +） |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 此分步演练演示如何创建用于 C++ 应用的静态库（.lib 文件）。 使用静态库是重用代码的一种绝佳方式。 你不必在要求功能的每个应用中重新实现同一例程，而只需将其写入静态数据库一次，然后从应用引用它们即可。 从静态库链接的代码成为了应用的一部分，这样你就不必安装另一个文件来使用代码。  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 5.  编译此静态库，在菜单栏上依次选择 **“生成”**、 **“生成解决方案”** 。 这将创建一个可供其他程序使用的静态库。  
   
     > [!NOTE]
-    >  如果使用 Visual Studio 命令行生成，必须分两个步骤来生成程序。 首先，运行 **cl /c /EHsc MathFuncsLib.cpp** 以编译代码并创建名为 **MathFuncsLib.obj**的对象文件。( **Cl**命令可调用编译器 Cl.exe，并且**/c**选项可指定编译而无需链接。 有关详细信息，请参阅[（编译而无需链接） 的 /c](../build/reference/c-compile-without-linking.md)。)第二次，运行**lib MathFuncsLib.obj**以链接代码并创建静态库**MathFuncsLib.lib**。 （ **lib** 命令可调用库管理器 Lib.exe。 有关详细信息，请参阅 [LIB Reference](../build/reference/lib-reference.md)。）  
+    >  如果使用 Visual Studio 命令行生成，必须分两个步骤来生成程序。 首先，运行 **cl /c /EHsc MathFuncsLib.cpp** 以编译代码并创建名为 **MathFuncsLib.obj**的对象文件。( **Cl**命令可调用编译器 Cl.exe，并且 **/c**选项可指定编译而无需链接。 有关详细信息，请参阅[（编译而无需链接） 的 /c](../build/reference/c-compile-without-linking.md)。)第二次，运行**lib MathFuncsLib.obj**以链接代码并创建静态库**MathFuncsLib.lib**。 （ **lib** 命令可调用库管理器 Lib.exe。 有关详细信息，请参阅 [LIB Reference](../build/reference/lib-reference.md)。）  
   
 ##  <a name="BKMK_CreateAppToRefTheLib"></a> 创建引用静态库的 C++ 控制台应用  
   
@@ -116,7 +111,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  **“添加引用”** 对话框列出了可以引用的库。 **“项目”** 选项卡列出了当前解决方案中的所有项目以及它们包含的所有库。 在 **“项目”** 选项卡上，选中 **“MathFuncsLib”** 复选框，然后选择 **“确定”** 按钮。  
   
-4.  若要引用 **MathFuncsLib.h** 头文件，必须修改包含的目录路径。 在**属性页**对话框**MyExecRefsLib**，展开**配置属性**节点，展开**C/c + +**节点，和然后选择**常规**。 在 **“附加包含目录”**旁，指定 **MathFuncsLib** 目录的路径或浏览至该目录。  
+4.  若要引用 **MathFuncsLib.h** 头文件，必须修改包含的目录路径。 在**属性页**对话框**MyExecRefsLib**，展开**配置属性**节点，展开**C/c + +** 节点，和然后选择**常规**。 在 **“附加包含目录”**旁，指定 **MathFuncsLib** 目录的路径或浏览至该目录。  
   
      若要浏览至目录路径，请打开属性值下拉列表框，然后选择 **“编辑”**。 在**附加包含目录**对话框中，在文本框中，选择一个空行，然后选择省略号按钮 (**...**) 在行的末尾。 在 **“选择目录”** 对话框中，选择 **MathFuncsLib** 目录，然后选择 **“选择文件夹”** 按钮以保存所做选择并关闭对话框。 在 **“附加包含目录”** 对话框中，选择 **“确定”** 按钮，然后在 **“属性页”** 对话框中，选择 **“确定”** 按钮以保存对该项目进行的更改。  
   

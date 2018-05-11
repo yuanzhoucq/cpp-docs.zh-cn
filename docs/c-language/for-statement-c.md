@@ -1,29 +1,24 @@
 ---
-title: "for 语句 (C) |Microsoft 文档"
-ms.custom: 
+title: for 语句 (C) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c2b89e8c09ca7ddb6ba7f2cc02c9b400265a35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21640d998a2df31a8429e9451bc674c200383f5f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for 语句 (C)
 使用 **for** 语句可以重复语句或复合语句指定的次数。 在可选条件变为 false 前，**for** 语句的主体将执行零次或多次。 可以在 **for** 语句中使用可选表达式，以便在 **for** 语句的执行期间初始化和更改值。  

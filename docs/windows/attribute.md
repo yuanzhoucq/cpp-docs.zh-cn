@@ -1,13 +1,10 @@
 ---
-title: "属性 |Microsoft 文档"
-ms.custom: 
+title: 属性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.attribute
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute"></a>属性
 允许你创建的自定义特性。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  `attribute`属性现已弃用。  使用直接到公共语言运行时属性 System.Attribute 创建用户定义的特性。  有关详细信息，请参阅[用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)。  
   
- 你定义[自定义特性](../windows/custom-attributes-cpp.md)放置`attribute`上托管的类或结构定义的属性。 类的名称是自定义特性。 例如:  
+ 你定义[自定义特性](../windows/custom-attributes-cpp.md)放置`attribute`上托管的类或结构定义的属性。 类的名称是自定义特性。 例如：  
   
 ```  
 [ attribute(Parameter) ]  
@@ -149,15 +144,15 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute`是的别名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 这是属性命名规则的例外)。  
+ `attribute` 是的别名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 这是属性命名规则的例外)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|`ref`**类**， **ref 结构**|  
+|**适用对象**|`ref` **类**， **ref 结构**|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  

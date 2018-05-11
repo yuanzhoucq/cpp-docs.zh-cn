@@ -1,13 +1,10 @@
 ---
-title: "特性编程常见问题 |Microsoft 文档"
-ms.custom: 
+title: 特性编程常见问题 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 本主题回答下列常见问题：  
@@ -49,10 +44,10 @@ ms.lasthandoff: 12/21/2017
   
 -   [可以从还使用属性的类派生的类上使用属性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>HRESULT 是什么？  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT 是什么？  
  `HRESULT`是通常由作为返回值特性和 ATL 通常以简单数据类型。 下表介绍各种值。 标头文件 winerror.h 中包含多个值。  
   
-|name|描述|“值”|  
+|名称|描述|值|  
 |----------|-----------------|-----------|  
 |S_OK|操作成功|0x00000000|  
 |E_UNEXPECTED|意外的失败|: 0x8000FFFF|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 |E_FAIL|未指定的失败|0x80004005|  
 |E_ACCESSDENIED|常规拒绝访问错误|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>何时具有指定属性的参数名称  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 何时具有指定属性的参数名称  
  在大多数情况下，如果属性具有单个参数，该参数的名称为。 如果在你的代码中插入该属性，则不需要此名称。 例如，下面的用法的[聚合](../windows/aggregatable.md)属性：  
   
 ```  
@@ -103,7 +98,7 @@ class CMyClass
 |[size_is](../windows/size-is.md)|[源](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>可以在特性块中使用注释？  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 可以在特性块中使用注释？  
  你可以使用特性块中的单行和多行注释。 但是，不能使用两种样式中的属性中保存的参数的括号内的注释。  
   
  以下被允许:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>属性如何与继承交互？  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 属性如何与继承交互？  
  你可以从其他类，该类可能本身被归因或不继承特性化和非特性化类。 从特性化的类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性不会传输到派生通过 c + + 继承的类。 属性提供程序仅转换邻近及其属性的代码。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>如何在非特性化 ATL 项目中使用属性？  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何在非特性化 ATL 项目中使用属性？  
  你可能必须具有.idl 文件，一个非特性化的 ATL 项目，并且你可能想要开始添加特性化的对象。 在这种情况下，使用添加类向导提供的代码。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>如何使用特性化项目中的.idl 文件？  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用特性化项目中的.idl 文件？  
  你可能具有你想要使用特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](../windows/importidl.md)特性，编译的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../ide/midl-property-pages.md)项目的属性页对话框中)，然后将.h 文件包含在你的项目.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>可以修改由属性插入的代码？  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 可以修改由属性插入的代码？  
  某些特性将代码注入到你的项目。 你可以通过查看插入的代码[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项。 还有可能从插入文件复制代码并将其粘贴到你的源代码。 这样，您可以修改该属性的行为。 但是，你可能需要修改你的代码以及其他部分。  
   
  下面的示例是将插入的代码复制到一个源代码文件的结果：  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>如何向前声明特性化的接口？  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 如何向前声明特性化的接口？  
  如果想要使前向声明的属性化接口，必须将相同的属性应用到适用于实际接口声明前向声明。 你还必须应用[导出](../windows/export.md)属性设为前向声明。  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>可以从还使用属性的类派生的类上使用属性？  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 可以从还使用属性的类派生的类上使用属性？  
  否，不支持从还使用属性的类派生的类上使用属性。  
   
 ## <a name="see-also"></a>请参阅  

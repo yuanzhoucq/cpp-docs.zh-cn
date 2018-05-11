@@ -1,12 +1,9 @@
 ---
-title: "C/c + + 预处理器参考 |Microsoft 文档"
-ms.custom: 
+title: C/c + + 预处理器参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d5af379d224a4967978c2d17f607f4332376859
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eea99138fe00b803bace6606532221a8d13da1f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 预处理器参考
 *C/c + + 预处理器参考*说明实现在 Microsoft C/c + + 预处理器。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 02/23/2018
  [C++ 语言参考](../cpp/cpp-language-reference.md)  
  提供有关 Microsoft 的 C++ 语言实现的参考材料。  
   
- [C# 语言参考](../c-language/c-language-reference.md)  
+ [C 语言参考](../c-language/c-language-reference.md)  
  提供有关 Microsoft 的 C 语言实现的参考材料。  
   
  [生成 C/c + + 程序](../build/reference/c-cpp-building-reference.md)  

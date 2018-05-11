@@ -1,13 +1,10 @@
 ---
-title: "针对旧代码 （Visual c + +） 的多线程处理支持 |Microsoft 文档"
-ms.custom: 
+title: 针对旧代码 （Visual c + +） 的多线程处理支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e082fd9c3f4c34c97f461a11dcec14d778affd8
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: b4ecd5f210aa01c41b3806ce15e19e77b8c93324
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>针对旧代码的多线程支持 (Visual C++)
 Visual c + + 允许你拥有多个并发线程同时运行的执行。 使用多线程处理，可以派生出后台任务，管理同时发生的输入流，管理用户界面和更多内容。  

@@ -1,13 +1,10 @@
 ---
-title: "密封 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 密封 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sealed--c-component-extensions"></a>sealed（C++ 组件扩展）
 `sealed` 是 ref 类的上下文相关关键字，它指示某个虚拟成员不能被替代，或某个类型不能用作基类型。  
@@ -65,13 +60,13 @@ virtual return-type identifier() sealed {...};
 ## <a name="windows-runtime"></a>Windows 运行时  
  请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
  （此语言功能没有只适用于公共运行时的备注。）  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

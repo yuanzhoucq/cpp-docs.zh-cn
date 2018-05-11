@@ -1,13 +1,10 @@
 ---
-title: "并发运行时中的异常处理 |Microsoft 文档"
-ms.custom: 
+title: 并发运行时中的异常处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>并发运行时中的异常处理
 并发运行时使用 c + + 异常处理来告知许多类型的错误。 这些错误包括在您提供给任务和任务组的工作函数中的运行时，运行时错误，无法获取资源，如和发生的错误的使用无效。 当任务或任务组引发异常时，运行时将保持该异常，并将其封送到等待的任务或任务组完成的上下文。 对于如轻量级任务和代理的组件，运行时不管理为你的异常。 在这些情况下，则必须实现自己的异常处理机制。 本主题介绍运行时如何处理由任务、 任务组、 轻量级任务和异步代理引发的异常以及如何在你的应用程序中响应异常。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   运行时不管理轻量级任务和代理的异常。  
   
-##  <a name="top"></a>本文档中  
+##  <a name="top"></a> 本文档中  
   
 - [任务和延续](#tasks)  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 - [异步代理](#agents)  
   
-##  <a name="tasks"></a>任务和延续  
+##  <a name="tasks"></a> 任务和延续  
  本部分介绍如何运行时处理引发的异常： [concurrency:: task](../../parallel/concrt/reference/task-class.md)对象和它们的延续。 有关任务和延续模型的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
  当引发异常时传递给一个工作函数体中`task`对象，则运行时存储该异常并将其封送到调用上下文[concurrency::task::get](reference/task-class.md#get)或[并发::task:: wait](reference/task-class.md#wait)。 文档[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)描述基于任务的基于值的延续任务，以汇总，但与基于值的延续采用类型参数`T`和基于任务的延续采用类型参数`task<T>`. 如果任务引发了一个或多个基于值的延续，这些延续不会计划运行。 下面的示例阐释了这种行为：  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="task_groups"></a>任务组和并行算法  
+##  <a name="task_groups"></a> 任务组和并行算法  
 
  本部分介绍运行时如何处理由任务组引发的异常。 本部分也适用于并行算法如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，因为这些算法基于任务组生成。  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[返回页首](#top)]  
   
-##  <a name="runtime"></a>由运行时引发的异常  
+##  <a name="runtime"></a> 由运行时引发的异常  
  异常可能会导致运行时调用。 大多数异常类型，除[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)和[concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md)，指示编程错误。 这些错误是通常不可恢复，并因此不应捕获或应用程序代码处理。 我们建议你仅捕捉或处理应用程序代码中不可恢复的错误，需要进行诊断的编程错误时。 但是，了解运行时定义的异常类型可以帮助您诊断的编程错误。  
   
  异常处理机制是相同的运行时中作为工作函数引发的异常引发的异常。 例如， [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函数引发`operation_timed_out`时未在指定的时间段内收到一条消息。 如果`receive`工作函数中引发异常，将传递给任务组，则运行时存储该异常并将其封送到调用上下文`task_group::wait`， `structured_task_group::wait`， `task_group::run_and_wait`，或`structured_task_group::run_and_wait`。  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[返回页首](#top)]  
   
-##  <a name="multiple"></a>多个异常  
+##  <a name="multiple"></a> 多个异常  
  如果任务或并行算法收到多个异常，运行时将封送到调用上下文这些异常之一。 运行时不保证它封送的异常。  
   
  下面的示例使用`parallel_for`算法将数字打印到控制台。 如果输入的值小于某些最小值或大于最大的一些值，则会引发异常。 在此示例中，多个工作函数可以引发异常。  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[返回页首](#top)]  
   
-##  <a name="cancellation"></a>取消  
+##  <a name="cancellation"></a> 取消  
  并非所有异常都表示错误。 例如，搜索算法可能使用异常处理时找到结果停止其关联的任务。 有关如何在代码中使用取消机制的详细信息，请参阅[PPL 中的取消](../../parallel/concrt/cancellation-in-the-ppl.md)。  
   
  [[返回页首](#top)]  
   
-##  <a name="lwts"></a>轻量级任务  
+##  <a name="lwts"></a> 轻量级任务  
  轻量级任务是直接从计划的任务[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)对象。 轻量级任务所需较少的开销比普通任务。 但是，运行时不会捕获由轻量任务引发的异常。 相反，未经处理的异常处理程序，它们的默认值，终止的进程中捕获该异常。 因此，在你的应用程序中使用相应的错误处理机制。 轻量级任务有关的详细信息，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
  [[返回页首](#top)]  
   
-##  <a name="agents"></a>异步代理  
+##  <a name="agents"></a> 异步代理  
  轻量级任务，如运行时不管理异步代理引发的异常。  
   
  下面的示例演示一种方法在派生自的类中处理异常[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)。 此示例定义`points_agent`类。 `points_agent::run`方法读取`point`对象从消息缓冲区，并输出到控制台。 `run`方法引发异常，如果它收到`NULL`指针。  

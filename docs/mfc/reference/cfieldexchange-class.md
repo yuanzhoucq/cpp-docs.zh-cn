@@ -2,11 +2,8 @@
 title: CFieldExchange 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 类
 支持数据库类使用的记录字段交换 (RFX) 和批量记录字段交换 (Bulk RFX) 例程。  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[CFieldExchange::SetFieldType](#setfieldtype)|指定的记录集数据成员的类型-列或参数-直到下一步调用由所有以下调用 RFX 函数`SetFieldType`。|  
   
 ## <a name="remarks"></a>备注  
- `CFieldExchange`没有基类。  
+ `CFieldExchange` 没有基类。  
   
  如果你正在编写数据交换例程的自定义数据类型或当你要实现批量行提取;，使用此类否则，你将直接使用此类。 RFX 和批量 RFX 交换字段数据成员的记录集对象和数据源上的当前记录的相应字段之间的数据。  
   
 > [!NOTE]
 >  如果你正在使用的数据访问对象 (DAO) 类，而不是开放式数据库连接 (ODBC) 类，可以使用类[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。  
   
- A`CFieldExchange`对象提供的上下文信息需要记录字段交换或批量记录字段交换，才能放置。 `CFieldExchange`对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员执行 RFX 和批量 RFX 操作`enum` **FieldType**中`CFieldExchange`。 可能**FieldType**的值为：  
+ A`CFieldExchange`对象提供的上下文信息需要记录字段交换或批量记录字段交换，才能放置。 `CFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员执行 RFX 和批量 RFX 操作`enum` **FieldType**中`CFieldExchange`。 可能**FieldType**的值为：  
   
 - **CFieldExchange::outputColumn**字段数据成员。  
   
@@ -72,10 +67,10 @@ class CFieldExchange
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CFieldExchange`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  如果你编写你自己 RFX 函数，请调用`IsFieldType`您确定是否可以对特定字段或参数数据成员类型执行当前操作的函数的开头 ( **CFieldExchange::outputColumn**， **CFieldExchange::inputParam**， **CFieldExchange::param**， **CFieldExchange::outputParam**，或**CFieldExchange::inoutParam**).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>备注  
  遵循现有的 RFX 函数的模型。  
   
-##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
  你需要调用`SetFieldType`在记录集类的[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)重写。  
   
 ```  

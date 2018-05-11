@@ -1,12 +1,9 @@
 ---
-title: "HANDLETraits 结构 |Microsoft 文档"
-ms.custom: 
+title: HANDLETraits 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - HANDLETraits structure
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dabc47a586eaed540757971f7272e5ec4098be09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 结构
 定义句柄的共同的特征。  
@@ -55,7 +50,7 @@ struct HANDLETraits;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `HANDLETraits`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  

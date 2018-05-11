@@ -1,13 +1,10 @@
 ---
-title: "如何： 各种字符串类型之间转换 |Microsoft 文档"
-ms.custom: 
+title: 如何： 各种字符串类型之间转换 |Microsoft 文档
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>如何：在各种字符串类型之间进行转换
 本主题演示如何将各种 Visual c + + 字符串类型转换为其他字符串。 介绍了字符串类型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情况下，转换为新类型时进行的字符串的副本。 为新的字符串所做的任何更改将不会影响原始字符串，反之亦然。  
@@ -474,9 +469,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 此示例演示如何将从转换`CString`为上面列出的其他字符串类型。 `CString`基于 TCHAR 数据类型，它又取决于是否符号`_UNICODE`定义。 如果`_UNICODE`未定义，`TCHAR`定义为 char 和`CString`包含多字节字符字符串; 如果`_UNICODE`定义，`TCHAR`定义为`wchar_t`和`CString`包含宽字符字符串。  
+ 此示例演示如何将从转换`CString`为上面列出的其他字符串类型。 `CString` 基于 TCHAR 数据类型，它又取决于是否符号`_UNICODE`定义。 如果`_UNICODE`未定义，`TCHAR`定义为 char 和`CString`包含多字节字符字符串; 如果`_UNICODE`定义，`TCHAR`定义为`wchar_t`和`CString`包含宽字符字符串。  
   
- `CStringA`多字节字符串的始终版本`CString`，`CStringW`是宽字符字符串的唯一版本。 既不`CStringA`也不`CStringW`使用`_UNICODE`以确定它们应如何编译。 `CStringA`和`CStringW`用于在此示例阐明中缓冲区大小分配细微差异，并输出处理。  
+ `CStringA` 多字节字符串的始终版本`CString`，`CStringW`是宽字符字符串的唯一版本。 既不`CStringA`也不`CStringW`使用`_UNICODE`以确定它们应如何编译。 `CStringA` 和`CStringW`用于在此示例阐明中缓冲区大小分配细微差异，并输出处理。  
   
 ### <a name="code"></a>代码  
   

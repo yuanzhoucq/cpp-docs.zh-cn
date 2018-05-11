@@ -1,28 +1,23 @@
 ---
 title: 如何： 使用 Windows 10 SDK 中的 Windows 桌面应用程序 |Microsoft 文档
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 04/19/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
 当你在 Visual Studio 2017 年 1 中创建经典 Windows 桌面项目时，它是默认设置使用 c + + 桌面工作负荷的安装或上次更新一起安装的 Windows 10 sdk 的版本进行生成。 此版本的 Windows SDK 是与所有最新的 Windows 版本兼容。 如果你想要面向的 sdk 的早期版本，则可以打开项目 |属性，然后选择从其他 Windows SDK 版本下拉列表中提供的 SDK 版本。  

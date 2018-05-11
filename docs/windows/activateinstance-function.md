@@ -2,11 +2,8 @@
 title: ActivateInstance 函数 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Windows::Foundation::ActivateInstance
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4ccf4195ac81188520ced79581c131c564cfbb9
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函数
 注册并检索在指定的类 id。 定义的指定类型的实例  
@@ -58,7 +53,7 @@ inline HRESULT ActivateInstance(
 ## <a name="requirements"></a>要求  
  **标头：** client.h  
   
- **Namespace:** Windows::Foundation  
+ **Namespace:** windows:: foundation  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows::Foundation 命名空间](../windows/windows-foundation-namespace.md)

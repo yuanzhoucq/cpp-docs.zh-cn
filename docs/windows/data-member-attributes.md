@@ -1,13 +1,10 @@
 ---
-title: "数据成员特性 |Microsoft 文档"
-ms.custom: 
+title: 数据成员特性 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 954a0448f160ba6d19eb4f48d44b0b7e0a718f17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 490f8f20a6e1fcee476a6bbeb18ec6f6164389fc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="data-member-attributes"></a>数据成员特性
 以下属性应用于类、 组件类或接口中的数据成员。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[id](../windows/id.md)|指定的成员函数 （属性或方法，在接口或调度接口） DISPID。|  
 |[范围](../windows/range-cpp.md)|指定自变量或在运行时设置其值的字段的允许值的范围。|  
 |[rdx](../windows/rdx.md)|创建注册表项或修改现有的注册表项。|  
-|[只读](../windows/readonly-cpp.md)|禁止分配给数据成员。|  
+|[readonly](../windows/readonly-cpp.md)|禁止分配给数据成员。|  
 |[requestedit](../windows/requestedit.md)|该值指示属性是否支持**OnRequestEdit**通知。|  
   
 ## <a name="see-also"></a>请参阅  

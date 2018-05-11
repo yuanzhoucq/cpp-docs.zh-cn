@@ -1,13 +1,10 @@
 ---
-title: "Safeint:: Safeint |Microsoft 文档"
-ms.custom: 
+title: 'Safeint:: Safeint |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeInt::SafeInt
 - SafeInt
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class, constructor
 ms.assetid: 39e6f632-a396-40e6-9ece-cc3d4c5a78ef
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9820227384866cdb1a6470ebd9650187848334c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7154349105c1953ad314b7928e7be8385179c42
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 构造 `SafeInt` 对象。  
@@ -79,7 +74,7 @@ SafeInt (
   
  如果你创建`SafeInt`从一个布尔型参数，您需要立即初始化值。 无法构造`SafeInt`使用代码`SafeInt<bool> sb;`。 这将生成一个编译错误。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** safeint.h  
   
  **Namespace:** msl::utilities  

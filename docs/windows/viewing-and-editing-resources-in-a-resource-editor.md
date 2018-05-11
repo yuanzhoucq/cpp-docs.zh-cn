@@ -1,13 +1,10 @@
 ---
-title: "查看和编辑资源在资源编辑器中 |Microsoft 文档"
-ms.custom: 
+title: 查看和编辑资源在资源编辑器中 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resourceview
 dev_langs:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1afa1377b222789243706cf3c5e61f45b4fcd1a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>在资源编辑器中查看和编辑资源
 每个资源类型都有特定于该资源类型的资源编辑器。 你可以重新排列、 调整大小、 添加控件和功能，或修改资源使用关联的编辑器的方面。 你还可以编辑中的资源[文本格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)和[二进制格式](../windows/opening-a-resource-for-binary-editing.md)。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="resources-in-managed-projects"></a>在托管项目中的资源  
  因为托管的项目不使用资源脚本文件，则必须打开您的资源不**解决方案资源管理器**。 你可以使用[图像编辑器](../windows/image-editor-for-icons.md)和[二进制编辑器](binary-editor.md)处理的托管项目中的资源文件。 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
 #### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>若要在资源编辑器中查看托管的资源  
   
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  在解决方案资源管理器，右键单击你想要删除选择的资源**删除**从快捷菜单。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

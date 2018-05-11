@@ -1,13 +1,10 @@
 ---
-title: "打开给定符号的资源编辑器 |Microsoft 文档"
-ms.custom: 
+title: 打开给定符号的资源编辑器 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.resource
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - View Use button
 - resource editors, resource symbols
 ms.assetid: f715807b-5af2-4627-be25-be63b23fd097
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b2d8da5a03289d65dd00d280d6fc3ef3f13b038
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fc4b0940e1932d1ae55280ce59f8219fd6017a7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>打开给定符号的资源编辑器
 当您在浏览中的符号[资源符号对话框](../windows/resource-symbols-dialog-box.md)，你可能想了解有关如何使用特定符号的详细信息。 **查看使用**按钮提供了获得此信息的快速方法。  
@@ -43,9 +38,9 @@ ms.lasthandoff: 12/21/2017
   
      资源显示在适当的编辑器窗口中。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。*  
   
- 惠?  
+ 要求  
   
  Win32  
   

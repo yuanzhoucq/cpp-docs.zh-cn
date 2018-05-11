@@ -1,12 +1,9 @@
 ---
-title: "Activationfactory:: Getiids 方法 |Microsoft 文档"
-ms.custom: 
+title: 'Activationfactory:: Getiids 方法 |Microsoft 文档'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ActivationFactory::GetIids
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetIids method
 ms.assetid: 0983d709-d155-4d65-aae4-5b2c8bb0fede
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0ab5960b84b16f8eb05679e0afdb9a85a1955d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids 方法
 检索已实现接口 ID 的数组。  
@@ -49,7 +44,7 @@ STDMETHOD(
 ## <a name="return-value"></a>返回值  
  如果成功，则为 S_OK；否则为描述失败的 HRESULT。 E_OUTOFMEMORY 是可能的失败 HRESULT。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  

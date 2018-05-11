@@ -1,36 +1,31 @@
 ---
-title: "异步代理 |Microsoft 文档"
-ms.custom: 
+title: 异步代理 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ce3240041987a79657c7e8bf296f9e89acb7a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8649ebe0451e4352b27989563a1a0918afcb5a01
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents"></a>异步代理
 *异步代理*(或仅仅称为*代理*) 是一种应用程序组件，它以异步方式与其他代理一起解决较大的计算任务。 将代理视为具有设定的生命周期的任务。 例如，一个代理可能会阅读输入/输出设备 （例如键盘、 磁盘上的文件或网络连接） 和另一个代理中的数据可能对数据执行操作该变得可用。 第一个代理使用消息传递通知的第二个代理更多数据可用。 并发运行时任务计划程序提供了有效的机制，以使代理能够阻止和以协作方式退出而无需效率低下的抢占。  
   
 
- 代理库定义[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)类来表示异步代理。 `agent`是一个抽象类来声明虚拟方法[concurrency::agent::run](reference/agent-class.md#run)。 `run`方法执行代理执行的任务。 因为`run`是抽象的则必须实现此方法在每个类都派生自`agent`。  
+ 代理库定义[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)类来表示异步代理。 `agent` 是一个抽象类来声明虚拟方法[concurrency::agent::run](reference/agent-class.md#run)。 `run`方法执行代理执行的任务。 因为`run`是抽象的则必须实现此方法在每个类都派生自`agent`。  
   
 ## <a name="agent-life-cycle"></a>代理生命周期  
  代理具有设定的生命周期。 [Concurrency:: agent_status](reference/concurrency-namespace-enums.md#agent_status)枚举定义代理的各种状态。 下图是显示了代理如何从一个状态到另一个状态图。 此图中，实线表示从你的应用程序; 调用的方法虚线表示在运行时中调用的方法。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |`agent_done`|代理已完成。|  
 |`agent_canceled`|代理已取消它输入之前`started`状态。|  
   
- `agent_created`是代理的初始状态`agent_runnable`和`agent_started`是活动状态，和`agent_done`和`agent_canceled`是最终状态。  
+ `agent_created` 是代理的初始状态`agent_runnable`和`agent_started`是活动状态，和`agent_done`和`agent_canceled`是最终状态。  
   
  使用[concurrency::agent::status](reference/agent-class.md#status)方法来检索其中的当前状态`agent`对象。 尽管`status`方法是并发安全的代理的状态可能会发生变化时`status`方法返回。 例如，代理可能在`agent_started`状态时调用`status`方法，但移动到`agent_done`紧后面状态`status`方法返回。  
 

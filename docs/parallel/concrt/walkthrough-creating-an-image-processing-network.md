@@ -1,30 +1,25 @@
 ---
-title: "演练： 创建图像处理网络 |Microsoft 文档"
-ms.custom: 
+title: 演练： 创建图像处理网络 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>演练：创建图像处理网络
 本文档演示如何创建执行图像处理的异步消息块网络。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [完整示例](#complete)  
   
-##  <a name="functionality"></a>定义图像处理功能  
+##  <a name="functionality"></a> 定义图像处理功能  
  本部分说明用于处理从磁盘读取的图像的图像处理网络支持函数。  
   
  以下函数，`GetRGB`和`MakeColor`、 提取并分别将组合的给定颜色的各个组件。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="network"></a>创建图像处理网络  
+##  <a name="network"></a> 创建图像处理网络  
  本部分介绍如何创建对执行图像处理的异步消息块网络中每个[!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)]给定目录中的 (.jpg) 映像。 网络执行以下图像处理操作：  
   
 1.  Tom 创作的任何图像，将转换为灰度。  
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
 |`colormask`|A`transformer`从具有作为基准的颜色的红色的映像中删除的绿色和蓝色颜色组件的对象。|  
 |`darken`|A`transformer`变暗有作为基准的颜色的红色的映像的对象。|  
 |`sepiatone`|A`transformer`适用范围棕褐色调编写不由 Tom 且不是红色的映像的对象。|  
-|`save_bitmap`|A`transformer`将保存已处理的对象`image`到以位图格式的磁盘。 `save_bitmap`检索从原始文件名`map`对象，并更改其文件扩展名为.bmp。|  
+|`save_bitmap`|A`transformer`将保存已处理的对象`image`到以位图格式的磁盘。 `save_bitmap` 检索从原始文件名`map`对象，并更改其文件扩展名为.bmp。|  
 |`delete_bitmap`|A`transformer`释放为映像的内存的对象。|  
 |`decrement`|A [concurrency:: call](../../parallel/concrt/reference/call-class.md)充当网络中的终端节点的对象。 它递减`countdown_event`可以向发出信号主应用程序已处理映像的对象。|  
   
@@ -155,7 +150,7 @@ ms.lasthandoff: 12/21/2017
   
  [[返回页首](#top)]  
   
-##  <a name="complete"></a>完整示例  
+##  <a name="complete"></a> 完整示例  
  以下代码显示完整示例。 `wmain`函数管理[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]库并调用`ProcessImages`函数来过程[!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)]文件中`Sample Pictures`目录。  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  ![有关示例的输出示例](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`由 Tom Alphin 创作并因此将转换为灰度。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`具有作为基准的颜色的红色，因此已删除的蓝色和绿色颜色组件而调暗。 `Hydrangeas``Jellyfish`，和`Penguins`匹配默认条件，并因此转换为棕褐色。  
+ `Lighthouse` 由 Tom Alphin 创作并因此将转换为灰度。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`具有作为基准的颜色的红色，因此已删除的蓝色和绿色颜色组件而调暗。 `Hydrangeas``Jellyfish`，和`Penguins`匹配默认条件，并因此转换为棕褐色。  
   
  [[返回页首](#top)]  
   

@@ -1,12 +1,9 @@
 ---
-title: "ISource 类 |Microsoft 文档"
-ms.custom: 
+title: ISource 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>ISource 类
 `ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。  
@@ -85,7 +80,7 @@ class ISource;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ISource`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -151,7 +146,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>备注  
  `consume`方法类似于是`accept`，但始终之前必须通过调用`reserve`返回`true`。  
   
-##  <a name="dtor"></a> ~ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  销毁`ISource`对象。  
   

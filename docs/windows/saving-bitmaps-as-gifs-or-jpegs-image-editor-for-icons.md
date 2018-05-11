@@ -1,13 +1,10 @@
 ---
-title: "将位图另存为 Gif 或 Jpeg （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 将位图另存为 Gif 或 Jpeg （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3fe626357283dde8d8f283c6d0aa406ec6c1db0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aed35f50e8cb874cea833439150b717034244b95
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>将位图另存为 GIF 或 JPEG（图标的图像编辑器）
 当你创建位图时，格式为位图 (.bmp) 创建映像。 为 GIF 或 JPEG 或其他图形格式，但是，可以保存图像。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  从**文件**菜单上，选择**打开**，然后单击**文件**。  
   
-2.  在**新文件对话框**，单击**Visual c + +**文件夹，然后选择**位图文件 (.bmp)**中**模板**框中，单击**打开**。  
+2.  在**新文件对话框**，单击**Visual c + +** 文件夹，然后选择**位图文件 (.bmp)** 中**模板**框中，单击**打开**。  
   
      在中打开位图**映像**编辑器。  
   
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  单击“保存” 。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="see-also"></a>请参阅  
  [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   

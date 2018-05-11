@@ -1,13 +1,10 @@
 ---
-title: "结构的存储和对齐 | Microsoft Docs"
-ms.custom: 
+title: 结构的存储和对齐 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>结构的存储和对齐
 **Microsoft 专用**  
@@ -49,7 +44,7 @@ min( n, sizeof( item ) )
   
  若要使用 `pack` 杂注为特定结构指定命令行上指定的包装以外的包装，请在结构的前面提供 `pack` 杂注，其中包装大小为 1、2、4、8 或 16。 若要恢复命令行上提供的包装，请指定不带参数的 `pack` 杂注。  
   
- 位域默认为 Microsoft C 编译器的 long 大小。 基于类型的大小或 /Zp[n] 大小（以较小者为准）对齐结构成员。 默认大小为 4。  
+ 位域默认为 Microsoft C 编译器的 long 大小。 基于类型大小或 /Zp[n] 大小（以较小者为准）对齐结构成员。 默认大小为 4。  
   
  **结束 Microsoft 专用**  
   

@@ -1,12 +1,9 @@
 ---
-title: "CreatorMap 结构 |Microsoft 文档"
-ms.custom: 
+title: CreatorMap 结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreatorMap
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - CreatorMap structure
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a941f052527b3617772bcb18b2092fdc35ea3a22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creatormap-structure"></a>CreatorMap 结构
 支持的 Windows 运行时 c + + 模板库基础结构，不宜在代码中直接使用。  
@@ -63,7 +58,7 @@ struct CreatorMap;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CreatorMap`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** module.h  
   
  **Namespace:** Microsoft::WRL::Details  

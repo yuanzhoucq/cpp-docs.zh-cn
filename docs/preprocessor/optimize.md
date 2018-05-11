@@ -1,12 +1,9 @@
 ---
-title: "优化 |Microsoft 文档"
-ms.custom: 
+title: 优化 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.optimize
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1988292b1f6dfa35f4cb77d145641528ed827f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bff0e4cc40bfa0e355f348c02f01cb0c7445b596
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="optimize"></a>optimize
 指定要对每个函数执行的优化。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/23/2018
 |**s**或**t**|指定机器代码的短或快速序列。|  
 |**y**|在程序堆栈上生成帧指针。|  
   
- 这些是与使用的相同字母[/O](../build/reference/o-options-optimize-code.md)编译器选项。 例如，以下杂注等效于**/Os**编译器选项：  
+ 这些是与使用的相同字母[/O](../build/reference/o-options-optimize-code.md)编译器选项。 例如，以下杂注等效于 **/Os**编译器选项：  
   
 ```  
 #pragma optimize( "ts", on )  

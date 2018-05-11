@@ -1,13 +1,10 @@
 ---
-title: "强制转换运算符 | Microsoft Docs"
-ms.custom: 
+title: 强制转换运算符 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], cast
 - type conversion, cast operators
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f922bb052d6a69bc8a051769bc552b1f2653de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fe1001c4a35e40b10abefd60faedcbcb6398445
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cast-operators"></a>强制转换运算符
 在特定情况下，类型强制转换提供了用于显式转换对象类型的方法。  

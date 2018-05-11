@@ -1,13 +1,10 @@
 ---
-title: "并发运行时 |Microsoft 文档"
-ms.custom: 
+title: 并发运行时 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 适用于 C++ 的并发运行时可帮助你编写可靠、可伸缩且响应迅速的并行应用程序。 它提升了抽象级别，因此无需管理与并发相关的基础结构详细信息。 你还可以使用它来指定符合应用程序服务要求质量的计划策略。 使用这些资源帮助你开始使用并发运行时。  
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/14/2018
   
 |||  
 |-|-|  
-|[在为 UWP 应用的 c + + 中创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成异步操作中的 UWP 应用时，需要注意的要点。|  
+|[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成异步操作中的 UWP 应用时，需要注意的要点。|  
 |[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务和`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口以将 HTTP GET 和 POST 请求发送到 web 服务中的 UWP 应用。|  
 |[Windows 运行时应用示例](http://code.msdn.microsoft.com/windowsapps)|包含可下载代码示例和演示应用适用于 Windows 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|  
   

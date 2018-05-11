@@ -1,28 +1,23 @@
 ---
-title: "如何： 完成异步操作，使用 WRL |Microsoft 文档"
-ms.custom: 
+title: 如何： 完成异步操作，使用 WRL |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成异步操作
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 来启动异步操作并在操作完成时执行工作。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 02/14/2018
 ### <a name="compiling-the-code"></a>编译代码  
  若要编译代码，将其复制，然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`wrl-consume-async.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
+ **cl.exe wrl 使用 async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>示例： 使用后台线程  
  以下步骤启动的工作线程，并定义由该线程执行的操作。 以下是完整的示例。  

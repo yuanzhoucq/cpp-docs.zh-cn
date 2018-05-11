@@ -1,13 +1,10 @@
 ---
-title: "常规属性页 （项目） |Microsoft 文档"
-ms.custom: 
+title: 常规属性页 （项目） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -36,14 +33,13 @@ helpviewer_keywords:
 - Unicode, creating C++ build configuration
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-property-page-project"></a>“常规”属性页（项目）
 
@@ -65,7 +61,7 @@ ms.lasthandoff: 02/14/2018
 **Windows SDK 版本**  
 对于 Windows 目标平台上，它指定你的项目需要的 Windows sdk 的版本。 在使用 Visual Studio 安装程序安装 c + + 工作负荷，也会安装 Windows SDK 的必需的部分。 如果你的计算机上有其他 Windows SDK 版本，每个版本的已安装的 SDK 工具会出现的下拉列表中。
 
-若要针对 Windows 7 或 Windows Vista，使用值**8.1**，因为 Windows SDK 8.1 对那些平台向后的兼容。 此外，你应在其中定义的相应值**_WIN32_WINNT**在 targetver.h 中。 对于 Windows 7，即 0x0601。 请参阅[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。
+若要针对 Windows 7 或 Windows Vista，使用值**8.1**，因为 Windows SDK 8.1 对那些平台向后的兼容。 此外，你应在其中定义的相应值 **_WIN32_WINNT**在 targetver.h 中。 对于 Windows 7，即 0x0601。 请参阅[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。
 
 你可以安装 Visual Studio，若要使用当前版本的库构建 Windows XP 和 Windows 2003 Server 项目中包含的 Windows XP 平台工具集。 有关如何获取和使用此平台工具集的信息，请参阅[适用于 Windows XP 配置程序](../build/configuring-programs-for-windows-xp.md)。 有关更改平台工具集的其他信息，请参阅[如何：修改目标框架和平台工具集](../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
 
@@ -115,7 +111,7 @@ ms.lasthandoff: 02/14/2018
 
 - **应用程序 (.exe)**，显示链接器工具集 （C/c + + 编译器、 MIDL、 资源编译器、 链接器、 BSCMake、 XML Web 服务代理生成器、 自定义生成、 预生成、 链接前、 生成后事件）。
 
-- **动态库 (.dll)**显示链接器工具集，指定 /DLL 链接器选项，以及将 _WINDLL 定义到 CL。
+- **动态库 (.dll)** 显示链接器工具集，指定 /DLL 链接器选项，以及将 _WINDLL 定义到 CL。
 
 - **生成文件**，显示生成文件工具集 (NMake)。
 

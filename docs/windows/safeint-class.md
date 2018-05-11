@@ -2,12 +2,9 @@
 title: SafeInt 类 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeInt
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: ce7715553e17e49ef3c169145abfb49816f6d6dd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeint-class"></a>SafeInt 类
 扩展来帮助防止整数溢出的整数基元，并可用于比较不同类型的整数。  
@@ -230,6 +225,6 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
   
  **Namespace:** msl::utilities  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SafeInt 库](../windows/safeint-library.md)   
  [SafeIntException 类](../windows/safeintexception-class.md)

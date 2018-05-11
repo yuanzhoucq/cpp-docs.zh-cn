@@ -1,13 +1,10 @@
 ---
-title: "平台、 default 和 cli 命名空间 （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: 平台、 default 和 cli 命名空间 （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - lang
 - cli
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5fa26b46a110fd59f7568a9101270766928f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空间（C++ 组件扩展）
 命名空间限定语言元素的名称，使这些名称不与源代码中其他位置的相同名称发生冲突。 例如，名称冲突可能会阻止编译器识别[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 命名空间由编译器使用但不保留在已编译的程序集中。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-runtime"></a>Windows 运行时  
  有关详细信息，请参阅[命名空间和类型可见性 (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -51,7 +46,7 @@ using namespace cli;
   
  **备注**  
   
- C + + /cli CLI 支持`cli`命名空间。 使用编译时**/clr**、`using`默示语法部分中的语句。  
+ C + + /cli CLI 支持`cli`命名空间。 使用编译时 **/clr**、`using`默示语法部分中的语句。  
   
  以下语言功能位于 `cli` 命名空间中：  
   
@@ -63,7 +58,7 @@ using namespace cli;
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  

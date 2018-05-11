@@ -1,27 +1,22 @@
 ---
-title: "在 UWP 应用中使用 c + + AMP |Microsoft 文档"
-ms.custom: 
+title: 在 UWP 应用中使用 c + + AMP |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>在 UWP 应用中使用 c + + AMP
 可以在通用 Windows 平台 (UWP) 应用程序中使用 c + + AMP (c + + Accelerated Massive Parallelism) 在 GPU （图形处理单元） 或其他计算加速器上执行计算。 但是，C++ AMP 不提供用于直接处理 Windows 运行时类型的 API，并且 Windows 运行时不提供 C++ AMP 包装器。 当你在代码（包括你自己创建的代码）中使用Windows 运行时类型时，必须将它们转换为与 C++ AMP 兼容的类型。  

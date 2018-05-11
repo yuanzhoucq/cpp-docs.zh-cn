@@ -1,13 +1,10 @@
 ---
-title: "窗口窗格 （图标的图像编辑器） |Microsoft 文档"
-ms.custom: 
+title: 窗口窗格 （图标的图像编辑器） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e899729e70db089c1c55f00aa9c4196a22c67060
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="window-panes-image-editor-for-icons"></a>窗口窗格（图标的图像编辑器）
 图像编辑器窗口通常显示两个窗格隔开拆分条中的图像。 其中一个视图是实际大小和其他扩大 （默认放大因子为 6）。 这两个窗格中的视图都将自动更新： 立即显示另一部分中的两侧加上一个窗格中所做的更改。 两个窗格方便在你的映像，在其中你可以区分单个像素并，同时，观察对映像的实际大小视图所做的工作的影响的放大视图上工作。  
@@ -41,9 +36,9 @@ ms.lasthandoff: 12/21/2017
   
  如果图像编辑器窗格被放大 4 或更高版本的因素，则可以[显示像素网格](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md)分隔映像中的单个像素。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  无  
   
 ## <a name="see-also"></a>请参阅  

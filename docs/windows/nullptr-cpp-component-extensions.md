@@ -1,31 +1,26 @@
 ---
-title: "nullptr （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: nullptr （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr（C++ 组件扩展）
 `nullptr`关键字表示*null 指针值*。 使用 null 指针值指示，对象句柄、 内部指针或本机指针类型不指向对象。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr`(尽管`throw (Object^)nullptr;`起)  
+-   `throw nullptr` (尽管`throw (Object^)nullptr;`起)  
   
  `nullptr`关键字可在以下的指针类型的初始化：  
   
@@ -231,7 +226,7 @@ NULL
 ## <a name="example"></a>示例  
  **示例**  
   
- 下面的代码示例演示`nullptr`与编译时可以分配给本机指针**/clr**。  
+ 下面的代码示例演示`nullptr`与编译时可以分配给本机指针 **/clr**。  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -242,8 +237,8 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
- 编译器选项: (而不是所需; 支持的所有代码生成选项，包括**/ZW**和**/clr**)  
+## <a name="requirements"></a>要求  
+ 编译器选项: (而不是所需; 支持的所有代码生成选项，包括 **/ZW**和 **/clr**)  
   
 ## <a name="see-also"></a>请参阅  
  [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   

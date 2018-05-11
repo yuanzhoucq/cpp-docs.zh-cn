@@ -1,12 +1,9 @@
 ---
-title: "agent 类 |Microsoft 文档"
-ms.custom: 
+title: agent 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent 类
 旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。  
@@ -60,11 +55,11 @@ class agent;
   
 |名称|描述|  
 |----------|-----------------|  
-|[cancel](#cancel)|将代理移从`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|  
+|[取消](#cancel)|将代理移从`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|  
 |[start](#start)|将从代理移`agent_created`状态`agent_runnable`状态，并且计划执行。|  
 |[status](#status)|从代理的状态信息的同步源。|  
 |[status_port](#status_port)|从代理的状态信息的一种异步来源。|  
-|[wait](#wait)|等待代理为了完成其任务。|  
+|[等待](#wait)|等待代理为了完成其任务。|  
 |[wait_for_all](#wait_for_all)|等待所有指定的代理来完成其任务。|  
 |[wait_for_one](#wait_for_one)|等待任何一种指定的代理，为了完成其任务。|  
   
@@ -72,7 +67,7 @@ class agent;
   
 |名称|描述|  
 |----------|-----------------|  
-|[done](#done)|将移动到代理`agent_done`状态，指示该代理已完成。|  
+|[完成](#done)|将移动到代理`agent_done`状态，指示该代理已完成。|  
 |[run](#run)|表示代理的主要任务。 `run` 应在派生类中重写，并指定代理应执行的操作已启动。|  
   
 ## <a name="remarks"></a>备注  
@@ -81,7 +76,7 @@ class agent;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `agent`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -144,7 +139,7 @@ bool done();
 ### <a name="remarks"></a>备注  
  应该在末尾调用此方法`run`方法，当你知道你的代理执行时完成。  
   
-##  <a name="run"></a> run 
+##  <a name="run"></a> 运行 
 
  表示代理的主要任务。 `run` 应在派生类中重写，并指定代理应执行的操作已启动。  
   

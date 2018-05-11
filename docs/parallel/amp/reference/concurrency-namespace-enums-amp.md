@@ -1,10 +1,7 @@
 ---
-title: "并发命名空间枚举 (AMP) |Microsoft 文档"
-ms.custom: 
+title: 并发命名空间枚举 (AMP) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::access_type
@@ -12,24 +9,22 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17378a34698cc80d356983898e0023b76877140
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums-amp"></a>并发命名空间枚举 (AMP)
 |||  
 |-|-|  
-|[access_type Enumeration](#access_type)|[queuing_mode 枚举](#queuing_mode)|  
+|[access_type 枚举](#access_type)|[queuing_mode 枚举](#queuing_mode)|  
   
-##  <a name="access_type"></a>  access_type Enumeration  
+##  <a name="access_type"></a>  access_type 枚举  
  用于表示数据的访问权限的各种类型的枚举类型。  
   
 ```  
@@ -46,7 +41,7 @@ enum access_type;
 |`access_type_write`|共享。 分配快捷键上是可访问和可读且在 CPU 上可写。|  
 
   
-##  <a name="queuing_mode"></a>  queuing_mode Enumeration  
+##  <a name="queuing_mode"></a>  queuing_mode 枚举  
  指定在快捷键受支持的排队模式。  
   
 ```  

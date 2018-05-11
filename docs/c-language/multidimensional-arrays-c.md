@@ -1,13 +1,10 @@
 ---
-title: "多维数组 (C) | Microsoft Docs"
-ms.custom: 
+title: 多维数组 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-arrays-c"></a>多维数组 (C)
 下标表达式还可以有多个下标，如下所示：  
@@ -40,7 +35,7 @@ expression3
 ]...  
 ```  
   
- 下标表达式从左至右关联。 最左侧的下标表达式，* expression1***[***expression2 ***]**，首先计算。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 在计算最后一个下标表达式之后应用间接寻址运算符 (\*)，除非最终指针值寻址数组类型（请参阅以下示例）。  
+ 下标表达式从左至右关联。 首先计算最左侧的下标表达式 expression1[expression2]。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 在计算最后一个下标表达式之后应用间接寻址运算符 (\*)，除非最终指针值寻址数组类型（请参阅以下示例）。  
   
  具有多个下标的表达式引用“多维数组”的元素。 多维数组是其元素为数组的数组。 例如，三维数组的第一个元素是一个具有两个维度的数组。  
   
@@ -86,5 +81,5 @@ ipp = prop[2];
   
  同样，第二个语句 `prop[2]` 中的表达式 `ipp = prop[2];` 的结果是一个寻址到一个二维数组的指针值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [下标运算符：](../cpp/subscript-operator.md)

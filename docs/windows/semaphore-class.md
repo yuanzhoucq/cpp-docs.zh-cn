@@ -1,12 +1,9 @@
 ---
-title: "信号类 |Microsoft 文档"
-ms.custom: 
+title: 信号类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Semaphore
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Semaphore class
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="semaphore-class"></a>Semaphore 类
 表示控制可支持有限数量用户的共享资源的同步对象。  
@@ -73,7 +68,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Semaphore`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  

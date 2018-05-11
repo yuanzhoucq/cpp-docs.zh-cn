@@ -1,12 +1,9 @@
 ---
-title: "scheduler_worker_creation_error 类 |Microsoft 文档"
-ms.custom: 
+title: scheduler_worker_creation_error 类 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - scheduler_worker_creation_error
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c04a6b3c55920739a8c9bce70a147951edbf935a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 077c5a52cf7ac8383fa3b917b3d53867e19ca370
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 类
 此类描述因未能在并发运行时中创建辅助执行上下文而引发的异常。  
@@ -56,7 +51,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  `scheduler_worker_creation_error`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** concrt.h  
   
  **命名空间：** 并发  

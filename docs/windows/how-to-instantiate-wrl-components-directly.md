@@ -2,27 +2,22 @@
 title: 如何： 直接实例化 WRL 组件 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8069ac8d079a879cb078d9e3e4b759b02817b5f
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: 127a8430e79e7963ea94646f70179df2f30450ff
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接实例化 WRL 组件
 了解如何使用 Windows 运行时 c + + 模板库 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函数来实例化的模块中的组件，将其定义。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  在 Visual Studio 中，创建**Win32 控制台应用程序**项目。 该项目命名，例如， `WRLLogger`。  
   
-2.  添加**Midl 文件 (.idl)**到项目文件，命名该文件`ILogger.idl`，然后添加以下代码：  
+2.  添加**Midl 文件 (.idl)** 到项目文件，命名该文件`ILogger.idl`，然后添加以下代码：  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Microsoft::WRL::Make](../windows/make-function.md)   
  [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

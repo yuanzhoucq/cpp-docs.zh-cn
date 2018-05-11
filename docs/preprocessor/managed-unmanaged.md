@@ -1,12 +1,9 @@
 ---
-title: "managed、 unmanaged |Microsoft 文档"
-ms.custom: 
+title: managed、 unmanaged |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.unmanaged
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7e86e053cec68a3a25c753b7c3b7fb8ab50363
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 启用函数级控制以将函数编译为托管或未托管函数。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
   
  未托管函数将为本机平台编译，因此，这一部分的程序的执行将由公共语言运行时传递给本机平台。  
   
- 将函数编译为默认情况下管理时**/clr**使用。  
+ 将函数编译为默认情况下管理时 **/clr**使用。  
   
  在将应用这些杂注时：  
   
@@ -59,7 +54,7 @@ ms.lasthandoff: 02/23/2018
   
 -   在 `#include`语句后添加杂注。 在 `#include` 语句之前不使用这些杂注。  
   
- 编译器将忽略`managed`和`unmanaged`杂注如果**/clr**不编译中使用。  
+ 编译器将忽略`managed`和`unmanaged`杂注如果 **/clr**不编译中使用。  
   
  当实例化模板函数后，定义时的模板的杂注状态可确定该函数是托管或未托管的。  
   

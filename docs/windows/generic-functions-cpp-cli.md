@@ -1,13 +1,10 @@
 ---
-title: "泛型函数 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 泛型函数 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
 泛型函数是具有类型参数声明的函数。 当调用，而不是类型参数使用实际类型。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  在 Windows 运行时中不支持此功能。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -66,7 +61,7 @@ return-type identifier<type-parameter identifier(s)>
  附加的声明信息。 有关特性和特性类的详细信息，请参阅属性。  
   
  *修饰符*（可选）  
- 对于函数，如静态修饰符。  `virtual`不允许由于虚方法不能是泛型。  
+ 对于函数，如静态修饰符。  `virtual` 不允许由于虚方法不能是泛型。  
   
  *返回类型*  
  由方法返回的类型。 如果返回类型为 void，没有返回值是必需的。  
@@ -94,7 +89,7 @@ return-type identifier<type-parameter identifier(s)>
   
  调用时，泛型类型参数替换为实际类型。 实际的类型可能在尖括号使用语法类似于模板函数调用中显式指定。 如果调用不带类型参数，编译器将尝试推导从函数调用中提供的参数的实际类型。 如果不能从所使用的参数中推导预期的类型参数，编译器将报告错误。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **示例**  
   
- 下面的示例使用泛型函数查找数组中的第一个元素。 它声明`MyClass`，它继承自的基类`MyBaseClass`。 `MyClass`包含泛型函数时， `MyFunction`，从而调用另一个泛型函数时，`MyBaseClassFunction`中的基类。 在**主要**，泛型函数时， `MyFunction`，称为使用不同的类型参数。  
+ 下面的示例使用泛型函数查找数组中的第一个元素。 它声明`MyClass`，它继承自的基类`MyBaseClass`。 `MyClass` 包含泛型函数时， `MyFunction`，从而调用另一个泛型函数时，`MyBaseClassFunction`中的基类。 在**主要**，泛型函数时， `MyFunction`，称为使用不同的类型参数。  
   
 ```  
 // generics_generic_function_3.cpp  

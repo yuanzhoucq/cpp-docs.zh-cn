@@ -1,13 +1,10 @@
 ---
-title: "受限制 |Microsoft 文档"
-ms.custom: 
+title: 受限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.restricted
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="restricted"></a>restricted
 指定不能任意调用模块、 接口或调度接口的成员。  
@@ -73,13 +68,13 @@ class c : public a, public b
 };  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|接口方法， `interface`，**类**，`struct`|  
+|**适用对象**|接口方法， `interface`，**类**， `struct`|  
 |**可重复**|否|  
 |**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
 |**无效的特性**|无|  

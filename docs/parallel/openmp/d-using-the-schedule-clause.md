@@ -1,27 +1,22 @@
 ---
-title: "D. 使用计划子句 |Microsoft 文档"
-ms.custom: 
+title: D. 使用计划子句 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. 使用计划子句
 并行区域具有至少一个屏障、 在其末尾，并且可能具有在它的其他屏障。 在每个屏障的其他团队成员必须等待到达最后一个线程。 为了尽量减少此等待时间，以便所有线程都到达屏障在了解同一时间应分发共享的工作。 如果某些的共享中包含工作**为**构造，`schedule`子句可用于此目的。  
@@ -53,7 +48,7 @@ for(i=0; i<n; i++) {
   
  **静态**计划的特点是属性的每个线程获取大约相同数量的迭代与其他任何线程，并且每个线程可以独立地确定分配给它的迭代。 因此需要同步来分发工作，并假设每次迭代需要相同数量的工作，所有线程应都完成在大约在同一时间。  
   
- 为团队的`p`线程，让*ceiling(n/p)*是整数*q*，以及满足*n = p\*q-r*与*0 < = r < p*. 一种实现**静态**为此示例将分配计划*q*迭代与第一个*p-1*线程，和*q r*到最后一个线程的迭代。  另一个可接受的实现会将分配*q*迭代与第一个*p-r*线程，和*q-1*到剩余迭代*r*线程。 它说明了为什么程序不应依赖于特定实现的详细信息。  
+ 为团队的`p`线程，让*ceiling(n/p)* 是整数*q*，以及满足*n = p\*q-r*与*0 < = r < p*. 一种实现**静态**为此示例将分配计划*q*迭代与第一个*p-1*线程，和*q r*到最后一个线程的迭代。  另一个可接受的实现会将分配*q*迭代与第一个*p-r*线程，和*q-1*到剩余迭代*r*线程。 它说明了为什么程序不应依赖于特定实现的详细信息。  
   
  **动态**计划适合的大小写**为**构造与要求不同，或甚至不可预测性工作的金额迭代。  
   
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- 如**动态**、**引导式**计划没有线程在超过它采用另一个线程来执行其最后一个迭代或最后一个屏障上等待的保证*k*如果的块区大小的迭代*k*指定。 在这种日程表之间**引导式**计划的特点是属性，它需要最少的同步。 块区大小为*k*，典型的实现会将分配*q = ceiling(n/p)*迭代到第一个可用线程，设置 *n* 到较大的*n-q*和*p\*k*，并重复，直到所有迭代都分配。  
+ 如**动态**、**引导式**计划没有线程在超过它采用另一个线程来执行其最后一个迭代或最后一个屏障上等待的保证*k*如果的块区大小的迭代*k*指定。 在这种日程表之间**引导式**计划的特点是属性，它需要最少的同步。 块区大小为*k*，典型的实现会将分配*q = ceiling(n/p)* 迭代到第一个可用线程，设置*n*到较大的*n-q*和*p\*k*，并重复，直到所有迭代都分配。  
   
  时选择最佳的计划不是因为这些示例，它是以明文**运行时**计划将为试验不同的计划和区块大小而无需修改和重新编译该程序提供方便。 它还可有用时获得最佳的计划 （在某种可预测的方式） 依赖于向其应用程序的输入数据。  
   

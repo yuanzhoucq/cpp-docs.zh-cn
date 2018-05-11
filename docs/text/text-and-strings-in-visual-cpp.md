@@ -1,13 +1,10 @@
 ---
-title: "文本和字符串在 Visual c + + |Microsoft 文档"
-ms.custom: 
+title: 文本和字符串在 Visual c + + |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文本和字符串
 开发国际市场的应用程序的一个重要方面是适当地表示的本地字符集。 ASCII 字符集在 0x00 到 0x7F 范围内定义字符。 有其他字符集，主要是欧洲字符集，于 ASCII 字符集相同定义中的范围 0x00 到 0x7F 的字符和还定义为扩展的字符设置为从 0x80 到 0xFF。 因此，一个 8 位、 单字节字符的集 (SBCS) 足以表示 ASCII 字符集，以及许多欧洲语言的字符集。 但是，一些非欧洲字符集，如日本汉字包括许多更多的字符不是单字节编码方案可以表示，并因此需要多字节字符集 (MBCS) 编码。  

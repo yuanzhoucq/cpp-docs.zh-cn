@@ -1,31 +1,26 @@
 ---
-title: "特性的基本机制 |Microsoft 文档"
-ms.custom: 
+title: 特性的基本机制 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], inserting in code
 - attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="basic-mechanics-of-attributes"></a>特性的基本机制
 有三种方法要插入到你的项目的属性。 首先，你可以将它们手动插入你的源代码。 其次，你可以将它们插入项目中使用对象的属性网格。 最后，你可以将它们插入使用各种向导。 使用属性窗口和各种向导的详细信息，请参阅[创建和管理 Visual c + + 项目](../ide/creating-and-managing-visual-cpp-projects.md)。  

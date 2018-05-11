@@ -1,13 +1,10 @@
 ---
-title: "计算的优先级和顺序 | Microsoft Docs"
-ms.custom: 
+title: 计算的优先级和顺序 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 84c3ec69c936605729f6813f28450ee1194951c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>计算的优先级和顺序
 C 运算符的优先级和结合性将影响表达式中操作数的分组和计算。 仅当存在优先级较高或较低的其他运算符时，运算符的优先级才有意义。 首先计算带优先级较高的运算符的表达式。 也可以通过“绑定”一词描述优先级。 优先级较高的运算符被认为具有更严格的绑定。  
@@ -52,7 +47,7 @@ C 运算符的优先级和结合性将影响表达式中操作数的分组和计
 |**&#124;&#124;**|逻辑“或”|从左到右|  
 |**? :**|条件表达式|从右到左|  
 |**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|简单和复合赋值 <sup>2</sup>|从右到左|  
-|**,**|顺序计算|从左到右|  
+|**，**|顺序计算|从左到右|  
   
  1. 运算符按优先级的降序顺序列出。 如果多个运算符出现在同一行或一个组中，则它们具有相同的优先级。  
   
@@ -94,5 +89,5 @@ C 运算符的优先级和结合性将影响表达式中操作数的分组和计
   
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运算符](../c-language/c-operators.md)

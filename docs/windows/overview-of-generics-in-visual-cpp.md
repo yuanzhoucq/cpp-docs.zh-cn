@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的泛型概述 |Microsoft 文档"
-ms.custom: 
+title: Visual c + + 中的泛型概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概述
 泛型是公共语言运行时所支持的参数化类型。 参数化类型是用在使用泛型时指定的未知类型参数定义的类型。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
  约束是对可以用作类型参数的类型的限制。 例如，给定泛型类可能仅接受继承自指定类或实现指定接口的类。 有关详细信息，请参阅[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
   
 ## <a name="reference-types-and-value-types"></a>引用类型和值类型  
- 句柄类型和值类型可以用作类型参数。 在泛型定义中，两种类型都可使用，语法是引用类型的语法。 例如，  **->** 运算符用于访问的类型参数的类型成员，无论最后使用的类型是引用类型或值类型。 在值类型用作类型参数时，运行时生成直接使用值类型的代码，而无需将值类型装箱。  
+ 句柄类型和值类型可以用作类型参数。 在泛型定义中，两种类型都可使用，语法是引用类型的语法。 例如， **->** 运算符用于访问的类型参数的类型成员，无论最后使用的类型是引用类型或值类型。 在值类型用作类型参数时，运行时生成直接使用值类型的代码，而无需将值类型装箱。  
   
  当将引用类型用作泛型类型参数时，请使用句柄语法。 当将值类型用作泛型类型参数时，请直接使用类型名称。  
   
@@ -135,7 +130,7 @@ int main() {
   
  这些限制也适用于运算符。 如果类型不支持这些运算符，那么不受约束的泛型类型参数就不能使用 `==` 和 `!=` 运算符比较类型参数的两个实例。 这些检查是对泛型的必要检查，但不适用于模板，因为当来不及检查成员是否无效时，泛型可以在运行时使用满足约束的任何类专用化。  
   
- 通过使用 `()` 运算符，可以创建类型参数的默认实例。 例如:  
+ 通过使用 `()` 运算符，可以创建类型参数的默认实例。 例如：  
   
  `T t = T();`  
   

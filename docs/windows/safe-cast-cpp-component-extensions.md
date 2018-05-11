@@ -1,13 +1,10 @@
 ---
-title: "safe_cast （c + + 组件扩展） |Microsoft 文档"
-ms.custom: 
+title: safe_cast （c + + 组件扩展） |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast（C++ 组件扩展）
 如果成功，则 `safe_cast` 操作以指定类型的形式返回指定表达式；否则引发 `InvalidCastException`。  
@@ -73,9 +68,9 @@ expression
  一个表达式，计算结果是引用或值类型的句柄、值类型或是对引用或值类型的跟踪引用。  
   
 ### <a name="remarks"></a>备注  
- `safe_cast`引发`InvalidCastException`如果无法转换*表达式*到由指定的类型*类型 id*。若要捕获`InvalidCastException`，指定[/EH （异常处理模型）](../build/reference/eh-exception-handling-model.md)编译器选项，并使用 try/catch 语句。  
+ `safe_cast` 引发`InvalidCastException`如果无法转换*表达式*到由指定的类型*类型 id*。若要捕获`InvalidCastException`，指定[/EH （异常处理模型）](../build/reference/eh-exception-handling-model.md)编译器选项，并使用 try/catch 语句。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
   
 ### <a name="examples"></a>示例  
@@ -145,7 +140,7 @@ expression
   
  有关强制转换的详细信息，请参阅[强制转换运算符](../cpp/casting-operators.md)。  
   
- `safe_cast`不适用于**const_cast** (丢掉**const**)。  
+ `safe_cast` 不适用于**const_cast** (丢掉**const**)。  
   
  `safe_cast` 位于 cli 命名空间中。  请参阅[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)有关详细信息。  
   
@@ -155,7 +150,7 @@ expression
   
 -   [如何：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
