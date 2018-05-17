@@ -2,11 +2,8 @@
 title: 构造函数 （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6e99d76c7ff35e1d3be9db743f69b63e78490a
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: d34dff9c04491c25b2babfd4e7f0574bf7c6c609
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -88,7 +83,7 @@ int main()
 
 构造函数可根据需要成员初始值设定项列表中，这将初始化之前构造函数主体的执行类成员。 (请注意，成员初始值设定项列表不与相同，均*初始值设定项列表*类型的[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。)
 
-使用成员初始值设定项列表优于分配构造函数的正文中值，因为它直接成员进行初始化。 在下面的示例演示成员初始值设定项列表包含所有**identifier(argument)**冒号后面的表达式：
+使用成员初始值设定项列表优于分配构造函数的正文中值，因为它直接成员进行初始化。 在下面的示例演示成员初始值设定项列表包含所有**identifier(argument)** 冒号后面的表达式：
 
 ```cpp
   
@@ -219,7 +214,7 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-在定义的复制构造函数时，你还应定义复制赋值运算符 （=）。 有关详细信息，请参阅[分配](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
+在定义的复制构造函数时，你还应定义复制赋值运算符 （=）。 有关更多信息，请参见[赋值](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
 
 你可以防止你的对象复制通过定义为已删除的复制构造函数：
 

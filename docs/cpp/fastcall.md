@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft 专用**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |自变量传递顺序|在参数列表中按从左到右的顺序找到的前两个 DWORD 或更小参数将在 ECX 和 EDX 寄存器中传递；所有其他参数在堆栈上从右向左传递。|  
 |堆栈维护职责|已调用函数会弹出显示堆栈中的自变量。|  
-|名称修饰约定|At 符号 (@) 是名称的前缀；参数列表中的字节数（在十进制中）前面的 at 符号是名称的后缀。|  
+|名称修饰约定|At 符号 (\@) 名称的前缀名称的列表后缀 at 符号 （采用十进制） 的参数中的字节数。|  
 |大小写转换约定|不执行任何大小写转换。|  
   
 > [!NOTE]

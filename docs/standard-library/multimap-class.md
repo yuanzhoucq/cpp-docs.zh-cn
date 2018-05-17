@@ -96,11 +96,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 863d0c84d772de389affc8167e3a0f69b0e0fabe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 25dffabfe01bb68af180d67b5b47dfee44ce30ff
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="multimap-class"></a>multimap 类
 
@@ -124,7 +124,7 @@ class multimap;
 
 `Traits` 提供可比较两个元素值作为排序键以确定在多重映射中其相对顺序的函数对象的类型。 默认值是二元谓词 `less<Key>`。
 
-在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
+在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 `Allocator` 表示存储的分配器对象封装有关映射的分配和解除分配内存的详细信息的类型。 此参数为可选参数，默认值为 `allocator<pair <const Key, Type> >`。
 
