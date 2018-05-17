@@ -1,13 +1,10 @@
 ---
-title: "泛型类 (C + + /cli CLI) |Microsoft 文档"
-ms.custom: 
+title: 泛型类 (C + + /cli CLI) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 使用以下形式声明泛型类：  
@@ -53,7 +48,7 @@ class-body
  附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
  *类别键*  
- 请`class`或`typename`  
+ 请`class`或 `typename`  
   
  *类型的参数的标识符*，  
  指定的类型参数的名称的标识符的逗号分隔列表。  
@@ -84,7 +79,7 @@ class-body
  *声明符*  
  此类型的任何变量的声明。 例如： `^`*标识符*[`,` ...]  
   
- 您可以声明这些泛型类 (请注意，关键字**类**可能而不是使用**typename**)。 在此示例中， `ItemType`，`KeyType`和`ValueType`是指定的点处的未知的类型其中的类型。 `HashTable<int, int>`为泛型类型构造的类型`HashTable<KeyType, ValueType>`。 大量的不同构造类型可以从单一的泛型类型构造。 从泛型类构造成的构造的类型一样任何其他 ref 类类型。  
+ 您可以声明这些泛型类 (请注意，关键字**类**可能而不是使用**typename**)。 在此示例中， `ItemType`，`KeyType`和`ValueType`是指定的点处的未知的类型其中的类型。 `HashTable<int, int>` 为泛型类型构造的类型`HashTable<KeyType, ValueType>`。 大量的不同构造类型可以从单一的泛型类型构造。 从泛型类构造成的构造的类型一样任何其他 ref 类类型。  
   
 ```  
 // generic_classes_1.cpp  
@@ -108,7 +103,7 @@ int main() {
 }  
 ```  
   
- 同时值类型 (内置类型，如`int`或`double`，或用户定义的值类型) 和引用类型用作泛型类型参数。 在泛型定义中的语法是相同的而不考虑。 在语法上，就像它是引用类型视为未知的类型。 但是，运行时能够确定如果实际使用的类型是值类型，用替换对成员的直接访问相应生成的代码。 使用作为泛型类型参数的值类型未装箱，并因此不会造成与装箱对性能的影响。 泛型主体中使用的语法应该是**T ^**和**->**而不是 of**。**。 任何使用[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)类型参数将相应地解释由运行时为值类型的简单创建如果类型参数是值类型。  
+ 同时值类型 (内置类型，如`int`或`double`，或用户定义的值类型) 和引用类型用作泛型类型参数。 在泛型定义中的语法是相同的而不考虑。 在语法上，就像它是引用类型视为未知的类型。 但是，运行时能够确定如果实际使用的类型是值类型，用替换对成员的直接访问相应生成的代码。 使用作为泛型类型参数的值类型未装箱，并因此不会造成与装箱对性能的影响。 泛型主体中使用的语法应该是**T ^** 和**->** 而不是 of **。** 任何使用[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)类型参数将相应地解释由运行时为值类型的简单创建如果类型参数是值类型。  
   
  您还可以声明具有泛型类[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)上可以用于类型参数的类型。 下面的示例在任何类型用于`ItemType`必须实现`IItem`接口。 尝试使用`int`，例如，这不实现`IItem`，会产生编译时错误，因为类型实参不满足约束。  
   
@@ -282,7 +277,7 @@ Test1
 ### <a name="non-generic-methods-in-generic-classes"></a>泛型类中的非泛型方法  
  具有任何其他类型参数的泛型类中的方法通常称为非泛型虽然它们按封闭泛型类隐式参数化。  
   
- 非泛型方法的签名可以包括在封闭类的一个或多个类型参数，直接或开放构造类型中。 例如:  
+ 非泛型方法的签名可以包括在封闭类的一个或多个类型参数，直接或开放构造类型中。 例如：  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
@@ -345,7 +340,7 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>泛型类中的泛型方法  
- 您可以声明泛型和非泛型类中的泛型方法。 例如:  
+ 您可以声明泛型和非泛型类中的泛型方法。 例如：  
   
 ## <a name="example"></a>示例  
   
