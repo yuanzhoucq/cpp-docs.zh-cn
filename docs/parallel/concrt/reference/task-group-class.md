@@ -1,4 +1,4 @@
-`task_group`类表示可以等待或取消的并行工作的集合。  
+`task_group` 类表示可以等待或取消的并行工作的集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,19 +26,19 @@ class task_group;
 |[等待](#wait)|等待，直到上的所有工作`task_group`对象已完成或已取消。|  
   
 ## <a name="remarks"></a>备注  
- 与不同的很大程度受限`structured_task_group`类，`task_group`类是更普遍的构造。 它不具有任何所描述的限制[structured_task_group](structured-task-group-class.md)。 `task_group`可以安全地跨线程使用对象，并为其使用自由格式的方式。 缺点`task_group`构造是可能无法执行以及`structured_task_group`构造执行少量的工作的任务。  
+ 与不同的很大程度受限`structured_task_group`类，`task_group`类是更普遍的构造。 它不具有任何所描述的限制[structured_task_group](structured-task-group-class.md)。 `task_group` 可以安全地跨线程使用对象，并为其使用自由格式的方式。 缺点`task_group`构造是可能无法执行以及`structured_task_group`构造执行少量的工作的任务。  
   
  有关详细信息，请参阅[任务并行](../task-parallelism-concurrency-runtime.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `task_group`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ppl.h  
   
  **命名空间：** 并发  
   
-##  <a name="cancel"></a>取消 
+##  <a name="cancel"></a> 取消 
 
  使最大努力尝试取消任务组取得 root 权限的工作的子树。 对任务组计划每个任务都将获取取消间接如有可能。  
   
@@ -49,7 +49,7 @@ void cancel();
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[取消](../cancellation-in-the-ppl.md)。  
   
-##  <a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a> is_canceling 
 
  任务组当前正在取消通知调用方。 这不一定表示，`cancel`上调用了方法`task_group`对象 (虽然这样肯定会让此方法以返回`true`)。 它可能是这种情况，`task_group`对象正在进行内联执行，任务组进一步向上工作树中已被取消。 在如这些位置的情况下运行时可以确定取消将流过提前`task_group`对象，`true`也会返回。  
   
@@ -63,7 +63,7 @@ bool is_canceling();
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[取消](../cancellation-in-the-ppl.md)。  
   
-##  <a name="run"></a>运行 
+##  <a name="run"></a> 运行 
 
  在计划任务`task_group`对象。 如果`task_handle`对象作为参数传递`run`，调用方负责管理的生存期`task_handle`对象。 方法将对函数对象的引用作为参数涉及在运行时这可能是堆分配的版本执行效果不如使用采用对引用的版本`task_handle`对象。 采用参数 `_Placement` 的版本导致任务偏向在该参数指定的位置执行。  
   
@@ -119,7 +119,7 @@ void run(
   
  该方法将引发[invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)如果任务处理的异常由给定`_Task_handle`参数已安排到一个任务组对象通过`run`方法和已经没有干预调用为`wait`或`run_and_wait`该任务组上的方法。  
   
-##  <a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a> run_and_wait 
 
  计划任务以运行内联将在调用上下文的帮助下`task_group`完整取消支持的对象。 该函数然后等待，直到上的所有工作`task_group`对象已完成或已取消。 如果`task_handle`对象作为参数传递`run_and_wait`，调用方负责管理的生存期`task_handle`对象。  
   
@@ -162,7 +162,7 @@ task_group_status run_and_wait(
   
  在执行非异常路径中，您可以调用此方法或`wait`方法之前的析构函数`task_group`执行。  
   
-##  <a name="ctor"></a>task_group 
+##  <a name="ctor"></a> task_group 
 
  构造一个新`task_group`对象。  
   
@@ -181,7 +181,7 @@ task_group(
 ### <a name="remarks"></a>备注  
  采用取消标记的构造函数会创建一个在取消与标记相关联的源时将会取消的 `task_group`。 提供显式取消标记也可以避免此任务组参与采用不同标记或没有标记的父组的隐式取消。  
   
-##  <a name="dtor"></a>~ task_group 
+##  <a name="dtor"></a> ~ task_group 
 
  销毁 `task_group` 对象。 你希望调用的一个`wait`或`run_and_wait`上之前的析构函数正在执行，除非因异常而堆栈展开因此执行析构函数的对象的方法。  
   
@@ -192,7 +192,7 @@ task_group(
 ### <a name="remarks"></a>备注  
  如果析构函数导致正常执行过程中 （例如，不堆栈展开由于出现异常） 且运行`wait`也不`run_and_wait`在调用方法，析构函数可能会引发[missing_wait](missing-wait-class.md)异常。  
   
-##  <a name="wait"></a>等待 
+##  <a name="wait"></a> 等待 
 
  等待，直到上的所有工作`task_group`对象已完成或已取消。  
   

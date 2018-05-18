@@ -1,7 +1,7 @@
 ---
 title: MFC 使用的样式 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式  
   
 使用以下样式标志来创建相应的 MFC 对象时指定窗口或控件的外观和行为。 在大多数情况下，这些样式中设置`dwStyle`类的参数`Create`函数。  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>按钮样式  
+## <a name="button-styles"></a> 按钮样式  
   
 按钮样式应用于[CButton 类](../../mfc/reference/cbutton-class.md)对象，如单选按钮、 复选框和按钮。 指定的组合中的样式`dwStyle`参数[CButton::Create](../../mfc/reference/cbutton-class.md#create)。 有关 Windows 中的按钮样式的详细信息，请参阅[按钮样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)。  
   
@@ -287,9 +285,7 @@ ms.lasthandoff: 05/04/2018
 |`BS_MULTILINE`|如果文本字符串太长，无法放在单个行中的按钮矩形，包装到多个行的按钮文本。|  
 |`BS_NOTIFY`|启用一个按钮将发送`BN_DBLCLK`， `BN_KILLFOCUS`，和`BN_SETFOCUS`到其父窗口的通知消息。 请注意，按钮发送`BN_CLICKED`无论是否指定此样式的通知。|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>组合框样式  
+## <a name="combo-box-styles"></a>  组合框样式  
   
 以下组合框样式在 MFC 中可用。 有关 Windows 中的组合框样式的详细信息，请参阅[组合框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)。  
   
@@ -309,9 +305,7 @@ ms.lasthandoff: 05/04/2018
 |`CBS_SORT`|自动对进行排序的列表框中输入的字符串。|  
 |`CBS_UPPERCASE`|将转换为大写选择字段和列表中的所有文本。|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>编辑样式  
+## <a name="edit-styles"></a>  编辑样式  
   
 编辑样式应用于[CEdit 类](../../mfc/reference/cedit-class.md)对象。 指定的组合中的样式`dwStyle`参数[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 有关 Windows 中的编辑控件样式的详细信息，请参阅[编辑控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
   
@@ -332,9 +326,7 @@ ms.lasthandoff: 05/04/2018
 |`ES_UPPERCASE`|将转换为大写按照它们键入到编辑控件的所有字符。|  
 |`ES_WANTRETURN`|指定在对话框中的多行编辑控件中输入文本时，在用户按 ENTER 键时的情况下插入一个回车。 如果不使用此样式，则按 ENTER 键起按对话框框默认全都相同的效果。 此样式不起的单行编辑控件。|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>框架窗口样式  
+## <a name="frame-window-styles-mfc"></a> 框架窗口样式  
   
 框架窗口样式应用于[CFrameWnd 类](../../mfc/reference/cframewnd-class.md)对象。 指定的组合中的样式`dwStyle`参数[CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)。  
   
@@ -342,11 +334,9 @@ ms.lasthandoff: 05/04/2018
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|指定要追加到末尾的框架窗口标题的信息。 例如，"Microsoft 绘制-绘制在 Document1"。 你可以指定在应用程序向导的文档模板字符串选项卡中显示的字符串。 如果你需要关闭此选项，重写`CWnd::PreCreateWindow`成员函数。|  
 |`FWS_PREFIXTITLE`|框架窗口标题中显示的应用程序名称前的文档名称。 例如，"文档-写字板"。 你可以指定在应用程序向导的文档模板字符串选项卡中显示的字符串。 如果你需要关闭此选项，重写`CWnd::PreCreateWindow`成员函数。|  
-|`FWS_SNAPTOBARS`|包含控制条时它的浮动窗口中而不是停靠到框架窗口的框架窗口控件调整大小。 此样式调整大小以适应控件条。|  
+|`FWS_SNAPTOBARS`|包含控制条时它的浮动窗口中而不是停靠到框架窗口的框架窗口控件调整大小。 此样式调整大小以适应控件条。|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>列表框样式  
+## <a name="list-box-styles"></a> 列表框样式  
   
 列表框样式应用于[CListBox 类](../../mfc/reference/clistbox-class.md)对象。 指定的组合中的样式`dwStyle`参数[CListBox::Create](../../mfc/reference/clistbox-class.md#create)。 有关 Windows 中的列表框样式的详细信息，请参阅[列表框样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149)。  
   
@@ -369,9 +359,7 @@ ms.lasthandoff: 05/04/2018
 |`LBS_USETABSTOPS`|允许列表框识别并展开制表符，在绘制其字符串时。 默认制表符位置是 32 个对话框单位。 （对话框单位是一个水平或垂直的距离。 一个水平对话框单位等于当前对话框基本宽度单位的四分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 `GetDialogBaseUnits` Windows 函数以像素为单位返回当前对话框基本单位。)不应与使用此样式`LBS_OWNERDRAWFIXED`。|  
 |`LBS_WANTKEYBOARDINPUT`|列表框的所有者会收到`WM_VKEYTOITEM`或`WM_CHARTOITEM`消息每当用户按下某个键时的列表框具有输入焦点。 这允许应用程序对键盘输入执行特殊处理。|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>消息框样式  
+##<a name="message-box-styles"></a>  消息框样式  
   
 消息框样式应用于[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)项。 指定的组合中的样式`nType`参数`AfxMessageBox`。 有关 Windows 中的消息框样式的详细信息，请参阅[MessageBox 函数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505)。  
   
@@ -412,9 +400,7 @@ ms.lasthandoff: 05/04/2018
 |`MB_DEFBUTTON2`|默认值为第二个按钮。|  
 |`MB_DEFBUTTON3`|默认值为第三个按钮。|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>滚动条样式  
+## <a name="scroll-bar-styles"></a> 滚动条样式  
   
 滚动条样式应用于[CScrollBar 类](../../mfc/reference/cscrollbar-class.md)对象。 指定的组合中的样式`dwStyle`参数[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 有关滚动条控件样式 Windows 中的详细信息，请参阅[滚动条控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)。  
   
@@ -431,9 +417,7 @@ ms.lasthandoff: 05/04/2018
 |`SBS_TOPALIGN`|与使用`SBS_HORZ`样式。 滚动条的上边缘对齐中指定的矩形的上边缘`Create`成员函数。 滚动条具有系统滚动条的默认高度。|  
 |`SBS_VERT`|指定垂直滚动条。 如果既没有`SBS_RIGHTALIGN`也不`SBS_LEFTALIGN`指定的样式、 滚动条具有高度、 宽度和位置中给定`Create`成员函数。|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>静态样式  
+## <a name="static-styles"></a> 静态样式  
   
 静态样式应用于[CStatic 类](../../mfc/reference/cstatic-class.md)对象。 指定的组合中的样式`dwStyle`参数[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 有关 Windows 中的静态控件样式的详细信息，请参阅[静态控件样式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)。  
   
@@ -467,9 +451,7 @@ ms.lasthandoff: 05/04/2018
 |`SS_WHITERECT`|指定用来填充窗口背景的颜色填充的矩形。 默认值为白色。|  
 |`SS_WORDELLIPSIS`|将截断无法容纳并且将添加省略号的文本。|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>窗口样式  
+## <a name="window-styles"></a> 窗口样式  
   
 窗口样式应用于[CWnd 类](../../mfc/reference/cwnd-class.md)对象。 指定的组合中的样式`dwStyle`参数[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)。 有关 Windows 中的窗口样式的详细信息，请参阅[窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)。  
   
@@ -503,9 +485,7 @@ ms.lasthandoff: 05/04/2018
 |`WS_VISIBLE`|创建初始可见的窗口。|  
 |`WS_VSCROLL`|创建该窗口具有垂直滚动条。|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>扩展的窗口样式  
+## <a name="extended-window-styles"></a> 扩展的窗口样式  
   
 扩展的窗口样式应用于[CWnd 类](../../mfc/reference/cwnd-class.md)对象。 指定的组合中的样式`dwExStyle`参数[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)。 有关 Windows 中的扩展的窗口样式的详细信息，请参阅[扩展窗口样式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)。  
   
