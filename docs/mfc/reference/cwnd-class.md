@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>CWnd 类
 提供 Microsoft 基础类库中所有窗口类的基本功能。  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|通知正在从链中移除指定窗口。|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|在应更改用户界面 (UI) 状态时调用。|  
 |[CWnd::OnChar](#onchar)|当击键转换为非系统字符时调用。|  
-|[CWnd::OnCharToItem](#onchartoitem)|由使用的子列表框调用[LBS_WANTKEYBOARDINPUT](list-box-styles.md)样式以响应[WM_CHAR](#onchar)消息。|  
+|[CWnd::OnCharToItem](#onchartoitem)|由使用的子列表框调用[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式以响应[WM_CHAR](#onchar)消息。|  
 |[CWnd::OnChildActivate](#onchildactivate)|每当 `CWnd` 大小或位置更改或 `CWnd` 激活时，针对多文档界面 (MDI) 子窗口进行调用。|  
 |[CWnd::OnChildNotify](#onchildnotify)|由父窗口调用以使通知控件有机会响应控件通知。|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|在剪贴板内容已更改时调用。|  
@@ -3563,7 +3563,7 @@ CWnd* GetDescendantWindow(
  指定要检索的控件或子窗口的标识符。  
   
  `bOnlyPerm`  
- 指定要返回窗口是否可以为临时。 如果**TRUE**，可以返回只有永久窗口; 如果**FALSE，**函数可以返回临时窗口。 临时 windows 上的详细信息请参阅[技术说明 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
+ 指定要返回窗口是否可以为临时。 如果**TRUE**，可以返回只有永久窗口; 如果**FALSE，** 函数可以返回临时窗口。 临时 windows 上的详细信息请参阅[技术说明 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
   
 ### <a name="return-value"></a>返回值  
  指向的指针`CWnd`对象，或**NULL**如果不找到任何子窗口。  
@@ -9493,7 +9493,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
  此函数的默认实现检查**NULL**窗口类名称，将相应的默认值。 重写该成员函数以修改`CREATESTRUCT`结构创建窗口。  
   
- 每个类派生自`CWnd`将其自身的功能添加到其重写`PreCreateWindow`。 按照设计，这些派生的`PreCreateWindow`未记录。 若要确定适合于每个类和样式之间相互依赖项的样式，可以检查应用程序的基类的 MFC 源代码。 如果你选择覆盖**PreCreateWindow，**可以确定是否使用应用程序的基类中的样式提供你需要通过从 MFC 源代码收集的信息的功能。  
+ 每个类派生自`CWnd`将其自身的功能添加到其重写`PreCreateWindow`。 按照设计，这些派生的`PreCreateWindow`未记录。 若要确定适合于每个类和样式之间相互依赖项的样式，可以检查应用程序的基类的 MFC 源代码。 如果你选择覆盖**PreCreateWindow，** 可以确定是否使用应用程序的基类中的样式提供你需要通过从 MFC 源代码收集的信息的功能。  
   
  更改窗口样式的详细信息，请参阅[更改 MFC 创建的窗口样式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
   

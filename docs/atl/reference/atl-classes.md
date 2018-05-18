@@ -1,7 +1,7 @@
 ---
-title: ATL 类 |Microsoft 文档
+title: ATL 类和结构 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL 类
-活动模板库 (ATL) 包括以下类。 若要按类别查找特定的类，请参阅[ATL 类概述](../../atl/atl-class-overview.md)。  
+# <a name="atl-classes-and-structs"></a>ATL 类和结构
+活动模板库 (ATL) 包括以下类和结构。 若要按类别查找特定的类，请参阅[ATL 类概述](../../atl/atl-class-overview.md)。  
   
-|类|描述|头文件|  
+|类 / 结构|描述|头文件|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|包含用于呈现到各种目标，如打印机、 图元文件或 ActiveX 控件的信息。|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|包含类实例数据中的代码窗口中 atl。|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|使用 atl。 任何项目使用|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|由 COM 相关的代码在 atl。| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|包含用于描述在调度接口上的方法或属性的类型信息。|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|包含每个 ATL 模块使用的数据。|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|使用窗口化代码在 atl。|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|此类由字符串转换宏`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|此类由字符串转换宏`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|此类由字符串转换宏`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。|atlconv.h|  
@@ -224,7 +231,6 @@ ms.lasthandoff: 05/03/2018
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
  [函数](../../atl/reference/atl-functions.md)   
  [全局变量](../../atl/reference/atl-global-variables.md)   
- [结构](../../atl/reference/atl-structures.md)   
  [Typedef](../../atl/reference/atl-typedefs.md)   
  [类概述](../../atl/atl-class-overview.md)
 

@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="worker-archetype"></a>辅助原型
 类符合*辅助*archetype 提供到过程工作项的代码在线程池上排队。  
@@ -118,7 +118,6 @@ void Terminate(void* pvParam) throw();
  理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。  
   
 ## <a name="see-also"></a>请参阅  
- [原型](../../atl/reference/atl-archetypes.md)   
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)
 

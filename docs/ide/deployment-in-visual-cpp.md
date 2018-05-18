@@ -1,7 +1,7 @@
 ---
 title: 部署 Visual c + + |Microsoft 文档
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
 开发计算机之外的计算机上的应用程序的安装被称为*部署*。 在部署到另一台计算机的 Visual c + + 应用程序时，你必须安装应用程序和它所依赖的任何库文件。 Visual Studio 提供三种方法来部署 Visual c + + 库以及你的应用程序：*集中部署*，*本地部署*，和*静态链接*。 集中部署放入其中 Windows 更新服务可以自动更新的 Windows 目录下的库文件。 本地部署将在你的应用程序所在的目录的库文件。 你必须重新部署任何本地部署的库自行更新它们。 静态链接将库代码绑定到你的应用程序。 你必须重新编译并重新部署应用程序以充分利用任何更新对库，当你使用静态链接。
+
+在 Visual Studio 2015 中，Microsoft C 运行时库被重构为特定于版本的本地库组件和新的通用 C 运行时库，现在是 Windows。 有关通用 CRT 的部署的详细信息，请参阅[通用 CRT 部署](universal-crt-deployment.md)。
 
 ## <a name="central-deployment"></a>集中部署
 
@@ -59,4 +61,5 @@ Visual c + + 库的加载顺序与系统相关。 若要诊断加载程序问题
 
 ## <a name="see-also"></a>请参阅
 
-[部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [通用 CRT 部署](universal-crt-deployment.md)

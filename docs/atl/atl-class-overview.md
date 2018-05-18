@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 类在活动模板库 (ATL) 可以进行分类，如下所示：  
@@ -49,11 +49,10 @@ ms.lasthandoff: 05/03/2018
  可以在 ATL 项目中使用的其他类，请参阅[共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [类](../atl/reference/atl-classes.md)   
- [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)   
+ [类和结构](../atl/reference/atl-classes.md)   
+ [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)  
  [函数](../atl/reference/atl-functions.md)   
  [全局变量](../atl/reference/atl-global-variables.md)   
  [宏](../atl/reference/atl-macros.md)   
- [结构](../atl/reference/atl-structures.md)   
  [Typedefs](../atl/reference/atl-typedefs.md)
 

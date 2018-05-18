@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e04f5efae261a151489309e876298b56ec696db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c8ba7be259a10ee1bf47bbdc401a2389adac2be
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 结构
 包含用于呈现到各种目标，如打印机、 图元文件或 ActiveX 控件的信息。  
@@ -96,8 +96,7 @@ struct ATL_DRAWINFO {
  **标头：** atlctl.h  
   
 ## <a name="see-also"></a>请参阅  
- [结构](../../atl/reference/atl-structures.md)   
- [Iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
+  [类和结构](../../atl/reference/atl-classes.md) [iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
 
 
