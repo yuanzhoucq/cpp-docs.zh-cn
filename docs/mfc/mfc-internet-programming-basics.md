@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 Microsoft 提供了许多 Api 编程客户端和服务器应用程序。 用于 Internet，编写了许多新的应用程序，并为技术、 浏览器功能和安全选项的更改，写入新类型的应用程序。 在客户端计算机，提供对 World Wide Web 访问权限和显示包含文本、 图形、 ActiveX 控件和文档的 HTML 页面上运行浏览器。 服务器提供 FTP、 HTTP 和 gopher 服务和运行使用 CGI 的服务器扩展应用程序。 自定义应用程序可以检索信息，并提供在 Internet 上的数据。  
@@ -52,8 +52,6 @@ Microsoft 提供了许多 Api 编程客户端和服务器应用程序。 用于 
 -   [WinInet 基础知识](../mfc/wininet-basics.md)  
   
 -   [HTML 基础知识](../mfc/html-basics.md)  
-  
--   [HTTP 基础知识](../mfc/http-basics.md)  
   
 ## <a name="related-sections"></a>相关章节  
   

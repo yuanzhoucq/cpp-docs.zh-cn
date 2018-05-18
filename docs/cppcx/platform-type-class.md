@@ -16,11 +16,11 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type 类
 包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过调用获取[object:: gettype](../cppcx/platform-object-class.md#gettype)任何对象或使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符的类或结构的名称。  
@@ -54,8 +54,8 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[运算符 Type^](../cppcx/operator-subtracttype-hat.md)|实现从 `Windows::UI::Xaml::Interop::TypeName` 到 `Platform::Type`的转换。|  
-|[运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|实现从 `Platform::Type` 到 `Windows::UI::Xaml::Interop::TypeName`的转换。|  
+|[运算符 Type^](../cppcx/operator-type-hat.md)|实现从 `Windows::UI::Xaml::Interop::TypeName` 到 `Platform::Type`的转换。|  
+|[运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|实现从 `Platform::Type` 到 `Windows::UI::Xaml::Interop::TypeName`的转换。|  
   
 ### <a name="requirements"></a>要求  
  **支持的最低客户端：** Windows 8  
