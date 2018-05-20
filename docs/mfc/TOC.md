@@ -136,7 +136,6 @@
 ### [Internet 上的 Active 技术](active-technology-on-the-internet.md)
 ### [WinInet 基础知识](wininet-basics.md)
 ### [HTML 基础知识](html-basics.md)
-### [HTTP 基础知识](http-basics.md)
 ## [MFC Internet 编程任务](mfc-internet-programming-tasks.md)
 ### [应用程序设计选项](application-design-choices.md)
 ### [编写 MFC 应用程序](writing-mfc-applications.md)
