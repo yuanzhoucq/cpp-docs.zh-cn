@@ -114,7 +114,7 @@ bool regex_match(
 
 `ptr` 指向要匹配的序列开头的指针。 如果 ptr 是 char*，则使用 cmatch 和 regex。 如果 ptr 是 wchar_t\*，则使用 wcmatch 和 wregex。
 
-`re` 要匹配的正则表达式。 对于 string 和 char*，请键入 `regex`，或者对于 wstring 和 wchar_t*\*，请键入 `wregex`。
+`re` 要匹配的正则表达式。 对于 string 和 char*，请键入 `regex`，或者对于 wstring 和 wchar_t\*\*，请键入 `wregex`。
 
 `str` 要匹配的字符串。 对应于 Elem 类型。
 
