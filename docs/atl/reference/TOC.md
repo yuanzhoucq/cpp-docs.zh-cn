@@ -1,3 +1,4 @@
+
 # [ATL 类和结构](atl-classes.md)
 ## [_ATL_BASE_MODULE70 结构](atl-base-module70-structure.md)
 ## [_ATL_COM_MODULE70 结构](atl-com-module70-structure.md)
@@ -204,6 +205,7 @@
 ## [IWorkerThreadClient 接口](iworkerthreadclient-interface.md)
 ## [Win32ThreadTraits 类](win32threadtraits-class.md)
 ## [Worker Archetype](worker-archetype.md)
+# [ATL_URL_SCHEME](atl-url-scheme-enum.md)
 # [ATL 函数](atl-functions.md)
 ## [ATL HTTP 效用函数](atl-http-utility-functions.md)
 ## [ATL 文本编码函数](atl-text-encoding-functions.md)
@@ -242,7 +244,9 @@
 ## [字符串转换宏](string-conversion-macros.md)
 ## [窗口类宏](window-class-macros.md)
 ## [Windows 消息宏](windows-messages-macros.md)
+# [ATL 运算符](atl-operators.md)
 # [ATL 全局变量](atl-global-variables.md)
+# [ATL Typedef](atl-typedefs.md)
 # [ATL 向导和对话框](atl-wizards-and-dialog-boxes.md)
 ## [应用程序设置，ATL 项目向导](application-settings-atl-project-wizard.md)
 ## [ATL Active Server Page 组件向导，ASP](asp-atl-active-server-page-component-wizard.md)

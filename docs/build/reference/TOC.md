@@ -53,6 +53,7 @@
 #### [/favor（优化体系结构详细信息）](favor-optimize-for-architecture-specifics.md)
 #### [/FC（诊断中源代码文件的完整路径）](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp（指定浮点行为）](fp-specify-floating-point-behavior.md)
+##### [Microsoft Visual C++ 浮点优化](floating-point-optimization.md)
 #### [/FS（强制同步 PDB 写入）](fs-force-synchronous-pdb-writes.md)
 #### [/GA（优化 Windows 应用程序）](ga-optimize-for-windows-application.md)
 #### [/Gd、/Gr、/Gv、/Gz（调用约定）](gd-gr-gv-gz-calling-convention.md)
