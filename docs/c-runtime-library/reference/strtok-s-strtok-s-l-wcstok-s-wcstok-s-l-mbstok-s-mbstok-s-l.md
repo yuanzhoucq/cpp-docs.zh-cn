@@ -57,11 +57,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
@@ -129,7 +129,7 @@ unsigned char* _mbstok_s(
 
 ## <a name="return-value"></a>返回值
 
-将指针返回到下一步中找到的令牌*str*。 返回**NULL**当找到没有更多的令牌时。 每个调用修改*str* ，只需替换**NULL**字符在返回的令牌之后第一个分隔符。
+将指针返回到下一步中找到的令牌*str*。 返回**NULL**当找到没有更多的令牌时。 每个调用修改*str*通过用在返回的令牌之后的第一个分隔符 null 字符替换。
 
 ### <a name="error-conditions"></a>错误条件
 

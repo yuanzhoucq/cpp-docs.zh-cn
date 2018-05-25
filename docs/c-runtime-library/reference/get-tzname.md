@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 182bad39b461efc18b120875432d6ce07be2a884
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -58,7 +58,7 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>参数
 
 *pReturnValue*<br/>
-字符串长度*timeZoneName*包括 NULL 结束符。
+字符串长度*timeZoneName*包括 null 结束符。
 
 *timeZoneName*<br/>
 具体取决于时区名称或夏时制标准时间区域名称 (DST) 的表示形式的字符字符串的地址*索引*。

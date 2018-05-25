@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 从控制台获取字符串。 提供这些函数的更多安全版本；请参阅 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  数据的存储位置。  
   
 ## <a name="return-value"></a>返回值  
- 在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果 `buffer` 为 `NULL`，这些函数则会调用无效的参数处理程序，如 [Parameter Validation](../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数则返回 `NULL` ，并将 `errno` 设置为 `EINVAL`。  
+ 在`_cgets` ， `_cgetws` 和 `buffer[2]`返回指向字符串起始位置的指针。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`。  
   
 ## <a name="remarks"></a>备注  
  这些函数从控制台读取字符构成的字符串，并将该字符串及其长度存储在 `buffer`指向的位置。 `buffer` 参数必须是指向字符数组的指针。 数组的第一个元素 `buffer[0]`必须包含要读取的字符串的最大长度（以字符为单位)。 该数组必须包含足够的元素，以保存该字符串、终止 null 字符 ('\0') 和 2 个其他字节。 此函数会读取字符，直至读取回车符 - 换行符 (CR-LF) 组合或指定的字符数。 字符串以开头 `buffer[2]`进行存储。 如果此函数读取 CR-LF，它会存储 null 字符 ('\0')。 然后，此函数会在第二个数组元素 `buffer[1]`中存储字符串的实际长度。  

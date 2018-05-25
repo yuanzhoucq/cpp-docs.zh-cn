@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 本主题演示如何调试使用 C++ Accelerated Massive Parallelism (C++ AMP) 应用程序以便利用图形处理单元 (GPU)。 它使用总结大整数数组的并行缩减程序。 本演练阐释了以下任务：  
@@ -228,7 +228,9 @@ CPU 断点
   
 3.  在**要启动的调试器**列表中，选择**本地 Windows 调试器**。  
   
-4.  在**调试器类型**列表中，选择**仅限 GPU**。  
+4.  在**调试器类型**列表中，验证**自动**选择。
+
+    **自动**是默认值。 在 Windows 10 之前**仅限 GPU**是必需的值，而不是**自动**。
   
 5.  选择“确定”  按钮。  
   

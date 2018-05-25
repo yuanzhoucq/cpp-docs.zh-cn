@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
 
@@ -96,7 +96,7 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="remarks"></a>备注
 
-**_Fullpath_dbg**和 **_wfullpath_dbg**函数相等 **_fullpath**和 **_wfullpath**只不过，当 **_DEBUG**是定义，这些函数将使用的调试版本**malloc**， **_malloc_dbg**来分配内存，如果作为第一个参数传递 NULL。 有关信息的调试功能的 **_malloc_dbg**，请参阅[_malloc_dbg](malloc-dbg.md)。
+**_Fullpath_dbg**和 **_wfullpath_dbg**函数相等 **_fullpath**和 **_wfullpath**只不过，当 **_DEBUG**是定义，这些函数将使用的调试版本**malloc**， **_malloc_dbg**来分配内存，如果**NULL**传递作为第一个参数。 有关信息的调试功能的 **_malloc_dbg**，请参阅[_malloc_dbg](malloc-dbg.md)。
 
 在大多数情况下，无需显式调用这些函数。 相反，你可以定义 **_CRTDBG_MAP_ALLOC**标志。 当 **_CRTDBG_MAP_ALLOC**定义，则调用 **_fullpath**和 **_wfullpath**重新映射到 **_fullpath_dbg**和 **_wfullpath_dbg**分别与*blockType*设置为 **_NORMAL_BLOCK**。 因此，不需要显式调用这些函数，除非你希望将堆块作为标记 **_CLIENT_BLOCK**。 有关详细信息，请参阅[调试堆的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 

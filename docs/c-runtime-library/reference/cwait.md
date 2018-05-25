@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>参数
 
 *termstat*<br/>
-指向将存储指定进程的结果代码的缓冲区的指针或 NULL。
+指向其中将存储指定进程的结果代码，缓冲区的指针或**NULL**。
 
 *procHandle*<br/>
 要等待的进程的句柄 (即之前, 必须终止进程 **_cwait**可以返回)。
@@ -81,7 +81,7 @@ NULL: Windows 操作系统应用程序; 忽略对于其他应用程序： 对执
 
 **_Cwait**函数等待由指定的进程的进程 ID 终止*procHandle*。 值*procHandle*传递给 **_cwait**应通过调用返回的值[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)函数创建指定的进程。 如果进程 ID 终止之前 **_cwait**调用时， **_cwait**立即返回。 **_cwait**可由任何进程用来等待任何其他已知的进程，为其有效句柄 (*procHandle*) 存在。
 
-*termstat*指向将存储指定进程的返回代码的缓冲区。 值*termstat*指示是否终止了指定的进程通常通过调用 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API。 **ExitProcess**如果指定的进程调用在内部调用**退出**或 **_exit**，返回从**主要**，或到达末尾**主要**. 有关通过传递的值的详细信息*termstat*，请参阅[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。 如果 **_cwait**由使用的 NULL 值调用*termstat*，不存储指定进程的返回代码。
+*termstat*指向将存储指定进程的返回代码的缓冲区。 值*termstat*指示是否终止了指定的进程通常通过调用 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API。 **ExitProcess**如果指定的进程调用在内部调用**退出**或 **_exit**，返回从**主要**，或到达末尾**主要**. 有关通过传递的值的详细信息*termstat*，请参阅[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。 如果 **_cwait**调用通过使用**NULL**值*termstat*，不存储指定进程的返回代码。
 
 *操作*因为父-子关系并不实现在这些环境中，Windows 操作系统会忽略参数。
 

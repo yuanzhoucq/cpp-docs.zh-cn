@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e49c65a642dcee3e0f04fb5000a390fccae98ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="filename-macros"></a>文件名宏
 文件名宏被预定义为依赖项 （在磁盘上的不完整的文件名规范） 中指定的文件名。 这些宏不需要括在圆括号中时调用;指定仅的 $ 所示。  
@@ -29,8 +29,8 @@ ms.lasthandoff: 05/03/2018
 |-----------|-------------|  
 |**$@**|当前目标的完整名称 （路径、 基名称、 扩展），当前所指定。|  
 |**$$@**|当前目标的完整名称 （路径、 基名称、 扩展），当前所指定。 仅在作为依赖项中有效。|  
-|**$\***|当前目标的路径和基名称，去掉文件扩展名。|  
-|**$\*\***|当前的目标的所有依赖项。|  
+|**$&#42;**|当前目标的路径和基名称，去掉文件扩展名。|  
+|**$&#42;&#42;**|当前的目标的所有依赖项。|  
 |**$?**|更高版本的时间戳比当前目标的所有依赖项。|  
 |**$<**|具有更高版本的时间戳比当前的目标的依赖文件。 仅在推理规则中的命令中有效。|  
   

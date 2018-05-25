@@ -1,10 +1,10 @@
 ---
-title: vcpkg - 用于 Windows 的 C++ 包管理器 | Microsoft Docs
+title: vcpkg - 用于 Windows、Linux 和 MacOS 的 C++ 包管理器 | Microsoft Docs
 description: vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上的开源 C++ 库的购置与安装。
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 04/06/2018
+ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -14,15 +14,15 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
-# <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：用于 Windows 的程序包管理器
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
-vcpkg 是一种命令行包管理器，可极大简化 Windows 上第三方库的购置与安装。 如果项目要使用第三方库，建议通过 vcpkg 来安装它们。 vcpkg 同时支持开源和专有库。 已测试 vcpkg 公共目录中所有库与 Visual Studio 2015 及 Visual Studio 2017 的兼容性。 截至 2018 年 1 月，目录中已有超过 600 个库，并且 C++ 社区正在此基础上持续添加更多库。
+vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS 上第三方库的购置与安装。 如果项目要使用第三方库，建议通过 vcpkg 来安装它们。 vcpkg 同时支持开源和专有库。 已测试 vcpkg Windows 目录中所有库与 Visual Studio 2015 及 Visual Studio 2017 的兼容性。 截至 2018 年 5 月，Windows 目录中已有 900 多个库，Linux/MacOS 目录中有 350 多个库。 C++ 社区正在不断向两个目录添加更多的库。
 
 ## <a name="simple-yet-flexible"></a>简单而灵活
 
@@ -30,19 +30,20 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows 上第三方库�
 
 ## <a name="sources-not-binaries"></a>源不是二进制文件
 
-对于公共目录中的库，vcpkg 会下载源，而不是二进制文件[1]。 它将使用 Visual Studio 2017 或 Visual Studio 2015（如果未安装 Visual Studio 2017）对源进行编译。 在 C++ 中，作为链接到它的应用程序代码，使用相同的编译器及编译器版本来编译任何要用的库至关重要。 通过 vcpkg 可以消除或最大程度减少不匹配二进制文件的存在风险及它可能造成的问题。 对于使用特定 Visual C++ 编译器版本的标准化团队，可让一位成员使用 vcpkg 下载源并编译一组二进制文件，然后通过导出命令将二进制文件和标头压缩打包，即可与其他团队成员进行共享。 有关详细信息，请参阅下方的导出已编译二进制文件及标头。
+对于 Windows 目录中的库，vcpkg 会下载源，而不是二进制文件[1]。 它将使用 Visual Studio 2017 或 Visual Studio 2015（如果未安装 Visual Studio 2017）对源进行编译。 在 C++ 中，作为链接到它的应用程序代码，使用相同的编译器及编译器版本来编译任何要用的库至关重要。 通过 vcpkg 可以消除或最大程度减少不匹配二进制文件的存在风险及它可能造成的问题。 对于使用特定编译器版本的标准化团队，可让一位成员使用 vcpkg 下载源并编译一组二进制文件，然后通过导出命令将二进制文件和标头压缩打包，即可与其他团队成员进行共享。 有关详细信息，请参阅下方的[导出已编译二进制文件及标头](#export_binaries_per_project)。
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
 
-## <a name="installation"></a>安装
+## <a name="installation"></a>安装 
 
 从 GitHub 克隆 vcpkg 存储库：https://github.com/Microsoft/vcpkg. 可凭喜好下载到任意文件夹位置。
 
-在根文件夹中运行引导程序：bootstrap-vcpkg.bat。
+在根文件夹中运行 bootstrapper： 
 
-## <a name="basic-tasks"></a>基本任务
+- **bootstrap-vcpkg.bat** (Windows)
+- **./bootstrap-vcpkg.sh** (Linux、MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>在列表中搜索可用库
 
@@ -72,7 +73,11 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>在本地计算机上安装库
 
-在使用 vcpkg search 获取库的名称后，可使用 vcpkg install 下载库并对其进行编译。 vcpkg 在端口目录中使用库的端口文件。 如果未指定任何三元组，vcpkg 将安装并编译 x86-windows。 如果端口文件指定了依赖项，vcpkg 还会下载并安装这些依赖项。 下载完成后，vcpkg 使用库所使用的生成系统（版本不限）来生成库。 首选 CMake 和 MSBuild 项目文件，但同时还支持 MAKE 以及其他任何生成系统。 如果 vcpkg 在本地计算机上找不到指定的生成系统，它会下载并安装一个。
+在使用 vcpkg search 获取库的名称后，可使用 vcpkg install 下载库并对其进行编译。 vcpkg 在端口目录中使用库的端口文件。 如果未指定三元组，则 vcpkg 将针对目标平台的默认三元组进行安装和编译：x86-windows、x64-linux.cmake 或 x64-osx.cmake。
+
+对于 Linux 库，vcpkg 取决于本地计算机上安装的 gcc。 在 MacOS 上，vcpkg 使用 Clang。 
+
+如果端口文件指定了依赖项，vcpkg 还会下载并安装这些依赖项。 下载完成后，vcpkg 使用库所使用的生成系统（版本不限）来生成库。 首选 CMake 和 MSBuild（Windows 上）项目，但同时还支持 MAKE 以及其他任何生成系统。 如果 vcpkg 在本地计算机上找不到指定的生成系统，它会下载并安装一个。
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -82,6 +87,14 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
+
+```
+
+对于 CMAKE 项目，使用 CMAKE_TOOLCHAIN_FILE 实现库与 `find_package()` 的结合使用。 例如:  
+
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>列出已安装的库
@@ -99,7 +112,7 @@ websocketpp:x86-windows 0.7.0    Library that implements RFC6455 The WebSocket P
 zlib:x86-windows        1.2.11   A compression library
 ```
 
-## <a name="integrate-with-visual-studio"></a>与 Visual Studio 集成
+## <a name="integrate-with-visual-studio-windows"></a>与 Visual Studio (Windows) 集成
 
 ### <a name="per-user"></a>按用户
 
@@ -118,41 +131,18 @@ zlib:x86-windows        1.2.11   A compression library
 1. 运行 vcpkg install \<library>。
 1. 使用 vcpkg integrate project 创建 NuGet 包，它会按项目来引用该库。
 
-## <a name="export-compiled-binaries-and-headers"></a>导出已编译的二进制文件和标头
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>与 Visual Studio Code (Linux/MacOS) 集成 
 
-让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件，将其与其他团队成员进行轻松共享。
+运行 vcpkg integrate install，使用 vcpkg 登记的位置在 Linux/MacOS 上配置 Visual Studio Code，并在源文件上启用 IntelliSense。
 
-## <a name="updateupgrade-installed-libraries"></a>更新/升级已安装的库
+## <a name="target-linux-from-windows-via-wsl"></a>通过 WSL 从 Windows 指向 Linux
 
-公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update。 准备好将端口集合更新为公共目录的最新版本后，运行 vcpkg upgrade 命令以自动下载和重新生成任一或所有已安装的过期库。
+可使用适用于 Linux 的 Windows 子系统 (WSL) 从 Windows 计算机生成 Linux 二进制文件。 按照说明[在 Windows 10 上设置 WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)，并使用[适用于 Linux 的 Visual Studio 扩展](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)进行配置。 可将生成的所有 Windows 和 Linux 库放在同一文件夹中，并从 Windows 和 WSL 进行访问。
 
-默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项。
 
-```cmd
-  vcpkg upgrade --no-dry-run
-```
+## <a name="export_binaries_per_project"></a>导出已编译的二进制文件和标头
 
-### <a name="upgrade-options"></a>升级选项
-
-- **--no-dry-run** 执行升级，在没有指定条件的情况下，命令只列出过期的包。
-- **--keep-going** 继续安装包（即使出现了失败）。
-- **--triplet \<t>** 为非限定的包设置默认的三元组。
-- **--vcpkg-root \<path>** 指定要使用的 vcpkg 目录，而不是使用当前目录或工具目录。
-
-### <a name="upgrade-example"></a>升级示例
-
-### <a name="per-project"></a>按项目
-
-如果需要使用的库的版本与活动 vcpkg 实例中的版本不同，请按以下步骤操作：
-
-1. 新建 vcpkg 克隆
-1. 修改库的端口文件以获取所需版本
-1. 运行 vcpkg install \<library>。
-1. 使用 vcpkg integrate project 创建 NuGet 包，它会按项目来引用该库。
-
-## <a name="export-compiled-binaries-and-headers"></a>导出已编译的二进制文件和标头
-
-让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件，将其与其他团队成员进行轻松共享。
+让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件或 NuGet 包（各种格式均可），将其与其他团队成员进行轻松共享。
 
 ## <a name="updateupgrade-installed-libraries"></a>更新/升级已安装的库
 
@@ -206,7 +196,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 反馈
 
-使用 --survey 命令向 Microsoft 发送关于 vcpkg 的反馈，包括 Bug 报告和功能上的建议。
+使用 vcpkg contact --survey 命令向 Microsoft 发送关于 vcpkg 的反馈，包括 Bug 报告和功能上的建议。
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 文件夹层次结构
 
@@ -241,12 +231,10 @@ vcpkg 实例的内容如下：
 |**vcpkg integrate project**|为使用单个 VS 项目生成引用 NuGet 包|
 |**vcpkg export \<pkg>... [opt]...**|导出包|
 |**vcpkg edit \<pkg>**|打开端口进行编辑（使用 %EDITOR%，默认为“code”）|
-|**vcpkg import \<pkg>**|导入预生成库|
 |**vcpkg create \<pkg> \<url> [archivename]**|创建新程序包|
-|**vcpkg owns \<pat>**|在已安装包中搜索文件|
 |**vcpkg cache**|列出缓存的已编译包|
 |**vcpkg version**|显示版本信息|
-|**vcpkg contact**|显示联系信息，以便发送反馈|
+|**vcpkg contact --survey**|显示联系信息，以便发送反馈。|
 
 ### <a name="options"></a>选项
 
@@ -254,3 +242,4 @@ vcpkg 实例的内容如下：
 |---------|---------|
 |**--triplet \<t>**|指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅“vcpkg help triplet”）|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目录（默认：`%VCPKG_ROOT%`）|
+

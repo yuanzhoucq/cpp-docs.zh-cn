@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -103,7 +103,7 @@ unsigned char *_mbstok(
 
 ## <a name="return-value"></a>返回值
 
-将指针返回到下一步中找到的令牌*strToken*。 它们返回**NULL**当找到没有更多的令牌时。 每个调用修改*strToken* ，只需替换**NULL**字符在返回的令牌之后第一个分隔符。
+将指针返回到下一步中找到的令牌*strToken*。 它们返回**NULL**当找到没有更多的令牌时。 每个调用修改*strToken*通过用在返回的令牌之后的第一个分隔符 null 字符替换。
 
 ## <a name="remarks"></a>备注
 

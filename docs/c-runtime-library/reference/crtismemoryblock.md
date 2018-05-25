@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ int _CrtIsMemoryBlock(
 
 ## <a name="remarks"></a>备注
 
-**_CrtIsMemoryBlock**函数验证指定的内存块是否位于应用程序的本地堆，并且它具有有效的块类型标识符。 此函数还可用于获取最初请求内存块分配的对象分配序号和源文件名/行号。 将非 NULL 值传递*requestNumber*， *filename*，或*linenumber*参数原因 **_CrtIsMemoryBlock**设置这些参数的内存块中的值为调试标头，如果本地堆中找到的块。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtIsMemoryBlock**在预处理过程中删除。
+**_CrtIsMemoryBlock**函数验证指定的内存块是否位于应用程序的本地堆，并且它具有有效的块类型标识符。 此函数还可用于获取最初请求内存块分配的对象分配序号和源文件名/行号。 传递非**NULL**值*requestNumber*， *filename*，或*linenumber*参数原因 **_CrtIsMemoryBlock**将这些参数设置为内存块的调试标头中的值，如果本地堆中找到的块。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtIsMemoryBlock**在预处理过程中删除。
 
 如果 **_CrtIsMemoryBlock**失败，它将返回**FALSE**和输出参数将初始化为默认值： *requestNumber*和**lineNumber**均设置为 0 和*filename*设置为**NULL**。
 

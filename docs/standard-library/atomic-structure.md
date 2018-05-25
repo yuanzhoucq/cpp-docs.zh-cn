@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic 结构
 
@@ -63,7 +63,7 @@ struct atomic;
 
 类型*Ty*必须*完全可复制*。 即，使用[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)要复制其字节必须生成一个有效*Ty*比较等于原始对象的对象。 [Compare_exchange_weak](#compare_exchange_weak)和[compare_exchange_strong](#compare_exchange_strong)成员函数使用[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)以确定是否两个*Ty*值相等。 这些函数将不会使用*Ty*-定义**运算符 = =**。 成员函数的**原子**使用**memcpy**复制类型的值*Ty*。
 
-部分专用化，* * 原子\<Ty * > * *，存在的所有指针类型。 通过专用化可将偏移量添加到托管的指针值或者从其中减去该偏移量。 算术运算采用的类型自变量**ptrdiff_t**并调整该自变量的大小根据*Ty*与普通地址运算保持一致。
+部分专用化，**原子\<Ty \* >** ，存在的所有指针类型。 通过专用化可将偏移量添加到托管的指针值或者从其中减去该偏移量。 算术运算采用的类型自变量**ptrdiff_t**并调整该自变量的大小根据*Ty*与普通地址运算保持一致。
 
 专用化存在除每个整数类型**bool**。 每个专用化为原子算术和逻辑运算提供了一组丰富的方法。
 

@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
 
@@ -96,7 +96,7 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>安全性问题
 
-无效的非 NULL 值的缓冲区会导致访问冲突，如果传入*numberOfElements*参数大于 9。
+传递中无效的非**NULL**值缓冲区会导致访问冲突，如果*numberOfElements*参数大于 9。
 
 将值传递*numberOfElements*即大于缓冲区的实际大小将导致缓冲区溢出。
 

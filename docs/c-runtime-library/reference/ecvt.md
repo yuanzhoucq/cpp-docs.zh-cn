@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ char *_ecvt(
 
 ## <a name="return-value"></a>返回值
 
-**_ecvt**将指针返回到数字; 的字符串如果出错，则为 NULL。
+**_ecvt**将指针返回到数字; 的字符串**NULL**如果发生错误。
 
 ## <a name="remarks"></a>备注
 
@@ -85,7 +85,7 @@ char *_ecvt(
 
 **_ecvt**和 **_fcvt**使用单个静态分配的缓冲区执行该转换。 每次调用这些例程都会破坏上一次调用的结果。
 
-此函数验证其参数。 如果*dec*或*登录*为 NULL，或*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**则返回 NULL。
+此函数验证其参数。 如果*dec*或*登录*是**NULL**，或*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和**NULL**返回。
 
 ## <a name="requirements"></a>要求
 

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -72,7 +72,7 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctomb**将宽字符转换为多字节字符，它将返回的字节数 (即永远不会大于**MB_CUR_MAX**) 中的宽字符。 如果*wchar*是宽字符 null 字符 (L \0')， **wctomb**返回 1。 如果目标指针*mbchar*为 NULL， **wctomb**返回 0。 如果转换不在当前区域设置，可能**wctomb**返回-1 和**errno**设置为**EILSEQ**。
+如果**wctomb**将宽字符转换为多字节字符，它将返回的字节数 (即永远不会大于**MB_CUR_MAX**) 中的宽字符。 如果*wchar*是宽字符 null 字符 (L \0')， **wctomb**返回 1。 如果目标指针*mbchar*是**NULL**， **wctomb**返回 0。 如果转换不在当前区域设置，可能**wctomb**返回-1 和**errno**设置为**EILSEQ**。
 
 ## <a name="remarks"></a>备注
 

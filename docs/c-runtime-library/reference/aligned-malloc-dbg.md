@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ void * _aligned_malloc_dbg(
 对齐值，必须是 2 的整数次幂。
 
 *filename*<br/>
-指向已请求分配操作的源文件名的指针或 NULL。
+指向已请求分配操作的源文件名或**NULL**。
 
 *linenumber*<br/>
-请求分配操作所在的源文件中的行数或 NULL。
+请求分配操作所在的源文件中的行数或**NULL**。
 
 ## <a name="return-value"></a>返回值
 

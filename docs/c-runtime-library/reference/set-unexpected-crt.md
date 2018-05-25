@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c97f46a66a26f107061676dba313b068e9aebf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -55,7 +55,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="return-value"></a>返回值
 
-返回指向以前的终止函数的注册的 **_set_unexpected**以便稍后能还原上一个函数。 如果之前尚未设置函数，则返回值可用于还原默认行为；此值可能为 NULL。
+返回指向以前的终止函数的注册的 **_set_unexpected**以便稍后能还原上一个函数。 如果已设置上一个函数，返回的值可能用于还原默认行为;此值可能为**NULL**。
 
 ## <a name="remarks"></a>备注
 

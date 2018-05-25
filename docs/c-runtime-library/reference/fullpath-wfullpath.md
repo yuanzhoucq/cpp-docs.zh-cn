@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>参数
 
 *absPath*<br/>
-指向包含绝对路径名称或完整路径名称的缓冲区的指针或 NULL。
+指向包含绝对路径或完整路径名称缓冲区的指针或**NULL**。
 
 *relPath*<br/>
 相对路径名称。
@@ -82,7 +82,7 @@ wchar_t *_wfullpath(
 
 ## <a name="remarks"></a>备注
 
-**_Fullpath**函数扩展中的相对路径名称*relPath*到其完全限定或绝对路径和存储名称中，这*absPath*。 如果*absPath*为 NULL， **malloc**用于分配足够的长度，以保存的路径名称的缓冲区。 调用方负责释放此缓冲区。 相对路径名称指定从当前位置到另一个位置的路径（如当前工作目录："."）。 绝对路径名称是相对路径名称的扩展，表示需要采用完整路径才能从文件系统的根达到所需的位置。 与不同 **_makepath**， **_fullpath**可以用于获取相对路径的绝对路径名称 (*relPath*)，包括"。 /".../"在其名称中。
+**_Fullpath**函数扩展中的相对路径名称*relPath*到其完全限定或绝对路径和存储名称中，这*absPath*。 如果*absPath*是**NULL**， **malloc**用于分配足够的长度，以保存的路径名称的缓冲区。 调用方负责释放此缓冲区。 相对路径名称指定从当前位置到另一个位置的路径（如当前工作目录："."）。 绝对路径名称是相对路径名称的扩展，表示需要采用完整路径才能从文件系统的根达到所需的位置。 与不同 **_makepath**， **_fullpath**可以用于获取相对路径的绝对路径名称 (*relPath*)，包括"。 /".../"在其名称中。
 
 例如，若要使用 C 运行时例程，该应用程序必须包括包含例程声明的头文件。 每个头文件包括以相对方式（从应用程序的工作目录）引用文件位置的语句：
 

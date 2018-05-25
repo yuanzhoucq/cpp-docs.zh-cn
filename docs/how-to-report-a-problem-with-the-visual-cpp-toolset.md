@@ -10,27 +10,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
-ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
+ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
+ms.sourcegitcommit: 06b1f7bde6b3f8bed0f3db91d14e2d974444c1e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/20/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
 使用 Microsoft Visual C++ 编译器、链接器或其他工具和库时如果遇到问题，请告知我们。 如果文档中存在问题，我们也想要了解。
 
-## <a name="how-to-report-a-c-documentation-issue"></a>如何报告 C++ 文档问题
-
-我们使用 GitHub 问题来跟踪文档中报告的问题。 现在可直接从内容页创建 GitHub 问题，这可帮助用户以更丰富的方式与文档作者和产品团队进行互动。 如果发现文档存在问题、错误代码示例、令人困惑的说明、关键信息的遗漏，甚至只是一个拼写错误，都请与我们联系。 滚动至本页底部，然后选择“登录以提供文档反馈”。 如果现在没有 GitHub 帐户，则需要创建一个，创建帐户后，可以看到所有文档问题及其状态，还可在报告的问题有了变化时收到通知。 有关详细信息，请参阅 [docs.microsoft.com 中即将推出的新反馈系统](/teamblog/a-new-feedback-system-is-coming-to-docs)。
-
-使用文档反馈按钮在 GitHub 上创建文档问题时，创建问题的页面的相关信息会自动填写到该问题中，这样我们就可了解问题出现的位置。 请不要编辑该信息。 只需要追加错误的详细信息和建议的修复方法（如果愿意）。 [文档为开放源](https://github.com/MicrosoftDocs/cpp-docs/)，如果想要自己对其进行实际修复和提出建议，可直接进行。 有关帮助改进文档的方式的详细信息，请参阅 GitHub 上的[帮助指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)。
-
-## <a name="how-to-report-a-c-product-issue"></a>如何报告 C++ 产品问题
+## <a name="how-to-report-a-c-toolset-issue"></a>如何报告 C++ 工具集问题
 
 最好是向我们发送报告，在报告中说明你所遇到的问题、如何生成程序的详细信息，以及重现（我们可用于在自己的计算机上重现该问题的完整测试用例）。 通过这些信息，我们可以快速验证问题是存在于我们的代码中还是你的本地环境中，判断它是否会影响其他版本的编译器，并诊断其原因。
 
-在以下部分中，可了解好的报告所包含的内容、如何生成所发现问题类型的报告，以及如何将报告发送给产品团队。 无论对我们，还是对和你一样的其他开发者而言，你的报告都十分重要。 谢谢你帮助我们改进 Visual C++！
+在本部分中，可了解好的报告所包含的内容、如何生成所发现问题类型的报告，以及如何将报告发送给产品团队。 无论对我们，还是对和你一样的其他开发者而言，你的报告都十分重要。 谢谢你帮助我们改进 Visual C++！
 
 ## <a name="how-to-prepare-your-report"></a>如何准备报告
 
@@ -56,16 +50,25 @@ ms.lasthandoff: 05/11/2018
 
 1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。 例如，如果在 x64 上使用 Visual Studio 2017 生成面向 x64 的项目，请选择“适用于 VS 2017 的 x64 本机工具命令提示”。 有关详细信息，请参阅[开发人员命令提示快捷方式](build/building-on-the-command-line.md#developer-command-prompt-shortcuts)。
 
-1. 在“开发人员命令提示”控制台窗口中，输入命令 cl。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl/Bv。
 
 该输出应与以下类似：
 
 ```Output
-C:\Users\username\Source>cl
-Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
+C:\Users\username\Source>cl /Bv
+Microsoft (R) C/C++ Optimizing Compiler Version 19.14.26428.1 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-usage: cl [ option... ] filename... [ /link linkoption... ]
+Compiler Passes:
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\cl.exe:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1xx.dll:      Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c2.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\link.exe:      Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\mspdb140.dll:  Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\1033\clui.dll: Version 19.14.26428.1
+
+cl : Command line error D8003 : missing source filename
 ```
 
 将整个输出复制并粘贴到报告。
@@ -94,7 +97,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 如果问题是编译器接受无效的代码并且未生成诊断，请在报告中注明。
 
-要报告运行时行为问题，请提供该程序输出内容的原样副本，和你想要看到的内容。 理想情况下，它嵌入在输出语句本身中，例如，`printf("This should be 5: %d\n", actual_result);`。 如果程序崩溃或挂起，也请提到这一点。
+若要报告运行时行为问题，请提供该程序输出内容的原样副本，和你想要看到的内容。 理想情况下，它嵌入在输出语句本身中，例如，`printf("This should be 5: %d\n", actual_result);`。 如果程序崩溃或挂起，也请提到这一点。
 
 添加任何其他可能有助于我们诊断你遇到的问题的详细信息，例如，你可能已发现的任何变通方法。 避免在报表的其他部分出现重复信息。
 
@@ -247,15 +250,75 @@ CONTEXT:
 
 1. 在开发人员命令提示控制台窗口中，输入命令 cl /P arguments filename.cpp，其中 arguments 是前面捕获的参数列表，filename.cpp 是重现源文件的名称。 此命令复制用于重现的命令行，但在预处理器传递后停止编译，并将预处理过的源代码输出到 filename.i。
 
+如果正在预处理 C++/CX 源代码文件，或正在使用 C++ 模块功能，则需执行一些额外步骤。 有关详细信息，请参见下方内容。
+
 如果已生成了预处理过的文件，最好确保仍可使用该预处理过的文件来重现问题。
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>确认仍可以通过预处理过的文件来重现错误
 
-1. 在开发人员命令提示控制台窗口中，输入命令 cl arguments /TP filename***.i*，告知 cl.exe 将预处理过的文件编译为 C++ 源文件，其中 arguments 是前面捕获的参数列表，但删除了 /D 和 /I 参数（因为它们已包含在预处理过的文件中）；filename***.i* 是预处理过的文件的名称。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl arguments /TP filename.i，告知 cl.exe 将预处理过的文件编译为 C++ 源文件，其中 arguments 是前面捕获的参数列表，但删除了 /D 和 /I 参数（因为它们已包含在预处理过的文件中）；filename.i 是预处理过的文件的名称。
 
 1. 确认该问题可被重现。
 
 最后，将预处理过的重现 filename.i 附加到报告中。
+
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>预处理过的 C++/CX WinRT/UWP 代码重现
+
+如果使用 C++/CX 生成可执行文件，则需执行一些额外步骤来创建和验证预处理过的重现。
+
+#### <a name="to-preprocess-ccx-source-code"></a>预处理 C++/CX 源代码
+
+1. 按[预处理源代码文件](#to-preprocess-a-source-code-file)的介绍创建一个预处理过的源代码文件。
+
+1. 在生成的 _filename_.i 文件中搜索 #using 指令。
+
+1. 列出所有参考文件。 省去所有 Windows\*.winmd 文件、platform.winmd 文件和 mscorlib.dll。
+
+准备验证预处理过的文件是否仍然会出现该问题
+
+1. 为预处理过的文件创建一个新目录并将其复制到新目录。
+
+1. 将 #using 列表中的 .winmd 文件复制到新目录。
+
+1. 在新目录中创建一个空 vccorlib.h 文件。
+
+1. 编辑预处理过的文件，删除 mscorlib.dll 的所有 #using 指令。
+
+1. 编辑预处理过的文件，将所有绝对路径更改为复制的 .winmd 文件的文件名。
+
+如上所述，确认预处理过的文件是否仍然会出现该问题。
+
+### <a name="preprocessed-c-modules-repros"></a>预处理过的 C++ 模块重现
+
+如果正在使用 C++ 编译器的模块功能，则需执行一些不同的步骤来创建和验证预处理过的重现。
+
+#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>预处理使用模块的源代码文件
+
+1. 捕获用于生成重现的命令行参数，如[报告命令行的内容](#to-report-the-contents-of-the-command-line)中所述。
+
+1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。
+
+1. 转到包含重现项目的目录。
+
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl /P arguments filename.cpp，其中 arguments 是前面捕获的参数列表，filename.cpp 是使用模块的源文件的名称。
+
+1. 更改为包含用于生成模块接口（.ifc 输出）的重现项目的目录。
+
+1. 捕获用于生成模块接口的命令行参数。
+
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl /P arguments modulename.ixx，其中 arguments 是前面捕获的参数列表，modulename.ixx 是创建模块接口的文件的名称。
+
+如果已生成了预处理过的文件，最好确保仍可使用该预处理过的文件来重现问题。
+
+#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>确认仍可以通过预处理过的文件来重现错误
+
+1. 在开发人员控制台窗口中，转回包含重现项目的目录。
+
+1. 输入上述命令 cl arguments /TP filename.i，将预处理过的文件视为 C++ 源文件进行编译。
+
+1. 确认预处理过的文件是否仍然会出现该问题。
+
+最后，将预处理过的重现文件（filename.i 和 modulename.i）与 .ifc 输出一起附加到报告中。
 
 ### <a name="link-repros"></a>链接重现
 
@@ -291,10 +354,10 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>发送报告的方式
 
-向我们提交报告的方式有多种。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可通过选择此页底部的“产品反馈”按钮直接进入开发人员社区页面。 还可随附电子邮件发送报告，但首选前两种方法。 所选方法取决于你希望与调查报告的工程师互动的方式，以及是要跟踪其进度还是与社区共享报告。
+可通过多种方式向我们提交报表。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可通过选择此页底部的“产品反馈”按钮直接进入开发人员社区页面。 此选择取决于你是想使用 IDE 中的内置工具来捕获屏幕截图和组织报告以在开发人员社区页中进行发布，还是想直接使用网页。
 
 > [!NOTE]
-> 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft Visual Studio 产品系列隐私声明](https://www.visualstudio.com/dn948229)。
+> 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 Microsoft 致力于遵守所有数据隐私法律和法规。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft Visual Studio 产品系列隐私声明](https://www.visualstudio.com/dn948229)。
 
 ### <a name="use-the-report-a-problem-tool"></a>使用“报告问题”工具
 
@@ -312,26 +375,34 @@ Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告
 
 如果之前无人报告你的问题，请选择“开发者社区”页面上搜索框附近的“报告问题”按钮。 系统可能要求你登录 Visual Studio 帐户并同意开发者社区应用访问你的个人资料。 登录后，将直接转到可报告问题的页面。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
 
-### <a name="send-an-email"></a>发送电子邮件
-
-还可使用电子邮件将报告直接发送给 Visual C++ 团队。 可通过 [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com) 联系我们。仅在其他两种方法均不可用时才使用此方法，因为相对于使用“报告问题”工具或网页向开发者社区报告问题，并未如此紧密地跟踪电子邮件，且评论和解决方案对其他 Visual Studio 用户不可见。
-
-如果选择通过电子邮件发送报告，可采用以下模板作为电子邮件的正文。 如果电子邮件正文中未包括源代码或其他文件，请不要忘记将其附加在电子邮件中。
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
 > [!TIP]
-> 对于可能在 Visual Studio 中遇到的、与工具集无关的问题（例如 UI 问题、损坏的 IDE 功能或常规故障），“报告问题工具”可能是最佳之选，因为它具有屏幕截图功能，可以记录导致问题的 UI 操作。 还可在[开发人员社区](https://developercommunity.visualstudio.com/)站点报告这些错误。 请勿以发送电子邮件至 compilercrash@microsoft.com 的方式报告其他类型的错误。
+> 对于可能在 Visual Studio 中遇到的、与工具集无关的问题（例如 UI 问题、损坏的 IDE 功能或常规故障），“报告问题工具”可能是最佳之选，因为它具有屏幕截图功能，可以记录导致问题的 UI 操作。 还可在[开发人员社区](https://developercommunity.visualstudio.com/)站点报告这些错误。
+
+### <a name="reports-and-privacy"></a>报表和隐私
+
+默认情况下，报告中的所有信息、评论和回复都是公开可见的。 一般来说，这是有好处的，因为这样整个社区都能看到其他用户发现的问题、解决方案和解决方法。 但是，如果担心数据或身份公开后会出现隐私或知识产权问题，则可另作选择。
+
+如果担心身份泄露，请[创建一个新 Microsoft 帐户](https://signup.live.com/)，该帐户不会透露任何详细信息。 使用此帐户来创建报表。 
+
+不要在初始报表标题或内容中添加任何想要保密的内容，因为这会被公开。 相反，请注意，将通过单独的评注以私密方式发送详细信息。 为确保报表发送给正确的人员，请在问题报表的主题列表中加入 cppcompiler。 创建问题报表后便可指定谁可以查看回复和附件。
+
+#### <a name="to-create-a-problem-report-for-private-information"></a>创建私人信息问题报表
+
+1. 在创建的报表中，选择“添加注释”，创建对问题的私人说明。
+
+1. 在回复编辑器中，使用“提交”和“取消”按钮下的下拉控件，指定可查看回复的群体。 只有指定的人员能看到这些私人回复以及其中的图像、链接或代码。 选择“版主和贴主可见”，可仅允许 Microsoft 员工和自己查看。
+
+1. 添加重现所需的说明和所有其他信息、图像和文件附件。 选择“提交”按钮将私下发送此信息。
+
+   请注意，附件大小不得超过 2GB，最多可附加 10 个文件。 若要上传更大容量的内容，请在私人评论中申请获取上传网址。
+
+同样，只有指定的人员能查看此注释下的所有回复。 即使回复上的下拉控件未正确显示可见性受限状态，仍是如此。
+
+为了维护你的隐私，不暴露敏感信息，请通过在此受限注释下进行回复与 Microsoft 进行一切沟通。 回复其他评论可能会导致敏感信息意外泄露。
+
+## <a name="how-to-report-a-c-documentation-issue"></a>如何报告 C++ 文档问题
+
+我们使用 GitHub 问题来跟踪文档中报告的问题。 现在可直接从内容页创建 GitHub 问题，这可帮助用户以更丰富的方式与文档作者和产品团队进行互动。 如果发现文档存在问题、错误代码示例、令人困惑的说明、关键信息的遗漏，甚至只是一个拼写错误，都请与我们联系。 滚动至本页底部，然后选择“登录以提供文档反馈”。 如果现在没有 GitHub 帐户，则需要创建一个，创建帐户后，可以看到所有文档问题及其状态，还可在报告的问题有了变化时收到通知。 有关详细信息，请参阅 [docs.microsoft.com 中即将推出的新反馈系统](/teamblog/a-new-feedback-system-is-coming-to-docs)。
+
+使用文档反馈按钮在 GitHub 上创建文档问题时，创建问题的页面的相关信息会自动填写到该问题中，这样我们就可了解问题出现的位置。 请不要编辑该信息。 只需要追加错误的详细信息和建议的修复方法（如果愿意）。 [文档为开放源](https://github.com/MicrosoftDocs/cpp-docs/)，如果想要自己对其进行实际修复和提出建议，可直接进行。 有关帮助改进文档的方式的详细信息，请参阅 GitHub 上的[帮助指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)。
+

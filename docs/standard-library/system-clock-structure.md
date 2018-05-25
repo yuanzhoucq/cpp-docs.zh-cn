@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock 结构
 
@@ -42,8 +42,6 @@ struct system_clock;
 如果首次调用 `now()` 返回的值始终小于或等于后续调用 `now()` 返回的值，则为单调时钟。
 
 如果它是单调时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
-
-在此实现中，`system_clock` 与 `high_resolution_clock` 是同义词。
 
 ## <a name="members"></a>成员
 
@@ -75,7 +73,7 @@ struct system_clock;
 
 **标头：** \<chrono >
 
-**命名空间：**std::chrono
+**命名空间：** std::chrono
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 

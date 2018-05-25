@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -120,7 +120,7 @@ LC_TIME|**Strftime**和**wcsftime**函数。
 
 `setlocale( LC_ALL, "C" );`
 
-*区域设置*自变量可以采用区域设置名称、 语言字符串、 语言字符串和国家/地区代码、 代码页或语言字符串、 国家/地区代码和代码页。 可用区域设置名称、语言、国家/地区代码和代码页集包含 Windows NLS API 支持的所有内容，要求每个字符对应两个以上的字节的代码页除外（如 UTF-7 和 UTF-8）。 如果你提供的代码页值为 utf-7 或 utf-8， **setlocale**将失败，返回空值。 支持的区域设置名称的一套**setlocale**中所述[区域设置名称、 语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 组的支持的语言和国家/地区字符串**setlocale**中列出[语言字符串](../../c-runtime-library/language-strings.md)和[国家/地区字符串](../../c-runtime-library/country-region-strings.md)。 建议对嵌入到代码中或序列化到存储中的区域设置字符串的性能和可维护性使用区域设置名称格式。 与语言和国家/地区名称格式相比，操作系统的更新更改区域设置名称字符串的可能性会小一些。
+*区域设置*自变量可以采用区域设置名称、 语言字符串、 语言字符串和国家/地区代码、 代码页或语言字符串、 国家/地区代码和代码页。 可用区域设置名称、语言、国家/地区代码和代码页集包含 Windows NLS API 支持的所有内容，要求每个字符对应两个以上的字节的代码页除外（如 UTF-7 和 UTF-8）。 如果你提供的代码页值为 utf-7 或 utf-8， **setlocale**将失败并返回**NULL**。 支持的区域设置名称的一套**setlocale**中所述[区域设置名称、 语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 组的支持的语言和国家/地区字符串**setlocale**中列出[语言字符串](../../c-runtime-library/language-strings.md)和[国家/地区字符串](../../c-runtime-library/country-region-strings.md)。 建议对嵌入到代码中或序列化到存储中的区域设置字符串的性能和可维护性使用区域设置名称格式。 与语言和国家/地区名称格式相比，操作系统的更新更改区域设置名称字符串的可能性会小一些。
 
 作为传递的 null 指针*区域设置*参数告诉**setlocale**查询而不是设置国际环境。 如果*区域设置*参数为 null 指针，则不更改程序的当前区域设置。 相反， **setlocale**将指针返回到关联的字符串*类别*的线程的当前区域设置。 如果*类别*自变量是**LC_ALL**，函数将返回一个字符串，指示每个类别，以分号隔开的当前设置。 例如，调用的顺序
 

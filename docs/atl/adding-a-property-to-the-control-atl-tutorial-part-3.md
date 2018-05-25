@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>向控件中添加属性（ATL 教程，第 3 部分）
 `IPolyCtl` 是接口，包含控件的自定义方法和属性，并将向其添加属性。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides`方法返回的当前值`Sides`属性通过`pVal`指针。 在`put_Sides`方法，该代码可确保设置用户`Sides`为可接受值的属性。 最小值必须为 2，并且由于的点数组将用于每一侧，100 的最大值为合理的极限。  
+ `get_Sides`方法返回的当前值`Sides`属性通过`pVal`指针。 在`put_Sides`方法，该代码可确保设置用户`Sides`为可接受值的属性。 最小值必须为 3，并且由于的点数组将用于每一侧，100 的最大值为合理的极限。  
   
  你现在具有一个名为属性`Sides`。 在下一步的步骤中，你将更改绘图代码以使用它。  
   
