@@ -11,11 +11,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 722b1dadbdd5e1855ea8d8cc163de705f3e2cbcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 语言一致性
 
@@ -32,8 +32,8 @@ ms.lasthandoff: 05/08/2018
 |----|---|
 |__C++03/11 核心语言功能__|__支持__|
 |&nbsp;&nbsp;其他所有内容|VS 2015 <sup>[A](#note_A)</sup>|
-|&nbsp;&nbsp;两阶段名称查找|部分 <sup>[B](#note_B)</sup>|
-|&nbsp;&nbsp;[N2634 表达式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|部分 <sup>[C](#note_C)</sup>|
+|&nbsp;&nbsp;两阶段名称查找|VS 2017 15.7 <sup>[B](#note_B)</sup>|
+|&nbsp;&nbsp;[N2634 表达式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99 预处理器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|部分 <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 扩展的整型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|N/A <sup>[E](#note_E)</sup>|
 |__C++ 14 核心语言功能__|__支持__|
@@ -80,16 +80,34 @@ ms.lasthandoff: 05/08/2018
 |&nbsp;&nbsp;[P0386R2 内联变量](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0522R0 将template-parameters 模板与兼容参数匹配](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0036R0 删除某些空的一元折叠](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4261 修复限定转换](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|否|
-|&nbsp;&nbsp;[P0017R1 扩展的聚合初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|否|
-|&nbsp;&nbsp;[P0091R3 类模板的模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 类模板参数推导问题](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|否|
-|&nbsp;&nbsp;[P0127R2 使用 auto 声明非类型模板参数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|否|
-|&nbsp;&nbsp;[P0135R1 保证副本省略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|否 <sup>[H](#note_H)</sup>|
-|&nbsp;&nbsp;[P0136R1 重新组织继承构造函数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|否|
-|&nbsp;&nbsp;[P0145R3 改进表达式计算顺序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 函数参数的计算顺序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|否|
-|&nbsp;&nbsp;[P0195R2 using 声明中的包扩展](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|否|
-|&nbsp;&nbsp;[P0283R2 忽略无法识别的属性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|否|
-|&nbsp;&nbsp;[P0702R1 修复 initializer-list ctor 的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|否|
+|&nbsp;&nbsp;[N4261 修复限定转换](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0017R1 扩展的聚合初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0091R3 类模板的模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 类模板参数推导问题](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0127R2 使用 auto 声明非类型模板参数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0135R1 保证副本省略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6<sup>[H](#note_H)</sup>|
+|&nbsp;&nbsp;[P0136R1 重新组织继承构造函数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0145R3 改进表达式计算顺序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 函数参数的计算顺序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0195R2 using 声明中的包扩展](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0283R2 忽略无法识别的属性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0702R1 修复 initializer-list ctor 的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+
+  
+  
+|功能区域| |
+|----|---|
+|__C++17 核心语言功能（缺陷报告）__|__支持__|
+|&nbsp;&nbsp;[P0702R1 修复 initializer-list ctor 的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0588R1 简化隐式 lambda 捕获](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|否|
+|&nbsp;&nbsp;[CWG 1581：何时定义 constexpr 成员函数？](https://wg21.cmeerw.net/cwg/issue1581)|否|
+|&nbsp;&nbsp;[P0962R1 放宽结构化绑定的自定义点查找规则](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|否|
+|&nbsp;&nbsp;[P0962R2 放宽 range-for 循环的自定义点查找规则](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|否|
+|&nbsp;&nbsp;[P0969R0 允许对可访问的成员进行结构化绑定](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|否|
+
+  
+  
+|功能区域| |
+|----|---|
 |__C++20 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[P0306R4 添加 &#95;&#95;VA_OPT&#95;&#95 用于省略和删除逗号](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|否|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|否|
@@ -105,25 +123,46 @@ ms.lasthandoff: 05/08/2018
 |功能区域| |
 |---|---|
 |__C++20 标准库功能__|__支持__|
+|&nbsp;&nbsp;[P0777R1 避免不必要的衰减](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|否|
 |&nbsp;&nbsp;[P0674R1 数组的 make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|否|
+|&nbsp;&nbsp;[P0858R0 Constexpr 迭代器要求](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0809R0 比较无序容器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp; [P0020R3 原子\<float>，原子\<double>，原子\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|否|
+|&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br />&nbsp;&nbsp;[P0753R2 osyncstream 操控器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|否|
+|&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|否|
+|&nbsp;&nbsp;[P0202R3 \<algorithm> 和 exchange() 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|否|
+|&nbsp;&nbsp;[P0355R7 \<chrono> 日历和时区](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|否|
+|&nbsp;&nbsp;[P0415R1 \<complex>（重新）的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|否|
+|&nbsp;&nbsp;[P0439R0 枚举类 memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|否|
+|&nbsp;&nbsp;[P0457R2 basic_string/basic_string_view 的 starts_with()/ends_with()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|否|
+|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|否|
+|&nbsp;&nbsp;[P0551R3 不应将 std 函数模板专用化!](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0551r3.pdf)|否|
+|&nbsp;&nbsp;[P0600R1 STL 第 1 部分的 \[\[nodiscard\]\] ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|否|
+|&nbsp;&nbsp;[P0616R0 在 \<numeric> 中使用 move()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|否|
+|&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|否|
+|&nbsp;&nbsp;[P0718R2 原子\<shared_ptr\<T>>、原子\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|否|
+|&nbsp;&nbsp;[P0754R2\<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|否|
+|&nbsp;&nbsp;[P0767R1 弃用 is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|否|
+|&nbsp;&nbsp;[P0768R1 太空船比较运算符的库支持\<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|否|
+|&nbsp;&nbsp;[P0966R1 string::reserve() 不应缩减](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|否|
 |__C++17 标准库功能__|__支持__|
-|&nbsp;&nbsp;[P0433R2 将类模板的模板推导集成到标准库中](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 改进集成到标准库中的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|否|
-|&nbsp;&nbsp;[P0426R1 char_traits 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|否|
-|&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|否|
-|&nbsp;&nbsp;[P0220R1 Library Fundamentals V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|部分 <sup>[J](#note_J)</sup>|
-|&nbsp;&nbsp;[P0067R5 基本字符串转换](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|否|
-|&nbsp;&nbsp;[N4562 库基础知识：\<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 删除 polymorphic_allocator 分配](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|否|
-|&nbsp;&nbsp;[P0024R2 并行算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 重命名并行执行策略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 并行算法应该对异常调用 terminate()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 统一 \<numeric> 并行算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|否|
-|&nbsp;&nbsp;[P0226R1 特殊数学函数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|否|
-|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 文件系统的相对路径](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 文件系统的目录项缓存](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 文件系统路径中支持 string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 支持非 POSIX 文件系统](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 解析文件系统的 NB 注释](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|否 <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0433R2 将类模板的模板推导集成到标准库中](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 改进集成到标准库中的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0426R1 char_traits 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0220R1 Library Fundamentals V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6 <sup>[J](#note_J)</sup>|
+|&nbsp;&nbsp;[P0067R5 基本字符串转换](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|VS 2017 15.7 <sup>[charconv](#note_charconv)</sup>|
+|&nbsp;&nbsp;[N4562 库基础知识：\<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 删除 polymorphic_allocator 分配](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|VS 2017 15.6|
+|&nbsp;&nbsp;[P0024R2 并行算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 重命名并行执行策略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 并行算法应该对异常调用 terminate()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 统一 \<numeric> 并行算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0226R1 特殊数学函数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 文件系统的相对路径](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 文件系统的目录项缓存](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 文件系统路径中支持 string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 支持非 POSIX 文件系统](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 解析文件系统的 NB 注释](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
 |&nbsp;&nbsp;[P0003R5 删除动态异常规范](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 not_fn() 的修补程序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0033R1 重新组织 enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0033R1 重新组织 enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0083R3 拼接映射和集](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0 阐明 insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0174R2 弃用残留库部分](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0302R1 删除 std::function 中的分配器支持](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>、shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 修复数组的 shared_ptr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>、shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 修复数组的 shared_ptr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0521R0 弃用 shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 标准库的内联变量](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 弃用 \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -148,7 +187,7 @@ ms.lasthandoff: 05/08/2018
 |&nbsp;&nbsp;[P0604R0 将 is\_callable/result\_of 更改为 invoke\_result、is\_invocable、is\_nothrow\_invocable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4562 库基础知识：\<algorithm> sample()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#alg.random.sample)|VS 2017|
 |&nbsp;&nbsp;[N4562 库基础知识：\<any>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#any)|VS 2017|
-|&nbsp;&nbsp;[N4562 库基础知识：\<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017|
+|&nbsp;&nbsp;[N4562 库基础知识：\<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 |
 |&nbsp;&nbsp;[N4562 库基础知识：\<string_view>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017|
 |&nbsp;&nbsp;[N4562 库基础知识：\<tuple> apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017|
 |&nbsp;&nbsp;[P0032R3 variant/any/optional 的同类接口](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0032r3.pdf)|VS 2017|
@@ -228,30 +267,48 @@ __VS 2015.2__ 和 __VS 2015.3__ 分别表示在 Visual Studio 2015 Update 2 和 
 __VS 2017__ 表示在 Visual Studio 2017 RTM 中支持的功能。  
 __VS 2017 15.3__表示 Visual Studio 2017 版本 15.3 中支持的功能。  
 __VS 2017 15.5__ 表示 Visual Studio 2017 版本 15.5 中支持的功能。
+__VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。
 
 ### <a name="notes"></a>说明
 
-<a name="note_A"></a>__A__ 这忽略了 C++03 的动态异常规范，该规范在 C++11 中已弃用。 没有计划来实现它们，应该会从将来的 C++ 标准版中删除。  
-<a name="note_B"></a>__B__ 编译器对两阶段名称查找的支持得到了改进，但仍不完整。  
-<a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 后，编译器对表达式 SFINAE 的支持足以满足标准库，但支持仍不完整。  
-<a name="note_D"></a>__D__ 编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。  
+<a name="note_A"></a>__A__ 在 /std:c++14 模式下，动态异常规范仍处于未实现状态，且 throw() 仍被视为 \_\_ declspec(nothrow) 的同义词。 在 C++17 中，动态异常规范大部分被 P0003R5 删除，留下了一个痕迹：throw() 被弃用，并被要求具有 noexcept 的同义词的行为。 在 /std:c++17 模式下，MSVC 现通过赋予 throw() 与 noexcept 相同的行为（即通过终止强制执行）来符合标准。
+编译器选项 /Zc:noexceptTypes- 请求 \_\_declspec(nothrow) 的旧行为。 throw() 很可能会从 C++20 删除。 为帮助迁移代码，以响应标准和实现中的这些更改，在 /std:c++17 和 /permissive- 下添加了异常规范问题的新编译器警告。  
+<a name="note_B"></a>__B__支持 Visual Studio 2017 15.7 版中的 /permissive- 模式。 有关详细信息，请参阅 [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)（MSVC 引入两阶段名称查找支持）。  
+<a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 后，编译器对表达式 SFINAE 的支持足以满足标准库。 受 Visual Studio 2017 15.7 支持（无论是否设置 /permissive- 模式）。 某些 bug 仍处于待修复状态。 “唯一标签类型”解决方法不再是必需的，我们已从 STL 实现中将其删除。  
+<a name="note_D"></a>__D__ 编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。  我们正在修改预处理器，并且很快将在 /permissive- 模式下发布实验版的改进内容。  
 <a name="note_E"></a>__E__ 它被标记为“不适用”，因为允许但不要求编译器支持扩展的整数类型。  和 GCC 和 Clang 一样，我们选择不支持它们。  
 <a name="note_F"></a>__F__ 与此类似，它被标记为“不适用”，因为允许但不要求编译器实现此优化。  
 <a name="note_G"></a>__G__ 在 [/std:c++14](./build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可禁止的警告。  
-<a name="note_H"></a>__H__ 此功能以前在 Visual Studio 2017 版本 15.3 的预览版中可用，但由于发现了 bug，已将其从发行版中删除。  
 <a name="note_J"></a>__J__ 在本表中的其他部分对 Visual Studio 2015 中不完整的功能进行了说明。  
-<a name="note_K"></a>__K__ 出于历史原因，文件系统 TS 在 \<experimental/filesystem> 和 \<filesystem> 中均可实现，但必须先更正其实现才能移动其命名空间。 完成此操作前，此功能标记为尚未实现。  
-<a name="note_L"></a>__L__ 由编译器内部函数支持。 此内部函数在 Clang 中尚不可用。 此功能可用，但尚未在 Intellisense 中启用。   
-<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](./build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17 功能也始终处于启用状态。 这是因为在引入 /std 选项之前实现了该功能，或者因为条件实现异常复杂。  
+<a name="note_K"></a>__K__ 这是一个全新的实现，与之前的 std::experimental 版本不兼容，这对符号链接支持、bug 修复以及更改需符合标准的行为而言是必不可少的。 目前，包含 \< filesystem> 提供新 std::filesystem 和旧 std::experimental::filesystem，而包含 \<experimental/filesystem> 仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。  
+<a name="note_L"></a>__L__ 由编译器内部函数支持。   
+<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std 选项之前实现了该功能，或者因为条件实现异常复杂。  
 <a name="note_17"></a>__17__ 这些功能由 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项启用。  
 <a name="note_byte"></a>__byte__ `std::byte` 由 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）启用，但由于它在某些情况下可能会与 Windows SDK 标头冲突，因此它具有细化的选择退出宏。 可以通过将 `_HAS_STD_BYTE` 定义为 `0` 将其禁用。  
 <a name="note_C11"></a>__C11__ 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符、C11 `fopen()` 独占模式和 C11 `aligned_alloc()`。 后者不太可能实现，因为 C11 以与 `free()` 的 Microsoft 实现不兼容的方式指定了 `aligned_alloc()`，即 `free()` 必须能够处理高度一致的分配。  
-指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项后会删除 <a name="note_rem"></a>__rem__ 功能。 这些功能具有选择退出宏：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。
-  
+指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)）编译器选项后会删除 <a name="note_rem"></a>__rem__ 功能。 这些功能具有选择退出宏：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。  
+<a name="note_charconv"></a>__charconv__ from_chars() 和 to_chars() 均可用于整数。 我们目前正在处理浮点 from_chars()，其后需接浮点 to_chars()。  
+<a name ="note_parallel"></a>__并行__ C++17 的并行算法库已完成。 请注意，这并不意味着各种情况中的各种算法都是并行执行的；我们已将最重要的算法并行执行，且即使算法未并行执行，我们也提供执行策略签名。 我们的 STL 实现的中心内部标头 yvals.h 中包含以下“并行算法注释”：C++ 允许实现将并行算法作为系列算法的调用实现。   此实现并行执行几个常见算法调用，但不是全部。  
+
+以下算法并行执行：
+
+- adjacent_difference、adjacent_find、all_of、any_of、count、count_if、equal、exclusive_scan、find、find_end、find_first_of、find_if、for_each、for_each_n、inclusive_scan、mismatch、none_of、reduce、remove、remove_if、search、search_n、sort、stable_sort、transform、transform_exclusive_scan、transform_inclusive_scan、transform_reduce。
+
+以下算法目前不并行执行：
+
+- 目标硬件上的并行性能没有显著提升；只用于复制或交换无分支的元素的所有算法通常会受内存带宽限制：
+  - copy、copy_backward、copy_n、fill、fill_n、move、move_backward、remove、remove_if、replace、replace_if、reverse、reverse_copy、rotate、rotate_copy、swap_ranges
+- 对用户并行性要求存在混淆；可能出现在上述类别中：
+  - generate、generate_n
+- 疑为不可实现的有效并行性：
+  - partial_sort、partial_sort_copy
+- 尚未评估；并行性可能在未来的版本中实现，且可能是有益的：
+  - copy_if、includes、inplace_merge、is_heap、is_heap_until、is_partitioned、is_sorted、is_sorted_until、lexicographical_compare、max_element、merge、min_element、minmax_element、nth_element、partition_copy、remove_copy、remove_copy_if、replace_copy、replace_copy_if、set_difference、set_intersection、set_symmetric_difference、set_union、stable_partition、unique、unique_copy
+
 ## <a name="see-also"></a>请参阅
 
 [C++ 语言参考](cpp/cpp-language-reference.md)  
-[C++ 标准库](standard-library/cpp-standard-library-reference.md)   
+[C++ 标准库](standard-library/cpp-standard-library-reference.md)  
 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)  
 [Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)  
 [Visual C++ 更改历史记录（2003 - 2015）](porting/visual-cpp-change-history-2003-2015.md)  

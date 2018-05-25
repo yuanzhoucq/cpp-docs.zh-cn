@@ -1,7 +1,9 @@
 ---
 title: 在 Visual Studio 中配置 Linux CMake 项目 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2107
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 43d29513b41cc89f7d4b6ba4e33365dfa60a761a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49d9364b7b39dfddd982519416c9a12b7adf9e6
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>配置 Linux CMake 项目
   
@@ -44,7 +46,8 @@ int main(int argc, char* argv[])
 }
 ```
 
-CMakeLists.txt： 
+CMakeLists.txt：
+
 ```cmd
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
@@ -58,6 +61,8 @@ add_executable(hello-cmake hello.cpp)
 指定 Linux 目标后，会将源复制到你的 Linux 计算机。 然后，CMake 在 Linux 计算机上运行，为项目生成 CMake 缓存。  
 
 ![在 Linux 上生成 CMake 缓存](media/cmake-linux-1.png "Generate the CMake cache on Linux")  
+
+**Visual Studio 2017 15.7 及更高版本：** 为向远程标头提供 IntelliSense 支持，Visual Studio 会自动将标头复制到本地 Windows 计算机上的目录中。 有关详细信息，请参阅[远程标头的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
 
 ## <a name="debug-the-project"></a>调试项目  
 若要在远程系统上调试代码，设置一个断点，并在项目设置旁的工具栏菜单中选择 CMake 目标作为启动项，然后单击“运行”（或按 F5）。
@@ -84,6 +89,7 @@ add_executable(hello-cmake hello.cpp)
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 可按需设置 `name` 值。 `remoteMachineName` 值指定了目标远程系统（以防存在多个系统）。 此字段启用了 IntelliSense，可帮助你选择正确的系统。 字段 `remoteCMakeListsRoot` 指定将项目源复制到远程系统上的何处。 字段 `remoteBuildRoot` 是远程系统上生成“生成输出”的位置。 还会在本地将该输出复制到由 `buildRoot` 指定的位置。
 
 ## <a name="building-a-supported-cmake-release-from-source"></a>从源生成受支持的 CMake 版本

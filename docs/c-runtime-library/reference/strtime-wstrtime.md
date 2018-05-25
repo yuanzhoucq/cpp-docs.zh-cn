@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime、_wstrtime
 
@@ -85,7 +85,7 @@ wchar_t *_wstrtime(
 
 **_Strtime**函数将当前的本地时间复制到缓冲区的指向*timestr*。 其时间格式为**hh: mm:** 其中**hh**是表示二十四小时制的小时数的两个数字**mm**是两个数字表示小时和分钟**ss**是两位数表示秒。 例如，在字符串**18:23:44**表示 23 分 44 秒过去 6 P.M. 缓冲区长度必须至少为 9 个字节。
 
-**_wstrtime**是宽字符版本的 **_strtime**; 的自变量和返回值 **_wstrtime**是宽字符字符串。 这些函数否则具有相同行为。如果*timestr*是**NULL**指针或如果*timestr*的格式错误，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许异常若要继续，这些函数返回 NULL 和集**errno**到**EINVAL**如果*timestr*为 null 或设置**errno**到**ERANGE**如果*timestr*的格式不正确。
+**_wstrtime**是宽字符版本的 **_strtime**; 的自变量和返回值 **_wstrtime**是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*是**NULL**指针或如果*timestr*的格式错误，无效参数处理程序调用中所述，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许异常若要继续，则这些函数将返回**NULL**并设置**errno**到**EINVAL**如果*timestr*已**NULL**或设置**errno**到**ERANGE**如果*timestr*的格式不正确。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -89,22 +89,22 @@ uintptr_t _beginthreadex( // MANAGED CODE
 新线程的堆栈大小或 0。
 
 *arglist*<br/>
-要传递到新线程的参数列表或 NULL。
+要传递到新线程的自变量列表或**NULL**。
 
 *安全性*<br/>
-指向 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*安全*为 NULL，句柄不能被继承。 对于 Windows 95 应用程序，必须为 NULL。
+指向 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*安全*是**NULL**，句柄不能被继承。 必须是**NULL**对于 Windows 95 应用程序。
 
 *initflag*<br/>
 控制新线程的初始状态的标志。 设置*initflag*为 0 来立即运行，或到**CREATE_SUSPENDED**处于挂起状态; 中创建的线程使用[ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx)来执行此线程。 设置*initflag*到**STACK_SIZE_PARAM_IS_A_RESERVATION**标志以将*stack_size*初始保留堆栈以字节为单位的大小; 如果此标志是由于未指定， *stack_size*指定提交大小。
 
 *thrdaddr*<br/>
-指向接收线程标识符的 32 位变量。 如果此变量为 NULL，则不可用。
+指向接收线程标识符的 32 位变量。 如果它是**NULL**，不使用它。
 
 ## <a name="return-value"></a>返回值
 
 如果成功，其中每个函数返回的句柄到新创建的线程;但是，如果新创建的线程退出过快， **_beginthread**可能不会返回有效句柄。 （请参见“备注”节中的讨论。）发生错误时， **_beginthread**返回-1l，并**errno**设置为**EAGAIN**是否存在线程过多，为**EINVAL**如果参数是无效或堆栈大小不正确，或者提供至**EACCES**是否存在资源 （如内存） 不足。 发生错误时， **_beginthreadex**返回 0，和**errno**和 **_doserrno**设置。
 
-如果*start_address*为 NULL，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。
+如果*start_address*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回-1。
 
 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -137,7 +137,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 操作系统将处理堆栈的分配时任一 **_beginthread**或 **_beginthreadex**调用; 你不必将该线程堆栈的地址传递给这些函数之一。 此外， *stack_size*参数可以为的 0，在这种情况下操作系统使用相同的值指定的堆栈的主线程。
 
-*arglist*是传递给新创建的线程的参数。 通常这是数据项的地址，例如字符串。 *arglist*时不需要可以为 NULL，但 **_beginthread**和 **_beginthreadex**必须赋值才能传递到新线程。 如果任何线程调用所有线程都会都终止[中止](abort.md)，**退出**， **_exit**，或**ExitProcess**。
+*arglist*是传递给新创建的线程的参数。 通常这是数据项的地址，例如字符串。 *arglist*可以是**NULL**如果不需要但 **_beginthread**和 **_beginthreadex**必须赋值才能传递到新线程。 如果任何线程调用所有线程都会都终止[中止](abort.md)，**退出**， **_exit**，或**ExitProcess**。
 
 通过使用每个进程的全局当前区域设置信息初始化新的线程的区域设置。 每个线程区域设置通过调用[_configthreadlocale](configthreadlocale.md) （全局或针对新线程仅），线程可以将更改其区域设置独立从其他线程通过调用**setlocale**或 **_wsetlocale**。 没有设置了每个线程区域设置标记的线程可能会影响中还没有设置，每个线程区域设置标志的所有其他线程，以及所有新创建线程的区域设置的信息。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 

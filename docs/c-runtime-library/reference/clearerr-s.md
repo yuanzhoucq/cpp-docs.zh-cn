@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ errno_t clearerr_s(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零**EINVAL**如果*流*为 NULL。
+如果成功，则为零**EINVAL**如果*流*是**NULL**。
 
 ## <a name="remarks"></a>备注
 
 **Clearerr_s**函数重置错误指示器和的文件尾指示器*流*。 错误指示符不自动清除;设置指定的流的错误指示器后，该流上继续执行操作来返回之前的错误值**clearerr_s**， **clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[rewind](rewind.md)调用。
 
-如果*流*为 NULL，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
+如果*流*是**NULL**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数将**errno**到**EINVAL**并返回**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

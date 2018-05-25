@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefe9bbfc1904847af5594a4d663b1eb8299fc9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -72,7 +72,7 @@ char *_fcvt(
 
 ## <a name="return-value"></a>返回值
 
-**_fcvt**将指针返回到的位数，字符串在错误上的 NULL。
+**_fcvt**将指针返回到的位数，字符串**NULL**错误。
 
 ## <a name="remarks"></a>备注
 
@@ -86,7 +86,7 @@ char *_fcvt(
 
 **_ecvt**和 **_fcvt**使用单个静态分配的缓冲区执行该转换。 对每个例程的每次调用都会破坏上一次调用的结果。
 
-此函数验证其参数。 如果*dec*或*登录*为 NULL，或*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**则返回 NULL。
+此函数验证其参数。 如果*dec*或*登录*是**NULL**，或*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和**NULL**返回。
 
 ## <a name="requirements"></a>要求
 

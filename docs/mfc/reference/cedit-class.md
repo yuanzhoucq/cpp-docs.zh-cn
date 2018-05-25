@@ -104,11 +104,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -188,7 +188,7 @@ class CEdit : public CWnd
   
  每个消息映射条目采用以下形式：  
   
- **ON_** 通知 **(** *id、 f x n * * *)**  
+  **ON_**_通知_**(** _id_**，** _f x n_ **)**
   
  其中`id`指定发送通知，编辑控件的子窗口 ID 和`memberFxn`是父成员函数编写以处理通知的名称。  
   

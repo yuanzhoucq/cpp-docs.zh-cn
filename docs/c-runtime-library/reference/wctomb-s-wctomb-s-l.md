@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 
@@ -102,7 +102,7 @@ errno_t _wctomb_s_l(
 
 **Wctomb_s**函数将其*wchar*的相应的多字节字符的自变量，并将存储在结果*mbchar*。 可以从任何程序的任何程序点调用该函数。
 
-如果**wctomb_s**将宽字符转换为多字节字符，它会将字节数 (即永远不会大于**MB_CUR_MAX**) 中为指向整数的宽字符*pRetValue*。 如果*wchar*是宽字符 null 字符 (L \0')， **wctomb_s**填充*pRetValue* 1。 如果目标指针*mbchar*为 NULL， **wctomb_s**将 0 放入*pRetValue*。 如果转换不在当前区域设置，可能**wctomb_s** -1 放*pRetValue*。
+如果**wctomb_s**将宽字符转换为多字节字符，它会将字节数 (即永远不会大于**MB_CUR_MAX**) 中为指向整数的宽字符*pRetValue*。 如果*wchar*是宽字符 null 字符 (L \0')， **wctomb_s**填充*pRetValue* 1。 如果目标指针*mbchar*是**NULL**， **wctomb_s**将 0 放入*pRetValue*。 如果转换不在当前区域设置，可能**wctomb_s** -1 放*pRetValue*。
 
 **wctomb_s**使用当前区域设置依赖于区域设置的信息; 以及 **_wctomb_s_l**具有完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 

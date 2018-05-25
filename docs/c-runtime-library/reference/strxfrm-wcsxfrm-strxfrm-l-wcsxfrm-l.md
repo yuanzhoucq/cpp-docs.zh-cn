@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
@@ -108,7 +108,7 @@ size_t wcsxfrm_l(
 
 **wcsxfrm**是宽字符版本的**strxfrm**; 的字符串自变量**wcsxfrm**都是宽字符指针。 有关**wcsxfrm**之后，在字符串转换，调用**wcscmp**使用两个已转换字符串生成的结果相同的调用**wcscoll**应用于原始的两个字符串。 **wcsxfrm**和**strxfrm**否则具有相同行为。 **wcsxfrm**使用当前区域设置为其区域设置相关的行为;**_wcsxfrm_l**而不是当前区域设置中传入的区域设置。
 
-这些函数验证其参数。 如果*strSource*是 null 指针，或*strDest* （除非计数为零） 为 NULL 指针，或如果*计数*大于**INT_MAX**，调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回**INT_MAX**。
+这些函数验证其参数。 如果*strSource*是 null 指针，或*strDest*是**NULL**指针 （除非计数为零），或者如果*计数*大于**INT_MAX**，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将设置**errno**到**EINVAL**并返回**INT_MAX**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ void *_lsearch(
 
 *比较*自变量是指向用户提供比较两个数组元素并返回一个值，指定其关系的例程的指针。 **_lsearch**调用*比较*搜索，将指针传递给两个数组元素，在每次调用例程的一个或多个期间。 *比较*必须比较元素并返回非零 （这意味着元素不同） 或 0 （这意味着元素相同的）。
 
-此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*为 NULL 和 **数*不为零，或者如果*宽度*小于零，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
+此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**和*数*不为零，或者如果*宽度*小于零，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
