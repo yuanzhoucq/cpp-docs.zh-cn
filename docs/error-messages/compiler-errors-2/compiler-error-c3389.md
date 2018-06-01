@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f0f60a1096c070d28be3b7af161bbb924fb20dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b540f87458c75ddf7d57626b6251248652b96213
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704296"
 ---
 # <a name="compiler-error-c3389"></a>编译器错误 C3389
-__declspec(keyword) 不能用于 /clr: pure 或 /clr: safe  
-  
- **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
-  
- A [__declspec](../../cpp/declspec.md)使用修饰符意味着每个进程状态。  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)意味着每个[appdomain](../../cpp/appdomain.md)状态。  因此，声明的变量`keyword` **__declspec**修饰符，并使用编译 **/clr: pure**不允许。  
-  
- 下面的示例生成 C3389:  
-  
-```  
-// C3389.cpp  
-// compile with: /clr:pure /c  
-__declspec(dllexport) int g2 = 0;   // C3389  
+
+> __declspec (*关键字*) 不能与 /clr: pure 或 /clr: safe
+
+## <a name="remarks"></a>备注
+
+**/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+
+A [__declspec](../../cpp/declspec.md)使用修饰符意味着每个进程状态。  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)意味着每个[appdomain](../../cpp/appdomain.md)状态。  因此，声明的变量`keyword` **__declspec**修饰符，并使用编译 **/clr: pure**不允许。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C3389:
+
+```cpp
+// C3389.cpp
+// compile with: /clr:pure /c
+__declspec(dllexport) int g2 = 0;   // C3389
 ```

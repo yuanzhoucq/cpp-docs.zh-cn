@@ -1,6 +1,6 @@
 ---
 title: 默认情况下处于关闭状态的编译器警告 |Microsoft 文档
-ms.date: 11/04/2016
+ms.date: 05/30/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,31 +14,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705561"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
 
-因为大多数开发人员不希望看到它们，编译器将包含默认情况下，关闭的警告。 在某些情况下，它们表示一个样式的选择，或在较旧的代码中，是常见惯用语或利用语言的 Microsoft 扩展。 在其他情况下，它们指示其中程序员通常做出错误假设，这可能导致意外或未定义行为的区域。 有些警告可能存在非常干扰库标头中。
+因为大多数开发人员不希望看到它们，编译器将包含默认情况下，关闭的警告。 在某些情况下，它们表示一个样式的选择，或在较旧的代码中，是常见惯用语或利用语言的 Microsoft 扩展。 在其他情况下，它们指示其中程序员通常做出错误假设，这可能导致意外或未定义行为的区域。 有些警告可能存在非常干扰库标头中。 C 运行时库和 c + + 标准库旨在不发出任何警告只能在警告级别[/W4](../build/reference/compiler-option-warning-level.md)。
 
-可以使用以下选项之一来启用这些警告：
+## <a name="enable-warnings-that-are-off-by-default"></a>启用默认为关闭的警告
 
-- **#pragma 警告 (默认：** *warning_number* **)**  
+您可以启用通常默认为关闭的通过使用以下选项之一的警告：
+
+- **#pragma 警告 (默认：** *warning_number* **)**
+
    指定的警告 (*warning_number*) 在其默认级别启用。 该警告的文档包含该警告的默认级别。
 
-- **#pragma 警告 (** *warning_level* **:** *warning_number* **)**  
+- **#pragma 警告 (** *warning_level* **:** *warning_number* **)**
+
    指定的警告 (*warning_number*) 在指定级别启用 (*warning_level*)。
 
-- [/Wall](../build/reference/compiler-option-warning-level.md)  
+- [/Wall](../build/reference/compiler-option-warning-level.md)
+
    **/ 墙壁**启用默认情况下处于关闭状态的所有警告。 如果你使用此选项，你可以通过将个别警告关闭[/wd](../build/reference/compiler-option-warning-level.md)选项。
 
-- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   这使警告*nnnn*级别*l*。
+- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-默认情况下，下列警告是禁用的。
+   这使警告*nnnn*级别*L*。
+
+## <a name="warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的警告
+
+以下警告处于关闭状态，默认情况下，Visual Studio 2015 和更高版本中：
 
 |||
 |-|-|
@@ -64,11 +73,12 @@ ms.lasthandoff: 05/07/2018
 |[C4371](../error-messages/compiler-warnings/c4371.md) （级别 3）|*classname*： 类的布局可能已更改从早期版本的编译器由于更好地封装成员*成员*|
 |C4388 （级别 4）|有符号/无符号不匹配|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （2 级）|*函数*： 函数签名包含类型*类型*';不安全的时间间隔纯代码和混合或本机 c + + 对象是|
-|C4426 （级别 1）|优化标志发生更改后包括标头，可能是由于 #pragma optimize （） 超出|
+|C4426 （级别 1）|包含标头后, 更改的优化标志可能是由于 #pragma optimize （） 超出<sup>14.1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （级别 4）|*class1*: /vd2 下的对象布局将因虚拟基而更改*class2*|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （级别 4）|从虚拟基的 dynamic_cast*class1*到*class2*可能会在某些上下文中失败|
 |C4444 （级别 3）|顶级“__unaligned”没有在该上下文中实现|
 |[C4464](../error-messages/compiler-warnings/c4464.md) （级别 4）|相对包含路径包含..|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) （级别 4）|未区分范围的枚举的前向声明必须具有基础类型 (假定为 int) <sup>Perm</sup>|
 |C4472 （级别 1）|*标识符*是本机枚举： 添加访问说明符 (private/public) 来声明托管的枚举|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) （级别 4）|*函数*： 在删除未引用的内联函数|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) （级别 4）|type name： 类型名超出了元数据限制为*限制*' 字符|
@@ -81,13 +91,16 @@ ms.lasthandoff: 05/07/2018
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （级别 3）|__assume 包含效果*效果*|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （级别 4）|自 Visual c + + 7.1; 以来更改的信息： 之后语义不再捕获结构化的异常 (SEH)|
 |C4574 （级别 4）|*标识符*定义为"0： 你是否希望使用 #if*标识符*？|
+|C4577 （级别 1）|noexcept 用于没有异常处理模式，以指定;不保证异常终止。 指定 /EHsc|
 |C4582 （级别 4）|*类型*： 不隐式调用构造函数|
 |C4583 （级别 4）|*类型*： 不隐式调用析构函数|
 |C4587 （级别 1）|*anonymous_structure*： 行为更改： 不再隐式调用构造函数|
 |C4588 （级别 1）|*anonymous_structure*： 行为更改： 不再隐式调用析构函数|
-|C4598 （级别 1 和等级 3）|#include"*标头*"： 标头编号*数*预编译标头不匹配当前的编译中的该位置|
-|C4599 （级别 3）|*选项**路径*： 命令行自变量数量*数*与预编译标头不匹配|
+|C4596 （级别 4）|*标识符*： 非法的限定的名称，在成员声明<sup>14.3</sup> <sup>Perm</sup>|
+|C4598 （级别 1 和等级 3）|#include"*标头*"： 标头编号*数*预编译标头不匹配当前的编译中的该位置<sup>14.3</sup>|
+|C4599 （级别 3）|*选项**路径*： 命令行自变量数量*数*与预编译标头不匹配<sup>14.3</sup>|
 |C4605 （级别 1）|/D*宏*当前的命令行上指定但未指定时生成预编译标头|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) （级别 3）|*union_member*已初始化在初始值设定项列表中，另一个联合成员*union_member* <sup>Perm</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) （级别 3）|#pragma 警告： 没有警告编号*数*|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) （级别 4）|“derived class”: 未能生成默认构造函数，因为基类默认构造函数不可访问|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) （级别 4）|“derived class”: 未能生成复制构造函数，因为基类复制构造函数不可访问|
@@ -95,7 +108,7 @@ ms.lasthandoff: 05/07/2018
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （级别 1）|-Ze 不支持二合字母。 字符序列*digraph*未解释为用于替换标记*char*|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （级别 3）|*实例*： 本地静态对象的构造不是线程安全|
 |C4647 （级别 3）|行为更改： __is_pod (*类型*) 在以前版本中具有不同的值|
-|C4654 （级别 4）|前后放置的代码包含预编译标头的行将被忽略。 将代码添加到预编译标头。|
+|C4654 （级别 4）|前后放置的代码包含预编译标头的行将被忽略。 将代码添加到预编译标头。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （级别 4）|*符号*未定义为预处理器宏，用"0"替换为中*指令*|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) （级别 4）|*符号*： 指定，默认为 [in] 未方向参数特性|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) （级别 3）|*用户定义类型*： 行为可能有更改，UDT 中的更改返回调用约定|
@@ -107,6 +120,7 @@ ms.lasthandoff: 05/07/2018
 |C4767 （级别 4）|节名称*符号*的长度超过 8 个字符，将链接器截断|
 |C4768 （级别 3）|则将忽略链接规范的前面的 __declspec 属性|
 |C4774 （级别 4）|*字符串*： 格式字符串中自变量应*数*不是字符串文本|
+|C4777 （级别 4）|*函数*： 格式字符串*字符串*要求类型自变量*type1*，但可变参数自变量*数*具有类型*type2*|
 |C4786 （级别 3）|*符号*： 对象名称被截断为*数*中的调试信息的字符|
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) （级别 4）|*字节*字节填充添加在构造之后*member_name*|
 |C4826 （2 级）|从*type1*到*type2*进行符号扩展。 这可能导致意外的运行时行为。|
@@ -131,18 +145,22 @@ ms.lasthandoff: 05/07/2018
 |C5026 （级别 1 和等级 4）|*类型*： 移动构造函数隐式定义，为已删除|
 |C5027 （级别 1 和等级 4）|*类型*： 移动赋值运算符已隐式定义为已删除|
 |C5029 （级别 4）|使用的非标准扩展： c + + 中的对齐方式属性应用于变量、 数据成员和仅适用于标记类型|
-|C5031 （级别 4）|#pragma warning （pop): 可能不匹配，弹出推入不同的文件的警告状态|
-|C5032 （级别 4）|检测到与测试 warning （没有相应 #pragma pop） #pragma warning （push）|
-|C5035|使用的功能*功能*将导致函数*函数*编译为访客代码|
-|C5036 （级别 1）|varargs 函数指针转换使用 /hybrid:x86arm64 编译时*type1*到*type2*|
-|[C5038](../error-messages/compiler-warnings/c5038.md)|数据成员*member1*将数据成员后初始化*member2*|
+|C5031 （级别 4）|#pragma warning （pop): 可能不匹配，弹出推入不同的文件的警告状态<sup>14.1</sup>|
+|C5032 （级别 4）|检测到与测试 warning （没有相应 #pragma pop） #pragma warning （push） <sup>14.1</sup>|
+|C5034|使用内部函数的*内部*将导致函数*函数*编译为访客代码<sup>15.3</sup>|
+|C5035|使用的功能*功能*将导致函数*函数*编译为访客代码<sup>15.3</sup>|
+|C5036 （级别 1）|varargs 函数指针转换使用 /hybrid:x86arm64 编译时*type1*到*type2* <sup>15.3</sup>|
+|[C5038](../error-messages/compiler-warnings/c5038.md) （级别 4）|数据成员*member1*将数据成员后初始化*member2* <sup>15.3</sup>|
+|C5039 （级别 4）|*函数*： 指针或对可能引发函数引用传递给下-EHc extern C 函数。 如果此函数将引发异常，则可能出现未定义的行为。 <sup>15.5</sup>|
+|C5042 （级别 3）|*函数*： 在块范围的函数声明不能指定为内联，在标准 c + +; 中删除内联说明符<sup>15.5</sup>|
 
-这些警告处于关闭状态，除非[/ 宽松-](../build/reference/permissive-standards-conformance.md)设置编译器选项：
+<sup>14.1</sup>此警告可从 Visual Studio 2015 Update 1 开始。<br>
+<sup>14.3</sup>此警告是在 Visual Studio 2015 Update 3 中开始提供。<br>
+<sup>15.3</sup>此警告是在 Visual Studio 2017 版本 15.3 中开始提供。<br>
+<sup>15.5</sup>此警告是在 Visual Studio 2017 版本 15.5 中开始提供。<br>
+<sup>Perm</sup>此警告处于关闭状态，除非[/ 宽松-](../build/reference/permissive-standards-conformance.md)设置编译器选项。
 
-|||
-|-|-|
-|[C4471 （级别 4）](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)|无范围枚举的前向声明必须有基础类型（假定为 int）|
-|[C4608 （级别 3）](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|*union_member*已初始化在初始值设定项列表中，另一个联合成员*union_member*|
+## <a name="warnings-off-by-default-in-earlier-versions"></a>默认情况下，在早期版本中关闭的警告
 
 默认情况下，在版本的 Visual Studio 2015 之前编译器情况下，这些警告已关闭状态：
 
@@ -153,7 +171,7 @@ ms.lasthandoff: 05/07/2018
 |[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) （级别 1）|*操作*： 从转换*type1*到*type2*更大的|
 |[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) （级别 1）|*运算符*： 零扩展*type1*到*type2*更大的|
 
-版本 Visual Studio 2012 之前的编译器中默认情况下，这些警告已关闭状态：
+此警告关闭时，默认情况下，在 Visual Studio 2012 之前的编译器的版本：
 
 |||
 |-|-|

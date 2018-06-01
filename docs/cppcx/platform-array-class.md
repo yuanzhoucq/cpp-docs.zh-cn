@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704667"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 表示可以跨应用程序二进制接口 (ABI) 接收和传递的一维可修改数组。  
@@ -62,9 +63,9 @@ private ref class Array<TArg, 1> :
   
  Windows 运行时类型系统不支持交错数组的概念，因此无法将传递 IVector < platform:: array\<T >> 作为返回值或方法参数。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。  
   
- 此类在编译器会自动包括的 vccorlib.h 标头中定义。 它在 Intellisense 中可见，但在“对象浏览器”中不可见，因为它不是在 platform.winmd 中定义的公共类型。  
+ 此类在编译器会自动包括的 vccorlib.h 标头中定义。 因为它不是在 platform.winmd 中定义的公共类型，它会显示在 IntelliSense 中而不是在对象浏览器。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
 
  

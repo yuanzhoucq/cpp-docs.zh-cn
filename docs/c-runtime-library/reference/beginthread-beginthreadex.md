@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704654"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -141,11 +142,11 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 通过使用每个进程的全局当前区域设置信息初始化新的线程的区域设置。 每个线程区域设置通过调用[_configthreadlocale](configthreadlocale.md) （全局或针对新线程仅），线程可以将更改其区域设置独立从其他线程通过调用**setlocale**或 **_wsetlocale**。 没有设置了每个线程区域设置标记的线程可能会影响中还没有设置，每个线程区域设置标志的所有其他线程，以及所有新创建线程的区域设置的信息。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-对于混合和纯代码， **_beginthread**和 **_beginthreadex**都具有两个重载。 一种采用本机调用约定函数指针，和另一种使用 **__clrcall**函数指针。 第一个重载不是应用程序安全域且永远不会是。 如果你要编写混合代码或纯代码，则必须确保新线程在访问托管资源之前进入正确的应用程序域。 例如，可以使用 [call_in_appdomain 函数](../../dotnet/call-in-appdomain-function.md)来完成该操作。 第二个重载是应用程序安全域;新创建的线程总是最终将得到的调用方的应用程序域中 **_beginthread**或 **_beginthreadex**。
+有关 **/clr**代码， **_beginthread**和 **_beginthreadex**都具有两个重载。 一种采用本机调用约定函数指针，和另一种使用 **__clrcall**函数指针。 第一个重载不是应用程序安全域且永远不会是。 如果你正在编写 **/clr**代码，则必须确保新线程进入正确的应用程序域，然后才能访问托管资源。 例如，可以使用 [call_in_appdomain 函数](../../dotnet/call-in-appdomain-function.md)来完成该操作。 第二个重载是应用程序安全域;新创建的线程总是最终将得到的调用方的应用程序域中 **_beginthread**或 **_beginthreadex**。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>请参阅
 
-[进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread、_endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread、_endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit、_Exit、_exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
