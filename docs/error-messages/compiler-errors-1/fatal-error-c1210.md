@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1b970454af8ab692aea949d437e4c1cce4e0cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704979"
 ---
 # <a name="fatal-error-c1210"></a>错误 C1210
-安装的运行时版本不支持 /clr:pure 和 /clr:safe  
-  
- **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
-  
- 使用的编译器是当前版本而公共语言运行时是早期版本时将发生 C1210。  
-  
- 编译器的一些功能在早期的运行时版本中可能无效。  
-  
- 若要解决 C1210，请安装适用于你的编译器的公共语言运行时版本。
+
+> 安装的运行时版本不支持 /clr:pure 和 /clr:safe
+
+**/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+
+使用的编译器是当前版本而公共语言运行时是早期版本时将发生 C1210。
+
+编译器的一些功能在早期的运行时版本中可能无效。
+
+若要解决 C1210，请安装适用于你的编译器的公共语言运行时版本。

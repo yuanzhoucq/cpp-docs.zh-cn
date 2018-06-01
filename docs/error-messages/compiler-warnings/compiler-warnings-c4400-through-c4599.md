@@ -1,6 +1,6 @@
 ---
 title: 编译器警告 C4400 通过 C4599 |Microsoft 文档
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704680"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>编译器警告 C4400 通过 C4599
 
@@ -319,7 +320,8 @@ ms.lasthandoff: 05/04/2018
 |编译器警告 （等级 4） C4574|*标识符*定义为"0： 你是否希望使用 #if identifier？|
 |编译器警告 （等级 1） C4575|__vectorcall 与不兼容 / clr 选项： 将转换为 __stdcall|
 |编译器警告 （等级 1，错误） C4576|初始值设定项列表后跟一个用圆括号括起来类型是一种非标准的显式类型转换语法|
-|编译器警告 （等级 1，错误） C4578|abs： 从转换*type1*到*type2*，可能丢失数据 (您的意思调用*函数*或 #include <cmath>？)|
+|编译器警告 （级别 1，Off） C4577|noexcept 用于没有异常处理模式，以指定;不保证异常终止。 指定 /EHsc|
+|编译器警告 （等级 1，错误） C4578|abs： 从转换*type1*到*type2*，可能丢失数据 (您的意思调用*函数*或 #include \<t h >？)|
 |[编译器警告（等级 3）C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] 已弃用；改为指定 System::Attribute 或 Platform::Metadata 作为基类|
 |[编译器警告（等级 1）C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|已否决的行为:"*字符串*"替换为*字符串*进程属性|
 |编译器警告 （等级 4） C4582|*类型*： 不隐式调用构造函数|

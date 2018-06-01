@@ -16,27 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efa8da496c6067381937820db365a5b37a19e843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704025"
 ---
 # <a name="compiler-error-c2393"></a>编译器错误 C2393
-symbol： 不能在段领域中分配每个 appdomain 符号  
-  
- **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
-  
- 使用[appdomain](../../cpp/appdomain.md)变量表示您正在用编译 **/clr: pure**或 **/clr: safe**，和的安全或纯映像不能包含数据段。  
-  
- 请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。  
-  
-## <a name="example"></a>示例  
- 下面的示例生成 C2393。  
-  
-```  
-// C2393.cpp  
-// compile with: /clr:pure /c  
-#pragma data_seg("myseg")  
-int n = 0;   // C2393  
+
+> *符号*： 不能在段中分配每个 appdomain 符号*段*
+
+## <a name="remarks"></a>备注
+
+**/Clr: pure**和 **/clr: safe**编译器选项是在 Visual Studio 2015 中已过时，在 Visual Studio 2017 中不支持。
+
+使用[appdomain](../../cpp/appdomain.md)变量表示您正在用编译 **/clr: pure**或 **/clr: safe**，和的安全或纯映像不能包含数据段。
+
+请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
+
+## <a name="example"></a>示例
+
+下面的示例生成 C2393。 若要解决此问题，不要创建的数据段。
+
+```cpp
+// C2393.cpp
+// compile with: /clr:pure /c
+#pragma data_seg("myseg")
+int n = 0;   // C2393
 ```

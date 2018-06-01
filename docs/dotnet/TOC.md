@@ -104,7 +104,6 @@
 #### [初始值设定项列表](initializer-lists.md)
 #### [强制转换表示法和 safe_cast<> 介绍](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [纯代码和可验证代码 (C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
-### [混合代码、纯代码和可验证代码的功能比较 (C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
 ### [如何：创建可验证的 C++ 项目 (C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [如何：迁移到 -clr:safe (C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [结合使用 SQL Server 和可验证的程序集 (C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)
