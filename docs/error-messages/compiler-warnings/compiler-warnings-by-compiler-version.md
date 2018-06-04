@@ -1,7 +1,7 @@
 ---
 title: 由编译器版本的编译器警告 |Microsoft 文档
 ms.custom: ''
-ms.date: 01/31/2018
+ms.date: 05/30/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e40de8aa08ae12bb0389a113be4d6cbd51196f12
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704732"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>由编译器版本的编译器警告
 
-编译器可禁止显示后，你通过使用指定的版本推出的警告[/Wv](../../build/reference/compiler-option-warning-level.md)编译器选项。 这可用于管理你的生成过程时引入新的工具集版本，并且想要暂时禁止显示新的警告。 此选项不会取消新的错误消息。 我们建议不要禁止显示所有新的警告永久 ！ 我们建议你始终在最高的正则警告等级，编译 __/W4__，并删除 __/Wv__越早越好在你的生成选项。 
+编译器可禁止显示后，你通过使用指定的版本推出的警告[/Wv](../../build/reference/compiler-option-warning-level.md)编译器选项。 这可用于管理你的生成过程时引入新的工具集版本，并且想要暂时禁止显示新的警告。 此选项不会取消新的错误消息。 我们建议不要禁止显示所有新的警告永久 ！ 我们建议你始终在最高的正则警告等级，编译 __/W4__，并删除 __/Wv__越早越好在你的生成选项。
 
 这些版本的编译器引入新的警告：
 
@@ -39,26 +40,36 @@ ms.lasthandoff: 05/04/2018
 | Visual c + + 2015 Update 1 | 19.00.23506.0 |
 | Visual c + + 2015 Update 2 | 19.00.23918.0 |
 | Visual c + + 2015 Update 3 | 19.00.24215.1 |
-| Visual c + + 2017 RTM | 19.10.24903.0 |
-| Visual c + + 2017 15.1 版 | 19.10.25017.0 |
+| Visual c + + 2017 RTM | 19.10.25017.0 |
 | Visual c + + 2017 版本 15.3 | 19.11.25506.0 |
-| Visual c + + 2017 版本 15.5 | 19.12.25827.0 |
+| Visual c + + 2017 版本 15.5 | 19.12.25830.0 |
+| Visual c + + 2017 版本 15.6 | 19.13.26128.0 |
+| Visual c + + 2017 15.7 版 | 19.14.26428.0 |
 
 你可以指定仅主版本号、 主版本号和次数字或主要，并生成数字与 __/Wv__选项。 编译器报告所有警告，与具有指定的数，开始的版本相匹配，并禁止显示所有警告版本大于指定的数。 例如， __/Wv:17__报告引入中或在任何版本的 Visual Studio 2012 之前, 的所有警告并取消任何编译器从 Visual Studio 2013 （版本 18） 或更高版本所引入的所有警告。 若要禁止显示警告在 Visual Studio 2015 中引入的更新 2 和更高版本，你可以使用 __/Wv:19.00.23506__。 使用 __/Wv:19.11__来报告所有警告在 Visual Studio 2017 版本 15.5 之前, 的 Visual Studio 的任何版本中引入，但禁止显示警告在 Visual Studio 2017 15.5 及更高版本中引入的。
 
 以下各节列出引入的每个版本的 Visual c + +，则可以通过使用禁止显示警告 __/Wv__编译器选项。 __/Wv__选项不能禁止显示未列出，其早指定的版本的编译器的警告。
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>在 Visual c + + 2017 版本 15.5 （编译器版本 19.12.25827.0） 中引入的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>在 Visual c + + 2017 15.7 （编译器版本 19.14.26428.0） 版中引入的警告
 
-通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.11__。
+通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.13__。
+
+|||
+|-|-|
+C4642|*问题*： 无法导入的泛型参数约束*参数*
+C5045|为内存负载如果 /Qspectre 切换指定，编译器将插入 Spectre 缓解
+
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>在 Visual c + + 2017 版本 15.6 （编译器版本 19.13.26128.0） 中引入的警告
+
+通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.12__。
 
 |||
 |-|-|
 C5044|命令行选项的自变量*选项*指向路径*路径*不存在
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>在 Visual c + + 2017 版本 15.3 （编译器版本 19.11.25506.0） 中引入的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>在 Visual c + + 2017 版本 15.5 （编译器版本 19.12.25830.0） 中引入的警告
 
-通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.10__。
+通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.11__。
 
 |||
 |-|-|
@@ -70,9 +81,9 @@ C5041|*定义*: constexpr 静态数据成员的超行定义，则不需要而且
 C5042|*声明*： 在块范围的函数声明不能指定为内联，在标准 c + +; 中删除内联说明符
 C5043|*规范*： 异常规范与前面的声明不匹配
 
-## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>在 Visual c + + 2017 15.1 （编译器版本 19.10.25017.0） 版中引入的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>在 Visual c + + 2017 版本 15.3 （编译器版本 19.11.25506.0） 中引入的警告
 
-通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.10.24903__。
+通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.10__。
 
 |||
 |-|-|
@@ -91,7 +102,7 @@ C5036|varargs 函数指针转换使用 /hybrid:x86arm64 编译时*type1*到*type
 C5037|*成员函数*： 类模板的成员的超行定义不能具有默认自变量
 C5038|数据成员*member1*将数据成员后初始化*member2*
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>在 Visual c + + 2017 RTM （编译器版本 19.10.24903） 中引入的警告
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>在 Visual c + + 2017 RTM （编译器版本 19.10.25017.0） 中引入的警告
 
 通过使用编译器选项禁止显示这些警告和更高版本中的所有警告 __/Wv:19.00__。
 
@@ -164,15 +175,15 @@ C4498|使用的非标准扩展:*扩展*
 C4499|*专用化*： 显式专用化不能具有存储类 （忽略）
 C4576|初始值设定项列表后跟一个用圆括号括起来类型是一种非标准的显式类型转换语法
 C4577|noexcept 用于没有异常处理模式，以指定;不保证异常终止。 指定 /EHsc
-C4578|abs： 从转换*类型*到*类型*，可能丢失数据 (您的意思调用*名称*或 #include <cmath>？)
+C4578|abs： 从转换*类型*到*类型*，可能丢失数据 (您的意思调用*名称*或 #include \<t h >？)
 C4582|*类型*： 不隐式调用构造函数
 C4583|*类型*： 不隐式调用析构函数
 C4587|*类型*： 行为更改： 不再隐式调用构造函数
 C4588|*类型*： 行为更改： 不再隐式调用析构函数
 C4589|抽象类的构造函数*类型*忽略虚拟基类的初始值设定项*类型*
-C4591|constexpr 调用深度限制*数*超出 (/ constexpr:depth<NUMBER>)
+C4591|constexpr 调用深度限制*数*超出 (/ constexpr:depth\<数 >)
 C4592|*类型*： 符号将动态初始化 （实现限制）
-C4593|*类型*: constexpr 调用评估步骤限制的*值*超出; 使用 /constexpr:steps<NUMBER>以提高限制
+C4593|*类型*: constexpr 调用评估步骤限制的*值*超出; 使用 /constexpr:steps\<数 > 以提高限制
 C4647|行为更改： __is_pod (*类型*) 在以前版本中具有不同的值
 C4648|忽略标准属性 carries_dependency
 C4649|在此上下文中，则忽略属性
@@ -377,10 +388,10 @@ C4633|XML 文档注释*说明*： 错误：*说明*
 C4634|XML 文档注释*说明*： 不能应用：*说明*
 C4635|XML 文档注释*说明*： 格式错误的 XML:*说明*
 C4636|XML 文档注释*说明*： 标记需要非空 '*说明*属性。
-C4637|XML 文档注释*说明*:<include>丢弃的标记。 description
+C4637|XML 文档注释*说明*:\<包括 > 丢弃的标记。 description
 C4638|XML 文档注释*说明*： 引用未知符号*说明*。
 C4639|MSXML 错误，将不会处理注释的 XML 文档。 description
-C4641|XML 文档注释中有明确的交叉引用： 
+C4641|XML 文档注释中有明确的交叉引用：
 C4678|基本类的*声明*is 可访问性低于*名称*
 C4679|*说明*： 无法导入成员
 C4687|*类型*： 密封的抽象类不能实现接口*类型*
@@ -626,6 +637,7 @@ C4997|*类型*： 组件类不实现 COM 接口或伪接口
 C4998|预期失败：*说明*(*数*)
 
 ## <a name="see-also"></a>请参阅
-[/Wv 编译器选项](../../build/reference/compiler-option-warning-level.md)
-[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-[警告](../../preprocessor/warning.md)
+
+- [/Wv 编译器选项](../../build/reference/compiler-option-warning-level.md)
+- [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+- [warning](../../preprocessor/warning.md)
