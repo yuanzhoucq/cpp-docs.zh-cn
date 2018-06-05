@@ -1,5 +1,5 @@
 ---
-title: 添加成员变量 （Visual c + +） |Microsoft 文档
+title: 添加成员变量 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,45 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325726"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>添加成员变量 (Visual C++)
-可以将成员变量添加到使用类视图的类。 成员变量可用于[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 数据成员变量向导专门用于采用的相关信息并使用它来在适当的位置在源文件中插入元素。 你可以添加从的成员变量[对话框编辑器](../windows/dialog-editor.md)中[资源视图](../windows/resource-view-window.md)，或从[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+可以使用类视图向类添加成员变量。 成员变量可以是[数据交换和数据验证](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 数据成员变量向导专门采用相关信息并使用其将元素插入源文件中的适当位置。 可以从[资源视图](../windows/resource-view-window.md)中的[对话框编辑器](../windows/dialog-editor.md)或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)添加成员变量。  
   
 > [!NOTE]
->  当你设计和实现对话框中，你可能会发现它更高效，先使用对话框编辑器添加对话框控件，然后实现的控件的成员变量。  
+>  设计和实现对话框时，可能会发现使用对话框编辑器添加对话框控件，然后实现控件的成员变量更为有效。  
   
-### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>在使用添加成员变量向导的资源视图中添加对话框控件的成员变量  
+### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>使用添加成员变量向导在资源视图中添加对话框控件的成员变量  
   
-1.  在资源视图中，展开项目节点和对话框节点以显示项目的对话框的列表。  
+1.  在资源视图中，展开项目节点和对话框节点，显示项目的对话框列表。  
   
-2.  双击你想要添加要在对话框编辑器中打开它的成员变量对话框。  
+2.  双击要向其添加成员变量的对话框，在对话框编辑器中将其打开。  
   
-3.  在对话框编辑器中显示的对话框中，右键单击你想要添加成员变量的控件。  
+3.  在对话框编辑器中显示的对话框中，右键单击要向其添加成员变量的控件。  
   
-4.  在快捷菜单上，单击**添加变量**以显示[添加成员变量向导](../ide/add-member-variable-wizard.md)。  
+4.  在快捷菜单上，单击“添加变量”以显示[添加成员变量向导](../ide/add-member-variable-wizard.md)。  
   
     > [!NOTE]
-    >  中已提供默认值**控件 ID**。  
+    >  “控件 ID”中已提供默认值。  
   
-5.  提供适当的向导框中的信息。 请参阅[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)有关详细信息。  
+5.  在相应向导框中提供信息。 请参阅[对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)，了解更多信息。  
   
-6.  单击**完成**以将定义和实现代码添加到项目并关闭向导。  
+6.  单击“完成”，即可将定义和实现代码添加到项目并关闭向导。  
   
-### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>若要从类视图使用添加成员变量向导添加的成员变量  
+### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>使用添加成员变量向导从类视图中添加成员变量  
   
-1.  在[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，展开项目节点以显示项目中的类。  
+1.  在[“类视图”](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，展开项目节点，显示项目中的类。  
   
-2.  右键单击你想要添加变量的类。  
+2.  右键单击要向其添加变量的类。  
   
-3.  在快捷菜单上，单击**添加**，然后单击**添加变量**以显示添加成员变量向导。  
+3.  在快捷菜单上，单击“添加”，然后单击“添加变量”以显示添加成员变量向导。  
   
-4.  提供适当的向导框中的信息。 请参阅[添加成员变量向导](../ide/add-member-variable-wizard.md)有关详细信息。  
+4.  在相应向导框中提供信息。 请参阅[添加成员变量向导](../ide/add-member-variable-wizard.md)，了解详细信息。  
   
-5.  单击**完成**以将定义和实现代码添加到项目并关闭向导。  
+5.  单击“完成”，即可将定义和实现代码添加到项目并关闭向导。  
   
 ## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
