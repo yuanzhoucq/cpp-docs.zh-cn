@@ -1,5 +1,5 @@
 ---
-title: Web 引用属性页 |Microsoft 文档
+title: “Web 引用”属性页 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,28 +21,29 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328846"
 ---
 # <a name="web-references-property-page"></a>“Web 引用”属性页
-**Web 引用**属性页指定将如何生成 XML Web 服务代理类。 如果你添加到你的项目的 web 引用，则将生成 XML Web 服务代理类。 请参阅[添加 Web 引用](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)有关详细信息。  
+“Web 引用”属性页指定 XML Web 服务代理类生成的方式。 如果向项目添加 Web 引用，将生成 XML Web 服务代理类。 请参阅[添加 Web 引用](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)，获取详细信息。  
   
- **Web 引用**属性页包含以下属性：  
+ “Web 引用”属性页包含下列属性：  
   
  **输出文件**  
- 要包含的 XML Web 服务代理类的文件的名称。  
+ 其中包含 XML Web 服务代理类的文件名。  
   
  **取消显示启动版权标志**  
- 并在 Web 服务描述语言工具 (Wsdl.exe) 中显示横幅。  
+ 不显示 Web 服务描述语言工具 (Wsdl.exe) 的版权标志。  
   
  **命名空间**  
- 指定生成的 web 代理服务器的名称。  
+ 指定所生成的 Web 代理的名称。  
   
- **其他参考**  
- 指定引用的代理 DLL 的其他 Dll。  
+ **其他引用**  
+ 指定代理 DLL 引用的其他 DLL。  
   
- 有关如何访问信息**Web 引用**属性页中，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+ 有关如何访问“Web引用”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)

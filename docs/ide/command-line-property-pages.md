@@ -1,5 +1,5 @@
 ---
-title: 命令行属性页 |Microsoft 文档
+title: “命令行”属性页 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327806"
 ---
 # <a name="command-line-property-pages"></a>“命令行”属性页
-大多数属性页文件夹都包含**命令行**属性页。 此页显示的文件夹中设置的属性。 **命令行**属性页还包含**其他选项**框中，你可以在其中指定该工具的有效的属性，但它没有任何属性的文件夹中。  
+大多数属性页文件夹都包含“命令行”属性页。 此页面显示在文件夹中设置哪些属性。 “命令行”属性页还包含“其他选项”框，可以在此框中指定对工具有效的属性但文件夹中没有该选项的属性。  
   
- 编辑框中输入任何命令将传递到该工具的文件夹。 不验证或检查将会于输入，也不会有任何依赖项检查。  
+ 在编辑框中输入的任何命令都会传递到文件夹的工具中。 不会对输入进行任何验证或检查，也没有任何依赖项检查。  
   
- 有关如何访问信息**命令行**属性页中，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+ 有关如何访问“命令行”属性页的详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)   

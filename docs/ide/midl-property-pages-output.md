@@ -1,5 +1,5 @@
 ---
-title: MIDL 属性页： 输出 |Microsoft 文档
+title: MIDL 属性页：输出 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325768"
 ---
 # <a name="midl-property-pages-output"></a>MIDL 属性页：输出
-**输出**中的属性页**MIDL**文件夹指定以下 MIDL 编译器选项：  
+MIDL 文件夹中的“输出”属性页指定以下 MIDL 编译器选项：  
   
 -   输出目录 ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   标头文件 ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   头文件 ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
 -   DLL 数据文件 ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
@@ -45,9 +46,9 @@ ms.lasthandoff: 05/04/2018
   
 -   类型库 ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
- 有关如何访问信息**输出**中的属性页**MIDL**文件夹，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+ 有关如何访问 MIDL 文件夹中的“输出”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
- 有关如何以编程方式访问 c + + 项目的 MIDL 选项的信息，请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。  
+ 有关如何以编程方式访问 C++ 项目的 MIDL 选项的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。  
   
 ## <a name="see-also"></a>请参阅  
  [“MIDL”属性页](../ide/midl-property-pages.md)

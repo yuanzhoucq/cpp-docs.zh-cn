@@ -1,5 +1,5 @@
 ---
-title: 链接器属性页 |Microsoft 文档
+title: “链接器”属性页 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2017
 ms.technology:
@@ -22,45 +22,46 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331514"
 ---
 # <a name="linker-property-pages"></a>“链接器”属性页
 
-本主题讨论以下属性上**常规**链接器属性页。 有关此页的 Linux 版本，请参阅[链接器属性 （Linux c + +）](../linux/prop-pages/linker-linux.md)。
+本主题讨论“常规”链接器属性页上的以下属性。 若要查看本页面的 Linux 版本，请参阅[链接器属性 (Linux C++)](../linux/prop-pages/linker-linux.md)。
 
-## <a name="general-page-properties"></a>常规页属性
+## <a name="general-page-properties"></a>“常规页”属性
 
-### <a name="ignore-import-library"></a>忽略导入库
+### <a name="ignore-import-library"></a>Ignore Import Library
 
-此属性指示链接器无法将此生成到依赖项目中生成任何.lib 输出链接。 这样，项目系统以处理.dll 文件，不会产生时生成的.lib 文件。 如果一个项目依赖于另一个生成 DLL 的项目，项目系统将自动链接该子项目生成的.lib 文件。 这可能不需要的 COM Dll 或纯资源 Dll; 生成的项目这些 Dll 不具有任何有意义的导出。 如果 DLL 没有导出，链接器将不生成的.lib 文件。 如果不不存在，磁盘上的任何导出.lib 文件，项目系统通知链接后，将其与此 （缺少） DLL 链接的链接失败。 使用**忽略导入库**属性来解决此问题。 当设置为**是**，项目系统将忽略该.lib 文件是否存在并导致依赖于此项目，从而不与不存在的.lib 文件链接任何项目。
+此属性指示链接器不要将基于该版本生成的任何 .lib 输出链接到任何相关项目。 这允许项目系统处理在生成时不创建 .lib 文件的 .dll 文件。 如果项目依赖于创建 DLL 的另一个项目，则项目系统会自动链接该子项目生成的 .lib 文件。 正在生成 COM DLL 或纯资源 DLL 的项目可能无需执行此操作，这些 DLL 的输出不具任何意义。 如果 DLL 没有导出项，链接器不会生成 .lib 文件。 如果磁盘上没有导出 .lib 文件，并且项目系统指示链接器链接此（缺少的）DLL，则链接将失败。 使用 Ignore Import Library 属性解决此问题。 设置为“是”时，项目系统会忽略是否存在该 .lib 文件，并导致依赖于此项目的任何项目不与非存在的 .lib 文件进行链接。
 
 若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>。
 
-### <a name="register-output"></a>注册输出
+### <a name="register-output"></a>Register Output
 
-运行`regsvr32.exe /s $(TargetPath)`上生成输出，即仅在.dll 项目上有效。 对于.exe 项目，将忽略此属性。 若要注册.exe 输出，设置配置为始终是必需的已注册的.exe 文件的自定义注册生成后事件。
+在生成输出上运行 `regsvr32.exe /s $(TargetPath)`，仅在 .dll 项目上有效。 对于 .exe 项目，则忽略此属性。 要注册 .exe 输出，请在配置上设置生成后事件以执行注册 .exe 文件始终所需的自定义注册。
 
 若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>。
 
-### <a name="per-user-redirection"></a>每个用户重定向
+### <a name="per-user-redirection"></a>Per-user Redirection
 
-Visual Studio 中的注册传统上已完成 HKEY_CLASSES_ROOT (HKCR)。 与 Windows Vista 和更高版本操作系统中，若要访问 HKCR 你必须运行 Visual Studio 在提升模式下。 开发人员始终不希望在提升模式下运行，但仍必须适用于注册。 每个用户重定向，可注册而无需在此模式下运行。
+传统上，Visual Studio 中的注册是在 HKEY_CLASSES_ROOT (HKCR) 中完成的。 如果使用 Windows Vista 及更高版本的操作系统，则必须在提升模式下运行 Visual Studio 才能访问 HKCR。 开发人员并非总是希望在提升模式下运行，但仍然必须注册。 使用 Per-user Redirection，可在非此模式下运行时进行注册。
 
-每个用户重定向将强制写入的所有数据转换成 HKCR 重定向到 HKEY\_当前\_用户 (HKCU)。 如果每个用户重定向已关闭，它可能会导致[项目生成错误 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)当程序尝试写入 HKCR。
+Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT\_USER (HKCU)。 如果关闭了 Per-user Redirection，当程序试图写入到 HKCR 时，可能导致[项目生成错误 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)。
 
-### <a name="link-library-dependencies"></a>链接库依赖项
+### <a name="link-library-dependencies"></a>Link Library Dependencies
 
-指定是否将由依赖项目生成的.lib 文件链接。 通常，你想要链接在.lib 文件中，但这可能不是某些 Dll 这种情况。
+指定是否链接由依赖项目生成的 .lib 文件。 通常，需要链接 .lib 文件，但某些 DLL 可能并非如此。
 
-你还可以通过以下方式指定.obj 文件通过提供的文件名和相对路径，例如"...\\..\MyLibProject\MyObjFile.obj"。 如果源代码.obj 文件 #includes 预编译标头，例如 pch.h 中，则 pch.obj 文件位于与 MyObjFile.obj，相同的文件夹，并且还必须将 pch.obj 添加为附加依赖项。
+也可通过提供文件名和相对路径来指定 .obj 文件，如“..\\..\MyLibProject\MyObjFile.obj”。 如果 .obj 文件 的源代码包含预编译标头（如 pch.h），则 pch.obj 文件位于 MyObjFile.obj 所在的文件夹中，且必须将 pch.obj 添加为附加依赖项。
 
-### <a name="use-library-dependency-inputs"></a>使用库依赖项输入
+### <a name="use-library-dependency-inputs"></a>Use Library Dependency Inputs
 
-在大型项目中，当依赖项目生成的.lib 文件，增量链接处于禁用状态。 如果有许多依赖项目生成的.lib 文件，生成应用程序可能需要很长时间。 当此属性设置为**是**，.lib 的.obj 文件中的项目系统链接生成依赖项目，从而启用增量链接。
+在大型项目中，当依赖项目生成 .lib 文件时，将禁用增量链接。 如果有许多依赖项目生成 .lib 文件，则生成应用程序可能需要很长时间。 当此属性设置为“是”时，项目系统链接 .obj 文件中依赖项目生成的 .lib 文件，从而启用增量链接。
 
-有关如何访问**常规**链接器属性页上，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
+若要了解如何访问“常规”链接器属性页，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
 
 ## <a name="see-also"></a>请参阅
 

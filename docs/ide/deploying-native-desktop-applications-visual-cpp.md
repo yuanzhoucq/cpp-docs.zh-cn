@@ -1,5 +1,5 @@
 ---
-title: 部署本机桌面应用程序 （Visual c + +） |Microsoft 文档
+title: 部署本机桌面应用程序 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -21,9 +21,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259239"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>部署本机桌面应用程序 (Visual C++)
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/17/2018
 
 Visual Studio 提供用于部署 Windows 应用程序的不同技术。 其中包括 ClickOnce 部署和 Windows Installer 部署。
 
-- 可以使用 ClickOnce 来部署 c + + 应用程序面向公共语言运行时 (CLR)-混合、 纯代码和可验证程序集。 尽管你可以使用 Windows Installer 部署托管的应用程序，我们建议你使用 ClickOnce，因为它利用.NET Framework 安全功能，如清单签名。 ClickOnce 不支持本机 c + + 应用程序部署。 有关详细信息，请参阅 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。
+- ClickOnce 可用于部署面向公共语言运行时 (CLR) 的 C++ 应用程序 - 可以是混合程序集、纯程序集和可验证的程序集。 尽管可以使用 Windows Installer 部署托管的应用程序，但仍建议使用 ClickOnce，因为它利用 .NET Framework 安全功能（如清单签名）。 ClickOnce 不支持本机 C++ 应用程序的部署。 有关详细信息，请参阅 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。
 
 - Windows Installer 技术可以用于部署本机 C++ 应用程序或面向 CLR 的 C++ 应用程序。
 
@@ -59,7 +60,7 @@ Visual Studio 提供用于部署 Windows 应用程序的不同技术。 其中�
 
 - [Visual C++ 应用程序的 ClickOnce 部署](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [在以前的运行时版本上运行 c + + /clr 应用程序](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [在以前版本的运行时上运行 C++ /clr 应用程序](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>相关章节
 

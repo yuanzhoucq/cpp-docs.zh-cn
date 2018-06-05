@@ -1,5 +1,5 @@
 ---
-title: 提示文件 |Microsoft 文档
+title: 提示文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,29 +23,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336692"
 ---
 # <a name="hint-files"></a>提示文件
-A*提示文件*可帮助 Visual Studio 集成的开发环境 (IDE) 解释 Visual c + + 标识符，例如的函数和宏的名称。 当你打开的 Visual c + + 项目，IDE 的*分析系统*分析项目中每个源文件中的代码并收集有关每个标识符的信息。 然后，IDE 使用该信息支持的功能，如 **类视图** 浏览器和 **导航栏**。  
+提示文件可帮助 Visual Studio 集成开发环境 (IDE) 解释 Visual C++ 标识符，例如函数和宏的名称。 打开 Visual C++ 项目时，IDE 的分析系统会分析项目中每个源文件中的代码，并收集每个标识符的相关信息。 然后，IDE 使用该信息来支持诸如“类视图”浏览器和“导航栏”等功能。  
   
- 分析系统，在 Visual c + + 2010年中引入，理解 C/c + + 语法，但可以曲解包含宏的语句。 如果宏导致要编写语法不正确的源代码，该语句可以被错误解释。 在编译的源代码，并预替换时，该语句可能成为语法正确[宏标识符](../preprocessor/hash-define-directive-c-cpp.md)利用自己的定义。 分析系统工作而无需生成项目，因为它使用提示文件来解释宏。 因此，如浏览功能**类视图**立即可用。  
+ Visual C++ 2010 中引入的分析系统可识别 C/C++ 语法，但可能会错误解释包含宏的语句。 如果宏导致写入源代码时语法不正确，则可能会错误解释该语句。 编译源代码且预处理器用其定义替换[宏标识符](../preprocessor/hash-define-directive-c-cpp.md)时，语句的语法可能是正确的。 分析系统无需生成项目即可运行，因为它使用提示文件来解释宏。 因此，“类视图”等浏览功能立即可用。  
   
- 提示文件包含用户可自定义*提示*，它具有与 C/c + + 宏定义相同的语法。 Visual c + + 包括内置提示文件，它足以满足大多数项目，但你可以创建你自己的提示文件以改进 Visual Studio 处理标识符的方式。  
+ 提示文件包含用户自定义的提示，其语法与 C/C++ 宏定义相同。 Visual C++ 包含一个内置提示文件，足以满足大多数项目的需求，但可自行创建提示文件来改进 Visual Studio 处理标识符的方式。  
   
 > [!IMPORTANT]
->  如果你修改或添加提示文件，则必须删除的.sdf 文件和/或 VC.db 文件中所作的更改才会生效的解决方案中。  
+>  如果修改或添加提示文件，则必须删除解决方案中的 .sdf 文件和/或 VC.db 文件才能使更改生效。  
   
 ## <a name="scenario"></a>方案  
- 假定下面的代码中使用检查源文件**类视图**浏览器。 `STDMETHOD`宏声明一个名为方法`myMethod`它接受一个参数并返回指向的指针**HRESULT**。  
+ 假设以下代码位于使用“类视图”进行检查的源文件中。 `STDMETHOD` 宏声明一个 `myMethod` 方法，该方法接受一个参数并返回指向 HRESULT 的指针。  
   
 ```  
 // Source code file.  
 STDMETHOD(myMethod)(int parameter1);  
 ```  
   
- 下面的宏定义位于单独的头文件。  
+ 以下宏定义位于单独的头文件中。  
   
 ```  
 // Header file.  
@@ -54,69 +55,69 @@ STDMETHOD(myMethod)(int parameter1);
 #define HRESULT void*  
 ```  
   
- 分析系统无法解释的源代码，由于一个名为 STDMETHOD 函数看起来声明和该声明的语法不正确的因为它具有两个形参列表。 分析系统不会打开该标头文件，找到的定义`STDMETHOD`， `STDMETHODCALLTYPE`，和`HRESULT`宏。 因为分析系统无法解释`STDMETHOD`宏，它将忽略整个语句，然后继续分析。  
+ 分析系统无法解释源代码，因为名为 STDMETHOD 的函数似乎已声明，且该声明在语法上是不正确的，因为它有两个参数列表。 分析系统不会打开头文件来发现 `STDMETHOD`、`STDMETHODCALLTYPE` 和 `HRESULT` 宏的定义。 由于分析系统无法解释 `STDMETHOD` 宏，因此它会忽略整个语句，然后继续分析。  
   
- 分析系统不使用标头文件，因为你的项目可能依赖于一个或多个重要的标头文件。 如果任何标头文件发生更改，则分析系统可能需要重新检查的所有标头文件在项目中，从而降低 IDE 的性能。 分析系统相反，使用提示，以指定如何处理`STDMETHOD`， `STDMETHODCALLTYPE`，和`HRESULT`宏。  
+ 分析系统不使用头文件，因为项目可能依赖于一个或多个重要的头文件。 如果任何头文件发生更改，分析系统可能需要重新检查项目中的所有头文件，这会降低 IDE 的性能。 相反，分析系统使用指定如何处理 `STDMETHOD`、`STDMETHODCALLTYPE` 和 `HRESULT` 宏的提示。  
   
- 如何知道需要提示？ 如果你需要一个提示，哪种类型应你创建和？ 一次登录提示，则需要是如果中的标识符的视图**类视图**与中的视图不一致**编辑器**。 例如，**类视图**可能不显示你知道的类成员存在，或成员的名称不正确。 有关解决常见问题的提示的类型的详细信息，请参阅什么宏需要提示？本主题中后面的部分。  
+ 如何知道需要提示？ 如果需要提示，应创建哪种类型的提示？ 需要提示的标志是“类视图”中标识符的视图与“编辑器”中的视图不一致。 例如，“类视图”可能不显示已知存在的类成员，或该成员的名称不正确。 若要详细了解用于解决常见问题的提示类型，请参阅本主题后面的“哪些宏需要提示？”部分。  
   
 ## <a name="architecture"></a>体系结构  
- 提示文件适用于物理目录，而不是逻辑目录图中所示**解决方案资源管理器**。 无需将提示文件添加到你要影响的提示文件的项目。 仅在分析源文件时，分析系统使用提示文件。  
+ 提示文件位于物理目录，而不是解决方案资源管理器中描述的逻辑目录。 无需将提示文件添加到项目中即可使提示文件生效。 分析系统仅在分析源文件时使用提示文件。  
   
- 名为每个提示文件**cpp.hint**。 因此，多个目录可以包含提示文件，但只有一个提示文件可以发生在特定的目录。  
+ 每个提示文件均命名为 cpp.hint。 因此，提示文件可包含在多个目录中，但特定目录中仅可具有一个提示文件。  
   
- 可以通过零个或多个提示文件影响你的项目。 如果没有提示的文件，分析系统将使用错误恢复技术来忽略无法解密的源代码。 否则，分析系统使用以下策略来查找和收集提示。  
+ 不存在提示文件还是存在多个提示文件，你的项目将受此影响。 如果没有提示文件，则分析系统使用错误恢复技术来忽略无法辨认的源代码。 否则，分析系统使用以下策略查找和收集提示。  
   
 ### <a name="search-order"></a>搜索顺序  
- 分析系统按以下顺序搜索提示文件目录。  
+ 分析系统按以下顺序在目录中搜索提示文件。  
   
--   Visual c + + 中包含的安装包的目录 (**vcpackages**)。 此目录包含一个内置提示文件，如描述频繁使用的系统文件中的符号**windows.h**。 因此，你的项目将自动继承大部分它需要的提示。  
+-   包含 Visual C++ 安装包 (vcpackages) 的目录。 此目录包含一个内置的提示文件，用于描述常用系统文件中的符号（如 windows.h）。 因此，项目会自动继承其所需的大部分提示。  
   
--   包含本身的源文件的目录中的源文件的根目录路径。 在典型的 Visual c + + 项目中，根目录包含的解决方案或项目文件。  
+-   从源文件根目录指向包含源文件本身的目录的路径。 在典型的 Visual C++ 项目中，根目录包含解决方案或项目文件。  
   
-     此规则的例外是如果*停止文件*到源代码文件的路径。 停止文件提供了对搜索顺序的其他控制，是名为任何文件**cpp.stop**。 而不是从根目录开始，分析系统将从包含到包含源文件的目录的停止文件的目录搜索。 在典型项目中，你不需要停止文件。  
+     此规则的例外情况是“停止”文件位于源文件的路径中。 “停止”文件是任意名为 cpp.stop 的文件，可加强对搜索顺序的控制。 分析系统首先搜索的不是根目录，而是先搜索包含“停止”文件的目录，再逐一搜索到包含源文件的目录。 在典型的项目中，无需停止文件。  
   
 ### <a name="hint-gathering"></a>提示收集  
- 提示文件包含零个或多*提示*。 提示删除一样 C/c + + 宏或定义。 也就是说，`#define`预处理器指令创建或重新定义了提示，和`#undef`指令删除提示。  
+ 提示文件包含零个或多个提示。 提示的定义或删除方式与 C/C++ 宏一样。 也就是说，`#define` 预处理器指令用于创建或重新定义提示，`#undef` 指令用于删除提示。  
   
- 分析系统中前面所述的搜索顺序打开每个提示的文件、 将每个文件的提示累积到一组*有效提示*，然后使用有效的提示来解释在代码中的标识符。  
+ 分析系统按上述搜索顺序打开每个提示文件，将每个文件的提示累积到一组有效提示中，然后使用有效提示来解释代码中的标识符。  
   
- 分析系统使用以下规则累积提示。  
+ 分析系统按以下规则来累积提示。  
   
--   如果新提示指定尚未定义一个名称，新的提示会将名称添加到有效的提示。  
+-   如果新提示指定了尚未定义的名称，则新提示将该名称添加到有效提示中。  
   
--   如果新提示指定已定义的名称，新的提示将重新定义现有的提示。  
+-   如果新提示指定了已定义的名称，则新提示将重新定义现有提示。  
   
--   如果新的提示是`#undef`指定现有的有效提示的指令，则该新提示将删除现有的提示。  
+-   如果新提示是指定现有有效提示的 `#undef` 指令，则新提示会删除现有提示。  
   
- 第一个规则表示有效的提示从以前打开的提示文件继承。 最后两个规则意味着更高版本中的搜索顺序发生的提示可以重写前面发生的提示。 例如，如果在包含源文件的目录中创建提示文件可以重写以前的任何提示。  
+ 第一条规则表示有效提示是从以前打开的提示文件中继承的。 后两条规则表示搜索顺序中稍后出现的提示可替代先前出现的提示。 例如，如果在包含源文件的目录中创建提示文件，则可替代以前的任何提示。  
   
- 描述如何收集提示，请参阅`Example`本主题中后面的部分。  
+ 若要了解如何收集提示，请参阅本主题后面的 `Example` 部分。  
   
 ### <a name="syntax"></a>语法  
- 创建和删除与创建和删除宏的预处理器指令相同的语法与提示。 事实上，分析系统使用 C + + 预处理器评估提示。 有关预处理器指令的详细信息，请参阅[#define 指令 （C/c + +）](../preprocessor/hash-define-directive-c-cpp.md)和[#undef 指令 （C/c + +）](../preprocessor/hash-undef-directive-c-cpp.md)。  
+ 使用与创建和删除宏的预处理器指令相同的语法来创建和删除提示。 事实上，分析系统使用 C/C++ 预处理器来评估提示。 有关预处理器指令的详细信息，请参阅 [#define 指令 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md) 和 [#undef 指令 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)。  
   
- 唯一不同之语法元素`@<`， `@=`，和`@>`替换字符串。 这些是提示文件的特定的替换字符串，仅与使用*映射*宏。 映射是一组宏与数据、 函数或事件相关的其他数据、 函数或事件处理程序。 例如，`MFC`使用映射来创建[消息映射](../mfc/reference/message-maps-mfc.md)，和`ATL`使用映射来创建[对象映射](../atl/reference/object-map-macros.md)。 提示文件特定的替换字符串指示映射的起始、 中间，和结束的元素。 只有映射宏名称非常重要。 因此，每个替换字符串有意隐藏宏的实现。  
+ 唯一罕见的语法元素是 `@<``@=` 和 `@>` 替换字符串。 它们是提示文件特定的替换字符串，仅与 map 宏一起使用。 映射是将数据、函数或事件与其他数据、函数或事件处理程序相关联的一组宏。 例如，`MFC` 通过映射创建[消息映射](../mfc/reference/message-maps-mfc.md)，而 `ATL` 通过映射创建[对象映射](../atl/reference/object-map-macros.md)。 提示文件特定的替换字符串指示映射的开始、中间和结束元素。 只有映射宏的名称很重要。 因此，每个替换字符串都故意隐藏宏的实现。  
   
  提示使用以下语法。  
   
 |语法|含义|  
 |------------|-------------|  
-|`#define` *提示名称**替换字符串*<br /><br /> `#define` *提示名称* `(` *参数*，...`)`*替换字符串*|定义新提示或重新定义现有提示的预处理器指令。 该指令之后，预处理器会将每个匹配项*提示名称*源的代码中*替换字符串*。<br /><br /> 第二种语法形式定义类似于函数的提示。 如果在源代码中出现类似于函数的提示，预处理器首先替换的每个匹配项*参数*中*替换字符串*替换源代码，然后替换对应的实参*提示名称*与*替换字符串*。|  
-|`@<`|提示文件特定*替换字符串*，该值指示地图元素的一组的开头。|  
-|`@=`|提示文件特定*替换字符串*，该值指示一个中间映射元素。 一个地图可以具有多个地图元素。|  
-|`@>`|提示文件特定*替换字符串*，该值指示地图元素的集的末尾。|  
-|`#undef` *提示名称*|删除现有提示预处理器指令。 提供的提示名*提示名称*标识符。|  
-|`//` *注释*|中的单行注释。|  
-|`/*`*comment*`*/`|中的多行注释。|  
+|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|定义新提示或重新定义现有提示的预处理器指令。 指令发出后，预处理器用替换字符串替换源代码中每次出现的提示名称。<br /><br /> 第二种语法形式定义类似函数的提示。 如果源代码中出现类似函数的提示，则预处理器首先使用源代码中的相应参数替换替换字符串中每次出现的参数，然后使用替换字符串替换提示名称。|  
+|`@<`|指示一组映射元素开始的提示文件特定的替换字符串。|  
+|`@=`|指示中间映射元素的提示文件特定的替换字符串。 一个映射可有多个映射元素。|  
+|`@>`|指示一组映射元素结束的提示文件特定的替换字符串。|  
+|`#undef` *hint-name*|删除现有提示的预处理器指令。 提示的名称由 hint-name 标识符提供。|  
+|`//` *comment*|单行注释。|  
+|`/*`*comment*`*/`|多行注释。|  
   
-## <a name="what-macros-require-a-hint"></a>什么宏需要提示？  
- 某些类型的宏可能会干扰分析系统。 本部分介绍的宏，会导致问题，类型和可以创建用于解决该问题的提示的类型。  
+## <a name="what-macros-require-a-hint"></a>哪些宏需要提示？  
+ 某些类型的宏可能会干扰分析系统。 本部分介绍会导致问题的宏类型，以及可创建问题解决方案的提示类型。  
   
-### <a name="disruptive-macros"></a>中断宏  
- 某些宏会导致错误解释源代码，该分析系统，但可以忽略不会影响到您的浏览体验。 例如，源代码批注语言 ([SAL](../c-runtime-library/sal-annotations.md)) 解析为帮助你的 c + + 特性查找编程 bug 的宏。 如果你想要忽略 SAL 批注，浏览代码时，你可能想要创建隐藏批注的提示文件。  
+### <a name="disruptive-macros"></a>中断型宏  
+ 某些宏会导致分析系统误解源代码，但在不影响浏览体验的情况下可忽略它。 例如，源代码注释语言 ([SAL](../c-runtime-library/sal-annotations.md)) 宏解析为 C++ 属性，可帮助查找编程错误。 如果要在浏览代码时忽略 SAL 注释，可能需要创建隐藏注释的提示文件。  
   
- 以下源代码中的参数类型为`FormatWindowClassName()`函数是`PXSTR`，并且参数名称为`szBuffer`。 但是，分析的系统错误`_Pre_notnull_`和`_Post_z_`SAL 批注的参数类型或参数名称。  
+ 在以下源代码中，`FormatWindowClassName()` 函数的参数类型为 `PXSTR`，参数名称为 `szBuffer`。 但是，分析系统会将 `_Pre_notnull_` 和 `_Post_z_` SAL 注释误认为参数类型或参数名称。  
   
  **源代码：**  
   
@@ -126,7 +127,7 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
   
  **策略：** Null 定义  
   
- 在此情况下策略是将视为其不存在的 SAL 批注。 若要执行此操作，指定的替换字符串为 null 的提示。 因此，分析系统将忽略的注释，和**类视图**浏览器不会显示它们。 （visual c + + 包括隐藏 SAL 批注的内置提示文件。）  
+ 在此情况下，策略将 SAL 注释视为不存在。 为此，请指定替换字符串为 NULL 的提示。 因此，分析系统忽略注释，且“类视图”浏览器不显示注释。 （Visual C++ 包含隐藏 SAL 注释的内置提示文件。）  
   
  **提示文件：**  
   
@@ -134,10 +135,10 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define _Pre_notnull_  
 ```  
   
-### <a name="concealed-cc-language-elements"></a>隐匿的 C/c + + 语言元素  
- 分析系统对源代码作出错误解释的典型原因是如果宏将隐藏 C/c + +[标点符号](../cpp/punctuators-cpp.md)或[关键字](../cpp/keywords-cpp.md)令牌。 也就是说，宏可能包含一半的成对的标点符号，如`<>`， `[]`， `{}`，和`()`。  
+### <a name="concealed-cc-language-elements"></a>隐藏的 C/C++ 语言元素  
+ 分析系统误解源代码的典型原因是宏隐藏了 C/C++ [标点符号](../cpp/punctuators-cpp.md)或[关键字](../cpp/keywords-cpp.md)令牌。 也就是说，宏可能包含一对标点符号的一半，例如 `<>`、`[]`、`{}` 和 `()`。  
   
- 在以下源代码中，`START_NAMESPACE`宏隐藏不成对的左大括号 (`{`)。  
+ 在以下源代码中，`START_NAMESPACE` 宏隐藏未配对的左大括号 (`{`)。  
   
  **源代码：**  
   
@@ -145,11 +146,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
- **策略：**直接复制  
+ **策略：** 直接复制  
   
- 如果宏的语义是至关重要的浏览体验，创建一个提示，等同于宏。 分析系统可解析为提示文件中定义的宏。  
+ 如果宏的语义对浏览体验至关重要，请创建一个与宏相同的提示。 分析系统将该宏解析为提示文件中的定义。  
   
- 请注意，是否宏的源文件中包含其他宏，这些宏会解释仅当它们已处于的一套有效的提示。  
+ 请注意，如果源文件中的宏包含其他宏，则仅在有效提示集中已存在这些哄时，才对其进行解释。  
   
  **提示文件：**  
   
@@ -158,9 +159,9 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 ```  
   
 ### <a name="maps"></a>映射  
- 地图包含指定起始元素、 结束元素以及零个或多个中间元素的宏。 分析系统错误地解释地图，因为每个映射宏会隐藏 C/c + + 语言元素，并且完整的 C/c + + 语句的语法分布在许多单独的宏中。  
+ 映射由指定起始元素、结束元素和零个或多个中间元素的宏组成。 分析系统对映射进行错误解释，原因是 C/C++ 语言元素在所有映射宏中隐藏，且完整的 C/C++ 语句的语法分布在多个独立的宏中。  
   
- 下面的源代码定义`BEGIN_CATEGORY_MAP`， `IMPLEMENTED_CATEGORY`，和`END_CATEGORY_MAP`宏。  
+ 以下源代码定义了 `BEGIN_CATEGORY_MAP`、`IMPLEMENTED_CATEGORY` 和 `END_CATEGORY_MAP` 宏。  
   
  **源代码：**  
   
@@ -174,9 +175,9 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }  
 ```  
   
- **策略：**标识地图元素  
+ **策略：** 识别映射元素  
   
- 指定提示的开始、 中间 （如果有） 和结束映射的元素。 使用特殊映射的替换字符串， `@<`， `@=`，和`@>`。 有关详细信息，请参阅`Syntax`本主题中的部分。  
+ 为映射的开始、中间（若有）和结束元素指定提示。 使用特殊映射替换字符串 `@<`、`@=` 和 `@>`。 有关详细信息，请参阅本主题中的 `Syntax` 一节。  
   
  **提示文件：**  
   
@@ -192,9 +193,9 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 ```  
   
 ### <a name="composite-macros"></a>复合宏  
- 复合宏包含一个或多个混淆分析系统宏的类型。  
+ 复合宏包含一种或多种混淆分析系统的宏类型。  
   
- 下面的源代码包含`START_NAMESPACE`宏，指定命名空间范围的开始位置，和`BEGIN_CATEGORY_MAP`宏，它们分别指定地图的开始。  
+ 以下源代码包含指定命名空间作用域开始的 `START_NAMESPACE` 宏和指定映射开始的 `BEGIN_CATEGORY_MAP` 宏。  
   
  **源代码：**  
   
@@ -202,11 +203,11 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP  
 ```  
   
- **策略：**直接复制  
+ **策略：** 直接复制  
   
- 为创建提示`START_NAMESPACE`和`BEGIN_CATEGORY_MAP`宏，然后创建提示`NSandMAP`有关的源代码前面所示相同的宏。 或者，如果复合宏包含仅发生中断性的宏和空白区域，你可以定义其替换字符串为 null 的定义的提示。  
+ 为 `START_NAMESPACE` 和 `BEGIN_CATEGORY_MAP` 宏创建提示，然后为 `NSandMAP` 宏创建与前面源代码所示相同的提示。 如果复合宏只包含中断型宏和空格，可定义一个替换字符串为 NULL 定义的提示。  
   
- 在此示例中，假定`START_NAMESPACE`已具有提示，如本主题中所述`Concealed C/C++ Language Elements`副标题。 和认为`BEGIN_CATEGORY_MAP`具有提示中所述`Maps`。  
+ 在此示例中，假定 `START_NAMESPACE` 已经具有本主题中 `Concealed C/C++ Language Elements` 子标题中所述的提示。 并假定 `BEGIN_CATEGORY_MAP` 具有先前在 `Maps` 中所述的提示。  
   
  **提示文件：**  
   
@@ -215,7 +216,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 ```  
   
 ### <a name="inconvenient-macros"></a>不合适的宏  
- 可被分析的系统，解释某些宏，但难以阅读因宏太长或者过于复杂的源代码。 以便于阅读，你可以提供一个提示，简化了宏的显示。  
+ 某些宏可由分析系统解释，但很难被源代码读取，因为宏很长或很复杂。 为方便阅读，可提供一个简化宏显示形式的提示。  
   
  **源代码：**  
   
@@ -223,9 +224,9 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
 ```  
   
- **策略：**简化  
+ **策略：** 简化  
   
- 创建一个提示，显示简单的宏定义。  
+ 创建一个显示更简单的宏定义的提示。  
   
  **提示文件：**  
   
@@ -234,15 +235,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何提示会累积从提示文件。 停止文件不在此示例中使用。  
+ 以下示例说明如何从提示文件中累积提示。 本例中不使用“停止”文件。  
   
- 下图描绘了一些在 Visual c + + 项目中的物理目录。 提示文件位于`vcpackages`， `Debug`， `A1`，和`A2`目录。  
+ 下图显示了 Visual C++ 项目中的一些物理目录。 提示文件位于 `vcpackages`、`Debug``A1` 和 `A2` 目录中。  
   
 ### <a name="hint-file-directories"></a>提示文件目录  
- ![常见和项目&#45;特定提示文件目录。] (../ide/media/hintfile.png "HintFile")  
+ ![通用的以及项目特定的提示文件目录。](../ide/media/hintfile.png "提示文件")  
   
 ### <a name="directories-and-hint-file-contents"></a>目录和提示文件内容  
- 以下列表显示提示文件，以及这些提示文件的内容包含此项目中的目录。 只有某些中的许多提示`vcpackages`列出目录提示文件。  
+ 以下列表显示了此项目中包含提示文件的目录以及这些提示文件的内容。 `vcpackages` 目录提示文件中存在很多提示，此处仅列举一些。  
   
 -   vcpackages  
   
@@ -282,12 +283,12 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
     #undef CBRACE  
     ```  
   
-### <a name="effective-hints"></a>有效的提示  
- 下表列出了此项目中的源文件的有效提示。  
+### <a name="effective-hints"></a>有效提示  
+ 下表列出了此项目中源文件的有效提示。  
   
--   源文件： A1_A2_B.cpp  
+-   源文件：A1_A2_B.cpp  
   
--   有效的提示：  
+-   有效提示：  
   
     ```  
     // vcpackages (partial list)  
@@ -303,21 +304,21 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
     #define END_NAMESPACE }  
     ```  
   
- 以下说明适用于上面的列表。  
+ 以下注释适用于上述列表。  
   
--   有效的提示是从`vcpackages`， `Debug`， `A1`，和`A2`目录。  
+-   有效提示来自 `vcpackages`、`Debug``A1` 和 `A2` 目录。  
   
--   **#Undef**指令`Debug`提示文件删除`#define _In_`提示中`vcpackages`目录提示文件。  
+-   `Debug` 提示文件中的 #undef 指令删除了 `vcpackages` 目录提示文件中的 `#define _In_` 提示。  
   
--   中的提示文件`A1`目录重新定义了`START_NAMESPACE`。  
+-   `A1` 目录中的提示文件重新定义 `START_NAMESPACE`。  
   
--   `#undef`提示中`A2`目录中删除的提示`OBRACE`和`CBRACE`中`Debug`目录提示文件。  
+-   `A2` 目录中的 `#undef` 提示删除了 `Debug` 目录提示文件中 `OBRACE` 和 `CBRACE` 的提示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)    
- [#define 指令 （C/c + +）](../preprocessor/hash-define-directive-c-cpp.md)   
- [#undef 指令 （C/c + +）](../preprocessor/hash-undef-directive-c-cpp.md)   
- [SAL 批注](../c-runtime-library/sal-annotations.md)   
+ [#define 指令 (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
+ [#undef 指令 (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
+ [SAL 注释](../c-runtime-library/sal-annotations.md)   
  [消息映射](../mfc/reference/message-maps-mfc.md)   
  [消息映射宏](../atl/reference/message-map-macros-atl.md)   
  [对象映射宏](../atl/reference/object-map-macros.md)

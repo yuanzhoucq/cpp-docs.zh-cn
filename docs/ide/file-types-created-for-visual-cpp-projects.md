@@ -1,5 +1,5 @@
 ---
-title: 文件类型为 Visual c + + 项目创建 |Microsoft 文档
+title: 为 Visual C++ 项目创建的文件类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,9 +26,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336012"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>为 Visual C++ 项目创建的文件类型
 本主题介绍与针对传统桌面应用程序的 Visual C++ 项目相关联的所有文件类型。 项目中包含的实际文件取决于项目类型以及在使用向导时选择的选项。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
 |.HxC|项目|帮助项目文件。|  
 |.ico|资源|图标位图图形文件。|  
 |.idb|编译|状态文件，包含源文件与类定义之间的依赖关系信息，可能由编译器在最小重新生成和增量编译过程中使用。 使用 [/Fd](../build/reference/fd-program-database-file-name.md) 编译器选项指定 .idb 文件的名称。 有关更多信息，请参见 [/Gm（启用最小重新生成）](../build/reference/gm-enable-minimal-rebuild.md) 。|  
-|.idl|编译|接口定义语言文件。 请参阅[接口定义 (IDL) 文件](http://msdn.microsoft.com/library/windows/desktop/aa378712)适用于详细信息的 Windows SDK 中。|  
+|.idl|编译|接口定义语言文件。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](http://msdn.microsoft.com/library/windows/desktop/aa378712)。|  
 |.ilk|链接|增量链接文件。 有关更多信息，请参见 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 。|  
 |.map|链接|包含链接器信息的文本文件。 使用 [/Fm](../build/reference/fm-name-mapfile.md) 编译器选项命名映射文件。 有关更多信息，请参见 [/MAP](../build/reference/map-generate-mapfile.md) 。|  
 |.mfcribbon-ms|资源|资源文件，包含用于定义功能区中的按钮、控件和特性的 XML 代码。 有关详细信息，请参阅 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/04/2018
 |.vap|项目|Visual Studio Analyzer 项目文件。|  
 |.vbg|解决方案|兼容的项目组文件。|  
 |.vbp、.vip、.vbproj|Project|Visual Basic 项目文件。|  
-|.vcxitems|项目|共享项项目共享的多个 c + + 项目之间的代码文件。 有关更多信息，请参见 [项目文件和生成文件](../ide/project-and-solution-files.md) 。|
+|.vcxitems|项目|用于在多个 C++ 项目之间共享代码文件的共享项目。 有关更多信息，请参见 [项目文件和生成文件](../ide/project-and-solution-files.md) 。|
 |.vcxproj|项目|Visual C++ 项目文件。 有关更多信息，请参见 [项目文件和生成文件](../ide/project-and-solution-files.md) 。|  
 |.vcxproj.filters|项目|解决方案资源管理器用于将文件添加到项目时，筛选器文件定义在解决方案资源管理器树视图中添加文件（基于其文件扩展名）的位置。|  
 |.vdproj|项目|Visual Studio 部署项目文件。|  
@@ -101,5 +102,5 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>请参阅  
  [创建和管理 Visual C++ 项目](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual c + + 项目类型](../ide/visual-cpp-project-types.md)   
+ [Visual C++ 项目类型](../ide/visual-cpp-project-types.md)   
  [其他语言的向导支持](../ide/wizard-support-for-other-languages.md)

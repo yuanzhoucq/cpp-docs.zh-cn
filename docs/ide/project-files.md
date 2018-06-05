@@ -1,5 +1,5 @@
 ---
-title: 项目文件 |Microsoft 文档
+title: 项目文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327224"
 ---
 # <a name="project-files"></a>项目文件
-Visual c + + 项目文件是一个基于 XML 的文件具有.vcxproj 文件扩展名，并且包含生成的 Visual c + + 项目所需的信息。  
+Visual C++ 项目文件是基于 XML 的文件，具有 .vcxproj 文件扩展名并包含生成 Visual C++ 项目所需的信息。  
   
 ## <a name="example"></a>示例  
- 下面的示例.vcxproj 文件由指定生成**Win32 控制台应用程序**中**新项目**对话框。 若要处理一个项目文件使用 msbuild.exe 工具在命令行中，或**生成**命令[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]。 （因为未提供所需的源文件和头文件，无法处理此示例。）有关项目文件中的 XML 元素的详细信息，请参阅[项目文件架构引用](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
+ 以下示例 .vcxproj 文件是由在“新建项目”对话框中指定“Win32 控制台应用程序”而生成的。 使用在命令行的 msbuild.exe 工具或 [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 中的“生成”命令处理项目文件。 （无法处理此示例，因为未提供所需源文件和头文件。）有关项目文件中的 XML 元素的详细信息，请参阅[项目文件架构参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,5 +129,5 @@ Visual c + + 项目文件是一个基于 XML 的文件具有.vcxproj 文件扩�
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [生成 Visual Studio 中的 c + + 项目](../ide/building-cpp-projects-in-visual-studio.md)   
+ [在 Visual Studio 中生成 C++ 项目](../ide/building-cpp-projects-in-visual-studio.md)   
  [使用项目属性](../ide/working-with-project-properties.md)

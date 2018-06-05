@@ -1,5 +1,5 @@
 ---
-title: 添加泛型 c + + 类 |Microsoft 文档
+title: 添加一般 C++ 类 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326467"
 ---
 # <a name="adding-a-generic-c-class"></a>添加一般 C++ 类
-你可以使用添加泛型 c + + 类**类视图**。 泛型 c + + 类是你定义或从你定义的类派生的类。  
+可以使用类视图添加一般 C++ 类。 一般 C++ 类是一种你定义的类或从你定义的类中派生的类。  
   
-### <a name="to-add-a-generic-c-class-to-a-project"></a>若要向项目添加泛型 c + + 类  
+### <a name="to-add-a-generic-c-class-to-a-project"></a>向项目添加一般 C++ 类  
   
-1.  在**类视图**，右键单击你想要添加新类，请单击的项目**添加**，然后单击**类**。  
+1.  在类视图中，右键单击要向其添加新类的项目，依次单击“添加”和“类”。  
   
-2.  在[添加类](../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**c + + 类**。 单击**添加**以显示[泛型 c + + 类向导](../ide/generic-cpp-class-wizard.md)。  
+2.  在“[添加类](../ide/add-class-dialog-box.md)”对话框的“模板”窗格中，单击“C++ 类”。 单击“添加”以显示[一般 C++ 类向导](../ide/generic-cpp-class-wizard.md)。  
   
-3.  在向导中，提供一个类名称，然后定义设置或接受默认设置。  
+3.  在向导中，提供类名称，然后定义设置或接受默认值。  
   
-4.  若要关闭向导并在项目中查看新的泛型 c + + 类，请单击**完成**。  
+4.  若要关闭向导并查看项目中新的一般 C++ 类，请单击“完成”。  
   
 ## <a name="see-also"></a>请参阅  
  [添加类](../ide/adding-a-class-visual-cpp.md)   

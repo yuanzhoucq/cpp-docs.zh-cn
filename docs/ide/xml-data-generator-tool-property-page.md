@@ -1,5 +1,5 @@
 ---
-title: XML 数据生成器工具属性页 |Microsoft 文档
+title: “XML 数据生成器工具”属性页 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329938"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>“XML 数据生成器工具”属性页
-**XML 数据生成器工具**时将数据集添加到项目属性页将变为可用。  
+将数据集添加到项目时，“XML 数据生成器工具”属性页即为可用。  
   
- **XML 数据生成器工具**属性页包含以下属性：  
+ “XML 数据生成器工具”属性页包含下列属性：  
   
  **输出文件**  
- 指定要使用的输出文件名称。  
+ 指定要使用的输出文件名。  
   
  **取消显示启动版权标志**  
  取消显示启动版权标志和信息消息。  
   
  **生成的代理语言**  
- 确定发出托管的代码。  
+ 确定是否发出托管代码。  
   
- 有关如何访问信息**XML 数据生成器工具**属性页中，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+ 有关如何访问“XML 数据生成器工具”属性页的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
- 有关如何以编程方式访问此对象的成员的信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+ 有关如何以编程方式访问此对象的成员的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
 ## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)
