@@ -1,5 +1,5 @@
 ---
-title: '&lt;值&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;value&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325391"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;值&gt;（Visual c + +）
-\<值 > 标记可以描述的属性和属性访问器方法。 请注意，当使用 Visual Studio 集成的开发环境中的代码向导添加属性，它将添加[\<摘要 >](../ide/summary-visual-cpp.md)标记为新的属性。 然后，应手动添加 \<value> 标记，描述属性表示的值。  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+借助 \<value>标记，可以描述属性和属性访问器方法。 请注意，在 Visual Studio 集成开发环境中使用代码向导添加属性时，将为新属性添加 [\<summary>](../ide/summary-visual-cpp.md)标记。 然后，应手动添加 \<value> 标记，描述属性表示的值。  
   
 ## <a name="syntax"></a>语法  
   

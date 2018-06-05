@@ -1,5 +1,5 @@
 ---
-title: '&lt;权限&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;permission&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324078"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;权限&gt;（Visual c + +）
-使用 \<permission> 可以记录成员访问权限 <xref:System.Security.PermissionSet> 可以指定对成员的访问。  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
+使用 \<permission> 可以记录成员访问权限 借助 <xref:System.Security.PermissionSet>，可以指定对成员的访问权限。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>备注  
  使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
- Visual C++ 编译器将尝试通过文档注释在一次处理中解决 cref 引用。  因此，如果使用 C++ 查找规则，编译器找不到符号，引用将被标记为未解析。 请参阅[ \<seealso >](../ide/seealso-visual-cpp.md)有关详细信息。  
+ Visual C++ 编译器将尝试通过文档注释在一次处理中解决 cref 引用。  因此，如果使用 C++ 查找规则，编译器找不到符号，引用将被标记为未解析。 请参阅 [\<seealso>](../ide/seealso-visual-cpp.md)，获取详细信息。  
   
 ## <a name="example"></a>示例  
   

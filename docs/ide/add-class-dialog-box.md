@@ -1,5 +1,5 @@
 ---
-title: 添加类对话框 |Microsoft 文档
+title: “添加类”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,9 +18,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339769"
 ---
 # <a name="add-class-dialog-box"></a>“添加类”对话框
 “添加类”  对话框包含的模板允许你：  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
   
 -   通过向项目中添加相应的文件和源代码，自动创建新类。  
   
- 你可以访问**添加类**对话框**项目**菜单上，**解决方案资源管理器**，或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+ 可以从“项目”菜单、“解决方案资源管理器”或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)访问“添加类”对话框。  
   
 > [!NOTE]
 >  如果尝试将不适合的类添加到当前项目，则会收到错误信息。 单击“确定”  返回到“添加类”  对话框。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |MFC 类|[MFC 添加类向导](../mfc/reference/mfc-add-class-wizard.md)|  
 |ActiveX 控件中的 MFC 类|[从 ActiveX 控件添加类向导](../ide/add-class-from-activex-control-wizard.md)|  
-|TypeLib 中的 MFC 类|[从类型库向导添加类](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|TypeLib 中的 MFC 类|[从类型库添加类向导](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |MFC ODBC 使用者|[MFC ODBC 使用者向导](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>泛型类  

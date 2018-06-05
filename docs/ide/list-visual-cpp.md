@@ -1,5 +1,5 @@
 ---
-title: '&lt;列表&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;list&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323974"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;列表&gt;（Visual c + +）
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 \<listheader> 块用于定义表或定义列表的标题行。 定义表时，只需提供标题中的术语的项。  
   
 ## <a name="syntax"></a>语法  

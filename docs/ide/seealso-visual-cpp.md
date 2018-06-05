@@ -1,5 +1,5 @@
 ---
-title: '&lt;另请参阅&gt;（Visual c + +） |Microsoft 文档'
+title: '&lt;seealso&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 6a726a2fa1694fd346a6632fdc5e40bd53547fc8
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334303"
 ---
-# <a name="ltseealsogt-visual-c"></a>&lt;另请参阅&gt;（Visual c + +）
+# <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C++)
 使用 \<seealso> 标记，可以指定想要在“另请参阅”部分中显示的文本。 使用 [\<see>](../ide/see-visual-cpp.md) 从文本内指定链接。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
  `member`  
  对可从当前编译环境调用的成员或字段的引用。  将名称括在单引号或双引号中。  
   
- 编译器会检查给定的代码元素存在，并解析`member`为在输出 XML 中的元素名称。  如果编译器没有找到 `member`，它会发出警告。  
+ 编译器检查是否存在给定的码位元素，并将 `member` 解析为输出 XML 中的元素名称。  如果编译器没有找到 `member`，它会发出警告。  
   
  有关如何创建对泛型类型的 cref 引用的信息，请参阅 [\<see>](../ide/see-visual-cpp.md)。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
  Visual C++ 编译器将尝试通过文档注释在一次处理中解决 cref 引用。  因此，如果使用 C++ 查找规则，编译器找不到符号，引用将被标记为未解析。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，无法解析的符号中 cref 引用。 用于到 B::Test cref 的 XML 注释将`<seealso cref="!:B::Test" />`，而对 A::Test 的引用是格式正确`<seealso cref="M:A.Test" />`。  
+ 在以下示例中，cref 中引用了未解析的符号。 针对 B::Test 的 cref 的 XML 注释将为 `<seealso cref="!:B::Test" />`，而对 A::Test 的引用则为格式标准的 `<seealso cref="M:A.Test" />`。  
   
 ```  
 // xml_seealso_tag.cpp  

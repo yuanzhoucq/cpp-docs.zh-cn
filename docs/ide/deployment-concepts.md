@@ -1,5 +1,5 @@
 ---
-title: 部署概念 |Microsoft 文档
+title: 部署概念 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,42 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34257057"
 ---
 # <a name="deployment-concepts"></a>部署概念
 
-本部分讨论部署 c + + 应用程序的主要注意事项。
+本节介绍部署 C++ 应用程序的主要注意事项。
 
-## <a name="windows-installer-deployment-in-c"></a>在 c + + 的 Windows Installer 部署
+## <a name="windows-installer-deployment-in-c"></a>C++ 中的 Windows Installer 部署
 
-Visual c + + 项目通常会使用传统的 Windows Installer 安装程序以进行部署。 若要准备的 Windows Installer 部署，打包应用程序中的 setup.exe 文件，并将该文件，与安装程序包 (.msi) 一起分发。 用户然后运行 setup.exe 来安装你的应用程序。
+Visual C++ 项目通常使用传统的 Windows Installer 安装程序进行部署。 要准备 Windows Installer 部署，请将应用程序打包为 setup.exe 文件，并将其与安装程序包 (.msi) 一起分发。 用户然后便可运行 setup.exe 来安装应用程序。
 
-通过将安装程序项目添加到解决方案; 打包应用程序生成时，它创建的安装程序和安装程序将分发给用户的包文件。 有关详细信息，请参阅[选择部署方法](../ide/choosing-a-deployment-method.md)。
+通过将安装项目添加到解决方案中来打包应用程序；生成时，它将创建分发给用户的安装和安装程序包文件。 有关详细信息，请参阅[选择部署方法](../ide/choosing-a-deployment-method.md)。
 
 ## <a name="library-dependencies"></a>库依赖项
 
-C/c + + 应用程序生成时使用的 Visual c + + 库所提供功能，它将依赖于这些库在运行时的状态。 为了使运行该应用程序，它必须链接，静态还是动态，到必要的 Visual c + + 库。 如果应用程序动态链接到 Visual c + + 库，则在运行该库时必须存在以便可以加载它。 另一方面，如果应用程序静态链接到 Visual c + + 库，然后它不需要相应的 Dll 存在于用户的计算机上。 静态链接中，但是，具有某些负面影响，如增加应用程序文件的大小并使得维护有可能更难。 有关详细信息，请参阅[使用 Dll 的优点](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls)。
+如果 C/C++ 应用程序使用 Visual C++ 库提供的功能进行生成，则会依赖于这些库在运行时的存在性。 为确保应用程序能够运行，必须将应用程序静态或动态链接到必需的 Visual C++ 库。 如果应用程序动态链接到 Visual C++ 库，则在应用程序运行时，该库必须存在才能进行加载。 另一方面，如果应用程序静态链接到 Visual C++ 库，则用户计算机上无需存在相应的 DLL。 但是，静态链接会产生一些负面影响，例如增加应用程序文件的大小，并可能更难以维护。 有关详细信息，请参阅[使用 Dll 的优点](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls)。
 
-## <a name="packaging-and-redistributing"></a>打包和重新发布
+## <a name="packaging-and-redistributing"></a>打包和重新分发
 
-Visual c + + 库打包为 Dll，并且 C/c + + 应用程序的所有必要的库可以由 Visual Studio 安装在开发人员计算机上。 但是，当你将应用部署到你的用户，不能在大多数情况下，要求他们安装 Visual Studio，才能运行你的应用程序。 务必要能够重新分发的部分的 Visual c + + 所需的应用程序正常运行。
+Visual C++ 库打包为 DLL，所有用于 C/C++ 应用程序的必要库都由 Visual Studio 安装在开发者的计算机上。 但是，在向用户部署应用程序时，大多数情况下，要求用户安装 Visual Studio 才能运行应用程序是不可行的。 要能够重新分发应用程序正确运行所需的 Visual C++ 部件，这点很重要。
 
 有关打包和重新分发的详细信息，请参阅以下主题：
 
-- [确定哪些 Dll 重新分发的](../ide/determining-which-dlls-to-redistribute.md)。
+- [确定要重新分发的 DLL](../ide/determining-which-dlls-to-redistribute.md)。
 
 - [选择部署方法](../ide/choosing-a-deployment-method.md)。
 
 - [通用 CRT 部署](universal-crt-deployment.md)。
 
-有关部署示例和有关故障排除建议，请参阅：
+有关疑难解答的部署示例和建议，请参阅：
 
 - [部署示例](../ide/deployment-examples.md)。
 
-- [疑难解答 C/c + + 独立应用程序和通过并行程序集](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
+- [C/C++ 独立应用程序和并行程序集疑难解答](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
 
 ## <a name="see-also"></a>请参阅
 

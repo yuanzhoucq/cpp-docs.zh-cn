@@ -1,5 +1,5 @@
 ---
-title: 清单工具配置属性 （Visual c + +） |Microsoft 文档
+title: 清单工具配置属性 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,26 +21,27 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1953e7c37c07f66845510efe037015a537aa7baa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329083"
 ---
-# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>常规、 清单工具，配置属性&lt;Projectname&gt;属性页对话框
-使用此对话框中指定的常规选项[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>“&lt;项目名&gt; 属性页”对话框 ->“配置属性”->“清单工具”->“常规”
+使用此对话框指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的常规选项。  
   
- 若要访问此属性页对话框中，打开你的项目或属性表的属性页。 展开**清单工具**节点下的**配置属性**，然后选择**常规**。  
+ 若要访问此属性页对话框，请打开项目或属性表的属性页。 展开“配置属性”下的“清单工具节点”，然后选择“常规”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **取消显示启动版权标志**  
- **是 (/ nologo)** 指定启动清单工具时，将隐藏标准 Microsoft 版权数据。 使用此选项时作为生成过程中或从生成环境的一部分运行 mt.exe 抑制不需要的输出日志文件中。  
+ 如果为“是(/nologo)”，则指定在启动清单工具时隐藏标准 Microsoft 版权所有数据。 将 mt.exe 作为生成过程的一部分运行或从生成环境运行 mt.exe 时，使用此选项取消显示日志文件中不需要的输出。  
   
  **详细输出**  
- **是 （/ 详细）**指定清单生成过程中，将显示其他生成信息。  
+ 如果为“是(/verbose)”，则指定在清单生成期间显示其他生成信息。  
   
  **程序集标识**  
- 使用 /identity 选项来指定一个标识字符串，其包含的属性[ \<assemblyIdentity > 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-application)。 标识字符串开头的值`name`特性，并后跟*属性* = *值*对。 用逗号分隔的标识字符串中的属性。  
+ 使用 /identity 选项指定标识字符串，该字符串包含 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-application)的特性。 标识字符串以 `name` 特性的值开头，后面跟特性 = 值对。 标识字符串中的特性以逗号隔开。  
   
- 下面是一个示例标识字符串：  
+ 以下是一个示例标识字符串：  
   
  `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
   

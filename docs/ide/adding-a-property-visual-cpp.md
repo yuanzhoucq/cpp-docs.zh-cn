@@ -1,5 +1,5 @@
 ---
-title: 添加属性 （Visual c + +） |Microsoft 文档
+title: 添加属性 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327575"
 ---
 # <a name="adding-a-property-visual-c"></a>添加属性 (Visual C++)
-你可以使用[添加属性向导](../ide/names-add-property-wizard.md)添加到你的项目中的接口的方法。  
+可以使用[添加属性向导](../ide/names-add-property-wizard.md)，向项目中的接口添加方法。  
   
-### <a name="to-add-a-property-to-your-object"></a>若要将属性添加到你的对象  
+### <a name="to-add-a-property-to-your-object"></a>向对象添加属性  
   
-1.  在[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击你想要添加的属性的接口的名称。  
+1.  在[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中单击要向其添加属性的接口的名称。  
   
     > [!NOTE]
-    >  你还可以将属性添加到调度接口，该项目已特性化，除非嵌套在库节点。  
+    >  也可以将属性添加到调度接口，它嵌套在库节点中（除非该项目已特性化）。  
   
-2.  从快捷菜单中，单击**添加**，然后单击**添加属性**。  
+2.  从快捷菜单中，单击“添加”，然后单击“添加属性”。  
   
-3.  在[添加属性向导](../ide/names-add-property-wizard.md)，提供信息来创建属性。  
+3.  在[添加属性向导](../ide/names-add-property-wizard.md)中，提供创建属性的信息。  
   
-4.  指定的属性中的任何接口定义语言 (IDL) 设置[IDL 特性](../ide/idl-attributes-add-property-wizard.md)向导页。  
+4.  在向导的 [IDL 特性](../ide/idl-attributes-add-property-wizard.md)页中，为此属性指定任何接口定义语言 (IDL) 设置。  
   
-5.  单击**完成**以添加属性。  
+5.  单击“完成”以添加属性。  
   
- **获取**和`Put`作为在类视图中，在其中定义的接口的两个图标显示的属性的方法。 你可以双击以查看.idl 文件中的属性声明这两个图标。  
+ 属性的 Get 和 `Put` 方法在定义该属性的接口下在类视图中显示为两个图标。 可以双击其中任一图标，查看 .idl 文件中的属性声明。  
   
--   ATL 接口**获取**和**放**函数添加到.cpp 文件中，并且对这些函数的引用添加到.h 文件。  
+-   对于 ATL 接口，Get 和 Put 函数已添加到 .cpp 文件，并且对这些函数的引用也添加到 .h 文件。  
   
--   对于 MFC 调度接口，如果你选择**成员变量**作为实现类型时，一个方法和变量添加到实现该接口的类。 如果你选择**Get/Set 方法**作为实现类型中，两种方法添加到实现该接口的类。  
+-   对于 MFC 调度接口，如果选择“成员变量”作为实现类型，则方法和变量将添加到实现它的类中。 如果选择 Get/Set 方法作为实现类型，则两个方法将添加到实现它的类中。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 COM 接口](../ide/creating-a-com-interface-visual-cpp.md)   

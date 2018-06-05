@@ -1,5 +1,5 @@
 ---
-title: 添加事件 （Visual c + +） |Microsoft 文档
+title: 添加事件 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,25 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 657053f33a83d67e79bea13ab87da21156bde94c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327484"
 ---
 # <a name="adding-an-event-visual-c"></a>添加事件 (Visual C++)
-从类视图中，你可以添加事件使用[添加事件向导](../ide/add-event-wizard.md)仅对中的控件类你[MFC ActiveX 控件](../mfc/reference/creating-an-mfc-activex-control.md)项目。 如果你想要将事件添加到其他项目类型，使用**事件**按钮[属性窗口](/visualstudio/ide/reference/properties-window)。  
+可以从类视图使用[添加事件向导](../ide/add-event-wizard.md)将事件仅添加到 [MFC ActiveX 控件](../mfc/reference/creating-an-mfc-activex-control.md)项目中的控件类。 如果想要将事件添加到其他项目类型，请使用[属性窗口](/visualstudio/ide/reference/properties-window)中的“事件”按钮。  
   
-### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>要向 MFC ActiveX 控件项目添加一个事件  
+### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>将事件添加到 MFC ActiveX 控件项目  
   
-1.  在类视图中，展开项目节点以显示项目中的类。  
+1.  在“类视图”中，展开项目节点，显示项目中的类。  
   
 2.  右键单击项目的控件类。  
   
-3.  在快捷菜单上，单击**添加**，然后单击**添加事件**以显示添加事件向导。  
+3.  在快捷菜单上，单击“添加”，然后单击“添加事件”以显示添加事件向导。  
   
-4.  提供适当的向导框中的事件信息。  
+4.  在相应向导框中提供事件信息。  
   
-5.  单击**完成**事件添加到项目。  
+5.  单击“完成”，即将事件添加到项目。  
   
 ## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   

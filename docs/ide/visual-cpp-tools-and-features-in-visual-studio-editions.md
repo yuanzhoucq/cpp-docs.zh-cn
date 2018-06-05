@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 工具和 Visual Studio 版本中的功能 |Microsoft 文档
+title: Visual Studio 版本中的 Visual C++ 工具和功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -18,11 +18,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337244"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual c + + 工具和 Visual Studio 版本中的功能
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 Visual C++ 工具和功能
 
 下表显示 Visual Studio 中可用的 Visual C++ 功能。 单元格中的 X 指示功能可用；空单元格指示功能不可用。 括号中的说明指示功能可用，但是受限制。
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台（手机、平板电脑、PC、Xbox、IoT 和 HoloLens）|X||X|X|
-|Microsoft 应用商店 8.1|||X|X|
+|Microsoft Store 8.1|||X|X|
 |Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
@@ -65,10 +66,10 @@ ms.lasthandoff: 05/04/2018
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |适用于 UWP、Windows 8.1、Windows Phone 8.0 的 XAML 模板|X||X|X|
 |Direct3D 应用程序|X||X|X|
-|DLL (通用 Windows)|X||X|X|
-|静态库 (通用 Windows)|X||X|X|
+|DLL（通用 Windows）|X||X|X|
+|静态库（通用 Windows）|X||X|X|
 |Windows 运行时组件|X||X|X|
-|单元测试应用 (通用 Windows)|X||X|X|
+|单元测试应用（通用 Windows）|X||X|X|
 |ATL 项目|||X|X|
 |类库 (CLR)||X|X|X|
 |CLR 控制台应用程序||X|X|X|
@@ -184,6 +185,6 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>请参阅
 
 [安装 Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[什么是 Visual Studio 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Visual Studio 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Visual C++ 项目类型](../ide/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>

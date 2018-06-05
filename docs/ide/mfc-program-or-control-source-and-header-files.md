@@ -1,5 +1,5 @@
 ---
-title: MFC 程序或控件的源文件和头文件 |Microsoft 文档
+title: MFC 程序或控件的源文件和头文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340224"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程序或控件的源文件和头文件
-MFC 项目在 Visual Studio 中，根据你为创建的项目选择的选项创建时创建以下文件。 例如，你的项目包含*Projname*dlg.cpp 和*Projname*dlg.h 文件仅当你创建的、 基于对话框的项目或类。  
+根据为创建的项目选择的选项，在 Visual Studio 中创建 MFC 项目时会创建以下文件。 例如，仅当创建基于对话框的项目或类时，项目才包含 Projnamedlg.cpp 和 Projnamedlg.h 文件。  
   
- 所有这些文件位于*Projname*目录中，而且标头文件 （.h 文件） 文件夹或解决方案资源管理器中的源代码文件 （.cpp 文件） 文件夹中。  
+ 所有这些文件都位于 Projname 目录中，并位于解决方案资源管理器中的头文件（.h 文件）文件夹或源文件（.cpp 文件）文件夹中。  
   
 |文件名|描述|  
 |---------------|-----------------|  
-|*Projname*.h|程序或 DLL 主要包含文件。 它包含所有全局符号和`#include`指令的其他标头文件。 它派生`CPrjnameApp`类`CWinApp`并声明`InitInstance`成员函数。 用于控件，`CPrjnameApp`类派生自`COleControlModule`。|  
-|*Projname*.cpp|主程序源文件。 它将创建一个类对象`CPrjnameApp`，该类派生自`CWinApp`，并重写`InitInstance`成员函数。<br /><br /> 对可执行文件，`CPrjnameApp::InitInstance`执行多项操作。 它注册文档模板，以用作文档和视图; 之间的连接创建一个主框架窗口;并创建空文档 （或打开文档，如果作为应用程序的命令行参数指定的一个）。<br /><br /> 对于 Dll 和 ActiveX (以前称为 OLE) 控件，`CProjNameApp::InitInstance`注册 OLE 通过调用控件的对象工厂`COleObjectFactory::RegisterAll`和调用`AfxOLEInit`。 此外，成员函数`CProjNameApp::ExitInstance`用于卸载从内存通过调用控件**AfxOleTerm**。<br /><br /> 此文件还注册和注销 Windows 注册数据库中的控件，通过实现`DllRegisterServer`和`DllUnregisterServer`函数。|  
-|*Projname*ctrl.h， *Projname*ctrl.cpp|声明和实现`CProjnameCtrl`类。 `CProjnameCtrl` 派生自`COleControl`，某些成员函数的主干实现定义用于初始化、 绘制，和序列化 （加载和保存） 控件。 此外定义了消息、 事件和调度映射。|  
-|*Projname*dlg.cpp， *Projname*dlg.h|如果你选择基于对话框的应用程序，创建。 文件派生和实现名为的对话框类`CProjnameDlg`，并且包括主干成员函数来初始化的对话框和执行对话框数据交换 (DDX)。 有关对话框类还放置在这些文件而不是在*Projname*.cpp。|  
-|Dlgproxy.cpp Dlgproxy.h|基于对话框的程序、 实现和标头文件中的主对话框的项目的自动化的代理类。 仅当选择了自动化的支持，才使用此选项。|  
-|*Projname*doc.cpp， *Projname*doc.h|派生和实现名为的文档类`CProjnameDoc`，并包括主干成员函数初始化文档、 序列化 （保存和加载） 文档和调试诊断的实现。|  
-|*Projname*set.h/.cpp|如果你创建一个程序，它支持数据库包含的记录集类，创建。|  
-|*Projname*view.cpp， *Projname*view.h|派生和实现名为的视图类`CProjnameView`，用于显示和打印的文档数据。 `CProjnameView`类派生自以下的 MFC 类之一：<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [Ctreeview 类](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [CRichEditView](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> 项目的视图类包含用于绘制的视图和实现调试诊断的主干成员函数。 如果已启用对打印的支持，消息映射条目会添加用于打印、 打印设置，并在打印预览命令消息。 这些项的基的 view 类中调用相应的成员函数。|  
-|*Projname*PropPage.h， *Projname*PropPage.cpp|声明和实现`CProjnamePropPage`类。 `CProjnamePropPage` 派生自`COlePropertyPage`与主干成员函数， `DoDataExchange`，用于实现数据交换和验证。|  
-|IPframe.cpp IPframe.h|如果在应用程序向导中选择最小化服务器或完全服务器选项创建**自动化选项**页 （步骤 3 的 6）。 文件派生和实现就地框架窗口类，名为**CInPlaceFrame**，就地激活的容器程序服务器时使用。|  
-|Mainfrm.cpp Mainfrm.h|派生**CMainFrame**类从[CFrameWnd](../mfc/reference/cframewnd-class.md) （对于 SDI 应用程序） 或[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) （对于 MDI 应用程序）。 **CMainFrame**类处理创建工具栏按钮和状态栏中，如果在应用程序向导中选择相应选项**应用程序选项**页 （步骤 4 的 6）。 有关使用信息**CMainFrame**，请参阅[框架窗口类创建的应用程序向导](../mfc/frame-window-classes-created-by-the-application-wizard.md)。|  
-|Childfrm.cpp Childfrm.h|派生**CChildFrame**类[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)。 **CChildFrame**类用于 MDI 文档框架窗口。 如果你选择 MDI 选项始终创建这些文件。|  
+|projname.h|程序或 DLL 的主包含文件。 它包含其他头文件的所有全局符号和 `#include` 指令。 它从 `CWinApp` 派生 `CPrjnameApp` 类并声明 `InitInstance` 成员函数。 对于控件，`CPrjnameApp` 类派生自 `COleControlModule`。|  
+|Projname.cpp|主程序源文件。 它创建一个派生自 `CWinApp` 的 `CPrjnameApp` 类的对象，并替代 `InitInstance` 成员函数。<br /><br /> 对于可执行文件，可使用 `CPrjnameApp::InitInstance` 执行多项操作。 可注册作为文档和视图之间的连接的文档模板；创建主框架窗口；创建一个空文档（如果已将一个文档指定为应用程序的命令行参数，则打开一个文档）。<br /><br /> 对于 DLL 和 ActiveX（以前称为 OLE）控件，`CProjNameApp::InitInstance` 通过调用 `COleObjectFactory::RegisterAll` 向 OLE 注册控件的对象工厂，并调用 `AfxOLEInit`。 此外，成员函数 `CProjNameApp::ExitInstance` 还可用于通过调用 AfxOleTerm 从内存卸载控件。<br /><br /> 该文件还通过实现 `DllRegisterServer` 和 `DllUnregisterServer` 函数在 Windows 注册数据库中注册和取消注册该控件。|  
+|Projnamectrl.h, Projnamectrl.cpp|声明并实现 `CProjnameCtrl` 类。 `CProjnameCtrl` 派生自 `COleControl`，并定义某些成员函数的框架实现，这些函数用于初始化、绘制和序列化（加载和保存）控件。 还定义消息、事件和调度映射。|  
+|Projnamedlg.cpp, Projnamedlg.h|选择基于对话框的应用程序时创建。 文件派生并实现名为 `CProjnameDlg` 的对话框类，并包括用于初始化对话框和执行对话框数据交换 (DDX) 的框架成员函数。 “关于”对话框类也位于这些文件中，而不是位于 Projname.cpp 中。|  
+|Dlgproxy.cpp, Dlgproxy.h|在基于对话框的程序中，主对话框的项目自动化代理类的实现和头文件。 仅当选择了“自动化支持”时才使用此选项。|  
+|Projnamedoc.cpp, Projnamedoc.h|派生和实现名为 `CProjnameDoc` 的文档类，并包括用于初始化文档、序列化（保存和加载）文档以及实现调试诊断的骨框架成员函数。|  
+|Projnameset.h/.cpp|创建的程序支持数据库并包含记录集类时创建。|  
+|Projnameview.cpp, Projnameview.h|派生并实现名为 `CProjnameView` 的视图类，该类用于显示和打印文档数据。 `CProjnameView` 类派生自以下任一 MFC 类：<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [CRichEditView](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> 项目的视图类包含用于绘制视图和实现调试诊断的框架成员函数。 如果启用了打印支持，则会为打印、打印设置和打印预览命令消息添加消息映射项。 这些项在基视图类中调用相应的成员函数。|  
+|ProjnamePropPage.h, ProjnamePropPage.cpp|声明并实现 `CProjnamePropPage` 类。 `CProjnamePropPage` 派生自 `COlePropertyPage`，并提供一个框架成员函数 `DoDataExchange` 来实现数据交换和验证。|  
+|IPframe.cpp, IPframe.h|在应用程序向导的“自动化选项”页中选择了“微型服务器”或“全服务器”选项时创建（第 3 步，共 6 步）。 文件派生并实现名为 CInPlaceFrame 的就地框架窗口类，容器程序就地激活服务器时使用。|  
+|Mainfrm.cpp, Mainfrm.h|从 [CFrameWnd](../mfc/reference/cframewnd-class.md)（针对 SDI 应用程序）或 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)（针对 MDI 应用程序）派生 CMainFrame 类。 如果在应用程序向导的“应用程序选项”页中选择了相应的选项，CMainFrame 类将处理工具栏按钮和状态栏的创建（第 4 步，共 6 步）。 有关使用 CMainFrame 的信息，请参阅[应用程序向导创建的框架窗口类](../mfc/frame-window-classes-created-by-the-application-wizard.md)。|  
+|Childfrm.cpp, Childfrm.h|从 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 派生 CChildFrame 类。 CChildFrame 类用于 MDI 文档框架窗口。 如果选择 MDI 选项，则始终创建这些文件。|  
   
 ## <a name="see-also"></a>请参阅  
  [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)   

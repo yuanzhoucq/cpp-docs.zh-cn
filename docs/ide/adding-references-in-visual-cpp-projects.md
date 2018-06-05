@@ -1,5 +1,5 @@
 ---
-title: 在 Visual c + + 项目中添加引用 |Microsoft 文档
+title: 在 Visual C++ 项目中添加引用 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336103"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 项目中添加引用
 程序调用到其他二进制文件（如 DLL、Windows 运行时组件、扩展 SDK、COM 组件和 .NET 程序集）中的 API 的情况非常普遍。 程序找到其他此类库的方式取决于项目的类型，以及二进制文件的类型。  
   
  在本机 C++ 项目中，如果你正在使用并非由解决方案中其他项目生成的本机 DLL 或 COM 组件，你将使用 LoadLibrary 或 CoCreateInstance 来指定指向二进制文件的路径，或者让系统通过查找定义明确的特定位置来找到它。  
   
- 在其他类型的项目（如 UWP 项目或 C++/CLI 项目）中，或当二进制文件由解决方案中其他项目生成时，你可将“引用”  添加到程序集、组件或项目。   引用在本质上是一组数据，让你的程序可以找到二进制文件并与其通信。       在你添加引用时，Visual Studio 会处理低级别的详细信息。 若要将引用从 c + + 项目设置为.NET Frameworkassemblies (C + + /cli 仅)、 COM 组件，包括你的解决方案中的其他项目共享的项目，或连接的服务，右键单击**引用**中节点**解决方案资源管理器**弹出**引用管理器**。 你在引用管理器中的所见内容有所差异，具体取决于你的项目类型。  
+ 在其他类型的项目（如 UWP 项目或 C++/CLI 项目）中，或当二进制文件由解决方案中其他项目生成时，你可将“引用”  添加到程序集、组件或项目。   引用在本质上是一组数据，让你的程序可以找到二进制文件并与其通信。       在你添加引用时，Visual Studio 会处理低级别的详细信息。 若要设置 C++ 项目到 .NET Framework 程序集（仅限 C++/CLI）、COM 组件、解决方案中的其他项目（包括共享项目）或连接服务的引用，请右键单击“解决方案资源管理库”中的“引用”节点，以打开“引用管理器”。 你在引用管理器中的所见内容有所差异，具体取决于你的项目类型。  
   
  在本机 C++ 项目 (ATL) 中， *引用* 的理念只适用于解决方案中的其他项目（包括共享项目），因此你只能在“引用管理器” 中看到这些内容：  
   
- ![Visual C&#43; &#43;引用管理器&#40;ATL 项目&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 引用管理器 （ATL 项目）")  
+ ![Visual C&#43;&#43; 引用管理器（ATL 项目）](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++ 引用管理器（ATL 项目）")  
   
- 在 C++/CLI 或通用 Windows 平台项目中，引用的理念适用于解决方案中的其他项目，以及更多类型的二进制文件。  这些中公开的全部**引用管理器**。
+ 在 C++/CLI 或通用 Windows 平台项目中，引用的理念适用于解决方案中的其他项目，以及更多类型的二进制文件。  以下是“引用管理器”中公开的全部内容。
   
 ## <a name="reference-properties"></a>引用属性  
  每类引用均有属性。 你可以采用以下两种方式来查看属性：在解决方案资源管理器中选择引用并按“Alt + Enter” ，或者右键单击并选择“属性” 。 一些属性为只读属性，而一些可进行修改。 然而，你通常无需手动修改这些属性。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
  显示用于从所引用的 COM 库或 ActiveX 控件中生成互操作程序集的工具。  
   
 ### <a name="assembly-reference-properties"></a>程序集引用属性  
- 程序集引用属性是仅适用于引用.NET Frameworkassemblies 在 C + + /cli 项目。 仅当.NET Frameworkassembly 中选择时，会显示这些属性**引用**窗格。 这些属性不可修改。  
+ 程序集引用属性仅用于对 C++/CLI 项目中 .NET Framework 程序集的引用。 只有在“引用”窗格中选中 .NET Framework 程序集时，才显示这些属性。 这些属性不可修改。  
   
  **相对路径**  
  显示项目目录到所引用程序集的相对路径。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/04/2018
  显示所引用的程序集的目录路径。  
   
  **标识**  
- 对于.NET Frameworkassemblies 中，将显示的完整路径。 对于 COM 组件，显示 GUID。  
+ 对于 .NET Framework 程序集，显示完整路径。 对于 COM 组件，显示 GUID。  
   
  **标签**  
  显示引用的标签。  

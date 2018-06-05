@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; （Visual c + +） |Microsoft 文档'
+title: '&lt;paramref&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326578"
 ---
-# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; （Visual c + +）
-\<Paramref > 标记为你提供了一种方法，以指示词为参数。 可以处理的.xml 文件以设置此参数的格式以不同的方式。  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
+\<paramref> 标记提供一种指示某字为参数的方法。 可处理 .xml 文件，以某种不同的方式设置此参数格式。  
   
 ## <a name="syntax"></a>语法  
   
