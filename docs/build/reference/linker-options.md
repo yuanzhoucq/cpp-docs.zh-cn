@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753625"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -67,6 +68,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|控制 DLL 的延迟加载。|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|导致延迟加载指定的 DLL。|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|对程序集进行部分签名。|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|在依赖 DLL 加载上设置默认值标志。|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|生成 DLL。|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|创建内核模式驱动程序。|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否生成可在加载时随机重新设定基址的可执行文件映像。|
@@ -128,7 +130,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|指定链接器生成的类型库的资源 ID。|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|指定 .tlb 文件和其他 MIDL 输出文件的名称。|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|创建专为在终端服务器下运行而设计的应用程序。|
-|[/ USEPROFILE](../../build/reference/useprofile.md)|使用按配置文件优化定型数据，以创建优化的映像。|
+|[/USEPROFILE](../../build/reference/useprofile.md)|使用按配置文件优化定型数据，以创建优化的映像。|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|打印链接器进度消息。|
 |[/VERSION](../../build/reference/version-version-information.md)|分配版本号。|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含指定的静态库中的每个对象文件。|
