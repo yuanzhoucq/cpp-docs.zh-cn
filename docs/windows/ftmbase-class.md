@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bcc003811a747569f22f6b2603faf72096dd049
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814347"
 ---
 # <a name="ftmbase-class"></a>FtmBase 类
 表示自由线程封送拆收器对象。  
@@ -36,7 +37,7 @@ class FtmBase : public Microsoft::WRL::Implements<
 ```  
   
 ## <a name="remarks"></a>备注  
- 有关详细信息，请参阅 MSDN 库中"COM 引用"主题的"COM 接口"子主题中的"IMarshal"主题。  
+ 有关详细信息，请参阅[RuntimeClass 类](runtimeclass-class.md)。  
   
 ## <a name="members"></a>成员  
   
