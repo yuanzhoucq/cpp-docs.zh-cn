@@ -21,7 +21,7 @@ ms.openlocfilehash: 9d0a70ea74851d3a10f9d46b8289098d6fb3fe22
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705369"
 ---
 # <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK（添加 SupressUnmanagedCodeSecurityAttribute）
@@ -48,7 +48,7 @@ A`PInvoke`链接器找不到一个托管的符号来满足中托管的调用方�
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-1. 展开**配置属性**节点。
+1. 展开“配置属性”节点。
 
 1. 展开**链接器**节点。
 

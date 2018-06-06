@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
+ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755766"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：创建和使用 unique_ptr 实例
 A [unique_ptr](../standard-library/unique-ptr-class.md)不共享它的指针。 无法将复制到另一个`unique_ptr`、 按值传递给函数，或需要副本进行任何 C++ 标准库算法中使用。 只能移动 `unique_ptr`。 这意味着，内存资源所有权将转移到另一 `unique_ptr`，并且原始 `unique_ptr` 不再拥有此资源。 我们建议你将对象限制为由一个所有者所有，因为多个所有权会使程序逻辑变得复杂。 因此，您需要为普通的 C++ 对象的智能指针，则使用`unique_ptr`，而当构造`unique_ptr`，使用[make_unique](../standard-library/memory-functions.md#make_unique)帮助器函数。  
@@ -25,7 +26,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)不共享它的指针。 
   
  ![移动的唯一所有权&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr`在中定义`<memory>`C++ 标准库中的标头。 这正是与原始指针有效并可在 C++ 标准库容器。 添加`unique_ptr`到 C++ 标准库容器的实例是高效因为移动构造函数的`unique_ptr`无需进行复制操作。  
+ `unique_ptr`在中定义`<memory>`C++ 标准库中的标头。 它完全与原始指针一样有效并可在 c + + 标准库容器。 添加`unique_ptr`到 C++ 标准库容器的实例是高效因为移动构造函数的`unique_ptr`无需进行复制操作。  
   
 ## <a name="example"></a>示例  
  以下示例演示如何创建 `unique_ptr` 实例并在函数之间传递这些实例。  

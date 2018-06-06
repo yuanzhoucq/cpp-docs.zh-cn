@@ -1,7 +1,7 @@
 ---
 title: x64 (amd64) 内部函数列表 |Microsoft 文档
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9412d7f0d464c6d8b795214cba900f1ae24ab27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76fc614bae4e94ddfd0c2245971315be5f7e5ddf
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753690"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) 内部函数列表
 
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
 
 - [Intel 内部函数指南](https://software.intel.com/sites/landingpage/IntrinsicsGuide)。 使用搜索框查找特定的内部函数。
 
-- [Intel 64 和 ia-32 体系结构软件开发人员手册](https://software.intel.com/articles/intel-sdm)
+- [Intel 64 和 ia-32 体系结构软件开发人员手册](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Intel 体系结构指令集扩展编程参考](https://software.intel.com/en-us/isa-extensions)
+- [Intel 体系结构指令集扩展编程参考](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Intel 高级矢量扩展简介](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [AMD 开发人员指南、 手册和 ISA 文档](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 开发人员指南、 手册和 ISA 文档](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 下表列出了 x64 处理器上可用的内部函数。 “技术”列列出了所需的指令集支持。 使用 [__cpuid](../intrinsics/cpuid-cpuidex.md) 内部函数确定运行时的指令集支持。 如果两个条目均在一行中，则它们表示同一内部函数的不同入口点。 [1] 表示内部函数仅适用于 AMD 处理器。 [2] 表示内部函数仅适用于 Intel 处理器。 [3] 指示该原型是一个宏。 “标题”列中列出了函数原型所需的标题。 为简明起见，Intrin.h 标头同时包含 immintrin.h 和 ammintrin.h。
 

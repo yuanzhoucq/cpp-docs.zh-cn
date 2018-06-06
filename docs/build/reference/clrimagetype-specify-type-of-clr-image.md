@@ -22,7 +22,7 @@ ms.openlocfilehash: b5efb2e73e854591be7134753cec21a708fff3e5
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705005"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE（指定 CLR 映像的类型）
@@ -45,7 +45,7 @@ ms.locfileid: "34705005"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
 
-1. 展开**配置属性**节点。
+1. 展开“配置属性”节点。
 
 1. 展开**链接器**节点。
 

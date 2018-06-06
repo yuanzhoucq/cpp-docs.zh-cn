@@ -204,7 +204,7 @@
 ### [/DELAY（延迟加载导入设置）](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD（延迟加载导入）](delayload-delay-load-import.md)
 ### [/DELAYSIGN（为程序集进行部分签名）](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS （设置默认依赖加载标志）](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG （设置默认依赖加载标志）](dependentloadflag.md)
 ### [/DLL（生成 DLL）](dll-build-a-dll.md)
 ### [/DRIVER（Windows NT 内核模式驱动程序）](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE（使用地址空间布局随机化）](dynamicbase-use-address-space-layout-randomization.md)

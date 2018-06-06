@@ -19,7 +19,7 @@ ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705587"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 类
@@ -52,7 +52,7 @@ class RoInitializeWrapper
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `RoInitializeWrapper`  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
