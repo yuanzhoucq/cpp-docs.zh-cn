@@ -43,7 +43,7 @@ ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704654"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
@@ -144,7 +144,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 有关 **/clr**代码， **_beginthread**和 **_beginthreadex**都具有两个重载。 一种采用本机调用约定函数指针，和另一种使用 **__clrcall**函数指针。 第一个重载不是应用程序安全域且永远不会是。 如果你正在编写 **/clr**代码，则必须确保新线程进入正确的应用程序域，然后才能访问托管资源。 例如，可以使用 [call_in_appdomain 函数](../../dotnet/call-in-appdomain-function.md)来完成该操作。 第二个重载是应用程序安全域;新创建的线程总是最终将得到的调用方的应用程序域中 **_beginthread**或 **_beginthreadex**。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|

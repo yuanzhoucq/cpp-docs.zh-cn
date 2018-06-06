@@ -21,7 +21,7 @@ ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704667"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
@@ -65,7 +65,7 @@ private ref class Array<TArg, 1> :
   
  此类在编译器会自动包括的 vccorlib.h 标头中定义。 因为它不是在 platform.winmd 中定义的公共类型，它会显示在 IntelliSense 中而不是在对象浏览器。  
   
-### <a name="requirements"></a>惠?  
+### <a name="requirements"></a>要求  
  编译器选项： **/ZW**  
 
  
