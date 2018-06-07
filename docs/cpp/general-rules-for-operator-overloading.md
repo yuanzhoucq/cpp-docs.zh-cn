@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34705421"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814334"
 ---
 # <a name="general-rules-for-operator-overloading"></a>运算符重载的一般规则
 以下规则约束如何实现重载运算符。 但是，它们不适用于[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符，对其进行单独讨论。  
@@ -55,7 +55,7 @@ ms.locfileid: "34705421"
   
 -   声明为成员函数的二元运算符将采用一个自变量；如果声明为全局函数，它们将采用两个自变量。  
   
--   如果可以为一个是一元或二元运算符使用运算符 (**&**， **\***， **+**，和**-**)，您可以单独重载每次使用。  
+-   如果可以为一个是一元或二元运算符使用运算符 (__&__， __*__， __+__，和__-__)，您可以单独重载每次使用。  
   
 -   重载运算符不能具有默认自变量。  
   
