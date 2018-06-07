@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569789"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 （Visual c + +）
-A*桌面应用程序*c + + 中是可以访问的 Windows Api，并在窗口中或在系统控制台任一运行整套的本机应用程序。 （尽管不再受正式支持 Windows XP，并且有从那时起已引入的许多 Windows Api），在 c + + 桌面应用程序可以通过 Windows 10 的 Windows XP 上运行。   桌面应用程序是不同于通用 Windows 平台 (UWP) 应用程序，可以在运行 Windows 10 的 Pc 上以及在 XBox、 Windows Phone、 Surface Hub 和其他设备上运行。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择您的技术](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
+A*桌面应用程序*c + + 中是可以访问的 Windows Api，并在窗口中或在系统控制台任一运行整套的本机应用程序。 （尽管不再受正式支持 Windows XP，并且有从那时起已引入的许多 Windows Api），在 c + + 桌面应用程序可以通过 Windows 10 的 Windows XP 上运行。
+
+桌面应用程序是不同于通用 Windows 平台 (UWP) 应用程序，可以在运行 Windows 10 的 Pc 上以及在 XBox、 Windows Phone、 Surface Hub 和其他设备上运行。 有关桌面 vs 的详细信息。UWP 应用程序，请参阅[选择您的技术](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
+
+
+**桌面桥**在 Windows 10 可以打包你的现有桌面应用程序或作为 UWP 应用的 COM 对象，并添加诸如 touch，或从现代调用 Api 的 UWP 功能 Windows API 设置。 你还可以向 Visual Studio 中和在一次在一起打包并使用 Windows Api 它们之间通信的包中的桌面解决方案中添加的 UWP 应用。  
+   
+在 Visual Studio 2017 15.4 及更高版本，你可以创建 Windows 应用程序的包项目大幅简化打包现有桌面应用程序的工作。 有一些限制方面的注册表调用或 Api 桌面应用程序使用，但在许多情况下，您可以创建替代代码路径，若要在应用包运行时实现类似的功能。 有关详细信息，请参阅[桌面桥](/windows-uwp/porting/desktop-to-uwp-root)。  
   
  **术语**  
   
