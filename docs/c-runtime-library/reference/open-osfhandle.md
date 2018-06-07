@@ -1,7 +1,7 @@
 ---
 title: _open_osfhandle | Microsoft 文档
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beb8c074beeb47274fbae21ea293d0ea55f28d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569831"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -67,23 +68,22 @@ int _open_osfhandle (
 
 ## <a name="remarks"></a>备注
 
-**_Open_osfhandle**函数分配的 C 运行时文件描述符，并将其与指定的操作系统文件句柄关联*osfhandle*。 *标志*自变量是由一个或多个 Fcntl.h 中定义的清单常量构成一个整数表达式。 当两个或多个清单常量来形成*标志*自变量，这些常量将与按位 OR 运算符合并 ( **&#124;** )。
+**_Open_osfhandle**函数分配的 C 运行时文件描述符，并将其与指定的操作系统文件句柄关联*osfhandle*。 若要避免编译器警告，强制转换*osfhandle*参数**处理**到**intptr_t**。 *标志*自变量是一个整数表达式，构成的一个或多个清单常量定义中\<fcntl.h >。 当两个或多个清单常量来形成*标志*自变量，这些常量将与按位 OR 运算符合并 ( **&#124;** )。
 
-Fcntl.h 中定义的以下清单常量：
+在中定义这些清单常量\<fcntl.h >:
 
-**\_O\_追加**定位文件指针到每个写入操作之前的文件的末尾。
+|||
+|-|-|
+**\_O\_追加**|在执行每个写入操作之前，将文件指针定位到文件结尾。
+**\_O\_RDONLY**|打开文件以供只读。
+**\_O\_TEXT**|在文本（转换）模式下打开文件。
+**\_O\_WTEXT**|在 Unicode（转换 UTF-16）模式下打开文件。
 
-**\_O\_RDONLY**打开只读文件。
-
-**\_O\_文本**在文本 （转换） 模式下打开该文件。
-
-**\_O\_WTEXT**在 Unicode (已翻译 utf-16) 模式下打开该文件。
-
-要关闭使用打开的文件 **_open_osfhandle**，调用[\_关闭](close.md)。 通过调用也关闭基础的操作系统文件句柄 **_close**，因此不需要调用 Win32 函数**CloseHandle**对原始句柄。 如果由所拥有的文件描述符**文件&#42;** 流，然后调用[fclose](fclose-fcloseall.md)上**文件&#42;** 流也会关闭这两个的文件描述符与基础句柄。 在这种情况下，不要调用 **_close**上的文件描述符。
+**_Open_osfhandle**调用将的 Win32 文件句柄的所有权转移到的文件描述符。 要关闭使用打开的文件 **_open_osfhandle**，调用[\_关闭](close.md)。 通过调用也关闭基础的操作系统文件句柄 **_close**，因此不需要调用 Win32 函数**CloseHandle**对原始句柄。 如果由所拥有的文件描述符**文件&#42;** 流，然后调用[fclose](fclose-fcloseall.md)上**文件&#42;** 流也会关闭这两个的文件描述符与基础句柄。 在这种情况下，不要调用 **_close**上的文件描述符。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_open_osfhandle**|\<io.h>|
 

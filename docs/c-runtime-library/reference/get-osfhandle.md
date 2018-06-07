@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft 文档
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569844"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>返回值
 
-如果返回操作系统文件句柄*fd*有效。 否则，将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回**INVALID_HANDLE_VALUE** (-1)，并将设置**errno**到**EBADF**，指示无效文件句柄。
+如果返回操作系统文件句柄*fd*有效。 否则，将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回**INVALID_HANDLE_VALUE** (-1)，并将设置**errno**到**EBADF**，指示无效文件句柄。 若要避免编译器警告，在预期的 Win32 文件句柄的例程中使用结果时，将它转换到**处理**类型。
 
 ## <a name="remarks"></a>备注
 
@@ -68,7 +69,7 @@ intptr_t _get_osfhandle(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_osfhandle**|\<io.h>|
 
