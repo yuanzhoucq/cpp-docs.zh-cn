@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239419"
 ---
 # <a name="cmap-class"></a>CMap 类
 将唯一键映射到值的字典集合类。  
@@ -67,20 +68,20 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  用作到映射的键的对象类。  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  数据类型用于`KEY`自变量; 通常指`KEY`。  
   
  `VALUE`  
  存储在映射中的对象类。  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  数据类型用于`VALUE`自变量; 通常指`VALUE`。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-structures"></a>公共结构  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|一个包含密钥值和关联的对象的值的嵌套的结构。|  
   

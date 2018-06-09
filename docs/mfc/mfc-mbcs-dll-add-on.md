@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df6ecf03a5b1c92dc7e435fc014615db09422638
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcfac98c5ff36f84ec0b7c4d2fbd6ff40cbb0d4
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239445"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL 加载项
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
 
 **Visual Studio 2015**： 两个 Unicode 和 MBCS MFC Dll 包含在 Visual c + + 安装组件，但默认情况下不安装 MFC 对的支持。 在 Visual Studio 安装程序中，Visual C++ 和 MFC 是可选安装配置。 若要确保已安装 MFC，请在安装程序中选择“自定义”  ，并确保在“编程语言” 下选择了“Visual C++”  和“用于 C++ 的 Microsoft 基础类”  。 如果已安装 Visual Studio，则尝试创建 MFC 项目时，系统将提示你安装 Visual C++ 和/或 MFC。
 
-**Visual Studio 2017**: Unicode 和 MBCS MFC Dll 使用安装**使用 c + + 桌面开发**当你选择的工作负荷**MFC 和 ATL 支持**从**可选组件**窗格。 如果你的安装不包括这些组件，你可以启动安装程序从**新项目**对话框，方法是使用**打开 Visual Studio 安装程序**链接。
+**Visual Studio 2017**: Unicode 和 MBCS MFC Dll 使用安装**使用 c + + 桌面开发**当你选择的工作负荷**MFC 和 ATL 支持**从**可选组件**窗格。 如果你安装不包括这些组件，导航到**文件 |新项目**对话框，然后单击**打开 Visual Studio 安装程序**链接。
 
 ## <a name="see-also"></a>请参阅
 
