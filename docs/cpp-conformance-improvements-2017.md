@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762057"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 中 C++ 的一致性改进
 
@@ -1382,7 +1383,7 @@ Visual Studio 2017 版本 15.3 中添加了此警告，但是默认关闭。 在
 
 ### <a name="defaulted-functions-and-declspecnothrow"></a>默认函数和 __declspec(nothrow)
 
-以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数*。*因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数：
+以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数 *。* 因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数：
 
 ```cpp
 struct A {
@@ -1581,6 +1582,46 @@ D<int> d;
 ```
 
 若要修复此错误，请将 B() 表达式更改为 B\<T>()。
+
+### <a name="constexpr-aggregate-initialization"></a>constexpr 聚合初始化
+
+先前版本的 C++ 编译器错误处理了 constexpr 聚合初始化；它接受了无效代码，其中 aggregate-init-list 拥有太多元素并为其生成了错误的 codegen。 以下代码是一个此类代码的示例： 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+在 Visual Studio 2017 版本 15.7 更新 3 及更高版本中，前面的示例现在引发“C2078 初始值设定项太多”。 以下示例演示了如何修复此代码。 在使用嵌套 brace-init-lists 初始化 `std::array` 时，给予内部数组一个自己的 braced-list：
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
 
 ## <a name="see-also"></a>请参阅
 

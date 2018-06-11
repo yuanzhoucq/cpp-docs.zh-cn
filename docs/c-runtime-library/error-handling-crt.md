@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee55abe1107e578729fe8d5a301a067afdb6c551
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704842"
 ---
 # <a name="error-handling-crt"></a>错误处理 (CRT)
 
@@ -45,4 +46,4 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>请参阅
 
-[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+- [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)

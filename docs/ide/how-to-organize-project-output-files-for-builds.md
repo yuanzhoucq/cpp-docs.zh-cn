@@ -1,5 +1,5 @@
 ---
-title: 如何： 组织生成的项目输出文件 |Microsoft 文档
+title: 如何：组织生成的项目输出文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,65 +15,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 5058493e93a89e64c87ef52b73ff8fe3272f8f99
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705340"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>如何：组织生成的项目输出文件
-本主题描述用于组织项目输出文件的最佳做法。 生成时未正确设置项目输出文件，可以在发生错误。 本主题还概述了每种用于组织项目输出文件的替代方案的优缺点。  
+本主题介绍组织项目输出文件的最佳做法。 如果没有正确设置项目输出文件，可能会出现生成错误。 本主题还概述每个替代选项在组织项目输出文件方面的优缺点。  
   
 ## <a name="referencing-clr-assemblies"></a>引用 CLR 程序集  
   
-#### <a name="to-reference-assemblies-with-using"></a>引用程序集与为 #using  
+#### <a name="to-reference-assemblies-with-using"></a>使用 #using 引用程序集  
   
-1.  你可以在代码中直接引用程序集，通过使用 #using 指令，如`#using <System.Data.dll>`。 有关详细信息，请参阅[#using 指令](../preprocessor/hash-using-directive-cpp.md)。  
+1.  使用 #using 指令（例如 `#using <System.Data.dll>`）可以直接从代码引用程序集。 有关详细信息，请参阅 [#using 指令](../preprocessor/hash-using-directive-cpp.md)。  
   
-     指定的文件可以是.dll、.exe、.netmodule 或.obj，只要它是在 MSIL 中。 可以采用任何语言生成引用的组件。 使用此选项，因为将从 MSIL 中提取元数据将具有 intellisense 的访问。 所涉及的文件必须位于项目; 路径否则为该项目将不进行编译和 Intellisense 将不可用。 确定文件是否位于路径中的简单办法是： 右击 #using 行，选择**打开的文档**命令。 如果找不到该文件，你将收到通知。  
+     所指定的文件可以是 dll、.exe、.netmodule 或 .obj，只要文件是以 MSIL 生成的即可。 可以引用以任何语言生成的组件。 使用此选项将能访问 IntelliSense，因为会从 MSIL 中提取元数据。 所涉及的文件必须位于项目的路径中，否则不会编译项目，并且也无法使用 IntelliSense。 若要确定文件是否在路径中，最简单的方式是右键单击 #using 行并选择“打开文档”命令。 如果未找到文件，你将收到通知。  
   
-     如果您不想要放置文件的完整路径，则可以使用 **/AI**编译器选项来编辑的搜索路径 #using 引用。 有关详细信息，请参阅 [/AI（指定元数据目录）](../build/reference/ai-specify-metadata-directories.md)。  
+     如果不希望放置文件的完整路劲，可以使用“/AI”编译器选项来编辑 #using 引用的搜索路径。 有关详细信息，请参阅 [/AI（指定元数据目录）](../build/reference/ai-specify-metadata-directories.md)。  
   
-#### <a name="to-reference-assemblies-with-fu"></a>引用程序集使用 /FU  
+#### <a name="to-reference-assemblies-with-fu"></a>使用 /FU 引用程序集  
   
-1.  而不是引用程序集直接从代码文件中，按上文所述，你可以使用 **/FU**编译器选项。 此方法的优点是，则不需要添加单独 #using 语句引用给定程序集的每个文件。  
+1.  除从代码文件直接引用程序集（如上所述）以外，还可以使用“/FU”编译器选项。 此方法的优点是你不必将单独的 #using 语句添加到每个引用给定程序集的文件。  
   
-     若要设置此选项，打开**属性页**项目。 展开**配置属性**节点，然后展开**C/c + +** 节点，然后选择**高级**。 将所需的程序集添加旁边**强制 #using**。 有关详细信息，请参阅 [/FU（命名强制 #using 文件）](../build/reference/fu-name-forced-hash-using-file.md)。  
+     若要设置此选项，请打开项目的“属性页”。 展开“配置属性”节点，然后展开“C/C++”节点并选择“高级”。 在“强制 #using”旁边添加所需程序集。 有关详细信息，请参阅 [/FU（命名强制 #using 文件）](../build/reference/fu-name-forced-hash-using-file.md)。  
   
-#### <a name="to-reference-assemblies-with-add-new-reference"></a>若要添加新引用与引用程序集  
+#### <a name="to-reference-assemblies-with-add-new-reference"></a>通过“添加新引用”来引用程序集  
   
-1.  这是使用 CLR 程序集的最简单方法。 首先，请确保编译项目与 **/clr**编译器选项。 然后，右键单击项目从**解决方案资源管理器**和选择**添加**，**引用**。 **属性页**对话框将出现。  
+1.  这是使用 CLR 程序集最简单的方法。 首先，请确保项目是使用“/clr”编译器选项编译的。 然后在“解决方案资源管理器”中右键单击项目，并选择“添加”、“引用”。 此时将出现“属性页”对话框。  
   
-2.  从**属性页**对话框中，选择**添加新引用**。 将显示一个对话框，列出所有.NET、 COM 和当前项目中可用的其他程序集。 选择所需的程序集，然后单击**确定**。  
+2.  从“属性页”对话框中选择“添加新引用”。 此时将出现一个对话框，其中列出了所有在当前项目中可用的 .NET、COM 和其他程序集。 选择所需程序集，然后单击“确定”。  
   
-     设置项目引用后，自动处理相应的依赖项。 此外，由于元数据是程序集的一部分，因此不无需添加标头文件或原型托管程序集中的正在使用的元素。  
+     设置项目引用后，将自动处理对应的依赖项。 此外，由于元数据是程序集的一部分，因此不需要添加头文件或者为从托管程序集使用的元素指定原型。  
   
-## <a name="referencing-native-dlls-or-static-libraries"></a>引用本机 Dll 或静态库  
+## <a name="referencing-native-dlls-or-static-libraries"></a>引用本机 DLL 或静态库  
   
-#### <a name="to-reference-native-dlls-or-static-libraries"></a>若要引用本机 Dll 或静态库  
+#### <a name="to-reference-native-dlls-or-static-libraries"></a>引用本机 DLL 或静态库  
   
-1.  引用相应的标头文件中使用 #include 指令。 标头文件必须是包含路径或当前项目的一部分。 有关详细信息，请参阅[#include 指令 （C/c + +）](../preprocessor/hash-include-directive-c-cpp.md)。  
+1.  在代码中使用 #include 指令引用适当的头文件。 头文件必须位于包含路径中，或者是当前项目的一部分。 有关详细信息，请参阅 [#include 指令 (C/C++)](../preprocessor/hash-include-directive-c-cpp.md)。  
   
-2.  你还可以设置项目依赖项。 设置项目依赖项保证了以下两点。 首先，它可确保，以便项目始终可以找到所需的依赖文件，按正确的顺序生成项目。 其次，它将隐式添加依赖项目的输出目录的路径，以便在链接时，可以轻松地找到文件。  
+2.  还可以设置项目依赖项。 设置项目依赖项能保证两点。 首先能确保按正确顺序生成项目，从而让项目始终可以找到所需的依赖文件。 其次会将依赖项目的输出目录隐式添加至路径，这样能在链接时轻松找到文件。  
   
-3.  若要部署应用程序，你将需要将 DLL 放置在适当的位置。 这可以是以下项之一：  
+3.  若要部署应用程序，需要将 DLL 放置在适当的位置。 可以是以下位置之一：  
   
-    1.  可执行文件所在的路径。  
+    1.  与可执行文件相同的路径。  
   
-    2.  在系统路径中的任意位置 (**路径**环境变量)。  
+    2.  系统路径（环境变量“path”）中的任何位置。  
   
-    3.  中的并行程序集。 有关详细信息，请参阅[构建 C/c + + 端并行程序集](../build/building-c-cpp-side-by-side-assemblies.md)。  
+    3.  并行程序集中。 有关详细信息，请参阅[生成 C/C++ 并行程序集](../build/building-c-cpp-side-by-side-assemblies.md)。  
   
 ## <a name="working-with-multiple-projects"></a>使用多个项目  
- 默认情况下，以便所有输出文件都创建项目目录的子目录中生成项目。 目录的名称为基于的生成配置 （例如调试或发布）。 为了使同级项目能够相互引用，每个项目必须显式添加到其路径在顺序中用于链接若要成功执行的其他项目输出目录。 设置项目依赖项时，这会自动完成。 但是，如果不使用依赖项，你必须仔细处理上述情况由于生成可能会很难管理。 例如，如果一个项目具有调试和发布配置，它包括从同级项目外部库，它应使用一个不同的库文件，具体取决于生成配置。 因此，这些路径进行硬编码可能会很棘手。  
+ 默认情况下，项目生成中的所有输出文件都创建在项目目录的子目录中。 目录的名称基于生成配置（例如调试或发布）。 为了让同级项目能互相引用，并且为了能成功地进行链接，每个项目必须显式地将其他项目输出目录添加到自己的路径中。 这将在设置项目依赖项时自动完成。 但是如果没有使用依赖项，则必须谨慎地处理此项操作，因为生成可能会很难管理。 例如，如果项目具备调试和发布配置，且包括来自同级项目的外部库，则应根据生成的配置使用不同的库文件。 所以对这些路径进行硬编码会非常困难。  
   
- （如可执行文件、 增量链接器文件和 PDB 文件） 的所有重要的输出文件将复制到一个常见的解决方案目录中。 因此，在使用包含大量使用等效配置的 c + + 项目的解决方案，所有输出文件是集中在都一起以简化链接和部署。 您可以确保按预期如果它们将这些文件显示在一起 （因为保证文件都是在路径中），其应用程序/库将正常工作。  
+ 所有重要的输出文件（例如可执行文件、增量链接器文件和 PDB 文件）都复制到常见的解决方案目录。 这样，在使用包含大量具备相同配置的 C++ 项目的解决方案时，会集中所有输出文件，以便简化链接和部署操作。 如果将这些文件保存在一起，可以确保它们的应用程序/库会按预期运行（因为能保证文件都在该路径中）。  
   
- 部署到生产环境时，输出文件的位置可以是主要问题。 在 IDE 中运行项目，时包括的库路径并不一定与生产环境中的相同。 例如，如果你有`#using "../../lib/debug/mylib.dll"`但然后在代码中将 mylib.dll 部署到不同的相对位置、 应用程序将在运行时失败。 若要防止此情况，应避免使用中的相对路径 #include 语句位于你的代码。 最好确保所需的文件的项目生成路径中，同样，确保相应的生产文件的位置是否正确。  
+ 部署到生成环境时，可能主要需要注意输出文件的位置。 在 IDE 中运行项目时，指向包括的库的路径无须与生成环境中的路径一致。 例如，如果你的代码中有 `#using "../../lib/debug/mylib.dll"` 但随后将 mylib.dll 部署进了不同的相对位置，则应用程序将在运行时出现故障。 若要防止此情况，应避免在代码的 #include 语句中使用相对路径。 最好确保必需的文件位于项目生成路径中，同样也请确保对应的生产文件也位于适当的位置。  
   
 #### <a name="how-to-specify-where-output-files-go"></a>如何指定输出文件输出位置  
   
-1.  项目的位置输出设置可在项目的**属性页**。 展开的节点旁边**配置属性**和选择**常规**。 输出位置指定旁边**输出目录**。 有关详细信息，请参阅[常规属性页 （项目）](../ide/general-property-page-project.md)。  
+1.  可在项目的“属性页”中找到项目输出位置的设置。 展开“配置属性”旁边的节点，并选择“常规”。 可在“输出目录”旁指定输出位置。 有关详细信息，请参阅[“常规”属性页（项目）](../ide/general-property-page-project.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Visual C++ 项目类型](../ide/visual-cpp-project-types.md)

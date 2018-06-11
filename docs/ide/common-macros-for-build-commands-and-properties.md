@@ -1,7 +1,7 @@
 ---
-title: 用于生成命令和属性的常用宏 | Microsoft Docs
+title: 用于生成命令和属性的常用宏
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -102,63 +102,76 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 278cb34a49650d88b9e7de9efd8456ff430aca63
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339626"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569922"
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>用于生成命令和属性的常用宏
-根据你的安装选项，Visual Studio 可以为你提供数百个宏。 这些宏对应于默认设置的，或者在 .props 或 .targets 文件中，或者在项目设置中设置的 MSBuild 属性。 你可以在项目“属性页”  对话框中接受字符串的任意位置使用这些宏。 这些宏不区分大小写。  
-  
- 若要显示当前可用的宏，请在属性名称右侧列中单击下拉箭头。 如果“编辑”  可用，请单击它，然后在“编辑”对话框中单击“宏” 。 有关详细信息，请参阅[属性页](../ide/property-pages-visual-cpp.md)中“指定用户定义的值”部分。  
-  
- 标记为“已弃用”的宏不再使用，或已由等效的[项元数据宏](/visualstudio/msbuild/itemmetadata-element-msbuild)（%(name)）所替代****。 标记为“已弃用；已迁移”的宏也已弃用。 此外，如果包含宏的项目迁移自 Visual Studio 2008，则 Visual Studio 会将宏转换为等效的当前宏。  
-  
- 下表介绍了可用宏的常用子集。 此列表并不详尽。 有关如何创建 MSBuild 属性定义以及如何在 .props、.targets 和 .vcxproj 文件中将其用作宏的详细信息，请参阅 [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)。  
-  
-|宏|描述|  
-|-----------|-----------------|  
-|**$(RemoteMachine)**|设置为“调试”属性页上 **Remote Machine** 属性的值。 有关详细信息，请参阅 [更改 C/C++ 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) 。|  
-|**$(Configuration)**|当前项目配置的名称，例如，“调试”。|  
-|**$(Platform)**|当前项目平台的名称（例如“Win32”）。|  
-|**$(ParentName)**|（已弃用。）包含此项目项的项的名称。 这将是父文件夹的名称或项目名称。|  
-|**$(RootNameSpace)**|包含应用程序的命名空间（如果存在）。|  
-|**$(IntDir)**|为中间文件指定的目录路径。 如果这是一个相对路径，则中间文件将转到追加到项目目录的此路径。 此路径应具有尾随斜杠。 这将解析为 **Intermediate Directory** 属性的值。 请勿使用 **$(OutDir)** 定义此属性。|  
-|**$(OutDir)**|输出文件目录的路径。 如果这是一个相对路径，则输出文件将转到追加到项目目录中的此路径。 此路径应具有尾随斜杠。 这将解析为 **Output Directory** 属性的值。 请勿使用 **$(IntDir)** 定义此属性。|  
-|**$(DevEnvDir)**|Visual Studio 的安装目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。|  
-|**$(InputDir)**|（已弃用；已迁移。）输入文件的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。 如果项目即输入，则此宏等同于 **$(ProjectDir)**。|  
-|**$(InputPath)**|（已弃用；已迁移。）输入文件的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。 如果项目即输入，则此宏等同于 **$(ProjectPath)**。|  
-|**$(InputName)**|（已弃用；已迁移。）输入文件的基名称。 如果项目即输入，则此宏等同于 **$(ProjectName)**。|  
-|**$(InputFileName)**|（已弃用；已迁移。）输入文件的文件名称（定义为基名称 + 文件扩展名）。 如果项目即输入，则此宏等同于 **$(ProjectFileName)**。|  
-|**$(InputExt)**|（已弃用；已迁移。）输入文件的文件扩展名。 文件扩展名之前包括“.”。 如果项目即输入，则此宏等同于 **$(ProjectExt)**。|  
-|**$(ProjectDir)**|项目的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。|  
-|**$(ProjectPath)**|项目的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。|  
-|**$(ProjectName)**|项目的基名称。|  
-|**$(ProjectFileName)**|项目的文件名称（定义为基名称 + 文件扩展名）。|  
-|**$(ProjectExt)**|项目的文件扩展名。 文件扩展名之前包括“.”。|  
-|**$(SolutionDir)**|解决方案的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。 仅当在 IDE 中生成解决方案时定义。|  
-|**$(SolutionPath)**|解决方案的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。 仅当在 IDE 中生成解决方案时定义。|  
-|**$(SolutionName)**|解决方案的基名称。 仅当在 IDE 中生成解决方案时定义。|  
-|**$(SolutionFileName)**|解决方案的文件名称（定义为基名称 + 文件扩展名）。 仅当在 IDE 中生成解决方案时定义。|  
-|**$(SolutionExt)**|解决方案的文件扩展名。 文件扩展名之前包括“.”。 仅当在 IDE 中生成解决方案时定义。|  
-|**$(TargetDir)**|生成的主输出文件的目录（定义为驱动器 + 路径）；包括尾随反斜杠 “\\”。|  
-|**$(TargetPath)**|生成的主输出文件的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。|  
-|**$(TargetName)**|生成的主输出文件的基名称。|  
-|**$(TargetFileName)**|生成的主输出文件的文件名称（定义为基名称 + 文件扩展名）。|  
-|**$(TargetExt)**|生成的主输出文件的文件扩展名。 文件扩展名之前包括“.”。|  
-|**$(VSInstallDir)**|在其中安装了 Visual Studio 的目录。<br /><br /> 此属性包含目标 Visual Studio 版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v110`进行生成时， **$(VSInstallDir)** 包含 Visual Studio 2012 安装的路径。|  
-|**$(VCInstallDir)**|在其中安装了 Visual C++ 的目录。<br /><br /> 此属性包含目标 Visual C++ 版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v140` 进行生成时，$(VCInstallDir) 包含 Visual C++ 2015 安装的路径。|  
-|**$(FrameworkDir)**|在其中安装了 .NET Framework 的目录。|  
-|**$(FrameworkVersion)**|Visual Studio 使用的.NET framework 版本。 结合 **$(FrameworkDir)**，Visual Studio 使用的.NET Framework 版本的完整路径。|  
-|**$(FrameworkSDKDir)**|在其中安装了 .NET Framework 的目录。 .NET Framework 可能已作为 Visual Studio 的一部分安装或单独安装。|  
-|**$(WebDeployPath)**|从 Web 部署根到项目输出位置的相对路径。 返回与 <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>相同的值。|  
-|**$(WebDeployRoot)**|\<localhost> 的位置的绝对路径。 例如，c:\inetpub\wwwroot。|  
-|**$(SafeParentName)**|（已弃用。）有效名称格式中直接父级的名称。 例如，窗体是 .resx 文件的父级。|  
-|**$(SafeInputName)**|（已弃用。）作为有效类名称的文件名，去掉文件扩展名。|  
-|**$(SafeRootNamespace)**|（已弃用。）项目向导将在其中添加代码的命名空间名。 此命名空间名将仅包含有效的 C++ 标识符中允许的字符。|  
-|**$(FxCopDir)**|fxcop.cmd 文件的路径。 fxcop.cmd 文件不随所有 Visual C++ 版本安装。|  
-  
-## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中生成 C++ 项目](../ide/building-cpp-projects-in-visual-studio.md)
+
+根据你的安装选项，Visual Studio 可以为你提供数百个宏。 这些宏对应于默认设置的，或者在 .props 或 .targets 文件中，或者在项目设置中设置的 MSBuild 属性。 你可以在项目“属性页”  对话框中接受字符串的任意位置使用这些宏。 这些宏不区分大小写。
+
+## <a name="view-the-current-properties-and-macros"></a>查看当前属性和宏
+
+若要显示当前可用的宏，请在“属性页面”对话框中的任何属性页面上，选择属性行末尾的下拉箭头。 如果“编辑” 可用，请选择它，然后在“编辑”对话框中选择“宏”按钮。 对 Visual Studio 可见的当前属性和宏集，连同每个属性和宏的当前值一起列出。 有关详细信息，请参阅[属性页](../ide/property-pages-visual-cpp.md)中“指定用户定义的值”部分。
+
+## <a name="list-of-common-macros"></a>常见宏列表
+
+下表介绍了可用宏的常用子集。 此列表远未详尽。 有关如何创建 MSBuild 属性定义以及如何在 .props、.targets 和 .vcxproj 文件中将其用作宏的详细信息，请参阅 [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)。
+
+|宏|描述|
+|-----------|-----------------|
+|**$(Configuration)**|当前项目配置的名称，例如，“调试”。|
+|**$(DevEnvDir)**|Visual Studio 的安装目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。|
+|**$(FrameworkDir)**|在其中安装了 .NET Framework 的目录。|
+|**$(FrameworkSDKDir)**|在其中安装了 .NET Framework 的目录。 .NET Framework 可能已作为 Visual Studio 的一部分安装或单独安装。|
+|**$(FrameworkVersion)**|Visual Studio 使用的.NET framework 版本。 结合 **$(FrameworkDir)**，Visual Studio 使用的.NET Framework 版本的完整路径。|
+|**$(FxCopDir)**|fxcop.cmd 文件的路径。 fxcop.cmd 文件不随所有 Visual C++ 版本安装。|
+|**$(IntDir)**|为中间文件指定的目录路径。 如果这是一个相对路径，则中间文件将转到追加到项目目录的此路径。 此路径应具有尾随斜杠。 这将解析为 **Intermediate Directory** 属性的值。 请勿使用 **$(OutDir)** 定义此属性。|
+|**$(OutDir)**|输出文件目录的路径。 如果这是一个相对路径，则输出文件将转到追加到项目目录中的此路径。 此路径应具有尾随斜杠。 这将解析为 **Output Directory** 属性的值。 请勿使用 **$(IntDir)** 定义此属性。|
+|**$(Platform)**|当前项目平台的名称（例如“Win32”）。|
+|**$(ProjectDir)**|项目的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。|
+|**$(ProjectExt)**|项目的文件扩展名。 文件扩展名之前包括“.”。|
+|**$(ProjectFileName)**|项目的文件名称（定义为基名称 + 文件扩展名）。|
+|**$(ProjectName)**|项目的基名称。|
+|**$(ProjectPath)**|项目的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。|
+|**$(RemoteMachine)**|设置为“调试”属性页上 **Remote Machine** 属性的值。 有关详细信息，请参阅 [更改 C/C++ 调试配置的项目设置](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) 。|
+|**$(RootNameSpace)**|包含应用程序的命名空间（如果存在）。|
+|**$(SolutionDir)**|解决方案的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。 仅当在 IDE 中生成解决方案时定义。|
+|**$(SolutionExt)**|解决方案的文件扩展名。 文件扩展名之前包括“.”。 仅当在 IDE 中生成解决方案时定义。|
+|**$(SolutionFileName)**|解决方案的文件名称（定义为基名称 + 文件扩展名）。 仅当在 IDE 中生成解决方案时定义。|
+|**$(SolutionName)**|解决方案的基名称。 仅当在 IDE 中生成解决方案时定义。|
+|**$(SolutionPath)**|解决方案的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。 仅当在 IDE 中生成解决方案时定义。|
+|**$(TargetDir)**|生成的主输出文件的目录（定义为驱动器 + 路径）；包括尾随反斜杠 “\\”。|
+|**$(TargetExt)**|生成的主输出文件的文件扩展名。 文件扩展名之前包括“.”。|
+|**$(TargetFileName)**|生成的主输出文件的文件名称（定义为基名称 + 文件扩展名）。|
+|**$(TargetName)**|生成的主输出文件的基名称。|
+|**$(TargetPath)**|生成的主输出文件的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。|
+|**$(VCInstallDir)**|包含 Visual Studio 安装的 C++ 内容的目录。 此属性包含目标 Visual C++ 工具集的版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v140` 进行生成时，$(VCInstallDir) 包含 Visual C++ 2015 安装的路径。|
+|**$(VSInstallDir)**|在其中安装了 Visual Studio 的目录。 此属性包含目标 Visual Studio 工具集的版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v110`进行生成时， **$(VSInstallDir)** 包含 Visual Studio 2012 安装的路径。|
+|**$(WebDeployPath)**|从 Web 部署根到项目输出位置的相对路径。 返回与 <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>相同的值。|
+|**$(WebDeployRoot)**|\<localhost> 的位置的绝对路径。 例如，c:\inetpub\wwwroot。|
+
+## <a name="obsolete-macros"></a>弃用的宏
+
+Visual Studio 2008 和 Visual Studio 2010 之间的 C++ 生成系统已显著更改。 早期项目类型中使用的许多宏已更改为新的宏。 这些宏已不再使用，或者被一个或多个等效属性或[项目元数据宏](/visualstudio/msbuild/itemmetadata-element-msbuild) (%(name)) 值替换。 项目迁移工具可以更新标记为“已迁移”的宏。 如果包含宏的项目从 Visual Studio 2008 或更旧版本迁移到了 Visual Studio 2010，则 Visual Studio 会将宏转换为等效的当前宏。 更高版本的 Visual Studio 无法将 Visual Studio 2008 和更低版本中的项目转换为新的项目类型。 转换这些项目必须执行两步操作；首先将这些项目转换为 Visual Studio 2010，然后将结果转换为更新版本的 Visual Studio。 有关详细信息，请参阅[潜在的升级问题概述](../porting/overview-of-potential-upgrade-issues-visual-cpp.md)。
+
+|宏|描述|
+|-----------|-----------------|
+|**$(InputDir)**|（已迁移。）输入文件的目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。 如果项目即输入，则此宏等同于 **$(ProjectDir)**。|
+|**$(InputExt)**|（已迁移。）输入文件的文件扩展名。 文件扩展名之前包括“.”。 如果项目即输入，则此宏等同于 **$(ProjectExt)**。 对于源文件，此为“%(Extension)”。|
+|**$(InputFileName)**|（已迁移。）输入文件的文件名称（定义为基名称 + 文件扩展名）。 如果项目即输入，则此宏等同于 **$(ProjectFileName)**。 对于源文件，此为“%(Identity)”。|
+|**$(InputName)**|（已迁移。）输入文件的基名称。 如果项目即输入，则此宏等同于 **$(ProjectName)**。 对于源文件，此为“%(Filename)”。|
+|**$(InputPath)**|（已迁移。）输入文件的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。 如果项目即输入，则此宏等同于 **$(ProjectPath)**。 对于源文件，此为“%(FullPath)”。|
+|**$(ParentName)**|包含此项目项的项的名称。 这将是父文件夹的名称或项目名称。|
+|**$(SafeInputName)**|作为有效类名称的文件名，去掉文件扩展名。 此属性没有确切的等效项。|
+|**$(SafeParentName)**|有效名称格式中直接父级的名称。 例如，窗体是 .resx 文件的父级。 此属性没有确切的等效项。|
+|**$(SafeRootNamespace)**|项目向导将在其中添加代码的命名空间名。 此命名空间名将仅包含有效的 C++ 标识符中允许的字符。 此属性没有确切的等效项。|
+
+## <a name="see-also"></a>请参阅
+
+- [在 Visual Studio 中生成 C++ 项目](../ide/building-cpp-projects-in-visual-studio.md)
+- [Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)
+- [潜在的升级问题概述](../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

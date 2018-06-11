@@ -1,7 +1,7 @@
 ---
 title: 指定自定义生成工具| Microsoft Docs
 ms.custom: ''
-ms.date: 12/28/2017
+ms.date: 06/05/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
+ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335546"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34798926"
 ---
 # <a name="specify-custom-build-tools"></a>指定自定义生成工具
 
@@ -68,7 +68,7 @@ ms.locfileid: "33335546"
 
    - 在“输出”中指定输出文件的名称。 此为必填项，如果此属性没有值，则不会运行自定义生成工具。 如果自定义生成工具有多个输出，请以分号分隔它们的文件名。
 
-      输出文件的名称应与“命令行”属性中所指定的名称一致。 项目生成系统将查找该文件并检查文件日期。 如果输出文件的日期晚于输出文件日期，或未找到输出文件，则运行自定义生成工具。 如果所有“附加依赖项”文件的日期都早于输入文件日期，且输入文件的日期早于“输出”属性中指定的文件日期，则不运行自定义生成工具。
+      输出文件的名称应与“命令行”属性中所指定的名称一致。 项目生成系统将查找该文件并检查文件日期。 如果输出文件的日期早于输入文件日期，或未找到输出文件，则运行自定义生成工具。 如果所有“附加依赖项”文件的日期都早于输入文件日期，且输入文件的日期早于“输出”属性中指定的文件日期，则不运行自定义生成工具。
 
 如果希望在由自定义生成工具生成的输出文件上运行生成系统，则需要手动将其添加到项目。 自定义生成工具将在生成期间更新文件。
 
