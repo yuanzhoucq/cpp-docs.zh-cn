@@ -2,7 +2,7 @@
 title: Visual Studio 中安装 c + + 支持 |Microsoft 文档
 description: 安装 Visual c + + 的 Visual Studio 支持
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/08/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253751"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio 中安装 c + + 支持
 
@@ -32,17 +33,17 @@ ms.lasthandoff: 05/03/2018
 
 - 足够的可用磁盘空间。 Visual Studio 需要至少 7 GB 的磁盘空间，而且可能需要 50 GB 或更高如果安装了许多常用的选项。 我们建议将其安装在 c： 驱动器。
 
-有关磁盘空间和操作系统要求的详细信息，请参阅[Visual Studio 2017 系统要求](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs)。 安装报告多少磁盘空间，才能使用你选择的选项。
+有关磁盘空间和操作系统要求的详细信息，请参阅[Visual Studio 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-vs)。 安装报告多少磁盘空间，才能使用你选择的选项。
 
 ## <a name="installation"></a>安装
 
 1. 下载适用于 Windows 最新的 Visual Studio 2017 安装程序。
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">安装 Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">安装 Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> 或 <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>。
+   > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> 或 <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>。
 
 1. 查找安装程序文件下载并运行它。 它可能会显示在浏览器中，或可能在 Downloads 文件夹中找到它。 安装程序需要管理员特权才能运行。 你可能会看到**用户帐户控制**对话框，要求您为授予权限以便安装到你的系统进行更改; 选择**是**。 如果你遇到的问题，在文件资源管理器中查找下载的文件、 右键单击该安装程序图标，并选择**以管理员身份运行**从上下文菜单。
 
