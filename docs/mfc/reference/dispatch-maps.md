@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377091"
 ---
 # <a name="dispatch-maps"></a>调度映射
 OLE 自动化提供方法来调用方法和跨应用程序中访问属性。 由 Microsoft 基础类库用于调度这些请求提供的机制是"调度映射"，它指定了对象函数和属性，以及属性本身的和的数据类型的内部和外部名称函数自变量。  

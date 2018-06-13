@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090952"
 ---
 # <a name="casting-ccx"></a>强制转换 (C++/CX)
 有四种不同的强制转换运算符适用于 Windows 运行时类型： [static_cast 运算符](../cpp/static-cast-operator.md)， [dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)， **safe_cast 运算符**，和[reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。 当无法执行转换时，`safe_cast` 和 `static_cast` 将引发异常； [static_cast 运算符](../cpp/static-cast-operator.md) 还执行编译时类型检查。 如果`dynamic_cast` 无法转换类型，它将返回 `nullptr` 。 即使 `reinterpret_cast` 返回一个非 null 值，它也可能是无效的。 为此，我们建议不使用 `reinterpret_cast` ，除非已知该强制转换将会成功。 此外，我们建议，你不使用 C 样式强制转换中你的 C + + /cli CX 代码，因为它们是相同`reinterpret_cast`。  

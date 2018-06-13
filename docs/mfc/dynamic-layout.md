@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350844"
 ---
 # <a name="dynamic-layout"></a>动态布局
 使用 Visual Studio 2015 中的 MFC，你可以创建用户可以调整大小的对话框，你可以控制调整布局以更改大小的方式。 例如，可以将对话框底部的按钮附加到下边缘，使其始终保持在底部。 还可以将某些控件（如列表框、编辑框和文本字段）设置为在用户展开对话框时展开。  

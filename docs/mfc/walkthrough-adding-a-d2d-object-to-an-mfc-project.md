@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384015"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>演练：向 MFC 项目添加 D2D 对象
 本演练介绍如何添加基本 Direct2D (D2D) 到 Visual c + +，Microsoft 基础类库 (MFC) 项目对象，然后将该项目生成的应用程序将打印为"Hello，world"渐变背景上。  

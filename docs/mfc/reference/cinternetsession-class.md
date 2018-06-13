@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374560"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 创建和初始化一个或多个同时 Internet 会话，并说明与代理服务器的连接（如果需要）。  

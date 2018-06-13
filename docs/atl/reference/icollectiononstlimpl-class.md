@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358485"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 类
 此类提供了所使用的集合类的方法。  
