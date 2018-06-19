@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343345"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪贴板：复制和粘贴数据
 本主题介绍实现到复制和粘贴剪贴板中 OLE 应用程序所需的最小工作量。 建议你阅读[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)在继续之前的主题。  

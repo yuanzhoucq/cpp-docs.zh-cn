@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889682"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>添加控件时调整其大小
 ### <a name="to-size-a-control-while-you-add-it"></a>若要调整控件的大小，而将其添加  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270659"
 ---
 # <a name="compiler-error-c3888"></a>编译器错误 C3888
 “name”：C++/CLI 不支持与此 literal 数据成员关联的常量表达式  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889464"
 ---
 # <a name="semaphore-class"></a>Semaphore 类
 表示控制可支持有限数量用户的共享资源的同步对象。  

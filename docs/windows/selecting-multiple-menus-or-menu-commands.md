@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891904"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>选择多个菜单或菜单命令
 你可以选择多个菜单名称或菜单命令以执行删除或更改属性等批量操作。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268564"
 ---
 # <a name="compiler-error-c3732"></a>编译器错误 C3732
 interface： 不能从 IDispatch 继承自定义接口激发 COM 事件  

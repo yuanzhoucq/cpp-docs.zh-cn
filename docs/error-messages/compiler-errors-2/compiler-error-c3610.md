@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252427"
 ---
 # <a name="compiler-error-c3610"></a>编译器错误 C3610
 valuetype： 在调用方法 method 之前必须将值类型装箱  

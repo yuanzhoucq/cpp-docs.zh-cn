@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252679"
 ---
 # <a name="compiler-error-c3531"></a>编译器错误 C3531
 symbol： 的符号的类型包含 auto 必须具有初始值设定项  

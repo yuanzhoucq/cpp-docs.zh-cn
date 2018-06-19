@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348214"
 ---
 # <a name="printing"></a>打印
 Microsoft Windows 实现独立于设备的显示。 在 MFC 中，这意味着，相同的绘图调用，在`OnDraw`的视图类，成员函数负责绘制和其他设备，例如打印机上显示。 对于打印预览中，目标设备是模拟的打印机输出到显示器。  

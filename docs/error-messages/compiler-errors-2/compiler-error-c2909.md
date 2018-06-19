@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245435"
 ---
 # <a name="compiler-error-c2909"></a>编译器错误 C2909
 “identifier”: 函数模板的显式实例化需要返回类型  

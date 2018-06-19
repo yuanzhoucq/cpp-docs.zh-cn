@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890174"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>将位图另存为 GIF 或 JPEG（图标的图像编辑器）
 当你创建位图时，格式为位图 (.bmp) 创建映像。 为 GIF 或 JPEG 或其他图形格式，但是，可以保存图像。  

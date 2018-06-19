@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889621"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 结构
 描述中共享的锁模式的 SRWLock 类的共同特征。  
