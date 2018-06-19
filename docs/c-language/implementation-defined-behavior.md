@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383431"
 ---
 # <a name="implementation-defined-behavior"></a>实现定义的行为
 ANSI X3.159-1989，*American National Standard for Information Systems* - *编程语言* - *C*，包含“可移植性问题”节。 ANSI 部分列出了 ANSI 针对每个特定实现开放的 C 语言区域。 本节描述 Microsoft C 如何处理 C 语言的这些实现定义的区域。  

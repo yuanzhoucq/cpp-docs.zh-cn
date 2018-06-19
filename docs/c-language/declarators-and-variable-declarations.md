@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390601"
 ---
 # <a name="declarators-and-variable-declarations"></a>声明符和变量声明
 本节的其余部分描述了该列表中汇总的变量类型的声明的形式和含义。 具体来说，其余各节说明如何声明以下内容：  

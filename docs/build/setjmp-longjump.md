@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379830"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 当您包括 setjmpex.h 或 setjmp.h 时，则所有调用[setjmp](../c-runtime-library/reference/setjmp.md)或[longjmp](../c-runtime-library/reference/longjmp.md)将导致展开时，将调用析构函数，最后调用。  这不同于 x86、 最后子句中包括 setjmp.h 结果的位置以及析构函数不调用。  

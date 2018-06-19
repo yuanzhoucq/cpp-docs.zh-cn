@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379232"
 ---
 # <a name="understanding-the-helper-function"></a>了解 Helper 函数
 链接器支持延迟加载 helper 函数是什么实际上在运行时加载 DLL。 你可以修改要自定义其行为，通过编写自己的函数，并将其链接到你的程序而不是在 Delayimp.lib 中使用提供的帮助器函数的帮助器函数。 一个帮助器函数提供所有延迟加载 Dll。  

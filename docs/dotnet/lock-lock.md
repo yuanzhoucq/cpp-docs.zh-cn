@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135022"
 ---
 # <a name="locklock"></a>lock::lock
 构造`lock`对象，可以选择等待一定的时间，或者不是在所有永久，获取锁。  

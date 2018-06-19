@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387478"
 ---
 # <a name="lifetime"></a>生存期
 “生存期”是其中存在变量或函数的程序执行的时段。 标识符的存储持续时间决定其生存期。  

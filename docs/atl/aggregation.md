@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353958"
 ---
 # <a name="aggregation"></a>聚合
 有对象的实现者希望充分利用预构建的另一个对象提供的服务的时间。 此外，它想要此第二个对象，以显示为第一个自然一部分。 COM 达到这两个目标通过包容和聚合。  

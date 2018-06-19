@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135074"
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>如何：使用反射枚举程序集中的数据类型 (C++/CLI)
 下面的代码演示的公共类型和成员使用的枚举<xref:System.Reflection>。  

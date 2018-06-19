@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161764"
 ---
 # <a name="replacecopy-stlclr"></a>replace_copy (STL/CLR)
 检查源范围中的每个元素，并替换与指定值匹配的元素，同时将结果复制到新的目标范围。  

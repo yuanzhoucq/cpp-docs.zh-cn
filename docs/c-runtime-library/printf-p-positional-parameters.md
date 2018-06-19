@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391309"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 位置参数
 位置参数可以按要替换到格式字符串中字段的自变量的编号进行指定。 以下位置参数 `printf` 函数可用：  

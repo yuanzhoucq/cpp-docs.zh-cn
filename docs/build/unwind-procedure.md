@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382018"
 ---
 # <a name="unwind-procedure"></a>展开过程
 展开代码数组按降序排列。 发生异常时，上下文记录中的操作系统存储的完整上下文。 然后调用异常调度逻辑，这其中重复执行以下步骤以查找异常处理程序。  

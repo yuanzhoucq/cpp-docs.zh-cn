@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385252"
 ---
 # <a name="signed-bitwise-operations"></a>带符号的按位运算
 **ANSI 3.3**：对带符号整数进行的按位运算的结果  

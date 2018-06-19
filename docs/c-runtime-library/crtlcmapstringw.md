@@ -32,6 +32,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451948"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 将一个字符串映射到另一个字符串，以执行指定的与区域设置相关的转换。 此函数还可用于生成输入字符串的排序键。  

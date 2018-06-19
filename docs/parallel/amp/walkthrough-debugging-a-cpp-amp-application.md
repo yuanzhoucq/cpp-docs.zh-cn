@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463087"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>演练：调试 C++ AMP 应用程序
 本主题演示如何调试使用 C++ Accelerated Massive Parallelism (C++ AMP) 应用程序以便利用图形处理单元 (GPU)。 它使用总结大整数数组的并行缩减程序。 本演练阐释了以下任务：  

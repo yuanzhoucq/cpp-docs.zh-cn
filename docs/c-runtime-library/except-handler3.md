@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389402"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 内部 CRT 函数。 由框架用于查找相应的异常处理程序，以处理当前异常。  

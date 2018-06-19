@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386065"
 ---
 # <a name="c-storage-classes"></a>C 存储类
 变量的“存储类”可确定项是具有“全局”还是“本地”生存期。 C 将这两个生存期称为“静态”和“自动”。 具有全局生存期的项存在且具有贯穿整个程序执行过程的值。 所有函数都具有全局生存期。  

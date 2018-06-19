@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256413"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
 使用 atl。 任何项目使用  

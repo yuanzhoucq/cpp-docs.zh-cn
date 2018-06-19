@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353971"
 ---
 # <a name="current-time-automation-classes"></a>当前时间： 自动化类
 下面的过程演示如何创建`COleDateTime`对象并将其初始化与当前时间。  

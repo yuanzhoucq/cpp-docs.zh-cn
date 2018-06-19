@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392414"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 在程序执行过程中设置的保存错误代码的全局宏，以及用于显示的错误代码的等效字符串。  

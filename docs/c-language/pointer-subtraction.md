@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383718"
 ---
 # <a name="pointer-subtraction"></a>指针减法
 **ANSI 3.3.6, 4.1.1** 保留两个指向同一数组 ptrdiff_t 的元素的指针之间的差所需的整数类型  

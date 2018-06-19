@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387140"
 ---
 # <a name="ciatan2"></a>_CIatan2
 计算 *x* / *y* 的反正切值，其中 *x* 和 *y* 是堆栈顶部的值。  
@@ -50,7 +51,7 @@ void __cdecl _CIatan2();
  生成的值被将被推送到堆栈顶部。  
   
 ## <a name="requirements"></a>惠?  
- **平台：**x86  
+ **平台：** x86  
   
 ## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

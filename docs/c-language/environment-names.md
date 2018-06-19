@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384875"
 ---
 # <a name="environment-names"></a>环境名称
 **ANSI 4.10.4.4** 环境名称集和用于更改 [getenv](../c-runtime-library/reference/getenv-wgetenv.md) 函数使用的环境列表的方法  

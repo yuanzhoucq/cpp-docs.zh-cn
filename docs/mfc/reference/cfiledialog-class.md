@@ -147,6 +147,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255764"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于文件打开或保存操作的文件的公共对话框。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380909"
 ---
 # <a name="where-to-define-macros"></a>定义宏的位置
 在命令行、 命令文件、 生成文件中，或 Tools.ini 文件中定义宏。  

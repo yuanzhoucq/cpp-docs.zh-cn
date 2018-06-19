@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33141745"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`list`来管理的元素序列作为双向链接列表节点，各个存储一个元素。  

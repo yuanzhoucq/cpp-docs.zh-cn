@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458909"
 ---
 # <a name="compiler-error-c3533"></a>编译器错误 C3533
 type: 参数不能具有包含 auto 的类型  

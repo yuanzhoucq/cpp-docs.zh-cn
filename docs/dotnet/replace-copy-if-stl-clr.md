@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161741"
 ---
 # <a name="replacecopyif-stlclr"></a>replace_copy_if (STL/CLR)
 检查源范围中的每个元素，并替换满足指定谓词的元素，同时将结果复制到新的目标范围。  

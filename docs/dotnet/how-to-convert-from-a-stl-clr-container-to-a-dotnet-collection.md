@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132003"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：从 STL/CLR 容器转换为 .NET 集合
 本主题演示如何将 STL/CLR 容器转换为其等效的.NET 集合。 作为示例，我们将演示如何将转换 STL/CLR[向量](../dotnet/vector-stl-clr.md)到.NET<xref:System.Collections.Generic.ICollection%601>以及如何将转换 STL/CLR[映射](../dotnet/map-stl-clr.md)到.NET <xref:System.Collections.Generic.IDictionary%602>，但所有集合类似的过程和容器。  

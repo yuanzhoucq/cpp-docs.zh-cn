@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387578"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 关系和相等运算符
 二元关系运算符和相等运算符将其第一个操作数与其第二个操作数进行比较以测试指定关系的有效性。 如果测试的关系为 true，则关系表达式的结果为 1；如果测试的关系为 false，则关系表达式的结果为 0。 结果的类型为 `int`。  

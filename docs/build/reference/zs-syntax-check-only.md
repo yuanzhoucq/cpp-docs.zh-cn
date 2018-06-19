@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380040"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs（只进行语法检查）
 告知编译器只检查语法的命令行上的源文件。  

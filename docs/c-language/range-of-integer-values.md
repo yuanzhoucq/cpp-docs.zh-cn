@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385307"
 ---
 # <a name="range-of-integer-values"></a>整数值的范围
 **ANSI 3.1.2.5**：各种类型的整数值的表示形式和集  

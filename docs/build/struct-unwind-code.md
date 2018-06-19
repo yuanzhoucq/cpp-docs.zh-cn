@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390094"
 ---
 # <a name="struct-unwindcode"></a>UNWIND_CODE 结构
 展开代码数组用于在会影响非易失寄存器和 RSP prolog 中记录的操作序列。 每个代码项均具有以下格式：  

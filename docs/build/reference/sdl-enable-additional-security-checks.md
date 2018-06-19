@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379531"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl（启用附加安全检查）
 添加建议的安全开发生命周期 (SDL) 检查。 这些检查包括额外的被视为错误的安全相关警告以及其他安全代码生成功能。  

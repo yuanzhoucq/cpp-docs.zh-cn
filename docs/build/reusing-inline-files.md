@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379895"
 ---
 # <a name="reusing-inline-files"></a>重复使用内联文件
 若要重复使用内联文件，指定 <<*filename*其中定义该文件第一次使用它，然后重复使用*filename*而无需 << 更高版本在同一或其他命令。 在使用该文件的所有命令之前，必须运行命令以创建内联文件。  

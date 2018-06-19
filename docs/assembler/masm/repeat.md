@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057307"
 ---
 # <a name="repeat"></a>REPEAT
 标记要重复的块*表达式*时间。 与相同[REPT](../../assembler/masm/rept.md)。  
