@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362279"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>使用可替换参数 (注册机构&#39;s 预处理器)
 可替换参数允许注册机构的客户端指定运行时数据。 若要执行此操作，注册机构维护替换映射到其中进入你的脚本中的可替换参数与关联的值。 注册机构使运行时的这些项。  

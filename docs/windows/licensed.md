@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875742"
 ---
 # <a name="licensed"></a>licensed
 指示它所应用于的 COM 对象授予许可，并且必须使用实例化**IClassFactory2**。  

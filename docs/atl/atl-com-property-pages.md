@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357527"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 属性页
 COM 属性页提供用户界面来设置属性 （或调用方法） 的一个或多个 COM 对象。 属性页广泛使用由 ActiveX 控件提供丰富的用户界面，允许在设计时设置的控件属性。  

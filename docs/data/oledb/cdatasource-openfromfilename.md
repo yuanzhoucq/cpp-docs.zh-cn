@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090765"
 ---
 # <a name="cdatasourceopenfromfilename"></a>CDataSource::OpenFromFileName
 从由用户提供的文件名指定的文件打开数据源。  

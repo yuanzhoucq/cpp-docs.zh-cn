@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357589"
 ---
 # <a name="date-and-time-automation-support"></a>日期和时间： 自动化支持
 本文介绍如何利用与日期和时间的管理相关的类库服务。 所述过程包括：  

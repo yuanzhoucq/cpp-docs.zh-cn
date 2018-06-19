@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878858"
 ---
 # <a name="menu-command-properties"></a>菜单命令属性
 根据选择菜单命令时 [属性窗口](/visualstudio/ide/reference/properties-window) 中出现的菜单属性组织以下信息。 按字母顺序列出属性，尽管属性窗口也使你可以按类别查看这些属性。  

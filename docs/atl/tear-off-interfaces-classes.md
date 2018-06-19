@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361057"
 ---
 # <a name="tear-off-interfaces-classes"></a>分离式接口类
 以下类提供对于分离式接口的支持：  

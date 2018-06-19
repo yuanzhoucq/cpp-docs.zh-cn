@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171944"
 ---
 # <a name="compiler-error-c2174"></a>编译器错误 C2174
 function： 实参具有类型 void： 参数 number1，参数列表 number2  

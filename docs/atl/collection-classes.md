@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361324"
 ---
 # <a name="collection-classes"></a>集合类
 下面的类为数组、 列表、 图、 和也用于帮助进行比较和元素访问的特征方法提供支持。  

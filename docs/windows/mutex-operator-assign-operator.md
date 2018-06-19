@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875482"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 运算符
 分配 （移动） 指定互斥体对象转换为当前的 Mutex 对象。  

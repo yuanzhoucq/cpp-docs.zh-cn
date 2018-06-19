@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874520"
 ---
 # <a name="dbaccessor"></a>db_accessor
 组**db_column**参与特性`IAccessor`-基于绑定。  

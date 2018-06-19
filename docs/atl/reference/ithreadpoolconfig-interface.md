@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363724"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig 接口
 此接口提供用于配置线程池的方法。  

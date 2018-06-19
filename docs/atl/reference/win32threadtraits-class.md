@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362011"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 类
 此类提供了 Windows 线程创建函数。 如果线程将不会使用 CRT 函数，请使用此类。  

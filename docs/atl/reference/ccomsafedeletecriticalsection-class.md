@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363854"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 类
 此类提供用于获取和释放的关键部分对象所有权的方法。  
@@ -139,7 +140,7 @@ HRESULT Term() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的结果[CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term)，或**，则为 S_OK**如果[m_bInitialized](#m_binitialized)已设置为**false**在输入时。  
+ 返回的结果[CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term)，或 **，则为 S_OK**如果[m_bInitialized](#m_binitialized)已设置为**false**在输入时。  
   
 ### <a name="remarks"></a>备注  
  则可以安全地调用此方法，即使内部**CRITICAL_SECTION**对象无效。 此类的析构函数调用此方法，如果[m_bInitialized](#m_binitialized)数据成员设置为**true**。  

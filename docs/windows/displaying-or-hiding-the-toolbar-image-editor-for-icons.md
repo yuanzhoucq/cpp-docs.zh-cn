@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872983"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>显示或隐藏工具栏（图标的图像编辑器）
 由于许多绘图工具都可以从[键盘](../windows/accelerator-keys-image-editor-for-icons.md)，有时很有用，若要隐藏的图像编辑器工具栏。  

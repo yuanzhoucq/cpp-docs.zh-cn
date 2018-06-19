@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873571"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>“网格设置”对话框（图标的图像编辑器）
 允许你指定映像的网格设置和编辑图像上方显示网格线。 行用于编辑图像，但未将另存为图像本身的一部分。  

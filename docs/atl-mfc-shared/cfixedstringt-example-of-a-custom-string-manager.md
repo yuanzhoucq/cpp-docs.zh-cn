@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359544"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT： 示例的自定义字符串管理器
 ATL 库实现的类所使用的自定义字符串管理器的一个示例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)、 调用**那么 CFixedStringMgr**。 `CFixedStringT` 派生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)并实现的一部分分配其字符数据字符串`CFixedStringT`对象本身，只要字符串是否小于指定的长度比**t_nChars**模板参数的`CFixedStringT`。 使用此方法，该字符串不需要，堆，除非字符串的长度超过固定的缓冲区的大小。 因为`CFixedStringT`并非总是不使用堆分配其字符串数据，它不能使用**CAtlStringMgr**作为其字符串经理。 它使用自定义字符串管理器 (**那么 CFixedStringMgr**)、 实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)接口。 此接口已在[实现的自定义字符串管理器 （高级方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。  

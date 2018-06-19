@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088360"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>可以对默认代码做的更改（MFC 数据访问）
 [MFC 应用程序向导](../mfc/reference/database-support-mfc-application-wizard.md)为你在单个表中选择所有记录编写记录集类。 你通常还可以采用下列一种或多种方式修改该行为：  

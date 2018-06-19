@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365515"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 此类创建一个工作线程或使用一个现有，等待上一个或多个内核对象句柄，并在其中一个的句柄处于有信号状态时执行指定的客户端函数。  

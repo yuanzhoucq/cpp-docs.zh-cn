@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360882"
 ---
 # <a name="urect-class"></a>_U_RECT 类
 此自变量适配器类允许`RECT`指针或引用传递给实现根据指针的函数。  

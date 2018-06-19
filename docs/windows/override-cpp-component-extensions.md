@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878874"
 ---
 # <a name="override--c-component-extensions"></a>重写（C++ 组件扩展）
 `override` 区分上下文的关键字表示类型成员重写基类或基接口成员。  

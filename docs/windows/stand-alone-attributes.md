@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890421"
 ---
 # <a name="stand-alone-attributes"></a>独立特性
 独立属性不对 c + + 关键字进行操作，但更类似的代码行。 独立特性语句需要行尾的分号。  

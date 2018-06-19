@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872060"
 ---
 # <a name="evening-the-spacing-between-controls"></a>使控件之间的间距相等
 对话框编辑器使您能够选择最外层控件之间均匀地空间控件。  

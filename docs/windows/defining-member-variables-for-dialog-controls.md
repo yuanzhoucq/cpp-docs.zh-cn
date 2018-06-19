@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873831"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>定义对话框控件的成员变量
 要定义除按钮外的任何对话框控件的成员变量，可以使用以下方法。  

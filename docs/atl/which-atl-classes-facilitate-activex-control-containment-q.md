@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361934"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL 类促进 ActiveX 控件包含？
 ATL 的控件承载代码不要求你使用任何 ATL 类;你可以只需创建 **"AtlAxWin80"** 窗口和使用控件承载 API，如有必要 (有关详细信息，请参阅**什么是 ATL 控件承载 API**。 但是，以下类使包含功能使用起来更为简便。  

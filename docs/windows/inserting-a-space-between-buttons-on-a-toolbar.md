@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879830"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>在工具栏按钮之间插入间隔
 一般情况下，若要插入按钮之间留一个空格，只需将它们拖开另一个在工具栏上。 若要删除的空间，请将它们拖动向彼此。  

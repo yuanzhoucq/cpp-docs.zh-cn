@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368637"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概述
 非 MFC DLL 是在内部，不使用 MFC 的 DLL，可以由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 函数通常被导出从非 MFC DLL 使用标准的 C 接口。  
