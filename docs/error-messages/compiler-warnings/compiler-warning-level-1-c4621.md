@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281945"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>编译器警告（等级 1）C4621
 operator-找到类型 type，以使用前缀形式中没有任何后缀窗体  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371616"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 类
 定义实现单文档界面 (SDI) 的文档模板。  

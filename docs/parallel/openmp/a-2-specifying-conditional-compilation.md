@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690590"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2   指定条件编译
 下面的示例演示如何使用条件编译使用 OpenMP 宏`_OPENMP`([2.2 节](../../parallel/openmp/2-2-conditional-compilation.md)第 8 页上)。 与 OpenMP 编译`_OPENMP`宏成为已定义。  

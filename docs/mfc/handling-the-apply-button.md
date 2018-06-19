@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345036"
 ---
 # <a name="handling-the-apply-button"></a>处理应用按钮
 属性表具有标准对话框没有的功能：它们使用户能够在关闭属性表之前应用进行的更改。 这是通过“应用”按钮完成的。 本文讨论您可以用于正确实现此功能的方法。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348213"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX 控件：访问环境属性
 本文讨论了 ActiveX 控件可以访问其控件容器的环境属性的方式。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  调用方必须调用**释放 （）**上返回的字体。  
+    >  调用方必须调用**释放 （）** 上返回的字体。  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   

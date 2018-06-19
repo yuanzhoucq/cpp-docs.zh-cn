@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369045"
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 A`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。  

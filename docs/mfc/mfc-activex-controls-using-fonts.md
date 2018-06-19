@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355134"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 如果 ActiveX 控件显示文本，你可以允许控制用户通过更改字体属性更改的文本外观。 字体属性作为字体对象实现，并可以是两种类型之一： 常用或自定义。 常用字体属性是可以使用添加属性向导添加的 preimplemented 的字体属性。 自定义字体属性不 preimplemented 并控件开发人员确定属性的行为和使用情况。  

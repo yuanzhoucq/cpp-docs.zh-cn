@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379679"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>将图形对象选入设备上下文
 本主题适用于在一个窗口设备上下文中使用图形对象。 检查完[创建图形对象](../mfc/one-stage-and-two-stage-construction-of-objects.md)，必须将它选入设备上下文代替那里存储的默认对象：  

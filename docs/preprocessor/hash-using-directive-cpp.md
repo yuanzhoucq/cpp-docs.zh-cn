@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33840731"
 ---
 # <a name="using-directive-cclr"></a>#using 指令 (C + + /cli CLR)
 将元数据导入编译的程序[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/07/2018
   
  为了使让编译器识别出的程序集 （而不是模块） 中的类型，它需要强制解析类型，你可以执行此操作，例如，通过定义类型的实例。 如果从程序集中的类型继承，没有其他的方法可以解决对于编译器，例如，程序集的类型名称，类型名称就会知道到编译器。  
   
- 导入从使用的源代码生成的元数据时[__declspec （thread)](../cpp/thread.md)，线程语义不会保留在元数据中。 例如，与声明的变量 **__declspec （thread)** 为.NET Framework 公共语言运行时，生成，然后通过导入的程序中编译`#using`，将不再有 **__declspec (线程）**对变量的语义。  
+ 导入从使用的源代码生成的元数据时[__declspec （thread)](../cpp/thread.md)，线程语义不会保留在元数据中。 例如，与声明的变量 **__declspec （thread)** 为.NET Framework 公共语言运行时，生成，然后通过导入的程序中编译`#using`，将不再有 **__declspec (线程）** 对变量的语义。  
   
  `#using` 引用的文件中所有导入的类型（托管的和本机的）都是可用的，但编译器会将本机类型视为声明而不是定义。  
   

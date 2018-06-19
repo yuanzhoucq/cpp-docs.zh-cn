@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374748"
 ---
 # <a name="cusertool-class"></a>CUserTool 类
 用户工具是运行外部应用程序的菜单项。 **工具**选项卡**自定义**对话框 ( [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 允许用户添加用户工具，并指定名称、 命令、 自变量，并每个用户工具的的初始目录。  

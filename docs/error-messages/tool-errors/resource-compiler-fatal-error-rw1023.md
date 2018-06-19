@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320380"
 ---
 # <a name="resource-compiler-fatal-error-rw1023"></a>资源编译器错误 RW1023
 写入文件，驱动器已满的 I/O 错误  

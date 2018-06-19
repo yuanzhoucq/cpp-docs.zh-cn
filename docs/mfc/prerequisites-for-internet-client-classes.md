@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354032"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Internet 客户端类的必备条件
 Internet 客户端 （例如读取文件，） 执行某些操作 （在此情况下，建立 Internet 连接） 具有先决条件的操作。 下表列出了一些客户端操作的先决条件。  

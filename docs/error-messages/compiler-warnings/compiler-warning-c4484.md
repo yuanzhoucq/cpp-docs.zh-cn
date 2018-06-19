@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274750"
 ---
 # <a name="compiler-warning-c4484"></a>编译器警告 C4484
 override_function: ref 基类类方法 base_class_function 相匹配，但未标记为虚拟一步、 上一 new 或 '重写;假定 new （和不是虚拟）  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374430"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 类
 `CRecentDockSiteInfo`类是存储最近状态信息的帮助器类[CPane 类](../../mfc/reference/cpane-class.md)。  

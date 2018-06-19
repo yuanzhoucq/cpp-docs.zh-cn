@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692647"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指令
 `threadprivate`指令使命名的文件范围、 命名空间范围或静态的块范围变量中指定*变量列表*专用于一个线程。 *变量列表*是不具有不完整类型的变量的以逗号分隔列表。 语法`threadprivate`指令是，如下所示：  

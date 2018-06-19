@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349657"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支持
 MFC 提供了对子集的 Microsoft 消息处理应用程序程序接口 (MAPI) 类中支持**CDocument**。 具体而言， **CDocument**具有确定邮件支持是否在最终用户的计算机上存在的成员函数，并且，如果是这样，启用其标准命令 id 的发送邮件命令**ID_FILE_SEND_MAIL**. 此命令的 MFC 处理程序函数允许用户通过电子邮件发送文档。  

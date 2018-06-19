@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269522"
 ---
 # <a name="compiler-warning-c4961"></a>编译器警告 C4961
 没有将任何配置文件数据合并到“.pgd file”，因此已禁用按配置文件优化  

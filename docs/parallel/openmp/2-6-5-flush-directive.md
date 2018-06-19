@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692332"
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush 指令
 **刷新**指令，是否显式或隐式，指定在其实现需要确保团队中的所有线程都具有一个一致的 （在下面指定） 中某些对象视图的"跨线程"序列点内存。 这意味着在完成前面的计算的表达式引用这些对象并随后的计算尚未开始。 例如，编译器必须还原对象的值从寄存器到内存中，并硬件可能需要刷新到内存写入缓冲区并重新加载内存中的对象的值。  

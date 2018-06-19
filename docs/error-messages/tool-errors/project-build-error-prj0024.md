@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318342"
 ---
 # <a name="project-build-error-prj0024"></a>项目生成错误 PRJ0024
 无法为用户的 ANSI 代码页转换 Unicode 路径 path。  

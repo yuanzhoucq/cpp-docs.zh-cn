@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293447"
 ---
 # <a name="bscmake-warning-bk4503"></a>BSCMAKE 警告 BK4503
 已忽略 .SBR 文件的文件名中的小错误  

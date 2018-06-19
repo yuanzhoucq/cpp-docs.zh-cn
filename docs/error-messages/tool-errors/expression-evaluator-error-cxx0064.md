@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302131"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>表达式计算器错误 CXX0064
 无法在绑定的虚拟成员函数上设置断点  

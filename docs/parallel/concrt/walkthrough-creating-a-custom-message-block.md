@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694672"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>演练：创建自定义消息块
 本文档介绍如何创建按优先级排序传入消息的自定义消息块类型。  

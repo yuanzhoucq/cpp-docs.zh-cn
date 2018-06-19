@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690340"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 ordered 构造
 结构化的块以下**排序**迭代将执行顺序循环中的顺序执行指令。 语法**排序**指令是，如下所示：  

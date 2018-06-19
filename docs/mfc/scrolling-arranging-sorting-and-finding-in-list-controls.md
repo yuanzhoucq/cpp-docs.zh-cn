@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379185"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>在列表控件中滚动、排列、排序和查找
 列表控件 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 是默认情况下可滚动。 有关详细信息，请参阅[滚动位置](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中和[滚动](../mfc/reference/clistctrl-class.md#scroll)成员函数。  

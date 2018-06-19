@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688032"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空间
 图形命名空间提供的类型和用于图形编程的函数。  

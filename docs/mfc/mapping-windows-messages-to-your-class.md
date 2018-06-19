@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346264"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>将 Windows 消息映射到您的类
 如果你需要处理 Windows 消息对话框中，重写适当的处理程序函数。 为此，请使用属性窗口[将消息映射](../mfc/reference/mapping-messages-to-functions.md)到对话框类。 这写入消息映射项为每个消息，并将消息处理程序成员函数添加到类。 使用 Visual c + + 源代码编辑器在消息处理程序中编写代码。  

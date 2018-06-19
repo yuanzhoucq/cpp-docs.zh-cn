@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369526"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 类
 实现虚拟键映射和格式设置的帮助器类。  

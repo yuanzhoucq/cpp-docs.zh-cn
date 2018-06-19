@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267168"
 ---
 # <a name="compiler-error-c3848"></a>编译器错误 C3848
 具有类型 type 的表达式都将丢失某些 const volatile 限定符，才能调用 function  

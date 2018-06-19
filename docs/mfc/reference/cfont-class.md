@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369663"
 ---
 # <a name="cfont-class"></a>CFont 类
 封装一个 Windows 图形设备接口 (GDI) 字体并提供用于操作字体的成员函数。  

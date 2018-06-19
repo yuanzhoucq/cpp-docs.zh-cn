@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266550"
 ---
 # <a name="compiler-error-c3832"></a>编译器错误 C3832
 type library： 类型库看上去就好像它为 32 位指针生成;请更改 ptrsize 限定符  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354143"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 类
 实现可对颜色的红色、绿色和蓝色分量进行动画处理的颜色功能。  

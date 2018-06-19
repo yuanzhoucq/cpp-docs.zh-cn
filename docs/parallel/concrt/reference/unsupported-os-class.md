@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687421"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 类
 此类描述使用不受支持的操作系统时引发的一种异常。  

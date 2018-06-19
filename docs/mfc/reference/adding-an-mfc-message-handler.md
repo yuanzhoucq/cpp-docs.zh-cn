@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353720"
 ---
 # <a name="adding-an-mfc-message-handler"></a>添加 MFC 消息处理程序
 你可以[使用属性窗口添加消息处理程序](../../mfc/reference/mapping-messages-to-functions.md)（处理 Windows 消息的成员函数） 到消息处理程序类并映射 Windows 消息。 你还可以添加[的事件处理程序任何对话框控件](../../windows/adding-event-handlers-for-dialog-box-controls.md)。  

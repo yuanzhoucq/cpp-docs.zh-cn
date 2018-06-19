@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354434"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 本文介绍如何针对您自己的数据类型生成类型安全的集合。 包括以下主题：  

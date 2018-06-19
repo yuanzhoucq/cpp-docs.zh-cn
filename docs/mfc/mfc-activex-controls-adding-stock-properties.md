@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357554"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控件：添加常用属性
 常用属性不同于自定义属性，因为它们已实现由类`COleControl`。 `COleControl` 包含控件中支持通用属性的预定义的成员函数。 一些常见属性包括控件的标题和前景色和背景颜色。 有关其他常用属性的信息，请参阅[Stock 属性支持添加属性向导](#_core_stock_properties_supported_by_classwizard)本文后续部分中。 常用属性的调度映射条目始终为前缀的**DISP_STOCKPROP**。  

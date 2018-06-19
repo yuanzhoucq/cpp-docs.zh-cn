@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353981"
 ---
 # <a name="print-preview-architecture"></a>打印预览结构
 本文介绍 MFC 框架如何实现打印预览功能。 涉及主题包括：  

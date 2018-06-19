@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691685"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   copyprivate 数据特性子句示例
 **示例 1:** `copyprivate`子句 ([部分 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在页上 32) 可以用于广播获取通过单个线程直接到其他线程中的私有变量的所有实例的值。  

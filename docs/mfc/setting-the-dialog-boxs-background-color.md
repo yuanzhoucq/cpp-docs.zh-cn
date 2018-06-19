@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379978"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>设置对话框的背景色
 您可以通过处理对话框窗口的 `WM_CTLCOLOR` 消息来设置对话框的背景色。 您设置的颜色仅用于指定的对话框。  

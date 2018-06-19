@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352735"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 结构
 `CDaoDatabaseInfo`结构包含有关定义为数据访问对象 (DAO) 的数据库对象的信息。  

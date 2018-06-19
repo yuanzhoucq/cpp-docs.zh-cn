@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353917"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 许可支持，ActiveX 控件的一个可选功能允许你控制能够使用或分发该控件。 (的许可问题的更多讨论，请参阅中的授权问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。)  

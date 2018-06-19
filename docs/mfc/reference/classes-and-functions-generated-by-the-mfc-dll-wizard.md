@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366120"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 向导生成的类和函数
 MFC DLL 向导生成的代码取决于你创建的 DLL 和你选择的选项的类型。 MFC DLL 向导生成的 MFC 的规则 Dll 这两个窗体相同的代码。  

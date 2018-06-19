@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355267"
 ---
 # <a name="multipage-documents"></a>多页文档
 本文介绍 Windows 打印协议并说明如何打印包含多个页面的文档。 本文包含以下主题：  

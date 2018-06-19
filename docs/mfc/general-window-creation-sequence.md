@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346511"
 ---
 # <a name="general-window-creation-sequence"></a>常用窗口创建序列
 在创建你自己，如子窗口的窗口时，框架将使用得多的相同的过程中所述的[文档/视图创建](../mfc/document-view-creation.md)。  

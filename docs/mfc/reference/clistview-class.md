@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366338"
 ---
 # <a name="clistview-class"></a>CListView 类
 简化了使用列表控件和[CListCtrl](../../mfc/reference/clistctrl-class.md)，封装列表控件功能，带有 MFC 文档视图体系结构的类。  

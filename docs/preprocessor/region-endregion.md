@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839442"
 ---
 # <a name="region-endregion"></a>region、endregion
 **#pragma 区域**允许你指定的可以展开或折叠时使用的代码块[大纲显示功能](/visualstudio/ide/outlining)的 Visual Studio 代码编辑器中。  

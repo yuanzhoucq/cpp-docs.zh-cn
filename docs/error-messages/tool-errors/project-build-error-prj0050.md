@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318508"
 ---
 # <a name="project-build-error-prj0050"></a>项目生成错误 PRJ0050
 未能注册输出。 请确保你具有适当的权限来修改注册表。  

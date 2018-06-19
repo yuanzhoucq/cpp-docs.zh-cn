@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351961"
 ---
 # <a name="menus-and-resources-menu-merging"></a>菜单和资源：菜单合并
 本文详细介绍 OLE 文档应用程序能够处理可视化编辑和就地激活正确所必需的步骤。 就地激活带来了挑战，容器和服务器 （组件） 应用程序。 用户保持在相同的框架窗口 （在容器文档的上下文中），但实际上正在运行另一个应用程序 （服务器）。 这要求容器和服务器应用程序的资源之间的协作。  

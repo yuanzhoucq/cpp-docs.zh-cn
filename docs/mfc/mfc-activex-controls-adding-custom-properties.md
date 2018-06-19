@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352420"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控件：添加自定义属性
 自定义属性不同于常用属性，因为自定义属性不会由已实现`COleControl`类。 自定义属性用于公开的某个状态或 ActiveX 控件适应程序员使用控件的外观。  

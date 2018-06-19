@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372070"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 帮助器宏
 DDX_DHtml 帮助器宏让您轻松访问的 HTML 页上的控件的常用属性。  

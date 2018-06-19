@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345789"
 ---
 # <a name="document-template-creation"></a>文档模板创建
 在响应中创建新文档时`New`或**打开**命令**文件**菜单中，文档模板还创建新的框架窗口对其进行查看该文档可访问。  

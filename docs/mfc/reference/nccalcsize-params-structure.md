@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369718"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS 结构
 `NCCALCSIZE_PARAMS`结构包含应用程序可以在处理时使用的信息`WM_NCCALCSIZE`消息来计算大小、 位置和一个窗口的客户端区域的有效内容。  

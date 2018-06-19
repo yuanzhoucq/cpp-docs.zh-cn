@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355387"
 ---
 # <a name="adding-an-mfc-class"></a>添加 MFC 类
 若要添加到你的项目从 Microsoft 基础类 (MFC) 库类派生的类，使用**添加类**中的可用命令[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。 指定新类的名称、 选择基类，并选择它与之关联 （如果有） 对话框中的 ID。 代码向导创建的标头文件和实现文件，并将它们添加到你的项目。  

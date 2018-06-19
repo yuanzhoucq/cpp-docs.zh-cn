@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374092"
 ---
 # <a name="csyncobject-class"></a>CSyncObject 类
 一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694688"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set 类
 `concurrent_unordered_set`类是并发安全容器，用于控制变长元素序列的类型 k。序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。  

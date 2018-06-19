@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691486"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   显示工作共享指令的不正确嵌套的示例
 本部分中的示例阐释了指令的嵌套规则。 指令嵌套的详细信息，请参阅[部分 2.9](../../parallel/openmp/2-9-directive-nesting.md)在页上 33。  

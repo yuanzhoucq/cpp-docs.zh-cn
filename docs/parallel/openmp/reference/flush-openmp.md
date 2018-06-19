@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696235"
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
 指定所有线程都具有相同的所有共享对象的内存的视图。  

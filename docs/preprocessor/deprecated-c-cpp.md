@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839814"
 ---
 # <a name="deprecated-cc"></a>已弃用 (C/C++)
 **弃用**杂注，可以指示，函数、 类型或任何其他标识符可能不再支持在将来版本支持或者应不再使用。  

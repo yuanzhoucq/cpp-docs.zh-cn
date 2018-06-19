@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357977"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 类
 可以将一个颜色选择对话框合并到你的应用程序。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293177"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>编译器警告（等级 4）C4487
 derived_class_function： 继承非虚拟方法 base_class_function 相匹配，但未显式 new 标记  

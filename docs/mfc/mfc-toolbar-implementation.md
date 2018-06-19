@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360961"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具栏实现
 工具栏是[控件条](../mfc/control-bars.md)包含控件的位图图像。 这些映像可以行为类似于普通按钮、 复选框或单选按钮。 MFC 还提供类[CToolbar](../mfc/reference/ctoolbar-class.md)管理工具栏。  

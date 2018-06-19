@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298611"
 ---
 # <a name="linker-tools-error-lnk1237"></a>链接器工具错误 LNK1237
 在代码生成期间编译器引入到符号 symbol 模块 module 使用 /GL 进行编译中定义的引用  

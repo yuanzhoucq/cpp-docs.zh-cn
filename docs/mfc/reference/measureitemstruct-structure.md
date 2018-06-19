@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372265"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 结构
 `MEASUREITEMSTRUCT`结构通知 Windows 所有者绘制的控件或菜单项的维数。  

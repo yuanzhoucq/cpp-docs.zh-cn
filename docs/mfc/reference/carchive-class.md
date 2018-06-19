@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357532"
 ---
 # <a name="carchive-class"></a>CArchive 类
 可以将复杂的网络的对象保存在仍然存在这些对象在被删除后永久二进制格式 （通常为磁盘存储）。  
@@ -329,7 +330,7 @@ void MapObject(const CObject* pOb);
 ### <a name="remarks"></a>备注  
  例如，你可能不序列化文档，但将序列化文档的一部分的项。 通过调用`MapObject`，允许这些项或个子对象，若要引用的文档。 此外，序列化的子项可以序列化其`m_pDocument`后向指针。  
   
- 你可以调用`MapObject`时将存储到和从加载`CArchive`对象。 `MapObject` 将指定的对象添加到由维护的内部数据结构`CArchive`对象在序列化和反序列化期间，但与不同[ReadObject](#readobject)和[WriteObject](#writeobject) **，**它未调用在对象上序列化。  
+ 你可以调用`MapObject`时将存储到和从加载`CArchive`对象。 `MapObject` 将指定的对象添加到由维护的内部数据结构`CArchive`对象在序列化和反序列化期间，但与不同[ReadObject](#readobject)和[WriteObject](#writeobject) **，** 它未调用在对象上序列化。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  

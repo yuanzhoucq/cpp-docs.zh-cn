@@ -40,6 +40,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693973"
 ---
 # <a name="targetblock-class"></a>target_block 类
 `target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。  

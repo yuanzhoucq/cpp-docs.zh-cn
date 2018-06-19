@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354084"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控件：绘制 ActiveX 控件
 本文描述了 ActiveX 控件绘制进程，以及如何改变绘制代码来优化过程。 (请参阅[优化控件绘制](../mfc/optimizing-control-drawing.md)为技术如何优化绘制但不使控件单独还原以前选定的 GDI 对象。 绘制所有控件之后，容器可以自动还原原始对象。）  

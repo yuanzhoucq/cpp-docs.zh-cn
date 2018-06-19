@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374518"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
 Web 浏览器样式的应用程序可以在本地文件系统中和网络上从 （如 HTML 或活动文档） Internet 或 intranet，以及文件夹访问信息。 通过派生从应用程序的视图类[CHtmlView](../../mfc/reference/chtmlview-class.md)，从而有效 Web 浏览器视图提供 WebBrowser 控件使应用程序。  

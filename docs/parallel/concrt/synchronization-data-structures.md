@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693801"
 ---
 # <a name="synchronization-data-structures"></a>同步数据结构
 并发运行时提供了一些可以从多个线程同步对共享数据的访问的数据结构。 如果要使用共享不常修改的数据，这些数据结构非常有用。 同步对象，例如，一个临界区，导致其他线程等待，直到共享的资源是可用。 因此，如果使用此类对象来同步访问频繁使用的数据，你可以在你的应用程序中失去可伸缩性。 [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类，让你可以共享在多个线程或任务，而不需同步的资源。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。  

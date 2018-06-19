@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351948"
 ---
 # <a name="add-class-from-typelib-wizard"></a>从类型库添加类向导
 使用此向导从可用的类型库添加 MFC 类。 该向导创建从所选的类型库添加每个接口的类。  

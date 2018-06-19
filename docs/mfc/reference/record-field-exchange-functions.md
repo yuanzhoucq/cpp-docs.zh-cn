@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378964"
 ---
 # <a name="record-field-exchange-functions"></a>记录字段交换函数
 本主题列出了记录字段交换 （RFX、 Bulk RFX 和 DFX） 用于自动记录集对象与其数据源之间传输数据以及对数据执行其他操作的函数。  

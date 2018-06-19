@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841655"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>作为用户组的成员运行
 本主题说明将 Windows 用户帐户配置为用户组（与管理员组相对）的成员如何通过减少受恶意代码感染的机会来增强安全性。  

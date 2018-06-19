@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692660"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>异步代理库中的最佳做法
 本文档介绍如何有效地利用异步代理库。 代理库促进基于参与者的编程模型和进程内消息传递用于粗粒度数据流和管道任务。  

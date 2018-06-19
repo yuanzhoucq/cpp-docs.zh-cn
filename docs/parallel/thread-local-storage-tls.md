@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694545"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 线程本地存储 (TLS) 是一种方法，给定的多线程进程中的每个线程可以使用这种方法分配用以存储线程特定的数据的位置。 动态绑定 （运行时） 线程特定的数据支持 TLS api ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801)， [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812)， [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818)，和[TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). 有关如何在 Windows 上实现线程本地存储区的详细信息，请参阅[线程本地存储 (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)。  Win32 和 Visual C++ 编译器现在除了支持现有的 API 实现外，还支持静态绑定（负载时）每线程数据。  

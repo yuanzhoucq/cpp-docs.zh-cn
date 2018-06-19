@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842763"
 ---
 # <a name="phases-of-translation"></a>转换阶段
 C 和 C++ 程序包含一个或多个源文件，每个源文件包含程序的一些文本。 源文件与其包含文件（使用 `#include` 预处理器指令包含的文件），但不包含由条件编译指令（如 `#if`）删除的代码部分，一起称为“翻译单元”。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367287"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 类
 为 `CWnd`派生窗格提供停靠支持。  

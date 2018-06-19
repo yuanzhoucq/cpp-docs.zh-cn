@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367628"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 类
 ID2D1HwndRenderTarget 包装器。  

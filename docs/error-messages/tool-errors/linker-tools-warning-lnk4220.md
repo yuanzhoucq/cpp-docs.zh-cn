@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33305303"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>链接器工具警告 LNK4220
 无效链接器选项值 value;假定默认值  

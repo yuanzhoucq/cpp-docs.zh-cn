@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379514"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 对象之间的关系
 为了帮助正确地对待文档/视图创建过程，请考虑正在运行的程序：文档、用于包含视图的框架窗口以及与文档关联的视图。  

@@ -37,6 +37,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694701"
 ---
 # <a name="array-class"></a>array 类
 表示用于将数据移到加速器的数据容器。  
@@ -673,7 +674,7 @@ Array_view 或基于数组中，与从 T 重新解释为 ElementType 和减少�
 
 ### <a name="remarks"></a>备注
 有时很方便地查看多维数组就好像它可能使用不同的值类型比源数组是线性的一维数组。 可以使用此方法来实现此目的。
-**警告：**这样一个数组对象使用不同的值类型是一个潜在的不安全的操作。 我们建议你谨慎使用此功能。 
+**警告：** 这样一个数组对象使用不同的值类型是一个潜在的不安全的操作。 我们建议你谨慎使用此功能。 
 
 下面的代码提供了一个示例。
 

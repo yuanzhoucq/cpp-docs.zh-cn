@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353493"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 本文讨论如何序列化 ActiveX 控件。 在序列化的读取或写入到持久存储介质，例如磁盘文件的过程。 Microsoft 基础类 (MFC) 库中类进行序列化提供内置支持`CObject`。 `COleControl` 此将支持扩展到通过属性交换机制使用 ActiveX 控件。  

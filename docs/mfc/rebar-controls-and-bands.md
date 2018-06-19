@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349846"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控件和带区
 Rebar 控件的主要用途是充当子窗口、 通用对话框控件、 菜单、 工具栏和等等的容器。 此包含支持的"带。"的概念 每个 rebar 带区可以包含一个手柄栏、 位图、 文本标签和子窗口的任意组合。  

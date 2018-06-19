@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354896"
 ---
 # <a name="idle-loop-processing"></a>空闲循环处理
 很多应用程序“在后台”执行长时间的处理。 有时候，出于性能考虑，不得不对此类工作使用多线程处理。 线程会产生额外的开发开销，因此不建议将其用于简单任务，例如 MFC 在空闲时间工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函数。 本文将重点介绍空闲处理。 有关多线程处理，请参阅详细信息[多线程处理主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  

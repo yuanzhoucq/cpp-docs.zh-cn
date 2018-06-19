@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327088"
 ---
 # <a name="resource-compiler-error-rc2175"></a>资源编译器错误 RC2175
 资源文件的文件名不是 3.00 格式  

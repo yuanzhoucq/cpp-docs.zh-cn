@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370150"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>创建文件资源管理器样式的 MFC 应用程序
 许多 Windows 系统应用程序为文件资源管理器使用用户界面 (UI)。 当你启动文件资源管理器时，例如，你看到具有垂直拆分条分割的工作区的应用程序。 客户端区域的左侧提供导航和浏览功能，并右端的客户端区域显示详细信息与所选内容相关的左窗格中。 当用户单击左窗格中的项时，应用程序重新填充右侧窗格。 在 MDI 应用程序，可以使用命令，在**视图**菜单更改显示在右窗格中的详细信息量。 （在 SDI 或多个顶级文档应用程序中，可以更改使用的工具栏按钮的详细信息。）  

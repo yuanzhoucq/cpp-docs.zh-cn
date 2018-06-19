@@ -21,11 +21,12 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843361"
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
 **#define***标识符**令牌字符串*选择    
   
- *#* **定义***标识符*[**(** *标识符*选择**，** *...* **，** *标识符*选择 **)**]*令牌字符串*选择    
+ *#* **定义***标识符*[**(** *标识符*选择 **，** *...* **，** *标识符*选择 **)**]*令牌字符串*选择    
   
  **defined(**  *identifier* **)**  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857514"
 ---
 # <a name="add-resource-dialog-box"></a>“添加资源”对话框
 使用此对话框将资源添加到 C++ Windows 桌面应用程序项目。  

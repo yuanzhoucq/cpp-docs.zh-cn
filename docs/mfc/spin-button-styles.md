@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380092"
 ---
 # <a name="spin-button-styles"></a>调节按钮样式
 数值调节钮的设置的许多 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) 由样式控制。 你可以设置使用的以下样式**属性**在对话框编辑器的窗口。  

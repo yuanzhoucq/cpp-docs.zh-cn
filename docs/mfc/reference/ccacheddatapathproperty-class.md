@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355455"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 类
 实现异步传输并在内存文件中缓冲的 OLE 控件属性。  

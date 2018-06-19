@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692985"
 ---
 # <a name="using-tiles"></a>使用平铺
 可用平铺来最大化你的应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果你使用相应的磁贴大小和平铺的算法，你可以在 c + + AMP 代码中获取更多的加速。 平铺的基本组件包括：  

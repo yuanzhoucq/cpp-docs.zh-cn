@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375815"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
 为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。  

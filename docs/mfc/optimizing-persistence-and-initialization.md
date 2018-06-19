@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355655"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>优化持久性和初始化
 默认情况下，持久性和初始化的控件中处理通过`DoPropExchange`成员函数。 在典型的控件中，该函数包含到多个调用**PX_** 函数 (`PX_Color`， `PX_Font`，依次类推)，一个用于每个属性。  

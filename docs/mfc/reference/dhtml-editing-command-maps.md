@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375130"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 编辑命令映射
 可以使用以下宏映射 DHTML 编辑命令[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-派生类。 有关其使用的示例，请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  

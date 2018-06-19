@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350648"
 ---
 # <a name="menus-and-resources-container-additions"></a>菜单和资源：容器添加
 此文章介绍了需要的菜单和可视化编辑的容器应用程序中的其他资源进行的更改。  

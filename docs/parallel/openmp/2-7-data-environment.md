@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690060"
 ---
 # <a name="27-data-environment"></a>2.7 数据环境
 本节介绍指令和多个子句，用于控制数据环境并行区域，在执行期间，如下所示：  

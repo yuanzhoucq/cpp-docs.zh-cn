@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849764"
 ---
 # <a name="checkstack"></a>check_stack
 指示编译器将关闭堆栈探测，如果**关闭**(或**-**) 指定，或者要关闭堆栈探测，如果**上**(或**+**) 指定。  

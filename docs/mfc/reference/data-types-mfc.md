@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375348"
 ---
 # <a name="data-types-mfc"></a>数据类型 (MFC)
 本主题列出了 Microsoft 基础类库中最常使用的数据类型。 大部分数据类型与平台软件开发工具包 (SDK) 中的相同，而其他数据类型对于 MFC 是唯一的。  

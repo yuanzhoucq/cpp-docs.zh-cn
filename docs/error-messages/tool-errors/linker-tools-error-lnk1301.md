@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299700"
 ---
 # <a name="linker-tools-error-lnk1301"></a>链接器工具错误 LNK1301
 找到，与 /LTCG:parameter 不兼容的 LTCG clr 模块  

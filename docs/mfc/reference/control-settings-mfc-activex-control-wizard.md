@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371857"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控件向导控件设置
 向导的此页用于指定你希望如何控制行为。 例如，你可以基于标准的 Windows 控件类型上的控件、 优化其行为和外观，或指示该控件可以充当其他控件的容器。  

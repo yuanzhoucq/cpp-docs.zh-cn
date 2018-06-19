@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688461"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自动并行化和自动矢量化
 自动并行化程序和自动向量化旨在为代码中的循环提供自动性能提升。  

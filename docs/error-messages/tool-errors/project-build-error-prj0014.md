@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316152"
 ---
 # <a name="project-build-error-prj0014"></a>项目生成错误 PRJ0014
 失败的作业对象，用于控制生成的进程。  无法继续生成。  

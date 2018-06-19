@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371629"
 ---
 # <a name="mapping-messages-to-functions"></a>将消息映射到函数
 属性窗口，可将消息处理程序 （MFC 用户界面类的成员函数） 绑定到你的应用程序资源生成的消息。 它们使用[MFC 消息映射](../../mfc/messages-and-commands-in-the-framework.md)以创建绑定。  

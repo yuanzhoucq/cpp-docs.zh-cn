@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369172"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 类
 类的对象`CSemaphore`表示一个"信号量"-在一个或多个进程访问资源，并保持当前访问指定的资源的线程数的计数允许有限的数量的线程的同步对象。  

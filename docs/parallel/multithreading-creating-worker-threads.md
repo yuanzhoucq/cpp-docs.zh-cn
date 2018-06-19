@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689267"
 ---
 # <a name="multithreading-creating-worker-threads"></a>多线程处理：创建辅助线程
 工作线程通常用于处理用户不必等待就可以继续使用你的应用程序的后台任务。 任务 （如重新计算和后台打印) 的工作线程很好的示例。 本主题详细介绍创建工作线程所需的步骤。 包括以下主题：  

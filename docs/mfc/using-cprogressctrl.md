@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381564"
 ---
 # <a name="using-cprogressctrl"></a>使用 CProgressCtrl
 可使用进度控件指示耗时较长的操作的进度。 它是一个矩形，通过让系统亮色逐渐填充来显示操作进度。  

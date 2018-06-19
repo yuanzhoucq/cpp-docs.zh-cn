@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839150"
 ---
 # <a name="constseg"></a>const_seg
 指定的段其中[const](../cpp/const-cpp.md)变量形式存储在.obj 文件中。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346485"
 ---
 # <a name="abc-structure"></a>ABC 结构
 **ABC**结构包含 TrueType 字体中字符的宽度。  
