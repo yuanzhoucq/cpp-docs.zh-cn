@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163954"
 ---
 # <a name="swap-function-autohandle"></a>swap 函数 (auto_handle)
 交换一个之间的对象`auto_handle`和另一个。  

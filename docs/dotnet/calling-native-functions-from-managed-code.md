@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112038"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 公共语言运行时提供平台调用服务或 PInvoke，使托管代码能够调用本机动态链接库 (Dll) 中的 C 样式函数。 相同的数据封送处理既又用于与运行时和为"仅方式，"或 ijw 映像、 机制 COM 互操作性。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128666"
 ---
 # <a name="lexicographicalcompare-stlclr"></a>lexicographical_compare (STL/CLR)
 逐个元素比较两个序列以确定其中的较小序列。  

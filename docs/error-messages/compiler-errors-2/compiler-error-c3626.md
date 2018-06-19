@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266163"
 ---
 # <a name="compiler-error-c3626"></a>编译器错误 C3626
 keyword: __event 关键字只能在 COM 接口、 成员函数和都是指向委托的数据成员  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252551"
 ---
 # <a name="compiler-error-c3284"></a>编译器错误 C3284
 函数“function”的泛型参数“parameter”的约束必须与函数“function”的泛型参数“paramete”的约束匹配  

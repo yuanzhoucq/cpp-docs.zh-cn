@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127846"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>如何：检索文件信息 (C++/CLI)
 下面的代码示例演示<xref:System.IO.FileInfo>类。 如果必须文件的名称，可以使用此类检索文件如文件大小、 目录、 完整名称，和日期和时间有关的信息的创建和上次修改。  

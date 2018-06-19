@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101687"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供程序中动态绑定列
 请确保您真正需要动态列绑定。 你可能需要它，因为：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129611"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>如何：使用正则表达式验证数据格式 (C++/CLI)
 下面的代码示例演示如何将正则表达式来验证字符串的格式。 在下面的代码示例中，字符串应包含有效的电话号码。 下面的代码示例使用字符串"\d{3}-\d{3}-\d{4}"以指示每个字段表示有效的电话号码。 在字符串中的"d"指示一个数字，并每个"d"后面的参数指示必须存在的数字个数。 在这种情况下，所以需要分离，从而可通过短划线的号码。  

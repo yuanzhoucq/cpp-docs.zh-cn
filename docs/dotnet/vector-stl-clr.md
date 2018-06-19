@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172633"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 此模板类描述控制变长序列的元素具有随机访问的对象。 使用容器`vector`管理作为一个连续存储的块的元素序列。 块以根据需要增长数组的形式实现。  

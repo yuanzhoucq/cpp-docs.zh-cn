@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247412"
 ---
 # <a name="compiler-error-c3206"></a>编译器错误 C3206
 “function”：“param”的类型参数无效，缺少对类类型“typename”上的类型参数列表  

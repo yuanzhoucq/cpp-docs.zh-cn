@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108255"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 使用者模板
 以下主题提供如何在常见方案中使用 OLE DB 使用者模板的一些示例：  

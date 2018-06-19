@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169444"
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 此模板类描述某个函数，当调用，返回的逻辑不其存储的单自变量函子。 使用它指定根据其存储的函子的函数对象。  

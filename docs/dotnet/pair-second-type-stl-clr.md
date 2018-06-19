@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159504"
 ---
 # <a name="pairsecondtype-stlclr"></a>pair::second_type (STL/CLR)
 已包装的第二个值的类型。  

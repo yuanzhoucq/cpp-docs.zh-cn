@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104784"
 ---
 # <a name="testing-your-provider"></a>测试提供程序
 发布提供程序之前，你应按所指示的顺序执行以下测试。 这些测试，请确保对大多数潜在用户正常运行的提供程序函数。  

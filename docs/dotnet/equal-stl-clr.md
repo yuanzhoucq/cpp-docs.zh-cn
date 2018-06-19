@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111531"
 ---
 # <a name="equal-stlclr"></a>equal (STL/CLR)
 逐个元素比较两个范围是否相等或是否在二元谓词指定的意义上等效。  

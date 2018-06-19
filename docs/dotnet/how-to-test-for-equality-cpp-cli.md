@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127976"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>如何：测试相等性 (C++/CLI)
 在下面的示例中，使用 Managed Extensions for c + + 的相等性测试将基于句柄的引用。  

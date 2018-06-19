@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130238"
 ---
 # <a name="minelement-stlclr"></a>min_element (STL/CLR)
 在指定范围中查找最小元素的第一个匹配项，其中排序条件可通过二元谓词指定。  

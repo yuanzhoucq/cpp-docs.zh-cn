@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164513"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof 转到 T::typeid
 `typeof`由 c + + 托管扩展中使用的运算符`typeid`Visual c + + 中的关键字。  

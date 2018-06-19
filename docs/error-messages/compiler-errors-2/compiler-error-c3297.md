@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249361"
 ---
 # <a name="compiler-error-c3297"></a>编译器错误 C3297
 “constraint_2”：不能使用“constraint_1”作为约束，因为“constraint_1”具有值约束  

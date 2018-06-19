@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161442"
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 放弃的 COM 对象，返回一个指向对象的所有权。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113182"
 ---
 # <a name="exceptions-in-ccli"></a>C++/CLI 中的异常
 本部分中的文档的文章说明异常处理在 C + + /cli CLI 和如何与标准异常处理的差异。  

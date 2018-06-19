@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166736"
 ---
 # <a name="compiler-error-c2172"></a>编译器错误 C2172
 “function”：实参不是指针：参数数目  

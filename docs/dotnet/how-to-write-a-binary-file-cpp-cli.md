@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130122"
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>如何：编写二进制文件 (C++/CLI)
 下面的代码示例演示对文件进行写入二进制数据。 两个类从<xref:System.IO>使用命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream> 表示实际的文件，而<xref:System.IO.BinaryWriter>允许二进制访问流为接口提供。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171749"
 ---
 # <a name="compiler-error-c2184"></a>编译器错误 C2184
 “type”：对 __except 表达式而言为非法类型，必须为整型  

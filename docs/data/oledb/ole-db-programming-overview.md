@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106188"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 编程概述
 OLE DB 是一种高性能、 基于 COM 的数据库技术。 它提供访问数据而不考虑在其中存储表单的常用方法。 在典型的业务的情况下，有大量的信息存储在企业数据库外部。 索引顺序文件、 个人数据库 （如访问）、 （如 Excel) 的电子表格、 项目规划应用程序 （例如项目），和电子邮件 （如 Outlook)，将文件系统 （如 FAT 或 NTFS） 中找到此信息。 OLE DB，可在同样的方式访问任何类型的数据存储区，只要数据存储区具有的 OLE DB 提供程序。

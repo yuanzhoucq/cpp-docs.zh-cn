@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138514"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>如何：将文本存储在剪贴板中 (C++/CLI)
 下面的代码示例使用<xref:System.Windows.Forms.Clipboard>中定义的对象<xref:System.Windows.Forms>命名空间来存储字符串。 此对象提供两个成员函数：<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>和<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>。 数据存储在剪贴板上，通过发送从派生的任何对象<xref:System.Object>到<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>。  

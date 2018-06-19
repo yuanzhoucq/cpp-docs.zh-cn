@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167887"
 ---
 # <a name="compiler-error-c2030"></a>编译器错误 C2030
 具有“protected private”可访问性的析构函数不能是声明为“sealed”的类的成员  

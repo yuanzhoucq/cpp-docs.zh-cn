@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163005"
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 重新排列的序列`N`插入其中一个范围中的元素`N`！ 可能排列之一。  

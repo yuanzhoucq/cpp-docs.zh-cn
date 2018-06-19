@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164554"
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
 序列化 （的过程中存储的对象或成员在永久介质状态） 的托管类 （包括单个字段或属性） 受<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>类。  

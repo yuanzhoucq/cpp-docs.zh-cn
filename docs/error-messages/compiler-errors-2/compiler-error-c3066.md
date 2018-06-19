@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248306"
 ---
 # <a name="compiler-error-c3066"></a>编译器错误 C3066
 有多种方法可以调用此类型的对象使用这些自变量  

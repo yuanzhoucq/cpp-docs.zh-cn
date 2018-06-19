@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137505"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 获取对等待指定的时间量，并返回的对象的锁`bool`报告成功的收购而不是引发异常。  

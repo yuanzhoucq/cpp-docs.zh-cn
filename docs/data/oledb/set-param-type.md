@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107410"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 指定将遵循 `COLUMN_ENTRY` 宏输入、输出或输入/输出的 `SET_PARAM_TYPE` 。  

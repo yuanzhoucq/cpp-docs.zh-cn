@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249498"
 ---
 # <a name="compiler-error-c3387"></a>编译器错误 C3387
 member: __declspec （dllexport) /\__declspec(dllimport) 不能应用于成员托管或 WinRT 类型  

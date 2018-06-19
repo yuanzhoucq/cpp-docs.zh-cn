@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172762"
 ---
 # <a name="compiler-error-c2312"></a>编译器错误 C2312
 “exception1”: 由“exception2”在行号上捕获  

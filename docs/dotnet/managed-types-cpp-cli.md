@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137672"
 ---
 # <a name="managed-types-ccli"></a>托管类型 (C++/CLI)
 Visual c + + 允许通过托管类型，为公共语言运行时的功能提供支持，同时受影响的优点和限制的运行时的.NET 功能访问。  

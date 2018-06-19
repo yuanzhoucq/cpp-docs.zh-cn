@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160831"
 ---
 # <a name="property-index-declaration"></a>属性索引声明
 声明索引的属性的语法已从托管扩展中的 c + + 更改为 Visual c + +。  

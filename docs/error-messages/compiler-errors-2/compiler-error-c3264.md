@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252492"
 ---
 # <a name="compiler-error-c3264"></a>编译器错误 C3264
 “class”: Class 构造函数不能有返回类型  

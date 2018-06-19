@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110764"
 ---
 # <a name="hashmapoperator-stlclr"></a>hash_map::operator= (STL/CLR)
 替换受控序列。  

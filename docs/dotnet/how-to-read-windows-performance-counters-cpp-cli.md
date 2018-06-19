@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130109"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>如何：读取 Windows 性能计数器 (C++/CLI)
 某些应用程序和 Windows 子系统公开通过 Windows 性能系统的性能数据。 可以使用访问这些计数器<xref:System.Diagnostics.PerformanceCounterCategory>和<xref:System.Diagnostics.PerformanceCounter>类，该类位于<xref:System.Diagnostics?displayProperty=fullName>命名空间。  
