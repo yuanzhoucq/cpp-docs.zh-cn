@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883523"
 ---
 # <a name="creating-a-console-application"></a>创建控制台应用程序
 创建 Win32 控制台应用程序的最简单方法是使用 Win32 应用程序向导。  

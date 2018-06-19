@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343689"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>自定义工具栏控件的外观
 类`CToolBarCtrl`提供许多影响外观 （和，有时，行为） 的工具栏对象的样式。 通过设置来修改工具栏对象`dwCtrlStyle`参数`CToolBarCtrl::Create`(或`CToolBar::CreateEx`) 成员函数，首次创建工具栏控件时。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890572"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>指定对话框的位置和大小
 位置和大小的对话框中，以及位置和中，控件的大小以对话框单位进行衡量。 当选择 Visual Studio 状态栏的右下方显示单独的控件和对话框中的值。  

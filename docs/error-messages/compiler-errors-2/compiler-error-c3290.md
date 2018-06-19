@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256378"
 ---
 # <a name="compiler-error-c3290"></a>编译器错误 C3290
 “type”: 普通属性不能具有引用类型  

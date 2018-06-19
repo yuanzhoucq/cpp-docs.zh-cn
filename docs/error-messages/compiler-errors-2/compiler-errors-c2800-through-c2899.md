@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283499"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>编译器错误 C2800 到 C2899
 

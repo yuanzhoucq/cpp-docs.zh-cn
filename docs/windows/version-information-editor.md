@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890585"
 ---
 # <a name="version-information-editor"></a>版本信息编辑器
 版本信息包括公司和产品标识、产品发行版号以及版权与商标通知。 使用版本信息编辑器，可以创建和维护存储在版本信息资源中的这些数据。 虽然应用程序不需要版本信息资源，但它是收集应用程序标识信息的有用位置。 安装 API 也使用版本信息。  

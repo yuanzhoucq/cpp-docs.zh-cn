@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341406"
 ---
 # <a name="com-interface-entry-points"></a>COM 接口入口点
 对于 COM 接口的成员函数，使用[METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue)宏维护适当的全局状态时调用导出接口的方法。  

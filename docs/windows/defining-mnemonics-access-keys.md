@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873688"
 ---
 # <a name="defining-mnemonics-access-keys"></a>定义助记键（访问键）
 通常情况下，键盘用户输入的焦点从一个控件移到另一个在对话框中使用 TAB 键和箭头键。 但是，你可以定义允许用户通过按单个键来选择控件的访问密钥 （助记键或易于记住的名称）。  

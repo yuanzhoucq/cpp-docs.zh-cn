@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236985"
 ---
 # <a name="compiler-error-c2792"></a>编译器错误 C2792
 super： 此关键字的后面必须跟::  

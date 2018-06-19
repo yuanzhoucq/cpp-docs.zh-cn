@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341869"
 ---
 # <a name="customization-for-mfc"></a>MFC 自定义
 本主题提供了有关自定义 MFC 应用程序的提示。  

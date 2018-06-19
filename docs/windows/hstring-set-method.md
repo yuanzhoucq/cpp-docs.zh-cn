@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882412"
 ---
 # <a name="hstringset-method"></a>HString::Set 方法
 将当前 HString 对象的值设置为指定的宽字符字符串或 HString 参数。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882819"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
 当你在 Visual Studio 2017 年 1 中创建经典 Windows 桌面项目时，它是默认设置使用 c + + 桌面工作负荷的安装或上次更新一起安装的 Windows 10 sdk 的版本进行生成。 此版本的 Windows SDK 是与所有最新的 Windows 版本兼容。 如果你想要面向的 sdk 的早期版本，则可以打开项目 |属性，然后选择从其他 Windows SDK 版本下拉列表中提供的 SDK 版本。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/08/2018
   
      `Retargeting End: 1 completed, 0 failed, 0 skipped`  
   
-4.  打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”**的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../ide/general-property-page-project.md)。  
+4.  打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”** 的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../ide/general-property-page-project.md)。  
   
      ![指定的目标平台版本](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   

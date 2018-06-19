@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877340"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 指定要用于执行文档字符串查找 （本地化） 的 dll 的名称。  

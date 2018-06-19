@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880673"
 ---
 # <a name="dbparam"></a>db_param
 将指定的成员变量与一个输入或输出参数相关联，并分隔变量。  

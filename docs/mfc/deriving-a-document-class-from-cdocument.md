@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342613"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>从 CDocument 派生文档类
 文档包含并管理你的应用程序数据。 若要使用的 MFC 应用程序向导提供的文档类，必须执行以下操作：  

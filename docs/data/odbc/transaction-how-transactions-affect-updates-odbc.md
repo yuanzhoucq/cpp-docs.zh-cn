@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097999"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>事务：事务如何影响更新 (ODBC)
 更新到[数据源](../../data/odbc/data-source-odbc.md)通过编辑缓冲区 （在事务外部使用的相同方法） 使用的事务处理期间管理。 记录集的字段数据成员共同作为包含当前记录，记录集备份临时期间编辑缓冲区`AddNew`或**编辑**。 期间**删除**操作，当前记录不会备份在事务中。 有关编辑缓冲区以及如何更新存储的当前记录的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  

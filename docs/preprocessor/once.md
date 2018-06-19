@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912922"
 ---
 # <a name="once"></a>once
 指定该文件在编译源代码文件时仅由编译器包含（打开）一次。  

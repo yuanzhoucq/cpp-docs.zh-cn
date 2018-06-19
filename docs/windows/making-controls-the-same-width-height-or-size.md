@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874793"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>使控件具有相同的宽度、高度或大小
 您可以调整大小一的组基于主导控件的大小的控件。 你还可以[调整其标题文本的维度所基于的控件的大小](../windows/sizing-individual-controls.md)。  

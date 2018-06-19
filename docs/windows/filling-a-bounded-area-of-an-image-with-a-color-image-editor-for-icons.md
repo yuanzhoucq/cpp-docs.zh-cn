@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880564"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>用某种颜色填充图像的封闭区域（图标的图像编辑器）
 图像编辑器提供了**填充**填充任何工具封闭用当前的绘制颜色或当前的背景色的图像区域。  

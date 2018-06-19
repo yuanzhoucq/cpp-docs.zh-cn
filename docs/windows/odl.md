@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877691"
 ---
 # <a name="odl"></a>odl
 标识为对象描述语言 (ODL) 接口的接口。 MIDL 编译器不需要**odl**属性; 仅为与较旧的.odl 文件的兼容性而识别它。  

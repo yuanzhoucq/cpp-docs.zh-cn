@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346095"
 ---
 # <a name="header-control-and-list-control"></a>标题控件和列表控件
 在大多数情况下，你将使用的标头控件嵌入在[CListCtrl](../mfc/reference/clistctrl-class.md)或[CListView](../mfc/reference/clistview-class.md)对象。 但是，有必要，如操作数据，排列在行或列，单独标头控件对象的情况[CView](../mfc/reference/cview-class.md)-派生对象。 在这些情况下，你需要更多控制力的外观和嵌入的标头控件的默认行为。  

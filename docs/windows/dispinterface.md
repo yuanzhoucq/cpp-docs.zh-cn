@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874283"
 ---
 # <a name="dispinterface"></a>dispinterface
 将一个接口作为调度接口置于 .idl 文件中。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882688"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 编程符号
 这些符号也是一部分的 MFC 支持文件，但它们支持标准 Windows 应用程序功能和操作。 这些符号主要用于菜单。 当你正在与菜单在菜单编辑器中时，这些符号将出现在常见的菜单命令与关联的属性窗口中。 例如，如果你的应用程序具有带退出命令的文件菜单，该命令将与关联的符号 ID_APP_EXIT 中[属性窗口](/visualstudio/ide/reference/properties-window)。  

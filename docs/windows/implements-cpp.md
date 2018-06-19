@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880672"
 ---
 # <a name="implements-c"></a>implements (C++)
 指定强制 IDL 组件类的成员的调度接口。  

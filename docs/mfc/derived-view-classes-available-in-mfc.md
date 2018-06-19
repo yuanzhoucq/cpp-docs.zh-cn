@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345659"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中可用的派生视图类
 下表显示了 MFC 的视图类以及它们与另一个关系。 视图类的功能依赖于它派生自 MFC 视图类。  

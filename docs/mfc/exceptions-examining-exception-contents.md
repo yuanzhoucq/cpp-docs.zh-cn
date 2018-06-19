@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343251"
 ---
 # <a name="exceptions-examining-exception-contents"></a>异常：检查异常内容
 尽管**捕获**块的自变量可以是几乎任何数据类型，则 MFC 函数引发派生自类类型的异常`CException`。 若要捕获 MFC 函数引发的异常，然后，你编写**捕获**块其参数为指针到`CException`对象 (或从派生的对象`CException`，如`CMemoryException`)。 根据异常的具体类型，你可以检查要收集的异常信息的具体原因的异常对象的数据成员。  

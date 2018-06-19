@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250900"
 ---
 # <a name="compiler-error-c3198"></a>编译器错误 C3198
 使用无效的浮点杂注： fenv_access 杂注仅在精确的模式下运行  

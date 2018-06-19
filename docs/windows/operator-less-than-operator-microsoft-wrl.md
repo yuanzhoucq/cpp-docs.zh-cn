@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881824"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>运算符&lt;运算符 (microsoft:: wrl)
 确定一个对象的地址是否小于另一个。  

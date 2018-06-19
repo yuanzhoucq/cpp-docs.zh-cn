@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875040"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：用 const 关键字声明内部指针 (C++/CLI)
 下面的示例演示如何使用`const`内部指针的声明中。  

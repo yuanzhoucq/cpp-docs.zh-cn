@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130550"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **initonly**是仅为一部分声明的或者在同一个类的静态构造函数则会出现上下文相关的关键字，该值指示该变量赋值。  

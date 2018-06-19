@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344992"
 ---
 # <a name="hierarchy-chart-categories"></a>层次结构图类别
 ![MFC 层次结构图类别](../mfc/media/vc369r1.png "vc369r1")  

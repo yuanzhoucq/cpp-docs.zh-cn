@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256943"
 ---
 # <a name="compiler-error-c2958"></a>编译器错误 C2958
 在位置中找到的左的分隔符匹配不正确  

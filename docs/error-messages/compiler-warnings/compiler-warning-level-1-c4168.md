@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270364"
 ---
 # <a name="compiler-warning-level-1-c4168"></a>编译器警告（等级 1）C4168
 编译器限制：超出调试器类型，删除程序数据库“database”并重新生成  

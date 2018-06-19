@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282946"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>编译器警告（等级 1）C4407
 指向成员表示形式不同的指针之间强制转换，编译器也会生成不正确的代码  

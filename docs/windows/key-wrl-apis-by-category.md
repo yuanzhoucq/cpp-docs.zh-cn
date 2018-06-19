@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881453"
 ---
 # <a name="key-wrl-apis-by-category"></a>按类别列出的关键 WRL API
 下表列出主类、 结构、 函数和 Windows 运行时 c + + 模板库中的宏。 省略中帮助程序命名空间和类的构造。 这些列表增加由命名空间进行排列的 API 文档。  

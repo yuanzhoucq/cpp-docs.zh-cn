@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269252"
 ---
 # <a name="compiler-error-c3803"></a>C3803
 property： 属性具有与一个其访问器 accessor 不兼容的类型  

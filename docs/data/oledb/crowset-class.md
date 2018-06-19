@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098571"
 ---
 # <a name="crowset-class"></a>CRowset 类
 封装 OLE DB 行集对象并在几个相关接口并提供行集数据的操作方法。  

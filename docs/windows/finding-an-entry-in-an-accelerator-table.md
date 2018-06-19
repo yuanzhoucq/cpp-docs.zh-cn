@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873204"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>在快捷键对应表中查找项
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在打开的快捷键对应表中查找项  

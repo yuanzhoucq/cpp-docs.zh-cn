@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128275"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>如何：将正则表达式用于简单匹配 (C++/CLI)
 下面的代码示例使用正则表达式来查找确切的子字符串匹配项。 搜索由静态<xref:System.Text.RegularExpressions.Regex.IsMatch%2A>方法，采用两个字符串作为输入。 第一个是要搜索的字符串，第二个是要在其中搜索的模式。  

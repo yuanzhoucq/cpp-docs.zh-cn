@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291136"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>编译器警告（等级 3）C4738
 将 32 位浮点型结果存储在内存中，可能会降低性能  

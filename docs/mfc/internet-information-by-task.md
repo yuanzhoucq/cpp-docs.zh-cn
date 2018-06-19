@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345497"
 ---
 # <a name="internet-information-by-task"></a>按任务划分的 Internet 信息
 根据你要完成的任务按本主题中列出的任务。  

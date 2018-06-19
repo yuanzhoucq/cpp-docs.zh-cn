@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879778"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new（vtable 中的新槽）（C++ 组件扩展）
 `new`关键字指示虚拟成员将获取 vtable 中的新槽。  

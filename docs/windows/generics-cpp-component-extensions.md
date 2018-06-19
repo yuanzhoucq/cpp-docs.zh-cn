@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878107"
 ---
 # <a name="generics--c-component-extensions"></a>泛型（C++ 组件扩展）
 泛型是参数化类型和方法。 在本节中，请了解 Windows 运行时和公共语言运行时共同支持的泛型功能，以及只有公共语言运行时支持的功能。 另外，请了解如何使用 Visual C++ 创作自己的泛型方法和类型，以及如何使用 Visual C++ 的 .NET Framework 语言创作的泛型类型。 最后，本节将比较泛型和 C++ 模板。  

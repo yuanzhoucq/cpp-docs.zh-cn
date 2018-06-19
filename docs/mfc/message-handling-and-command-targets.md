@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349462"
 ---
 # <a name="message-handling-and-command-targets"></a>消息处理和命令目标
 命令调度接口`IOleCommandTarget`定义一种简单和可扩展的机制，以查询和执行命令。 此机制是比自动化的简单得多`IDispatch`因为它依赖于一组标准的命令; 完全命令很少具有参数，且涉及无类型信息 （命令自变量也会降低类型安全）。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880910"
 ---
 # <a name="implements-structure"></a>Implements 结构
 为指定接口实现 QueryInterface 和 GetIid。  

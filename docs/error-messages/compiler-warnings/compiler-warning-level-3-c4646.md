@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291211"
 ---
 # <a name="compiler-warning-level-3-c4646"></a>编译器警告（等级 3）C4646
 用 __declspec(noreturn) 声明的函数有非 void 返回类型  

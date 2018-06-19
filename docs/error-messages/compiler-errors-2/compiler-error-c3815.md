@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268326"
 ---
 # <a name="compiler-error-c3815"></a>编译器错误 C3815
 方法 get_accessor 返回类型必须与 setter 的最后一个参数的类型匹配  

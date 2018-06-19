@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346007"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>对象的一阶段和两阶段构建
 你可以两种技术可用于创建图形对象，如钢笔和画笔选择：  

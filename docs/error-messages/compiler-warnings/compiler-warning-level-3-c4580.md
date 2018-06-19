@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290977"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>编译器警告（等级 3）C4580
 [attribute] 已弃用；改为指定 System::Attribute 或 Platform::Metadata 作为基类  

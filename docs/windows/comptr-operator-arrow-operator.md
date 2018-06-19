@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870180"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator-&gt;运算符
 检索指向当前模板参数所指定类型的指针。  

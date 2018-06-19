@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347274"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 后台：链接和嵌入
 在容器应用程序中使用“粘贴”命令将创建嵌入组件或嵌入项目。 嵌入项目的源数据作为包含其的 OLE 文档的一部分存储。 这样一来，字处理器文档的文档文件可包含文本，还可包含位图、图形、公式或任何其他类型的数据。  

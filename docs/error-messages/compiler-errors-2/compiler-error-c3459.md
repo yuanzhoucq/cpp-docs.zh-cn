@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255340"
 ---
 # <a name="compiler-error-c3459"></a>编译器错误 C3459
 “attribute”：特性只允许出现在类索引器上（默认索引属性）  

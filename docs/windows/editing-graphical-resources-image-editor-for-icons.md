@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882493"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>编辑图形资源（图标的图像编辑器）
 图形资源是为你的应用程序定义的映像。 可以自由绘制，也可以使用形状进行绘制。 你可以选择用于编辑、 翻转或调整大小时，图像的部分或可以从所选映像的一部分中创建自定义画笔，还可以使用该画笔绘制。 你可以定义映像属性，将图像保存在不同的格式，并将图像从一种格式转换为另一个。  

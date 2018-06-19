@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257855"
 ---
 # <a name="compiler-error-c3551"></a>编译器错误 C3551
 “应为后期指定的返回类型”  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865559"
 ---
 # <a name="timepoint-class"></a>time_point 类
 
@@ -74,7 +75,7 @@ class time_point;
 
 **标头：** \<chrono >
 
-**命名空间：**std::chrono
+**命名空间：** std::chrono
 
 ## <a name="max"></a>  time_point::max
 

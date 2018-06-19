@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287509"
 ---
 # <a name="compiler-warning-level-1-c4600"></a>编译器警告（等级 1）C4600
 \#杂注 macro name： 应为有效的非空字符串  

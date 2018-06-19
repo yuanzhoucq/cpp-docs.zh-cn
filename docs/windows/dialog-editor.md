@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875853"
 ---
 # <a name="dialog-editor"></a>对话框编辑器
 你可通过对话框编辑器创建或编辑对话框资源。 通过双击对话框的资源视图窗口中的.rc 文件上打开对话框编辑器 (**视图&#124;资源视图**)。 请注意，资源视图在 Express 版本中不可用。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137518"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`hash_set`若要管理的元素序列作为哈希表，每个表项存储双向链接列表的节点，并存储一个元素，每个节点。 每个元素的值用作一个键，以进行排序序列。  

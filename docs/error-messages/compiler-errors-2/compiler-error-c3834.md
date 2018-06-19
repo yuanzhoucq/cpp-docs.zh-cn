@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267709"
 ---
 # <a name="compiler-error-c3834"></a>编译器错误 C3834
 非法显式强制转换为固定的指针;改为使用固定的本地变量  

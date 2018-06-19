@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348385"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 控件：事件
 ActiveX 控件使用事件通知控件有事情的容器。 事件的常见示例包括点击控件，输入在控件的状态中使用键盘和更改的数据。 当发生这些操作时，则控件触发事件以提醒容器。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253795"
 ---
 # <a name="compiler-error-c3162"></a>编译器错误 C3162
 type： 具有析构函数的引用类型不能用作静态数据成员 member 的类型  

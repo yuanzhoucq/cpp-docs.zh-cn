@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885147"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>编辑 ActiveX 控件的属性
 通过独立供应商提供的 ActiveX 控件可能来自配备有其自己的属性和特征。 ActiveX 控件的属性将显示在属性窗口中。 此外，将创建 ActiveX 控件的写入器的任何属性页显示在**属性页**对话框 (若要查看特定的 ActiveX 控件的属性页，请单击中的属性页按钮[属性窗口](/visualstudio/ide/reference/properties-window))。  

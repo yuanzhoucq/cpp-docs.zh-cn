@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277574"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>编译器警告（等级 1）C4237
 关键字 keyword 尚不支持，但保留供将来使用  

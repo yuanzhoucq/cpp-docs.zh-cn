@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867098"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的一般文本映射
 若要简化的代码的全球范围内使用，传输[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]运行时库提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-特定一般文本映射的多种数据类型、 例程和其他对象。 你可以使用这些映射，Tchar.h，编写可以为单字节，多字节，编译的泛型代码中定义或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字符集，具体取决于你使用定义的清单常量`#define`语句。 一般文本映射是[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]不扩展[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]兼容。  

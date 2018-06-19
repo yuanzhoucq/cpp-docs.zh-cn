@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883129"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>“自定义图像”对话框（图标的图像编辑器）
 可以使用自定义大小和颜色数创建新的映像。

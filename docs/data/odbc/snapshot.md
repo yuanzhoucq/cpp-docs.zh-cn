@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094759"
 ---
 # <a name="snapshot"></a>快照
 快照是反映数据的静态视图时创建快照时存在的记录集。 当你打开快照，并将移动到的所有记录时，它包含的记录集，直到调用重建快照不会更改其值**Requery**。  

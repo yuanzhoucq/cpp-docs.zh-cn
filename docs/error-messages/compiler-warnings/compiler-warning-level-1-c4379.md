@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279079"
 ---
 # <a name="compiler-warning-level-1-c4379"></a>编译器警告（等级 1）C4379
 此编译器不支持版本的公共语言运行时版本。 使用此版本可能会导致意外的结果。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880789"
 ---
 # <a name="predefined-accelerator-keys"></a>预定义快捷键
 有多个预定义快捷键，它们可能是 Windows 应用程序项目的一部分。 部分虚拟键适用于 Windows 环境。 其他支持的浏览器或 Unicode 应用程序。 你可以在任何快捷键中使用这些键。  

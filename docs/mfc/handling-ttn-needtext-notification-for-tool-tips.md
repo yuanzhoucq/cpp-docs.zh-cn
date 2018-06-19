@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345912"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>处理工具提示的 TTN_NEEDTEXT 通知
 作为的一部分[启用工具提示](../mfc/enabling-tool-tips.md)，你处理**TTN_NEEDTEXT**通过将以下条目添加到所有者窗口的消息映射的消息：  
