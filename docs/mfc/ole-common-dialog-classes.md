@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348099"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 通用对话框类
 以下类处理通过实现很多标准 OLE 对话框来处理常见 OLE 任务。 它们还为 OLE 功能提供了一致的用户界面。  

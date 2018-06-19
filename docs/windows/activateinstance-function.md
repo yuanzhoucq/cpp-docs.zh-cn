@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855570"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函数
 注册并检索在指定的类 id。 定义的指定类型的实例  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856708"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>添加、编辑或删除控件
 使用对话框编辑器，可以添加、 调整大小、 编辑和删除控件在对话框中。 你还可以编辑的属性的控件，例如其 ID，或者它是否是最初可见在运行时。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849465"
 ---
 # <a name="omp"></a>omp
 将一个或多个 OpenMP 指令与任何可选指令子句一起使用。  

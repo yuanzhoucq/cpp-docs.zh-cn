@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333825"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 本文讨论如何使用属性窗口在 ActiveX 控件容器中安装 ActiveX 控件的事件处理程序。 使用事件处理程序接收通知 （从控件） 的某些事件，并在响应中执行某些操作。 此通知称为"触发"事件。  

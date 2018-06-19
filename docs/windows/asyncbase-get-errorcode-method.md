@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859626"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode 方法
 检索当前的异步操作的错误代码。  

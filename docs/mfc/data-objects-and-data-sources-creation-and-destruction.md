@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347938"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>数据对象和数据源：创建和销毁
 文章中所述[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)，数据对象和数据源表示数据传输双方。 本文介绍何时创建和销毁这些对象和源以正确地执行数据传输，包括：  

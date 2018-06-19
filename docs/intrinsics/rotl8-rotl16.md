@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328807"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8、_rotl16
 **Microsoft 专用**  

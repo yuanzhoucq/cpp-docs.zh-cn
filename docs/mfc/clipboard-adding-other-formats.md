@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342142"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪贴板：添加其他格式
 本主题说明如何扩展支持的格式，特别是对于 OLE 支持的列表。 主题[剪贴板： 复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放到剪贴板上的唯一格式会`CF_METAFILEPICT`， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并有可能延长`CF_LINKSOURCE`。 大多数应用程序将需要在剪贴板上比这三种的更多格式。  

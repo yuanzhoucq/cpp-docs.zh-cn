@@ -111,6 +111,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848932"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 

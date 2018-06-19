@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846657"
 ---
 # <a name="algorithms"></a>算法
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 
 算法模板函数的说明使用几个速记短语：
 
-- 短语“in the range [*A*, *B*)”表示从 *A* 开始到 *B*（不包括 B）的零个或多个离散值的序列。仅当可以从 *A 到达 *B* 时，范围有效；*可将 *A* 存储在对象 *N* (*N* = *A*) 中，零次或多次递增该对象 (++*N*)，使该对象在递增有限次数后等于 *B* (N == B *)。*
+- 短语“in the range [*A*, *B*)”表示从 *A* 开始到 *B*（不包括 B）的零个或多个离散值的序列。仅当可以从 *A 到达 *B* 时，范围有效；* 可将 *A* 存储在对象 *N* (*N* = *A*) 中，零次或多次递增该对象 (++*N*)，使该对象在递增有限次数后等于 *B* (N == B *)。*
 
 - 短语“each *N* in the range [*A*, *B*)”表示 *N* 以值 *A* 开始并递增零次或多次，直至等于值 *B*。*N* == *B* 的情况不在范围内。
 

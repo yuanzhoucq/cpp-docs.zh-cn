@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302576"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>链接器工具警告 LNK4092
 共享的可写节节包含重定位;图像可能无法正确运行  

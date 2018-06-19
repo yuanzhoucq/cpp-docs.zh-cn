@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690125"
 ---
 # <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   使用带列表的 flush 指令
 下面的示例使用`flush`指令为特定对象的线程对之间的点到点同步：  

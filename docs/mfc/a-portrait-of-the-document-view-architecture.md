@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329811"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文档/视图结构的纵览
 文档和视图在典型的 MFC 应用程序中是成对的。 数据存储在文档中，但视图具有对数据的特别访问权。 将文档与视图分离也会将数据的存储和维护与数据的显示分离。  

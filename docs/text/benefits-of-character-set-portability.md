@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853812"
 ---
 # <a name="benefits-of-character-set-portability"></a>字符集可迁移性的好处
 你可以从使用 MFC 和 C 运行时可移植性功能，即使你不当前打算国际化应用程序受益：  

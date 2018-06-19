@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862018"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>特性目标（C++ 组件扩展）
 特性用法说明符允许指定特性目标。  每个特性定义为应用于特定的语言元素。 例如，某个特征可能定义为仅应用于类和结构。  以下列表演示了自定义属性可以使用的语法元素。 可以结合使用这些值（使用逻辑或）。  

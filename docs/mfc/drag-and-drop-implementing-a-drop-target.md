@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344264"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>拖放：实现放置目标
 本文概述了如何使你的应用程序的放置目标。 实现放置目标采用稍多的工作，而不是实现放置源，但是它仍相对简单。 这些技术也适用于非 OLE 应用程序。  

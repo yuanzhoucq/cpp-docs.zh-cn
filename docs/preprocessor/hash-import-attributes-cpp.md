@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842282"
 ---
 # <a name="import-attributes-c"></a>#import 特性 (C++)
 提供指向用于 #import 指令的特性的链接。  

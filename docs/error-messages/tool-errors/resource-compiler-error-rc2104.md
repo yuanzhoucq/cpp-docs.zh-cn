@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321020"
 ---
 # <a name="resource-compiler-error-rc2104"></a>资源编译器错误 RC2104
 未定义的关键字或密钥名称： 密钥  

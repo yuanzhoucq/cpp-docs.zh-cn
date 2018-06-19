@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846420"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目
 

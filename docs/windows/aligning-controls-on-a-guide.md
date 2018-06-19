@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857833"
 ---
 # <a name="aligning-controls-on-a-guide"></a>在参考线上对齐控件
 当控件移，并参考线对齐控件 （如果不有任何控件的指南以前对齐），参考线对齐控件的尺寸控点。 当移动参考线时，会对齐到它的控件以及移动。 如果移动其中一个指南，对齐到多个指南的控件的大小。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347690"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>管理 MFC 模块的状态数据
 本文讨论 MFC 模块的状态数据以及在执行流（路径代码将在执行时通过应用程序）进入和离开模块时如何更新此状态。 还将讨论使用 `AFX_MANAGE_STATE` 和 `METHOD_PROLOGUE` 宏切换模块状态。  

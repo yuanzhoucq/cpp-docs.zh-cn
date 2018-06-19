@@ -81,6 +81,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375828"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 类
 A`CMFCCaptionBar`对象是可以显示三个元素的控件条： 按钮、 文本标签和位图。 它一次只能显示一种类型的一个元素。 你可以将每个元素与控件进行左对齐、右对齐或居中对齐。 你还可将平面或 3D 样式应用于标题栏的顶部和底部边界。  

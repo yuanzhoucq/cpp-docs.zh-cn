@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302628"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>链接器工具警告 LNK4248
 对于 type; 的未解析的 typeref 标记 （令牌）图像可能无法运行  

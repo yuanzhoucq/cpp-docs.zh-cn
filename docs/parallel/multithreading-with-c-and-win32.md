@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687538"
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 进行多线程编程
 Microsoft Visual c + + 提供了用于创建多线程应用程序的支持。 你应考虑使用多个线程，如果你的应用程序需要执行成本高昂的操作会导致用户界面以变得不响应。  

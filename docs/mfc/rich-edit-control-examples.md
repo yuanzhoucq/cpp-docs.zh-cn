@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379276"
 ---
 # <a name="rich-edit-control-examples"></a>Rich Edit 控件示例
 MFC OLE 示例[写字板](../visual-cpp-samples.md)使用`CRichEditView`， `CRichEditDoc`，和`CRichEditCntrItem`类。 通过扩展，它将使用[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)。 有关这三个类的快速说明，请参阅[与 Rich Edit 控件相关的类](../mfc/classes-related-to-rich-edit-controls.md)。  

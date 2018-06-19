@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380203"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>从对话框对象检索数据
 框架可以轻松地进行初始化的控件在对话框中的值并从控件中检索值。 更费力的手动方法是调用函数，如`SetDlgItemText`和`GetDlgItemText`类的成员函数`CWnd`，其应用到控制窗口。 使用这些函数中，你访问每个控件单独来设置或获取其值，如调用函数`SetWindowText`和`GetWindowText`。 初始化和检索，自动执行框架的方法。  

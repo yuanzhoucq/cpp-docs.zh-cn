@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302719"
 ---
 # <a name="c-runtime-error-r6017"></a>C 运行时错误 R6017
 意外的多线程锁定错误  

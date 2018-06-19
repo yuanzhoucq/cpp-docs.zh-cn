@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692316"
 ---
 # <a name="default-openmp"></a>default (OpenMP)
 并行区域中指定的未区分范围的变量的行为。  

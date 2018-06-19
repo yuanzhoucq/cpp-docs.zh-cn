@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856692"
 ---
 # <a name="character-assignment"></a>字符赋值
 请考虑以下示例中的，在其中`while`循环扫描字符串，将 X 以外的所有字符都复制到另一个字符串：  

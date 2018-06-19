@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378413"
 ---
 # <a name="coblist-class"></a>CObList 类
 排序的唯一，则列表的 fSupports`CObject`指针访问按顺序或指针值。  

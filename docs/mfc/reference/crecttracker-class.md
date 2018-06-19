@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375903"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 类
 允许要显示、 移动和不同的方式调整大小的项。  
@@ -426,7 +427,7 @@ BOOL TrackRubberBand(
  设备坐标，相对于工作区的当前鼠标位置。  
   
  `bAllowInvert`  
- 如果**为 TRUE，**矩形可倒沿 x 轴或 y 轴; 否则为**FALSE**。  
+ 如果**为 TRUE，** 矩形可倒沿 x 轴或 y 轴; 否则为**FALSE**。  
   
 ### <a name="return-value"></a>返回值  
  如果鼠标已移动，以及在该矩形不为空; 则为非 0否则为 0。  

@@ -21,10 +21,11 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843387"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述一个对象，用于存储这两种类型的对象的有序的对 **float * * *，*首先表示复数与第二个实部表示复数虚部。
+描述一个对象，用于存储这两种类型的对象的有序的对 **float * * *，* 首先表示复数与第二个实部表示复数虚部。
 
 ## <a name="syntax"></a>语法
 

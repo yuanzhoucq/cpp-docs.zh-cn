@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348112"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Rich Edit 控件中的段落格式设置
 你可以使用 rich edit 控件的成员函数 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 设置段落格式和检索格式设置信息。 段落格式设置特性包括对齐、选项卡、缩进和编号。  

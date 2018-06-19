@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692566"
 ---
 # <a name="isource-class"></a>ISource 类
 `ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845448"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
 

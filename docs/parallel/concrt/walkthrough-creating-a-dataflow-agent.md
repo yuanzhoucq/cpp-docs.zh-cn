@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693089"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>演练：创建数据流代理
 本文档演示如何创建基于代理的应用程序基于数据流，而不是控制流。  

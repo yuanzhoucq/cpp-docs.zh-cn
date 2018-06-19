@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849725"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>从 Visual C++ 早期版本升级项目
 在大多数情况下，你可以打开在 Visual Studio 早期版本中创建的项目。 但是，为实现这一点，Visual Studio 将升级项目。 如果你保存升级的该项目，它将无法在早期版本中打开。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/07/2018
   
 2.  在 Visual Studio 的当前版本中，打开（并因此升级）项目或解决方案的副本并保存。  
   
-3.  对于每个转换的项目，打开快捷菜单并选择 **“属性”**。 在 **“配置属性”**下，选择 **“常规”** ，然后为 **“平台工具集”**选择当前版本。 （例如，为 Visual Studio 2017 选择 v141。）  
+3.  对于每个转换的项目，打开快捷菜单并选择 **“属性”**。 在 **“配置属性”** 下，选择 **“常规”** ，然后为 **“平台工具集”** 选择当前版本。 （例如，为 Visual Studio 2017 选择 v141。）  
   
 4.  生成解决方案。 如果生成失败，请修改设置并重新生成。  
   

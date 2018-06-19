@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375058"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控件向导
 ActiveX 控件是特定类型的[自动化服务器](../../mfc/automation-servers.md); 它是一个可重用组件。 承载 ActiveX 控件的应用程序是[自动化客户端](../../mfc/automation-clients.md)该控件。 如果你的目标是创建此类可重用的组件，然后使用此向导创建您的控件。 请参阅[MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)有关详细信息。  

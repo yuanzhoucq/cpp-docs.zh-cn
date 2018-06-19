@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850289"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 指定执行字符集，用于字符串和字符文本。 文本标记为 u8 前缀不需要此指令。  

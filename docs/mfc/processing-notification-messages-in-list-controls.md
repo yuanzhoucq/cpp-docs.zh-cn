@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347671"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>处理列表控件中的通知消息
 当用户单击列标题时，拖动图标，编辑标签，依次类推，列表控件 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 将通知消息发送到其父窗口。 如果您要在响应中做些什么，请处理这些消息。 例如，当用户单击列标题时，您可能要根据单击的列内容对项进行排序，与在 Microsoft Outlook 中一样。  

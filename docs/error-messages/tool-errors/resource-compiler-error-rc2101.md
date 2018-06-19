@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330812"
 ---
 # <a name="resource-compiler-error-rc2101"></a>资源编译器错误 RC2101
 预处理 RC 文件中的无效指令  

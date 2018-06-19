@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378290"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 类[CObject](../../mfc/reference/cobject-class.md)和[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封装多个对象服务，包括对运行时类信息、 序列化和动态对象创建的访问。 所有派生自 `CObject` 的类都继承此功能。  

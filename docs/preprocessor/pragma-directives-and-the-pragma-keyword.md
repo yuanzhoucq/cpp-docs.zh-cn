@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846228"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 指令和 __Pragma 关键字
 杂注指令指定计算机或操作系统特定的编译器功能。 `__pragma` 关键字是特定于 Microsoft 编译器的，可利用它在宏定义中编码杂注指令。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695637"
 ---
 # <a name="concurrency-runtime-best-practices"></a>并发运行时最佳做法
 本部分介绍可帮助你高效使用并发运行时的最佳做法。 这些最佳做法适用于[并行模式库](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)，和[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  

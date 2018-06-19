@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344495"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>从标准控件派生控件
 与使用任何[CWnd](../mfc/reference/cwnd-class.md)-派生类，可以通过从现有控件类派生新类来修改控件的行为。  

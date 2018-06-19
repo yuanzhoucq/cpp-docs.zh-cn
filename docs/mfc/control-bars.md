@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347894"
 ---
 # <a name="control-bars"></a>控件条
 “控件条”是工具栏、状态栏和对话栏的统称。 MFC 类`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和**CReBar**派生自类[CControlBar](../mfc/reference/ccontrolbar-class.md)，该类可实现其常见功能。  

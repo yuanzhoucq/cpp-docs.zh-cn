@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385984"
 ---
 # <a name="writing-mfc-applications"></a>编写 MFC 应用程序
 此文章介绍了执行开发应用程序的初始步骤。 首先，你必须决定哪种应用程序正在编写。 多个选项已中所述[应用程序设计选择](../mfc/application-design-choices.md)。 将为你的应用程序：  

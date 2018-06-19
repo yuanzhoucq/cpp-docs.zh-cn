@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857907"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>选择透明或不透明背景（图标的图像编辑器）
 移动或复制选定内容从映像时，任何与匹配的当前的背景色的像素在所选内容时，默认情况下，透明的;它们不清楚目标位置中的像素为单位。  

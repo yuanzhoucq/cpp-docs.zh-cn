@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862717"
 ---
 # <a name="arrays-c-component-extensions"></a>数组（C++ 组件扩展）
 `Platform::Array<T>`类型在 C + + /CX 中，或`array`关键字在 C + + /cli CLI，声明的指定的类型和初始值的数组。  

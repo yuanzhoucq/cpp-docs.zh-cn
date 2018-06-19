@@ -326,6 +326,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378875"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 类
 `CMFCToolBar`类类似于[CToolBar 类](../../mfc/reference/ctoolbar-class.md)，但为用户界面功能提供额外支持。 其中包括平面工具栏、有热图的工具栏、大图标、页导航按钮、锁定的工具栏、Rebar 控件、图像下的文本、背景图像和选项卡式工具栏。 `CMFCToolBar` 类还包含内置支持，用户可对工具栏和菜单、工具栏和菜单之间的拖放、组合框按钮、编辑框按钮、颜色选取器和汇总按钮进行自定义。

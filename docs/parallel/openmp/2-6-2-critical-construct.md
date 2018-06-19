@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689592"
 ---
 # <a name="262-critical-construct"></a>2.6.2 critical 构造
 **关键**指令标识一个构造，用于限制为单线程的执行关联的结构化块，一次。 语法**关键**指令是，如下所示：  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347186"
 ---
 # <a name="memory-management-examples"></a>内存管理：示例
 本指南介绍了 MFC 如何三种典型的内存分配的每个执行了帧分配和堆分配：  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374365"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 类
 用于 OLE“服务器未响应”或“服务器忙”对话框。  

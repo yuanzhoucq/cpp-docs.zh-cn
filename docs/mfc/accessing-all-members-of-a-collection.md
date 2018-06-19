@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334842"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>访问集合的所有成员
 MFC 数组集合类（无论是否基于模板）使用索引来访问其元素。 MFC 列表和映射集合类（无论是否基于模板）使用 **POSITION** 类型的指示器来描述集合内的给定位置。 若要访问这些集合的一个或多个成员，首先初始化位置指示器，然后重复将此位置传递给集合，使其返回下一个元素。 集合不负责维护迭代进度的状态信息。 该信息保存在位置指示器。 但对于给定的特定位置，集合负责返回下一个元素。  

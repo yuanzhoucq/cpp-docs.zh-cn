@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692894"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 结构
 可以在给定虚拟处理器上运行并可以协作切换上下文的执行上下文的接口。  

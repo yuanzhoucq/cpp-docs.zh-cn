@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854806"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>将快捷键与菜单项关联
 很多时候，你希望某一菜单项和某一键盘组合可以发出相同的程序命令。 你可以为该菜单项和应用程序的快捷键对应表中的条目分配相同的资源标识符 (ID)，来达到这个目的。 接着你可以编辑该菜单项的标题，以显示快捷键的名称。 菜单项和快捷键的详细信息，请参阅[将菜单项与快捷键关联](../windows/associating-a-menu-command-with-an-accelerator-key.md)。  
