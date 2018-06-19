@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301104"
 ---
 # <a name="linker-tools-error-lnk1314"></a>链接器工具错误 LNK1314
 损坏或无效的 COFF 符号表 （未定义的静态或标签符号）  

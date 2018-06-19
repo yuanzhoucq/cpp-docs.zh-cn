@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318056"
 ---
 # <a name="project-build-warning-prj0041"></a>项目生成警告 PRJ0041
 找不到缺少依赖项依赖关系文件 file。 你的项目仍然可以生成，但可能会一直显示过期，直到找到此文件。  

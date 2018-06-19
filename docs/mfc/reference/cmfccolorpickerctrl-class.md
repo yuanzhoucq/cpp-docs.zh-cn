@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374810"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 类
 `CMFCColorPickerCtrl`类提供用于选择颜色的控件的功能。  

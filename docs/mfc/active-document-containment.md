@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332668"
 ---
 # <a name="active-document-containment"></a>活动文档包容
 活动文档包容是一种技术，它提供用于处理的文档，而不是强制你创建和使用每个文档类型的多个应用程序帧中的单个帧。 它不同于基本 OLE 技术，因为 OLE 配合复合文档仅一段单独的内容可在其中活动内的嵌入对象的不同而不同。 使用活动文档包容的单个帧的上下文中激活整个文档 （即，整个应用程序，包括关联的菜单、 工具栏和等等）。  

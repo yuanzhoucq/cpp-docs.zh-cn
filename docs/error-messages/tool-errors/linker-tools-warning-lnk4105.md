@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33304409"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>链接器工具警告 LNK4105
 使用选项 option; 指定任何自变量忽略选项  

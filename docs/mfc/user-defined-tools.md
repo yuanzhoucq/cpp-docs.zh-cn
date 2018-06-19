@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384343"
 ---
 # <a name="user-defined-tools"></a>用户定义的工具
 MFC 支持用户定义的工具。 用户定义的工具是执行程序外部的用户指定的特殊命令。 可以使用的自定义过程来管理用户定义的工具。 但是，不能使用此过程，如果你的应用程序对象不派生自[CWinAppEx 类](../mfc/reference/cwinappex-class.md)。 有关自定义的详细信息，请参阅[MFC 自定义](../mfc/customization-for-mfc.md)。  

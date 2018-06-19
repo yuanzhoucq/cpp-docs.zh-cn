@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377002"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 用于创建使用 HTML 的对话框而不是对话框资源来实现自己的用户界面。  

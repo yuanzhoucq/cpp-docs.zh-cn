@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344199"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文档/视图结构的替换选项
 MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格式和数据对用户的可视表示形式。 对于大多数桌面应用程序，文档/视图结构是适当和有效的应用程序体系结构。 这种体系结构将数据与视图分离，大多数情况下，可简化应用程序并减少冗余代码。  

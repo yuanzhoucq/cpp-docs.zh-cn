@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689891"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   使用并行区域
 `parallel`指令 ([2.3 节](../../parallel/openmp/2-3-parallel-construct.md)第 8 页上) 可以在粗粒度的并行程序中使用。 在下面的示例中，每个线程在并行区域决定全局数组的哪一部分`x`来处理，基于线程号：  

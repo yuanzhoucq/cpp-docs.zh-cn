@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347076"
 ---
 # <a name="files-in-mfc"></a>MFC 中的文件
 在 Microsoft 基础类库 (MFC)，类[CFile](../mfc/reference/cfile-class.md)处理常规文件 I/O 操作。 此系列文章介绍如何打开和关闭文件以及如何读取数据并将数据写入文件。 还讨论了文件状态操作。 有关如何使用 MFC 的基于对象的序列化功能作为一种替代方式的读取和写入数据文件中的说明，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382588"
 ---
 # <a name="walkthroughs-mfc"></a>演练 (MFC)
 本节包含的文章为你演练与新的 MFC 库功能相关的各种任务。  

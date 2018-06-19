@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342938"
 ---
 # <a name="creating-document-frame-windows"></a>创建文档框架窗口
 [文档/视图创建](../mfc/document-view-creation.md)演示如何[CDocTemplate](../mfc/reference/cdoctemplate-class.md)对象安排创建框架窗口、 文档和视图并将它们连接在一起。 三个[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)自变量`CDocTemplate`构造函数指定框架窗口、 文档和文档模板以响应用户命令，例如文件上的新命令动态创建的视图类菜单或 MDI 窗口菜单上的新建窗口命令。 在它创建视图和文档框架窗口时，文档模板将存储此信息以供将来使用。  

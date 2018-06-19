@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298764"
 ---
 # <a name="linker-tools-error-lnk1201"></a>链接器工具错误 LNK1201
 错误写入到程序数据库 filename;检查有足够的磁盘空间、 路径无效或没有足够的权限  

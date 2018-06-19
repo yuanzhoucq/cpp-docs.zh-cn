@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685757"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>线程控制的 C 运行库函数
 所有 Win32 程序都具有至少一个线程。 任何线程可以创建其他线程。 线程可以快速完成其工作，然后终止，或它可以将保持活动状态的生存期内程序。  

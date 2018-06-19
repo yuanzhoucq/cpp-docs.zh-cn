@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334881"
 ---
 # <a name="active-documents-on-the-internet"></a>Internet 上的活动文档
 活动文档提供传统嵌入对象的扩展。 活动文档可以是多页，并将显示在整个工作区。 它们执行传统的菜单协商，就地，以及在服务器应用程序中打开的窗口可以进行编辑。 而不是显示为通过阴影边框括起来的一个小矩形，活动文档是全帧和始终处于就地活动状态。  

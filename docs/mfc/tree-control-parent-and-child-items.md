@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382510"
 ---
 # <a name="tree-control-parent-and-child-items"></a>树控件父项和子项
 树控件中的任意项 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 都具有子项，称为子项目，与之关联的列表。 具有一个或多个子项的项称为“父项”。 子项显示在其父项下，可能指示其是父级的下属。 没有父级的项位于层次结构顶部，称为“根项”。  

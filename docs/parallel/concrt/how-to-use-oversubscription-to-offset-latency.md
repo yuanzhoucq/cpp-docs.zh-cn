@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689254"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用过度订阅偏移延迟
 过度订阅可提高对某些包含很长的延迟的任务的应用程序的整体效率。 本主题演示如何使用过度订阅抵消延迟所致通过网络连接读取数据。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344930"
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子窗口
 MDI 主框架窗口 （每个应用程序一个） 包含特殊子窗口调用**MDICLIENT**窗口。 **MDICLIENT**窗口管理主框架窗口的工作区，并且其自身具有子窗口： 派生自的文档窗口`CMDIChildWnd`。 由于文档窗口是框架窗口（MDI 子窗口），因此它们也有其自己的子级。 在所有这些情况下，父窗口管理其子窗口并将一些命令转发给它们。  

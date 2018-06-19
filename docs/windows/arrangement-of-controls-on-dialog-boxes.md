@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858482"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>对话框上的控件排列
 对话框编辑器提供了布局工具对齐控件和自动调整控件的大小。 对于大多数任务，你可以使用[对话框编辑器工具栏](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。 对话框编辑器工具栏上的所有命令还可在格式菜单上，但大多数有[快捷键](../windows/accelerator-keys-for-the-dialog-editor.md)。  

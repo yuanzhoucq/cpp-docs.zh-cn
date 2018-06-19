@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322791"
 ---
 # <a name="nmake-fatal-error-u1035"></a>NMAKE 错误 U1035
 语法错误： 预期 ':' 或 '=' 分隔符  

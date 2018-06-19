@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33309463"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>编译器警告 （等级 2） C4099
 identifier： 首先被使用 objecttype1 现在了解了使用 objecttype2 的类型名称  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347037"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE 拖放和数据传输类
 在 OLE 数据传输中使用这些类。 它们允许应用程序通过使用剪贴板或拖到和放置之间传输数据。  

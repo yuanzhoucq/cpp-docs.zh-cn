@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347160"
 ---
 # <a name="dragging-images-from-an-image-list"></a>从图像列表拖动图像
 [CImageList](../mfc/reference/cimagelist-class.md)包含在屏幕上拖动图像的函数。 拖动函数可以流畅地拖动图像，光标没有任何闪烁。 添加了蒙板的图像和未添加蒙板的图像均可拖动。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383545"
 ---
 # <a name="using-cstatusbarctrl"></a>使用 CStatusBarCtrl
 你可以使用状态栏控件 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 来创建反映有关应用程序的状态信息的各种类型的控件窗口。 状态窗口可以分成多个部分，以显示多种类型的信息。  

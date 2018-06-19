@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385462"
 ---
 # <a name="template-based-classes"></a>基于模板的类
 此文章介绍了 MFC 3.0 版及更高版本中的类型安全的基于模板的集合类。 使用这些模板创建类型安全的集合是更方便，并帮助比使用不基于模板的集合类更有效地提供类型安全。  

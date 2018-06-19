@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343640"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>跳过序列化机制
 如您所见，框架提供了一个在文件中读取和写入数据的默认方式。 通过存档对象进行序列化可满足很多应用程序的需求。 此类应用程序将文件完全读入内存，让用户更新文件，然后重新将更新的版本写入磁盘。  

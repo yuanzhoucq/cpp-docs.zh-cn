@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857345"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode 和 MBCS
 启用 Microsoft 基础类 (MFC) 库、 Visual c + +、 C 运行时库和 Visual c + + 开发环境以帮助你国际化编程。 它们提供：  
