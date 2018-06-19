@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414765"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>有关编写 Prolog/Epilog 代码的注意事项
 ## <a name="microsoft-specific"></a>Microsoft 专用  

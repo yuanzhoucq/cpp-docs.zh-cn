@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418882"
 ---
 # <a name="linkage-in-names-with-block-scope"></a>具有块范围的名称中的链接
 下列链接规则适用于具有块范围的名称（本地名称）：  

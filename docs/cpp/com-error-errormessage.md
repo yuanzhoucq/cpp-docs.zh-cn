@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411226"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Microsoft 专用**  

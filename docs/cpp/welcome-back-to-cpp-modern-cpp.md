@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424862"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 C++ 是世界上最常用的编程语言之一。 正确编写的 C++ 程序是快速而高效的。 该语言比其他语言更加灵活，因为你可以使用它来创建各种应用程序——从有趣而刺激的游戏，到高性能的科学软件、设备驱动程序、嵌入式程序和 Windows 客户端应用。 20 多年来，人们使用 C++ 解决此类问题和许多其他问题。 你可能不知道，越来越多的 C++ 程序员已经抛弃了过时的 C 样式编程，转而使用使用现代 C++。   

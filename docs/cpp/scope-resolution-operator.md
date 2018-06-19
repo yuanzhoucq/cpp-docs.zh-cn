@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420924"
 ---
 # <a name="scope-resolution-operator-"></a>范围解析运算符：::
 范围解析运算符 `::` 用于标识和消除在不同范围内使用的标识符。 有关作用域的详细信息，请参阅[作用域](../cpp/scope-visual-cpp.md)。  

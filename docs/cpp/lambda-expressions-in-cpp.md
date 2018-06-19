@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424044"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 在 C++ 11 和更高版本，lambda 表达式-通常称为*lambda*— 是定义匿名函数对象的简便方法 (*闭包*) 坐在调用或作为参数传递位置的位置到函数。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408564"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t 成员函数
 璝惠`_com_ptr_t`成员函数，请参阅[_com_ptr_t 类](../cpp/com-ptr-t-class.md)。  
