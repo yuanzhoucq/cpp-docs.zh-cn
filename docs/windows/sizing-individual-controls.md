@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890098"
 ---
 # <a name="sizing-individual-controls"></a>调整单个控件的大小
 使用调整大小控点来调整控件的大小。 仅当鼠标指针置于尺寸控点时，它将改变形状以指示可以在其中调整控件的说明。 活动的调整大小控点是实心;如果空心尺寸控点，该控件不调整大小沿该轴。  

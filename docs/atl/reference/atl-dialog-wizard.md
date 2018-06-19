@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358001"
 ---
 # <a name="atl-dialog-wizard"></a>ATL 对话框向导
 此向导将插入项目 ATL 对话框框对象，派生自[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 对话框中派生自`CAxDialogImpl`可以承载 ActiveX 控件。  

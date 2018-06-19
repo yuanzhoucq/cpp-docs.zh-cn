@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391400"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在 MFC 的规则 Dll 中使用数据库、 OLE 和套接字 MFC 扩展 Dll
 在使用 MFC 扩展 DLL 从正则 MFC DLL，如果 MFC 扩展 DLL 不连接到**CDynLinkLibrary**对象链的常规 MFC DLL，则可能会遇到一个或多个对相关问题的一组。 由于支持的调试版本的 MFC 数据库、 OLE 和套接字 Dll 作为 MFC 扩展 Dll 实现，可能会看到类似的问题，如果你正在使用这些 MFC 功能，即使你未显式使用任何你自己的 MFC 扩展 Dll。 某些症状是：  

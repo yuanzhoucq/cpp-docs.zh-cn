@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112753"
 ---
 # <a name="rowset-object-interfaces"></a>行集合对象接口
 下表显示由 OLE DB 行集对象定义的必需和可选接口。  

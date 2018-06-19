@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373343"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE（命名清单文件）
 ```  

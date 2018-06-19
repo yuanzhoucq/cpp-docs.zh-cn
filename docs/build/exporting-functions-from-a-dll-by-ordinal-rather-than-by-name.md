@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367688"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>按序号而不是按名称从 DLL 导出函数
 从 DLL 导出函数的最简单方法是将它们导出的名称。 这是当你使用时，会发生什么情况 **__declspec （dllexport)**，例如。 但你可以按序号导出函数。 凭借此技术，你必须使用.def 文件而不是 **__declspec （dllexport)**。 若要指定函数的序号值，请将其序号追加到.def 文件中的函数名称。 有关指定序号的信息，请参阅[使用.def 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)。  

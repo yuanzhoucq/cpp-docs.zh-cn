@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367506"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 显式链接到 DLL 调用的进程[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)在不再需要 DLL 模块时正常工作。 此函数递减模块的引用计数，并且，如果引用计数为零，则执行从进程的地址空间。  

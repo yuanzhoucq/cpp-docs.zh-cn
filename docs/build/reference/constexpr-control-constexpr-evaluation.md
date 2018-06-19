@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373954"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr （控件 constexpr 评估版）  
   

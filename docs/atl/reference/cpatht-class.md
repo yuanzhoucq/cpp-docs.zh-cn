@@ -64,6 +64,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366375"
 ---
 # <a name="cpatht-class"></a>CPathT 类
 此类表示的路径。  

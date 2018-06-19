@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375888"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF（消除重复的字符串）
 使编译器能够在执行过程中的程序映像和内存中创建的相同字符串的单个副本。 这是一种优化方式调用*字符串池*，它可以创建较小的程序。  

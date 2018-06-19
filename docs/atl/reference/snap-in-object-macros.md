@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363905"
 ---
 # <a name="snap-in-object-macros"></a>管理单元中对象宏
 这些宏提供对管理单元中扩展的支持。  

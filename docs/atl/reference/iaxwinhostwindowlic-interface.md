@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362835"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 接口
 此接口提供用于操作授权的控件和其主机对象的方法。  

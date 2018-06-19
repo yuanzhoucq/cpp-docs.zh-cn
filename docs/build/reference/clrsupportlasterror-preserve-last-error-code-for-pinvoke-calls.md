@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378631"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）
 **/CLRSUPPORTLASTERROR**，这是在默认情况下，使用保留通过 P/Invoke 机制，可用于在 DLL，从代码调用本机函数调用的函数的最后一个错误代码编译 **/clr**。  

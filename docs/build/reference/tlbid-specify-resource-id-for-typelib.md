@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375160"
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID（指定类型库的资源 ID）
 ```  

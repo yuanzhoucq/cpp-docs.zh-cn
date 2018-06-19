@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389951"
 ---
 # <a name="trigraphs"></a>三字符组
 C 源程序的源字符集包含在 7 位 ASCII 字符集中，但它是 ISO 646-1983 固定语言代码集的超集。 三元组序列仅允许使用 ISO（国际标准组织）固定语言代码集编写 C 程序。 三元组是三字符序列（由两个连续问号引入），编译器会将它替换为其相应的标点字符。 可以将 C 源文件中的三元组与不包含某些标点字符的方便图形表示形式的字符集一起使用。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373863"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx（合并插入的代码）
 为每个源文件生成一个副本，使插入的代码合并到源代码。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369898"
 ---
 # <a name="txt-files-as-linker-input"></a>用作链接器输入的 .Txt 文件
 链接需要各种文本文件作为附加输入。 [命令文件](../../build/reference/link-command-files.md)说明符 (@) 和[基址](../../build/reference/base-base-address.md)（/ 基本）， [/DEF](../../build/reference/def-specify-module-definition-file.md)，和[/order](../../build/reference/order-put-functions-in-order.md)选项所有指定文本的文件。 这些文件可以具有任何扩展名，并不仅仅是.txt。  

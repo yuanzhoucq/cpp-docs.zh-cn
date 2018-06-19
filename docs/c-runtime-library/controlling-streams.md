@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388810"
 ---
 # <a name="controlling-streams"></a>控制流
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) 返回 `FILE` 类型的对象的地址。 您可以将此地址用作多个库函数的 `stream` 参数以对打开的文件执行各种操作。 对于字节流，会像通过调用 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。 对于宽流，会像通过调用 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。  

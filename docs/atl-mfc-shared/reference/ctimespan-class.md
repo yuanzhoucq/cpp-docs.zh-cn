@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365313"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 类
 一段时间，它将内部存储为中的时间跨度的秒数。  

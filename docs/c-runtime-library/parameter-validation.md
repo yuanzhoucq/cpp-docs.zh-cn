@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450242"
 ---
 # <a name="parameter-validation"></a>参数验证
 大多数安全性增强的 CRT 函数和很多已有的函数都会验证其参数。 这可能包括检指针是否为 NULL、检查整数在有效的范围内或检查枚举该值是否有效。 当发现无效参数时，将执行无效参数处理程序。  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366414"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 这些宏提供的控制聚合和声明类工厂的方法。  

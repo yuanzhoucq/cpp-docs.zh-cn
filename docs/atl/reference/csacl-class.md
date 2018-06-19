@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363579"
 ---
 # <a name="csacl-class"></a>CSacl 类
 此类是 SACL （系统访问控制列表） 结构的包装器。  

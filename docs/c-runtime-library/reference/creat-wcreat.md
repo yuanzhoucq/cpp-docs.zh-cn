@@ -47,6 +47,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451844"
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 

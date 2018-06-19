@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358584"
 ---
 # <a name="device-context-global-functions"></a>设备上下文全局函数
 此函数创建对给定的设备的设备上下文。  

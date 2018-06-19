@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357900"
 ---
 # <a name="atl-project-wizard"></a>ATL 项目向导
 活动模板库 (ATL) 是一套基于模板的 c + + 类，用于简化编写小型和快速的 COM 对象。 ATL 项目向导创建的项目与以包含 COM 对象的结构。  

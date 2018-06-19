@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391908"
 ---
 # <a name="pointer-declarations"></a>指针声明
 “指针声明”可命名指针变量并指定该变量所指向的对象的类型。 声明为指针的变量保留了一个内存地址。  

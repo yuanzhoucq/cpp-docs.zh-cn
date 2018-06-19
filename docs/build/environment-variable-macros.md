@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367428"
 ---
 # <a name="environment-variable-macros"></a>环境变量宏
 NMAKE 继承的会话开始之前存在的环境变量的宏定义。 如果变量在操作系统环境中设置的则可以用作 NMAKE 宏。 继承的名称将转换为大写。 在预处理前发生继承。 使用 /E 选项会导致从环境变量重写中生成文件同名的任何宏继承的宏。  

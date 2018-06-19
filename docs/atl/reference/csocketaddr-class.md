@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363391"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 类
 此类提供用于将主机名转换为主机地址，支持 IPv4 和 IPV6 格式的方法。  

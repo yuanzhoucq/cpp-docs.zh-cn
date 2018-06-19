@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891219"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 命名空间
 启用基本 Windows 运行时功能，如对象和工厂创建。  

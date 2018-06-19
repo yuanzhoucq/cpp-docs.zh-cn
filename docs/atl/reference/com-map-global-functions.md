@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359874"
 ---
 # <a name="com-map-global-functions"></a>COM 映射全局函数
 这些函数提供支持 COM 映射**IUnknown**实现。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891293"
 ---
 # <a name="weakrefasiid-method"></a>WeakRef::AsIID 方法
 设置指定的 ComPtr 指针参数以表示指定的接口 ID。  

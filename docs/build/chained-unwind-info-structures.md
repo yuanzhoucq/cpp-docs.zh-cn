@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366947"
 ---
 # <a name="chained-unwind-info-structures"></a>链式展开信息结构
 如果设置 UNW_FLAG_CHAININFO 标志，然后展开信息结构是一个辅助和共享的异常的处理程序/链接的信息地址字段包含主展开信息。 以下代码检索主展开信息，假定`unwindInfo`是具有 UNW_FLAG_CHAININFO 结构标志设置。  

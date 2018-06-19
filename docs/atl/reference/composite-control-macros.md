@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363656"
 ---
 # <a name="composite-control-macros"></a>复合控件宏
 这些宏定义事件接收器映射和条目。  

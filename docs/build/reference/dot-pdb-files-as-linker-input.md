@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370171"
 ---
 # <a name="pdb-files-as-linker-input"></a>用作链接器输入的 .Pdb 文件
 对象 (.obj) 文件使用了 /Zi 选项编译包含的程序数据库 (PDB) 的名称。 未指定到链接器; 的对象的 PDB 文件名称链接使用嵌入的名称查找 PDB，如果需要。 这同样适用于可调试库; 中包含的对象可调试库的 PDB 必须可供随同库一起链接器。  

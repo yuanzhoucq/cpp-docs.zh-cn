@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131350"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：调用 Windows 窗体控件的属性和方法
 因为[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)返回一个指向<xref:System.Windows.Forms.Control?displayProperty=fullName>，并不是指向`WindowsControlLibrary1::UserControl1`，则最好添加用户控件类型的成员并将其在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 现在你可以调用方法和属性使用`m_ViewControl`。  

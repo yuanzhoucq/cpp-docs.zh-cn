@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369872"
 ---
 # <a name="cl-command-files"></a>CL 命令文件
 命令文件是文本文件，其中包含选项和文件名，否则将在键入[命令行](../../build/reference/compiler-command-line-syntax.md)或指定使用[CL 环境变量](../../build/reference/cl-environment-variables.md)。 CL 接受编译器命令文件作为自变量在 CL 环境变量或命令行上。 与命令行或 CL 环境变量不同，命令文件允许使用多行选项和文件名。  

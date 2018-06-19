@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360245"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 类
 使用此类将调试报告发送到命名管道。  

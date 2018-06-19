@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359309"
 ---
 # <a name="interfaces-atl"></a>接口 (ATL)
 接口是在其中一个对象公开到外界其功能的方式。 在 COM 中，接口是一个表 （如 c + + vtable) 指向的对象实现的函数的指针。 表表示的接口，和它所指向的函数是该接口的方法。 对象可能会公开它选择的任意多个接口。  

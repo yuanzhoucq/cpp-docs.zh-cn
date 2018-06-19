@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127898"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>如何：从剪贴板中检索文本 (C++/CLI)
 下面的代码示例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成员函数返回一个指向<xref:System.Windows.Forms.IDataObject>接口。 此接口然后可以查询的数据格式，用于检索实际数据。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372212"
 ---
 # <a name="heap"></a>/HEAP
 设置堆的大小（以字节为单位）。 此选项仅适用于可执行文件。  

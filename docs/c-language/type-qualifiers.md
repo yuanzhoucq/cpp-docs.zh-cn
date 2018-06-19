@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389980"
 ---
 # <a name="type-qualifiers"></a>类型限定符
 类型限定符为标识符提供两个属性之一。 const 类型限定符将对象声明为不可修改。 `volatile` 类型限定符声明一个项，该项的值可由超出该项所在的程序控制范围的某个项（如并发执行的线程）合理更改。  

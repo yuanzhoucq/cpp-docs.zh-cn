@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358122"
 ---
 # <a name="date-type"></a>日期类型
 **日期**使用 8 字节浮点数实现类型。 按从 1899 年 12 月 30 日，时间为零点午夜开始的整数增量表示天。 小时值表示为绝对值的数值的数字的小数部分。 下表说明了几个日期中的连同其**日期**类型数值等效项：  

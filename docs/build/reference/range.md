@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374419"
 ---
 # <a name="range"></a>/RANGE
 修改 dumpbin 与其他 dumpbin 选项，如 /RAWDATA 或 /DISASM 一起使用时的输出。  

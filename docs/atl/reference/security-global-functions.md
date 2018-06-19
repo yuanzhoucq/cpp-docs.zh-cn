@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365049"
 ---
 # <a name="security-global-functions"></a>安全全局函数
 这些函数为修改 SID 和 ACL 对象提供支持。  

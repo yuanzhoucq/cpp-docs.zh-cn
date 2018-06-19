@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451805"
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全功能
 许多旧 CRT 函数具有更新、更安全的版本。 如果存在安全函数，则较旧的、安全性更低的版本将标记为已弃用，并且新版本具有 `_s`（“安全”）后缀。  

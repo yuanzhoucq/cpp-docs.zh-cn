@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356681"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL 窗口类简介
 下面的 ATL 类旨在实现和操作窗口：  

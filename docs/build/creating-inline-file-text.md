@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367493"
 ---
 # <a name="creating-inline-file-text"></a>创建内联文件文本
 内联文件可以是临时的还是永久。  

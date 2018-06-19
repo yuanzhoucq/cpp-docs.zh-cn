@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376294"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy（启用函数级链接）
 允许编译器以打包函数 (COMDAT) 形式对各个函数进行打包。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392557"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建 Visual C++ 项目
 本演练演示如何使用[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]生成 Visual c + + 项目，在命令提示符。 您将学习如何创建 c + + 源代码文件和 Visual c + + 控制台应用程序的基于 XML 的项目文件。 后生成项目时，您将学习如何自定义生成过程。  

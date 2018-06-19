@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372651"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN 参考
 Microsoft COFF 二进制文件转储器 (DUMPBIN。EXE) 显示有关通用对象文件格式 (COFF) 的二进制文件的信息。 DUMPBIN 可用于检查 COFF 对象文件、 COFF 对象、 可执行文件和动态链接库 (Dll) 的标准库。  

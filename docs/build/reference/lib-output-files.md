@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370483"
 ---
 # <a name="lib-output-files"></a>LIB 输出文件
 LIB 所产生的输出文件取决于在其中它的使用的模式下, 表中所示。  

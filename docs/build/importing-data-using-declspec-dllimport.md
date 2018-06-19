@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368507"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>使用 __declspec(dllimport) 导入数据
 在使用的数据的情况下 **__declspec （dllimport)** 是中移除的间接层的方便项。 当你从 DLL 导入数据时，你仍必须经历的导入地址表。 之前 **__declspec （dllimport)**，这意味着你必须记住从 DLL 导出的访问数据时如何额外级别的间接寻址：  

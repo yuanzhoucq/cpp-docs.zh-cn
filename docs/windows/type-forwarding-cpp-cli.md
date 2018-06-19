@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891087"
 ---
 # <a name="type-forwarding-ccli"></a>类型转发 (C++/CLI)
 *类型转发*允许你将移动一种类型从一个程序集 （程序集 A） 到另一个程序集 （程序集 B），以便不需要重新编译使用程序集 A.的客户端  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366362"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 此类为使用基于 COM 的内存例程的智能指针类提供基础。  

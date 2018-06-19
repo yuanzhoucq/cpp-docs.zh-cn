@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376688"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用调试版本检查内存改写
 若要使用调试版本检查内存改写，首先必须重新生成用于调试的项目。 然后，请转到你的应用程序一开始`InitInstance`函数，并添加以下行：  

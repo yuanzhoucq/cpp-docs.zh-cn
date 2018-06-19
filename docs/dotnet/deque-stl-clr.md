@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111141"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 此模板类描述控制变长序列的元素具有随机访问的对象。 使用容器`deque`来管理，如下所示一块连续存储，但这可以增大或缩小在任何一端而无需复制剩余的所有元素的元素序列。 因此它的实现可以有效地`double-ended queue`。 (因此名称。)  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371679"
 ---
 # <a name="ilk-files-as-linker-input"></a>用作链接器输入的 .Ilk 文件
 链接时以增量方式，LINK 将更新其在第一个增量链接过程中创建的.ilk 状态文件。 此文件具有相同的基名称为.exe 文件或.dll 文件，并具有扩展.ilk。 在后续的增量链接期间链接更新.ilk 文件。 如果缺少.ilk 文件，则 LINK 执行完全链接和创建一个新的.ilk 文件。 如果.ilk 文件不可用，则 LINK 执行非增量链接。 有关增量链接的详细信息，请参阅[增量链接 (/incremental)](../../build/reference/incremental-link-incrementally.md)选项。  

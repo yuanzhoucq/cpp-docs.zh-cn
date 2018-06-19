@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379089"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>ARM ABI 约定概述
 针对 ARM 上 Windows 处理器编译的代码的应用程序二进制接口 (ABI) 基于标准 ARM EABI。 本文突出显示了 ARM 上的 Windows 与标准之间的主要差异。 有关标准 ARM EABI 的详细信息，请参阅[应用程序二进制接口 (ABI) ARM 体系结构](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)。  

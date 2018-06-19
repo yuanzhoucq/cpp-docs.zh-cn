@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112503"
 ---
 # <a name="provider-support-for-bookmarks"></a>用于书签的提供程序支持
 本主题中的示例将添加`IRowsetLocate`接口`CMyProviderRowset`类。 在几乎所有情况下，你首先将接口添加到现有的 COM 对象。 你随后可以测试它通过从使用者模板中添加更多调用。 此示例演示如何：  

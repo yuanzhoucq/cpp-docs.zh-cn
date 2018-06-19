@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365593"
 ---
 # <a name="cadapt-class"></a>CAdapt 类
 此模板用于包装一些类，这些类将 address-of 运算符重新定义为返回对象地址之外的内容。  

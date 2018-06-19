@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891306"
 ---
 # <a name="toolbar-editor"></a>工具栏编辑器
 使用工具栏编辑器，可以创建工具栏资源并将位图转换为工具栏资源。 工具栏编辑器通过图形化显示来显示工具栏和按钮，其外观与完成的应用程序非常相似。  

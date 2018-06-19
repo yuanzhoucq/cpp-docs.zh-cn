@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362266"
 ---
 # <a name="invoking-scripts"></a>调用脚本
 [使用可替换参数 （注册机构的预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)讨论替换地图并提及的注册机构方法**AddReplacement**。 下表中描述了所有和注册机构有八个特定于编写脚本，其他方法。  

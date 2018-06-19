@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371416"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS（编译器线程）
 设置 cl.exe 线程数以在指定链接时代码生成后用于优化和代码生成。  

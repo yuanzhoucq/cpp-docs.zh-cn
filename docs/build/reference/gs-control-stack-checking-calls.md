@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375735"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs（控制堆栈检查调用）
 控制堆栈探测。  

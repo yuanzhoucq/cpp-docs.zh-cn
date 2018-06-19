@@ -43,6 +43,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366518"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 此类是 **SAFEARRAY** 结构的包装器。  

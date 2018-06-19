@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363708"
 ---
 # <a name="example-implementing-a-property-page"></a>示例： 实现的属性页
 此示例演示如何生成显示 （并允许您更改） 的属性的属性页[文档类](../mfc/document-classes.md)接口。  

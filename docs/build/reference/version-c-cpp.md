@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375017"
 ---
 # <a name="version-cc"></a>VERSION (C/C++)
 通知链接以.exe 文件的标头中放置一个数字或 DLL。  

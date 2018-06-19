@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891654"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>使用颜色（图标的图像编辑器）
 图像编辑器包含很多功能，专门处理和自定义颜色。 你可以设置前景色或背景色、 限定的区域填充颜色，或选择要用作当前前景色或背景颜色的图像上的颜色。 你可以使用工具在[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)颜色调色板中以及[颜色窗口](../windows/colors-window-image-editor-for-icons.md)来创建映像。  

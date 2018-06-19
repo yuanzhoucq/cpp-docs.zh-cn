@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130420"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>如何：接收来自本机 C++ 类的 Windows 窗体事件
 你可以启用本机 c + + 类，以接收从 Windows 窗体控件或其他使用 MFC 宏映射格式的窗体中引发的托管事件回调。 接收视图和对话框中的事件是类似于控件的相同任务。  

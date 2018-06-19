@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359724"
 ---
 # <a name="registry-entries"></a>注册表项
 DCOM 引入了应用程序 Id (Appid) 分组到一个集中的位置，注册表中的一个或多个 DCOM 对象配置选项的概念。 通过它在名为该对象的 CLSID 下值 AppID 的值，该值指示指定一个 AppID。  

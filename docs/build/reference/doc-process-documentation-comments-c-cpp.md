@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371276"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc（处理文档注释）(C/C++)
 在源代码文件中并创建具有文档注释每个源代码文件的.xdc 文件可让编译器处理文档注释。  

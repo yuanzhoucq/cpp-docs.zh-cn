@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360957"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits 类
 此类提供的集合类的默认方法和函数。  

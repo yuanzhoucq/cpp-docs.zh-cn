@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164150"
 ---
 # <a name="unique-stlclr"></a>unique (STL/CLR)
 移除指定范围中彼此相邻的重复元素。  

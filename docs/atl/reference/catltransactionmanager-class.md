@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365934"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 CAtlTransactionManager 类提供包装到内核事务管理器 (KTM) 函数。  

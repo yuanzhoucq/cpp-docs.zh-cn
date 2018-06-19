@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373148"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh（启用 _penter 挂钩函数）
 导致调用`_penter`开头的每个方法或函数的函数。  

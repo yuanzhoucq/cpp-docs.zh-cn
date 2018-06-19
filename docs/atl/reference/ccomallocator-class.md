@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358272"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 类
 此类提供用于管理使用 COM 内存例程的内存的方法。  

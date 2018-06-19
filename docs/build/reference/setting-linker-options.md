@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374916"
 ---
 # <a name="setting-linker-options"></a>设置链接器选项
 内部或外部开发环境，可以设置链接器选项。 每个链接器选项的主题讨论如何可以在开发环境中设置它。 请参阅[链接器选项](../../build/reference/linker-options.md)有关的完整列表。  

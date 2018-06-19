@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912727"
 ---
 # <a name="charizing-operator-"></a>字符化运算符 (#@)
 **Microsoft 专用**  

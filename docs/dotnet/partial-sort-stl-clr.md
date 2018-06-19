@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159972"
 ---
 # <a name="partialsort-stlclr"></a>partial_sort (STL/CLR)
 将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。  

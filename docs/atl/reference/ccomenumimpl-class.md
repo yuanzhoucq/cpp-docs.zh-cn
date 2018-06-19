@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365023"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 此类提供正在枚举的项数组中的存储位置的 COM 枚举器接口的实现。  

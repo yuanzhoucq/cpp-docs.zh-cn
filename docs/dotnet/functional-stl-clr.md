@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112831"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 包括 STL/CLR 标头`<cliext/functional>`定义大量的模板类和相关的模板委托和函数。  

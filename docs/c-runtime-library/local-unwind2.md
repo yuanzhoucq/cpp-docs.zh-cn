@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391374"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 内部 CRT 函数。 运行在指示的范围表中列出的所有终止处理程序。  

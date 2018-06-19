@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371429"
 ---
 # <a name="improving-compiler-throughput"></a>提高编译器吞吐量
 使用预编译标头文件更快地生成你的项目。 这是重要信息： 如果你使用 ATL、 MFC 中或 Windows SDK 标头文件。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371936"
 ---
 # <a name="lib-reference"></a>LIB 引用
 Microsoft 库管理器 (LIB.exe) 创建和管理通用对象文件格式 (COFF) 对象文件的库。 LIB 还可用来创建导出文件，并将库导入引用导出的定义。  

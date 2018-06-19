@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373018"
 ---
 # <a name="output-file-f-options"></a>输出文件 (/F) 选项
 输出文件选项创建，或重命名输出文件。 它们会影响在 CL 环境变量中，在命令行，或任何命令文件中指定的所有 C 或 c + + 源代码文件。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110933"
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>对应于 C++ 本机类型的 .NET Framework 类型 (C++/CLI)
 下表显示了内置的 Visual c + + 类型，它们是预定义的类型的别名关键字中**系统**命名空间。  

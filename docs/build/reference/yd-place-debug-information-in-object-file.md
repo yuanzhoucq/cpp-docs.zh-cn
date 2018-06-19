@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378228"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd（将调试信息放在对象文件中）
 从的预编译标头 (.pch) 文件一起使用时创建完成调试在所有对象文件的信息的进度进行[/Yc](../../build/reference/yc-create-precompiled-header-file.md)和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)选项。 已否决。  

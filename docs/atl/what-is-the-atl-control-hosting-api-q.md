@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363241"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>什么是 ATL 控件承载 API？
 ATL 的控件承载 API 是一套函数，它允许任何窗口使其作为 ActiveX 控件容器。 这些函数可以是静态或动态链接到你的项目，因为它们可用作源代码并由 ATL90.dll 公开。 下表中列出的控件承载的函数。  

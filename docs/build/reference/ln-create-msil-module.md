@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375306"
 ---
 # <a name="ln-create-msil-module"></a>/LN（创建 MSIL 模块）
 指定不应将程序集清单插入输出文件中。  

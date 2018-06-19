@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363254"
 ---
 # <a name="aggregates-and-unions"></a>聚合和联合
 其他类型，如数组、 结构和联合，具有更严格的对齐要求，以确保一致聚合和联合存储和数据检索。 下面是数组、 结构和联合的定义：  

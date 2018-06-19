@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377113"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE（性能工具分析器）
 生成一个可与“性能工具”探查器结合使用的输出文件。  

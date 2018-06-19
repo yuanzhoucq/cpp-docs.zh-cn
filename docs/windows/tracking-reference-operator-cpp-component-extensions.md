@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890853"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>跟踪引用运算符（C++ 组件扩展）
 A*跟踪引用*(`%`) 表现得像普通的 c + + 参考 (`&`) 只不过当一个对象分配给跟踪引用，该对象的引用计数会递增。  

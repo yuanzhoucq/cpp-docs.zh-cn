@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390930"
 ---
 # <a name="type-float"></a>float 类型
 浮点数使用 IEEE（电气和电子工程师协会）格式。 浮点类型的单精度值具有 4 个字节，包括一个符号位、一个 8 位 excess-127 二进制指数和一个 23 位尾数。 尾数表示一个介于 1.0 和 2.0 之间的数。 由于尾数的高顺序位始终为 1，因此它不是以数字形式存储的。 此表示形式为 float 类型提供了一个大约在 3.4E-38 和 3.4E+38 之间的范围。  

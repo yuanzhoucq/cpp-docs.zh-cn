@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362292"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全局函数
 这些函数都提供支持`_AtlCreateWndData`结构操作。  

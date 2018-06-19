@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130859"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>如何：使用正则表达式重新排列数据 (C++/CLI)
 下面的代码示例演示如何使用.NET Framework 正则表达式支持可以重新排列，或重新设置数据格式。 下面的代码示例使用<xref:System.Text.RegularExpressions.Regex>和<xref:System.Text.RegularExpressions.Match>类来从字符串中提取第一个和最后一个名称，然后按相反的顺序显示这些名称元素。  

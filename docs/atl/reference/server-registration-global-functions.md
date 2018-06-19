@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364700"
 ---
 # <a name="server-registration-global-functions"></a>服务器注册全局函数
 这些函数提供用于注册和注销在对象映射中的 server 对象的支持。  

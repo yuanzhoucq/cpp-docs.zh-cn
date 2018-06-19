@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378400"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist（取消 _ftol）
 已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。  

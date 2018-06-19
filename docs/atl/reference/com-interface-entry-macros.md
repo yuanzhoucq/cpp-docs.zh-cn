@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366583"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏  
  这些宏在以便其可以访问通过其 COM 映射到输入对象的接口`QueryInterface`。 COM 映射中的项的顺序有顺序接口将检查匹配**IID**期间`QueryInterface`。  

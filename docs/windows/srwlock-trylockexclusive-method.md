@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892652"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive 方法
 尝试获取当前或指定 SRWLock 对象的排他模式的 SRWLock 对象。 如果调用成功，则调用线程将获得的锁定所有权。  

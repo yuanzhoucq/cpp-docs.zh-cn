@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365072"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 类
 此类实现一个对话框 （模式或无模式） 承载 ActiveX 控件。  

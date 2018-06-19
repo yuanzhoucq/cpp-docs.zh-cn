@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365502"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 这些函数提供用于加载和注册类型库的支持。  

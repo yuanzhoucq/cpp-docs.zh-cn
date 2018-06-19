@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373395"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD（IDE 最小重新生成）
 **/FD**不向除中的用户公开[命令行](../../ide/command-line-property-pages.md)c + + 项目的属性页**属性页**对话框中，当且仅当[/Gm （启用最小重新生成）](../../build/reference/gm-enable-minimal-rebuild.md)没有同时选择。 **/FD**不起作用以外的其他开发环境中。 **/FD**不公开的输出中**cl /？**。  

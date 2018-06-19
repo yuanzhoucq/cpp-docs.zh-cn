@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374539"
 ---
 # <a name="lib-files-as-linker-input"></a>用作链接器输入的 .Lib 文件
 链接接受 COFF 标准库和 COFF 导的入库，这两种通常具有扩展名。 lib。 标准库包含对象，并且通过 LIB 工具创建。 导入库包含有关其他程序中导出的信息和链接通过它生成包含导出的程序时或通过创建 LIB 工具。 有关使用 LIB 创建标准或导入库的信息，请参阅[LIB 引用](../../build/reference/lib-reference.md)。 有关使用链接来创建导入库的详细信息，请参阅[/DLL](../../build/reference/dll-build-a-dll.md)选项。  

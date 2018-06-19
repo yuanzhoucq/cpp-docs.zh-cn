@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368793"
 ---
 # <a name="language-specific-handler"></a>特定于语言的处理程序
 语言特定的处理程序的相对地址中不存在 UNWIND_INFO 只要设置了 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER 的标志。 如前一部分中所述，语言特定的处理程序称为作为一部分的异常处理程序搜索或展开代码的一部分。 它具有以下原型：  

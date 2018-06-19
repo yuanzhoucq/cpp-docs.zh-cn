@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367181"
 ---
 # <a name="exception-handling-x64"></a>异常处理 (x64)
 本部分讨论结构化的异常处理和 c + + 异常处理行为上[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378592"
 ---
 # <a name="using-an-import-library-and-export-file"></a>使用导入库和导出文件
 当程序 （可执行文件或 DLL） 将导出到的也是它，从中导入另一个程序，或者如果两个以上程序同时将导出到和从相互导入，链接这些程序的命令必须提供循环导出。  

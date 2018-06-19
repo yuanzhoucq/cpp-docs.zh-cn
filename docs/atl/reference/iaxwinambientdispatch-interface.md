@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366323"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 接口
 此接口提供用于指定特征的承载的控件或容器的方法。  

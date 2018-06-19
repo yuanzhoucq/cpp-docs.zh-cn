@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388320"
 ---
 # <a name="sizeof-operator-c"></a>sizeof 运算符 (C)
 `sizeof` 运算符提供了存储操作数的类型的对象所需的存储空间量（以字节为单位）。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。  

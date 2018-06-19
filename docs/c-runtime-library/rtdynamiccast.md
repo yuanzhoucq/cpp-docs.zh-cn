@@ -32,6 +32,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450929"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 [dynamic_cast](../cpp/dynamic-cast-operator.md) 运算符的运行时实现。  

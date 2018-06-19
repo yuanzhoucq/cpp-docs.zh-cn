@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369352"
 ---
 # <a name="parameter-passing"></a>参数传递
 在寄存器中传递的前四个整数参数。 整数值在 RCX、 RDX、 R8 和 R9 中传递 （按从左到右的顺序）。 自变量 5 和更高版本在堆栈上传递。 所有自变量是右对齐，寄存器中。 这样为了使被调用方可以忽略的寄存器高位，如果需要并且可以访问仅需的寄存器的部分。  

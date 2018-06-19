@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365186"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 类
 此类表示允许每个键可以是使用多个值，使用红色黑色二进制树关联的映射结构。  

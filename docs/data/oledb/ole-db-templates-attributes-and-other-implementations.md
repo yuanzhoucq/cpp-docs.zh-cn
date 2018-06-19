@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111167"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 模板、特性和其他实现
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB 模板  

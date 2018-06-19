@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371897"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目标框架和平台工具集
 你可以更改 Visual c + + 项目设置以面向不同版本的.NET Framework 和使用不同的平台工具集。 默认情况下，项目系统将使用对应于你用于创建该项目的 Visual Studio 版本的 .NET Framework 版本和工具集版本。 可以通过修改项目属性来更改目标平台工具集。 可以通过修改项目 (.vcxproj) 文件来更改目标框架。 不必为每个编译目标都维护一个单独的基本代码。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  保存更改并关闭编辑器。  
   
-6.  在 **“解决方案资源管理器”**中，打开项目的快捷菜单，然后选择 **“重新加载项目”**。  
+6.  在 **“解决方案资源管理器”** 中，打开项目的快捷菜单，然后选择 **“重新加载项目”**。  
   
 7.  若要验证更改，在“解决方案资源管理器” 中，右键单击打开你的项目（不适用于解决方案）的快捷菜单，然后选择“属性”  以打开项目“属性页”  对话框。 在对话框的左窗格中，展开 **“配置属性”** ，然后选择 **“常规”**。 验证“.NET 目标 Framework 版本”  是否显示了新的 Framework 版本。  
   

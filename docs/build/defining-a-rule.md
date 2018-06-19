@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367116"
 ---
 # <a name="defining-a-rule"></a>定义规则
 *Fromext*表示是依赖文件的扩展和*toext*表示目标文件的扩展名。  

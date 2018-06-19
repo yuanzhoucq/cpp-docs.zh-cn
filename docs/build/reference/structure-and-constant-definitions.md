@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376028"
 ---
 # <a name="structure-and-constant-definitions"></a>结构和常量定义
 默认 helper 例程使用多个结构与挂钩函数以及任何异常期间进行通信。 以下是通知和失败值、 信息结构和传递到挂钩的挂钩函数指针类型：  

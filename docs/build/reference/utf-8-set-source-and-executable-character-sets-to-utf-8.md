@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377483"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/utf-8 （设为源和可执行文件字符集为 utf-8）
 指定两个源字符集和执行字符集为 utf-8。  

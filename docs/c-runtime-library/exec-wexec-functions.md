@@ -68,6 +68,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451519"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 函数
 此系列中的每个函数都会加载并执行新进程：  

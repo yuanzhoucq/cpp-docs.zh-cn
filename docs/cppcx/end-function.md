@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086416"
 ---
 # <a name="end-function"></a>end 函数
 返回指向集合末尾以外的迭代器，该集合由指定的接口参数访问。  

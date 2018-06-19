@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365150"
 ---
 # <a name="security-identifier-global-functions"></a>安全标识符全局函数
 这些函数返回常见的已知 SID 的对象。  

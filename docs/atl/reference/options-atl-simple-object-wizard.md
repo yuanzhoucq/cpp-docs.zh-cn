@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364136"
 ---
 # <a name="options-atl-simple-object-wizard"></a>选项，ATL 简单对象向导
 ATL 简单对象向导的此页用于设计以便提高的效率和错误支持对象。  
