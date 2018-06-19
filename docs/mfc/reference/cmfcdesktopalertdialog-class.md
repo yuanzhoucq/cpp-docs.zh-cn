@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368165"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 类
 `CMFCDesktopAlertDialog`类一起配合使用[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)在弹出窗口中显示自定义对话框。  

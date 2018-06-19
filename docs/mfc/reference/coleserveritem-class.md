@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378769"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 类
 提供 OLE 项的服务器接口。  

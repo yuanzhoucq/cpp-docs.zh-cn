@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369224"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 类
 表示数据的流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 通过名为[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  

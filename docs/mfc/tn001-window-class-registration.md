@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383849"
 ---
 # <a name="tn001-window-class-registration"></a>TN001：窗口类注册
 本说明介绍注册这两个特殊的 MFC 例程[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es 所需的 Microsoft Windows。 特定`WNDCLASS`讨论使用 MFC 和 Windows 的属性。  

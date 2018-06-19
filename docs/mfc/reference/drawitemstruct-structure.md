@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378264"
 ---
 # <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT 结构
 `DRAWITEMSTRUCT` 结构提供有关所有者窗口必须确定如何绘制所有者描述的控件或菜单项的信息。  

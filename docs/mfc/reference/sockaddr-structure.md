@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371603"
 ---
 # <a name="sockaddr-structure"></a>SOCKADDR 结构
 `SOCKADDR` 结构用于为参与 Windows 套接字通信的计算机存储 Internet 协议 (IP) 地址。  

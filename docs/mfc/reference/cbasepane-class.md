@@ -181,6 +181,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357954"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 MFC 中的所有窗格的基类。  
@@ -679,7 +680,7 @@ virtual BOOL CreateEx(
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|该窗格可以浮动。|  
 |`AFX_CBRS_AUTOHIDE`|窗格支持自动隐藏模式|  
-|`AFX_CBRS_RESIZE`|可以调整大小的窗格。 **重要说明：**未实现此样式。|  
+|`AFX_CBRS_RESIZE`|可以调整大小的窗格。 **重要说明：** 未实现此样式。|  
 |`AFX_CBRS_CLOSE`|可以关闭窗格。|  
 |`AFX_CBRS_AUTO_ROLLUP`|可将其汇总窗格中，当它浮动。|  
 |`AFX_CBRS_REGULAR_TABS`|当一个窗格停靠到另一个具有此样式的窗格中时，将创建常规选项卡式的窗口。 (有关详细信息，请参阅[CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)。)|  

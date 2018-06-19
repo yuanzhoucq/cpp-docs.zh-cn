@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373724"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 结构
 此结构可提供有关用户悬停的 MDI 选项卡的信息。  

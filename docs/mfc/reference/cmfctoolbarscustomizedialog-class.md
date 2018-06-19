@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378176"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 类
 无模式选项卡对话框 ( [CPropertySheet 类](../../mfc/reference/cpropertysheet-class.md))，使用户能够自定义工具栏、 菜单、 键盘快捷键、 用户定义的工具和应用程序中的视觉样式。 通常，用户可从 **“工具”** 菜单中选择 **“自定义”** 来访问此对话框。  

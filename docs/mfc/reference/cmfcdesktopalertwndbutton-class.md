@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370329"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton 类
 允许按钮添加到桌面通知对话框。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367339"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 类
 提供 MFC 文档/视图体系结构上下文中的 Web 浏览器编辑平台功能。  

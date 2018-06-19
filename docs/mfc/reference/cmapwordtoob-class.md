@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367138"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 类
 支持 16 位键控的 `CObject` 指针的映射。  

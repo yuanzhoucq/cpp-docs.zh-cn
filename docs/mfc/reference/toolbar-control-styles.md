@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373190"
 ---
 # <a name="toolbar-control-styles"></a>工具栏控件样式
 [CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)具有一组确定的外观的样式标志和按钮的行为。 你可以通过调用设置这些标志的组合[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。 本主题列出了样式标志值及其含义。  

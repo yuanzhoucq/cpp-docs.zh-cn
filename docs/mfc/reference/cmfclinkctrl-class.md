@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371723"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 类
 `CMFCLinkCtrl`类按钮显示为超链接并单击该按钮时调用链接的目标。  

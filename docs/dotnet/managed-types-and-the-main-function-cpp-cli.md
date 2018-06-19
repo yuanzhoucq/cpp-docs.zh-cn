@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131301"
 ---
 # <a name="managed-types-and-the-main-function-ccli"></a>托管类型和 main 函数 (C++/CLI)
 编写应用程序中使用时 **/clr**的自变量**main （)** 函数不能为托管类型。  

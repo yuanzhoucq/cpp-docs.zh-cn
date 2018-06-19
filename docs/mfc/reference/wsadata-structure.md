@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380079"
 ---
 # <a name="wsadata-structure"></a>WSADATA 结构
 `WSADATA` 结构用于存储通过调用 `AfxSocketInit` 全局函数返回的 Windows 套接字初始化信息。  

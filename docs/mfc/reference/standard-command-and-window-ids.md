@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371645"
 ---
 # <a name="standard-command-and-window-ids"></a>标准命令和窗口 ID
 Microsoft 基础类库定义了 Afxres.h 中的很多标准命令和窗口 ID。 这些 ID 在资源编辑器和“属性”窗口中最常使用，用来将消息映射到处理程序函数。 所有标准命令都有**ID_** 前缀。 例如，当使用菜单编辑器时，你通常将绑定文件打开的菜单项到标准`ID_FILE_OPEN`命令 id。  

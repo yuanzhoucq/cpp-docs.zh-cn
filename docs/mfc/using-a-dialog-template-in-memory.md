@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381233"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>在内存中使用对话框模板
 而不是使用中提供的方法[对话框创建表](../mfc/creating-a-dialog-class-with-code-wizards.md)，你可以从内存中的对话框模板间接创建两种类型的对话框。 有关详细信息，请参阅类[CDialog](../mfc/reference/cdialog-class.md)中*MFC 参考*。  

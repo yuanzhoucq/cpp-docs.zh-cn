@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275144"
 ---
 # <a name="compiler-error-c3923"></a>编译器错误 C3923
 “member”：不允许在 WinRT 或托管类的成员函数中使用局部类、结构或联合定义  

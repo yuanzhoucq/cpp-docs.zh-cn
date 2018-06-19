@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367251"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 结构
 `CDaoIndexFieldInfo`结构包含的数据访问对象 (DAO) 定义的索引字段对象有关的信息。  

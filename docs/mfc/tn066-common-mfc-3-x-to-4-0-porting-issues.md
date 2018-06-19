@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381778"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066：常见的 MFC 3.x 到 4.0 迁移问题
 此技术说明描述了尝试将使用 MFC 3.x（Visual C++ 2.x 附带的 MFC）编写的应用程序转移到 MFC 4.0 时可能出现的最常见问题。  

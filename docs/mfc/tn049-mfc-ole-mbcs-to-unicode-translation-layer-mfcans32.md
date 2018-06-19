@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380736"
 ---
 # <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>TN049：MFC/OLE MBCS 到 Unicode 转换层 (MFCANS32)
 本说明最初描述了如何 MFCANS32。DLL 提供中的 ANSI 接口主要 Unicode 世界的 32 位 OLE。 MFC 不再使用此 DLL。  

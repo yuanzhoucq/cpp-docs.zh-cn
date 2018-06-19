@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164061"
 ---
 # <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 将源范围中的元素复制到目标范围，彼此相邻的重复元素除外。  

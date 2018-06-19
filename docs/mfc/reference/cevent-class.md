@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367498"
 ---
 # <a name="cevent-class"></a>CEvent 类
 表示一个事件，即支持一个线程向已发生事件的另一个线程的同步对象。  

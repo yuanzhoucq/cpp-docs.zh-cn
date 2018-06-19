@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385175"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 套接字：使用类 CAsyncSocket
 此文章介绍了如何使用类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 请注意，此类可封装 Windows 套接字 API 非常低的级别。 `CAsyncSocket` 是以供程序员了解详细信息中的网络通信，但希望网络事件的通知回调的便利性。 基于此假设，本文仅提供基本说明。 你可能应考虑使用`CAsyncSocket`如果你想的 MFC 应用程序中的多个网络协议处理的 Windows 套接字的易用性，但不是希望以牺牲灵活性来。 你还可能会觉得让你直接比你自己无法使用类的更常规的备用模型进行编程的通信详细获得更高的效率`CSocket`。  

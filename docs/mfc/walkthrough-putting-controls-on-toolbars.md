@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385078"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>演练：将控件置于工具栏上
 本主题介绍如何将一个包含 Windows 控件的工具栏按钮添加到工具栏。 在 MFC 中，工具栏按钮必须[CMFCToolBarButton 类](../mfc/reference/cmfctoolbarbutton-class.md)-派生类，例如[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 类](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 类](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 类](../mfc/reference/cmfctoolbarmenubutton-class.md)。  

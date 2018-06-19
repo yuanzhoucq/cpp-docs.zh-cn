@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375094"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 类
 用于 OLE“更改图标”对话框。  

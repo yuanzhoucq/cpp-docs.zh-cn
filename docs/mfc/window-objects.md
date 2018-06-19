@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385266"
 ---
 # <a name="window-objects"></a>窗口对象
 MFC 还提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句柄。 `CWnd` 对象是一个 C++ 窗口对象，与表示一个 Windows 窗口但包含它的 `HWND` 不同。 使用 `CWnd` 可派生您自己的子窗口类，或使用派生自 `CWnd` 的很多 MFC 类之一。 `CWnd` 类是所有窗口的基类，包括框架窗口、对话框、子窗口、控件和控件条（如工具栏）。 更好地理解[c + + 窗口对象和 HWND 之间的关系](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)进行使用 MFC 进行有效的编程非常重要。  

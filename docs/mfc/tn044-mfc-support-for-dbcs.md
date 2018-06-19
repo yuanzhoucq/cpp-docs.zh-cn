@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380300"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044：针对 DBCS 的 MFC 支持
 此技术声明描述了 MFC 对“双字节字符集”或 DBCS 的支持。 此信息以及有关 MFC 的支持 UNICODE 现已推出*类库参考*。  

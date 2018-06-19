@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109329"
 ---
 # <a name="greaterequal-stlclr"></a>greater_equal (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true 仅第一个自变量是否大于或等于第二个。 使用它指定根据其自变量类型的函数对象。  

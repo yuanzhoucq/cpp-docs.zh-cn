@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382444"
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 使用标头控件，由类表示[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)，以显示有关纵栏表列表的列标题。 例如，标头控件将用于实施电子表格中的列控制。  

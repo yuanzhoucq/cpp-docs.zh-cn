@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379946"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>工具提示控件的设置
 可以将工具提示控件 ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) 设置为活动或非活动。 如果将其设置为活动状态，当光标位于工具上时，将显示工具提示控件。 如果将其设置为非活动状态，即使光标位于工具上时，也不会显示工具提示控件。 调用 [Activate](../mfc/reference/ctooltipctrl-class.md#activate) 以激活或停用工具提示控件。  

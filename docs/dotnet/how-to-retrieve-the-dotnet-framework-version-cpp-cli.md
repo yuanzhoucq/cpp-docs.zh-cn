@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128766"
 ---
 # <a name="how-to-retrieve-the-net-framework-version-ccli"></a>如何：检索 .NET Framework 的版本 (C++/CLI)
 下面的代码示例演示如何确定与当前安装的.NET Framework 的版本<xref:System.Environment.Version%2A>属性，它是一个指针，到<xref:System.Version>包含版本信息的对象。  

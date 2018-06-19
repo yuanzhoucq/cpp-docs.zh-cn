@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686004"
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>如何：编写 parallel_for_each 循环
 此示例演示如何使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法来计算内的质数的计数[std:: array](../../standard-library/array-class-stl.md)并行的对象。  

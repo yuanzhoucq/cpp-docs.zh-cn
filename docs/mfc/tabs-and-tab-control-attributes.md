@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381188"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>选项卡和选项卡控件特性
 有相当大的控制权的外观和行为的构成选项卡控件的选项卡 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每个选项卡可以标签、 图标、 项状态中，以及与之关联的应用程序定义的 32 位值。 对于每个选项卡上，可以显示图标、 标签，或两者。  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368854"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 类
 `CMFCRibbonButtonsGroup`类使您可以将一组功能区按钮组织到组。 组中的所有按钮在水平位置上直接彼此相邻并位于边框中。  

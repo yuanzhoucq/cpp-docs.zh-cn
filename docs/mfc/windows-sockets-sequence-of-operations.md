@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385253"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows 套接字：操作顺序
 并排比较，本文说明了用于服务器套接字和客户端套接字的操作顺序。 因为套接字使用`CArchive`对象，它们都不一定[流套接字](../mfc/windows-sockets-stream-sockets.md)。  

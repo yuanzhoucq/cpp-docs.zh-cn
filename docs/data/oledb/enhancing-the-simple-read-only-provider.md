@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100013"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>增强简单的只读提供程序
 本部分说明如何增强[简单只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一节中创建。 `IRowsetLocateImpl` 创建的实现`IRowsetLocate`接口，并添加了对你的书签支持。  

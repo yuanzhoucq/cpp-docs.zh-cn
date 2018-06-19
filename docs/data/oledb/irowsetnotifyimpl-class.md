@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106253"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 类
 实现并注册[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)上使用者 （也称为"接收器"），以便它可以处理通知。  

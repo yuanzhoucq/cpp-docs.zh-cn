@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370954"
 ---
 # <a name="iview-interface"></a>IView 接口
 实现几种方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)用于将视图通知发送到托管的控件。  

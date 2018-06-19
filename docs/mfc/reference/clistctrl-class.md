@@ -279,6 +279,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379042"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 封装显示一组项的“列表视图控件”功能，每一项均包含一个图标（来自图像列表）和标签。  

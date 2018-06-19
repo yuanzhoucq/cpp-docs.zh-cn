@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131236"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>如何：编写文本文件 (C++/CLI)
 下面的代码示例演示如何创建一个文本文件并将文本写入它使用<xref:System.IO.StreamWriter>类，该类中定义<xref:System.IO>命名空间。 <xref:System.IO.StreamWriter>构造函数采用要创建的文件的名称。 如果该文件存在，则覆盖 (除非您传递 True 为第二个<xref:System.IO.StringWriter>构造函数自变量)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373419"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>与用户界面对象关联的消息类型
 下表显示的对象与其处理时，类型和消息与之关联的类型。  

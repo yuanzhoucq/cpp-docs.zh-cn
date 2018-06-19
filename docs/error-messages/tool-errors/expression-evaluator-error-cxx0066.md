@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298416"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>表达式计算器错误 CXX0066
 静态成员不存在  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105915"
 ---
 # <a name="foreach-stlclr"></a>for_each (STL/CLR)
 将指定的函数对象按向前顺序应用于范围中的每个元素并返回此函数对象。  

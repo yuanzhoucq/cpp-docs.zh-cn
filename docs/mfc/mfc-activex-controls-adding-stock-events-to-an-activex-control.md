@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359333"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
 常用事件不同于自定义事件，因为它们自动触发由类[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含激发事件导致常见操作的预定义的成员函数。 实现的一些常见操作`COleControl`纳入单-和当时-clicks 上的控件、 键盘事件和更改鼠标按钮的状态。 常用事件的事件映射条目始终前面带有**EVENT_STOCK**前缀。  

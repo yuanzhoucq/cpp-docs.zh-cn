@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358477"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 当你编写应用程序时，创建单个[CWinApp](../../mfc/reference/cwinapp-class.md)-派生对象。 有时，你可能想要获取有关从外部此对象的信息`CWinApp`-派生对象。 或者，你可能需要对其他全局"管理器"对象的访问。

@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375218"
 ---
 # <a name="ctabview-class"></a>CTabView 类
 `CTabView`的类简化了使用选项卡控件类 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  

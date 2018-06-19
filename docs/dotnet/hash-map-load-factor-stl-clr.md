@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110277"
 ---
 # <a name="hashmaploadfactor-stlclr"></a>hash_map::load_factor (STL/CLR)
 对每个存储桶的平均元素数进行计数。  

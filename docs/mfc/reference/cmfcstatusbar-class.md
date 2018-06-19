@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376156"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 `CMFCStatusBar`类实现类似于状态栏`CStatusBar`类。 但是， `CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380859"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>服务器：实现就地框架窗口
 本文介绍如果您不使用应用程序向导创建服务器应用程序，则在可视编辑服务器应用程序中实现就地框架窗口时必须执行的操作。 代替遵循本文中概述的过程，你可以使用应用程序向导生成的应用程序或 Visual c + + 提供的示例从现有的就地框架窗口类。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355530"
 ---
 # <a name="interface-pointers-classes"></a>接口指针类
 以下类管理给定的接口指针：  

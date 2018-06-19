@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335494"
 ---
 # <a name="active-documents"></a>活动文档
 活动文档扩展了 OLE 的复合文档技术。 这些扩展是以管理视图的其他界面的形式提供的，因此对象可在容器中正常运行，并且保持对其显示和打印功能的控制。 此过程使在外部框架（如 Microsoft Office Binder 或 Microsoft Internet Explorer）和本机框架（如产品自己的视区）中显示文档成为可能。  

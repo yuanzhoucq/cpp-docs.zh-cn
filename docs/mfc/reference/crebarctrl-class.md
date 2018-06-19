@@ -113,6 +113,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377582"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 封装 Rebar 控件的功能，此控件是一个子窗口容器。  

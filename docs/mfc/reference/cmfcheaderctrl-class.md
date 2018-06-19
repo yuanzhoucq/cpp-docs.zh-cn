@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370024"
 ---
 # <a name="cmfcheaderctrl-class"></a>CListCtrl
 `CMFCHeaderCtrl`类支持对标题控件中的多个列进行排序。  

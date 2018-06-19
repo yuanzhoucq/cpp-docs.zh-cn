@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381473"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060：新的 Windows 公共控件
 描述新的 Windows 公共控件以及如何使用它们，技术说明 60 已合并到[控件](../mfc/controls-mfc.md)。  

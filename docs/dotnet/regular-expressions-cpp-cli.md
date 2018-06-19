@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162871"
 ---
 # <a name="regular-expressions-ccli"></a>正则表达式 (C++/CLI)
 演示如何在.NET Framework 中使用正则表达式类的各种字符串操作。  

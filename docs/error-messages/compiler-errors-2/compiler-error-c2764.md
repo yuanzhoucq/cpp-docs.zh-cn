@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236439"
 ---
 # <a name="compiler-error-c2764"></a>编译器错误 C2764
 param： 未使用或部分专用化 specialization 中不能推导出的模板参数  

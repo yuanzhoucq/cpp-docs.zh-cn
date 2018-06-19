@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169005"
 ---
 # <a name="compiler-error-c2199"></a>编译器错误 C2199
 语法错误： 找到标识符 (在全局范围内 （是否要使用声明）？  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128727"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>如何：在非托管内存中保存对象引用
 你可以使用 gcroot.h，包装<xref:System.Runtime.InteropServices.GCHandle>，以非托管内存中保留的 CLR 对象引用。 或者，可以使用`GCHandle`直接。  

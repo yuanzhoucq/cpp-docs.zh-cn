@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366917"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 类
 从 gopher 服务器获取 gopher"定位器"，确定定位器的类型，并使定位器可用于[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。  

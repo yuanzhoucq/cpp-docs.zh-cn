@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376286"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 结构
 每个类派生自`CObject`与关联`CRuntimeClass`结构，它可用于获取有关一个对象或其基本类在运行时的信息。  

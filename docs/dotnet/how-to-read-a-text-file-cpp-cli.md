@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130193"
 ---
 # <a name="how-to-read-a-text-file-ccli"></a>如何：读取文本文件 (C++/CLI)
 下面的代码示例演示如何打开和使用一次读取文本文件的一行<xref:System.IO.StreamReader>中定义的类<xref:System.IO?displayProperty=fullName>命名空间。 此类的实例用于打开一个文本文件，然后<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用于检索每个行。  

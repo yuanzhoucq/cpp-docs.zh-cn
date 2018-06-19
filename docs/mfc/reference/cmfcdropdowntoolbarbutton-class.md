@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372529"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，它将打开一个下拉工具栏 ( [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果用户按下并按住工具栏按钮。  

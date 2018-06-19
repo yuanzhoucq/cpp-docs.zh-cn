@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377932"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 类
 工具栏上的图像。 `CMFCToolBarImages`类管理从应用程序资源或从文件加载的工具栏图像。  

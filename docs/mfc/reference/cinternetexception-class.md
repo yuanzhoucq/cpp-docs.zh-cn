@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366891"
 ---
 # <a name="cinternetexception-class"></a>CInternetException 类
 表示与 Internet 操作相关的异常条件。  

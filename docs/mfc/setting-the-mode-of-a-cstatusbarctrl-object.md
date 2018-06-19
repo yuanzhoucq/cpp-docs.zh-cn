@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380914"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>设置 CStatusBarCtrl 对象的模式
 有两种模式`CStatusBarCtrl`对象： 简单和非简单。 在大多数情况下，你状态栏控件将具有一个或多个部件，以及文本和可能的图标或图标。 这被称为非简单模式。 有关此模式的详细信息，请参阅[初始化 CStatusBarCtrl 对象的组成部分](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。  

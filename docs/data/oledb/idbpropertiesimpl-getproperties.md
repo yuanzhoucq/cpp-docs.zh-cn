@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103338"
 ---
 # <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
 返回当前设置数据源对象的当前设置在初始化属性组中的属性的值的数据源、 数据源信息和初始化属性组中的属性的值枚举器。  

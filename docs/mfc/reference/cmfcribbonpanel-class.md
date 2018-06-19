@@ -129,6 +129,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378038"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 类
 实现包含一组功能区元素的面板。 在绘制面板时，系统将根据面板的大小显示尽可能多的元素。  

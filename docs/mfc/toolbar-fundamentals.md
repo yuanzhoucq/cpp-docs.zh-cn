@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383969"
 ---
 # <a name="toolbar-fundamentals"></a>工具栏基础知识
 本文介绍基本的 MFC 实现，允许你将默认工具栏添加到你的应用程序，通过在应用程序向导中选择一个选项。 涉及主题包括：  

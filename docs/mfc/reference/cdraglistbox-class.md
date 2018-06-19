@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367206"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 类
 除了提供 Windows 列表框，功能`CDragListBox`类允许用户在列表框内移动文件名等列表框项。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381506"
 ---
 # <a name="tree-control-item-labels"></a>树控件项标签
 将项添加到树控件时通常指定项的标签的文本 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 `InsertItem`成员函数可以传递[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)定义项的属性，包括包含标签的文本的字符串的结构。 `InsertItem` 具有多个重载，可以用参数的各种组合调用。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376553"
 ---
 # <a name="property-pages-mfc"></a>属性页 (MFC)
 属性页在用于查看和编辑通过支持基于对话框数据交换 (DDX) 的数据映射机制的自定义的图形界面中显示特定的 OLE 控件属性的当前值。  

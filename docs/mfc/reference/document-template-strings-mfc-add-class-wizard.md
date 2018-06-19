@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371926"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>“MFC 添加类向导”的文档模板字符串
 向导的此页是仅适用于满足以下条件类：  

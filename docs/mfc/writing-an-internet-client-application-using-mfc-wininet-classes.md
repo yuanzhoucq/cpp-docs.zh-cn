@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384431"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 类编写 Internet 客户端应用程序
 每个 Internet 客户端应用程序的基础是 Internet 会话。 MFC 实现 Internet 会话作为类的对象[CInternetSession](../mfc/reference/cinternetsession-class.md)。 通过使用此类，您可以创建一个 Internet 会话或多个同时会话。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 -   如果使用 `CInternetSession::OpenURL` 建立服务器连接，则调用 `OpenURL` 将返回 `CStdioFile`。  
   
--   如果使用**cinternetsession:: Getftpconnection**， `GetGopherConnection`，或`GetHttpConnection`若要建立服务器连接，必须调用`CFtpConnection::OpenFile`， `CGopherConnection::OpenFile`，或**chttpconnection::，**分别返回`CInternetFile`， `CGopherFile`，或`CHttpFile`分别。  
+-   如果使用**cinternetsession:: Getftpconnection**， `GetGopherConnection`，或`GetHttpConnection`若要建立服务器连接，必须调用`CFtpConnection::OpenFile`， `CGopherConnection::OpenFile`，或**chttpconnection::，** 分别返回`CInternetFile`， `CGopherFile`，或`CHttpFile`分别。  
   
  根据你创建的基于泛型 Internet 客户端中实现 Internet 客户端应用程序的步骤有所不同**OpenURL**或特定于协议的客户端使用之一**GetConnection**函数。  
   

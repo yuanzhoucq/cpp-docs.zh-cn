@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377896"
 ---
 # <a name="cview-class"></a>CView 类
 提供用户定义视图类的基本功能。  
@@ -733,7 +734,7 @@ virtual BOOL OnScroll(
  滚动条代码是否包含滚动框的当前位置**SB_THUMBTRACK**; 否则为未使用。 具体取决于初始滚动范围，`nPos`可以是负数，并且应强制转换为`int`如有必要。  
   
  `bDoScroll`  
- 确定是否应实际完成指定滚动操作。 如果**为 TRUE，**然后滚动应发生; 如果**FALSE**，然后滚动应不会发生。  
+ 确定是否应实际完成指定滚动操作。 如果**为 TRUE，** 然后滚动应发生; 如果**FALSE**，然后滚动应不会发生。  
   
 ### <a name="return-value"></a>返回值  
  如果`bDoScroll`是**TRUE**和实际滚动视图，然后返回非零; 否则为 0。 如果`bDoScroll`是**FALSE**，然后返回值，将返回如果`bDoScroll`已**TRUE**，即使您不实际执行滚动。  
@@ -755,7 +756,7 @@ virtual BOOL OnScrollBy(
  水平和垂直，滚动的像素数。  
   
  `bDoScroll`  
- 确定是否滚动视图的执行。 如果**为 TRUE，**然后滚动发生; 如果**FALSE**，然后滚动不会发生。  
+ 确定是否滚动视图的执行。 如果**为 TRUE，** 然后滚动发生; 如果**FALSE**，然后滚动不会发生。  
   
 ### <a name="return-value"></a>返回值  
  如果视图能够滚动; 则为非 0否则为 0。  

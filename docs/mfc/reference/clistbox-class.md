@@ -117,6 +117,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377831"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 提供 Windows 列表框功能。  
@@ -944,7 +945,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  有关使用的详细信息[LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)中创建一个所有者描述列表框样式`SubclassDlgItem`成员函数`CWnd`，请参阅中的讨论[技术注意 14](../../mfc/tn014-custom-controls.md).  
   
- 请参阅[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)有关的说明`MEASUREITEMSTRUCT`结构**。**  
+ 请参阅[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)有关的说明`MEASUREITEMSTRUCT`结构 **。**  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385187"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>通过代码向导对控件进行类型安全的访问
 如果你熟悉 DDX 功能，你可以使用中的控件属性[添加成员变量向导](../ide/add-member-variable-wizard.md)创建类型安全访问。 这种方法是比创建控件而不通过代码向导更容易。  

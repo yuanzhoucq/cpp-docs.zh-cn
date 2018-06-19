@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370284"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 类
 有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的结构。  

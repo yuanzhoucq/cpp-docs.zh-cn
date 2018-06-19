@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380271"
 ---
 # <a name="servers-implementing-server-documents"></a>服务器：实现服务器文档
 此文章介绍了您必须执行以便成功实现服务器文档，如果你未在应用程序向导中指定的 OLE 服务器选项的步骤。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370433"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 结构
 `PAINTSTRUCT`结构包含可以用于绘制窗口的客户端区域的信息。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368808"
 ---
 # <a name="creating-an-mfc-application"></a>创建 MFC 应用程序
 MFC 应用程序是基于 Microsoft 基础类 (MFC) 库的 Windows 可执行应用程序。 创建 MFC 应用程序的最容易方法是使用 MFC 应用程序向导。  

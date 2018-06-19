@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270946"
 ---
 # <a name="compiler-warning-c4972"></a>编译器警告 C4972
 直接修改取消装箱操作的结果或将其视为左值是不可验证的  

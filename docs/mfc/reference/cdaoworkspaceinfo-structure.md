@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366286"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 结构
 `CDaoWorkspaceInfo`结构包含有关定义为数据访问对象 (DAO) 数据库访问工作区的信息。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276537"
 ---
 # <a name="compiler-warning-level-1-c4264"></a>编译器警告（等级 1）C4264
 virtual_function： 不重写的基 class; 的虚拟成员函数函数将被隐藏  

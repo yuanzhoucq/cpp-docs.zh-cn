@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378471"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 为了支持消息映射，MFC 提供了以下宏：  

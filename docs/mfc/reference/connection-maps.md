@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372833"
 ---
 # <a name="connection-maps"></a>连接映射
 OLE 控件可公开接口向其他应用程序。 这些接口仅允许从容器的访问，在该控件。 如果 OLE 控件想要访问的其他 OLE 对象的外部接口，必须建立的连接点。 此连接点允许传出外部调度映射，如事件映射或通知函数访问控件。  

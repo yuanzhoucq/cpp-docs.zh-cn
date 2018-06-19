@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381142"
 ---
 # <a name="specifying-levels-of-functionality"></a>指定功能级别
 本文介绍如何将添加到的功能的以下级别你[CObject](../mfc/reference/cobject-class.md)-派生类：  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386063"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：针对 OLE 自动化服务器的双重接口支持
 > [!NOTE]

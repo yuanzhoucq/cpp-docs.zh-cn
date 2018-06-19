@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369747"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 类
 允许用户将不同的命令与特定相关联[CView](../../mfc/reference/cview-class.md)当用户在视图内双击对象。  

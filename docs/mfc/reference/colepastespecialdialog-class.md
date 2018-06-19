@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374352"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 类
 用于 OLE“选择性粘贴”对话框。  

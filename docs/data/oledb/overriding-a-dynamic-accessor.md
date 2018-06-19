@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107852"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
 当使用动态访问器如`CDynamicAccessor`，该命令**打开**方法创建一个访问器自动根据打开行集的列信息。 您可以重写动态访问器可控制完全列的绑定方式。  

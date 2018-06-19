@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169694"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 包括 STL/CLR 标头`<cliext/utility>`定义模板类`pair`和几个支持模板函数。  

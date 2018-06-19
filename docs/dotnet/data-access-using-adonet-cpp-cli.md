@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108265"
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 的数据访问 (C++/CLI)
 ADO.NET 是用于数据访问的.NET Framework API，并提供电源和易于使用的以前的数据访问解决方案不匹配。 本部分介绍一些涉及 ADO.NET 是唯一的 Visual c + + 用户，例如封送处理本机类型的问题。  

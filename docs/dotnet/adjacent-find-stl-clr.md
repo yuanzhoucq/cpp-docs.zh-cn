@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102535"
 ---
 # <a name="adjacentfind-stlclr"></a>adjacent_find (STL/CLR)
 搜索相等或满足指定条件的两个相邻元素。  

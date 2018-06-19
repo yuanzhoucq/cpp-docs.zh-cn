@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367966"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 结构
 提供一种简便方式检测你的程序中的内存泄漏。  

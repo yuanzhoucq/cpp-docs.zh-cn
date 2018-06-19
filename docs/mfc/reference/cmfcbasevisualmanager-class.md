@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369146"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 类
 派生的视觉管理器和 Windows 主题 API 之间的一层。  

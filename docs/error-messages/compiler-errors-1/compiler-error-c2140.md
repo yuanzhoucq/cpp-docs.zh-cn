@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169681"
 ---
 # <a name="compiler-error-c2140"></a>编译器错误 C2140
 type： 依赖于泛型类型参数的类型不允许作为编译器内部类型特征特征的自变量  

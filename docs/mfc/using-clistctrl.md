@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382981"
 ---
 # <a name="using-clistctrl"></a>使用 CListCtrl
 像在文件资源管理器或带或不带图标的分栏式文本列表中，使用列表控件显示图标与标签的任何排列。 有关的四个可能"视图"（不将其与 MFC 视图混淆） 的说明你可以在列表控件 — 图标视图、 小图标视图、 列表视图和报表视图-请参阅中的视图[CListCtrl](../mfc/reference/clistctrl-class.md)类概述。  

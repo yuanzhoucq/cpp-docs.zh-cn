@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375740"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 类
 `CMFCFontComboBox`类创建包含字体列表的组合框控件。  

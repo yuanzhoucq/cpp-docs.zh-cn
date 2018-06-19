@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103861"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot 类
 自动资源管理 (如[auto_ptr 类](../standard-library/auto-ptr-class.md)) 可用于本机类型中嵌入虚拟句柄。  

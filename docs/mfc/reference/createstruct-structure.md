@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370866"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 结构
 `CREATESTRUCT`结构定义传递给应用程序的窗口过程的初始化参数。  

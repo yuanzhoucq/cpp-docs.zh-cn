@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366559"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog 类
 `CMFCWindowsManagerDialog`对象使用户能够管理 MDI 子窗口的 MDI 应用程序中。  

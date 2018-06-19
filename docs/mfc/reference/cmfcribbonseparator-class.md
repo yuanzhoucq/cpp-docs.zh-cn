@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370853"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 类
 实现的功能区分隔符。  

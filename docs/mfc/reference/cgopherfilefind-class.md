@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369409"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 辅助 Gopher 服务器的 Internet 文件搜索。  

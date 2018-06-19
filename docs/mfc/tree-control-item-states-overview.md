@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383144"
 ---
 # <a name="tree-control-item-states-overview"></a>树控件项状态概述
 树控件中的每个项 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 具有一个当前状态。 例如，可以选择、禁用、展开项等等。 在大多数情况下，树控件将自动设置项的状态以反映用户操作，例如选择了某个项。 但是，你还可以通过使用设置项的状态[SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate)成员函数，并检索项使用的当前状态[GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)成员函数。 有关项状态的完整列表，请参阅[树视图控件常量](http://msdn.microsoft.com/library/windows/desktop/bb759985)Windows SDK 中。  

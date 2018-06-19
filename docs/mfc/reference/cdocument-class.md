@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377035"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 提供用户定义文档类的基本功能。  
@@ -1067,7 +1068,7 @@ virtual void SetPathName(
  指向要用作文档路径的字符串。  
   
  `bAddToMRU`  
- 确定是否文件名添加到最近使用的 (MRU) 文件列表。 如果**为 TRUE，**添加文件名; 如果**FALSE**，未添加。  
+ 确定是否文件名添加到最近使用的 (MRU) 文件列表。 如果**为 TRUE，** 添加文件名; 如果**FALSE**，未添加。  
   
 ### <a name="remarks"></a>备注  
  根据值`bAddToMRU`的路径不添加，或者未添加到由应用程序维护的 MRU 列表。 请注意，一些文档不与磁盘文件关联。 仅当您要重写用于打开和保存框架使用的文件的默认实现调用此函数。  

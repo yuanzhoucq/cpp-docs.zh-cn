@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098636"
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 Visual c + + 支持可更新提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新提供程序使用 OLE DB 模板。  

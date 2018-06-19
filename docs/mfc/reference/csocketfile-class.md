@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372630"
 ---
 # <a name="csocketfile-class"></a>CSocketFile 类
 用于通过 Windows 套接字在网络中发送和接收数据的 `CFile` 对象。  

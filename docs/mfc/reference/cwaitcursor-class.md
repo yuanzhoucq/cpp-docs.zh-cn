@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372503"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 类
 在单行中显示等待光标，在你执行较长操作时，此光标通常显示为一个沙漏。  

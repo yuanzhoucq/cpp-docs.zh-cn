@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377650"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
 本主题列出在常见的 MFC 对话框控件使用的标准对话框数据交换 (DDX) 例程。  

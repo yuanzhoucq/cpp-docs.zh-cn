@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381018"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 此文章介绍了提供在 Microsoft 基础类库 (MFC) 以允许对象之间保持不变的序列化机制运行的程序。  

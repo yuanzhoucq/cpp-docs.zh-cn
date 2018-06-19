@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237387"
 ---
 # <a name="compiler-error-c2794"></a>编译器错误 C2794
 function： 不是 class 的任何直接或间接基类的成员  

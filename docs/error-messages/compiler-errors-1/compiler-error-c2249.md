@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171446"
 ---
 # <a name="compiler-error-c2249"></a>编译器错误 C2249
 member： 在虚拟基 class 中声明为访问成员没有可访问的路径  

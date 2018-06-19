@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104238"
 ---
 # <a name="irowsetupdateimplupdate"></a>IRowsetUpdateImpl::Update
 传输自上次提取或更新后对行进行任何更改。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355408"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 简介
 本部分提供了简要介绍到 COM 和 atl。  

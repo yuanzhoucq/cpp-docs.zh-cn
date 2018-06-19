@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361330"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
 ActiveX 控件是基于组件对象模型 (COM) 支持各种各样的 OLE 功能，可以自定义以满足许多软件需求的可重用软件组件。 ActiveX 控件被设计用于在普通的 ActiveX 控件容器和在 Internet 上，在全球通用 Web 页。 你可以创建 ActiveX 控件使用 MFC，所述在这里，或与[活动模板库 (ATL)](../atl/active-template-library-atl-concepts.md)。  

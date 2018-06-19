@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370827"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 应用程序向导的生成的类
 本主题列出的基类，这些类和你的项目生成的文件的名称。 默认情况下，名称基于中指定的项目名称**新建项目对话框**。 你可以更改大部分这些名称，如下所述：  

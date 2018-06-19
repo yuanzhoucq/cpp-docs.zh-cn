@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101466"
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 指定将用于创建行集时使用的命令[CCommand](../../data/oledb/ccommand-class.md)类。 接受仅与指定的应用程序类型 （ANSI 或 Unicode） 匹配的字符串类型。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380541"
 ---
 # <a name="slider-control-styles"></a>滑块控件样式
 滑块控件 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 可以具有垂直或水平方向。 该控件可以在任意一侧带有刻度线，可以两侧都有刻度线，也可以两侧都没有刻度线。 它们还可用于指定一系列连续值。 这些属性是使用滑块控件样式控制的，您可以在创建滑块控件时指定该样式。  

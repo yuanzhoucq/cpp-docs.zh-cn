@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371779"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 当你[向现有 MFC 可执行文件或 DLL 中添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 进行以下修改现有的 MFC 项目 (在此示例中，项目称为`MFCEXE`):  

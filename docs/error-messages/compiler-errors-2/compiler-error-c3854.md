@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275507"
 ---
 # <a name="compiler-error-c3854"></a>编译器错误 C3854
 左侧的 = 的表达式计算的函数。 无法分配到函数 （函数不是左值）  

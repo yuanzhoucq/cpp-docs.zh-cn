@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100140"
 ---
 # <a name="ctable-class"></a>CTable 类
 提供一种方法直接访问简单行集合 （一个不带任何参数）。  

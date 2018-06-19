@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105119"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 类
 提供的实现`IDBProperties`接口。  

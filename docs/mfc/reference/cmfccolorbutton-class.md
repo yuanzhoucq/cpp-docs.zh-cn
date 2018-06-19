@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371108"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 类
 `CMFCColorButton`和[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)类一起用于实现颜色选取器控件。  

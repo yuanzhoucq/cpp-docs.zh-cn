@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374145"
 ---
 # <a name="logpen-structure"></a>LOGPEN 结构
 `LOGPEN`结构定义样式、 宽度和钢笔颜色、 图形对象用于绘制线条和边框。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函数使用`LOGPEN`结构。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382845"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>在工具栏控件中使用图像列表
 默认情况下，使用工具栏控件中的按钮的图像存储为单个位图。 但是，你可以将按钮图像存储在图像列表的一组。 工具栏控件对象可以使用最多三个单独的映像列表：  

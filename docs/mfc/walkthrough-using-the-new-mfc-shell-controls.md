@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385091"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
 在本演练中，您将创建一个类似文件资源管理器的应用程序。 你将创建包含两个窗格的窗口。 左窗格中将包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)的层次结构视图中显示你的桌面的对象。 右窗格中将包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) ，在左窗格中选择的文件夹中显示的文件。  

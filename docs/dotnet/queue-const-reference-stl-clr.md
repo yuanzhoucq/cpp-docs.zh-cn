@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158724"
 ---
 # <a name="queueconstreference-stlclr"></a>queue::const_reference (STL/CLR)
 元素的常量引用的类型。  

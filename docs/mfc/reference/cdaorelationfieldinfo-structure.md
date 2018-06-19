@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366156"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 结构
 `CDaoRelationFieldInfo`结构包含有关中的数据访问对象 (DAO) 定义的关系的字段的信息。  

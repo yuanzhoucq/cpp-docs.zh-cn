@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376169"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 表示属性表的各个页，也称为选项卡对话框。  

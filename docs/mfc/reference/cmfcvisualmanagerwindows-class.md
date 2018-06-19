@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378364"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 类
 `CMFCVisualManagerWindows` 当用户选择 Windows XP 或 Vista 主题时，模仿 Microsoft Windows XP 或 Microsoft Vista 的外观。  

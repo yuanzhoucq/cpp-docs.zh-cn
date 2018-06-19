@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383440"
 ---
 # <a name="slider-control-member-functions"></a>滑块控件成员函数
 应用程序可以调用滑块控件的成员函数来检索滑块控件有关的信息 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 并更改其特征。  

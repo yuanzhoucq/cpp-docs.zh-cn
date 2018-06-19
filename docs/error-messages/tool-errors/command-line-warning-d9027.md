@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301445"
 ---
 # <a name="command-line-warning-d9027"></a>命令行警告 D9027
 源文件\<文件名 > 被忽略  

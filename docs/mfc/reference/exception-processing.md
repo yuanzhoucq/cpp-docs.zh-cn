@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376983"
 ---
 # <a name="exception-processing"></a>异常处理
 程序执行时，可以发生的异常条件和称为"异常"的错误数。 其中可能包括耗尽内存、 资源分配错误和文件中查找失败。  

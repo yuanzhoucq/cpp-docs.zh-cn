@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376205"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 类
 用于在图形界面（类似于对话框）中显示自定义控件的属性。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383956"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 Internet 扩展 (WinInet)
 Internet 客户端应用程序是一个程序，从网络数据源 （服务器） 使用 Internet 协议，如 gopher、 FTP 或 HTTP 访问信息。 Internet 客户端应用程序可能访问服务器以检索数据，例如天气地图、 股票价格或报纸标题，例如。 Internet 客户端可以通过外部网络 (Internet) 或 （有时称为 intranet） 的内部网络访问服务器。  

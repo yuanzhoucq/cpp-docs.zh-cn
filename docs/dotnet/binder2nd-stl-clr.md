@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107839"
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 此模板类描述一个自变量函子的当调用，则返回存储其使用提供的第一个自变量和其存储的第二个自变量调用的两个参数函子。 使用它指定根据其存储的函子的函数对象。  

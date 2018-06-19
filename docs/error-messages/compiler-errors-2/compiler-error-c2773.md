@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234523"
 ---
 # <a name="compiler-error-c2773"></a>编译器错误 C2773
 \#导入和 #using 仅在 c + + 编译器中可用  

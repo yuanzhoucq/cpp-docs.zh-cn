@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385867"
 ---
 # <a name="tab-controls-and-property-sheets"></a>选项卡控件和属性表
 属性表为多页对话框或"tab 切换对话框"可显示最多 24 到用户的对话框模板资源。 属性表的示例，请参阅 Windows 显示属性对话框中或以下的 MFC 示例应用程序：  

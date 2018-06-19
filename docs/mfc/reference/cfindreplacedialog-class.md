@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368977"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 类
 可以在你的应用程序中实现的标准字符串查找/替换对话框。  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376107"
 ---
 # <a name="coccmanager-class"></a>COccManager 类
 管理多个自定义控件站点；通过 `COleControlContainer` 和 `COleControlSite` 对象实现。  
@@ -357,7 +358,7 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ### <a name="remarks"></a>备注  
  如果找到任何 ActiveX 控件，该模板进行分析，并且创建了包含仅非 ActiveX 控件，一个新模板。 在此过程中发现任何 ActiveX 控件添加到`ppOleDlgItems`。  
   
- 如果在模板中，没有任何 ActiveX 控件**NULL**返回*。*  
+ 如果在模板中，没有任何 ActiveX 控件**NULL**返回 *。*  
   
 > [!NOTE]
 >  为新模板释放中分配的内存`PostCreateDialog`函数。  

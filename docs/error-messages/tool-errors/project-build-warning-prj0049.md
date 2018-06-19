@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319805"
 ---
 # <a name="project-build-warning-prj0049"></a>项目生成警告 PRJ0049
 引用的目标\<引用 > 需要.NET Framework \<MinFrameworkVersion > 并将无法在此项目的目标框架上运行  

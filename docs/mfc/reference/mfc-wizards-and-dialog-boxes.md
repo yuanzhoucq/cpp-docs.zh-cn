@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376273"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 向导和对话框
 Microsoft 基础类 (MFC) 向导为各种组件和对象生成样板代码。 你可以通过打开中的项目的快捷菜单来运行该向导**解决方案资源管理器**并选择**添加**，**类**。  

@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378676"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 `CMFCRibbonBaseElement`类是你可以将其添加到的所有元素的基类[功能区栏](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  

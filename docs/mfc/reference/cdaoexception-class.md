@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369211"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 表示由基于数据访问对象 (DAO) 的 MFC 数据库类引起的异常条件。  

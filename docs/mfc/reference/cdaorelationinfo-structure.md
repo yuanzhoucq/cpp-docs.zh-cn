@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366257"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 结构
 `CDaoRelationInfo`结构包含有关定义字段中两个表之间的关系的信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  

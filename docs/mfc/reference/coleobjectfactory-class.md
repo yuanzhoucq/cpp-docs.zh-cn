@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375932"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 类
 实现 OLE 类工厂，此工厂创建服务器、自动化对象和文档等 OLE 对象。  
