@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297331"
 ---
 # <a name="global-constants-in-c"></a>C++ 中的全局常量
 C + + 全局常量具有静态链接。 这是与 C 不同。如果你尝试使用全局常数多个文件中的 c + + 中，将得到无法解析的外部错误。 编译器优化掉全局常数，离开没有为该变量保留的空间。  

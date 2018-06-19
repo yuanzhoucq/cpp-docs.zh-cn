@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271733"
 ---
 # <a name="compiler-warning-level-1-c4022"></a>编译器警告 （等级 1） C4022
 function： 指针的实际参数 number 的不匹配  

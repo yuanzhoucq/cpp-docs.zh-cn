@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690889"
 ---
 # <a name="barrier"></a>barrier
 同步所有线程在一个组;所有线程在屏障，都暂停，直到所有线程都执行屏障。  

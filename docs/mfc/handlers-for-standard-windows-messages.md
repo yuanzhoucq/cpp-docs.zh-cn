@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348204"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>标准 Windows 消息的处理程序
 默认标准 Windows 消息的处理程序 (**WM_**) 中类预定义`CWnd`。 类库基于消息名称来命名这些处理程序的名称。 例如，`WM_PAINT` 消息的处理程序在 `CWnd` 中声明为：  

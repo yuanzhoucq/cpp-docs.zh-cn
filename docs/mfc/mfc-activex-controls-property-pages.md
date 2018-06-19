@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351740"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控件：属性页
 属性页允许 ActiveX 控件的用户查看和更改 ActiveX 控件属性。 通过调用控件的属性对话框中，其中包含一个或多个属性页可以用于查看和编辑控件属性提供自定义的图形界面访问这些属性。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350880"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有回调函数必须都捕获返回到 Windows，因为不能跨回调边界引发异常之前的 MFC 异常。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  

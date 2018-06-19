@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353268"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据库中的特定字段的控件属性的数据绑定。 当用户修改了此绑定的属性中的数据时，该控件通知的数据库和请求将更新记录的字段。 控制的成功或失败的请求，然后会通知数据库。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267249"
 ---
 # <a name="compiler-error-c3830"></a>编译器错误 C3830
 type1： 不能从 type2，值类型只能继承自接口类继承  

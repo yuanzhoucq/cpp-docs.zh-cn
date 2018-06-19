@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695754"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在为 UWP 应用的 c + + 中创建异步操作
 本文档介绍一些使用任务类生成基于 Windows 线程池的通用 Windows 运行时 (UWP) 应用中的异步操作时，需要注意的要点。  

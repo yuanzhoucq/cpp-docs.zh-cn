@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349208"
 ---
 # <a name="drawing-tool-classes"></a>绘图工具类
 这些类封装了用于在设备上下文上绘制的绘图工具。  

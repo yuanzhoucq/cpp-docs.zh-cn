@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691598"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 **Copyprivate**子句提供了一种机制来使用的私有变量的其他成员广播来自团队的成员的一个值。 它是另一种共享的变量的值时提供此类共享的变量是非常困难的 （例如，在需要一个不同的变量在每个级别的递归）。 **Copyprivate**子句只能出现在**单个**指令。  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371327"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 类
 `CMFCTasksPaneTask`类是一个帮助器类，表示任务窗格控件任务的 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 任务对象表示任务组中的项 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。  

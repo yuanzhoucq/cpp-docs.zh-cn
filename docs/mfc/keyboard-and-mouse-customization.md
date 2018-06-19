@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351658"
 ---
 # <a name="keyboard-and-mouse-customization"></a>键盘和鼠标自定义
 MFC 允许应用程序用户自定义其处理键盘和鼠标输入的方式。 用户可通过为命令分配键盘快捷键来自定义键盘输入。 用户还可通过选择应在用户双击应用程序特定窗口内时执行的命令来自定义鼠标输入。 本主题介绍如何为您的应用程序自定义输入。  

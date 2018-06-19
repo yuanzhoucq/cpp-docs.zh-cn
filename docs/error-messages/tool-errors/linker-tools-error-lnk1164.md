@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297415"
 ---
 # <a name="linker-tools-error-lnk1164"></a>链接器工具错误 LNK1164
 部分节对齐 （数字） 大于 /ALIGN 值  

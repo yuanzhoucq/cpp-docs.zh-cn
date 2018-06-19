@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375035"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式设置和消息框显示
 提供的许多功能进行格式化和分析`CString`对象。 每当你操作时，可以使用这些函数`CString`对象，但它们都将出现在消息框文本的字符串设置格式特别有用。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349250"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 结构
 `AFX_EXTENSION_MODULE` MFC 扩展 Dll 初始化期间中用于保存 MFC 扩展 DLL 模块的状态。  

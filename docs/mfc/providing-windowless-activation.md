@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351805"
 ---
 # <a name="providing-windowless-activation"></a>提供无窗口激活
 窗口创建代码 (即，一切事情在调用时**CreateWindow**) 执行成本很高。 用来维护屏幕上的窗口的控件必须管理窗口的消息。 因此，无窗口控件比有窗口控件更快。  

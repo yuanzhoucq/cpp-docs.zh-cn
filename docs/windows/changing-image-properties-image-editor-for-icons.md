@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863318"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>更改图像属性（图标的图像编辑器）
 你可以设置或修改属性的图像使用[属性窗口](/visualstudio/ide/reference/properties-window)。  

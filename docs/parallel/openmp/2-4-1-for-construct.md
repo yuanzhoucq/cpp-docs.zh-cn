@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693544"
 ---
 # <a name="241-for-construct"></a>2.4.1 for 构造
 **为**指令标识了指定的关联的循环迭代将并行执行的迭代工作共享构造。 迭代**为**循环分布在团队执行的并行构造，它将绑定中已存在的线程。 语法**为**构造是，如下所示：  

@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374505"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 在数据传输中用于从剪贴板、通过拖放或从嵌入 OLE 项检索各种格式的数据。  

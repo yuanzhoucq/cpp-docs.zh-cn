@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368772"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 类
 `CMFCCaptionButton`类实现停靠的窗格或微型框架窗口的标题栏显示的按钮。 通常，框架会自动创建标题按钮。  

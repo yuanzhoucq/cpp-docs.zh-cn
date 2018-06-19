@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349670"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>不活动时提供鼠标交互
 如果未立即激活你的控件，您可能仍需要它来处理`WM_SETCURSOR`和`WM_MOUSEMOVE`消息，即使该控件具有没有自己的窗口。 这可以通过实现来完成`COleControl`的实现`IPointerInactive`接口，默认处于禁用状态。 (请参阅*ActiveX SDK*有关此接口的说明。)若要启用它，包括`pointerInactive`标志返回集中的标志[COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

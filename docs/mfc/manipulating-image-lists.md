@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349153"
 ---
 # <a name="manipulating-image-lists"></a>操作图像列表
 [替换](../mfc/reference/cimagelist-class.md#replace)成员函数将图像列表中的映像 ([CImageList](../mfc/reference/cimagelist-class.md)) 为新图像。 如果需要动态增加图像列表对象中的图像数，此函数也很有用。 [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount)函数动态地更改存储的图像列表中的图像数量。 如果增加图像列表的大小，调用**替换**将映像添加到新的映像槽。 如果减小图像列表的大小，则释放超出新大小的图像。  

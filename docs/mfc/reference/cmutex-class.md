@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372455"
 ---
 # <a name="cmutex-class"></a>CMutex 类
 表示一个"互斥体"-允许一个线程互相排斥的方式访问资源的同步对象。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368402"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 结构
 `CDaoFieldInfo`结构包含的数据访问对象 (DAO) 定义的字段对象有关的信息。  

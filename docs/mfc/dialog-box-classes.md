@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351684"
 ---
 # <a name="dialog-box-classes"></a>对话框类
 类`CDialog`和及其派生的类封装对话框功能。 对话框中是一种特殊的窗口中，由于`CDialog`派生自`CWnd`。 派生对话框类从`CDialog`或使用其中一个标准对话框框中，例如打开或保存文件、 打印、 选择字体或颜色，通用对话框类的初始化搜索和替换操作中，或执行各种 OLE 相关操作。  
