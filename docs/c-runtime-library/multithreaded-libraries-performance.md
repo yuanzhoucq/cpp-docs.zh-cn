@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390408"
 ---
 # <a name="multithreaded-libraries-performance"></a>多线程库性能
 单线程的 CRT 不再可用。 本主题讨论如何从多线程库中获取最佳性能。  

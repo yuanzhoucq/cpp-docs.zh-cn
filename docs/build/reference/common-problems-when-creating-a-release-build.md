@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373161"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>创建发行版本时遇到的常见问题
 在开发期间，你通常将生成，并使用你的项目的调试版本进行测试。 如果你然后生成你的应用程序的发布版本，则可能获得访问冲突。  

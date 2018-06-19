@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388275"
 ---
 # <a name="cxxframehandler"></a>__CxxFrameHandler
 内部 CRT 函数。 由 CRT 用于处理结构化异常帧。  

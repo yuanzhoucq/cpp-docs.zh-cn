@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378140"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze（禁用语言扩展）
 **/Za**编译器选项将发出错误对与 ANSI C89 或 ISO C + + 11 不兼容的语言构造。 **/Ze**编译器选项，这将在上，默认情况下，将启用 Microsoft 扩展。  

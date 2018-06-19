@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375251"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD（启用防护检查）
 在可执行映像中，为控制流防护检查指定支持。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381052"
 ---
 # <a name="bits-per-character"></a>每字符的位数
 **ANSI 2.2.4.2.1** 字符中的位数  

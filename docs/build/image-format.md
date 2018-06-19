@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367935"
 ---
 # <a name="image-format"></a>图像格式
 可执行映像格式为 PE32 +。 （Dll 和 Exe） 的可执行映像被限制为 2 千兆字节，最大大小，以便与 32 位偏移量相对地址可用于处理静态图像数据。 此数据包括导入地址表、 字符串常量、 静态的全局数据和等等。  

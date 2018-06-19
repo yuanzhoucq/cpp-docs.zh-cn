@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386847"
 ---
 # <a name="storage-of-arrays"></a>数组的存储
 与数组类型关联的存储是其所有元素所需的存储。 数组的元素存储在连续且增加的内存位置（从第一个元素到最后一个元素）。  

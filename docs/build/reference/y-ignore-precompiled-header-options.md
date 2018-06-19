@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375072"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y-（忽略预编译标头选项）
 所有其他原因`/Y`编译器选项都被忽略 （和本身不能重写）。  

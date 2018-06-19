@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409048"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>文本和二进制模式下的 Unicode 流 I/O
 

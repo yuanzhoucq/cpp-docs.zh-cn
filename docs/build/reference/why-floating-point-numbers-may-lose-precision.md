@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376132"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>为何浮点数可能丢失精度
 浮点十进制值通常没有确切的二进制表示形式。 这是如何 CPU 浮点数据表示形式会产生副作用。 为此，你可能会遇到一些丢失精度，和某些浮点运算可能产生意外的结果。  

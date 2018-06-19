@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391189"
 ---
 # <a name="source-files-and-source-programs"></a>源文件和源程序
 源程序可以分为一个或多个“源文件”或“翻译单元”。 编译器的输入称为“翻译单元”。  

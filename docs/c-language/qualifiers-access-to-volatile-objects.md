@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384672"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>限定符：对可变对象的访问
 **ANSI 3.5.5.3** 构成对具有可变限定类型的对象的访问的内容  

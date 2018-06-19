@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374253"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA（Windows 应用程序优化）
 有关访问线程本地存储 (TLS) 变量的.exe 文件更高效的代码中的结果。  

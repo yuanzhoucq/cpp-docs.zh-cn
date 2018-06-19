@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377927"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>使用导入库和导出文件
 你可以使用 LIB /DEF 选项创建导入库和导出文件。 要生成一个包含的程序导出文件的链接使用导出 （通常动态链接库 (DLL)），并使用导入库解析其他程序中对这些导出的引用。  

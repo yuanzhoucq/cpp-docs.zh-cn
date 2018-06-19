@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384341"
 ---
 # <a name="c-comments"></a>C 注释
 “注释”是一个以正斜杠/星号组合（<b>/\*</b>）开头的字符序列，编译器会将正斜杠/星号组合视为单个空白字符，要不然就忽略它。 注释可以包含可表示字符集中的任意字符组合，包括换行符，但“结束注释”分隔符 (<b>\*/</b>) 除外。 注释可以占用多行，但无法嵌套。  

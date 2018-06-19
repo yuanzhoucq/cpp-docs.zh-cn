@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377399"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard（启用控制流保护）
 允许编译器生成控制流保护安全性检查。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  依次选择 **“配置属性”**、 **“C/C++”**和 **“代码生成”**。  
+2.  依次选择 **“配置属性”**、 **“C/C++”** 和 **“代码生成”**。  
   
 3.  选择 **“控制流保护”** 属性。  
   

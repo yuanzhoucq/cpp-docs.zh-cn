@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373135"
 ---
 # <a name="f-set-stack-size"></a>/F（设置堆栈大小）
 以字节为单位设置程序堆栈大小。  
