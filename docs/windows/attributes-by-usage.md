@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860627"
 ---
 # <a name="attributes-by-usage"></a>按用法分的特性
 本主题列出根据它们应用到的 c + + 语言元素的属性。  

@@ -77,6 +77,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355945"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
 扩展 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 的功能以支持创建选项卡式窗口。  

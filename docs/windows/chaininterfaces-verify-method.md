@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860689"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 方法
 验证模板参数 `I0` 到 `I9` 定义的每个接口是否继承自 IUnknown 和/或 IInspectable，以及验证 `I0` 是否继承自 `I1` 到 `I9`。  

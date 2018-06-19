@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375968"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控件的对话框数据交换函数
 本主题列出了用于对话框、 窗体视图或控件视图对象中 OLE 控件的属性和对话框、 窗体视图或控件视图对象的数据成员之间交换数据的 DDX_OC 函数。  

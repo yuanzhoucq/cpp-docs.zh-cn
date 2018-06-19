@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371525"
 ---
 # <a name="cresourceexception-class"></a>CResourceException 类
 当 Windows 无法找到或分配请求的资源时生成。  

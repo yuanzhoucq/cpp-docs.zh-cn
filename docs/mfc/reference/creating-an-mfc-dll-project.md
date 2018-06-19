@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374050"
 ---
 # <a name="creating-an-mfc-dll-project"></a>创建 MFC DLL 项目
 MFC DLL 是作为共享库的多个应用程序可同时使用的函数的二进制文件。 创建非 MFC DLL 项目的最简单方法是使用 MFC DLL 向导。  

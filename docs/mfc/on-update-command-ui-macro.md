@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348478"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI 宏
 使用**属性**窗口，以将用户界面对象连接到命令目标对象中的命令更新处理程序。 它会自动将用户界面对象的 ID 连接到 `ON_UPDATE_COMMAND_UI` 宏，并在对象中创建一个将处理更新的处理程序。 请参阅[消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)有关详细信息。  

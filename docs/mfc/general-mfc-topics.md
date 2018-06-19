@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349612"
 ---
 # <a name="general-mfc-topics"></a>常规 MFC 主题
 此系列文章包含有关 Microsoft 基础类 (MFC) 库的技术详细信息，并提供了 MFC 框架概述及其关键组件和子系统。  

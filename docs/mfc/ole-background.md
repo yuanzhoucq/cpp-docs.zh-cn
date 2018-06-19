@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355556"
 ---
 # <a name="ole-background"></a>OLE 后台
 OLE 是一个机制，用来支持用户创建和编辑包含由多个应用程序创建的项或“对象”的文档。  

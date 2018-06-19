@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351645"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：将现有 MFC 功能区转换为功能区资源
 功能区资源比手动编码的功能区更直观，且更易于修改和维护。 本主题描述如何将 MFC 项目中手动编码的功能区转换为功能区资源。  

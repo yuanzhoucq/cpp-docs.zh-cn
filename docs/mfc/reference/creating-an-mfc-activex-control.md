@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373284"
 ---
 # <a name="creating-an-mfc-activex-control"></a>创建 MFC ActiveX 控件
 ActiveX 控件的程序设计为向父应用程序提供特定类型的功能的模块化程序。 例如，你可以创建如用于按钮的控件在对话框中或使用网页中的工具栏中。  

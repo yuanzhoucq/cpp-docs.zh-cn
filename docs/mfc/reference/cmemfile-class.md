@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368356"
 ---
 # <a name="cmemfile-class"></a>CMemFile 类
 [CFile](../../mfc/reference/cfile-class.md)-派生支持内存文件的类。  

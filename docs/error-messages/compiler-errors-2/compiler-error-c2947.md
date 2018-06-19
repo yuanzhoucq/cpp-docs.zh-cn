@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243426"
 ---
 # <a name="compiler-error-c2947"></a>编译器错误 C2947
 应由“>”终止构造，却找到“syntax”  

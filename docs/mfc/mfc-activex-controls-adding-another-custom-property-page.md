@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350776"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一自定义属性页
 有时，ActiveX 控件将对有比正常可以容纳在一个属性页上的更多属性。 在这种情况下，你可以将属性页添加到要显示这些属性的 ActiveX 控件。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348971"
 ---
 # <a name="handling-reflected-messages"></a>处理反射消息
 消息反射可以让您处理消息的控件，如`WM_CTLCOLOR`， **WM_COMMAND**，和**WM_NOTIFY**，控件自身。 这使得控件更独立和可移植。 此机制适用于 Windows 公共控件以及 ActiveX 控件（之前称为 OLE 控件）。  

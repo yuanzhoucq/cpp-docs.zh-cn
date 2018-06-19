@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349306"
 ---
 # <a name="memory-management-frame-allocation"></a>内存管理：帧分配
 只要调用函数，帧分配就会从已设置的“堆栈帧”中采用其名称。 堆栈帧是一个内存区域，可暂时存储函数的参数以及为函数定义的所有局部变量。 帧变量通常称为“自动”变量，因为编译器会自动为其分配空间。  

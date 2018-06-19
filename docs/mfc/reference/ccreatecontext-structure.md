@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352039"
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 结构
 框架将使用`CCreateContext`结构创建的框架窗口和与文档相关联的视图时。  

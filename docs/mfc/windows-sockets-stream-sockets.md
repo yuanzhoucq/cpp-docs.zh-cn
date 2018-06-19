@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386101"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows 套接字：流套接字
 本文介绍了作为两种可用的 Windows 套接字类型之一的流套接字。 (另一种类型是[数据报套接字](../mfc/windows-sockets-datagram-sockets.md)。)  

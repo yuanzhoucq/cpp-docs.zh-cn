@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349108"
 ---
 # <a name="list-items-and-image-lists"></a>列表项和图像列表
 列表控件中的"项"([CListCtrl](../mfc/reference/clistctrl-class.md)) 图标、 标签和可能的其他信息 （在"子项"） 组成。  

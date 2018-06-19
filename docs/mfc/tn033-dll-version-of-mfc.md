@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385237"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 本说明介绍如何将 MFCxx.DLL 和 MFCxxD.DLL （其中 x 是 MFC 版本号） 共享动态链接库用于 MFC 应用程序和 MFC 扩展 Dll。 有关 MFC 的规则 Dll 的详细信息，请参阅[使用 MFC 作为 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。  

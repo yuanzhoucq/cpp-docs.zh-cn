@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353682"
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。  

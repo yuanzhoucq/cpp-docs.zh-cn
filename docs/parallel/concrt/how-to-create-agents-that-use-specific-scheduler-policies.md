@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685731"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>如何：创建使用特定计划程序策略的代理
 代理是以异步方式与其他组件以解决更大的计算任务将应用程序组件。 代理通常具有设定的生命周期，并保持状态。  

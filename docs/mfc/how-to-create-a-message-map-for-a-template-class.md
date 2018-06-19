@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354775"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>如何：为模板类创建消息映射
 MFC 中的消息映射提供了一种将 Windows 消息定向到合适的 C++ 对象实例的有效方法。 MFC 消息映射目标的示例包括应用程序类、文档和视图类、控件类等。  

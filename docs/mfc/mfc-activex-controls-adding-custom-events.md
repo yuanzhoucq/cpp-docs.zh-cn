@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352522"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控件：添加自定义事件
 自定义事件不同于常用事件，因为类自动不激发`COleControl`。 自定义事件识别的某些操作，由控件开发人员，为事件。 自定义事件的事件映射条目由`EVENT_CUSTOM`宏。 以下部分实现使用 ActiveX 控件向导创建 ActiveX 控件项目的自定义事件。  

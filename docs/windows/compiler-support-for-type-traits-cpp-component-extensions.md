@@ -76,6 +76,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862411"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>编译器支持类型特征（C++ 组件扩展）
 编译器支持*键入特征*，这指示在编译时类型的各种特征。  

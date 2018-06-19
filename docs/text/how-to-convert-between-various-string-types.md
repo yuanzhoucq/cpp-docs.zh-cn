@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861222"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>如何：在各种字符串类型之间进行转换
 本主题演示如何将各种 Visual c + + 字符串类型转换为其他字符串。 介绍了字符串类型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情况下，转换为新类型时进行的字符串的副本。 为新的字符串所做的任何更改将不会影响原始字符串，反之亦然。  

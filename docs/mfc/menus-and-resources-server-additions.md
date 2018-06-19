@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351346"
 ---
 # <a name="menus-and-resources-server-additions"></a>菜单和资源：服务器添加
 此文章介绍了需要的菜单和可视化编辑服务器 （组件） 应用程序中的其他资源进行的更改。 服务器应用程序需要多个添加到菜单结构和其他资源，因为它可以启动在三种模式之一： 独立、 嵌入，或就地。 中所述[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)文章，有最多四个集的菜单。 所有四个用于 MDI 完全服务器应用程序，而只有三用于 miniserver。 应用程序向导将创建菜单布局所需的服务器所需的类型。 自定义一些可能有必要。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246365"
 ---
 # <a name="compiler-error-c2891"></a>编译器错误 C2891
 parameter： 不能采用一个模板参数的地址  

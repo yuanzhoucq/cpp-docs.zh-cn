@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353900"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 类
 表示一个"临界区"-每次访问资源或代码段的允许一个线程的同步对象。  

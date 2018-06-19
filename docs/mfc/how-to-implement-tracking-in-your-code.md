@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349731"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>如何：在代码中实现跟踪
 若要跟踪的 OLE 项目，你必须处理到项，例如单击项或更新该文档的视图相关的某些事件。 在所有情况下，只需声明一个临时[CRectTracker](../mfc/reference/crecttracker-class.md)对象，并通过此对象操作项。  

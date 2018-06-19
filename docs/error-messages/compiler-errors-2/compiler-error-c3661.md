@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265303"
 ---
 # <a name="compiler-error-c3661"></a>编译器错误 C3661
 显式重写列表未找到要重写任何方法  

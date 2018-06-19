@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349904"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>数据对象和数据源：操作
 已创建的数据对象或数据源后，你可以执行大量的数据，例如插入和删除数据，枚举数据采用的格式和的详细信息的常见操作。 本指南介绍了完成最常见的操作所需的技术。 包括以下主题：  

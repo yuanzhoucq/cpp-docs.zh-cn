@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349038"
 ---
 # <a name="form-views-mfc"></a>窗体视图 (MFC)
 你可以将窗体添加到任何 Visual c + + 应用程序支持的 MFC 库，包括[基于窗体的应用程序](../mfc/reference/creating-a-forms-based-mfc-application.md)(一个其视图类派生自`CFormView`)。 如果你未最初创建你的应用程序以支持窗体，Visual c + + 将时插入一个新的窗体添加这种对你支持。 在 SDI 或 MDI 应用程序，它实现默认[文档/视图体系结构](../mfc/document-view-architecture.md)，当用户选择`New`命令 (默认情况下上,**文件**菜单)，Visual c + + 会提示用户从可用的窗体中选择。  

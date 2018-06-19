@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351717"
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 此文章介绍了如何将一系列消息映射到单个消息处理程序函数 （而不是将一条消息映射到一个功能）。  

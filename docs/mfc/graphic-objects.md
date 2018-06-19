@@ -56,6 +56,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349777"
 ---
 # <a name="graphic-objects"></a>图形对象
 Windows 提供了各种可在设备上下文中使用的绘图工具。 它提供了用于绘制线条的笔、用于填充内部的画笔以及用于绘制文本的字体。 MFC 提供等效于 Windows 中的绘图工具的图形对象类。 下表显示可用类以及等效的 Windows 图形设备接口 (GDI) 句柄类型。  

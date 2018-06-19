@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354295"
 ---
 # <a name="exceptions-database-exceptions"></a>异常：数据库异常
 此文章介绍了如何处理数据库异常。 你正在使用的 MFC 类开放式数据库连接 (ODBC) 或 MFC 类数据访问对象 (DAO) 可应用于大部分这篇文章中的材料。 显式标记为特定于一个或另一模型的材料。 包括以下主题：  

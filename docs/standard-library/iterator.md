@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860666"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -65,9 +66,9 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[end](../standard-library/iterator-functions.md#end)|检索指向指定容器中最后一个元素之后的元素的迭代器。|
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|创建一个可以在指定容器前面插入元素的迭代器。|
 |[inserter](../standard-library/iterator-functions.md#inserter)|一个可以在指定插入点向容器添加新元素的迭代器适配器。|
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|创建可由其他算法使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。 **注意：**该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|创建可由其他算法使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。 **注意：** 该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|返回一个移动迭代器，其中包含所提供的迭代器作为其存储的基迭代器。|
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|创建可由其他算法使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。 **注意：**该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|创建可由其他算法使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。 **注意：** 该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 |[next](../standard-library/iterator-functions.md#next)|迭代指定的次数并返回新的迭代器位置。|
 |[prev](../standard-library/iterator-functions.md#prev)|反向迭代指定的次数并返回新的迭代器位置。|
 
@@ -90,7 +91,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将元素插入到 **Container** 类型的容器，并通过其存储的受保护 **pointer** 对象（称为容器）访问此容器。|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一种为代表双向迭代器的 **iterator_category** 函数提供返回类型的类。|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|一种使用随机访问检查迭代器来访问数组的类。 **注意：**此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|一种使用随机访问检查迭代器来访问数组的类。 **注意：** 此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|一种为代表向前迭代器的 **iterator_category** 函数提供返回类型的类。|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它可以将元素插入到 **Container** 类型的容器，并通过其存储的受保护 **pointer** 对象（称为容器）访问此容器。|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|一种为代表输入迭代器的 **iterator_category** 函数提供返回类型的类。|
@@ -105,7 +106,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|一种为代表输出迭代器的 **iterator_category** 函数提供返回类型的类。|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|一种为代表随机访问迭代器的 **iterator_category** 函数提供返回类型的类。|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此模板类描述一个行为类似于随机访问迭代器的对象，只不过方向相反。|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|一种使用随机访问未检查迭代器来访问数组的类。 **注意：**此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|一种使用随机访问未检查迭代器来访问数组的类。 **注意：** 此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 
 ## <a name="see-also"></a>请参阅
 

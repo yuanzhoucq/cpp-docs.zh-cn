@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352572"
 ---
 # <a name="interface-elements"></a>界面元素
 本文档介绍中引入的界面元素[!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]SP1，并还介绍了与该早期版本的库的差异。  

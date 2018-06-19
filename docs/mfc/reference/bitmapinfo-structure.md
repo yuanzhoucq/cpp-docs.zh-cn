@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348148"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO 结构
 `BITMAPINFO`结构定义的维度和 Windows 设备独立位图 (DIB) 的颜色信息。  

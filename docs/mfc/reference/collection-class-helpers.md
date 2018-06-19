@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374833"
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
 集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素等目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，与为地图、 列表或数组中存储的数据类型而定制的版本，必须重写这些函数根据需要。 有关如何重写帮助器函数如`SerializeElements`，请参阅文章[集合： 如何生成类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意， **ConstructElements**和**DestructElements**已弃用。  

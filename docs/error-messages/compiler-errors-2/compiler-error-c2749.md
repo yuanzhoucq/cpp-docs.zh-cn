@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236889"
 ---
 # <a name="compiler-error-c2749"></a>编译器错误 C2749
 type： 只能引发或捕获的托管类使用 /clr: safe 句柄  

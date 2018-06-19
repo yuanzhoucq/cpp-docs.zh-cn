@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863499"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError 方法
 指示指定的错误代码是否可以修改的内部错误状态。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234578"
 ---
 # <a name="compiler-error-c2765"></a>编译器错误 C2765
 function： 函数模板的显式专用化不能有任何默认自变量  

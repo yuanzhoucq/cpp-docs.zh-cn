@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243484"
 ---
 # <a name="compiler-error-c2870"></a>编译器错误 C2870
 name： 命名空间定义必须出现在文件范围内或在另一个命名空间定义立即  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863694"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>添加对话框控件的事件处理程序
 对于已与一个类关联的项目对话框，在创建事件处理程序时可以利用某些快捷方式。 你可以快速创建的默认控件通知事件或任何适用的 Windows 消息的处理。  

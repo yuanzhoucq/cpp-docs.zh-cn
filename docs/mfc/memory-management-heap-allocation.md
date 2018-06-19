@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352407"
 ---
 # <a name="memory-management-heap-allocation"></a>内存管理：堆分配
 堆是为程序的内存分配需求保留的。 它是程序代码和堆栈之外的区域。 典型的 C 程序使用函数`malloc`和**免费**分配和释放堆内存。 MFC 的调试版本提供了 c + + 内置运算符的修改的版本**新**和**删除**分配和释放堆内存中的对象。  

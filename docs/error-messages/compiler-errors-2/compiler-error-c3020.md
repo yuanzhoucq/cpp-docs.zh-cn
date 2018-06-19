@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245363"
 ---
 # <a name="compiler-error-c3020"></a>编译器错误 C3020
 var： 不能在循环体中修改索引变量的 OpenMP for 循环  

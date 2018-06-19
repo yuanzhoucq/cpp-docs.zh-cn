@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349514"
 ---
 # <a name="documents-views-and-the-framework"></a>文档、视图和框架
 MFC 框架的核心是文档和视图的概念。 文档是用户在编辑会话中与之进行交互的数据对象。 它由创建`New`或**打开**命令**文件**菜单且通常保存在文件中。 (派生自类的标准 MFC 文档**CDocument**，与活动文档和 OLE 复合文档不同。)视图是用户可用来与文档进行交互的窗口对象。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349037"
 ---
 # <a name="ole-container-classes"></a>OLE 容器类
 容器应用程序使用这些类。 同时`COleLinkingDoc`和`COleDocument`管理的集合`COleClientItem`对象。 而不是派生您的文档类从**CDocument**，你将从它派生`COleLinkingDoc`或`COleDocument`，取决于是否要支持链接到嵌入到文档中的对象。  

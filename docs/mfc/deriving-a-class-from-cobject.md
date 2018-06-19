@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349352"
 ---
 # <a name="deriving-a-class-from-cobject"></a>从 CObject 派生类
 本指南介绍了从派生类所必需的最小步骤[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`类文章介绍利用特定于所需的步骤`CObject`功能，如序列化和诊断的调试支持。  

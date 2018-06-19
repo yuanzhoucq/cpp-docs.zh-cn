@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367511"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 类
 实现常用字体属性并封装 Windows 字体对象和 `IFont` 接口的功能。  

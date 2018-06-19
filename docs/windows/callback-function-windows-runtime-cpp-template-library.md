@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860848"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>回调函数（Windows 运行时 C++ 模板库）
 创建一个对象，该对象的成员函数是一个回调方法。  

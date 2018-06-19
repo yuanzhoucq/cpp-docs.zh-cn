@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241799"
 ---
 # <a name="compiler-error-c2928"></a>编译器错误 C2928
 显式实例化; “identifier”不是模板类“class”的函数或静态数据成员  

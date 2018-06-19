@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685835"
 ---
 # <a name="1-introduction"></a>1.介绍
 本文档指定编译器指令、 库函数和用于 C 和 c + + 程序中指定共享内存并行的环境变量的集合。 本文档中所述的功能统称为*OpenMP C/c + + 应用程序接口 (API)*。 本规范的目标是可以进行并行编程提供模型允许程序可以跨来自不同供应商的共享内存体系结构移植。 OpenMP C/c + + API 将从众多供应商的编译器支持。 OpenMP，有关详细信息包括*OpenMP Fortran 应用程序编程接口*，可以找到在以下网站：  

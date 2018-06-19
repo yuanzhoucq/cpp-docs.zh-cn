@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253900"
 ---
 # <a name="compiler-error-c3353"></a>编译器错误 C3353
 “delegate”: 委托只能从全局函数或者托管或 WinRT 类型的成员函数中创建  

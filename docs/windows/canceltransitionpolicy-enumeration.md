@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860341"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 枚举
 指示如何异步操作的尝试，则切换为终端状态的完成或错误的行为与客户端请求已取消状态。  

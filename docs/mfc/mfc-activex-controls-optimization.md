@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355306"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控件：优化
 此文章介绍了可用于优化 ActiveX 控件的更好的性能的技术。  

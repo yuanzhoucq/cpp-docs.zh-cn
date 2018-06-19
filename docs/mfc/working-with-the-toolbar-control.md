@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385932"
 ---
 # <a name="working-with-the-toolbar-control"></a>使用工具栏控件
 此文章介绍了如何访问[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象基础[CToolBar](../mfc/reference/ctoolbar-class.md)更好地控制您的工具栏。 这是一个高级的主题。  

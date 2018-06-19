@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860861"
 ---
 # <a name="callas"></a>call_as
 使[本地](../windows/local-cpp.md)函数映射到远程函数，以便远程函数调用时，调用本地函数。  

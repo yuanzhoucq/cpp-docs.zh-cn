@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354130"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 类
 实现可对大小对象的维度进行动画处理的大小对象功能。  

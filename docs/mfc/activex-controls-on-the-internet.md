@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352300"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种不同容器（包括 Internet 上的 COM 感知 Web 浏览器）中使用的可编程软件组件的主要体系结构。 任何 ActiveX 控件都可以是 Internet 控件，并且可将其功能添加到活动文档或成为网页的一部分。 网页上的控件可以使用脚本互相通信。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266456"
 ---
 # <a name="compiler-error-c3653"></a>编译器错误 C3653
 function： 不能用作命名重写： 重写未找到; 函数是否忘记使用显式命名函数:: 运算符？  

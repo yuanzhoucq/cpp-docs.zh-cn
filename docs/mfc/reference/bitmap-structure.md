@@ -21,9 +21,10 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351632"
 ---
 # <a name="bitmap-structure"></a>BITMAP 结构
-**位图**结构定义的高度、 宽度、 颜色格式和逻辑位图的位值**。**  
+**位图**结构定义的高度、 宽度、 颜色格式和逻辑位图的位值 **。**  
   
 ## <a name="syntax"></a>语法  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246398"
 ---
 # <a name="compiler-error-c3175"></a>编译器错误 C3175
 function1： 不能将托管类型的方法调用从非托管函数 function2  

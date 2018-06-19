@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245399"
 ---
 # <a name="compiler-error-c2858"></a>编译器错误 C2858
 命令行选项 /Yc (/ Fdfilename) 不一致，出现预编译标头，使用 / Fdfilename  

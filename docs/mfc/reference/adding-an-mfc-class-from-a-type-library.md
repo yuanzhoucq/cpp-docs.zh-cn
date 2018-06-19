@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355111"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>从类型库添加 MFC 类
 使用此向导创建 MFC 类时从可用的类型库中的接口。 你可以添加到的 MFC 类[MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)、 [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)，或[MFC ActiveX 控件](../../mfc/reference/creating-an-mfc-activex-control.md)。  

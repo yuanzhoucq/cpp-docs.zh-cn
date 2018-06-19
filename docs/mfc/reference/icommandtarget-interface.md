@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375572"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 接口
 向用户控件提供了一个接收命令从命令的源对象的接口。  

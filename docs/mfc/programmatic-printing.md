@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352830"
 ---
 # <a name="programmatic-printing"></a>以编程方式打印
 OLE 提供了一种来唯一标识永久文档 (**GetClassFile**) 并将它们加载到其相关代码 (`CoCreateInstance`， **queryinterface （iid_ipersistfile)**， **Queryinterface （iid_ipersiststorage)**， **ipersistfile:: Load**，和**ipersiststorage:: Load**)。 为了进一步启用打印文档，活动文档包容（使用最初未随 OLE 2.0 一起提供的现有 OLE 设计）引入了一个基本标准的打印接口 `IPrint`（通常可以通过任何能够加载文档类型的持久状态的对象获取）。 活动文档的每个视图可以选择性地分别支持**IPrint**接口，以提供这些功能。  

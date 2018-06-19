@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355907"
 ---
 # <a name="application-control"></a>应用程序控件
 OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能够启动并自动发布的应用程序，协调其生产和修改的对象，依次类推。 本主题中的函数满足这些要求。 除了调用由 OLE 系统 Dll，这些函数有时必须由应用程序以及调用。 

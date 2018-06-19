@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348340"
 ---
 # <a name="containers-compound-files"></a>容器：复合文件
 本文介绍了复合文件的组件和实现以及在 OLE 应用程序中使用复合文件的优缺点。  

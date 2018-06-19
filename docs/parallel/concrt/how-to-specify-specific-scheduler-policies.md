@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685780"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>如何：指定特定的计划程序策略
 计划程序策略让你能够控制计划程序将使用在管理任务的策略。 本主题演示如何使用计划程序策略来提高打印到控制台进度指示器的任务的线程优先级。  

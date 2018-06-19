@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366234"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 结构
 `CDaoParameterInfo`结构包含有关为数据访问对象 (DAO) 定义的参数对象的信息。  

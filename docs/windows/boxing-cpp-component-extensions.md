@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861352"
 ---
 # <a name="boxing--c-component-extensions"></a>装箱（C++ 组件扩展）
 Visual c + + 编译器可以将值类型转换为称为的过程中的对象*装箱*，并将对象转换为称为的过程中的值类型*取消装箱*。  

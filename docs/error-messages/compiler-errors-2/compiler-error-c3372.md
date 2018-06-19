@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257578"
 ---
 # <a name="compiler-error-c3372"></a>编译器错误 C3372
 必须至少为组件类的 "source" 特性指定 1 个接口  

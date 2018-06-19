@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353848"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>来自 Rich Edit 控件的通知
 通知消息事件影响 rich edit 控件的报表 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 它们可由父窗口的处理或者，可使用消息反射被 rich edit 控件本身的方法。 Rich edit 控件支持的所有使用与编辑控件，以及几个附加的通知消息。 你可以确定哪些通知消息 rich edit 控件发送其父窗口通过设置其"事件掩码"。  

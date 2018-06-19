@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352784"
 ---
 # <a name="docking-and-floating-toolbars"></a>停靠和浮动工具栏
 Microsoft 基础类库支持可停靠工具栏。 可以附加或停靠到其父窗口中，任何一边可停靠工具栏或可以分离或浮动在其自己的微型框架窗口中。 此文章介绍了如何在你的应用程序中使用可停靠工具栏。  

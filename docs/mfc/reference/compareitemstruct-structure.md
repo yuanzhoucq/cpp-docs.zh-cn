@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368626"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 结构
 `COMPAREITEMSTRUCT`结构提供的标识符和排序、 所有者描述列表框或组合框中的两个项的应用程序提供数据。  

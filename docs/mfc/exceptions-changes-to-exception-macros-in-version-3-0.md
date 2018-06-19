@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350007"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
 这是一个高级的主题。  

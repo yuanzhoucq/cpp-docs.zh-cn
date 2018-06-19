@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293382"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>编译器警告（等级 4）C4365
 操作： 从 type_1 类型到 type_2，有符号/无符号不匹配的转换  

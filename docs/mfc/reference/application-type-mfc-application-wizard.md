@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353434"
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 应用程序向导的应用程序类型
 使用此页的[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)设计并将基本功能添加到新的 MFC 应用程序。  

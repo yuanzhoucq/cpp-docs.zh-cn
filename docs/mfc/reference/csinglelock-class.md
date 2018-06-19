@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372964"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 类
 表示多线程程序中用于控制对一个资源的访问的访问控制机制。  

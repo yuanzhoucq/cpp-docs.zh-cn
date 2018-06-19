@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372442"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>创建基于窗体的 MFC 应用程序
 表单是一个对话框以及让用户访问和可能更改数据的控件。 你可能想要开发应用程序在其中用户选择从所选的窗体。 通常，基于窗体的应用程序允许用户访问窗体通过单击**新建**从**文件**菜单。 基于对话框的应用程序，不允许用户访问**新建**选项**文件**菜单上，也被视为一个基于窗体的应用程序。  
