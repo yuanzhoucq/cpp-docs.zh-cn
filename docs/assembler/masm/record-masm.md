@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057256"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 声明一包含的指定字段的记录类型。 *fieldname*名称字段，*宽度*指定的位数，和*表达式*提供其初始值。  

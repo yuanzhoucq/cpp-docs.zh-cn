@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356349"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>添加 ATL OLE DB 使用者
 使用此向导以向项目添加 ATL OLE DB 使用者。 ATL OLE DB 使用者包含 OLE DB 访问器类和数据绑定访问数据源所必需。 为 ATL COM 应用程序，或作为 MFC 或 Win32 应用程序包含 ATL 支持 （其中 ATL OLE DB 使用者向导自动添加），该项目必须已创建。  

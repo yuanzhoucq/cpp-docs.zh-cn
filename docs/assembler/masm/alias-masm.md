@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049162"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 **别名**指令创建的函数的备用名称。  这样可以创建多个名称对于函数，或创建允许链接器 (LINK.exe) 以将旧的函数映射到新函数的库。  

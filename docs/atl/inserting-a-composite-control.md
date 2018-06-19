@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358685"
 ---
 # <a name="inserting-a-composite-control"></a>插入复合控件
 **添加类**对话框中，可插入到项目中的 ATL 对象。 通过右键单击解决方案资源管理器，指向中的项目名称来访问此对话框**添加**，然后单击**添加类**。  

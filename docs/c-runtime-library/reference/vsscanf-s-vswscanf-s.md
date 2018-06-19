@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417098"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s、vswscanf_s
 

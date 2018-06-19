@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411749"
 ---
 # <a name="comments-c"></a>注释 （C++）
 注释是的文本，编译器将忽略，但这是用于程序员。 通常使用注释来批注代码以供将来参考。 编译器会将它们视为空白区域。 你可以使用在测试中的注释以使某些行代码处于非活动状态;但是， `#if` / `#endif`预处理器指令更适用于这因为可以包含注释的代码外侧，但你无法嵌套注释。  

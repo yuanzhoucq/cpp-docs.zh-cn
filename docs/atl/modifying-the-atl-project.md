@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355028"
 ---
 # <a name="modifying-the-atl-project"></a>修改 ATL 项目
 此时，您的复合控件项目实现为您的复合控件必要的对象。 下一步是添加任何控件复合控件，将包含和处理任何必要的事件。  

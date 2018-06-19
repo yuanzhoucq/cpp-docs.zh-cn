@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423865"
 ---
 # <a name="summary-of-scope-rules"></a>范围规则摘要
 名称的使用在其范围内必须是明确的（直至确定重载的点）。 如果名称表示一个函数，则该函数的参数的数目和类型必须明确。 如果名称保持明确，[成员访问](../cpp/member-access-control-cpp.md)应用规则。  

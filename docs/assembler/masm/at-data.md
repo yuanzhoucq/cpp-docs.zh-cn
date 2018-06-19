@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049882"
 ---
 # <a name="data"></a>@data
 默认数据组的名称。 除之外的所有模型的计算都结果为 DGROUP**平面**。 计算结果为**平面**下**平面**内存模型 （文本宏）。  

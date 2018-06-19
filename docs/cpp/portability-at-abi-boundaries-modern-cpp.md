@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419655"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>ABI 边界处的可移植性（现代 C++）
 在二进制接口边界使用二进制接口边界类型和约定。 “可迁移类型”是 C 内置类型或包含 C 内置类型的结构。 当调用方和被调用方同意布局，调用约定，等等，则仅可以使用类类型。这种情况只有，同时使用同一编译器和编译器设置在编译时。  

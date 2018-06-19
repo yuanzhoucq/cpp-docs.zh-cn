@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407977"
 ---
 # <a name="bstrt-operators"></a>_bstr_t 运算符
 璝惠`_bstr_t`运算符，请参阅[_bstr_t 类](../cpp/bstr-t-class.md)。  

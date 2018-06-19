@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055142"
 ---
 # <a name="pushreg"></a>.PUSHREG
 生成`UWOP_PUSH_NONVOL`指定注册号码，使用的当前偏移量在序言展开代码入口。  

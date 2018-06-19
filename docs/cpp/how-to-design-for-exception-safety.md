@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417963"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：设计异常安全性
 异常机制的优势之一是执行以及异常相关数据将直接从引发异常的语句跳至处理异常的第一个 catch 语句。 处理程序可以是调用堆栈中任意数量的级别。 在 try 语句和 throw 语句之间调用的函数无需了解与所引发异常有关的任何信息。  但是，这些函数必须进行设计，以便它们在异常可能从下向上传播时“意外地”超出范围，而这样做不会留下部分创建的对象、泄漏的内存或处于不稳定状态的数据结构。  

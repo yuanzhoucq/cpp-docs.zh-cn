@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049052"
 ---
 # <a name="486p"></a>.486P
 启用 80486 处理器的所有说明 （包括特权） 的程序集。  

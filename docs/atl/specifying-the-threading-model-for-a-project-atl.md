@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359631"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>指定项目的线程模型 (ATL)
 下列宏是可用于指定 ATL 项目的线程模型：  

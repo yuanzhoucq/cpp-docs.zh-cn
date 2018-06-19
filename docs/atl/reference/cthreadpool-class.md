@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365684"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 类
 此类提供处理的工作项队列的辅助线程的池。  

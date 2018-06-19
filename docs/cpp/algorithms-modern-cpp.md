@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412291"
 ---
 # <a name="algorithms-modern-c"></a>算法（现代 C++）
 对于现代 C++ 编程中，我们建议你使用的算法中[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。 下面是一些重要示例：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416166"
 ---
 # <a name="expressions-with-unary-operators"></a>使用一元运算符的表达式
 一元运算符仅作用于表达式中的某个操作数。 一元运算符如下所示：  

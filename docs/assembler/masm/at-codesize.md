@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049133"
 ---
 # <a name="codesize"></a>@CodeSize
 0 表示**微小**，**小**， **COMPACT**，和**平面**模型，并为 1**中等**， **大型**，和**非常巨大**（数字等同） 的模型。  

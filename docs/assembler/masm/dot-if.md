@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053111"
 ---
 # <a name="if"></a>.IF
 生成测试的代码`condition1`(例如，AX > 7) 并执行*语句*如果该条件为 true。  

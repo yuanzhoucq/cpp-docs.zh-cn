@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411572"
 ---
 # <a name="expression-statement"></a>表达式语句
 表达式语句导致计算表达式。 出于表达式语句的原因，不会发生控制或迭代的传输。  

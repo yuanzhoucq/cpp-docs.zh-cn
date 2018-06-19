@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052295"
 ---
 # <a name="stack"></a>.STACK
 如果用于[。模型](../../assembler/masm/dot-model.md)，定义 （使用段名称堆栈） 堆栈段。 可选`size`指定的堆栈 （默认值 1024） 的字节数。 `.STACK`指令会自动关闭堆栈语句。  

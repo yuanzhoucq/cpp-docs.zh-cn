@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411106"
 ---
 # <a name="customizing-c-command-line-processing"></a>自定义 C++ 命令行处理
 ## <a name="microsoft-specific"></a>Microsoft 专用  

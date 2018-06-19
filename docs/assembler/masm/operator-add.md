@@ -25,6 +25,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056127"
 ---
 # <a name="operator-"></a>运算符 +
 第一个运算符返回*expression1*加上*expression2*。 第二个运算符反转的符号*表达式*。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421935"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>将结构化异常处理用于 C++
 这些文章中描述的结构化异常处理适用于 C 和 C++ 源文件。 但是，这不是专门针对 C++ 设计，因此不建议使用。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理机制更灵活，因为它可以处理任何类型的异常。  

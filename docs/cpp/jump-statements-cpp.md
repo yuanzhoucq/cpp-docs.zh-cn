@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419025"
 ---
 # <a name="jump-statements-c"></a>跳转语句 (C++)
 C++ 跳转语句执行控制的即时本地转换。  

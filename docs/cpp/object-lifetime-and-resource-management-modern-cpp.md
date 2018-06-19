@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423491"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 与托管语言不同，C++ 没有垃圾回收 (GC)，垃圾回收将在程序运行时自动释放不再使用的内存资源。 在 C++ 中，资源管理直接与对象生存期相关。 本文档描述影响 C++ 中对象生存期的因素以及如何管理对象生存期。  

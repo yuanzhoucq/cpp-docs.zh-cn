@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356378"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>链接到 CRT 的内容在 ATL 项目
 [C 运行时库](../c-runtime-library/crt-library-features.md)(CRT) 提供可以使编程更容易在 ATL 开发过程中的许多有用的功能。 所有 ATL 项目都链接到 CRT 库。 你可以看到的优点和缺点的链接中的方法[优点和缺点为链接到 CRT 方法使用](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054879"
 ---
 # <a name="dosseg"></a>.DOSSEG
 根据 MS-DOS 段约定的段进行排序： 代码第一次，然后段不在 DGROUP，和在 DGROUP 然后段。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416653"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略号和可变参数模板
 这篇文章演示如何使用省略号 (`...`) 与 C++ 可变参数模板。 省略号具有 C 和 C++ 中的许多用途。 其中包括变量自变量列表的函数。 `printf()` C 运行时库中的功能的已知示例之一。  

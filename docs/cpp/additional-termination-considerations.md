@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408141"
 ---
 # <a name="additional-termination-considerations"></a>附加终止注意事项
 你可以通过使用终止 C++ 程序**退出**， `return`，或**中止**。 您可以使用 `atexit` 函数添加退出处理。 以下几节中讨论了这几个方面。  

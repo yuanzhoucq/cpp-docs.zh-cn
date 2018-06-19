@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054466"
 ---
 # <a name="forc"></a>FORC
 将块，它将为在每个字符一次重复标记`string`，与当前的字符替换`parameter`上每次重复。  

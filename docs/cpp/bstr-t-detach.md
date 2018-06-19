@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408947"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Microsoft 专用**  

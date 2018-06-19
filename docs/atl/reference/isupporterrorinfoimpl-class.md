@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364576"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 类
 此类提供的默认实现[ISupportErrorInfo 接口](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32)和可在只有单个接口生成一个对象上的错误时。  

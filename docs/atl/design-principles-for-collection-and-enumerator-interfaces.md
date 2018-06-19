@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354914"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和枚举器接口的设计原则
 有不同的设计依据每种类型的接口的原理：  

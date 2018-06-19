@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356336"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>实施 CComObject、 CComAggObject 和 CComPolyObject
 模板类[CComObject](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，和[CComPolyObject](../atl/reference/ccompolyobject-class.md)始终是继承链中的大多数派生的类。 它是他们的责任来处理所有中的方法**IUnknown**: `QueryInterface`， `AddRef`，和**版本**。 此外，`CComAggObject`和`CComPolyObject`（时用于聚合对象） 提供特殊的引用计数和`QueryInterface`未知的内部对象所需的语义。  

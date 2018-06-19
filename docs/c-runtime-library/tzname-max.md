@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408115"
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
 时区名称变量允许的最大字符串长度。  

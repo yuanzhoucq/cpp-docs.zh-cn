@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355443"
 ---
 # <a name="event-handling-principles"></a>事件处理原则
 有三个步骤普遍适用于所有事件处理。 你将需要：  

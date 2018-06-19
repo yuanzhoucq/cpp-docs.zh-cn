@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051741"
 ---
 # <a name="df"></a>DF
 分配和 （可选） 为每个初始化 6 字节存储`initializer`。 `DF` 同义词[FWORD](../../assembler/masm/fword.md)。  

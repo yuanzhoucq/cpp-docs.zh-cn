@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361181"
 ---
 # <a name="utility-classes"></a>实用程序类
 提供了以下的独立于 MFC 的实用程序类：  

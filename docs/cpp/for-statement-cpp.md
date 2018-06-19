@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417179"
 ---
 # <a name="for-statement-c"></a>for 语句 (C++)
 重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)。  

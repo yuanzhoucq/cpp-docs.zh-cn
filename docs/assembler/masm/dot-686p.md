@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049383"
 ---
 # <a name="686p"></a>.686P
 可以使程序集的 Pentium Pro 处理器 （包括特权） 的所有说明。  

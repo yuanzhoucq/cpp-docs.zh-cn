@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355641"
 ---
 # <a name="enumerators-and-collections-classes"></a>枚举器和集合类
 以下类提供支持 COM 集合和枚举：  

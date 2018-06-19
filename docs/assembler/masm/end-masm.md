@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050904"
 ---
 # <a name="end-masm"></a>END (MASM)
 将标记的末尾模块，并 （可选） 将程序入口点设置为*地址*。  

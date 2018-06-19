@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415182"
 ---
 # <a name="explicit-instantiation"></a>显式实例化
 你可以使用显式实例化来创建模板化类或函数的实例化，而不用将其实际用于你的代码。 创建库 (.lib) 文件，使用的模板分发时，这很有用，因为未实例化的模板定义未放入对象 (.obj) 文件。  

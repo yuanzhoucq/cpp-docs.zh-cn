@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418388"
 ---
 # <a name="data-type-ranges"></a>数据类型范围
 Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。  
