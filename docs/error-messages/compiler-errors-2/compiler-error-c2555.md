@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230571"
 ---
 # <a name="compiler-error-c2555"></a>编译器错误 C2555
 class1::function1： 重写虚函数返回类型不同，且不从 class2::function2 协变  

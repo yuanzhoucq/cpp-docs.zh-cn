@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088475"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>编译器和链接器选项 (C++/CX)
 环境变量，C + + /cli CX 编译器选项和链接器选项支持 Windows 运行时生成应用。  

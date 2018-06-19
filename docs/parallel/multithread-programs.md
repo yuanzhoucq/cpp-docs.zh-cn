@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686927"
 ---
 # <a name="multithread-programs"></a>多线程程序
 基本上，线程是执行通过计划的路径。 它也是 Win32 安排执行的最小单位。 线程包含的堆栈的状态以及 CPU 寄存器中，系统计划程序执行列表中的条目。 每个线程共享进程的所有资源。  

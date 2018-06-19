@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255617"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 结构
 包含用于描述在调度接口上的方法或属性的类型信息。  

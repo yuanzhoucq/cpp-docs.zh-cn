@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889301"
 ---
 # <a name="safeint-functions"></a>SafeInt 函数
 SafeInt 库提供你可以使用而无需创建的实例的多个函数[SafeInt 类](../windows/safeint-class.md)。 如果你想要从整数溢出保护单个数学运算，你可以使用这些函数。 如果你想要保护多个数学运算，则应创建`SafeInt`对象。 它会更加高效创建`SafeInt`对象而不是若要使用这些函数多次。  

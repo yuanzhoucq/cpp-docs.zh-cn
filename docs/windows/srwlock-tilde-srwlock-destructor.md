@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889074"
 ---
 # <a name="srwlocksrwlock-destructor"></a>SRWLock::~SRWLock 析构函数
 取消初始化 SRWLock 类的实例。  

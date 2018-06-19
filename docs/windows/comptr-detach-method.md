@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883588"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach 方法
 解除关联这`ComPtr`从它所表示的接口的对象。  

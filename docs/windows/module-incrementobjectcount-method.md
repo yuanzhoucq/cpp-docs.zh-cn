@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878237"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount 方法
 递增模块所跟踪对象的数量。  

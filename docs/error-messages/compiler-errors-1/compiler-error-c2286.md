@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171921"
 ---
 # <a name="compiler-error-c2286"></a>编译器错误 C2286
 指向成员的 identifier 表示已设置为继承-忽略声明  

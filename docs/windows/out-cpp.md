@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876808"
 ---
 # <a name="out-c"></a>out (C++)
 标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。  

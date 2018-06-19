@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871035"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>将图像从一种格式转换为另一种格式（图标的图像编辑器）
 你可以在图像编辑器中打开 GIF 或 JPEG 图像，并将其保存为位图。 此外，你可以打开位图文件，并将其保存为 GIF 或 JPEG。 处理的图像不需要以在开发环境中编辑项目的一部分 (请参阅[独立运行图像编辑](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。  

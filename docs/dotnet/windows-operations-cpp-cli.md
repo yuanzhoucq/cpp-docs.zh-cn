@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169106"
 ---
 # <a name="windows-operations-ccli"></a>Windows 操作 (C++/CLI)
 演示如何使用各种特定于 Windows 的任务[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]。  

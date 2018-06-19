@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094294"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>记录字段交换：RFX 的工作方式
 本主题介绍的 RFX 过程。 这是一个高级主题，包括：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168836"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>嵌套在本机类型中的值类型的版本问题 (C++/CLI)
 请考虑用于生成客户端程序集的签名 （强名称） 程序集组件。 组件包含用于在客户端作为类型的本机联合、 类或数组成员的值类型。 如果该组件的将来版本发生更改的大小或值类型的布局，则客户端必须重新编译。  

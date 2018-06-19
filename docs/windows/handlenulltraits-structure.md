@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877873"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 结构
 定义未初始化句柄的共同特征。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871827"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>创建新的自定义资源或数据资源
 可以通过以下方式来创建新的自定义资源或数据资源：在使用标准资源脚本 (.rc) 文件语法的独立文件中放置资源，然后在解决方案资源管理器中右键单击项目并单击快捷菜单上的 **资源包含** 来包含文件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876327"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>在现有菜单之间插入新菜单  

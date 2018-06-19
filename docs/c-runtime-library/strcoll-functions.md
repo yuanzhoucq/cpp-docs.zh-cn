@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418180"
 ---
 # <a name="strcoll-functions"></a>strcoll 函数
 每个 `strcoll` 和 `wcscoll` 函数根据当前使用的区域设置代码页的 `LC_COLLATE` 类别设置来比较两个字符串。 每个 `_mbscoll` 函数根据当前使用的多字节代码页比较两个字符串。 在以下情况下使用 `coll` 函数进行字符串比较：当前代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于比较很有用。 使用相应的 `cmp` 函数仅测试字符串相等性。  

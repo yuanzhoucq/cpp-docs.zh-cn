@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412327"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 自定义格式化 I/O 函数使用的输出格式。  

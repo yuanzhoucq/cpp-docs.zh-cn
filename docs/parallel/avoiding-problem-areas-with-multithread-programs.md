@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686609"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免与多线程程序有关的问题
 有几个问题可能会创建、 链接或执行多线程 C 程序中出现。 下表介绍了一些较为常见的问题。 (从 MFC 角度来看的类似讨论，请参阅[多线程处理： 编程提示](../parallel/multithreading-programming-tips.md)。)  

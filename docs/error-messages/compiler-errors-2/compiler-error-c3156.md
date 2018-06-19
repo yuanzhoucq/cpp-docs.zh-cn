@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248224"
 ---
 # <a name="compiler-error-c3156"></a>编译器错误 C3156
 “class”：不能局部定义托管或 WinRT 类型  

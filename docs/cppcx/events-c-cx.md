@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089633"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 Windows 运行时类型可声明 （即，发布） 事件，并在同一组件或其他组件的客户端代码可以订阅这些事件通过将调用的方法相关联*事件处理程序*与事件。 一个事件可以有多个事件处理程序与之关联。 当发布对象引发事件时，将调用所有事件处理程序。 这样，订阅类可在发布者引发事件时执行任何适当的自定义操作。 属于委托类型的事件可指定在所有事件处理程序订阅事件时所需的签名。  

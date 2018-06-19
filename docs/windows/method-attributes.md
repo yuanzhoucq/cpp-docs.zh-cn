@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879817"
 ---
 # <a name="method-attributes"></a>方法特性
 以下属性将应用于类、 组件类或接口中的方法。  

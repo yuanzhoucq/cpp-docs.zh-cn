@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873506"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>创建和设置参考线和边距
 无论移动控件、 添加控件，或重新排列当前布局，可帮助参考线对齐准确地在对话框中的控件。 参考线显示为蓝色虚线横跨在编辑器中和标尺 （顶部和左侧的对话框编辑器） 中的相应箭头显示的对话框。  

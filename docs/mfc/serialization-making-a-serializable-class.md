@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383411"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：定义可序列化的类
 使类可序列化所需的五个主要步骤。 下面列出了这些步骤，后续章节中对它们进行了说明：  

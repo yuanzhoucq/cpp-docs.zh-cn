@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247536"
 ---
 # <a name="compiler-error-c2843"></a>编译器错误 C2843
 “member”：不能获取托管或 WinRT 类型的非静态数据成员或方法的地址  

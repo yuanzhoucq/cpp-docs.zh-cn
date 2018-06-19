@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882055"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 预定义的符号
 MFC 项目始终包含支持 windows 的多个标头文件。 通过添加这些 #include 语句在 StdAfx.h 文件中：  

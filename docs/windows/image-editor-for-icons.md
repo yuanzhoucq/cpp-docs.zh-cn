@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879277"
 ---
 # <a name="image-editor-for-icons"></a>图标的图像编辑器
 图像编辑器具有一组丰富的图像创建和编辑工具，以及有助于创建工具栏位图的功能。 除了位图、图标和光标，你还可以使用 **“图像”** 菜单上的命令和 **“图像编辑器”** 工具栏上的工具来编辑 GIF 或 JPEG 格式的图像。  

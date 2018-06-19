@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882649"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>调整整个图像大小（图标的图像编辑器）
 ### <a name="to-resize-an-entire-image-using-the-properties-window"></a>调整整个图像使用属性窗口的大小  

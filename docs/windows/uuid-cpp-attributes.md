@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891527"
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
 指定为类或接口的唯一 ID。  

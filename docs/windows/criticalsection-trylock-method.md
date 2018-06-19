@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883947"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 方法
 尝试进入临界区而不阻止。 如果调用成功，则调用线程将获得的关键部分所有权。  

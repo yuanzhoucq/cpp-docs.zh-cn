@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878143"
 ---
 # <a name="pragma"></a>pragma
 将指定的字符串发出到生成的.idl 文件而不使用引号引起来。 .  

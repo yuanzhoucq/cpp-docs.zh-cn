@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880379"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>如何：声明钉住指针和值类型
 值类型可以隐式装箱。 然后可以声明钉住指针指向值的类型对象本身并使用**pin_ptr**为装箱的值类型。  

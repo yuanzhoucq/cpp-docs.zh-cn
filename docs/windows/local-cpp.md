@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877912"
 ---
 # <a name="local-c"></a>local (C++)
 接口标头中使用时，可以使用作为标头生成器的 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。  

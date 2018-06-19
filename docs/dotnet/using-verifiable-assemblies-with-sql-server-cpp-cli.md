@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168641"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展通过使用 Visual c + + 开发的函数的 SQL Server 功能。 扩展存储的过程实现为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义的类型](../cpp/classes-and-structs-cpp.md)和[聚合函数](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)（如 SUM 或 AVG）。  

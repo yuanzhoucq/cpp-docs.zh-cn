@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878666"
 ---
 # <a name="previewing-resources"></a>预览资源
 预览你的资源，可查看图形资源，而无需打开它们。 预览也是有用的可执行文件后你已编译它们，因为资源标识符将改为数字。 由于这些数字标识符通常不提供足够的信息，预览资源帮助你快速标识它们。  

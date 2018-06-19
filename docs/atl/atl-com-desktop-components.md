@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255988"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
 ATL 引用记录活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 要完全利用 ATL，强烈建议熟悉 COM 工作。  

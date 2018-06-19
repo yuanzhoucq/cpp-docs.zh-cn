@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877678"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可以用作标识符的 Visual c + + 关键字的使用。  

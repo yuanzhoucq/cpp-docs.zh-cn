@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195199"
 ---
 # <a name="compiler-error-c2356"></a>编译器错误 C2356
 在翻译单元期间，初始化段不得更改。  

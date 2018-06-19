@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172439"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 此模板类描述控制变长元素序列的最后一个单元中先进先出访问的对象。 使用容器适配器`stack`管理作为推堆栈的基础容器。  

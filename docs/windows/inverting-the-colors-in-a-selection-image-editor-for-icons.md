@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874075"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>反转所选内容的颜色（图标的图像编辑器）
 图像编辑器提供在图像选定部分进行反色操作的便利方法，这样一来，你就能够了解使用反色时图像将如何显示。  

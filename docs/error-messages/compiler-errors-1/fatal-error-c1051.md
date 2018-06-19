@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198243"
 ---
 # <a name="fatal-error-c1051"></a>错误 C1051
 程序数据库文件，pdbfile 具有过时的格式，将其删除并重新编译  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228588"
 ---
 # <a name="compiler-error-c2563"></a>编译器错误 C2563
 形参表中的不匹配  

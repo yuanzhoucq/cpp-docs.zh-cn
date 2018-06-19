@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159283"
 ---
 # <a name="popheap-stlclr"></a>pop_heap (STL/CLR)
 移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。  

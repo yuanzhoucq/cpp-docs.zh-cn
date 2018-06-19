@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880174"
 ---
 # <a name="partial--c-component-extensions"></a>部分（C++ 组件扩展）
 `partial`关键字允许相同的 ref 类，以编写独立地在不同的文件的不同部分。  

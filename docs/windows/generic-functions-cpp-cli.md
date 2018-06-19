@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878829"
 ---
 # <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
 泛型函数是具有类型参数声明的函数。 当调用，而不是类型参数使用实际类型。  

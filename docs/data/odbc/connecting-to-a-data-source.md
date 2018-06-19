@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088386"
 ---
 # <a name="connecting-to-a-data-source"></a>连接到数据源
 ODBC 数据源是一组特定的数据，访问该数据和数据源，可以使用数据源名称描述的位置所需的信息。 从程序的角度来看，数据源包括数据、 DBMS、 网络 （如果有） 和 ODBC。  

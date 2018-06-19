@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881700"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>打开&lt;设备&gt;图像对话框 （图标的图像编辑器）
 使用此对话框中打开设备图像。 它列出当前资源 （属于当前资源的映像） 中的现有设备图像。  

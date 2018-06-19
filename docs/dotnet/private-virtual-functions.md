@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162333"
 ---
 # <a name="private-virtual-functions"></a>私有虚函数
 在派生类中处理私有虚函数的方式已从托管扩展中的 c + + 更改为 Visual c + +。  

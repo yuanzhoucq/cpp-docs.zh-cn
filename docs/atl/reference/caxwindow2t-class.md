@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360753"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 类
 此类提供用于操作的窗口，承载 ActiveX 控件，并还具有对承载许可的 ActiveX 控件支持的方法。  

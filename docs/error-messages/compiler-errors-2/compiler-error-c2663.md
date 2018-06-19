@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235854"
 ---
 # <a name="compiler-error-c2663"></a>编译器错误 C2663
 function： 数字重载具有 this 指针的任何合法转换  

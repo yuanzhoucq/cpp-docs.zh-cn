@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359825"
 ---
 # <a name="atl-collection-classes"></a>ATL 集合类
 ATL 提供用于存储和访问数据的许多类。 你决定使用哪个类取决于多种因素，包括：  

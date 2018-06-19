@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879102"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *内部指针*声明内引用类型，但不是属于对象本身的指针。 内部指针可以指向引用句柄、值类型、装箱类型句柄、托管类型的成员或托管数组的元素。  

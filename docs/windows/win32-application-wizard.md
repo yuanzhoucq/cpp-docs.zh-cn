@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891420"
 ---
 # <a name="win32-application-wizard"></a>Win32 应用程序向导
 Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的项目（在下表中的标题列出）。 在每种情况下，你都可以指定适合于打开项目类型的其他选项。 下表指示了每个应用程序类型可用的选项。  

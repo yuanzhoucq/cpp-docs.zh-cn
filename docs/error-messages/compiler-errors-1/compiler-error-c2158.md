@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171138"
 ---
 # <a name="compiler-error-c2158"></a>编译器错误 C2158
 “type”: 目前只有本机非模板类型才支持 #pragma make_public 指令  

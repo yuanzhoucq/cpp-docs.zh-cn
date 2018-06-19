@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372095"
 ---
 # <a name="building-an-import-library-and-export-file"></a>生成导入库和导出文件
 若要生成导入库和导出文件，请使用以下语法：  

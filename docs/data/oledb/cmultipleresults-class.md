@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096215"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 类
 如果你想要处理多个结果集的命令，使用`CMultipleResults`为`CCommand`模板自变量*TMultiple*。  

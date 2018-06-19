@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136261"
 ---
 # <a name="operatorlt-multimap-stlclr"></a>运算符&lt;(multimap) (STL/CLR)
 列表小于比较。  

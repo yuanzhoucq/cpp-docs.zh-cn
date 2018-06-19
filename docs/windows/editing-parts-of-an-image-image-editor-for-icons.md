@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876847"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>编辑图像的各个部分（图标的图像编辑器）
 你可以执行标准的编辑操作-剪切、 复制、 清除和移动-上[选择](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、 所选内容是否整个图像或它的一部分。 由于图像编辑器使用 Windows 剪贴板，你可以在图像编辑器和其他 Windows 应用程序之间传输映像。  

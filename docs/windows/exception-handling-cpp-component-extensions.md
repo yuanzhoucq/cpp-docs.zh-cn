@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877730"
 ---
 # <a name="exception-handling--c-component-extensions"></a>异常处理（C++ 组件扩展）
 使用编译的应用程序 **/ZW**编译器选项或 **/clr**都使用的编译器选项*异常*来在程序执行过程中处理意外的错误。 以下主题讨论 C++/CX 或 C++/CLI 应用程序中的异常处理。  

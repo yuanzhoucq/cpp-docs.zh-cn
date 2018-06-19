@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879843"
 ---
 # <a name="how-to-copy-resources"></a>如何：复制资源
 你可以复制资源从一个文件到另一个不加更改地或者你可以[同时将它复制更改的语言或资源的条件](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097102"
 ---
 # <a name="creating-an-ole-db-provider"></a>创建 OLE DB 提供程序
 创建 OLE DB 提供程序的建议的方法是使用向导来创建 ATL COM 项目和提供程序，然后修改使用 OLE DB 模板的文件。 在自定义你的提供商，你可以注释掉不需要的属性，然后添加可选接口。  

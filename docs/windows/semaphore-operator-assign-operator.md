@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892522"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 运算符
 将指定的句柄从信号量对象移动到当前的信号量对象。  

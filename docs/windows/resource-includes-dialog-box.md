@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879667"
 ---
 # <a name="resource-includes-dialog-box"></a>“资源包括”对话框
 你可以使用**资源包括**对话框来修改环境的正常工作安排，将所有资源都存储在项目.rc 文件和所有[符号](../windows/symbols-resource-identifiers.md)Resource.h 中。  

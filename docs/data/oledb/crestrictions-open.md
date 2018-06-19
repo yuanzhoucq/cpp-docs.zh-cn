@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097427"
 ---
 # <a name="crestrictionsopen"></a>CRestrictions::Open
 返回一个结果集，根据用户提供的限制。  
