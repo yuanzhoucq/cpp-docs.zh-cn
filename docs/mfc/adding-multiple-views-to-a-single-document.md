@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344144"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>向单个文档添加多个视图
 在使用 Microsoft 基础类 (MFC) 库创建一个单文档界面 (SDI) 的应用程序的情况下，每种文档类型都与单个视图类型关联。 在某些情况下，最好切换文档与新视图的当前视图的功能。  

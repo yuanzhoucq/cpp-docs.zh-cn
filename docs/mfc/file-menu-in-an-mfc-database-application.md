@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345750"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 数据库应用程序中的文件菜单
 如何应解释打开、 关闭、 保存，和将另存为如果创建 MFC 数据库应用程序，并且不使用序列化，在文件菜单上命令尽管有此问题没有样式指南，以下是一些建议：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372252"
 ---
 # <a name="msg-structure1"></a>MSG 结构 1
 `MSG`结构包含从线程的消息队列的消息信息。  

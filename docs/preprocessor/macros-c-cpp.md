@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850178"
 ---
 # <a name="macros-cc"></a>宏 (C/C++)
 预处理展开宏中不是预处理器指令的所有行 (没有行**#** 作为第一个非空白字符) 和部分中的一部分不跳过某些指令条件编译。 利用“条件编译”指令，您可以通过测试一个常量表达式或标识符取消对源文件的某些部分的编译，以确定将哪些文本块传递给编译器以及在预处理期间将从源文件中删除哪些文本块。  

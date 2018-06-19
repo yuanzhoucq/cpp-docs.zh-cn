@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347930"
 ---
 # <a name="reading-and-writing-files"></a>读取和写入文件
 如果你已使用 C 运行时库文件处理函数，MFC 读取和写入操作将显示熟悉。 本指南介绍了从直接读取和写入直接`CFile`对象。 你可以还执行缓冲处理文件 i/o 操作[CArchive](../mfc/reference/carchive-class.md)类。  

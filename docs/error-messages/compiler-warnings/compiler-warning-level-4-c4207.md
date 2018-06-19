@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297636"
 ---
 # <a name="compiler-warning-level-4-c4207"></a>编译器警告（等级 4）C4207
 使用的非标准扩展： 扩展初始值设定项窗体  

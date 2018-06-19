@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344943"
 ---
 # <a name="file-and-database-classes"></a>文件和数据库类
 这些类使您可以将信息存储到数据库或磁盘文件。 有三组提供类似功能的数据库类：OLE DB、ODBC 和 DAO。 OLE DB 组是使用 OLE DB 实现的并可与 OLE DB 使用者模板一起使用，DAO 组是使用数据访问对象实现的，ODBC 组是使用开放式数据库连接实现的。 还有一组用来操作标准文件、活动流和 HTML 流的类。  

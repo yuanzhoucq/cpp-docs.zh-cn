@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858336"
 ---
 # <a name="aligning-groups-of-controls"></a>对齐控件组
 以下过程演示如何对齐控件组。  

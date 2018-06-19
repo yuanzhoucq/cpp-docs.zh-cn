@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344212"
 ---
 # <a name="containers-client-items"></a>容器：客户端项
 本文介绍什么是客户端项目以及您的应用程序应从哪些类派生其客户端项目。  

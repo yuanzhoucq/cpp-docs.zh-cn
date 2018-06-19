@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347836"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的对话框
 在用户运行 OLE 启用应用程序，可以在应用程序时才能执行的操作需要从用户的信息的时间。 MFC OLE 类提供了许多的对话框，以收集所需的信息。 本主题列出由 OLE 对话框的任务和显示这些对话框所需的类。 OLE 对话框和用于自定义其行为的结构的详细信息，请参阅[MFC 参考](../mfc/mfc-desktop-applications.md)。  

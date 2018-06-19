@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854647"
 ---
 # <a name="buffer-overflow"></a>缓冲区溢出
 将字符放入缓冲区时，改变字符大小可能会导致问题。 请考虑下面的代码，从字符串的字符复制， `sz`，到缓冲区中， `rgch`:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342015"
 ---
 # <a name="control-bar-classes"></a>控件条类
 控件条附加到框架窗口中。 它们包含按钮、 状态窗格或对话框模板。 自由浮动控件条，也称为工具调色板，实现通过附加到[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)对象。  

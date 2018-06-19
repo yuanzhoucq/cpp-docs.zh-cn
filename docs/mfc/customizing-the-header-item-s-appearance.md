@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342889"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>自定义标头项&#39;s 外观
 通过设置*dwStyle*参数首次创建标题控件 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create))，你可以定义的外观和行为的标头项或标头控件本身。  

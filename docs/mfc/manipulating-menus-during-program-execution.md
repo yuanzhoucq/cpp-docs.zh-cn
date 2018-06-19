@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344277"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>在程序执行过程中操作菜单
 使用类 `CMenu` 即时操作菜单和菜单项。 `CMenu` 将封装 Windows `HMENU` 句柄并提供与菜单一起使用的成员函数。  

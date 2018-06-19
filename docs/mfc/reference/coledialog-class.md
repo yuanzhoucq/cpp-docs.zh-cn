@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368655"
 ---
 # <a name="coledialog-class"></a>COleDialog 类
 提供 OLE 对话框共有的功能。  

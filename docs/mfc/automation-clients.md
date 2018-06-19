@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342486"
 ---
 # <a name="automation-clients"></a>自动化客户端
 利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便操作它们。 自动化客户端是应用程序可以操作属于另一个应用程序公开的对象。 对象公开的应用程序称为自动化服务器。 客户端操作通过访问这些对象的属性和函数的服务器应用程序的对象。  

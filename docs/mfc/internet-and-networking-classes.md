@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345086"
 ---
 # <a name="internet-and-networking-classes"></a>Internet 和网络类
 这些类使您能够与使用 Windows 套接字或 Win32 Internet (WinInet) 的其他计算机交换信息。 还有一组类用于操作 Windows 套接字。  

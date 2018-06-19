@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297084"
 ---
 # <a name="command-line-error-d8045"></a>命令行错误 D8045
 无法编译 C 文件 file 与 /clr 选项  

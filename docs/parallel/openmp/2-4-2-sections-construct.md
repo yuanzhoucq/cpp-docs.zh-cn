@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688279"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections 构造
 **部分**指令标识一个 noniterative 工作共享构造，用于指定要作为被除数线程在团队间的构造的一组。 每个部分由团队中的线程的执行一次。 语法**部分**指令是，如下所示：  

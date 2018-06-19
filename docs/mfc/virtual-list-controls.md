@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384187"
 ---
 # <a name="virtual-list-controls"></a>虚拟列表控件
 虚拟列表控件是一个列表视图控件，具有**LVS_OWNERDATA**样式。 此样式使控件能够最多支持项计数`DWORD`(默认项计数仅扩展到`int`)。 但是，此样式所提供的最大优点是能够在任何时候在内存中仅有部分数据项目。 这将允许虚拟列表视图控件，若要将自身添加为大型数据库的信息，用于访问数据的特定方法已到位。  

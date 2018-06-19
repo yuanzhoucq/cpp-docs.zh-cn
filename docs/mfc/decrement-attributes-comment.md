@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342915"
 ---
 # <a name="-attributes-comment"></a>// Attributes 注释
 MFC 类声明的 `// Attributes` 部分包含对象的公共特性（或属性）。 通常，它们是成员变量或 Get/Set 函数。 “Get”和“Set”函数可能是或可能不是虚拟的。 "Get"函数通常是**const**，因为在大多数情况下它们不具有副作用。 这些成员通常是公共的；通常可在实现部分中找到受保护的特性和私有特性。  

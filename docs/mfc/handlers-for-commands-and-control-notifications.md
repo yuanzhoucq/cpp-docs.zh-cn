@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347228"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控件通知的处理程序
 命令或控件通知消息没有默认的处理程序。 因此，您将仅受为这些消息类别命名处理程序的约定约束。 当您将命令或控件通知映射到处理程序时，“属性”窗口将基于命令 ID 或控件通知代码建议一个名称。 您可以接受建议的名称、更改或替换该名称。  

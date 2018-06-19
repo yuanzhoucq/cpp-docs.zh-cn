@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344837"
 ---
 # <a name="changing-list-control-styles"></a>更改列表控件样式
 你可以更改列表控件的窗口样式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何时间在创建之后。 通过更改窗口样式，可以更改该控件使用的视图的类型。 例如，若要模拟资源管理器，可能会提供菜单项或工具栏按钮以切换不同的视图之间的控件： 图标视图、 列表视图中，依次类推。  

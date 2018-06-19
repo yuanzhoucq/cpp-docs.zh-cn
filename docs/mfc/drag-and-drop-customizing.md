@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344238"
 ---
 # <a name="drag-and-drop-customizing"></a>拖放：自定义
 拖放功能的默认实现对大多数应用程序都够用。 但是，某些应用程序可能需要更改此标准行为。 本文说明更改这些默认设置所需的步骤。 此外，您还可以使用此方法建立不支持复合文档作为放置源的应用程序。  

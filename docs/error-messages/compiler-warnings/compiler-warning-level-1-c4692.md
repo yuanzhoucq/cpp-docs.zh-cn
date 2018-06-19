@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285650"
 ---
 # <a name="compiler-warning-level-1-c4692"></a>编译器警告（等级 1）C4692
 “function”: 非私有成员的签名包含程序集私有本机类型“native_type”  

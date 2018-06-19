@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278270"
 ---
 # <a name="compiler-warning-level-1-c4545"></a>编译器警告（等级 1）C4545
 逗号前的表达式计算为缺少自变量列表的函数  

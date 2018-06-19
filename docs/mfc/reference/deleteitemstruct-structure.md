@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370941"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 结构
 `DELETEITEMSTRUCT` 结构介绍了一个已删除的所有者描述的列表框或组合框项。  

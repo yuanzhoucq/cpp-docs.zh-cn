@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345181"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>异常：捕捉和删除异常
 下列说明和示例演示如何捕获和删除异常。 有关详细信息**重**，**捕获**，和`throw`关键字，请参阅[c + + 异常处理](../cpp/cpp-exception-handling.md)。  

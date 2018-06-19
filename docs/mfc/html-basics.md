@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347212"
 ---
 # <a name="html-basics"></a>HTML 基础
 大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 当您查看源时，将看到大量两侧是尖括号 (<>)、穿插文本的 HTML（超文本标记语言）标记。  

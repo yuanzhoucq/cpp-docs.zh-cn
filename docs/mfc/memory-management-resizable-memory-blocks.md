@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345675"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>内存管理：可调整大小的内存块
 **新**和**删除**运算符，文所述[内存管理： 示例](../mfc/memory-management-examples.md)，适用于分配和取消分配固定大小的内存块和对象。 有时，你的应用程序可能需要可调整大小的内存块。 你必须使用标准的 C 运行时库函数[malloc](../c-runtime-library/reference/malloc.md)， [realloc](../c-runtime-library/reference/realloc.md)，和[免费](../c-runtime-library/reference/free.md)来管理在堆上的可调整大小的内存块。  

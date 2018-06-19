@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347528"
 ---
 # <a name="mapi"></a>MAPI
 本文介绍面向客户端消息应用程序开发人员的 Microsoft 消息处理应用程序编程接口 (MAPI)。 MFC 提供了对类中的 MAPI 子集支持**CDocument**但不封装整个 API。 有关详细信息，请参阅[MFC 中的 MAPI 支持](../mfc/mapi-support-in-mfc.md)。  

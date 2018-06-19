@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346417"
 ---
 # <a name="connection-points"></a>连接点
 此文章介绍了如何实现连接点 （以前称为 OLE 连接点） 使用的 MFC 类`CCmdTarget`和`CConnectionPoint`。  

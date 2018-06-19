@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342168"
 ---
 # <a name="containers-client-item-states"></a>容器：客户端项状态
 此文章介绍了在其生存期内，通过传递客户端项的不同状态。  

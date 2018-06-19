@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344160"
 ---
 # <a name="-constructors-comment"></a>// Constructors 注释
 `// Constructors`的 MFC 类声明的部分用于声明构造函数 （在 c + + 的意义上），以及任何所需真正使用对象的初始化函数。 例如，`CWnd::Create`是构造函数部分中，因为你在使用之前`CWnd`对象，因此必须在"完全构造"通过首先调用 c + + 构造函数，然后再调用**创建**函数。 通常情况下，这些成员是公共的。  

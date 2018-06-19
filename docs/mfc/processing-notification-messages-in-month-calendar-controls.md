@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346908"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>处理月历控件中的通知消息
 用户月历控件 （选择日期和/或查看不同的月份），与控件进行交互 (`CMonthCalCtrl`) 将通知消息发送到其父窗口，通常是视图或对话框对象。 如果您要在响应中做些什么，请处理这些消息。 例如，当用户选择新月份查看，你可以提供一的组应强调的日期。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345005"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 控件中的当前选定内容
 用户可以选择 rich edit 控件中的文本 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 通过使用鼠标或键盘。 当前所选内容的所选的字符范围或选定的插入点，如果没有字符的位置。 应用程序可以获取有关当前所选内容的信息、 设置当前所选内容、 确定在当前选择会有所变化，以及显示或隐藏所选内容突出显示。  

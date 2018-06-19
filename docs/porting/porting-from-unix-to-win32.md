@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843283"
 ---
 # <a name="porting-from-unix-to-win32"></a>从 UNIX 到 Win32 的迁移
 将应用程序从 UNIX 迁移到 Windows 时，有以下几个选项：  

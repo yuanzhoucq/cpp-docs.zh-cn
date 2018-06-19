@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347326"
 ---
 # <a name="property-sheets-as-wizards"></a>属性表作为向导
 向导属性表的关键特征是，“下一步”或“完成”、“后退”和“取消”按钮而不是选项卡提供有导航。 你需要调用[CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode)之前调用[CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal)上要充分利用此功能的属性表对象。  

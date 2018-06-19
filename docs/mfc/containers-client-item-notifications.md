@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344619"
 ---
 # <a name="containers-client-item-notifications"></a>容器：客户端项通知
 本文讨论 MFC 框架在服务器应用程序修改客户端应用程序的文档中的项时调用的可重写函数。  

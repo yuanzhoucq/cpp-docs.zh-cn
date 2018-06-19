@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346131"
 ---
 # <a name="enabling-tool-tips"></a>启用工具提示
 您可以为窗口的子控件（如窗体视图或对话框上的控件）启用工具提示支持。  

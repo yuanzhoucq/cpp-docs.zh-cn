@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356181"
 ---
 # <a name="file-io-classes"></a>文件 I/O 类
 这些类提供传统的磁盘文件、 内存中文件、 活动流和 Windows 套接字的接口。 所有类派生自`CFile`可以与使用`CArchive`要执行序列化对象。  

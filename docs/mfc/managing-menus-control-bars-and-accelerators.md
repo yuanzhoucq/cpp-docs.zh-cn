@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345737"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>管理菜单、控件条和快捷键
 框架窗口管理对用户界面对象（包括菜单、工具栏按钮、状态栏和快捷键）的更新。 它还管理对 MDI 应用程序中的菜单栏的共享。  

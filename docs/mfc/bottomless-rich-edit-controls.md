@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343306"
 ---
 # <a name="bottomless-rich-edit-controls"></a>无界限 Rich Edit 控件
 你的应用程序可以调整 rich edit 控件的大小 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 根据需要以便它始终是相同的大小及其内容。 Rich edit 控件支持此所谓的"无界限"功能通过发送其父窗口[EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983)其内容的大小发生更改时的通知消息。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344969"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs。CReBarCtrl
 MFC 提供了两个类来创建 rebar: [CReBar](../mfc/reference/crebar-class.md)和[CReBarCtrl](../mfc/reference/crebarctrl-class.md) （其包装 Windows 公共控件 API）。 **CReBar**提供所有 rebar 公共控件的功能，和它为你处理的许多所需的常用控制设置和结构。  

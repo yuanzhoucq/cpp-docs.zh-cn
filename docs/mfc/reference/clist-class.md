@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372516"
 ---
 # <a name="clist-class"></a>CList 类
 支持可按顺序或值访问的不唯一对象的有序列表。  

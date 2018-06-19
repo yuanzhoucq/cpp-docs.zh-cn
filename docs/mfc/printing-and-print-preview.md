@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346251"
 ---
 # <a name="printing-and-print-preview"></a>打印和打印预览
 MFC 支持通过类的程序的文档打印和打印预览[CView](../mfc/reference/cview-class.md)。 针对基本打印和打印预览，只需重写视图类的[OnDraw](../mfc/reference/cview-class.md#ondraw)成员函数，你仍必须执行操作。 该函数可以绘制到在屏幕上，到实际的打印机，是打印机设备上下文的视图或，模拟您在屏幕上的打印机设备上下文。  

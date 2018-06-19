@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283388"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>编译器警告（等级 1） C4806
 “operation”：不安全的操作：提升到类型 “type” 的类型 “type” 没有值与给定的常量相等  

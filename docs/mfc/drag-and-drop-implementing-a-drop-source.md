@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345607"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>拖放：实现放置源
 此文章介绍了如何获取你的应用程序，以向拖放操作提供数据。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347917"
 ---
 # <a name="containers-advanced-features"></a>容器：高级功能
 本文介绍了将可选高级功能并入现有容器应用程序所需的步骤。 这些功能包括：  

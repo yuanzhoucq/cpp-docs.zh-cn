@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368795"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 A`CMFCReBar`对象是提供布局、 持久性和 rebar 控件的状态信息的控件条。  

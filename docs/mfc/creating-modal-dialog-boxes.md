@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342424"
 ---
 # <a name="creating-modal-dialog-boxes"></a>创建模式对话框
 若要创建模式对话框，请调用中声明的两个公共构造函数之一[CDialog](../mfc/reference/cdialog-class.md)。 接下来，调用对话框对象的[DoModal](../mfc/reference/cdialog-class.md#domodal)成员函数以显示对话框中和管理与之交互，直到用户选择确定或取消。 正是由 `DoModal` 进行的上述管理工作使得对话框成为模式对话框。 对于模式对话框，`DoModal` 将加载对话框资源。  

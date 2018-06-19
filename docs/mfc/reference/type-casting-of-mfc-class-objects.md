@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371155"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 类对象的类型强制转换
 类型强制转换宏提供一种方法将给定的指针到指向特定类，使用或不检查转换合法的对象的指针转换。  

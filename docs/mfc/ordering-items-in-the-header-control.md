@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347147"
 ---
 # <a name="ordering-items-in-the-header-control"></a>对标题控件中的项排序
 之后[项添加到标题控件](../mfc/adding-items-to-the-header-control.md)，您可以操作它们或获取有关它们的顺序使用以下函数的信息：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343603"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>框架如何调用处理程序
 以下主题首先检查框架如何传送命令，然后检查如何其他消息和控件通知将发送到 windows:  

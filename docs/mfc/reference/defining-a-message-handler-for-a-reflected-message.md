@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373164"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>为反射消息定义消息处理程序
 创建新的 MFC 控件类后，你可以为其定义消息处理程序。 反映的消息处理程序允许你的控件类来处理其自己的消息之前父接收此消息。 你可以使用 MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)函数将从控件的消息发送到父窗口。  

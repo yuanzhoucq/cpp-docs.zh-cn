@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301536"
 ---
 # <a name="command-line-warning-d9028"></a>命令行警告 D9028
 最小重新生成故障，恢复到常规的生成  

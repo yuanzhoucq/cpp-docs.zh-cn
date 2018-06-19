@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385919"
 ---
 # <a name="wininet-basics"></a>WinInet 基础知识
 你可以使用 WinInet 添加 FTP 支持，以下载并上载来自你的应用程序中的文件。 您可以重写[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)并用`dwContext`参数来搜索和下载文件，向用户提供进度信息。  

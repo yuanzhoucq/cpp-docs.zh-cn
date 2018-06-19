@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339011"
 ---
 # <a name="active-document-containers"></a>活动文档容器
 活动文档容器，如 Microsoft Office Binder 或 Internet Explorer 中，允许你使用不同的应用程序类型 （而不是强制你创建和使用多个应用程序帧每个单个范围内的多个文档文档类型）。  

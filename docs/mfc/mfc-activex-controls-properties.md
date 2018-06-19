@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347102"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控件：属性
 ActiveX 控件，将引发事件，其控件容器与进行通信。 容器，因而将使用方法和属性与控件进行通信。 方法和属性的使用和目的，类似分别是，对成员函数和 c + + 类的成员变量。 属性是对任何容器公开的数据成员的 ActiveX 控件。 属性包含 ActiveX 控件，如自动化客户端和 ActiveX 控件容器应用程序提供的接口。  

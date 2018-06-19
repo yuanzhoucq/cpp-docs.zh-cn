@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342266"
 ---
 # <a name="-operations-comment"></a>// Operations 注释
 `// Operations`的 MFC 类声明的部分包含你可以调用要使其执行操作或执行的操作 （执行操作） 的对象的成员函数。 这些函数是通常非**const**因为它们通常具有副作用。 它们可能是虚方法或非虚拟具体取决于类的需求。 通常情况下，这些成员是公共的。  

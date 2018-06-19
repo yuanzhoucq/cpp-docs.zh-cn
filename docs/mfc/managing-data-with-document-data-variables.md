@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344956"
 ---
 # <a name="managing-data-with-document-data-variables"></a>使用文档数据变量管理数据
 实现文档的数据为您的文档类的成员变量。 例如，Scribble 程序声明类型的数据成员`CObList`-存储指向的链接的列表`CObject`对象。 此列表用于存储的构成画线条图形的点数组。  

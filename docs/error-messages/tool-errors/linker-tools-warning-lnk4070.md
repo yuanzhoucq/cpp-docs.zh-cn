@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302498"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>链接器工具警告 LNK4070
 中的 /OUT:filename 指令。EXP 区别输出文件名 filename;忽略指令  

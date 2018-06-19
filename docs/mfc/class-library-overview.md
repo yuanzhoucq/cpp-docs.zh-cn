@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346895"
 ---
 # <a name="class-library-overview"></a>类库概述
 本概述分类并介绍在 Microsoft 基础类库 (MFC) 版本 9.0 的类。 MFC，集合在一起中的类构成的应用程序框架-为 Windows API 编写的应用程序的框架。 你的编程任务是特定于你的应用程序的代码中填充。  

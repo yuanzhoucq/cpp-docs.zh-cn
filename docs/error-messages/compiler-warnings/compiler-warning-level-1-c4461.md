@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278628"
 ---
 # <a name="compiler-warning-level-1-c4461"></a>编译器警告（第 1 级）C4461
 type： 此类具有终结器 finalizer 但没有析构函数 dtor  

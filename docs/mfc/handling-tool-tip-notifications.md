@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346371"
 ---
 # <a name="handling-tool-tip-notifications"></a>处理工具提示通知
 当指定`TBSTYLE_TOOLTIPS`样式，工具栏创建和管理工具提示控件。 工具提示是文本的一个小型弹出窗口，其中包含描述工具栏按钮行。 隐藏的工具提示，仅当用户将光标放在工具栏按钮上并停留约半秒钟时才显示出来。 在光标附近将显示工具提示。  

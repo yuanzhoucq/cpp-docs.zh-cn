@@ -105,6 +105,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369998"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 类
 管理位于停靠站点中同一水平或垂直行（列）的窗格的列表。  

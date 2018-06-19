@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344086"
 ---
 # <a name="creating-the-tab-control"></a>创建选项卡控件
 选项卡控件的创建方式取决于您是使用控件在对话框中还是在非对话框窗口中创建它。  

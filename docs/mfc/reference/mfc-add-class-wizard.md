@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373406"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 添加类向导
 若要向现有 MFC 项目中，添加一个类，或将类添加到支持 MFC 的 ATL 项目，请使用此代码向导。 你还可以向具有 MFC 支持的 Win32 项目中添加 MFC 类。 创建你的项目时指定的功能确定在此对话框中可用的选项。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343848"
 ---
 # <a name="exported-dll-function-entry-points"></a>导出的 DLL 函数入口点
 对于 DLL 的导出函数，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)宏来从 DLL 模块切换到调用应用程序的 DLL 时保持适当的全局状态。  

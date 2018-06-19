@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856994"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>更改放大因子（图标的图像编辑器）
 默认情况下，图像编辑器在实际大小和实际大小的 6 倍在右窗格中的视图的左窗格中显示该视图。 放大因子 （在工作区底部的状态栏中所示） 是映像的实际大小和显示的大小之间的比率。 默认因子为 6 和范围是从 1 到 10。  

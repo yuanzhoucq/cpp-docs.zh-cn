@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341184"
 ---
 # <a name="containers-user-interface-issues"></a>容器：用户界面问题
 必须将大量的功能添加到容器应用程序的用户界面来充分管理链接和嵌入的项。 这些功能涉及到的菜单结构和应用程序处理的事件的更改。 有关它们的详细信息，请参阅以下文章：  

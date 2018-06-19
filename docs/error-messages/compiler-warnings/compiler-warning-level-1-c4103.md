@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284727"
 ---
 # <a name="compiler-warning-level-1-c4103"></a>编译器警告 （等级 1） C4103
 filename： 包含标头后, 更改的对齐方式可能是由于缺少 #pragma pack(pop)  

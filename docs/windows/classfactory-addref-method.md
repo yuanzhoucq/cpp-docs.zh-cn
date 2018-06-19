@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856142"
 ---
 # <a name="classfactoryaddref-method"></a>ClassFactory::AddRef 方法
 递增当前 ClassFactory 对象的引用计数。  

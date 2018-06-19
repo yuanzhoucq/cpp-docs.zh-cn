@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342080"
 ---
 # <a name="creating-the-dialog-resource"></a>创建对话框资源
 设计[对话框](../mfc/dialog-boxes.md)和创建对话框资源，则使用[对话框编辑器](../windows/dialog-editor.md)。 在对话框编辑器中，您可以：  

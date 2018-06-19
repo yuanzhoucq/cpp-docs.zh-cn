@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345035"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>应用程序向导创建的框架窗口类
 当你使用[应用程序向导](../ide/creating-desktop-projects-by-using-application-wizards.md)创建主干应用程序，应用程序、 文档和视图类，除了应用程序向导创建应用程序的主框架窗口的派生的框架窗口类。 默认情况下，此类名为 `CMainFrame`，包含此类的文件名为 MAINFRM.H 和 MAINFRM.CPP。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346160"
 ---
 # <a name="drawing-in-a-view"></a>在视图中绘制
 在你的应用程序中的几乎所有绘制出现在视图的`OnDraw`成员函数，你必须在视图类中重写。 (例外情况是鼠标绘制中, 所述[通过视图解释用户输入](../mfc/interpreting-user-input-through-a-view.md)。)你`OnDraw`重写：  
