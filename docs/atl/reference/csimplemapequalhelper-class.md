@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361835"
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 类
 此类是帮助器[CSimpleMap](../../atl/reference/csimplemap-class.md)类。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356574"
 ---
 # <a name="cstring-semantics"></a>CString 语义
 即使[CString](../atl-mfc-shared/reference/cstringt-class.md)对象可以增长的动态对象，它们充当内置的基元类型和简单的类。 每个`CString`对象表示一个唯一值。 `CString` 对象应认为是实际的字符串，而不是指向字符串的指针。  

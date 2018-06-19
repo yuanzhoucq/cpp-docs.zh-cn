@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358920"
 ---
 # <a name="specifying-property-pages"></a>指定属性页
 在创建 ActiveX 控件时，通常想要将其与可以用来设置控件的属性的属性页关联。 控制容器使用**ISpecifyPropertyPages**接口以找出哪些属性页可以用于设置控件的属性。 你将需要对控件中实现此接口。  

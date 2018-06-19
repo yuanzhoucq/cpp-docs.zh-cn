@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363566"
 ---
 # <a name="cstringdata-class"></a>CStringData 类
 此类表示字符串对象的数据。  

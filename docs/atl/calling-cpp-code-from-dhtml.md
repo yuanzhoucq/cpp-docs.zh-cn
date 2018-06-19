@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355456"
 ---
 # <a name="calling-c-code-from-dhtml"></a>从 DHTML 调用 c + + 代码
 DHTML 控件可以承载于一个容器，例如测试容器或 Internet 资源管理器。 请参阅[使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)有关如何访问测试容器的信息。  

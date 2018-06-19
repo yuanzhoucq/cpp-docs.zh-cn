@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912974"
 ---
 # <a name="null-directive"></a>Null 指令
 Null 预处理器指令是以单个数字符号 (**#**) 行上单独。 它没有作用。  

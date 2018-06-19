@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357916"
 ---
 # <a name="using-contained-windows"></a>使用包含的窗口
 ATL 实现与包含的 windows [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)。 包含的窗口表示消息委托给容器对象而不是其自己的类中处理它们的窗口。  

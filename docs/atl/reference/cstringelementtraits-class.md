@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363980"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits 类
 此类提供了使用的存储的集合类的静态函数`CString`对象。  

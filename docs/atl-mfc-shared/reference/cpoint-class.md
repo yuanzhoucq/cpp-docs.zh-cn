@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365388"
 ---
 # <a name="cpoint-class"></a>CPoint 类
 类似于 Windows `POINT` 结构。  

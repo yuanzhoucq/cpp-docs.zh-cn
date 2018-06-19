@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362858"
 ---
 # <a name="ccomenum-class"></a>CComEnum 类
 此类定义在数组上基于 COM 枚举器对象。  

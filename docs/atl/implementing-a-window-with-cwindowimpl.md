@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356542"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>实现 CWindowImpl 的窗口
 若要实现一个窗口，从派生类`CWindowImpl`。 在派生类中，声明消息映射和消息处理程序函数。 你现在可以通过三种不同的方式使用您的类：  

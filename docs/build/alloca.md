@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360415"
 ---
 # <a name="alloca"></a>alloca
 [_alloca](../c-runtime-library/reference/alloca.md)必须是 16 字节对齐，此外需要使用帧指针。  

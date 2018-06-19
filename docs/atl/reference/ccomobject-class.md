@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361470"
 ---
 # <a name="ccomobject-class"></a>CComObject 类
 此类实现**IUnknown**非聚合对象。  

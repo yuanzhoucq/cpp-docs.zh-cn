@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358389"
 ---
 # <a name="using-a-window"></a>使用窗口
 类[CWindow](../atl/reference/cwindow-class.md)允许你使用一个窗口。 将连接到的窗口后`CWindow`对象，然后，你可以调用`CWindow`操作窗口的方法。 `CWindow` 此外包含`HWND`运算符以转换`CWindow`对象传递给`HWND`。 因此可以传递`CWindow`向需要一个窗口的句柄的任何函数对象。 您可以轻松地混用`CWindow`的方法调用和 Win32 函数调用，而不创建任何临时对象。  

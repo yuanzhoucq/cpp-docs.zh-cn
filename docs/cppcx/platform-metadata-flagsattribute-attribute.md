@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087573"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute 特性
 指示可将枚举视为位域（即一组标志）。  

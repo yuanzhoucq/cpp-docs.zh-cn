@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359657"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 类
 此自变量适配器类允许任一资源名称 ( `LPCTSTR`s) 或资源 Id ( **UINT**s) 传递到函数，而无需调用方将 ID 转换为字符串使用**MAKEINTRESOURCE**宏。  

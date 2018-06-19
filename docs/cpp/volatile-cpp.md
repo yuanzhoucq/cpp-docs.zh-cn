@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423945"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 可用于声明可在程序中由硬件修改的对象的类型限定符。  

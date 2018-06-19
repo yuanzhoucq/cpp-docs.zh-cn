@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362077"
 ---
 # <a name="windows-support-classes"></a>Windows 支持类
 下面的类提供适用于 windows 的支持：  

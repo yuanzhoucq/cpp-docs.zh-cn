@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422392"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移运算符 (&gt; &gt;和&lt; &lt;)
 按位移位运算符是右移位运算符 (>>)，移动的位*shift 表达式*到右侧，并使用左移运算符 (<<)，移动的位*shift 表达式*左侧。 <sup>1</sup>  

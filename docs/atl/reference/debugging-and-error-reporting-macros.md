@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365036"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告的宏
 这些宏提供有用的调试和跟踪功能。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`  
   
- 每个跟踪的第一部分始终会`ATL: QIThunk`。 接下来是一个值，标识特定*接口转换 （thunk）*正在使用。 接口转换 （thunk） 是用于维护引用计数，并提供此处使用的跟踪功能的对象。 在每次调用创建一个新的接口 thunk`QueryInterface`除外请求**IUnknown**接口 （在这种情况下，相同的转换 （thunk） 返回每次以符合 COM 的标识规则）。  
+ 每个跟踪的第一部分始终会`ATL: QIThunk`。 接下来是一个值，标识特定*接口转换 （thunk）* 正在使用。 接口转换 （thunk） 是用于维护引用计数，并提供此处使用的跟踪功能的对象。 在每次调用创建一个新的接口 thunk`QueryInterface`除外请求**IUnknown**接口 （在这种情况下，相同的转换 （thunk） 返回每次以符合 COM 的标识规则）。  
   
  接下来你将看到`AddRef`或**版本**，该值指示调用哪个方法。 接下来，你将看到一个标识已更改其接口引用计数的对象的值。 跟踪的值是**这**的对象的指针。  
   

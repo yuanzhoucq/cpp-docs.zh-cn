@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362347"
 ---
 # <a name="interfaces-atl-control-wizard"></a>接口，ATL 控件向导
 在向导的此页将标识该控件支持的接口。 默认情况下，受支持的接口是通常使用的大多数容器。  

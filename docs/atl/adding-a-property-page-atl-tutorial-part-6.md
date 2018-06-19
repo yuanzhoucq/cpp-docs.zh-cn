@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361585"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>添加属性页（ATL 教程，第 6 部分）
 属性页是作为单独的 COM 对象，允许它们在需要时共享实现的。 在此步骤中，您将执行以下任务以添加到控件的属性页：  

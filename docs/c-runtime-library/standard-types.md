@@ -175,6 +175,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418518"
 ---
 # <a name="standard-types"></a>标准类型
 Microsoft 运行库定义下列标准类型和 typedef。  

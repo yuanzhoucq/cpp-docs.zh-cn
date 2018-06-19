@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357064"
 ---
 # <a name="adding-an-atl-property-page"></a>添加 ATL 属性页
 若要将活动模板库 (ATL) 属性页添加到你的项目，你的项目必须已创建作为 ATL 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  

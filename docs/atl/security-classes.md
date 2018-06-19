@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362334"
 ---
 # <a name="security-classes"></a>安全类
 这些类是常见的 Win32 安全类和对象的包装。  

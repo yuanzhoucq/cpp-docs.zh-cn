@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409571"
 ---
 # <a name="basic-concepts--c"></a>基本概念 （C++）
 本部分介绍对了解 C++ 至关重要的概念。 将熟悉这些概念的许多 C 程序员但有一些细微的差异可能导致意外的程序结果。 包含以下主题：  

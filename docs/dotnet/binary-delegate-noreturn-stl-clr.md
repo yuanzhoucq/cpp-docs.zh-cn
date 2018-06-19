@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105746"
 ---
 # <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn (STL/CLR)
 Genereic 类描述两个参数委托，可返回`void`。 使用它指定根据其自变量的委托。  

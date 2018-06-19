@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421053"
 ---
 # <a name="overloading-unary-operators"></a>重载一元运算符
 可重载的一元运算符如下：  

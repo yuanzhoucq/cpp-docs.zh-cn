@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357713"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 本教程将指导你逐步完成创建用于显示多边形 ActiveX 对象的非特性化 ATL 项目。 对象包括允许用户的选项，若要更改组成的多边形和代码以刷新显示的边数。  

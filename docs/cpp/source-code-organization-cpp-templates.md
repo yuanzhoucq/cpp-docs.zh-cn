@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423111"
 ---
 # <a name="source-code-organization-c-templates"></a>源代码组织 （C++ 模板）
 

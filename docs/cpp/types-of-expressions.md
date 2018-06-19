@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422418"
 ---
 # <a name="types-of-expressions"></a>表达式的类型
 C++ 表达式分为多个类别：  

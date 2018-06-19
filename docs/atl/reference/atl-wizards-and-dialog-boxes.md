@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356668"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 向导和对话框
 活动模板库 (ATL) 向导生成各种类型的 COM 对象的样板文件代码。 你可以通过打开中的项目的快捷菜单来运行该向导**解决方案资源管理器**并选择**添加**，**类**。  

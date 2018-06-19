@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420577"
 ---
 # <a name="restrictions-on-termination-handlers"></a>对于终止处理程序的限制
 不能使用 `goto` 语句跳入 `__try` 语句块或 `__finally` 语句块。 相反，您必须通过常规控制流进入此语句块。 （但是，您可以跳出 `__try` 语句块。）此外，您不能将异常处理程序或终止处理程序嵌入 `__finally` 块。  

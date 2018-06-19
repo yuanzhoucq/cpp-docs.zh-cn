@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357540"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 类
 构造的智能指针的列表时，此类提供有用的方法。  

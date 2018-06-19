@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360108"
 ---
 # <a name="active-technology-and-dlls"></a>Active 技术和 DLL
 Active 技术使对象服务器得以在 DLL 内完全实现。 此类型的服务器称为进程内服务器。 MFC 不完全支持进程内服务器的可视化编辑的所有功能主要是因为 Active 技术不提供服务器挂钩到容器的主消息循环的方式。 MFC 需要访问容器应用程序的消息循环，以处理快捷键和空闲处理。  

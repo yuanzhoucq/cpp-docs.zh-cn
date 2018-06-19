@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357677"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>确定 DHTML 控件项目的元素
 大多数 DHTML 控件代码完全这样会为任何 ATL 控件创建。 泛型代码的一个基本的了解，工作通过[ATL 教程](../atl/active-template-library-atl-tutorial.md)，并阅读部分[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)和[ATL COM 对象的基础知识](../atl/fundamentals-of-atl-com-objects.md)。  

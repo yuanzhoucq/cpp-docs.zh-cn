@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364563"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 类
 此类窗体智能堆指针的多个类的基础。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424597"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -302,7 +303,7 @@ u32string str6{ UR"(She said "hello.")"s };
  在命名空间中定义 std:: string 文本`std::literals::string_literals`中\<字符串 > 标头文件。 因为 `std::literals::string_literals`和 `std::literals` 都声明为 [内联命名空间](../cpp/namespaces-cpp.md)，所以会自动将 `std::literals::string_literals` 视为如同它直接属于命名空间 `std`。  
   
 ### <a name="size-of-string-literals"></a>字符串文本大小  
- 对于 ANSI char\*字符串和其他单字节编码 (不 utf-8)，字符串文本的大小 （以字节为单位） 是字符数加上 1 个用于终止 null 字符。 对于所有其他字符串类型，大小不与字符数严格相关。 UTF-8 使用最多四个 char 元素对某些 *“代码单位”*进行编码，编码为 UTF-16 的 char16_t 或 wchar_t 可以使用两个元素（针对总共四个字节）对单个 *“代码单位”*进行编码。   本示例演示了宽字符串文本的大小（以字节为单位）：  
+ 对于 ANSI char\*字符串和其他单字节编码 (不 utf-8)，字符串文本的大小 （以字节为单位） 是字符数加上 1 个用于终止 null 字符。 对于所有其他字符串类型，大小不与字符数严格相关。 UTF-8 使用最多四个 char 元素对某些 *“代码单位”* 进行编码，编码为 UTF-16 的 char16_t 或 wchar_t 可以使用两个元素（针对总共四个字节）对单个 *“代码单位”* 进行编码。   本示例演示了宽字符串文本的大小（以字节为单位）：  
   
 ```cpp  
 const wchar_t* str = L"Hello!";  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357768"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 你可以使用 ATL 代码向导之一来向基于 ATL 或 MFC 项目添加对象或控件。 对于每个 COM 对象或控件添加，则向导将生成.cpp 和.h 文件，以及基于脚本的注册表支持.rgs file。 以下的 ATL 代码向导是 Visual Studio 中可用：  

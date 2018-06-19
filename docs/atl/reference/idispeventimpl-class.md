@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365629"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 类
 此类提供的实现`IDispatch`方法。  

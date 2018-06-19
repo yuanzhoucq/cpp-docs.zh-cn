@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360157"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>何时需要调用 AtlAxWinTerm？
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)注销 **"AtlAxWin80"** 窗口类。 所有现有主机窗口已销毁之后，都应 （如果不再需要创建宿主窗口） 调用此函数。 如果你不调用此函数，窗口类将自动取消注册在进程终止时。  

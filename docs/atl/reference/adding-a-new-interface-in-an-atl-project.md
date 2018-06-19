@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356740"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 项目中添加一个新接口
 将接口添加到你的对象或控件时，将在该接口创建每个方法的存根处理扩展函数。 在你的对象或控件，可以添加仅将接口当前在现有的类型库中找到。 此外，在其中添加接口的类必须实现[BEGIN_COM_MAP](com-map-macros.md#begin_com_map)宏或如果项目属性化，则它必须`coclass`属性。  

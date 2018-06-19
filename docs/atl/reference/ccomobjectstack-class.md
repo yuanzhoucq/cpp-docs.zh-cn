@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360738"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 类
 此类创建一个临时的 COM 对象，并为其提供的主干实现**IUnknown**。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360649"
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的自动化
 当你在 MFC DLL 向导中选择自动化选项时，该向导将提供你替换为以下内容：  

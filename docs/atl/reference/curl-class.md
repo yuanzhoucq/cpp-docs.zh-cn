@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366229"
 ---
 # <a name="curl-class"></a>CUrl 类
 此类表示的 URL。 它允许你操纵相互独立地 URL 的每个元素是否分析现有的 URL 字符串或生成一个从零开始的字符串。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094317"
 ---
 # <a name="cdataconnectionopennewsession"></a>CDataConnection::OpenNewSession
 打开新会话使用当前连接对象的数据源。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356503"
 ---
 # <a name="memory-management-classes"></a>内存管理类
 这些类为堆指针、 智能指针和其他内存分配例程提供支持。  

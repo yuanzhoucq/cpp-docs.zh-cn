@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422776"
 ---
 # <a name="statements-c"></a>语句 (C++)
 C++ 语句是控制操作对象的方式和顺序的程序元素。 本节包括：  

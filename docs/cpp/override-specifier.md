@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420176"
 ---
 # <a name="override-specifier"></a>override 说明符
 您可使用 `override` 关键字来指定在基类中重写虚函数的成员函数。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356248"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>承载 ActiveX 控件使用 ATL 类
 本主题中的示例演示如何创建 AXHost 以及如何承载 ActiveX 控件使用各种 ATL 函数。 它还演示如何访问控制和接收器事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 从承载的控件。 此示例承载主窗口中或在子窗口中的日历控件。  

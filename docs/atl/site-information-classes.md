@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359790"
 ---
 # <a name="site-information-classes"></a>站点信息类
 以下类允许要与其站点通信的对象：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419673"
 ---
 # <a name="main-function-restrictions"></a>main 函数限制
 几个限制适用于**主要**并不适用于任何其他 C++ 函数的函数。 **主要**函数：  

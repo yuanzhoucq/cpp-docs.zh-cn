@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424758"
 ---
 # <a name="keywords-c"></a>关键字 （C++）
 关键字是具有特殊意义的预定义保留标识符。 它们不能用作程序中的标识符。 Microsoft C++ 保留了下列关键字。 带前导下划线的名称是 Microsoft 扩展。  

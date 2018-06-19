@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361469"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 类
 此类实现**IUnknown**的非聚合的对象，但不会不构造函数中的模块锁计数的递增。  

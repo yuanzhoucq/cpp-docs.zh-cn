@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360072"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 类
 此类提供方法、 静态函数和有用的 typedef 时创建的堆指针的集合。  

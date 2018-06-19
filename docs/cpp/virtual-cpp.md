@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421791"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 `virtual` 关键字声明一个虚拟函数或一个虚拟基类。  

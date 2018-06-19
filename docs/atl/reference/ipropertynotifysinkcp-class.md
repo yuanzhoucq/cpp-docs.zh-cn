@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361621"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 类
 此类公开[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)作为可连接对象上的传出接口的接口。  

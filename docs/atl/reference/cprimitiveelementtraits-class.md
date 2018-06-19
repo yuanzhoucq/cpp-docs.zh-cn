@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359138"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 类
 此类提供默认方法并为集合类的函数组成基元数据类型。  

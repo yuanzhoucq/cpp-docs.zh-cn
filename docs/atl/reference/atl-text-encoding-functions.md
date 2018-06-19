@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366073"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文本编码函数
 这些函数支持文本编码和解码。

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419948"
 ---
 # <a name="program-termination"></a>程序终止
 在 C++ 中，可通过多种方式退出程序：  

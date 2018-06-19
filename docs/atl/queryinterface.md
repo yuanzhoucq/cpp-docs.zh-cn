@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356956"
 ---
 # <a name="queryinterface"></a>QueryInterface
 虽然有一个对象可以依据 express 它提供了静态 （它是在实例化之前） 的功能的机制，但基本的 COM 机制是使用**IUnknown**调用方法[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

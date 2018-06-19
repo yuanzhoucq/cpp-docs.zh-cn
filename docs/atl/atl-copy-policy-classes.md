@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358522"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 复制策略类
 复制策略类是[实用工具类](../atl/utility-classes.md)用于初始化，复制和删除数据。 复制策略类允许你定义复制语义的任何类型的数据，并以不同的数据类型间定义对话。  

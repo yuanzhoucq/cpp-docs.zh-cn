@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354989"
 ---
 # <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler 函数
 `CAtlServiceModuleT::Handler` 服务控制管理器 (SCM) 调用来检索服务的状态，并授予它 （例如停止或暂停） 的各种说明的例程。 SCM 将传递到操作代码`Handler`以指示服务应执行的操作。 一个默认 ATL 生成服务仅处理停止指令。 如果 SCM 通过停止指令，则服务将通知 SCM 程序即将停止。 然后，服务调用`PostThreadMessage`发布到其自身发出退出的消息。 这将终止消息循环并将最终关闭服务。  

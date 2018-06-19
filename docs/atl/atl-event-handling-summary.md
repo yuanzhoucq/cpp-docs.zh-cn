@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356516"
 ---
 # <a name="atl-event-handling-summary"></a>ATL 事件处理摘要
 通常情况下，处理 COM 事件是一个相对较简单的过程。 有三个主要步骤：  

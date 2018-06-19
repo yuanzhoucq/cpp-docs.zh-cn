@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422171"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>异常处理的计时：摘要
 无论 `__try` 语句块如何终止，都要执行终止处理程序。 原因包括跳出 `__try` 块（用于将控制权转交给块的 `longjmp` 语句外部）以及为了进行异常处理而展开堆栈。  

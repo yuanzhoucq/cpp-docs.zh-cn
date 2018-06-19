@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366102"
 ---
 # <a name="catlfile-class"></a>CAtlFile 类
 此类提供的窗口周围的瘦包装器文件处理 API。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364945"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 此向导安装 OLE DB 使用者类，该类数据绑定通过指定的 OLE DB 访问接口访问指定的数据源所需。  
@@ -59,15 +60,15 @@ ms.lasthandoff: 05/03/2018
   
      对于 SQL 数据：  
   
-    1. **选择或输入服务器名称：**单击要在网络上，显示所有已注册的数据服务器的下拉列表菜单，然后选择一个。  
+    1. **选择或输入服务器名称：** 单击要在网络上，显示所有已注册的数据服务器的下拉列表菜单，然后选择一个。  
   
-    2. **输入信息以登录到服务器：**输入用户名和密码以登录到数据服务器。  
+    2. **输入信息以登录到服务器：** 输入用户名和密码以登录到数据服务器。  
   
-    3. **选择服务器上的数据库：**单击要在数据服务器上，显示所有已注册的数据库的下拉列表菜单，然后选择一个。  
+    3. **选择服务器上的数据库：** 单击要在数据服务器上，显示所有已注册的数据库的下拉列表菜单，然后选择一个。  
   
          -或-  
   
- **将作为数据库名称的数据库文件附加：**指定要用作数据库的文件; 输入显式路径名。  
+ **将作为数据库名称的数据库文件附加：** 指定要用作数据库的文件; 输入显式路径名。  
   
         > [!NOTE]
         >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
          1. **Specify the source of data:** You can use a data source name or a connection string.  
   
- **使用数据源名称：**此下拉列表显示在您的计算机中注册的数据源。 你可以设置提前使用 ODBC 数据源管理器数据源-或-**使用连接字符串：**输入连接字符串已获取，或单击**生成**按钮;**选择数据源**对话框随即出现。 选择文件或计算机的数据源，然后单击**确定**。  
+ **使用数据源名称：** 此下拉列表显示在您的计算机中注册的数据源。 你可以设置提前使用 ODBC 数据源管理器数据源-或-**使用连接字符串：** 输入连接字符串已获取，或单击**生成**按钮;**选择数据源**对话框随即出现。 选择文件或计算机的数据源，然后单击**确定**。  
   
         > [!NOTE]
         >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
@@ -96,9 +97,9 @@ ms.lasthandoff: 05/03/2018
          4. Click **Test Connection**; if the test succeeds, click **OK**. If not, check your logon information, try another database, or try another data server.  
   
  **高级**  
- **网络设置：**指定**模拟级别**（的服务器可以使用模拟客户端时; 直接对应于 RPC 模拟级别的模拟级别） 和**保护级别**（客户端和服务器之间发送的数据的保护级别对应直接到 RPC 保护级别）。  
+ **网络设置：** 指定**模拟级别**（的服务器可以使用模拟客户端时; 直接对应于 RPC 模拟级别的模拟级别） 和**保护级别**（客户端和服务器之间发送的数据的保护级别对应直接到 RPC 保护级别）。  
   
- **其他：**中**连接超时**，指定允许发生超时之前的空闲时间的秒数。 在**访问权限**，指定有关数据连接的访问权限。  
+ **其他：** 中**连接超时**，指定允许发生超时之前的空闲时间的秒数。 在**访问权限**，指定有关数据连接的访问权限。  
   
      有关高级的初始化属性的详细信息，请参阅随每个特定的 OLE DB 提供程序提供的文档。  
   

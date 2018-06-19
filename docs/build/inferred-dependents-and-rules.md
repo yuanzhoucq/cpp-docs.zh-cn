@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368039"
 ---
 # <a name="inferred-dependents-and-rules"></a>推导出的依赖项和规则
 如果存在适用的推理规则 NMAKE 采用推断的目标的依赖项。 规则适用下列情况：  
@@ -30,9 +31,9 @@ ms.lasthandoff: 05/03/2018
   
 -   *fromext*匹配项的当前或指定的目录中存在具有目标的基名称，且文件的扩展名。  
   
--   *fromext*处于[。后缀](../build/dot-directives.md); 任何其他*fromext*在匹配规则具有更高**。后缀**优先级。  
+-   *fromext*处于[。后缀](../build/dot-directives.md); 任何其他*fromext*在匹配规则具有更高 **。后缀**优先级。  
   
--   没有显式依赖项具有更高**。后缀**优先级。  
+-   没有显式依赖项具有更高 **。后缀**优先级。  
   
  推理依赖项可能会导致意外的副作用。 如果目标的描述块包含命令，NMAKE 规则中执行这些命令而不是命令。  
   

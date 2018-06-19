@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361598"
 ---
 # <a name="service-provider-support-classes"></a>服务提供程序支持类
 下面的类为服务提供商提供支持：  

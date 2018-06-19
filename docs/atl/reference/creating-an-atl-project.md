@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358998"
 ---
 # <a name="creating-an-atl-project"></a>创建 ATL 项目
 创建 ATL 项目的最简单方法是使用 ATL 项目向导的 Win32 项目文件夹中**新建项目对话框中**。  

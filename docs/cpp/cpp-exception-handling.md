@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413903"
 ---
 # <a name="c-exception-handling"></a>C++ 异常处理
 C++ 语言为引发和捕获异常提供内置支持。 使用 C++ 编程时，你几乎总会用到本节所述的内置 C++ 异常支持。  

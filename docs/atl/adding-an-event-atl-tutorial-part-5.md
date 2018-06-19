@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361260"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>添加事件（ATL 教程，第 5 部分）
 在此步骤中，你将添加`ClickIn`和`ClickOut`ATL 控件的事件。 将激发`ClickIn`事件，如果用户单击中的多边形和火灾`ClickOut`如果用户单击之外。 要添加一个事件的任务如下所示：  

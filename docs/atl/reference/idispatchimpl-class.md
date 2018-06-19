@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364361"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 类
 提供的默认实现`IDispatch`双重接口的一部分。  

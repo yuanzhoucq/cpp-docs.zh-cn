@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412525"
 ---
 # <a name="exit-function"></a>exit 函数
 **退出**在标准包含文件中声明的函数\<stdlib.h >，将终止 C++ 程序。  

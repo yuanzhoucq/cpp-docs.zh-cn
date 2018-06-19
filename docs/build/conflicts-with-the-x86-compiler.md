@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366908"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>与 x86 编译器冲突
 数据类型都大于 4 个字节不自动对齐在堆栈上时使用 x86 编译器进行编译应用程序。 因为编译器为 4 字节对齐的堆栈，任何大于 4 个字节，例如，64 位整数，不能自动对齐到 8 字节地址 x86 的体系结构。  

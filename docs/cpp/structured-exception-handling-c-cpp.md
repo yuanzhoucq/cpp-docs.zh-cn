@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424265"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 尽管 Windows 和 Visual C++ 支持结构化异常处理 (SEH)，我们还是建议你使用 ISO 标准 C++ 异常处理，因为它使代码具有更好的可移植性并更灵活。 然而，在现有代码中或者对于特定类型的程序，你仍可能必须使用 SEH。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357240"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG**是 Windows NT 4.0 实用工具，可以在注册表中配置各种特定于 DCOM 的设置。 **DCOMCNFG**窗口有三个页： 默认安全性、 默认属性和应用程序。 在 Windows 2000 下第四个页上，默认协议，不存在。  

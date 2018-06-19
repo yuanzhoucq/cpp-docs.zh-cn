@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366856"
 ---
 # <a name="calling-convention"></a>调用约定
 本部分描述了一个函数 （调用方） 进行的过程调用另一个函数 （被调用方）。  

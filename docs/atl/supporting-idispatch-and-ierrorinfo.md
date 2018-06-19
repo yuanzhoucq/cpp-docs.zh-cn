@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360944"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>支持 IDispatch 和 IErrorInfo
 你可以使用此模板类[IDispatchImpl](../atl/reference/idispatchimpl-class.md)提供的默认实现`IDispatch Interface`上你的对象的任何双重接口的一部分。  

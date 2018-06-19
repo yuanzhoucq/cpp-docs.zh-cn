@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363964"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 简单对象向导
 此向导将最小的 COM 对象插入到项目中。 向导的此页用于指定标识的 c + + 类和你的对象和其 COM 功能文件的名称。  

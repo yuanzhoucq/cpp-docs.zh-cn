@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360170"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 类
 此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)通过委派给所有者对象的**IUnknown**。  

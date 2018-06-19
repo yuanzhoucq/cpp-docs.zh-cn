@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364877"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 这些函数提供有用的调试和跟踪功能。  

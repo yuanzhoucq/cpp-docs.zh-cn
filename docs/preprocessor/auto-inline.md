@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954016"
 ---
 # <a name="autoinline"></a>auto_inline
 排除范围内定义的所有函数其中**关闭**指定从考虑为自动内联扩展的候选项。  

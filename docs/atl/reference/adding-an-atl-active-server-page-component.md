@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356461"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>添加 ATL Active Server Page 组件
 若要将活动模板库 (ATL) 对象添加到你的项目，你的项目必须已创建作为 ATL COM 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)若要创建 ATL 应用程序，你可以选择**向 MFC 添加 ATL 支持**从[添加类对话框](../../ide/add-class-dialog-box.md)对话框中，或者你可以[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  

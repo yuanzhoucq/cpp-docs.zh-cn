@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357501"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 类
 此类是安全特性结构的瘦包装器。  

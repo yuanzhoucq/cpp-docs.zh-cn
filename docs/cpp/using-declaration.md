@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424465"
 ---
 # <a name="using-declaration"></a>using 声明
 使用声明将名称引入在其中的声明性区域 using 声明出现。  

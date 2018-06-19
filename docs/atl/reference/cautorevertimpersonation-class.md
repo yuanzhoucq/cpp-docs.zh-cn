@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359502"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 类
 此类将恢复[CAccessToken](../../atl/reference/caccesstoken-class.md) nonimpersonating 状态时超出范围的对象。  

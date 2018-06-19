@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356727"
 ---
 # <a name="implementing-a-dual-interface"></a>实现双重接口
 你可以实现双重接口使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)类，该类提供的默认实现`IDispatch`双重接口中的方法。 有关更多信息，请参见 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  

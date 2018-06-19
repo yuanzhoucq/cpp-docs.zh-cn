@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357839"
 ---
 # <a name="using-a-template-library"></a>使用模板库
 模板是有些类似宏。 与使用宏，一样调用模板后，即可展开 （使用适当的参数替换） 到你编写的代码。 但是，模板比这更进一步，允许基于作为参数传递的类型的新类创建。 这些新的类实现执行该操作在模板代码中表示的类型安全方式。  

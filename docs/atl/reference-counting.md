@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358243"
 ---
 # <a name="reference-counting"></a>引用计数
 COM 本身不会自动尝试从内存中移除一个对象，当它认为不再使用对象。 相反，该对象的程序员必须删除未使用的对象。 程序员确定是否可以移除一个对象基于引用计数。  

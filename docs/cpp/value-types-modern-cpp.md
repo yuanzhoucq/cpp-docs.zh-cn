@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423413"
 ---
 # <a name="value-types-modern-c"></a>值类型（现代 C++）
 C++ 类是由默认值类型。 本主题提供介绍性概述的值类型和与其使用相关的问题。  

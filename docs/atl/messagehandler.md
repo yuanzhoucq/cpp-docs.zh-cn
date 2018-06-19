@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356362"
 ---
 # <a name="messagehandler"></a>消息处理程序
 **消息处理程序**是标识的第二个参数的函数的名称`MESSAGE_HANDLER`消息映射中的宏。  

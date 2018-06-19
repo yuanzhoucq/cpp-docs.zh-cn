@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363426"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 类
 此类实现**IUnknown**和允许将其属性保存到客户端提供的属性包对象。  

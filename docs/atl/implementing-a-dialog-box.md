@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355847"
 ---
 # <a name="implementing-a-dialog-box"></a>实现一个对话框
 有两种方法将添加到你的 ATL 项目对话框中： 使用 ATL 对话框向导或手动添加它。  

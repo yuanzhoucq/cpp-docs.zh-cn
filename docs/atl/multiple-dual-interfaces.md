@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356714"
 ---
 # <a name="multiple-dual-interfaces"></a>多个双重接口
 你可能想要将双重接口 （即，vtable 和后期绑定，因此使类可用于脚本语言，以及 c + + 的灵活性） 优点结合起来使用多重继承的技术。  

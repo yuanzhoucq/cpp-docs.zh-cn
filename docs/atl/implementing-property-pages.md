@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357488"
 ---
 # <a name="implementing-property-pages"></a>实现的属性页
 属性页是 COM 对象实现`IPropertyPage`或**IPropertyPage2**接口。 ATL 为实现通过属性页提供支持[ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)中[添加类对话框](../ide/add-class-dialog-box.md)。  

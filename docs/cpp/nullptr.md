@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419638"
 ---
 # <a name="nullptr"></a>nullptr
 指定 `std::nullptr_t` 类型的 null 指针常量，该类型可转换为任何原始指针类型。  尽管您可以使用关键字 `nullptr` 而不包含任何标头，但如果您的代码使用类型 `std::nullptr_t`，则您必须通过包含标头 `<cstddef>` 来定义该类型。  

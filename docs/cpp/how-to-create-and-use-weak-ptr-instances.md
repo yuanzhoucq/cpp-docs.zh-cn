@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415140"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：创建和使用共享 weak_ptr 实例
 有时对象必须存储用于访问的基础对象的方法`shared_ptr`而不会导致要递增的引用计数。 当之间的循环引用时，通常情况下，出现这种情况`shared_ptr`实例。  

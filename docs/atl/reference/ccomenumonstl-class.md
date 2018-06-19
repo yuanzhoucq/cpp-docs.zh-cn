@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363293"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 此类定义一个基于 c + + 标准库集合的 COM 枚举器对象。  

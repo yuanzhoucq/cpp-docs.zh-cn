@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357195"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 共享类
 可以在任何本机 c + + 项目中使用这些实用程序类，而无需任何 MFC DLL。  

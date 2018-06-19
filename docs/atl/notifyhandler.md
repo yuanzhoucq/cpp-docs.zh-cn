@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356448"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 标识的第三个参数的函数的名称`NOTIFY_HANDLER`消息映射中的宏。  

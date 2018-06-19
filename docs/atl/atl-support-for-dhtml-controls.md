@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355517"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL 支持 DHTML 控件
 使用 ATL，可以在动态 HTML (DHTML) 功能中创建的控件。 ATL DHTML 控件：  

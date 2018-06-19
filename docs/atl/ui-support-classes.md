@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360281"
 ---
 # <a name="ui-support-classes"></a>支持的 UI 类
 下面的类提供常规的 UI 支持：  

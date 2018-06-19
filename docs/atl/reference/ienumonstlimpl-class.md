@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365251"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
 此类定义一个基于 c + + 标准库集合的枚举器接口。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363079"
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 类
 使用此类的自变量作为`MonitorClass`如果你想要禁用动态缓存维护缓存类模板参数。  

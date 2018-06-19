@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357272"
 ---
 # <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start 函数
 当运行时服务时， **_tWinMain**调用**CAtlServiceModuleT::WinMain**，从而又会调用`CAtlServiceModuleT::Start`。  

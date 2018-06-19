@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355015"
 ---
 # <a name="creating-an-aggregated-object"></a>创建聚合的对象
 聚合委托**IUnknown**调用，提供指向外部对象的指针**IUnknown**内部对象。  

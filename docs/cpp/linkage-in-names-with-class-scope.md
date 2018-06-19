@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418967"
 ---
 # <a name="linkage-in-names-with-class-scope"></a>具有类范围的名称中的链接
 下列链接规则将应用于具有类范围的名称：  

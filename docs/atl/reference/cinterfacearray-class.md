@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359457"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 类
 构造的 COM 接口指针的数组时，此类提供有用的方法。  

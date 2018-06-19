@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364903"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 类
 此类实现**IUnknown**和允许客户端访问的对象的属性页中的信息。  

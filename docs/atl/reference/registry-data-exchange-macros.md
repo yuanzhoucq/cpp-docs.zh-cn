@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363053"
 ---
 # <a name="registry-data-exchange-macros"></a>注册表数据 Exchange 宏
 这些宏执行注册表数据交换操作。  

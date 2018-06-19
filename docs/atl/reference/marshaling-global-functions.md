@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362822"
 ---
 # <a name="marshaling-global-functions"></a>封送处理的全局函数
 这些函数提供有关封送处理和封送数据转换为接口指针的支持。  

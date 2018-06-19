@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414671"
 ---
 # <a name="expressions-with-binary-operators"></a>使用二元运算符的表达式
 二元运算符在表达式中操作两个操作数。 二元运算符为：  

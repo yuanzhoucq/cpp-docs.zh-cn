@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357810"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>实现的自定义字符串管理器 （高级方法）
 在特殊情况下，你可能想要实现自定义字符串管理器以外的其他更改使用的堆分配内存。 在此情况下，你必须手动实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)作为自定义字符串经理的接口。  

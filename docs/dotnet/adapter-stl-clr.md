@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104511"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR 标头`<cliext/adapter>`指定两个模板类 (`collection_adapter`和`range_adapter`)，该模板函数`make_collection`。  

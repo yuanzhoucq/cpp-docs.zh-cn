@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357852"
 ---
 # <a name="programming-with-ccombstr-atl"></a>使用 CComBSTR 进行编程 (ATL)
 ATL 类[CComBSTR](../atl/reference/ccombstr-class.md)提供的包装`BSTR`数据类型。 虽然`CComBSTR`是有用的工具，需要注意的几种情况。  

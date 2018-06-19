@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360983"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 类
 此类提供方法通知控件属性更改有关的容器的接收器。  

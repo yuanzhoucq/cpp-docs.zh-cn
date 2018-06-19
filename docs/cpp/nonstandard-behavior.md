@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420290"
 ---
 # <a name="nonstandard-behavior"></a>非标准行为
 以下几节将列出 C++ 的 Visual C++ 实现不遵循 C++ 标准的几处地方。 下面给出的节号引用了 C++ 11 标准 (ISO/IEC 14882:2011(E)) 中的节号。  

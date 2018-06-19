@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421310"
 ---
 # <a name="variantt-operators"></a>_variant_t 运算符
 璝惠 **_variant_t**运算符，请参阅[_variant_t 类](../cpp/variant-t-class.md)。  

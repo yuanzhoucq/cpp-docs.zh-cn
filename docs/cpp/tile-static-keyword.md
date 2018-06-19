@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422158"
 ---
 # <a name="tilestatic-keyword"></a>tile_static 关键字
 `tile_static` 关键字用于声明可由线程平铺中的所有线程访问的变量。 此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。 使用磁贴的详细信息，请参阅[使用磁贴](../parallel/amp/using-tiles.md)。  

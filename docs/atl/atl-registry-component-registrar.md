@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354895"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 注册表组件（注册器）
 ATL 注册器提供对系统注册表通过自定义接口的优化的访问。 注册机构是自由线程，并且允许静态链接的代码的 c + + 客户端。  

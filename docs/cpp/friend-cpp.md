@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418258"
 ---
 # <a name="friend-c"></a>友元 (C++)
 在某些情况下，它会更方便，以授予成员级别的访问的不是类的成员的函数或单独类中的所有成员。 仅类实现器可以声明其友元。 函数或类不能将其自身声明为任何类的友元。 在类定义中，使用`friend`关键字和非成员函数或其他类，以允许其访问你的类的私有和受保护成员的名称。         在模板定义中，类型参数可以声明为友元。  

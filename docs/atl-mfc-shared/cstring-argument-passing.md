@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356825"
 ---
 # <a name="cstring-argument-passing"></a>CString 自变量传递
 此文章介绍了如何将传递[CString](../atl-mfc-shared/reference/cstringt-class.md)对象序列化为函数和如何返回`CString`从函数的对象。  

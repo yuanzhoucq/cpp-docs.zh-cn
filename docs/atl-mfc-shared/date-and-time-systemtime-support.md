@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355395"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和时间： SYSTEMTIME 支持
 [CTime](../atl-mfc-shared/reference/ctime-class.md)类具有构造函数接受从 Win32 的系统和文件时间。 如果你将 `CTime` 对象用于这些目的，你必须相应地修改它们的初始化，如本文所述。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416192"
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 
@@ -40,7 +41,7 @@ void Foo(int);
 
 - `[[carries_dependency]]` 指定该函数将传播排序方面线程同步的数据依赖项。 特性可以应用于一个或多个参数，以指定传入的参数传送到函数体的依赖项。 特性可以应用于该函数本身，以指定返回的值会带来跳出函数依赖关系。 编译器可以使用此信息来生成更高效的代码。
 
-- `[[deprecated]]` **Visual Studio 2015 及更高版本：**指定函数并非旨在使用，并且可能不存在在将来版本的库接口。 编译器可以使用此客户端代码尝试调用函数时生成一条信息性消息。 可以应用于声明的类、 typedef 名称、 变量、 非静态数据成员、 函数、 命名空间、 枚举、 枚举数或模板专用化。  
+- `[[deprecated]]` **Visual Studio 2015 及更高版本：** 指定函数并非旨在使用，并且可能不存在在将来版本的库接口。 编译器可以使用此客户端代码尝试调用函数时生成一条信息性消息。 可以应用于声明的类、 typedef 名称、 变量、 非静态数据成员、 函数、 命名空间、 枚举、 枚举数或模板专用化。  
 
 - `[[fallthrough]]`**2017年及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`的上下文中可以使用属性[切换](switch-statement-cpp.md)语句作为对的提示编译器 （或任何人阅读代码） 是旨在 fallthrough 行为。 Visual C++ 编译器当前不会警告 fallthrough 行为，因此此特性没有任何效果编译器行为。
 

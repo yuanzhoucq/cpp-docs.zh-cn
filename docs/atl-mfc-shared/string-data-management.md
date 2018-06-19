@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361231"
 ---
 # <a name="string-data-management"></a>字符串数据管理
 Visual c + + 提供多种方式来管理字符串数据：  

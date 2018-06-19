@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356134"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP，ATL Active Server Page 组件向导
 使用 ATL Active Server Page 组件向导的此页指定用于处理信息和状态与 ASP 组件相关的可选设置。  

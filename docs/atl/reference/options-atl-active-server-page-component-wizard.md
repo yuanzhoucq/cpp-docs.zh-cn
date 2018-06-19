@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364535"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>选项，ATL Active Server Page 组件向导
 使用 ATL Active Server Page 组件向导的此页为提高的效率和对象的错误支持设计。  

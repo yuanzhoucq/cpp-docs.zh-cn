@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094216"
 ---
 # <a name="cdataconnectionopen"></a>CDataConnection::Open
 打开使用初始化字符串的数据源的连接。  

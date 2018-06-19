@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419776"
 ---
 # <a name="linkage-in-names-with-file-scope"></a>具有文件范围的名称中的链接
 以下链接规则适用于带文件范围的名称（`typedef` 和枚举器名称除外）：  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360682"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits 类
 此类提供与集合类对象中存储的字符串相关的静态函数。 字符串对象以引用的方式处理的。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359125"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 组件向导
 此向导将 Active Server Pages (ASP) 组件插入到项目中。 Microsoft Internet 信息服务 (IIS) 使用 ASP 组件作为其增强的网页开发体系结构的一部分。  

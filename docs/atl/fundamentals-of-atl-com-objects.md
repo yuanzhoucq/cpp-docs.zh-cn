@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358285"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 对象的基础知识
 下图描绘了的类和接口，用于定义 ATL COM 对象之间的关系。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355488"
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 管理单元类
 下面的类为开发 Microsoft 管理控制台 (MMC) 管理单元组件提供支持：  

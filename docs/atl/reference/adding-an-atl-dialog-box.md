@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361520"
 ---
 # <a name="adding-an-atl-dialog-box"></a>添加一个 ATL 对话框
 要向你的项目添加 ATL 对话框，你的项目必须包括 ATL 支持的 MFC 项目或者 ATL 项目中。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  

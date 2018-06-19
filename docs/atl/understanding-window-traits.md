@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362363"
 ---
 # <a name="understanding-window-traits"></a>了解窗口特性
 窗口特性类提供标准化用于创建 ATL 窗口对象的样式的简单方法。 窗口特征接受作为模板参数[CWindowImpl](../atl/reference/cwindowimpl-class.md)和其他 ATL 窗口类作为一种方法提供默认在类级别的窗口样式。  

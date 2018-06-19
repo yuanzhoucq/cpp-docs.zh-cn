@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418193"
 ---
 # <a name="scanf-width-specification"></a>scanf 宽度规范
 此信息适用于解释 `scanf` 系列函数中的格式字符串，包括 `scanf_s` 等安全版本。 这些函数通常假定将输入流划分为标记序列。 标记通过空白字符（空格、制表符或换行）进行分隔，或者在数值类型的情况下，按无法转换为数值文本的第一个字符所示由数值数据类型的自然末尾进行分隔。 然而，宽度规范可能用于在标记的自然末尾之前停止输入分析。  

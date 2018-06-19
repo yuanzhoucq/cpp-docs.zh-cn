@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420832"
 ---
 # <a name="startup-and-termination-c"></a>启动和终止 (C++)
 使用两个函数来推动程序启动和终止：[主要](../cpp/main-program-startup.md)和[退出](../cpp/program-termination.md)。 可以执行其他启动和终止代码。  

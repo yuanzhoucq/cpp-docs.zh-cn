@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356613"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 类
 此类实现的线程放入池中，单元模型 COM 服务器。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355002"
 ---
 # <a name="properties-and-property-pages-classes"></a>属性和属性页类
 以下类支持属性和属性页：  

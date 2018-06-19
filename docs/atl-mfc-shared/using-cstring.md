@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361696"
 ---
 # <a name="using-cstring"></a>使用 CString
 本部分中的主题介绍如何使用 `CString` 进行编程。 有关参考文档`CString`类，请参阅的文档[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  

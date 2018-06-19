@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418034"
 ---
 # <a name="decltype--c"></a>decltype （C++）
 `decltype` 类型说明符生成指定表达式的类型。 `decltype`连同类型说明符， [auto 关键字](../cpp/auto-cpp.md)，主要对编写模板库的开发人员很有用。 使用 `auto` 和 `decltype` 声明其返回类型取决于其模板参数类型的模板函数。 或者，使用 `auto` 和 `decltype` 声明包装对其他函数的调用，然后返回包装函数的返回类型的模板函数。  

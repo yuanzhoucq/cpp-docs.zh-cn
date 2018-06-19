@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355786"
 ---
 # <a name="adding-an-atl-com-10-component"></a>添加 ATL COM + 1.0 组件
 此向导将对象添加到你支持 COM + 1.0 服务，包括事务的项目。  

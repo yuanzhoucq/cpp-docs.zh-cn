@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102903"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  

@@ -69,6 +69,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366310"
 ---
 # <a name="cimage-class"></a>CImage 类
 `CImage` 提供增强的位图支持，包括用于加载和采用 JPEG、 GIF、 BMP 和可移植网络图形 (PNG) 格式保存映像的功能。  

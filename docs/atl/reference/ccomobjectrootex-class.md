@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365976"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 此类提供方法以处理对象的非聚合和聚合对象的引用计数管理。  

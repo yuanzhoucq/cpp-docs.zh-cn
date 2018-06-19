@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417270"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：异常和非异常代码之间的接口
 本文介绍如何在 C++ 模块中实现一致的异常处理，以及如何在异常边界将异常和错误代码进行互相转换。  

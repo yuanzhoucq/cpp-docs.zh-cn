@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366596"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 用于创建对话框框中，以及用于创建、 承载和授权 ActiveX 控件，则这些函数提供支持。  

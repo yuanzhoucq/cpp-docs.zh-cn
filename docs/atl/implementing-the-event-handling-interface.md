@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356303"
 ---
 # <a name="implementing-the-event-handling-interface"></a>实现的事件处理接口
 ATL 可帮助你具有所需的处理事件的所有三个元素： 实现事件接口、 通知事件源和取消通知事件源。 你将需要采取的精确步骤取决于事件接口和你的应用程序的性能要求的类型。  

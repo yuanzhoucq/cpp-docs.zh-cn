@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355821"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL 和自由线程封送拆收器
 ATL 简单对象向导的属性页提供了一个允许你的类以聚合自由线程封送处理程序 (FTM) 的选项。  

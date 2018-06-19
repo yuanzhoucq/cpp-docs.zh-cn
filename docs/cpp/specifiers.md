@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422321"
 ---
 # <a name="specifiers"></a>说明符
 本主题介绍*声明说明符*（声明说明符） 组件[声明](declarations-and-definitions-cpp.md)。  

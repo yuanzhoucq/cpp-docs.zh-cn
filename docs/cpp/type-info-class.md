@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422431"
 ---
 # <a name="typeinfo-class"></a>type_info 类
 **Type_info**类描述编译器在程序中生成的类型信息。 此类的对象可以有效存储指向类型的名称的指针。 **Type_info**类还可存储适合比较是否相等的两个类型或比较其排列顺序的编码的值。 类型的编码规则和排列顺序是未指定的，并且可能因程序而异。  

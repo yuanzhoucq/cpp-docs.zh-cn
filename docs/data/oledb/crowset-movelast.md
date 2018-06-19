@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096387"
 ---
 # <a name="crowsetmovelast"></a>CRowset::MoveLast
 将光标移到的最后一行。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356930"
 ---
 # <a name="adding-an-atl-control"></a>添加 ATL 控件
 使用此向导将一个用户界面对象添加到所有潜在容器支持接口的项目。 若要支持这些接口，该项目必须已创建作为 ATL 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  

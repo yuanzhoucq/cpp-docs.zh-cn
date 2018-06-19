@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360327"
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 类
 此类实现**IUnknown**和[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)接口方法。  

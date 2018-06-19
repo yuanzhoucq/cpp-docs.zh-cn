@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356773"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 A`collection`是提供一个允许对一组数据项 （原始数据或其他对象） 的访问接口的 COM 对象。 一个接口，用于提供对一组对象的访问被称为遵循标准*集合接口*。  

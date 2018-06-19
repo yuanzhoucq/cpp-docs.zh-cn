@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092553"
 ---
 # <a name="quick-reference-ccx"></a>快速参考 (C++/CX)
 Windows 运行时支持，只在可信操作系统环境中执行的使用授权的函数、 数据类型和设备，以及通过 Microsoft 应用商店分布的通用 Windows 平台 (UWP) 应用程序。 C + + /cli CX 简化对 Windows 运行时编写应用程序。 本文仅作为快速参考;有关更完整的文档，请参阅[类型系统](../cppcx/type-system-c-cx.md)和[运行时平台的组件扩展](http://go.microsoft.com/fwlink/p/?linkid=228720)。  

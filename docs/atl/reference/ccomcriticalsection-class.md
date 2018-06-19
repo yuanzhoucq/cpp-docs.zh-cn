@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359900"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 类
 此类提供用于获取和释放的关键部分对象所有权的方法。  
@@ -80,7 +81,7 @@ CComCriticalSection() throw();
 ```  
   
 ### <a name="remarks"></a>备注  
- 集[m_sec](#m_sec)为 NULL 的数据成员**。**  
+ 集[m_sec](#m_sec)为 NULL 的数据成员 **。**  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
  调用 Win32 函数[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，其中初始化中包含的关键部分对象[m_sec](#m_sec)数据成员。  

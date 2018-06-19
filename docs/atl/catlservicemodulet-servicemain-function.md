@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355569"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain 函数
 服务控制管理器 (SCM) 调用`ServiceMain`当打开服务控制面板应用程序，请选择该服务，然后单击**启动**。  

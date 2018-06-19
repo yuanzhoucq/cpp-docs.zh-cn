@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355234"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>更改默认类工厂和聚合模型
 使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md)来定义你的对象的默认类工厂和聚合模型。 `CComCoClass` 指定以下两个宏：  

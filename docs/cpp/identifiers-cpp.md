@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415402"
 ---
 # <a name="identifiers-c"></a>标识符 （C++）
 标识符是用于表示以下内容之一的字符序列：  

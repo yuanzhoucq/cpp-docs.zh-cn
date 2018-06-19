@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358047"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 类
 此类为 ATL 窗口化组件提供支持。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357253"
 ---
 # <a name="message-maps-atl"></a>消息映射 (ATL)
 消息映射将与特定的消息、 命令或通知关联的处理程序函数。 使用 ATL 的[消息映射宏](../atl/reference/message-map-macros-atl.md)，你可以指定一个窗口消息映射。 中的窗口过程`CWindowImpl`， `CDialogImpl`，和`CContainedWindowT`窗口将消息定向到其消息映射。  

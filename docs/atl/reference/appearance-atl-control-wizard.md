@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358597"
 ---
 # <a name="appearance-atl-control-wizard"></a>外观，ATL 控件向导
 在此处插入摘要的"搜索结果"。  

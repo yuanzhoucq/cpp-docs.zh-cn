@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414582"
 ---
 # <a name="expressions-c"></a>表达式 (C++)
 本节描述 C++ 表达式。 表达式是用于实现以下一个或多个目的而使用的运算符和操作数的序列：  

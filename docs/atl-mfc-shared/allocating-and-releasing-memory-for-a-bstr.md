@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358320"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>为 BSTR 分配和释放内存
 当你创建`BSTR`s 并将它们传递之间 COM 对象，你必须在将它们使用，以避免内存泄漏的内存一定要小心。 当`BSTR`保持接口中的，你必须释放其内存是完成。 但是，当`BSTR`通过接口外的，接收对象负责其内存管理。  

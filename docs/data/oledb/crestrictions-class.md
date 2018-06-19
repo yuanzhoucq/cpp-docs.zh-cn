@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098480"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 泛型类，您可以指定架构行集的限制。  

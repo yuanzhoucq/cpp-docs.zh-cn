@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359670"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>实现 c + + 标准库基于集合
 ATL 提供`ICollectionOnSTLImpl`使您能够快速在你的对象上实施基于 c + + 标准库的集合接口的接口。 若要了解此类的工作原理，您将使用通过简单的示例 （见下面），使用此类实现旨在自动化客户端的只读集合。  

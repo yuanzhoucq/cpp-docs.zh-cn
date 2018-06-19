@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421062"
 ---
 # <a name="static-members-c"></a>静态成员 (C++)
 类可以包含静态成员数据和成员函数。 当数据成员声明为**静态**，只有一个数据副本维护类的所有对象。

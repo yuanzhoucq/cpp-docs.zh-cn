@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360931"
 ---
 # <a name="atl-operators"></a>ATL 运算符
 本部分包含有关 ATL 全局运算符的参考主题。  
