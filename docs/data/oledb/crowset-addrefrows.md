@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096647"
 ---
 # <a name="crowsetaddrefrows"></a>CRowset::AddRefRows
 调用[irowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx)以增加 （1) 的引用计数与当前行句柄。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114729"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>用架构行集合获取元数据
 有时需要不必打开行集合即可获得有关提供程序、行集合、表、列或其他数据库信息的信息。 有关数据库结构的数据被称为元数据，可以通过多种不同的方法来检索元数据。 一种方法是使用架构行集合。  

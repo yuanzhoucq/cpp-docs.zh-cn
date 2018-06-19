@@ -101,6 +101,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098701"
 ---
 # <a name="cindexes-cindexinfo"></a>CIndexes，CIndexInfo
 调用 typedef 类**CIndexes**来实现其参数类**CIndexInfo**。  

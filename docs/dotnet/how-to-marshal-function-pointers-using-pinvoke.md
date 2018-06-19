@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132172"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送函数指针
 本主题说明如何将托管的委托时与进行互操作非托管函数使用.NET Framework P/Invoke 功能可用于代替函数指针。 但是，Visual c + + 程序员是建议 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈实现的。 如果非托管的 API 打包为的 DLL 的源代码不可用，P/Invoke 是唯一的选项。 否则，请参阅以下主题：  

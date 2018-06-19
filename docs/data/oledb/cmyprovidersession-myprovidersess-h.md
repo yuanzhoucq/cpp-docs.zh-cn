@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096530"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H 包含的声明和实现 OLE DB 会话对象。 数据源对象创建会话对象，表示使用者和提供程序之间的对话。 多个同时会话可以打开一个数据源。 继承列表`CMyProviderSession`遵循：  

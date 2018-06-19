@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087811"
 ---
 # <a name="access-to-odbc-and-sql"></a>访问 ODBC 和 SQL
 Microsoft 基础类库封装许多 Windows API 调用，并仍可在直接调用任何 Windows API 函数。 数据库类为你提供了相同的灵活性方面 ODBC API。 尽管数据库类可使您减少了 ODBC 的复杂性，你可以直接从任何位置调用 ODBC API 函数在程序中。  

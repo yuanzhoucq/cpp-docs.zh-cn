@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129146"
 ---
 # <a name="inplacemerge-stlclr"></a>inplace_merge (STL/CLR)
 将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。  

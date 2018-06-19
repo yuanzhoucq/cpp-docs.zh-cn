@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099727"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>为提供程序启用或禁用服务
 可以启用或禁用默认情况下的所有应用程序访问的单个提供单独的 OLE DB 服务。 这可通过添加**OLEDB_SERVICES**下提供程序的注册表条目的 CLSID，与`DWORD`值，该值指定要启用或禁用的服务下, 表中所示。  

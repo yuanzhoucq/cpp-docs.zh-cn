@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090443"
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
 Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 从 Visual Studio 2015 和 SQL Server 2012 ODBC 开始是连接到 SQL 数据源的首选的方法。

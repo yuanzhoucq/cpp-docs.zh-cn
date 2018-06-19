@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098142"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand`类是提供程序命令对象的实现。 它提供的实现`IAccessor`， `ICommandText`，和**ICommandProperties**接口。 `IAccessor`接口是在行集中的一个相同。 命令对象使用访问器来指定参数的绑定。 行集对象使用它们来指定输出列的绑定。 `ICommandText`接口是一种以文本上指定的命令。 此示例使用`ICommandText`接口更高版本时它将添加自定义代码; 它还将重写`ICommand::Execute`方法。 **ICommandProperties**接口处理所有的命令和行集对象的属性。  

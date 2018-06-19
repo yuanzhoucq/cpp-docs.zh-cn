@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105668"
 ---
 # <a name="filln-stlclr"></a>fill_n (STL/CLR)
 将新值分配给以特定元素开始的范围中指定数量的元素。  

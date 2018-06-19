@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090469"
 ---
 # <a name="cdbpropsetcdbpropset"></a>CDBPropSet::CDBPropSet
 构造函数。 初始化**rgProperties**， **cProperties**，和**guidPropertySet**字段[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)结构。  

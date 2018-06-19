@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362195"
 ---
 # <a name="string-and-text-classes"></a>字符串和文本类
 这些类为字符串和文本字符串转换提供支持。  

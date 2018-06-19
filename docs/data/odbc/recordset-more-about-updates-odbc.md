@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098662"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>记录集：有关更新的更多信息 (ODBC)
 本主题适用于 MFC ODBC 类。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374474"
 ---
 # <a name="how-to-debug-a-release-build"></a>如何：调试发行版本
 你可以调试应用程序的发布版本。  

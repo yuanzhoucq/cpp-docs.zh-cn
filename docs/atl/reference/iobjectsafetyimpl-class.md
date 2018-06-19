@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364032"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 类
 此类提供的默认实现`IObjectSafety`接口以允许客户端来检索和设置对象的安全级别。  

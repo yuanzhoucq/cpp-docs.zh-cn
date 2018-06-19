@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094190"
 ---
 # <a name="ccommandgetnextresult"></a>CCommand::GetNextResult
 提取下一个结果集是否可用。  

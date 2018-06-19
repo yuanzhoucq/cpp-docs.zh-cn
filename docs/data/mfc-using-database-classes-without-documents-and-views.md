@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093891"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC：不结合文档和视图使用数据库类
 有时你不可能想要使用的框架的数据库应用程序中的文档/视图体系结构。 本主题说明：  

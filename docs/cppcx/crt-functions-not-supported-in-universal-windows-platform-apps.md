@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090863"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>通用 Windows 平台应用中不支持的 CRT 函数
 生成通用 Windows 平台 (UWP) 应用时，许多 C 运行时 (CRT) 函数不可用。 在某些情况下，解决方法是可用--例如，可以使用 Windows 运行时或 Win32 Api。 但是在其他情况下，CRT 函数被禁止使用，因为对应于它们的功能或支持 API 不适用于 UWP 应用。 若要查看适用于 Windows 运行时的替代方法，请参阅[UWP 应用中的 Windows Api 的替代项](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。  

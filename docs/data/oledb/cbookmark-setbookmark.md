@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093672"
 ---
 # <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
 将复制由引用的书签值`pBuffer`到`CBookmark`缓冲并将缓冲区大小设置为`nSize`。  

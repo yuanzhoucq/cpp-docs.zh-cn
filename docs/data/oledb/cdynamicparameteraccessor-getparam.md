@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090896"
 ---
 # <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
 从参数缓冲区中检索指定参数的非字符串数据。  

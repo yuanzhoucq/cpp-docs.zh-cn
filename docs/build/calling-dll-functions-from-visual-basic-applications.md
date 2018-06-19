@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367077"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 对于 Visual Basic 应用程序 （或 Pascal 或 Fortran 等其他语言中的应用程序） 可以调用 C/c + + DLL 中函数，必须使用正确的调用约定，而无需由编译器进行任何名称修饰导出函数。  

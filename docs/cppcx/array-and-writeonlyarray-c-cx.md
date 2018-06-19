@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089387"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 你可以随意使用常规 C 样式数组或[std:: array](../standard-library/array-class-stl.md)在 C + + /cli CX 程序 (尽管[std:: vector](../standard-library/vector-class.md)通常是更好的选择)，但在元数据中发布任何 API 中，你必须将 C 样式数组转换或矢量到[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)具体取决于如何使用的类型。 [Platform::Array](../cppcx/platform-array-class.md) 类型既不像 [std::vector](../standard-library/vector-class.md)那样高效也不像它那样功能强大，因此，一般原则是，应避免在对数组元素执行大量操作的内部代码中使用该类型。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113754"
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C++)
 适用的运行时，为*友元程序集*语言功能使位于命名空间范围或一个或多个客户端程序集或.netmodule 可以访问程序集组件中的全局范围的类型。  

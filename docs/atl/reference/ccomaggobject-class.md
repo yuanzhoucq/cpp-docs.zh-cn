@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364214"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 类
 此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)聚合对象的接口。 根据定义，聚合的对象将包含在外部对象。 `CComAggObject`类是类似于[CComObject 类](../../atl/reference/ccomobject-class.md)，只不过它公开一个接口，可直接访问外部客户端。  

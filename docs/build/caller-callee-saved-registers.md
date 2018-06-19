@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366791"
 ---
 # <a name="callercallee-saved-registers"></a>由调用方或被调用方保存的寄存器
 函数调用上销毁 RAX、 RCX、 RDX、 R8、 R9、 R10、 R11 被视为易失性，必须考虑的寄存器 (除非否则为安全-丰厚通过分析例如全程序优化)。  

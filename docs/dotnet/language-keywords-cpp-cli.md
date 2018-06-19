@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134408"
 ---
 # <a name="language-keywords-ccli"></a>语言关键字 (C++/CLI)
 从托管扩展的 c + + 更改，为 Visual c + + 的多个语言关键字。  

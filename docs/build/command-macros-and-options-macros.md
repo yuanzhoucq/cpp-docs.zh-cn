@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367354"
 ---
 # <a name="command-macros-and-options-macros"></a>命令宏和选项宏
 命令宏是 Microsoft 产品的预定义的。 选项宏表示这些产品的选项，并且默认情况下未定义。 同时使用预定义的推理规则中，可以用于描述块或用户定义的推理规则中。 可以重新定义命令宏来表示部分或全部命令行，其中包括选项。 如果未定义，options 宏将生成一个 null 字符串。  

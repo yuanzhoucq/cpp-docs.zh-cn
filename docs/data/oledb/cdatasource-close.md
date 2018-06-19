@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093849"
 ---
 # <a name="cdatasourceclose"></a>CDataSource::Close
 释放来关闭连接**m_spInit**指针。  

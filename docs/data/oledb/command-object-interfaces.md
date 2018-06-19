@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096114"
 ---
 # <a name="command-object-interfaces"></a>命令对象接口
 命令对象使用`IAccessor`接口来指定参数绑定。 使用者调用`IAccessor::CreateAccessor`，将其传递的数组`DBBINDING`结构。 `DBBINDING` 包含有关列绑定 （如类型和长度） 的信息。 提供程序接收这些结构，并确定应如何传输数据和是否需要转换。  

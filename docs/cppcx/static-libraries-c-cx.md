@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090098"
 ---
 # <a name="static-libraries-ccx"></a>静态库 (C++/CX)
 在通用 Windows 平台 (UWP) 应用程序中使用的静态库可包含 ISO 标准 c + + 代码，包括 STL 类型，同时还未排除的 Windows 运行时应用程序平台的 Win32 api 的调用。 静态库使用 Windows 运行时组件，并可能创建具有某些限制的 Windows 运行时组件。  

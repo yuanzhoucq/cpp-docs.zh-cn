@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134218"
 ---
 # <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true，仅当任一其自变量测试为 false。 使用它指定根据其自变量类型的函数对象。  

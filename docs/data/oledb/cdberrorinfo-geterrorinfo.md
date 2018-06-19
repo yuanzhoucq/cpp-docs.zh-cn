@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095685"
 ---
 # <a name="cdberrorinfogeterrorinfo"></a>CDBErrorInfo::GetErrorInfo
 调用[ierrorrecords:: Geterrorinfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx)返回[IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx)到指定的记录的接口指针。  

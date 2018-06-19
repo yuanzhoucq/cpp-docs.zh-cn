@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368689"
 ---
 # <a name="masm-macros"></a>MASM 宏
 为了简化使用的[原始伪操作](../build/raw-pseudo-operations.md)，有一套 ksamd64.inc，可以用于创建典型过程序言和尾声中定义的宏。  

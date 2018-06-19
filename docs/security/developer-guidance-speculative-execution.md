@@ -23,6 +23,7 @@ ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34428705"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>推理执行端通道的 c + + 开发人员指南
 

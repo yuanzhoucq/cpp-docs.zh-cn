@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089940"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>记录集：声明表的类 (ODBC)
 本主题适用于 MFC ODBC 类。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105785"
 ---
 # <a name="find-stlclr"></a>find (STL/CLR)
 在范围中找到具有指定值的元素的第一个匹配项位置。  

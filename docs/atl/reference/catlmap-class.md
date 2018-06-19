@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366285"
 ---
 # <a name="catlmap-class"></a>CAtlMap 类
 此类提供用于创建和管理 map 对象的方法。  

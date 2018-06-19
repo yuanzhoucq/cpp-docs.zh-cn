@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092426"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 表示将 MashalingBehavior=Standard 作为敏捷对象（这可以大大降低出现运行时线程处理异常的机率）的对象。 `Agile<T>` 使非敏捷对象可以调用相同或不同线程调用，或是从相同或不同线程进行调用。 有关详细信息，请参阅[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)。  

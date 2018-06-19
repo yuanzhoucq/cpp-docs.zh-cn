@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103367"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
 使用的运算符`auto_gcroot`条件表达式中。  

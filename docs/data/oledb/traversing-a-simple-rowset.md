@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102946"
 ---
 # <a name="traversing-a-simple-rowset"></a>遍历简单行集合
 下面的示例演示不涉及命令的快速而简便的数据库访问。 下面的使用者代码，在 ATL 项目中，从名为的表中检索记录*艺术家*Microsoft Access 数据库使用 Microsoft OLE DB Provider for ODBC。 该代码创建[CTable](../../data/oledb/ctable-class.md)使用访问器的表对象基于用户记录类`CArtists`。 打开连接，打开连接上, 一个会话，并在会话上打开表。  

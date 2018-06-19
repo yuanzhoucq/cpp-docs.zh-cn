@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112558"
 ---
 # <a name="implementing-a-simple-consumer"></a>实现简单使用者
 以下主题说明如何编辑由 MFC 应用程序向导和 ATL OLE DB 使用者向导创建简单使用者创建的文件。 此示例具有以下部分：  

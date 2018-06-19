@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091649"
 ---
 # <a name="record-field-exchange-rfx"></a>记录字段交换 (RFX)
 MFC ODBC 数据库类自动执行之间的数据源的数据移动和[记录集](../../data/odbc/recordset-odbc.md)对象。 当你从派生类[CRecordset](../../mfc/reference/crecordset-class.md)并且未使用批量行提取，记录字段交换 (RFX) 机制传输数据。  

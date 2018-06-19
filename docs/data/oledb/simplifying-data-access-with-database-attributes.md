@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111710"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>使用数据库特性简化数据访问
 本主题演示如何使用数据库特性简化数据库操作。  

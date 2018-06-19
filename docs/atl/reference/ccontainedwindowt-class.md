@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366479"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 此类实现包含在另一个对象的窗口。  

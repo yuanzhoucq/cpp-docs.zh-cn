@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131093"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>如何：使用正则表达式分析字符串 (C++/CLI)
 下面的代码示例演示了简单的字符串分析使用<xref:System.Text.RegularExpressions.Regex>类<xref:System.Text.RegularExpressions?displayProperty=fullName>命名空间。 将构造一个包含多个类型的字描绘的字符串。 然后，对字符串进行分析使用<xref:System.Text.RegularExpressions.Regex>结合类<xref:System.Text.RegularExpressions.Match>类。 然后，该句中的每个单词会单独显示。  

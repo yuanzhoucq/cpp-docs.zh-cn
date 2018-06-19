@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089708"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接调用 ODBC API 函数
 数据库类为提供更简单的接口[数据源](../../data/odbc/data-source-odbc.md)比 ODBC。 因此，类不封装所有 ODBC API。 对于任何类的功能以外的功能，必须直接调用 ODBC API 函数。 例如，你必须调用 ODBC 目录函数 (**:: SQLColumns**， **:: SQLProcedures**， **:: SQLTables**，等) 直接。  

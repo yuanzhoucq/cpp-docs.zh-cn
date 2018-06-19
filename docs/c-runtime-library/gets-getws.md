@@ -42,6 +42,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450632"
 ---
 # <a name="gets-getws"></a>gets、_getws
 从 `stdin` 流中获取行。 提供这些函数的更多安全版本；请参阅 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  

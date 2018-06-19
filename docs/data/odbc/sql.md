@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093238"
 ---
 # <a name="sql"></a>SQL
 SQL （结构化查询语言） 是一种方法来定义查询、 修改和控制的数据与关系数据库，它允许通信。 使用 SQL 语法，你可以构造提取根据你指定的条件的记录的语句。  

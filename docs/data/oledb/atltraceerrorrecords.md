@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093342"
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 如果返回错误，则转储到转储设备的 OLE DB 错误记录信息。  

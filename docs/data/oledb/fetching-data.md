@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101196"
 ---
 # <a name="fetching-data"></a>提取数据
 打开数据源、 会话和行集对象后，你可以提取数据。 根据你使用的访问器的类型，你可能需要将列绑定。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101843"
 ---
 # <a name="irowsetnotifycpfireonrowchange"></a>IRowsetNotifyCP::Fire_OnRowChange
 广播[OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)事件与连接点上的所有侦听器**IID_IRowsetNotify**以通知客户的影响行的更改。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364932"
 ---
 # <a name="crbmap-class"></a>CRBMap 类
 此类表示一个映射结构中，使用红色黑色二进制树。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134425"
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>如何：为 ADO.NET 封送 VARIANT (C++/CLI)
 演示如何将添加一个本机`VARIANT`到数据库，以及如何封送<xref:System.Object?displayProperty=fullName>从为本机数据库`VARIANT`。  

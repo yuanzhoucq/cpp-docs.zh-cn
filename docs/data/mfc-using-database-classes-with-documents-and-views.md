@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091863"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC：结合文档和视图使用数据库类
 你可以使用 MFC 数据库类具有或不使用文档/视图体系结构。 本主题重点介绍使用结合文档和视图的数据库。 它还说明了：  

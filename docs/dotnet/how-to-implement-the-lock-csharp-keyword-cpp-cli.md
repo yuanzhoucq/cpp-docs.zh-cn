@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127911"
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>如何：实现 C# 的 lock 关键字 (C++/CLI)
 本主题演示如何实现的 C# `lock` Visual c + + 中的关键字。 

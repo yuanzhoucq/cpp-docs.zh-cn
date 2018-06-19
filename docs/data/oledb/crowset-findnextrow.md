@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098209"
 ---
 # <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
 查找指定的书签之后的下一步的匹配行。  

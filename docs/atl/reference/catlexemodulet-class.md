@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364958"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT 类
 此类表示应用程序的模块。  
@@ -138,7 +139,7 @@ static HRESULT InitializeCom() throw();
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法从构造函数调用，并且可以重写以初始化 COM 以不同于默认实现方式。 默认实现是调用**CoInitializeEx （NULL、 COINIT_MULTITHREADED）**或**CoInitialize(NULL)** 具体取决于项目配置。  
+ 此方法从构造函数调用，并且可以重写以初始化 COM 以不同于默认实现方式。 默认实现是调用**CoInitializeEx （NULL、 COINIT_MULTITHREADED）** 或**CoInitialize(NULL)** 具体取决于项目配置。  
   
  重写此方法通常需要重写[CAtlExeModuleT::UninitializeCom](#uninitializecom)。  
   

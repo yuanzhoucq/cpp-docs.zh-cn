@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366060"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 类
 此类提供用于创建和使用的临时文件的方法。  

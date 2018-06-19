@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129390"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>如何：使用 C++ 互操作封送 ANSI 字符串
 本主题演示 ANSI 字符串可以是如何使用 c + + 互操作，但.NET Framework 传递<xref:System.String>表示以 Unicode 格式的字符串，因此转换为 ANSI 是一个额外的步骤。 用于与其他字符串类型进行交互，请参阅以下主题：  

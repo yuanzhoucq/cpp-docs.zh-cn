@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090048"
 ---
 # <a name="catalog-information--mfc-data-access"></a>目录信息（MFC 数据访问）
 数据源表格中的信息可以包括表格名称和其中的列、表格权限、主键和外键的名称、有关预定义查询或存储过程的信息、有关表格索引的信息和有关表格的统计信息。  

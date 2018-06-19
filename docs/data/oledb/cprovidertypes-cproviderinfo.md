@@ -82,6 +82,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098285"
 ---
 # <a name="cprovidertypes-cproviderinfo"></a>CProviderTypes，CProviderInfo
 调用 typedef 类**CProviderTypes**来实现其参数类**CProviderInfo**。  

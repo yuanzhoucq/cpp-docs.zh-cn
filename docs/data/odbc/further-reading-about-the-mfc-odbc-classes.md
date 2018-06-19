@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089215"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>有关 MFC ODBC 类的其他阅读材料
 以下主题进一步说明的概念和本主题中介绍的技术：  

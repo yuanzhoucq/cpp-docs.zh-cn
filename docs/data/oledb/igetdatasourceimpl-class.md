@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101105"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 类
 提供的实现[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)对象。  

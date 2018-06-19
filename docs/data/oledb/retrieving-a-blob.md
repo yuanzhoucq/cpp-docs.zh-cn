@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105200"
 ---
 # <a name="retrieving-a-blob"></a>检索 BLOB
 你可以检索以各种方式二进制大型对象 (BLOB)。 你可以使用**DBTYPE_BYTES**检索为一个字节序列的 BLOB 或使用类似的界面`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程序员参考*。  

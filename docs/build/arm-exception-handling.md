@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366258"
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 针对异步硬件生成的异常和同步软件生成的异常，ARM 上的 Windows 将使用相同的结构化异常处理机制。 将通过使用语言帮助器函数，基于 Windows 结构化异常处理来生成特定于语言的异常处理程序。 本文档描述了 ARM 上的 Windows 中的异常处理以及由 MASM 和 Visual C++ 编译器生成的代码所使用的语言帮助器。  

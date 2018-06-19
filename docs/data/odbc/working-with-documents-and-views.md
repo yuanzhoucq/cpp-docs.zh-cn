@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092941"
 ---
 # <a name="working-with-documents-and-views"></a>使用文档和视图
 Microsoft 基础类 (MFC) 库为它的许多功能依赖于文档/视图体系结构。 通常情况下，文档存储你的数据然后查看显示在框架窗口的客户端区域内和管理与数据的用户交互。 该视图与该文档以获取更新的数据进行通信。 你可以使用数据库类，与框架或不它。  

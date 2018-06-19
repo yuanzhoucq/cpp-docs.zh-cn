@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372004"
 ---
 # <a name="prolog-and-epilog"></a>保护现场和恢复现场
 每个分配堆栈空间的函数，调用其他函数将保存非易失寄存器，或使用异常处理必须具有的 prolog 中的相应函数表项与关联的展开数据描述其地址限制 (请参阅[异常处理 (x64)](../build/exception-handling-x64.md))。 Prolog 将保存在其内部地址寄存器必要情况下，在堆栈上推送非易失寄存器的参数、 局部变量和临时变量，为分配堆栈的固定的部分和 （可选） 建立帧指针。 关联的展开数据必须描述序言的操作，必须提供必需撤消了 prolog 代码的作用的信息。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094922"
 ---
 # <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
 调用[irowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx)以减少当前从 bulk 行集检索的所有行的引用计数。  

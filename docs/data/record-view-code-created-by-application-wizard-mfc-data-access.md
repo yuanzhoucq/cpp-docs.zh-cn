@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107098"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>应用程序向导创建的记录视图代码（MFC 数据访问）
 [MFC 应用程序向导](../mfc/reference/database-support-mfc-application-wizard.md)替代视图的`OnInitialUpdate`和`OnGetRecordset`成员函数。 在框架创建框架窗口、文档和视图之后，将调用 `OnInitialUpdate` 以便初始化视图。 `OnInitialUpdate` 从文档获取指向记录集的指针。 对基类的调用[cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate)函数打开记录集。 下面的代码演示此流程的`CRecordView`:  

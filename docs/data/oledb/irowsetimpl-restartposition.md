@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101245"
 ---
 # <a name="irowsetimplrestartposition"></a>IRowsetImpl::RestartPosition
 将下次提取位置重新定位到其初始位置;即，创建第一个行集时其位置。  

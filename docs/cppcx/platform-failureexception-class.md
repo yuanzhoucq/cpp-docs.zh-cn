@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088136"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException 类
 操作失败时引发。 它是 E_FAIL HRESULT 的等效项。  

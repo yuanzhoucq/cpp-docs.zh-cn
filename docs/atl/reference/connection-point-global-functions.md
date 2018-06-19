@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362786"
 ---
 # <a name="connection-point-global-functions"></a>连接点全局函数
 这些函数提供支持的连接点和接收器映射。  

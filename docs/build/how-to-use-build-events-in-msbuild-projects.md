@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369768"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
 生成事件是一个命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]在生成过程中的特定阶段执行。 *预生成*事件发生在生成开始前;*预链接*事件发生在链接步骤开始; 之前和*后期生成*事件发生在生成后已成功结束。 仅当关联的生成步骤发生时，生成事件才会发生。 例如，如果链接步骤未运行，也不会发生 pre-link 事件。  

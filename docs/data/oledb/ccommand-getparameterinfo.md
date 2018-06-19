@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094278"
 ---
 # <a name="ccommandgetparameterinfo"></a>CCommand::GetParameterInfo
 获取命令的参数、参数名称和参数类型的列表。  

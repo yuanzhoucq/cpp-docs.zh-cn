@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108307"
 ---
 # <a name="file-handling-and-io-ccli"></a>文件处理和 I/O (C++/CLI)
 演示如何使用.NET Framework 的各种文件操作。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109133"
 ---
 # <a name="general-language-changes-ccli"></a>常规语言更改 (C++/CLI)
 大量的托管扩展中更改 c + + 为 Visual c + + CLR 语言功能。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105811"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>记录视图的用户界面更新（MFC 数据访问）
 `CRecordView` 提供了默认用户界面更新处理程序为导航命令。 这些处理程序自动启用和禁用用户界面对象 — 菜单项和工具栏按钮。 应用程序向导提供标准菜单并且，如果你选择**可停靠工具栏**选项，一组的所有命令的工具栏按钮。 如果使用 `CRecordView` 创建记录视图类，建议将类似的用户界面对象添加到应用程序。  

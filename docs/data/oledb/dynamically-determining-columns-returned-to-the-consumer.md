@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107934"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>动态确定返回给使用者的列
 PROVIDER_COLUMN_ENTRY 宏通常处理**IColumnsInfo::GetColumnsInfo**调用。 但是，使用者可能选择使用书签，因为提供程序必须能够更改根据使用者是否要求书签返回的列。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106201"
 ---
 # <a name="debug-class-ccli"></a>Debug 类 (C++/CLI)
 使用时<xref:System.Diagnostics.Debug>在 Visual c + + 应用程序，该行为不会更改调试版本和发布版本之间。  

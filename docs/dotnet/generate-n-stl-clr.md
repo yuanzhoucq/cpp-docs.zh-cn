@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110607"
 ---
 # <a name="generaten-stlclr"></a>generate_n (STL/CLR)
 将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。  

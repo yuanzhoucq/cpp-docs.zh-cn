@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364413"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray 类
 此类存储**IUnknown**指针，而是使用作为参数传递给[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)模板类。  

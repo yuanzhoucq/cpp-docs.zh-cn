@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095737"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW 类
 可以在不知道数据库架构 （基础结构） 时访问数据源。  

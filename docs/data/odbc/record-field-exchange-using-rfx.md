@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091993"
 ---
 # <a name="record-field-exchange-using-rfx"></a>记录字段交换：使用 RFX
 本主题介绍你如何使用 RFX 相对于框架所执行的操作。  

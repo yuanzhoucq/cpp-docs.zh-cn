@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129094"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>与其他 .NET 语言的互操作性 (C++/CLI)
 本部分中的主题说明如何在通过使用或对用 C# 或 Visual Basic 编写的程序集提供的功能的 Visual c + + 中创建程序集。  

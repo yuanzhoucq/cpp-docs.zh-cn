@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088462"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC 和数据库类
 MFC ODBC 数据库类封装你将通常自行进行在成员中的函数的 ODBC API 函数调用[CDatabase](../../mfc/reference/cdatabase-class.md)和[CRecordset](../../mfc/reference/crecordset-class.md)类。 例如，复杂 ODBC 调用序列、 返回的记录到存储位置、 处理错误情况，以及其他操作的绑定是为你管理的数据库类。 因此，你可以使用相当简单的类接口来操作通过记录集对象的记录。  

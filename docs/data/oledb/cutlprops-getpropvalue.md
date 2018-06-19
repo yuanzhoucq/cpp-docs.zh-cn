@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099103"
 ---
 # <a name="cutlpropsgetpropvalue"></a>CUtlProps::GetPropValue
 获取来自属性集的属性。  

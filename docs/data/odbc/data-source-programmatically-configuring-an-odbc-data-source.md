@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091967"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
 本主题说明如何以编程方式配置开放式数据库连接 (ODBC) 数据源名称。 这可以灵活地访问数据而不强制用户显式使用 ODBC 管理器或其他程序以指定数据源的名称。  

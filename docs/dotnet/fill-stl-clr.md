@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107433"
 ---
 # <a name="fill-stlclr"></a>fill (STL/CLR)
 将相同的新值分配给指定范围中的每个元素。  

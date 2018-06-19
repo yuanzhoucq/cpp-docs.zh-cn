@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128649"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>如何：使用 for each 循环访问用户定义集合
 若要是一个类成为托管集合，它需要一个可向枚举器类或接口返回句柄的非私有 GetEnumerator 函数。  枚举器类必须包含非静态 MoveNext 函数和 Current 属性的声明。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362100"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI 类
 此类提供与集合类对象中存储的字符串相关的静态函数。 它是类似于[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)，但执行不区分大小写的比较。  

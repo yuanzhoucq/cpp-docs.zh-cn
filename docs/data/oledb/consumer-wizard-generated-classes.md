@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091980"
 ---
 # <a name="consumer-wizard-generated-classes"></a>使用者向导生成的类
 当使用 ATL OLE DB 使用者向导生成一个使用者时，可以选择使用 OLE DB 模板或 OLE DB 属性。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：  

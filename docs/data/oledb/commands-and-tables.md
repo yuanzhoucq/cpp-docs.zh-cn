@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098675"
 ---
 # <a name="commands-and-tables"></a>命令和表
 命令和表使你能够访问行集;也就是说，打开行集、 执行命令，并将列绑定。 [CCommand](../../data/oledb/ccommand-class.md)和[CTable](../../data/oledb/ctable-class.md)类实例化的命令和表的对象，分别。 这些类派生自[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)下图中所示。  

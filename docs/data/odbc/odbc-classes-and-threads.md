@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090583"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 类和线程
 从 MFC 4.2 开始，没有针对 MFC ODBC 类的多线程处理支持。 但是，请注意，MFC DAO 类不提供多线程处理支持。  

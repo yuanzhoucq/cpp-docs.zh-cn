@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099545"
 ---
 # <a name="iaccessorimplcreateaccessor"></a>IAccessorImpl::CreateAccessor
 从一组绑定创建一个访问器。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087700"
 ---
 # <a name="backinserter-function"></a>back_inserter 函数
 返回用于在指定集合末尾插入元素的迭代器。  

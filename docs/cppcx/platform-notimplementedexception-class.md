@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088495"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException 类
 当接口成员在派生类型中未实现时引发。  

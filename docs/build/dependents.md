@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366931"
 ---
 # <a name="dependents"></a>依赖项
 在依赖项行中，指定零个或多个依赖项之后的冒号 （:） 或双冒号 （:），使用任何有效的文件名或[伪目标](../build/pseudotargets.md)。 用一个或多个空格或制表符分隔多个依赖项。 依赖项不区分大小写。 路径被允许对文件名。  

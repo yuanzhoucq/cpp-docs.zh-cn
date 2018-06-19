@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127339"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>如何：显式请求装箱
 你可以通过将变量分配给类型的变量的显式请求装箱`Object`。  

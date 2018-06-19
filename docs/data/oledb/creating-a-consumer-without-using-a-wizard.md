@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097687"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 下面的示例假定 OLE DB 使用者支持添加到现有的 ATL 项目。 如果你想要将 OLE DB 使用者支持添加到 MFC 应用程序，应运行 MFC 应用程序向导，也不能创建所有支持必要时，将调用执行应用程序所需的 MFC 例程。  
