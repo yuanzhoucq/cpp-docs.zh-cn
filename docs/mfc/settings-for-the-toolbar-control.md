@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379702"
 ---
 # <a name="settings-for-the-toolbar-control"></a>工具栏控件的设置
 工具栏上的按钮中可显示位图、字符串或这两者。 默认情况下，图像大小设置为 16 x 15 像素的尺寸。 所有按钮的宽度都相同，默认情况下为 24 x 22 像素。 工具栏的高度由按钮的高度决定，工具栏的宽度与父窗口的工作区的宽度相同（也是默认设置）。  

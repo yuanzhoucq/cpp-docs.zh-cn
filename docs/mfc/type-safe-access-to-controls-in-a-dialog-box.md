@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381366"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>对对话框中的控件进行类型安全的访问
 对话框中的控件可以使用 MFC 控件类的接口，如 `CListBox` 和 `CEdit`。 您可以创建控件对象并将其附加到对话框控件。 然后，可以通过控件的类接口访问该控件，并调用成员函数以操作该控件。 此处介绍的方法旨在为您提供对控件的类型安全访问。 这对诸如编辑框和列表框之类的控件特别有用。  

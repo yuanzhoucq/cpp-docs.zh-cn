@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349256"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
 常用的方法与不同的自定义方法的已由类[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含支持刷新方法为您的控件的预定义的成员函数。 此常用方法的调度映射条目**DISP_STOCKFUNC_REFRESH**。  

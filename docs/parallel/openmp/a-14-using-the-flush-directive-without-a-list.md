@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694324"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   使用不带列表的 flush 指令
 下面的示例 (对于[部分 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md)第 20 页上) 区分受共享的对象`flush`指令与任何从共享不受影响的对象的列表：  

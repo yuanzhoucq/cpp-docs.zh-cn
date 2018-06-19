@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384366"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows 套接字：使用存档的套接字的示例
 本文介绍了使用类的示例[CSocket](../mfc/reference/csocket-class.md)。 该示例使用`CArchive`对象要序列化数据通过套接字。 请注意，这不是文档序列化到或从文件。  

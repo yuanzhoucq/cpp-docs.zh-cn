@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383027"
 ---
 # <a name="working-with-a-header-control"></a>使用标题控件
 使用标头控件的简单方法 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 是与列表控件结合使用; 请参阅[使用 CListCtrl](../mfc/using-clistctrl.md)本系列主题中更高版本。 你可以单独使用的标头控件。 MFC 调用**InitCommonControls**为你。 关键任务如下所示：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244867"
 ---
 # <a name="compiler-error-c2878"></a>编译器错误 C2878
 name： 命名空间或类的此名称不存在  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690577"
 ---
 # <a name="243-single-construct"></a>2.4.3 single 构造
 **单个**指令标识一个构造，用于指定关联的结构化的块只能由团队 （不一定的主线程） 中的一个线程执行。 语法**单个**指令是，如下所示：  

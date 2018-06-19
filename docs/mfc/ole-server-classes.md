@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350424"
 ---
 # <a name="ole-server-classes"></a>OLE 服务器类
 服务器应用程序使用这些类。 服务器文档派生自`COleServerDoc`而不是从**CDocument**。 请注意，因为`COleServerDoc`派生自`COleLinkingDoc`，服务器文档也可以是支持将链接的容器。  

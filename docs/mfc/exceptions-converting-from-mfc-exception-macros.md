@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350746"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>异常：从 MFC 异常宏转换
 这是一个高级的主题。  
