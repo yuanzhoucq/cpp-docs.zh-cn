@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862635"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
 Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。 通过使用 C + + /CX 中，你可以编程通用 Windows 平台应用程序和编译为本机代码的组件。 虽然你可以通过针对 Windows 运行时 COM 接口直接编程来创建通用 Windows 平台应用程序，通过使用 C + + /CX 中，你可以使用构造函数、 异常和其他现代 c + + 编程习语。 若要启用.NET 平台上的托管的执行环境中的 c + + 编程，你可以使用 C + + /cli CLI。  

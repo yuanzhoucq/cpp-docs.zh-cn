@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384718"
 ---
 # <a name="tn029-splitter-windows"></a>TN029：拆分窗口
 此注释描述 MFC [CSplitterWnd 类](../mfc/reference/csplitterwnd-class.md)，提供了窗口将拆分和管理其他窗格中窗口的大小调整。  

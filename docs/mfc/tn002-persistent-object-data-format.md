@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385412"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002：持久性对象数据格式
 本说明介绍支持持久性 c + + 对象和对象数据的格式时存储在文件中的 MFC 例程。 这仅适用于具有类[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)宏。  

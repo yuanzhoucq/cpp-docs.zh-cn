@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343371"
 ---
 # <a name="destroying-window-objects"></a>销毁窗口对象
 必须格外小心使用你自己的子窗口时用户已完成与窗口销毁 c + + 窗口对象。 如果这些对象不会被销毁，你的应用程序将不会恢复其内存。 幸运的是，框架管理窗口析构，以及创建框架窗口、 视图和对话框。 如果你创建其他 windows，你将负责销毁它们。  

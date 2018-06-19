@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382471"
 ---
 # <a name="simple-data-type-classes"></a>简单数据类型类
 下列类封装绘制坐标、字符串以及时间和日期信息，从而能够方便地使用 C++ 语法。 这些对象将作为参数广泛用于类库中 Windows 类的成员函数。 因为`CPoint`， `CSize`，和`CRect`对应于**点**，**大小**，和`RECT`结构，分别在 Windows SDK 中，你可以使用这些对象C + + 类只要你可以使用这些 C 语言结构。 这些类通过其成员函数提供有用的接口。 `CStringT` 提供了非常灵活的动态字符串。 `CTime``COleDateTime`， `CTimeSpan`，和**COleTimeSpan**表示时间和日期值。 有关这些类的详细信息，请参阅文章[日期和时间](../atl-mfc-shared/date-and-time.md)。  

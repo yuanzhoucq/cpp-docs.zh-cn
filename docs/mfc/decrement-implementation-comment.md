@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343029"
 ---
 # <a name="-implementation-comment"></a>// Implementation 注释
 `// Implementation` 节是任何 MFC 类声明的最重要的部分。  

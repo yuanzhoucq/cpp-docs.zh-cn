@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342155"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 公共控件的生成需求
 Microsoft 基础类 (MFC) 库支持 Windows 公共控件版本 6.1。 公共控件包含在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中，该库包含在 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]中。 库提供了增强现有类和新类的新方法和支持的方法[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]公共控件。 在生成应用程序时，应该遵循后续章节中所述的编译和迁移需求。  

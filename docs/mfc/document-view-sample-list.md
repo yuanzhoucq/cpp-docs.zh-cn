@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343013"
 ---
 # <a name="documentview-sample-list"></a>文档/视图示例列表
 请参阅以下演示有趣的方式使用 MFC 文档/视图体系结构的示例程序：  

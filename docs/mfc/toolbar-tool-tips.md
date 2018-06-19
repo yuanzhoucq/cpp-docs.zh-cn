@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383492"
 ---
 # <a name="toolbar-tool-tips"></a>工具栏工具提示
 工具提示是用途的小型弹出窗口，当你将鼠标放按钮上的一段时间内时所显示的工具栏按钮的简短说明。 当有一个工具栏由应用程序向导创建应用程序时，为你提供工具提示支持。 本文介绍了由应用程序向导和如何将工具提示支持添加到你的应用程序创建这两个工具提示支持。  

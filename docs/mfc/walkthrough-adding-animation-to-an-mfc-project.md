@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384744"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>演练：向 MFC 项目添加动画
 本演练介绍如何将基本的动画的对象添加到 Visual c + +，Microsoft 基础类库 (MFC) 项目。  

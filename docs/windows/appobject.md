@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856968"
 ---
 # <a name="appobject"></a>appobject
 标识为应用程序对象，这些关联与完整.exe 应用程序，并指示是否在此全局提供的函数和属性组件类组件类[类型库](../mfc/automation-clients-using-type-libraries.md)。  

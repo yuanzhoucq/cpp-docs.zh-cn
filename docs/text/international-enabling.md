@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858697"
 ---
 # <a name="international-enabling"></a>国际支持
 大多数传统的 C 和 c + + 代码作出假设字符和字符串操作适用于国际应用程序不起作用。 MFC 和运行时库支持 Unicode 或 MBCS，而是仍为您进行的工作。 以指导你，本部分介绍 Visual c + + 中的"国际支持"的含义：  

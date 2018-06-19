@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385139"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028：区分上下文的帮助支持
 此注释描述在 MFC 中分配帮助上下文 ID 和其他帮助问题的规则。 上下文相关帮助支持需要 Visual C++ 中提供的帮助编译器。  

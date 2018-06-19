@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383829"
 ---
 # <a name="wizards-and-the-resource-editors"></a>向导和资源编辑器
 Visual c + + 包括多个向导用于在 MFC 编程中，以及许多集成的资源编辑器。 对于 ActiveX 控件编程中， [ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)非常类似于 MFC 应用程序向导的起作用。 虽然可以编写没有其中大多数工具的 MFC 应用程序，则工具将极大地简化并加速你的工作。  

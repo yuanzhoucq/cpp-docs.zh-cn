@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384330"
 ---
 # <a name="using-the-mfc-source-files"></a>使用 MFC 源文件
 Microsoft 基础类 (MFC) 库提供完整源代码。 标头文件 (.h) 位于 \atlmfc\include 目录中；实现文件 (.cpp) 位于 \atlmfc\src\mfc 目录中。  

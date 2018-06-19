@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383183"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064：ActiveX 控件中的单元模型线程
 > [!NOTE]

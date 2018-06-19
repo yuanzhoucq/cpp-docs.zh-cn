@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345955"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>活动文档包含示例：Office 活页夹
 Microsoft Office 活页夹是活动文档容器的示例。 Office 活页夹包含两个主窗格，就像容器通常一样。 左窗格包含与将活页夹中的活动文档对应的图标。 每个文档被称为*部分*活页夹中。 例如，活页夹可能包含 Word 文档、PowerPoint 文件、Excel 电子表格等。  

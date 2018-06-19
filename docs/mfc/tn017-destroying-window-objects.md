@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384298"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017：销毁窗口对象
 本说明介绍了利用[CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)方法。 使用此方法，如果你想要执行的自定义的分配`CWnd`-派生的对象。 本文还介绍了为何应使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)销毁而不是 c + + Windows 对象`delete`运算符。  

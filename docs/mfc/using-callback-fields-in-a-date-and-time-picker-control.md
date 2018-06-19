@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383781"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>在日期和时间选取器控件中使用回调字段
 除了定义日期和时间选取器字段的标准格式字符之外，您还可以通过将自定义格式字符串的某些部分指定为回调字段来自定义您的输出。 若要声明回调字段，请在格式字符串主体中的任何位置包含一个或多个“X”字符（ASCII 代码 88）。 例如，以下字符串“Today is: 'yy'/'MM'/'dd' (Day 'X')'”会使日期和时间选取器控件将当前值按照“年、月、日和年积日”格式来显示。  

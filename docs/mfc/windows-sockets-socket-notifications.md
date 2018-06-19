@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385575"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 套接字：套接字通知
 本文介绍套接字类中的通知函数。 这些成员函数是框架调用以通知你的重要事件的套接字对象的回调函数。 通知函数包括：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342825"
 ---
 # <a name="containers-implementing-a-container"></a>容器：实现容器
 本文总结了实现容器的过程，向您指出了提供有关实现容器的更多详细介绍的其他文章。 它还列出了您可能需要实现的一些可选 OLE 功能以及描述这些功能的文章。  

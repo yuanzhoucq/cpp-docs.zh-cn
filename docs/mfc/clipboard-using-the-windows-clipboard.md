@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342103"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>剪贴板：使用 Windows 剪贴板
 本主题介绍如何使用 MFC 应用程序中的标准 Windows 剪贴板 API。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318316"
 ---
 # <a name="project-build-error-prj0031"></a>项目生成错误 PRJ0031
 自定义生成的 Outputs 属性为文件 file 包含 macro 计算出结果进入 macro_expansion。  

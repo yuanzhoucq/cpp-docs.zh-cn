@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384395"
 ---
 # <a name="using-cspinbuttonctrl"></a>使用 CSpinButtonCtrl
 *数值调节钮*控件 (也称为*上下*控制) 提供了一对用户可以单击来调整值的箭头。 此值称为*当前位置*。 此位置位于数值调节钮的范围内。 当用户单击向上箭头，位置将朝着最大值移动；当用户单击向下箭头，位置将朝着最小值移动。  
