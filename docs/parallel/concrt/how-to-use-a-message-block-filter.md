@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688266"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>如何：使用消息块筛选器
 本文档演示如何使用筛选器函数以启用异步消息块接受或拒绝该消息的负载根据一条消息。  

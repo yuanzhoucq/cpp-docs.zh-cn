@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382901"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>对 Rebar 控件使用对话栏
 中所述[Rebar 控件和带区](../mfc/rebar-controls-and-bands.md)，每个带区可以包含只有一个子窗口 （或控件）。 如果你想要具有多个每个带区的子窗口，这可能是一个限制。 方便的解决方法是具有多个控件创建对话框栏资源，然后将 rebar 带区 （包含对话栏） 添加到 rebar 控件。  

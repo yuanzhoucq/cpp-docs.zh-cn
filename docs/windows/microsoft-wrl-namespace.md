@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881645"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空间
 定义构成 Windows 运行时 c + + 模板库的基础类型。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383755"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows 套接字：转换字符串
 本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文介绍如何将字符串转换。 中涉及的其他问题[Windows 套接字： 阻止](../mfc/windows-sockets-blocking.md)和[Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)。  

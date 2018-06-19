@@ -74,6 +74,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385520"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：标准命令实现
 > [!NOTE]
@@ -180,7 +181,7 @@ ms.lasthandoff: 05/04/2018
   
      `CWinApp::OnFilePrintSetup` 具有非常简单的实现创建`CPrintDialog`对象，并调用**CWinApp::DoPrintDialog**实现函数。 这将设置应用程序默认打印机设置。  
   
-     常见的需要自定义此命令是为了允许每个文档打印机设置，应使用该文档何时保存存储。 若要执行此操作应添加中的消息映射处理程序你**CDocument**创建类`CPrintDialog`对象，请使用相应的打印机的属性对其进行初始化 (通常**hDevMode**和**hDevNames**)，调用**CPrintDialog::DoModal，**并保存更改的打印机设置。 强大的实现，你应该查看的实现**CWinApp::DoPrintDialog**检测错误和**CWinApp::UpdatePrinterSelection**来处理合理的默认值和跟踪系统级打印机更改。  
+     常见的需要自定义此命令是为了允许每个文档打印机设置，应使用该文档何时保存存储。 若要执行此操作应添加中的消息映射处理程序你**CDocument**创建类`CPrintDialog`对象，请使用相应的打印机的属性对其进行初始化 (通常**hDevMode**和**hDevNames**)，调用**CPrintDialog::DoModal，** 并保存更改的打印机设置。 强大的实现，你应该查看的实现**CWinApp::DoPrintDialog**检测错误和**CWinApp::UpdatePrinterSelection**来处理合理的默认值和跟踪系统级打印机更改。  
   
 -   当前文档的 ID_FILE_PRINT 标准打印  
   

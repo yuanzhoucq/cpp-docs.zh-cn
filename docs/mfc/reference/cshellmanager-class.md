@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378351"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 类
 实现可使你使用指向标识符列表 (PIDL) 的指针的几种方法。  

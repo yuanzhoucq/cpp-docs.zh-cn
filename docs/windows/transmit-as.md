@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890407"
 ---
 # <a name="transmitas"></a>transmit_as
 指示编译器将客户端和服务器应用程序操作，提供的类型与传输类型关联。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380596"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>设置单个项的图像
 不同类型的扩展的组合框项所使用的图像中的值确定`iImage`， **iSelectedImage**，和**iOverlay**的成员[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)结构。 每个值是图像的该控件关联的图像列表中的索引。 默认情况下，这些成员设置为 0，导致要显示的项没有图像的控件。 如果你想要为特定的项使用映像，你可以插入组合框项时或通过修改现有的组合框项相应地，修改结构。  

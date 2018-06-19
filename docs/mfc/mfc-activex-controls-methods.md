@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348304"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 控件：方法
 ActiveX 控件，将引发事件本身和其控件容器之间进行通信。 容器还可以通信与控件，通过方法和属性。 方法也称为函数。  

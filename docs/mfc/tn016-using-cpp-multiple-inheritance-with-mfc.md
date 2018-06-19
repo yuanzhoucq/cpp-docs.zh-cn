@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384083"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：对 MFC 使用 C++ 多重继承
 本说明介绍如何将多重继承 (MI) 与 Microsoft 基础类一起使用。 MI 不一定要与 MFC 一起使用。 MI 不在任何 MFC 类中使用，并且不需要编写类库。  

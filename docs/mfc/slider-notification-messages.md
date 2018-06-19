@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381974"
 ---
 # <a name="slider-notification-messages"></a>滑块通知消息
 滑块控件将通过发送父来通知用户操作其父窗口`WM_HSCROLL`或`WM_VSCROLL`消息，具体取决于滑块控件的方向。 若要处理这些消息，请添加处理程序`WM_HSCROLL`和`WM_VSCROLL`向父窗口的消息。 [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll)和[OnVScroll](../mfc/reference/cwnd-class.md#onvscroll)通知代码、 滑块和指向的指针的位置，则成员函数将传递[CSliderCtrl](../mfc/reference/csliderctrl-class.md)对象。 请注意，指针为类型**CScrollBar \*** 即使它指向`CSliderCtrl`对象。 你可能需要转换此指针，如果你需要操作滑块控件。  

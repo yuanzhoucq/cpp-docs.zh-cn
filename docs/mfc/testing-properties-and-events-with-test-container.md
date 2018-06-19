@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381031"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>使用测试容器测试属性和事件
 Visual C++ 中附带的测试容器应用程序是用于测试和调试 ActiveX 控件的 ActiveX 控件容器。 利用测试容器，控件开发人员可以通过更改控件的属性、调用控件的方法和激发其控件的事件来测试控件的功能。 测试容器可以显示数据绑定通知记录，还可以提供用于测试 ActiveX 控件的持久性功能的工具：你可以将属性保存到流或子存储，重载它们，然后检查存储的流数据。 本节介绍如何使用测试容器的基本功能。 其他信息，请选择**帮助**在运行测试容器时的菜单。  

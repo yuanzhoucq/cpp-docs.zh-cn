@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385302"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  

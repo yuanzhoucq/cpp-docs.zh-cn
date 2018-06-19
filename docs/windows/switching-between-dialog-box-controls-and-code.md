@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891917"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>在对话框控件和代码之间切换
 在 MFC 应用程序，你可以双击对话框控件跳转到其处理程序代码或快速创建存根 （stub） 处理程序函数。  

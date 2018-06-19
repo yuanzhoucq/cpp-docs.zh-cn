@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892278"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 方法
 尝试针对当前或指定 SRWLock 对象获取共享模式的 SRWLock 对象。  

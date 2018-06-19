@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383427"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 结构
 在编写你[工具提示通知处理程序](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)，你需要使用`TOOLTIPTEXT`结构。 成员`TOOLTIPTEXT`结构不是：  

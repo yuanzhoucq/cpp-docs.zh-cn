@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229763"
 ---
 # <a name="compiler-error-c2614"></a>编译器错误 C2614
 class1： 非法的成员初始化: class2 不是基或成员  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687642"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS**环境变量设置默认的线程数以使用在执行期间，除非该数字显式更改通过调用**omp_set_num_threads**库例程或通过显式**num_threads**上的子句**并行**指令。  

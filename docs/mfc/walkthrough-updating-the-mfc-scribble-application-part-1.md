@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385104"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练： 更新 MFC 随意画图应用程序 （第 1 部分）
 本演练演示如何修改现有 MFC 应用程序使用功能区用户界面。 Visual Studio 支持 Office 2007 功能区和 Windows 7 风景如画功能区。 有关功能区用户界面的详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 网站上。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385211"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 套接字：使用存档的套接字如何工作
 此文章介绍了如何[CSocket](../mfc/reference/csocket-class.md)对象， [CSocketFile](../mfc/reference/csocketfile-class.md)对象，和一个[CArchive](../mfc/reference/carchive-class.md)对象结合来简化发送和接收数据通过 Windows套接字。  

@@ -21,9 +21,10 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379468"
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT 结构
-`WINDOWPLACEMENT`结构包含一个窗口的布局信息在屏幕上**。**  
+`WINDOWPLACEMENT`结构包含一个窗口的布局信息在屏幕上 **。**  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +41,12 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
   
 #### <a name="parameters"></a>参数  
  *length*  
- 指定的长度以字节为单位，结构的**。**  
+ 指定的长度以字节为单位，结构的 **。**  
   
  `flags`  
  指定可控制的最小化的窗口以及窗口还原所依据的方法的位置的标志。 此成员可以是一个或两个以下的标志：  
   
-- **WPF_SETMINPOSITION**指定可以指定 x 和 y-位置的最小化窗口**。** 此标志必须指定坐标在中设置**ptMinPosition**成员。  
+- **WPF_SETMINPOSITION**指定可以指定 x 和 y-位置的最小化窗口 **。** 此标志必须指定坐标在中设置**ptMinPosition**成员。  
   
 - **WPF_RESTORETOMAXIMIZED**指定，还原窗口将最大化，无论是否它被最大化之前被最小化。 此设置为有效仅还原窗口的下一次。 它不会更改默认还原行为。 此标志是仅当**SW_SHOWMINIMIZED**为指定值**showCmd**成员。  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880314"
 ---
 # <a name="modifying-the-layout-grid"></a>修改布局网格
 当您放置或排列控件在对话框中时，可用于更精确地定位布局网格。 当开启了网格时，会出现"对齐到"网格的虚线就像磁化控件。 你可以打开和关闭此"网格线对齐"功能和更改的布局网格单元格的大小。  

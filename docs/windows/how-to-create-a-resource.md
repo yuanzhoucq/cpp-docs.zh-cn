@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878640"
 ---
 # <a name="how-to-create-a-resource"></a>如何：创建资源
 > [!NOTE]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/08/2018
   
 ### <a name="to-create-a-new-resource-in-solution-explorer"></a>在解决方案资源管理器中创建新资源  
   
-1.  在 **“解决方案资源管理器”**中，右击项目文件夹，然后选择 **“添加”**，然后单击快捷菜单上的 **“添加资源”** 。  
+1.  在 **“解决方案资源管理器”** 中，右击项目文件夹，然后选择 **“添加”**，然后单击快捷菜单上的 **“添加资源”** 。  
   
      如果你的项目中尚无 .rc 文件，此步骤将创建一个。 然后可以重复此步骤将特定资源类型添加到新的 .rc 文件。  
   

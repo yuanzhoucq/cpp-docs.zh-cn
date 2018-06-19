@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384129"
 ---
 # <a name="when-update-handlers-are-called"></a>何时调用更新处理程序
 假设用户在“文件”菜单中单击鼠标，则将生成 `WM_INITMENUPOPUP` 消息。 在菜单下拉以便用户可看到它之前，框架的更新机制将统一更新“文件”菜单中的所有项。  

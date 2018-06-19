@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227266"
 ---
 # <a name="fatal-error-c1197"></a>错误 C1197
 不能引用 mscorlib.dll_1，因为程序已经引用 mscorlib.dll_2  

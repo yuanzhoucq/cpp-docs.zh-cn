@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384210"
 ---
 # <a name="visualization-manager"></a>可视化管理器
 可视化管理器是控制整个应用程序的外观的对象。 它充当一个类可以放置所有绘图代码应用程序。 MFC 库包含多个视觉管理器。 如果你想要创建你的应用程序的自定义视图，你还可以创建你自己的视觉管理器。 下图显示相同的应用程序时启用不同的视觉管理器：  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690437"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31   线程安全的锁函数
 下面的 c + + 示例演示如何通过使用初始化数组的并行区域中的锁`omp_init_lock`([部分 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)页 42 上)。  

@@ -148,6 +148,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378436"
 ---
 # <a name="cpane-class"></a>CPane Class
 `CPane`类是一项增强功能的[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)。 如果要升级现有 MFC 项目，将出现的所有`CControlBar`与`CPane`。  

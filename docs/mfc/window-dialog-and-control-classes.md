@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381841"
 ---
 # <a name="window-dialog-and-control-classes"></a>窗口、对话框和控件类
 类`CWnd`和及其派生的类封装`HWND`，Windows 窗口的句柄。 `CWnd` 可单独或作为基用于派生新类。 由类库提供的派生的类表示各种类型的 windows。  

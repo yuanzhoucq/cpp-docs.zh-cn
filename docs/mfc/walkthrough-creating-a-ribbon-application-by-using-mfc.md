@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385224"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 本演练演示如何使用**MFC 应用程序向导**创建默认情况下具有功能区的应用程序。 然后可以通过添加扩展功能区**自定义**具有的功能区类别**收藏夹**功能区面板中，并添加一些经常使用的命令到面板。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341305"
 ---
 # <a name="application-and-thread-support-classes"></a>应用程序和线程支持类
 每个应用程序具有一个且仅有一个应用程序对象;此对象协调正在运行的程序中的其他对象，并从派生`CWinApp`。  

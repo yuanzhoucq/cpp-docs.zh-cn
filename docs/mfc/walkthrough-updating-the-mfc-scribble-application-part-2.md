@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385386"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本演练介绍了如何将 Office Fluent 功能区添加到经典自由曲线应用程序。 本部分将显示如何添加功能区面板和控件，用户可以使用而不是菜单和命令。  

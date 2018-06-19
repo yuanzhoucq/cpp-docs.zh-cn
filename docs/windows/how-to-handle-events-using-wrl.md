@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881148"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 处理事件
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 订阅和处理 Windows 运行时对象的事件。  

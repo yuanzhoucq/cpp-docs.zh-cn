@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235605"
 ---
 # <a name="compiler-error-c2743"></a>编译器错误 C2743
 type： 无法捕获具有 __clrcall 析构函数或复制构造函数的本机类型  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687733"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>如何：实现各种制造者-使用者模式
 本主题介绍如何在你的应用程序中实现制造者-使用者模式。 在此模式下，制造者向消息块发送消息，使用者从该块读取消息。  

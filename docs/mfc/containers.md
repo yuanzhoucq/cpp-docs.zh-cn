@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342181"
 ---
 # <a name="containers"></a>容器
 容器应用程序是可将嵌入项或者链接项并入自己的文档中的应用程序。 容器应用程序管理的文档必须能够存储和显示 OLE 复合文档组件以及应用程序本身创建的数据。 容器应用程序还必须支持用户插入新项或编辑现有项。  

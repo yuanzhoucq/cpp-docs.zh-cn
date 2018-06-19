@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384473"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>更新状态栏窗格的文本
 本文说明如何更改显示在 MFC 状态栏窗格中的文本。 状态栏-类的窗口对象[CStatusBar](../mfc/reference/cstatusbar-class.md) -包含多个"窗格。" 每个窗格都是状态栏中可用于显示信息的矩形区域。 例如，很多应用程序在最右侧的窗格中显示了 CAPS LOCK、NUM LOCK 和其他键的状态。 应用程序通常还在最左侧的窗格（窗格 0）中显示信息性文本，该窗格有时称为“消息窗格”。 例如，默认 MFC 状态栏使用消息窗格来显示用来说明当前选择的菜单项或工具栏按钮的字符串。 在图[状态栏](../mfc/status-bar-implementation-in-mfc.md)演示从应用程序向导创建 MFC 应用程序的状态栏。  

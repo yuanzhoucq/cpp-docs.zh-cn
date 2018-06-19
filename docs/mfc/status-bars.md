@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379627"
 ---
 # <a name="status-bars"></a>状态栏
 状态栏，应用程序向用户显示消息和有用信息但不会中断用户的工作的一个位置。 通常显示在窗口底部，状态栏具有"窗格，"包括"指示器"和"消息行"。 指示器提供 SCROLL LOCK 之类的内容的状态，指示宏录制启用上，依次类推。 状态栏上的消息行可以显示有关程序状态或使用鼠标指向用户是工具栏按钮或菜单项的信息。  

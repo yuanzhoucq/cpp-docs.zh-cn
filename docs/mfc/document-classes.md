@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346612"
 ---
 # <a name="document-classes"></a>文档类
 创建的文档模板对象的文档类对象管理应用程序的数据。 从这些类之一，将为你的文档中派生一个类。  

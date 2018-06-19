@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383388"
 ---
 # <a name="where-to-find-message-maps"></a>消息映射的位置
 当使用应用程序向导创建新的主干应用程序时，应用程序向导为您编写它会创建每个命令目标类的消息映射。 这包括你派生应用程序、 文档、 视图和框架窗口类。 这些消息映射的某些已提供某些消息和预定义的命令，则应用程序向导的条目，而有些则只需将添加的处理程序的占位符。  

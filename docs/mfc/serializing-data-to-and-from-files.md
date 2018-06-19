@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380427"
 ---
 # <a name="serializing-data-to-and-from-files"></a>针对文件进行数据序列化
 持久性基本理念都是一个对象应该能够编写其成员变量，到持久存储的值指示其当前状态。 以后，可以通过读取，或"反序列化，"对象的状态从持久性存储区重新创建该对象。 此处关键的一点是对象本身负责读取和写入其自己的状态。 因此，对于类为永久，它必须实现的基本序列化操作。  

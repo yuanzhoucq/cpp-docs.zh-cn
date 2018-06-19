@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382010"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037：多线程 MFC 2.1 应用程序
 本技术说明最初描述了最初随 Visual C++ 1.0 for Windows NT 提供的 MFC 2.1 的多线程程序的限制。 MFC 3.0 支持直接多线程处理和文档。 有关详细信息，请参阅相应的参考。  

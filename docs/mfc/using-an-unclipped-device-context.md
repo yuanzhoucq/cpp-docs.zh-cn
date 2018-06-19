@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381005"
 ---
 # <a name="using-an-unclipped-device-context"></a>使用未剪辑的设备上下文
 如果您完全确定您的控件不会在其客户端矩形的外部进行绘制，则可以通过禁用对由 `IntersectClipRect` 创建的 `COleControl` 的调用来实现较小但可检测到的增速。 若要执行此操作，请删除**clipPaintDC**从组返回的标志的标志[COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如：  

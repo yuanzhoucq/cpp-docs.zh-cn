@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381119"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>典型 FTP 客户端应用程序中的步骤
 典型 FTP 客户端应用程序创建[CInternetSession](../mfc/reference/cinternetsession-class.md)和[CFtpConnection](../mfc/reference/cftpconnection-class.md)对象。 请注意，这些 MFC WinInet 类并不实际控制代理类型设置;IIS 执行。  

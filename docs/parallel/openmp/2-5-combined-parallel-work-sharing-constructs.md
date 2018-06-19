@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689293"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 组合的并行工作共享构造
 组合的并行工作共享构造是用于指定并行区域包含只有一个工作共享构造的快捷方式。 这些指令的语义相等的显式指定**并行**指令跟 single 的工作共享构造。  

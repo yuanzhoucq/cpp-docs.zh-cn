@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892314"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>保存和加载不同的调色板（图标的图像编辑器）
 可以保存并加载包含调色板[自定义颜色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。 （默认情况下，启动 Visual Studio 时，会自动加载最近使用的调色板。）  

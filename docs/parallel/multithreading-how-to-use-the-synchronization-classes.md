@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689020"
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>多线程处理：如何使用同步类
 编写多线程应用程序时，同步线程之间的资源访问权限是一个常见问题。 具有两个或多个线程同时访问相同的数据可能会导致不必要和不可预知的结果。 例如，一个线程可能正在更新的结构的内容时另一个线程正在读取的内容相同的结构。 它是未知读取线程将会收到哪些数据： 旧的数据、 新写入的数据，或可能两者的混合。 MFC 提供了大量的同步和同步访问类，以帮助解决此问题。 本主题说明可用的类以及如何使用它们在典型的多线程应用程序创建线程安全类。  

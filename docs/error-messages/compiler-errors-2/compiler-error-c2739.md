@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231844"
 ---
 # <a name="compiler-error-c2739"></a>编译器错误 C2739
 “number”: 显式托管或 WinRT 数组维度必须介于 1 和 32 之间  

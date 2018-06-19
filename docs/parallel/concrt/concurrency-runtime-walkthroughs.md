@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686628"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>并发运行时演练
 本部分中的基于方案的主题演示如何使用许多并发运行时的功能。  

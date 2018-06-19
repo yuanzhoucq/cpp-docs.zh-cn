@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383677"
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
 “选项卡控件”类似于笔记本中的分隔条或文件柜中的带标签的文件夹。 使用由类表示的选项卡控件[CTabCtrl](../mfc/reference/ctabctrl-class.md)、 要向用户，建议的对等或每个页面之间的逻辑关系的格式一次一个地显示的信息或控件的多个页。  

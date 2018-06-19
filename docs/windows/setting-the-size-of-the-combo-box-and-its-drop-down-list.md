@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889340"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>设置组合框及其下拉列表的大小
 时将其添加到对话框中，你可以调整大小的组合框。 你还可以指定下拉列表框的大小。  

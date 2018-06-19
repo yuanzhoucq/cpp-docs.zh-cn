@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689488"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 函数
 `omp_get_wtime`函数将返回以秒为单位，由于某些"过去的时间"的已用的挂钟时间双精度浮点值。  实际"过去的时间"是任意的但可以保证无法应用程序执行期间发生更改。 格式如下所示：  

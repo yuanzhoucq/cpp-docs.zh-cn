@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346277"
 ---
 # <a name="command-routing"></a>命令传送
 你使用命令的职责限于在命令及其处理程序函数间建立消息映射连接，也是你使用“属性”窗口的任务。 还必须编写大部分命令处理程序。  

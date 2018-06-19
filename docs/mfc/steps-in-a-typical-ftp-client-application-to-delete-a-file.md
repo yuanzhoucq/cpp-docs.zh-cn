@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380560"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>在典型 FTP 客户端应用程序中用于删除文件的步骤
 下表显示了在典型的删除文件的 FTP 客户端应用程序中可能执行的步骤。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383170"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023：标准 MFC 资源
 此注释将介绍 MFC 库随附的和需要的标准资源。  

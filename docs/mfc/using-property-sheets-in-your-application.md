@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383888"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在您的应用程序中使用属性表
 若要在应用程序中使用属性表，请完成下列步骤：  

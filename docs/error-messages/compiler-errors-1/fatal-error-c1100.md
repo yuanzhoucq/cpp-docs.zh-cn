@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198399"
 ---
 # <a name="fatal-error-c1100"></a>错误 C1100
 无法初始化 OLE： 系统错误消息  

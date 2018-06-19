@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171189"
 ---
 # <a name="compiler-error-c2293"></a>编译器错误 C2293
 “identifie”：使成员变量作为 __based 说明符非法  

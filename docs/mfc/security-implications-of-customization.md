@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379413"
 ---
 # <a name="security-implications-of-customization"></a>自定义对安全有何影响
 本主题讨论了 MFC 中潜在的安全漏洞。  

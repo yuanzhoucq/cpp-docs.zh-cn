@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889402"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>设置光标&#39;s 作用点 （图标的图像编辑器）
 作用点[光标](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)是点到其 Windows 所引用的跟踪光标的位置。 默认情况下，作用点设置为的光标 （坐标为 0，0） 的左上角。 中的热点属性[属性窗口](/visualstudio/ide/reference/properties-window)演示作用点坐标。  

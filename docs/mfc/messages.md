@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344099"
 ---
 # <a name="messages"></a>消息
 中的消息循环**运行**类的成员函数`CWinApp`检索排队生成的各种事件消息。 例如，当用户单击鼠标时，Windows 将发送若干与鼠标有关的消息，如 `WM_LBUTTONDOWN`（按鼠标左键时）和 `WM_LBUTTONUP`（按鼠标右键时）。 应用程序消息循环的框架的实现会将消息调度到合适的窗口。  

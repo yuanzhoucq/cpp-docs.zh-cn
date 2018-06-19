@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233851"
 ---
 # <a name="compiler-error-c2757"></a>编译器错误 C2757
 symbol： 已存在具有此名称的符号，因此此名称不能用作命名空间名称  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690525"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26   使用 threadprivate 指令
 下面的示例演示如何使用`threadprivate`指令 ([部分 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) 23 页上) 为每个线程提供单独的计数器。  

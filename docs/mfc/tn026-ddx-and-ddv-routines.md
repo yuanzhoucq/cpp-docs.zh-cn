@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386049"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
 > [!NOTE]
@@ -84,7 +85,7 @@ DDV_Custom(pDX,
   
  `DoDataExchange`非常相似，成员函数即将`Serialize`成员函数-它是负责从外部的形式获取或设置数据，为/（在这种情况下控件在对话框中） 从/到类中的成员数据。 `pDX`参数是执行数据交换的上下文，它是类似于`CArchive`参数`CObject::Serialize`。 `pDX` (`CDataExchange`对象) 都有标志非常类似的方向`CArchive`方向标志：  
   
--   如果**！ m_bSaveAndValidate**，然后将数据状态加载到控件。  
+-   如果 **！ m_bSaveAndValidate**，然后将数据状态加载到控件。  
   
 -   如果`m_bSaveAndValidate`，然后从控件中设置数据状态。  
   

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688123"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic 构造
 `atomic`指令可确保特定内存位置而不是将其公开到的多个可能性的更新是以原子方式，同时编写线程。 语法`atomic`指令是，如下所示：  

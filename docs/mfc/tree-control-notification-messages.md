@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385731"
 ---
 # <a name="tree-control-notification-messages"></a>树控件通知消息
 树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 发送以下通知消息作为**WM_NOTIFY**消息：  

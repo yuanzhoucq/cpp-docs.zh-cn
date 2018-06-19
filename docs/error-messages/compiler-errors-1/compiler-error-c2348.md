@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222236"
 ---
 # <a name="compiler-error-c2348"></a>编译器错误 C2348
 type name： 不是 C 样式聚合的不能嵌入的 IDL 中导出  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382293"
 ---
 # <a name="using-cobject"></a>使用 CObject
 [CObject](../mfc/reference/cobject-class.md)对于大多数的 Microsoft 基础类库 (MFC) 是根的基类。 `CObject`类包含许多有用的功能，你可能想要将合并到您自己的程序对象，包括序列化支持、 运行时类信息和对象诊断输出。 如果你是从你的类派生`CObject`，你的类可以利用这些`CObject`功能。  

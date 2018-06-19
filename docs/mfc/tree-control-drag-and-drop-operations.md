@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382760"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>树控件拖放操作
 树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 发送通知，当用户开始拖动项。 控件将发送[TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504)通知消息，当用户开始拖动项时鼠标左键和[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)通知消息，当用户开始拖动与右侧的按钮。 你可以防止树控件发送这些通知通过为树控件提供**TVS_DISABLEDRAGDROP**样式。  

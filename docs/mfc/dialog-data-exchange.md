@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345135"
 ---
 # <a name="dialog-data-exchange"></a>对话框数据交换
 如果使用 DDX 机制，则可设置对话框对象的成员变量的初始值（通常在 `OnInitDialog` 处理程序或对话框构造函数中）。 立即显示对话框之前，框架的 DDX 机制会将成员变量的值传输到的控件在对话框中，它们显示哪个位置对话框本身中出现时响应`DoModal`或**创建**. `OnInitDialog` 中的 `CDialog` 的默认实现调用 `UpdateData` 类的 `CWnd` 成员函数以在对话框中初始化控件。  

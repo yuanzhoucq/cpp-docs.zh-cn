@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196488"
 ---
 # <a name="compiler-error-c2383"></a>编译器错误 C2383
 *符号*： 默认自变量不能存在于此符号  

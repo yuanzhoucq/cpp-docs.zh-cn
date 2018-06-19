@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689696"
 ---
 # <a name="call-class"></a>call 类
 `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。  

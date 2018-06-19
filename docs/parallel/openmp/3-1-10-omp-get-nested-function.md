@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686716"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 函数
 `omp_get_nested`如果它处于禁用状态，函数将返回一个非零值，如果启用了嵌套并行机制和 0。 有关嵌套并行的详细信息，请参阅第页 40 页的部分 3.1.9。 格式如下所示：  

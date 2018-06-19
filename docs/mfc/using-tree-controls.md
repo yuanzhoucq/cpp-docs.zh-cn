@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384864"
 ---
 # <a name="using-tree-controls"></a>使用树控件
 树控件的典型用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循以下模式：  

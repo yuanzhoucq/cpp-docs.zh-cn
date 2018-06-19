@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235342"
 ---
 # <a name="compiler-error-c2662"></a>编译器错误 C2662
 function： 无法将从 type1 到 type2 的 this 指针转换  

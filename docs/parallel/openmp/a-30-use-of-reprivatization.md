@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689605"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   重新私有化的使用
 下面的示例演示变量的 reprivatization。 可以标记私有变量`private`再次嵌套指令中。 它们无需在封闭的并行区域中共享。  

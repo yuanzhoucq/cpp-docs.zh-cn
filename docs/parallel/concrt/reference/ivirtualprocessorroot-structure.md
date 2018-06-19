@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692418"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 结构
 线程代理可在其中执行的硬件线程的抽象。  

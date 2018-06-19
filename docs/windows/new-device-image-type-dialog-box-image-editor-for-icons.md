@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879615"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>新&lt;设备&gt;图像类型对话框 （图标的图像编辑器）
 使用此选项可创建指定类型的新设备映像。 若要打开**新建\<设备 > 图像**对话框中，单击**新图像类型**上**映像**菜单。  

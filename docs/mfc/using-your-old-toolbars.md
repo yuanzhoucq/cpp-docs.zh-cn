@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385117"
 ---
 # <a name="using-your-old-toolbars"></a>使用您的旧工具栏
 如果你已使用以前版本的 Visual c + + 来创建自定义的工具栏，类的新实现[CToolBar](../mfc/reference/ctoolbar-class.md)可能导致问题。 因此您无需放弃您的旧工具栏来使用新的功能，以前的实现仍受支持。  

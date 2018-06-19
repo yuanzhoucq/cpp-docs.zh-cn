@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243516"
 ---
 # <a name="compiler-error-c2948"></a>编译器错误 C2948
 显式实例化;存储类说明符 specifier 专用化中不允许  

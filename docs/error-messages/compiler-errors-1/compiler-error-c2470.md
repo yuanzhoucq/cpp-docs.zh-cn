@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196709"
 ---
 # <a name="compiler-error-c2470"></a>编译器错误 C2470
 function： 看起来像函数定义，但没有参数列表;正在跳过明显正文  

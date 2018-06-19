@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384705"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：将 MFC 作为 DLL 的一部分使用
 本说明介绍正则 MFC Dll，它允许你使用 MFC 库作为 Windows 动态链接库 (DLL) 的一部分。 此说明假定您已熟悉 Windows DLL 及其生成方式。 有关 MFC 扩展 Dll，使用它可以创建扩展 MFC 库中，请参阅[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。  

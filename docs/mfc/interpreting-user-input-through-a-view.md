@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349424"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>通过视图解释用户输入
 视图的其他成员函数处理和解释所有用户输入。 通常，你将定义消息处理程序成员函数处理视图类中：  

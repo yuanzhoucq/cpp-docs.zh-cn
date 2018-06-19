@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385533"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 套接字：对存档使用套接字
 本指南介绍了[CSocket 编程模型](#_core_the_csocket_programming_model)。 类[CSocket](../mfc/reference/csocket-class.md)比类提供的抽象级别更高的套接字支持[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化协议的版本将传递数据传入和传出套接字对象，通过 MFC [CArchive](../mfc/reference/carchive-class.md)对象。 `CSocket` 提供锁定（在管理对 Windows 消息的背景处理时）并为您提供对 `CArchive` 的访问权限（其将管理您必须使用原始 API 或类 `CAsyncSocket` 亲自进行的通信的多个方面）。  

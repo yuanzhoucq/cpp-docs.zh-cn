@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341099"
 ---
 # <a name="clipboard"></a>剪贴板
 此系列文章介绍如何在 MFC 应用程序中实现对 Windows 剪贴板的支持。 两种方式使用 Windows 剪贴板：  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381165"
 ---
 # <a name="registration"></a>注册
 当用户需要将一个 OLE 项插入应用程序中时，OLE 会显示一个对象类型的列表以供选择。 OLE 从系统注册数据库获取此列表，该数据库包含所有服务器应用程序提供的信息。 当服务器注册自身时，它放入系统注册数据库（注册表）中的项将描述它提供的每种对象类型、文件扩展名、自身的路径以及其他信息。  

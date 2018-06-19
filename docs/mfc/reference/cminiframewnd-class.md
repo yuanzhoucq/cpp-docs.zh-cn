@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378377"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 类
 表示通常在浮动工具条周围出现的半高框架窗口。  

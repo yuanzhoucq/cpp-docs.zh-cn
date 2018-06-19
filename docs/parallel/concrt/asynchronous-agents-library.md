@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688991"
 ---
 # <a name="asynchronous-agents-library"></a>异步代理库
 异步代理库 (或仅仅称为*代理库*) 提供编程模型，你可以提高启用并发的应用程序开发的可靠性。 代理库是一个 c + + 模板库，以促进基于参与者的编程模型和进程内消息传递用于粗粒度数据流和管道任务。 代理库基于并发运行时的计划和资源管理组件。  

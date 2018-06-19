@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382081"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Windows 中不是从 CFrameWnd 派生的工具提示
 本文章系列介绍的不派生自的窗口中包含的控件启用工具提示[CFrameWnd](../mfc/reference/cframewnd-class.md)。 文章[工具栏工具提示](../mfc/toolbar-tool-tips.md)提供有关工具提示的信息中的控件`CFrameWnd`。  

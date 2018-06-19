@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705388"
 ---
 # <a name="norm-class"></a>norm 类
 表示范数。 每个元素都浮点数中的范围 [-1.0 f、 1.0 f]。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890283"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>“文本工具”对话框（图标的图像编辑器）
 使用**文本工具**对话框中，将文本添加到光标、 位图或图标资源。  

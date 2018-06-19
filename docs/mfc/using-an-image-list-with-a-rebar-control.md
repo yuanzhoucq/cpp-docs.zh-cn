@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381740"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>对 Rebar 控件使用图像列表
 每个 rebar 带区除了别的之外还可以包含关联图像列表的图像。 以下过程详述了在 rebar 带区显示图像的必需步骤。  

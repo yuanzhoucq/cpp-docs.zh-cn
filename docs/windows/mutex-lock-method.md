@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880867"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 方法
 等到当前对象或与指定句柄，关联的互斥体对象释放互斥体，或指定的超时间隔已过去。  

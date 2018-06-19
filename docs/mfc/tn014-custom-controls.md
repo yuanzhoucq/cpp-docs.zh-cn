@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384577"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自定义控件
 此说明描述 MFC 对自定义和自我绘制控件的支持。 它还描述了动态子类，并描述了之间的关系[CWnd](../mfc/reference/cwnd-class.md)对象和`HWND`s。  

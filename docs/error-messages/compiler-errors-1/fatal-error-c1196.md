@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199010"
 ---
 # <a name="fatal-error-c1196"></a>错误 C1196
 “identifier”：在类型库“typelib”中找到的标识符不是有效的 C++ 标识符  

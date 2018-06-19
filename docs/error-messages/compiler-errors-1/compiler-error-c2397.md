@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196878"
 ---
 # <a name="compiler-error-c2397"></a>编译器错误 C2397
 从 type_1 类型到 type_2 转换需要收缩转换  

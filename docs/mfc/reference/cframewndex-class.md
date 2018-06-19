@@ -193,6 +193,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377818"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展[CFrameWnd](../../mfc/reference/cframewnd-class.md)类。  

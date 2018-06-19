@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385334"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE 自动化实现
 > [!NOTE]
@@ -146,7 +147,7 @@ property Y    (DISPID)0x00010002
  指定属性的类型的值。  
   
 ## <a name="remarks"></a>备注  
- 此宏非常类似于`DISP_PROPERTY`，只不过它接受一个额外的参数。 这个附加参数， *pfnAfterSet，*应会返回任何内容并没有采用任何参数 void OnPropertyNotify() 的成员函数。 它将调用**后**成员变量已被修改。  
+ 此宏非常类似于`DISP_PROPERTY`，只不过它接受一个额外的参数。 这个附加参数， *pfnAfterSet，* 应会返回任何内容并没有采用任何参数 void OnPropertyNotify() 的成员函数。 它将调用**后**成员变量已被修改。  
   
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM-宏说明  
   

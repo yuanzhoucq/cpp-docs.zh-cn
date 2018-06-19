@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385607"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定义的消息和资源
 > [!NOTE]
@@ -161,7 +162,7 @@ ms.lasthandoff: 05/04/2018
  有关详细信息，请参阅的实现`CMiniFrameWnd`。  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- 当激活或停用在其"顶级组"窗口时，此消息是发送到顶级窗口。 如果这是一个顶级窗口 （没有父或所有者），或属于这样一个窗口，窗口将是顶级组的一部分。 此消息是在使用类似**WM_ACTIVATEAPP，**但可在属于不同的进程的 windows （常见 OLE 应用程序中） 的单个窗口层次结构中的混合其中的情况下。  
+ 当激活或停用在其"顶级组"窗口时，此消息是发送到顶级窗口。 如果这是一个顶级窗口 （没有父或所有者），或属于这样一个窗口，窗口将是顶级组的一部分。 此消息是在使用类似**WM_ACTIVATEAPP，** 但可在属于不同的进程的 windows （常见 OLE 应用程序中） 的单个窗口层次结构中的混合其中的情况下。  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP，WM_HELPHITTEST，WM_EXITHELPMODE  
  这些消息的上下文相关帮助实现中使用。 请参阅[技术注意 28](../mfc/tn028-context-sensitive-help-support.md)有关详细信息。  

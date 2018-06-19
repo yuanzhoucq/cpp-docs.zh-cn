@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230982"
 ---
 # <a name="compiler-error-c2692"></a>编译器错误 C2692
 function_name: C 编译器中所需的完全原型函数 ' / clr 选项  

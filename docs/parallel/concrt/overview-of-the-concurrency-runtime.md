@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692419"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>并发运行时的概述
 本文档对并发运行时进行了概述。 它介绍并发运行时的优势、何时使用它、其组件如何相互交互以及与操作系统和应用程序交互。  

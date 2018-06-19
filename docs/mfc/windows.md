@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384460"
 ---
 # <a name="windows"></a>Windows
 本系列文章介绍 MFC 框架中的窗口对象。 所有 MFC 窗口都派生自类[CWnd](../mfc/reference/cwnd-class.md)，包括框架窗口、 视图、 对话框和控件。  

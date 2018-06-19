@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688786"
 ---
 # <a name="schedule-groups"></a>计划组
 本文档介绍并发运行时中的计划组的角色。 A*计划组*关联，或，相关的任务组合到一起。 每个计划程序具有一个或多个计划组。 当你需要在任务之间处于较高位置时（例如，当一组相关的任务受益于在相同的处理器节点上执行操作时），可使用计划组。 如果应用程序特定的质量要求，例如，当你想要限制分配给一组任务的处理资源量，相反，使用计划程序实例。 有关计划程序实例的详细信息，请参阅[计划程序实例](../../parallel/concrt/scheduler-instances.md)。  

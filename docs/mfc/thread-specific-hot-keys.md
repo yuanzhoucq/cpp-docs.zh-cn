@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380414"
 ---
 # <a name="thread-specific-hot-keys"></a>线程特定的热键
 应用程序设置线程特定的热键 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 通过使用 Windows **RegisterHotKey**函数。 当用户按线程特定的热键时，Windows 文章[WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279)到特定线程的消息队列的开头的消息。 **WM_HOTKEY**消息包含的虚拟键代码、 位移状态和用户定义的特定的热键按下的 ID。 有关标准虚拟键代码的列表，请参见 Winuser.h。 此方法的详细信息，请参阅[RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)。  

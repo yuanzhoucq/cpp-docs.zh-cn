@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381707"
 ---
 # <a name="tree-control-label-editing"></a>树控件标签编辑
 用户可以直接编辑树控件中的项的标签 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))，其**TVS_EDITLABELS**样式。 用户通过单击具有焦点的项的标签开始编辑。 应用程序开始编辑通过使用[EditLabel](../mfc/reference/ctreectrl-class.md#editlabel)成员函数。 树控件在编辑开始以及编辑取消或完成时发送通知。 当编辑完成时，您负责根据需要更新项的标签。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687271"
 ---
 # <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 函数
 **Omp_set_nested**函数启用或禁用嵌套并行度。 格式如下所示：  

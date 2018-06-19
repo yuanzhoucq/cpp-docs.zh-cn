@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383937"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows 套接字：数据报套接字
 本指南介绍了数据报套接字，两个可用的 Windows 套接字类型之一。 (另一种类型是[流套接字](../mfc/windows-sockets-stream-sockets.md)。)  

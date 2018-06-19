@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234778"
 ---
 # <a name="compiler-error-c2767"></a>编译器错误 C2767
 管理或 WinRTarray 维度不匹配： 应有 N 个自变量-提供了 M  

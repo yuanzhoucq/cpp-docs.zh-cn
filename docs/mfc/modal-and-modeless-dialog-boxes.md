@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346556"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>模式和无模式对话框
 你可以使用类[CDialog](../mfc/reference/cdialog-class.md)管理两种类型的对话框：  

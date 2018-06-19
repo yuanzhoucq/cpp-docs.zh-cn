@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386140"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用类编写 Windows 应用程序
 综上所述，Microsoft 基础类 (MFC) 库中的类，构成的"应用程序框架，"在其生成用于 Windows 操作系统的应用程序。 在非常一般的级别，框架的应用程序定义框架，并提供可以放置到该主干上的标准用户界面实现。 你的作业作为程序员是主干的填写其余中，这是主干的这些特定于你的应用程序的内容。 可以通过使用 MFC 应用程序向导创建非常全面初学者应用程序的文件中获取一个良好的开端。 使用 Microsoft Visual c + + 资源编辑器直观地设计用户界面元素类视图命令连接到代码中和类库的这些元素来实现你的应用程序特定逻辑。  

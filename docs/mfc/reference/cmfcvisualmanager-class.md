@@ -359,6 +359,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378977"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager`继承而来。  

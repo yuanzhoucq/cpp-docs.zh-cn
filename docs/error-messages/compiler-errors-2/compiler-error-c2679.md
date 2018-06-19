@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231808"
 ---
 # <a name="compiler-error-c2679"></a>编译器错误 C2679
 二进制 operator： 未找到接受的右操作数的类型 type （或没有可接受的转换）  
