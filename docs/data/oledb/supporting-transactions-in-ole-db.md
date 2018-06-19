@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110336"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
 A[事务](../../data/transactions-mfc-data-access.md)是组，或批处理，一系列与数据源的更新，以便所有成功并同时提交，或 （如果任何之一失败） 会提交任何一种方法并回滚整个事务。 此过程可确保数据源上的结果的完整性。  

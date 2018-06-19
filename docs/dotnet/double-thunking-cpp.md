@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111203"
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 双重形式转换是指的是托管的上下文调用 Visual c + + 托管函数，并且其中程序执行函数调用以便调用托管的函数调用函数的本机入口点时，你可以遇到的性能下降。 本主题讨论双重形式转换发生的位置以及如何避免来提高性能。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270072"
 ---
 # <a name="compiler-error-c3853"></a>编译器错误 C3853
 '=': 是非法的重新初始化引用或通过引用向函数分配  

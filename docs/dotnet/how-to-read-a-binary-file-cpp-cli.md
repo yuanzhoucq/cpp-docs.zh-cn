@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129364"
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>如何：读取二进制文件 (C++/CLI)
 下面的代码示例演示如何从文件读取二进制数据，通过使用两个类从<xref:System.IO?displayProperty=fullName>命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream> 表示实际的文件。 <xref:System.IO.BinaryReader> 提供允许访问二进制流的接口。  

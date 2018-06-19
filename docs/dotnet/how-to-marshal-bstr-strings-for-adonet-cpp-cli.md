@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136644"
 ---
 # <a name="how-to-marshal-bstr-strings-for-adonet-ccli"></a>如何：为 ADO.NET 封送 BSTR 字符串 (C++/CLI)
 演示如何添加 COM 字符串 (`BSTR`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到`BSTR`。  

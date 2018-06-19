@@ -3,13 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "使用 C++ 文档的 Linux 开发"
-description: "创建和调试在 Linux 上运行的应用程序。"
+title: 使用 C++ 文档的 Linux 开发
+description: 创建和调试在 Linux 上运行的应用程序。
 ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794175"
 ---
 # <a name="linux-development-with-c-documentation"></a>使用 C++ 文档的 Linux 开发
 

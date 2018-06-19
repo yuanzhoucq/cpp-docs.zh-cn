@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133412"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>如何：诊断和修复程序集兼容性问题 (C++/CLI)
 本主题介绍在编译时引用程序集的版本不匹配在运行时，引用的程序集的版本时可能发生以及如何避免此问题。  

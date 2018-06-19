@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134467"
 ---
 # <a name="modulus-stlclr"></a>modulus (STL/CLR)
 此模板类描述某个函数，当调用，则返回第二个模的第一个参数。 使用它指定根据其自变量类型的函数对象。  

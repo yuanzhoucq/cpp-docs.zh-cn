@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130030"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>如何：使用 .NET Framework 绘制形状
 下面的代码示例使用<xref:System.Drawing.Graphics>类来修改<xref:System.Windows.Forms.Form.OnPaint%2A>事件处理程序来检索指向<xref:System.Drawing.Graphics>主窗体的对象。 此指针然后用于设置窗体的背景色和绘制直线和弧线使用<xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName>和<xref:System.Drawing.Graphics.DrawArc%2A>方法。  

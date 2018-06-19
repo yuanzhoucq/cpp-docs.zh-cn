@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159231"
 ---
 # <a name="partition-stlclr"></a>partition (STL/CLR)
 将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。  

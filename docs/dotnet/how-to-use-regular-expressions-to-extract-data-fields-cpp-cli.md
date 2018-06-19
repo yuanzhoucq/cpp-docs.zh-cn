@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129663"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>如何：使用正则表达式提取数据字段 (C++/CLI)
 下面的代码示例演示如何将正则表达式来从格式化字符串中提取数据。 下面的代码示例使用<xref:System.Text.RegularExpressions.Regex>类来指定对应于电子邮件地址的模式。 此模式包括字段标识符，可以用于检索的用户和主机名部分的每个电子邮件地址。 <xref:System.Text.RegularExpressions.Match>类用于执行实际的模式匹配。 如果给定的电子邮件地址是否有效，用户名称和主机名的提取和显示。  

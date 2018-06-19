@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129806"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 查找第一个元素的位置在排序的范围的值小于或等效指定值，其中可通过二元谓词指定的排序条件。  

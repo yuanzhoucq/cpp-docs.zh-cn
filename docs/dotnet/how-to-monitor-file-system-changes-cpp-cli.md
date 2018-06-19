@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130700"
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>如何：监视文件系统更改 (C++/CLI)
 下面的代码示例使用<xref:System.IO.FileSystemWatcher>以注册事件对应于正在创建，已更改、 删除或重命名的文件。 而不是定期轮询更改文件的目录，你可以使用<xref:System.IO.FileSystemWatcher>类激发事件时检测到更改。  

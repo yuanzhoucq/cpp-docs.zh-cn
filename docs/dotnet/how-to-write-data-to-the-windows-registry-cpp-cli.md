@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130797"
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>如何：将数据写入 Windows 注册表 (C++/CLI)
 下面的代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>密钥创建的可写实例<xref:Microsoft.Win32.RegistryKey>类对应于**软件**密钥。 <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>方法然后用于创建新的密钥和所添加的键/值对。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127817"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>如何：检索当前用户名 (C++/CLI)
 下面的代码示例演示如何检索当前用户名 （登录到 Windows 用户的名称）。 名称存储在<xref:System.Environment.UserName%2A>中定义的字符串<xref:System.Environment>命名空间。  

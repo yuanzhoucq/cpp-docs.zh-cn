@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111050"
 ---
 # <a name="user-record"></a>用户记录
 用户记录提供表示行集列数据的代码和数据结构。 在编译时或在运行时，可以创建用户记录。 当你创建提供程序使用 ATL OLE DB 提供程序向导时，向导将创建如下所示 （假设你指定"MyProvider"的提供程序名称 [短名称]） 的默认用户记录：  

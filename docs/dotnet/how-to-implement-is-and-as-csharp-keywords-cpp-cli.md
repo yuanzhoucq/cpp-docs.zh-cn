@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128613"
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>如何：实现 C# 的 is 和 as 关键字 (C++/CLI)
 本主题演示如何实现的功能`is`和`as`Visual c + + 中的 C# 关键字。  

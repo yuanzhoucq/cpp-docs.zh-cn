@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132773"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 C++ 互操作封送回调和委托
 本主题演示了回调的封送处理和使用 Visual c + + 的托管和非托管代码之间委托 （回调的托管的版本）。  

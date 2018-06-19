@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134892"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送嵌入式指针
 可以使用平台调用 (P/Invoke) 的功能的托管代码中调用在非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项来进行互操作。 但是，不同于其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)和[How to： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  

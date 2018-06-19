@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128636"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>如何：检索本地计算机名称 (C++/CLI)
 下面的代码示例演示如何检索本地计算机名称 （因为它的计算机的名称显示在网络上）。 你可以完成此操作通过获取<xref:System.Environment.MachineName%2A>中定义的字符串<xref:System.Environment>命名空间。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112740"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供程序模板 (C++)
 OLE DB 是 Microsoft 通用数据访问策略的一个重要部分。 OLE DB 设计允许来自任何数据源的高性能的数据访问。 任何表格数据将可查看通过 OLE DB 而不考虑它是否来自一个数据库。 此灵活性带给极大的方便。  

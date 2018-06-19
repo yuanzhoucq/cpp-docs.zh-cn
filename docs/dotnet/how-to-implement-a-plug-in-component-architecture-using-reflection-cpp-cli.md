@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135208"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>如何：使用反射实现插件组件体系结构 (C++/CLI)
 下面的代码示例演示使用反射可以实现一个简单的"插件"体系结构。 第一个列表应用程序，且第二个插件。 应用程序是填充本身使用作为命令行自变量提供该插件 DLL 中任何基于窗体的类的多个文档窗体。  

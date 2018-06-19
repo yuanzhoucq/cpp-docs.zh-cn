@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172739"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 此模板类描述控制元素的长短序列，可先入先出访问的对象。 使用容器适配器`queue`来管理为队列的基础容器。  
