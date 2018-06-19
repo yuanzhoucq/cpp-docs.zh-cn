@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388823"
 ---
 # <a name="escape-sequences"></a>转义序列
 由反斜杠 (\\) 后接字母或数字组合构成的字符组合称为“转义序列”。 要在字符常量中表示换行符，单引号或某些其他字符，你必须使用转义序列。 转义序列被视为单个字符，因此，它是有效的字符常量。  

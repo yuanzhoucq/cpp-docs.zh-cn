@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380584"
 ---
 # <a name="ansi-conformance"></a>ANSI 一致性
 Microsoft C 遵循在 ANSI C 标准的 9899:1990 版本中规定的 C 语言的标准。  

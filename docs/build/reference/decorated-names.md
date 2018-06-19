@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379375"
 ---
 # <a name="decorated-names"></a>修饰名
 C 和 C++ 程序中的函数、数据和对象均在内部由其修饰名表示。 A*修饰名*是由编译器在编译的对象、 数据或函数定义期间创建的已编码的字符串。 它记录名称以及调用约定、类型、函数参数和其他信息。 此名称修饰，也称为*名称重整*、 帮助链接器查找正确的函数和对象链接可执行文件时。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383626"
 ---
 # <a name="expanding-wildcard-arguments"></a>扩展通配符自变量
 **Microsoft 专用**  

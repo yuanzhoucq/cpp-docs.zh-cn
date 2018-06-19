@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381182"
 ---
 # <a name="c-language-reference"></a>C 语言参考
 《C 语言参考》介绍了在 Microsoft C 中实现的 C 编程语言。本书的组织基于 ANSI C 标准（有时称为 C89）以及关于 ANSI C 标准的 Microsoft 扩展的其他材料。  

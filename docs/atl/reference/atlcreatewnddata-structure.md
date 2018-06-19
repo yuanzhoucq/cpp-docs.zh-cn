@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255790"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 结构
 此结构包含类实例数据中的代码窗口中 atl。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388723"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 存储类说明符
 使用 `extern` 存储类说明符声明的变量是对名称与在程序的任何源文件的外部级别定义的名称相同的变量的引用。 内部 `extern` 声明用于使外部级别变量定义在块中可见。 除非在外部级别另有声明，否则使用 `extern` 关键字声明的变量仅在声明它的块中可见。  

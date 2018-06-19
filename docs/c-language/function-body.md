@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384667"
 ---
 # <a name="function-body"></a>函数体
 “函数体”是包含指定函数行为的语句的复合语句。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389775"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 下表是大多数标识符的生存期和可见性特征的摘要。 前三列提供了定义生存期和可见性的特性。 具有前三列提供的特性的标识符具有在第四和第五列中显示的生存期和可见性。 但是，该表未涵盖所有可能的情况。 有关详细信息，请参考[存储类](../c-language/c-storage-classes.md)。  

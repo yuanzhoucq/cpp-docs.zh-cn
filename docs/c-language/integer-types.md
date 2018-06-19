@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386798"
 ---
 # <a name="integer-types"></a>整型
 根据每个整数常量的值及其表示方式为该常量提供一个类型。 可通过将字母 **l** 或 **L** 追加到任何整数常量的末尾来将该常量强制转换为类型 **long**；可通过将 **u** 或 **U** 追加到该值来将其强制转换为类型 `unsigned`。 小写字母 **l** 会与数字 1 发生混淆，应避免此情况出现。 某些形式的 **long** 整数常量如下所示：  

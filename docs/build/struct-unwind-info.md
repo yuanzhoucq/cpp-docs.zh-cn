@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383236"
 ---
 # <a name="struct-unwindinfo"></a>UNWIND_INFO 结构
 展开数据信息结构用于记录的函数具有的堆栈指针和非易失寄存器在堆栈上的保存位置的影响：  

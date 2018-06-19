@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380610"
 ---
 # <a name="types-and-storage"></a>类型和存储
 本部分介绍的枚举和存储的数据类型的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]体系结构。  

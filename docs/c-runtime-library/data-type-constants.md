@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392141"
 ---
 # <a name="data-type-constants"></a>数据类型常量
 数据类型常量是实现相关的整数数据类型允许的值范围。 下面列出的常数提供了整数数据类型的范围，并在 LIMITS.H 中进行了定义。  

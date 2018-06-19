@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382791"
 ---
 # <a name="lexical-grammar"></a>词法语法
 -   [标记](../c-language/summary-of-tokens.md)  

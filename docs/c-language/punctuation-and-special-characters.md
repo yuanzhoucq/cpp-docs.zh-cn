@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383899"
 ---
 # <a name="punctuation-and-special-characters"></a>标点和特殊字符
 C 字符集中的标点和特殊字符各有其用途，从组织程序文本到定义编译器或已编译程序所执行的任务。它们不指定要执行的操作。 某些标点符号也是运算符（请参阅[运算符](../c-language/c-operators.md)）。 编译器从上下文确定其用途。  

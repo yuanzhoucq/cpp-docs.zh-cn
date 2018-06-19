@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380480"
 ---
 # <a name="search-paths-for-dependents"></a>依赖项的搜索路径
 每个依赖项有一个可选的搜索路径，指定，如下所示：  

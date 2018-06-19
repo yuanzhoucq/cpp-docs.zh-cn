@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379505"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>提高时间关键代码的技巧
 编写快速代码需要了解应用程序的所有方面和它如何与系统交互。 此主题建议的方法可替代一些更明显的编码方法，帮助确保代码的时间关键部分满意地执行。  

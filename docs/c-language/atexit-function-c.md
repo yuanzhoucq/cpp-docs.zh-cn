@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381221"
 ---
 # <a name="atexit-function-c"></a>atexit 函数 (C)
 **ANSI 4.10.4.3** 如果参数的值为零、EXIT_SUCCESS 或 EXIT_FAILURE 之外的其他值，则为 `atexit` 函数返回的状态  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381780"
 ---
 # <a name="converting-multibyte-characters"></a>转换多字节字符
 **ANSI 3.1.3.4** 用于将多字节字符转换为宽字符常量的相应宽字符（代码）的当前区域设置  

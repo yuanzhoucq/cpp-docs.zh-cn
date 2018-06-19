@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354725"
 ---
 # <a name="building-and-testing-the-atl-project"></a>生成和测试 ATL 项目
 中所述[插入复合控件](../atl/inserting-a-composite-control.md)，其中一个项目的初始组件是一个承载新的复合控件的默认 HTML 页面。 完成修改复合控件后，单击**生成解决方案**或**重新生成解决方案**从**生成**菜单。 项目成功生成后，加载 HTML 页中，Internet Explorer 或另一个浏览器到位于你的复合控件项目的根目录，并测试你的控件的功能。  

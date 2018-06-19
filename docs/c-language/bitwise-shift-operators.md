@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383249"
 ---
 # <a name="bitwise-shift-operators"></a>按位移位运算符
 移位运算符按第二个操作数指定的位置数量向左 (`<<`) 或向右 (`>>`) 移动第一个操作数。  

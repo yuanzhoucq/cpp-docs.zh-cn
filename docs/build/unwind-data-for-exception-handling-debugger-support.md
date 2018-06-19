@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380428"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>为异常处理和调试器支持展开数据
 本部分讨论异常处理和调试支持所需的数据结构。  

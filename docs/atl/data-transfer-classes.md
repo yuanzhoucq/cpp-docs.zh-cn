@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354095"
 ---
 # <a name="data-transfer-classes"></a>数据传输类
 以下类支持各种类型的数据传输：  

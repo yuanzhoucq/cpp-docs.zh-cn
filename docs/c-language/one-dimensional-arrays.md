@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388901"
 ---
 # <a name="one-dimensional-arrays"></a>一维数组
 后跟用方括号 ([ ]) 括起的表达式的后缀表达式是数组对象元素的下标表示形式。 下标表达式表示在表示为以下形式时位于超出 postfix-expression 的 expression 位置的地址的值  

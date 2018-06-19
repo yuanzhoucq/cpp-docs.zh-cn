@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385671"
 ---
 # <a name="c-bit-fields"></a>C 位域
 除了结构或联合的成员的声明符外，结构声明符也可以是指定数目的位，称为“位域”。 其长度从字段名称的声明符到冒号。 位域被解释为整型类型。  

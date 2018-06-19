@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386967"
 ---
 # <a name="values"></a>值
 **ANSI 3.1.2.5** 各种类型的浮点数的表示形式和值集  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379427"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮点表示形式
 Microsoft Visual c + + 是与 IEEE 数值标准保持一致。 有三个内部类型的实际数量。 实际\*4 和 real\*在 Visual c + + 中使用 8。 实际\*使用 word 声明 4 **float**。 实际\*使用 word 声明 8 **double**。 在 32 位 Windows 编程中，`long double`数据类型映射到**double**。 没有，但是，程序集语言支持用于计算使用 real * 10 个数据类型。  

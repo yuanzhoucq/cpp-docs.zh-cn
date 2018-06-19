@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380360"
 ---
 # <a name="abort-function-c"></a>abort 函数 (C)
 **ANSI 4.10.4.1** 有关打开的文件和临时文件的 abort 函数的行为  

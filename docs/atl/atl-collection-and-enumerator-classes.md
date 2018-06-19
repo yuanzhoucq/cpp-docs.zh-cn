@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354441"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL 集合和枚举器类
 ATL 提供的以下类，可帮助你实现集合和枚举数。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392583"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练： 创建和使用你自己动态链接库 （c + +）
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 
    ![在 Windows 桌面项目向导中创建 DLL](media/mathlibrary-desktop-project-wizard-dll.png "在 Windows 桌面项目向导中创建 DLL")
 
-1. 选择**“确定”**按钮，创建单元测试项目。
+1. 选择 **“确定”** 按钮，创建单元测试项目。
 
 > [!NOTE]
 > 在 Visual Studio 2017 版本 15.3 修复某个问题，需要执行其他步骤。 按照这些说明来确定是否需要进行此更改。

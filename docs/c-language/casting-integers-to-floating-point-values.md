@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381620"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>将整数转换为浮点值
 **ANSI 3.2.1.3** 当一个整数转换为无法确切表示原始值的浮点数时的截断方向  

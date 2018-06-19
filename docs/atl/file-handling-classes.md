@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353945"
 ---
 # <a name="file-handling-classes"></a>文件处理类
 这些类提供用于处理文件、 临时文件和内存映射文件的方法。  

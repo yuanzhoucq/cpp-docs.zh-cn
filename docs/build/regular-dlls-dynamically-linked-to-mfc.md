@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383719"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>动态链接到 MFC 的正则 MFC Dll
 MFC DLL 动态链接到 MFC 正则表达式是在内部，使用 MFC 的 DLL，可以由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 名称所述，使用动态链接库版本的 MFC （也称为 MFC 的共享版本） 进行构建这种类型的 DLL。 函数通常是从正则表达式使用标准的 C 界面的 MFC DLL 导出的。  

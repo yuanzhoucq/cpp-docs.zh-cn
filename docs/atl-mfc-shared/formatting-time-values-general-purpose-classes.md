@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354650"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>格式设置的时间值： 的通用类
 以下过程演示如何设置时间值的格式。  

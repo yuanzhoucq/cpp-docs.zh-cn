@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392356"
 ---
 # <a name="initializing-scalar-types"></a>初始化标量类型
 初始化标量类型时，assignment-expression 的值将赋给变量。 赋值的转换规则适用。 （有关转换规则的信息，请参阅[类型转换](../c-language/type-conversions-c.md)。）  

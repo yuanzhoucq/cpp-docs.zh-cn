@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387234"
 ---
 # <a name="type-conversions-c"></a>类型转换 (C)
 类型转换取决于指定的运算符以及操作数或运算符的类型。 下列情况下将执行类型转换：  

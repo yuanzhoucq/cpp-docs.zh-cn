@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379609"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 允许应用程序和组件使用公共语言运行时 (CLR) 中的功能。  
@@ -119,7 +120,7 @@ class {} x;
   
 #### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置此编译器选项  
   
-1.  在 **“解决方案资源管理器”**中，右键单击项目名，然后选择 **“属性”** 以打开项目的 **“属性页”** 对话框。  
+1.  在 **“解决方案资源管理器”** 中，右键单击项目名，然后选择 **“属性”** 以打开项目的 **“属性页”** 对话框。  
   
 2.  选择 **“配置属性”** 文件夹。  
   

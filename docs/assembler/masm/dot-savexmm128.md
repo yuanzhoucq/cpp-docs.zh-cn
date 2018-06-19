@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057934"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 生成或者`UWOP_SAVE_XMM128`或`UWOP_SAVE_XMM128_FAR`展开代码条目指定的 XMM 寄存器和偏移量使用当前的序言偏移量。 MASM 将选择最有效的编码。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384537"
 ---
 # <a name="declarations-and-types"></a>声明和类型
 本节介绍了变量、函数和类型的声明和初始化。 C 语言包括一组标准的基本数据类型。 您还可以通过基于已定义的类型声明新的类型来添加自己的数据类型（称为“派生类型”）。 本文讨论了以下主题：  

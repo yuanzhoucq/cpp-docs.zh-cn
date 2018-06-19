@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383860"
 ---
 # <a name="range-of-char-values"></a>字符值的范围
 **ANSI 3.2.1.1**：“纯”**char** 的值范围与 **signed char** 或 `unsigned char` 的值范围是否相同  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380698"
 ---
 # <a name="unwind-data-definitions-in-c"></a>展开数据定义（C 语言描述）
 下面是的展开数据的 C 说明：  

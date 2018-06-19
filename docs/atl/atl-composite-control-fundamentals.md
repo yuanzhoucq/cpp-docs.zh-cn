@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354612"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 复合控件基础知识
 复合控件是一种 ActiveX 控件可以包含 （类似于对话框） 其他 ActiveX 控件或 Windows 控件。 生成复合控件后，它可以插入任何可以承载 ActiveX 控件的位置。  

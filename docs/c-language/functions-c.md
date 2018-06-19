@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385411"
 ---
 # <a name="functions-c"></a>函数 (C)
 函数是 C 中的基本模块单元。函数通常设计为执行一项特定任务且其名称通常会反映该任务。 函数包含声明和语句。 本节描述如何声明、定义和调用 C 函数。 讨论的其他主题包括：  

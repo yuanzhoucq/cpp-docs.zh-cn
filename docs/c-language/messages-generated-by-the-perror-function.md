@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382804"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>perror 函数生成的消息
 **ANSI 4.9.10.4** `perror` 函数生成的消息  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386912"
 ---
 # <a name="conditional-expression-operator"></a>条件表达式运算符
 C 具有一个三元运算符：conditional-expression 运算符 (? :)。  

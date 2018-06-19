@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388781"
 ---
 # <a name="string-literal-concatenation"></a>字符串文本串联
 若要形成占用多行的字符串文本，则可以将两个字符串串联起来。 为此，请键入反斜杠，然后按 Return 键。 反斜杠将使编译器忽略以下换行符。 例如，字符串文本  

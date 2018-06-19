@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381663"
 ---
 # <a name="file-position-in-append-mode"></a>追加模式中的文件位置
 **ANSI 4.9.3** 追加模式流的文件位置指示器最初是位于文件的开头还是结尾  

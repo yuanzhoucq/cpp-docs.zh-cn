@@ -38,6 +38,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283322"
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 活动模板库包括以下 typedef。  
