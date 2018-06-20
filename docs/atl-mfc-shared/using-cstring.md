@@ -1,7 +1,7 @@
 ---
 title: 使用 CString |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361696"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238716"
 ---
 # <a name="using-cstring"></a>使用 CString
 本部分中的主题介绍如何使用 `CString` 进行编程。 有关参考文档`CString`类，请参阅的文档[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "32361696"
   
  `CStringW` 对象包含 `wchar_t` 类型并支持 Unicode 字符串。 `CStringA` 对象包含 `char` 类型，并支持单字节和多字节 (MBCS) 字符串。 `CString` 对象支持 `char` 类型或 `wchar_t` 类型，具体取决于 `MBCS` 符号或 `UNICODE` 符号是否在编译时定义。  
   
- `CString` 对象在 `CStringData` 对象中保留字符数据。 `CString` 接受 `null` 结尾的 C 样式字符串，但是不在已存储的字符数据中保留 `null` 字符。 相反，`CString` 跟踪字符串长度。 `CString` 在导出 C 样式字符串时不提供 null 终止符。 可以在 `null` 中插入 `CString`，但是这可能会产生意外结果。  
+ `CString` 对象在 `CStringData` 对象中保留字符数据。 `CString` 接受`null`-终止 C 样式字符串。 `CString` 跟踪的字符串长度更快的性能，但它还会保留`null`中存储的字符数据，以支持到 LPCWSTR 转换字符。 `CString` 此命令将导出的 C 样式字符串时，请包括 null 终止符。 你可以将插入`null`中其他位置`CString`，但是它可能会产生意外的结果。  
   
  以下一组字符串类可在未链接 MFC 库的情况下使用，无论是否有 CRT 支持：`CAtlString`、`CAtlStringA` 和 `CAtlStringW`。  
   

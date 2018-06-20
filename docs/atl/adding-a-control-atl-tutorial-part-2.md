@@ -1,7 +1,7 @@
 ---
 title: 添加控件 (ATL 教程，第 2 部分) |Microsoft 文档
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358571"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238703"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>添加控件（ATL 教程，第 2 部分）
 在此步骤中，将控件添加到你的项目，生成它，并在网页上对其进行测试。  
@@ -26,7 +26,7 @@ ms.locfileid: "32358571"
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>将对象添加到 ATL 项目  
   
-1.  在类视图中，右键单击多边形项目。  
+1.  在**解决方案资源管理器**，右键单击多边形项目。  
   
 2.  指向**添加**快捷菜单，然后单击**新项**的子菜单中。  
   
