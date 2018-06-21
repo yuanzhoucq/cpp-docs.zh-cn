@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5af6a8644514b18af3397fb22d54d42f649eed09
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377091"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271313"
 ---
 # <a name="dispatch-maps"></a>调度映射
 OLE 自动化提供方法来调用方法和跨应用程序中访问属性。 由 Microsoft 基础类库用于调度这些请求提供的机制是"调度映射"，它指定了对象函数和属性，以及属性本身的和的数据类型的内部和外部名称函数自变量。  
@@ -163,20 +163,20 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const 变体\*** 或**variant 类型的值 （& a)**|  
+|**VTS_VARIANT**|**const 变体\\\*** 或**variant 类型的值 （& a)**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**short\***|  
-|**VTS_PI4**|**长\***|  
-|**VTS_PR4**|**float\***|  
-|**VTS_PR8**|**双精度\***|  
-|**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**日期\***|  
-|**VTS_PBSTR**|**BSTR\***|  
-|**VTS_PDISPATCH**|**LPDISPATCH\***|  
-|**VTS_PSCODE**|**SCODE\***|  
-|**VTS_PBOOL**|**BOOL\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
-|**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
+|**VTS_PI2**|**短\\\***|  
+|**VTS_PI4**|**长\\\***|  
+|**VTS_PR4**|**float\\\***|  
+|**VTS_PR8**|**双精度\\\***|  
+|**VTS_PCY**|**CY\\\***|  
+|**VTS_PDATE**|**日期\\\***|  
+|**VTS_PBSTR**|**BSTR\\\***|  
+|**VTS_PDISPATCH**|**LPDISPATCH\\\***|  
+|**VTS_PSCODE**|**SCODE\\\***|  
+|**VTS_PBOOL**|**BOOL\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
+|**VTS_PUNKNOWN**|**LPUNKNOWN\\\***|  
 |**VTS_NONE**|没有参数|  
 
 ### <a name="requirements"></a>要求  

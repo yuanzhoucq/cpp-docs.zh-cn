@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374560"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271329"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 创建和初始化一个或多个同时 Internet 会话，并说明与代理服务器的连接（如果需要）。  
@@ -425,7 +425,7 @@ virtual void OnStatusCallback(
   
  `dwInternetStatus`参数指示正在执行的操作，并确定的内容`lpvStatusInformation`将。 `dwStatusInformationLength` 指示中包括的数据的长度`lpvStatusInformation`。 以下状态的值`dwInternetStatus`，如下所示定义：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`INTERNET_STATUS_RESOLVING_NAME`|查找名称中包含的 IP 地址`lpvStatusInformation`。|  
 |`INTERNET_STATUS_NAME_RESOLVED`|已成功找到中包含的名称的 IP 地址`lpvStatusInformation`。|  
@@ -498,10 +498,10 @@ CStdioFile* OpenURL(
   
 |URL 类型|返回|  
 |--------------|-------------|  
-|file://|**CStdioFile\***|  
-|http://|**CHttpFile\***|  
-|gopher://|**CGopherFile\***|  
-|ftp: / /|**CInternetFile\***|  
+|file://|**CStdioFile\\\***|  
+|http://|**CHttpFile\\\***|  
+|gopher://|**CGopherFile\\\***|  
+|ftp: / /|**CInternetFile\\\***|  
   
 ### <a name="remarks"></a>备注  
  参数`dwFlags`必须包括**INTERNET_FLAG_TRANSFER_ASCII**或**INTERNET_FLAG_TRANSFER_BINARY**，但不是两者。 可以与的按位组合的剩余标志`OR`运算符 ( **&#124;**)。  

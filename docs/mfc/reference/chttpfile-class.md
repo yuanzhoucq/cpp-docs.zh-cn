@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372614"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271342"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 类
 提供请求和读取 HTTP 服务器上文件的功能。  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  修改新的头文件的语义。 可以是以下各项之一：  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` 将合并具有相同的名称，使用标志添加到后续的标头中找到的第一个标头的标头。 例如，"接受： 文本 / *"后跟"接受： 音频 /\*"结果中的单个标头形成"接受： 文本 /\*、 音频 /\*"。 它是由调用应用程序中，以确保与已接收数据的请求都发送合并或单独标头凝聚力方案。  
+- `HTTP_ADDREQ_FLAG_COALESCE` 将合并具有相同的名称，使用标志添加到后续的标头中找到的第一个标头的标头。 例如，"接受： 文本 /\*"跟"接受： 音频 /\*"结果中的单个标头形成"接受： 文本 /\*、 音频 /\*"。 它是由调用应用程序中，以确保与已接收数据的请求都发送合并或单独标头凝聚力方案。  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` 执行删除并添加要替换当前标头。 标头名称将用于删除当前的标头，而将使用完整的值来添加新的标头。 如果标头值为空并且找到标头，则会删除。 如果不为空，则将替换标头值。  
   

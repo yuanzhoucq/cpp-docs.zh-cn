@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283335"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271365"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的样式  
   
@@ -321,7 +321,7 @@ ms.locfileid: "34283335"
 |`ES_NOHIDESEL`|通常情况下，编辑控件的控件失去输入的焦点并且反转所选内容，当控件接收输入的焦点时隐藏所选内容。 指定`ES_NOHIDESEL`删除此默认操作。|  
 |`ES_NUMBER`|允许仅位数字来编辑控件中输入。|  
 |`ES_OEMCONVERT`|在编辑控件中输入文本将从 ANSI 字符集转换为 OEM 字符集，然后重新为 ANSI。 这可确保正确进行字符转换，当应用程序调用`AnsiToOem`Windows 函数以将编辑控件中的 ANSI 字符串转换为 OEM 字符。 此样式是最适用于包含文件名的编辑控件。|  
-|`ES_PASSWORD`|将所有字符都显示为星号 (**\***) 按照它们键入到编辑控件。 应用程序可以使用`SetPasswordChar`成员函数来更改显示的字符。|  
+|`ES_PASSWORD`|将所有字符都显示为星号 (**\\\***) 按照它们键入到编辑控件。 应用程序可以使用`SetPasswordChar`成员函数来更改显示的字符。|  
 |`ES_READONLY`|可以阻止用户输入或编辑文本编辑控件中。|  
 |`ES_RIGHT`|中的单行或多行编辑控件的右对齐文本。|  
 |`ES_UPPERCASE`|将转换为大写按照它们键入到编辑控件的所有字符。|  
