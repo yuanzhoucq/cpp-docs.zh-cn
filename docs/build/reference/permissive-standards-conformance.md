@@ -1,6 +1,6 @@
 ---
 title: -宽松-（标准一致性） |Microsoft 文档
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379310"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322259"
 ---
 # <a name="permissive--standards-conformance"></a>/ 宽松-（标准一致性）
 
@@ -50,7 +50,7 @@ ms.locfileid: "32379310"
 
 **/ 宽松-** 选项使用的一致性支持当前的编译器版本中来确定哪些语言构造是不符合要求。 选项不确定你的代码是否符合 c + + 标准的特定版本。 若要启用针对最新草稿标准的所有实现的编译器支持，使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)选项。 若要限制对当前实现 C + + 17 标准编译器支持，请使用[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)选项。 若要限制以更接近 C + + 14 标准的编译器支持，使用[/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)选项，这是默认值。
 
-未列出所有 C + + 11、 C + + 14 中或 C + + 17 符合标准的代码支持 Visual Studio 自 2017 年中的 Visual c + + 编译器。 **/ 宽松-** 选项可能无法检测到问题有关的两阶段的名称查找某些方面，绑定到临时的非常量引用、 将复制 init 视为直接 init，允许在多个用户定义的转换初始化或逻辑运算符和其他不受支持的一致性区域的备用令牌。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
+未列出所有 C + + 11、 C + + 14 中或 C + + 17 符合标准的代码支持 Visual Studio 自 2017 年中的 Visual c + + 编译器。 具体取决于 Visual Studio 中，版本 **/ 宽松-** 选项可能无法检测到问题有关的两阶段的名称查找某些方面，绑定到临时的非常量引用，将复制 init 视为直接 init，允许多个用户定义的转换中初始化或备用令牌对于逻辑运算符和其他不受支持的一致性区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要充分利用获取 **/ 宽松-**，更新到最新版本的 Visual Studio。
 
 ### <a name="how-to-fix-your-code"></a>如何修复你的代码
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 您还可能看到的模板元编程，条件运算符的结果类型在其中下可能更改中的错误 **/Zc:ternary**和 **/ 宽松-**。 解决此问题是使用一种方法[std::remove_reference](../../standard-library/remove-reference-class.md)上生成的类型。
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>两阶段的名称查找 （部分）
+#### <a name="two-phase-name-look-up"></a>两阶段的名称查找
 
-当 **/ 宽松-** 在 Visual Studio 2017 版本 15.3 中设置选项，编译器分析函数和类模板定义中，标识所需的模板中使用两阶段的名称的相关和非依赖名称查找。 在此版本中，执行仅名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非相关名称导致作为按 ISO c + + 标准所需的诊断消息。 但是，绑定的需要自变量依赖查找定义上下文中的不执行操作的非依赖名称。
+当 **/ 宽松-** 设置选项，编译器分析函数和类模板定义中，标识所需的模板中用于两阶段的名称查找的相关和非依赖名称。 在 Visual Studio 2017 版本 15.3，执行名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非相关名称导致作为按 ISO c + + 标准所需的诊断消息。 在 Visual Studio 2017 15.7 版，还完成的需要自变量依赖查找定义上下文中的非依赖名称的绑定。
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+如果希望将旧行为两阶段 lookup 来说，但否则 **/ 宽松-** 行为，添加 **/Zc:twoPhase-** 选项。
+
 ### <a name="windows-header-issues"></a>Windows 标头问题
 
 **/ 宽松-** 选项设置为之前 Windows 秋季创建者更新 SDK (10.0.16299.0)，Windows 工具包的版本或 Windows 驱动程序工具包 (WDK) 版本 1709年太严格。 我们建议你更新到最新版本的 Windows 套件，以便使用 **/ 宽松-** 在 Windows 或设备驱动程序代码。
 
-Windows 秋季创建者更新 SDK (10.0.16299.0) 或 Windows 驱动程序工具包 (WDK) 1709年中的特定标头文件仍会出现问题，使它们与使用的不兼容 **/ 宽松-**。 若要解决这些问题，我们建议你将使用这些标头限制到源代码的那些文件，需要它们，并删除 **/ 宽松-** 选项编译这些特定的源代码文件时。 以下问题是特定于 Windows 秋季创建者更新 SDK (10.0.16299.0):
+某些 Windows 年 4 月 2018年更新 SDK (10.0.17134.0)、 Windows 秋季创建者更新 SDK (10.0.16299.0) 或 Windows 驱动程序工具包 (WDK) 1709 中的标头文件仍具有使它们与使用的不兼容的问题 **/permissive-**. 若要解决这些问题，我们建议你将使用这些标头限制到源代码的那些文件，需要它们，并删除 **/ 宽松-** 选项编译这些特定的源代码文件时。
 
-#### <a name="issue-in-umqueryh"></a>发出 um\Query.h 中
+发布这些 WinRT WRL 标头在窗口中年 4 月 2018年更新 SDK (10.0.17134.0) 不是使用干净 **/ 宽松-**。 若要解决这些问题，请不要将 **/ 宽松-**，或使用 **/ 宽松-** 与 **/Zc:twoPhase-** 时使用这些标头：
 
-使用时 **/ 宽松-** 编译器开关，`tagRESTRICTION`结构不能编译由于 case(RTOr) 成员 '。
+- Winrt/wrl/async.h 中的问题
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-若要解决此问题，程序文件编译包括而无需 Query.h **/ 宽松-** 选项。
+- 发出 winrt/wrl/implements.h 中
 
-#### <a name="issue-in-umcellularapioemh"></a>发出 um\cellularapi_oem.h 中
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-使用时 **/ 宽松-** 编译器开关、 的前向声明`enum UICCDATASTOREACCESSMODE`导致警告：
+发布这些用户模式下标头在窗口中年 4 月 2018年更新 SDK (10.0.17134.0) 不是使用干净 **/ 宽松-**。 若要解决这些问题，不要使用 **/ 宽松-** 时使用这些标头：
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Um/Tune.h 中的问题
 
-未区分范围的前向声明是枚举的 Microsoft 扩展。 若要解决此问题，编译包含而无需 cellularapi_oem.h 文件 **/ 宽松-** 选项，或使用[/wd](../../build/reference/compiler-option-warning-level.md)静音警告 C4471 的选项。
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>发出 um\omscript.h 中
+- 发出 um/spddkhlp.h 中
 
-在 C + + 03 中，从字符串转换为 BSTR (即的 typedef wchar_t *) 是不推荐使用，但允许。 在 C + + 11 中，不再允许转换。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Um/refptrco.h 中的问题
 
-若要解决此问题，程序文件编译包括而无需 omscript.h **/ 宽松-** 选项，或使用 **/Zc:strictStrings-** 相反。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+这些问题是特定于用户模式下在 Windows 秋季创建者更新 SDK (10.0.16299.0) 中的标头：
+
+- 发出 um/Query.h 中
+
+   使用时 **/ 宽松-** 编译器开关，`tagRESTRICTION`结构不能编译由于 case(RTOr) 成员 '。
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   若要解决此问题，程序文件编译包括而无需 Query.h **/ 宽松-** 选项。
+
+- 发出 um/cellularapi_oem.h 中
+
+   使用时 **/ 宽松-** 编译器开关、 的前向声明`enum UICCDATASTOREACCESSMODE`导致警告：
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   未区分范围的前向声明是枚举的 Microsoft 扩展。 若要解决此问题，编译包含而无需 cellularapi_oem.h 文件 **/ 宽松-** 选项，或使用[/wd](../../build/reference/compiler-option-warning-level.md)静音警告 C4471 的选项。
+
+- 发出 um/omscript.h 中
+
+   在 C + + 03 中，从字符串转换为 BSTR (即的 typedef wchar_t *) 是不推荐使用，但允许。 在 C + + 11 中，不再允许转换。
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   若要解决此问题，程序文件编译包括而无需 omscript.h **/ 宽松-** 选项，或使用 **/Zc:strictStrings-** 相反。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -407,7 +453,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. 打开你的项目的**属性页**对话框。
 
-1. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**语言**属性页。
+1. 选择**配置属性** > **C/c + +** > **语言**属性页。
 
 1. 更改**一致性模式**属性值设置为**是 (/ 宽松-)**。 选择**确定**或**应用**以保存所做的更改。
 
@@ -425,5 +471,5 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)   
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+- [编译器选项](../../build/reference/compiler-options.md)
+- [设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -1,7 +1,7 @@
 ---
 title: 对于 x64 (ml64.exe) MASM |Microsoft 文档
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253797"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322243"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM for x64 (ml64.exe)
 
-Visual Studio 包括 32 位和 64 位托管的版本的 Microsoft Assembler (MASM) 到面向 x64 代码。 名为 ml64.exe，这是接受 x64 汇编程序汇编程序语言。 当你在 Visual Studio 安装期间选择的 c + + 工作负荷时，会安装 MASM 命令行工具。 MASM 工具不可用作为单独的下载。 有关如何下载和安装 Visual Studio 的副本的说明，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 如果您不想安装完整的 Visual Studio IDE，但只需要命令行工具，下载[生成 Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931)。
+Visual Studio 包括 32 位和 64 位托管的版本的 Microsoft Assembler (MASM) 到面向 x64 代码。 名为 ml64.exe，这是接受 x64 汇编程序汇编程序语言。 当你在 Visual Studio 安装期间选择的 c + + 工作负荷时，会安装 MASM 命令行工具。 MASM 工具不可用作为单独的下载。 有关如何下载和安装 Visual Studio 的副本的说明，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 如果您不想安装完整的 Visual Studio IDE，但只需要命令行工具，下载[生成 Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)。
 
 若要使用 MASM 构建 x64 代码以在命令行上为目标，你必须使用开发人员命令提示 x64 目标，可将所需的路径和其他环境变量。 有关如何开始开发人员命令提示的信息，请参阅[命令行上的生成 C/c + + 代码](../../build/building-on-the-command-line.md)。
 

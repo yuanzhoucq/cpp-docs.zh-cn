@@ -1,7 +1,7 @@
 ---
 title: 在命令行上生成 C/c + + 代码 |Microsoft 文档
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379271"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322311"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令行上生成 C/c + + 代码
 
@@ -51,7 +51,7 @@ ms.locfileid: "32379271"
 
 如果你设置一个，具体取决于你已安装的 Visual Studio 的版本和安装昵称情况下会有所不同的实际开始菜单文件夹名称和快捷名称。 例如，如果你有 Visual Studio 2017 年 1 安装，并且您已给定它安装别名的*预览*，名为开发人员命令提示符快捷方式**VS 2017 （预览版）的开发人员命令提示符**，名为的文件夹中**Visual Studio 2017**。
 
-如果已安装[生成 Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) （其中还介绍了 Visual Studio 2015 Update 3 编译器工具集），只有特定于体系结构的本机或跨工具开发人员命令提示安装选项以及不常规**开发人员命令提示**快捷方式。
+如果已安装[生成 Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) （其中还介绍了 Visual Studio 2015 Update 3 编译器工具集），只有特定于体系结构的本机或跨工具开发人员命令提示安装选项以及不常规**开发人员命令提示**快捷方式。
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>若要打开开发人员命令提示符窗口
