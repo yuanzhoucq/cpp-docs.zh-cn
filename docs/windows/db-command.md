@@ -145,7 +145,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="example"></a>示例  
  本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../data/oledb/crowset-movenext.md)）。  
   
- 请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何在开发环境中执行此操作的信息，请参阅 [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) 和 [How to: Add New Data Connections in Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8)。  
+ 请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何在开发环境中执行此操作的信息，请参阅 [如何：从服务器资源管理器连接到数据库](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) 和 [如何： 在服务器资源管理器/数据库资源管理器中添加新数据连接](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8)。  
   
 ```  
 // db_command.h  
