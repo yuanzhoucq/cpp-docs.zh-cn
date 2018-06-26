@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353268"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929726"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据库中的特定字段的控件属性的数据绑定。 当用户修改了此绑定的属性中的数据时，该控件通知的数据库和请求将更新记录的字段。 控制的成功或失败的请求，然后会通知数据库。  
@@ -51,7 +51,7 @@ ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据
  它是可以创建数据绑定的常用属性的但它是更有可能，你将希望[可绑定的 get/set 方法](#vchowcreatingbindablegetsetmethod)。  
   
 > [!NOTE]
->  常用属性具有**可绑定**和**requestedit**默认情况下的属性。  
+>  常用属性具有`bindable`和`requestedit`默认情况下的属性。  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>若要添加使用添加属性向导的可绑定常用属性  
   

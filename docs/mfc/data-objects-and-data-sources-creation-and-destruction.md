@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347938"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931871"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>数据对象和数据源：创建和销毁
 文章中所述[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)，数据对象和数据源表示数据传输双方。 本文介绍何时创建和销毁这些对象和源以正确地执行数据传输，包括：  
@@ -72,14 +72,14 @@ ms.locfileid: "33347938"
   
 5.  应用程序将调用属于步骤 3 中所创建对象的 `SetClipboard` 成员函数（或 `DoDragDrop` 成员函数，如果这是一个拖放操作）。  
   
-6.  如果这是**剪切**操作或`DoDragDrop`返回`DROPEFFECT_MOVE`，从文档中删除在步骤 1 中所选的数据。  
+6.  如果这是**剪切**操作或`DoDragDrop`返回**DROPEFFECT_MOVE**，从文档中删除在步骤 1 中所选的数据。  
   
  这种情况下由 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)。 为每个应用程序的 `CView` 派生类（`GetClipboardData` 和 `OnGetClipboardData` 函数除外）查找源。 这两个函数位于 `COleClientItem` 或 `COleServerItem` 派生类实现中。 这些示例程序提供了一个很好的如何实现这些概念的示例。  
   
  如果您修改拖放操作的默认行为，则将出现您可能需要创建 `COleDataSource` 对象的另一种情况。 有关详细信息，请参阅[拖放： 自定义](../mfc/drag-and-drop-customizing.md)文章。  
   
 ##  <a name="_core_destroying_data_sources"></a> 销毁数据源  
- 数据源必须由当前负责它们的应用程序销毁。 在其中将数据源提交给 OLE 的情况下，如调用[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，你需要调用**pdatasrc->internalrelease**。 例如：  
+ 数据源必须由当前负责它们的应用程序销毁。 在其中将数据源提交给 OLE 的情况下，如调用[coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)，你需要调用`pDataSrc->InternalRelease`。 例如：  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

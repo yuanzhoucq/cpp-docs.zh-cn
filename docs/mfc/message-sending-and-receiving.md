@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347173"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931999"
 ---
 # <a name="message-sending-and-receiving"></a>消息发送和接收
 考虑进程的发送部分以及框架响应的方式。  
   
  大多数消息来源于用户与程序的交互。 命令通过以下方式生成：用鼠标单击菜单项或工具栏按钮或按快捷键。 用户还通过一些操作来生成 Windows 消息，例如，通过移动窗口或调整窗口大小。 当发生程序启动或终止、窗口获取或丢失焦点等情况时，会发送其他 Windows 消息。 通过鼠标单击或与用户与控件（如对话框中的按钮或列表框控件）的其他交互来生成控件通知消息。  
   
- **运行**类的成员函数`CWinApp`检索消息并将它们分派到适当的窗口。 大多数命令消息将发送到应用程序的主框架窗口。 由类库预定义的 `WindowProc` 将获取消息并以不同方式传送这些消息，具体取决于所接收消息的类别。  
+ `Run`类的成员函数`CWinApp`检索消息并将它们分派到适当的窗口。 大多数命令消息将发送到应用程序的主框架窗口。 由类库预定义的 `WindowProc` 将获取消息并以不同方式传送这些消息，具体取决于所接收消息的类别。  
   
  现在考虑过程的接收部分。  
   

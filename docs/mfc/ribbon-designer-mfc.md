@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382094"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931152"
 ---
 # <a name="ribbon-designer-mfc"></a>功能区设计器 (MFC)
 功能区设计器可用于在 MFC 应用程序中创建和自定义功能区。 功能区是一种将命令整理成逻辑组的用户界面 (UI) 元素。 这些组显示在窗口顶部条带中的独立选项卡上。 功能区取代了菜单栏和工具栏。 功能区可以显著提高应用程序的可用性。 有关详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)。 下图展示了一个功能区。  
@@ -34,7 +34,7 @@ ms.locfileid: "33382094"
 ## <a name="understanding-the-ribbon-designer"></a>了解功能区设计器  
  功能区设计器创建功能区并将其作为资源进行存储。 创建功能区资源时，功能区设计器将执行以下三项操作：  
   
--   在项目资源定义脚本 (*.rc) 中添加一个条目。 在下面的示例中，`IDR_RIBBON` 是标识功能区资源的唯一名称，`RT_RIBBON_XML` 是资源类型，`ribbon.mfcribbon-ms` 是资源文件的名称。  
+-   在项目资源定义脚本 (*.rc) 中添加一个条目。 在下面的示例中，IDR_RIBBON 是标识功能区资源的唯一名称、 RT_RIBBON_XML 是资源类型，和 ribbon.mfcribbon ms 是资源文件的名称。  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

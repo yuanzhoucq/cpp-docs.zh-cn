@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349462"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929351"
 ---
 # <a name="message-handling-and-command-targets"></a>消息处理和命令目标
 命令调度接口`IOleCommandTarget`定义一种简单和可扩展的机制，以查询和执行命令。 此机制是比自动化的简单得多`IDispatch`因为它依赖于一组标准的命令; 完全命令很少具有参数，且涉及无类型信息 （命令自变量也会降低类型安全）。  
@@ -33,7 +33,7 @@ ms.locfileid: "33349462"
   
  `IOleCommandTarget` 处理以下方案：  
   
--   一个对象时就地激活，仅通常显示对象的工具栏，该对象的工具栏可能有按钮等容器命令的某些**打印**，**打印预览**， **保存**， `New`，**缩放**，和其他人。 （在就地激活标准建议对象删除此类按钮从其工具栏中，或在至少禁用它们。 此设计允许这些命令来启用和尚未路由到正确的处理程序。）目前，没有任何机制可要调度到容器中的这些命令的对象。  
+-   一个对象时就地激活，仅通常显示对象的工具栏，该对象的工具栏可能有按钮等容器命令的某些**打印**，**打印预览**， **保存**，**新建**，**缩放**，和其他人。 （在就地激活标准建议对象删除此类按钮从其工具栏中，或在至少禁用它们。 此设计允许这些命令来启用和尚未路由到正确的处理程序。）目前，没有任何机制可要调度到容器中的这些命令的对象。  
   
 -   当在活动文档容器 （如 Office 活页夹） 中嵌入活动文档时，容器可能需要将命令发送此类**打印**，**页面设置**，**属性**，和其他包含的活动文档。  
   
@@ -56,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- `QueryStatus`此处方法测试是否集正在使用标识一组特定的命令， **GUID**，支持。 此调用填充数组**OLECMD**与受支持的命令以及返回的文字描述命令和/或状态信息的名称，列表的值 （结构）。 当调用方想要调用的命令时，它可以传递命令 (和集**GUID**) 到**Exec**选项和自变量，以及获取返回值。  
+ `QueryStatus`此处方法测试是否集正在使用标识一组特定的命令， **GUID**，支持。 此调用填充数组**OLECMD**与受支持的命令以及返回的文字描述命令和/或状态信息的名称，列表的值 （结构）。 当调用方想要调用的命令时，它可以传递命令 (和集**GUID**) 到`Exec`选项和自变量，以及获取返回值。  
   
 ## <a name="see-also"></a>请参阅  
  [活动文档容器](../mfc/active-document-containers.md)

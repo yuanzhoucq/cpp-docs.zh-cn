@@ -17,35 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348411"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931822"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>处理 Rebar 控件中的通知消息
 在 rebar 控件的父类中，为所有需要处理的 rebar 控件 (`OnChildNotify`) 通知消息创建一个带有 switch 语句的 `CReBarCtrl` 处理程序函数。 当用户在 rebar 控件上拖动对象、更改 rebar 带区的布局、从 rebar 控件中删除带区等时，将向其父窗口发送通知。  
   
  可通过 rebar 控件对象发送以下通知消息：  
   
--   **RBN_AUTOSIZE** ，由 rebar 控件发送 (使用创建**RBS_AUTOSIZE**样式) 当 rebar 自动调整自身大小。  
+-   RBN_AUTOSIZE，由 rebar 控件 （使用 RBS_AUTOSIZE 样式创建） 发送当 rebar 自动调整自身大小。  
   
--   **RBN_BEGINDRAG**在用户开始拖动带区时，由 rebar 控件发送。  
+-   RBN_BEGINDRAG，由 rebar 控件在用户开始拖动带时发送。  
   
--   **RBN_CHILDSIZE**调整带区的子窗口的大小时，由 rebar 控件发送。  
+-   RBN_CHILDSIZE，由 rebar 控件调整带区的子窗口的大小时发送。  
   
--   **RBN_DELETEDBAND**在删除带区后，由 rebar 控件发送。  
+-   RBN_DELETEDBAND，由 rebar 控件在删除带区后发送。  
   
--   **RBN_DELETINGBAND**将要删除带区时，由 rebar 控件发送。  
+-   RBN_DELETINGBAND 发送由 rebar 控件带区时即将被删除。  
   
--   **RBN_ENDDRAG**用户停止拖动带区时，由 rebar 控件发送。  
+-   RBN_ENDDRAG，由 rebar 控件在用户停止拖动带时发送。  
   
--   **RBN_GETOBJECT** ，由 rebar 控件发送 (使用创建**RBS_REGISTERDROP**样式) 时将对象拖到控件中的带。  
+-   RBN_GETOBJECT，由 rebar 控件 （使用 RBS_REGISTERDROP 样式创建） 发送时将对象拖到控件中的带。  
   
--   **RBN_HEIGHTCHANGE**窗体的高度已更改时，由 rebar 控件发送。  
+-   RBN_HEIGHTCHANGE，由 rebar 控件窗体的高度已更改时发送。  
   
--   **RBN_LAYOUTCHANGED**在用户更改控件的带区布局时，由 rebar 控件发送。  
+-   RBN_LAYOUTCHANGED，由 rebar 控件在用户更改控件的带区布局时发送。  
   
  有关这些通知的详细信息，请参阅[Rebar 控件参考](http://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK 中。  
   

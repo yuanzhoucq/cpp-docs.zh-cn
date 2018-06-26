@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353682"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930012"
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。  
   
- 你可以通过赋予工具栏 `CCS_ADJUSTABLE` 样式，使这些自定义功能对用户可用。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示  “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。  
+ 你可以使这些自定义功能对可用用户通过赋予工具栏**CCS_ADJUSTABLE**样式。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示  “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。  
   
  工具控件在自定义过程的每一步都会向父窗口发送通知消息。 如果用户按住 SHIFT 键并开始拖动按钮，工具栏将自动处理拖动操作。 工具栏将向父窗口发送 **TBN_QUERYDELETE** 通知消息，确定是否可删除该按钮。 如果父窗口返回 **FALSE**，则结束拖动操作。 否则，工具栏将捕获鼠标输入并等待用户释放鼠标按钮。  
   
@@ -165,7 +165,7 @@ Windows 工具栏公共控件有内置的自定义功能，包括一个系统定
  与通知关联的按钮索引。  
   
  **tbButton**  
- `TBBUTTON` 结构，它包含与通知关联的工具栏按钮有关的信息。  
+ **TBBUTTON**与通知关联的结构，其中包含有关工具栏按钮的信息。  
   
  **cchText**  
  按钮文本中的字符数。  

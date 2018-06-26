@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357554"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930125"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控件：添加常用属性
-常用属性不同于自定义属性，因为它们已实现由类`COleControl`。 `COleControl` 包含控件中支持通用属性的预定义的成员函数。 一些常见属性包括控件的标题和前景色和背景颜色。 有关其他常用属性的信息，请参阅[Stock 属性支持添加属性向导](#_core_stock_properties_supported_by_classwizard)本文后续部分中。 常用属性的调度映射条目始终为前缀的**DISP_STOCKPROP**。  
+常用属性不同于自定义属性，因为它们已实现由类`COleControl`。 `COleControl` 包含控件中支持通用属性的预定义的成员函数。 一些常见属性包括控件的标题和前景色和背景颜色。 有关其他常用属性的信息，请参阅[Stock 属性支持添加属性向导](#_core_stock_properties_supported_by_classwizard)本文后续部分中。 属性始终为前缀 DISP_STOCKPROP stock 调度映射条目。  
   
  本文介绍如何使用添加属性向导的 ActiveX 控件添加常用属性 （在这种情况下，标题），并说明的生成的代码修改。 包括以下主题：  
   
@@ -81,16 +81,16 @@ ms.locfileid: "33357554"
   
 |属性|调度映射条目|如何访问值|  
 |--------------|------------------------|-------------------------|  
-|**外观**|**DISP_STOCKPROP_APPEARANCE （)**|值的可访问性**m_sAppearance**。|  
-|`BackColor`|**DISP_STOCKPROP_BACKCOLOR （)**|通过调用可访问的值`GetBackColor`。|  
-|`BorderStyle`|**DISP_STOCKPROP_BORDERSTYLE （)**|值的可访问性**m_sBorderStyle**。|  
-|**标题**|**DISP_STOCKPROP_CAPTION （)**|通过调用可访问的值`InternalGetText`。|  
-|**启用**|**DISP_STOCKPROP_ENABLED （)**|值的可访问性**m_bEnabled**。|  
-|**字体**|**DISP_STOCKPROP_FONT （)**|请参阅文章[MFC ActiveX 控件： 使用字体](../mfc/mfc-activex-controls-using-fonts.md)的用法。|  
-|`ForeColor`|**DISP_STOCKPROP_FORECOLOR （)**|通过调用可访问的值`GetForeColor`。|  
-|**hWnd**|**DISP_STOCKPROP_HWND （)**|值的可访问性`m_hWnd`。|  
-|**文本**|**DISP_STOCKPROP_TEXT （)**|通过调用可访问的值`InternalGetText`。 此属性是相同**标题**，属性名称除外。|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState 的可访问性的值或 `GetReadyState`|  
+|`Appearance`|DISP_STOCKPROP_APPEARANCE （)|值的可访问性`m_sAppearance`。|  
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR （)|通过调用可访问的值`GetBackColor`。|  
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE （)|值的可访问性`m_sBorderStyle`。|  
+|`Caption`|DISP_STOCKPROP_CAPTION （)|通过调用可访问的值`InternalGetText`。|  
+|`Enabled`|DISP_STOCKPROP_ENABLED （)|值的可访问性`m_bEnabled`。|  
+|`Font`|DISP_STOCKPROP_FONT （)|请参阅文章[MFC ActiveX 控件： 使用字体](../mfc/mfc-activex-controls-using-fonts.md)的用法。|  
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR （)|通过调用可访问的值`GetForeColor`。|  
+|`hWnd`|DISP_STOCKPROP_HWND （)|值的可访问性`m_hWnd`。|  
+|`Text`|DISP_STOCKPROP_TEXT （)|通过调用可访问的值`InternalGetText`。 此属性是相同`Caption`，属性名称除外。|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|值的可访问性`m_lReadyState`或 `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> 常用属性和通知  
  大多数常用属性具有通知函数可以重写。 例如，每当`BackColor`属性更改，`OnBackColorChanged`调用函数 （控件类的成员函数）。 默认实现 (在`COleControl`) 调用`InvalidateControl`。 如果你想要在这种情况下执行其他操作，重写此函数。  

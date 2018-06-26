@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345880"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930597"
 ---
 # <a name="automation"></a>自动化
 自动化（以前称为“OLE 自动化”）使一个应用程序能够操作在其他应用程序中实现的对象，或公开对象以供其他应用程序进行操作。  
@@ -57,7 +57,7 @@ ms.locfileid: "33345880"
  许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在 Visual c + + 中，可以编写 VBScript 宏来自动执行生成、 代码编辑，或调试任务的方面。  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> 在自动化中传递参数  
- 创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它还支持 `HRESULT` （OLE 错误代码）、 **CURRENCY** （定点数值类型）和 **DATE** （绝对日期和时间）类型，以及指向 **IUnknown** 和 `IDispatch` 接口的指针。  
+ 创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它支持**HRESULT** （OLE 错误代码）、**货币**（定点数值类型），和**日期**（绝对日期和时间） 类型，以及指向`IUnknown`和`IDispatch`接口。  
   
  **VARIANT** 类型封装在 [COleVariant](../mfc/reference/colevariant-class.md) 类中。 支持的 **CURRENCY** 和 **DATE** 类封装在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 类中。  
   

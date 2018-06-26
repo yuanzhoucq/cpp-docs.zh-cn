@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347186"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929302"
 ---
 # <a name="memory-management-examples"></a>内存管理：示例
 本指南介绍了 MFC 如何三种典型的内存分配的每个执行了帧分配和堆分配：  
@@ -99,7 +99,7 @@ ms.locfileid: "33347186"
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     如果自变量的`CPerson`构造函数是一个指向`char`，帧分配的语句是：  
+     如果自变量的`CPerson`构造函数是一个指向**char**，帧分配的语句是：  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

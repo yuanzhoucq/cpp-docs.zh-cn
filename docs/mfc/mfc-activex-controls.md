@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361330"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930092"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
-ActiveX 控件是基于组件对象模型 (COM) 支持各种各样的 OLE 功能，可以自定义以满足许多软件需求的可重用软件组件。 ActiveX 控件被设计用于在普通的 ActiveX 控件容器和在 Internet 上，在全球通用 Web 页。 你可以创建 ActiveX 控件使用 MFC，所述在这里，或与[活动模板库 (ATL)](../atl/active-template-library-atl-concepts.md)。  
+ActiveX 控件是基于组件对象模型 (COM) 的可重用软件组件，支持各种 OLE 功能，并且可以进行自定义来满足多种软件所需。 ActiveX 控件被设计用于在普通的 ActiveX 控件容器和在 Internet 上，在全球通用 Web 页。 你可以创建 ActiveX 控件使用 MFC，所述在这里，或与[活动模板库 (ATL)](../atl/active-template-library-atl-concepts.md)。  
   
  ActiveX 控件可以对自身进行绘制在其自己的窗口中，响应事件 （如鼠标单击），并管理通过包括属性和方法类似于自动化对象的接口。  
   
@@ -77,7 +77,7 @@ ActiveX 控件容器与 ActiveX 控件之间的通信
   
  上图还说明了如何由控件处理其他 OLE 接口 （除了自动化和事件）。  
   
- 通过执行的所有与容器的控件的通信`COleControl`。 若要处理的容器的请求，某些**COleControl**将调用成员函数可在控件类中实现。 采用这种方式来处理所有方法，并且某些属性。 控件的类还可以通过调用的成员函数来启动与容器的通信`COleControl`。 在这种方式中触发事件。  
+ 通过执行的所有与容器的控件的通信`COleControl`。 若要处理的容器的请求，某些`COleControl`将调用成员函数可在控件类中实现。 采用这种方式来处理所有方法，并且某些属性。 控件的类还可以通过调用的成员函数来启动与容器的通信`COleControl`。 在这种方式中触发事件。  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> 活动和非活动状态的 ActiveX 控件  
  控件有两种基本状态： 活动和非活动。 传统上，控件是否有一个窗口来区分这些状态。 活动控件有窗口;不支持非活动控件。 随着无窗口激活的推出，这一区别不再通用的但仍然适用于很多控件。  

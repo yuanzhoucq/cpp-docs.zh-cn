@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358059"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931760"
 ---
 # <a name="mfc-library-versions"></a>MFC 库版本
 
@@ -89,7 +89,7 @@ MFC ANSI/MBCS 库版本支持 ASCII，如这两个单字节字符集和多字节
 
 若要设置你的项目配置为在 IDE 中使用单字节、 多字节或宽字符 Unicode 字符串和字符支持，使用**项目属性**对话框。 在**配置属性** > **常规**页上，设置**字符集**属性**未设置**使用单字节字符集。 将属性设置为**使用多字节字符集**用于多字节字符集，或**使用 Unicode 字符集**以使用 Unicode 编码为 utf-16。
 
-MFC 项目使用预处理器符号 **\_UNICODE**以指示 utf-16 宽字符的 Unicode 支持，和 **\_MBCS**来表明 MBCS 支持。 这些选项是互斥的项目中。
+MFC 项目使用预处理器符号\_以指示 utf-16 宽字符的 Unicode 支持的 UNICODE 和\_MBCS 以指示 MBCS 支持。 这些选项是互斥的项目中。
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC 静态库命名约定
 

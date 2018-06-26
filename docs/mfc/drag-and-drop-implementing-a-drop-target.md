@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344264"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928913"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>拖放：实现放置目标
 本文概述了如何使你的应用程序的放置目标。 实现放置目标采用稍多的工作，而不是实现放置源，但是它仍相对简单。 这些技术也适用于非 OLE 应用程序。  
@@ -30,7 +30,7 @@ ms.locfileid: "33344264"
   
 1.  将成员变量添加到你想要放置目标应用程序中的每个视图。 此成员变量的类型必须为`COleDropTarget`或从它派生的类。  
   
-2.  从处理的视图类的函数`WM_CREATE`消息 (通常`OnCreate`)，调用新成员变量的`Register`成员函数。 `Revoke` 将自动为您调用您的视图时销毁。  
+2.  从处理的视图类的函数**WM_CREATE**消息 (通常`OnCreate`)，调用新成员变量的`Register`成员函数。 `Revoke` 将自动为您调用您的视图时销毁。  
   
 3.  重写以下函数。 如果希望将相同的行为在整个应用程序，重写视图类中的这些函数。 如果你想要修改在隔离的情况下的行为，或者想要启用删除上非`CView`windows，重写这些函数中的你`COleDropTarget`-派生类。  
   

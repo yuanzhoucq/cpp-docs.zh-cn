@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350746"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931113"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>异常：从 MFC 异常宏转换
 这是一个高级的主题。  
   
- 此文章介绍了如何使用 Microsoft 基础类宏编写的现有代码转换-**重**，**捕获**，**引发**，依次类推-若要使用 c + + 异常处理关键字**重**，**捕获**，和`throw`。 包括以下主题：  
+ 此文章介绍了如何使用 Microsoft 基础类宏编写的现有代码转换-**重**，**捕获**，**引发**，依次类推-若要使用 c + + 异常处理关键字**重**，**捕获**，和**引发**。 包括以下主题：  
   
 -   [转换优点](#_core_advantages_of_converting)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33350746"
   
 -   使用 c + + 异常处理关键字的代码会编译为略低。EXE 或。DLL。  
   
--   C + + 异常处理关键字是更通用： 它们可以处理可以复制任何数据类型的异常 (`int`， **float**， `char`，依次类推)，而宏处理仅的类异常`CException`和从它派生类。  
+-   C + + 异常处理关键字是更通用： 它们可以处理可以复制任何数据类型的异常 (**int**， **float**， **char**，依次类推)，而宏处理异常的类仅`CException`和从它派生类。  
   
  宏和关键字的主要区别是"自动"使用宏的代码，当异常超出范围时将删除捕获的异常。 代码使用关键字不存在，则必须显式删除捕获的异常。 有关详细信息，请参阅文章[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   
@@ -69,19 +69,19 @@ ms.locfileid: "33350746"
   
 2.  界定的 catch 块内的方式：  
   
-     使用宏，**捕获**宏 （使用其自变量） 开始的第一个 catch 块;`AND_CATCH`宏开始后续 catch 块内，与`END_CATCH`宏终止 catch 块的序列。  
+     使用宏，**捕获**宏 （使用其自变量） 开始的第一个 catch 块; **AND_CATCH**宏开始后续 catch 块内，与**END_CATCH**宏终止的 catch 块的序列。  
   
-     与关键字，**捕获**关键字 （替换其异常声明） 开始每个 catch 块。 没有到`END_CATCH`宏; 阻止其右大括号以结束该 catch。  
+     与关键字，**捕获**关键字 （替换其异常声明） 开始每个 catch 块。 没有到**END_CATCH**宏; 阻止其右大括号以结束该 catch。  
   
 3.  引发表达式：  
   
-     宏使用`THROW_LAST`重新引发当前异常。 `throw`关键字，使用任何参数时，具有相同的效果。  
+     宏使用**THROW_LAST**重新引发当前异常。 **引发**关键字，使用任何参数时，具有相同的效果。  
   
 ##  <a name="_core_doing_the_conversion"></a> 进行转换  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>要转换宏用于使用 c + + 异常处理关键字的代码  
   
-1.  查找所有匹配项的 MFC 宏**重**，**捕获**， `AND_CATCH`， `END_CATCH`，**引发**，和`THROW_LAST`。  
+1.  查找所有匹配项的 MFC 宏**重**，**捕获**， **AND_CATCH**， **END_CATCH**，**引发**，和**THROW_LAST**。  
   
 2.  替换或删除所有出现的以下宏：  
   
@@ -89,13 +89,13 @@ ms.locfileid: "33350746"
   
      **捕获**(将其替换为**捕获**)  
   
-     `AND_CATCH` (将其替换为**捕获**)  
+     **AND_CATCH** (将其替换为**捕获**)  
   
-     `END_CATCH` （将其删除）  
+     **END_CATCH** （删除）  
   
-     **引发**(将其替换为`throw`)  
+     **引发**(将其替换为**引发**)  
   
-     `THROW_LAST` (将其替换为`throw`)  
+     **THROW_LAST** (将其替换为**引发**)  
   
 3.  修改宏自变量，以便它们构成有效的异常声明。  
   

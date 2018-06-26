@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344199"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930282"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文档/视图结构的替换选项
 MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格式和数据对用户的可视表示形式。 对于大多数桌面应用程序，文档/视图结构是适当和有效的应用程序体系结构。 这种体系结构将数据与视图分离，大多数情况下，可简化应用程序并减少冗余代码。  
@@ -41,11 +41,11 @@ MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格
   
  Visual C++ 向导以及源编辑器和对话框编辑器与生成的应用程序一起工作，就像与其他任何向导生成的应用程序一起工作一样。 应用程序可以支持工具栏、 滚动条和状态栏，并且具有**有关**框。 您的应用程序将不注册任何文档模板，且不包含文档类。  
   
- 请注意，生成的应用程序有视图类， **CChildView**派生自`CWnd`。 MFC 创建视图类的一个实例并将其放置在您的应用程序创建的框架窗口中。 MFC 仍将强制使用视图窗口，因为它简化了应用程序内容的定位和管理。 您可以将绘制代码添加到此类的 `OnPaint` 成员中。 您的代码应将滚动条添加到视图而不是框架中。  
+ 请注意，生成的应用程序有视图类，`CChildView`派生自`CWnd`。 MFC 创建视图类的一个实例并将其放置在您的应用程序创建的框架窗口中。 MFC 仍将强制使用视图窗口，因为它简化了应用程序内容的定位和管理。 您可以将绘制代码添加到此类的 `OnPaint` 成员中。 您的代码应将滚动条添加到视图而不是框架中。  
   
  由于 MFC 提供的文档/视图体系结构负责实现应用程序的许多基本功能，因此，如果项目中缺失该体系结构，则意味着您负责实现应用程序的许多重要功能：  
   
--   提供 MFC 应用程序向导，仅包含你的应用程序的菜单`New`和`Exit`上的命令**文件**菜单。 （只有 MDI 应用程序支持 `New` 命令，没有文档/视图支持的 SDI 应用程序则不支持。）生成的菜单资源不支持 MRU（最近使用的）列表。  
+-   提供 MFC 应用程序向导，仅包含你的应用程序的菜单**新建**和**退出**上的命令**文件**菜单。 (**新建**命令仅支持 MDI 应用程序，没有文档/视图的不 SDI 应用程序的支持。)生成的菜单资源不支持 MRU（最近使用的）列表。  
   
 -   你必须添加处理程序函数和实现你的应用程序将支持，包括任何命令**打开**和**保存**上**文件**菜单。 MFC 通常会提供代码以支持这些功能，但是，此支持与文档/视图体系结构紧密相连。  
   
@@ -53,9 +53,9 @@ MFC 应用程序通常使用文档/视图体系结构来管理信息、文件格
   
  强烈建议您使用 MFC 应用程序向导创建应用程序，而不使用文档/视图体系结构，因为该向导可以保证正确的 MFC 体系结构。 但是，如果必须避免使用此向导，这里有几种方法可以跳过代码中的文档/视图体系结构：  
   
--   如上面建议的，将文档视为未使用的附加物并在视图类中实现数据管理代码。 文档的开销相对较低。 单个[CDocument](../mfc/reference/cdocument-class.md)对象会产生少量开销本身，加上的少量开销**CDocument**的基类， [CCmdTarget](../mfc/reference/ccmdtarget-class.md)和[CObject](../mfc/reference/cobject-class.md)。 后面两个类都很小。  
+-   如上面建议的，将文档视为未使用的附加物并在视图类中实现数据管理代码。 文档的开销相对较低。 单个[CDocument](../mfc/reference/cdocument-class.md)对象会产生少量开销本身，加上的少量开销`CDocument`的基类， [CCmdTarget](../mfc/reference/ccmdtarget-class.md)和[CObject](../mfc/reference/cobject-class.md)。 后面两个类都很小。  
   
-     在中声明**CDocument**:  
+     在中声明`CDocument`:  
   
     -   两个 `CString` 对象。  
   

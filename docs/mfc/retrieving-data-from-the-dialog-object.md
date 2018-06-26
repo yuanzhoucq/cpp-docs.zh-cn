@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380203"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929590"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>从对话框对象检索数据
 框架可以轻松地进行初始化的控件在对话框中的值并从控件中检索值。 更费力的手动方法是调用函数，如`SetDlgItemText`和`GetDlgItemText`类的成员函数`CWnd`，其应用到控制窗口。 使用这些函数中，你访问每个控件单独来设置或获取其值，如调用函数`SetWindowText`和`GetWindowText`。 初始化和检索，自动执行框架的方法。  
@@ -47,7 +47,7 @@ ms.locfileid: "33380203"
   
  中的更详细地解释了 DDX 和 DDV[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。  
   
- 对于模式对话框，你可以检索用户输入时的任何数据`DoModal`返回**IDOK**但对话框之前在销毁对象。 对于无模式对话框，你可以从检索数据的对话框对象在任何时候通过调用`UpdateData`具有自变量**TRUE** ，然后访问对话框类成员变量。 中的更详细地讨论了此主题[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。  
+ 对于模式对话框，你可以检索用户输入时的任何数据`DoModal`返回 IDOK 但对话框之前在销毁对象。 对于无模式对话框，你可以从检索数据的对话框对象在任何时候通过调用`UpdateData`具有自变量**TRUE** ，然后访问对话框类成员变量。 中的更详细地讨论了此主题[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)

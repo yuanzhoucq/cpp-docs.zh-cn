@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333825"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930656"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 本文讨论如何使用属性窗口在 ActiveX 控件容器中安装 ActiveX 控件的事件处理程序。 使用事件处理程序接收通知 （从控件） 的某些事件，并在响应中执行某些操作。 此通知称为"触发"事件。  
@@ -46,7 +46,7 @@ ms.locfileid: "33333825"
   
  因为你可以使用属性窗口来添加事件，事件映射条目 (`ON_EVENT`) 添加到事件接收器映射和事件处理程序函数添加到容器的实现 (。CPP) 文件。  
   
- 下面的示例声明一个事件处理程序，调用`OnClickInCircCtrl`，Circ 控件**ClickIn**事件：  
+ 下面的示例声明一个事件处理程序，调用`OnClickInCircCtrl`，Circ 控件`ClickIn`事件：  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

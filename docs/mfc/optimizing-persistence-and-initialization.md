@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355655"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930308"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>优化持久性和初始化
 默认情况下，持久性和初始化的控件中处理通过`DoPropExchange`成员函数。 在典型的控件中，该函数包含到多个调用**PX_** 函数 (`PX_Color`， `PX_Font`，依次类推)，一个用于每个属性。  
@@ -45,7 +45,7 @@ ms.locfileid: "33355655"
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- 请注意，在负载情况下，使用临时变量，然后分配其值，而不是强制转换`m_boolProp`到**字节**引用。 强制转换方法将导致仅使用一个字节的`m_boolProp`被修改，使其余的字节未初始化的。  
+ 请注意，在负载情况下，使用临时变量，然后分配其值，而不是强制转换*m_boolProp*到**字节**引用。 强制转换方法将导致仅使用一个字节的*m_boolProp*被修改，使其余的字节未初始化的。  
   
  对于相同的控件，你可以通过重写优化控件的初始化[COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) ，如下所示：  
   

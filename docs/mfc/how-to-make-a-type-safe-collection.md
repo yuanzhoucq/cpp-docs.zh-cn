@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354434"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930028"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 本文介绍如何针对您自己的数据类型生成类型安全的集合。 包括以下主题：  
@@ -52,7 +52,7 @@ ms.locfileid: "33354434"
   
 3.  如有必要，实现[帮助器函数](../mfc/reference/collection-class-helpers.md)和[SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)。 有关实现这些函数的信息，请参阅[实现帮助器函数](#_core_implementing_helper_functions)。  
   
- 此示例演示对整数列表的声明。 步骤 1 中的第一个参数是作为列表的元素存储的数据的类型。 第二个参数指定如何将数据传递给并返回与成员函数的集合类，如**添加**和`GetAt`。  
+ 此示例演示对整数列表的声明。 步骤 1 中的第一个参数是作为列表的元素存储的数据的类型。 第二个参数指定如何将数据传递给并返回与成员函数的集合类，如`Add`和`GetAt`。  
   
 ##  <a name="_core_implementing_helper_functions"></a> 实现帮助器函数  
  基于模板的集合类 `CArray`、`CList` 和 `CMap` 使用您可根据需要为派生集合类自定义的 5 个全局帮助器函数。 有关这些帮助器函数的信息，请参阅[集合类帮助器](../mfc/reference/collection-class-helpers.md)中*MFC 参考*。 基于模板的集合类的大部分使用需要实现序列化函数。  
@@ -66,10 +66,10 @@ ms.locfileid: "33354434"
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- 有关重载的插入运算符`CArchive`调用`CObject::Serialize`（或该函数的替代） 为每个**CPerson**对象。  
+ 有关重载的插入运算符`CArchive`调用`CObject::Serialize`（或该函数的替代） 为每个`CPerson`对象。  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> 使用非模板集合类  
- MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 它们可以用于包含受支持的类型的数据`CObject*`， **UINT**， `DWORD`，和`CString`。 您可以使用这些预定义的集合（如 `CObList`）保存派生自 `CObject` 的任何对象的集合。 MFC 还提供其他预定义的集合以保存基元类型，如**UINT**和 void 指针 (`void`*)。 但一般来说，定义自己的类型安全集合来保存更特定的类的对象及其派生类型往往很有用。 请注意，使用不基于模板的集合类这样做比使用基于模板的类工作量大。  
+ MFC 还支持 MFC 1.0 版引入的集合类。 这些类都不基于模板。 它们可以用于包含受支持的类型的数据`CObject*`， `UINT`， `DWORD`，和`CString`。 您可以使用这些预定义的集合（如 `CObList`）保存派生自 `CObject` 的任何对象的集合。 MFC 还提供其他预定义的集合以保存基元类型，如`UINT`和 void 指针 (`void`*)。 但一般来说，定义自己的类型安全集合来保存更特定的类的对象及其派生类型往往很有用。 请注意，使用不基于模板的集合类这样做比使用基于模板的类工作量大。  
   
  使用非模板集合创建类型安全的集合有两种方式：  
   

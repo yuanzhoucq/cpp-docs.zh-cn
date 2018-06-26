@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353493"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930056"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控件：序列化
 本文讨论如何序列化 ActiveX 控件。 在序列化的读取或写入到持久存储介质，例如磁盘文件的过程。 Microsoft 基础类 (MFC) 库中类进行序列化提供内置支持`CObject`。 `COleControl` 此将支持扩展到通过属性交换机制使用 ActiveX 控件。  
@@ -77,7 +77,7 @@ ms.locfileid: "33353493"
  有关这些属性交换函数的详细信息，请参阅[持久性的 OLE 控件](../mfc/reference/persistence-of-ole-controls.md)中*MFC 参考*。  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> 自定义 DoPropExchange 的默认行为  
- 默认实现**DoPropertyExchange** （如前一个主题中所示） 进行调用以基类`COleControl`。 此序列化的自动支持的属性集`COleControl`，这将比序列化仅控件的自定义属性的更多存储空间。 删除此调用允许你只序列化这些属性您认为重要的对象。 对控件已实现任何常用属性状态将不进行序列化当保存或加载控件对象，除非你显式添加**PX_** 调用它们。  
+ 默认实现`DoPropertyExchange`（如前一个主题中所示） 进行调用以基类`COleControl`。 此序列化的自动支持的属性集`COleControl`，这将比序列化仅控件的自定义属性的更多存储空间。 删除此调用允许你只序列化这些属性您认为重要的对象。 对控件已实现任何常用属性状态将不进行序列化当保存或加载控件对象，除非你显式添加**PX_** 调用它们。  
   
 ##  <a name="_core_implementing_version_support"></a> 实现版本支持  
  版本支持修改后的 ActiveX 控件来添加新的持久性属性，仍将能够检测并加载由该控件的早期版本创建的持久性状态。 若要使控件的版本可作为其持久性数据的一部分，调用[COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion)该控件的`DoPropExchange`函数。 如果 ActiveX 控件使用 ActiveX 控件向导创建，则此调用会自动插入。 如果不需要版本支持，可以删除它。 但是，在控件大小的成本是非常小 （4 字节为单位） 以提供版本支持增加灵活性。  
@@ -87,7 +87,7 @@ ms.locfileid: "33353493"
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- 你可以使用任何`DWORD`作为的版本号。 ActiveX 控件向导生成的项目使用 **_wVerMinor**和 **_wVerMajor**作为默认值。 这些是在项目的 ActiveX 控件类的实现文件中定义的全局常量。 中的其余部分你`DoPropExchange`函数，你可以调用[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)在任何时间，以检索要保存或检索的版本。  
+ 你可以使用任何**DWORD**作为的版本号。 ActiveX 控件向导生成的项目使用`_wVerMinor`和`_wVerMajor`作为默认值。 这些是在项目的 ActiveX 控件类的实现文件中定义的全局常量。 中的其余部分你`DoPropExchange`函数，你可以调用[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)在任何时间，以检索要保存或检索的版本。  
   
  在下面的示例中，版本 1 的此示例控件具有只有一个"ReleaseDate"属性。 版本 2 添加了一个"OriginalDate"属性。 如果控件指示从旧版本中加载的持久状态，它将初始化为默认值的新属性的成员变量。  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347528"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930669"
 ---
 # <a name="mapi"></a>MAPI
-本文介绍面向客户端消息应用程序开发人员的 Microsoft 消息处理应用程序编程接口 (MAPI)。 MFC 提供了对类中的 MAPI 子集支持**CDocument**但不封装整个 API。 有关详细信息，请参阅[MFC 中的 MAPI 支持](../mfc/mapi-support-in-mfc.md)。  
+本文介绍面向客户端消息应用程序开发人员的 Microsoft 消息处理应用程序编程接口 (MAPI)。 MFC 提供了对类中的 MAPI 子集支持`CDocument`但不封装整个 API。 有关详细信息，请参阅[MFC 中的 MAPI 支持](../mfc/mapi-support-in-mfc.md)。  
   
  MAPI 是一组函数，由启用了邮件的应用程序和邮件感知应用程序用于创建、操作、传输和存储电子邮件。 它为应用程序开发人员提供了定义电子邮件的目的和内容的工具，并使他们能够灵活管理存储的电子邮件。 MAPI 还提供了公共接口，供应用程序开发人员用于独立于基础的邮件系统创建启用了邮件的应用程序和邮件感知应用程序。  
   

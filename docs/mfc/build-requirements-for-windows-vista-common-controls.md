@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342155"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930971"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 公共控件的生成需求
 Microsoft 基础类 (MFC) 库支持 Windows 公共控件版本 6.1。 公共控件包含在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中，该库包含在 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]中。 库提供了增强现有类和新类的新方法和支持的方法[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]公共控件。 在生成应用程序时，应该遵循后续章节中所述的编译和迁移需求。  
@@ -44,7 +44,7 @@ Microsoft 基础类 (MFC) 库支持 Windows 公共控件版本 6.1。 公共控�
  从 Windows 公共控件 6.1 版开始，某些 MFC 方法的 ANSI 版本已被弃用。 有关详细信息，请参阅[弃用的 ANSI Api](../mfc/deprecated-ansi-apis.md)。  
   
 ## <a name="migration-requirements"></a>迁移需求  
- 如果您使用 Visual Studio IDE 生成使用 Windows 公共控件 6.1 版的新 MFC 应用程序，IDE 将自动声明适当的清单。 但是，如果您从早期版本的 Visual Studio 迁移到现有 MFC 应用程序，并且您要使用新的公共控件，IDE 不会自动提供用来升级应用程序清单信息。 相反，你必须在 stdafx.h 文件中手动插入以下源代码：  
+ 如果您使用 Visual Studio IDE 生成使用 Windows 公共控件 6.1 版的新 MFC 应用程序，IDE 将自动声明适当的清单。 但是，如果您从早期版本的 Visual Studio 迁移到现有 MFC 应用程序，并且您要使用新的公共控件，IDE 不会自动提供用来升级应用程序清单信息。 相反，你必须手动插入以下源代码中的你**stdafx.h**文件：  
   
 ```  
 #ifdef UNICODE  

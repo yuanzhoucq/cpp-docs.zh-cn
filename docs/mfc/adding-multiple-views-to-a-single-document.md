@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344144"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928696"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>向单个文档添加多个视图
 在使用 Microsoft 基础类 (MFC) 库创建一个单文档界面 (SDI) 的应用程序的情况下，每种文档类型都与单个视图类型关联。 在某些情况下，最好切换文档与新视图的当前视图的功能。  
@@ -46,14 +46,14 @@ ms.locfileid: "33344144"
   
  此主题的其余部分假设如下：  
   
--   名称`CWinApp`-派生的对象是`CMyWinApp`，和`CMyWinApp`声明并在 MYWINAPP 中定义。H 和 MYWINAPP。CPP。  
+-   名称`CWinApp`-派生的对象是`CMyWinApp`，和`CMyWinApp`是声明和定义中*MYWINAPP。H*和*MYWINAPP。CPP*。  
   
--   `CNewView` 是的新名称`CView`-派生的对象，和`CNewView`是声明和定义中新建。H 和新建。CPP。  
+-   `CNewView` 是的新名称`CView`-派生的对象，和`CNewView`是声明和定义中*新建。H*和*新建。CPP*。  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> 修改现有的应用程序类  
  对于应用程序的视图之间切换，你需要通过添加成员变量以存储视图和方法来将它们转换来修改应用程序类。  
   
- 将以下代码添加到的声明`CMyWinApp`MYWINAPP 中。H:  
+ 将以下代码添加到的声明`CMyWinApp`中*MYWINAPP。H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33344144"
   
  上次修改与应用程序类需要包括新的头文件，用于定义 Windows 消息 (**WM_INITIALUPDATE**)，但切换函数中使用。  
   
- 在包含一部分 MYWINAPP 中插入以下行。CPP:  
+ 包括一节中插入以下行*MYWINAPP。CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33344144"
   
  在已经将类添加到项目中，你需要更改某些视图类成员的可访问性。  
   
- 修改新建。通过更改从访问说明符 H`protected`到**公共**对构造函数和析构函数。 这使类以创建和销毁动态，并修改视图外观之前可见。  
+ 修改*新建。H*通过更改从访问说明符**保护**到**公共**对构造函数和析构函数。 这使类以创建和销毁动态，并修改视图外观之前可见。  
   
  保存所做的更改并继续下一步。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "33344144"
 ##  <a name="vcconswitchingfunctiona4"></a> 实现切换函数  
  在上一步骤中，添加了代码创建和初始化新的视图对象。 最后一个主要一步是实现切换的方法， `SwitchView`。  
   
- 在你的应用程序的实现文件末尾类 (MYWINAPP。CPP) 中，添加以下方法定义：  
+ 在应用程序类实现文件末尾 (*MYWINAPP。CPP*)，添加以下方法定义：  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

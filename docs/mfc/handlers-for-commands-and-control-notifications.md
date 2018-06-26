@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347228"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929126"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控件通知的处理程序
 命令或控件通知消息没有默认的处理程序。 因此，您将仅受为这些消息类别命名处理程序的约定约束。 当您将命令或控件通知映射到处理程序时，“属性”窗口将基于命令 ID 或控件通知代码建议一个名称。 您可以接受建议的名称、更改或替换该名称。  
@@ -40,7 +40,7 @@ ms.locfileid: "33347228"
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- 您可为此命令分配一个 ID `IDC_MY_BUTTON`，因为它等效于应用程序特定用户界面对象。  
+ 你可将此命令分配的 ID 为**IDC_MY_BUTTON**因为它是等效于应用程序特定的用户界面对象。  
   
  所有消息类别不采用自变量也不返回值。  
   

@@ -22,22 +22,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19cda1869938a854ff03ea83cdda747e8120a0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345737"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929525"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>管理菜单、控件条和快捷键
 框架窗口管理对用户界面对象（包括菜单、工具栏按钮、状态栏和快捷键）的更新。 它还管理对 MDI 应用程序中的菜单栏的共享。  
   
 ## <a name="managing-menus"></a>管理菜单  
- 更新使用的用户界面项参与框架窗口`ON_UPDATE_COMMAND_UI`机制中所述[如何更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)。 空循环期间，工具栏上的按钮和其他控件栏会进行更新。 菜单栏上的下拉菜单中的菜单项正好在菜单下拉之前进行更新。  
+ 更新用户界面项使用中所述的 ON_UPDATE_COMMAND_UI 机制参与框架窗口[如何更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)。 空循环期间，工具栏上的按钮和其他控件栏会进行更新。 菜单栏上的下拉菜单中的菜单项正好在菜单下拉之前进行更新。  
   
  对于 MDI 应用程序，MDI 框架窗口管理菜单栏和标题。 MDI 框架窗口拥有一个默认菜单，该菜单可在没有活动 MDI 子窗口时用作菜单栏。 当存在活动子窗口时，MDI 框架窗口的菜单栏就会由活动的 MDI 子窗口取代。 如果 MDI 应用程序支持多个文档类型（如图表和工作表文档），则每个类型会将其自己的菜单放入菜单栏中并更改主框架窗口的标题。  
   
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)为 MDI 应用程序上显示的窗口菜单提供标准命令的默认实现。 具体而言，新建窗口命令 (**ID_WINDOW_NEW**) 实现来创建新的框架窗口和当前文档的视图。 仅在需要高级自定义时重写这些实现。  
+ [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)为 MDI 应用程序上显示的窗口菜单提供标准命令的默认实现。 具体而言，实现新窗口命令 (ID_WINDOW_NEW) 是为了创建新的框架窗口和当前文档的视图。 仅在需要高级自定义时重写这些实现。  
   
  同一文档类型的多个 MDI 子窗口共享菜单资源。 如果多个 MDI 子窗口是由同一个文档模板创建的，则它们可使用同一个菜单资源，并保存在 Windows 系统资源中。  
   

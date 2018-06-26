@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334881"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930883"
 ---
 # <a name="active-documents-on-the-internet"></a>Internet 上的活动文档
 活动文档提供传统嵌入对象的扩展。 活动文档可以是多页，并将显示在整个工作区。 它们执行传统的菜单协商，就地，以及在服务器应用程序中打开的窗口可以进行编辑。 而不是显示为通过阴影边框括起来的一个小矩形，活动文档是全帧和始终处于就地活动状态。  
@@ -55,7 +55,7 @@ ms.locfileid: "33334881"
 |-------------------------|---------------------------------|  
 |使用复合文件作为存储机制。|`IPersistStorage`。|  
 |支持活动文档，包括从文件创建的基础嵌入功能。|`IPersistFile`、`IOleObject` 和 `IDataObject`。|  
-|支持就地激活。|`IOleInPlaceObject` 和`IOleInPlaceActiveObject`(使用容器的`IOleInPlaceSite`和**IOleInPlaceFrame**接口)。|  
+|支持就地激活。|`IOleInPlaceObject` 和`IOleInPlaceActiveObject`(使用容器的`IOleInPlaceSite`和`IOleInPlaceFrame`接口)。|  
 |支持涉及这些新的接口的活动文档扩展。 有些接口是可选的。|`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget` 和 `IPrint`。|  
   
  MFC 提供支持，用于扩展现有嵌入的服务器支持添加到活动文档。  
@@ -68,7 +68,7 @@ ms.locfileid: "33334881"
   
 |类类型|以前派生自|更改为派生自|  
 |----------------|---------------------------|---------------------------|  
-|就地框架|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|就地框架|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |项|`COleServerItem`|`CDocObjectServerItem`|  
   
  你还将更改在注册表中，输入信息的方式，并进行一些其他更改。 如果你的应用程序当前不具有任何 COM 组件支持，你可以通过运行应用程序向导并与你现有的应用程序集成 COM 组件特有的代码中添加服务器支持。  

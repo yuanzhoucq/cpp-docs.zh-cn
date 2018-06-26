@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349037"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930485"
 ---
 # <a name="ole-container-classes"></a>OLE 容器类
-容器应用程序使用这些类。 同时`COleLinkingDoc`和`COleDocument`管理的集合`COleClientItem`对象。 而不是派生您的文档类从**CDocument**，你将从它派生`COleLinkingDoc`或`COleDocument`，取决于是否要支持链接到嵌入到文档中的对象。  
+容器应用程序使用这些类。 同时`COleLinkingDoc`和`COleDocument`管理的集合`COleClientItem`对象。 而不是派生您的文档类从`CDocument`，你将从它派生`COleLinkingDoc`或`COleDocument`，取决于是否要支持链接到嵌入到文档中的对象。  
   
  使用`COleClientItem`对象表示文档中嵌入从另一个文档或是另一个文档的链接中每个 OLE 项。  
   

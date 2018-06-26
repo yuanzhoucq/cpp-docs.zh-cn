@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349256"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929794"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
-常用的方法与不同的自定义方法的已由类[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含支持刷新方法为您的控件的预定义的成员函数。 此常用方法的调度映射条目**DISP_STOCKFUNC_REFRESH**。  
+常用的方法与不同的自定义方法的已由类[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含支持刷新方法为您的控件的预定义的成员函数。 此常用方法的调度映射项是 DISP_STOCKFUNC_REFRESH。  
   
  `COleControl` 支持两种常用的方法： DoClick 和刷新。 刷新调用由控件的用户，以立即更新控件的外观;DoClick 调用激发控件的单击事件。  
   
 |方法|调度映射条目|注释|  
 |------------|------------------------|-------------|  
 |`DoClick`|**DISP_STOCKPROP_DOCLICK （)**|触发单击事件。|  
-|**刷新**|**DISP_STOCKPROP_REFRESH （)**|立即更新控件的外观。|  
+|`Refresh`|**DISP_STOCKPROP_REFRESH （)**|立即更新控件的外观。|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 添加常用方法使用添加方法向导  
  添加常用方法是简单使用[添加方法向导](../ide/add-method-wizard.md)。 下面的过程演示将刷新方法添加到使用 MFC ActiveX 控件向导创建的控件。  

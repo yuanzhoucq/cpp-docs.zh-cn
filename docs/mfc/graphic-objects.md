@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349777"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930841"
 ---
 # <a name="graphic-objects"></a>图形对象
 Windows 提供了各种可在设备上下文中使用的绘图工具。 它提供了用于绘制线条的笔、用于填充内部的画笔以及用于绘制文本的字体。 MFC 提供等效于 Windows 中的绘图工具的图形对象类。 下表显示可用类以及等效的 Windows 图形设备接口 (GDI) 句柄类型。  
@@ -82,7 +82,7 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
   
  类库中的每个图形对象类都具有一个构造函数，使你可以创建该类的图形对象，随后必须使用适当的创建函数（如 `CreatePen`）初始化这些对象。  
   
- 类库中的每个图形对象类都具有一个强制转换运算符，可将 MFC 对象强制转换为关联的 Windows 句柄。 生成的句柄在关联对象将它分离之前都有效。 使用对象的**分离**成员函数可分离句柄。  
+ 类库中的每个图形对象类都具有一个强制转换运算符，可将 MFC 对象强制转换为关联的 Windows 句柄。 生成的句柄在关联对象将它分离之前都有效。 使用对象的`Detach`成员函数可分离句柄。  
   
  下面的代码将 `CPen` 对象强制转换为 Windows 句柄：  
   

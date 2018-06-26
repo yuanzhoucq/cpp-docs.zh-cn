@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb89180db8e1a6cce2c40bbb4bae0965b972afa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343518"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931848"
 ---
 # <a name="documentview-creation"></a>文档/视图创建
-框架提供的实现`New`和**打开**（及其他） 的命令上**文件**菜单。 创建新文档及其关联的视图和框架窗口是应用程序对象、 文档模板、 新建的文档和新创建的框架窗口相互合作的结果。 下表总结了哪些对象创建的内容。  
+框架提供的实现**新建**和**打开**（及其他） 的命令上**文件**菜单。 创建新文档及其关联的视图和框架窗口是应用程序对象、 文档模板、 新建的文档和新创建的框架窗口相互合作的结果。 下表总结了哪些对象创建的内容。  
   
 ### <a name="object-creators"></a>对象创建者  
   

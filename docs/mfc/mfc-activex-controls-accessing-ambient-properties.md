@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348213"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931718"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX 控件：访问环境属性
 本文讨论了 ActiveX 控件可以访问其控件容器的环境属性的方式。  
@@ -44,7 +44,7 @@ ms.locfileid: "33348213"
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  调用方必须调用**释放 （）** 上返回的字体。  
+    >  调用方必须调用`Release( )`上返回的字体。  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33348213"
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- 如果环境属性的值发生更改 （通过容器一些操作中）， **OnAmbientPropertyChanged**调用的控件的成员函数。 重写该成员函数以处理此类的通知。 参数**OnAmbientPropertyChanged**是受影响的环境属性的调度 ID。 此调度 ID 的值可能是**DISPID_UNKNOWN**，指示一个或多个环境的属性已更改，但有关哪些属性受影响的信息不可用。  
+ 如果环境属性的值发生更改 （通过容器一些操作中），`OnAmbientPropertyChanged`调用的控件的成员函数。 重写该成员函数以处理此类的通知。 参数`OnAmbientPropertyChanged`是受影响的环境属性的调度 ID。 此调度 ID 的值可能会 DISPID_UNKNOWN，指示一个或多个环境的属性已更改，但有关哪些属性受影响的信息是不可用。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)

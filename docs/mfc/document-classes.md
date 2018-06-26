@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346612"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928536"
 ---
 # <a name="document-classes"></a>文档类
 创建的文档模板对象的文档类对象管理应用程序的数据。 从这些类之一，将为你的文档中派生一个类。  
@@ -29,7 +29,7 @@ ms.locfileid: "33346612"
  文档类对象与视图对象交互。 视图对象表示一个窗口的工作区、 显示文档的数据，并允许用户与之进行交互。 文档模板对象创建文档和视图。  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- 应用程序特定文档的基类。 派生文档类的类**CDocument**。  
+ 应用程序特定文档的基类。 派生文档类的类`CDocument`。  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  用于复合文档实现以及基本容器支持。 可用作一个用于类派生自[CDocItem](../mfc/reference/cdocitem-class.md)。 此类可以用作基类的容器时记录该对象，并且是类的基类`COleServerDoc`。  

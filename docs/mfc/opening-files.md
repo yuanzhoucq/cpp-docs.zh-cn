@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352758"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931562"
 ---
 # <a name="opening-files"></a>打开文件
 在 MFC 中，最常见的文件打开方式是一个两阶段过程。  
@@ -55,7 +55,7 @@ ms.locfileid: "33352758"
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  此示例将创建并打开文件。 如果出现问题，则 `Open` 调用将在其最后一个参数中返回 `CFileException` 对象，如下所示。 `TRACE` 宏将打印文件名和指示失败原因的代码。 如果您需要更详细的错误报告，则可以调用 `AfxThrowFileException` 函数。  
+>  此示例将创建并打开文件。 如果出现问题，则 `Open` 调用将在其最后一个参数中返回 `CFileException` 对象，如下所示。 TRACE 宏将打印文件名和指示失败的原因的代码。 如果您需要更详细的错误报告，则可以调用 `AfxThrowFileException` 函数。  
   
 ## <a name="see-also"></a>请参阅  
  [CFile 类](../mfc/reference/cfile-class.md)   

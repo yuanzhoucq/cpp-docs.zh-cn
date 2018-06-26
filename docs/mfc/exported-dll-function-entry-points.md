@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343848"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928620"
 ---
 # <a name="exported-dll-function-entry-points"></a>导出的 DLL 函数入口点
 对于 DLL 的导出函数，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)宏来从 DLL 模块切换到调用应用程序的 DLL 时保持适当的全局状态。  
   
  调用时，此宏会针对函数包含范围的其余部分，将 `pModuleState`（一个指向包含模块的全局数据的 `AFX_MODULE_STATE` 结构的指针）设置为有效的模块状态。 一旦离开包含宏的范围，之前的有效模块状态将会自动还原。  
   
- 这种切换通过构造的实例来实现**AFX_MODULE_STATE**堆栈上的类。 在构造函数中，此类获取一个指向当前模块状态的指针并将其存储在一个成员变量中，然后将 `pModuleState` 设置为新的有效模块状态。 在析构函数中，此类将还原存储在其成员变量中的指针作为有效的模块状态。  
+ 这种切换通过构造的实例来实现`AFX_MODULE_STATE`堆栈上的类。 在构造函数中，此类获取一个指向当前模块状态的指针并将其存储在一个成员变量中，然后将 `pModuleState` 设置为新的有效模块状态。 在析构函数中，此类将还原存储在其成员变量中的指针作为有效的模块状态。  
   
  如果有一个导出的函数，例如在 DLL 中启动对话框的函数，则需要将以下代码添加到函数的开头：  
   

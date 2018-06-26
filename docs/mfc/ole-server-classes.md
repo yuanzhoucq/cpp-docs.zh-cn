@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350424"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932216"
 ---
 # <a name="ole-server-classes"></a>OLE 服务器类
-服务器应用程序使用这些类。 服务器文档派生自`COleServerDoc`而不是从**CDocument**。 请注意，因为`COleServerDoc`派生自`COleLinkingDoc`，服务器文档也可以是支持将链接的容器。  
+服务器应用程序使用这些类。 服务器文档派生自`COleServerDoc`而不是从`CDocument`。 请注意，因为`COleServerDoc`派生自`COleLinkingDoc`，服务器文档也可以是支持将链接的容器。  
   
  `COleServerItem`类表示文档或文档，可以在另一个文档中嵌入或链接到的一部分。  
   

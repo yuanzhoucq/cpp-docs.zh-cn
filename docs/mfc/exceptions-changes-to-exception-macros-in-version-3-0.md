@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350007"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931013"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>异常：3.0 版本中对异常宏的修改
 这是一个高级的主题。  
@@ -46,13 +46,13 @@ ms.locfileid: "33350007"
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- 引发作为**CException\***，即使它被构造为**CCustomException**。 **捕获**MFC 版本 2.5 和更早版本使用中的宏`CObject::IsKindOf`若要在运行时测试的类型。 因为表达式  
+ 引发作为`CException*`，即使它被构造为`CCustomException`。 **捕获**MFC 版本 2.5 和更早版本使用中的宏`CObject::IsKindOf`若要在运行时测试的类型。 因为表达式  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  为 true，第一个 catch 块捕获异常。 在版本 3.0 中，使用 c + + 异常来实现许多异常处理宏，第二个 catch 块与引发`CException`。  
   
- 类似下面的代码不常见。 它通常出现在异常对象传递给另一个函数接受泛型的**CException\***，执行"预引发"处理，最后会引发异常。  
+ 类似下面的代码不常见。 它通常出现在异常对象传递给另一个函数接受泛型的`CException*`，执行"预引发"处理，最后会引发异常。  
   
  若要解决此问题，将引发表达式从函数移动到调用代码，并引发在生成的异常时编译器知道实际类型的异常。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33350007"
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- 使用**引发**在 catch 块会导致指针`e`要删除，因此，外部 catch 站点将收到了无效的指针。 使用`THROW_LAST`重新引发`e`。  
+ 使用**引发**在 catch 块会导致指针`e`要删除，因此，外部 catch 站点将收到了无效的指针。 使用**THROW_LAST**重新引发`e`。  
   
  有关详细信息，请参阅[异常： 捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   

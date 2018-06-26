@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349306"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931055"
 ---
 # <a name="memory-management-frame-allocation"></a>内存管理：帧分配
 只要调用函数，帧分配就会从已设置的“堆栈帧”中采用其名称。 堆栈帧是一个内存区域，可暂时存储函数的参数以及为函数定义的所有局部变量。 帧变量通常称为“自动”变量，因为编译器会自动为其分配空间。  
@@ -42,7 +42,7 @@ ms.locfileid: "33349306"
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- 对于局部函数变量，当函数存在时会发生此范围转换，但如果使用嵌套括号，则帧变量的范围会比函数的范围小。 此自动删除帧变量的功能是非常重要的。 对于简单的基元类型 (如`int`或**字节**)，数组或数据结构，自动删除只需回收变量所使用的内存。 由于变量超出了范围，因此无法访问它。 不过，对于 C++ 对象，自动删除过程会更复杂一点。  
+ 对于局部函数变量，当函数存在时会发生此范围转换，但如果使用嵌套括号，则帧变量的范围会比函数的范围小。 此自动删除帧变量的功能是非常重要的。 对于简单的基元类型 (如**int**或**字节**)，数组或数据结构，自动删除只需回收变量所使用的内存。 由于变量超出了范围，因此无法访问它。 不过，对于 C++ 对象，自动删除过程会更复杂一点。  
   
  在将某个对象定义为帧变量时，会在遇到定义的位置自动调用其构造函数。 如果对象超出范围，则在回收此对象的内存之前将自动调用其析构函数。 此自动构造和析构非常方便，但您必须意识到自动调用，特别是对于析构函数。  
   

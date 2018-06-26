@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352420"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931910"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控件：添加自定义属性
 自定义属性不同于常用属性，因为自定义属性不会由已实现`COleControl`类。 自定义属性用于公开的某个状态或 ActiveX 控件适应程序员使用控件的外观。  
@@ -47,7 +47,7 @@ ms.locfileid: "33352420"
   
 -   参数化的实现  
   
-     添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现调度映射条目宏是`DISP_PROPERTY_PARAM`。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
+     添加属性向导支持参数化的实现。 （有时称为属性数组） 的参数化的属性可以用于通过您的控件的单个属性访问的一组值。 此实现调度映射条目宏是 DISP_PROPERTY_PARAM。 有关实现此类型的详细信息，请参阅[实现参数化属性](../mfc/mfc-activex-controls-advanced-topics.md)中文章 ActiveX 控件： 高级主题。  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用添加属性向导以添加自定义属性  
  以下过程演示如何添加自定义属性，CircleOffset，使用 Get/Set 方法的实现。 CircleOffset 自定义属性允许控件的用户偏移量从控件的边界矩形的中心的圆圈。 添加与以外 Get/Set 方法实现的自定义属性的步骤操作非常类似。  
@@ -66,7 +66,7 @@ ms.locfileid: "33352420"
   
      这将打开[添加属性向导](../ide/names-add-property-wizard.md)。  
   
-5.  在**属性名称**框中，键入`CircleOffset`。  
+5.  在**属性名称**框中，键入*CircleOffset*。  
   
 6.  对于“实现类型” ，请单击“Get/Set 方法” 。  
   

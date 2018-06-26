@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347076"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930498"
 ---
 # <a name="files-in-mfc"></a>MFC 中的文件
 在 Microsoft 基础类库 (MFC)，类[CFile](../mfc/reference/cfile-class.md)处理常规文件 I/O 操作。 此系列文章介绍如何打开和关闭文件以及如何读取数据并将数据写入文件。 还讨论了文件状态操作。 有关如何使用 MFC 的基于对象的序列化功能作为一种替代方式的读取和写入数据文件中的说明，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。  
   
 > [!NOTE]
->  当您使用 MFC **CDocument**对象时，框架执行许多序列化工作为你的操作。 具体而言，框架将创建和使用 `CFile` 对象。 只需在重写中编写代码`Serialize`类的成员函数**CDocument**。  
+>  当您使用 MFC`CDocument`对象时，框架执行许多序列化工作为你的操作。 具体而言，框架将创建和使用 `CFile` 对象。 只需在重写中编写代码`Serialize`类的成员函数`CDocument`。  
   
  `CFile` 类为通用二进制文件操作提供了一个接口。 派生自 `CStdioFile` 的 `CMemFile` 和 `CFile` 类以及派生自 `CSharedFile` 的 `CMemFile` 类提供了更专业的文件服务。  
   

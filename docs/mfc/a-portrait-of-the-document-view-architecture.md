@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329811"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928939"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文档/视图结构的纵览
 文档和视图在典型的 MFC 应用程序中是成对的。 数据存储在文档中，但视图具有对数据的特别访问权。 将文档与视图分离也会将数据的存储和维护与数据的显示分离。  
@@ -37,7 +37,7 @@ ms.locfileid: "33329811"
 ## <a name="gaining-access-to-document-data-from-the-view"></a>获取从视图访问文档数据的权限  
  视图访问其文档的数据使用[GetDocument](../mfc/reference/cview-class.md#getdocument)函数，返回一个指针，该文档，或通过使视图类 c + +`friend`的文档类。 视图随后会在准备好绘制或以其他方式操作数据时使用其访问权限获取数据。  
   
- 例如，从该视图的[OnDraw](../mfc/reference/cview-class.md#ondraw)成员函数，该视图使用**GetDocument**获取文档指针。 然后，它使用该指针访问文档中的 `CString` 数据成员。 视图将字符串传递到 `TextOut` 函数。 若要查看此示例的代码，请参阅[在视图中绘制](../mfc/drawing-in-a-view.md)。  
+ 例如，从该视图的[OnDraw](../mfc/reference/cview-class.md#ondraw)成员函数，该视图使用`GetDocument`获取文档指针。 然后，它使用该指针访问文档中的 `CString` 数据成员。 视图将字符串传递到 `TextOut` 函数。 若要查看此示例的代码，请参阅[在视图中绘制](../mfc/drawing-in-a-view.md)。  
   
 ## <a name="user-input-to-the-view"></a>对视图的用户输入  
  视图还可能在自身中将鼠标单击解释为数据的选择或编辑。 同样，它也可能将键击解释为数据输入或编辑。 假设用户在管理文本的视图中输入了一个字符串。 视图获取指向文档的指针并使用该指针将新数据传递到文档，从而将数据存储在某个数据结构中。  

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354295"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930233"
 ---
 # <a name="exceptions-database-exceptions"></a>异常：数据库异常
 此文章介绍了如何处理数据库异常。 你正在使用的 MFC 类开放式数据库连接 (ODBC) 或 MFC 类数据访问对象 (DAO) 可应用于大部分这篇文章中的材料。 显式标记为特定于一个或另一模型的材料。 包括以下主题：  
@@ -54,7 +54,7 @@ ms.locfileid: "33354295"
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)包含来自 MFC DAO 类扩展的错误代码。 这些错误代码，具有名称，在窗体**AFX_DAO_ERROR_XXX**，记录中的数据成员下`CDaoException`。  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode)包含 OLE`SCODE`从 DAO，如果适用。 很少需要与此错误代码，但是工作。 通常的其他两个数据成员中提供了详细信息。 请参阅，了解有关详细信息的数据成员`SCODE`值。  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode)包含 OLE **SCODE**从 DAO，如果适用。 很少需要与此错误代码，但是工作。 通常的其他两个数据成员中提供了详细信息。 请参阅，了解有关详细信息的数据成员**SCODE**值。  
   
  在类下提供了有关 DAO 错误、 DAO 错误对象类型和 DAO 错误集合的其他信息[CDaoException](../mfc/reference/cdaoexception-class.md)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33354295"
  下面的示例尝试构造[CRecordset](../mfc/reference/crecordset-class.md)-派生对象上具有堆**新**运算符和然后打开的记录集 （ODBC 数据源）。 DAO 类的类似示例，请参阅"DAO 异常示例"下面。  
   
 ### <a name="odbc-exception-example"></a>ODBC 异常示例  
- [打开](../mfc/reference/crecordset-class.md#open)成员函数可能会引发异常 (类型的[CDBException](../mfc/reference/cdbexception-class.md) ODBC 类)，因此该代码方括号**打开**调用**重**块。 后续**捕获**块将捕获`CDBException`。 你可以检查异常对象本身，调用`e`，但在这种情况下就可以知道创建记录集的尝试已失败。 **捕获**块显示一个消息框，并通过删除记录集对象清理。  
+ [打开](../mfc/reference/crecordset-class.md#open)成员函数可能会引发异常 (类型的[CDBException](../mfc/reference/cdbexception-class.md) ODBC 类)，因此该代码方括号`Open`调用**重**块。 后续**捕获**块将捕获`CDBException`。 你可以检查异常对象本身，调用`e`，但在这种情况下就可以知道创建记录集的尝试已失败。 **捕获**块显示一个消息框，并通过删除记录集对象清理。  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

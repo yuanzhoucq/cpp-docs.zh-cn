@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351658"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931575"
 ---
 # <a name="keyboard-and-mouse-customization"></a>键盘和鼠标自定义
 MFC 允许应用程序用户自定义其处理键盘和鼠标输入的方式。 用户可通过为命令分配键盘快捷键来自定义键盘输入。 用户还可通过选择应在用户双击应用程序特定窗口内时执行的命令来自定义鼠标输入。 本主题介绍如何为您的应用程序自定义输入。  
@@ -61,7 +61,7 @@ MFC 允许应用程序用户自定义其处理键盘和鼠标输入的方式。 
   
  在应用程序初始化鼠标管理器后，框架就会将**鼠标**tab 键移动到**自定义**对话框。 如果未添加任何视图，则访问此选项将导致未经处理的异常。 创建的视图列表之后**鼠标**选项卡可供用户。  
   
- 当您将新视图添加到鼠标管理器后，您将为其提供一个唯一 ID。 如果你想要支持鼠标自定义窗口，你必须处理`WM_LBUTTONDBLCLICK`消息并调用[CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick)函数。 当您调用此函数时，其中一个参数就是该窗口的 ID。 程序员负责记录 ID 号以及与其关联的对象。  
+ 当您将新视图添加到鼠标管理器后，您将为其提供一个唯一 ID。 如果你想要支持鼠标自定义窗口，你必须处理 WM_LBUTTONDBLCLICK 消息并调用[CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick)函数。 当您调用此函数时，其中一个参数就是该窗口的 ID。 程序员负责记录 ID 号以及与其关联的对象。  
   
 ## <a name="security-concerns"></a>安全问题  
  中所述[用户定义的工具](../mfc/user-defined-tools.md)，用户可以将用户定义的工具 ID 与双击事件关联。 当用户双击视图时，应用程序将寻找与关联 ID 匹配的用户工具。 如果应用程序找到匹配的工具，则它将执行该工具。 如果应用程序无法找到匹配的工具，则它将向双击的视图发送带有 ID 的 WM_COMMAND 消息。  

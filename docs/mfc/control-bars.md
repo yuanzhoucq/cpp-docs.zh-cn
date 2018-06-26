@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347894"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931786"
 ---
 # <a name="control-bars"></a>控件条
-“控件条”是工具栏、状态栏和对话栏的统称。 MFC 类`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和**CReBar**派生自类[CControlBar](../mfc/reference/ccontrolbar-class.md)，该类可实现其常见功能。  
+“控件条”是工具栏、状态栏和对话栏的统称。 MFC 类`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和`CReBar`派生自类[CControlBar](../mfc/reference/ccontrolbar-class.md)，该类可实现其常见功能。  
   
  控件条是显示多行控件的窗口，用户可以使用它来选择选项、执行命令或获取程序信息。 控件条的类型包括工具栏、对话栏和状态栏。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347894"
 -   Rebar，在类[CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  从 MFC 4.0 版开始，通过使用在 comctl32.dll 中实现的系统功能实现工具栏、状态栏和工具提示，而不是之前的特定于 MFC 的实现。 MFC 6.0 版中**CReBar**，还包装了 comctl32.dll 功能已添加。  
+>  截至 MFC 4.0 版、 工具栏、 状态栏和工具提示使用来实现中实现的系统功能*comctl32.dll*而不是特定于 MFC 以前的实现。 MFC 6.0 版中`CReBar`，还包装了 comctl32.dll 功能已添加。  
   
  下面将简单介绍控件条类型。 有关详细信息，请参阅以下链接。  
   

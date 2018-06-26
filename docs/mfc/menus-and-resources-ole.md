@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347089"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929629"
 ---
 # <a name="menus-and-resources-ole"></a>菜单和资源 (OLE)
 此系列文章介绍了使用菜单和 MFC OLE 文档应用程序中的资源。  
@@ -54,10 +54,10 @@ ms.locfileid: "33347089"
   
 |资源名称|使用|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|用于 MDI 应用程序是否没有文件处于打开状态，或 SDI 应用程序而不考虑打开的文件中。 这是在非 OLE 应用程序中使用的标准菜单。|  
-|**IDR_\<项目 > 类型**|如果文件处于打开状态，在 MDI 应用程序中使用。 应用程序以独立模式运行时使用。 这是在非 OLE 应用程序中使用的标准菜单。|  
-|**IDR_\<项目 > TYPE_SRVR_IP**|当对象处于打开位置时使用的服务器或容器。|  
-|**IDR_\<项目 > TYPE_SRVR_EMB**|如果不使用就地激活打开对象服务器应用程序使用。|  
+|IDR_MAINFRAME|用于 MDI 应用程序是否没有文件处于打开状态，或 SDI 应用程序而不考虑打开的文件中。 这是在非 OLE 应用程序中使用的标准菜单。|  
+|IDR_\<项目 > 类型|如果文件处于打开状态，在 MDI 应用程序中使用。 应用程序以独立模式运行时使用。 这是在非 OLE 应用程序中使用的标准菜单。|  
+|IDR_\<项目 > TYPE_SRVR_IP|当对象处于打开位置时使用的服务器或容器。|  
+|IDR_\<项目 > TYPE_SRVR_EMB|如果不使用就地激活打开对象服务器应用程序使用。|  
   
  其中每个资源名称表示菜单和快捷键对应表，通常情况下。 应在不使用应用程序向导创建的 MFC 应用程序使用类似的方案。  
   

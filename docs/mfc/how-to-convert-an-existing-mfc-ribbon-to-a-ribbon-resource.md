@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351645"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928992"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：将现有 MFC 功能区转换为功能区资源
 功能区资源比手动编码的功能区更直观，且更易于修改和维护。 本主题描述如何将 MFC 项目中手动编码的功能区转换为功能区资源。  
@@ -29,7 +29,7 @@ ms.locfileid: "33351645"
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>将 MFC 功能区转换为功能区资源  
   
-1.  在 Visual Studio 中，在一个现有 MFC 项目中打开在其中初始化 CMFCRibbonBar 对象的源文件。 通常，此文件是 mainfrm.cpp。 在功能区的初始化代码之后添加以下代码。  
+1.  在 Visual Studio 中，在现有 MFC 项目中，打开源文件其中`CMFCRibbonBar`初始化对象。 通常，此文件是 mainfrm.cpp。 在功能区的初始化代码之后添加以下代码。  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

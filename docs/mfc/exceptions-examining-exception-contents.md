@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343251"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932229"
 ---
 # <a name="exceptions-examining-exception-contents"></a>异常：检查异常内容
 尽管**捕获**块的自变量可以是几乎任何数据类型，则 MFC 函数引发派生自类类型的异常`CException`。 若要捕获 MFC 函数引发的异常，然后，你编写**捕获**块其参数为指针到`CException`对象 (或从派生的对象`CException`，如`CMemoryException`)。 根据异常的具体类型，你可以检查要收集的异常信息的具体原因的异常对象的数据成员。  
   
- 例如，`CFileException`类型具有`m_cause`数据成员，其中包含指定文件异常原因的枚举的类型。 可能的一些示例返回的值为**CFileException::fileNotFound**和**CFileException::readOnly**。  
+ 例如，`CFileException`类型具有`m_cause`数据成员，其中包含指定文件异常原因的枚举的类型。 可能的一些示例返回的值为`CFileException::fileNotFound`和`CFileException::readOnly`。  
   
  下面的示例演示如何检查的内容`CFileException`。 可以类似方式查看其他异常类型。  
   

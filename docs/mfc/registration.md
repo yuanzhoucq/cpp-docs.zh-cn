@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381165"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930685"
 ---
 # <a name="registration"></a>注册
 当用户需要将一个 OLE 项插入应用程序中时，OLE 会显示一个对象类型的列表以供选择。 OLE 从系统注册数据库获取此列表，该数据库包含所有服务器应用程序提供的信息。 当服务器注册自身时，它放入系统注册数据库（注册表）中的项将描述它提供的每种对象类型、文件扩展名、自身的路径以及其他信息。  
@@ -59,7 +59,7 @@ ms.locfileid: "33381165"
   
  当服务器应用程序启动时，您必须确保它可以执行实例注册。 实例注册告知 OLE 系统 DLL 此服务器处于活动状态并准备接收来自容器的请求。 它不会将条目添加到注册数据库中。 通过调用由 `ConnectTemplate` 定义的 `COleTemplateServer` 成员函数来执行服务器的实例注册。 这会将 `CDocTemplate` 对象连接到 `COleTemplateServer` 对象。  
   
- `ConnectTemplate`函数采用三个参数： 服务器的**CLSID**，指向的指针`CDocTemplate`对象，并且一个标志，指示服务器是否支持多个实例。 miniserver 必须能够支持多个实例，也就是说，多个服务器实例必须能够同时运行，一个实例对应一个容器。 因此，将传递**TRUE**启动 miniserver 时此标志。  
+ `ConnectTemplate`函数采用三个参数： 服务器的*CLSID*，指向的指针`CDocTemplate`对象，并且一个标志，指示服务器是否支持多个实例。 miniserver 必须能够支持多个实例，也就是说，多个服务器实例必须能够同时运行，一个实例对应一个容器。 因此，将传递**TRUE**启动 miniserver 时此标志。  
   
  如果您编写 miniserver，根据定义，它将始终由容器启动。 您仍应分析命令行以检查“/Embedding”选项。 命令行上缺少此选项意味着用户已尝试将 miniserver 作为独立的应用程序启动。 如果发生这种情况，请向系统注册数据库注册此服务器，然后显示一个消息框，通知用户从容器应用程序启动 miniserver。  
   

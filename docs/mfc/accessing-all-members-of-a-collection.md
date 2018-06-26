@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334842"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931933"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>访问集合的所有成员
 MFC 数组集合类（无论是否基于模板）使用索引来访问其元素。 MFC 列表和映射集合类（无论是否基于模板）使用 **POSITION** 类型的指示器来描述集合内的给定位置。 若要访问这些集合的一个或多个成员，首先初始化位置指示器，然后重复将此位置传递给集合，使其返回下一个元素。 集合不负责维护迭代进度的状态信息。 该信息保存在位置指示器。 但对于给定的特定位置，集合负责返回下一个元素。  
@@ -51,7 +51,7 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
   
      此示例使用一个类型化的指针数组，其中包含指向 `CPerson` 对象的指针。 数组派生自 `CObArray`类，这是一个非模板预定义类。 `GetAt` 返回一个指向 `CPerson` 对象的指针。 对于类型化的指针集合类（数组或列表），第一个参数指定基类；第二个参数指定要存储的类型。  
   
-     `CTypedPtrArray`类还重载 **[]** 运算符，以便你可以使用常用的数组下标语法来访问数组的元素。 以上 `for` 循环正文中的语句的替代是  
+     `CTypedPtrArray`类还重载 **[]** 运算符，以便你可以使用常用的数组下标语法来访问数组的元素。 正文中的语句的替代方法**为**循环上面是  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

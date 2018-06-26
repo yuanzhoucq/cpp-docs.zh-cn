@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347917"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932167"
 ---
 # <a name="containers-advanced-features"></a>容器：高级功能
 本文介绍了将可选高级功能并入现有容器应用程序所需的步骤。 这些功能包括：  
@@ -70,13 +70,13 @@ ms.locfileid: "33347917"
   
     -   通过调用对象的 `COleTemplateServer` 成员函数，将您的 `ConnectTemplate` 对象连接到文档模板。  
   
-    -   调用**coletemplateserver:: Registerall**成员函数以向 OLE 系统注册所有类对象。  
+    -   调用`COleTemplateServer::RegisterAll`成员函数以向 OLE 系统注册所有类对象。  
   
-    -   调用 `COleTemplateServer::UpdateRegistry`。 如果未使用“/Embedded”开关启动应用程序，则 `UpdateRegistry` 的唯一参数应为 `OAT_CONTAINER`。 这会将应用程序作为可支持链接到嵌入对象的容器注册。  
+    -   调用 `COleTemplateServer::UpdateRegistry`。 唯一参数`UpdateRegistry`应*OAT_CONTAINER*如果不使用"/embedded"开关启动应用程序。 这会将应用程序作为可支持链接到嵌入对象的容器注册。  
   
          如果应用程序已使用“/Embedded”开关启动，则不应显示其主窗口，这与服务器应用程序类似。  
   
- MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)实现了此功能。 有关如何完成此操作的示例，请参阅此示例应用程序的 OCLIENT.CPP 文件中的 `InitInstance` 函数。  
+ MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)实现了此功能。 有关如何完成此操作的示例，请参阅`InitInstance`函数中*OCLIENT。CPP*此示例应用程序的文件。  
   
 ## <a name="see-also"></a>请参阅  
  [容器](../mfc/containers.md)   

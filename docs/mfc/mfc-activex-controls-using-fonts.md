@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f5d1475412de736970d0ae36a39540121bfbc01
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355134"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930710"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 如果 ActiveX 控件显示文本，你可以允许控制用户通过更改字体属性更改的文本外观。 字体属性作为字体对象实现，并可以是两种类型之一： 常用或自定义。 常用字体属性是可以使用添加属性向导添加的 preimplemented 的字体属性。 自定义字体属性不 preimplemented 并控件开发人员确定属性的行为和使用情况。  
@@ -137,11 +137,11 @@ ms.locfileid: "33355134"
   
 8.  单击 **“完成”**。  
   
- 添加属性向导创建用于添加的代码`HeadingFont`自定义属性`CSampleCtrl`类和示例。IDL 文件。 因为`HeadingFont`是 Get/Set 属性类型，则添加属性向导将修改`CSampleCtrl`类的调度映射，以包括`DISP_PROPERTY_EX_ID` [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)宏条目：  
+ 添加属性向导创建用于添加的代码`HeadingFont`自定义属性`CSampleCtrl`类和示例。IDL 文件。 因为`HeadingFont`是 Get/Set 属性类型，则添加属性向导将修改`CSampleCtrl`类的调度映射，以包括 DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)宏条目：  
   
  [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- `DISP_PROPERTY_EX`宏将相关联`HeadingFont`与其对应的属性名称`CSampleCtrl`类获取和设置方法，`GetHeadingFont`和`SetHeadingFont`。 此外指定属性值的类型;在这种情况下， **VT_FONT**。  
+ DISP_PROPERTY_EX 宏将相关联`HeadingFont`与其对应的属性名称`CSampleCtrl`类获取和设置方法，`GetHeadingFont`和`SetHeadingFont`。 此外指定属性值的类型;在此情况下，VT_FONT。  
   
  添加属性向导还会在控件头文件中添加声明 (。H） 为`GetHeadingFont`和`SetHeadingFont`函数，并在控件实现文件中添加其函数模板 (。CPP):  
   
@@ -160,11 +160,11 @@ ms.locfileid: "33355134"
   
  在控件实现文件 (。CPP) 中，执行以下操作：  
   
--   初始化`m_fontHeading`控件构造函数中。  
+-   初始化*m_fontHeading*控件构造函数中。  
   
      [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   声明一个静态**FONTDESC**结构，它包含字体的默认属性。  
+-   声明静态 FONTDESC 结构包含的字体的默认属性。  
   
      [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
@@ -192,27 +192,27 @@ ms.locfileid: "33355134"
   
      [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- 在实现自定义的字体属性之后，应实现标准的字体属性页，允许控制用户更改控件的当前字体。 若要添加标准的字体属性页的属性页 ID，插入以下行后的`BEGIN_PROPPAGEIDS`宏：  
+ 在实现自定义的字体属性之后，应实现标准的字体属性页，允许控制用户更改控件的当前字体。 若要添加标准的字体属性页的属性页 ID，请在 BEGIN_PROPPAGEIDS 宏后插入以下行：  
   
  [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- 还必须以 1 为增量逐渐增加 `BEGIN_PROPPAGEIDS` 宏的计数参数。 下面一行阐释了这一点：  
+ 你还必须由一个递增 BEGIN_PROPPAGEIDS 宏的计数参数。 下面一行阐释了这一点：  
   
  [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
  做出这些更改后，重新生成整个项目以整合的其他功能。  
   
 ###  <a name="_core_processing_font_notifications"></a> 处理字体通知  
- 在大多数情况下在控件需要知道何时已修改的字体对象的特征。 每个字体对象都能够提供通知，如果它通过调用的成员函数更改**IFontNotification**由实现的接口`COleControl`。  
+ 在大多数情况下在控件需要知道何时已修改的字体对象的特征。 每个字体对象都能够提供通知，如果它通过调用的成员函数更改`IFontNotification`由实现的接口`COleControl`。  
   
- 如果该控件使用常用字体属性，其通知由`OnFontChanged`成员函数`COleControl`。 当你添加自定义字体属性时，你可以让它们使用相同的实现。 在上一节中示例中，这通过传递 （& a)**m_xFontNotification**初始化时**m_fontHeading**成员变量。  
+ 如果该控件使用常用字体属性，其通知由`OnFontChanged`成员函数`COleControl`。 当你添加自定义字体属性时，你可以让它们使用相同的实现。 在上一节中示例中，这通过传递 （& a)*m_xFontNotification*初始化时*m_fontHeading*成员变量。  
   
  ![实现多个字体对象接口](../mfc/media/vc373q1.gif "vc373q1")  
 实现多个字体对象接口  
   
- 在上图中实线显示这两个字体对象正在使用的相同实现**IFontNotification**。 如果你想要区分哪种字体更改，这会导致问题。  
+ 在上图中实线显示这两个字体对象正在使用的相同实现`IFontNotification`。 如果你想要区分哪种字体更改，这会导致问题。  
   
- 区分控件的字体对象通知的一种方法是创建的单独实现**IFontNotification**控件中每个字体对象接口。 此技术使你可以通过更新字符串或使用最近修改过的字体的字符串优化绘制代码。 以下部分演示实现第二个字体属性的单独通知接口所必需的步骤。 第二个字体属性被假定为`HeadingFont`已添加上一节中的属性。  
+ 区分控件的字体对象通知的一种方法是创建的单独实现`IFontNotification`控件中每个字体对象接口。 此技术使你可以通过更新字符串或使用最近修改过的字体的字符串优化绘制代码。 以下部分演示实现第二个字体属性的单独通知接口所必需的步骤。 第二个字体属性被假定为`HeadingFont`已添加上一节中的属性。  
   
 ###  <a name="_core_implementing_a_new_font_notification_interface"></a> 实现新字体通知接口  
  若要区分两个或多个字体的通知，必须为每个控件中使用的字体实现新的通知接口。 下列各节描述如何通过修改控制标头和实现文件实现新的字体通知接口。  
@@ -225,11 +225,11 @@ ms.locfileid: "33355134"
  这将创建的实现`IPropertyNotifySink`接口调用`HeadingFontNotify`。 此新界面包含调用的方法`OnChanged`。  
   
 ### <a name="additions-to-the-implementation-file"></a>添加内容到实现文件  
- 在初始化 （中控件的构造函数） 的标题字体的代码，更改`&m_xFontNotification`到`&m_xHeadingFontNotify`。 然后添加以下代码：  
+ 在初始化 （中控件的构造函数） 的标题字体的代码，更改 （& a)*m_xFontNotification*到 （& a)*m_xHeadingFontNotify*。 然后添加以下代码：  
   
  [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- `AddRef`和`Release`中的方法`IPropertyNotifySink`跟踪的接口的 ActiveX 控件对象的引用计数。 该控件时控件获得对接口指针的访问，调用`AddRef`递增引用计数。 当控件完成使用指针时，它将调用`Release`，在大致相同的方式**GlobalFree**可能调用释放全局内存块。 在此接口的引用计数变为零时，则可以释放接口的实现。 在此示例中，`QueryInterface`函数返回一个指向`IPropertyNotifySink`特定对象上的接口。 此函数允许 ActiveX 控件来查询来确定所支持的接口的对象。  
+ `AddRef`和`Release`中的方法`IPropertyNotifySink`跟踪的接口的 ActiveX 控件对象的引用计数。 该控件时控件获得对接口指针的访问，调用`AddRef`递增引用计数。 当控件完成使用指针时，它将调用`Release`，在大致相同的方式`GlobalFree`可能调用释放全局内存块。 在此接口的引用计数变为零时，则可以释放接口的实现。 在此示例中，`QueryInterface`函数返回一个指向`IPropertyNotifySink`特定对象上的接口。 此函数允许 ActiveX 控件来查询来确定所支持的接口的对象。  
   
  到你的项目进行了这些更改后，重新生成项目，并使用测试容器测试该接口。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。  
   

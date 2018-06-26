@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349994"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930321"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 后台：MFC 实现
 由于原始 OLE API 的大小和复杂性，直接调用它来编写 OLE 应用程序会非常耗时。 OLE 的 Microsoft 基础类库实现的目的是减少编写功能齐全、具有 OLE 功能的应用程序所必须进行的工作量。  
@@ -43,10 +43,10 @@ ms.locfileid: "33349994"
  `IMoniker` 接口由类库（例如，`COleServerItem` 类）实现，但之前尚未向程序员公开。 有关此接口的详细信息，请参阅 OLE 名字对象实现的 Windows sdk 的 OLE 部分中。 但是，另请参阅类[CMonikerFile](../mfc/reference/cmonikerfile-class.md)和[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)。  
   
  IUnknown 和 IMarshal 接口  
- **IUnknown**接口由类库实现，但未向程序员公开。 **IMarshal**接口未由类库实现，但在内部使用。 使用类库生成的自动化服务器已内置了封送功能。  
+ `IUnknown`接口由类库实现，但未向程序员公开。 `IMarshal`接口未由类库实现，但在内部使用。 使用类库生成的自动化服务器已内置了封送功能。  
   
  Docfiles（复合文件）  
- 复合文件由类库提供部分支持。 任何直接操作复合文件的函数（创建复合文件的函数除外）都不受支持。 MFC 使用类**COleFileStream**以支持使用标准文件函数的流。 有关详细信息，请参阅文章[容器： 复合文件](../mfc/containers-compound-files.md)。  
+ 复合文件由类库提供部分支持。 任何直接操作复合文件的函数（创建复合文件的函数除外）都不受支持。 MFC 使用类`COleFileStream`以支持使用标准文件函数的流。 有关详细信息，请参阅文章[容器： 复合文件](../mfc/containers-compound-files.md)。  
   
  进程内服务器和对象处理程序  
  进程内服务器和对象处理程序允许在动态链接库 (DLL) 中实现可视编辑数据或完整的组件对象模型 (COM) 对象。 为此，可以通过直接调用 OLE API 实现 DLL。 但是，如果您正在编写自动化服务器而且该服务器没有用户界面，则可使用 AppWizard 使该服务器成为进程内服务器并将其完全置于 DLL 中。 有关这些主题的详细信息，请参阅[自动化服务器](../mfc/automation-servers.md)。  

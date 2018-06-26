@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352300"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931972"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种不同容器（包括 Internet 上的 COM 感知 Web 浏览器）中使用的可编程软件组件的主要体系结构。 任何 ActiveX 控件都可以是 Internet 控件，并且可将其功能添加到活动文档或成为网页的一部分。 网页上的控件可以使用脚本互相通信。  
@@ -39,7 +39,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
  **若要 ActiveX 控件，控件必须：**  
   
--   支持**IUnknown**接口。  
+-   支持`IUnknown`接口。  
   
 -   是 COM 对象。  
   
@@ -85,7 +85,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>使用 MFC ActiveX 控件向导创建项目  
   
-1.  单击`New`上**文件**菜单。  
+1.  单击**新建**上**文件**菜单。  
   
 2.  选择**MFC ActiveX 控件向导**从 Visual c + + 项目并命名你的项目。  
   
@@ -129,7 +129,7 @@ ActiveX 控件是 OLE 控件规范的更新版本。 控件是开发可在各种
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  实现**Get/Set**方法。 有关**获取**，返回的字符串。 对于 `Set`，将加载属性并调用 `SetModifiedFlag`。  
+5.  实现 `Get/Set` 方法。 有关`Get`，返回的字符串。 对于 `Set`，将加载属性并调用 `SetModifiedFlag`。  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

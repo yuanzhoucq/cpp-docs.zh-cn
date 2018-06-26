@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349904"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929856"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>数据对象和数据源：操作
 已创建的数据对象或数据源后，你可以执行大量的数据，例如插入和删除数据，枚举数据采用的格式和的详细信息的常见操作。 本指南介绍了完成最常见的操作所需的技术。 包括以下主题：  
@@ -45,7 +45,7 @@ ms.locfileid: "33349904"
   
 -   调用`COleDataSource::CacheGlobalData`重复的每种剪贴板格式，在其中你所提供的数据。 传递的剪贴板格式，才能使用包含数据的内存的句柄和 （可选） **FORMATETC**描述数据结构。  
   
-     -或-  
+     或  
   
 -   如果你想要直接使用**STGMEDIUM**调用的结构，`COleDataSource::CacheData`而不是`COleDataSource::CacheGlobalData`在上面的选项。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33349904"
   
 -   调用`COleDataSource::DelayRenderData`重复的每种剪贴板格式，在其中你所提供的数据。 传递要使用的剪贴板格式和 （可选） **FORMATETC**描述数据结构。 当请求数据时，框架将调用`COleDataSource::OnRenderData`，后者必须重写。  
   
-     -或-  
+     或  
   
 -   如果你使用`CFile`对象提供数据，调用`COleDataSource::DelayRenderFileData`而不是`COleDataSource::DelayRenderData`在上个选项。 当请求数据时，框架将调用`COleDataSource::OnRenderFileData`，后者必须重写。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "33349904"
   
     -   调用数据对象的`IsDataAvailable`成员函数，如果有一个或两个格式化你需要。 这样做可以节约时间，在其中剪贴板上的数据支持比你的应用程序的更多格式的情况下。  
   
-         -或-  
+         或  
   
     -   调用数据对象的`BeginEnumFormats`成员函数开始枚举在剪贴板上可用的格式。 然后调用`GetNextFormat`直到剪贴板返回一种格式支持你的应用程序或有没有更多的格式。  
   
- 如果你使用`ON_UPDATE_COMMAND_UI`，你现在可以启用粘贴，而且可能在编辑菜单上的选择性粘贴项。 若要执行此操作，调用`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 有关哪些容器应用程序应使用菜单项执行的操作和时，请参阅[菜单和资源： 容器添加](../mfc/menus-and-resources-container-additions.md)。  
+ 如果你使用**ON_UPDATE_COMMAND_UI**，你现在可以启用粘贴，而且可能在编辑菜单上的选择性粘贴项。 若要执行此操作，调用`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 有关哪些容器应用程序应使用菜单项执行的操作和时，请参阅[菜单和资源： 容器添加](../mfc/menus-and-resources-container-additions.md)。  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> 从数据对象中检索数据  
  一旦你已决定数据格式，那么保持是此数据对象中检索数据。 若要执行此操作，用户可以决定在何处放置数据，并在应用程序调用相应的函数。 数据将可在以下的媒体之一：  

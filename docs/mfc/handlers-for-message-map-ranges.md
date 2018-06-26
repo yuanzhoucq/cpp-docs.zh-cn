@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351717"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930818"
 ---
 # <a name="handlers-for-message-map-ranges"></a>消息映射范围的处理程序
 此文章介绍了如何将一系列消息映射到单个消息处理程序函数 （而不是将一条消息映射到一个功能）。  
@@ -96,7 +96,7 @@ ms.locfileid: "33351717"
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- 单个命令的处理程序函数通常不带任何参数。 除了更新处理程序函数，消息映射范围的处理程序函数需要一个额外的参数， `nID`，类型的**UINT**。 此参数是第一个参数。 额外的参数提供额外的命令 ID，用于指定用户实际选择哪个命令。  
+ 单个命令的处理程序函数通常不带任何参数。 除了更新处理程序函数，消息映射范围的处理程序函数需要一个额外的参数， *nID*，类型的**UINT**。 此参数是第一个参数。 额外的参数提供额外的命令 ID，用于指定用户实际选择哪个命令。  
   
  有关更新处理程序函数的参数要求的详细信息，请参阅[示例的范围的命令 Id 的](#_core_example_for_a_range_of_command_ids)。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33351717"
   
 -   这两个命令 Id，开始和结束时间连续范围。  
   
-     以下是方法`ID_VIEW_ZOOM25`和`ID_VIEW_ZOOM300`。  
+     以下是方法**ID_VIEW_ZOOM25**和**ID_VIEW_ZOOM300**。  
   
 -   命令处理程序函数的名称。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "33351717"
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- 更新处理程序函数的大小写是类似，并可能具有更广泛的用途。 这是十分常见编写`ON_UPDATE_COMMAND_UI`处理程序的命令数，将发现自己编写，或复制，相同的代码反复。 该解决方案旨在的命令 Id 传递给其中一个更新处理程序函数使用范围映射`ON_UPDATE_COMMAND_UI_RANGE`宏。 命令 Id 必须形成连续范围。 有关示例，请参阅**OnUpdateZoom**处理程序并将其`ON_UPDATE_COMMAND_UI_RANGE`HIERSVR 示例的 view 类中的消息映射条目。  
+ 更新处理程序函数的大小写是类似，并可能具有更广泛的用途。 这是十分常见编写`ON_UPDATE_COMMAND_UI`处理程序的命令数，将发现自己编写，或复制，相同的代码反复。 该解决方案旨在的命令 Id 传递给其中一个更新处理程序函数使用范围映射`ON_UPDATE_COMMAND_UI_RANGE`宏。 命令 Id 必须形成连续范围。 有关示例，请参阅`OnUpdateZoom`处理程序并将其`ON_UPDATE_COMMAND_UI_RANGE`HIERSVR 示例的 view 类中的消息映射条目。  
   
- 更新处理程序函数的单个命令通常需要一个参数`pCmdUI`，类型的**CCmdUI\***。 与处理程序函数，不同的消息映射范围的更新处理程序函数不需要额外的参数， `nID`，类型的**UINT**。 命令 ID，将需要指定用户实际选择的命令，该文件位于`CCmdUI`对象。  
+ 更新处理程序函数的单个命令通常需要一个参数*pCmdUI*，类型的`CCmdUI*`。 与处理程序函数，不同的消息映射范围的更新处理程序函数不需要额外的参数， *nID*，类型的**UINT**。 命令 ID，将需要指定用户实际选择的命令，该文件位于`CCmdUI`对象。  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> 范围的控件 Id 的示例  
  另一个有趣的用例将控件 Id 的范围的控件通知消息映射到单个处理程序。 假设用户可以单击任何 10 个按钮。 若要映射到一个处理程序的所有 10 个按钮，你的消息映射条目将如下所示：  
@@ -136,7 +136,7 @@ ms.locfileid: "33351717"
   
 -   关联控件的连续范围内的控件 ID 值。  
   
-     这些是此处`IDC_BUTTON1`和`IDC_BUTTON10`。  
+     这些是此处**IDC_BUTTON1**和**IDC_BUTTON10**。  
   
 -   消息处理程序函数的名称。  
   

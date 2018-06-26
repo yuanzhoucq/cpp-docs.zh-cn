@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346371"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931809"
 ---
 # <a name="handling-tool-tip-notifications"></a>处理工具提示通知
-当指定`TBSTYLE_TOOLTIPS`样式，工具栏创建和管理工具提示控件。 工具提示是文本的一个小型弹出窗口，其中包含描述工具栏按钮行。 隐藏的工具提示，仅当用户将光标放在工具栏按钮上并停留约半秒钟时才显示出来。 在光标附近将显示工具提示。  
+当指定**TBSTYLE_TOOLTIPS**样式，工具栏创建和管理工具提示控件。 工具提示是文本的一个小型弹出窗口，其中包含描述工具栏按钮行。 隐藏的工具提示，仅当用户将光标放在工具栏按钮上并停留约半秒钟时才显示出来。 在光标附近将显示工具提示。  
   
  显示的工具提示之前， **TTN_NEEDTEXT**通知消息发送到工具栏的所有者窗口，以检索按钮的描述性文本。 如果工具栏的所有者窗口处于`CFrameWnd`窗口中，工具提示显示而无需任何额外工作，因为`CFrameWnd`具有默认处理程序**TTN_NEEDTEXT**通知。 如果工具栏的所有者窗口不派生自`CFrameWnd`，如对话框框中或窗体视图，你必须将条目添加到所有者窗口的消息映射并提供消息映射中的通知处理程序。 到所有者窗口的消息映射条目如下所示：  
   

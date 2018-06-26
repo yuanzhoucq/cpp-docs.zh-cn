@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350844"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930347"
 ---
 # <a name="dynamic-layout"></a>动态布局
 使用 Visual Studio 2015 中的 MFC，你可以创建用户可以调整大小的对话框，你可以控制调整布局以更改大小的方式。 例如，可以将对话框底部的按钮附加到下边缘，使其始终保持在底部。 还可以将某些控件（如列表框、编辑框和文本字段）设置为在用户展开对话框时展开。  
@@ -31,7 +31,7 @@ ms.locfileid: "33350844"
   
  ![调整大小后的对话框。] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- 可以通过在 IDE 的资源编辑器中对每个控件指定详细信息来控制动态布局，也可以通过访问特定控件的 CMFCDynamicLayout 对象并设置其属性以编程方式执行操作。  
+ 可以通过指定的资源编辑器在 IDE 中的每个控件的详细信息来控制动态布局也可以通过访问以编程方式执行操作`CMFCDynamicLayout`特定控件对象并设置的属性。  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>在资源编辑器中设置动态布局属性  
  可以使用资源编辑器设置对话框的动态布局行为，而无需编写任何代码。  
@@ -61,7 +61,7 @@ ms.locfileid: "33350844"
   
 1.  在自己对话框类的实现代码中查找或创建一个想要为该对话指定动态布局的位置。 例如，你可能希望在对话框中添加一个方法（如 `AdjustLayout`），并从不要更改布局的位置进行调用。 你可能会首先从构造函数中调用，也可能在对对话框进行更改之后调用。  
   
-2.  对话框，请调用[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，CWnd 类的方法。 GetDynamicLayout 返回了指向 CMFCDynamicLayout 对象的指针。  
+2.  对话框，请调用[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，一种`CWnd`类。 `GetDynamicLayout` 返回一个指向`CMFCDynamicLayout`对象。  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ ms.locfileid: "33350844"
   
 9. 下次用户调整大小的对话框中， [cmfcdynamiclayout:: Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust)方法调用实际应用设置。  
   
-10. 如果你想要禁用动态布局，调用[cwnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout)与`FALSE`同样适用于`bEnabled`参数。  
+10. 如果你想要禁用动态布局，调用[cwnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout)与**FALSE**同样适用于*bEnabled*参数。  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ ms.locfileid: "33350844"
 
  ```  
   
-     已命名的资源必须引用包含资源文件中以 AFX_DIALOG_LAYOUT 条目形式存在的布局信息的对话框，如下面的示例所示：  
+     命名的资源必须引用一个对话框，其中包含的表单中的布局信息**AFX_DIALOG_LAYOUT**在资源文件中，如以下示例所示的条目：  
   
  ' * / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  

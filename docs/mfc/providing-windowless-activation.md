@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351805"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931946"
 ---
 # <a name="providing-windowless-activation"></a>提供无窗口激活
-窗口创建代码 (即，一切事情在调用时**CreateWindow**) 执行成本很高。 用来维护屏幕上的窗口的控件必须管理窗口的消息。 因此，无窗口控件比有窗口控件更快。  
+窗口创建代码 (即，一切事情在调用时`CreateWindow`) 执行成本很高。 用来维护屏幕上的窗口的控件必须管理窗口的消息。 因此，无窗口控件比有窗口控件更快。  
   
  无窗口控件的进一步好处是，与有窗口控件不同，无窗口控件支持透明绘制和非矩形屏幕区域。 透明控件的常见示例是带有透明背景的文本控件。 该控件将绘制文本，但不会绘制背景，因此文本下的任何内容都将显露出来。 更新的窗体通常使用非矩形控件，如箭头按钮和圆形按钮。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33351805"
   
  如果你选择自动生成代码以包括此标志**无窗口激活**选项[控制设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md)MFC ActiveX 控件向导的页面。  
   
- 启用无窗口激活后，容器会将输入消息委托给控件的 `IOleInPlaceObjectWindowless` 接口。 在相应地调整鼠标坐标后，`COleControl` 的此接口的实现将会在控件的消息映射中调度消息。 您可以通过将对应的项添加到消息映射来处理普通窗口消息之类的消息。 在您为这些消息的处理程序，应避免使用`m_hWnd`成员变量 （或使用它的任何成员函数） 不首先检查其值不**NULL**。  
+ 启用无窗口激活后，容器会将输入消息委托给控件的 `IOleInPlaceObjectWindowless` 接口。 在相应地调整鼠标坐标后，`COleControl` 的此接口的实现将会在控件的消息映射中调度消息。 您可以通过将对应的项添加到消息映射来处理普通窗口消息之类的消息。 在您为这些消息的处理程序，应避免使用*m_hWnd*成员变量 （或使用它的任何成员函数） 不首先检查其值不**NULL**。  
   
  `COleControl` 提供了根据需要从容器中调用鼠标捕获、键盘焦点、滚动和其他窗口服务的成员函数，包括：  
   

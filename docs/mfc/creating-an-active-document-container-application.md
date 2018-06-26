@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341344"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929440"
 ---
 # <a name="creating-an-active-document-container-application"></a>创建活动文档容器应用程序
 最简单、最受推崇的活动文档容器应用程序的创建方式为使用 MFC 应用程序向导创建 MFC EXE 容器应用程序，然后将应用程序修改为支持活动文档包容。  
@@ -36,7 +36,7 @@ ms.locfileid: "33341344"
   
 3.  选择**MFC 应用程序**右窗格中。  
   
-4.  将项目`MyProj`，单击**确定**。  
+4.  将项目*MyProj*，单击**确定**。  
   
 5.  选择**复合文档支持**页。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "33341344"
   
 9. 当 MFC 应用程序向导完成应用程序生成时，使用解决方案资源管理器打开下列文件：  
   
-    -   MyProjview.cpp  
+    -   *Myprojview.cpp 中*  
   
-10. 在 MyProjview.cpp 中，进行下列更改：  
+10. 在*myprojview.cpp 中*，进行以下更改：  
   
     -   在 `CMyProjView::OnPreparePrinting` 中，将函数内容替换为下列代码：  
   
