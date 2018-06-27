@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b6b07040fbece5fae24fb2ca6be8985695eb0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382549"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950532"
 ---
 # <a name="using-an-animation-control"></a>使用动画控件
 动画控件的典型用法遵循以下模式：  
@@ -30,11 +30,11 @@ ms.locfileid: "33382549"
   
 -   加载到动画控件的 AVI 剪辑，通过调用[打开](../mfc/reference/canimatectrl-class.md#open)成员函数。 如果动画控件在对话框中，执行此操作的好时机是在对话框类的[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)函数。  
   
--   通过调用播放剪辑[播放](../mfc/reference/canimatectrl-class.md#play)成员函数。 如果动画控件在对话框中，执行此操作的好时机是在对话框类的**OnInitDialog**函数。 调用**播放**不是必需的如果在动画控件具有`ACS_AUTOPLAY`样式集。  
+-   通过调用播放剪辑[播放](../mfc/reference/canimatectrl-class.md#play)成员函数。 如果动画控件在对话框中，执行此操作的好时机是在对话框类的`OnInitDialog`函数。 调用`Play`如果在动画控件已设置了 ACS_AUTOPLAY 样式不是必需。  
   
 -   如果你想要显示的剪辑的部分或播放它请逐个框架使用`Seek`成员函数。 若要停止播放剪辑，请使用`Stop`成员函数。  
   
--   如果你不打算立即销毁该控件，剪辑从内存中删除通过调用**关闭**成员函数。  
+-   如果你不打算立即销毁该控件，剪辑从内存中删除通过调用`Close`成员函数。  
   
 -   如果在动画控件是在对话框中，它与`CAnimateCtrl`将自动销毁对象。 否则，您需要确保正确地销毁控件和 `CAnimateCtrl` 对象。 销毁控件将自动关闭 AVI 剪辑。  
   

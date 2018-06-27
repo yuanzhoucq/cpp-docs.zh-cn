@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381018"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952588"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 此文章介绍了提供在 Microsoft 基础类库 (MFC) 以允许对象之间保持不变的序列化机制运行的程序。  
@@ -41,7 +41,7 @@ ms.locfileid: "33381018"
 > [!NOTE]
 >  不要混淆`CArchive`类通用 iostream 类，该类适用于格式化纯文本。 `CArchive`类是的二进制格式序列化对象。  
   
- 如果你想，你可以绕过 MFC 序列化以创建自己的永久数据存储区的机制。 你将需要重写启动在用户的命令的序列化的类成员函数。 请参阅中的讨论[技术说明 22](../mfc/tn022-standard-commands-implementation.md)的`ID_FILE_OPEN`， **ID_FILE_SAVE**，和**ID_FILE_SAVE_AS**标准命令。  
+ 如果你想，你可以绕过 MFC 序列化以创建自己的永久数据存储区的机制。 你将需要重写启动在用户的命令的序列化的类成员函数。 请参阅中的讨论[技术说明 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN、 ID_FILE_SAVE 和 ID_FILE_SAVE_AS 标准命令。  
   
  以下文章介绍序列化所需的两个主要任务：  
   

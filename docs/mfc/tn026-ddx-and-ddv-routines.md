@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386049"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955886"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  有关所有对话框数据交换例程和 MFC 提供的对话框数据验证例程的列表，请参阅 afxdd_.h。  
   
- 对话框数据就是： 中的成员数据**CMyDialog**类。 它不存储在结构或类似的任何内容。  
+ 对话框数据就是： 中的成员数据`CMyDialog`类。 它不存储在结构或类似的任何内容。  
   
 ## <a name="notes"></a>说明  
  尽管我们中调用此"对话框数据"，所有功能都均可在任何类派生自`CWnd`并都不限于只需对话框。  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>它是如何工作的  
  不需要了解以下以使用对话框数据。 但是，了解此后台进行的活动的工作原理将帮助你编写自己的 exchange 或验证过程。  
   
- `DoDataExchange`非常相似，成员函数即将`Serialize`成员函数-它是负责从外部的形式获取或设置数据，为/（在这种情况下控件在对话框中） 从/到类中的成员数据。 `pDX`参数是执行数据交换的上下文，它是类似于`CArchive`参数`CObject::Serialize`。 `pDX` (`CDataExchange`对象) 都有标志非常类似的方向`CArchive`方向标志：  
+ `DoDataExchange`非常相似，成员函数即将`Serialize`成员函数-它是负责从外部的形式获取或设置数据，为/（在这种情况下控件在对话框中） 从/到类中的成员数据。 *PDX*参数是执行数据交换的上下文，它是类似于`CArchive`参数`CObject::Serialize`。 *PDX* (`CDataExchange`对象) 都有标志非常类似的方向`CArchive`方向标志：  
   
--   如果 **！ m_bSaveAndValidate**，然后将数据状态加载到控件。  
+-   如果 ！*m_bSaveAndValidate*，然后将数据状态加载到控件。  
   
--   如果`m_bSaveAndValidate`，然后从控件中设置数据状态。  
+-   如果*m_bSaveAndValidate*，然后从控件中设置数据状态。  
   
- 验证仅发生时`m_bSaveAndValidate`设置。 值`m_bSaveAndValidate`由的 BOOL 参数`CWnd::UpdateData`。  
+ 验证仅发生时*m_bSaveAndValidate*设置。 值*m_bSaveAndValidate*由的 BOOL 参数`CWnd::UpdateData`。  
   
  有三个其他令人感兴趣`CDataExchange`成员：  
   
-- `m_pDlgWnd`： 包含的控件窗口 （通常的对话）。 这是为了防止 DDX_ 和 DDV_ 全局函数的调用方无需将 this 传递到每个 DDX/DDV 例程。  
+- *m_pDlgWnd*： 包含的控件的窗口 （通常的对话）。 这是为了防止 DDX_ 和 DDV_ 全局函数的调用方无需将 this 传递到每个 DDX/DDV 例程。  
   
 - `PrepareCtrl`和`PrepareEditCtrl`： 对话框控件准备数据交换。 将存储该控件的句柄将焦点设置在验证失败。 `PrepareCtrl` 用于 nonedit 控件和`PrepareEditCtrl`用于编辑的控件。  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  此类的任意表达式的 ClassWizard 无法编辑，因此应移动之外的特殊格式注释 (/ / {{AFX_DATA_MAP(CMyClass))。  
   
- 具有**DoDialogExchange**成员函数包括条件语句或与混合交换和验证函数调用的任何其他有效的 c + + 语句。  
+ 具有`DoDialogExchange`成员函数包括条件语句或与混合交换和验证函数调用的任何其他有效的 c + + 语句。  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

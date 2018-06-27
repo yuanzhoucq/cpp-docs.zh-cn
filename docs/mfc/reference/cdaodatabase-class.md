@@ -68,12 +68,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b5ae20f06cee55a13327d5bbe7ad058047b53c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30e6ac1f1ed780415e7f0a10d82175c2b287fb29
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356439"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953891"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 类
 表示与数据库的连接，通过此连接可操作数据。  
@@ -90,7 +90,7 @@ class CDaoDatabase : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|构造 `CDaoDatabase` 对象。 调用**打开**以将对象连接到数据库。|  
+|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|构造 `CDaoDatabase` 对象。 调用`Open`以将对象连接到数据库。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -104,13 +104,13 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::DeleteQueryDef](#deletequerydef)|删除一个 querydef 对象，该对象保存在数据库的 QueryDefs 集合。|  
 |[CDaoDatabase::DeleteRelation](#deleterelation)|删除数据库中表之间的现有关系。|  
 |[CDaoDatabase::DeleteTableDef](#deletetabledef)|删除数据库中表的定义。 这会删除实际的表和其所有数据。|  
-|[CDaoDatabase::Execute](#execute)|执行一个操作查询。 调用**执行**为返回结果的查询将引发异常。|  
+|[CDaoDatabase::Execute](#execute)|执行一个操作查询。 调用`Execute`为返回结果的查询将引发异常。|  
 |[CDaoDatabase::GetConnect](#getconnect)|返回用于连接的连接字符串`CDaoDatabase`到数据库的对象。 用于 ODBC。|  
 |[CDaoDatabase::GetName](#getname)|返回当前所用的数据库名称。|  
 |[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|返回为数据库定义的查询数。|  
 |[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|返回有关指定的查询数据库中定义的信息。|  
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|返回后的数据库的秒数查询操作将超时。影响所有后续打开、 添加新、 更新和编辑操作和 ODBC 数据源上的其他操作 （仅限） 如**执行**调用。|  
-|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|返回的记录数受上次更新中，编辑或添加操作或通过调用**执行**。|  
+|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|返回后的数据库的秒数查询操作将超时。影响所有后续打开、 添加新、 更新和编辑操作和 ODBC 数据源上的其他操作 （仅限） 如`Execute`调用。|  
+|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|返回的记录数受上次更新中，编辑或添加操作或通过调用`Execute`。|  
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|返回数据库中表之间定义关系的数量。|  
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|返回有关数据库中表之间定义的指定关系的信息。|  
 |[CDaoDatabase::GetTableDefCount](#gettabledefcount)|返回数据库中定义的表的数目。|  
@@ -140,11 +140,11 @@ class CDaoDatabase : public CObject
   
 -   构造或`CDaoDatabase`而无需指定工作区 （MFC 创建的临时工作区对象） 的对象。  
   
- 若要创建新的 Microsoft Jet (。MDB) 数据库，构造`CDaoDatabase`对象并调用其[创建](#create)成员函数。 执行*不*调用**打开**后**创建**。  
+ 若要创建新的 Microsoft Jet (。MDB) 数据库，构造`CDaoDatabase`对象并调用其[创建](#create)成员函数。 执行*不*调用`Open`后`Create`。  
   
  若要打开现有的数据库，构造`CDaoDatabase`对象并调用其[打开](#open)成员函数。  
   
- 这些方法之一将 DAO 数据库对象追加到工作区中的数据库集合，并打开与数据的连接。 然后构造时[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)， [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)，或[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)对连接的数据库中，对象将传递这些对象的构造函数指向你`CDaoDatabase`对象。 当你完成使用连接时，调用[关闭](#close)成员函数，并且销毁`CDaoDatabase`对象。 **关闭**关闭你以前没有关闭任何记录集。  
+ 这些方法之一将 DAO 数据库对象追加到工作区中的数据库集合，并打开与数据的连接。 然后构造时[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)， [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)，或[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)对连接的数据库中，对象将传递这些对象的构造函数指向你`CDaoDatabase`对象。 当你完成使用连接时，调用[关闭](#close)成员函数，并且销毁`CDaoDatabase`对象。 `Close` 关闭你以前没有关闭任何记录集。  
   
 ## <a name="transactions"></a>事务  
  数据库事务处理提供的工作区级别-请参阅[BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)， [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans)，和[回滚](../../mfc/reference/cdaoworkspace-class.md#rollback)类的成员函数`CDaoWorkspace`.  
@@ -187,7 +187,7 @@ BOOL CanUpdate();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零如果`CDaoDatabase`对象允许更新; 否则为 0，指示该你传递**TRUE**中`bReadOnly`打开时`CDaoDatabase`对象或数据库本身是只读的。 请参阅[打开](#open)成员函数。  
+ 非零如果`CDaoDatabase`对象允许更新; 否则为 0，指示该你传递**TRUE**中*bReadOnly*打开时`CDaoDatabase`对象，或者数据库本身位于只读的。 请参阅[打开](#open)成员函数。  
   
 ### <a name="remarks"></a>备注  
  有关数据库可更新性信息，请参阅主题 DAO 帮助中的"可更新属性"。  
@@ -221,10 +221,10 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>备注  
- 很好的做法这些对象自行关闭之前调用此成员函数。 关闭`CDaoDatabase`对象从中关联的数据库集合中移除[工作区](../../mfc/reference/cdaoworkspace-class.md)。 因为**关闭**不会销毁`CDaoDatabase`对象，您可以通过打开同一个数据库或其他数据库重新使用该对象。  
+ 很好的做法这些对象自行关闭之前调用此成员函数。 关闭`CDaoDatabase`对象从中关联的数据库集合中移除[工作区](../../mfc/reference/cdaoworkspace-class.md)。 因为`Close`不会销毁`CDaoDatabase`对象，您可以通过打开同一个数据库或其他数据库重新使用该对象。  
   
 > [!CAUTION]
->  调用[更新](../../mfc/reference/cdaorecordset-class.md#update)成员函数 （如果有挂起的编辑） 和**关闭**之前关闭的数据库的所有打开的记录集对象的成员函数。 如果您退出声明的函数[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)或`CDaoDatabase`对象在堆栈上，在数据库关闭、 未保存的任何更改都将丢失、 所有挂起的事务将回滚，和任何挂起编辑均到你的数据都将丢失。  
+>  调用[更新](../../mfc/reference/cdaorecordset-class.md#update)成员函数 （如果有挂起的编辑） 和`Close`之前关闭的数据库的所有打开的记录集对象的成员函数。 如果您退出声明的函数[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)或`CDaoDatabase`对象在堆栈上，在数据库关闭、 未保存的任何更改都将丢失、 所有挂起的事务将回滚，和任何挂起编辑均到你的数据都将丢失。  
   
 > [!CAUTION]
 >  如果你尝试关闭的数据库对象，而任何记录集对象处于打开状态，或如果你尝试打开属于该特定工作区的任何数据库对象时关闭工作区对象，这些记录集对象将被关闭，任何挂起的更新或编辑将回滚。 如果你尝试对其所属任何数据库对象处于打开状态时关闭工作区对象，该操作将关闭所有属于该特定的工作区对象，这可能会导致关闭的不完整的记录集对象的数据库对象。 如果不要关闭你的数据库对象，MFC 将报告在调试版本中断言失败。  
@@ -242,10 +242,10 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  一个字符串表达式，是要创建的数据库文件的名称。 它可以的完整路径和文件名，如"c:\\\MYDB。MDB"。 必须提供名称。 如果未提供文件名扩展，。追加 MDB。 如果你的网络支持的统一命名约定 (UNC)，你还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 仅 Microsoft Jet (。可以使用此成员函数创建 MDB) 数据库文件。 (双反斜杠需要中的字符串文字，因为"\\"c + + 转义符。)  
   
- `lpszLocale`  
+ *lpszLocale*  
  用来指定用于创建数据库的排序规则顺序的字符串表达式。 默认值是**dbLangGeneral**。 可能的值有：  
   
 - **dbLangGeneral**英语、 德语、 法语、 葡萄牙语、 意大利语和现代西班牙语  
@@ -278,7 +278,7 @@ virtual void Create(
   
 - **dbLangTurkish**土耳其语  
   
- `dwOptions`  
+ *dwOptions*  
  一个整数，指示一个或多个选项。 可能的值有：  
   
 - **dbEncrypt**创建加密的数据库。  
@@ -297,10 +297,10 @@ virtual void Create(
 >  如果数据库不会加密，则可能，即使你实现用户/密码安全性，以直接读取构成数据库的二进制文件磁盘文件。  
   
 ### <a name="remarks"></a>备注  
- **创建**创建数据库文件和 DAO 数据库基础对象并初始化 c + + 对象。 对象添加到关联的工作区数据库集合。 数据库对象处于打开状态;不要调用**打开**后**创建**。  
+ `Create` 创建数据库文件和 DAO 数据库基础对象并初始化 c + + 对象。 对象添加到关联的工作区数据库集合。 数据库对象处于打开状态;不要调用`Open*`后`Create`。  
   
 > [!NOTE]
->  与**创建**，你可以创建仅 Microsoft Jet (。MDB) 数据库。 不能创建 ISAM 数据库或 ODBC 数据库。  
+>  与`Create`，你可以创建仅 Microsoft Jet (。MDB) 数据库。 不能创建 ISAM 数据库或 ODBC 数据库。  
   
 ##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
  调用此成员函数以建立在数据库中的主表中的一个或多个字段和外部表 （数据库中的另一个表） 中的一个或多个字段之间的关系。  
@@ -318,16 +318,16 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  关系对象的唯一名称。 名称必须以字母开头，并且可以包含最多 40 个字符。 它可以包含数字和下划线字符，但不能包含标点或空格。  
   
- `lpszTable`  
+ *lpszTable*  
  在关系主表的名称。 如果表不存在，则 MFC 会引发类型的异常[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
- `lpszForeignTable`  
+ *lpszForeignTable*  
  关系中的外部表的名称。 如果表不存在，则 MFC 会引发类型的异常`CDaoException`。  
   
- `lAttributes`  
+ *lAttributes*  
  包含有关关系类型的信息的长值。 此值可用于强制引用完整性，以及其他用途。 你可以使用按位 OR 运算符 ( **&#124;**) 以 （只要组合意义） 组合的任何以下值：  
   
 - **dbRelationUnique**关系是一对一。  
@@ -341,10 +341,10 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 - **dbRelationDeleteCascade**将级联删除。  
   
  *lpszField*  
- 指向以 null 结尾的字符串，包含主表中的字段的名称 (通过名为`lpszTable`)。  
+ 指向以 null 结尾的字符串，包含主表中的字段的名称 (通过名为*lpszTable*)。  
   
  *lpszForeignField*  
- 指向包含外的表中的字段的名称的以 null 结尾的字符串的指针 (通过名为`lpszForeignTable`)。  
+ 指向包含外的表中的字段的名称的以 null 结尾的字符串的指针 (通过名为*lpszForeignTable*)。  
   
  *relinfo*  
  对引用[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)对象，其中包含你想要创建有关关系的信息。  
@@ -370,7 +370,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  要删除的已保存查询的名称。  
   
 ### <a name="remarks"></a>备注  
@@ -386,7 +386,7 @@ void DeleteRelation(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  要删除的关系的名称。  
   
 ### <a name="remarks"></a>备注  
@@ -402,7 +402,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  若要删除 tabledef 的名称。  
   
 ### <a name="remarks"></a>备注  
@@ -425,10 +425,10 @@ void Execute(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszSQL`  
+ *lpszSQL*  
  指向以 null 结尾的字符串，包含要执行的有效 SQL 命令。  
   
- `nOptions`  
+ *nOptions*  
  一个整数，指定与查询的完整性相关的选项。 你可以使用按位 OR 运算符 ( **&#124;**) 将组合任何以下常量 (提供组合有意义 — 例如，不会合并**dbInconsistent**与**dbConsistent**):  
   
 - **dbDenyWrite**拒绝其他用户写入权限。  
@@ -447,16 +447,16 @@ void Execute(
 >  如果这两个**dbInconsistent**和**dbConsistent**包括或者如果都不包含，则结果为默认值。 有关这些常量中的说明，请参阅主题 DAO 帮助中的"执行方法"。  
   
 ### <a name="remarks"></a>备注  
- **执行**仅适用于操作查询或 SQL 的传递查询不返回结果。 它并不适用于 select 查询，返回的记录。  
+ `Execute` 仅适用于操作查询或 SQL 的传递查询不返回结果。 它并不适用于 select 查询，返回的记录。  
   
  有关定义和有关操作查询的信息，请参阅"操作查询"和"执行方法"DAO 帮助中的主题。  
   
 > [!TIP]
->  给定的语法正确的 SQL 语句和适当的权限，**执行**成员函数不会甚至失败如果不可以修改或删除单个行。 因此，始终使用**dbFailOnError**选项时使用**执行**成员函数以进行更新或删除查询。 此选项将导致引发异常的类型的 MFC [CDaoException](../../mfc/reference/cdaoexception-class.md)并回滚所有成功的更改，如果任何受影响的记录被锁定，无法更新或删除。 请注意，始终可以调用`GetRecordsAffected`以查看影响了多少条记录。  
+>  给定的语法正确的 SQL 语句和适当的权限，`Execute`成员函数不会甚至失败如果不可以修改或删除单个行。 因此，始终使用**dbFailOnError**选项时使用`Execute`成员函数以进行更新或删除查询。 此选项将导致引发异常的类型的 MFC [CDaoException](../../mfc/reference/cdaoexception-class.md)并回滚所有成功的更改，如果任何受影响的记录被锁定，无法更新或删除。 请注意，始终可以调用`GetRecordsAffected`以查看影响了多少条记录。  
   
- 调用[GetRecordsAffected](#getrecordsaffected)要确定受最新的记录数的数据库对象的成员函数**执行**调用。 例如，`GetRecordsAffected`返回有关删除、 更新或插入时执行的操作查询的记录数的信息。 返回的计数将不会反映级联更新或删除时的相关表中的更改中都起作用。  
+ 调用[GetRecordsAffected](#getrecordsaffected)要确定受最新的记录数的数据库对象的成员函数`Execute`调用。 例如，`GetRecordsAffected`返回有关删除、 更新或插入时执行的操作查询的记录数的信息。 返回的计数将不会反映级联更新或删除时的相关表中的更改中都起作用。  
   
- **执行**不返回一个记录集。 使用**执行**在选择记录的查询会导致引发异常的类型的 MFC `CDaoException`。 (没有任何`ExecuteSQL`成员函数类似于`CDatabase::ExecuteSQL`。)  
+ `Execute` 不会返回一个记录集。 使用`Execute`在选择记录的查询会导致引发异常的类型的 MFC `CDaoException`。 (没有任何`ExecuteSQL`成员函数类似于`CDatabase::ExecuteSQL`。)  
   
 ##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
  调用此成员函数可检索用来连接的连接字符串`CDaoDatabase`到 ODBC 或 ISAM 数据库对象。  
@@ -477,7 +477,7 @@ CString GetConnect();
 > [!NOTE]
 >  连接字符串用于将其他信息传递到 ODBC 和根据需要某些 ISAM 驱动程序。 它不用于。MDB 的数据库。 对于 Microsoft Jet 数据库基表，连接字符串为空字符串 ("") 除外何时使用它对于 SQL 传递查询在上面的返回值下所述。  
   
- 请参阅[打开](#open)有关的连接字符串的创建方式说明成员函数。 设置连接字符串后**打开**调用，你可以更高版本使用它来检查该设置将确定类型、 路径、 用户 ID、 密码或 ODBC 数据源的数据库。  
+ 请参阅[打开](#open)有关的连接字符串的创建方式说明成员函数。 设置连接字符串后`Open`调用，你可以更高版本使用它来检查该设置将确定类型、 路径、 用户 ID、 密码或 ODBC 数据源的数据库。  
   
 ##  <a name="getname"></a>  CDaoDatabase::GetName  
  调用此成员函数可检索当前打开的数据库，它是现有数据库文件的名称的名称或已注册的 ODBC 数据源的名称。  
@@ -539,13 +539,13 @@ void GetQueryDefInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  数据库的 QueryDefs 集合，按索引查找中的预定义查询的索引。  
   
  *querydefinfo*  
  对引用[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)返回请求的信息的对象。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定有关要检索的记录集的信息的选项。 以及它们会导致函数返回有关记录集，此处列出了可用的选项：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型  
@@ -554,13 +554,13 @@ void GetQueryDefInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要信息加号： SQL、 连接，odbc 超时  
   
- `lpszName`  
+ *在 lpszName*  
  包含在数据库中，按名称查找定义查询的名称的字符串。  
   
 ### <a name="remarks"></a>备注  
  因此你可以选择查询数据库的 QueryDefs 集合中的索引或查询的名称提供两个版本的函数。  
   
- 有关在中返回的信息的说明*querydefinfo*，请参阅[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 如果请求的信息的一个级别，你将获取任何之前级别的信息以及。  
+ 有关在中返回的信息的说明*querydefinfo*，请参阅[CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 如果请求的信息的一个级别，你将获取任何之前级别的信息以及。  
   
 ##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
  调用此成员函数可检索当前连接的数据库上的后续操作已超时前允许的秒数。  
@@ -590,7 +590,7 @@ long GetRecordsAffected();
  包含受影响的记录数的长整数。  
   
 ### <a name="remarks"></a>备注  
- 返回的值包括删除、 更新或插入由使用运行操作查询的记录数**执行**。 返回的计数将不会反映级联更新或删除时的相关表中的更改中都起作用。  
+ 返回的值包括删除、 更新或插入由使用运行操作查询的记录数`Execute`。 返回的计数将不会反映级联更新或删除时的相关表中的更改中都起作用。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"RecordsAffected 属性"。  
   
@@ -626,13 +626,13 @@ void GetRelationInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  数据库的关系集合，按索引查找中的关系对象的索引。  
   
  *relinfo*  
  对引用[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)返回请求的信息的对象。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定有关要检索的关系的信息的选项。 以及它们会导致函数返回有关该关系，这里列出了可用的选项：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称，表中，外部表  
@@ -641,11 +641,11 @@ void GetRelationInfo(
   
  字段信息是[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)对象，其中包含从关系中涉及的主表的字段。  
   
- `lpszName`  
+ *在 lpszName*  
  包含关系对象中，按名称查找的名称的字符串。  
   
 ### <a name="remarks"></a>备注  
- 按索引或名称，则此函数的两个版本提供的访问。 有关在中返回的信息的说明*relinfo*，请参阅[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 如果请求在一个级别的信息，你还可以获取信息在任何以前的级别。  
+ 按索引或名称，则此函数的两个版本提供的访问。 有关在中返回的信息的说明*relinfo*，请参阅[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 如果请求在一个级别的信息，你还可以获取信息在任何以前的级别。  
   
 > [!NOTE]
 >  如果您将关系设置对象的属性，若要激活的级联操作 ( **dbRelationUpdateCascades**或**dbRelationDeleteCascades**)，Microsoft Jet 数据库引擎会自动更新或相关的主键表发生更改时，请删除一个或多个其他表中的记录。 例如，假设你建立客户表和 Orders 表之间的级联删除关系。 当 Customers 表中删除记录时，也将删除与该客户相关的 Orders 表中的记录。 此外，如果建立级联删除订单表和其他表之间的关系，则在从客户表中删除记录时，会自动删除这些表中的记录。  
@@ -680,13 +680,13 @@ void GetTableDefInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  数据库的 TableDefs 集合，按索引查找中 tabledef 对象的索引。  
   
- `tabledefinfo`  
+ *tabledefinfo*  
  对引用[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)返回请求的信息的对象。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要检索的表有关的信息的选项。 以及它们会导致函数返回有关该关系，这里列出了可用的选项：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）可更新的、 名称、 属性  
@@ -695,13 +695,13 @@ void GetTableDefInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要信息加号： 验证规则，验证文本记录计数  
   
- `lpszName`  
+ *在 lpszName*  
  按名称查找 tabledef 对象名称。  
   
 ### <a name="remarks"></a>备注  
  数据库的 TableDefs 集合中的索引或表的名称，可以选择表以便提供两个版本的函数。  
   
- 有关在中返回的信息的说明`tabledefinfo`，请参阅[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 如果请求在一个级别的信息，你将获取任何以前的级别的信息。  
+ 有关在中返回的信息的说明*tabledefinfo*，请参阅[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 如果请求在一个级别的信息，你将获取任何以前的级别的信息。  
   
 > [!NOTE]
 >  `AFX_DAO_ALL_INFO`选项提供可能会很慢，若要获取的信息。 在这种情况下，计算表中的记录的数量可能非常耗时如果有多个记录。  
@@ -759,10 +759,10 @@ virtual void Open(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  是现有的 Microsoft Jet 的名称的字符串表达式 (。MDB) 数据库文件。 如果文件名的扩展名，则需要。 如果你的网络支持的统一命名约定 (UNC)，你还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要中的字符串文字，因为"\\"c + + 转义符。)  
   
- 在使用时的一些注意事项适用`lpszName`。 如果它：  
+ 在使用时的一些注意事项适用*lpszName*。 如果它：  
   
 -   数据库已打开进行独占访问由另一个用户，MFC 引发异常的类型是指[CDaoException](../../mfc/reference/cdaoexception-class.md)。 捕获该异常，以便你知道数据库将不可用的用户。  
   
@@ -773,13 +773,13 @@ virtual void Open(
 > [!NOTE]
 >  有关 DAO 错误代码的详细信息，请参阅 DAOERR。H 文件。 有关相关信息，请参阅主题"可捕获中的数据访问错误"DAO 帮助。  
   
- `bExclusive`  
+ *bExclusive*  
  一个布尔值，是**TRUE**数据库是否要打开以进行独占的 （共享） 访问和**FALSE**如果数据库位于要打开以进行共享访问。 如果省略此参数，以进行共享访问被打开该数据库。  
   
- `bReadOnly`  
+ *bReadOnly*  
  一个布尔值，是**TRUE**数据库是否要打开以进行只读访问权限和**FALSE**如果数据库位于要打开以进行读/写访问。 如果省略此参数，被打开该数据库进行读/写访问。 所有依赖的记录集继承此属性。  
   
- `lpszConnect`  
+ *lpszConnect*  
  字符串表达式，用于打开数据库。 此字符串构成 ODBC 连接参数。 必须提供独占和只读参数，可以提供源字符串。 如果该数据库是 Microsoft Jet 数据库 (。MDB)，此字符串为空 ("")。 默认值的语法- **_T**("")-提供你的应用程序的内部版本为 Unicode 和 ANSI 可移植性。  
   
 ### <a name="remarks"></a>备注  
@@ -787,22 +787,22 @@ virtual void Open(
   
  使用参数，如下所示：  
   
--   如果要打开 Microsoft Jet (。MDB) 数据库中，使用`lpszName`参数并传递一个空字符串为`lpszConnect`参数或将窗体的密码字符串传递";PWD = 密码"如果数据库受密码保护 (。MDB 仅限数据库）。  
+-   如果要打开 Microsoft Jet (。MDB) 数据库中，使用*lpszName*参数并传递一个空字符串为*lpszConnect*参数或将窗体的密码字符串传递";PWD = 密码"如果数据库受密码保护 (。MDB 仅限数据库）。  
   
--   如果要打开 ODBC 数据源，将传递有效的 ODBC 连接字符串中`lpszConnect`和中的空字符串`lpszName`。  
+-   如果要打开 ODBC 数据源，将传递有效的 ODBC 连接字符串中*lpszConnect*和中的空字符串*lpszName*。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"OpenDatabase 方法"。  
   
 > [!NOTE]
 >  为了更好性能时访问外部数据库，包括 ISAM 数据库和 ODBC 数据源中，建议将外部数据库表附加到的 Microsoft Jet 引擎数据库 (。MDB) 而不是直接连接至数据源。  
   
- 如果，例如，DBMS 主机不可用，它有可能连接尝试超时。 如果连接尝试失败，**打开**引发类型的异常[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
+ 如果，例如，DBMS 主机不可用，它有可能连接尝试超时。 如果连接尝试失败，`Open`引发类型的异常[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
  剩余的备注仅适用于 ODBC 数据库：  
   
- 如果数据库已 ODBC 数据库并且中的参数你**打开**调用不包含足够的信息来建立连接时，ODBC 驱动程序将打开一个对话框，从用户获取所需的信息。 当调用**打开**，连接字符串， `lpszConnect`、 私人存储，可通过调用[GetConnect](#getconnect)成员函数。  
+ 如果数据库已 ODBC 数据库并且中的参数你`Open`调用不包含足够的信息来建立连接时，ODBC 驱动程序将打开一个对话框，从用户获取所需的信息。 当调用`Open`，连接字符串， *lpszConnect*、 私人存储，可通过调用[GetConnect](#getconnect)成员函数。  
   
- 如果您愿意，你可以打开对话框中，然后才能调用**打开**获取信息从用户，如密码，然后该将信息添加到连接字符串传递给**打开**。 或者你可能想要保存连接字符串，因此你可以重复使用它的下一步 （可能是在 Windows 注册表中） 传递时间应用程序调用**打开**上`CDaoDatabase`对象。  
+ 如果您愿意，你可以打开对话框中，然后才能调用`Open`获取信息从用户，如密码，然后该将信息添加到连接字符串传递给`Open`。 或者你可能想要保存连接字符串，因此你可以重复使用它的下一步 （可能是在 Windows 注册表中） 传递时间应用程序调用`Open`上`CDaoDatabase`对象。  
   
  此外可以针对多个级别的登录名授权使用的连接字符串 (每个不同`CDaoDatabase`对象)，或者传递其他特定于数据库的信息。  
   
@@ -814,11 +814,11 @@ void SetQueryTimeout(short nSeconds);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nSeconds`  
+ *nSeconds*  
  超时允许在查询尝试之前的秒数。  
   
 ### <a name="remarks"></a>备注  
- 由于网络访问权限问题、 过多的查询处理时间和等等的操作可能会超时。 调用`SetQueryTimeout`之前打开记录集或在调用记录集的之前[AddNew](../../mfc/reference/cdaorecordset-class.md#addnew)，[更新](../../mfc/reference/cdaorecordset-class.md#update)，或[删除](../../mfc/reference/cdaorecordset-class.md#delete)成员函数，如果你想要更改查询超时值。 该设置将影响所有后续[打开](../../mfc/reference/cdaorecordset-class.md#open)， `AddNew`，**更新**，和**删除**到任何与此相关的记录集的调用`CDaoDatabase`对象。 在打开后更改记录集的查询超时值不会更改记录集的值。 例如，后续[移动](../../mfc/reference/cdaorecordset-class.md#move)操作不使用新值。  
+ 由于网络访问权限问题、 过多的查询处理时间和等等的操作可能会超时。 调用`SetQueryTimeout`之前打开记录集或在调用记录集的之前[AddNew](../../mfc/reference/cdaorecordset-class.md#addnew)，[更新](../../mfc/reference/cdaorecordset-class.md#update)，或[删除](../../mfc/reference/cdaorecordset-class.md#delete)成员函数，如果你想要更改查询超时值。 该设置将影响所有后续[打开](../../mfc/reference/cdaorecordset-class.md#open)， `AddNew`， `Update`，和`Delete`到任何与此相关的记录集的调用`CDaoDatabase`对象。 在打开后更改记录集的查询超时值不会更改记录集的值。 例如，后续[移动](../../mfc/reference/cdaorecordset-class.md#move)操作不使用新值。  
   
  查询超时的默认值为 60 秒。 并非所有数据库都支持的功能，以设置查询超时值。 如果你设置查询超时值为 0，则会发生无超时;与数据库通信可能会停止响应。 在开发过程中，此行为可能会有用。  
   

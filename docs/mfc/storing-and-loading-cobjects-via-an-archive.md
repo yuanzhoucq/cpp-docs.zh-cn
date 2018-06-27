@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5cc426e3494117bff98577f02178709a2588f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a2dc227815f8888b85784ea92e58b3e91ffc83a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380723"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954970"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>通过存档存储和加载 CObject
 存储和加载`CObject`s 通过存档需要额外考虑。 在某些情况下，应调用`Serialize`函数的对象，其中`CArchive`对象是参数的`Serialize`调用，而不是使用**< \<** 或**>>** 运算符的`CArchive`。 需要牢记的重要事实是， `CArchive` **>>** 运算符构造`CObject`在内存中基于`CRuntimeClass`以前由存储存档写入到文件的信息。  
@@ -37,7 +37,7 @@ ms.locfileid: "33380723"
 -   当反序列化对象，你已有为其分配的内存。  
   
 > [!CAUTION]
->  如果你加载对象使用`Serialize`函数，您还必须存储对象使用`Serialize`函数。 不要将存储使用`CArchive` **<<** 运算符，然后负载使用`Serialize`函数，或使用存储`Serialize`函数，然后加载使用**CArchive >>** 运算符。  
+>  如果你加载对象使用`Serialize`函数，您还必须存储对象使用`Serialize`函数。 不要将存储使用`CArchive` **<<** 运算符，然后负载使用`Serialize`函数，或使用存储`Serialize`函数，然后加载使用`CArchive >>`运算符。  
   
  下面的示例阐释了这些情况：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33380723"
   
  [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- 总之，如果可序列化类定义一个嵌入**CObjec**t 作为成员，你应该*不*使用`CArchive` **< \<** 和**>>** 运算符为该对象，但应调用`Serialize`函数。 此外，如果可序列化类定义的指针`CObject`(或从派生的对象`CObject`) 作为成员，但构造此其他对象在其自己的构造函数，你还应调用`Serialize`。  
+ 总之，如果可序列化类定义一个嵌入`CObject`作为成员，你应该*不*使用`CArchive` **< \<** 和 **>>** 运算符为该对象，但应调用`Serialize`函数。 此外，如果可序列化类定义的指针`CObject`(或从派生的对象`CObject`) 作为成员，但构造此其他对象在其自己的构造函数，你还应调用`Serialize`。  
   
 ## <a name="see-also"></a>请参阅  
  [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357977"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952107"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 类
 可以将一个颜色选择对话框合并到你的应用程序。  
@@ -80,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  若要构造`CColorDialog`对象、 使用提供的构造函数或派生新类并使用你自己的自定义构造函数。  
   
- 一旦构造的对话框中，你可以设置或修改中的任何值[m_cc](#m_cc)结构初始化对话框的控件的值。 `m_cc`结构属于类型[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)。  
+ 一旦构造的对话框中，你可以设置或修改中的任何值[m_cc](#m_cc)结构初始化对话框的控件的值。 *M_cc*结构属于类型[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)。  
   
  初始化对话框的控件后, 调用`DoModal`成员函数以显示对话框中，并允许用户选择一种颜色。 `DoModal` 返回的用户的选择对话框的确定 ( **IDOK**) 或取消 ( **IDCANCEL**) 按钮。  
   
@@ -129,10 +129,10 @@ CColorDialog(
  *clrInit*  
  默认颜色选择。 如果未不指定任何值，则默认值为 RGB(0,0,0) （黑色）。  
   
- `dwFlags`  
+ *dwFlags*  
  一组自定义的函数和对话框中的外观的标志。 有关详细信息，请参阅[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Windows SDK 中的结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向对话框的父或所有者窗口的指针。  
   
 ### <a name="example"></a>示例  
@@ -197,7 +197,7 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>备注  
- 后构造`CColorDialog`对象时，可以使用`m_cc`设置对话框之前调用的各个方面[DoModal](#domodal)成员函数。  
+ 后构造`CColorDialog`对象时，可以使用*m_cc*设置对话框之前调用的各个方面[DoModal](#domodal)成员函数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
@@ -231,18 +231,18 @@ virtual BOOL OnColorOK();
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- 调用此函数在调用`DoModal`强制中指定的颜色值的当前颜色选择`clr`。  
+ 调用此函数在调用`DoModal`强制中指定的颜色值的当前颜色选择*clr*。  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>参数  
- `clr`  
+ *clr*  
  RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
- 在消息处理程序内从调用此函数或`OnColorOK`。 对话框中将自动更新基于值的用户的选择`clr`参数。  
+ 在消息处理程序内从调用此函数或`OnColorOK`。 对话框中将自动更新基于值的用户的选择*clr*参数。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CColorDialog::OnColorOK](#oncolorok)。  

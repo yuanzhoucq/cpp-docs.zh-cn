@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368977"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957073"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 类
 可以在你的应用程序中实现的标准字符串查找/替换对话框。  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  一次`CFindReplaceDialog`构造对象，则必须调用[创建](#create)成员函数来创建和显示对话框。  
   
- 使用[m_fr](#m_fr)结构初始化对话框之前调用**创建**。 `m_fr`结构属于类型[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 此结构的详细信息，请参阅 Windows SDK。  
+ 使用[m_fr](#m_fr)结构初始化对话框之前调用`Create`。 `m_fr`结构属于类型[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 此结构的详细信息，请参阅 Windows SDK。  
   
  在父窗口查找/替换请求的通知的顺序，你必须使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函数，并使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)你帧中的消息映射宏处理此已注册的消息的窗口。  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>备注  
- 因为`CFindReplaceDialog`对象是一个无模式对话框，你必须通过将它构造堆上`new`运算符。  
+ 因为`CFindReplaceDialog`对象是一个无模式对话框，你必须通过将它构造堆上**新**运算符。  
   
- 在析构，过程 framework 尝试执行`delete this`上指向对话框中的指针。 如果在堆栈中，创建对话框中`this`指针不存在和未定义的行为可能会导致。  
+ 在析构，过程 framework 尝试执行**删除此**上指向对话框中的指针。 如果在堆栈中，创建对话框中**这**指针不存在和未定义的行为可能会导致。  
   
  有关详细信息的构造`CFindReplaceDialog`对象，请参阅[CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)概述。 使用[CFindReplaceDialog::Create](#create)成员函数来显示对话框。  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  将此参数设置为`TRUE`以显示**查找**对话框。 将其设置为`FALSE`以显示**查找/替换**对话框。  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  指向对话框出现时的默认搜索字符串的指针。 如果`NULL`，对话框中不包含默认搜索字符串。  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  指向对话框出现时的默认替换字符串的指针。 如果`NULL`，对话框中不包含默认替换字符串。  
   
- `dwFlags`  
+ *dwFlags*  
  可以使用自定义设置对话框中，使用按位 OR 运算符组合在一起的一个或多个标志。 默认值是`FR_DOWN`，它指定是否以继续向下搜索。 请参阅[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)这些标志的详细信息的 Windows SDK 中的结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向对话框的父或所有者窗口的指针。 这是将收到特别消息，该值指示查找/替换操作请求的窗口。 如果`NULL`，使用应用程序的主窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lParam`  
+ *lParam*  
  **Lparam**值传递到框架窗口的**OnFindReplace**成员函数。  
   
 ### <a name="return-value"></a>返回值  

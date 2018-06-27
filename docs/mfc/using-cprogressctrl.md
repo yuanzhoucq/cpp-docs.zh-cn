@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a9f89648a8dd31cfae9d644afec040b14c98691
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a3d222ed4f3de143182cf0a413e4160b68356cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381564"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951148"
 ---
 # <a name="using-cprogressctrl"></a>使用 CProgressCtrl
 可使用进度控件指示耗时较长的操作的进度。 它是一个矩形，通过让系统亮色逐渐填充来显示操作进度。  
   
  进度控件在由 MFC 类[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)。  
   
- 最初创建进度控件时，应指定其大小和位置、父窗口（通常为对话框）和 ID。 利用 `dwStyle` 参数，还可以为该控件指定不同的窗口样式和填充样式。  
+ 最初创建进度控件时，应指定其大小和位置、父窗口（通常为对话框）和 ID。 通过使用*dwStyle*参数，你还可以指定不同的控件的窗口样式和填充样式。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
   

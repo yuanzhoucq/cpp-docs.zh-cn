@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385626"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950209"
 ---
 # <a name="using-documents"></a>使用文档
 在同时工作，文档和视图：  
@@ -44,7 +44,7 @@ ms.locfileid: "33385626"
   
 -   [处理](../mfc/handling-commands-in-the-document.md)大部分应用程序的命令和消息。  
   
- 文档是特别管理所涉及的数据。 将你的数据，通常情况下，存储在文档类成员变量。 该视图使用这些变量来访问数据以用于显示和更新。 文档的默认序列化机制管理读取和写入数据，与其他文件。 文档还可以处理命令 (但不是 Windows 消息以外**WM_COMMAND**)。  
+ 文档是特别管理所涉及的数据。 将你的数据，通常情况下，存储在文档类成员变量。 该视图使用这些变量来访问数据以用于显示和更新。 文档的默认序列化机制管理读取和写入数据，与其他文件。 命令 （但不是 WM_COMMAND 以外的 Windows 消息），还可以处理文档。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
   

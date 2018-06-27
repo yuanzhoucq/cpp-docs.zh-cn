@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358350"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952175"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 类
 创建使用位图图像而非文本进行标记的按钮控件。  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  在`CDialog`对象的[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)例程，调用`CBitmapButton`对象的[自动上载](#autoload)函数，请使用作为参数按钮的控件 ID 和`CDialog`对象**这**指针。  
   
- 如果你想要处理 Windows 通知消息，如**BN_CLICKED**、 发送到其父位图按钮控件 (通常从派生的类**CDialog)**，将添加到`CDialog`-派生对象为每个消息的消息映射条目和消息处理程序成员函数。 发送的通知`CBitmapButton`对象是由发送相同[CButton](../../mfc/reference/cbutton-class.md)对象。  
+ 如果你想要处理 Windows 通知消息，如 BN_CLICKED，由位图按钮控件发送到其父 (通常从派生的类`CDialog`)，将添加到`CDialog`-派生的对象的消息映射条目和消息处理程序成员每个消息的的函数。 发送的通知`CBitmapButton`对象是由发送相同[CButton](../../mfc/reference/cbutton-class.md)对象。  
   
  类[CToolBar](../../mfc/reference/ctoolbar-class.md)针对位图按钮采用不同的方法。  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  按钮的控件 id。  
   
- `pParent`  
+ *pParent*  
  指向拥有按钮的对象的指针。  
   
 ### <a name="return-value"></a>返回值  

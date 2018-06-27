@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367768"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955682"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 类
 管理与 Gopher Internet 服务器的连接。  
@@ -99,32 +99,32 @@ CGopherConnection(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSession`  
+ *pSession*  
  指向相关[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。  
   
- `hConnected`  
+ *hConnected*  
  当前的 Internet 会话的 Windows 句柄。  
   
- `pstrServer`  
+ *pstrServer*  
  指向包含 FTP 服务器名称的字符串的指针。  
   
- `dwContext`  
- 操作上下文标识符。 `dwContext` 标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
+ *dwContext*  
+ 操作上下文标识符。 *dwContext*标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
   
- `pstrUserName`  
+ *pstrUserName*  
  指向以 null 结尾的字符串，指定要登录的用户的名称。 如果**NULL**，默认值是匿名的。  
   
- `pstrPassword`  
- 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个`pstrPassword`和`pstrUserName`是**NULL**，默认匿名密码是用户的电子邮件名称。 如果`pstrPassword`是**NULL** （或空字符串），但`pstrUserName`不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为`pstrUserName`和`pstrPassword`:  
+ *pstrPassword*  
+ 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个*pstrPassword*和*pstrUserName*是**NULL**，默认匿名密码是用户的电子邮件名称。 如果*pstrPassword*是**NULL** （或空字符串），但*pstrUserName*不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为*pstrUserName*和*pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
+|*pstrUserName*|*pstrPassword*|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL**或""|**NULL**或""|"匿名"|用户的电子邮件名称|  
-|非- **NULL**字符串|**NULL**或""|`pstrUserName`|" "|  
+|非- **NULL**字符串|**NULL**或""|*pstrUserName*|" "|  
 |**NULL**非**NULL**字符串|**错误**|**错误**||  
-|非- **NULL**字符串|非- **NULL**字符串|`pstrUserName`|`pstrPassword`|  
+|非- **NULL**字符串|非- **NULL**字符串|*pstrUserName*|*pstrPassword*|  
   
- `nPort`  
+ *nPort*  
  一个数字，标识要使用服务器上的 TCP/IP 端口。  
   
 ### <a name="remarks"></a>备注  
@@ -151,22 +151,22 @@ static CGopherLocator CreateLocator(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrDisplayString`  
- 指向包含 gopher 文档或要检索的目录名称的字符串的指针。 如果`pstrDisplayString`参数是**NULL**，返回 gopher 服务器的默认目录。  
+ *pstrDisplayString*  
+ 指向包含 gopher 文档或要检索的目录名称的字符串的指针。 如果*pstrDisplayString*参数是**NULL**，返回 gopher 服务器的默认目录。  
   
- `pstrSelectorString`  
- 指向要发送到 gopher 服务器以检索项的选择器字符串的指针。 `pstrSelectorString` 可以是**NULL**。  
+ *pstrSelectorString*  
+ 指向要发送到 gopher 服务器以检索项的选择器字符串的指针。 *pstrSelectorString*可以是**NULL**。  
   
  *dwGopherType*  
- 此设置指定是否`pstrSelectorString`指一个目录或文档，以及请求是 gopher +。 请参阅结构属性[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK 中。  
+ 此设置指定是否*pstrSelectorString*指一个目录或文档，以及请求是 gopher +。 请参阅结构属性[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK 中。  
   
- `pstrLocator`  
+ *pstrLocator*  
  指向用于标识要打开的文件的字符串的指针。 通常情况下，此字符串返回到调用[CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator)。  
   
  *pstrServerName*  
  指向包含 gopher 服务器名称的字符串的指针。  
   
- `nPort`  
+ *nPort*  
  标识此连接的 Internet 端口的编号。  
   
 ### <a name="return-value"></a>返回值  
@@ -187,13 +187,13 @@ BOOL GetAttribute(
 ```  
   
 ### <a name="parameters"></a>参数  
- `refLocator`  
+ *refLocator*  
  对引用[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象。  
   
  *strRequestedAttributes*  
  指定请求的属性的名称以空格分隔的字符串。  
   
- `strResult`  
+ *strResult*  
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收定位符类型。  
   
 ### <a name="return-value"></a>返回值  
@@ -211,23 +211,23 @@ CGopherFile* OpenFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `refLocator`  
+ *refLocator*  
  对引用[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象。  
   
- `dwFlags`  
+ *dwFlags*  
  INTERNET_FLAG_ * 标志的任意组合。 请参阅[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)有关进一步信息 INTERNET_FLAG_\*标志。  
   
- `pstrView`  
- 指向文件视图字符串的指针。 如果在服务器上存在的文件的多个视图，此参数指定要打开的文件视图。 如果`pstrView`是**NULL**，使用默认文件视图。  
+ *pstrView*  
+ 指向文件视图字符串的指针。 如果在服务器上存在的文件的多个视图，此参数指定要打开的文件视图。 如果*pstrView*是**NULL**，使用默认文件视图。  
   
- `dwContext`  
- 所打开的文件上下文 ID。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 所打开的文件上下文 ID。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="return-value"></a>返回值  
  指向的指针[CGopherFile](../../mfc/reference/cgopherfile-class.md)要打开的对象。  
   
 ### <a name="remarks"></a>备注  
- 重写`dwContext`默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CGopherConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ 重写*dwContext*默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CGopherConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   

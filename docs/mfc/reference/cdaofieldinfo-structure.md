@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368402"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952192"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 结构
 `CDaoFieldInfo`结构包含的数据访问对象 (DAO) 定义的字段对象有关的信息。  
@@ -50,10 +50,10 @@ struct CDaoFieldInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一地命名字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
- `m_nType`  
+ *m_nType*  
  一个值，指示该字段的数据类型。 有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。 此属性的值可以是以下项之一：  
   
 - **dbBoolean**是/否，与相同**TRUE**/**FALSE**  
@@ -101,7 +101,7 @@ struct CDaoFieldInfo
 |**dbMemo**|0|备注 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbGUID**|16|全局唯一标识符/全局唯一标识符用于远程过程调用。|  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  指定字段包含的对象由 tabledef、 记录集、 querydef 或索引对象的特性。 返回的值可以是两个常数，创建使用 c + + 按位 OR 的总和 (**&#124;**) 运算符：  
   
 - **dbFixedField**字段大小固定 （数字字段的默认值）。  
@@ -119,16 +119,16 @@ struct CDaoFieldInfo
  *m_nOrdinalPosition*  
  一个值，指定要在其中由 DAO 字段对象表示要显示相对于其他字段的字段的数字顺序。 你可以设置此属性与[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。 有关详细信息，请参阅主题 DAO 帮助中的"OrdinalPosition 属性"。  
   
- `m_bRequired`  
+ *m_bRequired*  
  指示 DAO 字段对象是否需要非 Null 值。 如果此属性为**TRUE**，该字段不允许 Null 值。 如果需要将设为**FALSE**，该字段只能包含 Null 值，以及满足填和 ValidationRule 属性设置指定的条件的值。 有关详细信息，请参阅主题 DAO 帮助中的"所需属性"。 你可以将此属性设置为与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  *m_bAllowZeroLength*  
  指示是否为空字符串 ("") 是具有数据类型为文本或备注的 DAO 字段对象的有效值。 如果此属性为**TRUE**，空字符串是有效的值。 你可以将此属性设置为**FALSE**以确保你不能使用空字符串来设置字段值。 有关详细信息，请参阅主题 DAO 帮助中的"允许空字符串属性"。 你可以将此属性设置为与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  用于字符串比较或排序的文本中指定的排序顺序的序列。 有关详细信息，请参阅"自定义 Windows 注册表设置的数据访问"DAO 帮助中的主题。 返回的可能值的列表，请参阅**m_lCollatingOrder**的成员[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)结构。 你可以将此属性设置为与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  一个值，在一个关系，指定 DAO 字段对象对应于主表中一个字段的外部表中的名称。 有关详细信息，请参阅主题 DAO 帮助中的"ForeignName 属性"。  
   
  *m_strSourceField*  
@@ -137,12 +137,12 @@ struct CDaoFieldInfo
  *m_strSourceTable*  
  指示 tabledef、 记录集或 querydef 对象包含的 DAO 字段对象的数据的原始源的表的名称。 此属性指示与字段对象相关联的原始表名称。 例如，可以使用此属性以确定其名称为与基础表中的字段的名称不相关的查询字段中的数据的原始源。 有关详细信息，请参阅 DAO 帮助中的主题"SourceField，SourceTable 属性"。 你可以将此属性设置为与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  一个值，验证字段中的数据，因为它已更改或添加到表中。 有关详细信息，请参阅主题 DAO 帮助中的"有效性规则属性"。 你可以将此属性设置为与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  有关 tabledefs 的相关信息，请参阅**m_strValidationRule**的成员[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)结构。  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  一个值，指定应用程序显示如果 DAO 字段对象的值不满足由 ValidationRule 属性设置指定的验证规则的消息的文本。 有关详细信息，请参阅主题 DAO 帮助中的"有效性文本属性"。 你可以将此属性设置为与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  *m_strDefaultValue*  

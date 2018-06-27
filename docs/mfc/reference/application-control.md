@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355907"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954035"
 ---
 # <a name="application-control"></a>应用程序控件
 OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能够启动并自动发布的应用程序，协调其生产和修改的对象，依次类推。 本主题中的函数满足这些要求。 除了调用由 OLE 系统 Dll，这些函数有时必须由应用程序以及调用。 
@@ -53,7 +53,7 @@ BOOL AFXAPI AfxOleCanExitApp();
  如果应用程序退出，则为非零；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果存在对应用程序的对象的未处理引用，则应用程序不应终止。 全局函数 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分别对应用程序对象引用计数器进行递增和递减。 当此计数器为非零时，应用程序不应终止。 如果计数器为非零，当用户从系统菜单选择“关闭”或从“文件”菜单选择“退出”时，应用程序的主窗口将会隐藏（不销毁）。 框架调用此函数**cframewnd:: Onclose**。  
+ 如果存在对应用程序的对象的未处理引用，则应用程序不应终止。 全局函数 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分别对应用程序对象引用计数器进行递增和递减。 当此计数器为非零时，应用程序不应终止。 如果计数器为非零，当用户从系统菜单选择“关闭”或从“文件”菜单选择“退出”时，应用程序的主窗口将会隐藏（不销毁）。 框架调用此函数`CFrameWnd::OnClose`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -147,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>备注  
  请参阅`AfxOleLockApp`有关进一步信息。  
   
- 当活动对象数为零时， **AfxOleOnReleaseAllObjects**调用。  
+ 当活动对象数为零时，`AfxOleOnReleaseAllObjects`调用。  
   
 ### <a name="example"></a>示例  
  请参阅示例[AfxOleLockApp](#afxolelockapp)。  
@@ -164,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  控件的唯一类 ID。  
   
- `lpszProgID`  
+ *lpszProgID*  
  控件的唯一程序 ID。  
    
 ### <a name="return-value"></a>返回值  
@@ -207,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  引用为服务器的 OLE 类 id。  
   
- `lpszClassName`  
+ *lpszClassName*  
  指向包含的服务器的对象的类名称的字符串的指针。  
   
  *lpszShortTypeName*  
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  指向包含服务器的对象类型，如"Microsoft Excel 5.0 图表。"的长名称的字符串  
   
- `nAppType`  
+ *nAppType*  
  从获取的值**OLE_APPTYPE**枚举，指定 OLE 应用程序的类型。 可能的值如下所示：  
   
 - `OAT_INPLACE_SERVER` 服务器具有完全服务器用户界面。  
@@ -230,23 +230,23 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`-支持的对象。  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  指向密钥和要添加到 OLE 系统注册表中，如果不找到任何现有值的键的值表示的字符串的指针的数组。  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  指向密钥和值要添加到 OLE 系统注册表中，如果该注册表包含给定的键的现有值表示的字符串的指针的数组。  
   
 ### <a name="return-value"></a>返回值  
  如果成功注册的服务器类; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 大多数应用程序可以使用**COleTemplateServer::Register**注册应用程序的文档类型。 如果你的应用程序的系统注册表格式不适合的典型模式，则可以使用`AfxOleRegisterServerClass`获得更多控制。  
+ 大多数应用程序可以使用`COleTemplateServer::Register`注册应用程序的文档类型。 如果你的应用程序的系统注册表格式不适合的典型模式，则可以使用`AfxOleRegisterServerClass`获得更多控制。  
   
- 注册表包含键和值的一组。 `rglpszRegister`和`rglpszOverwrite`自变量是指向字符串的指针的数组，其中每个包括的一个键和值隔开**NULL**字符 ( `'\0'`)。 每个这些字符串可以有其位置标记的字符序列的可替换参数`%1`通过`%5`。  
+ 注册表包含键和值的一组。 *RglpszRegister*和*rglpszOverwrite*自变量是指向字符串的指针的数组，其中每个包括的一个键和值隔开**NULL**字符 ( `'\0'`). 每个这些字符串可以有其位置标记的字符序列的可替换参数 *%1*通过 *%5*。  
   
  符号填充了如下：  
   
-|符号|值|  
+|符号|“值”|  
 |------------|-----------|  
 |%1|类 ID，其格式为字符串|  
 |%2|类名|  
@@ -271,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClient`  
+ *pClient*  
  指向客户端 OLE 项的指针。  
   
- `pMenu`  
+ *pMenu*  
  指向要更新的菜单对象的指针。  
   
  *iMenuItem*  
  要更新的菜单项的索引。  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  对应于主谓词命令 ID。  
   
  *nIDVerbMax*  
@@ -290,7 +290,7 @@ void AFXAPI AfxOleSetEditMenu(
  转换菜单项的 ID。  
   
 ### <a name="remarks"></a>备注  
- 如果服务器能够识别仅主谓词，则菜单项将成为"谓词*typename*对象"和`nIDVerbMin`当用户选择命令发送命令。 如果服务器能够识别的多个谓词，则菜单项将成为" *typename*对象"，并列出所有谓词子菜单显示当用户选择命令。 当用户从子菜单中，选择谓词`nIDVerbMin`如果选择第一个谓词，发送`nIDVerbMin`+ 1 发送第二项操作是否选择，依此类推。 默认值`COleDocument`实现自动处理此功能。  
+ 如果服务器能够识别仅主谓词，则菜单项将成为"谓词*typename*对象"和*nIDVerbMin*当用户选择命令发送命令。 如果服务器能够识别的多个谓词，则菜单项将成为" *typename*对象"，并列出所有谓词子菜单显示当用户选择命令。 当用户从子菜单中，选择谓词*nIDVerbMin*如果选择第一个谓词，发送*nIDVerbMin* + 1 发送第二项操作是否选择，依此类推。 默认值`COleDocument`实现自动处理此功能。  
   
  下面的语句必须在你的客户端应用程序资源脚本 (。RC) 文件：  
   
@@ -311,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  控件的唯一类 ID。  
   
- `lpszProgID`  
+ *lpszProgID*  
  控件的唯一程序 ID。  
    
 ### <a name="return-value"></a>返回值  

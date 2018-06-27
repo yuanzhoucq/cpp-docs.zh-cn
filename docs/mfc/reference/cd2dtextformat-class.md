@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352885"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955464"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 类
 IDWriteTextFormat 包装器。  
@@ -79,7 +79,7 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|指向 IDWriteTextFormat 的指针。|  
   
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  CString 对象，其中包含的字体系列名称。  
   
- `fontSize`  
+ *FontSize*  
  DIP （"独立于设备的像素"） 单位中的字体的逻辑大小。 Dip 等于 1/96 英寸。  
   
- `fontWeight`  
+ *fontWeight*  
  一个值，指示文本对象的字体粗细。  
   
- `fontStyle`  
+ *fontStyle*  
  一个值，指示文本对象的字体样式。  
   
- `fontStretch`  
+ *元素都*  
  一个值，指示文本对象的字体拉伸。  
   
- `strFontLocale`  
+ *strFontLocale*  
  CString 对象包含的区域设置名称。  
   
- `pFontCollection`  
+ *pFontCollection*  
  指向字体集合对象的指针。 当这是 NULL 时，表示系统字体集合。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

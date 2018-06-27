@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324e6411673a509bdf75954634ff9c6dffc5ce1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354421"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952049"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 类
 ID2D1Brush 包装器。  
@@ -87,7 +87,7 @@ class CD2DBrush : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DBrush::m_pBrush](#m_pbrush)|将存储指向 ID2D1Brush 对象的指针。|  
 |[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|画笔属性。|  
@@ -117,7 +117,7 @@ void Attach(ID2D1Brush* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
@@ -131,13 +131,13 @@ CD2DBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指向不透明度和画笔的转换的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="destroy"></a>  CD2DBrush::Destroy  
@@ -185,7 +185,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `transform`  
+ *transform*  
  当此方法返回时，包含当前呈现器目标的转换。 此参数未经初始化即被传递  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
@@ -230,7 +230,7 @@ void SetOpacity(FLOAT opacity);
 ```  
   
 ### <a name="parameters"></a>参数  
- `opacity`  
+ *不透明度*  
  一个介于 0 与 1，该值指示的不透明度的画笔之间的值。 此值是常数乘数，可线性缩放由画笔填充的所有像素的 alpha 值。 不透明度值限制为 0 到 1 范围内之前它们相乘  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
@@ -241,7 +241,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>参数  
- `transform`  
+ *transform*  
  要应用到呈现目标的转换  
   
 ## <a name="see-also"></a>请参阅  

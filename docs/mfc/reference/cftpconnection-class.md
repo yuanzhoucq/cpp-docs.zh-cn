@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f43df1cb610c785688db982be2ddc4a19cf140b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 303e89cd00091d8427bdb1d6e36c9a85b7aa5100
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374531"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952948"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 类
 管理与 Internet 服务器的 FTP 连接，并允许该服务器上的目录和文件的直接操作。  
@@ -122,36 +122,36 @@ CFtpConnection(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSession`  
+ *pSession*  
  指向相关[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。  
   
- `hConnected`  
+ *hConnected*  
  当前的 Internet 会话的 Windows 句柄。  
   
- `pstrServer`  
+ *pstrServer*  
  指向包含 FTP 服务器名称的字符串的指针。  
   
- `dwContext`  
- 操作上下文标识符。 `dwContext` 标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
+ *dwContext*  
+ 操作上下文标识符。 *dwContext*标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
   
- `pstrUserName`  
+ *pstrUserName*  
  指向以 null 结尾的字符串，指定要登录的用户的名称。 如果**NULL**，默认值是匿名的。  
   
- `pstrPassword`  
- 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个`pstrPassword`和`pstrUserName`是**NULL**，默认匿名密码是用户的电子邮件名称。 如果`pstrPassword`是**NULL** （或空字符串），但`pstrUserName`不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为`pstrUserName`和`pstrPassword`:  
+ *pstrPassword*  
+ 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个*pstrPassword*和*pstrUserName*是**NULL**，默认匿名密码是用户的电子邮件名称。 如果*pstrPassword*是**NULL** （或空字符串），但*pstrUserName*不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为*pstrUserName*和*pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
+|*pstrUserName*|*pstrPassword*|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL**或""|**NULL**或""|"匿名"|用户的电子邮件名称|  
-|非- **NULL**字符串|**NULL**或""|`pstrUserName`|" "|  
+|非- **NULL**字符串|**NULL**或""|*pstrUserName*|" "|  
 |**NULL**非**NULL**字符串|**错误**|**错误**||  
-|非- **NULL**字符串|非- **NULL**字符串|`pstrUserName`|`pstrPassword`|  
+|非- **NULL**字符串|非- **NULL**字符串|*pstrUserName*|*pstrPassword*|  
   
- `nPort`  
+ *nPort*  
  一个数字，标识要使用服务器上的 TCP/IP 端口。  
   
- `bPassive`  
- 为此 FTP 会话指定被动还是主动模式。 如果设置为**TRUE**，它将设置 Win32 API`dwFlag`到**INTERNET_FLAG_PASSIVE**。  
+ *bPassive*  
+ 为此 FTP 会话指定被动还是主动模式。 如果设置为**TRUE**，它将设置 Win32 API *dwFlag*到**INTERNET_FLAG_PASSIVE**。  
   
 ### <a name="remarks"></a>备注  
  切勿创建`CFtpConnection`直接对象。 而应调用[cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)，这将创建**CFptConnection**对象。  
@@ -168,7 +168,7 @@ CInternetFile* Command(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszCommand`  
+ *pszCommand*  
  指向包含待发送命令的字符串的指针。  
   
  *eResponse*  
@@ -178,10 +178,10 @@ CInternetFile* Command(
   
 - **CmdRespRead**预期响应。  
   
- `dwFlags`  
+ *dwFlags*  
  包含控制此函数的标志的值。 完整列表，请参阅[FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)。  
   
- `dwContext`  
+ *dwContext*  
  指向一个值的指针，该值包含用于在回调中标识应用程序上下文的应用程序定义的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -200,7 +200,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrDirName`  
+ *pstrDirName*  
  指向包含要创建的目录的名称的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -223,19 +223,19 @@ BOOL GetCurrentDirectory(
 ```  
   
 ### <a name="parameters"></a>参数  
- `strDirName`  
+ *strDirName*  
  对将收到的目录名称的字符串的引用。  
   
- `pstrDirName`  
+ *pstrDirName*  
  指向将收到的目录名称的字符串的指针。  
   
- `lpdwLen`  
+ *lpdwLen*  
  指向一个 dword 值，包含以下信息的链接：  
   
 |||  
 |-|-|  
-|条目|引用的缓冲区的大小`pstrDirName`。|  
-|返回时|存储到的字符数`pstrDirName`。 如果成员函数将失败并返回 ERROR_INSUFFICIENT_BUFFER，然后`lpdwLen`包含的应用程序必须分配为了接收字符串的字节数。|  
+|条目|引用的缓冲区的大小*pstrDirName*。|  
+|返回时|存储到的字符数*pstrDirName*。 如果成员函数将失败并返回 ERROR_INSUFFICIENT_BUFFER，然后*lpdwLen*包含的应用程序必须分配为了接收字符串的字节数。|  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
@@ -243,7 +243,7 @@ BOOL GetCurrentDirectory(
 ### <a name="remarks"></a>备注  
  若要改为获取作为 URL 的目录名称，请调用[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)。  
   
- 参数`pstrDirName`或`strDirName`可以是相对于当前目录任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetCurrentDirectory` 在使用之前，将转换为相应字符的目录名称分隔符。  
+ 参数*pstrDirName*或*strDirName*可以是相对于当前目录任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetCurrentDirectory` 在使用之前，将转换为相应字符的目录名称分隔符。  
   
 ##  <a name="getcurrentdirectoryasurl"></a>  Cftpconnection:: Getcurrentdirectoryasurl  
  调用此成员函数可获取当前目录的名称作为 URL。  
@@ -257,19 +257,19 @@ BOOL GetCurrentDirectoryAsURL(
 ```  
   
 ### <a name="parameters"></a>参数  
- `strDirName`  
+ *strDirName*  
  对将收到的目录名称的字符串的引用。  
   
- `pstrDirName`  
+ *pstrDirName*  
  指向将收到的目录名称的字符串的指针。  
   
- `lpdwLen`  
+ *lpdwLen*  
  指向一个 dword 值，包含以下信息的链接：  
   
 |||  
 |-|-|  
-|条目|引用的缓冲区的大小`pstrDirName`。|  
-|返回时|存储到的字符数`pstrDirName`。 如果成员函数将失败并返回 ERROR_INSUFFICIENT_BUFFER，然后`lpdwLen`包含的应用程序必须分配为了接收字符串的字节数。|  
+|条目|引用的缓冲区的大小*pstrDirName*。|  
+|返回时|存储到的字符数*pstrDirName*。 如果成员函数将失败并返回 ERROR_INSUFFICIENT_BUFFER，然后*lpdwLen*包含的应用程序必须分配为了接收字符串的字节数。|  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
@@ -277,7 +277,7 @@ BOOL GetCurrentDirectoryAsURL(
 ### <a name="remarks"></a>备注  
  `GetCurrentDirectoryAsURL` 行为与相同[GetCurrentDirectory](#getcurrentdirectory)  
   
- 参数`strDirName`可以是相对于当前目录任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetCurrentDirectoryAsURL` 在使用之前，将转换为相应字符的目录名称分隔符。  
+ 参数*strDirName*可以是相对于当前目录任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetCurrentDirectoryAsURL` 在使用之前，将转换为相应字符的目录名称分隔符。  
   
 ##  <a name="getfile"></a>  CFtpConnection::GetFile  
  调用此成员函数可从 FTP 服务器获取文件并将其存储在本地计算机上。  
@@ -293,16 +293,16 @@ BOOL GetFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrRemoteFile`  
+ *pstrRemoteFile*  
  指向以 null 结尾的字符串，包含要从 FTP 服务器中检索的文件的名称的指针。  
   
- `pstrLocalFile`  
+ *pstrLocalFile*  
  指向包含要在本地系统上创建的文件的名称的以 null 结尾的字符串的指针。  
   
  *bFailIfExists*  
  指示是否文件名称可能已使用的现有文件。 如果本地文件名已存在，并且此参数是**TRUE**，`GetFile`失败。 否则为`GetFile`将会删除该文件的现有副本。  
   
- `dwAttributes`  
+ *dwAttributes*  
  指示的文件的属性。 这可以是以下 FILE_ATTRIBUTE_ * 标志的任意组合。  
   
 -   FILE_ATTRIBUTE_ARCHIVE 文件是一个存档文件。 应用程序使用此特性标记的备份或删除的文件。  
@@ -321,11 +321,11 @@ BOOL GetFile(
   
 -   FILE_ATTRIBUTE_TEMPORARY 文件用于临时存储。 仅当绝对必要，应用程序应写入到文件。 大部分文件的数据保留在内存中而不刷新到媒体因为该文件将很快被删除。  
   
- `dwFlags`  
- 指定在其下传输发生的条件。 此参数可以为任何`dwFlags`值中所述[FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) Windows SDK 中。  
+ *dwFlags*  
+ 指定在其下传输发生的条件。 此参数可以为任何*dwFlags*值中所述[FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) Windows SDK 中。  
   
- `dwContext`  
- 文件检索上下文标识符。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 文件检索上下文标识符。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
@@ -333,11 +333,11 @@ BOOL GetFile(
 ### <a name="remarks"></a>备注  
  `GetFile` 是一个高级例程处理所有关联从 FTP 服务器读取文件并将其存储在本地的系统开销。 应用程序，只能检索文件的数据，或需要关闭控制文件传输，应使用`OpenFile`和[cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read)相反。  
   
- 如果`dwFlags`也是 FILE_TRANSFER_TYPE_ASCII，转换后的文件数据，则会将控件和格式设置为 Windows 的等效字符。 默认传输是二进制模式，其中文件下载的相同的格式存储在服务器上。  
+ 如果*dwFlags*也是 FILE_TRANSFER_TYPE_ASCII，转换后的文件数据，则会将控件和格式设置为 Windows 的等效字符。 默认传输是二进制模式，其中文件下载的相同的格式存储在服务器上。  
   
- 同时`pstrRemoteFile`和`pstrLocalFile`可以是相对于当前目录任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetFile` 在使用之前，将转换为相应字符的目录名称分隔符。  
+ 同时*pstrRemoteFile*和*pstrLocalFile*可以是相对于当前目录任一部分限定的文件名或完全限定的。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `GetFile` 在使用之前，将转换为相应字符的目录名称分隔符。  
   
- 重写`dwContext`默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ 重写*dwContext*默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile  
  调用此成员函数以打开位于用于读取或写入的 FTP 服务器上的文件。  
@@ -351,21 +351,21 @@ CInternetFile* OpenFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrFileName`  
+ *pstrFileName*  
  指向包含要打开的文件的名称的字符串的指针。  
   
  *dwAccess*  
  确定将如何访问该文件。 可以 GENERIC_READ 或 GENERIC_WRITE，但不是两个。  
   
- `dwFlags`  
+ *dwFlags*  
  指定在其下后续传输发生的条件。 这可以是任何 FTP_TRANSFER_ * 以下常量：  
   
 -   FTP_TRANSFER_TYPE_ASCII 文件传输使用 FTP ASCII （A 类型） 传输方法。 将控件并为本地等效值的格式设置信息。  
   
 -   FTP_TRANSFER_TYPE_BINARY 文件传输使用 FTP's 映像 (类型 I) 传输方法的数据。 存在完全相同的文件传输数据，不进行任何更改。 这是默认传输方法。  
   
- `dwContext`  
- 打开的文件上下文标识符。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 打开的文件上下文标识符。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="return-value"></a>返回值  
  指向的指针[CInternetFile](../../mfc/reference/cinternetfile-class.md)对象。  
@@ -379,11 +379,11 @@ CInternetFile* OpenFile(
   
 -   应用程序需要精细的控制的文件传输级别。 例如，应用程序可能希望显示进度控件指示下载文件时的文件传输状态的进度。  
   
- 在调用`OpenFile`和直到调用**CInternetConnection::Close**，只能调用应用程序[cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read)， [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)，**CInternetConnection::Close**，或[cftpfilefind:: Findfile](../../mfc/reference/cftpfilefind-class.md#findfile)。 对同一 FTP 会话其他 FTP 函数的调用将失败，并且将错误代码设置为 FTP_ETRANSFER_IN_PROGRESS。  
+ 在调用`OpenFile`和直到调用`CInternetConnection::Close`，只能调用应用程序[cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read)， [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)， `CInternetConnection::Close`，或[Cftpfilefind:: Findfile](../../mfc/reference/cftpfilefind-class.md#findfile)。 对同一 FTP 会话其他 FTP 函数的调用将失败，并且将错误代码设置为 FTP_ETRANSFER_IN_PROGRESS。  
   
- `pstrFileName`参数可以为任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `OpenFile` 在使用它之前将转换到的相应字符的目录名称分隔符。  
+ *PstrFileName*参数可以为任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `OpenFile` 在使用它之前将转换到的相应字符的目录名称分隔符。  
   
- 重写`dwContext`默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ 重写*dwContext*默认可为你选择的值设置的上下文标识符。 上下文标识符是与此特定操作的关联`CFtpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供有关用于标识的操作的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ##  <a name="putfile"></a>  CFtpConnection::PutFile  
  调用此成员函数以存储 FTP 服务器上的文件。  
@@ -397,17 +397,17 @@ BOOL PutFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrLocalFile`  
+ *pstrLocalFile*  
  指向包含要从本地系统发送的文件的名称的字符串的指针。  
   
- `pstrRemoteFile`  
+ *pstrRemoteFile*  
  指向包含要在 FTP 服务器上创建的文件的名称的字符串的指针。  
   
- `dwFlags`  
+ *dwFlags*  
  指定在其下的文件传输发生的条件。 可以是任何中所述的 FTP_TRANSFER_ * 常量[OpenFile](#openfile)。  
   
- `dwContext`  
- 放置文件的上下文标识符。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 放置文件的上下文标识符。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
@@ -425,14 +425,14 @@ BOOL Remove(LPCTSTR pstrFileName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrFileName`  
+ *pstrFileName*  
  指向包含要删除的文件名称的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
- `pstrFileName`参数可以为任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 **删除**函数将转换为相应字符的目录名称分隔符，在使用之前。  
+ *PstrFileName*参数可以为任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 **删除**函数将转换为相应字符的目录名称分隔符，在使用之前。  
   
 ##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory  
  调用此成员函数以从已连接的服务器中删除指定的目录。  
@@ -442,7 +442,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrDirName`  
+ *pstrDirName*  
  指向包含要删除的目录的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -451,7 +451,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>备注  
  使用[GetCurrentDirectory](#getcurrentdirectory)以确定服务器的当前工作目录。 不要假定该远程系统具有连接你到根目录。  
   
- `pstrDirName`参数可以是相对于当前目录的任一部分或完全限定的文件名。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `RemoveDirectory` 在使用之前，将转换为相应字符的目录名称分隔符。  
+ *PstrDirName*参数可以是相对于当前目录的任一部分或完全限定的文件名。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `RemoveDirectory` 在使用之前，将转换为相应字符的目录名称分隔符。  
   
 ##  <a name="rename"></a>  CFtpConnection::Rename  
  调用此成员函数以重命名已连接的服务器上的指定的文件。  
@@ -463,17 +463,17 @@ BOOL Rename(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrExisting`  
+ *pstrExisting*  
  指向包含要重命名的文件的当前名称的字符串的指针。  
   
- `pstrNew`  
+ *pstrNew*  
  指向包含新文件名的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
- `pstrExisting`和`pstrNew`参数可以是任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 **重命名**在使用之前将转换为相应字符的目录名称分隔符。  
+ *PstrExisting*和*pstrNew*参数可以是任一部分限定的文件名相对于当前目录或完全限定。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 **重命名**在使用之前将转换为相应字符的目录名称分隔符。  
   
 ##  <a name="setcurrentdirectory"></a>  Cftpconnection:: Setcurrentdirectory  
  调用此成员函数可更改为 FTP 服务器上的不同目录。  
@@ -483,14 +483,14 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrDirName`  
+ *pstrDirName*  
  指向包含的目录名称的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
   
 ### <a name="remarks"></a>备注  
- `pstrDirName`参数可以是相对于当前目录的任一部分或完全限定的文件名。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `SetCurrentDirectory` 在使用之前，将转换为相应字符的目录名称分隔符。  
+ *PstrDirName*参数可以是相对于当前目录的任一部分或完全限定的文件名。 反斜杠 (\\) 或正斜杠 （/） 可用作其中任一名称的目录分隔符。 `SetCurrentDirectory` 在使用之前，将转换为相应字符的目录名称分隔符。  
   
  使用[GetCurrentDirectory](#getcurrentdirectory)以确定 FTP 服务器的当前工作目录。 不要假定该远程系统具有连接你到根目录。  
   

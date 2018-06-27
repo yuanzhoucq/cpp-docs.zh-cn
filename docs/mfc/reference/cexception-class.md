@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368028"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951704"
 ---
 # <a name="cexception-class"></a>CException 类
 Microsoft 基础类库中所有异常的基类。  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>参数  
  *b_AutoDelete*  
- 指定**TRUE**如果的内存`CException`在堆中分配对象。 这将导致`CException`时删除的对象**删除**调用成员函数删除异常。 指定**FALSE**如果`CException`对象位于堆栈，或者是一个全局对象。 在这种情况下，`CException`对象不会删除时**删除**调用成员函数。  
+ 指定**TRUE**如果的内存`CException`在堆中分配对象。 这将导致`CException`时删除的对象`Delete`调用成员函数删除异常。 指定**FALSE**如果`CException`对象位于堆栈，或者是一个全局对象。 在这种情况下，`CException`对象不会删除时`Delete`调用成员函数。  
   
 ### <a name="remarks"></a>备注  
  你将通常无需直接调用此构造函数。 引发异常的函数应创建的实例`CException`-派生类并调用其构造函数，或它应使用的 MFC 如引发函数， [AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 引发的预定义的类型。 仅出于完整性的考虑提供此文档。  
   
 ##  <a name="delete"></a>  CException::Delete  
- 此函数将检查以查看**CException**对象在堆上创建的如果是这样，它调用**删除**对象上的运算符。  
+ 此函数将检查以查看`CException`对象在堆上创建的如果是这样，它调用**删除**对象上的运算符。  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>备注  
- 删除时**CException**对象，请使用**删除**成员函数删除异常。 不要使用**删除**运算符直接，因为`CException`对象可能全局对象，或者已在堆栈上创建。  
+ 删除时`CException`对象，请使用`Delete`成员函数删除异常。 不要使用**删除**运算符直接，因为`CException`对象可能全局对象，或者已在堆栈上创建。  
   
  你可以指定在对象构造时是否应删除对象。 有关详细信息，请参阅[CException::CException](#cexception)。  
   
- 只需调用**删除**如果你使用的 c + +**重**- **捕获**机制。 如果你使用 MFC 宏**重**和**捕获**，则这些宏将自动调用此函数。  
+ 只需调用`Delete`如果你使用的 c + +**重**- **捕获**机制。 如果你使用 MFC 宏**重**和**捕获**，则这些宏将自动调用此函数。  
   
 ### <a name="example"></a>示例  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nType`  
+ *nType*  
  指定消息框的样式。 应用的任意组合[消息框样式](styles-used-by-mfc.md#message-box-styles)在框中。 如果未指定此参数，默认值是**MB_OK**。  
   
  *nMessageID*  

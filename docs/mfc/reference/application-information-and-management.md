@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b6aa602956c6dcdeda8f6b8c24c1be48c58ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ecb761caaeabdd9b4d77f1713bd79a812a3c1a9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358477"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952480"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 当你编写应用程序时，创建单个[CWinApp](../../mfc/reference/cwinapp-class.md)-派生对象。 有时，你可能想要获取有关从外部此对象的信息`CWinApp`-派生对象。 或者，你可能需要对其他全局"管理器"对象的访问。
@@ -84,7 +84,7 @@ CWinThread* AfxBeginThread(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pfnThreadProc`  
+ *pfnThreadProc*  
  指向辅助线程的控制函数。 不能为**NULL**。 此函数必须声明如下：  
   
  `UINT __cdecl MyControllingFunction( LPVOID pParam );`  
@@ -93,22 +93,22 @@ CWinThread* AfxBeginThread(
  对象的 RUNTIME_CLASS 派生自[CWinThread](../../mfc/reference/cwinthread-class.md)。  
   
  *pParam*  
- 参数传递给控制函数，如图所示的参数中的函数声明中`pfnThreadProc`。  
+ 参数传递给控制函数，如图所示的参数中的函数声明中*pfnThreadProc*。  
   
- `nPriority`  
+ *nPriority*  
  所需的线程的优先级。 有关完整列表和说明可用的优先级，请参阅[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
   
- `nStackSize`  
+ *nStackSize*  
  以字节为单位的新线程的堆栈中指定的大小。 如果为 0，堆栈大小将默认为相同大小堆栈上为创建的线程。  
   
- `dwCreateFlags`  
+ *dwCreateFlags*  
  指定控制的线程创建一个附加标志。 此标志可以包含两个值之一：  
   
 - **CREATE_SUSPENDED**与一个挂起计数启动线程。 使用**CREATE_SUSPENDED**如果你想要初始化的任何成员数据`CWinThread`对象，如[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)或派生类中，在该线程开始运行前的任何成员。 你初始化完成后，使用[CWinThread::ResumeThread](../../mfc/reference/cwinthread-class.md#resumethread)开始运行的线程。 将才会执行线程`CWinThread::ResumeThread`调用。  
   
 - **0**创建后立即启动线程。  
   
- `lpSecurityAttrs`  
+ *lpSecurityAttrs*  
  指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定线程的安全属性。 如果**NULL**，相同的安全属性，如将使用创建的线程。 此结构的详细信息，请参阅 Windows SDK。  
   
 ### <a name="return-value"></a>返回值  
@@ -175,7 +175,7 @@ void AFXAPI AfxEndThread(
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );  
 ```
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向包含资源 ID 的字符串的指针。    
  *lpszType*  
  指向资源的类型的指针。 资源类型的列表，请参阅[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) Windows SDK 中。  
@@ -225,7 +225,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
   
  使用 `AfxLoadLibrary` 映射 DLL 模块。  
   
- 请务必使用`AfxFreeLibrary`和`AfxLoadLibrary`(而不是 Win32 函数**FreeLibrary**和**LoadLibrary**) 如果你的应用程序使用多个线程。 使用`AfxLoadLibrary`和`AfxFreeLibrary`确保在 MFC 扩展 DLL 加载和卸载不会损坏全局 MFC 状态时执行的启动和关闭代码。  
+ 请务必使用`AfxFreeLibrary`和`AfxLoadLibrary`(而不是 Win32 函数`FreeLibrary`和`LoadLibrary`) 如果你的应用程序使用多个线程。 使用`AfxLoadLibrary`和`AfxFreeLibrary`确保在 MFC 扩展 DLL 加载和卸载不会损坏全局 MFC 状态时执行的启动和关闭代码。  
   
 ### <a name="example"></a>示例  
  请参阅示例[AfxLoadLibrary](#afxloadlibrary)。  
@@ -297,12 +297,12 @@ CWnd* AFXAPI AfxGetMainWnd();
 ### <a name="return-value"></a>返回值  
  如果服务器具有在容器内处于就地活动状态的对象，并且此容器处于活动状态，此函数将返回一个指针，该指针指向包含就地活动文档的框架窗口对象。  
   
- 如果没有在容器中处于就地活动状态的对象，或者您的应用程序不是一个 OLE 服务器，则此函数仅返回您的应用程序对象的 `m_pMainWnd`。  
+ 如果没有为容器内的处于就地活动状态的对象，或者你的应用程序不是 OLE 服务器，此函数仅返回*m_pMainWnd*应用程序对象。  
   
  如果 `AfxGetMainWnd` 是从应用程序的主线程调用的，它将根据上述规则返回应用程序的主窗口。 如果该函数是从应用程序中的辅助线程调用的，它将返回与执行调用的线程关联的主窗口。  
   
 ### <a name="remarks"></a>备注  
- 如果您的应用程序不是 OLE 服务器，调用此函数相当于直接引用应用程序对象的 `m_pMainWnd` 成员。  
+ 如果你的应用程序不是 OLE 服务器，则调用此函数相当于直接引用*m_pMainWnd*应用程序对象的成员。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]  
@@ -329,7 +329,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
   **标头**afxstat_.h    
   
 ##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle  
- 使用`HINSTANCE`应用程序的资源直接访问，例如，在对 Windows 函数的调用此函数返回的句柄**FindResource**。  
+ 使用`HINSTANCE`应用程序的资源直接访问，例如，在对 Windows 函数的调用此函数返回的句柄`FindResource`。  
   
 ```   
 extern HINSTANCE  AfxGetResourceHandle(); 
@@ -406,7 +406,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向派生自 `CWnd`的对象的指针。  
    
 ### <a name="return-value"></a>返回值  
@@ -442,14 +442,14 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向派生自 `CWnd`的对象的指针。  
    
 ### <a name="return-value"></a>返回值  
  如果提供的窗口为工具栏对象，则为 `TRUE`；否则为 `FALSE`。  
    
 ### <a name="remarks"></a>备注  
- 如果 `TRUE` 派生自 `pWnd`，则此方法将返回 `CMFCToolBar`。 此方法在您必须验证函数或方法参数是否是 `CMFCToolBar` 对象时很有用。  
+ 此方法返回`TRUE`如果*pWnd*派生自`CMFCToolBar`。 此方法在您必须验证函数或方法参数是否是 `CMFCToolBar` 对象时很有用。  
    
 ### <a name="requirements"></a>要求  
  **标头：** afxpriv.h  
@@ -510,7 +510,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
   
  每个进程维护每个加载的库模块的引用计数。 此引用计数会递增每次`AfxLoadLibrary`称为，每次均递减`AfxFreeLibrary`调用。 当引用计数达到零时，将从调用进程的地址空间取消映射模块，并且句柄不再有效。  
   
- 请务必使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函数**LoadLibrary**和**FreeLibrary**) 如果你的应用程序使用多个线程，并且它动态加载 MFC扩展 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`将确保在加载和卸载 MFC 扩展 DLL 时执行的启动和关闭代码不会损坏全局 MFC 状态。  
+ 请务必使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函数`LoadLibrary`和`FreeLibrary`) 如果你的应用程序使用多个线程，并且它动态加载 MFC 扩展 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`将确保在加载和卸载 MFC 扩展 DLL 时执行的启动和关闭代码不会损坏全局 MFC 状态。  
   
  使用`AfxLoadLibrary`在应用程序需要动态链接到 MFC; 的 DLL 版本的头文件`AfxLoadLibrary`，Afxdll_.h，才包含如果 MFC 链接到应用程序为 DLL。 这是设计使然因为你必须将链接到使用或创建 MFC 扩展 Dll 的 MFC 的 DLL 版本的不同而不同。  
   
@@ -567,7 +567,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="remarks"></a>备注  
  如果使用此函数，则将在卸载 DLL 时自动取消注册类。  
   
- 在非 DLL 版本中，`AfxRegisterClass`标识符定义为宏映射到 Windows 函数**RegisterClass**，因为在应用程序中注册的类会自动注销。 如果你使用`AfxRegisterClass`而不是**RegisterClass**，而无需在应用程序和 DLL 中进行更改，可以使用你的代码。  
+ 在非 DLL 版本中，`AfxRegisterClass`标识符定义为宏映射到 Windows 函数`RegisterClass`，因为在应用程序中注册的类会自动注销。 如果你使用`AfxRegisterClass`而不是`RegisterClass`，而无需在应用程序和 DLL 中进行更改，可以使用你的代码。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]  
@@ -598,17 +598,17 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 -   将图标设置为标准的 Windows 徽标图标（飘扬的旗帜）。  
   
- `hCursor`  
+ *hCursor*  
  指定要在从窗口类创建的每个窗口中安装的光标资源的句柄。 如果你使用的默认**0**，您将获得标准**IDC_ARROW**光标。  
   
  *hbrBackground*  
  指定要在从窗口类创建的每个窗口中安装的画笔资源的句柄。 如果你使用的默认**0**，必须将**NULL**背景画笔，并且您的窗口将，默认情况下，不会擦除其背景处理时[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)。  
   
- `hIcon`  
+ *任务栏*  
  指定要在从窗口类创建的每个窗口中安装的图标资源的句柄。 如果你使用的默认**0**，您将获得标准的、 飘扬标志 Windows 徽标图标。  
   
 ### <a name="return-value"></a>返回值  
- 包含类名的以 null 结尾的字符串。 你可以将传递到此类名称**创建**成员函数在`CWnd`或其他**CWnd-** 派生类，以创建窗口。 该名称由 Microsoft 基础类库生成。  
+ 包含类名的以 null 结尾的字符串。 你可以将传递到此类名称`Create`成员函数在`CWnd`或其他**CWnd-** 派生类，以创建窗口。 该名称由 Microsoft 基础类库生成。  
   
 > [!NOTE]
 >  返回值是指向静态缓冲区的指针。 若要保存此字符串，请将其分配到 `CString` 变量。  
@@ -636,7 +636,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 指示注册表信息将定向至**HKCU**节点;`FALSE`指示，则应用程序将注册表信息写入默认节点。 默认节点为**HKEY_CLASSES_ROOT** ( **HKCR**)。  
   
 ### <a name="remarks"></a>备注  
@@ -660,7 +660,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hInstResource`  
+ *hInstResource*  
  从中加载应用程序的资源的 .EXE 或 .DLL 文件的实例或模块句柄。  
   
 ### <a name="example"></a>示例  
@@ -691,8 +691,8 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpwsaData`  
- 指向的指针[WSADATA](../../mfc/reference/wsadata-structure.md)结构。 如果 `lpwsaData` 不等于 `NULL`，则通过调用 `WSADATA` 填充 `WSAStartup` 结构的地址。 此函数还确保在应用程序终止前为您调用 `WSACleanup`。  
+ *lpwsaData*  
+ 指向的指针[WSADATA](../../mfc/reference/wsadata-structure.md)结构。 如果*lpwsaData*是否不等于`NULL`，然后的地址`WSADATA`结构填充通过调用`WSAStartup`。 此函数还确保在应用程序终止前为您调用 `WSACleanup`。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则为非 0；否则为 0。  
@@ -730,16 +730,16 @@ BOOL AFXAPI AfxWinInit(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hInstance`  
+ *hInstance*  
  当前正在运行的模块的句柄。  
   
  *hPrevInstance*  
  应用程序的上一个实例句柄。 对于基于 Win32 的应用程序，此参数始终是**NULL**。  
   
- `lpCmdLine`  
+ *lpCmdLine*  
  指向以 null 结尾的字符串指定命令行应用程序。  
   
- `nCmdShow`  
+ *nCmdShow*  
  指定将如何显示 GUI 应用程序的主窗口。  
   
 ### <a name="remarks"></a>备注  

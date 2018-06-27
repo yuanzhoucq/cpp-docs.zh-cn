@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350987"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957086"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 类
 实现回调，它在动画变量值更改时由动画 API 调用。  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>参数  
- `storyboard`  
+ *情节提要*  
  具有动画效果变量情节提要。  
   
- `variable`  
+ *变量*  
  已更新动画变量。  
   
- `newValue`  
+ *newValue*  
  新值。  
   
- `previousValue`  
+ *previousValue*  
  以前的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
 ## <a name="see-also"></a>请参阅  

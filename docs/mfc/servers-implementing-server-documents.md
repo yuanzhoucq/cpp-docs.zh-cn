@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380271"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950823"
 ---
 # <a name="servers-implementing-server-documents"></a>服务器：实现服务器文档
 此文章介绍了您必须执行以便成功实现服务器文档，如果你未在应用程序向导中指定的 OLE 服务器选项的步骤。  
   
 #### <a name="to-define-a-server-document-class"></a>若要定义服务器文档类  
   
-1.  派生您的文档类从`COleServerDoc`而不是**CDocument**。  
+1.  从 `COleServerDoc` 而不是 `CDocument` 派生您的文档类。  
   
 2.  创建派生自某个服务器项类`COleServerItem`。  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383170"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952032"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023：标准 MFC 资源
 此注释将介绍 MFC 库随附的和需要的标准资源。  
@@ -45,7 +45,7 @@ ms.locfileid: "33383170"
   
 -   Indicate.rc：包含状态栏键状态指示符（如用于大写锁定的“CAP”）的字符串资源。  
   
--   Prompts.rc：包含每个预定义命令的菜单提示字符串资源，如 `ID_FILE_NEW` 的“创建新文档”。  
+-   Prompts.rc： 包含 ID_FILE_NEW 为每个预定义的命令，如"创建新文档"的菜单提示字符串资源。  
   
 -   Commdlg.rc：包含标准 COMMDLG 对话框模板的与 Visual C++ 兼容的 .rc 文件。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33383170"
 >  注意不要无意中将资源永久性移出 Common.rc。 如果在拖动资源时按住 Ctrl 键，您将创建一个副本。 如果在拖动时不按住 Ctrl，则会移动资源。 如果担心可能意外对 Common.rc 文件进行更改，当系统询问是否保存对 Common.rc 的更改时，请单击“否”。  
   
 > [!NOTE]
->  .rc 资源文件包含一个特殊的 `TEXTINCLUDE` 资源，它将阻止您意外地在标准 .rc 文件的基础上进行保存。  
+>  .Rc 资源文件中，将阻止您意外地保存在标准.rc 文件之上都有特殊 TEXTINCLUDE 资源。  
   
 ### <a name="customizing-standard-framework-resources"></a>自定义标准框架资源  
  通常通过在应用程序的资源文件中使用 #include 命令将标准框架资源包含在应用程序中。 AppWizard 将生成一个资源文件。 此文件包含相应的标准框架资源，具体取决于您选择的 AppWizard 选项。 您可以通过更改编译时指令来评审、添加或删除包含的资源。 若要执行此操作，打开**资源**菜单，然后选择**设置包括**。 查看“编译时指令”编辑项。 例如：  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384945"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955717"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021：命令和消息传送
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384945"
  请参阅 Visual c + + 有关此处所述的体系结构的常规详细信息尤其是 Windows 消息、 控件通知和命令之间的差异。 本说明假定你非常熟悉打印文档中所述的问题，并仅解决非常高级的主题。  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>命令传送和调度 MFC 1.0 功能发展到 MFC 2.0 体系结构  
- Windows 具有**WM_COMMAND**重载以提供的菜单命令、 快捷键和对话框控件通知的通知的消息。  
+ Windows 已重载以提供的菜单命令、 快捷键和对话框控件通知的通知的 WM_COMMAND 消息。  
   
- MFC 1.0 内置上稍有允许命令处理程序 (例如，"OnFileNew")，从而**CWnd**派生类来获取调用以响应特定**WM_COMMAND**。 这与调用消息映射的数据结构一起粘附并导致空间非常高效命令机制中。  
+ MFC 1.0 内置上稍有允许命令处理程序 (例如，"OnFileNew")，从而`CWnd`派生类来获取调用以响应特定 WM_COMMAND。 这与调用消息映射的数据结构一起粘附并导致空间非常高效命令机制中。  
   
- MFC 1.0 还提供其他功能来分隔从命令消息的控件通知。 命令表示的 16 位 ID，有时称为一个命令 id。 从正常启动命令**CFrameWnd** （即菜单中选择或已翻译的快捷键），并获取路由到各种其他窗口。  
+ MFC 1.0 还提供其他功能来分隔从命令消息的控件通知。 命令表示的 16 位 ID，有时称为一个命令 id。 从正常启动命令`CFrameWnd`（即菜单中选择或已翻译的快捷键），并获取路由到各种其他窗口。  
   
  MFC 1.0 使用的有限的意义上实现多文档界面 (MDI) 中的命令路由。 （MDI 框架窗口的委托到其活动的 MDI 子窗口的命令）。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384945"
   
 -   可能是在用于创建工具栏的 ID 数组。  
   
--   在**ON_COMMAND**宏。  
+-   在一个 ON_COMMAND 宏。  
   
--   可能在**ON_UPDATE_COMMAND_UI**宏。  
+-   可能在 ON_UPDATE_COMMAND_UI 宏。  
   
  当前，需要命令 Id 的 MFC 中唯一的实现是 > = 0x8000 是 GOSUB 对话框/命令的实现。  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384945"
   
  你可以将常规按钮放在与设置为相应的命令 id。 该按钮的 IDC 正常模式对话框 当用户选择按钮时，对话框 （通常主框架窗口） 的所有者将获取就像任何其他命令的命令。 这被称为 GOSUB 命令，因为它通常用于显示其他对话框 (第一个对话框 GOSUB)。  
   
- 你还可以调用该函数**CWnd::UpdateDialogControls**上你的对话框并将其传递的主框架窗口的地址。 此函数将启用或禁用对话框控件基于是否帧中具有命令处理程序。 调用此函数可自动为你的应用程序的空闲循环中的控件条，但你必须调用它直接为你想让此功能的正常对话框。  
+ 你还可以调用该函数`CWnd::UpdateDialogControls`上你的对话框并将其传递的主框架窗口的地址。 此函数将启用或禁用对话框控件基于是否帧中具有命令处理程序。 调用此函数可自动为你的应用程序的空闲循环中的控件条，但你必须调用它直接为你想让此功能的正常对话框。  
   
 ## <a name="when-onupdatecommandui-is-called"></a>当调用 ON_UPDATE_COMMAND_UI  
- 维护程序的所有菜单项的启用检查状态的时间可能是计算开销很大的问题。 一种常用技术是启用/检查菜单项仅当用户选择弹出窗口时。 MFC 2.0 实现**CFrameWnd**句柄**WM_INITMENUPOPUP**消息并使用命令路由体系结构来确定通过菜单的状态**ON_UPDATE_COMMAND_UI**处理程序。  
+ 维护程序的所有菜单项的启用检查状态的时间可能是计算开销很大的问题。 一种常用技术是启用/检查菜单项仅当用户选择弹出窗口时。 MFC 2.0 实现`CFrameWnd`处理 WM_INITMENUPOPUP 消息并使用命令路由体系结构来确定通过 ON_UPDATE_COMMAND_UI 处理程序的菜单的状态。  
   
- **CFrameWnd**还可以处理**WM_ENTERIDLE**要说明当前选择 （也称为消息行） 的状态栏上的项的菜单的消息。  
+ `CFrameWnd` 此外可以处理 WM_ENTERIDLE 消息来描述当前选择 （也称为消息行） 的状态栏上的项的菜单。  
   
- 应用程序的菜单结构，由 Visual c + + 中，编辑用于表示可用的潜在命令**WM_INITMENUPOPUP**时间。 **ON_UPDATE_COMMAND_UI**处理程序可以修改的状态或文本的菜单上，或者为高级 （如文件 MRU 列表或 OLE 谓词弹出菜单），使用实际修改之前的菜单结构绘制菜单。  
+ 应用程序的菜单结构，由 Visual c + + 中，编辑用于表示在 WM_INITMENUPOPUP 时可用的潜在命令。 ON_UPDATE_COMMAND_UI 处理程序可修改的状态或文本的菜单上，或有关 （如文件 MRU 列表或 OLE 谓词弹出菜单） 的高级用法，实际修改菜单结构绘制菜单之前。  
   
- 某种程度上相同**ON_UPDATE_COMMAND_UI**对工具栏 （和其他控件栏） 执行处理应用程序在进入其空闲循环。 请参阅*类库参考*和[技术说明 31](../mfc/tn031-control-bars.md)的控件条的详细信息。  
+ ON_UPDATE_COMMAND_UI 处理相同排序出于工具栏 （和其他控件栏） 在应用程序进入其空闲循环。 请参阅*类库参考*和[技术说明 31](../mfc/tn031-control-bars.md)的控件条的详细信息。  
   
 ## <a name="nested-pop-up-menus"></a>嵌套的弹出菜单  
- 如果使用嵌套的菜单结构，您将注意到， **ON_UPDATE_COMMAND_UI**在两个不同的情况下调用第一个弹出菜单中的菜单项的处理程序。  
+ 如果使用嵌套的菜单结构，你将注意到，在两个不同的情况下调用的 ON_UPDATE_COMMAND_UI 处理程序中的弹出菜单的第一个菜单项。  
   
- 首先，为调用弹出菜单。 这是必需的因为弹出菜单没有 Id，我们使用弹出菜单的第一菜单项的 ID 来引用整个弹出菜单。 在这种情况下， **m_pSubMenu**成员变量**CCmdUI**对象将为非 NULL，并且将指向弹出菜单。  
+ 首先，为调用弹出菜单。 这是必需的因为弹出菜单没有 Id，我们使用弹出菜单的第一菜单项的 ID 来引用整个弹出菜单。 在这种情况下， *m_pSubMenu*成员变量`CCmdUI`对象将为非 NULL，并且将指向弹出菜单。  
   
- 其次，它之前调用的弹出菜单中的菜单项是要绘制。 在这种情况下，ID 是指只是第一个菜单项和**m_pSubMenu**成员变量**CCmdUI**对象将为 NULL。  
+ 其次，它之前调用的弹出菜单中的菜单项是要绘制。 在这种情况下，ID 是指只是第一个菜单项和*m_pSubMenu*成员变量`CCmdUI`对象将为 NULL。  
   
  这允许你启用弹出菜单不同于其菜单项，但需要你编写一些菜单注意代码。 例如，在具有以下结构的嵌套菜单：  
   

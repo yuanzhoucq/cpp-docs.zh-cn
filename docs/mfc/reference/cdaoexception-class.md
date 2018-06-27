@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369211"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952393"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 表示由基于数据访问对象 (DAO) 的 MFC 数据库类引起的异常条件。  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  数据库引擎错误集合，按索引查找中的错误信息的索引。  
   
 ### <a name="remarks"></a>备注  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |CDaoErrorInfo 成员|信息|含义|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|错误代码|DAO 错误代码|  
+|`m_lErrorCode`|错误代码|DAO 错误代码|  
 |`m_strSource`|源|最初生成错误的应用程序的对象的名称|  
 |`m_strDescription`|描述|与错误关联的描述性字符串|  
 |`m_strHelpFile`|帮助文件|用户可以在其中获取有关问题的信息 Windows 帮助的文件的路径|  
-|**m_lHelpContext**|帮助上下文|DAO 帮助文件中主题的上下文 ID|  
+|`m_lHelpContext`|帮助上下文|DAO 帮助文件中主题的上下文 ID|  
   
  有关完整详细信息中包含的信息`CDaoErrorInfo`对象，请参阅[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)结构。  
   

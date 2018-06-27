@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379978"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951212"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>设置对话框的背景色
-您可以通过处理对话框窗口的 `WM_CTLCOLOR` 消息来设置对话框的背景色。 您设置的颜色仅用于指定的对话框。  
+可以通过处理对话框窗口的 WM_CTLCOLOR 消息设置你的对话框的背景色。 您设置的颜色仅用于指定的对话框。  
   
 ## <a name="see-also"></a>请参阅  
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)   

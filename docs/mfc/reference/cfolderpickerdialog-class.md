@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366416"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956511"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 类
 CFolderPickerDialog 类实现文件夹选取器模式下的 CFileDialog。  
@@ -75,16 +75,16 @@ explicit CFolderPickerDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFolder`  
+ *lpszFolder*  
  初始文件夹。  
   
- `dwFlags`  
+ *dwFlags*  
  允许您自定义对话框中的一个或多个标志的组合。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向对话框对象的父级或所有者窗口的指针。  
   
- `dwSize`  
+ *dwSize*  
  OPENFILENAME 结构的大小。  
   
 ### <a name="remarks"></a>备注  

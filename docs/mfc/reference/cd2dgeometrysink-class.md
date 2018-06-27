@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355280"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952367"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 类
 ID2D1GeometrySink 包装器。  
@@ -100,7 +100,7 @@ class CD2DGeometrySink;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|指向 ID2D1GeometrySink 的指针。|  
   
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `arc`  
+ *弧线*  
  圆弧线段将添加到图  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bezier`  
+ *贝塞尔曲线*  
  描述的控点和的贝塞尔曲线，若要添加的终结点的结构。  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>参数  
- `beziers`  
+ *贝塞尔曲线*  
  描述要创建的贝塞尔曲线的贝塞尔曲线段数组。 从几何图形接收器当前点 （绘制的最后一段或由 BeginFigure 指定的位置的终结点） 绘制曲线将指向数组中的第一个贝塞尔段的结束点。 如果数组包含其他贝塞尔段，每个后续的贝塞尔段将使用前面的贝塞尔段的结束点作为其起点。  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  要绘制的行的终结点。  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>参数  
- `points`  
+ *点*  
  描述要绘制的线条的一个或多个点的数组。 从几何图形接收器当前点 （绘制的最后一段或由 BeginFigure 指定的位置的终结点） 到数组中的第一个点绘制线条。 如果数组包含额外的点，线是从第一个点绘制到数组中从第三个点，依次类推的第二个点的第二个点。 要绘制的线条终结点的序列的数组。  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bezier`  
+ *贝塞尔曲线*  
  描述控点和二次的贝塞尔曲线，若要添加终结点的结构。  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>参数  
- `beziers`  
+ *贝塞尔曲线*  
  二次贝塞尔线段序列的数组。  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>参数  
- `startPoint`  
+ *startPoint*  
  在此处开始新图的点。  
   
- `figureBegin`  
+ *figureBegin*  
  是否新图应空心或填充。  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pathGeometry`  
+ *pathGeometry*  
  现有 CD2DPathGeometry 对象。  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `figureEnd`  
+ *figureEnd*  
  一个值，该值指示是否关闭当前的图。 如果已关闭图，当前点和由 BeginFigure 指定的起始点之间绘制线条。  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fillMode`  
+ *fillMode*  
  用于确定给定的点是否为的几何图形的一部分的方法。  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>参数  
- `vertexFlags`  
+ *vertexFlags*  
  要应用于新段添加到几何图形接收器的笔画和联接选项。  
   
 ## <a name="see-also"></a>请参阅  

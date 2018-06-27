@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355455"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951411"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 类
 实现异步传输并在内存文件中缓冲的 OLE 控件属性。  
@@ -53,7 +53,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="remarks"></a>备注  
  内存文件存储在 RAM 中，而不是在磁盘上，并可用于快速临时传输。  
   
- 连同**CAysncMonikerFile**和`CDataPathProperty`，`CCachedDataPathProperty`异步名字对象中 OLE 控件用于提供功能。 与`CCachedDataPathProperty`对象，你将能够从 URL 或文件的源以异步方式传输数据，并将其存储在内存文件通过`m_Cache`公共变量。 所有数据都存储在内存文件中，并且没有无需重写[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)除非你想要观看通知并做出响应。 例如，如果要传输较大。GIF 文件并想要更多的数据已到达，它应重绘自己，通知你的控件重写`OnDataAvailable`进行通知。  
+ 连同`CAysncMonikerFile`和`CDataPathProperty`，`CCachedDataPathProperty`异步名字对象中 OLE 控件用于提供功能。 与`CCachedDataPathProperty`对象，你将能够从 URL 或文件的源以异步方式传输数据，并将其存储在内存文件通过`m_Cache`公共变量。 所有数据都存储在内存文件中，并且没有无需重写[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)除非你想要观看通知并做出响应。 例如，如果要传输较大。GIF 文件并想要更多的数据已到达，它应重绘自己，通知你的控件重写`OnDataAvailable`进行通知。  
   
  类`CCachedDataPathProperty`派生自`CDataPathProperty`。  
   
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pControl`  
+ *pControl*  
  指向要与此关联的 ActiveX 控件对象的指针`CCachedDataPathProperty`对象。  
   
- `lpszPath`  
+ *lpszPath*  
  路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CCachedDataPathProperty` 使用 Url，不是文件名。 如果你想`CCachedDataPathProperty`对象文件中，前面预置 file:// 到路径。  
   
 ### <a name="remarks"></a>备注  
- `COleControl`指向对象`pControl`由[打开](../../mfc/reference/cdatapathproperty-class.md#open)和检索由派生类。 如果`pControl`是**NULL**，与所使用的控件**打开**应与设置[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果`lpszPath`是**NULL**，可以在路径中，通过传递**打开**或将其与设置[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
+ `COleControl`指向对象*pControl*由[打开](../../mfc/reference/cdatapathproperty-class.md#open)和检索由派生类。 如果*pControl*是**NULL**，与所使用的控件`Open`应与设置[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果*lpszPath*是**NULL**，可以在路径中，通过传递`Open`或将其与设置[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  包含在其中缓存数据的内存文件的类名称。  

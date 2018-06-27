@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358194"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956562"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 类
 提供 Windows 检查表框功能。  
@@ -82,7 +82,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox` 是仅为所有者描述的控件，因为列表包含多个文本字符串。 简单地说，检查表框包含文本字符串和复选框，但不是需要有文本。 例如，你可以每个项旁边的复选框的小位图的列表。  
   
- 若要创建你自己的检查表框，必须派生您自己的类从`CCheckListBox`。 若要派生您自己的类，编写为派生的类构造函数，然后调用**创建**。  
+ 若要创建你自己的检查表框，必须派生您自己的类从`CCheckListBox`。 若要派生您自己的类，编写为派生的类构造函数，然后调用`Create`。  
   
  如果你想要处理 Windows 通知消息发送到其父列表框 (通常从派生的类[CDialog](../../mfc/reference/cdialog-class.md))，将消息映射条目和消息处理程序成员函数添加到每条消息的父类。  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **afx_msg** `void` `memberFxn` **（);**  
   
- 没有专门针对有关只有一个消息映射条目**CCheckListBox** (但另请参阅的消息映射项[CListBox](../../mfc/reference/clistbox-class.md)):  
+ 没有专门针对有关只有一个消息映射条目`CCheckListBox`(但另请参阅的消息映射项[CListBox](../../mfc/reference/clistbox-class.md)):  
   
 - **ON_CLBN_CHKCHANGE**用户已更改的状态的项的复选框。  
   
@@ -126,7 +126,7 @@ CCheckListBox();
 ```  
   
 ### <a name="remarks"></a>备注  
- 构造`CCheckListBox`两个步骤中的对象。 首先定义派生自的类`CCheckListBox`，然后调用**创建**，其中初始化 Windows 检查表框并将其附加到`CCheckListBox`对象。  
+ 构造`CCheckListBox`两个步骤中的对象。 首先定义派生自的类`CCheckListBox`，然后调用`Create`，其中初始化 Windows 检查表框并将其附加到`CCheckListBox`对象。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定的检查表框的样式。 样式必须是**LBS_HASSTRINGS**和任一**LBS_OWNERDRAWFIXED** （列表中的所有项都均为同一高度） 或**LBS_OWNERDRAWVARIABLE** （列表中的项都属于不同的高度）。 可以与其他组合此样式[列表框样式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)除**LBS_USETABSTOPS**。  
   
- `rect`  
+ *rect*  
  指定的检查表框大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定检查表框的父窗口 (通常`CDialog`对象)。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定检查表框的控件 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CCheckListBox`两个步骤中的对象。 首先，定义派生自的类**CcheckListBox** ，然后调用**创建**，其中初始化 Windows 检查表框并将其附加到`CCheckListBox`。 请参阅[CCheckListBox::CCheckListBox](#cchecklistbox)有关的示例。  
+ 构造`CCheckListBox`两个步骤中的对象。 首先，定义派生自的类`CcheckListBox`，然后调用`Create`，其中初始化 Windows 检查表框并将其附加到`CCheckListBox`。 请参阅[CCheckListBox::CCheckListBox](#cchecklistbox)有关的示例。  
   
- 当**创建**执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)到该清单框控件的消息。  
+ 当`Create`执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)用于检查列表框控件的消息。  
   
  默认情况下，通过处理这些消息的消息[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数在`CWnd`基类。 若要扩展的默认消息处理，添加消息映射到你的派生的类和重写前面的消息处理程序成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
   
@@ -189,7 +189,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的长指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关所需的绘图的类型的信息。  
   
 ### <a name="remarks"></a>备注  
@@ -197,9 +197,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  默认情况下，此函数绘制包含的字符串每个与左侧的默认大小复选框列表的默认复选框列表。 复选框列表的大小是之一中指定[创建](#create)。  
   
- 重写该成员函数以实现的不是默认值，如清单框不是字符串的列表、 高度可变的项，或不在左侧的复选框的所有者描述清单框的绘制。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前的此成员函数终止。  
+ 重写该成员函数以实现的不是默认值，如清单框不是字符串的列表、 高度可变的项，或不在左侧的复选框的所有者描述清单框的绘制。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象*lpDrawItemStruct*之前的此成员函数终止。  
   
- 清单框项不是高度相同，如果清单框样式 (中指定**创建**) 必须是**LBS_OWNERVARIABLE**，且必须重写[MeasureItem](#measureitem)函数。  
+ 清单框项不是高度相同，如果清单框样式 (中指定`Create`) 必须是**LBS_OWNERVARIABLE**，且必须重写[MeasureItem](#measureitem)函数。  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  调用此函数可启用或禁用检查列表框项。  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要启用的清单框项的索引。  
   
- `bEnabled`  
+ *bEnabled*  
  指定项是启用还是禁用。  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,13 +225,13 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  一个复选框，列表框中包含的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  指定的复选框的状态。 下表列出可能的值。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`BST_CHECKED`|选中复选框。|  
 |`BST_UNCHECKED`|未选中复选框。|  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  项的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -272,7 +272,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
@@ -291,7 +291,7 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  位置和大小的列表项。  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  默认位置和大小的项的复选框。  
   
 ### <a name="return-value"></a>返回值  
@@ -310,16 +310,16 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  一个复选框，列表框中包含的从零开始索引。  
   
- `nCheck`  
+ *n 检查*  
  指定的复选框按钮状态。 请参阅备注部分有关可能的值。  
   
 ### <a name="remarks"></a>备注  
- 下表列出可能值`nCheck`参数。  
+ 下表列出可能值*n 检查*参数。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**BST_CHECKED**|选择指定的复选框。|  
 |**BST_UNCHECKED**|清除指定的复选框。|  
@@ -333,7 +333,7 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStyle`  
+ *nStyle*  
  确定在清单中的复选框的样式。  
   
 ### <a name="remarks"></a>备注  

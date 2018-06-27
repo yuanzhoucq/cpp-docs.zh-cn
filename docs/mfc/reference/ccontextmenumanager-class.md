@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb3bb0d96723f14f6dec56853d52860f0568c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9407c98183fa923a58ca2939e8c534cd56dc8ef7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357710"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954616"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 类
 `CContextMenuManager`对象管理快捷菜单，也称为上下文菜单。  
@@ -115,20 +115,20 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiMenuNameResId`  
+ [in]*uiMenuNameResId*  
  包含新菜单的名称的字符串资源 ID。  
   
- [in] `uiMenuResId`  
+ [in]*uiMenuResId*  
  菜单资源 id。  
   
- [in] `lpszName`  
+ [in]*lpszName*  
  一个字符串，包含新菜单的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零如果该方法将失败，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果此方法将失败`uiMenuResId`无效或具有相同名称的另一个菜单如果已处于`CContextMenuManager`。  
+ 如果此方法将失败*uiMenuResId*无效或具有相同名称的另一个菜单如果已处于`CContextMenuManager`。  
   
 ##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
  构造[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)对象。  
@@ -148,7 +148,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nMenuResId`  
+ [in]*nMenuResId*  
  菜单资源 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -164,17 +164,17 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszName`  
+ [in]*lpszName*  
  包含要检索的菜单的名称的字符串。  
   
- [out] `puiOrigResID`  
+ [out]*puiOrigResID*  
  一个指向 `UINT` 的指针。 此参数包含指定的菜单中，资源 ID，如果找到。  
   
 ### <a name="return-value"></a>返回值  
- 指定的名称相匹配的菜单的句柄`lpszName`。 `NULL` 如果没有调用任何菜单`lpszName`。  
+ 指定的名称相匹配的菜单的句柄*lpszName*。 `NULL` 如果没有调用任何菜单*lpszName*。  
   
 ### <a name="remarks"></a>备注  
- 如果此方法查找匹配的菜单`lpszName`，`GetMenuByName`参数中存储的菜单资源 ID `puiOrigResID`。  
+ 如果此方法查找匹配的菜单*lpszName*，`GetMenuByName`参数中存储的菜单资源 ID *puiOrigResID*。  
   
 ##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
  返回的列表添加到的菜单名[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)。  
@@ -184,7 +184,7 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `listOfNames`  
+ [out]*listOfNames*  
  对引用[CStringList](../../mfc/reference/cstringlist-class.md)参数。 此方法将写入此参数的菜单名称的列表。  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
@@ -195,14 +195,14 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  包含的注册表项的相对路径的字符串。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `lpszProfileName`参数不是注册表项的绝对路径。 它是添加到你的应用程序的默认注册表项的末尾的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)分别。  
+ *LpszProfileName*参数不是注册表项的绝对路径。 它是添加到你的应用程序的默认注册表项的末尾的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)分别。  
   
  使用方法[CContextMenuManager::SaveState](#savestate)将保存到注册表的快捷菜单。  
   
@@ -227,14 +227,14 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  包含的注册表项的相对路径的字符串。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则非零否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `lpszProfileName`参数不是注册表项的绝对路径。 它是添加到你的应用程序的默认注册表项的末尾的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)分别。  
+ *LpszProfileName*参数不是注册表项的绝对路径。 它是添加到你的应用程序的默认注册表项的末尾的相对路径。 若要获取或设置默认的注册表项，使用方法[CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase)和[CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase)分别。  
   
  使用方法[CContextMenuManager::LoadState](#loadstate)从注册表加载的快捷菜单。  
   
@@ -246,7 +246,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  一个布尔型参数，用于控制是否关闭活动的弹出菜单。 值为`TRUE`指示活动的弹出菜单未关闭。 `FALSE` 指示活动的弹出菜单已关闭。  
   
 ### <a name="remarks"></a>备注  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiMenuResId`  
+ [in]*uiMenuResId*  
  此方法将显示的菜单资源 ID。  
   
- [in] `x`  
+ [in]*x*  
  水平偏移量在工作区坐标的快捷菜单。  
   
- [in] `y`  
+ [in]*y*  
  在工作区坐标的快捷菜单垂直偏移量  
   
- [in] `pWndOwner`  
+ [in]*pWndOwner*  
  指向的快捷菜单的父窗口的指针。  
   
- [in] `bOwnMessage`  
- 一个布尔型参数，该值指示如何路由消息。 如果`bOwnMessage`是`FALSE`，使用标准 MFC 路由。 否则为`pWndOwner`接收的消息。  
+ [in]*bOwnMessage*  
+ 一个布尔型参数，该值指示如何路由消息。 如果*bOwnMessage*是`FALSE`，使用标准 MFC 路由。 否则为*pWndOwner*接收的消息。  
   
- [in] `hmenuPopup`  
+ [in]*hmenuPopup*  
  此方法将显示的菜单的句柄。  
   
- [in] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
  一个布尔型参数，该值指示是否将自动销毁菜单。  
   
- [in] `bRightAlign`  
- 一个布尔型参数，该值指示菜单项的对齐方式。 如果`bRightAlign`是`TRUE`，菜单是右对齐的右到左阅读顺序。  
+ [in]*bRightAlign*  
+ 一个布尔型参数，该值指示菜单项的对齐方式。 如果*bRightAlign*是`TRUE`，菜单是右对齐的右到左阅读顺序。  
   
 ### <a name="return-value"></a>返回值  
  第一个方法重载返回非零，如果方法成功，则显示的菜单否则为 0。 第二个方法重载返回指向的指针[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)快捷菜单会显示正确; 否则为如果`NULL`。  
@@ -306,7 +306,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="remarks"></a>备注  
  此方法类似于方法[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)在于这两种方法显示的快捷菜单。 但是，`TrackPopupMenu`返回所选的菜单命令的索引。  
   
- 如果参数`bAutoDestroy`是`FALSE`，你必须手动调用继承`DestroyMenu`方法来释放内存资源。 默认实现`ShowPopupMenu`不使用参数`bAutoDestroy`。 它提供供将来使用或自定义的类派生自`CContextMenuManager`类。  
+ 如果参数*bAutoDestroy*是`FALSE`，你必须手动调用继承`DestroyMenu`方法来释放内存资源。 默认实现`ShowPopupMenu`不使用参数*bAutoDestroy*。 它提供供将来使用或自定义的类派生自`CContextMenuManager`类。  
   
 ##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  显示指定的快捷菜单，并返回所选的快捷方式菜单命令的索引。  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hmenuPopup`  
+ [in]*hmenuPopup*  
  此方法会显示的快捷菜单的句柄。  
   
- [in] `x`  
+ [in]*x*  
  水平偏移量在工作区坐标的快捷菜单。  
   
- [in] `y`  
+ [in]*y*  
  垂直偏移量在工作区坐标的快捷菜单。  
   
- [in] `pWndOwner`  
+ [in]*pWndOwner*  
  指向的快捷菜单的父窗口的指针。  
   
- [in] `bRightAlign`  
- 一个布尔型参数，该值指示菜单项的对齐方式。 如果`bRightAlign`是`TRUE`，菜单是右对齐的右到左阅读顺序。 如果`bRightAlign`是`FALSE`，菜单是左对齐的从左到右阅读顺序。  
+ [in]*bRightAlign*  
+ 一个布尔型参数，该值指示菜单项的对齐方式。 如果*bRightAlign*是`TRUE`，菜单是右对齐的右到左阅读顺序。 如果*bRightAlign*是`FALSE`，菜单是左对齐的从左到右阅读顺序。  
   
 ### <a name="return-value"></a>返回值  
  用户选择; 命令的菜单命令 ID如果用户关闭而不选择菜单命令的快捷菜单，则为 0。  

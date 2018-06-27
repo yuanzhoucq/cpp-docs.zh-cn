@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255764"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955240"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于文件打开或保存操作的文件的公共对话框。  
@@ -248,7 +248,7 @@ class CFileDialog : public CCommonDialog
   
  你可以使用`CFileDialog`按原样提供，构造函数，或可以派生从你自己对话框类`CFileDialog`和写入以满足你需求的构造函数。 在任一情况下，这些对话框将行为类似于标准 MFC 对话框因为它们都派生自[CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)。 `CFileDialog` 依赖于 COMMDLG。Windows 中包含的 DLL 文件。  
   
- 外观和功能`CFileDialog`与 Windows Vista 或更高版本不同于早期版本的 Windows。 默认值`CFileDialog`会自动使用新的 Windows Vista 或更高版本的样式，而不进行代码更改，如果程序是已编译和运行 Windows Vista 或更高版本。 使用`bVistaStyle`构造函数来手动重写此自动更新中的参数。 自动更新的例外是自定义的对话框。 它们将不能转换为的新样式。 有关构造函数的详细信息，请参阅[CFileDialog::CFileDialog](#cfiledialog)。  
+ 外观和功能`CFileDialog`与 Windows Vista 或更高版本不同于早期版本的 Windows。 默认值`CFileDialog`会自动使用新的 Windows Vista 或更高版本的样式，而不进行代码更改，如果程序是已编译和运行 Windows Vista 或更高版本。 使用*bVistaStyle*构造函数来手动重写此自动更新中的参数。 自动更新的例外是自定义的对话框。 它们将不能转换为的新样式。 有关构造函数的详细信息，请参阅[CFileDialog::CFileDialog](#cfiledialog)。  
   
 > [!NOTE]
 >  控件 ID 系统不同早期版本的 Windows 中 Windows Vista 或更高版本，当你使用`CFileDialog`。 你必须更新所有引用`CFileDialog`代码之前可以移植你的项目从早期版本的 Windows 中的控件。  
@@ -319,13 +319,13 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加检查按钮的 ID。  
   
- `strLabel`  
+ *strLabel*  
  检查按钮名称。  
   
- `bChecked`  
+ *bChecked*  
  一个布尔值，指示检查按钮的当前状态。 `TRUE` 如果选中;`FALSE`否则为  
   
 ### <a name="remarks"></a>备注  
@@ -338,7 +338,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加的组合框的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -354,13 +354,13 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要向其中添加项的容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  项的 ID。  
   
- `strLabel`  
+ *strLabel*  
  项的文本。  
   
 ### <a name="remarks"></a>备注  
@@ -375,10 +375,10 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加编辑框的 ID。  
   
- `strText`  
+ *strText*  
  编辑框名称。  
   
 ### <a name="remarks"></a>备注  
@@ -393,10 +393,10 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加的菜单的 ID。  
   
- `strLabel`  
+ *strLabel*  
  菜单名称中。  
   
 ### <a name="remarks"></a>备注  
@@ -416,13 +416,13 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFolder`  
+ *lpszFolder*  
  若要将提供给用户文件夹的路径。 这只能是一个文件夹。  
   
- `fdap`  
+ *fdap*  
  指定的文件夹列表中的放置位置。  
   
- `psi`  
+ *psi*  
  表示要将提供给用户的文件夹 IShellItem 指向的指针。 这只能是一个文件夹。  
   
 ### <a name="remarks"></a>备注  
@@ -437,10 +437,10 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加按钮的 ID。  
   
- `strLabel`  
+ *strLabel*  
  按钮名称中。  
   
 ### <a name="remarks"></a>备注  
@@ -453,7 +453,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加的选项按钮组的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -466,7 +466,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  添加分隔符的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -481,10 +481,10 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要添加文本的 ID。  
   
- `strText`  
+ *strText*  
  文本名称中。  
   
 ### <a name="remarks"></a>备注  
@@ -522,36 +522,36 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bOpenFileDialog`  
+ [in]*bOpenFileDialog*  
  指定哪种类型的对话框中，若要创建参数。 将其设置为`TRUE`构造**文件打开**对话框。 将其设置为`FALSE`构造**文件另存为**对话框。  
   
- [in] `lpszDefExt`  
- 默认的文件扩展名。 如果用户不在文件名中包括的已知的扩展 （一个用户的计算机上具有关联），指定的扩展`lpszDefExt`自动追加到的文件名称。 如果此参数为`NULL`，追加无扩展名。  
+ [in]*lpszDefExt*  
+ 默认的文件扩展名。 如果用户不在文件名中包括的已知的扩展 （一个用户的计算机上具有关联），指定的扩展*lpszDefExt*自动追加到的文件名称。 如果此参数为`NULL`，追加无扩展名。  
   
- [in] `lpszFileName`  
+ [in]*lpszFileName*  
  在文件名框中显示的初始文件名称。 如果`NULL`，没有初始文件名称出现。  
   
- [in] `dwFlags`  
+ [in]*dwFlags*  
  可用于自定义对话框中的一个或多个标志的组合。 有关这些标志的说明，请参阅[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Windows SDK 中的结构。 如果你修改`m_ofn.Flags`结构成员，请使用所做的更改中的按位 OR 运算符以保持不变的默认行为。  
   
- [in] `lpszFilter`  
+ [in]*lpszFilter*  
  指定筛选器的字符串对一系列你可以应用于文件。 如果指定文件筛选器，只有与筛选条件匹配的文件将出现在文件列表中。 请参阅有关如何使用文件筛选器的详细信息备注部分。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向文件对话框中的父或所有者窗口的指针。  
   
- [in] `dwSize`  
+ [in]*dwSize*  
  大小`OPENFILENAME`结构。 此值取决于操作系统版本。 MFC 使用此参数来确定的对话框中，若要创建适当的类型。 MFC 代码将确定要使用的正确对话框框大小的 0 表示的默认大小基于在其运行该程序的操作系统版本。  
   
- [in] `bVistaStyle`  
+ [in]*bVistaStyle*  
  **请注意**此参数是可在 Visual Studio 2008 及更高版本，将导致新样式对话框，用于仅当正在运行 Windows Vista 或更高版本。  
   
  参数，指定文件对话框的样式。 将其设置为`TRUE`以使用新的 Vista 样式文件对话框。 否则，将使用旧样式的对话框。 请参阅备注部分的详细信息在 Vista 下运行。  
   
 ### <a name="remarks"></a>备注  
- 任一**文件打开**或**文件另存为**对话框时构造，具体取决于值`bOpenFileDialog`。  
+ 任一**文件打开**或**文件另存为**对话框时构造，具体取决于值*bOpenFileDialog*。  
   
- 指定默认扩展使用`lpszDefExt`可能生成你预期的行为，因为它很少成为可预测有哪些扩展在用户的计算机上具有文件关联。 如果你需要更好地控制追加的默认扩展插件，可以派生您自己的类从`CFileDialog`，并重写`CFileDialog::OnFileNameOK`方法来执行您自己的扩展处理。  
+ 指定默认扩展使用*lpszDefExt*可能生成你预期的行为，因为它很少成为可预测有哪些扩展在用户的计算机上具有文件关联。 如果你需要更好地控制追加的默认扩展插件，可以派生您自己的类从`CFileDialog`，并重写`CFileDialog::OnFileNameOK`方法来执行您自己的扩展处理。  
   
  若要使用户能够选择多个文件，将设置`OFN_ALLOWMULTISELECT`标志你在调用之前[DoModal](#domodal)。 必须提供你自己的文件名称缓冲区来存储返回多个文件名称的列表。 执行此操作通过替换`m_ofn.lpstrFile`指向缓冲区的指针与你已分配之后你构造, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，但你在调用之前`DoModal`。 此外，必须设置`m_ofn.nMaxFile`具有指向的缓冲区中的字符数`m_ofn.lpstrFile`。 如果设置到选定文件的最大数目`n`，必要的缓冲区大小是`n`*(_MAX_PATH + 1) + 1。 例如：  
   
@@ -559,7 +559,7 @@ explicit CFileDialog(
   
  若要使用户能够通过使用鼠标或键盘来调整大小资源管理器样式对话框中，设置`OFN_ENABLESIZING`标志。 设置此标志才是必需提供挂钩过程或自定义模板。 标志仅适用于一个资源管理器样式的对话框;旧样式对话框不能调整大小。  
   
- `lpszFilter`参数用于确定文件必须具有要在文件列表中显示的文件名称的类型。 字符串对中的第一个字符串描述筛选器;第二个字符串指示要使用的文件扩展名。 可通过使用分号 （; 字符） 作为分隔符指定多个扩展。 使用两个结尾的字符串&#124;字符后, 跟`NULL`字符。 你还可以使用[CString](../../atl-mfc-shared/using-cstring.md)为此参数的对象。  
+ *LpszFilter*参数用于确定文件必须具有要在文件列表中显示的文件名称的类型。 字符串对中的第一个字符串描述筛选器;第二个字符串指示要使用的文件扩展名。 可通过使用分号 （; 字符） 作为分隔符指定多个扩展。 使用两个结尾的字符串&#124;字符后, 跟`NULL`字符。 你还可以使用[CString](../../atl-mfc-shared/using-cstring.md)为此参数的对象。  
   
  例如，[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]等允许用户打开具有扩展.xlc （图表） 或.xls （工作表） 的文件。 无法编写 Excel 的筛选器，如：  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  但是，如果你打算使用此字符串到直接更新`OPENFILENAME`结构，你应当分隔您用空字符 \0'，而不是垂直图条的字符串 (&#124;)。  
   
- `bVistaStyle`参数是适用的仅当运行在 Windows Vista 或更高版本时。 在早期版本的 Windows，则忽略此参数。 如果`bVistaStyle`设置为`TRUE`，当你编译的程序与 Visual Studio 2008 或更高版本，将新的 Vista 样式**文件对话框**将使用。 否则为上一个 MFC 样式**文件对话框**将使用。  
+ *BVistaStyle*参数是适用的仅当运行在 Windows Vista 或更高版本时。 在早期版本的 Windows，则忽略此参数。 如果*bVistaStyle*设置为`TRUE`，当你编译的程序与 Visual Studio 2008 或更高版本，将新的 Vista 样式**文件对话框**将使用。 否则为上一个 MFC 样式**文件对话框**将使用。  
   
- 对话框模板不支持基于的对话框上 `bVistaStyle`  
+ 对话框模板不支持基于的对话框上*bVistaStyle*  
   
 ### <a name="example"></a>示例  
   请参阅示例[CFileDialog::DoModal](#domodal)。  
@@ -606,7 +606,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  下拉列表的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -633,10 +633,10 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  复选框的 ID。  
   
- `bChecked`  
+ *bChecked*  
  复选框的状态。 `TRUE` 指示已检查;`FALSE`指示未选中状态。  
   
 ### <a name="remarks"></a>备注  
@@ -652,13 +652,13 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  项的 ID。  
   
- `dwState`  
+ *dwState*  
  对接收多个值之一，该值指示控件的当前状态 CDCONTROLSTATE 枚举中的变量的引用。  
   
 ### <a name="remarks"></a>备注  
@@ -673,10 +673,10 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  控件的 ID。  
   
- `dwState`  
+ *dwState*  
  对接收 CDCONTROLSTATE 枚举，该值指示控件的当前状态中的一个或多个值的变量的引用。  
   
 ### <a name="remarks"></a>备注  
@@ -691,10 +691,10 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  编辑框的 ID。  
   
- `strText`  
+ *strText*  
  文本值。  
   
 ### <a name="remarks"></a>备注  
@@ -773,7 +773,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  为内部的 COM 对象的指针`CFileDialog`。 它由你负责正确释放该指针。  
   
 ### <a name="remarks"></a>备注  
- 使用此函数仅在 Windows Vista 或更高版本与具有的对象`bVistaStyle`设置为`true`。 如果使用此函数时`bVistaStyle`是`false`，它将返回`NULL`在发布模式下和 throw 在调试模式下的断言。  
+ 使用此函数仅在 Windows Vista 或更高版本与具有的对象*bVistaStyle*设置为`true`。 如果使用此函数时*bVistaStyle*是`false`，它将返回`NULL`在发布模式下和 throw 在调试模式下的断言。  
   
  有关详细信息`IFileDialogCustomize`接口，请参阅[IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)。  
   
@@ -793,7 +793,7 @@ IFileOpenDialog* GetIFileOpenDialog();
  为内部的 COM 对象的指针`CFileDialog`。 它由你负责正确释放该指针。  
   
 ### <a name="remarks"></a>备注  
- 使用此函数仅在 Windows Vista 或更高版本与具有的对象`bVistaStyle`设置为`true`。 此函数将返回`NULL`如果`CFileDialog`不**打开**对话框或如果`bVistaStyle`设置为`false`。 在此最终的情况下，该函数将仅返回`NULL`在发布模式下-在调试模式下，它将引发一个断言。  
+ 使用此函数仅在 Windows Vista 或更高版本与具有的对象*bVistaStyle*设置为`true`。 此函数将返回`NULL`如果`CFileDialog`不**打开**对话框或如果*bVistaStyle*设置为`false`。 在此最终的情况下，该函数将仅返回`NULL`在发布模式下-在调试模式下，它将引发一个断言。  
   
  有关详细信息`IFileOpenDialog`接口，请参阅[IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834)。  
   
@@ -813,7 +813,7 @@ IFileSaveDialog* GetIFileSaveDialog();
  为内部的 COM 对象的指针`CFileDialog`。 它由你负责正确释放该指针。  
   
 ### <a name="remarks"></a>备注  
- 使用此函数仅在 Windows Vista 或更高版本与具有的对象`bVistaStyle`设置为`true`。 此函数将返回`NULL`如果`CFileDialog`不**保存**对话框或如果`bVistaStyle`设置为`false`。 在此最终的情况下，该函数将仅返回`NULL`在发布模式下-在调试模式下，它将引发一个断言。  
+ 使用此函数仅在 Windows Vista 或更高版本与具有的对象*bVistaStyle*设置为`true`。 此函数将返回`NULL`如果`CFileDialog`不**保存**对话框或如果*bVistaStyle*设置为`false`。 在此最终的情况下，该函数将仅返回`NULL`在发布模式下-在调试模式下，它将引发一个断言。  
   
  有关详细信息`IFileSaveDialog`接口，请参阅[IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688)。  
   
@@ -830,7 +830,7 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  对引用**位置**通过前一个返回值`GetNextPathName`或`GetStartPosition`函数调用。 **NULL**如果已到达列表的末尾。  
   
 ### <a name="return-value"></a>返回值  
@@ -924,10 +924,10 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  用户控件中选定的项的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -950,7 +950,7 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  若要隐藏的控件 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -972,7 +972,7 @@ BOOL IsPickFoldersMode() const;
  `m_ofn` 是一种类型的结构`OPENFILENAME`。 此结构中的数据表示的当前状态`CFileDialog`。  
   
 ### <a name="remarks"></a>备注  
- 使用此结构初始化的外观**文件打开**或**文件另存为**对话框中，在构造之后但在显示其与之前[DoModal](#domodal)方法。 例如，你可以设置`lpstrTitle`的成员`m_ofn`想对话框中，具有到链接的标题。  
+ 使用此结构初始化的外观**文件打开**或**文件另存为**对话框中，在构造之后但在显示其与之前[DoModal](#domodal)方法。 例如，你可以设置*lpstrTitle*的成员`m_ofn`想对话框中，具有到链接的标题。  
   
  与 Windows Vista 或更高版本样式[CFileDialog](../../mfc/reference/cfiledialog-class.md)，`m_ofn`不保证始终与对话框中的状态匹配。 它与早期版本的 Windows 中的对话框同步。 请参阅[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)和[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)有关同步的详细信息`m_ofn`结构和`CFileDialog`状态在 Windows Vista 或更高版本。  
   
@@ -1026,7 +1026,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  控件的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -1039,7 +1039,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  按钮的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -1054,10 +1054,10 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  复选框的 ID。  
   
- `bChecked`  
+ *bChecked*  
  选中或取消选中。  
   
 ### <a name="remarks"></a>备注  
@@ -1070,7 +1070,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  控件的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -1139,10 +1139,10 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  项的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -1161,17 +1161,17 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  列表框或在其中发生所选内容的组合框的 ID。  
   
- `iCurSel`  
+ *iCurSel*  
  当前所选内容的索引。  
   
- `nCode`  
+ *nCode*  
  控件通知代码。 此参数必须具有下列值之一：  
   
-- **CD_LBSELCHANGE**指定`iCurSel`是单项选择列表框中选定的项。  
+- **CD_LBSELCHANGE**指定*iCurSel*是单项选择列表框中选定的项。  
   
-- **CD_LBSELSUB**指定`iCurSel`在多选列表框中不再被选中。  
+- **CD_LBSELSUB**指定*iCurSel*在多选列表框中不再被选中。  
   
-- **CD_LBSELADD**指定`iCurSel`多选列表框中选择。  
+- **CD_LBSELADD**指定*iCurSel*多选列表框中选择。  
   
 - **CD_LBSELNOITEMS**指定任何选择是否存在于多选列表框。  
   
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszPathName`  
+ *lpszPathName*  
  发生共享冲突文件的路径。  
   
 ### <a name="return-value"></a>返回值  
@@ -1225,10 +1225,10 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  要从中移除项的容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  项的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -1243,10 +1243,10 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  复选框的 ID。  
   
- `bChecked`  
+ *bChecked*  
  复选框的状态。 `TRUE` 指示已检查;`FALSE`指示选中状态。  
   
 ### <a name="remarks"></a>备注  
@@ -1262,13 +1262,13 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  项的 ID。  
   
- `dwState`  
+ *dwState*  
  一个或多个 CDCONTROLSTATE 枚举值，指示该控件的新状态。  
   
 ### <a name="remarks"></a>备注  
@@ -1284,13 +1284,13 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  项的 ID。  
   
- `strLabel`  
+ *strLabel*  
  项的文本。  
   
 ### <a name="remarks"></a>备注  
@@ -1305,10 +1305,10 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  控件的 ID。  
   
- `strLabel`  
+ *strLabel*  
  控件名称。  
   
 ### <a name="remarks"></a>备注  
@@ -1323,10 +1323,10 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  控件的 ID。  
   
- `dwState`  
+ *dwState*  
  一个或多个值 CDCONTROLSTATE 枚举中指示该控件的当前状态。  
   
 ### <a name="remarks"></a>备注  
@@ -1346,10 +1346,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  为其设置的文本控件的 ID。  
   
- [in] `lpsz`  
+ [in]*lpsz*  
  指向包含要设置控件的文本的字符串的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1365,7 +1365,7 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpsz`  
+ *lpsz*  
  指向包含要使用的对话框对象的默认扩展名的字符串的指针。 此字符串必须包含一个句点 （.）。  
   
 ### <a name="remarks"></a>备注  
@@ -1381,10 +1381,10 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  编辑框的 ID。  
   
- `strText`  
+ *strText*  
  文本值。  
   
 ### <a name="remarks"></a>备注  
@@ -1397,7 +1397,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszPropList`  
+ *lpszPropList*  
  由“;”分隔的预定义的属性列表。 标志的列表，请参阅`Flags`部分[OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)。  
   
 ### <a name="remarks"></a>备注  
@@ -1412,10 +1412,10 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  容器控件的 ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  用户控件中选定的项的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -1435,16 +1435,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nWin3ID`  
+ [in]*nWin3ID*  
  包含非 Explorer 的模板资源的 ID 号`CFileDialog`对象。 在 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时，仅使用此模板。  
   
- [in] `nWin4ID`  
+ [in]*nWin4ID*  
  该资源管理器中包含的模板资源的 ID 号`CFileDialog`对象。 仅在使用此模板[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时。  
   
- [in] `lpWin3ID`  
+ [in]*lpWin3ID*  
  包含非 Explorer 的模板资源的名称`CFileDialog`对象。 在 Windows NT 3.51 或不存在 OFN_EXPLORER 样式时，仅使用此模板。  
   
- [in] `lpWin4ID`  
+ [in]*lpWin4ID*  
  包含名称的资源管理器的模板资源`CFileDialog`对象。 仅在使用此模板[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更高版本、 Windows 95 和更高版本，或存在 OFN_EXPLORER 样式时。  
   
 ### <a name="remarks"></a>备注  
@@ -1463,10 +1463,10 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwIDCtl`  
+ *dwIDCtl*  
  Visual 组的 ID。  
   
- `strLabel`  
+ *strLabel*  
  组名称中。  
   
 ### <a name="remarks"></a>备注  

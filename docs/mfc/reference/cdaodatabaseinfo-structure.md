@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352735"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951928"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 结构
 `CDaoDatabaseInfo`结构包含有关定义为数据访问对象 (DAO) 的数据库对象的信息。  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一名称的数据库对象。 若要直接检索此属性，调用[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  指示是否可以对数据库进行更改。 若要直接检索此属性，调用[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  指示 Microsoft Jet 数据库引擎的版本。 若要直接检索此属性的值，调用数据库对象的[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"版本属性"。  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  用于字符串比较或排序的文本中指定的排序顺序的序列。 可能的值包括：  
   
 - **dbSortGeneral**使用常规 （英语、 法语、 德语、 葡萄牙语、 意大利语和现代西班牙语） 排序顺序。  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  ODBC 数据库上运行一次查询时发生的 Microsoft Jet 数据库引擎在超时错误之前等待的秒数。 默认超时值为 60 秒。 当 QueryTimeout 设置为 0 时，则会发生无超时;这会导致程序停止响应。 若要直接检索此属性的值，调用数据库对象的[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"QueryTimeout 属性"。  
   
- `m_strConnect`  
+ *m_strConnect*  
  提供有关打开数据库的源的信息。 有关信息大约连接字符串，并直接检索此属性的值的信息，请参阅[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"连接属性"。  
   
 ## <a name="remarks"></a>备注  

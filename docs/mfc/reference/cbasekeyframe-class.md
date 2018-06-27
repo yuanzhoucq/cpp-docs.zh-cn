@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353931"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956702"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 类
 实现关键帧的基本功能。  
@@ -67,7 +67,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|指定此关键帧是否已添加到情节提要。|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|指定是否应将此关键帧添加到情节提要从另一个现有的关键帧，偏移量处或末尾的某些转换。|  
@@ -94,10 +94,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要的指针。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  如果此参数为 TRUE，则所添加的关键帧依赖于某些其他关键帧或转换，此方法将尝试添加此关键帧或转换到第一次情节提要。  
   
 ### <a name="return-value"></a>返回值  

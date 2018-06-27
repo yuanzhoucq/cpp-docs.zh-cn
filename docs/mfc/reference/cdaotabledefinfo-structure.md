@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c1422c4d0e45599ca8bc2e9c86a4263b8ac9b6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367729"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955604"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 结构
 `CDaoTableDefInfo`结构包含有关 tabledef 对象定义的数据访问对象 (DAO) 的信息。  
@@ -46,13 +46,13 @@ struct CDaoTableDefInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一地命名 tabledef 对象。 若要直接检索此属性的值，调用 tabledef 对象[GetName](../../mfc/reference/cdaotabledef-class.md#getname)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  指示是否可以对表进行更改。 确定表是否可更新的快速方式是打开`CDaoTableDef`表对象并调用对象的[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)成员函数。 `CanUpdate` 始终返回非零 (**TRUE**) 对于新创建的 tabledef 对象和零 (**FALSE**) 附加的 tabledef 对象。 可以将新 tabledef 对象追加到当前用户对其具有写权限的数据库。 如果表中包含不可更新字段，`CanUpdate`返回 0。 在一个或多个字段都是可更新，`CanUpdate`返回非零值。 你可以编辑仅可更新的字段。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  指定由 tabledef 对象表示的表的特性。 若要检索 tabledef 对象的当前属性，调用其[GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes)成员函数。 返回的值可以是这些长常量的组合 (使用按位 OR (**&#124;**) 运算符):  
   
 - **dbAttachExclusive**对于使用 Microsoft Jet 数据库引擎的数据库，该值指示该表是附加的表打开以供独占使用。  
@@ -67,22 +67,22 @@ struct CDaoTableDefInfo
   
 - **dbAttachedODBC**指示表是否附加的表从 ODBC 数据库，例如 Microsoft SQL Server。  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  日期和时间该表的创建。 若要直接检索表的创建的日期，调用[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成员函数`CDaoTableDef`与该表关联的对象。 有关详细信息，请参阅下面的注释。 有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  日期和时间的表的设计所做的最新更改。 若要直接检索上次更新表的日期，调用[GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated)成员函数`CDaoTableDef`与该表关联的对象。 有关详细信息，请参阅下面的注释。 有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
  *m_strSrcTableName*  
  如果有的话，请指定附加表的名称。 若要直接检索源表名称，请调用[GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename)成员函数`CDaoTableDef`与该表关联的对象。  
   
- `m_strConnect`  
+ *m_strConnect*  
  提供有关打开数据库的源的信息。 你可以通过调用检查此属性[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成员函数你`CDaoTableDef`对象。 有关详细信息连接字符串，请参阅`GetConnect`。  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  一个值，验证 tabledef 字段中的数据，因为它们被更改或添加到表中。 验证仅支持使用 Microsoft Jet 数据库引擎的数据库。 若要直接检索验证规则，请调用[GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule)成员函数`CDaoTableDef`与该表关联的对象。 有关相关信息，请参阅主题 DAO 帮助中的"有效性规则属性"。  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  一个值，指定如果不满足由 ValidationRule 属性指定的验证规则，应显示你的应用程序的消息的文本。 有关相关信息，请参阅主题 DAO 帮助中的"有效性文本属性"。  
   
  *m_lRecordCount*  

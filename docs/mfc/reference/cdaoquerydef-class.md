@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e7d3b093da8127887878b2ac5f2af652f549c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3af520de7e92a887f9a49fea7262d7f51b74082
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375789"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954629"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 类
 表示通常保存在数据库中的查询定义（即“querydef”）。  
@@ -98,7 +98,7 @@ class CDaoQueryDef : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|构造**CDaoQueryDef**对象。 接下来调用**打开**或**创建**，取决于你的需求。|  
+|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|构造 `CDaoQueryDef` 对象。 接下来调用`Open`或`Create`，取决于你的需求。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -107,7 +107,7 @@ class CDaoQueryDef : public CObject
 |[CDaoQueryDef::Append](#append)|将此 querydef 追加到为已保存查询的数据库的 QueryDefs 集合。|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|返回非零，如果查询可以更新数据库。|  
 |[CDaoQueryDef::Close](#close)|关闭 querydef 对象。 使用它完成后销毁 c + + 对象。|  
-|[CDaoQueryDef::Create](#create)|创建基础的 DAO querydef 对象。 将用作临时查询或调用 querydef**追加**将其保存在数据库中。|  
+|[CDaoQueryDef::Create](#create)|创建基础的 DAO querydef 对象。 将用作临时查询或调用 querydef`Append`将其保存在数据库中。|  
 |[CDaoQueryDef::Execute](#execute)|执行由 querydef 对象定义的查询。|  
 |[CDaoQueryDef::GetConnect](#getconnect)|返回与此 querydef 关联的连接字符串。 连接字符串标识的数据源。 （有关 SQL 传递查询; 否则为空字符串。）|  
 |[CDaoQueryDef::GetDateCreated](#getdatecreated)|返回的已保存的查询的创建的日期。|  
@@ -154,9 +154,9 @@ class CDaoQueryDef : public CObject
   
     -   若要使用现有的已保存查询，调用 querydef 对象[打开](#open)成员函数，提供已保存查询的名称。  
   
-    -   若要创建新的已保存的查询时，调用 querydef 对象[创建](#create)成员函数，提供查询的名称。 然后调用[追加](#append)以将其追加到数据库的 QueryDefs 集合以保存查询。 **创建**将 querydef 放入打开状态，因此在调用**创建**不调用**打开**。  
+    -   若要创建新的已保存的查询时，调用 querydef 对象[创建](#create)成员函数，提供查询的名称。 然后调用[追加](#append)以将其追加到数据库的 QueryDefs 集合以保存查询。 `Create` 将此 querydef 放入打开状态，因此在调用`Create`不调用`Open`。  
   
-    -   若要创建临时 querydef，调用**创建**。 传递的查询名称为空字符串。 不要调用**追加**。  
+    -   若要创建临时 querydef，调用`Create`。 传递的查询名称为空字符串。 不要调用 `Append`。  
   
  当你完成使用 querydef 对象时，调用其[关闭](#close)成员函数; 然后销毁 querydef 对象。  
   
@@ -168,14 +168,14 @@ class CDaoQueryDef : public CObject
   
 -   若要创建`CDaoRecordset`对象  
   
--   若要调用对象的**执行**要直接执行操作查询或 SQL 传递查询的成员函数  
+-   若要调用对象的`Execute`要直接执行操作查询或 SQL 传递查询的成员函数  
   
- 你可以 querydef 对象用于任何类型的查询，其中包括 select、 操作、 交叉表、 删除、 更新、 追加、 生成表、 数据定义、 SQL 传递、 联合和大容量查询。 查询的类型是由你提供的 SQL 语句的内容确定的。 有关查询类型的信息，请参阅**执行**和[GetType](#gettype)成员函数。 记录集通常用于返回行的查询，通常使用的那些**选择...从**关键字。 **执行**最常用于大容量操作。 有关详细信息，请参阅[执行](#execute)和[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
+ 你可以 querydef 对象用于任何类型的查询，其中包括 select、 操作、 交叉表、 删除、 更新、 追加、 生成表、 数据定义、 SQL 传递、 联合和大容量查询。 查询的类型是由你提供的 SQL 语句的内容确定的。 有关查询类型的信息，请参阅`Execute`和[GetType](#gettype)成员函数。 记录集通常用于返回行的查询，通常使用的那些**选择...从**关键字。 `Execute` 通常用于大容量操作。 有关详细信息，请参阅[执行](#execute)和[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
   
 ## <a name="querydefs-and-recordsets"></a>Querydefs 和记录集  
  若要使用 querydef 对象创建`CDaoRecordset`对象，通常创建或打开 querydef 上文所述。 然后构造一个记录集对象，将指针传递给 querydef 对象中，当您调用[cdaorecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open)。 你传递 querydef 必须处于打开状态。 有关详细信息，请参阅类[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
   
- Querydef 不能用于创建记录集 （querydef 的最常见用途），除非它是处于打开状态。 将此 querydef 放入打开状态，通过调用**打开**或**创建**。  
+ Querydef 不能用于创建记录集 （querydef 的最常见用途），除非它是处于打开状态。 将此 querydef 放入打开状态，通过调用`Open`或`Create`。  
   
 ## <a name="external-databases"></a>外部数据库  
  Querydef 对象是使用外部数据库引擎的本机 SQL 方言的首选的方法。 例如，可以创建 Transact SQL 查询 （如 Microsoft SQL Server 上使用），并将其存储在 querydef 对象。 当你需要使用不基于 Microsoft Jet 数据库引擎的 SQL 查询时，你必须提供指向外部数据源的连接字符串。 使用有效的连接字符串的查询绕过数据库引擎和查询将直接传递到外部数据库服务器处理。  
@@ -201,7 +201,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>备注  
- **追加**将 querydef 保存在数据库中，通过将对象追加到数据库的 QueryDefs 集合。 可以使用此 querydef 作为临时对象不会将附加它，但如果你希望保留，则必须调用**追加**。  
+ `Append` 将此 querydef 保存在数据库中，通过将对象追加到数据库的 QueryDefs 集合。 可以使用此 querydef 作为临时对象不会将附加它，但如果你希望保留，则必须调用`Append`。  
   
  如果你尝试将临时 querydef 对象追加，则 MFC 会引发类型的异常[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
@@ -225,14 +225,14 @@ BOOL CanUpdate();
      这取决于是否已实现安全功能。 MFC 为安全性，则不提供的支持你必须实现它自己通过调用 DAO 直接或通过使用 Microsoft Access。 请参阅主题 DAO 帮助中的"权限属性"。  
   
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef  
- 构造**CDaoQueryDef**对象。  
+ 构造 `CDaoQueryDef` 对象。  
   
 ```  
 CDaoQueryDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDatabase`  
+ *pDatabase*  
  向打开的指针[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
@@ -242,7 +242,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
 -   如果该对象表示要保存新 querydef，调用对象的[创建](#create)成员函数。 这将对象添加到数据库的 QueryDefs 集合。 然后调用`CDaoQueryDef`成员函数来设置对象的属性。 最后，调用[追加](#append)。  
   
--   如果该对象表示临时 querydef （不保存到数据库中），调用**创建**，传递查询的名称为空字符串。 在调用**创建**，初始化此 querydef 通过直接设置属性。 不要调用**追加**。  
+-   如果该对象表示临时 querydef （不保存到数据库中），调用`Create`，传递查询的名称为空字符串。 在调用`Create`，初始化此 querydef 通过直接设置属性。 不要调用 `Append`。  
   
  若要设置此 querydef 的特性，可以使用[SetName](#setname)， [SetSQL](#setsql)，[为表示](#setconnect)， [SetODBCTimeout](#setodbctimeout)，和[SetReturnsRecords](#setreturnsrecords)成员函数。  
   
@@ -268,16 +268,16 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  保存到数据库中查询的唯一名称。 有关字符串的详细信息，请参阅主题 DAO 帮助中的"CreateQueryDef 方法"。 如果你接受默认值为空字符串，将创建临时 querydef。 此类查询不会保存 QueryDefs 集合中。  
   
- `lpszSQL`  
+ *lpszSQL*  
  定义查询的 SQL 字符串。 如果你接受默认值的**NULL**，更高版本，必须调用[SetSQL](#setsql)设置字符串。 到那时，查询是不确定。 但是，可以使用未定义的查询以打开记录集;有关详细信息，请参阅备注。 可以将此 querydef 追加到 QueryDefs 集合之前，必须定义 SQL 语句。  
   
 ### <a name="remarks"></a>备注  
- 如果通过中的名称`lpszName`，然后，你可以调用[追加](#append)querydef 保存数据库的 QueryDefs 集合中。 否则为对象是临时 querydef，并且不会保存。 在任一情况下，此 querydef 处于打开状态，并且你可以使用它来创建[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象或调用此 querydef[执行](#execute)成员函数。  
+ 如果通过中的名称*lpszName*，然后，你可以调用[追加](#append)querydef 保存数据库的 QueryDefs 集合中。 否则为对象是临时 querydef，并且不会保存。 在任一情况下，此 querydef 处于打开状态，并且你可以使用它来创建[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象或调用此 querydef[执行](#execute)成员函数。  
   
- 如果未提供中的 SQL 语句`lpszSQL`，无法运行查询中的使用**执行**但可以使用它来创建一个记录集。 在这种情况下，MFC 使用记录集的默认 SQL 语句。  
+ 如果未提供中的 SQL 语句*lpszSQL*，无法运行查询中的使用`Execute`但可以使用它来创建一个记录集。 在这种情况下，MFC 使用记录集的默认 SQL 语句。  
   
 ##  <a name="execute"></a>  CDaoQueryDef::Execute  
  调用此成员函数以运行由 querydef 对象定义的查询。  
@@ -287,7 +287,7 @@ virtual void Execute(int nOptions = dbFailOnError);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nOptions`  
+ *nOptions*  
  一个整数，确定特性的查询。 有关相关信息，请参阅主题 DAO 帮助中的"执行方法"。 你可以使用按位 OR 运算符 ( **&#124;**) 组合为此参数的以下常量：  
   
 - **dbDenyWrite**拒绝其他用户写入权限。  
@@ -312,16 +312,16 @@ virtual void Execute(int nOptions = dbFailOnError);
   
 -   SQL 传递查询  
   
- **执行**并不适用于返回记录，如 select 查询的查询。 **执行**通常用于大容量操作查询，如**更新**，**插入**，或**SELECT INTO**，或数据定义语言 (DDL) 操作。  
+ `Execute` 不适用于返回记录，如 select 查询的查询。 `Execute` 通常用于大容量操作查询，如**更新**，**插入**，或**SELECT INTO**，或数据定义语言 (DDL) 操作。  
   
 > [!TIP]
 >  若要使用 ODBC 数据源的首选的方式是将表附加到 Microsoft Jet (。MDB) 数据库。 有关详细信息，请参阅主题"访问外部数据库与"帮助中的 DAO DAO。  
   
- 调用[GetRecordsAffected](#getrecordsaffected)要确定受最新的记录数的 querydef 对象的成员函数**执行**调用。 例如，`GetRecordsAffected`返回有关删除、 更新或插入时执行的操作查询的记录数的信息。 返回的计数将不会反映级联更新或删除时的相关表中的更改中都起作用。  
+ 调用[GetRecordsAffected](#getrecordsaffected)要确定受最新的记录数的 querydef 对象的成员函数`Execute`调用。 例如，`GetRecordsAffected`返回有关删除、 更新或插入时执行的操作查询的记录数的信息。 返回的计数将不会反映级联更新或删除时的相关表中的更改中都起作用。  
   
  如果你同时包含这两者**dbInconsistent**和**dbConsistent**或者如果都不包含，则结果为默认情况下， **dbInconsistent**。  
   
- **执行**不返回一个记录集。 使用**执行**在选择记录的查询会导致引发异常的类型的 MFC [CDaoException](../../mfc/reference/cdaoexception-class.md)。  
+ `Execute` 不会返回一个记录集。 使用`Execute`在选择记录的查询会导致引发异常的类型的 MFC [CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
 ##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect  
  调用此成员函数可获取与此 querydef 数据源关联的连接字符串。  
@@ -397,13 +397,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  所需域 querydef 的字段集合，按索引查找中的从零开始的索引。  
   
- `fieldinfo`  
+ *fieldinfo*  
  对引用`CDaoFieldInfo`返回请求的信息的对象。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定有关要检索的字段的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小属性  
@@ -412,11 +412,11 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要信息加号： 默认值，验证文本验证规则  
   
- `lpszName`  
+ *在 lpszName*  
  包含按名称查找所需字段的名称的字符串。 你可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="remarks"></a>备注  
- 有关在中返回的信息的说明`fieldinfo`，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于下的描述性信息的成员`dwInfoOptions`上面。 如果请求的信息的一个级别，你将获取任何之前级别的信息以及。  
+ 有关在中返回的信息的说明*fieldinfo*，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于下的描述性信息的成员*dwInfoOptions*上面。 如果请求的信息的一个级别，你将获取任何之前级别的信息以及。  
   
 ##  <a name="getname"></a>  CDaoQueryDef::GetName  
  调用此成员函数可检索此 querydef 所表示的查询的名称。  
@@ -479,22 +479,22 @@ void GetParameterInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  在此 querydef 参数集合中，按索引查找所需参数的从零开始的索引。  
   
- `paraminfo`  
+ *paraminfo 和*  
  对引用[CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)返回请求的信息的对象。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要检索的参数有关的信息的选项。 可用的选项以及它会导致要返回的函数在此处列出：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型  
   
- `lpszName`  
+ *在 lpszName*  
  包含按名称查找所需的参数的名称的字符串。 你可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="remarks"></a>备注  
- 有关在中返回的信息的说明`paraminfo`，请参阅[CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)结构。 此结构具有对应于下的描述性信息的成员`dwInfoOptions`上面。  
+ 有关在中返回的信息的说明*paraminfo 和*，请参阅[CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)结构。 此结构具有对应于下的描述性信息的成员*dwInfoOptions*上面。  
   
  有关相关信息，请参阅"参数声明 (SQL)"DAO 帮助中的主题。  
   
@@ -507,10 +507,10 @@ virtual COleVariant GetParamValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  参数要按名称查找对其值的名称。  
   
- `nIndex`  
+ *nIndex*  
  Querydef 的参数集合，按索引查找中参数的从零开始索引。 你可以获取此值通过调用[GetParameterCount](#getparametercount)和[GetParameterInfo](#getparameterinfo)。  
   
 ### <a name="return-value"></a>返回值  
@@ -639,7 +639,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  包含已保存的 querydef，若要打开的名称的字符串。 你可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="remarks"></a>备注  
@@ -653,7 +653,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszConnect`  
+ *lpszConnect*  
  包含关联的连接字符串的字符串[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
@@ -674,7 +674,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  包含一个非临时性查询中关联的新名称的字符串[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
@@ -711,13 +711,13 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  参数要设置其值的名称。  
   
- `varValue`  
+ *varValue*  
  要设置; 的值请参阅备注。  
   
- `nIndex`  
+ *nIndex*  
  Querydef 的参数集合中参数的序号位置。 你可以获取此值通过调用[GetParameterCount](#getparametercount)和[GetParameterInfo](#getparameterinfo)。  
   
 ### <a name="remarks"></a>备注  
@@ -747,13 +747,13 @@ void SetSQL(LPCTSTR lpszSQL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszSQL`  
+ *lpszSQL*  
  包含一个完整的 SQL 语句，适用于执行的字符串。 此字符串的语法取决于 DBMS 的查询目标。 有关在 Microsoft Jet 数据库引擎中使用的语法的讨论，请参阅"生成 SQL 语句中的代码"DAO 帮助中的主题。  
   
 ### <a name="remarks"></a>备注  
  一个典型用途`SetSQL`是设置使用在 SQL 查询中传递的 querydef 对象。 （有关目标 DBMS SQL 传递查询的语法，请参阅所使用的 DBMS 的文档）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDaoRecordset 类](../../mfc/reference/cdaorecordset-class.md)   

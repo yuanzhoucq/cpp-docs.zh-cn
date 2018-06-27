@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354189"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956228"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 类
 CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 类的基类。  
@@ -61,7 +61,7 @@ class CD2DGradientBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 结构的数组。|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|在哪种颜色执行之间的渐变停止点的内插的空间。|  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `gradientStops`  
+ *gradientStops*  
  指向 D2D1_GRADIENT_STOP 结构的数组的指针。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  一个值大于或等于 1 gradientStops 数组中指定的数梯度停止点。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  在哪种颜色执行之间的渐变停止点的内插的空间。  
   
- `extendMode`  
+ *extendMode*  
  [0，1] 的规范化范围之外的渐变的行为。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指向不透明度和画笔的转换的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369120"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954528"
 ---
 # <a name="cfileexception-class"></a>CFileException 类
 表示与文件相关的异常条件。  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cause`  
+ *可能的原因*  
  一个枚举的类型变量，指示该异常的原因。 请参阅[CFileException::m_cause](#m_cause)有关可能的值的列表。  
   
- `lOsError`  
- 异常，如果有一个特定于操作系统的原因。 `lOsError`参数提供的信息多于`cause`未。  
+ *lOsError*  
+ 异常，如果有一个特定于操作系统的原因。 *LOsError*参数提供的信息多于*导致*未。  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  指向包含的名称的字符串`CFile`引发异常的对象。  
   
 ### <a name="remarks"></a>备注  
  不直接，使用此构造函数，但而是调用全局函数[AfxThrowFileException](exception-processing.md#afxthrowfileexception)。  
   
 > [!NOTE]
->  变量`lOsError`仅适用于`CFile`和`CStdioFile`对象。 `CMemFile`类并不处理此错误代码。  
+>  变量*lOsError*仅适用于`CFile`和`CStdioFile`对象。 `CMemFile`类并不处理此错误代码。  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  给定的运行时库错误将值转换为`CFileException`枚举错误值。  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nErrno`  
+ *nErrno*  
  整数错误代码在运行时包含文件 ERRNO 中定义。H。  
   
 ### <a name="return-value"></a>返回值  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `lpszError`  
+ [在中，out]*lpszError*  
  为将收到错误消息的缓冲区的指针。  
   
- [in] `nMaxError`  
+ [in]*nMaxError*  
  最大可以容纳指定的缓冲区的字符数。 这包括终止 null 字符。  
   
- [in, out] `pnHelpContext`  
+ [在中，out]*pnHelpContext*  
  接收帮助上下文 id。 为无符号整数的指针 如果`NULL`，返回没有 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此数据成员是类型 `int` 的公共变量。 枚举器及其含义如下所示：  
+ 此数据成员是类型的公共变量**int**。枚举器及其含义如下所示：  
   
 - `CFileException::none` 0： 未发生错误。  
   
@@ -235,14 +235,14 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- 返回一个枚举器对应于给定`lOsError`值。 如果错误代码为未知，则该函数将返回**CFileException::generic**。  
+ 返回一个枚举器对应于给定*lOsError*值。 如果错误代码为未知，则该函数将返回**CFileException::generic**。  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lOsError`  
+ *lOsError*  
  特定于操作系统的错误代码。  
   
 ### <a name="return-value"></a>返回值  
@@ -252,34 +252,34 @@ static int PASCAL OsErrorToException(LONG lOsError);
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- 构造`CFileException`对象对应于给定`nErrno`值，然后引发异常。  
+ 构造`CFileException`对象对应于给定*nErrno*值，然后引发异常。  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nErrno`  
+ *nErrno*  
  整数错误代码在运行时包含文件 ERRNO 中定义。H。  
   
- `lpszFileName`  
+ *lpszFileName*  
  指向包含文件的名称的字符串的指针，导致异常，如果可用。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- 引发`CFileException`对应于给定`lOsError`值。 如果错误代码为未知，则该函数将引发异常编码为**CFileException::generic**。  
+ 引发`CFileException`对应于给定*lOsError*值。 如果错误代码为未知，则该函数将引发异常编码为**CFileException::generic**。  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lOsError`  
+ *lOsError*  
  特定于操作系统的错误代码。  
   
- `lpszFileName`  
+ *lpszFileName*  
  指向包含文件的名称的字符串的指针，导致异常，如果可用。  
   
 ### <a name="example"></a>示例  

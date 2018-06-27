@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2559b4917f16bb8ddc49b73ace8bda6e1a9bafc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e274a3fabf10e96aec41a92bb484f4ebcc5bf377
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367303"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955808"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 实现可异步加载的 OLE 控件属性。  
@@ -68,7 +68,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="remarks"></a>备注  
  可以在同步启动之后加载异步属性。  
   
- 类`CDataPathProperty`派生自**CAysncMonikerFile**。 若要在 OLE 控件中实现异步属性，从派生类`CDataPathProperty`，并重写[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。  
+ 类`CDataPathProperty`派生自`CAysncMonikerFile`。 若要在 OLE 控件中实现异步属性，从派生类`CDataPathProperty`，并重写[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。  
   
  有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅以下文章：  
   
@@ -101,14 +101,14 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pControl`  
+ *pControl*  
  指向 OLE 控件对象要与此相关联的`CDataPathProperty`对象。  
   
- `lpszPath`  
+ *lpszPath*  
  路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CDataPathProperty` 使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
   
 ### <a name="remarks"></a>备注  
- `COleControl`指向对象`pControl`由**打开**和检索由派生类。 如果`pControl`是**NULL**，与所使用的控件**打开**应与设置`SetControl`。 如果`lpszPath`是**NULL**，可以在路径中，通过传递**打开**或将其与设置`SetPath`。  
+ `COleControl`指向对象`pControl`由`Open`和检索由派生类。 如果*pControl*是**NULL**，与所使用的控件`Open`应与设置`SetControl`。 如果`lpszPath`是**NULL**，可以在路径中，通过传递`Open`或将其与设置`SetPath`。  
   
 ##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
  调用此成员函数可检索`COleControl`与关联的对象`CDataPathProperty`对象。  
@@ -121,7 +121,7 @@ COleControl* GetControl();
  返回指向 OLE 控件的指针与关联`CDataPathProperty`对象。 **NULL**如果不控件关联。  
   
 ##  <a name="getpath"></a>  CDataPathProperty::GetPath  
- 调用此成员函数可检索的路径、 时设置`CDataPathProperty`对象已构造的或在指定**打开**，或对上一个调用中指定`SetPath`成员函数。  
+ 调用此成员函数可检索的路径、 时设置`CDataPathProperty`对象已构造的或在指定`Open`，或对上一个调用中指定`SetPath`成员函数。  
   
 ```  
 CString GetPath() const;  
@@ -153,13 +153,13 @@ virtual BOOL Open(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pControl`  
+ *pControl*  
  指向 OLE 控件对象要与此相关联的`CDataPathProperty`对象。  
   
- `pError`  
+ *pError*  
  指向文件异常的指针。 发生错误时将设置的原因。  
   
- `lpszPath`  
+ *lpszPath*  
  路径，这可能是绝对或相对，用于创建异步名字对象引用的属性的实际绝对位置。 `CDataPathProperty` 使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
   
 ### <a name="return-value"></a>返回值  
@@ -168,9 +168,9 @@ virtual BOOL Open(CFileException* pError = NULL);
 ### <a name="remarks"></a>备注  
  该函数尝试获取`IBindHost`从控件的接口。  
   
- 之前调用**打开**如果没有路径，该属性的路径的值必须设置。 这可以对对象进行构造，或通过调用时`SetPath`成员函数。  
+ 之前调用`Open`如果没有路径，该属性的路径的值必须设置。 这可以对对象进行构造，或通过调用时`SetPath`成员函数。  
   
- 之前调用**打开**不会进行控制，ActiveX 控件 （以前称为 OLE 控件） 可以是与对象关联。 进行这种对象时构造，或通过调用`SetControl`。  
+ 之前调用`Open`不会进行控制，ActiveX 控件 （以前称为 OLE 控件） 可以是与对象关联。 进行这种对象时构造，或通过调用`SetControl`。  
   
  所有重载[CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open)还可以从中`CDataPathProperty`。  
   
@@ -192,7 +192,7 @@ void SetControl(COleControl* pControl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pControl`  
+ *pControl*  
  指向要与属性关联的异步 OLE 控件的指针。  
   
 ##  <a name="setpath"></a>  CDataPathProperty::SetPath  
@@ -203,7 +203,7 @@ void SetPath(LPCTSTR lpszPath);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszPath`  
+ *lpszPath*  
  路径，这可能是绝对或相对，异步加载的属性。 `CDataPathProperty` 使用 Url，不是文件名。 如果你想`CDataPathProperty`对象文件中，前面预置`file://`到路径。  
   
 ## <a name="see-also"></a>请参阅  

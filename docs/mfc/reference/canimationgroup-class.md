@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355628"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955730"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 类
 实现结合了动画情节提要、 动画对象和转换来定义动画的动画组。  
@@ -115,7 +115,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|动画组的唯一标识符。|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|指向此组所属的动画控制器的指针。|  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要 COM 对象的指针。  
   
- `bAddDeep`  
+ *bAddDeep*  
  指定是否应将此方法添加到依赖于其他关键帧的情节提要关键帧。  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要 COM 对象的指针。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  进行动画处理的组。  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 TRUE否则为 FALSE。  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentController`  
+ *pParentController*  
  动画控制器来创建一组指向的指针。  
   
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pVariable`  
+ *pVariable*  
  指向动画变量的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTimer`  
+ *pTimer*  
  指向动画计时器的指针。  
   
- `time`  
+ *time*  
  指定调度动画的时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指定如何销毁转换。  
   
 ### <a name="remarks"></a>备注  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366257"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951287"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 结构
 `CDaoRelationInfo`结构包含有关定义字段中两个表之间的关系的信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一地命名关系对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  在关系的外表进行命名。 外部表是用于包含外键表。 通常，可以使用外部表用于建立或强制引用完整性。 外部表通常是一个对多关系的多方。 外部表的示例包括表包含美国的州或加拿大省或客户订单的代码。  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  包含有关关系类型的信息。 此成员的值可以是以下任一项：  
   
 - **dbRelationUnique**关系是一对一。  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade**将级联删除。  
   
- `m_pFieldInfos`  
- 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含关系中每个字段的一个对象。 `m_nFields`数据成员提供的数组元素的计数。  
+ *m_pFieldInfos*  
+ 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含关系中每个字段的一个对象。 *M_nFields*数据成员提供的数组元素的计数。  
   
- `m_nFields`  
- 数`CDaoRelationFieldInfo`中的对象`m_pFieldInfos`数据成员。  
+ *m_nFields*  
+ 数`CDaoRelationFieldInfo`中的对象*m_pFieldInfos*数据成员。  
   
 ## <a name="remarks"></a>备注  
  对主要和辅助上面的引用指示如何通过返回的信息[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类中的成员函数`CDaoDatabase`。  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383014"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953819"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>使用 CStatusBarCtrl 创建 CStatusBarCtrl 对象
 下面是一个示例的一个典型用途[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -37,7 +37,7 @@ ms.locfileid: "33383014"
   
 4.  调用[SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts)在状态栏控件和每个部分的右边缘的坐标中设置的部分数。  
   
-5.  调用[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)以设置状态栏控件给定部分中的文本。 该消息会使已更改的控件部分失效，从而导致该控件在下一个控件收到 `WM_PAINT` 消息时显示新文本。  
+5.  调用[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)以设置状态栏控件给定部分中的文本。 消息将使已更改，从而导致该控件在下一步收到 WM_PAINT 消息时显示新的文本的控件部分失效。  
   
  在某些情况下，状态栏仅需要显示的文本行。 在这种情况下，请调用[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)。 这将状态栏控件放入"简单"模式下，显示单行文本。  
   

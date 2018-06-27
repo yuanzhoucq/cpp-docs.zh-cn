@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385152"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955997"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows 套接字：字节排序
 本文和两篇配套文章介绍了 Windows 套接字编程中的若干问题。 本文介绍如何字节排序。 文章中涉及的其他问题： [Windows 套接字： 阻止](../mfc/windows-sockets-blocking.md)和[Windows 套接字： 转换字符串](../mfc/windows-sockets-converting-strings.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "33385152"
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- C + + 中`struct`是实质上是相同的为类。 `Message`结构可以具有成员函数，如`Serialize`上面的成员函数声明。 `Serialize`成员函数可能如下所示：  
+ C + + 中**结构**是实质上是相同的为类。 `Message`结构可以具有成员函数，如`Serialize`上面的成员函数声明。 `Serialize`成员函数可能如下所示：  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   

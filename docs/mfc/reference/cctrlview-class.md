@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353161"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955516"
 ---
 # <a name="cctrlview-class"></a>CCtrlView 类
 使文档视图体系结构适应 Windows 98 和 Windows NT 版本 3.51 及更高版本所支持的公共控件。  
@@ -59,7 +59,7 @@ class CCtrlView : public CView
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|包含视图类的默认样式。|  
 |[CCtrlView::m_strClass](#m_strclass)|包含视图类的 Windows 类名称。|  
@@ -91,10 +91,10 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszClass`  
+ *lpszClass*  
  视图类 Windows 类名。  
   
- `dwStyle`  
+ *dwStyle*  
  视图类的样式。  
   
 ### <a name="remarks"></a>备注  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向在其中绘制发生的设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
- `OnDraw` 通常用于屏幕显示，传递指定屏幕设备上下文调用`pDC`。  
+ `OnDraw` 通常用于屏幕显示，传递指定屏幕设备上下文调用*pDC*。  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  在创建附加到此 `CWnd` 对象的 Windows 窗口之前调用。  

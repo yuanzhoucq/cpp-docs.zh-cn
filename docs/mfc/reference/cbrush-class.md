@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355884"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954099"
 ---
 # <a name="cbrush-class"></a>CBrush 类
 封装一个 Windows 图形设备接口 (GDI) 画笔。  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `crColor`  
+ *crColor*  
  指定作为 RGB 颜色的画笔的前景色。 如果画笔阴影线，则此参数指定阴影的颜色。  
   
- `nIndex`  
+ *nIndex*  
  指定的画笔的阴影样式。 它可以是以下值之一：  
   
 - `HS_BDIAGONAL` 在 45 度 （从左到右） 的向下阴影  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` 垂直阴影  
   
- `pBitmap`  
+ *pBitmap*  
  指向`CBitmap`对象，它指定与其画笔绘制的位图。  
   
 ### <a name="remarks"></a>备注  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  使用单个构造函数[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数构造实心画笔用指定颜色。 颜色指定 RGB 值，并可以使用构造`RGB`WINDOWS 中的宏。H。  
   
- 带两个参数的构造函数构造阴影画笔。 `nIndex`参数指定阴影模式的索引。 `crColor`参数指定的颜色。  
+ 带两个参数的构造函数构造阴影画笔。 *NIndex*参数指定阴影模式的索引。 *CrColor*参数指定的颜色。  
   
  带的构造函数`CBitmap`参数构造图案的画笔。 此参数标识位图。 假定已创建使用位图[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)。 填充模式中使用的位图的最小大小为 8 个像素的 8 个像素。  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  在处理 DIB 的方法不同的两个版本：  
   
--   在第一个版本中，若要获取 DIB 的句柄可调用 Windows **GlobalAlloc**函数分配的全局内存块，然后打包 DIB 并用来填充内存。  
+-   在第一个版本中，若要获取 DIB 的句柄可调用 Windows`GlobalAlloc`函数分配的全局内存块，然后打包 DIB 并用来填充内存。  
   
--   在第二个版本中，它不需要调用**GlobalAlloc**为已打包 DIB 分配内存。  
+-   在第二个版本中，它不需要调用`GlobalAlloc`为已打包 DIB 分配内存。  
   
  已打包的 DIB 组成`BITMAPINFO`紧跟定义位图的像素的字节数组的数据结构。 用作填充模式的位图应为 8 个像素 8 个像素。 如果位图大小，则 Windows 将创建使用仅为前 8 行和中与位图左上角的像素的 8 列对应的位的填充模式。  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  有关使用以下 Windows 功能的信息，请参阅 Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (此函数提供仅为对于早于 3.0 版本的 Windows 编写的应用程序的兼容性的; 使用**CreateDIBPatternBrushPt**函数。)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (此函数提供仅为对于早于 3.0 版本的 Windows 编写的应用程序的兼容性的; 使用`CreateDIBPatternBrushPt`函数。)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) （此函数应使用基于 Win32 的应用程序。）  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定的画笔的阴影样式。 它可以是以下值之一：  
   
 - `HS_BDIAGONAL` 在 45 度 （从左到右） 的向下阴影  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` 垂直阴影  
   
- `crColor`  
+ *crColor*  
  指定作为 RGB 颜色 （阴影的颜色） 的画笔的前景色。 请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)适用于详细信息的 Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitmap`  
+ *pBitmap*  
  标识位图。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 随后可以支持光栅操作任何设备上下文选择画笔。 由标识位图`pBitmap`通常通过使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函数。  
+ 随后可以支持光栅操作任何设备上下文选择画笔。 由标识位图*pBitmap*通常通过使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函数。  
   
  用作填充模式的位图应为 8 个像素 8 个像素。 如果位图大小，则 Windows 将只使用对应的前 8 行和列中与位图左上角的像素的位。  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>参数  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定的画笔的颜色。 颜色指定 RGB 值，并可以使用构造`RGB`WINDOWS 中的宏。H。  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定的画笔的颜色。 颜色指定 RGB 值，并可以使用 WINDOWS 中的 RGB 宏构造。H。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) Windows SDK for 的值列表中。  
   
 ### <a name="return-value"></a>返回值  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hBrush`  
+ *hBrush*  
  `HANDLE` 为 Windows GDI 画笔。  
   
 ### <a name="return-value"></a>返回值  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLogBrush`  
+ *pLogBrush*  
  指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，它包含有关画笔的信息。  
   
 ### <a name="return-value"></a>返回值  
- 如果函数成功，和`pLogBrush`是有效的指针，则返回值是存储到缓冲区的字节数。  
+ 如果函数成功，和*pLogBrush*是有效的指针，则返回值是存储到缓冲区的字节数。  
   
- 如果函数成功，和`pLogBrush`是**NULL**，返回值是保存该函数的信息所需的字节数应将存储到缓冲区。  
+ 如果函数成功，和*pLogBrush*是**NULL**，返回值是保存该函数的信息所需的字节数应将存储到缓冲区。  
   
  如果函数失败，返回值为 0。  
   

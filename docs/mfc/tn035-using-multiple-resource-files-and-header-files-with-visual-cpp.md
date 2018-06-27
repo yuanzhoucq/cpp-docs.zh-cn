@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385373"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952406"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多个资源文件和头文件
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- 当 Visual c + + 编译。RC 文件，它定义**APSTUDIO_INVOKED**以及**RC_INVOKED**。 如果 AppWizard 创建的文件结构被破坏，并且 Visual C++ 读取上述 #error 行，则它将报告错误，并中止读取 .RC 文件。  
+ 当 Visual c + + 编译。RC 文件，它定义`APSTUDIO_INVOKED`以及`RC_INVOKED`。 如果 AppWizard 创建的文件结构被破坏，并且 Visual C++ 读取上述 #error 行，则它将报告错误，并中止读取 .RC 文件。  
   
  **管理共享的多个 Visual c + + 编辑符号。RC 文件**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE**是将用于对话框资源、 菜单资源等的下一符号值。 资源符号值的有效范围为 1 到 0x6FFF。  
+ `_APS_NEXT_RESOURCE_VALUE` 是将用于对话框资源、 菜单资源等的下一符号值。 资源符号值的有效范围为 1 到 0x6FFF。  
   
- **_APS_NEXT_COMMAND_VALUE**是将用于命令标识的下一符号值。 命令符号值的有效范围为 0x8000 到 0xDFFF。  
+ `_APS_NEXT_COMMAND_VALUE` 是将用于命令标识的下一符号值。 命令符号值的有效范围为 0x8000 到 0xDFFF。  
   
- **_APS_NEXT_CONTROL_VALUE**是将用于对话框控件的下一符号值。 对话框控件符号值的有效范围为 8 到 0xDFFF。  
+ `_APS_NEXT_CONTROL_VALUE` 是将用于对话框控件的下一符号值。 对话框控件符号值的有效范围为 8 到 0xDFFF。  
   
- **_APS_NEXT_SYMED_VALUE**是当你手动分配符号值在符号浏览器中使用新命令，将发出的下一符号值。  
+ `_APS_NEXT_SYMED_VALUE` 当你手动分配符号值，将发出的下一符号值使用符号浏览器的新命令。  
   
  创建新 .RC 文件时，Visual C++ 先使用略高于最低合法值的值。 AppWizard 还会初始化这些值以更适于 MFC 应用程序。 有关 ID 值范围的详细信息，请参阅[技术说明 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。  
   
- 现在 Visual c + + 每次创建新的资源文件，即使在同一项目中，定义相同 **_APS_NEXT\_** 值。 因此，如果你在两个不同 .RC 文件中添加比如多个对话框，则 Visual C++ 很可能会将相同 #define 值分配到不同对话框。 例如，第一个 .RC 文件中的 IDD_MY_DLG1 可能会获得与第二个 .RC 文件中的 IDD_MY_DLG2 相同的数字 101。  
+ 现在 Visual c + + 每次创建新的资源文件，即使在同一项目中，定义相同`_APS_NEXT_`值。 因此，如果你在两个不同 .RC 文件中添加比如多个对话框，则 Visual C++ 很可能会将相同 #define 值分配到不同对话框。 例如，第一个 .RC 文件中的 IDD_MY_DLG1 可能会获得与第二个 .RC 文件中的 IDD_MY_DLG2 相同的数字 101。  
   
- 若要避免此问题，应在各自 .RC 文件中对四个 ID 域中的每个域保留不同的数值范围。 执行此操作通过手动更新 **_APS_NEXT**中每个值。RC 文件`before`开始将资源添加。 例如，如果第一个。RC 文件使用默认值 **_APS_NEXT**值，则你可能想要分配以下 **_APS_NEXT**第二个值。RC 文件：  
+ 若要避免此问题，应在各自 .RC 文件中对四个 ID 域中的每个域保留不同的数值范围。 执行此操作通过手动更新`_APS_NEXT`中每个值。RC 文件**之前**开始将资源添加。 例如，如果第一个。RC 文件使用默认值`_APS_NEXT`值，则你可能想要分配以下`_APS_NEXT`第二个值。RC 文件：  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

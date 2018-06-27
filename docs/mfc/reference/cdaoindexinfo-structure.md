@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367030"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954060"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 结构
 `CDaoIndexInfo`结构包含有关为数据访问对象 (DAO) 定义的索引对象的信息。  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一地命名字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  指向数组的指针[CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) ，该值指示哪些 tabledef 或记录集字段索引中的键字段的对象。 每个对象标识索引中的一个字段。 默认索引顺序为升序。 索引对象可以具有表示为每个记录的索引键的一个或多个字段。 可以对这些升序、 降序或组合。  
   
- `m_nFields`  
- 存储中的字段数`m_pFieldInfos`。  
+ *m_nFields*  
+ 存储中的字段数*m_pFieldInfos*。  
   
  *m_bPrimary*  
  如果主属性为**TRUE**，索引对象表示主索引。 主索引包含唯一标识预定义的顺序中的表中的所有记录的一个或多个字段。 索引字段必须是唯一的因为索引对象的唯一属性也设置为**TRUE**在 DAO 中。 如果主索引包含多个字段，每个字段可以包含重复值，但所有编制索引的字段中值的每个组合必须唯一。 主索引包含表的键，并且通常包含为主键相同的字段。  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  有关详细信息，请参阅主题 DAO 帮助中的"IgnoreNulls 属性"。  
   
- `m_bRequired`  
+ *m_bRequired*  
  指示 DAO 索引对象是否需要非 Null 值。 如果此属性为**TRUE**，索引对象不允许 Null 值。 有关详细信息，请参阅主题 DAO 帮助中的"所需属性"。  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  索引对象不由 MFC 类表示。 相反，DAO 对象类的基础 MFC 对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含称为索引集合的索引对象的集合。 这些类提供成员函数来访问各个项的索引信息，或可以访问其在一次与`CDaoIndexInfo`对象通过调用`GetIndexInfo`包含对象的成员函数。  
   
- `CDaoIndexInfo` 具有一个构造函数和析构函数以正确地分配和释放中的索引字段信息`m_pFieldInfos`。  
+ `CDaoIndexInfo` 具有一个构造函数和析构函数以正确地分配和释放中的索引字段信息*m_pFieldInfos*。  
   
  检索的信息`GetIndexInfo`成员函数的 tabledef 对象存储在`CDaoIndexInfo`结构。 调用`GetIndexInfo`包含 tabledef 对象的索引集合中存储索引对象的成员函数。 `CDaoIndexInfo` 此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoIndexInfo`对象。  
   

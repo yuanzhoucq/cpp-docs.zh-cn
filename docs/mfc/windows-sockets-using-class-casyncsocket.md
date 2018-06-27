@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc461a0a2325f768711f6d7529949ee24a1b4a25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385175"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954879"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 套接字：使用类 CAsyncSocket
 此文章介绍了如何使用类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 请注意，此类可封装 Windows 套接字 API 非常低的级别。 `CAsyncSocket` 是以供程序员了解详细信息中的网络通信，但希望网络事件的通知回调的便利性。 基于此假设，本文仅提供基本说明。 你可能应考虑使用`CAsyncSocket`如果你想的 MFC 应用程序中的多个网络协议处理的 Windows 套接字的易用性，但不是希望以牺牲灵活性来。 你还可能会觉得让你直接比你自己无法使用类的更常规的备用模型进行编程的通信详细获得更高的效率`CSocket`。  
@@ -53,13 +53,13 @@ ms.locfileid: "33385175"
   
      [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
-     -或-  
+     或  
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     上面的第一个构造函数创建`CAsyncSocket`堆栈上的对象。 第二个构造函数创建`CAsyncSocket`堆上。 第一个[创建](../mfc/reference/casyncsocket-class.md#create)调用上面使用的默认参数创建流套接字。 第二个**创建**调用都将使用指定的端口和地址创建数据报套接字。 (你可以使用**创建**采用哪种构造方法的版本。)  
+     上面的第一个构造函数创建`CAsyncSocket`堆栈上的对象。 第二个构造函数创建`CAsyncSocket`堆上。 第一个[创建](../mfc/reference/casyncsocket-class.md#create)调用上面使用的默认参数创建流套接字。 第二个`Create`调用都将使用指定的端口和地址创建数据报套接字。 (你可以使用`Create`采用哪种构造方法的版本。)  
   
-     参数**创建**是：  
+     参数`Create`是：  
   
     -   "端口": 短整数。  
   
@@ -75,14 +75,14 @@ ms.locfileid: "33385175"
   
 2.  如果客户端套接字，套接字对象连接到服务器套接字，使用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)。  
   
-     -或-  
+     或  
   
      如果套接字是服务器，设置以开始侦听套接字 (与[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 对从客户端的连接尝试。 收到连接请求后，接受其与[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。  
   
      后接受连接，你可以执行类似验证密码任务。  
   
     > [!NOTE]
-    >  **接受**成员函数会将新的空引用`CSocket`对象作为其参数。 您必须构造此对象，然后才能调用**接受**。 如果此套接字对象超出范围，则关闭连接。 不要调用**创建**为此新的套接字对象。 有关示例，请参阅文章[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)。  
+    >  `Accept`成员函数会将新的空引用`CSocket`对象作为其参数。 您必须构造此对象，然后才能调用`Accept`。 如果此套接字对象超出范围，则关闭连接。 不要调用`Create`为此新的套接字对象。 有关示例，请参阅文章[Windows 套接字： 操作序列](../mfc/windows-sockets-sequence-of-operations.md)。  
   
 3.  通过调用执行与其他套接字通信`CAsyncSocket`封装 Windows 套接字 API 函数的对象的成员函数。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33385175"
   
  有关术语的定义这些以及其他信息，请参阅[Windows 套接字： 阻止](../mfc/windows-sockets-blocking.md)， [Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)， [Windows 套接字： 转换字符串](../mfc/windows-sockets-converting-strings.md).  
   
- 尽管这些问题，类**CAsycnSocket**可能是正确的选择为你如果你的应用程序要求所有的灵活性和控制可以获取。 如果没有，你应考虑使用类`CSocket`相反。 `CSocket` 隐藏大量从你的详细信息： 泵 Windows 消息在阻止调用期间，并为你提供访问权限的 it `CArchive`，后者管理为你的字符串转换和字节顺序差异。  
+ 尽管这些问题，类`CAsycnSocket`可能是正确的选择为你如果你的应用程序要求所有的灵活性和控制可以获取。 如果没有，你应考虑使用类`CSocket`相反。 `CSocket` 隐藏大量从你的详细信息： 泵 Windows 消息在阻止调用期间，并为你提供访问权限的 it `CArchive`，后者管理为你的字符串转换和字节顺序差异。  
   
  有关详细信息，请参见:  
   

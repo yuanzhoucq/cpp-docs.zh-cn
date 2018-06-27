@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376566"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955071"
 ---
 # <a name="cfilefind-class"></a>CFileFind 类
 执行本地文件搜索和是为基类[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)，执行 Internet 文件搜索。  
@@ -125,7 +125,7 @@ class CFileFind : public CObject
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|指向 `CAtlTransactionManager` 对象的指针。|  
   
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="example"></a>示例  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>备注  
  关闭搜索句柄的当前值所指定的文件。 重写此函数可更改的默认行为。  
   
- 必须调用[FindFile](#findfile)或[FindNextFile](#findnextfile)函数至少一次检索有效的搜索句柄。 **FindFile**和`FindNextFile`函数使用的搜索句柄来找到具有匹配具有给定名称的名称的文件。  
+ 必须调用[FindFile](#findfile)或[FindNextFile](#findnextfile)函数至少一次检索有效的搜索句柄。 `FindFile`和`FindNextFile`函数使用的搜索句柄来找到具有匹配具有给定名称的名称的文件。  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  调用此成员函数以打开文件搜索。  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrName`  
- 指向包含要查找的文件的名称的字符串的指针。 如果你通过**NULL**为`pstrName`， **FindFile**没有通配符 (\*。\*) 搜索。  
+ *pstrName*  
+ 指向包含要查找的文件的名称的字符串的指针。 如果你通过**NULL**为*pstrName*， **FindFile**没有通配符 (*。\*) 搜索。  
   
  *dwUnused*  
- 保留以使**FindFile**多态使用派生类。 必须为 0。  
+ 保留以使`FindFile`多态使用派生类。 必须为 0。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 若要获得扩展的错误信息，调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
- 在调用**FindFile**若要开始文件搜索，调用[FindNextFile](#findnextfile)以检索后续文件。 必须调用`FindNextFile`至少一次之前调用以下属性的任何成员函数：  
+ 在调用`FindFile`若要开始文件搜索，调用[FindNextFile](#findnextfile)以检索后续文件。 必须调用`FindNextFile`至少一次之前调用以下属性的任何成员函数：  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -238,7 +238,7 @@ virtual BOOL FindFile(
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -292,7 +292,7 @@ virtual BOOL FindNextFile();
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTimeStamp`  
+ *pTimeStamp*  
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含已创建了文件的时间。  
   
- `refTime`  
+ *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `refTime`  
+ *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTimeStamp`  
+ *pTimeStamp*  
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含文件上次写入到的时间。  
   
- `refTime`  
+ *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwMask`  
+ *dwMask*  
  指定一个或多个标识中的文件属性[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)结构，找到的文件。 若要搜索多个属性，使用按位 OR (&#124;) 运算符。 以下属性的任何组合是可接受的：  
   
 -   FILE_ATTRIBUTE_ARCHIVE 文件是一个存档文件。 应用程序使用此特性标记的备份或删除的文件。  

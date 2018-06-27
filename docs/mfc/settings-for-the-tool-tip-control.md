@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b61fb9450e6206c8f96102b5feeec6fbf3bead3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39de60d17dae5a6d7b2965350162117d049c29c8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379946"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951109"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>工具提示控件的设置
 可以将工具提示控件 ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) 设置为活动或非活动。 如果将其设置为活动状态，当光标位于工具上时，将显示工具提示控件。 如果将其设置为非活动状态，即使光标位于工具上时，也不会显示工具提示控件。 调用 [Activate](../mfc/reference/ctooltipctrl-class.md#activate) 以激活或停用工具提示控件。  
   
- 无论工具提示控件的所有者窗口处于活动还是非活动状态，均可以在光标位于工具上时，通过使用 **TTS_ALWAYSTIP** 样式来将活动的工具提示设置为显示工作提示。 如果不使用此样式，工具提示控件将在工具的所有者窗口处于活动状态时显示，当其处于非活动状态时则不显示。  
+ 你可以设置活动的工具提示显示的工具提示，光标位于工具上时工具提示控件的所有者窗口处于活动状态还是处于非活动状态，使用 TTS_ALWAYSTIP 样式。 如果不使用此样式，工具提示控件将在工具的所有者窗口处于活动状态时显示，当其处于非活动状态时则不显示。  
   
- 大多数应用程序均有工具栏，工具栏中的工具与菜单命令对应。 对于此类工具，工具提示控件可以方便地显示与相应菜单项相同的文本。 系统自动去除的所有字符串传递给工具提示控件，与号 (&) 加速器字符，除非控件具有**TTS_NOPREFIX**样式。  
+ 大多数应用程序均有工具栏，工具栏中的工具与菜单命令对应。 对于此类工具，工具提示控件可以方便地显示与相应菜单项相同的文本。 系统自动去除 (&) 加速器字符的所有字符串传递给工具提示控件，除非控件具有 TTS_NOPREFIX 样式。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 CToolTipCtrl](../mfc/using-ctooltipctrl.md)   

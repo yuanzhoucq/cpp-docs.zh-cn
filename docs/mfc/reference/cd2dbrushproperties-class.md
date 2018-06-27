@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b21777ba272819c9921aed90ede185b759ba45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 897be7063385566f2fd0e717eba0f89b335c2c48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349943"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950408"
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties 类
 `D2D1_BRUSH_PROPERTIES`的包装器。  
@@ -72,10 +72,10 @@ CD2DBrushProperties(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_opacity`  
+ *_opacity*  
  基不透明度的画笔。 默认值为 1.0。  
   
- `_transform`  
+ *_transform*  
  要应用到画笔的转换  
   
 ##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit  

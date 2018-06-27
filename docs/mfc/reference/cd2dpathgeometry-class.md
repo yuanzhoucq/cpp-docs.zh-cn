@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3afe8efa5730c3ef0f4448b1c548724b56b7cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b6d090d6ac85ecc6af36052c0c61fe74a1283c8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353411"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953738"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 类
 ID2D1PathGeometry 包装器。  
@@ -75,7 +75,7 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|指向 ID2D1PathGeometry 的指针。|  
   
@@ -99,7 +99,7 @@ void Attach(ID2D1PathGeometry* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
@@ -112,10 +112,10 @@ CD2DPathGeometry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DPathGeometry::Create  
@@ -126,7 +126,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -194,7 +194,7 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 ```  
   
 ### <a name="parameters"></a>参数  
- `geometrySink`  
+ *geometrySink*  
  路径几何图形的内容复制到接收器。 修改此接收器不会更改此路径几何图形的内容。  
   
 ### <a name="return-value"></a>返回值  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366468"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953696"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 类
 ID2D1DCRenderTarget 包装器。  
@@ -72,7 +72,7 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|指向 ID2D1DCRenderTarget 对象的指针。|  
   
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTarget`  
+ *pTarget*  
  现有呈现器目标接口。 不能为 NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dc`  
+ *dc*  
  设备上下文呈现目标发出绘图命令  
   
- `rect`  
+ *rect*  
  设备上下文 (HDC) 呈现器目标绑定到的句柄的尺寸  
   
 ### <a name="return-value"></a>返回值  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>参数  
- `props`  
+ *属性*  
  呈现模式、 像素格式、 远程处理选项、 DPI 信息和硬件呈现所需的最小 DirectX 支持中。  
   
 ### <a name="return-value"></a>返回值  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384906"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951619"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 本演练介绍了 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) ，并演示如何将其添加到应用程序中。  
@@ -44,7 +44,7 @@ ms.locfileid: "33384906"
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog 的步骤  
   
-1.  使用默认设置创建一个新的 MFC 应用程序项目。 将其命名为 `MyProject`。  
+1.  使用默认设置创建一个新的 MFC 应用程序项目。 调用它*MyProject*。  
   
 2.  使用 **解决方案资源管理器** 打开文件 MyProject.cpp。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33384906"
  }  
  ```  
   
-6.  在步骤 5 中 `if` 语句后面的括号之间插入以下代码。 此代码将创建 `CTaskDialog`。  
+6.  后面的括号之间的下列代码插入**如果**步骤 5 中的语句。 此代码将创建 `CTaskDialog`。  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ ms.locfileid: "33384906"
   
 2.  展开**资源视图**直到能够选择**字符串表**文件夹。 展开该文件夹并双击**字符串表**条目。  
   
-3.  滚动到字符串表的底部并添加一个新条目。 将 ID 更改为 `TEMP_LINE1`。 将标题设置为 **Command Line 1**。  
+3.  滚动到字符串表的底部并添加一个新条目。 将 ID 更改为*TEMP_LINE1*。 将标题设置为*Command Line 1*。  
   
-4.  再添加一个新条目。 将 ID 更改为 `TEMP_LINE2`。 将标题设置为 **Command Line 2**。  
+4.  再添加一个新条目。 将 ID 更改为*TEMP_LINE2*。 将标题设置为*Command Line 2*。  
   
 5.  导航回到 MyProject.cpp。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "33384906"
   
 2.  导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。  
   
-3.  直接在 `if` 语句的右括号前面（ `else` 块的前面）插入以下代码：  
+3.  插入以下代码的右括号之前立即**如果**语句 (在之前**其他**块):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

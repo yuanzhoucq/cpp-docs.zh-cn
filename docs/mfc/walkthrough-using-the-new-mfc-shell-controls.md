@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f349c955724b66ccc8cb1b19fc826ca0b8354258
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385091"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951944"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
 在本演练中，您将创建一个类似文件资源管理器的应用程序。 你将创建包含两个窗格的窗口。 左窗格中将包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)的层次结构视图中显示你的桌面的对象。 右窗格中将包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) ，在左窗格中选择的文件夹中显示的文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "33385091"
   
 1.  使用**MFC 应用程序向导**创建新的 MFC 应用程序。 若要从运行向导，**文件**菜单中选择**新建**，然后选择**项目**。 **新项目**将显示对话框。  
   
-2.  在**新项目**对话框框中，展开**Visual c + +** 中的节点**项目类型**窗格中，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 为项目键入名称，如`MFCShellControls`单击**确定**。 **MFC 应用程序向导**将显示。  
+2.  在**新项目**对话框框中，展开**Visual c + +** 中的节点**项目类型**窗格中，然后选择**MFC**。 然后，在**模板**窗格中，选择**MFC 应用程序**。 为项目键入名称，如*MFCShellControls*单击**确定**。 **MFC 应用程序向导**将显示。  
   
 3.  在**MFC 应用程序向导**对话框中，单击**下一步**。 **应用程序类型**将显示窗格。  
   
@@ -65,18 +65,21 @@ ms.locfileid: "33385091"
   
      现在添加的类型的成员变量`CMFCShellListCtrl`。 首先，在头文件中找到以下注释：  
   
- ' * / / 生成的消息映射函数  
+ ``` 
+    // Generated message map functions  
  ```  
   
-     Immediately above that comment add this code:  
+     立即该注释上面添加以下代码：  
   
  ```  
-    私有： CMFCShellListCtrl m_wndList;  
+    private: 
+    CMFCShellListCtrl m_wndList;  
  ```  
   
-2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
+2.  **MFC 应用程序向导**已创建`CMFCShellTreeCtrl`对象在`CMainFrame`类，但它是受保护的成员。 我们将更高版本访问此对象。 因此，现在创建为其访问器。 通过在中双击打开 MainFrm.h 标头文件**解决方案资源管理器**。 找到以下注释：  
   
- ``` *// Attributes  
+ ``` 
+    // Attributes  
  ```  
   
      立即在其下添加以下方法声明：  
@@ -84,66 +87,50 @@ ms.locfileid: "33385091"
  ```  
     public: 
     CMFCShellTreeCtrl& GetShellTreeCtrl();
-
  ```  
   
      接下来，通过在中双击打开 MainFrm.cpp 源文件**解决方案资源管理器**。 在该文件的底部，将添加以下方法定义：  
   
  ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
- {  
-    return m_wndTree;  
- }  
+    {  
+        return m_wndTree;  
+    }  
  ```  
   
-3.  现在我们更新`CMFCShellControlsView`类来处理**WM_CREATE** windows 消息。 打开 MFCShellControlsView.h 标头文件，然后单击此代码行：  
+3.  现在我们更新`CMFCShellControlsView`类来处理 WM_CREATE windows 消息。 打开 MFCShellControlsView.h 标头文件，然后单击此代码行：  
   
  ```  
     class CMFCShellControlsView : public CView  
  ```  
   
-     接下来，在**属性**窗口中，单击**消息**图标。 向下滚动直到找到**WM_CREATE**消息。 从下拉列表下一步**WM_CREATE**，选择**\<添加 > OnCreate**。 这为我们将消息处理程序，并自动更新的 MFC 消息映射。  
+     接下来，在**属性**窗口中，单击**消息**图标。 向下滚动，直到你找到 WM_CREATE 消息。 从下拉列表 WM_CREATE 旁边，选择*\<添加 > OnCreate*。 这为我们将消息处理程序，并自动更新的 MFC 消息映射。  
   
      在`OnCreate`方法现在，我们将创建我们`CMFCShellListCtrl`对象。 查找`OnCreate`MFCShellControlsView.cpp 中的方法定义源文件，并将其实现替换为以下代码：  
   
  ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
- {  
-    if (CView::OnCreate(lpCreateStruct) == -1)  
-    return -1;  
- 
-    CRect rectDummy (0,
-    0,
-    0,
-    0);
-
-    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-    rectDummy,
-    this,
-    1);
-
- 
-    return 0;  
- }  
+    {  
+        if (CView::OnCreate(lpCreateStruct) == -1)  
+            return -1;  
+     
+        CRect rectDummy (0, 0, 0, 0);
+    
+        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT, rectDummy, this, 1);
+    
+        return 0;  
+    }  
  ```  
   
-4.  重复上述步骤，但对于**WM_SIZE**消息。 这将导致你的应用程序视图重绘每当用户更改应用程序窗口的大小。 将为定义`OnSize`方法替换为以下代码：  
+4.  重复上述步骤，但为 WM_SIZE 消息。 这将导致你的应用程序视图重绘每当用户更改应用程序窗口的大小。 将为定义`OnSize`方法替换为以下代码：  
   
  ```  
-    void CMFCShellControlsView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
-
-    m_wndList.SetWindowPos(NULL, -1, -1,
-    cx,
-    cy,  
-    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
-
- }  
+    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
+    
+        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+    }  
  ```  
   
 5.  最后一步是连接`CMFCShellTreeCtrl`和`CMFCShellListCtrl`通过使用对象[CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist)方法。 调用此方法之后,`CMFCShellListCtrl`将自动显示在选定的项的内容`CMFCShellTreeCtrl`。 我们将执行此操作`OnActivateView`方法，从重写[CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview)。  
@@ -152,30 +139,21 @@ ms.locfileid: "33385091"
   
  ```  
     protected: 
-    virtual void OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView);
-
+    virtual void OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);
  ```  
   
      接下来，将此方法的定义添加到 MFCShellControlsView.cpp 源文件：  
   
  ```  
-    void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView)   
- {  
-    if (bActivate&& AfxGetMainWnd() != NULL)  
- {  
- ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
-
- }  
- 
-    CView::OnActivateView(bActivate,
-    pActivateView,
-    pDeactiveView);
-
- }  
+    void CMFCShellControlsView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView)   
+    {  
+        if (bActivate&& AfxGetMainWnd() != NULL)  
+        {  
+            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+        }  
+     
+        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);
+    }  
  ```  
   
      因为我们正在呼叫中的方法`CMainFrame`类，我们必须添加`#include`指令 MFCShellControlsView.cpp 源文件顶部：  
@@ -198,4 +176,3 @@ ms.locfileid: "33385091"
   
 ## <a name="see-also"></a>请参阅  
  [演练](../mfc/walkthroughs-mfc.md)
-

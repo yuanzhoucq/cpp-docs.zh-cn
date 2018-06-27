@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367498"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950880"
 ---
 # <a name="cevent-class"></a>CEvent 类
 表示一个事件，即支持一个线程向已发生事件的另一个线程的同步对象。  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` 对象具有两种类型： 手动和自动。  
   
- 自动`CEvent`对象自动返回给是非终止的 （不可用） 状态后释放至少一个线程。 默认情况下，`CEvent`对象是自动的除非您传递`TRUE`为`bManualReset`在构造期间的参数。  
+ 自动`CEvent`对象自动返回给是非终止的 （不可用） 状态后释放至少一个线程。 默认情况下，`CEvent`对象是自动的除非您传递`TRUE`为*bManualReset*在构造期间的参数。  
   
  手动`CEvent`对象保留在通过设置状态[SetEvent](#setevent)或[ResetEvent](#resetevent)直到调用其他函数。 若要创建手动`CEvent`对象，则传递`TRUE`为`bManualReset`在构造期间的参数。  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bInitiallyOwn`  
- 如果**TRUE**的线程**CMultilock**或`CSingleLock`启用对象。 否则，必须等待，想要访问该资源的所有线程。  
+ *bInitiallyOwn*  
+ 如果**TRUE**的线程`CMultilock`或`CSingleLock`启用对象。 否则，必须等待，想要访问该资源的所有线程。  
   
  *bManualReset*  
  如果**TRUE**，指定事件对象是一个手动的事件，否则事件对象是自动的事件。  
   
- `lpszName`  
+ *在 lpszName*  
  `CEvent` 对象的名称。 如果跨进程边界，将使用该对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`即在引用该名称的事件的对象。 如果名称与匹配不是事件的现有同步对象，构造将失败。 如果**NULL**，名称将为 null。  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  事件对象的安全属性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  

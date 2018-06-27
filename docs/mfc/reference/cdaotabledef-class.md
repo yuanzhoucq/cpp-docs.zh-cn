@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbc191baf452a4e695eee2eed00a8f679285dee1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378303"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952474"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 表示基表或附加表的已存储定义。  
@@ -104,7 +104,7 @@ class CDaoTableDef : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|构造**CDaoTableDef**对象。|  
+|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|构造 `CDaoTableDef` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
@@ -161,7 +161,7 @@ class CDaoTableDef : public CObject
   
 -   获取或设置使用的验证条件`GetValidationRule`和`SetValidationRule`，和`GetValidationText`和`SetValidationText`成员函数。  
   
--   使用**打开**成员函数来创建表的、 动态集或快照类型`CDaoRecordset`对象。  
+-   使用`Open`成员函数来创建表的、 动态集或快照类型`CDaoRecordset`对象。  
   
     > [!NOTE]
     >  DAO 数据库类有别于基于开放式数据库连接 (ODBC) 的 MFC 数据库类。 DAO 数据库类的所有名称都具有"CDao"前缀。 你仍可以访问 ODBC 数据源对于 DAO 类;DAO 类通常提供高级功能，因为它们是特定于 Microsoft Jet 数据库引擎。  
@@ -176,7 +176,7 @@ class CDaoTableDef : public CObject
   
     -   若要创建新表，请调用 tabledef 对象[创建](#create)成员函数，提供的表的名称。 调用[CreateField](#createfield)和[CreateIndex](#createindex)若要向表中添加字段和索引。  
   
-    -   调用[追加](#append)表的保存通过将其追加到数据库的 TableDefs 集合。 **创建**将 tabledef 放入打开状态，因此在调用**创建**不调用**打开**。  
+    -   调用[追加](#append)表的保存通过将其追加到数据库的 TableDefs 集合。 `Create` 将 tabledef 放入打开状态，因此在调用`Create`不调用`Open`。  
   
         > [!TIP]
         >  创建已保存的表的最简单方法是创建它们，并将其存储在使用 Microsoft Access 数据库。 然后可以打开，并在 MFC 代码中使用它们。  
@@ -203,7 +203,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>备注  
- 该函数将对象追加到数据库的 TableDefs 集合。 你可以使用 tabledef 作为临时对象同时定义通过不追加，但如果你想要保存并使用它，则必须调用**追加**。  
+ 该函数将对象追加到数据库的 TableDefs 集合。 你可以使用 tabledef 作为临时对象同时定义通过不追加，但如果你想要保存并使用它，则必须调用`Append`。  
   
 > [!NOTE]
 >  如果你尝试附加未命名的 tabledef （包含 null 或空字符串），则 MFC 会引发异常。  
@@ -233,7 +233,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDatabase`  
+ *pDatabase*  
  指向的指针[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
@@ -247,9 +247,9 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>备注  
- 通常在调用之后**关闭**，如果它已分配了与删除 tabledef 对象**新**。  
+ 通常在调用之后`Close`，如果它已分配了与删除 tabledef 对象**新**。  
   
- 你可以调用[打开](#open)在调用后再次**关闭**。 这样可以重用 tabledef 对象。  
+ 你可以调用[打开](#open)在调用后再次`Close`。 这样可以重用 tabledef 对象。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"Close 方法"。  
   
@@ -265,10 +265,10 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向包含表的名称的字符串的指针。  
   
- `lAttributes`  
+ *lAttributes*  
  相对应的 tabledef 对象所表示的表的特征的值。 可以使用按位 OR 组合任何以下常量：  
   
 |返回的常量|描述|  
@@ -281,11 +281,11 @@ virtual void Create(
  *lpszSrcTable*  
  指向包含源表名称的字符串的指针。 默认情况下，此值初始化为**NULL**。  
   
- `lpszConnect`  
+ *lpszConnect*  
  指向包含的默认连接字符串的字符串的指针。 默认情况下，此值初始化为**NULL**。  
   
 ### <a name="remarks"></a>备注  
- 一旦具有名为 tabledef，然后，你可以调用[追加](#append)tabledef 保存数据库的 TableDefs 集合中。 在调用**追加**，tabledef 处于打开状态，并可以使用它来创建[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象。  
+ 一旦具有名为 tabledef，然后，你可以调用[追加](#append)tabledef 保存数据库的 TableDefs 集合中。 在调用`Append`，tabledef 处于打开状态，并可以使用它来创建[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"CreateTableDef 方法"。  
   
@@ -303,10 +303,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指定此字段的名称的字符串表达式指向的指针。  
   
- `nType`  
+ *nType*  
  指示该字段的数据类型的值。 该设置可以是下列值之一：  
   
 |类型|大小（字节）|描述|  
@@ -323,10 +323,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbLongBinary**|0|长二进制文件 （OLE 对象）， [CLongBinary](../../mfc/reference/clongbinary-class.md)或[CByteArray](../../mfc/reference/cbytearray-class.md)|  
 |**dbMemo**|0|备注 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
   
- `lSize`  
- 一个值，指示的最大大小，以字节为单位的字段的包含文本或包含文本或数字值的字段的固定的大小。 `lSize`对于除所有文本字段都忽略参数。  
+ *lSize*  
+ 一个值，指示的最大大小，以字节为单位的字段的包含文本或包含文本或数字值的字段的固定的大小。 *LSize*对于除所有文本字段都忽略参数。  
   
- `lAttributes`  
+ *lAttributes*  
  可以使用按位 OR 组合的字段，特征相对应的值。  
   
 |返回的常量|描述|  
@@ -337,17 +337,17 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbUpdatableField**|可以更改的字段值。|  
 |**dbDescending**|对字段进行排序以降序 (Z-A 或 100-0) （仅适用于索引对象的字段集合中的字段对象） 的顺序。 如果省略此常量时，对字段进行排序以升序 (A-Z 或 0-100) 顺序 （默认值）。|  
   
- `fieldinfo`  
+ *fieldinfo*  
  对引用[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
- A **DAOField**创建 (OLE) 对象并将其追加到的字段集合**DAOTableDef** (OLE) 对象。 除了其用于检查对象属性，还可以使用`CDaoFieldInfo`构造在 tabledef 中创建新字段的输入的参数。 第一个版本`CreateField`会更易于使用，但如果你想更精细的控制，你可以使用第二个版本`CreateField`，此方法采用`CDaoFieldInfo`参数。  
+ A **DAOField**创建 (OLE) 对象并将其追加到的字段集合`DAOTableDef`(OLE) 对象。 除了其用于检查对象属性，还可以使用`CDaoFieldInfo`构造在 tabledef 中创建新字段的输入的参数。 第一个版本`CreateField`会更易于使用，但如果你想更精细的控制，你可以使用第二个版本`CreateField`，此方法采用`CDaoFieldInfo`参数。  
   
  如果你使用的版本`CreateField`采用`CDaoFieldInfo`参数，你必须仔细设置每个的以下成员`CDaoFieldInfo`结构：  
   
 - **m_strName**  
   
-- `m_nType`  
+- **m_nType**  
   
 - **m_lSize**  
   
@@ -367,7 +367,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `indexinfo`  
+ *indexinfo*  
  对引用[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
@@ -379,9 +379,9 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName**必须提供名称。  
   
-- `m_pFieldInfos` 必须指向数组的`CDaoIndexFieldInfo`结构。  
+- **m_pFieldInfos**必须指向数组的`CDaoIndexFieldInfo`结构。  
   
-- `m_nFields` 必须指定的数组中的字段的数目`CDaoFieldInfo`结构。  
+- **m_nFields**必须的数组中指定的字段的数目`CDaoFieldInfo`结构。  
   
  剩余成员将被忽略的如果设置为**FALSE**。 此外， **m_lDistinctCount**成员时将忽略在创建索引。  
   
@@ -394,10 +394,10 @@ void DeleteField(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向是现有字段的名称的字符串表达式的指针。  
   
- `nIndex`  
+ *nIndex*  
  表的从零开始的字段集合，按索引查找中的字段的索引。  
   
 ### <a name="remarks"></a>备注  
@@ -414,10 +414,10 @@ void DeleteIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向现有索引的名称的字符串表达式的指针。  
   
- `nIndex`  
+ *nIndex*  
  数据库的从零开始 TableDefs 集合中，按索引查找索引对象的数组索引。  
   
 ### <a name="remarks"></a>备注  
@@ -491,14 +491,14 @@ COleDateTime GetDateCreated();
  有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
 ##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
- 调用此函数可确定日期和时间表基础**CDaoTableDef**上次更新对象。  
+ 调用此函数可确定日期和时间表基础`CDaoTableDef`上次更新对象。  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个值，包含的日期和时间表基础**CDaoTableDef**上次更新对象。  
+ 一个值，包含的日期和时间表基础`CDaoTableDef`上次更新对象。  
   
 ### <a name="remarks"></a>备注  
  日期和时间设置均源自在其创建或上次更新基表的计算机。 在多用户环境中，用户应直接从文件服务器，为了避免出现差异; 获取这些设置也就是说，所有客户端应使用"标准"的时间源-可能是从一台服务器。  
@@ -537,13 +537,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  表的从零开始的字段集合，按索引查找中的字段对象的索引。  
   
- `fieldinfo`  
+ *fieldinfo*  
  对引用[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定有关要检索的字段的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小，属性。 使用此选项以最快的性能。  
@@ -552,13 +552,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 验证规则，验证文本，默认值  
   
- `lpszName`  
+ *在 lpszName*  
  指向对象的名称字段，按名称查找的指针。 名称是唯一的名称字段带有最多 64 个字符的字符串。  
   
 ### <a name="remarks"></a>备注  
  一个版本的函数，可按索引查找字段。 另一个版本中，可以按名称查找字段。  
   
- 返回的信息的说明，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ 返回的信息的说明，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
@@ -594,13 +594,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  表的从零开始的索引集合中，通过在集合中的位置查找该索引对象的数字索引。  
   
- `indexinfo`  
+ *indexinfo*  
  对引用[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要检索的索引有关的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项：  
   
 - `AFX_DAO_PRIMARY_INFO` 名称，字段信息字段。 使用此选项以最快的性能。  
@@ -609,13 +609,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 非重复计数  
   
- `lpszName`  
+ *在 lpszName*  
  指向按名称查找的名称的索引对象的指针。  
   
 ### <a name="remarks"></a>备注  
  一个版本的函数可以查找集合中其位置的索引。 另一个版本中，可以按名称查找索引。  
   
- 返回的信息的说明，请参阅[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ 返回的信息的说明，请参阅[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
@@ -672,7 +672,7 @@ CString GetValidationRule();
 ```  
   
 ### <a name="return-value"></a>返回值  
- A **CString**验证字段中的数据，因为它已更改或添加到表中的对象。  
+ A`CString`验证字段中的数据，因为它已更改或添加到表中的对象。  
   
 ### <a name="remarks"></a>备注  
  与更新操作结合使用验证规则。 如果 tabledef 包含验证规则，则更新该 tabledef 必须匹配预先确定的条件之前在数据更改。 如果更改不匹配条件，包含的值的异常[GetValidationText](#getvalidationtext)引发。 有关`CDaoTableDef`对象，这`CString`是只读的附加的表和读/写对于基表。  
@@ -725,7 +725,7 @@ virtual void Open(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向一个字符串，指定表名的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -752,7 +752,7 @@ void SetAttributes(long lAttributes);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lAttributes`  
+ *lAttributes*  
  所代表的表格的特征`CDaoTableDef`对象，并可以是这些常量的总和：  
   
 |返回的常量|描述|  
@@ -779,7 +779,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszConnect`  
+ *lpszConnect*  
  指向一个字符串表达式，指定要传递到 ODBC 或可安装 ISAM 驱动程序的其他参数的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -816,7 +816,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  如果需要密码，但是未提供，ODBC 驱动程序将显示登录对话框第一次访问表时，会再次如果关闭并重新打开连接。  
   
- 你可以设置的连接字符串`CDaoTableDef`对象提供的源参数**创建**成员函数。 你可以检查该设置将确定类型、 路径、 用户 ID、 密码或 ODBC 数据源的数据库。 有关详细信息，请参阅特定驱动程序的文档。  
+ 你可以设置的连接字符串`CDaoTableDef`对象提供的源参数`Create`成员函数。 你可以检查该设置将确定类型、 路径、 用户 ID、 密码或 ODBC 数据源的数据库。 有关详细信息，请参阅特定驱动程序的文档。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"连接属性"。  
   
@@ -828,7 +828,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向一个字符串表达式，指定表的名称的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -868,7 +868,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  验证仅支持使用 Microsoft Jet 数据库引擎的数据库。 表达式不能引用用户定义函数、 域的聚合函数、 SQL 聚合函数或查询。 验证规则`CDaoTableDef`对象可以引用该对象中的多个字段。  
   
- 例如，对于名为的字段`hire_date`和`termination_date`，验证规则可能是：  
+ 例如，对于名为的字段*hire_date*和*termination_date*，验证规则可能是：  
   
  [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
   

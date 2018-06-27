@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306003"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954866"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>演练：向 MFC 项目添加 D2D 对象
 
@@ -40,7 +40,7 @@ ms.locfileid: "36306003"
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>系统必备
 
 若要完成本演练，你必须使用安装的 Visual Studio**使用 c + + 桌面开发**工作负荷和可选**为 x86 和 x64 的 Visual c + + MFC**组件。
 
@@ -48,7 +48,7 @@ ms.locfileid: "36306003"
 
 1. 上**文件**菜单上，指向**新建**，然后选择**项目**。
 
-2. 在**新项目**对话框中，在左窗格中下**已安装的模板**，展开**Visual c + +** ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在“名称”框中键入 `MFCD2DWalkthrough`。 选择 **“确定”**。
+2. 在**新项目**对话框中，在左窗格中下**已安装的模板**，展开**Visual c + +** ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在**名称**框中，键入*MFCD2DWalkthrough*。 选择 **“确定”**。
 
 3. 在**MFC 应用程序向导**，选择**完成**而无需更改任何设置。
 
@@ -132,7 +132,7 @@ ms.locfileid: "36306003"
 
 3. 上**消息**选项卡上，选择**添加自定义消息**。
 
-4. 在**添加自定义消息**对话框中，在**自定义 Windows 消息**框中，键入`AFX_WM_DRAW2D`。 在**消息处理程序名称**框中，键入`OnDraw2D`。 选择**注册消息**选项，然后选择**确定**。 此操作将添加消息处理程序`AFX_WM_DRAW2D`消息`CMFCD2DWalkthroughView`类。
+4. 在**添加自定义消息**对话框中，在**自定义 Windows 消息**框中，键入*AFX_WM_DRAW2D*。 在**消息处理程序名称**框中，键入*OnDraw2D*。 选择**注册消息**选项，然后选择**确定**。 此操作将添加到 AFX_WM_DRAW2D 消息的消息处理`CMFCD2DWalkthroughView`类。
 
 5. 在**现有处理程序**框中，选择`OnDraw2D`。 选择**编辑代码**以显示`CMFCD2DWalkthroughView::OnDraw2D`方法。 使用这段代码用于`CMFCD2DWalkthroughView::OnDrawD2D`方法：
 

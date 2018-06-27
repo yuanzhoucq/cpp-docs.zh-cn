@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367388"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955438"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 类
 支持面向流并使用可读文本格式的诊断输出。  
@@ -79,7 +79,7 @@ class CDumpContext
   
  `CDumpContext`类具有重载的插入 ( **<<**) 运算符`CObject`转储对象的数据的指针。 如果派生的对象需要自定义转储格式，重写[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大多数 Microsoft 基础类实现被重写`Dump`成员函数。  
   
- 不派生自的类`CObject`，如`CString`， `CTime`，和`CTimeSpan`，具有其自己重载`CDumpContext`插入运算符，为通常使用的是否结构，如**CFileStatus**， `CPoint`，和`CRect`。  
+ 不派生自的类`CObject`，如`CString`， `CTime`，和`CTimeSpan`，具有其自己重载`CDumpContext`插入运算符，为通常使用的是否结构，如`CFileStatus`， `CPoint`，和`CRect`.  
   
  如果你使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏在实现您的类，然后`CObject::Dump`将打印的名称你`CObject`-派生类。 否则，它将打印`CObject`。  
   
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFile`  
+ *pFile*  
  指向的指针`CFile`转储目标的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -180,10 +180,10 @@ void HexDump(
  *pby*  
  指向包含要转储的字节的缓冲区的指针。  
   
- `nBytes`  
+ *nBytes*  
  要转储的字节数。  
   
- `nWidth`  
+ *nWidth*  
  最大字节数转储每行 （不在输出行的宽度）。  
   
 ### <a name="remarks"></a>备注  
@@ -223,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  A`CDumpContext`引用。 使用返回的值，可以编写代码的源代码的行上多个插入。  
   
 ### <a name="remarks"></a>备注  
- 有关重载插入运算符`CObject`也适用于大多数基元类型的指针。 指向字符会导致字符串内容; 的转储指向的指针`void`导致仅的地址的十六进制转储。 A **LONGLONG**导致 64 位有符号整数; 转储A **ULONGLONG**导致转储的 64 位无符号整数。  
+ 有关重载插入运算符`CObject`也适用于大多数基元类型的指针。 指向字符会导致字符串内容; 的转储指向的指针**void**导致仅的地址的十六进制转储。 A **LONGLONG**导致 64 位有符号整数; 转储A **ULONGLONG**导致转储的 64 位无符号整数。  
   
  如果你使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`宏在实现中的类，然后插入运算符，通过`CObject::Dump`，将打印的名称你`CObject`-派生类。 否则，它将打印`CObject`。 如果你重写`Dump`函数的类，则你可以提供对象的内容，而不是十六进制转储的更有意义输出。  
   

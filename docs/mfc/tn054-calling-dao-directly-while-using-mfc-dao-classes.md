@@ -23,24 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2acc0d6df4495ed38e7c5a6a34dcfd70108f34b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ed0fc9a18278c4e603b9ddae5197f6b5d03ee21
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385646"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950938"
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：使用 MFC DAO 类时直接调用 DAO
 > [!NOTE]
 >  Visual c + + 环境和向导不支持 DAO （尽管 DAO 类包括并且仍可以使用它们）。 Microsoft 建议你使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 你只应在维护现有应用程序使用 DAO。  
   
- 使用 MFC DAO 数据库类时，可能无法直接使用 DAO 所必需的情况。 通常情况下，这将不是这种情况，但 MFC 提供了一些帮助器机制，以方便进行直接 DAO 呼叫简单时的 MFC 类使用结合基于 DAO 的直接调用。 进行直接 DAO MFC 托管 DAO 对象的方法的调用应需要仅有几行代码。 如果你需要创建和使用的 DAO 对象*不*由 MFC 管理，您将需要通过实际调用做一些工作**版本**对象上。 此技术说明介绍当你可能想要直接调用 DAO、 MFC 帮助程序可以做什么来帮助你，以及如何使用 DAO OLE 接口。 最后，此说明提供显示如何为 DAO 安全功能直接调用 DAO 某些示例函数。  
+ 使用 MFC DAO 数据库类时，可能无法直接使用 DAO 所必需的情况。 通常情况下，这将不是这种情况，但 MFC 提供了一些帮助器机制，以方便进行直接 DAO 呼叫简单时的 MFC 类使用结合基于 DAO 的直接调用。 进行直接 DAO MFC 托管 DAO 对象的方法的调用应需要仅有几行代码。 如果你需要创建和使用的 DAO 对象*不*由 MFC 管理，您将需要通过实际调用做一些工作`Release`对象上。 此技术说明介绍当你可能想要直接调用 DAO、 MFC 帮助程序可以做什么来帮助你，以及如何使用 DAO OLE 接口。 最后，此说明提供显示如何为 DAO 安全功能直接调用 DAO 某些示例函数。  
   
 ## <a name="when-to-make-direct-dao-calls"></a>何时进行直接 DAO 调用  
  集合需要刷新时，将发生最常见的情形进行直接调用 DAO 或当你要实现不由 MFC 包装的功能。 最重要的功能没有公开的 MFC 是安全的。 如果你想要实现安全功能，你将需要直接使用的 DAO 用户和组对象。 安全，除了有仅几个其他 DAO 功能不支持的 MFC。 其中包括记录集克隆和数据库复制功能，以及少量后期添加到 DAO。  
   
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>DAO 和 MFC 的实现的简要概述  
- MFC 的换行的 DAO 使得使用 DAO 通过处理的许多细节，因此无需担心很少的操作更容易。 这包括 OLE、 创建和管理的 DAO 对象 （尤其是集合对象），错误检查，并提供一个强类型、 更简单的界面的初始化 (没有**VARIANT**或`BSTR`自变量）。 你可以进行直接 DAO 调用，同时仍然可以利用这些功能。 你的代码必须做的全部操作是调用**版本**对于直接 DAO 所创建的任何对象调用和*不*修改任何 MFC 可能依赖于内部的接口指针。 例如，不要修改**m_pDAORecordset**打开成员`CDaoRecordset`对象除非你了解*所有*内部的后果。 但是，你可以使用**m_pDAORecordset**接口来调用 DAO 直接来获取字段集合。 在这种情况下**m_pDAORecordset**成员将不能修改。 你只需调用**版本**字段集合对象与对象完成后。  
+ MFC 的换行的 DAO 使得使用 DAO 通过处理的许多细节，因此无需担心很少的操作更容易。 这包括 OLE、 创建和管理的 DAO 对象 （尤其是集合对象），错误检查，并提供一个强类型、 更简单的界面的初始化 (没有**VARIANT**或`BSTR`自变量）。 你可以进行直接 DAO 调用，同时仍然可以利用这些功能。 你的代码必须做的全部操作是调用`Release`对于直接 DAO 所创建的任何对象调用和*不*修改任何 MFC 可能依赖于内部的接口指针。 例如，不要修改*m_pDAORecordset*打开成员`CDaoRecordset`对象除非你了解*所有*内部的后果。 但是，你可以使用*m_pDAORecordset*接口来调用 DAO 直接来获取字段集合。 在这种情况下*m_pDAORecordset*成员将不能修改。 你只需调用`Release`字段集合对象与对象完成后。  
   
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>说明的帮助器以使 DAO 调用更容易  
  提供了可使调用 DAO 更轻松的帮助器是在 MFC DAO 数据库类中内部使用的同一个帮助器。 这些帮助器用于时进行直接的 DAO 调用，检查返回代码的预期错误检查和引发相应异常，如有必要日志记录调试输出。 有两个基础的 helper 函数和映射到这些两个帮助器之一的四个宏。 最佳的说明将只需阅读的代码。 请参阅**DAO_CHECK**， **DAO_CHECK_ERROR**， **DAO_CHECK_MEM**，和**DAO_TRACE** AFXDAO 中。若要查看的宏，并查看的 H **AfxDaoCheck**和**AfxDaoTrace** DAOCORE 中。CPP。  
@@ -48,9 +48,9 @@ ms.locfileid: "33385646"
 ## <a name="using-the-dao-ole-interfaces"></a>使用 DAO OLE 接口  
  标头文件 DBDAOINT 中定义的 DAO 对象层次结构中每个对象的 OLE 接口。H、 files\microsoft Visual Studio.NET 2003\VC7\include 目录中找到。 这些接口提供方法，使您可以操作整个 DAO 层次结构。  
   
- 对于很多 DAO 接口中的方法中，你将需要操作`BSTR`对象 （长度为前缀的字符串在 OLE 自动化中使用）。 `BSTR`对象通常封装在**VARIANT**数据类型。 MFC 类`COleVariant`本身继承自**VARIANT**数据类型。 具体取决于是否为 ANSI 或 Unicode 生成项目，DAO 接口将返回 ANSI 或 Unicode `BSTR`s。 两个宏**V_BSTR**和**V_BSTRT**，可用于在确保 DAO 接口获取`BSTR`预期类型。  
+ 对于很多 DAO 接口中的方法中，你将需要操作`BSTR`对象 （长度为前缀的字符串在 OLE 自动化中使用）。 `BSTR`对象通常封装在**VARIANT**数据类型。 MFC 类`COleVariant`本身继承自**VARIANT**数据类型。 具体取决于是否为 ANSI 或 Unicode 生成项目，DAO 接口将返回 ANSI 或 Unicode `BSTR`s。 两个宏，V_BSTR 和 V_BSTRT，可用于在确保 DAO 接口获取`BSTR`预期类型。  
   
- **V_BSTR**将提取**bstrVal**的成员`COleVariant`。 当你需要传递的内容时，通常使用此宏`COleVariant`到 DAO 接口方法。 下面的代码段显示了声明和实际用于两种方法可以充分利用的 DAO DAOUser 接口**V_BSTR**宏：  
+ 将提取 V_BSTR *bstrVal*的成员`COleVariant`。 当你需要传递的内容时，通常使用此宏`COleVariant`到 DAO 接口方法。 下面的代码段显示了声明和实际使用的 DAO DAOUser 接口利用 V_BSTR 宏的两个方法：  
   
 ```  
 COleVariant varOldName;  
@@ -71,7 +71,7 @@ DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
   
  请注意，`VT_BSTRT`中指定的自变量`COleVariant`上述构造函数可确保将 ANSI`BSTR`中`COleVariant`如果生成你的应用程序和 Unicode 的 ANSI 版本`BSTR`Unicode 版本的你的应用程序。 这是 DAO 的期望。  
   
- 其他宏， **V_BSTRT**，将提取的 ANSI 或 Unicode **bstrVal**的成员`COleVariant`具体取决于生成 （ANSI 或 Unicode） 类型。 下面的代码演示了如何提取`BSTR`值从`COleVariant`到`CString`:  
+ 其他宏，V_BSTRT，将提取的 ANSI 或 Unicode *bstrVal*的成员`COleVariant`具体取决于生成 （ANSI 或 Unicode） 类型。 下面的代码演示了如何提取`BSTR`值从`COleVariant`到`CString`:  
   
 ```  
 COleVariant varName(_T("MyName"), VT_BSTRT);
@@ -79,10 +79,10 @@ COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```  
   
- **V_BSTRT**宏，以及其他技术来打开存储在其他类型`COleVariant`，DAOVIEW 示例所示。 具体而言，在执行此转换**CCrack::strVARIANT**方法。 此方法，如有可能，将转换的值`COleVariant`到的实例`CString`。  
+ V_BSTRT 宏，以及其他技术来打开存储在其他类型`COleVariant`，DAOVIEW 示例所示。 具体而言，在执行此转换`CCrack::strVARIANT`方法。 此方法，如有可能，将转换的值`COleVariant`到的实例`CString`。  
   
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>直接调用 DAO 的简单示例  
- 需要刷新基础 DAO 集合对象时，可能出现的情况。 通常情况下，这应不是必要的但它是一个简单的过程，如有必要。 集合可能需要刷新的一个示例是当了多个用户创建新 tabledefs 多用户环境中运行。 在这种情况下 tabledefs 集合可能会过时。 若要刷新集合，只需调用**刷新**特定集合对象并检查是否有错误的方法：  
+ 需要刷新基础 DAO 集合对象时，可能出现的情况。 通常情况下，这应不是必要的但它是一个简单的过程，如有必要。 集合可能需要刷新的一个示例是当了多个用户创建新 tabledefs 多用户环境中运行。 在这种情况下 tabledefs 集合可能会过时。 若要刷新集合，只需调用`Refresh`特定集合对象并检查是否有错误的方法：  
   
 ```  
 DAO_CHECK(pMyDaoDatabase->  

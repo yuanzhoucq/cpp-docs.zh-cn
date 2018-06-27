@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352601"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953095"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 类
 表示序列化异常条件  
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **标头：** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- 构造`CArchiveException`对象，存储的值`cause`对象中。  
+ 构造`CArchiveException`对象，存储的值*导致*对象中。  
   
 ```  
 CArchiveException(
@@ -78,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cause`  
+ *可能的原因*  
  一个枚举的类型变量，指示该异常的原因。 枚举器的列表，请参阅[m_cause](#m_cause)数据成员。  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  指向包含的名称的字符串`CArchive`引发异常的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此数据成员是类型 `int` 的公共变量。 由定义其值`CArchiveException`枚举类型。 枚举器及其含义如下所示：  
+ 此数据成员是类型的公共变量**int**。由定义其值`CArchiveException`枚举类型。 枚举器及其含义如下所示：  
   
 - **CArchiveException::none**未发生错误。  
   

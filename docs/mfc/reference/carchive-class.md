@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11edef585e699d90d8d33839e0e446cb5a726db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0bfca3c6e42c8b4efa6cd29d86a30f36fc394f5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357532"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952500"
 ---
 # <a name="carchive-class"></a>CArchive 类
 可以将复杂的网络的对象保存在仍然存在这些对象在被删除后永久二进制格式 （通常为磁盘存储）。  
@@ -156,9 +156,9 @@ void Abort ();
 ```  
   
 ### <a name="remarks"></a>备注  
- **CArchive**将通常会调用析构函数**关闭**，这将刷新不保存任何数据到关联`CFile`对象。 这会导致异常。  
+ `CArchive`将通常会调用析构函数`Close`，这将刷新不保存任何数据到关联`CFile`对象。 这会导致异常。  
   
- 如果捕捉这些异常，它是一个好办法使用**中止**，以便 destructing`CArchive`对象不会导致进一步异常。 当处理异常、`CArchive::Abort`将不引发异常，失败原因与[CArchive::Close](#close)，**中止**忽略失败。  
+ 如果捕捉这些异常，它是一个好办法使用`Abort`，以便 destructing`CArchive`对象不会导致进一步异常。 当处理异常、`CArchive::Abort`将不引发异常，失败原因与[CArchive::Close](#close)，`Abort`忽略失败。  
   
  如果你使用**新**分配`CArchive`对象在堆上，则你必须在关闭该文件之后删除它。  
   
@@ -177,23 +177,23 @@ CArchive(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFile`  
+ *pFile*  
  指向的指针`CFile`ultimate 源或目标的持久性数据的对象。  
   
- `nMode`  
- 一个标志，指定是否将从加载或存储存档到对象。 `nMode`参数必须具有以下值之一：  
+ *nMode*  
+ 一个标志，指定是否将从加载或存储存档到对象。 *NMode*参数必须具有以下值之一：  
   
 - **CArchive::load**从存档加载数据。 仅要求`CFile`读取权限。  
   
 - **CArchive::store**将数据保存到存档。 需要`CFile`写入权限。  
   
-- **CArchive::bNoFlushOnDelete**防止存档自动调用`Flush`存档析构函数调用时。 如果设置此标志，你有责任显式调用**关闭**调用的析构函数之前。 如果不这样做，将损坏你的数据。  
+- **CArchive::bNoFlushOnDelete**防止存档自动调用`Flush`存档析构函数调用时。 如果设置此标志，你有责任显式调用`Close`调用的析构函数之前。 如果不这样做，将损坏你的数据。  
   
- `nBufSize`  
+ *nBufSize*  
  一个整数，以字节为单位指定内部文件缓冲区的大小。 请注意默认缓冲区大小为 4,096 个字节。 如果你定期存档大型对象，则将提高性能，如果你使用的是文件缓冲区大小的倍数的更大的缓冲区大小。  
   
- `lpBuf`  
- 指向用户提供的缓冲区大小的可选指针`nBufSize`。 如果不指定此参数，存档分配从本地堆缓冲区，并在对象被销毁时释放它。 存档不会释放的用户提供的缓冲区。  
+ *lpBuf*  
+ 指向用户提供的缓冲区大小的可选指针*nBufSize*。 如果不指定此参数，存档分配从本地堆缓冲区，并在对象被销毁时释放它。 存档不会释放的用户提供的缓冲区。  
   
 ### <a name="remarks"></a>备注  
  创建存档后，无法更改此规范。  
@@ -213,7 +213,7 @@ void Close();
 ### <a name="remarks"></a>备注  
  允许使用存档没有进一步的操作。 关闭存档后，可以创建相同文件的另一个存档，或者你可以关闭该文件。  
   
- 成员函数**关闭**可确保所有数据将从存档都传输到该文件，并可存档不可用。 若要完成从文件传输到存储媒体，必须首先使用[CFile::Close](../../mfc/reference/cfile-class.md#close)然后销毁`CFile`对象。  
+ 成员函数`Close`可确保所有数据将从存档都传输到该文件，并可存档不可用。 若要完成从文件传输到存储媒体，必须首先使用[CFile::Close](../../mfc/reference/cfile-class.md#close)然后销毁`CFile`对象。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CArchive::WriteString](#writestring)。  
@@ -260,7 +260,7 @@ UINT GetObjectSchema();
 ### <a name="remarks"></a>备注  
  调用此函数时才有效`CArchive`正在加载对象 ( [CArchive::IsLoading](#isloading)返回非零)。 它应该是中的第一个调用`Serialize`函数和调用一次。 返回值 ( **UINT**)-1 指示的版本号为未知。  
   
- A `CObject`-派生的类可以使用**VERSIONABLE_SCHEMA**组合 (使用按位`OR`) 本身的架构版本 (在`IMPLEMENT_SERIAL`宏) 若要创建其的"无版本冲突对象，"，即的对象`Serialize`成员函数可以读取多个版本。 默认 framework 功能 (而无需**VERSIONABLE_SCHEMA**) 是版本不匹配时引发异常。  
+ A `CObject`-派生的类可能使用**VERSIONABLE_SCHEMA**组合 (使用按位**或**) 与 （中 IMPLEMENT_SERIAL 宏） 的架构版本本身，即创建"无版本冲突对象"，对象，其`Serialize`成员函数可以读取多个版本。 默认 framework 功能 (而无需**VERSIONABLE_SCHEMA**) 是版本不匹配时引发异常。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
@@ -324,11 +324,11 @@ void MapObject(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pOb`  
+ *邮政信箱*  
  指向要存储的对象的常量指针。  
   
 ### <a name="remarks"></a>备注  
- 例如，你可能不序列化文档，但将序列化文档的一部分的项。 通过调用`MapObject`，允许这些项或个子对象，若要引用的文档。 此外，序列化的子项可以序列化其`m_pDocument`后向指针。  
+ 例如，你可能不序列化文档，但将序列化文档的一部分的项。 通过调用`MapObject`，允许这些项或个子对象，若要引用的文档。 此外，序列化的子项可以序列化其*m_pDocument*后向指针。  
   
  你可以调用`MapObject`时将存储到和从加载`CArchive`对象。 `MapObject` 将指定的对象添加到由维护的内部数据结构`CArchive`对象在序列化和反序列化期间，但与不同[ReadObject](#readobject)和[WriteObject](#writeobject) **，** 它未调用在对象上序列化。  
   
@@ -342,16 +342,16 @@ void MapObject(const CObject* pOb);
  [!code-cpp[NVC_MFCSerialization#21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
 ##  <a name="m_pdocument"></a>  CArchive::m_pDocument  
- 设置为**NULL**默认情况下，此指向**CDocument**可以设置为任何内容的用户`CArchive`实例需要。  
+ 设置为**NULL**默认情况下，此指向`CDocument`可以设置为任何内容的用户`CArchive`实例需要。  
   
 ```  
 CDocument* m_pDocument;  
 ```  
   
 ### <a name="remarks"></a>备注  
- This 指针的常见用法是传达有关正在序列化的所有对象的序列化过程的其他信息。 这通过初始化与该文档的指针 ( **CDocument**-派生类)，它正在序列，如有必要，在文档内的对象可以访问该文档的方式。 此指针也可由`COleClientItem`在序列化过程的对象。  
+ This 指针的常见用法是传达有关正在序列化的所有对象的序列化过程的其他信息。 这通过初始化与该文档的指针 ( `CDocument`-派生类)，它正在序列，如有必要，在文档内的对象可以访问该文档的方式。 此指针也可由`COleClientItem`在序列化过程的对象。  
   
- 框架集`m_pDocument`到正在序列化，当用户发出一个文件的文档打开或保存命令。 如果序列化原因而不而文件打开或保存的对象链接和嵌入 (OLE) 容器文档，您必须显式设置`m_pDocument`。 例如，在序列化到剪贴板的容器文档时将执行此操作。  
+ 框架集*m_pDocument*到正在序列化，当用户发出一个文件的文档打开或保存命令。 如果序列化原因而不而文件打开或保存的对象链接和嵌入 (OLE) 容器文档，您必须显式设置*m_pDocument*。 例如，在序列化到剪贴板的容器文档时将执行此操作。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
@@ -412,12 +412,12 @@ CArchive& operator<<(LONGLONG dwdw);
 ### <a name="remarks"></a>备注  
  上面的最后两个版本是专门用于存储 64 位整数。  
   
- 如果你使用`IMPLEMENT_SERIAL`宏在类实现中，则为重载插入运算符`CObject`调用受保护**WriteObject**。 此函数，反过来，将调用`Serialize`类函数。  
+ 如果在类实现中，使用 IMPLEMENT_SERIAL 宏，则插入运算符重载的`CObject`调用受保护`WriteObject`。 此函数，反过来，将调用`Serialize`类函数。  
   
  [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)插入运算符 (<<) 支持诊断转储和存储到存档。  
   
 ### <a name="example"></a>示例  
- 此示例演示如何使用`CArchive`插入运算符 << 与`int`和`long`类型。  
+ 此示例演示如何使用`CArchive`插入运算符 << 与**int**和**长**类型。  
   
  [!code-cpp[NVC_MFCSerialization#31](../../mfc/codesnippet/cpp/carchive-class_12.cpp)]  
   
@@ -494,12 +494,12 @@ CArchive& operator>>(LONGLONG& dwdw);
 ### <a name="remarks"></a>备注  
  上面的最后两个版本是专门用于加载 64 位整数。  
   
- 如果你使用`IMPLEMENT_SERIAL`宏在类实现中，则为重载提取运算符`CObject`调用受保护**ReadObject** （用一个非零的运行时类的指针） 的函数。 此函数，反过来，将调用`Serialize`类函数。  
+ 如果在类实现中，使用 IMPLEMENT_SERIAL 宏，则提取运算符重载的`CObject`调用受保护`ReadObject`（用一个非零的运行时类的指针） 的函数。 此函数，反过来，将调用`Serialize`类函数。  
   
  [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)提取运算符 (>>) 支持从存档加载。  
   
 ### <a name="example"></a>示例  
- 此示例演示如何使用`CArchive`提取运算符 >> 与`int`类型。  
+ 此示例演示如何使用`CArchive`提取运算符 >> 与**int**类型。  
   
  [!code-cpp[NVC_MFCSerialization#33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]  
   
@@ -516,10 +516,10 @@ UINT Read(void* lpBuf, UINT nMax);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpBuf`  
+ *lpBuf*  
  指向将接收从存档读取的数据的用户提供的缓冲区的指针。  
   
- `nMax`  
+ *最*  
  无符号的整数，指定的字节数从存档读取。  
   
 ### <a name="return-value"></a>返回值  
@@ -528,7 +528,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="remarks"></a>备注  
  存档不解释字节。  
   
- 你可以使用**读取**成员函数中的你`Serialize`用于读取对象中包含的普通结构函数。  
+ 你可以使用`Read`成员函数中的你`Serialize`用于读取对象中包含的普通结构函数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
@@ -544,24 +544,24 @@ CRuntimeClass* ReadClass(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClassRefRequested`  
+ *pClassRefRequested*  
  指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对应于请求的类引用的结构。 可以是**NULL**。  
   
- `pSchema`  
+ *pSchema*  
  指向的架构的以前存储的运行时类的指针。  
   
- `pObTag`  
- 对象的唯一标记是指一个数字。 实现内部使用[ReadObject](#readobject)。 公开高级编程仅;`pObTag`通常应为**NULL**。  
+ *pObTag*  
+ 对象的唯一标记是指一个数字。 实现内部使用[ReadObject](#readobject)。 公开高级编程仅;*pObTag*通常应为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
- 如果`pClassRefRequested`不**NULL**，`ReadClass`验证的已存档的类信息适用于运行时类。 如果不兼容，`ReadClass`将引发[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
+ 如果*pClassRefRequested*不**NULL**，`ReadClass`验证的已存档的类信息适用于运行时类。 如果不兼容，`ReadClass`将引发[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
   
  运行时类必须使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); 否则为`ReadClass`将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 如果`pSchema`是**NULL**，可通过调用检索存储的类的架构相[CArchive::GetObjectSchema](#getobjectschema); 否则为**\*** `pSchema`将包含以前存储的运行时类的架构。  
+ 如果*pSchema*是**NULL**，可通过调用检索存储的类的架构相[CArchive::GetObjectSchema](#getobjectschema); 否则为 **\** * *pSchema*将包含以前存储的运行时类的架构。  
   
  你可以使用[SerializeClass](#serializeclass)而不是`ReadClass`，可处理读取和写入的类引用。  
   
@@ -576,16 +576,16 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClass`  
+ *pClass*  
  常量指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对应于你预计将读取的对象的结构。  
   
 ### <a name="return-value"></a>返回值  
  A [CObject](../../mfc/reference/cobject-class.md)必须安全地转换为正确的指针使用派生类[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)。  
   
 ### <a name="remarks"></a>备注  
- 通常调用此函数`CArchive`提取 ( **>>**) 的重载运算符[CObject](../../mfc/reference/cobject-class.md)指针。 **ReadObject**，反过来，调用`Serialize`存档类的函数。  
+ 通常调用此函数`CArchive`提取 ( **>>**) 的重载运算符[CObject](../../mfc/reference/cobject-class.md)指针。 `ReadObject`反过来，调用`Serialize`存档类的函数。  
   
- 如果提供非零`pClass`参数，它通过获取[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)宏，则该函数验证已存档的对象的运行时类。 这里假定你已使用`IMPLEMENT_SERIAL`类的实现中的宏。  
+ 如果提供非零*pClass*参数，它通过获取[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)宏，则该函数验证已存档的对象的运行时类。 这假定你已在类的实现中使用 IMPLEMENT_SERIAL 宏。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CArchive::WriteObject](#writeobject)。  
@@ -599,13 +599,13 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rString`  
+ *rString*  
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)读取从与 CArchive 对象关联的文件后将包含生成的字符串。  
   
- `lpsz`  
+ *lpsz*  
  指定指向用户提供将接收的以 null 结尾的文本字符串的缓冲区的指针。  
   
- `nMax`  
+ *最*  
  指定的最大读取的字符数。 应为一个小于的大小*lpsz*缓冲区。  
   
 ### <a name="return-value"></a>返回值  
@@ -614,7 +614,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
  返回的版本中`LPTSTR`，指向包含文本数据中; 的缓冲区的指针**NULL**如果已到达文件尾。  
   
 ### <a name="remarks"></a>备注  
- 使用成员函数的版本中`nMax`参数，缓冲区将保存最多的限制`nMax`-1 个字符。 读取已停止由回车换行符对。 始终删除尾随的换行符。 在任一情况下将追加 null 字符 (\0)。  
+ 使用成员函数的版本中*最*参数，缓冲区将保存最多的限制*最*-1 个字符。 读取已停止由回车换行符对。 始终删除尾随的换行符。 在任一情况下将追加 null 字符 (\0)。  
   
  [Carchive:: Read](#read)有也可用的文本模式下输入，但它不会终止回车换行符对上。  
   
@@ -629,7 +629,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClassRef`  
+ *pClassRef*  
  指向基类的运行时类对象的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -639,7 +639,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
   
  运行时类必须使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); 否则为`SerializeClass`将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 使用[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)宏要检索其值`pRuntimeClass`参数。 基类必须已使用[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏。  
+ 使用[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)宏要检索其值*pRuntimeClass*参数。 基类必须已使用[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
@@ -652,7 +652,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGrowBy`  
+ *nGrowBy*  
  要分配如果大小增加是必需的元素插槽中最小的数。  
   
 ### <a name="remarks"></a>备注  
@@ -664,18 +664,18 @@ void SetLoadParams(UINT nGrowBy = 1024);
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
 ##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema  
- 调用此成员函数可设置为存档对象中存储的对象架构`nSchema`。  
+ 调用此成员函数可设置为存档对象中存储的对象架构*nSchema*。  
   
 ```  
 void SetObjectSchema(UINT nSchema);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nSchema`  
+ *nSchema*  
  指定对象的架构。  
   
 ### <a name="remarks"></a>备注  
- 下次调用[GetObjectSchema](#getobjectschema)将返回中存储的值`nSchema`。  
+ 下次调用[GetObjectSchema](#getobjectschema)将返回中存储的值*nSchema*。  
   
  使用`SetObjectSchema`高级版本控制; 例如，如果想要强制在要读取的特定版本`Serialize`派生类的函数。  
   
@@ -693,7 +693,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
  *nHashSize*  
  将映射的接口指针的哈希表的大小。 应为质数。  
   
- `nBlockSize`  
+ *nBlockSize*  
  指定扩展参数的内存分配粒度。 应以实现最佳性能的 2 的幂。  
   
 ### <a name="remarks"></a>备注  
@@ -712,16 +712,16 @@ void Write(const void* lpBuf, INT nMax);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpBuf`  
+ *lpBuf*  
  指向包含要写入到存档的数据的用户提供的缓冲区的指针。  
   
- `nMax`  
+ *最*  
  一个整数，指定要写入到存档的字节数。  
   
 ### <a name="remarks"></a>备注  
  存档不会格式化字节。  
   
- 你可以使用**编写**成员函数中的你`Serialize`函数可以编写普通结构包含在你的对象。  
+ 你可以使用`Write`成员函数中的你`Serialize`函数可以编写普通结构包含在你的对象。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
@@ -734,7 +734,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClassRef`  
+ *pClassRef*  
  指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对应于请求的类引用的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -757,13 +757,13 @@ void WriteObject(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pOb`  
+ *邮政信箱*  
  指向要存储的对象的常量指针。  
   
 ### <a name="remarks"></a>备注  
- 通常调用此函数`CArchive`插入 ( **<<**) 的重载运算符`CObject`。 **WriteObject**，反过来，调用`Serialize`存档类的函数。  
+ 通常调用此函数`CArchive`插入 ( **<<**) 的重载运算符`CObject`。 `WriteObject`反过来，调用`Serialize`存档类的函数。  
   
- 必须使用`IMPLEMENT_SERIAL`宏，以启用存档。 **WriteObject** ASCII 类名写入存档。 更高版本的加载过程中验证此类名称。 特殊的编码方案可防止不必要的类的多个对象的类名称重复。 此方案还可以防止冗余存储的目标的多个指针的对象。  
+ 必须使用`IMPLEMENT_SERIAL`宏，以启用存档。 `WriteObject` 将写入存档 ASCII 类名称。 更高版本的加载过程中验证此类名称。 特殊的编码方案可防止不必要的类的多个对象的类名称重复。 此方案还可以防止冗余存储的目标的多个指针的对象。  
   
  编码 （包括 ASCII 类名称存在） 的方法的确切对象是实现详细信息，并可以更改在将来版本的库。  
   
@@ -783,7 +783,7 @@ void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpsz`  
+ *lpsz*  
  指定指向包含一个以 null 结尾的文本字符串的缓冲区的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -791,7 +791,7 @@ void WriteString(LPCTSTR lpsz);
   
  `WriteString` 响应多个条件，包括磁盘已满条件，则会引发异常。  
   
- **编写**也是可用，但它可以而不是终止 null 字符，来将文件写入请求的字节数。  
+ `Write` 也是可用，但它可以而不是终止 null 字符，来将文件写入请求的字节数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  

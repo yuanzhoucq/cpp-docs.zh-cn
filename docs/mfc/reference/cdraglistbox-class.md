@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367206"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955984"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 类
 除了提供 Windows 列表框，功能`CDragListBox`类允许用户在列表框内移动文件名等列表框项。  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，其中包含要拖动的项的坐标。  
   
 ### <a name="return-value"></a>返回值  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，其中包含要拖动的项的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，其中包含 x 和 y 屏幕坐标表示的光标。  
   
 ### <a name="return-value"></a>返回值  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  在插入点的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  指定删除字符串的从零开始的索引。  
   
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)包含放置站点的坐标的对象。  
   
 ### <a name="remarks"></a>备注  
  默认行为将列表框项和其数据复制到新位置，然后删除原始的项目。 重写此函数可自定义的默认行为，例如启用列表框项拖动到列表中其他位置的副本。  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- 调用此函数可检索的列表框项的从零开始的索引位于`pt`。  
+ 调用此函数可检索的列表框项的从零开始的索引位于*pt*。  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，其中包含在列表框中点的坐标。  
   
  *bAutoScroll*  

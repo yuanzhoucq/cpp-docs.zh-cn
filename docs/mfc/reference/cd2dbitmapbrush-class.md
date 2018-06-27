@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354616"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954486"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 类
 ID2D1BitmapBrush 包装器。  
@@ -109,7 +109,7 @@ class CD2DBitmapBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|将存储指向 CD2DBitmap 对象的指针。|  
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|将存储指向 ID2D1BitmapBrush 对象的指针。|  
@@ -142,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -176,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  一个指向扩展模式和位图画笔的插补模式。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指向不透明度和画笔的转换的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
- `uiResID`  
+ *uiResID*  
  资源的资源 ID 号。  
   
- `lpszType`  
+ *lpszType*  
  指向以 null 结尾的字符串，包含的资源类型的指针。  
   
- `sizeDest`  
+ *sizeDest*  
  位图的目标大小。  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  指向以 null 结尾的字符串包含文件的名称。  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -208,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  指向位图画笔属性的指针。  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -219,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -331,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitmap`  
+ *pBitmap*  
  使用画笔的位图源  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -342,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>参数  
- `extendModeX`  
+ *extendModeX*  
  一个值，指定如何画笔水平平铺的那些区域的超出其位图  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -353,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>参数  
- `extendModeY`  
+ *extendModeY*  
  一个值，指定如何画笔垂直平铺的那些区域的超出其位图  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -364,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>参数  
- `interpolationMode`  
+ *interpolationMode*  
  使用缩放或旋转画笔位图时的内插模式  
   
 ## <a name="see-also"></a>请参阅  

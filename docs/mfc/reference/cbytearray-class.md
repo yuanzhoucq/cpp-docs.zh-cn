@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352930"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951060"
 ---
 # <a name="cbytearray-class"></a>CByteArray 类
 支持字节的动态数组。  
@@ -112,7 +112,7 @@ class CByteArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CByteArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果字节数组存储到存档中，使用重载插入 ( **<<**) 运算符或`Serialize`成员函数，每个元素，从而，序列化。  
+ `CByteArray` 包含 IMPLEMENT_SERIAL 宏来支持序列化和转储的其元素。 如果字节数组存储到存档中，使用重载插入 ( **<<**) 运算符或`Serialize`成员函数，每个元素，从而，序列化。  
   
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  

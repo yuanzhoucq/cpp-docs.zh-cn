@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381740"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950701"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>对 Rebar 控件使用图像列表
 每个 rebar 带区除了别的之外还可以包含关联图像列表的图像。 以下过程详述了在 rebar 带区显示图像的必需步骤。  
@@ -31,9 +31,9 @@ ms.locfileid: "33381740"
   
 2.  修改**REBARBANDINFO**结构以将图像分配到 rebar 带区：  
   
-    -   设置**fMask**成员**RBBIM_IMAGE**，使用按位 OR 运算符来根据需要包含其他标志。  
+    -   设置*fMask*成员`RBBIM_IMAGE`，使用按位 OR 运算符来根据需要包含其他标志。  
   
-    -   将 `iImage` 成员设置为要显示图像的图像列表索引。  
+    -   设置*iImage*成员要显示的图像的图像列表索引。  
   
 3.  使用必需信息初始化任何其余的数据成员，如包含子窗口的大小、文本和句柄。  
   

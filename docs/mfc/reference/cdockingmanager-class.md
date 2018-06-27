@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5dad441d2aa997a3e32d53f07683877442100a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7e2fe05ba1bde0fc3d0de22d58a29f49f2130fc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377676"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954073"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 类
 实现用于控制主框架窗口中停靠布局的核心功能。  
@@ -197,7 +197,7 @@ class CDockingManager : public CObject
 |[CDockingManager::AddMiniFrame](#addminiframe)|将帧添加到微型框架的列表。|  
 |[CDockingManager::AddPane](#addpane)|注册到停靠管理器窗格。|  
 |[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|重新计算和调整框架窗口中的所有窗格的布局。|  
-|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|导致`WM_NCCALCSIZE`消息发送到所有窗格和`CPaneFrameWnd`windows。|  
+|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|使 WM_NCCALCSIZE 消息发送到所有窗格和`CPaneFrameWnd`windows。|  
 |[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|调整矩形的对齐方式。|  
 |[CDockingManager::AlignAutoHidePane](#alignautohidepane)|调整自动隐藏模式中的停靠窗格的大小，以便它采用全角或通过括起来的帧的客户端区域的高度停靠站点。|  
 |[CDockingManager::AutoHidePane](#autohidepane)|创建一个自动隐藏工具栏。|  
@@ -267,7 +267,7 @@ class CDockingManager : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|指定到停靠管理器是否隐藏在 OLE 容器模式下的窗格。|  
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|指定的全局停靠模式。|  
@@ -320,10 +320,10 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `info`  
+ [in]*信息*  
  对包含信息结构的引用将停靠窗格对齐方式。  
   
- [out] `ppDockBar`  
+ [out]*ppDockBar*  
  指向新的停靠窗格的指针指向的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -337,7 +337,7 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向一个栏窗格  
   
 ##  <a name="addpane"></a>  CDockingManager::AddPane  
@@ -352,16 +352,16 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `pWnd`  
+ [在中，out]*pWnd*  
  指定要添加到停靠管理器窗格。  
   
- [in] `bTail`  
+ [in]*bTail*  
  `TRUE` 若要添加到的窗格的列表的末尾窗格，停靠管理器;否则为`FALSE`。  
   
- [in] `bAutoHide`  
+ [in]*bAutoHide*  
  仅限内部使用。 始终使用默认值`FALSE`。  
   
- [in] `bInsertForOuterEdge`  
+ [in]*bInsertForOuterEdge*  
  仅限内部使用。 始终使用默认值`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -378,7 +378,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hdwp`  
+ [in]*hdwp*  
  指定的延迟的窗口位置结构。 有关详细信息，请参阅 [Windows 数据类型](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
   
 ### <a name="remarks"></a>备注  
@@ -391,7 +391,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向某个帧的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -416,17 +416,17 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectResult`  
+ [in]*rectResult*  
  对引用`CRect`对象  
   
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  对齐方式`CRect`对象  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果的对齐方式`CRect`对象已经过调整;`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
- `dwAlignment`参数可以具有下列值之一：  
+ *DwAlignment*参数可以具有下列值之一：  
   
 -   CBRS_ALIGN_TOP  
   
@@ -446,10 +446,10 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDefaultSlider`  
+ [in]*pDefaultSlider*  
  滑块的停靠窗格。  
   
- [in] `bIsVisible`  
+ [in]*bIsVisible*  
  `TRUE` 如果停靠窗格是可见的;`FALSE`否则为。  
   
 ##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
@@ -462,10 +462,10 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向栏的窗格。  
   
- [in] `pCurrAutoHideToolBar`  
+ [in]*pCurrAutoHideToolBar*  
  指向一个自动隐藏工具栏的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -481,10 +481,10 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  将转到其他窗口的顶部的停靠栏的对齐方式。  
   
- [in] `bExcludeDockedBars`  
+ [in]*bExcludeDockedBars*  
  `TRUE` 若要从顶部; 已排除的停靠的栏否则为`FALSE`。  
   
 ##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
@@ -497,10 +497,10 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `menu`  
+ [in]*菜单*  
  要添加的停靠窗格和工具栏到名称中的菜单。  
   
- [in] `bToolbarsOnly`  
+ [in]*bToolbarsOnly*  
  `TRUE` 若要将仅工具栏名称添加到菜单;`FALSE`否则为。  
   
 ##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
@@ -516,23 +516,23 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向停靠窗口的指针。  
   
- [in] `ptMouse`  
+ [in]*ptMouse*  
  鼠标位置。  
   
- [out] `rectResult`  
+ [out]*rectResult*  
  计算的矩形。  
   
- [in] `bDrawTab`  
+ [in]*bDrawTab*  
  `TRUE` 若要绘制一个选项卡;否则为`FALSE`。  
   
- [out] `ppTargetBar`  
+ [out]*ppTargetBar*  
  指向目标窗格中的指针指向的指针。  
   
 ### <a name="remarks"></a>备注  
- 此方法计算窗口将占用如果用户将窗口拖到所指定的点的矩形`ptMouse`和存在停靠。  
+ 此方法计算窗口将占用如果用户将窗口拖到所指定的点的矩形*ptMouse*和存在停靠。  
   
 ##  <a name="create"></a>  CDockingManager::Create  
  创建一个停靠管理器。  
@@ -542,7 +542,7 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向到停靠管理器的父框架的指针。 此值不能`NULL`。  
   
 ### <a name="return-value"></a>返回值  
@@ -562,22 +562,22 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  要检查的窗格的位置。  
   
- [in] `nSensitivity`  
+ [in]*nSensitivity*  
  要增加每个已选中的窗格的窗口矩形的值。 窗格中满足搜索条件，如果给定的点在此增加的区域。  
   
- [in] `dwEnabledAlignment`  
+ [in]*dwEnabledAlignment*  
  停靠的窗格中的对齐方式。  
   
- [out] `ppTargetBar`  
+ [out]*ppTargetBar*  
  指向目标窗格中的指针指向的指针。  
   
- [in] `pBarToIgnore`  
+ [in]*pBarToIgnore*  
  该方法将忽略窗格。  
   
- [in] `pBarToDock`  
+ [in]*pBarToDock*  
  停靠窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -601,7 +601,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDisable`  
+ [in]*bDisable*  
  `TRUE` 禁用从注册表; 停靠布局的加载否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -618,13 +618,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向一个栏的停靠窗格。  
   
- [in] `nDockBarID`  
+ [in]*nDockBarID*  
  若要将停靠的栏的 id。  
   
- [in] `lpRect`  
+ [in]*lpRect*  
  目标矩形。  
   
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
@@ -637,10 +637,10 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBarToDock`  
- 指向要停靠的左侧窗格中的`pTargetBar`。  
+ [in]*pBarToDock*  
+ 指向要停靠的左侧窗格中的*pTargetBar*。  
   
- [in] `pTargetBar`  
+ [in]*pTargetBar*  
  指向目标窗格中的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -654,7 +654,7 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwStyle`  
+ [in]*dwStyle*  
  停靠的对齐方式。  
   
 ### <a name="return-value"></a>返回值  
@@ -668,7 +668,7 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwStyle`  
+ [in]*dwStyle*  
  停靠的对齐方式。  
   
 ### <a name="return-value"></a>返回值  
@@ -682,7 +682,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用停靠站点菜单;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -710,16 +710,16 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  如果`TRUE`，库自动在上下文菜单; 的支持，如果将变为`FALSE`库关闭自动在上下文菜单的支持。  
   
- [in] `uiCustomizeCmd`  
+ [in]*uiCustomizeCmd*  
  命令 id**自定义**菜单中的项。  
   
- [in] `strCustomizeText`  
+ [in]*strCustomizeText*  
  文本**自定义**项。  
   
- [in] `bToolbarsOnly`  
+ [in]*bToolbarsOnly*  
  如果`TRUE`，菜单会显示一个列表的应用程序工具栏; 如果`FALSE`，库将应用程序停靠窗格添加到此列表。  
   
 ##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
@@ -732,10 +732,10 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  栏的对齐方式窗格。  
   
- [in] `bOuter`  
+ [in]*bOuter*  
  如果`TRUE`，检索的栏中的控件条列表中的头位置。 否则，检索列表中的控件条的结尾位置中的栏。  
   
 ### <a name="return-value"></a>返回值  
@@ -751,10 +751,10 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uBarID`  
+ [in]*uBarID*  
  指定要查找的窗格中的控件 ID。  
   
- [in] `bSearchMiniFrames`  
+ [in]*bSearchMiniFrames*  
  `TRUE` 若要在搜索中包括所有在浮动窗格。 `FALSE` 若要包括仅停靠的窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -770,7 +770,7 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTargetBar`  
+ [in]*pTargetBar*  
  指向目标状态栏窗格的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -797,13 +797,13 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  指定在屏幕坐标中，检查点。  
   
- [in] `pFrameToExclude`  
+ [in]*pFrameToExclude*  
  指向要排除的帧的指针。  
   
- [in] `bFloatMultiOnly`  
+ [in]*bFloatMultiOnly*  
  `TRUE` 要排除不是的实例的帧`CMultiPaneFrameWnd`;`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
@@ -819,7 +819,7 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rcClient`  
+ [out]*rcClient*  
  对包含客户端区域的边界的矩形的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -899,22 +899,22 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `lstBars`  
+ [在中，out]*lstBars*  
  包含当前停靠管理器的所有窗格。  
   
- [in] `bIncludeAutohide`  
+ [in]*bIncludeAutohide*  
  `TRUE` 若要包括在自动隐藏模式下; 窗格否则为`FALSE`。  
   
- [in] `pRTCFilter`  
+ [in]*pRTCFilter*  
  如果不是`NULL`，返回的列表包含仅的指定的运行时类的窗格。  
   
- [in] `bIncludeTabs`  
+ [in]*bIncludeTabs*  
  `TRUE` 若要包括选项卡。否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  如果到停靠管理器中有任何选项卡式的窗格，该方法返回指向[CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)对象，并且您必须显式枚举选项卡。  
   
- 使用`pRTCFilter`若要获取特定窗格的类。 例如，你可以通过适当地设置此值来获取仅工具栏。  
+ 使用*pRTCFilter*若要获取特定窗格的类。 例如，你可以通过适当地设置此值来获取仅工具栏。  
   
 ##  <a name="getsmartdockingmanager"></a>  CDockingManager::GetSmartDockingManager  
  检索指向智能停靠管理器。  
@@ -958,10 +958,10 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBarToExclude`  
+ [in]*pBarToExclude*  
  指向要排除从隐藏栏的指针。  
   
- [in] `bImmediately`  
+ [in]*bImmediately*  
  `TRUE` 若要立即; 隐藏窗格`FALSE`若要隐藏自动隐藏效果窗格。  
   
 ##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
@@ -975,13 +975,13 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `info`  
+ [in]*信息*  
  包含有关停靠窗格中的对齐方式信息的结构。  
   
- [in] `dwAlignToInsertAfter`  
+ [in]*dwAlignToInsertAfter*  
  停靠窗格中的对齐方式。  
   
- [out] `ppDockBar`  
+ [out]*ppDockBar*  
  指向将停靠窗格的指针指向的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -998,13 +998,13 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
+ [in]*pControlBar*  
  指向控件窗格的指针。  
   
- [in] `pTarget`  
+ [in]*pTarget*  
  指向目标窗格中的指针。  
   
- [in] `bAfter`  
+ [in]*bAfter*  
  `TRUE` 目标窗格中; 的位置之后插入窗格`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
@@ -1060,13 +1060,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  指定的点。  
   
- [out] `dwBarAlignment`  
+ [out]*dwBarAlignment*  
  指定的点附近是哪个边缘。 可能值为 `CBRS_ALIGN_LEFT`、`CBRS_ALIGN_RIGHT`、`CBRS_ALIGN_TOP` 和 `CBRS_ALIGN_BOTTOM`。  
   
- [out] `bOuterEdge`  
+ [out]*bOuterEdge*  
  `TRUE` 如果该点附近的外边框的停靠站点中;`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
@@ -1092,10 +1092,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  配置文件名称。  
   
- [in] `uiID`  
+ [in]*uiID*  
  到停靠管理器的 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -1109,7 +1109,7 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bLock`  
+ [in]*块*  
  `TRUE` 如果窗口被锁定;`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
@@ -1173,7 +1173,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bActivate`  
+ [in]*bActivate*  
  如果`TRUE`，框架窗口设为活动; 如果`FALSE`，框架窗口停用。  
   
 ##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
@@ -1194,7 +1194,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pFrame`  
+ [in]*pFrame*  
  指向微型框架窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1208,7 +1208,7 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  指定菜单的位置。  
   
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
@@ -1232,32 +1232,32 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  指定在屏幕坐标中，检查点。  
   
- [in] `nSensitivity`  
+ [in]*nSensitivity*  
  要放大量已选中的每个窗格的窗口矩形的值。 窗格中满足搜索条件，如果给定的点在此膨胀区域。  
   
- [in] `bExactBar`  
- `TRUE` 若要忽略`nSensitivity`参数; 否则为`FALSE`。  
+ [in]*bExactBar*  
+ `TRUE` 若要忽略*nSensitivity*参数; 否则为`FALSE`。  
   
- [in] `pRTCBarType`  
+ [in]*pRTCBarType*  
  如果不是`NULL`，该方法将搜索仅指定类型的窗格。  
   
- [in] `bCheckVisibility`  
+ [in]*bCheckVisibility*  
  `TRUE` 若要检查仅可见窗格;否则为`FALSE`。  
   
- [out] `dwAlignment`  
+ [out]*dwAlignment*  
  如果指定点处找到一个窗格，则此参数将包含已指定的点最接近的窗格的一端。 有关详细信息，请参阅“备注”部分。  
   
- [in] `pBarToIgnore`  
+ [in]*pBarToIgnore*  
  如果不是`NULL`，该方法将忽略此参数指定的窗格。  
   
 ### <a name="return-value"></a>返回值  
  [CBasePane](../../mfc/reference/cbasepane-class.md)-派生的对象，包含给定的点，或`NULL`如果不找到任何窗格。  
   
 ### <a name="remarks"></a>备注  
- 该函数返回时，如果找到一个窗格，`dwAlignment`包含指定点的对齐方式。 例如，如果点为靠近顶部窗格中，`dwAlignment`设置为`CBRS_ALIGN_TOP`。  
+ 该函数返回时，如果找到一个窗格， *dwAlignment*包含指定点的对齐方式。 例如，如果点为靠近顶部窗格中， *dwAlignment*设置为`CBRS_ALIGN_TOP`。  
   
 ##  <a name="processpanecontextmenucommand"></a>  CDockingManager::ProcessPaneContextMenuCommand  
  由框架调用以选择或以清除复选框为指定的命令并重新计算显示窗格的布局。  
@@ -1271,20 +1271,20 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  在菜单中的控件条 id。  
   
- [in] `nCode`  
+ [in]*nCode*  
  命令通知代码。  
   
- [in] `pExtra`  
- Void 的指针是强制转换为指向的指针`CCmdUI`如果`nCode`是 CN_UPDATE_COMMAND_UI。  
+ [in]*pExtra*  
+ Void 的指针是强制转换为指向的指针`CCmdUI`如果*nCode*是 CN_UPDATE_COMMAND_UI。  
   
- [in] `pHandlerInfo`  
+ [in]*pHandlerInfo*  
  指向信息结构的指针。 未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`pEXtra`不为 NULL 和`nCode`等于 CN_UPDATE_COMMAND_UI，或如果没有具有指定的控件条`nID`。  
+ `TRUE` 如果*pEXtra*不为 NULL 和*nCode*等于 CN_UPDATE_COMMAND_UI，或如果没有具有指定的控件条*nID*。  
   
 ##  <a name="recalclayout"></a>  CDockingManager::RecalcLayout  
  重新计算在控件列表中存在的控件的内部布局。  
@@ -1294,7 +1294,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bNotify`  
+ [in]*bNotify*  
  未使用此参数。  
   
 ##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
@@ -1312,7 +1312,7 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向一个栏的窗格中删除。  
   
 ##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
@@ -1323,7 +1323,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向要删除的帧的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1342,19 +1342,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向要删除的窗格的指针。  
   
- [in] `bDestroy`  
+ [in]*bDestroy*  
  如果`TRUE`，销毁删除窗格。  
   
- [in] `bAdjustLayout`  
+ [in]*bAdjustLayout*  
  如果`TRUE`，立即调整停靠布局。  
   
- [in] `bAutoHide`  
+ [in]*bAutoHide*  
  如果`TRUE`，从列表中自动隐藏栏删除窗格。 如果`FALSE`，窗格中移除的正则窗格的列表。  
   
- [in] `pBarReplacement`  
+ [in]*pBarReplacement*  
  指向替换删除窗格中的窗格的指针。  
   
 ##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
@@ -1367,10 +1367,10 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pOriginalBar`  
+ [in]*pOriginalBar*  
  指向原始的窗格的指针。  
   
- [in] `pNewBar`  
+ [in]*pNewBar*  
  指向替换原始窗格中的窗格的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1393,10 +1393,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  对注册表项路径。  
   
- [in] `uiID`  
+ [in]*uiID*  
  停靠管理器 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -1416,13 +1416,13 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uMessage`  
+ [in]*uMessage*  
  要发送的消息。  
   
- [in] `wParam`  
+ [in]*wParam*  
  其他消息的相关信息。  
   
- [in] `lParam`  
+ [in]*lParam*  
  其他消息的相关信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -1436,7 +1436,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
  对存档对象的引用。  
   
 ### <a name="remarks"></a>备注  
@@ -1450,7 +1450,7 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pAHDockingBar`  
+ [in]*pAHDockingBar*  
  指向可停靠的窗格中的指针。  
   
 ##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
@@ -1463,16 +1463,16 @@ static void SetDockingMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dockMode`  
+ *dockMode*  
  指定新的停靠模式。 有关详细信息，请参阅“备注”部分。  
   
- `theme`  
+ *主题*  
  指定要用于智能停靠标记的主题。 它可以是下列枚举值之一： AFX_SDT_DEFAULT，AFX_SDT_VS2005，AFX_SDT_VS2008。  
   
 ### <a name="remarks"></a>备注  
  调用此静态方法以设置停靠模式。  
   
- `dockMode` 可以是以下值之一：  
+ *dockMode*可以是以下值之一：  
   
 - `DT_STANDARD` 标准停靠模式下，当在 Visual Studio.NET 2003年中实现。 窗格拖动没有拖动的上下文中。  
   
@@ -1497,10 +1497,10 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bPreview`  
+ [in]*bPreview*  
  `TRUE` 如果打印预览模式设置;`FALSE`否则为。  
   
- [in] `pState`  
+ [in]*pState*  
  指向预览状态的指针。 未使用此参数。  
   
 ##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
@@ -1511,13 +1511,13 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `params`  
+ [在中，out]*params*  
  定义智能停靠的参数。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义外观、 颜色或智能停靠标记的形状，请调用此方法。  
   
- 若要使用智能停靠标记的默认外观，请将传递的未初始化的实例[CSmartDockingInfo 类](../../mfc/reference/csmartdockinginfo-class.md)到`params`。  
+ 若要使用智能停靠标记的默认外观，请将传递的未初始化的实例[CSmartDockingInfo 类](../../mfc/reference/csmartdockinginfo-class.md)到*params*。  
   
 ##  <a name="showdelayshowminiframes"></a>  CDockingManager::ShowDelayShowMiniFrames  
  显示或隐藏的微型框架窗口。  
@@ -1527,8 +1527,8 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
- `TRUE` 若要使所示的框架的窗口处于活动状态;`FALSE to`隐藏框架的窗口。  
+ [in]*bShow*  
+ `TRUE` 若要使所示的框架的窗口处于活动状态;`FALSE`隐藏框架的窗口。  
   
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  显示或隐藏的控制和自动隐藏栏的窗格。  
@@ -1538,8 +1538,8 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
- `TRUE` 若要显示窗格;`FALSE to`隐藏窗格。  
+ [in]*bShow*  
+ `TRUE` 若要显示窗格;`FALSE`隐藏窗格。  
   
 ### <a name="return-value"></a>返回值  
  总是为 `FALSE`。  
@@ -1552,7 +1552,7 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockingWnd`  
+ [in]*pDockingWnd*  
  指向停靠窗口的指针。  
   
 ##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  

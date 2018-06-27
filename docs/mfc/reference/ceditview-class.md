@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371538"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953396"
 ---
 # <a name="ceditview-class"></a>CEditView 类
 视图类的类型，提供 Windows 编辑控件功能并可用于实现简单的文本编辑器功能。  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |名称|描述|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|默认类型的对象的样式**CEditView。**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|默认类型的对象的样式`CEditView`。|  
   
 ## <a name="remarks"></a>备注  
  `CEditView`类提供以下附加功能：  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>备注  
- 在构造对象之后, 必须调用[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函数之前使用编辑控件。 如果派生的类从`CEditView`并将其添加到模板使用`CWinApp::AddDocTemplate`，框架会调用这两个此构造函数和**创建**函数。  
+ 在构造对象之后, 必须调用[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函数之前使用编辑控件。 如果派生的类从`CEditView`并将其添加到模板使用`CWinApp::AddDocTemplate`，框架会调用这两个此构造函数和`Create`函数。  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  包含的默认样式`CEditView`对象。  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>备注  
- 将传递作为此静态成员`dwStyle`参数**创建**函数来获取的默认样式`CEditView`对象。  
+ 将传递作为此静态成员`dwStyle`参数`Create`函数来获取的默认样式`CEditView`对象。  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  调用`FindText`函数要搜索`CEditView`对象的文本缓冲区。  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFind`  
+ *lpszFind*  
  要找的文本。  
   
- `bNext`  
+ *bNext*  
  指定搜索的方向。 如果**TRUE**，搜索方向将是朝向缓冲区末尾。 如果**FALSE**，搜索方向将是朝向缓冲区开头。  
   
- `bCase`  
+ *bCase*  
  指定是否搜索不区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
   
 ### <a name="return-value"></a>返回值  
  如果找到搜索文本; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此函数搜索指定的文本的缓冲区中的文本`lpszFind`中由指定的方向的当前选定处开始， `bNext`，并使用指定的大小写区分功能`bCase`。 如果找到了文本，它将所选内容设置为找到的文本，并返回一个非零值。 如果没有找到文本，该函数将返回 0。  
+ 此函数搜索指定的文本的缓冲区中的文本*lpszFind*中由指定的方向的当前选定处开始， *bNext*，和与指定的的区分大小写*bCase*。 如果找到了文本，它将所选内容设置为找到的文本，并返回一个非零值。 如果没有找到文本，该函数将返回 0。  
   
  通常不需要调用`FindText`作用，除非你重写`OnFindNext`，哪些调用`FindText`。  
   
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `strResult`  
+ *strResult*  
  对引用`CString`将接收所选的文本的对象。  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  指向编辑控件的缓冲区的指针。  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- 搜索指定的文本的缓冲区中的文本`lpszFind`，沿指定方向`bNext`，与由指定的大小写区分功能`bCase`。  
+ 搜索指定的文本的缓冲区中的文本*lpszFind*，沿指定方向*bNext*，与由指定的大小写区分功能*bCase*。  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFind`  
+ *lpszFind*  
  要找的文本。  
   
- `bNext`  
+ *bNext*  
  指定搜索的方向。 如果**TRUE**，搜索方向将是朝向缓冲区末尾。 如果**FALSE**，搜索方向将是朝向缓冲区开头。  
   
- `bCase`  
+ *bCase*  
  指定是否搜索不区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
   
 ### <a name="remarks"></a>备注  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFind`  
+ *lpszFind*  
  要找的文本。  
   
- `lpszReplace`  
+ *lpszReplace*  
  要替换搜索文本的文本。  
   
- `bCase`  
+ *bCase*  
  指定搜索是否区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
   
 ### <a name="remarks"></a>备注  
- `OnReplaceAll` 搜索指定的文本的缓冲区中的文本`lpszFind`，使用指定的大小写区分功能`bCase`。 当前所选内容的开头开始搜索。 每次发现搜索文本时，则此函数会将文本该匹配项替换与指定的文本`lpszReplace`。 搜索通过调用[FindText](#findtext)。 在默认实现中， [OnTextNotFound](#ontextnotfound)如果没有找到文本，则调用。  
+ `OnReplaceAll` 搜索指定的文本的缓冲区中的文本*lpszFind*，使用指定的大小写区分功能*bCase*。 当前所选内容的开头开始搜索。 每次找到搜索文本时，此函数会将文本该匹配项替换指定的文本*lpszReplace*。 搜索通过调用[FindText](#findtext)。 在默认实现中， [OnTextNotFound](#ontextnotfound)如果没有找到文本，则调用。  
   
- 如果当前所选内容不匹配`lpszFind`，所选内容更新到指定的文本的第一个匹配项`lpszFind`并且不执行替换操作。 这允许用户为确认这是他们想要选择与要替换的文本不匹配时执行的操作。  
+ 如果当前所选内容不匹配*lpszFind*，所选内容更新到指定的文本的第一个匹配项*lpszFind*并且不执行替换操作。 这允许用户为确认这是他们想要选择与要替换的文本不匹配时执行的操作。  
   
  重写`OnReplaceAll`更改的方式`CEditView`-派生的对象替换文本。  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFind`  
+ *lpszFind*  
  要找的文本。  
   
- `bNext`  
+ *bNext*  
  指定搜索的方向。 如果**TRUE**，搜索方向将是朝向缓冲区末尾。 如果**FALSE**，搜索方向将是朝向缓冲区开头。  
   
- `bCase`  
+ *bCase*  
  指定是否搜索不区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
   
- `lpszReplace`  
+ *lpszReplace*  
  要替换找到的文本的文本。  
   
 ### <a name="remarks"></a>备注  
- 将所选内容后, 此函数搜索的文本中指定的文本的下一个匹配项的缓冲区`lpszFind`，沿指定方向`bNext`，与由指定的区分大小写`bCase`。 搜索通过调用[FindText](#findtext)。 如果没有找到文本， [OnTextNotFound](#ontextnotfound)调用。  
+ 将所选内容后, 此函数搜索的文本中指定的文本的下一个匹配项的缓冲区*lpszFind*，沿指定方向*bNext*，区分大小写指定的*bCase*。 搜索通过调用[FindText](#findtext)。 如果没有找到文本， [OnTextNotFound](#ontextnotfound)调用。  
   
  重写`OnReplaceSel`更改的方式`CEditView`-派生的对象将替换所选的文本。  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFind`  
+ *lpszFind*  
  要找的文本。  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向打印机设备上下文的指针。  
   
  *rectLayout*  
  引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)指定是用要呈现文本的矩形。  
   
- `nIndexStart`  
+ *nIndexStart*  
  索引中要呈现的第一个字符的缓冲区。  
   
- `nIndexStop`  
+ *nIndexStop*  
  索引中要呈现的最后一个字符后面的字符的缓冲区。  
   
 ### <a name="return-value"></a>返回值  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ar`  
+ *ar*  
  引用`CArchive`对象，用于存储的序列化的文本。  
   
 ### <a name="remarks"></a>备注  
  `SerializeRaw` 不同于`CEditView`的内部实现`Serialize`在于它读取和写入纯文本，而无需前面对象说明数据。  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- 调用`SetPrinterFont`到由指定的字体设置的打印机字体`pFont`。  
+ 调用`SetPrinterFont`到由指定的字体设置的打印机字体*pFont*。  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFont`  
+ *pFont*  
  指向类型的对象的指针`CFont`。 如果**NULL**，用于打印的字体开始算起的显示字体。  
   
 ### <a name="remarks"></a>备注  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nTabStops`  
+ *nTabStops*  
  每个制表位，对话框单位的宽度。  
   
 ### <a name="remarks"></a>备注  

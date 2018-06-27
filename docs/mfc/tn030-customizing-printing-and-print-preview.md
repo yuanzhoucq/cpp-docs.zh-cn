@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 342edd56ee279de0b854c8e8ceb177b797a03f3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 208d179cb8131a690c0ca842f392c934b4386549
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384606"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951300"
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>TN030：自定义打印和打印预览
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。  
   
- 本说明介绍自定义打印和打印预览的过程和说明中使用的回调例程的用途`CView`回调例程和的成员函数**CPreviewView**。  
+ 本说明介绍自定义打印和打印预览的过程和说明中使用的回调例程的用途`CView`回调例程和的成员函数`CPreviewView`。  
   
 ## <a name="the-problem"></a>问题  
  MFC 提供了一个完整的解决方案，大多数打印和打印预览需求。 在大多数情况下，很少的其他代码都需要有一个视图，可以打印并预览。 但是，有方法可以优化打印需要大量精力，开发人员，并且某些应用程序需要将特定的用户界面元素添加到打印预览模式。  
@@ -42,7 +42,7 @@ ms.locfileid: "33384606"
  遗憾的是，这样会降低打印过程。 如果你的应用程序中的打印必须不是可以使用标准的技术来实现更快，则必须实现手动条带。  
   
 ## <a name="print-banding"></a>打印条带  
- 要手动对带外，你必须重新实现打印循环以便`OnPrint`每页 （一次每个带区） 多次调用。 在中实现打印循环**OnFilePrint** viewprnt.cpp 中的函数。 在你`CView`-派生类，以便用于处理打印命令消息映射条目调用打印函数重载此函数。 复制**OnFilePrint**例程和更改打印循环实现条带。 你将可能还想要将具有带区的矩形传递给打印功能，以便你可以优化绘制基于打印页的部分。  
+ 要手动对带外，你必须重新实现打印循环以便`OnPrint`每页 （一次每个带区） 多次调用。 在中实现打印循环`OnFilePrint`viewprnt.cpp 中的函数。 在你`CView`-派生类，以便用于处理打印命令消息映射条目调用打印函数重载此函数。 复制`OnFilePrint`例程和更改打印循环实现条带。 你将可能还想要将具有带区的矩形传递给打印功能，以便你可以优化绘制基于打印页的部分。  
   
  其次，必须频繁调用`QueryAbort`时绘制带区。 否则为将不会调用中止过程和用户将无法取消该打印作业。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "33384606"
   
 ## <a name="to-add-ui-to-the-preview-mode"></a>若要将用户界面添加到预览模式  
   
-1.  派生视图类从**CPreviewView**。  
+1.  派生视图类从`CPreviewView`。  
   
 2.  添加 UI 方面所需的命令处理程序。  
   
-3.  如果你要添加到显示的可视方面，重写`OnDraw`和执行后调用你绘制**CPreviewView::OnDraw。**  
+3.  如果你要添加到显示的可视方面，重写`OnDraw`和执行后调用你绘制`CPreviewView::OnDraw`。  
   
 ## <a name="onfileprintpreview"></a>OnFilePrintPreview  
  这是为打印预览命令处理程序。 其默认实现是：  
@@ -86,9 +86,9 @@ void CView::OnFilePrintPreview()
 }  
 ```  
   
- **DoPrintPreview**将隐藏应用程序的主窗格。 控件条，如状态栏中，可以保留通过指定中 pState->**dwStates**成员 (这是一个位掩码，并由定义的位以单个控件条**AFX_CONTROLBAR_MASK**(AFX_IDW_MYBAR))。 窗口 pState->**nIDMainPane**是将自动隐藏和 reshown 的窗口。 **DoPrintPreview**然后将为标准的预览版 UI 创建一个菜单栏。 如果需要特殊的窗口处理，如隐藏或显示其他 windows，应完成之前需要**DoPrintPreview**调用。  
+ `DoPrintPreview` 将隐藏应用程序的主窗格。 控件条，如状态栏中，可以保留通过指定中 pState->*dwStates* （这是一个位掩码和 bits 单个控件条是定义由 AFX_CONTROLBAR_MASK (AFX_IDW_MYBAR)） 的成员。 窗口 pState->*nIDMainPane*是将自动隐藏和 reshown 的窗口。 `DoPrintPreview` 然后将为标准的预览版 UI 创建一个菜单栏。 如果需要特殊的窗口处理，如隐藏或显示其他 windows，应完成之前需要`DoPrintPreview`调用。  
   
- 默认情况下，如果打印预览完成后，则返回控件条到其原始状态和主窗格中可见。 如果需要特殊处理，则它应进行的重写中**EndPrintPreview。** 如果**DoPrintPreview**失败，还提供特殊处理。  
+ 默认情况下，如果打印预览完成后，则返回控件条到其原始状态和主窗格中可见。 如果需要特殊处理，则它应进行的重写中`EndPrintPreview`。 如果`DoPrintPreview`失败，还提供特殊处理。  
   
  使用调用 DoPrintPreview:  
   
@@ -104,9 +104,9 @@ void CView::OnFilePrintPreview()
     >  如果打印支持需要单独的视图或视图类，应作为第二个参数传递给该对象的指针。  
   
 ## <a name="endprintpreview"></a>EndPrintPreview  
- 这称为终止打印预览模式。 它通常是需要移动到上次在打印预览中显示的文档中的页。 **EndPrintPreview**是执行该操作的应用程序的机会。 PInfo->`m_nCurPage`成员是上次显示 （如果显示两个页面的左侧，） 页，并且指针是关于在页上关注用户是其中一个提示。 由于应用程序的视图的结构是未知的框架，你必须提供代码以移动到选定的点。  
+ 这称为终止打印预览模式。 它通常是需要移动到上次在打印预览中显示的文档中的页。 `EndPrintPreview` 是应用程序的机会执行该操作。 PInfo->*m_nCurPage*成员是上次显示 （如果显示两个页面的左侧，） 页，并且指针是关于在页上关注用户是其中一个提示。 由于应用程序的视图的结构是未知的框架，你必须提供代码以移动到选定的点。  
   
- 你应执行大多数操作之前调用**CView::EndPrintPreview**。 此调用反转的效果**DoPrintPreview**并删除 pView、 pDC 和 pInfo。  
+ 你应执行大多数操作之前调用`CView::EndPrintPreview`。 此调用反转的效果`DoPrintPreview`并删除 pView、 pDC 和 pInfo。  
   
 ```  
 // Any further cleanup should be done here.  
@@ -126,7 +126,7 @@ CView::EndPrintPreview(pDC,
   
  正如所指出的介绍性段落，打印预览作用好似打印机。 因此，用户将看到什么将离开选择特定打印机。 负责视图以确定哪些图像打印每一页上。  
   
- 中的页说明字符串`CPrintInfo`结构提供了一种向用户显示页码，如果它可以表示为每页的一个数字 (如所示"第 1 页"或"页 1-2")。 此字符串的默认实现使用**CPreviewView::OnDisplayPageNumber**。 如果需要不同的显示，则一个可能会覆盖此虚拟函数，可提供，例如，"Sheet1，部分 A，B"。  
+ 中的页说明字符串`CPrintInfo`结构提供了一种向用户显示页码，如果它可以表示为每页的一个数字 (如所示"第 1 页"或"页 1-2")。 此字符串的默认实现使用`CPreviewView::OnDisplayPageNumber`。 如果需要不同的显示，则一个可能会覆盖此虚拟函数，可提供，例如，"Sheet1，部分 A，B"。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368945"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952298"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 类
 显示控件中数据库记录的视图。  
@@ -104,10 +104,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含是对话框模板资源的名称的以 null 结尾的字符串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含对话框模板资源的 ID 号。  
   
 ### <a name="remarks"></a>备注  
@@ -116,10 +116,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  在派生的类必须提供其自己的构造函数。 在派生类的构造函数调用的构造函数`CDaoRecordView::CDaoRecordView`资源名称或 ID 为作为自变量。  
   
- **CDaoRecordView::OnInitialUpdate**调用`CWnd::UpdateData`，哪些调用`CWnd::DoDataExchange`。 此初始调用`DoDataExchange`连接`CDaoRecordView`（间接） 到控制`CDaoRecordset`字段 ClassWizard 所创建的数据成员。 这些数据成员不能直到后调用基类**CFormView::OnInitialUpdate**成员函数。  
+ `CDaoRecordView::OnInitialUpdate` 调用`CWnd::UpdateData`，哪些调用`CWnd::DoDataExchange`。 此初始调用`DoDataExchange`连接`CDaoRecordView`（间接） 到控制`CDaoRecordset`字段 ClassWizard 所创建的数据成员。 这些数据成员不能直到后调用基类`CFormView::OnInitialUpdate`成员函数。  
   
 > [!NOTE]
->  如果你使用 ClassWizard，向导将定义`enum`值`CDaoRecordView::IDD`类声明并使用在成员初始化列表的构造函数。  
+>  如果你使用 ClassWizard，向导将定义**枚举**值`CDaoRecordView::IDD`类声明并使用在成员初始化列表的构造函数。  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -165,7 +165,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
  指向的指针`CDaoRecordset`-派生对象，如果对象已成功创建; 否则为**NULL**指针。  
   
 ### <a name="remarks"></a>备注  
- 你必须重写该成员函数以构造或获取记录集对象并返回指向它的指针。 如果声明与 ClassWizard 记录视图类，向导会为你编写的默认重写。 ClassWizard 的默认实现返回存储在记录视图中，如果存在的记录集指针。 如果不是，构造类型的记录集对象使用指定 ClassWizard 和调用其**打开**成员函数以打开该表或运行查询，然后将指针返回到对象。  
+ 你必须重写该成员函数以构造或获取记录集对象并返回指向它的指针。 如果声明与 ClassWizard 记录视图类，向导会为你编写的默认重写。 ClassWizard 的默认实现返回存储在记录视图中，如果存在的记录集指针。 如果不是，构造类型的记录集对象使用指定 ClassWizard 和调用其`Open`成员函数以打开该表或运行查询，然后将指针返回到对象。  
   
  有关详细信息和示例，请参阅文章[记录视图： 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  以下标准命令 ID 值之一：  
   
 - `ID_RECORD_FIRST` 将移动到记录集的第一个记录。  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  如果移动记录集中的最后一条记录，记录视图将继续显示最后一条记录。 如果向后移过会将第一条记录，记录视图将继续显示第一条记录。  
   
 > [!CAUTION]
->  调用`OnMove`记录集是否没有记录，将引发异常。 调用相应的用户界面更新处理程序函数- **OnUpdateRecordFirst**， **OnUpdateRecordLast**， **OnUpdateRecordNext**，或**OnUpdateRecordPrev** -之前相对应移动操作，以确定记录集是否具有任何记录。  
+>  调用`OnMove`记录集是否没有记录，将引发异常。 调用相应的用户界面更新处理程序函数- `OnUpdateRecordFirst`， `OnUpdateRecordLast`， `OnUpdateRecordNext`，或`OnUpdateRecordPrev`-之前相对应移动操作，以确定记录集是否具有任何记录。  
   
 ## <a name="see-also"></a>请参阅  
  [CFormView 类](../../mfc/reference/cformview-class.md)   

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374609"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955009"
 ---
 # <a name="cdialog-class"></a>CDialog 类
 用于在屏幕上显示对话框的基类。  
@@ -97,7 +97,7 @@ class CDialog : public CWnd
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|重写以执行的取消按钮或 ESC 键操作。 关闭对话框，默认值和**DoModal**返回**IDCANCEL**。|  
+|[CDialog::OnCancel](#oncancel)|重写以执行的取消按钮或 ESC 键操作。 关闭对话框，默认值和`DoModal`返回**IDCANCEL**。|  
 |[CDialog::OnOK](#onok)|重写以执行模式对话框中的确定按钮的操作。 关闭对话框，默认值和`DoModal`返回**IDOK**。|  
   
 ## <a name="remarks"></a>备注  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  数据映射生成以自动处理的成员变量和对话框的控件之间的数据交换。 数据映射提供函数来初始化的控件在对话框中，使用合适的值，检索数据，并验证数据。  
   
- 若要创建模式对话框，构造使用派生的对话框类的构造函数的堆栈上的对象，然后调用`DoModal`创建对话框窗口和其控件。 如果你想要创建无模式对话框，调用**创建**对话框类的构造函数中。  
+ 若要创建模式对话框，构造使用派生的对话框类的构造函数的堆栈上的对象，然后调用`DoModal`创建对话框窗口和其控件。 如果你想要创建无模式对话框，调用`Create`对话框类的构造函数中。  
   
  你还可以创建一个模板在内存中通过使用[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)数据结构在 Windows SDK 中所述。 在构造之后`CDialog`对象，请调用[CreateIndirect](#createindirect)创建无模式对话框中或调用[InitModalIndirect](#initmodalindirect)和[DoModal](#domodal)创建在安装结束时对话框。  
   
@@ -166,13 +166,13 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含是对话框模板资源的名称的以 null 结尾的字符串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含对话框模板资源的 ID 号。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
@@ -182,10 +182,10 @@ CDialog();
   
  与上述方法之一构造模式对话框后，调用`DoModal`。  
   
- 若要构造一个无模式对话框，使用受保护的形式`CDialog`构造函数。 构造函数得到保护，因为必须派生你自己对话框类，以实现无模式对话框。 无模式对话框的构造是一个两步过程。 第一次调用构造函数;然后调用**创建**成员函数来创建基于资源的对话框中，或调用`CreateIndirect`以从内存中的模板创建对话框。  
+ 若要构造一个无模式对话框，使用受保护的形式`CDialog`构造函数。 构造函数得到保护，因为必须派生你自己对话框类，以实现无模式对话框。 无模式对话框的构造是一个两步过程。 第一次调用构造函数;然后调用`Create`成员函数来创建基于资源的对话框中，或调用`CreateIndirect`以从内存中的模板创建对话框。  
   
 ##  <a name="create"></a>  CDialog::Create  
- 调用**创建**若要创建使用对话框模板资源从一个无模式对话框。  
+ 调用`Create`若要创建使用对话框模板资源从一个无模式对话框。  
   
 ```  
 virtual BOOL Create(
@@ -199,30 +199,30 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含是对话框模板资源的名称的以 null 结尾的字符串。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含对话框模板资源的 ID 号。  
   
 ### <a name="return-value"></a>返回值  
  这两种形式返回非零，如果对话框中创建和初始化已成功;否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 你可以将调用放到**创建**内的构造函数或调用其构造函数调用。  
+ 你可以将调用放到`Create`内的构造函数或调用其构造函数调用。  
   
- 两种形式的**创建**成员函数按模板名称或模板 ID 号 (例如，IDD_DIALOG1) 提供对对话框模板资源进行访问。  
+ 两种形式的`Create`成员函数按模板名称或模板 ID 号 (例如，IDD_DIALOG1) 提供对对话框模板资源进行访问。  
   
- 对于任一窗体，将指针传递到父窗口对象。 如果`pParentWnd`是**NULL**，将使用其父窗口或所有者窗口设置为应用程序主窗口创建对话框。  
+ 对于任一窗体，将指针传递到父窗口对象。 如果*pParentWnd*是**NULL**，将使用其父窗口或所有者窗口设置为应用程序主窗口创建对话框。  
   
- **创建**成员函数将返回其创建该对话框后立即。  
+ `Create`成员函数将返回其创建该对话框后立即。  
   
  使用**WS_VISIBLE**如果对话框中时创建的父窗口应出现在对话框模板中的样式。 否则，必须调用`ShowWindow`。 进一步对话框样式和其应用程序，请参阅[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 中的结构和[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 参考*。  
   
- 使用`CWnd::DestroyWindow`函数销毁对话框中创建的**创建**函数。  
+ 使用`CWnd::DestroyWindow`函数销毁对话框中创建的`Create`函数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -243,16 +243,16 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  指向包含用来创建对话框中的对话框模板的内存。 此模板是形式[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)结构和控制信息，如 Windows SDK 中所述。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向对话框对象的父窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md))。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  指向**DLGINIT**资源。  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  包含全局内存包含对话框模板的句柄。 此模板是形式**DLGTEMPLATE**结构和每个控件在对话框中的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `int`值，该值指定的值`nResult`参数传递到[CDialog::EndDialog](#enddialog)成员函数，其用于关闭对话框。 返回值为-1，如果该函数无法创建对话框中，或**IDABORT**如果发生了一些其他错误，通过这种情况下输出窗口将包含错误信息从[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ **Int**值，该值指定的值*n 结果*参数传递到[CDialog::EndDialog](#enddialog)成员函数，其用于关闭对话框。 返回值为-1，如果该函数无法创建对话框中，或**IDABORT**如果发生了一些其他错误，通过这种情况下输出窗口将包含错误信息从[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  对话框中处于活动状态时，此成员函数将处理与用户的所有交互。 正是这使得对话框模式;也就是说，用户不能交互与其他窗口中，是关闭该对话框之前。  
@@ -296,11 +296,11 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nResult`  
+ *n 结果*  
  包含要从对话框中返回到调用方的值`DoModal`。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数将返回`nResult`用作返回值`DoModal`。 必须使用`EndDialog`函数来完成处理每当创建模式对话框。  
+ 此成员函数将返回*n 结果*用作返回值`DoModal`。 必须使用`EndDialog`函数来完成处理每当创建模式对话框。  
   
  你可以调用`EndDialog`任何时候，即使在[OnInitDialog](#oninitdialog)，在这种情况下，你应在关闭对话框框，然后它会显示，或设置输入的焦点之前。  
   
@@ -332,11 +332,11 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWndCtrl`  
+ *pWndCtrl*  
  标识要接收焦点的窗口 （控件）。  
   
 ### <a name="remarks"></a>备注  
- 若要获取的控件 （子窗口），以将作为传递指针`pWndCtrl`，调用`CWnd::GetDlgItem`成员函数，返回一个指向[CWnd](../../mfc/reference/cwnd-class.md)对象。  
+ 若要获取的控件 （子窗口），以将作为传递指针*pWndCtrl*，调用`CWnd::GetDlgItem`成员函数，返回一个指向[CWnd](../../mfc/reference/cwnd-class.md)对象。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem)。  
@@ -357,16 +357,16 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  指向包含用来创建对话框中的对话框模板的内存。 此模板是形式[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)结构和控制信息，如 Windows SDK 中所述。  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  包含全局内存包含对话框模板的句柄。 此模板是形式**DLGTEMPLATE**结构和每个控件在对话框中的数据。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  指向**DLGINIT**资源。  
   
 ### <a name="return-value"></a>返回值  
@@ -385,7 +385,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)包含对话框中的对象要转换的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -393,7 +393,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  **GetDialogBaseUnits** Windows 函数将返回系统字体的大小信息，但你可以指定不同的字体每个对话框中，如果你使用**DS_SETFONT**设置中的样式资源定义文件。 `MapDialogRect` Windows 函数将使用此对话框中的相应的字体。  
   
- `MapDialogRect`成员函数将替换中的对话框单元`lpRect`与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
+ `MapDialogRect`成员函数将替换中的对话框单元*lpRect*与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  将焦点移到下一个控件在对话框中。  
@@ -472,7 +472,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pFont`  
+ [in]*pFont*  
  指定指向将用作此对话框中的所有控件的默认字体的字体的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  指定将成为默认的按钮控件的 ID。  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

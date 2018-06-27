@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f040978c898dae3bfd4ca21c2cf9886fde9b5238
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385266"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951267"
 ---
 # <a name="window-objects"></a>窗口对象
 MFC 还提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句柄。 `CWnd` 对象是一个 C++ 窗口对象，与表示一个 Windows 窗口但包含它的 `HWND` 不同。 使用 `CWnd` 可派生您自己的子窗口类，或使用派生自 `CWnd` 的很多 MFC 类之一。 `CWnd` 类是所有窗口的基类，包括框架窗口、对话框、子窗口、控件和控件条（如工具栏）。 更好地理解[c + + 窗口对象和 HWND 之间的关系](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)进行使用 MFC 进行有效的编程非常重要。  
@@ -44,7 +44,7 @@ MFC 还提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句�
  `CWnd` 并将其[派生的窗口类](../mfc/derived-window-classes.md)提供构造函数、 析构函数和成员函数以初始化对象，创建基础的 Windows 结构并访问封装`HWND`。 `CWnd` 还提供了可封装 Windows API 的成员函数，以用于发送消息、访问窗口的状态、转换坐标、更新、滚动、访问剪贴板以及许多其他任务。 大多数采用 `HWND` 参数的 Windows 窗口管理 API 都封装为 `CWnd` 的成员函数。 函数的名称及其参数保留在 `CWnd` 成员函数中。 有关通过封装 Windows Api 的详细信息`CWnd`，请参阅类[CWnd](../mfc/reference/cwnd-class.md)。  
   
 ## <a name="cwnd-and-windows-messages"></a>CWnd 和 Windows 消息  
- `CWnd` 的一个主要用途是提供用于处理 Windows 消息的接口，如 `WM_PAINT` 或 `WM_MOUSEMOVE`。 成员函数的许多`CWnd`是标准消息的处理程序 — 这些开头标识符**afx_msg**和前缀"On"，如`OnPaint`和**OnMouseMove**。 [消息处理和映射](../mfc/message-handling-and-mapping.md)介绍了消息和详细信息中的处理的消息。 这些信息同样适用于框架的窗口以及您出于特殊目的自己创建的窗口。  
+ 主要用途之一`CWnd`是提供用于处理 Windows 消息，如 WM_PAINT 或 WM_MOUSEMOVE 的接口。 成员函数的许多`CWnd`是标准消息的处理程序 — 这些开头标识符**afx_msg**和前缀"On"，如`OnPaint`和`OnMouseMove`。 [消息处理和映射](../mfc/message-handling-and-mapping.md)介绍了消息和详细信息中的处理的消息。 这些信息同样适用于框架的窗口以及您出于特殊目的自己创建的窗口。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么  
   

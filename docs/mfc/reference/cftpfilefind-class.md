@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370515"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956273"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 辅助 FTP 服务器的 Internet 文件搜索。  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pConnection`  
+ *pConnection*  
  指向的指针`CFtpConnection`对象。 你可以通过调用获取 FTP 连接[cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)。  
   
- `dwContext`  
+ *dwContext*  
  上下文标识符`CFtpFileFind`对象。 请参阅**备注**有关此参数的详细信息。  
   
 ### <a name="remarks"></a>备注  
- 默认值为`dwContext`发送到 mfc`CFtpFileFind`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CFtpFileFind`对象。 你可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ 默认值为*dwContext*发送到 mfc`CFtpFileFind`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CFtpFileFind`对象。 你可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ### <a name="example"></a>示例  
   请参阅本主题前面的类概述中的示例。  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrName`  
+ *pstrName*  
  指向包含要查找的文件的名称的字符串的指针。 如果**NULL**，调用将执行通配符的搜索 （*）。  
   
- `dwFlags`  
+ *dwFlags*  
  描述如何处理此会话的标志。 可以使用按位 OR 运算符组合这些标志 (&#124;) 和如下所示：  
   
 -   即使本地缓存 INTERNET_FLAG_RELOAD 从网络中获得数据。 这是默认值标志。  

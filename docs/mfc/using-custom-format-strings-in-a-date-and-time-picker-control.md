@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2b365439f1681cf72bd58218ea4f55fbb2f44c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aeb6c02041a4ba90f9721f23a1397e17a4cdf81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381997"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955753"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>在日期和时间选取器控件中使用自定义格式字符串
 默认情况下，日期和时间选取器控件提供了 3 种格式（每种格式对应于一个唯一样式）来显示当前日期或时间：  
@@ -34,7 +34,7 @@ ms.locfileid: "33381997"
   
  但是，您可通过使用自定义格式字符串来自定义日期或时间的外观。 此自定义字符串组成现有格式字符、无格式字符或二者的组合。 生成自定义字符串后，请调用[cdatetimectrl:: Setformat](../mfc/reference/cdatetimectrl-class.md#setformat)在自定义字符串中传递。 日期和时间选取器控件之后将使用您的自定义格式字符串显示当前值。  
   
- 以下代码示例（其中 `m_dtPicker` 是 `CDateTimeCtrl` 对象）演示了一种可能的情况：  
+ 下面的代码示例 (其中*m_dtPicker*是`CDateTimeCtrl`对象) 演示了一个可能的解决方法：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   

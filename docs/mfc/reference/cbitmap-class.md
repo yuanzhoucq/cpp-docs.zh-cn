@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 476e9b0bc5e9f4c3eec64e5d0d36d3f900988f48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355858"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954208"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 封装一个 Windows 图形设备接口 (GDI) 位图并提供成员函数以操作位图。  
@@ -130,26 +130,26 @@ BOOL CreateBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nWidth`  
+ *nWidth*  
  指定位图的宽度（以像素为单位）。  
   
- `nHeight`  
+ *nHeight*  
  指定位图的高度（以像素为单位）。  
   
- `nPlanes`  
+ *nPlanes*  
  指定位图中的颜色平面的数量。  
   
- `nBitcount`  
+ *nBitcount*  
  指定每个显示像素的颜色位的数量。  
   
- `lpBits`  
+ *lpBits*  
  指向包含的初始位图位值的字节的数组。 如果它是 **NULL**，新位图则未初始化。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 对于颜色位图， `nPlanes` 或 `nBitcount` 参数应设为 1。 如果这些参数均设为 1， `CreateBitmap` 则会创建一个单色位图。  
+ 对于颜色位图，任一*nPlanes*或*nBitcount*参数应设置为 1。 如果这些参数均设为 1， `CreateBitmap` 则会创建一个单色位图。  
   
  无法为显示设备直接选择位图，尽管它可以选择作为"内存设备上下文"的当前位图使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)和使用复制到任何兼容的设备上下文[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)函数。  
   
@@ -158,14 +158,14 @@ BOOL CreateBitmap(
  有关详细信息，请参见 **BITMAP** 结构中的 **bmBits** 字段的说明。 [位图](../../mfc/reference/bitmap-structure.md)结构做了介绍[CBitmap::CreateBitmapIndirect](#createbitmapindirect)成员函数。  
   
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
- 初始化具有宽度、 高度和提供指向的结构中的位模式 （如果指定） 的位图`lpBitmap`。  
+ 初始化具有宽度、 高度和提供指向的结构中的位模式 （如果指定） 的位图*lpBitmap*。  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpBitmap`  
+ *lpBitmap*  
  指向[位图](../../mfc/reference/bitmap-structure.md)包含位图有关的信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -174,12 +174,12 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>备注  
  无法为显示设备直接选择位图，尽管它可以选择作为内存设备上下文的当前位图使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)和使用复制到任何兼容的设备上下文[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)函数。 ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt)函数可以当前画笔的位图将直接复制到显示设备上下文。)  
   
- 如果**位图**指向结构`lpBitmap`通过使用已填写参数`GetObject`函数未指定位图的位和位图未初始化。 若要初始化位图，应用程序可以使用一个函数如[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)从中进行复制 bits 由的第一个参数标识位图`CGdiObject::GetObject`到创建的位图`CreateBitmapIndirect`.  
+ 如果**位图**指向结构*lpBitmap*通过使用已填写参数`GetObject`函数未指定位图的位和位图未初始化。 若要初始化位图，应用程序可以使用一个函数如[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)从中进行复制 bits 由的第一个参数标识位图`CGdiObject::GetObject`到创建的位图`CreateBitmapIndirect`.  
   
  当你完成与`CBitmap`创建与对象`CreateBitmapIndirect`函数，首先选择设备上下文中中的位图，然后删除`CBitmap`对象。  
   
 ##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
- 初始化与指定的设备兼容的位图`pDC`。  
+ 初始化与指定的设备兼容的位图*pDC*。  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -189,22 +189,22 @@ BOOL CreateCompatibleBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指定的设备上下文。  
   
- `nWidth`  
+ *nWidth*  
  指定位图的宽度（以像素为单位）。  
   
- `nHeight`  
+ *nHeight*  
  指定位图的高度（以像素为单位）。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 位图具有相同数量的颜色平面或与指定的设备上下文的每像素位数格式相同。 它可以选择作为适用于指定的任何内存设备的当前位图`pDC`。  
+ 位图具有相同数量的颜色平面或与指定的设备上下文的每像素位数格式相同。 它可以选择作为适用于指定的任何内存设备的当前位图*pDC*。  
   
- 如果`pDC`是内存设备上下文，位图返回在该设备上下文中具有与当前所选的位图的格式相同。 "内存设备上下文"是内存的表示显示图面块。 它可以用于准备在内存中的映像，然后将其复制到兼容的设备的实际显示图面。  
+ 如果*pDC*是内存设备上下文，位图返回在该设备上下文中具有与当前所选的位图的格式相同。 "内存设备上下文"是内存的表示显示图面块。 它可以用于准备在内存中的映像，然后将其复制到兼容的设备的实际显示图面。  
   
  当创建内存设备上下文时，GDI 会自动为其选择常用的单色位图。  
   
@@ -213,7 +213,7 @@ BOOL CreateCompatibleBitmap(
  当你完成与`CBitmap`创建与对象`CreateCompatibleBitmap`函数，首先选择设备上下文中中的位图，然后删除`CBitmap`对象。  
   
 ##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
- 初始化与由标识的设备上下文兼容的可丢弃位图`pDC`。  
+ 初始化与由标识的设备上下文兼容的可丢弃位图*pDC*。  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -223,20 +223,20 @@ BOOL CreateDiscardableBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指定设备上下文。  
   
- `nWidth`  
+ *nWidth*  
  指定位图的宽度 （以位为单位）。  
   
- `nHeight`  
+ *nHeight*  
  指定位图的高度 （以位为单位）。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 位图具有相同数量的颜色平面或与指定的设备上下文的每像素位数格式相同。 应用程序可以选择将该位图作为适用于指定的内存设备的当前位图`pDC`。  
+ 位图具有相同数量的颜色平面或与指定的设备上下文的每像素位数格式相同。 应用程序可以选择将该位图作为适用于指定的内存设备的当前位图*pDC*。  
   
  Windows 可丢弃创建此函数，仅当应用程序没有选择的显示上下文到它的位图。 如果 Windows 将时未选择和更高版本的应用程序尝试以选中它，将丢弃位图[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)函数将返回**NULL**。  
   
@@ -250,7 +250,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hBitmap`  
+ *hBitmap*  
  指定 Windows GDI 位图。  
   
 ### <a name="return-value"></a>返回值  
@@ -267,7 +267,7 @@ int GetBitmap(BITMAP* pBitMap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitMap`  
+ *pBitMap*  
  指向[位图结构](../../mfc/reference/bitmap-structure.md)结构，它将接收的映像属性。 此参数不能为 `NULL`。  
   
 ### <a name="return-value"></a>返回值  
@@ -285,10 +285,10 @@ DWORD GetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwCount`  
+ *dwCount*  
  要复制到缓冲区的字节数。  
   
- `lpBits`  
+ *lpBits*  
  指向将收到位图的缓冲区的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -311,7 +311,7 @@ CSize GetBitmapDimension() const;
  假定的高度和宽度以前通过使用设置[SetBitmapDimension](#setbitmapdimension)成员函数。  
   
 ##  <a name="loadbitmap"></a>  Cbitmap:: Loadbitmap  
- 加载位图资源通过名为`lpszResourceName`或识别的 ID 号`nIDResource`从应用程序的可执行文件。  
+ 加载位图资源通过名为*lpszResourceName*或识别的 ID 号*nIDResource*从应用程序的可执行文件。  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -319,10 +319,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向以 null 结尾的字符串，包含位图资源的名称。  
   
- `nIDResource`  
+ *nIDResource*  
  指定位图资源的资源 ID 号。  
   
 ### <a name="return-value"></a>返回值  
@@ -331,7 +331,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="remarks"></a>备注  
  加载的位图附加到`CBitmap`对象。  
   
- 如果通过标识位图`lpszResourceName`不存在或如果没有内存不足，无法加载位图，该函数返回 0。  
+ 如果通过标识位图*lpszResourceName*不存在或如果没有内存不足，无法加载位图，该函数返回 0。  
   
  你可以使用[CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)可用于删除位图函数加载的`LoadBitmap`函数，或`CBitmap`析构函数将为你删除对象。  
   
@@ -356,17 +356,17 @@ BOOL LoadMappedBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDBitmap`  
+ *nIDBitmap*  
  位图资源的 ID。  
   
- `nFlags`  
+ *nFlags*  
  位图的标志。 可以为零或**CMB_MASKED**。  
   
- `lpColorMap`  
+ *lpColorMap*  
  指向的指针**颜色映射**结构，其中包含所需映射的位图的颜色信息。 如果此参数为**NULL**，该函数使用默认颜色地图。  
   
  *nMapSize*  
- 指向数量的颜色映射`lpColorMap`。  
+ 指向数量的颜色映射*lpColorMap*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -384,7 +384,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDBitmap`  
+ *nIDBitmap*  
  预定义的 Windows 位图的 ID 号。 从 WINDOWS 下面列出可能的值。H:  
   
 |||  
@@ -431,7 +431,7 @@ operator HBITMAP() const;
  有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
- 将位图的位设置为给定的位值`lpBits`。  
+ 将位图的位设置为给定的位值*lpBits*。  
   
 ```  
 DWORD SetBitmapBits(
@@ -440,10 +440,10 @@ DWORD SetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwCount`  
- 指定指向的字节数`lpBits`。  
+ *dwCount*  
+ 指定指向的字节数*lpBits*。  
   
- `lpBits`  
+ *lpBits*  
  指向**字节**数组，其中包含要复制到的像素值`CBitmap`对象。 若要能够正确呈现其图像的位图的顺序，值应进行格式设置以符合 CBitmap 实例已创建时指定的高度、 宽度和颜色深度值。 有关详细信息，请参阅[CBitmap::CreateBitmap](#createbitmap)。  
   
 ### <a name="return-value"></a>返回值  
@@ -459,10 +459,10 @@ CSize SetBitmapDimension(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nWidth`  
+ *nWidth*  
  指定的宽度 （以 0.1 毫米为单位） 的位图。  
   
- `nHeight`  
+ *nHeight*  
  指定的高度 （以 0.1 毫米为单位） 的位图。  
   
 ### <a name="return-value"></a>返回值  

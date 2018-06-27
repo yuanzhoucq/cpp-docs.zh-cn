@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384070"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953757"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows 套接字：从套接字类派生
 本文介绍了一些你可以通过从一个套接字类派生您自己的类来获得的功能。  
@@ -30,7 +30,7 @@ ms.locfileid: "33384070"
   
  此外，类`CSocket`提供[OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending)成员函数 (一个高级可重写)。 MFC 套接字发送基于 Windows 的消息时调用此函数。 您可以重写`OnMessagePending`以从 Windows 查找特定的消息并对其进行响应。  
   
- 默认版本`OnMessagePending`类中提供`CSocket`检查消息队列中的`WM_PAINT`等待阻塞调用完成时的消息。 它将调度绘画消息以提高显示质量。 除了执行一些有用的任务，此演示一种方法可能会重写函数自己。 作为另一个示例，请考虑使用`OnMessagePending`以下任务。 假设在等待网络事务完成时显示无模式对话框。 对话框中包含用户可以使用来取消正在阻塞的事务花费很长时间的取消按钮。 你`OnMessagePending`重写可能会发送到此无模式对话框中相关的消息。  
+ 默认版本`OnMessagePending`类中提供`CSocket`在等待阻塞调用完成时检查 WM_PAINT 消息的消息队列。 它将调度绘画消息以提高显示质量。 除了执行一些有用的任务，此演示一种方法可能会重写函数自己。 作为另一个示例，请考虑使用`OnMessagePending`以下任务。 假设在等待网络事务完成时显示无模式对话框。 对话框中包含用户可以使用来取消正在阻塞的事务花费很长时间的取消按钮。 你`OnMessagePending`重写可能会发送到此无模式对话框中相关的消息。  
   
  在你`OnMessagePending`重写时，请返回**TRUE**或到基类版本的调用返回`OnMessagePending`。 如果它执行你仍然想要完成的工作，则调用基类版本。  
   

@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384460"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950469"
 ---
 # <a name="windows"></a>Windows
 本系列文章介绍 MFC 框架中的窗口对象。 所有 MFC 窗口都派生自类[CWnd](../mfc/reference/cwnd-class.md)，包括框架窗口、 视图、 对话框和控件。  
   
- 第一个系列文章介绍[窗口对象](../mfc/window-objects.md)一般情况下。 引用此组有关 c + + 窗口对象、 它们如何封装 HWND，并创建你自己的 windows，如子窗口时的使用方式的常规信息。  
+ 第一个系列文章介绍[窗口对象](../mfc/window-objects.md)一般情况下。 有关 c + + 窗口对象的常规信息此组是指如何与其所封装`HWND`，并创建你自己的 windows，如子窗口时的使用方式。  
   
  第二个系列文章介绍[框架窗口](../mfc/frame-windows.md)-windows 放边框内容-尤其是。 引用此组有关 MFC 框架如何管理框架窗口和框架，包括控件条和视图的内容信息。  
   

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382760"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956247"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>树控件拖放操作
-树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 发送通知，当用户开始拖动项。 控件将发送[TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504)通知消息，当用户开始拖动项时鼠标左键和[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)通知消息，当用户开始拖动与右侧的按钮。 你可以防止树控件发送这些通知通过为树控件提供**TVS_DISABLEDRAGDROP**样式。  
+树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 发送通知，当用户开始拖动项。 控件将发送[TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504)通知消息，当用户开始拖动项时鼠标左键和[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)通知消息，当用户开始拖动与右侧的按钮。 你可以防止树控件发送这些通知通过为树控件提供 TVS_DISABLEDRAGDROP 样式。  
   
  获取该图像显示在拖动操作期间，通过调用[CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage)成员函数。 树控件将基于所拖动的项标签创建一个拖动位图。 然后树控件创建图像列表，将位图添加到其中，并返回一个指向[CImageList](../mfc/reference/cimagelist-class.md)对象。  
   

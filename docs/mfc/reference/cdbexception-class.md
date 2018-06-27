@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368330"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952243"
 ---
 # <a name="cdbexception-class"></a>CDBException 类
 表示由数据库类引起的异常条件。  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED**无法满足你的更新锁定记录的请求，因为 ODBC 驱动程序不支持锁定。  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**你调用`CRecordset::Update`或**删除**具有没有唯一键的表和已更改的多个记录。  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**你调用`CRecordset::Update`或`Delete`具有没有唯一键的表和已更改的多个记录。  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD**您尝试编辑或删除以前已删除的记录。 你必须在删除之后滚动到新的当前记录。  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES**您的请求的不会完成动态集，因为 ODBC 驱动程序不支持定位更新。  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**你调用`CRecordset::Update`或**删除**，但该操作开始时记录不再找不到。  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**你调用`CRecordset::Update`或`Delete`，但该操作开始时记录不再找不到。  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED**尝试加载 ODBC。DLL 失败;Windows 找不到或无法加载此 DLL。 此错误是致命的。  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY**试图更新只读的记录集，或数据源是只读的。 可以使用该记录执行任何更新操作或`CDatabase`与之关联的对象。  
   
-- **SQL_ERROR**失败的函数。 ODBC 函数返回的错误消息**SQLError**存储在**m_strError**数据成员。  
+- **SQL_ERROR**失败的函数。 ODBC 函数返回的错误消息`SQLError`存储在**m_strError**数据成员。  
   
 - **SQL_INVALID_HANDLE**函数失败，由于无效的环境句柄、 连接句柄或语句句柄。 这指示编程错误。 无更多信息可从 ODBC 函数**SQLError**。  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>备注  
  该字符串采用的窗体"状态: %s，本机: %ld，源: %s"，其中的格式代码，按顺序，将替换为描述的值：  
   
--   **SQLSTATE**、 以 null 结尾的字符串，包含在中返回的五个字符的错误代码*szSqlState* ODBC 函数的参数**SQLError**。 **SQLSTATE**附录 A 列出了值[ODBC 错误代码](https://msdn.microsoft.com/library/ms714687.aspx)中*ODBC 程序员参考*。 示例:"S0022"。  
+-   **SQLSTATE**、 以 null 结尾的字符串，包含在中返回的五个字符的错误代码*szSqlState* ODBC 函数的参数`SQLError`。 **SQLSTATE**附录 A 列出了值[ODBC 错误代码](https://msdn.microsoft.com/library/ms714687.aspx)中*ODBC 程序员参考*。 示例:"S0022"。  
   
--   中的特定于数据源的本机错误代码返回*pfNativeError*参数**SQLError**函数。 示例： 207。  
+-   中的特定于数据源的本机错误代码返回*pfNativeError*参数`SQLError`函数。 示例： 207。  
   
--   在返回的错误消息文本*szErrorMsg*参数**SQLError**函数。 此消息由多个括在括号中的名称组成。 向用户从其源传递错误，如每个 ODBC 组件 （驱动程序，驱动程序管理器中的数据源） 将追加其自己的名称。 此信息可帮助找出错误的源。 示例: [Microsoft] [ODBC SQL Server 驱动程序] [SQL Server]  
+-   在返回的错误消息文本*szErrorMsg*参数`SQLError`函数。 此消息由多个括在括号中的名称组成。 向用户从其源传递错误，如每个 ODBC 组件 （驱动程序，驱动程序管理器中的数据源） 将追加其自己的名称。 此信息可帮助找出错误的源。 示例: [Microsoft] [ODBC SQL Server 驱动程序] [SQL Server]  
   
  框架解释的错误字符串，并将其组件都进入**m_strStateNativeOrigin**; 如果**m_strStateNativeOrigin**包含信息用分隔多个错误，错误换行符。 框架将放到的字母数字的错误文本**m_strError**。  
   

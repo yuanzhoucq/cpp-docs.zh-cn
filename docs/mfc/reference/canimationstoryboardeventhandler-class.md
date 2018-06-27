@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352218"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957112"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler 类
 实现回调，它在演示图板状态更改时或演示图板更新时由动画 API 调用。  
@@ -89,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
@@ -108,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>参数  
- `storyboard`  
+ *情节提要*  
  指向其状态已更改的情节提要的指针。  
   
- `newStatus`  
+ *newStatus*  
  指定新情节提要状态。  
   
- `previousStatus`  
+ *previousStatus*  
  指定以前的情节提要状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -128,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>参数  
- `storyboard`  
+ *情节提要*  
  情节提要的指针，其中已更新。  
   
 ### <a name="return-value"></a>返回值  
@@ -142,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
 ## <a name="see-also"></a>请参阅  

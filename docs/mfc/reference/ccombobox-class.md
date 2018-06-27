@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb514531e600243fe02f8b5a6a9cd91a30c14542
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357236"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952575"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 提供 Windows 组合框功能。  
@@ -254,7 +254,7 @@ class CComboBox : public CWnd
   
  如果您嵌入`CComboBox`另一个窗口中的对象的对象，不需要将其销毁。 如果你创建`CComboBox`对象在堆栈上，自动销毁。 如果你创建`CComboBox`使用堆上的对象**新**函数，必须调用**删除**上要在销毁 Windows 组合框时销毁它的对象。  
   
- **请注意**如果你想要处理`WM_KEYDOWN`和`WM_CHAR`的消息，你具有子类化组合框的编辑和列表框控件中，派生的类`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生类。 有关详细信息，请参阅[ http://support.microsoft.com/default.aspxscid=kb; en-我们;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
+ **请注意**如果你想要处理 WM_KEYDOWN 和 WM_CHAR 消息，您可以子类的组合框的编辑和列表框控件中，派生的类`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生的类。 有关详细信息，请参阅[ http://support.microsoft.com/default.aspxscid=kb; en-我们;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -276,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszString`  
+ *lpszString*  
  指向要添加的以 null 结尾的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -324,13 +324,13 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  指向的长指针[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)结构。  
   
 ### <a name="return-value"></a>返回值  
  指示中所述的两个项的相对位置`COMPAREITEMSTRUCT`结构。 它可以是任何以下值：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |- 1|项 2 之前进行排序的第 1 项。|  
 |0|项 1 和 2 的项进行排序相同。|  
@@ -366,25 +366,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定组合框的样式。 应用的任意组合[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)在框中。  
   
- `rect`  
+ *rect*  
  指向的位置和大小的组合框。 可以是[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定组合框的父窗口 (通常`CDialog`)。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定组合框控件 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CComboBox`两个步骤中的对象。 首先，调用的构造函数，然后调用**创建**，它创建 Windows 组合框，并将其附加到`CComboBox`对象。  
+ 构造`CComboBox`两个步骤中的对象。 首先，调用的构造函数，然后调用`Create`，它创建 Windows 组合框，并将其附加到`CComboBox`对象。  
   
- 当**创建**执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)到组合框的消息。  
+ 当`Create`执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)在组合框中的消息。  
   
  默认情况下，通过处理这些消息的消息[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数在`CWnd`基类。 若要扩展的默认消息处理，从派生类`CComboBox`、 将消息映射添加到新的类中，和重写前面的消息处理程序成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
   
@@ -428,7 +428,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  向 Windows 的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)结构，它包含有关已删除的项的信息。 请参阅[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)有关此结构的说明。  
   
 ### <a name="remarks"></a>备注  
@@ -438,21 +438,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
 ##  <a name="deletestring"></a>  CComboBox::DeleteString  
- 删除位置中的项`nIndex`从组合框。  
+ 删除位置中的项*nIndex*从组合框。  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定要删除的字符串的索引。  
   
 ### <a name="return-value"></a>返回值  
- 如果返回值是大于或等于 0，则会在列表中剩余的字符串的计数。 返回值是**CB_ERR**如果`nIndex`指定列表中的索引大于项的数目。  
+ 如果返回值是大于或等于 0，则会在列表中剩余的字符串的计数。 返回值是**CB_ERR**如果*nIndex*指定列表中的索引大于项的数目。  
   
 ### <a name="remarks"></a>备注  
- 后面的所有项`nIndex`现在下移一个位置。 例如，如果组合框包含两个项，则删除第一项将导致剩余的项现在处于的第一个位置。 `nIndex`= 0 中的第一个位置的项。  
+ 后面的所有项*nIndex*现在下移一个位置。 例如，如果组合框包含两个项，则删除第一项将导致剩余的项现在处于的第一个位置。 *nIndex*= 0 中的第一个位置的项。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
@@ -467,8 +467,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>参数  
- `attr`  
- 可以是任意组合的`enum`值中所述[cfile:: Getstatus](../../mfc/reference/cfile-class.md#getstatus)或以下值的任意组合：  
+ *attr*  
+ 可以是任意组合的**枚举**值中所述[cfile:: Getstatus](../../mfc/reference/cfile-class.md#getstatus)或以下值的任意组合：  
   
 - **DDL_READWRITE**可以读取或写入到文件。  
   
@@ -478,15 +478,15 @@ int Dir(
   
 - **DDL_SYSTEM**文件是系统文件。  
   
-- **DDL_DIRECTORY**指定的名称`lpszWildCard`指定的目录。  
+- **DDL_DIRECTORY**指定的名称*lpszWildCard*指定的目录。  
   
 - **DDL_ARCHIVE**已存档文件。  
   
-- **DDL_DRIVES**包括与指定的名称匹配的所有驱动器`lpszWildCard`。  
+- **DDL_DRIVES**包括与指定的名称匹配的所有驱动器*lpszWildCard*。  
   
 - **DDL_EXCLUSIVE**独占标志。 如果设置独占标志，仅指定类型的文件会列出。 否则，除"正常"的文件之外还列出指定类型的文件。  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  指向文件规范的字符串。 字符串可以包含通配符 (例如，*。\*)。  
   
 ### <a name="return-value"></a>返回值  
@@ -506,13 +506,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关所需的绘图的类型的信息。  
   
 ### <a name="remarks"></a>备注  
  **ItemAction**的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。 请参阅[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)有关此结构的说明。  
   
- 默认情况下，此成员函数没有任何影响。 重写该成员函数以实现所有者描述的绘图`CComboBox`对象。 此成员函数将终止之前，应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`。  
+ 默认情况下，此成员函数没有任何影响。 重写该成员函数以实现所有者描述的绘图`CComboBox`对象。 此成员函数将终止之前，应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象*lpDrawItemStruct*。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
@@ -527,10 +527,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartAfter`  
- 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nStartAfter`。 如果为-1，从开始处搜索整个列表框。  
+ *nStartAfter*  
+ 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项*nStartAfter*。 如果为-1，从开始处搜索整个列表框。  
   
- `lpszString`  
+ *lpszString*  
  指向以 null 结尾的字符串，其中包含要搜索的前缀。 搜索是独立的因此此字符串可以包含任何组合的大写和小写字母。  
   
 ### <a name="return-value"></a>返回值  
@@ -543,7 +543,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
- 调用`FindStringExact`成员函数，以便查找第一个列表框中的字符串 （组合框） 中指定的字符串匹配`lpszFind`。  
+ 调用`FindStringExact`成员函数，以便查找第一个列表框中的字符串 （组合框） 中指定的字符串匹配*lpszFind*。  
   
 ```  
 int FindStringExact(
@@ -552,17 +552,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndexStart`  
- 指定要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nIndexStart`。 如果`nIndexStart`为-1，从开始处搜索整个列表框。  
+ *nIndexStart*  
+ 指定要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项*nIndexStart*。 如果*nIndexStart*为-1，从开始处搜索整个列表框。  
   
- `lpszFind`  
+ *lpszFind*  
  指向要搜索的以 null 结尾的字符串。 此字符串可以包含完整的文件名，包括扩展名。 搜索不区分大小写，因此此字符串可以包含任何组合的大写和小写字母。  
   
 ### <a name="return-value"></a>返回值  
  匹配的项的从零开始索引或**CB_ERR**如果搜索未成功。  
   
 ### <a name="remarks"></a>备注  
- 如果组合框但没有创建了一个所有者绘制样式[CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，`FindStringExact`尝试与双字值的值相匹配`lpszFind`。  
+ 如果组合框但没有创建了一个所有者绘制样式[CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，`FindStringExact`尝试与双字值的值相匹配*lpszFind*。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
@@ -612,13 +612,13 @@ BOOL GetCueBanner(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `lpszText`|为接收提示横幅文本的缓冲区的指针。|  
-|[in] `cchText`|缓冲区的大小，`lpszText`参数指向。|  
+|[out]*lpszText*|为接收提示横幅文本的缓冲区的指针。|  
+|[in]*cchText*|缓冲区的大小， *lpszText*参数指向。|  
   
 ### <a name="return-value"></a>返回值  
  在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含提示横幅文本，如果存在; 否则为`CString`长度为零的对象。  
   
- -或-  
+ 或  
   
  在第二个重载中，`true`如果此方法成功; 否则为`false`。  
   
@@ -747,14 +747,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含组合框的列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  该项目，与关联的 32 位值或**CB_ERR**如果发生错误。  
   
 ### <a name="remarks"></a>备注  
- 32 位值可以设置与`dwItemData`参数[SetItemData](#setitemdata)成员函数调用。 使用`GetItemDataPtr`成员函数要检索的 32 位值是否为指针 ( **void\***)。  
+ 32 位值可以设置与*dwItemData*参数[SetItemData](#setitemdata)成员函数调用。 使用`GetItemDataPtr`成员函数要检索的 32 位值是否为指针 ( **void\***)。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
@@ -767,7 +767,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含组合框的列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -784,8 +784,8 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 指定组合框的高度是要检索的组件。 如果`nIndex`参数的值为-1，检索的组合框的编辑控件 （或静态文本） 部分的高度。 如果组合框中具有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，`nIndex`指定其高度是要检索的列表项的从零开始索引。 否则为`nIndex`应设置为 0。  
+ *nIndex*  
+ 指定组合框的高度是要检索的组件。 如果*nIndex*参数的值为-1，检索的组合框的编辑控件 （或静态文本） 部分的高度。 如果组合框中具有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式， *nIndex*指定其高度是要检索的列表项的从零开始索引。 否则为*nIndex*应设置为 0。  
   
 ### <a name="return-value"></a>返回值  
  以像素为单位，组合框中指定的项的高度。 返回值是 **CB_ERR** 如果发生错误。  
@@ -807,17 +807,17 @@ void GetLBText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含要复制的列表框中字符串的从零开始的索引。  
   
- `lpszText`  
+ *lpszText*  
  指向以将接收字符串的缓冲区。 缓冲区必须具有足够空间的字符串和终止 null 字符。  
   
- `rString`  
+ *rString*  
  对 `CString` 的引用。  
   
 ### <a name="return-value"></a>返回值  
- 不包括终止 null 字符的字符串的长度 （以字节为单位）。 如果`nIndex`未指定有效的索引，则返回值是**CB_ERR**。  
+ 不包括终止 null 字符的字符串的长度 （以字节为单位）。 如果*nIndex*未指定有效的索引，则返回值是**CB_ERR**。  
   
 ### <a name="remarks"></a>备注  
  此成员的第二种形式函数填充`CString`用项的文本的对象。  
@@ -833,11 +833,11 @@ int GetLBTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含列表框中字符串的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 以字节为单位，不包括终止 null 字符的字符串的长度。 如果`nIndex`未指定有效的索引，则返回值是**CB_ERR**。  
+ 以字节为单位，不包括终止 null 字符的字符串的长度。 如果*nIndex*未指定有效的索引，则返回值是**CB_ERR**。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CComboBox::GetLBText](#getlbtext)。  
@@ -897,10 +897,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItems`  
+ *nItems*  
  指定要添加的项的数目。  
   
- `nBytes`  
+ *nBytes*  
  以字节为单位，分配项字符串中指定内存的量。  
   
 ### <a name="return-value"></a>返回值  
@@ -909,7 +909,7 @@ int InitStorage(
 ### <a name="remarks"></a>备注  
  将大量的项添加到列表框部分之前调用此函数`CComboBox`。  
   
- 仅 Windows 95/98:`wParam`参数最多为 16 位值。 这意味着列表框不能包含多个 32,767 的项。 尽管限制项的数目，则列表框中的项的总大小仅受可用内存。  
+ 仅 Windows 95/98: *wParam*参数最多为 16 位值。 这意味着列表框不能包含多个 32,767 的项。 尽管限制项的数目，则列表框中的项的总大小仅受可用内存。  
   
  此函数可帮助加快拥有大量的项 (超过 100) 的列表框的初始化。 它预分配指定的数量的内存，因此后续[AddString](#addstring)， [InsertString](#insertstring)，和[Dir](#dir)函数采用最短的时间。 你可以使用估计值的参数。 如果你要估计得高一些，一些额外的内存分配;如果你低估，正常分配用于超过预分配的量的项。  
   
@@ -926,10 +926,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含一个索引（该索引从零开始），该索引指向列表框中将接收字符串的位置。 如果此参数为-1，则字符串被添加到列表的末尾。  
   
- `lpszString`  
+ *lpszString*  
  指向要插入的以 null 结尾的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -952,7 +952,7 @@ BOOL LimitText(int nMaxChars);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMaxChars`  
+ *nMaxChars*  
  指定用户可以输入的文本的长度 （以字节为单位）。 如果此参数为 0，则会将文本长度设置为 65535 字节。  
   
 ### <a name="return-value"></a>返回值  
@@ -974,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
@@ -1020,10 +1020,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartAfter`  
- 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nStartAfter`。 如果为-1，从开始处搜索整个列表框。  
+ *nStartAfter*  
+ 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项*nStartAfter*。 如果为-1，从开始处搜索整个列表框。  
   
- `lpszString`  
+ *lpszString*  
  指向以 null 结尾的字符串，其中包含要搜索的前缀。 搜索是独立的因此此字符串可以包含任何组合的大写和小写字母。  
   
 ### <a name="return-value"></a>返回值  
@@ -1059,7 +1059,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
  此方法可发送[CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897)消息，Windows SDK 中介绍。  
   
 ### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_combobox`，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
+ 下面的代码示例定义变量， *m_combobox*，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1076,11 +1076,11 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nSelect`  
+ *请选择*  
  指定要选择的字符串的从零开始的索引。 如果为-1，删除任何当前的选择列表框中，并清除编辑控件。  
   
 ### <a name="return-value"></a>返回值  
- 如果消息已成功中选定的项的从零开始的索引。 返回值是**CB_ERR**如果`nSelect`大于列表中的项的数目或如果`nSelect`设置为-1，清除选择。  
+ 如果消息已成功中选定的项的从零开始的索引。 返回值是**CB_ERR**如果*请选择*大于列表中的项的数目或如果*请选择*设置为-1，清除选择。  
   
 ### <a name="remarks"></a>备注  
  如有必要，列表框中滚动到视图字符串中 （如果该列表框是可见的）。 组合框编辑控件中的文本更改以反映新的选择。 删除任何以前的选择列表框中。  
@@ -1096,7 +1096,7 @@ int SetDroppedWidth(UINT nWidth);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nWidth`  
+ *nWidth*  
  组合框，以像素为单位的列表框部分的最小允许宽度。  
   
 ### <a name="return-value"></a>返回值  
@@ -1120,10 +1120,10 @@ BOOL SetEditSel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartChar`  
+ *nStartChar*  
  指定的起始位置。 如果起始位置设置为-1，则将移除任何现有的选择。  
   
- `nEndChar`  
+ *nEndChar*  
  指定的结束位置。 如果结束位置到最后一个设置为-1，然后从起始位置的所有文本选择编辑控件中的字符。  
   
 ### <a name="return-value"></a>返回值  
@@ -1191,10 +1191,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含要设置的项的从零开始索引。  
   
- `dwItemData`  
+ *dwItemData*  
  包含要与项关联的新值。  
   
 ### <a name="return-value"></a>返回值  
@@ -1216,10 +1216,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  包含项的从零开始索引。  
   
- `pData`  
+ *pData*  
  包含要与项关联的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1241,15 +1241,15 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定是否已设置的列表项的高度或组合框的编辑控件 （或静态文本） 部分的高度。  
   
- 如果组合框中具有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，`nIndex`指定其高度，则为设置; 否则为列表项的从零开始索引`nIndex`必须是 0 和将设置项的所有列表的高度。  
+ 如果组合框中具有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式， *nIndex*指定其高度，则为设置; 否则为列表项的从零开始索引*nIndex*必须为 0并将设置所有列表项的高度。  
   
- 如果`nIndex`为-1，编辑控件的高度或组合框的静态文本一部分将设置。  
+ 如果*nIndex*为-1，编辑控件的高度或组合框的静态文本一部分将设置。  
   
- `cyItemHeight`  
- 以像素为单位，组合框组件由标识指定的高度， `nIndex`。  
+ *cyItemHeight*  
+ 以像素为单位，组合框组件由标识指定的高度， *nIndex*。  
   
 ### <a name="return-value"></a>返回值  
  **CB_ERR**如果索引或高度为无效; 否则为 0。  
@@ -1268,7 +1268,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewLocale`  
+ *nNewLocale*  
  新区域设置标识符 (LCID) 要设置的值的组合框。  
   
 ### <a name="return-value"></a>返回值  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|指定可见项的最小数目。|  
+|[in]*iMinVisible*|指定可见项的最小数目。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -1300,7 +1300,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  此方法可发送[CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)消息，Windows SDK 中介绍。  
   
 ### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_combobox`，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
+ 下面的代码示例定义变量， *m_combobox*，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1317,14 +1317,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定列表框项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为零或**CB_ERR**如果发生错误。  
   
 ### <a name="remarks"></a>备注  
- 系统滚动列表框中指定的任意一项之前`nIndex`显示顶部的列表框或最大滚动范围已达到。  
+ 系统滚动列表框中指定的任意一项之前*nIndex*显示顶部的列表框或最大滚动范围已达到。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  

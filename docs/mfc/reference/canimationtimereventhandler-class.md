@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352094"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953267"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 类
 实现回调，它在计时事件发生时由动画 API 调用。  
@@ -77,10 +77,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
@@ -113,7 +113,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fps`  
+ *每秒帧数*  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功; 则为 S_OK否则为 E_FAIL。  
@@ -126,7 +126,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pAnimationController`  
+ *pAnimationController*  
  指向动画控制器，它将接收此事件的指针。  
   
 ## <a name="see-also"></a>请参阅  

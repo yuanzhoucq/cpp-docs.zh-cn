@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9020eb0165a0f06e430caa6a0e1641ea1afb3d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cf3f78624761b364bf192876cb8368c73507e86
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358337"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951570"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 类
 ID2D1SolidColorBrush 包装器。  
@@ -81,7 +81,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|画笔的纯色。|  
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|将存储指向 ID2D1SolidColorBrush 对象的指针。|  
@@ -113,7 +113,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
@@ -136,19 +136,19 @@ CD2DSolidColorBrush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `color`  
+ *颜色*  
  画笔的颜色红、 绿、 蓝方和 alpha 值。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指向不透明度和画笔的转换的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
- `nAlpha`  
+ *nAlpha*  
  画笔的颜色的不透明度。  
   
 ##  <a name="create"></a>  CD2DSolidColorBrush::Create  
@@ -159,7 +159,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -234,7 +234,7 @@ void SetColor(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  此纯色画笔的颜色  
   
 ## <a name="see-also"></a>请参阅  

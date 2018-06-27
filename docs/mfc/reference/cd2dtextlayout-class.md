@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355920"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951599"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 类
 IDWriteTextLayout 包装器。  
@@ -85,7 +85,7 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|指向 IDWriteTextLayout 的指针。|  
   
@@ -119,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `strText`  
+ *strText*  
  CString 对象包含要创建中的新 CD2DTextLayout 对象的字符串。  
   
- `textFormat`  
+ *textFormat*  
  CString 对象包含要应用于字符串的格式。  
   
- `sizeMax`  
+ *sizeMax*  
  布局框的大小。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -171,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>参数  
- `currentPosition`  
+ *currentPosition*  
  要检查的文本的位置。  
   
- `textRange`  
+ *textRange*  
  通过 currentPosition 指定位置处的文本格式的具有相同的文本范围。 这意味着该运行具有指定，包括但不是限于字体系列名称的位置的准确格式。  
   
 ### <a name="return-value"></a>返回值  
@@ -190,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>参数  
- `currentPosition`  
+ *currentPosition*  
  要检查的文本的位置。  
   
- `textRange`  
+ *textRange*  
  通过 currentPosition 指定位置处的文本格式的具有相同的文本范围。 这意味着该运行具有指定，包括但不是限于区域设置名称的位置的准确格式。  
   
 ### <a name="return-value"></a>返回值  
@@ -246,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  适用于 textRange 所指定的范围之内的整个文本字符串字体系列名称  
   
- `textRange`  
+ *textRange*  
  要应用此更改的文本范围  
   
 ### <a name="return-value"></a>返回值  
@@ -265,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  以 null 结尾的区域设置名称字符串  
   
- `textRange`  
+ *textRange*  
  要应用此更改的文本范围  
   
 ### <a name="return-value"></a>返回值  

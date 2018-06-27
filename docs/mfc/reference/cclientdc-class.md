@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348902"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954261"
 ---
 # <a name="cclientdc-class"></a>CClientDC 类
 负责调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在构造时和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在析构时。  
@@ -46,7 +46,7 @@ class CClientDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CClientDC::m_hWnd](#m_hwnd)|`HWND`此窗口的`CClientDC`有效。|  
   
@@ -66,14 +66,14 @@ class CClientDC : public CDC
  **标头:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- 构造`CClientDC`访问的工作区的对象[CWnd](../../mfc/reference/cwnd-class.md)指向`pWnd`。  
+ 构造`CClientDC`访问的工作区的对象[CWnd](../../mfc/reference/cwnd-class.md)指向*pWnd*。  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  窗口设备上下文对象将访问其工作区中。  
   
 ### <a name="remarks"></a>备注  
@@ -92,7 +92,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_hWnd` 是一个受保护的变量。  
+ *m_hWnd*是受保护的变量。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CClientDC::CClientDC](#cclientdc)。  

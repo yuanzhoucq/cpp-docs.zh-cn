@@ -1,7 +1,7 @@
 ---
 title: CFile 类 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957477"
 ---
 # <a name="cfile-class"></a>CFile 类
 Microsoft 基础类文件类的基类。  
@@ -136,7 +137,7 @@ class CFile : public CObject
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|指向`CAtlTransactionManager`对象。|  
   
@@ -169,9 +170,9 @@ virtual void Abort();
 ### <a name="remarks"></a>备注  
  如果您未在销毁对象之前关闭该文件，析构函数为你将其关闭。  
   
- 当处理异常、`CFile::Abort`区别`CFile::Close`在两个重要方面。 首先，**中止**函数将不引发异常，失败原因失败，将忽略**中止**。 第二个，**中止**不将**断言**如果文件尚未打开或在以前已关闭。  
+ 当处理异常、`CFile::Abort`区别`CFile::Close`在两个重要方面。 首先，`Abort`函数将不引发异常，失败原因失败，将忽略`Abort`。 第二个，`Abort`不将**断言**如果文件尚未打开或在以前已关闭。  
   
- 如果你使用**新**分配`CFile`对象在堆上，则你必须在关闭该文件之后删除它。 **中止**设置`m_hFile`到`CFile::hFileNull`。  
+ 如果你使用**新**分配`CFile`对象在堆上，则你必须在关闭该文件之后删除它。 `Abort` 设置`m_hFile`到`CFile::hFileNull`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hFile`  
+ *hFile*  
  要附加到 `CFile` 对象的文件的句柄。  
   
- `lpszFileName`  
+ *lpszFileName*  
  要附加到 `CFile` 对象的文件的相对路径或完整路径。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  指定文件的文件访问选项的按位组合 (OR)。 有关可能的选项，请参阅“备注”部分。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="remarks"></a>备注  
- 下面的五个表列出了 `nOpenFlags` 参数可能的选项。  
+ 下面的五个表列出可能的选项*nOpenFlags*参数。  
   
  仅选择下列文件访问模式选项之一。 默认文件访问模式为 `CFile::modeRead`，该模式为只读模式。  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |值|描述|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|创建一个新文件，如果文件不存在。;如果该文件已存在， [CFileException](../../mfc/reference/cfileexception-class.md)引发。|  
+|`CFile::modeCreate`|如果文件不存在，请创建一个新文件。 如果该文件已存在，它是覆盖，并且最初设置为长度为零。|  
 |`CFile::modeNoTruncate`|若文件不存在，则创建新文件；否则，如果该文件已存在，则将其附加到 `CFile` 对象。|  
   
  按照描述选择以下文件缓存选项。 默认情况下，系统将使用通用的缓存方案，该方案不可用作选项。  
@@ -282,7 +283,7 @@ virtual void Close();
 ### <a name="remarks"></a>备注  
  如果您未在销毁对象之前关闭该文件，析构函数为你将其关闭。  
   
- 如果你使用**新**分配`CFile`对象在堆上，则你必须在关闭该文件之后删除它。 **关闭**设置`m_hFile`到`CFile::hFileNull`。  
+ 如果你使用**新**分配`CFile`对象在堆上，则你必须在关闭该文件之后删除它。 `Close` 设置`m_hFile`到`CFile::hFileNull`。  
   
 ### <a name="example"></a>示例  
  请参阅示例[CFile::CFile](#cfile)。  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rStatus`  
+ *rStatus*  
  对用户提供的引用**CFileStatus**将接收的状态信息的结构。 **CFileStatus**结构具有以下字段：  
   
 - **CTime m_ctime**创建该文件的日期和时间。  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **char m_szFullName [_MAX_PATH]** Windows 字符集中的绝对文件名。  
   
- `lpszFileName`  
+ *lpszFileName*  
  中的 Windows 字符的字符串，它是设置为所需的文件的路径。 路径可以是相对或绝对的也可以包含的网络路径名称。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="return-value"></a>返回值  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwPos`  
+ *dwPos*  
  要锁定的字节范围的开始的字节偏移量。  
   
- `dwCount`  
+ *dwCount*  
  要锁定的范围中的字节数。  
   
 ### <a name="remarks"></a>备注  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="open"></a>  CFile::Open  
- 已重载。 **打开**专用于默认值`CFile`构造函数。  
+ 已重载。 `Open` 专用于默认值`CFile`构造函数。  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFileName`  
+ *lpszFileName*  
  一个字符串，是所需的文件的路径。 路径可以是相对、 绝对路径或网络名称 (UNC)。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  A **UINT**定义文件的共享和访问模式。 它指定当打开文件时要执行的操作。 你可以通过使用按位 OR 组合选项 ( **&#124;** ) 运算符。 一个访问权限和一个共享选项是必需的;**modeCreate**和**modeNoInherit**模式是可选的。 请参阅[CFile](#cfile)构造函数模式选项的列表。  
   
- `pError`  
+ *pError*  
  指向将接收失败的操作的状态的现有文件异常对象的指针。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="return-value"></a>返回值  
- 如果打开成功; 则为非 0否则为 0。 `pError`参数是有意义，仅当返回 0。  
+ 如果打开成功; 则为非 0否则为 0。 *PError*参数是有意义，仅当返回 0。  
   
 ### <a name="remarks"></a>备注  
  两个函数窗体打开其中的失败问题是正常，预期的条件的文件的"安全"方法。  
   
- 虽然`CFile`构造函数将在错误情况，此时引发的异常**打开**将返回**FALSE**错误条件。 **打开**仍可以初始化[CFileException](../../mfc/reference/cfileexception-class.md)对象，用于描述该错误，但是。 如果你不提供`pError`参数，或者如果传递**NULL**为`pError`，**打开**将返回**FALSE**并且不会引发`CFileException`。 如果将指针传递到的现有`CFileException`，和**打开**在遇到错误，该函数将它的信息填充描述该错误。 既不区分大小将**打开**引发异常。  
+ 虽然`CFile`构造函数将在错误情况，此时引发的异常`Open`将返回**FALSE**错误条件。 `Open` 仍可以初始化[CFileException](../../mfc/reference/cfileexception-class.md)对象，用于描述该错误，但是。 如果你不提供*pError*参数，或者如果传递**NULL**为*pError*，`Open`将返回**FALSE**并且不会引发`CFileException`. 如果将指针传递到的现有`CFileException`，和`Open`在遇到错误，该函数将它的信息填充描述该错误。 既不区分大小将`Open`引发异常。  
   
- 下表描述的可能结果**打开**。  
+ 下表描述的可能结果`Open`。  
   
 |`pError`|遇到错误|返回值|CFileException 内容|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -583,14 +584,14 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpBuf`  
+ *lpBuf*  
  指向将接收从文件读取的数据的用户提供的缓冲区的指针。  
   
- `nCount`  
+ *nCount*  
  最大要从文件中读取的字节数。 对于文本模式下的文件，回车换行符对被视为单个字符。  
   
 ### <a name="return-value"></a>返回值  
- 传输到缓冲区的字节数。 请注意，对于所有`CFile`类，则返回值可能小于`nCount`如果已到达文件结尾。  
+ 传输到缓冲区的字节数。 请注意，对于所有`CFile`类，则返回值可能小于*nCount*如果已到达文件结尾。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFileName`  
+ *lpszFileName*  
  一个字符串，是所需的文件的路径。 路径可以是相对或绝对的并且可以包含的网络名称。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="remarks"></a>备注  
@@ -632,13 +633,13 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszOldName`  
+ *lpszOldName*  
  旧的路径。  
   
- `lpszNewName`  
+ *lpszNewName*  
  新的路径。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="remarks"></a>备注  
@@ -657,19 +658,19 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lOff`  
+ *lOff*  
  要移动的文件指针的字节数。 值为正移动该文件; 末尾的文件指针负值将文件指针移向文件的开头。  
   
- `nFrom`  
+ *nFrom*  
  要查找从的位置。 请参阅备注部分有关可能的值。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则文件指针的位置否则，返回值是不确定和一个指向`CFileException`引发异常。  
   
 ### <a name="remarks"></a>备注  
- 下表列出可能值`nFrom`参数。  
+ 下表列出可能值*nFrom*参数。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CFile::begin`|从文件开头查找。|  
 |`CFile::current`|从文件指针的当前位置向搜索。|  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszNewName`  
+ *lpszNewName*  
  指向一个字符串，指定新路径。  
   
 ### <a name="remarks"></a>备注  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwNewLen`  
+ *dwNewLen*  
  所需的文件以字节为单位的长度。 此值可为大于或小于该文件的当前长度。 将扩展或截断根据该文件。  
   
 ### <a name="remarks"></a>备注  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFileName`  
+ *lpszFileName*  
  一个字符串，是所需的文件的路径。 路径可以是相对或绝对的并且可以包含的网络名称。  
   
  *status*  
  包含新的状态信息的缓冲区。 调用**GetStatus**成员函数以 prefill **CFileStatus**结构的当前值，然后根据需要进行更改。 如果值为 0，则不会更新相应的状态项。 请参阅[GetStatus](#getstatus)有关的说明的成员函数**CFileStatus**结构。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针  
   
 ### <a name="remarks"></a>备注  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwPos`  
+ *dwPos*  
  要解锁的字节范围开始的字节偏移量。  
   
- `dwCount`  
+ *dwCount*  
  要解锁的范围中的字节数。  
   
 ### <a name="remarks"></a>备注  
@@ -814,10 +815,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpBuf`  
+ *lpBuf*  
  指向包含要写入到文件的数据的用户提供的缓冲区的指针。  
   
- `nCount`  
+ *nCount*  
  要从缓冲区中传输的字节数。 对于文本模式下的文件，回车换行符对被视为单个字符。  
   
 ### <a name="remarks"></a>备注  

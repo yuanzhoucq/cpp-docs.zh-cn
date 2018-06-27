@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6979124916e8a9cc1dc723008491bababc0322
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 705c855a817f0c6ca342e51258c7d6c1e61fa392
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366286"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951073"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 结构
 `CDaoWorkspaceInfo`结构包含有关定义为数据访问对象 (DAO) 数据库访问工作区的信息。  
@@ -39,7 +39,7 @@ struct CDaoWorkspaceInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一命名的工作区对象。 若要直接检索此属性的值，调用 querydef 对象[GetName](../../mfc/reference/cdaoquerydef-class.md#getname)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  *m_strUserName*  

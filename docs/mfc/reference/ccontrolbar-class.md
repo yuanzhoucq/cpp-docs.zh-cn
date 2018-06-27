@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356027"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956663"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 控件条类的基类[CStatusBar](../../mfc/reference/cstatusbar-class.md)， [CToolBar](../../mfc/reference/ctoolbar-class.md)， [CDialogBar](../../mfc/reference/cdialogbar-class.md)， [CReBar](../../mfc/reference/crebar-class.md)，和[COleResizeBar](../../mfc/reference/coleresizebar-class.md)。  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLength`  
- 控件条，水平或垂直，具体取决于请求的维度`dwMode`。  
+ *nLength*  
+ 控件条，水平或垂直，具体取决于请求的维度*dwMode*。  
   
- `nMode`  
+ *nMode*  
  以下预定义的标志用于确定的高度和动态控件条的宽度。 使用按位 OR (&#124;) 运算符来组合标志。  
   
 |布局模式标志|其中的含义|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|指示是否将控件条被拉伸到的帧的大小。 如果栏不是停靠栏 （不可用于停靠），设置。 未设置栏时停靠或浮动 （适用于停靠）。 如果设置，`LM_STRETCH`忽略`nLength`并返回维度基于`LM_HORZ`状态。 `LM_STRETCH` 工作原理类似于`bStretch`参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
-|`LM_HORZ`|指示该拆分条是水平或垂直方向。 只有当栏为水平方向，并且如果它是垂直方向，未设置设置。 `LM_HORZ` 工作原理类似于`bHorz`参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
-|**LM_MRUWIDTH**|最近使用过的动态宽度。 将忽略`nLength`参数，并使用记忆个最近使用的宽度。|  
-|`LM_HORZDOCK`|水平停靠维度。 将忽略`nLength`参数并返回最大宽度的动态大小。|  
-|`LM_VERTDOCK`|垂直停靠维度。 将忽略`nLength`参数和返回使用的最大高度的动态大小。|  
-|`LM_LENGTHY`|如果设置`nLength`指示高度 （Y 轴方向） 而不是宽度。|  
-|`LM_COMMIT`|重置**LM_MRUWIDTH**到浮点控件条的当前宽度。|  
+|`LM_STRETCH`|指示是否将控件条被拉伸到的帧的大小。 如果栏不是停靠栏 （不可用于停靠），设置。 未设置栏时停靠或浮动 （适用于停靠）。 如果设置，`LM_STRETCH`忽略*nLength*并返回维度基于`LM_HORZ`状态。 `LM_STRETCH` 工作原理类似于*bStretch*参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
+|`LM_HORZ`|指示该拆分条是水平或垂直方向。 只有当栏为水平方向，并且如果它是垂直方向，未设置设置。 `LM_HORZ` 工作原理类似于*bHorz*参数中使用[CalcFixedLayout](#calcfixedlayout); 请参阅有关拉伸和方向之间的关系的详细信息该成员函数。|  
+|`LM_MRUWIDTH`|最近使用过的动态宽度。 将忽略*nLength*参数，并使用记忆个最近使用的宽度。|  
+|`LM_HORZDOCK`|水平停靠维度。 将忽略*nLength*参数并返回最大宽度的动态大小。|  
+|`LM_VERTDOCK`|垂直停靠维度。 将忽略*nLength*参数和返回使用的最大高度的动态大小。|  
+|`LM_LENGTHY`|如果设置*nLength*指示高度 （Y 轴方向） 而不是宽度。|  
+|`LM_COMMIT`|重置`LM_MRUWIDTH`到浮点控件条的当前宽度。|  
   
 ### <a name="return-value"></a>返回值  
  控件条的大小，以像素为单位的[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bStretch`  
- 指示是否应被栏拉伸到的帧的大小。 `bStretch`时栏 （不可用于停靠） 停靠栏并不为 0 时停靠或浮动 （适用于停靠），则为非零参数。  
+ *bStretch*  
+ 指示是否应被栏拉伸到的帧的大小。 *BStretch*时栏 （不可用于停靠） 停靠栏并不为 0 时停靠或浮动 （适用于停靠），则为非零参数。  
   
- `bHorz`  
- 指示该拆分条是水平或垂直方向。 `bHorz`如果栏是水平方向和垂直方向是否为 0，则为非零参数。  
+ *bHorz*  
+ 指示该拆分条是水平或垂直方向。 *BHorz*如果栏是水平方向和垂直方向是否为 0，则为非零参数。  
   
 ### <a name="return-value"></a>返回值  
  控件条的大小，以像素为单位的`CSize`对象。  
@@ -185,7 +185,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>备注  
  如工具栏的控件条可以水平拉伸或垂直以适应按钮包含在控件条。  
   
- 如果`bStretch`是**TRUE**，拉伸方向由沿维度`bHorz`。 换而言之，如果`bHorz`是**FALSE**，垂直拉伸控件条。 如果`bStretch`是**FALSE**，没有拉伸时发生。 下表显示可能的排列和生成的控件条样式的`bStretch`和`bHorz`。  
+ 如果*bStretch*是**TRUE**，拉伸方向由沿维度*bHorz*。 换而言之，如果*bHorz*是**FALSE**，垂直拉伸控件条。 如果*bStretch*是**FALSE**，没有拉伸时发生。 下表显示可能的排列和生成的控件条样式的*bStretch*和*bHorz*。  
   
 |bStretch|bHorz|拉伸|方向|停靠/未停靠|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  包含控件条中; 当前维度这包括边框。  
   
- `bHorz`  
- 指示该拆分条是水平或垂直方向。 `bHorz`如果栏是水平方向和垂直方向是否为 0，则为非零参数。  
+ *bHorz*  
+ 指示该拆分条是水平或垂直方向。 *BHorz*如果栏是水平方向和垂直方向是否为 0，则为非零参数。  
   
 ### <a name="remarks"></a>备注  
  控件条绘制之前调用此函数。  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向设备上下文以用于呈现边框和控件条的控制手柄。  
   
 ### <a name="remarks"></a>备注  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向设备上下文以用于呈现控件条的边框。  
   
- `rect`  
+ *rect*  
  A`CRect`对象，它包含控件条的维度。  
   
 ### <a name="remarks"></a>备注  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向设备上下文以用于呈现控件栏控制手柄。  
   
- `rect`  
+ *rect*  
  A`CRect`对象，它包含控件栏控制手柄的尺寸。  
   
 ### <a name="remarks"></a>备注  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDockStyle`  
+ *dwDockStyle*  
  指定是否将控件条支持停靠和到可停靠控件条，其父窗口的侧，如果受支持。 可以是一个或多个以下：  
   
 - `CBRS_ALIGN_TOP` 允许在客户端区域的顶部停靠。  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- A`CRect`对象，其中包含的每一方的控件条对象的当前宽度 （以像素为单位）。 例如，值为`left`成员的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，是左侧边框的宽度。  
+ A`CRect`对象，其中包含的每一方的控件条对象的当前宽度 （以像素为单位）。 例如，值为*左*成员的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，是左侧边框的宽度。  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  返回的非数`HWND`项上`CControlBar`对象。  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_bAutoDelete` 是类型的公共变量**BOOL**。  
+ *m_bAutoDelete*是类型的公共变量**BOOL**。  
   
- 控件条对象通常会嵌入在框架窗口对象中。 在这种情况下，`m_bAutoDelete`为 0，因为嵌入的控件条对象被销毁时销毁框架窗口。  
+ 控件条对象通常会嵌入在框架窗口对象中。 在这种情况下， *m_bAutoDelete*为 0，因为嵌入的控件条对象被销毁时销毁框架窗口。  
   
  将此变量设置为非零值，如果分配`CControlBar`对象堆和你不打算调用**删除**。  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTarget`  
+ *pTarget*  
  指向应用程序的主框架窗口。 此指针用于路由更新消息。  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  该标志指示没有更新处理程序的控件是否应自动显示为已禁用。  
   
 ### <a name="remarks"></a>备注  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  控件条所需的样式。 可以是一个或多个以下：  
   
 - `CBRS_ALIGN_TOP` 允许到框架窗口的工作区顶部停靠控件条。  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` 会导致将消息文本在工具提示在同一时间更新。  
   
-- **CBRS_GRIPPER**导致的控制手柄，类似于上带区中使用**CReBar**对象，要绘制任何`CControlBar`-派生类。  
+- `CBRS_GRIPPER` 导致的控制手柄，类似于上带区中使用`CReBar`对象，要绘制任何`CControlBar`-派生类。  
   
 ### <a name="remarks"></a>备注  
  不会影响**WS_** （窗口样式） 设置。  
@@ -476,7 +476,7 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  控件条下边框的高度 （以像素为单位）。  
   
- `lpRect`  
+ *lpRect*  
  指向的指针[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，其中包含每个边框的控件条对象的当前宽度 （以像素为单位）。  
   
 ### <a name="example"></a>示例  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向的指针`CWnd`对象。  
   
 ### <a name="remarks"></a>备注  

@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380157"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955451"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl 的设置
-默认位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口是父窗口的底部，但你可以指定`CCS_TOP`样式让其出现在父窗口工作区的顶部。  
+默认位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口是父窗口的底部，但你可以指定 CCS_TOP 样式让其显示在父窗口工作区的顶部。  
   
- 你可以指定**SBARS_SIZEGRIP**以包括最右侧大小调整手柄的样式`CStatusBarCtrl`状态窗口。 大小调整手柄类似于大小调整边框；它是用户可以通过单击和拖动来重设父窗口大小的矩形区域。  
+ 你可以指定要包括的最右侧大小调整手柄的 SBARS_SIZEGRIP 样式`CStatusBarCtrl`状态窗口。 大小调整手柄类似于大小调整边框；它是用户可以通过单击和拖动来重设父窗口大小的矩形区域。  
   
 > [!NOTE]
->  如果合并`CCS_TOP`和**SBARS_SIZEGRIP**样式，生成的大小调整手柄不起作用即使系统将其绘制在状态窗口中也是如此。  
+>  如果你合并 CCS_TOP 和 SBARS_SIZEGRIP 样式，即使系统将其绘制在状态窗口中不起作用生成的大小调整手柄。  
   
  状态窗口的窗口过程将自动设置控件窗口的初始大小和位置。 宽度与父窗口工作区的一样。 高度基于实际选入状态窗口设备上下文的字体的度量值和窗口边框的宽度。  
   
- 窗口过程将在收到 `WM_SIZE` 消息后自动调整状态窗口的大小。 通常，当父窗口的大小发生更改时，父级将向状态窗口发送 `WM_SIZE` 消息。  
+ 窗口过程自动调整状态窗口的大小，在收到 WM_SIZE 消息。 通常情况下，当父窗口的大小发生更改，父级将 WM_SIZE 消息发送到状态窗口。  
   
  你可以通过调用设置状态窗口绘图区的最小高度[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)，以像素为单位指定最小高度。 绘图区不包括窗口边框。  
   

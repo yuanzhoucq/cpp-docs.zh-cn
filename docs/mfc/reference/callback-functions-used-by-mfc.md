@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350880"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956829"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有回调函数必须都捕获返回到 Windows，因为不能跨回调边界引发异常之前的 MFC 异常。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
 
-|名称||  
+|name||  
 |----------|-----------------|  
 |[CDC::EnumObjects 的回调函数](#enum_objects)||  
 |[CDC::GrayString 的回调函数](#graystring)||
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  指向[LOGPEN](../../mfc/reference/logpen-structure.md)或[LOGBRUSH](../../mfc/reference/logbrush-structure.md)数据结构，其中包含有关的逻辑特性的对象的信息。  
   
- `lpData`  
+ *lpData*  
  指向传递给 `EnumObjects` 函数的应用程序提供的数据。  
   
 ### <a name="return-value"></a>返回值  
- 回调函数返回 `int`。 此返回值是用户定义的。 如果回调函数返回 0，`EnumObjects` 将提前停止枚举。  
+ 回调函数返回**int**。此返回值是用户定义的。 如果回调函数返回 0，`EnumObjects` 将提前停止枚举。  
   
 ### <a name="remarks"></a>备注  
  必须导出实际名称。  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hDC`  
- 向 `nWidth` 标识一个内存设备上下文，该上下文具有宽度和高度至少为 `nHeight` 和 `GrayString` 指定的值的位图。  
+ *hDC*  
+ 标识内存设备上下文与至少包含位图的宽度和高度指定*nWidth*和*nHeight*到`GrayString`。  
   
- `lpData`  
+ *lpData*  
  指向要绘制的字符串。  
   
- `nCount`  
+ *nCount*  
  指定要输出的字符数。  
   
 ### <a name="return-value"></a>返回值  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  标识设备上下文。  
   
- `code`  
- 指定是否已发生了错误。 如果未发生错误，则为 0。 它是**SP_OUTOFDISK**如果打印管理器当前磁盘空间不足，更多磁盘空间将变为可用，如果应用程序在等待。 如果`code`是**SP_OUTOFDISK**，应用程序没有中止打印作业。 如果不存在，也必须通过调用生成到打印管理器**PeekMessage**或**GetMessage** Windows 函数。  
+ *代码*  
+ 指定是否已发生了错误。 如果未发生错误，则为 0。 它是**SP_OUTOFDISK**如果打印管理器当前磁盘空间不足，更多磁盘空间将变为可用，如果应用程序在等待。 如果*代码*是**SP_OUTOFDISK**，应用程序没有中止打印作业。 如果不存在，也必须通过调用生成到打印管理器`PeekMessage`或`GetMessage`Windows 函数。  
   
 ### <a name="return-value"></a>返回值  
  中止处理程序函数的返回值表示打印作业是否要继续，则为非 0，0 如果它被取消。  

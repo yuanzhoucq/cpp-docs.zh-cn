@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367225"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952282"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 结构
 `CDaoQueryDefInfo`结构包含有关 querydef 对象定义的数据访问对象 (DAO) 的信息。  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一地命名 querydef 对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。 调用[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)直接检索此属性。  
   
- `m_nType`  
+ *m_nType*  
  一个值，指示 querydef 对象的操作类型。 值可以是下列任一值：  
   
 - **dbQSelect**选择-查询选择记录。  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  创建日期和时间 querydef 已。 若要直接检索 querydef 的创建的日期，调用[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成员函数`CDaoTableDef`与该表关联的对象。 有关详细信息，请参阅下面的注释。 另请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  日期和时间对 querydef 的最新的变更。 若要直接检索上次更新表的日期，调用[GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef 成员函数。 有关详细信息，请参阅下面的注释。 和，请参阅中 DAO 帮助主题"时间，上次更新属性"。  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  指示是否可以对 querydef 对象进行更改。 如果此属性为**TRUE**、 querydef 则可更新; 否则为它不是。 可更新意味着可以更改 querydef 对象的查询定义。 Querydef 对象的可更新属性设置为**TRUE**如果查询定义可以更新，即使得到的结果集不可更新。 若要直接检索此属性，请调用此 querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  定义由 querydef 对象执行的查询的 SQL 语句。 SQL 属性包含确定如何记录选择，分组和排序时执行查询的 SQL 语句。 可以使用查询来选择要包含在动态集或快照类型记录集对象中的记录。 你还可以定义大容量查询，而无需返回记录中修改数据。 你可以直接通过调用此 querydef 检索此属性的值[GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成员函数。  
   
- `m_strConnect`  
+ *m_strConnect*  
  提供有关原因的传递查询中使用的数据库的信息。 此信息的连接字符串的形式。 有关详细信息的连接字符串，并直接检索此属性的值的信息，请参阅[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成员函数。  
   
  *m_nODBCTimeout*  

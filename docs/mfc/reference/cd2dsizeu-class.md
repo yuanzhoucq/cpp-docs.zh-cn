@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349930"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950518"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU 类
 D2D1_SIZE_U 包装器。  
@@ -48,7 +48,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |名称|描述|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|返回`boolean`值，该值指示表达式是否包含任何有效的数据 ( `null`)。|  
+|[CD2DSizeU::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 ( **null**)。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
@@ -79,13 +79,13 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>参数  
- `size`  
+ *size*  
  源的大小  
   
- `cx`  
+ *cx*  
  源宽度  
   
- `cy`  
+ *cy*  
  源高度  
   
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull  

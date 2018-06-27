@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c7090940699894e6b868c246d90a9c85a8b2795
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378899"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956032"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 表示从数据源选择的一组记录。  
@@ -215,7 +215,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::Close](#close)|关闭记录集。|  
 |[CDaoRecordset::Delete](#delete)|从记录集删除当前记录。 你必须显式滚动到另一条记录后删除。|  
 |[CDaoRecordset::DoFieldExchange](#dofieldexchange)|调用以 （在两个方向） 和之间交换数据的记录集的字段数据成员的数据源上相应的记录。 实现 DAO 记录字段交换 (DFX)。|  
-|[CDaoRecordset::Edit](#edit)|准备对当前记录的更改。 调用**更新**以完成编辑。|  
+|[CDaoRecordset::Edit](#edit)|准备对当前记录的更改。 调用`Update`来完成编辑。|  
 |[CDaoRecordset::FillCache](#fillcache)|填充所有或本地缓存中，以便包含从 ODBC 数据源的数据的记录集对象的一部分。|  
 |[CDaoRecordset::Find](#find)|查找第一个下, 一步，在满足指定的条件，使该记录的当前记录成为动态集类型记录集特定字符串的上一个或最后一个位置。|  
 |[CDaoRecordset::FindFirst](#findfirst)|动态集类型或满足指定的条件，使该记录的当前记录成为的快照类型记录集中查找第一条记录。|  
@@ -275,7 +275,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::SetParamValue](#setparamvalue)|设置存储在基础 DAOParameter 对象中指定参数的当前值|  
 |[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|将指定的参数的当前值设置为 Null （无任何值）。|  
 |[CDaoRecordset::SetPercentPosition](#setpercentposition)|将当前记录的位置设置为对应的在记录集中的记录总数的百分比的位置。|  
-|[CDaoRecordset::Update](#update)|完成`AddNew`或**编辑**通过将新的或编辑数据保存在数据源上的操作。|  
+|[CDaoRecordset::Update](#update)|完成`AddNew`或`Edit`通过将新的或编辑数据保存在数据源上的操作。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
@@ -319,9 +319,9 @@ class CDaoRecordset : public CObject
 > [!NOTE]
 >  DAO 数据库类有别于基于开放式数据库连接 (ODBC) 的 MFC 数据库类。 DAO 数据库类的所有名称都具有"CDao"前缀。 你仍可以访问 ODBC 数据源对于 DAO 类;DAO 类通常提供高级功能，因为它们是特定于 Microsoft Jet 数据库引擎。  
   
- 你可以使用`CDaoRecordset`直接或从派生类`CDaoRecordset`。 若要在任一情况下使用记录集类，打开数据库，并构造记录集对象，向构造函数传递一个指向你`CDaoDatabase`对象。 此外可以构造`CDaoRecordset`对象，并允许创建一个临时的 MFC`CDaoDatabase`为你的对象。 然后调用记录集的[打开](#open)成员函数，该值指示对象是否为表类型记录集、 动态集类型的记录集或快照类型记录集。 调用**打开**从数据库中选择数据，并检索第一条记录。  
+ 你可以使用`CDaoRecordset`直接或从派生类`CDaoRecordset`。 若要在任一情况下使用记录集类，打开数据库，并构造记录集对象，向构造函数传递一个指向你`CDaoDatabase`对象。 此外可以构造`CDaoRecordset`对象，并允许创建一个临时的 MFC`CDaoDatabase`为你的对象。 然后调用记录集的[打开](#open)成员函数，该值指示对象是否为表类型记录集、 动态集类型的记录集或快照类型记录集。 调用`Open`从数据库中选择数据，并检索第一条记录。  
   
- 使用对象的成员函数和数据成员滚动显示记录并对它们进行操作。 可执行的操作取决于该对象是表类型记录集、 动态集类型的记录集或快照类型的记录集，以及它是否可更新或只读的这取决于数据库或开放式数据库连接 (ODBC) 的功能数据源。 若要刷新记录可能已更改或添加自**打开**调用，调用对象的[Requery](#requery)成员函数。 调用对象的**关闭**成员函数，并使用它完成后销毁对象。  
+ 使用对象的成员函数和数据成员滚动显示记录并对它们进行操作。 可执行的操作取决于该对象是表类型记录集、 动态集类型的记录集或快照类型的记录集，以及它是否可更新或只读的这取决于数据库或开放式数据库连接 (ODBC) 的功能数据源。 若要刷新记录可能已更改或添加自`Open`调用，调用对象的[Requery](#requery)成员函数。 调用对象的`Close`成员函数，并使用它完成后销毁对象。  
   
  `CDaoRecordset` 使用 DAO 记录字段交换 (DFX) 来支持读取和更新记录的字段的类型安全的 c + + 成员通过你`CDaoRecordset`或`CDaoRecordset`-派生类。 你还可以实现动态绑定列的数据库中不使用 DFX 机制使用[GetFieldValue](#getfieldvalue)和[SetFieldValue](#setfieldvalue)。  
   
@@ -343,10 +343,10 @@ virtual void AddNew();
 ```  
   
 ### <a name="remarks"></a>备注  
- 记录的字段均最初为空。 (在数据库术语中，Null 表示"having 没有值"，并且不能与相同**NULL** c + + 中。)若要完成该操作，必须调用[更新](#update)成员函数。 **更新**将所做的更改保存到数据源。  
+ 记录的字段均最初为空。 (在数据库术语中，Null 表示"having 没有值"，并且不能与相同**NULL** c + + 中。)若要完成该操作，必须调用[更新](#update)成员函数。 `Update` 将所做的更改保存到数据源。  
   
 > [!CAUTION]
->  如果编辑记录的虚拟机和模板，然后向下滚动到另一个记录，而不调用**更新**，所做的更改都将丢失而不发出警告。  
+>  如果编辑记录并且然后向下滚动到另一个记录，而不调用`Update`，所做的更改都将丢失而不发出警告。  
   
  如果你将添加一条记录到动态集类型的记录集通过调用[AddNew](#addnew)，该记录是记录集内可见的且包含在其中它将显示出来到任何新的基础表`CDaoRecordset`对象。  
   
@@ -369,7 +369,7 @@ virtual void AddNew();
  如果未使用双缓冲机制，然后将更改字段的值不会不自动将字段设置为脏。 在这种情况下，将需要显式将字段设置已更新。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
   
 > [!NOTE]
->  如果记录双缓冲 （即，自动字段启用检查），调用`CancelUpdate`将还原到之前所具有的值的成员变量`AddNew`或**编辑**调用。  
+>  如果记录双缓冲 （即，自动字段启用检查），调用`CancelUpdate`将还原到之前所具有的值的成员变量`AddNew`或`Edit`调用。  
   
  有关相关信息，请参阅主题的"AddNew 方法"、"正在执行方法"、"上次更改时间属性"和 DAO 帮助中的"EditMode 属性"。  
   
@@ -409,29 +409,29 @@ virtual void CancelUpdate();
 ```  
   
 ### <a name="remarks"></a>备注  
- 例如，如果应用程序调用**编辑**或`AddNew`成员函数，并具有不称为[更新](#update)，`CancelUpdate`取消后所做的任何更改**编辑**或`AddNew`调用。  
+ 例如，如果应用程序调用`Edit`或`AddNew`成员函数，并具有不称为[更新](#update)，`CancelUpdate`取消后所做的任何更改`Edit`或`AddNew`调用。  
   
 > [!NOTE]
->  如果记录双缓冲 （即，自动字段启用检查），调用`CancelUpdate`将还原到之前所具有的值的成员变量`AddNew`或**编辑**调用。  
+>  如果记录双缓冲 （即，自动字段启用检查），调用`CancelUpdate`将还原到之前所具有的值的成员变量`AddNew`或`Edit`调用。  
   
- 如果没有任何**编辑**或`AddNew`操作挂起，`CancelUpdate`导致 MFC 引发异常。 调用[GetEditMode](#geteditmode)成员函数以确定是否可以取消一个挂起操作。  
+ 如果没有任何`Edit`或`AddNew`操作挂起，`CancelUpdate`导致 MFC 引发异常。 调用[GetEditMode](#geteditmode)成员函数以确定是否可以取消一个挂起操作。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"正在执行方法"。  
   
 ##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
- 调用此成员函数可确定记录集是否允许通过调用重启 （若要刷新其记录） 其查询**Requery**成员函数。  
+ 调用此成员函数可确定记录集是否允许通过调用重启 （若要刷新其记录） 其查询`Requery`成员函数。  
   
 ```  
 BOOL CanRestart();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零如果**Requery**可以调用以进行运行记录集的一次查询，否则为 0。  
+ 非零如果`Requery`可以调用以进行运行记录集的一次查询，否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 不支持表类型记录集**Requery**。  
+ 不支持表类型记录集`Requery`。  
   
- 如果**Requery**是不受支持，调用[关闭](#close)然后[打开](#open)刷新数据。 你可以调用**Requery**更新记录集对象的基本参数查询后已更改的参数值。  
+ 如果`Requery`是不受支持，调用[关闭](#close)然后[打开](#open)刷新数据。 你可以调用`Requery`更新记录集对象的基本参数查询后已更改的参数值。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"可重启属性"。  
   
@@ -474,7 +474,7 @@ BOOL CanUpdate() const;
  如果可以更新记录集则为非 0 （添加、 更新和删除记录），否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 记录集可能是只读的如果基础数据源是只读的或你指定**dbReadOnly**为`nOptions`当调用[打开](#open)为记录集。  
+ 记录集可能是只读的如果基础数据源是只读的或你指定**dbReadOnly**为*nOptions*当调用[打开](#open)为记录集。  
   
  有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
   
@@ -486,8 +486,8 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDatabase`  
- 包含指向的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象或值**NULL**。 如果不是**NULL**和`CDaoDatabase`对象的**打开**成员函数不调用以将其连接到数据源，记录集尝试自己期间为您打开它[打开](#open)调用。 如果你通过**NULL**、`CDaoDatabase`对象进行构造并为你使用你指定如果派生从记录集类的数据源信息连接`CDaoRecordset`。  
+ *pDatabase*  
+ 包含指向的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象或值**NULL**。 如果不是**NULL**和`CDaoDatabase`对象的`Open`成员函数不调用以将其连接到数据源，记录集尝试自己期间为您打开它[打开](#open)调用。 如果你通过**NULL**、`CDaoDatabase`对象进行构造并为你使用你指定如果派生从记录集类的数据源信息连接`CDaoRecordset`。  
   
 ### <a name="remarks"></a>备注  
  你可以使用`CDaoRecordset`直接派生从应用程序特定类或`CDaoRecordset`。 可以使用 ClassWizard 派生记录集类。  
@@ -505,11 +505,11 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>备注  
- 因为**关闭**不会销毁`CDaoRecordset`对象，您可以通过调用重新使用该对象**打开**上相同的数据源或其他数据源。  
+ 因为**关闭**不会销毁`CDaoRecordset`对象，您可以通过调用重新使用该对象`Open`上相同的数据源或其他数据源。  
   
- 所有挂起的[AddNew](#addnew)或[编辑](#edit)语句被取消，并且所有挂起的事务将回滚。 如果你想要保留挂起的添加件或编辑，调用[更新](#update)之前调用**关闭**为每个记录集。  
+ 所有挂起的[AddNew](#addnew)或[编辑](#edit)语句被取消，并且所有挂起的事务将回滚。 如果你想要保留挂起的添加件或编辑，调用[更新](#update)之前调用`Close`为每个记录集。  
   
- 你可以调用**打开**在调用后再次**关闭**。 这样就可以重复使用记录集对象。 一个更好的替代方法是调用[Requery](#requery)如果可能。  
+ 你可以调用`Open`在调用后再次`Close`。 这样就可以重复使用记录集对象。 一个更好的替代方法是调用[Requery](#requery)如果可能。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"Close 方法"。  
   
@@ -521,16 +521,16 @@ virtual void Delete();
 ```  
   
 ### <a name="remarks"></a>备注  
- 在成功删除之后, 记录集的字段数据成员设置为 Null 值，并且你必须显式调用其中一个记录集导航成员函数 ([移动](#move)， [Seek](#seek)， [SetBookmark](#setbookmark)，依次类推) 若要离开已删除的记录。 当从一个记录集删除记录时，必须有当前记录的记录集然后才能调用**删除**; 否则为则 MFC 会引发异常。  
+ 在成功删除之后, 记录集的字段数据成员设置为 Null 值，并且你必须显式调用其中一个记录集导航成员函数 ([移动](#move)， [Seek](#seek)， [SetBookmark](#setbookmark)，依次类推) 若要离开已删除的记录。 当从一个记录集删除记录时，必须有当前记录的记录集然后才能调用`Delete`; 否则为则 MFC 会引发异常。  
   
- **删除**删除当前记录并使它成为不可访问。 虽然无法编辑或使用已删除的记录，但它仍当前记录。 一旦您移动到另一条记录，但是，你不能设为已删除的记录当前试。  
+ `Delete` 删除当前记录，并使其无法访问。 虽然无法编辑或使用已删除的记录，但它仍当前记录。 一旦您移动到另一条记录，但是，你不能设为已删除的记录当前试。  
   
 > [!CAUTION]
->  记录集必须是可更新，且必须具有有效记录的记录集当前在调用时**删除**。 例如，如果你删除一条记录，但你在调用之前不将其滚动到一条新记录**删除**再次，**删除**引发[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
+>  记录集必须是可更新，且必须具有有效记录的记录集当前在调用时`Delete`。 例如，如果你删除一条记录，但你在调用之前不将其滚动到一条新记录`Delete`再次，`Delete`引发[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
  如果您使用事务并且你调用，你可以取消删除一条记录[CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback)成员函数。 如果基表是主表中的级联删除关系，删除当前记录可能也会删除外部表中的一个或多个记录。 有关详细信息，请参阅 DAO 帮助中的定义"级联删除"。  
   
- 与不同`AddNew`和**编辑**，调用**删除**对的调用后面不接**更新**。  
+ 与不同`AddNew`和`Edit`，调用`Delete`对的调用后面不接`Update`。  
   
  有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
   
@@ -542,7 +542,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFX`  
+ *pFX*  
  包含指向的`CDaoFieldExchange`对象。 框架将已安装了此对象以便字段交换操作为指定上下文。  
   
 ### <a name="remarks"></a>备注  
@@ -562,10 +562,10 @@ virtual void Edit();
 ```  
   
 ### <a name="remarks"></a>备注  
- 一旦调用**编辑**成员函数，对当前记录的字段所做的更改复制到复制缓冲区。 对记录进行所需的更改后，调用**更新**以保存所做的更改。 **编辑**将保存记录集的数据成员的值。 如果调用**编辑**，进行更改，然后调用**编辑**再次，记录的值都将还原到它们早于第一个是**编辑**调用。  
+ 一旦调用`Edit`成员函数，对当前记录的字段所做的更改复制到复制缓冲区。 对记录进行所需的更改后，调用`Update`以保存所做的更改。 `Edit` 将保存记录集的数据成员的值。 如果调用`Edit`，进行更改，然后调用`Edit`再次，记录的值都将还原到它们早于第一个是`Edit`调用。  
   
 > [!CAUTION]
->  如果编辑记录，然后执行任何操作都将移到另一条记录，而无需首先调用**更新**，所做的更改都将丢失而不发出警告。 此外，如果你关闭记录集或的父数据库，你已编辑的记录被丢弃而不发出警告。  
+>  如果编辑记录，然后执行任何操作都将移到另一条记录，而无需首先调用`Update`，所做的更改都将丢失而不发出警告。 此外，如果你关闭记录集或的父数据库，你已编辑的记录被丢弃而不发出警告。  
   
  在某些情况下，你可能想要通过使 Null （不包含任何数据） 中更新列。 为此，请调用`SetFieldNull`其中参数**TRUE**标记字段为 Null。 这也会导致要更新的列。 如果你想要写入到数据源中，即使其值未更改，请调用的字段`SetFieldDirty`其中参数**TRUE**。 之所以即使字段具有 Null 值。  
   
@@ -573,12 +573,12 @@ virtual void Edit();
   
  如果未使用双缓冲机制，然后将更改字段的值不会不自动将字段设置为脏。 在这种情况下，将需要显式将字段设置已更新。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
   
- 记录当记录集对象保守式锁定在多用户环境中时，保持锁定状态从时间**编辑**完成更新之前使用。 如果乐观锁定记录集，该记录已被锁定，在数据库中更新之前，将与预编辑的记录进行比较。 如果记录已更改，因为你调用**编辑**、**更新**操作失败且 MFC 引发异常。 您可以更改与锁定模式`SetLockingMode`。  
+ 记录当记录集对象保守式锁定在多用户环境中时，保持锁定状态从时间`Edit`完成更新之前使用。 如果乐观锁定记录集，该记录已被锁定，在数据库中更新之前，将与预编辑的记录进行比较。 如果记录已更改，因为你调用`Edit`、`Update`操作失败且 MFC 引发异常。 您可以更改与锁定模式`SetLockingMode`。  
   
 > [!NOTE]
 >  外部数据库格式，如 ODBC 和可安装 ISAM 上始终使用乐观锁定。  
   
- 当前记录后，仍当前调用**编辑**。 若要调用**编辑**，必须有当前记录。 如果没有当前记录或记录集未引用的打开的表类型或动态集类型记录集对象，则会发生异常。 调用**编辑**导致`CDaoException`以下情况下引发：  
+ 当前记录后，仍当前调用`Edit`。 若要调用`Edit`，必须有当前记录。 如果没有当前记录或记录集未引用的打开的表类型或动态集类型记录集对象，则会发生异常。 调用`Edit`导致`CDaoException`以下情况下引发：  
   
 -   没有最新记录。  
   
@@ -590,7 +590,7 @@ virtual void Edit();
   
 -   其他用户锁定了包含您的记录的页面。  
   
- 如果数据源支持事务，则你可以**编辑**调用事务的一部分。 请注意，应调用`CDaoWorkspace::BeginTrans`之前调用**编辑**和之后打开记录集。 此外请注意，调用`CDaoWorkspace::CommitTrans`不能用于调用代替**更新**完成**编辑**操作。 有关事务的详细信息，请参阅类`CDaoWorkspace`。  
+ 如果数据源支持事务，则你可以`Edit`调用事务的一部分。 请注意，应调用`CDaoWorkspace::BeginTrans`之前调用`Edit`和之后打开记录集。 此外请注意，调用`CDaoWorkspace::CommitTrans`不能用于调用代替`Update`完成`Edit`操作。 有关事务的详细信息，请参阅类`CDaoWorkspace`。  
   
  有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
   
@@ -604,10 +604,10 @@ void FillCache(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSize`  
+ *pSize*  
  指定要在缓存中填充行的数。 如果省略此参数的值是由基础的 DAO 对象 CacheSize 属性设置决定。  
   
- `pBookmark`  
+ *pBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md)指定书签。 此书签所指定的记录从开始填充缓存。 如果省略此参数时，从基础的 DAO 对象的 CacheStart 属性所指定的记录开始填充缓存。  
   
 ### <a name="remarks"></a>备注  
@@ -615,11 +615,11 @@ void FillCache(
   
  而不是等待缓存记录它们提取要填充的您可以显式缓存在任何时候调用来填充`FillCache`成员函数。 这是因为填充缓存较快方式`FillCache`提取一次而不是一次一个地的多个记录。 例如，显示每一满屏记录时，你可以让你的应用程序调用`FillCache`提取的下一步满屏记录。  
   
- 通过记录集对象访问的任何 ODBC 数据库可以具有本地缓存。 若要创建缓存，请从远程数据源中，打开记录集对象，然后调用`SetCacheSize`和`SetCacheStart`记录集的成员函数。 如果`lSize`和*lBookmark*创建地址范围，则指定的范围之外的部分或完全`SetCacheSize`和`SetCacheStart`，此范围之外的记录集的部分将忽略，并且不会加载到缓存。 如果`FillCache`请求比的更多记录保留在远程数据源中、 仅剩下的记录，提取出来后，且不引发异常。  
+ 通过记录集对象访问的任何 ODBC 数据库可以具有本地缓存。 若要创建缓存，请从远程数据源中，打开记录集对象，然后调用`SetCacheSize`和`SetCacheStart`记录集的成员函数。 如果*lSize*和*lBookmark*创建地址范围，则指定的范围之外的部分或完全`SetCacheSize`和`SetCacheStart`，此范围之外的记录集的部分将忽略，并且不会加载到缓存。 如果`FillCache`请求比的更多记录保留在远程数据源中、 仅剩下的记录，提取出来后，且不引发异常。  
   
  从缓存提取的记录不能反映由其他用户对源数据同时进行的更改。  
   
- `FillCache` 提取仅尚未缓存的记录。 若要强制所有缓存的数据更新，请调用`SetCacheSize`成员函数时`lSize`参数等于 0，调用`SetCacheSize`试`lSize`最初请求，参数等于缓存的大小，然后调用`FillCache`.  
+ `FillCache` 提取仅尚未缓存的记录。 若要强制所有缓存的数据更新，请调用`SetCacheSize`成员函数时*lSize*参数等于 0，调用`SetCacheSize`试*lSize*参数等于缓存的大小最初请求，，然后调用`FillCache`。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"FillCache 方法"。  
   
@@ -644,7 +644,7 @@ virtual BOOL Find(
   
 - **AFX_DAO_LAST**查找匹配的字符串的最后一个位置。  
   
- `lpszFilter`  
+ *lpszFilter*  
  字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。 例如：  
   
  [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
@@ -653,12 +653,12 @@ virtual BOOL Find(
  如果找到匹配的记录，否则为 0，则为非 0。  
   
 ### <a name="remarks"></a>备注  
- 你可以找到第一个下, 一步上, 一个或最后一个的字符串实例。 **查找**是虚函数，因此你可以重写此方法并添加您自己的实现。 `FindFirst`， `FindLast`， `FindNext`，和`FindPrev`成员函数都调用**查找**成员函数，因此你可以使用**查找**来控制的所有查找操作的行为.  
+ 你可以找到第一个下, 一步上, 一个或最后一个的字符串实例。 `Find` 是虚拟函数，因此你可以重写此方法并添加您自己的实现。 `FindFirst`， `FindLast`， `FindNext`，和`FindPrev`成员函数都调用`Find`成员函数，因此你可以使用`Find`来控制的所有查找操作的行为。  
   
  若要查找中的表类型记录集的记录，调用[Seek](#seek)成员函数。  
   
 > [!TIP]
->  记录你有多个有效的越小套**查找**将。 通常，和尤其是在具有 ODBC 数据，则最好创建新的查询，以检索所需的记录。  
+>  记录你有多个有效的越小套`Find`将。 通常，和尤其是在具有 ODBC 数据，则最好创建新的查询，以检索所需的记录。  
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
@@ -670,7 +670,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFilter`  
+ *lpszFilter*  
  字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
   
 ### <a name="return-value"></a>返回值  
@@ -684,31 +684,31 @@ BOOL FindFirst(LPCTSTR lpszFilter);
  如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindFirst`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项，依次类推。  
   
 > [!CAUTION]
->  如果编辑当前记录，请务必保存所做的更改，通过调用**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  如果编辑当前记录，请务必保存所做的更改，通过调用`Update`成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
   
- **查找**成员函数搜索的位置和下表中指定的方向：  
+ `Find`成员函数搜索的位置和下表中指定的方向：  
   
 |查找操作|开始|搜索方向|  
 |---------------------|-----------|----------------------|  
 |`FindFirst`|记录集的开头|记录集的结尾|  
 |`FindLast`|记录集的结尾|记录集的开头|  
 |`FindNext`|当前记录|记录集的结尾|  
-|**FindPrevious**|当前记录|记录集的开头|  
+|`FindPrevious`|当前记录|记录集的开头|  
   
 > [!NOTE]
 >  当调用`FindLast`，Microsoft Jet 数据库引擎完全填充记录集中在开始搜索之前, 如果这不已完成了。 第一次搜索可能需要超过后续搜索。  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ 使用一个查找操作不是调用相同`MoveFirst`或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
   
  使用查找操作时，请记住以下：  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   如果`Find`返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
   
 -   不能使用只进滚动快照类型记录集查找操作。  
   
 -   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定的对象索引的记录。  
+-   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或`CDaoQuerydef`检索特定索引的记录的对象。  
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
@@ -720,7 +720,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFilter`  
+ *lpszFilter*  
  字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
   
 ### <a name="return-value"></a>返回值  
@@ -734,19 +734,19 @@ BOOL FindLast(LPCTSTR lpszFilter);
  如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindLast`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项后第一个匹配项，依次类推。  
   
 > [!CAUTION]
->  如果编辑当前记录，请确保通过调用保存所做的更改**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  如果编辑当前记录，请确保通过调用保存所做的更改`Update`成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ 使用一个查找操作不是调用相同`MoveFirst`或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
   
  使用查找操作时，请记住以下：  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   如果`Find`返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
   
 -   不能使用只进滚动快照类型记录集查找操作。  
   
 -   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定的对象索引的记录。  
+-   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或`CDaoQuerydef`检索特定索引的记录的对象。  
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
@@ -758,7 +758,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFilter`  
+ *lpszFilter*  
  字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
   
 ### <a name="return-value"></a>返回值  
@@ -772,19 +772,19 @@ BOOL FindNext(LPCTSTR lpszFilter);
  如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindNext`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项，依次类推。  
   
 > [!CAUTION]
->  如果编辑当前记录，请确保通过调用保存所做的更改**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  如果编辑当前记录，请确保通过调用保存所做的更改`Update`成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ 使用一个查找操作不是调用相同`MoveFirst`或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
   
  使用查找操作时，请记住以下：  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   如果`Find`返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
   
 -   不能使用只进滚动快照类型记录集查找操作。  
   
 -   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定的对象索引的记录。  
+-   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或`CDaoQuerydef`检索特定索引的记录的对象。  
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
@@ -796,7 +796,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFilter`  
+ *lpszFilter*  
  字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
   
 ### <a name="return-value"></a>返回值  
@@ -810,19 +810,19 @@ BOOL FindPrev(LPCTSTR lpszFilter);
  如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindPrev`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项，依次类推。  
   
 > [!CAUTION]
->  如果编辑当前记录，请确保通过调用保存所做的更改**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  如果编辑当前记录，请确保通过调用保存所做的更改`Update`成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ 使用一个查找操作不是调用相同`MoveFirst`或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
   
  使用查找操作时，请记住以下：  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   如果`Find`返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
   
 -   不能使用只进滚动快照类型记录集查找操作。  
   
 -   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定的对象索引的记录。  
+-   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或`CDaoQuerydef`检索特定索引的记录的对象。  
   
  有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
   
@@ -997,10 +997,10 @@ short GetEditMode();
   
 ### <a name="remarks"></a>备注  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**dbEditNone**|任何编辑操作不正在进行。|  
-|**dbEditInProgress**|**编辑**已调用。|  
+|**dbEditInProgress**|`Edit` 已调用。|  
 |**dbEditAdd**|`AddNew` 已调用。|  
   
  有关相关信息，请参阅主题 DAO 帮助中的"EditMode 属性"。  
@@ -1035,13 +1035,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  记录集的字段集合，按索引查找中的预定义字段的从零开始的索引。  
   
- `fieldinfo`  
+ *fieldinfo*  
  对引用[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定有关要检索的记录集的信息的选项。 可用选项以及它们会导致函数返回此处列出。 为了获得最佳性能，检索仅您需要的信息的级别：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称、 类型、 大小属性  
@@ -1050,13 +1050,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 默认值，验证规则验证文本  
   
- `lpszName`  
+ *在 lpszName*  
  字段的名称。  
   
 ### <a name="remarks"></a>备注  
  一个版本的函数，可按索引查找字段。 另一个版本中，可以按名称查找字段。  
   
- 返回的信息的说明，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ 返回的信息的说明，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
@@ -1078,13 +1078,13 @@ virtual COleVariant GetFieldValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向包含的字段名称的字符串的指针。  
   
- `varValue`  
+ *varValue*  
  对引用`COleVariant`将存储的字段值的对象。  
   
- `nIndex`  
+ *nIndex*  
  记录集的字段集合，按索引查找中的字段一个从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1134,13 +1134,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  表的索引集合，按数字位置查找中的从零开始索引。  
   
- `indexinfo`  
+ *indexinfo*  
  对引用[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要检索的索引有关的信息的选项。 可用选项以及它们会导致函数返回此处列出。 为了获得最佳性能，检索仅您需要的信息的级别：  
   
 - `AFX_DAO_PRIMARY_INFO` （默认值）名称，字段信息字段  
@@ -1149,13 +1149,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和辅助信息，加上： 非重复计数  
   
- `lpszName`  
+ *在 lpszName*  
  指向按名称查找的名称的索引对象的指针。  
   
 ### <a name="remarks"></a>备注  
  该函数的一个版本，可以通过在集合中的位置的索引查找。 另一个版本中，可以按名称查找索引。  
   
- 返回的信息的说明，请参阅[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ 返回的信息的说明，请参阅[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员*dwInfoOptions*。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
@@ -1189,7 +1189,7 @@ BOOL GetLockingMode();
 ### <a name="remarks"></a>备注  
  只要你调用保守式锁定时实际上，包含正在编辑的记录的数据页锁定[编辑](#edit)成员函数。 在调用时，该页是解锁[更新](#update)或[关闭](#close)成员函数或任何移动或查找操作。  
   
- 仅当与正在更新记录时，才时乐观锁定实际上是锁定包含记录的数据页**更新**成员函数。  
+ 仅当与正在更新记录时，才时乐观锁定实际上是锁定包含记录的数据页`Update`成员函数。  
   
  当使用 ODBC 数据源，锁定模式始终是开放式的。  
   
@@ -1219,10 +1219,10 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  基础 DAOParameter 对象中的参数的数字位置。  
   
- `lpszName`  
+ *在 lpszName*  
  参数所需其值的名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -1271,7 +1271,7 @@ long GetRecordCount();
   
  值`GetRecordCount`从表类型记录集反映表中的记录的大致数目和添加和删除表记录时立即影响。  
   
- 具有未记录的记录集返回值为 0。 使用附加的表或 ODBC 数据库时`GetRecordCount`始终返回-1。 调用**Requery**对记录集的成员函数的值重置`GetRecordCount`就像查询已重新执行。  
+ 具有未记录的记录集返回值为 0。 使用附加的表或 ODBC 数据库时`GetRecordCount`始终返回-1。 调用`Requery`对记录集的成员函数的值重置`GetRecordCount`就像查询已重新执行。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"RecordCount 属性"。  
   
@@ -1288,10 +1288,10 @@ CString GetSQL() const;
 ### <a name="remarks"></a>备注  
  通常，这将是 SQL**选择**语句。  
   
- 返回的字符串`GetSQL`通常不同于你可能会传递到记录集在任何字符串`lpszSQL`参数[打开](#open)成员函数。 这是因为该记录集构造一个完整的 SQL 语句，基于传递给**打开**ClassWizard，使用指定的内容，你可能具有指定的内容中[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)数据成员。  
+ 返回的字符串`GetSQL`通常不同于你可能会传递到记录集在任何字符串*lpszSQL*参数[打开](#open)成员函数。 这是因为该记录集构造一个完整的 SQL 语句，基于传递给`Open`ClassWizard，使用指定的内容，你可能具有指定的内容中[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)数据成员。  
   
 > [!NOTE]
->  在调用后才调用此成员函数**打开**。  
+>  在调用后才调用此成员函数`Open`。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"SQL 属性"。  
   
@@ -1355,19 +1355,19 @@ BOOL IsBOF() const;
  非零，如果记录集不包含任何记录，或具有第一个记录; 之前向后滚动否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 你还可以调用`IsBOF`连同`IsEOF`来确定记录集是否包含任何记录，或为空。 立即调用后**打开**，如果记录集不包含任何记录，`IsBOF`返回非零值。 打开一个包含至少一个记录记录集时，第一条记录是当前记录和`IsBOF`返回 0。  
+ 你还可以调用`IsBOF`连同`IsEOF`来确定记录集是否包含任何记录，或为空。 立即调用后`Open`，如果记录集不包含任何记录，`IsBOF`返回非零值。 打开一个包含至少一个记录记录集时，第一条记录是当前记录和`IsBOF`返回 0。  
   
  如果第一条记录的当前记录，并且你调用`MovePrev`，`IsBOF`随后将返回非零值。 如果`IsBOF`返回非零，并且你调用`MovePrev`，将引发异常。 如果`IsBOF`返回非零，当前记录是不确定，并且需要当前记录的任何操作会导致引发异常。  
   
  上的特定方法的效果`IsBOF`和`IsEOF`设置：  
   
--   调用**打开**内部通过可使第一条记录中记录集的当前记录调用**MoveFirst**。 因此，调用**打开**上记录的原因的空集`IsBOF`和`IsEOF`若要返回非零值。 (请参阅下表中的失败的行为**MoveFirst**或`MoveLast`调用。)  
+-   调用`Open*`内部通过可使第一条记录中记录集的当前记录调用`MoveFirst`。 因此，调用`Open`上记录的原因的空集`IsBOF`和`IsEOF`若要返回非零值。 (请参阅下表中的失败的行为`MoveFirst`或`MoveLast`调用。)  
   
 -   已成功找到一条记录的所有移动操作会都导致同时`IsBOF`和`IsEOF`返回 0。  
   
--   `AddNew`调用跟**更新**成功插入一条新记录的调用将导致`IsBOF`返回 0，但仅当`IsEOF`已为非零值。 状态`IsEOF`将始终保持不变。 定义由 Microsoft Jet 数据库引擎，空的记录集的当前记录指针是在文件末尾，因此任何新记录插入后的当前记录。  
+-   `AddNew`调用跟`Update`成功插入一条新记录的调用将导致`IsBOF`返回 0，但仅当`IsEOF`已为非零值。 状态`IsEOF`将始终保持不变。 定义由 Microsoft Jet 数据库引擎，空的记录集的当前记录指针是在文件末尾，因此任何新记录插入后的当前记录。  
   
--   任何**删除**调用，即使从记录集的唯一的剩余记录中删除不会更改的值`IsBOF`或`IsEOF`。  
+-   任何`Delete`调用，即使从记录集的唯一的剩余记录中删除不会更改的值`IsBOF`或`IsEOF`。  
   
  下表显示哪些移动操作允许使用的不同组合`IsBOF` /  `IsEOF`。  
   
@@ -1384,10 +1384,10 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**， `MoveLast`|非零|非零|  
-|**移动**0|无更改|无更改|  
-|`MovePrev`**移动**< 0|非零|无更改|  
-|`MoveNext`**移动**> 0|无更改|非零|  
+|`MoveFirst`, `MoveLast`|非零|非零|  
+|`Move` 0|无更改|无更改|  
+|`MovePrev``Move` < 0|非零|无更改|  
+|`MoveNext``Move` > 0|无更改|非零|  
   
  有关相关信息，请参阅主题"BOF，EOF 属性"DAO 帮助中。  
   
@@ -1422,19 +1422,19 @@ BOOL IsEOF() const;
  非零，如果记录集不包含任何记录，或已超出最后一条记录; 滚动否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 你还可以调用`IsEOF`来确定记录集是否包含任何记录，或为空。 立即调用后**打开**，如果记录集不包含任何记录，`IsEOF`返回非零值。 打开一个包含至少一个记录记录集时，第一条记录是当前记录和`IsEOF`返回 0。  
+ 你还可以调用`IsEOF`来确定记录集是否包含任何记录，或为空。 立即调用后`Open`，如果记录集不包含任何记录，`IsEOF`返回非零值。 打开一个包含至少一个记录记录集时，第一条记录是当前记录和`IsEOF`返回 0。  
   
  在调用时如果最后一条记录是当前记录`MoveNext`，`IsEOF`随后将返回非零值。 如果`IsEOF`返回非零，并且你调用`MoveNext`，将引发异常。 如果`IsEOF`返回非零，当前记录是不确定，并且需要当前记录的任何操作会导致引发异常。  
   
  上的特定方法的效果`IsBOF`和`IsEOF`设置：  
   
--   调用**打开**内部通过可使第一条记录中记录集的当前记录调用**MoveFirst**。 因此，调用**打开**上记录的原因的空集`IsBOF`和`IsEOF`若要返回非零值。 (请参阅下表中的失败的行为**MoveFirst**调用。)  
+-   调用`Open`内部通过可使第一条记录中记录集的当前记录调用`MoveFirst`。 因此，调用`Open`上记录的原因的空集`IsBOF`和`IsEOF`若要返回非零值。 (请参阅下表中的失败的行为`MoveFirst`调用。)  
   
 -   已成功找到一条记录的所有移动操作会都导致同时`IsBOF`和`IsEOF`返回 0。  
   
--   `AddNew`调用跟**更新**成功插入一条新记录的调用将导致`IsBOF`返回 0，但仅当`IsEOF`已为非零值。 状态`IsEOF`将始终保持不变。 定义由 Microsoft Jet 数据库引擎，空的记录集的当前记录指针是在文件末尾，因此任何新记录插入后的当前记录。  
+-   `AddNew`调用跟`Update`成功插入一条新记录的调用将导致`IsBOF`返回 0，但仅当`IsEOF`已为非零值。 状态`IsEOF`将始终保持不变。 定义由 Microsoft Jet 数据库引擎，空的记录集的当前记录指针是在文件末尾，因此任何新记录插入后的当前记录。  
   
--   任何**删除**调用，即使从记录集的唯一的剩余记录中删除不会更改的值`IsBOF`或`IsEOF`。  
+-   任何`Delete`调用，即使从记录集的唯一的剩余记录中删除不会更改的值`IsBOF`或`IsEOF`。  
   
  下表显示哪些移动操作允许使用的不同组合`IsBOF` /  `IsEOF`。  
   
@@ -1451,10 +1451,10 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**， `MoveLast`|非零|非零|  
-|**移动**0|无更改|无更改|  
-|`MovePrev`**移动**< 0|非零|无更改|  
-|`MoveNext`**移动**> 0|无更改|非零|  
+|`MoveFirst`, `MoveLast`|非零|非零|  
+|`Move` 0|无更改|无更改|  
+|`MovePrev``Move` < 0|非零|无更改|  
+|`MoveNext``Move` > 0|无更改|非零|  
   
  有关相关信息，请参阅主题"BOF，EOF 属性"DAO 帮助中。  
   
@@ -1466,14 +1466,14 @@ BOOL IsFieldDirty(void* pv);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pv`  
+ *pv*  
  指向字段数据成员你想要检查，其状态的指针或**NULL**以确定其中任何一个字段是否已更新。  
   
 ### <a name="return-value"></a>返回值  
  如果指定的字段数据成员标记为脏; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 所有已更新字段数据成员中的数据将传输到记录在数据源上的当前记录更新通过调用时**更新**成员函数`CDaoRecordset`(到调用**编辑**或`AddNew`)。 了解这一点，你可能需要进一步的步骤，如取消标记以将标记列，以便它不会写到数据源的字段数据成员。  
+ 所有已更新字段数据成员中的数据将传输到记录在数据源上的当前记录更新通过调用时`Update`成员函数`CDaoRecordset`(到调用`Edit`或`AddNew`)。 了解这一点，你可能需要进一步的步骤，如取消标记以将标记列，以便它不会写到数据源的字段数据成员。  
   
  `IsFieldDirty` 通过实现`DoFieldExchange`。  
   
@@ -1485,7 +1485,7 @@ BOOL IsFieldNull(void* pv);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pv`  
+ *pv*  
  指向字段数据成员你想要检查，其状态的指针或**NULL**以确定其中任何一个字段是否为 Null。  
   
 ### <a name="return-value"></a>返回值  
@@ -1510,14 +1510,14 @@ BOOL IsFieldNullable(void* pv);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pv`  
+ *pv*  
  指向字段数据成员你想要检查，其状态的指针或**NULL**以确定其中任何一个字段是否为 Null。  
   
 ### <a name="return-value"></a>返回值  
  非零，如果指定的字段数据成员可设置为 Null。否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 不能为 Null 的字段必须具有一个值。 如果你尝试将此类字段设置为 Null，在添加或更新记录时，数据源拒绝添加或更新，和**更新**将引发异常。 在调用时，则会发生异常**更新**，在调用时不`SetFieldNull`。  
+ 不能为 Null 的字段必须具有一个值。 如果你尝试将此类字段设置为 Null，在添加或更新记录时，数据源拒绝添加或更新，和`Update`将引发异常。 在调用时，则会发生异常`Update`，在调用时不`SetFieldNull`。  
   
 ##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  调用此成员函数可确定记录集是否打开。  
@@ -1527,7 +1527,7 @@ BOOL IsOpen() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 非零如果记录集对象的**打开**或**Requery**以前调用成员函数和记录集未被关闭; 否则为 0。  
+ 如果非零的记录集对象`Open`或`Requery`以前调用成员函数和记录集未被关闭; 否则为 0。  
   
 ### <a name="remarks"></a>备注  
   
@@ -1537,7 +1537,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>备注  
  标志默认为**TRUE**。 此数据成员中的设置控制的整个双缓冲机制。 如果将标志设置为**TRUE**，你可以将关闭使用 DFX 机制的字段的基础上缓存。 如果将标志设置为**FALSE**，必须调用`SetFieldDirty`和`SetFieldNull`自己。  
   
- 设置此数据成员之前调用**打开**。 此机制是主要用于易用性。 性能可能会降低由于双缓冲的字段进行更改时。  
+ 设置此数据成员之前调用`Open`。 此机制是主要用于易用性。 性能可能会降低由于双缓冲的字段进行更改时。  
   
 ##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  包含记录集类中的字段数据成员的数目和选定数据源的记录集的列数。  
@@ -1556,7 +1556,7 @@ BOOL IsOpen() const;
  包含的记录集类中的参数数据成员数-与记录集的查询一起传递的参数数目。  
   
 ### <a name="remarks"></a>备注  
- 如果你记录集的类具有任何参数数据成员，必须初始化类的构造函数`m_nParams`与正确的数目。 值`m_nParams`默认值为 0。 如果添加的参数数据成员-你必须手动执行该操作 — 您必须在类构造函数，以反映参数的数目也手动添加初始化 (它必须是至少一样大的数字的形式 ' 中的占位符你**m_strFilter**或`m_strSort`字符串)。  
+ 如果你记录集的类具有任何参数数据成员，必须初始化类的构造函数*m_nParams*与正确的数目。 值*m_nParams*默认值为 0。 如果添加的参数数据成员-你必须手动执行该操作 — 您必须在类构造函数，以反映参数的数目也手动添加初始化 (它必须是至少一样大的数字的形式 ' 中的占位符你*m_strFilter*或*m_strSort*字符串)。  
   
  它对参数化记录集的查询时，框架将使用此数字。  
   
@@ -1577,7 +1577,7 @@ BOOL IsOpen() const;
  包含指向的`CDaoDatabase`通过该记录集连接到数据源的对象。  
   
 ### <a name="remarks"></a>备注  
- 两种方式设置此变量。 通常情况下，将指针传递到已打开`CDaoDatabase`对象构造记录集对象时。 如果你通过**NULL**相反， **CDaoRecordset**创建`CDaoDatabase`为你的对象并将其打开。 在任一情况下，`CDaoRecordset`将指针存储在此变量。  
+ 两种方式设置此变量。 通常情况下，将指针传递到已打开`CDaoDatabase`对象构造记录集对象时。 如果你通过**NULL**相反，`CDaoRecordset`创建`CDaoDatabase`为你的对象并将其打开。 在任一情况下，`CDaoRecordset`将指针存储在此变量。  
   
  通常不直接需要使用存储在指针**m_pDatabase**。 如果你编写自己的扩展到`CDaoRecordset`，但是，你可能需要使用该指针。 例如，你可能需要指针如果引发了自己`CDaoException`(s)。  
   
@@ -1601,36 +1601,36 @@ BOOL IsOpen() const;
   
  无法对表类型记录集对象进行排序。 若要确定表类型记录集的排序顺序，请调用[SetCurrentIndex](#setcurrentindex)。  
   
- 使用`m_strSort`打开记录集使用时，不起`CDaoQueryDef`指针。  
+ 使用*m_strSort*打开记录集使用时，不起`CDaoQueryDef`指针。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"排序属性"。  
   
 ##  <a name="move"></a>  CDaoRecordset::Move  
- 调用此成员函数以定位该记录集`lRows`从当前记录的记录。  
+ 调用此成员函数以定位该记录集*lRows*从当前记录的记录。  
   
 ```  
 virtual void Move(long lRows);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lRows`  
+ *lRows*  
  要向前或向后移动的记录数。 正值表示向前，移动记录集的一端。 值为负时，开始向后移动。  
   
 ### <a name="remarks"></a>备注  
  您可以移动向前或向后。 `Move( 1 )` 等效于`MoveNext`，和`Move( -1 )`等效于`MovePrev`。  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  调用的任何`Move`函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后`Open`或`Requery`，调用`IsBOF`或`IsEOF`。  
   
 > [!NOTE]
->  如果你使用滚动条滚动过去的开头或末尾的记录集 (`IsBOF`或`IsEOF`返回非零)，调用**移动**引发`CDaoException`。  
+>  如果你使用滚动条滚动过去的开头或末尾的记录集 (`IsBOF`或`IsEOF`返回非零)，调用`Move`引发`CDaoException`。  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  如果你调用任意`Move`函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
   
- 当调用**移动**上只进滚动快照，`lRows`参数必须是一个正整数，书签不允许使用，因此你可以继续仅。  
+ 当调用`Move`上只进滚动快照，`lRows`参数必须是一个正整数，书签不允许使用，因此你可以继续仅。  
   
- 若要使第一个，最后，接下来，或上一个记录在记录集中的当前记录，调用**MoveFirst**， `MoveLast`， `MoveNext`，或`MovePrev`成员函数。  
+ 若要使第一个，最后，接下来，或上一个记录在记录集中的当前记录，调用`MoveFirst`， `MoveLast`， `MoveNext`，或`MovePrev`成员函数。  
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
@@ -1642,23 +1642,23 @@ void MoveFirst();
 ```  
   
 ### <a name="remarks"></a>备注  
- 无需调用**MoveFirst**后立即打开记录集。 此时，第一条记录 （如果有） 将自动当前记录。  
+ 无需调用`MoveFirst`后立即打开记录集。 此时，第一条记录 （如果有） 将自动当前记录。  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  调用的任何`Move`函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后`Open`或`Requery`，调用`IsBOF`或`IsEOF`。  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  如果你调用任意`Move`函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ 使用`Move`记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
   
  如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
   
  如果调用`MoveLast`对基于 SQL 查询或 querydef 记录集对象，该查询强制完成并完全填充的记录集对象。  
   
- 不能调用**MoveFirst**或`MovePrev`成员函数时只进的滚动快照。  
+ 不能调用`MoveFirst`或`MovePrev`成员函数时只进的滚动快照。  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用`Move`。  
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
@@ -1672,18 +1672,18 @@ void MoveLast();
 ### <a name="remarks"></a>备注  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  调用的任何`Move`函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后`Open`或`Requery`，调用`IsBOF`或`IsEOF`。  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  如果你调用任意`Move`函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ 使用`Move`记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
   
  如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
   
  如果调用`MoveLast`对基于 SQL 查询或 querydef 记录集对象，该查询强制完成并完全填充的记录集对象。  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用`Move`。  
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
@@ -1698,16 +1698,16 @@ void MoveNext();
  建议您调用`IsBOF`尝试将移到上一条记录之前。 调用`MovePrev`将引发`CDaoException`如果`IsBOF`返回非零值，指示，你已使用滚动条滚动在第一条记录之前或没有记录已选择的记录集。  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  调用的任何`Move`函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后`Open`或`Requery`，调用`IsBOF`或`IsEOF`。  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  如果你调用任意`Move`函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ 使用`Move`记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
   
  如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用`Move`。  
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
@@ -1722,18 +1722,18 @@ void MovePrev();
  建议您调用`IsBOF`尝试将移到上一条记录之前。 调用`MovePrev`将引发`CDaoException`如果`IsBOF`返回非零值，指示，你已使用滚动条滚动在第一条记录之前或没有记录已选择的记录集。  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  调用的任何`Move`函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后`Open`或`Requery`，调用`IsBOF`或`IsEOF`。  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  如果你调用任意`Move`函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ 使用`Move`记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
   
  如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
   
- 不能调用**MoveFirst**或`MovePrev`成员函数时只进的滚动快照。  
+ 不能调用`MoveFirst`或`MovePrev`成员函数时只进的滚动快照。  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用`Move`。  
   
  有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
   
@@ -1760,7 +1760,7 @@ virtual void Open(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nOpenType`  
+ *nOpenType*  
  以下值之一：  
   
 - **dbOpenDynaset**具有双向滚动的动态集类型记录集。 这是默认设置。  
@@ -1769,7 +1769,7 @@ virtual void Open(
   
 - **dbOpenSnapshot**而双向滚动快照类型的记录集。  
   
- `lpszSQL`  
+ *lpszSQL*  
  字符串指针，包含以下项之一：  
   
 -   A **NULL**指针。  
@@ -1780,7 +1780,7 @@ virtual void Open(
   
 -   传递的查询。  
   
- `nOptions`  
+ *nOptions*  
  一个或多个下面列出的选项。 默认值为 0。 可能的值如下：  
   
 - **dbAppendOnly**可以仅追加新记录 （仅记录动态集类型集）。 此选项的字面意思是，可能仅追加记录。 MFC ODBC 数据库类具有一个允许检索和追加的记录的仅限附加的选项。  
@@ -1800,7 +1800,7 @@ virtual void Open(
 - **dbConsistent**仅允许一致的更新 （仅记录动态集类型集）。  
   
 > [!NOTE]
->  常量**dbConsistent**和**dbInconsistent**是互相排斥。 你可以使用一个或另一个，但不要同时中的给定实例**打开**。  
+>  常量**dbConsistent**和**dbInconsistent**是互相排斥。 你可以使用一个或另一个，但不要同时中的给定实例`Open`。  
   
  *pTableDef*  
  指向的指针[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)对象。 此版本是仅对表类型记录集有效。 使用此选项时`CDaoDatabase`指针用于构造`CDaoRecordset`未使用; 相反，将使用 tabledef 所在的数据库。  
@@ -1809,30 +1809,30 @@ virtual void Open(
  指向的指针[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)对象。 此版本是仅对动态集类型和快照类型记录集有效。 使用此选项时`CDaoDatabase`指针用于构造`CDaoRecordset`未使用; 相反，将使用此 querydef 所在的数据库。  
   
 ### <a name="remarks"></a>备注  
- 之前调用**打开**，您必须先构造的记录集对象。 有若干方法可实现此操作：  
+ 之前调用`Open`，您必须先构造的记录集对象。 有若干方法可实现此操作：  
   
 -   如果你构造的记录集对象，将传递指向的指针`CDaoDatabase`已打开的对象。  
   
 -   如果你构造的记录集对象，将传递指向的指针`CDaoDatabase`未打开的对象。 记录集打开`CDaoDatabase`对象，但不是会关闭它，记录集对象关闭时。  
   
--   如果你构造的记录集对象，则将传递**NULL**指针。 记录集对象调用`GetDefaultDBName`若要获取的 Microsoft Access 的名称。要打开的 MDB 文件。 记录集然后打开`CDaoDatabase`对象并使它打开，只要记录集处于打开状态。 当调用**关闭**对记录集，`CDaoDatabase`对象也将关闭。  
+-   如果你构造的记录集对象，则将传递**NULL**指针。 记录集对象调用`GetDefaultDBName`若要获取的 Microsoft Access 的名称。要打开的 MDB 文件。 记录集然后打开`CDaoDatabase`对象并使它打开，只要记录集处于打开状态。 当调用`Close`对记录集，`CDaoDatabase`对象也将关闭。  
   
     > [!NOTE]
     >  记录集打开时`CDaoDatabase`对象，它以非独占方式访问以打开数据源。  
   
- 版本的**打开**使用`lpszSQL`参数，记录集处于打开状态后你可以检索几种方式之一中的记录。 第一个选项是在中拥有 DFX 函数你`DoFieldExchange`。 第二个选项是通过调用使用动态绑定`GetFieldValue`成员函数。 单独或组合，可以实现这些选项。 如果合并，你将需要传递的 SQL 语句中自行调用**打开**。  
+ 版本的`Open`使用*lpszSQL*参数，记录集处于打开状态后你可以检索几种方式之一中的记录。 第一个选项是在中拥有 DFX 函数你`DoFieldExchange`。 第二个选项是通过调用使用动态绑定`GetFieldValue`成员函数。 单独或组合，可以实现这些选项。 如果合并，你将需要传递的 SQL 语句中自行调用`Open`。  
   
- 如果你使用的第二个版本**打开**你传入`CDaoTableDef`对象，生成的列将可供你可通过将绑定`DoFieldExchange`和 DFX 机制，和/或动态通过绑定`GetFieldValue`。  
-  
-> [!NOTE]
->  你只能调用**打开**使用`CDaoTableDef`表类型记录集的对象。  
-  
- 如果你使用的第三个版本**打开**你传入`CDaoQueryDef`对象，将执行查询，并生成的列将可供你可通过将绑定`DoFieldExchange`和 DFX 机制，和/或动态绑定通过`GetFieldValue`。  
+ 如果你使用的第二个版本`Open`你传入`CDaoTableDef`对象，生成的列将可供你可通过将绑定`DoFieldExchange`和 DFX 机制，和/或动态通过绑定`GetFieldValue`。  
   
 > [!NOTE]
->  你只能调用**打开**使用`CDaoQueryDef`动态集类型和快照类型记录集对象。  
+>  你只能调用`Open`使用`CDaoTableDef`表类型记录集的对象。  
   
- 第一个版本的**打开**使用`lpszSQL`参数，记录则下表中所示的所选基于的条件。  
+ 如果你使用的第三个版本`Open`你传入`CDaoQueryDef`对象，将执行查询，并生成的列将可供你可通过将绑定`DoFieldExchange`和 DFX 机制，和/或动态通过绑定`GetFieldValue`。  
+  
+> [!NOTE]
+>  你只能调用`Open`使用`CDaoQueryDef`动态集类型和快照类型记录集对象。  
+  
+ 第一个版本的`Open`使用`lpszSQL`参数，记录则下表中所示的所选基于的条件。  
   
 |`lpszSQL` 参数的值|由确定所选记录|示例|  
 |--------------------------------------|----------------------------------------|-------------|  
@@ -1840,17 +1840,17 @@ virtual void Open(
 |以逗号分隔的一个或多个 tabledefs 和/或 querydef 名称列表。|在中的所有列都表示`DoFieldExchange`。|`"Customer"`|  
 |**选择**列列表**FROM**表列表|从指定的 tabledef(s) 和/或 querydef(s) 指定的列。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
- 常规步骤是将传递**NULL**到**打开**; 在这种情况下，**打开**调用`GetDefaultSQL`，ClassWizard 生成时创建的可重写成员函数`CDaoRecordset`-派生类。 此值使你在 ClassWizard 中指定的 tabledef(s) 和/或 querydef 名称。 您可以指定中的其他信息`lpszSQL`参数。  
+ 常规步骤是将传递**NULL**到`Open`; 在这种情况下，`Open`调用`GetDefaultSQL`，ClassWizard 生成时创建的可重写成员函数`CDaoRecordset`-派生类。 此值使你在 ClassWizard 中指定的 tabledef(s) 和/或 querydef 名称。 您可以指定中的其他信息*lpszSQL*参数。  
   
- 你传递的任何**打开**构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDERBY**子句追加到`lpszSQL`字符串传入） 和执行该查询。 你可以通过调用检查构造的字符串`GetSQL`之后调用**打开**。  
+ 你传递的任何`Open`构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDERBY**子句追加到*lpszSQL*字符串你传递） 并执行查询。 你可以通过调用检查构造的字符串`GetSQL`之后调用`Open`。  
   
  记录集类的字段数据成员将绑定到所选的数据的列。 如果返回任何记录，第一条记录成为当前记录。  
   
- 如果你想要设置为记录集，如筛选或排序，选项设置`m_strSort`或**m_strFilter**构造的记录集对象之后但在调用之前**打开**。 如果你想要刷新的记录后记录集中的记录集已打开，请调用**Requery**。  
+ 如果你想要设置为记录集，如筛选或排序，选项设置**m_strSort**或**m_strFilter**构造的记录集对象之后但在调用之前`Open`。 如果你想要刷新的记录后记录集中的记录集已打开，请调用`Requery`。  
   
- 如果调用**打开**上动态集类型或快照类型的记录集，或者如果数据源引用的 SQL 语句或 tabledef 对象，表示附加的表，不能使用**dbOpenTable**类型自变量;如果这样做，则 MFC 会引发异常。 若要确定 tabledef 对象是否表示附加的表，创建[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)对象并调用其[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成员函数。  
+ 如果调用`Open`上动态集类型或快照类型的记录集，或者如果数据源引用的 SQL 语句或 tabledef 对象，表示附加的表，不能使用**dbOpenTable**要让类型参数; 如果这样做，MFC引发异常。 若要确定 tabledef 对象是否表示附加的表，创建[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)对象并调用其[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成员函数。  
   
- 使用**dbSeeChanges**标志如果你想要捕获编辑或删除同一记录时，由另一个用户或计算机上的另一个程序所做的更改。 例如，如果两个用户开始编辑同一个记录，若要调用的第一个用户**更新**成员函数成功。 当**更新**由第二个用户，调用`CDaoException`引发。 同样，如果第二个用户尝试调用**删除**删除记录，并已更改第一个用户，通过`CDaoException`时发生。  
+ 使用**dbSeeChanges**标志如果你想要捕获编辑或删除同一记录时，由另一个用户或计算机上的另一个程序所做的更改。 例如，如果两个用户开始编辑同一个记录，若要调用的第一个用户`Update`成员函数成功。 当`Update`由第二个用户，调用`CDaoException`引发。 同样，如果第二个用户尝试调用`Delete`删除记录，并已更改第一个用户，通过`CDaoException`时发生。  
   
  通常情况下，如果用户获取此`CDaoException`更新时，你的代码应刷新字段的内容和检索最近修改的值。 如果删除的过程中发生异常，你的代码无法向用户和一条消息指出的数据已最近更改显示新的记录数据。 此时，你的代码可以请求用户仍想要删除的记录一条确认消息。  
   
@@ -1869,21 +1869,21 @@ virtual void Requery();
 ### <a name="remarks"></a>备注  
  如果返回任何记录，第一条记录成为当前记录。  
   
- 为了使为反映的添加和删除您或其他用户对数据源的记录集，必须重新记录集生成通过调用**Requery**。 如果记录集是动态集，它会自动反映你或其他用户对其现有记录 （但不是添加件） 进行的更新。 如果记录集是快照，则必须调用**Requery**以反映编辑由其他用户，以及添加和删除。  
+ 为了使为反映的添加和删除您或其他用户对数据源的记录集，必须重新记录集生成通过调用`Requery`。 如果记录集是动态集，它会自动反映你或其他用户对其现有记录 （但不是添加件） 进行的更新。 如果记录集是快照，则必须调用`Requery`以反映编辑由其他用户，以及添加和删除。  
   
- 对于动态集或快照中，调用**Requery**任何你想要重新生成使用参数值的记录集的时间。 通过设置来设置新的筛选器或排序[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)之前调用**Requery**。 通过将新值分配给之前调用的参数数据成员设置新的参数**Requery**。  
+ 对于动态集或快照中，调用`Requery`任何你想要重新生成使用参数值的记录集的时间。 通过设置来设置新的筛选器或排序[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)之前调用`Requery`。 通过将新值分配给之前调用的参数数据成员设置新的参数`Requery`。  
   
- 如果重新生成该记录集的尝试失败，已关闭记录集。 在调用之前**Requery**，你可以确定是否可以通过调用重新记录集的查询[CanRestart](#canrestart)成员函数。 `CanRestart` 不能保证**Requery**将会成功。  
+ 如果重新生成该记录集的尝试失败，已关闭记录集。 在调用之前`Requery`，你可以确定是否可以通过调用重新记录集的查询[CanRestart](#canrestart)成员函数。 `CanRestart` 不能保证`Requery`将会成功。  
   
 > [!CAUTION]
->  调用**Requery**仅具有调用后**打开**。  
+>  调用`Requery`仅具有调用后`Open`。  
   
 > [!NOTE]
 >  调用[Requery](#requery)更改 DAO 书签。  
   
- 不能调用**Requery**动态集类型或快照类型的记录集如果调用上`CanRestart`返回 0，也无法使用它在表类型记录集上。  
+ 不能调用`Requery`动态集类型或快照类型的记录集如果调用上`CanRestart`返回 0，也无法使用它在表类型记录集上。  
   
- 如果这两个`IsBOF`和`IsEOF`后你调用返回非零**Requery**，查询未返回任何记录和记录集将包含任何数据。  
+ 如果这两个`IsBOF`和`IsEOF`后你调用返回非零`Requery`，查询未返回任何记录和记录集将包含任何数据。  
   
  有关相关信息，请参阅主题 DAO 帮助中的"Requery 方法"。  
   
@@ -1905,10 +1905,10 @@ BOOL Seek(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszComparison`  
+ *lpszComparison*  
  以下字符串表达式之一:"<"、"\<="，"="、"> ="，或">"。  
   
- `pKey1`  
+ *pKey1*  
  指向的指针[COleVariant](../../mfc/reference/colevariant-class.md)其值对应于索引中的第一个字段。 必须的。  
   
  *pKey2*  
@@ -1934,11 +1934,11 @@ BOOL Seek(
   
  `Seek` 使搜索表类型记录集上的高性能索引。 必须通过调用设置的当前索引`SetCurrentIndex`之前调用`Seek`。 如果索引标识了非唯一的键字段或字段，`Seek`查找满足的条件的第一个记录。 如果未设置索引，将引发异常。  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
- 当调用`Seek`，你将一个或多个密钥值和比较运算符传递 ("<"、"\<="，"="、"> ="，或">")。 `Seek` 搜索指定的键字段，并找到满足指定的条件的第一个记录`lpszComparison`和`pKey1`。 一次找到，`Seek`返回非零值，并将该记录当前。 如果`Seek`无法找到匹配项，`Seek`返回零，而且当前记录是不确定。 当直接使用 DAO，则必须显示检查 NoMatch 属性。  
+ 当调用`Seek`，你将一个或多个密钥值和比较运算符传递 ("<"、"\<="，"="、"> ="，或">")。 `Seek` 搜索指定的键字段，并找到满足指定的条件的第一个记录*lpszComparison*和*pKey1*。 一次找到，`Seek`返回非零值，并将该记录当前。 如果`Seek`无法找到匹配项，`Seek`返回零，而且当前记录是不确定。 当直接使用 DAO，则必须显示检查 NoMatch 属性。  
   
- 如果`lpszComparison`"=""> ="，或">"，`Seek`开始的索引开始。 如果`lpszComparison`是"<"或"< ="，`Seek`开始索引末尾、 向后搜索，除非末尾有重复的索引条目。 在这种情况下，`Seek`从索引末尾重复的索引条目中的任意项开始。  
+ 如果`lpszComparison`"=""> ="，或">"，`Seek`开始的索引开始。 如果*lpszComparison*是"<"或"< ="，`Seek`开始索引末尾、 向后搜索，除非末尾有重复的索引条目。 在这种情况下，`Seek`从索引末尾重复的索引条目中的任意项开始。  
   
  那里没有为当前记录，当你使用`Seek`。  
   
@@ -1982,7 +1982,7 @@ void SetBookmark(COleVariant varBookmark);
 ```  
   
 ### <a name="parameters"></a>参数  
- `varBookmark`  
+ *varBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md)包含特定记录的书签值对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1991,7 +1991,7 @@ void SetBookmark(COleVariant varBookmark);
 > [!NOTE]
 >  调用[Requery](#requery)更改 DAO 书签。  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  有关相关信息，请参阅"书签属性"和 Bookmarkable 属性的主题"DAO 帮助中。  
   
@@ -2003,13 +2003,13 @@ void SetCacheSize(long lSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lSize`  
+ *lSize*  
  指定记录的数。 一个典型值为 100。 设置为 0 表示关闭缓存。 设置必须介于 5 和 1200年记录。 缓存可能会使用相当多的内存。  
   
 ### <a name="remarks"></a>备注  
  缓存在本地保存最近的事件中运行应用程序时将再次请求数据从服务器检索的数据的内存空间。 数据缓存提高从通过动态集类型记录集对象的远程服务器中检索数据的应用程序的性能。 请求数据时，Microsoft Jet 数据库引擎所请求数据的缓存会首先检查而不是检索在服务器上，这需要花费更多的时间。 不是来自 ODBC 数据源的数据不保存在缓存中。  
   
- 任何 ODBC 数据源，例如一个附加的表，可以本地缓存。 若要创建缓存，可从远程数据源，调用打开记录集对象`SetCacheSize`和`SetCacheStart`成员函数，然后调用`FillCache`成员函数或逐句通过移动操作的记录。 `lSize`参数`SetCacheSize`成员函数可以基于你的应用程序可以使用一次的记录数。 例如，如果你使用记录集作为数据源显示在屏幕上，你可以将`SetCacheSize``lSize`参数作为 20 以一次显示 20 的记录。  
+ 任何 ODBC 数据源，例如一个附加的表，可以本地缓存。 若要创建缓存，可从远程数据源，调用打开记录集对象`SetCacheSize`和`SetCacheStart`成员函数，然后调用`FillCache`成员函数或逐句通过移动操作的记录。 *LSize*参数`SetCacheSize`成员函数可以基于你的应用程序可以使用一次的记录数。 例如，如果你使用记录集作为数据源显示在屏幕上，你可以将`SetCacheSize` *lSize*参数作为 20 以一次显示 20 的记录。  
   
  有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
   
@@ -2021,19 +2021,19 @@ void SetCacheStart(COleVariant varBookmark);
 ```  
   
 ### <a name="parameters"></a>参数  
- `varBookmark`  
+ *varBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) ，它指定的第一条记录书签中为缓存的记录集。  
   
 ### <a name="remarks"></a>备注  
- 你可以使用任何记录书签值`varBookmark`参数`SetCacheStart`成员函数。 使你想要与当前记录启动缓存，建立该记录使用的书签的记录[SetBookmark](#setbookmark)，并将书签值作为参数传递`SetCacheStart`成员函数。  
+ 你可以使用任何记录书签值*varBookmark*参数`SetCacheStart`成员函数。 使你想要与当前记录启动缓存，建立该记录使用的书签的记录[SetBookmark](#setbookmark)，并将书签值作为参数传递`SetCacheStart`成员函数。  
   
  Microsoft Jet 数据库引擎从缓存中，请求缓存范围内的记录并从服务器请求到的缓存范围外的记录。  
   
  从缓存中检索的记录不能反映其他用户对源数据同时进行的更改。  
   
- 若要强制所有缓存的数据更新，请将传递`lSize`参数`SetCacheSize`为 0，调用`SetCacheSize`再次缓存的大小与你最初请求，，然后调用`FillCache`成员函数。  
+ 若要强制所有缓存的数据更新，请将传递*lSize*参数`SetCacheSize`为 0，调用`SetCacheSize`再次缓存的大小与你最初请求，，然后调用`FillCache`成员函数。  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  有关相关信息，请参阅主题 CacheSize，CacheStart 属性 DAO 帮助中。  
   
@@ -2045,7 +2045,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszIndex`  
+ *lpszIndex*  
  一个指针，它包含要设置的索引的名称。  
   
 ### <a name="remarks"></a>备注  
@@ -2067,10 +2067,10 @@ void SetFieldDirty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pv`  
+ *pv*  
  包含在记录集中的字段数据成员的地址或**NULL**。 如果**NULL**，标记在记录集中的所有字段数据成员。 (C + + **NULL**不同时，为 Null，在数据库术语中，这意味着"having 没有值。")  
   
- `bDirty`  
+ *bDirty*  
  **TRUE**字段数据成员是否会被标记为"脏"（更改）。 否则为**FALSE**字段数据成员是否会被标记为"清理"（未更改）。  
   
 ### <a name="remarks"></a>备注  
@@ -2107,10 +2107,10 @@ void SetFieldNull(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pv`  
+ *pv*  
  包含在记录集中的字段数据成员的地址或**NULL**。 如果**NULL**，标记在记录集中的所有字段数据成员。 (C + + **NULL**不同时，为 Null，在数据库术语中，这意味着"having 没有值。")  
   
- `bNull`  
+ *bNull*  
  如果字段数据成员均被标记为不具有任何值 (Null)，则为非 0。 如果字段数据成员是被标记为非 Null 则否则为 0。  
   
 ### <a name="remarks"></a>备注  
@@ -2118,7 +2118,7 @@ void SetFieldNull(
   
  当你将一条新记录添加到记录集时，所有字段数据成员最初设置为 Null 值的并标记为"脏"（更改）。 当从数据源检索一条记录时，其列已具有值，或者为 Null。 如果不合适，若要使字段为 Null， [CDaoException](../../mfc/reference/cdaoexception-class.md)引发。  
   
- 如果你使用双缓冲机制，例如，如果你明确想要将当前记录的字段指定为不具有一个值，调用`SetFieldNull`与`bNull`设置为**TRUE**标记为 Null。 如果字段以前已标记为 Null，并且现在想要为其提供一个值，只需将其新值设置。 不需要删除与 Null 标志`SetFieldNull`。 若要确定是否允许该字段为 Null，调用[IsFieldNullable](#isfieldnullable)。  
+ 如果你使用双缓冲机制，例如，如果你明确想要将当前记录的字段指定为不具有一个值，调用`SetFieldNull`与*bNull*设置为**TRUE**到标志它为 Null。 如果字段以前已标记为 Null，并且现在想要为其提供一个值，只需将其新值设置。 不需要删除与 Null 标志`SetFieldNull`。 若要确定是否允许该字段为 Null，调用[IsFieldNullable](#isfieldnullable)。  
   
  如果你未使用双缓冲机制，然后将更改字段的值不会自动设置字段作为脏和非 Null。 具体而言，必须设置字段，脏和非 Null。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
   
@@ -2158,22 +2158,22 @@ void SetFieldValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指向包含的字段名称的字符串的指针。  
   
- `varValue`  
+ *varValue*  
  对引用[COleVariant](../../mfc/reference/colevariant-class.md)对象包含的值的字段的内容。  
   
- `nIndex`  
+ *nIndex*  
  一个整数，表示记录集的字段集合 （从零开始） 中的字段的序号位置。  
   
- `lpszValue`  
+ *lpszValue*  
  指向包含该字段的内容的值的字符串的指针。  
   
 ### <a name="remarks"></a>备注  
  使用`SetFieldValue`和[GetFieldValue](#getfieldvalue)将字段动态绑定在运行的时而不是静态绑定列使用[DoFieldExchange](#dofieldexchange)机制。  
   
- 请注意，是否你不在创建 UNICODE 记录集，你必须使用一种形式的`SetFieldValue`不包含`COleVariant`参数，或`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
+ 请注意，是否你不在创建 UNICODE 记录集，你必须使用一种形式的`SetFieldValue`不包含`COleVariant`参数，或`COleVariant`对象必须显式声明 ANSI。 This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
   
@@ -2186,10 +2186,10 @@ void SetFieldValueNull(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  中的记录集，由从零开始的索引查找的字段的索引。  
   
- `lpszName`  
+ *在 lpszName*  
  按名称查找记录集中的字段名称。  
   
 ### <a name="remarks"></a>备注  
@@ -2209,13 +2209,13 @@ void SetLockingMode(BOOL bPessimistic);
  一个标志，指示锁定的类型。  
   
 ### <a name="remarks"></a>备注  
- 只要你调用保守式锁定时实际上，包含正在编辑的记录 2k 页锁定**编辑**成员函数。 在调用时，该页是解锁**更新**或**关闭**成员函数或任何移动或查找操作。  
+ 只要你调用保守式锁定时实际上，包含正在编辑的记录 2k 页锁定`Edit`成员函数。 在调用时，该页是解锁`Update`或`Close`成员函数或任何移动或查找操作。  
   
- 仅当与正在更新记录时，才时乐观锁定实际上是锁定 2k 页面，其中包含记录**更新**成员函数。  
+ 仅当与正在更新记录时，才时乐观锁定实际上是锁定 2k 页面，其中包含记录`Update`成员函数。  
   
- 如果页面被锁定，没有其他用户可以编辑的同一页面上的记录。 如果调用`SetLockingMode`和传递一个非零值和其他用户已锁定的页中，在调用时，将引发异常**编辑**。 其他用户可以从锁定的页读取数据。  
+ 如果页面被锁定，没有其他用户可以编辑的同一页面上的记录。 如果调用`SetLockingMode`和传递一个非零值和其他用户已锁定的页中，在调用时，将引发异常`Edit`。 其他用户可以从锁定的页读取数据。  
   
- 如果调用`SetLockingMode`具有零值及更高版本调用**更新**时由另一个用户锁定页，则会发生异常。 若要查看其他用户向您的记录所做的更改 （并放弃所做的更改），调用`SetBookmark`具有当前记录的书签值的成员函数。  
+ 如果调用`SetLockingMode`具有零值及更高版本调用`Update`时由另一个用户锁定页，则会发生异常。 若要查看其他用户向您的记录所做的更改 （并放弃所做的更改），调用`SetBookmark`具有当前记录的书签值的成员函数。  
   
  当使用 ODBC 数据源，锁定模式始终是开放式的。  
   
@@ -2234,19 +2234,19 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  Querydef 的参数集合中的参数的数字位置。  
   
- `var`  
+ *var*  
  要设置; 的值请参阅备注。  
   
- `lpszName`  
+ *在 lpszName*  
  参数要设置其值的名称。  
   
 ### <a name="remarks"></a>备注  
  参数必须已建立作为记录集的 SQL 字符串的一部分。 按名称或在集合中的索引位置，你可以访问参数。  
   
- 指定的值将设置为`COleVariant`对象。 有关设置的所需的值和中的类型信息你`COleVariant`对象，请参阅类[COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)** 窗体的构造函数与`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)** 与`vtSrc`设置为`VT_BSTRT`。  
+ 指定的值将设置为`COleVariant`对象。 有关设置的所需的值和中的类型信息你`COleVariant`对象，请参阅类[COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
 ##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  调用此成员函数可将参数设置为 Null 值。  
@@ -2257,10 +2257,10 @@ void SetParamValueNull(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  中的记录集，由从零开始的索引查找的字段的索引。  
   
- `lpszName`  
+ *在 lpszName*  
  按名称查找记录集中的字段名称。  
   
 ### <a name="remarks"></a>备注  
@@ -2288,23 +2288,23 @@ void SetPercentPosition(float fPosition);
  有关相关信息，请参阅主题 DAO 帮助中的"PercentPosition 属性"。  
   
 ##  <a name="update"></a>  CDaoRecordset::Update  
- 在调用后调用此成员函数`AddNew`或**编辑**成员函数。  
+ 在调用后调用此成员函数`AddNew`或`Edit`成员函数。  
   
 ```  
 virtual void Update();
 ```  
   
 ### <a name="remarks"></a>备注  
- 完成所需的此调用`AddNew`或**编辑**操作。  
+ 完成所需的此调用`AddNew`或`Edit`操作。  
   
- 同时`AddNew`和**编辑**准备保存到数据源在其中放置添加或编辑的数据的编辑缓冲区。 **更新**将数据保存。 更新仅这些字段标记或检测到为已更改。  
+ 同时`AddNew`和`Edit`准备保存到数据源在其中放置添加或编辑的数据的编辑缓冲区。 `Update` 将数据保存。 更新仅这些字段标记或检测到为已更改。  
   
- 如果数据源支持事务，则你可以**更新**调用 (和其对应`AddNew`或**编辑**调用) 事务的一部分。  
+ 如果数据源支持事务，则你可以`Update`调用 (和其对应`AddNew`或`Edit`调用) 事务的一部分。  
   
 > [!CAUTION]
->  如果调用**更新**但未事先调用`AddNew`或**编辑**，**更新**引发`CDaoException`。 如果调用`AddNew`或**编辑**，必须调用**更新**之前调用[MoveNext](#movenext)或关闭记录集或数据源连接。 否则，所做的更改都将丢失而不另行通知。  
+>  如果调用`Update`但未事先调用`AddNew`或`Edit`，`Update`引发`CDaoException`。 如果调用`AddNew`或`Edit`，必须调用`Update`之前调用[MoveNext](#movenext)或关闭记录集或数据源连接。 否则，所做的更改都将丢失而不另行通知。  
   
- 记录当记录集对象保守式锁定在多用户环境中时，保持锁定状态从时间**编辑**完成更新之前使用。 如果乐观锁定记录集，该记录已被锁定，在数据库中更新之前，将与预编辑的记录进行比较。 如果记录已更改，因为你调用**编辑**、**更新**操作失败且 MFC 引发异常。 您可以更改与锁定模式`SetLockingMode`。  
+ 记录当记录集对象保守式锁定在多用户环境中时，保持锁定状态从时间`Edit`完成更新之前使用。 如果乐观锁定记录集，该记录已被锁定，在数据库中更新之前，将与预编辑的记录进行比较。 如果记录已更改，因为你调用`Edit`、`Update`操作失败且 MFC 引发异常。 您可以更改与锁定模式`SetLockingMode`。  
   
 > [!NOTE]
 >  外部数据库格式，如 ODBC 和可安装 ISAM 上始终使用乐观锁定。  

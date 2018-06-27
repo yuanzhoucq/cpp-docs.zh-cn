@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385386"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952418"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>演练：更新 MFC 随意画图应用程序（第 2 部分）
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本演练介绍了如何将 Office Fluent 功能区添加到经典自由曲线应用程序。 本部分将显示如何添加功能区面板和控件，用户可以使用而不是菜单和命令。  
@@ -47,31 +47,31 @@ ms.locfileid: "33385386"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>若要将视图面板和窗口面板添加到功能区栏  
   
-1.  创建名为面板`View`，它具有两个复选框的切换状态栏和工具栏。  
+1.  创建名为面板*视图*，它具有两个复选框的切换状态栏和工具栏。  
   
     1.  从**工具箱**，拖动**面板**到**主页**类别。 然后将两个**复选框**到面板。  
   
-    2.  单击要修改其属性的面板。 更改**标题**到`View`。  
+    2.  单击要修改其属性的面板。 更改**标题**到*视图*。  
   
-    3.  单击第一个的复选框，以修改其属性。 更改**ID**到`ID_VIEW_TOOLBAR`和**标题**到`Toolbar`。  
+    3.  单击第一个的复选框，以修改其属性。 更改**ID**到*ID_VIEW_TOOLBAR*和**标题**到*工具栏*。  
   
-    4.  单击第二个的复选框，以修改其属性。 更改**ID**到`ID_VIEW_STATUS_BAR`和**标题**到`Status Bar`。  
+    4.  单击第二个的复选框，以修改其属性。 更改**ID**到*ID_VIEW_STATUS_BAR*和**标题**到*状态栏*。  
   
-2.  创建名为面板`Window`具有拆分按钮。 当用户单击拆分按钮时，快捷菜单会显示已在随意画图应用程序中定义的三个命令。  
+2.  创建名为面板*窗口*具有拆分按钮。 当用户单击拆分按钮时，快捷菜单会显示已在随意画图应用程序中定义的三个命令。  
   
     1.  从**工具箱**，拖动**面板**到**主页**类别。 然后拖动**按钮**到面板。  
   
-    2.  单击要修改其属性的面板。 更改**标题**到`Window`。  
+    2.  单击要修改其属性的面板。 更改**标题**到*窗口*。  
   
-    3.  单击按钮。 更改**标题**到`Windows`，**密钥**到`w`，**大图像索引**到`1`，和**拆分模式**到`False`。 然后单击省略号 (**...**) 旁边**菜单项**以打开**项编辑器**对话框。  
+    3.  单击按钮。 更改**标题**到*Windows*，**密钥**到*w*，**大图像索引**到*1*，和**拆分模式**到*False*。 然后单击省略号 (**...**) 旁边**菜单项**以打开**项编辑器**对话框。  
   
     4.  单击**添加**三次以添加三个按钮。  
   
-    5.  单击第一个按钮，然后更改**标题**到`New Window`，和**ID**到`ID_WINDOW_NEW`。  
+    5.  单击第一个按钮，然后更改**标题**到*新窗口*，和**ID**到*ID_WINDOW_NEW*。  
   
-    6.  单击第二个按钮，然后更改**标题**到`Cascade`，和**ID**到`ID_WINDOW_CASCADE`。  
+    6.  单击第二个按钮，然后更改**标题**到*Cascade*，和**ID**到*ID_WINDOW_CASCADE*。  
   
-    7.  单击第三个按钮，然后更改**标题**到`Tile`，和**ID**到`ID_WINDOW_TILE_HORZ`。  
+    7.  单击第三个按钮，然后更改**标题**到*磁贴*，和**ID**到*ID_WINDOW_TILE_HORZ*。  
   
 3.  保存更改，然后生成并运行应用程序。 **视图**和**窗口**应显示面板。 单击的按钮，以确认它们正常。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385386"
   
 1.  从**工具箱**，拖动**面板**到**主页**类别。 然后将两个**按钮**到面板。  
   
-2.  单击要修改其属性的面板。 更改**标题**到`Help`。  
+2.  单击要修改其属性的面板。 更改**标题**到*帮助*。  
   
-3.  单击第一个按钮。 更改**标题**到`Help Topics`，和**ID**到`ID_HELP_FINDER`。  
+3.  单击第一个按钮。 更改**标题**到*帮助主题*，和**ID**到*ID_HELP_FINDER*。  
   
-4.  单击第二个按钮。 更改**标题**到`About Scribble...`，和**ID**到`ID_APP_ABOUT`。  
+4.  单击第二个按钮。 更改**标题**到*有关 Scribble...*，和**ID**到*ID_APP_ABOUT*。  
   
 5.  保存更改，然后生成并运行应用程序。 A**帮助**应显示包含两个功能区按钮的面板。  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385386"
   
 1.  从**工具箱**，拖动**面板**到**主页**类别。 然后拖动**复选框**和两个**组合框**到面板。  
   
-2.  单击要修改其属性的面板。 更改**标题**到`Pen`。  
+2.  单击要修改其属性的面板。 更改**标题**到*钢笔*。  
   
-3.  单击复选框。 更改**标题**到`Use Thick`，和**ID**到`ID_PEN_THICK_OR_THIN`。  
+3.  单击复选框。 更改**标题**到*使用粗*，和**ID**到*ID_PEN_THICK_OR_THIN*。  
   
-4.  单击第一个组合框。 更改**标题**到`Thin Pen`， **ID**到`ID_PEN_THIN_WIDTH`，**文本**到`2`，**类型**到`Drop List`，和**数据**到`1;2;3;4;5;6;7;8;9;`。  
+4.  单击第一个组合框。 更改**标题**到*精简钢笔*， **ID**到*ID_PEN_THIN_WIDTH*，**文本**到*2*，**类型**到*下拉列表*，和**数据**到*1; 2; 3; 4; 5; 6; 7; 8; 9;*。  
   
-5.  单击第二个的组合框。 更改**标题**到`Thick Pen`， **ID**到`ID_PEN_THICK_WIDTH`，**文本**到`5`，**类型**到`Drop List`，和**数据**到`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`。  
+5.  单击第二个的组合框。 更改**标题**到*密集钢笔*， **ID**到*ID_PEN_THICK_WIDTH*，**文本**到*5*，**类型**到*下拉列表*，和**数据**到*5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20;*。  
   
 6.  新的组合框不对应于任何现有的菜单项。 因此，你必须创建钢笔的每个选项的菜单项。  
   
     1.  在**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。  
   
-    2.  单击**钢笔**以打开 p**en**菜单。 然后单击**此处键入**和类型`Thi&n Pen`。  
+    2.  单击**钢笔**以打开 p**en**菜单。 然后单击**此处键入**和类型*此应用和 n 钢笔*。  
   
-    3.  右键单击你刚刚键入的用于打开文本**属性**窗口，然后更改 ID 属性`ID_PEN_THIN_WIDTH`。  
+    3.  右键单击你刚刚键入的用于打开文本**属性**窗口，然后更改 ID 属性*ID_PEN_THIN_WIDTH*。  
   
     4.  你还必须创建的事件处理程序的每一笔菜单项。 右键单击**此应用和 n 钢笔**你刚刚创建，然后单击的菜单项**添加事件处理程序**。 **事件处理程序向导**显示。  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi （pThinComboBox-> GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要将颜色按钮添加到钢笔面板  
   
-1.  在添加此颜色按钮之前，请为其创建菜单项。 在**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。 单击**钢笔**要打开钢笔菜单的菜单项。 然后单击**此处键入**和类型`&Color`。 右键单击你刚刚键入要显示的文本**属性**窗口。 将 ID 更改为`ID_PEN_COLOR`。  
+1.  在添加此颜色按钮之前，请为其创建菜单项。 在**资源视图**窗口中，打开 IDR_SCRIBBTYPE 菜单资源。 单击**钢笔**要打开钢笔菜单的菜单项。 然后单击**此处键入**和类型 *（& a) 颜色*。 右键单击你刚刚键入要显示的文本**属性**窗口。 将 ID 更改为*ID_PEN_COLOR*。  
   
 2.  现在，添加此颜色按钮。 从**工具箱**，拖动**颜色按钮**到**钢笔**面板。  
   
-3.  单击此颜色按钮。 更改**标题**到`Color`， **ID**到`ID_PEN_COLOR`， **SimpleLook**到`True`，**大图像索引**到`1`，和**拆分模式**到`False`。  
+3.  单击此颜色按钮。 更改**标题**到*颜色*， **ID**到*ID_PEN_COLOR*， **SimpleLook**到*True*，**大图像索引**到*1*，和**拆分模式**到*False*。  
   
 4.  保存更改，然后生成并运行应用程序。 新的颜色按钮应显示在**钢笔**面板。 但是，它不用于因为它还没有一个事件处理程序。 下一步的步骤演示了如何添加此颜色按钮事件处理程序。  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384083"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954853"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：对 MFC 使用 C++ 多重继承
 本说明介绍如何将多重继承 (MI) 与 Microsoft 基础类一起使用。 MI 不一定要与 MFC 一起使用。 MI 不在任何 MFC 类中使用，并且不需要编写类库。  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- 在这种情况下，`CObject` 将被包含两次。 这意味着您需要一种消除对 `CObject` 方法或运算符的任何引用的多义性的方法。 `operator new`和[运算符 delete](../mfc/reference/cobject-class.md#operator_delete)都必须消除多义性的两个运算符。 另举一例，以下代码导致在编译时出现错误：  
+ 在这种情况下，`CObject` 将被包含两次。 这意味着您需要一种消除对 `CObject` 方法或运算符的任何引用的多义性的方法。 **运算符 new**和[运算符 delete](../mfc/reference/cobject-class.md#operator_delete)都必须消除多义性的两个运算符。 另举一例，以下代码导致在编译时出现错误：  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Reimplementing CObject 方法  
- 当您要创建包含两个或更多 `CObject` 派生基类的新类时，应重新实现您希望其他人使用的 `CObject` 方法。 运算符`new`和`delete`是必需的和[转储](../mfc/reference/cobject-class.md#dump)建议。 以下示例重新实现 `new` 和 `delete` 运算符以及 `Dump` 方法：  
+ 当您要创建包含两个或更多 `CObject` 派生基类的新类时，应重新实现您希望其他人使用的 `CObject` 方法。 运算符**新**和**删除**是必需的和[转储](../mfc/reference/cobject-class.md#dump)建议。 以下示例重新实现**新**和**删除**运算符和`Dump`方法：  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  以虚拟方式继承 `CObject` 看起来似乎能解决函数多义性问题，但事实并非如此。 由于 `CObject` 中没有成员数据，您不需要虚拟继承来防止多次复制基类成员数据。 在前面所示的第一个示例中，`Dump` 虚方法仍不明确，因为它在 `CFrameWnd` 和 `CObList`中的实现方式不同。 消除多义性的最佳方法是遵循上一节中提供的建议。  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf 和运行时类型检查  
- `CObject` 中受 MFC 支持的运行时类型检查机制使用宏 `DECLARE_DYNAMIC`、`IMPLEMENT_DYNAMIC`、`DECLARE_DYNCREATE`、`IMPLEMENT_DYNCREATE`、`DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL`。 这些宏可执行运行时类型检查以保证向下转换的安全性。  
+ 支持的 MFC 中运行时类型检查机制`CObject`使用 DECLARE_DYNAMIC、 IMPLEMENT_DYNAMIC、 DECLARE_DYNCREATE、 IMPLEMENT_DYNCREATE、 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 宏。 这些宏可执行运行时类型检查以保证向下转换的安全性。  
   
- 这些宏仅支持一个基类，并且以有限的方式用于多重继承类。 您在 `IMPLEMENT_DYNAMIC` 或 `IMPLEMENT_SERIAL` 中指定的基类应是第一个（或最左侧的）基类。 此位置将使您能够仅为最左侧的基类执行类型检查。 运行时类型系统将对附加基类一无所知。 在以下示例中，运行时系统将对 `CFrameWnd` 执行类型检查，但对 `CObList` 一无所知。  
+ 这些宏仅支持一个基类，并且以有限的方式用于多重继承类。 IMPLEMENT_DYNAMIC 或 IMPLEMENT_SERIAL 中指定的基类应是第一个 （或最左侧的） 基类。 此位置将使您能够仅为最左侧的基类执行类型检查。 运行时类型系统将对附加基类一无所知。 在以下示例中，运行时系统将对 `CFrameWnd` 执行类型检查，但对 `CObList` 一无所知。  
   
 ```  
 class CListWnd : public CFrameWnd,

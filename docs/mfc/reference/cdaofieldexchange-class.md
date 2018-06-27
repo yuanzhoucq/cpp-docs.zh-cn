@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9e65b4880c80f8a4b0d9a192f316b16a92a3e69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368724"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953904"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 类
 支持 DAO 数据库类使用的 DAO 记录字段交换 (DFX) 例程。  
@@ -67,7 +67,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  DAO 记录字段交换 (DFX) 是非常类似于基于 ODBC 的 MFC 数据库类中的记录字段交换 (RFX) ( `CDatabase`， `CRecordset`)。 如果你了解 RFX，你将发现易于使用 DFX。  
   
- A`CDaoFieldExchange`对象提供的上下文信息需要用于 DAO 记录字段交换做好准备。 `CDaoFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员上执行 DFX 操作`enum` **FieldType**中`CDaoFieldExchange`。 可能**FieldType**的值为：  
+ A`CDaoFieldExchange`对象提供的上下文信息需要用于 DAO 记录字段交换做好准备。 `CDaoFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员上执行 DFX 操作**枚举** **FieldType**中`CDaoFieldExchange`。 可能**FieldType**的值为：  
   
 - **CDaoFieldExchange::outputColumn**字段数据成员。  
   
@@ -118,7 +118,7 @@ BOOL IsValidOperation();
 |**StoreField**|将当前记录保存到缓存。|  
 |**LoadField**|还原中记录集的缓存的数据成员变量。|  
 |**FreeCache**|释放缓存用于检查"脏"中的字段记录集。|  
-|`SetFieldNull`|将字段的状态设置为 Null，且值为**PSEUDONULL**。|  
+|**SetFieldNull**|将字段的状态设置为 Null，且值为**PSEUDONULL**。|  
 |**MarkForAddNew**|字段标记为"脏"的如果不**PSEUDONULL**。|  
 |**MarkForEdit**|如果它们不匹配的缓存，标记字段"脏"。|  
 |**SetDirtyField**|设置字段值标记为"脏"。|  
@@ -138,7 +138,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nFieldType`  
+ *nFieldType*  
  值为**枚举 FieldType**中声明`CDaoFieldExchange`，可以是下列操作之一：  
   
 - **CDaoFieldExchange::outputColumn**  
@@ -146,9 +146,9 @@ void SetFieldType(UINT nFieldType);
 - **CDaoFieldExchange::param**  
   
 ### <a name="remarks"></a>备注  
- 通常情况下，ClassWizard 将为你编写此调用。 如果你编写自己的函数，并使用该向导来编写你`DoFieldExchange`函数中，添加到字段映射外部函数的调用。 如果不使用该向导，不将字段映射。 在调用之前对 DFX 函数，一个用于你的类，每个字段数据成员的调用和标识的字段类型**CDaoFieldExchange::outputColumn**。  
+ 通常情况下，ClassWizard 将为你编写此调用。 如果你编写自己的函数，并使用该向导来编写你`DoFieldExchange`函数中，添加到字段映射外部函数的调用。 如果不使用该向导，不将字段映射。 在调用之前对 DFX 函数，一个用于你的类，每个字段数据成员的调用和标识的字段类型`CDaoFieldExchange::outputColumn`。  
   
- 如果你将参数化记录集类，你应为所有参数数据成员 （之外字段映射中） 添加 DFX 调用以及前面通过调用这些调用`SetFieldType`。 将值传递**CDaoFieldExchange::param**。 (相反，可以使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)并设置其参数值。)  
+ 如果你将参数化记录集类，你应为所有参数数据成员 （之外字段映射中） 添加 DFX 调用以及前面通过调用这些调用`SetFieldType`。 将值传递`CDaoFieldExchange::param`。 (相反，可以使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)并设置其参数值。)  
   
  一般情况下，字段数据成员或参数数据成员与关联的 DFX 函数调用的每个组前面必须是对的调用`SetFieldType`。 `nFieldType`每个参数`SetFieldType`调用标识的 DFX 函数调用，请按照所表示的数据成员的类型`SetFieldType`调用。  
   

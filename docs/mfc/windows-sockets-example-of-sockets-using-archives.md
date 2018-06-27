@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cd74a20f0ccc54a366c1a62d913ee30e72471a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 942c3e8aa2aeccefc9c92cd9fd32d453dc5353cf
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384366"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956416"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows 套接字：使用存档的套接字的示例
 本文介绍了使用类的示例[CSocket](../mfc/reference/csocket-class.md)。 该示例使用`CArchive`对象要序列化数据通过套接字。 请注意，这不是文档序列化到或从文件。  
@@ -30,26 +30,26 @@ ms.locfileid: "33384366"
   
  [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- 有关此示例的最重要事项是其结构与 MFC 相似`Serialize`函数。 **PacketSerialize**成员函数组成**如果**语句**其他**子句。 该函数接收两个[CArchive](../mfc/reference/carchive-class.md)作为参数的引用：`arData`和`arAck`。 如果`arData`存档对象设置用于存储 （发送），**如果**执行分支; 否则为如果`arData`设置用于加载 （接收） 函数**其他**分支。 有关 MFC 中的序列化的详细信息，请参阅[序列化](../mfc/how-to-make-a-type-safe-collection.md)。  
+ 有关此示例的最重要事项是其结构与 MFC 相似`Serialize`函数。 `PacketSerialize`成员函数组成**如果**语句**其他**子句。 该函数接收两个[CArchive](../mfc/reference/carchive-class.md)作为参数的引用： *arData*和*arAck*。 如果*arData*存档对象设置用于存储 （发送），**如果**执行分支; 否则为如果*arData*设置用于加载 （接收），该函数采用**其他**分支。 有关 MFC 中的序列化的详细信息，请参阅[序列化](../mfc/how-to-make-a-type-safe-collection.md)。  
   
 > [!NOTE]
->  `arAck`存档对象被假定为相反`arData`。 如果`arData`是用于发送，`arAck`接收，反之将然。  
+>  *ArAck*存档对象被假定为相反*arData*。 如果*arData*是用于发送， *arAck*接收，反之将然。  
   
- 用于发送，示例函数超过指定的次数，生成一些随机数据用于演示目的每次循环。 你的应用程序要从某些来源，如文件中获得的真实数据。 `arData`存档的插入运算符 (**<<**) 用于发送的数据的三个连续的块流：  
+ 用于发送，示例函数超过指定的次数，生成一些随机数据用于演示目的每次循环。 你的应用程序要从某些来源，如文件中获得的真实数据。 *ArData*存档的插入运算符 (**<<**) 用于发送的数据的三个连续的块流：  
   
--   "标头"，指定数据的性质 (在此情况下，值`bValue`变量，将发送多少副本)。  
+-   "标头"，指定数据的性质 (在此情况下，值*bValue*变量，将发送多少副本)。  
   
      这两个项都是随机生成此示例。  
   
 -   指定的数据副本数。  
   
-     内部**为**循环发送`bValue`指定重试次数。  
+     内部**为**循环发送*bValue*指定重试次数。  
   
--   一个字符串，调用`strText`接收方显示给用户。  
+-   一个字符串，调用*strText*接收方显示给用户。  
   
  用于接收，函数的操作相似，只不过它使用存档的提取运算符 (**>>**) 从存档获取数据。 接收应用程序发送的应用程序，以显示有关验证它接收、 显示最终的"接收到"消息，然后再发送回一条消息，指出"发送"的数据。  
   
- 在此通信模型中，单词"接收"消息将发送`strText`变量，是用于显示在另一端的通信，因此它向接收用户指定已经接收了一定数量的数据包。 接收方在原始发件人的屏幕显示"发送"，以显示的相似字符串与答复。 这两个字符串的回执指示发生了成功通信。  
+ 在此通信模型中，单词"接收"消息将发送*strText*变量，是用于显示在另一端的通信，因此它向接收用户指定的一定数量的数据包已收到。 接收方在原始发件人的屏幕显示"发送"，以显示的相似字符串与答复。 这两个字符串的回执指示发生了成功通信。  
   
 > [!CAUTION]
 >  如果您要编写 MFC 客户端程序来与建立的（非 MFC）服务器通信，则请勿通过存档发送 C++ 对象。 除非服务器是 MFC 应用程序理解的各种您想要发送的对象，它将无法接收和反序列化对象。 示例，请参见文章[Windows 套接字： 字节排序](../mfc/windows-sockets-byte-ordering.md)显示此类型的通信。  

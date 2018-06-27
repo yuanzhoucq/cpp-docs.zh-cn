@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 197fc5ecb1b9676dd1ff11327c62950992f6f06d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3a89cb258b7208346a76cd2a59eb8da40c38087
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359224"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950688"
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer 类
 ID2D1Layer 包装器。  
@@ -79,7 +79,7 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DLayer::m_pLayer](#m_player)|将存储指向 ID2D1Layer 对象的指针。|  
   
@@ -108,7 +108,7 @@ void Attach(ID2D1Layer* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
@@ -121,10 +121,10 @@ CD2DLayer(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
 ##  <a name="create"></a>  CD2DLayer::Create  
@@ -135,7 +135,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  

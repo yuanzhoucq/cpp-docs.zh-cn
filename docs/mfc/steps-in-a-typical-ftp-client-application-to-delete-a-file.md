@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb595dfdc1a73ecd068e251cec5df99d4daaab30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380560"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951915"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>在典型 FTP 客户端应用程序中用于删除文件的步骤
 下表显示了在典型的删除文件的 FTP 客户端应用程序中可能执行的步骤。  
@@ -35,7 +35,7 @@ ms.locfileid: "33380560"
 |更改为服务器上的新 FTP 目录。|使用[cftpconnection:: Setcurrentdirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory)。|更改服务器上当前连接到的目录。|  
 |查找 FTP 目录中的第一个文件。|使用[cftpfilefind:: Findfile](../mfc/reference/cftpfilefind-class.md#findfile)。|查找第一个文件。 如果未找到文件，则返回 FALSE。|  
 |查找 FTP 目录中的下一个文件。|使用[cftpfilefind:: Findnextfile](../mfc/reference/cftpfilefind-class.md#findnextfile)。|查找下一个文件。 如果未找到文件，则返回 FALSE。|  
-|删除通过找到该文件**FindFile**或`FindNextFile`。|使用[cftpconnection:: Remove](../mfc/reference/cftpconnection-class.md#remove)，使用的文件名称由**FindFile**或`FindNextFile`。|删除服务器上用于读取或写入的文件。|  
+|删除通过找到该文件`FindFile`或`FindNextFile`。|使用[cftpconnection:: Remove](../mfc/reference/cftpconnection-class.md#remove)，使用的文件名称由`FindFile`或`FindNextFile`。|删除服务器上用于读取或写入的文件。|  
 |处理异常。|使用[CInternetException](../mfc/reference/cinternetexception-class.md)类。|处理所有常见的 Internet 异常类型。|  
 |结束 FTP 会话。|释放[CInternetSession](../mfc/reference/cinternetsession-class.md)对象。|自动清理打开的文件句柄和连接。|  
   

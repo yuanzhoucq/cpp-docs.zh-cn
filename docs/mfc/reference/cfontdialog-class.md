@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368343"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953670"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 类
 可以将字体选择对话框合并到你的应用程序。  
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- L `plfInitial`  
+ *plfInitial*  
  指向的指针[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)数据结构，您可以设置某些字体的特征。  
   
- `charFormat`  
+ *charFormat*  
  指向的指针[CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)数据结构，您可以设置某些字体的特征在 rich edit 控件。  
   
- `dwFlags`  
+ *dwFlags*  
  指定一个或多个用于选择字体的标记。 可以使用按位“OR”运算符对一个或多个预设值进行组合。 如果修改 `m_cf.Flag` 结构成员，请确保在更改中使用按位“OR”运算符以保持默认行为不变。 在每个标记的详细信息，请参阅说明[CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows SDK 中的结构。  
   
- pdcPrinter  
+ *pdcPrinter*  
  一个指向打印机设备上下文的指针。 如果已提供此参数，它将指向要选择其字体的打印机的打印机设备上下文。  
   
- `pParentWnd`  
+ *pParentWnd*  
  一个指向字体对话框的父窗口或所有者窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `cf`  
+ *cf*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)结构，它包含有关选定的字体的字符格式设置信息。  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

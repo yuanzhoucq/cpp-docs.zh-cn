@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcf6fd613231567cbb54b95c8be924919d93269
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e232c363da4c9bbaf7e049551f9e2915671098c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357723"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957437"
 ---
 # <a name="cbutton-class"></a>CButton 类
 提供 Windows 按钮控件功能。  
@@ -153,9 +153,9 @@ class CButton : public CWnd
   
  此外， [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)类派生自`CButton`支持创建使用位图图像而非文本进行标记的按钮控件。 A`CBitmapButton`可以有单独的位图按钮将上、 下、 已设定焦点，和禁用状态。  
   
- 从对话框模板或直接在代码中，可以创建一个按钮控件。 在这两种情况下，第一次调用的构造函数`CButton`构造`CButton`对象; 然后调用**创建**成员函数来创建 Windows 按钮控件，然后将其附加到`CButton`对象。  
+ 从对话框模板或直接在代码中，可以创建一个按钮控件。 在这两种情况下，第一次调用的构造函数`CButton`构造`CButton`对象; 然后调用`Create`成员函数来创建 Windows 按钮控件，然后将其附加到`CButton`对象。  
   
- 构造可以是派生自类中的一步过程`CButton`。 编写派生的类和调用构造函数**创建**从构造函数中。  
+ 构造可以是派生自类中的一步过程`CButton`。 编写派生的类和调用构造函数`Create`从构造函数中。  
   
  如果你想要处理到其父发送的按钮控件的 Windows 通知消息 (通常从派生的类[CDialog](../../mfc/reference/cdialog-class.md))，将消息映射条目和消息处理程序成员函数添加到每条消息的父类。  
   
@@ -215,26 +215,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszCaption`  
+ *lpszCaption*  
  指定按钮控件的文本。  
   
- `dwStyle`  
+ *dwStyle*  
  指定按钮控件的样式。 应用的任意组合[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)到按钮。  
   
- `rect`  
+ *rect*  
  指定按钮控件的大小和位置。 它可以是`CRect`对象或`RECT`结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定按钮控件的父窗口中，通常`CDialog`。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定按钮控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CButton`两个步骤中的对象。 首先，调用的构造函数，然后调用**创建**，它创建 Windows 按钮控件并将其附加到`CButton`对象。  
+ 构造`CButton`两个步骤中的对象。 首先，调用的构造函数，然后调用`Create`，它创建 Windows 按钮控件并将其附加到`CButton`对象。  
   
  如果**WS_VISIBLE**给定样式，Windows 将按钮控件将发送激活和显示按钮所需的所有消息。  
   
@@ -261,11 +261,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的长指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构。 结构包含有关要绘制的项和绘图所需的类型信息。  
   
 ### <a name="remarks"></a>备注  
- 所有者描述的按钮有**BS_OWNERDRAW**样式集。 重写该成员函数以实现一个所有者绘制的绘图`CButton`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`在该成员之前函数将终止。  
+ 所有者描述的按钮有**BS_OWNERDRAW**样式集。 重写该成员函数以实现一个所有者绘制的绘图`CButton`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象*lpDrawItemStruct*在该成员之前函数将终止。  
   
  另请参阅[BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles)样式的值。  
   
@@ -308,7 +308,7 @@ int GetCheck() const;
 ### <a name="return-value"></a>返回值  
  按钮控件中的返回值创建与**BS_AUTOCHECKBOX**， **BS_AUTORADIOBUTTON**， **BS_AUTO3STATE**， **BS_CHECKBOX**， **BS_RADIOBUTTON**，或**BS_3STATE**样式是以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**BST_UNCHECKED**|按钮状态为未选中状态。|  
 |**BST_CHECKED**|将检查按钮状态。|  
@@ -370,7 +370,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  指向的图像列表的指针`CButton`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -394,13 +394,13 @@ BOOL GetNote(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `lpszNote`|指向调用方负责分配和取消分配缓冲区的指针。 如果返回值为`true`、 在缓冲区中包含与当前的命令链接控件相关联; 否则为便笺文本、 缓冲区保持不变。|  
-|[in, out] `cchNote`|指向一个无符号的整数变量的指针。<br /><br /> 当调用此方法时，该变量包含指定的缓冲区的大小`lpszNote`参数。<br /><br /> 此方法返回时，如果返回值为`true`变量包含的大小与当前的命令链接控件相关联的注释。 如果返回值为`false`，该变量包含包含注释所需的缓冲区大小。|  
+|[out]*lpszNote*|指向调用方负责分配和取消分配缓冲区的指针。 如果返回值为`true`、 在缓冲区中包含与当前的命令链接控件相关联; 否则为便笺文本、 缓冲区保持不变。|  
+|[在中，out]*cchNote*|指向一个无符号的整数变量的指针。<br /><br /> 当调用此方法时，该变量包含指定的缓冲区的大小*lpszNote*参数。<br /><br /> 此方法返回时，如果返回值为`true`变量包含的大小与当前的命令链接控件相关联的注释。 如果返回值为`false`，该变量包含包含注释所需的缓冲区大小。|  
   
 ### <a name="return-value"></a>返回值  
  在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含与当前的命令链接控件关联的注释文本。  
   
- -或-  
+ 或  
   
  在第二个重载中，`true`如果此方法成功; 否则为`false`。  
   
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `pInfo`|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)接收当前拆分按钮控件有关的信息的结构。 调用方负责分配结构。|  
+|[out]*pInfo*|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)接收当前拆分按钮控件有关的信息的结构。 调用方负责分配结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `pSize`|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|  
+|[out]*pSize*|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，它接收的矩形的说明。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -527,7 +527,7 @@ UINT GetState() const;
 ### <a name="return-value"></a>返回值  
  包含指示按钮控件的当前状态的值的组合的位字段。 下表列出可能的值。  
   
-|按钮状态|值|描述|  
+|按钮状态|“值”|描述|  
 |------------------|-----------|-----------------|  
 |`BST_UNCHECKED`|0x0000|初始状态。|  
 |`BST_CHECKED`|0x0001|已选中按钮控件。|  
@@ -549,7 +549,7 @@ BOOL GetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pmargin`  
+ *pmargin*  
  指向的文本边距`CButton`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -569,7 +569,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hBitmap`  
+ *hBitmap*  
  位图的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -607,10 +607,10 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStyle`  
+ *nStyle*  
  指定[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。  
   
- `bRedraw`  
+ *bRedraw*  
  指定是否要重新绘制按钮。 一个非零值重绘按钮。 0 值不会刷新按钮。 默认情况下重绘按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -627,10 +627,10 @@ void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCheck`  
+ *n 检查*  
  指定的复选状态。 此参数可以是以下项之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**BST_UNCHECKED**|将按钮状态设置为未选中状态。|  
 |**BST_CHECKED**|将按钮状态，检查设置。|  
@@ -650,7 +650,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hCursor`  
+ *hCursor*  
  光标的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true` 若要设置`BST_DROPDOWNPUSHED`状态; 否则为`false`。|  
+|[in]*fDropDown*|`true` 若要设置`BST_DROPDOWNPUSHED`状态; 否则为`false`。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -698,7 +698,7 @@ BOOL SetDropDownState(BOOL fDropDown);
  此方法可发送[BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973)消息，Windows SDK 中介绍。  
   
 ### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_splitButton`，即用于以编程方式访问拆分按钮控件。 在下面的示例使用此变量。  
+ 下面的代码示例定义变量， *m_splitButton*，即用于以编程方式访问拆分按钮控件。 在下面的示例使用此变量。  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -736,7 +736,7 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hIcon`  
+ *任务栏*  
  图标的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -770,7 +770,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  指向新的图像列表的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `lpszNote`|为设置为命令链接控件的注释文本的 Unicode 字符串的指针。|  
+|[in]*lpszNote*|为设置为命令链接控件的注释文本的 Unicode 字符串的指针。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -801,7 +801,7 @@ BOOL SetNote(LPCTSTR lpszNote);
  此方法可发送[BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977)消息，Windows SDK 中介绍。  
   
 ### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_cmdLink`，即用于以编程方式访问命令链接控件。 在下面的示例使用此变量。  
+ 下面的代码示例定义变量， *m_cmdLink*，即用于以编程方式访问命令链接控件。 在下面的示例使用此变量。  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `chGlyph`|指定要使用作为拆分按钮下拉箭头的标志符号的字符。|  
+|[in]*chGlyph*|指定要使用作为拆分按钮下拉箭头的标志符号的字符。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -829,7 +829,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 ### <a name="remarks"></a>备注  
  仅对具有按钮样式的控件使用此方法`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
   
- 标志符号是字符的物理表示形式中特定字体。 `chGlyph`参数不用作符号，但改为将其用于将从系统定义的标志符号的一组选择标志符号。 默认下拉箭头字形指定"6"的字符，类似于黑色下指三角形 (U + 25BC) 的 Unicode 字符。  
+ 标志符号是字符的物理表示形式中特定字体。 *ChGlyph*参数不用作符号，但改为将其用于将从系统定义的标志符号的一组选择标志符号。 默认下拉箭头字形指定"6"的字符，类似于黑色下指三角形 (U + 25BC) 的 Unicode 字符。  
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_GLYPH`标志和`himlGlyph`成员`chGlyph`参数，然后在结构的将发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
   
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|指向[CImageList](../../mfc/reference/cimagelist-class.md)要分配给当前的拆分按钮控件。|  
+|[in]*pSplitImageList*|指向[CImageList](../../mfc/reference/cimagelist-class.md)要分配给当前的拆分按钮控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>备注  
  此方法只能用于的控制其按钮样式`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_IMAGE`标志和`himlGlyph`成员`pSplitImageList`参数，然后在结构的将发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_IMAGE`标志和`himlGlyph`成员*pSplitImageList*参数，然后发送该结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  指定确定如何 Windows 绘制当前拆分按钮控件的参数。  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pInfo`|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构，它定义当前拆分按钮控件。|  
+|[in]*pInfo*|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构，它定义当前拆分按钮控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pSize`|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)描述边界的矩形的结构。|  
+|[in]*pSize*|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)描述边界的矩形的结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  当扩展拆分按钮控件时，它可以显示如列表控件或页导航控件的下拉列表组件。 此方法指定包含下拉列表组件的边框的大小。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_SIZE`标志和`size`成员`pSize`参数，然后在结构的将发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_SIZE`标志和`size`成员*pSize*参数，然后将发送的结构中[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_splitButton`，即用于以编程方式访问拆分按钮控件。 在下面的示例使用此变量。  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|拆分按钮样式按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。|  
+|[in]*uSplitStyle*|拆分按钮样式按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -939,7 +939,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  拆分按钮样式指定对齐方式、 纵横比和与其 Windows 绘制拆分按钮图标的图形格式。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。  
   
- 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_STYLE`标志和`uSplitStyle`成员`uSplitStyle`参数，然后在结构的将发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
+ 此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构`BCSIF_STYLE`标志和`uSplitStyle`成员*uSplitStyle*参数，然后将发送在该结构[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中介绍的消息。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义变量， `m_splitButton`，即用于以编程方式访问拆分按钮控件。  
@@ -978,7 +978,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pmargin`  
+ *pmargin*  
  指向新的文本边距的指针。  
   
 ### <a name="return-value"></a>返回值  

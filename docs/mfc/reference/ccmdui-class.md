@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356683"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954147"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 类
 只能在使用`ON_UPDATE_COMMAND_UI`中的处理程序`CCmdTarget`-派生类。  
@@ -79,7 +79,7 @@ class CCmdUI
   
  当你的应用程序的用户会菜单、 每个菜单项需要知道是否它应显示为已启用或禁用拉取。 菜单命令的目标提供此信息通过实现`ON_UPDATE_COMMAND_UI`处理程序。 对于每个应用程序中的命令用户界面对象，使用属性窗口创建每个处理程序的消息映射条目和函数原型。  
   
- 框架在请求，则它菜单，搜索并调用每个`ON_UPDATE_COMMAND_UI`处理程序中，每个处理程序调用`CCmdUI`成员函数如**启用**和**检查**，和 framework 然后适当地显示每个菜单项。  
+ 框架在请求，则它菜单，搜索并调用每个`ON_UPDATE_COMMAND_UI`处理程序中，每个处理程序调用`CCmdUI`成员函数如`Enable`和`Check`，框架然后相应地显示每个菜单项。  
   
  菜单项可以将其替换控件条按钮或其他命令的用户界面对象而无需更改的代码内`ON_UPDATE_COMMAND_UI`处理程序。  
   
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bOn`  
+ *bOn*  
  **TRUE**以启用项， **FALSE**以禁用它。  
   
 ### <a name="example"></a>示例  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>备注  
- **NULL**如果该项不是一个菜单。 如果子菜单是一个弹出窗口，`m_nID`包含弹出菜单中的第一项的 ID。 有关详细信息，请参阅[技术说明 21](../../mfc/tn021-command-and-message-routing.md)。  
+ **NULL**如果该项不是一个菜单。 如果子菜单是一个弹出窗口， *m_nID*包含弹出菜单中的第一项的 ID。 有关详细信息，请参阅[技术说明 21](../../mfc/tn021-command-and-message-routing.md)。  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  指针 (类型的`CWnd`) 到窗口对象，如工具或状态栏中，发送通知。  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCheck`  
+ *n 检查*  
  指定要设置的复选状态。 如果 0，取消选中;如果 1，检查;，如果月 2 日，将设置不确定。  
   
 ### <a name="remarks"></a>备注  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  指向一个文本字符串的指针。  
   
 ### <a name="example"></a>示例  

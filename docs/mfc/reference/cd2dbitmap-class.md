@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354277"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954738"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 类
 ID2D1Bitmap 包装器。  
@@ -124,7 +124,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|如果应销毁 m_hBmpSrc; 则为 TRUE否则为 FALSE。|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|源位图的句柄。|  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  现有资源接口。 不能为 NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentTarget`  
+ *pParentTarget*  
  指向该呈现器目标的指针。  
   
- `uiResID`  
+ *uiResID*  
  资源的资源 ID 号。  
   
- `lpszType`  
+ *lpszType*  
  指向以 null 结尾的字符串，包含的资源类型的指针。  
   
- `sizeDest`  
+ *sizeDest*  
  位图的目标大小。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指示该对象将销毁所有者 (pParentTarget)。  
   
- `lpszPath`  
+ *lpszPath*  
  指向以 null 结尾的字符串包含文件的名称。  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  位图的句柄。  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitmap`  
+ *pBitmap*  
  要从复制的位图  
   
- `destPoint`  
+ *destPoint*  
  在当前的位图，复制到的区域指定 srcRect 的区域的左上角  
   
- `srcRect`  
+ *srcRect*  
  要复制的位图区域  
   
 ### <a name="return-value"></a>返回值  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>参数  
- `srcData`  
+ *srcData*  
  要复制的数据  
   
- `pitch`  
+ *音调*  
  跨距或音调、 srcData 中存储了源位图。 Stride 是扫描行 （一行在内存中的像素为单位） 的字节数。 可通过以下公式计算 stride： 像素宽度 * 每个像素 + 内存填充字节数  
   
- `destRect`  
+ *destRect*  
  在当前的位图，复制到的区域指定 srcRect 的区域的左上角  
   
 ### <a name="return-value"></a>返回值  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  包含要复制的区域呈现器目标  
   
- `destPoint`  
+ *destPoint*  
  在当前的位图，复制到的区域指定 srcRect 的区域的左上角  
   
- `srcRect`  
+ *srcRect*  
  区域中的呈现器目标复制  
   
 ### <a name="return-value"></a>返回值  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  指向该呈现器目标的指针。  
   
 ### <a name="return-value"></a>返回值  

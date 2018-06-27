@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366930"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957027"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 类
 封装离散转换。  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `delay`  
+ *延迟*  
  延迟即时切换到的最终值所依据的时间量。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  在转换结束动画变量的值。  
   
- `hold`  
+ *保存*  
  用来保存该变量在其最终值的时间量。  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  指向的指针[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
 
   

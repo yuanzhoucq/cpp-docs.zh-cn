@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356391"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952321"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 提供 Windows 公共动画控件的功能。  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定动画控件的样式。 应用的 windows 下面的备注部分和动画控件样式中所述的样式中所述的任意组合[动画控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定动画控件的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
   
- `pParentWnd`  
- 指定动画控件的父窗口中，通常`CDialog`。 它不能**NULL。**  
+ *pParentWnd*  
+ 指定动画控件的父窗口中，通常`CDialog`。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定动画控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 构造`CAnimateCtrl`中两个步骤。 首先，调用的构造函数，然后调用**创建**，它创建动画控件并将其附加到`CAnimateCtrl`对象。  
+ 构造`CAnimateCtrl`中两个步骤。 首先，调用的构造函数，然后调用`Create`，它创建动画控件并将其附加到`CAnimateCtrl`对象。  
   
  将应用以下[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)到动画控件。  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED**很少  
   
- 如果你想要使用动画控件扩展的窗口样式，调用[CreateEx](#createex)而不是**创建**。  
+ 如果你想要使用动画控件扩展的窗口样式，调用[CreateEx](#createex)而不是`Create`。  
   
  除了上面列出的窗口样式，你可能想要将一个或多个动画控件样式应用于动画控件。 请参阅上的适用于详细信息的 Windows SDK[动画控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761886)。  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定动画控件的样式。 应用窗口的任意组合和中所述动画控件样式[动画控件样式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFileName`  
+ *lpszFileName*  
  A`CString`对象或指向包含的 AVI 文件的名称或 AVI 资源的名称的以 null 结尾的字符串的指针。 如果此参数为**NULL**，系统关闭以前已经为动画控件中，打开 AVI 剪辑，如果有的话。  
   
- `nID`  
+ *nID*  
  AVI 资源标识符。 如果此参数为**NULL**，系统关闭以前已经为动画控件中，打开 AVI 剪辑，如果有的话。  
   
 ### <a name="return-value"></a>返回值  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nFrom`  
+ *nFrom*  
  播放开始处的帧的从零开始索引。 值必须是小于 65536。 值为 0 意味着开头 AVI 剪辑的第一个帧。  
   
- `nTo`  
+ *语法，但不*  
  帧的从零开始的索引位置播放结束。 值必须是小于 65536。 值为-1 表示结尾的最后一帧中 AVI 剪辑。  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nTo`  
+ *语法，但不*  
  要显示的帧的从零开始索引。 值必须是小于 65536。 值为 0 意味着在 AVI 剪辑中显示的第一帧。 值-1 表示在 AVI 剪辑中显示的最后一帧。  
   
 ### <a name="return-value"></a>返回值  

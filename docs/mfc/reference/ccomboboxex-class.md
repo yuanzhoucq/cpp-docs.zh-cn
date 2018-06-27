@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74dc76f0e638cb335c8ee762908aed36a41230eb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358286"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952344"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 类
 通过为图像列表提供支持扩展组合框控件。  
@@ -146,16 +146,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定应用于组合框的组合框样式的组合。 请参阅**备注**下面样式有关的详细信息。  
   
- `rect`  
+ *rect*  
  对引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，即的位置和大小的组合框。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是组合框的父窗口的对象 (通常`CDialog`)。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定组合框控件 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -168,7 +168,7 @@ virtual BOOL Create(
   
 2.  调用此成员函数，它创建扩展的 Windows 组合框，并将其附加到`CComboBoxEx`对象。  
   
- 当调用**创建**，MFC 初始化公共控件。  
+ 当调用`Create`，MFC 初始化公共控件。  
   
  当你创建的组合框时，你可以指定任何或所有以下组合框样式：  
   
@@ -184,7 +184,7 @@ virtual BOOL Create(
   
  创建窗口时传递的所有其他样式将被忽略。 **ComboBoxEx**控件还支持应用提供其他功能的扩展的样式。 这些样式中所述[ComboBoxEx 控件扩展的样式](http://msdn.microsoft.com/library/windows/desktop/bb775742)，在 Windows SDK 中。 设置通过调用此类样式[SetExtendedStyle](#setextendedstyle)。  
   
- 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是**创建**。  
+ 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  调用此函数可创建扩展的组合框控件 （子窗口），并将其与关联`CComboBoxEx`对象。  
@@ -199,28 +199,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  组合框控件的样式。 请参阅[创建](#create)有关样式的列表。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是**创建**将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+ 使用`CreateEx`而不是`Create`将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
- `CreateEx` 创建具有指定的扩展 Windows 样式控件`dwExStyle`。 必须将扩展的样式特定设置为扩展的组合框控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置为此类样式**CBES_EX_CASESENSITIVE**。 有关详细信息，请参阅本主题所述的样式[ComboBoxEx 控件扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb775742)Windows SDK 中。  
+ `CreateEx` 创建具有指定的扩展 Windows 样式控件*dwExStyle*。 必须将扩展的样式特定设置为扩展的组合框控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置为此类样式**CBES_EX_CASESENSITIVE**。 有关详细信息，请参阅本主题所述的样式[ComboBoxEx 控件扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb775742)Windows SDK 中。  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  中移除一个项从**ComboBoxEx**控件。  
@@ -230,11 +230,11 @@ int DeleteItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iIndex`  
+ *iIndex*  
  要删除的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- 在控件中剩余项的数目。 如果`iIndex`是无效的该函数将返回**CB_ERR**。  
+ 在控件中剩余项的数目。 如果*iIndex*是无效的该函数将返回**CB_ERR**。  
   
 ### <a name="remarks"></a>备注  
  此成员函数实现的消息的功能[CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)，如 Windows SDK 中所述。 当您调用 DeleteItem， [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息**CBEN_DELETEITEM**将向父窗口发送通知。  
@@ -303,7 +303,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCBItem`  
+ *pCBItem*  
  指向的指针[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)将收到项信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -333,7 +333,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCBItem`  
+ *pCBItem*  
  指向的指针[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)将收到项信息的结构。 此结构包含项的回调标志值。  
   
 ### <a name="return-value"></a>返回值  
@@ -352,10 +352,10 @@ DWORD SetExtendedStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExMask`  
- A`DWORD`值，该值指示在哪种样式`dwExStyles`要会受到影响。 中的扩展的样式`dwExMask`将会更改。 原样，则将保留所有其他样式。 如果此参数为零，则所有的中的样式`dwExStyles`将受到影响。  
+ *dwExMask*  
+ A`DWORD`值，该值指示在哪种样式*dwExStyles*要会受到影响。 中的扩展的样式*dwExMask*将会更改。 原样，则将保留所有其他样式。 如果此参数为零，则所有的中的样式*dwExStyles*将受到影响。  
   
- `dwExStyles`  
+ *dwExStyles*  
  A`DWORD`值，该值包含组合框控件设置控件的扩展的样式。  
   
 ### <a name="return-value"></a>返回值  
@@ -374,7 +374,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pImageList`  
+ *pImageList*  
  指向的指针`CImageList`对象，其中包含与使用的图像`CComboBoxEx`控件。  
   
 ### <a name="return-value"></a>返回值  
@@ -393,7 +393,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCBItem`  
+ *pCBItem*  
  指向的指针[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)将收到项信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -410,7 +410,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszSubAppName`  
+ *pszSubAppName*  
  指向包含扩展的组合框的视觉样式设置的 Unicode 字符串的指针。  
   
 ### <a name="return-value"></a>返回值  

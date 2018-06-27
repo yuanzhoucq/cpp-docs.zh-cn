@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384864"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954590"
 ---
 # <a name="using-tree-controls"></a>使用树控件
 树控件的典型用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循以下模式：  
@@ -31,7 +31,7 @@ ms.locfileid: "33384864"
   
 -   将数据放入控件，通过调用`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)一次为每个数据项的函数。 `InsertItem` 返回一个句柄到项可以使用来引用它更高版本，例如，当添加子项。 初始化的数据的好时机是在`OnInitDialog`（对于在对话框中的控件） 或`OnInitialUpdate`（适用于视图）。  
   
--   当用户与该控件交互时，将发送各种通知消息。 你可以指定函数来处理每个你想要通过添加处理的消息**ON_NOTIFY_REFLECT**宏控件窗口的消息映射中或通过添加`ON_NOTIFY`宏为父窗口的消息映射。 请参阅[树控件通知消息](../mfc/tree-control-notification-messages.md)本主题中有关的可能的通知列表更高版本。  
+-   当用户与该控件交互时，将发送各种通知消息。 你可以指定函数来处理每个你想要通过在你的控件窗口的消息映射中添加一个 ON_NOTIFY_REFLECT 宏或通过将 ON_NOTIFY 宏添加到父窗口的消息映射处理的消息。 请参阅[树控件通知消息](../mfc/tree-control-notification-messages.md)本主题中有关的可能的通知列表更高版本。  
   
 -   调用各种 Set 成员函数来设置滑块控件的值。 可以进行的更改包括设置缩进和更改文本、 图像或与项目关联的数据。  
   

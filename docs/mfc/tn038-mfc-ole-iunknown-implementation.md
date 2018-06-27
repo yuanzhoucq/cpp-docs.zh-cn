@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a52846754bdf1293e03a47127ae8886e0f1cd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385460"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952413"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
 > [!NOTE]
@@ -89,7 +89,7 @@ public:
 };  
 ```  
   
- 若要获取 IPrintInterface，如果你只有[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，调用[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)使用`IID`的**IPrintInterface**。 `IID` 是唯一标识接口的 128 位数字。 你或 OLE 定义的每个接口都具有 `IID`。 如果`pUnk`是一个指向[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)对象，可能是要从中检索 IPrintInterface 的代码：  
+ 若要获取 IPrintInterface，如果你只有[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，调用[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)使用`IID`的`IPrintInterface`。 `IID` 是唯一标识接口的 128 位数字。 你或 OLE 定义的每个接口都具有 `IID`。 如果*pUnk*是一个指向[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)对象，可能是要从中检索 IPrintInterface 的代码：  
   
 ```  
 IPrintInterface* pPrint = NULL;  
@@ -116,7 +116,7 @@ virtual void PrintObject();
 };  
 ```  
   
- 实现[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)将完全相同作为这些实现更高版本。 **CPrintObj::QueryInterface**将如下所示：  
+ 实现[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)将完全相同作为这些实现更高版本。 `CPrintObj::QueryInterface` 将如下所示：  
   
 ```  
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)  
@@ -301,15 +301,15 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 2.  使用派生类定义中的 `DECLARE_INTERFACE_MAP` 函数。  
   
-3.  对于希望支持的每个接口，在类定义中使用 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 宏。  
+3.  对于你希望支持每个接口，使用类定义中的 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏。  
   
-4.  在实现文件中，使用 `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 宏定义类的接口映射。  
+4.  在实现文件中，使用 BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 宏来定义类的接口映射。  
   
-5.  对于支持的每个 IID，使用 `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 宏之间的 `INTERFACE_PART` 宏将该 IID 映射到类的特定“部分”。  
+5.  对于支持每个 IID，使用 INTERFACE_PART 宏之间 BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 宏，将该 IID 映射到特定"部分"你的类。  
   
 6.  实现表示所支持接口的每个嵌套类。  
   
-7.  使用 `METHOD_PROLOGUE` 宏访问 `CCmdTarget` 派生的父对象。  
+7.  METHOD_PROLOGUE 宏用于访问父代、 `CCmdTarget`-派生对象。  
   
 8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可委派到`CCmdTarget`这些函数的实现 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。  
   
@@ -338,7 +338,7 @@ END_INTERFACE_PART(PrintObj)
 };  
 ```  
   
- 以上声明创建派生自 `CCmdTarget` 的类。 `DECLARE_INTERFACE_MAP` 宏告知框架，此类将具有自定义接口映射。 此外，`BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 宏定义嵌套类，在此例中，名称为 CEditObj 和 CPrintObj（X 仅用于将嵌套类与以“C”开头的全局类和以“I”开头的接口类区分开来）。 创建了这些类的两个嵌套成员，分别为 m_CEditObj 和 m_CPrintObj。 宏自动声明[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函数; 因此仅声明函数特定于此接口：EditObject 和 PrintObject (使用 OLE 宏`STDMETHOD`使用以便`_stdcall`和虚拟关键字提供了为适合于目标平台)。  
+ 以上声明创建派生自 `CCmdTarget` 的类。 DECLARE_INTERFACE_MAP 宏告知框架，此类将具有自定义接口映射。 此外，BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏定义嵌套的类，在这种情况下，名称为 CEditObj 和 cprintobj （X 仅用于将嵌套的类与使用"C"和接口的启动类的全局类区分开来的以"I"开头）。 创建了这些类的两个嵌套成员，分别为 m_CEditObj 和 m_CPrintObj。 宏自动声明[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函数; 因此仅声明函数特定于此接口：EditObject 和 PrintObject (使用 STDMETHOD 使用 OLE 宏，以便 **_stdcall**和虚拟关键字提供了为适合于目标平台)。  
   
  实现此类的接口映射：  
   
@@ -356,7 +356,7 @@ END_INTERFACE_MAP()
   
  这将分别连接 IID_IPrintInterface IID 和 m_CPrintObj 以及 IID_IEditInterface 和 m_CEditObj。 `CCmdTarget`实现[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) 使用此映射返回指向 m_CPrintObj 和 m_CEditObj 请求时。 无需包括 `IID_IUnknown` 的条目；请求 `IID_IUnknown` 时，框架将使用映射中的第一个接口（在此例中为 m_CPrintObj）。  
   
- 即使`BEGIN_INTERFACE_PART`宏自动声明[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)为你的函数，你仍需要实现它们：  
+ 即使 BEGIN_INTERFACE_PART 宏自动声明[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)为你的函数，你仍需要实现它们：  
   
 ```  
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()  
@@ -404,10 +404,10 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 -   在两个接口上声明其中一个内置方法  
   
- 此外，框架在内部使用消息映射。 这让你可以从框架类进行派生，例如 `COleServerDoc`，它已支持某些接口并向框架提供的接口提供替换项或添加项。 框架完全支持从基类继承接口映射，因此你可进行此操作。 这是 `BEGIN_INTERFACE_MAP` 采用其第二个参数作为基类名称的原因。  
+ 此外，框架在内部使用消息映射。 这让你可以从框架类进行派生，例如 `COleServerDoc`，它已支持某些接口并向框架提供的接口提供替换项或添加项。 框架完全支持从基类继承接口映射，因此你可进行此操作。 这是基类的为什么 BEGIN_INTERFACE_MAP 将作为其第二个参数的名称的原因。  
   
 > [!NOTE]
->  通常不可能仅通过从 MFC 版本继承 OLE 接口的嵌入专用化来重用 MFC 的 OLE 接口内置实现的实现。 这是不可能因为使用`METHOD_PROLOGUE`宏来获取对包含的访问权限`CCmdTarget`-派生的对象意味着*固定偏移量*的嵌入对象`CCmdTarget`-派生对象。 举例来说，这意味着你无法在 `COleClientItem::XAdviseSink` 中从 MFC 的实现派生嵌入 XMyAdviseSink，因为 XAdviseSink 依赖于对 `COleClientItem` 对象顶部进行特定偏移。  
+>  通常不可能仅通过从 MFC 版本继承 OLE 接口的嵌入专用化来重用 MFC 的 OLE 接口内置实现的实现。 这是不可能因为 METHOD_PROLOGUE 宏来获取访问该文件包含使用`CCmdTarget`-派生的对象意味着*固定偏移量*的嵌入对象`CCmdTarget`-派生对象。 举例来说，这意味着你无法在 `COleClientItem::XAdviseSink` 中从 MFC 的实现派生嵌入 XMyAdviseSink，因为 XAdviseSink 依赖于对 `COleClientItem` 对象顶部进行特定偏移。  
   
 > [!NOTE]
 >  但是，你可以为所有你想要其具有 MFC 默认行为的函数委托到 MFC 实现。 这在 `COleFrameHook` 类（它为许多函数委托到 m_xOleInPlaceUIWindow）中的 `IOleInPlaceFrame` (XOleInPlaceFrame) 的 MFC 实现中完成。 选择这种设计是为了减少实现多个接口的对象的运行时大小；它可以避免使用后向指针（例如上一节中使用 m_pParent 的方式）。  
@@ -418,13 +418,13 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
  有两种方法可以使用聚合：(1) 使用支持聚合的 COM 对象，和 (2) 实现可由另一个对象聚合的对象。 这些功能可称为“使用聚合对象”和“使对象可聚合”。 MFC 两者都支持。  
   
 ### <a name="using-an-aggregate-object"></a>使用聚合对象  
- 要使用聚合对象，需要有某种方法能将聚合连接到 QueryInterface 机制中。 换言之，聚合对象必须表现得像是你的对象的本机部分一样。 此连接到 MFC 的接口因此如何映射机制除了`INTERFACE_PART`宏，其中嵌套的对象映射到 IID，您还可以声明聚合对象的一部分你`CCmdTarget`派生类。 为此，将使用 `INTERFACE_AGGREGATE` 宏。 这允许你指定的成员变量 (它必须是指向的指针[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)或派生类)，这是将集成到接口映射机制。 如果指针不为 NULL`CCmdTarget::ExternalQueryInterface`是调用，框架将自动调用聚合对象[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成员函数，如果`IID`请求不是一个本机`IID`s支持`CCmdTarget`对象本身。  
+ 要使用聚合对象，需要有某种方法能将聚合连接到 QueryInterface 机制中。 换言之，聚合对象必须表现得像是你的对象的本机部分一样。 如何到 MFC 的接口映射机制除了 INTERFACE_PART 宏，没有此平分其中嵌套的对象映射到 IID，您还可以声明聚合对象的一部分你`CCmdTarget`派生类。 若要执行此操作，请使用 INTERFACE_AGGREGATE 宏。 这允许你指定的成员变量 (它必须是指向的指针[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)或派生类)，这是将集成到接口映射机制。 如果指针不为 NULL`CCmdTarget::ExternalQueryInterface`是调用，框架将自动调用聚合对象[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成员函数，如果`IID`请求不是一个本机`IID`s支持`CCmdTarget`对象本身。  
   
 ##### <a name="to-use-the-interfaceaggregate-macro"></a>使用 INTERFACE_AGGREGATE 宏  
   
 1.  声明将包含指向聚合对象的指针的成员变量 (`IUnknown*`)。  
   
-2.  在接口映射中包括 `INTERFACE_AGGREGATE` 宏，它根据名称引用成员变量。  
+2.  在接口映射中，它按名称引用成员变量包括 INTERFACE_AGGREGATE 宏。  
   
 3.  在某些情况下（通常在 `CCmdTarget::OnCreateAggregates` 期间），请将成员变量初始化为除 NULL 之外的值。  
   
@@ -508,10 +508,10 @@ void EnableAggregation();
 ## <a name="remarks"></a>备注  
   
 #### <a name="parameters"></a>参数  
- `lpIID`  
+ *lpIID*  
  指向 IID 的较远指针（QueryInterface 的第一个自变量）  
   
- `ppvObj`  
+ *ppvObj*  
  指向 IUnknown* 的指针（QueryInterface 的第二个自变量）  
   
 ## <a name="remarks"></a>备注  
@@ -550,7 +550,7 @@ DECLARE_INTERFACE_MAP
 ```  
   
 ## <a name="remarks"></a>备注  
- 在从 `CCmdTarget` 派生并且将拥有接口映射的任何类中使用此宏。 和使用 `DECLARE_MESSAGE_MAP` 的方式非常相似。 此宏调用应放置在类定义中（通常在标头 (.H) 文件中）。 具有 `DECLARE_INTERFACE_MAP` 的类必须使用 `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 宏对实现文件 (.CPP) 中的接口映射进行定义。  
+ 在从 `CCmdTarget` 派生并且将拥有接口映射的任何类中使用此宏。 在很大程度使用 DECLARE_MESSAGE_MAP 相同的方式。 此宏调用应放置在类定义中（通常在标头 (.H) 文件中）。 DECLARE_INTERFACE_MAP 具有的类必须在实现文件中定义接口映射 (。CPP) 使用 BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 宏。  
   
 ### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>BEGIN_INTERFACE_PART 和 END_INTERFACE_PART － 宏说明  
   
@@ -567,18 +567,18 @@ END_INTERFACE_PART(
 ## <a name="remarks"></a>备注  
   
 #### <a name="parameters"></a>参数  
- `localClass`  
+ *localClass*  
  实现接口的类的名称  
   
- `iface`  
+ *iface*  
  此类实现的接口的名称  
   
 ## <a name="remarks"></a>备注  
- 对于类将实现的每个接口，需要拥有一个 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 对。 这些宏定义从你定义的 OLE 接口派生的本地类以及该类的嵌入成员变量。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)自动声明的成员。 你必须包括属于要实现的接口的其他成员函数的声明（这些声明放在 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART`宏之间）。  
+ 对于每个类将实现的接口，你需要具有 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 对。 这些宏定义从你定义的 OLE 接口派生的本地类以及该类的嵌入成员变量。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)自动声明的成员。 你必须包括属于要实现的接口的其他成员函数声明 （这些声明放 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间）。  
   
- `iface` 参数是你希望实现的 OLE 接口，例如 `IAdviseSink` 或 `IPersistStorage`（或你自己的自定义接口）。  
+ *Iface*自变量是你想要实现，如的 OLE 接口`IAdviseSink`，或`IPersistStorage`（或你自己的自定义接口）。  
   
- `localClass` 参数是将被定义的本地类的名称。 名称前面会自动追加一个“X”。 此命名约定用于避免与同名的全局类发生冲突。 此外，嵌入成员的名称和 `localClass` 的名称相同，但其前缀为“m_x”。  
+ *LocalClass*参数是将定义的局部类的名称。 名称前面会自动追加一个“X”。 此命名约定用于避免与同名的全局类发生冲突。 此外，嵌入成员，与相同的名称*localClass*名称但其前缀为 m_x。  
   
  例如：  
   
@@ -621,14 +621,14 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>备注  
   
 #### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  要在其中定义接口映射的类  
   
- `baseClass`  
- `theClass` 派生自的类。  
+ *baseClass*  
+ 从其类*类*派生自。  
   
 ## <a name="remarks"></a>备注  
- `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 宏在实现文件中用于实际定义接口映射。 对于实现的每个接口，有一个或多个 `INTERFACE_PART` 宏调用。 对于类使用的每个聚合，有一个 `INTERFACE_AGGREGATE` 宏调用。  
+ BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 宏在实现文件中用于实际定义接口映射。 对于每个实现的接口是一个或多个 INTERFACE_PART 宏调用。 对于每个类使用的聚合，没有一个 INTERFACE_AGGREGATE 宏调用。  
   
 ### <a name="interfacepart--macro-description"></a>INTERFACE_PART － 宏说明  
   
@@ -643,17 +643,17 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>备注  
   
 #### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  包含接口映射的类的名称。  
   
- `iid`  
+ *iid*  
  要映射到嵌入类的 `IID`。  
   
- `localClass`  
+ *localClass*  
  本地类的名称（去掉“X”）。  
   
 ## <a name="remarks"></a>备注  
- 在 `BEGIN_INTERFACE_MAP` 宏和 `END_INTERFACE_MAP` 宏之间为你的对象将支持的每个接口使用此宏。 它让你能够将 IID 映射到 `theClass` 和 `localClass` 指示的类成员。 “m_x”将向 `localClass` 自动添加。 请注意，多个 `IID` 可以与单个成员关联。 当你仅实现一个“派生程度最高”的接口并希望同时提供所有中间接口时，这非常有用。 `IOleInPlaceFrameWindow` 接口就是一个很好的示例。 其层次结构如下所示：  
+ 对于你的对象将支持每个接口，如果 BEGIN_INTERFACE_MAP 宏和 END_INTERFACE_MAP 宏之间使用此宏。 它允许你将 IID 映射到指示的类的成员*类*和*localClass*。 M_x 将添加到*localClass*自动。 请注意，多个 `IID` 可以与单个成员关联。 当你仅实现一个“派生程度最高”的接口并希望同时提供所有中间接口时，这非常有用。 `IOleInPlaceFrameWindow` 接口就是一个很好的示例。 其层次结构如下所示：  
   
 ```  
 IUnknown  
@@ -662,7 +662,7 @@ IUnknown
     IOleInPlaceFrameWindow 
 ```  
   
- 如果对象实现`IOleInPlaceFrameWindow`，客户端还可能`QueryInterface`在任何这些接口上： `IOleUIWindow`， `IOleWindow`，或[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，除了"派生程度最高"接口`IOleInPlaceFrameWindow`（即其实是实现）。 要处理此情况，可以使用多个 `INTERFACE_PART` 宏将每一个基接口映射到 `IOleInPlaceFrameWindow` 接口：  
+ 如果对象实现`IOleInPlaceFrameWindow`，客户端还可能`QueryInterface`在任何这些接口上： `IOleUIWindow`， `IOleWindow`，或[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，除了"派生程度最高"接口`IOleInPlaceFrameWindow`（即其实是实现）。 若要处理这种情况可以使用多个 INTERFACE_PART 宏将每个基接口映射到`IOleInPlaceFrameWindow`接口：  
   
  在类定义文件中：  
   
@@ -701,14 +701,14 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>备注  
   
 #### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  包含接口映射的类的名称，  
   
- `theAggr`  
+ *theAggr*  
  要聚合的成员变量的名称。  
   
 ## <a name="remarks"></a>备注  
- 此宏用于告知框架，类正在使用聚合对象。 它必须在 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 宏之间出现。 聚合对象是单独的对象，派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 通过使用聚合和 `INTERFACE_AGGREGATE` 宏，你可以让聚合支持的所有接口看起来像是受到对象直接支持。 `theAggr`参数是只是你的类的派生自的成员变量的名称[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或间接）。 在放置到接口映射中时，所有 `INTERFACE_AGGREGATE` 宏都必须遵循 `INTERFACE_PART` 宏。  
+ 此宏用于告知框架，类正在使用聚合对象。 它必须显示 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 宏之间。 聚合对象是单独的对象，派生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 通过使用聚合和 INTERFACE_AGGREGATE 宏，你可以聚合支持显示由该对象直接支持的所有接口。 *TheAggr*参数是只是你的类的派生自的成员变量的名称[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或间接）。 所有 INTERFACE_AGGREGATE 宏都必须都遵循 INTERFACE_PART 宏置于接口映射中时。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   

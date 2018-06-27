@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355405"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954655"
 ---
 # <a name="afx-messages"></a>AFX 消息
 在 MFC 中使用这些消息。  
@@ -89,7 +89,7 @@ ms.locfileid: "33355405"
   
 ||||||  
 |-|-|-|-|-|  
-|消息|描述|[in] `wParam`|`lParam` （所有参数都都 [in] 除非另行说明。）|返回值|  
+|消息|描述|[in]*wParam*|*lParam* （所有参数都都 [in] 除非另行说明。）|返回值|  
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不适用。|不适用。|  
 |AFX_WM_ACCGETSTATE|用于可访问性支持。 发送到此消息`CMFCPopupMenu`或`CMFCRibbonPanelMenu`检索的当前元素的状态。|元素，可以为一个菜单按钮或分隔符的索引。|未使用。|元素状态中。 如果该索引无效，则为-1 0 菜单按钮是否没有特殊特性。 否则，它是以下标志的组合：<br /><br /> TBBS_DISABLED — 项被禁用<br /><br /> TBBS_CHECKED-选中项<br /><br /> TBBS_BUTTON-表明它是标准按键<br /><br /> TBBS_PRESSED-按下按钮<br /><br /> TBBS_INDETERMINATE-未定义的状态<br /><br /> TBBS_SEPARATOR-而不是菜单按钮，此元素窗体的其他菜单项之间的分离|  
 |AFX_WM_CHANGE_ACTIVE_TAB|框架将此消息发送到可调整大小控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象时用户更改活动选项卡。|选项卡的索引。|未使用。|非零。|  
@@ -131,11 +131,11 @@ ms.locfileid: "33355405"
 |AFX_WM_UPDATETOOLTIPS|发送到所有工具提示所有者以指示其工具提示控件应该重新创建。|应处理此消息的控件的类型。 请参阅有关的可能的值列表本主题后面的表。|未使用。|未使用。|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` 将此消息发送到的父框架中，当用户单击**帮助**按钮，或通过单击进入帮助模式**帮助**标题按钮或按 F1 键。|未使用。|指向的实例的指针`CMFCWindowsManagerDialog`。|未使用。|  
   
- 下表显示的值的低位字`lParam`AFX_WM_HSCROLL 方法的参数：  
+ 下表显示的值的低位字*lParam* AFX_WM_HSCROLL 方法的参数：  
   
 |||  
 |-|-|  
-|值|含义|  
+|“值”|含义|  
 |SB_ENDSCROLL|用户结束滚动。|  
 |SB_LEFT|用户滚动到左上角。|  
 |SB_RIGHT|用户滚动到右下角。|  
@@ -147,13 +147,13 @@ ms.locfileid: "33355405"
 |SB_THUMBTRACK|用户正在拖动滚动框。 此值，直到用户释放鼠标按钮会重复发送 AFX_WM_ON_HSCROLL 消息。 高序位字指示已向其拖动到滚动框的位置。|  
   
 > [!NOTE]
->  高序位字`lParam`参数指定滚动框的当前位置，如果低序位字是 SB_THUMBPOSITION 或 SB_THUMBTRACK; 否则，不使用该单词。  
+>  高序位字*lParam*参数指定滚动框的当前位置，如果低序位字是 SB_THUMBPOSITION 或 SB_THUMBTRACK; 否则，不使用该单词。  
   
- 下表列出的标志值`lParam`AFX_WM_UPDATETOOLTIPS 消息参数：  
+ 下表列出的标志值*lParam* AFX_WM_UPDATETOOLTIPS 消息参数：  
   
 |||  
 |-|-|  
-|Flag|值|  
+|Flag|“值”|  
 |AFX_TOOLTIP_TYPE_DEFAULT|0x0001|  
 |AFX_TOOLTIP_TYPE_TOOLBAR|0x0002|  
 |AFX_TOOLTIP_TYPE_TAB|0x0004|  

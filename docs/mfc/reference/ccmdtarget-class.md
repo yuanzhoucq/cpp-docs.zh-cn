@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356487"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955656"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 类
 Microsoft 基础类库消息映射体系结构的基类。  
@@ -131,7 +131,7 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>备注  
- 框架调用此函数可向用户显示这是忙，例如，当**CDocument**对象加载或保存到文件本身。  
+ 框架调用此函数可向用户显示这是忙，例如，当`CDocument`对象加载或保存到文件本身。  
   
  操作`BeginWaitCursor`并不总是有效外部单个消息处理程序与其他操作，如`OnSetCursor`处理，无法更改的光标。  
   
@@ -159,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iVerb`  
+ *iVerb*  
  该谓词的数字标识符。  
   
- `lpMsg`  
+ *lpMsg*  
  指向[消息](http://msdn.microsoft.com/library/windows/desktop/ms644958)结构描述调用谓词 （如双击） 的事件。  
   
- `hWndParent`  
+ *hWndParent*  
  包含该对象的文档窗口的句柄。  
   
- `lpRect`  
+ *lpRect*  
  指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它包含的坐标，以像素为单位，用于定义对象的边框中*hwndParent*。  
   
 ### <a name="return-value"></a>返回值  
@@ -228,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  指针到指向[IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084)接口。  
   
 ### <a name="return-value"></a>返回值  
- 如果对象支持 OLE 的至少一个谓词，则返回 TRUE (在这种情况下\*`ppenumOleVerb`指向**IEnumOLEVERB**枚举器接口)，否则为 FALSE。  
+ 如果对象支持 OLE 的至少一个谓词，则返回 TRUE (在这种情况下\* *ppenumOleVerb*指向`IEnumOLEVERB`枚举器接口)，否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
  此成员函数基本上是实现[ioleobject:: Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)。  
@@ -245,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDispatch`  
+ *lpDispatch*  
  指向 `IDispatch` 对象的指针。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针`CCmdTarget`与关联的对象`lpDispatch`。 此函数将返回**NULL**如果`IDispatch`对象不被识别为 Microsoft 基础类`IDispatch`对象。  
+ 指向的指针`CCmdTarget`与关联的对象*lpDispatch*。 此函数将返回**NULL**如果`IDispatch`对象不被识别为 Microsoft 基础类`IDispatch`对象。  
   
 ### <a name="remarks"></a>备注  
  此函数的结果是指向成员函数的调用的反向`GetIDispatch`。  
@@ -303,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>备注  
  此成员函数基本上实现[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)。  
   
- 派生的类应重写此函数可返回的类型信息接口提供 （0 或 1） 的数量。 如果未重写， **GetTypeInfoCount**返回 0。 若要重写，使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeLib`和`GetTypeLibCache`。  
+ 派生的类应重写此函数可返回的类型信息接口提供 （0 或 1） 的数量。 如果未重写，`GetTypeInfoCount`返回 0。 若要重写，使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeLib`和`GetTypeLibCache`。  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  检索与指定的 GUID 相对应的类型说明。  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lcid`  
+ *lcid*  
  区域设置标识符 ( `LCID`)。  
   
- `guid`  
+ *guid*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)的类型说明。  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  指针到指向`ITypeInfo`接口。  
   
 ### <a name="return-value"></a>返回值  
- HRESULT，指示调用成功与否。 如果成功，*`ppTypeInfo`指向类型信息接口。  
+ HRESULT，指示调用成功与否。 如果成功，* *ppTypeInfo*指向类型信息接口。  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  获取一个指针指向类型库。  
@@ -338,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lcid`  
+ *lcid*  
  区域设置标识符 ( `LCID`)。  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  指针到指向`ITypeLib`接口。  
   
 ### <a name="return-value"></a>返回值  
- HRESULT，指示调用成功与否。 如果成功，*`ppTypeLib`指向类型库接口。  
+ HRESULT，指示调用成功与否。 如果成功，* *ppTypeLib*指向类型库接口。  
   
 ### <a name="remarks"></a>备注  
  派生的类应重写该成员函数 (如果未重写，`GetTypeLib`返回 TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeInfoCount`和`GetTypeLibCache`。  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针**CTypeLibCache**对象。  
+ 指向的指针`CTypeLibCache`对象。  
   
 ### <a name="remarks"></a>备注  
- 派生的类应重写该成员函数 (如果未重写， **GetTypeLibCache**返回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeInfoCount`和`GetTypeLib`。  
+ 派生的类应重写该成员函数 (如果未重写，`GetTypeLibCache`返回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)宏，还实现`GetTypeInfoCount`和`GetTypeLib`。  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- MFC 的实现调用此函数**idispatch:: Invoke**以确定给定的自动化方法 (由标识`dispid`) 可以调用。  
+ MFC 的实现调用此函数`IDispatch::Invoke`以确定给定的自动化方法 (由标识*dispid*) 可以调用。  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dispid`  
+ *dispid*  
  调度 id。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法可以调用，否则为 FALSE，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 如果`IsInvokeAllowed`，则返回 TRUE， **Invoke**继续调用该方法中; 否则为`Invoke`将失败，返回 E_UNEXPECTED。  
+ 如果`IsInvokeAllowed`，则返回 TRUE，`Invoke`继续调用该方法中; 否则为`Invoke`将失败，返回 E_UNEXPECTED。  
   
  派生的类可以重写此函数可返回适当的值 (如果未重写， `IsInvokeAllowed` ，则返回 TRUE)。 请参阅尤其[COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。  
   
@@ -411,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  包含命令 id。  
   
- `nCode`  
- 命令通知代码都标识。 请参阅**备注**值有关的详细信息`nCode`。  
+ *nCode*  
+ 命令通知代码都标识。 请参阅**备注**值有关的详细信息*nCode*。  
   
- `pExtra`  
- 使用的值根据`nCode`。 请参阅**备注**有关详细信息`pExtra`。  
+ *pExtra*  
+ 使用的值根据*nCode*。 请参阅**备注**有关详细信息*pExtra*。  
   
- `pHandlerInfo`  
- 如果不是**NULL**，`OnCmdMsg`填入**pTarget**和**pmf**的成员`pHandlerInfo`结构而不调度该命令。 通常情况下，此参数应**NULL**。  
+ *pHandlerInfo*  
+ 如果不是**NULL**，`OnCmdMsg`填入*pTarget*和*pmf*的成员*pHandlerInfo*结构而不是调度该命令。 通常情况下，此参数应**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  处理此消息; 如果非零否则为 0。  
@@ -433,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  在少数情况下，你可能想要重写该成员函数以扩展框架的标准命令路由。 请参阅[技术说明 21](../../mfc/tn021-command-and-message-routing.md)命令路由体系结构的高级详细信息。  
   
- 如果你重写`OnCmdMsg`，你必须提供的相应值`nCode`，命令通知代码，和`pExtra`，取决于值`nCode`。 下表列出其对应的值：  
+ 如果你重写`OnCmdMsg`，你必须提供的相应值*nCode*，命令通知代码，和*pExtra*，取决于值*nCode*. 下表列出其对应的值：  
   
-|`nCode` 值|`pExtra` 值|  
+|*nCode*值|*pExtra*值|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  

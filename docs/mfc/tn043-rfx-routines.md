@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc6556cabaa8f1f04a2a53771b495233620e1a14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384447"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954404"
 ---
 # <a name="tn043-rfx-routines"></a>TN043：RFX 例程
 > [!NOTE]
@@ -63,7 +63,7 @@ RFX_Custom(pFX, "Col2",
   
  请参阅 afxdb.h 有关的所有记录集字段交换例程 MFC 提供的列表。  
   
- 记录集字段调用是一种注册的内存位置 （通常是数据成员） 的方式，用于存储字段数据的**CMySet**类。  
+ 记录集字段调用是一种注册的内存位置 （通常是数据成员） 的方式，用于存储字段数据的`CMySet`类。  
   
 ## <a name="notes"></a>说明  
  记录集字段函数旨在仅适用于`CRecordset`类。 它们不是通常可供任何其他 MFC 类。  
@@ -77,23 +77,23 @@ RFX_Custom(pFX, "Col2",
 ## <a name="how-does-it-work"></a>它是如何工作的  
  不需要了解以下以使用记录字段交换。 但是，了解此后台进行的活动的工作原理将帮助你编写自己的 exchange 过程。  
   
- `DoFieldExchange`非常相似，成员函数即将`Serialize`成员函数 — 它负责获取或设置数据向/从外部窗体 （在此事例的列从 ODBC 查询的结果） 从/到类中的成员数据。 `pFX`参数是执行数据交换的上下文，它是类似于`CArchive`参数`CObject::Serialize`。 `pFX` (`CFieldExchange`对象) 具有操作标记，它是相似，但的泛化`CArchive`方向标志。 RFX 函数可能需要支持以下操作：  
+ `DoFieldExchange`非常相似，成员函数即将`Serialize`成员函数 — 它负责获取或设置数据向/从外部窗体 （在此事例的列从 ODBC 查询的结果） 从/到类中的成员数据。 *PFX*参数是执行数据交换的上下文，它是类似于*CArchive*参数`CObject::Serialize`。 *PFX* (`CFieldExchange`对象) 具有操作标记，它是相似，但的泛化*CArchive*方向标志。 RFX 函数可能需要支持以下操作：  
   
-- **BindParam** -指示 ODBC 应在其中检索参数数据  
+- `BindParam` -指示 ODBC 应在其中检索参数数据  
   
-- **BindFieldToColumn** -指示其中 ODBC 必须检索/存款 outputColumn 数据  
+- `BindFieldToColumn` -指示其中 ODBC 必须检索/存款 outputColumn 数据  
   
-- **修正**-设置**CString/CByteArray**长度设置为 NULL 状态位  
+- `Fixup` -设置`CString/CByteArray`长度设置为 NULL 状态位  
   
-- **MarkForAddNew** -标记脏如果值已更改，因为 AddNew 调用  
+- `MarkForAddNew` -如果值已更改，因为 AddNew 调用，脏页标记  
   
-- **MarkForUpdate** -标记脏如果值已更改，因为编辑调用  
+- `MarkForUpdate` -如果值已更改，因为编辑调用，脏页标记  
   
-- **名称**-追加标记为已更新的字段的字段名称  
+- `Name` -追加标记为已更新的字段的字段名称  
   
-- **名称值**-追加"\<列名称 > ="标记为已更新的字段  
+- `NameValue` -追加"\<列名称 > ="标记为已更新的字段  
   
-- **值**-追加""跟分隔符，如 '，' 或 '  
+- `Value` -追加""跟分隔符，如 '，' 或 '  
   
 - `SetFieldDirty` -设置状态位脏 （即已更改） 字段  
   
@@ -105,13 +105,13 @@ RFX_Custom(pFX, "Col2",
   
 - `IsFieldNullable` -返回 TRUE，如果字段可以保存 NULL 值  
   
-- **StoreField** -存档字段值  
+- `StoreField` -存档字段值  
   
-- **LoadField** -重新加载存档字段值  
+- `LoadField` -重新加载已存档的字段值  
   
-- **GetFieldInfoValue** -返回的字段上的常规信息  
+- `GetFieldInfoValue` -返回的字段上的常规信息  
   
-- **GetFieldInfoOrdinal** -返回的字段上的常规信息  
+- `GetFieldInfoOrdinal` -返回的字段上的常规信息  
   
 ## <a name="user-extensions"></a>用户扩展  
  有多种方法来扩展默认 RFX 机制。 你可以  
@@ -149,13 +149,13 @@ RFX_Custom(pFX, "Col2",
 ## <a name="writing-a-custom-rfx"></a>编写自定义 RFX  
  若要编写自己的自定义 RFX 函数，但还是建议你复制现有 RFX 函数，并将它修改为自己的意图。 选择要复制右 RFX 可以使你的作业要容易得多。 某些 RFX 函数具有一些在决定要将复制时，应考虑到的唯一属性。  
   
- **RFX_Long 和 RFX_Int**:  
+ `RFX_Long` 和`RFX_Int`:  
  这些是最简单的 RFX 函数。 数据值不需要任何特殊的解释，并且为固定的数据大小。  
   
- **RFX_Single 和 RFX_Double**:  
+ `RFX_Single` 和`RFX_Double`:  
  如 RFX_Long 和 RFX_Int 上述，这些函数很简单，并可以广泛使用的默认实现。 它们存储在 dbflt.cpp 而不是 dbrfx.cpp，但是，若要启用加载运行时仅当在显式引用时浮点库。  
   
- **RFX_Text 和 RFX_Binary**:  
+ `RFX_Text` 和`RFX_Binary`:  
  这两个函数预分配静态缓冲区以保存字符串/二进制文件的信息，并必须注册这些缓冲区 ODBC SQLBindCol 而不是注册 （&） 值。 因此，这两个函数具有大量的特殊情况代码。  
   
  `RFX_Date`：  
@@ -164,9 +164,9 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`：  
  这是唯一的类库不使用列绑定来接收和发送数据的 RFX 函数。 此函数将忽略 BindFieldToColumn 操作而是在修正操作时，分配的存储空间来容纳传入的 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 数据，然后执行 SQLGetData 呼叫将检索到的已分配存储的值。 在准备将发送回数据源 （如名称和值的操作） 的数据值时，此函数将使用 ODBC 的 DATA_AT_EXEC 功能。 请参阅[技术说明 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)有关使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs 的详细信息。  
   
- 编写你自己时**RFX_** 函数，你通常将能够使用**CFieldExchange::Default**来实现对指定的操作。 查看操作的默认实现。 如果它执行该操作将你编写你**RFX_** 函数可以委托到**CFieldExchange::Default。** 你可以看到的调用的示例**CFieldExchange::Default** dbrfx.cpp 中  
+ 编写你自己时**RFX_** 函数，你通常将能够使用`CFieldExchange::Default`来实现对指定的操作。 查看操作的默认实现。 如果它执行该操作将你编写你**RFX_** 函数可以委托到`CFieldExchange::Default`。 你可以看到的调用的示例`CFieldExchange::Default`dbrfx.cpp 中  
   
- 务必要调用`IsFieldType`开头的你 RFX 函数，并且如果它返回 FALSE，则立即返回。 此机制会让参数从正在执行的操作**outputColumns**，反之亦然 (如调用**BindParam**上**outputColumn**)。 此外，`IsFieldType`自动将跟踪的数**outputColumns** (`m_nFields`) 以及参数 (`m_nParams`)。  
+ 务必要调用`IsFieldType`开头的你 RFX 函数，并且如果它返回 FALSE，则立即返回。 此机制会让参数从正在执行的操作*outputColumns*，反之亦然 (如调用`BindParam`上*outputColumn*)。 此外，`IsFieldType`自动将跟踪的数*outputColumns* (*m_nFields*) 以及参数 (*m_nParams*)。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   

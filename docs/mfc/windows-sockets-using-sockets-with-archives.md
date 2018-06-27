@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21c08dbd1d26e519fe7108018299d3d4e94854
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385533"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954362"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 套接字：对存档使用套接字
 本指南介绍了[CSocket 编程模型](#_core_the_csocket_programming_model)。 类[CSocket](../mfc/reference/csocket-class.md)比类提供的抽象级别更高的套接字支持[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化协议的版本将传递数据传入和传出套接字对象，通过 MFC [CArchive](../mfc/reference/carchive-class.md)对象。 `CSocket` 提供锁定（在管理对 Windows 消息的背景处理时）并为您提供对 `CArchive` 的访问权限（其将管理您必须使用原始 API 或类 `CAsyncSocket` 亲自进行的通信的多个方面）。  
@@ -47,19 +47,19 @@ ms.locfileid: "33385533"
   
 2.  使用对象创建基础**套接字**处理。  
   
-     有关`CSocket`客户端对象，你通常应使用的默认参数[创建](../mfc/reference/casyncsocket-class.md#create)，除非您需要数据报套接字。 有关`CSocket`服务器对象，你必须指定在端口**创建**调用。  
+     有关`CSocket`客户端对象，你通常应使用的默认参数[创建](../mfc/reference/casyncsocket-class.md#create)，除非您需要数据报套接字。 有关`CSocket`服务器对象，你必须指定在端口`Create`调用。  
   
     > [!NOTE]
     >  `CArchive` 不适用于数据报套接字。 如果要将 `CSocket` 用于数据报套接字，则必须如在没有存档的情况下使用 `CAsyncSocket` 一样使用此类。 由于数据报是不可靠的（不能保证到达并且可能重复或离开序列），因此它们将不能通过存档与序列化兼容。 您期待序列化操作可靠且有序地完成。 如果您尝试对数据报使用带 `CSocket` 对象的 `CArchive`，则 MFC 断言将失败。  
   
 3.  如果套接字，客户端调用[CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)连接到服务器套接字的套接字对象。  
   
-     -或-  
+     或  
   
      套接字是服务器，如果调用[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)开始侦听连接尝试从客户端。 收到连接请求后，接受它通过调用[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。  
   
     > [!NOTE]
-    >  **接受**成员函数会将新的空引用`CSocket`对象作为其参数。 您必须构造此对象，然后才能调用**接受**。 如果此套接字对象超出范围，则关闭连接。 不要调用**创建**为此新的套接字对象。  
+    >  `Accept`成员函数会将新的空引用`CSocket`对象作为其参数。 您必须构造此对象，然后才能调用`Accept`。 如果此套接字对象超出范围，则关闭连接。 不要调用`Create`为此新的套接字对象。  
   
 4.  创建[CSocketFile](../mfc/reference/csocketfile-class.md)对象，将相关联`CSocket`与它的对象。  
   

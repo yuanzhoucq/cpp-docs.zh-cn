@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367056"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951678"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 类
 支持数据库类使用的记录字段交换 (RFX) 和批量记录字段交换 (Bulk RFX) 例程。  
@@ -53,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  如果你正在使用的数据访问对象 (DAO) 类，而不是开放式数据库连接 (ODBC) 类，可以使用类[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)相反。 有关详细信息，请参阅文章[概述： 数据库编程](../../data/data-access-programming-mfc-atl.md)。  
   
- A`CFieldExchange`对象提供的上下文信息需要记录字段交换或批量记录字段交换，才能放置。 `CFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员执行 RFX 和批量 RFX 操作`enum` **FieldType**中`CFieldExchange`。 可能**FieldType**的值为：  
+ A`CFieldExchange`对象提供的上下文信息需要记录字段交换或批量记录字段交换，才能放置。 `CFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员并设置当前记录的字段上的各种标志。 由定义的类型的记录集类数据成员执行 RFX 和批量 RFX 操作**枚举** **FieldType**中`CFieldExchange`。 可能**FieldType**的值为：  
   
 - **CFieldExchange::outputColumn**字段数据成员。  
   
@@ -96,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nFieldType`  
+ *nFieldType*  
  值为**枚举 FieldType**中声明`CFieldExchange`，这可以是以下之一：  
   
 - **CFieldExchange::outputColumn**  
@@ -121,7 +121,7 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|输出参数。 记录集的存储过程返回值。|  
 |**CFieldExchange::inoutParam**|输入/输出参数。 一个值，是传递给及返回的记录集的存储过程。|  
   
- 一般情况下，字段数据成员或参数数据成员与关联的 RFX 函数调用的每个组前面必须是对的调用`SetFieldType`。 `nFieldType`每个参数`SetFieldType`调用标识由按照 RFX 函数调用的数据成员的类型`SetFieldType`调用。  
+ 一般情况下，字段数据成员或参数数据成员与关联的 RFX 函数调用的每个组前面必须是对的调用`SetFieldType`。 *NFieldType*每个参数`SetFieldType`调用标识由按照 RFX 函数调用的数据成员的类型`SetFieldType`调用。  
   
  有关处理输出参数和输入/输出参数的详细信息，请参阅`CRecordset`成员函数[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 有关 RFX 和批量 RFX 函数的详细信息，请参阅主题[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。 有关批量行提取的相关信息，请参阅文章[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354143"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951738"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 类
 实现可对颜色的红色、绿色和蓝色分量进行动画处理的颜色功能。  
@@ -91,7 +91,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|表示动画颜色中的蓝色部分的封装的动画变量。|  
 |[CAnimationColor::m_gValue](#m_gvalue)|表示动画颜色中的绿色部分的封装的动画变量。|  
@@ -121,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRTransition`  
+ *pRTransition*  
  红色分量的转换。  
   
- `pGTransition`  
+ *pGTransition*  
  绿色分量的转换。  
   
- `pBTransition`  
+ *pBTransition*  
  蓝色分量的转换。  
   
 ### <a name="remarks"></a>备注  
@@ -147,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  指定默认颜色。  
   
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `nObjectID`  
+ *nObjectID*  
  指定对象 id。  
   
- `dwUserData`  
+ *dwUserData*  
  指定用户定义的数据。  
   
 ### <a name="remarks"></a>备注  
@@ -170,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lst`  
+ *lst*  
  当函数返回时，它包含指向表示红色、 绿色和蓝色分量的三个 CAnimationVariable 对象的指针。  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -233,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  输出。 此方法返回时包含的当前值。  
   
 ### <a name="return-value"></a>返回值  
@@ -279,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  指定新值动画颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -293,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  指定红色、 绿色和蓝色分量的新默认的值。  
   
 ### <a name="remarks"></a>备注  

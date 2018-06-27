@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368932"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953342"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange 类
 支持 Microsoft 基础类使用的对话框数据交换 (DDX) 和对话框数据验证 (DDV) 例程。  
@@ -75,7 +75,7 @@ class CDataExchange
   
  使用此类，如果你正在编写数据交换例程的自定义数据类型或控件，或如果你正在编写你自己的数据验证例程。 有关编写你自己的 DDX 和 DDV 例程的详细信息，请参阅[技术注意 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 有关 DDX 和 DDV 的概述，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)和[对话框](../../mfc/dialog-boxes.md)。  
   
- A`CDataExchange`对象提供 DDX 和 DDV，才能将所需的上下文信息。 标志`m_bSaveAndValidate`是**FALSE** DDX 用于填充数据成员的对话框控件的初始值。 标志`m_bSaveAndValidate`是**TRUE** DDX 用于设置到数据成员和 DDV 用于验证的数据值的对话框控件的当前值。 如果 DDV 验证失败，DDV 过程将显示一个消息框，以解释输入的错误。 然后将调用 DDV 过程**失败**将焦点重置为有问题的控件，并引发异常来停止验证过程。  
+ A`CDataExchange`对象提供 DDX 和 DDV，才能将所需的上下文信息。 标志*m_bSaveAndValidate*是**FALSE** DDX 用于填充数据成员的对话框控件的初始值。 标志*m_bSaveAndValidate*是**TRUE** DDX 用于设置到数据成员和 DDV 用于验证的数据值的对话框控件的当前值。 如果 DDV 验证失败，DDV 过程将显示一个消息框，以解释输入的错误。 然后将调用 DDV 过程`Fail`将焦点重置为有问题的控件，并引发异常来停止验证过程。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CDataExchange`  
@@ -96,7 +96,7 @@ CDataExchange(
  *pDlgWnd*  
  指向包含该控件的父窗口的指针。 通常，这是[CDialog](../../mfc/reference/cdialog-class.md)-派生对象。  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  如果**TRUE**，此对象会验证数据，然后从控件将数据写入到成员。 如果**FALSE**，此对象将移数据从成员到控件。  
   
 ### <a name="remarks"></a>备注  
@@ -113,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>备注  
- **失败**将焦点和选择还原到其验证失败 （如果没有要还原的控件） 的控件。 **失败**然后引发类型的异常[CUserException](../../mfc/reference/cuserexception-class.md)停止验证过程。 该异常将导致解释错误以显示一个消息框。 DDV 验证失败后，用户可以重新输入有问题的控件中的数据。  
+ `Fail` 将焦点和选择还原到其验证失败 （如果没有要还原的控件） 的控件。 `Fail` 然后将引发类型的异常[CUserException](../../mfc/reference/cuserexception-class.md)停止验证过程。 该异常将导致解释错误以显示一个消息框。 DDV 验证失败后，用户可以重新输入有问题的控件中的数据。  
   
- 自定义 DDV 例程的实现器可以调用**失败**从其例程验证失败时。  
+ 自定义 DDV 例程的实现器可以调用`Fail`从其例程验证失败时。  
   
  有关编写你自己的 DDX 和 DDV 例程的详细信息，请参阅[技术注意 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 有关 DDX 和 DDV 的概述，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)和[对话框主题](../../mfc/dialog-boxes.md)。  
   
@@ -153,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDC`  
+ *nIDC*  
  要针对 DDX 或 DDV 准备控件的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -176,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDC`  
+ *nIDC*  
  要针对 DDX 或 DDV 准备编辑控件的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -199,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDC`  
+ *nIDC*  
  要针对 DDX 或 DDV 准备 OLE 控件的 ID。  
   
 ### <a name="return-value"></a>返回值  

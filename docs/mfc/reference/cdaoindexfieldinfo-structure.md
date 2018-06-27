@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be9a6a9db842f1e80be62f48a9990cff36168e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 759f8e6f9349fdcac61f6aca81d311e3bbc39e1d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367251"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957040"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 结构
 `CDaoIndexFieldInfo`结构包含的数据访问对象 (DAO) 定义的索引字段对象有关的信息。  
@@ -38,7 +38,7 @@ struct CDaoIndexFieldInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  唯一名称的索引字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  *m_bDescending*  

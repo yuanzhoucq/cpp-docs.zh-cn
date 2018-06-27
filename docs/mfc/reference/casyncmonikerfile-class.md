@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 765f88ef021b333a563fd92f7e9c7806960902e1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356002"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956978"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 类
 提供功能以在 ActiveX 控件（原为 OLE 控件）中使用异步名字对象。  
@@ -121,7 +121,7 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>备注  
- 它不会创建`IBindHost`接口。 `IBindHost` 仅当你提供在使用**打开**成员函数。  
+ 它不会创建`IBindHost`接口。 `IBindHost` 仅当你提供在使用`Open`成员函数。  
   
  有关的说明`IBindHost`接口，请参阅 Windows SDK。  
   
@@ -143,16 +143,16 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pUnkControlling`  
- 指向控制未知的 (外部**IUnknown**) 或**NULL**如果未使用聚合。  
+ *pUnkControlling*  
+ 指向控制未知的 (外部`IUnknown`) 或**NULL**如果未使用聚合。  
   
 ### <a name="return-value"></a>返回值  
- 如果`pUnkControlling`不**NULL**，该函数将指针返回到内部**IUnknown**上新的 COM 对象支持`IBindStatusCallback`。 如果`pUnkControlling`是**NULL**，该函数返回一个指向**IUnknown**上新的 COM 对象支持`IBindStatusCallback`。  
+ 如果*pUnkControlling*不**NULL**，该函数将指针返回到内部`IUnknown`上新的 COM 对象支持`IBindStatusCallback`。 如果`pUnkControlling`是**NULL**，该函数返回一个指向`IUnknown`上新的 COM 对象支持`IBindStatusCallback`。  
   
 ### <a name="remarks"></a>备注  
- `CAsyncMonikerFile` 需要一个 COM 对象，该对象实现`IBindStatusCallback`。 MFC 实现此类对象，并是聚合。 您可以重写`CreateBindStatusCallback`以返回你自己的 COM 对象。 COM 对象可以通过调用聚合 MFC 的实现`CreateBindStatusCallback`与 COM 对象控制未知。 使用实现的 COM 对象`CCmdTarget`COM 支持可以检索控制未知使用**CCmdTarget::GetControllingUnknown**。  
+ `CAsyncMonikerFile` 需要一个 COM 对象，该对象实现`IBindStatusCallback`。 MFC 实现此类对象，并是聚合。 您可以重写`CreateBindStatusCallback`以返回你自己的 COM 对象。 COM 对象可以通过调用聚合 MFC 的实现`CreateBindStatusCallback`与 COM 对象控制未知。 使用实现的 COM 对象`CCmdTarget`COM 支持可以检索控制未知使用`CCmdTarget::GetControllingUnknown`。  
   
- 或者，您的 COM 对象可以委托到 MFC 的实现通过调用**CreateBindStatusCallback (NULL)**。  
+ 或者，您的 COM 对象可以委托到 MFC 的实现通过调用`CreateBindStatusCallback( NULL )`。  
   
  [CAsyncMonikerFile::Open](#open)调用`CreateBindStatusCallback`。  
   
@@ -166,7 +166,7 @@ virtual DWORD GetBindInfo() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 将检索的设置**IBindStatusCallBack**。 有关的说明`IBindStatusCallback`接口，请参阅 Windows SDK。  
+ 将检索的设置`IBindStatusCallBack`。 有关的说明`IBindStatusCallback`接口，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
  默认实现设置是异步的以使用存储介质 （流），并使用数据推送模型的绑定。 如果你想要更改绑定的行为，重写此函数。  
@@ -184,7 +184,7 @@ IBinding* GetBinding() const;
  指向的指针`IBinding`异步传输开始时提供的接口。 返回**NULL**如果出于任何原因传输不能成为以异步方式。  
   
 ### <a name="remarks"></a>备注  
- 这允许你控制的数据传输进程通过`IBinding`接口，例如，与**IBinding::Abort**， **IBinding::Pause**，和**IBinding::Resume**.  
+ 这允许你控制的数据传输进程通过`IBinding`接口，例如，与`IBinding::Abort`， `IBinding::Pause`，和`IBinding::Resume`。  
   
  有关的说明`IBinding`接口，请参阅 Windows SDK。  
   
@@ -219,7 +219,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwSize`  
+ *dwSize*  
  提供的绑定开始以来的数据累积量 （以字节为单位）。 可以是零，表示的数据量与此操作，无关，或任何特定数量变为可用。  
   
  *bscfFlag*  
@@ -259,47 +259,47 @@ virtual void OnProgress(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ulProgress`  
- 指示相对于所示的预期最大绑定操作的当前进度`ulProgressMax`。  
+ *ulProgress*  
+ 指示相对于所示的预期最大绑定操作的当前进度*ulProgressMax*。  
   
- `ulProgressMax`  
- 指示预期的最大值的`ulProgress`到调用的持续时间为`OnProgress`对于此操作。  
+ *ulProgressMax*  
+ 指示预期的最大值的*ulProgress*到调用的持续时间为`OnProgress`对于此操作。  
   
- `ulStatusCode`  
+ *ulStatusCode*  
  提供有关进度的绑定操作的其他信息。 有效的值，将从`BINDSTATUS`枚举。 有关可能的值，请参阅备注。  
   
- `szStatusText`  
- 有关当前过程，具体取决于的值的信息`ulStatusCode`。 有关可能的值，请参阅备注。  
+ *szStatusText*  
+ 有关当前过程，具体取决于的值的信息*ulStatusCode*。 有关可能的值，请参阅备注。  
   
 ### <a name="remarks"></a>备注  
- 可能的值有`ulStatusCode`(和`szStatusText`每个值) 是：  
+ 可能的值有*ulStatusCode* (和*szStatusText*每个值) 是：  
   
  **BINDSTATUS_FINDINGRESOURCE**  
- 绑定操作发现包含对象或绑定到的存储资源。 `szStatusText`提供要搜索的资源的显示名称为 (例如，"www.microsoft.com")。  
+ 绑定操作发现包含对象或绑定到的存储资源。 *SzStatusText*提供要搜索的资源的显示名称为 (例如，"www.microsoft.com")。  
   
  **BINDSTATUS_CONNECTING**  
- 绑定操作正在连接到包含对象或绑定到的存储资源。 `szStatusText`提供 （例如，IP 地址） 连接到的资源的显示名称。  
+ 绑定操作正在连接到包含对象或绑定到的存储资源。 *SzStatusText*提供 （例如，IP 地址） 连接到的资源的显示名称。  
   
  **BINDSTATUS_SENDINGREQUEST**  
- 绑定操作正在请求的对象或绑定到的存储。 `szStatusText`提供对象 （例如，文件名） 的显示名称。  
+ 绑定操作正在请求的对象或绑定到的存储。 *SzStatusText*提供对象 （例如，文件名） 的显示名称。  
   
  **BINDSTATUS_REDIRECTING**  
- 绑定操作已被重定向到不同的数据位置。 `szStatusText`提供新的数据位置的显示名称。  
+ 绑定操作已被重定向到不同的数据位置。 *SzStatusText*提供新的数据位置的显示名称。  
   
  **BINDSTATUS_USINGCACHEDCOPY**  
- 绑定操作正在检索请求的对象或存储缓存副本。 `szStatusText`是**NULL**。  
+ 绑定操作正在检索请求的对象或存储缓存副本。 *SzStatusText*是**NULL**。  
   
  **BINDSTATUS_BEGINDOWNLOADDATA**  
- 绑定操作已开始接收要绑定到的存储的对象。 `szStatusText`提供的数据位置的显示名称。  
+ 绑定操作已开始接收要绑定到的存储的对象。 *SzStatusText*提供的数据位置的显示名称。  
   
  **BINDSTATUS_DOWNLOADINGDATA**  
- 绑定操作将继续接收要绑定到的存储的对象。 `szStatusText`提供的数据位置的显示名称。  
+ 绑定操作将继续接收要绑定到的存储的对象。 *SzStatusText*提供的数据位置的显示名称。  
   
  **BINDSTATUS_ENDDOWNLOADDATA**  
- 在绑定操作完成后接收的对象或绑定到的存储。 `szStatusText`提供的数据位置的显示名称。  
+ 在绑定操作完成后接收的对象或绑定到的存储。 *SzStatusText*提供的数据位置的显示名称。  
   
  **BINDSTATUS_CLASSIDAVAILABLE**  
- 要绑定到对象的实例是只是关于创建。 `szStatusText`提供允许客户端的机会取消绑定操作中，如果需要字符串格式中的新对象的 CLSID。  
+ 要绑定到对象的实例是只是关于创建。 *SzStatusText*提供允许客户端的机会取消绑定操作中，如果需要字符串格式中的新对象的 CLSID。  
   
 ##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  重写此函数在执行操作时绑定正在启动你派生类中。  
@@ -319,7 +319,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hresult`  
+ *hresult*  
  `HRESULT` ，它是错误或警告值。  
   
  *szErrort*  
@@ -374,23 +374,23 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszURL`  
+ *lpszURL*  
  指向要以异步方式打开以文件的指针。 文件可以是任何有效的 URL 或文件名。  
   
- `pError`  
+ *pError*  
  指向文件异常的指针。 发生错误，必须先将它设置为可能的原因。  
   
- `pMoniker`  
- 指向异步名字对象接口的指针`IMoniker`，是组合使用可以检索文档的名字对象的精确名字对象**IOleClientSite::GetMoniker (** *OLEWHICHMK_容器* **)**，并创建从路径名的名字对象。 控件可以使用此标记将绑定，但这不是该控件应将保存的名字对象。  
+ *pMoniker*  
+ 指向异步名字对象接口的指针`IMoniker`，是组合使用可以检索文档的名字对象的精确名字对象`IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`，并创建从路径名的名字对象。 控件可以使用此标记将绑定，但这不是该控件应将保存的名字对象。  
   
  *pBindHost*  
- 指向的指针`IBindHost`将用于从可能相对路径名创建标记的接口。 如果绑定主机无效或未提供名字对象，调用将默认为**打开 (** `lpszFileName` **，**`pError`**)**。 有关的说明`IBindHost`接口，请参阅 Windows SDK。  
+ 指向的指针`IBindHost`将用于从可能相对路径名创建标记的接口。 如果绑定主机无效或未提供名字对象，调用将默认为`Open(lpszFileName,pError)`。 有关的说明`IBindHost`接口，请参阅 Windows SDK。  
   
- `pServiceProvider`  
- 指向 `IServiceProvider` 接口的指针。 如果服务提供程序无效或无法提供的服务`IBindHost`，调用默认为**打开 (** `lpszFileName` **，**`pError`**)**。  
+ *pServiceProvider*  
+ 指向 `IServiceProvider` 接口的指针。 如果服务提供程序无效或无法提供的服务`IBindHost`，调用默认为`Open(lpszFileName,pError)`。  
   
  *pUnknown*  
- 指向的指针**IUnknown**接口。 如果`IServiceProvider`找到，则对的函数查询`IBindHost`。 如果服务提供程序无效或无法提供的服务`IBindHost`，调用默认为**打开 (** `lpszFileName` **，**`pError`**)**。  
+ 指向 `IUnknown` 接口的指针。 如果`IServiceProvider`找到，则对的函数查询`IBindHost`。 如果服务提供程序无效或无法提供的服务`IBindHost`，调用默认为`Open(lpszFileName,pError)`。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则打开该文件则为非 0否则为 0。  
@@ -398,7 +398,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>备注  
  此调用启动绑定过程。  
   
- 你可以使用 URL 或文件名`lpszURL`参数。 例如：  
+ 你可以使用 URL 或文件名*lpszURL*参数。 例如：  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

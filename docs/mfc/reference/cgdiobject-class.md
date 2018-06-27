@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369010"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956124"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 类
 为各种 Windows 图形设备接口 (GDI) 对象（如位图、区域、画笔、笔、调色板和字体）提供基类。  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hObject`  
+ *hObject*  
  A`HANDLE`与 Windows GDI 对象 (例如，`HPEN`或`HBRUSH`)。  
   
 ### <a name="return-value"></a>返回值  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>备注  
- 切勿创建`CGdiObject`直接。 相反，创建的对象从其派生类之一如`CPen`或**Cbrush**。  
+ 切勿创建`CGdiObject`直接。 相反，创建的对象从其派生类之一如`CPen`或`Cbrush`。  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  检索预定义的常用 Windows GDI 钢笔、 画笔或字体，之一的句柄，并将附加到的 GDI 对象`CGdiObject`对象。  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  一个常数，它指定所需的常用对象的类型。 请参阅参数*fnObject*为[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows SDK for 相应值的说明中。  
   
 ### <a name="return-value"></a>返回值  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hObject`  
+ *hObject*  
  A`HANDLE`与 Windows GDI 对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCount`  
- 指定要将复制到的字节数`lpObject`缓冲区。  
+ *nCount*  
+ 指定要将复制到的字节数*lpObject*缓冲区。  
   
- `lpObject`  
+ *lpObject*  
  指向以将接收信息的用户提供的缓冲区。  
   
 ### <a name="return-value"></a>返回值  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `obj`  
+ *obj*  
  指向现有`CGdiObject`。  
   
 ### <a name="remarks"></a>备注  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `obj`  
+ *obj*  
  对现有的引用`CGdiObject`。  
   
 ### <a name="remarks"></a>备注  

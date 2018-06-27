@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357010"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952380"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 类
 辅助在应用程序启动时分析命令行。  
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszParam`  
+ *pszParam*  
  参数或标志。  
   
  *bFlag*  
- 指示是否`pszParam`参数或标志。  
+ 指示是否*pszParam*参数或标志。  
   
- `bLast`  
+ *群发*  
  指示这是最后一个参数或命令行上的标志。  
   
 ### <a name="remarks"></a>备注  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)调用`ParseParam`一次对于每个参数或命令行上的标志，将自变量传递到`pszParam`。 如果参数的第一个字符是**-**' **/**，它会被删除和*bFlag*设置为`TRUE`。 在分析的最后一个参数时,`bLast`设置为`TRUE`。  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)调用`ParseParam`一次对于每个参数或命令行上的标志，将自变量传递到*pszParam*。 如果参数的第一个字符是**-**' **/**，它会被删除和*bFlag*设置为`TRUE`。 在分析的最后一个参数时,*群发*设置为`TRUE`。  
   
  此函数的默认实现可识别以下标志： `/p`， `/pt`， `/dde`， `/Automation`，和`/Embedding`下, 表中所示：  
   
