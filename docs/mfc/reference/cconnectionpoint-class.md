@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357385"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952217"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 类
 定义用于与其他 OLE 对象通信的接口（称为“连接点”）的特殊类型。  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|检索拥有连接映射的控件的容器。|  
 |[CConnectionPoint::GetIID](#getiid)|检索连接点的接口 ID。|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|检索由控件支持的连接点的最大数目。|  
-|[在](#getnextconnection)|检索指向处的连接元素的`pos`。|  
+|[在](#getnextconnection)|检索指向处的连接元素的*pos*。|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|通过返回启动映射迭代**位置**值，可以传递给`GetNextConnection`调用。|  
 |[CConnectionPoint::OnAdvise](#onadvise)|由框架建立或断开连接时调用。|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|检索指向所请求的接收器接口指针。|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- `BEGIN_CONNECTION_PART`和`END_CONNECTION_PART`宏声明一个嵌入的类、 `XSampleConnPt` (派生自`CConnectionPoint`) 实现此特定连接点。 如果你想要重写任何`CConnectionPoint`成员函数，或添加你自己的成员函数，将它们声明这些两个宏之间。 例如，`CONNECTION_IID`宏重写`CConnectionPoint::GetIID`成员函数时置于这些两个宏之间。  
+ BEGIN_CONNECTION_PART 和 END_CONNECTION_PART 宏声明一个嵌入的类、 `XSampleConnPt` (派生自`CConnectionPoint`) 实现此特定连接点。 如果你想要重写任何`CConnectionPoint`成员函数，或添加你自己的成员函数，将它们声明这些两个宏之间。 例如，CONNECTION_IID 宏重写`CConnectionPoint::GetIID`成员函数时置于这些两个宏之间。  
   
  第二个代码段插入到实现文件 (。CPP) 的控件类。 此代码实现连接映射，其中包括其他连接点， `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- 一旦已插入这些代码片段，示例 OLE 控件可公开的连接点**ISampleSink**接口。  
+ 一旦已插入这些代码片段，示例 OLE 控件可公开的连接点`ISampleSink`接口。  
   
  通常情况下，连接点支持"多播"，是能够广播到多个连接到相同的接口的接收器。 下面的代码段演示如何通过循环访问每个接收器连接点上完成多播：  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  如果成功，到容器; 的指针否则为**NULL**。  
   
 ### <a name="remarks"></a>备注  
- 此函数通常由实现`BEGIN_CONNECTION_PART`宏。  
+ 此函数通常是由 BEGIN_CONNECTION_PART 宏实现的。  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  由框架调用以检索连接点的接口 ID。  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  如果你想要限制可以连接到你的控件的接收器数，重写此函数。  
   
 ##  <a name="getnextconnection"></a>  在  
- 检索指向处的连接元素的`pos`。  
+ 检索指向处的连接元素的*pos*。  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  指定对引用**位置**通过前一个返回值`GetNextConnection`或[GetStartPosition](#getstartposition)调用。  
   
 ### <a name="return-value"></a>返回值  
- 指向指定的连接元素的指针`pos`，则为 NULL。  
+ 指向指定的连接元素的指针*pos*，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
  此函数是最适用于循环访问连接映射中的所有元素。 当循环时，跳过此函数返回 null 值。  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bAdvise`  
+ *bAdvise*  
  **TRUE**，如果连接正在建立; 否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pUnkSink`  
+ *pUnkSink*  
  所请求的接收器接口的标识符。  
   
- `ppInterface`  
- 指向由标识的接口指针的指针`pUnkSink`。 如果对象不支持此接口， \* `ppInterface`设置为**NULL**。  
+ *ppInterface*  
+ 指向由标识的接口指针的指针*pUnkSink*。 如果对象不支持此接口， \* *ppInterface*设置为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384577"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956842"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自定义控件
 此说明描述 MFC 对自定义和自我绘制控件的支持。 它还描述了动态子类，并描述了之间的关系[CWnd](../mfc/reference/cwnd-class.md)对象和`HWND`s。  
@@ -100,11 +100,11 @@ ms.locfileid: "33384577"
 ## <a name="using-self-draw-controls-and-menus"></a>使用自我描述控件和菜单  
  对于自我描述菜单，您必须重写 `OnMeasureItem` 和 `OnDrawItem` 方法。  
   
- 对于自我描述列表框和组合框，您必须重写 `OnMeasureItem` 和 `OnDrawItem`。 您必须在对话框模板中为列表框指定 `LBS_OWNERDRAWVARIABLE` 样式，或为组合框指定 `CBS_OWNERDRAWVARIABLE` 样式。 `OWNERDRAWFIXED` 样式不适用于自我描述项目，因为固定项目高度已在自我描述控件附加到列表框之前确定。 (你可以使用这些方法[CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)和[CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)来克服此限制。)  
+ 对于自我描述列表框和组合框，您必须重写 `OnMeasureItem` 和 `OnDrawItem`。 对话框模板中，必须指定列表框的 LBS_OWNERDRAWVARIABLE 样式或组合框的 CBS_OWNERDRAWVARIABLE 样式。 OWNERDRAWFIXED 样式不会使用自我描述项目因为前自我描述控件附加到列表框确定固定的项目高度。 (你可以使用这些方法[CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)和[CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)来克服此限制。)  
   
- 切换到 `OWNERDRAWVARIABLE` 样式将强制系统对控件应用 `NOINTEGRALHEIGHT` 样式。 由于控件无法计算大小不定的项目的整体高度，因此将忽略 `INTEGRALHEIGHT` 的默认样式，并且控件将始终 `NOINTEGRALHEIGHT`。 如果项目的高度是固定的，则可通过指定控件大小为项目大小的整数倍数来防止描述部分项目。  
+ 切换到可变样式将强制系统 NOINTEGRALHEIGHT 样式应用于控件。 由于控件无法计算具有可变大小的项目的整体高度，将忽略 INTEGRALHEIGHT 的默认样式，并且控件始终会 NOINTEGRALHEIGHT。 如果项目的高度是固定的，则可通过指定控件大小为项目大小的整数倍数来防止描述部分项目。  
   
- 对于 `LBS_SORT` 或 `CBS_SORT` 样式的自我描述列表框和组合框，您必须重写 `OnCompareItem` 方法。  
+ 对于自我描述列表框和组合框使用 LBS_SORT 或 CBS_SORT 样式，您必须重写`OnCompareItem`方法。  
   
  对于自我描述列表框和组合框，一般不会重写 `OnDeleteItem`。 如果要执行任何特殊处理，您可重写 `OnDeleteItem`。 此操作可能适用的一种情况是，每个列表框或组合框项目与其他内存或其他资源一起存储。  
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385607"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957180"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定义的消息和资源
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33385607"
   
  MFC 私有标头中声明这些私有 Windows 消息和关联的参数结构 AFXPRIV。H。 发出警告的任何代码，其中包含此标头可能依赖于未记录的行为和都可能中断在将来版本的 MFC。  
   
- 在无需处理这些消息之一的极少数情况下，你应使用`ON_MESSAGE`消息映射宏和处理中的泛型 LRESULT/WPARAM/LPARAM 格式的消息。  
+ 在无需处理这些消息之一的极少数情况下，应使用 ON_MESSAGE 消息映射宏和处理中的泛型 LRESULT/WPARAM/LPARAM 格式的消息。  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -60,12 +60,12 @@ ms.locfileid: "33385607"
   
  **WM_SIZEPARENT**  
   
- 此消息由发送框架窗口到其直接子项在调整大小时 (**CFrameWnd::OnSize**调用`CFrameWnd::RecalcLayout`哪些调用`CWnd::RepositionBars`) 若要重新定位控件条周围的框架的端。 **AFX_SIZEPARENTPARAMS**结构包含用于调用父和 HDWP （它可能是 NULL） 的当前可用的客户端矩形`DeferWindowPos`尽量减少重新绘制。  
+ 此消息由发送框架窗口到其直接子项在调整大小时 (`CFrameWnd::OnSize`调用`CFrameWnd::RecalcLayout`哪些调用`CWnd::RepositionBars`) 若要重新定位控件条周围的框架的端。 AFX_SIZEPARENTPARAMS 结构包含用于调用父和 HDWP （它可能是 NULL） 的当前可用的客户端矩形`DeferWindowPos`尽量减少重新绘制。  
   
 |||  
 |-|-|  
 |wParam|未使用|  
-|lParam|地址**AFX_SIZEPARENTPARAMS**结构|  
+|lParam|AFX_SIZEPARENTPARAMS 结构的地址|  
 |返回|未使用 (0)|  
   
  忽略该消息指示窗口不带布局中的一部分。  
@@ -82,7 +82,7 @@ ms.locfileid: "33385607"
   
  **WM_IDLEUPDATECMDUI**  
   
- 在空闲时间发送此消息实现更新命令 UI 处理程序的空闲时间更新。 如果窗口 （通常控件条） 处理的消息，它将创建`CCmdUI`对象 （或派生类的对象） 并调用**CCmdUI::DoUpdate**为每个窗口中的"项目"。 这反过来将检查`ON_UPDATE_COMMAND_UI`处理程序命令处理程序链中的对象。  
+ 在空闲时间发送此消息实现更新命令 UI 处理程序的空闲时间更新。 如果窗口 （通常控件条） 处理的消息，它将创建`CCmdUI`对象 （或派生类的对象） 并调用`CCmdUI::DoUpdate`为每个窗口中的"项目"。 这反过来将检查的 ON_UPDATE_COMMAND_UI 处理程序命令处理程序链中的对象。  
   
 |||  
 |-|-|  
@@ -90,11 +90,11 @@ ms.locfileid: "33385607"
 |lParam|未使用 (0)|  
 |返回|未使用 (0)|  
   
- *bDisableIfNoHandler*不为零可禁用用户界面对象，如果既无`ON_UPDATE_COMMAND_UI`也不`ON_COMMAND`处理程序。  
+ *bDisableIfNoHandler*不为零可禁用用户界面对象，如果既没有 ON_UPDATE_COMMAND_UI 也没有 ON_COMMAND 处理程序。  
   
  **WM_EXITHELPMODE**  
   
- 此消息发布到`CFrameWnd`，若要退出上下文相关帮助模式。 收到此消息终止通过启动模式循环**CFrameWnd::OnContextHelp。**  
+ 此消息发布到`CFrameWnd`，若要退出上下文相关帮助模式。 收到此消息终止通过启动模式循环`CFrameWnd::OnContextHelp`。  
   
 |||  
 |-|-|  
@@ -150,35 +150,35 @@ ms.locfileid: "33385607"
   
  **WM_FLOATSTATUS**  
   
- 此消息发送到所有拥有的框架窗口时激活或停用另一个顶级框架窗口框架的弹出窗口。 实现使用此**MFS_SYNCACTIVE**中`CMiniFrameWnd`，以使这些弹出式窗口激活与顶部级别框架窗口的激活同步。  
+ 此消息发送到所有拥有的框架窗口时激活或停用另一个顶级框架窗口框架的弹出窗口。 这由 MFS_SYNCACTIVE 中的实现`CMiniFrameWnd`，以使这些弹出式窗口激活与顶部级别框架窗口的激活同步。  
   
 |||  
 |-|-|  
-|wParam|是以下值之一：<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|是以下值之一：<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|未使用 (0)|  
   
- 返回值应为非零如果**FS_SYNCACTIVE**是组和窗口使其与父帧的激活。 `CMiniFrameWnd` 返回非零值时的样式设置为**MFS_SYNCACTIVE。**  
+ 返回值应为非零如果 FS_SYNCACTIVE 是组和窗口使其与激活的父框架。 `CMiniFrameWnd` 样式设置为 MFS_SYNCACTIVE 时返回非零值。  
   
  有关详细信息，请参阅的实现`CMiniFrameWnd`。  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- 当激活或停用在其"顶级组"窗口时，此消息是发送到顶级窗口。 如果这是一个顶级窗口 （没有父或所有者），或属于这样一个窗口，窗口将是顶级组的一部分。 此消息是在使用类似**WM_ACTIVATEAPP，** 但可在属于不同的进程的 windows （常见 OLE 应用程序中） 的单个窗口层次结构中的混合其中的情况下。  
+ 当激活或停用在其"顶级组"窗口时，此消息是发送到顶级窗口。 如果这是一个顶级窗口 （没有父或所有者），或属于这样一个窗口，窗口将是顶级组的一部分。 此消息是在使用类似于 WM_ACTIVATEAPP，但在 （常见 OLE 应用程序中） 的单个窗口层次结构中混合在的情况下 windows 属于不同的进程中的工作。  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP，WM_HELPHITTEST，WM_EXITHELPMODE  
  这些消息的上下文相关帮助实现中使用。 请参阅[技术注意 28](../mfc/tn028-context-sensitive-help-support.md)有关详细信息。  
   
 ## <a name="mfc-private-resource-formats"></a>MFC 私有资源格式  
- 目前，MFC 定义两种专用的资源格式： **RT_TOOLBAR**和**RT_DLGINIT**。  
+ 目前，MFC 定义两种专用的资源格式： RT_TOOLBAR 和 RT_DLGINIT。  
   
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR 资源格式  
- 默认的工具栏由 AppWizard 提供基于**RT_TOOLBAR** MFC 4.0 中引入的自定义资源。 你可以编辑使用工具栏编辑器此资源。  
+ 默认的工具栏由 AppWizard 提供基于 RT_TOOLBAR 自定义资源，MFC 4.0 中引入。 你可以编辑使用工具栏编辑器此资源。  
   
 ## <a name="rtdlginit-resource-format"></a>RT_DLGINIT 资源格式  
  一个 MFC 专用的资源格式用于存储额外对话框初始化信息。 这包括存储在一个组合框的初始字符串。 此资源的格式不是手动进行编辑，但由 Visual c + +。  
   
- Visual c + +，这**RT_DLGINIT**资源不需要使用 MFC 的相关的功能，因为不存在的资源使用信息 API 替代方法。 使用 Visual c + +，使得可以更轻松地编写、 维护和转换从长远来看，你的应用程序。  
+ Visual c + + 和此 RT_DLGINIT 资源不需要使用 MFC 的相关的功能，因为不存在的资源使用信息 API 替代方法。 使用 Visual c + +，使得可以更轻松地编写、 维护和转换从长远来看，你的应用程序。  
   
- 基本结构**RT_DLGINIT**资源是，如下所示：  
+ RT_DLGINIT 资源的基本结构如下所示：  
   
 ```  
 +---------------+    \  

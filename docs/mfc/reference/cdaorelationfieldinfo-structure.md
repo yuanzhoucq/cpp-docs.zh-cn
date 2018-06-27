@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53daaaa5ef4997762342cbfb74ae4d5fa96097d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d86faf89aea0f991a9fdd27bec6bb7969404986
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366156"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956906"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 结构
 `CDaoRelationFieldInfo`结构包含有关中的数据访问对象 (DAO) 定义的关系的字段的信息。  
@@ -38,10 +38,10 @@ struct CDaoRelationFieldInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  关系的主表中的字段的名称。  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  关系的外表中的字段的名称。  
   
 ## <a name="remarks"></a>备注  

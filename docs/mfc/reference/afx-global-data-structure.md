@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357223"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956302"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
 `AFX_GLOBAL_DATA` 结构包含用于管理框架或自定义应用程序外观和行为的字段和方法。  
@@ -86,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|指示当前操作系统是否支持 alpha 值混合处理。|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|指示应用程序在 Windows 7 OS 还是更高版本下执行|  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>参数   
- `angle`  
+ *角度*  
  顺时针旋转的角度，以度为单位。  
   
- `center`  
+ *center*  
  围绕其旋转的点。  
   
- `matrix`  
+ *矩阵*  
  此方法返回时，包含新的旋转转换。 必须为此参数来分配存储空间。  
   
 ### <a name="return-value"></a>返回值  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `pWnd`  
+ [in]*pWnd*  
  指向控件的窗口的指针。  
   
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `lpRect`  
+ [in]*lpRect*  
  指向用来限定要绘制的区域的矩形的指针。 默认值为 `NULL`。  
   
 ### <a name="return-value"></a>返回值  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `hTheme`  
+ [in]*hTheme*  
  窗口主题数据的句柄，或 `NULL`。 如果此参数不是 `NULL` 且支持主题，框架将使用指定的主题绘制文本。 否则，该框架将不使用主题来绘制文本。  
   
  使用 [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) 方法创建 `HTHEME`。  
   
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `iPartId`  
+ [in]*iPartId*  
  具有所需文本外观的控件部件。 有关详细信息，请参阅 [部件和状态](http://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“部件”列。 如果此值为 0，则会使用默认字体或在设备上下文中选择的字体绘制文本。  
   
- [in] `iStateId`  
+ [in]*iStateId*  
  具有所需文本外观的控件状态。 有关详细信息，请参阅 [部件和状态](http://msdn.microsoft.com/library/windows/desktop/bb773210)中表格的“状态”列。  
   
- [in] `strText`  
+ [in]*strText*  
  要绘制的文本。  
   
- [in] `rect`  
+ [in]*rect*  
  在其中绘制指定文本的区域的边界。  
   
- [in] `dwFlags`  
+ [in]*dwFlags*  
  指定如何绘制指定文本的标志的按位组合 (OR)。  
   
- 如果`hTheme`参数是`NULL`或如果主题不支持的和启用，`nFormat`参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述有效的标志。 如果支持主题， `dwFlags` DrawThemeTextEx [方法的](http://msdn.microsoft.com/library/windows/desktop/bb773317) 参数将描述有效的标志。  
+ 如果*hTheme*参数是`NULL`或如果主题不支持的和启用， *nFormat*参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述了有效标志。 如果支持主题， *dwFlags*参数[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)方法描述有效的标志。  
   
- [in] `nGlowSize`  
+ [in]*nGlowSize*  
  在背景上绘制，然后指定绘制的文本之前发光效果的大小。 默认值为 0。  
   
- [in] `clrText`  
+ [in]*clrText*  
  在其中绘制指定文本的颜色。 默认值为默认颜色。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果主题用于绘制指定的文本;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 主题定义应用程序的视觉样式。 如果 `hTheme` 参数为 `NULL`，或不支持 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) ，或如果禁用 [桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 组合，主题不会用于绘制文本。  
+ 主题定义应用程序的视觉样式。 主题不用于绘制文本，如果*hTheme*参数是`NULL`，或者如果[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)不支持方法，或者如果[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 组合已被禁用。  
   
 ### <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 启用辅助功能支持；`FALSE` 禁用辅助功能支持。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `strBuffer`  
+ [in]*strBuffer*  
  文本缓冲区。  
   
- [in] `lpszTag`  
+ [in]*lpszTag*  
  成对的开始和结束 XML 标记的名称。  
   
- [out] `strTag`  
- 此方法返回时，`strTag`参数包含由命名的标记是开始标记和结束 XML 之间的文本`lpszTag`参数。 从结果中任何前导或尾随空格被裁剪。  
+ [out]*strTag*  
+ 此方法返回时， *strTag*参数包含由命名的标记是开始标记和结束 XML 之间的文本*lpszTag*参数。 从结果中任何前导或尾随空格被裁剪。  
   
- [in] `bIsCharsList`  
- `TRUE` 要转换为转义字符中的符号`strTag`到实际的转义字符; 的参数`FALSE`无法执行转换。默认值是`FALSE`。 有关更多信息，请参见“备注”。  
+ [in]*bIsCharsList*  
+ `TRUE` 要转换为转义字符中的符号*strTag*到实际的转义字符; 的参数`FALSE`无法执行转换。默认值是`FALSE`。 有关更多信息，请参见“备注”。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 名为开始和结束标记表示的开始和结束的指定缓冲区中的文本的运行时的 XML 标记对组成。 `strBuffer`参数指定缓冲区，和`lpszTag`参数指定的 XML 标记的名称。  
+ 名为开始和结束标记表示的开始和结束的指定缓冲区中的文本的运行时的 XML 标记对组成。 *StrBuffer*参数指定缓冲区，和*lpszTag*参数指定的 XML 标记的名称。  
   
- 使用下表中的符号进行编码的一组指定的缓冲区中的转义字符。 指定`TRUE`为`bIsCharsList`要转换中的符号参数`strTag`到实际的转义符的参数。 下表使用[_T()](../../c-runtime-library/data-type-mappings.md)宏来指定符号并转义字符字符串。  
+ 使用下表中的符号进行编码的一组指定的缓冲区中的转义字符。 指定`TRUE`为*bIsCharsList*要转换中的符号参数*strTag*到实际的转义符的参数。 下表使用[_T()](../../c-runtime-library/data-type-mappings.md)宏来指定符号并转义字符字符串。  
   
 |符号|转义符|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `nColor`  
- 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅`nIndex`参数[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ [in]*nColor*  
+ 指定将检索其颜色的用户界面元素的值。 有关有效值的列表，请参阅*nIndex*参数[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ### <a name="return-value"></a>返回值  
  指定的用户界面元素的 RGB 颜色值。 有关更多信息，请参见“备注”。  
   
 ### <a name="remarks"></a>备注  
- 如果 `nColor` 参数超出范围，则返回值是零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，它返回`NULL`如果颜色不受支持。  
+ 如果*nColor*参数的值超出范围，则返回值为零。 由于零也是有效的 RGB 值，因此您不能使用此方法来确定当前操作系统是否支持系统颜色。 请改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，它返回`NULL`如果颜色不受支持。  
   
 ### <a name="see-also"></a>请参阅  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in, out] `info`  
+ [在中，out]*信息*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)结构，其中包含与非最小化窗口的非工作区相关联的可缩放度量值。  
   
 ### <a name="return-value"></a>返回值  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `bHorz`  
+ [in]*bHorz*  
  如果为 `TRUE`，则在文本水平运行时检索字符的高度；如果为 `FALSE`，则在文本垂直运行时检索字符的高度。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>参数   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  它创建 D2D 工厂和资源的线程模型。  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  一个值，指定是否将共享或隔离写入工厂对象  
   
 ### <a name="return-value"></a>返回值  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `lpszClassNamePrefix`  
+ [in]*lpszClassNamePrefix*  
  要注册的窗口类的名称。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则已注册的类的限定的名称否则为[资源异常](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
   
 ### <a name="remarks"></a>备注  
- 返回值为以下各项的冒号分隔的列表：`lpszClassNamePrefix` 参数字符串、当前应用程序实例的句柄的十六进制文本表示形式、应用程序光标（它是标识符为 IDC_ARROW 的箭头光标）和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
+ 返回值是一个冒号分隔的列表*lpszClassNamePrefix*参数字符串和当前的应用程序实例; 的句柄的十六进制文本表示形式之间实现应用程序光标，它是箭头光标其标识符为 IDC_ARROW;和背景画笔。 有关注册 MFC 窗口类的详细信息，请参阅[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
   
 ### <a name="see-also"></a>请参阅    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `hwnd`  
+ [in]*hwnd*  
  分层窗口的句柄。  
   
- [in] `crKey`  
+ [in]*crKey*  
  透明度颜色键[桌面窗口管理器](http://msdn.microsoft.com/library/windows/desktop/aa969540)用于组成分层的窗口。  
   
- [in] `bAlpha`  
+ [in]*bAlpha*  
  用于描述分层窗口的暗度的 alpha 值。  
   
- [in] `dwFlags`  
- 标志的按位组合 (OR)，其指定参数要使用的方法。 指定 LWA_COLORKEY 以使用 `crKey` 参数作为透明度颜色。 指定 LWA_ALPHA 以使用 `bAlpha` 参数确定分层窗口的暗度。  
+ [in]*dwFlags*  
+ 标志的按位组合 (OR)，其指定参数要使用的方法。 指定 LWA_COLORKEY 以使用*crKey*参数作为透明度颜色。 指定 LWA_ALPHA 以使用*bAlpha*参数确定分层窗口的不透明度。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果此方法成功，则否则为`FALSE`。   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>参数   
- [in] `lpLogFont`  
+ [in]*lpLogFont*  
  指向包含字体的属性的结构的指针。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 若要指定文本水平; 运行`FALSE`指定文本垂直运行。  
   
 ### <a name="return-value"></a>返回值  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>参数   
- `pszPath`  
+ *pszPath*  
  [in]指向的显示名称的指针。  
   
- `pbc`  
+ *pbc*  
  指向控制在分析操作的绑定上下文的指针。  
   
- `riid`  
+ *riid*  
  指接口 id。  
   
- `ppv`  
- [out]此函数返回时，包含在中请求的接口指针`riid`。 这通常是`IShellItem`或`IShellItem2`。  
+ *ppv*  
+ [out]此函数返回时，包含在中请求的接口指针*riid*。 这通常是`IShellItem`或`IShellItem2`。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则则为 S_OK 返回否则为一个错误值。  

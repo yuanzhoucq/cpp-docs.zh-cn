@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367401"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956451"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 类
 实现将常规 `COleDocument` 服务器接入完整 DocObject 服务器所需的其他 OLE 接口： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>备注  
- `ActivateDocObject` 调用`IOleDocumentSite`的**ActivateMe**方法，但不显示视图，因为它在等待有关如何设置并显示的视图，给定的调用中的特定说明[CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` 调用`IOleDocumentSite`的`ActivateMe`方法，但不显示视图，因为它在等待有关如何设置并显示的视图，给定的调用中的特定说明[CDocObjectServer::OnActivateView](#onactivateview)。  
   
  在一起，`ActivateDocObject`和`OnActivateView`激活并显示 DocObject 视图。 DocObject 激活不同于其他类型的 OLE 就地激活。 DocObject 激活绕过显示就地阴影边框和 （如大小调整控点） 的对象修饰、 忽略对象扩展盘区功能，和绘制而不是外部 （如下所示正常该矩形中绘制这些视图矩形中的滚动条就地激活）。  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  指向 DocObject 服务器的客户端的客户端站点文档的指针。  
   
- `pDocSite`  
+ *pDocSite*  
  指向的指针`IOleDocumentSite`由容器实现的接口。  
   
 ### <a name="remarks"></a>备注  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ar`  
+ *ar*  
  A`CArchive`从中序列化的视图状态的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ar`  
+ *ar*  
  A`CArchive`对象的视图状态序列化。  
   
 ### <a name="remarks"></a>备注  

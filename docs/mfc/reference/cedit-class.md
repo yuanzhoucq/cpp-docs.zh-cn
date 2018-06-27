@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 98410fb8b62eb160e21803b60a14ce731ffc8c23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463074"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957450"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -181,7 +181,7 @@ class CEdit : public CWnd
   
  从对话框模板或直接在代码中，可以创建一个编辑控件。 在这两种情况下，第一次调用的构造函数`CEdit`构造`CEdit`对象，然后调用[创建](#create)成员函数来创建 Windows 编辑控件，并将其附加到`CEdit`对象。  
   
- 构造可以是派生自类中的一步过程`CEdit`。 编写派生的类和调用构造函数**创建**从构造函数中。  
+ 构造可以是派生自类中的一步过程`CEdit`。 编写派生的类和调用构造函数`Create`从构造函数中。  
   
  `CEdit` 继承中的重要功能`CWnd`。 若要设置和检索文本从`CEdit`对象，请使用`CWnd`成员函数[SetWindowText](cwnd-class.md#setwindowtext)和[GetWindowText](cwnd-class.md#getwindowtext)，编辑的全部内容的 set 或 get 控制，即使它是一个多行控件。 由 \r\n 字符序列分隔的多行控件中的文本行。 此外，如果多行编辑控件，获取和设置控件的文本的一部分调用`CEdit`成员函数[GetLine](#getline)， [SetSel](#setsel)， [GetSel](#getsel)，和[ReplaceSel](#replacesel)。  
   
@@ -249,7 +249,7 @@ BOOL CanUndo() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果可以通过调用撤消上一个编辑操作则不为**撤消**成员函数; 如果它不能撤消则为 0。  
+ 如果可以通过调用撤消上一个编辑操作则不为`Undo`成员函数; 如果它不能撤消则为 0。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) Windows SDK 中。  
@@ -278,7 +278,7 @@ int CharFromPos(CPoint pt) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  此点的工作区的坐标`CEdit`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -302,7 +302,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>备注  
- 删除由**清除**可以通过调用撤消[撤消](#undo)成员函数。  
+ 删除由`Clear`可以通过调用撤消[撤消](#undo)成员函数。  
   
  若要删除当前所选内容并将已删除的内容放入剪贴板，调用[剪切](#cut)成员函数。  
   
@@ -336,25 +336,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定编辑控件的样式。 应用的任意组合[编辑样式](styles-used-by-mfc.md#edit-styles)到控件。  
   
- `rect`  
+ *rect*  
  指定编辑控件的大小和位置。 可以是`CRect`对象或`RECT`结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定编辑控件的父窗口 (通常`CDialog`)。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定编辑控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果初始化成功; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CEdit`两个步骤中的对象。 首先，调用`CEdit`构造函数，然后调用**创建**，它创建 Windows 编辑控件并将其附加到`CEdit`对象。  
+ 构造`CEdit`两个步骤中的对象。 首先，调用`CEdit`构造函数，然后调用`Create`，它创建 Windows 编辑控件并将其附加到`CEdit`对象。  
   
- 当**创建**执行 Windows 发送[WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635)， [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634)， [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619)，和[WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626)的编辑控件的消息。  
+ 当`Create`执行 Windows 发送[WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635)， [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634)， [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619)，和[WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626)编辑控件的消息。  
   
  默认情况下，通过处理这些消息的消息[OnNcCreate](cwnd-class.md#onnccreate)， [OnNcCalcSize](cwnd-class.md#onnccalcsize)， [OnCreate](cwnd-class.md#oncreate)，和[OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo)成员函数在`CWnd`基类。 若要扩展的默认消息处理，从派生类`CEdit`、 将消息映射添加到新的类中，和重写上面的消息处理程序成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
   
@@ -381,7 +381,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>备注  
- 删除由**剪切**可以通过调用撤消[撤消](#undo)成员函数。  
+ 删除由`Cut`可以通过调用撤消[撤消](#undo)成员函数。  
   
  若要删除当前所选内容，而无需将删除的文本放入剪贴板，调用[清除](#clear)成员函数。  
   
@@ -445,10 +445,10 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `lpszText`  
+ [out]*lpszText*  
  指向包含提示文本的字符串的指针。  
   
- [in] `cchText`  
+ [in]*cchText*  
  可接收的字符数。 此数字包括终止`NULL`字符。  
   
 ### <a name="return-value"></a>返回值  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `pichStart`|突出显示的文本范围中的第一个字符的从零开始索引。|  
-|[out] `pichEnd`|突出显示的文本范围中的最后一个字符的从零开始索引。|  
+|[out]*pichStart*|突出显示的文本范围中的第一个字符的从零开始索引。|  
+|[out]*pichEnd*|突出显示的文本范围中的最后一个字符的从零开始索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -544,7 +544,7 @@ UINT GetLimitText() const;
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
- 调用此函数可从一个编辑控件中检索一行文本，并将其置于`lpszBuffer`。  
+ 调用此函数可从一个编辑控件中检索一行文本，并将其置于*lpszBuffer*。  
   
 ```  
 int GetLine(
@@ -558,17 +558,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定要检索从多个行的行号的编辑控件。 行号是从零开始;值为 0 指定的第一行。 单行编辑控件忽略此参数。  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  指向接收一份行的缓冲区。 缓冲区的第一个单词必须指定的最大可以将复制到缓冲区的字符数。  
   
- `nMaxLength`  
- 指定的最大可以将复制到缓冲区的字节数。 `GetLine` 将此值放在第一个单词的`lpszBuffer`之后再进行对 Windows 的调用。  
+ *nMaxLength*  
+ 指定的最大可以将复制到缓冲区的字节数。 `GetLine` 将此值放在第一个单词的*lpszBuffer*之后再进行对 Windows 的调用。  
   
 ### <a name="return-value"></a>返回值  
- 实际复制的字节数。 返回值为 0，如果指定的行号`nIndex`大于编辑控件中的行数。  
+ 实际复制的字节数。 返回值为 0，如果指定的行号*nIndex*大于编辑控件中的行数。  
   
 ### <a name="remarks"></a>备注  
  复制的行不包含 null 终止字符。  
@@ -661,7 +661,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构，它接收的格式设置的矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -686,10 +686,10 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartChar`  
+ *nStartChar*  
  对一个整数，它将在当前所选内容中看到的第一个字符的位置的引用。  
   
- `nEndChar`  
+ *nEndChar*  
  对一个整数，它将接收的当前所选内容的末尾的第一个未选中字符的位置的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -722,7 +722,7 @@ void LimitText(int nChars = 0);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nChars`  
+ *nChars*  
  指定用户可以输入的文本的长度 （以字节为单位）。 如果此参数为 0，文本长度设置为**UINT_MAX**字节。 这是默认行为。  
   
 ### <a name="remarks"></a>备注  
@@ -744,11 +744,11 @@ int LineFromChar(int nIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 包含所需的字符的文本编辑控件中的从零开始的索引值或包含为-1。 如果`nIndex`为-1，它指定的当前行，即包含脱字号的行。  
+ *nIndex*  
+ 包含所需的字符的文本编辑控件中的从零开始的索引值或包含为-1。 如果*nIndex*为-1，它指定的当前行，即包含脱字号的行。  
   
 ### <a name="return-value"></a>返回值  
- 包含指定的字符索引的行的从零开始的行号`nIndex`。 如果`nIndex`为-1，返回的包含所选内容的第一个字符的行数。 如果没有选择任何内容，则返回当前的行号。  
+ 包含指定的字符索引的行的从零开始的行号*nIndex*。 如果*nIndex*为-1，返回的包含所选内容的第一个字符的行数。 如果没有选择任何内容，则返回当前的行号。  
   
 ### <a name="remarks"></a>备注  
  字符索引是从开始处编辑控件的字符数。  
@@ -768,11 +768,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLine`  
- 包含所需的行的文本编辑控件中的索引值或包含为-1。 如果`nLine`为-1，它指定的当前行，即包含脱字号的行。  
+ *不*  
+ 包含所需的行的文本编辑控件中的索引值或包含为-1。 如果*不*为-1，它指定的当前行，即包含脱字号的行。  
   
 ### <a name="return-value"></a>返回值  
- 在指定的行的字符索引`nLine`; 如果指定的行数大于编辑控件中的行数-1。  
+ 在指定的行的字符索引*不*; 如果指定的行数大于编辑控件中的行数-1。  
   
 ### <a name="remarks"></a>备注  
  字符索引是从编辑控件的开头到指定的行的字符数。  
@@ -792,17 +792,17 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLine`  
+ *不*  
  其长度是要检索的行中的字符的从零开始的索引。 默认值为 -1。  
   
 ### <a name="return-value"></a>返回值  
  对于单行编辑控件，则返回值是长度，在`TCHAR`s，编辑控件中的文本。  
   
- 对于多行编辑控件，则返回值是长度，在`TCHAR`s，由指定的行的`nLine`参数。 有关[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]文本，长度为行中的字节数; 对于 Unicode 文本，长度为行中的字符数。 长度不包括位于行的末尾处的回车符的字符。  
+ 对于多行编辑控件，则返回值是长度，在`TCHAR`s，由指定的行的*不*参数。 有关[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]文本，长度为行中的字节数; 对于 Unicode 文本，长度为行中的字符数。 长度不包括位于行的末尾处的回车符的字符。  
   
- 如果`nLine`参数大于控件中的字符数，则返回值为零。  
+ 如果*不*参数大于控件中的字符数，则返回值为零。  
   
- 如果`nLine`参数为-1，则返回值为未选中部分中的字符数包含选定的字符的行。 例如，如果所选内容覆盖从一行到下一行的结尾八个字符的第四个字符，则返回值为 10。 也就是说，三个字符的第一行和七个下一步。  
+ 如果*不*参数为-1，则返回值为未选中部分中的字符数包含选定的字符的行。 例如，如果所选内容覆盖从一行到下一行的结尾八个字符的第四个字符，则返回值为 10。 也就是说，三个字符的第一行和七个下一步。  
   
  有关详细信息`TCHAR`类型，请参阅`TCHAR`的表中的行[Windows 数据类型](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
   
@@ -822,16 +822,16 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLines`  
+ *nLines*  
  指定垂直滚动的行的数。  
   
- `nChars`  
+ *nChars*  
  指定水平滚动的字符位置的数。 如果编辑控件已忽略此值**ES_RIGHT**或**ES_CENTER**样式。  
   
 ### <a name="remarks"></a>备注  
  此成员函数仅由多个行编辑控件处理。  
   
- 编辑控件不垂直滚动过的文本编辑控件中的最后一行。 如果当前行加上指定的行数`nLines`超过了总的编辑控件中的行数，以便编辑控件的最后一行滚动到编辑控件窗口的顶部，将调整值。  
+ 编辑控件不垂直滚动过的文本编辑控件中的最后一行。 如果当前行加上指定的行数*nLines*超过了总的编辑控件中的行数，以便编辑控件的最后一行滚动到编辑控件窗口的顶部，将调整值。  
   
  `LineScroll` 可以使用水平滚动过去的任意行的最后一个字符。  
   
@@ -863,14 +863,14 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nChar`  
+ *nChar*  
  指定的字符的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 由指定的字符的左上角的坐标`nChar`。  
+ 由指定的字符的左上角的坐标*nChar*。  
   
 ### <a name="remarks"></a>备注  
- 通过给的从零开始的索引值指定的字符。 如果`nChar`大于在此的最后一个字符的索引`CEdit`对象，返回的值在此指定刚超出最后一个字符的字符位置的坐标`CEdit`对象。  
+ 通过给的从零开始的索引值指定的字符。 如果*nChar*大于在此的最后一个字符的索引`CEdit`对象，返回的值在此指定刚超出最后一个字符的字符位置的坐标`CEdit`对象。  
   
 > [!NOTE]
 >  此成员函数是与 Windows 95 和 Windows NT 4.0 开始提供。  
@@ -881,17 +881,17 @@ CPoint PosFromChar(UINT nChar) const;
   请参阅示例[CEdit::LineFromChar](#linefromchar)。  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
- 调用此函数可将替换为指定的文本编辑控件中的当前选定`lpszNewText`。  
+ 调用此函数可将替换为指定的文本编辑控件中的当前选定*lpszNewText*。  
   
 ```  
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszNewText`  
+ *lpszNewText*  
  指向以 null 结尾的字符串包含替换文本。  
   
- `bCanUndo`  
+ *bCanUndo*  
  若要指定此函数可用于撤消，设置到此参数的值**TRUE** 。 默认值是**FALSE**。  
   
 ### <a name="remarks"></a>备注  
@@ -917,10 +917,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  指向包含编辑控件中显示的提示的字符串的指针。  
   
- [in] `fDrawWhenFocused`  
+ [in]*fDrawWhenFocused*  
  如果`false`，当用户在编辑控件中单击，并使获得焦点的控件不绘制提示横幅。  
   
  如果`true`，即使在控件有焦点绘制提示横幅。 当用户开始在控件中键入时，就会消失提示横幅。  
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `ichStart`|要突出显示的文本范围中的第一个字符的从零开始索引。|  
-|[in] `ichEnd`|要突出显示的文本范围中的最后一个字符的从零开始索引。|  
+|[in]*ichStart*|要突出显示的文本范围中的第一个字符的从零开始索引。|  
+|[in]*ichEnd*|要突出显示的文本范围中的最后一个字符的从零开始索引。|  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643)消息，Windows SDK 中介绍。  
@@ -995,7 +995,7 @@ void SetLimitText(UINT nMax);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMax`  
+ *最*  
  新文本限制，以字符为单位。  
   
 ### <a name="remarks"></a>备注  
@@ -1044,7 +1044,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bModified`  
+ *bModified*  
  值为**TRUE**指出文本已修改，值为**FALSE**指示它未被修改。 默认情况下，设置已修改的标志。  
   
 ### <a name="remarks"></a>备注  
@@ -1088,7 +1088,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bReadOnly`  
+ *bReadOnly*  
  指定是否要设置或删除编辑控件的只读状态。 值为**TRUE**将状态设置为只读; 如果值为**FALSE**设置为读/写状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -1110,7 +1110,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构或`CRect`对象，它指定的格式设置的矩形的新维度。  
   
 ### <a name="remarks"></a>备注  
@@ -1135,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构或`CRect`对象，它指定矩形的新维度。  
   
 ### <a name="remarks"></a>备注  
@@ -1176,10 +1176,10 @@ void SetSel(
  *bNoScroll*  
  指示是否将插入符号被滚动到视图。 如果**FALSE**，插入符号移动滚动到视图。 如果**TRUE**，插入符号不滚动到视图。  
   
- `nStartChar`  
- 指定的起始位置。 如果`nStartChar`为 0 和`nEndChar`为-1，所有选择的文本编辑控件中。 如果`nStartChar`为-1，删除任何当前所选内容。  
+ *nStartChar*  
+ 指定的起始位置。 如果*nStartChar*为 0 和*nEndChar*为-1，所有选择的文本编辑控件中。 如果*nStartChar*为-1，删除任何当前所选内容。  
   
- `nEndChar`  
+ *nEndChar*  
  指定的结束位置。  
   
 ### <a name="remarks"></a>备注  
@@ -1202,13 +1202,13 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cxEachStop`  
- 指定制表位是若要设置在每个`cxEachStop`对话框单位。  
+ *cxEachStop*  
+ 指定制表位是若要设置在每个*cxEachStop*对话框单位。  
   
- `nTabStops`  
- 指定的数中包含的制表位`rgTabStops`。 此数字必须大于 1。  
+ *nTabStops*  
+ 指定的数中包含的制表位*rgTabStops*。 此数字必须大于 1。  
   
- `rgTabStops`  
+ *rgTabStops*  
  在对话框单位中停止指向数组的指定选项卡上的无符号整数。 对话框单位是水平或垂直距离。 一个水平对话框单位等于当前对话框基本宽度单位的四分之一和 1 个垂直对话框单位等于当前对话框基本高度单位的八分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 **GetDialogBaseUnits** Windows 函数以像素为单位返回当前对话框基本单位。  
   
 ### <a name="return-value"></a>返回值  
@@ -1217,7 +1217,7 @@ BOOL SetTabStops(
 ### <a name="remarks"></a>备注  
  当文本复制到多行编辑控件中时，任何 tab 字符文本中的将导致空间来生成到下一个制表位。  
   
- 若要设置为 32 个对话框单位的默认大小的制表位，调用此成员函数的无参数版本。 若要设置为 32 以外大小的制表位，调用的版本与`cxEachStop`参数。 若要设置制表位大小的数组，包含两个参数使用版本。  
+ 若要设置为 32 个对话框单位的默认大小的制表位，调用此成员函数的无参数版本。 若要设置为 32 以外大小的制表位，调用的版本与*cxEachStop*参数。 若要设置制表位大小的数组，包含两个参数使用版本。  
   
  此成员函数仅处理由多个行编辑控件。  
   
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pEditBalloonTip`|指向[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)描述的气球状提示的结构。|  
-|[in] `lpszTitle`|指向包含标题的气球状提示的 Unicode 字符串的指针。|  
-|[in] `lpszText`|指向包含的气球状提示文本的 Unicode 字符串的指针。|  
-|[in] `ttiIcon`|`INT` ，它指定要将与气球状提示关联的图标的类型。 默认值为 `TTI_NONE`。 有关详细信息，请参阅`ttiIcon`的成员[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)结构。|  
+|[in]*pEditBalloonTip*|指向[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)描述的气球状提示的结构。|  
+|[in]*lpszTitle*|指向包含标题的气球状提示的 Unicode 字符串的指针。|  
+|[in]*lpszText*|指向包含的气球状提示文本的 Unicode 字符串的指针。|  
+|[in]*ttiIcon*|**INT** ，它指定要将与气球状提示关联的图标的类型。 默认值为 `TTI_NONE`。 有关详细信息，请参阅`ttiIcon`的成员[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -1277,7 +1277,7 @@ BOOL Undo();
  对于单行编辑控件，返回值始终为非零。 对于多行编辑控件，则返回值是如果撤消操作成功，则为非 0 或 0 如果撤消操作失败。  
   
 ### <a name="remarks"></a>备注  
- 撤消操作也可以撤消。 例如，可以还原已删除的文本与首次调用**撤消**。 只要没有任何干预的编辑操作，你可以删除再次通过第二个调用的文本**撤消**。  
+ 撤消操作也可以撤消。 例如，可以还原已删除的文本与首次调用`Undo`。 只要没有任何干预的编辑操作，你可以删除再次通过第二个调用的文本`Undo`。  
   
  有关详细信息，请参阅[EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) Windows SDK 中。  
   

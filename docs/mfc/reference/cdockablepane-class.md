@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b00c40ded45d1d71b42c126e2461c404eb5223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6565ea15a2440855aa7f22ef7bbe37d2f583fb71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378795"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957255"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 实现可在停靠站点停靠或包含在选项卡式窗格中的窗格。  
@@ -248,7 +248,7 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|指定是否禁用自动隐藏动画的可停靠的窗格。|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|在窗格中，在自动隐藏模式下时，请确定窗格的行为。|  
@@ -280,14 +280,14 @@ class CDockablePane : public CPane
   
 -   显示拖动矩形的同时拖动窗格。  
   
- 若要在你的应用程序中使用停靠的窗格中，派生从你窗格类`CDockablePane`类。 到主框架窗口对象或控制您的窗格的实例的窗口对象嵌入派生的对象。 然后调用[CDockablePane::Create](#create)方法或[cdockablepane:: Createex](#createex)方法处理时`WM_CREATE`主框架窗口中的消息。 最后，通过调用设置窗格对象[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)， [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane)，或[cdockablepane:: Attachtotabwnd](#attachtotabwnd)。  
+ 若要在你的应用程序中使用停靠的窗格中，派生从你窗格类`CDockablePane`类。 到主框架窗口对象或控制您的窗格的实例的窗口对象嵌入派生的对象。 然后调用[CDockablePane::Create](#create)方法或[cdockablepane:: Createex](#createex)方法处理主框架窗口中的 WM_CREATE 消息时。 最后，通过调用设置窗格对象[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)， [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane)，或[cdockablepane:: Attachtotabwnd](#attachtotabwnd)。  
   
 ## <a name="customization-tips"></a>自定义提示  
  以下提示适用于`CDockablePane`对象：  
   
 -   如果调用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)对于两个非选项卡式、 可停靠窗格，指向选项卡式窗口的指针将返回在`ppTabbedControlBar`参数。 你可以继续使用此参数将选项卡添加到选项卡式窗口。  
   
--   通过创建的选项卡式窗格种[cdockablepane:: Attachtotabwnd](#attachtotabwnd)由`CDockablePane`对象在`pTabControlBarAttachTo`参数。 你可以调用[cdockablepane:: Settabbedpanertc](#settabbedpanertc)到设置的选项卡式窗格类型`CDockablePane`将创建。 默认类型由`dwTabbedStyle`的[CDockablePane::Create](#create)当你首次创建`CDockablePane`。 如果`dwTabbedStyle`是默认的类型是的 AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md); 如果`dwTabbedStyle`是默认的类型是的 AFX_CBRS_REGULAR_TABS [CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)。  
+-   通过创建的选项卡式窗格种[cdockablepane:: Attachtotabwnd](#attachtotabwnd)由`CDockablePane`对象在*pTabControlBarAttachTo*参数。 你可以调用[cdockablepane:: Settabbedpanertc](#settabbedpanertc)到设置的选项卡式窗格类型`CDockablePane`将创建。 默认类型由`dwTabbedStyle`的[CDockablePane::Create](#create)当你首次创建`CDockablePane`。 如果*dwTabbedStyle*是默认的类型是的 AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md); 如果*dwTabbedStyle* AFX_CBRS_REGULAR_TABS 默认类型为[CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)。  
   
 -   如果你想要将一个可停靠窗格停靠到另一个，调用[CDockablePane::DockToWindow](#docktowindow)方法。 原始窗格中必须停靠位置然后才能调用此方法。  
   
@@ -329,16 +329,16 @@ virtual CDockablePane* AttachToTabWnd(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pTabControlBarAttachTo`  
+ [in][out]*pTabControlBarAttachTo*  
  指定当前窗格中将附加到目标窗格。 目标窗格中必须是可停靠的窗格。  
   
- [in] `dockMethod`  
+ [in]*dockMethod*  
  指定的停靠的方法。  
   
- [in] `bSetActive`  
+ [in]*bSetActive*  
  `TRUE` 若要在附加操作; 后激活选项卡式的窗格否则为`FALSE`。  
   
- [out] `ppTabbedControlBar`  
+ [out]*ppTabbedControlBar*  
  包含附加操作生成的选项卡式的窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -347,13 +347,13 @@ virtual CDockablePane* AttachToTabWnd(
 ### <a name="remarks"></a>备注  
  当一个可停靠的窗格中将附加到使用此方法的另一个窗格中时，发生以下情况：  
   
-1.  Framework 检查是否目标窗格中`pTabControlBarAttachTo`正则表达式停靠窗格或如果它派生自[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)。  
+1.  Framework 检查是否目标窗格中*pTabControlBarAttachTo*正则表达式停靠窗格或如果它派生自[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)。  
   
 2.  如果目标窗格中，选项卡式的窗格框架将当前窗格中向其添加为一个选项卡。  
   
 3.  如果目标窗格中，正则停靠窗格框架创建选项卡式的窗格。  
   
-    -   框架调用`pTabControlBarAttachTo->CreateTabbedPane`。 取决于新的选项卡式窗格中的样式`m_pTabbedControlBarRTC`成员。 默认情况下，此成员设置为运行时类的[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。 如果你通过`AFX_CBRS_OUTLOOK_TABS`样式作为`dwTabbedStyle`参数[CDockablePane::Create](#create)方法，运行时类对象设置为运行时类的[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)。 你可以随时更改新窗格中的样式更改此成员。  
+    -   框架调用`pTabControlBarAttachTo->CreateTabbedPane`。 取决于新的选项卡式窗格中的样式`m_pTabbedControlBarRTC`成员。 默认情况下，此成员设置为运行时类的[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。 如果你通过`AFX_CBRS_OUTLOOK_TABS`样式作为*dwTabbedStyle*参数[CDockablePane::Create](#create)方法，运行时类对象设置为运行时类的[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). 你可以随时更改新窗格中的样式更改此成员。  
   
     -   当此方法创建选项卡式的窗格时，框架将替换指向的指针`pTabControlBarAttachTo`（窗格中是否停靠或浮动在多袖珍框架窗口中） 用一个指针指向新的选项卡式窗格。  
   
@@ -375,10 +375,10 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bStretch`  
+ [in]*bStretch*  
  未使用。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  未使用。  
   
 ### <a name="return-value"></a>返回值  
@@ -392,11 +392,11 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMiniFrame`  
+ [in]*pMiniFrame*  
  指向 `CPaneFrameWnd` 对象的指针。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`pMiniFrame`可停靠到窗格中; 否则为`FALSE`。  
+ `TRUE` 如果*pMiniFrame*可停靠到窗格中; 否则为`FALSE`。  
   
 ##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane  
  确定是否可以将另一个窗格停靠到当前窗格中。  
@@ -406,7 +406,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指定要将当前窗格停靠的窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -417,7 +417,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  重写此函数在启用或禁用特定窗格停靠在派生类中。  
   
- 默认情况下，此方法返回`TRUE`如果`pBar`或其父级的类型是`CDockablePane`。  
+ 默认情况下，此方法返回`TRUE`如果*pBar*或其父级的类型是`CDockablePane`。  
   
 ##  <a name="canautohide"></a>  CDockablePane::CanAutoHide  
  确定是否窗格中可以自动隐藏。  
@@ -469,7 +469,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bActiveTabOnly`  
+ [in]*bActiveTabOnly*  
  当转换`CTabbedPane`，指定`TRUE`要转换仅是活动的选项卡。指定`FALSE`要转换的窗格中的所有选项卡。  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
@@ -495,7 +495,7 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDirection`  
+ [in]*bDirection*  
  `TRUE` 如果窗格是可见的;`FALSE`如果窗格将会隐藏。  
   
 ### <a name="return-value"></a>返回值  
@@ -514,11 +514,11 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pOrgBar`  
+ [in]*pOrgBar*  
  指向可停靠的窗格中的指针。  
   
 ### <a name="remarks"></a>备注  
- `CDockablePane::CopyState` 将复制的状态`pOrgBar`到通过调用以下方法以及当前窗格：  
+ `CDockablePane::CopyState` 将复制的状态*pOrgBar*到通过调用以下方法以及当前窗格：  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
   
@@ -558,37 +558,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszCaption`  
+ [in]*lpszCaption*  
  指定的窗口名称。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定的父窗口。  
   
- [in] `rect`  
- 指定的大小和窗口的位置中的客户端坐标`pParentWnd`。  
+ [in]*rect*  
+ 指定的大小和窗口的位置中的客户端坐标*pParentWnd*。  
   
- [in] `bHasGripper`  
+ [in]*bHasGripper*  
  `TRUE` 若要创建带有标题; 窗格否则为`FALSE`。  
   
- [in] `nID`  
+ [in]*nID*  
  指定的子窗口的 ID。 此值必须是唯一的如果你想要保存此停靠的窗格的停靠状态。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  指定的窗口样式特性。  
   
- [in] `dwTabbedStyle`  
+ [in]*dwTabbedStyle*  
  指定当用户将窗格中拖动此窗格在标题上创建一个选项卡式窗口的选项卡式的样式。  
   
- [in] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定其他样式特性。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定窗口的创建上下文。  
   
- [in] `lpszWindowName`  
+ [in]*lpszWindowName*  
  指定的窗口名称。  
   
- [in] `sizeDefault`  
+ [in]*大小*  
  指定窗口的大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -597,9 +597,9 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  创建 Windows 窗格，并将其附加到`CDockablePane`对象。  
   
- 如果`dwStyle`窗口样式有`CBRS_FLOAT_MULTI`标志，与袖珍框架窗口中的其他窗格可以浮动袖珍框架窗口。 默认情况下，停靠窗格可以仅浮动单独。  
+ 如果*dwStyle*窗口样式有`CBRS_FLOAT_MULTI`标志，与袖珍框架窗口中的其他窗格可以浮动袖珍框架窗口。 默认情况下，停靠窗格可以仅浮动单独。  
   
- 如果`dwTabbedStyle`参数具有`AFX_CBRS_OUTLOOK_TABS`指定标志，在另一个窗格附加到此窗格中使用时，窗格中创建 Outlook 样式选项卡式窗格[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 默认情况下，可停靠窗格创建的类型的正则选项卡式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
+ 如果*dwTabbedStyle*参数具有`AFX_CBRS_OUTLOOK_TABS`指定标志，在另一个窗格附加到此窗格中使用时，窗格中创建 Outlook 样式选项卡式窗格[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 默认情况下，可停靠窗格创建的类型的正则选项卡式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
   
 ##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider  
  创建到框架窗口停靠的窗格中的默认分隔符。  
@@ -612,22 +612,22 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwAlignment`  
- 指定的端到停靠窗格中的主框架。 如果`dwAlignment`包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`标志，此方法创建垂直 ( `CPaneDivider::SS_VERT`) 分隔线; 否则，此方法会创建水平 ( `CPaneDivider::SS_HORZ`) 分隔符。  
+ [in]*dwAlignment*  
+ 指定的端到停靠窗格中的主框架。 如果*dwAlignment*包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`标志，此方法创建垂直 ( `CPaneDivider::SS_VERT`) 分隔线; 否则，此方法会创建水平 ( `CPaneDivider::SS_HORZ`) 分隔符。  
   
- [in] `pParent`  
+ [in]*pParent*  
  指向指针的父框架。  
   
- [in] `pSliderRTC`  
+ [in]*pSliderRTC*  
  未使用。  
   
 ### <a name="return-value"></a>返回值  
  此方法将指针返回到新建的分隔线，或`NULL`如果分隔符创建失败。  
   
 ### <a name="remarks"></a>备注  
- `dwAlignment` 可以是任何以下值：  
+ *dwAlignment*可以是任何以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|框架窗口的工作区顶部停靠窗格。|  
 |`CBRS_ALIGN_BOTTOM`|框架窗口的工作区底部停靠窗格。|  
@@ -652,34 +652,34 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwStyleEx`  
+ [in]*dwStyleEx*  
  指定新的窗口的扩展的样式属性。  
   
- [in] `lpszCaption`  
+ [in]*lpszCaption*  
  指定的窗口名称。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定的父窗口。  
   
- [in] `rect`  
- 指定的大小和窗口的位置中的客户端坐标`pParentWnd`。  
+ [in]*rect*  
+ 指定的大小和窗口的位置中的客户端坐标*pParentWnd*。  
   
- [in] `bHasGripper`  
+ [in]*bHasGripper*  
  `TRUE` 若要创建带有标题; 窗格否则为`FALSE`。  
   
- [in] `nID`  
+ [in]*nID*  
  指定的子窗口的 ID。 此值必须是唯一的如果你想要保存此停靠的窗格的停靠状态。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  指定的窗口样式特性。  
   
- [in] `dwTabbedStyle`  
+ [in]*dwTabbedStyle*  
  指定当用户将窗格中拖动此窗格在标题上创建一个选项卡式窗口的选项卡式的样式。  
   
- [in] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定的其他样式特性。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定窗口的创建上下文。  
   
 ### <a name="return-value"></a>返回值  
@@ -688,9 +688,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  创建 Windows 窗格，并将其附加到`CDockablePane`对象。  
   
- 如果`dwStyle`窗口样式有`CBRS_FLOAT_MULTI`标志，与袖珍框架窗口中的其他窗格可以浮动袖珍框架窗口。 默认情况下，停靠窗格可以仅浮动单独。  
+ 如果*dwStyle*窗口样式有`CBRS_FLOAT_MULTI`标志，与袖珍框架窗口中的其他窗格可以浮动袖珍框架窗口。 默认情况下，停靠窗格可以仅浮动单独。  
   
- 如果`dwTabbedStyle`参数具有`AFX_CBRS_OUTLOOK_TABS`指定标志，在另一个窗格附加到此窗格中使用时，窗格中创建 Outlook 样式选项卡式窗格[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 默认情况下，可停靠窗格创建的类型的正则选项卡式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
+ 如果*dwTabbedStyle*参数具有`AFX_CBRS_OUTLOOK_TABS`指定标志，在另一个窗格附加到此窗格中使用时，窗格中创建 Outlook 样式选项卡式窗格[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 默认情况下，可停靠窗格创建的类型的正则选项卡式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
   
 ##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane  
  从当前窗格中创建一个选项卡式的窗格。  
@@ -720,22 +720,22 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `barContainerManager`  
+ [in]*barContainerManager*  
  对正在停靠容器的容器管理器的引用。  
   
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  `DWORD` 指定的端到停靠容器的窗格。  
   
- [in] `dockMethod`  
+ [in]*dockMethod*  
  未使用。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果容器已成功停靠到窗格中;，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- `dwAlignment` 可以是任何以下值：  
+ *dwAlignment*可以是任何以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|容器正在停靠到窗格的顶部。|  
 |`CBRS_ALIGN_BOTTOM`|容器正在停靠到窗格的底部。|  
@@ -750,11 +750,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bWasDocked`  
+ [in]*bWasDocked*  
  方法返回时，此值包含`TRUE`窗格是成功停靠; 否则为如果它包含`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
- 如果窗格已停靠到选项卡式窗口中，或由于停靠创建选项卡式的窗口，此方法返回指向选项卡式窗口。 如果窗格是否则成功停靠，则此方法返回`this`指针。 如果停靠失败，此方法返回`NULL`。  
+ 如果窗格已停靠到选项卡式窗口中，或由于停靠创建选项卡式的窗口，此方法返回指向选项卡式窗口。 如果窗格是否则成功停靠，则此方法返回**这**指针。 如果停靠失败，此方法返回`NULL`。  
   
 ##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos  
  窗格停靠到其存储的停靠位置。  
@@ -780,20 +780,20 @@ virtual BOOL DockToWindow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pTargetWindow`  
+ [in][out]*pTargetWindow*  
  指定可停靠的窗格中，若要将停靠此窗格。  
   
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  指定的窗格的停靠对齐方式。 可能是 CBRS_ALIGN_LEFT、 CBRS_ALIGN_TOP、 CBRS_ALIGN_RIGHT、 CBRS_ALIGN_BOTTOM 或 CBRS_ALIGN_ANY 之一。 （在 afxres.h 中定义）。  
   
- [in] `lpRect`  
+ [in]*lpRect*  
  指定的窗格的停靠矩形。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果已成功，则停靠窗格，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以将一个窗格停靠到另一个窗格中，使用指定的对齐方式`dwAlignment`。  
+ 调用此方法以将一个窗格停靠到另一个窗格中，使用指定的对齐方式*dwAlignment*。  
   
 ##  <a name="drawcaption"></a>  CDockablePane::DrawCaption  
  绘制停靠的窗格的标题 （也称为控制手柄）。  
@@ -805,10 +805,10 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  表示用于绘图的设备上下文。  
   
- [in] `rectCaption`  
+ [in]*rectCaption*  
  指定窗格的标题的边框。  
   
 ### <a name="remarks"></a>备注  
@@ -824,13 +824,13 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用可停靠的窗格中; 所有功能的自动隐藏否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  当用户保存`Ctrl`键并单击固定按钮以切换到自动隐藏模式，在同一容器中的所有其他窗格的窗格中还会切换到自动隐藏模式。  
   
- 调用此方法与`bEnable`设置为`FALSE`若要为特定的窗格中禁用此功能。  
+ 调用此方法与*bEnable*设置为`FALSE`若要为特定的窗格中禁用此功能。  
   
 ##  <a name="enablegripper"></a>  CDockablePane::EnableGripper  
  显示或隐藏标题 （也称为控制手柄）。  
@@ -840,7 +840,7 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用标题;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -908,10 +908,10 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  以屏幕坐标表示指针的位置。  
   
- [in] `nSensitivity`  
+ [in]*nSensitivity*  
  距离，以像素为单位，离开矩形的边缘指针必须是以启用停靠。  
   
 ### <a name="return-value"></a>返回值  
@@ -949,7 +949,7 @@ int GetLastPercentInPaneContainer() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `int`该值指定在其容器中的窗格中所占据的空间的百分比。  
+ *Int*该值指定在其容器中的窗格中所占据的空间的百分比。  
   
 ### <a name="remarks"></a>备注  
  当容器调整其布局时使用此方法。  
@@ -964,10 +964,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectTabAreaTop`  
+ [in]*rectTabAreaTop*  
  `GetTabArea` 如果选项卡位于顶部的窗格中，请使用选项卡区域填充此变量。 如果选项卡位于窗格的底部，此变量被填充为空矩形。  
   
- [in] `rectTabAreaBottom`  
+ [in]*rectTabAreaBottom*  
  `GetTabArea` 如果选项卡位于窗格的底部，请使用选项卡区域填充此变量。 如果选项卡位于顶部的窗格中，此变量被填充为空矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1011,24 +1011,24 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  指定要测试的点。  
   
- [in] `bDetectCaption`  
+ [in]*bDetectCaption*  
  `TRUE` 如果`HTCAPTION`应返回该点是否在窗格的标题; 否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  以下值之一：  
   
-- `HTNOWHERE` 如果`point`不在可停靠的窗格中。  
+- `HTNOWHERE` 如果*点*不在可停靠的窗格中。  
   
-- `HTCLIENT` 如果`point`是可停靠的窗格中的客户端区域中。  
+- `HTCLIENT` 如果*点*是可停靠的窗格中的客户端区域中。  
   
-- `HTCAPTION` 如果`point`处于可停靠的窗格的标题区域。  
+- `HTCAPTION` 如果*点*处于可停靠的窗格的标题区域。  
   
-- `AFX_HTCLOSE` 如果`point`位于关闭按钮。  
+- `AFX_HTCLOSE` 如果*点*位于关闭按钮。  
   
-- `HTMAXBUTTON` 如果`point`位于固定按钮。  
+- `HTMAXBUTTON` 如果*点*位于固定按钮。  
   
 ##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled  
  指示是否可以将停靠的窗格中的容器中的所有其他窗格切换到自动隐藏模式。  
@@ -1193,7 +1193,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndOldParent`  
+ [in]*pWndOldParent*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1217,10 +1217,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndNewParent`  
+ [in]*pWndNewParent*  
  指向新的父窗口的指针。  
   
- [in] `bDelay`  
+ [in]*bDelay*  
  `BOOL` 它指定是否要延迟停靠布局的重新计算，如果停靠窗格。 有关详细信息，请参阅[CDockablePane::UndockPane](#undockpane)。  
   
 ### <a name="remarks"></a>备注  
@@ -1238,10 +1238,10 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectFloat`  
+ [in]*rectFloat*  
  当它处于浮动状态时指定的位置和窗格的大小。  
   
- [in] `dockMethod`  
+ [in]*dockMethod*  
  指定的停靠的方法。 请参阅[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)有关可能的值的列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -1258,7 +1258,7 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nHit`  
+ [in]*nHit*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1272,7 +1272,7 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSlideOut`  
+ [in]*bSlideOut*  
  `TRUE` 若要显示窗格;`FALSE`若要隐藏窗格。  
   
 ### <a name="remarks"></a>备注  
@@ -1299,13 +1299,13 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBarToReplaceWith`  
+ [in]*pBarToReplaceWith*  
  指向可停靠的窗格中的指针。  
   
- [in] `dockMethod`  
+ [in]*dockMethod*  
  未使用。  
   
- [in] `bRegisterWithFrame`  
+ [in]*bRegisterWithFrame*  
  如果`TRUE`，向旧窗格中的父到停靠管理器注册的新窗格。 在列表窗格中由到停靠管理器维护旧的窗格中的索引处插入新窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -1333,16 +1333,16 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMode`  
+ [in]*bMode*  
  `TRUE` 若要启用自动隐藏模式;`FALSE`若要启用正则停靠模式。  
   
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  指定自动隐藏窗格中创建的对齐的方式。  
   
- [in][out] `pCurrAutoHideBar`  
+ [in][out]*pCurrAutoHideBar*  
  指向当前的自动隐藏工具栏的指针。 可以是`NULL`。  
   
- [in] `bUseTimer`  
+ [in]*bUseTimer*  
  指定是否使用自动隐藏效果，当用户将窗格切换为自动隐藏模式或立即隐藏窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -1363,10 +1363,10 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pToolBar`  
+ [in]*pToolBar*  
  到自动隐藏工具栏的指针。  
   
- [in] `pBtn`  
+ [in]*pBtn*  
  指向一个自动隐藏按钮的指针。  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
@@ -1377,8 +1377,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
- `int`该值指定在其容器中的窗格中所占据的空间的百分比。  
+ [in]*n*  
+ **Int**该值指定在其容器中的窗格中所占据的空间的百分比。  
   
 ### <a name="remarks"></a>备注  
  框架调整窗格中时要使用的新值重新计算布局。  
@@ -1391,7 +1391,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hRestoredSlider`  
+ [in]*hRestoredSlider*  
  窗格分隔线 （滑块） 句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -1405,13 +1405,13 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRTC`  
+ [in]*pRTC*  
  选项卡式窗格中运行时类信息。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以设置动态创建的选项卡式窗格的运行时类信息。 当用户将一个窗格拖动到另一个窗格的标题，或者如果调用都会出现此[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法以编程方式从两个可停靠窗格创建选项卡式的窗格。  
   
- 根据设置了默认的运行时类`dwTabbedStyle`参数[CDockablePane::Create](#create)和[cdockablepane:: Createex](#createex)。 若要自定义新的选项卡式的窗格，请从以下类之一派生您的类：  
+ 根据设置了默认的运行时类*dwTabbedStyle*参数[CDockablePane::Create](#create)和[cdockablepane:: Createex](#createex)。 若要自定义新的选项卡式的窗格，请从以下类之一派生您的类：  
   
 - [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)  
   
@@ -1432,13 +1432,13 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要显示窗格;`FALSE`若要隐藏窗格。  
   
- [in] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 若要延迟调整停靠布局;`FALSE`以立即调整停靠布局。  
   
- [in] `bActivate`  
+ [in]*bActivate*  
  `TRUE` 若要激活窗格时显示;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1454,10 +1454,10 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSlideOut`  
+ [in]*bSlideOut*  
  `TRUE` 若要显示窗格;`FALSE`若要隐藏窗格。  
   
- [in] `bUseTimer`  
+ [in]*bUseTimer*  
  `TRUE` 若要显示或隐藏自动隐藏产生效果; 窗格`FALSE`以显示或隐藏立即窗格。  
   
 ### <a name="remarks"></a>备注  
@@ -1483,7 +1483,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 延迟计算停靠布局;`FALSE`立即重新计算停靠布局。  
   
 ### <a name="remarks"></a>备注  

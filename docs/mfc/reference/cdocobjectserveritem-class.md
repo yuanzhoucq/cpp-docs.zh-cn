@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367043"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956622"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 实现特别针对 DocObject 服务器的 OLE 服务器谓词。  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pServerDoc`  
+ *pServerDoc*  
  指向将包含新的 DocObject 项的文档的指针。  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  指示链接到该发布时，是否可以删除对象。 将参数设置为**FALSE**如果`CDocObjectServerItem`对象是不可或缺的组成部分文档的数据。 将其设置为**TRUE**如果对象是用于标识可以由框架删除的文档的数据中的范围的辅助结构。  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

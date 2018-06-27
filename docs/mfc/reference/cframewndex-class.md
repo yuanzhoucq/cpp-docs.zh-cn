@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e806d622e79fe57039b85dc77860b07b956ece1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71ec3bae44bd9365891c3a87fd33dfd3e1db2700
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377818"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957411"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 类
 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展[CFrameWnd](../../mfc/reference/cframewnd-class.md)类。  
@@ -337,10 +337,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
+ [in]*pControlBar*  
  若要注册一个控件栏窗格。  
   
- [in] `bTail`  
+ [in]*bTail*  
  `TRUE` 如果你想要将控件栏窗格添加到列表; 的末尾`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
@@ -354,7 +354,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hdwp`  
+ *hdwp*  
  包含多个窗口的位置的结构句柄。 .  
   
 ### <a name="remarks"></a>备注  
@@ -368,7 +368,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenuAlt`  
+ [in]*hMenuAlt*  
  替代菜单的句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -384,17 +384,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向要停靠控件条的指针。  
   
- [in] `nDockBarID`  
+ [in]*nDockBarID*  
  框架窗口停靠到一端的 ID。  
   
- [in] `lpRect`  
+ [in]*lpRect*  
  指向指定窗口的屏幕位置和大小的常量 Rect 结构的指针。  
   
 ### <a name="remarks"></a>备注  
- `nDockBarID`参数可以具有下列值之一：  
+ *NDockBarID*参数可以具有下列值之一：  
   
 -   AFX_IDW_DOCKBAR_TOP  
   
@@ -414,17 +414,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向要停靠的窗格中对象的指针。  
   
- [in] `pLeftOf`  
- 指向要将指定的窗格停靠在左侧窗格的指针`pBar`。  
+ [in]*pLeftOf*  
+ 指向要将指定的窗格停靠在左侧窗格的指针*pBar*。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`pBar`成功停靠。 否则为 `FALSE`。  
+ `TRUE` 如果*pBar*成功停靠。 否则为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 该方法采用指定工具栏`pBar`参数和它的工具栏左侧指定的停靠`pLeftOf`参数。  
+ 该方法采用指定工具栏*pBar*参数和它的工具栏左侧指定的停靠*pLeftOf*参数。  
   
 ##  <a name="enableautohidepanes"></a>  CFrameWndEx::EnableAutoHidePanes  
  启用自动隐藏模式的窗格停靠到指定的侧边的主框架窗口时。  
@@ -434,14 +434,14 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwDockStyle`  
+ [in]*dwDockStyle*  
  指定要将窗格停靠到主框架窗口的一侧。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果一个栏窗格成功停靠到由指定的框架窗口端`dwDockStyle`，`FALSE`否则为。  
+ `TRUE` 如果一个栏窗格成功停靠到由指定的框架窗口端*dwDockStyle*，`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
- `dwDockStyle` 可以具有以下值之一：  
+ *dwDockStyle*可以具有以下值之一：  
   
 -   CBRS_ALIGN_TOP： 允许到框架窗口的工作区顶部停靠控件条。  
   
@@ -459,14 +459,14 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwDockStyle`  
+ [in]*dwDockStyle*  
  指定主框架窗口停靠的窗格栏的其中一端。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果一个栏可以在指定的侧边成功停靠窗格。 否则为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
- `dwDockStyle`参数可以具有下列值之一：  
+ *DwDockStyle*参数可以具有下列值之一：  
   
 -   CBRS_ALIGN_TOP  
   
@@ -484,7 +484,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnableMenu`  
+ [in]*bEnableMenu*  
  `TRUE` 若要在全屏模式下，显示的主菜单`FALSE`否则为。  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
@@ -495,7 +495,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiFullScreenCmd`  
+ [in]*uiFullScreenCmd*  
  启用和禁用全屏模式的命令 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -513,7 +513,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用的停靠状态加载`FALSE`禁用的停靠状态加载。  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
@@ -530,22 +530,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用的弹出菜单; 栏控件的自动处理`FALSE`若要禁用的弹出菜单栏控件的自动处理。  
   
- [in] `uiCustomizeCmd`  
+ [in]*uiCustomizeCmd*  
  命令 ID 的**自定义**菜单项。  
   
- [in] `strCustomizeLabel`  
+ [in]*strCustomizeLabel*  
  要显示的标签**自定义**菜单项  
   
- [in] `uiViewToolbarsMenuEntryID`  
+ [in]*uiViewToolbarsMenuEntryID*  
  在控件条中打开的弹出菜单的工具栏菜单项的 ID。  
   
- [in] `bContextMenuShowsToolbarsOnly`  
+ [in]*bContextMenuShowsToolbarsOnly*  
  如果`TRUE`，上下文菜单栏控件显示的工具栏仅的列表。 如果`FALSE`，菜单显示的工具栏和停靠栏的列表。  
   
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in]*bViewMenuShowsToolbarsOnly*  
  如果`TRUE`，控件栏菜单显示的工具栏仅的列表。 如果`FALSE`，菜单显示的工具栏和停靠栏的列表。  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
@@ -599,7 +599,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  控件 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -637,10 +637,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向工具栏按钮的指针。  
   
- [in] `strTTText`  
+ [in]*strTTText*  
  要显示的按钮的工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -660,14 +660,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pControlBar`  
+ *pControlBar*  
  将插入到控件栏列表中并注册到停靠管理器的指向控件条的指针。  
   
- `pTarget`  
+ *pTarget*  
  在其之前或之后插入窗格的指向控件条的指针。  
   
- `bAfter`  
- `TRUE` 如果你想要插入`pControlBar`后`pTarget`，`FALSE`否则为。  
+ *bAfter*  
+ `TRUE` 如果你想要插入*pControlBar*后*pTarget*，`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果成功插入并注册，控件条`FALSE`否则为。  
@@ -709,20 +709,20 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  点的位置。  
   
- [out] `dwBarAlignment`  
+ [out]*dwBarAlignment*  
  对齐点的位置。 请参阅备注部分的可能值的表。  
   
- [out] `bOuterEdge`  
+ [out]*bOuterEdge*  
  `TRUE` 如果点是否位于接近边框;`FALSE`如果点位于工作区。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果该点位于未对齐的区域;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 下表列出的可能值`dwBarAlignment`参数。  
+ 下表列出的可能值*dwBarAlignment*参数。  
   
  `CBRS_ALIGN_TOP`  
  顶部对齐。  
@@ -760,16 +760,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIDResource`  
+ [in]*nIDResource*  
  用于加载所有框架资源的资源 ID。  
   
- [in] `dwDefaultStyle`  
+ [in]*dwDefaultStyle*  
  默认框架窗口样式。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向框架的父窗口的指针。  
   
- [in] `pContext`  
+ [in]*pContext*  
  指向[CCreateContext 结构](../../mfc/reference/ccreatecontext-structure.md)框架应用程序创建期间使用的类。  
   
 ### <a name="return-value"></a>返回值  
@@ -787,25 +787,25 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nBorderCmd`  
+ [in]*nBorderCmd*  
  边框协商命令。 请参阅备注部分有关可能的值。  
   
- [in, out] `lpRectBorder`  
+ [在中，out]*lpRectBorder*  
  边框的尺寸。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果必须重新计算布局;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 下表列出的可能值`nBorderCmd`参数。  
+ 下表列出的可能值*nBorderCmd*参数。  
   
- `borderGet`  
+ *borderGet*  
  获取可用的 OLE 客户端空间。  
   
- `borderRequest`  
+ *borderRequest*  
  请求 OLE 客户端空间。  
   
- `borderSet`  
+ *borderSet*  
  设置 OLE 客户端空间。  
   
 ##  <a name="onactivate"></a>  CFrameWndEx::OnActivate  
@@ -819,17 +819,17 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nState`  
+ [in]*nState*  
  是否的框架是活动或非活动。 请参阅备注部分的可能值的表。  
   
- [in] `pWndOther`  
+ [in]*pWndOther*  
  指向要切换与当前实例的用户输入的另一个窗口的指针。  
   
- [in] `bMinimized`  
+ [in]*bMinimized*  
  帧最小化的状态。 `TRUE` 最小化帧时;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 下表列出的可能值`nState`参数。  
+ 下表列出的可能值*nState*参数。  
   
  `WA_ACTIVE`  
  通过鼠标单击之外的方法，选择框架。  
@@ -850,10 +850,10 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bActive`  
+ [in]*bActive*  
  `TRUE` 如果选中了应用程序;，`FALSE`如果未选择应用程序。  
   
- [in] `dwThreadID`  
+ [in]*dwThreadID*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -868,10 +868,10 @@ afx_msg LRESULT OnChangeVisualManager(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wParam`  
+ [in]*wParam*  
  未使用此参数。  
   
- [in] `lParam`  
+ [in]*lParam*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -923,7 +923,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pMenuPopup`  
+ *pMenuPopup*  
  指向一个弹出菜单的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -941,16 +941,16 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  命令 ID。  
   
- [in] `nCode`  
+ [in]*nCode*  
  命令消息类别。  
   
- [in, out] `pExtra`  
+ [在中，out]*pExtra*  
  指向命令对象的指针。  
   
- [in, out] `pHandlerInfo`  
+ [在中，out]*pHandlerInfo*  
  命令处理程序结构的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -975,7 +975,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpCreateStruct`  
+ [in]*lpCreateStruct*  
  指向的指针[CREATESTRUCT 结构](../../mfc/reference/createstruct-structure.md)针对新帧。  
   
 ### <a name="return-value"></a>返回值  
@@ -1004,13 +1004,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pMenuButton`  
+ [in]*pMenuButton*  
  指向呈现其图像菜单按钮的指针。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  指向的指针`Rect`结构，它指定的屏幕位置和图像的大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -1030,13 +1030,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pMenu`  
+ [in]*pMenu*  
  指向菜单项的指针。  
   
- [in] `rectLogo`  
+ [in]*rectLogo*  
  为常量的引用`CRect`结构，它指定的屏幕位置和大小的菜单徽标。  
   
 ### <a name="remarks"></a>备注  
@@ -1052,10 +1052,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wp`  
+ [in]*wp*  
  未使用此参数。  
   
- [in] `lp`  
+ [in]*lp*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1073,10 +1073,10 @@ LRESULT OnExitSizeMove(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wp`  
+ [in]*wp*  
  未使用此参数。  
   
- [in] `lp`  
+ [in]*lp*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1092,7 +1092,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpMMI`  
+ [in]*lpMMI*  
  指向[MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605)结构。  
   
 ### <a name="remarks"></a>备注  
@@ -1107,10 +1107,10 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wParam`  
+ [in]*wParam*  
  未使用此参数。  
   
- [in] `lParam`  
+ [in]*lParam*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1128,10 +1128,10 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFlags`  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数`wParam`中[WM_LBUTTONDOWN 通知](http://msdn.microsoft.com/library/windows/desktop/ms645607)。  
+ [in]*nFlags*  
+ 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONDOWN 通知](http://msdn.microsoft.com/library/windows/desktop/ms645607)。  
   
- [in] `point`  
+ [in]*点*  
  指定 x 和指针的 y 坐标，相对于窗口的左上角。  
   
 ### <a name="remarks"></a>备注  
@@ -1146,10 +1146,10 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFlags`  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数`wParam`中[WM_LBUTTONUP 通知](http://msdn.microsoft.com/library/windows/desktop/ms645608)。  
+ [in]*nFlags*  
+ 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_LBUTTONUP 通知](http://msdn.microsoft.com/library/windows/desktop/ms645608)。  
   
- [in] `point`  
+ [in]*点*  
  指定 x 和指针的 y 坐标，相对于窗口的左上角。  
   
 ### <a name="remarks"></a>备注  
@@ -1164,14 +1164,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向工具栏按钮的指针。  
   
- [out] `pTI`  
+ [out]*pTI*  
  指向工具信息结构的指针。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果应用程序已满`pTI`参数。 否则为 `FALSE`。  
+ `TRUE` 如果应用程序已满*pTI*参数。 否则为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
  如果你想要提供有关特定菜单项的工具提示信息，请重写此方法。  
@@ -1187,13 +1187,13 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nChar`  
+ [in]*nChar*  
  按下的键的字符代码。  
   
- [in] `nFlags`  
+ [in]*nFlags*  
  包含`MF_POPUP`标志，如果显示的菜单位于子菜单; 包含`MF_SYSMENU`标志如果显示的菜单控件菜单。  
   
- [in] `pMenu`  
+ [in]*pMenu*  
  到的菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1220,10 +1220,10 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFlags`  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数`wParam`中[WM_MOUSEMOVE 通知](http://msdn.microsoft.com/library/windows/desktop/ms645616)。  
+ [in]*nFlags*  
+ 指示用户是否按下修改键。 有关可能的值，请参阅参数*wParam*中[WM_MOUSEMOVE 通知](http://msdn.microsoft.com/library/windows/desktop/ms645616)。  
   
- [in] `point`  
+ [in]*点*  
  指定的 x 和 y 坐标，相对于窗口的左上角的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1236,7 +1236,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pFrame`  
+ [in]*pFrame*  
  指向[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)窗格窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -1252,7 +1252,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bActive`  
+ [in]*bActive*  
  `TRUE` 若要绘制活动状态，则框架`FALSE`绘制非活动状态的帧。  
   
 ### <a name="return-value"></a>返回值  
@@ -1270,10 +1270,10 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bCalcValidRects`  
+ [in]*bCalcValidRects*  
  `TRUE` 当应用程序必须指定一个有效的客户端区域;否则为`FALSE`。  
   
- [in] `lpncsp`  
+ [in]*lpncsp*  
  指向`NCCALCSIZE_PARAMS`包含帧维度更改的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -1286,7 +1286,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  以屏幕坐标表示指针的位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -1304,10 +1304,10 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nHitTest`  
+ [in]*nHitTest*  
  指针命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
   
- [in] `point`  
+ [in]*点*  
  以屏幕坐标表示指针的位置。  
   
 ### <a name="remarks"></a>备注  
@@ -1329,7 +1329,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  显示窗格的控件 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -1347,10 +1347,10 @@ afx_msg LRESULT OnPostPreviewFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wParam`  
+ [in]*wParam*  
  未使用此参数。  
   
- [in] `lParam`  
+ [in]*lParam*  
  `TRUE` 当帧处于打印预览模式;`FALSE`时打印预览模式处于关闭状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -1368,10 +1368,10 @@ afx_msg LRESULT OnPowerBroadcast(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wp`  
+ [in]*wp*  
  电源管理事件。 有关可能的值的列表，请参阅[WM_POWERBROADCAST 消息](http://msdn.microsoft.com/library/windows/desktop/aa373247)。  
   
- [in] `lp`  
+ [in]*lp*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1391,13 +1391,13 @@ BOOL OnSetMenu(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wp`  
+ [in]*wp*  
  新的框架窗口菜单的句柄。  
   
- [in] `lp`  
+ [in]*lp*  
  新的窗口菜单的句柄。  
   
- [in] `hmenu`  
+ [in]*hmenu*  
  新的框架窗口菜单的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -1417,10 +1417,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bPreview`  
+ [in]*bPreview*  
  `TRUE` 若要启用打印预览，则为`FALSE`禁用打印预览。  
   
- [in] `pState`  
+ [in]*pState*  
  指向`CPrintPreviewState`帧状态结构。  
   
 ### <a name="remarks"></a>备注  
@@ -1435,10 +1435,10 @@ afx_msg LRESULT OnSetText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wParam`  
+ [in]*wParam*  
  未使用此参数。  
   
- [in] `lParam`  
+ [in]*lParam*  
  指向窗口的文本指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1456,10 +1456,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuPane`  
+ [in]*pMenuPane*  
  指向快速的自定义窗格。  
   
- [in] `uiToolbarID`  
+ [in]*uiToolbarID*  
  要自定义工具栏的控件 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -1476,16 +1476,16 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 如果应用程序显示窗格;`FALSE`否则为。  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 默认实现显示窗格如果`bShow`是`TRUE`和窗格隐藏时，或者当`bShow`是`FALSE`和窗格是可见。  
+ 默认实现显示窗格如果*bShow*是`TRUE`和窗格隐藏时，或者当*bShow*是`FALSE`和窗格是可见。  
   
- 默认实现隐藏窗格，如果`bShow`是`TRUE`，而且窗格可见时，或者当`bShow`是`FALSE`和窗格被隐藏。  
+ 默认实现隐藏窗格，如果*bShow*是`TRUE`，而且窗格可见时，或者当*bShow*是`FALSE`和窗格被隐藏。  
   
  重写此方法在派生类时要执行自定义代码框架显示或隐藏窗格。  
   
@@ -1497,7 +1497,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenu`  
+ [in]*pMenu*  
  指向一个弹出菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1517,13 +1517,13 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nType`  
- 调整大小的类型。 有关可能的值，请参阅参数`wParam`中[WM_SIZE 通知](http://msdn.microsoft.com/library/windows/desktop/ms632646)。  
+ [in]*nType*  
+ 调整大小的类型。 有关可能的值，请参阅参数*wParam*中[WM_SIZE 通知](http://msdn.microsoft.com/library/windows/desktop/ms632646)。  
   
- [in] `cx`  
+ [in]*cx*  
  以像素为单位的帧的新宽度。  
   
- [in] `cy`  
+ [in]*cy*  
  以像素为单位的帧的新高度。  
   
 ### <a name="remarks"></a>备注  
@@ -1538,10 +1538,10 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `fwSide`  
- 移动框架边缘。 请参阅参数`wParam`中[WM_SIZING 通知](http://msdn.microsoft.com/library/windows/desktop/ms632647)。  
+ [in]*fwSide*  
+ 移动框架边缘。 请参阅参数*wParam*中[WM_SIZING 通知](http://msdn.microsoft.com/library/windows/desktop/ms632647)。  
   
- [in, out] `pRect`  
+ [在中，out]*pRect*  
  指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](../../mfc/reference/rect-structure1.md)结构，其中包含帧的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -1565,10 +1565,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuPopup`  
+ [in]*pMenuPopup*  
  指向一个弹出菜单的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向拖曳栏的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1589,10 +1589,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wp`  
+ [in]*wp*  
  未使用此参数。  
   
- [in] `lp`  
+ [in]*lp*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1610,10 +1610,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wp`  
+ [in]*wp*  
  未使用此参数。  
   
- [in] `lp`  
+ [in]*lp*  
  指向工具栏的标题栏的文本指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1634,7 +1634,7 @@ afx_msg LRESULT OnToolbarDelete(
  [in]  
  未使用此参数。  
   
- [in] `lp`  
+ [in]*lp*  
  到工具栏的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1650,7 +1650,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenuAlt`  
+ [in]*hMenuAlt*  
  替代菜单的句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -1663,7 +1663,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAddToTitle`  
+ [in]*bAddToTitle*  
  `TRUE` 若要添加活动文档的标题与框架窗口标题栏;否则 `FALSE.`  
   
 ### <a name="remarks"></a>备注  
@@ -1676,7 +1676,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCmdUI`  
+ [in]*pCmdUI*  
  到窗格用户界面对象的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1689,7 +1689,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpwndpos`  
+ [in]*lpwndpos*  
  指向[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)结构，其中包含新的大小和位置。  
   
 ### <a name="remarks"></a>备注  
@@ -1712,28 +1712,28 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  要检查点的屏幕坐标。  
   
- [in] `nSensitivity`  
+ [in]*nSensitivity*  
  搜索点时，请按此量展开每个控件条的边框。  
   
- [in] `bExactBar`  
- `TRUE` 若要忽略`nSensitivity`参数; 否则为`FALSE`。  
+ [in]*bExactBar*  
+ `TRUE` 若要忽略*nSensitivity*参数; 否则为`FALSE`。  
   
- [in] `pRTCBarType`  
+ [in]*pRTCBarType*  
  如果不是`NULL`，该方法将搜索指定类型的控件条。  
   
- [out] `dwAlignment`  
+ [out]*dwAlignment*  
  如果成功，此参数将包含与指定的点最接近的控件条的端。 否则，此参数未初始化。  
   
 ### <a name="return-value"></a>返回值  
- 指向包含的控件条的指针`point`;`NULL`如果不找到任何控件。  
+ 指向包含的控件条的指针*点*;`NULL`如果不找到任何控件。  
   
 ### <a name="remarks"></a>备注  
- 此方法搜索你的应用程序中的所有控件条`point`。  
+ 此方法搜索你的应用程序中的所有控件条*点*。  
   
- 使用`nSensitivity`以提高搜索区域的大小。 使用`pRTCBarType`来限制方法搜索的控件条类型。  
+ 使用*nSensitivity*以提高搜索区域的大小。 使用*pRTCBarType*来限制方法搜索的控件条类型。  
   
 ##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage  
  处理特定的窗口消息之前被发送。  
@@ -1743,7 +1743,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
  指向的指针[消息](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。  
   
 ### <a name="return-value"></a>返回值  
@@ -1759,7 +1759,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bNotify`  
+ [in]*bNotify*  
  指定是否以通知 OLE 客户端项的布局更改的相关。  
   
 ### <a name="remarks"></a>备注  
@@ -1778,19 +1778,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
+ [in]*pControlBar*  
  指向控件栏窗格中，若要删除的指针。  
   
- [in] `bDestroy`  
+ [in]*bDestroy*  
  `TRUE` 若要删除它; 后销毁控件条`FALSE`否则为。  
   
- [in] `bAdjustLayout`  
+ [in]*bAdjustLayout*  
  `TRUE` 若要调整停靠布局;`FALSE`否则为。  
   
- [in] `bAutoHide`  
+ [in]*bAutoHide*  
  `TRUE` 如果控件条处于自动隐藏模式;`FALSE`否则为。  
   
- [in] `pBarReplacement`  
+ [in]*pBarReplacement*  
  指向替换删除窗格中的窗格的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1806,7 +1806,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>参数  
- `state`  
+ *state*  
  停靠状态。 忽略此参数。  
   
 ##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame  
@@ -1817,7 +1817,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  到打印预览框架窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1833,17 +1833,17 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `menu`  
+ [in]*菜单*  
  A`CMenu`要修改的对象。  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in]*uiViewUserToolbarCmdFirst*  
  第一个用户定义命令。  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in]*uiViewUserToolbarCmdLast*  
  上次执行用户定义的命令。  
   
 ### <a name="remarks"></a>备注  
- 框架将存储在列表中的用户定义的命令。 使用`uiViewUserToolbarCmdFirst`和`uiViewUserToolbarCmdList`来指定要插入的命令的索引。  
+ 框架将存储在列表中的用户定义的命令。 使用*uiViewUserToolbarCmdFirst*和*uiViewUserToolbarCmdList*来指定要插入的命令的索引。  
   
 ##  <a name="showfullscreen"></a>  CFrameWndEx::ShowFullScreen  
  切换全屏模式和正则模式之间的主框架。  
@@ -1864,16 +1864,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向控件条，以显示或隐藏的指针。  
   
- [in] `bShow`  
+ [in]*bShow*  
  如果`TRUE`，应用程序显示控件条。 否则，应用程序隐藏控件条。  
   
- [in] `bDelay`  
+ [in]*bDelay*  
  如果`TRUE`，延迟到框架调用停靠布局的调整[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)。 否则，立即重新计算停靠布局。  
   
- [in] `bActivate`  
+ [in]*bActivate*  
  如果`TRUE`，使控件条处于活动状态。 否则，显示处于不活动状态的控件条。  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
@@ -1895,10 +1895,10 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwData`  
- 依赖于数据`nCmd`参数。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ *dwData*  
+ 依赖于数据*nCmd*参数。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
   
- `nCmd`  
+ *nCmd*  
  帮助命令中。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
   
 ### <a name="remarks"></a>备注  

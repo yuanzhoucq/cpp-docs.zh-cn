@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1ee27994a83206b576452d30b108f01c794353
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957486"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 类
 定义文档模板基本功能的抽象基类。  
@@ -106,7 +107,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="remarks"></a>备注  
  通常你的应用程序的实现中创建一个或多个文档模板`InitInstance`函数。 文档模板定义了三种类型的类之间的关系：  
   
--   文档类，该类派生自**CDocument**。  
+-   文档类，该类派生自`CDocument`。  
   
 -   视图类，它显示从上面列出的文档类的数据。 可以派生此类从`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (你还可以使用`CEditView`直接。)  
   
@@ -144,7 +145,7 @@ virtual void AddDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDoc`  
+ *pDoc*  
  指向要添加的文档的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -162,7 +163,7 @@ CDocTemplate (
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDResource`  
+ *nIDResource*  
  指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
  字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符作为一个占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[GetDocString](#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如：  
@@ -179,13 +180,13 @@ CDocTemplate (
   
  请注意，字符串开始使用 \n 的字符;这是因为第一个子字符串不用于 MDI 应用程序，因此不包括。 你可以编辑使用字符串编辑器中; 此字符串整个字符串会作为单个条目在字符串编辑器中，会出现不为七个不同的项。  
   
- `pDocClass`  
- 指向`CRuntimeClass`文档类的对象。 此类是**CDocument**-派生类，定义来表示你的文档。  
+ *pDocClass*  
+ 指向`CRuntimeClass`文档类的对象。 此类是`CDocument`-派生类，定义来表示你的文档。  
   
- `pFrameClass`  
+ *pFrameClass*  
  指向`CRuntimeClass`的框架窗口类的对象。 此类可以是`CFrameWnd`-派生类，也可以是`CFrameWnd`本身如果你希望用于您的主框架窗口的默认行为。  
   
- `pViewClass`  
+ *pViewClass*  
  指向`CRuntimeClass`视图类的对象。 此类是`CView`-派生类定义以显示你的文档。  
   
 ### <a name="remarks"></a>备注  
@@ -199,8 +200,8 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEndSession`  
- 指定在正在结束会话。 它是**TRUE**如果会话正在结束; 否则为**FALSE**。  
+ *bEndSession*  
+ 未使用。  
   
 ### <a name="remarks"></a>备注  
  此成员函数通常用作文件退出命令的一部分。 此函数的默认实现调用[CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents)成员函数删除文档的数据，然后关闭所有视图的框架窗口附加到文档。  
@@ -227,19 +228,19 @@ virtual CFrameWnd* CreateNewFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDoc`  
+ *pDoc*  
  新的框架窗口应引用的文档。 可以是**NULL**。  
   
- `pOther`  
+ *pOther*  
  新的框架窗口是以数据为基础框架窗口。 可以是**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  指向新创建的框架窗口中，或**NULL**如果发生错误。  
   
 ### <a name="remarks"></a>备注  
- `CreateNewFrame` 使用`CRuntimeClass`对象传递给构造函数来使用视图和附加的文档创建新的框架窗口。 如果`pDoc`参数是**NULL**，框架将输出跟踪消息。  
+ `CreateNewFrame` 使用`CRuntimeClass`对象传递给构造函数来使用视图和附加的文档创建新的框架窗口。 如果*pDoc*参数是**NULL**，框架将输出跟踪消息。  
   
- `pOther`参数用于实现新建窗口命令。 它提供了用于模型的新的框架窗口的框架窗口。 新的框架窗口通常会创建不可见。 调用此函数可创建外部文件新建和打开文件的标准框架实现的框架窗口。  
+ *POther*参数用于实现新建窗口命令。 它提供了用于模型的新的框架窗口的框架窗口。 新的框架窗口通常会创建不可见。 调用此函数可创建外部文件新建和打开文件的标准框架实现的框架窗口。  
   
 ##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  创建 OLE 框架窗口。  
@@ -252,20 +253,20 @@ CFrameWnd* CreateOleFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向帧的父窗口的指针。  
   
- `pDoc`  
+ *pDoc*  
  指向新的 OLE 框架窗口应引用的文档的指针。  
   
- `bCreateView`  
+ *bCreateView*  
  确定是否以及框架创建视图。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则框架窗口指向的指针否则为**NULL**。  
   
 ### <a name="remarks"></a>备注  
- 如果`bCreateView`为零，创建一个空框架。  
+ 如果*bCreateView*为零，创建一个空框架。  
   
 ##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  检索与文档类型相关联的字符串。  
@@ -277,7 +278,7 @@ virtual BOOL GetDocString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rString`  
+ *rString*  
  对引用`CString`在函数返回时，将包含字符串的对象。  
   
  *index*  
@@ -321,7 +322,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都重写此纯虚拟函数。 派生自任何类`CDocTemplate`还必须重写此函数。  
   
 ##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
- 检索标识的列表元素`rPos`，然后设置`rPos`到**位置**的列表中的下一步条目的值。  
+ 检索标识的列表元素*Rpo*，然后设置*Rpo*到**位置**的列表中的下一步条目的值。  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
@@ -331,11 +332,11 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
  指向与此模板关联的文档的列表中的下一步文档的指针。  
   
 ### <a name="parameters"></a>参数  
- `rPos`  
+ *Rpo*  
  对引用**位置**返回上次调用值[GetFirstDocPosition](#getfirstdocposition)或`GetNextDoc`。  
   
 ### <a name="remarks"></a>备注  
- 如果检索的元素的是在列表中，最后然后的新值`rPos`设置为**NULL**。  
+ 如果检索的元素的是在列表中，最后然后的新值*Rpo*设置为**NULL**。  
   
  你可以使用`GetNextDoc`如果建立通过调用的初始位置的向前迭代循环中[GetFirstDocPosition](#getfirstdocposition)。  
   
@@ -352,17 +353,17 @@ virtual void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFrame`  
+ *pFrame*  
  需要初始更新框架窗口。  
   
- `pDoc`  
+ *pDoc*  
  框架所关联到文档。 可以是**NULL**。  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  表示框架应变得可见并处于活动状态。  
   
 ### <a name="remarks"></a>备注  
- 调用**IntitialUpdateFrame**创建具有的新帧之后`CreateNewFrame`。 调用此函数会导致在接收该框架窗口视图其`OnInitialUpdate`调用。 此外，如果没有以前的活动视图，框架窗口的主视图将活动状态，则主视图是使用子 ID 的视图**AFX_IDW_PANE_FIRST**。 最后，框架窗口均可见如果`bMakeVisible`为非零。 如果`bMakeVisible`为零，当前焦点和框架窗口的可见状态将保持不变。  
+ 调用**IntitialUpdateFrame**创建具有的新帧之后`CreateNewFrame`。 调用此函数会导致在接收该框架窗口视图其`OnInitialUpdate`调用。 此外，如果没有以前的活动视图，框架窗口的主视图将活动状态，则主视图是使用子 ID 的视图**AFX_IDW_PANE_FIRST**。 最后，框架窗口均可见如果`bMakeVisible`为非零。 如果*bMakeVisible*为零，当前焦点和框架窗口的可见状态将保持不变。  
   
  不需要使用框架的实现的新文件和文件打开时调用此函数。  
   
@@ -386,11 +387,11 @@ virtual Confidence MatchDocType(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszPathName`  
+ *lpszPathName*  
  要确定其类型的文件的路径名。  
   
- `rpDocMatch`  
- 如果指定的文件分配匹配的文档，文档的指针`lpszPathName`已打开。  
+ *rpDocMatch*  
+ 如果指定的文件分配匹配的文档，文档的指针*lpszPathName*已打开。  
   
 ### <a name="return-value"></a>返回值  
  取值范围为**置信度**枚举，定义如下：  
@@ -410,9 +411,9 @@ enum Confidence
 ### <a name="remarks"></a>备注  
  使用此函数可确定要用于打开文件的文档模板的类型。 如果你的应用程序支持多个文件类型，例如，你可以使用此函数来确定哪一项可用的文档模板是适用于给定文件通过调用`MatchDocType`打开，并选择根据模板中每个模板返回的置信度值。  
   
- 如果指定的文件`lpszPathName`已打开，此函数将返回**CDocTemplate::yesAlreadyOpen** ，并将复制文件的**CDocument**到处的对象的对象`rpDocMatch`。  
+ 如果指定的文件*lpszPathName*已打开，此函数将返回**CDocTemplate::yesAlreadyOpen** ，并将复制文件的**CDocument**对象插入在对象*rpDocMatch*。  
   
- 如果文件不是打开中的扩展但`lpszPathName`与指定扩展名匹配**CDocTemplate::filterExt**，此函数将返回**CDocTemplate::yesAttemptNative**和设置`rpDocMatch`到**NULL**。 有关详细信息**CDocTemplate::filterExt**，请参阅[CDocTemplate::GetDocString](#getdocstring)。  
+ 如果文件不是打开中的扩展但*lpszPathName*与指定扩展名匹配**CDocTemplate::filterExt**，此函数将返回**CDocTemplate::yesAttemptNative**和设置*rpDocMatch*到**NULL**。 有关详细信息**CDocTemplate::filterExt**，请参阅[CDocTemplate::GetDocString](#getdocstring)。  
   
  如果任何情况下为 true，则该函数将返回**CDocTemplate::yesAttemptForeign**。  
   
@@ -430,27 +431,27 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPathName`  
+ [in]*lpszPathName*  
  指向包含要打开的文档的文件的路径。  
   
- [in] `bAddToMRU`  
+ [in]*bAddToMRU*  
  `TRUE` 指示的文档是一个最新文件;`FALSE`指示该文档不是最新的文件之一。  
   
 ### <a name="return-value"></a>返回值  
- 指向由名为其文件的文档的`lpszPathName`;`NULL`如果不成功。  
+ 指向由名为其文件的文档的*lpszPathName*;`NULL`如果不成功。  
   
 ### <a name="remarks"></a>备注  
- 将指定其路径的文件打开`lpszPathName`。 如果`lpszPathName`是`NULL`，创建新的文件包含与此模板关联的类型的文档。  
+ 将指定其路径的文件打开*lpszPathName*。 如果*lpszPathName*是`NULL`，创建新的文件包含与此模板关联的类型的文档。  
   
 ##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
- 删除指向文档`pDoc`从与此模板关联的文档的列表。  
+ 删除指向文档*pDoc*从与此模板关联的文档的列表。  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDoc`  
+ *pDoc*  
  指向要删除的文档的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -474,13 +475,13 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDOleInPlaceContainer`  
+ *nIDOleInPlaceContainer*  
  在激活嵌入的对象时使用的资源 ID。  
   
 ### <a name="remarks"></a>备注  
  调用此函数可设置时就地激活的 OLE 对象时要使用的资源。 这些资源可能包括菜单和快捷键对应表。 通常在调用此函数[CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)你应用程序的功能。  
   
- 与关联的菜单`nIDOleInPlaceContainer`包含允许要合并的激活就地项的容器应用程序的菜单的菜单的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
+ 与关联的菜单*nIDOleInPlaceContainer*包含允许要合并的激活就地项的容器应用程序的菜单的菜单的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
 ##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  调用此函数可加载文档的默认标题并将其显示在文档的标题栏中。  
@@ -511,7 +512,7 @@ void SetServerInfo(
  *nIDOleEmbedding*  
  在单独的窗口中打开嵌入的对象时使用的资源 ID。  
   
- `nIDOleInPlaceServer`  
+ *nIDOleInPlaceServer*  
  就地激活嵌入的对象时使用的资源的 ID。  
   
  *pOleFrameClass*  
@@ -523,7 +524,7 @@ void SetServerInfo(
 ### <a name="remarks"></a>备注  
  调用此成员函数可确定当用户请求激活的嵌入对象时，服务器应用程序将使用的资源。 这些资源由菜单和快捷键对应表组成。 通常在调用此函数`InitInstance`的你的应用程序。  
   
- 与关联的菜单`nIDOleInPlaceServer`包含允许服务器菜单合并的菜单容器的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
+ 与关联的菜单*nIDOleInPlaceServer*包含允许服务器菜单合并的菜单容器的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
 ##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  创建一个子框架用于丰富预览。  
@@ -535,10 +536,10 @@ CFrameWnd* CreatePreviewFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向父窗口 （Shell 通常提供） 的指针。  
   
- `pDoc`  
+ *pDoc*  
  指向其内容将预览的文档对象的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -557,13 +558,13 @@ void SetPreviewInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDPreviewFrame`  
+ *nIDPreviewFrame*  
  指定的预览帧的资源 ID。  
   
- `pPreviewFrameClass`  
+ *pPreviewFrameClass*  
  指定指向预览帧的运行时类信息结构的指针。  
   
- `pPreviewViewClass`  
+ *pPreviewViewClass*  
  指定指向运行时类信息结构的预览视图。  
   
 ### <a name="remarks"></a>备注  

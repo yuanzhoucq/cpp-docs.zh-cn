@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385104"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956790"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练： 更新 MFC 随意画图应用程序 （第 1 部分）
 本演练演示如何修改现有 MFC 应用程序使用功能区用户界面。 Visual Studio 支持 Office 2007 功能区和 Windows 7 风景如画功能区。 有关功能区用户界面的详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 网站上。  
@@ -186,31 +186,31 @@ ms.locfileid: "33385104"
   
 3.  通过修改其属性，可以自定义应用程序按钮。 在菜单中，此代码中使用的消息 Id 已为 Scribble 1.0 定义。  
   
-4.  在设计视图中，单击应用程序按钮以显示其属性。 如下所示更改属性值：**映像**到`IDB_RIBBON_MAIN`，**提示**到`File`，**密钥**到`f`，**大型图像**到`IDB_RIBBON_FILELARGE`，和**小型图像**到`IDB_RIBBON_FILESMALL`。  
+4.  在设计视图中，单击应用程序按钮以显示其属性。 如下所示更改属性值：**映像**到*IDB_RIBBON_MAIN*，**提示**到*文件*，**密钥**到*f*，**大型图像**到*IDB_RIBBON_FILELARGE*，和**小型图像**到*IDB_RIBBON_FILESMALL*。  
   
 5.  以下修改之处创建显示当用户单击的应用程序按钮的菜单中。 单击省略号 (**...**) 旁边**Main 项**以打开**项编辑器**。  
   
-    1.  单击**添加**添加一个按钮。 更改**标题**到`&New`， **ID**到`ID_FILE_NEW`，**映像**到`0`，**大图标**到`0`.  
+    1.  单击**添加**添加一个按钮。 更改**标题**到*和新*， **ID**到*ID_FILE_NEW*，**映像**到*0*，**大图标**到*0*。  
   
-    2.  单击**添加**添加第二个按钮。 更改**标题**到`&Save`， **ID**到`ID_FILE_SAVE`，**映像**到`2`，和**大图标**到`2`.  
+    2.  单击**添加**添加第二个按钮。 更改**标题**到*和保存*， **ID**到*ID_FILE_SAVE*，**映像**到*2*，和**大图标**到*2*。  
   
-    3.  单击**添加**添加第三个按钮。 更改**标题**到`Save &As`， **ID**到`ID_FILE_SAVE_AS`，**映像**到`3`，和**大图标**到`3`.  
+    3.  单击**添加**添加第三个按钮。 更改**标题**到*保存并作为*， **ID**到*ID_FILE_SAVE_AS*，**映像**到*3*，和**大图标**到*3*。  
   
-    4.  单击**添加**添加第四个按钮。 更改**标题**到`&Print`， **ID**到`ID_FILE_PRINT`，**映像**到`4`，和**大图标**到`4`.  
+    4.  单击**添加**添加第四个按钮。 更改**标题**到*和打印*， **ID**到*ID_FILE_PRINT*，**映像**到*4*，和**大图标**到*4*。  
   
     5.  更改**项**键入到**分隔符**，然后单击**添加**。  
   
-    6.  更改**项**键入到**按钮**。 单击**添加**添加的第五个按钮。 更改**标题**到`&Close`， **ID**到`ID_FILE_CLOSE`，**映像**到`5`，和**大图标**到`5`.  
+    6.  更改**项**键入到**按钮**。 单击**添加**添加的第五个按钮。 更改**标题**到*并关闭*， **ID**到*ID_FILE_CLOSE*，**映像**到*5*，和**大图标**到*5*。  
   
 6.  以下修改之处创建你在上一步中创建的打印按钮下子菜单。  
   
-    1.  单击**打印**按钮，更改**项**键入到**标签**，然后单击**插入**。 更改**标题**到`Preview and print the document`。  
+    1.  单击**打印**按钮，更改**项**键入到**标签**，然后单击**插入**。 更改**标题**到*预览和打印文档*。  
   
-    2.  单击**打印**按钮，更改**项**键入到**按钮**，然后单击**插入**。 更改**标题**到`&Print`， **ID**到`ID_FILE_PRINT`，**映像**到`4`，和**大图标**到`4`.  
+    2.  单击**打印**按钮，更改**项**键入到**按钮**，然后单击**插入**。 更改**标题**到*和打印*， **ID**到*ID_FILE_PRINT*，**映像**到*4*，和**大图标**到*4*。  
   
-    3.  单击**打印**按钮，然后单击**插入**添加一个按钮。 更改**标题**到`&Quick Print`， **ID**到`ID_FILE_PRINT_DIRECT`，**映像**到`7`，和**大图标**到`7`.  
+    3.  单击**打印**按钮，然后单击**插入**添加一个按钮。 更改**标题**到*和快速打印*， **ID**到*ID_FILE_PRINT_DIRECT*，**映像**到*7*，和**大图标**到*7*。  
   
-    4.  单击**打印**按钮，然后单击**插入**添加另一个按钮。 更改**标题**到`Print Pre&view`， **ID**到`ID_FILE_PRINT_PREVIEW`，**映像**到`6`，和**大图标**到`6`.  
+    4.  单击**打印**按钮，然后单击**插入**添加另一个按钮。 更改**标题**到*打印前 （&) 视图*， **ID**到*ID_FILE_PRINT_PREVIEW*，**映像**到*6*，和**大图标**到*6*。  
   
     5.  现在已修改**Main 项**。 单击**关闭**退出**项编辑器**。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "33385104"
   
     1.  在**属性**窗口中，单击省略号 (**...**) 旁边**按钮**以打开**项编辑器**。  
   
-    2.  单击**添加**添加一个按钮。 更改**标题**到`E&xit`， **ID**到`ID_APP_EXIT`，**映像**到`8`。  
+    2.  单击**添加**添加一个按钮。 更改**标题**到 *（&) 退出*， **ID**到*ID_APP_EXIT*，**映像**到*8*.  
   
  [[部分](#top)]  
   
@@ -233,7 +233,7 @@ ms.locfileid: "33385104"
     CMFCRibbonBar m_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ ms.locfileid: "33385104"
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>若要添加主页类别和编辑面板  
   
-1.  Scribble 程序需要只有一个类别。 在设计视图中，单击**类别**以显示其属性。 如下所示更改属性值：**标题**到`&Home`，**大型图像**到`IDB_RIBBON_HOMELARGE`，**小型图像**到`IDB_RIBBON_HOMESMALL`。  
+1.  Scribble 程序需要只有一个类别。 在设计视图中，单击**类别**以显示其属性。 如下所示更改属性值：**标题**到*和主页*，**大型图像**到*IDB_RIBBON_HOMELARGE*， **小型图像**到*IDB_RIBBON_HOMESMALL*。  
   
-2.  每个功能区类别分为命名面板。 每个面板包含一组执行相关的操作的控件。 此类别中包含一个面板。 单击**面板**，然后将更改**标题**到`Edit`和**映像索引**到`0`。  
+2.  每个功能区类别分为命名面板。 每个面板包含一组执行相关的操作的控件。 此类别中包含一个面板。 单击**面板**，然后将更改**标题**到*编辑*和**映像索引**到*0*。  
   
-3.  到**编辑**面板中，添加一个按钮，它负责清除文档的内容。 此按钮的消息 ID 已 IDR_SCRIBBTYPE 菜单资源中定义。 指定`Clear All`作为按钮文本的修饰按钮位图的索引。 打开**工具箱**，然后拖动**按钮**到**编辑**面板。 单击按钮，然后更改**标题**到`Clear All`， **ID**到`ID_EDIT_CLEAR_ALL`，**映像索引**到`0`，**大型图像索引**到`0`。  
+3.  到**编辑**面板中，添加一个按钮，它负责清除文档的内容。 此按钮的消息 ID 已 IDR_SCRIBBTYPE 菜单资源中定义。 指定*全部清除*作为按钮文本的修饰按钮位图的索引。 打开**工具箱**，然后拖动**按钮**到**编辑**面板。 单击按钮，然后更改**标题**到*全部清除*， **ID**到*ID_EDIT_CLEAR_ALL*，**映像索引**到*0*，**大图像索引**到*0*。  
   
 4.  保存更改，然后生成并运行应用程序。 应显示随意画图应用程序，并且它应该具有位于窗口而不是菜单栏的顶部功能区栏。 功能区栏应具有一个类别，**主页**，和**主页**应具有一个面板中，**编辑**。 你添加的功能区按钮应在现有的事件处理程序，与关联和**打开**，**关闭**，**保存**，**打印**，和**全部清除**按钮应该按预期方式工作。  
   

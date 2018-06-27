@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383046"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956689"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025：文档、视图和框架创建
 > [!NOTE]
@@ -43,12 +43,12 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```  
   
- 一个 `CWinApp` 对象拥有应用程序中的所有框架窗口。 应用程序的主框架窗口应存储在**M_pmainwnd**; 通常设置`m_pMainWnd`中`InitInstance`实现，如果您没有让 AppWizard 为您完成此操作。 对于单文档界面 (SDI)，这是充当主应用程序框架窗口以及唯一的文档框架窗口的一个 `CFrameWnd`。 对于多文档界面 (MDI)，这是充当包含所有子 `CMDIFrameWnd` 的主应用程序框架窗口的 MDI 框架（类 `CFrameWnd`）。 每个子窗口属于类 `CMDIChildWnd`（派生自 `CFrameWnd`）并充当可能数量较多的文档框架窗口中的一个。  
+ 一个 `CWinApp` 对象拥有应用程序中的所有框架窗口。 应用程序的主框架窗口应存储在`CWinApp::m_pMainWnd`; 通常设置*m_pMainWnd*中`InitInstance`实现，如果您没有让 AppWizard 为您完成此操作。 对于单文档界面 (SDI)，这是充当主应用程序框架窗口以及唯一的文档框架窗口的一个 `CFrameWnd`。 对于多文档界面 (MDI)，这是充当包含所有子 `CMDIFrameWnd` 的主应用程序框架窗口的 MDI 框架（类 `CFrameWnd`）。 每个子窗口属于类 `CMDIChildWnd`（派生自 `CFrameWnd`）并充当可能数量较多的文档框架窗口中的一个。  
   
 ## <a name="doctemplates"></a>DocTemplate  
  `CDocTemplate` 是文档的创建者和管理者。 它对自己创建的文档具有所有权。 如果应用程序使用了下面所述的基于资源的方法，则不需要从 `CDocTemplate` 派生。  
   
- 对于 SDI 应用程序，类 `CSingleDocTemplate` 将跟踪一个打开的文档。 对于 MDI 应用程序，类 `CMultiDocTemplate` 类将保留所有当前打开的从该模板创建的文档的列表 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 提供了用于在模板中添加或删除文档的虚拟成员函数。 `CDocTemplate` 是的友元**CDocument**以便我们可以设置受保护**cdocument:: M_pdoctemplate**后向指针以指回创建文档的文档模板。  
+ 对于 SDI 应用程序，类 `CSingleDocTemplate` 将跟踪一个打开的文档。 对于 MDI 应用程序，类 `CMultiDocTemplate` 类将保留所有当前打开的从该模板创建的文档的列表 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 提供了用于在模板中添加或删除文档的虚拟成员函数。 `CDocTemplate` 是的友元`CDocument`以便我们可以设置受保护`CDocument::m_pDocTemplate`后向指针以指回创建文档的文档模板。  
   
  `CWinApp` 处理默认 `OnFileOpen` 实现，该实现反过来又会查询所有文档模板。 该实现包括查找已打开的文档和确定打开新文档的格式。  
   
@@ -57,13 +57,13 @@ AddDocTemplate(pTemplate);
  `CDocTemplate` 保留未命名的文档的计数。  
   
 ## <a name="cdocument"></a>CDocument  
- A **CDocument**归`CDocTemplate`。  
+ A`CDocument`归`CDocTemplate`。  
   
  文档具有当前打开的、用来查看文档 (`CView`) 的视图（派生自 `CPtrList`）的列表。  
   
  文档不创建/销毁视图，但它们在创建后会相互连接。 当文档关闭（通过“文件”/“关闭”）时，所有连接的视图都将关闭。 当文档中的最后一个视图关闭（通过“窗口”/“关闭”）时，文档将关闭。  
   
- `CDocument::AddView`（`RemoveView` 接口）用于维护视图列表。 **CDocument**为友元的`CView`以便我们可以设置**M_pdocument**后向指针。  
+ `CDocument::AddView`（`RemoveView` 接口）用于维护视图列表。 `CDocument` 是的友元`CView`以便我们可以设置`CView::m_pDocument`后向指针。  
   
 ## <a name="cframewnd"></a>CFrameWnd  
  `CFrameWnd`（也称为“框架”）的作用与在 MFC 1.0 中的作用相同，但现在 `CFrameWnd` 类可以在很多情况下使用，而不用派生新类。 派生类 `CMDIFrameWnd` 和 `CMDIChildWnd` 也已增强，因此很多标准命令已经实现。  

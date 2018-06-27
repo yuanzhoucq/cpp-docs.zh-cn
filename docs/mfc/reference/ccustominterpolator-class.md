@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355794"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955084"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 类
 实现基本插值程序。  
@@ -85,7 +85,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|内插的值。|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|内插的速度。|  
@@ -116,10 +116,10 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>备注  
  使用 CCustomInterpolator::Init 初始化持续时间和更高版本在代码中的最终值。  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>参数  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  输出。 各个方面插值程序依赖于初始的值传递给 SetInitialValueAndVelocity。  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  输出。 各个方面插值程序依赖于的初始速度传递给 SetInitialValueAndVelocity。  
   
- `durationDependencies`  
+ *durationDependencies*  
  输出。 各个方面插值程序持续时间取决于传递给 SetDuration。  
   
 ### <a name="return-value"></a>返回值  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  输出。 转换，以秒为单位的持续时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>参数  
- `value`  
+ *value*  
  输出。 变量在转换结束最终值。  
   
 ### <a name="return-value"></a>返回值  
@@ -185,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
- `finalValue`  
+ *finalValue*  
  变量在转换结束最终值。  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `value`  
+ *value*  
  输出。 内插的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>参数  
- `velocity`  
+ *速度*  
  输出。 偏移量处变量的速度。  
   
 ### <a name="return-value"></a>返回值  
@@ -273,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>参数  
- `initialValue`  
+ *initialValue*  
  在转换的开始的变量的值。  
   
- `initialVelocity`  
+ *initialVelocity*  
  在转换的开始的变量的速度。  
   
 ### <a name="return-value"></a>返回值  

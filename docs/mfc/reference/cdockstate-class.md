@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfbe14743ffff91a4a1749f0394a6deb8f0547a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83ae0a746e31c211517563a018e5b7da18e3350a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367433"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955591"
 ---
 # <a name="cdockstate-class"></a>CDockState 类
 在永久性内存（文件）中加载、卸载或清除一个或多个停靠控件条状态的序列化 `CObject` 类。  
@@ -107,7 +107,7 @@ void LoadState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszProfileName`  
+ *lpszProfileName*  
  指向以 null teminated 字符串，初始化文件或 Windows 注册表状态信息的存储位置中的键中指定的节名称。  
   
 ### <a name="remarks"></a>备注  
@@ -128,7 +128,7 @@ void SaveState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszProfileName`  
+ *lpszProfileName*  
  指向以 null teminated 字符串，初始化文件或 Windows 注册表状态信息的存储位置中的键中指定的节名称。  
   
 ### <a name="remarks"></a>备注  

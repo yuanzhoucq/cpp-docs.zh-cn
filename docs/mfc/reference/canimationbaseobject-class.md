@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355599"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952539"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 类
 所有动画对象的基类。  
@@ -113,7 +113,7 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|指定是否应自动销毁相关的转换。|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|将用户定义数据存储。|  
@@ -149,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStoryboard`  
+ *pStoryboard*  
  指向情节提要的指针。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  为 false，则此方法将添加仅这些不依赖于关键帧的转换。  
   
 ### <a name="return-value"></a>返回值  
@@ -175,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGroupID`  
+ *nGroupID*  
  指定组 id。  
   
- `nObjectID`  
+ *nObjectID*  
  指定对象 id。  
   
- `dwUserData`  
+ *dwUserData*  
  用户定义数据，它可以与动画对象相关联并在运行时检索更高版本。  
   
 ### <a name="remarks"></a>备注  
@@ -195,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bAutodestroy`  
+ *bAutodestroy*  
  指定是否自动销毁转换对象或只需从相关列表中删除它们。  
   
 ### <a name="remarks"></a>备注  
@@ -209,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pVariable`  
+ *pVariable*  
  指向动画变量的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -251,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pController`  
+ *pController*  
  指向父控制器的指针。  
   
- `bEnable`  
+ *bEnable*  
  指定是否启用或禁用整数值已更改事件。  
   
 ### <a name="remarks"></a>备注  
@@ -270,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pController`  
+ *pController*  
  指向父控制器的指针。  
   
- `bEnable`  
+ *bEnable*  
  指定是否启用或禁用值已更改事件。  
   
 ### <a name="remarks"></a>备注  
@@ -289,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lst`  
+ *lst*  
  必须填入动画对象中包含的动画变量的列表。  
   
 ### <a name="remarks"></a>备注  
@@ -390,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bValue`  
+ *bValue*  
  指定自动销毁标志。  
   
 ### <a name="remarks"></a>备注  
@@ -406,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nObjectID`  
+ *nObjectID*  
  指定新的对象 id。  
   
- `nGroupID`  
+ *nGroupID*  
  指定新的组 id。  
   
 ### <a name="remarks"></a>备注  
@@ -433,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwUserData`  
+ *dwUserData*  
  指定的自定义数据。  
   
 ### <a name="remarks"></a>备注  

@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d875f2b93309e96bc3d612a8adc55b5af387026
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380914"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956806"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>设置 CStatusBarCtrl 对象的模式
 有两种模式`CStatusBarCtrl`对象： 简单和非简单。 在大多数情况下，你状态栏控件将具有一个或多个部件，以及文本和可能的图标或图标。 这被称为非简单模式。 有关此模式的详细信息，请参阅[初始化 CStatusBarCtrl 对象的组成部分](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)。  
   
- 但是，在其中你只需显示单个文本行的情况下。 在这种情况下，简单的模式足以满足你的需求。 若要更改的模式`CStatusBarCtrl`对象为 simple 时，请调用[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成员函数。 简单模式状态栏控件后，通过调用设置的文本**SetText**成员函数，传递的值为 255 **nPane**参数。  
+ 但是，在其中你只需显示单个文本行的情况下。 在这种情况下，简单的模式足以满足你的需求。 若要更改的模式`CStatusBarCtrl`对象为 simple 时，请调用[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)成员函数。 简单模式状态栏控件后，通过调用设置的文本`SetText`成员函数，传递的值为 255 *nPane*参数。  
   
  你可以使用[IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)函数来确定哪种模式`CStatusBarCtrl`对象处于。  
   

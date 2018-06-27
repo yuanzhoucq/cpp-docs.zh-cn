@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385302"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955669"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  `-s 6144`参数保留在进行代码签名 cab 文件中的空间。  
   
 ### <a name="the-version-tag"></a>版本标记  
- 请注意，`#Version`使用 CAB 文件指定的信息适用于指定的控件`CLASSID`参数`<OBJECT>`标记。  
+ 请注意，`#Version`使用 CAB 文件指定的信息适用于指定的控件*CLASSID*参数`<OBJECT>`标记。  
   
- 根据指定的版本，您可以强制下载控件。 有关包括 `OBJECT` 标记的 `CODEBASE` 参数的完整规范，请参阅 W3C 参考。  
+ 根据指定的版本，您可以强制下载控件。 有关的完整规范`OBJECT`标记包括*CODEBASE*参数，请参阅 W3C 参考。  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> 将控件安全标记为对于脚本化或初始化  
  如果网页中使用的 ActiveX 控件实际上是安全的，则应将它们标记为对于脚本化和初始化是安全的。 安全的控件不会直接执行磁盘 IO 或者访问计算机的内存或注册表。  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  在 OCX 96 准则下，控件必须总是在后台实现其调色板。  
   
- 不使用环境调色板属性的旧容器将发送的 `WM_QUERYNEWPALETTE` 和 `WM_PALETTECHANGED` 信息。 控件可重写 `OnQueryNewPalette` 和 `OnPaletteChanged` 来处理这些消息。  
+ 不要使用环境调色板属性的旧容器将发送 WM_QUERYNEWPALETTE 和 WM_PALETTECHANGED 消息。 控件可重写 `OnQueryNewPalette` 和 `OnPaletteChanged` 来处理这些消息。  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer 浏览器安全级别和控件行为  
  浏览器具有可由用户配置的安全级别的选项。 由于网页可能包含对用户的计算机具有潜在威胁的活动内容，浏览器允许用户选择安全级别的选项。 控件可能完全不能下载，或者会显示证书或警告消息来允许用户在运行时选择是否下载控件，具体取决于浏览器实现安全级别的方式。 下面列出了在 Internet Explorer 中上处于高、中和低安全级别的 ActiveX 控件的行为。  

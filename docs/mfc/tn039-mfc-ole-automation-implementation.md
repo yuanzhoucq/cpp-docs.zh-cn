@@ -20,26 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97c42f59042490f6408fb457b12f4bdb1a2eeb88
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385334"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953355"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE 自动化实现
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。  
   
 ## <a name="overview-of-ole-idispatch-interface"></a>OLE IDispatch 接口的概述  
- `IDispatch`接口是依据应用程序公开的应用程序的功能，可以进行其他应用程序，如 Visual BASIC 或其他语言，以便使用方法和属性的方法。 此接口的最重要部分是**idispatch:: Invoke**函数。 MFC 使用"调度映射"实现**idispatch:: Invoke**。 调度映射提供的 MFC 实现信息的布局或"shape"的有关你`CCmdTarget`-派生类中，以便它可以直接操作的对象的属性或调用成员函数中你的对象，以满足**Idispatch:: Invoke**请求。  
+ `IDispatch`接口是依据应用程序公开的应用程序的功能，可以进行其他应用程序，如 Visual BASIC 或其他语言，以便使用方法和属性的方法。 此接口的最重要部分是`IDispatch::Invoke`函数。 MFC 使用"调度映射"实现`IDispatch::Invoke`。 调度映射提供的 MFC 实现信息的布局或"shape"的有关你`CCmdTarget`-派生类中，以便它可以直接操作的对象的属性或调用成员函数中你的对象，以满足`IDispatch::Invoke`请求。  
   
  大多数情况下，ClassWizard 和 MFC 共同协作以隐藏大部分的应用程序程序员的 OLE 自动化的详细信息。 程序员重点介绍在应用程序中公开的实际功能，无需担心基础的管道。  
   
  有的情况下，但是，十分了解 MFC 在后台执行的操作所必需。 本说明将地址如何分配 framework **DISPID**s 对成员函数和属性。 MFC 使用分配的算法的知识**DISPID**s 才有必要，您需要知道的 Id，例如当你创建的"类型库"为应用程序的对象。  
   
 ## <a name="mfc-dispid-assignment"></a>MFC DISPID 分配  
- 尽管自动化 （Visual Basic 用户，例如），最终用户看到的实际名称自动化启用属性和方法在其代码 （如 obj。ShowWindow) 的实现**idispatch:: Invoke**不会收到的实际名称。 为了优化，它接收**DISPID**，这是一个 32 位"幻 cookie"，其中描述的方法或属性访问。 这些**DISPID**从返回值`IDispatch`通过调用另一个方法的实现**IDispatch::GetIDsOfNames**。 自动化客户端应用程序将调用`GetIDsOfNames`后它想为每个成员或属性来访问，并缓存它们以便更高版本调用**idispatch:: Invoke**。 这样一来，昂贵字符串查找仅执行一次每个对象使用，而不是一次每个**idispatch:: Invoke**调用。  
+ 尽管自动化 （Visual Basic 用户，例如），最终用户看到的实际名称自动化启用属性和方法在其代码 （如 obj。ShowWindow) 的实现`IDispatch::Invoke`不会收到的实际名称。 为了优化，它接收**DISPID**，这是一个 32 位"幻 cookie"，其中描述的方法或属性访问。 这些**DISPID**从返回值`IDispatch`通过调用另一个方法的实现`IDispatch::GetIDsOfNames`。 自动化客户端应用程序将调用`GetIDsOfNames`后它想为每个成员或属性来访问，并缓存它们以便更高版本调用`IDispatch::Invoke`。 这样一来，昂贵字符串查找仅执行一次每个对象使用，而不是一次每个`IDispatch::Invoke`调用。  
   
  MFC 确定**DISPID**为每个方法和属性基于以下两项操作：  
   
@@ -131,23 +131,23 @@ property Y    (DISPID)0x00010002
 ## <a name="remarks"></a>备注  
   
 ### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  类的名称。  
   
- `pszName`  
+ *pszName*  
  属性的外部名称。  
   
- `memberName`  
+ *成员名称*  
  在其中存储属性的成员变量的名称。  
   
- `pfnAfterSet`  
+ *pfnAfterSet*  
  属性更改时要调用的成员函数的名称。  
   
- `vtPropType`  
+ *vtPropType*  
  指定属性的类型的值。  
   
 ## <a name="remarks"></a>备注  
- 此宏非常类似于`DISP_PROPERTY`，只不过它接受一个额外的参数。 这个附加参数， *pfnAfterSet，* 应会返回任何内容并没有采用任何参数 void OnPropertyNotify() 的成员函数。 它将调用**后**成员变量已被修改。  
+ 此宏非常类似 DISP_PROPERTY，只不过它接受一个额外的参数。 这个附加参数， *pfnAfterSet，* 应会返回任何内容并没有采用任何参数 void OnPropertyNotify() 的成员函数。 它将调用**后**成员变量已被修改。  
   
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM-宏说明  
   
@@ -165,26 +165,26 @@ property Y    (DISPID)0x00010002
 ## <a name="remarks"></a>备注  
   
 ### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  类的名称。  
   
- `pszName`  
+ *pszName*  
  属性的外部名称。  
   
- `memberGet`  
+ *memberGet*  
  用来获取属性的成员函数的名称。  
   
- `memberSet`  
+ *成员集*  
  用于设置属性的成员函数的名称。  
   
- `vtPropType`  
+ *vtPropType*  
  指定属性的类型的值。  
   
- `vtsParams`  
+ *vtsParams*  
  空间的字符串分隔 VTS_ 每个参数。  
   
 ## <a name="remarks"></a>备注  
- 非常类似`DISP_PROPERTY_EX`宏，此宏定义与单独的 Get 和 Set 成员函数访问的属性。 此宏，但是，可以指定参数列表的属性。 这可用于以某种其他方式实现索引或参数化的属性。 参数将始终放置首先，跟属性的新值。 例如：  
+ 更像 DISP_PROPERTY_EX 宏，此宏定义使用单独的 Get 和 Set 成员函数的访问的属性。 此宏，但是，可以指定参数列表的属性。 这可用于以某种其他方式实现索引或参数化的属性。 参数将始终放置首先，跟属性的新值。 例如：  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -244,32 +244,32 @@ void CMyObject::SetItem(short row,
 ## <a name="remarks"></a>备注  
   
 ### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  类的名称。  
   
- `pszName`  
+ *pszName*  
  属性的外部名称。  
   
- `dispid`  
+ *dispid*  
  固定的 DISPID，为属性或方法。  
   
- `pfnGet`  
+ *pfnGet*  
  用来获取属性的成员函数的名称。  
   
- `pfnSet`  
+ *pfnSet*  
  用于设置属性的成员函数的名称。  
   
- `memberName`  
+ *成员名称*  
  要映射到的属性成员变量的名称  
   
- `vtPropType`  
+ *vtPropType*  
  指定属性的类型的值。  
   
- `vtsParams`  
+ *vtsParams*  
  空间的字符串分隔 VTS_ 每个参数。  
   
 ## <a name="remarks"></a>备注  
- 这些宏可用于指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由紧后面指定的参数`pszName`参数。 请参阅 AFXDISP。有关这些宏的详细信息的 H。 **_ID**条目必须放置在调度映射的末尾。 其影响自动**DISPID**方式与非相同的生成 **_ID**版本宏将 ( **DISPID**s 由位置)。 例如：  
+ 这些宏可用于指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由紧后面指定的参数*pszName*参数。 请参阅 AFXDISP。有关这些宏的详细信息的 H。 **_ID**条目必须放置在调度映射的末尾。 其影响自动**DISPID**方式与非相同的生成 **_ID**版本宏将 ( **DISPID**s 由位置)。 例如：  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -298,7 +298,7 @@ property Z     (DISPID)0x00000001
  指定固定**DISPID**可将保持向后兼容到先前存在的调度接口，或实现某些系统定义的方法或属性 (通常由一个负数**DISPID**，如**DISPID_NEWENUM**集合)。  
   
 #### <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>检索 COleClientItem IDispatch 接口  
- 许多服务器将支持及其文档对象，以及 OLE 服务器功能的自动化功能。 若要获得此自动化接口的访问权限，则有必要进行直接访问**COleClientItem::m_lpObject**成员变量。 下面的代码将检索`IDispatch`接口的对象派生自`COleClientItem`。 如果找到此功能需要，您可以在你的应用程序中包括下面的代码：  
+ 许多服务器将支持及其文档对象，以及 OLE 服务器功能的自动化功能。 若要获得此自动化接口的访问权限，则有必要进行直接访问`COleClientItem::m_lpObject`成员变量。 下面的代码将检索`IDispatch`接口的对象派生自`COleClientItem`。 如果找到此功能需要，您可以在你的应用程序中包括下面的代码：  
   
 ```  
 LPDISPATCH CMyClientItem::GetIDispatch()  
@@ -346,7 +346,7 @@ return NULL;
 }  
 ```  
   
- 调度接口返回的此函数无法然后直接使用或附加到`COleDispatchDriver`为类型安全的访问。 如果直接使用，请确保你调用其**版本**成员时通过使用指针 (`COleDispatchDriver`析构函数执行此默认情况下)。  
+ 调度接口返回的此函数无法然后直接使用或附加到`COleDispatchDriver`为类型安全的访问。 如果直接使用，请确保你调用其`Release`成员时通过使用指针 (`COleDispatchDriver`析构函数执行此默认情况下)。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
