@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369078"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951814"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 表示 MFC ODBC 类的变量数据类型。  
@@ -82,10 +82,10 @@ class CDBVariant
   
 ### <a name="public-union-members"></a>公共联合成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|包含类型的值**BOOL**。|  
-|[CDBVariant::m_chVal](#m_chval)|包含类型的值`unsigned char`。|  
+|[CDBVariant::m_chVal](#m_chval)|包含类型的值**无符号 char**。|  
 |[CDBVariant::m_dblVal](#m_dblval)|包含类型的值**double**。|  
 |[CDBVariant::m_fltVal](#m_fltval)|包含类型的值**float**。|  
 |[CDBVariant::m_iVal](#m_ival)|包含类型的值**短**。|  
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果值[m_dwType](#m_dwtype)数据成员是**DBVT_DATE**， **DBVT_STRING**，或**DBVT_BINARY**，**清除**释放与联合的指针成员关联的内存。 **清除**设置`m_dwType`到**DBVT_NULL**。  
+ 如果值[m_dwType](#m_dwtype)数据成员是**DBVT_DATE**， **DBVT_STRING**，或**DBVT_BINARY**，`Clear`释放的内存与联合的指针成员相关联。 `Clear` 设置`m_dwType`到**DBVT_NULL**。  
   
- `CDBVariant`析构函数调用**清除**。  
+ `CDBVariant`析构函数调用`Clear`。  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  存储类型的值**BOOL**。  
