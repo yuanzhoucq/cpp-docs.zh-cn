@@ -1,7 +1,9 @@
 ---
 title: Visual C++ 中的 CMake 项目 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337426"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238560"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 项目
 
 本文假定你熟悉 CMake，CMake 是一种跨平台开源工具，用于定义在多个平台上运行的生成过程。
 
-直到最近，Visual Studio 用户一直都可使用 CMake 生成 MSBuild 项目文件，IDE 之后可将该项目文件用于 IntelliSense、浏览和编译。 从 Visual Studio 2017 开始，“用于 CMake 的 Visual C++ 工具”组件使用“打开文件夹”功能，让 IDE 能够直接将 CMake 项目文件（例如 CMakeLists.txt）用于 IntelliSense 和浏览。 如果使用 Visual Studio 生成器，则会生成一个临时项目文件并将该文件传递给 msbuild.exe，但是绝不会出于 IntelliSense 或浏览目的加载它。 
+在 Visual Studio 2015 中，Visual Studio 用户可使用 [CMake 生成器](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html)生成 MSBuild 项目文件，IDE 之后可将该项目文件用于 IntelliSense、浏览和编译。 
+
+从 Visual Studio 2017 开始，“用于 CMake 的 Visual C++ 工具”组件使用“打开文件夹”功能，让 IDE 能够直接将 CMake 项目文件（例如 CMakeLists.txt）用于 IntelliSense 和浏览。 如果使用 Visual Studio 生成器，则会生成一个临时项目文件并将该文件传递给 msbuild.exe，但是绝不会出于 IntelliSense 或浏览目的加载它。 
 
 **Visual Studio 2017 版本 15.3**：提供了对 Ninja 和 Visual Studio 生成器的支持。
 
@@ -33,6 +37,7 @@ ms.locfileid: "33337426"
 
 **Visual Studio 2017 版本 15.5**：添加了对导入现有 CMake 缓存的支持。 Visual Studio 自动提取自定义的变量，并创建一个预填充的 CMakeSettings.json 文件。
 
+Visual Studio 2017 版本 15.7：添加了对禁用自动缓存生成、解决方案资源管理器中的目标视图和单个文件编译的支持。
 
 ## <a name="installation"></a>安装
 
@@ -46,16 +51,25 @@ ms.locfileid: "33337426"
 
 - Visual Studio 将“CMake”菜单项添加到主菜单，其中包含用于查看和编辑 CMake 脚本的命令。
 - 解决方案资源管理器显示文件夹结构和文件。
-- Visual Studio 运行 CMake.exe 并生成默认配置的 CMake 缓存，即 x86 调试。 输出窗口中显示 CMake 命令行以及 CMake 的其他输出。
+- Visual Studio 运行 CMake.exe 并生成默认配置的 CMake 缓存，即 x86 调试。 输出窗口中显示 CMake 命令行以及 CMake 的其他输出。  Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”|“CMake”|“常规”对话框中禁用自动缓存生成。
 - 在后台，Visual Studio 开始对源文件编制索引，以启用 IntelliSense、浏览信息和重构等等。 随着工作进行，Visual Studio 监视器在编辑器和磁盘中随之发生变化，以保持其索引与源同步。
  
 可以打开包含任意数量 CMake 项目的文件夹。 Visual Studio 检测并配置工作区中的所有“根”CMakeLists.txt 文件。 CMake 操作（配置、生成、调试）以及 C++ IntelliSense 和浏览可用于工作区中的所有 CMake 项目。
 
-![包含多个根的 CMake 项目](media/cmake-multiple-roots.png) 
+![包含多个根的 CMake 项目](media/cmake-multiple-roots.png)  
+
+Visual Studio 2017 版本 15.7 及更高版本：还可以按目标查看经过逻辑组织的项目。 在“解决方案资源管理器”工具栏中，从下拉列表中选择“目标视图”：
+
+![CMake“目标视图”按钮](media/cmake-targets-view.png)
 
 ## <a name="import-an-existing-cache"></a>导入现有缓存
 
-导入现有 CMakeCache.txt 文件时，Visual Studio 自动提取自定义的变量，并基于这些变量创建一个预填充的 CMakeSettings.json 文件。 不会以任何方式修改原始缓存，并且仍可从命令行或者借助用于生成原始缓存的工具或 IDE 使用该原始缓存。 新的 CMakeSettings.json 文件与项目的根 CMakeLists.txt 放在一起。 Visual Studio 基于设置文件生成新的缓存。 并非缓存中的所有内容都会被导入。  生成器和编译器的位置等属性替换为已知适合用于 IDE 的默认值。
+导入现有 CMakeCache.txt 文件时，Visual Studio 自动提取自定义的变量，并基于这些变量创建一个预填充的 CMakeSettings.json 文件。 不会以任何方式修改原始缓存，并且仍可从命令行或者借助用于生成原始缓存的工具或 IDE 使用该原始缓存。 新的 CMakeSettings.json 文件与项目的根 CMakeLists.txt 放在一起。 Visual Studio 基于设置文件生成新的缓存。  
+
+
+Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”|“CMake”|“常规”对话框中替代自动缓存生成。
+
+并非缓存中的所有内容都会被导入。  生成器和编译器的位置等属性替换为已知适合用于 IDE 的默认值。
 
 ### <a name="to-import-an-existing-cache"></a>导入现有缓存
 
@@ -80,7 +94,7 @@ ms.locfileid: "33337426"
 1. 右键单击 CMakeLists.txt，并从上下文菜单中选择“生成”。 如果在文件夹结构中有多个目标，可以选择生成所有目标或仅生成某个特定目标，或者
 1. 从主菜单中选择“生成”|“生成解决方案”（F7 或 Ctrl+Shift+B）。 请确保已在“常规”工具栏的“启动项”下拉列表中选择了 CMake 目标。
 
-![CMake 生成菜单命令](media/cmake-build-menu.png "Cmake 生成命令菜单") 
+![CMake 生成菜单命令](media/cmake-build-menu.png "CMake 生成命令菜单") 
 
 为活动配置选择 Visual Studio 生成器时，可使用 `-m -v:minimal` 参数调用 MSBuild.exe。 要自定义生成，可在 CMakeSettings.json 文件中指定要通过 `buildCommandArgs` 属性传递到生成系统的其他命令行参数：
 
@@ -98,8 +112,7 @@ ms.locfileid: "33337426"
 
 要调试 CMake 项目，请选择所需配置并按 F5，或按工具栏中的“运行”按钮。 如果“运行”按钮提示“选择启动项”，请选择向下箭头并选择要运行的目标。 （在 CMake 项目中，“当前文档”选项只对 .cpp 文件有效。） 
 
-![CMake“运行”按钮](media/cmake-run-button.png "Cmake“运行”按钮")
-
+![CMake“运行”按钮](media/cmake-run-button.png "CMake“运行”按钮")
 
 如果在上次生成后进行了更改，则“运行”或“F5”命令会先生成项目。
 
@@ -112,7 +125,7 @@ ms.locfileid: "33337426"
 
 也可以从 CMake 菜单启动调试会话。
 
-要自定义项目中任何可执行 CMake 目标的调试程序设置，请右键单击特定 CMakeLists.txt 文件，并选择“调试和启动设置”。 在子菜单中选择 CMake 目标时，会创建一个名为 launch.vs.json 的文件。 此文件预填充了所选 CMake 目标的相关信息，且允许指定程序参数或调试程序类型等其他参数。 要引用 CMakeSettings.json 文件中的任何键，只需在 launch.vs.json 中 在该键前加上“cmake.”。 下面的示例演示了一个简单的 launch.vs.json 文件，该文件从当前所选配置的 CMakeSettings.json 文件拉取“remoteCopySources”键的值：
+要自定义项目中任何可执行 CMake 目标的调试程序设置，请右键单击特定 CMakeLists.txt 文件，并选择“调试和启动设置”。 在子菜单中选择 CMake 目标时，会创建一个名为 launch.vs.json 的文件。 此文件预填充了所选 CMake 目标的相关信息，且允许指定程序参数或调试程序类型等其他参数。 要引用 CMakeSettings.json 文件中的任何键，只需在 launch.vs.json 中 在该键前加上“CMake.”。 下面的示例演示了一个简单的 launch.vs.json 文件，该文件从当前所选配置的 CMakeSettings.json 文件拉取“remoteCopySources”键的值：
 
 ```json
 {
@@ -168,7 +181,6 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
    ![更改设置的 CMake 主菜单命令](media/cmake-change-settings.png)
 
-
 JSON IntelliSense 可帮助编辑 CMakeSettings.json 文件：
 
    ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
@@ -192,7 +204,6 @@ JSON IntelliSense 可帮助编辑 CMakeSettings.json 文件：
 
 1. **name**：显示在 C++ 配置下拉列表中的配置名称。 此属性值也可用作宏 `${name}`，用于指定其他属性值。 有关示例，请参阅 CMakeSettings.json 中的 **buildRoot** 定义。
 1. **generator**：映射到 -G 开关并指定要使用的生成器。 此属性也可用作宏 `${generator}`，帮助指定其他属性值。 Visual Studio 当前支持下列 CMake 生成器：
-
 
     - "Ninja"
     - "Visual Studio 14 2015"
@@ -363,3 +374,11 @@ CMakeSettings.json 现在支持继承环境。 此功能支持：(1) 继承默�
 - **打开缓存文件夹**：打开生成根文件夹的资源管理器窗口。  
 - **清理缓存**：删除生成根文件夹，使下一个 CMake 配置步骤从清理缓存开始。
 - **生成缓存**：即使 Visual Studio 认为环境是最新的，也强制运行生成步骤。
+ 
+Visual Studio 2017 版本 15.7 及更高版本：可在“工具”|“选项”|“CMake”|“常规”对话框中禁用自动缓存生成。
+
+## <a name="single-file-compilation"></a>单个文件编译
+
+Visual Studio 2017 版本 15.7 及更高版本：要在 CMake 项目中编译单个文件，可在解决方案资源管理器中右键单击该文件，然后选择“编译”。 通过使用 CMake 主菜单，还可编译当前在编辑器中打开的文件：
+
+![CMake 单个文件编译](media/cmake-single-file-compile.png)
