@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374171"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040855"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 类
 在功能区栏上实现位于一个编辑控件。  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  命令 ID`CMFCRibbonEdit`控件。  
   
- [in] `nWidth`  
+ [in]*nWidth*  
  宽度，以像素为单位的文本框`CMFCRibbonEdit`控件。  
   
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  标签`CMFCRibbonEdit`控件。  
   
- [in] `nImage`  
+ [in]*nImage*  
  要使用的小图像索引`CMFCRibbonEdit`控件。 由父功能区类别维护的较小的图像的集合。  
   
 ### <a name="remarks"></a>备注  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
  源 `CMFCRibbonEdit` 对象。  
   
 ### <a name="remarks"></a>备注  
- `src`参数的类型必须`CMFCRibbonEdit`。  
+ *Src*参数的类型必须`CMFCRibbonEdit`。  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  创建新的文本框，并为[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  指向的父窗口的指针`CMFCRibbonEdit`对象。  
   
- [in] `dwEditStyle`  
+ [in]*dwEditStyle*  
  指定文本框中的样式。 你可以组合备注部分中列出的窗口样式[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows SDK 所述。  
   
 ### <a name="return-value"></a>返回值  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nMin`  
+ [in]*nMin*  
  数值调节钮的最小值。  
   
- [in] `nMax`  
+ [in]*最*  
  数值调节钮的最大值。  
   
 ### <a name="remarks"></a>备注  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文`CMFCRibbonEdit`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文`CMFCRibbonEdit`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bInFloatyMode`  
+ [in]*bInFloatyMode*  
  `TRUE` 如果`CMFCRibbonEdit`控件是否处于浮动模式; 否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文`CMFCRibbonEdit`控件。  
   
 ### <a name="remarks"></a>备注  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文`CMFCRibbonEdit`控件。  
   
 ### <a name="remarks"></a>备注  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文`CMFCRibbonEdit`控件。  
   
 ### <a name="remarks"></a>备注  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文`CMFCRibbonEdit`控件。  
   
- [in] `strText`  
- 显示文本[](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 类")。  
+ [in]*strText*  
+ 显示文本[cmfcribbonedit 类](../../mfc/reference/cmfcribbonedit-class.md "")。  
   
- [in] `nTextOffset`  
+ [in]*nTextOffset*  
  距离，以像素为单位，从左侧的列表框中为显示文本内容。  
   
- [in] `rect`  
+ [in]*rect*  
  有关显示矩形`CMFCRibbonEdit`控件。  
   
- [in] `bIsSelected`  
+ [in]*bIsSelected*  
  未使用此参数。  
   
- [in] `bHighlighted`  
+ [in]*bHighlighted*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用控件;`FALSE`禁用控件。  
   
 ### <a name="remarks"></a>备注  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHighlight`  
+ [in]*bHighlight*  
  `TRUE` 如果指针的界限内`CMFCRibbonEdit`控件的指针; 否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsMenuKey`  
+ [in]*bIsMenuKey*  
  `TRUE` 如果快捷键提示显示弹出菜单;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsRTL`  
+ [in]*bIsRTL*  
  `TRUE` 如果布局，则从右到左;`FALSE`如果布局是从左到右。  
   
 ### <a name="remarks"></a>备注  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要显示的控件;`FALSE`隐藏控件。  
   
 ### <a name="remarks"></a>备注  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParent`  
+ *pParent*  
  指向的父窗口`CMFCRibbonEdit`对象。  
   
- `data`  
+ *data*  
  可访问性数据`CMFCRibbonEdit`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strText`  
+ [in]*strText*  
  文本框的文本。  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nAlign`  
+ [in]*nAlign*  
  文本对齐方式枚举值。 请参阅备注部分有关可能的值。  
   
 ### <a name="remarks"></a>备注  
- 参数`nAlign`是以下编辑之一控件样式：  
+ 参数*nAlign*是以下编辑之一控件样式：  
   
 - **ES_LEFT**为左对齐  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nWidth`  
+ [in]*nWidth*  
  以像素为单位，文本框的宽度。  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` 若要设置为浮动模式; 宽度`FALSE`设置常规模式的宽度。  
   
 ### <a name="remarks"></a>备注  
