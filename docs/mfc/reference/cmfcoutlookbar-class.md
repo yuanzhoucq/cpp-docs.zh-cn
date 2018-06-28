@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5640f634276f87d0a41633354a7dde0ed65a2940
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 935728856a00a27afa1f386f493832ddb955538b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372490"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040995"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 类
 在 Microsoft Outlook 2000 或 Outlook 2003 中具有 **“导航窗格”** 可视外观的选项卡式窗格。 `CMFCOutlookBar`对象包含[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象和一系列选项卡。 选项卡可以是[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象或`CWnd`-派生的对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。  
@@ -111,7 +111,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  在处理时`WM_CREATE`消息在主框架中，调用[CMFCOutlookBar::Create](#create)方法创建的 Outlook 栏选项卡控件。  
+2.  当处理主框架中的 WM_CREATE 消息时，调用[CMFCOutlookBar::Create](#create)方法创建的 Outlook 栏选项卡控件。  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -147,7 +147,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  调用[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)添加每个新选项卡。设置`bDetachable`参数`FALSE`以使页面非可拆分。 或者，使用[CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)以添加可拆分的页面。  
+5.  调用[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)添加每个新选项卡。设置*bDetachable*参数`FALSE`以使页面非可拆分。 或者，使用[CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)以添加可拆分的页面。  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
@@ -207,7 +207,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向正在停靠到此窗格中的另一个窗格的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -216,7 +216,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="remarks"></a>备注  
  如果 Outlook 栏在 Outlook 2003 模式下，停靠不支持，因此，返回值是`FALSE`。  
   
- 如果`pBar`参数是`NULL`，此方法返回`FALSE`。  
+ 如果*pBar*参数是`NULL`，此方法返回`FALSE`。  
   
  否则，此方法的行为方式如基方法[cbasepane:: Canacceptpane](../../mfc/reference/cbasepane-class.md#canacceptpane)，只不过即使未启用停靠，Outlook 栏仍然可以启用要停靠在其上的另一个 Outlook 栏。  
   
@@ -250,25 +250,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszCaption`  
+ [in]*lpszCaption*  
  指定的窗口标题。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指定指向父窗口的指针。 不得为 NULL。  
   
- [in] `rect`  
+ [in]*rect*  
  指定将 outlook 栏大小和位置以像素为单位。  
   
- [in] `nID`  
+ [in]*nID*  
  指定控件 id。 必须不同于其他控件使用在应用程序的 Id。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  指定所需的控件栏样式。 有关可能的值，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定的特殊库定义样式。  
   
- [in] `pContext`  
+ [in]*pContext*  
  创建上下文。  
   
 ### <a name="return-value"></a>返回值  
@@ -277,7 +277,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  构造`CMFCOutlookBar`两个步骤中的对象。 第一次调用的构造函数，，然后调用`Create`，它创建 outlook 栏控件并将其附加到`CMFCOutlookBar`对象。  
   
- 请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)有关可用的库定义样式，按指定的列表`dwControlBarStyle`。  
+ 请参阅[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)有关可用的库定义样式，按指定的列表*dwControlBarStyle*。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用`Create`方法`CMFCOutlookBar`类。 此代码片段属于[Outlook 多视图示例](../../visual-cpp-samples.md)。  
@@ -297,16 +297,16 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPageName`  
+ [in]*lpszPageName*  
  页标签中。  
   
- [in] `bActivatePage`  
+ [in]*bActivatePage*  
  如果`TRUE`，该页就会在创建时激活。  
   
- [in] `dwEnabledDocking`  
+ [in]*dwEnabledDocking*  
  指定启用停靠边分离页时 CBRS_ALIGN_ 标志的组合。  
   
- [in] `bEnableTextLabels`  
+ [in]*bEnableTextLabels*  
  如果`TRUE`，文本标签已启用位于页面上的按钮。  
   
 ### <a name="return-value"></a>返回值  
@@ -347,16 +347,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向为浮动窗格的指针。  
   
- [in] `nTabID`  
+ [in]*nTabID*  
  为浮动选项卡的从零开始索引。  
   
- [in] `dockMethod`  
+ [in]*dockMethod*  
  指定要使用可使窗格浮动的方法。  有关详细信息，请参阅[cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。  
   
- [in] `bHide`  
+ [in]*bHide*  
  `TRUE` 若要隐藏浮点; 之前的窗格否则为`FALSE`。 与此方法的基类版本，此参数没有默认值。  
   
 ### <a name="return-value"></a>返回值  
@@ -388,10 +388,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectTabAreaTop`  
+ [out]*rectTabAreaTop*  
  在函数返回时包含的大小和位置 （在客户端坐标中） 的顶部的选项卡区域。  
   
- [out] `rectTabAreaBottom`  
+ [out]*rectTabAreaBottom*  
  在函数返回时包含的大小和位置 （在客户端坐标中） 的底部选项卡区域。  
   
 ### <a name="remarks"></a>备注  
@@ -422,7 +422,7 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPage`  
+ [in]*nPage*  
  已活动选项卡页的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
@@ -436,7 +436,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPage`  
+ [in]*nPage*  
  将要设置活动选项卡页的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -452,7 +452,7 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDown`  
+ [in]*bDown*  
  `TRUE` 如果 Outlook 栏是向下滚动，或`FALSE`如果它向上滚动。  
   
 ### <a name="remarks"></a>备注  
@@ -467,10 +467,10 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiPage`  
+ [in]*uiPage*  
  父 Outlook 窗口中的页面的从零开始索引。  
   
- [in] `pTargetWnd`  
+ [in]*pTargetWnd*  
  Pointerto 父 Outlook 窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -493,10 +493,10 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pFont`  
+ [in]*pFont*  
  指定新的字体。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  如果`TRUE`，Outlook 栏将重绘。  
   
 ### <a name="remarks"></a>备注  
@@ -510,7 +510,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMode2003`  
+ [in]*bMode2003*  
  如果为 TRUE，则启用 Office 2003 模式。  
   
 ### <a name="remarks"></a>备注  

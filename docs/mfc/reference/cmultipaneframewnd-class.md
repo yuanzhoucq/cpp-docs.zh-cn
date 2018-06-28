@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375919"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039201"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 类
 `CMultiPaneFrameWnd`类扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个、 动态地创建多个浮点，选项卡式windows。  
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="remarks"></a>备注  
   
@@ -200,7 +200,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -237,11 +237,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndToDock`  
- [in] `ptMouse`  
- [in] `rectResult`  
- [in] `bDrawTab`  
- [in] `ppTargetBar`  
+ [in]*pWndToDock*  
+ [in]*ptMouse*  
+ [in]*rectResult*  
+ [in]*bDrawTab*  
+ [in]*ppTargetBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -264,7 +264,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockingBar`  
+ [in]*pDockingBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockedFrame`  
- [in] `dockMethod`  
+ [in]*pDockedFrame*  
+ [in]*dockMethod*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -322,7 +322,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockedBar`  
+ [in]*pDockedBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -336,7 +336,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -419,9 +419,9 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in]*pControlBar*  
+ [in]*pTarget*  
+ [in]*bAfter*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
- [in] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- [in] `bShow`  
+ [in]*pBar*  
+ [in]*bShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -506,9 +506,9 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bCheckVisibility`  
+ [in]*点*  
+ [in]*nSensitivity*  
+ [in]*bCheckVisibility*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -534,9 +534,9 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
- [in] `bDestroy`  
- [in] `bNoDelayedDestroy`  
+ [in]*pBar*  
+ [in]*bDestroy*  
+ [in]*bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>备注  
   
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBarOrg`  
- [in] `pBarReplaceWith`  
+ [in]*pBarOrg*  
+ [in]*pBarReplaceWith*  
   
 ### <a name="remarks"></a>备注  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
- [in] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -580,7 +580,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -592,7 +592,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockManager`  
+ [in]*pDockManager*  
   
 ### <a name="remarks"></a>备注  
   
@@ -604,7 +604,7 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hwnd`  
+ [in]*hwnd*  
   
 ### <a name="remarks"></a>备注  
   
@@ -619,9 +619,9 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `preDockState`  
- [in] `pBarToDock`  
- [in] `dockMethod`  
+ [in]*preDockState*  
+ [in]*pBarToDock*  
+ [in]*dockMethod*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -635,7 +635,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in]*pDockingBar*  
+ [in]*pTabbedBar*  
   
 ### <a name="remarks"></a>备注  
   

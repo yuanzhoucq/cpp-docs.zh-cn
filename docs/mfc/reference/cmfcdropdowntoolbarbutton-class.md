@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c894ff57bbbee59842f56dbfef0ec06a6c7899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372529"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041690"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 类
 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，它将打开一个下拉工具栏 ( [CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果用户按下并按住工具栏按钮。  
@@ -103,7 +103,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|指定用户必须按住鼠标按钮下拉工具栏出现之前的时间的长度。|  
   
@@ -132,11 +132,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
  源按钮对要从其中复制的引用。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以将另一个工具栏按钮复制到此工具栏按钮。 `src` 类型必须为`CMFCDropDownToolbarButton`。  
+ 调用此方法以将另一个工具栏按钮复制到此工具栏按钮。 *src*的类型必须为`CMFCDropDownToolbarButton`。  
   
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  构造 `CMFCDropDownToolbarButton` 对象。  
@@ -151,16 +151,16 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszName`  
+ [in]*lpszName*  
  按钮的默认文本。  
   
- [in] `pToolBar`  
+ [in]*pToolBar*  
  指向的指针`CMFCDropDownToolBar`当用户按下按钮时显示的对象。  
   
 ### <a name="remarks"></a>备注  
- 第二个重载的构造函数将复制到下拉列表按钮第一个按钮从工具栏，`pToolBar`指定。  
+ 第二个重载的构造函数将复制到下拉列表按钮第一个按钮从工具栏， *pToolBar*指定。  
   
- 通常情况下，下拉工具栏按钮的工具栏中使用从最近使用过按钮的文本，`pToolBar`指定。 它使用指定的文本`lpszName`按钮时将转换为菜单按钮或显示在**命令**选项卡**自定义**对话框。 有关详细信息**自定义**对话框中，请参阅[CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
+ 通常情况下，下拉工具栏按钮的工具栏中使用从最近使用过按钮的文本， *pToolBar*指定。 它使用指定的文本*lpszName*按钮时将转换为菜单按钮或显示在**命令**选项卡**自定义**对话框。 有关详细信息**自定义**对话框中，请参阅[CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何构造的对象`CMFCDropDownToolbarButton`类。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。  
@@ -175,7 +175,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  父窗口的下拉列表框中，或`NULL`使用下拉工具栏按钮的父窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -186,7 +186,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  此方法通过使用创建下拉工具栏[CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create)方法。 如果在父级工具栏垂直停靠，此方法将下拉工具栏放到父工具栏上，具体取决于调整为合适的左侧或右侧一端。 否则，此方法将下拉工具栏放在父级工具栏下方。  
   
- 如果此方法将失败`pWnd`是`NULL`和下拉工具栏按钮没有父窗口。  
+ 如果此方法将失败*pWnd*是`NULL`和下拉工具栏按钮没有父窗口。  
   
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  副本从工具栏按钮的文本复制到的菜单。  
@@ -196,7 +196,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `menuButton`  
+ [in]*menuButton*  
  对目标菜单按钮的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -267,13 +267,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  设备上下文显示按钮。  
   
- [in] `sizeDefault`  
+ [in]*大小*  
  按钮的默认大小。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  在父级工具栏停靠状态。 此参数是`TRUE`时工具栏水平停靠的还是浮动，或`FALSE`如果垂直停靠工具栏。  
   
 ### <a name="return-value"></a>返回值  
@@ -290,7 +290,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  新的父窗口。  
   
 ### <a name="remarks"></a>备注  
@@ -306,10 +306,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  父窗口的工具栏按钮。  
   
- [in] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 如果消息应处理一定的延迟。  
   
 ### <a name="return-value"></a>返回值  
@@ -345,14 +345,14 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  父窗口的工具栏按钮。  
   
 ### <a name="return-value"></a>返回值  
  如果按钮处理此帮助消息中; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法扩展的基类实现 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 通过调用[CMFCDropDownToolbarButton::OnClick](#onclick)方法替换`bDelay`设置为`FALSE`. 此方法返回的返回值[CMFCDropDownToolbarButton::OnClick](#onclick)。  
+ 此方法扩展的基类实现 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 通过调用[CMFCDropDownToolbarButton::OnClick](#onclick)方法替换*bDelay*设置为`FALSE`。 此方法返回的返回值[CMFCDropDownToolbarButton::OnClick](#onclick)。  
   
  有关详细信息`WM_HELPHITTEST message, see` [TN028： 上下文相关帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。  
   
@@ -364,7 +364,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenu`  
+ [in]*pMenu*  
  要自定义的菜单。  
   
 ### <a name="return-value"></a>返回值  
@@ -401,28 +401,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  设备上下文显示按钮。  
   
- [in] `rect`  
+ [in]*rect*  
  按钮的边框。  
   
- [in] `pImages`  
+ [in]*pImages*  
  与按钮相关联的工具栏图像的集合。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  在父级工具栏停靠状态。 此参数是`TRUE`按钮时水平停靠和`FALSE`按钮垂直插接时。  
   
- [in] `bCustomizeMode`  
+ [in]*bCustomizeMode*  
  指定指示工具栏是否在自定义模式。 此参数是`TRUE`工具栏时在自定义模式和`FALSE`工具栏不在自定义模式中时。  
   
- [in] `bHighlight`  
+ [in]*bHighlight*  
  指定按钮将突出显示。 此参数是`TRUE`时突出显示按钮和`FALSE`按钮将不突出显示。  
   
- [in] `bDrawBorder`  
+ [in]*bDrawBorder*  
  指定按钮是否应显示其边框。 此参数是`TRUE`按钮时应显示其边框和`FALSE`按钮时应不显示其边框。  
   
- [in] `bGrayDisabledButtons`  
+ [in]*bGrayDisabledButtons*  
  指定是否为禁用的按钮添加底纹或使用已禁用的图像集合。 此参数是`TRUE`禁用的按钮应阴影和`FALSE`当此方法应使用已禁用的图像集合。  
   
 ### <a name="remarks"></a>备注  
@@ -439,13 +439,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  设备上下文显示按钮。  
   
- [in] `rect`  
+ [in]*rect*  
  按钮的边框。  
   
- [in] `bSelected`  
+ [in]*bSelected*  
  是否选中按钮。 如果此参数为`TRUE`，按钮处于选中状态。 如果此参数为`FALSE`，未选择按钮时。  
   
 ### <a name="return-value"></a>返回值  
@@ -464,7 +464,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
  `CArchive`从中或向其进行序列化的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -478,11 +478,11 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  默认命令的 ID。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以指定用户单击按钮时框架所执行的默认命令。 具有由指定的命令 ID 的项`uiCmd`必须位于父下拉工具栏。  
+ 调用此方法以指定用户单击按钮时框架所执行的默认命令。 具有由指定的命令 ID 的项*uiCmd*必须位于父下拉工具栏。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

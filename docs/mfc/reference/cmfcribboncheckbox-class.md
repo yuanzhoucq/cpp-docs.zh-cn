@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369702"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042051"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 类
 `CMFCRibbonCheckBox` 类实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-其中 `nID` 是复选框命令 ID，`lpszText` 是复选框的文本标签。  
+其中*nID*是复选框命令 ID 和*lpszText*是复选框的文本标签。  
   
  可以通过向功能区面板中添加一个复选框[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  指定命令 id。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  指定文本标签。  
   
 ### <a name="return-value"></a>返回值  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向`CDC`与复选框。  
   
 ### <a name="return-value"></a>返回值  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向`CDC`与此复选框。  
   
 ### <a name="return-value"></a>返回值  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向`CDC`对象与此复选框。  
   
 ### <a name="return-value"></a>返回值  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向`CDC`要在其中绘制该复选框。  
   
 ### <a name="remarks"></a>备注  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDC*`  
+ [in]*CDC**  
  指向`CDC`与复选框。  
   
- [in] `CRect`  
+ [in]*的 CRect*  
  A`CRect`对象，它指定在其中绘制菜单图像的矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  要在其中绘制该复选框的设备上下文的指针。  
   
- [in] `strText`  
+ [in]*strText*  
  显示文本。  
   
- [in] `nTextOffset`  
+ [in]*nTextOffset*  
  距离，以像素为单位，从左侧的列表框中为显示文本内容。  
   
- [in] `rect`  
+ [in]*rect*  
  复选框显示矩形。  
   
- [in] `bIsSelected`  
+ [in]*bIsSelected*  
  `TRUE` 如果选中的复选框，或`FALSE`如果不是。  
   
- [in] `bHighlighted`  
+ [in]*bHighlighted*  
  `TRUE` 如果突出显示复选框时，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>备注  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParent`  
+ *pParent*  
  父窗口的复选框。  
   
- `data`  
+ *data*  
  复选框可访问性数据。  
   
 ### <a name="return-value"></a>返回值  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369237"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037338"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 类
 跟踪 Windows 消息，如当用户从菜单选择项的使用计数。  
@@ -73,7 +73,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|名称|描述|  
+|name|描述|  
 |`m_CmdUsage`|A`CMap`将命令映射到其使用情况计数的对象。|  
 |`m_nMinUsagePercentage`|要频繁使用的命令小使用率百分比。|  
 |`m_nStartCount`|用于确定此对象是否具有收集跟踪数据的最小量起始计数器。|  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `uiCmd`|指定要递增的命令计数器。|  
+|[in]*uiCmd*|指定要递增的命令计数器。|  
   
 ### <a name="remarks"></a>备注  
  此方法将新条目添加到映射结构的命令计数`m_CmdUsage`，如果该条目已存在。  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   工具栏框架是在自定义模式 ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)方法返回一个非零值)。  
   
--   该命令是指子菜单或菜单分隔符 (`uiCmd`等于 0 或-1)。  
+-   该命令是指子菜单或菜单分隔符 ( *uiCmd*等于 0 或-1)。  
   
-- `uiCmd` 指的是标准命令 (全局`IsStandardCommand`函数返回非零值)。  
+- *uiCmd*指的是标准命令 (全局`IsStandardCommand`函数返回非零值)。  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  检索与给定的命令 ID 相关联的使用计数  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `uiCmd`|要检索命令计数器的 ID。|  
+|[in]*uiCmd*|要检索命令计数器的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  与给定的命令 ID 相关联的使用率计数  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `uiCmd`|指定要检查的命令。|  
+|[in]*uiCmd*|指定要检查的命令。|  
   
 ### <a name="return-value"></a>返回值  
  如果经常使用的命令; 则为非 0否则为 0。  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `ar`|A`CArchive`要序列化来自或附加到对象。|  
+|[in]*ar*|A`CArchive`要序列化来自或附加到对象。|  
   
 ### <a name="remarks"></a>备注  
  此方法序列化的命令计数站点地图结构`m_CmdUsage`，并且总命令的使用情况， `m_nTotalUsage`、 计数器来自或附加到指定的存档。  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `nStartCount`|所有跟踪命令新初始计数。|  
-|[in] `nMinUsagePercentage`|新的小使用率百分比。|  
+|[in]*nStartCount*|所有跟踪命令新初始计数。|  
+|[in]*nMinUsagePercentage*|新的小使用率百分比。|  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果该方法成功，`FALSE`如果`nMinUsagePercentage`参数为大于或等于 100。  
+ `TRUE` 如果该方法成功，`FALSE`如果*nMinUsagePercentage*参数为大于或等于 100。  
   
 ### <a name="remarks"></a>备注  
- 此方法设置共享`CMFCCmdUsageCount`类数据成员`m_nStartCount`和`m_nMinUsagePercentage`到`nStartCount`和`nMinUsagePercentage`分别。 `m_nStartCount` 由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法来确定此对象是否具有收集跟踪数据的最小数量。 `m_nMinUsagePercentage` 由[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法来确定是否频繁使用给定的命令。  
+ 此方法设置共享`CMFCCmdUsageCount`类数据成员`m_nStartCount`和`m_nMinUsagePercentage`到*nStartCount*和*nMinUsagePercentage*分别。 `m_nStartCount` 由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法来确定此对象是否具有收集跟踪数据的最小数量。 `m_nMinUsagePercentage` 由[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法来确定是否频繁使用给定的命令。  
   
  在调试版本中，此方法将生成断言失败如果`nMinUsagePercentage`参数为大于或等于 100。  
   

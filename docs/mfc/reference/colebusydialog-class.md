@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374365"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040907"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 类
 用于 OLE“服务器未响应”或“服务器忙”对话框。  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  如果**TRUE**，而不是服务器忙对话框中调用未响应对话框。 未响应对话框中的用语比在服务器忙对话框中，使用文字稍有不同，取消按钮处于禁用状态。  
   
- `dwFlags`  
+ *dwFlags*  
  创建标记。 可以包含零个或多个与按位 OR 运算符结合使用的以下值：  
   
 - **BZ_DISABLECANCELBUTTON**时调用对话框中禁用取消按钮。  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON**时调用对话框中禁用重试按钮。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  

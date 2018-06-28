@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371681"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040176"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 类
 封装 Windows 公共 OLE“对象属性”对话框。  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向正在访问其属性的文档项的指针。  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  最大缩放比例文档项图像的百分比。  
   
- `pParentWnd`  
+ *pParentWnd*  
  对话框的父或所有者的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向正在访问其属性的文档项的指针。  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  对话框比例数字值。  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  默认实现不执行任何操作。 你必须重写此函数可启用缩放控件。  
   
 > [!NOTE]
->  常见的 OLE 对象属性对话框中将显示之前，框架调用此函数带**NULL**为`pItem`和 a-1 表示`nCurrentScale`。 这样做是为了确定是否应启用缩放控件。  
+>  常见的 OLE 对象属性对话框中将显示之前，框架调用此函数带**NULL**为*pItem*和 a-1 表示*nCurrentScale*。 这样做是为了确定是否应启用缩放控件。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 CIRC](../../visual-cpp-samples.md)   

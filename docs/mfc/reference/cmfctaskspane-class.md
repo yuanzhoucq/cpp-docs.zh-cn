@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10f183ed498fde15166a6e8ee7e7d10cfe9f60d7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378612"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040930"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -399,19 +399,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPageIdx`  
+ [in]*nPageIdx*  
  指定的从零开始的页索引。  
   
- [in] `lpszGroupName`  
+ [in]*lpszGroupName*  
  指定组名称。  
   
- [in] `bBottomLocation`  
+ [in]*bBottomLocation*  
  `TRUE` 若要在任务窗格控件; 底部创建组否则为`FALSE`。  
   
- [in] `bSpecial`  
+ [in]*bSpecial*  
  `TRUE` 若要将标记为此组*特殊*组; 否则为`FALSE`。 有关特殊组的详细信息，请参阅备注部分的`CMFCTasksPane`。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  指定要在组标题中显示的图标。  
   
 ### <a name="return-value"></a>返回值  
@@ -434,20 +434,20 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定添加了标签的组的索引。  
   
- [in] `lpszLabelName`  
+ [in]*lpszLabelName*  
  指定标签的名称。  
   
- [in] `nTaskIcon`  
+ [in]*nTaskIcon*  
  指定要显示标签旁边的图标。 框架将存储在映像的列表中的图标。 此参数是该列表的索引。  
   
- [in] `bIsBold`  
+ [in]*bIsBold*  
  `TRUE` 若要以粗体文本; 显示标签否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
- 标签添加的组的从零开始索引或-1，如果通过指定的组`nGroup`不存在。  
+ 标签添加的组的从零开始索引或-1，如果通过指定的组*nGroup*不存在。  
   
 ### <a name="remarks"></a>备注  
  该框架将以不同方式处理任务和标签。 当用户单击任务时，框架所执行命令。 当用户单击标签时，将不执行任何命令。 有关详细信息，请参阅[cmfctaskspane:: Addtask](#addtask)。  
@@ -462,14 +462,14 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定组的索引。 此方法将 MRU 文件列表添加到此参数指定的组。  
   
- [in] `nMaxFiles`  
+ [in]*nMaxFiles*  
  指定要在 MRU 文件列表中显示文件的数。  
   
 ### <a name="return-value"></a>返回值  
- MRU 文件列表添加的组的从零开始索引或-1，如果通过指定的组`nGroup`不存在。  
+ MRU 文件列表添加的组的从零开始索引或-1，如果通过指定的组*nGroup*不存在。  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  添加到任务窗格页。  
@@ -479,7 +479,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPageLabel`  
+ [in]*lpszPageLabel*  
  指定的标签页。  
   
 ### <a name="return-value"></a>返回值  
@@ -493,7 +493,7 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -512,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定其中添加任务的组索引。  
   
- [in] `lpszTaskName`  
+ [in]*lpszTaskName*  
  指定任务的名称。  
   
- [in] `nTaskIcon`  
+ [in]*nTaskIcon*  
  指定要显示任务旁边的图标。 框架将存储在映像的列表中的图标。 此参数是该列表的索引。  
   
- [in] `uiCommandID`  
- 指定当用户单击任务时要执行该命令的命令 ID。 该任务被视为一个标签，如果`uiCommandID`为 0。  
+ [in]*uiCommandID*  
+ 指定当用户单击任务时要执行该命令的命令 ID。 该任务被视为一个标签，如果*uiCommandID*为 0。  
   
- [in] `dwUserData`  
+ [in]*dwUserData*  
  指定要与任务关联的用户定义数据。  
   
 ### <a name="return-value"></a>返回值  
- 该任务添加的组的从零开始索引或-1，如果通过指定的组`nGroup`不存在。  
+ 该任务添加的组的从零开始索引或-1，如果通过指定的组*nGroup*不存在。  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  将子窗口添加到任务窗格。  
@@ -543,23 +543,23 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定其中添加窗口的组索引。  
   
- [in] `hwndTask`  
+ [in]*hwndTask*  
  指定要添加的窗口的句柄。  
   
- [in] `nWndHeight`  
+ [in]*nWndHeight*  
  指定窗口的高度。  
   
- [in] `bAutoDestroyWindow`  
+ [in]*bAutoDestroyWindow*  
  `TRUE` 当任务被删除; 销毁窗口否则为`FALSE`。  
   
- [in] `dwUserData`  
+ [in]*dwUserData*  
  指定与任务关联的用户定义数据。  
   
 ### <a name="return-value"></a>返回值  
- 窗口添加的组的从零开始索引或-1，如果通过指定的组`nGroup`不存在。  
+ 窗口添加的组的从零开始索引或-1，如果通过指定的组*nGroup*不存在。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以将控件添加到任务窗格。 例如，你可以添加一个搜索栏与运行方式类似的编辑控件。  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bCollapse`  
- [in] `nPageIdx`  
+ [in]*bCollapse*  
+ [in]*nPageIdx*  
   
 ### <a name="remarks"></a>备注  
   
@@ -604,13 +604,13 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pGroup`  
+ [in]*pGroup*  
  指定要折叠的组。  
   
- [in] `bCollapse`  
+ [in]*bCollapse*  
  `TRUE` 若要折叠组;`FALSE`若要展开的组。  
   
- [in] `nGroup`  
+ [in]*nGroup*  
  指定要折叠的组的内部列表中的组的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -627,7 +627,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectInitial`  
+ [in]*rectInitial*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -656,7 +656,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用任务组展开或折叠; 时发生动画否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -670,7 +670,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 如果用户可以折叠任务组;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -684,7 +684,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 在上启用下拉菜单**下一步**和**上一步**导航按钮; 否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -706,16 +706,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用导航工具栏;否则为`FALSE`。  
   
- [in] `uiToolbarBmpRes`  
+ [in]*uiToolbarBmpRes*  
  指定用于包含在工具栏上显示的图像的位图的资源 ID。  
   
- [in] `sizeToolbarImage`  
+ [in]*sizeToolbarImage*  
  指定的工具栏图像的大小。  
   
- [in] `sizeToolbarButton`  
+ [in]*sizeToolbarButton*  
  指定工具栏按钮的大小。  
   
 ### <a name="remarks"></a>备注  
@@ -731,7 +731,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
   
 ### <a name="remarks"></a>备注  
   
@@ -743,7 +743,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要在而不是滚动条; 任务窗格中显示滚动按钮否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -757,7 +757,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 文本换行中的任务窗格中; 显示的标签否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -771,7 +771,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 在任务窗格中; 中包装任务否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -840,10 +840,10 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pGroup`  
+ [in]*pGroup*  
  指定检索其位置的任务组。  
   
- [out] `nGroup`  
+ [out]*nGroup*  
  包含任务组的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -880,7 +880,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lstNextPages`  
+ [in]*lstNextPages*  
   
 ### <a name="remarks"></a>备注  
   
@@ -894,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定任务组的从零开始的索引。  
   
- [out] `nPage`  
+ [out]*nPage*  
  包含指定的组的页索引。 如果任务组仅包含一个默认页，则返回的值为 0。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果组`nGroup`存在; 否则为`FALSE`。  
+ `TRUE` 如果组*nGroup*存在; 否则为`FALSE`。  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  返回页数。  
@@ -921,7 +921,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lstPrevPages`  
+ [in]*lstPrevPages*  
   
 ### <a name="remarks"></a>备注  
   
@@ -933,7 +933,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nBar`  
+ [in]*nBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定包含任务的组的从零开始索引。  
   
- [in] `nTask`  
- 指定列表中，指定任务的从零开始索引`nGroup`。  
+ [in]*nTask*  
+ 指定列表中，指定任务的从零开始索引*nGroup*。  
   
 ### <a name="return-value"></a>返回值  
  指定索引处的任务。  
@@ -966,11 +966,11 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定任务组的索引。  
   
 ### <a name="return-value"></a>返回值  
- 指定的组或 0 中的任务数`nGroup`无效。  
+ 指定的组或 0 中的任务数*nGroup*无效。  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  返回指定的组索引的任务组。  
@@ -980,7 +980,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定要检索的组的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1007,26 +1007,26 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCommandID`  
+ [in]*uiCommandID*  
  指定要查找任务的命令 ID。  
   
- [out] `nGroup`  
+ [out]*nGroup*  
  包含任务的组索引。  
   
- [out] `nTask`  
+ [out]*nTask*  
  包含在任务组中任务的索引。  
   
- [in] `hwndTask`  
+ [in]*hwndTask*  
  指定与任务关联的窗口。  
   
- [in] `pTask`  
+ [in]*pTask*  
  指定要查找的任务。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果任务位置; 如果未找到`FALSE`如果指定的任务不存在。  
   
 ### <a name="remarks"></a>备注  
- 此方法检索的组索引和指定的任务的任务索引。 如果该方法返回`FALSE`，`nGroup`和`nTask`设置为-1。  
+ 此方法检索的组索引和指定的任务的任务索引。 如果该方法返回`FALSE`， *nGroup*和*nTask*设置为-1。  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  返回任务的水平偏移量。  
@@ -1199,9 +1199,9 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*nIndex*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1238,20 +1238,20 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroupNumber`  
+ [in]*nGroupNumber*  
  指定包含被单击的任务的组的从零开始索引。  
   
- [in] `nTaskNumber`  
+ [in]*nTaskNumber*  
  指定被单击的任务的从零开始索引。  
   
- [in] `uiCommandID`  
+ [in]*uiCommandID*  
  指定与任务关联的命令 ID。  
   
- [in] `dwUserData`  
+ [in]*dwUserData*  
  包含与被单击的任务关联的用户定义的数据。  
   
 ### <a name="remarks"></a>备注  
- 当用户单击任务时，框架将调用此方法。 默认情况下，框架将检查与被单击的任务相关联的命令 ID，并且如果它不为零，将发送`WM_COMMAND`到任务窗格控件的所有者的消息。  
+ 当用户单击任务时，框架将调用此方法。 默认情况下，框架将检查与被单击的任务相关联的命令 ID 并，如果不为零，则将 WM_COMMAND 消息发送到任务窗格控件的所有者。  
   
  重写此方法在派生类来执行自定义代码，当任务被单击时。  
   
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pbtn`  
- [in] `pWndOwner`  
+ [in]*pbtn*  
+ [in]*pWndOwner*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1323,7 +1323,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lVal`  
+ [in]*lVal*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1352,7 +1352,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1366,7 +1366,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bRedraw`  
+ [in]*bRedraw*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1378,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPageIdx`  
+ [in]*nPageIdx*  
  指定页的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
- 删除指定的页上的所有组`nPageIdx`，或如果没有一个默认页的所有组。  
+ 删除指定的页上的所有组*nPageIdx*，或如果没有一个默认页的所有组。  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  从任务窗格中删除所有页，除默认（第一）页除外。  
@@ -1399,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定的组的从零开始的索引。  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1410,7 +1410,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定要删除的组的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
@@ -1426,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPageIdx`  
+ [in]*nPageIdx*  
  指定要删除的页的从零开始的索引。  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1440,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定包含要删除的任务的任务组的从零开始索引。  
   
- [in] `nTask`  
+ [in]*nTask*  
  指定要删除的任务的从零开始索引。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 重绘的任务窗格中;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果该函数成功，则`FALSE`如果`nGroup`或`nTask`无效。  
+ `TRUE` 如果该函数成功，则`FALSE`如果*nGroup*或*nTask*无效。  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1463,9 +1463,9 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*nIndex*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1479,7 +1479,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1491,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPageIdx`  
+ [in]*nPageIdx*  
  指定要显示的页的从零开始的索引。  
   
 ### <a name="remarks"></a>备注  
- 如果此方法会断言`nPageIdx`无效。  
+ 如果此方法会断言*nPageIdx*无效。  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  设置任务窗格的标题名称。  
@@ -1505,7 +1505,7 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszName`  
+ [in]*lpszName*  
  指定的标题名称。  
   
 ### <a name="remarks"></a>备注  
@@ -1519,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  指定的标题高度。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以自定义任务窗格元素的边距。  
   
- 如果`n`为-1，框架将使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 默认标题高度为 25 像素。  
+ 如果*n*为-1，框架将使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 默认标题高度为 25 像素。  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  设置组标题的水平偏移量。  
@@ -1535,7 +1535,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  指定组标题的水平偏移的量。  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
@@ -1546,7 +1546,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  指定的垂直偏移量，以像素为单位的组标题。  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
@@ -1559,10 +1559,10 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定的组的从零开始的索引。  
   
- [in] `lpszGroupName`  
+ [in]*lpszGroupName*  
  指定组的名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -1579,13 +1579,13 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定的组的从零开始的索引。  
   
- [in] `color`  
+ [in]*颜色*  
  指定的文本颜色。  
   
- [in] `colorHot`  
+ [in]*colorHot*  
  指定突出显示的组的文本颜色。 如果为-1，则使用默认突出显示颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -1599,13 +1599,13 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  指定的垂直偏移量。  
   
 ### <a name="remarks"></a>备注  
  垂直偏移量是任务组和任务窗格的边框之间的距离。  
   
- 调用此方法以自定义任务窗格元素的边距。 如果`n`为-1，框架将使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 默认偏移量为 15 像素。  
+ 调用此方法以自定义任务窗格元素的边距。 如果*n*为-1，框架将使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 默认偏移量为 15 像素。  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  设置水平边距。  
@@ -1615,7 +1615,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  以像素为单位指定边距。  
   
 ### <a name="remarks"></a>备注  
@@ -1636,16 +1636,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiImageListResID`  
+ [in]*uiImageListResID*  
  指定的图像列表的资源 ID。  
   
- [in] `cx`  
+ [in]*cx*  
  指定的图像列表中的图标大小。  
   
- [in] `clrTransparent`  
+ [in]*clrTransparent*  
  指定的透明颜色。  
   
- [in] `hIcons`  
+ [in]*hIcons*  
  指定包含任务窗格中的图标的图像列表。  
   
 ### <a name="remarks"></a>备注  
@@ -1663,10 +1663,10 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPageIdx`  
+ [in]*nPageIdx*  
  指定页的从零开始的索引。  
   
- [in] `lpszName`  
+ [in]*lpszName*  
  指定要显示在页面上的标题文本。  
   
 ### <a name="remarks"></a>备注  
@@ -1683,13 +1683,13 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定任务组的从零开始的索引。  
   
- [in] `nTask`  
+ [in]*nTask*  
  指定任务的从零开始的索引。  
   
- [in] `lpszTaskName`  
+ [in]*lpszTaskName*  
  指定任务名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -1703,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  指定的水平偏移量。  
   
 ### <a name="remarks"></a>备注  
  水平偏移量是以从左边缘和右边缘的组的像素为单位的距离。  
   
- 如果`n`为-1，此方法将返回的值设置的水平偏移量`CMFCVisualManager::GetTasksPaneTaskHorzOffset`方法。  
+ 如果*n*为-1，此方法将返回的值设置的水平偏移量`CMFCVisualManager::GetTasksPaneTaskHorzOffset`方法。  
   
  默认的水平偏移量为 12 像素。  
   
@@ -1721,7 +1721,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1733,7 +1733,7 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1749,16 +1749,16 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定包含任务的任务组的从零开始索引。  
   
- [in] `nTask`  
+ [in]*nTask*  
  指定任务的从零开始的索引。  
   
- [in] `color`  
+ [in]*颜色*  
  指定任务的文本颜色。  
   
- [in] `colorHot`  
+ [in]*colorHot*  
  指定突出显示的组的文本颜色。 如果为-1，则此方法使用的默认突出显示颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -1772,13 +1772,13 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `n`  
+ [in]*n*  
  指定的垂直边距设置。  
   
 ### <a name="remarks"></a>备注  
  垂直边距是任务窗格和工作区的垂直边缘之间的距离。  
   
- 如果`n`为-1，框架将使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 默认边距为 12 像素。  
+ 如果*n*为-1，框架将使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 默认边距为 12 像素。  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  设置窗口控件的高度。  
@@ -1796,17 +1796,17 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定包含窗口控件的组的从零开始索引。  
   
- [in] `hwndTask`  
+ [in]*hwndTask*  
  指定窗口控件的句柄。  
   
- [in] `nWndHeight`  
+ [in]*nWndHeight*  
  指定要设置的高度。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果已成功设置窗口控件的高度;`FALSE`如果`nGroup`无效或者如果`hwndTask`不存在。  
+ `TRUE` 如果已成功设置窗口控件的高度;`FALSE`如果*nGroup*无效或者如果*hwndTask*不存在。  
   
 ### <a name="remarks"></a>备注  
  调用[CMFCTasksPane::AddWindow](#addwindow)添加与窗口控件的任务。  
@@ -1819,7 +1819,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdId`  
+ [in]*uiCmdId*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1835,16 +1835,16 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroup`  
+ [in]*nGroup*  
  指定的组的从零开始的索引。  
   
- [in] `nTask`  
+ [in]*nTask*  
  指定要显示或隐藏的任务的从零开始索引。  
   
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要显示任务;`FALSE`来隐藏该任务。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 重绘的任务窗格中;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -1864,13 +1864,13 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCommandID`  
+ [in]*uiCommandID*  
  指定要显示或隐藏该任务的命令 ID。  
   
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要显示任务;`FALSE`来隐藏该任务。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 重绘的任务窗格中;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  

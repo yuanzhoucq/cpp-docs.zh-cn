@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369868"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042178"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 类
 `CMFCAutoHideBar` 类是实现自动隐藏功能的特殊工具栏类。  
@@ -94,7 +94,7 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|当用户将鼠标光标放在上方的时刻之间的时间延迟[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)与框架显示关联的窗口的时刻。|  
   
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pAutoHideWnd`  
+ [in]*pAutoHideWnd*  
  你想要隐藏的窗口。  
   
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  用于指定自动隐藏按钮与应用程序窗口对齐方式的值。  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- `dwAlignment` 参数指示自动隐藏按钮位于应用程序中的位置。 该参数可为下列任一值：  
+ *DwAlignment*参数指示自动隐藏按钮在应用程序所在的位置。 该参数可为下列任一值：  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -207,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in]*lpszClassName*  
+ [in]*dwStyle*  
+ [in]*rect*  
+ [in]*pParentWnd*  
+ [in]*nID*  
+ [in]*dwControlBarStyle*  
+ [in]*pContext*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -261,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CPoint`  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -275,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>参数  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  要删除的自动隐藏窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]BOOL `bActive`  
+ [in]BOOL *bActive*  
  若要设置为活动则为 TRUE；否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
@@ -305,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bState`  
+ [in]*bState*  
   
 ### <a name="remarks"></a>备注  
   
@@ -320,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]CDockablePane * `pAutoHideWnd`  
- [in]BOOL `bShow`  
+ [in]CDockablePane * *pAutoHideWnd*  
+ [in]BOOL *bShow*  
  若要显示窗口，则为 TRUE。  
   
- [in]BOOL `bDelay`  
+ [in]BOOL *bDelay*  
  忽略此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -342,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nLength`  
+ [in]*nLength*  
  在基实现中未使用该值。 在派生的实现中，使用此值可指示已调整大小的窗格的长度。  
   
- [in] `bVert`  
+ [in]*bVert*  
  在基实现中未使用该值。 在派生的实现中，使用`TRUE`来处理自动隐藏栏垂直折叠情况和`FALSE`自动隐藏栏水平折叠的情况。  
   
 ### <a name="return-value"></a>返回值  

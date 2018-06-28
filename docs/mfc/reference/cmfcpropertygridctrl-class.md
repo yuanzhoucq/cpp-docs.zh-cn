@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d40ad0bf70fb3fda32265da321a3474723e8037
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379016"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039253"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `flagsSelect`  
- [in] `varChild`  
+ [in]*flagsSelect*  
+ [in]*varChild*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -350,13 +350,13 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  到属性的指针。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即; 重绘属性否则为`FALSE`。 默认值为 `TRUE`。  
   
- [in] `bAdjustLayout`  
+ [in]*bAdjustLayout*  
  `TRUE` 若要重新计算如何绘制的文本和值的属性，然后绘制您的属性。`FALSE`以使用现有的计算来绘制属性。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -383,7 +383,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -418,19 +418,19 @@ virtual int CompareProps(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pProp1`  
+ *pProp1*  
  属性指向的指针。  
   
- `pProp2`  
+ *pProp2*  
  属性指向的指针。  
   
 ### <a name="return-value"></a>返回值  
   
 |返回值|描述|  
 |------------------|-----------------|  
-|< 0|名称`pProp1`参数小于的名称`pProp2`参数。|  
-|0|名称`pProp1`参数等于的名称`pProp2`参数。|  
-|> 0|名称`pProp1`对象是否大于的名称`pProp2`参数。|  
+|< 0|名称*pProp1*参数小于的名称*pProp2*参数。|  
+|0|名称*pProp1*参数等于的名称*pProp2*参数。|  
+|> 0|名称*pProp1*对象是否大于的名称*pProp2*参数。|  
   
 ### <a name="remarks"></a>备注  
  默认情况下，此方法使用[CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法来比较`CMFCPropertyGridProperty::m_strName`指定的参数的成员。  
@@ -447,16 +447,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwStyle`  
+ [in]*dwStyle*  
  按位组合 (OR)[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `rect`  
- 在客户端中指定的大小和窗口的位置的边界矩形坐标`pParentWnd`。  
+ [in]*rect*  
+ 在客户端中指定的大小和窗口的位置的边界矩形坐标*pParentWnd*。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  向父窗口的指针。 不得为 `NULL`。  
   
- [in] `nID`  
+ [in]*nID*  
  子窗口的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -481,13 +481,13 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  到属性的指针。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 重绘属性网格控件;否则为`FALSE`。 默认值为 `TRUE`。  
   
- [in] `bAdjustLayout`  
+ [in]*bAdjustLayout*  
  `TRUE` 若要重新计算如何在属性网格控件中，绘制所有文本、 图像和项，然后都绘制控件;否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -517,10 +517,10 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  到属性的指针。  
   
- [in] `lptClick`  
+ [in]*lptClick*  
  用户单击以开始编辑操作的属性网格控件上的点。 该点则在客户端坐标的控件。 默认值为 `NULL`。  
   
 ### <a name="return-value"></a>返回值  
@@ -536,7 +536,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用说明区域中;`FALSE`禁用描述区域。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -553,13 +553,13 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用标头控件;`FALSE`禁用标头控件。 默认值为 `TRUE`。  
   
- [in] `lpszLeftColumn`  
+ [in]*lpszLeftColumn*  
  标头控件的左侧列的标题。 默认值是**属性**。  
   
- [in] `lpszRightColumn`  
+ [in]*lpszRightColumn*  
  标头控件的右侧的列的标题。 默认值是**值**。  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
@@ -570,7 +570,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bUpdateData`  
+ [in]*bUpdateData*  
  `TRUE` 若要指定编辑操作已完成; 必须验证修改的属性数据否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -588,10 +588,10 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  到属性的指针。  
   
- [in] `bExpandParents`  
+ [in]*bExpandParents*  
  `TRUE` 若要展开父项，以便可见，则指定的属性否则为`FALSE`。 默认值为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -604,7 +604,7 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bExpand`  
+ [in]*bExpand*  
  `TRUE` 若要展开所有节点;`FALSE`可折叠所有节点。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -619,10 +619,10 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwData`  
+ [in]*dwData*  
  一个 `DWORD` 值。  
   
- [in] `bSearchSubItems`  
+ [in]*bSearchSubItems*  
  `TRUE` 若要搜索属性子项目;否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -653,7 +653,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pvarChild`  
+ [in]*pvarChild*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `varChild`  
- [in] `pszHelp`  
+ [in]*varChild*  
+ [in]*pszHelp*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -687,9 +687,9 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pszHelpFile`  
- [in] `varChild`  
- [in] `pidTopic`  
+ [in]*pszHelpFile*  
+ [in]*varChild*  
+ [in]*pidTopic*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `varChild`  
- [in] `pszKeyboardShortcut`  
+ [in]*varChild*  
+ [in]*pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -720,7 +720,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pvarChildren`  
+ [in]*pvarChildren*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -776,25 +776,25 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `clrBackground`  
+ [out]*clrBackground*  
  属性值的背景色。  
   
- [out] `clrText`  
+ [out]*clrText*  
  属性名称和属性值文本的颜色。  
   
- [out] `clrGroupBackground`  
+ [out]*clrGroupBackground*  
  属性组的背景色。  
   
- [out] `clrGroupText`  
+ [out]*clrGroupText*  
  属性组中的文本的颜色。  
   
- [out] `clrDescriptionBackground`  
+ [out]*clrDescriptionBackground*  
  说明区背景色。  
   
- [out] `clrDescriptionText`  
+ [out]*clrDescriptionText*  
  描述区域中的文本的颜色。  
   
- [out] `clrLine`  
+ [out]*clrLine*  
  绘制属性之间的线的颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -883,10 +883,10 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  属性网格控件项的从零开始的索引。  
   
- 如果此方法会断言`nIndex`参数小于零或大于或等于属性的数目。  
+ 如果此方法会断言*nIndex*参数小于零或大于或等于属性的数目。  
   
 ### <a name="return-value"></a>返回值  
  指向对应于指定的索引，如果此方法成功，则属性对象的指针否则为`NULL`。  
@@ -939,7 +939,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nBar`  
+ [in]*nBar*  
  必须在滚动条的方向`SB_VERT`。  
   
 ### <a name="return-value"></a>返回值  
@@ -972,26 +972,26 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  客户端坐标中的点。  
   
- [in, out] `pnArea`  
+ [在中，out]*pnArea*  
  指向的指针`ClickArea`变量。 如果此方法返回时，变量指示*属性区域*，其中包含指定的点。 有关属性区域的详细信息，请参阅备注。  
   
- [in] `bPropsOnly`  
+ [in]*bPropsOnly*  
  `TRUE` 若要测试仅属性区域;`FALSE`测试*描述区域*如果指定的点未在属性区域。 默认值为 `FALSE`。 有关描述区域的详细信息，请参阅备注。  
   
 ### <a name="return-value"></a>返回值  
- 如果`bPropsOnly`参数是`TRUE`和指定的点处于属性区域，则返回值为指向相应的属性对象的指针。 此外，`pnArea`参数设置为包含指定的点的特定区域。 否则，返回值是`NULL`和`pnArea`不修改参数。  
+ 如果*bPropsOnly*参数是`TRUE`和指定的点处于属性区域，则返回值为指向相应的属性对象的指针。 此外， *pnArea*参数设置为包含指定的点的特定区域。 否则，返回值是`NULL`和*pnArea*不修改参数。  
   
- 如果`bPropsOnly`参数是`FALSE`，返回值始终是`NULL`。 但是，如果指定的点在说明区域中，`pnArea`参数设置为`CMFCPropertyGridProperty::ClickDescription`。  
+ 如果*bPropsOnly*参数是`FALSE`，返回值始终是`NULL`。 但是，如果指定的点在说明区域中， *pnArea*参数设置为`CMFCPropertyGridProperty::ClickDescription`。  
   
 ### <a name="remarks"></a>备注  
  术语*属性区域*指任何一个的名称，值，或展开框区域的属性网格控件项。 *描述区域*是在属性网格控件底部区域。 当单击属性网格控件项时，说明区域将显示相应的属性的说明。  
   
- 此方法设置的变量的值`pnArea`参数指向。 下表列出可能的值和相应的区域。  
+ 此方法设置的变量的值*pnArea*参数指向。 下表列出可能的值和相应的区域。  
   
-|值|区域|  
+|“值”|区域|  
 |-----------|----------|  
 |`ClickArea::ClickExpandBox`|属性展开框控件。|  
 |`ClickArea::ClickName`|属性名称。|  
@@ -1127,10 +1127,10 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMark`  
+ [in]*bMark*  
  `TRUE` 若要显示修改以粗体显示样式; 中的属性`FALSE`要在正则样式中显示已修改的属性。 默认值为 `TRUE`。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即; 重绘属性网格控件否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pNewSel`|指向新选择的属性。|  
-|[in] `pOldSel`|指向以前选择的属性。|  
+|[in]*pNewSel*|指向新选择的属性。|  
+|[in]*pOldSel*|指向以前选择的属性。|  
   
 ### <a name="remarks"></a>备注  
  此方法的默认实现没有任何影响。  
@@ -1162,7 +1162,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  客户端坐标中的点。  
   
 ### <a name="remarks"></a>备注  
@@ -1176,7 +1176,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1191,10 +1191,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定在哪里可以绘制描述区域的矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1208,7 +1208,7 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1223,10 +1223,10 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pProp`  
+ [in]*pProp*  
  指向属性对象的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1242,7 +1242,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  指向其值已更改的属性对象的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1274,7 +1274,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 重绘的属性列表中;否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1287,7 +1287,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 若要设置字母模式;`FALSE`重置字母模式。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1303,10 +1303,10 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszTrue`  
+ [in]*lpszTrue*  
  要显示的布尔值为 true 的文本字符串。  
   
- [in] `lpszFalse`  
+ [in]*lpszFalse*  
  要显示的布尔值为 false 的文本字符串。  
   
 ### <a name="remarks"></a>备注  
@@ -1321,10 +1321,10 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  指向属性对象的指针。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即; 重绘属性网格控件否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1345,25 +1345,25 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clrBackground`  
+ [in]*clrBackground*  
  属性值的背景色。  
   
- [in] `clrText`  
+ [in]*clrText*  
  属性名称和属性值文本的颜色。  
   
- [in] `clrGroupBackground`  
+ [in]*clrGroupBackground*  
  属性组的背景色。  
   
- [in] `clrGroupText`  
+ [in]*clrGroupText*  
  属性组的新的文本颜色。  
   
- [in] `clrDescriptionBackground`  
+ [in]*clrDescriptionBackground*  
  说明区背景色。  
   
- [in] `clrDescriptionText`  
+ [in]*clrDescriptionText*  
  描述区域中的文本的颜色。  
   
- [in] `clrLine`  
+ [in]*clrLine*  
  绘制属性之间的线的颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -1379,7 +1379,7 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nDescRows`  
+ [in]*nDescRows*  
  要在属性说明中显示的行数。  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
@@ -1392,10 +1392,10 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bGroupNameFullWidth`  
+ [in]*bGroupNameFullWidth*  
  `TRUE` 若要显示的类别名称，而不考虑属性名称列的宽度的完整宽度。 `FALSE` 限制到属性名称列的宽度的类别名称的宽度。 默认值为 `TRUE`。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即; 更新的属性网格控件`FALSE`来更新控件时的下一步重绘事件发生。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1411,11 +1411,11 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `c`  
+ [in]*c*  
  要用作分隔符的字符。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法定义中使用的属性值的列表中的分隔符字符[CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty)构造函数。 在该构造函数中，设置`bIsValueList`参数`TRUE`。  
+ 使用此方法定义中使用的属性值的列表中的分隔符字符[CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty)构造函数。 在该构造函数中，设置*bIsValueList*参数`TRUE`。  
   
  默认情况下， [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)构造函数设置为逗号分隔符字符 （'，'）。  
   
@@ -1427,7 +1427,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShowDragContext`  
+ [in]*bShowDragContext*  
  `TRUE` 重绘期间执行大小调整操作; 的名称和值的列`FALSE`重绘列拖放操作完成后。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1441,7 +1441,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 若要将属性网格控件设置为使用 Visual Studio.NET; 中的样式否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1454,7 +1454,7 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
+ [in]*颜色*  
  RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
@@ -1471,13 +1471,13 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pProp`|到属性的指针。 未使用此参数。|  
+|[in]*pProp*|到属性的指针。 未使用此参数。|  
   
 ### <a name="return-value"></a>返回值  
  总是为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
- [CMFCPropertyGridCtrl::EndEditItem](#endedititem)方法调用此方法以验证数据。 默认情况下，此方法不使用其`pProp`参数和其返回值始终是`TRUE`。  
+ [CMFCPropertyGridCtrl::EndEditItem](#endedititem)方法调用此方法以验证数据。 默认情况下，此方法不使用其*pProp*参数和其返回值始终是`TRUE`。  
   
  如果重写此方法时，返回`TRUE`如果指定的属性数据是否有效。 否则，返回`FALSE`，在这种情况下框架不会更新属性。  
   

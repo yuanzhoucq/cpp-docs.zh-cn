@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368431"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039006"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 类
 实现位于功能区上的超链接。 当单击此超链接时，可以打开网页。  
@@ -106,13 +106,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  指定在单击链接控件时执行的命令的命令 ID。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  指定要在链接控件上显示的标签。  
   
- [in] `lpszLink`  
+ [in]*lpszLink*  
  指定与链接控件关联的超链接。  
   
 ### <a name="example"></a>示例  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
   
 ### <a name="remarks"></a>备注  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDC*`  
- [in] `CRect`  
+ [in]*CDC**  
+ [in]*的 CRect*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
   
 ### <a name="remarks"></a>备注  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszLink`  
+ [in]*lpszLink*  
  指定的超链接文本。  
   
 ## <a name="see-also"></a>请参阅  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375740"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039989"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 类
 `CMFCFontComboBox`类创建包含字体列表的组合框控件。  
@@ -65,7 +65,7 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|框架中，指示要用于在当前的字体组合框中绘制项标签的字体。|  
   
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDesc`  
+ [in]*pDesc*  
  指向字体说明对象。  
   
- [in] `lpszName`  
+ [in]*lpszName*  
  指定的字体名称。  
   
- [in] `nCharSet`  
+ [in]*nCharSet*  
  指定字符集。 默认值为 DEFAULT_CHARSET。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFontType`  
+ [in]*nFontType*  
  指定的字体类型。 默认值是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
   
- [in] `nCharSet`  
+ [in]*nCharSet*  
  指定字体字符集。 默认值为 DEFAULT_CHARSET。  
   
- [in] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  指定的字体的间距和系列。 默认值为 DEFAULT_PITCH。  
   
 ### <a name="return-value"></a>返回值  

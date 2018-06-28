@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368002"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040670"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 类
 实现的自定义页**自定义**基于功能区的应用程序中的对话框。  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `lpszName`|指定的自定义的类别名称。|  
-|[in] `lstIDS`|包含功能区命令 Id 显示在自定义的类别。|  
+|[in]*lpszName*|指定的自定义的类别名称。|  
+|[in]*lstIDS*|包含功能区命令 Id 显示在自定义的类别。|  
   
 ### <a name="remarks"></a>备注  
- 此方法将添加名为的类别`lpszName`到**命令**组合框。 当用户选择的类别时中, 指定的命令`lstIDS`命令列表中显示。  
+ 此方法将添加名为的类别*lpszName*到**命令**组合框。 当用户选择的类别时中, 指定的命令*lstIDS*命令列表中显示。  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  构造 `CMFCRibbonCustomizePropertyPage` 对象。  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRibbonBar`  
+ [in]*pRibbonBar*  
  指向要为其功能区控件的自定义的选项。  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

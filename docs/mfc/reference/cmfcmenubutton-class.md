@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375384"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040163"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 类
 在用户菜单选项上显示弹出菜单和报表的按钮。  
@@ -65,7 +65,7 @@ class CMFCMenuButton : public CMFCButton
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|指定是否可以显示的默认系统弹出菜单或者使用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|指定是否将显示弹出菜单，下方或右侧的按钮。|  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
  指向[消息](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。  
   
 ### <a name="return-value"></a>返回值  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bCalcOnly`  
+ [in]*bCalcOnly*  
  一个布尔型参数，该值指示此方法是否调整大小的按钮。  
   
 ### <a name="return-value"></a>返回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)指定按钮的新大小的对象。  
   
 ### <a name="remarks"></a>备注  
- 如果调用此函数和`bCalcOnly`是`TRUE`，`SizeToContent`将计算仅按钮的新大小。  
+ 如果调用此函数和*bCalcOnly*是`TRUE`，`SizeToContent`将计算仅按钮的新大小。  
   
  按钮的新大小计算以适应按钮文本、 图像和箭头。 框架还将添加在水平边缘的 10 个像素和垂直边缘的 5 个像素的预定义的边距。  
   

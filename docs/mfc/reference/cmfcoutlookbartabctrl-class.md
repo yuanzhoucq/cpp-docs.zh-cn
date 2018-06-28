@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373298"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042302"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 在 Microsoft Outlook 中具有 **“导航窗格”** 可视外观的选项卡控件。  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndCtrl`  
+ [in]*pWndCtrl*  
  指向要添加的控件的指针。  
   
- [in] `lpszName`  
+ [in]*lpszName*  
  指定的选项卡的名称。  
   
- [in] `bDetachable`  
+ [in]*bDetachable*  
  如果`TRUE`，页面将创建为可拆分。  
   
- [in] `nImageID`  
+ [in]*nImageID*  
  在新选项卡中显示的图像的内部图像列表中的映像索引。  
   
- [in] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定 AFX_ `CBRS_`* 样式已包装的停靠窗格。  
   
 ### <a name="remarks"></a>备注  
@@ -168,7 +168,7 @@ void AddControl(
   
  在内部调用此函数[cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)。  
   
- 如果你设置`bDetachable`到`TRUE`，`AddControl`会在内部创建`CDockablePaneAdapter`对象，并将包装添加的控件。 它自动设置选项卡式窗口的运行时类的运行时类`CMFCOutlookBar`和在浮点帧的运行时类`CMultiPaneFrameWnd`。  
+ 如果你设置*bDetachable*到`TRUE`，`AddControl`会在内部创建`CDockablePaneAdapter`对象，并将包装添加的控件。 它自动设置选项卡式窗口的运行时类的运行时类`CMFCOutlookBar`和在浮点帧的运行时类`CMultiPaneFrameWnd`。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用`AddControl`中的方法`CMFCOutlookBarTabCtrl`类。 此代码片段属于[Outlook 演示示例](../../visual-cpp-samples.md)。  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rect`  
+ [in]*rect*  
  指定的初始大小和位置，以像素为单位。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  向父窗口的点。 不得为 `NULL`。  
   
- [in] `nID`  
+ [in]*nID*  
  控件 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则已创建控件则不为否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 通常情况下，outlook 栏选项卡控件时，会创建[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)控件`WM_CREATE`过程的消息。  
+ 通常情况下，outlook 栏选项卡控件时，会创建[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)控制 WM_CREATE 消息的过程。  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  指定是否启用活动选项卡之间进行切换过程中发生的动画。  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  指定是否应启用或禁用动画。  
   
 ### <a name="remarks"></a>备注  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEnable`  
+ *bEnable*  
  如果`TRUE`，启用的文本标签就地编辑。 如果`FALSE`，禁用就地编辑。  
   
 ### <a name="remarks"></a>备注  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  确定是否显示的滚动按钮。  
   
- [in] `bIsUp`  
+ [in]*bIsUp*  
  确定是否显示顶部的滚动条。  
   
- [in] `bIsDown`  
+ [in]*bIsDown*  
  确定是否显示底部滚动条。  
   
 ### <a name="remarks"></a>备注  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  若要打开选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nBorderSize`  
+ [in]*nBorderSize*  
  以像素为单位指定新的边框大小。  
   
 ### <a name="remarks"></a>备注  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiAlign`  
+ [in]*uiAlign*  
  指定的文本对齐方式。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  如果`TRUE`，outlook 窗口将重绘。  
   
 ### <a name="remarks"></a>备注  
  此函数用于更改页按钮文本对齐方式。  
   
- `uiAlign` 可以是以下值之一：  
+ *uiAlign*可以是以下值之一：  
   
 |返回的常量|含义|  
 |--------------|-------------|  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  指定要加载图像的资源 ID。  
   
- [in] `cx`  
+ [in]*cx*  
  在映像列表中，以像素为单位指定图像的宽度。  
   
- [in] `clrTransp`  
+ [in]*clrTransp*  
  一个指定的透明颜色的 RGB 值。  
   
 ### <a name="return-value"></a>返回值  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nVisiblePageButtons`  
+ [in]*nVisiblePageButtons*  
   
 ### <a name="remarks"></a>备注  
   

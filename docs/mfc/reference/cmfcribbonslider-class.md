@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372692"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037719"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 类
 `CMFCRibbonSlider`类实现可以将添加到功能区栏或功能区状态栏的滑块控件。 功能区滑块控件类似于显示在 Office 2007 应用程序中的缩放滑块。  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  滑块 id。  
   
- [in]。 `nWidth`  
+ [in]。 *nWidth*  
  以像素为单位的滑块宽度。  
   
 ### <a name="remarks"></a>备注  
- 构造是一个功能区滑块`nWidth`像素宽在其中添加滑块的面板类别。 默认情况下，滑块为水平方向。  
+ 构造是一个功能区滑块*nWidth*像素宽在其中添加滑块的面板类别。 默认情况下，滑块为水平方向。  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  返回当前滑块控件的位置。  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPos`  
+ [in]*nPos*  
  指定要设置滑块的位置。 相对于滑块的开始位置。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  如果`TRUE`，滑块将重绘。  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nMin`  
+ [in]*nMin*  
  指定滑块控件的最小值。  
   
- [in] `nMax`  
+ [in]*最*  
  指定滑块控件的最大值。  
   
 ### <a name="remarks"></a>备注  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in]。 `bSet`  
+ [in]。 *bSet*  
  `TRUE` 若要显示缩放按钮;`FALSE`以隐藏它们。  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nZoomIncrement`  
+ [in]*nZoomIncrement*  
  指定滑块控件的缩放增量。  
   
 ## <a name="see-also"></a>请参阅  

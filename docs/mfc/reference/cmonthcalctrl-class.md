@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8dd962a06d6c7edadcdd029bd83d44b251aec8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45e0499297c814e4a214962bc2f51404960a8c38
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377734"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039214"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 封装月历控件的功能。  
@@ -226,19 +226,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定应用于月历控件的窗口样式的组合。 请参阅[月日历控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760919)样式有关的详细信息的 Windows SDK 中。  
   
- `rect`  
+ *rect*  
  对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 包含的位置和月历控件的大小。  
   
- `pt`  
+ *pt*  
  对引用[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)标识月历控件的位置的结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是月历控件的父窗口的对象。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定月历控件的控件 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -251,11 +251,11 @@ virtual BOOL Create(
   
 2.  调用此成员函数，它创建月历控件并将其附加到`CMonthCalCtrl`对象。  
   
- 当调用**创建**，常见的控件进行初始化。 版本**创建**你调用确定如何将其大小调整：  
+ 当调用`Create`，常见的控件进行初始化。 版本`Create`你调用确定如何将其大小调整：  
   
--   要使 MFC 自动调整大小对一个月的控制，请调用使用的替代`pt`参数。  
+-   要使 MFC 自动调整大小对一个月的控制，请调用使用的替代*pt*参数。  
   
--   若要调整控件的大小自己，调用使用此函数的重写`rect`参数。  
+-   若要调整控件的大小自己，调用使用此函数的重写*rect*参数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `pmcGridInfo`|指向[MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925)接收当前月历控件的相关信息的结构。 调用方负责分配和初始化此结构。|  
+|[out]*pmcGridInfo*|指向[MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925)接收当前月历控件的相关信息的结构。 调用方负责分配和初始化此结构。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -331,15 +331,15 @@ CALID GetCalID() const;
  此方法可发送[MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951)消息，Windows SDK 中介绍。  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
- 检索每月的区域的颜色月历控件指定`nRegion`。  
+ 检索每月的区域的颜色月历控件指定*nRegion*。  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRegion`  
- 从中检索颜色月历控件的区域。 值的列表，请参阅`nRegion`参数[SetColor](#setcolor)。  
+ *nRegion*  
+ 从中检索颜色月历控件的区域。 值的列表，请参阅*nRegion*参数[SetColor](#setcolor)。  
   
 ### <a name="return-value"></a>返回值  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定与月历控件，部分关联的颜色，如果成功。 否则，此成员函数返回-1。  
@@ -354,7 +354,7 @@ DWORD GetCurrentView() const;
 ### <a name="return-value"></a>返回值  
  当前视图，这将由以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`MCMV_MONTH`|每月的视图|  
 |`MCMV_YEAR`|每年的视图|  
@@ -384,10 +384,10 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `refDateTime`  
+ *refDateTime*  
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。 接收的当前时间。  
   
- `pDateTime`  
+ *pDateTime*  
  指向的指针[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)将接收的当前所选日期信息的结构。 此参数必须是有效的地址，不能为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -418,7 +418,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的 Win32 消息行为[MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958)，如 Windows SDK 中所述。 每周天数，如下所示为整数，表示。  
   
-|值|日期是星期几|  
+|“值”|日期是星期几|  
 |-----------|---------------------|  
 |0|星期一|  
 |1|星期二|  
@@ -480,7 +480,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRect`  
+ *pRect*  
  指向的指针[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)将接收边界矩形信息的结构。 此参数必须是有效的地址，不能为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -523,28 +523,28 @@ int GetMonthRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `refMinRange`  
+ *refMinRange*  
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含允许的最小日期。  
   
- `refMaxRange`  
+ *refMaxRange*  
  对引用`COleDateTime`或`CTime`对象，其中包含允许的最大日期。  
   
- `pMinRange`  
+ *pMinRange*  
  指向的指针[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含范围的最低末尾处的日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指向的指针`SYSTEMTIME`结构，它包含在最高范围末尾的日期。  
   
- `dwFlags`  
+ *dwFlags*  
  值，该值指定要检索的范围限制的作用域。 此值必须是下列其中一项。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |GMR_DAYSTATE|包括的前导和尾随的可见区域仅部分显示的月。|  
 |GMR_VISIBLE|包括完全显示这些个月。|  
   
 ### <a name="return-value"></a>返回值  
- 一个整数，表示范围，以月为单位，跨两个限制由`refMinRange`和`refMaxRange`在第一个和第二个版本中，或`pMinRange`和`pMaxRange`在三个版本。  
+ 一个整数，表示范围，以月为单位，跨两个限制由*refMinRange*和*refMaxRange*在第一个和第二个版本中，或*pMinRange*和*pMaxRange*在三个版本。  
   
 ### <a name="remarks"></a>备注  
  此成员函数实现的 Win32 消息行为[MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981)，如 Windows SDK 中所述。 MFC 的实现中`GetMonthRange`，你可以指定`COleDateTime`使用情况，`CTime`用法，或`SYSTEMTIME`结构使用情况。  
@@ -570,19 +570,19 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pMinRange`  
+ *pMinRange*  
  指向的指针`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含范围的最低末尾处的日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指向的指针`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含在最高范围末尾的日期。  
   
 ### <a name="return-value"></a>返回值  
  A`DWORD`可能为零 （设置不受限制） 或指定限制信息的以下值的组合。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
-|GDTR_MAX|用于控制，设置最大限制`pMaxRange`有效，并且包含适用日期信息。|  
-|GDTR_MIN|最小限制设置用于控制，`pMinRange`有效，并且包含适用日期信息。|  
+|GDTR_MAX|用于控制，设置最大限制*pMaxRange*有效，并且包含适用日期信息。|  
+|GDTR_MIN|最小限制设置用于控制，*pMinRange*有效，并且包含适用日期信息。|  
   
 ### <a name="remarks"></a>备注  
  此成员函数实现的 Win32 消息行为[MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983)，如 Windows SDK 中所述。 MFC 的实现中`GetRange`，你可以指定`COleDateTime`使用情况，`CTime`用法，或`SYSTEMTIME`结构使用情况。  
@@ -608,16 +608,16 @@ BOOL GetSelRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `refMinRange`  
+ *refMinRange*  
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含允许的最小日期。  
   
- `refMaxRange`  
+ *refMaxRange*  
  对引用`COleDateTime`或`CTime`对象，其中包含允许的最大日期。  
   
- `pMinRange`  
+ *pMinRange*  
  指向的指针[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含范围的最低末尾处的日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指向的指针`SYSTEMTIME`结构，它包含在最高范围末尾的日期。  
   
 ### <a name="return-value"></a>返回值  
@@ -638,10 +638,10 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `refDateTime`  
+ *refDateTime*  
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，该值指示当前的日期。  
   
- `pDateTime`  
+ *pDateTime*  
  指向的指针[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)将收到的日期信息的结构。 此参数必须是有效的地址，不能为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -733,10 +733,10 @@ void SetCalendarBorder(int cxyBorder);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `cxyBorder`|边框宽度，以像素为单位。|  
+|[in]*cxyBorder*|边框宽度，以像素为单位。|  
   
 ### <a name="remarks"></a>备注  
- 如果此方法成功，边框宽度设置为`cxyBorder`参数。 否则，边框宽度将重置指定由当前的默认值为[主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或如果不使用主题为零。  
+ 如果此方法成功，边框宽度设置为*cxyBorder*参数。 否则，边框宽度将重置指定由当前的默认值为[主题](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或如果不使用主题为零。  
   
  此方法可发送[MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)消息，Windows SDK 中介绍。  
   
@@ -773,13 +773,13 @@ BOOL SetCalID(CALID calid);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `calid`|之一[日历标识符](http://msdn.microsoft.com/library/windows/desktop/dd317732)常量。|  
+|[in]*calid*|之一[日历标识符](http://msdn.microsoft.com/library/windows/desktop/dd317732)常量。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 日历标识符指定特定于区域的日历，如公历 （本地化）、 日语或回历日历。 使用`SetCalID`方法以显示指定的日历`calid`参数，如果在计算机上安装包含日历的区域设置。  
+ 日历标识符指定特定于区域的日历，如公历 （本地化）、 日语或回历日历。 使用`SetCalID`方法以显示指定的日历*calid*参数，如果在计算机上安装包含日历的区域设置。  
   
  此方法可发送[MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995)消息，Windows SDK 中介绍。  
   
@@ -816,10 +816,10 @@ COLORREF SetColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRegion`  
+ *nRegion*  
  指定要设置哪些月日历颜色的整数值。 此值可以是下列其中一项。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |MCSC_BACKGROUND|显示不同的月份的背景色。|  
 |MCSC_MONTHBK|在月份中显示的背景色。|  
@@ -828,7 +828,7 @@ COLORREF SetColor(
 |MCSC_TITLETEXT|用于显示日历的标题中的文本的颜色。|  
 |MCSC_TRAILINGTEXT|用来显示标头和尾随日文本的颜色。 标头和后续日期是从上一个和下一个月的当前日历上显示的日期。|  
   
- `ref`  
+ *ref*  
  A **COLORREF**月历控件的指定部分的新颜色设置的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwNewView`|指定每月，年度、 十年中或世纪视图的以下值之一。<br /><br /> MCMV_MONTH： 每月视图<br /><br /> MCMV_YEAR： 年度视图<br /><br /> MCMV_DECADE： 十年视图<br /><br /> MCMV_CENTURY： 世纪视图|  
+|[in]*dwNewView*|指定每月，年度、 十年中或世纪视图的以下值之一。<br /><br /> MCMV_MONTH： 每月视图<br /><br /> MCMV_YEAR： 年度视图<br /><br /> MCMV_DECADE： 十年视图<br /><br /> MCMV_CENTURY： 世纪视图|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -869,10 +869,10 @@ BOOL SetCurSel(const CTime& refDateTime);
 ```  
   
 ### <a name="parameters"></a>参数  
- `refDateTime`  
+ *refDateTime*  
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md) ，该值指示当前所选月历控件的对象。  
   
- `pDateTime`  
+ *pDateTime*  
  指向[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，其中包含要设置为当前所选内容的日期。  
   
 ### <a name="return-value"></a>返回值  
@@ -895,9 +895,9 @@ BOOL SetDayState(
   
 ### <a name="parameters"></a>参数  
  *nMonths*  
- 值，该值指示数组中的元素数量的`pStates`指向。  
+ 值，该值指示数组中的元素数量的*pStates*指向。  
   
- `pStates`  
+ *pStates*  
  指向的指针[MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915)定义如何月历控件将其显示在绘制每一天的值的数组。 **MONTHDAYSTATE**数据类型是一个位字段，其中每一位 (1 到 31) 表示一个月中的一天的状态。 如果某个位处于打开状态，则以粗体显示对应的那一天，否则将不会突出显示。  
   
 ### <a name="return-value"></a>返回值  
@@ -955,7 +955,7 @@ BOOL SetMaxSelCount(int nMax);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMax`  
+ *最*  
  将设置来表示最大天数可选择的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -1027,10 +1027,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pMinRange`  
+ *pMinRange*  
  指向的指针`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含范围的最低末尾处的日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指向的指针`COleDateTime`对象，`CTime`对象，或`SYSTEMTIME`结构，它包含在最高范围末尾的日期。  
   
 ### <a name="return-value"></a>返回值  
@@ -1062,10 +1062,10 @@ BOOL SetSelRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pMinRange`  
+ *pMinRange*  
  指向的指针`COleDateTime`对象，`CTime`对象，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构，它包含范围的最低末尾处的日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指向的指针`COleDateTime`对象，`CTime`对象，或`SYSTEMTIME`结构，它包含在最高范围末尾的日期。  
   
 ### <a name="return-value"></a>返回值  
@@ -1084,10 +1084,10 @@ void SetToday(const CTime* pDateTime);
 ```  
   
 ### <a name="parameters"></a>参数  
- `refDateTime`  
+ *refDateTime*  
  对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含当前日期。  
   
- `pDateTime`  
+ *pDateTime*  
  在第二个版本中，指向的指针[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象，其中包含当前日期信息。 在第三个版本中，指向的指针[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)包含当前日期信息的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -1117,7 +1117,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bRepaint`  
+ *bRepaint*  
  指定控件是否进行重新绘制。 默认情况下， **TRUE**。 如果**FALSE**，没有重新绘制时发生。  
   
 ### <a name="return-value"></a>返回值  
@@ -1137,13 +1137,13 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义一个包含所需的日历数的矩形。|  
+|[in]*lpRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它定义一个包含所需的日历数的矩形。|  
   
 ### <a name="return-value"></a>返回值  
- 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)定义其大小小于或等于矩形的矩形的结构由来定义`lpRect`参数。  
+ 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)定义其大小小于或等于矩形的矩形的结构由来定义*lpRect*参数。  
   
 ### <a name="remarks"></a>备注  
- 此方法计算中由指定的矩形可以容纳该值多少日历`lpRect`参数，然后返回最小的矩形可以包含该数量的日历。 实际上，此方法将缩小以完全适合所需的日历数的指定的矩形。  
+ 此方法计算中由指定的矩形可以容纳该值多少日历*lpRect*参数，然后返回最小的矩形可以包含该数量的日历。 实际上，此方法将缩小以完全适合所需的日历数的指定的矩形。  
   
  此方法可发送[MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020)消息，Windows SDK 中介绍。  
   

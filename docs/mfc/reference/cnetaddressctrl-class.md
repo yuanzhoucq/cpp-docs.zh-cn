@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e80b74262a05548d9aede80df44d204b759b84da
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373072"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038511"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 `CNetAddressCtrl` 类表示网络地址控件，可使用此控件输入和验证 IPv4、IPv6 与命名的 DNS 地址的格式。  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwStyle`|要应用于控件的样式按位组合。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
-|[in] `rect`|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
-|[in] `pParentWnd`|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
-|[in] `nID`|控件的 ID。|  
+|[in]*dwStyle*|要应用于控件的样式按位组合。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
+|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
+|[in]*pParentWnd*|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
+|[in]*nID*|控件的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|若要应用于控件的扩展样式按位组合 (OR)。 有关详细信息，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
-|[in] `dwStyle`|要应用于控件的样式按位组合 (OR)。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
-|[in] `rect`|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
-|[in] `pParentWnd`|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
-|[in] `nID`|控件的 ID。|  
+|[in]*dwExStyle*|若要应用于控件的扩展样式按位组合 (OR)。 有关详细信息，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
+|[in]*dwStyle*|要应用于控件的样式按位组合 (OR)。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
+|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
+|[in]*pParentWnd*|指向的非 null 指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。|  
+|[in]*nID*|控件的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -186,7 +186,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in, out] `pAddress`|指向[NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345)结构。  设置`pAddrInfo`到的地址此结构的成员[NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)结构，然后才能调用 GetAddress 方法。|  
+|[在中，out]*pAddress*|指向[NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345)结构。  设置*pAddrInfo*到的地址此结构的成员[NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)结构，然后才能调用 GetAddress 方法。|  
   
 ### <a name="return-value"></a>返回值  
  值`S_OK`如果此方法成功; 否则为 COM 错误代码。 有关可能的错误代码的详细信息，请参阅的返回值部分[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)宏。  
@@ -209,7 +209,7 @@ DWORD GetAllowType() const;
  网络地址控件可支持的按位组合 (OR) 的标志，用于指定的地址类型。 有关详细信息，请参阅[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。  
   
 ### <a name="remarks"></a>备注  
- 此消息时，将调用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)宏，Windows SDK 中介绍。 该宏将发送`NCM_GETALLOWTYPE`消息。  
+ 此消息时，将调用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)宏，Windows SDK 中介绍。 该宏将 NCM_GETALLOWTYPE 消息发送。  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  设置当前的网络地址控件可以支持的网络地址的类型。  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwAddrMask`|网络地址控件可支持的按位组合 (OR) 的标志，用于指定的地址类型。 有关详细信息，请参阅[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
+|[in]*dwAddrMask*|网络地址控件可支持的按位组合 (OR) 的标志，用于指定的地址类型。 有关详细信息，请参阅[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
   
 ### <a name="return-value"></a>返回值  
  `S_OK` 如果此方法成功，则否则为 COM 错误代码。  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>备注  
  使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定当前的网络地址控件可以支持的地址的类型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法来验证和分析用户输入的网络地址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法以显示错误消息信息提示，如果[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  
   
- 此消息时，将调用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)宏，Windows SDK 中介绍。 该宏将发送`NCM_SETALLOWTYPE`消息。  
+ 此消息时，将调用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)宏，Windows SDK 中介绍。 该宏将 NCM_SETALLOWTYPE 消息发送。  
   
 ## <a name="see-also"></a>请参阅  
  [CNetAddressCtrl 类](../../mfc/reference/cnetaddressctrl-class.md)   

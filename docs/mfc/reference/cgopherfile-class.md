@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366878"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040969"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 类
 提供查找和读取 Gopher 服务器上文件的功能。  
@@ -46,7 +46,7 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|构造 `CGopherFile` 对象。|  
   
 ## <a name="remarks"></a>备注  
- Gopher 服务不允许用户将数据写入到 gopher 文件，因为此服务主要充当菜单驱动的界面，用于查找信息。 `CGopherFile`成员函数**编写**， `WriteString`，和`Flush`未实现`CGopherFile`。 在调用这些函数`CGopherFile`对象，返回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ Gopher 服务不允许用户将数据写入到 gopher 文件，因为此服务主要充当菜单驱动的界面，用于查找信息。 `CGopherFile`成员函数`Write`， `WriteString`，和`Flush`未实现`CGopherFile`。 在调用这些函数`CGopherFile`对象，返回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
  若要了解有关如何`CGopherFile`工作与其他 MFC Internet 类，请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。  
   
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hFile`  
+ *hFile*  
  句柄`HINTERNET`文件。  
   
- `refLocator`  
+ *refLocator*  
  对引用[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象。  
   
- `pConnection`  
+ *pConnection*  
  指向的指针[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象。  
   
- `hSession`  
+ *hSession*  
  当前的 Internet 会话句柄。  
   
- `pstrLocator`  
+ *pstrLocator*  
  指向用于查找 gopher 服务器的字符串的指针。 请参阅[Gopher 会话](cgopherlocator-class.md)有关 gopher 定位符的详细信息。  
   
  *dwLocLen*  
- 一个包含中的字节数的 dword 值`pstrLocator`。  
+ 一个包含中的字节数的 dword 值*pstrLocator*。  
   
- `dwContext`  
+ *dwContext*  
  指向所打开的文件的上下文标识符的指针。  
   
 ### <a name="remarks"></a>备注  

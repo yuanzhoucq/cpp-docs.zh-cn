@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371668"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041739"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 类
 实现上下文快捷工具栏。  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRibbonBar`  
+ [in]*pRibbonBar*  
  浮动工具栏搜索要显示的按钮的功能区栏。  
   
- [in] `lstCommands`  
+ [in]*lstCommands*  
  要显示在浮动工具栏上的命令的列表。 所有功能区类别搜索以查找关联的按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `x`  
+ [in]*x*  
  在屏幕坐标中指定水平位置的浮动工具栏。  
   
- [in] `y`  
+ [in]*y*  
  在屏幕坐标中指定浮动工具栏的垂直的位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `x`  
+ [in]*x*  
  在屏幕坐标中指定的上下文菜单的水平位置。  
   
- [in] `y`  
+ [in]*y*  
  在屏幕坐标中指定的上下文菜单的垂直位置。  
   
- [in] `uiMenuResID`  
+ [in]*uiMenuResID*  
  指定要显示的上下文菜单的资源 ID。  
   
- [in] `pWndOwner`  
+ [in]*pWndOwner*  
  标识从上下文菜单中接收消息窗口的窗口。  
   
 ### <a name="return-value"></a>返回值  

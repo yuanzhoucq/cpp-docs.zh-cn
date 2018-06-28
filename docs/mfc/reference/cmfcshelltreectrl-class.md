@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371441"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041940"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 `CMFCShellTreeCtrl`类扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔值，指定是否启用的快捷菜单。  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `strPath`  
+ [out]*strPath*  
  对字符串参数的引用。 该方法将写入此参数的项的路径。  
   
- [in] `htreeItem`  
+ [in]*htreeItem*  
  该方法检索此树控件项的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则非零否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果此方法失败，`strPath`包含空字符串。  
+ 如果此方法失败， *strPath*包含空字符串。  
   
- 如果不指定`hTreeItem`，此方法尝试获取当前选定项的字符串。 如果未不选定任何项和`hTreeItem`是`NULL`，此方法失败。  
+ 如果不指定*hTreeItem*，此方法尝试获取当前选定项的字符串。 如果未不选定任何项和*hTreeItem*是`NULL`，此方法失败。  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  返回一个指向[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)与此关联的对象[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象。  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `message`  
- [in] `wParam`  
- [in] `lParam`  
- [in] `pLResult`  
+ [in]*消息*  
+ [in]*wParam*  
+ [in]*lParam*  
+ [in]*pLResult*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pItem`  
- [in] `bSelected`  
+ [in]*pItem*  
+ [in]*bSelected*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pItem`  
+ [in]*pItem*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPath`  
+ [in]*lpszPath*  
  一个字符串，指定项的路径。  
   
- [in] `lpidl`  
+ [in]*lpidl*  
  指定的项 PIDL  
   
 ### <a name="return-value"></a>返回值  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwFlags`  
+ [in]*dwFlags*  
  要设置的标志。  
   
- [in] `bRefresh`  
+ [in]*bRefresh*  
  一个布尔值，指定是否`CMFCShellTreeCtrl`应立即刷新。  
   
 ### <a name="remarks"></a>备注  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pShellList`  
+ [in]*pShellList*  
  指向的指针`CMFCShellListCtrl`对象。  
   
 ### <a name="remarks"></a>备注  

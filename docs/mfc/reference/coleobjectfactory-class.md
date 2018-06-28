@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375932"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038203"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 类
 实现 OLE 类工厂，此工厂创建服务器、自动化对象和文档等 OLE 对象。  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  对此对象工厂表示 OLE 类 ID 的引用。  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  指向此工厂可以创建的 c + + 对象的运行时类的指针。  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  指示应用程序的单个实例是否可以支持多个实例化。 如果**TRUE**，为每个请求，以创建对象启动的应用程序的多个实例。  
   
- `nFlags`  
+ *nFlags*  
  包含一个或多个以下的标志：  
   
 - **afxRegDefault**将线程模型设置为 ThreadingModel = 单元。  
   
 - **afxRegInsertable**允许控件中显示**插入对象**OLE 对象的对话框。  
   
-- `afxRegApartmentThreading` ThreadingModel 到注册表中设置线程模型 = 单元。  
+- **afxRegApartmentThreading** ThreadingModel 到注册表中设置线程模型 = 单元。  
   
 - **afxRegFreeThreading** ThreadingModel 到注册表中设置线程模型 = 免费。  
   
      你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)线程处理模型注册的详细信息的 Windows SDK 中。  
   
- `lpszProgID`  
+ *lpszProgID*  
  指向字符串，该字符串包含一个文字程序标识符，例如"Microsoft Excel。"  
   
 ### <a name="remarks"></a>备注  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- 从控件的 DLL 中请求的唯一许可密钥并将其存储在`BSTR`指向`pbstrKey`。  
+ 从控件的 DLL 中请求的唯一许可密钥并将其存储在`BSTR`指向*pbstrKey*。  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwReserved`  
+ *dwReserved*  
  留待将来使用。  
   
- `pbstrKey`  
+ *pbstrKey*  
  指向`BSTR`将存储的许可证密钥。  
   
 ### <a name="return-value"></a>返回值  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszProgID`  
+ *lpszProgID*  
  指向字符串，该字符串包含的用户可读的程序标识符，如"Excel.Document.5"。  
   
- `bRegister`  
+ *bRegister*  
  确定是否要注册的控件类的对象工厂。  
   
 ### <a name="remarks"></a>备注  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** OLE 系统注册表中注册此对象工厂。 通常调用此函数[CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)当启动应用程序。  
   
-- **UpdateRegistry (** `bRegister` **)** 这种形式的函数是可重写。 如果`bRegister`是**TRUE**，此函数向系统注册表中注册的控件类。 否则，它注销类。  
+- **UpdateRegistry (** `bRegister` **)** 这种形式的函数是可重写。 如果*bRegister*是**TRUE**，此函数向系统注册表中注册的控件类。 否则，它注销类。  
   
      如果您使用 MFC ActiveX 控件向导创建你的项目，controlwizard 可提供此纯虚函数的重写。  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bRegister`  
+ *bRegister*  
  确定是否要注册的控件类的对象工厂。  
   
 ### <a name="return-value"></a>返回值  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bstrKey`  
+ *bstrKey*  
  A`BSTR`存储容器的版本的许可证字符串。  
   
 ### <a name="return-value"></a>返回值  
  如果运行时许可证为有效，则为非零否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 默认版本调用[GetLicenseKey](#getlicensekey)若要获取的控件副本的许可证字符串并将它与中的字符串进行比较`bstrKey`。 如果两个字符串匹配，则函数返回一个非零值;否则，返回 0。  
+ 默认版本调用[GetLicenseKey](#getlicensekey)若要获取的控件副本的许可证字符串并将它与中的字符串进行比较*bstrKey*。 如果两个字符串匹配，则函数返回一个非零值;否则，返回 0。  
   
  你可以重写此函数可提供许可证的自定义的验证。  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370840"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037491"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 类
 `CMFCTasksPaneTaskGroup`类是使用的帮助器类[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。  
@@ -67,7 +67,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|确定是否将任务组对齐到任务窗格控件的底部。|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|确定任务组是否处于折叠状态。|  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ *在 lpszName*  
  指定的组标题中的组的名称。  
   
- `bIsBottom`  
+ *bIsBottom*  
  指定是否将组对齐到任务窗格控件的底部。  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  指定是否将组指定为*特殊*因此，是否进行填充组标题与另一种颜色。  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  指定组是否处于折叠状态。  
   
- `pPage`  
+ *pPage*  
  指定此任务组所属的属性页。  
   
- `hIcon`  
+ *任务栏*  
  指定在组标题中显示的图标。  
   
 ### <a name="remarks"></a>备注  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
  表示当前的任务组的父窗口。  
   
- [out] `data`  
+ [out]*数据*  
  类型的对象`CAccessibilityData`并且填充了当前的任务组的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`data`参数已成功填充了当前的任务组的可访问性数据; 否则为`FALSE`。  
+ `TRUE` 如果*数据*参数已成功填充了当前的任务组的可访问性数据; 否则为`FALSE`。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

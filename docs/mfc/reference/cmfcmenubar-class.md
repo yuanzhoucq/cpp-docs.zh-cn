@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377789"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039266"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 类
 实现停靠的菜单栏。  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwMode`  
- [in] `nLength`  
+ [in]*dwMode*  
+ [in]*nLength*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -333,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向新的父窗口`CMFCMenuBar`对象。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  新的菜单栏的样式。  
   
- [in] `nID`  
+ [in]*nID*  
  菜单栏的子窗口的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -366,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向新的父窗口`CMFCMenuBar`对象。  
   
- [in] `dwCtrlStyle`  
+ [in]*dwCtrlStyle*  
  新的菜单栏的的其他样式。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  新的菜单栏为主样式。  
   
- [in] `rcBorders`  
+ [in]*rcBorders*  
  A`CRect`参数指定的边框的大小`CMFCMenuBar`对象。  
   
- [in] `nID`  
+ [in]*nID*  
  菜单栏的子窗口的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -406,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenu`  
+ [in]*hMenu*  
  菜单资源的句柄。 `CreateFromMenu` 使用此资源的模板`CMFCMenuBar`。  
   
- [in] `bDefaultMenu`  
+ [in]*bDefaultMenu*  
  一个布尔值，该值指示新菜单是否为默认菜单。  
   
- [in] `bForceUpdate`  
+ [in]*bForceUpdate*  
  一个布尔值，该值指示此方法是否强制执行菜单更新。  
   
 ### <a name="remarks"></a>备注  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  按钮的命令 ID**帮助**组合框。  
   
- [in] `lpszPrompt`  
+ [in]*lpszPrompt*  
  包含框架是否为空且未处于活动状态在组合框中显示的文本的字符串。 例如，"输入文本在此处"。  
   
- [in] `nComboBoxWidth`  
+ [in]*nComboBoxWidth*  
  以像素为单位组合框按钮的宽度。  
   
 ### <a name="remarks"></a>备注  
  **帮助**组合框类似于**帮助**组合框中的菜单栏[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]。  
   
- 当调用此方法与`uiID`设置为 0，此方法会隐藏组合框。 否则，此方法的组合框会自动显示在菜单栏的右侧。 调用此方法后，调用[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)用于获取指向插入[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)对象。  
+ 当调用此方法与*uiID*设置为 0，此方法会隐藏组合框。 否则，此方法的组合框会自动显示在菜单栏的右侧。 调用此方法后，调用[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)用于获取指向插入[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)对象。  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  使弹出菜单的阴影。  
@@ -451,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔型参数，该值指示是否应为弹出菜单启用阴影。  
   
 ### <a name="remarks"></a>备注  
@@ -513,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -558,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHorz`  
+ [in]*bHorz*  
  一个布尔型参数，指定是否要返回的水平或垂直字体。 `TRUE` 指示水平字体。  
   
 ### <a name="return-value"></a>返回值  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iItem`  
+ [in]*iItem*  
  要返回的菜单项的索引。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针`CMFCToolBarButton`匹配由指定的索引的对象`iItem`。 `NULL` 如果该索引无效。  
+ 指向的指针`CMFCToolBarButton`匹配由指定的索引的对象*iItem*。 `NULL` 如果该索引无效。  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiBtn`  
- [in] `bByCommand`  
+ [in]*uiBtn*  
+ [in]*bByCommand*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -639,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHighlight`  
+ [in]*bHighlight*  
  一个布尔型参数，该值指示是否 framework 突出显示不可用的菜单项。  
   
 ### <a name="remarks"></a>备注  
@@ -740,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  包含 Windows 注册表项的路径的字符串。  
   
- [in] `nIndex`  
+ [in]*nIndex*  
  菜单栏控件 ID。  
   
- [in] `uiID`  
+ [in]*uiID*  
  保留的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -765,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iHot`  
+ [in]*iHot*  
   
 ### <a name="remarks"></a>备注  
   
@@ -777,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenu`  
+ [in]*hMenu*  
  菜单的句柄附加到`CMFCMenuBar`对象。  
   
 ### <a name="remarks"></a>备注  
@@ -791,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -805,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)用户想要自定义的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
- [in] `pTI`  
+ [in]*点*  
+ [in]*pTI*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -839,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -871,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  包含 Windows 注册表项的路径的字符串。  
   
- [in] `nIndex`  
+ [in]*nIndex*  
  菜单栏控件 ID。  
   
- [in] `uiID`  
+ [in]*uiID*  
  保留的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -896,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiResId`  
+ [in]*uiResId*  
  新的默认菜单资源 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -912,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bValue`  
+ [in]*bValue*  
   
 ### <a name="remarks"></a>备注  
   
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMax`  
+ [in]*bMax*  
  一个布尔值，指定的模式。 有关详细信息，请参阅备注部分。  
   
- [in] `pWnd`  
+ [in]*pWnd*  
  指向正在更改的 MDI 子窗口的指针。  
   
- [in] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  一个布尔值，指定是否应立即计算菜单栏的布局。  
   
 ### <a name="remarks"></a>备注  
- 当 MDI 子窗口最大化时，附加到 MDI 主框架窗口的菜单栏显示系统菜单和**最小化**，**最大化**和**关闭**按钮。 如果`bMax`是`TRUE`和`pWnd`不`NULL`、 最大化 MDI 子窗口和菜单栏中必须加入额外的控件。 否则，菜单栏返回到其正则状态。  
+ 当 MDI 子窗口最大化时，附加到 MDI 主框架窗口的菜单栏显示系统菜单和**最小化**，**最大化**和**关闭**按钮。 如果*bMax*是`TRUE`和*pWnd*不`NULL`、 最大化 MDI 子窗口和菜单栏中必须加入额外的控件。 否则，菜单栏返回到其正则状态。  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  设置框架在用户创建菜单按钮时使用的运行时类信息。  
@@ -947,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuButtonRTC`  
+ [in]*pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)信息的类派生自[CMFCMenuButton 类](../../mfc/reference/cmfcmenubutton-class.md)。  
   
 ### <a name="remarks"></a>备注  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpLogFont`  
+ [in]*lpLogFont*  
  指向的指针[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327)结构，它定义的字体设置。  
   
- [in] `bHorz`  
- 如果你想为`lpLogFont`参数使用的垂直字体，FALSE，如果你希望要用于水平字体。  
+ [in]*bHorz*  
+ 如果你想为*lpLogFont*参数使用的垂直字体，FALSE，如果你希望要用于水平字体。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果此方法成功，则否则为`FALSE`。  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bOn`  
+ [in]*bOn*  
  一个布尔值，控制是否显示最近使用的菜单命令。  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShowAllCommands`  
+ [in]*bShowAllCommands*  
  一个布尔参数，指定是否弹出菜单将显示所有的菜单命令。  
   
 ### <a name="remarks"></a>备注  

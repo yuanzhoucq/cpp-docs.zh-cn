@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370407"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040072"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 类
 此类实现位于 Shell 提供用于丰富预览的宿主窗口的窗口。  
@@ -93,7 +93,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|预览窗口的背景色。|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|预览窗口文本颜色。|  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWndParent`  
+ *hWndParent*  
  Shell 提供用于丰富预览主机窗口的句柄。  
   
- `prc`  
+ *中国*  
  指定的初始大小和窗口的位置。  
   
- `pContext`  
+ *pContext*  
  指向创建上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向绘制的设备上下文的指针。  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDocument`  
+ *pDocument*  
  指向文档实现的指针。  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hWndParent`  
+ *hWndParent*  
  新的父窗口的句柄。  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>参数  
- `clrBack`  
+ *clrBack*  
  预览窗口的背景色。  
   
- `clrText`  
+ *clrText*  
  预览窗口文本颜色。  
   
- `plf`  
+ *plf*  
  用于在预览窗口中显示文本的字体。 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `prc`  
+ *中国*  
  指定新的大小和预览控件的位置。  
   
- `bRedraw`  
+ *bRedraw*  
  指定是否应重绘控件。  
   
 ### <a name="remarks"></a>备注  

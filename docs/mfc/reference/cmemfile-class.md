@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368356"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040046"
 ---
 # <a name="cmemfile-class"></a>CMemFile 类
 [CFile](../../mfc/reference/cfile-class.md)-派生支持内存文件的类。  
@@ -108,7 +108,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBytes`  
+ *nBytes*  
  要分配的内存的字节数。  
   
 ### <a name="return-value"></a>返回值  
@@ -130,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpBuffer`  
+ *lpBuffer*  
  要附加到的缓冲区的指针`CMemFile`。  
   
- `nBufferSize`  
+ *nBufferSize*  
  一个整数，以字节为单位指定缓冲区的大小。  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  以字节为单位的内存分配增量。  
   
 ### <a name="remarks"></a>备注  
  这将导致`CMemFile`为内存文件中使用的内存块。  
   
- 如果`nGrowBytes`为 0，`CMemFile`将设置为的文件长度`nBufferSize`。 这意味着，内存块中的数据之前已附加到`CMemFile`将用作该文件。 在这种方式中创建的内存文件无法增长。  
+ 如果*nGrowBytes*为 0，`CMemFile`将设置为的文件长度*nBufferSize*。 这意味着，内存块中的数据之前已附加到`CMemFile`将用作该文件。 在这种方式中创建的内存文件无法增长。  
   
- 因为该文件不能而增长，请注意，不会导致`CMemFile`尝试增大该文件。 例如，请勿调用`CMemFile`重写[CFile:Write](../../mfc/reference/cfile-class.md#write)到超过末尾写入或不调用[CFile:SetLength](../../mfc/reference/cfile-class.md#setlength)长度超过`nBufferSize`。  
+ 因为该文件不能而增长，请注意，不会导致`CMemFile`尝试增大该文件。 例如，请勿调用`CMemFile`重写[CFile:Write](../../mfc/reference/cfile-class.md#write)到超过末尾写入或不调用[CFile:SetLength](../../mfc/reference/cfile-class.md#setlength)长度超过*nBufferSize*。  
   
- 如果`nGrowBytes`大于 0，`CMemFile`将忽略已附加的内存块的内容。 你将需要的内存文件的内容写入从暂存使用`CMemFile`的重写`CFile::Write`。 如果你尝试写入文件的末尾，或通过调用增大文件`CMemFile`的重写`CFile::SetLength`，`CMemFile`将增长增量为内存分配`nGrowBytes`。 如果内存块将传递给不断增长的内存分配将失败**附加**未使用与兼容方法分配[Alloc](#alloc)。 若要使用的默认实现兼容`Alloc`，您必须分配内存，运行时库函数[malloc](../../c-runtime-library/reference/malloc.md)或[calloc](../../c-runtime-library/reference/calloc.md)。  
+ 如果*nGrowBytes*大于 0，`CMemFile`将忽略已附加的内存块的内容。 你将需要的内存文件的内容写入从暂存使用`CMemFile`的重写`CFile::Write`。 如果你尝试写入文件的末尾，或通过调用增大文件`CMemFile`的重写`CFile::SetLength`，`CMemFile`将增长增量为内存分配*nGrowBytes*。 如果内存块将传递给不断增长的内存分配将失败`Attach`未使用与兼容方法分配[Alloc](#alloc)。 若要使用的默认实现兼容`Alloc`，您必须分配内存，运行时库函数[malloc](../../c-runtime-library/reference/malloc.md)或[calloc](../../c-runtime-library/reference/calloc.md)。  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  第一个重载打开的空内存文件。  
@@ -162,19 +162,19 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nGrowBytes`  
+ *nGrowBytes*  
  以字节为单位的内存分配增量。  
   
  *lpBuffe*r  
- 指向接收信息大小的缓冲区的指针`nBufferSize`。  
+ 指向接收信息大小的缓冲区的指针*nBufferSize*。  
   
- `nBufferSize`  
+ *nBufferSize*  
  一个整数，以字节为单位指定文件缓冲区的大小。  
   
 ### <a name="remarks"></a>备注  
  请注意，构造函数打开该文件，并且你不应调用[CFile::Open](../../mfc/reference/cfile-class.md#open)。  
   
- 第二个重载看起来相同，就像你使用第一个构造函数并立即调用[附加](#attach)使用相同的参数。 请参阅**附加**有关详细信息。  
+ 第二个重载看起来相同，就像你使用第一个构造函数并立即调用[附加](#attach)使用相同的参数。 有关详细信息，请参阅`Attach`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
@@ -190,7 +190,7 @@ BYTE* Detach();
  指向包含内存文件的内容的内存块的指针。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数还关闭`CMemFile`。 你可以重新附加到的内存块`CMemFile`通过调用[附加](#attach)。 如果你想要重新附加该文件并在其中使用的数据，则应调用[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength)要获取之前调用文件长度**分离**。 请注意，如果附加到的内存块`CMemFile`，以便你可以使用其数据 ( `nGrowBytes` = = 0)，然后你将无法增长的内存文件。  
+ 调用此函数还关闭`CMemFile`。 你可以重新附加到的内存块`CMemFile`通过调用[附加](#attach)。 如果你想要重新附加该文件并在其中使用的数据，则应调用[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength)要获取之前调用文件长度`Detach`。 请注意，如果附加到的内存块`CMemFile`，以便你可以使用其数据 ( `nGrowBytes` = = 0)，然后你将无法增长的内存文件。  
   
 ##  <a name="free"></a>  CMemFile::Free  
  调用此函数`CMemFile`成员函数。  
@@ -200,7 +200,7 @@ virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMem`  
+ *lpMem*  
  指向要释放的内存的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -214,7 +214,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwNewLen`  
+ *dwNewLen*  
  内存文件的新大小。  
   
 ### <a name="remarks"></a>备注  
@@ -231,17 +231,17 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMemTarget`  
+ *lpMemTarget*  
  将向其中复制源内存的内存块的指针。  
   
- `lpMemSource`  
+ *lpMemSource*  
  源内存块指针。  
   
- `nBytes`  
+ *nBytes*  
  要复制的字节数。  
   
 ### <a name="return-value"></a>返回值  
- `lpMemTarget` 的副本。  
+ 一份*lpMemTarget*。  
   
 ### <a name="remarks"></a>备注  
  如果你想要更改的方式重写此函数的`CMemFile`未这些内存副本。  
@@ -256,10 +256,10 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMem`  
+ *lpMem*  
  指向要重新分配的内存块的指针。  
   
- `nBytes`  
+ *nBytes*  
  内存块的新大小。  
   
 ### <a name="return-value"></a>返回值  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367609"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039032"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 类
 `CMFCPropertyGridFileProperty`类支持用于打开字体选择对话框中的属性列表控件项。  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strName`  
+ [in]*strName*  
  属性的名称。  
   
- [in] `lf`  
+ [in]*lf*  
  逻辑字体结构，它指定的字体特性。  
   
- [in] `dwFontDialogFlags`  
- 应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅`Flags`参数[CHOOSEFONT 结构](http://msdn.microsoft.com/library/windows/desktop/ms646832)。  
+ [in]*dwFontDialogFlags*  
+ 应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅*标志*参数[CHOOSEFONT 结构](http://msdn.microsoft.com/library/windows/desktop/ms646832)。  
   
- [in] `lpszDescr`  
+ [in]*lpszDescr*  
  字体属性的说明。 默认值为 `NULL`。  
   
- [in] `dwData`  
+ [in]*dwData*  
  应用程序特定数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
   
- [in] `color`  
+ [in]*颜色*  
  字体的颜色。 默认值为默认颜色。  
   
 ### <a name="remarks"></a>备注  

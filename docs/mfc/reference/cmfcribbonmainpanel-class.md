@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367953"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037356"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 类
 实现在单击时显示的功能区面板[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。  
@@ -90,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pElem`  
+ [in][out]*pElem*  
  指向要添加到主面板的功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -106,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszLabel`  
+ *lpszLabel*  
  指定要添加到新的文件列表的字符串。  
   
- `nWidth`  
+ *nWidth*  
  指定宽度，以像素为单位的最新的文件列表面板。  
   
 ### <a name="remarks"></a>备注  
@@ -122,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pElem`  
+ [in][out]*pElem*  
  指向要添加到主面板底部的功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -137,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pElem`  
+ *pElem*  
  指向要添加的主面板的右侧的功能区元素的指针。  
   
- `nWidth`  
+ *nWidth*  
  指定宽度，以像素为单位的右面板。  
   
 ### <a name="remarks"></a>备注  

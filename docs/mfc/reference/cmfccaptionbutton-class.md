@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368772"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040624"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 类
 `CMFCCaptionButton`类实现停靠的窗格或微型框架窗口的标题栏显示的按钮。 通常，框架会自动创建标题按钮。  
@@ -54,7 +54,7 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|构造 CMFCCaptionButton 对象。|  
   
@@ -106,15 +106,15 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nHit`  
+ [in]*nHit*  
  与按钮相关联的命令。  
   
- [in] `bLeftAlign`  
+ [in]*bLeftAlign*  
  指定是否向左对齐按钮。  
   
- 下表列出可能值`nHit`参数。  
+ 下表列出可能值*nHit*参数。  
   
-|值|命令|  
+|“值”|命令|  
 |-----------|-------------|  
 |`AFX_HTCLOSE`|关闭按钮。|  
 |`HTMINBUTTON`|最小化按钮。|  
@@ -141,7 +141,7 @@ UINT GetHit() const;
   
  下表列出可能的返回值。  
   
-|值|命令|  
+|“值”|命令|  
 |-----------|-------------|  
 |`AFX_HTCLOSE`|关闭按钮。|  
 |`HTMINBUTTON`|最小化按钮。|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 左或向右箭头映像 Id;`FALSE`的向上或向下箭头图像 Id。  
   
- [in] `bMaximized`  
+ [in]*bMaximized*  
  `TRUE` 最大化映像 ID;`FALSE`的最小化映像 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ptTo`  
+ [in]*ptTo*  
  新位置。  
   
- [in] `bHide`  
+ [in]*bHide*  
  是否显示按钮。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的按钮的指针。  
   
- [in] `bActive`  
+ [in]*bActive*  
  是否要绘制活动按钮图像。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  保留供派生类中使用。  
   
- [in] `bMaximized`  
+ [in]*bMaximized*  
  是否要绘制最大化的按钮图像。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  是否要绘制启用的按钮图像。  
   
 ### <a name="remarks"></a>备注  
- `bMaximized`参数最大化按钮时使用，或最小化按钮。  
+ *BMaximized*参数最大化按钮时使用，或最小化按钮。  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  设置标题栏的最小大小。  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 微型标题栏的高度;`FALSE`的默认标题栏的高度。  
   
 ## <a name="see-also"></a>请参阅  

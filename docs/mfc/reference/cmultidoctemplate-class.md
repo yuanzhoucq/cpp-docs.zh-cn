@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371577"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040829"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 类
 定义实现多文档界面 (MDI) 的文档模板。  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDResource`  
+ *nIDResource*  
  指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
  字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符作为一个占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如：  
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  有关这些资源类型的详细信息，请参阅[资源编辑器](../../windows/resource-editors.md)。  
   
- `pDocClass`  
- 指向`CRuntimeClass`文档类的对象。 此类是**CDocument**-派生类，定义来表示你的文档。  
+ *pDocClass*  
+ 指向`CRuntimeClass`文档类的对象。 此类是`CDocument`-派生类，定义来表示你的文档。  
   
- `pFrameClass`  
+ *pFrameClass*  
  指向`CRuntimeClass`框架窗口类的对象。 此类可以是`CMDIChildWnd`-派生类，也可以是`CMDIChildWnd`本身如果你希望用于你的文档框架窗口的默认行为。  
   
- `pViewClass`  
+ *pViewClass*  
  指向`CRuntimeClass`视图类的对象。 此类是`CView`-派生类定义以显示你的文档。  
   
 ### <a name="remarks"></a>备注  

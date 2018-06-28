@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374876"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042165"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 类
 用于 OLE“插入对象”对话框。  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwFlags`  
+ *dwFlags*  
  创建包含任意数量的以下值，以使用按位 OR 运算符组合的标志：  
   
 - **IOF_SHOWHELP**指定调用对话框中时，将显示帮助按钮。  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST**指定对话框中，应验证它将添加到列表框通过确保注册数据库中指定的服务器，显示该对话框之前存在的类。 设置此标志会显著降低性能。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要创建的项。  
   
 ### <a name="return-value"></a>返回值  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwFlags`  
+ *dwFlags*  
  以下值之一：  
   
  `COleInsertDialog::DocObjectsOnly` 将插入仅 DocObjects。  

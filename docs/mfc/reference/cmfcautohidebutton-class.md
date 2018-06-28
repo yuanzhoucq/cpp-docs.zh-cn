@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375306"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038294"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 类
 显示或隐藏配置为隐藏的 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 按钮。  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParentBar`  
+ [in]*pParentBar*  
  指向在父级工具栏的指针。  
   
- [in] `pAutoHideWnd`  
+ [in]*pAutoHideWnd*  
  指向的指针[CDockablePane](../../mfc/reference/cdockablepane-class.md)对象。 此自动隐藏按钮隐藏和显示`CDockablePane`。  
   
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
  一个值，指定与主框架窗口按钮的对齐方式。  
   
 ### <a name="return-value"></a>返回值  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  当你创建`CMFCAutoHideButton`对象，必须将自动隐藏按钮关联与特定`CDockablePane`。 用户可以使用自动隐藏按钮隐藏和显示关联`CDockablePane`。  
   
- `dwAlignment` 参数指示自动隐藏按钮位于应用程序中的位置。 该参数可为下列任一值：  
+ *DwAlignment*参数指示自动隐藏按钮在应用程序所在的位置。 该参数可为下列任一值：  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectBounds`  
+ [in]*rectBounds*  
  自动隐藏按钮的边框。  
   
- [in] `rectBorderSize`  
+ [in]*rectBorderSize*  
  每个边自动隐藏按钮的边框粗细。  
   
 ### <a name="remarks"></a>备注  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  自动隐藏按钮的边框。  
   
 ### <a name="remarks"></a>备注  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  一个布尔值，指定此方法显示附加`CDockablePane`。  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  一个布尔值，指定是否显示自动隐藏按钮。  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nOffset`  
+ [in]*nOffset*  
   
 ### <a name="remarks"></a>备注  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pNewBar`  
+ [in]*pNewBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pFirstBarInGroup`  
+ [in]*pFirstBarInGroup*  
  指向组中第一条栏的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bHighlight`  
+ *bHighlight*  
  指定新的自动隐藏按钮的状态。 `TRUE` 指示按钮将突出显示，`FALSE`指示按钮未突出显示。  
   
 ### <a name="remarks"></a>备注  

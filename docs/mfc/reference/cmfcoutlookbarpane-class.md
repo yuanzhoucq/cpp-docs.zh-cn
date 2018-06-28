@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374079"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037897"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiImage`  
+ [in]*uiImage*  
  指定位图的资源标识符。  
   
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  指定按钮的文本。  
   
- [in] `iIdCommand`  
+ [in]*iIdCommand*  
  指定按钮控件的 id。  
   
- [in] `iInsertAt`  
+ [in]*iInsertAt*  
  在 outlook 栏页上，在其中插入按钮中指定的从零开始的索引。  
   
- [in] `uiLabel`  
+ [in]*uiLabel*  
  字符串的资源 id。  
   
- [in] `szBmpFileName`  
+ [in]*szBmpFileName*  
  指定要加载的磁盘映像文件的名称。  
   
- [in] `szLabel`  
+ [in]*szLabel*  
  指定按钮的文本。  
   
- [in] `hBmp`  
+ [in]*hBmp*  
  指向按钮的位图的句柄。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  指向按钮的图标的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>备注  
  使用此方法将一个新按钮插入到 Outlook 栏的页。 从应用程序资源或从磁盘文件，可以加载按钮的图像。  
   
- 如果指定的页 ID`uiPageID`为-1，按钮插入到的第一页。  
+ 如果指定的页 ID *uiPageID*为-1，按钮插入到的第一页。  
   
- 如果指定的索引`iInsertAt`为-1，按钮将添加到页面的末尾。  
+ 如果指定的索引*iInsertAt*为-1，按钮将添加到页面的末尾。  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指定 Outlook 栏窗格控件的父窗口。 不得为 `NULL`。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  窗口样式。  窗口样式的列表，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `uiID`  
+ [in]*uiID*  
  控件 id。 必须是唯一的以启用的控件的状态保存。  
   
- [in] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定定义 Outlook 栏窗格控件的行为，从 Outlook 栏分离时的特殊样式。  
   
 ### <a name="return-value"></a>返回值  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向用户单击按钮的工具栏按钮的指针。  
   
- [in] `pPopup`  
+ [in]*pPopup*  
  指向的快捷菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bPageScroll`  
+ [in]*bPageScroll*  
  如果`TRUE`，启用页滚动模式。 如果`FALSE`，禁用页面滚动模式。  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIdCommand`  
+ [in]*iIdCommand*  
  指定要删除一个按钮的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
+ [in]*颜色*  
  指定新的背景色。  
   
 ### <a name="remarks"></a>备注  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiImageID`  
+ [in]*uiImageID*  
  指定图像资源 id。  
   
 ### <a name="remarks"></a>备注  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clrRegText`  
+ [in]*clrRegText*  
  指定未选定文本的新颜色。  
   
- [in] `clrSelText`  
+ [in]*clrSelText*  
  指定所选文本的新颜色。  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  指定新的透明颜色。  
   
 ### <a name="remarks"></a>备注  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366637"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042077"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 类
 `CMFCPropertyPage`类支持的弹出菜单显示在属性页上。  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDTemplate`  
+ *nIDTemplate*  
  此页的模板的资源 ID。  
   
- `nIDCaption`  
+ *nIDCaption*  
  资源 ID 的标签将在此页的选项卡。 如果为 0，名称来自此页对话框模板中。 默认值为 0。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  指向此页的模板名称。 不能为 `NULL`。  
   
 ### <a name="return-value"></a>返回值  

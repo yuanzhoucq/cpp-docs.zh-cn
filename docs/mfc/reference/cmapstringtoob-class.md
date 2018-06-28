@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375766"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042243"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 类
 将唯一 `CString` 对象映射到 `CObject` 指针的字典集合类。  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
+ *nBlockSize*  
  指定扩展映射的内存分配粒度。  
   
 ### <a name="remarks"></a>备注  
- 随着映射后，内存分配的单位`nBlockSize`条目。  
+ 随着映射后，内存分配的单位*nBlockSize*条目。  
   
  下表显示其他成员函数类似于**CMapStringToOb:: CMapStringToOb**。  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `key`  
+ *key*  
  键，其哈希值是要从中计算。  
   
 ### <a name="return-value"></a>返回值  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hashSize`  
+ *hashSize*  
  哈希表中的条目数。  
   
- `bAllocNow`  
+ *bAllocNow*  
  如果**TRUE**，分配哈希表初始化; 在需要时否则分配表。  
   
 ### <a name="remarks"></a>备注  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `key`  
+ *key*  
  指定标识要查找的元素的字符串键。  
   
- `rValue`  
+ *rValue*  
  指定查阅到元素中的返回的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- `key`  
+ *key*  
  指定标识要查找的元素的字符串键。  
   
- `rKey`  
+ *rKey*  
  对关联的键的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对指向的指针的引用`CObject`对象; 或**NULL**如果映射为空或`key`超出范围。  
+ 对指向的指针的引用`CObject`对象; 或**NULL**如果映射为空或*密钥*超出范围。  
   
 ### <a name="remarks"></a>备注  
  因此它可以仅在赋值语句 （左值） 的左侧使用。 如果没有地图元素与指定的键，则会创建一个新的元素。  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>参数  
- `key`  
+ *key*  
  指定用于映射查找的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `key`  
+ *key*  
  指定为新元素的键的字符串。  
   
- `newValue`  
+ *newValue*  
  指定`CObject`是新的元素的值的指针。  
   
 ### <a name="remarks"></a>备注  

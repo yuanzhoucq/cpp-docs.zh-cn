@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64682066a93618c8646973c76df395883dddf053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab829aeae9858fda830ebf2f15823c4e9c3c2f1c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378248"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039292"
 ---
 # <a name="cmenu-class"></a>CMenu 类
 封装 Windows `HMENU`。  
@@ -177,7 +177,7 @@ class CMenu : public CObject
 ## <a name="remarks"></a>备注  
  它提供用于创建、 跟踪、 更新和销毁菜单的成员函数。  
   
- 创建`CMenu`对象上以本地的堆栈帧，然后调用`CMenu`的成员函数以操作新菜单上，根据需要。 接下来，调用[CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu)若要将菜单设置为一个窗口，后面紧跟调用`CMenu`对象的[分离](#detach)成员函数。 `CWnd::SetMenu`成员函数设置到新菜单的窗口的菜单、 导致窗口重绘以反映菜单更改，并还会将菜单的所有权传递到窗口。 调用**分离**分离`HMENU`从`CMenu`对象，这样，当本地`CMenu`变量超出范围，`CMenu`对象析构函数不会尝试销毁菜单它没有再拥有。 销毁窗口时，将自动销毁本身的菜单。  
+ 创建`CMenu`对象上以本地的堆栈帧，然后调用`CMenu`的成员函数以操作新菜单上，根据需要。 接下来，调用[CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu)若要将菜单设置为一个窗口，后面紧跟调用`CMenu`对象的[分离](#detach)成员函数。 `CWnd::SetMenu`成员函数设置到新菜单的窗口的菜单、 导致窗口重绘以反映菜单更改，并还会将菜单的所有权传递到窗口。 调用`Detach`分离`HMENU`从`CMenu`对象，这样，当本地`CMenu`变量超出范围，`CMenu`对象析构函数不会尝试销毁它不再拥有一个菜单。 销毁窗口时，将自动销毁本身的菜单。  
   
  你可以使用[LoadMenuIndirect](#loadmenuindirect)成员函数来创建中的菜单的模板在内存中，但通过资源通过调用创建一个菜单[LoadMenu](#loadmenu)更易于维护和菜单资源本身可以创建和修改通过菜单编辑器。  
   
@@ -206,20 +206,20 @@ BOOL AppendMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nFlags`  
+ *nFlags*  
  添加到菜单时，请指定有关新的菜单项的状态信息。 它包含一个或多个备注部分中列出的值。  
   
- `nIDNewItem`  
- 指定新的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
+ *nIDNewItem*  
+ 指定新的菜单项的命令 ID 或者，如果*nFlags*设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 *NIDNewItem*忽略参数 （不需要） 如果*nFlags*设置为**MF_SEPARATOR**。  
   
- `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags`参数用于解释`lpszNewItem`方式如下：  
+ *lpszNewItem*  
+ 指定新的菜单项的内容。 *NFlags*参数用于解释*lpszNewItem*方式如下：  
   
 |nFlags|LpszNewItem 的解释|  
 |------------|-----------------------------------|  
 |`MF_OWNERDRAW`|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 在处理时，此 32 位的值是应用程序`WM_MEASUREITEM`和`WM_DRAWITEM`消息。 值存储在**itemData**提供与这些消息的结构的成员。|  
-|**MF_STRING**|包含指向以 null 结尾的字符串的指针。 这是默认解释。|  
-|**MF_SEPARATOR**|`lpszNewItem` （不需要），则忽略参数。|  
+|`MF_STRING`|包含指向以 null 结尾的字符串的指针。 这是默认解释。|  
+|`MF_SEPARATOR`|*LpszNewItem* （不需要），则忽略参数。|  
   
  *pBmp*  
  指向`CBitmap`将用作菜单项的对象。  
@@ -228,9 +228,9 @@ BOOL AppendMenu(
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 应用程序可以通过设置中的值指定菜单项的状态`nFlags`。 当`nIDNewItem`指定弹出菜单中，它将成为追加到的菜单的一部分。 如果该菜单将被销毁，附加的菜单还将被销毁。 应从分离附加的菜单`CMenu`对象以避免冲突。 请注意， **MF_STRING**和`MF_OWNERDRAW`不是有效的位图版本`AppendMenu`。  
+ 应用程序可以通过设置中的值指定菜单项的状态*nFlags*。 当*nIDNewItem*指定弹出菜单中，它将成为追加到的菜单的一部分。 如果该菜单将被销毁，附加的菜单还将被销毁。 应从分离附加的菜单`CMenu`对象以避免冲突。 请注意， **MF_STRING**和`MF_OWNERDRAW`不是有效的位图版本`AppendMenu`。  
   
- 以下列表描述可能在中设置的标志`nFlags`:  
+ 以下列表描述可能在中设置的标志*nFlags*:  
   
 - **MF_CHECKED**充当与一个切换开关**MF_UNCHECKED**放置项旁边的默认复选标记。 当应用程序提供选中标记位图 (请参阅[SetMenuItemBitmaps](#setmenuitembitmaps)成员函数)，显示"复选标记"位图。  
   
@@ -238,7 +238,7 @@ BOOL AppendMenu(
   
 - **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
   
-- `MF_ENABLED` 启用菜单项，以便它可以选择并将其还原从其灰显状态。  
+- **MF_ENABLED**启用菜单项，以便它可以选择并将其还原从其灰显状态。  
   
 - **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
   
@@ -246,7 +246,7 @@ BOOL AppendMenu(
   
 - **MF_MENUBREAK**将置于新行在静态菜单或弹出菜单中的新列中的项。 无分隔线位于各列之间。  
   
-- `MF_OWNERDRAW` 指定项目的所有者描述项。 当首次显示菜单时，拥有菜单窗口接收`WM_MEASUREITEM`消息，检索的高度和宽度的菜单项。 `WM_DRAWITEM`消息是发送每当所有者必须更新菜单项的可视外观。 此选项不是有效的顶级菜单项。  
+- **MF_OWNERDRAW**指定项目的所有者描述项。 当首次显示菜单时，拥有菜单的窗口接收 WM_MEASUREITEM 消息，检索的高度和宽度的菜单项。 WM_DRAWITEM 消息是发送每当所有者必须更新菜单项的可视外观。 此选项不是有效的顶级菜单项。  
   
 - **MF_POPUP**指定菜单项具有与之相关联的弹出菜单。 ID 参数指定是要与项相关联的弹出菜单的句柄。 这用于将顶级的弹出菜单或分层的弹出菜单添加到弹出菜单项。  
   
@@ -256,9 +256,9 @@ BOOL AppendMenu(
   
  每个以下的组列出标志是互斥的不能一起使用：  
   
-- **MF_DISABLED**， `MF_ENABLED`，和**MF_GRAYED**  
+- **MF_DISABLED**， **MF_ENABLED**，和**MF_GRAYED**  
   
-- **MF_STRING**， `MF_OWNERDRAW`， **MF_SEPARATOR**，和位图版本  
+- **MF_STRING**， **MF_OWNERDRAW**， **MF_SEPARATOR**，和位图版本  
   
 - **MF_MENUBARBREAK**和**MF_MENUBREAK**  
   
@@ -277,7 +277,7 @@ BOOL Attach(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hMenu`  
+ *hMenu*  
  指定一个 Windows 菜单的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -301,11 +301,11 @@ UINT CheckMenuItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDCheckItem`  
- 指定要检查的菜单项，所确定的那样`nCheck`。  
+ *nIDCheckItem*  
+ 指定要检查的菜单项，所确定的那样*n 检查*。  
   
- `nCheck`  
- 指定如何检查菜单项以及如何确定在菜单中的项的位置。 `nCheck`参数可以是的组合**MF_CHECKED**或**MF_UNCHECKED**与**MF_BYPOSITION**或**MF_BYCOMMAND**标志。 可以使用按位 OR 运算符组合这些标志。 它们具有以下含义：  
+ *n 检查*  
+ 指定如何检查菜单项以及如何确定在菜单中的项的位置。 *N 检查*参数可以是的组合**MF_CHECKED**或**MF_UNCHECKED**与**MF_BYPOSITION**或**MF_BYCOMMAND**标志。 可以使用按位 OR 运算符组合这些标志。 它们具有以下含义：  
   
 - **MF_BYCOMMAND**指定参数提供的命令 ID 的现有的菜单项。 这是默认设置。  
   
@@ -319,9 +319,9 @@ UINT CheckMenuItem(
  项的前一状态： **MF_CHECKED**或**MF_UNCHECKED**，或如果菜单项不存在的 0xFFFFFFFF。  
   
 ### <a name="remarks"></a>备注  
- `nIDCheckItem`参数指定要修改的项。  
+ *NIDCheckItem*参数指定要修改的项。  
   
- `nIDCheckItem`参数可识别的弹出菜单项，以及菜单项。 检查弹出菜单项不需任何特殊步骤。 无法检查顶级菜单项。 必须按位置检查的弹出菜单项，因为它不具有与之关联的菜单项标识符。  
+ *NIDCheckItem*参数可识别的弹出菜单项，以及菜单项。 检查弹出菜单项不需任何特殊步骤。 无法检查顶级菜单项。 必须按位置检查的弹出菜单项，因为它不具有与之关联的菜单项标识符。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::GetMenuState](#getmenustate)。  
@@ -338,17 +338,17 @@ BOOL CheckMenuRadioItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDFirst`  
- 指定 (ID 或偏移量，具体取决于的值作为`nFlags`) 中的单选按钮组的第一个菜单项。  
+ *nIDFirst*  
+ 指定 (ID 或偏移量，具体取决于的值作为*nFlags*) 中的单选按钮组的第一个菜单项。  
   
- `nIDLast`  
- 指定 (ID 或偏移量，具体取决于的值作为`nFlags`) 中的单选按钮组的最后一个菜单项。  
+ *nIDLast*  
+ 指定 (ID 或偏移量，具体取决于的值作为*nFlags*) 中的单选按钮组的最后一个菜单项。  
   
- `nIDItem`  
- 指定 (ID 或偏移量，具体取决于的值作为`nFlags`) 将检查与单选按钮组中的项。  
+ *nIDItem*  
+ 指定 (ID 或偏移量，具体取决于的值作为*nFlags*) 将检查与单选按钮组中的项。  
   
- `nFlags`  
- 指定解释`nIDFirst`， `nIDLast`，和`nIDItem`方式如下：  
+ *nFlags*  
+ 指定解释*nIDFirst*， *nIDLast*，和*nIDItem*方式如下：  
   
 |nFlags|解释|  
 |------------|--------------------|  
@@ -434,11 +434,11 @@ BOOL DeleteMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPosition`  
- 指定是要删除所确定的那样的菜单项`nFlags`。  
+ *nPosition*  
+ 指定是要删除所确定的那样的菜单项*nFlags*。  
   
- `nFlags`  
- 用于解释`nPosition`方式如下：  
+ *nFlags*  
+ 用于解释*nPosition*方式如下：  
   
 |nFlags|NPosition 的解释|  
 |------------|---------------------------------|  
@@ -509,11 +509,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关所需的绘图的类型的信息。  
   
 ### <a name="remarks"></a>备注  
- `itemAction`的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。 重写该成员函数以实现所有者描述的绘图`CMenu`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前的此成员函数终止。  
+ `itemAction`的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。 重写该成员函数以实现所有者描述的绘图`CMenu`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象*lpDrawItemStruct*之前的此成员函数终止。  
   
  请参阅[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)有关的说明`DRAWITEMSTRUCT`结构。  
   
@@ -533,10 +533,10 @@ UINT EnableMenuItem(
   
 ### <a name="parameters"></a>参数  
  *nIDEnableItem*  
- 指定要启用的菜单项所确定的那样`nEnable`。 弹出菜单项，以及标准菜单项，可以指定此参数。  
+ 指定要启用的菜单项所确定的那样*nEnable*。 弹出菜单项，以及标准菜单项，可以指定此参数。  
   
- `nEnable`  
- 指定要执行的操作。 它可以是的组合**MF_DISABLED**， `MF_ENABLED`，或**MF_GRAYED**，与**MF_BYCOMMAND**或**MF_BYPOSITION**。 可以使用按位 OR 运算符组合这些值。 这些值的含义如下：  
+ *nEnable*  
+ 指定要执行的操作。 它可以是的组合**MF_DISABLED**， **MF_ENABLED**，或**MF_GRAYED**，与**MF_BYCOMMAND**或**MF_BYPOSITION**. 可以使用按位 OR 运算符组合这些值。 这些值的含义如下：  
   
 - **MF_BYCOMMAND**指定参数提供的命令 ID 的现有的菜单项。 这是默认设置。  
   
@@ -544,12 +544,12 @@ UINT EnableMenuItem(
   
 - **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
   
-- `MF_ENABLED` 启用菜单项，以便它可以选择并将其还原从其灰显状态。  
+- **MF_ENABLED**启用菜单项，以便它可以选择并将其还原从其灰显状态。  
   
 - **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
   
 ### <a name="return-value"></a>返回值  
- 以前的状态 ( **MF_DISABLED**， `MF_ENABLED`，或**MF_GRAYED**) 或为-1 是否有效。  
+ 以前的状态 ( **MF_DISABLED**， **MF_ENABLED**，或**MF_GRAYED**) 或为-1 是否有效。  
   
 ### <a name="remarks"></a>备注  
  [CreateMenu](#createmenu)， [InsertMenu](#insertmenu)， [ModifyMenu](#modifymenu)，和[LoadMenuIndirect](#loadmenuindirect)成员函数还可以设置的状态 （已启用，禁用，或变暗） 的菜单项。  
@@ -569,7 +569,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hMenu`  
+ *hMenu*  
  菜单 Windows 句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -596,12 +596,12 @@ UINT GetDefaultItem(
  *gmdiFlags*  
  值，该值指定该函数搜索菜单项的方式。 此参数可以为 none、 一个，或以下值的组合：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**GMDI_GOINTOPOPUPS**|指定，是否默认项目是指打开一个子菜单，该函数是相应的子菜单以递归方式在其中进行搜索。 如果子菜单中没有默认项，则返回的值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定菜单上，不管它是用于打开子菜单项的第一个默认项。|  
 |**GMDI_USEDISABLED**|指定，该函数是返回一个默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或显示为灰色的项。|  
   
- `fByPos`  
+ *fByPos*  
  值，该值指定是否检索菜单项的标识符或其位置。 如果此参数为**FALSE**，返回标识符。 否则，返回的位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -634,7 +634,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpcmi`  
+ *lpcmi*  
  指向的指针[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)结构，它包含菜单上的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -657,18 +657,18 @@ UINT GetMenuItemCount() const;
   请参阅示例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
   
 ##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
- 获取位于位置定义的菜单项的菜单项标识符`nPos`。  
+ 获取位于位置定义的菜单项的菜单项标识符*nPos*。  
   
 ```  
 UINT GetMenuItemID(int nPos) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  指定的位置 （从零开始） 的菜单项正在检索其 ID。  
   
 ### <a name="return-value"></a>返回值  
- 如果该函数成功的弹出菜单中指定的项的项 ID。 如果指定的项是一个弹出菜单 （而不是弹出菜单中的项），则返回值为-1。 如果`nPos`对应于**分隔符**菜单项，返回值为 0。  
+ 如果该函数成功的弹出菜单中指定的项的项 ID。 如果指定的项是一个弹出菜单 （而不是弹出菜单中的项），则返回值为-1。 如果*nPos*对应于**分隔符**菜单项，返回值为 0。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
@@ -684,13 +684,13 @@ BOOL GetMenuItemInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uItem`  
+ *uItem*  
  标识符或要获取其相关信息的菜单项的位置。 此参数的含义取决于值`ByPos`。  
   
- `lpMenuItemInfo`  
+ *lpMenuItemInfo*  
  指向的指针[MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578)，如下所述在 Windows SDK 中，包含有关菜单上的信息。  
   
- `fByPos`  
+ *fByPos*  
  值，该值指定的含义`nIDItem`。 默认情况下，`ByPos`是**FALSE**，指示该 uItem 是菜单项标识符。 如果`ByPos`未设置为**FALSE**，它指示菜单项位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -712,11 +712,11 @@ UINT GetMenuState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
- 指定的菜单项 ID，由`nFlags`。  
+ *nID*  
+ 指定的菜单项 ID，由*nFlags*。  
   
- `nFlags`  
- 指定的性质`nID`。 它可以是以下值之一：  
+ *nFlags*  
+ 指定的性质*nID*。 它可以是以下值之一：  
   
 - **MF_BYCOMMAND**指定参数提供的命令 ID 的现有的菜单项。 这是默认设置。  
   
@@ -729,7 +729,7 @@ UINT GetMenuState(
   
 - **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
   
-- `MF_ENABLED` 启用菜单项，以便它可以选择并将其还原从其灰显状态。 请注意此常量的值为 0;使用此值时，应用程序不应测试针对失败的 0。  
+- **MF_ENABLED**启用菜单项，以便它可以选择并将其还原从其灰显状态。 请注意此常量的值为 0;使用此值时，应用程序不应测试针对失败的 0。  
   
 - **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
   
@@ -761,20 +761,20 @@ int GetMenuString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDItem`  
- 在菜单中，根据的值中指定的整数标识符的菜单项或菜单项的偏移量`nFlags`。  
+ *nIDItem*  
+ 在菜单中，根据的值中指定的整数标识符的菜单项或菜单项的偏移量*nFlags*。  
   
- `lpString`  
+ *lpString*  
  指向以将接收标签的缓冲区。  
   
- `rString`  
+ *rString*  
  对引用`CString`是接收复制的菜单字符串的对象。  
   
- `nMaxCount`  
- 指定要复制的标签的最大长度 （以字符为单位）。 如果标签的长度超过中指定的最大`nMaxCount`，额外的字符将被截断。  
+ *nMaxCount*  
+ 指定要复制的标签的最大长度 （以字符为单位）。 如果标签的长度超过中指定的最大*nMaxCount*，额外的字符将被截断。  
   
- `nFlags`  
- 指定的解释`nIDItem`参数。 它可以是以下值之一：  
+ *nFlags*  
+ 指定的解释*nIDItem*参数。 它可以是以下值之一：  
   
 |nFlags|NIDItem 的解释|  
 |------------|-------------------------------|  
@@ -785,7 +785,7 @@ int GetMenuString(
  指定的实际将复制到缓冲区，不包括 null 终止符的字符数。  
   
 ### <a name="remarks"></a>备注  
- `nMaxCount`参数应为一个大于中的标签，以适应终止字符串的 null 字符的字符数。  
+ *NMaxCount*参数应为一个大于中的标签，以适应终止字符串的 null 字符的字符数。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::InsertMenu](#insertmenu)。  
@@ -808,7 +808,7 @@ CMenu* GetSubMenu(int nPos) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  指定菜单中包含的弹出菜单的位置。 位置值从 0 开始，第一个菜单项。 无法在此函数中使用弹出菜单的标识符。  
   
 ### <a name="return-value"></a>返回值  
@@ -818,7 +818,7 @@ CMenu* GetSubMenu(int nPos) const;
   请参阅示例[CMenu::TrackPopupMenu](#trackpopupmenu)。  
   
 ##  <a name="insertmenu"></a>  CMenu::InsertMenu  
- 在指定位置插入新菜单项`nPosition`菜单中向下移动其他项。  
+ 在指定位置插入新菜单项*nPosition*菜单中向下移动其他项。  
   
 ```  
 BOOL InsertMenu(
@@ -836,28 +836,28 @@ BOOL InsertMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPosition`  
- 指定要在其前面新菜单项是要插入的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式：  
+ *nPosition*  
+ 指定要在其前面新菜单项是要插入的菜单项。 *NFlags*参数可以用于解释*nPosition*通过以下方式：  
   
 |nFlags|NPosition 的解释|  
 |------------|---------------------------------|  
 |**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。 如果`nPosition`为-1，新的菜单项追加到菜单的末尾。|  
+|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。 如果*nPosition*为-1，新的菜单项追加到菜单的末尾。|  
   
- `nFlags`  
- 指定如何`nPosition`被解释且添加到菜单时指定有关新的菜单项的状态信息。 有关可能设置的标志的列表，请参阅[AppendMenu](#appendmenu)成员函数。 若要指定多个值，使用按位 OR 运算符合并它们与**MF_BYCOMMAND**或**MF_BYPOSITION**标志。  
+ *nFlags*  
+ 指定如何*nPosition*被解释且添加到菜单时指定有关新的菜单项的状态信息。 有关可能设置的标志的列表，请参阅[AppendMenu](#appendmenu)成员函数。 若要指定多个值，使用按位 OR 运算符合并它们与**MF_BYCOMMAND**或**MF_BYPOSITION**标志。  
   
- `nIDNewItem`  
- 指定新的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
+ *nIDNewItem*  
+ 指定新的菜单项的命令 ID 或者，如果*nFlags*设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 *NIDNewItem*忽略参数 （不需要） 如果*nFlags*设置为**MF_SEPARATOR**。  
   
- `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags` 可以用于解释`lpszNewItem`通过以下方式：  
+ *lpszNewItem*  
+ 指定新的菜单项的内容。 *nFlags*可以用于解释*lpszNewItem*通过以下方式：  
   
 |nFlags|LpszNewItem 的解释|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 此 32 位的值是在应用程序**itemData**由提供的结构的成员[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)和[WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923)消息。 菜单项最初显示或更改时，会发送这些消息。|  
+|**MF_OWNERDRAW**|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 此 32 位的值是在应用程序**itemData**由提供的结构的成员[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)和[WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923)消息。 菜单项最初显示或更改时，会发送这些消息。|  
 |**MF_STRING**|包含指向以 null 结尾的字符串的长指针。 这是默认解释。|  
-|**MF_SEPARATOR**|`lpszNewItem` （不需要），则忽略参数。|  
+|**MF_SEPARATOR**|*LpszNewItem* （不需要），则忽略参数。|  
   
  *pBmp*  
  指向`CBitmap`将用作菜单项的对象。  
@@ -866,11 +866,11 @@ BOOL InsertMenu(
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 应用程序可以通过设置中的值指定菜单项的状态`nFlags`。  
+ 应用程序可以通过设置中的值指定菜单项的状态*nFlags*。  
   
  每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序应调用`CWnd::DrawMenuBar`。  
   
- 当`nIDNewItem`指定弹出菜单中，它将成为在插入的菜单的一部分。 如果该菜单将被销毁，插入菜单上也将被销毁。 应从分离插入的菜单`CMenu`对象以避免冲突。  
+ 当*nIDNewItem*指定弹出菜单中，它将成为在插入的菜单的一部分。 如果该菜单将被销毁，插入菜单上也将被销毁。 应从分离插入的菜单`CMenu`对象以避免冲突。  
   
  如果多文档界面 (MDI) 子窗口最大化的活动点和应用程序将弹出菜单插入 MDI 应用程序的菜单通过调用此函数并指定**MF_BYPOSITION**插入标志，菜单一个位置距离剩余比预期。 这是因为活动的 MDI 子窗口的控件菜单插入 MDI 框架窗口的菜单栏的第一个位置。 若要正确放置菜单上，应用程序必须将 1 添加到否则将使用的位置值。 应用程序可以使用**WM_MDIGETACTIVE**消息，以确定当前处于活动状态的子窗口是否最大化。  
   
@@ -888,14 +888,14 @@ BOOL InsertMenuItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uItem`  
- 请参阅说明`uItem`中[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) Windows SDK 中。  
+ *uItem*  
+ 请参阅说明*uItem*中[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) Windows SDK 中。  
   
- `lpMenuItemInfo`  
- 请参阅说明`lpmii`中**InsertMenuItem** Windows SDK 中。  
+ *lpMenuItemInfo*  
+ 请参阅说明*lpmii*中**InsertMenuItem** Windows SDK 中。  
   
- `fByPos`  
- 请参阅说明`fByPosition`中**InsertMenuItem** Windows SDK 中。  
+ *fByPos*  
+ 请参阅说明*fByPosition*中**InsertMenuItem** Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  此函数包装[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)、 Windows SDK 中所述。  
@@ -909,10 +909,10 @@ BOOL LoadMenu(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向以 null 结尾的字符串，其中包含要加载的菜单资源名称。  
   
- `nIDResource`  
+ *nIDResource*  
  指定要加载该菜单资源的菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -970,7 +970,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  指向的指针`MEASUREITEMSTRUCT`结构。  
   
 ### <a name="remarks"></a>备注  
@@ -984,7 +984,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
  [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
 ##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
- 更改指定的位置处的现有菜单项`nPosition`。  
+ 更改指定的位置处的现有菜单项*nPosition*。  
   
 ```  
 BOOL ModifyMenu(
@@ -1002,28 +1002,28 @@ BOOL ModifyMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPosition`  
- 指定要更改的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式：  
+ *nPosition*  
+ 指定要更改的菜单项。 *NFlags*参数可以用于解释*nPosition*通过以下方式：  
   
 |nFlags|NPosition 的解释|  
 |------------|---------------------------------|  
 |**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
 |**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
   
- `nFlags`  
- 指定如何`nPosition`解释，并提供有关必须对菜单项所做的更改的信息。 可以设置的标志的列表，请参阅[AppendMenu](#appendmenu)成员函数。  
+ *nFlags*  
+ 指定如何*nPosition*解释，并提供有关必须对菜单项所做的更改的信息。 可以设置的标志的列表，请参阅[AppendMenu](#appendmenu)成员函数。  
   
- `nIDNewItem`  
- 指定修改后的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
+ *nIDNewItem*  
+ 指定修改后的菜单项的命令 ID 或者，如果*nFlags*设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 *NIDNewItem*忽略参数 （不需要） 如果*nFlags*设置为**MF_SEPARATOR**。  
   
- `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags`参数可以用于解释`lpszNewItem`通过以下方式：  
+ *lpszNewItem*  
+ 指定新的菜单项的内容。 *NFlags*参数可以用于解释*lpszNewItem*通过以下方式：  
   
 |nFlags|LpszNewItem 的解释|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 在处理时，此 32 位的值是应用程序**MF_MEASUREITEM**和**MF_DRAWITEM**。|  
+|**MF_OWNERDRAW**|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 在处理时，此 32 位的值是应用程序**MF_MEASUREITEM**和**MF_DRAWITEM**。|  
 |**MF_STRING**|包含的长指针到以 null 结尾的字符串或`CString`。|  
-|**MF_SEPARATOR**|`lpszNewItem` （不需要），则忽略参数。|  
+|**MF_SEPARATOR**|*LpszNewItem* （不需要），则忽略参数。|  
   
  *pBmp*  
  指向`CBitmap`将用作菜单项的对象。  
@@ -1032,9 +1032,9 @@ BOOL ModifyMenu(
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 应用程序的设置中的值将指定菜单项的新状态`nFlags`。 如果此函数取代弹出菜单与菜单项关联，它将销毁旧的弹出菜单和释放使用弹出菜单的内存。  
+ 应用程序的设置中的值将指定菜单项的新状态*nFlags*。 如果此函数取代弹出菜单与菜单项关联，它将销毁旧的弹出菜单和释放使用弹出菜单的内存。  
   
- 当`nIDNewItem`指定弹出菜单中，它将成为在插入的菜单的一部分。 如果该菜单将被销毁，插入菜单上也将被销毁。 应从分离插入的菜单`CMenu`对象以避免冲突。  
+ 当*nIDNewItem*指定弹出菜单中，它将成为在插入的菜单的一部分。 如果该菜单将被销毁，插入菜单上也将被销毁。 应从分离插入的菜单`CMenu`对象以避免冲突。  
   
  每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序应调用`CWnd::DrawMenuBar`。 若要更改现有的菜单项的属性，是使用要快得多`CheckMenuItem`和`EnableMenuItem`成员函数。  
   
@@ -1062,7 +1062,7 @@ BOOL operator!=(const CMenu& menu) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `menu`  
+ *菜单*  
  A`CMenu`比较的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1076,7 +1076,7 @@ BOOL operator==(const CMenu& menu) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `menu`  
+ *菜单*  
  A`CMenu`比较的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1092,16 +1092,16 @@ BOOL RemoveMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPosition`  
- 指定要删除的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式：  
+ *nPosition*  
+ 指定要删除的菜单项。 *NFlags*参数可以用于解释*nPosition*通过以下方式：  
   
 |nFlags|NPosition 的解释|  
 |------------|---------------------------------|  
 |**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
 |**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
   
- `nFlags`  
- 指定如何`nPosition`解释。  
+ *nFlags*  
+ 指定如何*nPosition*解释。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则为非 0；否则为 0。  
@@ -1124,11 +1124,11 @@ BOOL SetDefaultItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uItem`  
- 标识符或新的默认菜单项或-1 表示没有默认的项目的位置。 此参数的含义取决于值`fByPos`。  
+ *uItem*  
+ 标识符或新的默认菜单项或-1 表示没有默认的项目的位置。 此参数的含义取决于值*fByPos*。  
   
- `fByPos`  
- 值，该值指定的含义`uItem`。 如果此参数为**FALSE**，`uItem`是菜单项标识符。 否则，它是菜单项位置。  
+ *fByPos*  
+ 值，该值指定的含义*uItem*。 如果此参数为**FALSE**， *uItem*是菜单项标识符。 否则，它是菜单项位置。  
   
 ### <a name="return-value"></a>返回值  
  如果函数成功，则返回值不为零。 如果函数失败，则返回值为零。 若要获得扩展的错误信息，请使用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。  
@@ -1147,7 +1147,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwContextHelpId`  
+ *dwContextHelpId*  
  要将与相关联的上下文帮助 ID `CMenu`。  
   
 ### <a name="return-value"></a>返回值  
@@ -1167,7 +1167,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpcmi`  
+ *lpcmi*  
  指向的指针[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)结构，它包含菜单上的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -1188,21 +1188,21 @@ BOOL SetMenuItemBitmaps(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPosition`  
- 指定要更改的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式：  
+ *nPosition*  
+ 指定要更改的菜单项。 *NFlags*参数可以用于解释*nPosition*通过以下方式：  
   
 |nFlags|NPosition 的解释|  
 |------------|---------------------------------|  
 |**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
 |**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
   
- `nFlags`  
- 指定如何`nPosition`解释。  
+ *nFlags*  
+ 指定如何*nPosition*解释。  
   
- `pBmpUnchecked`  
+ *pBmpUnchecked*  
  指定要使用适用于未选中的菜单项的位图。  
   
- `pBmpChecked`  
+ *pBmpChecked*  
  指定要用于选中的菜单项的位图。  
   
 ### <a name="return-value"></a>返回值  
@@ -1211,7 +1211,7 @@ BOOL SetMenuItemBitmaps(
 ### <a name="remarks"></a>备注  
  选中或取消选中菜单项是否，Windows 将显示菜单项旁边的相应位图。  
   
- 如果任一`pBmpUnchecked`或`pBmpChecked`是**NULL**，则 Windows 将显示相应的属性的菜单项旁边的执行任何操作。 如果两个参数均**NULL**，在项被选中且未选中的项时移除复选标记时，Windows 将使用默认复选标记。  
+ 如果任一*pBmpUnchecked*或*pBmpChecked*是**NULL**，则 Windows 将显示相应的属性的菜单项旁边的执行任何操作。 如果两个参数均**NULL**，在项被选中且未选中的项时移除复选标记时，Windows 将使用默认复选标记。  
   
  菜单已销毁时，将不会销毁这些位图;应用程序必须将其销毁。  
   
@@ -1233,14 +1233,14 @@ BOOL SetMenuItemInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uItem`  
- 请参阅说明`uItem`中[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) Windows SDK 中。  
+ *uItem*  
+ 请参阅说明*uItem*中[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) Windows SDK 中。  
   
- `lpMenuItemInfo`  
- 请参阅说明`lpmii`中**SetMenuItemInfo** Windows SDK 中。  
+ *lpMenuItemInfo*  
+ 请参阅说明*lpmii*中**SetMenuItemInfo** Windows SDK 中。  
   
- `fByPos`  
- 请参阅说明`fByPosition`中**SetMenuItemInfo** Windows SDK 中。  
+ *fByPos*  
+ 请参阅说明*fByPosition*中**SetMenuItemInfo** Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  此函数包装[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)、 Windows SDK 中所述。  
@@ -1258,19 +1258,19 @@ BOOL TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nFlags`  
+ *nFlags*  
  指定屏幕位置和鼠标位置的标志。 请参阅[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002)有关可用标志的列表。  
   
  *x*  
- 指定屏幕坐标中的弹出菜单的水平位置。 根据值`nFlags`参数，菜单可以为左对齐、 右对齐或居中相对于此位置。  
+ 指定屏幕坐标中的弹出菜单的水平位置。 根据值*nFlags*参数，菜单可以为左对齐、 右对齐或居中相对于此位置。  
   
  *y*  
  在屏幕上指定菜单的顶部屏幕坐标的垂直位置。  
   
- `pWnd`  
+ *pWnd*  
  标识拥有的弹出菜单的窗口。 此参数不能为**NULL**，即使**TPM_NONOTIFY**指定标志。 此窗口接收所有**WM_COMMAND**从菜单的消息。 在 Windows 版本 3.1 和更高版本中，该窗口不会收到**WM_COMMAND**消息直到`TrackPopupMenu`返回。 在 Windows 3.0 中，该窗口才接收**WM_COMMAND**消息之前`TrackPopupMenu`返回。  
   
- `lpRect`  
+ *lpRect*  
  已忽略。  
   
 ### <a name="return-value"></a>返回值  
@@ -1295,7 +1295,7 @@ BOOL TrackPopupMenuEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `fuFlags`  
+ *fuFlags*  
  指定扩展菜单的各种功能。 所有值的列表和它们的含义，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
   
  *x*  
@@ -1304,16 +1304,16 @@ BOOL TrackPopupMenuEx(
  *y*  
  在屏幕上指定菜单的顶部屏幕坐标的垂直位置。  
   
- `pWnd`  
- 指向拥有的弹出菜单和菜单创建接收消息窗口的指针。 此窗口可以是从当前应用程序的任何窗口，但不能为**NULL**。 如果指定**TPM_NONOTIFY**中`fuFlags`参数，该函数不会发送到任何消息`pWnd`。 该函数必须返回指向对窗口`pWnd`接收**WM_COMMAND**消息。  
+ *pWnd*  
+ 指向拥有的弹出菜单和菜单创建接收消息窗口的指针。 此窗口可以是从当前应用程序的任何窗口，但不能为**NULL**。 如果指定**TPM_NONOTIFY**中*fuFlags*参数，该函数不会发送到任何消息*pWnd*。 该函数必须返回指向对窗口*pWnd*接收**WM_COMMAND**消息。  
   
  *lptpm*  
  指向[TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586)结构，它指定屏幕菜单区域不应重叠。 此参数可以为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
- 如果指定**TPM_RETURNCMD**中`fuFlags`参数，返回值是用户选定的项的菜单项标识符。 如果用户取消菜单不做任何选择，或者如果发生错误，则返回值为 0。  
+ 如果指定**TPM_RETURNCMD**中*fuFlags*参数，返回值是用户选定的项的菜单项标识符。 如果用户取消菜单不做任何选择，或者如果发生错误，则返回值为 0。  
   
- 如果不指定**TPM_RETURNCMD**中`fuFlags`参数，返回值表示非零，如果函数成功，0 失败。 若要获得扩展的错误信息，调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果不指定**TPM_RETURNCMD**中*fuFlags*参数，返回值表示非零，如果函数成功，0 失败。 若要获得扩展的错误信息，调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
  浮动的弹出菜单可以出现在屏幕上的任意位置。 创建弹出菜单时处理错误的详细信息，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  

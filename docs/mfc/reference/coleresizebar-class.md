@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375611"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040111"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 类
 支持调整现有 OLE 项的控件条类型。  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  向父窗口的大小调整栏的指针。  
   
- `dwStyle`  
+ *dwStyle*  
  指定[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。  
   
- `nID`  
+ *nID*  
  调整大小条子窗口 id。  
   
 ### <a name="return-value"></a>返回值  

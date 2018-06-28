@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369045"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038498"
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 A`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。  
@@ -71,7 +71,7 @@ class CJumpList;
 |[CJumpList::CJumpList](#cjumplist)|构造 `CJumpList` 对象。|  
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|销毁 `CJumpList` 对象。|  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|中止生成列表的事务，且不提交。|  
 |[CJumpList::AddDestination](#adddestination)|已重载。 将目标添加到列表。|  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  指定的类别名称。 如果指定的类别不存在，将创建它。  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  指定目标文件的路径。  
   
- `strCategoryName`  
+ *strCategoryName*  
  指定的类别名称。 如果指定的类别不存在，将创建它。  
   
- `pShellItem`  
+ *pShellItem*  
  指定表示要添加的目标的命令行程序项目。  
   
- `pShellLink`  
+ *pShellLink*  
  指定表示要添加的目标的 Shell 链接。  
   
 ### <a name="return-value"></a>返回值  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>参数  
- `category`  
+ *category*  
  指定的已知的类别类型。 可以是`KDC_RECENT`，或`KDC_KNOWN`。  
   
 ### <a name="return-value"></a>返回值  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>参数  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  指定目标任务路径。  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  指定由 strTargetExecutablePath 指定的可执行文件的命令行参数。  
   
- `strTitle`  
+ *strTitle*  
  将目标列表中显示的任务名称。  
   
- `strIconLocation`  
+ *strIconLocation*  
  图标将显示在目标列表以及标题中的位置。  
   
- `iIconIndex`  
+ *iIconIndex*  
  图标索引。  
   
- `pShellLink`  
+ *pShellLink*  
  表示要添加的任务的命令行程序链接。  
   
 ### <a name="return-value"></a>返回值  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pObjectCollection`  
+ *pObjectCollection*  
  要添加的任务的集合。  
   
 ### <a name="return-value"></a>返回值  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bAutoCommit`  
+ *bAutoCommit*  
  如果此参数为 FALSE 则在析构函数中不是自动提交列表。  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `strAppID`  
+ *strAppID*  
  一个字符串，指定应用程序用户模型 id。  
   
 ## <a name="see-also"></a>请参阅  

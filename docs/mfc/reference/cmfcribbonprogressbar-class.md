@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369331"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040215"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 类
 实现用于直观指示较长操作进度的控件。  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  指定功能区进度栏的命令 ID。  
   
- [in] `nWidth`  
+ [in]*nWidth*  
  指定以像素为单位，功能区进度栏的宽度。  
   
- [in] `nHeight`  
+ [in]*nHeight*  
  指定以像素为单位，功能区进度栏的高度。  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 若要指定进度栏处于无限模式;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nPos`  
+ [in]*nPos*  
  指定为设置进度栏的位置。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  指定是否应重绘进度栏。  
   
 ### <a name="remarks"></a>备注  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nMin`  
+ [in]*nMin*  
  指定范围的最小值。  
   
- [in] `nMax`  
+ [in]*最*  
  指定范围的最大值。  
   
 ### <a name="remarks"></a>备注  

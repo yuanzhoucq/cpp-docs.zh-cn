@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374469"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037748"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 类
 嵌入到弹出菜单的菜单栏。  
@@ -100,7 +100,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|指定是否在应用程序具有 Windows XP 的外观时，将会显示灰色侧栏。|  
   
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  `TRUE` 自动重新计算弹出窗口的菜单栏窗格中; 的布局否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiMenuResID`  
+ [in]*uiMenuResID*  
  指定要加载该菜单资源的菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  在屏幕上点。  
   
 ### <a name="return-value"></a>返回值  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenu`  
+ [in]*hMenu*  
  要从中导入的弹出菜单按钮菜单。  
   
- [in] `bShowAllCommands`  
+ [in]*bShowAllCommands*  
  `TRUE` 如果该菜单上的所有命令导入，或`FALSE`如果很少使用的可能被隐藏。  
   
 ### <a name="return-value"></a>返回值  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenu`  
+ [in]*hMenu*  
  要加载的已存档菜单句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  都要设置其样式工具栏按钮的从零开始的索引。  
   
- [in] `nStyle`  
+ [in]*nStyle*  
  按钮样式。 请参阅[工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)可用工具栏按钮样式的列表。  
   
 ### <a name="remarks"></a>备注  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iOffset`  
+ [in]*iOffset*  
  应偏移弹出菜单栏的行数。  
   
 ### <a name="remarks"></a>备注  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuButton`  
+ [in]*pMenuButton*  
  指向为其设置延迟计时器的菜单按钮的指针。  
   
- [in] `nDelayFactor`  
+ [in]*nDelayFactor*  
  一个延迟的系数，等于至少一个，以乘以标准菜单延迟时间 （通常为半秒和 5 秒）。  
   
 ### <a name="remarks"></a>备注  

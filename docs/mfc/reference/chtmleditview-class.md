@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367339"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040608"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 类
 提供 MFC 文档/视图体系结构上下文中的 Web 浏览器编辑平台功能。  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszClassName`  
+ *lpszClassName*  
  指向以 null 结尾的字符串名称的 Windows 类。 类名称可以是与注册的任何名称[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数或**RegisterClass** Windows 函数。 如果**NULL**，使用预定义的默认[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向以 null 结尾的字符串表示的窗口名称。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式特性。 默认情况下， **WS_VISIBLE**和**WS_CHILD**设置窗口样式。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 `rectDefault`值允许 Windows 指定的大小和位置的新窗口。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 *RectDefault*值允许 Windows 指定的大小和位置的新窗口。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父窗口的指针。  
   
- `nID`  
+ *nID*  
  视图的 ID 号。 默认情况下，设置为**AFX_IDW_PANE_FIRST**。  
   
- `pContext`  
+ *pContext*  
  指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**默认情况下。  
   
 ### <a name="remarks"></a>备注  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `ppDocument`  
+ *ppDocument*  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)接口。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

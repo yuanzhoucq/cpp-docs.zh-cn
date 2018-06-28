@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1101e4115efa3c5c822d0d64b767cdee379a0e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34baec7ddcb04cb3de564484a2b4afd04e36eae9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377831"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042275"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 提供 Windows 列表框功能。  
@@ -195,7 +195,7 @@ class CListBox : public CWnd
   
  从对话框模板或直接在代码中，可以创建一个列表框。 若要直接创建它，请构造`CListBox`对象，然后调用[创建](#create)成员函数以创建 Windows 列表框控件并将其附加到`CListBox`对象。 若要使用的对话框模板中的列表框，列表框中声明变量对话框类，然后使用`DDX_Control`在自己对话框类的`DoDataExchange`函数连接到该控件的成员变量。 （这是为你自动完成时将控制变量添加到对话框类。）  
   
- 构造可以是派生自类中的一步过程`CListBox`。 编写派生的类和调用构造函数**创建**从构造函数中。  
+ 构造可以是派生自类中的一步过程`CListBox`。 编写派生的类和调用构造函数`Create`从构造函数中。  
   
  如果你想要处理 Windows 通知消息发送到其父列表框 (通常从派生的类[CDialog](../../mfc/reference/cdialog-class.md))，将消息映射条目和消息处理程序成员函数添加到每条消息的父类。  
   
@@ -253,7 +253,7 @@ int AddString(LPCTSTR lpszItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszItem`  
+ *lpszItem*  
  指向要添加的以 null 结尾的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -277,10 +277,10 @@ virtual int CharToItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nKey`  
+ *nKey*  
  用户键入的字符的 ANSI 代码。  
   
- `nIndex`  
+ *nIndex*  
  列表框中插入符号的当前位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -312,7 +312,7 @@ CListBox();
 ```  
   
 ### <a name="remarks"></a>备注  
- 构造`CListBox`两个步骤中的对象。 首先，调用的构造函数**ClistBox** ，然后调用**创建**，其中初始化 Windows 列表框并将其附加到`CListBox`。  
+ 构造`CListBox`两个步骤中的对象。 首先，调用的构造函数`ClistBox`，然后调用`Create`，其中初始化 Windows 列表框并将其附加到`CListBox`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
@@ -325,13 +325,13 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  指向的长指针`COMPAREITEMSTRUCT`结构。  
   
 ### <a name="return-value"></a>返回值  
  指示中所述的两个项的相对位置[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)结构。 它可能是以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |-1|项 2 之前进行排序的第 1 项。|  
 |0|项 1 和 2 的项进行排序相同。|  
@@ -357,25 +357,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定列表框的样式。 应用的任意组合[列表框样式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)在框中。  
   
- `rect`  
+ *rect*  
  指定列表框的大小和位置。 可以是`CRect`对象或`RECT`结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定列表框中的父窗口 (通常`CDialog`对象)。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定列表框的控件 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CListBox`两个步骤中的对象。 首先，调用的构造函数，然后调用**创建**，其中初始化 Windows 列表框并将其附加到`CListBox`对象。  
+ 构造`CListBox`两个步骤中的对象。 首先，调用的构造函数，然后调用`Create`，其中初始化 Windows 列表框并将其附加到`CListBox`对象。  
   
- 当**创建**执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)到该列表框控件的消息。  
+ 当`Create`执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)到该列表框控件的消息。  
   
  默认情况下，通过处理这些消息的消息[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数在`CWnd`基类。 若要扩展的默认消息处理，从派生类`CListBox`、 将消息映射添加到新的类中，和重写前面的消息处理程序成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
   
@@ -406,7 +406,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  向 Windows 的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)结构，它包含有关已删除的项的信息。  
   
 ### <a name="remarks"></a>备注  
@@ -425,14 +425,14 @@ int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定要删除的字符串的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 在列表中剩余的字符串的计数。 返回值是**LB_ERR**如果`nIndex`指定列表中的索引大于项的数目。  
+ 在列表中剩余的字符串的计数。 返回值是**LB_ERR**如果*nIndex*指定列表中的索引大于项的数目。  
   
 ### <a name="remarks"></a>备注  
- 后面的所有项`nIndex`现在下移一个位置。 例如，如果列表框中包含两个项，则删除第一项将导致剩余的项现在处于的第一个位置。 `nIndex`= 0 中的第一个位置的项。  
+ 后面的所有项*nIndex*现在下移一个位置。 例如，如果列表框中包含两个项，则删除第一项将导致剩余的项现在处于的第一个位置。 *nIndex*= 0 中的第一个位置的项。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
@@ -447,21 +447,21 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>参数  
- `attr`  
- 可以是任意组合的`enum`值中所述**CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：  
+ *attr*  
+ 可以是任意组合的**枚举**值中所述**CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |0x0000|可以读取或写入到文件。|  
 |0x0001|可以从读取但不是会写入到文件。|  
 |0x0002|文件不在目录列表中显示和隐藏。|  
 |0x0004|文件是系统文件。|  
-|0x0010|指定的名称`lpszWildCard`指定的目录。|  
+|0x0010|指定的名称*lpszWildCard*指定的目录。|  
 |0x0020|已存档文件。|  
-|0x4000|包含与指定的名称匹配的所有驱动器`lpszWildCard`。|  
+|0x4000|包含与指定的名称匹配的所有驱动器*lpszWildCard*。|  
 |0x8000|独占标志。 如果设置独占标志，仅指定类型的文件会列出。 否则，除"正常"的文件之外还列出指定类型的文件。|  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  指向文件规范的字符串。 字符串可以包含通配符 (例如，*。\*)。  
   
 ### <a name="return-value"></a>返回值  
@@ -478,13 +478,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的长指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关所需的绘图的类型的信息。  
   
 ### <a name="remarks"></a>备注  
  **ItemAction**和**itemState**的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。  
   
- 默认情况下，此成员函数没有任何影响。 重写该成员函数以实现所有者描述的绘图`CListBox`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前此成员函数将终止。  
+ 默认情况下，此成员函数没有任何影响。 重写该成员函数以实现所有者描述的绘图`CListBox`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象*lpDrawItemStruct*之前此成员函数将终止。  
   
  请参阅[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)有关的说明`DRAWITEMSTRUCT`结构。  
   
@@ -501,10 +501,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartAfter`  
- 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nStartAfter`。 如果`nStartAfter`为-1，从开始处搜索整个列表框。  
+ *nStartAfter*  
+ 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项*nStartAfter*。 如果*nStartAfter*为-1，从开始处搜索整个列表框。  
   
- `lpszItem`  
+ *lpszItem*  
  指向以 null 结尾的字符串，其中包含要搜索的前缀。 搜索是独立的因此此字符串可能包含任何组合的大写和小写字母。  
   
 ### <a name="return-value"></a>返回值  
@@ -517,7 +517,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
 ##  <a name="findstringexact"></a>  CListBox::FindStringExact  
- 查找与中指定的字符串匹配的第一个列表框字符串`lpszFind`。  
+ 查找与中指定的字符串匹配的第一个列表框字符串*lpszFind*。  
   
 ```  
 int FindStringExact(
@@ -526,17 +526,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndexStart`  
- 指定要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nIndexStart`。 如果`nIndexStart`为-1，从开始处搜索整个列表框。  
+ *nIndexStart*  
+ 指定要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项*nIndexStart*。 如果*nIndexStart*为-1，从开始处搜索整个列表框。  
   
- `lpszFind`  
+ *lpszFind*  
  指向要搜索的以 null 结尾的字符串。 此字符串可以包含完整的文件名，包括扩展名。 搜索不区分大小写，因此该字符串可包含的任何组合的大写和小写字母。  
   
 ### <a name="return-value"></a>返回值  
  匹配的项的索引或**LB_ERR**如果搜索未成功。  
   
 ### <a name="remarks"></a>备注  
- 如果使用列表框中但不是创建了一个所有者绘制样式[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，`FindStringExact`成员函数尝试与双字值的值相匹配`lpszFind`。  
+ 如果使用列表框中但不是创建了一个所有者绘制样式[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，`FindStringExact`成员函数尝试与双字值的值相匹配*lpszFind*。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
@@ -631,14 +631,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  在列表框中指定项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  该项目，与关联的 32 位值或**LB_ERR**如果发生错误。  
   
 ### <a name="remarks"></a>备注  
- 双字值`dwItemData`参数[SetItemData](#setitemdata)调用。  
+ 双字值*dwItemData*参数[SetItemData](#setitemdata)调用。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
@@ -651,7 +651,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  在列表框中指定项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -668,11 +668,11 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  在列表框中指定项的从零开始索引。 仅当该列表框时，才使用此参数**LBS_OWNERDRAWVARIABLE**样式; 否则，它应设置为 0。  
   
 ### <a name="return-value"></a>返回值  
- 以像素为单位，列表框中的项的高度。 如果该列表框[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，则返回值是由指定的项的高度`nIndex`。 如果出错，则返回值是**LB_ERR**。  
+ 以像素为单位，列表框中的项的高度。 如果该列表框[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，则返回值是由指定的项的高度*nIndex*。 如果出错，则返回值是**LB_ERR**。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
@@ -687,10 +687,10 @@ int GetItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定项的从零开始索引。  
   
- `lpRect`  
+ *lpRect*  
  指定指向的长指针[RECT 结构](../../mfc/reference/rect-structure1.md)接收项的列表框中客户端坐标。  
   
 ### <a name="return-value"></a>返回值  
@@ -736,7 +736,7 @@ int GetSel(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -773,11 +773,11 @@ int GetSelItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMaxItems`  
+ *nMaxItems*  
  指定其项的数字是要放入缓冲区的选定项的最大数目。  
   
- `rgIndex`  
- 指定指向缓冲区足够大小以容纳的指定的整数个数的指针`nMaxItems`。  
+ *rgIndex*  
+ 指定指向缓冲区足够大小以容纳的指定的整数个数的指针*nMaxItems*。  
   
 ### <a name="return-value"></a>返回值  
  在缓冲区中放置项的实际数目。 如果列表框为单选择列表框中，返回值是`LB_ERR`。  
@@ -799,17 +799,17 @@ void GetText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定要检索的字符串的从零开始的索引。  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  指向接收字符串的缓冲区。 缓冲区必须具有足够空间的字符串和终止 null 字符。 字符串的大小可以提前确定通过调用`GetTextLen`成员函数。  
   
- `rString`  
+ *rString*  
  对 `CString` 对象的引用。  
   
 ### <a name="return-value"></a>返回值  
- 不包括终止 null 字符的字符串的长度 （以字节为单位）。 如果`nIndex`未指定有效的索引，则返回值是**LB_ERR**。  
+ 不包括终止 null 字符的字符串的长度 （以字节为单位）。 如果*nIndex*未指定有效的索引，则返回值是**LB_ERR**。  
   
 ### <a name="remarks"></a>备注  
  此成员的第二种形式函数填充`CString`具有字符串文本对象。  
@@ -825,11 +825,11 @@ int GetTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定字符串的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 以字符为单位，不包括终止 null 字符的字符串的长度。 如果`nIndex`未指定有效的索引，则返回值是**LB_ERR**。  
+ 以字符为单位，不包括终止 null 字符的字符串的长度。 如果*nIndex*未指定有效的索引，则返回值是**LB_ERR**。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::GetText](#gettext)。  
@@ -860,10 +860,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItems`  
+ *nItems*  
  指定要添加的项的数目。  
   
- `nBytes`  
+ *nBytes*  
  以字节为单位，分配项字符串中指定内存的量。  
   
 ### <a name="return-value"></a>返回值  
@@ -874,7 +874,7 @@ int InitStorage(
   
  此函数可帮助加快拥有大量的项 (超过 100) 的列表框的初始化。 它预分配指定的数量的内存，因此后续[AddString](#addstring)， [InsertString](#insertstring)，和[Dir](#dir)函数采用最短的时间。 你可以使用估计值的参数。 如果你要估计得高一些，一些额外的内存分配;如果你低估，正常分配用于超过预分配的量的项。  
   
- 仅 Windows 95/98:`nItems`参数最多为 16 位值。 这意味着列表框不能包含多个 32,767 的项。 尽管限制项的数目，则列表框中的项的总大小仅受可用内存。  
+ 仅 Windows 95/98: *nItems*参数最多为 16 位值。 这意味着列表框不能包含多个 32,767 的项。 尽管限制项的数目，则列表框中的项的总大小仅受可用内存。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
@@ -889,10 +889,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定要将该字符串的位置的从零开始索引。 如果此参数为-1，则字符串被添加到列表的末尾。  
   
- `lpszItem`  
+ *lpszItem*  
  指向要插入的以 null 结尾的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -905,7 +905,7 @@ int InsertString(
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
 ##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
- 确定最接近的中指定的点的列表框项`pt`。  
+ 确定最接近的中指定的点的列表框项*pt*。  
   
 ```  
 UINT ItemFromPoint(
@@ -914,14 +914,14 @@ UINT ItemFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  为其查找最近的项，指定相对于列表框中的客户端区域的左上角的点。  
   
- `bOutside`  
- 引用`BOOL`变量都将设置为`TRUE`如果`pt`最接近的列表框项，工作区以外`FALSE`如果`pt`在最近的列表框项的客户端区域内。  
+ *bOutside*  
+ 引用`BOOL`变量都将设置为`TRUE`如果`pt`最接近的列表框项，工作区以外`FALSE`如果*pt*在最近的列表框项的客户端区域内。  
   
 ### <a name="return-value"></a>返回值  
- 中指定的点到最近的项的索引`pt`。  
+ 中指定的点到最近的项的索引*pt*。  
   
 ### <a name="remarks"></a>备注  
  无法使用此函数可确定哪鼠标光标移到上一列表框项。  
@@ -937,7 +937,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。  
   
 ### <a name="remarks"></a>备注  
@@ -970,10 +970,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartAfter`  
- 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nStartAfter`。 如果`nStartAfter`为-1，从开始处搜索整个列表框。  
+ *nStartAfter*  
+ 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项*nStartAfter*。 如果*nStartAfter*为-1，从开始处搜索整个列表框。  
   
- `lpszItem`  
+ *lpszItem*  
  指向以 null 结尾的字符串，其中包含要搜索的前缀。 搜索是独立的因此此字符串可能包含任何组合的大写和小写字母。  
   
 ### <a name="return-value"></a>返回值  
@@ -984,7 +984,7 @@ int SelectString(
   
  此成员函数不能用于具有一个列表框[LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式。  
   
- 仅当其初始字符 （从起始点） 与匹配的指定字符串中的字符选择项`lpszItem`。  
+ 仅当其初始字符 （从起始点） 与匹配的指定字符串中的字符选择项*lpszItem*。  
   
  使用`FindString`成员函数查找字符串，而不选择该项。  
   
@@ -1002,20 +1002,20 @@ int SelItemRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bSelect`  
- 指定如何设置所选内容。 如果`bSelect`是**TRUE**，则选定字符串并将其突出显示; 如果**FALSE**，删除突出显示，并且该字符串不再处于选中状态。  
+ *bSelect*  
+ 指定如何设置所选内容。 如果*bSelect*是**TRUE**，则选定字符串并将其突出显示; 如果**FALSE**，删除突出显示，并且该字符串不再处于选中状态。  
   
- `nFirstItem`  
+ *nFirstItem*  
  指定要设置的第一个项的从零开始索引。  
   
- `nLastItem`  
+ *nLastItem*  
  指定要设置的最后一个项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  **LB_ERR**如果发生错误。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数只能使用多选列表框。 如果你需要在多选列表框中选择只有一项 — 也就是说，如果`nFirstItem`等同于`nLastItem`-调用[SetSel](#setsel)成员函数。  
+ 此成员函数只能使用多选列表框。 如果你需要在多选列表框中选择只有一项 — 也就是说，如果*nFirstItem*等同于*nLastItem* -调用[SetSel](#setsel)成员函数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
@@ -1028,7 +1028,7 @@ void SetAnchorIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定将定位点的列表框项的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
@@ -1047,7 +1047,7 @@ int SetCaretIndex(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定要接收焦点矩形的列表框中的项的从零开始索引。  
   
  *bScroll*  
@@ -1070,7 +1070,7 @@ void SetColumnWidth(int cxWidth);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cxWidth`  
+ *cxWidth*  
  指定以像素为单位的所有列的宽度。  
   
 ### <a name="example"></a>示例  
@@ -1084,8 +1084,8 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nSelect`  
- 指定要选择的字符串的从零开始的索引。 如果`nSelect`为-1，列表框设置为具有未选择任何内容。  
+ *请选择*  
+ 指定要选择的字符串的从零开始的索引。 如果*请选择*为-1，列表框设置为具有未选择任何内容。  
   
 ### <a name="return-value"></a>返回值  
  `LB_ERR` 如果发生错误。  
@@ -1131,10 +1131,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定项的从零开始索引。  
   
- `dwItemData`  
+ *dwItemData*  
  指定要与项相关联的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -1153,10 +1153,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定项的从零开始索引。  
   
- `pData`  
+ *pData*  
  指定要与项关联的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1178,17 +1178,17 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  在列表框中指定项的从零开始索引。 仅当该列表框时，才使用此参数**LBS_OWNERDRAWVARIABLE**样式; 否则，它应设置为 0。  
   
- `cyItemHeight`  
+ *cyItemHeight*  
  指定高度，以像素为单位的项。  
   
 ### <a name="return-value"></a>返回值  
  **LB_ERR**索引或高度是否无效。  
   
 ### <a name="remarks"></a>备注  
- 如果该列表框[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，此函数将由指定的项的高度`nIndex`。 否则，此函数将设置列表框中的所有项的高度。  
+ 如果该列表框[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，此函数将由指定的项的高度*nIndex*。 否则，此函数将设置列表框中的所有项的高度。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
@@ -1201,7 +1201,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewLocale`  
+ *nNewLocale*  
  新区域设置标识符 (LCID) 要设置的值的列表框。  
   
 ### <a name="return-value"></a>返回值  
@@ -1223,11 +1223,11 @@ int SetSel(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
- 包含要设置的字符串的从零开始的索引。 如果为-1，所选内容添加到或从所有字符串，具体取决于的值中删除`bSelect`。  
+ *nIndex*  
+ 包含要设置的字符串的从零开始的索引。 如果为-1，所选内容添加到或从所有字符串，具体取决于的值中删除*bSelect*。  
   
- `bSelect`  
- 指定如何设置所选内容。 如果`bSelect`是`TRUE`，则选定字符串并将其突出显示; 如果`FALSE`，删除突出显示，并且该字符串不再处于选中状态。 指定的字符串是选择，默认情况下突出显示。  
+ *bSelect*  
+ 指定如何设置所选内容。 如果*bSelect*是`TRUE`，则选定字符串并将其突出显示; 如果`FALSE`，删除突出显示，并且该字符串不再处于选中状态。 指定的字符串是选择，默认情况下突出显示。  
   
 ### <a name="return-value"></a>返回值  
  `LB_ERR` 如果发生错误。  
@@ -1254,22 +1254,22 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cxEachStop`  
- 制表位设置为每个`cxEachStop`对话框单位。 请参阅*rgTabStops*有关对话框单位的说明。  
+ *cxEachStop*  
+ 制表位设置为每个*cxEachStop*对话框单位。 请参阅*rgTabStops*有关对话框单位的说明。  
   
- `nTabStops`  
+ *nTabStops*  
  指定的数制表位能够在列表框中。  
   
- `rgTabStops`  
+ *rgTabStops*  
  指向包含对话框单位的制表位位置的整数的数组的第一个成员。 对话框单位是水平或垂直距离。 一个水平对话框单位等于 1 / 4 的当前对话框基本宽度单位，且一个垂直对话框单位等于当前对话框基本高度单位的八分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 **GetDialogBaseUnits** Windows 函数以像素为单位返回当前对话框基本单位。 必须按升序排列; 排序的制表位不允许向后制表位。  
   
 ### <a name="return-value"></a>返回值  
  如果设置了所有选项卡; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 若要设置为 2 个对话框单位的默认大小的制表位，调用此成员函数的无参数版本。 若要设置为 2 以外大小的制表位，调用的版本与`cxEachStop`自变量。  
+ 若要设置为 2 个对话框单位的默认大小的制表位，调用此成员函数的无参数版本。 若要设置为 2 以外大小的制表位，调用的版本与*cxEachStop*自变量。  
   
- 若要设置制表位为数组的大小，使用的版本与`rgTabStops`和`nTabStops`自变量。 将为每个值中设置制表位`rgTabStops`，最多指定的数`nTabStops`。  
+ 若要设置制表位为数组的大小，使用的版本与*rgTabStops*和*nTabStops*自变量。 将为每个值中设置制表位*rgTabStops*，最多指定的数*nTabStops*。  
   
  响应调用`SetTabStops`成员函数的列表框中必须具有已创建具有[LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式。  
   
@@ -1284,14 +1284,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  指定列表框项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为零或**LB_ERR**如果发生错误。  
   
 ### <a name="remarks"></a>备注  
- 系统滚动列表框中指定的任意一项之前`nIndex`显示顶部的列表框或最大滚动范围已达到。  
+ 系统滚动列表框中指定的任意一项之前*nIndex*显示顶部的列表框或最大滚动范围已达到。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
@@ -1306,10 +1306,10 @@ virtual int VKeyToItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nKey`  
+ *nKey*  
  密钥的虚拟键代码用户按下。 有关标准虚拟键代码的列表，请参见 Winuser.h  
   
- `nIndex`  
+ *nIndex*  
  列表框中插入符号的当前位置。  
   
 ### <a name="return-value"></a>返回值  

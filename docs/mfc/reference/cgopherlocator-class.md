@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366917"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041281"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 类
 从 gopher 服务器获取 gopher"定位器"，确定定位器的类型，并使定位器可用于[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。  
@@ -84,7 +84,7 @@ CGopherLocator(const CGopherLocator& ref);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ref`  
+ *ref*  
  为常量的引用`CGopherLocator`对象。  
   
 ### <a name="remarks"></a>备注  
@@ -107,7 +107,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 ### <a name="remarks"></a>备注  
  可能的类型如下所示：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |GOPHER_TYPE_TEXT_FILE|一个 ASCII 文本文件。|  
 |GOPHER_TYPE_DIRECTORY|Gopher 了附加项目的目录。|  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371723"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038349"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 类
 `CMFCLinkCtrl`类按钮显示为超链接并单击该按钮时调用链接的目标。  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectClient`  
+ [in]*rectClient*  
  限定链接控件的矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszURL`  
+ [in]*lpszURL*  
  要显示的按钮文本。  
   
 ### <a name="remarks"></a>备注  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPrefix`  
+ [in]*lpszPrefix*  
  URL 协议的前缀。  
   
 ### <a name="remarks"></a>备注  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bVCenter`  
+ [in]*bVCenter*  
  `TRUE` 到中心按钮文本和位图的顶部和底部的链接控件; 之间的垂直对齐否则为`FALSE`。 默认值为 `FALSE`。  
   
- [in] `bHCenter`  
+ [in]*bHCenter*  
  `TRUE` 到中心按钮文本和位图水平之间的左侧和右侧的链接控件;否则为`FALSE`。 默认值为 `FALSE`。  
   
 ### <a name="return-value"></a>返回值  

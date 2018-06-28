@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369803"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042113"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 类
 当用户按住顶层工具栏按钮时显示的工具栏。  
@@ -133,22 +133,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiResID`  
+ [in]*uiResID*  
  用于引用热工具栏图像的位图的资源 ID。  
   
- [in] `uiColdResID`  
+ [in]*uiColdResID*  
  用于引用冷工具栏图像的位图的资源 ID。  
   
- [in] `uiMenuResID`  
+ [in]*uiMenuResID*  
  用于引用常规菜单图像的位图的资源 ID。  
   
- [in] `bLocked`  
+ [in]*阻止*  
  `TRUE` 要锁定工具栏;否则为`FALSE`。  
   
- [in] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  用于引用禁用工具栏图像的位图的资源 ID。  
   
- [in] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  用于引用禁用菜单图像的位图的资源 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiResID`  
- [in] `uiColdResID`  
- [in] `uiMenuResID`  
- [in] `BOOL`  
- [in] `uiDisabledResID`  
- [in] `uiMenuDisabledResID`  
- [in] `uiHotResID`  
+ [in]*uiResID*  
+ [in]*uiColdResID*  
+ [in]*uiMenuResID*  
+ [in]*BOOL*  
+ [in]*uiDisabledResID*  
+ [in]*uiMenuDisabledResID*  
+ [in]*uiHotResID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFlags`  
- [in] `point`  
+ [in]*nFlags*  
+ [in]*点*  
   
 ### <a name="remarks"></a>备注  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFlags`  
- [in] `point`  
+ [in]*nFlags*  
+ [in]*点*  
   
 ### <a name="remarks"></a>备注  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>备注  
   

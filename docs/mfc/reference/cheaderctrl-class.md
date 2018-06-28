@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376014"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041953"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 提供 Windows 公共标头控件的功能。  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nColumn`  
+ *nColumn*  
  列值，该值指示要清除哪个滤镜。  
   
 ### <a name="return-value"></a>返回值  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定标头控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定标头控件的父窗口中，通常`CDialog`。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定标头控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果初始化成功; 则为非 0否则为零。  
   
 ### <a name="remarks"></a>备注  
- 构造`CHeaderCtrl`两个步骤中的对象。 首先，调用的构造函数，然后调用**创建**，它创建标头控件并将其附加到`CHeaderCtrl`对象。  
+ 构造`CHeaderCtrl`两个步骤中的对象。 首先，调用的构造函数，然后调用`Create`，它创建标头控件并将其附加到`CHeaderCtrl`对象。  
   
  除了标头控件样式，你可以使用以下常见的控件样式确定如何标头控件定位并调整自身大小 (请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)有关详细信息):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP**的控件，通过该用户可以通过使用 TAB 键移动任意数量之一指定。 TAB 键将用户移至指定的下一步控件**WS_TABSTOP**样式。  
   
- 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是**创建**。  
+ 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是`Create`。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  标头控件的样式。 标头控件样式的说明，请参阅[标头控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。 请参阅[创建](#create)有关其他样式的列表。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是**创建**将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+ 使用`CreateEx`而不是`Create`将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
 ##  <a name="createdragimage"></a>  Cheaderctrl:: Createdragimage  
  创建标头控件内的项的图像的透明版本。  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  标头控件中项的从零开始索引。 分配给此项目的映像是透明的映像的基础。  
   
 ### <a name="return-value"></a>返回值  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  指定要删除的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的指针[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)结构描述要绘制的项。  
   
 ### <a name="remarks"></a>备注  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  默认情况下，此成员函数没有任何影响。 重写该成员函数以实现所有者描述的绘图`CHeaderCtrl`对象。  
   
- 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前此成员函数将终止。  
+ 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象*lpDrawItemStruct*之前此成员函数将终止。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nColumn`  
+ *nColumn*  
  要编辑的列。  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  一个值，指定如何处理用户的编辑更改，如果用户正在编辑筛选器时[HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)发送消息。  
   
  指定`true`丢弃用户，所做的更改或`false`接受用户所做的更改。  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  指定要检索的项的从零开始索引。  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  指向[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)接收新项的结构。 此结构用于`InsertItem`和`SetItem`成员函数。 在中设置任何标志**掩码**元素确保中的相应元素的值返回时正确填写。 如果**掩码**元素设置为零中的其他结构元素的值是无意义。  
   
 ### <a name="return-value"></a>返回值  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iItem`|其样式的标头项的从零开始索引`HDF_SPLITBUTTON`。 有关详细信息，请参阅`fmt`的成员[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)结构。|  
-|[out] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。|  
+|[in]*iItem*|其样式的标头项的从零开始索引`HDF_SPLITBUTTON`。 有关详细信息，请参阅`fmt`的成员[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)结构。|  
+|[out]*lpRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果成功，则此函数否则为`false`。  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  标头控件项的从零开始索引。  
   
- `lpRect`  
+ *lpRect*  
  指向的地址的指针[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>参数  
- `piArray`  
+ *piArray*  
  指向在标头控件中，按它们的出现从左到右的顺序接收项的索引值的缓冲区的地址的指针。  
   
- `iCount`  
+ *iCount*  
  标头控件项的数目。 必须为非负数。  
   
 ### <a name="return-value"></a>返回值  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[out] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。|  
+|[out]*lpRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收边界的矩形信息的结构。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果成功，则此函数否则为`false`。  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|指向[HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245)结构，它指定要测试的点并接收测试的结果。|  
+|[在中，out]*phdhti*|指向[HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245)结构，它指定要测试的点并接收测试的结果。|  
   
 ### <a name="return-value"></a>返回值  
  标头项，如果有的话，位于指定位置; 的从零开始索引否则为-1。  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  要插入的项的索引（索引从零开始）。 如果值为零，标头控件的开头插入项。 如果值大于最大值，在标头控件的末尾插入项。  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nWidth`  
+ *nWidth*  
  指定以像素为单位，距环绕现有标头控件中的位图的宽度。  
   
 ### <a name="return-value"></a>返回值  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iItem`|标头项的从零开始索引。|  
+|[in]*iItem*|标头项的从零开始索引。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  指针的位置。 标头控件突出显示相应的分隔符基于指针的位置。  
   
- `nIndex`  
+ *nIndex*  
  突出显示分隔符的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pImageList`  
+ *pImageList*  
  指向的指针`CImageList`对象，其中包含要分配给标头控件的图像列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  要操作的项的从零开始的索引。  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  指向[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)结构，其中包含新的项目的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iCount`  
+ *iCount*  
  标头控件项的数目。  
   
- `piArray`  
+ *piArray*  
  指向在标头控件中，按它们的出现从左到右的顺序接收项的索引值的缓冲区的地址的指针。  
   
 ### <a name="return-value"></a>返回值  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372715"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040007"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
 `CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。  
@@ -151,7 +151,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPage`  
+ [in]*pPage*  
  Page 对象的指针。 此参数不能为`NULL`。  
   
 ### <a name="remarks"></a>备注  
@@ -171,20 +171,20 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCategory`  
+ [in]*pCategory*  
  指向父树节点或`NULL`若要将指定的页的顶级节点与相关联。 调用[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法来获取此指针。  
   
- [in] `pPage`  
+ [in]*pPage*  
  与属性页的对象的指针。  
   
- [in] `nIconNum`  
+ [in]*nIconNum*  
  一个图标，则为-1 如果使用没有图标的从零开始索引。 如果未选择页上，树控件属性页旁边显示的图标。 默认值为 -1。  
   
- [in] `nSelIconNum`  
+ [in]*nSelIconNum*  
  一个图标，则为-1 如果使用没有图标的从零开始索引。 页处于选定状态时，树控件属性页旁边显示的图标。 默认值为 -1。  
   
 ### <a name="remarks"></a>备注  
- 此方法为叶树控件添加的属性页。 若要添加属性页，创建`CMFCPropertySheet`对象，请调用[cmfcpropertysheet:: Setlook](#setlook)方法替换`look`参数设置为`CMFCPropertySheet::PropSheetLook_Tree`，然后使用此方法添加的属性页。  
+ 此方法为叶树控件添加的属性页。 若要添加属性页，创建`CMFCPropertySheet`对象，请调用[cmfcpropertysheet:: Setlook](#setlook)方法替换*查找*参数设置为`CMFCPropertySheet::PropSheetLook_Tree`，然后使用此方法添加的属性页.  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  向树控件添加新节点。  
@@ -198,23 +198,23 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  节点的名称。  
   
- [in] `nIconNum`  
+ [in]*nIconNum*  
  一个图标，则为-1 如果使用没有图标的从零开始索引。 如果未选择页上，树控件属性页旁边显示的图标。 默认值为 -1。  
   
- [in] `nSelectedIconNum`  
+ [in]*nSelectedIconNum*  
  一个图标，则为-1 如果使用没有图标的从零开始索引。 页处于选定状态时，树控件属性页旁边显示的图标。 默认值为 -1。  
   
- [in] `pParentCategory`  
+ [in]*pParentCategory*  
  指向父树节点或`NULL`若要将指定的页的顶级节点与相关联。 设置此参数与[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法。  
   
 ### <a name="return-value"></a>返回值  
  指向树控件中的新节点的指针。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法将一个新的节点，也称为类别，添加到树控件。 若要添加节点时，创建`CMFCPropertySheet`对象，请调用[cmfcpropertysheet:: Setlook](#setlook)方法替换`look`参数设置为`CMFCPropertySheet::PropSheetLook_Tree`，然后使用此方法将节点添加。  
+ 使用此方法将一个新的节点，也称为类别，添加到树控件。 若要添加节点时，创建`CMFCPropertySheet`对象，请调用[cmfcpropertysheet:: Setlook](#setlook)方法替换*查找*参数设置为`CMFCPropertySheet::PropSheetLook_Tree`，然后使用此方法将节点添加。  
   
  在后续调用中使用此方法的返回值[CMFCPropertySheet::AddPageToTree](#addpagetotree)和[CMFCPropertySheet::AddTreeCategory](#addtreecategory)。  
   
@@ -234,16 +234,16 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pszCaption`  
+ [in]*pszCaption*  
  包含属性表标题的字符串。 不能为 `NULL`。  
   
- [in] `nIDCaption`  
+ [in]*nIDCaption*  
  包含属性表标题资源 ID。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  到属性表中，父窗口的指针或`NULL`如果父窗口是应用程序的主窗口。 默认值为 `NULL`。  
   
- [in] `iSelectPage`  
+ [in]*iSelectPage*  
  Top 属性页的从零开始索引。 默认值为 0。  
   
 ### <a name="remarks"></a>备注  
@@ -257,11 +257,11 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nHeaderHeight`  
+ [in]*nHeaderHeight*  
  标头，以像素为单位的高度。  
   
 ### <a name="remarks"></a>备注  
- 若要使用的值`nHeaderHeight`参数来绘制自定义标头，重写[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)方法。  
+ 若要使用的值*nHeaderHeight*参数来绘制自定义标头，重写[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)方法。  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  检索当前页眉的高度。  
@@ -334,7 +334,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPage`  
+ [in]*pPage*  
  表示已启用的属性页的属性页上对象的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -351,13 +351,13 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `nPage`  
+ [in]*nPage*  
  从零开始的属性页号。  
   
- [in] `rectHeader`  
+ [in]*rectHeader*  
  指定在哪里可以绘制标题边框。  
   
 ### <a name="remarks"></a>备注  
@@ -371,7 +371,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPage`  
+ [in]*pPage*  
  表示要删除的属性页的属性页上对象的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -385,7 +385,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCategory`  
+ [in]*pCategory*  
  指向要删除的类别 （节点） 的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -400,14 +400,14 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPage`  
+ [in]*pPage*  
  到表示要删除的属性页的属性页上对象的指针。 不能为 `NULL`。  
   
- [in] `nPage`  
+ [in]*nPage*  
  要删除的页的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
- 此方法中移除指定的属性页，并销毁其关联的窗口。 属性页对象`pPage`参数指定不会被销毁之前[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)窗口已关闭。  
+ 此方法中移除指定的属性页，并销毁其关联的窗口。 属性页对象*pPage*参数指定不会被销毁之前[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)窗口已关闭。  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  指定用于 Outlook 窗格的导航控件的图像列表。  
@@ -421,16 +421,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiImageListResID`  
+ [in]*uiImageListResID*  
  图像列表资源 ID。  
   
- [in] `cx`  
+ [in]*cx*  
  宽度，以像素为单位的图像列表中的图标。  
   
- [in] `clrTransparent`  
+ [in]*clrTransparent*  
  透明图像颜色。 此颜色图像的部分将是透明的。 默认值为颜色洋红色，RGB(255,0,255)。  
   
- [in] `hIcons`  
+ [in]*hIcons*  
  指向现有图像列表的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -451,18 +451,18 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `look`  
+ [in]*查找*  
  指定属性表的外观的枚举值之一。 属性表的默认样式是`CMFCPropertySheet::PropSheetLook_Tabs`。 有关详细信息，请参阅本主题的备注部分中的表。  
   
- [in] `nNavControlWidth`  
+ [in]*nNavControlWidth*  
  导航控件，以像素为单位的宽度。 默认值为 100。  
   
 ### <a name="remarks"></a>备注  
  若要在非默认样式中显示属性表，请在创建属性表窗口之前调用此方法。  
   
- 下表列出了可以中指定的枚举值`look`参数。  
+ 下表列出了可以中指定的枚举值*查找*参数。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CMFCPropertySheet::PropSheetLook_Tabs`|（默认值）显示每个属性页的选项卡。 选项卡显示在属性表的顶部，并具有堆积，如果有更多选项卡不是单个行中放不下。|  
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|显示样式的 Microsoft Outlook 栏中，属性表左侧的导航按钮、 列表。 在列表中的每个按钮对应于属性页。 如果没有更多按钮而不能显示在列表的可见区域中，框架将显示滚动箭头。|  

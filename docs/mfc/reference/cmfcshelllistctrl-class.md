@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374958"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040816"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 类
 `CMFCShellListCtrl`类提供 Windows 列表控件功能，并通过包含显示 shell 项列表的功能进行扩展。  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPath`  
+ [in]*lpszPath*  
  包含输入文件夹的路径的字符串。  
   
- [in] `lpItemInfo`  
+ [in]*lpItemInfo*  
  指向的指针`LPAFX_SHELLITEMINFO`描述要显示的文件夹结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔值，指定是否使用 framework，快捷菜单。  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `strPath`  
+ [out]*strPath*  
  对该方法将路径的输出一个字符串参数的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `strName`  
+ [out]*strName*  
  对该方法将名称的写入一个字符串参数的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `strPath`  
+ [out]*strPath*  
  对接收路径的字符串的引用。  
   
- [in] `iItem`  
+ [in]*iItem*  
  列表项的索引。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果成功，则，`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
- 由提供的索引`iItem`基于当前显示的项[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象。  
+ 由提供的索引*iItem*基于当前显示的项[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象。  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  返回的项显示的类型[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [in]*lParam1*  
+ [in]*lParam2*  
+ [in]*iColumn*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `tmFile`  
+ [in]*tmFile*  
  与文件相关联的日期。  
   
- [out] `str`  
+ [out]*str*  
  包含格式化的文件日期的字符串。  
   
 ### <a name="remarks"></a>备注  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lFileSize`  
+ [in]*lFileSize*  
  框架将显示文件的大小。  
   
- [out] `str`  
+ [out]*str*  
  一个字符串，包含格式的文件大小。  
   
 ### <a name="remarks"></a>备注  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iItem`  
+ [in]*iItem*  
  项的索引。  
   
- [in] `pItem`  
+ [in]*pItem*  
  A`LPAFX_SHELLITEMINFO`描述的项的参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>备注  
  图标图像索引基于系统映像列表。  
   
- 默认情况下，此方法依赖于`pItem`参数。 值`iItem`中的默认实现不使用。 你可以使用`iItem`来实现自定义行为。  
+ 默认情况下，此方法依赖于*pItem*参数。 值*iItem*中的默认实现不使用。 你可以使用*iItem*来实现自定义行为。  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  它必须检索 shell 项的文本时，框架将调用此方法。  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iItem`  
+ [in]*iItem*  
  项的索引。  
   
- [in] `iColumn`  
+ [in]*iColumn*  
  感兴趣的列。  
   
- [in] `pItem`  
+ [in]*pItem*  
  A`LPAFX_SHELLITEMINFO`描述的项的参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>备注  
  在每个项`CMFCShellListCtrl`对象可能具有一个或多个列中的文本。 当框架调用此方法时，它指定对感兴趣的列。 如果手动调用此函数，还必须指定你感兴趣的列。  
   
- 默认情况下，此方法依赖于`pItem`参数，以确定哪一项到进程。 值`iItem`中的默认实现不使用。  
+ 默认情况下，此方法依赖于*pItem*参数，以确定哪一项到进程。 值*iItem*中的默认实现不使用。  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  它将设置列的名称时，框架将调用此方法。  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTypes`  
+ [in]*nTypes*  
  项的列表类型`CMFCShellListCtrl`对象支持。  
   
 ### <a name="remarks"></a>备注  

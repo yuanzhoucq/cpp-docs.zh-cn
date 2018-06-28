@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370902"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041255"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 类
 实现包含功能区库的功能区菜单按钮。  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
   
 ### <a name="remarks"></a>备注  
   
@@ -132,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uiID`  
- 按钮的命令 ID。 这是中发送的值**WM_COMMAND**消息当用户单击此按钮。  
+ *uiID*  
+ 按钮的命令 ID。 这是当用户单击此按钮在 WM_COMMAND 消息中发送的值。  
   
- `iImage`  
- 要与库菜单按钮显示的图像的索引。 映像存储在`imagesPalette`参数。  
+ *iImage*  
+ 要与库菜单按钮显示的图像的索引。 映像存储在*imagesPalette*参数。  
   
- `lpszText`  
+ *lpszText*  
  要在菜单按钮上显示的文本。  
   
- `imagesPalette`  
+ *imagesPalette*  
  包含映像以在库中显示的列表。  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  要在库中显示图像的图像列表的资源 ID。  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  指定以像素为单位的要在库中显示的图像的宽度。  
   
 ### <a name="remarks"></a>备注  

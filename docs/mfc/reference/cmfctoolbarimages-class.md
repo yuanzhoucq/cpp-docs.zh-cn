@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d837ec17623887eb63b49810066937fcd4bf5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34c364357ad14db2cd0ebc53e2a9cdcd5455f5ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377932"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042126"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 类
 工具栏上的图像。 `CMFCToolBarImages`类管理从应用程序资源或从文件加载的工具栏图像。  
@@ -251,7 +251,7 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE` 如果禁用了真彩色 alpha 混合 （32 位颜色）。|  
   
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clrBase`  
- [in] `clrTone`  
+ [in]*clrBase*  
+ [in]*clrTone*  
   
 ### <a name="remarks"></a>备注  
   
@@ -297,10 +297,10 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hIcon`  
+ [in]*任务栏*  
  要添加的图标的句柄。  
   
- [in] `bAlphaBlend`  
+ [in]*bAlphaBlend*  
  `TRUE` 如果使用 alpha 混合; 使用此图标否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -320,16 +320,16 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hbmp`  
+ [in]*hbmp*  
  要添加的位图句柄。  
   
- [in] `bSetBitPerPixel`  
+ [in]*bSetBitPerPixel*  
  `TRUE` 如果`CMFCToolBarImages`对象使用新的映像中; 的颜色深度 （位 / 像素）`FALSE`如果`CMFCToolbarImages`对象保留当前的颜色深度。  
   
- [in] `imageList`  
+ [in]*imageList*  
  对引用`CMFCToolbarImages`对象，其中包含要添加的图像。  
   
- [in] `nIndex`  
+ [in]*nIndex*  
  源中的索引`CMFCToolbarImages`要添加的映像的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -369,7 +369,7 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iImage`  
+ [in]*iImage*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -383,7 +383,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `imageList`  
+ [in]*imageList*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -397,7 +397,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `imageList`  
+ [in]*imageList*  
  要用作工具栏图像源的图像列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bmp`  
- [in] `clrTransparent`  
+ [in]*bmp*  
+ [in]*clrTransparent*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -431,7 +431,7 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iImage`  
+ [in]*iImage*  
  指定要删除的映像的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -455,34 +455,34 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `x`  
+ [in]*x*  
  映像是其中是要绘制的矩形的左侧的 X 坐标。  
   
- [in] `y`  
+ [in]*y*  
  映像是其中是要绘制的矩形的顶部的 Y 坐标。  
   
- [in] `iImageIndex`  
+ [in]*iImageIndex*  
  要显示的图像的从零开始的索引。  
   
- [in] `bHilite`  
+ [in]*bHilite*  
  `TRUE` 如果图像是以突出显示;否则为`FALSE`。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  `TRUE` 如果图像是要绘制的已禁用的样式; 中否则为`FALSE`。  
   
- [in] `bIndeterminate`  
+ [in]*bIndeterminate*  
  `TRUE` 如果图像是不确定状态样式; 绘制否则为`FALSE`。  
   
- [in] `bShadow`  
+ [in]*bShadow*  
  `TRUE` 如果使用投影，则绘制的图像否则为`FALSE`。  
   
- [in] `bInactive`  
+ [in]*bInactive*  
  `TRUE` 如果图像是要绘制非活动状态样式;否则为`FALSE`。  
   
- [in] `alphaSrc`  
+ [in]*alphaSrc*  
  Alpha 通道 （不透明度） 值中。 值为 255 意味着映像是绘制不透明。 值为 0 表示图像绘制透明。 仅为 32 位颜色映像和显示 Windows Vista 玻璃样式的映像，则使用此值。  
   
 ### <a name="return-value"></a>返回值  
@@ -506,15 +506,15 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `iImageIndex`  
- [in] `horzAlign`  
- [in] `vertAlign`  
- [in] `rectSrc`  
- [in] `0`  
- [in] `0)`  
- [in] `alphaSrc`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*iImageIndex*  
+ [in]*horzAlign*  
+ [in]*vertAlign*  
+ [in]*rectSrc*  
+ [in]*0*  
+ [in]*0)*  
+ [in]*alphaSrc*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -528,7 +528,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsRTL`  
+ [in]*bIsRTL*  
   
 ### <a name="remarks"></a>备注  
   
@@ -540,7 +540,7 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ds`  
+ [in]*ds*  
  对引用`CAfxDrawState`对象传递到`PrepareDrawImage`方法。  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
@@ -551,11 +551,11 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  要提取为图标的图像的图像列表中从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- 提取图标的句柄或`NULL`如果`nIndex`超出范围。  
+ 提取图标的句柄或`NULL`如果*nIndex*超出范围。  
   
 ##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  与工具栏背景色填充的矩形。  
@@ -567,10 +567,10 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  若要填充的矩形的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -629,7 +629,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDest`  
+ [in]*bDest*  
  `TRUE` 若要检索的目标大小;`FALSE`以检索源映像大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -705,7 +705,7 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iImage`  
+ [in]*iImage*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -719,7 +719,7 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiResId`  
+ [in]*uiResId*  
  图像资源 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -744,14 +744,14 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGrayImageLuminancePercentage`  
+ [in]*nGrayImageLuminancePercentage*  
  亮度百分比。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果集合中的映像已成功，则灰否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 此方法通过平均每个像素的红色、 绿色和蓝色组件并相乘的结果来修改工具栏图像`nGrayImageLuminancePercentage`除以 100。 如果`nGrayImageLuminancePercentage`为零或负数，默认为 130 改为使用值。  
+ 此方法通过平均每个像素的红色、 绿色和蓝色组件并相乘的结果来修改工具栏图像*nGrayImageLuminancePercentage*除以 100。 如果*nGrayImageLuminancePercentage*为零或负数，默认为 130 改为使用值。  
   
 > [!NOTE]
 >  如果你想要撤销此更改，你必须从源映像重新加载。 你可以执行此操作通过调用[CMFCToolBarImages::Load](#load)或[CMFCToolBarImages::UpdateImage](#updateimage) （仅适用于用户定义的映像），或通过调用[CMFCToolBarImages::Clear](#clear)，然后再次添加映像，通过调用[CMFCToolBarImages::AddIcon](#addicon)或[CMFCToolBarImages::AddImage](#addimage)。  
@@ -844,19 +844,19 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiResID`  
+ [in]*uiResID*  
  位图资源的 ID。  
   
- [in] `hinstRes`  
+ [in]*hinstRes*  
  资源 DLL 的实例。  
   
- [in] `bAdd`  
+ [in]*bAdd*  
  `TRUE` 若要添加到现有的位图，加载的位图或`FALSE`替换现有的位图。  
   
- [in] `lpszBmpFileName`  
+ [in]*lpszBmpFileName*  
  要从其中加载位图磁盘文件的路径。  
   
- [in] `nMaxFileSize`  
+ [in]*nMaxFileSize*  
  最大位图文件中; 中的字节数或为 0 加载而不考虑文件大小的位图。 如果文件的大小超过此最大大小，该方法返回`FALSE`而不加载位图。  
   
 ### <a name="return-value"></a>返回值  
@@ -876,9 +876,9 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszResourceName`  
- [in] `hinstRes`  
- [in] `bAdd`  
+ [in]*lpszResourceName*  
+ [in]*hinstRes*  
+ [in]*bAdd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in]*颜色*  
+ [in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -912,9 +912,9 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bUseRGBQUAD`  
- [in] `clrSrc`  
- [in] `clrDest`  
+ [in]*bUseRGBQUAD*  
+ [in]*clrSrc*  
+ [in]*clrDest*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in]*颜色*  
+ [in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -945,7 +945,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
+ [in]*颜色*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -974,10 +974,10 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `hbmp`  
+ [在中，out]*hbmp*  
  位图镜像句柄。  
   
- [in] `cxImage`  
+ [in]*cxImage*  
  以像素为单位图像的宽度。  
   
 ### <a name="return-value"></a>返回值  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hbmp`  
- [in] `cyImage`  
+ [in]*hbmp*  
+ [in]*cyImage*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hbmp`  
- [in] `bAutoCheckPremlt`  
+ [in]*hbmp*  
+ [in]*bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1066,13 +1066,13 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ds`  
+ [in]*ds*  
  对引用`CAfxDrawState`结构，它存储在图像呈现阶段之间的已分配的资源。  
   
- [in] `sizeImageDest`  
+ [in]*sizeImageDest*  
  指定目标映像的大小。  
   
- [in] `bFadeInactive`  
+ [in]*bFadeInactive*  
  `TRUE` 如果你想停用淡出要绘制的图像。  
   
 ### <a name="return-value"></a>返回值  
@@ -1089,14 +1089,14 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszBmpFileName`  
+ *lpszBmpFileName*  
  磁盘文件的路径。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果已成功，则保存工具栏图像否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以将用户定义的映像存储到磁盘文件。 如果`lpszBmpFileName`是`NULL`，该方法将位图存储到从中加载位图文件[CMFCToolBarImages::Load](#load)方法。  
+ 调用此方法以将用户定义的映像存储到磁盘文件。 如果*lpszBmpFileName*是`NULL`，该方法将位图存储到从中加载位图文件[CMFCToolBarImages::Load](#load)方法。  
   
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
@@ -1106,7 +1106,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAlwaysLight`  
+ [in]*bAlwaysLight*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1118,7 +1118,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nValue`  
+ [in]*n 值*  
  Alpha 通道新值。  
   
 ### <a name="remarks"></a>备注  
@@ -1132,7 +1132,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nValue`  
+ [in]*n 值*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1146,7 +1146,7 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `sizeImage`  
+ [in]*sizeImage*  
  工具栏图像的新大小。  
   
 ### <a name="remarks"></a>备注  
@@ -1160,7 +1160,7 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nValue`  
+ [in]*n 值*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1172,7 +1172,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMapTo3DColors`  
+ [in]*bMapTo3DColors*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1184,7 +1184,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAuto`  
+ [in]*bAuto*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1205,14 +1205,14 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clrTransparent`  
+ [in]*clrTransparent*  
  RGB 值。  
   
 ### <a name="return-value"></a>返回值  
  以前的透明颜色。  
   
 ### <a name="remarks"></a>备注  
- 当您或框架调用[CMFCToolBarImages::Draw](#draw)，该方法不绘制任何匹配指定的颜色的像素`clrTransparent`。  
+ 当您或框架调用[CMFCToolBarImages::Draw](#draw)，该方法不绘制任何匹配指定的颜色的像素*clrTransparent*。  
   
 ##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  更新位图中的用户定义的工具栏图像。  
@@ -1224,10 +1224,10 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iImage`  
+ [in]*iImage*  
  要更新的图像的从零开始的索引。  
   
- [in] `hbmp`  
+ [in]*hbmp*  
  要更新的映像从中句柄到位图。  
   
 ### <a name="return-value"></a>返回值  
@@ -1241,7 +1241,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```  
   
 ### <a name="parameters"></a>参数  
- `clrTransparent`  
+ *clrTransparent*  
  指定带下划线的位图的透明的颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -1290,7 +1290,7 @@ BOOL SmoothResize(double dblImageScale);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dblImageScale`  
+ *dblImageScale*  
  缩放比例。  
   
 ### <a name="return-value"></a>返回值  

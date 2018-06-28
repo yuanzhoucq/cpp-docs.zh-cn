@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376325"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040124"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
 这是一个类可简化区块和属性值对逻辑。  
@@ -166,7 +166,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pStatChunk`  
+ *pStatChunk*  
  指向目标值，描述在区块的特征的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -182,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pValue`  
+ *pValue*  
  指定要从复制的源值。  
   
 ### <a name="remarks"></a>备注  
@@ -243,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ppPropVariant`  
+ *ppPropVariant*  
  在函数返回时，此参数会包含区块值。  
   
 ### <a name="return-value"></a>返回值  
- 如果已成功分配 PROPVARIANT 并区块值已成功复制到，则为 S_OK `ppPropVariant`; 否则为错误代码。  
+ 如果已成功分配 PROPVARIANT 并区块值已成功复制到，则为 S_OK *ppPropVariant*; 否则为错误代码。  
   
 ### <a name="remarks"></a>备注  
   
@@ -300,25 +300,25 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `bVal`  
+ *bVal*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -340,22 +340,22 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -378,25 +378,25 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `dwVal`  
+ *dwVal*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -419,25 +419,25 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `dtVal`  
+ *dtVal*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -460,25 +460,25 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `nVal`  
+ *nVal*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -501,25 +501,25 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `nVal`  
+ *nVal*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -542,25 +542,25 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `lVal`  
+ *lVal*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -583,25 +583,25 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `systemTime`  
+ *systemTime*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  
@@ -624,25 +624,25 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pkey`  
+ *主键*  
  指定一个属性键。  
   
- `pszValue`  
+ *pszValue*  
  指定要设置的区块值。  
   
- `chunkType`  
+ *chunkType*  
  标志指示此块是否包含文本类型或值类型属性。 标志值，将从 CHUNKSTATE 枚举。  
   
- `locale`  
+ *locale*  
  语言和子语言的文本块与相关联。 块区区域设置是文档的索引器用于执行正确的断字的文本。 如果既没有文本类型，也不带有 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的数据类型的值类型，区块，则会忽略此字段。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  以字符为单位从中派生当前文本块的源文本的长度。 零值表示逐字符的源文本和派生的文本之间的对应关系。 一个非零值意味着没有此类直接对应关系存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  从中派生的块区的源文本启动在源块区中的偏移量。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  分页符将与当前文本块分隔的上一个块区的类型。 值为 CHUNK_BREAKTYPE 枚举。  
   
 ### <a name="return-value"></a>返回值  

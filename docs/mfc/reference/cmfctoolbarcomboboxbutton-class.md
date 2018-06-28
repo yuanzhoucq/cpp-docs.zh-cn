@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377361"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039188"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 类
 包含一个组合框控件的工具栏按钮 ( [CComboBox 类](../../mfc/reference/ccombobox-class.md))。  
@@ -138,7 +138,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  2. 构造`CMFCToolBarComboBoxButton`对象。  
   
- 3. 在处理消息处理程序`AFX_WM_RESETTOOLBAR`消息，通过使用新的组合框按钮代替 dummy 按钮[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
+ 3. 在处理 AFX_WM_RESETTOOLBAR 消息的消息处理程序，将 dummy 按钮替换为新的组合框按钮使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
   
  有关详细信息，请参阅[演练： 将工具栏上的控件](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 组合框工具栏按钮的示例，请参阅示例项目 VisualStudioDemo。  
   
@@ -168,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszItem`  
+ [in]*lpszItem*  
  要添加到列表框中的项的文本。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与要添加到列表框中的项关联的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -192,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszItem`  
+ [in]*lpszItem*  
  要添加到列表框中的项的文本。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与要添加到列表框中的项关联的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -226,16 +226,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  新建按钮的命令 ID。  
   
- [in] `iImage`  
+ [in]*iImage*  
  新建按钮与关联的图像映像索引。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  新建按钮的样式。  
   
- [in] `iWidth`  
+ [in]*iWidth*  
  以像素为单位，新建按钮的宽度。  
   
 ### <a name="remarks"></a>备注  
@@ -263,16 +263,16 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszItem1`  
+ [in]*lpszItem1*  
  要比较的第一个字符串。  
   
- [in] `lpszItem2`  
+ [in]*lpszItem2*  
  要比较的第二个字符串。  
   
 ### <a name="return-value"></a>返回值  
  一个值，指示在字符串之间的区分大小写字典关系。 下表列出可能的值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |\<0|第一个字符串是否小于第二个。|  
 |0|第一个字符串等于第二个。|  
@@ -306,10 +306,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  指向按钮的父窗口的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  组合框绑定矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -326,13 +326,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  指向按钮的父窗口的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  新的编辑框的绑定矩形。  
   
- [in] `dwEditStyle`  
+ [in]*dwEditStyle*  
  新的编辑框控件样式。  
   
 ### <a name="return-value"></a>返回值  
@@ -351,13 +351,13 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  要删除的项的从零开始的索引。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与要删除的项关联的数据。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  要删除的项的文本。 如果有多个具有相同的文本项，将删除的第一项。  
   
 ### <a name="return-value"></a>返回值  
@@ -383,7 +383,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用的编辑和组合框;`FALSE`若要禁用编辑和组合框。  
   
 ### <a name="remarks"></a>备注  
@@ -397,7 +397,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `menuButton`  
+ [out]*menuButton*  
  对菜单按钮的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -411,7 +411,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  要在列表框中搜索文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -429,10 +429,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  组合框按钮命令 ID。  
   
- [in] `bIsFocus`  
+ [in]*bIsFocus*  
  `TRUE` 若要只搜索已设定焦点的按钮;`FALSE`要搜索的所有按钮。  
   
 ### <a name="return-value"></a>返回值  
@@ -482,7 +482,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  组合框按钮命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -511,7 +511,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  组合框按钮命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -550,7 +550,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -569,10 +569,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  组合框按钮命令 ID。  
   
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -589,7 +589,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -608,10 +608,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  组合框按钮命令 ID。  
   
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -630,10 +630,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  组合框按钮命令 ID。  
   
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -674,7 +674,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  命令 ID 的特定组合框按钮。  
   
 ### <a name="return-value"></a>返回值  
@@ -728,7 +728,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hwnd`  
+ [in]*hwnd*  
  窗口句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -765,7 +765,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iNotifyCode`  
+ [in]*iNotifyCode*  
  与命令关联的通知消息。  
   
 ### <a name="return-value"></a>返回值  
@@ -789,13 +789,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  设备上下文，显示组合框按钮。  
   
- [in] `sizeDefault`  
+ [in]*大小*  
  组合框按钮默认大小。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  在父级工具栏停靠状态。 `TRUE` 工具栏时水平停靠和`FALSE`时垂直停靠工具栏。  
   
 ### <a name="return-value"></a>返回值  
@@ -809,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  指向新的父工具栏。  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -822,10 +822,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  向组合框按钮的父窗口的指针。  
   
- [in] `bDelay`  
+ [in]*bDelay*  
  保留供派生类中使用。  
   
 ### <a name="return-value"></a>返回值  
@@ -841,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  设备上下文，显示组合框按钮。  
   
- [in] `nCtlColor`  
+ [in]*nCtlColor*  
  未使用。  
   
 ### <a name="return-value"></a>返回值  
@@ -869,28 +869,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `Pdc`  
+ [in]*Pdc*  
  设备上下文显示按钮。  
   
- [in] `rect`  
+ [in]*rect*  
  按钮的边框。  
   
- [in] `pImages`  
+ [in]*pImages*  
  与按钮的图像集合。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  在父级工具栏停靠状态。 `TRUE` 工具栏时水平停靠和`FALSE`时垂直停靠工具栏。  
   
- [in] `bCustomizeMode`  
+ [in]*bCustomizeMode*  
  应用程序是否在自定义模式。  
   
- [in] `bHighlight`  
+ [in]*bHighlight*  
  是否要绘制突出显示组合框按钮。  
   
- [in] `bDrawBorder`  
+ [in]*bDrawBorder*  
  是否要绘制了一个边框组合框按钮。  
   
- [in] `bGrayDisabledButtons`  
+ [in]*bGrayDisabledButtons*  
  `TRUE` 若要绘制阴影禁用的按钮;`FALSE`若要使用已禁用图像集合。  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
@@ -904,13 +904,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  设备上下文，显示组合框按钮。  
   
- [in] `rect`  
+ [in]*rect*  
  组合框按钮的边框。  
   
- [in] `bSelected`  
+ [in]*bSelected*  
  `TRUE` 如果组合框按钮被选中;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -938,7 +938,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  是否要隐藏或显示组合框按钮。  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
@@ -949,7 +949,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iSize`  
+ [in]*iSize*  
  组合框按钮新宽度。  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
@@ -964,16 +964,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  到组合框按钮的父窗口的指针。  
   
- [in] `iButtonIndex`  
+ [in]*iButtonIndex*  
  组合框按钮的 ID。  
   
- [in] `wndToolTip`  
+ [in]*wndToolTip*  
  若要将与组合框按钮相关联的工具提示。  
   
- [in] `str`  
+ [in]*str*  
  工具提示文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -1002,16 +1002,16 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
- [in] `bNotify`  
+ [in]*bNotify*  
  `TRUE` 若要通知的所选内容; 组合框按钮否则为`FALSE`。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与列表框中的项关联的数据。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  列表框中的项的文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -1039,16 +1039,16 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmd`  
+ [in]*uiCmd*  
  包含列表框中组合框按钮命令 ID。  
   
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中项的从零开始索引。 值-1 的列表框中删除任何当前所选内容，并清除编辑框。  
   
- [in] `dwData`  
+ [in]*dwData*  
  列表框中的项的数据。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  列表框中的项的文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -1064,7 +1064,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `ar`  
+ [在中，out]*ar*  
  `CArchive`要序列化对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1080,10 +1080,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
  组合框按钮父窗口。  
   
- [out] `data`  
+ [out]*数据*  
  A`CAccessibilityData`从组合框按钮接收可访问性数据的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -1097,7 +1097,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bCenterVert`  
+ [in]*bCenterVert*  
  `TRUE` 到中心组合框按钮在工具栏中;`FALSE`对齐到工具栏顶部组合框按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -1111,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiResID`  
+ [in]*uiResID*  
  快捷菜单上的资源 id。  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1122,7 +1122,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nHeight`  
+ [in]*nHeight*  
  以像素为单位，列表框的高度。  
   
 ### <a name="remarks"></a>备注  
@@ -1136,7 +1136,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bFlat`  
+ [in]*bFlat*  
  `TRUE` 用于平面样式外观;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1150,7 +1150,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nStyle`  
+ [in]*nStyle*  
  工具栏样式的按位组合 (OR)。  
   
 ### <a name="remarks"></a>备注  
@@ -1164,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  为包含编辑框的文本字符串的指针。  
   
 ## <a name="see-also"></a>请参阅  

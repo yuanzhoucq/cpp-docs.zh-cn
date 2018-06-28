@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376445"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037591"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 类
 用于 OLE“更改源”对话框。  
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向链接[COleClientItem](../../mfc/reference/coleclientitem-class.md)其源是要更新。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口将设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  

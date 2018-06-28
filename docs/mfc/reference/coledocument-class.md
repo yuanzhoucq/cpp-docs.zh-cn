@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f492e7fc3e29c74caba7303179b72c5dacad72e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377117"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040683"
 ---
 # <a name="coledocument-class"></a>COleDocument 类
 支持可视编辑的 OLE 文档的基类。  
@@ -119,15 +119,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|由框架调用以更新命令 UI 粘贴菜单选项。|  
   
 ## <a name="remarks"></a>备注  
- `COleDocument` 派生自**CDocument**，这样，OLE 应用程序，可使用由 Microsoft 基础类库提供的文档/视图体系结构。  
+ `COleDocument` 派生自`CDocument`，这样，OLE 应用程序，可使用由 Microsoft 基础类库提供的文档/视图体系结构。  
   
  `COleDocument` 将文档的集合视为[CDocItem](../../mfc/reference/cdocitem-class.md)对象以处理 OLE 项。 容器和服务器应用程序需要这种体系结构，因为其文档必须能够包含 OLE 项。 [COleServerItem](../../mfc/reference/coleserveritem-class.md)和[COleClientItem](../../mfc/reference/coleclientitem-class.md)类都派生自`CDocItem`，管理应用程序和 OLE 项之间的交互。  
   
- 如果你正在编写简单的容器应用程序，派生您的文档类从`COleDocument`。 如果你正在编写的容器应用程序支持将链接到其文档中包含的嵌入项，派生您的文档类从[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)。 如果你正在编写服务器应用程序或组合容器/服务器，派生您的文档类从[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)。 `COleLinkingDoc` 和`COleServerDoc`派生自`COleDocument`，因此这些类都继承中可用的所有服务`COleDocument`和**CDocument**。  
+ 如果你正在编写简单的容器应用程序，派生您的文档类从`COleDocument`。 如果你正在编写的容器应用程序支持将链接到其文档中包含的嵌入项，派生您的文档类从[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)。 如果你正在编写服务器应用程序或组合容器/服务器，派生您的文档类从[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)。 `COleLinkingDoc` 和`COleServerDoc`派生自`COleDocument`，因此这些类都继承中可用的所有服务`COleDocument`和`CDocument`。  
   
  若要使用`COleDocument`、 从其派生一个类并添加功能来管理应用程序的非 OLE 数据以及嵌入项或者链接项。 如果你定义`CDocItem`-派生类来存储应用程序的本机数据，你可以使用所定义的默认实现`COleDocument`来存储您的 OLE 和非 OLE 数据。 你还可以设计自己的数据结构的存储非 OLE 数据分开 OLE 项。 有关详细信息，请参阅文章[容器： 复合文件](../../mfc/containers-compound-files.md)...  
   
- **CDocument**支持将您的文档通过邮件发送邮件支持 (MAPI) 是否存在。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail)若要正确处理复合文档。 有关详细信息，请参阅文章[MAPI](../../mfc/mapi.md)和[MFC 中的 MAPI 支持](../../mfc/mapi-support-in-mfc.md)...  
+ `CDocument` 如果存在邮件支持 (MAPI)，则发送邮件通过文档的支持。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail)若要正确处理复合文档。 有关详细信息，请参阅文章[MAPI](../../mfc/mapi.md)和[MFC 中的 MAPI 支持](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -149,7 +149,7 @@ virtual void AddItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要添加的文档项的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -164,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptd`  
+ *ptd*  
  指向**DVTARGETDEVICE**数据结构，其中包含有关新的打印目标设备的信息。 可以是**NULL**。  
   
- `ppd`  
+ *ppd*  
  指向**PRINTDLG**数据结构，其中包含有关新的打印目标设备的信息。 可以是**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -197,7 +197,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEnable`  
+ *bEnable*  
  指定是启用还是禁用复合文件的支持。  
   
 ### <a name="remarks"></a>备注  
@@ -208,14 +208,14 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
  复合文件的支持是启用还是禁用文档后，应不会在文档的生存期内更改设置。  
   
 ##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
- 在包含由视图的框架窗口中的位置中当前激活调用此函数可获取 OLE 项`pWnd`。  
+ 在包含由视图的框架窗口中的位置中当前激活调用此函数可获取 OLE 项*pWnd*。  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向显示容器文档窗口的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -229,14 +229,14 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  对引用**位置**值设置到的以前调用`GetNextClientItem`; 初始值由返回`GetStartPosition`成员函数。  
   
 ### <a name="return-value"></a>返回值  
  对在文档中下, 一步的客户端项的指针或**NULL**如果没有更多的客户端项。  
   
 ### <a name="remarks"></a>备注  
- 每个调用的值后`pos`为在文档中，可能会也可能不是客户端项的下一项设置。  
+ 每个调用的值后*pos*为在文档中，可能会也可能不是客户端项的下一项设置。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
@@ -249,14 +249,14 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  对引用**位置**值设置到的以前调用`GetNextItem`; 初始值由返回`GetStartPosition`成员函数。  
   
 ### <a name="return-value"></a>返回值  
  指向位于指定位置的文档项的指针。  
   
 ### <a name="remarks"></a>备注  
- 每个调用的值后`pos`设置为**位置**的文档中的下一项的值。 检索的元素是否在文档中，新值的最后一个元素`pos`是**NULL**。  
+ 每个调用的值后*pos*设置为**位置**的文档中的下一项的值。 检索的元素是否在文档中，新值的最后一个元素*pos*是**NULL**。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
@@ -269,14 +269,14 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  对引用**位置**值设置到的以前调用`GetNextServerItem`; 初始值由返回`GetStartPosition`成员函数。  
   
 ### <a name="return-value"></a>返回值  
  在文档中下, 一步的服务器项的指针或**NULL**如果没有更多的服务器项。  
   
 ### <a name="remarks"></a>备注  
- 每个调用的值后`pos`为在文档中，可能会也可能不是服务器项的下一项设置。  
+ 每个调用的值后*pos*为在文档中，可能会也可能不是服务器项的下一项设置。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
@@ -289,7 +289,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pView`  
+ *pView*  
  显示文档的活动视图对象的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -366,7 +366,7 @@ afx_msg void OnFileSendMail();
 ### <a name="remarks"></a>备注  
  `OnFileSendMail` 调用`OnSaveDocument`（保存） 到一个临时文件，然后通过电子邮件发送的未命名和修改文档序列化。 如果文档未进行修改，则不需要的临时文件;发送原始。 `OnFileSendMail` 加载 MAPI32。如果尚未加载的 DLL。  
   
- 与不同的实现`OnFileSendMail`为**CDocument**，此函数可以正确处理复合文件。  
+ 与不同的实现`OnFileSendMail`为`CDocument`，此函数可以正确处理复合文件。  
   
  有关详细信息，请参阅[MAPI 主题](../../mfc/mapi.md)和[MFC 中的 MAPI 支持](../../mfc/mapi-support-in-mfc.md)文章...  
   
@@ -378,7 +378,7 @@ virtual void OnShowViews(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bVisible`  
+ *bVisible*  
  表示文档已变得可见或不可见。  
   
 ### <a name="remarks"></a>备注  
@@ -392,8 +392,8 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCmdUI`  
- 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用**启用**成员函数`CCmdUI`结构通过`pCmdUI`若要更新的用户界面。  
+ *pCmdUI*  
+ 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用`Enable`成员函数`CCmdUI`结构通过*pCmdUI*若要更新的用户界面。  
   
 ### <a name="remarks"></a>备注  
  `OnUpdateEditChangeIcon` 更新了命令的用户界面，具体取决于有效的图标存在文档中。 重写此函数可更改的行为。  
@@ -406,8 +406,8 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCmdUI`  
- 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用**启用**成员函数`CCmdUI`结构通过`pCmdUI`若要更新的用户界面。  
+ *pCmdUI*  
+ 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用`Enable`成员函数`CCmdUI`结构通过*pCmdUI*若要更新的用户界面。  
   
 ### <a name="remarks"></a>备注  
  与在文档中，第一个 OLE 项启动`OnUpdateEditLinksMenu`访问每个项，测试是否项是一个链接，并且如果它是一个链接，可以让链接命令。 重写此函数可更改的行为。  
@@ -420,8 +420,8 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCmdUI`  
- 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用**启用**成员函数`CCmdUI`结构通过`pCmdUI`若要更新的用户界面。  
+ *pCmdUI*  
+ 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用`Enable`成员函数`CCmdUI`结构通过*pCmdUI*若要更新的用户界面。  
   
 ### <a name="remarks"></a>备注  
  `OnUpdateObjectVerbMenu` 更新*ObjectName*具体取决于有效的对象是否存在文档中的命令的用户界面。 如果存在的对象， *ObjectName*启用编辑菜单上的命令。 选择此菜单命令时，将显示谓词子菜单。 谓词子菜单包含可用于对象，如编辑、 属性和等等的所有谓词命令。 重写此函数可更改的行为。  
@@ -434,8 +434,8 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCmdUI`  
- 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用**启用**成员函数`CCmdUI`结构通过`pCmdUI`若要更新的用户界面。  
+ *pCmdUI*  
+ 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用`Enable`成员函数`CCmdUI`结构通过*pCmdUI*若要更新的用户界面。  
   
 ### <a name="remarks"></a>备注  
  启用或禁用具体取决于是否项可将粘贴到文档或不选择性粘贴的菜单命令。  
@@ -448,8 +448,8 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCmdUI`  
- 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用**启用**成员函数`CCmdUI`结构通过`pCmdUI`若要更新的用户界面。  
+ *pCmdUI*  
+ 指向的指针`CCmdUI`结构，它表示生成更新命令的菜单。 更新处理程序调用`Enable`成员函数`CCmdUI`结构通过*pCmdUI*若要更新的用户界面。  
   
 ### <a name="remarks"></a>备注  
  启用或禁用具体取决于是否项可将粘贴到文档或不粘贴菜单命令和按钮。  
@@ -462,7 +462,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要删除的文档项的指针。  
   
 ### <a name="remarks"></a>备注  

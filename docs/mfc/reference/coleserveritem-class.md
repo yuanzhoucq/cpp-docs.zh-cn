@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a05553843c4478109c0fe63dd79f08b2116f58c7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378769"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039240"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 类
 提供 OLE 项的服务器接口。  
@@ -110,7 +110,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|将放置演示文稿和转换中的格式`COleDataSource`对象。|  
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|将该项目复制到剪贴板。|  
@@ -119,7 +119,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::GetDocument](#getdocument)|返回包含项的服务器文档。|  
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|获取**CF_EMBEDSOURCE** OLE 项的数据。|  
 |[COleServerItem::GetItemName](#getitemname)|返回项的名称。 用于链接的项。|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|获取`CF_LINKSOURCE`OLE 项的数据。|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|获取**CF_LINKSOURCE** OLE 项的数据。|  
 |[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|获取**CF_OBJECTDESCRIPTOR** OLE 项的数据。|  
 |[COleServerItem::IsConnected](#isconnected)|指示项当前是否附加到活动的容器。|  
 |[COleServerItem::IsLinkedItem](#islinkeditem)|指示项是否表示链接的 OLE 项。|  
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[COleServerItem::GetDataSource](#getdatasource)|获取用于存储转换格式的对象。|  
 |[COleServerItem::OnHide](#onhide)|由框架调用以隐藏 OLE 项。|  
@@ -152,7 +152,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|有关可见 OLE 项中有多少是通知服务器。|  
   
@@ -185,7 +185,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataSource`  
+ *pDataSource*  
  指向`COleDataSource`中放置数据对象。  
   
 ### <a name="remarks"></a>备注  
@@ -201,10 +201,10 @@ COleServerItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pServerDoc`  
+ *pServerDoc*  
  指向将包含新的项的文档的指针。  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  指示是否可以删除此对象，链接到该发布时的标志。 将其设置为**FALSE**如果`COleServerItem`对象是不可或缺的组成部分必须删除文档的数据。 将其设置为**TRUE**如果对象是用于标识可以由框架删除的文档的数据中的范围的辅助结构。  
   
 ##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
@@ -215,7 +215,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bIncludeLink`  
+ *bIncludeLink*  
  将其设置为**TRUE**如果链接数据应复制到剪贴板。 将其设置为**FALSE**如果服务器应用程序不支持链接。  
   
 ### <a name="remarks"></a>备注  
@@ -237,23 +237,23 @@ DROPEFFECT DoDragDrop(
  *lpRectItem*  
  在屏幕上，以像素为单位，相对于客户端区域的项的矩形。  
   
- `ptOffset`  
- 从的偏移量`lpItemRect`在拖动时所在的鼠标位置。  
+ *ptOffset*  
+ 从的偏移量*lpItemRect*在拖动时所在的鼠标位置。  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  将其设置为**TRUE**如果链接数据应复制到剪贴板。 将其设置为**FALSE**如果你的应用程序不支持链接。  
   
- `dwEffects`  
+ *dwEffects*  
  确定在拖动操作 （复制、 移动和链接的组合） 中将允许拖动源的效果。  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  指向定义拖动实际开始的矩形的指针。 有关更多信息，请参见下面的“备注”部分。  
   
 ### <a name="return-value"></a>返回值  
  `DROPEFFECT` 枚举中的一个值。 如果它是`DROPEFFECT_MOVE`，则应删除原始数据。  
   
 ### <a name="remarks"></a>备注  
- 拖放操作不会立即开始。 它等待，直到鼠标光标离开由指定的矩形`lpRectStartDrag`或之前已通过指定的毫秒数。 如果`lpRectStartDrag`是**NULL**，使用默认矩形，以便当鼠标光标移动一个像素时，拖动启动。  
+ 拖放操作不会立即开始。 它等待，直到鼠标光标离开由指定的矩形*lpRectStartDrag*或之前已通过指定的毫秒数。 如果*lpRectStartDrag*是**NULL**，使用默认矩形，以便当鼠标光标移动一个像素时，拖动启动。  
   
  注册表项设置由指定的延迟时间。 你可以通过调用来更改的延迟时间[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果未指定的延迟时间，使用默认值为 200 毫秒。 拖动延迟时间存储中，如下所示：  
   
@@ -277,20 +277,20 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataSource`  
+ *pDataSource*  
  指向`COleDataSource`将接收 OLE 项的数据的所有支持的格式中的对象。  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE**如果链接数据应复制到剪贴板。 **FALSE**如果服务器应用程序不支持链接。  
   
- `lpOffset`  
+ *lpOffset*  
  偏移量，以像素为单位，鼠标光标从该对象的原点。  
   
- `lpSize`  
+ *lpSize*  
  以像素为单位的对象的大小。  
   
 ### <a name="remarks"></a>备注  
- 此函数将调用[GetEmbedSourceData](#getembedsourcedata)成员函数，若要获取的 OLE 项和调用的本机数据[AddOtherClipboardData](#addotherclipboarddata)成员函数来获取演示文稿格式和任何支持的转换格式。 如果`bIncludeLink`是**TRUE**，函数还调用[GetLinkSourceData](#getlinksourcedata)以获得该项的链接数据。  
+ 此函数将调用[GetEmbedSourceData](#getembedsourcedata)成员函数，若要获取的 OLE 项和调用的本机数据[AddOtherClipboardData](#addotherclipboarddata)成员函数来获取演示文稿格式和任何支持的转换格式。 如果*bIncludeLink*是**TRUE**，函数还调用[GetLinkSourceData](#getlinksourcedata)以获得该项的链接数据。  
   
  重写此函数，如果你想要置于格式`COleDataSource`对象之前或之后提供的这些格式`CopyToClipboard`。  
   
@@ -328,7 +328,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它将接收**CF_EMBEDSOURCE** OLE 项的数据。  
   
 ### <a name="remarks"></a>备注  
@@ -359,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它将接收`CF_LINKSOURCE`OLE 项的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -383,17 +383,17 @@ void GetObjectDescriptorData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpOffset`  
+ *lpOffset*  
  鼠标单击从 OLE 项的左上角的偏移量。 可以是**NULL**。  
   
- `lpSize`  
+ *lpSize*  
  OLE 项的大小。 可以是**NULL**。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它将接收**CF_OBJECTDESCRIPTOR** OLE 项的数据。  
   
 ### <a name="remarks"></a>备注  
- 将信息复制到**STGMEDIUM**指向结构`lpStgMedium`。 此格式包括选择性粘贴对话框中所需的信息。  
+ 将信息复制到**STGMEDIUM**指向结构*lpStgMedium*。 此格式包括选择性粘贴对话框中所需的信息。  
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK 中。  
   
@@ -443,7 +443,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nDrawAspect`  
+ *nDrawAspect*  
  取值范围为`DVASPECT`枚举，指示已更改的 OLE 项的方面。 此参数可以具有任何以下值：  
   
 - `DVASPECT_CONTENT` 项可以显示作为嵌入到其容器内的对象的方式表示。  
@@ -465,10 +465,10 @@ virtual void OnDoVerb(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iVerb`  
+ *iVerb*  
  指定要执行的谓词。 它可以是以下之一：  
   
-|值|含义|符号|  
+|“值”|含义|符号|  
 |-----------|-------------|------------|  
 |0|主谓词|`OLEIVERB_PRIMARY`|  
 |1|辅助谓词|（无）|  
@@ -486,7 +486,7 @@ virtual void OnDoVerb(LONG iVerb);
  有关详细信息，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
   
 ##  <a name="ondraw"></a>  Coleserveritem:: Ondraw  
- 由框架调用，以将 OLE 项呈现到 metafile 中。  
+ 由框架调用以将 OLE 项渲染到图元文件。  
   
 ```  
 virtual BOOL OnDraw(
@@ -495,10 +495,10 @@ virtual BOOL OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向的指针[CDC](../../mfc/reference/cdc-class.md)在其上绘制项的对象。 显示上下文自动连接到的属性显示上下文因此您可以调用属性函数，虽然这样会导致图元文件特定于设备的。  
   
- `rSize`  
+ *rSize*  
  调整大小，请在**HIMETRIC**单位，在其中进行绘制图元文件。  
   
 ### <a name="return-value"></a>返回值  
@@ -518,10 +518,10 @@ virtual BOOL OnDrawEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向的指针[CDC](../../mfc/reference/cdc-class.md)在其上绘制项的对象。 DC 自动连接到特性 DC 因此您可以调用属性函数，虽然这样会导致图元文件特定于设备的。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 枚举中的一个值。 此参数可以具有任何以下值：  
   
 - `DVASPECT_CONTENT` 项可以显示作为嵌入到其容器内的对象的方式表示。  
@@ -554,13 +554,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bIncludeLink`  
+ *bIncludeLink*  
  将其设置为**TRUE**如果链接数据应复制到剪贴板。 将其设置为**FALSE**如果服务器应用程序不支持链接。  
   
- `lpOffset`  
+ *lpOffset*  
  以像素为单位的对象从源鼠标光标的偏移量。  
   
- `lpSize`  
+ *lpSize*  
  以像素为单位的对象的大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -579,7 +579,7 @@ virtual BOOL OnGetExtent(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nDrawAspect`  
+ *nDrawAspect*  
  指定要检索其边界的 OLE 项的方面。 此参数可以具有任何以下值：  
   
 - `DVASPECT_CONTENT` 项可以显示作为嵌入到其容器内的对象的方式表示。  
@@ -590,7 +590,7 @@ virtual BOOL OnGetExtent(
   
 - `DVASPECT_DOCPRINT` 就像它已使用文件菜单中的打印命令来打印表示项。  
   
- `rSize`  
+ *rSize*  
  引用`CSize`将接收 OLE 项的大小的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -610,7 +610,7 @@ virtual void OnHide();
  默认调用**COleServerDoc::OnShowDocument (FALSE)**。 此外，该函数会通知容器 OLE 项已被隐藏。 如果你想要隐藏 OLE 项时执行特殊处理，重写此函数。  
   
 ##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
- 由框架初始化 OLE 项使用的内容调用`pDataObject`。  
+ 由框架初始化 OLE 项使用的内容调用*pDataObject*。  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -619,17 +619,17 @@ virtual BOOL OnInitFromData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataObject`  
+ *pDataObject*  
  指向一个包含用于初始化 OLE 项的各种格式的数据的 OLE 数据对象的指针。  
   
- `bCreation`  
+ *bCreation*  
  **TRUE**如果该函数调用以初始化新的容器应用程序创建一个 OLE 项。 **FALSE**如果调用该函数替换现有 OLE 项的内容。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果`bCreation`是**TRUE**，如果容器实现基于当前所选内容的插入的新对象调用此函数。 创建新的 OLE 项时，使用所选的数据。 例如，当在电子表格程序中选择的一个单元范围，然后使用插入的新对象来创建一个图表基于所选范围中的值。 默认实现不执行任何操作。 重写此函数可从所提供的选择可接受的格式`pDataObject`和初始化 OLE 项基于提供的数据。 这是一个高级可重写。  
+ 如果*bCreation*是**TRUE**，如果容器实现基于当前所选内容的插入的新对象调用此函数。 创建新的 OLE 项时，使用所选的数据。 例如，当在电子表格程序中选择的一个单元范围，然后使用插入的新对象来创建一个图表基于所选范围中的值。 默认实现不执行任何操作。 重写此函数可从所提供的选择可接受的格式*pDataObject*和初始化 OLE 项基于提供的数据。 这是一个高级可重写。  
   
  有关详细信息，请参阅[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK 中。  
   
@@ -670,10 +670,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中请求信息的格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)是用要返回的数据的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -682,7 +682,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>备注  
  指定的格式是以前放置在`COleDataSource`对象使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)延迟呈现的成员函数。 此函数的默认实现调用[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)分别，如果提供的存储介质是文件或内存。 如果任一这些格式提供，默认实现将返回 0，且不执行任何操作。  
   
- 如果`lpStgMedium` ->  *tymed*是**TYMED_NULL**、 **STGMEDIUM**应分配和指定的填充*lpFormatEtc->tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**应填充了具有数据的位置。  
+ 如果*lpStgMedium*-> *tymed*是**TYMED_NULL**、 **STGMEDIUM**应分配和填充为指定的*lpFormatEtc-> tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**应填充了具有数据的位置。  
   
  这是一个高级可重写。 重写此函数可提供的请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你的数据较小，而且固定大小，重写`OnRenderGlobalData`。 如果你的数据是在文件中，或者是大小可变的重写`OnRenderFileData`。  
   
@@ -698,10 +698,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中请求信息的格式。  
   
- `pFile`  
+ *pFile*  
  指向`CFile`对象是用要呈现的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -724,10 +724,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中请求信息的格式。  
   
- `phGlobal`  
+ *phGlobal*  
  指向全局内存在其中的数据是要返回的句柄。 如果已不分配任何内存，此参数可以为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -736,7 +736,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>备注  
  指定的格式是以前放置在`COleDataSource`对象使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)延迟呈现的成员函数。 此函数的默认实现只返回**FALSE**。  
   
- 如果`phGlobal`是**NULL**，然后新`HGLOBAL`应分配，并且在返回`phGlobal`。 否则为`HGLOBAL`指定的`phGlobal`应已填满数据。 数据量置于`HGLOBAL`不能超过内存块的当前大小。 此外，块不能重新分配给了更大的大小。  
+ 如果*phGlobal*是**NULL**，然后新`HGLOBAL`应分配，并且在返回*phGlobal*。 否则为`HGLOBAL`指定的*phGlobal*应已填满数据。 数据量置于`HGLOBAL`不能超过内存块的当前大小。 此外，块不能重新分配给了更大的大小。  
   
  这是一个高级可重写。 重写此函数可提供的请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒介，重写[OnRenderData](#onrenderdata)。 如果你的数据是在文件中，或者是大小可变的重写[OnRenderFileData](#onrenderfiledata)。  
   
@@ -750,7 +750,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpLogPalette`  
+ *lpLogPalette*  
  指向 Windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -772,14 +772,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定的数据格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构中的数据位于其中。  
   
- `bRelease`  
- 指示有完成函数调用后的存储介质的所有权。 调用方决定谁负责释放代表的存储介质分配的资源。 通过设置的调用方执行此`bRelease`。 如果`bRelease`为非零值，服务器项将获得所有权，释放该媒体，使用它完成。 当`bRelease`为 0，调用方保留所有权并且服务器项可以仅为在调用期间使用的存储介质。  
+ *bRelease*  
+ 指示有完成函数调用后的存储介质的所有权。 调用方决定谁负责释放代表的存储介质分配的资源。 通过设置的调用方执行此*bRelease*。 如果*bRelease*为非零值，服务器项将获得所有权，释放该媒体，使用它完成。 当*bRelease*为 0，调用方保留所有权并且服务器项可以仅为在调用期间使用的存储介质。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -801,7 +801,7 @@ virtual BOOL OnSetExtent(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nDrawAspect`  
+ *nDrawAspect*  
  指定其边界正在指定的 OLE 项的方面。 此参数可以具有任何以下值：  
   
 - `DVASPECT_CONTENT` 项可以显示作为嵌入到其容器内的对象的方式表示。  
@@ -812,14 +812,14 @@ virtual BOOL OnSetExtent(
   
 - `DVASPECT_DOCPRINT` 就像它已使用文件菜单中的打印命令来打印表示项。  
   
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)结构，它指定的 OLE 项的新大小。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果使用 Microsoft 基础类库在撰写容器应用程序时，此函数调用时[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)相应的成员函数`COleClientItem`调用对象。 默认实现集[m_sizeExtent](#m_sizeextent)为指定大小的成员如果`nDrawAspect`是`DVASPECT_CONTENT`; 否则它将返回 0。 重写此函数以执行特殊处理，当你更改的项的大小。  
+ 如果使用 Microsoft 基础类库在撰写容器应用程序时，此函数调用时[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)相应的成员函数`COleClientItem`调用对象。 默认实现集[m_sizeExtent](#m_sizeextent)为指定大小的成员如果*nDrawAspect*是`DVASPECT_CONTENT`; 否则它将返回 0。 重写此函数以执行特殊处理，当你更改的项的大小。  
   
 ##  <a name="onshow"></a>  COleServerItem::OnShow  
  由框架调用以指示服务器应用程序，以就地显示 OLE 项。  
@@ -845,16 +845,16 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSender`  
+ *pSender*  
  为修改文档的项的指针。 可以是**NULL**。  
   
- `lHint`  
+ *lHint*  
  包含有关修改信息。  
   
- `pHint`  
+ *pHint*  
  指针指向存储有关修改信息的对象。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 枚举中的一个值。 此参数可以具有以下值之一：  
   
 - `DVASPECT_CONTENT` 项可以显示作为嵌入到其容器内的对象的方式表示。  
@@ -886,13 +886,13 @@ void SetItemName(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszItemName`  
+ *lpszItemName*  
  为新的名称的项的指针。  
   
 ### <a name="remarks"></a>备注  
  名称必须是唯一的文档中。 当调用的服务器应用程序时编辑链接的项时，应用程序将使用此名称查找该项目。 不需要用于嵌入项调用此函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
  [CDocItem 类](../../mfc/reference/cdocitem-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

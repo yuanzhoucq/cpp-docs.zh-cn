@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369842"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039968"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 类
 支持链接到所包含的嵌入项的 OLE 容器文档的基类。  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- 连接你`COleTemplateServer`到通过调用对象的文档模板对象`ConnectTemplate`成员函数，并注册所有类都对象通过调用 OLE 系统**coletemplateserver:: Registerall**:  
+ 连接你`COleTemplateServer`到通过调用对象的文档模板对象`ConnectTemplate`成员函数，并注册所有类都对象通过调用 OLE 系统`COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszItemName`  
+ *lpszItemName*  
  指向嵌入 OLE 项请求的名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszItemName`  
+ *lpszItemName*  
  指向链接 OLE 项请求的名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  指向 OLE 工厂对象 (可以是**NULL**)。  
   
- `lpszPathName`  
+ *lpszPathName*  
  指向容器文档的完全限定路径。  
   
 ### <a name="return-value"></a>返回值  

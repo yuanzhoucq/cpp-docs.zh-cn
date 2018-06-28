@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f9006b78d90a26aa6d4a2ee2bbbb010241298e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13fa7aea135099a8e0903ef0fc5fd20ca0cca5ff
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378977"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039500"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager`继承而来。  
@@ -650,7 +650,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bTemporary`  
+ [in]*bTemporary*  
   
 ### <a name="remarks"></a>备注  
   
@@ -662,7 +662,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAutoDestroyOnly`  
+ [in]*bAutoDestroyOnly*  
   
 ### <a name="remarks"></a>备注  
   
@@ -678,10 +678,10 @@ void DoDrawHeaderSortArrow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsUp`  
- [in] `bDlgCtrl`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bIsUp*  
+ [in]*bDlgCtrl*  
   
 ### <a name="remarks"></a>备注  
   
@@ -697,9 +697,9 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDC*`  
- [in] `CRect`  
- [in] `BOOL`  
+ [in]*CDC**  
+ [in]*的 CRect*  
+ [in]*BOOL*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -717,9 +717,9 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDC*`  
- [in] `CRect`  
- [in] `BOOL`  
+ [in]*CDC**  
+ [in]*的 CRect*  
+ [in]*BOOL*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -736,10 +736,10 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDC*`  
- [in] `CRect`  
- [in] `CMFCButton*`  
- [in] `UINT`  
+ [in]*CDC**  
+ [in]*的 CRect*  
+ [in]*CMFCButton**  
+ [in]*UINT*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -759,12 +759,12 @@ virtual BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `strText`  
- [in] `rect`  
- [in] `dwFlags`  
- [in] `nGlowSize`  
- [in] `clrText`  
+ [in]*pDC*  
+ [in]*strText*  
+ [in]*rect*  
+ [in]*dwFlags*  
+ [in]*nGlowSize*  
+ [in]*clrText*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -778,7 +778,7 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
   
 ### <a name="remarks"></a>备注  
   
@@ -790,11 +790,11 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向一个自动隐藏按钮的指针。  
   
 ### <a name="return-value"></a>返回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，指定的文本颜色`pButton`。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，指定的文本颜色*pButton*。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生类以自定义应用程序中自动隐藏按钮的文本颜色。 若要执行此操作，返回您的应用程序要用作文本颜色的颜色。  
@@ -820,11 +820,11 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向标题栏的指针。  
   
 ### <a name="return-value"></a>返回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示中的文本的颜色`pBar`。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示中的文本的颜色*pBar*。  
   
 ### <a name="remarks"></a>备注  
  在重写此方法在派生类自定义标题栏的文本颜色。 在你重写方法中，返回所需的颜色。  
@@ -874,7 +874,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -928,9 +928,9 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
- [in] `bHighlighted`  
- [in] `bDisabled`  
+ [in]*pButton*  
+ [in]*bHighlighted*  
+ [in]*bDisabled*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -957,8 +957,8 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSmall`  
- 一个布尔型参数，该值指示是否`GetNcBtnSize`应检索小型或大型系统按钮的大小。 如果`bSmall`是`TRUE`，`GetNcBtnSize`返回小的系统按钮的大小。 否则，它返回大型系统按钮的大小。  
+ [in]*bSmall*  
+ 一个布尔型参数，该值指示是否`GetNcBtnSize`应检索小型或大型系统按钮的大小。 如果*bSmall*是`TRUE`，`GetNcBtnSize`返回小的系统按钮的大小。 否则，它返回大型系统按钮的大小。  
   
 ### <a name="return-value"></a>返回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)指示系统按钮的大小的参数。  
@@ -998,11 +998,11 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPropList`  
+ [in]*pPropList*  
  指向绘制框架的属性列表的指针。  
   
 ### <a name="return-value"></a>返回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示的背景色`pPropList`。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示的背景色*pPropList*。  
   
 ### <a name="remarks"></a>备注  
  重写此函数可自定义你的应用程序中的属性列表的背景色。  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPropList`  
+ [in]*pPropList*  
  指向属性列表的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1032,7 +1032,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pHyperLink`  
+ [in]*pHyperLink*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1046,7 +1046,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCRibbonPanelMenu*`  
+ [in]*CMFCRibbonPanelMenu**  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1082,7 +1082,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDisabled`  
+ [in]*bDisabled*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1102,12 +1102,12 @@ virtual void GetRibbonSliderColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pSlider`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
- [in] `bIsDisabled`  
- [in] `clrLine`  
- [in] `clrFill`  
+ [in]*pSlider*  
+ [in]*bIsHighlighted*  
+ [in]*bIsPressed*  
+ [in]*bIsDisabled*  
+ [in]*clrLine*  
+ [in]*clrFill*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1119,7 +1119,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pStatusBar`  
+ [in]*pStatusBar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1135,8 +1135,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `sizeDefault`  
+ [in]*pDC*  
+ [in]*大小*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1152,8 +1152,8 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clrBaseGroupBackground`  
- [in] `clrBaseGroupBorder`  
+ [in]*clrBaseGroupBackground*  
+ [in]*clrBaseGroupBorder*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1190,8 +1190,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pStatusBar`  
- [in] `pPane`  
+ [in]*pStatusBar*  
+ [in]*pPane*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1214,31 +1214,31 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向框架在其中绘制选项卡选项卡式窗口的指针。  
   
- [out] `clrDark`  
+ [out]*clrDark*  
  对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)此方法将一个选项卡的深色边框的颜色在其中存储的参数。  
   
- [out] `clrBlack`  
+ [out]*clrBlack*  
  对引用`COLORREF`此方法将选项卡窗口边框的颜色在其中存储的参数。 边框的默认颜色为黑色。  
   
- [out] `clrHighlight`  
+ [out]*clrHighlight*  
  对引用`COLORREF`此方法将选项卡窗口突出显示状态的颜色在其中存储的参数。  
   
- [out] `clrFace`  
+ [out]*clrFace*  
  对引用`COLORREF`参数其中此方法将存储的选项卡窗口的表面颜色。  
   
- [out] `clrDarkShadow`  
+ [out]*clrDarkShadow*  
  对引用`COLORREF`此方法将选项卡窗口的阴影颜色在其中存储的参数。  
   
- [out] `clrLight`  
+ [out]*clrLight*  
  对引用`COLORREF`此方法将浅色窗口边缘的选项卡上的颜色在其中存储的参数。  
   
- [out] `pbrFace`  
+ [out]*pbrFace*  
  指向画笔的引用的指针。 此方法将存储它使用以填充表面的此参数中的选项卡窗口的画笔。  
   
- [out] `pbrBlack`  
+ [out]*pbrBlack*  
  指向画笔的引用的指针。 此方法将存储它使用以填充此参数中的选项卡窗口的黑色边缘的画笔。  
   
 ### <a name="remarks"></a>备注  
@@ -1252,7 +1252,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCBaseTabCtrl*`  
+ [in]*CMFCBaseTabCtrl&#42;*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1269,9 +1269,9 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCBaseTabCtrl*`  
- [in] `int`  
- [in] `BOOL`  
+ [in]*CMFCBaseTabCtrl&#42;*  
+ [in]*int*  
+ [in]*BOOL*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1386,14 +1386,14 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向工具栏按钮的指针。  
   
- [in] `state`  
+ [in]*状态*  
  工具栏按钮的状态。  
   
 ### <a name="return-value"></a>返回值  
- 文本颜色`pButton`当它具有状态由指示`state`。  
+ 文本颜色*pButton*当它具有状态由指示*状态*。  
   
 ### <a name="remarks"></a>备注  
  文本颜色[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)对象依赖于按钮的状态。 工具栏按钮的可能的状态包括`ButtonsIsRegular`， `ButtonsIsPressed`，或`ButtonsIsHighlighted`。  
@@ -1456,8 +1456,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `params`  
- [in] `nType`  
+ [in]*params*  
+ [in]*nType*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1492,7 +1492,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCDesktopAlertWndButton*`  
+ [in]*CMFCDesktopAlertWndButton**  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1668,7 +1668,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCToolBar*`  
+ [in]*CMFCToolBar&#42;*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1695,8 +1695,8 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
- [in] `bActive`  
+ [in]*pWnd*  
+ [in]*bActive*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1712,22 +1712,22 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectBounds`  
+ [in]*rectBounds*  
  大小和自动隐藏按钮的位置。  
   
- [in] `rectBorderSize`  
+ [in]*rectBorderSize*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md)包含边框的大小的参数。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向自动隐藏按钮的指针。 框架在绘制此按钮的边框。  
   
 ### <a name="remarks"></a>备注  
  如果你想要自定义自动隐藏按钮的边框的外观，重写此方法在派生类。 默认情况下，此方法填充带你的应用程序的默认阴影颜色的平面边框。  
   
- `rectBorderSize`参数不包含边框的坐标。 它包含在边框的大小`top`， `bottom`， `left`，和`right`数据成员。 一个值小于或等于 0 指示自动隐藏按钮该侧无边框。  
+ *RectBorderSize*参数不包含边框的坐标。 它包含在边框的大小`top`， `bottom`， `left`，和`right`数据成员。 一个值小于或等于 0 指示自动隐藏按钮该侧无边框。  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManager::OnDrawBarGripper  
  绘制的控件条控制手柄时由框架调用。  
@@ -1741,16 +1741,16 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向控件条的设备上下文的指针。  
   
- [in] `rectGripper`  
+ [in]*rectGripper*  
  控件条的边框。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  布尔参数可指定水平还是垂直是否停靠控件条。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向控件条的指针。 可视化管理器绘制此控件条的控制手柄。  
   
 ### <a name="remarks"></a>备注  
@@ -1769,19 +1769,19 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定浏览按钮的边界矩形。  
   
- [in] `pEdit`  
+ [in]*pEdit*  
  指向一个编辑控件的指针。 可视化管理器绘制此编辑控件的浏览按钮。  
   
- [in] `state`  
+ [in]*状态*  
  一个枚举的值，指定按钮的状态。  
   
- [out] `clrText`  
+ [out]*clrText*  
  对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数。 这是一个保留的值，表示当前未使用。  
   
 ### <a name="return-value"></a>返回值  
@@ -1802,16 +1802,16 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的工具栏按钮的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向工具栏按钮的指针。 Framework 绘制此按钮的边框。  
   
- [in] `rect`  
+ [in]*rect*  
  指定工具栏按钮的边界矩形。  
   
- [in] `state`  
+ [in]*状态*  
  枚举的数据类型，指定工具栏按钮的当前状态。  
   
 ### <a name="remarks"></a>备注  
@@ -1832,11 +1832,11 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
- [in] `bHorz`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*状态*  
+ [in]*bHorz*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1853,19 +1853,19 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向的指针`CMFCCaptionBar`对象。 Framework 绘制此标题栏。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的标题栏的边界矩形。  
   
- [in] `clrBarBorder`  
+ [in]*clrBarBorder*  
  边框的颜色。  
   
- [in] `bFlatBorder`  
+ [in]*bFlatBorder*  
  一个布尔型参数，用于指定边框是否具有平面、 二维外观。  
   
 ### <a name="remarks"></a>备注  
@@ -1887,14 +1887,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
- [in] `bIsDisabled`  
- [in] `bHasDropDownArrow`  
- [in] `bIsSysButton`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
+ [in]*bIsPressed*  
+ [in]*bIsHighlighted*  
+ [in]*bIsDisabled*  
+ [in]*bHasDropDownArrow*  
+ [in]*bIsSysButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1909,9 +1909,9 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1930,26 +1930,26 @@ virtual void OnDrawCaptionButton (
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针`CMFCCaptionButton`对象。 Framework 绘制此标题按钮。  
   
- [in] `bActive`  
+ [in]*bActive*  
  布尔参数可指定按钮是否处于活动状态。  
   
- [in] `bHorz`  
+ [in]*bHorz*  
  一个布尔型参数，用于指定标题是否为水平。  
   
- [in] `bMaximized`  
+ [in]*bMaximized*  
  布尔参数可指定是否已最大化父窗格中的说明。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  一个布尔型参数，用于指定是否禁用标题按钮。  
   
- [in] `nImageID`  
- 要使用的按钮的图标的的图像索引。 如果`nImageID`为-1，此方法使用的图像索引记录在`pButton`。  
+ [in]*nImageID*  
+ 要使用的按钮的图标的的图像索引。 如果*nImageID*为-1，此方法使用的图像索引记录在*pButton*。  
   
 ### <a name="remarks"></a>备注  
  此方法的默认实现显示从全局实例的小按钮`CMenuImages`类。 标头文件中列出按钮`CMenuImages`。 一些示例包括`CMenuImages::IdClose`， `CMenuImages::IdArowLeft`， `CMenuImages::IdArowRight`， `CMenuImages::IdArowDown`， `CMenuImages::IdArowUp`，和`CMenuImages::IdPinHorz`。  
@@ -1969,11 +1969,11 @@ virtual void OnDrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `bHighlighted`  
- [in] `bChecked`  
- [in] `bEnabled`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bHighlighted*  
+ [in]*bChecked*  
+ [in]*bEnabled*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1991,12 +1991,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `nState`  
- [in] `bHighlighted`  
- [in] `bPressed`  
- [in] `bEnabled`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*nState*  
+ [in]*bHighlighted*  
+ [in]*bPressed*  
+ [in]*bEnabled*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2014,22 +2014,22 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的组合框按钮的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定组合框按钮的边界矩形。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  一个布尔型参数，该值指示组合框按钮是否不可用。  
   
- [in] `bIsDropped`  
+ [in]*bIsDropped*  
  一个布尔型参数，该值指示是否向下删除组合框。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示组合框按钮将突出显示。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针`CMFCToolBarComboBoxButton`对象。 Framework 绘制此组合框按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -2049,22 +2049,22 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的下拉按钮的边界矩形。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  一个布尔型参数，该值指示下拉按钮是否不可用。  
   
- [in] `bIsDropped`  
+ [in]*bIsDropped*  
  一个布尔型参数，该值指示是否向下删除组合框。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  布尔参数可指示下拉按钮将突出显示的说明。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针`CMFCToolBarComboBoxButton`对象。 Framework 绘制此组合框按钮的下拉按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -2078,7 +2078,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndCtrl`  
+ [in]*pWndCtrl*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2095,19 +2095,19 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  指定的默认图像的边界矩形。  
   
- [in] `bIsDisabled`  
+ [in]*bIsDisabled*  
  一个布尔型参数，该值指示功能区按钮是否不可用。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔型参数，该值指示是否按下了功能区按钮。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示是否将突出显示功能区按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -2126,19 +2126,19 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的边界的矩形`CMFCToolBarEditBoxButton`对象。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  一个布尔型参数，该值指示按钮是否不可用。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示按钮将突出显示。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针`CMFCToolBarEditBoxButton`对象。 Framework 绘制此编辑框按钮的边框。  
   
 ### <a name="remarks"></a>备注  
@@ -2156,10 +2156,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsOpened`  
- [in] `colorBox`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bIsOpened*  
+ [in]*colorBox*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2175,22 +2175,22 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pToolBar`  
+ [in]*pToolBar*  
  指向浮动工具栏的指针。  
   
- [in] `rectBorder`  
+ [in]*rectBorder*  
  指定的浮动工具栏边界的矩形。  
   
- [in] `rectBorderSize`  
+ [in]*rectBorderSize*  
  指定的工具栏上的边框大小的矩形。  
   
 ### <a name="remarks"></a>备注  
  浮动工具栏是显示为一个微型框架窗口的工具栏。 通常情况下，这发生在用户拖动一个工具栏，以便不再停靠。  
   
- 中的相应参数指定边框的大小`rectBorderSize`。 例如，通过指定的工具栏上的边框的宽度`rectBorderSize.top`。  
+ 中的相应参数指定边框的大小*rectBorderSize*。 例如，通过指定的工具栏上的边框的宽度`rectBorderSize.top`。  
   
  重写此方法在派生视觉管理器，自定义的浮动工具栏边框外观。  
   
@@ -2207,19 +2207,19 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCtrl`  
+ [in]*pCtrl*  
  指向的指针`CMFCHeaderCtrl`对象。 Framework 绘制此标头控件的边框。  
   
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的标头控件的边界矩形。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔型参数，该值指示是否按下了标头控件。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示是否将突出显示标头控件。  
   
 ### <a name="remarks"></a>备注  
@@ -2237,20 +2237,20 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCtrl`  
+ [in]*pCtrl*  
  指向标头控件的指针。 可视化管理器绘制此的排序箭头[CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)对象。  
   
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的排序箭头的边界矩形。  
   
- [in] `bIsUp`  
+ [in]*bIsUp*  
  一个布尔值，指定的排序箭头的方向。  
   
 ### <a name="remarks"></a>备注  
- 如果`bIsUp`是`TRUE`，视觉管理器绘制向上排序箭头。 如果它是`FALSE`，视觉管理器绘制排序的向下箭头。 重写`OnDrawHeaderCtrlSortArrow`在派生类自定义排序按钮的外观。  
+ 如果*bIsUp*是`TRUE`，视觉管理器绘制向上排序箭头。 如果它是`FALSE`，视觉管理器绘制排序的向下箭头。 重写`OnDrawHeaderCtrlSortArrow`在派生类自定义排序按钮的外观。  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
 
@@ -2263,9 +2263,9 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectCommand`  
- [in] `bSelected`  
+ [in]*pDC*  
+ [in]*rectCommand*  
+ [in]*bSelected*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2280,13 +2280,13 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针`CMFCPopupMenu`对象。  
   
- [in] `pMenu`  
+ [in]*pMenu*  
  指向的指针`CMFCPopupMenu`对象。 Framework 绘制此弹出菜单周围的边框。  
   
- [in] `rect`  
+ [in]*rect*  
  指定弹出菜单中的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -2305,11 +2305,11 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `bHighlight`  
- [in] `bIsRadio`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*bHighlight*  
+ [in]*bIsRadio*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2326,11 +2326,11 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rectButton`  
- [in] `bHighlight`  
- [in] `bDisabled`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rectButton*  
+ [in]*bHighlight*  
+ [in]*bDisabled*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2344,8 +2344,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -2362,9 +2362,9 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `nResizeFlags`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*nResizeFlags*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2382,22 +2382,22 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  一个指定滚动按钮的边界的矩形。  
   
- [in] `bIsScrollDown`  
+ [in]*bIsScrollDown*  
  一个布尔值，该值指示哪种类型的按钮绘制视觉管理器。 值为`TRUE`指示视觉管理器绘制向下按钮。  
   
- [in] `bIsHighlited`  
+ [in]*bIsHighlited*  
  一个布尔值，该值指示按钮将突出显示。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔值，该值指示是否按下了按钮。  
   
- [in] `bIsDisabled`  
+ [in]*bIsDisabled*  
  一个布尔值，该值指示是否禁用按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -2420,15 +2420,15 @@ virtual void OnDrawMenuShadow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `rectExclude`  
- [in] `nDepth`  
- [in] `iMinBrightness`  
- [in] `iMaxBrightness`  
- [in] `pBmpSaveBottom`  
- [in] `pBmpSaveRight`  
- [in] `bRTL`  
+ [in]*pDC*  
+ [in]*rectClient*  
+ [in]*rectExclude*  
+ [in]*nDepth*  
+ [in]*iMinBrightness*  
+ [in]*iMaxBrightness*  
+ [in]*pBmpSaveBottom*  
+ [in]*pBmpSaveRight*  
+ [in]*bRTL*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2445,19 +2445,19 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定按钮的边界矩形。  
   
- [in] `uiSystemCommand`  
+ [in]*uiSystemCommand*  
  一个标志，指定哪个系统命令与按钮相关联。 可能的值为 SC_CLOSE、 SC_MINIMIZE 和 SC_RESTORE。  
   
- [in] `nStyle`  
+ [in]*nStyle*  
  用于指定按钮的当前样式的标志。 可能的值为 TBBS_PRESSED、 TBBS_DISABLED 和 0。  
   
- [in] `bHighlight`  
+ [in]*bHighlight*  
  布尔参数可指定按钮将突出显示的说明。  
   
 ### <a name="remarks"></a>备注  
@@ -2477,10 +2477,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pFrameWnd`  
- [in] `rectBorder`  
- [in] `rectBorderSize`  
+ [in]*pDC*  
+ [in]*pFrameWnd*  
+ [in]*rectBorder*  
+ [in]*rectBorderSize*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2494,10 +2494,10 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectSplitter`  
+ [in]*rectSplitter*  
  指定的拆分器的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -2515,16 +2515,16 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectBtn`  
+ [in]*rectBtn*  
  指定 Outlook 页按钮的边界矩形。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔值，指定按钮将突出显示。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔值，指定是否按下了按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -2541,13 +2541,13 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向控件条的设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向一个窗格的指针。 可视化管理器绘制此窗格中的边框。  
   
- [in] `rect`  
+ [in]*rect*  
  指示窗格中的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -2566,19 +2566,19 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向的指针`CDockablePane`对象。 Framework 绘制此窗格的标题。  
   
- [in] `bActive`  
+ [in]*bActive*  
  一个布尔型参数，该值指示是否将控件条处于活动状态。  
   
- [in] `rectCaption`  
+ [in]*rectCaption*  
  指定标题的边界矩形。  
   
- [in] `rectButtons`  
+ [in]*rectButtons*  
  指定标题按钮的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -2599,10 +2599,10 @@ virtual void OnDrawPaneDivider(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pSlider`  
- [in] `rect`  
- [in] `bAutoHideMode`  
+ [in]*pDC*  
+ [in]*pSlider*  
+ [in]*rect*  
+ [in]*bAutoHideMode*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2616,8 +2616,8 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2632,9 +2632,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*rectClient*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2649,9 +2649,9 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pPopupWnd`  
+ [in]*pDC*  
+ [in]*rectCaption*  
+ [in]*pPopupWnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -2667,10 +2667,10 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针**Main 按钮**功能区上。  
   
 ### <a name="remarks"></a>备注  
@@ -2686,10 +2686,10 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)对象。 Framework 绘制此功能区按钮的边框。  
   
 ### <a name="remarks"></a>备注  
@@ -2706,13 +2706,13 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pGroup`  
+ [in]*pGroup*  
  指向一组功能区上的按钮的指针。 Framework 绘制按钮此组。  
   
- [in] `rectGroup`  
+ [in]*rectGroup*  
  指定组的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -2733,16 +2733,16 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向功能区栏的指针。 可视化管理器绘制此功能区栏。  
   
- [in] `rect`  
+ [in]*rect*  
  指定功能区栏的边界矩形。  
   
- [in] `rectText`  
+ [in]*rectText*  
  指定的标题栏的文本的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -2758,10 +2758,10 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  一个指向设备上下文的指针。  
   
- `pButton`  
+ *pButton*  
  指向的指针`CMFCRibbonCaptionButton`类。 Framework 绘制此标题按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -2778,13 +2778,13 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pCategory`  
+ [in]*pCategory*  
  指向的指针`CMFCRibbonCategory`对象。 Framework 绘制此功能区类别。  
   
- [in] `rectCategory`  
+ [in]*rectCategory*  
  指定功能区的所有类别面板的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -2802,10 +2802,10 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  绘制的上下文中。  
   
- [in] `pContextCaption`  
+ [in]*pContextCaption*  
  指向标题栏的指针。 可视化管理器绘制这[CMFCRibbonContextCaption 类](../../mfc/reference/cmfcribboncontextcaption-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -2824,8 +2824,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pScroll`  
+ [in]*pDC*  
+ [in]*pScroll*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2840,13 +2840,13 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pTab`  
+ [in]*pTab*  
  指向的实例的指针`CMFCRibbonTab`类。 Framework 绘制此选项卡。  
   
- [in] `bIsActive`  
+ [in]*bIsActive*  
  一个布尔型参数，该值指示是否选项卡处于活动状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -2868,11 +2868,11 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pCheckBox`  
- [in] `rect`  
- [in] `bIsSelected`  
- [in] `bHighlighted`  
+ [in]*pDC*  
+ [in]*pCheckBox*  
+ [in]*rect*  
+ [in]*bIsSelected*  
+ [in]*bHighlighted*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2894,16 +2894,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pColorButton`  
- [in] `pIcon`  
- [in] `color`  
- [in] `rect`  
- [in] `bDrawTopEdge`  
- [in] `bDrawBottomEdge`  
- [in] `bIsHighlighted`  
- [in] `bIsChecked`  
- [in] `bIsDisabled`  
+ [in]*pDC*  
+ [in]*pColorButton*  
+ [in]*pIcon*  
+ [in]*颜色*  
+ [in]*rect*  
+ [in]*bDrawTopEdge*  
+ [in]*bDrawBottomEdge*  
+ [in]*bIsHighlighted*  
+ [in]*bIsChecked*  
+ [in]*bIsDisabled*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2917,10 +2917,10 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向功能区窗格中的默认按钮的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -2938,8 +2938,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2956,11 +2956,11 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `bIsSelected`  
- [in] `bHighlighted`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*bIsSelected*  
+ [in]*bHighlighted*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2975,9 +2975,9 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rectBorder`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rectBorder*  
   
 ### <a name="remarks"></a>备注  
   
@@ -2991,8 +2991,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3008,10 +3008,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pElement`  
- [in] `rect`  
- [in] `str`  
+ [in]*pDC*  
+ [in]*pElement*  
+ [in]*rect*  
+ [in]*str*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3026,13 +3026,13 @@ virtual void OnDrawRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pLabel`  
+ [in]*pLabel*  
  指向的指针[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)对象。 Framework 绘制此功能区标签。  
   
- [in] `rect`  
+ [in]*rect*  
  指定功能区面板的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3048,10 +3048,10 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针`CMFCRibbonButton`位于主功能区面板上。 Framework 绘制此按钮的边框。  
   
 ### <a name="remarks"></a>备注  
@@ -3068,13 +3068,13 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pPanel`  
+ [in]*pPanel*  
  指向的指针`CMFCRibbonMainPanel`。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的边界的矩形`CMFCRibbonMainPanel`。  
   
 ### <a name="remarks"></a>备注  
@@ -3091,9 +3091,9 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3109,16 +3109,16 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pPanel`  
+ [in]*pPanel*  
  指向的指针`CMFCRibbonPanel`对象。 Framework 绘制此功能区面板。  
   
- [in] `rectPanel`  
+ [in]*rectPanel*  
  指定面板的边界矩形。  
   
- [in] `rectCaption`  
+ [in]*rectCaption*  
  指定面板标题的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -3138,13 +3138,13 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pPanel`  
+ [in]*pPanel*  
  指向的指针`CMFCRibbonPanel`对象。 Framework 绘制此功能区面板的标题。  
   
- [in] `rectCaption`  
+ [in]*rectCaption*  
  指定标题功能区面板的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3163,19 +3163,19 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pProgress`  
+ [in]*pProgress*  
  指向的指针`CMFCRibbonProgressBar`对象。 Framework 绘制此进度栏。  
   
- [in] `rectProgress`  
+ [in]*rectProgress*  
  指定进度栏的边界矩形。  
   
- [in] `rectChunk`  
+ [in]*rectChunk*  
  指定区域周围的进度栏的边界矩形。  
   
- [in] `bInfiniteMode`  
+ [in]*bInfiniteMode*  
  一个布尔型参数，指示进度栏的模式。 值为`TRUE`意味着栏处于无限模式。 默认实现不使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -3192,13 +3192,13 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSeparator`  
+ [in]*pSeparator*  
  指向的指针[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)对象。 Framework 绘制此功能区分隔符。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的分隔符的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3215,13 +3215,13 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pPanel`  
+ [in]*pPanel*  
  指向的指针**Main**功能区上的面板。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的最近使用的文件列表的框架的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3238,13 +3238,13 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSlider`  
+ [in]*pSlider*  
  指向 CMFCRibbonSlider 对象的指针。 Framework 绘制此功能区滑块的通道。  
   
- [in] `rect`  
+ [in]*rect*  
  指定功能区滑块的通道的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3264,22 +3264,22 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSlider`  
+ [in]*pSlider*  
  指向的指针`CMFCRibbonSlider`。 Framework 绘制此功能区滑块条的滚动块。  
   
- [in] `rect`  
+ [in]*rect*  
  指定功能区滑块条的滚动块的边界矩形。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示是否滚动块将突出显示。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  布尔参数可指示滚动块并按下的说明。  
   
- [in] `bIsDisabled`  
+ [in]*bIsDisabled*  
  一个布尔型参数，该值指示滚动块是否不可用。  
   
 ### <a name="remarks"></a>备注  
@@ -3300,25 +3300,25 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSlider`  
+ [in]*pSlider*  
  指向的指针`CMFCRibbonSlider`对象。 Framework 绘制此功能区滑块。  
   
- [in] `rect`  
+ [in]*rect*  
  在功能区滑块指定的缩放按钮的边界矩形。  
   
- [in] `bIsZoomOut`  
+ [in]*bIsZoomOut*  
  一个布尔型参数，该值指示哪个按钮 framework 绘制。 值为`TRUE`指示与左键"-"为缩小。值为`FALSE`指示与"+"为 zoom 在右侧的按钮。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示按钮将突出显示。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔型参数，该值指示是否按下了按钮。  
   
- [in] `bIsDisabled`  
+ [in]*bIsDisabled*  
  一个布尔型参数，该值指示按钮是否不可用。  
   
 ### <a name="remarks"></a>备注  
@@ -3335,13 +3335,13 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向包含窗格中的状态栏的指针。  
   
- [in] `pPane`  
+ [in]*pPane*  
  指向状态栏窗格的指针。 Framework 绘制这[CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -3361,13 +3361,13 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  一个指向设备上下文的指针。  
   
- `pWndRibbonBar`  
+ *pWndRibbonBar*  
  指向的指针[CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)对象。 Framework 绘制此功能区栏的框架。  
   
- `rectTab`  
+ *rectTab*  
  指定功能区选项卡的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -3389,11 +3389,11 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `nBorderSize`  
- [in] `iImage`  
- [in] `bHilited`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*nBorderSize*  
+ [in]*iImage*  
+ [in]*bHilited*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3409,16 +3409,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向控件条的设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向包含分隔符的窗格的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的分隔符的边界矩形。  
   
- [in] `bIsHoriz`  
+ [in]*bIsHoriz*  
  一个布尔型参数，该值指示停靠的窗格的方向。 值为`TRUE`指示水平停靠的窗格。 值为`FALSE`指示垂直停靠窗格。  
   
 ### <a name="remarks"></a>备注  
@@ -3435,9 +3435,9 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `state`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*状态*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3454,23 +3454,23 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectSpin`  
+ [in]*rectSpin*  
  指定的数值调节钮控件的边界矩形。  
   
- [in] `nState`  
+ [in]*nState*  
  一个标志，指示数值调节钮控件的状态。 有关详细信息，请参阅备注部分。  
   
- [in] `bOrientation`  
+ [in]*bOrientation*  
  布尔参数可指定数值调节钮控件的方向。 值为`TRUE`指示数值调节钮控件为水平方向。 否则，为垂直。  
   
- [in] `pSpinCtrl`  
+ [in]*pSpinCtrl*  
  指向数值调节钮控件的指针。 Framework 绘制此控件的按钮。  
   
 ### <a name="remarks"></a>备注  
- `nState`参数指示数值调节钮控件的状态。 参数是以下值之一：  
+ *NState*参数指示数值调节钮控件的状态。 参数是以下值之一：  
   
 -   AFX_SPIN_PRESSEDUP  
   
@@ -3495,13 +3495,13 @@ virtual void OnDrawSplitterBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSplitterWnd`  
+ [in]*pSplitterWnd*  
  指向拆分窗口的指针。 Framework 绘制此窗口的边框。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的拆分窗口的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3518,13 +3518,13 @@ virtual void OnDrawSplitterBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSplitterWnd`  
+ [in]*pSplitterWnd*  
  指向拆分窗口的指针。 Framework 绘制此拆分器窗口的框。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的拆分窗口的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3543,19 +3543,19 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向的指针`CMFCStatusBar`对象。 Framework 绘制此状态栏对象。  
   
- [in] `rectPane`  
+ [in]*rectPane*  
  指定状态栏的边界矩形。  
   
- [in] `uiID`  
+ [in]*uiID*  
  状态栏的 ID。  
   
- [in] `nStyle`  
+ [in]*nStyle*  
  状态栏的样式。  
   
 ### <a name="remarks"></a>备注  
@@ -3578,31 +3578,31 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向状态栏的设备上下文的指针。  
   
- [in] `pStatusBar`  
+ [in]*pStatusBar*  
  `CMFCStatusBar`对象，其中包含进度栏。  
   
- [in] `rectProgress`  
+ [in]*rectProgress*  
  指定进度栏的边界矩形。  
   
- [in] `nProgressTotal`  
+ [in]*nProgressTotal*  
  进度栏的总数。  
   
- [in] `nProgressCurr`  
+ [in]*nProgressCurr*  
  进度栏当前进度。  
   
- [in] `clrBar`  
+ [in]*clrBar*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示进度栏的初始颜色。 值是颜色渐变的开始或完成的进度栏的颜色。  
   
- [in] `clrProgressBarDest`  
- A`COLORREF`参数可指示进度栏的颜色渐变的末尾。 如果`clrProgressBarDest`为-1，框架不绘制为颜色渐变的进度栏。 相反，用指定的颜色填充整个进度栏`clrBar`。  
+ [in]*clrProgressBarDest*  
+ A`COLORREF`参数可指示进度栏的颜色渐变的末尾。 如果*clrProgressBarDest*为-1，框架不绘制为颜色渐变的进度栏。 相反，用指定的颜色填充整个进度栏*clrBar*。  
   
- [in] `clrProgressText`  
- A`COLORREF`参数可指示的文本表示形式的当前进度的文本颜色。 如果忽略此参数`bProgressText`设置为`FALSE`。  
+ [in]*clrProgressText*  
+ A`COLORREF`参数可指示的文本表示形式的当前进度的文本颜色。 如果忽略此参数*bProgressText*设置为`FALSE`。  
   
- [in] `bProgressText`  
+ [in]*bProgressText*  
  一个布尔型参数，该值指示是否显示的文本表示形式的当前进度。  
   
 ### <a name="remarks"></a>备注  
@@ -3619,13 +3619,13 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pStatBar`  
+ [in]*pStatBar*  
  指向状态栏的指针。 Framework 绘制此状态栏的大小框。  
   
- [in] `rectSizeBox`  
+ [in]*rectSizeBox*  
  指定的大小框中的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -3644,19 +3644,19 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectTab`  
+ [in]*rectTab*  
  指定的选项卡控件的边界矩形。  
   
- [in] `iTab`  
+ [in]*iTab*  
  Framework 绘制选项卡的索引。  
   
- [in] `bIsActive`  
+ [in]*bIsActive*  
  布尔参数可指定选项卡处于活动状态。  
   
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向的指针`CMFCBaseTabCtrl`对象。 Framework 绘制该选项卡控件。  
   
 ### <a name="remarks"></a>备注  
@@ -3678,26 +3678,26 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的边界的矩形**关闭**按钮。  
   
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向选项卡控件的指针。 Framework 绘制**关闭**对于此选项卡控件的按钮。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示是否**关闭**突出显示按钮。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔型参数，该值指示是否**关闭**按下按钮。  
   
- [in] `bIsDisabled`  
+ [in]*bIsDisabled*  
  一个布尔型参数，该值指示是否**关闭**按钮处于禁用状态。  
   
 ### <a name="remarks"></a>备注  
- 重写此方法在派生的视觉管理器的外观进行自定义**关闭**的活动选项卡上的按钮`pTabWnd`。  
+ 重写此方法在派生的视觉管理器的外观进行自定义**关闭**的活动选项卡上的按钮*pTabWnd*。  
   
 ##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent  
  框架在绘制位于的实例的内部的内容时调用此方法[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)。  
@@ -3713,22 +3713,22 @@ virtual void OnDrawTabContent(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectTab`  
+ [in]*rectTab*  
  指定的选项卡内部的边界矩形。  
   
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。Framework 绘制此选项卡的内部。  
   
- [in] `bIsActive`  
+ [in]*bIsActive*  
  一个布尔型参数，该值指示是否选项卡处于活动状态。  
   
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向包含正在绘制的选项卡上的选项卡式控件的指针。  
   
- [in] `clrText`  
+ [in]*clrText*  
  在选项卡的内部文本的颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -3747,19 +3747,19 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的选项卡按钮的边界矩形。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCButton](../../mfc/reference/cmfcbutton-class.md)对象。 框架边框绘制此`CMFCButton`实例。  
   
- [in] `uiState`  
+ [in]*uiState*  
  一个无符号的整数，指定按钮的状态。  
   
- [in] `pWndTab`  
+ [in]*pWndTab*  
  指向父选项卡窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -3778,23 +3778,23 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pTask`  
+ [in]*pTask*  
  指向的指针[CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)对象。 Framework 绘制此任务。  
   
- [in] `pIcons`  
+ [in]*pIcons*  
  指向任务窗格与关联的图像列表的指针。 每个任务包含此列表中的图像的索引。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  布尔参数可指定是否显示的任务将突出显示的说明。  
   
- [in] `bIsSelected`  
+ [in]*bIsSelected*  
  一个布尔型参数，指定是否选择显示的任务。  
   
 ### <a name="remarks"></a>备注  
- 框架的图标和文本作为任务栏上显示的任务。 `pIcons`参数包含由任务的图标`pTask`。  
+ 框架的图标和文本作为任务栏上显示的任务。 *PIcons*参数包含由任务的图标*pTask*。  
   
  重写此方法在派生类自定义任务栏上的任务的外观。  
   
@@ -3810,16 +3810,16 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定在任务窗格的组区域的边界矩形。  
   
- [in] `bSpecial`  
+ [in]*bSpecial*  
  一个布尔参数，指定是否突出显示边框。 值为`TRUE`指示边框突出显示。  
   
- [in] `bNoTitle`  
+ [in]*bNoTitle*  
  一个布尔型参数，用于指定是否组区域具有标题。 值为`TRUE`指示组区域不具有标题。  
   
 ### <a name="remarks"></a>备注  
@@ -3838,19 +3838,19 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pGroup`  
+ [in]*pGroup*  
  指向的指针`CMFCTasksPaneTaskGroup`对象。 Framework 绘制此组的标题。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示是否将突出显示组。  
   
- [in] `bIsSelected`  
+ [in]*bIsSelected*  
  一个布尔型参数，该值指示当前是否选择了的组。  
   
- [in] `bCanCollapse`  
+ [in]*bCanCollapse*  
  一个布尔型参数，该值指示是否可以折叠组。  
   
 ### <a name="remarks"></a>备注  
@@ -3872,12 +3872,12 @@ virtual void OnDrawTasksGroupIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pGroup`  
- [in] `nIconHOffset`  
- [in] `bIsHighlighted`  
- [in] `bIsSelected`  
- [in] `bCanCollapse`  
+ [in]*pDC*  
+ [in]*pGroup*  
+ [in]*nIconHOffset*  
+ [in]*bIsHighlighted*  
+ [in]*bIsSelected*  
+ [in]*bCanCollapse*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3892,13 +3892,13 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定标题的边界矩形。  
   
- [in] `bIsActive`  
+ [in]*bIsActive*  
  `TRUE` 如果标题是活动状态，则`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
@@ -3916,8 +3916,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3931,10 +3931,10 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectClient`  
+ [in]*rectClient*  
  指定 MDI 客户端区域的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -3954,9 +3954,9 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in]*pDC*  
+ [in]*rectClient*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>备注  
   
@@ -3971,17 +3971,17 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的选项卡区域的边界矩形。  
   
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向选项卡窗口的指针。 框架清除指定选项卡窗口选项卡区域。  
   
 ### <a name="remarks"></a>备注  
- 由框架调用此函数时[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)对象进程`WM_PAINT`消息，然后清除选项卡区域。  
+ 由框架调用此函数时[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)对象处理 WM_PAINT 消息并清除选项卡区域。  
   
  重写此方法在派生视觉管理器，以自定义选项卡的外观。  
   
@@ -3997,20 +3997,20 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的选项卡按钮的边界矩形。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向选项卡按钮的指针。 框架清除文本和此按钮的图标。  
   
- [in] `pWndTab`  
+ [in]*pWndTab*  
  指向包含选项卡按钮的选项卡控件的指针。  
   
 ### <a name="remarks"></a>备注  
- 框架清除文本和一个按钮的图标时[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象进程`WM_ERASEBKGND`消息。  
+ 框架清除文本和一个按钮的图标时[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象处理 WM_ERASEBKGND 消息。  
   
  重写此方法在派生视觉管理器，自定义选项卡按钮的外观。  
   
@@ -4025,20 +4025,20 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的选项卡窗口的边界矩形。  
   
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向选项卡窗口的指针。 框架清除此帧`CMFCBaseTabCtrl`。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果此方法成功，则`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
- 此方法填充区域由`rect`与活动选项卡的背景色。它时，将调用`CMFCBaseTabCtrl`对象进程`WM_PAINT`消息，然后清除选项卡帧。  
+ 此方法填充区域由*rect*与活动选项卡的背景色。它时，将调用`CMFCBaseTabCtrl`对象处理 WM_PAINT 消息并清除选项卡帧。  
   
 ##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManager::OnFillAutoHideButtonBackground  
  框架在填充自动隐藏按钮的背景时调用此方法。  
@@ -4051,13 +4051,13 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定自动隐藏按钮的边界矩形。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)对象。 框架填充此自动隐藏按钮的背景。  
   
 ### <a name="remarks"></a>备注  
@@ -4076,19 +4076,19 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向控件条的设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向的指针`CBasePane`对象。 框架填充此窗格的背景。  
   
- [in] `rectClient`  
+ [in]*rectClient*  
  指定的窗格中的边界矩形。  
   
- [in] `rectClip`  
+ [in]*rectClip*  
  指定的窗格中的剪辑区域的矩形。  
   
- [in] `bNCArea`  
+ [in]*bNCArea*  
  保留的值。  
   
 ### <a name="remarks"></a>备注  
@@ -4111,16 +4111,16 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的工具栏按钮的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)。 框架填充此按钮的背景。  
   
- [in] `rect`  
+ [in]*rect*  
  指定工具栏按钮的边界矩形。  
   
- [in] `state`  
+ [in]*状态*  
  工具栏按钮的状态。  
   
 ### <a name="remarks"></a>备注  
@@ -4144,14 +4144,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
- [in] `bIsDisabled`  
- [in] `bHasDropDownArrow`  
- [in] `bIsSysButton`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
+ [in]*bIsPressed*  
+ [in]*bIsHighlighted*  
+ [in]*bIsDisabled*  
+ [in]*bHasDropDownArrow*  
+ [in]*bIsSysButton*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -4168,13 +4168,13 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定按钮的边界矩形。  
   
- [in] `bIsSelected`  
+ [in]*bIsSelected*  
  一个布尔型参数，该值指示按钮是否处于选定状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -4194,13 +4194,13 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pCtrl`  
+ [in]*pCtrl*  
  指向的指针[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)对象。 框架填充此标头控件的背景。  
   
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的标头控件的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -4218,16 +4218,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectCaption`  
+ [in]*rectCaption*  
  指定的标题栏的边界矩形。  
   
- [in] `pFrameWnd`  
+ [in]*pFrameWnd*  
  指向微型框架窗口的指针。 Framework 绘制此窗口的标题栏。  
   
- [in] `bActive`  
+ [in]*bActive*  
  一个布尔型参数，该值指示窗口是否处于活动状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -4247,13 +4247,13 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectCaption`  
+ [in]*rectCaption*  
  指定的标题栏的边界矩形。  
   
- [out] `clrText`  
+ [out]*clrText*  
  对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数。 该方法将在标题栏上的文本颜色写入为此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -4272,19 +4272,19 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定 Outlook 页按钮的边界矩形。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  布尔参数可指定按钮将突出显示的说明。  
   
- [in] `bIsPressed`  
+ [in]*bIsPressed*  
  一个布尔参数，指定是否按下了按钮。  
   
- [out] `clrText`  
+ [out]*clrText*  
  对引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数。 此方法将存储在此参数的 outlook 页按钮的文本颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -4300,10 +4300,10 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定弹出窗口的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -4319,14 +4319,14 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)对象。 框架填充此功能区按钮的内部。  
   
 ### <a name="return-value"></a>返回值  
- 指定功能区按钮的文本的颜色`pButton`如果功能区按钮支持文本。 值-1，如果文本是无效的功能区按钮。  
+ 指定功能区按钮的文本的颜色*pButton*如果功能区按钮支持文本。 值-1，如果文本是无效的功能区按钮。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生视觉管理器，自定义功能区按钮的外观。  
@@ -4348,35 +4348,35 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pEdit`  
+ [in]*pEdit*  
  指向的指针`CMFCRibbonRichEditCtrl`对象。 框架填充此编辑控件的内部。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的编辑控件的边界矩形。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  一个布尔型参数，该值指示是否将突出显示编辑控件。  
   
- [in] `bIsPaneHighlighted`  
+ [in]*bIsPaneHighlighted*  
  布尔参数可指示父窗格中将突出显示的说明。  
   
- [in] `bIsDisabled`  
+ [in]*bIsDisabled*  
  一个布尔型参数，该值指示编辑控件是否不可用。  
   
- [in] `clrText`  
+ [in]*clrText*  
  对编辑控件的文本颜色的引用。  
   
- [in] `clrSelBackground`  
+ [in]*clrSelBackground*  
  对编辑控件当突出显示时的背景色的引用。  
   
- [in] `clrSelText`  
+ [in]*clrSelText*  
  对在编辑控件上的所选文本的颜色的引用。  
   
 ### <a name="remarks"></a>备注  
- `CMFCRibbonRichEditCtrl`由`pEdit`可以是在功能区组合框按钮的一部分。  
+ `CMFCRibbonRichEditCtrl`由*pEdit*可以是在功能区组合框按钮的一部分。  
   
  重写此方法在派生的视觉管理器的外观进行自定义`CMFCRibbonRichEditCtrl`。  
   
@@ -4390,14 +4390,14 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)对象。 框架填充此功能区按钮。  
   
 ### <a name="return-value"></a>返回值  
- 指定功能区按钮的文本的颜色`pButton`如果功能区按钮支持文本。 值-1，如果文本是无效的功能区按钮。  
+ 指定功能区按钮的文本的颜色*pButton*如果功能区按钮支持文本。 值-1，如果文本是无效的功能区按钮。  
   
 ### <a name="remarks"></a>备注  
  重写此方法在派生视觉管理器，自定义上的功能区按钮的外观**Main**面板。  
@@ -4413,13 +4413,13 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pPanel`  
+ [in]*pPanel*  
  指向的实例的指针[CMFCRibbonMainPanel 类](../../mfc/reference/cmfcribbonmainpanel-class.md)。 框架填充此功能区面板的菜单框架。  
   
- [in] `rect`  
+ [in]*rect*  
  指定菜单帧的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -4436,9 +4436,9 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `pMenuBar`  
- [in] `rect`  
+ [in]*pDC*  
+ [in]*pMenuBar*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -4453,13 +4453,13 @@ virtual void OnFillSplitterBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pSplitterWnd`  
+ [in]*pSplitterWnd*  
  指向的实例的指针[CSplitterWndEx 类](csplitterwndex-class.md)。 框架填充此拆分器窗口的背景。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的拆分窗口的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -4479,22 +4479,22 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectFill`  
+ [in]*rectFill*  
  指定选项卡窗口的边界矩形。  
   
- [in] `pbrFill`  
+ [in]*pbrFill*  
  指向画笔的指针。 框架将使用此画笔填充选项卡窗口。  
   
- [in] `iTab`  
+ [in]*iTab*  
  为其框架填充背景选项卡的从零开始的选项卡索引。  
   
- [in] `bIsActive`  
+ [in]*bIsActive*  
  `TRUE` 如果选项卡处于活动状态;否则为`FALSE`。  
   
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向父选项卡控件的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -4511,13 +4511,13 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定任务组的边界矩形。  
   
- [in] `bSpecial`  
+ [in]*bSpecial*  
  一个布尔值，该值指示是否用特殊的颜色填充其内部。  
   
 ### <a name="remarks"></a>备注  
@@ -4533,10 +4533,10 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectWorkArea`  
+ [in]*rectWorkArea*  
  指定的任务窗格的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -4554,22 +4554,22 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文菜单的指针。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)要显示对象。 默认实现不使用此参数。  
   
- [in] `rect`  
+ [in]*rect*  
  指定菜单项的边界矩形。  
   
- [in] `clrText`  
+ [in]*clrText*  
  突出显示的菜单项的当前的文本颜色。 默认实现不使用此参数。  
   
 ### <a name="remarks"></a>备注  
- 此方法的默认实现不使用参数`pButton`或`clrText`。 填充由指定的矩形`rect`与标准的背景色。  
+ 此方法的默认实现不使用参数*pButton*或*clrText*。 填充由指定的矩形*rect*与标准的背景色。  
   
- 重写此方法在派生视觉管理器，以自定义突出显示的菜单项的外观。 使用`clrText`参数来修改突出显示的菜单项的文本颜色。  
+ 重写此方法在派生视觉管理器，以自定义突出显示的菜单项的外观。 使用*clrText*参数来修改突出显示的菜单项的文本颜色。  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManager::OnHighlightRarelyUsedMenuItems  
  绘制突出显示的菜单命令时，框架将调用此方法。  
@@ -4581,10 +4581,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectRarelyUsed`  
+ [in]*rectRarelyUsed*  
  指定突出显示的命令的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -4600,8 +4600,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
- [in] `bActive`  
+ [in]*pWnd*  
+ [in]*bActive*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -4618,13 +4618,13 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向窗口框架绘制其非工作区的指针。  
   
- [in] `lstSysButtons`  
+ [in]*lstSysButtons*  
  系统按钮列表。 这些实参也称为标题按钮。  
   
- [in] `rectRedraw`  
+ [in]*rectRedraw*  
  指定的非工作区的边界矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -4643,10 +4643,10 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向与地区更改窗口的指针。  
   
- [in] `sizeWindow`  
+ [in]*sizeWindow*  
  窗口的大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -4663,7 +4663,7 @@ virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>备注  
- 框架在调用此方法的处理一部分`WM_SYSCOLORCHANGE`消息。 默认实现不执行任何操作。 如果你想要在你的应用程序中的颜色更改时执行自定义代码重写此方法在派生视觉管理器。  
+ 框架在调用此方法作为处理 WM_SYSCOLORCHANGE 消息的一部分。 默认实现不执行任何操作。 如果你想要在你的应用程序中的颜色更改时执行自定义代码重写此方法在派生视觉管理器。  
   
 ##  <a name="redrawall"></a>  CMFCVisualManager::RedrawAll  
  立即应用程序中将重新绘制所有控件条。  
@@ -4680,7 +4680,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
+ [in]*颜色*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -4694,7 +4694,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRTI`  
+ [in]*pRTI*  
  指向视觉管理器的运行时信息的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -4710,7 +4710,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEmboss`  
+ [in]*bEmboss*  
  一个布尔型参数，该值指示是否启用已禁用的工具栏图像的浮雕的模式。  
   
 ### <a name="remarks"></a>备注  
@@ -4724,7 +4724,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bFade`  
+ [in]*bFade*  
  布尔参数可指定是否启用的照明效果。  
   
 ### <a name="remarks"></a>备注  
@@ -4738,7 +4738,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMenuFlatLook`  
+ [in]*bMenuFlatLook*  
  一个布尔型参数，该值指示是否将显示平面菜单按钮。  
   
 ### <a name="remarks"></a>备注  
@@ -4752,7 +4752,7 @@ void SetMenuShadowDepth(int nDepth);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nDepth`  
+ [in]*nDepth*  
  一个整数，指定以像素为单位的菜单阴影的深度。  
   
 ### <a name="remarks"></a>备注  
@@ -4766,7 +4766,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShadow`  
+ [in]*bShadow*  
  一个布尔型参数，该值指示可视化管理器是否显示在突出显示的图像下，阴影。  
   
 ### <a name="remarks"></a>备注  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372909"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040982"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 类
 提供选项卡控件和 OLE 库之间的通信机制。  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pWnd`|未使用。|  
-|[in] `pDataObject`|指向用户拖动的对象的指针。|  
-|[in] `dwKeyState`|包含修改键的状态。 这是任意数量的以下组合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[in] `point`|在客户端坐标中光标的位置。|  
+|[in]*pWnd*|未使用。|  
+|[in]*pDataObject*|指向用户拖动的对象的指针。|  
+|[in]*dwKeyState*|包含修改键的状态。 这是任意数量的以下组合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
+|[in]*点*|在客户端坐标中光标的位置。|  
   
 ### <a name="return-value"></a>返回值  
- 将引起; 如果放置操作发生在指定的位置的影响`point`。 它可以是一个或多个以下：  
+ 将引起; 如果放置操作发生在指定的位置的影响*点*。 它可以是一个或多个以下：  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pWnd`|未使用。|  
+|[in]*pWnd*|未使用。|  
   
 ### <a name="remarks"></a>备注  
  此方法调用`CMFCBaseTabCtrl::OnDragLeave`方法来执行拖动操作。  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pWnd`|未使用。|  
-|[in] `pDataObject`|指向用户拖动的对象的指针。|  
-|[in] `dwKeyState`|包含修改键的状态。 这是任意数量的以下组合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[in] `point`|在客户端坐标中鼠标指针的位置。|  
+|[in]*pWnd*|未使用。|  
+|[in]*pDataObject*|指向用户拖动的对象的指针。|  
+|[in]*dwKeyState*|包含修改键的状态。 这是任意数量的以下组合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
+|[in]*点*|在客户端坐标中鼠标指针的位置。|  
   
 ### <a name="return-value"></a>返回值  
- 将引起; 如果放置操作发生在指定的位置的影响`point`。 它可以是一个或多个以下：  
+ 将引起; 如果放置操作发生在指定的位置的影响*点*。 它可以是一个或多个以下：  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pWnd`|未使用。|  
-|[in] `pDataObject`|指向用户拖动的对象的指针。|  
-|[in] `dropEffect`|默认的拖放操作。|  
-|[in] `dropList`|未使用。|  
-|[in] `point`|在客户端坐标中鼠标指针的位置。|  
+|[in]*pWnd*|未使用。|  
+|[in]*pDataObject*|指向用户拖动的对象的指针。|  
+|[in]*dropEffect*|默认的拖放操作。|  
+|[in]*下拉列表*|未使用。|  
+|[in]*点*|在客户端坐标中鼠标指针的位置。|  
   
 ### <a name="return-value"></a>返回值  
  生成的放置效果。 它可以是一个或多个以下：  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>备注  
- 此方法调用`CMFCBaseTabCtrl::OnDrop`如果工具栏框架是在自定义模式且可用的剪贴板数据格式。 如果调用`CMFCBaseTabCtrl::OnDrop`返回非零值，此方法返回由指定的默认放置效果`dropEffect`。 否则，此方法返回`DROPEFFECT_NONE`。 有关放置效果的详细信息，请参阅[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。  
+ 此方法调用`CMFCBaseTabCtrl::OnDrop`如果工具栏框架是在自定义模式且可用的剪贴板数据格式。 如果调用`CMFCBaseTabCtrl::OnDrop`返回非零值，此方法返回由指定的默认放置效果*dropEffect*。 否则，此方法返回`DROPEFFECT_NONE`。 有关放置效果的详细信息，请参阅[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。  
   
  有关自定义模式的详细信息，请参阅[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 有关剪贴板数据格式的详细信息，请参阅[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pOwner`|要注册为放置目标的选项卡控件。|  
+|[in]*pOwner*|要注册为放置目标的选项卡控件。|  
   
 ### <a name="return-value"></a>返回值  
  如果注册成功，则非零否则为 0。  

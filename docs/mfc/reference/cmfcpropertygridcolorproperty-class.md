@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367989"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040803"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 类
 `CMFCPropertyGridColorProperty` 类支持用于打开颜色选择对话框的属性列表控件项。  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strName`  
+ [in]*strName*  
  属性的名称。  
   
- [in] `color`  
+ [in]*颜色*  
  属性的颜色值。  
   
- [in] `pPalette`  
+ [in]*pPalette*  
  指向一个颜色的调色板。 默认值为 `NULL`。  
   
- [in] `lpszDescr`  
+ [in]*lpszDescr*  
  属性说明中。 默认值为 `NULL`。  
   
- [in] `dwData`  
+ [in]*dwData*  
  应用程序特定数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  自动按钮标签文本。  
   
- [in] `colorAutomatic`  
+ [in]*colorAutomatic*  
  自动 （默认值） 颜色的 RGB 颜色值。  
   
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用自动按钮;否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  其他按钮的标签文本。  
   
- [in] `bAltColorDlg`  
+ [in]*bAltColorDlg*  
  `TRUE` 若要显示`CMFCColorDialog`对话框;`FALSE`以显示标准颜色选择对话框。 默认值为 `TRUE`。  
   
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要显示其他按钮;否则为`FALSE`。  默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `color`  
+ [in]*颜色*  
  RGB 颜色值。  
   
 ### <a name="remarks"></a>备注  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nColumnsNumber`  
+ [in]*nColumnsNumber*  
  首选在颜色属性网格中的列数。  
   
 ### <a name="remarks"></a>备注  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `varValue`  
+ [in]*varValue*  
  一个值。  
   
 ### <a name="remarks"></a>备注  

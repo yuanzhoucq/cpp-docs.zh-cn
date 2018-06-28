@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368138"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039532"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 类
 实现一个 Windows 图元文件，此文件包含一系列图形设备接口 (GDI) 命令，你可以重播此命令来创建所需图像或文本。  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  接下来发送`CMetaFileDC`对象的序列`CDC`才能重播想 GDI 命令。 创建输出，如这些 GDI 命令`MoveTo`和`LineTo`，可以使用。  
   
- 所需的命令发送至图元文件后，调用**关闭**成员函数，其关闭图元文件设备上下文，返回的图元文件句柄。 然后释放`CMetaFileDC`对象。  
+ 所需的命令发送至图元文件后，调用`Close`成员函数，其关闭图元文件设备上下文，返回的图元文件句柄。 然后释放`CMetaFileDC`对象。  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)然后可以使用图元文件句柄图元文件中重复播放。 图元文件还可以通过 Windows 函数如[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)，这将图元文件复制到磁盘。  
   
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDCRef`  
+ *pDCRef*  
  标识增强型图元文件的引用设备。  
   
- `lpszFileName`  
+ *lpszFileName*  
  指向以 null 结尾的字符串。 指定要创建增强型图元文件的文件名。 如果此参数为**NULL**，增强型图元文件是基于的内存和丢失或该对象被销毁时其内容 Win32 **DeleteEnhMetaFile**调用函数。  
   
- `lpBounds`  
+ *lpBounds*  
  指向[RECT](../../mfc/reference/rect-structure1.md)数据结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定的尺寸以**HIMETRIC**单元 （以 0.1 毫米为增量） 该图片的要存储在增强型图元文件。  
   
- `lpszDescription`  
+ *lpszDescription*  
  指向以零结尾的字符串，指定创建图片，以及图片的标题的应用程序的名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>备注  
  此 DC 可以用于存储独立于设备的图片。  
   
- Windows 使用由引用设备`pDCRef`参数来记录的解决方法和图片最初出现的设备的单位。 如果`pDCRef`参数是**NULL**，它使用当前的显示设备的引用。  
+ Windows 使用由引用设备*pDCRef*参数来记录的解决方法和图片最初出现的设备的单位。 如果*pDCRef*参数是**NULL**，它使用当前的显示设备的引用。  
   
- 左侧和顶部成员`RECT`指向数据结构`lpBounds`参数必须是小于的右侧和底部的成员，分别。 图中包括的矩形的边缘点。 如果`lpBounds`是**NULL**，图形设备接口 (GDI) 计算可以在将应用程序所绘制图的最小矩形的尺寸。 `lpBounds`应提供参数，在可能的情况。  
+ 左侧和顶部成员`RECT`指向数据结构*lpBounds*参数必须是小于的右侧和底部的成员，分别。 图中包括的矩形的边缘点。 如果*lpBounds*是**NULL**，图形设备接口 (GDI) 计算可以在将应用程序所绘制图的最小矩形的尺寸。 *LpBounds*应提供参数，在可能的情况。  
   
- 指向的字符串`lpszDescription`参数必须包含应用程序名称和图片名称之间 null 字符，并且必须具有两个 null 字符终止 — 例如，"XYZ 图形 Editor\0Bald Eagle\0\0，"\0 其中表示 null字符。 如果`lpszDescription`是**NULL**，增强型图元文件标头中没有对应项。  
+ 指向的字符串*lpszDescription*参数必须包含应用程序名称和图片名称之间 null 字符，并且必须具有两个 null 字符终止 — 例如，"XYZ 图形 Editor\0Bald Eagle\0\0，"其中 \0 表示 null 字符。 如果*lpszDescription*是**NULL**，增强型图元文件标头中没有对应项。  
   
  应用程序使用此函数创建的 DC 将图形图片存储在增强型图元文件。 可以向任何 GDI 函数传递标识此 DC 的句柄。  
   
- 应用程序将图片存储在增强型图元文件后，它可以显示图在任何输出设备上通过调用`CDC::PlayMetaFile`函数。 在显示图，Windows 使用指向该矩形`lpBounds`参数和引用设备放置和缩放图中的解析数据。 此函数返回的设备上下文包含相同的默认属性与任何新 DC 相关联。  
+ 应用程序将图片存储在增强型图元文件后，它可以显示图在任何输出设备上通过调用`CDC::PlayMetaFile`函数。 在显示图，Windows 使用指向该矩形*lpBounds*参数和引用设备放置和缩放图中的解析数据。 此函数返回的设备上下文包含相同的默认属性与任何新 DC 相关联。  
   
  应用程序必须使用 Win32 **GetWinMetaFileBits**函数将增强型图元文件转换为较旧的 Windows 图元文件格式。  
   

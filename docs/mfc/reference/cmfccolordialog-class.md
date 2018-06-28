@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367911"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040228"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 类
 `CMFCColorDialog`类表示颜色选择对话框。  
@@ -72,7 +72,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|`TRUE` 如果颜色选择对话框使用其自己的调色板，或`FALSE`如果对话框中使用的调色板中指定`CMFCColorDialog`构造函数。|  
 |`m_bPickerMode`|`TRUE` 虽然用户正在从选择对话框中; 选择一种颜色否则为`FALSE`。|  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clrInit`  
+ [in]*clrInit*  
  默认颜色选择。 如果未不指定任何值，则默认值为 RGB(0,0,0) （黑色）。  
   
- [in] `dwFlags`  
+ [in]*dwFlags*  
  （保留）。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向对话框的父或所有者窗口的指针。  
   
- [in] `hPal`  
+ [in]*hPal*  
  调色板句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rgb`  
+ [in]*rgb*  
  RGB 颜色值  
   
 ### <a name="remarks"></a>备注  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rgb`  
+ [in]*rgb*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，它指定 RGB 颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `R`  
+ [in]*R*  
  指定 RGB 值的红色的组件。  
   
- [in] `G`  
+ [in]*G*  
  指定 RGB 值的绿色的组件。  
   
- [in] `B`  
+ [in]*B*  
  指定 RGB 值的蓝色的组件。  
   
 ### <a name="remarks"></a>备注  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `R`  
+ [in]*R*  
  指定 RGB 值的红色的组件  
   
- [in] `G`  
+ [in]*G*  
  指定 RGB 值的绿色的组件  
   
- [in] `B`  
+ [in]*B*  
  指定 RGB 值的蓝色的组件  
   
 ### <a name="remarks"></a>备注  

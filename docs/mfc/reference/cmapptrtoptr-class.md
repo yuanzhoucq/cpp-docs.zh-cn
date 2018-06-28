@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b3af1336c35fe9520834018d9c668005048db82
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366819"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037749"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 类
 支持 void 指针键控的 void 指针的映射。  
@@ -61,7 +61,7 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>成员  
- 成员函数的`CMapPtrToPtr`类似于类的成员函数[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论您在何处找到作为函数参数的 `CObject` 或返回值，都将替换指向 `void` 的指针。 无论您在何处`CString`或**const**指向`char`作为函数参数或返回值，替换指向`void`。  
+ 成员函数的`CMapPtrToPtr`类似于类的成员函数[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论您在何处`CObject`作为函数参数或返回值的指针替换指向**void**。 无论您在何处`CString`或**const**指向`char`作为函数参数或返回值，替换指向**void**。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371385"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041440"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 类
 表示数据的流 ( `IStream`) 作为 OLE 结构化存储一部分的复合文件中。  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpStream`  
+ *lpStream*  
  指向 OLE 流 ( `IStream`) 与对象相关联。 不能为**NULL**。  
   
 ### <a name="remarks"></a>备注  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpStream`  
+ *lpStream*  
  指向要将与对象相关联的 OLE 流指针。  
   
 ### <a name="remarks"></a>备注  
- 如果`lpStream`是**NULL**、 对象不是与 OLE 流关联，否则，该对象是与提供的 OLE 流相关联。  
+ 如果*lpStream*是**NULL**、 对象不是与 OLE 流关联，否则，该对象是与提供的 OLE 流相关联。  
   
  有关详细信息，请参阅[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pError`  
+ *pError*  
  指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或**NULL** ，该值指示创建操作的完成状态。 如果你想要监视可能尝试创建流的生成的异常，请提供此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpStorage`  
+ *lpStorage*  
  指向包含要创建的流的 OLE 存储对象。 不能为**NULL**。  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  要创建的流的名称。 不能为**NULL**。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  打开流时要使用的访问模式。 独占，读/写和创建模式默认情况下使用。 有关可用的模式的完整列表，请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
- `pError`  
+ *pError*  
  指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或**NULL**。 如果你想要监视可能尝试创建流的生成的异常，请提供此参数。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建流则不为否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果打开失败，则将引发文件异常和`pError`不**NULL**。  
+ 如果打开失败，则将引发文件异常和*pError*不**NULL**。  
   
  有关详细信息，请参阅[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpStorage`  
+ *lpStorage*  
  指向包含要打开的流的 OLE 存储对象。 不能为**NULL**。  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  要打开的流的名称。 不能为**NULL**。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  打开流时要使用的访问模式。 独占和读/写模式默认情况下使用。 有关可用的模式的完整列表，请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
- `pError`  
+ *pError*  
  指向[CFileException](../../mfc/reference/cfileexception-class.md)对象或**NULL**。 如果你想要监视可能由尝试打开流生成的异常，请提供此参数。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则打开流，则非零否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果打开失败，则将引发文件异常和`pError`不**NULL**。  
+ 如果打开失败，则将引发文件异常和*pError*不**NULL**。  
   
  有关详细信息，请参阅[IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
   

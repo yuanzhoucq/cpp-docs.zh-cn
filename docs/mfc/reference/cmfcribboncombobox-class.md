@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371509"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040737"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 类
 `CMFCRibbonComboBox`类实现可以将添加到功能区栏、 功能区面板或功能区弹出菜单的组合框控件。  
@@ -70,7 +70,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|构造 CMFCRibbonComboBox 对象。|  
   
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszItem`  
+ [in]*lpszItem*  
  要添加的项的字符串。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与要添加的项关联的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  组合框的 ID。  
   
- [in] `bHasEditBox`  
+ [in]*bHasEditBox*  
  `TRUE` 如果你想编辑框中，控件;`FALSE`否则为。  
   
- [in] `nWidth`  
+ [in]*nWidth*  
  以像素为单位; 组合框的宽度或-1 表示的默认宽度。  
   
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  组合框显示标签。  
   
- [in] `nImage`  
+ [in]*nImage*  
  组合框的小图像索引。  
   
 ### <a name="remarks"></a>备注  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  要删除的项的从零开始的索引。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与要删除的项关联的数据。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  要删除的项的字符串。 如果有多个具有相同的字符串项，将删除的第一项。  
   
 ### <a name="return-value"></a>返回值  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用调整大小;`FALSE`禁用调整大小。  
   
 ### <a name="remarks"></a>备注  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  列表框中的项的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  组合框的设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nItem`  
+ [in]*nItem*  
  所选的项的索引。  
   
 ### <a name="remarks"></a>备注  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
  列表框中的项的从零开始索引。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与列表框中的项关联的数据。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  列表框中的项的字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nHeight`  
+ [in]*nHeight*  
  以像素为单位，列表框的高度。  
   
 ### <a name="remarks"></a>备注  

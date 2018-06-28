@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374034"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038885"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 提供 Windows 多文档界面 (MDI) 框架窗口功能，并提供管理窗口的成员。  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  您可以通过调用构造 MDI 框架窗口[创建](../../mfc/reference/cframewnd-class.md#create)或[LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)成员函数`CFrameWnd`。  
   
- 在调用之前**创建**或`LoadFrame`，您必须先构造使用 c + + 堆上的框架窗口对象**新**运算符。 之前调用**创建**还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数，若要设置帧的图标和类样式。  
+ 在调用之前`Create`或`LoadFrame`，您必须先构造使用 c + + 堆上的框架窗口对象**新**运算符。 之前调用`Create`还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数，若要设置帧的图标和类样式。  
   
- 使用**创建**成员函数将为快速的自变量传递帧的创建参数。  
+ 使用`Create`成员函数将为快速的自变量传递帧的创建参数。  
   
- `LoadFrame` 需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 为可供`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要更少的自变量比`Create`，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 为可供`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
   
  尽管**MDIFrameWnd**派生自`CFrameWnd`，框架窗口类派生自`CMDIFrameWnd`不需要使用声明`DECLARE_DYNCREATE`。  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>备注  
- 调用**创建**或`LoadFrame`成员函数来创建可见的 MDI 框架窗口。  
+ 调用`Create`或`LoadFrame`成员函数来创建可见的 MDI 框架窗口。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  指向的长指针[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构。  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  指向窗口弹出菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClass`  
+ *pClass*  
  要创建的子窗口运行时类。  
   
  *nResource*  
  与子窗口关联的共享资源的 ID。  
   
- `hMenu`  
+ *hMenu*  
  子窗口的菜单。  
   
- `hAccel`  
+ *hAccel*  
  子窗口的快捷键。  
   
 ### <a name="remarks"></a>备注  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nType`  
+ *nType*  
  指定级联标志。 可以指定仅以下标志： `MDITILE_SKIPDISABLED`，从而防止已禁用的 MDI 子窗口正在级联。  
   
 ### <a name="remarks"></a>备注  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向窗口将最大化。  
   
 ### <a name="remarks"></a>备注  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向要还原的窗口。  
   
 ### <a name="example"></a>示例  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  指定新的框架窗口菜单的菜单。 如果**NULL**，菜单不会更改。  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  指定新的窗口弹出菜单的菜单。 如果**NULL**，菜单不会更改。  
   
 ### <a name="return-value"></a>返回值  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nType`  
+ *nType*  
  指定一个平铺标志。 此参数可以是任何一种以下标志：  
   
 - `MDITILE_HORIZONTAL` 磁贴 MDI 子窗口使该窗口显示上面另一个。  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` 磁贴 MDI 子窗口以便该窗口显示另一个的旁边。  
   
 ### <a name="remarks"></a>备注  
- 第一个版本`MDITile`，不带参数，平铺窗口垂直下 Windows 版本 3.1 和更高版本。 第二个版本平铺窗口垂直或水平，具体取决于值`nType`参数。  
+ 第一个版本`MDITile`，不带参数，平铺窗口垂直下 Windows 版本 3.1 和更高版本。 第二个版本平铺窗口垂直或水平，具体取决于值*nType*参数。  
   
 ### <a name="example"></a>示例  
  请参阅示例[CMDIFrameWnd::MDICascade](#mdicascade)。  

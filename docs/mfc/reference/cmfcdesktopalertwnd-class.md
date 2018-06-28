@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370651"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039981"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`类实现的无模式对话框中显示的功能在屏幕上以通知用户有关的事件。  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pWndOwner`  
+ [in][out]*pWndOwner*  
  指定的通知窗口的所有者。 然后，该所有者将收到在桌面警报窗口的所有的通知。 此值不能为 `NULL`。  
   
- [in] `uiDlgResID`  
+ [in]*uiDlgResID*  
  指定通知窗口的资源的 ID。  
   
- [in] `hMenu`  
+ [in]*hMenu*  
  指定当用户单击的菜单按钮时显示的菜单。 如果`NULL`，不显示的菜单按钮。  
   
- [in] `ptPos`  
+ [in]*ptPos*  
  指定通知窗口的显示位置的初始位置，则使用屏幕坐标。 如果此参数为 （-1，则为-1），通知窗口被显示在屏幕右下角。  
   
- [in] `pRTIDlgBar`  
+ [in]*pRTIDlgBar*  
  介绍通知窗口的工作区的自定义的对话框类的运行时类信息。  
   
- [in] `params`  
+ [in]*params*  
  指定用于创建警报的窗口的参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CPoint&`  
+ [in]*CPoint （& a)*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wParam`  
- [in] `lParam`  
+ [in]*wParam*  
+ [in]*lParam*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hwnd`  
+ [in]*hwnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nSpeed`  
+ [in]*nSpeed*  
  指定新动画速度，以毫秒为单位。  
   
 ### <a name="remarks"></a>备注  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `type`  
+ [in]*类型*  
  指定动画类型。  
   
 ### <a name="remarks"></a>备注  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTime`  
+ [in]*nTime*  
  经过通知窗口自动关闭之前的时间，以毫秒为单位。  
   
 ### <a name="remarks"></a>备注  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSmallCaption`  
+ [in]*bSmallCaption*  
  `TRUE` 若要指定通知窗口显示小标题;否则为`FALSE`指定通知窗口显示常规大小标题。  
   
 ### <a name="remarks"></a>备注  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTransparency`  
+ [in]*nTransparency*  
  指定透明度级别。 此值必须介于 0 和 255，（含) 之间。 值越大，详细的不透明窗口。  
   
 ### <a name="remarks"></a>备注  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368795"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037956"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 A`CMFCReBar`对象是提供布局、 持久性和 rebar 控件的状态信息的控件条。  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pBar`  
+ [in][out]*pBar*  
  指向要插入到 rebar 的子窗口的指针。 被引用的对象必须具有**WS_CHILD**窗口样式。  
   
- [in] `pszText`  
+ [in]*pszText*  
  指定要显示在 rebar 上的文本。 文本不是子窗口的一部分。 相反，它将显示在 rebar 本身。  
   
- [in][out] `pbmp`  
+ [in][out]*pbmp*  
  指定要 rebar 背景上显示的位图。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  包含要应用到带区的样式。 带样式的完整列表，请参见的说明`fStyle`中[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK 文档中的结构。  
   
- [in] `clrFore`  
+ [in]*clrFore*  
  表示 rebar 的前景色。  
   
- [in] `clrBack`  
+ [in]*clrBack*  
  表示 rebar 的背景色。  
   
 ### <a name="return-value"></a>返回值  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指向此 rebar 控件的父窗口的指针。  
   
- [in] `dwCtrlStyle`  
+ [in]*dwCtrlStyle*  
  指定 rebar 控件的样式。 默认样式值是**RBS_BANDBORDERS**，后者显示缩小行来分隔相邻带，可在 rebar 控件。 有关有效的样式的列表，请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 文档中。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  Rebar 控件的窗口样式。 有关有效的样式的列表，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `nID`  
+ [in]*nID*  
  Rebar 的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
 ### <a name="remarks"></a>备注  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CPoint`  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
- [in] `pTI`  
+ [in]*点*  
+ [in]*pTI*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>备注  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwAlignment`  
+ [in]*dwAlignment*  
   
 ### <a name="remarks"></a>备注  
   

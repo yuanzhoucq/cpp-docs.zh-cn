@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370375"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040020"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 类
 应用程序就地编辑窗口的基。  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpPosRect`  
+ *lpPosRect*  
  指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前位置坐标，以像素为单位，相对于工作区。  
   
- `lpClipRect`  
+ *lpClipRect*  
  指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前剪辑矩形坐标，以像素为单位，相对于工作区。  
   
 ### <a name="remarks"></a>备注  

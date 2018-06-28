@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376702"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038547"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 类
 充当应用程序将数据放置到的缓存，应用程序将在数据传输操作（如剪贴板或拖放操作）期间提供这些数据。  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  剪贴板格式是用来提供数据。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它包含指定的格式中的数据。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="remarks"></a>备注  
  您必须提供数据，因为通过使用即时呈现的此函数提供它。 直到您需要缓存数据。  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  剪贴板格式是用来提供数据。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
  *hGlobal*  
  包含指定的格式中的数据的全局内存块的句柄。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="remarks"></a>备注  
  此函数提供了使用即时呈现，因此调用函数; 时，必须提供数据的数据直到您需要缓存数据。 使用`CacheData`成员函数，如果你所提供的大量数据或者如果您需要的结构化的存储介质。  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  剪贴板格式是用来提供数据。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="remarks"></a>备注  
  此函数提供了使用延迟呈现，以便不立即提供数据的数据。 [OnRenderData](#onrenderdata)或[OnRenderGlobalData](#onrenderglobaldata)成员函数调用以请求数据。  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  剪贴板格式是用来提供数据。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用来提供数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="remarks"></a>备注  
  此函数提供了使用延迟呈现，以便不立即提供数据的数据。 [OnRenderFileData](#onrenderfiledata)成员函数调用以请求数据。  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  将用用于放置数据剪贴板格式。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述在其中的数据是要替换的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述在其中的数据是要替换的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="remarks"></a>备注  
  [OnSetData](#onsetdata)这种情况下将由框架调用。 这仅框架返回的数据源时使用[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`不调用，你`OnSetData`永远不会调用函数。 `DelaySetData` 应该为每个剪贴板调用或**FORMATETC**你支持的格式。  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwEffects`  
+ *dwEffects*  
  拖放操作允许对此数据源。 可以是一个或多个以下：  
   
 - `DROPEFFECT_COPY` 无法执行复制操作。  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` 表示可能发生拖动滚动操作。  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  指向定义拖动实际开始的矩形的指针。 有关更多信息，请参见下面的“备注”部分。  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  删除由拖放操作; 生成的影响否则为`DROPEFFECT_NONE`如果永远不会操作从开始是因为用户在离开所提供的矩形之前释放鼠标按钮。  
   
 ### <a name="remarks"></a>备注  
- 拖放操作不会立即开始。 它等待，直到鼠标光标离开由指定的矩形`lpRectStartDrag`或之前已通过指定的毫秒数。 如果`lpRectStartDrag`是**NULL**，矩形的大小是一个像素。  
+ 拖放操作不会立即开始。 它等待，直到鼠标光标离开由指定的矩形*lpRectStartDrag*或之前已通过指定的毫秒数。 如果*lpRectStartDrag*是**NULL**，矩形的大小是一个像素。  
   
  注册表项设置由指定的延迟时间。 你可以通过调用来更改的延迟时间[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果未指定的延迟时间，使用默认值为 200 毫秒。 拖动延迟时间存储中，如下所示：  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中请求信息的格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)是用要返回的数据的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>备注  
  指定的格式是以前放置在`COleDataSource`对象使用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)延迟呈现的成员函数。 此函数的默认实现将调用[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)是否提供的存储媒体文件或内存，分别。 如果提供了这些格式任一，默认实现将返回 0 并不执行任何操作。 有关详细信息延迟呈现处理的 MFC，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 如果`lpStgMedium` ->  *tymed*是**TYMED_NULL**、 **STGMEDIUM**应分配和指定的填充*lpFormatEtc->tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**应填充了具有数据的位置。  
+ 如果*lpStgMedium*-> *tymed*是**TYMED_NULL**、 **STGMEDIUM**应分配并填充为指定的*lpFormatEtc-> tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**应填充了具有数据的位置。  
   
  这是一个高级可重写。 重写此函数可提供的请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你的数据较小，而且固定大小，重写`OnRenderGlobalData`。 如果你的数据是在文件中，或者是大小可变的重写`OnRenderFileData`。  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中请求信息的格式。  
   
- `pFile`  
+ *pFile*  
  指向[CFile](../../mfc/reference/cfile-class.md)对象是用要呈现的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中请求信息的格式。  
   
- `phGlobal`  
+ *phGlobal*  
  指向全局内存在其中的数据是要返回的句柄。 如果一个尚未尚未分配，此参数可以为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>备注  
  指定的格式是以前放置在`COleDataSource`对象使用[DelayRenderData](#delayrenderdata)延迟呈现的成员函数。 此函数的默认实现只返回**FALSE**。  
   
- 如果`phGlobal`是**NULL**，然后新`HGLOBAL`应分配，并且在返回`phGlobal`。 否则为`HGLOBAL`指定的`phGlobal`应已填满数据。 数据量置于`HGLOBAL`不能超过内存块的当前大小。 此外，块不能重新分配给了更大的大小。  
+ 如果*phGlobal*是**NULL**，然后新`HGLOBAL`应分配，并且在返回*phGlobal*。 否则为`HGLOBAL`指定的*phGlobal*应已填满数据。 数据量置于`HGLOBAL`不能超过内存块的当前大小。 此外，块不能重新分配给了更大的大小。  
   
  这是一个高级可重写。 重写此函数可提供的请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你想要处理多个存储媒体，重写[OnRenderData](#onrenderdata)。 如果你的数据是在文件中，或者是大小可变的重写[OnRenderFileData](#onrenderfiledata)。 有关详细信息延迟呈现处理的 MFC，请参阅文章[数据对象和数据源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构，它指定在其中替换数据的格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)结构，它包含的数据将替换的当前内容`COleDataSource`对象。  
   
- `bRelease`  
- 指示有完成函数调用后的存储介质的所有权。 调用方决定谁负责释放代表的存储介质分配的资源。 通过设置的调用方执行此`bRelease`。 如果`bRelease`为非零值，数据源将获得所有权，释放该媒体，使用它完成。 当`bRelease`为 0，调用方保留所有权并且数据源可以仅为在调用期间使用的存储介质。  
+ *bRelease*  
+ 指示有完成函数调用后的存储介质的所有权。 调用方决定谁负责释放代表的存储介质分配的资源。 通过设置的调用方执行此*bRelease*。 如果*bRelease*为非零值，数据源将获得所有权，释放该媒体，使用它完成。 当*bRelease*为 0，调用方保留所有权并且数据源可以仅为在调用期间使用的存储介质。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  

@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377857"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039318"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 类
 实现 Office 2007 样式功能区库。  
@@ -150,7 +150,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|在库中定义的每行的项数。|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|设置库中的项的工具提示文本。|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|将调色板附加到功能区库。|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|定义中未发送的命令 ID`WM_COMMAND`消息时已选择的库项。|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|定义当选择了一个库项时 WM_COMMAND 消息中发送的命令 ID。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
@@ -159,7 +159,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|绘制库图标时，由框架调用。|  
   
 ## <a name="remarks"></a>备注  
- 库按钮行为就像常规菜单按钮，只不过它将显示一个库，当用户打开它。 当在库中选择一个项时，框架会将发送`WM_COMMAND`以及按钮的命令 ID 的消息。 在处理消息时，应调用[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)以确定已从库选择哪一项。  
+ 库按钮行为就像常规菜单按钮，只不过它将显示一个库，当用户打开它。 在库中选择一个项，框架将以及按钮的命令 ID 的 WM_COMMAND 消息发送。 在处理消息时，应调用[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)以确定已从库选择哪一项。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用各种方法`CMFCRibbonGallery`用于配置类`CMFCRibbonGallery`对象。 该示例说明如何在库中指定每个行项的数目、 启用菜单面板的调整大小、 启用弹出菜单中，左侧的栏和显示功能区库为直接在功能区栏上的调色板。 此代码片段属于 [Draw Client 示例](../../visual-cpp-samples.md)。  
@@ -195,19 +195,19 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszGroupName`  
+ [in]*lpszGroupName*  
  指定组的名称。  
   
- [in] `uiImagesPaletteResID`  
+ [in]*uiImagesPaletteResID*  
  指定包含组的图像的图像列表的资源 ID。  
   
- [in] `cxPaletteImage`  
+ [in]*cxPaletteImage*  
  指定以像素为单位的图像的宽度。  
   
- [in] `imagesGroup`  
+ [in]*imagesGroup*  
  对包含组图像的图像列表的引用。  
   
- [in] `nIconsNum`  
+ [in]*nIconsNum*  
  指定组中的图标的数目。 应仅为自定义 （所有者描述的） 指定此参数组。  
   
 ### <a name="remarks"></a>备注  
@@ -224,22 +224,22 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pSubItem`  
+ [in]*pSubItem*  
  指向要添加到菜单项的指针。  
   
- [in] `nIndex`  
+ [in]*nIndex*  
  指定位置的从零开始的索引位置插入项。  
   
- [in] `bOnTop`  
+ [in]*bOnTop*  
  `TRUE` 若要指定在功能区库; 之前，应插入项否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  可以通过调用此方法与弹出菜单项一起组合弹出库。 之前或之后库，可以放置菜单项。  
   
- 若要插入库之前的项，设置`bOnTop`到`TRUE`。 设置`bOnTop`到`FALSE`来插入下面库项。  
+ 若要插入库之前的项，设置*bOnTop*到`TRUE`。 设置*bOnTop*到`FALSE`来插入下面库项。  
   
 > [!NOTE]
->  参数`nIndex`指定插入索引在库的顶部和底部的库。 例如，如果需要插入之前库项一个位置，则设置`nIndex`为 1 和`bOnTop`到`TRUE`。 同样，如果需要插入下面库项一个位置，则设置`nIndex`为 1 和`bOnTop`到`FALSE`。  
+>  参数*nIndex*指定插入索引在库的顶部和底部的库。 例如，如果需要插入之前库项一个位置，则设置*nIndex*为 1 和*bOnTop*到`TRUE`。 同样，如果需要插入下面库项一个位置，则设置*nIndex*为 1 和*bOnTop*到`FALSE`。  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  清除库的内容。  
@@ -283,34 +283,34 @@ CMFCRibbonGallery (
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  指定要在用户单击按钮时执行的命令的命令 ID。  
   
- `lpszText`  
+ *lpszText*  
  指定要在按钮上显示的文本。  
   
- `nSmallImageIndex`  
+ *nSmallImageIndex*  
  要在按钮上显示的小图像的从零开始的索引。  
   
- `nLargeImageIndex`  
+ *nLargeImageIndex*  
  要在按钮上显示的大图像的从零开始的索引。  
   
- `imagesPalette`  
+ *imagesPalette*  
  对引用[CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md)对象，其中包含要在库上显示的图像。  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  要在库中显示的图像列表的资源 ID。  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  指定宽度，以像素为单位，库上的映像。  
   
- `sizeIcon`  
+ *sizeIcon*  
  指定的大小，以像素为单位的库映像。  
   
- `nIconsNum`  
+ *nIconsNum*  
  在库中指定图标的数目。  
   
- `bDefaultButtonStyle`  
+ *bDefaultButtonStyle*  
  指定是否使用默认值或所有者描述的按钮样式。  
   
 ### <a name="remarks"></a>备注  
@@ -325,10 +325,10 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用调整大小菜单;否则为`FALSE`。  
   
- [in] `bVertcalOnly`  
+ [in]*bVertcalOnly*  
  `TRUE` 若要指定可仅垂直; 调整库`FALSE`来指定库可以调整大小同时垂直和水平方向。  
   
 ### <a name="remarks"></a>备注  
@@ -342,7 +342,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要指定侧栏启用了;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -381,7 +381,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroupIndex`  
+ [in]*nGroupIndex*  
  指定组你想要检索其名称的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -420,7 +420,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nItemIndex`  
+ [in]*nItemIndex*  
  指定为其检索工具提示文本的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -436,11 +436,11 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  指定的菜单项，打开功能区库的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
- 当用户在功能区库中选择任何项时，库将发送`WM_COMMAND`以及打开功能区库菜单按钮的命令 ID 的消息。  
+ 当用户在功能区库中选择任何项时，则库将发送以及打开功能区库菜单按钮的命令 ID 的 WM_COMMAND 消息。  
   
 ### <a name="remarks"></a>备注  
   
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -559,7 +559,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -576,19 +576,19 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向用于绘图的设备上下文的指针。  
   
- [in] `rectIcon`  
+ [in]*rectIcon*  
  指定要绘制的图标的边框。  
   
- [in] `nIconIndex`  
+ [in]*nIconIndex*  
  库图标，图标以绘制的图像列表中指定的从零开始的索引。  
   
- [in] `pIcon`  
+ [in]*pIcon*  
  指向正在绘制的图标的指针。  
   
- [in] `clrText`  
+ [in]*clrText*  
  指定要绘制的项文本的颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
   
 ### <a name="remarks"></a>备注  
   
@@ -614,7 +614,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsRTL`  
+ [in]*bIsRTL*  
   
 ### <a name="remarks"></a>备注  
   
@@ -645,7 +645,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nItemIndex`  
+ [in]*nItemIndex*  
   
 ### <a name="remarks"></a>备注  
   
@@ -659,10 +659,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
  功能区库窗口中的父窗口。  
   
- [out] `data`  
+ [out]*数据*  
  一个 `CAccessibilityData` 对象，该对象从功能区库接收可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -678,7 +678,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 要将功能区库显示为下拉列表菜单按钮;`FALSE`直接在功能区上显示的功能区库的内容。  
   
 ### <a name="remarks"></a>备注  
@@ -693,10 +693,10 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nGroupIndex`  
+ [in]*nGroupIndex*  
  指定的名称更改的组的从零开始索引。  
   
- [in] `lpszGroupName`  
+ [in]*lpszGroupName*  
  指定组的新名称。  
   
 ### <a name="remarks"></a>备注  
@@ -710,7 +710,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIconsInRow`  
+ [in]*nIconsInRow*  
  指定库的每一行中显示的项数。  
   
 ### <a name="remarks"></a>备注  
@@ -726,10 +726,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nItemIndex`  
+ [in]*nItemIndex*  
  要与关联的工具提示调色板项的从零开始索引。  
   
- [in] `lpszToolTip`  
+ [in]*lpszToolTip*  
  要在工具提示上显示的文本。  
   
 ### <a name="remarks"></a>备注  
@@ -747,27 +747,27 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `imagesPalette`  
+ [in]*imagesPalette*  
  指定包含要在库上显示的图标的图像列表。  
   
- [in] `uiImagesPaletteResID`  
+ [in]*uiImagesPaletteResID*  
  指定包含要在库上显示的图标的图像列表的资源 ID。  
   
- [in] `cxPaletteImage`  
+ [in]*cxPaletteImage*  
  指定宽度，以像素为单位库上的图像。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- 定义中未发送的命令 ID **WM_COMMAND**消息时用户选择的库项。  
+ 定义当用户选择的库项时 WM_COMMAND 消息中发送的命令 ID。  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
- 指定发送中的命令 ID **WM_COMMAND**消息时用户选择的库项。  
+ [in]*nID*  
+ 指定当用户选择的库项时 WM_COMMAND 消息中发送的命令 ID。  
   
 ### <a name="remarks"></a>备注  
  若要确定用户选择了库中的特定项，请调用[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)静态方法。  

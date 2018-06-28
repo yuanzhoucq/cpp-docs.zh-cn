@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bcac3c7ce4658ec7dafeaa1cac45b5f2450298
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370729"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040189"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 结构
 `CODBCFieldInfo`结构包含有关 ODBC 数据源中的字段的信息。  
@@ -41,7 +41,7 @@ struct CODBCFieldInfo
 ```  
   
 #### <a name="parameters"></a>参数  
- `m_strName`  
+ *m_strName*  
  字段的名称。  
   
  *m_nSQLType*  

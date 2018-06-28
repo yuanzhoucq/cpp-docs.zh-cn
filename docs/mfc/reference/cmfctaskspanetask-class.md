@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371327"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040696"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 类
 `CMFCTasksPaneTask`类是一个帮助器类，表示任务窗格控件任务的 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 任务对象表示任务组中的项 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。  
@@ -73,7 +73,7 @@ class CMFCTasksPaneTask : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|确定是否自动销毁任务窗口。|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|确定是否框架在绘制任务标签中显示为粗体文本。|  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroup`  
+ *pGroup*  
  指定[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)任务所属。  
   
- `lpszName`  
+ *在 lpszName*  
  指定任务的名称。  
   
- `nIcon`  
+ *nIcon*  
  图像列表中指定该任务的映像的索引。  
   
- `uiCommandID`  
+ *uiCommandID*  
  指定当任务被单击时执行的命令的命令 ID。  
   
- `dwUserData`  
+ *dwUserData*  
  用户定义的数据。  
   
- `hwndTask`  
+ *hwndTask*  
  指定任务窗口的句柄。  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  如果`TRUE`，任务窗口将自动销毁。  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  指定的任务窗口的高度。  
   
 ### <a name="remarks"></a>备注  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
  表示当前任务的父窗口。  
   
- [out] `data`  
+ [out]*数据*  
  类型的对象`CAccessibilityData`填充当前任务可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`data`参数已成功填充了当前任务可访问性数据; 否则为`FALSE`。  
+ `TRUE` 如果*数据*参数已成功填充了当前任务可访问性数据; 否则为`FALSE`。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

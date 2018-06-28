@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369224"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037264"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 类
 表示数据的流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 通过名为[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
@@ -113,7 +113,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pError`  
+ *pError*  
  指向文件异常的指针。 发生错误，必须先将它设置为可能的原因。  
   
 ### <a name="return-value"></a>返回值  
@@ -130,7 +130,7 @@ BOOL Detach(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pError`  
+ *pError*  
  指向文件异常的指针。 发生错误，必须先将它设置为可能的原因。  
   
 ### <a name="return-value"></a>返回值  
@@ -164,22 +164,22 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszURL`  
+ *lpszURL*  
  URL 或要打开的文件的文件名。  
   
- `pError`  
+ *pError*  
  指向文件异常的指针。 发生错误，必须先将它设置为可能的原因。  
   
- `pMoniker`  
+ *pMoniker*  
  指向名字对象接口的指针`IMoniker`用于获取的流。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `lpszURL`参数不能用于在 Macintosh 上。 仅`pMoniker`形式**打开**可以在 Macintosh 上使用。  
+ *LpszURL*参数不能用于在 Macintosh 上。 仅*pMoniker*形式**打开**可以在 Macintosh 上使用。  
   
- 你可以使用 URL 或文件名`lpszURL`参数。 例如：  
+ 你可以使用 URL 或文件名*lpszURL*参数。 例如：  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

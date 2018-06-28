@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378676"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042259"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 `CMFCRibbonBaseElement`类是你可以将其添加到的所有元素的基类[功能区栏](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `arElems`  
+ [in]*arElems*  
  引用[CArray](../../mfc/reference/carray-class.md)的键提示。  
   
 ### <a name="remarks"></a>备注  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndListBox`  
+ [in]*pWndListBox*  
  改为命令列表框的指针。  
   
- [in] `bDeep`  
+ [in]*bDeep*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
  源[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `type`  
+ [in]*类型*  
  图像类型枚举值。 请参阅可能的值列表的备注的部分。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  映像矩形中。  
   
 ### <a name="remarks"></a>备注  
  默认情况下此方法没有任何影响。 重写此方法在派生类以绘制功能区元素的图像。  
   
- 下表列出可能值`type`参数：  
+ 下表列出可能值*类型*参数：  
   
  `RibbonImageLarge`  
  大型 32 x 32 像素的图像大小。  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElement`  
+ [in]*pElement*  
  指向功能区元素的指针。  
   
 ### <a name="return-value"></a>返回值  
- 指向功能区元素的指针如果`pElement`指向当前对象; 否则为`NULL`。  
+ 指向功能区元素的指针如果*pElement*指向当前对象; 否则为`NULL`。  
   
 ### <a name="remarks"></a>备注  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwData`  
+ [in]*dwData*  
  与功能区元素关联的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  功能区元素的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pOriginal`  
+ [in]*pOriginal*  
  指向功能区元素的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `arElements`  
+ [在中，out]*arElements*  
  功能区元素的数组。  
   
 ### <a name="remarks"></a>备注  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  命令 ID 的功能区元素。  
   
- [in] `arElements`  
+ [in]*arElements*  
  功能区元素的数组。  
   
 ### <a name="remarks"></a>备注  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `bIsMenu`  
+ [in]*bIsMenu*  
  `TRUE` 如果功能区元素显示弹出菜单;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -825,7 +825,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="return-value"></a>返回值  
  A`RibbonElementLocation`枚举值。 下表列出可能的值。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|功能区元素不包含在功能区组。|  
 |`RibbonElementSingleInGroup`|功能区元素显示为功能区组中的唯一项目。|  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nDelay`  
+ [in]*nDelay*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bWithDelay`  
+ [in]*bWithDelay*  
  `TRUE` 若要向父窗口中; 消息队列中添加命令通知`FALSE`立即将消息发送到父窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  列表中的功能区元素的索引。  
   
 ### <a name="remarks"></a>备注  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `qat`  
+ [in]*qat*  
  快速访问工具栏中。  
   
 ### <a name="return-value"></a>返回值  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pPanelMenuBar`  
+ [in]*pPanelMenuBar*  
  未使用此参数。  
   
- [in] `pHot`  
+ [in]*pHot*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  快捷键提示的边界矩形。  
   
- [in] `bIsMenu`  
+ [in]*bIsMenu*  
  `TRUE` 如果快捷键提示适用于弹出菜单按钮;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  菜单图像的矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的功能区元素的指针。  
   
- [in] `strText`  
+ [in]*strText*  
  显示文本。  
   
- [in] `nTextOffset`  
+ [in]*nTextOffset*  
  距离，以像素为单位，从左侧的列表框中为显示文本内容。  
   
- [in] `rect`  
+ [in]*rect*  
  功能区元素显示矩形。  
   
- [in] `bIsSelected`  
+ [in]*bIsSelected*  
  未使用此参数。  
   
- [in] `bHighlighted`  
+ [in]*bHighlighted*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsMenuKey`  
+ [in]*bIsMenuKey*  
  `TRUE` 如果快捷键提示显示弹出菜单;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nUpperChar`  
+ [in]*nUpperChar*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nChar`  
+ [in]*nChar*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsRTL`  
+ [in]*bIsRTL*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  未使用此参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdId`  
+ [in]*uiCmdId*  
  不使用参数。  
   
 ### <a name="remarks"></a>备注  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParent`  
+ *pParent*  
  功能区元素的父窗口。  
   
- `data`  
+ *data*  
  功能区元素的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bCompactMode`  
+ [in]*bCompactMode*  
  `TRUE` 若要减少的功能区元素; 的显示大小`FALSE`增加的功能区元素的显示大小。  
   
 ### <a name="remarks"></a>备注  
  下表总结了此方法的逻辑。  
   
-|`bCompactMode`|当前功能区元素大小|新的功能区元素大小|  
+|*bCompactMode*|当前功能区元素大小|新的功能区元素大小|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|压缩|没有变化。|  
 |`TRUE`|中间|如果有可能进行压缩。|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwData`  
+ [in]*dwData*  
  数据值。  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsDefaultMenuLook`  
+ [in]*bIsDefaultMenuLook*  
  `TRUE` 若要设置功能区元素显示为弹出命令;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  功能区元素说明。  
   
 ### <a name="remarks"></a>备注  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  命令 ID。  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bOneRow`  
+ [in]*bOneRow*  
  `TRUE` 若要限制要压缩或中间; 的功能区元素的显示大小否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszKeys`  
+ [in]*lpszKeys*  
  上方功能区元素的键提示。  
   
- [in] `lpszMenuKeys`  
+ [in]*lpszMenuKeys*  
  功能区元素的弹出菜单的快捷键提示。  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pOriginal`  
+ [in]*pOriginal*  
  指向功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
  指向功能区类别的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenuBar`  
+ [in]*pMenuBar*  
  父菜单中。  
   
 ### <a name="remarks"></a>备注  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRibbonBar`  
+ [in]*pRibbonBar*  
  指向父功能区栏的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rect`  
+ [in]*rect*  
  矩形的尺寸。  
   
 ### <a name="remarks"></a>备注  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  文本和上方功能区元素的键提示。  
   
 ### <a name="remarks"></a>备注  
- 若要设置上方功能区元素的键提示，追加到的快捷键提示字符后跟换行符转义序列`lpszText`。  
+ 若要设置上方功能区元素的键提示，追加到的快捷键提示字符后跟换行符转义序列*lpszText*。  
   
 ### <a name="example"></a>示例  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 若要显示的文本，右侧;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  工具提示文本中。  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsVisible`  
+ [in]*bIsVisible*  
  `TRUE` 若要显示的功能区元素;`FALSE`隐藏功能区元素。  
   
 ### <a name="remarks"></a>备注  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  未使用此参数。  
   
- [in] `nHeight`  
+ [in]*nHeight*  
  行的高度。  
   
 ### <a name="return-value"></a>返回值  

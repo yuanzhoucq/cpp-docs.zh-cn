@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239419"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039149"
 ---
 # <a name="cmap-class"></a>CMap 类
 将唯一键映射到值的字典集合类。  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>参数  
- `KEY`  
+ *KEY*  
  用作到映射的键的对象类。  
   
- `ARG_KEY`  
- 数据类型用于`KEY`自变量; 通常指`KEY`。  
+ *ARG_KEY*  
+ 数据类型用于*密钥*自变量; 通常指*密钥*。  
   
- `VALUE`  
+ *值*  
  存储在映射中的对象类。  
   
- `ARG_VALUE`  
- 数据类型用于`VALUE`自变量; 通常指`VALUE`。  
+ *ARG_VALUE*  
+ 数据类型用于*值*自变量; 通常指*值*。  
   
 ## <a name="members"></a>成员  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
+ *nBlockSize*  
  指定扩展映射的内存分配粒度。  
   
 ### <a name="remarks"></a>备注  
- 随着映射后，内存分配的单位`nBlockSize`条目。  
+ 随着映射后，内存分配的单位*nBlockSize*条目。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rNextPosition`  
+ *rNextPosition*  
  指定对引用**位置**通过前一个返回值`GetNextAssoc`或`GetStartPosition`调用。  
   
  *KEY*  
  指定地图的键的类型的模板参数。  
   
- `rKey`  
+ *rKey*  
  指定检索的元素返回的密钥。  
   
  *值*  
  指定地图的值的类型的模板参数。  
   
- `rValue`  
+ *rValue*  
  指定检索的元素的返回的值。  
   
 ### <a name="remarks"></a>备注  
  此函数是最适用于循环访问映射中的所有元素。 请注意，位置序列不一定是相同的密钥值序列。  
   
- 如果检索的元素的是在映射中，最后然后的新值`rNextPosition`设置为**NULL**。  
+ 如果检索的元素的是在映射中，最后然后的新值*rNextPosition*设置为**NULL**。  
   
 ### <a name="example"></a>示例  
  请参阅示例[CMap::SetAt](#setat)。  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hashSize`  
+ *hashSize*  
  哈希表中的条目数。  
   
- `bAllocNow`  
+ *bAllocNow*  
  如果**TRUE**，分配哈希表初始化; 在需要时否则分配表。  
   
 ### <a name="remarks"></a>备注  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_KEY`  
- 指定的类型的模板参数`key`值。  
+ *ARG_KEY*  
+ 指定的类型的模板参数*密钥*值。  
   
- `key`  
+ *key*  
  指定标识要查找的元素的键。  
   
  *值*  
  指定要查找的值的类型。  
   
- `rValue`  
+ *rValue*  
  接收的查阅到值。  
   
 ### <a name="return-value"></a>返回值  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *值*  
  指定的映射值的类型的模板参数。  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  指定的密钥值的类型的模板参数。  
   
- `key`  
+ *key*  
  用于从映射中检索的值的键。  
   
 ### <a name="remarks"></a>备注  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- 检索指向的地图元素`pAssocRec`。  
+ 检索指向的地图元素*pAssocRec*。  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>参数  
- `key`  
+ *key*  
  要搜索的元素键。  
   
 ### <a name="return-value"></a>返回值  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_KEY`  
+ *ARG_KEY*  
  指定的键类型的模板参数。  
   
- `key`  
+ *key*  
  要移除的元素键。  
   
 ### <a name="return-value"></a>返回值  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_KEY`  
- 指定的类型的模板参数`key`参数。  
+ *ARG_KEY*  
+ 指定的类型的模板参数*密钥*参数。  
   
- `key`  
+ *key*  
  指定新元素的键。  
   
- `ARG_VALUE`  
- 指定的类型的模板参数`newValue`参数。  
+ *ARG_VALUE*  
+ 指定的类型的模板参数*newValue*参数。  
   
- `newValue`  
+ *newValue*  
  指定新的元素的值。  
   
 ### <a name="remarks"></a>备注  

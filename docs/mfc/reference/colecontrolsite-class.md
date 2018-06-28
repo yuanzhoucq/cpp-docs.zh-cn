@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377805"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040868"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 类
 提供自定义客户端控件接口支持。  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|控件所在位置的尺寸。|  
   
 ## <a name="remarks"></a>备注  
- 此支持并依据嵌入的 ActiveX 控件获取信息的位置和其显示站点、 其名字对象，其用户界面，其环境属性和由其容器提供其他资源的范围的主要方式。 `COleControlSite` 完全实现[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， **IBoundObjectSite**， **INotifyDBEvents**， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)接口。 此外，还实现 IDispatch 接口 （为环境属性和事件接收器中提供支持）。  
+ 此支持并依据嵌入的 ActiveX 控件获取信息的位置和其显示站点、 其名字对象，其用户界面，其环境属性和由其容器提供其他资源的范围的主要方式。 `COleControlSite` 完全实现[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， `IBoundObjectSite`，`INotifyDBEvents`， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)接口。 此外，还实现 IDispatch 接口 （为环境属性和事件接收器中提供支持）。  
   
  若要创建 ActiveX 控件站点使用`COleControlSite`，从派生类`COleControlSite`。 在你`CWnd`-容器 （例如，对话框中） 的派生的类重写**CWnd::CreateControlSite**函数。  
   
@@ -231,16 +231,16 @@ virtual void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  指定**DISPID**上要绑定到数据源控件的数据绑定控件的属性。  
   
- `vtProp`  
- 指定要绑定的属性的类型-例如， `VT_BSTR`， **VT_VARIANT**，依次类推。  
+ *vtProp*  
+ 指定要绑定的属性的类型-例如， **VT_BSTR**， **VT_VARIANT**，依次类推。  
   
- `szFieldName`  
+ *szFieldName*  
  该属性将绑定到该数据源控件提供的游标中指定的列的名称。  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  指向的指针`CWnd`-承载数据源控件的属性将绑定到的派生的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -259,7 +259,7 @@ virtual void BindProperty(
  *dwDispId*  
  指定**DISPID**上要绑定到数据源控件的数据绑定控件的属性。  
   
- `pWndDSC`  
+ *pWndDSC*  
  指向的指针`CWnd`-承载数据源控件的属性将绑定到的派生的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -273,7 +273,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCtrlCont`  
+ *pCtrlCont*  
  指向控件的容器 （它表示承载 AtiveX 控件的窗口） 的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -309,50 +309,50 @@ virtual HRESULT CreateControl(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWndCtrl`  
+ *pWndCtrl*  
  指向表示控件的窗口对象的指针。  
   
- `clsid`  
+ *clsid*  
  控件的唯一类 ID。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向要在控件中显示的文本的指针。 （如果有），请设置 winodw 的标题或文本属性的值。  
   
- `dwStyle`  
+ *dwStyle*  
  窗口样式。 可用的样式下列出**备注**部分。  
   
- `rect`  
+ *rect*  
  指定控件的大小和位置。 它可以是`CRect`对象或`RECT`结构。  
   
- `nID`  
+ *nID*  
  指定控件的子窗口 id。  
   
- `pPersist`  
+ *pPersist*  
  指向的指针`CFile`包含控件的持久状态。 默认值是**NULL**，，该值指示该控件而不是从任何持久性存储区还原其状态初始化自身。 如果不是**NULL**，它应为一个指向`CFile`-派生的对象，包含控件的持久性数据，流或存储的形式。 无法在客户端以前激活保存此数据。 `CFile`可以包含其他数据，但必须在调用的时间设置为永久数据的第一个字节其读写指针`CreateControl`。  
   
- `bStorage`  
- 指示是否在数据`pPersist`应被视为`IStorage`或`IStream`数据。 如果中的数据`pPersist`是一种存储，`bStorage`应**TRUE**。 如果中的数据`pPersist`是流、`bStorage`应**FALSE**。 默认值是**FALSE**。  
+ *bStorage*  
+ 指示是否在数据*pPersist*应被视为`IStorage`或`IStream`数据。 如果中的数据*pPersist*是一种存储， *bStorage*应**TRUE**。 如果中的数据*pPersist*是流、 *bStorage*应**FALSE**。 默认值是**FALSE**。  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  可选的许可证密钥数据。 仅用于创建控件需要运行时许可证密钥所需要的此数据。 如果该控件支持授权，则必须提供要成功的控件创建的许可密钥。 默认值是**NULL**。  
   
- `ppt`  
- 指向的指针**点**结构，它包含控件的左上角。 控件的大小由值*psize*。 `ppt`和*psize*值是一种可选方法的指定的大小和位置 opf 控件。  
+ *ppt*  
+ 指向的指针**点**结构，它包含控件的左上角。 控件的大小由值*psize*。 *Ppt*和*psize*值是一种可选方法的指定的大小和位置 opf 控件。  
   
  *psize*  
- 指向的指针**大小**结构，它包含控件的大小。 由的值确定的左上角`ppt`。 `ppt`和*psize*值是一种可选方法的指定的大小和位置 opf 控件。  
+ 指向的指针**大小**结构，它包含控件的大小。 由的值确定的左上角*ppt*。 *Ppt*和*psize*值是一种可选方法的指定的大小和位置 opf 控件。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
 ### <a name="remarks"></a>备注  
- Windows 的一个子集`dwStyle`标志受`CreateControl`:  
+ Windows 的一个子集*dwStyle*标志受`CreateControl`:  
   
 - **WS_VISIBLE**创建初始可见的窗口。 如果您希望控件，使其立即，像普通的窗口可见，则必须填写。  
   
 - **WS_DISABLED**创建最初处于禁用状态的窗口。 已禁用的窗口无法接收来自用户输入。 如果控件具有 Enabled 属性可以设置。  
   
-- `WS_BORDER` 创建一个窗口，有精简行的边框。 如果控件具有 BorderStyle 属性可以设置。  
+- **WS_BORDER**有精简行的边框创建一个窗口。 如果控件具有 BorderStyle 属性可以设置。  
   
 - **WS_GROUP**指定一组控件的第一个控件。 用户可以通过使用箭头键键盘焦点从一个控件组中更改为下一步。 使用定义的所有控件**WS_GROUP**样式后的第一个控件属于同一个组。 使用下一个控件**WS_GROUP**样式组结束和开始下一个组。  
   
@@ -383,10 +383,10 @@ virtual HRESULT DoVerb(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nVerb`  
+ *nVerb*  
  指定要执行的谓词。 它可以包括以下项之一：  
   
-|值|含义|符号|  
+|“值”|含义|符号|  
 |-----------|-------------|------------|  
 |0|主谓词|`OLEIVERB_PRIMARY`|  
 |-1|辅助谓词|（无）|  
@@ -394,10 +394,10 @@ virtual HRESULT DoVerb(
 |-2|编辑单独窗口中的项。|`OLEIVERB_OPEN`|  
 |-3|隐藏对象。|`OLEIVERB_HIDE`|  
 |-4|激活控件中的位置。|`OLEIVERB_UIACTIVATE`|  
-|-5|控件被就地激活，而无需附加用户界面元素。|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|显示控件的属性。|**OLEIVERB_PROPERTIES**|  
+|-5|控件被就地激活，而无需附加用户界面元素。|`OLEIVERB_INPLACEACTIVATE`|  
+|-7|显示控件的属性。|`OLEIVERB_PROPERTIES`|  
   
- `lpMsg`  
+ *lpMsg*  
  指向导致要激活的项的消息。  
   
 ### <a name="return-value"></a>返回值  
@@ -426,7 +426,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEnable`  
+ *bEnable*  
  指定是否启用或禁用窗口： **TRUE**窗口输入是否要启用，否则**FALSE**。  
   
 ### <a name="return-value"></a>返回值  
@@ -440,11 +440,11 @@ void FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bFreeze`  
+ *bFreeze*  
  指定控件所在位置是否希望停止接受事件。 如果该控件不接受事件; 则为非 0否则为零。  
   
 ### <a name="remarks"></a>备注  
- 如果`bFreeze`是**TRUE**，控制站点请求要停止 fring 事件的控件。 如果`bFreeze`是**FALSE**，控制站点请求要继续激发事件的控件。  
+ 如果*bFreeze*是**TRUE**，控制站点请求要停止 fring 事件的控件。 如果*bFreeze*是**FALSE**，控制站点请求要继续激发事件的控件。  
   
 > [!NOTE]
 >  控件不需要停止激发事件，如果请求的控件所在位置。 它可以继续激发，但所有后续的事件将被忽略，控件所在位置。  
@@ -493,11 +493,11 @@ BOOL GetEventIID(IID* piid);
 ```  
   
 ### <a name="parameters"></a>参数  
- `piid`  
+ *piid*  
  一个指向接口 id。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则为非 0 否则为 0。 如果成功，`piid`包含控件的默认事件接口的接口 ID。  
+ 如果成功，则为非 0 否则为 0。 如果成功， *piid*包含控件的默认事件接口的接口 ID。  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  检索窗口的扩展的样式。  
@@ -513,7 +513,7 @@ virtual DWORD GetExStyle() const;
  若要检索的正则样式，调用[COleControlSite::GetStyle](#getstyle)。  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- 获取指定的控件属性`dwDispID`。  
+ 获取指定的控件属性*dwDispID*。  
   
 ```  
 virtual void GetProperty(
@@ -523,17 +523,17 @@ virtual void GetProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识控件的默认上找到的属性的调度 ID`IDispatch`接口来检索。  
   
- `vtProp`  
+ *vtProp*  
  指定要检索的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `pvProp`  
- 将接收属性值的变量的地址。 它必须与由指定的类型匹配`vtProp`。  
+ *pvProp*  
+ 将接收属性值的变量的地址。 它必须与由指定的类型匹配*vtProp*。  
   
 ### <a name="remarks"></a>备注  
- 通过返回的值`pvProp`。  
+ 通过返回的值*pvProp*。  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  检索控件所在位置的样式。  
@@ -556,14 +556,14 @@ virtual void GetWindowText(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `str`  
+ *str*  
  对引用`CString`对象，它包含控件的当前文本。  
   
 ### <a name="remarks"></a>备注  
  如果该控件支持标题的常用属性，则返回该值。 如果不支持标题的常用属性，则返回的 Text 属性的值。  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- 调用的方法或属性指定`dwDispID`，通过指定的上下文中`wFlags`。  
+ 调用的方法或属性指定*dwDispID*，通过指定的上下文中*wFlags*。  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -575,31 +575,31 @@ virtual void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识属性或方法，该控件上找到的调度 ID`IDispatch`接口来调用。  
   
- `wFlags`  
- 描述对 idispatch:: Invoke 的调用的上下文的标志。 有关可能`wFlags`值，请参阅`IDispatch::Invoke`Windows SDK 中。  
+ *wFlags*  
+ 描述对 idispatch:: Invoke 的调用的上下文的标志。 有关可能*wFlags*值，请参阅`IDispatch::Invoke`Windows SDK 中。  
   
- `vtRet`  
+ *vtRet*  
  指定返回值的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `pvRet`  
- 将接收属性值或返回值的变量的地址。 它必须与 `vtRet`指定的类型匹配。  
+ *pvRet*  
+ 将接收属性值或返回值的变量的地址。 它必须与由指定的类型匹配*vtRet*。  
   
- `pbParamInfo`  
- 指向以 null 结尾的字符串的指针，该字符串由指定 `pbParamInfo`后面的参数类型的字节组成。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
+ *pbParamInfo*  
+ 指向以 null 结尾的字符串的指定类型的后面的参数的字节指针*pbParamInfo*。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
- 具有 `pbParamInfo`中指定的类型的参数的变量列表。  
+ 中指定的类型的参数的变量列表*pbParamInfo*。  
   
 ### <a name="remarks"></a>备注  
- `pbParamInfo` 参数指定传递到方法或属性的参数的类型。 自变量的变量列表由表示...语法声明中。  
+ *PbParamInfo*参数指定传递到方法或属性的参数的类型。 自变量的变量列表由表示...语法声明中。  
   
- 此函数将转换的参数**VARIANTARG**值，然后调用**idispatch:: Invoke**在控件上的方法。 如果调用**idispatch:: Invoke**失败，此函数将引发异常。 如果返回状态代码**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函数将引发**COleDispatchException**对象中，否则为它将引发`COleException`。  
+ 此函数将转换的参数**VARIANTARG**值，然后调用`IDispatch::Invoke`在控件上的方法。 如果调用`IDispatch::Invoke`失败，此函数将引发异常。 如果返回状态代码`IDispatch::Invoke`是`DISP_E_EXCEPTION`，此函数将引发`COleDispatchException`对象中，否则为它将引发`COleException`。  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- 调用的方法或属性指定`dwDispID`，通过指定的上下文中`wFlags`。  
+ 调用的方法或属性指定*dwDispID*，通过指定的上下文中*wFlags*。  
   
 ```  
 virtual void InvokeHelperV(
@@ -612,26 +612,26 @@ virtual void InvokeHelperV(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识属性或方法，该控件上找到的调度 ID`IDispatch`接口来调用。  
   
- `wFlags`  
+ *wFlags*  
  描述对 idispatch:: Invoke 的调用的上下文的标志。  
   
- `vtRet`  
+ *vtRet*  
  指定返回值的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `pvRet`  
- 将接收属性值或返回值的变量的地址。 它必须与 `vtRet`指定的类型匹配。  
+ *pvRet*  
+ 将接收属性值或返回值的变量的地址。 它必须与由指定的类型匹配*vtRet*。  
   
- `pbParamInfo`  
- 指向以 null 结尾的字符串的指针，该字符串由指定 `pbParamInfo`后面的参数类型的字节组成。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
+ *pbParamInfo*  
+ 指向以 null 结尾的字符串的指定类型的后面的参数的字节指针*pbParamInfo*。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `argList`  
+ *argList*  
  指针变量自变量列表。  
   
 ### <a name="remarks"></a>备注  
- `pbParamInfo` 参数指定传递到方法或属性的参数的类型。 可以使用传递额外参数的方法或属性正在调用*va_list*参数。  
+ *PbParamInfo*参数指定传递到方法或属性的参数的类型。 可以使用传递额外参数的方法或属性正在调用*va_list*参数。  
   
  通常情况下，调用此函数`COleControlSite::InvokeHelper`。  
   
@@ -790,13 +790,13 @@ virtual BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwRemove`  
+ *dwRemove*  
  要删除从当前窗口样式的样式。  
   
- `dwAdd`  
+ *dwAdd*  
  若要从当前窗口样式添加样式。  
   
- `nFlags`  
+ *nFlags*  
  定位标志的窗口。 有关可能的值的列表，请参阅[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
@@ -807,7 +807,7 @@ virtual BOOL ModifyStyle(
   
  修改控件的窗口样式。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)有关可用的窗口样式信息的 Windows SDK 中的函数。  
   
- 如果`nFlags`不为零，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口`nFlags`与以下四个标志：  
+ 如果*nFlags*不为零，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
 - `SWP_NOSIZE` 保留当前的大小。  
   
@@ -830,13 +830,13 @@ virtual BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwRemove`  
+ *dwRemove*  
  要从当前窗口样式中删除扩展的样式。  
   
- `dwAdd`  
+ *dwAdd*  
  要从当前窗口样式添加的扩展的样式。  
   
- `nFlags`  
+ *nFlags*  
  定位标志的窗口。 有关可能的值的列表，请参阅[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函数。  
   
 ### <a name="return-value"></a>返回值  
@@ -847,7 +847,7 @@ virtual BOOL ModifyStyleEx(
   
  修改扩展控件站点对象的样式窗口。 可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)有关可用的窗口样式信息的 Windows SDK 中的函数。  
   
- 如果`nFlags`不为零，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口`nFlags`与以下四个标志：  
+ 如果*nFlags*不为零，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：  
   
 - `SWP_NOSIZE` 保留当前的大小。  
   
@@ -877,10 +877,10 @@ virtual void MoveWindow(
  *y*  
  窗口顶部的新位置。  
   
- `nWidth`  
+ *nWidth*  
  新窗口的宽度  
   
- `nHeight`  
+ *nHeight*  
  新窗口的高度。  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
@@ -899,7 +899,7 @@ virtual BOOL QuickActivate();
  `IPersist*::Load`和`IPersist*::InitNew`迅速激活发生后，应调用方法。 控件应快速激活期间建立其连接到容器的接收器。 但是，这些连接不是实时直到`IPersist*::Load`或`IPersist*::InitNew`已调用。  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- 设置指定的控件属性`dwDispID`。  
+ 设置指定的控件属性*dwDispID*。  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -908,14 +908,14 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识属性或方法，该控件上找到的调度 ID`IDispatch`接口来设置。  
   
- `vtProp`  
+ *vtProp*  
  指定要设置属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
- 由 `vtProp`指定的类型的单个参数。  
+ 由指定的类型的单个参数*vtProp*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
@@ -933,7 +933,7 @@ void SetDefaultButton(BOOL bDefault);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bDefault`  
+ *bDefault*  
  如果该控件应会成为默认按钮; 则为非 0否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -949,7 +949,7 @@ virtual int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  新的标识符值。  
   
 ### <a name="return-value"></a>返回值  
@@ -973,7 +973,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
  指向以前具有焦点的窗口的指针。  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- 设置指定的控件属性`dwDispID`。  
+ 设置指定的控件属性*dwDispID*。  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -982,22 +982,22 @@ virtual void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识属性或方法，该控件上找到的调度 ID`IDispatch`接口来设置。  
   
- `vtProp`  
+ *vtProp*  
  指定要设置属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
- 由 `vtProp`指定的类型的单个参数。  
+ 由指定的类型的单个参数*vtProp*。  
   
 ### <a name="remarks"></a>备注  
  如果`SetProperty`在遇到错误，将引发异常。  
   
- 异常的类型是由尝试设置的属性或方法的返回值确定的。 如果返回值为`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**则引发该异常; 否则为`COleException`。  
+ 异常的类型是由尝试设置的属性或方法的返回值确定的。 如果返回值为`DISP_E_EXCEPTION`、`COleDispatchExcpetion`则引发该异常; 否则为`COleException`。  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- 设置指定的控件属性`dwDispID`。  
+ 设置指定的控件属性*dwDispID*。  
   
 ```  
 virtual void SetPropertyV(
@@ -1007,19 +1007,19 @@ virtual void SetPropertyV(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识属性或方法，该控件上找到的调度 ID`IDispatch`接口来设置。  
   
- `vtProp`  
+ *vtProp*  
  指定要设置属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `argList`  
+ *argList*  
  指向参数列表的指针。  
   
 ### <a name="remarks"></a>备注  
  为方法或属性正在调用的额外参数可以是 passeed 使用*arg_list*参数。 如果`SetProperty`在遇到错误，将引发异常。  
   
- 异常的类型是由尝试设置的属性或方法的返回值确定的。 如果返回值为`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**则引发该异常; 否则为`COleException`。  
+ 异常的类型是由尝试设置的属性或方法的返回值确定的。 如果返回值为`DISP_E_EXCEPTION`、`COleDispatchExcpetion`则引发该异常; 否则为`COleException`。  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  设置大小、 位置和控件所在位置的 Z 顺序。  
@@ -1035,7 +1035,7 @@ virtual BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWndInsertAfter`  
+ *pWndInsertAfter*  
  指向窗口的指针。  
   
  *x*  
@@ -1044,13 +1044,13 @@ virtual BOOL SetWindowPos(
  *y*  
  窗口顶部的新位置。  
   
- `cx`  
+ *cx*  
  新窗口的宽度  
   
- `cy`  
+ *cy*  
  新窗口的高度。  
   
- `nFlags`  
+ *nFlags*  
  指定的窗口大小调整和定位标志。 有关可能的值，请参阅备注部分[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
@@ -1064,7 +1064,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszString`  
+ *lpszString*  
  指向以 null 结尾的字符串用作新的标题或控件文本指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1078,7 +1078,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCmdShow`  
+ *nCmdShow*  
  指定控件所在位置的显示方式。 它必须是以下值之一：  
   
 - **SW_HIDE**隐藏此窗口，并将激活传递到另一个窗口。  

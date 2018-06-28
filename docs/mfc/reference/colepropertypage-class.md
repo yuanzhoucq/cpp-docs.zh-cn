@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376205"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042542"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 类
 用于在图形界面（类似于对话框）中显示自定义控件的属性。  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  属性页控件的资源 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pnObjects`  
+ *pnObjects*  
  将接收正在编辑的页面的对象的数目为无符号长整数的指针。  
   
 ### <a name="return-value"></a>返回值  
  指向数组的指针`IDispatch`指针，用于访问每个控件的属性页上的属性。 调用方必须不释放这些接口指针。  
   
 ### <a name="remarks"></a>备注  
- 每个属性页对象维护指向的指针的数组`IDispatch`正在编辑的页面的对象的接口。 此函数将其`pnObjects`该数组中的元素数目的自变量并返回数组的第一个元素的指针。  
+ 每个属性页对象维护指向的指针的数组`IDispatch`正在编辑的页面的对象的接口。 此函数将其*pnObjects*该数组中的元素数目的自变量并返回数组的第一个元素的指针。  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  获取一个指针指向属性页的`IPropertyPageSite`接口。  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  若要忽略的控件 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dispid`  
+ *dispid*  
  正在编辑的属性的调度 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nID`  
+ *nID*  
  包含属性页控件的 ID。  
   
- `bDirty`  
+ *bDirty*  
  指定是否已修改的属性页的字段。 设置为**TRUE**如果字段已被修改， **FALSE**如果尚未修改。  
   
 ### <a name="return-value"></a>返回值  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  包含在一个状态栏或其他位置中进行显示简要的帮助信息的字符串。  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  属性页的帮助文件的名称。  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bModified`  
+ *bModified*  
  指定的属性页修改标志的新值。  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

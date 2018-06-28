@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374352"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039155"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 类
 用于 OLE“选择性粘贴”对话框。  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|将自定义格式添加到你的应用程序可以粘贴的格式的列表。|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|将新条目添加到受支持的剪贴板格式的列表。|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|将添加**CF_BITMAP**， **CF_DIB**， `CF_METAFILEPICT`，和 （可选）`CF_LINKSOURCE`你的应用程序可以粘贴到格式的列表。|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|将添加**CF_BITMAP**， **CF_DIB**， **CF_METAFILEPICT**，和 （可选） **CF_LINKSOURCE**你的应用程序可以粘贴到格式的列表.|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|创建使用指定的格式到容器文档中的项。|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|显示 OLE 选择性粘贴对话框。|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|指示是否绘制项作为图标或不。|  
@@ -130,22 +130,22 @@ void AddFormat(
  *格式*  
  对要添加的数据类型的引用。  
   
- `lpszFormat`  
+ *lpszFormat*  
  介绍向用户格式的字符串。  
   
  *lpszResult*  
  介绍的结果，如果在对话框中选择了此格式的字符串。  
   
- `flags`  
+ *flags*  
  不同链接和嵌入可用于此格式选项。 此标志是一个或多个中的不同值的按位组合**OLEUIPASTEFLAG**枚举类型。  
   
- `cf`  
+ *cf*  
  要添加的剪贴板格式。  
   
  *tymed*  
  这种形式的媒体类型。 这是一个或多个中的值的按位组合**TYMED**枚举类型。  
   
- `nFormatID`  
+ *nFormatID*  
  标识此格式的字符串的 ID。 此字符串的格式是以 \n 字符分隔的两个单独的字符串。 第一个字符串是相同会传递中*lpstrFormat*参数，而第二个是相同*lpstrResult*参数。  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cf`  
+ *cf*  
  要添加的剪贴板格式。  
   
 ### <a name="return-value"></a>返回值  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"嵌入的对象"**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwFlags`  
+ *dwFlags*  
  创建一个标记，包含任意数量的使用按位 OR 运算符组合以下标志：  
   
 - `PSF_SELECTPASTE` 指定当调用对话框中，确认将最初选中粘贴单选按钮。 不能与结合使用`PSF_SELECTPASTELINK`。 这是默认设置。  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` 指定调用对话框中时，将显示帮助按钮。  
   
- `pDataObject`  
+ *pDataObject*  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)粘贴。 如果此值为**NULL**，它获取`COleDataObject`从剪贴板。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  

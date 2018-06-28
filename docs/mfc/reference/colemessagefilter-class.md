@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371359"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037604"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 类
 管理 OLE 应用程序交互所需的并发。  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  `BeginBusyState`和`EndBusyState`调用进行递增和递减，分别，确定应用程序是否繁忙的计数器。 例如，有两个调用到`BeginBusyState`和一个调用`EndBusyState`仍会导致繁忙状态。 若要取消繁忙状态需要调用`EndBusyState`相同次数`BeginBusyState`已调用。  
   
- 默认情况下，框架进入忙状态在空闲处理，通过执行期间[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 处理应用程序时**ON_COMMANDUPDATEUI**空闲处理完成后，将更高版本，处理通知，传入调用。  
+ 默认情况下，框架进入忙状态在空闲处理，通过执行期间[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 虽然应用程序正在处理 ON_COMMANDUPDATEUI 通知，传入调用处理更高版本，空闲处理完成后。  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  创建一个 `COleMessageFilter` 对象。  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  `BeginBusyState`和`EndBusyState`调用进行递增和递减，分别，确定应用程序是否繁忙的计数器。 例如，有两个调用到`BeginBusyState`和一个调用`EndBusyState`仍会导致繁忙状态。 若要取消繁忙状态需要调用`EndBusyState`相同次数`BeginBusyState`已调用。  
   
- 默认情况下，框架进入忙状态在空闲处理，通过执行期间[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 处理应用程序时`ON_UPDATE_COMMAND_UI`空闲处理完成后处理通知，传入调用。  
+ 默认情况下，框架进入忙状态在空闲处理，通过执行期间[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 虽然应用程序正在处理 ON_UPDATE_COMMAND_UI 通知，空闲处理完成后处理的传入调用。  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  正在进行的 OLE 调用时，由处理这些消息框架调用。  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pMsg`  
+ *pMsg*  
  一个指针，指向挂起消息。  
   
 ### <a name="return-value"></a>返回值  
  若成功，则为非零；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 调用应用程序正在等待完成的调用，框架将调用`OnMessagePending`用一个指针指向挂起消息。 默认情况下，框架将调度`WM_PAINT`消息，以便窗口更新可以花很长时间的调用期间发生。  
+ 调用应用程序正在等待完成的调用，框架将调用`OnMessagePending`用一个指针指向挂起消息。 默认情况下，框架会将调度 WM_PAINT 消息以便窗口更新可以花很长时间的调用期间发生。  
   
  你必须通过调用注册消息筛选器[注册](#register)它就会被激活之前。  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nTimeout`  
+ *nTimeout*  
  消息挂起延迟的毫秒数。  
   
 ### <a name="remarks"></a>备注  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nRetryReply`  
+ *nRetryReply*  
  重试之间的毫秒数。  
   
 ### <a name="remarks"></a>备注  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  调用方的响应控制由函数`SetRetryReply`和[SetMessagePendingDelay](#setmessagependingdelay)。 `SetRetryReply` 确定调用应用程序的给定调用的重试之间应等待多长时间。 `SetMessagePendingDelay` 确定多长时间调用应用程序服务器的响应前等待采取进一步操作。  
   
- 通常是可接受和不需要更改的默认值。 框架就会重试调用每个`nRetryReply`直到调用经历或已过期的挂起的消息的延迟的毫秒。 值为 0，`nRetryReply`指定立即重试，和-1，则指定的调用的取消。  
+ 通常是可接受和不需要更改的默认值。 框架就会重试调用每个*nRetryReply*直到调用经历或已过期的挂起的消息的延迟的毫秒。 值为 0， *nRetryReply*指定立即重试，和-1，则指定的调用的取消。  
   
  消息挂起延迟已过期时，OLE"忙对话框中"(请参阅[COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) 将显示，以便用户可以选择取消或重试调用。 调用[EnableBusyDialog](#enablebusydialog)启用或禁用此对话框。  
   

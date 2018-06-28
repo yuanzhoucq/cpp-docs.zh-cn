@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367069"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038222"
 ---
 # <a name="class-factories-and-licensing"></a>类工厂和许可
 为了创建 OLE 控件的实例，容器应用程序调用了控件的类工厂的成员函数。 由于控件是实际 OLE 对象，类工厂将负责创建控件的实例。 每个 OLE 控件类必须有一个类工厂。  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hInstance`  
+ *hInstance*  
  与授权控件关联的 DLL 的实例句柄。  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  指向以 null 结尾的字符串包含许可证文件名。  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  指向一个字节序列，其中必须与许可证文件的开头处的顺序匹配。  
   
- `cch`  
- 中的字符数`pszLicFileContents`。  
+ *cch*  
+ 中的字符数*pszLicFileContents*。  
   
 ### <a name="return-value"></a>返回值  
- 如果许可证文件存在且开始中的字符序列则不为`pszLicFileContents`; 否则为 0。  
+ 如果许可证文件存在且开始中的字符序列则不为*pszLicFileContents*; 否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果`cch`为-1，此函数使用：  
+ 如果*cch*为-1，此函数使用：  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

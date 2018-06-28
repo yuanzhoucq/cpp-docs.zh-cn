@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ad6630f2a0debd5ab3fee30374b84f5bbe9b2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c218f38b76d70ef20fed46a502a7cc15041aa8c5
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378860"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039175"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 A`CMFCPropertyGridProperty`对象表示属性列表控件中的列表项。  
@@ -291,7 +291,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|双精度类型的值的格式字符串。|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|浮点类型的值的格式字符串。|  
@@ -326,14 +326,14 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszOption`  
+ [in]*lpszOption*  
  列表项 （选项） 来添加。  
   
- [in] `bInsertUnique`  
+ [in]*bInsertUnique*  
  `TRUE` 若要添加列表项仅当它尚不存在;否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE`这意味着添加列表项。 否则为`FALSE`，这意味着，此列表项不是添加，因为`bInsertUnique`参数是`TRUE`和列表项指定`lpszOption`参数已存在。  
+ `TRUE`这意味着添加列表项。 否则为`FALSE`，这意味着，此列表项不是添加，因为*bInsertUnique*参数是`TRUE`和列表项指定*lpszOption*已参数存在。  
   
 ### <a name="remarks"></a>备注  
   
@@ -345,7 +345,7 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  指向要添加的属性。  
   
 ### <a name="return-value"></a>返回值  
@@ -380,10 +380,10 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectEdit`  
+ [out]*rectEdit*  
  当此方法返回时，指定的属性值的文本框中的边界的矩形。  
   
- [out] `rectSpin`  
+ [out]*rectSpin*  
  当此方法返回时，指定的属性值数值调节钮控件的边界的矩形。 或者，如果属性不支持数值调节钮，为空矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -397,7 +397,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAllow`  
+ [in]*bAllow*  
  `TRUE` 若要将该属性可编辑;`FALSE`若要使此属性成为只读的。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -423,31 +423,31 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strGroupName`  
+ [in]*strGroupName*  
  组名称中。 A*组*是在属性网格控件中的相关属性的集合。 如果该控件显示层次结构方式*组名称*显示为组上方行中类别标题。  
   
- [in] `dwData`  
+ [in]*dwData*  
  应用程序特定数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
   
- [in] `strName`  
+ [in]*strName*  
  属性的名称。  
   
- [in] `varValue`  
+ [in]*varValue*  
  属性值。  
   
- [in] `lpszDescr`  
+ [in]*lpszDescr*  
  属性说明中。 默认值为 `NULL`。  
   
- [in] `lpszEditMask`  
+ [in]*lpszEditMask*  
  编辑掩码中，如果属性是掩码的编辑控件。 默认值为 `NULL`。  
   
- [in] `lpszEditTemplate`  
+ [in]*lpszEditTemplate*  
  编辑模板中，如果属性是掩码的编辑控件。 默认值为 `NULL`。  
   
- [in] `lpszValidChars`  
+ [in]*lpszValidChars*  
  有效字符，如果属性是掩码的编辑控件的列表。 默认值为 `NULL`。  
   
- [in] `bIsValueList`  
+ [in]*bIsValueList*  
  `TRUE` 如果该属性表示的值; 列表`FALSE`如果属性是表示单个值。 默认值为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -462,10 +462,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
  向组合框的父窗口的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  组合框绑定矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -483,19 +483,19 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectEdit`  
+ [in]*rectEdit*  
  可编辑的控件边界矩形。  
   
- [in] `bDefaultFormat`  
+ [in]*bDefaultFormat*  
  `TRUE` 若要使用的默认属性格式设置可编辑的控件; 的文本否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则可编辑的控件指向的指针否则为`NULL`。  
   
 ### <a name="remarks"></a>备注  
- 此方法使用的值`varValue`， `lpszEditMask`， `lpszEditTemplate`，和`lpszValidChars`中指定的参数[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)类构造函数。 默认情况下，此方法支持`varValue`变体类型。 这包括`VT_BSTR`， `VT_R4`， `VT_R8`， `VT_UI1`， `VT_I2`， `VT_INT`， `VT_UINT`， `VT_I4`， `VT_UI2`， `VT_UI4`，和`VT_BOOL`。  
+ 此方法使用的值*varValue*， *lpszEditMask*， *lpszEditTemplate*，和*lpszValidChars*参数属于指定在[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)类构造函数。 默认情况下，此方法支持*varValue*变体类型。 这包括`VT_BSTR`， `VT_R4`， `VT_R8`， `VT_UI1`， `VT_I2`， `VT_INT`， `VT_UINT`， `VT_I4`， `VT_UI2`， `VT_UI4`，和`VT_BOOL`。  
   
- 此方法创建[CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)如果一个或多个控制`lpszEditMask`， `lpszEditTemplate`，或`lpszValidChars`指定参数; 否则，它会创建[CEdit](../../mfc/reference/cedit-class.md)控件。  
+ 此方法创建[CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)如果一个或多个控制*lpszEditMask*， *lpszEditTemplate*，或*lpszValidChars*指定的参数;否则，它会创建[CEdit](../../mfc/reference/cedit-class.md)控件。  
   
 ##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
  由框架调用以创建可编辑的数值调节钮控件。  
@@ -505,7 +505,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectSpin`  
+ [in]*rectSpin*  
  定义创建可编辑的数值调节钮控件的位置的矩形。  
   
 ### <a name="return-value"></a>返回值  
@@ -522,7 +522,7 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用您的属性。`FALSE`要禁用的属性。 已禁用的属性不响应鼠标或键盘输入。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -538,19 +538,19 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用数值调节钮控件;`FALSE`禁用数值调节钮控件。 默认值为 `TRUE`。  
   
- [in] `nMin`  
+ [in]*nMin*  
  数值调节钮控件最小值。 默认值为 0。  
   
- [in] `nMax`  
+ [in]*最*  
  数值调节钮控件的最大值。 默认值为 0。  
   
 ### <a name="remarks"></a>备注  
  将要对其进行编辑属性时，框架自动创建数值调节钮控件。  
   
- 属性类型，由指定`varValue`参数[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)构造函数，必须是支持的变体类型。 否则，此方法在调试模式中断言。 支持的类型包括`VT_INT`， `VT_UINT`， `VT_I2`， `VT_I4`， `VT_UI2`，和`VT_UI4`。  
+ 属性类型，由指定*varValue*参数[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)构造函数，必须是支持的变体类型。 否则，此方法在调试模式中断言。 支持的类型包括`VT_INT`， `VT_UINT`， `VT_I2`， `VT_I4`， `VT_UI2`，和`VT_UI4`。  
   
 ##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
  展开或折叠包含子属性的属性。  
@@ -560,7 +560,7 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bExpand`  
+ [in]*bExpand*  
  `TRUE` 若要展开您的属性。如果为 FALSE，则折叠属性。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `bIncludeHidden`|`TRUE` 将隐藏子项目包含在计数中;否则为`FALSE`。 默认值为 `TRUE`。|  
+|[in]*bIncludeHidden*|`TRUE` 将隐藏子项目包含在计数中;否则为`FALSE`。 默认值为 `TRUE`。|  
   
 ### <a name="return-value"></a>返回值  
  展开子项目数。  
@@ -666,7 +666,7 @@ LPCTSTR GetOption(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  属性列表项 （选项） 来检索的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -734,15 +734,15 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  要检索的属性的从零开始的索引。 此参数是无效的如果它小于零或大于或等于子属性的数目。  
   
 ### <a name="return-value"></a>返回值  
  指向为此属性的子项目的属性对象的指针。  
   
- -或-  
+ 或  
   
- 在零售模式下，`NULL`如果`nIndex`参数无效。 在调试模式下，此方法断言。  
+ 在零售模式下，`NULL`如果*nIndex*参数无效。 在调试模式下，此方法断言。  
   
 ### <a name="remarks"></a>备注  
   
@@ -810,16 +810,16 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  要测试，在工作区坐标的点。 此参数通常是当前鼠标指针位置。  
   
- [in] `pt`  
+ [in]*pt*  
  要测试，在工作区坐标的点。  
   
- [out] `pnArea`  
+ [out]*pnArea*  
  此方法返回时，指示该区域包含指定的点。 有关更多信息，请参见“备注”。 默认值为 `NULL`。  
   
- [in] `bPropsOnly`  
+ [in]*bPropsOnly*  
  `TRUE` 若要测试属性控件; 中的任何区域`FALSE`测试仅描述区域。 默认值为 `FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -828,7 +828,7 @@ CMFCPropertyGridProperty* HitTest(
 ### <a name="remarks"></a>备注  
  默认情况下，此方法测试属性的子项，如果任一属性项中找不到指定的点。  
   
- 下表列出可以返回到的值`pnArea`参数。  
+ 下表列出可以返回到的值*pnArea*参数。  
   
 |区域|描述|  
 |----------|-----------------|  
@@ -951,7 +951,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  属性指向的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1025,7 +1025,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  客户端坐标中的点。  
   
 ### <a name="remarks"></a>备注  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `C`|客户端坐标中的点。|  
+|[in]*C*|客户端坐标中的点。|  
   
 ### <a name="remarks"></a>备注  
  默认情况下，此方法没有任何影响。  
@@ -1057,10 +1057,10 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiMsg`  
+ [in]*uiMsg*  
  鼠标消息。  
   
- [in] `point`  
+ [in]*点*  
  客户端坐标中的点。  
   
 ### <a name="return-value"></a>返回值  
@@ -1088,10 +1088,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `nCtlColor`  
+ [in]*nCtlColor*  
  （未使用此参数。）  
   
 ### <a name="return-value"></a>返回值  
@@ -1107,7 +1107,7 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  客户端坐标中的点。  
   
 ### <a name="return-value"></a>返回值  
@@ -1135,10 +1135,10 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectButton`  
+ [in]*rectButton*  
  指定要绘制的按钮的位置的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1153,10 +1153,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定要绘制的属性说明的位置的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1172,10 +1172,10 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rectExpand`  
+ [in]*rectExpand*  
  指定要绘制展开框控件的位置的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1191,10 +1191,10 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定要绘制的属性名称的位置的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1209,10 +1209,10 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  指定要绘制的属性值的位置的边界矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -1225,7 +1225,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lptClick`  
+ [in]*lptClick*  
  （未使用此参数。）指向一个点，在工作区坐标的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `CWnd`|（未使用。）指向窗口的指针。|  
+|[in]*CWnd*|（未使用。）指向窗口的指针。|  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回 `TRUE`。  
@@ -1274,7 +1274,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCPropertyGridProperty*`  
+ [in]*CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>备注  
  默认情况下，此方法没有任何影响。  
@@ -1287,7 +1287,7 @@ virtual void OnPosSizeChanged(CRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CRect`  
+ [in]*的 CRect*  
   
 ### <a name="remarks"></a>备注  
  默认情况下，此方法没有任何影响。  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `C`|客户端坐标中的点。|  
+|[in]*C*|客户端坐标中的点。|  
   
 ### <a name="remarks"></a>备注  
  默认情况下，此方法没有任何影响。  
@@ -1321,11 +1321,11 @@ virtual void OnRClickValue(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `C`|客户端坐标中的点。|  
-|[in] `B`|一个布尔值。|  
+|[in]*C*|客户端坐标中的点。|  
+|[in]*B*|一个布尔值。|  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，此方法不执行任何操作和`B`参数具有任何预定义的用途。  
+ 默认情况下，此方法不执行任何操作和*B*参数具有任何预定义的用途。  
   
 ##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo  
  当用户从可编辑的组合框中选择一项时，由框架调用。  
@@ -1358,7 +1358,7 @@ virtual void OnSetSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CMFCPropertyGridProperty*`  
+ [in]*CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>备注  
  默认情况下，此方法没有任何影响。  
@@ -1383,7 +1383,7 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nChar`  
+ [in]*nChar*  
  一个字符。  
   
 ### <a name="return-value"></a>返回值  
@@ -1421,16 +1421,16 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pProp`  
+ [in]*pProp*  
  指向指针的属性子项。  
   
- [in] `bDelete`  
- `TRUE` 若要删除指定的属性对象`pProp`参数; 否则为`FALSE`。 默认值为 `TRUE`。  
+ [in]*bDelete*  
+ `TRUE` 若要删除指定的属性对象*pProp*参数; 否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="return-value"></a>返回值  
   
 ### <a name="remarks"></a>备注  
- 指定`FALSE`为`bDelete`参数，如果你想要移动指定的子项目; 即删除子该项，并将其添加其他位置。  
+ 指定`FALSE`为*bDelete*参数，如果你想要移动指定的子项目; 即删除子该项，并将其添加其他位置。  
   
 ##  <a name="resetoriginalvalue"></a>  Cmfcpropertygridproperty:: Resetoriginalvalue  
  还原已编辑属性的原始值。  
@@ -1449,7 +1449,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwData`  
+ [in]*dwData*  
  特定于应用程序的 32 位值，如整数或其他数据的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1463,7 +1463,7 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strDescr`  
+ [in]*strDescr*  
  描述当前属性的文本。  
   
 ### <a name="remarks"></a>备注  
@@ -1478,10 +1478,10 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszName`  
+ [in]*lpszName*  
  属性名称。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即; 重绘属性否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1494,7 +1494,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `varValue`  
+ [in]*varValue*  
  一个值。  
   
 ### <a name="remarks"></a>备注  
@@ -1508,7 +1508,7 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `varValue`  
+ [in]*varValue*  
  对一个值的引用。  
   
 ### <a name="remarks"></a>备注  
@@ -1523,7 +1523,7 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要显示当前的属性以及其子项;`FALSE`隐藏 current 属性和其子项目。 默认值为 `TRUE`。  
   
  [in] `bAdjustLayout`  

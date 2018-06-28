@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369344"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040842"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 类
 提供 Windows 多文档界面 (MDI) 子窗口功能，并提供管理窗口的成员。  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  有三种方法来构造 MDI 子窗口：  
   
--   直接构造它使用**创建**。  
+-   直接构造它使用`Create`。  
   
 -   直接构造它使用`LoadFrame`。  
   
 -   间接构造通过文档模板。  
   
- 在调用之前**创建**或`LoadFrame`，您必须先构造使用 c + + 堆上的框架窗口对象**新**运算符。 之前调用**创建**还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数，若要设置帧的图标和类样式。  
+ 在调用之前`Create`或`LoadFrame`，您必须先构造使用 c + + 堆上的框架窗口对象**新**运算符。 之前调用`Create`还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数，若要设置帧的图标和类样式。  
   
- 使用**创建**成员函数将为快速的自变量传递帧的创建参数。  
+ 使用`Create`成员函数将为快速的自变量传递帧的创建参数。  
   
- `LoadFrame` 需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要更少的自变量比`Create`，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
   
  当`CMDIChildWnd`对象包含视图和文档，就会创建间接的框架，而不是直接由程序员。 `CDocTemplate`对象安排帧的创建、 创建所包含的视图和连接到适当的文档的视图。 参数`CDocTemplate`构造函数指定`CRuntimeClass`的三个类涉及到 （文档、 框架和视图）。 A`CRuntimeClass`对象由框架用于动态创建新帧时指定用户 （例如，通过使用文件新的命令或 MDI 窗口新的命令）。  
   
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszClassName`  
+ *lpszClassName*  
  指向以 null 结尾的字符字符串名称的 Windows 类 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构)。 类名称可以是与注册的任何名称[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数。 应为**NULL**对于标准`CMDIChildWnd`。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向以 null 结尾的字符串表示的窗口名称。 用作标题栏的文本。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口[样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。 **WS_CHILD**都需要使用样式。  
   
- `rect`  
+ *rect*  
  包含的大小和窗口的位置。 `rectDefault`值允许指定的大小和位置的新 Windows `CMDIChildWnd`。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定窗口的父级。 如果**NULL**，使用主应用程序窗口。  
   
- `pContext`  
+ *pContext*  
  指定[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。 此参数可以为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  当前处于活动状态的 MDI 子框架窗口可以确定父框架窗口的标题。 此功能被禁用通过关闭**FWS_ADDTOTITLE**子框架窗口的样式位。  
   
- 框架调用以响应用户命令以创建子窗口，此成员函数和框架将使用`pContext`参数以正确连接到应用程序的子窗口。 当调用**创建**，`pContext`可以是**NULL**。  
+ 框架调用以响应用户命令以创建子窗口，此成员函数和框架将使用*pContext*参数以正确连接到应用程序的子窗口。 当调用`Create`， *pContext*可以是**NULL**。  
   
 ### <a name="example"></a>示例  
  示例 1:  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hMenu`  
+ *hMenu*  
  菜单资源的句柄。  
   
- `hAccel`  
+ *hAccel*  
  快捷键资源的句柄。  
   
 ### <a name="remarks"></a>备注  

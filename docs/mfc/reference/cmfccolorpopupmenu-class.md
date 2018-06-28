@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372371"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037299"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 类
 表示一个用户使用在文档或应用程序中选择颜色的弹出菜单。  
@@ -64,7 +64,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|名称|描述|  
+|name|描述|  
 |`m_bEnabledInCustomizeMode`|一个布尔值，确定是否显示颜色栏。|  
 |`m_wndColorBar`|`CMFCColorBar`提供颜色选择的对象。|  
   
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `colors`  
+ [in]*颜色*  
  框架显示弹出菜单的颜色的数组。  
   
- [in] `color`  
+ [in]*颜色*  
  默认值选择颜色。  
   
- [in] `lpszAutoColor`  
+ [in]*lpszAutoColor*  
  文本标签*自动*（默认值） 颜色按钮，或`NULL`。  
   
  自动按钮的标准标签是**自动**。  
   
- [in] `lpszOtherColor`  
+ [in]*lpszOtherColor*  
  文本标签*其他*按钮，用于显示其他颜色选项，或`NULL`。  
   
  其他按钮的标准标签是**其他颜色...**.  
   
- [in] `lpszDocColors`  
+ [in]*lpszDocColors*  
  文档颜色按钮文本标签。 文档调色板列出所有文档当前使用的颜色。  
   
- [in] `lstDocColors`  
+ [in]*lstDocColors*  
  该文档当前使用的颜色的列表。  
   
- [in] `nColumns`  
+ [in]*nColumns*  
  颜色数组具有的列数。  
   
- [in] `nHorzDockRows`  
+ [in]*nHorzDockRows*  
  在颜色栏具有时水平停靠的行数。  
   
- [in] `nVertDockColumns`  
+ [in]*nVertDockColumns*  
  在颜色栏具有垂直停靠时的列数。  
   
- [in] `colorAutomatic`  
+ [in]*colorAutomatic*  
  单击自动按钮时，将应用框架默认颜色。  
   
- [in] `uiCommandID`  
+ [in]*uiCommandID*  
  颜色栏控件命令 id。  
   
- [in] `bStdColorDlg`  
+ [in]*bStdColorDlg*  
  一个布尔值，该值指示是否显示标准系统颜色对话框中或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框。  
   
- [in] `pParentBtn`  
+ [in]*pParentBtn*  
  指向父按钮的指针。  
   
- [in] `nID`  
+ [in]*nID*  
  命令 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pWndMain`|指向拖曳栏的父窗口的指针。|  
-|[in] `uiID`|拖曳栏的命令 ID。|  
-|[in] `lpszName`|拖曳栏窗口文本。|  
+|[in]*pWndMain*|指向拖曳栏的父窗口的指针。|  
+|[in]*uiID*|拖曳栏的命令 ID。|  
+|[in]*lpszName*|拖曳栏窗口文本。|  
   
 ### <a name="return-value"></a>返回值  
  指向新的拖曳控件条对象的指针。  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndList`  
+ [in]*pWndList*  
  为属性网格控件对象的指针。  
   
 ## <a name="see-also"></a>请参阅  

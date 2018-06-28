@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370284"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042516"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 类
 有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的结构。  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要转换或激活的项。  
   
- `dwFlags`  
+ *dwFlags*  
  使用的按位组合起来，创建标志，其中包含任意数量的以下值-或运算符：  
   
 - **CF_SELECTCONVERTTO**指定，在调用对话框时最初选择的转换为单选按钮。 这是默认设置。  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON**指定调用对话框中时，将显示帮助按钮。  
   
- `pClassID`  
- 指向要转换或激活的项的 CLSID。 如果**NULL**、 **CLSID**与关联`pItem`将使用。  
+ *pClassID*  
+ 指向要转换或激活的项的 CLSID。 如果**NULL**、 **CLSID**与关联*pItem*将使用。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要转换或激活的项。 不能为**NULL**。  
   
 ### <a name="return-value"></a>返回值  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369029"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037283"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 类
 `CMFCKeyMapDialog`类支持将命令映射到键盘上的键的控件。  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParentFrame`  
+ [in]*pWndParentFrame*  
  指向的父窗口的指针`CMFCKeyMapDialog`对象。  
   
- [in] `bEnablePrint`  
+ [in]*bEnablePrint*  
  `TRUE` 如果可以打印快捷键的列表;，否则为`FALSE`。 默认值为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nItem`  
+ [in]*nItem*  
  内部列表中的键映射的项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  命令 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向用于将键盘键组合映射到的命令名称和描述工具栏按钮的指针。 键映射项被存储在内部列表控件中。  
   
- [in] `nItem`  
+ [in]*nItem*  
  一个从零开始的索引，它指定内部列表控件中插入新的键映射项的位置。  
   
 ### <a name="remarks"></a>备注  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dc`  
+ [in]*dc*  
  打印机设备上下文。  
   
- [in] `nPage`  
+ [in]*nPage*  
  若要打印的页码。  
   
- [in] `cx`  
+ [in]*cx*  
  标头，以像素为单位的水平偏移量。  
   
 ### <a name="return-value"></a>返回值  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dc`  
+ [in]*dc*  
  打印机设备上下文。  
   
- [in] `nItem`  
+ [in]*nItem*  
  要打印的项的从零开始的索引。  
   
- [in] `y`  
+ [in]*y*  
  页面顶部和项的位置之间的垂直偏移量。  
   
- [in] `cx`  
+ [in]*cx*  
  在页面左侧和的位置中的项之间的水平偏移量。  
   
- [in] `bCalcHeight`  
+ [in]*bCalcHeight*  
  `TRUE` 若要计算的打印项; 的最佳高度`FALSE`截断的打印项，以使其适应默认的空间。  
   
 ### <a name="return-value"></a>返回值  

@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376872"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041628"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 类
 与任意类型和维度的数组一起使用的类。  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ppvData`  
+ *ppvData*  
  指向数组数据的指针的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDims`  
+ *dwDims*  
  在安全数组的维度数。  
   
 ### <a name="remarks"></a>备注  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `saSrc`  
+ *saSrc*  
  现有`COleSafeArray`对象或**SAFEARRAY**要复制到新`COleSafeArray`对象。  
   
- `vtSrc`  
+ *vtSrc*  
  **VARTYPE**新`COleSafeArray`对象。  
   
- `psaSrc`  
+ *psaSrc*  
  指向的指针**SAFEARRAY**要复制到新`COleSafeArray`对象。  
   
  *varSrc*  
  现有**VARIANT**或`COleVariant`要复制到新对象`COleSafeArray`对象。  
   
- `pSrc`  
+ *pSrc*  
  指向的指针**VARIANT**要复制到新对象`COleSafeArray`对象。  
   
 ### <a name="remarks"></a>备注  
- 所有这些构造函数创建新`COleSafeArray`对象。 如果没有参数，一个空`COleSafeArray`创建对象 ( `VT_EMPTY`)。 如果`COleSafeArray`复制从另一个数组其[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)隐式已知 ( `COleSafeArray`， `COleVariant`，或**VARIANT**)，则**VARTYPE**的源数组保留，而且无需指定。 如果`COleSafeArray`复制从另一个数组其**VARTYPE**未知 ( **SAFEARRAY**)，则**VARTYPE**中必须指定`vtSrc`参数。  
+ 所有这些构造函数创建新`COleSafeArray`对象。 如果没有参数，一个空`COleSafeArray`创建对象 ( `VT_EMPTY`)。 如果`COleSafeArray`复制从另一个数组其[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)隐式已知 ( `COleSafeArray`， `COleVariant`，或**VARIANT**)，则**VARTYPE**的源数组保留，而且无需指定。 如果`COleSafeArray`复制从另一个数组其**VARTYPE**未知 ( **SAFEARRAY**)，则**VARTYPE**中必须指定*vtSrc*参数。  
   
  该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `vtSrc`  
- 数组的基类型 (即， **VARTYPE**的数组的每个元素)。 **VARTYPE**被限制为 variant 类型的子集。 既不**VT_ARRAY**也不**VT_BYREF**可以设置标志。 `VT_EMPTY` 和**VT_NULL**就不是数组的有效基类型。 所有其他类型是合法的。  
+ *vtSrc*  
+ 数组的基类型 (即， **VARTYPE**的数组的每个元素)。 **VARTYPE**被限制为 variant 类型的子集。 既不**VT_ARRAY**也不**VT_BYREF**可以设置标志。 **VT_EMPTY**和**VT_NULL**就不是数组的有效基类型。 所有其他类型是合法的。  
   
- `dwDims`  
+ *dwDims*  
  数组中的维度数。 与创建数组后，可以更改此[Redim](#redim)。  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>参数  
- `vtSrc`  
+ *vtSrc*  
  数组的基类型 (即， **VARTYPE**的数组的每个元素)。  
   
- `dwElements`  
+ *dwElements*  
  数组中的元素数目。 与创建数组后，可以更改此[ResizeOneDim](#resizeonedim)。  
   
- `pvSrcData`  
+ *pvSrcData*  
  指向要复制到数组的数据的指针。  
   
  *nLBound*  
  数组的下限。  
   
 ### <a name="remarks"></a>备注  
- 该函数分配和初始化的数组，如果复制指定的数据的数据指针`pvSrcData`不**NULL**。  
+ 该函数分配和初始化的数组，如果复制指定的数据的数据指针*pvSrcData*不**NULL**。  
   
  该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)。  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bytes`  
+ *字节*  
  对引用[CByteArray](../../mfc/reference/cbytearray-class.md)对象。  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rgIndices`  
+ *rgIndices*  
  指向数组的每个维度的索引数组的指针。  
   
- `pvData`  
+ *pvData*  
  指向用于放置数组的元素的位置的指针。  
   
 ### <a name="remarks"></a>备注  
- 此函数将自动调用 windows 函数`SafeArrayLock`和`SafeArrayUnlock`之前和之后在检索的元素。 如果数据元素是字符串、 对象或变体，该函数将复制正确的方式的元素。 参数`pvData`应指向大型足够的缓冲区以包含元素。  
+ 此函数将自动调用 windows 函数`SafeArrayLock`和`SafeArrayUnlock`之前和之后在检索的元素。 如果数据元素是字符串、 对象或变体，该函数将复制正确的方式的元素。 参数*pvData*应指向大型足够的缓冲区以包含元素。  
   
  该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDim`  
+ *dwDim*  
  要为其获取下限数组维度。  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDim`  
+ *dwDim*  
  要为其获取上限数组维度。  
   
  *pUBound*  
@@ -581,11 +581,11 @@ void PtrOfIndex (long 类型的值 * rgIndices，
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (long 类型的值 * rgIndices，
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements);
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368964"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042529"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 类
 用于 OLE“编辑链接”对话框。  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDoc`  
+ *pDoc*  
  指向 OLE 文档包含要编辑的链接。  
   
- `pView`  
- 指向上的当前视图`pDoc`。  
+ *pView*  
+ 指向上的当前视图*pDoc*。  
   
- `dwFlags`  
+ *dwFlags*  
  创建标记，其中包含 0 或**ELF_SHOWHELP**以指定是否显示对话框中时，将显示帮助按钮。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  

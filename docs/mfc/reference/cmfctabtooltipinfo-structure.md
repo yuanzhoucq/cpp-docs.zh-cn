@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373724"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037478"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 结构
 此结构可提供有关用户悬停的 MDI 选项卡的信息。  
@@ -36,14 +36,14 @@ struct CMFCTabToolTipInfo
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|指定的选项卡控件的索引。|  
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|指向选项卡控件的指针。|  
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|工具提示文本中。|  
   
 ## <a name="remarks"></a>备注  
- 指向的指针`CMFCTabToolTipInfo`作为参数传递结构`AFX_WM_ON_GET_TAB_TOOLTIP`消息。 当启用了 MDI 选项卡并将用户悬停在选项卡控件上时，将生成此消息。  
+ 指向的指针`CMFCTabToolTipInfo`作为 AFX_WM_ON_GET_TAB_TOOLTIP 消息的参数传递结构。 当启用了 MDI 选项卡并将用户悬停在选项卡控件上时，将生成此消息。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何`CMFCTabToolTipInfo`中使用[MDITabsDemo 示例： MFC 选项卡式 MDI 应用程序](../../visual-cpp-samples.md)。  

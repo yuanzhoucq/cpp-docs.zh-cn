@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371694"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042373"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 类
 提供 Windows 公共 SysLink 控件的功能。  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  指向包含要显示的文本标记的以零结尾的字符串的指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
   
- `dwStyle`  
+ *dwStyle*  
  指定链接控件的样式。 应用控件样式的任意组合。 请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中`Windows SDK`有关详细信息。  
   
- `rect`  
+ *rect*  
  指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定链接控件的父窗口。 不得为`NULL`。  
   
- `nID`  
+ *nID*  
  指定链接控件的 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>备注  
  构造`CLinkCtrl`两个步骤中的对象。 首先，调用的构造函数，然后调用`Create`，它创建的链接控件并将其附加到`CLinkCtrl`对象。 如果你想要将扩展的窗口样式与控件一起使用，调用[CLinkCtrl::CreateEx](#createex)而不是`Create`。  
   
- 第二种形式的`Create`方法已弃用。 使用指定的第一个窗体`lpszLinkMarkup`参数。  
+ 第二种形式的`Create`方法已弃用。 使用指定的第一个窗体*lpszLinkMarkup*参数。  
   
 ### <a name="example"></a>示例  
  下面的代码示例定义两个变量，名为`m_Link1`和`m_Link2`，用于访问两个链接控件。  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  指向包含要显示的文本标记的以零结尾的字符串的指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
   
- `dwExStyle`  
- 指定链接控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定链接控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定链接控件的样式。 应用控件样式的任意组合。 有关详细信息，请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定链接控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定链接控件的父窗口。 不得为`NULL`。  
   
- `nID`  
+ *nID*  
  指定链接控件的 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)将扩展的 Windows 样式常量。  
   
- 第二种形式的`CreateEx`方法已弃用。 使用指定的第一个窗体`lpszLinkMarkup`参数。  
+ 第二种形式的`CreateEx`方法已弃用。 使用指定的第一个窗体*lpszLinkMarkup*参数。  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  检索链接控件的理想高度。  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|该链接，以像素为单位的最大宽度。|  
-|[out 一个] * `pSize`|指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时，`cy`的成员`SIZE`结构包含由指定的链接文本宽度的理想链接文本高度`cxMaxWidth`。 `cx`结构中的成员包含实际需要的链接文本宽度。|  
+|[in]*cxMaxWidth*|该链接，以像素为单位的最大宽度。|  
+|[out 一个] * *pSize*|指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时， *cy*的成员`SIZE`结构包含由指定的链接文本宽度的理想链接文本高度*cxMaxWidth*。 *Cx*结构中的成员包含实际需要的链接文本宽度。|  
   
 ### <a name="return-value"></a>返回值  
- 链接文本，以像素为单位的首选的高度。 返回值是相同的值`cy`的成员`SIZE`结构。  
+ 链接文本，以像素为单位的首选的高度。 返回值是相同的值*cy*的成员`SIZE`结构。  
   
 ### <a name="remarks"></a>备注  
  有关的示例`GetIdealSize`方法，请参阅中的示例[CLinkCtrl::Create](#create)。  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向的指针[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)接收项信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iLink`  
+ *iLink*  
  链接控件项的索引。  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iLink`  
+ *iLink*  
  链接控件项的索引。  
   
- `pnState`  
+ *pnState*  
  指定的状态项的值。  
   
- `stateMask`  
+ *stateMask*  
  描述要获取的状态项标志的组合。 有关值的列表，请参阅说明**状态**中的成员[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构。 允许的项是相同中允许**状态**。  
   
 ### <a name="return-value"></a>返回值  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iLink`  
+ *iLink*  
  链接控件项的索引。  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含由指定的项的 URL  
   
- `szUrl`  
+ *szUrl*  
  包含由指定的项的 URL 的以 null 结尾的字符串  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向的指针[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构，它包含要设置的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iLink`  
+ *iLink*  
  链接控件项的索引。  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iLink`  
+ *iLink*  
  链接控件项的索引。  
   
- `pnState`  
+ *pnState*  
  设置指定的状态项的值。  
   
- `stateMask`  
+ *stateMask*  
  描述要设置的状态项标志的组合。 有关值的列表，请参阅说明**状态**中的成员[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构。 允许的项是相同中允许**状态**。  
   
 ### <a name="return-value"></a>返回值  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iLink`  
+ *iLink*  
  链接控件项的索引。  
   
- `szUrl`  
+ *szUrl*  
  包含由指定的项的 URL 的以 null 结尾的字符串  
   
 ### <a name="return-value"></a>返回值  

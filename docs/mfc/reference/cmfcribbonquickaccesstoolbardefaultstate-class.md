@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370915"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041800"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 类
 默认状态管理器定位在功能区栏上的快速访问工具栏的帮助程序类 ( [CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md))。  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `[in] uiCmd`  
+ *[] in uiCmd*  
  指定命令 id。  
   
- `[in] bIsVisible`  
+ *[] in bIsVisible*  
  快速访问工具栏处于默认状态时，请设置该命令的可见性。  
   
 ### <a name="remarks"></a>备注  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
  源的引用`CMFCRibbonQuickAccessToolBarDefaultState`从中进行复制的对象。  
   
 ### <a name="remarks"></a>备注  

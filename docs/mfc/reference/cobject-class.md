@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377235"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041706"
 ---
 # <a name="cobject-class"></a>CObject 类
 Microsoft 基础类库中的主体基类。  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>备注  
  由派生类的构造函数自动调用默认版本。  
   
- 如果你的类是可序列化 (它融合了`IMPLEMENT_SERIAL`宏)，则必须在类声明具有默认构造函数 （不带任何参数的构造函数）。 如果不需要默认构造函数，声明一个私有或受保护的"空"的构造函数。 有关详细信息，请参阅[使用 CObject](../../mfc/using-cobject.md)。  
+ 如果你的类是可序列化 （它融合了 IMPLEMENT_SERIAL 宏），则必须在类声明具有默认构造函数 （不带任何参数的构造函数）。 如果不需要默认构造函数，声明一个私有或受保护的"空"的构造函数。 有关详细信息，请参阅[使用 CObject](../../mfc/using-cobject.md)。  
   
  标准 c + + 默认类复制构造函数执行逐个成员复制。 私钥是否存在`CObject`复制构造函数可保证编译器错误消息，如果你的类的复制构造函数是所需但不可用。 如果你的类需要此功能，因此必须提供复制构造函数。  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `dc`  
+ *dc*  
  转储，通常的诊断转储上下文`afxDump`。  
   
 ### <a name="remarks"></a>备注  
- 当你编写您自己的类时，则应重写`Dump`函数以提供为你自己以及你的类的其他用户的诊断服务。 重写`Dump`通常调用`Dump`之前打印数据成员唯一派生的类的其基本类的函数。 `CObject::Dump` 打印类名称，如果你的类使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`宏。  
+ 当你编写您自己的类时，则应重写`Dump`函数以提供为你自己以及你的类的其他用户的诊断服务。 重写`Dump`通常调用`Dump`之前打印数据成员唯一派生的类的其基本类的函数。 `CObject::Dump` 打印类名称，如果你的类使用`IMPLEMENT_DYNAMIC`或 IMPLEMENT_SERIAL 宏。  
   
 > [!NOTE]
 >  你`Dump`函数应不会打印出来其输出的末尾处的换行字符。  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pClass`  
+ *pClass*  
  指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构与你`CObject`-派生类。  
   
 ### <a name="return-value"></a>返回值  
  如果对象都对应于类; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此函数将测试`pClass`以查看是否 （1） 它是指定类的对象或 （2） 它是从指定的类派生的类的对象。 此函数仅适用于使用声明的类[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)宏。  
+ 此函数将测试*pClass*以查看是否 （1） 它是指定类的对象或 （2） 它是从指定的类派生的类的对象。 此函数仅适用于使用声明的类[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)宏。  
   
  不要使用此功能进行了广泛因为它使您无法获得 c + + 多态性功能。 改为使用虚函数。  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ar`  
+ *ar*  
  A`CArchive`要序列化或从对象。  
   
 ### <a name="remarks"></a>备注  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373381"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037865"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 类
 处理特定于 OLE `IDispatch` 接口的异常，此接口是 OLE 自动化的重要组成部分。  
@@ -55,7 +55,7 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-特定错误代码。|  
   
 ## <a name="remarks"></a>备注  
- 像其他异常类派生自`CException`基类，`COleDispatchException`可以与使用**引发**， `THROW_LAST`，**重**，**捕获**，`AND_CATCH`，和`END_CATCH`宏。  
+ 像其他异常类派生自`CException`基类，`COleDispatchException`可与 THROW、 THROW_LAST、 重试，CATCH、 AND_CATCH，和 END_CATCH 宏。  
   
  一般情况下，应调用[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)创建并引发`COleDispatchException`对象。  
   

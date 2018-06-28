@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367664"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041008"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 类
 管理可拖曳菜单。 可拖曳菜单是菜单栏上的菜单。 用户可以从菜单栏移开可拖曳菜单，从而使可拖拽菜单浮动。  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [in]*uiTearOffBarID*  
+ [in]*strText*  
   
 ### <a name="remarks"></a>备注  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszRegEntry`  
+ [in]*lpszRegEntry*  
  包含注册表项的路径的字符串。 你的应用程序将拖曳栏的设置存储在此注册表项。  
   
- [in] `uiTearOffMenuFirst`  
+ [in]*uiTearOffMenuFirst*  
  第一个拖曳菜单的菜单 ID。  
   
- [in] `uiTearOffMenuLast`  
+ [in]*uiTearOffMenuLast*  
  最后一个拖曳菜单的菜单 ID。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 从菜单 Id 的范围`uiTearOffMenuFirst`到`uiTearOffMenuLast`必须是连续的间隔。 间隔定义可以出现在应用程序中的相同时间拖曳菜单数。  
+ 从菜单 Id 的范围*uiTearOffMenuFirst*到*uiTearOffMenuLast*必须是连续的间隔。 间隔定义可以出现在应用程序中的相同时间拖曳菜单数。  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `str`  
+ [in]*str*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hmenu`  
+ [in]*hmenu*  
   
 ### <a name="remarks"></a>备注  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [in]*uiCmdId*  
+ [in]*bUse*  
   
 ### <a name="remarks"></a>备注  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenu`  
+ [in]*hMenu*  
   
 ### <a name="remarks"></a>备注  
   

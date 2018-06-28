@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378413"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039122"
 ---
 # <a name="coblist-class"></a>CObList 类
 排序的唯一，则列表的 fSupports`CObject`指针访问按顺序或指针值。  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  插入元素非常快速位于列表前面、 尾部，和已知**位置**。 按顺序搜索是按值或索引查找元素所需的。 此搜索可能会很慢，如果列表太长。  
   
- `CObList` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果一份`CObject`指针存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CObject`反过来序列化元素。  
+ `CObList` 包含 IMPLEMENT_SERIAL 宏来支持序列化和转储的其元素。 如果一份`CObject`指针存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CObject`反过来序列化元素。  
   
  如果你需要个人的转储`CObject`列表中的元素，必须将转储上下文的深度设置为 1 或更高版本。  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `newElement`  
+ *newElement*  
  `CObject`要添加到此列表的指针。  
   
- `pNewList`  
- 指向另一个`CObList`列表。 中的元素`pNewList`将添加到此列表。  
+ *pNewList*  
+ 指向另一个`CObList`列表。 中的元素*pNewList*将添加到此列表。  
   
 ### <a name="return-value"></a>返回值  
  第一个版本返回**位置**新插入的元素的值。  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `newElement`  
+ *newElement*  
  `CObject`要添加到此列表的指针。  
   
- `pNewList`  
- 指向另一个`CObList`列表。 中的元素`pNewList`将添加到此列表。  
+ *pNewList*  
+ 指向另一个`CObList`列表。 中的元素*pNewList*将添加到此列表。  
   
 ### <a name="return-value"></a>返回值  
  第一个版本返回**位置**新插入的元素的值。  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
+ *nBlockSize*  
  内存分配扩展列表的粒度。  
   
 ### <a name="remarks"></a>备注  
- 随着列表后，内存分配的单位`nBlockSize`条目。 如果内存分配失败，`CMemoryException`引发。  
+ 随着列表后，内存分配的单位*nBlockSize*条目。 如果内存分配失败，`CMemoryException`引发。  
   
  下表显示其他成员函数类似于`CObList::CObList`。  
   
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>参数  
- `searchValue`  
+ *searchValue*  
  要在此列表中找到的对象指针。  
   
- `startAfter`  
+ *startAfter*  
  搜索起始位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -285,18 +285,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- 使用的值`nIndex`作为列表中的索引。  
+ 使用的值*nIndex*作为列表中的索引。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要找的列表元素的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果`nIndex`太大。 (如果，框架才生成断言`nIndex`为负。)  
+ A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果*nIndex*太大。 (如果，框架才生成断言*nIndex*为负。)  
   
 ### <a name="remarks"></a>备注  
  从列表中，停止对的开头开始顺序扫描*n*th 元素。  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>参数  
  *位置*  
- A**位置**通过前一个返回值`GetHeadPosition`或**查找**成员函数调用。  
+ A**位置**通过前一个返回值`GetHeadPosition`或`Find`成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
  请参见的返回值说明[GetHead](#gethead)。  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- 获取标识的列表元素`rPosition`，然后设置`rPosition`到`POSITION`的列表中的下一步条目的值。  
+ 获取标识的列表元素*rPosition*，然后设置*rPosition*到`POSITION`的列表中的下一步条目的值。  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `rPosition`  
+ *rPosition*  
  对引用`POSITION`通过前一个返回值`GetNext`， `GetHeadPosition`，或其他成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  你必须确保你`POSITION`值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   
- 如果检索的元素的是在列表中，最后然后的新值`rPosition`设置为`NULL`。  
+ 如果检索的元素的是在列表中，最后然后的新值*rPosition*设置为`NULL`。  
   
  可迭代过程中删除元素。 请参阅示例[RemoveAt](#removeat)。  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- 获取标识的列表元素`rPosition`，然后设置`rPosition`到`POSITION`列表中的上一项的值。  
+ 获取标识的列表元素*rPosition*，然后设置*rPosition*到`POSITION`列表中的上一项的值。  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `rPosition`  
+ *rPosition*  
  对引用`POSITION`通过前一个返回值`GetPrev`或其他成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 一个由先前 **、** 或 `GetNext`Find `GetPrev`成员函数调用返回的 **位置** 值。  
+ A**位置**通过前一个返回值`GetNext`， `GetPrev`，或`Find`成员函数调用。  
   
  `newElement`  
  要添加到此列表的对象指针。  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 一个由先前 **、** 或 `GetNext`Find `GetPrev`成员函数调用返回的 **位置** 值。  
+ A**位置**通过前一个返回值`GetNext`， `GetPrev`，或`Find`成员函数调用。  
   
- `newElement`  
+ *newElement*  
  要添加到此列表的对象指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  **位置**要设置的元素。  
   
- `newElement`  
+ *newElement*  
  `CObject`要写入到列表的指针。  
   
 ### <a name="remarks"></a>备注  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369318"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037969"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 `CMFCEditBrowseCtrl`类支持编辑浏览控件，即有选择性地包含一个浏览按钮可编辑文本框控件。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  若要提供自定义映像的浏览按钮，调用[SetBrowseButtonImage](#setbrowsebuttonimage)方法或重写[OnDrawBrowseButton](#ondrawbrowsebutton)方法。  
   
-7.  若要从编辑浏览控件中删除浏览按钮，请调用[EnableBrowseButton](#enablebrowsebutton)方法替换`bEnable`参数设置为`FALSE`。  
+7.  若要从编辑浏览控件中删除浏览按钮，请调用[EnableBrowseButton](#enablebrowsebutton)方法替换*bEnable*参数设置为`FALSE`。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bEnable`  
+ *bEnable*  
  `TRUE` 若要显示浏览按钮;`FALSE`不希望显示浏览按钮。 默认值为 `TRUE`。  
   
- `szLabel`  
+ *szLabel*  
  在浏览按钮显示标签。 默认值是" **...**".  
   
 ### <a name="remarks"></a>备注  
- 如果`bEnable`参数是`TRUE`，实现自定义操作，单击浏览按钮时执行。 若要实现自定义操作，从派生类`CMFCEditBrowseCtrl`类，然后重写其[OnBrowse](#onbrowse)方法。  
+ 如果*bEnable*参数是`TRUE`，实现自定义操作，单击浏览按钮时执行。 若要实现自定义操作，从派生类`CMFCEditBrowseCtrl`类，然后重写其[OnBrowse](#onbrowse)方法。  
   
  如果`bEnable`参数是`TRUE`，该控件的浏览模式是`BrowseMode_Default`; 否则为浏览模式是`BrowseMode_None`。 有关浏览模式的详细信息，请参阅[GetMode](#getmode)方法。  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszDefExt`  
+ *lpszDefExt*  
  指定在文件选择对话框中使用的默认文件扩展名。 默认值为 `NULL`。  
   
- `lpszFilter`  
+ *lpszFilter*  
  指定在文件选择对话框中使用的默认筛选器字符串。 默认值为 `NULL`。  
   
- `dwFlags`  
+ *dwFlags*  
  对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。  
   
 ### <a name="remarks"></a>备注  
@@ -198,7 +198,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  下表列出可能的返回值。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|`custom mode`。 程序员定义的操作执行。|  
 |`BrowseMode_File`|`file mode`。 将显示标准文件浏览器对话框。|  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  一个指向设备上下文的指针。  
   
- `Rect`  
+ *rect*  
  浏览按钮的边框。  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` 如果按下了按钮;否则为`FALSE`。  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` 如果按钮突出显示;，否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hIcon`  
+ *任务栏*  
  图标的句柄。  
   
- `hBitmap`  
+ *hBitmap*  
  位图的句柄。  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  位图的资源 ID。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` 此方法退出; 中删除指定的图标或位图否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `strFileName`  
+ *strFileName*  
  指定的非法文件名称。  
   
 ### <a name="return-value"></a>返回值  

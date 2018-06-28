@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370853"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039789"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 类
 实现的功能区分隔符。  
@@ -113,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndListBox`  
+ [in]*pWndListBox*  
  指向的指针**命令**添加分隔符的位置的列表。  
   
- [in] `bDeep`  
+ [in]*bDeep*  
  已忽略。  
   
 ### <a name="return-value"></a>返回值  
- 指定列表框中的字符串的从零开始索引`pWndListBox`。  
+ 指定列表框中的字符串的从零开始索引*pWndListBox*。  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  构造 `CMFCRibbonSeparator` 对象。  
@@ -130,7 +130,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsHoriz`  
+ [in]*bIsHoriz*  
  如果`TRUE`，该分隔符是水平; 如果`FALSE`，分隔符为垂直。  
   
 ### <a name="remarks"></a>备注  
@@ -149,7 +149,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `Src`  
+ [in]*Src*  
  要从复制的源功能区元素。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
@@ -160,7 +160,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备内容的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -197,7 +197,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pDC`|一个指向设备上下文的指针。|  
-|[in] `strText`|显示在列表中的文本。|  
-|[in] `nTextOffset`|文本和边框的左侧之间的间距。|  
-|[in] `rect`|指定的绑定矩形。|  
-|[in] `bIsSelected`|已忽略。|  
-|[in] `bHighlighted`|已忽略。|  
+|[in]*pDC*|一个指向设备上下文的指针。|  
+|[in]*strText*|显示在列表中的文本。|  
+|[in]*nTextOffset*|文本和边框的左侧之间的间距。|  
+|[in]*rect*|指定的绑定矩形。|  
+|[in]*bIsSelected*|已忽略。|  
+|[in]*bHighlighted*|已忽略。|  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

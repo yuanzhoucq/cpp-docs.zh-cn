@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376244"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040764"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 类
 `CMFCImageEditorDialog`类支持的图像编辑器对话框。  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitmap`  
+ *pBitmap*  
  指向图像的指针。  
   
- `pParent`  
+ *pParent*  
  指向当前的图像编辑器对话框的父窗口的指针。  
   
- `nBitsPixel`  
- 用于表示对一个像素，也称为颜色深度的颜色的比特数。  如果`nBitsPixel`参数的值为-1，从指定的映像派生的颜色深度`pBitmap`参数。 默认值为 -1。  
+ *nBitsPixel*  
+ 用于表示对一个像素，也称为颜色深度的颜色的比特数。  如果*nBitsPixel*参数的值为-1，从指定的映像派生的颜色深度*pBitmap*参数。 默认值为 -1。  
   
 ### <a name="return-value"></a>返回值  
  若要修改映像时，将传递到的映像指针`CMFCImageEditorDialog`构造函数。 然后调用`DoModal`方法打开模式对话框。 当`DoModal`方法返回时，该位图包含新映像。  

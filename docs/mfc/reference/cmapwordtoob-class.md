@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367138"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041826"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 类
 支持 16 位键控的 `CObject` 指针的映射。  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>成员  
- 成员函数的`CMapWordToOb`类似于类的成员函数[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论您在何处`CString`或**const**指向`char`作为函数参数或返回值，替换**WORD**。  
+ 成员函数的`CMapWordToOb`类似于类的成员函数[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由于此相似性，因此你可以使用 `CMapStringToOb` 参考文档获取成员函数细节。 无论您在何处`CString`或**const**指向**char**作为函数参数或返回值，替换**WORD**。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

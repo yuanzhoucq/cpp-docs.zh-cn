@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378377"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038575"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 类
 表示通常在浮动工具条周围出现的半高框架窗口。  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpClassName`  
+ *lpClassName*  
  指向以 null 结尾的字符串名称的 Windows 类。 类名称可以是具有全局注册的任何名称[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函数。 如果**NULL**，将由框架为你注册窗口类。 MFC 提供了默认的类的以下样式和特性：  
   
 -   设置样式位**CS_DBLCLKS**，它会将双击消息到窗口过程当用户双击鼠标。  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   将窗口设置到的默认大小和位置，Windows 所述。  
   
- `lpWindowName`  
+ *lpWindowName*  
  指向以 null 结尾的字符串，其中包含窗口名称。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式特性。 这些错误可能包括标准窗口样式和一个或多个以下的特殊样式：  
   
 - **MFS_MOVEFRAME**允许通过在窗口中，而不仅仅是标题任何边缘上单击要移动微型框架窗口。  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  请参阅[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)有关可能的窗口样式值的说明。 用于微型框架窗口的典型组合是**WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**。  
   
- `rect`  
+ *rect*  
  A`RECT`结构，它指定所需的窗口的尺寸。  
   
- `pParentWnd`  
+ *pParentWnd*  
  向父窗口的点。 使用**NULL**为顶级窗口。  
   
- `nID`  
+ *nID*  
  如果用作子窗口创建微型框架窗口，则这是子控件; 标识符否则为 0。  
   
 ### <a name="return-value"></a>返回值  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
+ *dwExStyle*  
  指定的扩展的样式`CMiniFrameWnd`正在创建。 应用任何[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)到窗口。  
   
- `lpClassName`  
+ *lpClassName*  
  指向以 null 结尾的字符字符串名称的 Windows 类 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构)。 类名称可以是具有全局注册的任何名称[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函数或任何预定义的控件类名称。 它不能**NULL**。  
   
- `lpWindowName`  
+ *lpWindowName*  
  指向以 null 结尾的字符串，其中包含窗口名称。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式特性。 请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)有关可能的值的说明。  
   
- `rect`  
- 大小和位置的窗口中，在客户端坐标中的`pParentWnd`。  
+ *rect*  
+ 大小和位置的窗口中，在客户端坐标中的*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向以父窗口对象。  
   
- `nID`  
+ *nID*  
  子窗口的标识符。  
   
 ### <a name="return-value"></a>返回值  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  重写进一步 **上 * * * 消息*消息处理程序，以向派生类添加更多的功能。  
   
- 如果**WS_VISIBLE**给定样式时，Windows 发送窗口激活和显示窗口所需的所有消息。 如果窗口样式指定的标题栏，窗口标题的指向`lpszWindowName`参数显示在标题栏中。  
+ 如果**WS_VISIBLE**给定样式时，Windows 发送窗口激活和显示窗口所需的所有消息。 如果窗口样式指定的标题栏，窗口标题的指向*lpszWindowName*参数显示在标题栏中。  
   
- `dwStyle`参数可以是任意组合的[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+ *DwStyle*参数可以是任意组合的[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
  不再支持旧样式调色板工具箱窗口。 在以前版本的 Windows，运行 MFC 应用程序时，已支持的旧样式，没有"X"关闭按钮，但在 Visual c + +.NET 不再受支持。 仅新`WS_EX_TOOLWINDOW`样式现在支持; 这种样式的说明，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
   

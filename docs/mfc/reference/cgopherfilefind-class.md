@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369409"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038524"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 辅助 Gopher 服务器的 Internet 文件搜索。  
@@ -119,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pConnection`  
+ *pConnection*  
  指向的指针[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象。  
   
- `dwContext`  
- 操作上下文标识符。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 操作上下文标识符。 请参阅**备注**有关详细信息*dwContext*。  
   
 ### <a name="remarks"></a>备注  
- 默认值为`dwContext`发送到 mfc`CGopherFileFind`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CGopherFileFind`对象。 构造时`CGopherFileFind`对象，您可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ 默认值为*dwContext*发送到 mfc`CGopherFileFind`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CGopherFileFind`对象。 构造时`CGopherFileFind`对象，您可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤： WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  调用此成员函数可查找 gopher 文件。  
@@ -144,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `refLocator`  
+ *refLocator*  
  对引用[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象。  
   
  *pstrString*  
  指向包含的文件名称的字符串的指针。  
   
- `dwFlags`  
+ *dwFlags*  
  描述如何处理此会话的标志。 有效标志包括：  
   
 -   即使本地缓存，INTERNET_FLAG_RELOAD 从远程服务器获取数据。  
@@ -186,10 +186,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTimeStamp`  
+ *pTimeStamp*  
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含已创建了文件的时间。  
   
- `refTime`  
+ *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -210,10 +210,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `refTime`  
+ *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含上一次访问该文件的时间。  
   
 ### <a name="return-value"></a>返回值  
@@ -234,10 +234,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pTimeStamp`  
+ *pTimeStamp*  
  指向的指针[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构，它包含文件上次写入到的时间。  
   
- `refTime`  
+ *refTime*  
  对引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  

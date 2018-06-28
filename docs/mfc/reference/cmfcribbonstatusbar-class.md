@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374660"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038098"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
 `CMFCRibbonStatusBar`类实现状态栏控件可以显示功能区元素。  
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElement`  
+ [in]*pElement*  
  指向动态元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElement`  
+ [in]*pElement*  
  添加的元素指向的指针。  
   
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  元素的文本标签。  
   
- [in] `bIsVisible`  
+ [in]*bIsVisible*  
  `TRUE` 如果你想要将元素添加为可见，`FALSE`如果你想要添加的元素为隐藏。  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElement`  
+ [in]*pElement*  
  添加的元素指向的指针。  
   
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  元素的文本标签。  
   
- [in] `bIsVisible`  
+ [in]*bIsVisible*  
  `TRUE` 如果你想要将元素添加为可见，`FALSE`如果你想要添加的元素为隐藏。  
   
 ### <a name="remarks"></a>备注  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向父窗口的指针。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  逻辑或组合的控件样式。  
   
- [in] `nID`  
+ [in]*nID*  
  状态栏控件 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向父窗口的指针。  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  逻辑或组合的创建状态栏对象的其他样式。  
   
- `dwStyle`  
+ *dwStyle*  
  状态栏控件样式。  
   
- `nID`  
+ *nID*  
  状态栏控件 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
- [in] `BOOL`  
+ [in]*uiCmdID*  
+ [in]*BOOL*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  元素的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定位于状态栏控件的主要区域中的元素的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定元素的索引（从零开始），该元素位于状态栏控件的扩展区域中。  
   
 ### <a name="return-value"></a>返回值  
- 一个指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 如果 `NULL` 为负或超过功能区状态栏的扩展区域中的元素数，则为 `nIndex`。  
+ 一个指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 `NULL` 如果*nIndex*为负或超过功能区状态栏扩展区域中的元素数。  
   
 ### <a name="remarks"></a>备注  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rect`  
+ [in]*rect*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElement`  
+ [in]*pElement*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `strInfo`  
+ [in]*strInfo*  
  信息字符串中。  
   
- [in] `rectInfo`  
+ [in]*rectInfo*  
  绑定矩形。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要自定义状态栏中的信息字符串的外观，重写此方法在派生类。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法，以便将状态栏置于信息模式。 在此模式下，状态栏隐藏所有窗格，并显示指定的信息字符串`strInfo`。  
+ 如果你想要自定义状态栏中的信息字符串的外观，重写此方法在派生类。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法，以便将状态栏置于信息模式。 在此模式下，状态栏隐藏所有窗格，并显示指定的信息字符串*strInfo*。  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  要从状态栏中删除元素的 ID。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果具有指定的元素`uiID`中删除。 否则为 `FALSE`。  
+ `TRUE` 如果具有指定的元素*uiID*中删除。 否则为 `FALSE`。  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  启用或禁用功能区状态栏的信息模式。  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszInfo`  
+ [in]*lpszInfo*  
  信息字符串中。  
   
 ### <a name="remarks"></a>备注  
- 使用此方法将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格，并显示指定的信息字符串`lpszInfo`。  
+ 使用此方法将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格，并显示指定的信息字符串*lpszInfo*。  
   
  LpszInfo 时`NULL`，状态栏将恢复到常规模式。  
   

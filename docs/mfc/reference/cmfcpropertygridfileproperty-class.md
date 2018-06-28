@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367791"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038908"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 类
 `CMFCPropertyGridFileProperty`类支持打开文件选择对话框中的属性列表控件项。  
@@ -78,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `strName`  
+ [in]*strName*  
  属性名称。  
   
- [in] `bOpenFileDialog`  
+ [in]*bOpenFileDialog*  
  `TRUE` 若要打开**打开文件**对话框;`FALSE`以打开**保存文件**对话框。  
   
- [in] `strFileName`  
+ [in]*strFileName*  
  初始文件名。  
   
- [in] `lpszDefExt`  
+ [in]*lpszDefExt*  
  一个或多个文件扩展名字符串。 默认值为 `NULL`。  
   
- [in] `dwFlags`  
+ [in]*dwFlags*  
  对话框标志。 默认值是 `OFN_HIDEREADONLY` 和 `OFN_OVERWRITEPROMPT` 的按位组合 (OR)。  
   
- [in] `lpszFilter`  
+ [in]*lpszFilter*  
  一个或多个文件筛选器的字符串。 默认值为 `NULL`。  
   
- [in] `lpszDescr`  
+ [in]*lpszDescr*  
  属性项说明。 默认值为 `NULL`。  
   
- [in] `dwData`  
+ [in]*dwData*  
  与属性项相关联的特定于应用程序的数据。 例如，32 位整数或与指向其他数据的指针。 默认值为 0。  
   
 ### <a name="return-value"></a>返回值  

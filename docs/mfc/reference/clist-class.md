@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372516"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039129"
 ---
 # <a name="clist-class"></a>CList 类
 支持可按顺序或值访问的不唯一对象的有序列表。  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  用于指定列表元素类型的模板参数（可以为一个引用）。  
   
- `newElement`  
+ *newElement*  
  新元素。  
   
- `pNewList`  
- 指向另一个`CList`列表。 中的元素`pNewList`将添加到此列表。  
+ *pNewList*  
+ 指向另一个`CList`列表。 中的元素*pNewList*将添加到此列表。  
   
 ### <a name="return-value"></a>返回值  
  第一个版本返回**位置**新插入的元素的值。  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  用于指定列表元素类型的模板参数（可以为一个引用）。  
   
- `newElement`  
+ *newElement*  
  要添加到此列表的元素。  
   
- `pNewList`  
- 指向另一个`CList`列表。 中的元素`pNewList`将添加到此列表。  
+ *pNewList*  
+ 指向另一个`CList`列表。 中的元素*pNewList*将添加到此列表。  
   
 ### <a name="return-value"></a>返回值  
  第一个版本返回**位置**新插入的元素的值。  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nBlockSize`  
+ *nBlockSize*  
  内存分配扩展列表的粒度。  
   
 ### <a name="remarks"></a>备注  
- 随着列表后，内存分配的单位`nBlockSize`条目。  
+ 随着列表后，内存分配的单位*nBlockSize*条目。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- 按顺序以查找匹配指定的第一个元素在列表中搜索`searchValue`。  
+ 按顺序以查找匹配指定的第一个元素在列表中搜索*searchValue*。  
   
 ```  
 POSITION Find(
@@ -223,13 +223,13 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  用于指定列表元素类型的模板参数（可以为一个引用）。  
   
- `searchValue`  
+ *searchValue*  
  要在列表中找到的值。  
   
- `startAfter`  
+ *startAfter*  
  搜索起始位置。 如果未不指定任何值，与头元素开始执行搜索。  
   
 ### <a name="return-value"></a>返回值  
@@ -239,18 +239,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- 使用的值`nIndex`作为列表中的索引。  
+ 使用的值*nIndex*作为列表中的索引。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要找的列表元素的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
- A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果`nIndex`为负数或过大。  
+ A**位置**可以用于迭代或对象指针检索; 的值**NULL**如果*nIndex*为负数或过大。  
   
 ### <a name="remarks"></a>备注  
  从列表中，停止对的开头开始顺序扫描*n*th 元素。  
@@ -338,7 +338,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- 获取标识的列表元素`rPosition`，然后设置`rPosition`到**位置**的列表中的下一步条目的值。  
+ 获取标识的列表元素*rPosition*，然后设置*rPosition*到**位置**的列表中的下一步条目的值。  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,7 +349,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *类型*  
  在列表中指定的元素的类型的模板参数。  
   
- `rPosition`  
+ *rPosition*  
  对引用**位置**通过前一个返回值`GetNext`， [GetHeadPosition](#getheadposition)，或其他成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
@@ -358,7 +358,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  如果该列表不是**const**，`GetNext`返回对列表的元素的引用。 这允许要在赋值语句的任何一侧上使用的函数，从而允许对要修改的列表项。  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`GetNext`如果建立通过调用的初始位置的向前迭代循环中`GetHeadPosition`或**查找**。  
+ 你可以使用`GetNext`如果建立通过调用的初始位置的向前迭代循环中`GetHeadPosition`或`Find`。  
   
  你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   
@@ -379,7 +379,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *类型*  
  在列表中指定的元素的类型的模板参数。  
   
- `rPosition`  
+ *rPosition*  
  对引用**位置**通过前一个返回值`GetPrev`或其他成员函数调用。  
   
 ### <a name="return-value"></a>返回值  
@@ -388,11 +388,11 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  如果该列表不是**const**，`GetPrev`返回对列表的元素的引用。 这允许要在赋值语句的任何一侧上使用的函数，从而允许对要修改的列表项。  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`GetPrev`如果建立通过调用的初始位置的反向迭代循环中`GetTailPosition`或**查找**。  
+ 你可以使用`GetPrev`如果建立通过调用的初始位置的反向迭代循环中`GetTailPosition`或`Find`。  
   
  你必须确保你**位置**值表示在列表中的有效位置。 如果它是无效的 Microsoft 基础类库的调试版本断言。  
   
- 如果检索的元素的是在列表中，第一个然后的新值`rPosition`设置为**NULL**。  
+ 如果检索的元素的是在列表中，第一个然后的新值*rPosition*设置为**NULL**。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -456,12 +456,12 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 一个由先前 **、** 或 `GetNext`Find `GetPrev`成员函数调用返回的 **位置** 值。  
+ A**位置**通过前一个返回值`GetNext`， `GetPrev`，或`Find`成员函数调用。  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  指定列表元素的类型的模板参数。  
   
- `newElement`  
+ *newElement*  
  要添加到此列表的元素。  
   
 ### <a name="return-value"></a>返回值  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>参数  
  *位置*  
- 一个由先前 **、** 或 `GetNext`Find `GetPrev`成员函数调用返回的 **位置** 值。  
+ A**位置**通过前一个返回值`GetNext`， `GetPrev`，或`Find`成员函数调用。  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  用于指定列表元素类型的模板参数（可以为一个引用）。  
   
- `newElement`  
+ *newElement*  
  要添加到此列表的元素。  
   
 ### <a name="return-value"></a>返回值  
@@ -587,13 +587,13 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  **位置**要设置的元素。  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  用于指定列表元素类型的模板参数（可以为一个引用）。  
   
- `newElement`  
+ *newElement*  
  要添加到列表的元素。  
   
 ### <a name="remarks"></a>备注  

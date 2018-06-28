@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367966"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040736"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 结构
 提供一种简便方式检测你的程序中的内存泄漏。  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  与其他诊断`CMemoryState`诊断程序仅在程序的调试版本中可用。 必须具有的调试版本 **_DEBUG**定义常量。  
   
- 如果你怀疑你的程序有内存泄漏，则可以使用`Checkpoint`，**差异**，和`DumpStatistics`函数在程序中的两个不同点发现 （分配的对象） 的内存状态之间的差异执行。 此信息可以用于确定是否将函数清理其所分配的所有对象。  
+ 如果你怀疑你的程序有内存泄漏，则可以使用`Checkpoint`， `Difference`，和`DumpStatistics`函数以在程序执行两个不同时间点上发现的内存状态 （分配的对象） 之间的差异。 此信息可以用于确定是否将函数清理其所分配的所有对象。  
   
  如果只需知道在分配和解除分配这种不平衡的出现位置未提供足够的信息，则可以使用`DumpAllObjectsSince`函数转储所有对象分配到在上一个调用`Checkpoint`。 此转储演示的分配、 源文件和已分配的对象的行顺序 (如果你使用`DEBUG_NEW`分配)，和派生类型的对象，它的地址以及其大小。 `DumpAllObjectsSince` 此外会调用每个对象的`Dump`函数提供有关其当前状态信息。  
   

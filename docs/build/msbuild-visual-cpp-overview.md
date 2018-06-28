@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379258"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039084"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概述  
   
@@ -139,7 +139,10 @@ A*任务参数*是类任务的属性，通常表示可执行命令的命令行�
 |重新生成|清理，然后生成你的项目。|  
 |ResourceCompile|执行 Microsoft Windows 资源编译器工具 rc.exe。|  
 |XdcMake|执行 XML 文档工具 xdcmake.exe。|  
-|Xsd|执行 XML 架构定义工具中，xsd.exe。|  
+|Xsd|执行 XML 架构定义工具中，xsd.exe。 *请参阅下面的说明。*|  
+
+> [!NOTE] 
+> 在 Visual Studio 2017，c + + 项目支持**xsd**文件已弃用。 你仍然可以使用**Microsoft.VisualC.CppCodeProvider**通过添加**CppCodeProvider.dll**手动到 GAC。
   
 ## <a name="see-also"></a>请参阅  
   

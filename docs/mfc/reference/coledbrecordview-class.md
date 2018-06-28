@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372201"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037852"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 类
 显示控件中数据库记录的视图。  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含是对话框模板资源的名称的以 null 结尾的字符串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含对话框模板资源的 ID 号。  
   
 ### <a name="remarks"></a>备注  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  标准 `HRESULT` 值。  
   
 ### <a name="remarks"></a>备注  
- 你必须重写该成员函数以构造或中获取行集对象并返回到原来的句柄。 如果声明与 ClassWizard 记录视图类，向导会为你编写的默认重写。 ClassWizard 的默认实现返回存储在记录视图中，如果存在的行集句柄。 如果不是，构造类型的行集对象使用指定 ClassWizard 和调用其**打开**成员函数以打开该表或运行查询，然后返回该对象的句柄。  
+ 你必须重写该成员函数以构造或中获取行集对象并返回到原来的句柄。 如果声明与 ClassWizard 记录视图类，向导会为你编写的默认重写。 ClassWizard 的默认实现返回存储在记录视图中，如果存在的行集句柄。 如果不是，构造类型的行集对象使用指定 ClassWizard 和调用其`Open`成员函数以打开该表或运行查询，然后返回该对象的句柄。  
   
 > [!NOTE]
 >  上一步 MFC 7.0`OnGetRowset`返回一个指向`CRowset`。 如果有调用的代码`OnGetRowset`，你需要返回类型更改为模板化类**CRowset <>**。  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  以下标准命令 ID 值之一：  
   
 - `ID_RECORD_FIRST` — 将移动到记录集的第一个记录。  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  如果移动已成功; 则为非 0如果移动请求被拒绝则否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 默认实现调用相应**移动**成员函数`CRowset`与记录视图关联的对象。  
+ 默认实现调用相应`Move`成员函数`CRowset`与记录视图关联的对象。  
   
  默认情况下，`OnMove`更新数据源上的当前记录，如果用户具有在记录视图中更改它。  
   

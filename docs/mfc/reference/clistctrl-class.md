@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b44878f5b860a05029f31492a7ca8ae06d83b607
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a81ce168c99f4ad473619c72941842085c3a5a8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379042"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042412"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 封装显示一组项的“列表视图控件”功能，每一项均包含一个图标（来自图像列表）和标签。  
@@ -487,7 +487,7 @@ class CListCtrl : public CWnd
 ## <a name="items-and-subitems"></a>项和子项  
  在列表视图控件中的每个项包含一个图标 （来自图像列表）、 标签、 一个当前状态和 （称为"项数据"） 的应用程序定义的值。 与每个项，一个或多个子项还可以将关联。 "子项"是一个字符串，在报表视图中，可以显示的项的图标和标签右侧列中。 在列表视图控件中的所有项都必须都具有相同数量的子项。  
   
- 类**CListCtrl**提供多个函数用于插入、 删除、 查找、 和修改这些项目。 有关详细信息，请参阅[clistctrl:: Getitem](#getitem)， [CListCtrl::InsertItem](#insertitem)，和[CListCtrl::FindItem](#finditem)，[将项添加到控件](../adding-items-to-the-control.md)，和[滚动、 排列、 排序和查找列表控件中](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。  
+ 类`CListCtrl`提供多个函数用于插入、 删除、 查找、 和修改这些项目。 有关详细信息，请参阅[clistctrl:: Getitem](#getitem)， [CListCtrl::InsertItem](#insertitem)，和[CListCtrl::FindItem](#finditem)，[将项添加到控件](../adding-items-to-the-control.md)，和[滚动、 排列、 排序和查找列表控件中](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。  
   
  默认情况下，列表视图控件是负责存储项的图标和文本特性。 但是，这些项类型，除了类`CListCtrl`支持"回调项"。 "回调项"是为其的列表视图项应用程序，而不是控件 — 存储文本、 图标或两者。 回调掩码用于指定由应用程序提供哪些项特性 （文本和/或图标）。 如果应用程序使用回调项，它必须能够提供按需的文本和/或图标属性。 当应用程序已维护的一些此信息时，回调项所很有用。 有关详细信息，请参阅[使用 CListCtrl： 回调项和回调掩码](../callback-items-and-the-callback-mask.md)。  
   
@@ -535,10 +535,10 @@ CSize ApproximateViewRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `sz`  
+ *sz*  
  控件，以像素为单位的建议的尺寸。 如果未指定维度，框架将使用该控件的当前宽度或高度值。  
   
- `iCount`  
+ *iCount*  
  要在控件中显示的项的数目。 如果此参数为-1，框架将使用的总项数当前控件中。  
   
 ### <a name="return-value"></a>返回值  
@@ -555,7 +555,7 @@ BOOL Arrange(UINT nCode);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCode`  
+ *nCode*  
  指定项的对齐方式样式。 它可以是以下值之一：  
   
 - `LVA_ALIGNLEFT` 将窗口的项目沿左边缘对齐。  
@@ -570,7 +570,7 @@ BOOL Arrange(UINT nCode);
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- `nCode`参数指定对齐样式。  
+ *NCode*参数指定对齐样式。  
   
 ### <a name="example"></a>示例    
 ```cpp  
@@ -610,25 +610,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定列表控件的样式。 应用于控件的列表控件样式的任意组合。 请参阅[列表视图窗口样式](http://msdn.microsoft.com/library/windows/desktop/bb774739)Windows SDK for 这些样式的完整列表中。 设置扩展样式特定于控件使用[SetExtendedStyle](#setextendedstyle)。  
   
- `rect`  
+ *rect*  
  指定列表控件的大小和位置。 它可以是`CRect`对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定列表控件的父窗口中，通常`CDialog`。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定列表控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 构造`CListCtrl`中两个步骤。 首先，调用的构造函数，然后调用**创建**，它创建列表视图控件，并将其附加到`CListCtrl`对象。  
+ 构造`CListCtrl`中两个步骤。 首先，调用的构造函数，然后调用`Create`，它创建列表视图控件，并将其附加到`CListCtrl`对象。  
   
- 若要将扩展的窗口样式应用于列表控件对象，调用[CreateEx](#createex)而不是**创建**。  
+ 若要将扩展的窗口样式应用于列表控件对象，调用[CreateEx](#createex)而不是`Create`。  
   
 ### <a name="example"></a>示例  
 
@@ -652,19 +652,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定列表控件的样式。 应用于控件的列表控件样式的任意组合。 有关这些样式的完整列表，请参阅[列表视图窗口样式](http://msdn.microsoft.com/library/windows/desktop/bb774739)Windows SDK 中。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -673,10 +673,10 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
   
- `CreateEx` 创建具有指定的扩展 Windows 样式控件`dwExStyle`。 若要设置特定于控件的扩展的样式，调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置为此类样式**LVS_EX_FULLROWSELECT**。 有关详细信息，请参阅本主题所述的样式[扩展列表视图样式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
+ `CreateEx` 创建具有指定的扩展 Windows 样式控件*dwExStyle*。 若要设置特定于控件的扩展的样式，调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置为此类样式**LVS_EX_FULLROWSELECT**。 有关详细信息，请参阅本主题所述的样式[扩展列表视图样式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
- 创建由指定的项拖动图像列表`nItem`。  
+ 创建由指定的项拖动图像列表*nItem*。  
   
 ```  
 CImageList* CreateDragImage(
@@ -685,10 +685,10 @@ CImageList* CreateDragImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  其拖动图像列表是要创建项的索引。  
   
- `lpPoint`  
+ *lpPoint*  
  地址[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它接收的图像的左上角的初始位置视图中协调。  
   
 ### <a name="return-value"></a>返回值  
@@ -734,7 +734,7 @@ BOOL DeleteColumn(int nCol);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCol`  
+ *nCol*  
  要删除的列的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -761,7 +761,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  指定要删除的项的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -787,7 +787,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指向的长指针`DRAWITEMSTRUCT`结构，其中包含有关所需的绘图的类型的信息。  
   
 ### <a name="remarks"></a>备注  
@@ -805,7 +805,7 @@ CEdit* EditLabel(int nItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要编辑的列表视图项的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -836,7 +836,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fEnable`  
+ *fEnable*  
  指示是否启用到组 listview 控件显示的项。 **TRUE**若要启用分组;**FALSE**以禁用它。  
   
 ### <a name="return-value"></a>返回值  
@@ -861,17 +861,17 @@ BOOL EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  是要显示的列表视图项的索引。  
   
- `bPartialOK`  
+ *bPartialOK*  
  指定是否可接受部分可见性。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 如有必要，滚动列表视图控件。 如果`bPartialOK`参数为非零，则不会发生滚动项是否部分可见。  
+ 如有必要，滚动列表视图控件。 如果*bPartialOK*参数为非零，则不会发生滚动项是否部分可见。  
   
 ### <a name="example"></a>示例  
 ```cpp  
@@ -892,17 +892,17 @@ int FindItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pFindInfo`  
+ *pFindInfo*  
  指向的指针[LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745)结构，它包含有关要在其中搜索的项的信息。  
   
- `nStart`  
- 要开始使用，搜索的项或-1 以从头开始的索引。 处的项`nStart`如果从搜索中排除`nStart`是否不等于-1。  
+ *nStart*  
+ 要开始使用，搜索的项或-1 以从头开始的索引。 处的项*nStart*如果从搜索中排除*nStart*是否不等于-1。  
   
 ### <a name="return-value"></a>返回值  
  如果成功的项或否则为-1 的索引。  
   
 ### <a name="remarks"></a>备注  
- `pFindInfo`参数指向**LVFINDINFO**结构，其中包含用于搜索列表视图项的信息。  
+ *PFindInfo*参数指向**LVFINDINFO**结构，其中包含用于搜索列表视图项的信息。  
   
 ### <a name="example"></a>示例  
 
@@ -942,7 +942,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `plvbkImage`  
+ *plvbkImage*  
  指向的指针**LVBKIMAGE**结构，它包含当前的背景图像的列表视图。  
   
 ### <a name="return-value"></a>返回值  
@@ -991,7 +991,7 @@ BOOL GetCheck(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  列表控件项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1013,10 +1013,10 @@ BOOL GetColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCol`  
+ *nCol*  
  要检索其属性的列的索引。  
   
- `pColumn`  
+ *pColumn*  
  地址[LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)结构，它指定要检索的信息并接收有关该列的信息。 **掩码**成员指定要检索的列属性。 如果**掩码**成员指定`LVCF_TEXT`值， **pszText**成员必须包含接收项文本的缓冲区的地址和**cchTextMax**成员必须指定缓冲区的大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -1051,10 +1051,10 @@ BOOL GetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>参数  
- `piArray`  
+ *piArray*  
  指向将包含在列表视图控件中的列的索引值的缓冲区的指针。 缓冲区必须大到足以包含在列表视图控件中的列的总数。  
   
- `iCount`  
+ *iCount*  
  在列表视图控件中的列数。 如果此参数为-1，由框架自动检索的列数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1100,11 +1100,11 @@ int GetColumnWidth(int nCol) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCol`  
+ *nCol*  
  指定其宽度是要检索的列的索引。  
   
 ### <a name="return-value"></a>返回值  
- 以像素为单位指定的列的宽度`nCol`。  
+ 以像素为单位指定的列的宽度*nCol*。  
   
 ### <a name="example"></a>示例  
 
@@ -1251,10 +1251,10 @@ int GetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iGroupId`  
+ *iGroupId*  
  要检索其信息的组标识符。  
   
- `pgrp`  
+ *pgrp*  
  指向的指针[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)包含指定的组的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iIndex`|组的从零开始索引。|  
-|[out] `pGroup`|指向[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收由指定的组的相关信息的结构`iIndex`参数。<br /><br /> 调用方负责初始化的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。 设置`cbSize`成员的结构、 大小和所用的标志`mask`成员来指定要检索的信息。|  
+|[in]*iIndex*|组的从零开始索引。|  
+|[out]*pGroup*|指向[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收由指定的组的相关信息的结构*iIndex*参数。<br /><br /> 调用方负责初始化的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。 设置`cbSize`成员的结构、 大小和所用的标志`mask`成员来指定要检索的信息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -1333,7 +1333,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  指向的指针[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)包含组度量值信息。  
   
 ### <a name="remarks"></a>备注  
@@ -1353,15 +1353,15 @@ BOOL GetGroupRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iGroupId`|指定一组。|  
-|[in, out] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，结构接收由指定的组的矩形坐标`iGroupId`。|  
-|[in] `iCoords`|指定要检索的矩形坐标。 使用以下值之一：<br /><br /> - `LVGGR_GROUP` -整个展开的组 （默认值） 坐标。<br />- `LVGGR_HEADER` 坐标仅标头 （折叠组）。<br />- `LVGGR_SUBSETLINK` 坐标只对子集链路 （标记子集）。|  
+|[in]*iGroupId*|指定一组。|  
+|[在中，out]*lpRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，结构接收由指定的组的矩形坐标*iGroupId*。|  
+|[in]*iCoords*|指定要检索的矩形坐标。 使用以下值之一：<br /><br /> - `LVGGR_GROUP` -整个展开的组 （默认值） 坐标。<br />- `LVGGR_HEADER` 坐标仅标头 （折叠组）。<br />- `LVGGR_SUBSETLINK` 坐标只对子集链路 （标记子集）。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 调用方负责分配[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)指向结构`pRect`参数。  
+ 调用方负责分配[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)指向结构*pRect*参数。  
   
  此方法可发送[LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935)消息，Windows SDK 中介绍。  
   
@@ -1406,14 +1406,14 @@ UINT GetGroupState(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iGroupId`|组的从零开始索引。|  
-|[in] `dwMask`|指定要检索指定组的状态值的掩码。 有关详细信息，请参阅`mask`的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。|  
+|[in]*iGroupId*|组的从零开始索引。|  
+|[in]*dwMask*|指定要检索指定组的状态值的掩码。 有关详细信息，请参阅`mask`的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。|  
   
 ### <a name="return-value"></a>返回值  
  指定的组或 0，如果找不到组的请求的状态。  
   
 ### <a name="remarks"></a>备注  
- 返回值的按位与运算的结果位于`dwMask`参数和值的`state`的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构，它表示当前的列表视图控件。  
+ 返回值的按位与运算的结果位于*dwMask*参数和值的`state`的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构，它表示当前的列表视图控件。  
   
  此方法可发送[LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936)消息，Windows SDK 中介绍。 有关详细信息，请参阅[ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288)宏。  
   
@@ -1512,7 +1512,7 @@ CImageList* GetImageList(int nImageList) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nImageList`  
+ *nImageList*  
  值，该值指定要检索的映像列表。 它可以是下列值之一：  
   
 - `LVSIL_NORMAL` 使用大图标的图像列表。  
@@ -1541,7 +1541,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lvim`  
+ *lvim*  
  指向的指针[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)结构，它包含插入标记的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -1571,7 +1571,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRect`  
+ *pRect*  
  指向`RECT`包含限定插入点的矩形的坐标的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -1592,7 +1592,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)接收项的属性的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -1622,7 +1622,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  其数据是要检索的列表项的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为`NULL`。|  
-|[in] `iColumn`|在控件中的列的从零开始索引。|  
-|[in] `rectType`|为其检索的绑定矩形的列表视图子项的部分。 指定下列值之一：<br /><br /> `LVIR_BOUNDS` -返回整个子项，包括图标和标签的边框。<br /><br /> `LVIR_ICON` -返回图标或小图标的子项的绑定矩形。<br /><br /> `LVIR_LABEL` -返回子项文本的边框。|  
-|[out] `pRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收的子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 此参数不能为`NULL`。|  
+|[in]*pItemIndex*|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为`NULL`。|  
+|[in]*iColumn*|在控件中的列的从零开始索引。|  
+|[in]*rectType*|为其检索的绑定矩形的列表视图子项的部分。 指定下列值之一：<br /><br /> `LVIR_BOUNDS` -返回整个子项，包括图标和标签的边框。<br /><br /> `LVIR_ICON` -返回图标或小图标的子项的绑定矩形。<br /><br /> `LVIR_LABEL` -返回子项文本的边框。|  
+|[out]*pRect*|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收的子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 此参数不能为`NULL`。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -1709,10 +1709,10 @@ BOOL GetItemPosition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要检索其位置的项索引。  
   
- `lpPoint`  
+ *lpPoint*  
  地址[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)视图中协调结构，它接收的项的左上角的位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -1746,13 +1746,13 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要检索其位置的项索引。  
   
- `lpRect`  
+ *lpRect*  
  地址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它接收的边框。  
   
- `nCode`  
+ *nCode*  
  为其检索的绑定矩形的列表视图项的一部分。 它可以是下列值之一：  
   
 - `LVIR_BOUNDS` 返回整个项，包括的图标和标签的边框。  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `fSmall`|为其检索的项间距的视图。 指定`true`小图标视图或`false`图标视图。|  
-|[out] `pnHorzSpacing`|包含项之间的水平间距。|  
-|[out] `pnVertSpacing`|包含项之间的垂直间距。|  
+|[in]*fSmall*|为其检索的项间距的视图。 指定`true`小图标视图或`false`图标视图。|  
+|[out]*pnHorzSpacing*|包含项之间的水平间距。|  
+|[out]*pnVertSpacing*|包含项之间的垂直间距。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -1841,10 +1841,10 @@ UINT GetItemState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要检索其状态的项索引。  
   
- `nMask`  
+ *nMask*  
  指定用于返回的项的状态标志的掩码。  
   
 ### <a name="return-value"></a>返回值  
@@ -1872,25 +1872,25 @@ CString GetItemText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  其文本是要检索的项的索引。  
   
- `nSubItem`  
+ *nSubItem*  
  指定其文本是要检索的子项。  
   
- `lpszText`  
+ *lpszText*  
  要接收的项文本的字符串的指针。  
   
- `nLen`  
- 指向的缓冲区的长度`lpszText`。  
+ *nLen*  
+ 指向的缓冲区的长度*lpszText*。  
   
 ### <a name="return-value"></a>返回值  
- 返回的版本`int`返回检索到的字符串的长度。  
+ 返回的版本**int**返回检索到的字符串的长度。  
   
  返回的版本`CString`返回项文本。  
   
 ### <a name="remarks"></a>备注  
- 如果`nSubItem`为零，则此函数可检索项的标签; 如果`nSubItem`是不为零，则它将检索子项的文本。 对的子项自变量的详细信息，请参阅的讨论[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK 中的结构。  
+ 如果*nSubItem*为零，则此函数可检索项的标签; 如果*nSubItem*是不为零，则它将检索子项的文本。 对的子项自变量的详细信息，请参阅的讨论[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK 中的结构。  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  搜索列表查看的项，它具有指定的属性且，具有与给定项的指定的关系。  
@@ -1902,10 +1902,10 @@ int GetNextItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要开始，搜索的项或-1 以查找与指定的标志匹配的第一个项的索引。 从搜索中排除指定的项本身。  
   
- `nFlags`  
+ *nFlags*  
  请求的项的指定的项，并且请求的项的状态的几何关系。 几何关系可以是下列值之一：  
   
 - `LVNI_ABOVE` 搜索指定项的上方是项。  
@@ -1944,30 +1944,30 @@ BOOL GetNextItemIndex(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in, out] `pItemIndex`|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)描述搜索的开始处的项的结构或-1 以查找与匹配中的标志的第一个项`nFlags`参数。<br /><br /> 如果此方法成功，`LVITEMINDEX`结构描述由搜索找到的项。|  
-|[in] `nFlags`|指定如何执行搜索的标志的按位组合 (OR)。<br /><br /> 搜索可以依赖于索引、 状态或目标项的外观或目标项的物理位置相对于项由指定`pItemIndex`参数。 有关详细信息，请参阅`flags`中的参数[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)消息。|  
+|[在中，out]*pItemIndex*|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)描述搜索的开始处的项的结构或-1 以查找与匹配中的标志的第一个项*nFlags*参数。<br /><br /> 如果此方法成功，`LVITEMINDEX`结构描述由搜索找到的项。|  
+|[in]*nFlags*|指定如何执行搜索的标志的按位组合 (OR)。<br /><br /> 搜索可以依赖于索引、 状态或目标项的外观或目标项的物理位置相对于项由指定*pItemIndex*参数。 有关详细信息，请参阅*标志*中的参数[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)消息。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 调用方负责分配和设置的成员`LVITEMINDEX`指向结构`pItemIndex`参数。  
+ 调用方负责分配和设置的成员`LVITEMINDEX`指向结构*pItemIndex*参数。  
   
  此方法可发送[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)消息，Windows SDK 中介绍。  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
- 获取由标识的列表项的索引`pos`，然后设置*pos*到**位置**值。  
+ 获取由标识的列表项的索引*pos*，然后设置*pos*到**位置**值。  
   
 ```  
 int GetNextSelectedItem(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `pos`  
+ *pos*  
  对引用**位置**返回上次调用值`GetNextSelectedItem`或`GetFirstSelectedItemPosition`。 通过此调用至下一个位置更新的值。  
   
 ### <a name="return-value"></a>返回值  
- 由标识的列表项的索引`pos`。  
+ 由标识的列表项的索引*pos*。  
   
 ### <a name="remarks"></a>备注  
  你可以使用`GetNextSelectedItem`如果建立通过调用的初始位置的向前迭代循环中`GetFirstSelectedItemPosition`。  
@@ -2058,7 +2058,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpPoint`  
+ *lpPoint*  
  地址[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)接收视图原点的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -2137,11 +2137,11 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpsz`  
+ *lpsz*  
  确定其宽度时以 null 结尾的字符串的地址。  
   
 ### <a name="return-value"></a>返回值  
- 宽度，以像素为单位通过指向的字符串`lpsz`。  
+ 宽度，以像素为单位通过指向的字符串*lpsz*。  
   
 ### <a name="remarks"></a>备注  
  控件的当前字体和列边距，但不是小图标的宽度，则返回的宽度将考虑在内。  
@@ -2190,7 +2190,7 @@ BOOL GetSubItemRect(
   
 - `LVIR_LABEL` 返回整个项，包括的图标和标签的边框。 这等同于`LVIR_BOUNDS`。  
   
- `ref`  
+ *ref*  
  引用[CRect](../../atl-mfc-shared/reference/crect-class.md)包含子项的坐标的对象的边框。  
   
 ### <a name="return-value"></a>返回值  
@@ -2250,7 +2250,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptvi`  
+ *ptvi*  
  指向的指针[LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768)接收检索的信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -2334,7 +2334,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  地址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -2353,10 +2353,10 @@ void GetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nWorkAreas`  
+ *nWorkAreas*  
  数`RECT`结构中包含*中国*数组。  
   
- `prc`  
+ *中国*  
  指向数组的指针`RECT`结构 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象) 接收的工作区域的列表视图控件。 这些结构中的值包括在客户端坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -2373,7 +2373,7 @@ BOOL HasGroup(int iGroupId) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `iGroupId`  
+ *iGroupId*  
  正在请求的组的标识符。  
   
 ### <a name="return-value"></a>返回值  
@@ -2394,22 +2394,22 @@ int HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  地址**LVHITTESTINFO**结构，它包含要进行命中测试和该位置接收的命中测试结果的相关信息。  
   
- `pt`  
+ *pt*  
  要测试的点。  
   
- `pFlags`  
+ *pFlags*  
  指向一个整数，它接收的测试结果的相关信息。 请参阅说明**标志**的成员[LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) Windows SDK 中的结构。  
   
 ### <a name="return-value"></a>返回值  
- 指定的位置处的项的索引`pHitTestInfo`(如果有） 或否则为-1。  
+ 指定的位置处的项的索引*pHitTestInfo*(如果有） 或否则为-1。  
   
 ### <a name="remarks"></a>备注  
  你可以使用`LVHT_ABOVE`， `LVHT_BELOW`， `LVHT_TOLEFT`，和`LVHT_TORIGHT`值结构的**标志**成员来确定是否滚动列表视图控件的内容。 两个这些标志可以结合使用，例如，如果的位置上方和客户端区域的左侧。  
   
- 你可以测试**LVHT_ONITEM**值结构的**标志**成员以确定给定的位置是否位于列表视图项。 此值的按位 OR 操作位于`LVHT_ONITEMICON`， `LVHT_ONITEMLABEL`，和`LVHT_ONITEMSTATEICON`值结构的**标志**成员。  
+ 你可以测试`LVHT_ONITEM`值结构的**标志**成员以确定给定的位置是否位于列表视图项。 此值的按位 OR 操作位于`LVHT_ONITEMICON`， `LVHT_ONITEMLABEL`，和`LVHT_ONITEMSTATEICON`值结构的**标志**成员。  
   
 ### <a name="example"></a>示例  
 
@@ -2452,22 +2452,22 @@ int InsertColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCol`  
+ *nCol*  
  新列的索引。  
   
- `pColumn`  
+ *pColumn*  
  地址**LVCOLUMN**结构，其中包含新列的属性。  
   
  *lpszColumnHeading*  
  包含列的标题字符串的地址。  
   
- `nFormat`  
+ *nFormat*  
  指定列的对齐方式的整数。 它可以是下列值之一： **LVCFMT_LEFT**， **LVCFMT_RIGHT**，或**LVCFMT_CENTER**。  
   
- `nWidth`  
+ *nWidth*  
  列的宽度，以像素为单位。 如果此参数为-1，列宽度未设置。  
   
- `nSubItem`  
+ *nSubItem*  
  与该列关联的子项的索引。 如果此参数为-1，则没有子项是与列关联。  
   
 ### <a name="return-value"></a>返回值  
@@ -2491,7 +2491,7 @@ LRESULT InsertGroup(
  *index*  
  在组很要插入项的索引。  
   
- `pgrp`  
+ *pgrp*  
  指向的指针[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构，它包含要添加的组。  
   
 ### <a name="return-value"></a>返回值  
@@ -2546,29 +2546,29 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构，它指定项的特性，如 Windows SDK 中所述。  
   
- `nItem`  
+ *nItem*  
  要插入的项索引。  
   
- `lpszItem`  
+ *lpszItem*  
  包含项的标签的字符串的地址或`LPSTR_TEXTCALLBACK`如果该项是回调项。 回调项的信息，请参阅[clistctrl:: Getcallbackmask](#getcallbackmask)。  
   
- `nImage`  
+ *nImage*  
  项的图像的索引或`I_IMAGECALLBACK`如果该项是回调项。 回调项的信息，请参阅[clistctrl:: Getcallbackmask](#getcallbackmask)。  
   
- `nMask`  
- `nMask`参数指定哪一项作为参数传递的属性是否有效。 它可以是一个或多个掩码值中所述[LVITEM 结构](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows SDK 中。 可以使用按位 OR 运算符组合的有效的值。  
+ *nMask*  
+ *NMask*参数指定哪一项作为参数传递的属性是否有效。 它可以是一个或多个掩码值中所述[LVITEM 结构](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows SDK 中。 可以使用按位 OR 运算符组合的有效的值。  
   
- `nState`  
+ *nState*  
  指示项的状态、 状态图像和覆盖图像。 请参阅 Windows SDK 主题[LVITEM 结构](http://msdn.microsoft.com/library/windows/desktop/bb774760)有关详细信息和[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)有关有效的标志的列表。  
   
- `nStateMask`  
+ *nStateMask*  
  指示将检索或修改状态成员哪些位。 请参阅[LVITEM 结构](http://msdn.microsoft.com/library/windows/desktop/bb774760)适用于详细信息的 Windows SDK 中。  
   
- `lParam`  
- 与项关联的 32 位应用程序特定值。 如果指定此参数，则必须设置`nMask`属性`LVIF_PARAM`。  
+ *lParam*  
+ 与项关联的 32 位应用程序特定值。 如果指定此参数，则必须设置*nMask*属性`LVIF_PARAM`。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，新的项或否则为-1 的索引。  
@@ -2611,10 +2611,10 @@ int InsertMarkHitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pPoint`  
+ *pPoint*  
  指向的指针[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)坐标中包含命中的测试的结构，列表控件的工作区相对。  
   
- `lvim`  
+ *lvim*  
  指向的指针[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)结构，它指定与定义的点参数坐标最接近的插入点。  
   
 ### <a name="return-value"></a>返回值  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `index`|当前列表视图控件中的项的从零开始索引。|  
+|[in]*索引*|当前列表视图控件中的项的从零开始索引。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果指定的项目，则可见; 否则为`false`。  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `id`|项的唯一 ID。|  
+|[in]*id*|项的唯一 ID。|  
   
 ### <a name="return-value"></a>返回值  
  以指定 ID 的当前索引  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `index`|项的从零开始索引。|  
+|[in]*索引*|项的从零开始索引。|  
   
 ### <a name="return-value"></a>返回值  
  指定项的唯一 ID。  
@@ -2751,10 +2751,10 @@ LRESULT MoveGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iGroupId`  
+ *iGroupId*  
  要移动的组的标识符。  
   
- `toIndex`  
+ *toIndex*  
  在组很要移动的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -2773,10 +2773,10 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `idItemFrom`  
+ [in]*idItemFrom*  
  要移动的项的索引。  
   
- [in] `idGroupTo`  
+ [in]*idGroupTo*  
  项将移到组的标识符。  
   
 ### <a name="remarks"></a>备注  
@@ -2796,17 +2796,17 @@ BOOL RedrawItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nFirst`  
+ *nFirst*  
  要进行重新绘制的第一项的索引。  
   
- `nLast`  
+ *nLast*  
  要进行重新绘制的最后一项的索引。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 指定的项不实际重新绘制列表视图窗口收到之前`WM_PAINT`消息。 若要立即重绘，调用 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)后使用此函数的函数。  
+ 列表视图窗口收到 WM_PAINT 消息之前，指定的项不是实际重新绘制。 若要立即重绘，调用 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)后使用此函数的函数。  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  从列表视图控件中移除所有组。  
@@ -2826,7 +2826,7 @@ LRESULT RemoveGroup(int iGroupId);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iGroupId`  
+ *iGroupId*  
  要删除的组的标识符。  
   
 ### <a name="return-value"></a>返回值  
@@ -2843,8 +2843,8 @@ BOOL Scroll(CSize size);
 ```  
   
 ### <a name="parameters"></a>参数  
- `size`  
- A`CSize`对象，它指定的水平和垂直滚动，以像素为单位量。 **Y**的成员`size`除以的高度，以像素为单位列表视图控件的行和得到的行数的滚动控件。  
+ *size*  
+ A`CSize`对象，它指定的水平和垂直滚动，以像素为单位量。 **Y**的成员*大小*除以的高度，以像素为单位列表视图控件的行和得到的行数的滚动控件。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
@@ -2857,7 +2857,7 @@ BOOL SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cr`  
+ *cr*  
  背景色，若要设置，或`CLR_NONE`没有背景色的值。 使用背景的颜色的列表视图控件重绘自己显著速度快于而无需背景色。 有关信息，请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
@@ -2894,13 +2894,13 @@ BOOL SetBkImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `plvbkImage`  
+ *plvbkImage*  
  地址**LVBKIMAGE**包含新的背景图像信息的结构。  
   
- `hbm`  
+ *hbm*  
  位图的句柄。  
   
- `pszUrl`  
+ *pszUrl*  
  A **NULL**-终止字符串，其中包含的背景图像的 URL。  
   
  *fTile*  
@@ -2931,7 +2931,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMask`  
+ *nMask*  
  回调掩码的新值。  
   
 ### <a name="return-value"></a>返回值  
@@ -2959,11 +2959,11 @@ BOOL SetCheck(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  列表控件项的从零开始的索引。  
   
- `fCheck`  
- 指定是否与否，项的状态图像应为可见。 默认情况下，*查看*是**TRUE**状态图像且可见。 如果`fCheck`是**FALSE**，它是不可见。  
+ *查看*  
+ 指定是否与否，项的状态图像应为可见。 默认情况下，*查看*是**TRUE**状态图像且可见。 如果*查看*是**FALSE**，它是不可见。  
   
 ### <a name="return-value"></a>返回值  
  如果该项已选中，则为非 0 否则为 0。  
@@ -2997,10 +2997,10 @@ BOOL SetColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCol`  
+ *nCol*  
  要设置其属性的列的索引。  
   
- `pColumn`  
+ *pColumn*  
  地址[LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)结构，其中包含新的列属性，如 Windows SDK 中所述。 结构的**掩码**成员指定的列属性设置。 如果**掩码**成员指定`LVCF_TEXT`值，该结构的**pszText**成员是以 null 结尾的字符串和结构的地址**cchTextMax**成员将被忽略。  
   
 ### <a name="return-value"></a>返回值  
@@ -3019,10 +3019,10 @@ BOOL SetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>参数  
- `piArray`  
+ *piArray*  
  指向包含在列表视图控件 （从左到右） 中的列的索引值的缓冲区的指针。 缓冲区必须大到足以包含在列表视图控件中的列的总数。  
   
- `iCount`  
+ *iCount*  
  在列表视图控件中的列数。  
   
 ### <a name="return-value"></a>返回值  
@@ -3044,10 +3044,10 @@ BOOL SetColumnWidth(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCol`  
+ *nCol*  
  为设置宽度的列索引。 在列表视图中，此参数必须为 0。  
   
- `cx`  
+ *cx*  
  新列的宽度。 可以是**LVSCW_AUTOSIZE**或**LVSCW_AUTOSIZE_USEHEADER**中所述， [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
@@ -3061,7 +3061,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwNewStyle`  
+ *dwNewStyle*  
  要使用列表视图控件的扩展样式的组合。 有关这些样式的说明性列表，请参阅[扩展列表视图样式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中的主题。  
   
 ### <a name="return-value"></a>返回值  
@@ -3090,10 +3090,10 @@ int SetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iGroupId`  
+ *iGroupId*  
  设置其信息的组的标识符。  
   
- `pgrp`  
+ *pgrp*  
  指向[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构，其中包含要设置的信息。 调用方负责分配此结构并设置其成员。  
   
 ### <a name="return-value"></a>返回值  
@@ -3110,7 +3110,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  指向的指针[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)结构，它包含要设置的组度量值信息。  
   
 ### <a name="remarks"></a>备注  
@@ -3146,7 +3146,7 @@ int SetHotItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iIndex`  
+ *iIndex*  
  要设置为热项的项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -3190,13 +3190,13 @@ CSize SetIconSpacing(CSize size);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cx`  
+ *cx*  
  X 轴上的图标之间的距离 （以像素为单位）。  
   
- `cy`  
+ *cy*  
  Y 轴上的图标之间的距离 （以像素为单位）。  
   
- `size`  
+ *size*  
  A`CSize`对象，它指定在 x 轴上的图标和 y 轴之间的距离 （以像素为单位）。  
   
 ### <a name="return-value"></a>返回值  
@@ -3224,10 +3224,10 @@ CImageList* SetImageList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pImageList`  
+ *pImageList*  
  指向要分配的图像列表的指针。  
   
- `nImageListType`  
+ *nImageListType*  
  图像列表的类型。 它可以是下列值之一：  
   
 - `LVSIL_NORMAL` 使用大图标的图像列表。  
@@ -3267,7 +3267,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lvim`  
+ *lvim*  
  指向的指针[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)结构，它指定在何处设置插入点。  
   
 ### <a name="return-value"></a>返回值  
@@ -3284,7 +3284,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定要设置插入点的颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -3324,47 +3324,47 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  地址[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构，其中包含新的项属性，如 Windows SDK 中所述。 结构的**iItem**和**iSubItem**成员标识项或子项和结构的**掩码**成员指定要设置的属性。 有关详细信息**掩码**成员，请参阅**备注**。  
   
- `nItem`  
+ *nItem*  
  要设置其属性的项的索引。  
   
- `nSubItem`  
+ *nSubItem*  
  要设置其属性的子项的索引。  
   
- `nMask`  
+ *nMask*  
  指定哪些属性要设置 （请参阅备注）。  
   
- `lpszItem`  
+ *lpszItem*  
  指定项的标签以 null 结尾的字符串的地址。  
   
- `nImage`  
+ *nImage*  
  图像列表中的项的图像的索引。  
   
- `nState`  
+ *nState*  
  指定的状态更改 （请参阅备注） 的值。  
   
- `nStateMask`  
+ *nStateMask*  
  指定要更改 （请参阅备注） 的状态。  
   
- `lParam`  
+ *lParam*  
  要与项关联一个 32 位应用程序特定值。  
   
- `nIndent`  
- 宽度，以像素为单位，缩进。 如果`nIndent`小于超过系统定义的最小宽度，新宽度设置为系统定义的最小值  
+ *nIndent*  
+ 宽度，以像素为单位，缩进。 如果*nIndent*小于超过系统定义的最小宽度，新宽度设置为系统定义的最小值  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- **IItem**和**iSubItem**的成员**LVITEM**结构和`nItem`和`nSubItem`参数标识的项和 subitem 其属性是要设置。  
+ **IItem**和**iSubItem**的成员**LVITEM**结构和*nItem*和*nSubItem*参数标识的项和子项要设置其属性。  
   
- **掩码**的成员**LVITEM**结构和`nMask`参数指定的项属性是要设置：  
+ **掩码**的成员**LVITEM**结构和*nMask*参数指定的项属性是要设置：  
   
-- `LVIF_TEXT` **PszText**成员或`lpszItem`参数是以 null 结尾的字符串的地址; **cchTextMax**成员将被忽略。  
+- `LVIF_TEXT` **PszText**成员或*lpszItem*参数是以 null 结尾的字符串的地址; **cchTextMax**成员将被忽略。  
   
-- `LVIF_STATE` **StateMask**成员或`nStateMask`参数指定的项状态更改和**状态**成员或`nState`参数包含这些状态的值。  
+- `LVIF_STATE` **StateMask**成员或*nStateMask*参数指定的项状态更改和**状态**成员或*nState*参数将包含这些状态的值。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::HitTest](#hittest)。  
@@ -3377,7 +3377,7 @@ void SetItemCount(int nItems);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItems`  
+ *nItems*  
  最终包含控件的项目数。  
   
 ### <a name="remarks"></a>备注  
@@ -3413,10 +3413,10 @@ BOOL SetItemCountEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `iCount`  
+ *iCount*  
  最终包含控件的项目数。  
   
- `dwFlags`  
+ *dwFlags*  
  指定重置项计数后的列表视图控件的行为。 此值可以是以下组合：  
   
 - **LVSICF_NOINVALIDATEALL**列表视图控件不会重新绘制，除非受影响的项目当前正在视图。 这是默认值。  
@@ -3451,17 +3451,17 @@ BOOL SetItemCountEx(
 
   
 ##  <a name="setitemdata"></a>  CListCtrl::SetItemData  
- 设置与由指定的项关联的 32 位应用程序特定值`nItem`。  
+ 设置与由指定的项关联的 32 位应用程序特定值*nItem*。  
   
 ```  
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  其数据的设置的列表项的索引。  
   
- `dwData`  
+ *dwData*  
  要与项关联一个 32 位值。  
   
 ### <a name="return-value"></a>返回值  
@@ -3496,17 +3496,17 @@ BOOL SetItemIndexState(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)描述项的结构。 调用方负责分配此结构并设置其成员。|  
-|[in] `dwState`|要设置，为项的状态即的按位组合[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 到重置，或另一个用于设置状态。|  
-|[in] `dwMask`|指定的状态的有效位掩码`dwState`参数。 指定的按位组合 (OR)[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
+|[in]*pItemIndex*|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)描述项的结构。 调用方负责分配此结构并设置其成员。|  
+|[in]*dwState*|要设置，为项的状态即的按位组合[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 到重置，或另一个用于设置状态。|  
+|[in]*dwMask*|指定的状态的有效位掩码*dwState*参数。 指定的按位组合 (OR)[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息`dwState`参数，请参阅[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。  
+ 有关详细信息*dwState*参数，请参阅[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。  
   
- 有关详细信息`dwMask`参数，请参阅`stateMask`的成员[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构。  
+ 有关详细信息*dwMask*参数，请参阅*stateMask*的成员[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构。  
   
  此方法可发送[LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190)消息，Windows SDK 中介绍。  
   
@@ -3520,10 +3520,10 @@ BOOL SetItemPosition(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要设置其位置的项的索引。  
   
- `pt`  
+ *pt*  
  A[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它指定新位置，在视图中的，项的左上角坐标。  
   
 ### <a name="return-value"></a>返回值  
@@ -3553,16 +3553,16 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要设置其状态的项的索引。  
   
- `pItem`  
+ *pItem*  
  地址[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构，如 Windows SDK 中所述。 结构的**stateMask**成员指定的状态更改，和结构的位**状态**成员包含这些位的新值。 其他成员将被忽略。  
   
- `nState`  
+ *nState*  
  状态位新值。 有关可能的值的列表，请参阅[CListCtrl::GetNextItem](#getnextitem)和[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)状态成员。  
   
- `nMask`  
+ *nMask*  
  指定的状态更改的位掩码。 此值对应于的 stateMask 成员[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -3585,13 +3585,13 @@ BOOL SetItemText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要设置其文本的项的索引。  
   
- `nSubItem`  
+ *nSubItem*  
  要设置项的标签子项，则为零的索引。  
   
- `lpszText`  
+ *lpszText*  
  指向包含新的项文本的字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -3611,7 +3611,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  新[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它包含轮廓颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -3645,7 +3645,7 @@ int SetSelectionMark(int iIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `iIndex`  
+ *iIndex*  
  多个所选内容中的第一项的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -3665,7 +3665,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cr`  
+ *cr*  
  A **COLORREF**指定新的文本背景色。 有关信息，请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
@@ -3690,7 +3690,7 @@ BOOL SetTextColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cr`  
+ *cr*  
  A **COLORREF**指定新的文本颜色。 有关信息，请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
@@ -3733,7 +3733,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptvi`  
+ *ptvi*  
  指向的指针[LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768)结构，它包含要设置的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -3750,7 +3750,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWndTip`  
+ *pWndTip*  
  指向的指针`CToolTipCtrl`列表控件将使用的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -3788,10 +3788,10 @@ void SetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nWorkAreas`  
- 数`RECT`结构 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象) 的指向数组中`lpRect`。  
+ *nWorkAreas*  
+ 数`RECT`结构 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象) 的指向数组中*lpRect*。  
   
- `lpRect`  
+ *lpRect*  
  数组的地址`RECT`结构 (或`CRect`对象)，用于指定的新的工作区域的列表视图控件。 必须在客户端坐标中指定这些区域。 如果此参数为**NULL**的工作区域将设置为该控件的工作区。  
   
 ### <a name="remarks"></a>备注  
@@ -3816,10 +3816,10 @@ BOOL SortGroups(
 ```  
   
 ### <a name="parameters"></a>参数  
- `_pfnGroupCompare`  
+ *_pfnGroupCompare*  
  指向组比较函数的指针。  
   
- `_plv`  
+ *_plv*  
  Void 指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -3838,12 +3838,12 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pfnCompare`  
+ [in]*pfnCompare*  
  应用程序定义比较函数的地址。  
   
  排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须不是是任何类的成员的独立函数或类的静态成员。  
   
- [in] `dwData`  
+ [in]*dwData*  
  传递给比较函数的应用程序定义的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -3852,7 +3852,7 @@ BOOL SortItems(
 ### <a name="remarks"></a>备注  
  此方法可更改每个项以反映新的序列的索引。  
   
- 比较函数， `pfnCompare`，具有以下形式：  
+ 比较函数， *pfnCompare*，具有以下形式：  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -3861,12 +3861,12 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 如果第一项应位于之前第二个，比较函数必须返回一个负值，如果第二个或为零，应遵循的第一项是正数值的两项相等。  
   
- `lParam1`参数是与进行比较的第一项关联的 32 位值和`lParam2`参数是与第二个项关联的值。 这些是在中指定的值`lParam`的项的成员[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构时它们已插入到列表。 `lParamSort`参数等同于`dwData`值。  
+ *LParam1*参数是与进行比较的第一项关联的 32 位值和*lParam2*参数是与第二个项关联的值。 这些是在中指定的值*lParam*的项的成员[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构时它们已插入到列表。 *LParamSort*参数等同于*dwData*值。  
   
  此方法可发送[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)消息，Windows SDK 中介绍。  
   
 ### <a name="example"></a>示例  
- 以下是简单的比较函数，将导致项正在按其`lParam`值。  
+ 以下是简单的比较函数，将导致项正在按其*lParam*值。  
   
 ```cpp  
 // Sort items by associated lParam
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pfnCompare`|应用程序定义比较函数的地址。<br /><br /> 排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须不是是任何类的成员的独立函数或类的静态成员。|  
-|[in] `dwData`|应用程序定义的值传递给比较函数。|  
+|[in]*pfnCompare*|应用程序定义比较函数的地址。<br /><br /> 排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须不是是任何类的成员的独立函数或类的静态成员。|  
+|[in]*dwData*|应用程序定义的值传递给比较函数。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -3908,14 +3908,14 @@ BOOL SortItemsEx(
 ### <a name="remarks"></a>备注  
  此方法可更改每个项以反映新的序列的索引。  
   
- 比较函数， `pfnCompare`，具有以下形式：  
+ 比较函数， *pfnCompare*，具有以下形式：  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-此消息就像是[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，除外的信息的类型传递给比较函数。 在[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，`lParam1`和`lParam2`是要比较的项的值。 在[LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)，`lParam1`是要比较的第一个项的当前索引和`lParam2`是第二个项的当前索引。 你可以发送[LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055)消息以检索有关某个项的详细信息。  
+此消息就像是[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，除外的信息的类型传递给比较函数。 在[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)， *lParam1*和*lParam2*是要比较的项的值。 在[LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)， *lParam1*是要比较的第一个项的当前索引和*lParam2*是第二个项的当前索引。 你可以发送[LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055)消息以检索有关某个项的详细信息。  
   
  如果第一项应位于之前第二个，比较函数必须返回一个负值，如果第二个或为零，应遵循的第一项是正数值的两项相等。  
   
@@ -3977,7 +3977,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInfo`  
+ *pInfo*  
  指向的指针[LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754)结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -4008,14 +4008,14 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
   
 ##  <a name="update"></a>  CListCtrl::Update  
- 强制重新绘制由指定的项列表视图控件`nItem`。  
+ 强制重新绘制由指定的项列表视图控件*nItem*。  
   
 ```  
 BOOL Update(int nItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nItem`  
+ *nItem*  
  要更新的项索引。  
   
 ### <a name="return-value"></a>返回值  

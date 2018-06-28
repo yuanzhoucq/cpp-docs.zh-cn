@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366312"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037839"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 类
 工具栏的基类。  
@@ -90,7 +90,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `size`  
+ [out]*大小*  
  工具栏的最小大小。  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
@@ -101,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndOldParent`  
+ [in]*pWndOldParent*  
  指向上一个父窗口的指针。  
   
 ## <a name="see-also"></a>请参阅  

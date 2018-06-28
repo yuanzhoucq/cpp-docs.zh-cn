@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09f92440a926f547f051dd0bee73468a1958813e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367641"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041021"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 类
 管理与 HTTP 服务器的连接。  
@@ -100,36 +100,36 @@ CHttpConnection(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSession`  
+ *pSession*  
  指向的指针[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。  
   
- `hConnected`  
+ *hConnected*  
  Internet 连接句柄。  
   
- `pstrServer`  
+ *pstrServer*  
  指向包含服务器名称的字符串的指针。  
   
- `dwContext`  
- 上下文标识符`CInternetConnection`对象。 请参阅**备注**有关详细信息`dwContext`。  
+ *dwContext*  
+ 上下文标识符`CInternetConnection`对象。 请参阅**备注**有关详细信息*dwContext*。  
   
- `nPort`  
+ *nPort*  
  标识此连接的 Internet 端口数。  
   
- `pstrUserName`  
+ *pstrUserName*  
  指向以 null 结尾的字符串，指定要登录的用户的名称。 如果**NULL**，默认值是匿名的。  
   
- `pstrPassword`  
- 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个`pstrPassword`和`pstrUserName`是**NULL**，默认匿名密码是用户的电子邮件名称。 如果`pstrPassword`是**NULL** （或空字符串），但`pstrUserName`不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为`pstrUserName`和`pstrPassword`:  
+ *pstrPassword*  
+ 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个*pstrPassword*和*pstrUserName*是**NULL**，默认匿名密码是用户的电子邮件名称。 如果*pstrPassword*是**NULL** （或空字符串），但*pstrUserName*不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为*pstrUserName*和*pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
+|*pstrUserName*|*pstrPassword*|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL**或""|**NULL**或""|"匿名"|用户的电子邮件名称|  
-|非- **NULL**字符串|**NULL**或""|`pstrUserName`|" "|  
+|非- **NULL**字符串|**NULL**或""|*pstrUserName*|" "|  
 |**NULL**非**NULL**字符串|**错误**|**错误**||  
-|非- **NULL**字符串|非- **NULL**字符串|`pstrUserName`|`pstrPassword`|  
+|非- **NULL**字符串|非- **NULL**字符串|*pstrUserName*|*pstrPassword*|  
   
- `dwFlags`  
- 任意组合**INTERNET_ FLAG_\*** 标志。 请参阅中的表**备注**部分[chttpconnection::](#openrequest)有关的说明`dwFlags`值。  
+ *dwFlags*  
+ 任意组合**INTERNET_ FLAG_\*** 标志。 请参阅中的表**备注**部分[chttpconnection::](#openrequest)有关的说明*dwFlags*值。  
   
 ### <a name="remarks"></a>备注  
  切勿创建`CHttpConnection`直接。 相反，通过调用创建的对象[CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。  
@@ -159,31 +159,31 @@ CHttpFile* OpenRequest(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrVerb`  
+ *pstrVerb*  
  指向一个包含要在请求中使用的谓词字符串的指针。 如果`NULL`，使用"获取"。  
   
- `pstrObjectName`  
+ *pstrObjectName*  
  指向包含指定的动词的目标对象的字符串的指针。 这通常是文件名、 可执行模块或搜索说明符。  
   
- `pstrReferer`  
- 指向一个字符串，指定从其文档的地址 (URL) 的请求中的 URL ( `pstrObjectName`) 获得。 如果`NULL`，指定的 HTTP 标头。  
+ *pstrReferer*  
+ 指向一个字符串，指定从其文档的地址 (URL) 的请求中的 URL ( *pstrObjectName*) 获得。 如果`NULL`，指定的 HTTP 标头。  
   
- `dwContext`  
- 上下文标识符`OpenRequest`操作。 请参阅备注部分以了解更多信息，关于`dwContext`。  
+ *dwContext*  
+ 上下文标识符`OpenRequest`操作。 请参阅备注部分以了解更多信息，关于*dwContext*。  
   
- `ppstrAcceptTypes`  
- 以 null 结尾的数组的指针`LPCTSTR`为字符串，该值指示内容类型的指针接受客户端。 如果`ppstrAcceptTypes`是`NULL`，服务器解释客户端仅接受类型的文档"文本 / *"（即，仅有的文本文档并不图片或其他二进制文件）。 等效于 CGI 变量 p E，用于标识已附加信息，例如 HTTP POST 和 PUT 的查询数据的类型的内容类型。  
+ *ppstrAcceptTypes*  
+ 以 null 结尾的数组的指针`LPCTSTR`为字符串，该值指示内容类型的指针接受客户端。 如果*ppstrAcceptTypes*是`NULL`，服务器解释客户端仅接受类型的文档"文本 / *"（即，仅有的文本文档并不图片或其他二进制文件）。 等效于 CGI 变量 p E，用于标识已附加信息，例如 HTTP POST 和 PUT 的查询数据的类型的内容类型。  
   
- `pstrVersion`  
+ *pstrVersion*  
  指向一个定义的 HTTP 版本的字符串的指针。 如果`NULL`，使用"HTTP/1.0"。  
   
- `dwFlags`  
- INTERNET_ FLAG_ * 标志的任意组合。 请参阅备注部分有关可能的说明`dwFlags`值。  
+ *dwFlags*  
+ INTERNET_ FLAG_ * 标志的任意组合。 请参阅备注部分有关可能的说明*dwFlags*值。  
   
- `nVerb`  
+ *nVerb*  
  与 HTTP 请求类型的号码。 可以是以下各项之一：  
   
-|HTTP 请求类型|`nVerb` 值|  
+|HTTP 请求类型|*nVerb*值|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -197,7 +197,7 @@ CHttpFile* OpenRequest(
  指向的指针[CHttpFile](../../mfc/reference/chttpfile-class.md)请求对象。  
   
 ### <a name="remarks"></a>备注  
- `dwFlags` 可以是以下项之一：  
+ *dwFlags*可以是以下之一：  
   
 |Internet 标志|描述|  
 |-------------------|-----------------|  

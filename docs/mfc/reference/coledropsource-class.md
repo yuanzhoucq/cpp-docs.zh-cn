@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374892"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038216"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 类
 允许数据拖动到放置目标。  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dropEffect`  
+ *dropEffect*  
  你想要向用户显示的效果，通常指示什么会删除与所选数据这一时刻发生。 通常，这是到最新的调用所返回的值[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)。 它可以是一个或多个以下：  
   
 - `DROPEFFECT_NONE` 不允许删除。  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向以包含所选的数据的窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  状态在最后一个调用是否按 ESC 键`COleDropSource::QueryContinueDrag`。  
   
- `dwKeyState`  
+ *dwKeyState*  
  包含修改键键盘上的状态。 这是任意数量的以下组合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
   
 ### <a name="return-value"></a>返回值  

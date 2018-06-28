@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370752"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040709"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 类
 实现 MFC 方法以更新与应用程序的 `IOleCommandTarget`驱动功能相关的用户界面对象的状态。  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rgCmds`  
+ *rgCmds*  
  与给定 GUID 相关联的受支持命令的列表。 **OLECMD**结构将命令与命令标志相关联。  
   
  *cCmds*  
- 中的命令的计数`rgCmds`。  
+ 中的命令的计数*rgCmds*。  
   
- `pGroup`  
+ *pGroup*  
  指向用于标识一组命令的 GUID 的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bOn`  
+ *bOn*  
  指示该命令与`COleCmdUI`对象应启用或禁用。 Nonzero 使命令;0 禁用该命令。  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,10 +113,10 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCheck`  
+ *n 检查*  
  值，该值确定要设置开/关切换的状态命令。 值为：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**1**|将该命令设置为 on。|  
 |**2**|将该命令设置为不确定的;无法确定状态，因为此命令的属性中同时打开和关闭相关的所选内容中的状态。|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  指向要与命令一起使用的文本的指针。  
   
 ## <a name="see-also"></a>请参阅  

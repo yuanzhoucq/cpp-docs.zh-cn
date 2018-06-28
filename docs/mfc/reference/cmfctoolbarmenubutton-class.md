@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515689e4596a3a0336e73b0be7aa008d21e445ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ec0fae7ceaa7b32636518f4c8a5eb5fc3836bb8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378400"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039039"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 类
 包含一个弹出菜单的工具栏按钮。  
@@ -158,7 +158,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|按钮插入到一个新工具栏时，由框架调用。 (重写[CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|当用户单击鼠标按钮时，由框架调用。 (重写[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)。)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|当用户的弹出菜单中选择一项时，由框架调用。|  
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|当在父级工具栏处理时由框架调用`WM_HELPHITTEST`消息。 (重写[CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)。)|  
+|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|当在父级工具栏处理 WM_HELPHITTEST 消息时由框架调用。 (重写[CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)。)|  
 |[CMFCToolBarMenuButton::OnDraw](#ondraw)|由框架调用以绘制按钮通过使用指定的样式和选项。 (重写[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw)。)|  
 |[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|由框架绘制按钮调用**命令**窗格**自定义**对话框。 (重写[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。)|  
 |[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|在用户打开的弹出菜单时由框架调用。|  
@@ -180,7 +180,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|如果`TRUE`，框架将始终调用[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)时绘制一个按钮。|  
   
@@ -220,26 +220,26 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
  现有`CMFCToolBarMenuButton`要复制到此对象`CMFCToolBarMenuButton`对象。  
   
- [in] `uiID`  
+ [in]*uiID*  
  若要在用户单击按钮; 执行的命令 ID或 ( `UINT`)-1 表示不直接执行命令的菜单按钮。  
   
- [in] `hMenu`  
+ [in]*hMenu*  
  菜单; 句柄或`NULL`如果按钮不具有一个菜单。  
   
- [in] `iImage`  
- 该按钮; 图像的索引如果此按钮不具有一个图标或使用的图标的命令通过指定-1 `uiID`。 索引是相同的每个`CMFCToolBarImages`应用程序中的对象。  
+ [in]*iImage*  
+ 该按钮; 图像的索引如果此按钮不具有一个图标或使用的图标的命令通过指定-1 *uiID*。 索引是相同的每个`CMFCToolBarImages`应用程序中的对象。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  工具栏菜单按钮的文本。  
   
- [in] `bUserButton`  
- `TRUE` 如果按钮显示用户定义的图像;`FALSE`如果按钮将显示与指定的命令相关联的预定义的映像`uiID`。  
+ [in]*bUserButton*  
+ `TRUE` 如果按钮显示用户定义的图像;`FALSE`如果按钮将显示与指定的命令相关联的预定义的映像*uiID*。  
   
 ### <a name="remarks"></a>备注  
- 如果`uiID`是一个有效命令 ID，按钮执行该命令，当用户单击它。 如果`hMenu`是有效的菜单的句柄，按钮提供了下拉菜单中，当出现在菜单上时，它出现在工具栏或子菜单。 如果这两个`uiID`和`hMenu`有效，该按钮是当用户单击它时将执行的命令部分和使用的向下箭头将下拉列表菜单当用户单击它时部分与拆分按钮。 但是，如果`hMenu`有效，用户将不能单击按钮时按钮插入到菜单执行命令。  
+ 如果*uiID*是一个有效命令 ID，按钮执行该命令，当用户单击它。 如果*hMenu*是有效的菜单的句柄，按钮提供了下拉菜单中，当出现在菜单上时，它出现在工具栏或子菜单。 如果这两个*uiID*和*hMenu*有效，该按钮是当用户单击它时将执行的命令部分和使用的向下箭头将的下拉列表菜单部分与拆分按钮时用户单击它。 但是，如果*hMenu*有效，用户将不能单击按钮时按钮插入到菜单执行命令。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何构造的对象`CMFCToolBarMenuButton`类。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。  
@@ -254,7 +254,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `other`  
+ [in]*其他*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -268,7 +268,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `src`  
+ [in]*src*  
   
 ### <a name="remarks"></a>备注  
   
@@ -280,7 +280,7 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hMenu`  
+ [in]*hMenu*  
  菜单句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -327,17 +327,17 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  指向设备上下文的指针。  
   
- [in] `rectImage`  
+ [in]*rectImage*  
  图像边界矩形坐标。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  图标句柄。  
   
 ### <a name="remarks"></a>备注  
- 此方法采用一个文档图标，并将其绘制在指定的区域中居中显示的菜单按钮`rectImage`。  
+ 此方法采用一个文档图标，并将其绘制在指定的区域中居中显示的菜单按钮*rectImage*。  
   
 ##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize  
 
@@ -424,7 +424,7 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectImage`  
+ [out]*rectImage*  
  对引用`CRect`接收图像边界矩形的坐标的对象。  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
@@ -560,9 +560,9 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `sizeDefault`  
- [in] `bHorz`  
+ [in]*pDC*  
+ [in]*大小*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -585,7 +585,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndParent`  
+ [in]*pWndParent*  
   
 ### <a name="remarks"></a>备注  
   
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
- [in] `bDelay`  
+ [in]*pWnd*  
+ [in]*bDelay*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -629,7 +629,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `pImages`  
- [in] `bHorz`  
- [in] `bCustomizeMode`  
- [in] `bHighlight`  
- [in] `bDrawBorder`  
- [in] `bGrayDisabledButtons`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pImages*  
+ [in]*bHorz*  
+ [in]*bCustomizeMode*  
+ [in]*bHighlight*  
+ [in]*bDrawBorder*  
+ [in]*bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>备注  
   
@@ -673,9 +673,9 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSelected`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bSelected*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -689,7 +689,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指定接收下拉列表菜单命令的窗口。 它可以是`NULL`只有工具栏菜单按钮有父窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -725,7 +725,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -739,10 +739,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParent`  
+ *pParent*  
  功能区元素的父窗口。  
   
- `data`  
+ *data*  
  功能区元素的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -759,11 +759,11 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMenuOnly`  
+ [in]*bMenuOnly*  
  `TRUE` 若要当它具有有效的命令 ID 和子菜单时，显示此按钮为菜单按钮`FALSE`时它具有有效的命令 ID 和子菜单，显示此按钮作为拆分按钮。  
   
 ### <a name="remarks"></a>备注  
- 通常情况下，当工具栏菜单按钮具有子菜单和命令 ID，显示的菜单要向下箭头按钮都有一个主按钮和一个附加的拆分按钮。 如果调用此方法和`bMenuOnly`是`TRUE`，该按钮改为显示要向下箭头按钮中的单个菜单按钮。 当用户单击任何一种模式中的箭头时，将打开子菜单中，并且当用户单击的任何一种模式框架中的按钮的非箭头部分执行的命令。  
+ 通常情况下，当工具栏菜单按钮具有子菜单和命令 ID，显示的菜单要向下箭头按钮都有一个主按钮和一个附加的拆分按钮。 如果调用此方法和*bMenuOnly*是`TRUE`，该按钮改为显示要向下箭头按钮中的单个菜单按钮。 当用户单击任何一种模式中的箭头时，将打开子菜单中，并且当用户单击的任何一种模式框架中的按钮的非箭头部分执行的命令。  
   
 ##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode  
  指定是否在调色板模式下的下拉列表菜单。  
@@ -775,14 +775,14 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMenuPaletteMode`  
+ [in]*bMenuPaletteMode*  
  指定是否在调色板模式下的下拉列表菜单。  
   
- [in] `nPaletteRows`  
+ [in]*nPaletteRows*  
  调色板中的行数。  
   
 ### <a name="remarks"></a>备注  
- 在调色板模式下，所有菜单项都显示为多列的调色板。 使用指定的行数`nPaletteRows`。  
+ 在调色板模式下，所有菜单项都显示为多列的调色板。 使用指定的行数*nPaletteRows*。  
   
 ##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd  
 
@@ -792,7 +792,7 @@ void SetMessageWnd(CWnd* pWndMessage);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndMessage`  
+ [in]*pWndMessage*  
   
 ### <a name="remarks"></a>备注  
   
@@ -816,11 +816,11 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiBarID`  
+ [in]*uiBarID*  
  指定新的分离式栏 id。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以指定当用户拖动从菜单栏中移出的菜单按钮创建的拖曳栏的 ID。 如果`uiBarID`参数为 0，则用户无法抽出菜单按钮。  
+ 调用此方法以指定当用户拖动从菜单栏中移出的菜单按钮创建的拖曳栏的 ID。 如果*uiBarID*参数为 0，则用户无法抽出菜单按钮。  
   
  调用[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)以启用你的应用程序中的拖曳菜单功能。  
   

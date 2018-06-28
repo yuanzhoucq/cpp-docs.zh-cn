@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369159"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037416"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 类
 实现位于应用程序窗口左上角的特殊按钮。 单击此按钮将打开一个菜单，其中通常包含公共的 **“文件”** 命令，如 **“打开”**、 **“保存”** 和 **“退出”**。  
@@ -98,10 +98,10 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiBmpResID`  
+ [in]*uiBmpResID*  
  若要在应用程序按钮上显示的图像资源 ID。  
   
- [in] `hBmp`  
+ [in]*hBmp*  
  指向应用程序在按钮上显示的位图的句柄。  
   
 ### <a name="remarks"></a>备注  

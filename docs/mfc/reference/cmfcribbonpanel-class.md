@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a1af8887a1c07aefd3fc3593b0aae6222e51a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613076e38d8033a5af92913fcbe8e195ebdc2c60
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378038"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042139"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 类
 实现包含一组功能区元素的面板。 在绘制面板时，系统将根据面板的大小显示尽可能多的元素。  
@@ -235,7 +235,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `pElem`  
+ [在中，out]*pElem*  
  指向功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -262,16 +262,16 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiToolbarResID`  
+ [in]*uiToolbarResID*  
  指定要添加工具栏上的资源 ID。  
   
- [in] `uiColdResID`  
+ [in]*uiColdResID*  
  指定工具栏的冷图像的资源的 ID。  
   
- [in] `uiHotResID`  
+ [in]*uiHotResID*  
  指定工具栏的热图的资源 ID。  
   
- [in] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  指定工具栏的已禁用图像的资源的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -292,13 +292,13 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszName`  
+ [in]*lpszName*  
  功能区面板的名称。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  功能区面板的默认按钮的图标的句柄。  
   
- [in] `pPaletteButton`  
+ [in]*pPaletteButton*  
  指向功能区库中的功能区面板。  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
@@ -309,7 +309,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwData`  
+ [in]*dwData*  
  与功能区元素关联的数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -325,7 +325,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  功能区元素的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -397,11 +397,11 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定要检索的元素的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- 指向基功能区元素的有效指针位于位置`nIndex`在功能区面板中，或`NULL`如果没有指定索引处的元素。  
+ 指向基功能区元素的有效指针位于位置*nIndex*在功能区面板中，或`NULL`如果没有指定索引处的元素。  
   
 ##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
  检索包含在功能区面板中的所有功能区元素。  
@@ -411,7 +411,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `arElements`  
+ [out]*arElements*  
  用于填充功能区面板中包含的所有功能区元素的数组。  
   
 ### <a name="remarks"></a>备注  
@@ -426,10 +426,10 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  功能区元素的命令 ID。  
   
- [in] `arElements`  
+ [in]*arElements*  
  功能区元素的数组。  
   
 ### <a name="remarks"></a>备注  
@@ -455,7 +455,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElem`  
+ [in]*pElem*  
  指向功能区元素的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -471,7 +471,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `lstItems`  
+ [out]*lstItems*  
  功能区面板中包含的功能区元素的命令 Id 的列表。  
   
 ### <a name="remarks"></a>备注  
@@ -528,7 +528,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rect`  
+ [out]*rect*  
  未使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -569,7 +569,7 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pElem`  
+ [in]*pElem*  
  指向功能区元素的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -587,10 +587,10 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHighlight`  
+ [in]*bHighlight*  
  `TRUE` 以突出显示功能区面板中;`FALSE`以 unhighlight 功能区面板。  
   
- [in] `point`  
+ [in]*点*  
  X 和 y 坐标的指针，相对于窗口的左上角。  
   
 ### <a name="remarks"></a>备注  
@@ -605,10 +605,10 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  X 和 y 坐标的指针，相对于窗口的左上角。  
   
- [in] `bCheckPanelCaption`  
+ [in]*bCheckPanelCaption*  
  `TRUE` 若要测试的功能区面板标题;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -625,7 +625,7 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  X 和 y 坐标的指针，相对于窗口的左上角。  
   
 ### <a name="return-value"></a>返回值  
@@ -644,17 +644,17 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `pElem`  
+ [在中，out]*pElem*  
  指向功能区元素的指针。  
   
- [in] `nIndex`  
+ [in]*nIndex*  
  从零开始的值，范围从-1 到数组中包含的功能区元素的数目。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果成功，则插入功能区元素否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 如果值`nIndex`为-1，或者如果`nIndex`等于数组中的功能区元素的数目，指定功能区元素添加到数组末尾。 如果值`nIndex`是超出范围，该方法将失败。  
+ 如果值*nIndex*为-1，或者如果*nIndex*等于数组中的功能区元素的数目，指定功能区元素添加到数组末尾。 如果值*nIndex*是超出范围，该方法将失败。  
   
 ##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
  在给定位置插入分隔符。  
@@ -664,14 +664,14 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定插入分隔符的位置的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果已成功，则插入分隔符否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以在指定的位置插入分隔符`nIndex`。 若要插入旁边的最新添加的功能区元素分隔符，调用[CMFCRibbonPanel::AddSeparator](#addseparator)。  
+ 调用此方法以在指定的位置插入分隔符*nIndex*。 若要插入旁边的最新添加的功能区元素分隔符，调用[CMFCRibbonPanel::AddSeparator](#addseparator)。  
   
 ##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
  指示是否在其显示矩形内居中的功能区元素的垂直位置。  
@@ -753,7 +753,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nChar`  
+ [in]*nChar*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -769,10 +769,10 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  功能区面板的设备上下文的指针。  
   
- [in] `nHeight`  
+ [in]*nHeight*  
  功能区面板的高度。  
   
 ### <a name="remarks"></a>备注  
@@ -788,14 +788,14 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定从功能区面板中移除的元素的从零开始索引。  
   
- [in] `bDelete`  
+ [in]*bDelete*  
  `TRUE` 若要删除已移除; 的元素否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果删除元素并将其删除 (如果`bDelete`是`TRUE`);`FALSE`如果不移除元素，或者如果没有任何功能区元素位于`nIndex`。  
+ `TRUE` 如果删除元素并将其删除 (如果*bDelete*是`TRUE`);`FALSE`如果不移除该元素或如果没有任何功能区元素位于*nIndex*。  
   
 ### <a name="remarks"></a>备注  
  调用此方法以从功能区面板中删除元素。  
@@ -820,10 +820,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定要替换的元素的从零开始索引。  
   
- [in][out] `pElem`  
+ [in][out]*pElem*  
  指向替换的原始元素的元素的有效指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -842,10 +842,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  指定要替换元素的命令 ID。  
   
- [in][out] `pElem`  
+ [in][out]*pElem*  
  指向要替换的原始元素的元素的有效指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -862,7 +862,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 若要使其显示矩形; 中的功能区元素的垂直位置居中`FALSE`若要禁用此功能。  
   
 ### <a name="remarks"></a>备注  
@@ -875,7 +875,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwData`  
+ [in]*dwData*  
  指定要设置的用户定义数据。  
   
 ### <a name="remarks"></a>备注  
@@ -900,19 +900,19 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  指定功能区元素添加菜单下的命令 ID。  
   
- [in] `hMenu`  
+ [in]*hMenu*  
  指定要添加到功能区面板 Windows 菜单的句柄。  
   
- [in] `bIsDefautCommand`  
+ [in]*bIsDefautCommand*  
  `TRUE` 若要指定是否在单击功能区元素应执行与功能区元素关联的命令。 在这种情况下，仅打开菜单，当用户单击功能区元素旁边的箭头。 `FALSE` 若要指定是否在单击功能区元素不应执行与功能区元素关联的命令。 在这种情况下，无论其中用户单击此元素将显示的弹出菜单。  
   
- [in] `bRightAlign`  
+ [in]*bRightAlign*  
  `TRUE` 若要指定弹出菜单是右对齐;否则为`FALSE`。  
   
- [in] `uiMenuResID`  
+ [in]*uiMenuResID*  
  指定要将添加到功能区面板菜单上的资源 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -931,10 +931,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定要添加的功能区元素的从零开始索引。  
   
- [in][out] `pRTC`  
+ [in][out]*pRTC*  
  指向功能区元素添加到功能区面板的运行时类信息的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -953,10 +953,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiCmdID`  
+ [in]*uiCmdID*  
  指定要添加的功能区元素的命令 ID。  
   
- [in][out] `pRTC`  
+ [in][out]*pRTC*  
  指向功能区元素添加到功能区面板与关联的运行时类信息的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -999,7 +999,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  `TRUE` 调整列; 中的最大功能区元素的宽度的同一列中的功能区元素的宽度`FALSE`若要禁用此宽度调整。  
   
 ### <a name="remarks"></a>备注  
@@ -1013,7 +1013,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszKeys`  
+ [in]*lpszKeys*  
  默认按钮的功能区面板快捷键提示。  
   
 ### <a name="remarks"></a>备注  
@@ -1027,7 +1027,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pButton`  
+ [in]*pButton*  
  指向功能区面板的默认按钮。  
   
 ### <a name="return-value"></a>返回值  
@@ -1044,7 +1044,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pNewFocus`  
+ *pNewFocus*  
  指向接收到焦点的功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1057,7 +1057,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要显示的功能区元素的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -1084,7 +1084,7 @@ CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>参数  
- `arElements`  
+ *arElements*  
  在函数返回时，此参数会包含可见的元素的数组。  
   
 ### <a name="remarks"></a>备注  

@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbc5972d244d9dfd969221d88299e868f617a5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378277"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039344"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 类
 提供 MFC 文档/视图体系结构上下文中的 Web 浏览器控件功能。  
@@ -383,25 +383,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszClassName`  
+ *lpszClassName*  
  指向以 null 结尾的字符串名称的 Windows 类。 类名称可以是与注册的任何名称[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全局函数或**RegisterClass** Windows 函数。 如果**NULL**，使用预定义的默认[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向以 null 结尾的字符串表示的窗口名称。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式特性。 默认情况下， **WS_VISIBLE**和**WS_CHILD**设置窗口样式。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 `rectDefault`值允许 Windows 指定的大小和位置的新窗口。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 *RectDefault*值允许 Windows 指定的大小和位置的新窗口。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父窗口的指针。  
   
- `nID`  
+ *nID*  
  视图的 ID 号。 默认情况下，设置为**AFX_IDW_PANE_FIRST**。  
   
- `pContext`  
+ *pContext*  
  指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**默认情况下。  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
@@ -416,16 +416,16 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pContainer`  
+ *pContainer*  
  指向的指针[COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md)包含控件的对象。  
   
- `ppSite`  
+ *ppSite*  
  指针到指向[COleControlSite](../../mfc/reference/colecontrolsite-class.md)对象，提供控件的站点。  
   
- `nID`  
+ *nID*  
  要承载的控件的标识符。  
   
- `clsid`  
+ *clsid*  
  承载控件的 CLSID  
   
 ### <a name="return-value"></a>返回值  
@@ -445,7 +445,7 @@ HRESULT ExecFormsCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwCommandID`  
+ *dwCommandID*  
  要执行的命令。 此命令必须属于**CMDSETID3_Forms3**组。  
   
  *pVarIn*  
@@ -472,13 +472,13 @@ void ExecWB(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  要执行的命令。  
   
  *cmdexecopt*  
  为执行命令设置的选项。  
   
- `pvaIn`  
+ *pvaIn*  
  一个用于指定命令输入自变量的变量。  
   
  *pvaOut*  
@@ -684,10 +684,10 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszProperty`  
+ *lpszProperty*  
  指向包含要检索的属性的字符串的指针。  
   
- `strValue`  
+ *StrValue*  
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收的属性的当前值的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -759,7 +759,7 @@ BOOL GetSource(CString& strRef);
  如果成功，则不为零，否则为零。  
   
 ### <a name="parameters"></a>参数  
- `refString`  
+ *refString*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，将存放的源代码。  
   
 ### <a name="remarks"></a>备注  
@@ -911,10 +911,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszResource`  
+ *lpszResource*  
  指向包含要加载的资源的名称的字符串的指针。  
   
- `nRes`  
+ *nRes*  
  要加载包含资源的名称的缓冲区的 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -940,19 +940,19 @@ void Navigate(
  *URL*  
  包含要导航到的 URL 的调用方分配的字符串或显示的文件的完整路径。  
   
- `dwFlags`  
+ *dwFlags*  
  指定是否将资源添加到历史记录列表、 是否为读取或写入从缓存中，以及是否在新窗口中显示的资源的变量的标志。 变量可以是定义的值的组合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)枚举。  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  指向包含要在其中显示资源框架的名称的字符串的指针。  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  指向一个值，指定要向服务器发送的 HTTP 标头的指针。 这些标头添加到默认的 Internet Explorer 标头。 标头可以指定之类的内容，为所需服务器的数据传递给服务器或状态代码的类型的操作。 如果忽略此参数*URL*不是 HTTP URL。  
   
- `lpvPostData`  
+ *lpvPostData*  
  指向要使用的 HTTP POST 事务发送的数据的指针。 例如，POST 事务用于发送的 HTML 窗体数据。 如果此参数未指定任何发送数据，**导航**发出 HTTP GET 的事务。 如果忽略此参数*URL*不是 HTTP URL。  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  要使用的 HTTP POST 事务发送的数据。 例如，POST 事务用于发送的 HTML 窗体数据。 如果此参数未指定任何发送数据，**导航**发出 HTTP GET 的事务。 如果忽略此参数*URL*不是 HTTP URL。  
   
 ### <a name="remarks"></a>备注  
@@ -989,25 +989,25 @@ void Navigate2(
  *pIDL*  
  指向的指针[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)结构。  
   
- `dwFlags`  
+ *dwFlags*  
  指定是否将资源添加到历史记录列表、 是否为读取或写入从缓存中，以及是否在新窗口中显示的资源的变量的标志。 变量可以是定义的值的组合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)枚举。  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  指向包含要在其中显示资源框架的名称的字符串的指针。  
   
- `lpszURL`  
+ *lpszURL*  
  指向包含 URL 的字符串的指针。  
   
- `lpvPostData`  
+ *lpvPostData*  
  要使用的 HTTP POST 事务发送的数据。 例如，POST 事务用于发送的 HTML 窗体数据。 如果此参数未指定任何发送数据，`Navigate2`发出 HTTP GET 的事务。 如果忽略此参数*URL*不是 HTTP 或 HTTPS URL。  
   
- `dwPostDataLen`  
- 指向以字节为单位的数据的长度`lpvPostData`参数。  
+ *dwPostDataLen*  
+ 指向以字节为单位的数据的长度*lpvPostData*参数。  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  指向一个值，指定要向服务器发送的 HTTP 或 HTTPS 标头的指针。 这些标头添加到默认的 Internet Explorer 标头。 标头可以指定之类的内容，为所需服务器的数据传递给服务器或状态代码的类型的操作。 如果忽略此参数*URL*不是 HTTP 或 HTTPS URL。  
   
- `baPostedData`  
+ *baPostedData*  
  对引用[CByteArray](../../mfc/reference/cbytearray-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
@@ -1032,22 +1032,22 @@ virtual void OnBeforeNavigate2(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszURL`  
+ *lpszURL*  
  指向包含要导航到 URL 的字符串的指针。  
   
- `nFlags`  
+ *nFlags*  
  留待将来使用。  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  包含要在其中显示资源，框架的名称的字符串或**NULL**如果没有命名的框架为目标的资源。  
   
- `baPostedData`  
+ *baPostedData*  
  对引用`CByteArray`对象，其中包含要发送到服务器，如果正在使用 HTTP POST 事务的数据。  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  指向包含附加的 HTTP 标头将发送到服务器 (仅适用于 HTTP Url) 的字符串的指针。 标头可以指定之类的内容，为所需服务器的数据传递给服务器或状态代码的类型的操作。  
   
- `pbCancel`  
+ *pbCancel*  
  指向取消标志的指针。 应用程序可以将此参数设置为非零，若要取消导航操作，或为零，以允许它以继续。  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
@@ -1063,7 +1063,7 @@ virtual void OnCommandStateChange(
  *nCommand*  
  该命令的启用的状态已更改的标识符。  
   
- `bEnable`  
+ *bEnable*  
  启用的状态。 如果命令已启用，或者如果它处于禁用状态则为零，则此参数不为零。  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
@@ -1074,13 +1074,13 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszURL`  
+ *lpszURL*  
  指向字符串的计算结果为 URL，UNC 文件名称，或导航到的 PIDL （指向的项标识符列表的指针）。  
   
 ### <a name="remarks"></a>备注  
  不是每个帧将触发此事件，但每个激发的帧[OnDownloadBegin](#ondownloadbegin)事件将激发相应`OnDocumentComplete`事件。  
   
- URL 由`lpszURL`可以不同于浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"在调用到的 URL[导航](#navigate)或[Navigate2](#navigate2)，通过传递的 URL`OnNavigateComplete2`将"http://www.microsoft.com/"。 此外，如果服务器已重浏览器定向到另一个 URL，重定向的 URL 将会反映在此处。  
+ URL 由*lpszURL*可以不同于浏览器被告知要导航到，因为此 URL 是规范化和限定的 URL 的 URL。 例如，如果应用程序指定"www.microsoft.com"在调用到的 URL[导航](#navigate)或[Navigate2](#navigate2)，通过传递的 URL`OnNavigateComplete2`将"http://www.microsoft.com/"。 此外，如果服务器已重浏览器定向到另一个 URL，重定向的 URL 将会反映在此处。  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  从 **IOleInPlaceActiveObject::OnDocWindowActivate**的 Internet Explorer 或 MSHTML 实现调用，该操作将在激活或停用容器文件窗口时通知活动的就地对象。  
@@ -1090,7 +1090,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fActivate`  
+ *fActivate*  
  指示文档窗口的状态。 如果此值不为零，正在激活窗口。 如果此值为零，正在停用窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -1124,7 +1124,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fEnable`  
+ *fEnable*  
  指示启用或禁用了是否主机的无模式对话框。 如果此值不为零，则会启用无模式对话框。 如果此值为零，将禁用无模式对话框。  
   
 ### <a name="return-value"></a>返回值  
@@ -1143,7 +1143,7 @@ virtual HRESULT OnFilterDataObject(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataObject`  
+ *pDataObject*  
  地址[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)由 Internet Explorer 或 MSHTML 提供的接口。  
   
  *ppDataObject*  
@@ -1163,7 +1163,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>参数  
- `fActivate`  
+ *fActivate*  
  指示容器的顶级框架窗口的状态。 如果此值不为零，正在激活窗口。 如果此值为零，正在停用窗口。  
   
 ### <a name="return-value"></a>返回值  
@@ -1193,10 +1193,10 @@ virtual HRESULT OnGetDropTarget(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDropTarget`  
+ *pDropTarget*  
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer 或 MSHTML 建议使用。  
   
- `ppDropTarget`  
+ *ppDropTarget*  
  地址`IDropTarget`接收`IDropTarget`主机需要提供的接口指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1230,7 +1230,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInfo`  
+ *pInfo*  
  地址[DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx)接收主机的用户界面功能的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -1249,10 +1249,10 @@ virtual HRESULT OnGetOptionKeyPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pchKey`  
+ *pchKey*  
  地址`LPOLESTR`接收主机在其中存储其默认选项的注册表子项字符串。 此子项将在 HKEY_CURRENT_USER 键下。 分配此内存使用[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)。 调用应用程序负责释放此内存使用[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)。 此参数应始终初始化为**NULL**，即使该方法将失败。  
   
- `dwReserved`  
+ *dwReserved*  
  留待将来使用。 当前未使用。  
   
 ### <a name="return-value"></a>返回值  
@@ -1313,16 +1313,16 @@ virtual void OnNavigateError(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszURL`  
+ *lpszURL*  
  为其失败导航 URL。  
   
  *lpszFrame*  
  在其中的资源是要显示，或未命名的帧的目标资源的情况下为 NULL 的框架名称。  
   
- `dwError`  
+ *dwError*  
  错误状态代码，如果可用。 有关可能的 HRESULT 和 HTTP 状态代码的列表，请参阅[如何事件状态代码。](https://msdn.microsoft.com/library/aa768365.aspx)  
   
- `pbCancel`  
+ *pbCancel*  
  指定是否要取消错误页或任何进一步的自动搜索到的导航。 如果**TRUE** （默认值），继续导航到错误页或自动搜索; 如果**FALSE**，取消导航到错误页或自动搜索。  
   
 ### <a name="remarks"></a>备注  
@@ -1340,10 +1340,10 @@ virtual void OnNewWindow2(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ppDisp`  
+ *ppDisp*  
  （可选） 接收的接口指针指向的指针`IDispatch`新的 web 浏览器或 Internet Explorer 对象的接口指针。  
   
- `Cancel`  
+ *取消*  
  指向取消标志的指针。 应用程序可以将此参数设置为非零，若要取消导航操作，或为零，以允许它以继续。  
   
 ### <a name="remarks"></a>备注  
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszProperty`  
+ *lpszProperty*  
  指向包含的属性名称的字符串的指针。  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
@@ -1397,13 +1397,13 @@ virtual HRESULT OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- `prcBorder`  
+ *prcBorder*  
  边框空间的新外部矩形。  
   
- `pUIWindow`  
+ *pUIWindow*  
  指向已更改其边框的框架或文档窗口对象的接口的指针。  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  **TRUE**如果框架窗口正在调用[IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053)，否则为**FALSE**。  
   
 ### <a name="return-value"></a>返回值  
@@ -1424,16 +1424,16 @@ virtual HRESULT OnShowContextMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwID`  
+ *dwID*  
  要显示的上下文菜单的标识符。 请参阅**IDocHostUIHandler::ShowContextMenu** Windows SDK for 的值列表中。  
   
- `ppt`  
+ *ppt*  
  菜单的屏幕坐标。  
   
- `pcmdtReserved`  
+ *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)接口用来查询命令状态和在此对象上执行命令。  
   
- `pdispReserved`  
+ *pdispReserved*  
  屏幕坐标处的对象的 IDispatch 接口。 这样，主机可以区分要提供更具体的上下文的特定对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -1455,19 +1455,19 @@ virtual HRESULT OnShowUI(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwID`  
+ *dwID*  
  留待将来使用。  
   
- `pActiveObject`  
+ *pActiveObject*  
  [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)当前处于活动状态的对象的接口。  
   
- `pCommandTarget`  
+ *pCommandTarget*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)接口的对象。  
   
- `pFrame`  
+ *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)接口的对象。 这需要菜单和工具栏。  
   
- `pDoc`  
+ *pDoc*  
  [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716)对象接口。 需要执行此工具栏。  
   
 ### <a name="return-value"></a>返回值  
@@ -1495,7 +1495,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  包含新的状态栏文本的字符串。  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
@@ -1517,7 +1517,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  新的文档标题。  
   
 ### <a name="remarks"></a>备注  
@@ -1545,13 +1545,13 @@ virtual HRESULT OnTranslateAccelerator(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpMsg`  
+ *lpMsg*  
  指向要转换可能需要的消息。  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  命令组标识符。  
   
- `nCmdID`  
+ *nCmdID*  
  命令标识符。  
   
 ### <a name="return-value"></a>返回值  
@@ -1571,13 +1571,13 @@ virtual HRESULT OnTranslateUrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwTranslate`  
+ *dwTranslate*  
  留待将来使用。  
   
- `pchURLIn`  
+ *pchURLIn*  
  提供由 Internet Explorer 或 MSHTML 表示要转换的 URL 字符串的地址。  
   
- `ppchURLOut`  
+ *ppchURLOut*  
  接收的已翻译的 URL 地址的字符串指针的地址。 主机分配的缓冲区，使用任务内存分配器。 此参数的内容始终应初始化为**NULL**，即使 URL 不会进行转换，否则该方法将失败。  
   
 ### <a name="return-value"></a>返回值  
@@ -1607,7 +1607,7 @@ virtual void OnVisible(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bVisible`  
+ *bVisible*  
  如果对象是可见则不为零，否则或。  
   
 ### <a name="remarks"></a>备注  
@@ -1643,11 +1643,11 @@ void PutProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszProperty`  
+ *lpszProperty*  
  包含要设置的属性的字符串。  
   
  *vtValue*  
- 属性的新值由`lpszProperty`。  
+ 属性的新值由*lpszProperty*。  
   
  *lpszPropertyName*  
  指向包含要设置的属性的名称的字符串的指针。  
@@ -1655,13 +1655,13 @@ void PutProperty(
  *dValue*  
  属性的新值。  
   
- `lValue`  
+ *左值*  
  属性的新值。  
   
- `lpszValue`  
+ *lpszValue*  
  指向包含属性的新值的字符串的指针。  
   
- `nValue`  
+ *n 值*  
  属性的新值。  
   
 ### <a name="remarks"></a>备注  
@@ -1679,17 +1679,17 @@ HRESULT QueryFormsCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwCommandID`  
+ *dwCommandID*  
  要查询的命令标识符。  
   
  *pbSupported*  
- 指向的指针**BOOL**指定如果该命令 (由标识`dwCommandID`) 支持。 如果为 TRUE，则支持该命令;否则为 FALSE。  
+ 指向的指针**BOOL**指定如果该命令 (由标识*dwCommandID*) 支持。 如果为 TRUE，则支持该命令;否则为 FALSE。  
   
- `pbEnabled`  
- 指向的指针**BOOL**指定如果该命令 (由标识`dwCommandID`) 启用。 如果为 TRUE，则支持该命令;否则为 FALSE。  
+ *pbEnabled*  
+ 指向的指针**BOOL**指定如果该命令 (由标识*dwCommandID*) 启用。 如果为 TRUE，则支持该命令;否则为 FALSE。  
   
  *pbChecked*  
- 指向的指针**BOOL**指定如果该命令 (由标识`dwCommandID`) 已选中。 如果为 TRUE，则支持该命令;否则为 FALSE。  
+ 指向的指针**BOOL**指定如果该命令 (由标识*dwCommandID*) 已选中。 如果为 TRUE，则支持该命令;否则为 FALSE。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。 有关可能的值的完整列表，请参阅[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK 中。  
@@ -1705,7 +1705,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264)为其调用方需要状态信息的命令的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -1736,7 +1736,7 @@ void Refresh2(int nLevel);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLevel`  
+ *nLevel*  
  指定刷新级别变量的地址。 中定义可能变量[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)，在 Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
@@ -1752,7 +1752,7 @@ void SetAddressBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  非零值，显示地址栏;否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1766,7 +1766,7 @@ void SetFullScreen(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  全屏幕模式，则为非零否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1782,7 +1782,7 @@ void SetHeight(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewValue`  
+ *nNewValue*  
  以像素为单位，主窗口的高度。  
   
 ### <a name="remarks"></a>备注  
@@ -1796,7 +1796,7 @@ void SetLeft(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewValue`  
+ *nNewValue*  
  主窗口的左边缘的屏幕坐标。  
   
 ##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar  
@@ -1807,7 +1807,7 @@ void SetMenuBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  非零值，显示菜单栏。否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1821,7 +1821,7 @@ void SetOffline(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  非零值，从本地缓存中; 中读取否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1837,7 +1837,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  确定是否将 Internet Explorer 注册为的顶级浏览器。 如果不为零，将 web 浏览器注册为的顶级浏览器;如果为零，它不的顶级浏览器。 默认值为 0。  
   
 ### <a name="remarks"></a>备注  
@@ -1853,7 +1853,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  确定是否 WebBrowser 控件注册为导航的放置目标。 如果不为零，该对象被注册为放置目标;如果为零，它不是拖放目标。  
   
 ### <a name="remarks"></a>备注  
@@ -1867,7 +1867,7 @@ void SetSilent(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  如果不为零，则不会显示对话框;如果为零，则将显示对话框。 默认值为 0。  
   
 ### <a name="remarks"></a>备注  
@@ -1881,7 +1881,7 @@ void SetStatusBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  如果状态栏是否可见; 则为非 0否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1895,7 +1895,7 @@ void SetTheaterMode(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  非零值，将 web 浏览器控件设置为影院模式;否则为零。 默认值为 0。  
   
 ### <a name="remarks"></a>备注  
@@ -1911,7 +1911,7 @@ void SetToolBar(int nNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewValue`  
+ *nNewValue*  
  指示是否显示工具栏。 如果工具栏是否显示; 则为非 0否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1925,7 +1925,7 @@ void SetTop(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewValue`  
+ *nNewValue*  
  主窗口上边缘屏幕坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -1939,7 +1939,7 @@ void SetVisible(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bNewValue`  
+ *bNewValue*  
  如果控件可见; 则为非 0否则为零。  
   
 ### <a name="remarks"></a>备注  
@@ -1953,7 +1953,7 @@ void SetWidth(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewValue`  
+ *nNewValue*  
  以像素为单位，Internet Explorer 主窗口的宽度。  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  
@@ -1966,7 +1966,7 @@ void Stop();
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MFCIE](../../visual-cpp-samples.md)   
  [CFormView 类](../../mfc/reference/cformview-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

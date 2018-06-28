@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f87dd55373599f8ab8394284a6271930b9fcd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372777"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037504"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 类
 包含使用户能够选择字体大小的组合框控件的工具栏按钮。  
@@ -105,7 +105,7 @@ void RebuildFontSizes(const CString& strFontName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `[in] strFontName`  
+ [in]*strFontName*  
  指定的字体名称。  
   
 ### <a name="remarks"></a>备注  
@@ -119,7 +119,7 @@ void SetTwipSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nSize`  
+ [in]*nSize*  
  指定的字体大小 （以缇为单位） 设置。  
   
 ### <a name="remarks"></a>备注  

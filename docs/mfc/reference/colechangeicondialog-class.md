@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375094"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041040"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 类
 用于 OLE“更改图标”对话框。  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向要转换的项。  
   
- `dwFlags`  
+ *dwFlags*  
  使用的按位组合起来，创建标志，其中包含任意数量的以下值-或运算符：  
   
 - **CIF_SELECTCURRENT**指定，在调用对话框时最初选择当前的单选按钮。 这是默认设置。  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE**指定应从中指定的可执行文件中提取图标**szIconExe**字段[m_ci](#m_ci)而不是检索的类型。 这可用于嵌入或链接到非 OLE 文件。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口将设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pItem`  
+ *pItem*  
  指向以更改其图标的项。  
   
 ### <a name="return-value"></a>返回值  

@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ee30d461bac43831bf59c19f5aac95884057eea
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378449"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042230"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 实现选项卡式窗口的基本功能。  
@@ -393,7 +393,7 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|指定是通过单击鼠标左键还是单击鼠标右键来选择选项卡。|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|指定是否自动销毁选项卡中包含的窗格。|  
@@ -436,10 +436,10 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hIcon`  
+ [in]*任务栏*  
  要添加的图标的句柄。  
   
- [in] `iIcon`  
+ [in]*iIcon*  
  中受保护的图标的从零开始索引`CImageList m_Images`成员。  
   
 ### <a name="remarks"></a>备注  
@@ -463,23 +463,23 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pTabWnd`  
+ [in]*pTabWnd*  
  指向此方法表示为一个新选项卡的窗口的指针。  
   
- [in] `lpszTabLabel`  
+ [in]*lpszTabLabel*  
  一个字符串，包含新选项卡的标签。  
   
- [in] `uiImageId`  
+ [in]*uiImageId*  
  从图像列表的图像 ID。 选项卡控件用作此映像图标的新选项卡。  
   
- [in] `uiResTabLabel`  
+ [in]*uiResTabLabel*  
  标签资源 ID。  
   
- [in] `bDetachable`  
+ [in]*bDetachable*  
  一个布尔型参数，用于确定新选项卡是否可拆分。  
   
 ### <a name="remarks"></a>备注  
- 如果`pTabWnd`指向不派生自对象[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)如果`bDetachable`是`TRUE`，框架会自动创建的包装`pTabWnd`对象。 使用包装，可以`pTabWnd`可拆分的对象。 默认情况下，包装，则实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 如果超过了可接受提供的默认包装器的功能，则使用[cmfcbasetabctrl::](#setdockingbarwrapperrtc)方法，以指定不同的包装器。  
+ 如果*pTabWnd*指向不派生自对象[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)如果*bDetachable*是`TRUE`，框架会自动创建包装器*pTabWnd*对象。 使用包装，可以*pTabWnd*可拆分的对象。 默认情况下，包装，则实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 如果超过了可接受提供的默认包装器的功能，则使用[cmfcbasetabctrl::](#setdockingbarwrapperrtc)方法，以指定不同的包装器。  
   
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
@@ -489,7 +489,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bUseTabIndexes`  
+ [in]*bUseTabIndexes*  
   
 ### <a name="remarks"></a>备注  
   
@@ -501,7 +501,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
   
 ### <a name="remarks"></a>备注  
   
@@ -513,7 +513,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectEdit`  
+ [in]*rectEdit*  
   
 ### <a name="remarks"></a>备注  
   
@@ -546,24 +546,24 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndToWrap`  
+ [in]*pWndToWrap*  
  指向已包装的框架窗口的指针。  
   
- [in] `lpszTabLabel`  
+ [in]*lpszTabLabel*  
  一个字符串，包含窗口的标签。  
   
- [in] `bDetachable`  
+ [in]*bDetachable*  
  一个布尔型参数，该值指示窗口是否可拆分。  
   
 ### <a name="return-value"></a>返回值  
- 指向包装派生自`CDockablePane`类如果`CreateWrapper`成功创建的包装类`pWndToWrap`。 如果此方法失败，其形式返回`pWndToWrap`。  
+ 指向包装派生自`CDockablePane`类如果`CreateWrapper`成功创建的包装类*pWndToWrap*。 如果此方法失败，其形式返回*pWndToWrap*。  
   
 ### <a name="remarks"></a>备注  
  选项卡式的窗口可以停靠从派生的任何对象`CWnd`。 但是，在顺序`CMFCBaseTabCtrl Class`对象可停靠、 上的每个对象`CMFCBaseTabCtrl`必须可拆分。 因此，`CMFCBaseTabCtrl`自动包装不派生自任何对象`CDockablePane`。  
   
  默认情况下，`CMFCBaseTabCtrl`创建的实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 若要更改包装器的默认类，请调用[cmfcbasetabctrl::](#setdockingbarwrapperrtc)。  
   
- 如果`pWndToWrap`派生自`CDockablePane`，此方法不会创建一个包装。 相反，它将失败并返回`pWndToWrap`。  
+ 如果*pWndToWrap*派生自`CDockablePane`，此方法不会创建一个包装。 相反，它将失败并返回*pWndToWrap*。  
   
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  框架调用此方法以分离选项卡控件中的选项卡。  
@@ -576,20 +576,20 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dockMethod`  
+ [in]*dockMethod*  
  枚举的数据类型由[CBasePane 类](../../mfc/reference/cbasepane-class.md)。 此数据类型指定用于分离选项卡上的方法。  
   
- [in] `nTabNum`  
+ [in]*nTabNum*  
  要分离选项卡的从零开始索引。  
   
- [in] `bHide`  
+ [in]*bHide*  
  一个布尔型参数，该值指示是否框架应隐藏分离选项卡。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果选项卡指定`nTabNum`是非可拆分的此函数将失败并返回`FALSE`。  
+ 如果选项卡指定*nTabNum*是非可拆分的此函数将失败并返回`FALSE`。  
   
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
@@ -599,7 +599,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bLastActive`  
+ [in]*bLastActive*  
   
 ### <a name="remarks"></a>备注  
   
@@ -611,7 +611,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  布尔参数可确定是否框架将使用自动颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -627,7 +627,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔值，确定是否使用自定义工具提示。  
   
 ### <a name="return-value"></a>返回值  
@@ -644,7 +644,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  布尔参数可指定是否启用直接编辑选项卡标签。  
   
 ### <a name="remarks"></a>备注  
@@ -664,10 +664,10 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔值，该值指示是否使可拆分的选项卡。  
   
 ### <a name="return-value"></a>返回值  
@@ -681,7 +681,7 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔值，该值指示是否启用选项卡交换。  
   
 ### <a name="remarks"></a>备注  
@@ -695,14 +695,14 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法不起如果选项卡由`iTab`已经可见。  
+ 此方法不起如果选项卡由*iTab*已经可见。  
   
  默认情况下，此方法不支持通过`CMFCBaseTabCtrl Class`。 应从派生的自定义类中实现此函数`CMFCBaseTabCtrl`如果该自定义选项卡控件支持选项卡上滚动。 此方法支持通过[CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)。  
   
@@ -723,7 +723,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  通过使用客户端区域定义一个点坐标[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -740,7 +740,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nNewTab`  
+ [in]*nNewTab*  
   
 ### <a name="remarks"></a>备注  
   
@@ -752,7 +752,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nNewTab`  
+ [in]*nNewTab*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -830,19 +830,19 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `iTabNum`  
+ [out]*iTabNum*  
  对整数的引用。 此方法将写入此参数的从零开始的第一个可见选项卡索引。  
   
- [in] `iStartFrom`  
+ [in]*iStartFrom*  
  第一个选项卡中，若要检查的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
  第一个可见选项卡如果成功，则指针否则为`NULL`。  
   
 ### <a name="remarks"></a>备注  
- 如果此方法失败，则它写入到的值为-1 `iStartFrom`。  
+ 如果此方法失败，则它写入到的值为-1 *iStartFrom*。  
   
- 如果`iStartFrom`大于或等于在选项卡控件中，选项卡的数目`GetFirstVisibleTab`自动失败。  
+ 如果*iStartFrom*大于或等于在选项卡控件中，选项卡的数目`GetFirstVisibleTab`自动失败。  
   
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
@@ -895,7 +895,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTabNum`  
+ [in]*iTabNum*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -935,10 +935,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectTabAreaTop`  
+ [in]*rectTabAreaTop*  
  对 `CRect` 对象的引用。 `GetTabArea` 此对象用于存储的大小和顶部的选项卡区域的位置。  
   
- [in] `rectTabAreaBottom`  
+ [in]*rectTabAreaBottom*  
  对 `CRect` 对象的引用。 `GetTabArea` 此对象用于存储的大小和底部选项卡区域的位置。  
   
 ### <a name="remarks"></a>备注  
@@ -954,11 +954,11 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示指定的选项卡的背景色; 则为-1`iTab`超出范围。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示指定的选项卡的背景色; 则为-1 *iTab*超出范围。  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  检索选项卡控件中选项卡边框的大小。  
@@ -981,7 +981,7 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `id`  
+ [in]*id*  
  选项卡 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -1009,11 +1009,11 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hwnd`  
+ [in]*hwnd*  
  窗口的句柄。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则选项卡的从零开始索引如果没有选项卡包含为-1 `hwnd`。  
+ 如果成功，则选项卡的从零开始索引如果没有选项卡包含为-1 *hwnd*。  
   
 ##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  检索包含指定的点的选项卡。  
@@ -1023,11 +1023,11 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  客户端坐标中的选项卡控件的点。  
   
 ### <a name="return-value"></a>返回值  
- 包含的选项卡的索引`pt`;-1，如果没有选项卡包含`pt`。  
+ 包含的选项卡的索引*pt*;-1，如果没有选项卡包含*pt*。  
   
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
@@ -1037,7 +1037,7 @@ virtual int GetTabFullWidth(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1051,7 +1051,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1065,7 +1065,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1082,11 +1082,11 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- ID 为选项卡或则为-1`iTab`超出范围。  
+ ID 为选项卡或则为-1 *iTab*超出范围。  
   
 ##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  检索的选项卡标签的文本。  
@@ -1098,17 +1098,17 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
- [out] `strLabel`  
+ [out]*strLabel*  
  对 `CString` 对象的引用。 此方法将存储在此参数的选项卡上的标签。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果成功，则，`FALSE`否则为。  
   
 ### <a name="remarks"></a>备注  
- 如果此方法将失败索引`iTab`无效。  
+ 如果此方法将失败索引*iTab*无效。  
   
  使用创建选项卡时设置的选项卡标签[cmfcbasetabctrl:: Addtab](#addtab)。 你还可以更改标签创建后使用方法[CMFCBaseTabCtrl::SetTabLabel](#settablabel)。  
   
@@ -1122,10 +1122,10 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
- [out] `rect`  
+ [out]*rect*  
  对 `CRect` 对象的引用。 此方法将存储在此参数的大小和位置选项卡。  
   
 ### <a name="return-value"></a>返回值  
@@ -1160,7 +1160,7 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rect`  
+ [in]*rect*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1172,11 +1172,11 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，该值指示指定的选项卡的文本颜色的参数; 则为-1`iTab`超出范围。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，该值指示指定的选项卡的文本颜色的参数; 则为-1 *iTab*超出范围。  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  返回指向驻留在指定的选项卡的窗格的指针。  
@@ -1186,11 +1186,11 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针[CWnd](../../mfc/reference/cwnd-class.md)驻留在选项卡的对象，`iTab`指定。 `NULL` 如果`iTab`无效。  
+ 指向的指针[CWnd](../../mfc/reference/cwnd-class.md)驻留在选项卡的对象， *iTab*指定。 `NULL` 如果*iTab*无效。  
   
 ### <a name="remarks"></a>备注  
  返回的对象是应用程序添加调用之一时[cmfcbasetabctrl:: Addtab](#addtab)或[cmfcbasetabctrl:: Inserttab](#inserttab)。  
@@ -1205,11 +1205,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针[CWnd](../../mfc/reference/cwnd-class.md)驻留在指定的选项卡; 的对象`NULL`如果`iTab`无效。  
+ 指向的指针[CWnd](../../mfc/reference/cwnd-class.md)驻留在指定的选项卡; 的对象`NULL`如果*iTab*无效。  
   
 ### <a name="remarks"></a>备注  
  此方法检索到的直接指针`CWnd`对象通过使用上述任一方法添加[cmfcbasetabctrl:: Addtab](#addtab)或[cmfcbasetabctrl:: Inserttab](#inserttab)。 `GetTabWndNoWrapper` 将检索对所添加的指针`CWnd`，即使框架添加对象的包装器。 有关包装器的详细信息和[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)，请参阅[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)。  
@@ -1244,7 +1244,7 @@ virtual BOOL HasImage(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1258,7 +1258,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHide`  
+ [in]*bHide*  
  一个布尔值，指定是否启用隐藏单个选项卡。  
   
 ### <a name="remarks"></a>备注  
@@ -1285,26 +1285,26 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pNewWnd`  
+ [in]*pNewWnd*  
  指向此方法将添加为新选项卡的窗口的指针。  
   
- [in] `lpszTabLabel`  
+ [in]*lpszTabLabel*  
  一个字符串，包含新选项卡的标签。  
   
- [in] `nInsertAt`  
+ [in]*nInsertAt*  
  新选项卡的从零开始索引。  
   
- [in] `uiImageId`  
+ [in]*uiImageId*  
  从图像列表的图像 ID。 选项卡控件用作此映像图标的新选项卡。  
   
- [in] `bDetachable`  
+ [in]*bDetachable*  
  一个布尔型参数，用于确定新选项卡是否可拆分。  
   
- [in] `uiResTabLabel`  
+ [in]*uiResTabLabel*  
  标签资源 ID。  
   
 ### <a name="remarks"></a>备注  
- 如果该对象由`pNewWnd`不派生自[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)如果`bDetachable`参数是`TRUE`，框架会创建新的选项卡的特殊包装。默认情况下，包装，则实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 使用[cmfcbasetabctrl::](#setdockingbarwrapperrtc)方法来创建不同的包装类。 派生自所需要的任何自定义包装类`CDockablePaneAdapter`。  
+ 如果该对象由*pNewWnd*不派生自[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)如果*bDetachable*参数是`TRUE`，框架创建新选项卡的特殊包装器。默认情况下，包装，则实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 使用[cmfcbasetabctrl::](#setdockingbarwrapperrtc)方法来创建不同的包装类。 派生自所需要的任何自定义包装类`CDockablePaneAdapter`。  
   
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
@@ -1314,7 +1314,7 @@ void InvalidateTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hIcon`  
- [in] `iIcon`  
+ [in]*任务栏*  
+ [in]*iIcon*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1500,7 +1500,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  要测试的点。  
   
 ### <a name="return-value"></a>返回值  
@@ -1539,7 +1539,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  要检查的选项卡的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1556,7 +1556,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1586,7 +1586,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  要检查的选项卡的从零开始的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nSource`  
- [in] `nDest`  
+ [in]*n 源*  
+ [in]*nDest*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1659,9 +1659,9 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `COleDataObject*`  
- [in] `DROPEFFECT`  
- [in] `CPoint`  
+ [in]*COleDataObject**  
+ [in]*DROPEFFECT*  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1678,9 +1678,9 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in]*COleDataObject**  
+ [in]*DWORD*  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1706,9 +1706,9 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in]*COleDataObject**  
+ [in]*DWORD*  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `int`  
- [in] `CString&`  
+ [in]*int*  
+ [in]*CString （& a)*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1737,7 +1737,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -1773,10 +1773,10 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
- [in] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  一个布尔型参数，指定是否重新计算选项卡的布局。  
   
 ### <a name="return-value"></a>返回值  
@@ -1811,7 +1811,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1823,7 +1823,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引`SetActiveTab`使具有此索引的选项卡处于活动状态。  
   
 ### <a name="return-value"></a>返回值  
@@ -1840,7 +1840,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clr`  
+ [in]*clr*  
  指定新的背景色。  
   
 ### <a name="remarks"></a>备注  
@@ -1854,7 +1854,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `clr`  
+ [in]*clr*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，指定新的文本颜色。  
   
 ### <a name="remarks"></a>备注  
@@ -1868,11 +1868,11 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `arColors`  
+ [in]*arColors*  
  RGB 颜色的数组。  
   
 ### <a name="remarks"></a>备注  
- 如果你提供一个自定义的颜色数组，则忽略默认值的颜色数组。 如果参数`arColors`为空，框架将恢复为默认的颜色数组。  
+ 如果你提供一个自定义的颜色数组，则忽略默认值的颜色数组。 如果参数*arColors*为空，框架将恢复为默认的颜色数组。  
   
  若要启用 autocolor 模式，使用[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)方法。  
   
@@ -1884,7 +1884,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRTC`  
+ [in]*pRTC*  
  新的包装器类的运行时类信息。  
   
 ### <a name="remarks"></a>备注  
@@ -1900,10 +1900,10 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bNoPrefix`  
+ [in]*bNoPrefix*  
  `TRUE` 如果你想要处理前缀字符;否则为`FALSE`。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 如果你想要重绘选项卡式的窗口中;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
@@ -1922,16 +1922,16 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  位图的资源 id。 `SetImageList` 从此资源中加载的图像列表。  
   
- [in] `cx`  
+ [in]*cx*  
  以像素为单位的每个图像的宽度。  
   
- [in] `clrTransp`  
+ [in]*clrTransp*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示图像的透明色。  
   
- [in] `hImageList`  
+ [in]*hImageList*  
  预加载的图像列表句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -1940,7 +1940,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>备注  
  从图标图像列表映像与选项卡的标签一起显示。若要显示一个图标，必须指定其索引，当您调用[cmfcbasetabctrl:: Addtab](#addtab)。  
   
- `SetImageList` 如果使用选项卡控件创建了平面样式，将失败。 它也将失败如果 framework 无法加载所指示的图像`uiID`。  
+ `SetImageList` 如果使用选项卡控件创建了平面样式，将失败。 它也将失败如果 framework 无法加载所指示的图像*uiID*。  
   
  此方法重新计算的图像和文本大小根据选项卡的高度。  
   
@@ -1952,7 +1952,7 @@ virtual void SetLocation(Location location);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `location`  
+ [in]*位置*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1966,10 +1966,10 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
- [in] `color`  
+ [in]*颜色*  
  要设置的颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -1985,10 +1985,10 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTabBorderSize`  
+ [in]*nTabBorderSize*  
  新边框大小，以像素为单位。  
   
- [in] `bRepaint`  
+ [in]*bRepaint*  
  一个布尔型参数，该值指示是否 framework 重绘控件。  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
@@ -2001,10 +2001,10 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。此方法会更改此选项卡的图标。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  图标的图柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -2020,10 +2020,10 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡以更新从零开始索引。  
   
- [in] `uiIcon`  
+ [in]*uiIcon*  
  新建图标图标 ID。 此 ID 引用内部[CImageList](../../mfc/reference/cimagelist-class.md)对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -2040,13 +2040,13 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  若要更改选项卡的从零开始索引。  
   
- [in] `bIconOnly`  
+ [in]*bIconOnly*  
  布尔参数可确定是否显示仅图标。  
   
- [in] `bShowTooltipAlways`  
+ [in]*bShowTooltipAlways*  
  布尔参数可确定是否与框架显示工具提示显示仅图标的选项卡标签。  
   
 ### <a name="return-value"></a>返回值  
@@ -2065,10 +2065,10 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡以更新从零开始索引。  
   
- [in] `strLabel`  
+ [in]*strLabel*  
  对包含选项卡标签的新文本的字符串的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -2091,14 +2091,14 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `arOrder`  
+ [in]*arOrder*  
  定义新的 tab 键顺序的从零开始的索引数组。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果成功，则，`FAIL`否则为。  
   
 ### <a name="remarks"></a>备注  
- 大小`arOrder`数组必须等于选项卡控件中选项卡的数目。  
+ 大小*arOrder*数组必须等于选项卡控件中选项卡的数目。  
   
 ##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  设置特定的选项卡的文本颜色。  
@@ -2110,10 +2110,10 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
- [in] `color`  
+ [in]*颜色*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示新的文本颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -2131,23 +2131,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的索引，`ShowTab`将显示或隐藏。  
   
- [in] `bShow`  
+ [in]*bShow*  
  一个布尔型参数，该值指示是否显示选项卡。  
   
- [in] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  一个布尔型参数，该值指示是否立即重新计算窗口布局。  
   
- [in] `bActivate`  
- 一个布尔型参数，该值指示是否选择选项卡指定`iTab`。  
+ [in]*bActivate*  
+ 一个布尔型参数，该值指示是否选择选项卡指定*iTab*。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 参数`bActivate`仅适用于时`bShow`是`TRUE`。 如果`bActivate`是`TRUE`如果`ShowTab`成功，`ShowTab`会将消息 AFX_WM_CHANGE_ACTIVE_TAB 发送到选项卡窗口的父级。  
+ 参数*bActivate*仅适用于时*bShow*是`TRUE`。 如果*bActivate*是`TRUE`如果`ShowTab`成功，`ShowTab`会将消息 AFX_WM_CHANGE_ACTIVE_TAB 发送到选项卡窗口的父级。  
   
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
@@ -2157,7 +2157,7 @@ virtual BOOL StartRenameTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFisrtTabID`  
- [in] `nSecondTabID`  
+ [in]*nFisrtTabID*  
+ [in]*nSecondTabID*  
   
 ### <a name="remarks"></a>备注  
   

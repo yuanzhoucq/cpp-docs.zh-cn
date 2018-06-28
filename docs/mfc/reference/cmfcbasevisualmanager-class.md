@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369146"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040722"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 类
 派生的视觉管理器和 Windows 主题 API 之间的一层。  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文  
   
- [in] `rect`  
+ [in]*rect*  
  复选框的绑定矩形。  
   
- [in] `bHighlighted`  
+ [in]*bHighlighted*  
  指定是否将突出显示复选框。  
   
- [in] `nState`  
+ [in]*nState*  
  0 用于检查正常、 未选中，1  
   
  如混合的常规 2。  
   
- [in] `bEnabled`  
+ [in]*bEnabled*  
  指定是否启用复选框。  
   
- [in] `bPressed`  
+ [in]*bPressed*  
  指定是否按下了复选框。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果启用了主题 API;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 值`nState`对应于以下的复选框样式。  
+ 值*nState*对应于以下的复选框样式。  
   
 |nState|复选框样式|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  组合框边框的绑定矩形。  
   
- [in] `bDisabled`  
+ [in]*bDisabled*  
  指定是否禁用组合框边框。  
   
- [in] `bIsDropped`  
+ [in]*bIsDropped*  
  指定是否向下删除组合框边框。  
   
- [in] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  指定组合框边框会突出显示。  
   
 ### <a name="return-value"></a>返回值  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `pDC`|一个指向设备上下文的指针。|  
-|[in] `rect`|组合框下拉按钮的边框。|  
-|[in] `bDisabled`|指定组合框下拉按钮是否已禁用。|  
-|[in] `bIsDropped`|指定是否向下删除组合框下拉按钮。|  
-|[in] `bIsHighlighted`|指定组合框下拉按钮将突出显示。|  
+|[in]*pDC*|一个指向设备上下文的指针。|  
+|[in]*rect*|组合框下拉按钮的边框。|  
+|[in]*bDisabled*|指定组合框下拉按钮是否已禁用。|  
+|[in]*bIsDropped*|指定是否向下删除组合框下拉按钮。|  
+|[in]*bIsHighlighted*|指定组合框下拉按钮将突出显示。|  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果启用了主题 API;否则为`FALSE`。  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  推送按钮的边框。  
   
- [in] `pButton`  
+ [in]*pButton*  
  指向的指针[CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)要绘制的对象。  
   
- [in] `uiState`  
- 已忽略。 状态取自`pButton`。  
+ [in]*uiState*  
+ 已忽略。 状态取自*pButton*。  
   
 ### <a name="return-value"></a>返回值  
  `TRUE` 如果启用了主题 API;否则为`FALSE`。  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `rect`  
+ [in]*rect*  
  单选按钮的边框。  
   
- [in] `bHighlighted`  
+ [in]*bHighlighted*  
  指定的单选按钮将突出显示。  
   
- [in] `bChecked`  
+ [in]*bChecked*  
  指定是否已选中的单选按钮。  
   
- [in] `bEnabled`  
+ [in]*bEnabled*  
  指定是否启用单选按钮。  
   
- [in] `bPressed`  
+ [in]*bPressed*  
  指定是否按下了单选按钮。  
   
 ### <a name="return-value"></a>返回值  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pStatusBar`  
+ [in]*pStatusBar*  
  指向状态栏的指针。 忽略此值。  
   
- [in] `rectProgress`  
- 中的进度栏的边框`pDC`坐标。  
+ [in]*rectProgress*  
+ 中的进度栏的边框*pDC*坐标。  
   
- [in] `nProgressTotal`  
+ [in]*nProgressTotal*  
  总进度值。  
   
- [in] `nProgressCurr`  
+ [in]*nProgressCurr*  
  当前的进度值。  
   
- [in] `clrBar`  
+ [in]*clrBar*  
  开始颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 派生的类可以使用它的颜色渐变。  
   
- [in] `clrProgressBarDest`  
+ [in]*clrProgressBarDest*  
  结束颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 派生的类可以使用它的颜色渐变。  
   
- [in] `clrProgressText`  
+ [in]*clrProgressText*  
  进度的文本颜色。 `CMFCBaseVisualManager` 将忽略这种情况。 由定义的文本颜色`afxGlobalData.clrBtnText`。  
   
- [in] `bProgressText`  
+ [in]*bProgressText*  
  指定是否显示进度的文本。  
   
 ### <a name="return-value"></a>返回值  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
- [in] `pBar`  
+ [in]*pBar*  
  指向应绘制其背景的窗格的指针。  
   
- [in] `rectClient`  
+ [in]*rectClient*  
  要填充的区域边界的矩形。  
   
 ### <a name="return-value"></a>返回值  

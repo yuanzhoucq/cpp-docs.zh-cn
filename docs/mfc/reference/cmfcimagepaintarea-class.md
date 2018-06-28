@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368317"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037363"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 类
 提供用于修改图像编辑器对话框中的图像的图片区域。  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pParentDlg`|指向父级的图像编辑器的对话框中的指针。|  
+|[in]*pParentDlg*|指向父级的图像编辑器的对话框中的指针。|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  检索当前的绘制模式。  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `pBitmap`|要显示的新位图图像。|  
+|[in]*pBitmap*|要显示的新位图图像。|  
   
 ### <a name="remarks"></a>备注  
- 如果`pBitmap`是`NULL`，此方法可修改绘制区域的大小设置为零。 否则，它可修改绘制区域的大小设置为提供的位图图像的大小。  
+ 如果*pBitmap*是`NULL`，此方法可修改绘制区域的大小设置为零。 否则，它可修改绘制区域的大小设置为提供的位图图像的大小。  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  设置当前绘图色。  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `color`|新的绘图色。|  
+|[in]*颜色*|新的绘图色。|  
   
 ### <a name="remarks"></a>备注  
  当从映像编辑器调色板栏选择一种颜色或颜色选取器，框架调用此方法以更新当前绘制颜色。 初始绘制颜色为黑色 (`COLORREF`值为 0)。  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |参数|描述|  
-|[in] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，该值指定当前的绘制模式。|  
+|[in]*模式*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，该值指定当前的绘制模式。|  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

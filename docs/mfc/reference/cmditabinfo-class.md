@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b3676db7cedbca1fe831e44c9ff7cf018360adc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368090"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040048"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 类
 `CMDITabInfo`类用于将参数传递给[cmdiframewndex:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)方法。 设置此类的成员以控制 MDI 选项卡式组的行为。  
@@ -70,7 +70,7 @@ class CMDITabInfo
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|指定是否**关闭**活动选项卡标签上显示按钮。|  
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|指定是否颜色 MDI 选项卡。|  
@@ -235,7 +235,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ar`  
+ [in]*ar*  
  A [CArchive 类](../../mfc/reference/carchive-class.md)要序列化对象。  
   
 ## <a name="see-also"></a>请参阅  

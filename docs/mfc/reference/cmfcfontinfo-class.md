@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368288"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038595"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 类
 `CMFCFontInfo`类描述的名称和字体的其他特性。  
@@ -60,7 +60,7 @@ class CMFCFontInfo : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|一个值，指定与字体相关联的字符集 （脚本）。|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|一个值，指定的间距和系列的字体。|  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszName`  
+ [in]*lpszName*  
  字体的名称。 有关详细信息，请参阅`lfFaceName`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
   
- [in] `lpszScript`  
+ [in]*lpszScript*  
  脚本 （字符集） 的字体的名称。  
   
- [in] `nCharSet`  
+ [in]*nCharSet*  
  一个值，指定的字体的字符集 （脚本）。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
   
- [in] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  一个值，指定的间距和系列的字体。 有关详细信息，请参阅`lfPitchAndFamily`的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
   
- [in] `nType`  
+ [in]*nType*  
  一个值，指定的字体类型。 此参数可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。  
   
- [in] `src`  
+ [in]*src*  
  现有`CMFCFontInfo`其成员用于构造此对象`CMFCFontInfo`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅`nCharSet`参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
+ 有关详细信息，请参阅*nCharSet*参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  一个值，指定的间距 （点大小） 和的字体系列 （例如，serif、 宋体，和 monospace）。  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅`nPitchAndFamily`参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
+ 有关详细信息，请参阅*nPitchAndFamily*参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  一个值，指定的字体的类型。  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅`nType`参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
+ 有关详细信息，请参阅*nType*参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  字体的名称： 例如， **Arial**。  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅`lpszName`参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
+ 有关详细信息，请参阅*lpszName*参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  字符集 （脚本） 与字体相关联的名称。  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅`lpszScript`参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
+ 有关详细信息，请参阅*lpszScript*参数[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)构造函数。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

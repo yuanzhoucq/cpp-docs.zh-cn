@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369185"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038427"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 类
 `CMFCRibbonStatusBarPane`类实现可添加到功能区状态栏的功能区元素。  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nCmdID`  
+ [in]*nCmdID*  
  指定的命令 ID 的窗格。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  指定要在窗格中显示的文本字符串。  
   
- [in] `bIsStatic`  
+ [in]*bIsStatic*  
  如果`TRUE`，无法突出显示或通过单击选择状态窗格。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  指定要在窗格中显示的图标的句柄。  
   
- [in] `lpszAlmostLargeText`  
+ [in]*lpszAlmostLargeText*  
  指定可以在窗格中显示的最长文本字符串。  
   
- [in] `hBmpAnimationList`  
+ [in]*hBmpAnimationList*  
  指定用于动画的图像列表的句柄。  
   
- [in] `cxAnimation`  
+ [in]*cxAnimation*  
  指定宽度，以像素为单位，用于动画的图像列表中的图标。  
   
- [in] `clrTrnsp`  
+ [in]*clrTrnsp*  
  用于动画的图像列表中指定图像的透明色。  
   
- [in] `uiAnimationListResID`  
+ [in]*uiAnimationListResID*  
  指定图像列表用于动画的资源的 ID。  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `CDC*`  
+ [in]*CDC**  
   
 ### <a name="remarks"></a>备注  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszAlmostLargeText`  
+ [in]*lpszAlmostLargeText*  
  指定可以显示在状态栏窗格而不发生截断的最长字符串。  
   
 ### <a name="remarks"></a>备注  
- 库计算文本的大小，`lpszAlmostLargeText`指定并相应地调整窗格的大小。 如果它仍不适合在窗格中，文本将被截断。  
+ 库计算文本的大小， *lpszAlmostLargeText*指定并相应地调整窗格的大小。 如果它仍不适合在窗格中，文本将被截断。  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  将附加到状态栏窗格可以用于动画的图像列表。  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hBmpAnimationList`  
+ [in]*hBmpAnimationList*  
  指定图像列表的句柄。  
   
- [in] `cxAnimation`  
+ [in]*cxAnimation*  
  指定宽度，以像素为单位，在图像列表的框架。  
   
- [in] `clrTransp`  
+ [in]*clrTransp*  
  指定的图像列表的透明颜色。  
   
- [in] `uiAnimationListResID`  
+ [in]*uiAnimationListResID*  
  指定的图像列表的资源 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nAlign`  
+ [in]*nAlign*  
  指定的文本对齐方式。  
   
 ### <a name="remarks"></a>备注  
- `nAlign` 可以具有以下值之一：  
+ *nAlign*可以具有以下值之一：  
   
 - `TA_LEFT`： 左对齐  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFrameDelay`  
+ [in]*nFrameDelay*  
  指定动画帧速率，单位为毫秒。  
   
- [in] `nDuration`  
+ [in]*nDuration*  
  指定播放动画，以毫秒为单位的时间。 使用-1 表示无限循环。  
   
 ### <a name="remarks"></a>备注  

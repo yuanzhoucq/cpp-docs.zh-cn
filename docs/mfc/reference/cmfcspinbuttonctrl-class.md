@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366793"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039461"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 类
 `CMFCSpinButtonCtrl`类支持绘制数值调节钮控件的可视管理器。  
@@ -79,7 +79,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  

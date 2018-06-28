@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371792"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040098"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 类
 `CMFCMaskedEdit`类支持掩码的编辑控件，将验证用户输入掩码并显示根据模板验证的结果。  
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法检索仅屏蔽字符;`FALSE`若要指定方法检索整个文本。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszMask`  
- 指定的字符可以出现在用户输入中每个位置的类型掩码字符串。 长度`lpszInputTemplate`和`lpszMask`参数字符串必须相同。 请参阅有关掩码字符的更多详细信息备注部分。  
+ [in]*lpszMask*  
+ 指定的字符可以出现在用户输入中每个位置的类型掩码字符串。 长度*lpszInputTemplate*和*lpszMask*参数字符串必须相同。 请参阅有关掩码字符的更多详细信息备注部分。  
   
- [in] `lpszInputTemplate`  
- 一个掩码模板字符串，指定文本字符可以出现在用户输入中每个位置。 使用下划线字符 ('_') 作为的字符占位符。 长度`lpszInputTemplate`和`lpszMask`参数字符串必须相同。  
+ [in]*lpszInputTemplate*  
+ 一个掩码模板字符串，指定文本字符可以出现在用户输入中每个位置。 使用下划线字符 ('_') 作为的字符占位符。 长度*lpszInputTemplate*和*lpszMask*参数字符串必须相同。  
   
- [in] `chMaskInputTemplate`  
+ [in]*chMaskInputTemplate*  
  框架将为每个用户输入中包含无效字符替换默认字符。 此参数的默认值是下划线 ('_')。  
   
- [in] `lpszValid`  
+ [in]*lpszValid*  
  包含一组有效字符的字符串。 `NULL` 指示所有字符都有效。 此参数的默认值为 `NULL`。  
   
 ### <a name="remarks"></a>备注  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要选择仅组;`FALSE`来选择整个文本。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要验证用户输入与仅屏蔽字符;`FALSE`以对整个掩码进行验证。 默认值为 `TRUE`。  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `lpszStringBuf`  
+ [out]*lpszStringBuf*  
  指向接收来自编辑控件的文本的缓冲区的指针。  
   
- [in] `nMaxCount`  
+ [in]*nMaxCount*  
  最大要接收的字符数。  
   
- [out] `rstrString`  
+ [out]*rstrString*  
  对接收来自编辑控件的文本的字符串对象的引用。  
   
 ### <a name="return-value"></a>返回值  
- 第一个方法重载方法返回的字符串复制到的字节数`lpszStringBuf`参数缓冲区; 如果掩码的编辑控件具有没有文本为 0。  
+ 第一个方法重载方法返回的字符串复制到的字节数*lpszStringBuf*参数缓冲区; 如果掩码的编辑控件具有没有文本为 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法将文本复制到掩码的编辑控件从`lpszStringBuf`缓冲区或`rstrString`字符串。  
+ 此方法将文本复制到掩码的编辑控件从*lpszStringBuf*缓冲区或*rstrString*字符串。  
   
  此方法重新定义了[CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)。  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `chChar`  
+ [in]*chChar*  
  要验证的字符。  
   
- [in] `chMaskChar`  
+ [in]*chMaskChar*  
  掩码字符串中的相应字符。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`chChar`参数是一种通过允许的字符`chMaskChar`参数; 否则为`FALSE`。  
+ `TRUE` 如果*chChar*参数是一种通过允许的字符*chMaskChar*参数; 否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
  重写此方法以验证自己的输入的字符。 有关掩码字符的详细信息，请参阅[CMFCMaskedEdit::EnableMask](#enablemask)方法。  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszValid`  
+ [in]*lpszValid*  
  包含的一套有效的输入字符的字符串。 `NULL` 表示所有字符都有效。 此参数的默认值为 `NULL`。  
   
 ### <a name="remarks"></a>备注  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszString`  
+ [in]*lpszString*  
  指向以 null 结尾的字符串，将使用作为提示。  
   
 ### <a name="remarks"></a>备注  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373574"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042204"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 实现活动文档包容。  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pContainerDoc`  
+ *pContainerDoc*  
  指向的指针`COleDocument`充当活动文档容器的对象。 此参数必须是**NULL**启用**IMPLEMENT_SERIALIZE**。 通常将 OLE 项构造与非**NULL**文档指针。  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCaller`  
+ *pCaller*  
  指向的指针[CView](../../mfc/reference/cview-class.md)发送打印命令的对象。  
   
- `pInfo`  
+ *pInfo*  
  指向的指针[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,31 +138,31 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCmdID`  
- 要执行的命令标识符。 必须在由标识的组`pguidCmdGroup`。  
+ *nCmdID*  
+ 要执行的命令标识符。 必须在由标识的组*pguidCmdGroup*。  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  指定命令执行选项。 默认情况下，设置以执行该命令而不提示用户。 请参阅[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)有关值的列表。  
   
- `pguidCmdGroup`  
- 命令组的唯一标识符。 默认情况下， **NULL**，它指定标准的组。 该命令传递中`nCmdID`必须属于的组。  
+ *pguidCmdGroup*  
+ 命令组的唯一标识符。 默认情况下， **NULL**，它指定标准的组。 该命令传递中*nCmdID*必须属于的组。  
   
 ### <a name="return-value"></a>返回值  
  返回`S_OK`如果成功; 否则，返回以下错误代码之一。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|出现意外的错误。|  
 |**E_FAIL**|出现错误。|  
 |**E_NOTIMPL**|指示 MFC 本身应尝试转换并将其分派命令。|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 为非**NULL** ，但未指定识别的命令组。|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 无法识别为有效命令组 pGroup 中。|  
-|**OLECMDERR_DISABLED**|由该命令`nCmdID`处于禁用状态，并且无法执行。|  
-|**OLECMDERR_NOHELP**|调用方标识的命令上要求帮助`nCmdID`但没有帮助可用。|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup*为非**NULL** ，但未指定识别的命令组。|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID*未被识别为组 pGroup 中的有效命令。|  
+|**OLECMDERR_DISABLED**|由该命令*nCmdID*处于禁用状态，并且无法执行。|  
+|**OLECMDERR_NOHELP**|调用方标识的命令上要求帮助*nCmdID*但没有帮助可用。|  
 |**OLECMDERR_CANCELLED**|用户已取消执行。|  
   
 ### <a name="remarks"></a>备注  
- `pguidCmdGroup`和`nCmdID`参数一起唯一标识要调用的命令。 `nCmdExecOpt`参数指定要执行的准确操作。  
+ *PguidCmdGroup*和*nCmdID*参数一起唯一标识要调用的命令。 *NCmdExecOpt*参数指定要执行的准确操作。  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  调用此成员函数以获取指向`IOleDocumentView`接口的当前处于活动状态的视图。  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCaller`  
+ *pCaller*  
  指向的指针[CView](../../mfc/reference/cview-class.md)发送打印命令的对象。  
   
- `pInfo`  
+ *pInfo*  
  指向的指针[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。  
   
- `bPrintAll`  
+ *bPrintAll*  
  指定是否要打印整个文档。  
   
 ### <a name="return-value"></a>返回值  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCaller`  
+ *pCaller*  
  指向正在发送打印命令 CView 对象的指针。  
   
- `pInfo`  
+ *pInfo*  
  指向的指针[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。  
   
- `bPrintAll`  
+ *bPrintAll*  
  指定是否要打印整个文档。  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nCmdID`  
+ *nCmdID*  
  要查询的命令标识符。  
   
- `pdwStatus`  
+ *pdwStatus*  
  指向作为查询的结果而返回的标志的指针。 有关可能的值的列表，请参阅[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)。  
   
- `pCmdText`  
+ *pCmdText*  
  指向[OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314)中要返回其为单个命令的名称和状态信息的结构。 可以是**NULL**以指示调用方不需要此信息。  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  命令组中; 的唯一标识符可以是**NULL**指定标准的组。  
   
 ### <a name="return-value"></a>返回值  
@@ -277,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwCloseOption`  
+ *dwCloseOption*  
  指定在什么情况下，当它返回时向加载状态已保存该 OLE 项的标志。 有关可能的值的列表，请参阅[COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)。  
   
 ### <a name="remarks"></a>备注  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369617"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037720"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 类
 `CMFCListCtrl`类扩展的功能[CListCtrl 类](../../mfc/reference/clistctrl-class.md)通过支持的高级标头控件功能的类[CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)。  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bMark`  
+ [in]*bMark*  
  布尔参数可确定是否启用不同的背景色。  
   
- [in] `bRedraw`  
+ [in]*bRedraw*  
  布尔参数可确定是否要立即重绘控件。  
   
 ### <a name="remarks"></a>备注  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  一个布尔值，指定是否启用多个列排序模式。  
   
 ### <a name="remarks"></a>备注  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lParam1`  
+ [in]*lParam1*  
  要比较的第一项。  
   
- [in] `lParam2`  
+ [in]*lParam2*  
  要比较的第二项。  
   
- [in] `iColumn`  
+ [in]*iColumn*  
  此方法对进行排序的列的索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nRow`  
+ [in]*nRow*  
  相关的单元的行。  
   
- [in] `nColumn`  
+ [in]*nColumn*  
  相关的单元的列。  
   
- [in] `dwData`  
+ [in]*dwData*  
  用户定义的数据。 默认实现不使用此参数。  
   
 ### <a name="return-value"></a>返回值  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nRow`  
+ [in]*nRow*  
  相关的单元的行。  
   
- [in] `nColumn`  
+ [in]*nColumn*  
  相关的单元的列。  
   
 ### <a name="return-value"></a>返回值  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iColumn`  
+ [in]*iColumn*  
  要删除的列。  
   
 ### <a name="remarks"></a>备注  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iColumn`  
+ [in]*iColumn*  
  要排序的列。  
   
- [in] `bAscending`  
+ [in]*bAscending*  
  一个布尔值，指定的排序顺序。  
   
- [in] `bAdd`  
- 一个布尔值，指定该方法是否将所指出的列添加`iColumn`到的列排序的列表。  
+ [in]*bAdd*  
+ 一个布尔值，指定该方法是否将所指出的列添加*iColumn*到的列排序的列表。  
   
 ### <a name="remarks"></a>备注  
  此方法将到标头控件的输入的参数传递使用方法[CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)。  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iColumn`  
+ [in]*iColumn*  
  要排序的列。  
   
- [in] `bAscending`  
+ [in]*bAscending*  
  一个布尔值，指定的排序顺序。  
   
- [in] `bAdd`  
- 一个布尔值，指定此方法是否将所指出的列添加`iColumn`到的列排序的列表。  
+ [in]*bAdd*  
+ 一个布尔值，指定此方法是否将所指出的列添加*iColumn*到的列排序的列表。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

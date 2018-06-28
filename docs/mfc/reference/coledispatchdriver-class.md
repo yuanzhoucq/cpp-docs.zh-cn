@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f9eaa33abd0f24a1d584c5ba2a1e4d6f9e5d44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d7a15243f68143f043d12486f9fd21b27373a17
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374547"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039955"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 实现 OLE 自动化的客户端。  
@@ -89,7 +89,7 @@ class COleDispatchDriver
 ## <a name="remarks"></a>备注  
  `COleDispatchDriver` 没有基类。  
   
- OLE 调度接口提供对对象的方法和属性访问。 成员函数的`COleDispatchDriver`附加、 分离、 创建和发布类型的调度连接`IDispatch`。 其他成员函数使用变量自变量列表来简化调用**idispatch:: Invoke**。  
+ OLE 调度接口提供对对象的方法和属性访问。 成员函数的`COleDispatchDriver`附加、 分离、 创建和发布类型的调度连接`IDispatch`。 其他成员函数使用变量自变量列表来简化调用`IDispatch::Invoke`。  
   
  此类可用于直接，但它通常由仅添加类向导创建的类。 当导入类型库创建新的 c + + 类时，将新的类派生自`COleDispatchDriver`。  
   
@@ -115,10 +115,10 @@ void AttachDispatch(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDispatch`  
+ *lpDispatch*  
  指向 OLE `IDispatch` 对象的指针被附加到 `COleDispatchDriver` 对象。  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  指定当此对象超出范围时是否要释放调度。  
   
 ### <a name="remarks"></a>备注  
@@ -137,13 +137,13 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpDispatch`  
+ *lpDispatch*  
  指向 OLE `IDispatch` 对象的指针被附加到 `COleDispatchDriver` 对象。  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  指定当此对象超出范围时是否要释放调度。  
   
- `dispatchSrc`  
+ *dispatchSrc*  
  引用现有`COleDispatchDriver`对象。  
   
 ### <a name="remarks"></a>备注  
@@ -171,13 +171,13 @@ BOOL CreateDispatch(
 ```  
   
 ### <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  要创建的 `IDispatch` 连接对象的类 ID。  
   
- `pError`  
+ *pError*  
  指向 OLE 异常对象的指针，它将保存因创建而产生的状态代码。  
   
- `lpszProgID`  
+ *lpszProgID*  
  指向要为其创建调度对象的自动化对象的编程标识符的指针，如“Excel.Document.5”。  
   
 ### <a name="return-value"></a>返回值  
@@ -205,7 +205,7 @@ LPDISPATCH DetachDispatch();
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
   
 ##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty  
- 获取指定的对象属性`dwDispID`。  
+ 获取指定的对象属性*dwDispID*。  
   
 ```  
 void GetProperty(
@@ -215,20 +215,20 @@ void GetProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识要检索的属性。  
   
- `vtProp`  
+ *vtProp*  
  指定要检索的属性。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](#invokehelper)。  
   
- `pvProp`  
- 将接收属性值的变量的地址。 它必须与由指定的类型匹配`vtProp`。  
+ *pvProp*  
+ 将接收属性值的变量的地址。 它必须与由指定的类型匹配*vtProp*。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]  
   
 ##  <a name="invokehelper"></a>  Coledispatchdriver:: Invokehelper  
- 在 `dwDispID`指定的上下文中调用 `wFlags`指定的对象方法或属性。  
+ 调用对象方法或属性指定*dwDispID*，通过指定的上下文中*wFlags*。  
   
 ```  
 void AFX_CDECL InvokeHelper(
@@ -240,32 +240,32 @@ void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识要调用的方法或属性。  
   
- `wFlags`  
- 描述 **IDispatch::Invoke**调用的上下文的标志。 . 有关可能的值的列表，请参阅`wFlags`中的参数[idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) Windows SDK 中。  
+ *wFlags*  
+ 描述 **IDispatch::Invoke**调用的上下文的标志。 . 有关可能的值的列表，请参阅*wFlags*中的参数[idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) Windows SDK 中。  
   
- `vtRet`  
+ *vtRet*  
  指定返回值的类型。 有关可能值，请参阅“备注”部分。  
   
- `pvRet`  
- 将接收属性值或返回值的变量的地址。 它必须与 `vtRet`指定的类型匹配。  
+ *pvRet*  
+ 将接收属性值或返回值的变量的地址。 它必须与由指定的类型匹配*vtRet*。  
   
- `pbParamInfo`  
- 指向以 null 结尾的字符串的指针，该字符串由指定 `pbParamInfo`后面的参数类型的字节组成。  
+ *pbParamInfo*  
+ 指向以 null 结尾的字符串的指定类型的后面的参数的字节指针*pbParamInfo*。  
   
  *...*  
- 具有 `pbParamInfo`中指定的类型的参数的变量列表。  
+ 中指定的类型的参数的变量列表*pbParamInfo*。  
   
 ### <a name="remarks"></a>备注  
- `pbParamInfo` 参数指定传递到方法或属性的参数的类型。 参数的变量列表在语法声明中通过 **...** 进行表示。  
+ *PbParamInfo*参数指定传递到方法或属性的参数的类型。 参数的变量列表在语法声明中通过 **...** 进行表示。  
   
- `vtRet` 参数的可能值取自 `VARENUM` 枚举。 可能的值如下：  
+ 可能的值有*vtRet*自变量，将从`VARENUM`枚举。 可能的值如下：  
   
 |符号|返回类型|  
 |------------|-----------------|  
-|`VT_EMPTY`|`void`|  
+|`VT_EMPTY`|**void**|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
@@ -273,15 +273,15 @@ void AFX_CDECL InvokeHelper(
 |`VT_CY`|**CY**|  
 |`VT_DATE`|DATE|  
 |`VT_BSTR`|`BSTR`|  
-|VT_DISPATCH|`LPDISPATCH`|  
+|`VT_DISPATCH`|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
-|VT_VARIANT|**VARIANT**|  
-|VT_UNKNOWN|`LPUNKNOWN`|  
+|`VT_VARIANT`|**VARIANT**|  
+|`VT_UNKNOWN`|`LPUNKNOWN`|  
   
- `pbParamInfo` 参数是 **VTS_** 常量的以空格分隔的列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 列出可能的值[EVENT_CUSTOM](event-maps.md#event_custom)宏。  
+ *PbParamInfo*自变量是空格分隔的列表**VTS_** 常量。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 列出可能的值[EVENT_CUSTOM](event-maps.md#event_custom)宏。  
   
- 此函数将参数转换为 **VARIANTARG** 值，然后调用 [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) 方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果`SCODE`（状态代码） 返回**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则它会引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
+ 此函数将参数转换为 **VARIANTARG** 值，然后调用 [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) 方法。 如果 `Invoke` 调用失败，则此函数会引发异常。 如果`SCODE`（状态代码） 返回`IDispatch::Invoke`是`DISP_E_EXCEPTION`，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象; 否则它会引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
  有关详细信息，请参阅[VARIANTARG](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)，[实现 IDispatch 接口](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx)， [idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx)，和[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
   
@@ -326,7 +326,7 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dispatchSrc`  
+ *dispatchSrc*  
  指向现有`COleDispatchDriver`对象。  
   
 ##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH  
@@ -347,13 +347,13 @@ void ReleaseDispatch();
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果已为此连接设置自动释放，此函数将调用**IDispatch::Release**之前释放接口。  
+ 如果已为此连接设置自动释放，此函数将调用`IDispatch::Release`之前释放接口。  
   
 ### <a name="example"></a>示例  
   请参阅示例[COleDispatchDriver::AttachDispatch](#attachdispatch)。  
   
 ##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty  
- 设置由 `dwDispID`指定的 OLE 对象属性。  
+ 设置指定的 OLE 对象属性*dwDispID*。  
   
 ```  
 void AFX_CDECL SetProperty(
@@ -362,14 +362,14 @@ void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwDispID`  
+ *dwDispID*  
  标识要设置的属性。  
   
- `vtProp`  
+ *vtProp*  
  指定要设置的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](#invokehelper)。  
   
  *...*  
- 由 `vtProp`指定的类型的单个参数。  
+ 由指定的类型的单个参数*vtProp*。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]  

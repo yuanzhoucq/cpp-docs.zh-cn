@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370163"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041242"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 类
 `CMFCRibbonUndoButton`类实现包含最新的用户命令的下拉列表按钮。 用户可以从要重做或撤消的下拉列表中选择一个或多个最新的命令。  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszLabel`  
+ [in]*lpszLabel*  
  将显示在下拉列表中的操作标签。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  指定的命令标识符。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  指定按钮的文本标签。  
   
- [in] `nSmallImageIndex`  
+ [in]*nSmallImageIndex*  
  按钮的小图像的父对象的图像列表中的从零开始索引。  
   
- [in] `nLargeImageIndex`  
+ [in]*nLargeImageIndex*  
  从零开始的索引的父对象的图像列表中的按钮的大图像。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  指向可以用作按钮的图像的图标的句柄。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

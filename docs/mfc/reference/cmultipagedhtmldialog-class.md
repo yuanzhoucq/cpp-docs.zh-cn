@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373887"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038001"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 类
 多页对话框按顺序显示多个 HTML 页并处理每页中的事件。  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  以 null 结尾的字符串，表示对话框模板资源的名称。  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  以 null 结尾的字符串，表示一个 HTML 资源的名称。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象的指针 (类型的[CWnd](../../mfc/reference/cwnd-class.md)) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含对话框模板资源的 ID 号。  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  包含一个 HTML 资源的 ID 号。  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

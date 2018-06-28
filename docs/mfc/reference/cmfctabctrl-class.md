@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7a5331a2826df9dd6804e5c6a0f918bfeeb9d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3faa618a2b65abd7c532ecdce0a8ed5e174889f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377766"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042015"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`类提供的选项卡控件的功能。 选项卡控件在其顶部或底部显示具有平面或三维选项卡的可停靠窗口。 选项卡可以显示文本和图像，并可在处于活动状态时更改颜色。  
@@ -202,7 +202,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|防止失去焦点时插入新选项卡并将其启用活动视图。|  
   
@@ -265,7 +265,7 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTab`  
+ [in]*nTab*  
  选项卡显示，或者为-1 以指定当前活动选项卡的从零开始索引。  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
@@ -307,29 +307,29 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `style`  
+ [in]*样式*  
  选项卡控件的样式。 有关更多信息，请参见“备注”。  
   
- [in] `rect`  
+ [in]*rect*  
  限定选项卡控件的矩形。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  指向父窗口的指针。 不得为 `NULL`。  
   
- [in] `nID`  
+ [in]*nID*  
  选项卡控件的 ID。  
   
- [in] `location`  
+ [in]*位置*  
  选项卡位置。 默认值为 `LOCATION_BOTTOM`。 有关更多信息，请参见“备注”。  
   
- [in] `bCloseBtn`  
+ [in]*bCloseBtn*  
  `TRUE` 若要显示的选项卡; 上的关闭按钮否则为`FALSE`。 默认值为 `FALSE`。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 `TRUE`；否则为 `FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 下表描述你可以为指定的值`style`参数。  
+ 下表描述你可以为指定的值*样式*参数。  
   
 |样式|描述|  
 |-----------|-----------------|  
@@ -341,7 +341,7 @@ BOOL Create(
 |STYLE_3D_ROUNDED|使用样式的 Microsoft Visual Studio 2005 圆角的选项卡中创建选项卡控件。|  
 |STYLE_3D_ROUNDED_SCROLL|创建选项卡控件具有圆角的选项卡和 Microsoft Visual Studio 2005 样式的滚动按钮。|  
   
- 下表列出了可以为指定的值`location`参数。  
+ 下表列出了可以为指定的值*位置*参数。  
   
 |位置|描述|  
 |--------------|-----------------|  
@@ -362,7 +362,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `rectEdit`  
+ [in]*rectEdit*  
  指定的选项卡区域的矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -376,7 +376,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要在活动选项卡; 上显示关闭按钮`FALSE`右上角的选项卡区域中显示关闭按钮。 默认值为 `TRUE`。  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
@@ -387,7 +387,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要启用可编辑的选项卡标签;`FALSE`禁用可编辑的选项卡标签。  
   
 ### <a name="remarks"></a>备注  
@@ -400,7 +400,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要显示的选项卡式的窗口标签; 的弹出菜单`FALSE`以显示向前和向后滚动按钮。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -414,7 +414,7 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -431,7 +431,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nCmdID`  
+ [in]*nCmdID*  
  在选项卡式窗口弹出菜单的选项卡的命令 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -483,10 +483,10 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectTabAreaTop`  
+ [out]*rectTabAreaTop*  
  此方法返回时，本参考包含限定顶部的选项卡标签区域的矩形。 矩形是在工作区坐标。 此引用是没有选项卡标签区域存在顶部的选项卡控件的情况下为空。  
   
- [out] `rectTabAreaBottom`  
+ [out]*rectTabAreaBottom*  
  此方法返回时，本参考包含限定底部选项卡标签区域的矩形。 矩形是在工作区坐标。 此引用是没有选项卡标签区域存在底部的选项卡控件的情况下为空。  
   
 ### <a name="remarks"></a>备注  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rect`  
- 此方法返回时，`rect`参数包含限定选项卡区域的矩形。  
+ [out]*rect*  
+ 此方法返回时， *rect*参数包含限定选项卡区域的矩形。  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  检索当前的选项卡控件的客户端区域的边界。  
@@ -534,7 +534,7 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in, out] `rect`  
+ [在中，out]*rect*  
  此方法返回时，此参数将包含限定当前选项卡控件的矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -557,7 +557,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHide`  
+ [in]*bHide*  
  `TRUE` 不希望显示非活动窗口;`FALSE`以显示非活动窗口。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -570,7 +570,7 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHide`  
+ [in]*bHide*  
  `TRUE` 若要启用绘制选项卡区域;`FALSE`禁止绘图。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -583,7 +583,7 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bHide`  
+ [in]*bHide*  
  `TRUE` 若要不绘制单个选项卡式窗口; 一个选项卡`FALSE`绘制单个选项卡。默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -703,7 +703,7 @@ BOOL IsSharedScroll() const;
  `TRUE` 如果选项卡控件具有共享的滚动条;否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 此方法返回`TRUE`如果`style`参数[CMFCTabCtrl::Create](#create)方法是 STYLE_FLAT_SHARED_HORZ_SCROLL。  
+ 此方法返回`TRUE`如果*样式*参数[CMFCTabCtrl::Create](#create)方法是 STYLE_FLAT_SHARED_HORZ_SCROLL。  
   
 ##  <a name="istabdocumentsmenu"></a>  CMFCTabCtrl::IsTabDocumentsMenu  
  指示选项卡控件显示滚动按钮或显示的选项卡式窗口菜单按钮。  
@@ -729,7 +729,7 @@ virtual BOOL IsVS2005Style() const;
  `TRUE` 如果使用 Visual Studio 2005; 的样式绘制选项卡否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 使用`style`参数[CMFCTabCtrl::Create](#create)方法，以指定如何绘制选项卡。  
+ 使用*样式*参数[CMFCTabCtrl::Create](#create)方法，以指定如何绘制选项卡。  
   
 ##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate  
  防止失去焦点时插入新选项卡并将其启用活动视图。  
@@ -749,16 +749,16 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `style`  
+ [in]*样式*  
  指定的选项卡控件外观的枚举值之一。 有关详细信息，请参阅备注中的表。  
   
 ### <a name="return-value"></a>返回值  
  总是为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
- 值`style`参数可以是以下之一`CMFCTabCtrl::Style`枚举。  
+ 值*样式*参数可以是以下之一`CMFCTabCtrl::Style`枚举。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |STYLE_3D|显示三维、 矩形具有圆角的选项卡。|  
 |STYLE_3D_ONENOTE|显示三维选项卡具有一个垂直端和一个倾斜的端且，有了圆形角。|  
@@ -780,13 +780,13 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDataObject`  
+ [in]*pDataObject*  
  指向一个包含用户拖动的数据的数据对象。  
   
- [in] `dwKeyState`  
+ [in]*dwKeyState*  
  包含修改键的状态。 此参数是以下值的按位组合 (OR): `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。 有关详细信息，请参阅**消息参数**部分[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
   
- [in] `point`  
+ [in]*点*  
  包含当前工作区坐标中光标的位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -808,13 +808,13 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDataObject`  
+ [in]*pDataObject*  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)正在拖动到放置目标上的对象。  
   
- [in] `dwKeyState`  
+ [in]*dwKeyState*  
  状态的修改键，即的按位组合 （或者） `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。 有关详细信息，请参见"消息参数"[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
   
- [in] `point`  
+ [in]*点*  
  当前的鼠标位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -831,7 +831,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  显示弹出菜单的位置的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -844,7 +844,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bActive`  
+ [in]*bActive*  
  `TRUE` 若要使活动选项卡; 的当前选项卡`FALSE`以使当前选项卡处于非活动状态。  
   
 ### <a name="remarks"></a>备注  
@@ -858,11 +858,11 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTab`  
+ [in]*iTab*  
  指定要激活的选项卡的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果指定的选项卡已激活;`FALSE`如果指定`iTab`参数值无效。  
+ `TRUE` 如果指定的选项卡已激活;`FALSE`如果指定*iTab*参数值无效。  
   
 ### <a name="remarks"></a>备注  
  此方法不会发送`AFX_WM_CHANGE_ACTIVE_TAB`向父窗口的选项卡控件的通知。  
@@ -877,7 +877,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bIsBold`  
+ [in]*bIsBold*  
  `TRUE` 若要使用粗体字体来显示活动选项卡; 标签`FALSE`使用标准字体显示标签。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -890,7 +890,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDraw`  
+ [in]*bDraw*  
  `TRUE` 若要显示一个嵌入的栏; 周围的帧矩形否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -905,10 +905,10 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bFlat`  
+ [in]*bFlat*  
  `TRUE` 若要在选项卡区域; 周围绘制平面 （二维） 框架`FALSE`若要绘制三维 (3D) 框架。 默认值为 `TRUE`。  
   
- [in] `bRepaint`  
+ [in]*bRepaint*  
  `TRUE` 若要立即; 重绘窗口否则为`FALSE`。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
@@ -926,20 +926,20 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  包含的图像列表位图资源的 ID。  
   
- [in] `cx`  
+ [in]*cx*  
  每个图像，以像素为单位的宽度。 默认值为 15。  
   
- [in] `clrTransp`  
+ [in]*clrTransp*  
  透明图像颜色。 此颜色图像的部分将是透明的。 默认值为颜色洋红色，RGB(255,0,255)。  
   
- [in] `hImageList`  
+ [in]*hImageList*  
  预加载的图像列表句柄。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果此方法成功。 `FALSE` 如果使用平面样式创建选项卡控件或第一种方法重载无法加载指定的位图`uiID`参数。  
+ `TRUE` 如果此方法成功。 `FALSE` 如果使用平面样式创建选项卡控件或第一种方法重载无法加载指定的位图*uiID*参数。  
   
 ### <a name="remarks"></a>备注  
  使用此方法设置的选项卡控件图像列表。 选项卡标签旁显示的图像列表的图像。 此方法重新计算选项卡高度，以便选项卡大小调整，以包含图像和文本。  
@@ -954,13 +954,13 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `resizeMode`  
+ [in]*resizeMode*  
  之一`CMFCTabCtrl::ResizeMode`指定选项卡控件可以调整大小的枚举值。 有关可能的值的列表，请参阅备注中的表。  
   
 ### <a name="remarks"></a>备注  
- `resizeMode`参数可以是以下之一`ResizeMode`枚举值。  
+ *ResizeMode*参数可以是以下之一`ResizeMode`枚举值。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |RESIZE_NO|选项卡控件不调整大小。|  
 |RESIZE_VERT|选项卡控件可以调整垂直但不是进行水平大小。|  
@@ -974,7 +974,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTabMaxWidth`  
+ [in]*nTabMaxWidth*  
  最大的选项卡宽度，以像素为单位。  
   
 ### <a name="remarks"></a>备注  
@@ -988,7 +988,7 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bCancel`  
+ [in]*卡*  
  `TRUE` 放弃当前的大小调整操作;`FALSE`完成当前的调整大小操作。 在任一情况下，框架将停止绘制调整大小矩形。  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
@@ -999,7 +999,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `pScrollInfo`  
+ [out]*pScrollInfo*  
  指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构或`NULL`。 当此方法返回时，并且如果此参数不是`NULL`，该结构包含的滚动条的所有参数。 默认值为 `NULL`。  
   
 ### <a name="return-value"></a>返回值  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377909"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040202"
 ---
 # <a name="cobarray-class"></a>CObArray 类
 支持 `CObject` 指针数组。  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  C 数组，访问时间与`CObArray`索引的元素是常数，它独立于数组大小。  
   
- `CObArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果数组`CObject`指针存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CObject`，反过来，序列化元素及其数组索引。  
+ `CObArray` 包含 IMPLEMENT_SERIAL 宏来支持序列化和转储的其元素。 如果数组`CObject`指针存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CObject`，反过来，序列化元素及其数组索引。  
   
  如果你需要个人的转储`CObject`数组中的元素，必须设置的深度`CDumpContext`为 1 或更高的对象。  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  类似于列表派生数组类派生。 有关特殊用途列表类派生的详细信息，请参阅文章[集合](../../mfc/collections.md)。  
   
 > [!NOTE]
->  必须使用`IMPLEMENT_SERIAL`你如果你想要序列化数组的派生类的实现中的宏。  
+>  如果你想要序列化数组，则必须在派生类的实现中使用 IMPLEMENT_SERIAL 宏。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>参数  
- `newElement`  
+ *newElement*  
  `CObject`要添加到此数组的指针。  
   
 ### <a name="return-value"></a>返回值  
  添加元素的索引。  
   
 ### <a name="remarks"></a>备注  
- 如果[SetSize](#setsize)已用于`nGrowBy`可能分配值大于 1，则额外的内存。 但是，上限将增加仅为 1。  
+ 如果[SetSize](#setsize)已用于*nGrowBy*可能分配值大于 1，则额外的内存。 但是，上限将增加仅为 1。  
   
  下表显示其他成员函数类似于`CObArray::Add`。  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>备注  
  数组必须是类型的相同。  
   
- 如有必要，**追加**可能会分配额外内存来容纳追加到该数组的元素。  
+ 如有必要，`Append`可能会分配额外内存来容纳追加到该数组的元素。  
   
  下表显示其他成员函数类似于`CObArray::Append`。  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  要复制到数组的元素的源。  
   
 ### <a name="remarks"></a>备注  
- **复制**不释放内存; 但是，如有必要，**复制**可能会分配额外内存来容纳的元素复制到数组。  
+ `Copy` 不释放内存;但是，如果有必要，`Copy`可能会分配额外内存来容纳的元素复制到数组。  
   
  下表显示其他成员函数类似于`CObArray::Copy`。  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`GetUpperBound`。  
   
 ### <a name="return-value"></a>返回值  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`GetUpperBound`。  
   
 ### <a name="return-value"></a>返回值  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  可能返回的值大于整数索引`GetUpperBound`。  
   
- `newElement`  
- `CObject`放入此数组的指针。 A`newElement`的值**NULL**允许。  
+ *newElement*  
+ `CObject`放入此数组的指针。 A *newElement*的值**NULL**允许。  
   
- `nCount`  
+ *nCount*  
  此元素应为次数插入 （默认为 1）。  
   
- `nStartIndex`  
+ *nStartIndex*  
  可能返回的值大于整数索引`GetUpperBound`。  
   
- `pNewArray`  
+ *pNewArray*  
  包含要添加到该数组的元素的另一个数组。  
   
 ### <a name="remarks"></a>备注  
  第一个版本`InsertAt`中数组的指定索引处插入一个元素 （或多个元素的副本）。 在过程中，它上移 （通过将递增索引） 在此索引，和它的现有元素上移它上面的所有元素。  
   
- 第二个版本将所有元素都插入从另一个`CObArray`从开始的集合`nStartIndex`位置。  
+ 第二个版本将所有元素都插入从另一个`CObArray`从开始的集合*nStartIndex*位置。  
   
  `SetAt`函数，与此相反，替换一个指定的数组元素和任何元素不移位。  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`GetUpperBound`。  
   
- `nCount`  
+ *nCount*  
  要移除的元素数。  
   
 ### <a name="remarks"></a>备注  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`GetUpperBound`。  
   
- `newElement`  
+ *newElement*  
  要在此数组中插入的对象指针。 A **NULL**允许值。  
   
 ### <a name="remarks"></a>备注  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  大于或等于 0 的整数索引。  
   
- `newElement`  
+ *newElement*  
  要添加到该数组的对象指针。 A **NULL**允许值。  
   
 ### <a name="remarks"></a>备注  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNewSize`  
+ *nNewSize*  
  新数组大小 （即元素的数目）。 必须大于或等于 0。  
   
- `nGrowBy`  
+ *nGrowBy*  
  要分配如果大小增加是必需的元素插槽中最小的数。  
   
 ### <a name="remarks"></a>备注  
  如果新的大小小于旧大小，然后数组将被截断并释放所有未使用的内存。 为提高效率，调用`SetSize`然后再使用它设置数组的大小。 这样可以防止需要重新分配和复制每次添加一个项的数组。  
   
- `nGrowBy`参数会影响内部内存分配，而增长数组。 其使用永远不会影响数组大小由报告`GetSize`和`GetUpperBound`。  
+ *NGrowBy*参数会影响内部内存分配，而增长数组。 其使用永远不会影响数组大小由报告`GetSize`和`GetUpperBound`。  
   
  如果数组已增大，所有新分配**CObject \*** 指针设置为 NULL。  
   

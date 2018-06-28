@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374505"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038325"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 在数据传输中用于从剪贴板、通过拖放或从嵌入 OLE 项检索各种格式的数据。  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  指向 OLE 数据对象的指针。  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **TRUE**如果 OLE 数据对象应为发布时`COleDataObject`对象被销毁; 否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  是用要返回的数据格式。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)将接收数据的结构。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用要返回数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用要返回数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  是用要返回的数据格式。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用要返回数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用要返回数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="return-value"></a>返回值  
  指向新`CFile`或`CFile`-派生的对象包含的数据，如果成功，否则为**NULL**。  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
+ *cfFormat*  
  是用要返回的数据格式。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用要返回数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述是用要返回数据的格式。 为此参数提供一个值，如果你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="return-value"></a>返回值  
  包含如果成功，则会显示数据的全局内存块的句柄否则为**NULL**。  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)函数调用返回时接收的格式信息的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cfFormat`  
- 指向要在结构中使用的剪贴板数据格式`lpFormatEtc`。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
+ *cfFormat*  
+ 指向要在结构中使用的剪贴板数据格式*lpFormatEtc*。 此参数可以是预定义的剪贴板格式或本机 Windows 返回的值之一[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函数。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述所需的格式。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构描述所需的格式。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息*cfFormat*。 如果它是**NULL**，默认值用于中的其他字段中**FORMATETC**结构。  
   
 ### <a name="return-value"></a>返回值  
  如果数据中指定的格式; 则为非 0否则为 0。  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>备注  
- `IDataObject`与关联`COleDataObject`通过调用**附加**或`AttachClipboard`显式或框架。 如果`bAutoRelease`参数**附加**是**FALSE**、`IDataObject`对象将不会被释放。 在这种情况下，调用方负责释放`IDataObject`通过调用[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)。  
+ `IDataObject`与关联`COleDataObject`通过调用`Attach`或`AttachClipboard`显式或框架。 如果`bAutoRelease`参数`Attach`是**FALSE**、`IDataObject`对象将不会被释放。 在这种情况下，调用方负责释放`IDataObject`通过调用[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   

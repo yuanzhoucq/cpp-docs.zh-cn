@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370117"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042490"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
 实现功能区的不可单击文本标签。  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
  要在标签中显示的文本。  
   
- [in] `bIsMultiLine`  
+ [in]*bIsMultiLine*  
  `TRUE` 若要指定标签是多行标签;否则为`FALSE`。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
  表示当前的功能区标签的父窗口。  
   
- [out] `data`  
+ [out]*数据*  
  类型的对象`CAccessibilityData`并且填充了当前的功能区标签可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果`data`参数已成功填充了当前的功能区标签可访问性数据; 否则为`FALSE`。  
+ `TRUE` 如果*数据*参数已成功填充了当前的功能区标签可访问性数据; 否则为`FALSE`。  
   
 ## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

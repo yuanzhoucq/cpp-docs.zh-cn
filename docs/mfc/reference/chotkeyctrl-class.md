@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368747"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040150"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 类
 提供 Windows 公共热键控件的功能。  
@@ -73,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  此控件 (因此`CHotKeyCtrl`类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。  
   
- 应用程序时用户已选择键组合，可以从控件中检索指定的键组合并使用**WM_SETHOTKEY**设置热键在系统中的消息。 每当用户按热键此后，从系统的任何部分中指定窗口**WM_SETHOTKEY**消息接收`WM_SYSCOMMAND`消息指定**SC_HOTKEY**。 此消息激活接收的窗口。 热键的应用程序调用之前就保持有效**WM_SETHOTKEY**退出。  
+ 应用程序时用户已选择键组合，可以从控件中检索指定的键组合并使用**WM_SETHOTKEY**设置热键在系统中的消息。 每当用户按热键此后，从系统的任何部分中指定窗口**WM_SETHOTKEY**消息接收**WM_SYSCOMMAND**消息指定**SC_HOTKEY**. 此消息激活接收的窗口。 热键的应用程序调用之前就保持有效**WM_SETHOTKEY**退出。  
   
  此机制是不同于依赖于的热密钥支持**WM_HOTKEY**消息和 Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)和[UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327)函数。  
   
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定热键控件的样式。 应用控件样式的任意组合。 请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)适用于详细信息的 Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定热键控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)。  
   
- `pParentWnd`  
+ *pParentWnd*  
  通常指定热键控件的父窗口[CDialog](../../mfc/reference/cdialog-class.md)。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定热键控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  不为零，如果初始化成功;否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 构造`CHotKeyCtrl`两个步骤中的对象。 首先，调用的构造函数，然后调用**创建**，它创建热键控件并将其附加到`CHotKeyCtrl`对象。  
+ 构造`CHotKeyCtrl`两个步骤中的对象。 首先，调用的构造函数，然后调用`Create`，它创建热键控件并将其附加到`CHotKeyCtrl`对象。  
   
- 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是**创建**。  
+ 如果你想要将扩展的窗口样式与控件一起使用，调用[CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  调用此函数可创建的控件 （子窗口），并将其与关联`CHotKeyCtrl`对象。  
@@ -143,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定热键控件的样式。 应用控件样式的任意组合。 有关详细信息，请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `wVirtualKeyCode`  
+ [out]*wVirtualKeyCode*  
  键盘快捷方式的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h。  
   
- [out] `wModifiers`  
+ [out]*wModifiers*  
  指示修改键的键盘快捷方式中的标志的按位组合 (OR)。  
   
  修饰符标志如下所示：  
@@ -220,14 +220,14 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>参数  
- `vk`  
+ *vk*  
  虚拟键代码。  
   
  *fExtended*  
  如果虚拟键代码是否为扩展的键， **TRUE**; 否则为**FALSE**。  
   
 ### <a name="return-value"></a>返回值  
- 指定的键的本地化的名称`vk`参数。 如果密钥没有映射的名称，`GetKeyName`返回空字符串。  
+ 指定的键的本地化的名称*vk*参数。 如果密钥没有映射的名称，`GetKeyName`返回空字符串。  
   
 ### <a name="remarks"></a>备注  
  此函数将返回的项名称来自键盘驱动程序，因此你可以安装的非本地化键盘驱动程序中的本地化版本的 Windows 中，反之亦然。  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wVirtualKeyCode`  
+ [in]*wVirtualKeyCode*  
  键盘快捷方式的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h。  
   
- [in] `wModifiers`  
+ [in]*wModifiers*  
  指示修改键的键盘快捷方式中的标志的按位组合 (OR)。  
   
  修饰符标志如下所示：  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>参数  
- `wInvalidComb`  
+ *wInvalidComb*  
  指定无效的键组合的数组的标志。 它可以是以下值的组合：  
   
 - `HKCOMB_A` ALT  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  指定键的组合用户输入的无效组合时要使用的数组的标志。 修饰符标志的详细信息，请参阅[GetHotKey](#gethotkey)。  
   
 ### <a name="remarks"></a>备注  
- 当用户输入无效的键组合，由中指定的标志所规定`wInvalidComb`，系统使用 OR 运算符以组合中指定的标志与用户输入的密钥`wModifiers`。 生成的键组合将转换为字符串，然后显示在热键控件。  
+ 当用户输入无效的键组合，由中指定的标志所规定*wInvalidComb*，系统使用 OR 运算符以组合中指定的标志与用户输入的密钥*wModifiers*. 生成的键组合将转换为字符串，然后显示在热键控件。  
   
 ## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

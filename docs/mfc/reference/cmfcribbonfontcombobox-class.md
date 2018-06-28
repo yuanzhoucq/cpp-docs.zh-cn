@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370502"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039370"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 类
 实现包含字体列表的组合框。 将组合框置于功能区面板上。  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nFontType`  
+ [in]*nFontType*  
  指定要添加的字体的字体类型。  
   
- [in] `nCharSet`  
+ [in]*nCharSet*  
  指定要添加的字体的字符集。  
   
- [in] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  指定的间距和要添加的字体系列。  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  当用户从组合框中选择某个项时可以执行命令的命令 ID。  
   
- [in] `nFontType`  
+ [in]*nFontType*  
  指定要在组合框中显示哪种字体类型。 有效选项为**是 DEVICE_FONTTYPE**， **RASTER_FONTTYPE**，和**TRUETYPE_FONTTYPE**，或它们的任何按位组合。  
   
- [in] `nCharSet`  
+ [in]*nCharSet*  
  筛选器组合框为那些属于指定的字符集中的字体...  
   
- [in] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  指定的间距和组合框中显示的字体系列。  
   
- [in] `nWidth`  
+ [in]*nWidth*  
  指定宽度，以像素为单位，组合框。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，有关可行`nFontType`参数值，请参阅[EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  
+ 有关详细信息，有关可行*nFontType*参数值，请参阅[EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  
   
- 有关可以分配给的有效字符集的详细信息`nCharSet`，并可以分配给的有效值`nPitchAndFamily`，请参阅[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 文档中。  
+ 有关可以分配给的有效字符集的详细信息*nCharSet*，并可以分配给的有效值*nPitchAndFamily*，请参阅[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)中Windows SDK 文档。  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iIndex`  
+ [in]*iIndex*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszName`  
+ 在 lpszName *  
  指定要选择的字体的名称。  
   
- `nCharSet`  
+ *nCharSet*  
  指定选定的字体的字符集。  
   
- `bExact`  
+ *bExact*  
  `TRUE` 若要指定字符设置必须匹配时选择一种字体;`FALSE`指定选择一种字体时，可以忽略的字符集。  
   
 ### <a name="return-value"></a>返回值  

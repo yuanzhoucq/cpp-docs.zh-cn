@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376413"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040033"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 类
 `CMFCRibbonButton` 类实现可放置在功能区栏元素（例如面板、快速访问工具栏和弹出菜单）上的按钮。  
@@ -261,10 +261,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pSubItem`  
+ [in]*pSubItem*  
  指定指向要添加的新元素的指针。  
   
- [in] `nIndex`  
+ [in]*nIndex*  
  指定用于将元素添加到的菜单项的按钮; 数组的索引-1 以的菜单项的数组的末尾添加元素。  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
@@ -318,19 +318,19 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  指定按钮的命令 ID。  
   
- [in] `lpszText`  
+ [in]*lpszText*  
  指定按钮的文本标签。  
   
- [in] `nSmallImageIndex`  
+ [in]*nSmallImageIndex*  
  指定父类别的图像列表中的按钮的小图像中的从零开始索引。  
   
- [in] `nLargeImageIndex`  
+ [in]*nLargeImageIndex*  
  指定父类别的图像列表中的按钮的大图像中的从零开始索引。  
   
- [in] `hIcon`  
+ [in]*任务栏*  
  指定应用程序用作按钮的图像的图标的句柄。  
   
 ### <a name="example"></a>示例  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [in]*pDC*  
+ [in]*bCalcOnly*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -366,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [in]*pDC*  
+ [in]*类型*  
+ [in]*rectImage*  
   
 ### <a name="remarks"></a>备注  
   
@@ -385,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [in]*pDC*  
+ [in]*strText*  
+ [in]*rectText*  
+ [in]*uiDTFlags*  
+ [in]*clrText*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -403,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `uiID`  
+ [in]*uiID*  
  指定的命令 ID 的弹出菜单项。  
   
 ### <a name="return-value"></a>返回值  
- 与关联的子项的从零开始索引`uiID`。 如果没有此类子项，则为-1。  
+ 与关联的子项的从零开始索引*uiID*。 如果没有此类子项，则为-1。  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -428,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -442,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bLargeIcon`  
+ [in]*bLargeIcon*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -456,7 +456,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bLargeImage`  
+ [in]*bLargeImage*  
  如果`TRUE`，返回的图像索引中包含大型图像; 否则返回包含较小的图像的图像列表中的映像索引的图像列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -470,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `type`  
+ [in]*类型*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -484,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -519,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -751,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -763,7 +763,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  指定鼠标单击的位置。  
   
 ### <a name="remarks"></a>备注  
@@ -777,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -789,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>备注  
   
@@ -801,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>返回值  
   
@@ -822,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定你想要删除的菜单项的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果指定的项已被成功，则删除否则为`FALSE`如果`nIndex`为负或超过弹出菜单中的菜单项的数目。  
+ `TRUE` 如果指定的项已被成功，则删除否则为`FALSE`如果*nIndex*为负或超过弹出菜单中的菜单项的数目。  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata  
  设置功能区按钮的辅助功能数据。  
@@ -838,10 +838,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParent`  
+ *pParent*  
  功能区元素的父窗口。  
   
- `data`  
+ *data*  
  功能区元素的可访问性数据。  
   
 ### <a name="return-value"></a>返回值  
@@ -857,7 +857,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  如果`TRUE`，按钮显示大图像。 否则，按钮将显示的小图像。  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
@@ -868,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  如果`TRUE`，按钮可以执行其默认命令。 如果`FALSE`，按钮无法执行其默认命令。  
   
 ### <a name="remarks"></a>备注  
- `bSet` 仅当按钮有一个菜单时才是相关。 如果`bSet`是`TRUE`、 按钮可以执行其默认命令和分配的弹出菜单显示仅当用户单击按钮的右边缘的箭头。 否则为按钮无法执行其默认命令，并弹出菜单出现在用户单击无论哪个区域的按钮。  
+ *bSet*是相关只在按钮已菜单。 如果*bSet*是`TRUE`、 按钮可以执行其默认命令和分配的弹出菜单显示仅当用户单击按钮的右边缘的箭头。 否则为按钮无法执行其默认命令，并弹出菜单出现在用户单击无论哪个区域的按钮。  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -882,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
   
 ### <a name="remarks"></a>备注  
   
@@ -896,10 +896,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nIndex`  
+ [in]*nIndex*  
  指定的图像索引。  
   
- [in] `bLargeImage`  
+ [in]*bLargeImage*  
  如果`TRUE`，指定的索引引用的大型图像列表。 否则，索引引用的较小的图像列表。  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
@@ -918,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hMenu`  
+ *hMenu*  
  Windows 菜单句柄。  
   
- `bIsDefaultCommand`  
+ *bIsDefaultCommand*  
  如果`TRUE`，按钮可以执行其默认命令; 否则，按钮将显示一个弹出菜单。  
   
- `bRightAlign`  
+ *bRightAlign*  
  如果`TRUE`，菜单为右对齐。 否则，该菜单是左对齐。  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  菜单资源 id。  
   
 ### <a name="remarks"></a>备注  
- 当应用程序分配给按钮的菜单时，按钮将显示在其右侧的箭头。 如果`bIsDefaultCommand`是`TRUE`，仅当用户单击的箭头时，才显示的菜单。 如果用户单击按钮时，将执行其默认命令。 如果`bIsDefaultCommand`是`FALSE`，通过单击任意位置在按钮上显示的菜单。  
+ 当应用程序分配给按钮的菜单时，按钮将显示在其右侧的箭头。 如果*bIsDefaultCommand*是`TRUE`，仅当用户单击的箭头时，才显示的菜单。 如果用户单击按钮时，将执行其默认命令。 如果*bIsDefaultCommand*是`FALSE`，通过单击任意位置在按钮上显示的菜单。  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -941,7 +941,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pParent`  
+ [in]*pParent*  
   
 ### <a name="remarks"></a>备注  
   
@@ -953,7 +953,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bSet`  
+ [in]*bSet*  
  如果`TRUE`，菜单为右对齐。 否则，菜单都是左对齐  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
@@ -964,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszText`  
+ [in]*lpszText*  
   
 ### <a name="remarks"></a>备注  
   
