@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375903"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079663"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 类
 允许要显示、 移动和不同的方式调整大小的项。  
@@ -124,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nHandle`  
+ *nHandle*  
  使用句柄的索引。  
   
- `lpRect`  
+ *lpRect*  
  指向的当前大小的矩形的指针。 （矩形的大小由给定其高度和宽度。）  
   
 ### <a name="remarks"></a>备注  
  此函数的默认行为允许矩形的方向，若要更改时，才`Track`和`TrackRubberBand`使用反转允许调用。  
   
- 重写此函数可控制在拖动操作过程中跟踪矩形的调整。 一种方法是调整指定的坐标`lpRect`在返回之前。  
+ 重写此函数可控制在拖动操作过程中跟踪矩形的调整。 一种方法是调整指定的坐标*lpRect*在返回之前。  
   
  不直接支持的特殊功能`CRectTracker`，例如对齐到网格或保持纵横比，可以实现通过重写此函数。  
   
@@ -150,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpSrcRect`  
+ *lpSrcRect*  
  Rectangle 对象的坐标。  
   
- `nStyle`  
+ *nStyle*  
  指定的样式`CRectTracker`对象。 支持以下样式：  
   
 - **CRectTracker::solidLine**实线用于矩形边框。  
@@ -169,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched 模式涵盖整个矩形。  
   
 ### <a name="remarks"></a>备注  
- 默认构造函数初始化`CRectTracker`对象的值从`lpSrcRect`并初始化其他大小为系统默认值。 如果对象创建不带任何参数，`m_rect`和`m_nStyle`数据成员是未初始化。  
+ 默认构造函数初始化`CRectTracker`对象的值从*lpSrcRect*并初始化其他大小为系统默认值。 如果对象创建不带任何参数，`m_rect`和`m_nStyle`数据成员是未初始化。  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  调用此函数可绘制矩形的外部直线和内部区域。  
@@ -179,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  在其上绘制的设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -197,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`，其中包含要绘制的矩形。  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  指向窗口用于剪辑矩形的指针。  
   
- `pDC`  
+ *pDC*  
  在其上绘制的设备上下文的指针。  
   
- `pWnd`  
+ *pWnd*  
  指向将在其绘制窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -243,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpTrueRect`  
+ *lpTrueRect*  
  指向`RECT`结构，它将包含设备坐标`CRectTracker`对象。  
   
 ### <a name="remarks"></a>备注  
- 矩形的尺寸包括的高度和宽度的位于外部边框任何调整大小图柄。 在返回，`lpTrueRect`是始终在设备坐标的规范化的矩形。  
+ 矩形的尺寸包括的高度和宽度的位于外部边框任何调整大小图柄。 在返回， *lpTrueRect*是始终在设备坐标的规范化的矩形。  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
  调用此函数可了解用户是否具有只张开重设大小句柄。  
@@ -257,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `point`  
+ *点*  
  在设备坐标中，若要测试的点。  
   
 ### <a name="return-value"></a>返回值  
@@ -328,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nHandle`  
+ *nHandle*  
  由用户选择的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向当前包含光标的窗口。  
   
- `nHitTest`  
- 以前的命中测试的结果从`WM_SETCURSOR`消息。  
+ *nHitTest*  
+ 以前的命中测试中，从 WM_SETCURSOR 消息的结果。  
   
 ### <a name="return-value"></a>返回值  
  如果上一命中结果是通过跟踪器矩形中; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数在你处理的窗口函数内部`WM_SETCURSOR`消息 (通常`OnSetCursor`)。  
+ 调用该函数从在你处理 WM_SETCURSOR 消息的窗口函数内 (通常`OnSetCursor`)。  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  调用此函数可显示调整矩形大小的用户界面。  
@@ -387,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  包含矩形的窗口对象。  
   
- `point`  
+ *点*  
  设备坐标，相对于工作区的当前鼠标位置。  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  如果**TRUE**，矩形可倒沿 x 轴或 y 轴; 否则为**FALSE**。  
   
- `pWndClipTo`  
- 绘制操作将剪切到窗口。 如果**NULL**，`pWnd`用作的剪辑矩形。  
+ *pWndClipTo*  
+ 绘制操作将剪切到窗口。 如果**NULL**， *pWnd*用作的剪辑矩形。  
   
 ### <a name="return-value"></a>返回值  
  如果按 ESC 键，跟踪进程将暂停，不更改跟踪器中存储的矩形，并返回 0。 如果则会提交更改，通过将鼠标并释放鼠标左键，新的位置和/或大小在中记录跟踪器的矩形，并返回非零。  
@@ -407,7 +407,7 @@ BOOL Track(
   
  此函数将捕获鼠标，直到用户释放鼠标左键、 按 ESC 键，或按下鼠标右键按钮。 当用户将鼠标光标，通过调用更新反馈`DrawTrackerRect`和`OnChangedRect`。  
   
- 如果`bAllowInvert`是**TRUE**，跟踪矩形可以反转 x 轴或 y 轴上。  
+ 如果*bAllowInvert*是**TRUE**，跟踪矩形可以反转 x 轴或 y 轴上。  
   
 ##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband  
  调用此函数可执行橡皮筋选择。  
@@ -420,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  包含矩形的窗口对象。  
   
- `point`  
+ *点*  
  设备坐标，相对于工作区的当前鼠标位置。  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  如果**为 TRUE，** 矩形可倒沿 x 轴或 y 轴; 否则为**FALSE**。  
   
 ### <a name="return-value"></a>返回值  
  如果鼠标已移动，以及在该矩形不为空; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 它通常从内部处理你应用程序的函数调用`WM_LBUTTONDOWN`消息 (通常`OnLButtonDown`)。  
+ 它通常从内部的应用程序处理 WM_LBUTTONDOWN 消息函数调用 (通常`OnLButtonDown`)。  
   
  此函数将捕获鼠标，直到用户释放鼠标左键、 按 ESC 键，或按下鼠标右键按钮。 当用户将鼠标光标，通过调用更新反馈`DrawTrackerRect`和`OnChangedRect`。  
   

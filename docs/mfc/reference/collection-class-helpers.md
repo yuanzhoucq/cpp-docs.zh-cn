@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374833"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078151"
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
-集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素等目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，与为地图、 列表或数组中存储的数据类型而定制的版本，必须重写这些函数根据需要。 有关如何重写帮助器函数如`SerializeElements`，请参阅文章[集合： 如何生成类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意， **ConstructElements**和**DestructElements**已弃用。  
+集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素等目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，与为地图、 列表或数组中存储的数据类型而定制的版本，必须重写这些函数根据需要。 有关如何重写帮助器函数如`SerializeElements`，请参阅文章[集合： 如何生成类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意，`ConstructElements`和`DestructElements`已弃用。  
   
  Microsoft 基础类库提供了 afxtempl.h 帮助你自定义您的集合类中的以下全局函数：  
   
@@ -57,24 +57,24 @@ CompareElements(
  *类型*  
  要比较的第一个元素的类型。  
   
- `pElement1`  
+ *pElement1*  
  要比较的第一个元素的指针。  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  要进行比较的第二个元素的类型。  
   
- `pElement2`  
+ *pElement2*  
  指向要进行比较的第二个元素的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果指向的对象则不为`pElement1`指向的对象相等`pElement2`; 否则为 0。  
+ 如果指向的对象则不为*pElement1*指向的对象相等*pElement2*; 否则为 0。  
   
 ### <a name="remarks"></a>备注  
  `CMap`调用使用`CMap`模板参数*密钥*和`ARG_KEY`。  
   
  默认实现返回的比较的结果的 *\*pElement1*和 *\*pElement2*。 重写此函数，以便它将一种适合于你的应用程序中的元素进行比较。  
   
- C + + 语言定义的比较运算符 ( `==`) 对于简单类型 ( `char`， `int`， **float**，依次类推)，但不定义类和结构的比较运算符。 如果你想要使用`CompareElements`或若要实例化一个使用它的集合类，必须定义比较运算符，或重载`CompareElements`版本，返回适当的值。  
+ C + + 语言定义的比较运算符 ( `==`) 对于简单类型 ( **char**， **int**， **float**，依次类推)，但不定义的比较运算符类和结构。 如果你想要使用`CompareElements`或若要实例化一个使用它的集合类，必须定义比较运算符，或重载`CompareElements`版本，返回适当的值。  
   
 ### <a name="requirements"></a>要求  
    **标头：** afxtempl.h   
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *类型*  
  指定要复制的元素类型的模板参数。  
   
- `pDest`  
+ *pDest*  
  指向将复制元素的目标位置。  
   
- `pSrc`  
+ *pSrc*  
  指向要复制的元素的源。  
   
- `nCount`  
+ *nCount*  
  要复制的元素的数量。  
   
 ### <a name="remarks"></a>备注  
@@ -123,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dc`  
+ *dc*  
  转储转储元素的上下文。  
   
  *类型*  
  模板参数来指定元素的类型。  
   
- `pElements`  
+ *pElements*  
  指向要转储的元素的指针。  
   
- `nCount`  
+ *nCount*  
  要转储的元素数。  
   
 ### <a name="remarks"></a>备注  
- **CArray::Dump**， **CList::Dump**，和**CMap::Dump**函数调用这如果转储的深度大于 0。  
+ `CArray::Dump`， `CList::Dump`，和`CMap::Dump`函数调用这如果转储的深度大于 0。  
   
  默认实现不执行任何操作。 如果你的集合的元素派生自`CObject`，重写通常将循环访问集合的元素，调用`Dump`中打开每个元素。  
   
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>参数  
- `ARG_KEY`  
+ *ARG_KEY*  
  指定用于访问地图密钥的数据类型的模板参数。  
   
- `key`  
+ *key*  
  键，其哈希值是要从中计算。  
   
 ### <a name="return-value"></a>返回值  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>备注  
  直接通过调用此函数[CMap::RemoveKey](cmap-class.md#removekey)和间接[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator &#91; &#93; ](cmap-class.md#operator_at)。
   
- 默认实现将创建一个哈希值，通过将转移`key`权限通过四个位置。 重写此函数，从而使其返回哈希值适用于你的应用程序。  
+ 默认实现将创建一个哈希值，通过将转移*密钥*权限通过四个位置。 重写此函数，从而使其返回哈希值适用于你的应用程序。  
   
 ### <a name="example"></a>示例
  ```cpp  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *类型*  
  模板参数来指定元素的类型。  
   
- `ar`  
+ *ar*  
  要存档或从存档对象。  
   
- `pElements`  
+ *pElements*  
  指向要存档的元素的指针。  
   
- `nCount`  
+ *nCount*  
  要存档的元素数  
   
 ### <a name="remarks"></a>备注  

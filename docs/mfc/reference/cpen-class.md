@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376374"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079585"
 ---
 # <a name="cpen-class"></a>CPen 类
 封装一个 Windows 图形设备接口 (GDI) 笔。  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPenStyle`  
+ *nPenStyle*  
  指定的钢笔样式。 此构造函数的第一个版本中的参数可以是下列值之一：  
   
 - **PS_SOLID**创建实心钢笔。  
@@ -118,7 +118,7 @@ CPen(
   
 - **PS_NULL**创建 null 钢笔。  
   
-- **PS_INSIDEFRAME**创建钢笔绘制由指定边界的矩形的 Windows GDI 输出函数的闭合形状的框架内的行 (例如，**椭圆**，**矩形**， `RoundRect`， `Pie`，和`Chord`成员函数)。 此样式用于 Windows GDI 输出函数，没有指定边界的矩形 (例如，`LineTo`成员函数)，钢笔的绘图区域时不受限制的帧。  
+- **PS_INSIDEFRAME**创建钢笔绘制由指定边界的矩形的 Windows GDI 输出函数的闭合形状的框架内的行 (例如， `Ellipse`， `Rectangle`， `RoundRect`， `Pie`，和`Chord`成员函数)。 此样式用于 Windows GDI 输出函数，没有指定边界的矩形 (例如，`LineTo`成员函数)，钢笔的绘图区域时不受限制的帧。  
   
  第二个版本`CPen`构造函数指定的类型、 样式、 端帽和联接属性的组合。 应使用按位 OR 运算符组合中每个类别的值 (&#124;)。 钢笔类型可以是下列值之一：  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC**创建修饰钢笔。  
   
-     第二个版本`CPen`构造函数将添加以下钢笔样式`nPenStyle`:  
+     第二个版本`CPen`构造函数将添加以下钢笔样式*nPenStyle*:  
   
 - **PS_ALTERNATE**创建钢笔设置每个其他像素。 （此样式是仅适用于修饰钢笔。）  
   
@@ -148,24 +148,24 @@ CPen(
   
 - **PS_JOIN_ROUND**联接是舍入。  
   
- `nWidth`  
+ *nWidth*  
  指定的笔宽。  
   
 -   对于构造函数的第一个版本，如果此值为 0，以设备为单位的宽度始终是 1 个像素，而不管映射模式如何。  
   
--   第二个版本的构造函数中，如果`nPenStyle`是**PS_GEOMETRIC**，宽度给定逻辑单位。 如果`nPenStyle`是**PS_COSMETIC**，宽度必须设置为 1。  
+-   第二个版本的构造函数中，如果*nPenStyle*是**PS_GEOMETRIC**，宽度给定逻辑单位。 如果*nPenStyle*是**PS_COSMETIC**，宽度必须设置为 1。  
   
- `crColor`  
+ *crColor*  
  包含为笔 RGB 颜色。  
   
- `pLogBrush`  
- 指向`LOGBRUSH`结构。 如果`nPenStyle`是**PS_COSMETIC**、`lbColor`的成员`LOGBRUSH`结构指定的颜色的笔和`lbStyle`的成员`LOGBRUSH`结构必须设置为**BS_实心**。 如果`nPenStyle`是**PS_GEOMETRIC**，所有成员必须都用于指定钢笔的画笔属性。  
+ *pLogBrush*  
+ 指向`LOGBRUSH`结构。 如果*nPenStyle*是**PS_COSMETIC**、 *lbColor*的成员`LOGBRUSH`结构指定的颜色的笔和*lbStyle*的成员`LOGBRUSH`结构必须设置为**BS_SOLID**。 如果*nPenStyle*是**PS_GEOMETRIC**，所有成员必须都用于指定钢笔的画笔属性。  
   
- `nStyleCount`  
- 指定的长度，以双字单位`lpStyle`数组。 此值必须为零`nPenStyle`不**PS_USERSTYLE**。  
+ *nStyleCount*  
+ 指定的长度，以双字单位*lpStyle*数组。 此值必须为零*nPenStyle*不**PS_USERSTYLE**。  
   
- `lpStyle`  
- 指向双字的值的数组。 第一个值为用户定义的样式中指定的第一个破折号长度，第二个值指定的第一个空格和等等的长度。 此指针必须是**NULL**如果`nPenStyle`不**PS_USERSTYLE**。  
+ *lpStyle*  
+ 指向双字的值的数组。 第一个值为用户定义的样式中指定的第一个破折号长度，第二个值指定的第一个空格和等等的长度。 此指针必须是**NULL**如果*nPenStyle*不**PS_USERSTYLE**。  
   
 ### <a name="remarks"></a>备注  
  如果你使用不带任何参数的构造函数，必须初始化生成`CPen`对象`CreatePen`， `CreatePenIndirect`，或`CreateStockObject`成员函数。  
@@ -194,27 +194,27 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPenStyle`  
- 指定为笔的样式。 有关可能的值的列表，请参阅`nPenStyle`中的参数[CPen](#cpen)构造函数。  
+ *nPenStyle*  
+ 指定为笔的样式。 有关可能的值的列表，请参阅*nPenStyle*中的参数[CPen](#cpen)构造函数。  
   
- `nWidth`  
+ *nWidth*  
  指定的笔宽。  
   
 -   第一个版本的`CreatePen`，如果此值为 0，以设备为单位的宽度始终为 1 个像素，无论映射模式如何。  
   
--   第二个版本的`CreatePen`，如果`nPenStyle`是**PS_GEOMETRIC**，宽度给定逻辑单位。 如果`nPenStyle`是**PS_COSMETIC**，宽度必须设置为 1。  
+-   第二个版本的`CreatePen`，如果*nPenStyle*是**PS_GEOMETRIC**，宽度给定逻辑单位。 如果*nPenStyle*是**PS_COSMETIC**，宽度必须设置为 1。  
   
- `crColor`  
+ *crColor*  
  包含为笔 RGB 颜色。  
   
- `pLogBrush`  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。 如果`nPenStyle`是**PS_COSMETIC**、 **lbColor**的成员`LOGBRUSH`结构指定的颜色的笔和`lbStyle`的成员`LOGBRUSH`必须是结构设置为**BS_SOLID**。 如果**nPenStyle**是**PS_GEOMETRIC**，所有成员必须都用于指定钢笔的画笔属性。  
+ *pLogBrush*  
+ 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。 如果*nPenStyle*是**PS_COSMETIC**、 **lbColor**的成员`LOGBRUSH`结构指定的颜色的笔和*lbStyle*的成员`LOGBRUSH`结构必须设置为**BS_SOLID**。 如果**nPenStyle**是**PS_GEOMETRIC**，所有成员必须都用于指定钢笔的画笔属性。  
   
- `nStyleCount`  
- 指定的长度，以双字单位`lpStyle`数组。 此值必须为零`nPenStyle`不**PS_USERSTYLE**。  
+ *nStyleCount*  
+ 指定的长度，以双字单位*lpStyle*数组。 此值必须为零*nPenStyle*不**PS_USERSTYLE**。  
   
- `lpStyle`  
- 指向双字的值的数组。 第一个值为用户定义的样式中指定的第一个破折号长度，第二个值指定的第一个空格和等等的长度。 此指针必须是**NULL**如果`nPenStyle`不**PS_USERSTYLE**。  
+ *lpStyle*  
+ 指向双字的值的数组。 第一个值为用户定义的样式中指定的第一个破折号长度，第二个值指定的第一个空格和等等的长度。 此指针必须是**NULL**如果*nPenStyle*不**PS_USERSTYLE**。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为非 0 或为零则该方法将失败。  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  第二个版本`CreatePen`初始化具有指定的样式，宽度，，画笔属性的逻辑修饰或几何笔。 修饰钢笔的宽度始终为 1;始终在世界单位中指定几何笔宽。 应用程序创建一个逻辑笔后，它可以选择该钢笔入设备上下文通过调用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)函数。 钢笔选入设备上下文之后，它可以用于绘制直线和曲线。  
   
--   如果`nPenStyle`是**PS_COSMETIC**和**PS_USERSTYLE**中的条目`lpStyle`数组在样式单元中指定的短划线和空白的长度。 使用钢笔绘制线条的设备由定义样式单元。  
+-   如果*nPenStyle*是**PS_COSMETIC**和**PS_USERSTYLE**中的条目*lpStyle*数组指定短划线和中的空格的长度样式单位。 使用钢笔绘制线条的设备由定义样式单元。  
   
--   如果`nPenStyle`是**PS_GEOMETRIC**和**PS_USERSTYLE**中的条目`lpStyle`数组在逻辑单元中指定的短划线和空白的长度。  
+-   如果*nPenStyle*是**PS_GEOMETRIC**和**PS_USERSTYLE**中的条目*lpStyle*数组指定短划线和中的空格的长度逻辑单元。  
   
--   如果`nPenStyle`是**PS_ALTERNATE**，忽略样式单元，并设置其他每个像素。  
+-   如果*nPenStyle*是**PS_ALTERNATE**，忽略样式单元，并设置其他每个像素。  
   
  当应用程序不再需要给定的钢笔时，则应调用[CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成员函数或销毁`CPen`对象，以便资源不再使用。 钢笔选择在设备上下文中时，应用程序不应删除钢笔。  
   
@@ -240,14 +240,14 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- 初始化具有样式、 宽度和颜色中指向的结构提供钢笔`lpLogPen`。  
+ 初始化具有样式、 宽度和颜色中指向的结构提供钢笔*lpLogPen*。  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpLogPen`  
+ *lpLogPen*  
  指向 Windows [LOGPEN](../../mfc/reference/logpen-structure.md)结构，它包含有关钢笔的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -289,7 +289,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLogPen`  
+ *pLogPen*  
  指向[EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)结构，它包含有关钢笔的信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -321,7 +321,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLogPen`  
+ *pLogPen*  
  指向[LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)结构，以包含有关钢笔的信息。  
   
 ### <a name="return-value"></a>返回值  

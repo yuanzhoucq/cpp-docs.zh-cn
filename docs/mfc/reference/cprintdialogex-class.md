@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376641"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079093"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 类
 封装由 Windows 打印属性表提供的服务。  
@@ -68,7 +68,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|构造 `CPrintDialogEx` 对象。|  
   
@@ -93,7 +93,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CPrintDialogEx::m_pdex](#m_pdex)|用于自定义的结构`CPrintDialogEx`对象。|  
   
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwFlags`  
+ *dwFlags*  
  可以使用自定义设置对话框中，使用按位 OR 运算符组合在一起的一个或多个标志。 例如， **PD_ALLPAGES**标志将默认打印范围设置为文档的所有页面。 请参阅[PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844)这些标志的详细信息的 Windows SDK 中的结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向对话框的父或所有者窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  A`CString`指定系统定义的驱动程序名称。  
   
 ### <a name="remarks"></a>备注  
- 使用指向指针`CString`返回对象`GetDriverName`的值作为`lpszDriverName`对的调用中[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。  
+ 使用指向指针`CString`返回对象`GetDriverName`的值作为*lpszDriverName*对的调用中[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  调用此函数在调用[DoModal](#domodal)或[GetDefaults](#getdefaults)检索当前所选的打印机端口的名称。  
@@ -338,7 +338,7 @@ BOOL PrintSelection() const;
 ### <a name="return-value"></a>返回值  
  **TRUE**如果只有所选的项目，则为打印; 否则为**FALSE**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CPrintInfo 结构](../../mfc/reference/cprintinfo-structure.md)

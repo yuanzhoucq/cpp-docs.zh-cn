@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370202"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078678"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange 类
 封装具有给定振动范围的正弦范围转换。  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLibrary`  
+ *pLibrary*  
  指向转换库，它是负责创建的标准转换的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  正弦批通过在动画变量的值。  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  在高峰期的正弦批动画变量的值。  
   
- `period`  
+ *段*  
  以秒为单位的正弦批振荡的段。  
   
- `slope`  
+ *斜率*  
  在转换的开始的斜率。  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

@@ -1,7 +1,7 @@
 ---
 title: 在 c + + 中的封送处理概述 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,16 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137129"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079155"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中的封送处理概述
-在混合模式下，你有时必须封你本机和托管类型之间的数据。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 引入的封送处理库来帮助你封送，并将数据转换的简单方式。  
-  
+在混合模式下，你有时必须封你本机和托管类型之间的数据。 Visual Studio 2008 中引入*封送处理库*有助于封送，并将数据转换的简单方式。  封送处理库包含一组函数和`marshal_context`执行常见类型的封送处理的类。 这些标头中定义库**包括/msclr**目录 Visual Studio 版本：
+
+|Header|描述|  
+|---------------|-----------------|
+|marshal.h|`marshal_context` 类和免上下文封送处理函数|
+|marshal_atl.h| ATL 类型封送函数|
+|marshal_cppstd.h|封送处理标准 c + + 类型的函数|
+|marshal_windows.h|封送处理 Windows 类型的函数|
+
+
+默认路径**msclr**文件夹是类似于以下必须具体取决于哪个版本和内部版本号：
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  你可以使用或不使用封送处理库[marshal_context 类](../dotnet/marshal-context-class.md)。 某些转换需要上下文。 可以使用实现其他转换[marshal_as](../dotnet/marshal-as.md)函数。 下表列出当前支持的转换、 是否需要非上下文，和封送文件必须包括：  
   
 |从类型|为类型|封送方法|包含文件|  
@@ -62,7 +76,7 @@ ms.locfileid: "33137129"
 > [!NOTE]
 >  如果有嵌入`NULL`在字符串中的 s，但不保证的封送处理字符串结果。 嵌入`NULL`s 会导致字符串被截断，或者它们可能会保留。  
   
- 封送处理库标头位于 msclr 子目录中的 include 目录中。 此示例演示如何在包含标头声明中包括 msclr 目录：  
+此示例演示如何在包含标头声明中包括 msclr 目录：  
   
  `#include "msclr\marshal_cppstd.h"`  
   

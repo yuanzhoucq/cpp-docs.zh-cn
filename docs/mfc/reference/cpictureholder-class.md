@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375436"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079444"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 类
 实现图片属性，这样用户就可以在控件中显示的图片。  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `idResource`  
+ *idResource*  
  位图资源的资源 ID。  
   
- `pBitmap`  
+ *pBitmap*  
  指向[CBitmap](../../mfc/reference/cbitmap-class.md)对象。  
   
  *pPal*  
  指向[CPalette](../../mfc/reference/cpalette-class.md)对象。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  指示是否图片对象将获得的位图和调色板对象的所有权。  
   
- `hbm`  
+ *hbm*  
  从中位图的句柄`CPictureHolder`创建对象。  
   
- `hpal`  
+ *hpal*  
  用于呈现位图的调色板的句柄。  
   
 ### <a name="return-value"></a>返回值  
  如果成功创建对象; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果`bTransferOwnership`是**TRUE**、 调用方不应使用位图或以任何方式此调用后的调色板对象返回。 如果`bTransferOwnership`是**FALSE**，调用方负责确保位图和调色板对象图片对象的生存期内保持有效。  
+ 如果*bTransferOwnership*是**TRUE**、 调用方不应使用位图或以任何方式此调用后的调色板对象返回。 如果*bTransferOwnership*是**FALSE**，调用方负责确保位图和调色板对象图片对象的生存期内保持有效。  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  使用一个图标来初始化中的图片对象`CPictureHolder`。  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>参数  
- `idResource`  
+ *idResource*  
  位图资源的资源 ID。  
   
- `hIcon`  
+ *任务栏*  
  从其句柄图标`CPictureHolder`创建对象。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  指示是否图片对象将取得图标对象的所有权。  
   
 ### <a name="return-value"></a>返回值  
  如果成功创建对象; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果`bTransferOwnership`是**TRUE**，调用方不应使用的图标对象以任何方式此调用返回后。 如果`bTransferOwnership`是**FALSE**，调用方负责确保图标对象图片对象的生存期内就保持有效。  
+ 如果*bTransferOwnership*是**TRUE**，调用方不应使用的图标对象以任何方式此调用返回后。 如果*bTransferOwnership*是**FALSE**，调用方负责确保图标对象图片对象的生存期内就保持有效。  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  使用图元文件来初始化中的图片对象`CPictureHolder`。  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `hmf`  
+ *hmf*  
  用于创建该图元文件的句柄`CPictureHolder`对象。  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  该图片的 Y 范围。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  指示是否图片对象将取得图元文件对象的所有权。  
   
 ### <a name="return-value"></a>返回值  
  如果成功创建对象; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果`bTransferOwnership`是**TRUE**，此调用返回后调用方应以任何方式使用图元文件对象。 如果`bTransferOwnership`是**FALSE**，调用方负责确保图元文件对象的图片对象的生存期内就保持有效。  
+ 如果*bTransferOwnership*是**TRUE**，此调用返回后调用方应以任何方式使用图元文件对象。 如果*bTransferOwnership*是**FALSE**，调用方负责确保图元文件对象的图片对象的生存期内就保持有效。  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  检索容器的属性浏览器中显示的字符串。  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>参数  
- `strValue`  
+ *StrValue*  
  引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)即来保存显示字符串。  
   
 ### <a name="return-value"></a>返回值  
@@ -253,7 +253,7 @@ short GetType();
 ### <a name="return-value"></a>返回值  
  一个值，该值指示该图片的类型。 可能的值及其含义如下所示：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**PICTYPE_UNINITIALIZED**|`CPictureHolder` 对象被 unititialized。|  
 |**PICTYPE_NONE**|`CPictureHolder` 对象为空。|  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  Cpictureholder:: Render  
- 呈现中引用的矩形的图片`rcRender`。  
+ 呈现中引用的矩形的图片*rcRender*。  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向在其中图片是要呈现的显示上下文的指针。  
   
- `rcRender`  
+ *rcRender*  
  在该图是要呈现的矩形。  
   
  *rcWBounds*  
- 表示呈现图的对象的边框的矩形。 对于控件，将此矩形是`rcBounds`参数传递到的重写[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。  
+ 表示呈现图的对象的边框的矩形。 对于控件，将此矩形是*rcBounds*参数传递到的重写[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  连接`CPictureHolder`对象传递给`IPictureDisp`接口。  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDisp`  
+ *pDisp*  
  指向新`IPictureDisp`接口。  
   
 ## <a name="see-also"></a>请参阅  

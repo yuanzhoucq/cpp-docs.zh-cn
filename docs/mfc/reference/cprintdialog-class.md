@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377222"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079641"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 类
 封装由 Windows 公共对话框提供的打印服务。  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bPrintSetupOnly`  
- 指定是否显示的标准 Windows 打印对话框中或打印设置对话框。 将此参数设置为**TRUE**以显示标准的 Windows 打印设置对话框。 将其设置为**FALSE**以显示 Windows 打印对话框。 如果`bPrintSetupOnly`是**FALSE**，打印设置选项按钮仍显示在打印对话框中。  
+ *bPrintSetupOnly*  
+ 指定是否显示的标准 Windows 打印对话框中或打印设置对话框。 将此参数设置为**TRUE**以显示标准的 Windows 打印设置对话框。 将其设置为**FALSE**以显示 Windows 打印对话框。 如果*bPrintSetupOnly*是**FALSE**，打印设置选项按钮仍显示在打印对话框中。  
   
- `dwFlags`  
+ *dwFlags*  
  可以使用自定义设置对话框中，使用按位 OR 运算符组合在一起的一个或多个标志。 例如， **PD_ALLPAGES**标志将默认打印范围设置为文档的所有页面。 请参阅[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)这些标志的详细信息的 Windows SDK 中的结构。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向对话框的父或所有者窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  在调用`DoModal`，您可以调用其他成员函数检索的设置或用户的信息输入到对话框。  
   
- 请注意，当你调用具有构造函数`bPrintSetupOnly`设置为**FALSE**、 **PD_RETURNDC**标志会自动使用。 在调用`DoModal`， `GetDefaults`，或`GetPrinterDC`，会在返回打印机 DC `m_pd.hDC`。 必须通过调用释放此 DC [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)由调用方的`CPrintDialog`。  
+ 请注意，当你调用具有构造函数*bPrintSetupOnly*设置为**FALSE**、 **PD_RETURNDC**标志会自动使用。 在调用`DoModal`， `GetDefaults`，或`GetPrinterDC`，会在返回打印机 DC `m_pd.hDC`。 必须通过调用释放此 DC [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)由调用方的`CPrintDialog`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CPrintDialog::CreatePrinterDC](#createprinterdc)。  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>备注  
  检索到的值都将置于`m_pd`结构。  
   
- 在某些情况下，对此函数的调用将调用[构造函数](#cprintdialog)为`CPrintDialog`与`bPrintSetupOnly`设置为**FALSE**。 在这些情况下，打印机 DC 和**hDevNames**和**hDevMode** (两个控点位于`m_pd`数据成员) 自动分配。  
+ 在某些情况下，对此函数的调用将调用[构造函数](#cprintdialog)为`CPrintDialog`与*bPrintSetupOnly*设置为**FALSE**。 在这些情况下，打印机 DC 和**hDevNames**和**hDevMode** (两个控点位于`m_pd`数据成员) 自动分配。  
   
  如果的构造函数`CPrintDialog`调用时使用`bPrintSetupOnly`设置为**FALSE**，此函数不会只返回**hDevNames**和**hDevMode** （位于**m_pd.hDevNames**和**m_pd.hDevMode**) 向调用方，但也将返回中的打印机 DC **m_pd.hDC**。 它负责调用方删除打印机 DC 并调用 Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)函数在完成的句柄`CPrintDialog`对象。  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  如果成功，则打印机设备上下文的句柄否则为**NULL**。  
   
 ### <a name="remarks"></a>备注  
- 如果`bPrintSetupOnly`参数`CPrintDialog`构造函数已**FALSE** （指示显示打印对话框中），然后`GetPrinterDC`打印机设备上下文中返回的句柄。 必须调用 Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)可用于完成后删除的设备上下文函数使用它。  
+ 如果*bPrintSetupOnly*参数`CPrintDialog`构造函数已**FALSE** （指示显示打印对话框中），然后`GetPrinterDC`打印机设备返回的句柄上下文。 必须调用 Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)可用于完成后删除的设备上下文函数使用它。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

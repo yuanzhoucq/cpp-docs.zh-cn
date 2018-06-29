@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1906505e75273cc62a0eac55e6ed1a9686a3b76f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352572"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078439"
 ---
 # <a name="interface-elements"></a>界面元素
-本文档介绍中引入的界面元素[!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]SP1，并还介绍了与该早期版本的库的差异。  
+本文档介绍在 Visual Studio 2008 SP1 中，引入的界面元素，并还介绍了与该早期版本的库的差异。  
   
  下图显示了通过使用新的界面元素生成的应用程序。  
   

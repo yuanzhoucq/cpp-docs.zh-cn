@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376286"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079539"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 结构
 每个类派生自`CObject`与关联`CRuntimeClass`结构，它可用于获取有关一个对象或其基本类在运行时的信息。  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszClassName`  
+ *lpszClassName*  
  要创建的类的熟悉的名称。  
   
 ### <a name="return-value"></a>返回值  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszClassName`  
+ *lpszClassName*  
  类的熟悉的名称派生自`CObject`。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针`CRuntimeClass`对象，如传入与名称对应`lpszClassName`。 该函数将返回**NULL**如果不找到任何匹配的类名称。  
+ 指向的指针`CRuntimeClass`对象，如传入与名称对应*lpszClassName*。 该函数将返回**NULL**如果不找到任何匹配的类名称。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  通过"浏览"从的派生类的成员的类在一系列向上一直到顶部确定关系。 此函数仅返回**FALSE**如果未找到匹配的基类。  
   
 > [!NOTE]
->  若要使用`CRuntimeClass`结构，你必须包括`IMPLEMENT_DYNAMIC`， `IMPLEMENT_DYNCREATE`，或`IMPLEMENT_SERIAL`你想要检索运行时对象信息的类的实现中的宏。  
+>  若要使用`CRuntimeClass`结构，你必须在你想要检索运行时对象信息的类的实现包括 IMPLEMENT_DYNAMIC、 IMPLEMENT_DYNCREATE 或 IMPLEMENT_SERIAL 宏。  
   
  有关详细信息使用`CRuntimeClass`，请参阅文章[CObject 类： 访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。  
   

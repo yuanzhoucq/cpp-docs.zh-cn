@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305860"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079820"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 此模板类描述控制变长序列的元素具有随机访问的对象。 使用容器`deque`来管理，如下所示一块连续存储，但这可以增大或缩小在任何一端而无需复制剩余的所有元素的元素序列。 因此它的实现可以有效地`double-ended queue`。 (因此名称。)  
@@ -148,9 +148,9 @@ template<typename Value>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>成员  
+## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[deque::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[deque::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -166,7 +166,7 @@ template<typename Value>
 |[deque::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|  
 |[deque::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[deque::assign (STL/CLR)](#assign)|替换所有元素。|  
 |[deque::at (STL/CLR)](#at)|访问指定位置处的元素。|  
@@ -190,12 +190,12 @@ template<typename Value>
 |[deque::swap (STL/CLR)](#swap)|交换两个容器的内容。|  
 |[deque::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |[deque::back_item (STL/CLR)](#back_item)|访问最后一个元素。|  
 |[deque::front_item (STL/CLR)](#front_item)|访问第一个元素。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[deque::operator!= (STL/CLR)](#op_neq)|确定两个`deque`对象是否不相等。|  
 |[deque::operator(STL/CLR)](#operator)|访问指定位置处的元素。|  
@@ -208,7 +208,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
  
-## <a name="member-definitions"></a>成员定义
+## <a name="members"></a>成员
 
 ## <a name="assign"></a> deque:: assign (STL/CLR)
 替换所有元素。  
@@ -2023,7 +2023,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  受控序列的新大小。  
   
- val  
+ Val  
  填充元素的值。  
   
 ### <a name="remarks"></a>备注  

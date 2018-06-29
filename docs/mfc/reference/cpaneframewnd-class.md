@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378782"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079689"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -238,7 +238,7 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|指定是否注册具有 `CS_SAVEBITS` 类样式的窗口类。|  
   
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  要添加的窗格。  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,10 +284,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  要添加或删除的窗格。  
   
- [in] `bAdd`  
+ [in]*bAdd*  
  如果非零，将窗格添加。 如果为 0，则删除窗格。  
   
 ### <a name="return-value"></a>返回值  
@@ -317,7 +317,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectBorderSize`  
+ [out]*rectBorderSize*  
  包含的大小，以像素为单位的袖珍框架窗口的边框。  
   
 ### <a name="remarks"></a>备注  
@@ -336,23 +336,23 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWndToDock`  
+ [in]*pWndToDock*  
  指向停靠窗口的指针。  
   
- [in] `ptMouse`  
+ [in]*ptMouse*  
  鼠标位置。  
   
- [out] `rectResult`  
+ [out]*rectResult*  
  计算的矩形。  
   
- [out] `bDrawTab`  
+ [out]*bDrawTab*  
  如果`TRUE`，绘制选项卡。如果`FALSE`，不绘制选项卡。  
   
- [out] `ppTargetBar`  
+ [out]*ppTargetBar*  
  指向目标窗格中的指针。  
   
 ### <a name="remarks"></a>备注  
- 此方法计算窗口将占用如果用户将窗口拖到所指定的点的矩形`ptMouse`和存在停靠。  
+ 此方法计算窗口将占用如果用户将窗口拖到所指定的点的矩形*ptMouse*和存在停靠。  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  确定是否可将当前窗格停靠到另一个窗格或框架窗口。  
@@ -372,11 +372,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockingBar`  
+ [in]*pDockingBar*  
  窗格。  
   
 ### <a name="return-value"></a>返回值  
- 非零，如果微型框架可以停靠到`pDockingBar`; 否则为 0。  
+ 非零，如果微型框架可以停靠到*pDockingBar*; 否则为 0。  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -407,19 +407,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszWindowName`  
+ [in]*lpszWindowName*  
  指定要在袖珍框架窗口中显示的文本。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  指定的窗口样式。 有关详细信息，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的初始大小和袖珍框架窗口的位置。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定袖珍框架窗口的父框架。 此值不能`NULL`。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定用户定义的上下文。  
   
 ### <a name="return-value"></a>返回值  
@@ -442,22 +442,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwStyleEx`  
+ [in]*dwStyleEx*  
  指定扩展的窗口样式。 有关详细信息，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] `lpszWindowName`  
+ [in]*lpszWindowName*  
  指定要在袖珍框架窗口中显示的文本。  
   
- [in] `dwStyle`  
+ [in]*dwStyle*  
  指定的窗口样式。 有关详细信息，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的初始大小和袖珍框架窗口的位置。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定袖珍框架窗口的父框架。 此值不能`NULL`。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定用户定义的上下文。  
   
 ### <a name="return-value"></a>返回值  
@@ -474,7 +474,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `bWasDocked`  
+ [out]*bWasDocked*  
  `TRUE` 如果已停靠窗格;，否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -488,7 +488,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nID`  
+ [in]*nID*  
  表示要查找的窗格中的控件 ID。  
   
 ### <a name="return-value"></a>返回值  
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pt`  
+ [in]*pt*  
  屏幕坐标中的点。  
   
- [in] `nSensitivity`  
+ [in]*nSensitivity*  
  通过此大小增加微型框架窗口的搜索的区域。 微型框架窗口满足搜索条件，如果给的定点落在增加的区域。  
   
- [in] `pFrameToExclude`  
+ [in]*pFrameToExclude*  
  指定要从搜索中排除的微型框架窗口。  
   
- [in] `bFloatMultiOnly`  
+ [in]*bFloatMultiOnly*  
  如果`TRUE`，仅搜索微型框架窗口具有`CBRS_FLOAT_MULTI`样式。 如果`FALSE`，搜索所有微型框架窗口。  
   
 ### <a name="return-value"></a>返回值  
- 指向包含微型框架窗口的指针`pt`; 否则为`NULL`。  
+ 指向包含微型框架窗口的指针*pt*; 否则为`NULL`。  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  返回微型框架窗口标题的高度。  
@@ -542,7 +542,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `rectCaption`  
+ [out]*rectCaption*  
  包含的大小和位置的微型框架窗口标题中，在屏幕坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -688,16 +688,16 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  要测试的点。  
   
- [in] `bDetectCaption`  
+ [in]*bDetectCaption*  
  如果`TRUE`，检查对标题的点。 如果`FALSE`，忽略标题。  
   
 ### <a name="return-value"></a>返回值  
  以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`HTNOWHERE`|该点则微型框架窗口外。|  
 |`HTCLIENT`|该点位于工作区。|  
@@ -780,10 +780,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  配置文件名称。  
   
- [in] `uiID`  
+ [in]*uiID*  
  窗格中的 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
+ [in]*pDC*  
  用于绘制边框的设备上下文。  
   
 ### <a name="remarks"></a>备注  
@@ -859,10 +859,10 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  指向 （忽略） 的窗格的指针。  
   
- [in] `ptOffset`  
+ [in]*ptOffset*  
  用于将窗格移动偏移量。  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
@@ -894,10 +894,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
  正在窗格中显示或隐藏。  
   
- [in] `bShow`  
+ [in]*bShow*  
  `TRUE` 如果当前显示窗格中;`FALSE`如果窗格将会被隐藏。  
   
 ### <a name="remarks"></a>备注  
@@ -911,7 +911,7 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bPin`  
+ [in]*bPin*  
   
 ### <a name="remarks"></a>备注  
   
@@ -926,13 +926,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `point`  
+ [in]*点*  
  点的用户在屏幕坐标中单击。  
   
- [in] `nSensitivity`  
+ [in]*nSensitivity*  
  未使用此参数。  
   
- [in] `bCheckVisibility`  
+ [in]*bCheckVisibility*  
  `TRUE` 若要指定应返回仅可见窗格的;否则为`FALSE`。  
   
 ### <a name="return-value"></a>返回值  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pWnd`  
+ [in]*pWnd*  
  指向删除窗格的指针。  
   
- [in] `bDestroy`  
- 指定到微型框架窗口进行什么操作。 如果`bDestroy`是`TRUE`，此方法将立即销毁微型框架窗口。 如果它是`FALSE`，此方法特定的延迟后销毁微型框架窗口。  
+ [in]*bDestroy*  
+ 指定到微型框架窗口进行什么操作。 如果*bDestroy*是`TRUE`，此方法将立即销毁微型框架窗口。 如果它是`FALSE`，此方法特定的延迟后销毁微型框架窗口。  
   
- [in] `bNoDelayedDestroy`  
+ [in]*bNoDelayedDestroy*  
  如果`TRUE`、 延迟析构处于禁用状态。 如果`FALSE`、 延迟启用析构。  
   
 ### <a name="remarks"></a>备注  
- 立即或在特定的延迟后，框架可以销毁微型框架窗口。 如果你想要延迟析构微型框架窗口，将传递`FALSE`中`bNoDelayedDestroy`参数。 框架处理时发生延迟的析构`AFX_WM_CHECKEMPTYMINIFRAME`消息。  
+ 立即或在特定的延迟后，框架可以销毁微型框架窗口。 如果你想要延迟析构微型框架窗口，将传递`FALSE`中*bNoDelayedDestroy*参数。 框架处理时发生延迟的析构`AFX_WM_CHECKEMPTYMINIFRAME`消息。  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  用一个窗格替换另一个窗格。  
@@ -991,10 +991,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBarOrg`  
+ [in]*pBarOrg*  
  指向原始的窗格的指针。  
   
- [in] `pBarReplaceWith`  
+ [in]*pBarReplaceWith*  
  指向替换原始窗格中的窗格的指针。  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
@@ -1007,10 +1007,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszProfileName`  
+ [in]*lpszProfileName*  
  配置文件名称。  
   
- [in] `uiID`  
+ [in]*uiID*  
  窗格中的 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -1024,7 +1024,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwButtons`  
+ [in]*dwButtons*  
  以下值的按位 OR 组合：  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1043,7 +1043,7 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bDelayShow`  
+ [in]*bDelayShow*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1055,7 +1055,7 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pManager`  
+ [in]*pManager*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1067,7 +1067,7 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `nTimeOut`  
+ [in]*nTimeOut*  
  以毫秒为单位的超时值。  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
@@ -1078,7 +1078,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockManager`  
+ [in]*pDockManager*  
  停靠管理器指向的指针。  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
@@ -1089,7 +1089,7 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `ptNew`  
+ [in]*ptNew*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1104,7 +1104,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `preDockState`  
+ [in]*preDockState*  
  可能的值：  
   
 - `PDS_NOTHING`,  
@@ -1113,10 +1113,10 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in] `pBarToDock`  
+ [in]*pBarToDock*  
  指向要将停靠的窗格的指针。  
   
- [in] `dockMethod`  
+ [in]*dockMethod*  
  停靠的方法。 （忽略此参数。）  
   
 ### <a name="return-value"></a>返回值  
@@ -1140,7 +1140,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pMenu`  
+ [in]*pMenu*  
  指向一个菜单的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -1154,7 +1154,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pBar`  
+ [in]*pBar*  
   
 ### <a name="remarks"></a>备注  
   
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in]*pDockingBar*  
+ [in]*pTabbedBar*  
   
 ### <a name="remarks"></a>备注  
   

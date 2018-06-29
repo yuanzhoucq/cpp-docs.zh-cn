@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e969607e4017191539a0b0301b0c27ccb9f1ae
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372964"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078979"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 类
 表示多线程程序中用于控制对一个资源的访问的访问控制机制。  
@@ -57,7 +57,7 @@ class CSingleLock
 ## <a name="remarks"></a>备注  
  `CSingleLock` 没有基类。  
   
- 若要使用同步类[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，你必须创建`CSingleLock`或[CMultiLock](../../mfc/reference/cmultilock-class.md)等待并释放同步对象的对象。 使用`CSingleLock`时只需一次等待上一个对象。 使用**CMultiLock**时有多个对象，你无法使用在特定的时间。  
+ 若要使用同步类[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，你必须创建`CSingleLock`或[CMultiLock](../../mfc/reference/cmultilock-class.md)等待并释放同步对象的对象。 使用`CSingleLock`时只需一次等待上一个对象。 使用`CMultiLock`时有多个对象，你无法使用在特定的时间。  
   
  若要使用`CSingleLock`对象，请在受控的资源类中调用其构造函数内的成员函数。 然后调用[IsLocked](#islocked)成员函数来确定该资源是否可用。 如果是，继续而成员函数的其余部分。 如果资源不可用，则等待指定数量的资源要释放的时间，或返回失败。 使用的资源已完成后，请调用[解锁](#unlock)函数如果`CSingleLock`对象是同样，使用或允许`CSingleLock`对象将其销毁。  
   
@@ -79,10 +79,10 @@ explicit CSingleLock(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pObject`  
+ *pObject*  
  指向要访问的同步对象。 不能为**NULL**。  
   
- `bInitialLock`  
+ *bInitialLock*  
  指定是否以最初尝试访问所提供的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -137,10 +137,10 @@ BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lCount`  
+ *lCount*  
  若要释放的访问次数。 必须大于 0。 如果指定的量将导致超过其最大值的对象的计数，计数未发生更改，并且该函数将返回**FALSE**。  
   
- `lPrevCount`  
+ *lPrevCount*  
  指向要接收同步对象的前一个计数的变量。 如果**NULL**，则不返回前一个计数。  
   
 ### <a name="return-value"></a>返回值  

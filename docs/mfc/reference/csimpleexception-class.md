@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369920"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078231"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 类
 此类是资源重要的 MFC 异常的基类。  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bAutoDelete`  
- 指定**TRUE**如果的内存`CSimpleException`在堆中分配对象。 这将导致`CSimpleException`时删除的对象**删除**调用成员函数删除异常。 指定**FALSE**如果`CSimpleException`对象位于堆栈，或者是一个全局对象。 在这种情况下，`CSimpleException`对象不会删除时**删除**调用成员函数。  
+ *bAutoDelete*  
+ 指定**TRUE**如果的内存`CSimpleException`在堆中分配对象。 这将导致`CSimpleException`时删除的对象`Delete`调用成员函数删除异常。 指定**FALSE**如果`CSimpleException`对象位于堆栈，或者是一个全局对象。 在这种情况下，`CSimpleException`对象不会删除时`Delete`调用成员函数。  
   
 ### <a name="remarks"></a>备注  
  你将通常无需直接调用此构造函数。 引发异常的函数应创建的实例`CException`-派生类并调用其构造函数，或它应使用的 MFC 如引发函数， [AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 引发的预定义的类型。  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszError`  
+ *lpszError*  
  指向将收到一条错误消息的缓冲区的指针。  
   
- `nMaxError`  
+ *nMaxError*  
  最大缓冲区可以容纳，包括的字符数**NULL**终止符。  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  地址**UINT** ，将收到帮助上下文 id。 如果**NULL**，将返回没有 ID。  
   
 ### <a name="return-value"></a>返回值  

@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377166"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079637"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwStyle`|按位组合 (OR)[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)要应用于控件。|  
-|[in] `rect`|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的客户端坐标中的控件。|  
-|[in] `pParentWnd`|指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为`NULL`。|  
-|[in] `nID`|控件的 ID。|  
+|[in]*dwStyle*|按位组合 (OR)[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)要应用于控件。|  
+|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的客户端坐标中的控件。|  
+|[in]*pParentWnd*|指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为`NULL`。|  
+|[in]*nID*|控件的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|若要应用于控件的扩展样式按位组合。 有关详细信息，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
-|[in] `dwStyle`|按位组合 (OR)[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)要应用于控件。|  
-|[in] `rect`|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的客户端坐标中的控件。|  
-|[in] `pParentWnd`|指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为`NULL`。|  
-|[in] `nID`|控件的 ID。|  
+|[in]*dwExStyle*|若要应用于控件的扩展样式按位组合。 有关详细信息，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
+|[in]*dwStyle*|按位组合 (OR)[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)要应用于控件。|  
+|[in]*rect*|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的客户端坐标中的控件。|  
+|[in]*pParentWnd*|指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是控件的父窗口的对象。 此参数不能为`NULL`。|  
+|[in]*nID*|控件的 ID。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `bForward`|`true` 若要将鼠标消息转发或`false`不转发鼠标消息。|  
+|[in]*bForward*|`true` 若要将鼠标消息转发或`false`不转发鼠标消息。|  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867)消息，Windows SDK 中介绍。  
@@ -273,10 +273,10 @@ DWORD GetButtonState(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButton`|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>返回值  
- 指定按钮的状态`iButton`参数。 状态可以是`PGF_INVISIBLE`， `PGF_NORMAL`， `PGF_GRAYED`， `PGF_DEPRESSED`，或`PGF_HOT`。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
+ 指定按钮的状态*iButton*参数。 状态可以是`PGF_INVISIBLE`， `PGF_NORMAL`， `PGF_GRAYED`， `PGF_DEPRESSED`，或`PGF_HOT`。 有关详细信息，请参阅的返回值部分[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息。  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)消息，Windows SDK 中介绍。  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButton`|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果指定的按钮处于按下状态;否则为`false`。  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButton`|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果指定的按钮处于灰显状态;否则为`false`。  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButton`|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果指定的按钮处于热状态;否则为`false`。  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButton`|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果指定的按钮处于可见状态;否则为`false`。  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButton`|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in]*iButton*|指示为其检索状态的按钮。 如果页导航控件样式`PGS_HORZ`，指定`PGB_TOPORLEFT`左侧的按钮和`PGB_BOTTOMORRIGHT`的右侧的按钮。 如果页导航控件样式`PGS_VERT`，指定`PGB_TOPORLEFT`顶部的按钮和`PGB_BOTTOMORRIGHT`底部按钮。 有关详细信息，请参阅[页导航控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>返回值  
  `true` 如果指定的按钮处于正常状态;否则为`false`。  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含新的页导航控件的背景色的值。|  
+|[in]*clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含新的页导航控件的背景色的值。|  
   
 ### <a name="return-value"></a>返回值  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含以前的背景颜色的页导航控件的值。  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iBorder`|新的边框大小，以像素度量。 如果`iBorder`参数是负数，边框大小设置为零。|  
+|[in]*iBorder*|新的边框大小，以像素度量。 如果*iBorder*参数是负数，边框大小设置为零。|  
   
 ### <a name="return-value"></a>返回值  
  以前的边框大小，以像素度量。  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|该新按钮的大小，以像素度量。|  
+|[in]*iButtonSize*|该新按钮的大小，以像素度量。|  
   
 ### <a name="return-value"></a>返回值  
  先前按钮的大小，以像素度量。  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `hwndChild`|要包含窗口的句柄。|  
+|[in]*hwndChild*|要包含窗口的句柄。|  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884)消息，Windows SDK 中介绍。  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iPos`|新的滚动位置，以像素度量。|  
+|[in]*iPos*|新的滚动位置，以像素度量。|  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886)消息，Windows SDK 中介绍。  

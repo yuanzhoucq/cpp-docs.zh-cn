@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373046"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079969"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 类
 用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDoc`  
+ *pDoc*  
  指向包含可能需要更新的链接的文档。  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  确定是否要更新嵌入的对象的标志。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口将设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  

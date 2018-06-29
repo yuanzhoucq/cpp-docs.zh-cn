@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377582"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079457"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 封装 Rebar 控件的功能，此控件是一个子窗口容器。  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  拖放操作将影响的带区的从零开始索引。  
   
- `dwPos`  
- A`DWORD`值，该值包含起始鼠标坐标。 水平坐标包含在 LOWORD 并且 HIWORD 中包含的垂直坐标。 如果你通过`(DWORD)-1`，rebar 控件将使用上一次调用的控件的线程的鼠标位置**GetMessage**或**PeekMessage**。  
+ *dwPos*  
+ A`DWORD`值，该值包含起始鼠标坐标。 水平坐标包含在 LOWORD 并且 HIWORD 中包含的垂直坐标。 如果你通过`(DWORD)-1`，rebar 控件将使用上一次调用的控件的线程的鼠标位置`GetMessage`或`PeekMessage`。  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  创建 rebar 控件并将其附加到`CReBarCtrl`对象。  
@@ -252,16 +252,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定应用于控件的 rebar 控件样式的组合。 请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK for 支持样式的列表中。  
   
- `rect`  
+ *rect*  
  对引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，即的位置和大小的 rebar 控件。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的指针[CWnd](../../mfc/reference/cwnd-class.md)是 rebar 控件的父窗口的对象。 它不能**NULL**。  
   
- `nID`  
+ *nID*  
  指定 rebar 控件的控件 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -292,19 +292,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定应用于控件的 rebar 控件样式的组合。 有关受支持的样式的列表，请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 中。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -331,7 +331,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  要删除的带区的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -348,8 +348,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwPos`  
- A`DWORD`值，该值包含新的鼠标坐标。 水平坐标包含在 LOWORD 并且 HIWORD 中包含的垂直坐标。 如果你通过`(DWORD)-1`，rebar 控件将使用上一次调用的控件的线程的鼠标位置**GetMessage**或**PeekMessage**。  
+ *dwPos*  
+ A`DWORD`值，该值包含新的鼠标坐标。 水平坐标包含在 LOWORD 并且 HIWORD 中包含的垂直坐标。 如果你通过`(DWORD)-1`，rebar 控件将使用上一次调用的控件的线程的鼠标位置`GetMessage`或`PeekMessage`。  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  实现的 Win32 消息行为[RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435)，如 Windows SDK 中所述。  
@@ -368,10 +368,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  将为其检索边框的带区的从零开始索引。  
   
- `prc`  
+ *中国*  
  指向的指针[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)将收到带边框的结构。 如果 rebar 控件具有**RBS_BANDBORDERS**样式，此结构的每个成员将接收的像素数，在相应的一端带，构成边框。 如果 rebar 控件不具有**RBS_BANDBORDERS**样式，仅此结构的左的成员接收有效信息。 Rebar 控件样式的说明，请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 中。  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -394,10 +394,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  将为其检索信息的带区的从零开始索引。  
   
- `prbbi`  
+ *prbbi*  
  指向的指针[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)接收带信息的结构。 必须设置`cbSize`到此结构的成员`sizeof(REBARBANDINFO)`并设置**fMask**到你想要在发送此消息之前检索的项的成员。  
   
 ### <a name="return-value"></a>返回值  
@@ -435,8 +435,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `prbi`  
- 指向的指针[REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395)将收到的 rebar 控制信息的结构。 必须设置`cbSize`到此结构的成员`sizeof(REBARINFO)`之前发送此消息。  
+ *prbi*  
+ 指向的指针[REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395)将收到的 rebar 控制信息的结构。 必须设置*cbSize*到此结构的成员`sizeof(REBARINFO)`之前发送此消息。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
@@ -459,7 +459,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpcs`  
+ *lpcs*  
  指向的指针[要添加的配色](http://msdn.microsoft.com/library/windows/desktop/bb775502)结构，如 Windows SDK 中所述。  
   
 ### <a name="return-value"></a>返回值  
@@ -486,7 +486,7 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指示扩展的样式标志的按位组合 (OR)。 可能的标志是`RBS_EX_SPLITTER`和`RBS_EX_TRANSPARENT`。 有关详细信息，请参阅`dwMask`参数[CReBarCtrl::SetExtendedStyle](#setextendedstyle)方法。  
+ 指示扩展的样式标志的按位组合 (OR)。 可能的标志是`RBS_EX_SPLITTER`和`RBS_EX_TRANSPARENT`。 有关详细信息，请参阅*dwMask*参数[CReBarCtrl::SetExtendedStyle](#setextendedstyle)方法。  
   
 ### <a name="remarks"></a>备注  
  此方法可发送[RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433)消息，Windows SDK 中介绍。  
@@ -530,10 +530,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  在 rebar 控件带区的从零开始索引。  
   
- `prc`  
+ *中国*  
  指向的指针[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将接收 rebar 带区的边界。  
   
 ### <a name="return-value"></a>返回值  
@@ -636,8 +636,8 @@ BOOL InsertBand(
  *uIndex*  
  将插入带区的位置的位置的从零开始索引。 如果此参数设置为-1 时，控件将在最后一个位置添加新的带区。  
   
- `prbbi`  
- 指向的指针[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)结构，它定义要插入的带区。 必须设置`cbSize`到此结构的成员`sizeof(REBARBANDINFO)`之前调用此函数。  
+ *prbbi*  
+ 指向的指针[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)结构，它定义要插入的带区。 必须设置*cbSize*到此结构的成员`sizeof(REBARBANDINFO)`之前调用此函数。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
@@ -653,7 +653,7 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  若要最大化的带区的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
@@ -670,7 +670,7 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  若要将最小化的带区的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
@@ -708,11 +708,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  其 v 形图标是推送的带区的从零开始索引。  
   
- `lAppValue`  
- 应用程序定义的 32 位值。 请参阅`lAppValue`中[RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) Windows SDK 中。  
+ *lAppValue*  
+ 应用程序定义的 32 位值。 请参阅*lAppValue*中[RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) Windows SDK 中。  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  调整到其理想大小 rebar 控件中的带。  
@@ -722,7 +722,7 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  若要最大化的带区的从零开始索引。  
   
 ### <a name="remarks"></a>备注  
@@ -741,10 +741,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  若要接收新设置的带区的从零开始索引。  
   
- `prbbi`  
+ *prbbi*  
  指向[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)结构，它定义要插入的带区。 必须设置`cbSize`到此结构的成员`sizeof(REBARBANDINFO)`之前发送此消息。  
   
 ### <a name="return-value"></a>返回值  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `uBand`|Rebar 带区的从零开始索引。|  
-|[in] `cxWidth`|新的 rebar 带区，以像素为单位的宽度。|  
+|[in]*uBand*|Rebar 带区的从零开始索引。|  
+|[in]*cxWidth*|新的 rebar 带区，以像素为单位的宽度。|  
   
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
@@ -793,7 +793,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>参数  
- `prbi`  
+ *prbi*  
  指向的指针[REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395)结构，其中包含要设置的信息。 必须设置`cbSize`到此结构的成员`sizeof(REBARINFO)`发送此消息之前  
   
 ### <a name="return-value"></a>返回值  
@@ -810,7 +810,7 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>参数  
- `clr`  
+ *clr*  
  **COLORREF**值，该值表示新的默认背景色。  
   
 ### <a name="return-value"></a>返回值  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `dwMask`|指定在哪些标志的标志的按位组合 (OR)`dwStyleEx`参数应用。 使用一个或多个以下值：<br /><br /> RBS_EX_SPLITTER： 默认情况下，显示拆分器底部水平模式下，在右侧中和垂直模式。<br /><br /> RBS_EX_TRANSPARENT： 转发[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息发送到父窗口。|  
-|[in] `dwStyleEx`|指定要应用的样式的标志的按位组合 (OR)。 若要设置样式，指定同一个中使用的标志`dwMask`参数。 若要重置样式，请指定二进制零。|  
+|[in]*dwMask*|指定在哪些标志的标志的按位组合 (OR) *dwStyleEx*参数应用。 使用一个或多个以下值：<br /><br /> RBS_EX_SPLITTER： 默认情况下，显示拆分器底部水平模式下，在右侧中和垂直模式。<br /><br /> RBS_EX_TRANSPARENT： 转发[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息发送到父窗口。|  
+|[in]*dwStyleEx*|指定要应用的样式的标志的按位组合 (OR)。 若要设置样式，指定同一个中使用的标志*dwMask*参数。 若要重置样式，请指定二进制零。|  
   
 ### <a name="return-value"></a>返回值  
  以前的扩展的样式。  
@@ -863,7 +863,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pImageList`  
+ *pImageList*  
  指向的指针[CImageList](../../mfc/reference/cimagelist-class.md)对象，其中包含要分配到 rebar 控件的图像列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -877,7 +877,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向的指针`CWnd`对象将设置为 rebar 控件的所有者。  
   
 ### <a name="return-value"></a>返回值  
@@ -914,7 +914,7 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>参数  
- `clr`  
+ *clr*  
  A **COLORREF**值，该值表示新的文本颜色`CReBarCtrl`对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -945,7 +945,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszSubAppName`  
+ *pszSubAppName*  
  指向包含要设置的 rebar 视觉样式的 Unicode 字符串的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -964,7 +964,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>参数  
- `uBand`  
+ *uBand*  
  在 rebar 控件带区的从零开始索引。  
   
  *fShow*  
@@ -981,7 +981,7 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  对引用[CRect](../../atl-mfc-shared/reference/crect-class.md)指定 rebar 控件的大小应调整到的矩形的对象。  
   
 ### <a name="return-value"></a>返回值  

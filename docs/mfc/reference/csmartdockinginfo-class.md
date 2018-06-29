@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b787828c59535f0e3008816df6f4ab209e1d882c
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373662"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079129"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
 定义智能停靠标记的外观。  
@@ -68,7 +68,7 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否使用当前的主题颜色时框架显示智能停靠标记。|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智能停靠标记的基的背景的色。|  
@@ -119,7 +119,7 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `params`  
+ [out]*params*  
  类型的对象`CSmartDockingInfo`填充当前智能停靠参数。  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  

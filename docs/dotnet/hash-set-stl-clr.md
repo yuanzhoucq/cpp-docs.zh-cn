@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba3494599c57160bf87a10e53aa2143d9e2b78c0
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 9c701bfa64e96594050ddaf46d56c12849a0ad30
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305733"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079742"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`hash_set`若要管理的元素序列作为哈希表，每个表项存储双向链接列表的节点，并存储一个元素，每个节点。 每个元素的值用作一个键，以进行排序序列。  
   
  在下面，描述`GValue`相同`GKey`，这反过来是相同`Key`后者为 ref 类型，除非在这种情况下很`Key^`。  
   
-### <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key>  
@@ -133,8 +133,8 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
- Key  
+### <a name="parameters"></a>参数  
+ 键  
  受控序列中的元素的关键组件的类型。  
 
 ## <a name="requirements"></a>要求  
@@ -142,9 +142,9 @@ template<typename Key>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>成员  
+## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[hash_set::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[hash_set::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -164,7 +164,7 @@ template<typename Key>
 |[hash_set::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[hash_set::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[hash_set::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[hash_set::bucket_count (STL/CLR)](#bucket_count)|对存储桶的数量进行计数。|  
@@ -192,13 +192,13 @@ template<typename Key>
 |[hash_set::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[hash_set::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[hash_set::operator= (STL/CLR)](#op)|替换受控序列。|  
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|  
 |IHash\<密钥，值 >|维护泛型容器。|  
   
-### <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注  
  对象分配和释放存储在双向链接列表中的各个节点作为其控制的序列。 为了加快速度访问，该对象还维护有效地管理为的邻接，序列的整个列表的长短数组的指针到列表 （哈希表），或存储桶。 它会将元素插入到通过变更节点，永远不会通过将一个节点的内容复制到另一个之间的链接保持有序的存储桶中。 这意味着可以插入和移除自由不影响剩余元素的元素。  
   
  该对象进行排序它通过调用类型的存储的委托对象控制每个存储桶[hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 在构造 hash_set; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<=(key_type, key_type)`。  
@@ -240,6 +240,8 @@ template<typename Key>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
+## <a name="members"></a>成员
+
 ## <a name="begin"></a> hash_set:: begin (STL/CLR)
 指定受控序列的开头。  
   
@@ -1497,7 +1499,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的密钥值。  
   
  其中  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377271"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079676"
 ---
 # <a name="cpalette-class"></a>CPalette 类
 封装一个 Windows 调色板。  
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartIndex`  
+ *nStartIndex*  
  指定要进行动画处理的调色板中的第一个条目。  
   
- `nNumEntries`  
+ *nNumEntries*  
  指定要进行动画处理的调色板中的条目数。  
   
- `lpPaletteColors`  
- 指向数组的第一个成员[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)结构，以替换由标识的调色板条目`nStartIndex`和`nNumEntries`。  
+ *lpPaletteColors*  
+ 指向数组的第一个成员[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)结构，以替换由标识的调色板条目*nStartIndex*和*nNumEntries*。  
   
 ### <a name="remarks"></a>备注  
  在应用程序调用`AnimatePalette`，它不需要更新其工作区，因为 Windows 立即将映射到系统调色板的新条目。  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  标识设备上下文。  
   
 ### <a name="return-value"></a>返回值  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpLogPalette`  
+ *lpLogPalette*  
  指向[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)结构，其中包含有关逻辑调色板中的颜色信息。  
   
 ### <a name="return-value"></a>返回值  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hPalette`  
+ *hPalette*  
  指向 Windows GDI 颜色调色板的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `crColor`  
+ *crColor*  
  指定要匹配的颜色。  
   
 ### <a name="return-value"></a>返回值  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartIndex`  
+ *nStartIndex*  
  指定要检索的逻辑调色板中的第一个条目。  
   
- `nNumEntries`  
+ *nNumEntries*  
  指定要检索的逻辑调色板中的条目数。  
   
- `lpPaletteColors`  
- 指向数组的[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)数据结构，以接收调色板条目。 该数组必须包含至少尽可能多的数据结构，由指定`nNumEntries`。  
+ *lpPaletteColors*  
+ 指向数组的[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)数据结构，以接收调色板条目。 该数组必须包含至少尽可能多的数据结构，由指定*nNumEntries*。  
   
 ### <a name="return-value"></a>返回值  
  从逻辑调色板; 中检索的条目数如果函数失败，则为 0。  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  有关使用图形对象的详细信息，请参阅文章[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- 连接到逻辑调色板的大小更改`CPalette`的条目由指定数量的对象`nNumEntries`。  
+ 连接到逻辑调色板的大小更改`CPalette`的条目由指定数量的对象*nNumEntries*。  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nNumEntries`  
+ *nNumEntries*  
  已调整大小后，请选择调色板中指定条目数。  
   
 ### <a name="return-value"></a>返回值  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStartIndex`  
+ *nStartIndex*  
  指定要设置的逻辑调色板中的第一个条目。  
   
- `nNumEntries`  
+ *nNumEntries*  
  指定要设置的逻辑调色板中的条目数。  
   
- `lpPaletteColors`  
- 指向数组的[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)数据结构，以接收调色板条目。 该数组必须包含至少尽可能多的数据结构，由指定`nNumEntries`。  
+ *lpPaletteColors*  
+ 指向数组的[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)数据结构，以接收调色板条目。 该数组必须包含至少尽可能多的数据结构，由指定*nNumEntries*。  
   
 ### <a name="return-value"></a>返回值  
  设置逻辑调色板; 中的条目数如果函数失败，则为 0。  

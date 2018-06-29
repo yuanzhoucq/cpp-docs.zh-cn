@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374378"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077973"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 类
 用于 OLE 可视编辑服务器、自动化服务器和链接容器（支持链接到嵌入的应用程序）。  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `clsid`  
+ *clsid*  
  对该模板请求的 OLE 类 ID 的引用。  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  文档模板的指针。  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  指示应用程序的单个实例是否可以支持多个实例化。 如果**TRUE**，为每个请求，以创建对象启动的应用程序的多个实例。  
   
 ### <a name="remarks"></a>备注  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nAppType`  
+ *nAppType*  
  取值范围为**OLE_APPTYPE** AFXDISP 中定义的枚举。H。 它可以具有以下值之一：  
   
 - `OAT_INPLACE_SERVER` 服务器具有完全服务器用户界面。  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` 对象是`IDispatch`的支持。  
   
-- **OAT_DOC_OBJECT_SERVER**服务器同时支持嵌入和文档对象组件模型。  
+- `OAT_DOC_OBJECT_SERVER` 服务器同时支持嵌入和文档对象组件模型。  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  仅当不存在的项写入到注册表项的列表。  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  写入而不考虑任何前面条目是否存在注册表项的列表。  
   
- `bRegister`  
- 确定是否要注册的类。 如果`bRegister`是**TRUE**，类注册系统注册表。 否则，它注销类。  
+ *bRegister*  
+ 确定是否要注册的类。 如果*bRegister*是**TRUE**，类注册系统注册表。 否则，它注销类。  
   
 ### <a name="remarks"></a>备注  
  通过调用加载的注册信息[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 检索子字符串的那些计算机标识索引**regFileTypeId**， **regFileTypeName**，和**fileNewName**中所述， `GetDocString`引用页面。  
   
  如果**regFileTypeId**子字符串为空或者，如果调用`GetDocString`失败的任何其他原因，此函数将失败并且在注册表中不输入的文件信息。  
   
- 自变量中的信息`rglpszRegister`和`rglpszOverwrite`写入到通过调用注册表[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 两个自变量时注册的默认信息**NULL**，适用于大多数应用程序。 有关这些自变量中的信息的结构的信息，请参阅`AfxOleRegisterServerClass`。  
+ 自变量中的信息*rglpszRegister*和*rglpszOverwrite*写入到通过调用注册表[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 两个自变量时注册的默认信息**NULL**，适用于大多数应用程序。 有关这些自变量中的信息的结构的信息，请参阅`AfxOleRegisterServerClass`。  
   
- 有关更多信息，请参见 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 有关详细信息，请参阅[实现 IDispatch 接口](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371135"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078760"
 ---
 # <a name="crebar-class"></a>CReBar 类
 提供 Rebar 控件的布局、持久性和状态信息的控件条。  
@@ -56,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Rebar 控件  
  Rebar 对象的行为类似于工具栏对象。 Rebar 控件使用单击并拖动机制来调整其带区的大小。 Rebar 控件可以包含一个或多个带区，每个带区都有手柄栏、位图、文本标签和子窗口的任意组合。 但是，带区不可包含多个子窗口。  
   
- **CReBar**使用[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)类以提供其实现。 你可以访问 rebar 控制通过[GetReBarCtrl](#getrebarctrl)要利用的控件的自定义选项。 Rebar 控件有关的详细信息，请参阅`CReBarCtrl`。 有关使用 rebar 控件的详细信息，请参阅[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。  
+ `CReBar` 使用[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)类以提供其实现。 你可以访问 rebar 控制通过[GetReBarCtrl](#getrebarctrl)要利用的控件的自定义选项。 Rebar 控件有关的详细信息，请参阅`CReBarCtrl`。 有关使用 rebar 控件的详细信息，请参阅[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。  
   
 > [!CAUTION]
->  Rebar 和 rebar 控件对象不支持 MFC 工具栏停靠的控件。 如果**CRebar::EnableDocking**称为你的应用程序将声明。  
+>  Rebar 和 rebar 控件对象不支持 MFC 工具栏停靠的控件。 如果`CRebar::EnableDocking`称为你的应用程序将声明。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -95,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBar`  
+ *pBar*  
  指向的指针`CWnd`是要插入到 rebar 的子窗口的对象。 被引用的对象必须具有**WS_CHILD**。  
   
- `lpszText`  
- 指向包含要显示在 rebar 的文本的字符串的指针。 **NULL**默认情况下。 中包含的文本`lpszText`不是子窗口中; 它位于 rebar 本身上。  
+ *lpszText*  
+ 指向包含要显示在 rebar 的文本的字符串的指针。 **NULL**默认情况下。 中包含的文本*lpszText*不是子窗口中; 它位于 rebar 本身上。  
   
- `pbmp`  
+ *pbmp*  
  指向的指针`CBitmap`rebar 背景上显示的对象。 **NULL**默认情况下。  
   
- `dwStyle`  
+ *dwStyle*  
  A`DWORD`包含要应用到 rebar 的样式。 请参阅**fStyle**函数 Win32 结构中的说明[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)有关带样式的完整列表。  
   
  *clrFore*  
@@ -131,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向`CWnd`其 Windows 窗口是状态栏的父对象。 通常您的框架窗口。  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Rebar 控件样式。 默认情况下， **RBS_BANDBORDERS**，后者显示缩小行来分隔 rebar 控件中的相邻带区。 请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK for 样式的列表中。  
   
- `dwStyle`  
+ *dwStyle*  
  Rebar 窗口样式。  
   
- `nID`  
+ *nID*  
  Rebar 的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  

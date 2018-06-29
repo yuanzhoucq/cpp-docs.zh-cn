@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305873"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079715"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`multimap`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
@@ -127,7 +127,7 @@ ms.locfileid: "36305873"
   
  `GMapped` 等同于`Mapped`后者为 ref 类型，除非在此情况下它是 `Mapped^`  
   
-### <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key,  
@@ -144,8 +144,8 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
- Key  
+### <a name="parameters"></a>参数  
+ 键  
  受控序列中的元素的关键组件的类型。  
   
  映射  
@@ -158,7 +158,7 @@ template<typename Key,
 
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[multimap::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[multimap::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -178,7 +178,7 @@ template<typename Key,
 |[multimap::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[multimap::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[multimap::clear (STL/CLR)](#clear)|删除所有元素。|  
@@ -201,7 +201,7 @@ template<typename Key,
 |[multimap::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[multimap::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[multimap::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[operator!= (multimap) (STL/CLR)](#op_neq)|确定如果`multimap`对象是否不等于另一个`multimap`对象。|  
@@ -213,7 +213,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|  
 |ITree\<密钥，值 >|维护泛型容器。|  
   
-### <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注  
  对象分配和释放各个节点作为其控制的序列的存储。 它将元素插入到通过变更节点，永远不会通过将一个节点的内容复制到另一个之间的链接保持有序 （几乎） 平衡的树。 这意味着可以插入和移除自由不影响剩余元素的元素。  
   
  该对象进行排序它通过调用类型的存储的委托对象控制的序列[multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)。 在构造多重映射; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<(key_type, key_type)`。 通过调用成员函数来访问此存储的对象[multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`。  
@@ -1149,7 +1149,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的密钥值。  
   
  其中  

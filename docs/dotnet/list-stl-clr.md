@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305912"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079781"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`list`来管理的元素序列作为双向链接列表节点，各个存储一个元素。  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  “值”  
  受控序列中的元素的类型。  
   
@@ -155,9 +155,9 @@ template<typename Value>
   
  **Namespace:** cliext 
 
-## <a name="members"></a>成员  
+## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[list::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[list::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -173,7 +173,7 @@ template<typename Value>
 |[list::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|  
 |[list::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[list::assign (STL/CLR)](#assign)|替换所有元素。|  
 |[list::back (STL/CLR)](#back)|访问最后一个元素。|  
@@ -203,12 +203,12 @@ template<typename Value>
 |[list::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
 |[list::unique (STL/CLR)](#unique)|删除通过了指定测试的相邻元素。|  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |[list::back_item (STL/CLR)](#back_item)|访问最后一个元素。|  
 |[list::front_item (STL/CLR)](#front_item)|访问第一个元素。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[list::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[operator!= (list) (STL/CLR)](#op_neq)|确定如果`list`对象是否不等于另一个`list`对象。|  
@@ -220,7 +220,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
+## <a name="members"></a>成员
+
 ## <a name="assign"></a> list:: assign (STL/CLR)
 替换所有元素。  
   
@@ -265,7 +267,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的元素的值。  
   
 ### <a name="remarks"></a>备注  
@@ -1249,7 +1251,7 @@ void insert(iterator where,
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的元素的值。  
   
  其中  
@@ -1964,7 +1966,7 @@ void remove(value_type val);
 ```  
   
 #### <a name="parameters"></a>参数  
- val  
+ Val  
  要移除的元素的值。  
   
 ### <a name="remarks"></a>备注  
@@ -2142,7 +2144,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  受控序列的新大小。  
   
- val  
+ Val  
  填充元素的值。  
   
 ### <a name="remarks"></a>备注  

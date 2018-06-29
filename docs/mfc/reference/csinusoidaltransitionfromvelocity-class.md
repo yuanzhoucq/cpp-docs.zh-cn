@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370635"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078574"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity 类
 封装其幅度由动画变量的初始速度决定的正弦速度转换。  
@@ -84,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pLibrary`  
+ *pLibrary*  
  指向转换库，它是负责创建的标准转换的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -100,10 +100,10 @@ CSinusoidalTransitionFromVelocity(
 ```  
   
 ### <a name="parameters"></a>参数  
- `duration`  
+ *持续时间*  
  转换的持续时间。  
   
- `period`  
+ *段*  
  以秒为单位的正弦批振荡的段。  
   
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  

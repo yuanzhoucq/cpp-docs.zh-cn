@@ -69,12 +69,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305522"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079728"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 此模板类描述控制变长元素序列的最后一个单元中先进先出访问的对象。 使用容器适配器`stack`管理作为推堆栈的基础容器。  
@@ -93,7 +93,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  “值”  
  受控序列中的元素的类型。  
   
@@ -107,7 +107,7 @@ template<typename Value,
   
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[stack::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
 |[stack::container_type (STL/CLR)](#container_type)|基础容器的类型。|  
@@ -118,7 +118,7 @@ template<typename Value,
 |[stack::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|  
 |[stack::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[stack::assign (STL/CLR)](#assign)|替换所有元素。|  
 |[stack::empty (STL/CLR)](#empty)|测试元素是否存在。|  
@@ -130,11 +130,11 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|访问最后一个元素。|  
 |[stack::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |[stack::top_item (STL/CLR)](#top_item)|访问最后一个元素。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[stack::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[operator!= (stack) (STL/CLR)](#op_neq)|确定如果`stack`对象是否不等于另一个`stack`对象。|  
@@ -146,7 +146,7 @@ template<typename Value,
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |IStack\<值、 容器 >|维护泛型容器适配器。|  

@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305886"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079866"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`set`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。  
   
  在下面，描述`GValue`相同`GKey`，这反过来是相同`Key`后者为 ref 类型，除非在这种情况下很`Key^`。  
   
-### <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key>  
@@ -133,13 +133,18 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
- Key  
+### <a name="parameters"></a>参数  
+ 键  
  受控序列中的元素的关键组件的类型。  
   
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
+  
+ **Namespace:** cliext  
+
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[set::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[set::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -158,7 +163,7 @@ template<typename Key>
 |[set::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[set::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[set::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[set::clear (STL/CLR)](#clear)|删除所有元素。|  
@@ -181,7 +186,7 @@ template<typename Key>
 |[set::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[set::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[set::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[operator!= (set) (STL/CLR)](#op_neq)|确定如果`set`对象是否不等于另一个`set`对象。|  
@@ -193,7 +198,7 @@ template<typename Key>
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|  
 |ITree\<密钥，值 >|维护泛型容器。|  
   
-### <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注  
  对象分配和释放各个节点作为其控制的序列的存储。 它将元素插入到通过变更节点，永远不会通过将一个节点的内容复制到另一个之间的链接保持有序 （几乎） 平衡的树。 这意味着可以插入和移除自由不影响剩余元素的元素。  
   
  该对象进行排序它通过调用类型的存储的委托对象控制的序列[set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)。 在构造集; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<(key_type, key_type)`。 通过调用成员函数来访问此存储的对象[set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`。  
@@ -228,11 +233,6 @@ template<typename Key>
  集合迭代程序存储其关联的集节点，后者反过来将存储到其关联的容器的句柄的句柄。 迭代器仅用于其关联的容器对象。 只要其关联的集节点是与某一集相关联，设置迭代器就保持有效。 此外，有效的迭代器是 dereferencable-可用来访问或更改元素值，它指定-，只要不等于`end()`。  
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
-  
-## <a name="requirements"></a>要求  
- **标头：** \<cliext/set >  
-  
- **Namespace:** cliext  
  
 ## <a name="members"></a>成员
 
@@ -1113,7 +1113,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的密钥值。  
   
  其中  

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376764"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079598"
 ---
 # <a name="crgn-class"></a>CRgn 类
 封装一个 Windows 图形设备接口 (GDI) 区域。  
@@ -138,20 +138,20 @@ int CombineRgn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRgn1`  
+ *pRgn1*  
  标识现有区域。  
   
- `pRgn2`  
+ *pRgn2*  
  标识现有区域。  
   
- `nCombineMode`  
+ *nCombineMode*  
  指定要合并两个源区域时执行的操作。 它可以是以下值之一：  
   
 - **RGN_AND**使用的两个区域 （交集） 的重叠区域。  
   
-- **RGN_COPY**会创建一份区域 1 (由标识`pRgn1`)。  
+- **RGN_COPY**会创建一份区域 1 (由标识*pRgn1*)。  
   
-- **RGN_DIFF**创建包含区域的区域 1 的区域 (由标识`pRgn1`)，不是区域 2 的一部分 (由标识`pRgn2`)。  
+- **RGN_DIFF**创建包含区域的区域 1 的区域 (由标识*pRgn1*)，不是区域 2 的一部分 (由标识*pRgn2*)。  
   
 - **RGN_OR**将合并整个 （并集） 的两个区域。  
   
@@ -169,7 +169,7 @@ int CombineRgn(
 - **SIMPLEREGION**新区域具有不重叠的边框。  
   
 ### <a name="remarks"></a>备注  
- 区域组合所指定的`nCombineMode`。  
+ 区域组合所指定的*nCombineMode*。  
   
  两个指定的区域会进行合并，并生成的区域句柄存储在`CRgn`对象。 因此，任何区域存储在`CRgn`对象替换为组合的区域。  
   
@@ -181,14 +181,14 @@ int CombineRgn(
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn  
- 将复制定义的区域`pRgnSrc`到`CRgn`对象。  
+ 将复制定义的区域*pRgnSrc*到`CRgn`对象。  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRgnSrc`  
+ *pRgnSrc*  
  标识现有区域。  
   
 ### <a name="return-value"></a>返回值  
@@ -220,23 +220,23 @@ BOOL CreateEllipticRgn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `x1`  
+ *x1*  
  指定的椭圆的边框的左上角中的逻辑 x 坐标。  
   
- `y1`  
+ *y1*  
  指定的椭圆的边框的左上角中的逻辑 y 坐标。  
   
- `x2`  
+ *x2*  
  指定的椭圆的边框的右下角中的逻辑 x 坐标。  
   
- `y2`  
+ *y2*  
  指定的椭圆的边框的右下角中的逻辑 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
  如果该操作成功; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 区域定义的由指定的边界矩形`x1`， `y1`， `x2`，和`y2`。 该区域存储在`CRgn`对象。  
+ 区域定义的由指定的边界矩形*x1*， *y1*， *x2*，和*y2*。 该区域存储在`CRgn`对象。  
   
  区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
   
@@ -253,14 +253,14 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构或`CRect`包含椭圆的边框的左上角和右下角的逻辑坐标的对象。  
   
 ### <a name="return-value"></a>返回值  
  如果该操作成功; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 区域定义的结构或指向的对象`lpRect`并存储在`CRgn`对象。  
+ 区域定义的结构或指向的对象*lpRect*并存储在`CRgn`对象。  
   
  区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
   
@@ -283,10 +283,10 @@ BOOL CreateFromData(
  *lpXForm*  
  指向[XFORM](../../mfc/reference/xform-structure.md)数据结构，它定义要在区域上执行的转换。 此指针为时**NULL**，使用标识转换。  
   
- `nCount`  
- 指定指向的字节数`pRgnData`。  
+ *nCount*  
+ 指定指向的字节数*pRgnData*。  
   
- `pRgnData`  
+ *pRgnData*  
  指向[RGNDATA](../../mfc/reference/rgndata-structure.md)包含区域数据的数据结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -303,14 +303,14 @@ BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  标识设备上下文，其中包含已关闭的路径。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 由标识的设备上下文`pDC`参数必须包含已关闭的路径。 后`CreateFromPath`将某个区域，Windows 路径转换放弃从设备上下文已关闭的路径。  
+ 由标识的设备上下文*pDC*参数必须包含已关闭的路径。 后`CreateFromPath`将某个区域，Windows 路径转换放弃从设备上下文已关闭的路径。  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  创建一个多边形区域。  
@@ -323,7 +323,7 @@ BOOL CreatePolygonRgn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpPoints`  
+ *lpPoints*  
  指向数组的**点**结构或一组`CPoint`对象。 每个结构指定的 x 坐标和 y 坐标的多边形的一个顶点。 **点**结构具有以下形式：  
   
  `typedef struct tagPOINT {`  
@@ -334,10 +334,10 @@ BOOL CreatePolygonRgn(
   
  `} POINT;`  
   
- `nCount`  
- 指定的数**点**结构或`CPoint`指向数组中的对象`lpPoints`。  
+ *nCount*  
+ 指定的数**点**结构或`CPoint`指向数组中的对象*lpPoints*。  
   
- `nMode`  
+ *nMode*  
  指定区域的填充模式。 此参数可以是**备用**或**绕**。  
   
 ### <a name="return-value"></a>返回值  
@@ -369,7 +369,7 @@ BOOL CreatePolyPolygonRgn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpPoints`  
+ *lpPoints*  
  指向数组的**点**结构或一组`CPoint`定义的多边形的顶点的对象。 必须显式关闭每个多边形，因为系统不会自动关闭它们。 多边形指定连续。 **点**结构具有以下形式：  
   
  `typedef struct tagPOINT {`  
@@ -380,13 +380,13 @@ BOOL CreatePolyPolygonRgn(
   
  `} POINT;`  
   
- `lpPolyCounts`  
- 指向整数的数组。 第一个整数指定中第一个多边形的顶点数`lpPoints`数组，第二个整数的顶点数指定在第二个多边形，依次类推。  
+ *lpPolyCounts*  
+ 指向整数的数组。 第一个整数指定中第一个多边形的顶点数*lpPoints*数组，第二个整数的顶点数指定在第二个多边形，依次类推。  
   
- `nCount`  
- 指定在整数的总数`lpPolyCounts`数组。  
+ *nCount*  
+ 指定在整数的总数*lpPolyCounts*数组。  
   
- `nPolyFillMode`  
+ *nPolyFillMode*  
  指定的多边形填充模式。 此值可能是**备用**或**绕**。  
   
 ### <a name="return-value"></a>返回值  
@@ -417,16 +417,16 @@ BOOL CreateRectRgn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `x1`  
+ *x1*  
  指定区域的左上角中的逻辑 x 坐标。  
   
- `y1`  
+ *y1*  
  指定区域的左上角中的逻辑 y 坐标。  
   
- `x2`  
+ *x2*  
  指定区域的右下角中的逻辑 x 坐标。  
   
- `y2`  
+ *y2*  
  指定区域的右下角中的逻辑 y 坐标。  
   
 ### <a name="return-value"></a>返回值  
@@ -450,7 +450,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构或`CRect`包含区域的左上角和右下角的逻辑坐标的对象。 `RECT`结构具有以下形式：  
   
  `typedef struct tagRECT {`  
@@ -490,22 +490,22 @@ BOOL CreateRoundRectRgn(
 ```  
   
 ### <a name="parameters"></a>参数  
- `x1`  
+ *x1*  
  指定区域的左上角中的逻辑 x 坐标。  
   
- `y1`  
+ *y1*  
  指定区域的左上角中的逻辑 y 坐标。  
   
- `x2`  
+ *x2*  
  指定区域的右下角中的逻辑 x 坐标。  
   
- `y2`  
+ *y2*  
  指定区域的右下角中的逻辑 y 坐标。  
   
  *x3*  
  指定用于创建圆的角的椭圆的宽度。  
   
- `y3`  
+ *y3*  
  指定用于创建圆的角的椭圆的高度。  
   
 ### <a name="return-value"></a>返回值  
@@ -540,7 +540,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRgn`  
+ *pRgn*  
  标识的区域。  
   
 ### <a name="return-value"></a>返回值  
@@ -557,7 +557,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hRgn`  
+ *hRgn*  
  指定一个 Windows 区域的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -576,14 +576,14 @@ int GetRegionData(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRgnData`  
+ *lpRgnData*  
  指向[RGNDATA](../../mfc/reference/rgndata-structure.md)接收信息的数据结构。 如果此参数为**NULL**，返回值将包含所需的区域数据的字节数。  
   
- `nCount`  
- 指定的大小，以字节为单位，`lpRgnData`缓冲区。  
+ *nCount*  
+ 指定的大小，以字节为单位， *lpRgnData*缓冲区。  
   
 ### <a name="return-value"></a>返回值  
- 如果函数成功和`nCount`指定足够数目的字节，返回值始终是`nCount`。 如果函数失败，或者如果`nCount`指定小于比足够数量的字节，则返回值为 0 （错误）。  
+ 如果函数成功和*nCount*指定足够数目的字节，返回值始终是*nCount*。 如果函数失败，或者如果*nCount*指定小于比足够数量的字节，则返回值为 0 （错误）。  
   
 ### <a name="remarks"></a>备注  
  此数据包括组成区域的矩形的尺寸。 结合使用此函数`CRgn::CreateFromData`函数。  
@@ -596,7 +596,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构或`CRect`对象以便接收边界的矩形的坐标。 `RECT`结构具有以下形式：  
   
  `typedef struct tagRECT {`  
@@ -643,8 +643,8 @@ int OffsetRgn(POINT point);
  *y*  
  指定要向上或向下移动单位的数。  
   
- `point`  
- X 坐标`point`指定左移或向右的单位数。 Y 坐标`point`指定要向上或向下移动的单位数。 `point`参数可能是**点**结构或`CPoint`对象。  
+ *点*  
+ X 坐标*点*指定左移或向右的单位数。 Y 坐标*点*指定要向上或向下移动的单位数。 *点*参数可能是**点**结构或`CPoint`对象。  
   
 ### <a name="return-value"></a>返回值  
  新区域的类型。 它可以是以下值之一：  
@@ -698,21 +698,21 @@ BOOL PtInRegion(POINT point) const;
  *y*  
  指定要测试的点的逻辑 y 坐标。  
   
- `point`  
- X 和 y 坐标`point`指定要测试的值的点 x 和 y 坐标。 `point`参数可以是**点**结构或`CPoint`对象。  
+ *点*  
+ X 和 y 坐标*点*指定要测试的值的点 x 和 y 坐标。 *点*参数可以是**点**结构或`CPoint`对象。  
   
 ### <a name="return-value"></a>返回值  
  如果该点位于区域; 则为非 0否则为 0。  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- 确定指定的矩形的任何部分`lpRect`中存储的区域的边界内`CRgn`对象。  
+ 确定指定的矩形的任何部分*lpRect*中存储的区域的边界内`CRgn`对象。  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向`RECT`结构或`CRect`对象。 `RECT`结构具有以下形式：  
   
  `typedef struct tagRECT {`  
@@ -744,23 +744,23 @@ void SetRectRgn(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `x1`  
+ *x1*  
  指定的矩形区域的左上角的 x 坐标。  
   
- `y1`  
+ *y1*  
  指定的矩形区域的左上角的 y 坐标。  
   
- `x2`  
+ *x2*  
  指定的矩形区域的右下角的 x 坐标。  
   
- `y2`  
+ *y2*  
  指定的矩形区域的右下角的 y 坐标。  
   
- `lpRect`  
+ *lpRect*  
  指定的矩形区域。 可以是到指针`RECT`结构或`CRect`对象。  
   
 ### <a name="remarks"></a>备注  
- 与不同[CreateRectRgn](#createrectrgn)，但是，它不会分配任何额外的内存从本地的 Windows 应用程序堆。 相反，它使用为该区域存储在分配的空间`CRgn`对象。 这意味着，`CRgn`对象必须具有已初始化与有效的 Windows 区域之前调用`SetRectRgn`。 通过给定的点`x1`， `y1`， `x2`，和`y2`指定分配的空间的最小大小。  
+ 与不同[CreateRectRgn](#createrectrgn)，但是，它不会分配任何额外的内存从本地的 Windows 应用程序堆。 相反，它使用为该区域存储在分配的空间`CRgn`对象。 这意味着，`CRgn`对象必须具有已初始化与有效的 Windows 区域之前调用`SetRectRgn`。 通过给定的点*x1*， *y1*， *x2*，和*y2*指定分配的空间的最小大小。  
   
  使用此函数，而不是`CreateRectRgn`成员函数以避免对本地内存管理器的调用。  
   

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317ce9484cc471611762d10e6f1482f24c2742a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ccc4acfdfd618bf0fa11f4a49c1e0b78f009ca
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378316"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079385"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 提供 Windows 公共进度栏控件的功能。  
@@ -142,27 +142,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定进度栏控件的样式。 应用窗口 stylesdescribed 中的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了以下进度栏控件样式，到控件：  
   
 - `PBS_VERTICAL` 显示垂直进度信息、 上到下。 如果没有此标志，进度栏控件到右显示水平、 左侧。  
   
 - `PBS_SMOOTH` 显示逐步区平滑填写进度栏控件。 如果没有此标志，该控件将填充块。  
   
- `rect`  
- 指定进度栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 因为控件必须是子窗口，指定的坐标是相对于工作区`pParentWnd`。  
+ *rect*  
+ 指定进度栏控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 因为控件必须是子窗口，指定的坐标是相对于工作区*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  通常指定进度栏控件的父窗口`CDialog`。 它不能**NULL。**  
   
- `nID`  
+ *nID*  
  指定进度栏控件的 id。  
   
 ### <a name="return-value"></a>返回值  
  **TRUE**如果`CProgressCtrl`对象是已成功创建; 否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- 构造`CProgressCtrl`两个步骤中的对象。 首先，调用的构造函数，这将创建`CProgressCtrl`对象，，然后调用**创建**，这将创建进度栏控件。  
+ 构造`CProgressCtrl`两个步骤中的对象。 首先，调用的构造函数，这将创建`CProgressCtrl`对象，，然后调用`Create`，这将创建进度栏控件。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
@@ -180,19 +180,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定进度栏控件的样式。 应用中所述的窗口样式的任意组合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
- `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ *rect*  
+ 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向控件的父级的窗口的指针。  
   
- `nID`  
+ *nID*  
  控件的子窗口 id。  
   
 ### <a name="return-value"></a>返回值  
@@ -253,14 +253,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLower`  
+ *nLower*  
  对接收进度栏控件的下限的整数的引用。  
   
- `nUpper`  
+ *nUpper*  
  对接收进度栏控件的上限的整数的引用。  
   
 ### <a name="remarks"></a>备注  
- 此函数将下限和上限限制的值复制到引用的整数`nLower`和`nUpper`分别。  
+ 此函数将下限和上限限制的值复制到引用的整数*nLower*和*nUpper*分别。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
@@ -275,7 +275,7 @@ int GetState() const;
 ### <a name="return-value"></a>返回值  
  当前的进度栏控件，可以为以下值之一的状态：  
   
-|值|状态|  
+|“值”|状态|  
 |-----------|-----------|  
 |`PBST_NORMAL`|正在进行|  
 |`PBST_ERROR`|Error|  
@@ -320,14 +320,14 @@ int GetStep() const;
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
 ##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
- 进度栏控件的当前位置前移由指定的增量`nPos`和重绘滚动条来反映新的位置。  
+ 进度栏控件的当前位置前移由指定的增量*nPos*和重绘滚动条来反映新的位置。  
   
 ```  
 int OffsetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  要前移的位置的量。  
   
 ### <a name="return-value"></a>返回值  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `clrBar`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定进度指示器栏的新颜色。 指定`CLR_DEFAULT`导致进度栏，以使用其默认颜色。|  
+|[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定进度指示器栏的新颜色。 指定`CLR_DEFAULT`导致进度栏，以使用其默认颜色。|  
   
 ### <a name="return-value"></a>返回值  
  进度指示器栏，以前的颜色表示为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，或`CLR_DEFAULT`如果进度指示器栏的颜色为默认颜色。  
@@ -375,7 +375,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ```  
   
 ### <a name="parameters"></a>参数  
- `clrNew`  
+ *clrNew*  
  A **COLORREF**值，该值指定新的背景色。 指定`CLR_DEFAULT`值要用于进度栏的默认背景色。  
   
 ### <a name="return-value"></a>返回值  
@@ -397,8 +397,8 @@ BOOL SetMarquee(
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `fMarqueeMode`|`true` 若要打开选框模式，或`false`关闭字幕模式。|  
-|[in] `nInterval`|以毫秒为单位的字幕动画的更新之间的时间。|  
+|[in]*fMarqueeMode*|`true` 若要打开选框模式，或`false`关闭字幕模式。|  
+|[in]*间隔*|以毫秒为单位的字幕动画的更新之间的时间。|  
   
 ### <a name="return-value"></a>返回值  
  此方法始终返回 `true`。  
@@ -419,14 +419,14 @@ BOOL SetMarquee(
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
 ##  <a name="setpos"></a>  CProgressCtrl::SetPos  
- 设置进度栏控件的当前位置由指定`nPos`和重绘滚动条来反映新的位置。  
+ 设置进度栏控件的当前位置由指定*nPos*和重绘滚动条来反映新的位置。  
   
 ```  
 int SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPos`  
+ *nPos*  
  进度栏控件的新位置。  
   
 ### <a name="return-value"></a>返回值  
@@ -453,10 +453,10 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLower`  
+ *nLower*  
  指定范围的下限 （默认值为零）。  
   
- `nUpper`  
+ *nUpper*  
  指定范围的上限 （默认值为 100）。  
   
 ### <a name="remarks"></a>备注  
@@ -476,7 +476,7 @@ int SetState(int iState);
   
 |参数|描述|  
 |---------------|-----------------|  
-|[in] `iState`|要将进度栏设置到的状态。 使用下列值之一：<br /><br /> - `PBST_NORMAL` -正在进行中<br />- `PBST_ERROR` -错误<br />- `PBST_PAUSED` -暂停|  
+|[in]*iState*|要将进度栏设置到的状态。 使用下列值之一：<br /><br /> - `PBST_NORMAL` -正在进行中<br />- `PBST_ERROR` -错误<br />- `PBST_PAUSED` -暂停|  
   
 ### <a name="return-value"></a>返回值  
  当前进度栏控件的前一个状态。  

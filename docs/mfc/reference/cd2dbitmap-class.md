@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 03c41bc17b6d8e5853203533a2d20d81063316a1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954738"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079284"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 类
 ID2D1Bitmap 包装器。  
@@ -152,7 +152,7 @@ virtual ~CD2DBitmap();
 ```  
   
 ##  <a name="attach"></a>  CD2DBitmap::Attach  
- 附加现有的资源的对象的接口  
+ 附加现有的资源的对象的接口。  
   
 ```  
 void Attach(ID2D1Bitmap* pResource);
@@ -160,7 +160,7 @@ void Attach(ID2D1Bitmap* pResource);
   
 ### <a name="parameters"></a>参数  
  *pResource*  
- 现有资源接口。 不能为 NULL  
+ 现有资源接口。 不能为 NULL。  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  构造中资源的 CD2DBitmap 对象。  
@@ -216,14 +216,14 @@ CD2DBitmap(
  位图的句柄。  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
- 初始化对象  
+ 初始化对象。  
   
 ```  
 void CommonInit();
 ```  
   
 ##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
- 将指定的区域中指定的位图复制到当前位图  
+ 将指定位图中的指定的区域复制到当前位图中。  
   
 ```  
 HRESULT CopyFromBitmap(
@@ -234,19 +234,19 @@ HRESULT CopyFromBitmap(
   
 ### <a name="parameters"></a>参数  
  *pBitmap*  
- 要从复制的位图  
+ 要从复制的位图。  
   
  *destPoint*  
- 在当前的位图，复制到的区域指定 srcRect 的区域的左上角  
+ 在当前位图，将被复制到的区域指定 srcRect 的区域的左上角。  
   
  *srcRect*  
- 要复制的位图区域  
+ 要复制的位图区域。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- 将指定的区域从内存复制到当前位图  
+ 将指定的区域从内存复制到当前位图。  
   
 ```  
 HRESULT CopyFromMemory(
@@ -257,19 +257,19 @@ HRESULT CopyFromMemory(
   
 ### <a name="parameters"></a>参数  
  *srcData*  
- 要复制的数据  
+ 要复制的数据。  
   
  *音调*  
- 跨距或音调、 srcData 中存储了源位图。 Stride 是扫描行 （一行在内存中的像素为单位） 的字节数。 可通过以下公式计算 stride： 像素宽度 * 每个像素 + 内存填充字节数  
+ 跨距或音调、 srcData 中存储了源位图。 Stride 是扫描行 （一行在内存中的像素为单位） 的字节数。 可通过以下公式计算 stride： 像素宽度 * 每像素 + 内存填充字节。  
   
  *destRect*  
- 在当前的位图，复制到的区域指定 srcRect 的区域的左上角  
+ 在当前位图，将被复制到的区域指定 srcRect 的区域的左上角。 
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- 副本从指定的指定的区域呈现目标的当前位图为  
+ 从指定的指定的区域的当前位图到其呈现目标的副本。  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -280,13 +280,13 @@ HRESULT CopyFromRenderTarget(
   
 ### <a name="parameters"></a>参数  
  *pRenderTarget*  
- 包含要复制的区域呈现器目标  
+ 包含要复制的区域呈现器目标。  
   
  *destPoint*  
- 在当前的位图，复制到的区域指定 srcRect 的区域的左上角  
+ 在当前位图，将被复制到的区域指定 srcRect 的区域的左上角。  
   
  *srcRect*  
- 区域中的呈现器目标复制  
+ 呈现器目标要复制的区域。  
   
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
@@ -313,7 +313,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBitmap::Detach  
- 分离资源接口从该对象  
+ 分离资源接口从该对象。  
   
 ```  
 ID2D1Bitmap* Detach();
@@ -323,7 +323,7 @@ ID2D1Bitmap* Detach();
  指向分离的资源接口指针。  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
- 返回 ID2D1Bitmap 接口  
+ 返回 ID2D1Bitmap 接口。  
   
 ```  
 ID2D1Bitmap* Get();
@@ -333,7 +333,7 @@ ID2D1Bitmap* Get();
  指向 ID2D1Bitmap 接口或如果尚未初始化对象的 NULL 指针。  
   
 ##  <a name="getdpi"></a>  CD2DBitmap::GetDPI  
- 返回每英寸点数 (DPI) 的位图  
+ 返回每英寸点数 (DPI) 的位图。  
   
 ```  
 CD2DSizeF GetDPI() const;  
@@ -353,7 +353,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
  位图的像素格式和 alpha 模式。  
   
 ##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
- 返回的大小，以依赖于设备的单位 （像素），该位图的  
+ 返回的位图的大小，以设备相关的单位 （像素）。  
   
 ```  
 CD2DSizeU GetPixelSize() const;  
@@ -363,7 +363,7 @@ CD2DSizeU GetPixelSize() const;
  以像素为单位，位图的大小...  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
- 返回的大小，以独立于设备的像素为单位 (Dip)，该位图的  
+ 返回的位图的大小，以独立于设备的像素为单位 (Dip)。  
   
 ```  
 CD2DSizeF GetSize() const;  
@@ -373,7 +373,7 @@ CD2DSizeF GetSize() const;
  Dip 的位图中的大小。  
   
 ##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
- 检查资源有效性  
+ 检查资源有效性。  
   
 ```  
 virtual BOOL IsValid() const;  

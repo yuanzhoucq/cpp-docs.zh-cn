@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305535"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079431"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR 标头`<cliext/adapter>`指定两个模板类 (`collection_adapter`和`range_adapter`)，该模板函数`make_collection`。  
@@ -80,17 +80,19 @@ STL/CLR 标头`<cliext/adapter>`指定两个模板类 (`collection_adapter`和`r
   
  **Namespace:** cliext 
   
-## <a name="members"></a>成员  
+## <a name="declarations"></a>声明  
   
-|类|Description|  
+|类|描述|  
 |-----------|-----------------|  
 |[collection_adapter (STL/CLR)](#collection_adapter)|包装为一个范围的基类库 (BCL) 集合。|  
 |[range_adapter (STL/CLR)](#range_adapter)|包装为 BCL 集合的范围。|  
 
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|创建范围适配器使用的迭代器对。|   
   
+## <a name="members"></a>成员
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 包装.NET 集合以用作 STL/CLR 容器。 A`collection_adapter`是一种模板类描述一个简单的 STL/CLR 容器对象。 它包装一个基类库 (BCL) 接口，并返回用于处理受控的序列的迭代器对。  
   
@@ -133,7 +135,7 @@ template<typename Key,
   
 ### <a name="specializations"></a>专用化  
   
-|专用化|Description|  
+|专用化|描述|  
 |--------------------|-----------------|  
 |IEnumerable|通过元素的序列。|  
 |ICollection|维护一的组元素。|  
@@ -146,7 +148,7 @@ template<typename Key,
   
 ### <a name="members"></a>成员  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|两个元素间的带符号距离的类型。|  
 |[collection_adapter::iterator (STL/CLR)](#iterator)|受控序列的迭代器的类型。|  
@@ -156,7 +158,7 @@ template<typename Key,
 |[collection_adapter::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|  
 |[collection_adapter::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[collection_adapter::base (STL/CLR)](#base)|指定的已包装的 BCL 接口。|  
 |[collection_adapter::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
@@ -165,7 +167,7 @@ template<typename Key,
 |[collection_adapter::size (STL/CLR)](#size)|对元素数进行计数。|  
 |[collection_adapter::swap (STL/CLR)](#swap)|交换两个容器的内容。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|替换存储的 BCL 句柄。|  
   
@@ -995,17 +997,17 @@ template<typename Iter>
   
 ### <a name="members"></a>成员  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|将构造一个适配器对象。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|替换存储的迭代器对。|  
   
 ### <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.Collections.IEnumerable>|循环访问集合中的元素。|  
 |<xref:System.Collections.ICollection>|维护一的组元素。|  

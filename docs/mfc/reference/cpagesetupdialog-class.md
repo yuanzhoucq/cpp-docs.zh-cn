@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374644"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079178"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 封装由 Windows 公共 OLE“页面设置”对话框提供的服务以及对于设置和修改打印边距的额外支持。  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwFlags`  
+ *dwFlags*  
  可用于自定义的对话框中设置的一个或多个标志。 可以使用按位 OR 运算符组合的值。 这些值的含义如下：  
   
 - **PSD_DEFAULTMINMARGINS**设置最小的允许宽度为页边距会作为打印机的最小值相同。 如果将忽略此标志**PSD_MARGINS**和**PSD_MINMARGINS**还指定标志。  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING**禁用对话框中的绘图区域。  
   
- `pParentWnd`  
+ *pParentWnd*  
  对话框的父或所有者的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 使用的设备名称**CPageSetupDialog**对象。  
+ 使用的设备名称`CPageSetupDialog`对象。  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  调用此函数在调用`DoModal`检索有关打印机设备上下文的信息`CPageSetupDialog`对象。  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向打印机设备上下文的指针。  
   
- `nMessage`  
+ *n 消息*  
  指定一条消息，指出当前绘制页的区域。 可以是以下各项之一：  
   
 - **WM_PSD_FULLPAGERECT**整个页面区域中。  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT**的寄信人地址表示的区域。 此区域扩展到了示例页面区域中的边缘。  
   
- `lpRect`  
+ *lpRect*  
  指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)对象，其中包含的绘图区域的坐标。  
   
 ### <a name="return-value"></a>返回值  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>备注  
  此映像随后会显示为标准 OLE 页面设置对话框中的一部分。 默认实现绘制的文本页的图像。  
   
- 重写此函数可自定义映像或整个图像的特定区域的绘制。 你可以执行此操作通过使用`switch`语句**用例**检查的值的语句`nMessage`。 例如，若要自定义的内容页图像的渲染，无法使用下面的代码示例：  
+ 重写此函数可自定义映像或整个图像的特定区域的绘制。 你可以执行此操作通过使用**切换**语句**用例**检查的值的语句*n 消息*。 例如，若要自定义的内容页图像的渲染，无法使用下面的代码示例：  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- 请注意，不需要处理的每个用例`nMessage`。 您可以选择处理映像的映像或整个区域的多个组件的一个组件。  
+ 请注意，不需要处理的每个用例*n 消息*。 您可以选择处理映像的映像或整个区域的多个组件的一个组件。  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  在绘制打印页的屏幕图像之前由框架调用。  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  指定一个值，指示纸张大小。 此值可以是之一**DMPAPER_** 值中的说明列出[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
   
- `wFlags`  
+ *wFlags*  
  指示的方向的纸张或信封，并且打印机已点矩阵或 HPPCL （Hewlett Packard 打印机控件语言） 设备。 此参数可以具有下列值之一：  
   
 -   0x001 纸张以横向模式 （圆点矩阵）  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f 信封为纵向模式 （圆点矩阵）  
   
- `pPSD`  
+ *pPSD*  
  指向**PAGESETUPDLG**结构。 有关详细信息[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)，请参阅 Windows SDK。  
   
 ### <a name="return-value"></a>返回值  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370866"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078462"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 结构
 `CREATESTRUCT`结构定义传递给应用程序的窗口过程的初始化参数。  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>参数  
- `lpCreateParams`  
+ *lpCreateParams*  
  指向要用于创建窗口的数据。  
   
- `hInstance`  
+ *hInstance*  
  标识拥有新的窗口中的模块的模块实例句柄。  
   
- `hMenu`  
+ *hMenu*  
  标识要使用新的窗口的菜单。 如果一个子窗口，将包含整数 id。  
   
- `hwndParent`  
+ *hwndParent*  
  标识拥有新的窗口的窗口。 此成员是**NULL**如果新的窗口为顶级窗口。  
   
- `cy`  
+ *cy*  
  指定新的窗口的高度。  
   
- `cx`  
+ *cx*  
  指定新的窗口的宽度。  
   
- `y`  
+ *y*  
  指定的新窗口的左上角的 y 坐标。 如果新的窗口是子窗口; 坐标是相对于父窗口否则坐标是相对于屏幕源。  
   
- `x`  
+ *x*  
  指定的新窗口的左上角的 x 坐标。 如果新的窗口是子窗口; 坐标是相对于父窗口否则坐标是相对于屏幕源。  
   
- `style`  
+ *style*  
  指定新的窗口[样式](../../mfc/reference/styles-used-by-mfc.md)。  
   
- `lpszName`  
+ *在 lpszName*  
  指向以 null 结尾的字符串，指定新窗口的名称。  
   
- `lpszClass`  
+ *lpszClass*  
  指向以 null 结尾的字符串，指定新窗口的窗口类名称 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构; 有关详细信息，请参阅 Windows SDK)。  
   
- `dwExStyle`  
+ *dwExStyle*  
  指定[扩展样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新窗口。  
   
 ## <a name="requirements"></a>要求  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376039"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078694"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 类
 `CSettingsStoreSP`类是可用于创建的实例的帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
@@ -55,7 +55,7 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`m_dwUserData`|自定义用户数据存储在`CSettingsStoreSP`对象。 你提供的构造函数中的此数据`CSettingsStoreSP`对象。|  
 |`m_pRegistry`|`CSettingsStore`-派生对象`Create`方法创建。|  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `bAdmin`  
+ [in]*bAdmin*  
  布尔参数可确定是否`CSettingsStore`在管理员模式下创建对象。  
   
- [in] `bReadOnly`  
+ [in]*bReadOnly*  
  布尔参数可确定是否`CSettingsStore`对象创建为只读访问权限。  
   
 ### <a name="return-value"></a>返回值  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  如果你创建`CSettingsStore`对象在管理员模式下，所有注册表访问的默认位置为 HKEY_LOCAL_MACHINE。 否则，所有注册表访问的默认位置为 HKEY_CURRENT_USER。  
   
- 如果`bAdmin`是`TRUE`，应用程序必须具有管理权限。 否则，它将它尝试访问注册表时失败。  
+ 如果*bAdmin*是`TRUE`，应用程序必须具有管理权限。 否则，它将它尝试访问注册表时失败。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何使用`Create`方法`CSettingsStoreSP`类。  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `dwUserData`  
+ [in]*dwUserData*  
  用户定义的数据，`CSettingsStoreSP`对象存储。  
   
 ### <a name="remarks"></a>备注  
- `CSettingsStoreSP`对象将从数据存储`dwUserData`在受保护的成员变量`m_dwUserData`。  
+ `CSettingsStoreSP`对象将从数据存储*dwUserData*在受保护的成员变量`m_dwUserData`。  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  设置运行时类。 该方法[CSettingsStoreSP::Create](#create)运行时类用于确定要创建的对象类型。  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pRTI`  
+ [in]*pRTI*  
  指向类的运行时类信息的指针派生自[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果成功，则，`FALSE`如果通过标识类`pRTI`不派生自`CSettingsStore`。  
+ `TRUE` 如果成功，则，`FALSE`如果通过标识类*pRTI*不派生自`CSettingsStore`。  
   
 ### <a name="remarks"></a>备注  
  你可以使用[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)派生的类`CSettingsStore`。 使用方法`SetRuntimeClass`如果你想要创建自定义类派生自的对象`CSettingsStore`。  

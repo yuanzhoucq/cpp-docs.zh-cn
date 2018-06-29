@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376169"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079624"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 表示属性表的各个页，也称为选项卡对话框。  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDTemplate`  
+ *nIDTemplate*  
  为此页使用的模板的 ID。  
   
- `nIDCaption`  
+ *nIDCaption*  
  要放入此页的选项卡名称的 ID。 如果为 0，名称将取自对话框模板的此页。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含一个以 null 结尾的字符串，它的模板资源名称。  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  要放入的属性页标题的标题位置名称的 ID。 默认情况下，0。  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  要放入的属性页页眉的副标题位置名称的 ID。 默认情况下，0。  
   
 ### <a name="remarks"></a>备注  
@@ -189,9 +189,9 @@ void Construct(
   
 -   用户已选定 （选项到卡式） 此页。  
   
- 调用**构造**如果尚未调用的其他类构造函数之一。 `Construct`成员函数是灵活，因为您可以将参数语句留空，然后在代码中指定多个参数和任何时候的构造。  
+ 调用`Construct`如果尚未调用的其他类构造函数之一。 `Construct`成员函数是灵活，因为您可以将参数语句留空，然后在代码中指定多个参数和任何时候的构造。  
   
- 必须使用`Construct`当处理数组，并且你必须调用**构造**数组的每个成员，以便数据成员分配适当的值。  
+ 必须使用`Construct`当处理数组，并且你必须调用`Construct`数组的每个成员，以便数据成员分配适当的值。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDTemplate`  
+ *nIDTemplate*  
  为此页使用的模板的 ID。  
   
- `nIDCaption`  
+ *nIDCaption*  
  要放入此页的选项卡名称的 ID。 如果为 0，名称将取自对话框模板的此页。  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  指向包含模板的此页的名称的字符串。 不能为**NULL**。  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  要放入的属性页标题的标题位置名称的 ID。  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  要放入的属性页页眉的副标题位置名称的 ID。  
   
 ### <a name="remarks"></a>备注  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>参数  
- `wParam`  
+ *wParam*  
  指定消息相关的其他信息。  
   
- `lParam`  
+ *lParam*  
  指定消息相关的其他信息  
   
 ### <a name="return-value"></a>返回值  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bChanged`  
+ *bChanged*  
  **TRUE**以指示是否尚未中应用; 的上次修改的属性页设置**FALSE**以指示已应用，或应忽略的属性页设置。  
   
 ### <a name="remarks"></a>备注  

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377457"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079768"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 表示属性表，也称为选项卡对话框。  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pPage`  
+ *pPage*  
  指向以页后，可以添加到属性表。 不能为**NULL**。  
   
 ### <a name="remarks"></a>备注  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDCaption`  
+ *nIDCaption*  
  要用于属性表标题的 ID。  
   
- `pParentWnd`  
+ *pParentWnd*  
  到属性表的父窗口的指针。 如果**NULL**，父窗口将应用程序的主窗口。  
   
- `iSelectPage`  
+ *iSelectPage*  
  最初将成为在最前面的页的索引。 默认值为添加到表中的第一页。  
   
- `pszCaption`  
+ *pszCaption*  
  指向包含要用于属性表的标题的字符串的指针。 不能为**NULL**。  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  在属性页水印位图的句柄。  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  水印位图和/或标头位图的调色板的句柄。  
   
- `hbmHeader`  
+ *hbmHeader*  
  属性页的标头位图的句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -253,7 +253,7 @@ void Construct(
   
  若要显示属性表，请调用[DoModal](#domodal)或[创建](#create)。 将在属性表的标题栏中放置的第一个参数中包含的字符串。  
   
- 如果你使用的第三个或第四个原型，你可以自动显示水印和/或标头的图像`Construct`，列出更高版本，且您传递有效的值`hbmWatermark`， `hpalWatermark`，和/或`hbmHeader`参数。  
+ 如果你使用的第三个或第四个原型，你可以自动显示水印和/或标头的图像`Construct`，列出更高版本，且您传递有效的值*hbmWatermark*， *hpalWatermark*和/或*hbmHeader*参数。  
   
 ### <a name="example"></a>示例  
  下面的示例演示在什么情况下，您将调用`Construct`。  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDCaption`  
+ *nIDCaption*  
  要用于属性表标题的 ID。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向属性表的父窗口。 如果**NULL**，父窗口将应用程序的主窗口。  
   
- `iSelectPage`  
+ *iSelectPage*  
  最初将成为在最前面的页的索引。 默认值为添加到表中的第一页。  
   
- `pszCaption`  
+ *pszCaption*  
  指向包含要用于属性表的标题的字符串。 不能为**NULL**。  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  属性表的背景位图句柄。  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  水印位图和/或标头位图的调色板的句柄。  
   
- `hbmHeader`  
+ *hbmHeader*  
  属性页的标头位图句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -324,7 +324,7 @@ CPropertySheet(
   
  如果你有多个参数 （例如，如果你使用的数组），使用[构造](#construct)而不是`CPropertySheet`。  
   
- 如果你使用的第三个或第四个原型，你可以自动显示水印和/或标头的图像`CPropertySheet`、 更高版本，并将有效的值传递`hbmWatermark`， `hpalWatermark`，和/或`hbmHeader`参数。  
+ 如果你使用的第三个或第四个原型，你可以自动显示水印和/或标头的图像`CPropertySheet`、 更高版本，并将有效的值传递*hbmWatermark*， *hpalWatermark*，和 /或*hbmHeader*参数。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
@@ -339,26 +339,26 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  指向以父窗口。 如果**NULL**，父情况是桌面。  
   
- `dwStyle`  
+ *dwStyle*  
  属性表的窗口样式。 有关可用样式的完整列表，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- `dwExStyle`  
+ *dwExStyle*  
  属性表的扩展的窗口样式。 有关可用样式的完整列表，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则创建属性表则不为否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 调用**创建**可以是在构造函数中，或后调用的构造函数可以调用它。  
+ 调用`Create`可以是在构造函数中，或后调用的构造函数可以调用它。  
   
- 默认样式，表示通过将传递为-1 表示`dwStyle`，实际**WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_可见**。 默认值扩展窗口样式，表示通过将 0 作为传递`dwExStyle`，实际**WS_EX_DLGMODALFRAME**。  
+ 默认样式，表示通过将传递为-1 表示*dwStyle*，实际**WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE**。 默认值扩展窗口样式，表示通过将 0 作为传递*dwExStyle*，实际**WS_EX_DLGMODALFRAME**。  
   
- **创建**成员函数将在创建属性表后立即返回。 若要销毁属性表，调用[cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。  
+ `Create`成员函数将在创建属性表后立即返回。 若要销毁属性表，调用[cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。  
   
- 无模式属性表显示通过调用**创建**没有确定、 取消，立即应用和帮助按钮，模式属性表一样。 必须由用户创建所需的按钮。  
+ 无模式属性表显示通过调用`Create`没有确定、 取消，立即应用和帮助按钮，模式属性表一样。 必须由用户创建所需的按钮。  
   
  若要显示模式属性表，请调用[DoModal](#domodal)相反。  
   
@@ -418,13 +418,13 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bStacked`  
- 指示是否属性表中启用堆积选项卡。 通过设置来禁用堆积的行标记`bStacked`到**FALSE**。  
+ *bStacked*  
+ 指示是否属性表中启用堆积选项卡。 通过设置来禁用堆积的行标记*bStacked*到**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- 默认情况下，如果属性表具有更多选项卡而不能显示在宽度属性表的单个行中选项卡将堆积在多行。 若要使用滚动选项卡而不是堆叠选项卡，调用`EnableStackedTabs`与`bStacked`设置为**FALSE**之前调用[DoModal](#domodal)或[创建](#create)。  
+ 默认情况下，如果属性表具有更多选项卡而不能显示在宽度属性表的单个行中选项卡将堆积在多行。 若要使用滚动选项卡而不是堆叠选项卡，调用`EnableStackedTabs`与*bStacked*设置为**FALSE**之前调用[DoModal](#domodal)或[创建](#create).  
   
- 必须调用`EnableStackedTabs`在创建模式或无模式属性表。 将在此样式`CPropertySheet`-派生类中，消息处理程序编写为`WM_CREATE`。 中的重写版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，调用**EnableStackedTabs (FALSE)** 之前调用基类实现。  
+ 必须调用`EnableStackedTabs`在创建模式或无模式属性表。 将在此样式`CPropertySheet`-派生类中，为 WM_CREATE 编写消息处理程序。 中的重写版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，调用**EnableStackedTabs (FALSE)** 之前调用基类实现。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
@@ -485,11 +485,11 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPage`  
+ *nPage*  
  索引所需的页上，从 0 开始。 必须是介于 0 和一个小于 （含） 的属性表中的页面数之间。  
   
 ### <a name="return-value"></a>返回值  
- 指向对应的页面的指针`nPage`参数。  
+ 指向对应的页面的指针*nPage*参数。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pPage`  
+ *pPage*  
  指向包含要查找的索引的页面。 不能为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -547,7 +547,7 @@ CTabCtrl* GetTabControl() const;
  其成员存储的特征的结构[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。  
   
 ### <a name="remarks"></a>备注  
- 使用此结构来初始化属性表的外观，它构造之后，但它显示为带之前[DoModal](#domodal)成员函数。 例如，设置`dwSize`的成员`m_psh`你想要具有的属性表的大小。  
+ 使用此结构来初始化属性表的外观，它构造之后，但它显示为带之前[DoModal](#domodal)成员函数。 例如，设置*dwSize*的成员`m_psh`你想要具有的属性表的大小。  
   
  此结构，包括其成员的列表的详细信息请参阅**PROPSHEETHEADER** Windows SDK 中。  
   
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpRect`  
+ *lpRect*  
  指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)包含对话框中的对象要转换的坐标。  
   
 ### <a name="remarks"></a>备注  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 函数将返回系统字体的大小信息，但你可以指定不同的字体的每个属性表，如果你使用**DS_SETFONT**设置中的样式资源定义文件。 [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows 函数，在 Windows SDK 中，将会介绍用于此对话框中的相应的字体。  
   
- `MapDialogRect`成员函数将替换中的对话框单元`lpRect`与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
+ `MapDialogRect`成员函数将替换中的对话框单元*lpRect*与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
   
 ##  <a name="oninitdialog"></a>  Cpropertysheet:: Oninitdialog  
  替代来增加属性表初始化。  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指定应用程序是否已将输入的焦点设置到其中一个属性表中的控件。 如果**OnInitDialog**返回非零，则 Windows 会将输入的焦点设置到属性表中的第一个控件。 只有当它已显式设置为它的一个属性表中控件的输入的焦点，则该应用程序可以返回 0。  
+ 指定应用程序是否已将输入的焦点设置到其中一个属性表中的控件。 如果`OnInitDialog`返回非零，则 Windows 会将输入的焦点设置到属性表中的第一个控件。 只有当它已显式设置为它的一个属性表中控件的输入的焦点，则该应用程序可以返回 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数调用以响应**WM_INITDIALOG**消息。 此消息将发送到属性表期间[创建](#create)或[DoModal](#domodal)调用，在显示属性表之前立即发生。  
+ 此成员函数调用以响应 WM_INITDIALOG 消息中。 此消息将发送到属性表期间[创建](#create)或[DoModal](#domodal)调用，在显示属性表之前立即发生。  
   
  如果你需要执行特殊处理，在初始化属性表时，重写该成员函数。 在重写的版本中，首先调用基类`OnInitDialog`但忽略其返回值。 通常将返回**TRUE**从你重写的成员函数。  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nButton`  
+ *nButton*  
  nButton： 标识要按下的按钮。 此参数可以是以下值之一：  
   
 - **PSBTN_BACK**选择后退按钮。  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pPage`  
+ *pPage*  
  指向以页后，可以从属性表中删除。 不能为 `NULL`。  
   
- `nPage`  
+ *nPage*  
  要删除的页的索引。 必须是介于 0 和一个小于 （含） 的属性表中的页面数之间。  
   
 ### <a name="remarks"></a>备注  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nPage`  
+ *nPage*  
  要设置的页的索引。 它必须是介于 0 和一个小于 （含） 的属性表中的页面数之间。  
   
- `pPage`  
+ *pPage*  
  指向要设置的属性表中的页。 它不能是**NULL**。  
   
 ### <a name="return-value"></a>返回值  
@@ -672,7 +672,7 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszText`  
+ *lpszText*  
  指向要显示在完成命令按钮的文本。  
   
 ### <a name="remarks"></a>备注  
@@ -691,10 +691,10 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStyle`  
+ *nStyle*  
  指定的属性表标题的样式。 必须指定的样式，0 或作为**PSH_PROPTITLE**。 如果将样式设置为**PSH_PROPTITLE**，在指定为标题文本之后显示单词"属性"。 例如，调用`SetTitle`("简单" **PSH_PROPTITLE**) 将导致在属性表标题的"简单属性。  
   
- `lpszText`  
+ *lpszText*  
  指向要将其用于在属性表的标题栏中标题的文本。  
   
 ### <a name="remarks"></a>备注  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwFlags`  
+ *dwFlags*  
  一组自定义的函数和向导按钮外观的标志。 此参数可以是以下值的组合：  
   
 - **PSWIZB_BACK**后退按钮  

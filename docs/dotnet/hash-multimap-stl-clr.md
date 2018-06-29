@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8b14a4941a280d34e29de80f343981a0f6d20e5
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305847"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079885"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`hash_multimap`若要管理的元素序列作为哈希表，每个表项存储双向链接列表的节点，并存储一个元素，每个节点。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
@@ -145,8 +145,8 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
- Key  
+### <a name="parameters"></a>参数  
+ 键  
  受控序列中的元素的关键组件的类型。  
   
  映射  
@@ -159,7 +159,7 @@ template<typename Key,
 
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[hash_multimap::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[hash_multimap::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -180,7 +180,7 @@ template<typename Key,
 |[hash_multimap::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[hash_multimap::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[hash_multimap::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[hash_multimap::bucket_count (STL/CLR)](#bucket_count)|对存储桶的数量进行计数。|  
@@ -208,13 +208,13 @@ template<typename Key,
 |[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[hash_multimap::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[hash_multimap::operator= (STL/CLR)](#op)|替换受控序列。|  
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -1545,7 +1545,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的密钥值。  
   
  其中  

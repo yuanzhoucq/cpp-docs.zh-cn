@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368415"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078603"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 类
 与[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。  
@@ -86,8 +86,8 @@ CRichEditCntrItem(
  *preo*  
  指向[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)结构描述一个 OLE 项。 新`CRichEditCntrItem`对象构造此 OLE 项周围。 如果*preo*是**NULL**，客户端项为空。  
   
- `pContainer`  
- 指向将包含该项的容器文档的指针。 如果`pContainer`是**NULL**，你必须明确地调用[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)将此客户端项添加到文档。  
+ *pContainer*  
+ 指向将包含该项的容器文档的指针。 如果*pContainer*是**NULL**，你必须明确地调用[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)将此客户端项添加到文档。  
   
 ### <a name="remarks"></a>备注  
  此函数不执行任何 OLE 初始化。  
@@ -95,7 +95,7 @@ CRichEditCntrItem(
  有关详细信息，请参阅[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的结构。  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- 调用此函数可同步设备方面， [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，此**CRichEditCntrltem**到指定的*reo*。  
+ 调用此函数可同步设备方面， [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，此`CRichEditCntrltem`到指定的*reo*。  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);

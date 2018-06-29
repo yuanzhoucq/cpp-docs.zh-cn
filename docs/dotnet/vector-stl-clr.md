@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305766"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079807"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 此模板类描述控制变长序列的元素具有随机访问的对象。 使用容器`vector`管理作为一个连续存储的块的元素序列。 块以根据需要增长数组的形式实现。  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  “值”  
  受控序列中的元素的类型。  
   
@@ -146,7 +146,7 @@ template<typename Value>
 
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[vector::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[vector::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -162,7 +162,7 @@ template<typename Value>
 |[vector::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|  
 |[vector::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[vector::assign (STL/CLR)](#assign)|替换所有元素。|  
 |[vector::at (STL/CLR)](#at)|访问指定位置处的元素。|  
@@ -186,12 +186,12 @@ template<typename Value>
 |[vector::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
 |[vector::vector (STL/CLR)](#vector)|构造容器对象。|  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |[vector::back_item (STL/CLR)](#back_item)|访问最后一个元素。|  
 |[vector::front_item (STL/CLR)](#front_item)|访问第一个元素。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[vector::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[vector::operator(STL/CLR)](#op)|访问指定位置处的元素。|  
@@ -204,7 +204,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -225,10 +225,7 @@ template<typename Value>
   
  擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但是，请注意的容器的句柄不会销毁它的元素。  
   
-## <a name="requirements"></a>要求  
- **标头：** \<cliext/向量 >  
-  
- **Namespace:** cliext  
+## <a name="members"></a>成员
 
 ## <a name="assign"></a> vector:: assign (STL/CLR)
 替换所有元素。  
@@ -255,7 +252,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的元素的值。  
   
 ### <a name="remarks"></a>备注  
@@ -1337,7 +1334,7 @@ void insert(iterator where,
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的元素的值。  
   
  其中  
@@ -1881,7 +1878,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  受控序列的新大小。  
   
- val  
+ Val  
  填充元素的值。  
   
 ### <a name="remarks"></a>备注  
@@ -2252,7 +2249,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
  右  
  要插入的对象或范围。  
   
- val  
+ Val  
  要插入的元素的值。  
   
 ### <a name="remarks"></a>备注  

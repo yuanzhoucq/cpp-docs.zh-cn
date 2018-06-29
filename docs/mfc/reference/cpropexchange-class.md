@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377335"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078403"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 类
 支持 OLE 控件持久性的实现。  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszPropName`  
+ *pszPropName*  
  要交换的属性的名称。  
   
- `phBlob`  
+ *phBlob*  
  指针到指向该属性的存储位置的变量 （变量通常是你的类的成员）。  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  属性的默认值。  
   
 ### <a name="return-value"></a>返回值  
  如果 exchange 成功; 则为非 0如果不成功，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 读取或写入，根据需要，引用的变量属性的值`phBlob`。 如果`hBlobDefault`指定，它将用作该属性的默认值。 如果出于任何原因，控制的序列化失败，则使用此值。  
+ 读取或写入，根据需要，引用的变量属性的值*phBlob*。 如果*hBlobDefault*指定，它将用作该属性的默认值。 如果出于任何原因，控制的序列化失败，则使用此值。  
   
  函数**CArchivePropExchange::ExchangeBlobProp**， **CResetPropExchange::ExchangeBlobProp**，和**CPropsetPropExchange::ExchangeBlobProp**重写此纯虚拟函数。  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszPropName`  
+ *pszPropName*  
  要交换的属性的名称。  
   
- `font`  
+ *字体*  
  对引用[CFontHolder](../../mfc/reference/cfontholder-class.md)包含字体属性的对象。  
   
- `pFontDesc`  
- 指向的指针[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)结构，它包含用于初始化字体属性的默认状态的值时`pFontDispAmbient`是**NULL**。  
+ *pFontDesc*  
+ 指向的指针[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)结构，它包含用于初始化字体属性的默认状态的值时*pFontDispAmbient*是**NULL**。  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  指向的指针**IFontDisp**接口的一种字体用于初始化字体属性的默认状态。  
   
 ### <a name="return-value"></a>返回值  
  如果 exchange 成功; 则为非 0如果不成功，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果字体属性从介质加载到控件时，将从该媒体检索字体的特征和`CFontHolder`所引用对象`font`与其初始化。 如果正在存储字体属性，字体对象中的特征写入到介质。  
+ 如果字体属性从介质加载到控件时，将从该媒体检索字体的特征和`CFontHolder`所引用对象*字体*与其初始化。 如果正在存储字体属性，字体对象中的特征写入到介质。  
   
  函数**CArchivePropExchange::ExchangeFontProp**， **CResetPropExchange::ExchangeFontProp**，和**CPropsetPropExchange::ExchangeFontProp**重写此纯虚拟函数。  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszPropName`  
+ *pszPropName*  
  要交换的属性的名称。  
   
- `ppUnk`  
+ *ppUnk*  
  指向包含的属性指向的指针的变量的指针**IUnknown** （此变量通常是你的类的成员） 的接口。  
   
- `iid`  
+ *iid*  
  在控件将使用的属性上的接口的接口 ID。  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  属性的默认值。  
   
 ### <a name="return-value"></a>返回值  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pszPropName`  
+ *pszPropName*  
  要交换的属性的名称。  
   
- `vtProp`  
+ *vtProp*  
  指定要交换的属性的类型的符号。 可能的值有：  
   
 |符号|属性类型|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  指向该属性的值的指针。  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  如果 exchange 成功; 则为非 0如果不成功，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 从媒体中检索属性从介质加载到控件时，如果属性的值并存储指向的对象在`pvProp`。 如果属性存储到介质，对象的值的指向`pvProp`写入介质。  
+ 从媒体中检索属性从介质加载到控件时，如果属性的值并存储指向的对象在*pvProp*。 如果属性存储到介质，对象的值的指向*pvProp*写入介质。  
   
  函数**CArchivePropExchange::ExchangeProp**， **CResetPropExchange::ExchangeProp**，和**CPropsetPropExchange::ExchangeProp**替代这纯虚函数。  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  对将存储永久性数据正在加载的版本号的变量的引用。  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  控件的当前版本号。  
   
- `bConvert`  
+ *bConvert*  
  指示是否将持久数据转换为最新版本，或使其保持已加载的版本相同。  
   
 ### <a name="return-value"></a>返回值  

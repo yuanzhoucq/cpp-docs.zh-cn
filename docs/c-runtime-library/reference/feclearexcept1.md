@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399018"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070072"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -72,7 +72,7 @@ int feclearexcept(
 |FE_INVALID|早期浮点运算中发生域错误。|
 |FE_OVERFLOW|范围出错；早期浮点运算结果过大而无法表示。|
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
-|FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
+|FE_ALL_EXCEPT|所有受支持的浮点异常的按位 OR。|
 
 *Excepts*参数可能为零或一个或多个受支持的异常宏的按位或。 任何其他参数值的结果均未定义。
 

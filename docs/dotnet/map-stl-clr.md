@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305821"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079898"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`map`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
@@ -147,8 +147,8 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
- Key  
+### <a name="parameters"></a>参数  
+ 键  
  受控序列中的元素的关键组件的类型。  
   
  映射  
@@ -161,7 +161,7 @@ template<typename Key,
   
 ## <a name="declarations"></a>声明
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[map::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[map::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -181,7 +181,7 @@ template<typename Key,
 |[map::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[map::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[map::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[map::clear (STL/CLR)](#clear)|删除所有元素。|  
@@ -204,7 +204,7 @@ template<typename Key,
 |[map::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[map::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[map::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[map::operator(STL/CLR)](#op)|将键映射到其关联的映射值。|  
@@ -217,7 +217,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -1148,7 +1148,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的密钥值。  
   
  其中  

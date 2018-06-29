@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368626"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078253"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 结构
 `COMPAREITEMSTRUCT`结构提供的标识符和排序、 所有者描述列表框或组合框中的两个项的应用程序提供数据。  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>参数  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** （它指定一个所有者描述列表框） 或**ODT_COMBOBOX** （它指定一个所有者描述组合框）。  
   
- `CtlID`  
+ *CtlID*  
  列表框或组合框的控件 ID。  
   
- `hwndItem`  
+ *hwndItem*  
  控件的窗口句柄。  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  要比较的第二项应用程序提供数据。 将项添加到组合或列表框中的调用中传递此值。  
   
 ## <a name="remarks"></a>备注  
- 每当应用程序将新项添加到一个所有者描述的列表框或组合框创建与**CBS_SORT**或**LBS_SORT**样式，Windows 将向所有者发送`WM_COMPAREITEM`消息。 `lParam`消息参数包含的长指针`COMPAREITEMSTRUCT`结构。 接收消息后，所有者比较的两个项，并返回一个值，该值哪一项进行排序之前另。  
+ 每当应用程序将新项添加到一个所有者描述的列表框或组合框创建与**CBS_SORT**或**LBS_SORT**样式，Windows 将向所有者发送 WM_COMPAREITEM 消息。 *LParam*消息参数包含的长指针`COMPAREITEMSTRUCT`结构。 接收消息后，所有者比较的两个项，并返回一个值，该值哪一项进行排序之前另。  
   
 ## <a name="requirements"></a>要求  
  **标头：** winuser.h  

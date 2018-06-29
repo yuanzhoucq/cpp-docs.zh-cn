@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952049"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078551"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 类
 ID2D1Brush 包装器。  
@@ -110,7 +110,7 @@ virtual ~CD2DBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DBrush::Attach  
- 附加现有的资源的对象的接口  
+ 附加现有的资源的对象的接口。  
   
 ```  
 void Attach(ID2D1Brush* pResource);
@@ -118,7 +118,7 @@ void Attach(ID2D1Brush* pResource);
   
 ### <a name="parameters"></a>参数  
  *pResource*  
- 现有资源接口。 不能为 NULL  
+ 现有资源接口。 不能为 NULL。  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  构造 CD2DBrush 对象。  
@@ -148,7 +148,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBrush::Detach  
- 分离资源接口从该对象  
+ 分离资源接口从该对象。  
   
 ```  
 ID2D1Brush* Detach();
@@ -175,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个介于 0 与 1，该值指示的不透明度的画笔之间的值。 此值是常数乘数，可线性缩放由画笔填充的所有像素的 alpha 值。 不透明度值限制为 0 到 1 范围内之前它们相乘  
+ 一个介于 0 与 1，该值指示的不透明度的画笔之间的值。 此值是常数乘数，可线性缩放由画笔填充的所有像素的 alpha 值。 不透明度值在 0 到 1 范围限制为之前它们相乘。  
   
 ##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  获取当前呈现器目标的转换  
@@ -186,7 +186,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
   
 ### <a name="parameters"></a>参数  
  *transform*  
- 当此方法返回时，包含当前呈现器目标的转换。 此参数未经初始化即被传递  
+ 当此方法返回时，包含当前呈现器目标的转换。 此参数未经初始化即被传递。  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  检查资源有效性  
@@ -231,10 +231,10 @@ void SetOpacity(FLOAT opacity);
   
 ### <a name="parameters"></a>参数  
  *不透明度*  
- 一个介于 0 与 1，该值指示的不透明度的画笔之间的值。 此值是常数乘数，可线性缩放由画笔填充的所有像素的 alpha 值。 不透明度值限制为 0 到 1 范围内之前它们相乘  
+ 一个介于 0 与 1，该值指示的不透明度的画笔之间的值。 此值是常数乘数，可线性缩放由画笔填充的所有像素的 alpha 值。 不透明度值在 0 到 1 范围限制为之前它们相乘。  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
- 适用于呈现器目标，替换现有转换指定的转换。 所有后续的绘图操作将在转换后的空间  
+ 适用于呈现器目标，替换现有转换指定的转换。 所有后续绘图操作发生在转换后的空间中。  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);

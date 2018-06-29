@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305541"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079702"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 此模板类描述控制元素的长短序列，可先入先出访问的对象。 使用容器适配器`queue`来管理为队列的基础容器。  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  “值”  
  受控序列中的元素的类型。  
   
@@ -111,7 +111,7 @@ template<typename Value,
 
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[queue::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
 |[queue::container_type (STL/CLR)](#container_type)|基础容器的类型。|  
@@ -122,7 +122,7 @@ template<typename Value,
 |[queue::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|  
 |[queue::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[queue::assign (STL/CLR)](#assign)|替换所有元素。|  
 |[queue::back (STL/CLR)](#back)|访问最后一个元素。|  
@@ -135,12 +135,12 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|对元素数进行计数。|  
 |[queue::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |[queue::back_item (STL/CLR)](#back_item)|访问最后一个元素。|  
 |[queue::front_item (STL/CLR)](#front_item)|访问第一个元素。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[queue::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[operator!= (queue) (STL/CLR)](#op_neq)|确定如果`queue`对象是否不等于另一个`queue`对象。|  
@@ -152,12 +152,12 @@ template<typename Value,
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |IQueue\<值、 容器 >|维护泛型容器适配器。|  
   
-### <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注  
  对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 对象限制的访问权限只将推送的第一个元素并弹出的最后一个元素，实现第一个在先进先出队列 （也称为 FIFO 队列或只需队列）。  
   
 ## <a name="members"></a>成员

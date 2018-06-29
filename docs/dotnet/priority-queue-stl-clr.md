@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306029"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079526"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此模板类描述控制不同的长度为排序的元素序列，具有有限访问权限的对象。 使用容器适配器`priority_queue`管理作为优先级队列的基础容器。  
   
  在下面，描述`GValue`相同`Value`后者为 ref 类型，除非在这种情况下很`Value^`。 同样，`GContainer`相同`Container`后者为 ref 类型，除非在这种情况下很`Container^`。  
   
-### <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  “值”  
  受控序列中的元素的类型。  
   
@@ -98,7 +98,7 @@ template<typename Value,
 
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[priority_queue::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
 |[priority_queue::container_type (STL/CLR)](#container_type)|基础容器的类型。|  
@@ -110,7 +110,7 @@ template<typename Value,
 |[priority_queue::value_compare (STL/CLR)](#value_compare)|用于两个元素的排序委托。|  
 |[priority_queue::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[priority_queue::assign (STL/CLR)](#assign)|替换所有元素。|  
 |[priority_queue::empty (STL/CLR)](#empty)|测试元素是否存在。|  
@@ -123,22 +123,22 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](#to_array)|受控的序列复制到新数组。|  
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|将复制两个元素的排序委托。|  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |[priority_queue::top_item (STL/CLR)](#top_item)|访问优先级最高的元素。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[priority_queue::operator= (STL/CLR)](#op_as)|替换受控序列。|  
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |IPriorityQueue\<值、 容器 >|维护泛型容器适配器。|  
   
-### <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注  
  对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 它会保留为堆，与的优先级最高的元素 （顶部元素） 轻松地访问和可移动排序的序列。 对象限制的访问权限将新元素推送和弹出只是优先级最高的元素，实现优先级队列。  
   
  该对象进行排序它通过调用类型的存储的委托对象控制的序列[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)。 在构造 priority_queue; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<(value_type, value_type)`。 通过调用成员函数来访问此存储的对象[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`。  

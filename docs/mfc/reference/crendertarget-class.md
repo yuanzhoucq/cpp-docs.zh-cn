@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7550e3e3d8bf7e49f9f93ea6e9a931d6567ef0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab1f4a056e1a65475a71ede0b51db45189d2dd9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377753"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079748"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 类
 ID2D1RenderTarget 包装器。  
@@ -217,7 +217,7 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|指向 CD2DResource 对象的指针的列表。|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|指向 ID2D1RenderTarget 对象的指针。|  
@@ -246,7 +246,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRenderTarget`  
+ *pRenderTarget*  
  现有呈现器目标接口。 不能为 NULL  
   
 ##  <a name="begindraw"></a>  CRenderTarget::BeginDraw  
@@ -264,7 +264,7 @@ void Clear(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  向其清除的绘图区域的颜色。  
   
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
@@ -277,10 +277,10 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ```  
   
 ### <a name="parameters"></a>参数  
- `color`  
+ *颜色*  
  RGB 值。  
   
- `nAlpha`  
+ *nAlpha*  
   
 ### <a name="return-value"></a>返回值  
  D2D1_COLOR_F 值。  
@@ -298,19 +298,19 @@ BOOL CreateCompatibleRenderTarget(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bitmapTarget`  
+ *bitmapTarget*  
  此方法返回时，包含指向新的位图呈现器目标的指针的地址。 此参数未经初始化即被传递。  
   
- `sizeDesired`  
+ *sizeDesired*  
  新的呈现器目标以是否应将其不同于原始独立于设备的像素为单位的所需的大小呈现器目标，则为 NULL。 有关详细信息，请参阅“备注”部分。  
   
- `sizePixelDesired`  
+ *sizePixelDesired*  
  以像素为单位是否应将其不同于原始新的呈现器目标所需的大小呈现器目标，则为 NULL。 有关详细信息，请参阅“备注”部分。  
   
- `desiredFormat`  
+ *desiredFormat*  
  所需的像素格式和新的 alpha 模式呈现器目标，则为 NULL。 如果像素格式设置为 DXGI_FORMAT_UNKNOWN 或者如果此参数为 null，新的呈现器目标将使用相同的像素格式，作为原始呈现器目标。 如果 alpha 模式 D2D1_ALPHA_MODE_UNKNOWN 或此参数为 NULL，则新的呈现器目标的 alpha 模式将默认为 D2D1_ALPHA_MODE_PREMULTIPLIED。 有关受支持的像素格式的信息，请参阅受支持像素格式和 Alpha 模式。  
   
- `options`  
+ *options*  
  一个值，指定新的呈现器目标是否必须与 GDI 兼容。  
   
 ### <a name="return-value"></a>返回值  
@@ -331,7 +331,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bDeleteResources`  
+ *bDeleteResources*  
  如果 bDeleteResources 为 TRUE，则将自动销毁位于 m_lstResources 中的所有资源。  
   
 ### <a name="return-value"></a>返回值  
@@ -360,19 +360,19 @@ void DrawBitmap(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pBitmap`  
+ *pBitmap*  
  要呈现的位图。  
   
- `rectDest`  
+ *rectDest*  
  大小和位置，以呈现器目标的坐标空间的位图绘制到的区域中的独立于设备的像素为单位。 如果在该矩形不秩序井然，不绘制任何内容，但该呈现器目标不会进入错误状态。  
   
- `fOpacity`  
+ *fOpacity*  
  介于 0.0 f 和 1.0 f （含)，指定要应用于位图; 不透明度值此值乘以位图的内容的 alpha 值。  
   
- `interpolationMode`  
+ *interpolationMode*  
  要使用如果位图进行缩放或旋转的绘制操作的内插模式。  
   
- `pRectSrc`  
+ *pRectSrc*  
  大小和位置，以独立于设备的像素为单位的位图的坐标空间内要绘制的位图区域的位置。  
   
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
@@ -387,16 +387,16 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ellipse`  
+ *椭圆*  
  位置和要绘制，以独立于设备的像素为单位的椭圆的半径。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制椭圆的边框的画笔。  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  椭圆的笔划的粗细。 笔画边框上居中的椭圆。  
   
- `strokeStyle`  
+ *strokeStyle*  
  要应用于椭圆的大纲或为 NULL 以绘制实心笔画的笔划的样式。  
   
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
@@ -411,16 +411,16 @@ void DrawGeometry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGeometry`  
+ *pGeometry*  
  要绘制的几何图形。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制几何图形的笔划画笔。  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  该几何图形的笔划的粗细。 笔画边框上居中的几何图形。  
   
- `strokeStyle`  
+ *strokeStyle*  
  要应用的几何图形的大纲，或者为 NULL 以绘制实心笔画笔画样式。  
   
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
@@ -435,16 +435,16 @@ void DrawGlyphRun(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptBaseLineOrigin`  
+ *ptBaseLineOrigin*  
  以独立于设备的像素为单位中的标志符号的基线的原点。  
   
- `glyphRun`  
+ *glyphRun*  
  要呈现的标志符号。  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  用于绘制指定的标志符号的画笔。  
   
- `measuringMode`  
+ *measuringMode*  
  一个值，该值指示如何使用标志符号度量值来测量文本格式时。 默认值为 DWRITE_MEASURING_MODE_NATURAL。  
   
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine  
@@ -460,19 +460,19 @@ void DrawLine(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptFrom`  
+ *ptFrom*  
  行，以独立于设备的像素为单位的起点。  
   
- `ptTo`  
+ *ptTo*  
  行，以独立于设备的像素为单位的终结点。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制线条的描边的画笔。  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  一个值大于或等于 0.0 f 的指定的笔划的宽度。 如果未指定此参数，则它默认为 1.0 f。 笔划居中在行上显示。  
   
- `strokeStyle`  
+ *strokeStyle*  
  绘制，或者为 NULL 以绘制一条实线的笔划的样式。  
   
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
@@ -487,16 +487,16 @@ void DrawRectangle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  若要绘制，以独立于设备的像素为单位的矩形的尺寸  
   
- `pBrush`  
+ *pBrush*  
  用于绘制矩形的笔划画笔  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  大于或等于 0.0 f 的指定矩形的描边宽度的值。 笔画边框上居中的矩形。  
   
- `strokeStyle`  
+ *strokeStyle*  
  绘制，或者为 NULL 以绘制实心笔画的笔划的样式。  
   
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
@@ -511,16 +511,16 @@ void DrawRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rectRounded`  
+ *rectRounded*  
  要绘制，以独立于设备的像素为单位的圆角矩形的尺寸。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制圆角的矩形的边框的画笔。  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  圆角的矩形描边宽度。 笔划圆角的矩形轮廓上居中。 默认值为 1.0 f。  
   
- `strokeStyle`  
+ *strokeStyle*  
  圆角的矩形描边，或者为 NULL 以绘制实心笔画样式。 默认值为 NULL。  
   
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText  
@@ -537,22 +537,22 @@ void DrawText(
 ```  
   
 ### <a name="parameters"></a>参数  
- `strText`  
+ *strText*  
  指向要绘制的 Unicode 字符数组的指针。  
   
- `rect`  
+ *rect*  
  大小和在其中绘制文本区域的位置。  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  用于绘制文本的画笔。  
   
- `textFormat`  
+ *textFormat*  
  对象用于描述格式的要绘制的文本，如字体、 字号和流方向的详细信息。  
   
- `options`  
+ *options*  
  一个值，该值指示是否应该与像素边界对齐文本和文本是否应剪裁到布局矩形。 默认值为 D2D1_DRAW_TEXT_OPTIONS_NONE，表示应该与像素边界对齐文本，它不应剪切到布局矩形。  
   
- `measuringMode`  
+ *measuringMode*  
  一个值，该值指示如何使用标志符号度量值来测量文本格式时。 默认值为 DWRITE_MEASURING_MODE_NATURAL。  
   
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
@@ -567,16 +567,16 @@ void DrawTextLayout(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ptOrigin`  
+ *ptOrigin*  
  描述以独立于设备的像素为单位，在其中绘制 textLayout 所描述的文本的左上角点。  
   
- `textLayout`  
+ *textLayout*  
  要绘制的带格式的文本。 不继承 ID2D1Resource 任何绘制效果都被忽略。 如果有绘制继承 ID2D1Resource 不画笔效果，此方法失败，并且该呈现器目标将处于错误状态。  
   
- `pBrushForeground`  
+ *pBrushForeground*  
  用于绘制中尚不包含作为绘制效果 （由 IDWriteTextLayout::SetDrawingEffect 方法指定） 与之关联的画笔的 textLayout 的任何文本的画笔。  
   
- `options`  
+ *options*  
  一个值，该值指示是否应该与像素边界对齐文本和文本是否应剪裁到布局矩形。 默认值为 D2D1_DRAW_TEXT_OPTIONS_NONE，表示应该与像素边界对齐文本，它不应剪切到布局矩形。  
   
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
@@ -599,10 +599,10 @@ void FillEllipse(
 ```  
   
 ### <a name="parameters"></a>参数  
- `ellipse`  
+ *椭圆*  
  位置和半径，以独立于设备的像素为单位，要绘制的椭圆。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制椭圆的内部的画笔。  
   
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
@@ -616,13 +616,13 @@ void FillGeometry(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pGeometry`  
+ *pGeometry*  
  要绘制的几何图形。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制几何图形的画笔的内部。  
   
- `pOpacityBrush`  
+ *pOpacityBrush*  
  要应用于该几何图形; 透明蒙板不是透明蒙板的为 NULL。 如果指定不透明蒙板 （opacityBrush 参数），则画笔必须已设置为 D2D1_EXTEND_MODE_CLAMP 其 x 和 y 扩展模式 ID2D1BitmapBrush。 有关详细信息，请参阅“备注”部分。  
   
 ##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
@@ -635,10 +635,10 @@ void FillMesh(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pMesh`  
+ *pMesh*  
  要绘制的网格。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制网格的画笔。  
   
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
@@ -654,19 +654,19 @@ void FillOpacityMask(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pOpacityMask`  
+ *pOpacityMask*  
  位置和半径，以独立于设备的像素为单位，要绘制的椭圆。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制指定的目标的呈现器目标的区域的画笔。  
   
- `content`  
+ *内容*  
  包含的内容不透明蒙版的类型。 值用于确定在其中混合不透明蒙版的色彩空间。  
   
- `rectDest`  
+ *rectDest*  
  呈现器目标来绘制，以独立于设备的像素为单位的区域。  
   
- `rectSrc`  
+ *rectSrc*  
  要用作透明蒙板，以独立于设备的像素为单位的位图的区域。  
   
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
@@ -679,10 +679,10 @@ void FillRectangle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  若要绘制，以独立于设备的像素为单位的矩形的尺寸。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制矩形的画笔的内部。  
   
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
@@ -695,10 +695,10 @@ void FillRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rectRounded`  
+ *rectRounded*  
  要绘制，以设备独立像素为单位的圆角矩形的尺寸。  
   
- `pBrush`  
+ *pBrush*  
  用于绘制圆角矩形的内部的画笔。  
   
 ##  <a name="flush"></a>  CRenderTarget::Flush  
@@ -711,10 +711,10 @@ void Flush(
 ```  
   
 ### <a name="parameters"></a>参数  
- `tag1`  
+ *tag1*  
  包含绘制操作导致错误或 0，如果没有发生错误的标记。 此参数未经初始化即被传递。  
   
- `tag2`  
+ *tag2*  
  包含绘制操作导致错误或 0，如果没有发生错误的标记。 此参数未经初始化即被传递。  
   
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
@@ -797,10 +797,10 @@ void GetTags(
 ```  
   
 ### <a name="parameters"></a>参数  
- `tag1`  
+ *tag1*  
  包含用于后续绘图操作的第一个标签。 此参数未经初始化即被传递。 如果指定 NULL，则将为此参数中不检索任何值。  
   
- `tag2`  
+ *tag2*  
  包含用于后续的绘制操作的第二个标签。 此参数未经初始化即被传递。 如果指定 NULL，则将为此参数中不检索任何值。  
   
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
@@ -821,7 +821,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```  
   
 ### <a name="parameters"></a>参数  
- `textRenderingParams`  
+ *textRenderingParams*  
  此方法返回时，textRenderingParamscontains 呈现器目标的指针的地址的当前文本呈现选项。  
   
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
@@ -832,7 +832,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>参数  
- `transform`  
+ *transform*  
  要应用到呈现目标的转换。  
   
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported  
@@ -843,7 +843,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ```  
   
 ### <a name="parameters"></a>参数  
- `renderTargetProperties`  
+ *renderTargetProperties*  
  要测试的呈现器目标属性  
   
 ### <a name="return-value"></a>返回值  
@@ -914,10 +914,10 @@ void PushAxisAlignedClip(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rectClip`  
+ *rectClip*  
  大小和位置的剪辑区域中，以独立于设备的像素为单位。  
   
- `mode`  
+ *模式*  
  用于绘制具有子像素边界的剪辑矩形的边缘并混合的场景内容剪辑抗锯齿模式。 当调用，并不适用于在层内的每个基元 PopAxisAlignedClip 方法后，执行的混合。  
   
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
@@ -930,10 +930,10 @@ void PushLayer(
 ```  
   
 ### <a name="parameters"></a>参数  
- `layerParameters`  
+ *layerParameters*  
  内容的边界、 几何掩码、 不透明度、 不透明蒙板和层的抗锯齿选项中。  
   
- `layer`  
+ *层*  
  接收后续绘图操作层。  
   
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
@@ -944,7 +944,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```  
   
 ### <a name="parameters"></a>参数  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  呈现器目标的绘制新状态。  
   
 ##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState  
@@ -955,7 +955,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  此方法返回时，包含呈现器目标的当前绘图状态。 必须将其传递到方法之前初始化此参数。  
   
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
@@ -966,7 +966,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```  
   
 ### <a name="parameters"></a>参数  
- `antialiasMode`  
+ *antialiasMode*  
  将来的绘制操作抗锯齿模式。  
   
 ##  <a name="setdpi"></a>  CRenderTarget::SetDpi  
@@ -977,7 +977,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `sizeDPI`  
+ *sizeDPI*  
  大于或等于指定的呈现器目标水平/垂直 Dpi 的零的值。  
   
 ##  <a name="settags"></a>  CRenderTarget::SetTags  
@@ -990,10 +990,10 @@ void SetTags(
 ```  
   
 ### <a name="parameters"></a>参数  
- `tag1`  
+ *tag1*  
  标签以应用于后续绘图操作。  
   
- `tag2`  
+ *tag2*  
  标签以应用于后续绘图操作。  
   
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
@@ -1004,7 +1004,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```  
   
 ### <a name="parameters"></a>参数  
- `textAntialiasMode`  
+ *textAntialiasMode*  
  要用于后续的文本和绘制操作的标志符号的抗锯齿模式。  
   
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
@@ -1015,7 +1015,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- `textRenderingParams`  
+ *textRenderingParams*  
  要应用于所有后续的文本和绘制操作; 的标志符号的文本呈现选项为 NULL 以清除当前文本呈现选项。  
   
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform  
@@ -1027,7 +1027,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```  
   
 ### <a name="parameters"></a>参数  
- `transform`  
+ *transform*  
  要应用到呈现目标的转换。  
   
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
@@ -1038,7 +1038,7 @@ BOOL VerifyResource(CD2DResource* pResource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pResource`  
+ *pResource*  
  指向 CD2DResource 对象的指针。  
   
 ### <a name="return-value"></a>返回值  

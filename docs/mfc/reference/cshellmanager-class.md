@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1052c7197d8679272cc917402a8936983649acb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378351"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079233"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 类
 实现可使你使用指向标识符列表 (PIDL) 的指针的几种方法。  
@@ -104,29 +104,29 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>参数  
- [out] `strOutFolder`  
+ [out]*strOutFolder*  
  该方法用于存储所选文件夹的路径的字符串。  
   
- [in] `pWndParent`  
+ [in]*pWndParent*  
  指向父窗口的指针。  
   
- [in] `lplszInitialFolder`  
+ [in]*lplszInitialFolder*  
  一个字符串，包含在显示的对话框时，默认情况下选择的文件夹。  
   
- [in] `lpszTitle`  
+ [in]*lpszTitle*  
  对话框标题。  
   
- [in] `ulFlags`  
+ [in]*ulFlags*  
  指定对话框中的选项的标志。 请参阅[BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205)有关详细说明。  
   
- [out] `piFolderImage`  
+ [out]*piFolderImage*  
  指向方法写入所选文件夹的图像索引的位置的整数值的指针。  
   
 ### <a name="return-value"></a>返回值  
  非零，如果用户从对话框; 选择一个文件夹否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 在调用此方法时，应用程序将创建并显示一个对话框，使用户能够选择的文件夹。 该方法将写入到的文件夹的路径`strOutFolder`参数。  
+ 在调用此方法时，应用程序将创建并显示一个对话框，使用户能够选择的文件夹。 该方法将写入到的文件夹的路径*strOutFolder*参数。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何检索到的引用`CShellManager`通过使用对象`CWinAppEx::GetShellManager`方法以及如何使用`BrowseForFolder`方法。 此代码片段属于[资源管理器示例](../../visual-cpp-samples.md)。  
@@ -143,17 +143,17 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pidl1`  
+ [in]*pidl1*  
  第一项。  
   
- [in] `pidl2`  
+ [in]*pidl2*  
  第二个项。  
   
 ### <a name="return-value"></a>返回值  
  指向新的项列表，如果函数成功，否则`NULL`。  
   
 ### <a name="remarks"></a>备注  
- 此方法创建一个新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)足够大，使之同时包含`pidl1`和`pidl2`。 然后将它复制`pidl1`和`pidl2`到新列表。  
+ 此方法创建一个新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)足够大，使之同时包含*pidl1*和*pidl2*。 然后将它复制*pidl1*和*pidl2*到新列表。  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  将复制的项列表。  
@@ -163,7 +163,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pidlSource`  
+ [in]*pidlSource*  
  原始的项列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -180,7 +180,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `cbSize`  
+ [in]*cbSize*  
  项列表的大小。  
   
 ### <a name="return-value"></a>返回值  
@@ -204,7 +204,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pidl`  
+ [in]*pidl*  
  若要删除项列表。  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
@@ -215,7 +215,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pidl`  
+ [in]*pidl*  
  指向的项列表的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -229,7 +229,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pidl`  
+ [in]*pidl*  
  指向的项列表的指针。  
   
 ### <a name="return-value"></a>返回值  
@@ -243,7 +243,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pidl`  
+ [in]*pidl*  
  要循环的项列表。  
   
 ### <a name="return-value"></a>返回值  
@@ -262,10 +262,10 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpidl`  
+ [in]*lpidl*  
  将检索其父 PIDL。  
   
- [out] `lpidlParent`  
+ [out]*lpidlParent*  
  对该方法将在其中存储结果 PIDL 的引用。  
   
 ### <a name="return-value"></a>返回值  
@@ -284,10 +284,10 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszPath`  
+ [in]*lpszPath*  
  一个字符串，指定项的路径。  
   
- [out] `pidl`  
+ [out]*pidl*  
  对 PIDL 的引用。 该方法使用此 PIDL 存储指向其返回值的指针。  
   
 ### <a name="return-value"></a>返回值  

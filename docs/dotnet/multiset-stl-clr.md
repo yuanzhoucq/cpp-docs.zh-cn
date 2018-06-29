@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4a4255e5c6229ee570b9baa8952cc784044ef95
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b3c81bc3fd5068f8269476608cc870272a0ef2e4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305808"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079794"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`multiset`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。  
@@ -135,8 +135,8 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>参数  
- Key  
+### <a name="parameters"></a>参数  
+ 键  
  受控序列中的元素的关键组件的类型。  
 
 ## <a name="requirements"></a>要求  
@@ -146,7 +146,7 @@ template<typename Key>
 
 ## <a name="declarations"></a>声明  
   
-|类型定义|Description|  
+|类型定义|描述|  
 |---------------------|-----------------|  
 |[multiset::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|  
 |[multiset::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|  
@@ -165,7 +165,7 @@ template<typename Key>
 |[multiset::value_compare (STL/CLR)](#value_compare)|两个元素值排序委托。|  
 |[multiset::value_type (STL/CLR)](#value_type)|元素的类型。|  
   
-|成员函数|Description|  
+|成员函数|描述|  
 |---------------------|-----------------|  
 |[multiset::begin (STL/CLR)](#begin)|指定受控序列的开头。|  
 |[multiset::clear (STL/CLR)](#clear)|删除所有元素。|  
@@ -188,7 +188,7 @@ template<typename Key>
 |[multiset::upper_bound (STL/CLR)](#upper_bound)|查找与指定的键匹配的范围末尾。|  
 |[multiset::value_comp (STL/CLR)](#value_comp)|将复制两个元素值的排序委托。|  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[multiset::operator= (STL/CLR)](#op_as)|替换受控序列。|  
 |[operator!= (multiset) (STL/CLR)](#op_neq)|确定如果`multiset`对象是否不等于另一个`multiset`对象。|  
@@ -200,7 +200,7 @@ template<typename Key>
   
 ## <a name="interfaces"></a>接口  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
 |<xref:System.Collections.IEnumerable>|通过元素的序列。|  
@@ -1115,7 +1115,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  要插入的枚举。  
   
- val  
+ Val  
  要插入的密钥值。  
   
  其中  

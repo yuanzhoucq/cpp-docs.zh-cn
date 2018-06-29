@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370176"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078278"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 类
 [CMemFile](../../mfc/reference/cmemfile-class.md)-支持的派生的类共享内存文件。  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>备注  
  内存文件行为类似于磁盘文件，只不过该文件存储在 RAM 中，而不是在磁盘上。 内存文件可用于快速临时存储或传输原始字节或序列化的独立进程之间的对象。  
   
- 从其他内存文件不同的共享的内存文件，因为它们的内存分配与[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数。 `CSharedFile`类将数据存储在全局范围内分配的内存块 (使用创建**GlobalAlloc**)，并可以使用 DDE、 剪贴板或其他 OLE/COM 统一数据传输操作，例如，共享该内存块使用`IDataObject`。  
+ 从其他内存文件不同的共享的内存文件，因为它们的内存分配与[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数。 `CSharedFile`类将数据存储在全局范围内分配的内存块 (使用创建`GlobalAlloc`)，并且该内存块可以共享使用 DDE、 剪贴板或其他 OLE/COM 统一数据传输操作，例如，使用`IDataObject`。  
   
- **GlobalAlloc**返回`HGLOBAL`处理而不是指向内存，如通过返回的指针的指针[malloc](../../c-runtime-library/reference/malloc.md)。 `HGLOBAL`句柄需要在某些应用程序。 例如，若要将数据放在剪贴板需要`HGLOBAL`处理。  
+ `GlobalAlloc` 返回`HGLOBAL`处理而不是指向内存，如通过返回的指针的指针[malloc](../../c-runtime-library/reference/malloc.md)。 `HGLOBAL`句柄需要在某些应用程序。 例如，若要将数据放在剪贴板需要`HGLOBAL`处理。  
   
  请注意，`CSharedFile`不使用内存映射文件，和数据不能直接共享进程间。  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  标志，指示内存的分配方式。 请参阅[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)有关有效的标志值的列表。  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  以字节为单位的内存分配增量。  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  要附加到的全局内存的句柄`CSharedFile`。  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  指定是否允许的内存块增长。  
   
 ### <a name="remarks"></a>备注  
- 如果`bAllowGrow`不为零，增加了大小的内存块根据需要，例如，如果尝试进行多个字节写入文件比已分配的内存块。  
+ 如果*bAllowGrow*不为零，增加了大小的内存块根据需要，例如，如果尝试进行多个字节写入文件比已分配的内存块。  
   
 ## <a name="see-also"></a>请参阅  
  [CMemFile 类](../../mfc/reference/cmemfile-class.md)   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377248"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079011"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 类
 支持最近使用的 (MRU) 文件列表的控件。  
@@ -115,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszPathName`  
+ *lpszPathName*  
  指定要添加到列表的路径名。  
   
- `lpszAppID`  
+ *lpszAppID*  
  指定应用程序的应用程序用户模型 ID。  
   
- `pItem`  
+ *pItem*  
  指定指向要添加到列表 Shell 项的指针。  
   
- `pLink`  
+ *pLink*  
  指定命令行程序链接到添加到列表的指针。  
   
- `pidl`  
+ *pidl*  
  指定应添加到新的文档文件夹 shell 项 IDLIST。  
   
 ### <a name="remarks"></a>备注  
@@ -146,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nStart`  
+ *nStart*  
  偏移量 MRU （最近使用） 的文件列表的菜单显示的编号。  
   
- `lpszSection`  
+ *lpszSection*  
  指向的注册表或应用程序的部分的名称。其中 MRU 文件列表是读取和/或写入 INI 文件。  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  指向一个格式字符串要用于存储在注册表或应用程序的条目的名称。INI 文件。  
   
- `nSize`  
+ *nSize*  
  MRU 文件列表中的文件的最大数量。  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  最大长度 （以字符为单位，可用于菜单显示的是 MRU 文件列表中的文件名）。  
   
 ### <a name="remarks"></a>备注  
- 格式字符串指向的`lpszEntryFormat`应包含"%d"，它将用来替换每个 MRU 项的索引。 例如，如果格式字符串为`"file%d"`然后条目将被命名为`file0`， `file1`，依次类推。  
+ 格式字符串指向的*lpszEntryFormat*应包含"%d"，它将用来替换每个 MRU 项的索引。 例如，如果格式字符串为`"file%d"`然后条目将被命名为`file0`， `file1`，依次类推。  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  获取在 MRU 文件列表中，在 MRU 列表的菜单显示中使用的文件的显示名称。  
@@ -177,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>参数  
- `strName`  
+ *strName*  
  要在 MRU 文件菜单列表中显示其名称的文件的完整路径。  
   
- `nIndex`  
+ *nIndex*  
  MRU 文件列表中的文件的从零开始索引。  
   
  *lpszCurDir*  
@@ -189,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  当前目录字符串的长度。  
   
- `bAtLeastName`  
- 如果非零值，指示应返回文件的基名称，即使它超过了最大显示长度 (作为传递`nMaxDispLen`参数`CRecentFileList`构造函数)。  
+ *bAtLeastName*  
+ 如果非零值，指示应返回文件的基名称，即使它超过了最大显示长度 (作为传递*nMaxDispLen*参数`CRecentFileList`构造函数)。  
   
 ### <a name="return-value"></a>返回值  
  **FALSE**中是否存在任何 filename 中指定索引处最近使用的 (MRU) 文件列表。  
   
 ### <a name="remarks"></a>备注  
- 如果该文件位于当前目录中，该函数将离开停止显示的目录。 如果文件名太长，被剥离的目录和扩展。 如果文件名仍然太长，显示名称设置为空字符串中，除非`bAtLeastName`为非零值。  
+ 如果该文件位于当前目录中，该函数将离开停止显示的目录。 如果文件名太长，被剥离的目录和扩展。 如果文件名仍然太长，显示名称设置为空字符串中，除非*bAtLeastName*为非零值。  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  检索 MRU 文件列表中的文件数。  
@@ -209,14 +209,14 @@ int GetSize() const;
  在当前的文件数个最近使用 (过的 MRU) 文件列表。  
   
 ##  <a name="operator_at"></a>  CRecentFileList::operator]  
- 重载的下标 ( `[]`) 运算符将返回单个`CString`由中从零开始的索引指定`nIndex`。  
+ 重载的下标 ( `[]`) 运算符将返回单个`CString`由中从零开始的索引指定*nIndex*。  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  从零开始的索引`CString`中的一组`CString`s。  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -234,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  要从最近使用的 (MRU) 文件列表中删除的文件的从零开始索引。  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -245,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pCmdUI`  
+ *pCmdUI*  
  指向的指针[CCmdUI](../../mfc/reference/ccmdui-class.md)的最近使用的 (MRU) 文件列表菜单对象。  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

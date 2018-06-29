@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375537"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079562"
 ---
 # <a name="cscrollview-class"></a>CScrollView 类
 A [CView](../../mfc/reference/cview-class.md)带滚动功能。  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  之前`OnDraw`调用的派生的视图类的成员函数时，`CScrollView`自动调整的视区原点`CPaintDC`设备上下文对象，它将传递给`OnDraw`。  
   
- 若要调整滚动的窗口中，视区原点`CScrollView`重写[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 此调整是自动的`CPaintDC`设备上下文的`CScrollView`将传递给`OnDraw`，但必须调用**CScrollView::OnPrepareDC**用于任何其他设备上下文的您自己使用，如`CClientDC`. 您可以重写**CScrollView::OnPrepareDC**设置钢笔、 背景色和其他绘制的特性，但调用基类来进行缩放。  
+ 若要调整滚动的窗口中，视区原点`CScrollView`重写[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 此调整是自动的`CPaintDC`设备上下文的`CScrollView`将传递给`OnDraw`，但必须调用`CScrollView::OnPrepareDC`用于任何其他设备上下文的您自己使用，如`CClientDC`。 您可以重写`CScrollView::OnPrepareDC`设置钢笔、 背景色和其他绘制的特性，但调用基类来进行缩放。  
   
  在以下情况下所示，滚动条可以出现在相对于工作视图中，以下三个位置：  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  是用进行填充的设备上下文。  
   
- `pBrush`  
+ *pBrush*  
  区域与之要填充的画笔。  
   
 ### <a name="remarks"></a>备注  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMapMode`  
+ *nMapMode*  
  返回此视图的当前映射模式。 有关可能的值的列表，请参阅`SetScrollSizes`。  
   
- `sizeTotal`  
+ *sizeTotal*  
  以设备单位返回当前的总大小的滚动视图。  
   
- `sizePage`  
+ *页面*  
  返回当前的水平和垂直金额，才可在响应鼠标每个方向上滚动单击滚动条轴中。 **Cx**成员包含水平的量。 **Cy**成员包含垂直的量。  
   
- `sizeLine`  
+ *sizeLine*  
  返回当前的水平和垂直金额，才可在响应鼠标每个方向上滚动单击滚动箭头。 **Cx**成员包含水平的量。 **Cy**成员包含垂直的量。  
   
 ### <a name="remarks"></a>备注  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pt`  
+ *pt*  
  要向下滚动到，在逻辑单元的点。 **X**成员必须是一个正值 （大于或等于 0，直到达到总大小的视图）。 同样适用于**y**成员映射模式时`MM_TEXT`。 **Y**成员为负以外映射模式`MM_TEXT`。  
   
 ### <a name="remarks"></a>备注  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>参数  
- `sizeTotal`  
+ *sizeTotal*  
  水平和垂直大小的视图是可按比例。 滚动视图的大小的单位为逻辑单元。 中包含的水平大小**cx**成员。 中包含的垂直大小**cy**成员。 同时**cx**和**cy**必须大于或等于 0。  
   
 ### <a name="remarks"></a>备注  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nMapMode`  
+ *nMapMode*  
  要为此视图设置的映射模式。 可能的值包括：  
   
 |映射模式|逻辑单元|正 y 轴扩展...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  由 Windows 定义所有这些模式。 两种标准的映射模式，`MM_ISOTROPIC`和`MM_ANISOTROPIC`，不能使用`CScrollView`。 类库提供了`SetScaleToFitSize`缩放到窗口大小的视图的成员函数。 第三列上表中的描述的坐标的方向。  
   
- `sizeTotal`  
+ *sizeTotal*  
  滚动视图总大小。 **Cx**成员包含水平扩展盘区。 **Cy**成员包含垂直扩展盘区。 大小是在逻辑单元。 同时**cx**和**cy**必须大于或等于 0。  
   
- `sizePage`  
+ *页面*  
  水平和垂直金额，才可在响应鼠标每个方向上滚动单击滚动条轴中。 **Cx**成员包含水平的量。 **Cy**成员包含垂直的量。  
   
- `sizeLine`  
+ *sizeLine*  
  水平和垂直金额，才可在响应鼠标每个方向上滚动单击滚动箭头。 **Cx**成员包含水平的量。 **Cy**成员包含垂直的量。  
   
 ### <a name="remarks"></a>备注  

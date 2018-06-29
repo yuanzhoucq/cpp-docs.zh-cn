@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374935"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078538"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 类
 `CPaneDialog`类支持一个无模式的可停靠对话框。  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|处理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息。 (重新定义了[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)。)|  
 |`CPaneDialog::OnLButtonDblClk`|处理[WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。 (重新定义了[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)。)|  
 |`CPaneDialog::OnLButtonDown`|处理[WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607)消息。 (重新定义了[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)。)|  
-|`CPaneDialog::OnUpdateCmdUI`|由框架调用以更新对话框窗口。 (重写[cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
+|`CPaneDialog::OnUpdateCmdUI`|由框架调用以更新对话框窗口。 (重写[cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
 |`CPaneDialog::OnWindowPosChanging`|处理[WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653)消息。 (重新定义了[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)。)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|指定一个对话框，是的 OLE 控件容器的模板。|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `lpszWindowName`  
+ [in]*lpszWindowName*  
  停靠的对话框中的名称。  
   
- [in] `pParentWnd`  
+ [in]*pParentWnd*  
  向父窗口的点。  
   
- [in] `bHasGripper`  
+ [in]*bHasGripper*  
  `TRUE` 若要创建带有标题 （控制手柄）; 停靠对话框否则为`FALSE`。  
   
- [in] `lpszTemplateName`  
+ [in]*lpszTemplateName*  
  资源对话框模板的名称。  
   
- [in] `nStyle`  
+ [in]*nStyle*  
  Windows 样式中。  
   
- [in] `nID`  
+ [in]*nID*  
  控件 id。  
   
- [in] `nIDTemplate`  
+ [in]*nIDTemplate*  
  对话框模板资源 ID。  
   
- [in] `dwTabbedStyle`  
+ [in]*dwTabbedStyle*  
  当用户将另一个控制窗格中拖动到此控件窗格的标题会产生的选项卡式窗口的样式。 默认值为 `AFX_CBRS_REGULAR_TABS`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
- [in] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  其他样式特性。 默认值为 `AFX_DEFAULT_DOCKING_PANE_STYLE`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
 ### <a name="return-value"></a>返回值  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `wParam`  
+ [in]*wParam*  
  要接收默认键盘焦点的控件的句柄。  
   
- [in] `lParam`  
+ [in]*lParam*  
  指定附加的初始化数据。  
   
 ### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。 此外，`TRUE`将键盘焦点设置为指定的控件`wParam`参数;`FALSE`阻止设置默认键盘焦点。  
+ 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。 此外，`TRUE`将键盘焦点设置为指定的控件*wParam*参数;`FALSE`阻止设置默认键盘焦点。  
   
 ### <a name="remarks"></a>备注  
  框架使用此方法来初始化控件和一个对话框的外观。 然后再显示对话框中，框架会调用此方法。  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pOccDialogInfo`  
+ [in]*pOccDialogInfo*  
  到对话框模板用于创建对话框对象的指针。 此参数的值随后传递到[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
   
 ### <a name="return-value"></a>返回值  
