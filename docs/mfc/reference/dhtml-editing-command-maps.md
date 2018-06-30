@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d040f3cb4c9bf8e1f3afc0e8213cd4513fc8571
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375130"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123365"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 编辑命令映射
 可以使用以下宏映射 DHTML 编辑命令[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-派生类。 有关其使用的示例，请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
@@ -42,7 +42,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>参数  
- `className`  
+ *类名*  
  类的名称。  
   
 ### <a name="remarks"></a>备注  
@@ -64,13 +64,13 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>参数  
- `className`  
+ *类名*  
  包含 DHTML 编辑命令映射的类名称。 此类应直接或间接派生从[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)和包括[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)在其类定义中的宏。  
   
 ### <a name="remarks"></a>备注  
  将 DHTML 编辑命令映射添加到你的类以将用户界面命令映射到 HTML 编辑命令。  
   
- 位置`BEGIN_DHTMLEDITING_CMDMAP`类的实现 (.cpp) 文件中的宏跟[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)用于此类是映射的命令的宏 (例如，从**ID_EDIT_CUT**到**IDM_CUT**)。 使用[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)宏来标记事件映射的末尾。  
+ 将 BEGIN_DHTMLEDITING_CMDMAP 宏放在类的实现 (.cpp) 文件跟[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)用于此类是映射 （例如，从到 IDM_CUT ID_EDIT_CUT) 的命令的宏。 使用[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)宏来标记事件映射的末尾。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxhtml.h  
@@ -99,11 +99,11 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
- 命令 ID (如**ID_EDIT_COPY**)。  
+ *cmdID*  
+ 命令 ID （如 ID_EDIT_COPY) 中。  
   
- `dhtmlcmdID`  
- HTML 编辑命令向其`cmdID`映射 (如**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ HTML 编辑命令向其*cmdID*映射 （如 IDM_COPY)。  
   
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
@@ -119,13 +119,13 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
- 命令 ID (如**ID_EDIT_COPY**)。  
+ *cmdID*  
+ 命令 ID （如 ID_EDIT_COPY) 中。  
   
- `dhtmlcmdID`  
- HTML 编辑命令向其`cmdID`映射 (如**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ HTML 编辑命令向其*cmdID*映射 （如 IDM_COPY)。  
   
- `member_func_name`  
+ *member_func_name*  
  命令映射到的消息处理程序函数的名称。  
   
 ### <a name="example"></a>示例  
@@ -142,14 +142,14 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
- 命令 ID (如**ID_EDIT_COPY**)。  
+ *cmdID*  
+ 命令 ID （如 ID_EDIT_COPY) 中。  
   
- `dhtmlcmdID`  
- HTML 编辑命令向其`cmdID`映射 (如**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ HTML 编辑命令向其*cmdID*映射 （如 IDM_COPY)。  
   
- `elemType`  
- 用户界面元素类型;之一**AFX_UI_ELEMTYPE_NORMAL**， **AFX_UI_ELEMTYPE_CHECKBOX**，或**AFX_UI_ELEMTYPE_RADIO**。  
+ *elemType*  
+ 用户界面元素类型;AFX_UI_ELEMTYPE_NORMAL、 AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO 之一。  
   
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  
@@ -165,17 +165,17 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
- 命令 ID (如**ID_EDIT_COPY**)。  
+ *cmdID*  
+ 命令 ID （如 ID_EDIT_COPY) 中。  
   
- `dhtmlcmdID`  
- HTML 编辑命令向其`cmdID`映射 (如**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ HTML 编辑命令向其*cmdID*映射 （如 IDM_COPY)。  
   
- `member_func_name`  
+ *member_func_name*  
  命令映射到的消息处理程序函数的名称。  
   
- `elemType`  
- 用户界面元素类型;之一**AFX_UI_ELEMTYPE_NORMAL**， **AFX_UI_ELEMTYPE_CHECKBOX**，或**AFX_UI_ELEMTYPE_RADIO**。  
+ *elemType*  
+ 用户界面元素类型;AFX_UI_ELEMTYPE_NORMAL、 AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO 之一。  
   
 ### <a name="example"></a>示例  
  请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。  

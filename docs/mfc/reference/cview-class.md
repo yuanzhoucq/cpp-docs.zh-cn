@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ff4e48bd7006c3706909d1791b82aa8cda2658
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377896"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123118"
 ---
 # <a name="cview-class"></a>CView 类
 提供用户定义视图类的基本功能。  
@@ -155,7 +155,7 @@ class AFX_NOVTABLE CView : public CWnd
   
 - [CTreeView](../../mfc/reference/ctreeview-class.md)，允许使用文档的视图体系结构与树控件的视图。  
   
- `CView`类还具有一个名为的派生的实现类**CPreviewView**，用于由框架执行打印预览。 此类为唯一的打印预览窗口中，例如一个工具栏，单或双页面预览功能提供支持和缩放的，增大预览的图像。 无需调用或重写任何**CPreviewView**的成员函数，除非你想要实现您自己的打印预览的界面 （例如，如果你想要支持在打印预览模式中编辑）。 有关详细信息使用`CView`，请参阅[文档/视图体系结构](../../mfc/document-view-architecture.md)和[打印](../../mfc/printing.md)。 此外，请参阅[技术注意 30](../../mfc/tn030-customizing-printing-and-print-preview.md)有关自定义打印预览的详细信息。  
+ `CView`类还具有一个名为的派生的实现类`CPreviewView`，用于由框架执行打印预览。 此类为唯一的打印预览窗口中，例如一个工具栏，单或双页面预览功能提供支持和缩放的，增大预览的图像。 无需调用或重写任何`CPreviewView`的成员函数，除非你想要实现您自己的打印预览的界面 （例如，如果你想要支持在打印预览模式中编辑）。 有关详细信息使用`CView`，请参阅[文档/视图体系结构](../../mfc/document-view-architecture.md)和[打印](../../mfc/printing.md)。 此外，请参阅[技术注意 30](../../mfc/tn030-customizing-printing-and-print-preview.md)有关自定义打印预览的详细信息。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -187,14 +187,14 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInfo`  
+ *pInfo*  
  指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。  
   
 ### <a name="return-value"></a>返回值  
  如果可以开始打印或打印预览; 则为非 0如果操作已取消，则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此函数的行为取决于是否正在出于打印或打印预览调用 (通过指定**m_bPreview**的成员`pInfo`参数)。 如果打印文件时，此函数将调用打印对话框中，使用中的值[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)结构的`pInfo`指向; 用户已关闭该对话框后，该函数将创建打印机设备上下文基于在对话框中指定的用户设置并返回通过此设备上下文`pInfo`参数。 此设备上下文用于打印文档。  
+ 此函数的行为取决于是否正在出于打印或打印预览调用 (通过指定`m_bPreview`的成员*pInfo*参数)。 如果打印文件时，此函数将调用打印对话框中，使用中的值[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)结构的*pInfo*指向; 用户已关闭该对话框后，该函数将创建打印机设备上下文设置基于在对话框中指定的用户，并返回通过此设备上下文*pInfo*参数。 此设备上下文用于打印文档。  
   
  如果正在预览一个文件，此函数将创建使用当前的打印机设置; 是打印机设备上下文此设备上下文用于在预览期间模拟打印机。  
   
@@ -206,7 +206,7 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针[CDocument](../../mfc/reference/cdocument-class.md)与视图关联的对象。 **NULL**如果视图未附加到文档。  
+ 指向的指针[CDocument](../../mfc/reference/cdocument-class.md)与视图关联的对象。 如果视图未附加到文档，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
  这样，您才能调用文档的成员函数。  
@@ -219,14 +219,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDocItem`  
+ *pDocItem*  
  指向所测试的文档项的链接。  
   
 ### <a name="return-value"></a>返回值  
  如果选定了指定的文档项; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此函数的默认实现返回**FALSE**。 重写此函数，如果你要实现选择使用[CDocItem](../../mfc/reference/cdocitem-class.md)对象。 如果你的视图包含 OLE 项，必须重写此函数。  
+ 此函数的默认实现返回 FALSE。 重写此函数，如果你要实现选择使用[CDocItem](../../mfc/reference/cdocitem-class.md)对象。 如果你的视图包含 OLE 项，必须重写此函数。  
   
 ##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  当激活或停用包含视图的框架窗口时，由框架调用。  
@@ -238,16 +238,16 @@ virtual void OnActivateFrame(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nState`  
+ *nState*  
  指定是否框架窗口正在激活或停用。 它可以是以下值之一：  
   
-- **WA_INACTIVE**框架窗口正在停用。  
+- 正在停用 WA_INACTIVE 框架窗口。  
   
-- **WA_ACTIVE**框架窗口正在激活通过某些方法是之外 （例如，通过使用要选择的窗口的键盘接口），鼠标单击。  
+- WA_ACTIVE 框架窗口正在激活通过某些方法不是鼠标单击 （例如，通过使用要选择的窗口的键盘接口）。  
   
-- **WA_CLICKACTIVE**鼠标单击激活框架窗口  
+- 通过单击鼠标正在激活 WA_CLICKACTIVE 框架窗口  
   
- `pFrameWnd`  
+ *pFrameWnd*  
  指向要激活的框架窗口的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -264,19 +264,19 @@ virtual void OnActivateView(
 ```  
   
 ### <a name="parameters"></a>参数  
- `bActivate`  
+ *bActivate*  
  指示是否视图处于激活或停用。  
   
- `pActivateView`  
+ *pActivateView*  
  指向正在激活的视图对象。  
   
- `pDeactiveView`  
+ *pDeactiveView*  
  指向正在停用的视图对象。  
   
 ### <a name="remarks"></a>备注  
- 此函数的默认实现将焦点设置到正在激活的视图。 如果你想要执行特殊处理，在激活或停用视图时，重写此函数。 例如，如果你想要提供特殊可视提示，从非活动视图区分活动视图，你会检查`bActivate`参数并相应地更新视图的外观。  
+ 此函数的默认实现将焦点设置到正在激活的视图。 如果你想要执行特殊处理，在激活或停用视图时，重写此函数。 例如，如果你想要提供特殊可视提示，从非活动视图区分活动视图，你会检查*bActivate*参数并相应地更新视图的外观。  
   
- `pActivateView`和`pDeactiveView`参数指向在同一个视图，如果应用程序的主框架窗口激活与活动视图不会更改 — 例如，如果从另一个应用程序到这台，而不是从一个传输焦点查看到另一个应用程序中或在 MDI 子窗口之间切换时。 如果需要这样，要重新实现其调色板的视图。  
+ *PActivateView*和*pDeactiveView*参数指向在同一个视图，如果应用程序的主框架窗口激活与活动视图不会更改 — 例如，如果正在焦点在 MDI 子窗口之间切换时，传输从另一个应用程序到这台，而不是从一个视图到另一个应用程序中或。 如果需要这样，要重新实现其调色板的视图。  
   
  与不同，这些参数时[CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)称为与不同于什么视图[CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)将返回。 发生这种情况最常与拆分窗口。  
   
@@ -290,10 +290,10 @@ virtual void OnBeginPrinting(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向打印机设备上下文。  
   
- `pInfo`  
+ *pInfo*  
  指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -312,30 +312,30 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataObject`  
+ *pDataObject*  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)正在拖放到视图的拖放区域。  
   
- `dwKeyState`  
- 包含修改键的状态。 这是任意数量的以下组合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ *dwKeyState*  
+ 包含修改键的状态。 这是任意数量的以下组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。  
   
- `point`  
+ *点*  
  当前鼠标位置相对于客户端区域的视图。  
   
 ### <a name="return-value"></a>返回值  
- 取值范围为`DROPEFFECT`枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常依赖于当前的密钥状态由指示`dwKeyState`。 到 keystates 的标准映射`DROPEFFECT`值是：  
+ 取值范围为 DROPEFFECT 枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常依赖于当前的密钥状态由指示*dwKeyState*。 Keystates 为 DROPEFFECT 值的标准映射是：  
   
-- `DROPEFFECT_NONE` 无法删除该数据对象，该窗口中。  
+- 在此窗口中，不能除去 DROPEFFECT_NONE 数据对象。  
   
-- `DROPEFFECT_LINK` 有关**MK_CONTROL &#124; MK_SHIFT**创建对象和其服务器之间的链接。  
+- 有关 MK_CONTROL DROPEFFECT_LINK &#124; MK_SHIFT 创建对象和其服务器之间的链接。  
   
-- `DROPEFFECT_COPY` 有关**MK_CONTROL**创建已删除的对象的副本。  
+- 有关 MK_CONTROL DROPEFFECT_COPY 创建已删除的对象的副本。  
   
-- `DROPEFFECT_MOVE` 有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。 这通常是默认放置效果，当该视图可以接受此数据对象。  
+- 有关 MK_ALT DROPEFFECT_MOVE 创建这些已删除的对象并删除原始对象的副本。 这通常是默认放置效果，当该视图可以接受此数据对象。  
   
  有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。  
   
 ### <a name="remarks"></a>备注  
- 默认实现是不执行任何操作并返回`DROPEFFECT_NONE`。  
+ 默认实现是不执行任何操作并返回 DROPEFFECT_NONE。  
   
  重写此函数可准备以便将来调用[OnDragOver](#ondragover)成员函数。 此数据对象中所需的任何数据应检索以便以后用于在此时`OnDragOver`成员函数。 该视图还应能够在用户的视觉反馈这次会更新。 有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
   
@@ -360,30 +360,30 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataObject`  
+ *pDataObject*  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)正在拖动到放置目标上。  
   
- `dwKeyState`  
- 包含修改键的状态。 这是任意数量的以下组合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ *dwKeyState*  
+ 包含修改键的状态。 这是任意数量的以下组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。  
   
- `point`  
+ *点*  
  相对于视图客户端区域的当前鼠标位置。  
   
 ### <a name="return-value"></a>返回值  
- 取值范围为`DROPEFFECT`枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常取决于当前项的状态由`dwKeyState`。 到 keystates 的标准映射`DROPEFFECT`值是：  
+ 取值范围为 DROPEFFECT 枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常取决于当前项的状态由*dwKeyState*。 Keystates 为 DROPEFFECT 值的标准映射是：  
   
-- `DROPEFFECT_NONE` 无法删除该数据对象，该窗口中。  
+- 在此窗口中，不能除去 DROPEFFECT_NONE 数据对象。  
   
-- `DROPEFFECT_LINK` 有关**MK_CONTROL &#124; MK_SHIFT**创建对象和其服务器之间的链接。  
+- 有关 MK_CONTROL DROPEFFECT_LINK &#124; MK_SHIFT 创建对象和其服务器之间的链接。  
   
-- `DROPEFFECT_COPY` 有关**MK_CONTROL**创建已删除的对象的副本。  
+- 有关 MK_CONTROL DROPEFFECT_COPY 创建已删除的对象的副本。  
   
-- `DROPEFFECT_MOVE` 有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。 这通常是默认放置效果，当该视图可以接受的数据对象。  
+- 有关 MK_ALT DROPEFFECT_MOVE 创建这些已删除的对象并删除原始对象的副本。 这通常是默认放置效果，当该视图可以接受的数据对象。  
   
  有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。  
   
 ### <a name="remarks"></a>备注  
- 默认实现是不执行任何操作并返回`DROPEFFECT_NONE`。  
+ 默认实现是不执行任何操作并返回 DROPEFFECT_NONE。  
   
  重写此函数可在拖动操作期间提供的用户的可视反馈。 由于连续调用此函数，其中包含的任何代码应优化尽可能多地。 有关详细信息，请参阅文章[拖放： 实现放置目标](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
   
@@ -397,24 +397,24 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwKeyState`  
- 包含修改键的状态。 这是任意数量的以下组合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ *dwKeyState*  
+ 包含修改键的状态。 这是任意数量的以下组合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。  
   
- `point`  
+ *点*  
  包含光标，以像素为单位，相对于屏幕的位置。  
   
 ### <a name="return-value"></a>返回值  
- 取值范围为`DROPEFFECT`枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常依赖于当前的密钥状态由指示`dwKeyState`。 到 keystates 的标准映射`DROPEFFECT`值是：  
+ 取值范围为 DROPEFFECT 枚举类型，该值指示如果用户在此位置删除对象，将出现的下拉的类型。 拖放的类型通常依赖于当前的密钥状态由指示*dwKeyState*。 Keystates 为 DROPEFFECT 值的标准映射是：  
   
-- `DROPEFFECT_NONE` 无法删除该数据对象，该窗口中。  
+- 在此窗口中，不能除去 DROPEFFECT_NONE 数据对象。  
   
-- `DROPEFFECT_LINK` 有关**MK_CONTROL &#124; MK_SHIFT**创建对象和其服务器之间的链接。  
+- 有关 MK_CONTROL DROPEFFECT_LINK &#124; MK_SHIFT 创建对象和其服务器之间的链接。  
   
-- `DROPEFFECT_COPY` 有关**MK_CONTROL**创建已删除的对象的副本。  
+- 有关 MK_CONTROL DROPEFFECT_COPY 创建已删除的对象的副本。  
   
-- `DROPEFFECT_MOVE` 有关**MK_ALT**创建已删除的对象的副本，则删除原始对象。  
+- 有关 MK_ALT DROPEFFECT_MOVE 创建这些已删除的对象并删除原始对象的副本。  
   
-- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标视图。  
+- DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或者问题发生在目标视图。  
   
  有关详细信息，请参阅 MFC 高级概念示例[OCLIENT](../../visual-cpp-samples.md)。  
   
@@ -429,13 +429,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向设备上下文以用于呈现文档的映像。  
   
 ### <a name="remarks"></a>备注  
  框架调用此函数可执行屏幕显示、 打印和打印预览中，并且每个用例中传递不同的设备上下文。 没有默认实现。  
   
- 你必须重写此函数来显示文档的视图。 你可以使用图形设备接口 (GDI) 调用[CDC](../../mfc/reference/cdc-class.md)指向对象`pDC`参数。 可以选择到设备上下文中绘制之前的 GDI 资源，例如笔或字体，然后之后取消选择它们。 绘制代码通常可以是独立于设备;也就是说，它不需要哪种类型的设备已显示的图像的信息。  
+ 你必须重写此函数来显示文档的视图。 你可以使用图形设备接口 (GDI) 调用[CDC](../../mfc/reference/cdc-class.md)指向对象*pDC*参数。 可以选择到设备上下文中绘制之前的 GDI 资源，例如笔或字体，然后之后取消选择它们。 绘制代码通常可以是独立于设备;也就是说，它不需要哪种类型的设备已显示的图像的信息。  
   
  若要优化绘制，调用[RectVisible](../../mfc/reference/cdc-class.md#rectvisible)的设备上下文以了解是否将绘制给定的矩形的成员函数。 如果你需要区分普通屏幕显示和打印，调用[IsPrinting](../../mfc/reference/cdc-class.md#isprinting)的设备上下文的成员函数。  
   
@@ -450,28 +450,28 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataObject`  
+ pDataObject *  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)删除到放置目标。  
   
- `dropEffect`  
+ *dropEffect*  
  用户已请求放置效果。  
   
-- `DROPEFFECT_COPY` 创建一份丢弃的数据对象。  
+- DROPEFFECT_COPY 会创建一份丢弃的数据对象。  
   
-- `DROPEFFECT_MOVE` 将数据对象移到当前的鼠标位置。  
+- DROPEFFECT_MOVE 移动到当前的鼠标位置的数据对象。  
   
-- `DROPEFFECT_LINK` 创建数据对象和其服务器之间的链接。  
+- DROPEFFECT_LINK 创建数据对象和其服务器之间的链接。  
   
- `point`  
+ *点*  
  相对于视图客户端区域的当前鼠标位置。  
   
 ### <a name="return-value"></a>返回值  
  如果下拉成功; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 默认实现不执行任何操作并返回**FALSE**。  
+ 默认实现不执行任何操作，并返回 FALSE。  
   
- 重写此函数在视图的工作区中实现的 OLE 拖放效果。 可以通过检查数据对象`pDataObject`剪贴板数据格式和数据删除在指定的点。  
+ 重写此函数在视图的工作区中实现的 OLE 拖放效果。 可以通过检查数据对象*pDataObject*剪贴板数据格式和数据删除在指定的点。  
   
 > [!NOTE]
 >  框架不调用此函数的重写是否[OnDropEx](#ondropex)此视图类中。  
@@ -488,20 +488,20 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDataObject`  
+ *pDataObject*  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)删除到放置目标。  
   
- `dropDefault`  
- 用户选择基于当前的关键状态的默认拖放操作效果。 它可能是`DROPEFFECT_NONE`。 在备注部分中讨论了放置效果。  
+ *dropDefault*  
+ 用户选择基于当前的关键状态的默认拖放操作效果。 它可能 DROPEFFECT_NONE。 在备注部分中讨论了放置效果。  
   
- `dropList`  
+ *下拉列表*  
  放置源支持拖放效果的列表。 可以使用按位 OR 组合放置效果值 ( **&#124;**) 操作。 在备注部分中讨论了放置效果。  
   
- `point`  
+ *点*  
  相对于视图客户端区域的当前鼠标位置。  
   
 ### <a name="return-value"></a>返回值  
- 从指定位置处删除尝试导致的放置效果`point`。 这必须是一个由值*dropEffectList*。 在备注部分中讨论了放置效果。  
+ 从指定位置处删除尝试导致的放置效果*点*。 这必须是一个由值*dropEffectList*。 在备注部分中讨论了放置效果。  
   
 ### <a name="remarks"></a>备注  
  默认实现是不执行任何操作并返回一个虚拟值 (-1) 以指示应调用 framework [OnDrop](#ondrop)处理程序。  
@@ -512,27 +512,27 @@ virtual DROPEFFECT OnDropEx(
   
 -   如果右侧的鼠标按钮已关闭，则重写应显示弹出菜单，它提供了放置源支持放置效果。  
   
-    -   检查`dropList`以确定支持的放置源放置效果。 启用弹出菜单上的这些操作。  
+    -   检查*下拉列表*以确定支持的放置源放置效果。 启用弹出菜单上的这些操作。  
   
-    -   使用[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)设置基于的默认操作`dropDefault`。  
+    -   使用[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)设置基于的默认操作*dropDefault*。  
   
     -   最后，需要由用户选择从弹出菜单中的操作。  
   
--   如果未按下鼠标右键，则重写应处理此作为标准放请求。 使用中指定的放置效果`dropDefault`。 或者，重写可返回虚拟值 (-1)，则指示`OnDrop`将处理此拖放操作。  
+-   如果未按下鼠标右键，则重写应处理此作为标准放请求。 使用中指定的放置效果*dropDefault*。 或者，重写可返回虚拟值 (-1)，则指示`OnDrop`将处理此拖放操作。  
   
- 使用`pDataObject`检查`COleDataObject`剪贴板数据格式和数据删除在指定的点。  
+ 使用*pDataObject*检查`COleDataObject`剪贴板数据格式和数据删除在指定的点。  
   
  放置效果描述与拖放操作相关联的操作。 请参阅以下放置效果的列表：  
   
-- `DROPEFFECT_NONE` 不允许删除。  
+- 不允许删除 DROPEFFECT_NONE。  
   
-- `DROPEFFECT_COPY` 将执行复制操作。  
+- DROPEFFECT_COPY 执行复制操作。  
   
-- `DROPEFFECT_MOVE` 将执行移动操作。  
+- DROPEFFECT_MOVE 将执行移动操作。  
   
-- `DROPEFFECT_LINK` 将建立从放置的数据到原始数据的链接。  
+- 将建立从放置的数据的 DROPEFFECT_LINK A 链接到原始数据。  
   
-- `DROPEFFECT_SCROLL` 指示，拖动滚动操作即将发生或者问题发生在目标中。  
+- DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或者问题发生在目标中。  
   
  设置默认菜单命令的详细信息，请参阅[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) Windows SDK 中和[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)此卷中。  
   
@@ -546,10 +546,10 @@ virtual void OnEndPrinting(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向打印机设备上下文。  
   
- `pInfo`  
+ *pInfo*  
  指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。  
   
 ### <a name="remarks"></a>备注  
@@ -567,20 +567,20 @@ virtual void OnEndPrintPreview(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向打印机设备上下文。  
   
- `pInfo`  
+ *pInfo*  
  指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。  
   
- `point`  
+ *点*  
  上次在预览模式下显示的页面上指定的点。  
   
- `pView`  
+ *pView*  
  指向以用于预览的视图对象。  
   
 ### <a name="remarks"></a>备注  
- 此函数的默认实现调用[OnEndPrinting](#onendprinting)成员函数，并还原主框架窗口到在打印预览之前的状态开始。 重写此函数以执行特殊处理，预览模式而终止时。 例如，如果你想要维护了文档中的用户的位置，从预览模式切换到普通显示模式时，你可以向下滚动到所描述的位置`point`参数和`m_nCurPage`的成员`CPrintInfo`结构`pInfo`参数指向。  
+ 此函数的默认实现调用[OnEndPrinting](#onendprinting)成员函数，并还原主框架窗口到在打印预览之前的状态开始。 重写此函数以执行特殊处理，预览模式而终止时。 例如，如果你想要维护了文档中的用户的位置，从预览模式切换到普通显示模式时，你可以向下滚动到所描述的位置*点*参数和`m_nCurPage`的成员`CPrintInfo`结构的*pInfo*参数指向。  
   
  始终调用基类版本的`OnEndPrintPreview`从你重写时，通常在该函数的末尾。  
   
@@ -592,7 +592,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此函数的默认实现调用[OnUpdate](#onupdate)而不提示信息的成员函数 (即，使用默认值为 0 表示`lHint`参数和**NULL**为`pHint`参数)。 重写此函数以执行任何需要有关文档的信息的一次性初始化。 例如，如果你的应用程序具有固定大小的文档，你可以使用此函数来初始化视图的滚动限制基于的文档大小。 如果你的应用程序支持大小可变的文档，使用[OnUpdate](#onupdate)更新滚动限制每次文档发生更改。  
+ 此函数的默认实现调用[OnUpdate](#onupdate)而不提示信息的成员函数 (即，使用默认值为 0 表示*lHint*参数和 NULL *pHint*参数)。 重写此函数以执行任何需要有关文档的信息的一次性初始化。 例如，如果你的应用程序具有固定大小的文档，你可以使用此函数来初始化视图的滚动限制基于的文档大小。 如果你的应用程序支持大小可变的文档，使用[OnUpdate](#onupdate)更新滚动限制每次文档发生更改。  
   
 ##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  由框架在之前调用[OnDraw](#ondraw)为屏幕显示和之前调用成员函数[OnPrint](#onprint)在打印或打印预览过程的每个页面调用成员函数。  
@@ -604,24 +604,24 @@ virtual void OnPrepareDC(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向设备上下文以用于呈现文档的映像。  
   
- `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)结构，描述当前打印作业，如果`OnPrepareDC`正在为打印或打印预览，则为调用`m_nCurPage`成员指定要打印的页。 此参数是**NULL**如果`OnPrepareDC`调用是用于屏幕显示。  
+ *pInfo*  
+ 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)结构，描述当前打印作业，如果`OnPrepareDC`正在为打印或打印预览，则为调用`m_nCurPage`成员指定要打印的页。 此参数为 NULL，如果`OnPrepareDC`调用是用于屏幕显示。  
   
 ### <a name="remarks"></a>备注  
  如果为屏幕显示调用函数，则此函数的默认实现没有任何效果。 但是，此函数被重写在派生类中，如[CScrollView](../../mfc/reference/cscrollview-class.md)，调整属性的设备上下文中; 因此，你始终应开头的重写调用基类实现。  
   
- 如果打印调用函数时，默认实现将检查中存储的页信息`pInfo`参数。 如果尚未指定文档的长度，`OnPrepareDC`假定要长的一页的文档，并且会在已打印一页后停止打印循环。 函数通过设置来停止打印循环`m_bContinuePrinting`到结构中的成员**FALSE**。  
+ 如果打印调用函数时，默认实现将检查中存储的页信息*pInfo*参数。 如果尚未指定文档的长度，`OnPrepareDC`假定要长的一页的文档，并且会在已打印一页后停止打印循环。 函数通过设置来停止打印循环`m_bContinuePrinting`为 FALSE 的结构的成员。  
   
  重写`OnPrepareDC`任何由于以下原因之一：  
   
 -   若要根据需要为指定的页调整设备上下文的属性。 例如，如果你需要设置的映射模式或的设备上下文的其他特征，这样在此函数。  
   
--   若要执行打印时分页。 通常指定文档的长度，开始打印时，使用[OnPreparePrinting](#onprepareprinting)成员函数。 但是，如果你不知道提前多长时间文档程序 （例如，当从数据库中打印的记录不确定的数），重写`OnPrepareDC`来测试而在打印文档的结尾。 当没有更多的要打印的文档时，设置`m_bContinuePrinting`的成员`CPrintInfo`结构**FALSE**。  
+-   若要执行打印时分页。 通常指定文档的长度，开始打印时，使用[OnPreparePrinting](#onprepareprinting)成员函数。 但是，如果你不知道提前多长时间文档程序 （例如，当从数据库中打印的记录不确定的数），重写`OnPrepareDC`来测试而在打印文档的结尾。 当没有更多的要打印的文档时，设置`m_bContinuePrinting`的成员`CPrintInfo`为 FALSE 的结构。  
   
--   若要将转义码发送到按页基于打印机。 若要发送中的转义码`OnPrepareDC`，调用**转义**成员函数`pDC`参数。  
+-   若要将转义码发送到按页基于打印机。 若要发送中的转义码`OnPrepareDC`，调用`Escape`成员函数*pDC*参数。  
   
  调用基类版本的`OnPrepareDC`重写的开头。  
   
@@ -636,7 +636,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pInfo`  
+ *pInfo*  
  指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)描述当前打印作业的结构。  
   
 ### <a name="return-value"></a>返回值  
@@ -645,13 +645,13 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="remarks"></a>备注  
  默认实现不执行任何操作。  
   
- 你必须重写此函数可启用打印和打印预览。 调用[DoPreparePrinting](#doprepareprinting)成员函数，将其传递`pInfo`参数，然后返回其返回值;`DoPreparePrinting`显示打印对话框中，并创建打印机设备上下文。 如果你想要初始化使用默认值以外的值打印对话框中，将值分配给的成员`pInfo`。 例如，如果你知道文档的长度，将值传递给[SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)成员函数`pInfo`之前调用`DoPreparePrinting`。 此值显示在收件人： 框中的打印对话框中的范围部分。  
+ 你必须重写此函数可启用打印和打印预览。 调用[DoPreparePrinting](#doprepareprinting)成员函数，将其传递*pInfo*参数，然后返回其返回值;`DoPreparePrinting`显示打印对话框中，并创建打印机设备上下文。 如果你想要初始化使用默认值以外的值打印对话框中，将值分配给的成员*pInfo*。 例如，如果你知道文档的长度，将值传递给[SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)成员函数*pInfo*之前调用`DoPreparePrinting`。 此值显示在收件人： 框中的打印对话框中的范围部分。  
   
- `DoPreparePrinting` 不显示预览作业的打印对话框。 如果你想要绕过打印作业的打印对话框，请检查**m_bPreview**的成员`pInfo`是**FALSE**然后将它设置为**TRUE**之前将其传递给`DoPreparePrinting`; 重置到**FALSE**之后。  
+ `DoPreparePrinting` 不显示预览作业的打印对话框。 如果你想要绕过打印作业的打印对话框，请检查`m_bPreview`的成员*pInfo*是 FALSE，然后将其设置为 TRUE 之前将其传递给`DoPreparePrinting`; 它重置为 FALSE 之后。  
   
  如果你需要执行需要访问的初始化`CDC`表示打印机设备上下文 （例如，如果你之前需要知道的页大小指定文档的长度），对象重写`OnBeginPrinting`成员函数。  
   
- 如果你想要设置的值**m_nNumPreviewPages**或**m_strPageDesc**的成员`pInfo`参数，这样做之后调用`DoPreparePrinting`。 `DoPreparePrinting`成员函数集**m_nNumPreviewPages**到应用程序的中找到的值。INI 文件和设置**m_strPageDesc**为其默认值。  
+ 如果你想要设置的值`m_nNumPreviewPages`或`m_strPageDesc`的成员*pInfo*参数，这样做之后调用`DoPreparePrinting`。 `DoPreparePrinting`成员函数集`m_nNumPreviewPages`到应用程序的中找到的值。INI 文件和设置`m_strPageDesc`为其默认值。  
   
 ### <a name="example"></a>示例  
   重写`OnPreparePrinting`并调用`DoPreparePrinting`重写，以便框架将显示一个打印对话框并为你创建是打印机设备。  
@@ -672,14 +672,14 @@ virtual void OnPrint(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  指向打印机设备上下文。  
   
- `pInfo`  
+ *pInfo*  
  指向`CPrintInfo`描述当前打印作业的结构。  
   
 ### <a name="remarks"></a>备注  
- 对于每个打印的页，框架会调用此函数在调用后立即[OnPrepareDC](#onpreparedc)成员函数。 通过指定打印页`m_nCurPage`的成员[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)结构的`pInfo`指向。 默认实现调用[OnDraw](#ondraw)成员函数并将其传递打印机设备上下文。  
+ 对于每个打印的页，框架会调用此函数在调用后立即[OnPrepareDC](#onpreparedc)成员函数。 通过指定打印页`m_nCurPage`的成员[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)结构的*pInfo*指向。 默认实现调用[OnDraw](#ondraw)成员函数并将其传递打印机设备上下文。  
   
  由于以下原因导致重写此函数：  
   
@@ -691,7 +691,7 @@ virtual void OnPrint(
   
 -   若要实现页眉或页脚。 你仍然可以使用`OnDraw`如何呈现通过限制可以打印的区域。  
   
- 请注意， **m_rectDraw**的成员`pInfo`参数描述中逻辑单元的页可打印区域。  
+ 请注意，`m_rectDraw`的成员*pInfo*参数描述中逻辑单元的页可打印区域。  
   
  不要调用`OnPrepareDC`的重写中`OnPrint`; 框架调用`OnPrepareDC`自动之前调用`OnPrint`。  
   
@@ -713,34 +713,34 @@ virtual BOOL OnScroll(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nScrollCode`  
+ *nScrollCode*  
  指示的用户的滚动条代码的滚动请求。 此参数由两个部分组成： 低序位字节，用于确定滚动正在进行水平的类型，并确定的一种滚动发生垂直高序位字节：  
   
-- **SB_BOTTOM**滚动到下的顺序。  
+- SB_BOTTOM 滚动到底部。  
   
-- **SB_LINEDOWN**向下滚动一行。  
+- SB_LINEDOWN 滚动行下移一行。  
   
-- **SB_LINEUP**向上滚动一行。  
+- SB_LINEUP 滚动行上移一行。  
   
-- **SB_PAGEDOWN**向下滚动一页。  
+- 向下 SB_PAGEDOWN 滚动一页。  
   
-- **SB_PAGEUP**向上滚动一页。  
+- 向上 SB_PAGEUP 滚动一页。  
   
-- **SB_THUMBTRACK**拖动到指定位置的滚动框。 在指定当前位置`nPos`。  
+- SB_THUMBTRACK 拖动滚动到指定的位置。 在指定当前位置*nPos*。  
   
-- **SB_TOP**滚动到顶部。  
+- 页首 SB_TOP 滚动。  
   
- `nPos`  
- 滚动条代码是否包含滚动框的当前位置**SB_THUMBTRACK**; 否则为未使用。 具体取决于初始滚动范围，`nPos`可以是负数，并且应强制转换为`int`如有必要。  
+ *nPos*  
+ 包含滚动框的当前位置，如果滚动条代码是 SB_THUMBTRACK;否则不使用它。 具体取决于初始滚动范围， *nPos*可以是负数，并且应强制转换为**int**如有必要。  
   
- `bDoScroll`  
- 确定是否应实际完成指定滚动操作。 如果**为 TRUE，** 然后滚动应发生; 如果**FALSE**，然后滚动应不会发生。  
+ *bDoScroll*  
+ 确定是否应实际完成指定滚动操作。 如果为 TRUE，然后滚动应发生;如果为 FALSE，然后滚动应不会发生。  
   
 ### <a name="return-value"></a>返回值  
- 如果`bDoScroll`是**TRUE**和实际滚动视图，然后返回非零; 否则为 0。 如果`bDoScroll`是**FALSE**，然后返回值，将返回如果`bDoScroll`已**TRUE**，即使您不实际执行滚动。  
+ 如果*bDoScroll*为 TRUE 并且实际滚动视图，然后返回非零; 否则为 0。 如果*bDoScroll*为 FALSE，则返回值，将返回如果*bDoScroll*是 TRUE，即使您不实际执行滚动。  
   
 ### <a name="remarks"></a>备注  
- 框架使用一种情况下在调用此函数`bDoScroll`设置为**TRUE**视图当收到滚动条消息。 在这种情况下，你应实际滚动视图。 使用在其他情况下调用此函数`bDoScroll`设置为**FALSE**时 OLE 项最初拖放到放置目标的自动滚动区域滚动实际的发生之前。 在这种情况下，你应实际滚动视图。  
+ 框架使用一种情况下在调用此函数*bDoScroll*视图收到的滚动条消息时设置为 TRUE。 在这种情况下，你应实际滚动视图。 使用在其他情况下调用此函数*bDoScroll*时滚动实际的发生之前，OLE 项最初拖动到放置目标的自动滚动区域设置为 FALSE。 在这种情况下，你应实际滚动视图。  
   
 ##  <a name="onscrollby"></a>  CView::OnScrollBy  
  当用户查看文档，通过拖动针对视图的当前边框的 OLE 项或操作的垂直或水平滚动条的存在视图之外的区域，由框架调用。  
@@ -752,11 +752,11 @@ virtual BOOL OnScrollBy(
 ```  
   
 ### <a name="parameters"></a>参数  
- `sizeScroll`  
+ *sizeScroll*  
  水平和垂直，滚动的像素数。  
   
- `bDoScroll`  
- 确定是否滚动视图的执行。 如果**为 TRUE，** 然后滚动发生; 如果**FALSE**，然后滚动不会发生。  
+ *bDoScroll*  
+ 确定是否滚动视图的执行。 如果为 TRUE，然后滚动发生;如果为 FALSE，然后滚动不会发生。  
   
 ### <a name="return-value"></a>返回值  
  如果视图能够滚动; 则为非 0否则为 0。  
@@ -766,7 +766,7 @@ virtual BOOL OnScrollBy(
   
  此方法的默认实现不会更改视图，但如果未调用，该视图将在不滚动`CScrollView`-派生类。  
   
- 如果文档宽度或高度超过 32767 的像素为单位，过去的 32767 滚动将失败，因为`OnScrollBy`称为无效`sizeScroll`自变量。  
+ 如果文档宽度或高度超过 32767 的像素为单位，过去的 32767 滚动将失败，因为`OnScrollBy`称为无效*sizeScroll*自变量。  
   
 ##  <a name="onupdate"></a>  CView::OnUpdate  
  修改视图的文档; 后，由框架调用调用此函数[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) ，并允许更新以反映这些修改显示的视图。  
@@ -779,23 +779,23 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pSender`  
- 指向修改文档，该视图或**NULL**如果所有视图进行更新。  
+ *pSender*  
+ 指向修改文档，该视图或如果所有视图都是要更新为 NULL。  
   
- `lHint`  
+ *lHint*  
  包含有关修改信息。  
   
- `pHint`  
+ *pHint*  
  指向以存储有关修改信息的对象。  
   
 ### <a name="remarks"></a>备注  
- 它还由的默认实现[OnInitialUpdate](#oninitialupdate)。 默认实现将使失效整个客户端区域中，将它标记为对于绘制时的下一步`WM_PAINT`接收消息。 如果你想要更新映射到文档的修改后的部分的区域，重写此函数。 若要执行此操作必须传递有关使用提示参数的修改的信息。  
+ 它还由的默认实现[OnInitialUpdate](#oninitialupdate)。 默认实现使整个客户端区域中，在收到下一步 WM_PAINT 消息时绘制进行了标记无效。 如果你想要更新映射到文档的修改后的部分的区域，重写此函数。 若要执行此操作必须传递有关使用提示参数的修改的信息。  
   
- 若要使用`lHint`，定义特殊的提示值、 通常是一个位屏蔽或枚举的类型，并且必须传递这些值之一的文档。 若要使用`pHint`，提示从派生类[CObject](../../mfc/reference/cobject-class.md)和拥有在重写时，将指针传递给提示的对象; 此文档`OnUpdate`，使用[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)到成员函数确定提示对象的运行时类型。  
+ 若要使用*lHint*，定义特殊的提示值、 通常是一个位屏蔽或枚举的类型，并且必须传递这些值之一的文档。 若要使用*pHint*，提示从派生类[CObject](../../mfc/reference/cobject-class.md)和拥有在重写时，将指针传递给提示的对象; 此文档`OnUpdate`，使用[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)用于确定提示对象的运行时类型的成员函数。  
   
  通常，则应不执行任何直接从绘制`OnUpdate`。 相反，确定描述，在设备坐标中，则需要更新; 的区域的矩形传递到此矩形[CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)。 这将导致绘制下一次时[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)接收消息。  
   
- 如果`lHint`为 0 和`pHint`是**NULL**，文档已发送泛型更新通知。 如果视图收到一个泛型更新通知，或者如果它不能进行解码提示，它应使其整个工作区。  
+ 如果*lHint*为 0 和*pHint*为 NULL，文档已发送泛型更新通知。 如果视图收到一个泛型更新通知，或者如果它不能进行解码提示，它应使其整个工作区。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370941"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123235"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 结构
 `DELETEITEMSTRUCT` 结构介绍了一个已删除的所有者描述的列表框或组合框项。  
@@ -39,23 +39,23 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ```  
   
 #### <a name="parameters"></a>参数  
- `CtlType`  
- 指定**ODT_LISTBOX** （一个所有者描述的列表框） 或**ODT_COMBOBOX** （一个所有者描述的组合框）。  
+ *CtlType*  
+ 指定 ODT_LISTBOX （一个所有者描述的列表框） 或 ODT_COMBOBOX （一个所有者描述的组合框）。  
   
- `CtlID`  
+ *CtlID*  
  指定列表框或组合框的标识符。  
   
- `itemID`  
+ *itemID*  
  指定要移除的列表框或组合框中的项的索引。  
   
- `hwndItem`  
+ *hwndItem*  
  标识控件。  
   
- `itemData`  
- 为该项指定应用程序定义的数据。 此值传递到中的控件**lParam**将项添加到列表框或组合框的消息的参数。  
+ *itemData*  
+ 为该项指定应用程序定义的数据。 此值传递到中的控件*lParam*将项添加到列表框或组合框的消息的参数。  
   
 ## <a name="remarks"></a>备注  
- 在从列表框或组合框中移除某个项或销毁列表框或组合框时，Windows 会将 `WM_DELETEITEM` 消息发送给每个被删除项的所有者。 **LParam**消息参数包含指向此结构的指针。  
+ 在从列表框或组合框或销毁列表框或组合框时，移除某个项，Windows 会将 WM_DELETEITEM 消息发送到每个已删除的项的所有者。 *LParam*消息参数包含指向此结构的指针。  
   
 ## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368477"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121537"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 类
 从 `CDC`派生。  
@@ -46,9 +46,9 @@ class CWindowDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|`HWND`此`CWindowDC`附加。|  
+|[CWindowDC::m_hWnd](#m_hwnd)|此 HWND`CWindowDC`附加。|  
   
 ## <a name="remarks"></a>备注  
  调用 Windows 函数[GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)在构造时和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx)在析构时。 这意味着，`CWindowDC`对象访问的整个屏幕区域[CWnd](../../mfc/reference/cwnd-class.md) （客户端和非工作区）。  
@@ -66,14 +66,14 @@ class CWindowDC : public CDC
  标头： afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- 构造`CWindowDC`访问的整个屏幕区域 （客户端和非工作） 的对象`CWnd`指向对象`pWnd`。  
+ 构造`CWindowDC`访问的整个屏幕区域 （客户端和非工作） 的对象`CWnd`指向对象*pWnd*。  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  窗口设备上下文对象将访问其工作区中。  
   
 ### <a name="remarks"></a>备注  
@@ -85,14 +85,14 @@ explicit CWindowDC(CWnd* pWnd);
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- `HWND`的`CWnd`指针用于构造`CWindowDC`对象。  
+ HWND`CWnd`指针用于构造`CWindowDC`对象。  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>备注  
- `m_hWnd` 是一个受保护的类型变量`HWND`。  
+ `m_hWnd` 是受保护的类型的变量的 HWND。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWindowDC::CWindowDC](#cwindowdc)。  

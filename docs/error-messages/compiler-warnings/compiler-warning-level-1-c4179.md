@@ -1,7 +1,7 @@
 ---
 title: 编译器警告 （等级 1） C4179 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64cfa3224d64220da094c376ca569a66de653034
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a47c8da89df03e9c33e968574e81bef304a00dd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277662"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122025"
 ---
 # <a name="compiler-warning-level-1-c4179"></a>编译器警告（等级 1）C4179
-/ / *： 分析为 '/' 和 ' /\*： 与标准混淆 / / 注释  
+
+> / / *： 分析为 '/' 和 ' /\*： 与标准混淆 / / 注释  
   
- **//\*** 是不正确的注释分隔符。 请改用 **//** 或 **/\*** 。
+__//\*__ 是不正确的注释分隔符。 使用__//__ 或__/ \*__ 相反。

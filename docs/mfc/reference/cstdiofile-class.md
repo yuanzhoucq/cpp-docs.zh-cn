@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89de8dddae6d6549fe12086b84e6bb656afcbc4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95e05c071057025bda8e841be2cd5c6b17971626
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374983"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122563"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile 类
 表示 C 运行时流文件，并由运行时函数打开[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
@@ -109,28 +109,28 @@ CStdioFile(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pOpenStream`  
+ *pOpenStream*  
  指定对 C 运行时函数的调用返回的文件指针[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
   
- `lpszFileName`  
+ *lpszFileName*  
  指定是所需的文件的路径的字符串。 路径可以是相对或绝对。  
   
- `nOpenFlags`  
- 指定文件创建、 文件共享和文件访问模式的选项。 你可以使用的按位或指定多个选项 ( `|`) 运算符。  
+ *nOpenFlags*  
+ 指定文件创建、 文件共享和文件访问模式的选项。 你可以使用的按位或指定多个选项 ( **|** ) 运算符。  
   
  一个文件访问模式选项是必需的;其他模式是可选的。 请参阅[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)有关模式选项和其他标志的列表。 在 MFC 3.0 版及更高版本，允许共享标志。  
   
- `pTM`  
+ *pTM*  
  指向 CAtlTransactionManager 对象的指针。  
   
 ### <a name="remarks"></a>备注  
  默认构造函数不会附加的文件，以便`CStdioFile`对象。 在使用此构造函数，您必须使用`CStdioFile::Open`方法打开文件并将其附加到`CStdioFile`对象。  
   
- 单参数构造函数将附加到的打开的文件流`CStdioFile`对象。 允许指针的值包括预定义的输入/输出文件指针`stdin`， `stdout`，或`stderr`。  
+ 单参数构造函数将附加到的打开的文件流`CStdioFile`对象。 允许指针的值包括预定义的输入/输出文件指针*stdin*， *stdout*，或*stderr*。  
   
  两个参数构造函数创建`CStdioFile`对象，并将相应的文件打开与给定的路径。  
   
- 如果你通过`NULL`为`pOpenStream`或`lpszFileName`，在构造函数引发`CInvalidArgException*`。  
+ 如果你将为 NULL 传递*pOpenStream*或*lpszFileName*，在构造函数引发`CInvalidArgException*`。  
   
  如果无法打开或创建文件，在构造函数引发`CFileException*`。  
   
@@ -145,7 +145,7 @@ FILE* m_pStream;
 ```  
   
 ### <a name="remarks"></a>备注  
- 它是**NULL**如果文件从未打开或已关闭。  
+ 如果从未打开或已关闭了文件，它为 NULL。  
   
 ##  <a name="open"></a>  CStdioFile::Open  
  已重载。 打开专用于默认值`CStdioFile`构造函数。  
@@ -165,25 +165,25 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpszFileName`  
+ *lpszFileName*  
  一个字符串，是所需的文件的路径。 路径可以是相对或绝对。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  共享和访问模式。 指定当打开文件时要执行的操作。 你可以通过使用按位 OR 组合选项 (&#124;) 运算符。 一个访问权限和一个共享选项是必需的;modeCreate 和 modeNoInherit 模式是可选的。  
   
- `pError`  
+ *pError*  
  指向将接收失败的操作的状态的现有文件异常对象的指针。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 对象的指针。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+ 若成功，则为 TRUE；否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
   
 ##  <a name="readstring"></a>  CStdioFile::ReadString  
- 将文本数据读入的缓冲区，最多为`nMax`-1 个字符，与关联的文件从`CStdioFile`对象。  
+ 将文本数据读入的缓冲区，最多为*最*-1 个字符，与关联的文件从`CStdioFile`对象。  
   
 ```  
 virtual LPTSTR ReadString(
@@ -194,25 +194,25 @@ virtual BOOL ReadString(CString& rString);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpsz`  
+ *lpsz*  
  指定指向用户提供将接收的以 null 结尾的文本字符串的缓冲区的指针。  
   
- `nMax`  
+ *最*  
  指定的最大读取的字符数不包括终止 null 字符。  
   
- `rString`  
+ *rString*  
  对引用`CString`在函数返回时，将包含字符串的对象。  
   
 ### <a name="return-value"></a>返回值  
- 指向包含文本数据的缓冲区的指针。 **NULL**如果文件尾已达到而无需读取任何数据; 或如果布尔值、 **FALSE**如果而无需读取任何数据已到达最终的文件。  
+ 指向包含文本数据的缓冲区的指针。 如果文件尾已达到而无需读取任何数据; 则为 NULL或如果 boolean 类型的值，如果文件结尾，则返回 FALSE 已达到而无需读取任何数据。  
   
 ### <a name="remarks"></a>备注  
- 读取已停止的第一个换行符。 如果，在这种情况下，比较少`nMax`-1 字符都已读取，换行字符存储在缓冲区中。 在任一情况下将追加 null 字符 (\0)。  
+ 读取已停止的第一个换行符。 如果，在这种情况下，比较少*最*-1 字符都已读取，换行字符存储在缓冲区中。 在任一情况下将追加 null 字符 (\0)。  
   
  [CFile::Read](../../mfc/reference/cfile-class.md#read)有也可用的文本模式下输入，但它不会终止回车换行符对上。  
   
 > [!NOTE]
->  `CString`此函数的版本中移除`'\n'`如果存在;`LPTSTR`版本却没有。  
+>  `CString`此函数的版本中移除`'\n'`LPTSTR 版本不存在; 如果不会。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
@@ -227,17 +227,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lOff`  
+ *lOff*  
  要将指针移动到的字节数。  
   
- `nFrom`  
+ *nFrom*  
  指针移动模式。 必须是以下值之一：  
   
-- `CFile::begin`： 移动文件指针`lOff`转发中文件的开头的字节。  
+- `CFile::begin`： 移动文件指针*lOff*转发中文件的开头的字节。  
   
-- `CFile::current`： 移动文件指针`lOff`个字节从文件中的当前位置。  
+- `CFile::current`： 移动文件指针*lOff*个字节从文件中的当前位置。  
   
-- `CFile::end`： 移动文件指针`lOff`从文件末尾的字节。 请注意，`lOff`必须负要查找到现有文件; 正值将查找该文件的末尾。  
+- `CFile::end`： 移动文件指针*lOff*从文件末尾的字节。 请注意， *lOff*必须负要查找到现有文件; 正值将查找该文件的末尾。  
   
 ### <a name="return-value"></a>返回值  
  如果所请求的位置是合法的`Seek`返回文件的开头的新的字节偏移量。 否则，返回值是不确定和`CFileException`引发对象。  
@@ -262,15 +262,15 @@ virtual void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>参数  
- `lpsz`  
+ *lpsz*  
  指定指向包含以 null 结尾的字符串的缓冲区的指针。  
   
 ### <a name="remarks"></a>备注  
- 终止 null 字符 ( `\0`) 不会写入该文件。 此方法中写入换行符`lpsz`为回车/换行对的文件。  
+ 终止 null 字符 ( `\0`) 不会写入该文件。 此方法中写入换行符*lpsz*为回车/换行对的文件。  
   
  如果你想要写入的数据，不到文件中，使用以 null 结尾`CStdioFile::Write`或[CFile::Write](../../mfc/reference/cfile-class.md#write)。  
   
- 此方法将引发`CInvalidArgException*`如果指定`NULL`为`lpsz`参数。  
+ 此方法将引发`CInvalidArgException*`如果指定 NULL 为*lpsz*参数。  
   
  此方法将引发`CFileException*`以响应文件系统错误。  
   

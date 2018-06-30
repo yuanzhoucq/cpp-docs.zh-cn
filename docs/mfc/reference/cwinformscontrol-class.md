@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375273"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121632"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 类
 提供用于承载 Windows 窗体控件的基本功能。  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pType`  
+ *pType*  
  要创建控件的数据类型。 必须是[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
   
- `dwStyle`  
+ *dwStyle*  
  要应用于控件的窗口样式。 指定的组合[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前，支持仅以下样式： WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。  
   
- `rect`  
+ *rect*  
  A [RECT 结构](../../mfc/reference/rect-structure1.md)，它定义控件的左上角和右下角的坐标 （仅第一个重载）。  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  静态位置持有者控件的句柄放在资源编辑器中。 新创建的 Windows 窗体控件替换静态控件，假定其位置、 z 顺序和样式 （仅第二个重载）。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父窗口的指针。  
   
- `nID`  
+ *nID*  
  要分配给新创建的控件的资源 ID 号。  
   
- `pControl`  
+ *pControl*  
  Windows 窗体控件来与关联的实例[CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)对象 （仅适用于第四个重载）。  
   
 ### <a name="return-value"></a>返回值  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>备注  
  此方法实例化 MFC 容器中的.NET Framework Windows 窗体控件。  
   
- 方法的第一个重载接受的.NET Framework 数据类型`pType`以便 MFC 可以实例化此类型的新对象。 `pType` 必须是[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
+ 方法的第一个重载接受的.NET Framework 数据类型*pType*以便 MFC 可以实例化此类型的新对象。 *pType*必须[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
   
- 第二个重载的方法创建基于的 Windows 窗体控件`TManagedControl`的模板参数`CWinFormsControl`类。 大小和位置的控件基于`RECT`结构传递给方法。 仅`dwStyle`样式很重要。  
+ 第二个重载的方法创建基于的 Windows 窗体控件`TManagedControl`的模板参数`CWinFormsControl`类。 大小和位置的控件基于`RECT`结构传递给方法。 仅*dwStyle*样式很重要。  
   
- 方法的第三个重载创建替换静态控件，销毁它，并假设其位置、 z 顺序和样式的 Windows 窗体控件。 静态控件仅用作 Windows 窗体控件的占位符。 创建控件时，此重载将组合中的样式`dwStyle`与静态控件的资源样式。  
+ 方法的第三个重载创建替换静态控件，销毁它，并假设其位置、 z 顺序和样式的 Windows 窗体控件。 静态控件仅用作 Windows 窗体控件的占位符。 创建控件时，此重载将组合中的样式*dwStyle*与静态控件的资源样式。  
   
- 方法的第四个重载允许您在已实例化 Windows 窗体控件中将传递`pControl`，MFC 将自动换行。 它必须与同一类型`TManagedControl`的模板参数`CWinFormsControl`类。  
+ 方法的第四个重载允许您在已实例化 Windows 窗体控件中将传递*pControl* ，MFC 将自动换行。 它必须与同一类型`TManagedControl`的模板参数`CWinFormsControl`类。  
   
  请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)的示例使用 Windows 窗体控件。  
   

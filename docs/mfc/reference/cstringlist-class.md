@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375143"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122710"
 ---
 # <a name="cstringlist-class"></a>CStringList 类
 支持 `CString` 对象列表。  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>备注  
  所有的比较求得的值，这意味着字符串中的字符进行比较而不是字符串的地址由完成。  
   
- `CStringList` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果一份`CString`对象存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CString`反过来序列化元素。  
+ `CStringList` 包含 IMPLEMENT_SERIAL 宏来支持序列化和转储的其元素。 如果一份`CString`对象存储到存档中，通过重载的插入运算符或`Serialize`成员函数，每个`CString`反过来序列化元素。  
   
  如果你需要个人的转储`CString`元素，必须将转储上下文的深度设置为 1 或更高版本。  
   

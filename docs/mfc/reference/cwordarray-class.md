@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 562f0eff1470a4754d3eaac15a94d08fefb95951
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376680"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123014"
 ---
 # <a name="cwordarray-class"></a>CWordArray 类
 支持 16 位数组。  
@@ -69,7 +69,7 @@ class CWordArray : public CObject
 ```  
   
 ## <a name="members"></a>成员  
- 成员函数的`CWordArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处[CObject](../../mfc/reference/cobject-class.md)指针作为函数参数或返回值，替换**WORD**。  
+ 成员函数的`CWordArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处[CObject](../../mfc/reference/cobject-class.md)作为函数参数或返回值的指针替换一个单词。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以是**NULL**。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以为 NULL。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|  
@@ -153,14 +153,14 @@ void AddCommandHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  命令 ID。  
   
- `cmdHandler`  
+ *cmdHandler*  
  命令处理程序方法句柄。  
   
 ### <a name="remarks"></a>备注  
- 此方法将添加的命令处理程序`cmdHandler`到命令源对象，并将映射到处理程序`cmdID`。  
+ 此方法将添加的命令处理程序*cmdHandler*到命令源对象，并将映射到处理程序*cmdID*。  
   
  请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`AddCommandHandler`。  
   
@@ -175,13 +175,13 @@ void AddCommandRangeHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdIDMin`  
+ *cmdIDMin*  
  命令 ID 范围的开始索引。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  命令 ID 范围的结束索引。  
   
- `cmdHandler`  
+ *cmdHandler*  
  命令映射到的消息处理程序方法句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -198,13 +198,13 @@ void AddCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdIDMin`  
+ *cmdIDMin*  
  命令 ID 范围的开始索引。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  命令 ID 范围的结束索引。  
   
- `cmdHandler`  
+ *cmdHandler*  
  命令映射到的消息处理程序方法句柄。  
   
 ### <a name="remarks"></a>备注  
@@ -220,14 +220,14 @@ void AddCommandUIHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  命令 ID。  
   
- `cmdUIHandler`  
+ *cmdUIHandler*  
  用户界面命令消息处理程序方法句柄。  
   
 ### <a name="remarks"></a>备注  
- 此方法将添加的用户界面命令消息处理程序`cmdHandler`到命令源对象，并将映射到处理程序`cmdID`。  
+ 此方法将添加的用户界面命令消息处理程序*cmdHandler*到命令源对象，并将映射到处理程序*cmdID*。  
   
 ##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  将消息发送无需等待对其进行处理。  
@@ -237,11 +237,11 @@ void PostCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>参数  
- `command`  
+ *command*  
  要发布的消息命令 ID。  
   
 ### <a name="remarks"></a>备注  
- 此方法以异步方式将映射到由指定的 ID 邮件投递`command`。 它调用[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)将消息放入窗口的消息队列，然后又返回，而无需等待相应的窗口来处理该消息。  
+ 此方法以异步方式将映射到由指定的 ID 邮件投递*命令*。 它调用[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)将消息放入窗口的消息队列，然后又返回，而无需等待相应的窗口来处理该消息。  
   
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  从命令源对象中删除命令处理程序。  
@@ -251,11 +251,11 @@ void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  命令 ID。  
   
 ### <a name="remarks"></a>备注  
- 此方法可以删除命令处理程序映射到`cmdID`命令源对象中。  
+ 此方法可以删除命令处理程序映射到*cmdID*命令源对象中。  
   
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  从命令源对象中删除一组命令处理程序。  
@@ -267,14 +267,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdIDMin`  
+ *cmdIDMin*  
  命令 ID 范围的开始索引。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  命令 ID 范围的结束索引。  
   
 ### <a name="remarks"></a>备注  
- 此方法中删除的消息处理程序，映射到由指定的命令 Id 组`cmdIDMin`和`cmdIDMax`，从命令源对象。  
+ 此方法中删除的消息处理程序，映射到由指定的命令 Id 组*cmdIDMin*和*cmdIDMax*，从命令源对象。  
   
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  从命令源对象中删除用户界面命令消息处理程序的组。  
@@ -286,14 +286,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdIDMin`  
+ *cmdIDMin*  
  命令 ID 范围的开始索引。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  命令 ID 范围的结束索引。  
   
 ### <a name="remarks"></a>备注  
- 此方法中删除的用户界面命令消息处理程序，映射到由指定的命令 Id 组`cmdIDMin`和`cmdIDMax`，从命令源对象。  
+ 此方法中删除的用户界面命令消息处理程序，映射到由指定的命令 Id 组*cmdIDMin*和*cmdIDMax*，从命令源对象。  
   
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  从命令源对象中删除用户接口命令消息处理程序。  
@@ -303,11 +303,11 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  命令 ID。  
   
 ### <a name="remarks"></a>备注  
- 此方法中删除的用户界面命令消息处理程序映射到`cmdID`命令源对象中。  
+ 此方法中删除的用户界面命令消息处理程序映射到*cmdID*命令源对象中。  
   
 ##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  发送一条消息，并等待其在返回之前进行处理。  
@@ -317,11 +317,11 @@ void SendCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>参数  
- `command`  
+ *command*  
  要发送的消息命令 ID。  
   
 ### <a name="remarks"></a>备注  
- 此方法以同步方式将消息映射到由指定的 ID 发送`command`。 它调用[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)将消息放入窗口的消息队列并等待，直到在返回之前，该窗口过程已处理完该消息。  
+ 此方法以同步方式将消息映射到由指定的 ID 发送*命令*。 它调用[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)将消息放入窗口的消息队列并等待，直到在返回之前，该窗口过程已处理完该消息。  
   
 ##  <a name="icommandtarget_interface"></a>  ICommandTarget 接口  
  向用户控件提供了一个接收命令从命令的源对象的接口。  
@@ -345,13 +345,13 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>参数  
- `cmdSource`  
+ *cmdSource*  
  命令源对象的句柄。  
   
 ### <a name="remarks"></a>备注  
  当你托管在 MFC 视图中，用户控件时[CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令和更新命令 UI 到用户控件的消息以允许应用程序处理 MFC 命令。  
   
- 此方法初始化命令目标对象，并将其与指定的命令源对象关联`cmdSource`。 在用户控件类实现中，应该调用它。 在初始化时，你应注册命令处理程序使用的命令源对象通过调用[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)中`Initialize`实现。 请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`Initialize`要这样做。  
+ 此方法初始化命令目标对象，并将其与指定的命令源对象关联*cmdSource*。 在用户控件类实现中，应该调用它。 在初始化时，你应注册命令处理程序使用的命令源对象通过调用[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)中`Initialize`实现。 请参阅[如何： 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`Initialize`要这样做。  
   
 ##  <a name="icommandui_interface"></a>  ICommandUI 接口  
  管理用户界面命令。  
@@ -395,7 +395,7 @@ void ContinueRouting();
 ```  
   
 ### <a name="remarks"></a>备注  
- 这是一个高级的成员函数，应与结合使用[ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)处理程序返回`FALSE`。 有关详细信息，请参阅技术说明[TN006： 消息映射](../../mfc/tn006-message-maps.md)。  
+ 这是一个高级的成员函数，应与结合使用[ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)处理程序，则返回 FALSE。 有关详细信息，请参阅技术说明[TN006： 消息映射](../../mfc/tn006-message-maps.md)。  
   
 ##  <a name="enabled"></a>  ICommandUI::Enabled  
  启用或禁用此命令的用户界面项。  
@@ -405,7 +405,7 @@ property bool Enabled;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此属性启用或禁用此命令的用户界面项。 设置`Enabled`到`TRUE`以启用项，`FALSE`以禁用它。  
+ 此属性启用或禁用此命令的用户界面项。 设置`Enabled`为 TRUE 以启用该项目，则返回 FALSE 来禁用它。  
   
 ##  <a name="id"></a>  ICommandUI::ID  
  获取所表示的用户界面对象的 ID`ICommandUI`对象。  
@@ -435,7 +435,7 @@ property bool Radio;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此属性将此命令的用户界面项设置为相应的复选状态。 设置`Radio`到`TRUE`以启用项; 否则为`FALSE`。  
+ 此属性将此命令的用户界面项设置为相应的复选状态。 设置`Radio`为 TRUE 以启用项; 否则为 FALSE。  
   
 ##  <a name="text"></a>  ICommandUI::Text  
  设置此命令的用户界面项的文本。  
@@ -469,7 +469,7 @@ void OnActivateView(bool activate);
 ```  
   
 ### <a name="parameters"></a>参数  
- `activate`  
+ *激活*  
  指示是否视图处于激活或停用。  
   
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  

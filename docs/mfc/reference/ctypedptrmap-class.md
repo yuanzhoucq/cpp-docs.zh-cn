@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376390"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121859"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 为 `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`和 `CMapStringToPtr`指针映射类的对象提供安全类型“包装器”。  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>参数  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  类型化的指针映射类; 基类必须为一个指针映射类 ( `CMapPtrToPtr`， `CMapPtrToWord`， `CMapWordToPtr`，或`CMapStringToPtr`)。  
   
- `KEY`  
+ *KEY*  
  用作到映射的键的对象类。  
   
- `VALUE`  
+ *值*  
  存储在映射中的对象类。  
   
 ## <a name="members"></a>成员  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>参数  
- `rPosition`  
- 指定对引用**位置**通过前一个返回值`GetNextAssoc`或`BASE_CLASS` **:: GetStartPosition**调用。  
+ *rPosition*  
+ 指定对先前返回的位置值的引用`GetNextAssoc`或`BASE_CLASS` **:: GetStartPosition**调用。  
   
  *KEY*  
  指定地图的键的类型的模板参数。  
   
- `rKey`  
+ *rKey*  
  指定检索的元素返回的密钥。  
   
  *值*  
  指定地图的值的类型的模板参数。  
   
- `rValue`  
+ *rValue*  
  指定检索的元素的返回的值。  
   
 ### <a name="remarks"></a>备注  
  此函数是最适用于循环访问映射中的所有元素。 请注意，位置序列不一定是相同的密钥值序列。  
   
- 如果检索的元素的是在映射中，最后然后的新值`rNextPosition`设置为**NULL**。  
+ 如果检索的元素的是在映射中，最后然后的新值`rNextPosition`设置为 NULL。  
   
  此内联函数调用`BASE_CLASS` **:: GetNextAssoc**。  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  指定此地图的类的基本类模板参数。  
   
- `key`  
+ *key*  
  要查找的元素键。  
   
  *值*  
  模板参数来指定存储在此映射中的值的类型。  
   
- `rValue`  
+ *rValue*  
  指定检索的元素的返回的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *值*  
  模板参数来指定存储在此映射中的值的类型。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  指定此地图的类的基本类模板参数。  
   
- `key`  
+ *key*  
  要查找或创建在映射中的元素的键。  
   
 ### <a name="remarks"></a>备注  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  指定地图的键的类型的模板参数。  
   
- `key`  
+ *key*  
  要移除的元素键。  
   
 ### <a name="return-value"></a>返回值  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  指定地图的键的类型的模板参数。  
   
- `key`  
+ *key*  
  指定 newValue 关键的值。  
   
- `newValue`  
+ *newValue*  
  指定是将新元素的值的对象指针。  
   
 ### <a name="remarks"></a>备注  

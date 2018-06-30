@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d2b44c4e854a27bcc753c1403ea058b03906a8
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377844"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123144"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 提供拆分窗口功能，此窗口包含多个窗格。  
@@ -159,9 +159,9 @@ class CSplitterWnd : public CWnd
   
 3.  从中重写`OnCreateClient`，调用[创建](#create)或[CreateStatic](#createstatic)成员函数`CSplitterWnd`。  
   
- 调用**创建**成员函数来创建动态拆分窗口。 动态拆分窗口通常用于创建和滚动大量的各个窗格或同一文档的视图。 框架会自动创建的初始窗格拆分器;然后框架创建、 调整大小，并释放的其他窗格，如用户的操作拆分窗口的控件。  
+ 调用`Create`成员函数来创建动态拆分窗口。 动态拆分窗口通常用于创建和滚动大量的各个窗格或同一文档的视图。 框架会自动创建的初始窗格拆分器;然后框架创建、 调整大小，并释放的其他窗格，如用户的操作拆分窗口的控件。  
   
- 当调用**创建**，指定确定何时将窗格太小而无法完全显示一个最小行高度和列宽度。 调用后**创建**，你可以通过调用来调整这些最小值[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成员函数。  
+ 当调用`Create`，指定确定何时将窗格太小而无法完全显示一个最小行高度和列宽度。 调用后`Create`，你可以通过调用来调整这些最小值[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成员函数。  
   
  此外使用`SetColumnInfo`和`SetRowInfo`成员函数来设置列"理想"宽度和行"理想"高度。 当框架显示拆分窗口时，它首先显示的父框架，然后拆分窗口。 框架然后是根据其理想的尺寸，处理从左上角到右下角的拆分器窗口工作区的行和列中的窗格布局。  
   
@@ -171,13 +171,13 @@ class CSplitterWnd : public CWnd
   
  在创建静态拆分时，你必须专门创建所有静态拆分的窗格。 请确保你创建的父框架之前的所有窗格`OnCreateClient`成员函数返回时或该框架将不会正确显示窗口。  
   
- `CreateStatic`成员函数可以自动初始化静态拆分最小行高度和列宽度为 0。 调用后**创建**，调整这些最小值通过调用[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成员函数。 此外使用`SetColumnInfo`和`SetRowInfo`调用后`CreateStatic`以指示所需的理想的窗格中的维度。  
+ `CreateStatic`成员函数可以自动初始化静态拆分最小行高度和列宽度为 0。 调用后`Create`，调整这些最小值通过调用[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成员函数。 此外使用`SetColumnInfo`和`SetRowInfo`调用后`CreateStatic`以指示所需的理想的窗格中的维度。  
   
  静态拆分的单个窗格通常属于不同的类。 静态拆分窗口的示例，请参阅图形编辑器和 Windows 文件管理器。  
   
  拆分窗口支持 （脱离窗格可能具有的滚动条） 的特殊的滚动条。 这些滚动条是子级`CSplitterWnd`对象，并与窗格共享。  
   
- 在创建拆分窗口时，你可以创建这些特殊的滚动条。 例如，`CSplitterWnd`具有一行、 两个列和**WS_VSCROLL**样式将显示垂直滚动条所共享的两个窗格。 当用户将在滚动条`WM_VSCROLL`消息发送到这两个窗格。 当窗格设置滚动条位置时，设置共享的滚动条。  
+ 在创建拆分窗口时，你可以创建这些特殊的滚动条。 例如， `CSplitterWnd` ，它具有一个行，两个列，且 WS_VSCROLL 样式将显示垂直滚动条所共享的两个窗格。 当用户将滚动条时，WM_VSCROLL 消息发送到这两个窗格。 当窗格设置滚动条位置时，设置共享的滚动条。  
   
  拆分窗口的详细信息，请参阅：  
   
@@ -211,7 +211,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bPrev`  
+ *bPrev*  
  指示要激活的窗口。 **TRUE**为以前;**FALSE**的下一步。  
   
 ### <a name="remarks"></a>备注  
@@ -225,7 +225,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `bPrev`  
+ *bPrev*  
  指示要激活的窗口。 **TRUE**为以前;**FALSE**的下一步。  
   
 ### <a name="return-value"></a>返回值  
@@ -249,7 +249,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  拆分窗口的父框架窗口。  
   
  *nMaxRows*  
@@ -258,17 +258,17 @@ virtual BOOL Create(
  *nMaxCols*  
  最大拆分器窗口中的列数。 此值不能超过 2。  
   
- `sizeMin`  
+ *sizeMin*  
  指定一个窗格可能会显示的最小大小。  
   
- `pContext`  
- 指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。 在大多数情况下，这可能是`pContext`传递到父框架窗口。  
+ *pContext*  
+ 指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。 在大多数情况下，这可能是*pContext*传递到父框架窗口。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式。  
   
- `nID`  
- 窗口的子窗口 ID。 该 ID 可以是**AFX_IDW_PANE_FIRST**除非拆分窗口的嵌套在另一个拆分器窗口的内部。  
+ *nID*  
+ 窗口的子窗口 ID。 该 ID 可以是 AFX_IDW_PANE_FIRST，除非拆分窗口的嵌套在另一个拆分器窗口的内部。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -280,11 +280,11 @@ virtual BOOL Create(
   
 2.  重写的父框架[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成员函数。  
   
-3.  调用**创建**从中重写的成员函数`OnCreateClient`。  
+3.  调用`Create`从中重写的成员函数`OnCreateClient`。  
   
- 创建从在父范围内的产生拆分器窗口时, 传递的父框架`pContext`拆分窗口的参数。 否则，此参数可以是**NULL**。  
+ 创建从在父范围内的产生拆分器窗口时, 传递的父框架*pContext*拆分窗口的参数。 否则，此参数可以为 NULL。  
   
- 动态拆分窗口的初始最小行高度和列宽度由`sizeMin`参数。 这些最小值，用于确定是否太小，无法显示在其整个窗格中，可以更改与[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成员函数。  
+ 动态拆分窗口的初始最小行高度和列宽度由*sizeMin*参数。 这些最小值，用于确定是否太小，无法显示在其整个窗格中，可以更改与[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成员函数。  
   
  有关动态拆分窗口的详细信息，请参阅"拆分窗口"中文章[多文档类型、 视图和框架窗口](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技术注意 29](../../mfc/tn029-splitter-windows.md)，和`CSplitterWnd`类概述。  
   
@@ -301,11 +301,11 @@ virtual BOOL CreateScrollBarCtrl(
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式。  
   
- `nID`  
- 窗口的子窗口 ID。 该 ID 可以是**AFX_IDW_PANE_FIRST**除非拆分窗口的嵌套在另一个拆分器窗口的内部。  
+ *nID*  
+ 窗口的子窗口 ID。 该 ID 可以是 AFX_IDW_PANE_FIRST，除非拆分窗口的嵌套在另一个拆分器窗口的内部。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -326,20 +326,20 @@ virtual BOOL CreateStatic(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pParentWnd`  
+ *pParentWnd*  
  拆分窗口的父框架窗口。  
   
- `nRows`  
+ *nRows*  
  行数。 此值不能超过 16。  
   
  *nCols*  
  列数。 此值不能超过 16。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的窗口样式。  
   
- `nID`  
- 窗口的子窗口 ID。 该 ID 可以是**AFX_IDW_PANE_FIRST**除非拆分窗口的嵌套在另一个拆分器窗口的内部。  
+ *nID*  
+ 窗口的子窗口 ID。 该 ID 可以是 AFX_IDW_PANE_FIRST，除非拆分窗口的嵌套在另一个拆分器窗口的内部。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -359,7 +359,7 @@ virtual BOOL CreateStatic(
   
  静态拆分窗口的初始最小行高度和列宽度为 0。 这些最小值，这些扩展名决定了太小，无法显示在其整个窗格中时，可以更改与[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成员函数。  
   
- 若要添加到静态拆分窗口的滚动条，添加**WS_HSCROLL**和**WS_VSCROLL**样式`dwStyle`。  
+ 若要将滚动条添加到一个静态拆分窗口中，将添加到 WS_HSCROLL 和 WS_VSCROLL 样式*dwStyle*。  
   
  请参阅本文中的"拆分窗口"[多文档类型、 视图和框架窗口](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技术注意 29](../../mfc/tn029-splitter-windows.md)，和`CSplitterWnd`类概述有关静态拆分窗口的详细信息。  
   
@@ -376,20 +376,20 @@ virtual BOOL CreateView(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
+ *行*  
  指定要在其中放置新视图的拆分器窗口行。  
   
- `col`  
+ *列*  
  指定要在其中放置新视图的拆分器窗口列。  
   
- `pViewClass`  
+ *pViewClass*  
  指定[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)的新视图。  
   
  *sizeInit*  
  指定新视图的初始大小。  
   
- `pContext`  
- 一个指向用于创建视图创建上下文 (通常`pContext`传入的父框架重写[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)在其中创建拆分窗口的成员函数)。  
+ *pContext*  
+ 一个指向用于创建视图创建上下文 (通常*pContext*传入的父框架重写[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)处于拆分窗口的成员函数正在创建）。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
@@ -424,7 +424,7 @@ virtual void DeleteColumn(int colDelete);
  指定要删除的列。  
   
 ### <a name="remarks"></a>备注  
- 由框架实现动态拆分窗口的逻辑调用此成员函数 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ 由框架 （即，如果拆分窗口具有 SPLS_DYNAMIC_SPLIT 样式） 实现动态拆分窗口的逻辑调用此成员函数。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
 ##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  从拆分器窗口中删除行。  
@@ -438,7 +438,7 @@ virtual void DeleteRow(int rowDelete);
  指定要删除的行。  
   
 ### <a name="remarks"></a>备注  
- 由框架实现动态拆分窗口的逻辑调用此成员函数 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ 由框架 （即，如果拆分窗口具有 SPLS_DYNAMIC_SPLIT 样式） 实现动态拆分窗口的逻辑调用此成员函数。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
 ##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  从拆分器窗口中删除视图。  
@@ -450,16 +450,16 @@ virtual void DeleteView(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
+ *行*  
  指定用于删除视图的拆分器窗口行。  
   
- `col`  
+ *列*  
  指定用于删除视图的拆分器窗口列。  
   
 ### <a name="remarks"></a>备注  
  如果正在删除活动的视图，下一步视图将处于活动状态。 默认实现假设该视图将自动删除在[PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy)。  
   
- 由框架实现动态拆分窗口的逻辑调用此成员函数 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ 由框架 （即，如果拆分窗口具有 SPLS_DYNAMIC_SPLIT 样式） 实现动态拆分窗口的逻辑调用此成员函数。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
 ##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  执行键盘拆分命令，通常"窗口拆分。"  
@@ -485,26 +485,26 @@ virtual BOOL DoScroll(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pViewFrom`  
+ *pViewFrom*  
  指向滚动消息所源自的视图的指针。  
   
- `nScrollCode`  
+ *nScrollCode*  
  指示的用户的滚动条代码的滚动请求。 此参数由两个部分组成： 低序位字节，用于确定滚动正在进行水平的类型，并确定的一种滚动发生垂直高序位字节：  
   
-- **SB_BOTTOM**滚动到下的顺序。  
+- SB_BOTTOM 滚动到底部。  
   
-- **SB_LINEDOWN**向下滚动一行。  
+- SB_LINEDOWN 滚动行下移一行。  
   
-- **SB_LINEUP**向上滚动一行。  
+- SB_LINEUP 滚动行上移一行。  
   
-- **SB_PAGEDOWN**向下滚动一页。  
+- 向下 SB_PAGEDOWN 滚动一页。  
   
-- **SB_PAGEUP**向上滚动一页。  
+- 向上 SB_PAGEUP 滚动一页。  
   
-- **SB_TOP**滚动到顶部。  
+- 页首 SB_TOP 滚动。  
   
- `bDoScroll`  
- 确定是否执行了指定滚动操作。 如果`bDoScroll`是**TRUE** （即，如果存在子窗口，并在拆分窗口具有滚动范围），然后指定滚动操作可能需要的位置; 如果`bDoScroll`是**FALSE** （即，如果没有子窗口存在，或者拆分视图具有任何滚动范围），然后滚动不会发生。  
+ *bDoScroll*  
+ 确定是否执行了指定滚动操作。 如果*bDoScroll*是 TRUE （即，如果存在子窗口，并在拆分窗口具有滚动范围），则指定滚动操作可能需要的位置; 如果*bDoScroll*是 FALSE （也就是说，如果没有子窗口存在，或拆分视图具有任何滚动范围)，然后滚动不会发生。  
   
 ### <a name="return-value"></a>返回值  
  发生滚动如果同步的则为非 0;否则为 0。  
@@ -523,20 +523,20 @@ virtual BOOL DoScrollBy(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pViewFrom`  
+ *pViewFrom*  
  指向滚动消息所源自的视图的指针。  
   
- `sizeScroll`  
+ *sizeScroll*  
  水平和垂直滚动的像素数。  
   
- bDoScroll  
- 确定是否执行了指定滚动操作。 如果`bDoScroll`是**TRUE** （即，如果存在子窗口，并在拆分窗口具有滚动范围），然后指定滚动操作可能需要的位置; 如果`bDoScroll`是**FALSE** （即，如果没有子窗口存在，或者拆分视图具有任何滚动范围），然后滚动不会发生。  
+ *bDoScroll*  
+ 确定是否执行了指定滚动操作。 如果*bDoScroll*是 TRUE （即，如果存在子窗口，并在拆分窗口具有滚动范围），则指定滚动操作可能需要的位置; 如果*bDoScroll*是 FALSE （也就是说，如果没有子窗口存在，或拆分视图具有任何滚动范围)，然后滚动不会发生。  
   
 ### <a name="return-value"></a>返回值  
  发生滚动如果同步的则为非 0;否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数调用中滚动消息响应的框架，则执行同步拆分窗口的滚动量，以像素为单位，由`sizeScroll`。 正值指示滚动向下和向右;负值表示向上和向左滚动。  
+ 此成员函数调用中滚动消息响应的框架，则执行同步拆分窗口的滚动量，以像素为单位，由*sizeScroll*。 正值指示滚动向下和向右;负值表示向上和向左滚动。  
   
  重写以要求在允许滚动之前由用户操作。  
   
@@ -550,14 +550,14 @@ virtual CWnd* GetActivePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pRow`  
+ *pRow*  
  指向的指针**int**检索活动窗格的行号。  
   
- `pCol`  
+ *pCol*  
  指向的指针**int**检索活动窗格中的列号。  
   
 ### <a name="return-value"></a>返回值  
- 指向活动窗格的指针。 **NULL**如果没有活动的窗格中存在。  
+ 指向活动窗格的指针。 如果没有活动的窗格中存在，则为 NULL。  
   
 ### <a name="remarks"></a>备注  
  此成员函数调用由框架确定拆分器窗口中的活动窗格中。 重写以要求用户在获取活动窗格之前的操作。  
@@ -583,14 +583,14 @@ void GetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `col`  
+ *列*  
  指定一列。  
   
  *cxCur*  
- 对引用`int`将设置为列的当前宽度。  
+ 对引用**int**将设置为列的当前宽度。  
   
- `cxMin`  
- 对引用`int`将设置为列的当前最小宽度。  
+ *cxMin*  
+ 对引用**int**将设置为列的当前最小宽度。  
   
 ##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  返回在指定的行和列的窗格。  
@@ -602,10 +602,10 @@ CWnd* GetPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
+ *行*  
  指定的行。  
   
- `col`  
+ *列*  
  指定一列。  
   
 ### <a name="return-value"></a>返回值  
@@ -632,17 +632,17 @@ void GetRowInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
+ *行*  
  指定的行。  
   
- `cyCur`  
- 引用`int`将设置为以像素为单位的行的当前高度。  
+ *cyCur*  
+ 引用**int**将设置为以像素为单位的行的当前高度。  
   
- `cyMin`  
- 引用`int`将设置为以像素为单位的行的当前最小高度。  
+ *cyMin*  
+ 引用**int**将设置为以像素为单位的行的当前最小高度。  
   
 ### <a name="remarks"></a>备注  
- 调用此成员函数以获取有关指定行的信息。 `cyCur`参数填充的指定行的当前高度和`cyMin`填入行的最小高度。  
+ 调用此成员函数以获取有关指定行的信息。 *CyCur*参数填充的指定行的当前高度和*cyMin*填入行的最小高度。  
   
 ##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  返回拆分窗口的共享的滚动条样式。  
@@ -654,9 +654,9 @@ DWORD GetScrollStyle() const;
 ### <a name="return-value"></a>返回值  
  一个或多个以下的窗口样式标志，如果成功：  
   
-- **WS_HSCROLL**如果拆分器当前管理共享水平滚动条。  
+- WS_HSCROLL 如果拆分器当前管理共享水平滚动条。  
   
-- **WS_VSCROLL**如果拆分器当前管理共享的垂直滚动条。  
+- WS_VSCROLL 如果拆分器当前管理共享垂直滚动条。  
   
  如果为零，拆分窗口的当前未管理任何共享的滚动条。  
   
@@ -670,10 +670,10 @@ int IdFromRowCol(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
+ *行*  
  指定的拆分器窗口的行。  
   
- `col`  
+ *列*  
  指定的拆分器窗口列。  
   
 ### <a name="return-value"></a>返回值  
@@ -686,7 +686,7 @@ int IdFromRowCol(
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
 ##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
- 确定是否`pWnd`目前此拆分器窗口的子窗格。  
+ 确定是否*pWnd*目前此拆分器窗口的子窗格。  
   
 ```  
 BOOL IsChildPane(
@@ -696,17 +696,17 @@ BOOL IsChildPane(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pWnd`  
+ *pWnd*  
  指向的指针[CWnd](../../mfc/reference/cwnd-class.md)要测试的对象。  
   
- `pRow`  
- 指向的指针`int`要在其中存储行号。  
+ *pRow*  
+ 指向的指针**int**要在其中存储行号。  
   
- `pCol`  
- 指向的指针`int`要在其中存储列号。  
+ *pCol*  
+ 指向的指针**int**要在其中存储列号。  
   
 ### <a name="return-value"></a>返回值  
- 如果不为零，`pWnd`目前此拆分器窗口中，子窗格和`pRow`和`pCol`使用窗格的拆分器窗口中的位置填充。 如果`pWnd`不是子窗格中的此拆分器窗口中，则返回 0。  
+ 如果不为零， *pWnd*目前此拆分器窗口中，子窗格和*pRow*和*pCol*使用窗格的拆分器窗口中的位置填充。 如果*pWnd*不是子窗格中的此拆分器窗口中，则返回 0。  
   
 ### <a name="remarks"></a>备注  
  在 Visual c + + 6.0 之前的版本，此函数已定义为  
@@ -736,21 +736,21 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
- 指向在其中进行绘制的设备上下文的指针。 如果`pDC`是**NULL**，然后[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)称为绘制窗口框架和不进行拆分。  
+ *pDC*  
+ 指向在其中进行绘制的设备上下文的指针。 如果*pDC*为 NULL，则[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)称为绘制窗口框架和不进行拆分。  
   
- `nType`  
- 值为**枚举 ESplitType**，这可以是以下之一：  
+ *nType*  
+ 值为`enum ESplitType`，这可以是以下之一：  
   
-- **splitBox**拆分器拖动框。  
+- `splitBox` 拆分器拖动框。  
   
 - `splitBar` 显示两个拆分窗口之间的栏。  
   
-- **splitIntersection**拆分窗口的交集。 在 Windows 95/98 上运行时不会调用此元素。  
+- `splitIntersection` 拆分窗口的交集。 在 Windows 95/98 上运行时不会调用此元素。  
   
-- **splitBorder**拆分窗口边框。  
+- `splitBorder` 拆分窗口边框。  
   
- `rect`  
+ *rect*  
  对引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定的大小和形状的拆分窗口。  
   
 ### <a name="remarks"></a>备注  
@@ -766,7 +766,7 @@ virtual void OnInvertTracker(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>参数  
- `rect`  
+ *rect*  
  引用`CRect`对象，它指定跟踪矩形。  
   
 ### <a name="remarks"></a>备注  
@@ -800,19 +800,19 @@ virtual void SetActivePane(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
- 如果`pWnd`是**NULL**，在将处于活动状态窗格中指定的行。  
+ *行*  
+ 如果*pWnd*为 NULL，在将处于活动状态窗格中指定的行。  
   
- `col`  
- 如果`pWnd`是**NULL**，指定将处于活动状态的窗格中的列。  
+ *列*  
+ 如果*pWnd*为 NULL，指定将处于活动状态的窗格中的列。  
   
- `pWnd`  
- 指向的指针`CWnd`对象。 如果**NULL**，由指定的窗格`row`和`col`设置活动视图。 如果不是**NULL**，指定设置活动窗格。  
+ *pWnd*  
+ 指向的指针`CWnd`对象。 如果为 NULL，窗格中指定*行*和*col*设置活动视图。 如果不为 NULL，则指定设置活动窗格。  
   
 ### <a name="remarks"></a>备注  
  由框架时用户将焦点更改到在框架窗口内的窗格为活动状态设置窗格中调用此成员函数。 你可以明确地调用`SetActivePane`要将焦点更改到指定的视图。  
   
- 通过提供行和列中，指定窗格**或**通过提供`pWnd`。  
+ 通过提供行和列中，指定窗格**或**通过提供*pWnd*。  
   
 ##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  用于设置指定的列信息的调用。  
@@ -825,13 +825,13 @@ void SetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `col`  
+ *列*  
  指定的拆分器窗口列。  
   
  *cxIdeal*  
  以像素为单位指定拆分器窗口中列的理想宽度。  
   
- `cxMin`  
+ *cxMin*  
  以像素为单位指定拆分器窗口中列的最小宽度。  
   
 ### <a name="remarks"></a>备注  
@@ -853,13 +853,13 @@ void SetRowInfo(
 ```  
   
 ### <a name="parameters"></a>参数  
- `row`  
+ *行*  
  指定的拆分器窗口的行。  
   
  *cyIdeal*  
  以像素为单位指定拆分器窗口行的理想高度。  
   
- `cyMin`  
+ *cyMin*  
  以像素为单位指定拆分器窗口行最小高度。  
   
 ### <a name="remarks"></a>备注  
@@ -875,12 +875,12 @@ void SetScrollStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwStyle`  
+ *dwStyle*  
  拆分窗口的滚动新式共享滚动条支持，可以是以下值之一：  
   
-- **WS_HSCROLL**创建/显示水平共享滚动条。  
+- WS_HSCROLL 创建/显示共享水平滚动条。  
   
-- **WS_VSCROLL**创建/显示垂直共享滚动条。  
+- WS_VSCROLL 创建/显示共享的垂直滚动条。  
   
 ### <a name="remarks"></a>备注  
  滚动条创建后不会销毁即使`SetScrollStyle`称为如果不使用该样式; 而是在隐藏这些滚动条。 这允许滚动条来保留其状态，即使它们处于隐藏状态。 在调用`SetScrollStyle`需要调用[RecalcLayout](#recalclayout)的所有更改才会生效。  
@@ -902,7 +902,7 @@ virtual BOOL SplitColumn(int cxBefore);
 ### <a name="remarks"></a>备注  
  创建垂直拆分器窗口时调用此成员函数。 `SplitColumn` 指示发生拆分的位置的默认位置。  
   
- `SplitColumn` 由框架实现动态拆分窗口的逻辑调用 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ `SplitColumn` 由框架，以实现动态拆分窗口的逻辑 （即，如果拆分窗口具有 SPLS_DYNAMIC_SPLIT 样式） 调用。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
 ##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  指示框架窗口水平拆分的位置。  
@@ -921,7 +921,7 @@ virtual BOOL SplitRow(int cyBefore);
 ### <a name="remarks"></a>备注  
  创建水平拆分器窗口时调用此成员函数。 `SplitRow` 指示发生拆分的位置的默认位置。  
   
- `SplitRow` 由框架实现动态拆分窗口的逻辑调用 (即，如果拆分窗口具有**SPLS_DYNAMIC_SPLIT**样式)。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
+ `SplitRow` 由框架，以实现动态拆分窗口的逻辑 （即，如果拆分窗口具有 SPLS_DYNAMIC_SPLIT 样式） 调用。 它可以进行自定义，以及虚拟函数[对 CreateView](#createview)，以实现更高级的动态拆分器。  
   
 ##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  由框架调用以绘制拆分窗口。  
@@ -931,7 +931,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pDC`  
+ *pDC*  
  一个指向设备上下文的指针。  
   
 ### <a name="remarks"></a>备注  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c423f1423c874dbf110cfd6951b3510fe0506af
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375598"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121872"
 ---
 # <a name="csocket-class"></a>CSocket 类
 派生自`CAsyncSocket`、 继承其封装 Windows 套接字 API 中，并表示比更高级别的抽象`CAsyncSocket`对象。  
@@ -58,10 +58,10 @@ class CSocket : public CAsyncSocket
   
 |名称|描述|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|将附加**套接字**的句柄`CSocket`对象。|  
+|[CSocket::Attach](#attach)|将附加到套接字句柄`CSocket`对象。|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|取消当前正在进行一个阻塞调用。|  
 |[CSocket::Create](#create)|创建套接字。|  
-|[CSocket::FromHandle](#fromhandle)|返回一个指向`CSocket`给定的对象**套接字**处理。|  
+|[CSocket::FromHandle](#fromhandle)|返回一个指向`CSocket`给定套接字句柄的对象。|  
 |[CSocket::IsBlocking](#isblocking)|确定是否正在执行阻止调用。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
@@ -73,9 +73,9 @@ class CSocket : public CAsyncSocket
 ## <a name="remarks"></a>备注  
  `CSocket` 适用于类`CSocketFile`和`CArchive`来管理发送和接收数据。  
   
- A`CSocket`对象还提供了阻止，这是至关重要的同步操作`CArchive`。 阻止函数，如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(从所有继承`CAsyncSocket`)，不会返回`WSAEWOULDBLOCK`中的错误`CSocket`。 相反，这些函数等待，直到操作完成。 此外，原始调用将终止并出现错误`WSAEINTR`如果`CancelBlockingCall`时这些函数之一的阻止调用。  
+ A`CSocket`对象还提供了阻止，这是至关重要的同步操作`CArchive`。 阻止函数，如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(从所有继承`CAsyncSocket`)，不会返回`WSAEWOULDBLOCK`中的错误`CSocket`。 相反，这些函数等待，直到操作完成。 此外，原始调用如果将终止，错误 WSAEINTR`CancelBlockingCall`时这些函数之一的阻止调用。  
   
- 若要使用`CSocket`对象，请调用构造函数中，然后调用`Create`创建基础`SOCKET`处理 (类型`SOCKET`)。 默认参数`Create`创建流套接字，但是，如果你未使用与套接字`CArchive`对象，你可以指定用于相反，创建数据报套接字或绑定到特定端口以创建服务器套接字的参数。 连接到客户端套接字使用`Connect`在客户端和`Accept`服务器端。 然后创建`CSocketFile`对象，并将关联到`CSocket`对象在`CSocketFile`构造函数。 接下来，创建`CArchive`发送的对象，另一个用于接收数据 （如需要），然后将其关联与`CSocketFile`对象在`CArchive`构造函数。 当通信都完成后时，销毁`CArchive`， `CSocketFile`，和`CSocket`对象。 `SOCKET`文章中介绍了数据类型[Windows 套接字： 背景](../../mfc/windows-sockets-background.md)。  
+ 若要使用`CSocket`对象，请调用构造函数中，然后调用`Create`创建基础套接字句柄 （类型为套接字）。 默认参数`Create`创建流套接字，但是，如果你未使用与套接字`CArchive`对象，你可以指定用于相反，创建数据报套接字或绑定到特定端口以创建服务器套接字的参数。 连接到客户端套接字使用`Connect`在客户端和`Accept`服务器端。 然后创建`CSocketFile`对象，并将关联到`CSocket`对象在`CSocketFile`构造函数。 接下来，创建`CArchive`发送的对象，另一个用于接收数据 （如需要），然后将其关联与`CSocketFile`对象在`CArchive`构造函数。 当通信都完成后时，销毁`CArchive`， `CSocketFile`，和`CSocket`对象。 文章中介绍了套接字数据类型[Windows 套接字： 背景](../../mfc/windows-sockets-background.md)。  
   
  当你使用`CArchive`与`CSocketFile`和`CSocket`，可能会遇到这样的情况其中`CSocket::Receive`进入循环 (通过`PumpMessages(FD_READ)`) 等待请求的字节量。 这是因为 Windows 套接字允许每个 FD_READ 通知，只有一个接收调用，但`CSocketFile`和`CSocket`允许每 FD_READ 的多个接收调用。 如果你收到 FD_READ 要读取的数据时，应用程序挂起。 如果你永远不会获得另一个 FD_READ，应用程序将停止通过套接字进行通信。  
   
@@ -108,14 +108,14 @@ BOOL Attach(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hSocket`  
+ *hSocket*  
  包含为套接字的句柄。  
   
 ### <a name="return-value"></a>返回值  
  如果函数运行成功，则为非零。  
   
 ### <a name="remarks"></a>备注  
- **套接字**句柄存储在对象的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)数据成员。  
+ SOCKET 句柄存储在对象的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)数据成员。  
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -134,11 +134,11 @@ void CancelBlockingCall();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此函数将取消此套接字任何未完成停滞操作。 原始阻止调用将尽快终止并出现错误**WSAEINTR**。  
+ 此函数将取消此套接字任何未完成停滞操作。 原始阻止调用将出现错误 WSAEINTR 尽快终止。  
   
- 在阻止的情况下**连接**操作，就会立即可行的但是它可能不可行的套接字资源，直到完成该连接释放，Windows 套接字实现将终止阻止的调用（，然后已重置） 或超时。这是，可能需要明显仅当应用程序会立即尝试打开新的套接字中，（如果有任何套接字），或者连接到相同的对等方。  
+ 在阻止的情况下`Connect`操作，就会立即可行的但是它可能不可行的套接字资源，直到连接已完成 （，然后已重置） 释放，Windows 套接字实现将终止阻止的调用或操作已超时。这是，可能需要明显仅当应用程序会立即尝试打开新的套接字中，（如果有任何套接字），或者连接到相同的对等方。  
   
- 而取消任何操作**接受**会使处于不确定状态的套接字。 如果应用程序取消停滞操作套接字上的，应用程序可以依赖于能够套接字上执行的唯一操作是对的调用**关闭**，但其他操作可能在某些 Windows 套接字上工作实现。 如果你需要为你的应用程序的最大的可移植性，你必须注意不要依赖于在取消后执行操作。  
+ 而取消任何操作`Accept`会使处于不确定状态的套接字。 如果应用程序取消停滞操作套接字上的，应用程序可以依赖于能够套接字上执行的唯一操作是对的调用`Close`，但其他操作上某些 Windows 套接字实现可能工作。 如果你需要为你的应用程序的最大的可移植性，你必须注意不要依赖于在取消后执行操作。  
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -153,27 +153,27 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nSocketPort`  
+ *nSocketPort*  
  如果你想要选择的端口的 MFC 套接字或 0 开头使用特定端口。  
   
- `nSocketType`  
- **SOCK_STREAM**或**SOCK_DGRAM**。  
+ *nSocketType*  
+ SOCK_STREAM 或 SOCK_DGRAM。  
   
- `lpszSocketAddress`  
- 指向包含连接的套接字，一个以点分隔的数字，如"128.56.22.8"的网络地址的字符串的指针。 传递**NULL**字符串此参数指示**CSocket**实例应侦听的所有网络接口上的客户端活动。  
+ *lpszSocketAddress*  
+ 指向包含连接的套接字，一个以点分隔的数字，如"128.56.22.8"的网络地址的字符串的指针。 此参数指示传递 NULL 字符串`CSocket`实例应侦听的所有网络接口上的客户端活动。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则非零否则通过调用检索 0 和特定错误代码`GetLastError`。  
   
 ### <a name="remarks"></a>备注  
- **创建**然后调用**绑定**将套接字绑定到指定的地址。 支持以下套接字类型：  
+ `Create` 然后调用`Bind`将套接字绑定到指定的地址。 支持以下套接字类型：  
   
-- **SOCK_STREAM**序列化，提供可靠、 双向、 基于连接的字节流。 为 Internet 地址族使用传输控制协议 (TCP)。  
+- SOCK_STREAM 提供序列化，可靠、 双向、 基于连接的字节流。 为 Internet 地址族使用传输控制协议 (TCP)。  
   
-- **SOCK_DGRAM**支持数据报，即无连接的、 不可靠的缓冲区的固定 （通常很小） 的最大长度。 为 Internet 地址族使用用户数据报协议 (UDP)。 若要使用此选项，你必须使用与套接字`CArchive`对象。  
+- SOCK_DGRAM 支持数据报，即无连接的、 不可靠的缓冲区的固定 （通常很小） 的最大长度。 为 Internet 地址族使用用户数据报协议 (UDP)。 若要使用此选项，你必须使用与套接字`CArchive`对象。  
   
     > [!NOTE]
-    >  **接受**成员函数会将新的空引用`CSocket`对象作为其参数。 您必须构造此对象，然后才能调用**接受**。 请记住，如果此套接字对象超出范围，该连接将关闭。 不要调用**创建**为此新的套接字对象。  
+    >  `Accept`成员函数会将新的空引用`CSocket`对象作为其参数。 您必须构造此对象，然后才能调用`Accept`。 请记住，如果此套接字对象超出范围，该连接将关闭。 不要调用`Create`为此新的套接字对象。  
   
  有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字： 背景](../../mfc/windows-sockets-background.md)， [Windows 套接字： 端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)，和[Windows 套接字： 使用使用存档的套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -185,7 +185,7 @@ CSocket();
 ```  
   
 ### <a name="remarks"></a>备注  
- 完成构造后，必须调用**创建**成员函数。  
+ 完成构造后，必须调用`Create`成员函数。  
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -197,14 +197,14 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>参数  
- `hSocket`  
+ *hSocket*  
  包含为套接字的句柄。  
   
 ### <a name="return-value"></a>返回值  
- 指向的指针`CSocket`对象，或**NULL**如果没有任何`CSocket`对象附加到`hSocket`。  
+ 指向的指针`CSocket`对象，则为 NULL 是否有任何`CSocket`对象附加到*hSocket*。  
   
 ### <a name="remarks"></a>备注  
- 在给定**套接字**处理，如果`CSocket`对象未附加到该句柄，则成员函数将返回**NULL**并不会创建临时对象。  
+ 在给定套接字句柄，如果`CSocket`对象未附加到该句柄，则成员函数返回 NULL，并不会创建临时对象。  
   
  有关详细信息，请参阅[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   

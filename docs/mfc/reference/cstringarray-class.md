@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da29c1b3c62769157735bca556eedc7557a4268d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375501"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121807"
 ---
 # <a name="cstringarray-class"></a>CStringArray 类
 支持的数组[CString](../../atl-mfc-shared/using-cstring.md)对象。  
@@ -120,7 +120,7 @@ class CStringArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|  
   
 ## <a name="remarks"></a>备注  
- `CStringArray` 包括用于支持其元素序列化和转储的 `IMPLEMENT_SERIAL` 宏。 如果将 `CString` 对象的数组存储到存档中（使用重载插入运算符或 `Serialize` 成员函数），则将依次序列化每个元素。  
+ `CStringArray` 包含 IMPLEMENT_SERIAL 宏来支持序列化和转储的其元素。 如果将 `CString` 对象的数组存储到存档中（使用重载插入运算符或 `Serialize` 成员函数），则将依次序列化每个元素。  
   
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  

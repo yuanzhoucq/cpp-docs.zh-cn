@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375218"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121752"
 ---
 # <a name="ctabview-class"></a>CTabView 类
 `CTabView`的类简化了使用选项卡控件类 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  
@@ -95,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pViewClass`  
+ [in]*pViewClass*  
  指向插入视图的运行时类的指针。  
   
- [in] `strViewLabel`  
+ [in]*strViewLabel*  
  指定选项卡的文本。  
   
- [in] `iIndex`  
+ [in]*iIndex*  
  指定在其中插入视图的从零开始的位置。 如果位置为-1 结尾处插入新选项卡。  
   
- [in] `pContext`  
+ [in]*pContext*  
  一个指向`CCreateContext`的视图。  
   
 ### <a name="return-value"></a>返回值  
@@ -121,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `hWndView`  
+ [in]*hWndView*  
  视图的句柄。  
   
 ### <a name="return-value"></a>返回值  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 活动视图中，指向的有效指针或`NULL`如果没有任何活动的视图。  
+ 指向的活动视图或如果没有任何活动的视图的为 NULL 的有效指针。  
   
 ### <a name="remarks"></a>备注  
   
@@ -160,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果应与共享的滚动条一起创建选项卡视图。 否则为 `FALSE`。  
+ 如果应与共享的滚动条一起创建选项卡视图，则为 TRUE。 否则为 FALSE。  
   
 ### <a name="remarks"></a>备注  
- 框架在调用此方法时`CTabView`正在创建对象。  
+ 框架在调用此方法时*CTabView*正在创建对象。  
   
- 重写`IsScrollBar`中的方法`CTabView`-派生类，并返回`TRUE`如果你想要创建具有共享水平滚动条的视图。  
+ 重写*IsScrollBar*中的方法*CTabView*-派生类并将返回 TRUE，如果你想要创建具有共享水平滚动条的视图。  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  选项卡视图进行活动或非活动时，由框架调用。  
@@ -175,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `view`  
+ [in]*视图*  
  指向该视图的指针。  
   
 ### <a name="remarks"></a>备注  
@@ -189,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTabNum`  
+ [in]*iTabNum*  
  要删除的视图索引。  
   
 ### <a name="return-value"></a>返回值  
@@ -205,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `iTabNum`  
+ [in]*iTabNum*  
  选项卡视图的从零开始索引。  
   
 ### <a name="return-value"></a>返回值  
- `TRUE` 如果指定的视图已激活，`FALSE`如果视图的索引无效。  
+ 如果指定的视图已激活，则返回 FALSE 如果视图的索引无效，则为 TRUE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息请参阅[CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)。  

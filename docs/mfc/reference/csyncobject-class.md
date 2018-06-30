@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374092"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122064"
 ---
 # <a name="csyncobject-class"></a>CSyncObject 类
 一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。  
@@ -89,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>参数  
- `pstrName`  
- 对象的名称。 如果**NULL**， *pstrName*将为 null。  
+ *pstrName*  
+ 对象的名称。 如果为 NULL， *pstrName*将为 null。  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  调用此函数可获取对由同步对象控制资源访问权限。  
@@ -100,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>参数  
- `dwTimeout`  
- 指定的时间 （毫秒） 等待同步对象可用 （发出信号）。 如果**无限**，`Lock`将等待，直到该对象在返回之前处于有信号状态。  
+ *dwTimeout*  
+ 指定的时间 （毫秒） 等待同步对象可用 （发出信号）。 如果无限大，`Lock`将等待，直到该对象在返回之前处于有信号状态。  
   
 ### <a name="return-value"></a>返回值  
  如果该函数成功，则非零否则为 0。  
@@ -124,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，同步对象中; 的句柄否则为**NULL**。  
+ 如果成功，同步对象中; 的句柄否则，为 NULL。  
   
 ### <a name="remarks"></a>备注  
  句柄可用于直接调用 Windows Api。  
@@ -139,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>参数  
- `lCount`  
+ *lCount*  
  不使用默认实现。  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  不使用默认实现。  
   
 ### <a name="return-value"></a>返回值  
- 默认实现始终返回**TRUE**。  
+ 默认实现始终返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
- 两个参数的声明始终的默认实现返回**TRUE**。 调用此函数以释放拥有由调用线程的同步对象访问权限。 第二个声明进行同步的对象，如允许的受控资源的多个访问的信号量。  
+ 两个参数的声明始终的默认实现，则返回 TRUE。 调用此函数以释放拥有由调用线程的同步对象访问权限。 第二个声明进行同步的对象，如允许的受控资源的多个访问的信号量。  
   
 ## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   

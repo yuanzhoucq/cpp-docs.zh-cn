@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322278"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122975"
 ---
 # <a name="dispatch-maps"></a>调度映射
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>备注
 
-使用`DECLARE_DISPATCH_MAP`宏在类声明的末尾。 然后，在。类的函数定义的成员的 CPP 文件，请使用`BEGIN_DISPATCH_MAP`宏。 然后在每个类的公开方法和属性包括宏条目 ( `DISP_FUNCTION`， `DISP_PROPERTY`，依次类推)。 最后，使用`END_DISPATCH_MAP`宏。
+在类声明的末尾使用 DECLARE_DISPATCH_MAP 宏。 然后，在。定义为类的成员函数的 CPP 文件使用 BEGIN_DISPATCH_MAP 宏。 然后为每个类的公开的方法和属性 （DISP_FUNCTION、 DISP_PROPERTY，依次类推） 包括宏条目。 最后，使用 END_DISPATCH_MAP 宏。
 
 > [!NOTE]
-> 如果声明后的任何成员`DECLARE_DISPATCH_MAP`，必须指定新的访问类型 (**公共**，**私有**，或**保护**) 为它们。
+> 如果之后 DECLARE_DISPATCH_MAP 声明任何成员，则必须指定新的访问类型 (**公共**，**私有**，或**保护**) 为它们。
 
 应用程序向导和代码向导帮助创建自动化类并维护调度映射可帮助。 调度映射的详细信息，请参阅[自动化服务器](../../mfc/automation-servers.md)。
 
@@ -84,7 +84,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="remarks"></a>备注
 
-在定义类的成员函数的实现 (.cpp) 文件中，使用 `BEGIN_DISPATCH_MAP` 宏启动调度映射，为每个调度函数和属性添加宏项，然后使用 `END_DISPATCH_MAP` 宏完成调度映射。
+在实现 (.cpp) 文件中定义你的类的成员函数，用 BEGIN_DISPATCH_MAP 宏启动调度映射，为每个调度函数和属性，添加宏条目并完成用 END_DISPATCH_ 调度映射映射宏。
 
 ### <a name="requirements"></a>要求
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>备注
 
-它必须与 `BEGIN_DISPATCH_MAP` 一起使用。
+它必须与 BEGIN_DISPATCH_MAP 结合使用。
 
 ### <a name="requirements"></a>要求
 
@@ -138,23 +138,23 @@ DISP_FUNCTION(
 
 ### <a name="remarks"></a>备注
 
-*VtRetVal*自变量为类型**VARTYPE**。 以下可能值为此参数，将从`VARENUM`枚举：
+*VtRetVal*自变量为类型 VARTYPE。 以下可能值为此参数，将从`VARENUM`枚举：
 
 |符号|返回类型|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 *VtsParams*自变量是空格分隔的值从列表`VTS_*`常量。 一个或多个用空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如，应用于对象的
 
@@ -166,31 +166,31 @@ DISP_FUNCTION(
 
 |符号|参数类型|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` 或 `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` 或 `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__short\*__|
-|`VTS_PI4`|__长\*__|
-|`VTS_PR4`|__float\*__|
-|`VTS_PR8`|__双精度\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|没有参数|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` 或 `CY*`|
+|VTS_DATE|DATE|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*` 或 `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__short\*__|
+|VTS_PI4|__长\*__|
+|VTS_PR4|__float\*__|
+|VTS_PR8|__双精度\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|没有参数|
 
 ### <a name="requirements"></a>要求
 
@@ -224,22 +224,22 @@ DISP_PROPERTY(
 
 ### <a name="remarks"></a>备注
 
-*VtPropType*自变量为类型**VARTYPE**。 为此参数的可能值取自`VARENUM`枚举：
+*VtPropType*自变量为类型**VARTYPE**。 为此参数的可能值取自 VARENUM 枚举：
 
 |符号|属性类型|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 外部客户端更改的属性，指定的成员变量的值时*memberName*更改; 则不显示通知的更改。
 
@@ -281,7 +281,7 @@ DISP_PROPERTY_EX(
 
 *MemberGet*和*memberSet*函数具有由签名*vtPropType*自变量。 *MemberGet*函数不采用任何参数，且返回由指定的类型值*vtPropType*。 *MemberSet*函数采用由指定的类型的自变量*vtPropType*并返回执行任何操作。
 
-*VtPropType*自变量为类型`VARTYPE`。 为此参数的可能值取自`VARENUM`枚举。 有关这些值的列表，请参阅备注*vtRetVal*中的参数[DISP_FUNCTION](#disp_function)。 请注意， `VT_EMPTY`，列出在`DISP_FUNCTION`备注，不允许为属性数据类型。
+*VtPropType*自变量为类型 VARTYPE。 为此参数的可能值取自 VARENUM 枚举。 有关这些值的列表，请参阅备注*vtRetVal*中的参数[DISP_FUNCTION](#disp_function)。 请注意，VT_EMPTY，列出 DISP_FUNCTION 注释中不允许为属性数据类型。
 
 ### <a name="requirements"></a>要求
 
@@ -319,24 +319,24 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="remarks"></a>备注
 
-与使用定义的属性不同`DISP_PROPERTY`，与定义的属性`DISP_PROPERTY_NOTIFY`将自动调用指定函数的*pfnAfterSet*时更改的属性。
+与使用 DISP_PROPERTY 定义的属性，不同 DISP_PROPERTY_NOTIFY 与定义的属性将自动调用指定函数的*pfnAfterSet*时更改的属性。
 
-*VtPropType*自变量为类型`VARTYPE`。 为此参数的可能值取自`VARENUM`枚举：
+*VtPropType*自变量为类型 VARTYPE。 为此参数的可能值取自 VARENUM 枚举：
 
 |符号|属性类型|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>要求
 
@@ -378,7 +378,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>备注
 
-与不同`DISP_PROPERTY_EX`宏，此宏允许你指定参数列表的属性。 这可用于实现索引或参数化的属性。
+与不同 DISP_PROPERTY_EX 宏，此宏，可指定参数列表的属性。 这可用于实现索引或参数化的属性。
 
 ### <a name="example"></a>示例
 
@@ -386,7 +386,7 @@ DISP_PROPERTY_PARAM(
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-这些方法对应于以下`DISP_PROPERTY_PARAM`控件调度映射中的宏：
+这些方法对应于控件调度映射中的以下 DISP_PROPERTY_PARAM 宏：
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ DISP_PROPERTY_PARAM(
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-这些方法对应于以下`DISP_PROPERTY_PARAM`控件调度映射中的宏：
+这些方法对应于控件调度映射中的以下 DISP_PROPERTY_PARAM 宏：
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

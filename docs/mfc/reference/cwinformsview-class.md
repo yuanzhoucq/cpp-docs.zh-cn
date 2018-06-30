@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e82dce1d80ee241c8bffae99457c2e25555818
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370544"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121710"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 类
 提供用于将 Windows 窗体控件作为 MFC 视图承载的一般功能。  
@@ -52,7 +52,7 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称||  
+|name||  
 |----------|-|  
 |[CWinFormsView::operator 控件 ^](#operator_control)|将类型强制转换为指向 Windows 窗体控件。|  
   
@@ -78,7 +78,7 @@ CWinFormsView(System::Type^ pManagedViewType);
 ```  
   
 ### <a name="parameters"></a>参数  
- `pManagedViewType`  
+ *pManagedViewType*  
  指向 Windows 窗体用户控件的数据类型的指针。   
   
 ### <a name="example"></a>示例  

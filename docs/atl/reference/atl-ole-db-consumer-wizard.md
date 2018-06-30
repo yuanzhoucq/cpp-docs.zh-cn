@@ -1,7 +1,7 @@
 ---
 title: ATL OLE DB 使用者向导 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364945"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121684"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 此向导安装 OLE DB 使用者类，该类数据绑定通过指定的 OLE DB 访问接口访问指定的数据源所需。  
@@ -66,7 +66,7 @@ ms.locfileid: "32364945"
   
     3. **选择服务器上的数据库：** 单击要在数据服务器上，显示所有已注册的数据库的下拉列表菜单，然后选择一个。  
   
-         -或-  
+         或  
   
  **将作为数据库名称的数据库文件附加：** 指定要用作数据库的文件; 输入显式路径名。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "32364945"
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372977"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122687"
 ---
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ ms.locfileid: "33372977"
 |[END_DELEGATE_MAP](#end_delegate_map)|结束委托映射。|
 |[END_INTERFACE_MAP](#end_interface_map)|终止实现文件中的接口映射。 |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|在委托映射中创建条目。|
-|[INTERFACE_PART](#interface_part)|之间使用`BEGIN_INTERFACE_MAP`宏和`END_INTERFACE_MAP`宏为每个接口将支持你的对象。|
+|[INTERFACE_PART](#interface_part)|BEGIN_INTERFACE_MAP 宏和 END_INTERFACE_MAP 宏之间使用对于你的对象将支持每个接口。|
 |[MAKE_DELEGATE](#make_delegate)|将事件处理程序附加到托管的控件。|
 
 
@@ -43,7 +43,7 @@ ms.locfileid: "33372977"
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>参数  
- `CLASS`  
+ *类*  
  在其中托管托管的控件的类。  
    
 ### <a name="remarks"></a>备注  
@@ -63,14 +63,14 @@ BEGIN_DELEGATE_MAP(  CLASS );
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  要在其中定义接口映射的类  
   
- `baseClass`  
- `theClass` 派生自的类。  
+ *baseClass*  
+ 从其类*类*派生自。  
    
 ### <a name="remarks"></a>备注  
- 对于每个实现的接口，没有一个或多个`INTERFACE_PART`宏调用。 对于每个类使用的聚合，还有一个**INTERFACE_AGGREGATE**宏调用。  
+ 对于每个实现的接口，没有一个或多个 INTERFACE_PART 宏调用。 对于每个类使用的聚合，没有一个 INTERFACE_AGGREGATE 宏调用。  
   
  有关接口映射的详细信息，请参阅[技术说明 38](../tn038-mfc-ole-iunknown-implementation.md)。  
    
@@ -85,7 +85,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  命令 ID。  
    
 ### <a name="remarks"></a>备注  
@@ -109,10 +109,10 @@ delegate void CommandHandler(  UINT^ cmdID  );
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>参数  
- `cmdID`  
+ *cmdID*  
  命令 ID。  
   
- `cmdUI`  
+ *cmdUI*  
  命令消息 id。  
    
 ### <a name="remarks"></a>备注  
@@ -173,20 +173,20 @@ END_INTERFACE_MAP( )
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>参数  
- `MEMBER`  
+ *成员*  
  要附加到控件的事件处理程序方法。  
   
- `ARG0`  
- 第一个参数的托管的事件处理程序方法，如**对象 ^**。  
+ *ARG0*  
+ 第一个参数的托管的事件处理程序方法，如`Object^`。  
   
- `ARG1`  
- 托管的事件处理程序方法中，第二个参数如**EventArgs ^**。  
+ *ARG1*  
+ 托管的事件处理程序方法中，第二个参数如`EventArgs^`。  
    
 ### <a name="remarks"></a>备注  
  在委托映射中的每个条目对应于由托管的事件处理程序委托[MAKE_DELEGATE](#make_delegate)。  
    
 ### <a name="example"></a>示例  
- 以下代码示例演示如何使用 `EVENT_DELEGATE_ENTRY` 在 `OnClick` 事件处理程序的委托映射中创建条目；另请参阅 `MAKE_DELEGATE` 中的代码示例。 有关详细信息，请参阅[如何： 从本机 c + + 类接收器 Windows 窗体的事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。  
+ 下面的代码示例演示如何使用 EVENT_DELEGATE_ENTRY 的委托映射中创建条目`OnClick`事件处理程序，还请参阅 MAKE_DELEGATE 中的代码示例。 有关详细信息，请参阅[如何： 从本机 c + + 类接收器 Windows 窗体的事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -205,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-之间使用`BEGIN_INTERFACE_MAP`宏和`END_INTERFACE_MAP`宏为每个接口将支持你的对象。  
+BEGIN_INTERFACE_MAP 宏和 END_INTERFACE_MAP 宏之间使用对于你的对象将支持每个接口。  
    
 ### <a name="syntax"></a>语法    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>参数  
- `theClass`  
+ *类*  
  包含接口映射的类的名称。    
- `iid`  
+ *iid*  
  要映射到嵌入类的 IID。    
  *localClass*  
  本地类的名称。  
    
 ### <a name="remarks"></a>备注  
- 它允许你将 IID 映射到指示的类的成员`theClass`和*localClass*。  
+ 它允许你将 IID 映射到指示的类的成员*类*和*localClass*。  
   
  有关接口映射的详细信息，请参阅[技术说明 38](../tn038-mfc-ole-iunknown-implementation.md)。  
    
@@ -236,14 +236,14 @@ INTERFACE_PART( theClass, iid, localClass)
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>参数  
- `DELEGATE`  
+ *委托*  
  托管的事件处理程序委托类型，如[EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True)。  
   
- `MEMBER`  
+ *成员*  
  要附加到控件的事件处理程序方法的名称。  
    
 ### <a name="remarks"></a>备注  
- 此宏会创建类型的托管的事件处理程序委托`DELEGATE`和名称的`MEMBER`。 托管的事件处理程序委托允许本机类以处理托管的事件。  
+ 此宏会创建类型的托管的事件处理程序委托*委托*和名称的*成员*。 托管的事件处理程序委托允许本机类以处理托管的事件。  
    
 ### <a name="example"></a>示例  
  下面的代码示例演示如何调用`MAKE_DELEGATE`附加`OnClick`到 MFC 控件的事件处理程序`MyControl`。 此宏 MFC 应用程序中的工作原理的更广泛的说明，请参阅[如何： 从本机 c + + 类接收器 Windows 窗体的事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。  

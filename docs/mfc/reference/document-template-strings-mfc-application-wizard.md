@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373535"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122191"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>MFC 应用程序向导的文档模板字符串
 在 MFC 应用程序向导的此页中，提供或优化以下选项来帮助进行文档管理和本地化。 文档模板字符串是可用于应用程序包括**文档/视图体系结构支持**中[应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md)。 它们不能对话框。 由于大多数文档模板字符串是可见且由应用程序的用户，它们已本地化到**资源语言**中所示**应用程序类型**向导页。  
@@ -43,7 +43,7 @@ ms.locfileid: "33373535"
 |**主框架标题**|设置在主应用程序框架的顶部显示的文本。 默认情况下，项目名称。|  
 |**文档类型名称**|标识可以在其下分组应用程序的文档的文档的类型。 默认情况下，项目名称。 更改默认值不会更改在此对话框中的任何其他选项。|  
 |**筛选器名称**|设置你的用户可以指示查找你的文件类型的文件的名称。 此选项才可用从**类型的文件**和**另存为类型**标准的 Windows 中的选项**打开**和**将另存为**对话框。 默认值，项目名称加上 Files 后, 跟中提供的扩展名**文件扩展名**。 例如，如果你的项目名为小组件中，文件，文件扩展名为.wgt，**筛选器名称**默认为小组件文件 (*.wgt)。|  
-|**文件新的短名称**|设置显示在标准的 Windows 中的名称`New`对话框中，如果有多个新的文档模板。 如果你的应用程序[自动化服务器](../../mfc/automation-servers.md)，此名称用作您的自动化对象的短名称。 默认情况下，项目名称。|  
+|**文件新的短名称**|设置显示在标准的 Windows 中的名称**新建**对话框中，如果有多个新的文档模板。 如果你的应用程序[自动化服务器](../../mfc/automation-servers.md)，此名称用作您的自动化对象的短名称。 默认情况下，项目名称。|  
 |**文件类型长名称**|在系统注册表中设置的文件类型名称。 如果你的应用程序自动化服务器，则此名称用作您的自动化对象的长名称。 默认情况下，项目名称加上。文档。|  
   
 ## <a name="see-also"></a>请参阅  

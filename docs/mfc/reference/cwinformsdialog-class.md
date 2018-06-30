@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371554"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122492"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 承载 Windows 窗体用户控件的 MFC 对话框类的包装器。  
@@ -64,7 +64,7 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称||  
+|name||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|替换[CWinFormsDialog::GetControl](#getcontrol)表达式中。|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|将类型强制转换为 Windows 窗体用户控件的引用。|  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIDTemplate`  
+ *nIDTemplate*  
  包含的对话框模板资源的 ID。 使用对话框编辑器创建对话框模板并将其存储在应用程序的资源脚本文件中。 对话框模板的详细信息，请参阅[CDialog 类](../../mfc/reference/cdialog-class.md)。  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  一个布尔值，指定是否应用程序的设置输入的焦点为每个控件在对话框中。 如果`OnInitDialog`返回非零，Windows 设置输入的焦点的第一个控件在对话框中。 仅当应用程序已显式设置输入的焦点为每个控件在对话框中，此方法可以返回 0。  
   
 ### <a name="remarks"></a>备注  
- 创建 MFC 对话框中时 (使用[创建](../../mfc/reference/cdialog-class.md#create)， [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)，或[DoModal](../../mfc/reference/cdialog-class.md#domodal)方法继承自[CDialog](../../mfc/reference/cdialog-class.md))， `WM_INITDIALOG`发送消息并调用此方法。 创建 Windows 窗体控件在对话框中的实例，并调整大小的对话框中，以容纳个用户控件的大小。 然后，它承载在 MFC 对话框中新的控件。  
+ 创建 MFC 对话框中时 (使用[创建](../../mfc/reference/cdialog-class.md#create)， [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)，或[DoModal](../../mfc/reference/cdialog-class.md#domodal)方法继承自[CDialog](../../mfc/reference/cdialog-class.md))，WM_发送 INITDIALOG 消息并调用此方法。 创建 Windows 窗体控件在对话框中的实例，并调整大小的对话框中，以容纳个用户控件的大小。 然后，它承载在 MFC 对话框中新的控件。  
   
  如果你需要执行特殊处理，在初始化对话框中时，重写该成员函数。 使用此方法的详细信息，请参阅[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。  
   

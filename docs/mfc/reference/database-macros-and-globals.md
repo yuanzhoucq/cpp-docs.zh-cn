@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb4dbb75dba33fe616fbce95cdec74bd81cc3fe9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370768"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121911"
 ---
 # <a name="database-macros-and-globals"></a>数据库宏和全局函数
 下面所列的宏和全局适用于基于 ODBC 的数据库应用程序。 它们不适用于基于 DAO 的应用程序。  
@@ -52,7 +52,7 @@ ms.locfileid: "33370768"
 
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule
-MFC 数据库 （或 DAO） 支持从动态链接到 MFC 常规 MFC DLL 的支持，在常规 MFC DLL 中添加对此函数的调用**CWinApp::InitInstance**函数可以初始化 MFC 数据库 DLL。  
+MFC 数据库 （或 DAO） 支持从动态链接到 MFC 常规 MFC DLL 的支持，在常规 MFC DLL 中添加对此函数的调用`CWinApp::InitInstance`函数可以初始化 MFC 数据库 DLL。  
    
 ### <a name="syntax"></a>语法    
 ```
@@ -60,7 +60,7 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>备注  
- 请确保此调用发生在基类中的任何调用之前或任何添加的代码访问 MFC 数据库 DLL。 MFC 数据库 DLL 是 MFC 扩展 DLL;使 MFC 扩展 DLL，若要连接到**CDynLinkLibrary**链，它必须创建**CDynLinkLibrary**将使用它的每个模块的上下文中的对象。 `AfxDbInitModule` 创建**CDynLinkLibrary**对象常规 MFC DLL 的上下文中，以便让它连接到**CDynLinkLibrary**对象常规 MFC dll 的链。  
+ 请确保此调用发生在基类中的任何调用之前或任何添加的代码访问 MFC 数据库 DLL。 MFC 数据库 DLL 是 MFC 扩展 DLL;使 MFC 扩展 DLL，若要连接到`CDynLinkLibrary`链，它必须创建`CDynLinkLibrary`将使用它的每个模块的上下文中的对象。 `AfxDbInitModule` 创建`CDynLinkLibrary`对象常规 MFC DLL 的上下文中，以便让它连接到`CDynLinkLibrary`对象常规 MFC dll 的链。  
    
 ### <a name="requirements"></a>要求  
  **标头：** < afxdll_.h >  
@@ -78,19 +78,19 @@ AFX_ODBC_CALL(SQLFunc)
 ```  
   
 ### <a name="parameters"></a>参数  
- `SQLFunc`  
+ *SQLFunc*  
  ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
  `AFX_ODBC_CALL` 将重复调用该函数之前它不再返回`SQL_STILL_EXECUTING`。  
   
- 然后再调用`AFX_ODBC_CALL`，必须声明变量， `nRetCode`，类型的**某一 RETCODE**。  
+ 然后再调用`AFX_ODBC_CALL`，必须声明变量，`nRetCode`的某一 RETCODE 类型。  
   
- 请注意，MFC ODBC 类现在使用仅同步处理。 若要执行异步操作，必须调用 ODBC API 函数**SQLSetConnectOption**。 有关详细信息，请参阅"异步执行函数"在 Windows SDK 中的主题。  
+ 请注意，MFC ODBC 类现在使用仅同步处理。 若要执行异步操作，必须调用 ODBC API 函数`SQLSetConnectOption`。 有关详细信息，请参阅"异步执行函数"在 Windows SDK 中的主题。  
 
   
 ### <a name="example"></a>示例  
- 此示例使用`AFX_ODBC_CALL`调用**SQLColumns** ODBC API 函数时，返回通过名为的表中的列的列表`strTableName`。 请注意声明`nRetCode`和的记录集数据成员，将参数传递到函数的用法。 该示例还阐释了检查与调用的结果**检查**，类的成员函数`CRecordset`。 变量`prs`是一个指向`CRecordset`声明在其他位置的对象。  
+ 此示例使用`AFX_ODBC_CALL`调用`SQLColumns`ODBC API 函数时，返回通过名为的表中的列的列表`strTableName`。 请注意声明`nRetCode`和的记录集数据成员，将参数传递到函数的用法。 该示例还阐释了检查与调用的结果`Check`，类的成员函数`CRecordset`。 变量`prs`是一个指向`CRecordset`声明在其他位置的对象。  
   
  [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
 
@@ -105,17 +105,17 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ```  
   
 ### <a name="parameters"></a>参数  
- `prs`  
+ *pr*  
  指向 `CRecordset` 对象或 `CDatabase` 对象的指针。 从 MFC 4.2 开始，将忽略此参数值。  
   
- `SQLFunc`  
+ *SQLFunc*  
  ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
- `AFX_SQL_ASYNC` 简单调用宏[AFX_ODBC_CALL](#afx_odbc_call)并忽略`prs`参数。 在 4.2 之前的 MFC 版本中，`AFX_SQL_ASYNC` 用于调用可能返回 `SQL_STILL_EXECUTING` 的 ODBC API 函数。 如果 ODBC API 函数返回 `SQL_STILL_EXECUTING`，则 `AFX_SQL_ASYNC` 将调用 `prs->OnWaitForDataSource`。  
+ `AFX_SQL_ASYNC` 简单调用宏[AFX_ODBC_CALL](#afx_odbc_call)并忽略*pr*参数。 在 4.2 之前的 MFC 版本中，`AFX_SQL_ASYNC` 用于调用可能返回 `SQL_STILL_EXECUTING` 的 ODBC API 函数。 如果 ODBC API 函数返回 `SQL_STILL_EXECUTING`，则 `AFX_SQL_ASYNC` 将调用 `prs->OnWaitForDataSource`。  
   
 > [!NOTE]
->  MFC ODBC 类现在只能使用同步处理。 若要执行异步操作，必须调用 ODBC API 函数**SQLSetConnectOption**。 有关详细信息，请参阅"异步执行函数"在 Windows SDK 中的主题。  
+>  MFC ODBC 类现在只能使用同步处理。 若要执行异步操作，必须调用 ODBC API 函数`SQLSetConnectOption`。 有关详细信息，请参阅"异步执行函数"在 Windows SDK 中的主题。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxdb.h  
@@ -128,13 +128,13 @@ AFX_SQL_SYNC(SQLFunc)
 ```  
   
 ### <a name="parameters"></a>参数  
- `SQLFunc`  
+ *SQLFunc*  
  ODBC API 函数。 有关这些函数的详细信息，请参阅 Windows SDK。  
   
 ### <a name="remarks"></a>备注  
  使用此宏调用不会返回的 ODBC API 函数`SQL_STILL_EXECUTING`。  
   
- 之前调用`AFX_SQL_SYNC`，必须声明变量， `nRetCode`，类型的**某一 RETCODE**。 你可以检查的值`nRetCode`宏调用之后。  
+ 之前调用`AFX_SQL_SYNC`，必须声明变量，`nRetCode`的某一 RETCODE 类型。 你可以检查的值`nRetCode`宏调用之后。  
   
  请注意的实现`AFX_SQL_SYNC`在 MFC 4.2 中发生更改。 检查服务器状态不再是必需的因为`AFX_SQL_SYNC`只需将值赋给`nRetCode`。 例如，而不是进行调用  
   

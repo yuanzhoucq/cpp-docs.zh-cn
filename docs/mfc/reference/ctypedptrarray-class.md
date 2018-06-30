@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375815"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122910"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
 为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>参数  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  类的基类类型化的指针数组;必须为数组类 (`CObArray`或`CPtrArray`)。  
   
- `TYPE`  
+ *类型*  
  基类数组中存储的元素的类型。  
   
 ## <a name="members"></a>成员  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *类型*  
  模板参数来指定要添加到数组的元素的类型。  
   
- `newElement`  
+ *newElement*  
  要添加到该数组的元素。  
   
 ### <a name="return-value"></a>返回值  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  有关详细说明，请参阅[CObArray::Add](../../mfc/reference/cobarray-class.md#add)。  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- 此成员函数将调用`BASE_CLASS` **:: 追加**。  
+ 此成员函数将调用`BASE_CLASS`:: 追加 * *。  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  类的基类类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
   
  *类型*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>参数  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  类的基类类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
   
  *类型*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *类型*  
  模板参数来指定存储在此数组中元素的类型。  
   
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。  
   
 ### <a name="return-value"></a>返回值  
- 对指定的位置处的元素的临时引用`nIndex`。 此元素是由模板参数指定的类型*类型*。  
+ 对指定的位置处的元素的临时引用*nIndex*。 此元素是由模板参数指定的类型*类型*。  
   
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)。  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *类型*  
  模板参数来指定存储在数组中元素的类型。  
   
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。  
   
 ### <a name="return-value"></a>返回值  
- 指定的位置处的元素的副本`nIndex`。 此元素是由模板参数指定的类型*类型*。  
+ 指定的位置处的元素的副本*nIndex*。 此元素是由模板参数指定的类型*类型*。  
   
 ### <a name="remarks"></a>备注  
  有关详细说明，请参阅[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  可能返回的值大于整数索引[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。  
   
  *类型*  
  基类数组中存储的元素的类型。  
   
- `newElement`  
- 要放置此数组中的对象指针。 A`newElement`的值**NULL**允许。  
+ *newElement*  
+ 要放置此数组中的对象指针。 A *newElement*的值**NULL**允许。  
   
- `nCount`  
+ *nCount*  
  此元素应为次数插入 （默认为 1）。  
   
- `nStartIndex`  
+ *nStartIndex*  
  可能返回的值大于整数索引`CObArray::GetUpperBound`。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  类的基类类型化的指针数组;必须为数组类 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
   
- `pNewArray`  
+ *pNewArray*  
  包含要添加到该数组的元素的另一个数组。  
   
 ### <a name="remarks"></a>备注  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *类型*  
  模板参数来指定存储在数组中元素的类型。  
   
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值`BASE_CLASS` **:: GetUpperBound**。  
   
 ### <a name="remarks"></a>备注  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  整数索引大于或等于 0 且小于或等于返回的值[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。  
   
  *类型*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nIndex`  
+ *nIndex*  
  大于或等于 0 的整数索引。  
   
  *类型*  
  基类数组中存储的元素的类型。  
   
- `newElement`  
+ *newElement*  
  要添加到该数组的对象指针。 A **NULL**允许值。  
   
 ### <a name="remarks"></a>备注  

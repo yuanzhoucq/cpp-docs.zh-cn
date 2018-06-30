@@ -1,7 +1,7 @@
 ---
 title: CDaoRelationInfo 结构 |Microsoft 文档
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951287"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122603"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 结构
 `CDaoRelationInfo`结构包含有关定义字段中两个表之间的关系的信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>参数  
- *m_strName*  
+*m_strName*  
  唯一地命名关系对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  *m_strTable*  
@@ -70,11 +71,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade**将级联删除。  
   
- *m_pFieldInfos*  
- 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含关系中每个字段的一个对象。 *M_nFields*数据成员提供的数组元素的计数。  
+*m_pFieldInfos*  
+ 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含关系中每个字段的一个对象。 `m_nFields`数据成员提供的数组元素的计数。  
   
- *m_nFields*  
- 数`CDaoRelationFieldInfo`中的对象*m_pFieldInfos*数据成员。  
+*m_nFields*  
+ 数`CDaoRelationFieldInfo`中的对象`m_pFieldInfos`数据成员。  
   
 ## <a name="remarks"></a>备注  
  对主要和辅助上面的引用指示如何通过返回的信息[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类中的成员函数`CDaoDatabase`。  

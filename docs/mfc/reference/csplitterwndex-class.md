@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368870"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121645"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 类
 
@@ -81,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>参数  
- [in] `pDC`  
- 指向设备上下文的指针。 如果此参数为`NULL`，框架将重新绘制活动窗口。  
+ [in]*pDC*  
+ 指向设备上下文的指针。 如果此参数为 NULL，框架将重新绘制活动窗口。  
   
- [in] `nType`  
+ [in]*nType*  
  之一`CSplitterWnd::ESplitType`指定要绘制的拆分器窗口元素的枚举值。 有效值为 `splitBox`、`splitBar`、`splitIntersection` 和 `splitBorder`。  
   
- [in] `rect`  
+ [in]*rect*  
  指定的维数和位置绘制指定的拆分器窗口元素边框。  
   
 ### <a name="remarks"></a>备注  
