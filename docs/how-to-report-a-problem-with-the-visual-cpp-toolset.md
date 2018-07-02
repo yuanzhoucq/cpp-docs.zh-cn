@@ -1,6 +1,6 @@
 ---
 title: 如何使用 Visual C++ 工具集报告问题 | Microsoft Docs
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253875"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322363"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -358,7 +358,7 @@ CONTEXT:
 可通过多种方式向我们提交报表。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可通过选择此页底部的“产品反馈”按钮直接进入开发人员社区页面。 此选择取决于你是想使用 IDE 中的内置工具来捕获屏幕截图和组织报告以在开发人员社区页中进行发布，还是想直接使用网页。
 
 > [!NOTE]
-> 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 Microsoft 致力于遵守所有数据隐私法律和法规。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft 隐私声明](https://www.visualstudio.com/dn948229)。
+> 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 Microsoft 致力于遵守所有数据隐私法律和法规。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。
 
 ### <a name="use-the-report-a-problem-tool"></a>使用“报告问题”工具
 

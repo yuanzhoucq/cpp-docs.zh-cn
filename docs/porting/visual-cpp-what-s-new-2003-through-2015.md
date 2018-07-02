@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705600"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271391"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1585,7 +1585,7 @@ Microsoft Visual C++ 编译器支持以下 ISO C++11 语言功能：
 
 - 添加用于类类型的分号。
 - 完成对原始字符串文本使用括号。
-- 完成多行注释 (/* */)
+- 完成多行注释 (/\* \*/)
 
 **查找所有引用**在后台引用显示出文本匹配列表后自动对其进行解析和筛选。
 
