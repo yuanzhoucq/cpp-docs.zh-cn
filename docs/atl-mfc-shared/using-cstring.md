@@ -1,5 +1,5 @@
 ---
-title: 使用 CString |Microsoft 文档
+title: 使用 CString |Microsoft Docs
 ms.custom: ''
 ms.date: 06/18/2018
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 92807995183d2e5a34391250b36129e9bea01d66
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238716"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025839"
 ---
 # <a name="using-cstring"></a>使用 CString
-本部分中的主题介绍如何使用 `CString` 进行编程。 有关参考文档`CString`类，请参阅的文档[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  
+本部分中的主题介绍如何使用 `CString` 进行编程。 有关参考文档`CString`类中，请参阅的文档[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  
   
  若要使用 `CString`，请包含 `atlstr.h` 标头。  
   
- `CString`， `CStringA`，和`CStringW`类是一个称为的类模板的专用化[CStringT](../atl-mfc-shared/reference/cstringt-class.md)根据它们支持的字符数据类型。  
+ `CString`， `CStringA`，并`CStringW`类是一个称为类模板的专用化[CStringT](../atl-mfc-shared/reference/cstringt-class.md)基于它们所支持的字符数据的类型。  
   
- `CStringW` 对象包含 `wchar_t` 类型并支持 Unicode 字符串。 `CStringA` 对象包含 `char` 类型，并支持单字节和多字节 (MBCS) 字符串。 `CString` 对象支持 `char` 类型或 `wchar_t` 类型，具体取决于 `MBCS` 符号或 `UNICODE` 符号是否在编译时定义。  
+ 一个`CStringW`对象包含**wchar_t**键入并支持 Unicode 字符串。 一个`CStringA`对象包含**char**类型和支持单字节和多字节 (MBCS) 字符串。 一个`CString`对象支持**char**类型或`wchar_t`类型，具体取决于是否在编译时定义了 MBCS 或 UNICODE 符号。  
   
- `CString` 对象在 `CStringData` 对象中保留字符数据。 `CString` 接受`null`-终止 C 样式字符串。 `CString` 跟踪的字符串长度更快的性能，但它还会保留`null`中存储的字符数据，以支持到 LPCWSTR 转换字符。 `CString` 此命令将导出的 C 样式字符串时，请包括 null 终止符。 你可以将插入`null`中其他位置`CString`，但是它可能会产生意外的结果。  
+ `CString` 对象在 `CStringData` 对象中保留字符数据。 `CString` 接受以 NULL 结尾的 C 样式字符串。 `CString` 跟踪字符串长度更快的性能，但它还会保留存储的字符数据，以支持到 LPCWSTR 转换中的 NULL 字符。 `CString` 包括 null 终止符，它将导出的 C 样式字符串时。 可以在其他位置插入 NULL `CString`，但是它可能会产生意外的结果。  
   
  以下一组字符串类可在未链接 MFC 库的情况下使用，无论是否有 CRT 支持：`CAtlString`、`CAtlStringA` 和 `CAtlStringW`。  
   
@@ -65,7 +65,7 @@ int main() {
  介绍操作 `CString` 对象的内容，像 C 样式 null 结尾的字符串一样。  
   
  [为 BSTR 分配和释放内存](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
- 讨论为 `BSTR` 和 COM 对象使用内存。  
+ 讨论如何为 BSTR 和 COM 对象使用内存。  
   
  [CString 异常清理](../atl-mfc-shared/cstring-exception-cleanup.md)  
  说明 MFC 3.0 和更高版本中的显式清理不再是必需的。  

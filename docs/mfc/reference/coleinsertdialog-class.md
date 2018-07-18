@@ -1,5 +1,5 @@
 ---
-title: COleInsertDialog 类 |Microsoft 文档
+title: COleInsertDialog 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042165"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026219"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 类
 用于 OLE“插入对象”对话框。  
@@ -64,23 +64,23 @@ class COleInsertDialog : public COleDialog
 |----------|-----------------|  
 |[COleInsertDialog::CreateItem](#createitem)|创建在对话框中选定的项。|  
 |[COleInsertDialog::DoModal](#domodal)|显示 OLE 插入对象对话框。|  
-|[COleInsertDialog::GetClassID](#getclassid)|获取**CLSID**与选定的项关联。|  
-|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|指示是否绘制为图标的项。|  
-|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|获取与此项图标窗体关联的图元文件的句柄。|  
-|[COleInsertDialog::GetPathName](#getpathname)|获取对话框中选择的文件的完整路径。|  
+|[COleInsertDialog::GetClassID](#getclassid)|获取与所选的项相关联的 CLSID。|  
+|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|指示是否绘制为一个图标的项。|  
+|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|获取与此项的图标窗体相关联的图元文件的句柄。|  
+|[COleInsertDialog::GetPathName](#getpathname)|获取在对话框中选择的文件的完整路径。|  
 |[COleInsertDialog::GetSelectionType](#getselectiontype)|获取所选对象的类型。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
 |名称|描述|  
 |----------|-----------------|  
-|[COleInsertDialog::m_io](#m_io)|类型的结构**OLEUIINSERTOBJECT**控制对话框中的行为。|  
+|[COleInsertDialog::m_io](#m_io)|类型 OLEUIINSERTOBJECT 控制对话框的行为的结构。|  
   
 ## <a name="remarks"></a>备注  
- 创建类的对象`COleInsertDialog`如果想要调用此对话框。 后`COleInsertDialog`构造对象，则可以使用[m_io](#m_io)结构初始化的值或在对话框中的控件的状态。 `m_io`结构属于类型**OLEUIINSERTOBJECT**。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
+ 创建类的对象`COleInsertDialog`时您想要调用此对话框。 之后`COleInsertDialog`构造对象，则可以使用[m_io](#m_io)结构初始化的值或在对话框中的控件的状态。 `m_io`结构属于类型 OLEUIINSERTOBJECT。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
   
 > [!NOTE]
->  应用程序向导生成的容器代码使用此类。  
+>  应用程序向导生成的容器的代码使用此类。  
   
  有关详细信息，请参阅[OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的结构。  
   
@@ -105,7 +105,7 @@ class COleInsertDialog : public COleDialog
  **标头：** afxodlgs.h  
   
 ##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
- 此函数仅构造`COleInsertDialog`对象。  
+ 此函数将构造仅`COleInsertDialog`对象。  
   
 ```  
 COleInsertDialog (
@@ -114,31 +114,32 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>参数  
- *dwFlags*  
- 创建包含任意数量的以下值，以使用按位 OR 运算符组合的标志：  
+
+*dwFlags*  
+创建包含任意数量的以下值，以使用按位 OR 运算符组合的标志：  
   
-- **IOF_SHOWHELP**指定调用对话框中时，将显示帮助按钮。  
+- IOF_SHOWHELP 指定对话框的调用时，将显示帮助按钮。  
+      
+- 创建新的单选按钮将处于 IOF_SELECTCREATENEW 指定最初选定对话框的调用时。 这是默认值，不能用于 IOF_SELECTCREATEFROMFILE。  
+      
+- 从文件创建单选按钮将处于 IOF_SELECTCREATEFROMFILE 指定最初选定对话框的调用时。 不能用于 IOF_SELECTCREATENEW。  
+      
+- IOF_CHECKLINK 指定链接复选框将选中最初调用的对话框时。  
+      
+- 调用对话框的时，将禁用 IOF_DISABLELINK 指定链接复选框。  
+      
+- IOF_CHECKDISPLAYASICON 指定显示为图标的复选框将最初检查，将显示当前图标，并且调用对话框时，将启用更改图标按钮。  
+      
+- IOF_VERIFYSERVERSEXIST 指定对话框中应验证它将添加到列表框通过确保在注册数据库中指定的服务器，显示的对话框之前存在的类。 设置此标志会显著降低性能。  
   
-- **IOF_SELECTCREATENEW**指定，在调用对话框时最初选择创建新的单选按钮。 这是默认值，不能与使用**IOF_SELECTCREATEFROMFILE**。  
-  
-- **IOF_SELECTCREATEFROMFILE**指定，在调用对话框时最初选择从文件创建单选按钮。 不能与使用**IOF_SELECTCREATENEW**。  
-  
-- **IOF_CHECKLINK**指定，在调用对话框时最初检查链接复选框。  
-  
-- **IOF_DISABLELINK**指定调用对话框中时，将禁用链接复选框。  
-  
-- **IOF_CHECKDISPLAYASICON**指定将最初选中了显示为图标复选框，将显示当前的图标，并调用对话框中时，将启用更改图标按钮。  
-  
-- **IOF_VERIFYSERVERSEXIST**指定对话框中，应验证它将添加到列表框通过确保注册数据库中指定的服务器，显示该对话框之前存在的类。 设置此标志会显著降低性能。  
-  
- *pParentWnd*  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为应用程序主窗口。  
+*pParentWnd*  
+指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象属于的。 如果它为 NULL，对话框对象的父窗口设置为应用程序主窗口。  
   
 ### <a name="remarks"></a>备注  
- 若要显示对话框中，调用[DoModal](#domodal)函数。  
+ 若要显示的对话框，请调用[DoModal](#domodal)函数。  
   
 ##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
- 调用此函数可创建类型的对象[COleClientItem](../../mfc/reference/coleclientitem-class.md)才[DoModal](#domodal)返回**IDOK**。  
+ 调用此函数可创建类型的对象[COleClientItem](../../mfc/reference/coleclientitem-class.md)仅当[DoModal](#domodal)返回 IDOK。  
   
 ```  
 BOOL CreateItem(COleClientItem* pItem);
@@ -149,10 +150,10 @@ BOOL CreateItem(COleClientItem* pItem);
  指向要创建的项。  
   
 ### <a name="return-value"></a>返回值  
- 创建项; 如果非零否则为 0。  
+ 创建项; 如果非零值否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 你必须将分配`COleClientItem`对象，然后您可以调用此函数。  
+ 您必须分配`COleClientItem`对象才能调用此函数。  
   
 ##  <a name="domodal"></a>  COleInsertDialog::DoModal  
  调用此函数可显示 OLE 插入对象对话框。  
@@ -174,37 +175,37 @@ INT_PTR
   
  `COleInsertDialog::ControlsOnly` 将插入仅 ActiveX 控件。  
   
- 既不 DocObject，也不 ActiveX 控件，将插入零。 上面列出此值将导致返回中的第一个原型相同的实现。  
+ DocObject 和 ActiveX 控件都不会将插入零。 上面列出的此值会导致相同的实现的第一个原型。  
   
 ### <a name="return-value"></a>返回值  
  对话框中的完成状态。 以下值之一：  
   
--   如果成功显示该对话框，IDOK。  
+-   IDOK 如果成功显示的对话框。  
   
--   如果用户已取消对话框中的 IDCANCEL。  
+-   如果用户已取消对话框的，IDCANCEL。  
   
--   如果出现错误，IDABORT。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型详细信息。 有关可能的错误的列表，请参阅[OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) Windows SDK 中的函数。  
+-   IDABORT 是否发生错误。 如果返回 IDABORT，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能的错误的列表，请参阅[OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) Windows SDK 中的函数。  
   
 ### <a name="remarks"></a>备注  
- 如果你想要通过设置成员的初始化各种对话框控件[m_io](#m_io)结构，应执行此操作，然后再调`DoModal`，但在构造对话框对象之后。  
+ 如果你想要通过设置的成员初始化各种对话框控件[m_io](#m_io)结构，应执行此操作之前调用`DoModal`，但在构造对话框对象之后。  
   
- 如果`DoModal`返回 IDOK，您可以调用其他成员函数以检索设置或信息输入到用户对话框。  
+ 如果`DoModal`返回 IDOK，您可以调用其他成员函数以检索的设置或信息输入到用户对话框。  
   
 ##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
- 调用此函数可获取**CLSID**与所选的项仅当关联[DoModal](#domodal)返回**IDOK**和所选内容类型是**COleInsertDialog::createNewItem**。  
+ 调用此函数可获取与所选的项仅当相关联的 CLSID [DoModal](#domodal)返回 IDOK 和所选内容类型是`COleInsertDialog::createNewItem`。  
   
 ```  
 REFCLSID GetClassID() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**CLSID**与所选的项相关联。  
+ 返回与所选的项相关联的 CLSID。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
- 调用此函数可确定是否用户选择了以图标形式显示的选定的项。  
+ 调用此函数可确定用户选择以图标形式显示选定的项。  
   
 ```  
 DVASPECT GetDrawAspect() const;  
@@ -213,37 +214,37 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>返回值  
  呈现对象所需的方法。  
   
-- `DVASPECT_CONTENT` 返回如果未选中显示为图标复选框。  
+- 如果未选中显示为图标复选框，将返回 DVASPECT_CONTENT。  
   
-- `DVASPECT_ICON` 返回如果已选中了显示为图标复选框。  
+- 如果显示为图标的复选框已选中，将返回 DVASPECT_ICON。  
   
 ### <a name="remarks"></a>备注  
- 调用此函数仅当[DoModal](#domodal)返回**IDOK**。  
+ 调用此函数仅当[DoModal](#domodal)返回 IDOK。  
   
  绘制方面的详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的数据结构。  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
- 调用此函数可获取包含所选的项的图标化方面的图元文件的句柄。  
+ 调用此函数可获取包含选定项的图标方面的图元文件的句柄。  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果显示为图标复选框已包含的选定项的图标化方面的图元文件的句柄检查时通过选择解除对话框**确定**; 否则为**NULL**。  
+ 句柄图元文件包含选定项的图标的方面，如果显示为图标的复选框选中对话框时通过选择解除**确定**; 否则为 NULL。  
   
 ##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
- 调用此函数可获取选定的文件才的完整路径[DoModal](#domodal)返回**IDOK**和所选内容类型不是**COleInsertDialog::createNewItem**。  
+ 调用此函数可获取选定的文件才的完整路径[DoModal](#domodal)返回 IDOK 和所选内容类型不是`COleInsertDialog::createNewItem`。  
   
 ```  
 CString GetPathName() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 在对话框中选择文件的完整路径。 如果选择类型为`createNewItem`，此函数将返回无意义`CString`在发布模式下或在调试模式下，将导致断言。  
+ 在对话框中选择文件的完整路径。 如果所选内容类型为`createNewItem`，此函数将返回无意义`CString`在发布模式下或在调试模式下引发断言。  
   
 ##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
- 调用此函数可获取选定内容类型选择插入对象对话框中时通过选择解除**确定**。  
+ 调用此函数可获取所选内容类型选择插入对象对话框时通过选择解除**确定**。  
   
 ```  
 UINT GetSelectionType() const;  
@@ -253,7 +254,7 @@ UINT GetSelectionType() const;
  所做选择的类型。  
   
 ### <a name="remarks"></a>备注  
- 通过指定返回类型值**选择**枚举类型中声明`COleInsertDialog`类。  
+ 通过指定返回类型值`Selection`枚举类型中声明`COleInsertDialog`类。  
   
 ```  
 enum Selection {
@@ -263,28 +264,28 @@ enum Selection {
     };  
 ```  
   
- 请按照这些值的简要说明操作：  
+ 请按照这些值的简短说明：  
   
-- **COleInsertDialog::createNewItem**选择创建新的单选按钮。  
+- `COleInsertDialog::createNewItem` 已选择新创建的单选按钮。  
   
-- **COleInsertDialog::insertFromFile**选择从文件创建单选按钮和链接复选框未选中。  
+- `COleInsertDialog::insertFromFile` 已选择从文件创建单选按钮和未选中链接复选框。  
   
-- **COleInsertDialog::linkToFile**选择从文件创建单选按钮和链接复选框已选中。  
+- `COleInsertDialog::linkToFile` 已选择从文件创建单选按钮和链接复选框已选中。  
   
 ##  <a name="m_io"></a>  COleInsertDialog::m_io  
- 类型的结构**OLEUIINSERTOBJECT**用于控制插入对象对话框中的行为。  
+ 类型 OLEUIINSERTOBJECT 的结构，用于控制行为的插入对象对话框。  
   
 ```  
 OLEUIINSERTOBJECT m_io;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 直接或通过成员函数，则可以修改此结构的成员。  
+ 直接或通过成员函数，可以修改此结构的成员。  
   
  有关详细信息，请参阅[OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的结构。  
   
 ## <a name="see-also"></a>请参阅  
  [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
  [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+ [层次结构图表](../../mfc/hierarchy-chart.md)   
  [COleDialog 类](../../mfc/reference/coledialog-class.md)
