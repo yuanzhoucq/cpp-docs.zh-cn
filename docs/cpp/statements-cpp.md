@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422776"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025752"
 ---
 # <a name="statements-c"></a>语句 (C++)
 C++ 语句是控制操作对象的方式和顺序的程序元素。 本节包括：  
@@ -42,7 +42,7 @@ C++ 语句是控制操作对象的方式和顺序的程序元素。 本节包括
   
     -   [跳转语句](../cpp/jump-statements-cpp.md)。 这些语句可以立即将控制权转移到函数中的其他位置或从函数中返回控制权。  
   
-    -   [声明语句](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9)。 声明将一个名称引入程序中。 ([声明和定义](declarations-and-definitions-cpp.md)提供更详细的有关声明信息。)  
+    -   [声明语句](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9)。 声明将一个名称引入程序中。 ([声明和定义](declarations-and-definitions-cpp.md)提供更详细的有关声明的信息。)  
   
  有关异常处理语句的信息，请参阅[异常处理](../cpp/exception-handling-in-visual-cpp.md)。  
   
