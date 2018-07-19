@@ -1,5 +1,5 @@
 ---
-title: 实用程序类 (ATL) |Microsoft 文档
+title: 实用工具类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450c22a6c31128204dcb9e2f5baf8aeb04439eab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c3803a3b78e5a5a1e08edf1e8b6ca7df0c257ee
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961771"
 ---
-# <a name="utility-classes"></a>实用程序类
-提供了以下的独立于 MFC 的实用程序类：  
+# <a name="utility-classes"></a>实用工具类
+提供了以下独立于 MFC 的实用程序类：  
   
--   [CImage](../atl-mfc-shared/reference/cimage-class.md)提供增强的位图支持，包括用于加载和保存在 JPEG、 GIF、 BMP，映像的功能和可移植网络图形 (PNG) 格式。  
+-   [中的 CImage](../atl-mfc-shared/reference/cimage-class.md)提供增强的位图支持，包括能够加载和保存在 JPEG、 GIF、 BMP、 映像和可移植网络图形 (PNG) 格式。  
   
--   [CPoint](../atl-mfc-shared/reference/cpoint-class.md)提供用于存储坐标 （x，y） 对的实现。  
+-   [CPoint](../atl-mfc-shared/reference/cpoint-class.md)提供一个实现存储 （x，y） 坐标对。  
   
--   [CRect](../atl-mfc-shared/reference/crect-class.md)提供用于存储矩形区域的坐标的实现。  
+-   [CRect](../atl-mfc-shared/reference/crect-class.md)提供一个实现存储矩形区域的坐标。  
   
--   [CSize](../atl-mfc-shared/reference/csize-class.md)提供用于存储距离、 相对位置或匹配的值的实现。  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md)提供一个实现存储距离、 相对位置或匹配的值。  
   
--   [CString](../atl-mfc-shared/reference/cstringt-class.md)提供用于存储字符串的实现。  
+-   [CString](../atl-mfc-shared/reference/cstringt-class.md)提供一个实现存储字符字符串。  
   
--   [CAdapt](../atl/reference/cadapt-class.md)用来重新定义 address-of 运算符的类进行简单包装的简单模板。  
+-   [CAdapt](../atl/reference/cadapt-class.md)用于包装类，以重新定义 address-of 运算符的简单模板。  
   
--   [_U_RECT](../atl/reference/u-rect-class.md)参数适配器类，该类允许或者`RECT`指针或引用传递给实现根据指针的函数。  
+-   [_U_RECT](../atl/reference/u-rect-class.md)允许参数适配器类`RECT`指针或引用要传递给实现方面的指针的函数。  
   
 ## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)

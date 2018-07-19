@@ -1,5 +1,5 @@
 ---
-title: 创建 MFC 应用程序 |Microsoft 文档
+title: 创建 MFC 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b30b1e0f5e8031609845c78da7558e8b3207862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368808"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026986"
 ---
 # <a name="creating-an-mfc-application"></a>创建 MFC 应用程序
 MFC 应用程序是基于 Microsoft 基础类 (MFC) 库的 Windows 可执行应用程序。 创建 MFC 应用程序的最容易方法是使用 MFC 应用程序向导。  
@@ -29,7 +29,7 @@ MFC 应用程序是基于 Microsoft 基础类 (MFC) 库的 Windows 可执行应�
 > [!IMPORTANT]
 >  Visual Studio Express 版本不支持 MFC 项目。  
   
- MFC 可执行程序通常分为五类： 标准 Windows 应用程序、 对话框、 基于窗体的应用程序，资源管理器样式的应用程序和 Web 浏览器样式的应用程序。 有关详细信息，请参见:  
+ MFC 可执行文件通常分为五类： 标准 Windows 应用程序、 对话框、 基于窗体的应用程序、 资源管理器样式的应用程序和 Web 浏览器样式的应用程序。 有关详细信息，请参见:  
   
 -   [使用类编写 Windows 应用程序](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
@@ -45,22 +45,22 @@ MFC 应用程序是基于 Microsoft 基础类 (MFC) 库的 Windows 可执行应�
   
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>使用 MFC 应用程序向导创建 MFC 应用程序  
   
-1.  按照帮助主题中的说明[使用 Visual c + + 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)。  
+1.  请按帮助主题[使用 Visual C++ 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)中的说明进行操作。  
   
-2.  在**新项目**对话框中，选择**MFC 应用程序**在模板窗格中，以打开向导。  
+2.  在中**新的项目**对话框中，选择**MFC 应用程序**在模板窗格中，以打开向导。  
   
-3.  定义你使用的应用程序设置[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)。  
+3.  定义使用应用程序设置[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)。  
   
     > [!NOTE]
     >  跳过此步骤可保留向导的默认设置。  
   
-4.  单击**完成**关闭向导并在开发环境中打开你的新项目。  
+4.  单击**完成**关闭向导并在开发环境中打开新项目。  
   
- 你的项目创建后，你可以查看在中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
+ 你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [调试准备： Visual c + + Windows 应用程序](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [调试准备： Visual c + + Windows 应用程序](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [属性页](../../ide/property-pages-visual-cpp.md)   
- [部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [部署应用程序](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

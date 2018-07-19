@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961969"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine 类
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>参数
 
-`Engine` 基引擎类型中。
+*引擎*基引擎类型。
 
-`K` **表大小**。 缓冲区（表）中的元素数。 **前提条件**：`0 < K`
+*K* **表大小**。 缓冲区（表）中的元素数。 **前提条件**：`0 < K`
 
 ## <a name="members"></a>成员
 
@@ -60,7 +60,7 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了通过对其基引擎返回的值进行重新排序来产生值的引擎适配器。 每个构造函数都将使用由基引擎返回的 `K` 值填充内部表，请求一个值后，将从该表中选择一个随机元素。
+此模板类描述了通过对其基引擎返回的值进行重新排序来产生值的引擎适配器。 每个构造函数填充内部表与*K*由基引擎返回的值和值请求时从表中选择一个随机元素。
 
 ## <a name="requirements"></a>要求
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847723"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961478"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -37,7 +37,7 @@ ms.locfileid: "33847723"
 
 ## <a name="remarks"></a>备注
 
-一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如，[noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除 **str** 对象中的格式标志 `ios_base::skipws`，它可以是其中一种类型。
+一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除格式标志`ios_base::skipws`对象中`str`，它可以是以下类型之一。
 
 还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如：
 

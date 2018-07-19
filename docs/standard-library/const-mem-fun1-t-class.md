@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5fe5c06dd3017e867e73cf1107e619ec2c1edaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 059ad07e50fb6325850d1095940ce084893bf70b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966494"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t 类
 
@@ -41,11 +41,11 @@ class const_mem_fun1_t
 
 ### <a name="parameters"></a>参数
 
-`_Pm` 指向类成员函数的指针**类型**可转换为函数对象。
+*_Pm*指向的类成员函数的指针`Type`可转换为函数对象。
 
-`_Pleft` **Const**对象`_Pm`上调用成员函数。
+*_Pleft* **const**对象 *_Pm*上调用成员函数。
 
-`right` 为指定的自变量`_Pm`。
+*右*自变量提供给 *_Pm*。
 
 ## <a name="return-value"></a>返回值
 
@@ -53,7 +53,7 @@ class const_mem_fun1_t
 
 ## <a name="remarks"></a>备注
 
-模板类存储 `_Pm` 的副本，它必须是专用成员对象中指向类 **Type** 的成员函数的指针。 它定义其成员函数`operator()`为返回 ( **_Pleft** -> \* * Pm) (***右**) **const**。
+此模板类存储一份 *_Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回 ( **_Pleft** -> \* * Pm) (***右**) **const**。
 
 ## <a name="example"></a>示例
 

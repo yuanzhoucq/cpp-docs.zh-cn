@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3b8fc232c6d692dd6e4f80018ab571e4e0cb34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847710"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962440"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 类
 
@@ -88,7 +88,7 @@ class allocator_traits;
 
 以下静态方法调用给定分配器参数上的相应的方法。
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[allocate](#allocate)|使用给定的分配器参数分配内存的静态方法。|
 |[construct](#construct)|使用指定的分配器构造对象的静态方法。|
@@ -116,11 +116,11 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>参数
 
-`al` 分配器对象。
+*al*分配器对象。
 
-`count` 要分配的元素数。
+*计数*要分配的元素数。
 
-`hint` A `const_pointer` ，可能通过定位请求之前已分配的对象的地址满足存储的请求帮助的分配器对象。 Null 指针将被视为无提示。
+*提示*A`const_pointer`可能帮助分配器对象满足存储请求通过定位在请求之前已分配的对象的地址。 Null 指针将被视为无提示。
 
 ### <a name="return-value"></a>返回值
 
@@ -141,11 +141,11 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>参数
 
-`al` 分配器对象。
+*al*分配器对象。
 
-`ptr` 指向该对象为要构造的位置的指针。
+*ptr*指向其中对象是要构造位置的指针。
 
-`args` 传递给对象构造函数的参数列表。
+*args*传递给对象构造函数的参数列表。
 
 ### <a name="remarks"></a>备注
 
@@ -163,11 +163,11 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>参数
 
-`al` 分配器对象。
+*al*分配器对象。
 
-`ptr` 指向要释放的对象的起始位置的指针。
+*ptr*指向要释放的对象的起始位置的指针。
 
-`count` 要释放的对象数。
+*计数*要解除分配的对象数。
 
 ### <a name="remarks"></a>备注
 
@@ -186,9 +186,9 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>参数
 
-`al` 分配器对象。
+*al*分配器对象。
 
-`ptr` 指向对象的位置的指针。
+*ptr*指向对象的位置的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -204,7 +204,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>参数
 
-`al` 分配器对象。
+*al*分配器对象。
 
 ### <a name="remarks"></a>备注
 
@@ -220,11 +220,11 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>参数
 
-`al` 分配器对象。
+*al*分配器对象。
 
 ### <a name="return-value"></a>返回值
 
-如果该类型形式正确，则此方法返回 `al.select_on_container_copy_construction()`；否则返回 `al`。
+此方法返回`al.select_on_container_copy_construction()`，如果该类型形式正确; 否则返回*al*。
 
 ### <a name="remarks"></a>备注
 

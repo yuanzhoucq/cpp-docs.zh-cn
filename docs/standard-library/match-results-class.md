@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964478"
 ---
 # <a name="matchresults-class"></a>match_results 类
 
@@ -69,9 +69,9 @@ class match_results {
 
 ### <a name="parameters"></a>参数
 
-`BidIt` 子匹配项的迭代器类型。
+*BidIt*子匹配项的迭代器类型。
 
-`Alloc` 用于管理存储的分配器类型。
+*分配*用于管理存储的分配器类型。
 
 ## <a name="remarks"></a>备注
 
@@ -93,7 +93,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>备注
 
-Typedef 是模板参数 `Alloc`的同义词。
+Typedef 是模板参数的同义词*Alloc*。
 
 ### <a name="example"></a>示例
 
@@ -1066,17 +1066,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>参数
 
-`OutIt` 输出迭代器类型。
+*OutIt*输出迭代器类型。
 
-`out` 要写入的输出流。
+*out*要写入的输出流。
 
-`fmt` 格式字符串中。
+*fmt*格式字符串。
 
-`flags` 格式标志。
+*标志*格式标志。
 
 ### <a name="remarks"></a>备注
 
-每个成员函数在 `fmt` 格式的控制下生成带格式的文本。 第一个成员函数将带格式的文本写入到其参数 `out` 定义的序列，并返回 `out`。 第二个成员函数返回保存了带格式文本的副本的字符串对象。
+每个成员函数生成控制的格式的格式化的文本*fmt*。 第一个成员函数将带格式的文本写入到其自变量定义的序列*出*，并返回*出*。第二个成员函数返回保存了带格式文本的副本的字符串对象。
 
 生成格式化文本。 格式字符串中的文字文本通常会复制到目标序列。 格式字符串中的每个转义序列均由它表示的文本替换。 复制和替换的详细信息由传递到函数的格式标志控制。
 
@@ -1441,7 +1441,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-`sub` 子匹配项的索引。
+*sub*子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>参数
 
-`alloc` 要存储的分配器对象。
+*分配*要存储的分配器对象。
 
-`right` 要复制的 match_results 对象。
+*右*要复制的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数构造 `match_results` 对象，其中不包含子匹配项。 第二个构造函数构造 `match_results` 对象，它是 `right` 的副本。
+第一个构造函数构造 `match_results` 对象，其中不包含子匹配项。 第二个构造函数构造`match_results`对象，它是一份*右*。
 
 ### <a name="example"></a>示例
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要复制的 match_results 对象。
+*右*要复制的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用 `right` 控制的序列的副本替换 `*this` 控制的序列。
+成员运算符会将控制的序列`*this`控制的序列的副本*右*。
 
 ### <a name="example"></a>示例
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>参数
 
-`n` 子匹配项的索引。
+*n*子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
-该成员函数将返回对受控序列中元素 `n` 的引用，如果 `sub_match` ，或捕获组 `size() <= n` 不是匹配项的一部分，则返回对空 `n` 对象的引用。
+成员函数将返回元素的引用*n*受控的序列，或为空引用`sub_match`对象如果`size() <= n`或者，如果捕获组*n*并不是匹配项的一部分。
 
 ### <a name="example"></a>示例
 
@@ -2066,7 +2066,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-`sub` 子匹配项的索引。
+*sub*子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
@@ -2675,7 +2675,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-`sub` 子匹配项的索引。
+*sub*子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>参数
 
-`right` 要交换的 match_results 对象。
+*右*要交换的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-该成员函数定时交换 `*this` 和 `right` 的内容且不引发异常。
+成员函数交换的内容`*this`并*右*在常量时间内，而不会引发异常。
 
 ### <a name="example"></a>示例
 

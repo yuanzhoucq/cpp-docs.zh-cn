@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1248c8efd06069863a9f78a94378fe7aed651011
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ae0db2b789e16a39396a329a64dfb8794eef5775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961904"
 ---
 # <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable 类
 
@@ -36,19 +36,19 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是具有普通移动赋值运算符的类，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是具有普通移动赋值运算符，否则为 false 的类。
 
-如果符合以下条件，类 `Ty` 的移动赋值运算符是普通运算符：
+移动赋值运算符的类*Ty*并不重要如果：
 
 它被隐式提供
 
-类 `Ty` 没有虚函数
+该类*Ty*不具有虚拟函数
 
-类 `Ty` 没有虚拟基
+该类*Ty*不具有虚拟基
 
 类类型的所有非静态数据成员的类具有普通移动赋值运算符
 

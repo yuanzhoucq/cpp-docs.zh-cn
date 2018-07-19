@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa161e1eec0e02097f22bb15f825542a6928111b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861173"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965560"
 ---
 # <a name="numpunct-class"></a>numpunct 类
 
@@ -60,7 +60,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 在程序内所使用的区域设置中的字符进行编码的类型。
+*CharType*在程序内使用的区域设置的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -85,14 +85,14 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|返回要用作小数点的区域设置特定元素。|
 |[do_decimal_point](#do_decimal_point)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作小数点的区域设置特定元素。|
-|[do_falsename](#do_falsename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 `false` 的文本表示形式的字符串。|
+|[do_falsename](#do_falsename)|一种受保护虚拟成员函数调用以返回要用作值的文本表示形式的字符串**false**。|
 |[do_grouping](#do_grouping)|一种受保护的虚拟成员函数，通过调用此函数可返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[do_thousands_sep](#do_thousands_sep)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作千位分隔符的区域设置特定元素。|
-|[do_truename](#do_truename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 `true` 的文本表示形式的字符串。|
-|[falsename](#falsename)|返回要用作值 `false` 的文本表示形式的字符串。|
+|[do_truename](#do_truename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 **true** 的文本表示形式的字符串。|
+|[falsename](#falsename)|返回要用作值 **false** 的文本表示形式的字符串。|
 |[grouping](#grouping)|返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[thousands_sep](#thousands_sep)|返回要用作千位分隔符的区域设置特定元素。|
-|[truename](#truename)|返回要用作值 `true` 的文本表示形式的字符串。|
+|[truename](#truename)|返回要用作值 **true** 的文本表示形式的字符串。|
 
 ## <a name="requirements"></a>要求
 
@@ -209,7 +209,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅 [grouping](#grouping) 的示例，其中虚拟成员函数由 **grouping** 调用。
+有关示例，请参阅[分组](#grouping)，其中虚拟成员函数由调用`grouping`。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -225,7 +225,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>备注
 
-此受保护的虚拟成员函数返回 **CharType** 类型的区域设置特定元素，以便用作任何小数点左侧的组分隔符。
+受保护虚拟成员函数返回类型的区域设置特定元素`CharType`要用作任何小数点左侧的组分隔符。
 
 ### <a name="example"></a>示例
 
@@ -259,7 +259,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>返回值
 
-一个包含要用作值 **false** 的文本表示形式的 **CharType** 序列的字符串。
+一个包含一系列字符串`CharType`要用作值的文本表示形式**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -354,11 +354,11 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
@@ -368,7 +368,7 @@ explicit numpunct(size_t _Refs = 0);
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。
+构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
 ## <a name="string_type"></a>  numpunct::string_type
 

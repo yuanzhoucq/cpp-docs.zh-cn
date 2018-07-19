@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966649"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 运算符
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_set`。
+*左*类型的对象`hash_set`。
 
-`right` 类型的对象`hash_set`。
+*右*类型的对象`hash_set`。
 
 ### <a name="return-value"></a>返回值
 
@@ -48,7 +48,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 hash_set 对象之间的比较基于其元素的成对比较。 如果两个 hash_set 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_set 相等。 否则，它们不相等。
 
-成员[< hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)标头文件位于[stdext Namespace](../standard-library/stdext-namespace.md)。
+成员[< hash_map >](../standard-library/hash-map.md)并[< hash_set >](../standard-library/hash-set.md)标头文件位于[stdext Namespace](../standard-library/stdext-namespace.md)。
 
 ### <a name="example"></a>示例
 
@@ -102,9 +102,9 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_set`。
+*左*类型的对象`hash_set`。
 
-`right` 类型的对象`hash_set`。
+*右*类型的对象`hash_set`。
 
 ### <a name="return-value"></a>返回值
 
@@ -166,9 +166,9 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_multiset`。
+*左*类型的对象`hash_multiset`。
 
-`right` 类型的对象`hash_multiset`。
+*右*类型的对象`hash_multiset`。
 
 ### <a name="return-value"></a>返回值
 
@@ -230,9 +230,9 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`hash_multiset`。
+*左*类型的对象`hash_multiset`。
 
-`right` 类型的对象`hash_multiset`。
+*右*类型的对象`hash_multiset`。
 
 ### <a name="return-value"></a>返回值
 

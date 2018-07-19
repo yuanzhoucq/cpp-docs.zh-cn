@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b1d6e93aa929d95032c04a58b5b419ca312f8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964367"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname 类
 
@@ -53,15 +53,15 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`_Locname` 命名的区域设置。
+*_Locname*命名的区域设置。
 
-`_Refs` 初始引用计数。
+*_Refs*初始引用计数。
 
 ## <a name="remarks"></a>备注
 
 构造已命名的区域设置时，将自动创建 Byname facet。
 
-其行为由命名的区域设置 `_Locname` 决定。 每个构造函数使用 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基对象。
+其行为由命名的区域设置确定 *_Locname*。 每个构造函数使用 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基对象。
 
 ## <a name="requirements"></a>要求
 

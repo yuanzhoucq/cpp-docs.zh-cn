@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856793"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963688"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 运算符
 
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|要测试是否相等的对象。|
-|`right`|要测试是否相等的对象。|
+|*left*|要测试是否相等的对象。|
+|*right*|要测试是否相等的对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|要测试是否不相等的对象。|
-|`right`|要测试是否不相等的对象。|
+|*left*|要测试是否不相等的对象。|
+|*right*|要测试是否不相等的对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果 `right` 中传入的对象不等于 `left` 中传入的对象，则为 **true**；否则为 **false**。
+**true**如果在传递的对象*左*是否不等于传入的对象*右*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |参数|描述|
 |---------------|-----------------|
-|`left`|要比较的对象。|
-|`right`|要比较的对象。|
+|*left*|要比较的对象。|
+|*right*|要比较的对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果 `left` 中传入的对象小于 `right` 中传入的对象，则为 **true**；否则为 **false**。
+**true**如果在传递的对象*左*小于传入的对象*右*;否则为**false**。
 
 ### <a name="remarks"></a>备注
 

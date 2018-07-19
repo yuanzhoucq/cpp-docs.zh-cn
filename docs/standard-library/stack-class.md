@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963220"
 ---
 # <a name="stack-class"></a>stack 类
 
@@ -50,17 +50,17 @@ class stack
 
 ### <a name="parameters"></a>参数
 
-*类型*要存储堆栈中的元素数据类型。
+*类型*元素数据类型存储在堆栈中。
 
-`Container` 用于实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。
+*容器*用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。
 
 ## <a name="remarks"></a>备注
 
-堆栈对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。
+类的元素`Type`中的第一个模板规定的堆栈对象的参数是使用同义词[value_type](#value_type) ，并且必须匹配的基础容器类中的元素类型`Container`规定的第二个模板参数。 `Type`必须是可赋值的以便它才能复制该类型的对象，并将值分配到该类型的变量。
 
-适合堆栈的基础容器类包括 [deque](../standard-library/deque-class.md)、[list class](../standard-library/list-class.md) 和 [vector class](../standard-library/vector-class.md) 或者支持 **back** 操作（`push_back` 和 `pop_back`）的任何其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
+堆栈适合基础容器类包括[deque](../standard-library/deque-class.md)， [list 类](../standard-library/list-class.md)，并[vector 类](../standard-library/vector-class.md)，或支持的操作的任何其他序列容器`back`， `push_back`，和`pop_back`。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
 
-当且仅当 **Type** 类的元素可进行相等比较时，堆栈对象才可进行相等比较，当且仅当 **Type** 类的元素可进行小于比较时，堆栈对象才可进行小于比较。
+堆栈对象类的元素进行相等比较，当且仅当`Type`进行相等比较，很少-比比较，当且仅当类的元素`Type`小于的比较。
 
 - 堆栈类支持后进先出 (LIFO) 数据结构。 可以在脑海中将其类比为一摞盘子。 元素（盘子）只能从堆栈顶部（基容器末尾的最后一个元素）插入、检查或删除。 限制仅访问顶部元素是使用堆栈类的原因。
 
@@ -227,7 +227,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-`val` 添加到堆栈顶部的元素。
+*val*添加到堆栈顶部的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -334,7 +334,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 构造的堆栈是为复制其中的容器。
+*右*所构造的堆栈是为复制其中的容器。
 
 ### <a name="example"></a>示例
 
@@ -393,7 +393,7 @@ const_reference top() const;
 
 堆栈必须为非空才能应用成员函数。 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
-如果 **top** 的返回值赋给了 `const_reference`，则不能修改堆栈对象。 如果 **top** 的返回值赋给了 **reference**，则不能修改堆栈对象。
+如果返回值`top`分配给`const_reference`，不能修改堆栈对象。 如果返回值`top`分配给`reference`，可以修改堆栈对象。
 
 ### <a name="example"></a>示例
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109d7ee960b6788468c473e88321a00a38fb4379
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862385"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963126"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -37,9 +37,9 @@ ms.locfileid: "33862385"
 
 若要创建正则表达式对象，请将模板类 [basic_regex 类](../standard-library/basic-regex-class.md)或其专用化（[regex](../standard-library/regex-typedefs.md#regex) 和[wregex](../standard-library/regex-typedefs.md#wregex)）之一与类型为 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 的语法标志一起使用。
 
-若要搜索的正则表达式对象的匹配项的文本，请使用模板函数[regex_match](../standard-library/regex-functions.md#regex_match)和[regex_search](../standard-library/regex-functions.md#regex_search)、 与类型的匹配项标志一起[regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type)。 这些函数通过将模板类 [match_results 类](../standard-library/match-results-class.md)及其专用化（[cmatch](../standard-library/regex-typedefs.md#cmatch)、[wcmatch](../standard-library/regex-typedefs.md#wcmatch)、[smatch](../standard-library/regex-typedefs.md#smatch) 和 [wsmatch](../standard-library/regex-typedefs.md#wsmatch)）与模板类 [sub_match 类](../standard-library/sub-match-class.md)及其专用化（[csub_match](../standard-library/regex-typedefs.md#csub_match)、[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)、[ssub_match](../standard-library/regex-typedefs.md#ssub_match) 和 [wssub_match](../standard-library/regex-typedefs.md#wssub_match)）一起使用来返回结果。
+若要搜索的正则表达式对象的匹配项的文本，请使用模板函数[regex_match](../standard-library/regex-functions.md#regex_match)并[regex_search](../standard-library/regex-functions.md#regex_search)类型的匹配项标志一起使用、 [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type)。 这些函数通过将模板类 [match_results 类](../standard-library/match-results-class.md)及其专用化（[cmatch](../standard-library/regex-typedefs.md#cmatch)、[wcmatch](../standard-library/regex-typedefs.md#wcmatch)、[smatch](../standard-library/regex-typedefs.md#smatch) 和 [wsmatch](../standard-library/regex-typedefs.md#wsmatch)）与模板类 [sub_match 类](../standard-library/sub-match-class.md)及其专用化（[csub_match](../standard-library/regex-typedefs.md#csub_match)、[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)、[ssub_match](../standard-library/regex-typedefs.md#ssub_match) 和 [wssub_match](../standard-library/regex-typedefs.md#wssub_match)）一起使用来返回结果。
 
-若要替换与正则表达式对象相匹配的文本，请使用模板函数[regex_replace](../standard-library/regex-functions.md#regex_replace)、 与类型的匹配项标志一起[regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type)。
+若要替换匹配正则表达式对象的文本，请使用模板函数[regex_replace](../standard-library/regex-functions.md#regex_replace)、 类型的匹配项标志一起使用[regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type)。
 
 若要循环访问正则表达式对象的多个匹配项，请将模板类 [regex_iterator 类](../standard-library/regex-iterator-class.md)和 [regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)或其专用化之一（[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)、[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)、[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)、[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)、[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)、[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)、[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)或 [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)）与类型 [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type) 的匹配项标志一起使用。
 
@@ -55,8 +55,8 @@ ms.locfileid: "33862385"
 |[regex_error](../standard-library/regex-error-class.md)|报告错误的正则表达式。|
 |[regex_iterator](../standard-library/regex-iterator-class.md)|循环访问匹配结果。|
 |[regex_traits](../standard-library/regex-traits-class.md)|描述用于匹配的元素的特征。|
-|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|描述用于匹配的 `char` 的特征。|
-|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|描述用于匹配的 `wchar_t` 的特征。|
+|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|介绍特征**char**匹配。|
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|介绍特征**wchar_t**匹配。|
 |[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|循环访问子匹配项。|
 |[sub_match](../standard-library/sub-match-class.md)|介绍子匹配项。|
 
@@ -64,20 +64,20 @@ ms.locfileid: "33862385"
 
 |||
 |-|-|
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|`char` `match_results` 的类型定义。|
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|`char` `regex_iterator` 的类型定义。|
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|`char` `regex_token_iterator` 的类型定义。|
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|`char` `sub_match` 的类型定义。|
-|[regex](../standard-library/regex-typedefs.md#regex)|`char` `basic_regex` 的类型定义。|
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|类型定义**char** `match_results`。|
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|类型定义**char** `regex_iterator`。|
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|类型定义**char** `regex_token_iterator`。|
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|类型定义**char** `sub_match`。|
+|[regex](../standard-library/regex-typedefs.md#regex)|类型定义**char** `basic_regex`。|
 |[smatch](../standard-library/regex-typedefs.md#smatch)|`string` `match_results` 的类型定义。|
 |[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|`string` `regex_iterator` 的类型定义。|
 |[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|`string` `regex_token_iterator` 的类型定义。|
 |[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|`string` `sub_match` 的类型定义。|
-|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|`wchar_t` `match_results` 的类型定义。|
-|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|`wchar_t` `regex_iterator` 的类型定义。|
-|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|`wchar_t` `regex_token_iterator` 的类型定义。|
-|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|`wchar_t` `sub_match` 的类型定义。|
-|[wregex](../standard-library/regex-typedefs.md#wregex)|`wchar_t` `basic_regex` 的类型定义。|
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|类型定义**wchar_t** `match_results`。|
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|类型定义**wchar_t** `regex_iterator`。|
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|类型定义**wchar_t** `regex_token_iterator`。|
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|类型定义**wchar_t** `sub_match`。|
+|[wregex](../standard-library/regex-typedefs.md#wregex)|类型定义**wchar_t** `basic_regex`。|
 |[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|`wstring` `match_results` 的类型定义。|
 |[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|`wstring` `regex_iterator` 的类型定义。|
 |[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|`wstring` `regex_token_iterator` 的类型定义。|

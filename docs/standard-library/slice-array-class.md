@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67ffb39df8f02df233a31cfffeea5ab5ddcdf933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cb34fd44214ac503c8b9e201d07dbe1a6eb85de
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965761"
 ---
 # <a name="slicearray-class"></a>slice_array 类
 
@@ -58,7 +58,7 @@ public:
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-只通过写入 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 形式的表达式即可为 valarray **va** 的 **sl** 切片构造 **gslice_array\<Type>** 对象。 然后，slice_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应函数签名，只不过仅所选的元素的序列受到影响。 slice_array 控制的序列由构造函数的三个参数切片定义，即切片中第一个元素的索引、元素数以及元素之间的距离。 剪切自 valarray **va**（由 **va**[ `slice`（2，5，3）] 声明）的 slice_array 从**va** 中选择具有索引 2、5、8、11 和 14 的元素。 若要过程有效，索引必须有效。
+在构造`slice_array<Type>`只通过写入形式的表达式的对象[va&#91;sl&#93;](../standard-library/valarray-class.md#op_at)，切片`sl`valarray 的`va`。 Slice_array 类的成员函数，然后就像是为定义的对应函数签名`valarray<Type>`，只不过仅所选元素的序列受到影响。 slice_array 控制的序列由构造函数的三个参数切片定义，即切片中第一个元素的索引、元素数以及元素之间的距离。 剪切自 valarray 的 slice_array`va`来声明**va**[ `slice`（2，5，3）] 选择具有索引 2、 5、 8、 11 和 14 中的元素`va`。 若要过程有效，索引必须有效。
 
 ## <a name="example"></a>示例
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961917"
 ---
 # <a name="binarynegate-class"></a>binary_negate 类
 
@@ -44,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>参数
 
-`Func` 要求反的二元函数。
+*Func*进行求反的二元函数。
 
-`left` 要求反的二元函数的左的操作数。
+*左*进行求反的二元函数的左的操作数。
 
-`right` 要求反的二元函数的右操作数。
+*右*进行求反的二元函数的右操作数。
 
 ## <a name="return-value"></a>返回值
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d88359bbf1521ad9fa464f22149c82497101ecb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108182e7f54453bb88d9ea6e001f672c0c214a2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857280"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961621"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution 类
 
@@ -77,7 +77,7 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*整数结果类型，默认为`int`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -219,7 +219,7 @@ explicit binomial_distribution(const param_type& parm);
 
 *意味着*`mean`分布参数。
 
-*参数*用于构造分布的参数结构。
+*parm*用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 

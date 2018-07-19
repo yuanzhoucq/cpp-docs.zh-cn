@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149b43f0485d3717ad2f413d2519e435f0da0562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87975e0b27934d091e896867620011a51b78d52
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966505"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference 类
 
@@ -43,7 +43,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |成员函数|描述|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|反转向量元素的布尔值。|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|提供从 `vector<bool>::reference` 到 `bool` 的隐式转换。|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|提供了隐式转换`vector<bool>::reference`到**bool**。|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|将布尔值赋给一个位，或将引用的元素所保存的值赋给一个位。|
 
 ## <a name="requirements"></a>要求

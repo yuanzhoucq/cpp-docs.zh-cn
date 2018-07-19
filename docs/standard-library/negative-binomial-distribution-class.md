@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964403"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 类
 
@@ -77,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>参数
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-## Remarks
+## <a name="remarks"></a>备注
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+此模板类将描述产生用户指定的整型值类型**int**如果未提供任何内容根据负二项式分布离散型概率函数分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+属性成员`k()`并`p()`返回参数值的当前存储的分布*k*并*p*分别。
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+`min()` 和 `max()` 成员函数将分别返回最小可能结果和最大可能结果。
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+`reset()` 成员函数将放弃所有缓存的值，使下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+`operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+有关负二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[负二项分布](http://go.microsoft.com/fwlink/p/?linkid=400516)。
 
-## Example
+## <a name="example"></a>示例
 
 ```cpp
 // compile with: /EHsc /W4
@@ -246,7 +246,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* `p`分布参数。
 
-*参数*用于构造分布的参数结构。
+*parm*用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 

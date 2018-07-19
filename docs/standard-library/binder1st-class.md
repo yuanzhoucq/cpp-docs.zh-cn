@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f000ea8458925f8ea3faa4896943e045de127d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841482"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961716"
 ---
 # <a name="binder1st-class"></a>binder1st 类
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`Func` 要转换为一元函数对象的二元函数对象。
+*func*二元函数对象转换为一元函数对象。
 
-`left` 二元函数对象的第一个参数绑定到的值。
+*左*二元函数对象的第一个参数是要绑定的值。
 
-`right` 适配的二进制对象将与第二个参数的固定值进行比较的自变量的值。
+*右*改编的二元对象将与第二个参数的固定值进行比较的参数的值。
 
 ## <a name="return-value"></a>返回值
 
-将二元函数对象的第一个参数绑定到值 `left.` 生成的一元函数对象
+将二元函数对象的第一个参数绑定到值而得出的一元函数对象*左*。
 
 ## <a name="remarks"></a>备注
 
-模板类将二元函数对象 `Func` 的副本存储在 **op** 中，并将 `left` 的副本存储在 **value** 中。 它将其成员函数 `operator()` 定义为返回 **op**( **value**, `right`)。
+此模板类存储二元函数对象的副本*Func*中`op`，以及一份*左*中`value`。 它将其成员函数 `operator()` 定义为返回 **op**( **value**, `right`)。
 
-如果 `Func` 是 **Operation** 类型的对象且 `c` 是常量，则 [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) 等效于 `binder1st` 类构造函数`binder1st`\< **Operation**> ( `Func`, `c` ) 且更为方便。
+如果*Func*是类型的对象`Operation`并`c`是常量，则[bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`， `c` ) 等效于`binder1st`类构造函数`binder1st` \< **操作**> ( `Func`， `c` ) 且更为方便。
 
 ## <a name="example"></a>示例
 

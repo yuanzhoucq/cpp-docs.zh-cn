@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2fa3ef6113add6bcf72f85f74b8722033cb8d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846605"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962869"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,23 +38,23 @@ ms.locfileid: "33846605"
 
 |类型名称|描述|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|专用于 `char` 模板参数的类型 `basic_filebuf`。|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|专用于 `char` 模板参数的类型 `basic_fstream`。|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|专用于 `char` 模板参数的类型 `basic_ifstream`。|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|专用于 `char` 模板参数的类型 `basic_ofstream`。|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|专用于 `wchar_t` 模板参数的类型 `basic_fstream`。|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|专用于 `wchar_t` 模板参数的类型 `basic_ifstream`。|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|专用于 `wchar_t` 模板参数的类型 `basic_ofstream`。|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|专用于 `wchar_t` 模板参数的类型 `basic_filebuf`。|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|一种类型`basic_filebuf`专用于**char**模板参数。|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|一种类型`basic_fstream`专用于**char**模板参数。|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|一种类型`basic_ifstream`专用于**char**模板参数。|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|一种类型`basic_ofstream`专用于**char**模板参数。|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|一种类型`basic_fstream`专用于**wchar_t**模板参数。|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|一种类型`basic_ifstream`专用于**wchar_t**模板参数。|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|一种类型`basic_ofstream`专用于**wchar_t**模板参数。|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|一种类型`basic_filebuf`专用于**wchar_t**模板参数。|
 
 ### <a name="classes"></a>类
 
 |类|描述|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|该模板类描述对 **Elem** 类型的元素（其字符特征由类 **Tr** 确定）与外部文件中存储的元素序列之间的来回传输进行控制的流缓冲区。|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|该模板类描述一个对象，该对象使用 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区控制元素和编码对象的插入和提取，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|该模板类描述一个对象，该对象控制从 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区提取元素和编码对象，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|该模板类描述一个对象，该对象控制向 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区插入元素和编码对象，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|该模板类描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与外部文件中存储的元素序列之间的来回传输进行控制的流缓冲区。|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|此模板类描述控制元素的插入和提取的对象和编码的对象使用类的流缓冲区[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**， **Tr**>，类型的元素`Elem`，其字符特征由类`Tr`。|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|此模板类描述一个对象，用于控制提取元素和编码的对象类的流缓冲区[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**， **Tr**>，类型的元素`Elem`，其字符特征由类`Tr`。|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|此模板类描述类的流缓冲区控制元素插入的对象和编码的对象[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**， **Tr**>，类型的元素`Elem`，其字符特征由类`Tr`。|
 
 ## <a name="see-also"></a>请参阅
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851897"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962366"
 ---
 # <a name="isscalar-class"></a>is_scalar 类
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是整数类型、浮点类型、枚举类型、指针类型或指向成员类型的指针或其中任意一个的 `cv-qualified` 形式，则类型谓词的实例将为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一种整型类型，浮点类型、 枚举类型、 指针类型或指针到成员类型，或`cv-qualified`窗体的其中之一，否则为 false。
 
 ## <a name="example"></a>示例
 

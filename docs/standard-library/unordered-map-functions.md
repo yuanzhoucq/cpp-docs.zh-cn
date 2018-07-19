@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665bdfd08fffdfcb662c175b9af44b8e9ed42a1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965547"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 函数
 
@@ -42,19 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`Key` 键的类型。
+*Key*  
+ 密钥类型。
 
-`Ty` 映射的类型。
+*Ty*  
+ 映射类型。
 
-`Hash` 哈希函数对象类型。
+*哈希*  
+ 哈希函数对象类型。
 
-`Pred` 相等比较函数对象类型。
+*Pred*  
+ 相等比较函数对象类型。
 
-`Alloc` 分配器类中。
+*分配*  
+ allocator 类。
 
-`left` 第一个要交换的容器。
+*left*  
+ 第一个要交换的容器。
 
-`right` 第二个要交换的容器。
+*right*  
+ 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 
@@ -129,19 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`Key` 键的类型。
+*Key*  
+ 密钥类型。
 
-`Ty` 映射的类型。
+*Ty*  
+ 映射类型。
 
-`Hash` 哈希函数对象类型。
+*哈希*  
+ 哈希函数对象类型。
 
-`Pred` 相等比较函数对象类型。
+*Pred*  
+ 相等比较函数对象类型。
 
-`Alloc` 分配器类中。
+*分配*  
+ allocator 类。
 
-`left` 第一个要交换的容器。
+*left*  
+ 第一个要交换的容器。
 
-`right` 第二个要交换的容器。
+*right*  
+ 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 

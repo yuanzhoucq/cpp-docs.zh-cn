@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962446"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 类
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |参数|描述|
 |---------------|-----------------|
-|`Type`|由分配器分配元素类型。|
-|`Sync`|分配器的同步策略有 [sync_none 类](../standard-library/sync-none-class.md)、[sync_per_container 类](../standard-library/sync-per-container-class.md)、[sync_per_thread 类](../standard-library/sync-per-thread-class.md)或 [sync_shared 类](../standard-library/sync-shared-class.md)。|
+|*类型*|由分配器分配元素类型。|
+|*同步*|分配器的同步策略有 [sync_none 类](../standard-library/sync-none-class.md)、[sync_per_container 类](../standard-library/sync-per-container-class.md)、[sync_per_thread 类](../standard-library/sync-per-thread-class.md)或 [sync_shared 类](../standard-library/sync-shared-class.md)。|
 
 ### <a name="constructors"></a>构造函数
 
@@ -95,14 +95,14 @@ class allocator_base
 
 |成员函数|描述|
 |-|-|
-|[_Charalloc](#charalloc)|为 `char` 类型的数组分配存储。|
-|[_Chardealloc](#chardealloc)|为包含 `char` 类型元素的数组释放存储。|
+|[_Charalloc](#charalloc)|为类型的数组分配存储**char**。|
+|[_Chardealloc](#chardealloc)|释放存储包含类型的元素的数组**char**。|
 |[address](#address)|查找指定了其值的对象的地址。|
 |[allocate](#allocate)|分配大小足以存储至少某个指定数量的元素的内存块。|
 |[construct](#construct)|在使用指定值初始化的指定地址处构造特定类型的对象。|
 |[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|
 |[destroy](#destroy)|调用对象析构函数而不释放存储对象的内存。|
-|[max_size](#max_size)|在可用内存用完之前，返回可以由类分配器的对象分配的类型 `Type` 的元素数。|
+|[max_size](#max_size)|在可用内存用完之前，返回可以由类分配器的对象分配的类型 *Type* 的元素数。|
 
 ## <a name="requirements"></a>要求
 
@@ -112,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-为 `char` 类型的数组分配存储。
+为类型的数组分配存储**char**。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -134,7 +134,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-为包含 `char` 类型元素的数组释放存储。
+释放存储包含类型的元素的数组**char**。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,8 +144,8 @@ void _Chardealloc(void* ptr, size_type count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -163,7 +163,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>参数
 
-`val` 其地址进行搜索对象的 const 或 nonconst 值。
+*val*其地址要搜索的对象的常量或非常量值。
 
 ### <a name="return-value"></a>返回值
 
@@ -188,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |参数|描述|
 |---------------|-----------------|
-|`_Nx`|数组中要分配的元素数目。|
-|`_Hint`|忽略此参数。|
+|*_Nx*|数组中要分配的元素数目。|
+|*_Hint*|忽略此参数。|
 
 ### <a name="return-value"></a>返回值
 
@@ -214,7 +214,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要复制的分配器对象。|
+|*right*|要复制的分配器对象。|
 
 ### <a name="remarks"></a>备注
 
@@ -248,8 +248,8 @@ void construct(pointer ptr, const Type& val);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要构造对象的位置的指针。|
-|`val`|要进行初始化的要构造的对象的值。|
+|*ptr*|指向要构造对象的位置的指针。|
+|*val*|要进行初始化的要构造的对象的值。|
 
 ### <a name="remarks"></a>备注
 
@@ -267,8 +267,8 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`_Nx`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*_Nx*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -286,7 +286,7 @@ void destroy(pointer ptr);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指定要销毁的对象的地址的指针。|
+|*ptr*|指定要销毁的对象的地址的指针。|
 
 ### <a name="remarks"></a>备注
 

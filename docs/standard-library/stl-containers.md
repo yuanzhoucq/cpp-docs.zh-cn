@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862424"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965237"
 ---
 # <a name="c-standard-library-containers"></a>C++ 标准库容器
 
@@ -177,7 +177,7 @@ int main()
 
 ### <a name="comparing-dissimilar-containers-c14"></a>比较不同的容器 (C++14)
 
-在 C++14 及更高版本，通过使用采用两个完整范围的 **std::equal**、**std::mismatch** 或 **std::is_permutation** 函数重载之一来比较不同的容器和/或不同的元素类型。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
+在 C + + 14 及更高版本，您可以通过使用其中一个比较不同的容器和/或不同的元素类型`std::equal`， `std::mismatch`，或`std::is_permutation`函数采用两个完整范围的重载。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
 
 ## <a name="see-also"></a>请参阅
 

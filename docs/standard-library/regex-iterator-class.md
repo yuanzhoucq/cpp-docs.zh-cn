@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861293"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962551"
 ---
 # <a name="regexiterator-class"></a>regex_iterator 类
 
@@ -75,11 +75,11 @@ private:
 
 ### <a name="parameters"></a>参数
 
-`BidIt` 子匹配项的迭代器类型。
+*BidIt*子匹配项的迭代器类型。
 
-`Elem` 要匹配的元素类型。
+*Elem*要匹配的元素的类型。
 
-`RXtraits` 元素的特征类。
+*RXtraits*元素的特征类。
 
 ## <a name="remarks"></a>备注
 
@@ -223,7 +223,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要进行比较的迭代器。
+*右*迭代器进行比较。
 
 ### <a name="remarks"></a>备注
 
@@ -395,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要进行比较的迭代器。
+*右*迭代器进行比较。
 
 ### <a name="remarks"></a>备注
 
-如果 `*this` 和 `right` 均为序列末迭代器或均不为序列末迭代器且 `begin == right.begin`、 `end == right.end`、 `pregex == right.pregex`和 `flags == right.flags`，则此成员函数将返回 true。 否则，返回 false。
+如果成员函数将返回 true`*this`并*右*为序列末迭代器或如果两者都不是一个序列末迭代器，并`begin == right.begin`， `end == right.end`， `pregex == right.pregex`，和`flags == right.flags`。 否则，返回 false。
 
 ### <a name="example"></a>示例
 
@@ -625,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>参数
 
-`first` 要匹配的序列的开头。
+*第一个*的序列匹配的开头。
 
-`last` 要匹配的序列的结尾。
+*最后一个*序列的末尾匹配。
 
-`re` 匹配项的正则表达式。
+*re*正则表达式的匹配项。
 
-`f` 匹配标志。
+*f*的匹配项的标志。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将构造序列末迭代器。 第二个构造函数使用 `begin` 初始化存储值 `first`，使用 `end` 初始化存储值 `last`，使用 `pregex` 初始化存储值 `&re`，并使用 `flags` 初始化存储值 `f`。 然后，它调用 `regex_search(begin, end, match, *pregex, flags)`。 如果搜索失败，则构造函数会将对象设置为序列末迭代器。
+第一个构造函数将构造序列末迭代器。 第二个构造函数初始化存储的值`begin`与*第一个*，则存储值`end`与*最后一个*，则存储值`pregex`与`&re`，和存储值`flags`与*f*。 然后，它调用 `regex_search(begin, end, match, *pregex, flags)`。 如果搜索失败，则构造函数会将对象设置为序列末迭代器。
 
 ### <a name="example"></a>示例
 

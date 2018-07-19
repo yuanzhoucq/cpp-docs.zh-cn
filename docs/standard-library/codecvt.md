@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4e07c4869bd345e77f0af4f30f694773aed114
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 973f183980e89ac0be268e5cbbec42de83a378f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965810"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-定义了多种模板类，用于描述基于模板类 [codecvt](../standard-library/codecvt-class.md) 的对象。 此对象可用作[区域设置 facet](../standard-library/locale-class.md#facet_class) 来控制 `Elem` 类型的值序列和 `char` 类型的值序列之间的转换。
+定义了多种模板类，用于描述基于模板类 [codecvt](../standard-library/codecvt-class.md) 的对象。 这些对象来充当[区域设置 facet](../standard-library/locale-class.md#facet_class)控制的类型的值序列之间的转换`Elem`和类型的值序列**char**。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ ms.locfileid: "33845136"
 
 - UTF-16 是在程序内作为任意一个或两个 16 位整数的编码的 Unicode。 （请注意，这不符合标准 C 或标准 C++ 的有效宽字符编码的全部要求。 不过，它仍被广泛使用。）
 
-对于字节流（存储在文件中，作为字节序列传输，或存储在 `char` 数组中的程序内）：
+对于字节流 (存储在文件中，作为字节序列进行传输或存储在数组中的程序**char**):
 
 - Utf-8 是字节流中已编码的 Unicode，为具有确定性字节顺序的一个或多个八位字节。
 

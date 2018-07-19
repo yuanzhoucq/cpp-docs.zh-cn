@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7453120d40efc05fd0dce919a7b85869710a9b18
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848906"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964946"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 类
 
@@ -124,13 +124,13 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>参数
 
-`Elem` A [char_type](#char_type)。
+*Elem* A [char_type](#char_type)。
 
-`Tr` 字符[traits_type](#traits_type)。
+*Tr*字符[traits_type](#traits_type)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。 `basic_streambuf` 类的对象有助于控制具有 `Tr` 类型（也称为 [char_type](#char_type)）的元素的流，该类型的字符特征由 [char_traits](../standard-library/char-traits-struct.md) 类（也称为 [traits_type](#traits_type)）决定。
+此模板类描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。 类的对象`basic_streambuf`可帮助控制具有类型的元素的流*Tr*，也称为[char_type](#char_type)，其字符特征由类[char_traits](../standard-library/char-traits-struct.md)，也称为[traits_type](#traits_type)。
 
 从概念上来说，每个流缓冲区控制两个独立的流：一个用于提取（输入），另一个用于插入（输出）。 但是，特定的表示形式可能会导致这些流中的一个或两个不可访问。 通常，它在两个流之间保持有某种关系。 例如，向 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> 对象的输出流插入的内容，就是之后从其输入流中提取的内容。 当定位 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 对象的一个流时，将同时定位其他流。
 
@@ -250,13 +250,13 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 对的左值引用`basic_streambuf`使用此设置的值的对象`basic_streambuf`对象。
+*右*的左值引用`basic_streambuf`对象，用于为此参数设置值`basic_streambuf`对象。
 
 ### <a name="remarks"></a>备注
 
 第一个受保护构造函数将 null 指针存储在控制输入缓冲区和输出缓冲区的所有指针中。 此外，它还将 `locale::classic` 存储在区域设置对象中。 有关详细信息，请参见 [locale::classic](../standard-library/locale-class.md#classic)。
 
-第二个受保护构造函数会从 `right` 复制指针和区域设置。
+第二个受保护的构造函数将指针和区域设置从复制*右*。
 
 ## <a name="char_type"></a>  basic_streambuf::char_type
 
@@ -304,7 +304,7 @@ char_type *epptr() const;
 
 ## <a name="gbump"></a>  basic_streambuf::gbump
 
-一个受保护的函数，该函数将 `count` 添加到输入缓冲区的下一个指针。
+将添加一个受保护的函数*计数*到输入缓冲区的下一个指针。
 
 ```cpp
 void gbump(int count);
@@ -312,7 +312,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>参数
 
-`count` 依据向前移动指针的数量。
+*计数*让指针前进的量。
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +370,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-`_Loc` 对区域设置的引用。
+*_Loc*对区域设置的引用。
 
 ### <a name="remarks"></a>备注
 
@@ -436,11 +436,11 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 对的左值引用`basic_streambuf`用于将值分配给此对象的对象。
+*右*左值引用到`basic_streambuf`用于将值分配给此对象的对象。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员运算符从 `right`（控制输入缓冲区和输出缓冲区的指针）进行复制。 它还将 `right.`[getloc()](#getloc) 存储在 `locale object` 中。 它将返回 `*this`。
+受保护的成员运算符将从复制*右*控制输入的缓冲区和输出缓冲区的指针。 它还将 `right.`[getloc()](#getloc) 存储在 `locale object` 中。 它将返回 `*this`。
 
 ## <a name="overflow"></a>  basic_streambuf::overflow
 
@@ -452,7 +452,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>参数
 
-`_Meta` 要插入到缓冲区中的字符或**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
+*_Meta*要插入到缓冲区中的字符或**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="return-value"></a>返回值
 
@@ -486,7 +486,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>参数
 
-`_Meta` 要插入到缓冲区中的字符或**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
+*_Meta*要插入到缓冲区中的字符或**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="return-value"></a>返回值
 
@@ -516,7 +516,7 @@ char_type *pbase() const;
 
 ## <a name="pbump"></a>  basic_streambuf::pbump
 
-一个受保护的函数，该函数将 `count` 添加到输出缓冲区的下一个指针。
+将添加一个受保护的函数*计数*到输出缓冲区的下一个指针。
 
 ```cpp
 void pbump(int count);
@@ -524,7 +524,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>参数
 
-`count` 用于向前移动写入位置的字符数。
+*计数*移动写入的字符数向前定位。
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +556,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-`_Loc` 对区域设置的引用。
+*_Loc*对区域设置的引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -582,11 +582,11 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>参数
 
-`_Off` 要查找有关相对于位置`_Way`。
+*_Off*要搜寻的相对于的位置 *_Way*。
 
-`_Way` 偏移操作起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*偏移操作的起始点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-`_Which` 指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -594,7 +594,7 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="remarks"></a>备注
 
-移动相对于 `_Way` 的指针。
+将相对于指针移 *_Way*。
 
 ## <a name="pubseekpos"></a>  basic_streambuf::pubseekpos
 
@@ -606,9 +606,9 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>参数
 
-`_Sp` 要搜寻的位置。
+*_Sp*要搜寻的位置。
 
-`_Which` 指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -630,9 +630,9 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>参数
 
-`_Buffer` 一个指向`char_type`的此实例化。
+*_Buffer*指向的`char_type`此实例化。
 
-`count` 缓冲区的大小。
+*计数*缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -648,7 +648,7 @@ int pubsync();
 
 ### <a name="return-value"></a>返回值
 
-返回[同步](#sync)或则为-1 失败。
+返回[同步](#sync)或者为-1 失败。
 
 ## <a name="sbumpc"></a>  basic_streambuf::sbumpc
 
@@ -707,11 +707,11 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>参数
 
-`_Off` 要查找有关相对于位置`_Way`。
+*_Off*要搜寻的相对于的位置 *_Way*。
 
-`_Way` 偏移操作起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
+*_Way*偏移操作的起始点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-`_Which` 指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -741,9 +741,9 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>参数
 
-`_Sp` 要搜寻的位置。
+*_Sp*要搜寻的位置。
 
-`_Which` 指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which*指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -769,9 +769,9 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>参数
 
-`_Buffer` 指向缓冲区的指针。
+*_Buffer*指向的缓冲区。
 
-`count` 缓冲区的大小。
+*计数*缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -795,13 +795,13 @@ void setg(char_type* _Gbeg,
 
 *_Gbeg*指向缓冲区开头的指针。
 
-`_Gnext` 指向的某处中间缓冲区。
+*_Gnext*指向某个位置的指针缓冲区中间。
 
-`_Gend` 指向缓冲区末尾的指针。
+*_Gend*指向缓冲区末尾的指针。
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-一个受保护的函数，该函数将 `_Pbeg` 存储到开始指针，并将 `_Pend` 存储到输出缓冲区的结束指针。
+将存储的受保护的函数 *_Pbeg*到开始指针和 *_Pend*输出缓冲区的结束指针。
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -809,9 +809,9 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>参数
 
-`_Pbeg` 指向缓冲区开头的指针。
+*_Pbeg*指向缓冲区开头的指针。
 
-`_Pend` 指向缓冲区末尾的指针。
+*_Pend*指向缓冲区末尾的指针。
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -851,7 +851,7 @@ int main( )
 
 ## <a name="sgetn"></a>  basic_streambuf::sgetn
 
-最多从输入缓冲区提取 `count` 个字符，并将其存储在提供的缓冲区 `ptr`。
+提取最多*计数*字符从输入缓冲区并将它们存储在提供的缓冲区*ptr*。
 
 此方法可能并不安全，因为它依赖于调用方检查所传递的值是否正确。
 
@@ -863,9 +863,9 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>参数
 
-`ptr` 要包含提取的字符的缓冲区。
+*ptr*要包含提取的字符的缓冲区。
 
-`count` 要读取的元素数。
+*计数*要读取的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -967,7 +967,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-`_Ch` 字符。
+*_Ch*字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -975,7 +975,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>备注
 
-如果放回位置可用，且 `_Ch` 与存储在该位置的字符相等，则成员函数递减输入缓冲区的下一个指针，并返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否则，它将返回 [pbackfail](#pbackfail)( `_Ch`)。
+如果放回位置可用并 *_Ch*经比较等于字符存储在该位置，则成员函数递减输入的缓冲区和返回的下一个指针**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否则，它将返回 [pbackfail](#pbackfail)( `_Ch`)。
 
 ### <a name="example"></a>示例
 
@@ -1014,7 +1014,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-`_Ch` 字符。
+*_Ch*字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -1022,7 +1022,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>备注
 
-如果 `write position` 可用，则成员函数在写入位置存储 `_Ch`，递增输出缓冲区的下一个指针，并返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否则，返回 [overflow](#overflow)( `_Ch`)。
+如果`write position`不可用，此成员函数存储 *_Ch*中的写入位置，递增输出缓冲区的下一个指针，并返回**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). 否则，返回 [overflow](#overflow)( `_Ch`)。
 
 ### <a name="example"></a>示例
 
@@ -1056,9 +1056,9 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 字符的字符串。
+*ptr*字符字符串。
 
-`count` 字符数。
+*计数*字符数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1183,11 +1183,11 @@ void swap(basic_streambuf& right);
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|对用于交换值的 `basic_streambuf` 对象的左值引用。|
+|*right*|对用于交换值的 `basic_streambuf` 对象的左值引用。|
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数可与 `right`（控制 `input buffer` 和 `output buffer` 的所有指针）进行交换。 它还将 `right.`[getloc()](#getloc) 与 `locale` 对象进行交换。
+与受保护的成员函数交换*右*控制的所有指针`input buffer`和`output buffer`。 它还将 `right.`[getloc()](#getloc) 与 `locale` 对象进行交换。
 
 ## <a name="sync"></a>  basic_streambuf::sync
 
@@ -1281,9 +1281,9 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>参数
 
-`ptr` 要包含提取的字符的缓冲区。
+*ptr*要包含提取的字符的缓冲区。
 
-`count` 要提取的元素数。
+*计数*要提取的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1291,7 +1291,7 @@ virtual streamsize xsgetn(
 
 ### <a name="remarks"></a>备注
 
-此受保护虚拟成员函数最多将从输入流提取 `count` 个元素，这与从以 `ptr` 开头的数组重复调用 [sbumpc](#sbumpc) 并存储元素类似。 它返回实际提取的元素数。
+受保护虚拟成员函数提取最多*计数*元素从输入流中，如果通过重复调用[sbumpc](#sbumpc)，并将它们存储在数组开始*ptr*. 它返回实际提取的元素数。
 
 ## <a name="xsputn"></a>  basic_streambuf::xsputn
 
@@ -1303,9 +1303,9 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向要插入元素的指针。
+*ptr*指向元素要插入。
 
-`count` 要插入的元素数。
+*计数*要插入的元素数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1313,7 +1313,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>备注
 
-此受保护虚拟成员函数最多将 `count` 个元素插入输出流，这与从以 `ptr` 开头的数组重复调用 [sputc](#sputc) 类似。 当所有 `count` 个字符已被写入或如果调用 `sputc( count)` 将返回 `traits::eof()` 时，输出流的字符插入立即停止。 它返回实际插入的元素数。
+受保护虚拟成员函数插入最多*计数*元素插入输出流，通过重复调用像[sputc](#sputc)，从数组开头*ptr*。 插入到输出流中的字符一次停止所有*计数*已写入的字符，或如果调用`sputc( count)`将返回`traits::eof()`。 它返回实际插入的元素数。
 
 ## <a name="see-also"></a>请参阅
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964127"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread 类
 
@@ -44,7 +44,7 @@ class sync_per_thread
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*缓存*|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ## <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`count`|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="remarks"></a>备注
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|`ptr`|指向要从存储中释放的第一个对象的指针。|
-|`count`|要从存储中释放的对象数量。|
+|*ptr*|指向要从存储中释放的第一个对象的指针。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -113,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`Cache`|同步筛选器的缓存对象。|
-|`Other`|要用于比较是否相等的缓存对象。|
+|*缓存*|同步筛选器的缓存对象。|
+|*其他*|要用于比较是否相等的缓存对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果没有为该对象或当前线程中的 `Other` 分配任何缓存对象，则为 `false`。 否则，它会返回将 `operator==` 应用到两个缓存对象的结果。
+**false**为此对象或如果已分配任何缓存对象*其他*当前线程中。 否则，它会返回将 `operator==` 应用到两个缓存对象的结果。
 
 ### <a name="remarks"></a>备注
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403e0133818846deb08bb336adc98618e944bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962925"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
 
@@ -75,7 +75,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="constructors"></a>构造函数
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|构造 `scoped_allocator_adaptor` 对象。|
 
@@ -98,7 +98,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="structs"></a>结构
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[scoped_allocator_adaptor::rebind 结构](#rebind_struct)|将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。|
 
@@ -131,9 +131,9 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>参数
 
-`count` 为分配足够的存储空间的元素数目。
+*计数*为分配足够的存储空间的元素数。
 
-`hint` 一个指针，它可能有助于通过定位在请求之前分配的对象的地址的分配器对象。
+*提示*通过定位在请求之前分配的对象的地址可能帮助分配器对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -168,19 +168,19 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向要构造对象的内存位置的指针。
+*ptr*指向要构造对象的内存位置的指针。
 
-`args` 自变量列表。
+*args*的参数列表。
 
-`first` 一个对中第一种类型的对象。
+*第一个*一对中第一种类型的对象。
 
-`second` 一个对中第二种类型的对象。
+*第二个*一对中的第二个类型的对象。
 
-`right` 要移动或复制的现有对象。
+*右*移动或复制的现有对象。
 
 ### <a name="remarks"></a>备注
 
-第一种方法通过调用 `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)` 在 `ptr` 处构造对象，其中 `xargs...` 是以下项之一。
+第一种方法处构造对象*ptr*通过调用`Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`，其中`xargs...`是以下值之一。
 
 - 如果 `uses_allocator<Ty, inner_allocator_type>` 为 false，则 `xargs...` 为 `args...`。
 
@@ -188,7 +188,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 - 如果 `uses_allocator<Ty, inner_allocator_type>` 为 true 且 `is_constructible<Ty, args..., inner_allocator()>` 为 true，则 `xargs...` 为 `args..., inner_allocator()`。
 
-第二种方法通过调用 `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)` 和 `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)` 在 `ptr` 处构造对对象，其中 `xargs...` 在上述列表中是 `first...` 被修改的，而 `xargs...` 在上述列表中是 `second...` 被修改的。
+第二种方法对处构造对象*ptr*通过调用`Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`，其中`xargs...`是`first...`修改在上述列表中，和`Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`，其中`xargs...`是`second...`修改在上述列表中。
 
 第三种方法的行为与 `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)` 相同。
 
@@ -208,9 +208,9 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向要释放的对象的起始位置的指针。
+*ptr*指向要释放的对象的起始位置的指针。
 
-`count` 要释放的对象数。
+*计数*要解除分配的对象数。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +223,7 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>参数
 
-`ptr` 指向要销毁的对象的指针。
+*ptr*指向要销毁的对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -271,7 +271,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。
 
-结构重新绑定 {typedef Other_traits::rebind\<其他 > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc，内部...> 其他;};
+重新绑定结构 {typedef Other_traits::rebind\<其他 > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc，内部...> 其他;};
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 构造函数
 
@@ -294,15 +294,15 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>参数
 
-`right` 现有`scoped_allocator_adaptor`。
+*右*的现有`scoped_allocator_adaptor`。
 
-`al` 要用作外部的分配器现有分配器。
+*al*要用作外部分配器的现有分配器。
 
-`rest` 要用作的内部分配器的分配器的列表。
+*rest*要用作内部分配器的分配器的列表。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数默认构造其存储分配器对象。 后面的三个构造函数中的每一个都会从 `right` 中的相应对象构造其存储分配器对象。 最后一个构造函数从参数列表中相应参数构造其存储分配器对象。
+第一个构造函数默认构造其存储分配器对象。 接下来三个构造函数的每个构造中的相应对象从其存储的分配器对象*右*。 最后一个构造函数从参数列表中相应参数构造其存储分配器对象。
 
 ## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
 
@@ -314,7 +314,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>返回值
 
-实际上，此方法将返回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 结果为新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用相应分配器 `al` 的 `al.select_on_container_copy_construction()` 进行初始化。
+实际上，此方法将返回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 结果是一种新`scoped_allocator_adaptor`对象，其中每个存储分配器对象通过调用来初始化`al.select_on_container_copy_construction()`来相应分配器*al*。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 复合控件类 (ATL) |Microsoft 文档
+title: 复合控件类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c421b385564299035e0045dac275859afc5a222
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355359"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964192"
 ---
 # <a name="composite-controls-classes"></a>复合控件类
-下面的类提供支持，用于创建复合控件  
+下面的类提供用于创建复合控件的支持  
   
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX 控件派生自`CComCompositeControl`托管的标准对话框。 这些类型的控件称为复合控件，因为它们是能够托管其他控件 （本机 Windows 控件和 ActiveX 控件）。  
+-   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX 控件派生自`CComCompositeControl`所承载的标准对话框。 这些类型的控件称为复合控件，因为它们是可托管其他控件 （Windows 的本机控件和 ActiveX 控件）。  
   
 ## <a name="related-articles"></a>相关文章  
  [复合控件基础知识](../atl/atl-composite-control-fundamentals.md)  

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9c56ecc8b27b18498de225bbba6f0d110d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6223151acbce299178101735db05f7b4bd516f2f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965508"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout 类
 
@@ -39,11 +39,11 @@ struct is_standard_layout;
 
 |参数|描述|
 |---------------|-----------------|
-|`Ty`|要查询的类型|
+|*Ty*|要查询的类型|
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是具有内存中成员对象的标准布局的类，则此类型谓词的实例为 true；否则为 false。
+此类型谓词的实例保留为 true 如果类型*Ty*是具有成员对象的标准布局在内存中，否则为 false 的类。
 
 ## <a name="requirements"></a>要求
 

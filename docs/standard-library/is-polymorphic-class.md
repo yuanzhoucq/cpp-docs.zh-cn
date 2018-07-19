@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eab6d6ce44655177d20073ca5c5cda3859cb8b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966376"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic 类
 
@@ -37,11 +37,11 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 是声明或继承虚函数的类，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*Ty*是一个类声明或继承虚函数，否则为 false。
 
 ## <a name="example"></a>示例
 

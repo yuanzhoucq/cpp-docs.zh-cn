@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850751"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966611"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference 类
 
@@ -39,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>参数
 
-T 要修改的类型。
+*T*要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`add_rvalue_reference` 类具有名为 `type` 的成员，它是模板参数 `T` 的右值引用类型的别名。 对于非对象和非函数类型 `T`，引用折叠的语义意味着 `T&&` 是 `T`。 例如，当`T`是左值引用类型，`add_rvalue_reference<T>::type`是左值引用类型，而不是右值引用。
+`add_rvalue_reference`类具有一个名为成员`type`，即模板参数的右值引用的类型的别名*T*。引用折叠的语义意味着，对于非对象和非函数类型*T*，`T&&`是*T*。例如，当*T*是左值引用类型，`add_rvalue_reference<T>::type`为左值引用类型，不是右值引用。
 
-为方便起见， \<type_traits > 定义的帮助程序模板， `add_rvalue_reference_t`，则该别名`type`的成员`add_rvalue_reference`。
+为方便起见， \<type_traits > 定义帮助程序模板`add_rvalue_reference_t`，则该别名`type`的成员`add_rvalue_reference`。
 
 ## <a name="example"></a>示例
 

@@ -1,7 +1,7 @@
 ---
 title: '&lt;atomic&gt; 函数 | Microsoft 文档'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50e70230dd5b8d9aa61f4df8c1288569192048b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848786"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028312"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函数
 
@@ -110,15 +110,15 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针*原子*对象，它存储类型的值`Ty`。
 
-`Exp` 指向类型的值的指针`Ty`。
+*Exp*指向类型的值的指针`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
 ### <a name="return-value"></a>返回值
 
-指示值比较的结果的 `bool`。
+**true**值是否相等，否则**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -148,23 +148,23 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`Ty`。
 
-`Exp` 指向类型的值的指针`Ty`。
+*Exp*指向类型的值的指针`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
-`Order1` 第一个[memory_order](../standard-library/atomic-enums.md#memory_order_enum)自变量。
+*顺序排列 1*第一个[memory_order](../standard-library/atomic-enums.md#memory_order_enum)参数。
 
-`Order2` 第二个`memory_order`自变量。 `Order2` 的值不能为 `memory_order_release` 或 `memory_order_acq_rel`，它不能比 `Order1` 的值更强。
+*Order2*第二个`memory_order`参数。 值*Order2*不能`memory_order_release`或`memory_order_acq_rel`，它不能比的值更强*顺序排列 1*。
 
 ### <a name="return-value"></a>返回值
 
-指示值比较的结果的 `bool`。
+**true**值是否相等，否则**false**。
 
 ### <a name="remarks"></a>备注
 
-*原子比较和交换操作*将 `Atom` 所指向的存储在对象中的值与 `Exp` 所指向的值比较。 如果这些值相等，将会通过使用 `read-modify-write` 操作将 `atom` 所指向的存储在对象中的值替换为 `Val`，并应用 `Order1` 指定的内存顺序约束。 如果这些值不相等，该操作会将 `Exp` 所指向的值替换为 `Atom` 所指向的存储在对象中的值，并应用 `Order2` 指定的内存顺序约束。
+*原子比较和交换操作*所指向的对象中存储的值进行比较*Atom*与所指向的值*Exp*。如果值相等，所指向的对象中存储的值*atom*替换为`Val`使用`read-modify-write`操作和应用的内存顺序约束所指定的*顺序排列 1*。 如果值不相等，该操作将替换所指向的值*Exp*所指向的对象中存储的值与*Atom* ，并将应用的内存顺序约束的通过指定*Order2*。
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 
@@ -186,15 +186,15 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`Ty`。
 
-`Exp` 指向类型的值的指针`Ty`。
+*Exp*指向类型的值的指针`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
 ### <a name="return-value"></a>返回值
 
-指示值比较的结果的 `bool`。
+**true**值是否相等，否则**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -224,29 +224,27 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`Ty`。
 
-`Exp` 指向类型的值的指针`Ty`。
+*Exp*指向类型的值的指针`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
-`Order1` 第一个[memory_order](../standard-library/atomic-enums.md#memory_order_enum)自变量。
+*顺序排列 1*第一个[memory_order](../standard-library/atomic-enums.md#memory_order_enum)参数。
 
-`Order2` 第二个`memory_order`自变量。 `Order2` 的值不能为 `memory_order_release` 或 `memory_order_acq_rel`，也不能比 `Order1` 的值更强。
+*Order2*第二个`memory_order`参数。 值*Order2*不能`memory_order_release`或`memory_order_acq_rel`，也不能比的值更强*顺序排列 1*。
 
 ### <a name="return-value"></a>返回值
 
-指示值比较的结果的 `bool`。
+**true**值是否相等，否则**false**。
 
 ### <a name="remarks"></a>备注
 
-*原子比较和交换操作*将对象中存储的通过 `Atom` 所指向的值与通过 `Exp` 所指向的值比较。 如果这些值相等，该操作会通过使用 `read-modify-write` 操作将 `Atom` 所指向的存储在对象中的值替换为 `Val`，并应用 `Order1` 指定的内存顺序约束。 如果这些值不相等，该操作会将 `Exp` 所指向的值替换为 `Atom` 所指向的存储在对象中的值，并应用 `Order2` 指定的内存顺序约束。
-
-如果所比较的值相等，一个*弱*原子比较和交换操作将执行交换。 但是，如果这些值不相等，则不保证该操作会执行交换。
+强和弱风格*原子比较和交换操作*保证它们是否存储新值，如果预期的和当前值是否不相等。 强类型保证，它将存储的新值，如果预期的和当前值相等。 有时可能会返回弱风格**false**并不存储新值，即使当前和预期值是否相等。 换而言之，该函数将返回**false**，但它未更改，并因此应具有相等比较，可能会显示对所需的值的更高版本检查。
 
 ## <a name="atomic_exchange"></a>  atomic_exchange
 
-使用 `Value` 替换存储的值 `Atom`。
+使用*值*的存储的值替换*Atom*。
 
 ```cpp
 template <class T>
@@ -258,21 +256,21 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
 ### <a name="return-value"></a>返回值
 
-交换前 `Atom` 的存储值。
+存储的值*Atom*交换前。
 
 ### <a name="remarks"></a>备注
 
-`atomic_exchange` 函数执行 `read-modify-write` 操作，将存储在 `Atom` 中的值与 `Value` 进行交换（使用 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。
+`atomic_exchange`函数执行`read-modify-write`操作来交换中存储的值*Atom*与*值*，并使用`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit
 
-将 `Atom` 的存储值替换为 `Value`。
+替换存储的值*Atom*与*值*。
 
 ```cpp
 template <class Ty>
@@ -290,19 +288,19 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>返回值
 
-交换前 `Atom` 的存储值。
+存储的值*Atom*交换前。
 
 ### <a name="remarks"></a>备注
 
-`atomic_exchange_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 中存储的值与 `Value` 进行交换（限于 `Order` 指定的内存约束）。
+`atomic_exchange_explicit`函数执行`read-modify-write`操作来交换中存储的值*Atom*与*值*，由指定的内存约束内*顺序*。
 
 ## <a name="atomic_fetch_add"></a>  atomic_fetch_add
 
@@ -317,9 +315,9 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，用于存储指向类型的指针`T`。
+*Atom*指向的指针`atomic`对象，它存储指向类型的指针`T`。
 
-`Value` 类型的值`ptrdiff_t`。
+*值*类型的值`ptrdiff_t`。
 
 ### <a name="return-value"></a>返回值
 
@@ -327,9 +325,9 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_add` 函数执行 `read-modify-write` 操作，以原子方式将 `Value` 添加到 `Atom` 中存储的值（使用 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_add`函数执行`read-modify-write`操作以原子方式将添加*值*中存储的值为*Atom*，并使用`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
 
-当原子类型为 `atomic_address` 时，`Value` 具有类型 `ptrdiff_t`，并且操作将存储指针视为 `char *`。
+当原子类型是`atomic_address`，*值*具有类型`ptrdiff_t`并且该操作将存储的指针视为`char *`。
 
 另外还将为整型类型重载该操作：
 
@@ -359,9 +357,9 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，用于存储指向类型的指针`T`。
+*Atom*指向的指针`atomic`对象，它存储指向类型的指针`T`。
 
-`Value` 类型的值`ptrdiff_t`。
+*值*类型的值`ptrdiff_t`。
 
 ### <a name="return-value"></a>返回值
 
@@ -369,7 +367,7 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_add_explicit` 函数执行 `read-modify-write` 操作，以原子方式将 `Value` 添加到 `Atom` 中存储的值（限于 `Order` 指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_add_explicit`函数执行`read-modify-write`操作以原子方式将添加*值*中存储的值为*Atom*，在[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束由指定的`Order`。
 
 当原子类型为 `atomic_address` 时，`Value` 具有类型 `ptrdiff_t`，并且操作将存储指针视为 `char *`。
 
@@ -400,9 +398,9 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
-`Value` 类型的值`T`。
+*值*类型的值`T`。
 
 ### <a name="return-value"></a>返回值
 
@@ -410,7 +408,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_and` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `and` 和存储在 `Atom` 中的当前值（使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_and`函数执行`read-modify-write`操作的存储的值替换*Atom*的按位`and`的*值*中存储的当前值和*Atom*，并使用`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
 
 ## <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit
 
@@ -432,11 +430,11 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
-`Value` 类型的值`T`。
+*值*类型的值`T`。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>返回值
 
@@ -444,7 +442,7 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_and_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `and` 和存储在 `Atom` 中的当前值（限于 `Order` 指定的内存约束）。
+`atomic_fetch_and_explicit`函数执行`read-modify-write`操作的存储的值替换*Atom*的按位`and`的*值*中存储的当前值和*Atom*，由指定的内存约束内*顺序*。
 
 ## <a name="atomic_fetch_or"></a>  atomic_fetch_or
 
@@ -459,9 +457,9 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
-`Value` 类型的值`T`。
+*值*类型的值`T`。
 
 ### <a name="return-value"></a>返回值
 
@@ -469,7 +467,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_or` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `or` 和存储在 `Atom` 中的当前值（使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。
+`atomic_fetch_or`函数执行`read-modify-write`操作的存储的值替换*Atom*的按位`or`的*值*中存储的当前值和*Atom*，并使用`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit
 
@@ -491,11 +489,11 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
-`Value` 类型的值`T`。
+*值*类型的值`T`。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>返回值
 
@@ -503,7 +501,7 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_or_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `or` 和存储在 `Atom` 中的当前值（限于 `Order` 指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_or_explicit`函数执行`read-modify-write`操作的存储的值替换*Atom*的按位`or`的*值*中存储的当前值和*Atom*，在[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束指定*顺序*。
 
 ## <a name="atomic_fetch_sub"></a>  atomic_fetch_sub
 
@@ -523,9 +521,9 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，用于存储指向类型的指针`T`。
+*Atom*指向的指针`atomic`对象，它存储指向类型的指针`T`。
 
-`Value` 类型的值`ptrdiff_t`。
+*值*类型的值`ptrdiff_t`。
 
 ### <a name="return-value"></a>返回值
 
@@ -533,9 +531,9 @@ T* atomic_fetch_sub(
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_sub` 函数执行 `read-modify-write` 操作，以原子方式从 `Atom` 存储的值中减去 `Value`（使用 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_sub`函数执行`read-modify-write`操作以原子方式减去*值*中存储的值从*Atom*，并使用`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
 
-当原子类型为 `atomic_address` 时，`Value` 具有类型 `ptrdiff_t`，并且操作将存储指针视为 `char *`。
+当原子类型是`atomic_address`，*值*具有类型`ptrdiff_t`并且该操作将存储的指针视为`char *`。
 
 另外还将为整型类型重载该操作：
 
@@ -563,9 +561,9 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，用于存储指向类型的指针`T`。
+*Atom*指向的指针`atomic`对象，它存储指向类型的指针`T`。
 
-`Value` 类型的值`ptrdiff_t`。
+*值*类型的值`ptrdiff_t`。
 
 ### <a name="return-value"></a>返回值
 
@@ -573,9 +571,9 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_sub_explicit` 函数执行 `read-modify-write` 操作，以原子方式从 `Atom` 存储的值中减去 `Value`（限于 `Order` 指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_sub_explicit`函数执行`read-modify-write`操作以原子方式减去*值*中存储的值从*Atom*，在[memory_order](../standard-library/atomic-enums.md#memory_order_enum)通过指定约束`Order`。
 
-当原子类型为 `atomic_address` 时，`Value` 具有类型 `ptrdiff_t`，并且操作将存储指针视为 `char *`。
+当原子类型是`atomic_address`，*值*具有类型`ptrdiff_t`并且该操作将存储的指针视为`char *`。
 
 另外还将为整型类型重载该操作：
 
@@ -605,9 +603,9 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
-`Value` 类型的值`T`。
+*值*类型的值`T`。
 
 ### <a name="return-value"></a>返回值
 
@@ -615,7 +613,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_xor` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `exclusive or` 和存储在 `Atom` 中的当前值（使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。
+`atomic_fetch_xor`函数执行`read-modify-write`操作的存储的值替换*Atom*的按位`exclusive or`的*值*中存储的当前值和*Atom*，并使用`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit
 
@@ -637,11 +635,11 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
-`Value` 类型的值`T`。
+*值*类型的值`T`。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>返回值
 
@@ -649,11 +647,11 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="remarks"></a>备注
 
-`atomic_fetch_xor_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `exclusive or` 和存储在 `Atom` 中的当前值（限于 `Order` 指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_fetch_xor_explicit`函数执行`read-modify-write`操作的存储的值替换*Atom*的按位`exclusive or`的*值*中存储的当前值和*Atom*，在[memory_order](../standard-library/atomic-enums.md#memory_order_enum)由指定的约束*顺序*。
 
 ## <a name="atomic_flag_clear"></a>  atomic_flag_clear
 
-将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `false`（限于 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。
+集**bool**中的标志[atomic_flag](../standard-library/atomic-flag-structure.md)对象传递给**false**，在`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -662,11 +660,11 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Flag` 指向的指针`atomic_flag`对象。
+*标志*指向的`atomic_flag`对象。
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
-将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `false`（限于指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+集**bool**中的标志[atomic_flag](../standard-library/atomic-flag-structure.md)对象传递给**false**，在指定[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -675,13 +673,13 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>参数
 
-`Flag` 指向的指针`atomic_flag`对象。
+*标志*指向的`atomic_flag`对象。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
-将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `true`（限于 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 的约束）。
+集**bool**中的标志[atomic_flag](../standard-library/atomic-flag-structure.md)对象传递给**true**的约束内`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -690,15 +688,15 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Flag` 指向的指针`atomic_flag`对象。
+*标志*指向的`atomic_flag`对象。
 
 ### <a name="return-value"></a>返回值
 
-`Flag` 的初始值。
+初始值*标志*。
 
 ## <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit
 
-将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `true`（限于指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+集**bool**中的标记[atomic_flag](../standard-library/atomic-flag-structure.md)对象传递给**true**，在指定[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -707,13 +705,13 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>参数
 
-`Flag` 指向的指针`atomic_flag`对象。
+*标志*指向的`atomic_flag`对象。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>返回值
 
-`Flag` 的初始值。
+初始值*标志*。
 
 ## <a name="atomic_init"></a>  atomic_init
 
@@ -728,9 +726,9 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
 ### <a name="remarks"></a>备注
 
@@ -749,11 +747,11 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，它存储类型的值`T`。
+*Atom*指向的指针`atomic`对象，它存储类型的值`T`。
 
 ### <a name="return-value"></a>返回值
 
-如果对 `Atom` 执行的原子操作为无锁，则返回 `true`；否则，返回 `false`。
+**true**如果对原子操作*Atom*无锁; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -772,11 +770,11 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，其中包含类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，其中包含类型的值`Ty`。
 
 ### <a name="return-value"></a>返回值
 
-存储在 `Atom` 中的检索到的值。
+检索到的值存储在*Atom*。
 
 ### <a name="remarks"></a>备注
 
@@ -795,13 +793,13 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，其中包含类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，其中包含类型的值`Ty`。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 不要使用 `memory_order_release` 或 `memory_order_acq_rel`。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 不要使用 `memory_order_release` 或 `memory_order_acq_rel`。
 
 ### <a name="return-value"></a>返回值
 
-存储在 `Atom` 中的检索到的值。
+检索到的值存储在*Atom*。
 
 ## <a name="atomic_signal_fence"></a>  atomic_signal_fence
 
@@ -813,11 +811,11 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Order` 排序确定围墙类型的约束的内存。
+*顺序*的内存排序约束确定 fence 类型。
 
 ### <a name="remarks"></a>备注
 
-`Order` 参数确定 fence 类型。
+*顺序*参数确定 fence 类型。
 
 |||
 |-|-|
@@ -841,13 +839,13 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向一个包含类型的值的原子对象的指针`Ty`。
+*Atom*指向一个包含类型的值的原子对象的指针`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
 ### <a name="remarks"></a>备注
 
-`atomic_store` 将 `Value` 存储到 `Atom` 所指向的对象中（限于 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。
+`atomic_store` 将存储*值*所指向的对象中*Atom*，在`memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
 
 ## <a name="atomic_store_explicit"></a>  atomic_store_explicit
 
@@ -869,15 +867,15 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>参数
 
-`Atom` 指向的指针`atomic`对象，其中包含类型的值`Ty`。
+*Atom*指向的指针`atomic`对象，其中包含类型的值`Ty`。
 
-`Value` 类型的值`Ty`。
+*值*类型的值`Ty`。
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 请勿使用 `memory_order_consume`、`memory_order_acquire` 或 `memory_order_acq_rel`。
+*顺序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 请勿使用 `memory_order_consume`、`memory_order_acquire` 或 `memory_order_acq_rel`。
 
 ### <a name="remarks"></a>备注
 
-`atomic_store` 将 `Value` 存储到 `Atom` 所指向的对象中（限于 `Order` 指定的 `memory_order`）。
+`atomic_store` 将存储*值*所指向的对象中*Atom*，在`memory_order`由指定*顺序*。
 
 ## <a name="atomic_thread_fence"></a>  atomic_thread_fence
 
@@ -889,11 +887,11 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Order` 排序确定围墙类型的约束的内存。
+*顺序*的内存排序约束确定 fence 类型。
 
 ### <a name="remarks"></a>备注
 
-`Order` 参数确定 fence 类型。
+*顺序*参数确定 fence 类型。
 
 |||
 |-|-|
@@ -915,11 +913,11 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Arg` 类型的值`Ty`。
+*Arg*类型的值`Ty`。
 
 ### <a name="return-value"></a>返回值
 
-返回值为 `Arg`。 `Arg` 的求值不会将依赖关系传送至函数调用。 通过中断可能的依赖关系链，该函数可能允许编译器生成更高效的代码。
+返回值是*Arg*。 评估*Arg*不会延续到函数调用的依赖项。 通过中断可能的依赖关系链，该函数可能允许编译器生成更高效的代码。
 
 ## <a name="see-also"></a>请参阅
 

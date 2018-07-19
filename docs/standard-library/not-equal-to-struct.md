@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966350"
 ---
 # <a name="notequalto-struct"></a>not_equal_to 结构
 
-一个对其参数执行不等运算 (`operator!=`) 的二元谓词。
+执行不等于运算的二元谓词 (`operator!=`) 对其自变量。
 
 ## <a name="syntax"></a>语法
 
@@ -49,11 +49,11 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>参数
 
-`Type``T`，`U`支持任何类型`operator!=`接受的操作数的指定或推断类型。
+*类型*， *T*， *U*支持任何类型`operator!=`接受指定或推断类型的操作数。
 
-`Left` 不相等运算的左的操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。
+*左侧*不等于运算的左的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-`Right` 不相等运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。
+*右*不等于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 
@@ -61,7 +61,7 @@ struct not_equal_to<void>
 
 ## <a name="remarks"></a>备注
 
-`Type` 类型的对象必须可比较相等性。 这要求在对象集上定义的 `operator!=` 满足等价关系的数学性质。 所有内置的数字和指针类型都满足此要求。
+类型的对象*类型*必须是可比较相等性的。 这要求在对象集上定义的 `operator!=` 满足等价关系的数学性质。 所有内置的数字和指针类型都满足此要求。
 
 ## <a name="example"></a>示例
 

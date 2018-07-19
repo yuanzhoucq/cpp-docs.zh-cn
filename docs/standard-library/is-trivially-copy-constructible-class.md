@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963662"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible 类
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是具有普通复制构造函数的类，则类型谓词的实例为 true；否则为 false。
+如果类型谓词的实例将保留 true 类型*T*是一个类具有普通复制构造函数，否则为 false。
 
-如果类 `T` 的复制构造函数经隐式声明，则为普通类，类 `T` 不具有虚拟函数或虚拟基，类 `T` 的所有直接基具有普通复制构造函数，类类型的所有非静态数据成员的类都具有普通复制构造函数，且类的类型数组的所有非静态数据成员的类具有普通复制构造函数。
+一个类的复制构造函数*T*并不重要，如果它隐式声明的该类*T*没有虚函数或虚拟基，类的所有直接基*T*具有普通复制构造函数的类类型的所有非静态数据成员的类具有普通复制构造函数和类的类型数组的所有非静态数据成员的类具有普通复制构造函数。
 
 ## <a name="requirements"></a>要求
 

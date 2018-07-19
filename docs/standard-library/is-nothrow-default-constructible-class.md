@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844798"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962983"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible 类
 
@@ -36,11 +36,11 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>参数
 
-`Ty` 查询的类型。
+*Ty*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `Ty` 具有 nothrow 默认构造函数，类型谓词的实例将保留为 true，否则保留为 false。 类型谓词的实例等效于 `is_nothrow_constructible<Ty>`。
+如果类型谓词的实例将保留 true 类型*Ty*具有 nothrow 默认构造函数，否则为 false。 类型谓词的实例等效于 `is_nothrow_constructible<Ty>`。
 
 ## <a name="requirements"></a>要求
 

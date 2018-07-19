@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861605"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962021"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 运算符
 
@@ -48,9 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**对。**
+*left*  
+ 一个 `pair` 类型的对象。
 
-`right` 类型的对象`pair`。
+*right*  
+ 一个 `pair` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -118,9 +120,9 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象**对。**
+*左*类型的对象`pair`。
 
-`right` 类型的对象`pair`。
+*右*类型的对象`pair`。
 
 ### <a name="return-value"></a>返回值
 
@@ -179,9 +181,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`pair`运算符左侧。
+*left*  
+ 运算符左侧类型 `pair` 的对象。
 
-`right` 类型的对象`pair`运算符右侧。
+*right*  
+ 运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -189,7 +193,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>备注
 
-`left` `pair`认为对象严格小于`right``pair`对象如果`left`小于且不等于`right`。
+`left` `pair`对象是严格上讲不会早于`right``pair`对象如果*左*小于且不等于*右*。
 
 在配对比较中，两个对的值的第一个元素具有最高优先级。 如果它们不同，则将其比较结果作为配对比较的结果。 如果第一个元素的值不同，则比较第二个元素的值，并将其比较结果作为配对比较的结果。
 
@@ -254,9 +258,11 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`pair`运算符左侧。
+*left*  
+ 运算符左侧类型 `pair` 的对象。
 
-`right` 类型的对象`pair`运算符右侧。
+*right*  
+ 运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -337,9 +343,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`pair`运算符左侧。
+*left*  
+ 运算符左侧类型 `pair` 的对象。
 
-`right` 类型的对象`pair`运算符右侧。
+*right*  
+ 运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -347,7 +355,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>备注
 
-`left` `pair`认为对象要严格大于`right``pair`对象如果`left`大于且不等于`right`。
+`left` `pair`说对象是可严格大于`right``pair`对象如果*左*大于且不等于*右*。
 
 在配对比较中，两个对的值的第一个元素具有最高优先级。 如果它们不同，则将其比较结果作为配对比较的结果。 如果第一个元素的值不同，则比较第二个元素的值，并将其比较结果作为配对比较的结果。
 
@@ -422,9 +430,11 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>参数
 
-`left` 类型的对象`pair`运算符左侧。
+*left*  
+ 运算符左侧类型 `pair` 的对象。
 
-`right` 类型的对象`pair`运算符右侧。
+*right*  
+ 运算符右侧类型 `pair` 的对象。
 
 ### <a name="return-value"></a>返回值
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab4990ad1c2440449eff2699634364149f5a055
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06fe531330b1043c78882fb511caafe9cc3a7b6d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963802"
 ---
 # <a name="greater-struct"></a>greater 结构
 
-一个对其参数执行大于运算 ( `operator>`) 的二元谓词。
+执行较大的二进制谓词的运算 (`operator>`) 对其自变量。
 
 ## <a name="syntax"></a>语法
 
@@ -52,11 +52,11 @@ struct greater<void>
 
 ### <a name="parameters"></a>参数
 
-`Type``T`，`U`支持任何类型`operator>`接受的操作数的指定或推断类型。
+*类型*， *T*， *U*支持任何类型`operator>`接受指定或推断类型的操作数。
 
-`Left` 较大的左的操作数的操作相比，前者。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。
+*左侧*较大的左的操作数的运算。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-`Right` 较大的右操作数的操作相比，前者。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。
+*右*大于右操作数的运算。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
 
@@ -64,7 +64,7 @@ struct greater<void>
 
 ## <a name="remarks"></a>备注
 
-二元谓词 `greater`< `Type`> 向等价类提供类型为 `Type` 的一组元素值的严格弱排序（在且仅在此类型满足如此进行排序的标准数学要求时）。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
+二元谓词`greater` <  `Type`> 提供严格弱排序的一组类型的元素值*类型*向等价类，当且仅当满足此类型的标准数学正在如此进行排序的要求。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
 
 ## <a name="example"></a>示例
 

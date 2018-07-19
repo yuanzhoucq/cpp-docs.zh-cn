@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e601afeb05e0347dba8bf792611f20068c69b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e93cbd4298a0f2094c2c5950220610a17642512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965573"
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;filesystem&gt; 运算符
 
-这些运算符将两个路径作为字符串进行词汇比较。 使用 **等效** 函数来确定两个路径（例如，相对路径和绝对路径）是否指向磁盘上的同一文件或目录。
+这些运算符将两个路径作为字符串进行词汇比较。 使用`equivalent`函数来确定两个路径 （例如相对路径和绝对路径） 是否引用了同一个文件或磁盘上的目录。
 
 有关详细信息，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 

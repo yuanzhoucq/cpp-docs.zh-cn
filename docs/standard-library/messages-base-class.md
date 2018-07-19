@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857163"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964842"
 ---
 # <a name="messagesbase-class"></a>messages_base 类
 
-该基类描述消息目录的 `int` 类型。
+该基类描述**int**目录的消息的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>备注
 
-该类型目录是类型 `int` 的同义词，用于描述 messages:: [do_open](../standard-library/messages-class.md#do_open) 中可能的返回值。
+该类型目录是类型的同义词**int**描述消息中可能的返回值:: [do_open](../standard-library/messages-class.md#do_open)。
 
 ## <a name="requirements"></a>要求
 

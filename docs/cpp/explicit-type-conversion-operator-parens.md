@@ -1,5 +1,5 @@
 ---
-title: '显式类型转换运算符: （) |Microsoft 文档'
+title: '显式类型转换运算符: （) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966930"
 ---
 # <a name="explicit-type-conversion-operator-"></a>显式类型转换运算符：()
 C++ 允许使用与函数调用语法类似的语法进行显式类型转换。  
@@ -34,9 +35,9 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>备注  
- A*简单类型名称*跟*表达式列表*括在括号构造使用指定的表达式的指定类型的对象。 以下示例显示到类型 int 的显式类型转换：  
+ 一个*简单类型名称*跟*表达式列表*括在括号构造使用指定的表达式的指定类型的对象。 以下示例显示到类型 int 的显式类型转换：  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
@@ -44,7 +45,7 @@ int i = int( d );
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>输出  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  尽管前面的示例演示了使用常量的显式类型转换，但在对对象执行转换时，此方法也同样有效。 以下代码片段对此进行了演示：  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  还可以使用“cast”语法指定显式类型转换。 使用 cast 语法重写的上一个示例是：  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  当从单个值转换时，强制转换和函数样式转换都有相同的结果。 但是，在函数样式语法中，可以为转换指定多个参数。 此差异对用户定义的类型非常重要。 请考虑 `Point` 类及其转换：  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- 上述示例中，使用函数样式转换，演示如何将转换两个值 (一个用于*x* ，另一个用于*y*) 为用户定义类型`Point`。  
+ 上述示例中，使用函数样式转换，演示如何将两个值 (一个用于*x* ，另一个用于*y*) 为用户定义类型`Point`。  
   
 > [!CAUTION]
 >  请谨慎使用显式类型转换，因其会重写 C++ 编译器的内置类型检查。  
   
- [强制转换](../cpp/cast-operator-parens.md)表示法必须用于到没有的类型的转换*简单类型名称*（指针或引用类型，例如）。 可以使用表示的类型转换*简单类型名称*可以用其中任一种形式编写。 请参阅[类型说明符](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4)有关何谓*简单类型名称*。  
+ [Cast](../cpp/cast-operator-parens.md)表示法必须用于转换为类型，不具有*简单类型名称*（指针或引用类型，例如）。 可以使用表示的类型转换*简单类型名称*可以采用两种形式编写。  
   
  在强制转换中的类型定义是非法的。  
   

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994e97f126796db9725cdccb629f01a0f22dc962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863434"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028328"
 ---
 # <a name="multiset-class"></a>multiset 类
 
@@ -116,13 +116,13 @@ class multiset
 
 ### <a name="parameters"></a>参数
 
-*密钥*存储在多重集合的元素数据类型。
+*密钥*元素数据类型存储在多重集合中。
 
-*比较*提供函数对象可比较两个元素值作为排序键以确定其相对顺序，在多重集合中的类型。 默认值是二元谓词 **less**\<Key>。
+*比较*提供两个元素值作为排序键以确定多重集中其相对顺序进行比较的函数对象的类型。 默认值是二元谓词 **less**\<Key>。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-`Allocator` 表示存储的分配器对象封装有关多重集的分配和解除分配内存的详细信息的类型。 默认值为 **分配器 * * *\<密钥 >。*
+*分配器*表示存储的分配器对象封装有关多重集的分配和解除分配的内存的详细信息的类型。 默认值为 **分配器 * * *\<密钥 >。*
 
 ## <a name="remarks"></a>备注
 
@@ -146,7 +146,7 @@ C++ 标准库多重集合类为：
 
 当应用程序满足将值与其键关联的条件时，应选择多重集合作为关联容器。 多重集合的元素可以为多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用集作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则映射应为包含此数据的适当结构。 如果定义不唯一，则应选择多重映射作为容器。
 
-多重集合通过调用存储的 `Compare` 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（*x* 和 *y*）以及一个返回值（**true** 或 **false**）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 *f*( *x,y*) 和 *f*( *y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
+多重集合通过调用类型的存储的函数对象控制的序列进行排序*比较*。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（*x* 和 *y*）以及一个返回值（**true** 或 **false**）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 *f*( *x,y*) 和 *f*( *y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
@@ -161,10 +161,10 @@ C++ 标准库多重集合类为：
 |类型名称|描述|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 对象的 `multiset` 类的 typedef。|
-|[const_iterator](#const_iterator)|可读取 `const` 中 `multiset` 元素的双向迭代器的 typedef。|
-|[const_pointer](#const_pointer)|指向 `const` 中的 `multiset` 元素的指针的 typedef。|
-|[const_reference](#const_reference)|对存储在 `const` 中的 `multiset` 元素的引用（用于读取和执行 `const` 操作）的 typedef。|
-|[const_reverse_iterator](#const_reverse_iterator)|可读取 `const` 中任何 `multiset` 元素的双向迭代器的 typedef。|
+|[const_iterator](#const_iterator)|可以读取的双向迭代器的 typedef **const**中的元素`multiset`。|
+|[const_pointer](#const_pointer)|指向指针的 typedef **const**中的元素`multiset`。|
+|[const_reference](#const_reference)|对引用的 typedef **const**元素存储在`multiset`用于读取和执行**const**操作。|
+|[const_reverse_iterator](#const_reverse_iterator)|可以阅读任何的双向迭代器的 typedef **const**中的元素`multiset`。|
 |[difference_type](#difference_type)|`multiset` 中迭代器指向的元素间范围内元素数量的有符号整数 typedef。|
 |[Iterator](#iterator)|可读取或修改 `multiset` 中任何元素的双向迭代器的 typedef。|
 |[key_compare](#key_compare)|可比较两个键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|
@@ -291,7 +291,7 @@ The first element of ms1 is now 2
 
 ## <a name="cbegin"></a>  multiset::cbegin
 
-返回确定范围中第一个元素地址的 `const` 迭代器。
+返回**const**的范围中的第一个元素的迭代器。
 
 ```cpp
 const_iterator cbegin() const;
@@ -299,13 +299,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-`const` 双向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。
+一个**const**双向访问迭代器，指向范围内或刚超出空范围末尾的位置的第一个元素 (对于空范围， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -317,7 +317,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multiset::cend
 
-返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。
+返回**const**刚超出范围中的最后一个元素的位置的迭代器。
 
 ```cpp
 const_iterator cend() const;
@@ -325,13 +325,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>返回值
 
-指向刚超出范围末尾的位置的 `const` 双向访问迭代器。
+一个**const**指向刚超出范围末尾的双向访问迭代器。
 
 ### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -478,7 +478,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 从多重集合进行匹配的元素的键。
+*密钥*匹配的多重集中的元素的键。
 
 ### <a name="return-value"></a>返回值
 
@@ -711,7 +711,7 @@ iterator emplace(Args&&... args);
 
 |参数|描述|
 |-|-|
-|`args`|用于构造要插入到多重集中的元素的转发参数。|
+|*参数*|用于构造要插入到多重集中的元素的转发参数。|
 
 ### <a name="return-value"></a>返回值
 
@@ -780,8 +780,8 @@ iterator emplace_hint(
 
 |参数|描述|
 |-|-|
-|`args`|用于构造要插入到多重集中的元素的转发参数。|
-|`where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|
+|*参数*|用于构造要插入到多重集中的元素的转发参数。|
+|*where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
 
 ### <a name="return-value"></a>返回值
 
@@ -873,7 +873,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-`key` 要从所搜索多重集中的元素的排序键进行比较的自变量键。
+*密钥*与要搜索的多重集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -957,13 +957,13 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-`Where` 要删除的元素的位置。
+*其中*要移除的元素位置。
 
-`First` 要移除的第一个元素的位置。
+*第一个*要删除的第一个元素的位置。
 
-`Last` 要移除的最后一个元素以外的位置。
+*最后一个*刚超出最后一个元素的位置，要删除。
 
-`Key` 要移除的元素的键值。
+*密钥*要移除的元素的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -988,7 +988,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-`key` 要从所搜索多重集中的元素的排序键匹配的键值。
+*密钥*所搜索多重集中元素的排序键匹配的键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -996,9 +996,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回引用多重集中其键与二元谓词下的参数 `key` 等效的元素的迭代器，该谓词基于小于比较关系进行顺序。
+此成员函数返回一个迭代器，引用的元素多重集中其键等于自变量*密钥*下二元谓词基于小于比较关系进行顺序。
 
-如果 **find** 的返回值赋予了 **const_iterator**，则无法修改多重集对象。 如果 **find** 的返回值赋予了 **iterator**，则可以修改多重集对象
+如果返回值`find`分配给`const_iterator`，无法修改多重集的对象。 如果返回值`find`分配给`iterator`，可以修改多重集的对象
 
 ### <a name="example"></a>示例
 
@@ -1176,13 +1176,13 @@ IList);
 
 |参数|描述|
 |-|-|
-|`Val`|要插入到多重集合中的元素的值。|
-|`Where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `Where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|
-|`ValTy`|指定多重集合可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的自变量类型并将 `Val` 作为自变量完美转发的模板参数。|
-|`First`|要复制的第一个元素的位置。|
-|`Last`|要复制的最后一个元素以外的位置。|
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
-|`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|要插入到多重集合中的元素的值。|
+|*Where*|开始搜索正确插入点的位置。 (如果该点紧贴*其中*，插入可发生在分期常量时间内而非对数时间。)|
+|*ValTy*|指定多重集合可用于构造的元素的自变量类型的模板参数[value_type](../standard-library/map-class.md#value_type)，和完美转发*Val*作为自变量。|
+|*第一个*|要复制的第一个元素的位置。|
+|*最后一个*|要复制的最后一个元素以外的位置。|
+|*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
+|*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1305,7 +1305,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。
+有关示例，请参阅[开始](#begin)有关如何声明和使用的示例`iterator`。
 
 ## <a name="key_comp"></a>  multiset::key_comp
 
@@ -1392,7 +1392,7 @@ typedef Compare key_compare;
 
 ### <a name="remarks"></a>备注
 
-**key_compare** 是模板参数 `Compare` 的同义词。
+`key_compare` 是模板参数 `Compare` 的同义词。
 
 有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。
 
@@ -1430,11 +1430,11 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>参数
 
-`key` 要从所搜索多重集中的元素的排序键进行比较的自变量键。
+*密钥*与要搜索的多重集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
-一个**迭代器**或 `const_iterator`，它会发现多重集中其键等于或大于参数键的元素的位置，或如果未找到键的匹配项，则发现多重集中最后一个元素之后的位置。
+`iterator`或`const_iterator`地址的多重集，其键等于或大于参数键，或如果未发现最后一个元素之后多重集中的位置匹配的元素的位置找到的密钥。
 
 ### <a name="example"></a>示例
 
@@ -1573,12 +1573,12 @@ multiset (
 
 |参数|描述|
 |-|-|
-|`Al`|要用于此多重集对象的存储分配器类，默认为 `Allocator`。|
-|`Comp`|用于对多重集中元素排序的 `const Compare` 类型比较函数，默认为 `Compare`。|
-|`Right`|所构造多重集要作为副本的多重集。|
-|`First`|要复制的范围元素中的第一个元素的位置。|
-|`Last`|要复制的元素范围以外的第一个元素的位置。|
-|`IList`|从中复制元素的 initializer_list。|
+|*Al*|要用于此多重集对象的存储分配器类，默认为 `Allocator`。|
+|*Comp*|用于对多重集中元素排序的 `const Compare` 类型比较函数，默认为 `Compare`。|
+|右侧|所构造多重集要作为副本的多重集。|
+|*第一个*|要复制的范围元素中的第一个元素的位置。|
+|*最后一个*|要复制的元素范围以外的第一个元素的位置。|
+|*IList*|从中复制元素的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
@@ -1588,11 +1588,11 @@ multiset (
 
 所有构造函数会存储类型为 Compare 的函数对象，此对象用于在多重集的键之间建立顺序，且事后可通过调用 [key_comp](#key_comp) 返回。
 
-前三个构造函数均指定空的起始多重集，此外，第二个函数还指定用于建立元素顺序的比较函数 (`Comp`) 的类型，第三个函数还显式指定了要使用的分配器类型 (`Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。
+前三个构造函数均指定空的初始多重集，第二个指定的比较函数类型 (*Comp*) 用于显式建立的元素和第三个顺序指定分配器类型(*Al*) 使用。 关键字 **explicit** 取消某些种类的自动类型转换。
 
-第四个构造函数指定多重集 `Right` 的副本。
+第四个构造函数指定多重集的副本*右*。
 
-第五个构造函数通过移动 `Right` 指定多重集的副本。
+第五个构造函数通过移动指定多重集的副本*右*。
 
 第六个、第七个和第八个构造函数指定要从中复制元素的 initializer_list。
 
@@ -1713,11 +1713,11 @@ multiset& operator=(multiset&& right);
 
 |参数|描述|
 |-|-|
-|`right`|从中复制或移动元素的 `multiset`。|
+|*right*|从中复制或移动元素的 `multiset`。|
 
 ### <a name="remarks"></a>备注
 
-`operator=` 会将 `right` 中的元素复制或移动到此 `multiset`，具体取决于使用的引用类型（左值或右值）。 放弃 `operator=` executes 之前此 `multiset` 中的元素。
+`operator=` 复制或移动元素*右*这部`multiset`，具体取决于引用类型 （左值或右值）。 放弃 `operator=` executes 之前此 `multiset` 中的元素。
 
 ### <a name="example"></a>示例
 
@@ -2036,7 +2036,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`right` 提供的元素与目标多重集合交换自变量的多重集合。
+*右*参数多重集提供与目标多重集进行交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -2104,7 +2104,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>参数
 
-`key` 要从所搜索多重集中的元素的排序键进行比较的自变量键。
+*密钥*与要搜索的多重集中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
 
@@ -2246,7 +2246,7 @@ typedef key_compare value_compare;
 
 `value_compare` 是模板参数 `Compare` 的同义词。
 
-请注意，[key_compare](#key_compare) 和 **value_compare** 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意，这两[key_compare](#key_compare)并`value_compare`是模板参数的同义词`Compare`。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。
 
@@ -2266,7 +2266,7 @@ typedef Key value_type;
 
 `value_type` 是模板参数 `Key` 的同义词。
 
-请注意，[key_type](#key_type) 和 `value_type` 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意，这两[key_type](#key_type)并`value_type`是模板参数的同义词`Key`。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 有关 `Key` 的详细信息，请参阅该主题的备注部分。
 
@@ -2307,7 +2307,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>请参阅
 
-[\<设置 > 成员](http://msdn.microsoft.com/en-us/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<设置 > 成员](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

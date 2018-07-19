@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965387"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base 类
 
-一种 codecvt 类的基类，用于定义一种称为 **result** 的枚举类型，此类型用作 facet 成员函数的返回类型以便指示转换结果。
+用于定义枚举类型的 codecvt 类的基类称为`result`、 用作 facet 成员函数的返回类型以便指示转换的结果。
 
 ## <a name="syntax"></a>语法
 
@@ -50,13 +50,13 @@ protected:
 
 此类会描述常用于所有模板类 [codecvt](../standard-library/codecvt-class.md) 专用化的枚举。 枚举结果描述了来自 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 可能的返回值：
 
-- 如果内部和外部字符编码之间的转换成功，则为 **ok**。
+- `ok` 如果内部和外部字符编码之间的转换会成功。
 
-- 如果目标大小不足以使转换成功完成，则为 **partial**。
+- `partial` 如果目标是不足够大，以便使转换成功完成。
 
-- 如果源序列格式不正确，则为 **error**。
+- `error` 如果源序列格式不，正确。
 
-- 如果函数不执行任何转换，则为 **noconv**。
+- 如果函数不执行任何转换，则为 `noconv`。
 
 ## <a name="requirements"></a>要求
 

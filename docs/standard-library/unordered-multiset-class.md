@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96a8b6d492380e16c5808fac7f70e0cc0f3750e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965482"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset 类
 
@@ -169,10 +169,10 @@ class unordered_multiset;
 
 |参数|描述|
 |-|-|
-|`Key`|密钥类型。|
-|`Hash`|哈希函数对象类型。|
-|`Pred`|相等比较函数对象类型。|
-|`Alloc`|allocator 类。|
+|*Key*|密钥类型。|
+|*哈希*|哈希函数对象类型。|
+|*Pred*|相等比较函数对象类型。|
+|*分配*|allocator 类。|
 
 ## <a name="members"></a>成员
 
@@ -219,7 +219,7 @@ class unordered_multiset;
 |[max_bucket_count](#max_bucket_count)|获取最大的存储桶数。|
 |[max_load_factor](#max_load_factor)|获取或设置每个存储桶的最多元素数。|
 |[max_size](#max_size)|获取受控序列的最大大小。|
-|[rehash](#rehash)|重新生成哈希表。|
+|[回顾](#rehash)|重新生成哈希表。|
 |[size](#size)|对元素数进行计数。|
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_multiset](#unordered_multiset)|构造容器对象。|
@@ -302,11 +302,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |参数|描述|
 |-|-|
-|`nbucket`|存储桶编号。|
+|*nbucket*|存储桶编号。|
 
 ### <a name="remarks"></a>备注
 
-前两个编号函数返回向前迭代器，指向序列的第一个元素（或紧邻空序列后的位置）。 最后两个成员函数返回一个向前迭代器，指向存储桶 `nbucket` 的第一个元素（或刚超出空存储桶末尾的位置）。
+前两个编号函数返回向前迭代器，指向序列的第一个元素（或紧邻空序列后的位置）。 最后两个成员函数返回一个向前迭代器存储桶的第一个元素，指向*nbucket* （或刚超出空存储桶末尾）。
 
 ### <a name="example"></a>示例
 
@@ -507,11 +507,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-`nbucket` 存储桶编号。
+*nbucket*  
+ 存储桶编号。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回编号为 `nbucket`的存储桶的大小。
+成员函数返回存储桶数的大小*nbucket*。
 
 ### <a name="example"></a>示例
 
@@ -555,7 +556,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_multiset::cbegin
 
-返回确定范围中第一个元素地址的 `const` 迭代器。
+返回**const**的范围中的第一个元素的迭代器。
 
 ```cpp
 const_iterator cbegin() const;
@@ -563,13 +564,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-`const` 前向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。
+一个**const**向前访问迭代器，指向范围内或刚超出空范围末尾的位置的第一个元素 (对于空范围， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -581,7 +582,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_multiset::cend
 
-返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。
+返回**const**刚超出范围中的最后一个元素的位置的迭代器。
 
 ```cpp
 const_iterator cend() const;
@@ -589,13 +590,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>返回值
 
-指向刚超出范围末尾的位置的 `const` 向前访问迭代器。
+一个**const**指向刚超出范围末尾的向前访问迭代器。
 
 ### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -872,7 +873,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要搜索的密钥值。
+*keyval*  
+ 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -990,7 +992,7 @@ iterator emplace(Args&&... args);
 
 |参数|描述|
 |-|-|
-|`args`|用于构造要插入到 unordered_multiset 中的元素的转发参数。|
+|*参数*|用于构造要插入到 unordered_multiset 中的元素的转发参数。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1019,8 +1021,8 @@ iterator emplace_hint(
 
 |参数|描述|
 |-|-|
-|`args`|用于构造要插入到 unordered_multiset 中的元素的转发参数。|
-|`where`|有关开始搜索正确插入点的位置的提示。|
+|*参数*|用于构造要插入到 unordered_multiset 中的元素的转发参数。|
+|*where*|有关开始搜索正确插入点的位置的提示。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1117,11 +1119,12 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-`nbucket` 存储桶编号。
+*nbucket*  
+ 存储桶编号。
 
 ### <a name="remarks"></a>备注
 
-前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器，它指向刚超出存储桶 `nbucket` 末尾的位置。
+前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器指向刚超出存储桶末尾*nbucket*。
 
 ### <a name="example"></a>示例
 
@@ -1184,11 +1187,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要搜索的密钥值。
+*keyval*  
+ 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回一对迭代器 `X` ，以便 `[X.first, X.second)` 仅分隔受控序列中与 `keyval`具有等效排序的那些元素。 如果不存在此类元素，则两个迭代器均为 `end()`。
+此成员函数返回一对迭代器`X`，以便`[X.first, X.second)`分隔受控序列中具有等效排序仅对这些元素*keyval*。 如果不存在此类元素，则两个迭代器均为 `end()`。
 
 ### <a name="example"></a>示例
 
@@ -1257,13 +1261,17 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-`Where` 要删除的元素的位置。
+*Where*  
+ 要移除的元素的位置。
 
-`First` 要移除的第一个元素的位置。
+*第一个*  
+ 要移除的第一个元素的位置。
 
-`Last` 要移除的最后一个元素以外的位置。
+*最后一个*  
+ 要移除的刚超出最后一个元素的位置。
 
-`Key` 要移除的元素的键值。
+*Key*  
+ 要移除的元素的关键值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1285,7 +1293,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-`keyval` 要搜索的密钥值。
+*keyval*  
+ 要搜索的键值。
 
 ### <a name="remarks"></a>备注
 
@@ -1499,13 +1508,13 @@ IList);
 
 |参数|描述|
 |-|-|
-|`Val`|要插入到 unordered_multiset 中的元素的值。|
-|`Where`|开始搜索正确插入点的位置。|
-|`ValTy`|一种模板参数，它指定 unordered_multiset 可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的参数类型，并将 `Val` 作为参数完美转发。|
-|`First`|要复制的第一个元素的位置。|
-|`Last`|要复制的最后一个元素以外的位置。|
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
-|`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|要插入到 unordered_multiset 中的元素的值。|
+|*Where*|开始搜索正确插入点的位置。|
+|*ValTy*|指定 unordered_multiset 可用于构造的元素的自变量类型的模板参数[value_type](../standard-library/map-class.md#value_type)，和完美转发*Val*作为自变量。|
+|*第一个*|要复制的第一个元素的位置。|
+|*最后一个*|要复制的最后一个元素以外的位置。|
+|*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
+|*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1521,7 +1530,7 @@ IList);
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于集，`unordered_multiset<V>::value_type` 是 `const V` 类型。
 
-范围成员函数 (5) 将元素值序列插到 unordered_multiset 中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。
+范围成员函数 (5) 将元素值序列插入到 unordered_multiset 中，它对应于所处理的范围中的迭代器的每个元素`[First, Last)`; 因此，*最后一个*不会插入。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。
 
 初始化表达式列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到 unordered_multiset 中。
 
@@ -1897,11 +1906,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>参数
 
-`factor` 新的最大加载因子。
+*factor*  
+ 新的最大加载因子。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数将返回存储的最大加载因子。 第二个成员函数将用 `factor`替换已存储的最大加载因子。
+第一个成员函数将返回存储的最大加载因子。 第二个成员函数将使用存储的最大加载因子*身份*。
 
 ### <a name="example"></a>示例
 
@@ -2029,11 +2039,11 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 |参数|描述|
 |-|-|
-|`right`|正在被复制到 `unordered_multiset` 中的 [unordered_multiset](../standard-library/unordered-multiset-class.md)。|
+|*right*|正在被复制到 `unordered_multiset` 中的 [unordered_multiset](../standard-library/unordered-multiset-class.md)。|
 
 ### <a name="remarks"></a>备注
 
-清除 `unordered_multiset` 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 `unordered_multiset`。
+在清除中的任何现有元素后`unordered_multiset`，`operator=`复制或移动的内容*右*到`unordered_multiset`。
 
 ### <a name="example"></a>示例
 
@@ -2178,11 +2188,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-`nbuckets` 请求的 bucket 数。
+*nbuckets*  
+ 请求的存储桶数。
 
 ### <a name="remarks"></a>备注
 
-成员函数将存储桶数更改为至少 `nbuckets` 并根据需要重新生成哈希表。
+成员函数将更改存储桶为至少数*nbuckets*并根据需要重新生成哈希表。
 
 ### <a name="example"></a>示例
 
@@ -2361,11 +2372,12 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>参数
 
-`right` 要交换的容器。
+*right*  
+ 要交换的容器。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
+成员函数交换之间的受控的序列`*this`并*右*。 如果为 [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
 
 ### <a name="example"></a>示例
 
@@ -2479,27 +2491,27 @@ unordered_multiset(
 
 |参数|描述|
 |-|-|
-|`InputIterator`|迭代器类型。|
-|`Al`|要存储的分配器对象。|
-|`Comp`|要存储的比较函数对象。|
-|`Hash`|要存储的哈希函数对象。|
-|`Bucket_count`|存储桶的最少数量。|
-|`Right`|要复制的容器。|
-|`IList`|要从中进行复制的 initializer_list。|
+|*InputIterator*|迭代器类型。|
+|*Al*|要存储的分配器对象。|
+|*Comp*|要存储的比较函数对象。|
+|*哈希*|要存储的哈希函数对象。|
+|*bucket_count*|存储桶的最少数量。|
+|右侧|要复制的容器。|
+|*IList*|要从中进行复制的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数指定通过 `Right` 控制的序列副本。 第二个构造函数指定空的受控序列。 第三个构造函数插入元素值 `[First, Last)` 的序列。 第四个构造函数通过移动 `Right` 指定序列副本。
+第一个构造函数指定控制的序列的副本*右*。 第二个构造函数指定空的受控序列。 第三个构造函数插入元素值 `[First, Last)` 的序列。 第四个构造函数通过移动指定的序列的副本*右*。
 
-所有构造函数还初始化若干存储的值。 对于复制构造函数，值从 `Right` 获取。 否则：
+所有构造函数还初始化若干存储的值。 对于复制构造函数，可获得的值从*右*。 否则：
 
-存储桶的最少数量是参数 `Bucket_count`（如果有）；否则为此处说明的默认值 `N0`。
+存储桶的最小数量是参数*Bucket_count*，如果存在; 否则为它是所述的默认值为实现定义的值，此处`N0`。
 
-哈希函数对象是参数 `Hash`（如果有）；否则为 `Hash()`。
+哈希函数对象是参数*哈希*，如果存在; 否则为它是`Hash()`。
 
-比较函数对象是参数 `Comp`（如果有）；否则为 `Comp()`。
+比较函数对象是参数*Comp*，如果存在; 否则为它是`Comp()`。
 
-分配器对象是参数 `Al`（如果有）；否则为 `Alloc()`。
+分配器对象是参数*Al*，如果存在; 否则为它是`Alloc()`。
 
 ## <a name="value_type"></a>  unordered_multiset::value_type
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963545"
 ---
 # <a name="constructing-input-stream-objects"></a>构造输入流对象
 
@@ -33,7 +33,7 @@ ms.locfileid: "33842867"
 
 有两种创建输入文件流的方法：
 
-- 使用 `void` 参数构造函数，然后调用 `open` 成员函数：
+- 使用**void**参数的构造函数，然后调用`open`成员函数：
 
    ```cpp
    ifstream myFile; // On the stack

@@ -1,5 +1,5 @@
 ---
-title: CWinFormsControl 类 |Microsoft 文档
+title: CWinFormsControl 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 797903c3f558cff9a0ff5addb689e31ae2adbed7
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121632"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026369"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 类
 提供用于承载 Windows 窗体控件的基本功能。  
@@ -43,7 +43,7 @@ class CWinFormsControl : public CWnd
   
 #### <a name="parameters"></a>参数  
  `TManagedControl`  
- 要在 MFC 应用程序中显示一个.NET Framework Windows 窗体控件。  
+ 要在 MFC 应用程序中显示.NET Framework Windows 窗体控件。  
   
 ## <a name="members"></a>成员  
   
@@ -51,38 +51,38 @@ class CWinFormsControl : public CWnd
   
 |名称|描述|  
 |----------|-----------------|  
-|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|将构造一个 MFC Windows 窗体控件包装对象。|  
+|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|构造一个 MFC Windows 窗体控件包装器对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|在 MFC 容器中创建 Windows 窗体控件。|  
-|[CWinFormsControl::GetControl](#getcontrol)|检索指向 Windows 窗体控件的指针。|  
+|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|在 MFC 容器中创建的 Windows 窗体控件。|  
+|[CWinFormsControl::GetControl](#getcontrol)|检索指向在 Windows 窗体控件。|  
 |[CWinFormsControl::GetControlHandle](#getcontrolhandle)|检索 Windows 窗体控件的句柄。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CWinFormsControl::operator-&gt;](#operator_-_gt)|替换[CWinFormsControl::GetControl](#getcontrol)表达式中。|  
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|将类型强制转换为指向 Windows 窗体控件。|  
+|[CWinFormsControl::operator-&gt;](#operator_-_gt)|将替换[CWinFormsControl::GetControl](#getcontrol)在表达式中。|  
+|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|将一种类型强制转换为指向的 Windows 窗体控件的指针。|  
   
 ## <a name="remarks"></a>备注  
- `CWinFormsControl`类提供用于承载 Windows 窗体控件的基本功能。  
+ `CWinFormsControl`类提供了用于承载 Windows 窗体控件的基本功能。  
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
- MFC 代码不应缓存窗口句柄 (通常存储在`m_hWnd`)。 一些 Windows 窗体控件的属性需要基础 Win32`Window`被销毁，并且使用重新创建`DestroyWindow`和`CreateWindow`。 MFC Windows 窗体实现句柄`Destroy`和`Create`更新控件的事件的`m_hWnd`成员。  
+ MFC 代码不应缓存窗口句柄 (通常存储在`m_hWnd`)。 某些 Windows 窗体控件属性需要基础 Win32`Window`销毁并重新创建使用`DestroyWindow`和`CreateWindow`。 MFC Windows 窗体实现句柄`Destroy`并`Create`要更新的控件的事件`m_hWnd`成员。  
   
 > [!NOTE]
->  MFC Windows 窗体集成仅在动态链接 （在其中 AFXDLL 定义） 的 mfc 项目中可以正常工作。  
+>  MFC Windows 窗体集成仅在使用 MFC （在其中定义了 AFXDLL） 动态链接的项目中可以正常工作。  
   
 ## <a name="requirements"></a>要求  
  **标头：** afxwinforms.h  
   
 ##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
- 在 MFC 容器中创建 Windows 窗体控件。  
+ 在 MFC 容器中创建的 Windows 窗体控件。  
   
 ```  
 inline BOOL CreateManagedControl(
@@ -114,16 +114,16 @@ inline BOOL CreateManagedControl(
   
 ### <a name="parameters"></a>参数  
  *pType*  
- 要创建控件的数据类型。 必须是[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
+ 要创建的控件的数据类型。 必须是[类型](https://msdn.microsoft.com/library/system.type)数据类型。  
   
  *dwStyle*  
- 要应用于控件的窗口样式。 指定的组合[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前，支持仅以下样式： WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。  
+ 要应用于控件的窗口样式。 指定的组合[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前，支持仅以下样式： WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。  
   
  *rect*  
- A [RECT 结构](../../mfc/reference/rect-structure1.md)，它定义控件的左上角和右下角的坐标 （仅第一个重载）。  
+ 一个[RECT 结构](../../mfc/reference/rect-structure1.md)，它定义控件的左上角和右下角的坐标 （仅第一个重载）。  
   
  *nPlaceHolderID*  
- 静态位置持有者控件的句柄放在资源编辑器中。 新创建的 Windows 窗体控件替换静态控件，假定其位置、 z 顺序和样式 （仅第二个重载）。  
+ 静态位置持有者控件的句柄放在资源编辑器中。 在新创建的 Windows 窗体控件取代了静态控件，假定其位置、 z 顺序和样式 （仅第二个重载）。  
   
  *pParentWnd*  
  指向父窗口的指针。  
@@ -132,43 +132,43 @@ inline BOOL CreateManagedControl(
  要分配给新创建的控件的资源 ID 号。  
   
  *pControl*  
- Windows 窗体控件来与关联的实例[CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)对象 （仅适用于第四个重载）。  
+ 若要与之关联的 Windows 窗体控件的实例[CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)对象 （仅第四个重载）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则返回非零值。 如果不成功，则返回零。  
+ 如果成功，返回非零值。 如果不成功，将返回零。  
   
 ### <a name="remarks"></a>备注  
  此方法实例化 MFC 容器中的.NET Framework Windows 窗体控件。  
   
- 方法的第一个重载接受的.NET Framework 数据类型*pType*以便 MFC 可以实例化此类型的新对象。 *pType*必须[类型](https://msdn.microsoft.com/en-us/library/system.type)数据类型。  
+ 该方法的第一个重载接受.NET Framework 数据类型*pType*以便 MFC 可以实例化此类型的新对象。 *pType*必须是[类型](https://msdn.microsoft.com/library/system.type)数据类型。  
   
- 第二个重载的方法创建基于的 Windows 窗体控件`TManagedControl`的模板参数`CWinFormsControl`类。 大小和位置的控件基于`RECT`结构传递给方法。 仅*dwStyle*样式很重要。  
+ 该方法的第二个重载创建基于的 Windows 窗体控件`TManagedControl`的模板参数`CWinFormsControl`类。 大小和位置的控件基于`RECT`结构传递给该方法。 仅*dwStyle*样式非常重要。  
   
- 方法的第三个重载创建替换静态控件，销毁它，并假设其位置、 z 顺序和样式的 Windows 窗体控件。 静态控件仅用作 Windows 窗体控件的占位符。 创建控件时，此重载将组合中的样式*dwStyle*与静态控件的资源样式。  
+ 该方法的第三个重载创建替换静态控件，将其销毁，并假设其位置、 z 顺序和样式的 Windows 窗体控件。 静态控件只能用作在 Windows 窗体控件的占位符。 在创建控件时，此重载将合并来自样式*dwStyle*使用静态控件的资源样式。  
   
- 方法的第四个重载允许您在已实例化 Windows 窗体控件中将传递*pControl* ，MFC 将自动换行。 它必须与同一类型`TManagedControl`的模板参数`CWinFormsControl`类。  
+ 该方法的第四个重载允许您将在已经实例化 Windows 窗体控件中传递*pControl* ，MFC 将自动换行。 它必须与相同类型的`TManagedControl`的模板参数`CWinFormsControl`类。  
   
- 请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)的示例使用 Windows 窗体控件。  
+ 请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)了解有关使用 Windows 窗体控件。  
   
 ##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
- 将构造一个 MFC Windows 窗体控件包装对象。  
+ 构造一个 MFC Windows 窗体控件包装器对象。  
   
 ```  
 CWinFormsControl();
 ```  
   
 ### <a name="remarks"></a>备注  
- 在调用时实例化 Windows 窗体控件[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
+ 在调用时，实例化 Windows 窗体控件[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
   
 ##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
- 检索指向 Windows 窗体控件的指针。  
+ 检索指向在 Windows 窗体控件。  
   
 ```  
 inline TManagedControl^ GetControl() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回一个指向 Windows 窗体控件。  
+ 返回一个指向在 Windows 窗体控件。  
   
 ### <a name="example"></a>示例  
   请参阅[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
@@ -181,32 +181,32 @@ inline HWND GetControlHandle() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回 Windows 窗体控件的句柄。  
+ 返回的句柄在 Windows 窗体控件。  
   
 ### <a name="remarks"></a>备注  
- `GetControlHandle` 返回.NET Framework 的控件属性存储的窗口句柄的帮助器方法。 窗口句柄值复制到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)到在呼叫期间[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。  
+ `GetControlHandle` 是返回存储在.NET Framework 控件属性中的窗口句柄的帮助器方法。 窗口句柄值复制到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)在调用[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。  
   
 ##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
- 替换[CWinFormsControl::GetControl](#getcontrol)表达式中。  
+ 将替换[CWinFormsControl::GetControl](#getcontrol)在表达式中。  
   
 ```  
 inline TManagedControl^  operator->() const;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此运算符提供了一种方便的语法，用于替换`GetControl`表达式中。  
+ 此运算符提供了方便的语法，用于替换`GetControl`在表达式中。  
   
- Windows 窗体上的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ 在 Windows 窗体上的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
 ##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
- 将类型强制转换为指向 Windows 窗体控件。  
+ 将一种类型强制转换为指向的 Windows 窗体控件的指针。  
   
 ```  
 inline operator TManagedControl^() const;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此运算符将传递`CWinFormsControl<TManagedControl>`接受指向 Windows 窗体控件的指针的函数。  
+ 此运算符将传递`CWinFormsControl<TManagedControl>`接受指向的 Windows 窗体控件的指针的函数。  
   
 ## <a name="see-also"></a>请参阅  
  [CWinFormsDialog 类](../../mfc/reference/cwinformsdialog-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: 持久性类 (ATL) |Microsoft 文档
+title: 持久性类 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963649"
 ---
 # <a name="persistence-classes"></a>持久性类
 以下类实现对象持久性：  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)允许客户端加载和保存到一个属性包的对象的属性。  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)允许客户端加载和保存到一个属性包对象的属性。  
   
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md)允许客户端加载和保存到流的对象的持久性数据。  
+-   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md)允许客户端加载和保存到流对象的持久性数据。  
   
 -   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md)允许客户端加载和保存到存储的对象的持久性数据。  
   

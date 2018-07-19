@@ -1,5 +1,5 @@
 ---
-title: 承载 ActiveX 控件使用 ATL AXHost |Microsoft 文档
+title: 承载 ActiveX 控件使用 ATL AXHost |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e26fd9e80b96c2b0196e3fd0e11b9c97f0f3bff3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356248"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027201"
 ---
-# <a name="hosting-activex-controls-using-atl-axhost"></a>承载 ActiveX 控件使用 ATL 类
-本主题中的示例演示如何创建 AXHost 以及如何承载 ActiveX 控件使用各种 ATL 函数。 它还演示如何访问控制和接收器事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 从承载的控件。 此示例承载主窗口中或在子窗口中的日历控件。  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>使用 ATL AXHost 承载 ActiveX 控件
+本主题中的示例演示如何创建 AXHost 以及如何托管 ActiveX 控件使用各种 ATL 函数。 它还演示如何访问控制和接收器事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 从承载的控件。 此示例承载日历控件在主窗口中或在子窗口。  
   
- 请注意的定义`USE_METHOD`符号。 你可以更改此符号用于改变介于 1 和 8 之间的值。 符号的值确定将如何创建该控件的创建：  
+ 请注意 USE_METHOD 符号的定义。 可以更改此符号来改变介于 1 和 8 之间的值。 符号的值确定将如何创建控件：  
   
--   中的偶数值`USE_METHOD`，用于创建窗口的主机子类的调用和将其转换为控件主机。 对于奇数的值，该代码创建作为主机子窗口。  
+-   USE_METHOD，调用创建主机子类的窗口的偶数值，并将它转换为控件宿主。 对于奇数的值，该代码创建充当一个主机的子窗口。  
   
--   值`USE_METHOD`1，4，访问控件和事件的事件接收还会创建主机的调用中完成。 介于 5 和 8 之间的值查询接口的主机，并将挂钩接收器。  
+-   对控件的访问的 USE_METHOD 介于 1 和 4 之间的值和事件的事件接收完成的调用中，还会创建主机。 介于 5 到 8 之间的值查询接口的主机，并挂接接收器。  
   
- 摘要如下：  
+摘要如下：  
   
-|USE_METHOD|Host|控制访问权限和接收的事件|演示函数|  
+|USE_METHOD|Host|控制访问和事件接收|说明的函数|  
 |-----------------|----------|--------------------------------------|---------------------------|  
 |1|子窗口|一个步骤|CreateControlLicEx|  
 |2|主窗口|一个步骤|AtlAxCreateControlLicEx|  

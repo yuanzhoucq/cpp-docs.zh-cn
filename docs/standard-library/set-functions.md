@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: aac2aaa09f609cd88c2bfab0e3fb66f4edade293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857033"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966327"
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt; 函数
 
@@ -31,13 +31,13 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>参数
 
-`right` 提供要交换的元素集或者其元素将要与那些集交换的集`left`。
+*右*提供要交换的元素的集或其元素将要进行交换的一组与一组*左*。
 
-`left` 其元素将要与那些集交换的集`right`。
+*左*其元素将要与这些集的交换的集*右*。
 
 ### <a name="remarks"></a>备注
 
-模板函数是容器类上专用化的算法，用以执行成员函数 `left.`[swap](../standard-library/set-class.md#swap)( `right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本
+模板函数是专用于容器类用以执行成员函数的算法`left.`[交换](../standard-library/set-class.md#swap)(`right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本
 
 `template` \< **classT**> **void swap**( **T&**, **T&**)
 
@@ -58,13 +58,13 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>参数
 
-`right` 多重集合提供要交换的元素或其元素将要与那些多重集合交换多重集合`left`。
+*右*多重集提供要交换的元素或其元素将要进行交换的多重集与多重*左*。
 
-`left` 其元素将要与那些多重集合交换多重集合`right`。
+*左*其元素将要进行交换的多重集与多重*右*。
 
 ### <a name="remarks"></a>备注
 
-模板函数是容器类多重集上专用化的算法，用以执行成员函数 `left.`[swap](../standard-library/multiset-class.md#swap)(`right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本
+模板函数是容器类多重集用以执行成员函数上专用化的算法`left.`[交换](../standard-library/multiset-class.md#swap)(`right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本
 
 `template` \< **classT**> **void swap**( **T&**, **T&**)
 

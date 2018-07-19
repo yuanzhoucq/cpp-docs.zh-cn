@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56eac7eef1feba1ba287af0dcd0d581335e395c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2450f57d755b70170165d1b2e46e4b00788fe573
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965856"
 ---
 # <a name="custom-manipulators-with-arguments"></a>带自变量的自定义操控器
 
@@ -29,7 +29,7 @@ ms.locfileid: "33843699"
 
 ## <a name="in-this-section"></a>本节内容
 
-[带有一个自变量（`int` 或 `long`）的输出流操控器](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md)
+[输出 Stream 带有一个自变量的操控器](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md)(**int**或**长**)
 
 [其他单一自变量输出流操控器](../standard-library/other-one-argument-output-stream-manipulators.md)
 

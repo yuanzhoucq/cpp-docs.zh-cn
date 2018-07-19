@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a5da108c082dc4199a216d36f51d41e1748ada
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5b2c9237c7f17217d28e489edef4ab65863b54b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844284"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964103"
 ---
 # <a name="isdestructible-class"></a>is_destructible 类
 
@@ -37,11 +37,11 @@ struct is_destructible;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是易损坏类型，则类型谓词的实例为 true；否则为 false。 易损坏类型是引用类型、对象类型以及那些在其中对于等于 `U` 的某些类型 `remove_all_extents_t<T>` 而言未计算操作数 `std::declval<U&>.~U()` 格式正确的类型。 其他类型（包括不完整类型、 `void`和函数类型）均不属于易损坏类型。
+如果类型谓词的实例将保留 true 类型*T*是易损坏类型，否则为 false。 易损坏类型是引用类型、对象类型以及那些在其中对于等于 `U` 的某些类型 `remove_all_extents_t<T>` 而言未计算操作数 `std::declval<U&>.~U()` 格式正确的类型。 其他类型，包括不完整类型**void**，和函数类型，不是易损坏类型。
 
 ## <a name="requirements"></a>要求
 

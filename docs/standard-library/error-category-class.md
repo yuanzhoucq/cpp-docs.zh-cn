@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847697"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028224"
 ---
 # <a name="errorcategory-class"></a>error_category 类
 
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`_Errval`|要存储在 [error_condition](../standard-library/error-condition-class.md) 中的错误代码值。|
+|*_Errval*|要存储在 [error_condition](../standard-library/error-condition-class.md) 中的错误代码值。|
 
 ### <a name="return-value"></a>返回值
 
@@ -112,13 +112,13 @@ virtual bool equivalent(const error_code& _Code,
 
 |参数|描述|
 |---------------|-----------------|
-|`_Errval`|要比较的错误代码值。|
-|`_Cond`|要比较的 [error_condition](../standard-library/error-condition-class.md) 对象。|
-|`_Code`|要比较的 [error_code](../standard-library/error-code-class.md) 对象。|
+|*_Errval*|要比较的错误代码值。|
+|*_Cond*|要比较的 [error_condition](../standard-library/error-condition-class.md) 对象。|
+|*（_c)*|要比较的 [error_code](../standard-library/error-code-class.md) 对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果类别和值相等则为 `true`；否则为 `false`。
+**true**如果类别和值相等; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -138,11 +138,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 |参数|描述|
 |---------------|-----------------|
-|`val`|要描述的错误代码值。|
+|*val*|要描述的错误代码值。|
 
 ### <a name="return-value"></a>返回值
 
-为类别返回错误代码 `val` 的描述性名称。
+返回的错误代码的描述性名称*val*的类别。
 
 ### <a name="remarks"></a>备注
 
@@ -172,7 +172,7 @@ bool operator==(const error_category& right) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要测试是否相等的对象。|
+|*right*|要测试是否相等的对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -194,11 +194,11 @@ bool operator!=(const error_category& right) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要测试是否不相等的对象。|
+|*right*|要测试是否不相等的对象。|
 
 ### <a name="return-value"></a>返回值
 
-如果 `error_category` 对象不等于 `right` 中的传入对象 `error_category`，则为 **true**；否则为 **false**。
+**true**如果`error_category`对象是否不等于`error_category`传入的对象*右*; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -216,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 |参数|描述|
 |---------------|-----------------|
-|`right`|要比较的 `error_category` 对象。|
+|*right*|要比较的 `error_category` 对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -236,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>备注
 
-此类型定义是 `int` 的同义词。
+此类型定义是的同义词**int**。
 
 ## <a name="see-also"></a>请参阅
 

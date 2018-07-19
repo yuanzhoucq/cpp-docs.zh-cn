@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962008"
 ---
 # <a name="isfinal-class"></a>is_final 类
 
@@ -37,11 +37,11 @@ struct is_final;
 
 ### <a name="parameters"></a>参数
 
-`T` 查询的类型。
+*T*查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型 `T` 是标记为 `final` 的类类型，则类型谓词的实例为 true；否则为 false。 如果 `T` 是类类型，则其必须是完整类型。
+如果类型谓词的实例将保留 true 类型*T*标记的类类型`final`，否则为 false。 如果*T*是类类型，它必须是完整的类型。
 
 ## <a name="requirements"></a>要求
 

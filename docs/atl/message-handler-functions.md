@@ -1,5 +1,5 @@
 ---
-title: 消息处理程序函数 |Microsoft 文档
+title: 消息处理程序函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,24 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437ae282efd4b21f294e26890f16130b7a89a55f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963967"
 ---
 # <a name="message-handler-functions"></a>消息处理程序函数
-ATL 提供三种类型的消息处理程序函数：  
+ATL 提供了三种类型的消息处理程序函数：  
   
-|消息处理程序的类型|对应的消息宏|  
+|消息处理程序的类型|相应消息宏|  
 |-----------------------------|---------------------------------|  
 |[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
 |[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
 |[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
   
 ## <a name="see-also"></a>请参阅  
- [实现一个窗口](../atl/implementing-a-window.md)   
+ [实现窗口](../atl/implementing-a-window.md)   
  [消息映射](../atl/message-maps-atl.md)   
  [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
 

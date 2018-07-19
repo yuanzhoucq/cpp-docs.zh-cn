@@ -1,5 +1,5 @@
 ---
-title: 升级现有 ActiveX 控件 |Microsoft 文档
+title: 升级现有 ActiveX 控件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,34 +22,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955669"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026415"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 现有 ActiveX 控件（以前称为 OLE 控件）无需修改即可在 Internet 上使用。 但是，您可能希望修改控件以提高其性能。 在网页上使用控件时，还有其他一些考虑因素。 .ocx 文件和所有支持文件必须在目标计算机上或者必须通过 Internet 下载。 这使代码大小和下载时间成为了一个重要考虑因素。 下载内容可在已签名的 .cab 文件中打包。 您可以将控件标记为对于脚本化或初始化是安全的。  
   
  本文讨论以下主题：  
   
-- [打包用于下载的代码](#_core_packaging_code_for_downloading)  
+- [用于下载的打包代码](#_core_packaging_code_for_downloading)  
   
-- [将控件安全标记为对于脚本化或初始化](#_core_marking_a_control_safe_for_scripting_and_initializing)  
+- [将控件安全标记的脚本编写和初始化](#_core_marking_a_control_safe_for_scripting_and_initializing)  
   
 - [许可问题](#_core_licensing_issues)  
   
-- [对代码进行签名](#_core_signing_code)  
+- [代码签名](#_core_signing_code)  
   
 - [管理调色板](#_core_managing_the_palette)  
   
 - [Internet Explorer 浏览器安全级别和控件行为](#_core_internet_explorer_browser_safety_levels_and_control_behavior)  
   
- 中所述，还可以添加优化， [ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。 名字对象可用于下载属性和大型 Blob 中所述异步[Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)。  
+ 此外可以添加优化，如中所述[ActiveX 控件： 优化](../mfc/mfc-activex-controls-optimization.md)。 名字对象可用于下载属性和大型 Blob 以异步方式，如中所述[Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)。  
   
-##  <a name="_core_packaging_code_for_downloading"></a> 打包用于下载的代码  
- 有关此主题的详细信息，请参阅知识库文章“打包 MFC 控件以便通过 Internet 使用”(Q167158)。 你可以找到在知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
+##  <a name="_core_packaging_code_for_downloading"></a> 用于下载的打包代码  
+ 有关此主题的详细信息，请参阅知识库文章“打包 MFC 控件以便通过 Internet 使用”(Q167158)。 您可以找到知识库文章[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
   
 ### <a name="the-codebase-tag"></a>CODEBASE 标记  
  ActiveX 控件是使用 `<OBJECT>` 标记嵌入在网页中的。 `CODEBASE` 标记的 `<OBJECT>` 参数指定从中下载控件的位置。 `CODEBASE` 可成功指向很多不同的文件类型。  
@@ -71,7 +71,7 @@ CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
 CODEBASE="http://example.microsoft.com/trustme.inf"  
 ```  
   
- .inf 文件将控制 .ocx 文件及其支持文件的安装。 不推荐使用此方法，因为它不是无法对.inf 文件进行签名 (请参阅[对代码进行签名](#_core_signing_code)有关代码签名的指针)。  
+ .inf 文件将控制 .ocx 文件及其支持文件的安装。 不推荐使用此方法，因为它不可能.inf 文件进行签名 (请参阅[对代码进行签名](#_core_signing_code)有关代码签名的指针)。  
   
 ### <a name="using-the-codebase-tag-with-a-cab-file"></a>将 CODEBASE 标记用于 CAB 文件  
   
@@ -85,11 +85,11 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
  Cabinet 文件是使用 MFC 打包 ActiveX 控件的推荐方法。 通过在 Cabinet 文件中打包 MFC ActiveX 控件，可以包含 .inf 文件来控制 ActiveX 控件和任何依赖 DLL（如 MFC DLL）的安装。 使用 CAB 文件可自动压缩代码以加快下载速度。 如果要使用 .cab 文件进行组件下载，对整个 .cab 文件进行签名比分别对每个组件进行签名速度更快。  
   
 ### <a name="creating-cab-files"></a>创建 CAB 文件  
- 你可以从知识库文章下载 Cabinet 开发工具包[310618: Microsoft cab 文件软件开发工具包](http://go.microsoft.com/fwlink/p/?linkid=148204)。 在此工具包中，您将找到构造 Cabinet 文件所需的工具。  
+ 您可以从知识库文章中下载 Cabinet 开发工具包[310618: Microsoft Cabinet 开发工具包](http://go.microsoft.com/fwlink/p/?linkid=148204)。 在此工具包中，您将找到构造 Cabinet 文件所需的工具。  
   
  `CODEBASE` 指向的 Cabinet 文件应包含 ActiveX 控件的 .ocx 文件和用于控制其安装的 .inf 文件。 您可以通过指定控件文件的名称和一个 .inf 文件来创建 Cabinet 文件。 不要在此 Cabinet 文件中包含可能已存在于系统上的依赖 DLL。 例如，MFC DLL 在单独的 Cabinet 文件中打包并通过控制 .inf 文件来引用。  
   
- 有关如何创建 CAB 文件的详细信息，请参阅[创建 CAB 文件](http://msdn.microsoft.com/en-us/cc52fd09-bdf6-4410-a693-149a308f36a3)。  
+ 有关如何创建 CAB 文件的详细信息，请参阅[创建 CAB 文件](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3)。  
   
 ### <a name="the-inf-file"></a>INF 文件  
  以下示例 spindial.inf 列出了 MFC Spindial 控件所需的支持文件和版本信息。 请注意，MFC DLL 的位置是 Microsoft 网站。 mfc42.cab 由 Microsoft 提供和签名。  
@@ -133,14 +133,14 @@ file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
 C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf   
 ```  
   
- `-s 6144`参数保留在进行代码签名 cab 文件中的空间。  
+ `-s 6144`参数保留代码签名的 cab 文件中的空间。  
   
 ### <a name="the-version-tag"></a>版本标记  
- 请注意，`#Version`使用 CAB 文件指定的信息适用于指定的控件*CLASSID*参数`<OBJECT>`标记。  
+ 此处请注意，`#Version`指定使用 CAB 文件的信息适用于指定的控件*CLASSID*参数的`<OBJECT>`标记。  
   
  根据指定的版本，您可以强制下载控件。 有关的完整规范`OBJECT`标记包括*CODEBASE*参数，请参阅 W3C 参考。  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> 将控件安全标记为对于脚本化或初始化  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> 将控件安全标记的脚本编写和初始化  
  如果网页中使用的 ActiveX 控件实际上是安全的，则应将它们标记为对于脚本化和初始化是安全的。 安全的控件不会直接执行磁盘 IO 或者访问计算机的内存或注册表。  
   
  可通过注册表将控件标记对于脚本和初始化是安全的。 修改 `DllRegisterServer` 可添加与下面类似的项，从而将控件标记为对于脚本化和注册表中的持久化是安全的。 一个替代方法是实现 `IObjectSafety`。  
@@ -157,7 +157,7 @@ HKEY_CLASSES_ROOT\Component Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
 HKEY_CLASSES_ROOT\Component Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}  
 ```  
   
- 添加类似于以下的条目 (替换控件的类 ID 代替`{06889605-B8D0-101A-91F1-00608CEAD5B3}`) 以将你的密钥与以下类 ID 相关联：  
+ 添加与以下类似项 (替换控件的类来代替 ID `{06889605-B8D0-101A-91F1-00608CEAD5B3}`) 若要将你的密钥与以下类 ID 相关联：  
   
 ```  
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}   
@@ -177,19 +177,19 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   Codebase 参数的使用  
   
- 若要在未授权的计算机上在 HTML 页中使用授权控件，则必须生成许可协议包文件 (LPK)。 LPK 文件将授权控件的运行时许可证包含在 HTML 页中。 此文件通过 ActiveX SDK 附带的 LPK_TOOL.EXE 的生成。 有关详细信息，请参阅 MSDN 网站， [ http://msdn.microsoft.com ](http://msdn.microsoft.com)。  
+ 若要在未授权的计算机上在 HTML 页中使用授权控件，则必须生成许可协议包文件 (LPK)。 LPK 文件将授权控件的运行时许可证包含在 HTML 页中。 此文件通过 ActiveX SDK 附带的 LPK_TOOL.EXE 的生成。 有关详细信息，请参阅 MSDN 网站上的[ http://msdn.microsoft.com ](http://msdn.microsoft.com)。  
   
 #### <a name="to-create-an-lpk-file"></a>若要创建 LPK 文件  
   
 1.  在获得使用控件的授权的计算机上运行 LPK_TOOL.EXE。  
   
-2.  在**许可证包创作工具**对话框中，在**可用控件**列表框中，选择每个授权 ActiveX 控件，将使用在 HTML 页上单击**添加**.  
+2.  在中**许可协议包创作工具**对话框中**可用控件**列表框中，选择每个授权 ActiveX 控件，将使用 HTML 页上，单击**添加**.  
   
-3.  单击**保存并退出**键入 LPK 文件的名称。 这将创建 LPK 文件并关闭应用程序。  
+3.  单击**保存并退出**并为 LPK 文件键入一个名称。 这将创建 LPK 文件并关闭应用程序。  
   
 #### <a name="to-embed-a-licensed-control-on-an-html-page"></a>在 HTML 页上嵌入授权控件  
   
-1.  编辑 HTML 页。 在 HTML 页中，插入\<对象 > 标记为许可证管理器对象之前任何其他\<对象 > 标记。 许可证管理器是与 Internet Explorer 一起安装的 ActiveX 控件。 其类 ID 如下所示。 将许可证管理器对象的 LPKPath 属性设置为 LPK 文件的路径和名称。 每个 HTML 页面只能有一个 LPK 文件。  
+1.  编辑 HTML 页。 在 HTML 页中，插入\<对象 > 标记前任何其他许可证管理器对象\<对象 > 标记。 许可证管理器是与 Internet Explorer 一起安装的 ActiveX 控件。 其类 ID 如下所示。 将许可证管理器对象的 LPKPath 属性设置为 LPK 文件的路径和名称。 每个 HTML 页面只能有一个 LPK 文件。  
   
  ```  
  <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
@@ -197,13 +197,13 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
  </OBJECT>  
  ```  
   
-2.  插入\<对象 > 为许可证管理器标记之后授权控件的标记。  
+2.  插入\<对象 > 标记为授权控件许可证管理器标记之后。  
   
      例如，显示 Microsoft Masked Edit 控件的 HTML 页如下所示。 第一个类 ID 用于许可证管理器控件，第二个类 ID 用于 Masked Edit 控件。 将标记更改为指向之前创建的 .lpk 文件的相对路径，并添加对象标记（包括控件的类 ID）。  
   
 3.  插入\<嵌入 > 属性为 LPK 文件，如果使用 NCompass ActiveX 插件。  
   
-     如果你的控件可能在其他查看 Active 的浏览器 — 例如，使用 NCompass ActiveX 插件的 Netscape — 你必须添加\<嵌入 > 语法如下所示。  
+     如果您的控件可能会查看其他活动启用浏览器-例如，使用 NCompass ActiveX 插件的 Netscape — 您必须添加\<嵌入 > 语法如下所示。  
   
  ```  
  <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
@@ -216,12 +216,12 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
  </OBJECT>  
  ```  
   
- 有关控件授权的详细信息，请参阅[ActiveX 控件： 许可 ActiveX 控件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。  
+ 有关控件授权详细信息，请参阅[ActiveX 控件： 许可 ActiveX 控件](../mfc/mfc-activex-controls-licensing-an-activex-control.md)。  
   
-##  <a name="_core_signing_code"></a> 对代码进行签名  
+##  <a name="_core_signing_code"></a> 代码签名  
  代码签名专用于标识代码的源和保证代码在签名后未发生更改。 在下载代码之前，用户可能会收到警告，具体取决于浏览器安全设置。 用户可能选择信任某些证书所有者或公司，在这种情况下，这些受信任方签名的代码可以直接下载，不会发出警告。 将对代码进行数字签名以避免篡改。  
   
- 请确保对最终代码进行了签名，以便让控件可以自动下载而不显示信任警告消息。 有关如何对代码进行签名的详细信息，查看 ActiveX SDK 中的 Authenticode 上的文档，并请参阅[签名 CAB 文件](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747)。  
+ 请确保对最终代码进行了签名，以便让控件可以自动下载而不显示信任警告消息。 了解代码进行签名的详细信息，请查看 ActiveX SDK 中的 Authenticode 上文档并查看[签名 CAB 文件](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747)。  
   
  可能显示证书来标识签名人员和公司，具体取决于信任和浏览器安全级别设置。 如果安全级别是“无”，或者已签名的控件的证书所有者是受信任的，证书将不会显示。 请参阅[Internet Explorer 浏览器安全级别和控件行为](#_core_internet_explorer_browser_safety_levels_and_control_behavior)有关如何浏览器安全设置将确定是否下载控件和显示证书的详细信息。  
   
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  在 OCX 96 准则下，控件必须总是在后台实现其调色板。  
   
- 不要使用环境调色板属性的旧容器将发送 WM_QUERYNEWPALETTE 和 WM_PALETTECHANGED 消息。 控件可重写 `OnQueryNewPalette` 和 `OnPaletteChanged` 来处理这些消息。  
+ 不使用环境调色板属性的旧容器将发送 WM_QUERYNEWPALETTE 和 WM_PALETTECHANGED 消息。 控件可重写 `OnQueryNewPalette` 和 `OnPaletteChanged` 来处理这些消息。  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer 浏览器安全级别和控件行为  
  浏览器具有可由用户配置的安全级别的选项。 由于网页可能包含对用户的计算机具有潜在威胁的活动内容，浏览器允许用户选择安全级别的选项。 控件可能完全不能下载，或者会显示证书或警告消息来允许用户在运行时选择是否下载控件，具体取决于浏览器实现安全级别的方式。 下面列出了在 Internet Explorer 中上处于高、中和低安全级别的 ActiveX 控件的行为。  

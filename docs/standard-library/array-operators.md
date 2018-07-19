@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965453"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 运算符
 
-\<array> 标头包含这些 `array` 非成员比较模板函数。
+\<数组 > 标头包含这些**数组**非成员比较模板函数。
 
 ||||
 |-|-|-|
@@ -42,13 +42,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要比较的左的容器。
+*左*要比较的左的容器。
 
-`right` 要比较的右容器。
+*右*要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
@@ -111,13 +111,13 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要比较的左的容器。
+*左*要比较的左的容器。
 
-`right` 要比较的右容器。
+*右*要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
@@ -181,13 +181,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要比较的左的容器。
+*左*要比较的左的容器。
 
-`right` 要比较的右容器。
+*右*要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
@@ -251,13 +251,13 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要比较的左的容器。
+*左*要比较的左的容器。
 
-`right` 要比较的右容器。
+*右*要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
@@ -321,13 +321,13 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要比较的左的容器。
+*左*要比较的左的容器。
 
-`right` 要比较的右容器。
+*右*要比较的右容器。
 
 ### <a name="remarks"></a>备注
 
@@ -391,13 +391,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-`Ty` 元素的类型。
+*Ty*元素的类型。
 
-`N` 数组的大小。
+*N*数组的大小。
 
-`left` 要比较的左的容器。
+*左*要比较的左的容器。
 
-`right` 要比较的右容器。
+*右*要比较的右容器。
 
 ### <a name="remarks"></a>备注
 

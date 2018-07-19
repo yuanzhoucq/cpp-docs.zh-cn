@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560cad54e315aa1304e26456392b2b82404d4933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858976"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963532"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 类
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*浮点结果类型，默认为`double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*浮点结果类型，默认值为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -258,23 +258,23 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-`firstI` 分布范围中的第一个元素的输入迭代器。
+*firstI*分布范围中的第一个元素的输入迭代器。
 
-`lastI` 分布范围中的最后一个元素的输入迭代器。
+*lastI*分布范围中的最后一个元素的输入迭代器。
 
-`firstW` 权重范围中的第一个元素的输入迭代器。
+*firstW*权重范围中的第一个元素的输入迭代器。
 
-`intervals` [Initializer_list](../cpp/initializers.md)具有分布区间。
+*时间间隔* [initializer_list](../cpp/initializers.md)具有分布区间。
 
-`count` 分布范围中的元素数目。
+*计数*分布范围中的元素数。
 
-`xmin` 分布范围中的最低值。
+*xmin*分布范围中的最小值。
 
-`xmax` 分布范围中的最高值。 必须大于 `xmin`。
+*xmax*分布范围中的最高值。 必须大于 *xmin*。
 
-`weightfunc` 表示分布的概率函数的对象。 参数和返回值都必须可转换为 `double`。
+*weightfunc*表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
 
-`parm` 用于构造分布的参数结构。
+*parm*用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
@@ -297,7 +297,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-使用初始值设定项列表 `intervals` 中的区间和从函数 `weightfunc` 中生成的权重来构造分布对象。
+构造分布对象初始值设定项列表区间*间隔*并从该函数生成的权重*weightfunc*。
 
 定义为以下内容的构造函数
 ```cpp
@@ -306,14 +306,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-使用在 [`xmin,xmax`] 上均匀分布的 `count` 区间来构造分布对象，从而根据函数 `weightfunc` 分配每个区间权重，`weightfunc` 必须接受一个参数并包含一个返回值，两者都可转换为 `double`。 **前提条件：**`xmin < xmax`
+构造分布对象*计数*上均匀分布的时间间隔 [ `xmin,xmax`]，分配每个区间权重根据函数*weightfunc*，并*weightfunc*必须接受一个参数并包含返回值，这两种都可以转换为`double`。 **前置条件：**`xmin < xmax`
 
 定义为以下内容的构造函数
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-通过将 `parm` 用作存储的参数结构，构造分布对象。
+构造分布对象使用*parm*作为存储的参数结构。
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 

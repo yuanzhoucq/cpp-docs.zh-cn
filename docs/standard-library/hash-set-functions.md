@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846280"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961872"
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 函数
 
@@ -35,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-`right` Hash_set 提供要交换的元素或其元素将要与那些 hash_set 交换的 hash_set `left`。
+*右*提供的元素进行交换的 hash_set 或其元素将要与 hash_set 进行交换的 hash_set*左*。
 
-`left` 其元素将要与那些 hash_set 交换的 hash_set `right`。
+*左*其元素将要与 hash_set 进行交换的 hash_set*右*。
 
 ### <a name="remarks"></a>备注
 
-`swap` 模板函数是容器类 hash_set 上专用化的算法，用以执行成员函数 `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本 
+`swap`模板函数是容器类 hash_set 用以执行成员函数上专用化的算法`left.`[交换](../standard-library/hash-set-class.md#swap)(`right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本 
 
 **template \<class T> void swap(T&, T&),** 
 
@@ -64,13 +64,13 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>参数
 
-`right` Hash_multiset 提供要交换的元素或其元素将要与那些 hash_multiset 交换 hash_multiset `left`。
+*右*提供的元素进行交换的 hash_multiset 或其元素将要与 hash_multiset 进行交换的 hash_multiset*左*。
 
-`left` 其元素将要与那些 hash_multiset 交换的 hash_multiset `right`。
+*左*其元素将要与 hash_multiset 进行交换的 hash_multiset*右*。
 
 ### <a name="remarks"></a>备注
 
-`swap` 模板函数是容器类 hash_multiset 上专用化的算法，用以执行成员函数 `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本 
+`swap`模板函数是容器类 hash_multiset 用以执行成员函数上专用化的算法`left.`[交换](../standard-library/hash-multiset-class.md#swap)(`right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本 
 
 **template \<class T> void swap(T&, T&),** 
 

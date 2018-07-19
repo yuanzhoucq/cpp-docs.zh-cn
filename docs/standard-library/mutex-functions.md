@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858207"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962183"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 函数和变量
 
@@ -50,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>参数
 
-`Flag` A [once_flag](../standard-library/once-flag-structure.md)对象，以确保可调用对象只能调用一次。
+*标志*A [once_flag](../standard-library/once-flag-structure.md)对象，以确保可调用对象只能调用一次。
 
-`F` 可调用对象。
+*F*可调用对象。
 
-`A` 参数列表。
+*一个*参数列表。
 
 ### <a name="remarks"></a>备注
 
-如果 `Flag` 无效，则函数将引发一个错误代码为 `invalid_argument` 的 [system_error](../standard-library/system-error-class.md)。 否则，模板函数将使用其 `Flag` 参数，以确保它仅成功调用一次 `F(A...)`，而不考虑调用模板函数的次数。 如果通过引发异常退出 `F(A...)`，则该调用未成功。
+如果*标志*不是有效的该函数将引发[system_error](../standard-library/system-error-class.md)的一个错误代码`invalid_argument`。 否则，模板函数将使用其*标志*参数，以确保它调用`F(A...)`成功一次，而不考虑多少次模板函数调用。 如果通过引发异常退出 `F(A...)`，则该调用未成功。
 
 ## <a name="defer_lock"></a>  defer_lock 变量
 

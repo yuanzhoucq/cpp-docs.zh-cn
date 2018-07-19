@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964920"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
 
@@ -58,7 +58,7 @@ template <class Key,
 class set
 ```
 
-第二个模板函数是函数对象 `less`。 如果传递来的第一个参数小于所传递的第二个参数，则此函数对象返回 `true` 。 因为某些容器对其元素进行排序，所以容器需要一种方法来比较两个元素，而通过使用函数对象实现了这一点。 你可以创建函数对象并在容器的模板列表中指定它，从而定义你自己的排序条件。
+第二个模板函数是函数对象 `less`。 此函数对象返回 **，则返回 true**传递给第一个参数是否小于第二个参数传递。 因为某些容器对其元素进行排序，所以容器需要一种方法来比较两个元素，而通过使用函数对象实现了这一点。 你可以创建函数对象并在容器的模板列表中指定它，从而定义你自己的排序条件。
 
 ## <a name="function-objects-and-algorithms"></a>函数对象和算法
 
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-`remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果是 `true`，则从迭代器 `first` 和 `last` 正在访问的容器中删除元素。 你可以使用在 `pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。
+`remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果为 **，则返回 true**，然后从正在访问由迭代器的容器中移除元素`first`和`last`。 你可以使用在 `pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: TN056： 安装本地化的 MFC 组件 |Microsoft 文档
+title: TN056： 安装本地化的 MFC 组件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10addbf21c276a98c980002e4e9a9ea08538455
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44c285e3ff50100dc34c4859c412d58ca8d084dc
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380872"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027107"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056：安装本地化的 MFC 组件
 讨论了本地化 MFC 组件的安装的此技术说明现已过时。  
   
- **请参阅**[部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)为其他**重新分发 Visual c + + 应用程序的信息。  另请参阅**[技术说明 57](../mfc/tn057-localization-of-mfc-components.md)有关本地化 MFC 应用程序的详细信息。  
+ **请参阅**[部署应用程序](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)的其他**重新分发 Visual c + + 应用程序的信息。  另请参阅**[技术说明 57](../mfc/tn057-localization-of-mfc-components.md)有关本地化 MFC 应用程序的详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   

@@ -7,12 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852603"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964952"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函数
 
@@ -22,7 +22,7 @@ ms.locfileid: "33852603"
 
 ## <a name="nothrow"></a>  nothrow
 
-提供一个对象，用作 **new** 和 **delete** 的 `nothrow` 版本的自变量。
+提供一个对象，用作自变量**nothrow**新版**新**并**删除**。
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -38,7 +38,7 @@ extern const std::nothrow_t nothrow;
 
 ## <a name="set_new_handler"></a>  set_new_handler
 
-安装一个用户函数，当 `operator new` 尝试分配内存失败时会调用该函数。
+安装时要调用的用户函数**运算符 new**中尝试分配内存失败。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -46,7 +46,8 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>参数
 
-`Pnew` 若要安装 new_handler。
+*Pnew*  
+`new_handler`安装。
 
 ### <a name="return-value"></a>返回值
 
@@ -54,7 +55,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>备注
 
-该函数将 `Pnew` 存储于其维护的静态[新处理程序](../standard-library/new-typedefs.md#new_handler)指针中，然后返回以前存储在指针中的值。 此新处理程序由[运算符 new](../standard-library/new-operators.md#op_new)( **size_t**) 使用。
+函数存储*Pnew*在静态[新的处理程序](../standard-library/new-typedefs.md#new_handler)指针维护，然后返回以前存储在指针中的值。 新的处理程序可供[运算符 new](../standard-library/new-operators.md#op_new)(**size_t**)。
 
 ### <a name="example"></a>示例
 

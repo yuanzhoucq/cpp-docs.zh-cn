@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2b6c5e4847737ce0208b35a2db9fac783c225f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848071"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966454"
 ---
 # <a name="collate-class"></a>collate 类
 
@@ -52,11 +52,11 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-`CharType` 用于在程序内的字符进行编码的类型。
+*CharType*在程序中用于对字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
 
-对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **id** 中存储唯一的正值。在某些语言中，多个字符作为单个字符分组和处理，在其他语言中，单个字符被作为两个字符进行处理。 通过排序规则类提供的排序规则服务，可以在这些情况下进行排序。
+对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 `id` 中存储唯一正值。 在某些语言中，多个字符作为单个字符分组和处理，在其他语言中，单个字符被作为两个字符进行处理。 通过排序规则类提供的排序规则服务，可以在这些情况下进行排序。
 
 ### <a name="constructors"></a>构造函数
 
@@ -90,7 +90,7 @@ class collate : public locale::facet;
 
 ## <a name="char_type"></a>  collate::char_type
 
-一种类型，此类型描述 **CharType** 类型字符。
+一种类型，此类型描述 `CharType` 类型字符。
 
 ```cpp
 typedef CharType char_type;
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 **CharType** 的同义词。
+该类型是模板参数 `CharType` 的同义词。
 
 ## <a name="collate"></a>  collate::collate
 
@@ -117,13 +117,13 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-`_Refs` 用于指定类型的对象的内存管理的整数值。
+*_Refs*整数值，该值用于指定类型的对象的内存管理。
 
-`_Locname` 区域设置的名称。
+*_Locname*的区域设置名称。
 
 ### <a name="remarks"></a>备注
 
-`_Refs` 参数可能的值及其含义：
+可能的值 *_Refs*参数和其重要性：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
@@ -131,7 +131,7 @@ protected:
 
 - \> 1： 未定义这些值。
 
-构造函数初始化与与其基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
 ## <a name="compare"></a>  collate::compare
 
@@ -146,13 +146,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-`first1` 要进行比较的第一个序列中的第一个元素的指针。
+*first1*指向第一个序列中的第一个元素的指针进行比较。
 
-`last1` 指向要进行比较的第一个序列中的最后一个元素的指针。
+*last1*指向第一个序列中的最后一个元素的指针进行比较。
 
-`first2` 指向要进行比较的第二个序列的第一个元素的指针。
+*first2*指向第二个序列中的第一个元素的指针进行比较。
 
-`last2` 指向要进行比较的第二个序列中的最后一个元素的指针。
+*last2*指向第二个序列中的最后一个元素的指针进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-`first1` 要进行比较的第一个序列中的第一个元素的指针。
+*first1*指向第一个序列中的第一个元素的指针进行比较。
 
-`last1` 指向要进行比较的第一个序列中的最后一个元素的指针。
+*last1*指向第一个序列中的最后一个元素的指针进行比较。
 
-`first2` 指向要进行比较的第二个序列的第一个元素的指针。
+*first2*指向第二个序列中的第一个元素的指针进行比较。
 
-`last2` 指向要进行比较的第二个序列中的最后一个元素的指针。
+*last2*指向第二个序列中的最后一个元素的指针进行比较。
 
 ### <a name="return-value"></a>返回值
 
@@ -228,7 +228,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数将在序列进行比较 [* first1，Last1) * 与在序列 *[first2，last2*)。 它通过应用 **operator<** 比较 **CharType** 类型的相应元素对的值。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
+受保护虚拟成员函数比较序列在 [* first1，Last1) * 的序列与 *[first2，last2*)。 它将通过应用进行比较的值`operator<`类型的相应元素对之间`CharType`。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
 
 ### <a name="example"></a>示例
 
@@ -244,9 +244,9 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 确定其具有值序列中的第一个字符的指针时。
+*第一个*指向它的具有值在序列中的第一个字符的指针要确定的。
 
-`last` 确定其具有值的序列中的最后一个字符的指针时。
+*最后一个*指向它的具有值在序列中的最后一个字符的指针要确定的。
 
 ### <a name="return-value"></a>返回值
 
@@ -270,9 +270,9 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>参数
 
-`first` 指向要转换的序列中的第一个字符的指针。
+*第一个*指向待转换序列中的第一个字符的指针。
 
-`last` 指向要转换的序列中的最后一个字符的指针。
+*最后一个*指向待转换序列中的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -296,9 +296,9 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 确定其具有值序列中的第一个字符的指针时。
+*第一个*指向它的具有值在序列中的第一个字符的指针要确定的。
 
-`last` 确定其具有值的序列中的最后一个字符的指针时。
+*最后一个*指向它的具有值在序列中的最后一个字符的指针要确定的。
 
 ### <a name="return-value"></a>返回值
 
@@ -340,7 +340,7 @@ int main( )
 
 ## <a name="string_type"></a>  collate::string_type
 
-一种类型，此类型描述包含 **CharType** 类型字符的 `basic_string` 类型字符串。
+一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。
 
 ```cpp
 typedef basic_string<CharType> string_type;
@@ -364,9 +364,9 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-`first` 指向要转换的序列中的第一个字符的指针。
+*第一个*指向待转换序列中的第一个字符的指针。
 
-`last` 指向要转换的序列中的最后一个字符的指针。
+*最后一个*指向待转换序列中的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 [do_transform](#do_transform)( `first`, `last`)。
+此成员函数返回[do_transform](#do_transform)(`first`， `last`)。
 
 ### <a name="example"></a>示例
 

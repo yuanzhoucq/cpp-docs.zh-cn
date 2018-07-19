@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f59e7f6595d89b0078e650ab1ce8a36139f03486
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961573"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 类
 
@@ -81,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*整数结果类型，默认为`int`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -200,17 +200,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-非独占的随机值的下限。
+*a*  
+随机值的下限（包含下限）。
 
-*b*非独占的随机值的上限。
+*b*  
+随机值的上限（包含上限）。
 
-*参数*`param_type`用于构造分布的结构。
+*parm*  
+用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
 **前置条件：**`a ≤ b`
 
-第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
+第一个构造函数构造一个对象，其存储值保留值并且其存储*b*值保留值*b*。
 
 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
@@ -233,11 +236,14 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-非独占的随机值的下限。
+*a*  
+随机值的下限（包含下限）。
 
-*b*非独占的随机值的上限。
+*b*  
+随机值的上限（包含上限）。
 
-*右*`param_type`要比较的此对象。
+*right*  
+要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
