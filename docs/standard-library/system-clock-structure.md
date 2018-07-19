@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458896"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959038"
 ---
 # <a name="systemclock-structure"></a>system_clock 结构
 
@@ -65,7 +65,7 @@ struct system_clock;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[system_clock::is_monotonic 常量](#is_monotonic_constant)|指定时钟类型是否为单调。|
 |[system_clock::is_steady 常量](#is_steady_constant)|指定时钟类型是否为稳定。|
@@ -78,7 +78,7 @@ struct system_clock;
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-返回 [time_point](../standard-library/time-point-class.md) 的静态方法，此返回值最接近 `Tm` 表示的时间。
+返回的静态方法[time_point](../standard-library/time-point-class.md)该最接近的时间，由表示*Tm*。
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -86,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Tm` A [time_t](../c-runtime-library/standard-types.md)对象。
+*Tm*  
+ 一个 [time_t](../c-runtime-library/standard-types.md) 对象。
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 常量
 
@@ -98,7 +99,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>返回值
 
-在此实现中，`system_clock::is_monotonic` 始终返回 `false`。
+在此实现中，`system_clock::is_monotonic`始终返回**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -114,11 +115,11 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>返回值
 
-在此实现中，`system_clock::is_steady` 始终返回 `false`。
+在此实现中，`system_clock::is_steady`始终返回**false**。
 
 ### <a name="remarks"></a>备注
 
-如果它是[单调](#is_monotonic_constant)时钟并且时钟计时周期之间的时间是常量，则为*稳定*时钟。
+如果它是[单调](#is_monotonic_constant)时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
 
 ## <a name="now"></a>  system_clock::now
 
@@ -134,7 +135,7 @@ static time_point now() noexcept;
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-返回 [time_t](../c-runtime-library/standard-types.md) 的静态方法，该返回值最接近 `Time` 表示的时间。
+返回的静态方法[time_t](../c-runtime-library/standard-types.md)该最接近的时间，由表示*时间*。
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -142,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>参数
 
-`Time` A [time_point](../standard-library/time-point-class.md)对象。
+*时间*  
+ 一个 [time_point](../standard-library/time-point-class.md) 对象。
 
 ## <a name="see-also"></a>请参阅
 
